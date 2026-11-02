@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rsadi-gd-advanced/v1/PlayerDriftProfile.schema.json",
+  "title": "PlayerDriftProfile",
+  "type": "object",
+  "required": ["curiosity", "aggression", "patience", "exploration", "rhythm"],
+  "properties": {
+    "curiosity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "How strongly the player seeks novelty (RTT drift analogue)."
+    },
+    "aggression": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Tendency toward forceful or disruptive actions."
+    },
+    "patience": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Willingness to wait, observe, or hold state."
+    },
+    "exploration": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Desire to traverse new areas or test boundaries."
+    },
+    "rhythm": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Player’s internal tempo (RTT temporal cadence analogue)."
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
+

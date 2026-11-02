@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/taxes/operators.md">
+  <title>Taxes Module — Operators</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/taxes/operators.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/taxes/operators.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="taxes-module-operators">Taxes Module — Operators</h1>
+<h3 id="incentiveregime-substrate-drift-propagation-alignment">Incentive‑Regime Substrate · Drift · Propagation · Alignment</h3>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This file defines the <strong>operator grammar</strong> for the Taxes module.<br>
+Operators describe how incentives behave across jurisdictions, how drift accumulates, and how half‑lives determine stability.</p>
+<p>Operators are grouped into:
+- <strong>Primary operators</strong><br>
+- <strong>Drift operators</strong><br>
+- <strong>Alignment operators</strong><br>
+- <strong>Cross‑module operators</strong>  </p>
+<hr>
+<h2 id="2-primary-operators">2. Primary Operators</h2>
+<h3 id="21-incentive_regime_operator">2.1 incentive_regime_operator</h3>
+<p>Defines the baseline incentive structure for a jurisdiction or regime.<br>
+Inputs: incentive parameters, jurisdictional rules<br>
+Outputs: incentive baseline, propagation envelope</p>
+<h3 id="22-depreciation_envelope_operator">2.2 depreciation_envelope_operator</h3>
+<p>Models depreciation, phase‑out, or diminishing incentive strength over time.<br>
+Inputs: incentive baseline, half‑life<br>
+Outputs: depreciation curve, envelope boundaries</p>
+<h3 id="23-jurisdiction_propagation_operator">2.3 jurisdiction_propagation_operator</h3>
+<p>Describes how incentives propagate across jurisdictions or layers.<br>
+Inputs: baseline incentives, jurisdiction map<br>
+Outputs: propagation vectors, cross‑domain flow</p>
+<h3 id="24-compliance_substrate_operator">2.4 compliance_substrate_operator</h3>
+<p>Defines compliance behavior and its effect on incentive stability.<br>
+Inputs: compliance parameters<br>
+Outputs: compliance‑adjusted incentive envelope</p>
+<hr>
+<h2 id="3-drift-operators">3. Drift Operators</h2>
+<h3 id="31-incentive_drift_operator">3.1 incentive_drift_operator</h3>
+<p>Models drift accumulation within an incentive regime.<br>
+Inputs: incentive baseline, propagation vectors<br>
+Outputs: drift amplitude, drift direction</p>
+<h3 id="32-incentive_half_life_operator">3.2 incentive_half_life_operator</h3>
+<p>Defines the half‑life of incentive stability (IHL).<br>
+Inputs: incentive parameters, drift amplitude<br>
+Outputs: half‑life value, stability envelope</p>
+<hr>
+<h2 id="4-alignment-operators">4. Alignment Operators</h2>
+<h3 id="41-incentive_continuity_alignment_operator">4.1 incentive_continuity_alignment_operator</h3>
+<p>Aligns incentive regimes with RRR continuity envelopes.<br>
+Inputs: incentive baseline, RRR continuity<br>
+Outputs: alignment score, stability adjustment</p>
+<h3 id="42-incentive_cycle_alignment_operator">4.2 incentive_cycle_alignment_operator</h3>
+<p>Aligns incentives with economic cycles (IE).<br>
+Inputs: incentive baseline, cycle phase<br>
+Outputs: alignment score, drift correction</p>
+<hr>
+<h2 id="5-crossmodule-operators">5. Cross‑Module Operators</h2>
+<h3 id="51-taxes_rrr_alignment_operator">5.1 taxes_rrr_alignment_operator</h3>
+<p>Maps incentive regimes to revenue continuity (RRR).<br>
+Outputs: continuity‑incentive alignment surface</p>
+<h3 id="52-taxes_ie_alignment_operator">5.2 taxes_ie_alignment_operator</h3>
+<p>Maps incentives to cycle inversion and uplift constraints (IE).<br>
+Outputs: inversion‑incentive alignment surface</p>
+<h3 id="53-taxes_gsm_alignment_operator">5.3 taxes_gsm_alignment_operator</h3>
+<p>Maps incentives to governance coherence (GSM).<br>
+Outputs: policy‑incentive alignment surface</p>
+<hr>
+<h2 id="6-operator-interaction-map">6. Operator Interaction Map</h2>
+<pre><code>incentive_regime_operator
+    → depreciation_envelope_operator
+        → jurisdiction_propagation_operator
+            → incentive_drift_operator
+                → incentive_half_life_operator
+                    → incentive_continuity_alignment_operator
+                        → incentive_cycle_alignment_operator
+</code></pre>
+<p>This chain defines the <strong>structural flow</strong> of the Taxes module.</p>
+<hr>
+<h2 id="7-operator-status">7. Operator Status</h2>
+<ul>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal  </li>
+<li><strong>Drift:</strong> bounded  </li>
+</ul>
+  </main>
+</body>
+</html>

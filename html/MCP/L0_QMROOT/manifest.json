@@ -1,0 +1,19 @@
+{
+  "canonical": "R5",
+  "layer": "L0_QMROOT",
+  "triad": "root",
+  "lineage": ["qmroot"],
+
+  "purpose": "Defines the quantum origin and root-state mechanics of the TriadicFrameworks cosmology. Establishes the pre-regime foundation from which all higher layers inherit.",
+
+  "contents": {
+    "files": ["README.md"],
+    "modules": [],
+    "notes": "L0 contains no schemas, registries, operators, or dimensional constructs."
+  },
+
+  "coherence": {
+    "inheritsTo": ["L1_Frequency_Unseen"],
+    "description": "L0 provides the cosmological seed-state. All higher layers must preserve root-state invariants."
+  }
+}

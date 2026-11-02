@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/qCompute/qc_Session.md">
+  <title>qCompute — Session Engine</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/qCompute/qc_Session.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/qCompute/qc_Session.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="qcompute-session-engine">qCompute — Session Engine</h1>
+<p><strong>File:</strong> qc_Session.md<br>
+<strong>Layer:</strong> RTT‑Inside Compute Harness<br>
+<strong>Status:</strong> Canonical (2026)</p>
+<p>A <strong>qSession</strong> is the structural container for all qCompute activity.</p>
+<p>It governs:</p>
+<ul>
+<li>environment  </li>
+<li>drift bound  </li>
+<li>backend legality  </li>
+<li>resonance frames  </li>
+<li>tokens  </li>
+<li>lineage  </li>
+<li>transitions  </li>
+<li>capture lifecycle  </li>
+</ul>
+<p>qCompute computes <strong>structure</strong>, not amplitudes.</p>
+<hr>
+<h1 id="1-purpose">1. Purpose</h1>
+<p>The Session Engine:</p>
+<ul>
+<li>initializes structural context  </li>
+<li>manages environment  </li>
+<li>manages tokens  </li>
+<li>manages frames  </li>
+<li>manages drift envelope  </li>
+<li>orchestrates routing  </li>
+<li>orchestrates transitions  </li>
+<li>orchestrates capture  </li>
+<li>provides replay‑verifiable structure  </li>
+</ul>
+<p>A session is the <strong>root of structural truth</strong>.</p>
+<hr>
+<h1 id="2-session-identity">2. Session Identity</h1>
+<p>A session has:</p>
+<pre><code>session_id: &quot;&lt;uuid&gt;&quot;
+environment: &quot;sandbox&quot; | &quot;production&quot; | &quot;archive&quot;
+drift_bound: &quot;&lt;float&gt;&quot;
+backend_legal: [...]
+frames: []
+lineage: [&quot;sandbox&quot;, ...]
+tokens: { deployed: [...] }
+timestamp_open: &quot;&lt;iso8601&gt;&quot;
+timestamp_close: &quot;&lt;iso8601&gt;&quot;
+</code></pre>
+<p>All fields are required.</p>
+<hr>
+<h1 id="3-session-construction">3. Session Construction</h1>
+<pre><code class="language-python">session = qSession(env=&quot;sandbox&quot;, backend=&quot;auto&quot;)
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li><code>env</code>: <code>"sandbox" | "production" | "archive"</code></li>
+<li><code>backend</code>: <code>"auto"</code> or explicit backend ID</li>
+</ul>
+<p>Defaults:</p>
+<ul>
+<li>environment = sandbox  </li>
+<li>backend = auto (tier‑bound)  </li>
+</ul>
+<hr>
+<h1 id="4-environment-model">4. Environment Model</h1>
+<p>Environments define legality:</p>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Allowed Tiers</th>
+<th>Drift Bound</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sandbox</td>
+<td>r1, r2</td>
+<td>relaxed</td>
+<td>development</td>
+</tr>
+<tr>
+<td>production</td>
+<td>r1, r2, r3</td>
+<td>strict</td>
+<td>governed</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>none</td>
+<td>immutable</td>
+<td>terminal</td>
+</tr>
+</tbody>
+</table>
+<p>Environment is updated only through transitions.</p>
+<hr>
+<h1 id="5-token-model">5. Token Model</h1>
+<p>Tokens are required for:</p>
+<ul>
+<li>sandbox → production  </li>
+<li>production → archive  </li>
+<li>r3 operators  </li>
+</ul>
+<p>Deploy token:</p>
+<pre><code class="language-python">session.deploy_token(&quot;token-id&quot;)
+</code></pre>
+<p>Token state:</p>
+<pre><code>tokens:
+  deployed: [&quot;t1&quot;, &quot;t2&quot;, ...]
+</code></pre>
+<hr>
+<h1 id="6-frame-model">6. Frame Model</h1>
+<p>A session contains <strong>ResonanceFrames</strong>.</p>
+<p>Frame lifecycle:</p>
+<ul>
+<li>open on first operator  </li>
+<li>open on tier escalation  </li>
+<li>open on tier decrease  </li>
+<li>open on r3 operator  </li>
+<li>open on meta operator  </li>
+<li>open on drift overflow  </li>
+<li>open on environment transition  </li>
+<li>close when new frame opens  </li>
+<li>close when session ends  </li>
+</ul>
+<p>Frames are append‑only and immutable after closure.</p>
+<hr>
+<h1 id="7-drift-model">7. Drift Model</h1>
+<p>Session maintains drift envelope:</p>
+<pre><code>drift:
+  accumulated: &lt;float&gt;
+  bound: &lt;float&gt;
+</code></pre>
+<p>Drift resets when:</p>
+<ul>
+<li>new frame opens  </li>
+<li>measurement occurs  </li>
+<li>meta operator occurs  </li>
+<li>r3 operator occurs  </li>
+<li>environment transitions  </li>
+</ul>
+<p>Drift must never exceed bound.</p>
+<hr>
+<h1 id="8-operator-lifecycle">8. Operator Lifecycle</h1>
+<p>Operator flow inside a session:</p>
+<pre><code>operator → validator → router → frame manager → drift engine → capture
+</code></pre>
+<p>Session orchestrates:</p>
+<ul>
+<li>legality  </li>
+<li>routing  </li>
+<li>frame boundaries  </li>
+<li>drift accumulation  </li>
+<li>transition enforcement  </li>
+<li>capture ledger updates  </li>
+</ul>
+<p>Operators are appended to the active frame.</p>
+<hr>
+<h1 id="9-transition-lifecycle">9. Transition Lifecycle</h1>
+<p>Transitions are invoked via:</p>
+<pre><code class="language-python">session.transition(&quot;production&quot;)
+session.transition(&quot;archive&quot;)
+</code></pre>
+<p>Transitions:</p>
+<ul>
+<li>require tokens  </li>
+<li>close current frame  </li>
+<li>update environment  </li>
+<li>reset drift  </li>
+<li>open new frame  </li>
+<li>update lineage  </li>
+<li>update backend legality  </li>
+<li>emit transition metadata  </li>
+</ul>
+<p>Archive is terminal.</p>
+<hr>
+<h1 id="10-capture-lifecycle">10. Capture Lifecycle</h1>
+<p>Save trace:</p>
+<pre><code class="language-python">session.save_trace(&quot;example.qtrace&quot;)
+</code></pre>
+<p>Capture writes:</p>
+<ul>
+<li>header  </li>
+<li>operator entries  </li>
+<li>frame summaries  </li>
+<li>transitions  </li>
+<li>footer  </li>
+<li>hash chain root  </li>
+</ul>
+<p>Capture is append‑only and immutable.</p>
+<hr>
+<h1 id="11-replay-integration">11. Replay Integration</h1>
+<p>Replay reconstructs:</p>
+<ul>
+<li>session  </li>
+<li>frames  </li>
+<li>operators  </li>
+<li>transitions  </li>
+<li>drift  </li>
+<li>routing  </li>
+<li>backend legality  </li>
+<li>environment sequence  </li>
+<li>hash chain integrity  </li>
+</ul>
+<p>Replay is deterministic and read‑only.</p>
+<hr>
+<h1 id="12-invariants">12. Invariants</h1>
+<ol>
+<li>environment must be legal  </li>
+<li>backend must be legal  </li>
+<li>drift must not exceed bound  </li>
+<li>tier must not decrease inside a frame  </li>
+<li>r3 requires token  </li>
+<li>transitions require token  </li>
+<li>transitions always open new frames  </li>
+<li>archive is terminal  </li>
+<li>capture must maintain valid hash chain  </li>
+<li>frames are immutable after closure  </li>
+</ol>
+<hr>
+<h1 id="13-summary">13. Summary</h1>
+<p>The Session Engine provides:</p>
+<ul>
+<li>structural context  </li>
+<li>environment governance  </li>
+<li>drift envelope  </li>
+<li>frame lifecycle  </li>
+<li>routing orchestration  </li>
+<li>transition orchestration  </li>
+<li>capture lifecycle  </li>
+<li>replay‑verifiable structure  </li>
+</ul>
+<p>A session is the <strong>governed container</strong> for all qCompute computation.</p>
+  </main>
+</body>
+</html>

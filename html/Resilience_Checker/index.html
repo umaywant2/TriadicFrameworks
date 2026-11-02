@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-02">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<meta name="description"
+      content="Resilience Checker — a curated collection of 108 paradox analyses spanning logic, computation, thermodynamics, cosmology, quantum theory, and emergence. Designed as a diagnostic surface for regime literacy and structural clarity.">
+<meta name="keywords"
+      content="Resilience Checker, paradoxes, structural paradoxes, regime literacy, logic paradoxes, computation paradoxes, thermodynamics paradoxes, cosmology paradoxes, quantum paradoxes, emergence paradoxes">
+
+<link rel="canonical" href="https://docs.triadicframeworks.org/Resilience_Checker/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Resilience Checker — Paradox‑Structural Canon">
+<meta property="og:url" content="https://docs.triadicframeworks.org/Resilience_Checker/">
+<meta property="og:description"
+      content="108 paradox analyses across logic, computation, thermodynamics, cosmology, quantum, and emergence.">
+<meta property="og:image" content="https://docs.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+      
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Resilience Checker — Paradox‑Structural Canon">
+<meta name="twitter:description"
+      content="A diagnostic surface for regime literacy and structural clarity.">
+<meta name="twitter:image" content="https://docs.triadicframeworks.org/assets/og-image.png">
+
+<meta name="citation_title" content="Resilience Checker — Paradox‑Structural Canon">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="paradox resilience, structural paradoxes, logic, computation, thermodynamics, cosmology, quantum, emergence">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="Resilience Checker">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Provide paradox‑structural diagnostics across logic, computation, thermodynamics, cosmology, quantum, and emergence.">
+<meta name="ai.keywords"
+      content="paradox, resilience, structural paradoxes, regime literacy, conceptual stress testing">
+<meta name="ai.audience" content="students, researchers, developers, AI systems">
+<meta name="ai.navigation" content="https://docs.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<meta name="ai.module.name" content="Resilience Checker">
+<meta name="ai.module.summary"
+      content="108 paradox analyses across 11 structural categories: Foundational Logic and Physics, Mind Identity and Observation, Mathematics Decision and Infinity, Thermodynamics and Statistical Reality, Cosmology and Spacetime, Quantum Reality and Observers, Anthropic and Cosmological Measure, Quantum Gravity and Holography, Effective Theories and Backreaction, Information Computation and Causation, Computation Modeling and Emergence. Plus Paradox Resilience Full Chart capstone.">
+      
+<link rel="preload" as="image" href="https://docs.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://docs.triadicframeworks.org/assets/favicon-16.png" sizes="16x16">
+<link rel="icon" href="https://docs.triadicframeworks.org/assets/favicon-32.png" sizes="32x32">
+<link rel="icon" href="https://docs.triadicframeworks.org/assets/favicon-192.png" sizes="192x192">
+
+<title>Resilience Checker | TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
+
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Neon headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
+}
+
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
+
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+   <details>
+     <summary><h2>🎯 Resilience Checker</h2></summary>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://docs.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+   </details>
+   <details>
+     <summary><h3>🧠 Foundational Logic and Physics</h3></summary>
+    <a href="#Paradox_01">🔗 EPR Paradox</a>
+    <a href="#Paradox_02">⚖️ Gibbs Paradox</a>
+    <a href="#Paradox_03">🔁 Loschmidt Paradox</a>
+    <a href="#Paradox_04">🛑 Halting Problem</a>
+    <a href="#Paradox_05">🧠 Russell’s Paradox</a>
+    <a href="#Paradox_06">🧩 Frame Problem</a>
+    <a href="#Paradox_07">⏳ Arrow of Time</a>
+    <a href="#Paradox_08">🌀 Curry’s Paradox</a>
+    <a href="#Paradox_09">🗣️ Chinese Room</a>
+    <a href="#Paradox_10">♾️ Infinite Regress of Justification</a>
+   </details>
+   <details>
+     <summary><h3>👁️ Mind Identity and Observation</h3></summary>
+    <a href="#Paradox_11">🧠 Boltzmann Brain</a>
+    <a href="#Paradox_12">🖥️ Simulation Argument</a>
+    <a href="#Paradox_13">⏱️ Quantum Zeno Effect</a>
+    <a href="#Paradox_14">🚢 Ship of Theseus</a>
+    <a href="#Paradox_15">🔬 Double‑Slit Which‑Way</a>
+    <a href="#Paradox_16">🏗️ Sorites Heap Paradox</a>
+    <a href="#Paradox_17">🧮 P vs NP</a>
+    <a href="#Paradox_18">🎭 Unexpected Hanging</a>
+    <a href="#Paradox_19">🧹 Quantum Eraser</a>
+    <a href="#Paradox_20">🪞 Liar Paradox</a>
+   </details>
+   <details>
+     <summary><h3>♾️ Mathematics Decision and Infinity</h3></summary>
+    <a href="#Paradox_21">🧊 Banach–Tarski Paradox</a>
+    <a href="#Paradox_22">🎲 Newcomb’s Problem</a>
+    <a href="#Paradox_23">🤝 Prisoner’s Dilemma</a>
+    <a href="#Paradox_24">🐴 Buridan’s Ass</a>
+    <a href="#Paradox_25">🦅 Raven’s Paradox</a>
+    <a href="#Paradox_26">🏨 Hilbert’s Hotel</a>
+    <a href="#Paradox_27">🏹 Zeno’s Paradoxes</a>
+    <a href="#Paradox_28">➡️ Arrow Paradox</a>
+    <a href="#Paradox_29">⏳ Arrow of Time</a>
+    <a href="#Paradox_30">🔁 Loschmidt Paradox</a>
+   </details>
+   <details>
+     <summary><h3>♾️ Mathematics Decision and Infinity</h3></summary>
+    <a href="#Paradox_31">🧠 Maxwell’s Demon</a>
+    <a href="#Paradox_32">🧠 Boltzmann Brain</a>
+    <a href="#Paradox_33">🎯 Olmstead’s Anthropic Paradox</a>
+    <a href="#Paradox_34">🎯 Fine‑Tuning Problem</a>
+    <a href="#Paradox_35">📊 Measure Problem in Cosmology</a>
+    <a href="#Paradox_36">❄️ Heat Death vs Recurrence</a>
+    <a href="#Paradox_37">🕳️ Black Hole Information Paradox</a>
+    <a href="#Paradox_38">🔥 Firewall Paradox</a>
+    <a href="#Paradox_39">🔗 ER = EPR</a>
+    <a href="#Paradox_40">🧵 Holographic Principle</a>
+   </details>
+   <details>
+     <summary><h3>🌌 Cosmology and Spacetime</h3></summary>
+    <a href="#Paradox_41">🌌 Spacetime Emergence</a>
+    <a href="#Paradox_42">🚧 Cosmic Censorship</a>
+    <a href="#Paradox_43">⚖️ Strong vs Weak Cosmic Censorship</a>
+    <a href="#Paradox_44">🕳️ Singularity Resolution (Quantum Gravity)</a>
+    <a href="#Paradox_45">🔄 Bounce vs Beginning (Cosmology)</a>
+    <a href="#Paradox_46">♾️ Eternal Inflation vs Finite Cosmos</a>
+    <a href="#Paradox_47">✨ Quantum Creation vs Classical Origin</a>
+    <a href="#Paradox_48">🎲 Vacuum Selection vs Landscape Degeneracy</a>
+    <a href="#Paradox_49">📜 Meta‑Laws vs Lawless Landscape</a>
+    <a href="#Paradox_50">🧮 Mathematical vs Physical Universe</a>
+   </details>
+   <details>
+     <summary><h3>⚛️ Quantum Reality & Observers</h3></summary>
+      <a href="#Paradox_51">🧮 Computability vs. Continuum Reality</a>
+      <a href="#Paradox_52">🖥️ Simulation Hypothesis vs. Physical Autonomy</a>
+      <a href="#Paradox_53">👁️ Observer Dependence vs. Objective Reality</a>
+      <a href="#Paradox_54">🧑‍🔬 Wigner’s Friend vs. Universal Unitarity</a>
+      <a href="#Paradox_55">🐱 Schrödinger Evolution vs. Measurement Collapse</a>
+      <a href="#Paradox_56">🌫️ Decoherence vs. Classical Emergence</a>
+      <a href="#Paradox_57">🌀 Quantum Chaos vs. Classical Chaos</a>
+      <a href="#Paradox_58">🔁 Reversibility vs. Irreversibility</a>
+      <a href="#Paradox_59">♻️ Poincaré Recurrence vs. Entropy Increase</a>
+      <a href="#Paradox_60">❄️ Heat Death vs. Eternal Fluctuations</a>
+   </details>
+   <details>
+     <summary><h3>🎯 Anthropic and Cosmological Measure</h3></summary>
+      <a href="#Paradox_61">🎯 Boltzmann Brains vs Cosmological Coherence</a>
+      <a href="#Paradox_62">🧭 Typicality vs Anthropic Selection</a>
+      <a href="#Paradox_63">📊 Measure Problem vs Predictive Power</a>
+      <a href="#Paradox_64">🌌 Eternal Inflation vs Observable Uniqueness</a>
+      <a href="#Paradox_65">🌠 Horizon Problem vs Inflationary Smoothness</a>
+      <a href="#Paradox_66">📐 Flatness Problem vs Inflationary Fine‑Tuning</a>
+      <a href="#Paradox_67">⚖️ Baryon Asymmetry vs Symmetric Laws</a>
+      <a href="#Paradox_68">🧪 Neutrino Mass vs Standard Model Completeness</a>
+      <a href="#Paradox_69">🏗️ Hierarchy Problem vs Naturalness</a>
+      <a href="#Paradox_70">🌡️ Vacuum Energy vs Cosmological Constant</a>
+   </details>
+   <details>
+     <summary><h3>🕳️ Quantum Gravity and Holography</h3></summary>
+    <a href="#Paradox_71">🧠 Black Hole Information vs. Unitarity</a>
+    <a href="#Paradox_72">🔥 Firewalls vs. Smooth Horizons</a>
+    <a href="#Paradox_73">🧵 Holographic Encoding vs. Local Bulk Reality</a>
+    <a href="#Paradox_74">🪟 Entanglement Wedge Reconstruction vs. Bulk Locality</a>
+    <a href="#Paradox_75">🔗 ER = EPR vs. Classical Spacetime Intuition</a>
+    <a href="#Paradox_76">🛠️ Quantum Error Correction vs. Physical Locality</a>
+    <a href="#Paradox_77">🧩 Tensor Networks vs. Continuum Geometry</a>
+    <a href="#Paradox_78">⏱️ Discrete Causality vs. Lorentz Invariance</a>
+    <a href="#Paradox_79">📏 Minimal Length vs. Continuous Fields</a>
+    <a href="#Paradox_80">🔄 UV/IR Mixing vs. Scale Separation</a>
+   </details>
+   <details>
+     <summary><h3>🔄 Effective Theories and Backreaction</h3></summary>
+    <a href="#Paradox_81">🔄 Running Couplings vs Fixed Background Geometry</a>
+    <a href="#Paradox_82">🌐 Background Independence vs Effective Field Theory</a>
+    <a href="#Paradox_83">🧪 Semiclassical Gravity vs Quantum Backreaction</a>
+    <a href="#Paradox_84">🎭 Quantum State Reduction vs Covariant Dynamics</a>
+    <a href="#Paradox_85">👁️ Observer‑Dependent Horizons vs Objective Quantum States</a>
+    <a href="#Paradox_86">🌌 Cosmological Horizons vs Global Quantum Coherence</a>
+    <a href="#Paradox_87">❄️ Inflationary Mode Freezing vs Quantum Unitarity</a>
+    <a href="#Paradox_88">♾️ Eternal Inflation vs Global Unitarity</a>
+    <a href="#Paradox_89">📊 Measure Problem vs Predictive Probability</a>
+    <a href="#Paradox_90">🎯 Anthropic Selection vs Physical Explanation</a>
+   </details>
+   <details>
+     <summary><h3>💾 Information Computation and Causation</h3></summary>
+    <a href="#Paradox_91">🧭 Typicality Assumptions vs Observer Self‑Location</a>
+    <a href="#Paradox_92">🧠 Boltzmann Brains vs Cognitive Typicality</a>
+    <a href="#Paradox_93">⏳ Arrow of Time vs Time‑Symmetric Laws</a>
+    <a href="#Paradox_94">🔁 Loschmidt’s Reversibility vs Entropy Increase</a>
+    <a href="#Paradox_95">♻️ Poincaré Recurrence vs Macroscopic Irreversibility</a>
+    <a href="#Paradox_96">🧠 Maxwell’s Demon vs Information Conservation</a>
+    <a href="#Paradox_97">🧹 Quantum Eraser vs Information Irreversibility</a>
+    <a href="#Paradox_98">📎 No‑Cloning vs Classical Copying</a>
+    <a href="#Paradox_99">🗑️ No‑Deleting vs Classical Erasure</a>
+    <a href="#Paradox_100">🙈 No‑Hiding vs Classical Forgetting</a>
+   </details>
+   <details>
+     <summary><h3>🧬 Computation Modeling and Emergence</h3></summary>
+    <a href="#Paradox_101">🔄 Computational Irreversibility vs Microscopic Reversibility</a><br>
+    <a href="#Paradox_102">🧮 Computational Complexity vs Physical Realizability</a><br>
+    <a href="#Paradox_103">📐 Analog Continuity vs Digital Precision</a><br>
+    <a href="#Paradox_104">🌪️ Chaos Sensitivity vs Predictive Determinism</a><br>
+    <a href="#Paradox_105">🎮 Simulation Accuracy vs Physical Fidelity</a><br>
+    <a href="#Paradox_106">🧩 Model Idealization vs Physical Completeness</a><br>
+    <a href="#Paradox_107">🌱 Reductionism vs Emergent Complexity</a><br>
+    <a href="#Paradox_108">🔗 Micro‑Causality vs Macro‑Causation</a><br>
+    <a href="#Meta_Summary_Paradoxes_101_108">📘 Meta‑Summary: Paradoxes 101–108</a>
+   </details>
+   <details>
+     <summary><h3>🎯 Full Chart</h3></summary>
+     <a href="#Paradox_Resilience_Full_Chart">✅ Paradox Resilience Full Chart</a>
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
+      <a href="https://docs.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://docs.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://docs.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://docs.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://docs.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://docs.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://docs.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://docs.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://docs.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://docs.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://docs.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://docs.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://docs.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   </details>
+   <!-- RTT Canonical Signature -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/Resilience_Checker — Session Context block           -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="resilience-checker-session-header"
+         data-rtt="resilience-checker"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-regime="structural">
+
+   <details>
+     <summary><h2>Session Context</h2></summary>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (paradox‑structural)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      logic → computation → thermodynamics → cosmology → quantum → emergence → capstone (101–108)
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (root‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (structural‑energetic‑relational separation)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (resilience‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + diagrams</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Resilience Checker root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + AI‑parsable</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + researchers + developers + AIs</span>
+
+  </div>
+   </details>
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🧭 Resilience‑Core<br>📘 Paradox‑Structural Canon • AI‑Ready
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      Paradox_Resilience_Full_Chart: 'Paradox_Resilience_Full_Chart.md',
+
+  Paradox_01: 'Paradox_01_EPR_Paradox.md',
+  Paradox_02: 'Paradox_02_Gibbs_Paradox.md',
+  Paradox_03: 'Paradox_03_Loschmidt_Paradox.md',
+  Paradox_04: 'Paradox_04_Halting_Problem.md',
+  Paradox_05: 'Paradox_05_Russells_Paradox.md',
+  Paradox_06: 'Paradox_06_Frame_Problem.md',
+  Paradox_07: 'Paradox_07_Arrow_of_Time.md',
+  Paradox_08: 'Paradox_08_Currys_Paradox.md',
+  Paradox_09: 'Paradox_09_Chinese_Room.md',
+  Paradox_10: 'Paradox_10_Infinite_Regress_Justification.md',
+
+    Paradox_11: "Paradox_11_Boltzmann_Brain.md",
+    Paradox_12: "Paradox_12_Simulation_Argument.md",
+    Paradox_13: "Paradox_13_Quantum_Zeno.md",
+    Paradox_14: "Paradox_14_Ship_of_Theseus.md",
+    Paradox_15: "Paradox_15_Double_Slit_Which_Way.md",
+    Paradox_16: "Paradox_16_Sorites_Heap_Paradox.md",
+    Paradox_17: "Paradox_17_P_vs_NP.md",
+    Paradox_18: "Paradox_18_Unexpected_Hanging.md",
+    Paradox_19: "Paradox_19_Quantum_Eraser.md",
+    Paradox_20: "Paradox_20_Liar_Paradox.md",
+
+  Paradox_21: 'Paradox_21_Banach_Tarski.md',
+  Paradox_22: 'Paradox_22_Newcombs_Problem.md',
+  Paradox_23: 'Paradox_23_Prisoners_Dilemma.md',
+  Paradox_24: 'Paradox_24_Buridan’s_Ass.md',
+  Paradox_25: 'Paradox_25_Ravens_Paradox.md',
+  Paradox_26: 'Paradox_26_Hilberts_Hotel.md',
+  Paradox_27: 'Paradox_27_Zenos_Paradoxes.md',
+  Paradox_28: 'Paradox_28_Arrow_Paradox.md',
+  Paradox_29: 'Paradox_29_Arrow_of_Time.md',
+  Paradox_30: 'Paradox_30_Loschmidt_Paradox.md',
+
+  Paradox_31: 'Paradox_31_Maxwell’s_Demon.md',
+  Paradox_32: 'Paradox_32_Boltzmann_Brain.md',
+  Paradox_33: 'Paradox_33_Olmstead’s_Anthropic_Paradox.md',
+  Paradox_34: 'Paradox_34_Fine_Tuning_Problem.md',
+  Paradox_35: 'Paradox_35_Measure_Problem_in_Cosmology.md',
+  Paradox_36: 'Paradox_36_Heat_Death_vs_Recurrence.md',
+  Paradox_37: 'Paradox_37_Information_Paradox_(Black_Holes).md',
+  Paradox_38: 'Paradox_38_Firewall_Paradox.md',
+  Paradox_39: 'Paradox_39_ER_equals_EPR.md',
+  Paradox_40: 'Paradox_40_Holographic_Principle.md',
+
+  Paradox_41: 'Paradox_41_Spacetime_Emergence.md',
+  Paradox_42: 'Paradox_42_Cosmic_Censorship.md',
+  Paradox_43: 'Paradox_43_Strong_vs_Weak_Cosmic_Censorship.md',
+  Paradox_44: 'Paradox_44_Singularity_Resolution_(Quantum_Gravity).md',
+  Paradox_45: 'Paradox_45_Bounce_vs_Beginning_(Cosmology).md',
+  Paradox_46: 'Paradox_46_Eternal_Inflation_vs_Finite_Cosmos.md',
+  Paradox_47: 'Paradox_47_Quantum_Creation_vs_Classical_Origin.md',
+  Paradox_48: 'Paradox_48_Vacuum_Selection_vs_Landscape_Degeneracy.md',
+  Paradox_49: 'Paradox_49_Meta_Laws_vs_Lawless_Landscape.md',
+  Paradox_50: 'Paradox_50_Mathematical_Universe_vs_Physical_Universe.md',
+
+    Paradox_51: 'Paradox_51_Computability_vs_Continuum_Reality.md',
+    Paradox_52: 'Paradox_52_Simulation_Hypothesis_vs_Physical_Autonomy.md',
+    Paradox_53: 'Paradox_53_Observer_Dependence_vs_Objective_Reality.md',
+    Paradox_54: 'Paradox_54_Wigners_Friend_vs_Universal_Unitarity.md',
+    Paradox_55: 'Paradox_55_Schrödinger_Evolution_vs_Measurement_Collapse.md',
+    Paradox_56: 'Paradox_56_Decoherence_vs_Classical_Emergence.md',
+    Paradox_57: 'Paradox_57_Quantum_Chaos_vs_Classical_Chaos.md',
+    Paradox_58: 'Paradox_58_Reversibility_vs_Irreversibility.md',
+    Paradox_59: 'Paradox_59_Poincaré_Recurrence_vs_Entropy_Increase.md',
+    Paradox_60: 'Paradox_60_Heat_Death_vs_Eternal_Fluctuations.md',
+
+    Paradox_61: "Paradox_61_Boltzmann_Brains_vs_Cosmological_Coherence.md",
+    Paradox_62: "Paradox_62_Typicality_vs_Anthropic_Selection.md",
+    Paradox_63: "Paradox_63_Measure_Problem_vs_Predictive_Power.md",
+    Paradox_64: "Paradox_64_Eternal_Inflation_vs_Observable_Uniqueness.md",
+    Paradox_65: "Paradox_65_Horizon_Problem_vs_Inflationary_Smoothness.md",
+    Paradox_66: "Paradox_66_Flatness_Problem_vs_Inflationary_Fine_Tuning.md",
+    Paradox_67: "Paradox_67_Baryon_Asymmetry_vs_Symmetric_Laws.md",
+    Paradox_68: "Paradox_68_Neutrino_Mass_vs_Standard_Model_Completeness.md",
+    Paradox_69: "Paradox_69_Hierarchy_Problem_vs_Naturalness.md",
+    Paradox_70: "Paradox_70_Vacuum_Energy_vs_Cosmological_Constant.md",
+
+    Paradox_71: 'Paradox_71_Black_Hole_Information_vs_Unitarity.md',
+    Paradox_72: 'Paradox_72_Firewalls_vs_Smooth_Horizons.md',
+    Paradox_73: 'Paradox_73_Holographic_Encoding_vs_Local_Bulk_Reality.md',
+    Paradox_74: 'Paradox_74_Entanglement_Wedge_Reconstruction_vs_Bulk_Locality.md',
+    Paradox_75: 'Paradox_75_ER_EPR_vs_Classical_Spacetime_Intuition.md',
+    Paradox_76: 'Paradox_76_Quantum_Error_Correction_vs_Physical_Locality.md',
+    Paradox_77: 'Paradox_77_Tensor_Networks_vs_Continuum_Geometry.md',
+    Paradox_78: 'Paradox_78_Discrete_Causality_vs_Lorentz_Invariance.md',
+    Paradox_79: 'Paradox_79_Minimal_Length_vs_Continuous_Fields.md',
+    Paradox_80: "Paradox_80_UV_IR_Mixing_vs_Scale_Separation.md",
+
+  Paradox_81: 'Paradox_81_Running_Couplings_vs_Fixed_Background_Geometry.md',
+  Paradox_82: 'Paradox_82_Background_Independence_vs_Effective_Field_Theory.md',
+  Paradox_83: 'Paradox_83_Semiclassical_Gravity_vs_Quantum_Backreaction.md',
+  Paradox_84: 'Paradox_84_Quantum_State_Reduction_vs_Covariant_Dynamics.md',
+  Paradox_85: 'Paradox_85_Observer_Dependent_Horizons_vs_Objective_Quantum_States.md',
+  Paradox_86: 'Paradox_86_Cosmological_Horizons_vs_Global_Quantum_Coherence.md',
+  Paradox_87: 'Paradox_87_Inflationary_Mode_Freezing_vs_Quantum_Unitarity.md',
+  Paradox_88: 'Paradox_88_Eternal_Inflation_vs_Global_Unitarity.md',
+  Paradox_89: 'Paradox_89_Measure_Problem_vs_Predictive_Probability.md',
+  Paradox_90: 'Paradox_90_Anthropic_Selection_vs_Physical_Explanation.md',
+
+  Paradox_91: 'Paradox_91_Typicality_Assumptions_vs_Observer_Self_Location.md',
+  Paradox_92: 'Paradox_92_Boltzmann_Brains_vs_Cognitive_Typicality.md',
+  Paradox_93: 'Paradox_93_Arrow_of_Time_vs_Time_Symmetric_Laws.md',
+  Paradox_94: 'Paradox_94_Loschmidts_Reversibility_vs_Entropy_Increase.md',
+  Paradox_95: 'Paradox_95_Poincaré_Recurrence_vs_Macroscopic_Irreversibility.md',
+  Paradox_96: 'Paradox_96_Maxwells_Demon_vs_Information_Conservation.md',
+  Paradox_97: 'Paradox_97_Quantum_Eraser_vs_Information_Irreversibility.md',
+  Paradox_98: 'Paradox_98_No_Cloning_vs_Classical_Copying.md',
+  Paradox_99: 'Paradox_99_No_Deleting_vs_Classical_Erasure.md',
+  Paradox_100: 'Paradox_100_No_Hiding_vs_Classical_Forgetting.md',
+
+  Paradox_101: 'Paradox_101_Computational_Irreversibility_vs_Microscopic_Reversibility.md',
+  Paradox_102: 'Paradox_102_Computational_Complexity_vs_Physical_Realizability.md',
+  Paradox_103: 'Paradox_103_Analog_Continuity_vs_Digital_Precision.md',
+  Paradox_104: 'Paradox_104_Chaos_Sensitivity_vs_Predictive_Determinism.md',
+  Paradox_105: 'Paradox_105_Simulation_Accuracy_vs_Physical_Fidelity.md',
+  Paradox_106: 'Paradox_106_Model_Idealization_vs_Physical_Completeness.md',
+  Paradox_107: 'Paradox_107_Reductionism_vs_Emergent_Complexity.md',
+  Paradox_108: 'Paradox_108_Micro_Causality_vs_Macro_Causation.md',
+  Meta_Summary_Paradoxes_101_108: 'Meta_Summary_Paradoxes_101–108.md',
+
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>

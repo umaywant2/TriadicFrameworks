@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/electromagnetism/regimes.md">
+  <title>Regimes — Electromagnetism</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/electromagnetism/regimes.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/electromagnetism/regimes.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="regimes-electromagnetism">Regimes — Electromagnetism</h1>
+<h3 id="triadicframeworks-docstheorieselectromagnetismregimesmd">TriadicFrameworks /docs/theories/electromagnetism/regimes.md</h3>
+<p>Electromagnetism (EM) in TriadicFrameworks is a <strong>field‑coherence
+theory</strong>, not a force‑centric mechanism and not a particle‑first
+narrative.</p>
+<p>EM = <strong>coherent behavior of the electromagnetic field</strong>.<br>
+Maxwell operators = <strong>structural constraints</strong>, not “laws of force.”<br>
+Light = <strong>self‑consistent field propagation</strong>.</p>
+<p>This file defines how EM behaves across RTT regimes (R1 → R3).</p>
+<hr>
+<h1 id="r1-classical-field-stability-regime">R1 — Classical Field Stability Regime</h1>
+<h3 id="static-quasistatic-coherence">(Static + quasi‑static coherence)</h3>
+<p>R1 is the regime where EM fields are <strong>stable, slowly varying, and
+geometry‑compatible</strong>.</p>
+<p>Characteristics:</p>
+<ul>
+<li>∇·E = ρ/ε₀ (divergence‑source relation stable)  </li>
+<li>∇·B = 0 (magnetic coherence constraint)  </li>
+<li>∇×E ≈ 0 (quasi‑static electric field)  </li>
+<li>∇×B ≈ μ₀J (quasi‑static magnetic field)  </li>
+<li>fields respond smoothly to charge/current distributions  </li>
+<li>no wave propagation required  </li>
+<li>no relativistic coupling required  </li>
+</ul>
+<p>R1 supports:</p>
+<ul>
+<li>electrostatics  </li>
+<li>magnetostatics  </li>
+<li>DC circuits  </li>
+<li>static field solvers  </li>
+<li>low‑frequency approximations  </li>
+</ul>
+<p>Coherence in R1 = <strong>divergence stability + curl stability</strong>.</p>
+<hr>
+<h1 id="r2-dynamic-field-propagation-regime">R2 — Dynamic Field Propagation Regime</h1>
+<h3 id="full-maxwell-dynamics">(Full Maxwell dynamics)</h3>
+<p>R2 introduces <strong>time‑varying fields</strong> and <strong>self‑consistent propagation</strong>.</p>
+<p>Characteristics:</p>
+<ul>
+<li>∂E/∂t and ∂B/∂t active  </li>
+<li>∇×E = −∂B/∂t  </li>
+<li>∇×B = μ₀J + μ₀ε₀∂E/∂t  </li>
+<li>wave equation emerges naturally  </li>
+<li>light = self‑coherent field propagation  </li>
+<li>no medium required (no ether metaphors)  </li>
+<li>geometry still classical (flat or weakly curved)  </li>
+</ul>
+<p>R2 supports:</p>
+<ul>
+<li>electromagnetic waves  </li>
+<li>antennas  </li>
+<li>AC circuits  </li>
+<li>optics (classical)  </li>
+<li>radiation and propagation models  </li>
+</ul>
+<p>Coherence in R2 = <strong>dynamic divergence + dynamic curl + propagation
+stability</strong>.</p>
+<hr>
+<h1 id="r3-geometrycoupled-multiscale-field-regime">R3 — Geometry‑Coupled, Multi‑Scale Field Regime</h1>
+<h3 id="relativistic-quantumcompatible-em">(Relativistic + quantum‑compatible EM)</h3>
+<p>R3 is the highest EM regime: <strong>geometry‑coupled, multi‑scale, and
+quantization‑compatible</strong>.</p>
+<p>Characteristics:</p>
+<ul>
+<li>EM fields couple to curvature (GR‑compatible)  </li>
+<li>field tensors replace E/B decomposition  </li>
+<li>invariants (FᵤᵥFᵘᵛ, Fᵤᵥ⋆Fᵘᵛ) become coherence anchors  </li>
+<li>propagation respects spacetime geometry  </li>
+<li>EM integrates with QFT (QED)  </li>
+<li>multi‑scale behavior (classical ↔ quantum)  </li>
+<li>gauge structure explicit (U(1) symmetry)  </li>
+</ul>
+<p>R3 supports:</p>
+<ul>
+<li>relativistic electrodynamics  </li>
+<li>curved‑spacetime EM  </li>
+<li>QED compatibility  </li>
+<li>high‑frequency, high‑energy propagation  </li>
+<li>multi‑scale field analysis  </li>
+</ul>
+<p>Coherence in R3 = <strong>tensor‑level invariance + geometric compatibility +
+gauge stability</strong>.</p>
+<hr>
+<h1 id="regime-transitions">Regime Transitions</h1>
+<h3 id="r1-r2">R1 → R2</h3>
+<ul>
+<li>time‑varying fields activate  </li>
+<li>curl operators become dynamic  </li>
+<li>wave propagation emerges  </li>
+</ul>
+<h3 id="r2-r3">R2 → R3</h3>
+<ul>
+<li>geometry becomes active  </li>
+<li>field tensor replaces E/B split  </li>
+<li>gauge structure becomes explicit  </li>
+</ul>
+<h3 id="r3-r2">R3 → R2</h3>
+<ul>
+<li>geometry weakens  </li>
+<li>tensor reduces to classical Maxwell form  </li>
+</ul>
+<h3 id="r2-r1">R2 → R1</h3>
+<ul>
+<li>time‑variation suppressed  </li>
+<li>quasi‑static approximation valid  </li>
+</ul>
+<p>Transitions must preserve:</p>
+<ul>
+<li>divergence consistency  </li>
+<li>curl consistency  </li>
+<li>source compatibility  </li>
+<li>geometric validity  </li>
+<li>field coherence  </li>
+</ul>
+<hr>
+<h1 id="collapse-modes-em1-em5">Collapse Modes (EM1 → EM5)</h1>
+<ul>
+<li><strong>EM1:</strong> divergence collapse (∇·E or ∇·B invalid)  </li>
+<li><strong>EM2:</strong> curl collapse (∇×E or ∇×B invalid)  </li>
+<li><strong>EM3:</strong> propagation collapse (unstable wave evolution)  </li>
+<li><strong>EM4:</strong> source collapse (invalid charge/current configuration)  </li>
+<li><strong>EM5:</strong> geometry collapse (field‑geometry mismatch)  </li>
+</ul>
+<p>Collapse is structural, not force‑based.</p>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>Electromagnetism across regimes:</p>
+<ul>
+<li><strong>R1:</strong> classical field stability  </li>
+<li><strong>R2:</strong> dynamic field propagation  </li>
+<li><strong>R3:</strong> geometry‑coupled, multi‑scale EM  </li>
+</ul>
+<p>Electromagnetism = <strong>coherent field behavior</strong>, not force.<br>
+Maxwell operators = <strong>structural constraints</strong>, not particle rules.<br>
+Light = <strong>self‑consistent field propagation</strong>.</p>
+  </main>
+</body>
+</html>

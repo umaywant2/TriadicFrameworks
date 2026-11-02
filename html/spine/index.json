@@ -1,0 +1,326 @@
+{
+  "project": "Triadic Languages Atlas — Starter Edition",
+  "version": "1.0.0",
+  "built": "2026-08-14T00:25:00-04:00",
+  "description": "Master index of all 19 language modules organized across three categories: natural spoken languages, symbolic/ancient systems, and programming languages. Each module contains a curated token list and triadic scores across three axes.",
+  "schema": "./schema/triadic_schema.json",
+  "triadic_axes": {
+    "axis_1": {
+      "id": "phonemic",
+      "label": "Phonemic Complexity",
+      "description": "Sound system richness: tone systems, consonant/vowel inventory, prosody, aspiration, retroflex phonemes, phonemic distinctions.",
+      "range": [
+        0,
+        10
+      ],
+      "note": "Programming and pure symbolic languages score 0 on this axis — they have no spoken phonology."
+    },
+    "axis_2": {
+      "id": "lexical",
+      "label": "Lexical Density",
+      "description": "Semantic richness: polysemy, compounding productivity, morphological depth, symbol-to-meaning compression ratio, homoglyph ambiguity.",
+      "range": [
+        0,
+        10
+      ]
+    },
+    "axis_3": {
+      "id": "structural",
+      "label": "Structural Complexity",
+      "description": "Grammar rule complexity: case systems, agreement, word order rigidity, type systems, memory models, root systems.",
+      "range": [
+        0,
+        10
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "spanish",
+      "name": "Spanish",
+      "category": "natural",
+      "file": "./languages/natural/spanish.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 4,
+        "axis_2_lexical": 7,
+        "axis_3_structural": 5,
+        "composite": 5.3
+      }
+    },
+    {
+      "id": "mandarin",
+      "name": "Mandarin Chinese",
+      "category": "natural",
+      "file": "./languages/natural/mandarin.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 7,
+        "axis_2_lexical": 8,
+        "axis_3_structural": 4,
+        "composite": 6.3
+      }
+    },
+    {
+      "id": "arabic",
+      "name": "Arabic (MSA)",
+      "category": "natural",
+      "file": "./languages/natural/arabic.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 8,
+        "axis_2_lexical": 8,
+        "axis_3_structural": 9,
+        "composite": 8.3
+      }
+    },
+    {
+      "id": "hindi",
+      "name": "Hindi",
+      "category": "natural",
+      "file": "./languages/natural/hindi.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 6,
+        "axis_2_lexical": 7,
+        "axis_3_structural": 7,
+        "composite": 6.7
+      }
+    },
+    {
+      "id": "french",
+      "name": "French",
+      "category": "natural",
+      "file": "./languages/natural/french.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 6,
+        "axis_2_lexical": 7,
+        "axis_3_structural": 6,
+        "composite": 6.3
+      }
+    },
+    {
+      "id": "russian",
+      "name": "Russian",
+      "category": "natural",
+      "file": "./languages/natural/russian.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 5,
+        "axis_2_lexical": 7,
+        "axis_3_structural": 9,
+        "composite": 7.0
+      }
+    },
+    {
+      "id": "portuguese",
+      "name": "Portuguese",
+      "category": "natural",
+      "file": "./languages/natural/portuguese.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 5,
+        "axis_2_lexical": 7,
+        "axis_3_structural": 5,
+        "composite": 5.7
+      }
+    },
+    {
+      "id": "japanese",
+      "name": "Japanese",
+      "category": "natural",
+      "file": "./languages/natural/japanese.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 3,
+        "axis_2_lexical": 9,
+        "axis_3_structural": 8,
+        "composite": 6.7
+      }
+    },
+    {
+      "id": "german",
+      "name": "German",
+      "category": "natural",
+      "file": "./languages/natural/german.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 5,
+        "axis_2_lexical": 7,
+        "axis_3_structural": 8,
+        "composite": 6.7
+      }
+    },
+    {
+      "id": "swahili",
+      "name": "Swahili",
+      "category": "natural",
+      "file": "./languages/natural/swahili.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 3,
+        "axis_2_lexical": 6,
+        "axis_3_structural": 8,
+        "composite": 5.7
+      }
+    },
+    {
+      "id": "egyptian_hieroglyphs",
+      "name": "Egyptian Hieroglyphs",
+      "category": "symbolic",
+      "file": "./languages/symbolic/egyptian_hieroglyphs.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 6,
+        "axis_2_lexical": 10,
+        "axis_3_structural": 10,
+        "composite": 8.7
+      }
+    },
+    {
+      "id": "kanji_radicals",
+      "name": "Kanji Radicals",
+      "category": "symbolic",
+      "file": "./languages/symbolic/kanji_radicals.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 8,
+        "axis_2_lexical": 10,
+        "axis_3_structural": 7,
+        "composite": 8.3
+      }
+    },
+    {
+      "id": "runes",
+      "name": "Elder Futhark Runes",
+      "category": "symbolic",
+      "file": "./languages/symbolic/runes.json",
+      "token_count": 24,
+      "triadic": {
+        "axis_1_phonemic": 5,
+        "axis_2_lexical": 9,
+        "axis_3_structural": 6,
+        "composite": 6.7
+      }
+    },
+    {
+      "id": "mathematical_symbols",
+      "name": "Mathematical Symbols",
+      "category": "symbolic",
+      "file": "./languages/symbolic/mathematical_symbols.json",
+      "token_count": 50,
+      "triadic": {
+        "axis_1_phonemic": 1,
+        "axis_2_lexical": 10,
+        "axis_3_structural": 9,
+        "composite": 6.7
+      }
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "programming",
+      "file": "./languages/programming/python.json",
+      "token_count": 35,
+      "triadic": {
+        "axis_1_phonemic": 0,
+        "axis_2_lexical": 6,
+        "axis_3_structural": 7,
+        "composite": 4.3
+      }
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "category": "programming",
+      "file": "./languages/programming/javascript.json",
+      "token_count": 41,
+      "triadic": {
+        "axis_1_phonemic": 0,
+        "axis_2_lexical": 6,
+        "axis_3_structural": 8,
+        "composite": 4.7
+      }
+    },
+    {
+      "id": "c_language",
+      "name": "C Language",
+      "category": "programming",
+      "file": "./languages/programming/c_language.json",
+      "token_count": 41,
+      "triadic": {
+        "axis_1_phonemic": 0,
+        "axis_2_lexical": 5,
+        "axis_3_structural": 9,
+        "composite": 4.7
+      }
+    },
+    {
+      "id": "rust",
+      "name": "Rust",
+      "category": "programming",
+      "file": "./languages/programming/rust.json",
+      "token_count": 44,
+      "triadic": {
+        "axis_1_phonemic": 0,
+        "axis_2_lexical": 7,
+        "axis_3_structural": 10,
+        "composite": 5.7
+      }
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "category": "programming",
+      "file": "./languages/programming/sql.json",
+      "token_count": 51,
+      "triadic": {
+        "axis_1_phonemic": 0,
+        "axis_2_lexical": 5,
+        "axis_3_structural": 8,
+        "composite": 4.3
+      }
+    }
+  ],
+  "stats": {
+    "total_modules": 19,
+    "total_tokens": 886,
+    "by_category": {
+      "natural": {
+        "count": 10,
+        "modules": [
+          "spanish",
+          "mandarin",
+          "arabic",
+          "hindi",
+          "french",
+          "russian",
+          "portuguese",
+          "japanese",
+          "german",
+          "swahili"
+        ]
+      },
+      "symbolic": {
+        "count": 4,
+        "modules": [
+          "egyptian_hieroglyphs",
+          "kanji_radicals",
+          "runes",
+          "mathematical_symbols"
+        ]
+      },
+      "programming": {
+        "count": 5,
+        "modules": [
+          "python",
+          "javascript",
+          "c_language",
+          "rust",
+          "sql"
+        ]
+      }
+    }
+  }
+}

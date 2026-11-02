@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/alphafold_substrate_alignments/drift_detection.md">
+  <title>AlphaFold Substrate Alignments</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/alphafold_substrate_alignments/drift_detection.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/alphafold_substrate_alignments/drift_detection.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="alphafold-substrate-alignments"><em>AlphaFold Substrate Alignments</em></h3>
+<h3 id="drift-detection"><em>Drift Detection</em></h3>
+<p>This document defines the drift‑detection framework for AlphaFold‑class protein‑folding inference systems within the Resonance Substrate Model (RSM) and vST (Validation‑Space‑Time) validation architecture. Drift detection identifies deviations in structural coherence, latent‑space stability, regime behavior, and dimensional‑core alignment that indicate model degradation, dataset shifts, or inference instability.</p>
+<p>The framework is model‑agnostic and applies to any biological inference engine with comparable latent‑space and structural‑output characteristics.</p>
+<hr>
+<h2 id="1-purpose-of-drift-detection"><strong>1. Purpose of Drift Detection</strong></h2>
+<p>Drift detection provides early identification of:</p>
+<ul>
+<li>structural incoherence  </li>
+<li>latent‑space instability  </li>
+<li>regime‑transition anomalies  </li>
+<li>dimensional‑core misalignment  </li>
+<li>inference‑cycle divergence  </li>
+<li>degradation across model versions or datasets  </li>
+</ul>
+<p>Drift signals indicate when substrate alignment or model behavior deviates from expected resonance‑time patterns.</p>
+<hr>
+<h2 id="2-drift-categories"><strong>2. Drift Categories</strong></h2>
+<p>Drift is classified into four categories:</p>
+<ol>
+<li><strong>Structural Drift (D₁)</strong>  </li>
+<li><strong>Latent‑Space Drift (D₂)</strong>  </li>
+<li><strong>Regime Drift (D₃)</strong>  </li>
+<li><strong>Dimensional‑Core Drift (D₄)</strong>  </li>
+</ol>
+<p>Each category corresponds to a specific substrate property.</p>
+<hr>
+<h2 id="3-structural-drift-d1"><strong>3. Structural Drift (D₁)</strong></h2>
+<p>Structural drift occurs when predicted conformations lose geometric coherence.</p>
+<h3 id="indicators"><strong>Indicators:</strong></h3>
+<ul>
+<li>disrupted backbone continuity  </li>
+<li>unstable motif‑level geometry  </li>
+<li>inconsistent residue‑interaction patterns  </li>
+<li>divergence across inference cycles  </li>
+<li>failure to align with the 3D structural core  </li>
+</ul>
+<h3 id="causes-may-include"><strong>Causes may include:</strong></h3>
+<ul>
+<li>degraded input features  </li>
+<li>model‑version changes  </li>
+<li>training‑data shifts  </li>
+</ul>
+<hr>
+<h2 id="4-latentspace-drift-d2"><strong>4. Latent‑Space Drift (D₂)</strong></h2>
+<p>Latent‑space drift occurs when internal representations lose stability.</p>
+<h3 id="indicators_1"><strong>Indicators:</strong></h3>
+<ul>
+<li>inconsistent attention‑map patterns  </li>
+<li>unstable pairwise embeddings  </li>
+<li>shifting latent‑space orientations  </li>
+<li>loss of coherence surfaces  </li>
+<li>increased variance across inference cycles  </li>
+</ul>
+<h3 id="causes-may-include_1"><strong>Causes may include:</strong></h3>
+<ul>
+<li>architectural modifications  </li>
+<li>dataset imbalance  </li>
+<li>inference‑pipeline changes  </li>
+</ul>
+<hr>
+<h2 id="5-regime-drift-d3"><strong>5. Regime Drift (D₃)</strong></h2>
+<p>Regime drift occurs when resonance‑time behavior deviates from expected triadic patterns.</p>
+<h3 id="indicators_2"><strong>Indicators:</strong></h3>
+<ul>
+<li>unexpected transitions between R₁, R₂, and R₃  </li>
+<li>unbounded oscillation in R₂  </li>
+<li>premature collapse into R₃  </li>
+<li>failure to converge into R₁  </li>
+<li>irregular resonance‑time timing  </li>
+</ul>
+<h3 id="causes-may-include_2"><strong>Causes may include:</strong></h3>
+<ul>
+<li>inference‑cycle instability  </li>
+<li>noise amplification  </li>
+<li>degraded MSA or feature quality  </li>
+</ul>
+<hr>
+<h2 id="6-dimensionalcore-drift-d4"><strong>6. Dimensional‑Core Drift (D₄)</strong></h2>
+<p>Dimensional‑core drift occurs when projections into the 3D–9D substrate lose coherence.</p>
+<h3 id="indicators_3"><strong>Indicators:</strong></h3>
+<ul>
+<li>dispersed or distorted projections  </li>
+<li>loss of motif‑level invariants  </li>
+<li>unstable 6D interaction‑core mapping  </li>
+<li>inconsistent 9D pathway‑core alignment  </li>
+<li>failure to preserve substrate invariants  </li>
+</ul>
+<h3 id="causes-may-include_3"><strong>Causes may include:</strong></h3>
+<ul>
+<li>high‑dimensional noise  </li>
+<li>latent‑space collapse  </li>
+<li>model‑version divergence  </li>
+</ul>
+<hr>
+<h2 id="7-driftdetection-workflow"><strong>7. Drift‑Detection Workflow</strong></h2>
+<p>Drift detection proceeds in four steps:</p>
+<ol>
+<li>
+<p><strong>Collect substrate‑aligned inference outputs</strong><br>
+   Structural, latent‑space, and regime‑transition data.</p>
+</li>
+<li>
+<p><strong>Apply vST validation layers (V₁–V₄)</strong><br>
+   Identify failures in structural, latent, regime, or dimensional‑core stability.</p>
+</li>
+<li>
+<p><strong>Classify drift category (D₁–D₄)</strong><br>
+   Based on which validation layers fail.</p>
+</li>
+<li>
+<p><strong>Generate drift‑severity and drift‑location indicators</strong><br>
+   Localize drift to motifs, residues, latent‑space regions, or inference cycles.</p>
+</li>
+</ol>
+<hr>
+<h2 id="8-driftseverity-levels"><strong>8. Drift‑Severity Levels</strong></h2>
+<p>Drift is classified into three severity levels:</p>
+<ul>
+<li><strong>Low:</strong> minor deviations; substrate invariants preserved  </li>
+<li><strong>Moderate:</strong> partial loss of coherence; regime instability  </li>
+<li><strong>High:</strong> structural collapse; substrate alignment invalid  </li>
+</ul>
+<p>Severity informs downstream analysis and model‑version comparison.</p>
+<hr>
+<h2 id="9-outputs-of-drift-detection"><strong>9. Outputs of Drift Detection</strong></h2>
+<p>Drift detection produces:</p>
+<ul>
+<li>drift category (D₁–D₄)  </li>
+<li>drift‑severity level  </li>
+<li>affected substrate axes  </li>
+<li>affected dimensional cores  </li>
+<li>regime‑transition anomalies  </li>
+<li>reproducibility indicators  </li>
+<li>cross‑model comparison metrics  </li>
+</ul>
+<p>These outputs integrate with vST validation layers and support long‑term monitoring of biological inference systems.</p>
+  </main>
+</body>
+</html>

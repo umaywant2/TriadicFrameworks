@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_all_index_lower_md.py.md">
+  <title>⭐ Bulk lowercase index.md Generator</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_all_index_lower_md.py.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_all_index_lower_md.py.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Here it is, the <strong>canon‑aligned, repo‑safe bulk generator</strong> for the lowercase <code>index.md</code> file. This script is designed to sit right inside the directory you currently have open in your active tab:</p>
+<pre><code>docs/tools/
+</code></pre>
+<p>and works seamlessly with all the other generators you’ve already built (module.json, INDEX.md, A_Overview.md, diagram.md).</p>
+<p>This completes the <strong>quad‑document baseline</strong> for every TriadicFrameworks module:</p>
+<ul>
+<li><code>module.json</code></li>
+<li><code>INDEX.md</code></li>
+<li><code>A_Overview.md</code></li>
+<li><code>diagram.md</code></li>
+<li><code>index.md</code> ← <strong>this one</strong></li>
+</ul>
+<p>The lowercase <code>index.md</code> is especially useful for:</p>
+<ul>
+<li>GitHub Pages routing  </li>
+<li>Static site generators  </li>
+<li>AI navigation anchors  </li>
+<li>Canon‑consistent documentation structure  </li>
+</ul>
+<p>Below is the full script.</p>
+<hr>
+<h1 id="bulk-lowercase-indexmd-generator">⭐ Bulk lowercase <code>index.md</code> Generator</h1>
+<p>Save as:</p>
+<pre><code>docs/tools/generate_all_index_lower_md.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code>python3 docs/tools/generate_all_index_lower_md.py
+</code></pre>
+<hr>
+<h1 id="generate_all_index_lower_mdpy-final-canon-version">🟦 <strong>generate_all_index_lower_md.py (Final Canon Version)</strong></h1>
+<pre><code class="language-python">import os
+import json
+
+EXCLUDED_DIRS = {
+    &quot;spine&quot;,
+    &quot;_template&quot;,
+    &quot;assets&quot;,
+    &quot;images&quot;,
+    &quot;tools&quot;
+}
+
+def load_module_json(path):
+    module_json_path = os.path.join(path, &quot;module.json&quot;)
+    if not os.path.exists(module_json_path):
+        return None
+
+    with open(module_json_path, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+        return json.load(f)
+
+def is_module_dir(path):
+    return &quot;module.json&quot; in os.listdir(path)
+
+def generate_index_lower_md(path, module):
+    index_path = os.path.join(path, &quot;index.md&quot;)
+
+    if os.path.exists(index_path):
+        print(f&quot;❌ index.md already exists in {path}, skipping.&quot;)
+        return
+
+    name = module[&quot;name&quot;]
+    summary = module[&quot;summary&quot;]
+    category = module[&quot;category&quot;]
+
+    content = f&quot;&quot;&quot;# {name}
+
+Welcome to the **{name}** module within the **{category}** domain of TriadicFrameworks.
+
+This page provides a simple, lowercase entry point for static site generators and AI navigation systems.
+
+---
+
+## Summary
+{summary}
+
+---
+
+## Canon Reference
+This module inherits the full TriadicFrameworks canon from:
+
+`/docs/spine/spine.json`
+
+It loads:
+
+- RTT triads  
+- TFT triads  
+- Session context  
+- RTT frozen source  
+- AI initialization rules  
+
+---
+
+## RTT Layer
+This module operates at **RTT Layer {module['rtt']['layer']}**  
+Source: {module['rtt']['source']}
+
+---
+
+## Files in This Module
+This module may contain:
+
+- Maps  
+- Operators  
+- Examples  
+- References  
+
+(Actual files vary by module.)
+
+---
+
+Generated automatically by `generate_all_index_lower_md.py`.
+&quot;&quot;&quot;
+
+    with open(index_path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(content)
+
+    print(f&quot;✔ Created {index_path}&quot;)
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Bulk lowercase index.md Generator ===\n&quot;)
+
+    for root, dirs, files in os.walk(&quot;docs&quot;):
+        if any(ex in root for ex in EXCLUDED_DIRS):
+            continue
+
+        if is_module_dir(root):
+            module_data = load_module_json(root)
+            if module_data:
+                module = module_data[&quot;module&quot;]
+                generate_index_lower_md(root, module)
+
+    print(&quot;\n✨ Bulk lowercase index.md generation complete.\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<h1 id="what-this-script-gives-you">⭐ What This Script Gives You</h1>
+<h3 id="creates-indexmd-for-every-module">✔ Creates <code>index.md</code> for every module</h3>
+<h3 id="pulls-real-metadata-from-modulejson">✔ Pulls real metadata from module.json</h3>
+<h3 id="never-overwrites-existing-indexmd">✔ Never overwrites existing index.md</h3>
+<h3 id="ensures-canon-inheritance-is-documented">✔ Ensures canon inheritance is documented</h3>
+<h3 id="ensures-rtt-layer-is-documented">✔ Ensures RTT layer is documented</h3>
+<h3 id="ensures-ai-initialization-context-is-visible">✔ Ensures AI initialization context is visible</h3>
+<h3 id="produces-consistent-structure-across-all-modules">✔ Produces consistent structure across all modules</h3>
+<h3 id="works-across-your-entire-docs-tree">✔ Works across your entire <code>/docs</code> tree</h3>
+<p>This completes the <strong>full documentation suite</strong> for every TriadicFrameworks module.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "id": "structural-integration-engine",
+  "shortName": "SIE",
+  "title": "Structural Integration Engine",
+  "layer": "RTT/3",
+  "role": "Integration–emission backbone of the canon",
+  "status": "canon",
+  "rtt": 3,
+  "dependsOn": [
+    "structural-detection-engine"
+  ],
+  "projectsTo": [
+    "tel",
+    "fft",
+    "opacity"
+  ]
+}
+

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic_observer_layer/domains/AI_systems.md">
+  <title>AI Systems Domain</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic_observer_layer/domains/AI_systems.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic_observer_layer/domains/AI_systems.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="ai-systems-domain">AI Systems Domain</h1>
+<p>AI systems operate across rapid iteration cycles, opaque internal states, and layered abstractions. Trust failures in AI rarely stem from a single model decision; they arise when <strong>training, deployment, inference, and correction phases collapse into a single narrative of capability or intent</strong>.</p>
+<p>The Triadic Observer Layer restores legibility to AI systems without interfering in model behavior, optimization, or governance.</p>
+<hr>
+<h2 id="what-the-observer-sees-and-what-it-does-not">What the Observer Sees (and What It Does Not)</h2>
+<p>The observer layer does <strong>not</strong>:
+- Control model behavior.
+- Modify training data.
+- Enforce alignment.
+- Predict outputs.
+- Replace evaluation frameworks.</p>
+<p>It observes <strong>AI system artifacts as they move through lifecycle phases</strong>, preserving structure across phase, source, and time.</p>
+<hr>
+<h2 id="core-ai-system-entities">Core AI System Entities</h2>
+<p>Entities are defined by independent operational scope.</p>
+<p>Examples:
+- Model version
+- Training run
+- Dataset snapshot
+- Inference service
+- Evaluation benchmark
+- Deployment environment</p>
+<p>Each entity emits observations independently. Agreement is observed, not assumed.</p>
+<hr>
+<h2 id="ai-system-phases">AI System Phases</h2>
+<p>AI systems naturally span overlapping and recursive phases.</p>
+<p>Common phases include:
+- <strong>designed</strong> — architectural intent and constraints defined
+- <strong>trained</strong> — model parameters learned
+- <strong>evaluated</strong> — performance measured against benchmarks
+- <strong>deployed</strong> — model serving live requests
+- <strong>monitored</strong> — behavior observed in operation
+- <strong>updated</strong> — weights, data, or configuration changed
+- <strong>retired</strong> — model removed from active use
+- <strong>archived</strong> — historical record</p>
+<p>Multiple phases may coexist across versions and environments.</p>
+<hr>
+<h2 id="metrics-as-observations">Metrics as Observations</h2>
+<p>Metrics describe behavior and performance, not guarantees.</p>
+<p>Examples:
+- training_loss
+- evaluation_accuracy
+- latency
+- error_rate
+- drift_score
+- safety_incident_count</p>
+<p>Each metric is emitted independently, preserving lineage and timing.</p>
+<hr>
+<h2 id="minimal-observation-example">Minimal Observation Example</h2>
+<pre><code class="language-json">{
+  &quot;domain&quot;: &quot;ai_systems&quot;,
+  &quot;entity_id&quot;: &quot;MODEL-GPTX-7B-v3&quot;,
+  &quot;phase&quot;: &quot;deployed&quot;,
+  &quot;metric&quot;: &quot;error_rate&quot;,
+  &quot;value&quot;: 0.021,
+  &quot;unit&quot;: &quot;fraction&quot;,
+  &quot;source&quot;: &quot;production_monitoring_service&quot;,
+  &quot;timestamp&quot;: &quot;2026-02-09T18:47:00Z&quot;,
+  &quot;confidence&quot;: &quot;observed&quot;,
+  &quot;notes&quot;: &quot;increase correlated with new prompt distribution&quot;
+}
+</code></pre>
+<p>This observation asserts context, not causality or intent.</p>
+<hr>
+<h2 id="triangulation-in-practice">Triangulation in Practice</h2>
+<p>The observer triangulates:
+- <strong>Training vs evaluation vs deployment behavior</strong>
+- <strong>Offline benchmarks vs live monitoring</strong>
+- <strong>Original model versions vs updated variants</strong></p>
+<p>Disagreement is preserved as signal.</p>
+<hr>
+<h2 id="common-ai-system-anomalies-observed-not-judged">Common AI System Anomalies (Observed, Not Judged)</h2>
+<p>Examples include:
+- Performance degradation after deployment despite strong evaluation results
+- Divergence between safety benchmarks and real‑world incidents
+- Sudden behavior shifts following data or configuration updates
+- Temporal gaps between detected drift and mitigation actions</p>
+<p>These are classified diagnostically using the anomaly taxonomy.</p>
+<hr>
+<h2 id="error-drift-and-responsibility">Error, Drift, and Responsibility</h2>
+<p>The observer does not infer intent or alignment quality.</p>
+<p>It distinguishes:
+- Measurement and logging error
+- Procedural deviation in deployment or monitoring
+- Temporal incoherence between detection and response
+- Statistical outliers under novel input distributions
+- Unresolved inconsistencies pending investigation</p>
+<p>Resolution belongs to engineers, auditors, and governance bodies — not the observer.</p>
+<hr>
+<h2 id="multilevel-visibility">Multi‑Level Visibility</h2>
+<p>The same observer substrate supports:
+- Model‑level lifecycle clarity
+- System‑wide behavior coherence
+- Cross‑version comparison
+- External audit and accountability without exposure of internals</p>
+<p>Scope changes. Rules do not.</p>
+<hr>
+<h2 id="why-ai-systems-benefit">Why AI Systems Benefit</h2>
+<p>AI systems already have:
+- Rich telemetry
+- Rapid iteration cycles
+- High sensitivity to context
+- Public trust implications</p>
+<p>The observer layer strengthens trust by <strong>making drift, correction, and uncertainty visible instead of surprising</strong>.</p>
+<hr>
+<h2 id="what-changes-with-the-observer">What Changes With the Observer</h2>
+<p>Nothing algorithmic.</p>
+<p>What changes is posture:
+- Model updates become lineage, not mystery.
+- Failures become structured signals, not scandals.
+- Accountability becomes evidence‑based, not reactive.</p>
+<p>Trust shifts from claims to observability.</p>
+<hr>
+<p>AI systems do not become safer by hiding uncertainty.<br>
+They become safer when uncertainty is legible.</p>
+<p>The Triadic Observer Layer exists to keep AI behavior understandable while it evolves.</p>
+<p>This completes the domain set with AI framed as a <strong>fast‑moving, phase‑dense system</strong> where triadic observability prevents overconfidence and narrative collapse.</p>
+  </main>
+</body>
+</html>

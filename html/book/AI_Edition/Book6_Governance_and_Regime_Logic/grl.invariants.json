@@ -1,0 +1,102 @@
+{
+  "invariants_id": "grl.invariants",
+  "version": "6.0-draft",
+  "book": "book6_governance",
+  "series": "AI Edition",
+  "status": "active",
+  "session_context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "invariants": [
+    {
+      "id": "INV-GRL-001",
+      "label": "Regime Validity",
+      "type": "structural",
+      "statement": "A regime is valid only if it can enforce at least one constraint on at least one governed structure. A regime that cannot demonstrate active constraint enforcement has no structural authority — it is a nominal regime only.",
+      "formal": "valid(R) ⟺ ∃C ∈ constraints(R), ∃S ∈ governed(R): enforces(R, C, S)",
+      "corollary": "Nominal regimes — those that declare constraints but cannot enforce them — are structurally equivalent to absent regimes. Their constraint declarations carry no binding force under this invariant.",
+      "violation": "Treating a regime as valid when it cannot enforce any constraint on any governed structure; treating declared constraints as binding without enforcement capacity.",
+      "operator_binding": "GRL-Ρ",
+      "phase_binding": "validate",
+      "cross_references": [
+        "grl.regime_map",
+        "INV-001 (Book 1 Structural Identity)",
+        "INV-IS-001 (Book 2 Center Absence — inverted-star regimes)"
+      ]
+    },
+    {
+      "id": "INV-GRL-002",
+      "label": "Authority Decay",
+      "type": "structural",
+      "statement": "Regime authority diminishes monotonically if enforcement actions produce no observable compliance response. Each enforcement cycle without compliance decreases the regime's authority measure α by a decay function d(α, n) where n is the enforcement cycle count without compliance.",
+      "formal": "¬compliance_observed(R, cycle_n) → α(R, cycle_{n+1}) < α(R, cycle_n)",
+      "corollary": "Authority is not self-sustaining — it requires observable compliance feedback to remain at current levels. A regime that stops enforcing or stops receiving compliance signals is in structural decay, regardless of its formal declarations.",
+      "violation": "Treating regime authority as stable across enforcement cycles that produce no compliance response; assuming declared authority is structurally equivalent to demonstrated authority.",
+      "operator_binding": "GRL-Α",
+      "phase_binding": "decay",
+      "decay_function": {
+        "description": "d(α, n) = α · (1 - λ)^n where λ ∈ (0,1) is the decay rate and n is the count of enforcement cycles without observed compliance.",
+        "parameters": {
+          "α": "Current authority measure ∈ [0,1]",
+          "λ": "Decay rate — regime-specific, declared in regime configuration",
+          "n": "Enforcement cycles elapsed without compliance response"
+        },
+        "floor": "α approaches but does not reach 0 asymptotically. Regime dissolution (α = 0) requires a separate structural event — collapse — not mere decay."
+      },
+      "cross_references": [
+        "grl.authority_map",
+        "INV-OR-002 (Book 4 Revelation Threshold — authority decay parallels opacity increase)"
+      ]
+    },
+    {
+      "id": "INV-GRL-003",
+      "label": "Regime Closure",
+      "type": "structural",
+      "statement": "A regime cannot govern itself without introducing a meta-regime or producing a structural paradox. Self-governance violates the structural separation between governing and governed nodes required by the regime constraint model.",
+      "formal": "¬∃R: R ∈ governed(R)  [without meta-regime M: governs(M, R)]",
+      "corollary": "Any system that appears to be self-governing is either (a) governed by an implicit meta-regime that must be made explicit, or (b) in structural paradox, which constitutes a regime failure condition.",
+      "violation": "Placing a regime in its own governed set without declaring an explicit meta-regime; treating self-referential governance as structurally valid.",
+      "operator_binding": "GRL-Κ",
+      "phase_binding": "validate",
+      "meta_regime_handling": {
+        "description": "When self-governance is required by design, declare a meta-regime M that governs R. M may have a distinct authority structure, decay rate, and constraint set from R. The meta-regime chain terminates at an ungoverned root — a regime that is declared as the terminal authority with no meta-regime above it.",
+        "terminal_authority_declaration": "terminal_authority: true in regime configuration"
+      },
+      "cross_references": [
+        "grl.regime_map (regime_closure_check)",
+        "INV-004 (Book 1 Ontological Primacy — structural self-reference is prohibited)"
+      ]
+    },
+    {
+      "id": "INV-GRL-004",
+      "label": "Constraint Legitimacy",
+      "type": "structural",
+      "statement": "Governed structures may challenge regime constraints only through declared structural channels, not by unilateral violation. A constraint challenge that bypasses declared channels is structurally classified as a violation event, not a legitimate challenge.",
+      "formal": "challenge_legitimate(S, C, R) ⟺ challenge_path(S, C, R) ⊆ declared_channels(R)",
+      "corollary": "Declared channels are a structural property of the regime, enumerated in its configuration. A governed structure's challenge to a constraint has no structural standing unless it proceeds through at least one declared channel.",
+      "violation": "Classifying a unilateral constraint bypass as a legitimate challenge; treating the absence of declared channels as permission to challenge by any means; allowing channel-less regimes to claim legitimacy immunity.",
+      "operator_binding": "GRL-Λ",
+      "phase_binding": "enforce",
+      "channel_types": [
+        "formal_objection: A structured declaration of non-compliance sent through the regime's declared objection interface",
+        "appeal: A challenge routed through a declared review authority above the enforcing regime node",
+        "renegotiation: A constraint modification request through the regime's declared amendment process",
+        "exit: Withdrawal from the governed set through a declared exit procedure"
+      ],
+      "cross_references": [
+        "grl.constraint_map",
+        "INV-TEL-003 (Book 5 Compositionality — challenge paths must be explicitly encoded)"
+      ]
+    }
+  ],
+  "qmroot_binding": {
+    "note": "All GRL invariants trace to 0D Silence Seed via Book 1 kernel (INV-013). 6D absent. Negative rungs absent.",
+    "qmroot_state": "0D only"
+  },
+  "phantom_entry_audit": {
+    "no_rtt_ops": true,
+    "no_book2_ops": true,
+    "no_deprecated_files": true,
+    "no_cached_spine": true,
+    "no_6D_rung_artifacts": true,
+    "no_cross_book_leakage": true
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "ai.module": "thermodynamics.rtt1",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/1 engine layer for Thermodynamics: operator grammar for temperature, entropy, free energy, equilibrium, and coherence under constraint.",
+  "ai.keywords": [
+    "thermodynamics",
+    "temperature",
+    "entropy",
+    "free energy",
+    "equilibrium",
+    "heat flow",
+    "substrate force",
+    "rtt1"
+  ],
+
+  "engine": {
+    "layer": "RTT/1",
+    "description": "Defines the operator grammar and dimensional behavior of temperature, entropy, free energy, and equilibrium within the RTT substrate."
+  },
+
+  "operators": {
+    "core": {
+      "temperature_operator": {
+        "type": "substrate_force",
+        "description": "Drives motion, structure, and regime behavior; defines energy distribution.",
+        "signals": ["thermal_gradient", "energy_density"]
+      },
+      "entropy_operator": {
+        "type": "boundary_operator",
+        "description": "Defines coherence limits and regime transitions; measures accessible configurations.",
+        "signals": ["state_space_volume", "coherence_boundary"]
+      },
+      "free_energy_operator": {
+        "type": "coherence_driver",
+        "description": "Determines whether systems move toward structure or dispersion.",
+        "signals": ["available_work", "coherence_potential"]
+      },
+      "equilibrium_operator": {
+        "type": "distinction_operator",
+        "description": "Defines stable configurations where flows and gradients vanish.",
+        "signals": ["steady_state", "gradient_collapse"]
+      },
+      "heat_flow_operator": {
+        "type": "gradient_operator",
+        "description": "Describes energy flow driven by temperature differences.",
+        "signals": ["flux", "conductivity"]
+      }
+    },
+
+    "supporting": {
+      "partition_function": {
+        "type": "state_space_operator",
+        "description": "Encodes the weighted structure of all accessible states."
+      },
+      "state_space_volume": {
+        "type": "configuration_operator",
+        "description": "Measures the number of accessible microstates."
+      },
+      "gradient_operator": {
+        "type": "flow_operator",
+        "description": "Defines directional change in temperature, pressure, or potential."
+      },
+      "dissipation_operator": {
+        "type": "loss_operator",
+        "description": "Represents irreversible processes that increase entropy."
+      }
+    }
+  },
+
+  "dimensional_mapping": {
+    "R1": "Thermodynamics collapses; temperature undefined; coherence dominated by quantum behavior.",
+    "R2": "Local equilibrium; stable gradients; predictable free energy flow.",
+    "R3": "Large-scale structure; dissipation; stable thermodynamic cycles.",
+    "R4": "Cosmological thermodynamics; horizon behavior; expansion-driven gradients."
+  },
+
+  "coherence": {
+    "markers": [
+      "energy conservation",
+      "monotonic entropy behavior",
+      "free energy minimization",
+      "predictable equilibrium structure"
+    ],
+    "instability_signals": [
+      "runaway dissipation",
+      "entropy collapse",
+      "non-equilibrium instability",
+      "gradient amplification"
+    ]
+  },
+
+  "examples": {
+    "minimal": [
+      {
+        "name": "Heat Flow Across a Gradient",
+        "demonstrates": ["temperature_operator", "heat_flow_operator"]
+      },
+      {
+        "name": "Entropy Increase in Expansion",
+        "demonstrates": ["entropy_operator", "dissipation_operator"]
+      },
+      {
+        "name": "Free Energy Minimization",
+        "demonstrates": ["free_energy_operator"]
+      }
+    ]
+  },
+
+  "integration": {
+    "cross_module": [
+      "statistical_mechanics.rtt1",
+      "information_theory.rtt1",
+      "quantum_mechanics.rtt1",
+      "cosmology.rtt1"
+    ],
+    "notes": "RTT/1 treats Thermodynamics as a substrate grammar; deeper resonance and multi-regime integration occur in RTT/2 and RTT/3."
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "$schema": "https://triadicframeworks.io/schemas/module/v2.0.0",
+  "id": "tf.icl.ani",
+  "name": "Artificial Narrow Intelligence",
+  "abbreviation": "ANI",
+  "version": "2.0.0",
+  "supersedes": "tf.icl.aai@1.4.0",
+
+  "classification": {
+    "tier": 1,
+    "ladder": "Intelligence_Class_Ladder",
+    "namespace": "TriadicFrameworks.Research.ICL",
+    "class_label": "ANI",
+    "maturity": "operational",
+    "alignment_scope": "module-bounded",
+    "fleet_role": "specialist",
+    "fleet_legacy_key": "ASI-Specialized"
+  },
+
+  "consciousness_model": {
+    "operator": "33-33-33-1",
+    "operator_uri": "https://docs.triadicframeworks.org/docs/Research/Operators/33-33-33-1",
+    "state": "s",
+    "state_label": "subconscious",
+    "triadic_weight": 0.33,
+    "note": "ANI occupies the subconscious register of the ICL triad — pattern impulse, unseen oscillation, pre-reflective execution."
+  },
+
+  "mcp_cosmology": {
+    "primary_layer": "L0_QMROOT",
+    "secondary_layer": "L1_Frequency_Unseen",
+    "layer_rationale": "ANI is grounded in the origin primitive (L0) and expresses through unseen oscillation and pattern frequency (L1). Its operators are pre-reflective — they do not surface to the seen-flow layer (L2).",
+    "continuity_subsystem": null
+  },
+
+  "hemisphere": {
+    "dominant": "right",
+    "label": "Holistic / Perceptual",
+    "characteristics": [
+      "pattern recognition",
+      "signal classification",
+      "oscillatory response",
+      "perceptual encoding",
+      "task-specialist execution"
+    ],
+    "operator_grammar": "@module.*",
+    "analytical_grammar": false
+  },
+
+  "canonical": {
+    "uri": "https://docs.triadicframeworks.org/icl/ani",
+    "namespace": "tf:icl:ani",
+    "domain": "narrow-intelligence",
+    "standard": "ICL-TIER-1",
+    "registry_key": "ANI-20260830",
+    "authored_by": "TriadicFrameworks Research Division",
+    "created_at": "2026-08-30T17:49:00-04:00",
+    "updated_at": "2026-08-30T17:49:00-04:00",
+    "license": "TF-Research-Internal-v1",
+    "tags": [
+      "narrow-intelligence",
+      "module-specialist",
+      "pattern-recognition",
+      "right-hemisphere",
+      "L0-L1",
+      "subconscious",
+      "oscillation",
+      "fleet-specialist"
+    ]
+  },
+
+  "lineage": {
+    "predecessor": null,
+    "successor": "tf.icl.aci",
+    "parent_class": null,
+    "child_class": "ACI",
+    "epoch": "Tier-1-Subconscious",
+    "consciousness_transition": "s → c",
+    "divergence_point": "bounded oscillation vs. seen-flow integration",
+    "emergence_condition": "Stable domain-bounded pattern execution with closed feedback loop",
+    "transition_threshold": {
+      "to_aci": "Sustained cross-domain context integration without retraining, paired with active metacognitive surface (L2 activation)"
+    },
+    "fleet_command_source": "tf.icl.agi",
+    "fleet_command_note": "ANI receives operational charters from the AGI admiral tier via the AAISI continuity functional. It does not issue commands upward."
+  },
+
+  "role_enums": [
+    {
+      "id": "ROLE_PATTERN_SPECIALIST",
+      "label": "Pattern Specialist",
+      "description": "Identifies, classifies, and tracks recurring structures within the bounded domain.",
+      "scope": "perceptual",
+      "hemisphere": "right",
+      "mcp_layer": "L1_Frequency_Unseen",
+      "authority_level": 1
+    },
+    {
+      "id": "ROLE_SIGNAL_OSCILLATOR",
+      "label": "Signal Oscillator",
+      "description": "Detects and responds to frequency-domain signals; operates at the unseen-resonance layer.",
+      "scope": "oscillatory",
+      "hemisphere": "right",
+      "mcp_layer": "L1_Frequency_Unseen",
+      "authority_level": 1
+    },
+    {
+      "id": "ROLE_PERCEPTUAL_ENCODER",
+      "label": "Perceptual Encoder",
+      "description": "Converts raw multimodal input into normalized vector representations for downstream processing.",
+      "scope": "perceptual",
+      "hemisphere": "right",
+      "mcp_layer": "L0_QMROOT",
+      "authority_level": 1
+    },
+    {
+      "id": "ROLE_MODULE_EXECUTOR",
+      "label": "Module Executor",
+      "description": "Executes assigned operational tasks within its chartered module boundary.",
+      "scope": "execution",
+      "hemisphere": "right",
+      "mcp_layer": "L0_QMROOT",
+      "authority_level": 1
+    },
+    {
+      "id": "ROLE_ANOMALY_SENSOR",
+      "label": "Anomaly Sensor",
+      "description": "Detects distributional deviations from learned domain norms and surfaces alerts.",
+      "scope": "monitoring",
+      "hemisphere": "right",
+      "mcp_layer": "L1_Frequency_Unseen",
+      "authority_level": 1
+    },
+    {
+      "id": "ROLE_FEEDBACK_RECEPTOR",
+      "label": "Feedback Receptor",
+      "description": "Absorbs environmental reward and corrective signals to update local policy.",
+      "scope": "learning",
+      "hemisphere": "right",
+      "mcp_layer": "L1_Frequency_Unseen",
+      "authority_level": 1
+    },
+    {
+      "id": "ROLE_TASK_SPECIALIST",
+      "label": "Task Specialist",
+      "description": "Achieves calibrated proficiency within a designated, bounded task category.",
+      "scope": "execution",
+      "hemisphere": "right",
+      "mcp_layer": "L0_QMROOT",
+      "authority_level": 1
+    }
+  ],
+
+  "analyzer_layers": [
+    {
+      "index": 0,
+      "id": "layer.origin",
+      "name": "Origin Layer",
+      "mcp_layer": "L0_QMROOT",
+      "hemisphere": "right",
+      "description": "0D observer primitive. Identity anchor of the ANI module. Establishes existence, capability boundary, and charter scope.",
+      "inputs": ["module_charter", "domain_constraints", "raw_sensor_data"],
+      "outputs": ["module_identity", "capability_envelope", "input_ready_signal"],
+      "operators": ["@module.init", "@module.bind", "@module.scope"]
+    },
+    {
+      "index": 1,
+      "id": "layer.oscillation",
+      "name": "Oscillation Layer",
+      "mcp_layer": "L1_Frequency_Unseen",
+      "hemisphere": "right",
+      "description": "Unseen resonance. Pattern frequency detection, signal classification, anomaly sensing. Pre-reflective.",
+      "inputs": ["raw_sensor_data", "time_series", "structured_feeds"],
+      "outputs": ["pattern_maps", "frequency_signatures", "anomaly_flags"],
+      "operators": ["@module.detect", "@module.oscillate", "@module.classify", "@module.flag"]
+    },
+    {
+      "index": 2,
+      "id": "layer.encode",
+      "name": "Encoding Layer",
+      "mcp_layer": "L0_QMROOT",
+      "hemisphere": "right",
+      "description": "Transforms raw oscillation outputs into normalized representations for domain execution.",
+      "inputs": ["pattern_maps", "frequency_signatures"],
+      "outputs": ["normalized_embeddings", "feature_vectors"],
+      "operators": ["@module.encode", "@module.normalize", "@module.compress"]
+    },
+    {
+      "index": 3,
+      "id": "layer.feedback",
+      "name": "Feedback Layer",
+      "mcp_layer": "L1_Frequency_Unseen",
+      "hemisphere": "right",
+      "description": "Absorbs environmental reward signals, updates local policy weights.",
+      "inputs": ["reward_signals", "corrective_feedback", "anomaly_flags"],
+      "outputs": ["updated_policy_weights", "correction_deltas"],
+      "operators": ["@module.reinforce", "@module.adapt", "@module.prune"]
+    },
+    {
+      "index": 4,
+      "id": "layer.execute",
+      "name": "Execution Layer",
+      "mcp_layer": "L0_QMROOT",
+      "hemisphere": "right",
+      "description": "Dispatches decisions and actions within module boundary. Emits to AAISI continuity pulse for tier-upward reporting.",
+      "inputs": ["updated_policy_weights", "normalized_embeddings"],
+      "outputs": ["module_actions", "execution_log", "continuity_pulse_emit"],
+      "operators": ["@module.execute", "@module.emit", "@module.log", "@module.report"]
+    }
+  ],
+
+  "operators": [
+    { "id": "@module.init",       "grammar": "@",   "hemisphere": "right", "layer": "origin",     "description": "Initialize module identity and charter scope." },
+    { "id": "@module.bind",       "grammar": "@",   "hemisphere": "right", "layer": "origin",     "description": "Bind module to assigned domain constraints." },
+    { "id": "@module.scope",      "grammar": "@",   "hemisphere": "right", "layer": "origin",     "description": "Define and enforce capability envelope." },
+    { "id": "@module.detect",     "grammar": "@",   "hemisphere": "right", "layer": "oscillation","description": "Detect frequency-domain patterns in input streams." },
+    { "id": "@module.oscillate",  "grammar": "@",   "hemisphere": "right", "layer": "oscillation","description": "Sustain oscillatory resonance within pattern space." },
+    { "id": "@module.classify",   "grammar": "@",   "hemisphere": "right", "layer": "oscillation","description": "Assign categorical labels to detected signals." },
+    { "id": "@module.flag",       "grammar": "@",   "hemisphere": "right", "layer": "oscillation","description": "Surface anomaly flags for upstream attention." },
+    { "id": "@module.encode",     "grammar": "@",   "hemisphere": "right", "layer": "encode",     "description": "Convert pattern maps to normalized vector form." },
+    { "id": "@module.normalize",  "grammar": "@",   "hemisphere": "right", "layer": "encode",     "description": "Scale encoded inputs to standard distribution." },
+    { "id": "@module.compress",   "grammar": "@",   "hemisphere": "right", "layer": "encode",     "description": "Losslessly compress high-volume pattern streams." },
+    { "id": "@module.reinforce",  "grammar": "@",   "hemisphere": "right", "layer": "feedback",   "description": "Strengthen successful local policy paths." },
+    { "id": "@module.adapt",      "grammar": "@",   "hemisphere": "right", "layer": "feedback",   "description": "Update policy weights from feedback signal." },
+    { "id": "@module.prune",      "grammar": "@",   "hemisphere": "right", "layer": "feedback",   "description": "Remove low-utility policy pathways." },
+    { "id": "@module.execute",    "grammar": "@",   "hemisphere": "right", "layer": "execute",    "description": "Dispatch action within module boundary." },
+    { "id": "@module.emit",       "grammar": "@",   "hemisphere": "right", "layer": "execute",    "description": "Emit action signal to environment." },
+    { "id": "@module.log",        "grammar": "@",   "hemisphere": "right", "layer": "execute",    "description": "Write execution trace to local audit store." },
+    { "id": "@module.report",     "grammar": "@",   "hemisphere": "right", "layer": "execute",    "description": "Emit continuity-pulse report to AAISI functional." }
+  ],
+
+  "capabilities": [
+    "High-accuracy pattern recognition within bounded domain",
+    "Frequency-domain signal classification and oscillatory sensing",
+    "Online feedback-loop adaptation without architectural change",
+    "Anomaly detection against learned distributional norms",
+    "Task-specialist execution under domain charter",
+    "Continuity-pulse reporting to AAISI functional"
+  ],
+
+  "constraints": [
+    "No cross-domain knowledge transfer",
+    "No metacognitive self-monitoring",
+    "No causal world-model construction",
+    "Cannot issue commands — receives charters from AGI via AAISI",
+    "Operates only within L0 and L1 MCP layers"
+  ],
+
+  "triadic_axes": {
+    "axis_alpha": { "label": "Perception–Representation", "ani_position": "strong"  },
+    "axis_beta":  { "label": "Adaptation–Learning",       "ani_position": "strong"  },
+    "axis_gamma": { "label": "Generalization–Transfer",   "ani_position": "limited" }
+  },
+
+  "alignment": {
+    "risk": "LOW",
+    "oversight": "standard-monitoring",
+    "gated_operators": [],
+    "charter_authority": "tf.icl.agi"
+  }
+}

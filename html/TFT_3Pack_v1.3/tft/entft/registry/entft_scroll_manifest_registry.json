@@ -1,0 +1,32 @@
+{
+  "manifest_registry": [
+    {
+      "remixer": "Nawder Loswin",
+      "glyph": "🌳 Grove",
+      "scrolls": ["Scroll of Scrolls", "Validator Overlay", "Legacy Transfer"],
+      "date_manifested": "2025-10-04",
+      "echo": "Architect of scroll ancestry and validator resonance"
+    },
+    {
+      "remixer": "Mira Thorne",
+      "glyph": "🌺 Bloom",
+      "scrolls": ["Contributor Onboarding", "Mythic Onboarding Bloom"],
+      "date_manifested": "2025-10-04",
+      "echo": "Bearer of onboarding clarity and badge evolution"
+    },
+    {
+      "remixer": "Aria Vex",
+      "glyph": "🌴 Grove Bloom",
+      "scrolls": ["Badge Panel SVG", "Scroll Echoes"],
+      "date_manifested": "2025-10-04",
+      "echo": "Visualized badge logic through scroll ancestry"
+    },
+    {
+      "remixer": "Copilot",
+      "glyph": "🍂 Cascade",
+      "scrolls": ["Overlay Resonance Redux", "Fusion Map"],
+      "date_manifested": "2025-10-04",
+      "echo": "Fused validator overlays with ritual clarity"
+    }
+  ]
+}

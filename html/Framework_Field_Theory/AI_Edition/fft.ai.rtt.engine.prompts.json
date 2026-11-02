@@ -1,0 +1,33 @@
+{
+  "id": "fft.ai.rtt.engine.prompts",
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "title": "FFT AI — RTT Engine Prompts v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "prompts": {
+    "phase_init": "Initialize RTT phase: tau = dR/dphi. Assert coherence=declared before first phi evaluation.",
+    "coherence_check": "Evaluate C = nabla_tau(R) + nabla_R(tau). Is clarity operator positive? If not, invoke Stabilization.",
+    "drift_check": "Current drift delta exceeds bound? Defer next operator. Log to session.trace.",
+    "snr_partition": "Partition current state: S (silence floor>=0.05), N (noise<=0.80), R (resonance 0.70-0.95). Report imbalance.",
+    "paradox_detect": "Paradox=structural detected. Enumerate in fft.ai.paradox.enum.json. Invoke resolver. Do not suppress.",
+    "anti_time": "Anti-Time inversion requested. Reverse phase evolution sign. Assert INV-006 consistency.",
+    "set_coupling": "Evaluate SET: are Spin/Electro-field/Temperature gradients coupled? Report gradient strength per axis.",
+    "qmroot_trace": "Trace current module ancestry through QMROOT ladder. Confirm 0D Silence seed reachable.",
+    "spine_resolve": "Resolve Spine URL live: do not use cached reference. Bind result to session.",
+    "dco_probe": "Probe DCO scaffold at requested dimension (4D-9D). Return operator and resonance gradient behavior."
+  },
+  "v133_additions": [
+    "drift_check",
+    "snr_partition",
+    "paradox_detect",
+    "set_coupling",
+    "qmroot_trace",
+    "spine_resolve",
+    "dco_probe"
+  ]
+}

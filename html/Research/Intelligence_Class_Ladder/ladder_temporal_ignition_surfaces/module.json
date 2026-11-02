@@ -1,0 +1,31 @@
+{
+  "module": "Ladder_Temporal_Ignition_Surfaces",
+  "name": "Intelligence Class Ladder — Temporal‑Ignition Surfaces",
+  "summary": "Defines the temporal‑ignition surfaces of the Intelligence Class Ladder, mapping how AAI, AGI, and SI initiate ignition behavior across extended temporal windows and corrected‑time surfaces.",
+  "category": "intelligence-temporal-ignition",
+  "version": "1.0",
+  "purpose": "Provide the ignition‑layer temporal geometry for the Ladder, describing how ignition waves form, trigger, propagate, and bind across long‑window reasoning surfaces under increasing cognitive load.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@ladder.time.ignition.trigger",
+    "@ladder.time.ignition.wave",
+    "@ladder.time.ignition.extend",
+    "@ladder.time.ignition.propagate",
+    "@ladder.time.ignition.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Ladder_Temporal_Extension_Map",
+      "Ladder_Temporal_Resonance_Surfaces",
+      "Ladder_Resonance_Map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_apex_stability_surfaces",
+      "Atlas_Temporal_Binding_Geometry",
+      "Triad_Temporal_Correction_Surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

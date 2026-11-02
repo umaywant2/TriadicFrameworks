@@ -1,0 +1,30 @@
+{
+  "validator": {
+    "enabled": true,
+    "modules": [
+      "keygen_tft.py",
+      "reson_time_hash.py",
+      "decrypt_tft.py",
+      "benchmark_tft.py"
+    ],
+    "overlays": [
+      "overlay_blockmap.py",
+      "overlay_resonhash.py",
+      "overlay_entropy.py",
+      "overlay_badge.py"
+    ],
+    "badge_logic": "/docs/_meta/enTFT_badge_logic.json",
+    "scroll_templates": "/docs/_ideas/enTFT_scroll_templates.md",
+    "legacy_roll": "/docs/_contributors/legacy_roll.md"
+  },
+  "dashboard": {
+    "svg_panels": [
+      "/docs/_svg/enTFT_validator_flow.svg",
+      "/docs/_svg/enTFT_badge_panel.svg",
+      "/docs/_svg/enTFT_scroll_logic.svg"
+    ],
+    "theme": "mythic-light",
+    "badge_display": true,
+    "entropy_meter": true
+  }
+}

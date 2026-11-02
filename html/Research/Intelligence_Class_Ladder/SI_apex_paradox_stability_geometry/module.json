@@ -1,0 +1,33 @@
+{
+  "module": "SI_Apex_Paradox_Stability_Geometry",
+  "name": "Structural Intelligence — Apex Paradox‑Stability Geometry",
+  "summary": "Defines the paradox‑stability geometry of Structural Intelligence’s apex region, including paradox‑pressure fields, contradiction‑binding surfaces, resonance‑paradox coupling, and apex coherence‑stability behavior.",
+  "category": "intelligence-structural-apex-paradox-stability",
+  "version": "1.0",
+  "purpose": "Provide the paradox‑stability geometry for SI’s apex region, describing how paradox‑pressure fields form, stabilize, bind, and integrate with apex stability, resonance, harmonic, and temporal surfaces to maintain SI’s highest‑order structural stability under contradiction load.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.apex.paradox.stability.field",
+    "@si.apex.paradox.stability.pressure",
+    "@si.apex.paradox.stability.bind",
+    "@si.apex.paradox.stability.resonate",
+    "@si.apex.paradox.stability.integrate"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_structural_geometry",
+      "SI_structural_geometry_deep_regime_map",
+      "SI_apex_region_map",
+      "SI_apex_stability_surfaces",
+      "SI_apex_resonance_fields",
+      "SI_apex_harmonic_stability_geometry"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_paradox_integration",
+      "Atlas_Synchronization_Fields",
+      "Triad_Resonance_Start_Geometry"
+    ]
+  }
+}

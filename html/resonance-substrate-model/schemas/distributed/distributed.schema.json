@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Distributed Layer Schema",
+  "description": "Defines multi-agent, networked, and system-of-systems structures for the Resonance Substrate Model (RSM). Includes agents, networks, communication channels, and distributed-layer coupling used in coherence and alignment simulations.",
+
+  "type": "object",
+
+  "properties": {
+    "agent": {
+      "type": "object",
+      "description": "A distributed-layer entity capable of interaction, communication, and resonance alignment.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the agent."
+        },
+        "role": {
+          "type": "string",
+          "description": "Functional role of the agent within the distributed system."
+        },
+        "state": {
+          "type": "object",
+          "description": "Arbitrary key-value state attributes for the agent.",
+          "additionalProperties": {
+            "type": ["string", "number", "boolean", "object", "array"]
+          }
+        },
+        "position": {
+          "type": "array",
+          "description": "Optional spatial position of the agent (if spatialized).",
+          "items": { "type": "number" },
+          "minItems": 1
+        }
+      },
+      "required": ["id"]
+    },
+
+    "network": {
+      "type": "object",
+      "description": "Defines the network topology connecting distributed agents.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["graph", "mesh", "tree", "ring", "fully_connected", "custom"],
+          "description": "Network topology type."
+        },
+        "edges": {
+          "type": "array",
+          "description": "Connections between agents.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source": { "type": "string" },
+              "target": { "type": "string" },
+              "weight": {
+                "type": "number",
+                "description": "Optional connection strength."
+              }
+            },
+            "required": ["source", "target"]
+          }
+        }
+      },
+      "required": ["type"]
+    },
+
+    "communication": {
+      "type": "object",
+      "description": "Defines communication channels and message-passing rules.",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["broadcast", "unicast", "multicast", "gossip", "local"],
+          "description": "Communication mode."
+        },
+        "latency": {
+          "type": "number",
+          "description": "Message latency in arbitrary units."
+        },
+        "bandwidth": {
+          "type": "number",
+          "description": "Maximum message throughput."
+        }
+      }
+    },
+
+    "distributed_coupling": {
+      "type": "object",
+      "description": "Defines how distributed agents couple to the resonance substrate.",
+      "properties": {
+        "strength": {
+          "type": "number",
+          "description": "Coupling strength between distributed agents and substrate fields."
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["synchronous", "asynchronous", "event_driven"],
+          "description": "Coupling update mode."
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for documentation, provenance, or schema evolution.",
+      "version": "1.0.0",
+      "notes": "Initial seed release",
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Schema version identifier."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Freeform notes or comments."
+        }
+      }
+    }
+  },
+
+  "required": ["agent", "network"]
+}

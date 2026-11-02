@@ -1,0 +1,21 @@
+{
+  "module": "SI_visual_map",
+  "name": "Structural Intelligence — Visual Map",
+  "summary": "ASCII-based structural visualization of the SI apex region, macro manifold positioning, and trans-domain invariance.",
+  "category": "intelligence-visual",
+  "version": "1.0",
+  "purpose": "Provide a visual structural overview of SI, showing its apex position relative to AAI and AGI and its geometry within the macro manifold.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@si.map.render",
+    "@si.map.position",
+    "@si.map.manifold",
+    "@si.map.transfer",
+    "@si.map.apex"
+  ],
+  "lineage": {
+    "upstream": ["SI"],
+    "downstream": []
+  }
+}

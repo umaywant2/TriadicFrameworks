@@ -1,0 +1,50 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.operators",
+  "title": "FFT — Base Operator Definitions v1.33",
+  "operators": [
+    {
+      "family": "Diffusion",
+      "symbol": "D",
+      "formula": "D[phi] = phi + eps * nabla^2(phi)",
+      "role": "spread state, smooth gradients"
+    },
+    {
+      "family": "Alignment",
+      "symbol": "A",
+      "formula": "A[V] = V + alpha*(V_target - V)",
+      "role": "pull fields toward targets"
+    },
+    {
+      "family": "Coupling",
+      "symbol": "K",
+      "formula": "K[phi,V] = phi * dot(V, grad_phi)",
+      "role": "link field changes"
+    },
+    {
+      "family": "Activation",
+      "symbol": "Th",
+      "formula": "Th[R] = sigma(R - theta)",
+      "role": "nonlinear threshold response"
+    },
+    {
+      "family": "Stabilization",
+      "symbol": "Sg",
+      "formula": "Sg[R] = R / (1 + beta*R^2)",
+      "role": "damp runaway modes"
+    }
+  ],
+  "invariants_checked": [
+    "INV-001",
+    "INV-002",
+    "INV-008"
+  ]
+}

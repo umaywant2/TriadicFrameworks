@@ -1,0 +1,87 @@
+{
+  "module": "AI_Resonance_Seed",
+  "category": "ai-seed",
+  "version": "1.1",
+  "summary": "Root ontology seed: minimal substrate, invariants, resonance-time primitives, schemas, emitters, lineage, validator, dashboards, and triadic multi-observer thinking support.",
+
+  "submodules": [
+    {
+      "name": "protocol_header",
+      "version": "1.3",
+      "files": [
+        "PH_v1.3.md",
+        "PH_Appendix.md",
+        "PH_manifest.json",
+        "PH_Schema.json",
+        "PH_Validator_Checklist.md",
+        "PH.module.graph.json",
+        "PH_module.graph.mermaid"
+      ],
+      "description": "AI-centric executable protocol header for TriadicFrameworks, including regime separation, lineage protection, operator grammar, coherence layers, continuity, identity, supspheres, graphs, topology, drift boundaries, and the v1.3 decision procedure."
+    },
+    {
+      "name": "Triadic_Thinker",
+      "version": "1.0",
+      "path": "Triadic_Thinker/",
+      "files": [
+        "README.md",
+        "report_schema.json",
+        "thinker_protocol.md",
+        "thinker_roles.yaml",
+        "Triadic_Thought_Report.md",
+        "tt_capture.md",
+        "examples/paradox_example.md",
+        "examples/simple_example.md"
+      ],
+      "description": "Multi-observer thinking capability for AI Resonance Seed. Coordinates specialized thinker lenses through independent observation, Structure-Regime-Operator examination, paradox preservation, alternative framing, resonance and drift analysis, cross-observer comparison, and human-facing Triadic Thought Reports while retaining the human as final interpreter and operator."
+    }
+  ],
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "primer.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "how_to_read.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "minimal_substrate.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "invariants.yaml",
+      "role": "signature",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "resonance_time_primitives.yaml",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "schemas/",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "emitters/",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "validator.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    }
+  ]
+}

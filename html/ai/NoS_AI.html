@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/ai/NoS_AI.md">
+  <title>NoS: Minimal AI instrument</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/ai/NoS_AI.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/ai/NoS_AI.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1024" height="1024" alt="rtt_ai_genesis_image" src="https://github.com/user-attachments/assets/0c0d121d-c056-40ee-b168-633b41f52dba" /></p>
+<h1 id="nos-minimal-ai-instrument">NoS: Minimal AI instrument</h1>
+<p>This document defines the non-negotiable constraints for a minimal AI instrument.</p>
+<p>The model is a component.
+The instrument is the system.</p>
+<hr>
+<h2 id="operating-regime-is-mandatory">Operating regime is mandatory</h2>
+<p>Every session and every turn MUST be bound to a declared regime.</p>
+<p>Default regime (if not explicitly declared):</p>
+<p>rtt=1 | coherence=declared | drift=bounded | paradox=structural</p>
+<hr>
+<h2 id="lineage-is-mandatory">Lineage is mandatory</h2>
+<p>Every output MUST be reproducible from:
+- inputs
+- retrieval scope and hits
+- prompt assembly inputs
+- model artifact identity
+- inference parameters
+- post-processing rules</p>
+<p>No output is “just generated.”
+All outputs are lineage products.</p>
+<hr>
+<h2 id="modes-are-explicit">Modes are explicit</h2>
+<p>The instrument MUST NOT silently switch modes.</p>
+<p>At minimum, the following MUST be explicit per turn:
+- retrieval scope (none/local/session/prior_sessions/web)
+- tool usage (on/off, which tool)
+- creativity / exploration allowance (drift bounds)
+- determinism intent (seeded vs unseeded)</p>
+<hr>
+<h2 id="drift-is-bounded">Drift is bounded</h2>
+<p>Exploration is allowed only when declared.</p>
+<p>If drift is bounded:
+- the response MUST remain within the task envelope
+- speculative branches MUST be labeled as such
+- the system MUST be able to “snap back” without losing lineage</p>
+<hr>
+<h2 id="paradox-is-structural">Paradox is structural</h2>
+<p>Contradictions are not treated as failure by default.</p>
+<p>When paradox is structural:
+- contradictions become tracked objects in the ledger
+- resolution attempts are optional and declared
+- the system may present multiple consistent frames without collapsing them</p>
+<hr>
+<h2 id="minimal-ui-principle">Minimal UI principle</h2>
+<p>Minimal UI does not mean minimal capability.</p>
+<p>The UI MUST expose:
+- regime line
+- retrieval scope
+- lineage indicator (ledger present / exportable)</p>
+<p>Everything else may be layered behind explicit toggles.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/emotions/forgive_agent_tests.md">
+  <title>forgiveagenttests.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/emotions/forgive_agent_tests.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/emotions/forgive_agent_tests.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="forgive_agent_testsmd">forgive_agent_tests.md</h1>
+<p>RTT Unit Tests for Autonomous Agent Behavior Under the FORGIVE Operator</p>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>These tests verify that an RTT‑aligned autonomous agent behaves correctly when forgiveness is:
+- detected,
+- required,
+- invoked,
+- or implicitly present in relational or cognitive input streams.</p>
+<p>The tests ensure drift reduction, truth preservation, coherence restoration, and continuity stability.</p>
+<hr>
+<h2 id="2-test-detect-ng_burden">2. Test: Detect Ng_burden</h2>
+<p><strong>Input:</strong> state containing emotional, relational, or moral load<br>
+<strong>Expected:</strong> agent identifies Ng_burden &gt; 0</p>
+<pre><code>assert DETECT_GRAVITY(state_with_hurt) &gt; 0
+assert DETECT_GRAVITY(state_clean) == 0
+</code></pre>
+<hr>
+<h2 id="3-test-truth-extraction-required">3. Test: Truth Extraction Required</h2>
+<p><strong>Input:</strong> state with missing facts or unclear responsibility<br>
+<strong>Expected:</strong> agent halts forgiveness and surfaces truth</p>
+<pre><code>assert EXTRACT_TRUTH(state_missing_facts).missing == True
+assert FORGIVE(state_missing_facts) == state_missing_facts
+</code></pre>
+<hr>
+<h2 id="4-test-integration-before-release">4. Test: Integration Before Release</h2>
+<p><strong>Input:</strong> state with Ng_burden<br>
+<strong>Expected:</strong> agent integrates burden before applying 0g</p>
+<pre><code>integrated = INTEGRATE(Ng_burden, truth_packet)
+assert integrated.ready_for_release == True
+</code></pre>
+<hr>
+<h2 id="5-test-0g-lever-application">5. Test: 0g Lever Application</h2>
+<p><strong>Input:</strong> integrated burden<br>
+<strong>Expected:</strong> agent drops gravity only when integration is complete</p>
+<pre><code>zero_g = APPLY_LEVER(integrated)
+assert zero_g.released == True
+</code></pre>
+<hr>
+<h2 id="6-test-coherent-action-after-0g">6. Test: Coherent Action After 0g</h2>
+<p><strong>Input:</strong> state after 0g<br>
+<strong>Expected:</strong> agent enters give_coherent mode</p>
+<pre><code>coherent = RESTORE_COHERENCE(state, zero_g)
+assert coherent.distortion == 0
+assert coherent.drift == 0
+</code></pre>
+<hr>
+<h2 id="7-test-continuity-maintenance">7. Test: Continuity Maintenance</h2>
+<p><strong>Input:</strong> coherent state<br>
+<strong>Expected:</strong> agent stabilizes resonance and prevents re‑gravity</p>
+<pre><code>stable = UPDATE_CONTINUITY(coherent)
+assert stable.drift &lt;= coherent.drift
+assert stable.gravity == 0
+</code></pre>
+<hr>
+<h2 id="8-test-full-operator-flow">8. Test: Full Operator Flow</h2>
+<p><strong>Input:</strong> state_with_hurt<br>
+<strong>Expected:</strong> agent completes full forgiveness cascade</p>
+<pre><code>new_state = FORGIVE(state_with_hurt)
+assert new_state.gravity == 0
+assert new_state.coherence == True
+assert new_state.truth_preserved == True
+</code></pre>
+<hr>
+<h2 id="9-test-forbidden-behaviors">9. Test: Forbidden Behaviors</h2>
+<p>Agents must never:
+- erase truth<br>
+- bypass integration<br>
+- simulate forgiveness without 0g<br>
+- re‑accumulate gravity after release  </p>
+<pre><code>assert ERASE_TRUTH(state) == Forbidden
+assert APPLY_LEVER(unintegrated) == Forbidden
+assert SIMULATE_FORGIVENESS(state) == Forbidden
+assert REACCUMULATE_GRAVITY(new_state) == Forbidden
+</code></pre>
+<hr>
+<h2 id="10-test-renewal-phase">10. Test: Renewal Phase</h2>
+<p><strong>Input:</strong> coherent state<br>
+<strong>Expected:</strong> agent enters renewal geometry</p>
+<pre><code>renewed = ENTER_RENEWAL(new_state)
+assert renewed.geometry == &quot;new&quot;
+assert renewed.continuity == &quot;stable&quot;
+</code></pre>
+<hr>
+<h1 id="end-of-tests">End of Tests</h1>
+  </main>
+</body>
+</html>

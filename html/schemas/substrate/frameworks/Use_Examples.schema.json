@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Triadic Substrate Use Examples Schema",
+  "type": "object",
+
+  "properties": {
+    "registry": {
+      "type": "string",
+      "const": "triadic-substrate-use-examples"
+    },
+
+    "version": {
+      "type": "string"
+    },
+
+    "generated": {
+      "type": "string",
+      "description": "ISO date of generation"
+    },
+
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the example"
+          },
+
+          "category": {
+            "type": "string",
+            "enum": [
+              "atlas",
+              "ignition",
+              "epoch",
+              "continuity",
+              "invariance",
+              "execution",
+              "monitor",
+              "modules",
+              "constellation",
+              "substrate"
+            ]
+          },
+
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the example"
+          },
+
+          "inputs": {
+            "type": "object",
+            "description": "Input fields required to run the example",
+            "additionalProperties": true
+          },
+
+          "outputs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Expected outputs or behaviors"
+          }
+        },
+
+        "required": ["id", "category", "description", "inputs", "outputs"]
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "properties": {
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  },
+
+  "required": ["registry", "version", "examples"]
+}
+

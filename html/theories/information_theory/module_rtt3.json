@@ -1,0 +1,116 @@
+{
+  "ai.module": "information_theory.rtt3",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/3 engine layer for Information Theory: triadic-substrate integration, multi-regime simulation hooks, distinction-resonance mapping, and hybrid-canon scaffolding.",
+  "ai.keywords": [
+    "information",
+    "entropy",
+    "mutual information",
+    "codes",
+    "channels",
+    "substrate",
+    "resonance",
+    "rtt3"
+  ],
+
+  "engine": {
+    "layer": "RTT/3",
+    "description": "Integrates Information Theory into the triadic substrate, enabling multi-regime reasoning, distinction propagation, and hybrid-canon simulation."
+  },
+
+  "substrate_integration": {
+    "mapping": {
+      "structure": "Distinctions map to substrate state separations; entropy reflects distribution over these separations.",
+      "behavior": "Information flow emerges from resonance alignment between constraints and channel structure.",
+      "capacity": "Channel capacity corresponds to stable resonance bandwidth under substrate invariants."
+    },
+    "constraints": [
+      "Distinctions require stable substrate separations.",
+      "Noise arises from substrate-level perturbations.",
+      "Propagation speed and bandwidth are substrate invariants."
+    ]
+  },
+
+  "multi_regime": {
+    "R0": {
+      "behavior": "Pure distinctions; information defined without physical substrate.",
+      "notes": "Entropy and codes exist as abstract operators."
+    },
+    "R1": {
+      "behavior": "Primitive channels; minimal carriers and noise.",
+      "notes": "Distinction propagation weak; noise dominates."
+    },
+    "R2": {
+      "behavior": "Physical, biological, or computational implementations of codes and channels.",
+      "notes": "Stable distinction propagation emerges."
+    },
+    "R3": {
+      "behavior": "Complex multi-channel systems with robust error correction and redundancy.",
+      "notes": "High-coherence information resonance."
+    }
+  },
+
+  "lineage": {
+    "tracking": [
+      "distinction_history",
+      "code_evolution",
+      "channel_stability",
+      "entropy_flow"
+    ],
+    "effects": [
+      "stabilizes long-term information patterns",
+      "reveals hidden structure in signals",
+      "reduces apparent randomness",
+      "enables cross-regime coherence"
+    ]
+  },
+
+  "simulation": {
+    "hooks": [
+      {
+        "name": "distinction_resonance_sim",
+        "description": "Simulates how distinctions propagate across channels under substrate constraints."
+      },
+      {
+        "name": "entropy_flow_sim",
+        "description": "Models entropy gradients as resonance flows between uncertainty and constraint."
+      },
+      {
+        "name": "code_stability_sim",
+        "description": "Simulates how redundancy and error correction stabilize information across noisy regimes."
+      }
+    ],
+    "notes": "Simulations operate on distinctions, constraints, and resonance patterns, not on physical substrates unless specified."
+  },
+
+  "hybrid_canon": {
+    "interfaces": [
+      "thermodynamics.rtt3",
+      "evolutionary_biology.rtt3",
+      "computation.rtt3",
+      "quantum_mechanics.rtt3"
+    ],
+    "purpose": "Enable agentic AIs to reason across physics, biology, and computation using shared informational invariants.",
+    "scaffolding": [
+      "triadic substrate mapping",
+      "multi-regime coherence",
+      "distinction-resonance integration",
+      "entropy-constraint coupling"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "stable distinction preservation",
+      "bounded noise",
+      "predictable entropy gradients",
+      "consistent channel capacity"
+    ],
+    "failure_modes": [
+      "noise overwhelming signal",
+      "loss of distinctions",
+      "channel collapse",
+      "overcompression"
+    ]
+  }
+}

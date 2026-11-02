@@ -1,0 +1,14 @@
+<!-- docs/badges/readme-first.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="32" role="img" aria-label="README First">
+  <title>README First</title>
+  <rect width="140" height="32" rx="6" fill="#00796b"/>
+  <g fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, sans-serif">
+    <!-- Document icon -->
+    <path d="M20 10h12l4 4v12H20z" fill="#b2dfdb"/>
+    <rect x="23" y="14" width="10" height="2" fill="#00796b"/>
+    <rect x="23" y="18" width="10" height="2" fill="#00796b"/>
+    <rect x="23" y="22" width="7" height="2" fill="#00796b"/>
+    <rect x="40" y="8" width="1" height="16" fill="#80cbc4" opacity="0.8"/>
+    <text x="48" y="21" font-size="14" font-weight="600" letter-spacing="0.2">README First</text>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+{
+  "entity": "Crystalline Entity",
+  "substrate": "Atomic / Lattice-structured",
+  "regimes": [
+    {
+      "name": "Arrival",
+      "dimensional_access": "0D → 1D",
+      "signature": "Nucleation",
+      "description": "Seed crystal forms; lattice anchors.",
+      "key_operators": ["Initialization", "Boundary-forming", "Substrate anchoring"]
+    },
+    {
+      "name": "Expansion",
+      "dimensional_access": "1D → 2D",
+      "signature": "Growth",
+      "description": "Lattice propagation; environmental patterning.",
+      "key_operators": ["Pattern acquisition", "Regime scanning", "Stability-seeking"]
+    },
+    {
+      "name": "Inversion",
+      "dimensional_access": "2D → 1D collapse / 3D emergence",
+      "signature": "Fracture or phase shift",
+      "description": "Thermal, mechanical, or quantum inversion event.",
+      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
+    },
+    {
+      "name": "Coherence",
+      "dimensional_access": "3D stabilized",
+      "signature": "Stable lattice",
+      "description": "Long-term structural coherence; minimal entropy.",
+      "key_operators": ["Integration", "Regime navigation", "Self-structuring"]
+    },
+    {
+      "name": "Dissolution",
+      "dimensional_access": "3D → 0D",
+      "signature": "Melting or sublimation",
+      "description": "Lattice unbinding; return to atomic substrate.",
+      "key_operators": ["Unbinding", "Return", "Substrate release"]
+    }
+  ]
+}

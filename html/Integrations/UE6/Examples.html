@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Integrations/UE6/Examples.md">
+  <title>UE6 Examples</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Integrations/UE6/Examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Integrations/UE6/Examples.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="ue6-examples">UE6 Examples</h1>
+<p><strong>RTT / Integrations / UE6</strong></p>
+<p>This file provides minimal, student‑ready examples showing how RTT operators, invariants, resonance metrics, and entropy signatures are used inside Unreal Engine 6.<br>
+All examples are cross‑scale, operator‑first, and aligned with the UE6 Operator Map.</p>
+<hr>
+<h2 id="1-vr-in-a-ue6-blueprint">1. φ–V–R in a UE6 Blueprint</h2>
+<p><strong>Goal:</strong> Apply φ (emergence) and V (variance) to a dynamic mesh and visualize R (resonance) in real time.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Add an <code>RTTComponent</code> to any Actor.  </li>
+<li>In the Event Graph:<br>
+<code>Event Tick
+       → RTT_PhiField (Mesh)
+       → RTT_VarianceStabilizer (Lumen)
+       → RTT_ResonanceProbe (MetaSounds)</code></li>
+<li>Connect <code>ResonanceProbe → EnvelopeValue</code> to a material parameter.  </li>
+<li>Observe resonance spikes as the mesh deforms.</li>
+</ol>
+<p><strong>Concepts Demonstrated:</strong><br>
+- φ emergence field<br>
+- variance stabilization<br>
+- resonance envelope extraction  </p>
+<hr>
+<h2 id="2-resonancedriven-lighting-lumen-20">2. Resonance‑Driven Lighting (Lumen 2.0)</h2>
+<p><strong>Goal:</strong> Use resonance amplitude to modulate Lumen GI intensity.</p>
+<p><strong>Blueprint:</strong></p>
+<pre><code>RTT_ResonanceProbe
+    → GetResonanceAmplitude
+    → SetLumenGIIntensity
+</code></pre>
+<p><strong>Effect:</strong><br>
+High resonance → brighter GI<br>
+Low resonance → darker GI  </p>
+<p><strong>Concepts Demonstrated:</strong><br>
+- resonance → lighting coupling<br>
+- harmonic propagation → GI modulation  </p>
+<hr>
+<h2 id="3-entropy-boundary-visualization-world-partition-2">3. Entropy Boundary Visualization (World Partition 2)</h2>
+<p><strong>Goal:</strong> Visualize entropy collapse zones as the player moves through a streaming world.</p>
+<p><strong>C++ Snippet:</strong></p>
+<pre><code class="language-cpp">FRTTEntropySignature Sig = RTT_TraceEntropy(WorldContext);
+DrawDebugSphere(GetWorld(), Sig.Location, Sig.Radius, 32, FColor::Red);
+</code></pre>
+<p><strong>Concepts Demonstrated:</strong><br>
+- entropy flow<br>
+- collapse signatures<br>
+- spatial entropy gradients  </p>
+<hr>
+<h2 id="4-crossscale-resonance-alignment">4. Cross‑Scale Resonance Alignment</h2>
+<p><strong>Goal:</strong> Align Nanite (geometry), Lumen (lighting), and MetaSounds (audio) using RTT’s resonance metrics.</p>
+<p><strong>Blueprint Flow:</strong></p>
+<pre><code>RTT_ResonanceProbe
+    → ResonanceValue
+        → NaniteDetailMultiplier
+        → LumenIntensity
+        → MetaSoundsHarmonicDrive
+</code></pre>
+<p><strong>Concepts Demonstrated:</strong><br>
+- multi‑system resonance alignment<br>
+- cross‑scale propagation<br>
+- harmonic → geometric → lighting coupling  </p>
+<hr>
+<h2 id="5-hybrid-operator-example-futureready">5. Hybrid Operator Example (Future‑Ready)</h2>
+<p><strong>Goal:</strong> Demonstrate a hybrid operator bridging classical + spectral behavior.</p>
+<p><strong>Blueprint:</strong></p>
+<pre><code>RTT_HybridOperator
+    Inputs:
+        - PhiField
+        - ResonanceEnvelope
+    Output:
+        - HybridState
+</code></pre>
+<p><strong>Use Case:</strong><br>
+Drive a simulation layer effect (e.g., particle coherence) based on hybrid operator output.</p>
+<p><strong>Concepts Demonstrated:</strong><br>
+- hybrid operator bridge<br>
+- multi‑regime evaluation<br>
+- spectral → classical transitions  </p>
+<hr>
+<h2 id="6-editor-tool-example-resonancefield-visualizer">6. Editor Tool Example: Resonance‑Field Visualizer</h2>
+<p><strong>Goal:</strong> Visualize resonance fields directly in the UE6 editor.</p>
+<p><strong>Editor Script (Python):</strong></p>
+<pre><code class="language-python">from RTTTools import visualize_resonance
+
+actor = get_selected_actor()
+visualize_resonance(actor)
+</code></pre>
+<p><strong>Concepts Demonstrated:</strong><br>
+- editor‑level diagnostics<br>
+- resonance field overlays<br>
+- operator‑timeline debugging  </p>
+<hr>
+<h2 id="status">Status</h2>
+<p>Active, stable, and aligned with the 2026 RTT Integrations standard.<br>
+These examples form the baseline for all UE6 operator demonstrations.</p>
+  </main>
+</body>
+</html>

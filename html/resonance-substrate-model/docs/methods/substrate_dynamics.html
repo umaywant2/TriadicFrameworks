@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/resonance-substrate-model/docs/methods/substrate_dynamics.md">
+  <title>Substrate Dynamics</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/resonance-substrate-model/docs/methods/substrate_dynamics.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/resonance-substrate-model/docs/methods/substrate_dynamics.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="substrate-dynamics">Substrate Dynamics</h1>
+<p>Substrate dynamics describe how triadic fields evolve over time through the application of operators, boundary conditions, and integration schemes. This unified version merges early conceptual notes with the newer structured scaffolding.</p>
+<hr>
+<h1 id="quicklinks">Quicklinks</h1>
+<ul>
+<li><a href="../README.html">docs README</a></li>
+<li><a href="../api/integration_examples.html">docs api integration examples</a></li>
+<li><a href="../api/README.html">docs api README</a></li>
+<li><a href="../api/schema_overview.html">docs api schema overview</a></li>
+<li><a href="../api/using_the_schemas.html">docs api using the schemas</a></li>
+<li><a href="../experiments/faraday_paradox_experiment.html">docs experiments faraday paradox experiment</a></li>
+<li><a href="../experiments/README.html">docs experiments README</a></li>
+<li><a href="../experiments/replication_checklist.html">docs experiments replication checklist</a></li>
+<li><a href="../experiments/resonance_alignment_tests.html">docs experiments resonance alignment tests</a></li>
+<li><a href="../experiments/rotating_conductor_tests.html">docs experiments rotating conductor tests</a></li>
+<li><a href="dimensional_layers.html">docs methods dimensional layers</a></li>
+<li><a href="field_equations.html">docs methods field equations</a></li>
+<li><a href="operator_definitions.html">docs methods operator definitions</a></li>
+<li><a href="README.html">docs methods README</a></li>
+<li><a href="triadic_fields.html">docs methods triadic fields</a></li>
+<li><a href="../onboarding/model_map.html">docs onboarding model map</a></li>
+<li><a href="../onboarding/reading_guide.html">docs onboarding reading guide</a></li>
+<li><a href="../onboarding/triadic_quickstart.html">docs onboarding triadic quickstart</a></li>
+<li><a href="../onboarding/verification_tests.html">docs onboarding verification tests</a></li>
+<li><a href="../overview/comparison_to_gr_models.html">docs overview comparison to gr models</a></li>
+<li><a href="../overview/glossary.html">docs overview glossary</a></li>
+<li><a href="../overview/introduction.html">docs overview introduction</a></li>
+<li><a href="../overview/README.html">docs overview README</a></li>
+<li><a href="../overview/resonance_primitives.html">docs overview resonance primitives</a></li>
+<li><a href="../overview/theoretical_background.html">docs overview theoretical background</a></li>
+<li><a href="../simulations/boundary_conditions.html">docs simulations boundary conditions</a></li>
+<li><a href="../simulations/numerical_methods.html">docs simulations numerical methods</a></li>
+<li><a href="../simulations/README.html">docs simulations README</a></li>
+<li><a href="../simulations/solver_architecture.html">docs simulations solver_architecture</a></li>
+<li><a href="../simulations/validation_metrics.html">docs simulations validation metrics</a></li>
+<li><a href="../simulations/core/README.html">docs simulations core README</a></li>
+<li><a href="../">previous folder</a></li>
+</ul>
+<hr>
+<h2 id="1-evolution-framework">1. Evolution Framework</h2>
+<p>Field evolution follows a general update rule:</p>
+<ol>
+<li>Apply operators  </li>
+<li>Integrate in time  </li>
+<li>Enforce boundaries  </li>
+<li>Record diagnostics  </li>
+</ol>
+<p>This loop continues until termination criteria are met.</p>
+<hr>
+<h2 id="2-operator-application">2. Operator Application</h2>
+<p>Operators act on fields in a defined sequence or composition:</p>
+<ul>
+<li><strong>diffusion</strong> smooths scalar and vector fields  </li>
+<li><strong>alignment</strong> drives directional coherence  </li>
+<li><strong>coupling</strong> links fields across layers  </li>
+<li><strong>resonance activation</strong> triggers envelope dynamics  </li>
+<li><strong>decay</strong> stabilizes the system  </li>
+</ul>
+<p>Operator composition may be linear, nonlinear, or gated by resonance conditions.</p>
+<hr>
+<h2 id="3-time-integration">3. Time Integration</h2>
+<p>The substrate supports multiple integration schemes:</p>
+<ul>
+<li>explicit Euler (rapid prototyping)  </li>
+<li>Runge–Kutta (higher stability)  </li>
+<li>semi-implicit methods (stiff operators)  </li>
+</ul>
+<p>Timestep selection respects stability constraints such as CFL conditions.</p>
+<hr>
+<h2 id="4-boundary-conditions">4. Boundary Conditions</h2>
+<p>Boundary handlers enforce:</p>
+<ul>
+<li>Dirichlet conditions (fixed values)  </li>
+<li>Neumann conditions (fixed gradients)  </li>
+<li>periodic boundaries (looped domains)  </li>
+<li>custom experimental boundaries (e.g., rotating-frame transforms)  </li>
+</ul>
+<p>Boundaries are applied after operator updates to maintain physical consistency.</p>
+<hr>
+<h2 id="5-stability-and-control">5. Stability and Control</h2>
+<p>Stability is maintained through:</p>
+<ul>
+<li>damping  </li>
+<li>normalization  </li>
+<li>resonance envelope clipping  </li>
+<li>timestep adaptivity  </li>
+</ul>
+<p>These mechanisms prevent runaway growth and ensure coherent evolution.</p>
+<hr>
+<h2 id="6-emergent-behavior">6. Emergent Behavior</h2>
+<p>Dynamic interactions among fields and operators can produce:</p>
+<ul>
+<li>coherent resonance pockets  </li>
+<li>rotating or oscillatory patterns  </li>
+<li>alignment waves  </li>
+<li>paradox-class responses  </li>
+</ul>
+<p>These emergent structures are central to the substrate’s expressive power.</p>
+  </main>
+</body>
+</html>

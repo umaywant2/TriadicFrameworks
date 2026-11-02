@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_multi_atlas_composite.py.md">
+  <title>Known atlas/heatmap SVGs to stack</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_multi_atlas_composite.py.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_multi_atlas_composite.py.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Here’s your <strong>multi‑atlas SVG composite</strong> generator, aligned with your existing canon tooling and safe to paste into your active <code>docs/tools</code> tab.</p>
+<p>Save as:</p>
+<pre><code class="language-text">docs/tools/generate_multi_atlas_composite.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code class="language-bash">python3 docs/tools/generate_multi_atlas_composite.py
+</code></pre>
+<p>It will create:</p>
+<pre><code class="language-text">docs/spine/multi_atlas_composite.svg
+</code></pre>
+<hr>
+<pre><code class="language-python">import os
+
+ROOT = &quot;docs&quot;
+SPINE = os.path.join(ROOT, &quot;spine&quot;)
+
+# Known atlas/heatmap SVGs to stack
+SVG_FILES = [
+    &quot;triad_purity_heatmap.svg&quot;,
+    &quot;consistency_map.svg&quot;,
+    &quot;consistency_map_heatmap.svg&quot;,
+]
+
+def read_svg_body(path):
+    try:
+        with open(path, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+            text = f.read()
+    except:
+        return None
+
+    # crude extraction: strip outer &lt;svg ...&gt;...&lt;/svg&gt;
+    start = text.find(&quot;&lt;svg&quot;)
+    if start == -1:
+        return None
+    start = text.find(&quot;&gt;&quot;, start)
+    end = text.rfind(&quot;&lt;/svg&gt;&quot;)
+    if start == -1 or end == -1:
+        return None
+    inner = text[start + 1:end].strip()
+    return inner
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Multi‑Atlas SVG Composite Generator ===\n&quot;)
+
+    os.makedirs(SPINE, exist_ok=True)
+    atlas_paths = []
+    for name in SVG_FILES:
+        p = os.path.join(SPINE, name)
+        if os.path.isfile(p):
+            atlas_paths.append(p)
+            print(f&quot;✔ found atlas: {name}&quot;)
+        else:
+            print(f&quot;⚠ missing atlas: {name}&quot;)
+
+    if not atlas_paths:
+        print(&quot;\n⚠ No atlas SVGs found in /docs/spine — nothing to composite.\n&quot;)
+        return
+
+    # Assume each atlas is roughly same width; stack vertically with offsets
+    bodies = []
+    y_offset = 0
+    gap = 20  # vertical gap between atlases
+
+    # Simple fixed width/height; we’ll expand height as we stack
+    width = 1200
+    total_height = 0
+
+    for p in atlas_paths:
+        inner = read_svg_body(p)
+        if inner is None:
+            print(f&quot;⚠ could not parse {os.path.basename(p)} — skipped&quot;)
+            continue
+
+        # Wrap each atlas in a &lt;g&gt; with translate
+        bodies.append(f'&lt;g transform=&quot;translate(0,{y_offset})&quot;&gt;\n{inner}\n&lt;/g&gt;\n')
+        # crude height increment: assume 400px per atlas
+        y_offset += 400 + gap
+        total_height = y_offset
+
+    if not bodies:
+        print(&quot;\n⚠ No parsable atlas SVGs — composite not created.\n&quot;)
+        return
+
+    out_path = os.path.join(SPINE, &quot;multi_atlas_composite.svg&quot;)
+    svg = f&quot;&quot;&quot;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;{width}&quot; height=&quot;{total_height}&quot;&gt;
+&lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;{width}&quot; height=&quot;{total_height}&quot; fill=&quot;#ffffff&quot;/&gt;
+{''.join(bodies)}
+&lt;/svg&gt;
+&quot;&quot;&quot;
+
+    with open(out_path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(svg)
+
+    print(f&quot;\n✔ Created {out_path}&quot;)
+    print(&quot;\n✨ Multi‑atlas SVG composite generated.\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+  </main>
+</body>
+</html>

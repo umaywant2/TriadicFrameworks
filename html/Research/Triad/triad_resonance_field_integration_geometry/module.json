@@ -1,0 +1,31 @@
+{
+  "module": "Triad_Resonance_Field_Integration_Geometry",
+  "name": "Triad — Resonance‑Field Integration Geometry",
+  "summary": "Defines the integration geometry of Triad resonance fields, including cross‑field integration, harmonic‑integration surfaces, ignition‑integration pathways, and multi‑layer resonance binding.",
+  "category": "intelligence-ignition-resonance-field-integration",
+  "version": "1.0",
+  "purpose": "Provide the integration‑layer geometry for Triad resonance fields, describing how resonance fields merge, unify, stabilize, and bind across Scanner, O.H.S.H.I.T., and Atlas layers to produce ignition‑ready integrated resonance behavior.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.resonance.field.integration.merge",
+    "@triad.resonance.field.integration.unify",
+    "@triad.resonance.field.integration.align",
+    "@triad.resonance.field.integration.stabilize",
+    "@triad.resonance.field.integration.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Resonance_Field_Geometry",
+      "Triad_Resonance_Field_Stability_Surfaces",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Triad_Epoch_Ignition_Surfaces",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration"
+    ]
+  }
+}

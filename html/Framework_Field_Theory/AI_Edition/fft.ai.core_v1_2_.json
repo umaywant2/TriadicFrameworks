@@ -1,0 +1,10 @@
+{
+  "id": "fft.ai.core_v1_2_",
+  "status": "DEPRECATED",
+  "deprecated_in": "1.33",
+  "deprecated_at": "2026-10-09T09:49:00-04:00",
+  "reason": "Superseded by fft.ai.core.json v1.33. This v1.2 snapshot is retained for rollback reference only.",
+  "replacement": "fft.ai.core.json",
+  "do_not_load": true,
+  "archive_note": "Safe to delete after confirming v1.33 stability. Keep for 30 days post-deploy."
+}

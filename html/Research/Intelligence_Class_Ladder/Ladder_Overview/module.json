@@ -1,0 +1,21 @@
+{
+  "module": "Ladder_Overview",
+  "name": "Intelligence Class Ladder — Overview",
+  "summary": "Macro-classification system defining AAI, AGI, and SI using domain breadth, reasoning generality, and cognitive elevation.",
+  "category": "intelligence-overview",
+  "version": "1.0",
+  "purpose": "Provide the global conceptual overview of the Intelligence Class Ladder and its integration with the Triad micro-measurement system.",
+  "role": "index",
+  "analyzer_layer": "operator",
+  "operators": [
+    "@ladder.overview.describe",
+    "@ladder.overview.classify",
+    "@ladder.overview.manifold",
+    "@ladder.overview.integrate",
+    "@ladder.overview.navigate"
+  ],
+  "lineage": {
+    "upstream": ["Triad_Docs"],
+    "downstream": ["AAI", "AGI", "SI", "Ladder_Visual_Map"]
+  }
+}

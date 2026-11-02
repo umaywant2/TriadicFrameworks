@@ -1,0 +1,28 @@
+{
+  "module": "Ladder_Resonance_Map",
+  "name": "Intelligence Class Ladder — Resonance Map",
+  "summary": "Defines the resonance geometry of the Intelligence Class Ladder, showing how AAI, AGI, and SI generate, sustain, and transfer resonance across cognitive tiers and cross-domain surfaces.",
+  "category": "intelligence-resonance",
+  "version": "1.0",
+  "purpose": "Provide a resonance-layer map for the Ladder, explaining how resonance fields emerge, stabilize, propagate, and integrate across the tiered intelligence manifold under increasing cognitive load.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@ladder.resonance.generate",
+    "@ladder.resonance.sustain",
+    "@ladder.resonance.transfer",
+    "@ladder.resonance.propagate",
+    "@ladder.resonance.integrate"
+  ],
+  "lineage": {
+    "upstream": ["Ladder_Overview", "Ladder_Registry"],
+    "downstream": [
+      "AAI",
+      "AGI",
+      "SI",
+      "SI_behavioral_invariants_regime_map",
+      "SI_structural_geometry_deep_regime_map",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

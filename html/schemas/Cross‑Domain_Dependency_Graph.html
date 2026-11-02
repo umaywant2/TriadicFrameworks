@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/Cross‑Domain_Dependency_Graph.md">
+  <title>🔗 2. Cross‑Domain Dependency Graph</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/Cross‑Domain_Dependency_Graph.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/Cross‑Domain_Dependency_Graph.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_Cross_Domain_Dependency_Graph_" src="https://github.com/user-attachments/assets/8cb649df-e713-403e-9e29-017e663ba80c" /></p>
+<h1 id="2-crossdomain-dependency-graph">🔗 2. Cross‑Domain Dependency Graph</h1>
+<p><em>Shows how schemas depend on or extend each other.</em></p>
+<pre><code>                                         🔗
+CANON
+  ├── universe_definition
+  ├── canon_entry
+  └── lineage_manifest
+  │
+  ▼
+DIMENSIONAL
+  ├── dimensional_layer
+  ├── dimensional_operator
+  ├── resonance_interface
+  └── structural_awareness
+  │
+  ├──────────────────────┬───────────────────────────┬───────────────────────────────┐
+  ▼                      ▼                           ▼                               ▼
+IDENTITY               COEUS                      QUANTUM                         FINANCE
+  │                      │                           │                               │
+  │ uses                 │ uses                      │ uses                          │ uses
+  ▼                      ▼                           ▼                               ▼
+directory_node     state_model                 quantum_state                   market_state
+trust_channel      operator                    qcompute_operator              pricing_model
+identity_event     coeus_contract              quantum_event                  finance_event
+  │                      │                           │                              │
+  └──────────────┬───────┴──────────┬────────────────┴───────────────┬──────────────┘
+                 ▼                  ▼                                ▼
+            NETWORKING           INFRASTRUCTURE                   SENSING
+                 │                  │                                │
+                 ▼                  ▼                                ▼
+            network_node         dpu_rtt                         gpr_sensor
+            network_link         vcg_route                       seismic_sensor
+            radio_channel        nimms_node                      hologram_reconstruction
+                 │                  │                                │
+                 └──────────────┬───┴───────────────┬────────────────┘
+                                ▼                    ▼
+                              ENERGY              LAB SYSTEMS
+                                │                    │
+                                ▼                    ▼
+                          power_module_rtt       lab_instrument
+                          bms_rtt               experiment
+                          energy_corridor       measurement
+</code></pre>
+<p>This graph shows:</p>
+<ul>
+<li><strong>Coeus depends on Dimensional</strong>  </li>
+<li><strong>Identity depends on Dimensional</strong>  </li>
+<li><strong>Quantum depends on Dimensional</strong>  </li>
+<li><strong>Finance depends on Dimensional + Coeus</strong>  </li>
+<li><strong>Networking depends on Identity + Coeus</strong>  </li>
+<li><strong>Infrastructure depends on Networking + Quantum</strong>  </li>
+<li><strong>Sensing depends on Infrastructure</strong>  </li>
+<li><strong>Energy depends on Sensing</strong>  </li>
+<li><strong>Autonomous systems depend on Energy + Sensing + Networking</strong></li>
+</ul>
+<p>It’s a <em>living ecosystem</em>.</p>
+  </main>
+</body>
+</html>

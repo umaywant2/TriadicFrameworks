@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Columns: Tuatha, Fomorians, Otherworld -->
+  <text x="200" y="80" text-anchor="middle">Tuatha Dé Danann</text>
+  <text x="400" y="80" text-anchor="middle">Fomorians</text>
+  <text x="600" y="80" text-anchor="middle">Otherworld Hosts</text>
+
+  <!-- Rows: Sky, Land, Sea -->
+  <text x="80" y="200">Sky</text>
+  <text x="80" y="400">Land</text>
+  <text x="80" y="600">Sea / Otherworld</text>
+
+  <!-- Example operator nodes -->
+  <circle cx="200" cy="200" r="30" fill="#fff" stroke="#000"/>
+  <text x="200" y="205" text-anchor="middle" font-size="10">Sky Magic</text>
+
+  <circle cx="400" cy="400" r="30" fill="#fff" stroke="#000"/>
+  <text x="400" y="405" text-anchor="middle" font-size="10">Conflict</text>
+
+  <circle cx="600" cy="600" r="30" fill="#fff" stroke="#000"/>
+  <text x="600" y="605" text-anchor="middle" font-size="10">Otherworld Gate</text>
+
+  <!-- Hero / Bard / Trickster band -->
+  <rect x="100" y="650" width="600" height="80" fill="none" stroke="#555"/>
+  <text x="400" y="680" text-anchor="middle">Hero · Bard · Trickster</text>
+</svg>

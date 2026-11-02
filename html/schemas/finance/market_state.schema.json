@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Market State",
+  "type": "object",
+  "properties": {
+    "timestamp": { "type": "string", "format": "date-time" },
+    "conditions": { "type": "object" },
+    "triadic_resonance": {
+      "type": "object",
+      "properties": {
+        "spin_field": { "type": "number" },
+        "charge_field": { "type": "number" },
+        "temperature_field": { "type": "number" }
+      }
+    },
+    "volatility_index": { "type": "number" }
+  }
+}

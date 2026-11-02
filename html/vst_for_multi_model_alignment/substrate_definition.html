@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_multi_model_alignment/substrate_definition.md">
+  <title>vST for Multi‑Model Alignment</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_multi_model_alignment/substrate_definition.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_multi_model_alignment/substrate_definition.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="vst-for-multimodel-alignment"><em>vST for Multi‑Model Alignment</em></h3>
+<h3 id="substrate-definition"><em>Substrate Definition</em></h3>
+<p>This document defines the substrate used to perform <strong>multi‑model alignment</strong> within the <strong>Validation‑Space‑Time (vST)</strong> framework and the <strong>1024D dimensional substrate</strong>. It establishes the primitives, alignment invariants, cross‑architecture mapping rules, and projection‑compatible structures required to compare heterogeneous models in a stable, invariant‑preserving manner.</p>
+<p>The substrate is architecture‑agnostic and applies to LLMs, PLMs, diffusion models, VAEs, flow models, simulators, robotics policies, embedding stores, and hybrid systems.</p>
+<hr>
+<h2 id="1-purpose-of-the-multimodel-alignment-substrate"><strong>1. Purpose of the Multi‑Model Alignment Substrate</strong></h2>
+<p>The multi‑model substrate provides a structured, reproducible framework for:</p>
+<ul>
+<li>aligning latent spaces across architectures and modalities  </li>
+<li>mapping regime behavior (R₁/R₂/R₃) across heterogeneous inference systems  </li>
+<li>comparing scaling behavior across model families  </li>
+<li>projecting high‑dimensional states into 3D–9D cores for cross‑model interpretability  </li>
+<li>detecting drift across architectures, checkpoints, or training runs  </li>
+<li>establishing a unified dimensional grammar for all model types  </li>
+</ul>
+<p>Multi‑model alignment requires a substrate that is <strong>neutral</strong>, <strong>invertible</strong>, and <strong>invariant‑preserving</strong> across all architectures.</p>
+<hr>
+<h2 id="2-substrate-overview"><strong>2. Substrate Overview</strong></h2>
+<p>The multi‑model substrate models heterogeneous latent spaces using:</p>
+<ul>
+<li><strong>Dimensional Primitives (DP)</strong>  </li>
+<li><strong>Triadic Dimensional Primitives (TDP)</strong>  </li>
+<li><strong>Scaling Primitives (SP)</strong>  </li>
+<li><strong>Coherence Primitives (CP)</strong>  </li>
+<li><strong>Alignment Primitives (AP)</strong>  </li>
+</ul>
+<p>These primitives define the structure of cross‑model alignment, regime mapping, and projection behavior.</p>
+<p>The substrate is anchored by the <strong>Triadic Dimensional Cores</strong>:</p>
+<ul>
+<li><strong>3D Structural Core</strong>  </li>
+<li><strong>6D Interaction Core</strong>  </li>
+<li><strong>9D Coherence Core</strong></li>
+</ul>
+<p>and extended through the <strong>1024D high‑dimensional substrate</strong>.</p>
+<hr>
+<h2 id="3-alignment-primitives"><strong>3. Alignment Primitives</strong></h2>
+<h3 id="31-alignment-primitive-ap"><strong>3.1 Alignment Primitive (AP)</strong></h3>
+<p>The AP is the minimal unit of cross‑model comparability.<br>
+It captures:</p>
+<ul>
+<li>local geometric compatibility  </li>
+<li>variance‑aligned structure  </li>
+<li>regime‑consistent mapping  </li>
+<li>projection‑stable correspondence  </li>
+</ul>
+<p>APs allow two heterogeneous latent states to be compared without requiring architectural similarity.</p>
+<hr>
+<h3 id="32-crossarchitecture-tdp-tdpx"><strong>3.2 Cross‑Architecture TDP (TDP‑X)</strong></h3>
+<p>A TDP‑X is a triad of APs that expresses full cross‑model regime behavior.</p>
+<p>It captures:</p>
+<ul>
+<li>stable alignment (R₁ ↔ R₁)  </li>
+<li>transitional alignment (R₂ ↔ R₂)  </li>
+<li>dispersed alignment (R₃ ↔ R₃)  </li>
+</ul>
+<p>TDP‑X is the backbone of multi‑model regime mapping.</p>
+<hr>
+<h3 id="33-crossmodel-scaling-primitive-spx"><strong>3.3 Cross‑Model Scaling Primitive (SP‑X)</strong></h3>
+<p>SP‑X governs dimensional expansion across architectures.</p>
+<p>It ensures:</p>
+<ul>
+<li>invariant‑preserving scaling  </li>
+<li>compatibility between different latent dimensionalities  </li>
+<li>stable projection into triadic cores  </li>
+<li>consistent scaling‑law interpretation across models  </li>
+</ul>
+<p>SP‑X is essential for aligning models with different latent sizes (e.g., 4096D LLM ↔ 1024D diffusion ↔ 256D PLM).</p>
+<hr>
+<h3 id="34-crossmodality-coherence-primitive-cpx"><strong>3.4 Cross‑Modality Coherence Primitive (CP‑X)</strong></h3>
+<p>CP‑X identifies stable or unstable regions in cross‑model alignment.</p>
+<p>It captures:</p>
+<ul>
+<li>coherent alignment regions  </li>
+<li>transitional alignment regions  </li>
+<li>dispersed or incompatible regions  </li>
+<li>cross‑modality regime transitions  </li>
+</ul>
+<p>CP‑X is essential for drift detection and vST validation.</p>
+<hr>
+<h2 id="4-triadic-dimensional-cores-for-multimodel-alignment"><strong>4. Triadic Dimensional Cores for Multi‑Model Alignment</strong></h2>
+<h3 id="41-3d-structural-core"><strong>4.1 3D Structural Core</strong></h3>
+<p>Captures motif‑level geometry shared across models.</p>
+<p>Used for:</p>
+<ul>
+<li>cross‑modality motif comparison  </li>
+<li>alignment of stable regimes  </li>
+<li>low‑variance structural mapping  </li>
+</ul>
+<hr>
+<h3 id="42-6d-interaction-core"><strong>4.2 6D Interaction Core</strong></h3>
+<p>Captures relational structure across architectures.</p>
+<p>Used for:</p>
+<ul>
+<li>cross‑model interaction surfaces  </li>
+<li>alignment of transitional regimes  </li>
+<li>sampler‑ or decoder‑dependent reorientation  </li>
+</ul>
+<hr>
+<h3 id="43-9d-coherence-core"><strong>4.3 9D Coherence Core</strong></h3>
+<p>Captures pathway‑level coherence across heterogeneous inference systems.</p>
+<p>Used for:</p>
+<ul>
+<li>cross‑model coherence mapping  </li>
+<li>alignment of inference trajectories  </li>
+<li>invertible projection from higher dimensions  </li>
+</ul>
+<p>The 9D core is the anchor for all cross‑model alignment.</p>
+<hr>
+<h2 id="5-highdimensional-substrate-64d1024d"><strong>5. High‑Dimensional Substrate (64D–1024D)</strong></h2>
+<p>The multi‑model substrate spans the dimensional ladder:</p>
+<ul>
+<li><strong>64D</strong> — minimal cross‑model substrate  </li>
+<li><strong>128D</strong> — expanded alignment surfaces  </li>
+<li><strong>256D</strong> — multi‑primitive interaction  </li>
+<li><strong>512D</strong> — high‑variance cross‑architecture regions  </li>
+<li><strong>1024D</strong> — full research‑grade alignment substrate  </li>
+</ul>
+<p>Each step preserves:</p>
+<ul>
+<li>structural invariants  </li>
+<li>resonance‑time invariants  </li>
+<li>projection invariants  </li>
+<li>alignment invariants  </li>
+<li>scaling invariants  </li>
+</ul>
+<p>This ensures stable alignment across architectures and modalities.</p>
+<hr>
+<h2 id="6-crossmodel-alignment-structure"><strong>6. Cross‑Model Alignment Structure</strong></h2>
+<p>Cross‑model alignment is modeled as:</p>
+<ul>
+<li>sequences of APs  </li>
+<li>grouped into TDP‑X  </li>
+<li>expanded through SP‑X  </li>
+<li>classified using CP‑X  </li>
+</ul>
+<p>This structure enables:</p>
+<ul>
+<li>regime‑aware alignment  </li>
+<li>cross‑modality comparison  </li>
+<li>cross‑architecture drift detection  </li>
+<li>unified scaling‑law interpretation  </li>
+</ul>
+<hr>
+<h2 id="7-projection-into-triadic-cores"><strong>7. Projection into Triadic Cores</strong></h2>
+<p>High‑dimensional states from different models are projected into:</p>
+<ul>
+<li><strong>9D</strong> for coherence alignment  </li>
+<li><strong>6D</strong> for interaction alignment  </li>
+<li><strong>3D</strong> for geometric alignment  </li>
+</ul>
+<p>Projection must remain:</p>
+<ul>
+<li>invertible  </li>
+<li>primitive‑aligned  </li>
+<li>regime‑aware  </li>
+<li>architecture‑neutral  </li>
+<li>invariant‑preserving  </li>
+</ul>
+<p>Projection is essential for cross‑model interpretability.</p>
+<hr>
+<h2 id="8-substrate-outputs"><strong>8. Substrate Outputs</strong></h2>
+<p>The multi‑model substrate produces:</p>
+<ul>
+<li>cross‑model regime maps  </li>
+<li>alignment surfaces  </li>
+<li>scaling‑law diagnostics  </li>
+<li>projection‑stability indicators  </li>
+<li>drift‑detection signals  </li>
+<li>vST validation outputs  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑level alignment across architectures, modalities, and inference systems.</p>
+  </main>
+</body>
+</html>

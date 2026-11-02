@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Python/Inside-Cisco_Inside-Python_Inside-Internet2_cross_module_examples.md">
+  <title>Cross‑Module Examples (Cisco × Python × Internet2)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Python/Inside-Cisco_Inside-Python_Inside-Internet2_cross_module_examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Python/Inside-Cisco_Inside-Python_Inside-Internet2_cross_module_examples.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="crossmodule-examples-cisco-python-internet2">Cross‑Module Examples (Cisco × Python × Internet2)</h1>
+<h3 id="rttinside-triadic-causal-stitching">RTT‑Inside Triadic Causal Stitching</h3>
+<h2 id="purpose">Purpose</h2>
+<p>Demonstrate how RTT‑Inside combines operator grammars from:</p>
+<ul>
+<li><strong>Cisco</strong> (device‑level + cluster‑level causality)</li>
+<li><strong>Python</strong> (semantic engine + drift + invariants)</li>
+<li><strong>Internet2</strong> (dimensional substrate + DSRSP + ROA)</li>
+</ul>
+<p>to produce a <strong>triadic causal object</strong> spanning hardware, software, and
+dimensional substrates.</p>
+<p>These examples show how intent, telemetry, semantic forms, drift, invariants,
+regime signatures, and lineage stitching combine into a single RTT chain.</p>
+<hr>
+<h1 id="example-1-python-intent-cisco-flow-internet2-regime-transition">Example 1 — Python Intent → Cisco Flow → Internet2 Regime Transition</h1>
+<p>A Python service emits a request that traverses a Cisco fabric and then crosses
+an Internet2 regime boundary.</p>
+<pre><code>py_intent     = INTENT_PY(source_code)
+py_signal     = TIF_PY(runtime_event)
+py_form       = PY_FORM_SCAN(ast_node, object_graph)
+py_drift      = PY_DRIFT_DETECT(runtime_state, expected_state)
+
+cisco_intent  = INTENT_CISCO(device_policy)
+cisco_signal  = TIF_CISCO(telemetry)
+cisco_flow    = FFF_CISCO(flow_record)
+
+i2_signature  = DSRSP_AWARE_I2(path, sensors)
+i2_harmonic   = HARMONIC_SCAN_I2(flow, i2_signature)
+i2_tier       = SUBSTRATE_CLASSIFY(i2_harmonic, invariants)
+
+resolved_py   = CRE_PY(py_intent, py_signal, mgmt_py)
+resolved_cis  = CRE_CISCO(cisco_intent, cisco_signal, mgmt_cis)
+resolved_i2   = CRE_I2(i2_intent, i2_signal, mgmt_i2)
+
+lineage       = CSL_I2([resolved_py, resolved_cis, resolved_i2])
+time          = CET_I2(lineage)
+
+output        = RTT_I2(time)
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+RTT stitches semantic intent → device‑level causality → dimensional regime
+transitions into a single causal object.</p>
+<hr>
+<h1 id="example-2-cisco-cluster-event-python-semantic-drift-internet2-roa-oversight">Example 2 — Cisco Cluster Event → Python Semantic Drift → Internet2 ROA Oversight</h1>
+<p>A Cisco cluster emits a management event that triggers Python semantic drift,
+which is then evaluated by Internet2’s ROA.</p>
+<pre><code>cluster_intent  = INTENT_CISCO_G(cluster_policy)
+cluster_signal  = TIF_CISCO_G(cluster_telemetry)
+
+py_form         = PY_FORM_SCAN(ast_node, object_graph)
+py_drift        = PY_DRIFT_DETECT(runtime_state, expected_state)
+py_severity     = PY_DRIFT_CLASSIFY(py_drift, delta)
+
+i2_health       = SUBSTRATE_HEALTH_I2(regime_profiles, tier_distribution)
+roa_obs         = ROA_OBSERVE(forms, drift, invariants)
+roa_diag        = ROA_DIAGNOSE(roa_obs, i2_health)
+roa_decision    = ROA_DECIDE(roa_diag, policy)
+roa_action      = ROA_ACT(roa_decision, flows)
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+ROA uses Python semantic drift + Cisco cluster signals to maintain dimensional
+coherence.</p>
+<hr>
+<h1 id="example-3-invariant-arc-python-flow-lineage-cisco-dimensional-stitch-internet2">Example 3 — Invariant Arc (Python) → Flow Lineage (Cisco) → Dimensional Stitch (Internet2)</h1>
+<p>A Python invariant arc emerges, influences a Cisco forwarding decision, and is
+stitched into an Internet2 dimensional lineage.</p>
+<pre><code>py_invariant   = PY_INVARIANT_CHECK(form, evidence)
+py_decision    = INVARIANT_REGISTRY_I2(candidate, evidence)
+
+cisco_flow     = FFF_CISCO(flow_record)
+cisco_resolve  = CRE_CISCO(intent, signal, mgmt)
+
+i2_lineage     = CSL_I2([py_decision, cisco_resolve])
+i2_time        = CET_I2(i2_lineage)
+
+output         = RTT_I2(i2_time)
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+RTT preserves invariant‑level semantics across hardware and dimensional layers.</p>
+<hr>
+<h1 id="example-4-full-triadic-chain-canonical">Example 4 — Full Triadic Chain (Canonical)</h1>
+<pre><code>INTENT_PY
+→ PY_FORM_SCAN
+→ PY_DRIFT_DETECT
+→ INTENT_CISCO
+→ FFF_CISCO
+→ DSRSP_AWARE_I2
+→ HARMONIC_SCAN_I2
+→ SUBSTRATE_CLASSIFY
+→ CRE_I2
+→ CSL_I2
+→ CET_I2
+→ RTT_I2
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+This is the canonical triadic causal chain:<br>
+<strong>semantic intent → device causality → dimensional substrate → final RTT object.</strong></p>
+<hr>
+<h1 id="end-of-file">End of File</h1>
+  </main>
+</body>
+</html>

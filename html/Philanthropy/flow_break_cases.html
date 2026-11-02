@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Philanthropy/flow_break_cases.md">
+  <title>Flow Break Cases — Philanthropy Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Philanthropy/flow_break_cases.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Philanthropy/flow_break_cases.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="flow-break-cases-philanthropy-module">Flow Break Cases — Philanthropy Module</h1>
+<h2 id="structural-failure-patterns-in-multilayer-funding-chains-rtt1">Structural Failure Patterns in Multi‑Layer Funding Chains (RTT/1)</h2>
+<p>This file catalogs <strong>flow break cases</strong> in philanthropic systems.<br>
+A flow break is a structural failure where funding, information, or accountability <strong>stops</strong>, <strong>loops</strong>, <strong>dissipates</strong>, or <strong>becomes opaque</strong>.</p>
+<p>Flow breaks are detectable using:
+- FLOW / TRACE<br>
+- SET load<br>
+- Governance substrate<br>
+- Drift detection<br>
+- Triadic observer  </p>
+<hr>
+<h1 id="1-case-type-a-hard-break-flow-0">1. Case Type A — Hard Break (FLOW = 0)</h1>
+<p>A <strong>hard break</strong> occurs when funds stop moving entirely.</p>
+<pre><code>FLOW(src → dst) = 0
+RED(flow_break)
+</code></pre>
+<p>Common causes:
+- frozen grants<br>
+- stalled approvals<br>
+- governance bottlenecks<br>
+- missing documentation  </p>
+<p>Structural signature:</p>
+<pre><code>D1 = high (structural)
+D2 = medium (dimensional)
+D3 = low
+D4 = medium
+</code></pre>
+<hr>
+<h1 id="2-case-type-b-soft-break-flow-but-not-zero">2. Case Type B — Soft Break (FLOW ↓ but not zero)</h1>
+<p>A <strong>soft break</strong> occurs when funds move, but far below expected levels.</p>
+<pre><code>FLOW(src → dst) &lt;&lt; expected
+SET_LEAK(node) ↑
+</code></pre>
+<p>Common causes:
+- excessive overhead<br>
+- compliance drag<br>
+- multi‑layer routing<br>
+- narrative‑driven delays  </p>
+<p>Structural signature:</p>
+<pre><code>D1 = medium
+D2 = high
+D3 = medium
+D4 = low
+</code></pre>
+<hr>
+<h1 id="3-case-type-c-loop-break-circular-routing">3. Case Type C — Loop Break (Circular Routing)</h1>
+<p>A <strong>loop break</strong> occurs when funds circulate between nodes without progressing.</p>
+<pre><code>FLOW(A → B)
+FLOW(B → A)
+TRACE(path) = circular
+</code></pre>
+<p>Common causes:
+- regranting loops<br>
+- fiscal sponsorship recursion<br>
+- governance asymmetry  </p>
+<p>Structural signature:</p>
+<pre><code>D1 = high
+D2 = high
+D3 = medium
+D4 = medium
+</code></pre>
+<hr>
+<h1 id="4-case-type-d-dissipation-break-energy-loss">4. Case Type D — Dissipation Break (Energy Loss)</h1>
+<p>A <strong>dissipation break</strong> occurs when SET load collapses due to extreme leakage.</p>
+<pre><code>SET_LEAK(node) &gt; 60%
+SET_BAL(node) &lt; 0.40
+</code></pre>
+<p>Common causes:
+- administrative overload<br>
+- branding‑heavy intermediaries<br>
+- inefficient procurement  </p>
+<p>Structural signature:</p>
+<pre><code>D1 = medium
+D2 = high
+D3 = medium
+D4 = high
+</code></pre>
+<hr>
+<h1 id="5-case-type-e-opaque-break-visibility-failure">5. Case Type E — Opaque Break (Visibility Failure)</h1>
+<p>An <strong>opaque break</strong> occurs when visibility collapses.</p>
+<pre><code>VIS(node) = low
+OPA(node) = high
+TRACE(path) = incomplete
+</code></pre>
+<p>Common causes:
+- missing reports<br>
+- unverified subgrants<br>
+- narrative‑only updates  </p>
+<p>Structural signature:</p>
+<pre><code>D1 = high
+D2 = medium
+D3 = high
+D4 = high
+</code></pre>
+<hr>
+<h1 id="6-case-type-f-regime-break-narrative-override">6. Case Type F — Regime Break (Narrative Override)</h1>
+<p>A <strong>regime break</strong> occurs when narrative, emotion, or authority overrides structure.</p>
+<pre><code>REG(node) = NAR / EMO / AUTH
+NOI ↑
+SIG ↓
+</code></pre>
+<p>Common causes:
+- donor emotion<br>
+- PR‑driven intermediaries<br>
+- political influence  </p>
+<p>Structural signature:</p>
+<pre><code>D1 = medium
+D2 = low
+D3 = high
+D4 = high
+</code></pre>
+<hr>
+<h1 id="7-case-type-g-beneficiary-break-output-failure">7. Case Type G — Beneficiary Break (Output Failure)</h1>
+<p>A <strong>beneficiary break</strong> occurs when funds reach the final node but fail to convert into outcomes.</p>
+<pre><code>FLOW(LocalPartner → Beneficiary) = expected
+OUTCOME = low
+SET_OUT ↓
+</code></pre>
+<p>Common causes:
+- misaligned programs<br>
+- weak local capacity<br>
+- poor implementation  </p>
+<p>Structural signature:</p>
+<pre><code>D1 = medium
+D2 = low
+D3 = medium
+D4 = medium
+</code></pre>
+<hr>
+<h1 id="8-flow-break-detection-operators">8. Flow Break Detection Operators</h1>
+<p>Flow breaks are detected using:</p>
+<pre><code>RED(flow_break)
+RED(opacity)
+RED(leakage)
+RED(overhead_spike)
+RED(narrative_inflation)
+</code></pre>
+<p>And confirmed via:</p>
+<pre><code>SIG ↓
+NOI ↑
+REG(type)
+DRF(category)
+SET_LEAK ↑
+SET_BAL ↓
+TRACE(path)
+</code></pre>
+<hr>
+<h1 id="9-flow-break-signature">9. Flow Break Signature</h1>
+<p>A flow break signature summarizes the anomaly:</p>
+<pre><code>FLOW_BREAK_SIGNATURE:
+  Type = {{A–G}}
+  Node = {{node}}
+  Severity = {{low/med/high}}
+  SET_LEAK = {{value}}
+  VIS = {{value}}
+  REG = {{type}}
+  DRIFT = {{D1–D4}}
+  Notes = {{context}}
+</code></pre>
+<p>Example:</p>
+<pre><code>FLOW_BREAK_SIGNATURE:
+  Type = C (Loop Break)
+  Node = Intermediary
+  Severity = high
+  SET_LEAK = 51%
+  VIS = low
+  REG = NAR
+  DRIFT = D1 + D2 + D3
+  Notes = regranting loop detected
+</code></pre>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>Flow breaks in philanthropic systems are:</p>
+<ul>
+<li>detectable  </li>
+<li>classifiable  </li>
+<li>structural  </li>
+<li>correctable  </li>
+</ul>
+<p>This file provides a library of flow break patterns to support donors, auditors, analysts, and AI agents in identifying and resolving structural failures in funding systems.</p>
+  </main>
+</body>
+</html>

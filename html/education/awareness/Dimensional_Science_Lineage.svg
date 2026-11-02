@@ -1,0 +1,99 @@
+<svg width="720" height="520" viewBox="0 0 720 520" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill:#0f1117; stroke:#9ca3af; stroke-width:1.5; rx:8; ry:8; }
+    .title { fill:#e5e7eb; font-family:Inter, system-ui, sans-serif; font-size:14px; font-weight:600; }
+    .subtitle { fill:#9ca3af; font-family:Inter, system-ui, sans-serif; font-size:12px; }
+    .caption { fill:#9ca3af; font-family:Inter, system-ui, sans-serif; font-size:11px; }
+    .arrow { stroke:#9ca3af; stroke-width:1.5; marker-end:url(#arrowhead); }
+    .label { fill:#9ca3af; font-family:Inter, system-ui, sans-serif; font-size:11px; font-style:italic; }
+    .header { fill:#e5e7eb; font-family:Inter, system-ui, sans-serif; font-size:18px; font-weight:600; }
+    .subheader { fill:#9ca3af; font-family:Inter, system-ui, sans-serif; font-size:12px; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#9ca3af" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="32" text-anchor="middle" class="header">
+    Dimensional Science Lineage
+  </text>
+  <text x="360" y="50" text-anchor="middle" class="subheader">
+    Geometry → Interaction → Process → Meaning → Operators
+  </text>
+
+  <!-- Fuller -->
+  <rect x="170" y="70" width="380" height="70" class="box" />
+  <text x="360" y="92" text-anchor="middle" class="title">
+    Buckminster Fuller
+  </text>
+  <text x="360" y="110" text-anchor="middle" class="subtitle">
+    Synergetics
+  </text>
+  <text x="360" y="126" text-anchor="middle" class="caption">
+    Geometry of Stability (3D–4D)
+  </text>
+
+  <!-- Arrow Fuller → Haskell -->
+  <line x1="360" y1="140" x2="360" y2="165" class="arrow" />
+  <text x="380" y="155" class="label">structure → interaction</text>
+
+  <!-- Haskell -->
+  <rect x="170" y="170" width="380" height="70" class="box" />
+  <text x="360" y="192" text-anchor="middle" class="title">
+    Edward Haskell
+  </text>
+  <text x="360" y="210" text-anchor="middle" class="subtitle">
+    Co‑Action Compass
+  </text>
+  <text x="360" y="226" text-anchor="middle" class="caption">
+    Interaction Signatures (5D–6D)
+  </text>
+
+  <!-- Arrow Haskell → Young -->
+  <line x1="360" y1="240" x2="360" y2="265" class="arrow" />
+  <text x="380" y="255" class="label">interaction → process</text>
+
+  <!-- Young -->
+  <rect x="170" y="270" width="380" height="70" class="box" />
+  <text x="360" y="292" text-anchor="middle" class="title">
+    Arthur M. Young
+  </text>
+  <text x="360" y="310" text-anchor="middle" class="subtitle">
+    Theory of Process
+  </text>
+  <text x="360" y="326" text-anchor="middle" class="caption">
+    Evolution of Freedom (7D–8D)
+  </text>
+
+  <!-- Arrow Young → Peirce -->
+  <line x1="360" y1="340" x2="360" y2="365" class="arrow" />
+  <text x="380" y="355" class="label">process → meaning</text>
+
+  <!-- Peirce -->
+  <rect x="170" y="370" width="380" height="70" class="box" />
+  <text x="360" y="392" text-anchor="middle" class="title">
+    Charles Sanders Peirce
+  </text>
+  <text x="360" y="410" text-anchor="middle" class="subtitle">
+    Triadic Logic
+  </text>
+  <text x="360" y="426" text-anchor="middle" class="caption">
+    Mediation &amp; Meaning (9D)
+  </text>
+
+  <!-- Arrow Peirce → RTT -->
+  <line x1="360" y1="440" x2="360" y2="465" class="arrow" />
+  <text x="380" y="455" class="label">meaning → operators</text>
+
+  <!-- Triadic Frameworks / RTT -->
+  <rect x="170" y="470" width="380" height="70" class="box" />
+  <text x="360" y="492" text-anchor="middle" class="title">
+    TriadicFrameworks (RTT)
+  </text>
+  <text x="360" y="510" text-anchor="middle" class="subtitle">
+    Seven Operators · Resonance‑Time Science
+  </text>
+</svg>

@@ -1,0 +1,73 @@
+{
+  "module": "atmosphere",
+  "version": "1.0",
+  "category": "domain",
+  "description": "The Atmosphere module models atmospheric dynamics, thermodynamics, hydrospheric interactions, forcing, teleconnections, resonance, paradox, drift, dimensional scaling, continuity, coherence, clarity, and composition. It provides a complete diagnostic, mapping, tracing, example, agent, and coupling framework.",
+  "directories": {
+    "diagnostics": "/docs/atmosphere/diagnostics",
+    "examples": "/docs/atmosphere/examples",
+    "agents": "/docs/atmosphere/agents",
+    "maps": "/docs/atmosphere/maps",
+    "extensions": "/docs/atmosphere/extensions",
+    "future": "/docs/atmosphere/future",
+    "registry": "/docs/atmosphere/registry",
+    "session": "/docs/atmosphere/session",
+    "visualizations": "/docs/atmosphere/visualizations",
+    "coupling": "/docs/coupling"
+  },
+  "primary_files": {
+    "envelope": "diagnostics/atmosphere_envelope.json",
+    "map": "diagnostics/atmosphere_map.json",
+    "trace": "diagnostics/atmosphere_trace.json",
+    "operators": "diagnostics/operators_atmosphere.json",
+    "example": "diagnostics/atmosphere_example.json",
+    "schema": "diagnostics/module.schema.json",
+    "agent": "agents/atmosphere_agent.json"
+  },
+  "diagnostic_families": [
+    "dynamics",
+    "thermodynamics",
+    "hydrospheric",
+    "forcing",
+    "teleconnection",
+    "resonance",
+    "paradox",
+    "drift",
+    "dimensional",
+    "continuity",
+    "coherence",
+    "clarity",
+    "composition",
+    "nudge"
+  ],
+  "example_scenarios": [
+    "baseline",
+    "pre_convective_burst",
+    "moisture_gradient_shift",
+    "teleconnection_collapse",
+    "cryosphere_coupling_event",
+    "magnetosphere_perturbation",
+    "biosphere_feedback_loop",
+    "advanced_resonance_alignment",
+    "edge_case_paradox_drift_cascade"
+  ],
+  "coupling_maps": {
+    "hydrosphere": "/docs/coupling/atmosphere_to_hydrosphere.json",
+    "cryosphere": "/docs/coupling/atmosphere_to_cryosphere.json",
+    "biosphere": "/docs/coupling/atmosphere_to_biosphere.json",
+    "land": "/docs/coupling/atmosphere_to_land.json",
+    "magnetosphere": "/docs/coupling/atmosphere_to_magnetosphere.json"
+  },
+  "visualizations": {
+    "overview": "visualizations/atmosphere_overview.svg",
+    "regimes": "visualizations/atmosphere_regimes.svg",
+    "coupling": "visualizations/atmosphere_coupling.svg"
+  },
+  "metadata": {
+    "author": "Nawder Loswin",
+    "publication_year": "2026",
+    "license": "Open educational use permitted",
+    "ai_ready": true,
+    "canonical": true
+  }
+}

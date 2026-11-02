@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RTT Agentic Research Module Schema",
+  "description": "Schema for TriadicFrameworks agentic research modules (RTT-enhanced research papers).",
+  "type": "object",
+
+  "properties": {
+    "module": {
+      "type": "object",
+      "description": "Identity block for the agentic module.",
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "category": {
+          "type": "string",
+          "description": "Regime category for this agentic module.",
+          "enum": [
+            "temporal-dynamics",
+            "geometric-combinatorics",
+            "algebraic-combinatorics",
+            "analytic-combinatorial-resonance",
+            "epistemic-logic",
+            "arithmetic-analytic-duality",
+            "path-dynamics",
+            "high-dimensional-geometry",
+            "q-regime-transformations",
+            "moduli-geometry",
+            "extremal-regimes",
+            "randomness-regimes",
+            "axiomatic-definability"
+          ]
+        },
+        "summary": { "type": "string" },
+        "source_paper": {
+          "type": "string",
+          "description": "Citation or link to the original research paper."
+        }
+      },
+      "required": ["name", "version", "category", "summary"]
+    },
+
+    "operators": {
+      "type": "array",
+      "description": "RTT operator grammar extracted from the paper.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "role": {
+            "type": "string",
+            "enum": [
+              "engine",
+              "profile",
+              "signature",
+              "diagnostic",
+              "map",
+              "example",
+              "extension",
+              "index",
+              "reference",
+              "template"
+            ]
+          },
+          "analyzer_layer": {
+            "type": "string",
+            "enum": [
+              "operator",
+              "dimensional",
+              "regime",
+              "drift",
+              "coherence",
+              "cross-cutting"
+            ]
+          },
+          "description": { "type": "string" }
+        },
+        "required": ["id", "role", "analyzer_layer", "description"]
+      }
+    },
+
+    "regimes": {
+      "type": "array",
+      "description": "Regime map for the module (analytic, geometric, logical, etc.).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "transitions": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["name", "description"]
+      }
+    },
+
+    "drift": {
+      "type": "object",
+      "description": "Drift quantification for the module.",
+      "properties": {
+        "max_drift": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "coherence": {
+      "type": "object",
+      "description": "Coherence kernel for the module.",
+      "properties": {
+        "kernel": { "type": "string" },
+        "links": {
+          "type": "array",
+          "description": "Cross-module coherence links.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "files": {
+      "type": "array",
+      "description": "File-to-role mapping for the module.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string" },
+          "role": {
+            "type": "string",
+            "enum": [
+              "engine",
+              "profile",
+              "signature",
+              "diagnostic",
+              "map",
+              "example",
+              "extension",
+              "index",
+              "reference",
+              "template"
+            ]
+          },
+          "analyzer_layer": {
+            "type": "string",
+            "enum": [
+              "operator",
+              "dimensional",
+              "regime",
+              "drift",
+              "coherence",
+              "cross-cutting"
+            ]
+          },
+          "purpose": { "type": "string" }
+        },
+        "required": ["path", "role", "analyzer_layer", "purpose"]
+      }
+    }
+  },
+
+  "required": ["module", "operators", "regimes", "files"]
+}

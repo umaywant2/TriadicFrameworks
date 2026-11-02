@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="rtt.css" />
+<h1 class="rtt-hero-title">Coeus Pattern Engine</h1>
+  <div id="rtt-nav"></div>
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
+<p class="rtt-hero-subtitle">Fractal cognition for multi‑horizon intelligence.</p>
+
+<div class="rtt-badge rtt-badge-intelligence">Intelligence Tier</div>
+
+<hr class="rtt-divider" />
+
+<section>
+  <h2 class="rtt-section-title">What It Does</h2>
+  <p>
+    Coeus identifies, stabilizes, and harmonizes multi‑scale patterns across
+    dimensional fields, enabling emergent reasoning and cross‑horizon synthesis.
+  </p>
+</section>
+
+<section>
+  <h2 class="rtt-section-title">Capabilities</h2>
+  <ul>
+    <li>Fractal pattern recognition</li>
+    <li>Multi‑horizon synthesis</li>
+    <li>Dimensional curvature mapping</li>
+    <li>Resonance‑aware inference</li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="rtt-section-title">Learn More</h2>
+  <a class="rtt-btn rtt-btn-secondary" href="academy-course.html?course=coeus">Coeus Lesson</a>
+</section>
+
+<script>
+engines: [
+  { name: "Coeus", link: "coeus.html" },
+  { name: "Wrapped Core L2", link: "wrapped-core-l2.html" }
+  ]
+</script>

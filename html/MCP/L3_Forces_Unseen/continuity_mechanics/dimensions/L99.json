@@ -1,0 +1,46 @@
+{
+  "id": "L99",
+  "layer": "L3_Forces_Unseen",
+  "triad": "continuity",
+  "dimension": "L99",
+  "name": "Full Resonance Envelope",
+  "canonical": "R5",
+
+  "summary": "L99 is the full resonance envelope formed from L66 and L33. It represents the complete internal resonance of the continuity manifold.",
+
+  "semantic_axis": "resonanceEnvelope",
+  "role": "full",
+  "category": "composite",
+  "fraction": "99%",
+
+  "composition": [
+    "L66",
+    "L33"
+  ],
+
+  "redirects": {
+    "up": "validator_pulse",
+    "down": "L66"
+  },
+
+  "description": {
+    "canonical": "L99 defines the full resonance envelope. It is the final composite structure before the external validator pulse.",
+    "cosmology": "In the cosmology chain, L99 represents the completion of internal resonance before external validation.",
+    "continuity": "L99 models the full continuity envelope derived from triadic-sum resonance.",
+    "mcp": "Used for modeling full resonance behavior in continuity mechanics."
+  },
+
+  "ai": {
+    "module": "L4_Continuity_Mechanics",
+    "dimension": "L99",
+    "version": "1.0.0",
+    "keywords": [
+      "resonance",
+      "full",
+      "continuity",
+      "composite",
+      "triadic-sum"
+    ],
+    "purpose": "Defines the full resonance envelope for AI reasoning and composite modeling."
+  }
+}

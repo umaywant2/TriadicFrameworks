@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/agentic/chebyshev-demazure-dyck.md">
+  <title>RTT Agentic Module: Chebyshev Quotients, Demazure Multiplicities, and Dyck‑Path Models</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/agentic/chebyshev-demazure-dyck.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/agentic/chebyshev-demazure-dyck.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_agentic_chebyshev_demazure_dyck_" src="https://github.com/user-attachments/assets/ca2daa34-8e16-4fd0-9431-c984b0d0d901" /></p>
+<h1 id="rtt-agentic-module-chebyshev-quotients-demazure-multiplicities-and-dyckpath-models">RTT Agentic Module: Chebyshev Quotients, Demazure Multiplicities, and Dyck‑Path Models</h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/chebyshev-demazure-dyck_module.json"><code>chebyshev-demazure-dyck_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p><strong>Module ID:</strong> <code>chebyshev_demazure_dyck_rtt</code><br>
+<strong>Source paper:</strong> https://arxiv.org/pdf/2604.25246</p>
+<p>This module wraps the paper <em>“Chebyshev quotients, Demazure multiplicities, and Dyck‑path models”</em> in RTT operator grammar.<br>
+It preserves the authors’ mathematics while exposing the structural regimes that govern:</p>
+<ul>
+<li>the Chebyshev‑quotient formula for numerical Demazure multiplicities,  </li>
+<li>the eventual‑positivity dichotomy,  </li>
+<li>the signed matching/strip‑walk model, and  </li>
+<li>the Dyck‑path factorization families.</li>
+</ul>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<ul>
+<li>Make the paper <strong>agentic</strong> and machine‑navigable.  </li>
+<li>Clarify the <strong>regime structure</strong> behind Chebyshev quotients and positivity.  </li>
+<li>Provide students with a clean conceptual map.  </li>
+<li>Support AI agents in reasoning over the paper without drift.</li>
+</ul>
+<hr>
+<h2 id="2-core-rtt-view-of-the-paper">2. Core RTT view of the paper</h2>
+<p>The paper shows that numerical Demazure multiplicities for sl₂[t] fusion products can be computed by extracting a single coefficient from a Chebyshev quotient.<br>
+This quotient exhibits a sharp dichotomy:</p>
+<ul>
+<li><strong>Either</strong> it becomes a polynomial (finite support),  </li>
+<li><strong>Or</strong> its coefficients are <strong>eventually strictly positive</strong>.</li>
+</ul>
+<p>The authors then:</p>
+<ul>
+<li>give a <strong>signed combinatorial model</strong> using matchings and bounded strip walks,  </li>
+<li>identify infinite families where the quotient <strong>factors into Dyck‑path‑compatible pieces</strong>,  </li>
+<li>and translate these back into explicit formulas for Demazure multiplicities.</li>
+</ul>
+<p>The appendix documents <strong>AxiomProver’s autonomous Lean formalization</strong> of the main theorems.</p>
+<hr>
+<h2 id="3-rtt-structures-in-this-module">3. RTT structures in this module</h2>
+<h3 id="regimes">Regimes</h3>
+<ul>
+<li><code>fusion_product_regime</code>  </li>
+<li><code>chebyshev_quotient_regime</code>  </li>
+<li><code>eventual_positivity_regime</code>  </li>
+<li><code>matching_walk_regime</code>  </li>
+<li><code>dyck_path_factorization_regime</code>  </li>
+<li><code>formalization_regime</code></li>
+</ul>
+<h3 id="tensions">Tensions</h3>
+<ul>
+<li><code>representation_vs_polynomial</code>  </li>
+<li><code>signed_vs_unsigned</code>  </li>
+<li><code>root_behavior_vs_combinatorics</code>  </li>
+<li><code>formal_vs_informal</code></li>
+</ul>
+<h3 id="transitions">Transitions</h3>
+<ul>
+<li><code>demazure_to_chebyshev_transition</code>  </li>
+<li><code>quotient_to_positivity_transition</code>  </li>
+<li><code>positivity_to_signed_model_transition</code>  </li>
+<li><code>signed_to_unsigned_transition</code>  </li>
+<li><code>informal_to_lean_transition</code></li>
+</ul>
+<hr>
+<h2 id="4-operators">4. Operators</h2>
+<ul>
+<li><strong><code>chebyshev_coefficient_operator</code></strong> — extracts multiplicity coefficients.  </li>
+<li><strong><code>root_analysis_operator</code></strong> — determines eventual positivity.  </li>
+<li><strong><code>matching_operator</code></strong> — expands numerator via matchings.  </li>
+<li><strong><code>strip_walk_operator</code></strong> — expands denominator via strip walks.  </li>
+<li><strong><code>dyck_factor_operator</code></strong> — detects Dyck‑path factorizations.  </li>
+<li><strong><code>formalization_operator</code></strong> — maps statements to Lean.</li>
+</ul>
+<hr>
+<h2 id="5-how-to-use-this-module">5. How to use this module</h2>
+<ul>
+<li>
+<p><strong>Students:</strong><br>
+  Use this README alongside the PDF to understand how Chebyshev polynomials, Dyck paths, and representation theory interact.</p>
+</li>
+<li>
+<p><strong>Researchers:</strong><br>
+  Query the module’s regimes and operators to explore structural dependencies.</p>
+</li>
+<li>
+<p><strong>Agents:</strong><br>
+  Treat <code>module.json</code> as the canonical structural map of the paper.</p>
+</li>
+</ul>
+<hr>
+<h2 id="6-provenance">6. Provenance</h2>
+<ul>
+<li><strong>Module authoring:</strong> TriadicFrameworks (RTT / agentic mapping).  </li>
+<li><strong>Original content:</strong> Authors of arXiv:2604.25246.  </li>
+<li><strong>License:</strong> Open educational use permitted.</li>
+</ul>
+<hr>
+<h1 id="diagramtxt">✅ <strong>diagram.txt</strong></h1>
+<p><em>(ASCII regime–tension–transition map)</em></p>
+<pre><code class="language-text">     +--------------------------------------------------------------+
+     | chebyshev_demazure_dyck_rtt                                  |
+     +--------------------------------------------------------------+
+
+REGIMES
+  [R1] fusion_product_regime
+  [R2] chebyshev_quotient_regime
+  [R3] eventual_positivity_regime
+  [R4] matching_walk_regime
+  [R5] dyck_path_factorization_regime
+  [R6] formalization_regime
+
+TENSIONS
+  [T1] representation_vs_polynomial        (R1 &lt;--&gt; R2)
+  [T2] root_behavior_vs_combinatorics      (R2 &lt;--&gt; R3 &lt;--&gt; R4)
+  [T3] signed_vs_unsigned                  (R4 &lt;--&gt; R5)
+  [T4] formal_vs_informal                  (R5 &lt;--&gt; R6)
+
+TRANSITIONS
+  [X1] demazure_to_chebyshev_transition
+  [X2] quotient_to_positivity_transition
+  [X3] positivity_to_signed_model_transition
+  [X4] signed_to_unsigned_transition
+  [X5] informal_to_lean_transition
+
+FLOW
+  fusion_product_regime (R1)
+        |
+        v
+  chebyshev_quotient_regime (R2)
+        |
+        v
+  eventual_positivity_regime (R3)
+        |
+        v
+  matching_walk_regime (R4)
+        |
+        v
+  dyck_path_factorization_regime (R5)
+        |
+        v
+  formalization_regime (R6)
+</code></pre>
+  </main>
+</body>
+</html>

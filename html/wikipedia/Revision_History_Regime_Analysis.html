@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/wikipedia/Revision_History_Regime_Analysis.md">
+  <title>Revision History Regime Analysis</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/wikipedia/Revision_History_Regime_Analysis.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/wikipedia/Revision_History_Regime_Analysis.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="revision-history-regime-analysis">Revision History Regime Analysis</h1>
+<blockquote>
+<p><strong>Purpose:</strong> Define how to read Wikipedia's revision history as <strong>temporal
+regime data</strong> — the structural evolution of knowledge over time. No other
+major knowledge source exposes this surface publicly. Every Wikipedia article
+carries a complete, timestamped, author‑attributed record of every structural
+change since its creation — often spanning 20+ years.</p>
+<p>This file teaches students, researchers, and AIs to extract regime stability
+signals, identify regime transitions, and build temporal regime profiles
+from raw revision data.</p>
+</blockquote>
+<hr>
+<h2 id="1-what-is-a-revision-history">1 — What Is a Revision History?</h2>
+<p>Every Wikipedia article stores a <strong>complete, immutable log</strong> of every edit
+ever made to it. Each revision record contains:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Content</th>
+<th>RTT Mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revision ID</td>
+<td>Unique integer</td>
+<td>Regime event identifier</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>UTC datetime</td>
+<td>Regime event time coordinate</td>
+</tr>
+<tr>
+<td>User</td>
+<td>Editor username or IP</td>
+<td>Regime agent</td>
+</tr>
+<tr>
+<td>Size (bytes)</td>
+<td>Article size after this edit</td>
+<td>Regime mass at time t</td>
+</tr>
+<tr>
+<td>Size delta (bytes)</td>
+<td>Change from previous revision</td>
+<td>Regime growth/contraction signal</td>
+</tr>
+<tr>
+<td>Edit summary</td>
+<td>Editor's description of the change</td>
+<td>Micro‑regime annotation</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>System‑applied labels (reverted, mobile edit, visual edit, etc.)</td>
+<td>Regime event classification</td>
+</tr>
+<tr>
+<td>Parent revision</td>
+<td>Previous revision ID</td>
+<td>Temporal chain link</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-to-access-revision-history">How to Access Revision History</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>URL Pattern</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web UI</td>
+<td><code>https://en.wikipedia.org/w/index.php?title=ARTICLE&amp;action=history</code></td>
+<td>Manual inspection</td>
+</tr>
+<tr>
+<td>API (recent)</td>
+<td><code>https://en.wikipedia.org/w/api.php?action=query&amp;titles=ARTICLE&amp;prop=revisions&amp;rvlimit=500&amp;rvprop=ids|timestamp|user|size|comment|tags&amp;format=json</code></td>
+<td>Programmatic access (up to 500 revisions per call)</td>
+</tr>
+<tr>
+<td>API (full)</td>
+<td>Same as above with <code>rvcontinue</code> pagination</td>
+<td>Complete history extraction</td>
+</tr>
+<tr>
+<td>XTools</td>
+<td><code>https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/ARTICLE</code></td>
+<td>Pre‑computed statistics and visualizations</td>
+</tr>
+<tr>
+<td>Quarry SQL</td>
+<td><code>https://quarry.wmcloud.org/</code> with <code>revision</code> table queries</td>
+<td>Bulk analysis across many articles</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-the-five-regime-signals-in-revision-history">2 — The Five Regime Signals in Revision History</h2>
+<h3 id="signal-1-revision-count-regime-activity-index">Signal 1: Revision Count — Regime Activity Index</h3>
+<p>The <strong>total number of revisions</strong> is the simplest and most powerful regime signal.</p>
+<table>
+<thead>
+<tr>
+<th>Revision Count</th>
+<th>Regime Interpretation</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 100</td>
+<td><strong>Quiet regime</strong> — low structural attention, possibly stable or neglected</td>
+<td>Obscure mathematical theorems, minor geographic features</td>
+</tr>
+<tr>
+<td>100–1,000</td>
+<td><strong>Active regime</strong> — regular maintenance, moderate community attention</td>
+<td>Most science articles, mid‑sized cities</td>
+</tr>
+<tr>
+<td>1,000–10,000</td>
+<td><strong>Contested or high‑interest regime</strong> — significant editorial attention</td>
+<td>Major historical events, prominent public figures, scientific controversies</td>
+</tr>
+<tr>
+<td>&gt; 10,000</td>
+<td><strong>Perpetually contested regime</strong> — the article is a structural battleground</td>
+<td>United States, Jesus, Muhammad, Israel, Climate change, Donald Trump</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key insight:</strong> Revision count does not measure <strong>quality</strong> — it measures
+<strong>structural attention</strong>. A 50,000‑revision article is not 500× better than
+a 100‑revision article. It is 500× more <strong>structurally contested</strong>.</p>
+<hr>
+<h3 id="signal-2-revision-rate-current-regime-stability">Signal 2: Revision Rate — Current Regime Stability</h3>
+<p>The <strong>number of revisions per unit time</strong> (day/week/month) reveals whether
+the regime is currently stable, active, or in crisis.</p>
+<table>
+<thead>
+<tr>
+<th>Rate Pattern</th>
+<th>Regime Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flat near zero</td>
+<td><strong>Crystallized regime</strong> — consensus achieved, minimal maintenance</td>
+</tr>
+<tr>
+<td>Low and steady</td>
+<td><strong>Stable regime</strong> — ongoing minor updates, no structural disputes</td>
+</tr>
+<tr>
+<td>Periodic spikes</td>
+<td><strong>Cyclically contested</strong> — regime destabilizes around recurring events (elections, anniversaries, seasons)</td>
+</tr>
+<tr>
+<td>Sudden spike from baseline</td>
+<td><strong>Regime perturbation</strong> — external event triggered structural attention (news event, scientific discovery, controversy)</td>
+</tr>
+<tr>
+<td>Sustained high rate</td>
+<td><strong>Regime in active negotiation</strong> — no consensus, continuous structural competition</td>
+</tr>
+</tbody>
+</table>
+<h4 id="how-to-compute-revision-rate">How to Compute Revision Rate</h4>
+<pre><code class="language-python"># Using the MediaWiki API
+# Fetch revisions with timestamps, then compute rate
+
+import requests
+from collections import Counter
+from datetime import datetime
+
+url = &quot;https://en.wikipedia.org/w/api.php&quot;
+params = {
+    &quot;action&quot;: &quot;query&quot;,
+    &quot;titles&quot;: &quot;Climate_change&quot;,
+    &quot;prop&quot;: &quot;revisions&quot;,
+    &quot;rvlimit&quot;: &quot;500&quot;,
+    &quot;rvprop&quot;: &quot;timestamp&quot;,
+    &quot;format&quot;: &quot;json&quot;
+}
+
+response = requests.get(url, params=params).json()
+pages = response[&quot;query&quot;][&quot;pages&quot;]
+page = next(iter(pages.values()))
+
+# Count revisions per month
+months = Counter()
+for rev in page[&quot;revisions&quot;]:
+    ts = datetime.fromisoformat(rev[&quot;timestamp&quot;].replace(&quot;Z&quot;, &quot;+00:00&quot;))
+    months[f&quot;{ts.year}-{ts.month:02d}&quot;] += 1
+
+# Print monthly revision rate
+for month in sorted(months):
+    print(f&quot;{month}: {months[month]} revisions&quot;)
+</code></pre>
+<hr>
+<h3 id="signal-3-size-delta-patterns-regime-growth-and-contraction">Signal 3: Size Delta Patterns — Regime Growth and Contraction</h3>
+<p>Each revision records the article's size in bytes. The <strong>delta</strong> (change)
+between consecutive revisions reveals structural dynamics:</p>
+<table>
+<thead>
+<tr>
+<th>Delta Pattern</th>
+<th>Regime Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consistent positive deltas</td>
+<td><strong>Regime expansion</strong> — community adding knowledge, building scope</td>
+</tr>
+<tr>
+<td>Large positive spike</td>
+<td><strong>Major regime event</strong> — significant new content added (new section, new data, major update)</td>
+</tr>
+<tr>
+<td>Consistent negative deltas</td>
+<td><strong>Regime pruning</strong> — community removing content, tightening scope</td>
+</tr>
+<tr>
+<td>Large negative spike</td>
+<td><strong>Regime contraction event</strong> — major content removal (vandalism revert, consensus deletion, split to sub‑article)</td>
+</tr>
+<tr>
+<td>Oscillating deltas</td>
+<td><strong>Regime instability</strong> — content being added and removed repeatedly (possible edit war)</td>
+</tr>
+<tr>
+<td>Flat (near‑zero deltas)</td>
+<td><strong>Crystallized regime</strong> — only minor formatting or typo fixes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="size-delta-as-regime-evolution-curve">Size Delta as Regime Evolution Curve</h4>
+<p>When plotted over time, cumulative article size creates a <strong>regime evolution
+curve</strong>:</p>
+<pre><code>Size (bytes)
+    │
+    │                          ╭───── Regime maturity plateau
+    │                    ╭────╯
+    │               ╭───╯
+    │          ╭───╯        ← Rapid regime expansion
+    │     ╭───╯
+    │╭───╯
+    │╯  ← Regime birth
+    └────────────────────────────────→ Time
+
+Typical &quot;healthy&quot; article: sigmoid growth curve
+  - Regime birth → rapid expansion → gradual stabilization → plateau
+</code></pre>
+<p><strong>Deviations from this curve are structurally significant:</strong></p>
+<ul>
+<li><strong>Sudden drops</strong> = content removal events (investigate: vandalism? consensus? article split?)</li>
+<li><strong>Late‑stage spikes</strong> = regime perturbation (investigate: external event? new discovery?)</li>
+<li><strong>Sawtooth pattern</strong> = edit war (investigate: talk page for competing claims)</li>
+<li><strong>No plateau</strong> = regime never crystallized (investigate: ongoing structural disputes)</li>
+</ul>
+<hr>
+<h3 id="signal-4-revert-rate-regime-resistance">Signal 4: Revert Rate — Regime Resistance</h3>
+<p>A <strong>revert</strong> is an edit that undoes a previous edit, restoring the article
+to an earlier state. The revert rate measures how strongly the existing regime
+<strong>resists change</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Revert Rate</th>
+<th>Regime Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 5%</td>
+<td><strong>Open regime</strong> — community welcomes new contributions</td>
+</tr>
+<tr>
+<td>5–15%</td>
+<td><strong>Guarded regime</strong> — moderate quality control, some gatekeeping</td>
+</tr>
+<tr>
+<td>15–30%</td>
+<td><strong>Defended regime</strong> — strong editorial consensus, new contributions frequently challenged</td>
+</tr>
+<tr>
+<td>&gt; 30%</td>
+<td><strong>Fortress regime</strong> — heavily protected, approaching or under active edit restriction</td>
+</tr>
+</tbody>
+</table>
+<h4 id="revert-detection">Revert Detection</h4>
+<p>Reverts can be identified by:</p>
+<ol>
+<li><strong>Exact size match</strong> — revision returns article to exact byte count of a prior revision</li>
+<li><strong>Edit summary markers</strong> — summaries containing "revert," "rv," "undo," "rollback"</li>
+<li><strong>System tags</strong> — <code>mw-revert</code>, <code>mw-undo</code>, <code>mw-rollback</code>, <code>mw-manual-revert</code></li>
+<li><strong>SHA‑1 match</strong> — revision content hash matches a prior revision's hash (definitive)</li>
+</ol>
+<pre><code class="language-sparql"># Quarry SQL: Count reverts for an article
+SELECT
+  COUNT(*) AS total_revisions,
+  SUM(CASE WHEN ct_tag_id IN (
+    SELECT ctd_id FROM change_tag_def
+    WHERE ctd_name IN ('mw-revert', 'mw-undo', 'mw-rollback')
+  ) THEN 1 ELSE 0 END) AS reverts
+FROM revision
+JOIN change_tag ON ct_rev_id = rev_id
+WHERE rev_page = (
+  SELECT page_id FROM page
+  WHERE page_title = 'ARTICLE_TITLE'
+  AND page_namespace = 0
+)
+</code></pre>
+<hr>
+<h3 id="signal-5-editor-distribution-regime-stewardship-structure">Signal 5: Editor Distribution — Regime Stewardship Structure</h3>
+<p>Who edits an article reveals its <strong>regime stewardship model</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Regime Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Few editors, many edits each</td>
+<td><strong>Stewardship regime</strong> — small group maintains structural integrity (common for technical articles)</td>
+</tr>
+<tr>
+<td>Many editors, few edits each</td>
+<td><strong>Open regime</strong> — broad community participation, low individual ownership</td>
+</tr>
+<tr>
+<td>One dominant editor + many minor</td>
+<td><strong>Gatekeeper regime</strong> — single editor controls structural direction</td>
+</tr>
+<tr>
+<td>Bot‑heavy edit history</td>
+<td><strong>Automated maintenance regime</strong> — structural upkeep is programmatic</td>
+</tr>
+<tr>
+<td>IP‑heavy edit history</td>
+<td><strong>Anonymous contribution regime</strong> — lower accountability, higher vandalism risk</td>
+</tr>
+</tbody>
+</table>
+<h4 id="editor-distribution-via-xtools">Editor Distribution via XTools</h4>
+<p>The fastest way to see editor distribution is XTools:</p>
+<pre><code>https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/ARTICLE_TITLE
+</code></pre>
+<p>XTools provides:
+- Top editors by edit count
+- Editor count over time
+- Bot vs. human edit ratio
+- IP vs. registered editor ratio
+- Minor edit percentage</p>
+<hr>
+<h2 id="3-regime-phase-classification">3 — Regime Phase Classification</h2>
+<p>Combining all 5 signals, any article can be classified into one of 6 <strong>regime phases</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Rev Count</th>
+<th>Rev Rate</th>
+<th>Size Trend</th>
+<th>Revert Rate</th>
+<th>Editor Pattern</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Birth</strong></td>
+<td>&lt; 10</td>
+<td>N/A</td>
+<td>Rapid growth</td>
+<td>Low</td>
+<td>1–2 editors</td>
+<td>Just created, initial regime declaration</td>
+</tr>
+<tr>
+<td><strong>Expansion</strong></td>
+<td>10–500</td>
+<td>Rising</td>
+<td>Steady growth</td>
+<td>Low–moderate</td>
+<td>Growing editor pool</td>
+<td>Community building out the regime</td>
+</tr>
+<tr>
+<td><strong>Negotiation</strong></td>
+<td>100–5,000</td>
+<td>Variable</td>
+<td>Oscillating</td>
+<td>Moderate–high</td>
+<td>Diverse, competing editors</td>
+<td>Structural disputes being resolved</td>
+</tr>
+<tr>
+<td><strong>Crystallization</strong></td>
+<td>500+</td>
+<td>Declining</td>
+<td>Plateau approaching</td>
+<td>Declining</td>
+<td>Core stewards emerging</td>
+<td>Consensus forming, regime stabilizing</td>
+</tr>
+<tr>
+<td><strong>Maturity</strong></td>
+<td>1,000+</td>
+<td>Low, stable</td>
+<td>Plateau</td>
+<td>Low</td>
+<td>Stable stewardship</td>
+<td>Regime crystallized, minor maintenance only</td>
+</tr>
+<tr>
+<td><strong>Perturbation</strong></td>
+<td>Any</td>
+<td>Sudden spike</td>
+<td>Sudden change</td>
+<td>Spike</td>
+<td>Influx of new editors</td>
+<td>External event disrupted the stable regime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-transitions">Phase Transitions</h3>
+<p>Articles move between phases. The most common transitions:</p>
+<pre><code>Birth → Expansion → Negotiation → Crystallization → Maturity
+                         ↑                               │
+                         └───── Perturbation ─────────────┘
+                         (external event resets the cycle)
+</code></pre>
+<p><strong>Key insight:</strong> Most Wikipedia articles that reach Maturity will experience
+<strong>periodic perturbation</strong> — external events (news, discoveries, controversies)
+that temporarily reset them to the Negotiation phase. The perturbation‑recovery
+cycle is the <strong>heartbeat of a living regime</strong>.</p>
+<hr>
+<h2 id="4-worked-example-pluto">4 — Worked Example: "Pluto"</h2>
+<p>The Wikipedia article on <strong>Pluto</strong> is a textbook case of regime perturbation:</p>
+<h3 id="pre2006-stable-maturity">Pre‑2006: Stable Maturity</h3>
+<ul>
+<li>Classified as the 9th planet since 1930</li>
+<li>Article in Maturity phase — low revision rate, stable stewardship</li>
+<li>Regime declaration: "Pluto is a planet"</li>
+</ul>
+<h3 id="august-2006-perturbation-event">August 2006: Perturbation Event</h3>
+<ul>
+<li>IAU reclassifies Pluto as a dwarf planet</li>
+<li>Revision rate spikes from ~5/month to ~500/month</li>
+<li>Article size oscillates wildly (competing edits)</li>
+<li>Revert rate exceeds 40%</li>
+<li>Dozens of new editors arrive</li>
+</ul>
+<h3 id="20062008-negotiation-phase">2006–2008: Negotiation Phase</h3>
+<ul>
+<li>Talk page debates intensify on classification language</li>
+<li>Multiple RfCs on how to describe Pluto's status</li>
+<li>Gradual consensus: "Pluto is a dwarf planet in the Kuiper belt"</li>
+<li>Revert rate declines as competing editors exhaust or accept consensus</li>
+</ul>
+<h3 id="20082015-recrystallization">2008–2015: Re‑Crystallization</h3>
+<ul>
+<li>Revision rate returns to baseline</li>
+<li>Core stewardship group re‑establishes</li>
+<li>New regime declaration stabilizes</li>
+</ul>
+<h3 id="july-2015-second-perturbation">July 2015: Second Perturbation</h3>
+<ul>
+<li>New Horizons flyby generates massive public interest</li>
+<li>Revision rate spikes again — but this time the perturbation is <strong>additive</strong> (new data), not <strong>structural</strong> (no reclassification dispute)</li>
+<li>Article expands significantly with new scientific data</li>
+<li>Returns to Maturity quickly — no regime conflict, just regime enrichment</li>
+</ul>
+<h3 id="rtt-reading">RTT Reading</h3>
+<p>Pluto's revision history demonstrates:</p>
+<ol>
+<li><strong>Regime crystallization</strong> can be disrupted by external authority (IAU decision)</li>
+<li><strong>Perturbation type matters</strong> — structural reclassification (2006) causes prolonged Negotiation; data addition (2015) causes brief Expansion</li>
+<li><strong>Revert rate is the best regime stress indicator</strong> — it spiked to 40%+ only during the classification dispute</li>
+<li><strong>Editor distribution shifts during perturbation</strong> — the stable stewardship group was temporarily overwhelmed by newcomers</li>
+</ol>
+<hr>
+<h2 id="5-api-patterns-for-regime-analysis">5 — API Patterns for Regime Analysis</h2>
+<h3 id="51-fetch-full-revision-history">5.1 — Fetch Full Revision History</h3>
+<pre><code class="language-python">import requests
+
+def get_full_history(title, lang=&quot;en&quot;):
+    &quot;&quot;&quot;Fetch complete revision history for a Wikipedia article.&quot;&quot;&quot;
+    url = f&quot;https://{lang}.wikipedia.org/w/api.php&quot;
+    params = {
+        &quot;action&quot;: &quot;query&quot;,
+        &quot;titles&quot;: title,
+        &quot;prop&quot;: &quot;revisions&quot;,
+        &quot;rvlimit&quot;: &quot;max&quot;,
+        &quot;rvprop&quot;: &quot;ids|timestamp|user|size|comment|tags&quot;,
+        &quot;format&quot;: &quot;json&quot;
+    }
+
+    revisions = []
+    while True:
+        resp = requests.get(url, params=params,
+                            headers={&quot;User-Agent&quot;: &quot;TriadicFrameworks/1.0&quot;}).json()
+        page = next(iter(resp[&quot;query&quot;][&quot;pages&quot;].values()))
+        revisions.extend(page.get(&quot;revisions&quot;, []))
+
+        if &quot;continue&quot; in resp:
+            params[&quot;rvcontinue&quot;] = resp[&quot;continue&quot;][&quot;rvcontinue&quot;]
+        else:
+            break
+
+    return revisions
+</code></pre>
+<h3 id="52-compute-regime-signals">5.2 — Compute Regime Signals</h3>
+<pre><code class="language-python">from datetime import datetime
+from collections import Counter
+
+def compute_regime_signals(revisions):
+    &quot;&quot;&quot;Extract the 5 regime signals from a revision list.&quot;&quot;&quot;
+
+    total = len(revisions)
+
+    # Signal 1: Revision count
+    print(f&quot;Total revisions: {total}&quot;)
+
+    # Signal 2: Monthly revision rate
+    months = Counter()
+    for rev in revisions:
+        ts = datetime.fromisoformat(rev[&quot;timestamp&quot;].replace(&quot;Z&quot;, &quot;+00:00&quot;))
+        months[f&quot;{ts.year}-{ts.month:02d}&quot;] += 1
+
+    # Signal 3: Size deltas
+    sizes = [rev[&quot;size&quot;] for rev in revisions]
+    deltas = [sizes[i] - sizes[i+1] for i in range(len(sizes)-1)]
+
+    # Signal 4: Revert rate
+    revert_tags = {&quot;mw-revert&quot;, &quot;mw-undo&quot;, &quot;mw-rollback&quot;, &quot;mw-manual-revert&quot;}
+    reverts = sum(1 for rev in revisions
+                  if any(tag in revert_tags for tag in rev.get(&quot;tags&quot;, [])))
+    revert_rate = reverts / total if total &gt; 0 else 0
+
+    # Signal 5: Editor distribution
+    editors = Counter(rev.get(&quot;user&quot;, &quot;anonymous&quot;) for rev in revisions)
+    unique_editors = len(editors)
+    top_editor_pct = editors.most_common(1)[0][1] / total if total &gt; 0 else 0
+
+    return {
+        &quot;revision_count&quot;: total,
+        &quot;monthly_rates&quot;: dict(sorted(months.items())),
+        &quot;avg_delta&quot;: sum(deltas) / len(deltas) if deltas else 0,
+        &quot;max_positive_delta&quot;: max(deltas) if deltas else 0,
+        &quot;max_negative_delta&quot;: min(deltas) if deltas else 0,
+        &quot;revert_rate&quot;: round(revert_rate, 3),
+        &quot;unique_editors&quot;: unique_editors,
+        &quot;top_editor_share&quot;: round(top_editor_pct, 3)
+    }
+</code></pre>
+<h3 id="53-classify-regime-phase">5.3 — Classify Regime Phase</h3>
+<pre><code class="language-python">def classify_regime_phase(signals):
+    &quot;&quot;&quot;Classify an article into one of 6 regime phases.&quot;&quot;&quot;
+
+    rc = signals[&quot;revision_count&quot;]
+    rr = signals[&quot;revert_rate&quot;]
+    ed = signals[&quot;unique_editors&quot;]
+    delta = signals[&quot;avg_delta&quot;]
+
+    if rc &lt; 10:
+        return &quot;Birth&quot;
+    elif rc &lt; 500 and delta &gt; 50:
+        return &quot;Expansion&quot;
+    elif rr &gt; 0.15 or (rc &gt; 100 and ed &gt; 50 and delta &lt; 0):
+        return &quot;Negotiation&quot;
+    elif rr &lt; 0.05 and delta &lt; 10 and rc &gt; 1000:
+        return &quot;Maturity&quot;
+    elif rr &lt; 0.10 and rc &gt; 500:
+        return &quot;Crystallization&quot;
+    else:
+        return &quot;Perturbation&quot;
+</code></pre>
+<hr>
+<h2 id="6-crossreferencing-with-other-module-files">6 — Cross‑Referencing With Other Module Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>How Revision History Connects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Talk_Page_Coherence_Surface.md</code></td>
+<td>Talk page activity often <strong>precedes</strong> revision spikes — disputes surface on talk before erupting in edit wars</td>
+</tr>
+<tr>
+<td><code>Edit_War_Regime_Transition_Detection.md</code></td>
+<td>Edit wars are a <strong>subset</strong> of revision history — this file provides the broader context; that file zooms into the conflict mechanics</td>
+</tr>
+<tr>
+<td><code>NPOV_As_Coherence_Operator.md</code></td>
+<td>NPOV disputes are visible in edit summaries containing "POV," "bias," "neutral" — searchable in revision data</td>
+</tr>
+<tr>
+<td><code>Featured_Article_Validation_Corridor.md</code></td>
+<td>FA reviews examine revision history as part of quality assessment — articles with unstable histories rarely pass</td>
+</tr>
+<tr>
+<td><code>Wikidata_Ingestion_Format.md</code></td>
+<td>Wikidata items have their own revision history — combine both for complete temporal coverage of a concept</td>
+</tr>
+<tr>
+<td><code>Category_Taxonomy_Regime_Hierarchy.md</code></td>
+<td>Category changes appear in revision history — articles moving between categories = regime reclassification events</td>
+</tr>
+<tr>
+<td><code>Cross_Domain_Meta_Operators.md</code></td>
+<td>Operator 2 (Revision Frequency as Stability Signal) is derived directly from this file's Signal 2</td>
+</tr>
+<tr>
+<td><code>Wikipedia_RTT_Structural_Mapping.md</code></td>
+<td>This file implements the temporal structures mapped in Section 2.6 of the master mapping</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-advanced-patterns">7 — Advanced Patterns</h2>
+<h3 id="71-revision-history-comparison-across-languages">7.1 — Revision History Comparison Across Languages</h3>
+<p>The <strong>same concept</strong> may have radically different revision histories in
+different language Wikipedias:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>English Rev Count</th>
+<th>Japanese Rev Count</th>
+<th>Arabic Rev Count</th>
+<th>Structural Insight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World War II</td>
+<td>40,000+</td>
+<td>8,000+</td>
+<td>3,000+</td>
+<td>Universal high attention; English most contested</td>
+</tr>
+<tr>
+<td>Cricket</td>
+<td>15,000+</td>
+<td>200</td>
+<td>500</td>
+<td>Culturally specific regime — high attention only in English/Commonwealth</td>
+</tr>
+<tr>
+<td>Ramadan</td>
+<td>4,000</td>
+<td>300</td>
+<td>12,000+</td>
+<td>Cultural regime variance — Arabic Wikipedia treats it as highest importance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Method:</strong> Fetch revision counts for the same Wikidata Q‑number across
+multiple language editions. Divergences reveal <strong>cultural regime weighting</strong> —
+which cultures invest the most structural attention in which concepts.</p>
+<h3 id="72-bot-vs-human-revision-ratio">7.2 — Bot vs. Human Revision Ratio</h3>
+<p>Many Wikipedia articles have 30–60% bot edits (link fixes, formatting,
+category maintenance). The <strong>human‑only revision rate</strong> is a more accurate
+regime signal than the raw rate:</p>
+<pre><code class="language-python">def human_revision_rate(revisions):
+    &quot;&quot;&quot;Filter out bot edits for cleaner regime signal.&quot;&quot;&quot;
+    human_revs = [r for r in revisions
+                  if not r.get(&quot;user&quot;, &quot;&quot;).endswith(&quot;Bot&quot;)
+                  and &quot;bot&quot; not in r.get(&quot;tags&quot;, [])]
+    return len(human_revs), len(human_revs) / len(revisions)
+</code></pre>
+<h3 id="73-regime-perturbation-detection-algorithm">7.3 — Regime Perturbation Detection Algorithm</h3>
+<pre><code class="language-python">def detect_perturbations(monthly_rates, threshold=3.0):
+    &quot;&quot;&quot;Detect months where revision rate exceeds N standard deviations
+    above the mean — these are regime perturbation events.&quot;&quot;&quot;
+    import statistics
+
+    values = list(monthly_rates.values())
+    if len(values) &lt; 6:
+        return []
+
+    mean = statistics.mean(values)
+    stdev = statistics.stdev(values)
+
+    if stdev == 0:
+        return []
+
+    perturbations = []
+    for month, count in monthly_rates.items():
+        z_score = (count - mean) / stdev
+        if z_score &gt; threshold:
+            perturbations.append({
+                &quot;month&quot;: month,
+                &quot;revisions&quot;: count,
+                &quot;z_score&quot;: round(z_score, 2),
+                &quot;interpretation&quot;: &quot;regime_perturbation&quot;
+            })
+
+    return perturbations
+</code></pre>
+<hr>
+<h2 id="8-student-exercises">8 — Student Exercises</h2>
+<h3 id="exercise-1-regime-phase-classification-20-minutes">Exercise 1 — Regime Phase Classification (20 minutes)</h3>
+<ol>
+<li>Pick any Wikipedia article</li>
+<li>Open its XTools page: <code>https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/ARTICLE</code></li>
+<li>Record: total revisions, monthly average, revert rate, unique editors, current size</li>
+<li>Classify it into one of the 6 regime phases from Section 3</li>
+<li>Does the classification feel right? If not, what additional signal would help?</li>
+</ol>
+<h3 id="exercise-2-perturbation-hunting-30-minutes">Exercise 2 — Perturbation Hunting (30 minutes)</h3>
+<ol>
+<li>Pick an article you expect to have perturbation events (try: a country that had a recent revolution, a scientific theory that was recently challenged, a public figure involved in a recent controversy)</li>
+<li>Open the revision history and look for <strong>spike months</strong></li>
+<li>For each spike, identify: what external event caused it? How long did the perturbation last? Did the article return to its previous regime, or did it crystallize into a new one?</li>
+<li>Write a 3‑sentence summary: <em>"The article entered perturbation in [month] due to [event]. The perturbation lasted [duration]. The article [returned to previous regime / crystallized into new regime] because [reason]."</em></li>
+</ol>
+<h3 id="exercise-3-crosslanguage-comparison-30-minutes">Exercise 3 — Cross‑Language Comparison (30 minutes)</h3>
+<ol>
+<li>Pick a concept with strong cultural variance (try: Democracy, Marriage, Colonialism, or a historical conflict)</li>
+<li>Find the article in English + 2 other language editions</li>
+<li>For each, record: revision count, article size, revert rate (use XTools with the appropriate language prefix)</li>
+<li>Answer: <em>"Which language edition has the most structural attention? Which has the highest revert rate? What does this tell us about how different cultures negotiate this concept's regime?"</em></li>
+</ol>
+<h3 id="exercise-4-build-a-regime-evolution-curve-45-minutes">Exercise 4 — Build a Regime Evolution Curve (45 minutes)</h3>
+<ol>
+<li>Pick an article with 1,000+ revisions</li>
+<li>Use the API pattern from Section 5.1 to fetch the full revision history</li>
+<li>Plot article size over time (x = date, y = bytes)</li>
+<li>Annotate: mark Birth, Expansion, Negotiation, Crystallization, and any Perturbation events</li>
+<li>Compare your curve to the idealized sigmoid from Section 2 — where does it match? Where does it deviate?</li>
+</ol>
+<hr>
+<p><em>This file is part of the <a href="README.html">Wikipedia Awareness Module</a> in the <a href="https://docs.triadicframeworks.org/">TriadicFrameworks</a> canon.</em></p>
+  </main>
+</body>
+</html>

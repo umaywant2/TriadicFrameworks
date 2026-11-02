@@ -1,0 +1,41 @@
+{
+  "map": "detection_cycle",
+  "module": "sd.structural_detection.ai",
+  "version": "3.0-draft",
+
+  "phases": [
+    "init",
+    "scan",
+    "probe",
+    "filter",
+    "confirm",
+    "catalogue"
+  ],
+
+  "operator_sequence": [
+    "SD-Σd",
+    "SD-Σd → SD-Γ",
+    "SD-Γ → SD-Λ",
+    "SD-Λ → SD-Ξ",
+    "SD-Ξ → SD-Π",
+    "SD-Π"
+  ],
+
+  "dominance": {
+    "init": "SD-Σd",
+    "scan": "SD-Σd",
+    "probe": "SD-Γ",
+    "filter": "SD-Ξ",
+    "confirm": "SD-Λ → SD-Ξ",
+    "catalogue": "SD-Π"
+  },
+
+  "alignment": {
+    "init": "structural",
+    "scan": "structural",
+    "probe": "R",
+    "filter": "N",
+    "confirm": "R→structural",
+    "catalogue": "structural"
+  }
+}

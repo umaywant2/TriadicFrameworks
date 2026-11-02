@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Access Field",
+  "type": "object",
+  "properties": {
+    "field_id": { "type": "string" },
+    "resource": { "type": "string" },
+    "interaction_type": { "type": "string" },
+    "triadic_thresholds": {
+      "type": "object",
+      "properties": {
+        "spin_min": { "type": "number" },
+        "charge_min": { "type": "number" },
+        "temperature_min": { "type": "number" }
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/module_poker_state.json",
+  "title": "RTT Poker StateEmitter",
+  "description": "Triadic state output for a poker hand under uncertainty.",
+  "type": "object",
+
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "module_id": { "type": "string" },
+        "hand_id": { "type": "string" },
+        "street": {
+          "type": "string",
+          "enum": ["preflop", "flop", "turn", "river"]
+        },
+        "next_player": { "type": "string" }
+      },
+      "required": ["module_id", "hand_id", "street", "next_player"]
+    },
+
+    "visible_state": {
+      "type": "object",
+      "properties": {
+        "board": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "pot": { "type": "number", "minimum": 0 },
+        "stacks": {
+          "type": "object",
+          "additionalProperties": { "type": "number", "minimum": 0 }
+        }
+      },
+      "required": ["board", "pot", "stacks"]
+    },
+
+    "hidden_state": {
+      "type": "object",
+      "description": "Hole cards per player (unknown to opponents).",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "lumen": {
+      "type": "object",
+      "properties": {
+        "range_compression": {
+          "type": "string",
+          "enum": ["wide", "medium", "narrow"]
+        },
+        "pressure_nodes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "pot_geometry": {
+          "type": "string",
+          "enum": ["small", "medium", "large", "critical"]
+        }
+      },
+      "required": ["range_compression", "pressure_nodes", "pot_geometry"]
+    },
+
+    "regime": {
+      "type": "array",
+      "description": "Hephaestus regime classification per action.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": { "type": "string" },
+          "regime": {
+            "type": "string",
+            "enum": ["local", "structural", "continuity"]
+          }
+        },
+        "required": ["action", "regime"]
+      }
+    },
+
+    "ancestry": {
+      "type": "array",
+      "description": "Aurion betting-line ancestry signals.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sequence": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "collapse_signature": { "type": "boolean" },
+          "projection_loss": { "type": "boolean" }
+        },
+        "required": ["sequence", "collapse_signature", "projection_loss"]
+      }
+    },
+
+    "drift": {
+      "type": "object",
+      "description": "Continuity drift across the betting line.",
+      "properties": {
+        "direction": { "type": "string" },
+        "strength": {
+          "type": "string",
+          "enum": ["none", "weak", "medium", "strong"]
+        },
+        "alignment": {
+          "type": "string",
+          "enum": ["aligned", "misaligned"]
+        }
+      },
+      "required": ["direction", "strength", "alignment"]
+    },
+
+    "risk": {
+      "type": "object",
+      "properties": {
+        "paradox": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        },
+        "collapse": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        },
+        "projection_loss": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        }
+      },
+      "required": ["paradox", "collapse", "projection_loss"]
+    },
+
+    "triadic_score": {
+      "type": "object",
+      "properties": {
+        "local": { "type": "number", "minimum": 0, "maximum": 1 },
+        "structural": { "type": "number", "minimum": 0, "maximum": 1 },
+        "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "risk": { "type": "number", "minimum": 0, "maximum": 1 },
+        "final": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["local", "structural", "continuity", "risk", "final"]
+    },
+
+    "timeline": {
+      "type": "array",
+      "description": "Betting-line history.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ply": { "type": "integer" },
+          "action": { "type": "string" },
+          "player": { "type": "string" }
+        },
+        "required": ["ply", "action", "player"]
+      }
+    }
+  },
+
+  "required": [
+    "metadata",
+    "visible_state",
+    "hidden_state",
+    "lumen",
+    "regime",
+    "ancestry",
+    "drift",
+    "risk",
+    "triadic_score"
+  ]
+}

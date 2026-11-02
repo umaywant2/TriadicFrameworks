@@ -1,0 +1,111 @@
+{
+  "$schema": "../../atlas/atlas.schema.json",
+  "atlas": "triadic-atlas",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "imports": {
+    "atlas_surfaces": "./atlas-surfaces.json",
+    "atlas_navigation": "./atlas-navigation.json",
+    "atlas_fingerprint": "./atlas-fingerprint.json",
+    "atlas_synchronization": "./atlas-synchronization.json",
+    "continuity_field": "../../continuity/substrate-continuity.json",
+    "invariance_kernel": "../../invariance/substrate-invariance.json"
+  },
+
+  "interaction_modes": {
+    "explore": {
+      "entry": "atlas_root",
+      "gestures": ["zoom", "pan", "expand", "collapse"],
+      "transitions": ["query", "traverse", "inspect", "synchronize"]
+    },
+    "query": {
+      "entry": "atlas_query",
+      "gestures": ["filter", "search", "highlight"],
+      "transitions": ["explore", "traverse", "inspect"]
+    },
+    "traverse": {
+      "entry": "atlas_route",
+      "gestures": ["step", "jump", "follow", "branch"],
+      "transitions": ["explore", "query", "inspect"]
+    },
+    "inspect": {
+      "entry": "atlas_node",
+      "gestures": ["open", "drill", "compare"],
+      "transitions": ["explore", "query", "traverse"]
+    },
+    "synchronize": {
+      "entry": "atlas_sync",
+      "gestures": ["align", "merge", "update"],
+      "transitions": ["explore"]
+    }
+  },
+
+  "interaction_events": [
+    {
+      "event": "surface-open",
+      "trigger": "inspect",
+      "response": "load-surface",
+      "constraints": ["surface must exist", "fingerprint must be valid"]
+    },
+    {
+      "event": "navigation-transition",
+      "trigger": "traverse",
+      "response": "update-route",
+      "constraints": ["route must be valid", "continuity must be preserved"]
+    },
+    {
+      "event": "query-execute",
+      "trigger": "query",
+      "response": "return-results",
+      "constraints": ["query must be valid", "invariance must be preserved"]
+    },
+    {
+      "event": "sync-cycle",
+      "trigger": "synchronize",
+      "response": "apply-sync",
+      "constraints": ["sync route valid", "surface stable"]
+    }
+  ],
+
+  "interaction_queries": {
+    "global_query": {
+      "fields": [
+        "coherence",
+        "drift",
+        "stability",
+        "resonance",
+        "epoch",
+        "ignition"
+      ],
+      "filters": ["region", "severity", "phase", "cluster"]
+    },
+    "surface_query": {
+      "fields": ["surface_id", "surface_type", "fingerprint"],
+      "filters": ["region", "layer", "dimension"]
+    }
+  },
+
+  "interaction_transitions": {
+    "explore_to_query": ["zoom", "highlight"],
+    "query_to_traverse": ["filter", "search"],
+    "traverse_to_inspect": ["step", "open"],
+    "inspect_to_explore": ["collapse", "pan"],
+    "explore_to_synchronize": ["align", "update"]
+  },
+
+  "interaction_surfaces": {
+    "global": ["coherence", "drift", "stability", "resonance", "epoch", "ignition"],
+    "surface": ["surface_id", "surface_type", "fingerprint"],
+    "temporal": ["timeline", "propagation"],
+    "activation": ["ignition_cascade"]
+  },
+
+  "output": {
+    "interaction_protocol": "./atlas-interaction-protocol.json"
+  },
+
+  "meta": {
+    "notes": "Interaction protocol defining modes, gestures, transitions, events, queries, and surfaces for the Triadic Atlas."
+  }
+}

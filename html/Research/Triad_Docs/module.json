@@ -1,0 +1,21 @@
+{
+  "module": "Triad_Docs",
+  "name": "Triad Documentation Hub",
+  "summary": "Central documentation hub for the RTT Triad system, organizing all Scanner, O.H.S.H.I.T., and Atlas modules.",
+  "category": "intelligence-docs",
+  "version": "1.0",
+  "purpose": "Provide unified navigation and documentation structure for all Triad subsystems and their integration with the Intelligence Class Ladder.",
+  "role": "index",
+  "analyzer_layer": "structural",
+  "operators": [
+    "@triad.docs.group",
+    "@triad.docs.navigate",
+    "@triad.docs.describe",
+    "@triad.docs.integrate",
+    "@triad.docs.map"
+  ],
+  "lineage": {
+    "upstream": ["Triad_Global_Index"],
+    "downstream": ["AAI", "AGI", "SI"]
+  }
+}

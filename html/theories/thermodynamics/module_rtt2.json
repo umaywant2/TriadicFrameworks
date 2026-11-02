@@ -1,0 +1,133 @@
+{
+  "ai.module": "thermodynamics.rtt2",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/2 engine layer for Thermodynamics: resonance mapping, stabilizers, dissipation structure, and cross-module propagation.",
+  "ai.keywords": [
+    "thermodynamics",
+    "temperature",
+    "entropy",
+    "free energy",
+    "dissipation",
+    "equilibrium",
+    "substrate force",
+    "resonance",
+    "rtt2"
+  ],
+
+  "engine": {
+    "layer": "RTT/2",
+    "description": "Integrates Thermodynamics into the RTT resonance substrate, exposing temperature-driven resonance flows, entropy geometry, and cross-module coherence."
+  },
+
+  "resonance": {
+    "patterns": [
+      {
+        "name": "thermal_resonance",
+        "description": "Temperature acts as a resonance driver shaping energy distribution and flow."
+      },
+      {
+        "name": "entropy_geometry",
+        "description": "Entropy defines the geometric structure of accessible configurations and coherence boundaries."
+      },
+      {
+        "name": "free_energy_resonance",
+        "description": "Free energy determines resonance direction: toward structure or dispersion."
+      },
+      {
+        "name": "dissipation_resonance_decay",
+        "description": "Irreversible processes appear as resonance decay across gradients."
+      }
+    ],
+    "failure_modes": [
+      "runaway_dissipation",
+      "entropy_collapse",
+      "gradient_instability",
+      "non_equilibrium_breakdown"
+    ]
+  },
+
+  "stabilizers": {
+    "primary": [
+      {
+        "name": "temperature_gradient",
+        "description": "Defines the direction and magnitude of resonance flow."
+      },
+      {
+        "name": "entropy_boundary",
+        "description": "Constrains accessible configurations and stabilizes regime behavior."
+      },
+      {
+        "name": "free_energy_landscape",
+        "description": "Shapes stability basins and determines equilibrium points."
+      }
+    ],
+    "secondary": [
+      {
+        "name": "conductivity_structure",
+        "description": "Controls how resonance propagates through a medium."
+      },
+      {
+        "name": "dissipation_channels",
+        "description": "Define irreversible pathways that increase entropy."
+      }
+    ]
+  },
+
+  "flow_propagation": {
+    "mechanisms": [
+      "thermal_gradient_flow",
+      "free_energy_descent",
+      "entropy_expansion"
+    ],
+    "signals": [
+      "flux_intensity",
+      "gradient_shape",
+      "dissipation_rate"
+    ],
+    "notes": "Flow propagation is treated as resonance flow shaped by temperature, entropy geometry, and free energy structure."
+  },
+
+  "cross_module": {
+    "interactions": [
+      {
+        "module": "statistical_mechanics.rtt2",
+        "interaction": "Thermodynamic resonance emerges from statistical ensembles and microstate structure."
+      },
+      {
+        "module": "information_theory.rtt2",
+        "interaction": "Entropy links thermodynamic and informational coherence boundaries."
+      },
+      {
+        "module": "quantum_mechanics.rtt2",
+        "interaction": "Decoherence and thermalization share resonance decay pathways."
+      },
+      {
+        "module": "cosmology.rtt2",
+        "interaction": "Large-scale temperature gradients shape cosmic structure and expansion behavior."
+      }
+    ],
+    "notes": "Thermodynamic resonance propagates across physical, informational, and cosmological modules."
+  },
+
+  "dimensional_behavior": {
+    "R1": "Thermodynamics collapses; temperature undefined; coherence dominated by quantum behavior.",
+    "R2": "Local equilibrium; stable gradients; predictable resonance flow.",
+    "R3": "Large-scale structure; dissipation cycles; stable thermodynamic patterns.",
+    "R4": "Cosmological thermodynamics; horizon behavior; expansion-driven gradients."
+  },
+
+  "coherence": {
+    "markers": [
+      "energy conservation",
+      "monotonic entropy behavior",
+      "free energy minimization",
+      "stable equilibrium structure"
+    ],
+    "instability_signals": [
+      "runaway dissipation",
+      "entropy collapse",
+      "gradient amplification",
+      "non-equilibrium instability"
+    ]
+  }
+}

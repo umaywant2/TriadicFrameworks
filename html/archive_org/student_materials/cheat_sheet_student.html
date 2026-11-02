@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/archive_org/student_materials/cheat_sheet_student.md">
+  <title>RTT Cheat Sheet — Internet Archive (Student Edition)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/archive_org/student_materials/cheat_sheet_student.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/archive_org/student_materials/cheat_sheet_student.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rtt-cheat-sheet-internet-archive-student-edition"><strong>RTT Cheat Sheet — Internet Archive (Student Edition)</strong></h1>
+<h3 id="archive_org-module-student_materialscheat_sheet_studentmd"><em>archive_org module — student_materials/cheat_sheet_student.md</em></h3>
+<hr>
+<h2 id="1-what-this-module-teaches"><strong>1. What This Module Teaches</strong></h2>
+<p>Use the Internet Archive to understand:</p>
+<ul>
+<li>how webpages change over time  </li>
+<li>which versions are stable  </li>
+<li>how to detect redesigns and migrations  </li>
+<li>how to choose the most reliable snapshot  </li>
+</ul>
+<p>You will use the RTT operator chain to guide your analysis.</p>
+<hr>
+<h2 id="2-the-six-operators-student-version"><strong>2. The Six Operators (Student Version)</strong></h2>
+<h3 id="1-metadata_operator"><strong>1. METADATA_OPERATOR</strong></h3>
+<p>Identifies the webpage’s basic structure:<br>
+- format (HTML, PDF, image, OCR)<br>
+- type of site (institutional, news, scholarly, etc.)<br>
+- expected drift level  </p>
+<h3 id="2-wayback_operator"><strong>2. WAYBACK_OPERATOR</strong></h3>
+<p>Collects snapshots and shows:<br>
+- timeline of captures<br>
+- drift between years<br>
+- missing years (continuity breaks)  </p>
+<h3 id="3-lineage_operator"><strong>3. LINEAGE_OPERATOR</strong></h3>
+<p>Shows how the webpage evolved:<br>
+- template changes<br>
+- navigation changes<br>
+- CMS migrations<br>
+- stable elements (continuity kernel)  </p>
+<h3 id="4-collection_operator"><strong>4. COLLECTION_OPERATOR</strong></h3>
+<p>Places the webpage in context:<br>
+- which IA collection it belongs to<br>
+- related pages<br>
+- structural family  </p>
+<h3 id="5-preservation_operator"><strong>5. PRESERVATION_OPERATOR</strong></h3>
+<p>Checks how stable the snapshots are:<br>
+- substrate stability<br>
+- drift risk<br>
+- mixed layers (HTML + PDF, etc.)  </p>
+<h3 id="6-driftbound_retrieval_operator"><strong>6. DRIFTBOUND_RETRIEVAL_OPERATOR</strong></h3>
+<p>Finds the <strong>most reliable version</strong> by combining:<br>
+- drift<br>
+- continuity<br>
+- substrate stability<br>
+- collection context  </p>
+<hr>
+<h2 id="3-drift-levels-student-guide"><strong>3. Drift Levels (Student Guide)</strong></h2>
+<ul>
+<li><strong>None</strong> — looks the same  </li>
+<li><strong>Minor</strong> — small layout or style changes  </li>
+<li><strong>Moderate</strong> — navigation or template changes  </li>
+<li><strong>High</strong> — redesign, rebuild, CMS migration  </li>
+</ul>
+<hr>
+<h2 id="4-substrate-types-student-guide"><strong>4. Substrate Types (Student Guide)</strong></h2>
+<ul>
+<li><strong>PDF</strong> — most stable  </li>
+<li><strong>Image</strong> — stable but incomplete  </li>
+<li><strong>HTML</strong> — drift‑prone  </li>
+<li><strong>OCR</strong> — lossy, high drift  </li>
+<li><strong>Mixed</strong> — requires careful evaluation  </li>
+</ul>
+<hr>
+<h2 id="5-continuity-kernel"><strong>5. Continuity Kernel</strong></h2>
+<p>These are the parts of a webpage that stay the same across snapshots.</p>
+<p>Examples:<br>
+- header<br>
+- footer<br>
+- main menu<br>
+- index page<br>
+- sidebar  </p>
+<p>If these stay the same, the site has good continuity.</p>
+<hr>
+<h2 id="6-how-to-compare-two-snapshots"><strong>6. How to Compare Two Snapshots</strong></h2>
+<p>Look for structural differences:</p>
+<ul>
+<li>layout  </li>
+<li>navigation  </li>
+<li>template  </li>
+<li>sidebar  </li>
+<li>header/footer  </li>
+<li>presence/absence of PDF layer  </li>
+</ul>
+<p>Avoid content differences — focus on structure only.</p>
+<hr>
+<h2 id="7-how-to-choose-the-most-reliable-version"><strong>7. How to Choose the Most Reliable Version</strong></h2>
+<p>Pick the snapshot that has:</p>
+<ol>
+<li><strong>Stable substrate</strong> (PDF &gt; HTML &gt; OCR)  </li>
+<li><strong>Low drift</strong>  </li>
+<li><strong>Strong continuity kernel</strong>  </li>
+<li><strong>Few or no missing years</strong>  </li>
+<li><strong>No major redesigns</strong>  </li>
+</ol>
+<hr>
+<h2 id="8-quick-student-workflow"><strong>8. Quick Student Workflow</strong></h2>
+<ol>
+<li>Pick a webpage  </li>
+<li>List its snapshots  </li>
+<li>Compare two snapshots  </li>
+<li>Identify drift  </li>
+<li>Find continuity kernel  </li>
+<li>Check substrate stability  </li>
+<li>Choose the most reliable version  </li>
+</ol>
+<hr>
+<h2 id="9-common-patterns"><strong>9. Common Patterns</strong></h2>
+<ul>
+<li>Government sites → stable, low drift  </li>
+<li>News sites → high drift, frequent redesigns  </li>
+<li>Journals → mixed substrates, periodic updates  </li>
+<li>Vintage software → very stable, versioned  </li>
+</ul>
+<hr>
+<h2 id="10-onesentence-summary"><strong>10. One‑Sentence Summary</strong></h2>
+<p><strong>RTT helps you find the most reliable version of a webpage by analyzing structure, drift, continuity, and substrate stability — not content.</strong></p>
+  </main>
+</body>
+</html>

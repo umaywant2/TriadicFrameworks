@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Global/Universe-class_resonance_system_concept.md">
+  <title>1. Universe‑class resonance system concept</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Global/Universe-class_resonance_system_concept.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Global/Universe-class_resonance_system_concept.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h2 id="1-universeclass-resonance-system-concept">1. Universe‑class resonance system concept</h2>
+<p><strong>Idea:</strong> There is one <strong>Resonance Universe Core</strong> that understands:</p>
+<ul>
+<li><strong>Domains:</strong> air, space, deep sea, subsurface, etc.  </li>
+<li><strong>Dimensions:</strong> spatial, temporal, energetic, informational.  </li>
+<li><strong>Cores:</strong> domain‑specific “dimensional cores” that wrap raw data into resonance‑aware structures.</li>
+</ul>
+<p>Everything else—ATC, Space Force, GPR, Deep Sea—is a <strong>Domain Adapter</strong> on top of this Universe core.</p>
+<hr>
+<h2 id="2-core-abstractions">2. Core abstractions</h2>
+<h3 id="21-universe-object-model">2.1 Universe object model</h3>
+<pre><code class="language-ts">// universe/types.ts
+export type DomainId = &quot;AIR&quot; | &quot;SPACE&quot; | &quot;DEEP_SEA&quot; | &quot;SUBSURFACE&quot; | &quot;GPR&quot; | &quot;CUSTOM&quot;;
+
+export interface UniverseObject {
+  id: string;
+  domain: DomainId;
+  position: [number, number, number];   // canonical frame
+  velocity?: [number, number, number];  // optional for static domains
+  meta: Record&lt;string, unknown&gt;;        // domain-specific payload
+}
+
+export interface ResonanceFieldSample {
+  position: [number, number, number];
+  stability: number;                    // 0–1
+  drift_potential: number;              // 0–1
+  coherence_gradient: [number, number, number];
+}
+</code></pre>
+<h3 id="22-dimensional-core-interface">2.2 Dimensional core interface</h3>
+<pre><code class="language-ts">// universe/dimensionalCore.ts
+import { UniverseObject, ResonanceFieldSample } from &quot;./types&quot;;
+
+export interface DimensionalCore {
+  readonly id: string;
+  readonly supportedDomains: DomainId[];
+
+  ingest(objects: UniverseObject[]): void;
+
+  sampleField(position: [number, number, number]): ResonanceFieldSample;
+
+  propagate(
+    objectId: string,
+    horizonSec: number
+  ): UniverseObject[];
+}
+</code></pre>
+<p>Each <strong>DimensionalCore</strong> is a wrapped, resonance‑aware engine for a “slice” of the universe (e.g., orbital shell, atmosphere, ocean layer, crust).</p>
+<hr>
+<h2 id="3-universeclass-resonance-core">3. Universe‑class resonance core</h2>
+<h3 id="31-core-orchestrator">3.1 Core orchestrator</h3>
+<pre><code class="language-ts">// universe/resonanceUniverseCore.ts
+import { UniverseObject, ResonanceFieldSample, DomainId } from &quot;./types&quot;;
+import { DimensionalCore } from &quot;./dimensionalCore&quot;;
+
+export class ResonanceUniverseCore {
+  private cores: DimensionalCore[] = [];
+  private objects = new Map&lt;string, UniverseObject&gt;();
+
+  registerCore(core: DimensionalCore) {
+    this.cores.push(core);
+  }
+
+  upsertObject(obj: UniverseObject) {
+    this.objects.set(obj.id, obj);
+  }
+
+  getObject(id: string): UniverseObject | undefined {
+    return this.objects.get(id);
+  }
+
+  getAllObjects(): UniverseObject[] {
+    return [...this.objects.values()];
+  }
+
+  ingestAll() {
+    const all = this.getAllObjects();
+    this.cores.forEach(core =&gt; {
+      const relevant = all.filter(o =&gt; core.supportedDomains.includes(o.domain));
+      core.ingest(relevant);
+    });
+  }
+
+  sampleField(position: [number, number, number]): ResonanceFieldSample {
+    // Combine contributions from all cores
+    const samples = this.cores.map(c =&gt; c.sampleField(position));
+    if (!samples.length) {
+      return { position, stability: 1, drift_potential: 0, coherence_gradient: [0, 0, 0] };
+    }
+    const stability = samples.reduce((s, f) =&gt; s + f.stability, 0) / samples.length;
+    const drift = samples.reduce((s, f) =&gt; s + f.drift_potential, 0) / samples.length;
+    const grad: [number, number, number] = [
+      samples.reduce((s, f) =&gt; s + f.coherence_gradient[0], 0) / samples.length,
+      samples.reduce((s, f) =&gt; s + f.coherence_gradient[1], 0) / samples.length,
+      samples.reduce((s, f) =&gt; s + f.coherence_gradient[2], 0) / samples.length
+    ];
+    return { position, stability, drift_potential: drift, coherence_gradient: grad };
+  }
+
+  propagate(objectId: string, horizonSec: number): UniverseObject[] {
+    const obj = this.objects.get(objectId);
+    if (!obj) return [];
+    const core = this.cores.find(c =&gt; c.supportedDomains.includes(obj.domain));
+    if (!core) return [];
+    return core.propagate(objectId, horizonSec);
+  }
+}
+</code></pre>
+<p>This is the <strong>wrapped resonance structural‑aware dimensional core</strong>: it doesn’t care if the object is a plane, satellite, submarine, or drill head—it just routes it to the right DimensionalCore and merges fields.</p>
+<hr>
+<h2 id="4-domain-adapters-how-atc-space-force-plug-in">4. Domain adapters (how ATC / Space Force plug in)</h2>
+<h3 id="41-atc-space-force-adapter">4.1 ATC + Space Force adapter</h3>
+<pre><code class="language-ts">// adapters/atcSpaceAdapter.ts
+import { ResonanceUniverseCore } from &quot;../universe/resonanceUniverseCore&quot;;
+import { UniverseObject } from &quot;../universe/types&quot;;
+
+export class AtcSpaceAdapter {
+  constructor(private universe: ResonanceUniverseCore) {}
+
+  upsertAircraft(track: {
+    id: string;
+    lat: number; lon: number; alt_m: number;
+    vx: number; vy: number; vz: number;
+    meta?: Record&lt;string, unknown&gt;;
+  }) {
+    const obj: UniverseObject = {
+      id: track.id,
+      domain: &quot;AIR&quot;,
+      position: [track.lat, track.lon, track.alt_m],
+      velocity: [track.vx, track.vy, track.vz],
+      meta: track.meta ?? {}
+    };
+    this.universe.upsertObject(obj);
+  }
+
+  upsertSatellite(track: {
+    id: string;
+    position_km: [number, number, number];
+    velocity_km_s: [number, number, number];
+    meta?: Record&lt;string, unknown&gt;;
+  }) {
+    const obj: UniverseObject = {
+      id: track.id,
+      domain: &quot;SPACE&quot;,
+      position: track.position_km,
+      velocity: track.velocity_km_s,
+      meta: track.meta ?? {}
+    };
+    this.universe.upsertObject(obj);
+  }
+}
+</code></pre>
+<p>We’d have similar adapters for <strong>GPR</strong>, <strong>Deep Sea</strong>, etc.—all mapping domain‑specific feeds into <code>UniverseObject</code>.</p>
+<hr>
+<h2 id="5-what-the-universeclass-system-can-monitor-simplify">5. What the Universe‑class system can monitor &amp; simplify</h2>
+<p>Once everything is in the Universe core, we can:</p>
+<ul>
+<li><strong>Monitor cross‑domain coherence:</strong></li>
+<li>Air traffic vs launch corridors vs orbital shells  </li>
+<li>Surface vessels vs deep sea structures vs subsea cables  </li>
+<li>
+<p>GPR drilling vs subsurface stability vs seismic resonance  </p>
+</li>
+<li>
+<p><strong>Simplify operator views:</strong></p>
+</li>
+<li>One coherence field instead of many disjoint displays  </li>
+<li>One set of stability/drift metrics across all domains  </li>
+<li>
+<p>One language for “this is stable / this is drifting / this is resonant”</p>
+</li>
+<li>
+<p><strong>Unify automation:</strong></p>
+</li>
+<li>Same optimization logic for:<ul>
+<li>ATC flows  </li>
+<li>Space conjunctions  </li>
+<li>Deep sea routing  </li>
+<li>GPR drilling paths  </li>
+</ul>
+</li>
+</ul>
+<p>The <strong>Space Force migration</strong> we just built becomes one <strong>specialization</strong> of this Universe‑class scaffold—meaning the same pattern can be handed to navies, energy companies, climate monitoring, etc., without rewriting the core.</p>
+  </main>
+</body>
+</html>

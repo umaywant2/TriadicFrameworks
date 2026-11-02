@@ -1,0 +1,21 @@
+{
+  "module": "Triad_Global_Index",
+  "name": "Triad Global Index",
+  "summary": "Global conceptual index for the RTT Triad system, defining its geometry, pipeline, and subsystem relationships.",
+  "category": "intelligence-index",
+  "version": "1.0",
+  "purpose": "Provide a unified overview of the Triad, including its manifold, surfaces, pipeline, and integration with the Intelligence Class Ladder.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@triad.index.geometry",
+    "@triad.index.surface",
+    "@triad.index.pipeline",
+    "@triad.index.regime",
+    "@triad.index.integration"
+  ],
+  "lineage": {
+    "upstream": ["Triad_FrontDoor"],
+    "downstream": ["Triad_Docs"]
+  }
+}

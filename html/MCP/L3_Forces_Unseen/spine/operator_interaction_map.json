@@ -1,0 +1,98 @@
+{
+  "id": "S3-Spine-Operator-Interaction-Map",
+  "canonical": "R5",
+  "version": "1.0.0",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "regime": "unseen-force-regime",
+
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "nodes": ["gradient", "field", "rupture", "integrity"],
+
+  "operators": [
+    {
+      "id": "push",
+      "category": "secondary",
+      "semantics": ["gradientIntensity"],
+      "actsOn": ["gradient"],
+      "effects": {
+        "gradient": "Increases gradientIntensity",
+        "field": "Amplifies influence propagation",
+        "rupture": "Raises rupturePotential",
+        "integrity": "Weakens stability under high stress"
+      },
+      "dimensions": ["L4", "L5", "L16", "LH"]
+    },
+
+    {
+      "id": "pull",
+      "category": "secondary",
+      "semantics": ["fieldCoherence"],
+      "actsOn": ["field"],
+      "effects": {
+        "gradient": "Reduces influence slope",
+        "field": "Increases fieldCoherence",
+        "rupture": "Lowers rupturePotential",
+        "integrity": "Strengthens forceIntegrity"
+      },
+      "dimensions": ["L8", "L10", "L26"]
+    },
+
+    {
+      "id": "fieldShift",
+      "category": "secondary",
+      "semantics": ["fieldCoherence"],
+      "actsOn": ["field"],
+      "effects": {
+        "gradient": "Alters gradient-field coupling",
+        "field": "Modulates field structure",
+        "rupture": "Changes rupture sensitivity",
+        "integrity": "Indirect stabilization via field modulation"
+      },
+      "dimensions": ["L8", "L10", "L26"]
+    },
+
+    {
+      "id": "gradient",
+      "category": "primary",
+      "semantics": ["gradientIntensity"],
+      "actsOn": ["gradient"],
+      "effects": {
+        "gradient": "Modulates gradientIntensity",
+        "field": "Controls influence slope",
+        "rupture": "Adjusts rupture sensitivity",
+        "integrity": "Indirect stabilization via slope control"
+      },
+      "dimensions": ["L4", "L5", "L16", "LH"]
+    },
+
+    {
+      "id": "ruptureForce",
+      "category": "primary",
+      "semantics": ["rupturePotential"],
+      "actsOn": ["field", "rupture"],
+      "effects": {
+        "gradient": "Destabilizes gradient transitions",
+        "field": "Collapses fieldCoherence",
+        "rupture": "Escalates rupturePotential",
+        "integrity": "Weakens forceIntegrity"
+      },
+      "dimensions": ["L12"]
+    },
+
+    {
+      "id": "bind",
+      "category": "primary",
+      "semantics": ["fieldCoherence", "forceIntegrity"],
+      "actsOn": ["field", "integrity"],
+      "effects": {
+        "gradient": "Stabilizes gradient transitions",
+        "field": "Increases fieldCoherence",
+        "rupture": "Suppresses rupturePotential",
+        "integrity": "Strengthens forceIntegrity"
+      },
+      "dimensions": ["L8", "L10", "L32", "LI"]
+    }
+  ]
+}

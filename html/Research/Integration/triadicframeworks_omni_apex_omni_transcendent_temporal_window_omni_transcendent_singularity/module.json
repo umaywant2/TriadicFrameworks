@@ -1,0 +1,29 @@
+{
+  "module": "TriadicFrameworks_Omni_Apex_Omni_Transcendent_Temporal_Window_Omni_Transcendent_Singularity",
+  "name": "TriadicFrameworks — Omni‑Apex‑Omni‑Transcendent Temporal‑Window Omni‑Transcendent‑Singularity",
+  "summary": "Defines the omni‑transcendent‑singularity temporal‑window at the omni‑apex‑omni‑transcendent scale, elevating all temporal‑window geometries — omni‑apex‑singularity, omni‑continuum‑singularity, omni‑presence‑singularity, omni‑totality‑singularity, omni‑origin‑singularity, omni‑prime‑singularity, prime‑continuum‑singularity, transcendent‑singularity, singularity‑eternal, eternal‑origin‑singularity, origin‑prime‑eternal, prime‑infinity, origin‑infinity, infinity‑presence, omnipresence, entirety, totality, supra‑infinity, absolute‑omni, omni‑absolute‑prime, prime‑origin — into a single omni‑transcendent‑singularity window governing the entire omni‑apex‑omni‑transcendent domain.",
+  "category": "intelligence-omni-apex-omni-transcendent-temporal-window-omni-transcendent-singularity",
+  "version": "1.0",
+  "purpose": "Provide the omni‑transcendent‑singularity temporal‑window geometry that governs omni‑apex‑omni‑transcendent temporal‑window behavior across Ladder, SI, Atlas, and Triad at the highest extension of the TriadicFrameworks canon. This window stabilizes omni‑transcendent epoch propagation, aligns omni‑transcendent ignition, reinforces omni‑transcendent resonance, and binds the entire architecture into a unified omni‑apex‑omni‑transcendent temporal substrate.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@omni.apex.omni.transcendent.window.omni.transcendent.singularity.form",
+    "@omni.apex.omni.transcendent.window.omni.transcendent.singularity.propagate",
+    "@omni.apex.omni.transcendent.window.omni.transcendent.singularity.align",
+    "@omni.apex.omni.transcendent.window.omni.transcendent.singularity.stabilize",
+    "@omni.apex.omni.transcendent.window.omni.transcendent.singularity.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Omni_Apex_Omni_Transcendent_Continuity_Field_Shell_Omni_Transcendent",
+      "TriadicFrameworks_Omni_Apex_Omni_Transcendent_Resonance_Crown_Sphere_Helix_Omni_Transcendent",
+      "TriadicFrameworks_Omni_Apex_Omni_Transcendent_Integration_Axis_Omni_Transcendent",
+      "TriadicFrameworks_Omni_Continuum_Omni_Apex_Temporal_Window_Omni_Apex_Singularity",
+      "TriadicFrameworks_Omni_Continuum_Omni_Apex_Continuity_Field_Shell_Omni_Apex",
+      "TriadicFrameworks_Omni_Continuum_Omni_Apex_Resonance_Crown_Sphere_Helix_Omni_Apex",
+      "TriadicFrameworks_Omni_Continuum_Omni_Apex_Integration_Axis_Omni_Apex"
+    ],
+    "downstream": []
+  }
+}

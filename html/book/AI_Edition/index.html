@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Canonical Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TriadicFrameworks — AI Edition (Books 1–9)</title>
+
+    <!-- Identity -->
+    <meta name="generator" content="TriadicFrameworks AI Edition">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#111111">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="TriadicFrameworks — AI Edition (Books 1–9)">
+    <meta property="og:description" content="AI Edition of the TriadicFrameworks canon, Books 1–9, aligned to RTT and the Spine.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.triadicframeworks.org/">
+    <meta property="og:image" content="/assets/triadic-og.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TriadicFrameworks — AI Edition (Books 1–9)">
+    <meta name="twitter:description" content="AI Edition of the TriadicFrameworks canon, Books 1–9.">
+
+    <!-- Citation -->
+    <meta name="citation_author" content="Nawder Loswin">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+
+    <!-- AI Metadata -->
+    <meta name="ai.navigation" content="/sitemap_main.xml">
+    <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+    <meta name="ai.contact.x" content="@TriadicFrameworks">
+    <meta name="ai.contact.youtube" content="@TriadicFrameworks">
+    <meta name="ai.license" content="Open educational use permitted">
+
+    <!-- Session Context -->
+    <meta name="session.rtt" content="1">
+    <meta name="session.coherence" content="declared">
+    <meta name="session.drift" content="bounded">
+    <meta name="session.paradox" content="structural">
+
+    <!-- RTT & Spine Anchors -->
+    <link rel="rtt" href="https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+    <link rel="spine" href="https://docs.triadicframeworks.org/spine/">
+
+    <!-- Favicon Suite -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<style>
+    /* --- Root Variables (AI Edition Canon) --- */
+    :root {
+        --bg: #0d0f14;
+        --bg2: #13151c;
+        --bg3: #1a1d27;
+        --border: #2a2d3a;
+        --accent: #5b8aff;
+        --accent2: #9b59b6;
+        --green: #2ecc71;
+        --yellow: #f39c12;
+        --red: #e74c3c;
+        --text: #d4d8e8;
+        --text-muted: #7a7f96;
+        --text-dim: #555a72;
+        --mono: 'Courier New','Lucida Console',monospace;
+        --sans: -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+        --sidebar-w: 280px;
+    }
+
+    /* --- Global --- */
+    html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    a {
+        color: var(--accent);
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* --- Layout --- */
+    .layout {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    /* --- Sidebar --- */
+    .sidebar {
+        width: var(--sidebar-w);
+        background: var(--bg2);
+        border-right: 1px solid var(--border);
+        padding: 28px 18px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+        font-size: 13px;
+    }
+
+    .sidebar-section {
+        margin-bottom: 28px;
+    }
+
+    .sidebar-label {
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 10px;
+        color: var(--text-dim);
+        margin-bottom: 8px;
+    }
+
+    .sidebar-breadcrumb {
+        color: var(--text-muted);
+        line-height: 1.8;
+    }
+    .sidebar-breadcrumb span {
+        color: var(--text);
+        font-weight: 600;
+    }
+
+    /* --- Main Content --- */
+    .main {
+        flex: 1;
+        padding: 48px 64px;
+        max-width: 1100px;
+    }
+
+    .main h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-weight: 600;
+    }
+
+    .main p {
+        color: var(--text-muted);
+        max-width: 800px;
+    }
+
+    /* --- Book Grid --- */
+    .book-grid {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 24px;
+    }
+
+    .book-card {
+        background: var(--bg3);
+        border: 1px solid var(--border);
+        padding: 20px;
+        border-radius: 6px;
+        transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .book-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+    }
+
+    .book-title {
+        font-family: var(--mono);
+        font-size: 13px;
+        color: var(--accent);
+        margin-bottom: 6px;
+    }
+
+    .book-desc {
+        font-size: 12px;
+        color: var(--text-muted);
+        line-height: 1.5;
+    }
+
+    /* --- Pills (Module IDs, Status, etc.) --- */
+    .pill {
+        display: inline-block;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: var(--mono);
+        font-size: 11px;
+        margin-top: 10px;
+        background: rgba(91,138,255,0.12);
+        border: 1px solid rgba(91,138,255,0.3);
+        color: var(--accent);
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+        .layout {
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+            border-right: none;
+            border-bottom: 1px solid var(--border);
+        }
+        .main {
+            padding: 32px 24px;
+        }
+    }
+</style>
+    
+<body>
+    <header>
+        <h1>TriadicFrameworks — AI Edition</h1>
+        <p>Books 1–9 • Canon‑Aligned • RTT‑Anchored • Drift‑Bounded</p>
+    </header>
+
+    <!-- Session Context Display -->
+    <section id="session-context">
+        <h2>Session Context</h2>
+        <p><strong>RTT:</strong> <a href="https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">Resonance‑Time Theory</a></p>
+        <p><strong>Spine:</strong> <a href="https://docs.triadicframeworks.org/spine/">TriadicFrameworks Spine</a></p>
+        <p><strong>Context:</strong> rtt=1 | coherence=declared | drift=bounded | paradox=structural</p>
+    </section>
+
+    <!-- Book Navigation -->
+    <section id="books">
+        <h2>AI Edition Books</h2>
+        <ul>
+            <li><a href="https://docs.triadicframeworks.org/Framework_Field_Theory/AI_Edition/">Book 1 — Framework Field Theory</a></li>
+            <li><a href="https://docs.triadicframeworks.org/rtt/The_Inverted_Star/AI_Edition/">Book 2 — The Inverted Star</a></li>
+            <li><a href="https://docs.triadicframeworks.org/Structural_Detection/AI_Edition/">Book 3 — Structural Detection</a></li>
+            <li><a href="Book4_Opacity_and_Revelation/">Book 4 — Opacity & Revelation</a></li>
+            <li><a href="Book5_TEL_Expression_and_Representation/">Book 5 — TEL Expression & Representation</a></li>
+            <li><a href="Book6_Governance_and_Regime_Logic/">Book 6 — Governance & Regime Logic</a></li>
+            <li><a href="Book7_SARG_Structural_Argumentation/">Book 7 — SARG Structural Argumentation</a></li>
+            <li><a href="Book8_NoS_Nature_of_Structure/">Book 8 — NoS — Nature of Structure</a></li>
+            <li><a href="Book9_Pattern_Dynamics/">Book 9 — Pattern Dynamics</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025–2026 TriadicFrameworks — AI Edition</p>
+    </footer>
+</body>
+</html>
+

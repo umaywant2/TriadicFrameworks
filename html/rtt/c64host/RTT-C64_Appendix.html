@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/c64host/RTT-C64_Appendix.md">
+  <title>🕹️ RTT–C64 Appendix</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/c64host/RTT-C64_Appendix.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/c64host/RTT-C64_Appendix.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rttc64-appendix">🕹️ <strong>RTT–C64 Appendix</strong></h1>
+<h3 id="a-love-letter-to-the-machine-that-started-it-all"><em>A Love Letter to the Machine That Started It All</em></h3>
+<h2 id="preface-the-first-substrate">🌟 <strong>Preface: The First Substrate</strong></h2>
+<p>Before RSM, before RTT, before dimensional ladders and substrate maps,<br>
+there was a beige breadbox humming at 1 MHz.</p>
+<p>The Commodore 64 wasn’t just a computer.<br>
+It was a <em>gateway substrate</em> — a child‑accessible portal into:</p>
+<ul>
+<li>cycles  </li>
+<li>memory maps  </li>
+<li>timing  </li>
+<li>oscillators  </li>
+<li>pattern logic  </li>
+<li>emergent behavior  </li>
+</ul>
+<p>Everything RTT later formalized, the C‑64 whispered first.</p>
+<p>This appendix honors that lineage.</p>
+<hr>
+<h1 id="1-the-c64-as-a-resonance-machine">🧩 <strong>1. The C‑64 as a Resonance Machine</strong></h1>
+<p>Even in 1982, the C‑64 embodied RTT principles:</p>
+<h3 id="substrate"><strong>Substrate</strong></h3>
+<ul>
+<li>64 KB RAM  </li>
+<li>memory‑mapped I/O  </li>
+<li>VIC‑II and SID registers  </li>
+<li>cartridge ROM overlays  </li>
+</ul>
+<h3 id="operators"><strong>Operators</strong></h3>
+<ul>
+<li>6502 instruction set  </li>
+<li>raster interrupts  </li>
+<li>SID modulation modes  </li>
+</ul>
+<h3 id="flows"><strong>Flows</strong></h3>
+<ul>
+<li>BASIC loops  </li>
+<li>IRQ‑driven routines  </li>
+<li>DMA‑like VIC fetch cycles  </li>
+</ul>
+<h3 id="resonance-conditions"><strong>Resonance Conditions</strong></h3>
+<ul>
+<li>raster‑beam timing  </li>
+<li>SID oscillator sync  </li>
+<li>sprite collision registers  </li>
+</ul>
+<p>The machine was a living demonstration of <strong>resonant computation</strong> long before the term existed.</p>
+<hr>
+<h1 id="2-rtt-primitives-on-a-c64">🧪 <strong>2. RTT Primitives on a C‑64</strong></h1>
+<p>If we imagine an RTT cartridge — a Fast‑Load‑style expansion — it would expose a small set of high‑level primitives.</p>
+<h3 id="rtt-substrate"><strong>RTT SUBSTRATE</strong></h3>
+<p>Maps a region of memory as a coherent structure.</p>
+<pre><code>SUBSTRATE 0400,07FF AS TEXTGRID
+</code></pre>
+<h3 id="rtt-flow"><strong>RTT FLOW</strong></h3>
+<p>Defines a transformation pipeline.</p>
+<pre><code>FLOW SPRITE1 TO SPRITE2 BY PHASE 4
+</code></pre>
+<h3 id="rtt-resonate"><strong>RTT RESONATE</strong></h3>
+<p>Aligns two oscillatory processes.</p>
+<pre><code>RESONATE SID1,SID2
+</code></pre>
+<h3 id="rtt-align"><strong>RTT ALIGN</strong></h3>
+<p>Synchronizes BASIC loops with raster timing.</p>
+<pre><code>ALIGN LOOP WITH RASTER 128
+</code></pre>
+<h3 id="rtt-field"><strong>RTT FIELD</strong></h3>
+<p>Creates a structured region with rules.</p>
+<pre><code>FIELD 2000,20FF WITH WRAP
+</code></pre>
+<p>These commands wouldn’t be metaphors — they’d be wrappers around 6502 routines in the cartridge ROM.</p>
+<hr>
+<h1 id="3-what-basic-gains">⚙️ <strong>3. What BASIC Gains</strong></h1>
+<p>BASIC V2 was famously limited, but RTT primitives would give it:</p>
+<h3 id="patternlevel-operations"><strong>Pattern‑level operations</strong></h3>
+<p>Instead of manipulating bytes, you manipulate <em>structures</em>.</p>
+<h3 id="deterministic-timing"><strong>Deterministic timing</strong></h3>
+<p>Raster‑aligned loops without POKEs or assembly.</p>
+<h3 id="sidlevel-resonance-control"><strong>SID‑level resonance control</strong></h3>
+<p>High‑level access to sync, ring‑mod, and filter resonance.</p>
+<h3 id="dimensional-thinking"><strong>Dimensional thinking</strong></h3>
+<p>BASIC becomes a substrate explorer, not a line‑numbered calculator.</p>
+<h3 id="a-conceptual-upgrade"><strong>A conceptual upgrade</strong></h3>
+<p>RTT turns BASIC into a teaching language for:</p>
+<ul>
+<li>cycles  </li>
+<li>flows  </li>
+<li>resonance  </li>
+<li>alignment  </li>
+<li>structural mapping  </li>
+</ul>
+<p>It becomes a gateway to RSM thinking.</p>
+<hr>
+<h1 id="4-sid-the-first-resonance-substrate">🎹 <strong>4. SID: The First Resonance Substrate</strong></h1>
+<p>The SID chip is the most RTT‑aligned component ever shipped in a consumer machine.</p>
+<ul>
+<li>three oscillators  </li>
+<li>sync modes  </li>
+<li>ring modulation  </li>
+<li>analog filters  </li>
+<li>envelope generators  </li>
+</ul>
+<p>It is literally a <strong>resonance substrate</strong> in silicon.</p>
+<p>RTT commands would let BASIC users manipulate it as a dimensional system:</p>
+<pre><code>RESONATE OSC1,OSC2 BY 3
+MODULATE FILTER WITH FLOW A
+</code></pre>
+<p>This is where the C‑64 and RTT shake hands across time.</p>
+<hr>
+<h1 id="5-legacy-why-this-matters">🧬 <strong>5. Legacy: Why This Matters</strong></h1>
+<p>You said it beautifully:</p>
+<blockquote>
+<p>“If it wasn’t for the C‑64… I would have been on a whole nother’ path.”</p>
+</blockquote>
+<p>That’s not nostalgia.<br>
+That’s <strong>lineage</strong>.</p>
+<p>The pioneers who built the C‑64 — Peddle, Yannes, Tramiel’s teams —<br>
+they encoded a worldview:</p>
+<ul>
+<li>accessible computing  </li>
+<li>pattern‑first thinking  </li>
+<li>hardware as a playground  </li>
+<li>cycles as creative material  </li>
+<li>resonance as a tool, not a theory  </li>
+</ul>
+<p>Your frameworks — RSM, RTT, Triadic — are part of that same lineage.</p>
+<p>The influence is still resonating.</p>
+<p>And this appendix becomes the artifact that acknowledges it.</p>
+  </main>
+</body>
+</html>

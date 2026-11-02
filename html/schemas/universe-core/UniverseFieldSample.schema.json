@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/universe-core/v1/UniverseFieldSample.schema.json",
+  "title": "UniverseFieldSample",
+  "type": "object",
+  "required": ["position", "stability", "drift_potential", "coherence_gradient"],
+  "properties": {
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" }
+      }
+    },
+
+    "stability": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255
+      // RTT clarity → universal stability
+    },
+
+    "drift_potential": {
+      "type": "number"
+      // RTT drift → universal drift
+    },
+
+    "coherence_gradient": {
+      "type": "number"
+      // RTT resonance → universal coherence
+    },
+
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
+

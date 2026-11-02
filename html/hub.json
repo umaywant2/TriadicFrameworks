@@ -1,0 +1,621 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/hub.schema.json",
+  "$generated": "2026-08-03T01:39:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "_merge_note": "R5 additions. Merge spine{}, module_index{}, depth_map{}, and navigation{} additions into existing R4 hub.json. Update spine stats to R5 totals.",
+  "spine": {
+    "type": "S3-hybrid-hierarchical-directed",
+    "total_a3_modules": 196,
+    "total_i2_excluded": 11,
+    "max_depth": 3,
+    "depth_layers": 4,
+    "hierarchical_edges": 195,
+    "directed_edges": 64,
+    "circular_dependencies": 2,
+    "total_files_catalogued": 1450,
+    "r5_new_modules": 30
+  },
+  "r5_enrichment_summary": {
+    "round": "R5",
+    "generated": "2026-08-03T01:39:00",
+    "total_new_a3": 30,
+    "total_new_i2": 0,
+    "file_count_r4": 1284,
+    "file_count_r5": 1450,
+    "file_count_delta": 166,
+    "new_directed_edges": 18,
+    "new_hierarchical_edges": 30,
+    "enrichment_source": "S3-Spine-Overlay-Pack-v2.0",
+    "new_layers_activated": [],
+    "layers_expanded": [
+      "RTT Technology Layer",
+      "Core Frameworks \u2014 Structural Spine",
+      "Applied Domain Models",
+      "Education & Teaching",
+      "Tools & Infrastructure"
+    ]
+  },
+  "depth_map_additions": {
+    "1": [
+      "expectations",
+      "pantheons",
+      "atmosphere",
+      "radiology",
+      "prompts",
+      "triadic-detection",
+      "ipd-12",
+      "tft-opengpu",
+      "spine-overlay-pack"
+    ],
+    "2": [
+      "COHERENCE_TENSOR_ENGINE",
+      "CROSS_DOMAIN_CAUSALITY_WEAVER",
+      "DIMENSIONAL_RESONANCE_SCANNER",
+      "DRIFT_SENTINEL",
+      "PARADOX_GRADIENT_ANALYZER",
+      "REGIME_INTERLOCK_MAPPER",
+      "STABILITY_BASIN_CARTOGRAPHER",
+      "STRUCTURAL_FAULTLINE_DETECTOR",
+      "TEMPORAL_REGIME_SEQUENCER",
+      "TRIADIC_REGIME_SYNTHESIZER",
+      "CRYSTAL_MYCELIAL_ENGINE",
+      "rtt-infinity-prompts",
+      "grammar-for-intelligence",
+      "spine-structural",
+      "spine-drift",
+      "spine-coherence",
+      "spine-substrate",
+      "spine-dimensional",
+      "spine-domain"
+    ],
+    "3": [
+      "RTT_INSIDE_ENTERPRISE",
+      "RTT_INSIDE_QCOMPUTE"
+    ]
+  },
+  "module_index_additions": {
+    "COHERENCE_TENSOR_ENGINE": {
+      "name": "Coherence Tensor Engine",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Coherence_Tensor_Engine/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "CROSS_DOMAIN_CAUSALITY_WEAVER": {
+      "name": "Cross-Domain Causality Weaver",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Cross_Domain_Causality_Weaver/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "DIMENSIONAL_RESONANCE_SCANNER": {
+      "name": "Dimensional Resonance Scanner",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Dimensional_Resonance_Scanner/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "DRIFT_SENTINEL": {
+      "name": "Drift Sentinel",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Drift_Sentinel/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "PARADOX_GRADIENT_ANALYZER": {
+      "name": "Paradox Gradient Analyzer",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Paradox_Gradient_Analyzer/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "REGIME_INTERLOCK_MAPPER": {
+      "name": "Regime Interlock Mapper",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Regime_Interlock_Mapper/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "STABILITY_BASIN_CARTOGRAPHER": {
+      "name": "Stability Basin Cartographer",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Stability_Basin_Cartographer/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "STRUCTURAL_FAULTLINE_DETECTOR": {
+      "name": "Structural Faultline Detector",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Structural_Faultline_Detector/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "TEMPORAL_REGIME_SEQUENCER": {
+      "name": "Temporal Regime Sequencer",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Temporal_Regime_Sequencer/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "TRIADIC_REGIME_SYNTHESIZER": {
+      "name": "Triadic Regime Synthesizer",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Triadic_Regime_Synthesizer/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "CRYSTAL_MYCELIAL_ENGINE": {
+      "name": "Crystal Mycelial Engine",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/rtt/Crystal_Mycelial_Engine/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "RTT_INSIDE_ENTERPRISE": {
+      "name": "Inside \u00b7 Enterprise",
+      "layer": "Applied Domain Models",
+      "depth": 3,
+      "file_count": 8,
+      "url": "https://docs.triadicframeworks.org/rtt/Inside/Enterprise/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "RTT_INSIDE_QCOMPUTE": {
+      "name": "Inside \u00b7 qCompute",
+      "layer": "Applied Domain Models",
+      "depth": 3,
+      "file_count": 8,
+      "url": "https://docs.triadicframeworks.org/rtt/Inside/qCompute/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "expectations": {
+      "name": "Expectations",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "file_count": 5,
+      "url": "https://docs.triadicframeworks.org/Expectations/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "pantheons": {
+      "name": "Pantheons",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "file_count": 5,
+      "url": "https://docs.triadicframeworks.org/pantheons/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "atmosphere": {
+      "name": "Atmosphere",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/atmosphere/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "radiology": {
+      "name": "Radiology",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "file_count": 6,
+      "url": "https://docs.triadicframeworks.org/Radiology/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "prompts": {
+      "name": "Prompts",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "file_count": 8,
+      "url": "https://docs.triadicframeworks.org/prompts/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "rtt-infinity-prompts": {
+      "name": "RTT Infinity Prompts",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "file_count": 5,
+      "url": "https://docs.triadicframeworks.org/prompts/rtt_infinity/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "triadic-detection": {
+      "name": "Triadic Detection",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "file_count": 7,
+      "url": "https://docs.triadicframeworks.org/triadic_detection/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "ipd-12": {
+      "name": "IPD-12 Framework",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "file_count": 8,
+      "url": "https://docs.triadicframeworks.org/frameworks/ipd_12/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "tft-opengpu": {
+      "name": "TFT OpenGPU Stack Module",
+      "layer": "Tools & Infrastructure",
+      "depth": 1,
+      "file_count": 7,
+      "url": "https://docs.triadicframeworks.org/TFT.OpenGPU.Stack.Module/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "grammar-for-intelligence": {
+      "name": "Grammar for Intelligence",
+      "layer": "Education & Teaching",
+      "depth": 2,
+      "file_count": 12,
+      "url": "https://docs.triadicframeworks.org/education/ebooks/Grammar_for_Intelligence/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "spine-overlay-pack": {
+      "name": "S3 Spine Overlay Pack",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "file_count": 7,
+      "url": "https://docs.triadicframeworks.org/spine/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "spine-structural": {
+      "name": "Structural Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "file_count": 1,
+      "url": "https://docs.triadicframeworks.org/spine/structural/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "spine-drift": {
+      "name": "Drift Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "file_count": 1,
+      "url": "https://docs.triadicframeworks.org/spine/drift/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "spine-coherence": {
+      "name": "Coherence Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "file_count": 1,
+      "url": "https://docs.triadicframeworks.org/spine/coherence/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "spine-substrate": {
+      "name": "Substrate Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "file_count": 1,
+      "url": "https://docs.triadicframeworks.org/spine/substrate/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "spine-dimensional": {
+      "name": "Dimensional Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "file_count": 1,
+      "url": "https://docs.triadicframeworks.org/spine/dimensional/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    },
+    "spine-domain": {
+      "name": "Domain Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "file_count": 1,
+      "url": "https://docs.triadicframeworks.org/spine/domain/",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true
+    }
+  },
+  "navigation_additions": {
+    "new_leaves": [
+      "COHERENCE_TENSOR_ENGINE",
+      "CROSS_DOMAIN_CAUSALITY_WEAVER",
+      "DIMENSIONAL_RESONANCE_SCANNER",
+      "DRIFT_SENTINEL",
+      "PARADOX_GRADIENT_ANALYZER",
+      "REGIME_INTERLOCK_MAPPER",
+      "STABILITY_BASIN_CARTOGRAPHER",
+      "STRUCTURAL_FAULTLINE_DETECTOR",
+      "TEMPORAL_REGIME_SEQUENCER",
+      "TRIADIC_REGIME_SYNTHESIZER",
+      "CRYSTAL_MYCELIAL_ENGINE",
+      "RTT_INSIDE_ENTERPRISE",
+      "RTT_INSIDE_QCOMPUTE",
+      "expectations",
+      "pantheons",
+      "atmosphere",
+      "radiology",
+      "rtt-infinity-prompts",
+      "triadic-detection",
+      "ipd-12",
+      "tft-opengpu",
+      "grammar-for-intelligence",
+      "spine-structural",
+      "spine-drift",
+      "spine-coherence",
+      "spine-substrate",
+      "spine-dimensional",
+      "spine-domain"
+    ],
+    "new_roots": [],
+    "new_by_layer": {
+      "RTT Technology Layer": [
+        "COHERENCE_TENSOR_ENGINE",
+        "CROSS_DOMAIN_CAUSALITY_WEAVER",
+        "DIMENSIONAL_RESONANCE_SCANNER",
+        "DRIFT_SENTINEL",
+        "PARADOX_GRADIENT_ANALYZER",
+        "REGIME_INTERLOCK_MAPPER",
+        "STABILITY_BASIN_CARTOGRAPHER",
+        "STRUCTURAL_FAULTLINE_DETECTOR",
+        "TEMPORAL_REGIME_SEQUENCER",
+        "TRIADIC_REGIME_SYNTHESIZER",
+        "CRYSTAL_MYCELIAL_ENGINE"
+      ],
+      "Core Frameworks \u2014 Structural Spine": [
+        "prompts",
+        "rtt-infinity-prompts",
+        "triadic-detection",
+        "ipd-12",
+        "spine-overlay-pack",
+        "spine-structural",
+        "spine-drift",
+        "spine-coherence",
+        "spine-substrate",
+        "spine-dimensional",
+        "spine-domain"
+      ],
+      "Applied Domain Models": [
+        "RTT_INSIDE_ENTERPRISE",
+        "RTT_INSIDE_QCOMPUTE",
+        "expectations",
+        "pantheons",
+        "atmosphere",
+        "radiology"
+      ],
+      "Education & Teaching": [
+        "grammar-for-intelligence"
+      ],
+      "Tools & Infrastructure": [
+        "tft-opengpu"
+      ]
+    },
+    "new_by_depth": {
+      "1": [
+        "expectations",
+        "pantheons",
+        "atmosphere",
+        "radiology",
+        "prompts",
+        "triadic-detection",
+        "ipd-12",
+        "tft-opengpu",
+        "spine-overlay-pack"
+      ],
+      "2": [
+        "COHERENCE_TENSOR_ENGINE",
+        "CROSS_DOMAIN_CAUSALITY_WEAVER",
+        "DIMENSIONAL_RESONANCE_SCANNER",
+        "DRIFT_SENTINEL",
+        "PARADOX_GRADIENT_ANALYZER",
+        "REGIME_INTERLOCK_MAPPER",
+        "STABILITY_BASIN_CARTOGRAPHER",
+        "STRUCTURAL_FAULTLINE_DETECTOR",
+        "TEMPORAL_REGIME_SEQUENCER",
+        "TRIADIC_REGIME_SYNTHESIZER",
+        "CRYSTAL_MYCELIAL_ENGINE",
+        "rtt-infinity-prompts",
+        "grammar-for-intelligence",
+        "spine-structural",
+        "spine-drift",
+        "spine-coherence",
+        "spine-substrate",
+        "spine-dimensional",
+        "spine-domain"
+      ],
+      "3": [
+        "RTT_INSIDE_ENTERPRISE",
+        "RTT_INSIDE_QCOMPUTE"
+      ]
+    }
+  },
+  "cross_module_lattice_additions": {
+    "new_propagation_edges": [
+      {
+        "from": "spine-structural",
+        "to": "spine-drift",
+        "type": "structural-frame-publish"
+      },
+      {
+        "from": "spine-drift",
+        "to": "spine-coherence",
+        "type": "drift-report-publish"
+      },
+      {
+        "from": "spine-coherence",
+        "to": "spine-substrate",
+        "type": "coherence-report-publish"
+      },
+      {
+        "from": "spine-substrate",
+        "to": "spine-dimensional",
+        "type": "substrate-report-publish"
+      },
+      {
+        "from": "spine-dimensional",
+        "to": "spine-domain",
+        "type": "drm-publish"
+      },
+      {
+        "from": "STRUCTURAL_FAULTLINE_DETECTOR",
+        "to": "spine-structural",
+        "type": "primary-engine"
+      },
+      {
+        "from": "DRIFT_SENTINEL",
+        "to": "spine-drift",
+        "type": "primary-engine"
+      },
+      {
+        "from": "COHERENCE_TENSOR_ENGINE",
+        "to": "spine-coherence",
+        "type": "primary-engine"
+      },
+      {
+        "from": "STABILITY_BASIN_CARTOGRAPHER",
+        "to": "spine-substrate",
+        "type": "primary-engine"
+      },
+      {
+        "from": "DIMENSIONAL_RESONANCE_SCANNER",
+        "to": "spine-dimensional",
+        "type": "primary-engine"
+      },
+      {
+        "from": "TRIADIC_REGIME_SYNTHESIZER",
+        "to": "spine-domain",
+        "type": "co-primary-engine"
+      },
+      {
+        "from": "CROSS_DOMAIN_CAUSALITY_WEAVER",
+        "to": "spine-domain",
+        "type": "co-primary-engine"
+      },
+      {
+        "from": "ipd-12",
+        "to": "spine-structural",
+        "type": "coordinate-system"
+      },
+      {
+        "from": "ipd-12",
+        "to": "spine-dimensional",
+        "type": "coordinate-system"
+      },
+      {
+        "from": "tft-opengpu",
+        "to": "spine-overlay-pack",
+        "type": "compute-layer"
+      },
+      {
+        "from": "CRYSTAL_MYCELIAL_ENGINE",
+        "to": "spine-substrate",
+        "type": "tertiary-engine"
+      },
+      {
+        "from": "expectations",
+        "to": "spine-drift",
+        "type": "envelope-provider"
+      },
+      {
+        "from": "atmosphere",
+        "to": "spine-drift",
+        "type": "environmental-signal"
+      },
+      {
+        "from": "grammar-for-intelligence",
+        "to": "spine-overlay-pack",
+        "type": "narration-grammar"
+      }
+    ]
+  }
+}

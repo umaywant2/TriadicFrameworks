@@ -1,0 +1,33 @@
+{
+  "strike_event": {
+    "location": "geo",
+    "timestamp": "UTC",
+    "intensity": "float",
+    "duration": "ms",
+    "arc_type": ["cloud-to-ground", "cloud-to-cloud", "intra-cloud"]
+  },
+  "cyclone_core": {
+    "pressure": "hPa",
+    "wind_speed": "km/h",
+    "radius": "km",
+    "category": "int"
+  },
+  "tornado_path": {
+    "length": "km",
+    "width": "m",
+    "damage_index": "int",
+    "trajectory": "geo"
+  },
+  "resonance_echo": {
+    "emotional_vector": "string",
+    "fear_index": "float",
+    "grief_index": "float"
+  },
+  "metadata": {
+    "source": "NOAA + IBTrACS + Kaggle",
+    "scope": "global",
+    "version": "v1",
+    "author": "Nawder Loswin",
+    "designation": "Unified Weather Scaffold"
+  }
+}

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/workflows/Diagram.md">
+  <title>🔷 Workflow Diagram (Refreshed, Scroll‑Centric)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/workflows/Diagram.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/workflows/Diagram.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="workflow-diagram-refreshed-scrollcentric">🔷 Workflow Diagram (Refreshed, Scroll‑Centric)</h1>
+<p>This diagram shows how the four workflow engines relate to each other using the updated scroll‑centric topology:</p>
+<ul>
+<li><strong>Scrolls</strong> remain the canonical center  </li>
+<li><strong>Pipelines</strong> are execution paths (Python + JS symmetry)  </li>
+<li><strong>Remix</strong> generates lineage variants  </li>
+<li><strong>Batch</strong> coordinates multi‑scroll execution  </li>
+<li><strong>Engines orbit the scroll artifact, not each other</strong></li>
+</ul>
+<hr>
+<h2 id="textbased-diagram-singleglance">🔷 Text‑Based Diagram (Single‑Glance)</h2>
+<pre><code>                               🔷
+                 ┌──────────────────────────┐
+                 │   remix_generation.py    │
+                 │   (Remix Lineage Engine) │
+                 └──────────────▲───────────┘
+                                │
+                        produces variants
+                                │
+        ┌───────────────────────┴────────────────────────┐
+        │                                                │
+        │                Scrolls (.fff)                  │
+        │        (canonical RTT artifacts)               │
+        │                                                │
+        └───────────────────────┬────────────────────────┘
+                                │
+                         executed by
+                                │
+ ┌──────────────────────────────┼──────────────────────────────┐
+ │                              │                              │
+ │     ┌────────────────────┐   │     ┌───────────────────┐    │
+ │     │ scroll_pipeline.py │   │     │ scrollPipeline.js │    │
+ │     │   (Python Engine)  │   │     │    (JS Engine)    │    │
+ │     └────────────────────┘   │     └───────────────────┘    │
+ │                              │                              │
+ └──────────────────────────────┴───────────────┬──────────────┘
+                                                │
+                                        executes many
+                                                │
+                                   ┌──────────────────────────┐
+                                   │  batch_orchestrator.py   │
+                                   │     (Batch Runner)       │
+                                   └──────────────────────────┘
+</code></pre>
+<h3 id="interpretation">Interpretation</h3>
+<ul>
+<li><strong>Remix Generation</strong> creates new scroll variants.  </li>
+<li><strong>Scroll Pipelines</strong> (Python + JS) execute scrolls in different runtime environments.  </li>
+<li><strong>Batch Orchestrator</strong> runs many scrolls or variants in sequence.  </li>
+<li><strong>Scrolls</strong> remain the invariant center; engines are operators around them.  </li>
+</ul>
+<p>This matches the modernized architecture shown in your Workflows page and the scroll‑centric Quickstart.</p>
+<hr>
+<h2 id="updated-triadic-glyph-scrollcentric">🔷 Updated Triadic Glyph (Scroll‑Centric)</h2>
+<p>A glyph for this subsystem should reflect the updated relationships:</p>
+<pre><code>                 🌀 Scroll Artifact
+        ┌───────────────┼────────────────┬────────────────┐
+        │               │                │                │
+        │         🌐 JS Pipeline   🐍 Python Pipeline   🎨 Remix Engine
+        │               │                │                │
+        └───────────────┴────────────────┴────────────────┘
+                                ▼
+                         📦 Batch Orchestrator
+</code></pre>
+<h3 id="interpretation_1">Interpretation</h3>
+<ul>
+<li>The scroll artifact is the invariant center.  </li>
+<li>Pipelines and Remix orbit horizontally as sibling engines.  </li>
+<li>Batch anchors the system by coordinating multi‑scroll execution.  </li>
+<li>The glyph mirrors the structural relationships in the diagram above.  </li>
+</ul>
+<hr>
+<h2 id="notes-for-maintainers">🔷 Notes for maintainers</h2>
+<ul>
+<li><code>/docs/engine/</code> has been archived; no engine‑era modules appear in this diagram.  </li>
+<li>All workflows now use the scroll‑centric module layout (<code>tft.scrolls.*</code>).  </li>
+<li>Pipelines maintain Python/JS symmetry.  </li>
+<li>Remix and Batch remain orthogonal operators.  </li>
+</ul>
+  </main>
+</body>
+</html>

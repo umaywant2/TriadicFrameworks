@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="rtt.css" />
+  <script src="include.js"></script>
+</head>
+
+<body class="dark-mode">
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
+  <main class="rtt-page">
+    <h1 class="rtt-hero-title">Bundle Builder</h1>
+    <p class="rtt-hero-subtitle">Compose your own dimensional bundle.</p>
+
+    <hr class="rtt-divider" />
+
+    <div class="rtt-bundle-layout">
+      <section>
+        <h2 class="rtt-section-title">Select Modules</h2>
+        <div id="bundleModules" class="rtt-tier-grid"></div>
+      </section>
+
+      <section>
+        <h2 class="rtt-section-title">Your Bundle</h2>
+        <div id="bundleSummary" class="rtt-card">
+          <div class="rtt-card-title">Selected Modules</div>
+          <ul id="bundleList"></ul>
+          <p id="bundleCount"></p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="rtt-footer">
+      © TriadicFrameworks — Resonance‑Time Technology
+    </footer>
+  </main>
+
+  <script>
+    const modules = [
+      { name: "RTT Primer" },
+      { name: "RSM" },
+      { name: "RTTcodes" },
+      { name: "Wrapped Core L2" },
+      { name: "Coeus" },
+      { name: "Multi‑Helix Orchestration" },
+      { name: "RTOF" }
+    ];
+
+    const selected = new Set();
+    const modContainer = document.getElementById("bundleModules");
+    const list = document.getElementById("bundleList");
+    const count = document.getElementById("bundleCount");
+
+    function renderModules() {
+      modContainer.innerHTML = modules.map(m => `
+        <div class="rtt-card">
+          <div class="rtt-card-title">${m.name}</div>
+          <button class="rtt-btn rtt-btn-secondary" data-module="${m.name}">
+            ${selected.has(m.name) ? "Remove" : "Add"}
+          </button>
+        </div>
+      `).join("");
+    }
+
+    function renderSummary() {
+      list.innerHTML = Array.from(selected).map(n => `<li>${n}</li>`).join("");
+      count.textContent = `Total modules: ${selected.size}`;
+    }
+
+    document.addEventListener("click", e => {
+      if (e.target.matches("[data-module]")) {
+        const name = e.target.dataset.module;
+        if (selected.has(name)) selected.delete(name); else selected.add(name);
+        renderModules();
+        renderSummary();
+      }
+    });
+
+    renderModules();
+    renderSummary();
+  </script>

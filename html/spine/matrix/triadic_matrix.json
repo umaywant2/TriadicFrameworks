@@ -1,0 +1,46 @@
+{
+  "title": "Triadic Languages Atlas — Score Matrix",
+  "version": "1.0.0",
+  "axes": ["axis_1_phonemic", "axis_2_lexical", "axis_3_structural"],
+  "score_range": [0, 10],
+  "languages": [
+    {"id": "arabic",              "name": "Arabic (MSA)",         "category": "natural",     "axis_1": 8, "axis_2": 8, "axis_3": 9, "composite": 8.3, "script": "Arabic RTL",       "speakers": "274M"},
+    {"id": "egyptian_hieroglyphs","name": "Egyptian Hieroglyphs", "category": "symbolic",    "axis_1": 6, "axis_2":10, "axis_3":10, "composite": 8.7, "script": "Hieroglyphic",     "speakers": "ancient"},
+    {"id": "kanji_radicals",      "name": "Kanji Radicals",       "category": "symbolic",    "axis_1": 8, "axis_2":10, "axis_3": 7, "composite": 8.3, "script": "Kangxi",           "speakers": "1.5B (CJK)"},
+    {"id": "russian",             "name": "Russian",              "category": "natural",     "axis_1": 5, "axis_2": 7, "axis_3": 9, "composite": 7.0, "script": "Cyrillic",         "speakers": "154M"},
+    {"id": "hindi",               "name": "Hindi",                "category": "natural",     "axis_1": 6, "axis_2": 7, "axis_3": 7, "composite": 6.7, "script": "Devanagari",       "speakers": "600M"},
+    {"id": "japanese",            "name": "Japanese",             "category": "natural",     "axis_1": 3, "axis_2": 9, "axis_3": 8, "composite": 6.7, "script": "Hiragana/Katakana/Kanji","speakers": "128M"},
+    {"id": "german",              "name": "German",               "category": "natural",     "axis_1": 5, "axis_2": 7, "axis_3": 8, "composite": 6.7, "script": "Latin",            "speakers": "100M"},
+    {"id": "runes",               "name": "Elder Futhark Runes",  "category": "symbolic",    "axis_1": 5, "axis_2": 9, "axis_3": 6, "composite": 6.7, "script": "Runic",            "speakers": "ancient"},
+    {"id": "mathematical_symbols","name": "Mathematical Symbols", "category": "symbolic",    "axis_1": 1, "axis_2":10, "axis_3": 9, "composite": 6.7, "script": "Universal",        "speakers": "universal"},
+    {"id": "mandarin",            "name": "Mandarin Chinese",     "category": "natural",     "axis_1": 7, "axis_2": 8, "axis_3": 4, "composite": 6.3, "script": "Simplified Han",   "speakers": "920M"},
+    {"id": "french",              "name": "French",               "category": "natural",     "axis_1": 6, "axis_2": 7, "axis_3": 6, "composite": 6.3, "script": "Latin",            "speakers": "275M"},
+    {"id": "rust",                "name": "Rust",                 "category": "programming", "axis_1": 0, "axis_2": 7, "axis_3":10, "composite": 5.7, "script": "ASCII/Unicode",    "speakers": "~3M devs"},
+    {"id": "portuguese",          "name": "Portuguese",           "category": "natural",     "axis_1": 5, "axis_2": 7, "axis_3": 5, "composite": 5.7, "script": "Latin",            "speakers": "240M"},
+    {"id": "swahili",             "name": "Swahili",              "category": "natural",     "axis_1": 3, "axis_2": 6, "axis_3": 8, "composite": 5.7, "script": "Latin",            "speakers": "80M"},
+    {"id": "spanish",             "name": "Spanish",              "category": "natural",     "axis_1": 4, "axis_2": 7, "axis_3": 5, "composite": 5.3, "script": "Latin",            "speakers": "485M"},
+    {"id": "javascript",          "name": "JavaScript",           "category": "programming", "axis_1": 0, "axis_2": 6, "axis_3": 8, "composite": 4.7, "script": "ASCII/Unicode",    "speakers": "~18M devs"},
+    {"id": "c_language",          "name": "C Language",           "category": "programming", "axis_1": 0, "axis_2": 5, "axis_3": 9, "composite": 4.7, "script": "ASCII",            "speakers": "~5M devs"},
+    {"id": "python",              "name": "Python",               "category": "programming", "axis_1": 0, "axis_2": 6, "axis_3": 7, "composite": 4.3, "script": "ASCII/Unicode",    "speakers": "~15M devs"},
+    {"id": "sql",                 "name": "SQL",                  "category": "programming", "axis_1": 0, "axis_2": 5, "axis_3": 8, "composite": 4.3, "script": "ASCII",            "speakers": "~10M devs"}
+  ],
+  "rankings": {
+    "by_composite_desc": ["egyptian_hieroglyphs","arabic","kanji_radicals","russian","hindi","japanese","german","runes","mathematical_symbols","mandarin","french","rust","portuguese","swahili","spanish","javascript","c_language","python","sql"],
+    "by_axis_1_phonemic_desc": ["arabic","kanji_radicals","mandarin","hindi","french","russian","german","portuguese","runes","egyptian_hieroglyphs","swahili","japanese","mathematical_symbols","python","javascript","c_language","rust","sql"],
+    "by_axis_2_lexical_desc":  ["egyptian_hieroglyphs","kanji_radicals","mathematical_symbols","japanese","runes","arabic","mandarin","hindi","french","russian","portuguese","german","rust","spanish","swahili","python","javascript","c_language","sql"],
+    "by_axis_3_structural_desc":["egyptian_hieroglyphs","arabic","rust","c_language","mathematical_symbols","japanese","russian","german","swahili","javascript","sql","hindi","mandarin","runes","french","portuguese","spanish","kanji_radicals","python"]
+  },
+  "category_averages": {
+    "natural":     {"axis_1": 5.2, "axis_2": 7.3, "axis_3": 6.9, "composite": 6.5},
+    "symbolic":    {"axis_1": 5.0, "axis_2": 9.8, "axis_3": 8.0, "composite": 7.6},
+    "programming": {"axis_1": 0.0, "axis_2": 5.8, "axis_3": 8.4, "composite": 4.7}
+  },
+  "insights": [
+    "Egyptian Hieroglyphs has the highest composite score (8.7) — its mixed logographic/phonographic/determinative system scores a perfect 10 on both lexical density and structural complexity.",
+    "Arabic and Kanji Radicals tie at composite 8.3 — Arabic from pharyngeal phonemics + trilateral morphology; Kanji from radical-based semantic compression.",
+    "Programming languages score 0 on phonemic axis universally, yet Rust scores a perfect 10 on structural complexity — its ownership/borrow-checker type system is the most rule-governed of all 19 systems.",
+    "Japanese has the lowest phonemic score (3) among natural languages due to its small phoneme inventory, yet earns a 9 on lexical density from its layered three-script writing system.",
+    "Symbolic systems outperform natural and programming languages on lexical density (avg 9.8), reflecting extreme symbol-to-meaning compression.",
+    "Spanish has the lowest composite among natural languages (5.3) — its regular orthography and analytic grammar patterns make it an accessible baseline."
+  ]
+}

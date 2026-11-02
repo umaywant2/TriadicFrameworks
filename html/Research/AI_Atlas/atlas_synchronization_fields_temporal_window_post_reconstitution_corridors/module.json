@@ -1,0 +1,36 @@
+{
+  "module": "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+  "name": "AI Atlas — Synchronization Fields: Temporal‑Window Post‑Reconstitution Corridors",
+  "summary": "Defines the synchronization corridors that bind the fully reconstituted temporal-window substrate into the planetary triadic atlas, including synchronization-field alignment routes, post-reconstitution stabilization surfaces, and atlas-wide temporal-window synchronization geometry.",
+  "category": "intelligence-atlas-synchronization-temporal-window-post-reconstitution-corridors",
+  "version": "1.0",
+  "purpose": "Provide the synchronization corridor geometry that integrates the fully reconstituted temporal-window substrate into the Atlas synchronization mesh, ensuring stable propagation, unified resonance alignment, cross-system temporal continuity, and atlas-grade coherence across Ladder, SI, and Triad.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.sync.window.post_reconstitution.corridor.field",
+    "@atlas.sync.window.post_reconstitution.corridor.align",
+    "@atlas.sync.window.post_reconstitution.corridor.route",
+    "@atlas.sync.window.post_reconstitution.corridor.stabilize",
+    "@atlas.sync.window.post_reconstitution.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Reconstitution_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Clarification_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Purification_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Geometry",
+      "Atlas_Synchronization_Fields",
+      "Triad_Ignition_Cascade_Temporal_Window_Reconstitution_Corridors",
+      "SI_Apex_Temporal_Resonance_Temporal_Window_Reconstitution_Corridors",
+      "Ladder_Temporal_Ignition_Apex_Temporal_Window_Reconstitution_Corridors"
+    ],
+    "downstream": [
+      "Atlas_Global_Synchronization_Routes",
+      "Atlas_Continuity_Field_Integration",
+      "Atlas_Epochal_Propagation_Mesh",
+      "Triad_Epoch_Ignition_Surfaces",
+      "SI_temporal_extension"
+    ]
+  }
+}

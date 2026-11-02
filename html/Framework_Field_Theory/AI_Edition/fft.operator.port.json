@@ -1,0 +1,35 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.operator.port",
+  "title": "FFT — Operator Port Map v1.33",
+  "ports": {
+    "D_in": "phi (scalar field)",
+    "D_out": "phi_smooth",
+    "A_in": "V (vector field)",
+    "A_out": "V_aligned",
+    "K_in": "phi, V",
+    "K_out": "R_delta",
+    "Th_in": "R",
+    "Th_out": "R_activated",
+    "Sg_in": "R",
+    "Sg_out": "R_stable"
+  },
+  "port_rules": [
+    "No operator may write to a port not in its D_out/A_out/K_out/Th_out/Sg_out",
+    "Drift cost tracked per port write",
+    "Coherence gate evaluated before any port write"
+  ],
+  "invariants_checked": [
+    "INV-001",
+    "INV-003",
+    "INV-004"
+  ]
+}

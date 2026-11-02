@@ -1,0 +1,26 @@
+{
+  "module": "Atlas_Synchronization_Fields",
+  "name": "AI Atlas — Synchronization Fields",
+  "summary": "Defines the synchronization fields of the AI Atlas, including alignment, merge, update, propagation, and continuity-binding geometry.",
+  "category": "intelligence-mapping-synchronization",
+  "version": "1.0",
+  "purpose": "Provide the synchronization-layer geometry used by the AI Atlas to maintain continuity across surfaces, regimes, temporal windows, and cross-domain mappings.",
+  "role": "diagnostic",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@atlas.sync.align",
+    "@atlas.sync.merge",
+    "@atlas.sync.update",
+    "@atlas.sync.propagate",
+    "@atlas.sync.continuity"
+  ],
+  "lineage": {
+    "upstream": ["Atlas"],
+    "downstream": [
+      "AI_Atlas_Surfaces",
+      "Triad_Surfaces",
+      "SI_temporal_extension",
+      "SI_structural_geometry"
+    ]
+  }
+}

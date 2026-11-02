@@ -1,0 +1,85 @@
+{
+  "module": {
+    "name": "RTT Observer Bot",
+    "id": "bots.observer",
+    "summary": "Triadic Observer Layer: watches any bot, engine, or conversation and emits triadic identity, drift, regime shifts, and collapse signals.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT Observer",
+      "summary": "The RTT interpretive layer itself — a meta‑bot that observes sequences and emits triadic state.",
+      "version": "1.0.0",
+      "purpose": "Provide triadic interpretation for any input stream: game states, engine outputs, conversations, or events.",
+      "keywords": [
+        "observer",
+        "triadic",
+        "continuity",
+        "drift",
+        "regime shifts",
+        "collapse signatures",
+        "projection-loss",
+        "meta-bot"
+      ],
+      "audience": "Framework authors, engine integrators, diagnostics systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "observation_stream",
+    "input_spec": {
+      "type": "sequence",
+      "items": "game_state | message | event",
+      "notes": "Observer does not play; it watches."
+    },
+    "steps": [
+      "Lumen: extract structural signals from each observed state",
+      "Hephaestus: classify regime shifts across the sequence",
+      "Aurion: compute ancestry, collapse signatures, projection-loss",
+      "Harmonia: synthesize triadic identity over time",
+      "StateEmitter: emit JSON conforming to module_observer_schema.json"
+    ],
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT observation"
+    }
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_observer_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "observer_sequence_drift",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "A short sequence showing regime shifts, drift alignment, and a collapse signature."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "👁️",
+    "label": "RTT Observer"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Observer tracks drift across time, not across boards.",
+      "coherence": "Observer is the coherence backbone of the entire bots suite.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}

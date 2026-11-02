@@ -1,0 +1,80 @@
+{
+  "id": "L12",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "L12",
+  "name": "Rupture Threshold",
+  "canonical": "R5",
+
+  "summary": "L12 defines the rupture threshold of unseen force-regime mechanics. It is the instability axis of the S3 Spine and represents the point at which field coherence collapses into rupturePotential.",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "semantic_axis": "rupturePotential",
+
+  "role": "instability-threshold",
+  "category": "rupture",
+  "cluster": "rupture-threshold",
+
+  "description": {
+    "canonical": "L12 establishes the instability threshold of unseen influence fields. It defines the point at which fieldCoherence can no longer maintain structural stability, causing rupturePotential to escalate.",
+    "cosmology": "In the cosmology chain, L12 represents the emergence of instability from coherence mechanics. It is the rupture hinge between field-state modulation and integrity-state restoration.",
+    "spine": "Within the S3 Spine, L12 is the rupture dimension, defining the threshold where coherence collapses and rupturePotential becomes active.",
+    "mcp": "In MCP operations, L12 is used to model instability events, rupture thresholds, and coherence breakdown conditions."
+  },
+
+  "operators": {
+    "primary": [
+      "ruptureForce"
+    ],
+    "secondary": [],
+    "forbidden": [
+      "gradient",
+      "push",
+      "pull",
+      "fieldShift",
+      "bind"
+    ]
+  },
+
+  "valid_transitions": [
+    "L12 → L32",
+    "L12 → LI"
+  ],
+
+  "forbidden_transitions": [
+    "L12 → L4",
+    "L12 → L5",
+    "L12 → L16",
+    "L12 → LH",
+    "L12 → L8",
+    "L12 → L10",
+    "L12 → L26"
+  ],
+
+  "spine_mapping": {
+    "node": "rupture",
+    "semantic": "rupturePotential",
+    "position": "threshold",
+    "causal_role": "instability activation"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L12",
+    "version": "1.0.0",
+    "keywords": [
+      "rupture",
+      "instability",
+      "threshold",
+      "force-regime",
+      "coherence-collapse"
+    ],
+    "purpose": "Defines the rupture threshold for AI reasoning and MCP instability modeling."
+  }
+}

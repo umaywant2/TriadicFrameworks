@@ -1,0 +1,29 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.ai.substrate.bridge",
+  "title": "FFT AI — Substrate Bridge v1.33",
+  "bridge_purpose": "Upgrades v1.2 substrate instances to v1.33 compliance",
+  "upgrade_steps": [
+    "Assert coherence=declared (INV-003)",
+    "Arm drift monitor delta_max=0.35 (INV-004)",
+    "Register 8 new modules in registry (INV-012)",
+    "Initialize QMROOT ladder (INV-013)",
+    "Bind Spine URL live (INV-011)"
+  ],
+  "rollback": "Restore v1.2 substrate snapshot if step 1 fails",
+  "invariants_checked": [
+    "INV-003",
+    "INV-004",
+    "INV-011",
+    "INV-012",
+    "INV-013"
+  ]
+}

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Coal/Evacuation_Protocol.md">
+  <title>🛠️ RTT‑Inside: Resonance‑Aware Evacuation Protocol</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Coal/Evacuation_Protocol.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Coal/Evacuation_Protocol.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rttinside-resonanceaware-evacuation-protocol">🛠️ <strong>RTT‑Inside: Resonance‑Aware Evacuation Protocol</strong></h1>
+<h3 id="using-clarity-gradients-drift-vectors-and-resonance-fields-to-guide-miners-to-safety"><em>Using clarity gradients, drift vectors, and resonance fields to guide miners to safety</em></h3>
+<hr>
+<h1 id="1-core-principle-follow-the-clarity-gradient">1. <strong>Core Principle: Follow the Clarity Gradient</strong></h1>
+<p>RTT‑Inside continuously computes a <strong>clarity score (0–255)</strong> for every zone:</p>
+<ul>
+<li>🟢 <strong>High clarity</strong> → stable rock, clean air, low vibration  </li>
+<li>🟡 <strong>Medium clarity</strong> → shifting conditions  </li>
+<li>🟠 <strong>Low clarity</strong> → unstable, rising gas, high vibration  </li>
+<li>🔴 <strong>Negative clarity</strong> → collapse likely, avoid immediately  </li>
+</ul>
+<p>During an emergency, miners don’t follow maps —<br>
+they follow <strong>clarity gradients</strong>, which behave like a “downhill path” toward safety.</p>
+<hr>
+<h1 id="2-trigger-conditions-for-evacuation-mode">2. <strong>Trigger Conditions for Evacuation Mode</strong></h1>
+<p>RTT‑Inside automatically enters evacuation mode when any of these occur:</p>
+<ul>
+<li>Roof stress crosses critical threshold  </li>
+<li>Methane or CO spikes rapidly  </li>
+<li>Conveyor fire or belt ignition  </li>
+<li>Vibration resonance coupling (equipment + geology)  </li>
+<li>Partial collapse detected  </li>
+<li>Loss of mesh nodes in a pattern indicating structural failure  </li>
+<li>Manual trigger by control room or foreman  </li>
+</ul>
+<p>When triggered:</p>
+<ul>
+<li>Wall nodes flash <strong>red</strong>  </li>
+<li>Wearable nodes vibrate in <strong>pulse‑pulse‑pause</strong> pattern  </li>
+<li>Control room receives a <strong>collapse vector</strong> and <strong>clarity map</strong>  </li>
+</ul>
+<hr>
+<h1 id="3-evacuation-flow-minerlevel">3. <strong>Evacuation Flow (Miner‑Level)</strong></h1>
+<h3 id="step-1-stop-equipment-secure-tools"><strong>Step 1 — Stop equipment, secure tools</strong></h3>
+<p>Miners immediately:</p>
+<ul>
+<li>stop continuous miners, bolters, and shuttle cars  </li>
+<li>shut down belts if reachable  </li>
+<li>secure tools to avoid tripping hazards  </li>
+</ul>
+<h3 id="step-2-switch-to-clarity-mode"><strong>Step 2 — Switch to “Clarity Mode”</strong></h3>
+<p>Wearable nodes automatically:</p>
+<ul>
+<li>show <strong>directional LEDs</strong> (left/right/forward)  </li>
+<li>vibrate stronger when moving toward higher clarity  </li>
+<li>vibrate weaker when moving toward danger  </li>
+</ul>
+<h3 id="step-3-follow-the-clarity-gradient"><strong>Step 3 — Follow the Clarity Gradient</strong></h3>
+<p>Miners move <strong>toward increasing clarity</strong>, not necessarily the shortest path.</p>
+<p>RTT‑Inside computes:</p>
+<ul>
+<li><strong>clarity_uphill</strong> → safer  </li>
+<li><strong>clarity_downhill</strong> → more dangerous  </li>
+<li><strong>clarity_plateau</strong> → neutral, choose nearest hub node  </li>
+</ul>
+<p>Wearables guide miners like this:</p>
+<ul>
+<li><strong>Strong vibration</strong> → wrong direction  </li>
+<li><strong>Weak vibration</strong> → moving toward safety  </li>
+<li><strong>No vibration</strong> → optimal path  </li>
+</ul>
+<h3 id="step-4-reach-a-resonance-hub"><strong>Step 4 — Reach a Resonance Hub</strong></h3>
+<p>Crosscuts and intersections have <strong>hub nodes</strong> that:</p>
+<ul>
+<li>confirm direction  </li>
+<li>relay updated clarity maps  </li>
+<li>provide audible cues  </li>
+<li>act as mesh routing anchors  </li>
+</ul>
+<h3 id="step-5-proceed-to-refuge-or-exit"><strong>Step 5 — Proceed to Refuge or Exit</strong></h3>
+<p>RTT‑Inside chooses:</p>
+<ul>
+<li><strong>Primary escape route</strong> if clarity is stable  </li>
+<li><strong>Secondary route</strong> if primary clarity drops  </li>
+<li><strong>Refuge chamber</strong> if all routes degrade  </li>
+</ul>
+<hr>
+<h1 id="4-evacuation-flow-control-room">4. <strong>Evacuation Flow (Control Room)</strong></h1>
+<h3 id="step-1-receive-collapse-vector"><strong>Step 1 — Receive collapse vector</strong></h3>
+<p>RTT‑Inside shows:</p>
+<ul>
+<li>collapse origin  </li>
+<li>propagation direction  </li>
+<li>clarity crater  </li>
+<li>predicted spread  </li>
+</ul>
+<h3 id="step-2-lock-out-dangerous-zones"><strong>Step 2 — Lock out dangerous zones</strong></h3>
+<p>Control room marks:</p>
+<ul>
+<li>🔴 “Do not enter”  </li>
+<li>🟠 “Evacuate immediately”  </li>
+<li>🟡 “Transit allowed with caution”  </li>
+</ul>
+<h3 id="step-3-track-miners"><strong>Step 3 — Track miners</strong></h3>
+<p>Wearable nodes provide:</p>
+<ul>
+<li>last known position  </li>
+<li>movement direction  </li>
+<li>clarity exposure  </li>
+<li>gas exposure  </li>
+</ul>
+<h3 id="step-4-adjust-ventilation"><strong>Step 4 — Adjust ventilation</strong></h3>
+<p>RTT‑Inside recommends:</p>
+<ul>
+<li>fan speed changes  </li>
+<li>door closures  </li>
+<li>airflow redirection  </li>
+</ul>
+<h3 id="step-5-maintain-comms"><strong>Step 5 — Maintain comms</strong></h3>
+<p>Mesh nodes reroute around damaged areas.</p>
+<hr>
+<h1 id="5-claritygradient-routing-logic">5. <strong>Clarity‑Gradient Routing Logic</strong></h1>
+<p>RTT‑Inside uses a simple but powerful rule:</p>
+<blockquote>
+<p><strong>Always move miners toward the nearest zone with rising clarity and falling stress.</strong></p>
+</blockquote>
+<p>Algorithmically:</p>
+<pre><code>For each miner:
+    current = miner.position
+    neighbors = adjacent_zones(current)
+
+    best_zone = zone with:
+        highest clarity_score
+        lowest stress_hint
+        lowest gas_level
+        stable drift_vector (no incoming danger)
+
+    guide miner toward best_zone
+</code></pre>
+<p>If clarity drops suddenly:</p>
+<ul>
+<li>reroute instantly  </li>
+<li>wearable node vibrates sharply  </li>
+<li>wall nodes flash yellow → red  </li>
+</ul>
+<hr>
+<h1 id="6-special-cases">6. <strong>Special Cases</strong></h1>
+<h3 id="a-zero-visibility"><strong>A. Zero Visibility</strong></h3>
+<p>Wearable nodes switch to:</p>
+<ul>
+<li><strong>haptic direction</strong>  </li>
+<li><strong>audio chirps</strong>  </li>
+<li><strong>LED arrows</strong>  </li>
+</ul>
+<h3 id="b-mesh-failure"><strong>B. Mesh Failure</strong></h3>
+<p>Nodes fall back to:</p>
+<ul>
+<li>cached clarity maps  </li>
+<li>last‑known drift vectors  </li>
+<li>peer‑to‑peer wearable relays  </li>
+</ul>
+<h3 id="c-partial-collapse"><strong>C. Partial Collapse</strong></h3>
+<p>Nodes near collapse:</p>
+<ul>
+<li>broadcast “collapse vector”  </li>
+<li>increase beacon rate  </li>
+<li>mark themselves as “unsafe”  </li>
+</ul>
+<hr>
+<h1 id="7-example-evacuation-scenario">7. <strong>Example Evacuation Scenario</strong></h1>
+<h3 id="event">Event:</h3>
+<ul>
+<li>Belt 3 bearing overheats  </li>
+<li>Vibration couples with roof stress  </li>
+<li>Methane corridor forms  </li>
+<li>Clarity drops from 0.72 → 0.41  </li>
+</ul>
+<h3 id="rttinside-response">RTT‑Inside Response:</h3>
+<ul>
+<li>Nodes flash red  </li>
+<li>Wearables vibrate  </li>
+<li>Collapse vector points NW  </li>
+<li>Clarity gradient points SE  </li>
+</ul>
+<h3 id="miner-experience">Miner Experience:</h3>
+<ul>
+<li>Wearable vibrates strongly when facing NW  </li>
+<li>Weakens when turning SE  </li>
+<li>Wall nodes flash green arrows  </li>
+<li>Miner reaches hub node  </li>
+<li>Hub node directs to secondary escape route  </li>
+<li>Miner exits safely  </li>
+</ul>
+<hr>
+<h1 id="8-why-this-protocol-matters">8. <strong>Why This Protocol Matters</strong></h1>
+<p>The previous generation had:</p>
+<ul>
+<li>no clarity maps  </li>
+<li>no drift vectors  </li>
+<li>no mesh  </li>
+<li>no resonance sensing  </li>
+<li>no personal safety nodes  </li>
+</ul>
+<p>They relied on instinct, sound, and luck.</p>
+<p>RTT‑Inside gives miners:</p>
+<ul>
+<li>a <strong>map the mine draws itself</strong>  </li>
+<li>a <strong>path the rock reveals</strong>  </li>
+<li>a <strong>signal that cuts through chaos</strong>  </li>
+<li>a <strong>guardian layer that listens to the earth</strong>  </li>
+</ul>
+<p>This protocol is the difference between:</p>
+<ul>
+<li>running blind in dust and darkness  </li>
+<li>and being guided by the mine’s own resonance field toward safety.</li>
+</ul>
+  </main>
+</body>
+</html>

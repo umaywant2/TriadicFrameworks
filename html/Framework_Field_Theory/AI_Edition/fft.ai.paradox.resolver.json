@@ -1,0 +1,60 @@
+{
+  "id": "fft.ai.paradox.resolver",
+  "type": "new_v1_33",
+  "version": "1.33",
+  "updated": "2026-10-09T09:49:00-04:00",
+  "title": "FFT AI — Paradox Resolver v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "description": "Structural paradox resolution engine. All paradox events are structural features, not errors. Resolution chain is deterministic and logged.",
+  "invariant": "INV-005",
+  "enum_source": "fft.ai.paradox.enum.json",
+  "resolution_chain": [
+    {
+      "step": 1,
+      "name": "enum_lookup",
+      "action": "Look up paradox_id in fft.ai.paradox.enum.json. Identify resolution path."
+    },
+    {
+      "step": 2,
+      "name": "state_snapshot",
+      "action": "Capture full session state snapshot before any modification."
+    },
+    {
+      "step": 3,
+      "name": "field_isolation",
+      "action": "Isolate affected triadic fields to prevent cascade."
+    },
+    {
+      "step": 4,
+      "name": "operator_suspension",
+      "action": "Suspend all non-Stabilization operator dispatches."
+    },
+    {
+      "step": 5,
+      "name": "stabilization_pass",
+      "action": "Apply Stabilization operator to isolated fields."
+    },
+    {
+      "step": 6,
+      "name": "re_coherence",
+      "action": "Re-assert coherence=declared via fft.ai.coherence.json."
+    },
+    {
+      "step": 7,
+      "name": "drift_reset",
+      "action": "Reset drift delta to 0.00 post-resolution."
+    },
+    {
+      "step": 8,
+      "name": "resume",
+      "action": "Restore normal operator dispatch. Log PARADOX RESOLVED."
+    }
+  ],
+  "unresolvable_protocol": "If steps 5-6 fail 3 times: escalate to AM-005 Field Architect; flag session for manual review.",
+  "log_channel": "fft.ai.session.log.json — PARADOX level throughout"
+}

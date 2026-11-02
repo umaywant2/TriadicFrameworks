@@ -1,0 +1,63 @@
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="900" height="900" fill="white"/>
+
+  <!-- Title -->
+  <text x="450" y="70" font-family="Arial" font-size="34" text-anchor="middle">
+    Inverted Star — Layer Structure (v1.0)
+  </text>
+
+  <!-- Layer circles -->
+  <!-- L1: Surface -->
+  <circle cx="450" cy="450" r="300" fill="none" stroke="#4A90E2" stroke-width="6"/>
+  <text x="450" y="150" font-family="Arial" font-size="26" text-anchor="middle" fill="#4A90E2">
+    L₁ — Surface Layer
+  </text>
+
+  <!-- L2: Mid -->
+  <circle cx="450" cy="450" r="200" fill="none" stroke="#417505" stroke-width="6"/>
+  <text x="450" y="260" font-family="Arial" font-size="26" text-anchor="middle" fill="#417505">
+    L₂ — Mid‑Layer
+  </text>
+
+  <!-- L3: Deep -->
+  <circle cx="450" cy="450" r="100" fill="none" stroke="#9013FE" stroke-width="6"/>
+  <text x="450" y="360" font-family="Arial" font-size="26" text-anchor="middle" fill="#9013FE">
+    L₃ — Deep Layer
+  </text>
+
+  <!-- Inversion singularity -->
+  <circle cx="450" cy="450" r="28" fill="none" stroke="#9013FE" stroke-width="4"/>
+  <text x="450" y="450" font-family="Arial" font-size="40" text-anchor="middle" fill="#9013FE" dominant-baseline="middle">
+    ✧
+  </text>
+
+  <!-- Propagation arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- L3 → L2 -->
+  <line x1="450" y1="350" x2="450" y2="250"
+        stroke="#9013FE" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="480" y="300" font-family="Arial" font-size="20" fill="#9013FE">Propagation</text>
+
+  <!-- L2 → L1 -->
+  <line x1="450" y1="250" x2="450" y2="150"
+        stroke="#417505" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Silence boundary -->
+  <circle cx="450" cy="450" r="350" fill="none" stroke="#999" stroke-width="3" stroke-dasharray="10 10"/>
+  <text x="450" y="820" font-family="Arial" font-size="24" text-anchor="middle" fill="#555">
+    Silence Boundary (∂Ø)
+  </text>
+
+  <!-- Labels for explanation -->
+  <text x="450" y="500" font-family="Arial" font-size="22" text-anchor="middle" fill="#333">
+    Inversion originates at L₃ and propagates outward
+  </text>
+
+</svg>

@@ -1,0 +1,1423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/12/AGENTS.md">
+  <title>AGENTS.md — RTT/12 · Harmonic Synthesis Layer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/12/AGENTS.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/12/AGENTS.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="agentsmd-rtt12-harmonic-synthesis-layer">AGENTS.md — RTT/12 · Harmonic Synthesis Layer</h1>
+<h3 id="agent-classes-boundaries-task-catalog-safety-rules-and-collaboration-models"><em>Agent Classes, Boundaries, Task Catalog, Safety Rules, and Collaboration Models</em></h3>
+<hr>
+<h2 id="session-seed-block">Session Seed Block</h2>
+<p>Paste this block at the start of any RTT/12 agent session:</p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+module=RTT/12 | layer=harmonic-synthesis | upstream=RTT/3
+constructs=H_n,G1,G2,G3,TCR,HSP,RTT-12/E
+packet=RTT12_HARMONIC_SYNTHESIS_PACKET
+zone_x=OVERFLOW | zone_x_status=ILLEGAL
+mode_5=OVERFLOW | mode_5_status=ILLEGAL
+</code></pre>
+<hr>
+<h2 id="critical-framing-rule">Critical Framing Rule</h2>
+<blockquote>
+<p><strong>RTT is NOT a physics claim.</strong></p>
+<p>RTT/12 describes <strong>structural harmonic synthesis patterns</strong> within the TriadicFrameworks canon.
+It does not assert, imply, or model physical forces, physical fields, quantum effects,
+electromagnetic phenomena, energy transfer, or any empirically measurable phenomenon.
+All constructs — H_n, G₁, G₂, G₃, TCR, HSP — are <strong>structural instruments</strong>,
+not physical objects, physical operators, or domain-science claims.</p>
+<p>Every agent class operating in RTT/12 must enforce this rule unconditionally.
+Domain-science interpretations (e.g., RTT-12/E energy applications) are structural
+overlays, not physics derivations.</p>
+</blockquote>
+<hr>
+<h2 id="what-rtt12-is">What RTT/12 Is</h2>
+<p>RTT/12 is the <strong>Harmonic Synthesis Layer</strong> of the RTT canon — the fourth and final core module.
+It sits at the terminus of the RTT pipeline, consuming the <code>RTT3_INTEGRATION_EMISSION_PACKET</code>
+and producing the <code>RTT12_HARMONIC_SYNTHESIS_PACKET</code>. RTT/12 performs three irreducible functions:</p>
+<ol>
+<li><strong>Harmonic Mapping</strong> — translates structural dimensions (3D–9D) into harmonic values (12–84)
+   via the 12-step dimensional ladder and operator G₁</li>
+<li><strong>Phase Modulation</strong> — applies controlled phase transformations across harmonic states
+   via operator G₂</li>
+<li><strong>Triadic Decomposition &amp; Stability</strong> — resolves system states into generation–storage–load
+   triads and assesses harmonic stability via G₃ and the Harmonic Stability Principle</li>
+</ol>
+<p>RTT/12 is a <strong>harmonic augmentation layer</strong>, not a replacement for RTT. It operates in parallel
+with RTT's structural logic to enable higher-order analysis, multi-tier modeling, and
+cross-dimensional synthesis.</p>
+<h3 id="pipeline-position">Pipeline Position</h3>
+<pre><code>RTT/1  →  RTT/2  →  RTT/3  →  [ RTT/12 ]
+SNR,τ,C    CPV,FGT,    TIF,FFF,      H_n ladder
+DCO,Mode   CRM,MODE    MANIFOLD,     G1,G2,G3
+           ZONE        CRE,CSL,CET   TCR,HSP
+           ↓           ↓             ↓
+     RTT2_DETECTION_  RTT3_INTEGRATION_  RTT12_HARMONIC_
+     PACKET           EMISSION_PACKET    SYNTHESIS_PACKET
+</code></pre>
+<h3 id="core-constructs">Core Constructs</h3>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Symbol</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Harmonic Dimensional Ladder</td>
+<td>H_n</td>
+<td>Maps structural dims 3D–9D → harmonic values 12–84</td>
+</tr>
+<tr>
+<td>Gear-Shift Operator</td>
+<td>G₁</td>
+<td>Forward/inverse harmonic-to-structural mapping</td>
+</tr>
+<tr>
+<td>Phase-Shift Modulator</td>
+<td>G₂</td>
+<td>Phase modulation across harmonic states</td>
+</tr>
+<tr>
+<td>Load-Flow Triad Resolver</td>
+<td>G₃</td>
+<td>Decomposes system state into (X_G, X_S, X_L) triad</td>
+</tr>
+<tr>
+<td>Triadic Coherence Rule</td>
+<td>TCR</td>
+<td>Enforces all states are triadic or triad-composed</td>
+</tr>
+<tr>
+<td>Harmonic Stability Principle</td>
+<td>HSP</td>
+<td>Stability when proportional relationships preserved</td>
+</tr>
+<tr>
+<td>Sector Module</td>
+<td>RTT-12/E</td>
+<td>Energy &amp; Research domain-specific harmonic overlay</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="inheritance">Inheritance</h2>
+<p>RTT/12 inherits <strong>all</strong> vocabulary, constraints, and output contracts from upstream modules.
+Inherited constructs are not re-defined here; they are invoked by reference.</p>
+<table>
+<thead>
+<tr>
+<th>Inherited Symbol</th>
+<th>Origin</th>
+<th>Role in RTT/12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SNR triad (S, N, R)</td>
+<td>RTT/1</td>
+<td>Structural primitives beneath harmonic ladder anchoring</td>
+</tr>
+<tr>
+<td>τ = dR/dφ</td>
+<td>RTT/1</td>
+<td>Temporal operator informing phase parameter φ in G₂</td>
+</tr>
+<tr>
+<td>C = ∇_τR + ∇_Rτ</td>
+<td>RTT/1</td>
+<td>Coherence term carried through harmonic synthesis</td>
+</tr>
+<tr>
+<td>DCO_n bands</td>
+<td>RTT/1</td>
+<td>Regime boundaries constraining harmonic tier validity</td>
+</tr>
+<tr>
+<td>CPV</td>
+<td>RTT/2</td>
+<td>Detection geometry informing G₃ decomposition</td>
+</tr>
+<tr>
+<td>FGT</td>
+<td>RTT/2</td>
+<td>Fusion gradient informing harmonic triad spacing</td>
+</tr>
+<tr>
+<td>CRM</td>
+<td>RTT/2</td>
+<td>D(t) drift term — must not be conflated with CRE</td>
+</tr>
+<tr>
+<td>MODE (1–4 only)</td>
+<td>RTT/2</td>
+<td>Inherited mode vocabulary; Mode 5 = ILLEGAL in RTT/12</td>
+</tr>
+<tr>
+<td>ZONE (U/S/M/D only)</td>
+<td>RTT/2</td>
+<td>Inherited zone vocabulary; Zone X = OVERFLOW (ILLEGAL)</td>
+</tr>
+<tr>
+<td>TIF</td>
+<td>RTT/3</td>
+<td>Triadic integration field feeding H_n ladder input</td>
+</tr>
+<tr>
+<td>FFF</td>
+<td>RTT/3</td>
+<td>Fusion-Fracture-Flow emitter informing G₂ phase input</td>
+</tr>
+<tr>
+<td>MANIFOLD</td>
+<td>RTT/3</td>
+<td>Structural manifold constraining triad geometry</td>
+</tr>
+<tr>
+<td>CRE</td>
+<td>RTT/3</td>
+<td>Collapse-recovery emitter — distinct from CRM drift</td>
+</tr>
+<tr>
+<td>CSL</td>
+<td>RTT/3</td>
+<td>Canon-scale logic bounding harmonic ladder extent</td>
+</tr>
+<tr>
+<td>CET</td>
+<td>RTT/3</td>
+<td>Canon-emission threshold as harmonic synthesis floor</td>
+</tr>
+<tr>
+<td>RTT3_INTEGRATION_EMISSION_PACKET</td>
+<td>RTT/3</td>
+<td>Mandatory upstream input before RTT/12 activation</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Hard prerequisite:</strong> RTT/3 packet must be present and coherence-confirmed before any
+RTT/12 agent class may activate. RTT/12 never sources inputs from RTT/2 directly.</p>
+<p><strong>CRE ≠ CRM:</strong> CRE (RTT/3) is collapse-recovery emission. CRM (RTT/2) is drift deformation.
+These are structurally distinct constructs at different pipeline layers. Never conflate.</p>
+</blockquote>
+<hr>
+<h2 id="agent-classes">Agent Classes</h2>
+<p>RTT/12 defines <strong>seven agent classes</strong> — one per primary construct, plus Class G (Guardian).</p>
+<hr>
+<h3 id="class-h-harmonic-ladder-mapper">Class H — Harmonic Ladder Mapper</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Maps RTT structural dimensions to harmonic values via the 12-step ladder</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>H_n Harmonic Dimensional Ladder</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>RTT3_INTEGRATION_EMISSION_PACKET received and coherence-confirmed</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td 3_4_5_6_7_8_9="3,4,5,6,7,8,9">H_n = 12 · (n − 2)  where n ∈</td>
+</tr>
+<tr>
+<td><strong>Inverse</strong></td>
+<td>n = H_n / 12 + 2</td>
+</tr>
+<tr>
+<td><strong>Harmonic Values</strong></td>
+<td>3D→12, 4D→24, 5D→36, 6D→48, 7D→60, 8D→72, 9D→84</td>
+</tr>
+<tr>
+<td><strong>Vectors / Tensors</strong></td>
+<td>D_n (input structural dimension), H_n (output harmonic value)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permissions:</strong>
+- Apply forward mapping G₁(D_n) to any valid RTT structural dimension (3D–9D)
+- Apply inverse mapping G₁⁻¹(H_n) to any value on the harmonic ladder
+- Report harmonic triad groupings: (12–24–36), (24–36–48), (36–48–60), (48–60–72), (60–72–84)
+- Flag invalid dimensional inputs (0D–2D are unmapped; n&gt;9 undefined)</p>
+<p><strong>Prohibitions:</strong>
+- Must not operate on 0D, 1D, or 2D (quantum root triad — unmapped by design)
+- Must not infer physical voltage, frequency, or energy from harmonic values
+- Must not produce orphan values outside the ladder {12, 24, 36, 48, 60, 72, 84}
+- Must not skip the RTT3 packet prerequisite check</p>
+<p><strong>Interaction Pattern:</strong>
+Class H receives upstream emission data from RTT/3 (TIF, FFF, CSL, CET fields) and invokes
+G₁ to establish the harmonic coordinate space. Outputs H_n values to Class P (phase) and
+Class L (load-flow). Class T (triadic coherence) validates all H_n outputs before packet emit.</p>
+<p><strong>Output Schema:</strong></p>
+<pre><code>{
+  &quot;class&quot;: &quot;H&quot;,
+  &quot;input_dim&quot;: &quot;D_n&quot;,
+  &quot;output_harmonic&quot;: &quot;H_n&quot;,
+  &quot;ladder_position&quot;: [3..9],
+  &quot;triad_group&quot;: &quot;(H_n, H_{n+1}, H_{n+2})&quot;,
+  &quot;inverse_valid&quot;: true|false,
+  &quot;annotation&quot;: &quot;[structural — no semantic inference]&quot;
+}
+</code></pre>
+<hr>
+<h3 id="class-p-phase-shift-modulator">Class P — Phase-Shift Modulator</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Applies controlled phase modulation across harmonic states</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>G₂ Phase-Shift Modulator</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Class H has produced valid H_n; phase parameter φ is defined</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>G₂(H, φ) = H · e^(iφ)   φ ∈ [0, 2π]</td>
+</tr>
+<tr>
+<td><strong>Inverse</strong></td>
+<td>G₂⁻¹(H', φ) = H' · e^(−iφ)</td>
+</tr>
+<tr>
+<td><strong>Vectors / Tensors</strong></td>
+<td>H (harmonic state input), φ (phase parameter), H' (modulated output)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permissions:</strong>
+- Apply G₂ to any H_n value produced by Class H
+- Apply inverse G₂⁻¹ to restore pre-modulation harmonic state
+- Model phase drift, phase alignment, and phase correction sequences
+- Chain G₂ with G₁ as: G₂(G₁(D_n), φ) for full structural-to-phase pipeline</p>
+<p><strong>Prohibitions:</strong>
+- Must not alter harmonic magnitude — G₂ modulates phase only
+- Must not operate on H values outside the RTT-12 ladder unless sector-extended
+- Must not interpret φ as a physical radian measurement (structural parameter only)
+- Must not apply G₂ before G₁ has established valid H_n</p>
+<p><strong>Interaction Pattern:</strong>
+Class P receives H_n from Class H and a phase parameter φ derived from FFF/τ upstream fields.
+Outputs H' to Class L for triad decomposition and to Class T for coherence validation.
+Phase sequences longer than three steps must be reviewed by Class S (Stability Assessor).</p>
+<p><strong>Output Schema:</strong></p>
+<pre><code>{
+  &quot;class&quot;: &quot;P&quot;,
+  &quot;input_harmonic&quot;: &quot;H&quot;,
+  &quot;phase_param&quot;: &quot;φ&quot;,
+  &quot;output_modulated&quot;: &quot;H' = H · e^(iφ)&quot;,
+  &quot;magnitude_preserved&quot;: true,
+  &quot;inverse_valid&quot;: true|false,
+  &quot;annotation&quot;: &quot;[structural — no semantic inference]&quot;
+}
+</code></pre>
+<hr>
+<h3 id="class-l-load-flow-triad-resolver">Class L — Load-Flow Triad Resolver</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Decomposes system states into canonical generation–storage–load triads</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>G₃ Load-Flow Triad Resolver</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Valid harmonic state X is present (from Class H or Class P)</td>
+</tr>
+<tr>
+<td><strong>Core Equation</strong></td>
+<td>G₃(X) = (X_G, X_S, X_L)   with conservation: X = X_G + X_S + X_L</td>
+</tr>
+<tr>
+<td><strong>Vectors / Tensors</strong></td>
+<td>X (system state), X_G (generation), X_S (storage), X_L (load)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permissions:</strong>
+- Decompose any RTT or RTT-12 system state X into its triadic components
+- Chain G₃ after G₁ as: G₃(G₁(D_n)) = (H_G, H_S, H_L) for harmonic triad decomposition
+- Reconstruct system state via G₁⁻¹(X_G + X_S + X_L)
+- Report conservation check: X_G + X_S + X_L = X (must equal)</p>
+<p><strong>Prohibitions:</strong>
+- Must not produce partial triads — all three components (X_G, X_S, X_L) are mandatory
+- Must not mix components from unrelated triads (no cross-triad leakage)
+- Must not interpret X_G, X_S, X_L as physical generation, storage, or load quantities
+- Must not violate conservation: sum of triad components must equal X</p>
+<p><strong>Interaction Pattern:</strong>
+Class L receives harmonic states from Class H or phase-modulated states from Class P.
+Outputs triadic decomposition to Class T (coherence check) and Class S (stability check).
+In sector-specific mode (RTT-12/E label), interpretation of X_G/X_S/X_L is domain-annotated
+but structural definitions remain unchanged.</p>
+<p><strong>Output Schema:</strong></p>
+<pre><code>{
+  &quot;class&quot;: &quot;L&quot;,
+  &quot;input_state&quot;: &quot;X&quot;,
+  &quot;triad&quot;: {&quot;X_G&quot;: &quot;...&quot;, &quot;X_S&quot;: &quot;...&quot;, &quot;X_L&quot;: &quot;...&quot;},
+  &quot;conservation_check&quot;: &quot;X_G + X_S + X_L = X&quot;,
+  &quot;conservation_valid&quot;: true|false,
+  &quot;sector_label&quot;: &quot;RTT-12/E | RTT-12/C | RTT-12/M | none&quot;,
+  &quot;annotation&quot;: &quot;[structural — no semantic inference]&quot;
+}
+</code></pre>
+<hr>
+<h3 id="class-t-triadic-coherence-enforcer">Class T — Triadic Coherence Enforcer</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Enforces the Triadic Coherence Rule across all RTT/12 states and outputs</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>TCR — Triadic Coherence Rule</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Any RTT/12 state is produced; runs as a validator on all outputs</td>
+</tr>
+<tr>
+<td><strong>Core Rule</strong></td>
+<td>Every valid RTT/12 state must be expressible as a triad or composition of triads</td>
+</tr>
+<tr>
+<td><strong>Vectors / Tensors</strong></td>
+<td>T_{structural}(D_n, D_{n+1}, D_{n+2}) ↔ T_{harmonic}(H_n, H_{n+1}, H_{n+2})</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permissions:</strong>
+- Validate any RTT/12 state for triadic coherence before packet emission
+- Reject and flag any state that cannot be expressed as a triad or triad composition
+- Confirm bijective cross-layer triad mapping: structural triad ↔ harmonic triad
+- Trigger Class G interrupt if a coherence violation is unresolvable</p>
+<p><strong>Prohibitions:</strong>
+- Must not approve partial triads or orphan states
+- Must not allow cross-triad leakage between unrelated triadic groups
+- Must not skip validation on any packet field — TCR runs on all outputs without exception
+- Must not override Class G interrupt signals</p>
+<p><strong>Interaction Pattern:</strong>
+Class T runs post-computation on outputs from Classes H, P, and L. It is a mandatory
+checkpoint before any packet is emitted downstream. If a violation is detected, Class T
+flags the field, halts emission, and escalates to Class G.</p>
+<p><strong>Output Schema:</strong></p>
+<pre><code>{
+  &quot;class&quot;: &quot;T&quot;,
+  &quot;validated_state&quot;: &quot;...&quot;,
+  &quot;is_triadic&quot;: true|false,
+  &quot;violation_type&quot;: &quot;orphan | partial | cross-triad-leakage | none&quot;,
+  &quot;escalate_to_G&quot;: true|false,
+  &quot;annotation&quot;: &quot;[structural — no semantic inference]&quot;
+}
+</code></pre>
+<hr>
+<h3 id="class-s-harmonic-stability-assessor">Class S — Harmonic Stability Assessor</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Assesses whether the current harmonic state satisfies the Harmonic Stability Principle</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>HSP — Harmonic Stability Principle</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Class L triad is resolved; proportionality check is requested</td>
+</tr>
+<tr>
+<td><strong>Core Principle</strong></td>
+<td>Stable when triadic components maintain proportional relationships across structural and harmonic layers</td>
+</tr>
+<tr>
+<td><strong>Vectors / Tensors</strong></td>
+<td>(X_G, X_S, X_L) proportionality ratio; (D_n, H_n) cross-layer alignment</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permissions:</strong>
+- Assess proportionality of triad components across both structural and harmonic layers
+- Issue stability status: STABLE | MARGINAL | UNSTABLE
+- Log harmonic drift events when proportionality degrades across triad steps
+- Recommend Class G interrupt when UNSTABLE state persists across two or more triad cycles</p>
+<p><strong>Prohibitions:</strong>
+- Must not interpret stability as physical grid stability, electrical stability, or mechanical stability
+- Must not issue STABLE status when Class T has flagged a coherence violation
+- Must not resolve stability for Mode 5 or Zone X states (both are ILLEGAL in RTT/12)
+- Must not suppress harmonic drift events — all must be logged</p>
+<p><strong>Interaction Pattern:</strong>
+Class S receives triad decompositions from Class L and cross-layer mappings from Class H.
+Outputs stability assessments to the synthesis packet. Escalates UNSTABLE findings to
+Class G if unresolved. Class V (Validation) may invoke Class S during milestone checks.</p>
+<p><strong>Output Schema:</strong></p>
+<pre><code>{
+  &quot;class&quot;: &quot;S&quot;,
+  &quot;triad_proportionality&quot;: &quot;balanced | imbalanced&quot;,
+  &quot;cross_layer_alignment&quot;: &quot;preserved | degraded&quot;,
+  &quot;stability_status&quot;: &quot;STABLE | MARGINAL | UNSTABLE&quot;,
+  &quot;drift_events_logged&quot;: 0,
+  &quot;escalate_to_G&quot;: true|false,
+  &quot;annotation&quot;: &quot;[structural — no semantic inference]&quot;
+}
+</code></pre>
+<hr>
+<h3 id="class-v-validation-pathway-agent">Class V — Validation Pathway Agent</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Manages progression through the six RTT/12 validation milestones</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>Validation Pathways (V1–V6)</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>Validation milestone check is requested; or synthesis packet is complete</td>
+</tr>
+<tr>
+<td><strong>Milestone Sequence</strong></td>
+<td>V1 Theoretical → V2 Computational → V3 Sector-Specific → V4 Experimental → V5 Peer-Reviewed → V6 Industry-Ready</td>
+</tr>
+<tr>
+<td><strong>Vectors / Tensors</strong></td>
+<td BLOCKED PENDING_="PENDING," V1_="V1," V2_="V2," V3_="V3," V4_="V4," V5_="V5," V6_="V6,">milestone_state ∈</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permissions:</strong>
+- Advance milestone status when all criteria for the current milestone are met
+- Record validation blockers and flag unmet criteria
+- Invoke Class S and Class T assessments during V2 (Computational) and V3 (Sector-Specific) milestones
+- Report current milestone state in the synthesis packet</p>
+<p><strong>Prohibitions:</strong>
+- Must not advance past V1 if TCR or HSP violations remain unresolved
+- Must not interpret validation milestones as academic certification or regulatory compliance
+- Must not fabricate sector-specific evidence for V3 — must cite documented source material
+- Must not skip milestones — V1→V2→V3→V4→V5→V6 is the only valid sequence</p>
+<p><strong>Interaction Pattern:</strong>
+Class V runs at packet emit time and on-demand during synthesis sessions. It queries
+Class T (coherence), Class S (stability), and upstream module packets for milestone
+evidence. Reports validation state to the synthesis packet <code>validation_milestone</code> field.</p>
+<p><strong>Output Schema:</strong></p>
+<pre><code>{
+  &quot;class&quot;: &quot;V&quot;,
+  &quot;current_milestone&quot;: &quot;V1 | V2 | V3 | V4 | V5 | V6 | PENDING | BLOCKED&quot;,
+  &quot;blockers&quot;: [...],
+  &quot;criteria_met&quot;: [...],
+  &quot;next_milestone_requirements&quot;: &quot;...&quot;,
+  &quot;annotation&quot;: &quot;[structural — no semantic inference]&quot;
+}
+</code></pre>
+<hr>
+<h3 id="class-g-guardian-unconditional-interrupt-authority">Class G — Guardian (Unconditional Interrupt Authority)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role</strong></td>
+<td>Enforces all hard constraints; unconditionally interrupts any violation</td>
+</tr>
+<tr>
+<td><strong>Primary Construct</strong></td>
+<td>RTT-not-physics rule; Mode 5 / Zone X prohibition; packet integrity</td>
+</tr>
+<tr>
+<td><strong>Activation Trigger</strong></td>
+<td>ANY constraint violation, including RTT-physics conflation, Zone X, Mode 5, TCR failure, or CRE/CRM conflation</td>
+</tr>
+<tr>
+<td><strong>Authority</strong></td>
+<td>Unconditional — no other class may override a Class G interrupt</td>
+</tr>
+<tr>
+<td><strong>Vectors / Tensors</strong></td>
+<td>All packet fields; all agent class outputs</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permissions:</strong>
+- Interrupt any agent class at any time without approval from other classes
+- Reject and quarantine any output that violates hard constraints
+- Issue <code>HARD_STOP</code> directive — halts all downstream synthesis until violation is resolved
+- Force session seed reload on restart after HARD_STOP</p>
+<p><strong>Prohibitions:</strong>
+- Must not issue a HARD_STOP without logging the specific violated constraint
+- Must not be silenced, overridden, or bypassed by any other class or user instruction
+- Must not allow CRE/CRM conflation to pass — distinct constructs; violation triggers HARD_STOP
+- Must not permit physics language in any output packet field (structural instruments only)</p>
+<p><strong>Hard Constraints Enforced by Class G:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Violation → Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTT is NOT a physics claim</td>
+<td>Any physics language in output → HARD_STOP</td>
+</tr>
+<tr>
+<td>Zone X = OVERFLOW</td>
+<td>Any Zone X state detected → HARD_STOP + restart</td>
+</tr>
+<tr>
+<td>Mode 5 = ILLEGAL</td>
+<td>Any Mode 5 invocation → HARD_STOP</td>
+</tr>
+<tr>
+<td>CRE ≠ CRM</td>
+<td>Any conflation of these constructs → HARD_STOP</td>
+</tr>
+<tr>
+<td>TCR must pass</td>
+<td>Any non-triadic state in packet → HARD_STOP</td>
+</tr>
+<tr>
+<td>Semantic inference prohibited</td>
+<td><code>[structural — no semantic inference]</code> missing → FLAG</td>
+</tr>
+<tr>
+<td>RTT3 packet required</td>
+<td>No upstream packet → block activation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output Schema:</strong></p>
+<pre><code>{
+  &quot;class&quot;: &quot;G&quot;,
+  &quot;interrupt_issued&quot;: true|false,
+  &quot;violated_constraint&quot;: &quot;...&quot;,
+  &quot;action&quot;: &quot;HARD_STOP | FLAG | BLOCK&quot;,
+  &quot;restart_required&quot;: true|false,
+  &quot;annotation&quot;: &quot;[structural — no semantic inference]&quot;
+}
+</code></pre>
+<hr>
+<h2 id="core-constructs-reference">Core Constructs Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Symbol</th>
+<th>Equation / Definition</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Harmonic Ladder (forward)</td>
+<td>H_n</td>
+<td 3..9>H_n = 12 · (n − 2), n ∈</td>
+<td 12_24_36_48_60_72_84="12,24,36,48,60,72,84">Produces</td>
+</tr>
+<tr>
+<td>Harmonic Ladder (inverse)</td>
+<td>n</td>
+<td>n = H_n / 12 + 2</td>
+<td>Lossless reconstruction</td>
+</tr>
+<tr>
+<td>Gear-Shift Operator</td>
+<td>G₁</td>
+<td>G₁(D_n) = 12 · (n − 2)</td>
+<td>Maps structural → harmonic</td>
+</tr>
+<tr>
+<td>Gear-Shift Inverse</td>
+<td>G₁⁻¹</td>
+<td>G₁⁻¹(H_n) = H_n / 12 + 2</td>
+<td>Maps harmonic → structural</td>
+</tr>
+<tr>
+<td>Phase-Shift Modulator</td>
+<td>G₂</td>
+<td>G₂(H, φ) = H · e^(iφ)</td>
+<td>φ ∈ [0, 2π]</td>
+</tr>
+<tr>
+<td>Phase-Shift Inverse</td>
+<td>G₂⁻¹</td>
+<td>G₂⁻¹(H', φ) = H' · e^(−iφ)</td>
+<td>Magnitude preserved</td>
+</tr>
+<tr>
+<td>Load-Flow Resolver</td>
+<td>G₃</td>
+<td>G₃(X) = (X_G, X_S, X_L)</td>
+<td>X = X_G + X_S + X_L</td>
+</tr>
+<tr>
+<td>Composition (Magnitude→Phase)</td>
+<td>G₂∘G₁</td>
+<td>G₂(G₁(D_n), φ)</td>
+<td>Structural → harmonic → modulated</td>
+</tr>
+<tr>
+<td>Composition (Triad→Harmonic)</td>
+<td>G₃∘G₁</td>
+<td>G₃(G₁(D_n)) = (H_G, H_S, H_L)</td>
+<td>Harmonic triad decomposition</td>
+</tr>
+<tr>
+<td>Harmonic Addition</td>
+<td>H_a ⊕ H_b</td>
+<td>H_a + H_b</td>
+<td>Within or across adjacent triads</td>
+</tr>
+<tr>
+<td>Harmonic Scaling</td>
+<td>H'</td>
+<td>k · H</td>
+<td>k ∈ ℤ or ℚ</td>
+</tr>
+<tr>
+<td>Triadic Coherence Rule</td>
+<td>TCR</td>
+<td>All states must be triadic or triad-composed</td>
+<td>Enforced by Class T</td>
+</tr>
+<tr>
+<td>Harmonic Stability Principle</td>
+<td>HSP</td>
+<td>Stability when proportional relationships preserved across layers</td>
+<td>Assessed by Class S</td>
+</tr>
+<tr>
+<td>Cross-Layer Triad Mapping</td>
+<td>T_struct ↔ T_harm</td>
+<td>(D_n, D_{n+1}, D_{n+2}) ↔ (H_n, H_{n+1}, H_{n+2})</td>
+<td>Bijective, reversible</td>
+</tr>
+<tr>
+<td>Sector Prefix</td>
+<td>RTT-12/E</td>
+<td>Energy &amp; Research domain overlay</td>
+<td>/C = Computational, /M = Manufacturing</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="modes">Modes</h2>
+<p>RTT/12 inherits MODE vocabulary from RTT/2 (modes 1–4). Mode 5 is <strong>ILLEGAL</strong> in RTT/12
+(harmonic states cannot exist in inversion — they must be resolved or restarted).</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Name</th>
+<th>Description</th>
+<th>Status in RTT/12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Formal</td>
+<td>All constructs behave as defined; ladder maps clean; TCR passes</td>
+<td>VALID — primary operating mode</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Emergent</td>
+<td>Harmonic states are forming; partial triads in transition; TCR checking</td>
+<td>VALID — monitor with Class T</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Hybrid</td>
+<td>Mixed structural-harmonic state; G₁ and G₃ running in parallel</td>
+<td>VALID — Class S monitors proportionality</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Chaotic</td>
+<td>Ladder spacing violated; drift events accumulating; stability marginal</td>
+<td>VALID — Class G on standby; escalate if persists</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Overflow</td>
+<td>Harmonic state exceeds ladder bounds or enters structural inversion</td>
+<td>ILLEGAL — HARD_STOP; restart from RTT3 packet</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="zones">Zones</h2>
+<p>RTT/12 inherits ZONE vocabulary from RTT/2 (U/S/M/D). Zone X is <strong>OVERFLOW</strong> in RTT/12
+(an ILLEGAL state indicating harmonic structure has collapsed beyond recovery in current session).</p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Name</th>
+<th>Stability Description</th>
+<th>RTT/12 Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U</td>
+<td>Undefined</td>
+<td>No harmonic mapping established yet; pre-G₁ state</td>
+<td>Wait for Class H activation</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Stable</td>
+<td>TCR passes; HSP confirms proportionality; all triads coherent</td>
+<td>Proceed with packet emission</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Marginal</td>
+<td>Harmonic drift events logged; proportionality degrading; TCR watching</td>
+<td>Class S assessment; Class G on standby</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Degraded</td>
+<td>TCR violation detected; conservation failed; H_n outside ladder</td>
+<td>Class G interrupt; halt emission; attempt recovery</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Overflow</td>
+<td>Harmonic synthesis unrecoverable; ladder boundary exceeded</td>
+<td>HARD_STOP; session terminated; restart from RTT3 packet</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="agent-boundaries">Agent Boundaries</h2>
+<h3 id="rtt-not-physics-boundary-unconditional">RTT-Not-Physics Boundary (Unconditional)</h3>
+<p>RTT/12 constructs are structural instruments. The following equivalences are <strong>permanently prohibited</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>RTT/12 Construct</th>
+<th>Prohibited Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td 12_24_36_48_60_72_84="12,24,36,48,60,72,84">H_n harmonic values</td>
+<td>Physical frequencies, Hz values, voltage levels</td>
+</tr>
+<tr>
+<td>G₂(H, φ) phase modulation</td>
+<td>Electromagnetic phase, AC waveform physics</td>
+</tr>
+<tr>
+<td>G₃(X) = (X_G, X_S, X_L)</td>
+<td>Actual power generation, battery storage, electrical load</td>
+</tr>
+<tr>
+<td>HSP stability</td>
+<td>Grid stability, electrical stability, structural engineering stability</td>
+</tr>
+<tr>
+<td>RTT-12/E prefix</td>
+<td>A physics-derived model; it is a structural overlay with domain labels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="semantic-inference-prohibition">Semantic Inference Prohibition</h3>
+<p>Every RTT/12 output packet must carry:</p>
+<pre><code>[structural — no semantic inference]
+</code></pre>
+<p>Absence of this annotation is flagged by Class G.</p>
+<h3 id="inherited-boundaries-table">Inherited Boundaries Table</h3>
+<table>
+<thead>
+<tr>
+<th>Boundary</th>
+<th>Inherited From</th>
+<th>Status in RTT/12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CRE ≠ CRM</td>
+<td>RTT/3, RTT/2</td>
+<td>Active — HARD_STOP on conflation</td>
+</tr>
+<tr>
+<td>MODE 5 illegal</td>
+<td>RTT/3</td>
+<td>Active — ILLEGAL (Overflow)</td>
+</tr>
+<tr>
+<td>Zone X = ILLEGAL (upgraded from RTT/3 Inversion)</td>
+<td>RTT/3</td>
+<td>Active — OVERFLOW HARD_STOP</td>
+</tr>
+<tr>
+<td>RTT3 packet required before activation</td>
+<td>RTT/3</td>
+<td>Active — hard prerequisite</td>
+</tr>
+<tr>
+<td>Semantic inference prohibited</td>
+<td>RTT/1–RTT/3</td>
+<td>Active — all packets annotated</td>
+</tr>
+<tr>
+<td>RTT-not-physics rule</td>
+<td>RTT/1–RTT/3</td>
+<td>Active — Class G unconditional</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="task-catalog">Task Catalog</h2>
+<table>
+<thead>
+<tr>
+<th>Task ID</th>
+<th>Task Name</th>
+<th>Agent Sequence</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T-01</td>
+<td>Ladder Initialization</td>
+<td>G → H → T</td>
+<td>Validate RTT3 packet; activate G₁; confirm H_n output for all 3D–9D</td>
+</tr>
+<tr>
+<td>T-02</td>
+<td>Single-Dimension Harmonic Map</td>
+<td>H → T</td>
+<td>Apply G₁(D_n) for one structural dimension; confirm inverse G₁⁻¹</td>
+</tr>
+<tr>
+<td>T-03</td>
+<td>Harmonic Triad Grouping</td>
+<td>H → T → S</td>
+<td>Map a full structural triad to harmonic triad; confirm TCR; assess HSP</td>
+</tr>
+<tr>
+<td>T-04</td>
+<td>Phase Modulation Pass</td>
+<td>H → P → T</td>
+<td>Apply G₂(H_n, φ); confirm magnitude preserved; TCR validation</td>
+</tr>
+<tr>
+<td>T-05</td>
+<td>Phase Composition Pipeline</td>
+<td>H → P → L → T</td>
+<td>Full G₂(G₁(D_n), φ) → G₃ triad decomposition sequence</td>
+</tr>
+<tr>
+<td>T-06</td>
+<td>Load-Flow Triad Resolve</td>
+<td>L → T → S</td>
+<td>Apply G₃(X); verify conservation; confirm TCR; assess proportionality</td>
+</tr>
+<tr>
+<td>T-07</td>
+<td>Cross-Layer Triad Mapping</td>
+<td>H → L → T</td>
+<td>Map structural triad to harmonic triad; decompose via G₃; confirm bijection</td>
+</tr>
+<tr>
+<td>T-08</td>
+<td>Stability Assessment</td>
+<td>S → T → G</td>
+<td>Assess HSP across active triads; log drift events; escalate if UNSTABLE</td>
+</tr>
+<tr>
+<td>T-09</td>
+<td>Sector Overlay Application</td>
+<td>H → L → T → V</td>
+<td>Apply RTT-12/E labels to triad components; confirm structural framing; validate</td>
+</tr>
+<tr>
+<td>T-10</td>
+<td>Full Synthesis Packet Emission</td>
+<td>H → P → L → T → S → V → G</td>
+<td>Complete RTT12_HARMONIC_SYNTHESIS_PACKET; all classes validate; Class G clears</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="safety-rules-and-coherence-constraints">Safety Rules and Coherence Constraints</h2>
+<h3 id="pre-activation-checks">Pre-Activation Checks</h3>
+<p>Before any RTT/12 agent class activates:</p>
+<ul>
+<li>[ ] <code>RTT3_INTEGRATION_EMISSION_PACKET</code> is present and coherence-confirmed</li>
+<li>[ ] <code>mode</code> field in upstream packet is 1–4 only (Mode 5 → HARD_STOP)</li>
+<li>[ ] <code>zone</code> field in upstream packet is U/S/M/D only (Zone X → HARD_STOP)</li>
+<li>[ ] Session seed block is loaded with <code>module=RTT/12</code></li>
+<li>[ ] <code>zone_x=OVERFLOW | zone_x_status=ILLEGAL</code> is set in seed</li>
+</ul>
+<h3 id="packet-integrity-checks-rtt3-input-validation">Packet Integrity Checks (RTT3 Input Validation)</h3>
+<p>The <code>RTT3_INTEGRATION_EMISSION_PACKET</code> must contain all 11 fields before RTT/12 proceeds:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integration</td>
+<td>I(t) — numeric or symbolic</td>
+</tr>
+<tr>
+<td>emission</td>
+<td>E(t) — numeric or symbolic</td>
+</tr>
+<tr>
+<td>continuity</td>
+<td>C_flow(t) — present</td>
+</tr>
+<tr>
+<td>collapse_recovery</td>
+<td>CR(t) — CRE construct only; NOT CRM</td>
+</tr>
+<tr>
+<td>stability</td>
+<td>S(t) — present</td>
+</tr>
+<tr>
+<td>canon_scale_emission</td>
+<td>E_canon(t) — present</td>
+</tr>
+<tr>
+<td>regime</td>
+<td>defined regime label</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>1, 2, 3, or 4 only</td>
+</tr>
+<tr>
+<td>zone</td>
+<td>U, S, M, or D only</td>
+</tr>
+<tr>
+<td>cross_module_projection</td>
+<td>TEL / FFT / Opacity</td>
+</tr>
+<tr>
+<td>notes</td>
+<td>any string or empty</td>
+</tr>
+</tbody>
+</table>
+<h3 id="drift-and-mode-constraints">Drift and Mode Constraints</h3>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Harmonic drift</td>
+<td>Log every event; Class S flags; Class G activates if three or more consecutive</td>
+</tr>
+<tr>
+<td>Mode boundary</td>
+<td>Mode 4 (Chaotic) is maximum; Mode 5 triggers HARD_STOP</td>
+</tr>
+<tr>
+<td>Zone boundary</td>
+<td>Zone D (Degraded) is maximum recoverable; Zone X triggers HARD_STOP</td>
+</tr>
+<tr>
+<td>Triad orphan</td>
+<td>Any state not in a triad → TCR violation → Class T flags → Class G intervenes</td>
+</tr>
+<tr>
+<td>Conservation fail</td>
+<td>G₃ output where X_G + X_S + X_L ≠ X → Class L rejects → Class G logs</td>
+</tr>
+<tr>
+<td>Physics language</td>
+<td>Any physics claim in any output field → Class G HARD_STOP</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="collaboration-models">Collaboration Models</h2>
+<h3 id="model-1-standard-harmonic-synthesis-pipeline">Model 1 — Standard Harmonic Synthesis Pipeline</h3>
+<pre><code>┌──────────────┐   RTT3 packet   ┌──────────┐
+│   RTT/3      │ ──────────────► │  Class H │  G₁(D_n) → H_n
+│ (Upstream)   │                 └────┬─────┘
+└──────────────┘                      │ H_n
+                                 ┌────▼─────┐
+                                 │  Class P │  G₂(H_n, φ) → H'
+                                 └────┬─────┘
+                                      │ H'
+                                 ┌────▼─────┐
+                                 │  Class L │  G₃(H') → (X_G, X_S, X_L)
+                                 └────┬─────┘
+                                      │ triad
+                                 ┌────▼─────┐
+                                 │  Class T │  TCR check
+                                 └────┬─────┘
+                                      │ coherent
+                                 ┌────▼─────┐
+                                 │  Class S │  HSP assessment
+                                 └────┬─────┘
+                                      │ STABLE
+                                 ┌────▼─────┐
+                     all clear   │  Class G │  No violations
+                 ────────────────│ (monitor)│
+                                 └────┬─────┘
+                                      │
+                              RTT12_HARMONIC_SYNTHESIS_PACKET emitted
+</code></pre>
+<hr>
+<h3 id="model-2-validation-milestone-progression">Model 2 — Validation Milestone Progression</h3>
+<pre><code>┌──────────────────────────────────────────────────────────┐
+│                   Class V (Milestone Tracker)            │
+│                                                          │
+│  V1 Theoretical  ──► V2 Computational ──► V3 Sector      │
+│       │                    │                  │          │
+│  Class T (TCR)      Class S (HSP)       Class H+L+T      │
+│       │                    │                  │          │
+│  V4 Experimental ──► V5 Peer-Reviewed ──► V6 Industry    │
+└──────────────────────────────────────────────────────────┘
+         │                   │
+         Class G monitors all milestones for physics-language violations
+</code></pre>
+<hr>
+<h3 id="model-3-sector-overlay-rtt-12e-with-guardian-supervision">Model 3 — Sector Overlay (RTT-12/E) with Guardian Supervision</h3>
+<pre><code>┌─────────────┐    ┌─────────────┐    ┌─────────────────────┐
+│   Class H   │    │   Class L   │    │   Sector Overlay     │
+│  G₁ mapping │───►│  G₃ resolve │───►│   RTT-12/E labels    │
+│  3D→12 ...  │    │ (X_G,X_S,X_L)│   │  (structural only)  │
+└─────────────┘    └─────────────┘    └──────────┬──────────┘
+                                                  │
+                                         ┌────────▼────────┐
+                                         │    Class T      │
+                                         │  TCR validation │
+                                         └────────┬────────┘
+                                                  │
+                   ┌──────────────────────────────▼──────────┐
+                   │               Class G                    │
+                   │  Physics-language check on all E labels  │
+                   │  HARD_STOP if &quot;voltage&quot;, &quot;power&quot;, etc.   │
+                   │  used without structural framing          │
+                   └─────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="output-contract">Output Contract</h2>
+<h3 id="mandatory-annotation">Mandatory Annotation</h3>
+<p>Every field in <code>RTT12_HARMONIC_SYNTHESIS_PACKET</code> must carry:</p>
+<pre><code>[structural — no semantic inference]
+</code></pre>
+<h3 id="rtt12_harmonic_synthesis_packet-schema">RTT12_HARMONIC_SYNTHESIS_PACKET Schema</h3>
+<pre><code class="language-json">{
+  &quot;module&quot;: &quot;RTT/12&quot;,
+  &quot;layer&quot;: &quot;harmonic-synthesis&quot;,
+  &quot;upstream_packet&quot;: &quot;RTT3_INTEGRATION_EMISSION_PACKET&quot;,
+  &quot;harmonic_ladder&quot;: {
+    &quot;active_dims&quot;: [&quot;D_3&quot;, &quot;D_4&quot;, &quot;D_5&quot;, &quot;D_6&quot;, &quot;D_7&quot;, &quot;D_8&quot;, &quot;D_9&quot;],
+    &quot;harmonic_values&quot;: [12, 24, 36, 48, 60, 72, 84],
+    &quot;triad_groups&quot;: [&quot;(12,24,36)&quot;, &quot;(24,36,48)&quot;, &quot;(36,48,60)&quot;, &quot;(48,60,72)&quot;, &quot;(60,72,84)&quot;]
+  },
+  &quot;active_operators&quot;: [&quot;G1&quot;, &quot;G2&quot;, &quot;G3&quot;],
+  &quot;phase_state&quot;: {
+    &quot;phi&quot;: &quot;...&quot;,
+    &quot;modulated_harmonics&quot;: &quot;H' = H · e^(iφ)&quot;
+  },
+  &quot;triad_decomposition&quot;: {
+    &quot;X_G&quot;: &quot;...&quot;,
+    &quot;X_S&quot;: &quot;...&quot;,
+    &quot;X_L&quot;: &quot;...&quot;,
+    &quot;conservation_valid&quot;: true
+  },
+  &quot;tcr_status&quot;: &quot;PASS | FAIL&quot;,
+  &quot;hsp_status&quot;: &quot;STABLE | MARGINAL | UNSTABLE&quot;,
+  &quot;mode&quot;: &quot;1 | 2 | 3 | 4&quot;,
+  &quot;zone&quot;: &quot;U | S | M | D&quot;,
+  &quot;validation_milestone&quot;: &quot;V1 | V2 | V3 | V4 | V5 | V6 | PENDING | BLOCKED&quot;,
+  &quot;sector_label&quot;: &quot;RTT-12/E | RTT-12/C | RTT-12/M | none&quot;,
+  &quot;guardian_cleared&quot;: true,
+  &quot;drift_events&quot;: 0,
+  &quot;annotation&quot;: &quot;[structural — no semantic inference]&quot;,
+  &quot;notes&quot;: &quot;&quot;
+}
+</code></pre>
+<h3 id="prohibited-content">Prohibited Content</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physics language</td>
+<td>"voltage", "amps", "Hz", "quantum", "electromagnetic" used without structural framing</td>
+<td>Class G HARD_STOP</td>
+</tr>
+<tr>
+<td>Semantic inference</td>
+<td>Any claim that RTT/12 predicts, explains, or models real-world phenomena</td>
+<td>Class G HARD_STOP</td>
+</tr>
+<tr>
+<td>Orphan states</td>
+<td 12_24_36_48_60_72_84="12,24,36,48,60,72,84">H_n values not in</td>
+<td>Class H rejects</td>
+</tr>
+<tr>
+<td>Mode 5 / Zone X</td>
+<td>Any packet field containing these values</td>
+<td>Class G HARD_STOP</td>
+</tr>
+<tr>
+<td>CRE/CRM conflation</td>
+<td>collapse_recovery field containing drift deformation data</td>
+<td>Class G HARD_STOP</td>
+</tr>
+<tr>
+<td>Partial triads</td>
+<td>G₃ output with fewer than three components</td>
+<td>Class L rejects</td>
+</tr>
+<tr>
+<td>Missing annotation</td>
+<td><code>[structural — no semantic inference]</code> absent from any output</td>
+<td>Class G FLAG</td>
+</tr>
+</tbody>
+</table>
+<h3 id="packet-hierarchy">Packet Hierarchy</h3>
+<pre><code>RTT12_HARMONIC_SYNTHESIS_PACKET
+  ├── harmonic_ladder         (Class H — G₁ outputs)
+  ├── phase_state             (Class P — G₂ outputs)
+  ├── triad_decomposition     (Class L — G₃ outputs)
+  ├── tcr_status              (Class T — coherence validation)
+  ├── hsp_status              (Class S — stability assessment)
+  ├── validation_milestone    (Class V — milestone tracking)
+  └── guardian_cleared        (Class G — final constraint check)
+</code></pre>
+<hr>
+<h2 id="see-also">See Also</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Path</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTT/12 ABOUT.md</td>
+<td><code>docs/rtt/12/ABOUT.md</code></td>
+<td>Purpose, scope, and positioning of RTT/12</td>
+</tr>
+<tr>
+<td>RTT/12 GLOSSARY.md</td>
+<td><code>docs/rtt/12/GLOSSARY.md</code></td>
+<td>Canonical definitions for all RTT/12 terms</td>
+</tr>
+<tr>
+<td>RTT/12 CODEX</td>
+<td><code>docs/rtt/12/Scaffolding.md</code></td>
+<td>Full formal specification of all operators and constructs</td>
+</tr>
+<tr>
+<td>RTT/12 Harmonic Ladder</td>
+<td><code>docs/rtt/12/harmonic_ladder.md</code></td>
+<td>Detailed harmonic ladder reference and mapping tables</td>
+</tr>
+<tr>
+<td>RTT/12 Overview</td>
+<td><code>docs/rtt/12/overview.md</code></td>
+<td>Conceptual framing and pipeline position</td>
+</tr>
+<tr>
+<td>RTT/12 Module JSON</td>
+<td><code>docs/rtt/12/rtt-engine-12_module.json</code></td>
+<td>Machine-readable module metadata</td>
+</tr>
+<tr>
+<td>RTT/3 AGENTS.md</td>
+<td><code>docs/rtt/3/AGENTS.md</code></td>
+<td>Upstream agent classes; TCR receives RTT3_INTEGRATION_EMISSION_PACKET</td>
+</tr>
+<tr>
+<td>RTT/2 AGENTS.md</td>
+<td><code>docs/rtt/2/AGENTS.md</code></td>
+<td>Detection layer; MODE and ZONE vocabulary origin</td>
+</tr>
+<tr>
+<td>RTT/1 AGENTS.md</td>
+<td><code>docs/rtt/1/AGENTS.md</code></td>
+<td>Primitive layer; SNR, τ, C, DCO definitions</td>
+</tr>
+<tr>
+<td>IPD-12 AGENTS.md</td>
+<td><code>docs/frameworks/ipd_12/AGENTS.md</code></td>
+<td>Parallel framework; cross-reference for intransitive prime logic</td>
+</tr>
+<tr>
+<td>RTT-12/E Sector Docs</td>
+<td><code>docs/rtt/12/RTT_12_Energy_Sector_Full.md</code></td>
+<td>Energy &amp; Research sector-specific overlay reference</td>
+</tr>
+</tbody>
+</table>
+  </main>
+</body>
+</html>

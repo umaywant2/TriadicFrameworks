@@ -1,0 +1,73 @@
+{
+  "module": "Quantum Substrate Model",
+  "version": "1.0",
+  "category": "substrate-layer",
+  "summary": "Structural, architecture‑agnostic substrate defining regime structure, dimensional organization, operator dynamics, assumptions, limitations, and validation checks. Extends the Boson Substrate Model while preserving substrate neutrality.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "figures/qsm_structural_overview.svg",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "metadata/README.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "paper/abstract.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "paper/introduction.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "paper/substrate_definition.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "paper/regime_structure.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "paper/operator_dynamics.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "paper/scope_and_assumptions.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "paper/limitations.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "paper/discussion.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "paper/validation_checks.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    }
+  ]
+}

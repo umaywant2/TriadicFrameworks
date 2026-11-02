@@ -1,0 +1,29 @@
+```xml
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#fefefe"/>
+
+  <!-- Title -->
+  <text x="450" y="40" font-size="24" text-anchor="middle" fill="#222">entft Glyph Transfer Map</text>
+
+  <!-- Transfer Nodes -->
+  <g>
+    <!-- Wildflower Transfer -->
+    <circle cx="200" cy="150" r="30" fill="#d0ffd0" stroke="#333" stroke-width="2"/>
+    <text x="200" y="155" font-size="14" text-anchor="middle" fill="#000">🌼</text>
+    <text x="200" y="180" font-size="12" text-anchor="middle" fill="#555">Mira → Aria</text>
+
+    <!-- Cascade Transfer -->
+    <circle cx="450" cy="150" r="30" fill="#cceccf" stroke="#333" stroke-width="2"/>
+    <text x="450" y="155" font-size="14" text-anchor="middle" fill="#000">🍂</text>
+    <text x="450" y="180" font-size="12" text-anchor="middle" fill="#555">Nawder → Mira</text>
+
+    <!-- Bloomfall Custody -->
+    <circle cx="700" cy="150" r="30" fill="#f9f9a0" stroke="#333" stroke-width="2"/>
+    <text x="700" y="155" font-size="14" text-anchor="middle" fill="#000">🍁</text>
+    <text x="700" y="180" font-size="12" text-anchor="middle" fill="#555">→ Curriculum Guild</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="450" y="550" font-size="14" text-anchor="middle" fill="#555">Glyphs migrate. Scrolls echo. Stewardship is sealed in flame.</text>
+</svg>

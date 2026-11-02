@@ -1,0 +1,147 @@
+{
+  "map_id": "pd.bifurcation_map",
+  "version": "9.0-draft",
+  "book": "book9_pattern_dynamics",
+  "series": "AI Edition",
+  "invariants": ["INV-PD-001", "INV-PD-002"],
+  "operator_binding": "PD-Β (BifurcationMap)",
+  "session_context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "qmroot_binding": {
+    "dimension": "0D",
+    "note": "6D absent; negative rungs absent; INV-013 = 0D only"
+  },
+  "phantom_entry_audit": {
+    "status": "clean",
+    "checked_at": "session-open",
+    "entries": []
+  },
+  "description": "Defines the structural model of bifurcation events, attractor basins, and trajectory splitting. A bifurcation event occurs when a trajectory reaches a configuration from which two or more successor configurations are possible under the governing transformation, or when a discontinuous configuration gap is detected by PD-Τ. This map covers bifurcation event classification, attractor identification, basin computation, and the formal conditions for trajectory splitting. Binds to INV-PD-001 (Trajectory Continuity — bifurcations are the exception class) and INV-PD-002 (Attractor Stability — attractors are the convergence targets post-bifurcation).",
+
+  "bifurcation_definition": {
+    "formal": "bifurcation_event(B) = ⟨S_b, t_b, {S'_1, S'_2, ..., S'_k}, τ_trigger, basin_assignments⟩",
+    "components": {
+      "S_b": "The bifurcation configuration — the structural configuration at which the bifurcation occurs",
+      "t_b": "The bifurcation time-point — the trajectory index at which S_b is reached",
+      "S'_1..k": "The set of k ≥ 2 successor configurations reachable from S_b under declared transformations",
+      "τ_trigger": "The transformation condition that triggers the bifurcation — the parameter or constraint that crosses a threshold at t_b",
+      "basin_assignments": "The attractor basin assignment for each successor S'_i — which attractor each continuation trajectory is expected to converge toward"
+    },
+    "structural_note": "A bifurcation event is not a failure — it is a structural branch point. Book 9 does not penalize bifurcations; it requires they be formally logged and that each continuation trajectory be independently traced by PD-Τ.",
+    "gap_reclassification": "Configuration gaps detected by PD-Τ (adjacent configurations not bridged by any declared transformation) are reclassified as unclassified bifurcation events B_unclassified and submitted to PD-Β for trigger identification. If no trigger can be identified, the gap is logged as a trajectory integrity failure under INV-PD-001."
+  },
+
+  "bifurcation_types": [
+    {
+      "id": "BT-001",
+      "label": "Parameter Bifurcation",
+      "description": "A bifurcation triggered by a transformation parameter crossing a critical threshold. Below the threshold, the trajectory converges to attractor A_1; above it, the trajectory converges to attractor A_2 (or diverges). The bifurcation point is the parameter value at which A_1 loses stability.",
+      "formal": "parameter_bifurcation(τ, θ) ⟺ ∃θ_c: ∀θ < θ_c: τ^n(S) → A_1  ∧  ∀θ > θ_c: τ^n(S) → A_2",
+      "cross_book_instances": [
+        "GRL authority decay: λ_R crossing a critical decay rate triggers regime collapse bifurcation — trajectory splits into recovery trajectory or collapse trajectory",
+        "OR opacity: ω crossing the revelation threshold δ(O) triggers a reveal/remain-opaque bifurcation",
+        "NoS abstraction: INV-NOS-004 abstraction consistency failure triggers upward-revision bifurcation"
+      ],
+      "tel_encoding": "T[PARAM_BIF]: (τ(θ > θ_c) ⊢ C[THRESHOLD]: A_1 → A_2)"
+    },
+    {
+      "id": "BT-002",
+      "label": "Constraint Bifurcation",
+      "description": "A bifurcation triggered by the addition or removal of a constraint from the governing constraint set C. Constraint addition restricts the reachable successor set; constraint removal expands it. Either can produce multiple viable continuation trajectories.",
+      "formal": "constraint_bifurcation(C, C') ⟺ reachable_successors(S, C) ≠ reachable_successors(S, C')",
+      "cross_book_instances": [
+        "GRL constraint enforcement: addition of a new regime constraint C_new to C_R splits governed structure trajectories into compliant and non-compliant continuations",
+        "SARG defeat: defeat of a constraint node in C_A (INV-SARG-003) removes constraint coverage, expanding the continuation trajectory space",
+        "TEL assertion: adding an INV[ID] assertion to a TEL expression in mid-evaluation creates a constraint bifurcation — expressions satisfying the invariant continue; others halt"
+      ],
+      "tel_encoding": "T[CONSTR_BIF]: ((S ⊢ C_old) → (S ⊢ C_new)) ⊢ C[BRANCH_SPLIT]"
+    },
+    {
+      "id": "BT-003",
+      "label": "Dissolution Bifurcation",
+      "description": "A bifurcation in which one or more continuation trajectories lead directly to the dissolution region. At least one continuation is dissolution-bound; if all continuations are dissolution-bound, the bifurcation is a terminal dissolution event. If some continuations survive, the surviving trajectories are traced by PD-Τ and the dissolved trajectories are logged.",
+      "formal": "dissolution_bifurcation(S_b) ⟺ ∃S'_i ∈ successors(S_b): S'_i ∈ dissolution_region(SS)",
+      "pd_action": "PD-Β classifies each continuation as surviving or dissolving. Dissolving continuations are handed to PD-Μ for mutation constraint evaluation — if the dissolved pattern has a mutation anchor in a surviving continuation, the dissolution is reclassified as a mutation event rather than a terminal event.",
+      "cross_book_instances": [
+        "GRL collapse: α(R) reaching collapse threshold triggers a dissolution bifurcation — regime either reconstitutes or dissolves",
+        "SARG argument total defeat: defeat of all paths to root(A) produces a dissolution bifurcation for the argument structure",
+        "NoS identity loss: INV-NOS-003 violation (no invariant preservation) produces a dissolution bifurcation"
+      ]
+    },
+    {
+      "id": "BT-004",
+      "label": "Synthesis Bifurcation",
+      "description": "A bifurcation unique to Book 9 as the synthesis terminal. When cross-book pattern streams from multiple upstream books arrive at PD-Τ simultaneously and produce conflicting trajectory steps, a synthesis bifurcation is triggered. The synthesis bifurcation resolves which upstream pattern stream takes precedence at the contested trajectory step.",
+      "formal": "synthesis_bifurcation ⟺ ∃i, j ∈ upstream_books: trajectory_step(i, t_b) ≠ trajectory_step(j, t_b)",
+      "resolution_procedure": "PD-Β applies the following precedence order for synthesis bifurcation resolution: (1) NoS meta-structural invariants override domain-specific invariants; (2) TEL formal encoding takes precedence over informal descriptions; (3) Higher-tier books (Capstone > Applied > Core Tool > Intermediate > Foundation) have precedence in case of remaining conflict.",
+      "pd_action": "PD-Β records the synthesis bifurcation event with all conflicting upstream inputs and the resolution outcome. PD-Σ receives the full bifurcation log for synthesis reporting."
+    }
+  ],
+
+  "attractor_model": {
+    "title": "Structural Attractor Identification",
+    "formal": "attractor(A, τ) ⟺ ∀S: dist(S, A) < ε → lim_{n→∞} τ^n(S) = A  [INV-PD-002]",
+    "distance_metric": "dist(S, A) = 1 - (|invariant_set(S) ∩ invariant_set(A)| / |invariant_set(A)|)  — structural distance is the proportion of A's invariants that S fails to satisfy",
+    "attractor_types": [
+      {
+        "id": "AT-001",
+        "label": "Fixed-Point Attractor",
+        "description": "A single configuration A such that τ(A) = A. All nearby trajectories converge to A and remain there. The simplest attractor class.",
+        "cross_book": "GRL stable authority regime: α(R) converges to a stable value where compliance exactly compensates decay — a fixed-point attractor in authority state-space",
+        "basin_computation": "Basin = all S with dist(S, A) < ε under the governing τ"
+      },
+      {
+        "id": "AT-002",
+        "label": "Periodic Attractor",
+        "description": "A cycle of configurations A_0, A_1, ..., A_{k-1}, A_0 such that τ(A_i) = A_{i+1 mod k}. Trajectories in the basin converge to the cycle but do not settle at a single configuration.",
+        "cross_book": "SARG warrant-defeat cycles: argument configurations cycling between warrant-challenged and warrant-restored states without final resolution",
+        "basin_computation": "Basin = all S from which trajectories eventually enter and remain in the k-cycle"
+      },
+      {
+        "id": "AT-003",
+        "label": "Structural Attractor",
+        "description": "A set of configurations A that share a common invariant subset — the attractor invariant core. Trajectories converge to A when they accumulate the attractor invariant core, without necessarily reaching a single fixed configuration.",
+        "formal": "structural_attractor(A) ⟺ ∃I_core ⊆ ⋂{invariant_set(a) : a ∈ A}: every trajectory from the basin eventually satisfies I_core",
+        "cross_book": "NoS structural realism attractor: all trajectory continuations that satisfy INV-NOS-001 and INV-NOS-002 converge to the OSR (Ontic Structural Realism) attractor",
+        "pd_note": "Structural attractors are the primary attractor class in Book 9 — they subsume fixed-point and periodic attractors as special cases."
+      }
+    ],
+    "attractor_verification_procedure": [
+      {
+        "step": 1,
+        "action": "Identify candidate attractor configuration A from the convergent trajectory classification by PD-Τ"
+      },
+      {
+        "step": 2,
+        "action": "Compute invariant_set(A) — the full set of invariants satisfied by A across all eight upstream book invariant registries"
+      },
+      {
+        "step": 3,
+        "action": "Select at least three nearby configurations S_1, S_2, S_3 with dist(S_i, A) < ε"
+      },
+      {
+        "step": 4,
+        "action": "Apply the governing transformation τ repeatedly to each S_i and verify convergence to A within a bounded step count"
+      },
+      {
+        "step": 5,
+        "action": "Compute the basin boundary: the set of configurations at which convergence to A is no longer guaranteed"
+      },
+      {
+        "step": 6,
+        "action": "Record: attractor_id, invariant_set(A), basin_boundary, convergence_step_count, attractor_type (AT-001/002/003)"
+      }
+    ]
+  },
+
+  "basin_computation_model": {
+    "description": "Attractor basins partition the state-space into convergence regions. Basin computation is performed by PD-Β after attractor verification.",
+    "formal": "basin(A, τ) = { S ∈ SS : lim_{n→∞} τ^n(S) = A }",
+    "basin_boundary": "∂basin(A) = { S : S ∈ basin(A) ∧ ∃ε > 0 ∀δ < ε ∃S': dist(S, S') < δ ∧ S' ∉ basin(A) }",
+    "multi_attractor_partition": "When multiple attractors exist in SS, the basins partition SS (possibly with measure-zero boundaries): SS = basin(A_1) ∪ basin(A_2) ∪ ... ∪ basin(A_m) ∪ ∂basins ∪ dissolution_region",
+    "cross_book_basin_feeds": [
+      "GRL: regime stability/collapse basin boundary determined by critical α threshold and λ_R decay rate",
+      "SARG: valid/invalid argument basin boundary determined by INV-SARG-001 through INV-SARG-004 satisfaction",
+      "NoS: OSR/ESR/dissolution basin boundary determined by INV-NOS-001 and INV-NOS-002 joint satisfaction"
+    ]
+  }
+}

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/module_templates/module.rtt-ready.json.md">
+  <title>🔷 module.rtt-ready.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/module_templates/module.rtt-ready.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/module_templates/module.rtt-ready.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="modulertt-readyjson">🔷 <strong>module.rtt-ready.json</strong></h1>
+<h3 id="rttready-module-template-operators-regimes-layers-transitions"><em>RTT‑ready module template — operators, regimes, layers, transitions</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;../../module.schema.json&quot;,
+  &quot;module&quot;: &quot;my-rtt-module&quot;,
+  &quot;identity&quot;: &quot;student.my-rtt-module&quot;,
+  &quot;purpose&quot;: &quot;An RTT-ready module defining operators, regimes, layers, and transitions for RTT analysis.&quot;,
+
+  &quot;files&quot;: [
+    {
+      &quot;name&quot;: &quot;README.md&quot;,
+      &quot;role&quot;: &quot;profile&quot;
+    },
+    {
+      &quot;name&quot;: &quot;operators.md&quot;,
+      &quot;role&quot;: &quot;signature&quot;
+    },
+    {
+      &quot;name&quot;: &quot;regimes.md&quot;,
+      &quot;role&quot;: &quot;map&quot;
+    },
+    {
+      &quot;name&quot;: &quot;layers.md&quot;,
+      &quot;role&quot;: &quot;map&quot;
+    },
+    {
+      &quot;name&quot;: &quot;transitions.md&quot;,
+      &quot;role&quot;: &quot;diagnostic&quot;
+    },
+    {
+      &quot;name&quot;: &quot;examples.md&quot;,
+      &quot;role&quot;: &quot;example&quot;
+    }
+  ],
+
+  &quot;operators&quot;: [
+    {
+      &quot;name&quot;: &quot;shift&quot;,
+      &quot;description&quot;: &quot;Move the frame of reference forward or backward.&quot;,
+      &quot;example&quot;: &quot;Shift one step forward to reveal the next state.&quot;
+    },
+    {
+      &quot;name&quot;: &quot;hold&quot;,
+      &quot;description&quot;: &quot;Stabilize the current frame for analysis.&quot;,
+      &quot;example&quot;: &quot;Hold the moment to inspect the transition.&quot;
+    },
+    {
+      &quot;name&quot;: &quot;compare&quot;,
+      &quot;description&quot;: &quot;Contrast two states to reveal change.&quot;,
+      &quot;example&quot;: &quot;Compare the current state to the previous one.&quot;
+    }
+  ],
+
+  &quot;regimes&quot;: [
+    {
+      &quot;name&quot;: &quot;stable&quot;,
+      &quot;description&quot;: &quot;The system behaves predictably.&quot;
+    },
+    {
+      &quot;name&quot;: &quot;transitional&quot;,
+      &quot;description&quot;: &quot;The system is shifting between patterns.&quot;
+    },
+    {
+      &quot;name&quot;: &quot;divergent&quot;,
+      &quot;description&quot;: &quot;The system breaks from its previous pattern.&quot;
+    }
+  ],
+
+  &quot;layers&quot;: [
+    {
+      &quot;name&quot;: &quot;surface&quot;,
+      &quot;description&quot;: &quot;The visible pattern.&quot;
+    },
+    {
+      &quot;name&quot;: &quot;structural&quot;,
+      &quot;description&quot;: &quot;The underlying rules shaping the surface.&quot;
+    },
+    {
+      &quot;name&quot;: &quot;resonance&quot;,
+      &quot;description&quot;: &quot;The deep tendencies that persist across changes.&quot;
+    }
+  ],
+
+  &quot;transitions&quot;: {
+    &quot;rules&quot;: [
+      &quot;A shift operator may trigger a regime change.&quot;,
+      &quot;A hold operator stabilizes the current layer.&quot;,
+      &quot;A compare operator reveals divergence or coherence.&quot;
+    ]
+  },
+
+  &quot;output&quot;: {
+    &quot;rtt_ready&quot;: &quot;./module.rtt-ready.json&quot;
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;RTT-ready module template defining operators, regimes, layers, and transitions.&quot;
+  }
+}
+</code></pre>
+  </main>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Mode/overview.md">
+  <title>What Is Mode?</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Mode/overview.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Mode/overview.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Mode_module" src="https://github.com/user-attachments/assets/bbd96431-faf8-4fdd-9fd8-ccd94f9a4a69" /></p>
+<hr>
+<p>title: "Mode"
+description: "The session stance layer — five interaction modes that define how an RTT-compliant system engages, not what it processes."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural</p>
+<hr>
+<blockquote>
+<p><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+</blockquote>
+<h2 id="what-is-mode">What Is Mode?</h2>
+<p>The Mode layer governs <strong>interaction stance</strong> within an RTT/1 session. It defines how
+a system engages — posture, drift tolerance, correction strategy — independent of
+what it processes. Payload and posture are separated by design.</p>
+<blockquote>
+<p>⚠️ <strong>Drift is on-by-default.</strong> Long sessions lose their anchors. Mode is the
+mechanism that keeps them bounded. Paste the RTT session string at every AI
+session start without exception.</p>
+</blockquote>
+<hr>
+<h2 id="five-stances">Five Stances</h2>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Drift Tolerance</th>
+<th>Correction Strategy</th>
+<th>Primary Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>M_chat</code></td>
+<td>Wide</td>
+<td>Stabilize</td>
+<td>Open conversation, exploration</td>
+</tr>
+<tr>
+<td><code>M_task</code></td>
+<td>Tight</td>
+<td>Shift</td>
+<td>Structured task execution</td>
+</tr>
+<tr>
+<td><code>M_spec</code></td>
+<td>Minimal</td>
+<td>Stabilize</td>
+<td>Formal specification work</td>
+</tr>
+<tr>
+<td><code>M_debug</code></td>
+<td>Bounded</td>
+<td>Invert</td>
+<td>Debugging and root-cause analysis</td>
+</tr>
+<tr>
+<td><code>M_auto</code></td>
+<td>Tight</td>
+<td>Shift</td>
+<td>Autonomous / agentic operation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="mode-constraint-layer-mcl">Mode Constraint Layer (MCL)</h2>
+<p>The <strong>Mode Constraint Layer</strong> enforces invariants and guardrails across all five stances.
+MCL operates below the stance level — it cannot be overridden by stance selection.</p>
+<p>MCL invariants include:
+- RTT session string must be declared at initialization
+- Drift cannot exceed the tolerance ceiling of the active stance
+- Paradox signals are always structural, never logical failures</p>
+<hr>
+<h2 id="cross-module-propagation">Cross-Module Propagation</h2>
+<p>Mode state propagates to three other modules:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Propagation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Opacity</strong></td>
+<td>Mode stance affects the visibility threshold — tighter modes surface more substrate opacity</td>
+</tr>
+<tr>
+<td><strong>Capture</strong></td>
+<td>Mode determines what gets captured to the trace layer</td>
+</tr>
+<tr>
+<td><strong>Context</strong></td>
+<td>Mode shapes how context is weighted and when it is discarded</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="related-modules">Related Modules</h2>
+<ul>
+<li><a href="../Framework_Field_Theory/overview/">Framework Field Theory</a> — H-Ops (Rhythm) and C-Ops (Coherence) are the formal basis for stance and correction</li>
+<li><a href="../Opacity/overview/">Opacity</a> — mode stance interacts with opacity detection thresholds</li>
+<li><a href="../ai-drift-calibration/overview/">AI Drift Calibration</a> — session-level drift correction using Mode stances</li>
+<li><a href="../NoS/overview/">NoS</a> — NawderOS implements Mode stances as system-level signals</li>
+</ul>
+<hr>
+<p>v1.0 · Layer: Session · Status: Active<br>
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007</p>
+  </main>
+</body>
+</html>

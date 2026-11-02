@@ -1,0 +1,50 @@
+{
+  "id": "fft.ai.runtime",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Runtime Configuration v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "runtime_flags": {
+    "coherence_mode": "declared",
+    "drift_mode": "bounded",
+    "paradox_mode": "structural",
+    "snr_monitor": true,
+    "set_coupling": true,
+    "dco_active": [
+      "4D",
+      "5D",
+      "7D",
+      "8D",
+      "9D"
+    ],
+    "qmroot_trace": true,
+    "spine_live": true,
+    "ep_loading": true,
+    "registry_validate": true,
+    "max_drift_delta": 0.35,
+    "resonance_target": {
+      "min": 0.7,
+      "max": 0.95
+    },
+    "silence_floor": 0.05,
+    "noise_ceiling": 0.8,
+    "log_level": "verbose",
+    "session_checkpoint": "on_state_change"
+  },
+  "v133_flags_new": [
+    "snr_monitor",
+    "set_coupling",
+    "dco_active",
+    "qmroot_trace",
+    "spine_live",
+    "max_drift_delta",
+    "resonance_target",
+    "silence_floor",
+    "noise_ceiling"
+  ]
+}

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/thermodynamics/operators.md">
+  <title>Operators — Thermodynamics</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/thermodynamics/operators.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/thermodynamics/operators.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="operators-thermodynamics">Operators — Thermodynamics</h1>
+<h3 id="triadicframeworks-docstheoriesthermodynamicsoperatorsmd">TriadicFrameworks /docs/theories/thermodynamics/operators.md</h3>
+<p>Thermodynamics is a <strong>constraint‑first substrate grammar</strong>. Its operators
+do not act on particles or waves — they act on <strong>state variables,
+constraints, gradients, and potentials</strong>. Temperature is a substrate
+force, entropy is a regime boundary, free energy is a coherence
+operator, and flows are gradient responses.</p>
+<p>This file defines the canonical operators of Thermodynamics.</p>
+<hr>
+<h1 id="1-temperature_operator">1. temperature_operator</h1>
+<h3 id="substrate-force">(Substrate force)</h3>
+<p><strong>Signal:</strong> T  </p>
+<p><strong>Purpose:</strong><br>
+Defines the intensity of thermal interaction. Acts as a <strong>driving
+potential</strong> for flows.</p>
+<p><strong>Notes:</strong><br>
+- not molecular agitation<br>
+- not average kinetic energy<br>
+- a <strong>substrate force</strong> in the constraint grammar  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT interpret T as a microscopic property.</p>
+<hr>
+<h1 id="2-entropy_operator">2. entropy_operator</h1>
+<h3 id="regime-boundary-operator">(Regime boundary operator)</h3>
+<p><strong>Signal:</strong> S  </p>
+<p><strong>Purpose:</strong><br>
+Defines allowable configurations. Sets <strong>regime boundaries</strong> for
+processes.</p>
+<p><strong>Notes:</strong><br>
+- monotonic under allowed transformations<br>
+- dual to information entropy<br>
+- defines directionality  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT interpret S as disorder.</p>
+<hr>
+<h1 id="3-free_energy_operator">3. free_energy_operator</h1>
+<h3 id="coherence-operator">(Coherence operator)</h3>
+<p><strong>Signal:</strong> F, G, Ω (depending on ensemble)</p>
+<p><strong>Purpose:</strong><br>
+Defines coherence and directionality of processes. Determines equilibrium
+via minimization.</p>
+<p><strong>Notes:</strong><br>
+- generator of spontaneous change<br>
+- convex potential<br>
+- ensemble‑dependent  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat free energy as “usable energy.”</p>
+<hr>
+<h1 id="4-equilibrium_operator">4. equilibrium_operator</h1>
+<h3 id="fixedpoint-operator">(Fixed‑point operator)</h3>
+<p><strong>Signal:</strong> E*  </p>
+<p><strong>Purpose:</strong><br>
+Defines fixed‑point structures where gradients vanish and potentials are
+extremized.</p>
+<p><strong>Notes:</strong><br>
+- not stasis<br>
+- not absence of motion<br>
+- a <strong>constraint‑satisfied configuration</strong>  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT interpret equilibrium as “nothing happening.”</p>
+<hr>
+<h1 id="5-gradient_operator">5. gradient_operator</h1>
+<h3 id="flow-generator">(Flow generator)</h3>
+<p><strong>Signal:</strong> ∇  </p>
+<p><strong>Purpose:</strong><br>
+Generates flows from potentials. Defines direction and magnitude of
+thermodynamic processes.</p>
+<p><strong>Notes:</strong><br>
+- flows follow gradients<br>
+- gradients define irreversibility<br>
+- dual to free energy  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat gradients as forces.</p>
+<hr>
+<h1 id="6-heat_flow_operator">6. heat_flow_operator</h1>
+<h3 id="constraintdriven-flow">(Constraint‑driven flow)</h3>
+<p><strong>Signal:</strong> Q̇  </p>
+<p><strong>Purpose:</strong><br>
+Represents flow induced by temperature gradients.</p>
+<p><strong>Notes:</strong><br>
+- not a substance<br>
+- not a fluid<br>
+- a <strong>constraint‑driven transfer</strong>  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat heat as a material.</p>
+<hr>
+<h1 id="7-work_operator">7. work_operator</h1>
+<h3 id="constraint-deformation-operator">(Constraint deformation operator)</h3>
+<p><strong>Signal:</strong> Ẇ  </p>
+<p><strong>Purpose:</strong><br>
+Represents changes due to deformation of constraints (volume, pressure,
+fields).</p>
+<p><strong>Notes:</strong><br>
+- geometric<br>
+- boundary‑dependent<br>
+- couples to free energy  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat work as force × distance in a mechanical sense.</p>
+<hr>
+<h1 id="8-ensemble_operator">8. ensemble_operator</h1>
+<h3 id="macrostate-selector">(Macro‑state selector)</h3>
+<p><strong>Signal:</strong> 𝓔 = {canonical, grand canonical, microcanonical}</p>
+<p><strong>Purpose:</strong><br>
+Defines which constraints are held fixed and which potentials apply.</p>
+<p><strong>Notes:</strong><br>
+- determines free energy form<br>
+- determines allowed fluctuations  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat ensembles as physical containers.</p>
+<hr>
+<h1 id="9-partition_function_operator">9. partition_function_operator</h1>
+<h3 id="statistical-extension-operator">(Statistical extension operator)</h3>
+<p><strong>Signal:</strong> Z  </p>
+<p><strong>Purpose:</strong><br>
+Connects Thermodynamics to Statistical Mechanics. Generates all
+thermodynamic quantities via derivatives.</p>
+<p><strong>Notes:</strong><br>
+- R2 operator (emerges in Statistical Mechanics)<br>
+- not required in R1  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat Z as counting physical objects.</p>
+<hr>
+<h1 id="10-irreversibility_operator">10. irreversibility_operator</h1>
+<h3 id="arrowoftime-operator">(Arrow‑of‑time operator)</h3>
+<p><strong>Signal:</strong> 𝓘 ≥ 0  </p>
+<p><strong>Purpose:</strong><br>
+Encodes monotonicity of entropy and directionality of flows.</p>
+<p><strong>Notes:</strong><br>
+- zero only at equilibrium<br>
+- defines thermodynamic arrow of time  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT interpret irreversibility as friction.</p>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>Thermodynamics operators define:</p>
+<ul>
+<li><strong>temperature</strong> as a substrate force  </li>
+<li><strong>entropy</strong> as a regime boundary  </li>
+<li><strong>free energy</strong> as a coherence operator  </li>
+<li><strong>equilibrium</strong> as a fixed‑point structure  </li>
+<li><strong>flows</strong> as gradient responses  </li>
+<li><strong>irreversibility</strong> as monotonic structure  </li>
+</ul>
+<p>Thermodynamics is the <strong>constraint substrate</strong> from which Statistical
+Mechanics emerges and into which QFT and Cosmology embed their
+large‑scale behavior.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "layers": [
+    {
+      "band": "RF",
+      "quadrature_map": "rf_quadrature.npy",
+      "phase_bins": "rf_phase_bins.npy",
+      "color_palette": "rf_overlay"
+    },
+    {
+      "band": "visible",
+      "phase_map": "visible_phase.npy",
+      "color_palette": "visible_overlay"
+    }
+  ],
+  "glyphs": "Glyph_Set_SpectralClarity.json",
+  "legend": {
+    "lock_in": "phase-sensitive detection",
+    "corridors": "stability ranges"
+  }
+}

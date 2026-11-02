@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/epoch/epochal-stability-profiles.json.md">
+  <title>🌒 epochal-stability-profiles.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/epoch/epochal-stability-profiles.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/epoch/epochal-stability-profiles.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="epochal-stability-profilesjson">🌒 <strong>epochal-stability-profiles.json</strong></h1>
+<h3 id="canonical-stability-profiles-for-epochs-e0e7"><em>Canonical stability profiles for epochs E0–E7</em></h3>
+<pre><code class="language-json">{
+  &quot;profiles&quot;: &quot;epochal-stability&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;imports&quot;: {
+    &quot;stability_envelope&quot;: &quot;../stability/planetary-stability-envelope.json&quot;,
+    &quot;coherence_map&quot;: &quot;../coherence/global-coherence-map.json&quot;,
+    &quot;resonance_map&quot;: &quot;../resonance/global-resonance-map.json&quot;,
+    &quot;drift_map&quot;: &quot;../drift/global-drift-boundary-map.json&quot;,
+    &quot;epochal_timeline&quot;: &quot;./timeline.json&quot;,
+    &quot;epochal_propagation&quot;: &quot;./epochal-propagation.json&quot;
+  },
+
+  &quot;epochal_stability_profiles&quot;: {
+    &quot;E0&quot;: {
+      &quot;description&quot;: &quot;Baseline epoch with minimal harmonic activity and low drift velocity.&quot;,
+      &quot;stability_mode&quot;: &quot;baseline&quot;,
+      &quot;conditions&quot;: [
+        &quot;stability_index &gt;= stability_min&quot;,
+        &quot;drift_magnitude &lt;= drift_boundary&quot;,
+        &quot;coherence_envelope &gt;= coherence_min&quot;
+      ],
+      &quot;collapse_signals&quot;: [
+        &quot;drift_spike&quot;,
+        &quot;coherence_break&quot;
+      ],
+      &quot;regeneration_arcs&quot;: [
+        &quot;coherence_rebuild&quot;,
+        &quot;harmonic_realignment&quot;
+      ]
+    },
+
+    &quot;E1&quot;: {
+      &quot;description&quot;: &quot;Early harmonic epoch with rising resonance magnitude.&quot;,
+      &quot;stability_mode&quot;: &quot;harmonic-rise&quot;,
+      &quot;conditions&quot;: [
+        &quot;resonance_magnitude &lt;= harmonic_threshold&quot;,
+        &quot;phase in allowed_window&quot;,
+        &quot;stability_index &gt;= stability_min&quot;
+      ],
+      &quot;collapse_signals&quot;: [
+        &quot;resonance_surge&quot;,
+        &quot;phase_inversion&quot;
+      ],
+      &quot;regeneration_arcs&quot;: [
+        &quot;harmonic_dampening&quot;,
+        &quot;phase_correction&quot;
+      ]
+    },
+
+    &quot;E2&quot;: {
+      &quot;description&quot;: &quot;Epoch of drift–coherence tension with moderate instability risk.&quot;,
+      &quot;stability_mode&quot;: &quot;tension&quot;,
+      &quot;conditions&quot;: [
+        &quot;drift_magnitude &lt;= drift_boundary&quot;,
+        &quot;coherence_envelope &gt;= coherence_min&quot;,
+        &quot;stability_index &gt;= stability_min&quot;
+      ],
+      &quot;collapse_signals&quot;: [
+        &quot;drift_boundary_break&quot;,
+        &quot;coherence_break&quot;
+      ],
+      &quot;regeneration_arcs&quot;: [
+        &quot;coherence_rebuild&quot;,
+        &quot;drift_realignment&quot;
+      ]
+    },
+
+    &quot;E3&quot;: {
+      &quot;description&quot;: &quot;High‑resonance epoch with strong harmonic propagation.&quot;,
+      &quot;stability_mode&quot;: &quot;harmonic-peak&quot;,
+      &quot;conditions&quot;: [
+        &quot;resonance_phase in harmonic_window&quot;,
+        &quot;harmonic_profile_valid&quot;,
+        &quot;stability_index &gt;= stability_min&quot;
+      ],
+      &quot;collapse_signals&quot;: [
+        &quot;harmonic_misalignment&quot;,
+        &quot;resonance_collapse&quot;
+      ],
+      &quot;regeneration_arcs&quot;: [
+        &quot;harmonic_reconstruction&quot;,
+        &quot;phase_realignment&quot;
+      ]
+    },
+
+    &quot;E4&quot;: {
+      &quot;description&quot;: &quot;Epoch of stability–drift conflict with elevated collapse risk.&quot;,
+      &quot;stability_mode&quot;: &quot;conflict&quot;,
+      &quot;conditions&quot;: [
+        &quot;stability_index &gt;= stability_min&quot;,
+        &quot;drift_magnitude &lt;= drift_boundary&quot;,
+        &quot;phase in allowed_window&quot;
+      ],
+      &quot;collapse_signals&quot;: [
+        &quot;stability_instability&quot;,
+        &quot;drift_spike&quot;
+      ],
+      &quot;regeneration_arcs&quot;: [
+        &quot;stability_rebuild&quot;,
+        &quot;drift_dampening&quot;
+      ]
+    },
+
+    &quot;E5&quot;: {
+      &quot;description&quot;: &quot;Epoch of coherence–resonance synchronization.&quot;,
+      &quot;stability_mode&quot;: &quot;synchronization&quot;,
+      &quot;conditions&quot;: [
+        &quot;coherence_envelope &gt;= coherence_min&quot;,
+        &quot;resonance_phase in harmonic_window&quot;,
+        &quot;stability_index &gt;= stability_min&quot;
+      ],
+      &quot;collapse_signals&quot;: [
+        &quot;coherence_break&quot;,
+        &quot;phase_inversion&quot;
+      ],
+      &quot;regeneration_arcs&quot;: [
+        &quot;coherence_rebuild&quot;,
+        &quot;phase_correction&quot;
+      ]
+    },
+
+    &quot;E6&quot;: {
+      &quot;description&quot;: &quot;Epoch of ignition–resonance interaction with volatile stability.&quot;,
+      &quot;stability_mode&quot;: &quot;volatile&quot;,
+      &quot;conditions&quot;: [
+        &quot;ignition_magnitude &lt;= ignition_threshold&quot;,
+        &quot;resonance_magnitude &lt;= harmonic_threshold&quot;,
+        &quot;stability_index &gt;= stability_min&quot;
+      ],
+      &quot;collapse_signals&quot;: [
+        &quot;ignition_overrun&quot;,
+        &quot;resonance_surge&quot;
+      ],
+      &quot;regeneration_arcs&quot;: [
+        &quot;ignition_dampening&quot;,
+        &quot;harmonic_realignment&quot;
+      ]
+    },
+
+    &quot;E7&quot;: {
+      &quot;description&quot;: &quot;Terminal epoch with maximum harmonic complexity and stability sensitivity.&quot;,
+      &quot;stability_mode&quot;: &quot;terminal&quot;,
+      &quot;conditions&quot;: [
+        &quot;stability_index &gt;= stability_min&quot;,
+        &quot;harmonic_profile_valid&quot;,
+        &quot;drift_magnitude &lt;= drift_boundary&quot;
+      ],
+      &quot;collapse_signals&quot;: [
+        &quot;stability_collapse&quot;,
+        &quot;harmonic_misalignment&quot;
+      ],
+      &quot;regeneration_arcs&quot;: [
+        &quot;stability_reconstruction&quot;,
+        &quot;harmonic_rebuild&quot;
+      ]
+    }
+  },
+
+  &quot;output&quot;: {
+    &quot;epochal_stability_profiles&quot;: &quot;./epochal-stability-profiles.json&quot;
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Canonical stability profiles for epochs E0–E7, defining collapse signals, regeneration arcs, and stability modes.&quot;
+  }
+}
+</code></pre>
+  </main>
+</body>
+</html>

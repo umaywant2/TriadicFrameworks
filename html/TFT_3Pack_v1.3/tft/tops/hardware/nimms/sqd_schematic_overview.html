@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/tft/tops/hardware/nimms/sqd_schematic_overview.md">
+  <title>🛰️ Starship Quantum Drive — Schematic Overview</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/tft/tops/hardware/nimms/sqd_schematic_overview.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/tft/tops/hardware/nimms/sqd_schematic_overview.md</code>
+    &middot;
+    <a href="../../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h2 id="starship-quantum-drive-schematic-overview">🛰️ Starship Quantum Drive — Schematic Overview</h2>
+<p>Summary: a modular node composed of a Blade Core backplane, Lightwave Bus Matrix, two Nonagon Resonance Anchors, and a Flow Mantle. Blade triplets map to Manifestor / Ledger / Guardian roles. Backplane supports hot-swap detection, photonic routing, and maintenance channels.</p>
+<ul>
+<li>Files in the current NIMMS folder informed layout and naming (blade array, nonagon shell, boot glyphs, resonance cache, glyph interrupts, echo log).  </li>
+<li>Topology: Blade banks (rows of blade triplets) → Dynamic Routing Backplane → Lightwave Bus Matrix → Manifestor DPUs → Nonagon Anchors (periodic checkpoint nodes) → Flow Mantle (external lattice, shielding, thermal routing).</li>
+</ul>
+<hr>
+<h3 id="schematic-physical-logical-layers">Schematic: Physical &amp; Logical Layers</h3>
+<ol>
+<li>
+<p>Physical stack (outer → inner)
+   - Flow Mantle: vacuum-stable lattice wrap with photonic conduits and thermal glyph router channels.
+   - Nonagon Resonance Anchors: two clam-shell nodes mounted opposite sides of the blade bank for checkpointing and cold-restore seeds.
+   - Blade Bank Tranches: multiple blade slots arranged in triangular triplet groups (A/B/C per core).
+   - Backplane: photonic/lightwave manifold and service rail.</p>
+</li>
+<li>
+<p>Blade slot design (per 9mm × 6mm × 3mm blade)
+   - Mechanical guide pins (2) for orientation.
+   - Photonic contact pads (6): triad transmit, triad receive, sync.
+   - Glyph ID EEPROM contact (I2C-style narrow bus) for seed/metadata.
+   - Thermal contact pad for SiC glyph router coupling.</p>
+</li>
+<li>
+<p>Backplane lanes
+   - Lightwave Bus Matrix lanes: logical lanes L0..L7 (priority), with physical photonic waveguides and micro-optical switches.
+   - Service rail: NMP (maintenance port) with fallback electrical UART and preferred photonic debug interface.
+   - Power/thermal: distributed glyph router lines and entropy sink bus.</p>
+</li>
+</ol>
+<hr>
+<h3 id="blade-pinout-logical">Blade Pinout (logical)</h3>
+<ul>
+<li>MECH: GUIDE1, GUIDE2</li>
+<li>PHOTON_TX0, PHOTON_TX1, PHOTON_RX0, PHOTON_RX1</li>
+<li>SYNC_CLK (photonic phase sync)</li>
+<li>I2C_GLYPH_ID (electrical narrow bus)</li>
+<li>THERMAL_PAD</li>
+<li>GND, Vbat (managed by backplane power manager)</li>
+</ul>
+<p>Behavior: on insertion, backplane reads GLYPH_ID, assigns role (A/B/C) if missing, or respects metadata if present. Hot-swap triggers rebalancing in tops orchestrator.</p>
+<hr>
+<h3 id="backplane-dynamic-routing-schema">Backplane Dynamic Routing Schema</h3>
+<ul>
+<li>Auto-discovery: blade inserted → GLYPH_ID read → backplane issues RoleAssign(glyph_id) to tops controller.</li>
+<li>Photonic switching: Lightwave Bus Matrix routes triadic channels using switch fabric controlled by VCG glyph router.</li>
+<li>Fault isolation: failed blade flagged; Guardian triggers remap; N+2 redundancy policy applied.</li>
+</ul>
+<p>Diagram shorthand (logical):
+- [Blade Triplet] ↔ [Triad Switch Fabric] ↔ [DPU v2 Cluster (Manifestor/ Ledger/ Guardian)] ↔ [Nonagon Anchors]</p>
+<hr>
+<h3 id="api-denometer-dimensional-addressing">API: Denometer (Dimensional Addressing)</h3>
+<p>Purpose: negotiate dimensional offsets, reserve/commit/revert checkpoint seeds, coordinate manifestor offsets.</p>
+<pre><code class="language-python"># Denometer API (conceptual)
+class Denometer:
+    def reserve_offset(self, node_id: str, magnitude: float) -&gt; str:
+        &quot;&quot;&quot;Reserve a δ offset for node; returns reservation_id.&quot;&quot;&quot;
+    def commit_echo(self, reservation_id: str, checkpoint_meta: dict) -&gt; bool:
+        &quot;&quot;&quot;Commit checkpoint echo; returns success.&quot;&quot;&quot;
+    def revert_to_seed(self, seed_id: str, node_id: str) -&gt; bool:
+        &quot;&quot;&quot;Rollback node to crystal seed; returns success.&quot;&quot;&quot;
+    def query_offsets(self, node_id: str) -&gt; list:
+        &quot;&quot;&quot;List active offsets and their status.&quot;&quot;&quot;
+</code></pre>
+<p>Notes:
+- Offsets are negotiated with validators; reservation includes time-to-live and validator quorum parameters.
+- Checkpoints include glyph-seed, phase_map, and entft signature.</p>
+<hr>
+<h3 id="protocol-lightwave-bus-protocol-lwp">Protocol: Lightwave Bus Protocol (LWP)</h3>
+<p>Purpose: photonic packetization for glyphic charge and triadic control frames.</p>
+<p>Frame (binary-photonic concept):</p>
+<ul>
+<li>Header (fixed):</li>
+<li>node_id (16b)</li>
+<li>triad_role (2b)  // 00=M,01=L,10=G</li>
+<li>glyph_id (32b)</li>
+<li>frame_type (8b): {CTRL,DATA,VALIDATOR,MAINT}</li>
+<li>timestamp (48b, phase-encoded)</li>
+<li>Payload:</li>
+<li>phase_map (variable; photonic interference map)</li>
+<li>checksum (64b; entft-signed)</li>
+<li>QoS lanes: L0 (Manifestor ctrl), L1 (Guardian), L2 (Validator consensus), L3..L7 (data/ledger)</li>
+</ul>
+<p>Example pseudo-send:</p>
+<pre><code class="language-text">LWP.send(node=0x01, triad=M, glyph=0x9fa2, type=CTRL, phase_map=..., sign=entft.sign(...))
+</code></pre>
+<p>Security:
+- entft signatures on payloads.
+- Validator badges attached to validator frames.
+- Photonic lane encryption via entft-lite per blade session.</p>
+<hr>
+<h3 id="interface-nimms-maintenance-port-nmp">Interface: NIMMS Maintenance Port (NMP)</h3>
+<p>Channels:
+- Photonic Debug Channel (preferred): high-bandwidth, low-latency; supports LWP debug frames and photonic telemetry.
+- Electrical Fallback UART: for safe recovery and initial provisioning.</p>
+<p>Methods:
+- discover_blades(): returns blade list and GLYPH_IDs
+- hot_swap_replace(slot_id, blade_meta): triggers role rebalance
+- read_telemetry(slot_id): returns resonance Q, thermal, phase drift
+- flash_seed(slot_id, seed_blob): write/resign glyph-seed</p>
+<p>Example JSON RPC:</p>
+<pre><code class="language-json">{ &quot;method&quot;:&quot;discover_blades&quot;, &quot;params&quot;:{}, &quot;id&quot;:&quot;req-001&quot; }
+{ &quot;result&quot;:[{&quot;slot&quot;:3,&quot;glyph_id&quot;:&quot;0x0f01&quot;,&quot;role&quot;:&quot;A&quot;,&quot;q&quot;:0.98}], &quot;id&quot;:&quot;req-001&quot; }
+</code></pre>
+<hr>
+<h3 id="validator-ledger-hooks">Validator &amp; Ledger Hooks</h3>
+<ul>
+<li>
+<p>Validator frames exist on LWP; validators issue badges: {badge_id, score, timestamp, signature}. Tops orchestrator consumes badges and updates Ledger.</p>
+</li>
+<li>
+<p>Ledger mirroring: critical shards periodically checkpoint to Nonagon Anchors and optionally to Coeus Exchange via secured entft channel.</p>
+</li>
+</ul>
+<hr>
+<h3 id="operational-considerations-math-notes">Operational Considerations &amp; Math Notes</h3>
+<ul>
+<li>Phase sync: SYNC_CLK enforces phase coherence across photonic lanes; use master-slave hierarchical sync or distributed consensus when crossing nodes.</li>
+<li>Stability metric Q: composite of photonic fringe contrast, thermal variance, and validator consensus. Target Qmin tuned per mission profile (e.g., Qmin_cruise = 0.75; Qmin_warp = 0.92).</li>
+<li>Triadic manifestor state update: at each tick, compute S(t) as triadic projection (a,b,c) with denometer offsets δa,δb,δc. Use validator gate to commit to ledger when phase variance &lt; ε.</li>
+</ul>
+<hr>
+<h3 id="next-steps-recommended">Next steps (recommended)</h3>
+<ol>
+<li>Produce a plate-level schematic: backplane photonic waveguide map + mechanical guides for blades.  </li>
+<li>Flesh Denometer message formats (wire-level), LWP binary framing, and example validator badge envelope.  </li>
+<li>Prototype a telemetry exchange (NMP) and a hot-swap sequence (timeline of signals).  </li>
+<li>Optional: render a simple sequence diagram for Warp Initiate showing Manifestor priority lanes and Guardian isolation.</li>
+</ol>
+  </main>
+</body>
+</html>

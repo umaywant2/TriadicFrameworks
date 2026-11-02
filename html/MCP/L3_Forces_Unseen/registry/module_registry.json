@@ -1,0 +1,116 @@
+{
+  "version": "0.1.0",
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Module Registry",
+  "description": "Canonical registry of all modules belonging to the Forces Unseen layer, including schemas, registries, spine, dimensions, operators, and examples.",
+
+  "modules": [
+    {
+      "id": "examples",
+      "name": "Examples",
+      "category": "examples",
+      "purpose": "Provides example envelopes for canonical, reality, imagination, information, error, and qmroot examples.",
+      "path": "docs/MCP/L3_Forces_Unseen/examples",
+      "metadata": {
+        "contains": ["example envelopes"],
+        "forceDomain": "forces"
+      }
+    },
+
+    {
+      "id": "schemas",
+      "name": "Schemas",
+      "category": "schemas",
+      "purpose": "Defines JSON Schemas for modules, operators, and examples.",
+      "path": "docs/MCP/L3_Forces_Unseen/schemas",
+      "metadata": {
+        "contains": [
+          "module.schema.json",
+          "operator.schema.json"
+        ],
+        "forceDomain": "forces"
+      }
+    },
+
+    {
+      "id": "registry",
+      "name": "Registry",
+      "category": "registry",
+      "purpose": "Provides canonical registries for modules, operators, and examples.",
+      "path": "docs/MCP/L3_Forces_Unseen/registry",
+      "metadata": {
+        "contains": [
+          "module_registry.json",
+          "operator_registry.json"
+        ],
+        "forceDomain": "forces"
+      }
+    },
+
+    {
+      "id": "spine",
+      "name": "S3 Spine",
+      "category": "spine",
+      "purpose": "Implements the force-regime spine: gradient → field → rupture → integrity.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/S3.graph.json",
+      "metadata": {
+        "contains": ["S3.graph.json"],
+        "forceDomain": "forces"
+      }
+    },
+
+    {
+      "id": "dimensions",
+      "name": "Dimensional Subsystem",
+      "category": "dimension",
+      "purpose": "Defines dimensional constructs belonging to the Forces Unseen layer.",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions",
+      "metadata": {
+        "contains": [
+          "L4.json",
+          "L5.json",
+          "L8.json",
+          "L10.json",
+          "L11.json",
+          "L12.json",
+          "L16.json",
+          "L26.json",
+          "L32.json",
+          "LH.json",
+          "LI.json"
+        ],
+        "forceDomain": "forces"
+      }
+    },
+
+    {
+      "id": "operators",
+      "name": "Operators",
+      "category": "operator",
+      "purpose": "Defines force-regime operators including push, pull, bind, gradient, fieldShift, and ruptureForce.",
+      "path": "docs/MCP/L3_Forces_Unseen/operators",
+      "metadata": {
+        "contains": [
+          "operator_registry.json"
+        ],
+        "forceDomain": "forces"
+      }
+    },
+
+    {
+      "id": "module",
+      "name": "Module Manifest",
+      "category": "module",
+      "purpose": "Defines the canonical module manifest for TriadicFrameworks MCP.",
+      "path": "docs/MCP/module.json",
+      "metadata": {
+        "contains": ["module.json"],
+        "forceDomain": "forces"
+      }
+    }
+  ]
+}

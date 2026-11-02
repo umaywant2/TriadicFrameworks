@@ -1,0 +1,101 @@
+<svg width="1080" height="720" viewBox="0 0 1080 720" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#05060d"/>
+      <stop offset="100%" stop-color="#151a2b"/>
+    </radialGradient>
+
+    <linearGradient id="solar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd34f"/>
+      <stop offset="100%" stop-color="#c79a1f"/>
+    </linearGradient>
+
+    <linearGradient id="nile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f7bff"/>
+      <stop offset="100%" stop-color="#203b8f"/>
+    </linearGradient>
+
+    <linearGradient id="osiris" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b34fff"/>
+      <stop offset="100%" stop-color="#6a1fc7"/>
+    </linearGradient>
+
+    <linearGradient id="pharaoh" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff4f7b"/>
+      <stop offset="100%" stop-color="#c71f4f"/>
+    </linearGradient>
+
+    <linearGradient id="duat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4fffd3"/>
+      <stop offset="100%" stop-color="#1fc79a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="720" fill="url(#bg)" />
+
+  <!-- Title -->
+  <text x="540" y="70" fill="#ffffff" font-size="26" text-anchor="middle">
+    Egyptian Cycle Diagram (RTT/3)
+  </text>
+  <text x="540" y="95" fill="#9fd3ff" font-size="13" text-anchor="middle">
+    Solar · Nile · Osiris · Pharaonic · Duat Traversal
+  </text>
+
+  <!-- Solar Cycle (top left) -->
+  <circle cx="260" cy="220" r="90" fill="none" stroke="url(#solar)" stroke-width="3"/>
+  <text x="260" y="190" fill="#ffe38f" font-size="16" text-anchor="middle">Solar Cycle</text>
+  <text x="260" y="210" fill="#ffe38f" font-size="11" text-anchor="middle">Ra</text>
+  <text x="260" y="230" fill="#ffe38f" font-size="10" text-anchor="middle">day → night → rebirth</text>
+
+  <!-- Nile Cycle (top right) -->
+  <circle cx="820" cy="220" r="90" fill="none" stroke="url(#nile)" stroke-width="3"/>
+  <text x="820" y="190" fill="#9fd3ff" font-size="16" text-anchor="middle">Nile Cycle</text>
+  <text x="820" y="210" fill="#9fd3ff" font-size="11" text-anchor="middle">Hapi</text>
+  <text x="820" y="230" fill="#9fd3ff" font-size="10" text-anchor="middle">inundation → fertility → recession</text>
+
+  <!-- Osiris Cycle (center left) -->
+  <circle cx="260" cy="420" r="90" fill="none" stroke="url(#osiris)" stroke-width="3"/>
+  <text x="260" y="390" fill="#f3e3ff" font-size="16" text-anchor="middle">Osiris Cycle</text>
+  <text x="260" y="410" fill="#f3e3ff" font-size="11" text-anchor="middle">Osiris</text>
+  <text x="260" y="430" fill="#f3e3ff" font-size="10" text-anchor="middle">death → rebirth → kingship</text>
+
+  <!-- Pharaonic Cycle (center right) -->
+  <circle cx="820" cy="420" r="90" fill="none" stroke="url(#pharaoh)" stroke-width="3"/>
+  <text x="820" y="390" fill="#ffd3e3" font-size="16" text-anchor="middle">Pharaonic Cycle</text>
+  <text x="820" y="410" fill="#ffd3e3" font-size="11" text-anchor="middle">Pharaoh</text>
+  <text x="820" y="430" fill="#ffd3e3" font-size="10" text-anchor="middle">mortal → divine → lineage</text>
+
+  <!-- Duat Traversal (bottom center) -->
+  <circle cx="540" cy="540" r="100" fill="none" stroke="url(#duat)" stroke-width="3"/>
+  <text x="540" y="510" fill="#d3fff7" font-size="16" text-anchor="middle">Duat Traversal</text>
+  <text x="540" y="530" fill="#d3fff7" font-size="11" text-anchor="middle">Solar Barque · Osiris · Anubis</text>
+  <text x="540" y="550" fill="#d3fff7" font-size="10" text-anchor="middle">night descent → gates → sunrise</text>
+
+  <!-- Central hub: Cycle–Paradox Fusion -->
+  <circle cx="540" cy="340" r="60" fill="#0b1b33" stroke="#4fb3ff" stroke-width="2"/>
+  <text x="540" y="335" fill="#e3f3ff" font-size="16" text-anchor="middle">
+    Cycle Hub
+  </text>
+  <text x="540" y="355" fill="#9fd3ff" font-size="11" text-anchor="middle">
+    cycles + paradox + corridors
+  </text>
+
+  <!-- Connections from hub to cycles -->
+  <line x1="540" y1="340" x2="260" y2="220" stroke="#4fb3ff" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="540" y1="340" x2="820" y2="220" stroke="#4fb3ff" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="540" y1="340" x2="260" y2="420" stroke="#4fb3ff" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="540" y1="340" x2="820" y2="420" stroke="#4fb3ff" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="540" y1="340" x2="540" y2="540" stroke="#4fb3ff" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Corridors / paradox note -->
+  <text x="540" y="640" fill="#ffffff" font-size="11" text-anchor="middle">
+    Corridors: Thoth (knowledge) · Anubis (death) · Wepwawet (path) · Isis (resurrection) · Seshat (record)
+  </text>
+  <text x="540" y="660" fill="#9fd3ff" font-size="11" text-anchor="middle">
+    Cycles interlock through paradox engines (Osiris, Ra, Set, Bennu) and Duat traversal —
+    cycle‑dense, paradox‑tight, underworld‑structured.
+  </text>
+
+</svg>

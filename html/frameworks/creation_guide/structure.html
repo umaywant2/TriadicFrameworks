@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Framework Creation Guide — Structure</title>
+  <link rel="stylesheet" href="../fcg.css" />
+</head>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+ /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+       
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+
+<body>
+   
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧩FCG%20Structure%20Layer-🏗️Framework%20Structural%20Spine%20Active-4c8eda?style=for-the-badge" alt="🧩FCG Structure Layer | 🏗️Framework Structural Spine Active"/>
+<!-- ========================= -->
+<!-- Session Context Block     -->
+<!-- ========================= -->
+
+<section id="fcg-structure-session-header"
+         data-rtt="0"
+         data-coherence="declared"
+         data-drift="minimal"
+         data-paradox="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (fcg‑structure)</span><br>
+
+    <span class="context-label"><strong>Scope:</strong></span>
+    <span class="context-value">
+      structural‑spine → components → relationships →
+      constraints → coherence‑rules
+    </span><br>
+
+    <span class="context-label"><strong>Role:</strong></span>
+    <span class="context-value">
+      define the structural backbone of a framework and how its parts fit together
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (fcg‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (triadic‑creation grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (structure‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + diagrams + structural patterns</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">
+      exists (structural layer of the Framework Creation Guide)
+    </span><br>
+
+    <span class="context-label"><strong>Every section:</strong></span>
+    <span class="context-value">
+      minimal • structural • AI‑parsable
+    </span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">
+      creators • developers • researchers • AIs
+    </span>
+
+  </div>
+
+</section>
+
+<div class="fcg-tag">
+  🧩 FCG — Structure Layer<br>🏗️ Framework Structural Spine Active
+</div>
+
+
+<!-- ========================= -->
+<!-- Page Header               -->
+<!-- ========================= -->
+
+<header class="fcg-header">
+  <h1>Structure</h1>
+  <p class="fcg-subtitle">
+    Structure defines the backbone of a framework: its components, their
+    relationships, and the rules that maintain coherence.
+  </p>
+</header>
+
+
+<!-- ========================= -->
+<!-- 1. Structural Spine        -->
+<!-- ========================= -->
+
+<section id="structural-spine">
+  <h2>1. Structural Spine</h2>
+
+  <p>
+    Every framework begins with a structural spine — the minimal set of elements
+    that define its identity and hold the rest of the system together.
+  </p>
+
+  <ul>
+    <li><strong>Core Components:</strong> the essential parts</li>
+    <li><strong>Primary Relationships:</strong> how components connect</li>
+    <li><strong>Invariant Rules:</strong> what must always hold true</li>
+    <li><strong>Boundary Conditions:</strong> what the spine excludes</li>
+  </ul>
+
+  <p>
+    The spine is not the full framework. It is the skeleton that everything else
+    attaches to.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- 2. Components              -->
+<!-- ========================= -->
+
+<section id="components">
+  <h2>2. Components</h2>
+
+  <p>
+    Components are the building blocks of the framework. They may be conceptual,
+    mathematical, procedural, or symbolic — but they must be defined clearly.
+  </p>
+
+  <ul>
+    <li><strong>Definition:</strong> what the component is</li>
+    <li><strong>Role:</strong> what the component does</li>
+    <li><strong>Dependencies:</strong> what it relies on</li>
+    <li><strong>Interactions:</strong> how it connects to others</li>
+  </ul>
+
+  <p>
+    Components must be minimal, non‑overlapping, and structurally coherent.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- 3. Relationships           -->
+<!-- ========================= -->
+
+<section id="relationships">
+  <h2>3. Relationships</h2>
+
+  <p>
+    Relationships define how components interact. They determine the shape of
+    the framework and the flow of information or influence.
+  </p>
+
+  <ul>
+    <li><strong>Type:</strong> directional, bidirectional, hierarchical, cyclic</li>
+    <li><strong>Strength:</strong> weak, strong, conditional</li>
+    <li><strong>Scope:</strong> local or global</li>
+    <li><strong>Stability:</strong> fixed or dynamic</li>
+  </ul>
+
+  <p>
+    A framework’s structure emerges from the pattern of relationships, not from
+    the components alone.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- 4. Constraints             -->
+<!-- ========================= -->
+
+<section id="constraints">
+  <h2>4. Constraints</h2>
+
+  <p>
+    Constraints define what the framework cannot do. They prevent drift,
+    maintain coherence, and ensure the system behaves as intended.
+  </p>
+
+  <ul>
+    <li><strong>Structural Limits:</strong> what cannot be added</li>
+    <li><strong>Behavioral Limits:</strong> what cannot occur</li>
+    <li><strong>Dimensional Limits:</strong> what cannot vary</li>
+    <li><strong>Regime Limits:</strong> what cannot transition</li>
+  </ul>
+
+  <p>
+    Constraints are not restrictions — they are the guardrails that keep the
+    framework meaningful.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- 5. Coherence Rules         -->
+<!-- ========================= -->
+
+<section id="coherence-rules">
+  <h2>5. Coherence Rules</h2>
+
+  <p>
+    Coherence rules ensure that the structure remains internally consistent.
+    They define how the framework maintains identity across use cases.
+  </p>
+
+  <ul>
+    <li><strong>Identity Rules:</strong> what must remain true</li>
+    <li><strong>Compatibility Rules:</strong> how parts align</li>
+    <li><strong>Transition Rules:</strong> how structure adapts</li>
+    <li><strong>Integrity Rules:</strong> what prevents collapse</li>
+  </ul>
+
+  <p>
+    Coherence rules are the glue that holds the structure together.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- Footer                    -->
+<!-- ========================= -->
+
+<footer class="fcg-footer">
+  <p>Framework Creation Guide — Structure Layer</p>
+</footer>
+
+</body>
+</html>

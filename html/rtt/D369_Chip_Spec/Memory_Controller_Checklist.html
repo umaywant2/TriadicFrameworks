@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/D369_Chip_Spec/Memory_Controller_Checklist.md">
+  <title>Memory Controller Checklist</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/D369_Chip_Spec/Memory_Controller_Checklist.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/D369_Chip_Spec/Memory_Controller_Checklist.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="memory-controller-checklist">Memory Controller Checklist</h1>
+<blockquote>
+<p>The last gatekeeper before off‑chip — where three structural erasures happen in rapid succession and no one is watching.</p>
+</blockquote>
+<hr>
+<h2 id="session-context">Session Context</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Module</strong></td>
+<td>D369_Chip_Spec</td>
+</tr>
+<tr>
+<td><strong>File</strong></td>
+<td><code>Memory_Controller_Checklist.md</code></td>
+</tr>
+<tr>
+<td><strong>Role</strong></td>
+<td>diagnostic · reference</td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>First‑fill</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>Derived from <code>Memory_Alignment_Spec.md</code> §Tier 3→4, <code>Diagram_SoC.md</code> §Memory Controller, and <code>DIMM_Module_Checklist.md</code></td>
+</tr>
+<tr>
+<td><strong>Audience</strong></td>
+<td>Memory controller designers · Verification engineers · System architects · Students · AIs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>The memory controller is the <strong>gateway between Tier 3 (on‑chip LLC) and Tier 4 (off‑chip DRAM)</strong>. It is the single point through which every evicted cache line, every DMA write, and every coherency writeback must pass before leaving the SoC.</p>
+<p>It is also the point where three structural erasures happen in rapid succession:</p>
+<pre><code>From LLC / NoC
+═══════════════╗
+               ║
+┌──────────────▼──────────────────────────────────────┐
+│  1. Transaction Queue                               │
+│     ⚠ TEMPORAL REORDERING                           │
+│     Transactions rearranged for row‑buffer locality,│
+│     bank pipelining, and QoS priority.              │
+│     Original issue order is gone.                   │
+├─────────────────────────────────────────────────────┤
+│  2. Scheduler / Address Mapper                      │
+│     ⚠ SOURCE FLATTENING                             │
+│     Requests mapped to physical ranks, banks, rows. │
+│     Initiator identity replaced by physical address.│
+├─────────────────────────────────────────────────────┤
+│  3. PHY Interface                                   │
+│     ⚠ CLOCK DOMAIN SHIFT                            │
+│     On‑chip clock → memory clock.                   │
+│     Temporal reference frame changes.               │
+└──────────────┬──────────────────────────────────────┘
+               ║
+═══════════════╝ → To DIMM / HBM
+                   (see DIMM_Module_Checklist.md)
+</code></pre>
+<p>Other D369 files acknowledge these erasures. This document goes <strong>inside</strong> the memory controller and specifies what structural observability looks like at each internal stage.</p>
+<hr>
+<h2 id="why-the-memory-controller-is-special">Why the Memory Controller Is Special</h2>
+<p>The memory controller is the only SoC block where <strong>all three structural erasures happen within a single functional unit</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Erasure</th>
+<th>Where it happens</th>
+<th>What's lost</th>
+<th>Parallel in other D369 files</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temporal reordering</td>
+<td>Transaction queue</td>
+<td>Original issue order; causal sequence</td>
+<td>N‑3 (NoC QoS reordering)</td>
+</tr>
+<tr>
+<td>Source flattening</td>
+<td>Address mapper</td>
+<td>Initiator identity (which block wrote)</td>
+<td>N‑1 (NoC source flattening); FM‑1 (DIMM rank interleave)</td>
+</tr>
+<tr>
+<td>Clock domain shift</td>
+<td>PHY</td>
+<td>On‑chip temporal reference frame</td>
+<td>Board Rule 2 (annotate every re‑clock)</td>
+</tr>
+</tbody>
+</table>
+<p>No other block concentrates this much structural information loss in this small a functional area. The NoC distributes its erasures across the fabric. The DIMM's erasures are spread across ranks, banks, and refresh cycles. The memory controller does all three <strong>in pipeline order</strong>, in nanoseconds.</p>
+<hr>
+<h2 id="memory-controller-internal-architecture">Memory Controller Internal Architecture</h2>
+<h3 id="expanded-block-diagram">Expanded Block Diagram</h3>
+<pre><code>-
+┌──────────────────────────────────────────────────────────────────────┐
+│  Memory Controller — Internal Structural View                        │
+│                                                                      │
+│  From NoC / LLC / DMA                                                │
+│  ══════════╗                                                         │
+│            ║                                                         │
+│  ┌─────────▼────────────────────────────────────────────────────────┐│
+│  │  Request Ingress                                                 ││
+│  │  · Receives read/write requests from NoC                         ││
+│  │  · Each request carries: address, data, size, request type       ││
+│  │  · ⚠ Does NOT carry: initiator source ID (unless NoC preserves)  ││
+│  └─────────┬────────────────────────────────────────────────────────┘│
+│            │                                                         │
+│  ┌─────────▼───────────────────────────────────────────────────────┐ │
+│  │  Transaction Queue (Read + Write)                               │ │
+│  │  · Buffers pending requests                                     │ │
+│  │  · ⚠ Reorders for efficiency:                                   │ │
+│  │    - Row‑buffer hit prioritization                              │ │
+│  │    - Bank‑level parallelism                                     │ │
+│  │    - Read‑over‑write priority                                   │ │
+│  │    - QoS/urgency class arbitration                              │ │
+│  │  · ⚠ Original issue order lost after reordering                 │ │
+│  └─────────┬───────────────────────────────────────────────────────┘ │
+│            │                                                         │
+│  ┌─────────▼───────────────────────────────────────────────────────┐ │
+│  │  Write Combining / Coalescing                                   │ │
+│  │  · Merges multiple partial writes to the same address           │ │
+│  │  · ⚠ Multi‑source writes collapsed into single transaction      │ │
+│  │  · ⚠ Per‑write source identity destroyed if sources differ      │ │
+│  └─────────┬───────────────────────────────────────────────────────┘ │
+│            │                                                         │
+│  ┌─────────▼───────────────────────────────────────────────────────┐ │
+│  │  Address Mapper / Scrambler                                     │ │
+│  │  · Maps logical address → physical (channel, rank, bank, row)   │ │
+│  │  · ⚠ Address scrambling for security / wear distribution        │ │
+│  │  · ⚠ Source identity fully replaced by physical coordinates     │ │
+│  └─────────┬───────────────────────────────────────────────────────┘ │
+│            │                                                         │
+│  ┌─────────▼───────────────────────────────────────────────────────┐ │
+│  │  Scheduler                                                      │ │
+│  │  · Issues commands to the DRAM interface                        │ │
+│  │  · Manages timing constraints (tRCD, tRP, tRAS, tFAW, etc.)     │ │
+│  │  · Inserts refresh commands (REF, per‑bank REF)                 │ │
+│  │  · ⚠ Refresh is a controller‑initiated phase transition         │ │
+│  │  · ⚠ Refresh timing interleaves with data commands              │ │
+│  └─────────┬───────────────────────────────────────────────────────┘ │
+│            │                                                         │
+│  ┌─────────▼───────────────────────────────────────────────────────┐ │
+│  │  ECC Engine (Controller‑Side)                                   │ │
+│  │  · Generates ECC on writes; checks/corrects on reads            │ │
+│  │  · ⚠ Controller‑side ECC is distinct from on‑die ECC (ODECC)    │ │
+│  │  · ⚠ Corrections are unattributed — clean data returned         │ │
+│  │  · ⚠ Error syndrome info may be logged but not source‑tagged    │ │
+│  └─────────┬───────────────────────────────────────────────────────┘ │
+│            │                                                         │
+│  ┌─────────▼───────────────────────────────────────────────────────┐ │
+│  │  Prefetch Engine                                                │ │
+│  │  · Speculatively fetches data from DRAM into controller buffers │ │
+│  │  · ⚠ Prefetched data has no explicit requester                  │ │
+│  │  · ⚠ If consumed, appears identical to demand‑fetched data      │ │
+│  └─────────┬───────────────────────────────────────────────────────┘ │
+│            │                                                         │
+│  ┌─────────▼───────────────────────────────────────────────────────┐ │
+│  │  PHY (DDR / LPDDR / HBM Interface)                              │ │
+│  │  · Converts controller‑domain signals to memory‑domain          │ │
+│  │  · ⚠ Clock domain crossing: core_clk → mem_clk                  │ │
+│  │  · ⚠ Serialization, training, calibration                       │ │
+│  │  · ⚠ Temporal reference frame changes at this boundary          │ │
+│  └─────────┬───────────────────────────────────────────────────────┘ │
+│            │                                                         │
+│  ┌─────────▼───────────────────────────────────────────────────────┐ │
+│  │  Channel Interface (per‑channel)                                │ │
+│  │  · One or more independent DRAM channels                        │ │
+│  │  · ⚠ Multi‑channel interleaving = another source merge point    │ │
+│  │  · ⚠ Channel assignment may differ from original request path   │ │
+│  └─────────┬───────────────────────────────────────────────────────┘ │
+│            ║                                                         │
+│  ══════════╝ → To DIMM / HBM                                         │
+│                                                                      │
+│  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─           │
+│  D369 Structural Metadata Channel: Meta_MEM                          │
+│  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─           │
+│                                                                      │
+│  ┌──────────────────────────────────────────────────────────────────┐│
+│  │  Structural Metadata (reserved, optional, dark by default)       ││
+│  │                                                                  ││
+│  │  · Per‑transaction source attribution log                        ││
+│  │  · Reordering annotation (original vs. scheduled sequence)       ││
+│  │  · Write‑combining source collision flag                         ││
+│  │  · Refresh event log (timing, bank/rank, count)                  ││
+│  │  · ECC correction event log (syndrome, location, not content)    ││
+│  │  · Prefetch vs. demand‑fetch distinction tag                     ││
+│  │  · PHY clock domain reference annotation                         ││
+│  │  · Channel assignment log                                        ││
+│  │  · Power state transition log (CKE, self‑refresh entry/exit)     ││
+│  └──────────────────────────────────────────────────────────────────┘│
+│                                                                      │
+└──────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="the-eight-controller-failure-modes">The Eight Controller Failure Modes</h2>
+<p>Each internal stage has a specific failure mode. These extend the module's failure mode taxonomy alongside the DIMM failure modes (FM‑1–FM‑5) and NoC erasures (N‑1–N‑5).</p>
+<h3 id="mc1-transaction-queue-reordering">MC‑1: Transaction Queue Reordering</h3>
+<p><strong>What happens:</strong> The transaction queue reorders pending requests for efficiency — row‑buffer hits before misses, bank‑level parallelism, read‑over‑write priority. The issue order from the NoC is discarded.</p>
+<p><strong>What's lost:</strong> Causal sequence. If Request A was issued before Request B, but B hits an open row and A doesn't, B executes first. Post‑hoc analysis cannot reconstruct the original order.</p>
+<p><strong>Structural parallel:</strong> N‑3 (NoC QoS reordering) — same erasure, different location.</p>
+<p><strong>Preservation requirement:</strong> If structural observability requires temporal reconstruction, the controller must log the mapping between original issue order and scheduled execution order (or at minimum a sequence number per request at ingress).</p>
+<hr>
+<h3 id="mc2-source-identity-replacement">MC‑2: Source Identity Replacement</h3>
+<p><strong>What happens:</strong> The address mapper converts a logical address to physical coordinates (channel, rank, bank, row, column). The request's initiator identity — which core, which accelerator, which DMA engine — is not part of the physical address. It is discarded.</p>
+<p><strong>What's lost:</strong> Source provenance. The DRAM sees an address and data. It does not know who wrote.</p>
+<p><strong>Structural parallel:</strong> N‑1 (NoC source flattening); FM‑1 (DIMM rank interleaving).</p>
+<p><strong>Preservation requirement:</strong> Source ID must be preserved as a metadata sideband through the controller pipeline. It does not need to reach the DIMM (the DIMM has no concept of source) — but it must be <strong>loggable</strong> in Meta_MEM before it is discarded at the PHY boundary.</p>
+<hr>
+<h3 id="mc3-write-combining-coalescing">MC‑3: Write Combining / Coalescing</h3>
+<p><strong>What happens:</strong> Multiple partial writes to the same cache line or address range are combined into a single full‑width write. This is correct for functional data. For structural metadata, it creates a problem: if Core 0 writes the first half and the AI accelerator writes the second half, the combined write appears as a single transaction with <strong>no multi‑source attribution</strong>.</p>
+<p><strong>What's lost:</strong> Per‑write source identity in combined transactions.</p>
+<p><strong>Structural parallel:</strong> Board Rule 4 (carry provenance through aggregation) — write combining is aggregation at the controller level.</p>
+<p><strong>Preservation requirement:</strong> When writes from different sources are combined, the metadata channel should flag the combination as a <strong>multi‑source write</strong> and log the contributing source IDs. The combined data itself is correct — but the provenance must reflect that multiple sources contributed.</p>
+<hr>
+<h3 id="mc4-address-scrambling">MC‑4: Address Scrambling</h3>
+<p><strong>What happens:</strong> Many controllers scramble the logical‑to‑physical address mapping for security (preventing row‑hammer attacks), thermal distribution, or wear leveling. The scrambling function is typically secret and non‑invertible from outside the controller.</p>
+<p><strong>What's lost:</strong> The relationship between logical address and physical location. Post‑hoc analysis cannot determine which physical row/bank/rank stored a value without knowing the scrambling function.</p>
+<p><strong>Structural impact:</strong> Address scrambling does not directly erase source, lifecycle, or time — but it makes <strong>physical forensics impossible</strong> without controller cooperation. If a DIMM reports an ECC error at physical row X, the system cannot determine which logical address (and therefore which data structure) was affected without unscrambling.</p>
+<p><strong>Preservation requirement:</strong> D369 does not require exposing the scrambling function (that would be a security risk). But the controller metadata channel should log enough information to map physical error reports back to logical addresses — either by logging the inverse mapping for error events, or by providing a diagnostic interface for authorized unscrambling.</p>
+<hr>
+<h3 id="mc5-refresh-scheduling">MC‑5: Refresh Scheduling</h3>
+<p><strong>What happens:</strong> The memory controller issues refresh commands to DRAM on a regular schedule (typically every 7.8 µs per row in DDR4, with variations for DDR5 and temperature‑dependent refresh). Refresh is a maintenance operation that preserves data — but it is also a <strong>controller‑initiated phase transition</strong> that:</p>
+<ul>
+<li>Temporarily blocks data access to the refreshed bank.</li>
+<li>Resets the retention clock for every cell in the refreshed row.</li>
+<li>Is invisible to software and to the data itself.</li>
+</ul>
+<p><strong>What's lost:</strong> This is the controller‑side origin of FM‑2 (DIMM refresh as invisible phase transition). The controller decides <strong>when</strong> to refresh, but the fact that a refresh occurred — and how many times a particular region has been refreshed — is not recorded or exposed.</p>
+<p><strong>Preservation requirement:</strong> The controller metadata channel should log refresh events: which bank/rank was refreshed, when, and optionally how many refresh cycles have occurred since a given region was last written. This enables downstream analysis of refresh frequency per region — a signal relevant to aging, reliability, and data residency analysis.</p>
+<hr>
+<h3 id="mc6-controllerside-ecc">MC‑6: Controller‑Side ECC</h3>
+<p><strong>What happens:</strong> On writes, the controller generates ECC check bits and appends them to the data. On reads, it checks and (if needed) corrects. Corrected data is returned to the requester as if no error occurred.</p>
+<p><strong>What's lost:</strong> The fact that an error occurred. The error syndrome (which bits were wrong). The frequency of corrections per address region. The distinction between controller‑side ECC and on‑die ECC (ODECC).</p>
+<p><strong>Structural parallel:</strong> FM‑3 (DIMM ECC as unattributed correction). The controller is actually the <strong>first</strong> ECC layer — before ODECC and before any module‑level ECC. All three layers mask errors independently.</p>
+<p><strong>Preservation requirement:</strong> The controller metadata channel should log ECC correction events: address region, syndrome type (single‑bit correctable, multi‑bit detected), and timestamp. The log should <strong>not</strong> include corrected data content (that would be a functional data exposure). Correction frequency per region is a first‑class structural signal for aging and reliability analysis.</p>
+<hr>
+<h3 id="mc7-prefetch-misattribution">MC‑7: Prefetch Misattribution</h3>
+<p><strong>What happens:</strong> The prefetch engine speculatively fetches data from DRAM into controller buffers based on access pattern prediction. If the predicted data is later requested by a core, it is served from the buffer instead of DRAM — faster, but with no explicit requester for the original fetch.</p>
+<p><strong>What's lost:</strong> The distinction between demand‑fetched data (explicitly requested by a source) and speculatively prefetched data (fetched by the controller's prediction engine). If a prefetched value is consumed, it looks identical to a demand fetch in every way — but its provenance is different. The <strong>controller</strong> decided to fetch it, not the consuming core.</p>
+<p><strong>Preservation requirement:</strong> Prefetched data should carry a distinguishing tag in the metadata channel: "this fill was initiated by the prefetch engine, not by a core request." This enables post‑hoc analysis to distinguish cache fills driven by actual workload from fills driven by speculation.</p>
+<hr>
+<h3 id="mc8-multichannel-interleaving">MC‑8: Multi‑Channel Interleaving</h3>
+<p><strong>What happens:</strong> Multi‑channel controllers distribute requests across two or more independent DRAM channels for bandwidth. Channel assignment is typically based on address bits — but the assignment logic means that sequential logical addresses may land on different physical channels.</p>
+<p><strong>What's lost:</strong> The relationship between request locality and channel locality. A burst of writes from a single source may be interleaved across channels, making per‑channel analysis unable to reconstruct per‑source behavior.</p>
+<p><strong>Structural parallel:</strong> FM‑1 (DIMM rank interleaving) and FM‑5 (LRDIMM data buffer rank flattening) — the same source‑flattening problem at the channel level.</p>
+<p><strong>Preservation requirement:</strong> The controller metadata channel should log channel assignment per transaction. When multi‑channel interleaving distributes a source's writes across channels, the metadata should preserve the source‑to‑channel mapping so that per‑source analysis can be reconstructed from per‑channel data.</p>
+<hr>
+<h2 id="failure-mode-summary-table">Failure Mode Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Failure Mode</th>
+<th>Stage</th>
+<th>What's Lost</th>
+<th>Structural Parallel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MC‑1</td>
+<td>Transaction queue reordering</td>
+<td>Transaction Queue</td>
+<td>Causal sequence / issue order</td>
+<td>N‑3 (NoC QoS reorder)</td>
+</tr>
+<tr>
+<td>MC‑2</td>
+<td>Source identity replacement</td>
+<td>Address Mapper</td>
+<td>Initiator identity</td>
+<td>N‑1 (NoC source flatten); FM‑1</td>
+</tr>
+<tr>
+<td>MC‑3</td>
+<td>Write combining</td>
+<td>Write Coalescer</td>
+<td>Per‑write source in combined txn</td>
+<td>Board Rule 4</td>
+</tr>
+<tr>
+<td>MC‑4</td>
+<td>Address scrambling</td>
+<td>Address Mapper</td>
+<td>Logical↔physical address mapping</td>
+<td>— (unique to controller)</td>
+</tr>
+<tr>
+<td>MC‑5</td>
+<td>Refresh scheduling</td>
+<td>Scheduler</td>
+<td>Refresh event history per region</td>
+<td>FM‑2 (DIMM refresh)</td>
+</tr>
+<tr>
+<td>MC‑6</td>
+<td>Controller‑side ECC</td>
+<td>ECC Engine</td>
+<td>Error occurrence / syndrome / frequency</td>
+<td>FM‑3 (DIMM ECC)</td>
+</tr>
+<tr>
+<td>MC‑7</td>
+<td>Prefetch misattribution</td>
+<td>Prefetch Engine</td>
+<td>Demand vs. speculative distinction</td>
+<td>— (unique to controller)</td>
+</tr>
+<tr>
+<td>MC‑8</td>
+<td>Multi‑channel interleaving</td>
+<td>Channel Interface</td>
+<td>Source‑to‑channel mapping</td>
+<td>FM‑1, FM‑5</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="the-checklist">The Checklist</h2>
+<p>Organized by controller subsystem. Each item maps to a contractual requirement (R1–R7), a controller failure mode (MC‑1–MC‑8), and where applicable a downstream DIMM failure mode or board preservation rule.</p>
+<h3 id="1-request-ingress-and-source-attribution">§1 — Request Ingress and Source Attribution</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>MC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Request ingress captures initiator source ID from NoC.</td>
+<td>R5.1</td>
+<td>MC‑2</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Source ID is preserved as a sideband field through the controller pipeline.</td>
+<td>R5.1</td>
+<td>MC‑2</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Source ID field width is sufficient to distinguish all major blocks.</td>
+<td>R5.1</td>
+<td>MC‑2</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>DMA‑initiated requests carry the <strong>original requestor's</strong> source ID, not the DMA engine's.</td>
+<td>R5.1</td>
+<td>MC‑2</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>Source ID is loggable in Meta_MEM even if not forwarded to the DIMM.</td>
+<td>R2.1</td>
+<td>MC‑2</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td>Source ID is not overwritten by address mapper or scheduler.</td>
+<td>R5.1</td>
+<td>MC‑2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-transaction-queue-and-temporal-ordering">§2 — Transaction Queue and Temporal Ordering</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>MC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1</td>
+<td>Transaction queue assigns a monotonic ingress sequence number.</td>
+<td>R4.1</td>
+<td>MC‑1</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Sequence number survives reordering and is loggable in Meta_MEM.</td>
+<td>R4.1</td>
+<td>MC‑1</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>Reordering does not overwrite or reset ingress timestamps.</td>
+<td>R4.2</td>
+<td>MC‑1</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>QoS priority class is loggable as metadata (which class, not which data).</td>
+<td>R2.1</td>
+<td>MC‑1</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>Read‑over‑write reordering events are distinguishable from same‑priority reordering.</td>
+<td>R2.1</td>
+<td>MC‑1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-write-combining-and-coalescing">§3 — Write Combining and Coalescing</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>MC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td>Write combining logs when multiple source IDs contribute to a single transaction.</td>
+<td>R5.1</td>
+<td>MC‑3</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Multi‑source combined writes are flagged in Meta_MEM.</td>
+<td>R2.1</td>
+<td>MC‑3</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Single‑source combining (same source, multiple partial writes) does not falsely flag multi‑source.</td>
+<td>R5.1</td>
+<td>MC‑3</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>Write combining does not strip lifecycle tags from contributing sources.</td>
+<td>R5.2</td>
+<td>MC‑3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-address-mapping-and-scrambling">§4 — Address Mapping and Scrambling</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>MC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>Address mapping does not replace source ID with physical address.</td>
+<td>R5.1</td>
+<td>MC‑2</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>Address scrambling function does not affect metadata channel content.</td>
+<td>R1.2</td>
+<td>MC‑4</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Diagnostic interface exists for mapping physical error reports back to logical addresses.</td>
+<td>R2.1</td>
+<td>MC‑4</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>Channel assignment is logged per transaction in Meta_MEM.</td>
+<td>R2.1</td>
+<td>MC‑8</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td>Multi‑channel interleaving does not erase per‑source attribution.</td>
+<td>R5.1</td>
+<td>MC‑8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-refresh-scheduling">§5 — Refresh Scheduling</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>MC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>Refresh commands are logged in Meta_MEM (bank, rank, time).</td>
+<td>R2.1</td>
+<td>MC‑5</td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>Refresh count per bank/rank is trackable.</td>
+<td>R2.1</td>
+<td>MC‑5</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>Temperature‑dependent refresh rate changes are logged.</td>
+<td>R2.1</td>
+<td>MC‑5</td>
+</tr>
+<tr>
+<td>5.4</td>
+<td>Per‑bank refresh events do not reset or overwrite metadata in other banks.</td>
+<td>R4.2</td>
+<td>MC‑5</td>
+</tr>
+<tr>
+<td>5.5</td>
+<td>Self‑refresh entry/exit is logged with timestamps.</td>
+<td>R2.1</td>
+<td>MC‑5</td>
+</tr>
+<tr>
+<td>5.6</td>
+<td>Temporal gap during self‑refresh is annotated (entry time, exit time).</td>
+<td>R4.1</td>
+<td>MC‑5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-ecc-and-error-handling">§6 — ECC and Error Handling</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>MC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.1</td>
+<td>Controller‑side ECC correction events are logged (address region, syndrome, time).</td>
+<td>R2.1</td>
+<td>MC‑6</td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>Correction log does NOT include corrected data content.</td>
+<td>—</td>
+<td>MC‑6</td>
+</tr>
+<tr>
+<td>6.3</td>
+<td>Controller ECC events are distinguishable from ODECC events reported by the DIMM.</td>
+<td>R5.1</td>
+<td>MC‑6</td>
+</tr>
+<tr>
+<td>6.4</td>
+<td>Correction frequency per address region is trackable.</td>
+<td>R2.1</td>
+<td>MC‑6</td>
+</tr>
+<tr>
+<td>6.5</td>
+<td>Multi‑bit detected (uncorrectable) errors are logged even when correction fails.</td>
+<td>R2.1</td>
+<td>MC‑6</td>
+</tr>
+<tr>
+<td>6.6</td>
+<td>ECC correction does not reset or overwrite temporal markers.</td>
+<td>R4.2</td>
+<td>MC‑6</td>
+</tr>
+<tr>
+<td>6.7</td>
+<td>Scrub (background patrol read) events are logged separately from demand‑read ECC events.</td>
+<td>R2.1</td>
+<td>MC‑6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-prefetch-engine">§7 — Prefetch Engine</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>MC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7.1</td>
+<td>Prefetched fills are tagged as "prefetch" in Meta_MEM.</td>
+<td>R2.1</td>
+<td>MC‑7</td>
+</tr>
+<tr>
+<td>7.2</td>
+<td>Prefetch‑initiated fills are distinguishable from demand‑initiated fills.</td>
+<td>R5.1</td>
+<td>MC‑7</td>
+</tr>
+<tr>
+<td>7.3</td>
+<td>Consumed prefetches carry both the prefetch tag and the consuming core's source ID.</td>
+<td>R5.1</td>
+<td>MC‑7</td>
+</tr>
+<tr>
+<td>7.4</td>
+<td>Unused prefetches (evicted before consumption) are logged as wasted fills if metadata is active.</td>
+<td>R2.1</td>
+<td>MC‑7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8-phy-and-clock-domain">§8 — PHY and Clock Domain</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>MC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8.1</td>
+<td>PHY clock domain reference (core_clk → mem_clk) is annotated in Meta_MEM.</td>
+<td>R4.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8.2</td>
+<td>PHY training and calibration events do not corrupt metadata state.</td>
+<td>R7.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8.3</td>
+<td>PHY clock domain crossing does not strip ingress sequence numbers.</td>
+<td>R4.1</td>
+<td>MC‑1</td>
+</tr>
+<tr>
+<td>8.4</td>
+<td>PHY serialization does not merge metadata from different transactions.</td>
+<td>R1.2</td>
+<td>MC‑2</td>
+</tr>
+<tr>
+<td>8.5</td>
+<td>DVFS (dynamic voltage/frequency scaling) events on the memory clock are logged as temporal annotations.</td>
+<td>R4.1</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-power-state-management">§9 — Power State Management</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>MC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9.1</td>
+<td>CKE power‑down entry and exit are logged with timestamps.</td>
+<td>R2.1</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>9.2</td>
+<td>Self‑refresh entry and exit are logged with timestamps.</td>
+<td>R2.1</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>9.3</td>
+<td>Deep power‑down explicitly declares metadata loss if retention is not guaranteed.</td>
+<td>R7.1</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>9.4</td>
+<td>Power state transitions do not reset the controller's monotonic counter.</td>
+<td>R4.2</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>9.5</td>
+<td>Controller metadata channel survives all power states except full power‑off.</td>
+<td>R7.1</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>9.6</td>
+<td>DRAM initialization sequence on power‑up or reset is logged as a lifecycle transition.</td>
+<td>R5.2</td>
+<td>FM‑4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-metadata-channel-independence">§10 — Metadata Channel Independence</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>MC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.1</td>
+<td>Meta_MEM is electrically isolated from the DRAM data bus.</td>
+<td>R1.2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>Meta_MEM can remain dark without affecting controller function.</td>
+<td>R3.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10.3</td>
+<td>No controller functional logic depends on Meta_MEM content.</td>
+<td>R3.2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10.4</td>
+<td>Meta_MEM does not share bandwidth with the DRAM command/address bus.</td>
+<td>R1.2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10.5</td>
+<td>Meta_MEM activation is independent of debug/trace activation.</td>
+<td>R3.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10.6</td>
+<td>Meta_MEM is not removable by synthesis optimization.</td>
+<td>R7.1</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="the-memory-controller-review-question">The Memory Controller Review Question</h2>
+<p>At every design review involving the memory controller, this checklist prompts one question:</p>
+<blockquote>
+<p><em>"If a value passed through the memory controller — could we later determine </em><em>who</em><em> initiated the transaction, </em><em>when</em><em> it was issued vs. when it was scheduled, </em><em>whether</em><em> it was combined with other writes, </em><em>whether</em><em> it was corrected by ECC, and </em><em>what</em><em> the memory clock domain was at the time?"</em></p>
+</blockquote>
+<p>If the answer is <strong>"yes, without redesign,"</strong> the controller is aligned.</p>
+<p>If the answer is <strong>"no, but we could log it without changing the data path,"</strong> the reservation is achievable — return to the failing items.</p>
+<p>If the answer is <strong>"no, and logging it would affect the data path,"</strong> something has gone wrong — R3 (independence) has been violated. Escalate.</p>
+<hr>
+<h2 id="handoff-points">Handoff Points</h2>
+<p>The memory controller sits between two other D369 checklists:</p>
+<pre><code>-
+  ┌────────────────────────────────────┐
+  │  Internal Design‑Review Checklist  │
+  │  (SoC‑wide, items 2.10–2.12)       │
+  │  Covers: NoC source attribution,   │
+  │  DMA tagging, cache coherency      │
+  └──────────────┬─────────────────────┘
+                 │
+                 ▼ (requests arrive at memory controller)
+  ┌────────────────────────────────────┐
+  │  Memory Controller Checklist       │  ◄── YOU ARE HERE
+  │  (this document, 55 items)         │
+  │  Covers: everything between NoC    │
+  │  ingress and PHY output            │
+  └──────────────┬─────────────────────┘
+                 │
+                 ▼ (data leaves the SoC)
+  ┌────────────────────────────────────┐
+  │  DIMM Module Checklist             │
+  │  (38 items)                        │
+  │  Covers: everything from gold edge │
+  │  connector to die‑internal state   │
+  └────────────────────────────────────┘
+</code></pre>
+<p><strong>Upstream handoff:</strong> The memory controller inherits source IDs from the NoC. If the NoC strips source IDs (erasure N‑1), the controller cannot recover them. Item 1.1 depends on the Internal Design‑Review Checklist items 2.10 and 2.12.</p>
+<p><strong>Downstream handoff:</strong> The memory controller's PHY output connects to the DIMM. Everything logged in Meta_MEM before the PHY is on‑chip information. Everything the DIMM tracks (per <code>DIMM_Module_Checklist.md</code>) is off‑chip information. The PHY is the boundary between the two checklists.</p>
+<hr>
+<h2 id="what-this-checklist-is-not">What This Checklist Is Not</h2>
+<table>
+<thead>
+<tr>
+<th>It is NOT…</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A memory controller architecture</td>
+<td>D369 does not specify controller design — only structural observability requirements.</td>
+</tr>
+<tr>
+<td>A DDR/LPDDR timing specification</td>
+<td>Timing parameters (tRCD, tRP, etc.) are unchanged.</td>
+</tr>
+<tr>
+<td>A performance tuning guide</td>
+<td>Reordering, combining, and prefetch policies are unchanged.</td>
+</tr>
+<tr>
+<td>A security specification</td>
+<td>Address scrambling functions are not exposed.</td>
+</tr>
+<tr>
+<td>An ECC algorithm specification</td>
+<td>ECC algorithm choice is unchanged.</td>
+</tr>
+<tr>
+<td>A replacement for RAS features</td>
+<td>Existing reliability features are unaffected.</td>
+</tr>
+</tbody>
+</table>
+<p>This checklist exists so memory controller engineers can say:</p>
+<blockquote>
+<p><em>"We didn't change how the controller moves data — we just made sure it remembers what happened along the way."</em></p>
+</blockquote>
+<hr>
+<h2 id="relationship-to-other-d369-files">Relationship to Other D369 Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Memory_Alignment_Spec.md</code></td>
+<td>Parent spec — §Tier 3→4 boundary defines the three erasures this file expands</td>
+</tr>
+<tr>
+<td><code>DIMM_Module_Checklist.md</code></td>
+<td>Downstream — receives data from the controller PHY output</td>
+</tr>
+<tr>
+<td><code>Diagram_SoC.md</code></td>
+<td>§Memory Controller diagram — summary version of this file's architecture</td>
+</tr>
+<tr>
+<td><code>Internal_Design_Review_Checklist.md</code></td>
+<td>Items MA.6–MA.9 are the Memory Alignment Spec's controller subset</td>
+</tr>
+<tr>
+<td><code>Board_Level_Alignment.md</code></td>
+<td>§Memory Hierarchy — board‑level persistence boundary model</td>
+</tr>
+<tr>
+<td><code>Contractual_Requirements.md</code></td>
+<td>R1–R7 requirements instantiated per controller subsystem</td>
+</tr>
+<tr>
+<td><code>Glossary_Extensions.md</code></td>
+<td>§4 (Memory and DIMM Terms); §5 (Failure Modes)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="canon-alignment">Canon Alignment</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero drift</td>
+<td>✅ All failure modes derived from Memory_Alignment_Spec §Tier 3→4 and Diagram_SoC §Memory Controller</td>
+</tr>
+<tr>
+<td>Structural contract</td>
+<td>✅ Role: diagnostic + reference — validation checklist with failure mode taxonomy</td>
+</tr>
+<tr>
+<td>Lineage clean</td>
+<td>✅ Every checklist item traceable to R1–R7 requirements and specific MC failure modes</td>
+</tr>
+<tr>
+<td>Student‑ready</td>
+<td>✅ Expanded block diagram with ⚠ markers; per‑subsystem failure mode explanations</td>
+</tr>
+<tr>
+<td>AI‑parsable</td>
+<td>✅ Numbered items with Req and MC columns; failure mode summary table</td>
+</tr>
+<tr>
+<td>Cross‑module refs</td>
+<td>✅ Handoff diagram linking to upstream (Design Review) and downstream (DIMM) checklists</td>
+</tr>
+<tr>
+<td>Non‑claims preserved</td>
+<td>✅ Explicit "What This Checklist Is Not" section</td>
+</tr>
+<tr>
+<td>Engineer bar</td>
+<td>✅ "Didn't change how the controller moves data — just made sure it remembers what happened"</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Module: D369_Chip_Spec · File: Memory_Controller_Checklist.md · Version: 0.1.0 · TriadicFrameworks / RTT</em></p>
+<hr>
+<h3 id="structural-summary-what-this-file-adds-to-d369">Structural Summary — What This File Adds to D369</h3>
+<p><strong>New taxonomy introduced: MC‑1 through MC‑8</strong> — eight named controller failure modes that extend the module's erasure catalog alongside N‑1–N‑5 (NoC) and FM‑1–FM‑5 (DIMM). Two are unique to the controller (MC‑4 address scrambling, MC‑7 prefetch misattribution); the rest have structural parallels to existing failure modes at different hierarchy levels.</p>
+<p><strong>55 checklist items across 10 sections</strong>, organized by controller subsystem — each traceable to a specific R‑requirement and MC failure mode. The sections cover the full internal pipeline: ingress → transaction queue → write combining → address mapping → refresh → ECC → prefetch → PHY → power management → metadata independence.</p>
+<p><strong>Meta_MEM expanded</strong> — the metadata channel spec from Diagram_SoC now has nine concrete log types (source attribution, reordering annotation, write‑combining collision flag, refresh events, ECC corrections, prefetch tags, PHY clock reference, channel assignment, power state transitions).</p>
+<p><strong>Handoff chain completed</strong> — the three‑checklist cascade is now explicit: Internal Design‑Review Checklist (SoC‑wide) → Memory Controller Checklist (on‑chip gateway) → DIMM Module Checklist (off‑chip). The PHY boundary is the dividing line between the last two.</p>
+  </main>
+</body>
+</html>

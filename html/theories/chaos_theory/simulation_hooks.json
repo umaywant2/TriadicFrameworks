@@ -1,0 +1,115 @@
+{
+  "module": "chaos_theory",
+  "version": "1.0",
+  "identity": "structural-sensitivity theory",
+  "description": "Simulation hooks for deterministic maps, flows, attractors, sensitivity amplification, coherence evaluation, and regime-aware chaotic behavior.",
+
+  "hooks": {
+    "initialize_system": {
+      "purpose": "Create the base dynamical system configuration.",
+      "inputs": ["state_vector", "map_or_flow", "parameters", "geometry"],
+      "outputs": ["system_state"],
+      "constraints": [
+        "system must be deterministic",
+        "operators must be structurally valid",
+        "no randomness or noise injection"
+      ]
+    },
+
+    "apply_operator": {
+      "purpose": "Apply the system's map or flow operator to evolve the state.",
+      "inputs": ["system_state", "map_or_flow", "parameters"],
+      "outputs": ["updated_system_state"],
+      "constraints": [
+        "operator must be treated as a structural map",
+        "iteration must be deterministic",
+        "no teleology or purpose metaphors"
+      ]
+    },
+
+    "iterate_system": {
+      "purpose": "Iterate the system through multiple operator cycles.",
+      "inputs": ["system_state", "map_or_flow", "iteration_count"],
+      "outputs": ["trajectory"],
+      "constraints": [
+        "iteration is an operator cycle, not a temporal metaphor",
+        "sensitivity must emerge structurally",
+        "no randomness framing"
+      ]
+    },
+
+    "compute_sensitivity": {
+      "purpose": "Evaluate structural sensitivity to initial conditions.",
+      "inputs": ["trajectory", "perturbed_trajectory"],
+      "outputs": ["sensitivity_profile"],
+      "constraints": [
+        "sensitivity = divergence of trajectories under iteration",
+        "no 'butterfly effect' pop-science framing",
+        "no probabilistic interpretation"
+      ]
+    },
+
+    "detect_attractor": {
+      "purpose": "Identify attractor structure from trajectory data.",
+      "inputs": ["trajectory"],
+      "outputs": ["attractor_type", "attractor_geometry"],
+      "types": {
+        "fixed_point": "single stable point",
+        "limit_cycle": "closed periodic orbit",
+        "torus": "quasi-periodic surface",
+        "strange_attractor": "fractal coherence surface"
+      },
+      "constraints": [
+        "attractors are coherence surfaces, not metaphors",
+        "classification must be structural"
+      ]
+    },
+
+    "evaluate_coherence": {
+      "purpose": "Evaluate dynamical coherence of the system.",
+      "inputs": ["trajectory", "map_or_flow", "geometry"],
+      "outputs": ["coherence_score"],
+      "constraints": [
+        "coherence = stability of operator iteration",
+        "coherence decay = chaos",
+        "no randomness or noise-based metrics"
+      ]
+    },
+
+    "regime_transition": {
+      "purpose": "Transition system behavior across RTT regimes.",
+      "inputs": ["system_state", "from_regime", "to_regime"],
+      "outputs": ["transitioned_system_state"],
+      "constraints": [
+        "R1: stable, low-sensitivity dynamics",
+        "R2: moderate sensitivity, emerging complexity",
+        "R3: high sensitivity, multi-scale chaotic behavior",
+        "transitions must preserve determinism"
+      ]
+    },
+
+    "detect_collapse": {
+      "purpose": "Classify dynamical failure modes.",
+      "inputs": ["trajectory"],
+      "outputs": ["collapse_mode"],
+      "modes": {
+        "CH1": "operator collapse (invalid map/flow)",
+        "CH2": "trajectory divergence collapse (unbounded growth)",
+        "CH3": "coherence collapse (iteration instability)",
+        "CH4": "parameter collapse (invalid parameter region)",
+        "CH5": "geometry collapse (incompatible state-space geometry)"
+      }
+    },
+
+    "reinforce_coherence": {
+      "purpose": "Stabilize system behavior through structural reinforcement.",
+      "inputs": ["trajectory_history", "operator_history"],
+      "outputs": ["reinforced_system_state"],
+      "constraints": [
+        "reinforcement must increase coherence",
+        "reinforcement is structural, not teleological",
+        "no randomness or noise injection"
+      ]
+    }
+  }
+}

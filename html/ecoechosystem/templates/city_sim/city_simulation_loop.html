@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/ecoechosystem/templates/city_sim/city_simulation_loop.md">
+  <title>City Simulation Loop</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/ecoechosystem/templates/city_sim/city_simulation_loop.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/ecoechosystem/templates/city_sim/city_simulation_loop.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="city-simulation-loop"><strong>City Simulation Loop</strong></h1>
+<h3 id="the-unified-execution-cycle-that-advances-all-city-subsystems-through-time"><em>The unified execution cycle that advances all city subsystems through time</em></h3>
+<p>The city simulation loop defines <strong>how the city runs</strong>.</p>
+<p>It does not describe any single domain.<br>
+It defines <strong>how all domains update, interact, and co‑evolve</strong> across each simulation step.</p>
+<p>This loop is the <strong>heartbeat</strong> of the city.</p>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>The city simulation loop exists to:</p>
+<ul>
+<li>synchronize all city subsystems  </li>
+<li>enforce S/E/R coherence across updates  </li>
+<li>propagate activation, feedback, and transitions  </li>
+<li>support scenario execution and intervention testing  </li>
+<li>provide a canonical execution order for simulation engines  </li>
+</ul>
+<p>Without this loop, the city is a diagram.<br>
+With it, the city becomes a <strong>living system</strong>.</p>
+<hr>
+<h2 id="loop-as-substrate-expression"><strong>Loop as Substrate Expression</strong></h2>
+<p>The simulation loop itself expresses the substrate:</p>
+<ul>
+<li><strong>Structure (S)</strong> — persistent state variables and networks  </li>
+<li><strong>Activation (E)</strong> — dynamic pressures and intensities  </li>
+<li><strong>Relational Time (R)</strong> — step cadence, delays, and memory  </li>
+</ul>
+<p>Each iteration advances the city <strong>one coherent moment</strong>.</p>
+<hr>
+<h1 id="canonical-loop-phases"><strong>Canonical Loop Phases</strong></h1>
+<p>Each simulation step proceeds through the following ordered phases.</p>
+<hr>
+<h2 id="1-external-inputs-shocks"><strong>1. External Inputs &amp; Shocks</strong></h2>
+<p>Inject exogenous influences.</p>
+<p>Examples:
+- climate events<br>
+- regional economic shifts<br>
+- policy changes<br>
+- technological disruptions  </p>
+<p>These inputs modify baseline S/E/R conditions.</p>
+<hr>
+<h2 id="2-resource-dynamics-update"><strong>2. Resource Dynamics Update</strong></h2>
+<p>Update resource stocks and flows.</p>
+<p>Includes:
+- inflow and depletion<br>
+- storage buffering<br>
+- distribution stress  </p>
+<p>Resource constraints propagate <strong>upward</strong> into all other systems.</p>
+<hr>
+<h2 id="3-infrastructure-regime-update"><strong>3. Infrastructure Regime Update</strong></h2>
+<p>Evaluate infrastructure capacity and strain.</p>
+<p>Includes:
+- load vs. capacity<br>
+- congestion and degradation<br>
+- failure probability  </p>
+<p>Infrastructure constrains <strong>movement, energy, and access</strong>.</p>
+<hr>
+<h2 id="4-population-activation-update"><strong>4. Population Activation Update</strong></h2>
+<p>Update collective human activation.</p>
+<p>Includes:
+- stress accumulation<br>
+- engagement or withdrawal<br>
+- movement and unrest  </p>
+<p>Population activation responds <strong>rapidly</strong> to material and informational signals.</p>
+<hr>
+<h2 id="5-economic-activation-update"><strong>5. Economic Activation Update</strong></h2>
+<p>Update market intensity and volatility.</p>
+<p>Includes:
+- transaction velocity<br>
+- employment shifts<br>
+- investment behavior  </p>
+<p>Economic activation translates resources and behavior into <strong>market motion</strong>.</p>
+<hr>
+<h2 id="6-inequality-dynamics-update"><strong>6. Inequality Dynamics Update</strong></h2>
+<p>Update distributional gradients.</p>
+<p>Includes:
+- access divergence<br>
+- recovery asymmetry<br>
+- stress concentration  </p>
+<p>Inequality evolves <strong>slowly but persistently</strong>.</p>
+<hr>
+<h2 id="7-information-flow-update"><strong>7. Information Flow Update</strong></h2>
+<p>Update perception and signaling.</p>
+<p>Includes:
+- signal propagation<br>
+- trust modulation<br>
+- narrative amplification  </p>
+<p>Information flow can <strong>override material signals</strong>.</p>
+<hr>
+<h2 id="8-governance-response-update"><strong>8. Governance Response Update</strong></h2>
+<p>Evaluate institutional response.</p>
+<p>Includes:
+- perception of conditions<br>
+- decision latency<br>
+- intervention deployment  </p>
+<p>Governance acts <strong>late but broadly</strong>.</p>
+<hr>
+<h2 id="9-feedback-loop-resolution"><strong>9. Feedback Loop Resolution</strong></h2>
+<p>Apply cross‑domain feedback.</p>
+<p>Includes:
+- stabilizing loops<br>
+- amplifying loops<br>
+- learning adjustments  </p>
+<p>Feedback determines whether the system <strong>settles or escalates</strong>.</p>
+<hr>
+<h2 id="10-stability-cycle-regime-evaluation"><strong>10. Stability Cycle &amp; Regime Evaluation</strong></h2>
+<p>Evaluate regime transitions.</p>
+<p>Includes:
+- regime thresholds<br>
+- stability basin shifts<br>
+- recovery or collapse paths  </p>
+<p>This phase determines <strong>long‑arc direction</strong>.</p>
+<hr>
+<h2 id="11-state-persistence-memory"><strong>11. State Persistence &amp; Memory</strong></h2>
+<p>Commit state to memory.</p>
+<p>Includes:
+- structural scars<br>
+- activation sensitivity<br>
+- temporal inertia  </p>
+<p>Memory shapes future behavior.</p>
+<hr>
+<h2 id="12-time-advancement"><strong>12. Time Advancement</strong></h2>
+<p>Advance simulation time.</p>
+<p>Includes:
+- step increment<br>
+- cycle counters<br>
+- horizon updates  </p>
+<p>The city moves forward <strong>one coherent beat</strong>.</p>
+<hr>
+<h1 id="loop-timing-resolution"><strong>Loop Timing &amp; Resolution</strong></h1>
+<p>The loop supports multiple time resolutions:</p>
+<ul>
+<li>fast ticks (minutes / hours)  </li>
+<li>daily cycles  </li>
+<li>seasonal cycles  </li>
+<li>long‑arc steps  </li>
+</ul>
+<p>Different subsystems may update at <strong>different cadences</strong> within the same loop.</p>
+<hr>
+<h1 id="intervention-points"><strong>Intervention Points</strong></h1>
+<p>Interventions may be applied at:</p>
+<ul>
+<li>resource allocation  </li>
+<li>infrastructure investment  </li>
+<li>governance policy  </li>
+<li>information messaging  </li>
+<li>inequality mitigation  </li>
+</ul>
+<p>Interventions alter <strong>future loop behavior</strong>, not past state.</p>
+<hr>
+<h1 id="failure-termination-conditions"><strong>Failure &amp; Termination Conditions</strong></h1>
+<p>The loop may detect:</p>
+<ul>
+<li>systemic collapse  </li>
+<li>irreversible fragmentation  </li>
+<li>recovery stabilization  </li>
+<li>scenario completion  </li>
+</ul>
+<p>Termination is a <strong>state outcome</strong>, not an error.</p>
+<hr>
+<h1 id="integration-notes"><strong>Integration Notes</strong></h1>
+<p>The city simulation loop:</p>
+<ul>
+<li>binds all city subsystems  </li>
+<li>enforces execution order  </li>
+<li>preserves substrate coherence  </li>
+<li>enables scenario replay and comparison  </li>
+</ul>
+<p>This file is the <strong>bridge between theory and execution</strong>.</p>
+<hr>
+<h1 id="status"><strong>Status</strong></h1>
+<p>Canonical city‑scale simulation loop definition.<br>
+Designed for implementation in code, games, or analytical models.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "id": "validator_pulse",
+  "layer": "external_operator",
+  "triad": "continuity",
+  "name": "Validator Pulse",
+  "canonical": "R5",
+
+  "summary": "The validator pulse is the 1% external resonance source. It is not a dimension, but the external operator that completes the composite resonance chain beyond L99.",
+
+  "semantic_axis": "externalResonance",
+  "role": "external",
+  "category": "operator",
+  "percentage": "1%",
+
+  "composition": [],
+
+  "redirects": {
+    "down": "L99"
+  },
+
+  "description": {
+    "canonical": "The validator pulse provides the 1% external resonance that completes the 99/1 resonance structure. It is the origin of all composite envelopes.",
+    "cosmology": "In the cosmology chain, the validator pulse sits above L99 as the external resonance source.",
+    "continuity": "The validator pulse defines the external boundary of the continuity manifold.",
+    "mcp": "Used as the external operator for resonance validation and composite envelope completion."
+  },
+
+  "ai": {
+    "module": "L4_Continuity_Mechanics",
+    "dimension": "validator_pulse",
+    "version": "1.0.0",
+    "keywords": [
+      "validator",
+      "pulse",
+      "external",
+      "resonance",
+      "operator",
+      "continuity"
+    ],
+    "purpose": "Defines the external resonance operator for AI reasoning and composite modeling."
+  }
+}

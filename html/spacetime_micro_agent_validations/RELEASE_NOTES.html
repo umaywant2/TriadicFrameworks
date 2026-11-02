@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/spacetime_micro_agent_validations/RELEASE_NOTES.md">
+  <title>v2.0.0 Release Notes — vST Micro‑Agent: Spacetime Structural Query Wrapper</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/spacetime_micro_agent_validations/RELEASE_NOTES.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/spacetime_micro_agent_validations/RELEASE_NOTES.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="v200-release-notes-vst-microagent-spacetime-structural-query-wrapper"><strong>v2.0.0 Release Notes — vST Micro‑Agent: Spacetime Structural Query Wrapper</strong></h1>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>Version <strong>2.0.0</strong> expands the vST Micro‑Agent with a new structural‑detection example and updated documentation.<br>
+This release strengthens the artifact’s role as a <strong>substrate‑agnostic query wrapper</strong> for unknown or heterogeneous signals, including those originating from distributed sensor networks, communication channels, or archival datasets.</p>
+<p>The core logic of the micro‑agent remains unchanged.<br>
+This update adds clarity, examples, and improved onboarding for researchers evaluating structural patterns in unfamiliar data streams.</p>
+<hr>
+<h2 id="whats-new-in-v200"><strong>What’s New in v2.0.0</strong></h2>
+<h3 id="1-new-example-minimal-vst-structural-query-language-detection"><strong>1. New Example: Minimal vST Structural Query Language Detection</strong></h3>
+<p>A new example demonstrates how the micro‑agent can detect <strong>structural regularities</strong> in arbitrary input streams using the vST Structural Query Language (vST‑SQL).</p>
+<p>This example shows:</p>
+<ul>
+<li>how to wrap an unknown signal into a structural query envelope  </li>
+<li>how the interpreter identifies repeatable, traceable, and transfer‑addressable patterns  </li>
+<li>how structural detection differs from raw signal analysis  </li>
+<li>how to apply the micro‑agent to <strong>any</strong> high‑dimensional or unfamiliar data source  </li>
+</ul>
+<p>This example is intentionally minimal and substrate‑agnostic.<br>
+It does <strong>not</strong> make claims about any specific dataset or domain.<br>
+It simply demonstrates the method.</p>
+<hr>
+<h3 id="2-updated-documentation"><strong>2. Updated Documentation</strong></h3>
+<p>The following files have been added or expanded:</p>
+<ul>
+<li><strong>README.md</strong> — clearer overview of the micro‑agent’s purpose and usage  </li>
+<li><strong>New example folder</strong> for structural detection  </li>
+<li><strong>Interpreter notes</strong> updated to reflect the new example  </li>
+<li><strong>Schema documentation</strong> clarified for v2.0.0  </li>
+</ul>
+<p>These updates improve onboarding for researchers exploring structural analysis across domains.</p>
+<hr>
+<h3 id="3-metadata-improvements"><strong>3. Metadata Improvements</strong></h3>
+<p>The Zenodo metadata (<code>zenodo.json</code>) has been updated to:</p>
+<ul>
+<li>reflect the new version  </li>
+<li>include keywords related to structural detection, substrate‑agnostic analysis, and signal‑agnostic query wrappers  </li>
+<li>clarify the scientific scope of the artifact  </li>
+</ul>
+<hr>
+<h2 id="why-this-matters"><strong>Why This Matters</strong></h2>
+<p>The vST Micro‑Agent is designed for <strong>unknown‑signal environments</strong>:</p>
+<ul>
+<li>distributed sensor networks  </li>
+<li>communication channels with unfamiliar structure  </li>
+<li>archival datasets lacking semantic annotation  </li>
+<li>exploratory analysis of complex or noisy streams  </li>
+</ul>
+<p>This release provides a <strong>clear, minimal demonstration</strong> of how structural queries can reveal patterns that are not visible at the raw signal level.</p>
+<p>It does not assert the presence of structure in any specific dataset.<br>
+It simply provides the tools and examples needed for researchers to explore structure where appropriate.</p>
+<hr>
+<h2 id="folder-structure-for-v200"><strong>Folder Structure for v2.0.0</strong></h2>
+<p>Here is the recommended structure including the new example:</p>
+<pre><code>📐
+
+README.md
+
+examples/
+  sample_interpretation_walkthrough.md
+  sample_query_envelope.json
+  structural_detection_minimal/
+    example_signal_input.json
+    example_query_envelope.json
+    example_interpretation_output.md
+
+interpreter/
+  interpreter_logic.md
+  interpreter_pseudocode.txt
+
+schema/
+  vST_micro_agent.schema.json
+
+metadata/
+  zenodo.json
+</code></pre>
+<p>This keeps the new structural‑detection example cleanly separated and easy to reference.</p>
+  </main>
+</body>
+</html>

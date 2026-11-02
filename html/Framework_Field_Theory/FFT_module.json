@@ -1,0 +1,208 @@
+{
+  "module": "Framework Field Theory",
+  "version": "1.0",
+  "category": "fft-field",
+  "summary": "Triadic field architecture — the meta‑framework of TriadicFrameworks. 14 Parts covering origin, definition, operator grammar (7 families: B‑Ops, R‑Ops, T‑Ops, L‑Ops, E‑Ops, H‑Ops, C‑Ops), dimensionality (D0–D9), identity and signatures, meta‑architecture, coherence engine, examples, teaching, research frontier, infrastructure, appendices (A–Z + AA–AL), 3 AI reviews, external review, and mathematical foundations. ISBN‑pending. EST FILR operator.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_I_Origin/01_Why_TriadicFrameworks_Becomes_a_Field.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_I_Origin/02_The_Threshold_Moment.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_II_Definition/03_What_Is_FFT.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_II_Definition/04_Why_FFT_Exists.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_II_Definition/05_What_FFT_Studies.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_III_Operators/06_Operator_Families.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_III_Operators/07_Operator_Ecology.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_IV_Dimensionality/08_Dimensional_Layers.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_IV_Dimensionality/09_Dimensional_Compatibility.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_V_Identity/10_Framework_Signatures.md",
+      "role": "signature",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_V_Identity/11_Framework_Evolution.md",
+      "role": "engine",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_V_Identity/12_Coherence_And_Paradox.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/13_Meta_Architecture.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/14_Coherence_Engine.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_VII_Examples/15_Example_Frameworks.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_VII_Examples/16_Cross_Domain_Translations.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_VII_Examples/17_Paradox_Resolution.md",
+      "role": "example",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_VII_Examples/18_Dimensional_Upgrades.md",
+      "role": "example",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_VII_Examples/19_Hybrid_Frameworks.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_VIII_Teaching/20_Teaching_Modules.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_VIII_Teaching/21_Learning_Path.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_IX_Research/22_Research_Questions.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_IX_Research/23_Open_Problems.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_IX_Research/26_Testable_Predictions.md",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_IX_Research/27_LLM_Behavior_Simulations.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_IX_Research/28_Peer-Review_Validation.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_IX_Research/29_Engineering_Breakthroughs.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_IX_Research/30_Citations_Established_Literature.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_X_Infrastructure/24_GitHub_Architecture.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_X_Infrastructure/25_Contribution_Guide.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/Grok.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/Perplexity.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/Gemini.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_XIII_External_Reviewer/Duck_ai.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Book_Repo_Eval_Edition/PART_XIV_Mathematical_Foundations/README.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "unlocks/FFT_RTT_Civilization_Unlocks.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "unlocks/AI_Drift_Eras.md",
+      "role": "extension",
+      "analyzer_layer": "drift"
+    }
+  ]
+}

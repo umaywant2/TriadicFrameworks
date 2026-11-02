@@ -1,0 +1,64 @@
+{
+  "artifact": "",
+  "module": "LINEAGE",
+  "version": "",
+  "timestamp": "",
+  "author": "Nawder Loswin",
+  "canonical_path": "",
+
+  "lineage": {
+    "origin": {
+      "canonical_sources": [],
+      "earliest_known": "",
+      "regime_of_origin": ""
+    },
+    "cross_canon": {
+      "mapped_canons": [],
+      "external_references": []
+    },
+    "inheritance": {
+      "kept": [],
+      "modified": [],
+      "removed": []
+    },
+    "drift": {
+      "semantic": "",
+      "operational": "",
+      "ethical": "",
+      "version_history": []
+    },
+    "genealogy": {
+      "parent": "",
+      "children": [],
+      "variants": []
+    }
+  },
+
+  "prior_art": {
+    "citations": [],
+    "public_timestamps": [],
+    "license": "",
+    "defensive_publication_links": []
+  },
+
+  "laundering_vectors": {
+    "terminology_flattening": "",
+    "operator_renaming": "",
+    "regime_neutralization": "",
+    "ancestry_erasure": "",
+    "structural_reframing": "",
+    "equation_rederivation": "",
+    "novel_context_injection": "",
+    "api_fragmentation": "",
+    "stability_recasting": "",
+    "defect_reinterpretation": "",
+    "drift_concealment": "",
+    "licensing_laundering": ""
+  },
+
+  "deployment": {
+    "constraints": [],
+    "warnings": [],
+    "known_laundering_attempts": []
+  }
+}

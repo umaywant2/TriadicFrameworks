@@ -1,0 +1,163 @@
+<svg width="1080" height="600" viewBox="0 0 1080 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05030a"/>
+      <stop offset="50%" stop-color="#1b2345"/>
+      <stop offset="100%" stop-color="#2b1455"/>
+    </linearGradient>
+    <radialGradient id="coreGreek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe9b3"/>
+      <stop offset="100%" stop-color="#c28b2f"/>
+    </radialGradient>
+    <radialGradient id="coreHindu" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e3ffe3"/>
+      <stop offset="100%" stop-color="#4fbf4f"/>
+    </radialGradient>
+    <radialGradient id="coreSumerian" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e3f3ff"/>
+      <stop offset="100%" stop-color="#4f8fbf"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1080" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="540" y="40" fill="#ffffff" font-size="20" text-anchor="middle">
+    Supersphere Comparison — Greek · Hindu · Sumerian
+  </text>
+
+  <!-- Layout: three superspheres horizontally -->
+  <!-- Greek Supersphere (left) -->
+  <circle cx="220" cy="300" r="70" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="220" cy="300" r="35" fill="url(#coreGreek)" stroke="#ffd27f" stroke-width="1"/>
+  <text x="220" y="295" fill="#000000" font-size="12" text-anchor="middle">
+    Greek
+  </text>
+  <text x="220" y="315" fill="#000000" font-size="10" text-anchor="middle">
+    Zeus‑centered
+  </text>
+
+  <!-- Greek lower cone -->
+  <polygon points="220,300 160,460 280,460" fill="none" stroke="#ffcc66" stroke-width="1.4"/>
+  <text x="220" y="480" fill="#ffcc66" font-size="9" text-anchor="middle">
+    Void: Chaos (symbolic)
+  </text>
+  <text x="220" y="445" fill="#ff8866" font-size="9" text-anchor="middle">
+    Shadow: Hades · Eris
+  </text>
+  <text x="220" y="410" fill="#ffe6a3" font-size="9" text-anchor="middle">
+    Clarity: Zeus · Apollo
+  </text>
+
+  <!-- Greek equator -->
+  <ellipse cx="220" cy="300" rx="120" ry="35" fill="none" stroke="#ff66ff" stroke-width="1.2"/>
+  <text x="220" y="270" fill="#ffb3ff" font-size="9" text-anchor="middle">
+    Dimensional: Olympus/Hades/Sea
+  </text>
+  <text x="220" y="330" fill="#ff66ff" font-size="9" text-anchor="middle">
+    Liminal: Hermes · Hecate
+  </text>
+
+  <!-- Greek upper cone -->
+  <polygon points="220,300 160,140 280,140" fill="none" stroke="#66ffcc" stroke-width="1.4"/>
+  <text x="220" y="210" fill="#66ffcc" font-size="9" text-anchor="middle">
+    Projection: Heroes
+  </text>
+  <text x="220" y="185" fill="#66c2ff" font-size="9" text-anchor="middle">
+    Flow: rivers/winds
+  </text>
+  <text x="220" y="160" fill="#ff6666" font-size="9" text-anchor="middle">
+    Emergent: hybrids (peripheral)
+  </text>
+
+  <!-- Hindu Supersphere (center) -->
+  <circle cx="540" cy="300" r="90" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+  <circle cx="540" cy="300" r="45" fill="url(#coreHindu)" stroke="#a8ff9f" stroke-width="1"/>
+  <text x="540" y="295" fill="#000000" font-size="12" text-anchor="middle">
+    Hindu
+  </text>
+  <text x="540" y="315" fill="#000000" font-size="10" text-anchor="middle">
+    Brahman‑centered
+  </text>
+
+  <!-- Hindu lower cone -->
+  <polygon points="540,300 460,500 620,500" fill="none" stroke="#ffcc66" stroke-width="1.6"/>
+  <text x="540" y="520" fill="#ffcc66" font-size="9" text-anchor="middle">
+    Void: Brahman (non‑dual)
+  </text>
+  <text x="540" y="470" fill="#ff8866" font-size="9" text-anchor="middle">
+    Shadow: Shiva · Kali
+  </text>
+  <text x="540" y="435" fill="#ffe6a3" font-size="9" text-anchor="middle">
+    Clarity: Vishnu · Krishna
+  </text>
+
+  <!-- Hindu equator -->
+  <ellipse cx="540" cy="300" rx="170" ry="45" fill="none" stroke="#ff66ff" stroke-width="1.6"/>
+  <text x="540" y="260" fill="#ffb3ff" font-size="9" text-anchor="middle">
+    Dimensional: Lokas (multi‑layer)
+  </text>
+  <text x="540" y="340" fill="#ff66ff" font-size="9" text-anchor="middle">
+    Liminal: Hanuman · Garuda · Ganesha
+  </text>
+
+  <!-- Hindu upper cone -->
+  <polygon points="540,300 460,120 620,120" fill="none" stroke="#66ffcc" stroke-width="1.6"/>
+  <text x="540" y="220" fill="#66ffcc" font-size="9" text-anchor="middle">
+    Projection: Avatars
+  </text>
+  <text x="540" y="190" fill="#66c2ff" font-size="9" text-anchor="middle">
+    Flow: Vayu · Ganga · Maruts
+  </text>
+  <text x="540" y="160" fill="#ff6666" font-size="9" text-anchor="middle">
+    Emergent: Narasimha · Ganesha · Garuda
+  </text>
+
+  <!-- Sumerian Supersphere (right) -->
+  <circle cx="860" cy="300" r="85" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+  <circle cx="860" cy="300" r="42" fill="url(#coreSumerian)" stroke="#9fd3ff" stroke-width="1"/>
+  <text x="860" y="295" fill="#000000" font-size="12" text-anchor="middle">
+    Sumerian
+  </text>
+  <text x="860" y="315" fill="#000000" font-size="10" text-anchor="middle">
+    Abzu/Tiamat‑centered
+  </text>
+
+  <!-- Sumerian lower cone -->
+  <polygon points="860,300 790,500 930,500" fill="none" stroke="#ffcc66" stroke-width="1.6"/>
+  <text x="860" y="520" fill="#ffcc66" font-size="9" text-anchor="middle">
+    Void: Abzu · Tiamat
+  </text>
+  <text x="860" y="470" fill="#ff8866" font-size="9" text-anchor="middle">
+    Shadow: Ereshkigal · Kur · Nergal
+  </text>
+  <text x="860" y="435" fill="#ffe6a3" font-size="9" text-anchor="middle">
+    Clarity: Enlil · Enki · Utu
+  </text>
+
+  <!-- Sumerian equator -->
+  <ellipse cx="860" cy="300" rx="150" ry="40" fill="none" stroke="#ff66ff" stroke-width="1.4"/>
+  <text x="860" y="260" fill="#ffb3ff" font-size="9" text-anchor="middle">
+    Dimensional: Anu · Ki · Ninhursag
+  </text>
+  <text x="860" y="340" fill="#ff66ff" font-size="9" text-anchor="middle">
+    Liminal: Inanna · Ninshubur · Neti · Gilgamesh/Enkidu
+  </text>
+
+  <!-- Sumerian upper cone -->
+  <polygon points="860,300 790,120 930,120" fill="none" stroke="#66ffcc" stroke-width="1.6"/>
+  <text x="860" y="220" fill="#66ffcc" font-size="9" text-anchor="middle">
+    Projection: Uruk · Dumuzi · Ziusudra
+  </text>
+  <text x="860" y="190" fill="#66c2ff" font-size="9" text-anchor="middle">
+    Flow: Pazuzu · Ugallu · rivers
+  </text>
+  <text x="860" y="160" fill="#ff6666" font-size="9" text-anchor="middle">
+    Emergent: Anzu · Humbaba · Asag · Lamashtu
+  </text>
+
+  <!-- Comparative notes -->
+  <text x="540" y="560" fill="#ffffff" font-size="11" text-anchor="middle">
+    Hindu: largest & most cyclic · Sumerian: deepest substrate & shadow · Greek: most clarity‑balanced
+  </text>
+</svg>

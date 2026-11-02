@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RTT Clarity Canon Dashboard</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b0c10;
+      color: #e5e9f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 24px 32px;
+      background: #1f2833;
+      border-bottom: 1px solid #45a29e33;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #66fcf1;
+    }
+    header p {
+      margin: 8px 0 0;
+      color: #c5c6c7;
+      font-size: 14px;
+    }
+    main {
+      padding: 24px 32px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 32px;
+    }
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #66fcf1;
+      border-bottom: 1px solid #45a29e55;
+      padding-bottom: 4px;
+    }
+    section p {
+      font-size: 14px;
+      color: #c5c6c7;
+      line-height: 1.5;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .card {
+      background: #1f2833;
+      border-radius: 8px;
+      padding: 16px 18px;
+      border: 1px solid #45a29e33;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #c5c6c7;
+    }
+    .card p {
+      margin: 4px 0;
+      font-size: 13px;
+    }
+    .vector {
+      font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+      color: #e5e9f0;
+      margin-top: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 8px 10px;
+      border: 1px solid #45a29e33;
+      text-align: left;
+    }
+    th {
+      background: #1f2833;
+      color: #66fcf1;
+    }
+    tr:nth-child(even) td {
+      background: #14191f;
+    }
+    .bars {
+      margin-top: 10px;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+      font-size: 12px;
+      color: #c5c6c7;
+    }
+    .bar-label {
+      width: 70px;
+    }
+    .bar-track {
+      flex: 1;
+      height: 10px;
+      background: #0b0c10;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid #45a29e55;
+      margin: 0 8px;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+    .bar-value {
+      width: 40px;
+      text-align: right;
+      color: #e5e9f0;
+    }
+    .freqi { background: #5e81ac; }
+    .aurion { background: #88c0d0; }
+    .forci { background: #a3be8c; }
+    .flui { background: #bf616a; }
+    .note {
+      font-size: 12px;
+      color: #7f8c9f;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RTT Clarity Canon Dashboard</h1>
+    <p>Multi‑model spectral clarity comparison across Jev‑class and GPT‑6‑class operators.</p>
+  </header>
+
+  <main>
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>
+        This dashboard presents RTT‑aligned clarity profiles for different AI model classes.
+        Each model is expressed as a four‑channel spectral clarity vector:
+        <code>&lt;C_freqi, C_aurion, C_forci, C_flui&gt;</code>, corresponding to categorical,
+        scalar, polarity, and drift clarity respectively.
+      </p>
+    </section>
+
+    <section id="model-inputs">
+      <h2>Model Inputs</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Jev‑Class Model</h3>
+          <p><strong>Decision regime:</strong> Typed (choice / score / new)</p>
+          <p><strong>Drift:</strong> None (Flui removed)</p>
+          <p><strong>Coherence layers:</strong> L0–L2</p>
+          <p><strong>Confidence:</strong> RLCD scalar probability</p>
+        </div>
+        <div class="card">
+          <h3>GPT‑6‑Class Model</h3>
+          <p><strong>Decision regime:</strong> Emergent, narrative‑heavy</p>
+          <p><strong>Drift:</strong> High (Flui active)</p>
+          <p><strong>Coherence layers:</strong> L0–L3</p>
+          <p><strong>Confidence:</strong> margin‑based, coherence‑cost dependent</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="clarity-vectors">
+      <h2>Clarity Vectors</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Jev Spectral Clarity</h3>
+          <p>Sample RTT clarity vector:</p>
+          <div class="vector">&lt;0.70, 0.65, 0.85, 1.00&gt;</div>
+          <div class="bars">
+            <div class="bar-row">
+              <div class="bar-label">Freqi</div>
+              <div class="bar-track">
+                <div class="bar-fill freqi" style="width:70%;"></div>
+              </div>
+              <div class="bar-value">0.70</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Aurion</div>
+              <div class="bar-track">
+                <div class="bar-fill aurion" style="width:65%;"></div>
+              </div>
+              <div class="bar-value">0.65</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Forci</div>
+              <div class="bar-track">
+                <div class="bar-fill forci" style="width:85%;"></div>
+              </div>
+              <div class="bar-value">0.85</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Flui</div>
+              <div class="bar-track">
+                <div class="bar-fill flui" style="width:100%;"></div>
+              </div>
+              <div class="bar-value">1.00</div>
+            </div>
+          </div>
+          <p class="note">
+            Jev’s strongest channel is Flui clarity (drift‑free), with high polarity stability and moderate categorical/scalar clarity.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>GPT‑6 Spectral Clarity</h3>
+          <p>Sample RTT clarity vector:</p>
+          <div class="vector">&lt;0.45, 0.52, 0.40, 0.22&gt;</div>
+          <div class="bars">
+            <div class="bar-row">
+              <div class="bar-label">Freqi</div>
+              <div class="bar-track">
+                <div class="bar-fill freqi" style="width:45%;"></div>
+              </div>
+              <div class="bar-value">0.45</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Aurion</div>
+              <div class="bar-track">
+                <div class="bar-fill aurion" style="width:52%;"></div>
+              </div>
+              <div class="bar-value">0.52</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Forci</div>
+              <div class="bar-track">
+                <div class="bar-fill forci" style="width:40%;"></div>
+              </div>
+              <div class="bar-value">0.40</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Flui</div>
+              <div class="bar-track">
+                <div class="bar-fill flui" style="width:22%;"></div>
+              </div>
+              <div class="bar-value">0.22</div>
+            </div>
+          </div>
+          <p class="note">
+            GPT‑6 shows reduced clarity in all channels, with particularly low drift clarity due to strong narrative turbulence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="spectral-comparison">
+      <h2>Spectral Comparison (Jev vs GPT‑6)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Channel</th>
+            <th>Jev Clarity</th>
+            <th>GPT‑6 Clarity</th>
+            <th>Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Freqi (Categorical)</td>
+            <td>0.70</td>
+            <td>0.45</td>
+            <td>Jev’s categorical decisions are more entropy‑stable; GPT‑6’s categories are more drift‑affected.</td>
+          </tr>
+          <tr>
+            <td>Aurion (Scalar)</td>
+            <td>0.65</td>
+            <td>0.52</td>
+            <td>Jev’s scalar confidence is more tightly calibrated; GPT‑6’s magnitude is diluted by coherence cost.</td>
+          </tr>
+          <tr>
+            <td>Forci (Polarity)</td>
+            <td>0.85</td>
+            <td>0.40</td>
+            <td>Jev rarely flips polarity; GPT‑6 flips more often under narrative turbulence.</td>
+          </tr>
+          <tr>
+            <td>Flui (Drift)</td>
+            <td>1.00</td>
+            <td>0.22</td>
+            <td>Jev is drift‑free; GPT‑6 exhibits strong linguistic drift and hallucination potential.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="drift-stability">
+      <h2>Drift & Stability</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>Jev</th>
+            <th>GPT‑6</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drift level</td>
+            <td>None (Flui removed)</td>
+            <td>High (Flui dominant)</td>
+          </tr>
+          <tr>
+            <td>Regime type</td>
+            <td>Typed, declared</td>
+            <td>Emergent, contextual</td>
+          </tr>
+          <tr>
+            <td>Coherence layers</td>
+            <td>L0–L2 (substrate + calibration)</td>
+            <td>L0–L3 (substrate + reasoning + narrative)</td>
+          </tr>
+          <tr>
+            <td>Flui status</td>
+            <td>Removed, clarity = 1.0</td>
+            <td>Active, clarity &lt; 0.3 typical</td>
+          </tr>
+          <tr>
+            <td>Clarity stability</td>
+            <td>High, drift‑free, bounded</td>
+            <td>Moderate, drift‑affected, context‑sensitive</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="note">
+        Jev behaves as a driftless clarity engine, ideal for substrate diagnostics. GPT‑6 behaves as a narrative coherence engine,
+        powerful but turbulence‑prone. RTT clarity vectors make these differences explicit and measurable.
+      </p>
+    </section>
+
+    <section id="channel-explanations">
+      <h2>Clarity Channels (RTT Canon)</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Freqi — Categorical Clarity</h3>
+          <p>
+            Measures how cleanly resonance collapses into discrete options. High Freqi clarity corresponds to low entropy and
+            stable categorical decisions across perturbations.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Aurion — Scalar Clarity</h3>
+          <p>
+            Measures the strength of scalar emission (confidence magnitude). In Jev, this is RLCD‑calibrated; in GPT‑6, it is
+            influenced by coherence cost and reasoning depth.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Forci — Polarity Clarity</h3>
+          <p>
+            Measures stability of binary decisions (yes/no, true/false). High Forci clarity means low flip‑rate across repeated
+            queries and micro‑context changes.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Flui — Drift Clarity</h3>
+          <p>
+            Measures turbulence in linguistic and narrative channels. Jev achieves maximal Flui clarity by removing drift entirely;
+            GPT‑6 exhibits reduced Flui clarity due to active generative drift.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

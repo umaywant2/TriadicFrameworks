@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "RTT Data Processing Unit",
+  "type": "object",
+  "properties": {
+    "dpu_id": { "type": "string" },
+    "compute_units": { "type": "number" },
+    "memory_mb": { "type": "number" },
+    "triadic_compute_profile": { "type": "object" },
+    "supported_operators": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

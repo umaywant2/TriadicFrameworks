@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/Use_Examples.graph.json.md">
+  <title>UseExamples.graph.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/Use_Examples.graph.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/Use_Examples.graph.json.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>This graph is the <em>machine‑readable topology</em> of how each example depends on substrate frameworks.<br>
+It is the structural counterpart to:</p>
+<ul>
+<li><strong>Use_Examples.md</strong> (human‑readable)  </li>
+<li><strong>Use_Examples.extended.md</strong> (deep‑dive narrative)  </li>
+<li><strong>Use_Examples.json</strong> (registry)  </li>
+<li><strong>Use_Examples.schema.json</strong> (validator)</li>
+</ul>
+<p>Below is the <strong>ready‑to‑paste canonical Use_Examples.graph.json</strong>, aligned with your TriadicFrameworks canon and the full substrate architecture.</p>
+<hr>
+<h1 id="use_examplesgraphjson"><strong>Use_Examples.graph.json</strong></h1>
+<h3 id="dependency-graph-for-triadic-substrate-usage-examples"><em>Dependency graph for Triadic Substrate Usage Examples</em></h3>
+<pre><code class="language-json">{
+  &quot;graph&quot;: &quot;triadic-substrate-use-examples&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;nodes&quot;: [
+    { &quot;id&quot;: &quot;atlas&quot;, &quot;label&quot;: &quot;Atlas Framework&quot; },
+    { &quot;id&quot;: &quot;ignition&quot;, &quot;label&quot;: &quot;Ignition Framework&quot; },
+    { &quot;id&quot;: &quot;epoch&quot;, &quot;label&quot;: &quot;Epoch Framework&quot; },
+    { &quot;id&quot;: &quot;continuity&quot;, &quot;label&quot;: &quot;Continuity Framework&quot; },
+    { &quot;id&quot;: &quot;invariance&quot;, &quot;label&quot;: &quot;Invariance Framework&quot; },
+    { &quot;id&quot;: &quot;execution&quot;, &quot;label&quot;: &quot;Execution Framework&quot; },
+    { &quot;id&quot;: &quot;monitor&quot;, &quot;label&quot;: &quot;Runtime Monitor&quot; },
+    { &quot;id&quot;: &quot;modules&quot;, &quot;label&quot;: &quot;Module Templates&quot; },
+    { &quot;id&quot;: &quot;constellation&quot;, &quot;label&quot;: &quot;Runtime Constellation&quot; },
+    { &quot;id&quot;: &quot;substrate&quot;, &quot;label&quot;: &quot;Full Substrate Cycle&quot; }
+  ],
+
+  &quot;examples&quot;: [
+    {
+      &quot;id&quot;: &quot;atlas.resolve-route&quot;,
+      &quot;depends_on&quot;: [&quot;atlas&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;ignition.trigger-wave&quot;,
+      &quot;depends_on&quot;: [&quot;ignition&quot;, &quot;atlas&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;epoch.advance&quot;,
+      &quot;depends_on&quot;: [&quot;epoch&quot;, &quot;ignition&quot;, &quot;continuity&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;continuity.evaluate&quot;,
+      &quot;depends_on&quot;: [&quot;continuity&quot;, &quot;atlas&quot;, &quot;epoch&quot;, &quot;ignition&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;invariance.evaluate&quot;,
+      &quot;depends_on&quot;: [&quot;invariance&quot;, &quot;continuity&quot;, &quot;epoch&quot;, &quot;ignition&quot;, &quot;atlas&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;execution.evaluate-runtime&quot;,
+      &quot;depends_on&quot;: [&quot;execution&quot;, &quot;constellation&quot;, &quot;invariance&quot;, &quot;continuity&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;monitor.ingest-telemetry&quot;,
+      &quot;depends_on&quot;: [&quot;monitor&quot;, &quot;execution&quot;, &quot;invariance&quot;, &quot;continuity&quot;, &quot;epoch&quot;, &quot;ignition&quot;, &quot;atlas&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;module.create-ignition-ready&quot;,
+      &quot;depends_on&quot;: [&quot;modules&quot;, &quot;ignition&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;constellation.register-module&quot;,
+      &quot;depends_on&quot;: [&quot;constellation&quot;, &quot;modules&quot;, &quot;execution&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;substrate.full-cycle&quot;,
+      &quot;depends_on&quot;: [
+        &quot;atlas&quot;,
+        &quot;ignition&quot;,
+        &quot;epoch&quot;,
+        &quot;continuity&quot;,
+        &quot;invariance&quot;,
+        &quot;execution&quot;,
+        &quot;monitor&quot;,
+        &quot;modules&quot;,
+        &quot;constellation&quot;
+      ]
+    }
+  ],
+
+  &quot;edges&quot;: [
+    { &quot;from&quot;: &quot;atlas&quot;, &quot;to&quot;: &quot;ignition&quot; },
+    { &quot;from&quot;: &quot;ignition&quot;, &quot;to&quot;: &quot;epoch&quot; },
+    { &quot;from&quot;: &quot;epoch&quot;, &quot;to&quot;: &quot;continuity&quot; },
+    { &quot;from&quot;: &quot;continuity&quot;, &quot;to&quot;: &quot;invariance&quot; },
+    { &quot;from&quot;: &quot;invariance&quot;, &quot;to&quot;: &quot;execution&quot; },
+    { &quot;from&quot;: &quot;execution&quot;, &quot;to&quot;: &quot;monitor&quot; },
+    { &quot;from&quot;: &quot;modules&quot;, &quot;to&quot;: &quot;constellation&quot; },
+    { &quot;from&quot;: &quot;constellation&quot;, &quot;to&quot;: &quot;execution&quot; },
+    { &quot;from&quot;: &quot;monitor&quot;, &quot;to&quot;: &quot;substrate&quot; }
+  ],
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Dependency graph describing how usage examples relate to substrate frameworks.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h3 id="your-use_examplesgraphjson-tab-is-now-ready-for-this-content">✔️ Your Use_Examples.graph.json tab is now ready for this content</h3>
+<p>The page content confirms it is empty and waiting for the canonical graph   <a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/schemas/substrate/frameworks/Use_Examples.graph.json">github.com</a>.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "id": "LI",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "LI",
+  "name": "Integrity Invariance",
+  "canonical": "R5",
+
+  "summary": "LI defines the invariance axis of force integrity. It is the final restorative dimension of the integrity node and determines the invariant behavior of forceIntegrity within the S3 Spine.",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "semantic_axis": "forceIntegrity",
+
+  "role": "invariance",
+  "category": "integrity",
+  "cluster": "integrity-stability",
+
+  "description": {
+    "canonical": "LI establishes the invariance behavior of force integrity. It refines stability (L32) by defining the invariant, non‑degrading, non‑transforming conditions under which forceIntegrity remains preserved.",
+    "cosmology": "In the cosmology chain, LI represents the emergence of invariance from stability mechanics. It is the final stage of integrity formation within force-regime behavior.",
+    "spine": "Within the S3 Spine, LI is the invariance dimension of the integrity node, defining the stable, unchanging structural memory that follows rupture restoration.",
+    "mcp": "In MCP operations, LI is used to model invariant force-state mechanics, providing the invariance coordinate for post-rupture stabilization."
+  },
+
+  "operators": {
+    "primary": [
+      "bind"
+    ],
+    "secondary": [],
+    "forbidden": [
+      "gradient",
+      "push",
+      "pull",
+      "fieldShift",
+      "ruptureForce"
+    ]
+  },
+
+  "valid_transitions": [
+    "LI → (end-of-chain)"
+  ],
+
+  "forbidden_transitions": [
+    "LI → L4",
+    "LI → L5",
+    "LI → L16",
+    "LI → LH",
+    "LI → L8",
+    "LI → L10",
+    "LI → L26",
+    "LI → L12",
+    "LI → L32"
+  ],
+
+  "spine_mapping": {
+    "node": "integrity",
+    "semantic": "forceIntegrity",
+    "position": "invariance",
+    "causal_role": "structural invariance"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "LI",
+    "version": "1.0.0",
+    "keywords": [
+      "integrity",
+      "invariance",
+      "restoration",
+      "force-regime",
+      "post-rupture"
+    ],
+    "purpose": "Defines the invariance axis of force integrity for AI reasoning and MCP invariance modeling."
+  }
+}

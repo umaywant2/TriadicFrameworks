@@ -1,0 +1,43 @@
+{
+  "module": "LACTOS",
+  "version": "1.0",
+  "category": "collision-core",
+  "summary": "Localized Anisotropic Collision & Triadic Ontology System — collision regime taxonomy, cross‑ontology collision mapping (SO ↔ ISO ↔ LACTOS), event pipeline (detection → classification → routing → resolution), SO‑ISO‑LACTOS triadic alignment wheel, and VCG‑LACTOS integration diagram. Siblings: SO, ISO, VCG.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "LACTOS_collision_regime_taxonomy.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "LACTOS_cross_ontology_collision_mapping.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "LACTOS_event_pipeline.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "SO_ISO_LACTOS_triadic_alignment_wheel.md",
+      "role": "map",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "VCG_LACTOS_integration_diagram.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    }
+  ]
+}

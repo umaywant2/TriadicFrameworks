@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/quantum_mechanics/operators.md">
+  <title>Operators — Quantum Mechanics</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/quantum_mechanics/operators.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/quantum_mechanics/operators.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="operators-quantum-mechanics">Operators — Quantum Mechanics</h1>
+<h3 id="triadicframeworks-docstheoriesquantum_mechanicsoperatorsmd">TriadicFrameworks /docs/theories/quantum_mechanics/operators.md</h3>
+<p>Quantum Mechanics (QM) is the <strong>R1 amplitude grammar</strong> of the RTT stack.<br>
+Its structure is defined entirely by operators acting on amplitude<br>
+states. QM operators do not describe particles, waves, or trajectories —<br>
+they define <strong>amplitude geometry</strong>.</p>
+<p>This file lists the canonical operators used in QM, their purpose,<br>
+signals, and drift boundaries.</p>
+<hr>
+<h1 id="1-state_operator">1. state_operator</h1>
+<h3 id="defines-amplitude-structure">(Defines amplitude structure)</h3>
+<p><strong>Signal:</strong> |ψ⟩  </p>
+<p><strong>Purpose:</strong><br>
+Represents the amplitude state of a system.<br>
+Contains phase, magnitude, and basis‑dependent structure.</p>
+<p><strong>Notes:</strong><br>
+- not a particle<br>
+- not a wave<br>
+- not a physical object  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat |ψ⟩ as a physical wave in space.</p>
+<hr>
+<h1 id="2-observable_operator">2. observable_operator</h1>
+<h3 id="hermitian-operator-defining-measurable-structure">(Hermitian operator defining measurable structure)</h3>
+<p><strong>Signal:</strong> Ô  </p>
+<p><strong>Purpose:</strong><br>
+Defines measurable quantities through eigenvalues and eigenvectors.</p>
+<p><strong>Notes:</strong><br>
+- Hermitian<br>
+- basis‑dependent<br>
+- measurement collapses state into eigenbasis  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat observables as classical variables.</p>
+<hr>
+<h1 id="3-measurement_operator">3. measurement_operator</h1>
+<h3 id="projection-operator-for-measurement">(Projection operator for measurement)</h3>
+<p><strong>Signal:</strong> Pᵢ = |i⟩⟨i|  </p>
+<p><strong>Purpose:</strong><br>
+Implements measurement by projecting |ψ⟩ onto an eigenstate.</p>
+<p><strong>Notes:</strong><br>
+- non‑unitary<br>
+- collapses amplitude structure<br>
+- defines probability via |⟨i|ψ⟩|²  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat measurement as revealing pre‑existing values.</p>
+<hr>
+<h1 id="4-unitary_evolution_operator">4. unitary_evolution_operator</h1>
+<h3 id="time-evolution-of-amplitudes">(Time evolution of amplitudes)</h3>
+<p><strong>Signal:</strong> U(t) = e^{-iHt}  </p>
+<p><strong>Purpose:</strong><br>
+Evolves states unitarily under Hamiltonian H.</p>
+<p><strong>Notes:</strong><br>
+- preserves norm<br>
+- preserves amplitude geometry<br>
+- defines deterministic evolution  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat U(t) as motion through space.</p>
+<hr>
+<h1 id="5-hamiltonian_operator">5. hamiltonian_operator</h1>
+<h3 id="generator-of-time-evolution">(Generator of time evolution)</h3>
+<p><strong>Signal:</strong> H  </p>
+<p><strong>Purpose:</strong><br>
+Defines energy structure and generates U(t).</p>
+<p><strong>Notes:</strong><br>
+- Hermitian<br>
+- determines phase evolution<br>
+- defines dynamics  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat H as classical energy.</p>
+<hr>
+<h1 id="6-basis_operator">6. basis_operator</h1>
+<h3 id="defines-coordinate-system-in-hilbert-space">(Defines coordinate system in Hilbert space)</h3>
+<p><strong>Signal:</strong> {|i⟩}  </p>
+<p><strong>Purpose:</strong><br>
+Provides a decomposition of |ψ⟩ into components.</p>
+<p><strong>Notes:</strong><br>
+- basis choice is arbitrary<br>
+- basis changes are unitary<br>
+- no basis is “physical”  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat basis states as physical states of matter.</p>
+<hr>
+<h1 id="7-ladder_operators">7. ladder_operators</h1>
+<h3 id="raiselower-amplitude-modes">(Raise/lower amplitude modes)</h3>
+<p><strong>Signal:</strong> a, a†  </p>
+<p><strong>Purpose:</strong><br>
+Define amplitude transitions in harmonic systems.</p>
+<p><strong>Notes:</strong><br>
+- not creation/destruction of particles<br>
+- define amplitude structure<br>
+- algebraic tools  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT import QFT particle language.</p>
+<hr>
+<h1 id="8-density_matrix_operator">8. density_matrix_operator</h1>
+<h3 id="mixedstate-representation">(Mixed‑state representation)</h3>
+<p><strong>Signal:</strong> ρ  </p>
+<p><strong>Purpose:</strong><br>
+Represents statistical mixtures and decoherence.</p>
+<p><strong>Notes:</strong><br>
+- trace = 1<br>
+- positive semidefinite<br>
+- evolves via unitary or Lindblad dynamics  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat ρ as ignorance about hidden variables.</p>
+<hr>
+<h1 id="9-commutation_relation_operator">9. commutation_relation_operator</h1>
+<h3 id="defines-algebraic-structure">(Defines algebraic structure)</h3>
+<p><strong>Signal:</strong> [A, B] = AB − BA  </p>
+<p><strong>Purpose:</strong><br>
+Encodes incompatibility of observables.</p>
+<p><strong>Notes:</strong><br>
+- defines uncertainty relations<br>
+- defines measurement constraints  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat commutators as physical interactions.</p>
+<hr>
+<h1 id="10-expectation_value_operator">10. expectation_value_operator</h1>
+<h3 id="extracts-measurable-averages">(Extracts measurable averages)</h3>
+<p><strong>Signal:</strong> ⟨Ô⟩ = ⟨ψ|Ô|ψ⟩  </p>
+<p><strong>Purpose:</strong><br>
+Computes expected measurement outcomes.</p>
+<p><strong>Notes:</strong><br>
+- basis‑dependent<br>
+- amplitude‑weighted<br>
+- not a classical average  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat expectation values as deterministic values.</p>
+<hr>
+<h1 id="11-tensor_product_operator">11. tensor_product_operator</h1>
+<h3 id="combines-subsystems">(Combines subsystems)</h3>
+<p><strong>Signal:</strong> |ψ⟩ ⊗ |φ⟩  </p>
+<p><strong>Purpose:</strong><br>
+Builds composite systems and entanglement structure.</p>
+<p><strong>Notes:</strong><br>
+- defines multi‑system amplitudes<br>
+- enables entanglement<br>
+- basis‑dependent  </p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat entanglement as communication.</p>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>Quantum Mechanics operators define:</p>
+<ul>
+<li>amplitude geometry  </li>
+<li>measurement structure  </li>
+<li>basis transformations  </li>
+<li>unitary evolution  </li>
+<li>entanglement  </li>
+<li>uncertainty  </li>
+<li>mixed‑state behavior  </li>
+</ul>
+<p>QM is the <strong>R1 amplitude grammar</strong> from which QFT emerges and to which<br>
+QFT collapses when excitations lose stability.</p>
+  </main>
+</body>
+</html>

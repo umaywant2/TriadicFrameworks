@@ -1,0 +1,41 @@
+{
+  "map": "noise_gate_map",
+  "module": "sd.structural_detection.ai",
+  "version": "3.0-draft",
+
+  "noise_sources": {
+    "substrate_noise": ["text", "code", "logs", "graphs"],
+    "geometry_noise": ["fracture", "misalignment", "drift"],
+    "lattice_noise": ["inconsistency", "regime_mismatch"],
+    "probe_noise": ["false_anomaly", "unstable_R"]
+  },
+
+  "gate_logic": {
+    "SD-Ξ": {
+      "inputs": [
+        "signal_fields",
+        "anomaly_map",
+        "lattice_scan_fields"
+      ],
+      "filters": [
+        "false_positive_suppression",
+        "boundary_noise_reduction",
+        "geometry_noise_reduction"
+      ],
+      "outputs": [
+        "noise_gate_fields",
+        "filtered_signal_fields"
+      ]
+    }
+  },
+
+  "phase_interactions": {
+    "filter": ["SD-Ξ"],
+    "confirm": ["SD-Ξ", "SD-Π"]
+  },
+
+  "constraints": {
+    "must_not_suppress_PX_001_through_PX_010": true,
+    "must_not_invent_6D_operator": true
+  }
+}

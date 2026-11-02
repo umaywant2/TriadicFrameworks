@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/app/api/awareness_endpoint.md">
+  <title>Awareness Endpoint</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/app/api/awareness_endpoint.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/app/api/awareness_endpoint.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="awareness-endpoint">Awareness Endpoint</h1>
+<p>The Awareness endpoint provides the RTT‑App with the global clarity state published by the RTT ecosystem. It is a simple, stable, permissionless interface designed to work across all platforms and network conditions. The endpoint exposes a minimal JSON document that the app can fetch, cache, and merge with local signals to compute the final Awareness state.</p>
+<hr>
+<h3 id="endpoint-location">Endpoint Location</h3>
+<p>The RTT server publishes the Awareness document at:</p>
+<p><code>/.well-known/rtt-awareness</code></p>
+<p>This path follows established conventions for well‑known metadata and ensures predictable behavior across environments.</p>
+<hr>
+<h3 id="response-format">Response Format</h3>
+<p>The endpoint returns a compact JSON object containing the current global clarity state:</p>
+<pre><code class="language-json">{
+  &quot;clarity&quot;: &quot;high&quot;,
+  &quot;drift&quot;: &quot;low&quot;,
+  &quot;timestamp&quot;: &quot;2026-02-28T20:00:00Z&quot;
+}
+</code></pre>
+<ul>
+<li><strong>clarity</strong> — a coarse indicator of global stability.  </li>
+<li><strong>drift</strong> — a coarse indicator of global instability.  </li>
+<li><strong>timestamp</strong> — the server’s declaration time in ISO‑8601 format.</li>
+</ul>
+<p>The server does not expose internal reasoning or diagnostics.</p>
+<hr>
+<h3 id="semantics">Semantics</h3>
+<p>The values published by the endpoint represent the RTT ecosystem’s global interpretation of clarity:</p>
+<ul>
+<li><strong>High clarity</strong> indicates stable global conditions.  </li>
+<li><strong>Low clarity</strong> indicates global drift or instability.  </li>
+<li><strong>Drift</strong> values complement clarity and provide additional context.  </li>
+</ul>
+<p>The RTT‑App treats these values as authoritative for the global half of the Awareness model.</p>
+<hr>
+<h3 id="caching-behavior">Caching Behavior</h3>
+<p>The RTT‑App uses a conservative caching strategy:</p>
+<ul>
+<li>Cache the most recent valid response.  </li>
+<li>Use the cached value when offline or degraded.  </li>
+<li>Expire the cache only after a safe interval to avoid rapid oscillation.  </li>
+<li>Treat missing or expired data as <em>Unknown</em>, which behaves as <em>Stable</em> for merge purposes.</li>
+</ul>
+<p>This ensures predictable behavior even in unstable network environments.</p>
+<hr>
+<h3 id="error-handling">Error Handling</h3>
+<p>The app handles errors gracefully:</p>
+<ul>
+<li><strong>Network errors</strong> — fall back to cached data.  </li>
+<li><strong>Invalid JSON</strong> — ignore the response and retain the previous value.  </li>
+<li><strong>Unexpected fields</strong> — ignore unknown keys without failing.  </li>
+<li><strong>Missing fields</strong> — treat the server state as <em>Unknown</em>.  </li>
+</ul>
+<p>The endpoint is designed to be forward‑compatible with future extensions.</p>
+<hr>
+<h3 id="versioning">Versioning</h3>
+<p>The Awareness endpoint is versionless in v1. Future versions may introduce:</p>
+<ul>
+<li>Additional fields.  </li>
+<li>Optional metadata.  </li>
+<li>Extended clarity categories.  </li>
+</ul>
+<p>All additions will preserve backward compatibility.</p>
+  </main>
+</body>
+</html>

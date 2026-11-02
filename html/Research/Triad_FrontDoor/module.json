@@ -1,0 +1,21 @@
+{
+  "module": "Triad_FrontDoor",
+  "name": "Triad Front Door",
+  "summary": "Unified entry point for the RTT Triad system: Scanner, O.H.S.H.I.T., and AI Atlas.",
+  "category": "intelligence-frontdoor",
+  "version": "1.0",
+  "purpose": "Introduce the Triad architecture, its detection→hashing→mapping pipeline, and its integration with the Intelligence Class Ladder.",
+  "role": "index",
+  "analyzer_layer": "operator",
+  "operators": [
+    "@triad.frontdoor.describe",
+    "@triad.frontdoor.pipeline",
+    "@triad.frontdoor.integrate",
+    "@triad.frontdoor.navigate",
+    "@triad.frontdoor.map"
+  ],
+  "lineage": {
+    "upstream": [],
+    "downstream": ["Triad_Global_Index", "Triad_Docs"]
+  }
+}

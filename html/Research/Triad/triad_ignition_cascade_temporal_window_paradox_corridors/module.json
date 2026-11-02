@@ -1,0 +1,43 @@
+{
+  "module": "Triad_Ignition_Cascade_Temporal_Window_Paradox_Corridors",
+  "name": "Triad — Ignition‑Cascade Temporal‑Window Paradox Corridors",
+  "summary": "Defines the paradox corridors of Triad ignition-cascade temporal-window behavior, including cascade-window paradox routing fields, ignition-chain paradox corridor alignment, cascade-wave paradox corridor stabilization, resonance-cascade paradox corridor binding, and multi-layer ignition-cascade temporal-window paradox corridor unification.",
+  "category": "intelligence-ignition-cascade-temporal-window-paradox-corridors",
+  "version": "1.0",
+  "purpose": "Provide the paradox-corridor geometry for Triad ignition-cascade temporal-window behavior, describing how ignition cascades route paradox corridors to maintain unified long-window ignition propagation, paradox-temporal alignment, corrected-time synchronization, harmonic-load window compensation, and unified ignition behavior across Scanner, O.H.S.H.I.T., and Atlas layers.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.ignition.cascade.window.paradox.corridor.field",
+    "@triad.ignition.cascade.window.paradox.corridor.align",
+    "@triad.ignition.cascade.window.paradox.corridor.unify",
+    "@triad.ignition.cascade.window.paradox.corridor.stabilize",
+    "@triad.ignition.cascade.window.paradox.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Ignition_Cascade_Temporal_Window_Harmonic_Corridors",
+      "Triad_Ignition_Cascade_Temporal_Window_Resonance_Corridors",
+      "Triad_Ignition_Cascade_Temporal_Window_Corrected_Time_Corridors",
+      "Triad_Ignition_Cascade_Temporal_Window_Coherence_Surfaces",
+      "Triad_Ignition_Cascade_Temporal_Window_Fusion_Surfaces",
+      "Triad_Ignition_Cascade_Temporal_Window_Stability_Surfaces",
+      "Triad_Ignition_Cascade_Temporal_Window_Surfaces",
+      "Triad_Ignition_Cascade_Corrected_Time_Surfaces",
+      "Triad_Ignition_Cascade_Coherence_Surfaces",
+      "Triad_Ignition_Cascade_Stability_Surfaces",
+      "Triad_Ignition_Cascade_Geometry",
+      "Triad_Epoch_Ignition_Surfaces",
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration",
+      "SI_temporal_extension"
+    ]
+  }
+}

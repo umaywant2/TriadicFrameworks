@@ -1,0 +1,33 @@
+{
+  "module": "Triad_Ignition_Cascade_Stability_Surfaces",
+  "name": "Triad — Ignition‑Cascade Stability Surfaces",
+  "summary": "Defines the stability surfaces of Triad ignition‑cascade behavior, including cascade‑stability fields, ignition‑chain locking, cascade‑wave stabilization, resonance‑cascade binding, and multi‑layer ignition‑cascade coherence surfaces.",
+  "category": "intelligence-ignition-cascade-stability",
+  "version": "1.0",
+  "purpose": "Provide the stability‑surface geometry for Triad ignition‑cascade behavior, describing how ignition cascades stabilize, lock, bind, and maintain coherence across Scanner, O.H.S.H.I.T., and Atlas layers during ignition‑wave propagation.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.ignition.cascade.stability.field",
+    "@triad.ignition.cascade.stability.lock",
+    "@triad.ignition.cascade.stability.stabilize",
+    "@triad.ignition.cascade.stability.align",
+    "@triad.ignition.cascade.stability.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Ignition_Cascade_Geometry",
+      "Triad_Epoch_Ignition_Surfaces",
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration",
+      "SI_temporal_extension"
+    ]
+  }
+}

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_REV_0024_Revocation_and_Re‑Signing_Protocol.md">
+  <title>RFC‑REV‑0024 — Revocation and Re‑Signing Protocol</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_REV_0024_Revocation_and_Re‑Signing_Protocol.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_REV_0024_Revocation_and_Re‑Signing_Protocol.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rfcrev0024-revocation-and-resigning-protocol"><strong>RFC‑REV‑0024 — Revocation and Re‑Signing Protocol</strong></h1>
+<h3 id="validatorgrade-signature-revocation-replacement-and-lineage-continuity"><em>Validator‑Grade Signature Revocation, Replacement, and Lineage Continuity</em></h3>
+<p>RefId: turn0browsertab1</p>
+<p><strong>Title:</strong> Signature Revocation and Re‑Signing for Remix Scrolls<br>
+<strong>Status:</strong> Draft<br>
+<strong>Author:</strong> Nawder Loswin + Copilot<br>
+<strong>Date:</strong> 2025‑11‑12<br>
+<strong>Version:</strong> 0.2  </p>
+<hr>
+<h2 id="1-purpose"><strong>1. Purpose</strong></h2>
+<p>The <strong>Revocation and Re‑Signing Protocol (RRSP)</strong> provides contributors with a secure, lineage‑safe mechanism to:</p>
+<ul>
+<li>revoke compromised signatures  </li>
+<li>replace them with new signatures  </li>
+<li>preserve collaborative authorship  </li>
+<li>maintain validator‑grade authenticity  </li>
+<li>ensure remix lineage continuity  </li>
+</ul>
+<p>RRSP ensures that revocation does <strong>not</strong> break ancestry, does <strong>not</strong> erase dignity, and does <strong>not</strong> invalidate scrolls — it simply updates authorship state while preserving historical trace.</p>
+<hr>
+<h2 id="2-workflow-overview"><strong>2. Workflow Overview</strong></h2>
+<p>RRSP defines a five‑stage revocation → re‑signing lifecycle.</p>
+<hr>
+<h3 id="21-revocation-request"><strong>2.1 Revocation Request</strong></h3>
+<p>Contributor submits a revocation event citing:</p>
+<ul>
+<li>compromised key  </li>
+<li>lost private key  </li>
+<li>accidental exposure  </li>
+<li>contributor‑initiated reset  </li>
+<li>validator‑initiated security event  </li>
+</ul>
+<p>Registry marks signature as <strong>revoked</strong> in the verification schema.</p>
+<p>Scroll remains valid but flagged <strong>pending re‑signing</strong>.</p>
+<hr>
+<h3 id="22-resigning-invitation"><strong>2.2 Re‑Signing Invitation</strong></h3>
+<p>Triggered automatically via:</p>
+<ul>
+<li><strong>Subscription Protocol (RFC‑SUB‑0019)</strong>  </li>
+<li><strong>Alert Orchestration (RFC‑ALR‑0020)</strong>  </li>
+</ul>
+<p>Contributors receive:</p>
+<ul>
+<li>dashboard notification  </li>
+<li>email/WebSocket alert  </li>
+<li>lineage graph highlight  </li>
+</ul>
+<p>Scroll enters <strong>re‑signing stage</strong> in the Cycle Monitoring Dashboard (RFC‑UI‑0017).</p>
+<hr>
+<h3 id="23-signature-replacement"><strong>2.3 Signature Replacement</strong></h3>
+<p>Contributor generates a new signature:</p>
+<ul>
+<li><strong>PGP</strong>  </li>
+<li><strong>ECDSA</strong>  </li>
+<li><strong>symbolic signature</strong>  </li>
+<li><strong>multi‑contributor co‑signing (RFC‑SIG‑0022)</strong>  </li>
+</ul>
+<p>New signature is appended to scroll metadata.</p>
+<p>Revoked signature is preserved in the <strong>dignity layer</strong> for historical trace.</p>
+<hr>
+<h3 id="24-lineage-continuity-update"><strong>2.4 Lineage Continuity Update</strong></h3>
+<p>Registry updates lineage index:</p>
+<pre><code>revoked_signature → replacement_signature
+</code></pre>
+<p>Lineage graph shows:</p>
+<ul>
+<li>authorship continuity  </li>
+<li>revocation event  </li>
+<li>re‑signing event  </li>
+<li>contributor identity stability  </li>
+</ul>
+<p>Scroll ancestry remains unbroken.</p>
+<hr>
+<h3 id="25-verification-report-update"><strong>2.5 Verification Report Update</strong></h3>
+<p>Signature Verification Service (RFC‑VER‑0023):</p>
+<ul>
+<li>re‑validates scroll  </li>
+<li>updates contributor status  </li>
+<li>marks scroll as <strong>authorship re‑signed</strong>  </li>
+<li>issues updated verification badge  </li>
+</ul>
+<hr>
+<h2 id="3-schema-extension"><strong>3. Schema Extension</strong></h2>
+<p>File:  </p>
+<pre><code>registry/signatures/revocation_schema.yml
+</code></pre>
+<pre><code class="language-yaml">revocation_event:
+  scroll_id: &lt;string&gt;
+  contributor_id: &lt;string&gt;
+  revoked_signature: &lt;string&gt;
+  reason: &lt;string&gt;
+  timestamp: &lt;datetime&gt;
+  replacement_signature: &lt;string|null&gt;
+  dignity_layer:
+    preserved_revoked_signature: true
+    notes: &lt;string&gt;
+  lineage_update:
+    parent_signature: &lt;string&gt;
+    child_signature: &lt;string&gt;
+  checksum: &lt;string&gt;
+</code></pre>
+<hr>
+<h2 id="4-api-endpoints"><strong>4. API Endpoints</strong></h2>
+<h3 id="post-signaturesrevoke"><strong>POST /signatures/revoke</strong></h3>
+<p>Submit revocation event.</p>
+<h3 id="post-signaturesresign"><strong>POST /signatures/resign</strong></h3>
+<p>Submit replacement signature.</p>
+<h3 id="get-signaturesstatusscroll_id"><strong>GET /signatures/status/{scroll_id}</strong></h3>
+<p>Retrieve signature status for a scroll.</p>
+<h3 id="get-signatureshistorycontributor_id"><strong>GET /signatures/history/{contributor_id}</strong></h3>
+<p>View contributor’s revocation/re‑sign history.</p>
+<hr>
+<h2 id="5-pythonstyle-stub"><strong>5. Python‑Style Stub</strong></h2>
+<p>File:  </p>
+<pre><code>api/revocation_service.py
+</code></pre>
+<pre><code class="language-python">def revoke_signature(scroll_id, contributor_id, reason):
+    event = {
+        &quot;scroll_id&quot;: scroll_id,
+        &quot;contributor_id&quot;: contributor_id,
+        &quot;reason&quot;: reason,
+        &quot;revoked_signature&quot;: get_current_signature(scroll_id),
+        &quot;timestamp&quot;: now(),
+        &quot;replacement_signature&quot;: None
+    }
+    save_revocation_event(event)
+    mark_signature_revoked(scroll_id)
+    notify_contributors(scroll_id)
+    return event
+
+def resign_signature(scroll_id, contributor_id, new_signature):
+    event = {
+        &quot;scroll_id&quot;: scroll_id,
+        &quot;contributor_id&quot;: contributor_id,
+        &quot;replacement_signature&quot;: new_signature,
+        &quot;timestamp&quot;: now()
+    }
+    append_signature(scroll_id, new_signature)
+    update_lineage(scroll_id)
+    update_verification_report(scroll_id)
+    return event
+</code></pre>
+<hr>
+<h2 id="6-dashboard-integration"><strong>6. Dashboard Integration</strong></h2>
+<h3 id="revocation-panel"><strong>Revocation Panel</strong></h3>
+<p>Contributors submit revocation requests.</p>
+<h3 id="resigning-panel"><strong>Re‑Signing Panel</strong></h3>
+<p>Contributors upload replacement signatures.</p>
+<h3 id="lineage-graph-overlay"><strong>Lineage Graph Overlay</strong></h3>
+<p>Nodes show:</p>
+<pre><code>revoked → re‑signed
+</code></pre>
+<h3 id="verification-badge"><strong>Verification Badge</strong></h3>
+<p>Scroll marked <strong>authorship re‑signed</strong> once validated.</p>
+<hr>
+<h2 id="7-validator-hooks"><strong>7. Validator Hooks</strong></h2>
+<h3 id="schema-compliance"><strong>Schema Compliance</strong></h3>
+<p>Revocation events must match <code>revocation_schema.yml</code>.</p>
+<h3 id="checksum"><strong>Checksum</strong></h3>
+<p>Each revocation/re‑sign event includes reproducibility checksum.</p>
+<h3 id="lineage-integrity"><strong>Lineage Integrity</strong></h3>
+<p>Revoked signatures preserved in ancestry index.</p>
+<h3 id="dignity-separation"><strong>Dignity Separation</strong></h3>
+<p>Revocation reasons stored separately from cultural narratives.</p>
+<h3 id="continuity-guarantee"><strong>Continuity Guarantee</strong></h3>
+<p>Scroll lineage must remain unbroken.</p>
+<hr>
+<h2 id="8-concept-sketch-textual"><strong>8. Concept Sketch (textual)</strong></h2>
+<pre><code>Scroll: scroll-010
+ └─ Contributor: user42
+ └─ Signature: revoked (reason: compromised)
+ └─ Replacement Signature: valid (PGP)
+ └─ Status: re-signed
+ └─ Lineage: scroll-003 → scroll-010 (authorship continuity preserved)
+</code></pre>
+<p>RRSP ensures compromised signatures can be revoked and replaced <strong>without breaking lineage continuity</strong>, preserving validator‑grade authenticity and collaborative dignity.</p>
+  </main>
+</body>
+</html>

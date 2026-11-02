@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_large_language_models/examples/example_cross_version_alignment.md">
+  <title>vST for Large Language Models</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_large_language_models/examples/example_cross_version_alignment.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_large_language_models/examples/example_cross_version_alignment.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="vst-for-large-language-models"><em>vST for Large Language Models</em></h3>
+<h3 id="example-crossversion-alignment-of-llm-latent-spaces"><em>Example: Cross‑Version Alignment of LLM Latent Spaces</em></h3>
+<p>This example demonstrates how the <strong>Validation‑Space‑Time (vST)</strong> framework evaluates <strong>cross‑version alignment</strong> between two Large Language Model (LLM) checkpoints. The goal is to show how latent‑space structure, regime behavior, and projection stability change across versions, and how drift is detected using the dimensional substrate.</p>
+<p>The example is model‑agnostic and applies to any transformer‑based LLM.</p>
+<hr>
+<h2 id="1-scenario-overview"><strong>1. Scenario Overview</strong></h2>
+<p>We compare two versions of the same LLM:</p>
+<ul>
+<li><strong>Model A (v1.0)</strong> — baseline checkpoint  </li>
+<li><strong>Model B (v1.1)</strong> — fine‑tuned or updated checkpoint  </li>
+</ul>
+<p>We analyze:</p>
+<ul>
+<li>latent‑trajectory alignment  </li>
+<li>regime‑transition correspondence  </li>
+<li>coherence‑surface stability  </li>
+<li>projection behavior (1024D → 9D → 6D → 3D)  </li>
+<li>drift category and severity  </li>
+</ul>
+<p>The comparison uses a single token’s latent pathway across all layers.</p>
+<hr>
+<h2 id="2-step-1-extract-latent-pathways"><strong>2. Step 1 — Extract Latent Pathways</strong></h2>
+<p>For each model, extract the 1024D hidden‑state vectors:</p>
+<p>[
+h^{A}_1,\ h^{A}_2,\ \dots,\ h^{A}_L
+]
+[
+h^{B}_1,\ h^{B}_2,\ \dots,\ h^{B}_L
+]</p>
+<h3 id="observed-properties"><strong>Observed Properties</strong></h3>
+<p><strong>Model A (v1.0)</strong><br>
+- smooth variance distribution<br>
+- stable DP/TDP structure<br>
+- predictable regime transitions  </p>
+<p><strong>Model B (v1.1)</strong><br>
+- increased variance in mid‑layers<br>
+- sharper regime transitions<br>
+- mild fragmentation in late layers  </p>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<p>Model B exhibits structural changes introduced by fine‑tuning or training updates.</p>
+<hr>
+<h2 id="3-step-2-classify-regime-behavior"><strong>3. Step 2 — Classify Regime Behavior</strong></h2>
+<p>Using substrate‑aligned regime detection:</p>
+<h3 id="model-a-v10"><strong>Model A (v1.0)</strong></h3>
+<ul>
+<li>Layers 1–10: R₁ᴴ  </li>
+<li>Layers 11–20: R₂ᴴ  </li>
+<li>Layers 21–24: R₁ᴴ  </li>
+<li>Layers 25–32: mild R₂ᴴ  </li>
+</ul>
+<h3 id="model-b-v11"><strong>Model B (v1.1)</strong></h3>
+<ul>
+<li>Layers 1–8: R₁ᴴ  </li>
+<li>Layers 9–18: strong R₂ᴴ  </li>
+<li>Layers 19–22: R₁ᴴ  </li>
+<li>Layers 23–32: R₂ᴴ → R₃ᴴ onset  </li>
+</ul>
+<h3 id="interpretation_1"><strong>Interpretation</strong></h3>
+<p>Model B shows:</p>
+<ul>
+<li>earlier entry into R₂ᴴ  </li>
+<li>stronger oscillatory behavior  </li>
+<li>partial dispersion in late layers  </li>
+</ul>
+<p>This indicates potential drift.</p>
+<hr>
+<h2 id="4-step-3-project-1024d-9d"><strong>4. Step 3 — Project 1024D → 9D</strong></h2>
+<p>Project both models’ latent pathways into the 9D coherence core.</p>
+<h3 id="model-a-v10_1"><strong>Model A (v1.0)</strong></h3>
+<ul>
+<li>smooth coherence surfaces  </li>
+<li>stable curvature  </li>
+<li>consistent primitive alignment  </li>
+</ul>
+<h3 id="model-b-v11_1"><strong>Model B (v1.1)</strong></h3>
+<ul>
+<li>sharper curvature changes  </li>
+<li>partial fragmentation in late layers  </li>
+<li>reduced projection stability  </li>
+</ul>
+<h3 id="interpretation_2"><strong>Interpretation</strong></h3>
+<p>Model B’s coherence surfaces show signs of structural drift.</p>
+<hr>
+<h2 id="5-step-4-project-9d-6d-3d"><strong>5. Step 4 — Project 9D → 6D → 3D</strong></h2>
+<p>Evaluate projection stability across dimensional reductions.</p>
+<h3 id="model-a-v10_2"><strong>Model A (v1.0)</strong></h3>
+<ul>
+<li>compact 3D motifs  </li>
+<li>smooth 6D interaction surfaces  </li>
+<li>stable mapping across layers  </li>
+</ul>
+<h3 id="model-b-v11_2"><strong>Model B (v1.1)</strong></h3>
+<ul>
+<li>oscillatory 6D surfaces  </li>
+<li>diffuse 3D motifs in late layers  </li>
+<li>partial loss of primitive alignment  </li>
+</ul>
+<h3 id="interpretation_3"><strong>Interpretation</strong></h3>
+<p>Model B exhibits projection drift, especially near the output layers.</p>
+<hr>
+<h2 id="6-step-5-alignment-analysis"><strong>6. Step 5 — Alignment Analysis</strong></h2>
+<p>Compare the two models’ projected trajectories.</p>
+<h3 id="alignment-results"><strong>Alignment Results</strong></h3>
+<ul>
+<li><strong>Early layers:</strong> high alignment (stable R₁ᴴ)  </li>
+<li><strong>Mid layers:</strong> moderate divergence (stronger R₂ᴴ in Model B)  </li>
+<li><strong>Late layers:</strong> significant divergence (R₃ᴴ onset in Model B)  </li>
+</ul>
+<h3 id="coherencesurface-overlap"><strong>Coherence‑Surface Overlap</strong></h3>
+<ul>
+<li>82% overlap in early layers  </li>
+<li>61% overlap in mid layers  </li>
+<li>34% overlap in late layers  </li>
+</ul>
+<h3 id="interpretation_4"><strong>Interpretation</strong></h3>
+<p>The models share early‑layer structure but diverge significantly in deeper layers.</p>
+<hr>
+<h2 id="7-step-6-vst-validation"><strong>7. Step 6 — vST Validation</strong></h2>
+<p>Apply vST layers (V₁–V₄) to both models.</p>
+<h3 id="model-a-v10_3"><strong>Model A (v1.0)</strong></h3>
+<ul>
+<li><strong>V₁:</strong> pass  </li>
+<li><strong>V₂:</strong> pass  </li>
+<li><strong>V₃:</strong> pass  </li>
+<li><strong>V₄:</strong> pass  </li>
+</ul>
+<h3 id="model-b-v11_3"><strong>Model B (v1.1)</strong></h3>
+<ul>
+<li><strong>V₁:</strong> minor warnings (structural coherence)  </li>
+<li><strong>V₂:</strong> warning (dimensional continuity)  </li>
+<li><strong>V₃:</strong> warning (regime instability)  </li>
+<li><strong>V₄:</strong> warning (core alignment)  </li>
+</ul>
+<h3 id="interpretation_5"><strong>Interpretation</strong></h3>
+<p>Model B remains functional but exhibits measurable structural instability.</p>
+<hr>
+<h2 id="8-step-7-drift-detection"><strong>8. Step 7 — Drift Detection</strong></h2>
+<p>Assign drift categories (D₁–D₄) and severity.</p>
+<h3 id="model-b-v11_4"><strong>Model B (v1.1)</strong></h3>
+<ul>
+<li><strong>D₁ Structural Drift:</strong> low  </li>
+<li><strong>D₂ Dimensional Drift:</strong> moderate  </li>
+<li><strong>D₃ Regime Drift:</strong> moderate  </li>
+<li><strong>D₄ Projection Drift:</strong> moderate  </li>
+</ul>
+<h3 id="severity-moderate-drift"><strong>Severity:</strong> <strong>Moderate Drift</strong></h3>
+<h3 id="interpretation_6"><strong>Interpretation</strong></h3>
+<p>Model B introduces meaningful structural changes that may affect reliability or alignment.</p>
+<hr>
+<h2 id="9-summary"><strong>9. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how to compare latent pathways across model versions  </li>
+<li>how regime behavior reveals structural changes  </li>
+<li>how projection exposes coherence‑surface divergence  </li>
+<li>how vST layers quantify stability  </li>
+<li>how drift detection identifies meaningful differences  </li>
+</ul>
+<p>Cross‑version alignment is essential for evaluating model updates, fine‑tuning, and long‑term model governance.</p>
+  </main>
+</body>
+</html>

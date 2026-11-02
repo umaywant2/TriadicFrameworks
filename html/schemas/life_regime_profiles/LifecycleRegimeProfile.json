@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LifecycleRegimeProfile",
+  "type": "object",
+  "properties": {
+    "entity": { "type": "string" },
+    "substrate": { "type": "string" },
+    "regimes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "dimensional_access": { "type": "string" },
+          "signature": { "type": "string" },
+          "description": { "type": "string" },
+          "key_operators": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": [
+          "name",
+          "dimensional_access",
+          "signature",
+          "description",
+          "key_operators"
+        ]
+      }
+    }
+  },
+  "required": ["entity", "substrate", "regimes"]
+}

@@ -1,0 +1,35 @@
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Example Stub",
+  "description": "Minimal example stub for the Frequency Layer (Unseen). Provides a canonical template for example blocks.",
+  "note": "This is a stub file. Replace or extend as needed for module-specific examples.",
+
+  "example": {
+    "name": "stub-example",
+    "input": {
+      "request": "stub"
+    },
+    "output": {
+      "response": "This is a stub example for the Frequency Layer.",
+      "layer": "L1_Frequency_Unseen",
+      "triad": "frequency",
+      "qmroot": "0D",
+      "canonical": "R5"
+    },
+    "reality": {
+      "description": "A minimal machine-level example.",
+      "details": "Stub examples provide a structural template for module-specific examples."
+    },
+    "imagination": {
+      "description": "Symbolic interpretation of the stub.",
+      "details": "A placeholder oscillation appears in the unseen field, awaiting definition."
+    },
+    "information": {
+      "description": "Cosmology and lineage notes.",
+      "details": "Stub examples inherit qmroot-0D and triad-frequency metadata for cosmological consistency."
+    }
+  }
+}

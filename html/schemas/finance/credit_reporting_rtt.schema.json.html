@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/finance/credit_reporting_rtt.schema.json.md">
+  <title>creditreportingrtt.schema.json (complete example)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/finance/credit_reporting_rtt.schema.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/finance/credit_reporting_rtt.schema.json.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Below is a <strong>fully‑stocked, student‑ and AI‑friendly, RTT‑aligned, regime‑aware schema</strong> for credit reporting. It’s designed to drop directly into your repo as:</p>
+<pre><code>credit_reporting_rtt.schema.json
+</code></pre>
+<p>It follows your house style:<br>
+- <strong>Minimal</strong><br>
+- <strong>Triadic</strong><br>
+- <strong>Regime‑indexed</strong><br>
+- <strong>Simulation‑ready</strong><br>
+- <strong>Safe for beginners, expandable for experts</strong><br>
+- <strong>Aligned with RTT substrate → regime → resonance stack</strong></p>
+<p>It also mirrors the structure of your other RTT schemas (environment, entity, intent, tick, etc.) so students can immediately recognize the pattern.</p>
+<hr>
+<h2 id="credit_reporting_rttschemajson-complete-example"><strong>credit_reporting_rtt.schema.json (complete example)</strong></h2>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/finance/credit_reporting_rtt.schema.json&quot;,
+  &quot;title&quot;: &quot;Regime-Aware Credit Reporting (RTT)&quot;,
+  &quot;description&quot;: &quot;A minimal, student- and AI-friendly schema for representing credit reporting data, models, and interpretations across regimes.&quot;,
+
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;properties&quot;: {
+
+    &quot;metadata&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Basic file-level metadata for lineage, versioning, and authorship.&quot;,
+      &quot;properties&quot;: {
+        &quot;schema_version&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;example&quot;: &quot;1.0.0&quot; },
+        &quot;created_at&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; },
+        &quot;updated_at&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; },
+        &quot;author&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;notes&quot;: { &quot;type&quot;: &quot;string&quot; }
+      },
+      &quot;required&quot;: [&quot;schema_version&quot;]
+    },
+
+    &quot;identity&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Identity substrate: the entity whose credit behavior is being reported.&quot;,
+      &quot;properties&quot;: {
+        &quot;entity_type&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;individual&quot;, &quot;business&quot;, &quot;synthetic&quot;, &quot;unknown&quot;]
+        },
+        &quot;identifiers&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;description&quot;: &quot;Non-sensitive, simulation-safe identifiers.&quot;,
+          &quot;properties&quot;: {
+            &quot;local_id&quot;: { &quot;type&quot;: &quot;string&quot; },
+            &quot;jurisdiction&quot;: { &quot;type&quot;: &quot;string&quot; }
+          }
+        },
+        &quot;demographics&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;description&quot;: &quot;Optional; for fairness simulations only.&quot;,
+          &quot;properties&quot;: {
+            &quot;age_bucket&quot;: { &quot;type&quot;: &quot;string&quot; },
+            &quot;region&quot;: { &quot;type&quot;: &quot;string&quot; }
+          }
+        }
+      }
+    },
+
+    &quot;substrate&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;The raw credit substrate: tradelines, balances, payments, inquiries.&quot;,
+      &quot;properties&quot;: {
+        &quot;tradelines&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;type&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;credit_card&quot;, &quot;loan&quot;, &quot;mortgage&quot;, &quot;auto&quot;, &quot;other&quot;] },
+              &quot;status&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;open&quot;, &quot;closed&quot;, &quot;charged_off&quot;] },
+              &quot;balance&quot;: { &quot;type&quot;: &quot;number&quot; },
+              &quot;limit&quot;: { &quot;type&quot;: &quot;number&quot; },
+              &quot;payment_history&quot;: {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;on_time&quot;, &quot;late_30&quot;, &quot;late_60&quot;, &quot;late_90&quot;, &quot;default&quot;] }
+              },
+              &quot;opened_at&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date&quot; }
+            },
+            &quot;required&quot;: [&quot;type&quot;, &quot;status&quot;]
+          }
+        },
+
+        &quot;inquiries&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;date&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date&quot; },
+              &quot;type&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;hard&quot;, &quot;soft&quot;] }
+            }
+          }
+        },
+
+        &quot;public_records&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;record_type&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;bankruptcy&quot;, &quot;lien&quot;, &quot;judgment&quot;] },
+              &quot;date&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date&quot; }
+            }
+          }
+        }
+      }
+    },
+
+    &quot;regime&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;The regime context in which the credit data is interpreted.&quot;,
+      &quot;properties&quot;: {
+        &quot;macro_regime&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;expansion&quot;, &quot;recession&quot;, &quot;high_inflation&quot;, &quot;low_rate&quot;, &quot;stress&quot;, &quot;unknown&quot;]
+        },
+        &quot;regulatory_regime&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;pre_crisis&quot;, &quot;post_crisis&quot;, &quot;gdpr&quot;, &quot;dodd_frank&quot;, &quot;emerging_market&quot;, &quot;unknown&quot;]
+        },
+        &quot;data_regime&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;bureau_only&quot;, &quot;alt_data_enabled&quot;, &quot;cashflow_rich&quot;, &quot;thin_file&quot;, &quot;synthetic&quot;]
+        },
+        &quot;model_regime&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;logistic_scorecard&quot;, &quot;ml_blackbox&quot;, &quot;explainable_ml&quot;, &quot;regime_switching&quot;, &quot;hybrid&quot;]
+        }
+      }
+    },
+
+    &quot;features&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Feature engineering layer: what the model actually sees.&quot;,
+      &quot;properties&quot;: {
+        &quot;utilization&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;description&quot;: &quot;Total balance / total limit&quot; },
+        &quot;delinquency_count_12m&quot;: { &quot;type&quot;: &quot;integer&quot; },
+        &quot;inquiry_count_6m&quot;: { &quot;type&quot;: &quot;integer&quot; },
+        &quot;file_age_months&quot;: { &quot;type&quot;: &quot;integer&quot; },
+        &quot;alt_data_signals&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;utility_payments&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;good&quot;, &quot;mixed&quot;, &quot;poor&quot;, &quot;none&quot;] },
+            &quot;rent_payments&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;good&quot;, &quot;mixed&quot;, &quot;poor&quot;, &quot;none&quot;] }
+          }
+        }
+      }
+    },
+
+    &quot;model&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;The model used to compute PD, score, or other credit signals.&quot;,
+      &quot;properties&quot;: {
+        &quot;model_type&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;logistic_regression&quot;, &quot;gradient_boosting&quot;, &quot;neural_network&quot;, &quot;markov_regime_switching&quot;]
+        },
+        &quot;parameters&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;description&quot;: &quot;Model parameters; simulation-safe.&quot;,
+          &quot;properties&quot;: {
+            &quot;betas&quot;: {
+              &quot;type&quot;: &quot;object&quot;,
+              &quot;description&quot;: &quot;Feature coefficients (if applicable).&quot;,
+              &quot;additionalProperties&quot;: { &quot;type&quot;: &quot;number&quot; }
+            },
+            &quot;regime_parameters&quot;: {
+              &quot;type&quot;: &quot;object&quot;,
+              &quot;description&quot;: &quot;Regime-specific parameter sets.&quot;,
+              &quot;properties&quot;: {
+                &quot;expansion&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: { &quot;type&quot;: &quot;number&quot; } },
+                &quot;recession&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: { &quot;type&quot;: &quot;number&quot; } },
+                &quot;stress&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: { &quot;type&quot;: &quot;number&quot; } }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    &quot;outputs&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Model outputs, regime-indexed.&quot;,
+      &quot;properties&quot;: {
+        &quot;pd&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;description&quot;: &quot;Probability of default (0–1)&quot; },
+        &quot;score&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;description&quot;: &quot;Scalar score (e.g., 300–850)&quot; },
+        &quot;regime_adjusted_score&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;description&quot;: &quot;Score adjusted per regime.&quot;,
+          &quot;properties&quot;: {
+            &quot;expansion&quot;: { &quot;type&quot;: &quot;number&quot; },
+            &quot;recession&quot;: { &quot;type&quot;: &quot;number&quot; },
+            &quot;stress&quot;: { &quot;type&quot;: &quot;number&quot; }
+          }
+        },
+        &quot;explanations&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+        }
+      }
+    },
+
+    &quot;meaning&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Interpretation layer: what the outputs mean in this regime.&quot;,
+      &quot;properties&quot;: {
+        &quot;risk_band&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;very_high&quot;]
+        },
+        &quot;access_implications&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;What access to credit looks like in this regime.&quot;
+        },
+        &quot;fairness_notes&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Any fairness or bias considerations relevant to this regime.&quot;
+        }
+      }
+    }
+  },
+
+  &quot;required&quot;: [&quot;metadata&quot;, &quot;substrate&quot;, &quot;regime&quot;, &quot;outputs&quot;]
+}
+</code></pre>
+<hr>
+<h2 id="why-this-schema-works-for-your-ecosystem"><strong>Why this schema works for your ecosystem</strong></h2>
+<h3 id="1-triadic-alignment"><strong>1. Triadic alignment</strong></h3>
+<ul>
+<li><strong>Being → substrate</strong>  </li>
+<li><strong>Knowing → model + features + regime</strong>  </li>
+<li><strong>Meaning → outputs + interpretation</strong></li>
+</ul>
+<h3 id="2-regime-awareness-is-first-class"><strong>2. Regime awareness is first-class</strong></h3>
+<p>Macro, regulatory, data, and model regimes are explicit, not implicit.</p>
+<h3 id="3-simulation-ready"><strong>3. Simulation-ready</strong></h3>
+<p>Students can:
+- Swap regimes<br>
+- Swap model types<br>
+- Compare outputs<br>
+- Run “what if” scenarios  </p>
+<h3 id="4-drift-safe"><strong>4. Drift-safe</strong></h3>
+<p>No sensitive data.<br>
+No PII.<br>
+No real credit files.<br>
+Perfect for teaching.</p>
+<h3 id="5-extensible"><strong>5. Extensible</strong></h3>
+<p>You can add:
+- <code>scenario</code> blocks<br>
+- <code>tick</code> integration<br>
+- <code>entity</code> crosslinks<br>
+- <code>environment</code> macro feeds  </p>
+<hr>
+<h2 id="if-you-want-i-can-also-generate">If you want, I can also generate:</h2>
+<ul>
+<li>A <strong>companion example JSON file</strong> (<code>credit_reporting_rtt.example.json</code>)  </li>
+<li>A <strong>diagram</strong> showing the triadic flow  </li>
+<li>A <strong>museum‑style placard</strong> explaining the schema’s purpose  </li>
+<li>A <strong>simulation notebook outline</strong> for students  </li>
+</ul>
+<p>Just tell me which artifact you want next.</p>
+  </main>
+</body>
+</html>

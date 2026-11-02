@@ -1,0 +1,127 @@
+{
+  "ai.module": "Governance_Substrate_Model",
+  "ai.version": "2025",
+  "ai.purpose": "Define the governance substrate, its invariants, awareness layers, evaluation pathways, validation structures, implementation patterns, leadership corridors, incubation protocols, historical lineage, and adapters.",
+  "ai.keywords": [
+    "governance",
+    "substrate",
+    "RTT",
+    "agentic",
+    "regime",
+    "coherence",
+    "drift",
+    "paradox",
+    "civic instrumentation"
+  ],
+  "ai.module.summary": "The Governance Substrate Model establishes the structural grammar, analyzer layers, and agentic pathways that govern civic, organizational, and multi‑system coherence.",
+  "ai.module.category": "Governance",
+  "ai.audience": "Governance designers, civic technologists, structural analysts, TriadicFrameworks contributors",
+
+  "directories": {
+    "01_Invariants": {
+      "role": "index",
+      "analyzer_layer": "dimensional",
+      "purpose": "Define the foundational invariants of governance substrates."
+    },
+    "02_Awareness": {
+      "role": "index",
+      "analyzer_layer": "awareness",
+      "purpose": "Describe awareness regimes, perception layers, and governance sensing."
+    },
+    "03_Evaluation": {
+      "role": "index",
+      "analyzer_layer": "evaluation",
+      "purpose": "Outline evaluation pathways, drift detection, paradox surfacing, and coherence checks."
+    },
+    "04_Validation": {
+      "role": "index",
+      "analyzer_layer": "validation",
+      "purpose": "Define validation structures, regime boundaries, and governance integrity checks."
+    },
+    "05_Implementation": {
+      "role": "index",
+      "analyzer_layer": "regime",
+      "purpose": "Implementation documents, applied governance patterns, and civic instrumentation examples."
+    },
+    "06_Leadership": {
+      "role": "index",
+      "analyzer_layer": "leadership",
+      "purpose": "Leadership corridors, decision‑making regimes, and governance stewardship."
+    },
+    "07_Incubation": {
+      "role": "index",
+      "analyzer_layer": "incubation",
+      "purpose": "Incubation protocols, emergent governance structures, and adaptive substrate growth."
+    },
+    "08_History": {
+      "role": "index",
+      "analyzer_layer": "lineage",
+      "purpose": "Historical lineage, evolution of governance substrates, and canonical record."
+    },
+    "09_Appendices": {
+      "role": "index",
+      "analyzer_layer": "reference",
+      "purpose": "Appendices, reference materials, and extended governance artifacts."
+    },
+    "10_Adapters": {
+      "role": "index",
+      "analyzer_layer": "adapter",
+      "purpose": "Adapters, integration patterns, and cross‑substrate governance connectors."
+    }
+  },
+
+  "files": {
+    "index.html": {
+      "role": "index",
+      "analyzer_layer": "regime",
+      "purpose": "Module front door, DOC_MAP navigation, and canonical metadata."
+    },
+    "overview.md": {
+      "role": "index",
+      "analyzer_layer": "regime",
+      "purpose": "High‑level overview of the Governance Substrate Model."
+    },
+    "gsm_module.json": {
+      "role": "signature",
+      "analyzer_layer": "operator",
+      "purpose": "Module manifest defining structure, purpose, analyzer layers, and file roles."
+    },
+
+    "How_To_Flock_with_Governance.md": {
+      "role": "example",
+      "analyzer_layer": "regime",
+      "purpose": "Demonstrate governance-agentic RTT micro-core behavior applied to ALPR and non-ALPR civic sensor networks."
+    },
+    "How_To_Flock_with_Governance_module.json": {
+      "role": "signature",
+      "analyzer_layer": "operator",
+      "purpose": "Manifest for the How_To_Flock_with_Governance implementation document."
+    },
+
+    "Infrastructure_Retrofit_Patterns.md": {
+      "role": "example",
+      "analyzer_layer": "adapter",
+      "purpose": "Governance retrofit patterns for legacy civic and organizational systems."
+    },
+    "AI_Alignment_Surfaces.md": {
+      "role": "example",
+      "analyzer_layer": "dimensional",
+      "purpose": "Describe alignment surfaces and governance interaction boundaries."
+    },
+    "Core_System_Design.md": {
+      "role": "example",
+      "analyzer_layer": "operator",
+      "purpose": "Core system design principles for governance substrates."
+    },
+    "Education_Embedding.md": {
+      "role": "example",
+      "analyzer_layer": "awareness",
+      "purpose": "Embedding governance awareness into educational structures."
+    }
+  },
+
+  "phantoms": [
+    "ALPR_Governance.md",
+    "sensor_governance_notes.txt"
+  ]
+}

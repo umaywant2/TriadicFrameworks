@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Vocabulary module icon">
+  <!-- TriadicFrameworks · Vocabulary Icon · v1.0.0 · #5fa8d3 -->
+  <!-- PLACEHOLDER: replace paths with final icon artwork -->
+  <circle cx="24" cy="24" r="22" stroke="#5fa8d3" stroke-width="2" fill="none"/>
+  <!-- Open diamond ◇ -->
+  <polygon points="24,7 39,24 24,41 9,24" stroke="#5fa8d3" stroke-width="1.5" fill="rgba(95,168,211,0.12)"/>
+  <circle cx="24" cy="24" r="2.5" fill="#5fa8d3"/>
+</svg>

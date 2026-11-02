@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Stability_Basin_Cartographer/sbc_examples.md">
+  <title>Stability Basin Cartographer Examples — RTT/1</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Stability_Basin_Cartographer/sbc_examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Stability_Basin_Cartographer/sbc_examples.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="stability-basin-cartographer-examples-rtt1"><strong>Stability Basin Cartographer Examples — RTT/1</strong></h1>
+<h3 id="example-dictionary-for-the-stability-basin-cartographer-sbc"><em>Example Dictionary for the Stability Basin Cartographer (SBC)</em></h3>
+<p>These examples illustrate how the <strong>Stability Basin Cartographer (SBC)</strong> maps stability basins, computes basin gradients, identifies stability fields, detects collapse zones, and evaluates stability topology across R1–R4.</p>
+<p>Each example demonstrates one or more SBC operators:</p>
+<ul>
+<li><strong>SBC‑Map</strong>  </li>
+<li><strong>SBC‑Basin</strong>  </li>
+<li><strong>SBC‑Gradient</strong>  </li>
+<li><strong>SBC‑Field</strong>  </li>
+<li><strong>SBC‑Collapse</strong>  </li>
+<li><strong>SBC‑Stabilize</strong></li>
+</ul>
+<p>Examples are grouped by basin type.</p>
+<hr>
+<h2 id="1-stability-basin-examples"><strong>1. Stability Basin Examples</strong></h2>
+<h3 id="example-1-conceptual-stability-basin-r1"><strong>Example 1 — Conceptual Stability Basin (R1)</strong></h3>
+<p><strong>Scenario</strong><br>
+A conceptual model exhibits a stable region with low curvature and shallow collapse potential.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;stability&quot;,
+  &quot;regime&quot;: &quot;R1&quot;,
+  &quot;basin_magnitude&quot;: 0.41,
+  &quot;basin_direction&quot;: &quot;conceptual&quot;,
+  &quot;basin_curvature&quot;: 0.22,
+  &quot;collapse_zone&quot;: 0.11,
+  &quot;stability_field&quot;: 0.63,
+  &quot;envelope_boundary&quot;: 0.44
+}
+</code></pre>
+<hr>
+<h3 id="example-2-computational-stability-basin-r2"><strong>Example 2 — Computational Stability Basin (R2)</strong></h3>
+<p><strong>Scenario</strong><br>
+A computational structure forms a stability basin with moderate curvature and medium collapse sensitivity.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;stability&quot;,
+  &quot;regime&quot;: &quot;R2&quot;,
+  &quot;basin_magnitude&quot;: 0.52,
+  &quot;basin_direction&quot;: &quot;computational&quot;,
+  &quot;basin_curvature&quot;: 0.33,
+  &quot;collapse_zone&quot;: 0.27,
+  &quot;stability_field&quot;: 0.57,
+  &quot;envelope_boundary&quot;: 0.41
+}
+</code></pre>
+<hr>
+<h2 id="2-gradient-basin-examples"><strong>2. Gradient Basin Examples</strong></h2>
+<h3 id="example-3-gradient-basin-opposition-r1-r4"><strong>Example 3 — Gradient Basin Opposition (R1 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Conceptual and dimensional gradients oppose each other, forming a gradient basin with high curvature.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;gradient&quot;,
+  &quot;regime&quot;: &quot;R1-R4&quot;,
+  &quot;basin_magnitude&quot;: 0.83,
+  &quot;basin_direction&quot;: &quot;R1↔R4&quot;,
+  &quot;basin_curvature&quot;: 0.51,
+  &quot;collapse_zone&quot;: 0.22,
+  &quot;stability_field&quot;: 0.69,
+  &quot;envelope_boundary&quot;: 0.46
+}
+</code></pre>
+<hr>
+<h3 id="example-4-gradient-inversion-basin-r2-r3"><strong>Example 4 — Gradient Inversion Basin (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Computational stability decreases while physical stability increases, forming a gradient inversion basin.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;gradient&quot;,
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;basin_magnitude&quot;: 0.79,
+  &quot;basin_direction&quot;: &quot;R3→R2&quot;,
+  &quot;basin_curvature&quot;: 0.58,
+  &quot;collapse_zone&quot;: 0.31,
+  &quot;stability_field&quot;: 0.72,
+  &quot;envelope_boundary&quot;: 0.41
+}
+</code></pre>
+<hr>
+<h2 id="3-boundary-basin-examples"><strong>3. Boundary Basin Examples</strong></h2>
+<h3 id="example-5-abstractionmeasurement-stability-basin-r1-r3"><strong>Example 5 — Abstraction‑Measurement Stability Basin (R1 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Conceptual abstraction predicts behavior that contradicts physical measurement, forming a boundary stability basin.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;boundary&quot;,
+  &quot;regime&quot;: &quot;R1-R3&quot;,
+  &quot;basin_magnitude&quot;: 0.67,
+  &quot;basin_direction&quot;: &quot;R1→R3&quot;,
+  &quot;basin_curvature&quot;: 0.33,
+  &quot;collapse_zone&quot;: 0.22,
+  &quot;stability_field&quot;: 0.55,
+  &quot;envelope_boundary&quot;: 0.38
+}
+</code></pre>
+<hr>
+<h3 id="example-6-gradientboundary-stability-basin-r2-r4"><strong>Example 6 — Gradient‑Boundary Stability Basin (R2 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Aligned gradients across computational and dimensional regimes produce contradictory stability outcomes.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;boundary&quot;,
+  &quot;regime&quot;: &quot;R2-R4&quot;,
+  &quot;basin_magnitude&quot;: 0.88,
+  &quot;basin_direction&quot;: &quot;R2↔R4&quot;,
+  &quot;basin_curvature&quot;: 0.47,
+  &quot;collapse_zone&quot;: 0.29,
+  &quot;stability_field&quot;: 0.66,
+  &quot;envelope_boundary&quot;: 0.58
+}
+</code></pre>
+<hr>
+<h2 id="4-stabilityfield-examples"><strong>4. Stability‑Field Examples</strong></h2>
+<h3 id="example-7-multiregime-stability-field-r1-r2-r3"><strong>Example 7 — Multi‑Regime Stability Field (R1 ↔ R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+A multi‑regime stability field binds conceptual, computational, and physical stability basins.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;field&quot;,
+  &quot;regime&quot;: &quot;R1-R2-R3&quot;,
+  &quot;basin_magnitude&quot;: 0.94,
+  &quot;basin_direction&quot;: &quot;tensor&quot;,
+  &quot;basin_curvature&quot;: 0.63,
+  &quot;collapse_zone&quot;: 0.37,
+  &quot;stability_field&quot;: 0.78,
+  &quot;envelope_boundary&quot;: 0.57
+}
+</code></pre>
+<hr>
+<h3 id="example-8-dimensional-stability-constraint-r2-r4"><strong>Example 8 — Dimensional Stability Constraint (R2 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Dimensional constraints influence computational stability pathways.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;field&quot;,
+  &quot;regime&quot;: &quot;R2-R4&quot;,
+  &quot;basin_magnitude&quot;: 0.88,
+  &quot;basin_direction&quot;: &quot;R4→R2&quot;,
+  &quot;basin_curvature&quot;: 0.55,
+  &quot;collapse_zone&quot;: 0.33,
+  &quot;stability_field&quot;: 0.73,
+  &quot;envelope_boundary&quot;: 0.63
+}
+</code></pre>
+<hr>
+<h2 id="5-collapsezone-examples"><strong>5. Collapse‑Zone Examples</strong></h2>
+<h3 id="example-9-stability-collapse-basin-r3-r4"><strong>Example 9 — Stability Collapse Basin (R3 → R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Physical stability collapses into dimensional instability, forming a collapse basin.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;collapse&quot;,
+  &quot;regime&quot;: &quot;R3-R4&quot;,
+  &quot;basin_magnitude&quot;: 0.91,
+  &quot;basin_direction&quot;: &quot;R3→R4&quot;,
+  &quot;basin_curvature&quot;: 0.71,
+  &quot;collapse_zone&quot;: 0.52,
+  &quot;stability_field&quot;: 0.82,
+  &quot;envelope_boundary&quot;: 0.44
+}
+</code></pre>
+<hr>
+<h3 id="example-10-stabilitycoherence-collapse-ridge-r2-r3"><strong>Example 10 — Stability‑Coherence Collapse Ridge (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Computational stability reduces coherence while physical stability increases coherence sensitivity, forming a collapse ridge.</p>
+<p><strong>SBC Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;collapse&quot;,
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;basin_magnitude&quot;: 0.86,
+  &quot;basin_direction&quot;: &quot;R2↔R3&quot;,
+  &quot;basin_curvature&quot;: 0.62,
+  &quot;collapse_zone&quot;: 0.49,
+  &quot;stability_field&quot;: 0.77,
+  &quot;envelope_boundary&quot;: 0.48
+}
+</code></pre>
+<hr>
+<h2 id="6-canonical-sbc-output-snippet"><strong>6. Canonical SBC Output Snippet</strong></h2>
+<pre><code class="language-json">{
+  &quot;basin_type&quot;: &quot;gradient&quot;,
+  &quot;regime&quot;: &quot;R1-R4&quot;,
+  &quot;basin_magnitude&quot;: 0.83,
+  &quot;basin_direction&quot;: &quot;R1↔R4&quot;,
+  &quot;basin_curvature&quot;: 0.51,
+  &quot;collapse_zone&quot;: 0.22,
+  &quot;stability_field&quot;: 0.69,
+  &quot;envelope_boundary&quot;: 0.46
+}
+</code></pre>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<ul>
+<li><strong>Version:</strong> 1.0  </li>
+<li><strong>Status:</strong> canon‑stable  </li>
+<li><strong>Category:</strong> rtt‑stability  </li>
+<li><strong>Module Path:</strong> <code>/docs/rtt/Stability_Basin_Cartographer/</code></li>
+</ul>
+  </main>
+</body>
+</html>

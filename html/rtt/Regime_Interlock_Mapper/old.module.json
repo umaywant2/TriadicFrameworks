@@ -1,0 +1,77 @@
+{
+  "identity": {
+    "name": "Regime Interlock Mapper",
+    "canonical_id": "RTT_REGIME_INTERLOCK_MAPPER",
+    "module_path": "/docs/rtt/Regime_Interlock_Mapper/",
+    "category": "rtt-structural",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "purpose": {
+    "summary": "RTT/1 regime-level intelligence engine for detecting, mapping, and analyzing interlocks between conceptual, computational, and physical regimes.",
+    "detail": "The Regime Interlock Mapper identifies structural interlocks between RTT regimes (R1–R4), maps cross-regime boundaries, detects regime entanglement, and provides interlock diagnostics for higher-level RTT engines such as the Regime Synthesizer, Paradox Gradient Analyzer, and Coherence Tensor Engine."
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "primary": [
+      "RIM-Detect",
+      "RIM-Map",
+      "RIM-Interlock",
+      "RIM-Boundary",
+      "RIM-Entangle",
+      "RIM-Resolve"
+    ],
+    "secondary": [
+      "RTT-Regime",
+      "RTT-Boundary",
+      "RTT-Structural",
+      "RTT-Continuity"
+    ]
+  },
+
+  "analyzer_layer": {
+    "layer": "regime",
+    "sub_layers": [
+      "boundary-mapping",
+      "interlock-detection",
+      "entanglement-analysis",
+      "structural-regime-coherence"
+    ]
+  },
+
+  "files": {
+    "core": [
+      "README.md",
+      "Regime_Interlock_Mapper.md",
+      "rtt_interlock_examples.md",
+      "rtt_interlock_diagrams.svg"
+    ],
+    "support": [
+      "boundary_profiles.md",
+      "regime_entanglement_cases.md",
+      "regime_interlock_matrix.json"
+    ],
+    "ai": [
+      "rtt_interlock_prompts.md",
+      "rtt_interlock_operators.md"
+    ]
+  },
+
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "RTT_REGIME_INTERLOCK_MAPPER",
+    "ai_keywords": "RTT, regime interlock, boundary mapping, entanglement, structural regime analysis",
+    "ai_purpose": "Provide regime-level intelligence for RTT/1 by detecting and mapping interlocks between conceptual, computational, and physical regimes.",
+    "ai_operators": "RIM-Detect, RIM-Map, RIM-Interlock, RIM-Boundary, RIM-Entangle, RIM-Resolve",
+    "ai_audience": "researchers, systems designers, AI systems"
+  }
+}
+

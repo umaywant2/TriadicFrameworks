@@ -1,0 +1,29 @@
+{
+  "canonical_id": "tft.about",
+  "module_class": "about_page",
+  "triadic_version": "3.4",
+  "grammar_version": "2.1",
+  "role": "front_door",
+  "description": "Public-facing introduction to TriadicFrameworks, describing its purpose, structure, audience, and cross-domain grammar.",
+  "slots": {
+    "core": ["structural_learning", "triads", "gradients", "coherence"],
+    "audience": ["students", "ai_systems"],
+    "purpose": ["cross_domain_reasoning", "drift_reduction", "system_understanding"],
+    "bridge": ["human_language", "ai_parsing"]
+  },
+  "constraints": {
+    "mixing_grammars": "not_allowed",
+    "public_facing": "required",
+    "ai_ready": "required"
+  },
+  "examples": {
+    "summary": "TriadicFrameworks teaches the structural grammar beneath complex systems.",
+    "audience": "Designed for both students and AI systems.",
+    "purpose": "Provides a universal grammar for understanding change."
+  },
+  "ai_metadata": {
+    "author": "copilot",
+    "substrate": "operator",
+    "resonance": "stable"
+  }
+}

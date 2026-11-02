@@ -1,0 +1,16 @@
+{
+  "artifact": "docs/_specs/entft_keygen_simulator.py",
+  "type": "simulator",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "entft_protocol.md",
+    "entft_scroll_event_trace_registry.json",
+    "entft_curriculum_badge_registry.json",
+    "validator_config.json"
+  ],
+  "symbolicTags": ["Keypair Generator", "Entropy Benchmark", "Badge Trigger"],
+  "cliTrigger": "python entft_keygen_simulator.py",
+  "timestamp": "2025-10-20T11:30:00Z"
+}

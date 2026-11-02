@@ -1,0 +1,88 @@
+{
+  "$schema": "https://docs.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "module": "ipd-12",
+    "canonical_name": "IPD-12 Framework",
+    "module_path": "docs/frameworks/ipd_12",
+    "version": "1.0",
+    "status": "Active Canonical",
+    "category": "Core Frameworks — Structural Spine",
+    "summary": "12-dimensional analytical decomposition framework: the structural coordinate system for all S3 Spine overlay computations"
+  },
+  "purpose": {
+    "role": "12-dimensional analytical decomposition framework: the structural coordinate system for all S3 Spine overlay computations",
+    "description": "IPD-12 defines the 12 canonical analytical dimensions used across all S3 Spine overlay computations. Each dimension represents an orthogonal axis of structural analysis (e.g., Material, Relational, Temporal, Energetic, Informational, Operational, Ecological, etc.). The SFD uses IPD-12 for faultline decomposition, the DRS uses it to compute the 66 pairwise resonance coefficients of the DRM, and the Coherence Tensor Engine uses it to project the CI tensor. IPD-12 is the implicit coordinate grid of the entire S3 Spine.",
+    "spine_role": "Universal coordinate system for all S3 Spine overlay engines",
+    "audience": [
+      "developers",
+      "researchers",
+      "AIs",
+      "architects"
+    ]
+  },
+  "structure": {
+    "module_type": "Coordinate System",
+    "triadic_lens": "ipd-12-as-structural-grid",
+    "analyzer_layer": [
+      "Core Frameworks — Structural Spine",
+      "Core Frameworks — Structural Spine"
+    ]
+  },
+  "files": {
+    "core": [
+      "ipd_12.md",
+      "index.md"
+    ],
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
+  },
+  "ai_metadata": {
+    "navigation": {
+      "url": "https://docs.triadicframeworks.org/frameworks/ipd_12/",
+      "path": "docs/frameworks/ipd_12"
+    },
+    "ai_ready": true,
+    "ai_module_id": "ipd-12",
+    "ai_keywords": [
+      "IPD-12",
+      "12 dimensions",
+      "analytical decomposition",
+      "structural coordinate",
+      "resonance coefficients",
+      "DRM",
+      "coordinate grid",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "12-dimensional analytical decomposition framework: the structural coordinate system for all S3 Spine overlay computations",
+    "ai_audience": [
+      "developers",
+      "researchers",
+      "AIs",
+      "architects"
+    ],
+    "license": "See docs/LICENSE_module.json",
+    "module": {
+      "module_id": "ipd-12",
+      "canonical_name": "IPD-12 Framework",
+      "version": "1.0"
+    }
+  }
+}

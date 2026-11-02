@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/qCompute/qc_Identity.md">
+  <title>qCompute — Identity</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/qCompute/qc_Identity.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/qCompute/qc_Identity.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="qcompute-identity">qCompute — Identity</h1>
+<p><strong>File:</strong> qc_Identity.md<br>
+<strong>Layer:</strong> RTT‑Inside Compute Harness<br>
+<strong>Status:</strong> Canonical (2026)</p>
+<p>qCompute is the <strong>structural compute harness</strong> of RTT‑Inside.</p>
+<p>It provides the complete operator → routing → frame → drift → transition → capture → replay pipeline.<br>
+qCompute computes <strong>structure</strong>, not amplitudes.</p>
+<hr>
+<h1 id="1-purpose">1. Purpose</h1>
+<p>qCompute exists to:</p>
+<ul>
+<li>define resonance‑tiered operators (r1 / r2 / r3)  </li>
+<li>validate operators against grammar, environment, backend, and tier  </li>
+<li>route operators to appropriate backends  </li>
+<li>manage resonance frames and drift accumulation  </li>
+<li>govern environment transitions  </li>
+<li>produce an append‑only <code>.qtrace</code> ledger  </li>
+<li>replay and verify structural correctness  </li>
+</ul>
+<p>qCompute is the <strong>execution substrate</strong> for RTT‑Inside.</p>
+<hr>
+<h1 id="2-identity-statement">2. Identity Statement</h1>
+<p>qCompute is:</p>
+<ul>
+<li><strong>structural</strong> — computes structure, not physics  </li>
+<li><strong>deterministic</strong> — routing, drift, and transitions are rule‑driven  </li>
+<li><strong>governed</strong> — all operators pass through validation  </li>
+<li><strong>tiered</strong> — r1, r2, r3 define resonance depth  </li>
+<li><strong>environment‑aware</strong> — sandbox, production, archive  </li>
+<li><strong>drift‑bounded</strong> — drift accumulation is strictly enforced  </li>
+<li><strong>append‑only</strong> — capture ledger is immutable  </li>
+<li><strong>replay‑verifiable</strong> — every session can be reconstructed  </li>
+</ul>
+<p>qCompute is <strong>not</strong>:</p>
+<ul>
+<li>a quantum simulator  </li>
+<li>a physics engine  </li>
+<li>a numerical amplitude system  </li>
+<li>a probabilistic execution model  </li>
+</ul>
+<hr>
+<h1 id="3-structural-role">3. Structural Role</h1>
+<p>qCompute is the <strong>compute layer</strong> of RTT‑Inside.</p>
+<p>It sits between:</p>
+<ul>
+<li><strong>Operators</strong> (intent)  </li>
+<li><strong>Backends</strong> (execution substrate)  </li>
+<li><strong>Frames</strong> (structural containers)  </li>
+<li><strong>Drift</strong> (stability envelope)  </li>
+<li><strong>Transitions</strong> (environment governance)  </li>
+<li><strong>Capture</strong> (ledger)  </li>
+<li><strong>Replay</strong> (verification)  </li>
+</ul>
+<p>qCompute defines the <strong>rules</strong>, <strong>invariants</strong>, and <strong>structural lifecycle</strong> of computation.</p>
+<hr>
+<h1 id="4-invariants">4. Invariants</h1>
+<p>qCompute enforces the following invariants:</p>
+<ol>
+<li>
+<p><strong>Grammar Validity</strong><br>
+   Operators must follow canonical grammar.</p>
+</li>
+<li>
+<p><strong>Argument Validity</strong><br>
+   All parameters must be well‑typed and complete.</p>
+</li>
+<li>
+<p><strong>Environment Legality</strong><br>
+   - sandbox: r1, r2<br>
+   - production: r1, r2, r3<br>
+   - archive: none  </p>
+</li>
+<li>
+<p><strong>Backend Legality</strong><br>
+   - r1 → local-sim<br>
+   - r2 → hybrid-sim<br>
+   - r3 → hardware-qpu-2  </p>
+</li>
+<li>
+<p><strong>Tier Monotonicity</strong><br>
+   Tiers may increase within a frame but never decrease.</p>
+</li>
+<li>
+<p><strong>Measurement Reset</strong><br>
+   Measurement forces a new frame.</p>
+</li>
+<li>
+<p><strong>Meta Operators</strong><br>
+   Meta operators always open a new frame.</p>
+</li>
+<li>
+<p><strong>Drift Bound</strong><br>
+   Drift must not exceed environment drift limits.</p>
+</li>
+<li>
+<p><strong>Transition Legality</strong><br>
+   - sandbox → production (token required)<br>
+   - production → archive (token required)<br>
+   - archive → (forbidden)  </p>
+</li>
+<li>
+<p><strong>Archive Terminality</strong><br>
+    No operators allowed in archive.</p>
+</li>
+<li>
+<p><strong>Hash Chain Integrity</strong><br>
+    Capture must maintain a valid hash chain.</p>
+</li>
+</ol>
+<hr>
+<h1 id="5-module-boundaries">5. Module Boundaries</h1>
+<p>qCompute defines:</p>
+<ul>
+<li>operator semantics  </li>
+<li>routing rules  </li>
+<li>frame lifecycle  </li>
+<li>drift model  </li>
+<li>environment transitions  </li>
+<li>capture format  </li>
+<li>replay verification  </li>
+</ul>
+<p>qCompute does <strong>not</strong> define:</p>
+<ul>
+<li>amplitude simulation  </li>
+<li>quantum state evolution  </li>
+<li>hardware calibration  </li>
+<li>backend implementation details  </li>
+</ul>
+<p>These belong to other modules.</p>
+<hr>
+<h1 id="6-summary">6. Summary</h1>
+<p>qCompute is the <strong>structural compute substrate</strong> of RTT‑Inside.</p>
+<p>It provides:</p>
+<ul>
+<li>resonance‑tiered operators  </li>
+<li>deterministic routing  </li>
+<li>drift‑bounded frames  </li>
+<li>governed transitions  </li>
+<li>append‑only capture  </li>
+<li>strict replay  </li>
+</ul>
+<p>qCompute ensures that all computation inside RTT‑Inside is <strong>valid</strong>, <strong>deterministic</strong>, <strong>governed</strong>, and <strong>verifiable</strong>.</p>
+  </main>
+</body>
+</html>

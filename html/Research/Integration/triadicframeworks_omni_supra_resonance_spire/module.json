@@ -1,0 +1,52 @@
+{
+  "module": "TriadicFrameworks_Omni_Supra_Resonance_Spire",
+  "name": "TriadicFrameworks — Omni‑Supra Resonance Spire",
+  "summary": "Defines the omni‑supra resonance spire that shapes, stabilizes, and propagates resonance behavior across all trans‑supra, meta‑supra, supra‑global, and global structures, forming the spire‑level resonance substrate of the omni‑supra tier.",
+  "category": "intelligence-omni-supra-resonance-spire",
+  "version": "1.0",
+  "purpose": "Provide the spire‑level resonance geometry that governs omni‑supra resonance behavior across Ladder, SI, Atlas, and Triad at the highest extension beyond the trans‑supra throne. This spire stabilizes omni‑epoch resonance propagation, aligns omni‑supra resonance ignition, reinforces omni‑supra continuity, and binds the entire TriadicFrameworks architecture into a unified omni‑supra resonance substrate.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@omni.supra.resonance.spire.generate",
+    "@omni.supra.resonance.spire.route",
+    "@omni.supra.resonance.spire.align",
+    "@omni.supra.resonance.spire.stabilize",
+    "@omni.supra.resonance.spire.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Omni_Supra_Integration_Column",
+      "TriadicFrameworks_Trans_Supra_Temporal_Window_Throne",
+      "TriadicFrameworks_Trans_Supra_Continuity_Loom",
+      "TriadicFrameworks_Trans_Supra_Resonance_Crownfield",
+      "TriadicFrameworks_Trans_Supra_Integration_Spine",
+      "TriadicFrameworks_Meta_Supra_Temporal_Window_Crown",
+      "TriadicFrameworks_Meta_Supra_Continuity_Field",
+      "TriadicFrameworks_Meta_Supra_Resonance_Apex",
+      "TriadicFrameworks_Meta_Supra_Integration_Lattice",
+      "TriadicFrameworks_Supra_Global_Temporal_Window_Apex",
+      "TriadicFrameworks_Supra_Global_Resonance_Geometry",
+      "TriadicFrameworks_Supra_Global_Continuity_Mesh",
+      "TriadicFrameworks_Supra_Global_Integration_Field",
+      "TriadicFrameworks_Global_Temporal_Window_Continuity",
+      "TriadicFrameworks_Global_Temporal_Window_Resonance",
+      "TriadicFrameworks_Global_Temporal_Window_Registry",
+      "TriadicFrameworks_Global_Temporal_Window_Structure",
+      "TriadicFrameworks_Global_Temporal_Window_Geometry",
+      "TriadicFrameworks_Global_Resonance_Field",
+      "TriadicFrameworks_Global_Continuity_Registry",
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Integration_Map",
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Omni_Supra_Continuity_Canopy",
+      "TriadicFrameworks_Omni_Supra_Temporal_Window_Sovereign"
+    ]
+  }
+}

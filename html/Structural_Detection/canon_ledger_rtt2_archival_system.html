@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Structural_Detection/canon_ledger_rtt2_archival_system.md">
+  <title>🗄️ Structural Detection — Canon Ledger (RTT/2 Archival System)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Structural_Detection/canon_ledger_rtt2_archival_system.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Structural_Detection/canon_ledger_rtt2_archival_system.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="structural-detection-canon-ledger-rtt2-archival-system">🗄️ <strong>Structural Detection — Canon Ledger (RTT/2 Archival System)</strong></h1>
+<h3 id="triadicframeworks-rtt2-permanent-canon-record-lineage-archive"><em>TriadicFrameworks • RTT/2 • Permanent Canon Record &amp; Lineage Archive</em></h3>
+<h3 id="a-canon-survives-only-when-its-memory-is-structured"><em>“A canon survives only when its memory is structured.”</em></h3>
+<h1 id="canon-ledger-rtt2-archival-system">Canon Ledger (RTT/2 Archival System)</h1>
+<h3 id="structural-detection-module">Structural Detection Module</h3>
+<h3 id="rtt2-permanent-canon-record-lineage-archive">RTT/2 • Permanent Canon Record &amp; Lineage Archive</h3>
+<hr>
+<h1 id="1-purpose-of-the-canon-ledger">1. Purpose of the Canon Ledger</h1>
+<p>The Canon Ledger is the <strong>authoritative archival system</strong> for:</p>
+<ul>
+<li>recording all canonical changes  </li>
+<li>preserving lineage across module generations  </li>
+<li>documenting cross‑module integrations  </li>
+<li>tracking collapse‑mode corrections  </li>
+<li>archiving pattern‑family expansions  </li>
+<li>maintaining a permanent structural record  </li>
+</ul>
+<p>The Ledger ensures that the canon remains:</p>
+<ul>
+<li>traceable  </li>
+<li>auditable  </li>
+<li>reversible  </li>
+<li>lineage‑consistent  </li>
+<li>drift‑free  </li>
+</ul>
+<hr>
+<h1 id="2-ledger-principles">2. Ledger Principles</h1>
+<p>The Canon Ledger is governed by five principles:</p>
+<ol>
+<li>
+<p><strong>Immutability</strong><br>
+   Once recorded, entries cannot be altered — only superseded.</p>
+</li>
+<li>
+<p><strong>Lineage Continuity</strong><br>
+   Every change must reference its lineage origin.</p>
+</li>
+<li>
+<p><strong>Structural Transparency</strong><br>
+   All architectural decisions must be documented.</p>
+</li>
+<li>
+<p><strong>Cross‑Module Traceability</strong><br>
+   Every change must list affected modules.</p>
+</li>
+<li>
+<p><strong>Drift Prevention</strong><br>
+   Ledger entries must include drift‑risk analysis.</p>
+</li>
+</ol>
+<hr>
+<h1 id="3-ledger-entry-types">3. Ledger Entry Types</h1>
+<p>The Ledger records <strong>seven categories</strong> of canonical events:</p>
+<ol>
+<li><strong>Operator Updates</strong>  </li>
+<li><strong>Pattern Family Additions (A–G and beyond)</strong>  </li>
+<li><strong>Envelope Geometry Revisions</strong>  </li>
+<li><strong>Regime Logic Updates</strong>  </li>
+<li><strong>Continuity Architecture Changes</strong>  </li>
+<li><strong>Cross‑Module Integration Events</strong>  </li>
+<li><strong>Collapse‑Mode Corrections</strong></li>
+</ol>
+<p>Each category has its own required fields.</p>
+<hr>
+<h1 id="4-ledger-entry-structure-canonical">4. Ledger Entry Structure (Canonical)</h1>
+<p>Every entry must follow the <strong>CANON_LEDGER_ENTRY</strong> format:</p>
+<pre><code>CANON_LEDGER_ENTRY:
+  entry_id:
+  timestamp:
+  steward:
+  category:
+  description:
+  lineage_origin:
+  structural_justification:
+  drift_risk:
+  envelope_regime_alignment:
+  continuity_impact:
+  cross_module_impact:
+  collapse_mode_impact:
+  validation_results:
+  ratification_status:
+  supersedes:
+  notes:
+</code></pre>
+<hr>
+<h1 id="5-ledger-lifecycle">5. Ledger Lifecycle</h1>
+<p>Ledger entries follow a strict lifecycle:</p>
+<ol>
+<li><strong>Draft</strong> — created by a steward  </li>
+<li><strong>Review</strong> — evaluated by RTT/2 panel  </li>
+<li><strong>Validation</strong> — stress‑tested and sandbox‑tested  </li>
+<li><strong>Ratification</strong> — unanimously approved  </li>
+<li><strong>Publication</strong> — added to the Ledger  </li>
+<li><strong>Supersession</strong> — older entries replaced when necessary  </li>
+</ol>
+<p>No entry may skip a stage.</p>
+<hr>
+<h1 id="6-ledger-validation-requirements">6. Ledger Validation Requirements</h1>
+<p>Before an entry is ratified, it must pass:</p>
+<h3 id="61-structural-validation"><strong>6.1 Structural Validation</strong></h3>
+<ul>
+<li>drift geometry  </li>
+<li>envelope geometry  </li>
+<li>deformation class  </li>
+<li>continuity behavior  </li>
+<li>regime alignment  </li>
+</ul>
+<h3 id="62-crossmodule-validation"><strong>6.2 Cross‑Module Validation</strong></h3>
+<ul>
+<li>TEL lattice stability  </li>
+<li>FFT variance stability  </li>
+<li>Opacity boundary stability  </li>
+</ul>
+<h3 id="63-collapsemode-validation"><strong>6.3 Collapse‑Mode Validation</strong></h3>
+<ul>
+<li>collapse‑mode simulation  </li>
+<li>break‑chain tracing  </li>
+<li>recovery viability  </li>
+</ul>
+<h3 id="64-patternsynthesis-validation"><strong>6.4 Pattern‑Synthesis Validation</strong></h3>
+<ul>
+<li>Stress Harness  </li>
+<li>Sandbox adversarial tests  </li>
+</ul>
+<p>If any validation fails → entry rejected.</p>
+<hr>
+<h1 id="7-ledger-supersession-rules">7. Ledger Supersession Rules</h1>
+<p>A Ledger entry may be superseded only when:</p>
+<ul>
+<li>a new entry provides a structurally superior model  </li>
+<li>lineage remains intact  </li>
+<li>coherence remains stable  </li>
+<li>drift is not introduced  </li>
+<li>collapse‑modes remain predictable  </li>
+</ul>
+<p>Supersession must be explicitly recorded:</p>
+<pre><code>supersedes: &lt;entry_id&gt;
+</code></pre>
+<hr>
+<h1 id="8-ledger-index-structure">8. Ledger Index Structure</h1>
+<p>The Ledger is organized into <strong>four indices</strong>:</p>
+<h3 id="81-structural-index"><strong>8.1 Structural Index</strong></h3>
+<ul>
+<li>operators  </li>
+<li>envelopes  </li>
+<li>regimes  </li>
+<li>continuity architectures  </li>
+</ul>
+<h3 id="82-pattern-index"><strong>8.2 Pattern Index</strong></h3>
+<ul>
+<li>pattern families A–G  </li>
+<li>sub‑patterns  </li>
+<li>collapse‑modes  </li>
+<li>synthesis templates  </li>
+</ul>
+<h3 id="83-module-index"><strong>8.3 Module Index</strong></h3>
+<ul>
+<li>Structural Detection  </li>
+<li>TEL  </li>
+<li>FFT  </li>
+<li>Opacity  </li>
+<li>Resilience Checker  </li>
+<li>Paradoxes Canon  </li>
+<li>Low‑Dimensional Structures  </li>
+</ul>
+<h3 id="84-evolution-index"><strong>8.4 Evolution Index</strong></h3>
+<ul>
+<li>Canon Change Proposals  </li>
+<li>Evolution Dossier references  </li>
+<li>Stewardship actions  </li>
+<li>Audit results  </li>
+</ul>
+<hr>
+<h1 id="9-ledger-audit-protocol">9. Ledger Audit Protocol</h1>
+<p>The Ledger is audited:</p>
+<ul>
+<li>annually  </li>
+<li>after any major canonical change  </li>
+<li>after any cross‑module update  </li>
+<li>after any new pattern family integration  </li>
+</ul>
+<p>Audits verify:</p>
+<ul>
+<li>lineage continuity  </li>
+<li>structural correctness  </li>
+<li>cross‑module coherence  </li>
+<li>collapse‑mode stability  </li>
+<li>drift absence  </li>
+</ul>
+<hr>
+<h1 id="10-ledger-packet-template">10. Ledger Packet Template</h1>
+<pre><code>CANON_LEDGER_PACKET:
+  entries:
+    - entry_id:
+      category:
+      summary:
+      lineage_origin:
+      structural_changes:
+      module_changes:
+      collapse_mode_changes:
+      validation_summary:
+      ratification_status:
+  audit_status:
+  notes:
+</code></pre>
+<hr>
+<h1 id="11-summary">11. Summary</h1>
+<p>The Canon Ledger ensures:</p>
+<ul>
+<li>the canon is permanently recorded  </li>
+<li>lineage is preserved  </li>
+<li>evolution is traceable  </li>
+<li>drift is prevented  </li>
+<li>coherence is maintained  </li>
+<li>structural decisions are auditable  </li>
+</ul>
+<p>The Ledger is the <strong>archival backbone</strong> of RTT/2 governance.</p>
+  </main>
+</body>
+</html>

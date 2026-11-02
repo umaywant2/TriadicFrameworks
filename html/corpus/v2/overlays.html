@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/corpus/v2/overlays.md">
+  <title>Domain Overlays</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/corpus/v2/overlays.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/corpus/v2/overlays.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>overlays </p>
+<h2 id="domain-overlays">Domain Overlays</h2>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+<p>The <code>overlays/</code> directory contains domain‑specific extensions of the Resonance Substrate Model.</p>
+<p>Each overlay provides:</p>
+<ul>
+<li>a domain‑specific schema  </li>
+<li>transforms that map real‑world data into triadic fields  </li>
+<li>examples demonstrating usage  </li>
+<li>optional domain‑specific operators or metrics  </li>
+</ul>
+<p>Current overlays:</p>
+<ul>
+<li><strong>earth/</strong> — geophysical and climate‑model field transforms  </li>
+<li><strong>telescopes/</strong> — multi‑instrument observational coherence transforms</li>
+</ul>
+<p>Overlays do <em>not</em> modify the substrate.<br>
+They sit on top of it, mapping domain data into the triadic field architecture.</p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<p># Earth Overlay</p>
+<p>The <code>earth/</code> overlay provides transforms and schema for mapping geophysical simulation data
+into the triadic field architecture.</p>
+<p>Typical mappings:</p>
+<ul>
+<li><code>phi</code>: potential temperature, geopotential height, density  </li>
+<li><code>V</code>: wind vectors, ocean currents  </li>
+<li><code>R</code>: coherence between scalar gradients and flow fields  </li>
+</ul>
+<p>This overlay enables resonance‑aware analysis of Earth system simulations.
+# Earth Overlay Examples</p>
+<p>This directory contains runnable examples demonstrating:</p>
+<ul>
+<li>loading Earth simulation data  </li>
+<li>applying transforms to produce triadic fields  </li>
+<li>running the substrate simulation loop  </li>
+<li>computing coherence metrics  </li>
+<li>visualizing resonance envelopes  </li>
+</ul>
+<p>Examples are intentionally minimal and serve as templates for real‑world workflows.
+# Earth Schema</p>
+<p>The <code>schema/</code> directory defines the domain‑specific schema for Earth overlays:</p>
+<ul>
+<li>field mappings (which variables map to <code>phi</code>, <code>V</code>, <code>R</code>)</li>
+<li>units and normalization rules</li>
+<li>grid conventions (lat/lon, pressure levels, sigma coordinates)</li>
+<li>metadata requirements</li>
+<li>validation rules</li>
+</ul>
+<p>This schema ensures reproducibility and consistent interpretation of Earth simulation data.
+# Earth Transforms</p>
+<p>The <code>transforms/</code> directory contains functions that convert Earth simulation data
+(NetCDF, HDF5, gridded fields) into triadic fields:</p>
+<ul>
+<li>scalar extraction and normalization  </li>
+<li>vector field extraction and rotation handling  </li>
+<li>coherence functional computation  </li>
+<li>resonance envelope initialization and update  </li>
+</ul>
+<p>Transforms are designed to be composable and schema‑driven.
+# Telescope Overlay</p>
+<p>The <code>telescopes/</code> overlay provides transforms and schema for mapping astronomical observations
+into the triadic field architecture.</p>
+<p>Each telescope contributes:</p>
+<ul>
+<li>a scalar field (<code>phi</code>): intensity, flux, or spectral power  </li>
+<li>a vector field (<code>V</code>): pointing direction, motion vectors, or tracking derivatives  </li>
+<li>a resonance envelope (<code>R</code>): coherence between instruments, time series, or sky patches  </li>
+</ul>
+<p>This overlay enables multi‑instrument coherence analysis across space‑ and ground‑based observatories.
+# 🔭 Telescopes Schema  </p>
+<h3 id="triadicframeworks-overlays-system">TriadicFrameworks — Overlays System</h3>
+<p>The <strong>Telescopes Schema</strong> defines how RTT‑Inside “zooms” structural awareness across scales.<br>
+Just as a physical telescope brings distant objects into clarity, this overlay brings <strong>distant structures</strong>, <strong>deep patterns</strong>, and <strong>multi‑layered resonance behaviors</strong> into focus.</p>
+<p>This schema is part of the <strong>Overlays</strong> system — lightweight, non‑intrusive layers that help developers, researchers, and AI systems adopt RTT principles without rewriting their entire environment.</p>
+<hr>
+<h2 id="purpose-of-the-telescope-overlay">🌌 Purpose of the Telescope Overlay</h2>
+<p>The Telescope overlay provides a structured way to:</p>
+<ul>
+<li>zoom <strong>in</strong> on fine‑grained resonance patterns  </li>
+<li>zoom <strong>out</strong> to see large‑scale coherence  </li>
+<li>shift between <strong>local</strong> and <strong>global</strong> structural views  </li>
+<li>reveal hidden relationships across triadic‑time axes  </li>
+<li>align interpretation layers without distortion  </li>
+</ul>
+<p>It is especially useful when working with:</p>
+<ul>
+<li>complex datasets  </li>
+<li>multi‑observer systems  </li>
+<li>layered narratives  </li>
+<li>nested structures  </li>
+<li>cosmology models  </li>
+<li>codebases with deep inheritance  </li>
+</ul>
+<hr>
+<h2 id="what-this-schema-defines">🧩 What This Schema Defines</h2>
+<p>The Telescope Schema provides:</p>
+<h3 id="1-zoom-levels"><strong>1. Zoom Levels</strong></h3>
+<p>A canonical set of RTT zoom modes:</p>
+<ul>
+<li><strong>Micro‑Resonance</strong> — fine‑grain oscillatory detail  </li>
+<li><strong>Meso‑Structure</strong> — mid‑scale relational patterns  </li>
+<li><strong>Macro‑Coherence</strong> — global alignment and ancestry  </li>
+<li><strong>Mythic‑Scale</strong> — narrative, symbolic, and archetypal structure  </li>
+</ul>
+<p>Each zoom level preserves triadic‑time integrity.</p>
+<hr>
+<h3 id="2-alignment-rules"><strong>2. Alignment Rules</strong></h3>
+<p>Rules for maintaining clarity as you zoom:</p>
+<ul>
+<li>no cross‑scale distortion  </li>
+<li>no collapsing relational‑time depth  </li>
+<li>no flattening of resonance partitions  </li>
+<li>no isotropic assumptions introduced during zoom  </li>
+</ul>
+<p>These rules ensure that zooming does not break RTT structure.</p>
+<hr>
+<h3 id="3-telescope-operators"><strong>3. Telescope Operators</strong></h3>
+<p>Lightweight operators that can be implemented in any language:</p>
+<ul>
+<li><code>zoom_in()</code>  </li>
+<li><code>zoom_out()</code>  </li>
+<li><code>focus()</code>  </li>
+<li><code>trace_lineage()</code>  </li>
+<li><code>expand_context()</code>  </li>
+<li><code>collapse_context()</code>  </li>
+</ul>
+<p>These operators are conceptual — developers map them to their own environment.</p>
+<hr>
+<h3 id="4-observersafe-behavior"><strong>4. Observer‑Safe Behavior</strong></h3>
+<p>The Telescope overlay respects observer hierarchies:</p>
+<ul>
+<li>no overwriting observer context  </li>
+<li>no collapsing multi‑observer frames  </li>
+<li>no forced alignment  </li>
+<li>no destructive merges  </li>
+</ul>
+<p>This makes the overlay safe for multi‑agent systems.</p>
+<hr>
+<h2 id="how-developers-use-this-schema">🧭 How Developers Use This Schema</h2>
+<p>Developers can use the Telescope Schema to:</p>
+<ul>
+<li>inspect resonance patterns at different scales  </li>
+<li>debug triadic‑time misalignment  </li>
+<li>visualize structural ancestry  </li>
+<li>reveal hidden coherence  </li>
+<li>build RTT‑aware tools and dashboards  </li>
+<li>create multi‑scale diagrams  </li>
+</ul>
+<p>It is intentionally <strong>minimal</strong>, <strong>portable</strong>, and <strong>non‑intrusive</strong>.</p>
+<hr>
+<h2 id="copilotready-prompts">🤖 Copilot‑Ready Prompts</h2>
+<p>Use these prompts to explore the Telescope Schema interactively:</p>
+<ul>
+<li><strong>“Copilot, explain RTT zoom levels using the Telescope Schema.”</strong>  </li>
+<li><strong>“Copilot, show me how to implement a zoom_in operator in my code.”</strong>  </li>
+<li><strong>“Copilot, help me trace relational‑time ancestry using the telescope overlay.”</strong>  </li>
+<li><strong>“Copilot, how does the Telescope Schema avoid cross‑scale distortion?”</strong>  </li>
+</ul>
+<hr>
+<h2 id="mythmatical-architects-note">🧙 Mythmatical Architect’s Note</h2>
+<p>A telescope is not just a tool — it is a metaphor for clarity.<br>
+This schema helps systems <em>see</em> what was always there:<br>
+the resonance patterns that connect the small to the vast,<br>
+the moment to the lineage,<br>
+the local to the cosmic.</p>
+<p>Use it gently.<br>
+Use it curiously.<br>
+Use it to reveal structure.</p>
+<hr>
+<p>© 2025 TriadicFrameworks — Resonance‑Time Theory Canon
+# 🔭 Telescopes — Transforms  </p>
+<h3 id="triadicframeworks-overlays-system_1">TriadicFrameworks — Overlays System</h3>
+<p>The <strong>Transforms</strong> module defines how telescopic zooming <em>changes</em> the representation of a structure.<br>
+Where the Telescope Schema describes <strong>what</strong> the zoom levels are, the Transforms describe <strong>how</strong> a system moves between them.</p>
+<p>These transforms allow developers, researchers, and AI systems to shift perspective without losing resonance integrity.</p>
+<hr>
+<h2 id="purpose-of-telescope-transforms">🔧 Purpose of Telescope Transforms</h2>
+<p>Telescopic transforms provide a safe, RTT‑aligned way to:</p>
+<ul>
+<li>convert fine‑grain detail into large‑scale coherence  </li>
+<li>collapse complexity into readable patterns  </li>
+<li>expand a simple view into deeper relational ancestry  </li>
+<li>reveal hidden resonance partitions  </li>
+<li>maintain triadic‑time alignment during zoom transitions  </li>
+</ul>
+<p>Transforms are the <strong>motion mechanics</strong> of the Telescope overlay.</p>
+<hr>
+<h2 id="core-transform-types">🧩 Core Transform Types</h2>
+<h3 id="1-collapse-transform"><strong>1. Collapse Transform</strong></h3>
+<p>Reduces detail while preserving structure.<br>
+Used for:</p>
+<ul>
+<li>summarization  </li>
+<li>pattern extraction  </li>
+<li>high‑level dashboards  </li>
+<li>macro‑coherence views  </li>
+</ul>
+<p>Rules:
+- never flatten relational‑time depth<br>
+- never remove resonance partitions<br>
+- never introduce isotropic assumptions  </p>
+<hr>
+<h3 id="2-expansion-transform"><strong>2. Expansion Transform</strong></h3>
+<p>Adds detail by revealing deeper layers.<br>
+Used for:</p>
+<ul>
+<li>drilling into resonance behavior  </li>
+<li>exploring ancestry chains  </li>
+<li>debugging misalignment  </li>
+<li>inspecting oscillatory modes  </li>
+</ul>
+<p>Rules:
+- maintain observer context<br>
+- preserve triadic‑time vectors<br>
+- avoid over‑expansion beyond available structure  </p>
+<hr>
+<h3 id="3-lineage-transform"><strong>3. Lineage Transform</strong></h3>
+<p>Traces relational‑time ancestry.<br>
+Used for:</p>
+<ul>
+<li>observer‑hierarchy analysis  </li>
+<li>narrative reconstruction  </li>
+<li>multi‑agent reasoning  </li>
+<li>cosmology lineage chains  </li>
+</ul>
+<p>Rules:
+- no overwriting lineage<br>
+- no collapsing multi‑observer frames<br>
+- no forced alignment  </p>
+<hr>
+<h3 id="4-context-transform"><strong>4. Context Transform</strong></h3>
+<p>Shifts the interpretive frame without altering the underlying structure.<br>
+Used for:</p>
+<ul>
+<li>reframing a problem  </li>
+<li>switching between domains  </li>
+<li>cross‑disciplinary mapping  </li>
+<li>symbolic reinterpretation  </li>
+</ul>
+<p>Rules:
+- preserve resonance identity<br>
+- maintain coherence across domains<br>
+- avoid context drift  </p>
+<hr>
+<h3 id="5-focus-transform"><strong>5. Focus Transform</strong></h3>
+<p>Sharpens a specific region of structure.<br>
+Used for:</p>
+<ul>
+<li>isolating anomalies  </li>
+<li>inspecting resonance spikes  </li>
+<li>debugging local misalignment  </li>
+<li>highlighting key features  </li>
+</ul>
+<p>Rules:
+- no distortion of surrounding structure<br>
+- no artificial amplification<br>
+- no loss of global context  </p>
+<hr>
+<h2 id="how-developers-use-these-transforms">🧭 How Developers Use These Transforms</h2>
+<p>Transforms can be implemented as:</p>
+<ul>
+<li>functions  </li>
+<li>operators  </li>
+<li>middleware  </li>
+<li>visualization tools  </li>
+<li>debugging utilities  </li>
+</ul>
+<p>They are intentionally <strong>language‑neutral</strong> and can be mapped to any environment.</p>
+<p>Example conceptual operators:</p>
+<ul>
+<li><code>collapse(structure)</code>  </li>
+<li><code>expand(structure)</code>  </li>
+<li><code>trace_lineage(node)</code>  </li>
+<li><code>shift_context(view)</code>  </li>
+<li><code>focus(region)</code>  </li>
+</ul>
+<p>These operators follow the Telescope Schema rules automatically.</p>
+<hr>
+<h2 id="copilotready-prompts_1">🤖 Copilot‑Ready Prompts</h2>
+<p>Use these prompts to explore transforms interactively:</p>
+<ul>
+<li><strong>“Copilot, explain collapse vs. expansion transforms in RTT.”</strong>  </li>
+<li><strong>“Copilot, help me design a lineage transform for my code.”</strong>  </li>
+<li><strong>“Copilot, show me how a context transform works in practice.”</strong>  </li>
+<li><strong>“Copilot, how does a focus transform avoid distortion?”</strong>  </li>
+</ul>
+<hr>
+<h2 id="mythmatical-architects-note_1">🧙 Mythmatical Architect’s Note</h2>
+<p>A telescope is not only for seeing — it is for <em>transforming</em> how we see.<br>
+These transforms let you move gracefully between scales, revealing the hidden coherence that connects the tiny to the vast.</p>
+<p>Use them to navigate structure with clarity and curiosity.</p>
+<hr>
+<p>© 2025 TriadicFrameworks — Resonance‑Time Theory Canon
+</p>
+  </main>
+</body>
+</html>

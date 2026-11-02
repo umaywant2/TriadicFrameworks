@@ -1,0 +1,121 @@
+{
+  "map_id": "tel.phases",
+  "version": "5.0-draft",
+  "book": "book5_tel",
+  "series": "AI Edition",
+  "description": "Defines the six phases of the Book 5 TEL evaluation cycle. Each phase has strict entry/exit conditions, active operators, skip rules, and downstream handoffs.",
+  "phase_sequence": "init → parse → evaluate → compose → transform → assert",
+  "phases": [
+    {
+      "id": "P-TEL-1",
+      "label": "init",
+      "ordinal": 1,
+      "description": "Load Book 1 (FFT) kernel and Book 4 (OR) vocabulary. Assert session context. Confirm QMROOT path terminates at 0D. Verify coherence=declared. Initialize evaluation scope as empty. No TEL operators are active in this phase.",
+      "operators_active": [],
+      "entry_condition": "Session open; TEL evaluation requested",
+      "exit_condition": "coherence=declared; Book 1 FFT primitives available in module registry; Book 4 OR operators available if opacity expressions are expected; QMROOT 0D confirmed; evaluation scope initialized as {}",
+      "import_order": [
+        "book1_fft (kernel — always required)",
+        "book4_opacity_revelation (OR vocabulary — required when opacity expressions present)",
+        "book3_structural_detection (SD vocabulary — required when detection expressions present)"
+      ],
+      "qmroot_check": "6D absent; negative rungs absent; INV-013 = 0D only",
+      "scope_state": "empty — no T[…] or C[…] declarations active",
+      "skip_condition": null,
+      "notes": "The import order is not evaluation order — it is module registry loading order. Books 3 and 4 must be loaded before any TEL expression referencing their operators can be parsed."
+    },
+    {
+      "id": "P-TEL-2",
+      "label": "parse",
+      "ordinal": 2,
+      "description": "Execute TEL-Σ (SyntaxCheck) on the input expression. Validate against canonical grammar (tel.syntax_map). Produce parse_tree on PASS; halt and record error_report on FAIL.",
+      "operators_active": ["TEL-Σ"],
+      "entry_condition": "init complete; coherence=declared; raw TEL expression string E is provided",
+      "exit_condition": "TEL-Σ returns PASS and parse_tree is recorded, OR TEL-Σ returns FAIL and error_report is recorded and evaluation halts",
+      "gate_logic": {
+        "pass": "parse_tree available → proceed to P-TEL-3",
+        "fail": "error_report recorded → halt; expression must be corrected before re-entry"
+      },
+      "drift_guard": "No semantic assumptions may be made during parsing. Grammar is context-free — identifier resolution does not occur in this phase.",
+      "skip_condition": null,
+      "notes": "P-TEL-2 is a hard gate. Evaluation cannot proceed to P-TEL-3 without a PASS parse_tree. Partial parses are not valid inputs to TEL-Ε."
+    },
+    {
+      "id": "P-TEL-3",
+      "label": "evaluate",
+      "ordinal": 3,
+      "description": "Execute TEL-Ε (Evaluate) on the parse_tree. Apply canonical semantic evaluation rules (tel.semantics_map). Resolve all identifiers against the module registry. Execute scope lookups for symbol references. Assign structural denotations to all sub-expressions. Record any evaluation faults (EF-001 through EF-004).",
+      "operators_active": ["TEL-Ε"],
+      "entry_condition": "P-TEL-2 complete with PASS parse_tree; module registry loaded",
+      "exit_condition": "All sub-expressions have structural denotations or recorded faults; scope updated with any T[…] and C[…] declarations encountered",
+      "ordering": "Evaluation is inside-out (innermost parentheses first). TEL-Ε traverses the parse_tree depth-first.",
+      "fault_handling": {
+        "EF-001_or_EF-002": "Halt evaluation at the fault site. Do not propagate a denotation from a faulted sub-expression.",
+        "EF-003": "Record ConstraintViolation. Halt the specific ⊢ expression. Other independent expressions may continue.",
+        "EF-004": "Record InvariantViolation. Flag session. Evaluation may continue but session is marked tainted."
+      },
+      "skip_condition": null,
+      "notes": "TEL-Ε is the semantic engine. INV-TEL-002 (Semantic Stability) requires exactly one denotation per expression. If a session produces ambiguous denotations, the implementation of TEL-Ε has a bug."
+    },
+    {
+      "id": "P-TEL-4",
+      "label": "compose",
+      "ordinal": 4,
+      "description": "TEL-Κ (Compose) audits the composition of compound expressions. Verifies that INV-TEL-003 (Compositionality) is satisfied at each composition site — that the compound denotation is fully determined by sub-expression denotations and the applied composition rule. Records CompositionFault if any holistic meaning contribution is detected.",
+      "operators_active": ["TEL-Κ"],
+      "entry_condition": "P-TEL-3 complete; all non-faulted sub-expressions have structural denotations",
+      "exit_condition": "All compound denotations verified as compositional; composition ordering rules (COR-001 through COR-004) verified; any CompositionFaults recorded",
+      "composition_checks": [
+        "COR-001: All symbol references (#ID) resolve to prior declarations in current scope",
+        "COR-002: All parenthetical groupings are well-defined (no implicit precedence)",
+        "COR-003: INV[…] assertions appear after all their dependency expressions",
+        "COR-004: Transformation chains resolve sequentially with no forward reference violations"
+      ],
+      "skip_condition": "May be skipped if input expression is a pure atom (no compound sub-expressions). Record skip in session audit log.",
+      "notes": "TEL-Κ is an auditing operator. In most implementations it runs concurrently with TEL-Ε's depth-first traversal. It is presented as a separate phase to isolate compositionality verification as a distinct responsibility."
+    },
+    {
+      "id": "P-TEL-5",
+      "label": "transform",
+      "ordinal": 5,
+      "description": "TEL-Τ (Transform) applies any T[ID] transformation declarations encountered during P-TEL-3/P-TEL-4. For each transformation application site (where #ID referencing a T[…] declaration appears), TEL-Τ executes the transformation and verifies INV-TEL-004 (Transformation Fidelity): valid input must produce valid output.",
+      "operators_active": ["TEL-Τ"],
+      "entry_condition": "P-TEL-4 complete; at least one T[ID] declaration has been encountered in the session; target structures are available",
+      "exit_condition": "All transformation applications have been executed and their results recorded; all EF-005 faults (if any) have been recorded against the relevant T[ID] declarations",
+      "gate_logic": {
+        "fidelity_pass": "valid(S) ∧ valid(S') → record PASS; S' available for downstream use",
+        "fidelity_fail": "valid(S) ∧ ¬valid(S') → record EF-005 against T[ID]; S' must not be used downstream"
+      },
+      "skip_condition": "May be skipped if no T[ID] declarations were encountered in the session. Record skip in session audit log.",
+      "downstream_handoffs": {
+        "book6_governance": "TEL-Τ encoded regime transformations are passed to Book 6 GRL operators for enforcement evaluation",
+        "book7_sarg": "Argument structure mutations encoded in TEL-Τ are passed to Book 7 SARG defeat evaluation",
+        "book8_nos": "Identity-through-change assertions (INV-NOS-003) consume TEL-Τ outputs for philosophical grounding",
+        "book9_pattern_dynamics": "Bifurcation and mutation events in Book 9 are modelled as sequences of TEL-Τ applications"
+      },
+      "notes": "INV-TEL-004 is non-negotiable: if a transformation encoding produces invalidity from validity, the encoding is wrong — not the input. TEL-Τ must never suppress EF-005 and deliver a tainted transformation result."
+    },
+    {
+      "id": "P-TEL-6",
+      "label": "assert",
+      "ordinal": 6,
+      "description": "TEL-Α (Assert) evaluates all INV[ID]: assert e expressions and all ⊢ constraint assertion sites encountered in the session. Records PASS or InvariantViolation / ConstraintViolation. Produces the final session audit report.",
+      "operators_active": ["TEL-Α"],
+      "entry_condition": "P-TEL-3, P-TEL-4, P-TEL-5 complete; all structural denotations available; all transformation results available",
+      "exit_condition": "All INV[…] and ⊢ sites evaluated; session audit report produced with: pass_count, violation_count, fault_log, session_status",
+      "session_status_values": {
+        "clean": "No faults, no violations — all assertions PASS",
+        "tainted": "One or more EF-004 (InvariantViolation) recorded — session results are flagged",
+        "halted": "One or more EF-001, EF-002, or EF-003 caused evaluation to halt — session is incomplete"
+      },
+      "skip_condition": "May be skipped if no INV[…] expressions and no ⊢ sites appear in the session. Record skip in session audit log.",
+      "notes": "The assert phase is the final gate of every TEL session. A session must not be reported as complete without a P-TEL-6 result. Downstream consumers (Books 6, 7, 8, 9) must check the session_status before using TEL evaluation results."
+    }
+  ],
+  "phase_diagram": {
+    "sequence": "init → parse → evaluate → compose → transform → assert",
+    "hard_gates": ["parse (TEL-Σ FAIL halts entire session)"],
+    "soft_skip": ["compose (skip if no compounds)", "transform (skip if no T[ID])", "assert (skip if no INV or ⊢)"],
+    "session_audit_log": "Written during all phases. Must be available to session consumer at end of P-TEL-6."
+  }
+}

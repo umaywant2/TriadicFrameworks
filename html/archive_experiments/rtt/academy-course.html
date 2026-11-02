@@ -1,0 +1,84 @@
+<div id="rtt-nav"></div>
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
+<script>
+  async function loadCourse() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    if (!id) return;
+
+    const [coursesRes, registryRes] = await Promise.all([
+      fetch("docs/academy/academy-courses.json"),
+      fetch("docs/academy/academy-registry.json")
+    ]);
+
+    const coursesData = await coursesRes.json();
+    const registry = await registryRes.json();
+
+    const course = coursesData.courses.find(c => c.id === id);
+    if (!course) return;
+
+    const docsById = Object.fromEntries(registry.docs.map(d => [d.id, d]));
+    const enginesById = Object.fromEntries(registry.engines.map(e => [e.id, e]));
+
+    // Title, subtitle, overview
+    document.getElementById("courseTitle").textContent = course.title;
+    document.getElementById("courseSubtitle").textContent = course.subtitle;
+    document.getElementById("courseOverview").textContent = course.overview;
+
+    // Tier badge
+    const tierMap = {
+      foundations: "rtt-badge-foundations",
+      systems: "rtt-badge-systems",
+      intelligence: "rtt-badge-intelligence",
+      aeonic: "rtt-badge-aeonic"
+    };
+    const tierEl = document.getElementById("courseTier");
+    tierEl.className = "rtt-badge " + (tierMap[course.tier] || "rtt-badge-foundations");
+    tierEl.textContent = course.tier.charAt(0).toUpperCase() + course.tier.slice(1);
+
+    // Objectives
+    document.getElementById("courseObjectives").innerHTML =
+      course.objectives.map(o => `<li>${o}</li>`).join("");
+
+    // Docs
+    document.getElementById("courseDocs").innerHTML =
+      (course.docs || []).map(id => docsById[id]).filter(Boolean).map(d => `
+        <div class="rtt-card">
+          <div class="rtt-card-title">${d.name}</div>
+          <a class="rtt-btn rtt-btn-secondary" href="${d.link}">Open</a>
+        </div>
+      `).join("");
+
+    // Engines
+    document.getElementById("courseEngines").innerHTML =
+      (course.engines || []).map(id => enginesById[id]).filter(Boolean).map(e => `
+        <div class="rtt-card">
+          <div class="rtt-card-title">${e.name}</div>
+          <a class="rtt-btn rtt-btn-secondary" href="${e.link}">View Engine</a>
+        </div>
+      `).join("");
+
+    // Next steps (courses)
+    document.getElementById("courseNext").innerHTML =
+      (course.next || []).map(nextId => {
+        const nextCourse = coursesData.courses.find(c => c.id === nextId);
+        if (!nextCourse) return "";
+        return `
+          <div class="rtt-card">
+            <div class="rtt-card-title">${nextCourse.title}</div>
+            <div class="rtt-card-subtitle">${nextCourse.subtitle}</div>
+            <a class="rtt-btn rtt-btn-primary" href="academy-course.html?id=${nextCourse.id}">
+              Continue
+            </a>
+          </div>
+        `;
+      }).join("");
+  }
+
+  loadCourse();
+</script>

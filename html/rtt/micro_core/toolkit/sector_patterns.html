@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/micro_core/toolkit/sector_patterns.md">
+  <title>🗂️ Sector Patterns (MRT)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/micro_core/toolkit/sector_patterns.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/micro_core/toolkit/sector_patterns.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="sector-patterns-mrt">🗂️ <strong>Sector Patterns (MRT)</strong></h1>
+<p><em>Reusable micro‑regime configurations for common environments</em></p>
+<p>Sector Patterns are minimal, deterministic micro‑regime templates that appear across embedded systems, distributed micro‑agents, and ultra‑low‑power environments.<br>
+Each pattern is built entirely from <strong>Micro‑Core structures</strong> and <strong>MRT primitives</strong>, providing ready‑made configurations for stable micro‑scale behavior.</p>
+<hr>
+<h2 id="sector-1-stable-loop-sector-s1">📦 <strong>Sector 1 — Stable Loop Sector (S₁)</strong></h2>
+<p><strong>Use Case</strong><br>
+Ultra‑low‑power devices, periodic sampling, heartbeat loops.</p>
+<p><strong>Structure</strong><br>
+- triad: ⟨A, B, P⟩<br>
+- stable Δt<br>
+- δ kept below δ*<br>
+- <strong>R₁ (Oscillation)</strong> as primary operator  </p>
+<p><strong>Behavior</strong><br>
+A predictable A ⇆ P loop with minimal drift.</p>
+<hr>
+<h2 id="sector-2-boundarysensitive-sector-s2">📦 <strong>Sector 2 — Boundary‑Sensitive Sector (S₂)</strong></h2>
+<p><strong>Use Case</strong><br>
+Systems where constraints shift frequently (thermal drift, voltage variation).</p>
+<p><strong>Structure</strong><br>
+- triad with dynamic B<br>
+- frequent B⁺ / B⁻ adjustments<br>
+- <strong>K₃ (Boundary Alignment)</strong> active  </p>
+<p><strong>Behavior</strong><br>
+Triad maintains coherence despite boundary fluctuations.</p>
+<hr>
+<h2 id="sector-3-inversiondriven-sector-s3">📦 <strong>Sector 3 — Inversion‑Driven Sector (S₃)</strong></h2>
+<p><em>(Corrected — original referenced P₈, which does not exist.)</em></p>
+<p><strong>Use Case</strong><br>
+Systems requiring reversible state flips (mode switching, polarity changes).</p>
+<p><strong>Structure</strong><br>
+- inversion‑ready triad<br>
+- inversion trigger monitored via <strong>P₆ (Coherence Sample)</strong><br>
+- <strong>R₂ (Inversion Operator)</strong> as primary  </p>
+<p><strong>Behavior</strong><br>
+Clean, reversible inversions with preserved coherence.</p>
+<hr>
+<h2 id="sector-4-fractionaltransition-sector-s4">📦 <strong>Sector 4 — Fractional‑Transition Sector (S₄)</strong></h2>
+<p><em>(Completed — original file cut off mid‑sentence.)</em></p>
+<p><strong>Use Case</strong><br>
+Fine‑grained modeling, adaptive micro‑states, micro‑learning loops.</p>
+<p><strong>Structure</strong><br>
+- fractional dimension Dᶠ active<br>
+- <strong>K₆ (Fractional‑Ladder Regulator)</strong> engaged<br>
+- bounded fractional steps using <strong>P₇ (Fractional Step)</strong>  </p>
+<p><strong>Behavior</strong><br>
+Smooth, stable transitions along the fractional‑dimensional ladder.</p>
+<hr>
+<h2 id="summary">✔️ <strong>Summary</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Sector</th>
+<th>Focus</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S₁</strong></td>
+<td>Stable loops</td>
+<td>Predictable micro‑oscillation under tight constraints</td>
+</tr>
+<tr>
+<td><strong>S₂</strong></td>
+<td>Boundary‑sensitive systems</td>
+<td>Maintains coherence despite shifting conditions</td>
+</tr>
+<tr>
+<td><strong>S₃</strong></td>
+<td>Inversion‑driven behavior</td>
+<td>Clean, reversible state flips</td>
+</tr>
+<tr>
+<td><strong>S₄</strong></td>
+<td>Fractional transitions</td>
+<td>Fine‑grained, adaptive micro‑state evolution</td>
+</tr>
+</tbody>
+</table>
+<p>Sector Patterns provide <strong>ready‑to‑use micro‑regime templates</strong> that preserve coherence, minimize drift, and support deterministic behavior across diverse environments.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/resonance-substrate-model/schemas/primitives/README.md">
+  <title>Primitives</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/resonance-substrate-model/schemas/primitives/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/resonance-substrate-model/schemas/primitives/README.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="primitives"><strong>Primitives</strong></h1>
+<p>This directory defines the foundational schemas used throughout the Resonance Substrate Model (RSM). These schemas represent the lowest‑level substrate constructs—fields, coordinates, envelopes, and operators—that higher‑layer systems build upon. They provide the essential mathematical and structural vocabulary for simulations, experiments, sensing, and quantum‑substrate interactions.</p>
+<p>Below is a detailed description of each schema contained in this directory.</p>
+<hr>
+<h1 id="quicklinks">Quicklinks</h1>
+<ul>
+<li><a href="../index_md.html">schemas index</a></li>
+<li><a href="../README.html">schemas README</a></li>
+<li><a href="../coeus/README.html">schemas coeus README</a></li>
+<li><a href="../dimensional/README.html">schemas dimensional README</a></li>
+<li><a href="../distributed/README.html">schemas distributed README</a></li>
+<li><a href="../energy/README.html">schemas energy README</a></li>
+<li><a href="../experiments/README.html">schemas experiments README</a></li>
+<li><a href="../fields/README.html">schemas fields README</a></li>
+<li><a href="../finance/README.html">schemas finance README</a></li>
+<li><a href="../identity/README.html">schemas identity README</a></li>
+<li><a href="../infrastructure/README.html">schemas infrastructure README</a></li>
+<li><a href="../lab/README.html">schemas lab README</a></li>
+<li><a href="../language/README.html">schemas language README</a></li>
+<li><a href="../networking/README.html">schemas networking README</a></li>
+<li><a href="../operators/README.html">schemas operators README</a></li>
+<li><a href="../quantum/README.html">schemas quantum README</a></li>
+<li><a href="../sensing/README.html">schemas sensing README</a></li>
+<li><a href="../simulations/README.html">schemas simulations README</a></li>
+<li><a href="../universe-core/README.html">schemas universe-core README</a></li>
+<li><a href="../">previous folder</a></li>
+</ul>
+<hr>
+<h1 id="schema-descriptions"><strong>Schema Descriptions</strong></h1>
+<h2 id="1-primitivesschemajson"><strong>1. <code>primitives.schema.json</code></strong></h2>
+<p>Defines the atomic building blocks used across the entire RSM ecosystem, including:
+- numbers<br>
+- vectors<br>
+- matrices<br>
+- ranges<br>
+- flags<br>
+- generic key‑value structures  </p>
+<p>This schema underpins all other schemas in this directory.</p>
+<hr>
+<h2 id="2-vector3schemajson"><strong>2. <code>vector3.schema.json</code></strong></h2>
+<p>Represents a 3‑dimensional vector used for:
+- spatial coordinates<br>
+- field gradients<br>
+- spin orientations<br>
+- directional operators  </p>
+<p>Fields and operators frequently reference this structure for consistent vector math.</p>
+<hr>
+<h2 id="3-grid_coordinatesschemajson"><strong>3. <code>grid_coordinates.schema.json</code></strong></h2>
+<p>Defines coordinate positions within the substrate grid.<br>
+Includes:
+- x, y, z indices<br>
+- optional world‑space coordinates<br>
+- optional resolution or scaling metadata  </p>
+<p>Used by fields, operators, and sensing modules to anchor data in space.</p>
+<hr>
+<h2 id="4-scalar_fieldschemajson"><strong>4. <code>scalar_field.schema.json</code></strong></h2>
+<p>Represents a scalar field distributed across the substrate.<br>
+Common uses:
+- temperature<br>
+- density<br>
+- amplitude<br>
+- potential values  </p>
+<p>Includes support for:
+- grid mapping<br>
+- default values<br>
+- boundary behavior  </p>
+<hr>
+<h2 id="5-vector_fieldschemajson-if-present-otherwise-skip"><strong>5. <code>vector_field.schema.json</code></strong> <em>(if present; otherwise skip)</em></h2>
+<p>Represents a vector field across the substrate.<br>
+Used for:
+- flow fields<br>
+- directional forces<br>
+- spin orientations<br>
+- gradient propagation  </p>
+<p>(If your folder does not contain this file, I can generate it for you.)</p>
+<hr>
+<h2 id="6-spin_fieldschemajson"><strong>6. <code>spin_field.schema.json</code></strong></h2>
+<p>Defines a spin‑based vector field, typically used for:
+- spin alignment<br>
+- resonance‑phase coupling<br>
+- quantum triad interactions  </p>
+<p>Often paired with operators such as alignment or coupling.</p>
+<hr>
+<h2 id="7-charge_fieldschemajson"><strong>7. <code>charge_field.schema.json</code></strong></h2>
+<p>Represents a field of charge‑like values.<br>
+Useful for:
+- charge distributions<br>
+- polarity maps<br>
+- field‑driven interactions<br>
+- substrate‑level force modeling  </p>
+<p>This schema supports both continuous and discrete charge representations.</p>
+<hr>
+<h2 id="8-temperature_fieldschemajson"><strong>8. <code>temperature_field.schema.json</code></strong></h2>
+<p>A specialized scalar field representing temperature.<br>
+Includes:
+- temperature units<br>
+- thermal gradients<br>
+- dissipation parameters  </p>
+<p>Often used in experiments, lab environments, and energy modeling.</p>
+<hr>
+<h2 id="9-resonance_envelopeschemajson"><strong>9. <code>resonance_envelope.schema.json</code></strong></h2>
+<p>Defines the resonance‑envelope field—one of the core constructs of the RSM.<br>
+Includes:
+- amplitude<br>
+- phase<br>
+- coherence<br>
+- envelope propagation parameters  </p>
+<p>This field interacts closely with:
+- quantum triad states<br>
+- operators<br>
+- sensing modules<br>
+- energy dissipation  </p>
+<hr>
+<h2 id="10-substrate_operatorschemajson"><strong>10. <code>substrate_operator.schema.json</code></strong></h2>
+<p>Defines a low‑level operator acting on substrate fields.<br>
+Includes:
+- operator type<br>
+- parameters<br>
+- target fields<br>
+- optional coupling behavior  </p>
+<p>This schema is used by higher‑level operator definitions and simulation modules.</p>
+<hr>
+<h1 id="purpose-of-this-directory"><strong>Purpose of This Directory</strong></h1>
+<p>These schemas form the <strong>primitive substrate layer</strong> of the RSM. They provide:</p>
+<ul>
+<li>
+<p><strong>Consistency</strong><br>
+  Shared definitions for fields, coordinates, and operators.</p>
+</li>
+<li>
+<p><strong>Interoperability</strong><br>
+  Higher‑level schemas (fields, energy, quantum, distributed, sensing) rely on these primitives.</p>
+</li>
+<li>
+<p><strong>Reusability</strong><br>
+  Common structures like <code>vector3</code>, <code>grid_coordinates</code>, and <code>scalar_field</code> appear throughout the RSM.</p>
+</li>
+<li>
+<p><strong>Extensibility</strong><br>
+  New field types or operators can be added without breaking existing systems.</p>
+</li>
+</ul>
+<hr>
+<h1 id="navigation"><strong>Navigation</strong></h1>
+<p>Return to the RSM schema index:<br>
+<code>../index.md</code></p>
+<p>Return to the RSM root:<br>
+<code>../../../README.md</code></p>
+<hr>
+  </main>
+</body>
+</html>

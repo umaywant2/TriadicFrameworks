@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rsadi/gd/v1/GDRouteSuggestion.schema.json",
+  "title": "GDRouteSuggestion",
+  "type": "object",
+  "required": [
+    "route_id",
+    "timestamp",
+    "from_position",
+    "to_position",
+    "clarity_profile",
+    "instructions"
+  ],
+  "properties": {
+    "route_id": { "type": "string", "format": "uuid" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "from_position": {
+      "$ref": "GDClaritySample.schema.json#/properties/position"
+    },
+    "to_position": {
+      "$ref": "GDClaritySample.schema.json#/properties/position"
+    },
+    "clarity_profile": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["position", "clarity_score"],
+        "properties": {
+          "position": {
+            "$ref": "GDClaritySample.schema.json#/properties/position"
+          },
+          "clarity_score": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+          }
+        }
+      }
+    },
+    "risk_level": {
+      "$ref": "GDRiskLevel.schema.json"
+    },
+    "instructions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

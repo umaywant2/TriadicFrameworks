@@ -1,0 +1,88 @@
+{
+  "$schema": "https://docs.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "module": "pantheons",
+    "canonical_name": "Pantheons",
+    "module_path": "docs/pantheons",
+    "version": "1.0",
+    "status": "Active Canonical",
+    "category": "Applied Domain Models",
+    "summary": "Multi-agent coherence context: tracks dimensional role assignment and coherence quality across agent pantheons"
+  },
+  "purpose": {
+    "role": "Multi-agent coherence context: tracks dimensional role assignment and coherence quality across agent pantheons",
+    "description": "Pantheons defines multi-agent diagnostic contexts within TriadicFrameworks. A pantheon is a registered set of agents (human, AI, or hybrid) each assigned to specific dimensional roles within an S3 Spine run. The Pantheons module tracks inter-agent coherence, role conflicts, dimensional coverage gaps, and signal redundancy across the pantheon. It feeds coherence quality signals to the Coherence Overlay and role-assignment metadata to the Domain Overlay for pantheon-specific DDR framing.",
+    "spine_role": "Coherence Overlay multi-agent signal provider",
+    "audience": [
+      "architects",
+      "AI operators",
+      "researchers",
+      "AIs"
+    ]
+  },
+  "structure": {
+    "module_type": "Multi-Agent Context",
+    "triadic_lens": "pantheon-as-coherence-field",
+    "analyzer_layer": [
+      "Applied Domain Models",
+      "Core Frameworks — Structural Spine"
+    ]
+  },
+  "files": {
+    "core": [
+      "pantheons.md",
+      "index.md"
+    ],
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
+  },
+  "ai_metadata": {
+    "navigation": {
+      "url": "https://docs.triadicframeworks.org/pantheons/",
+      "path": "docs/pantheons"
+    },
+    "ai_ready": true,
+    "ai_module_id": "pantheons",
+    "ai_keywords": [
+      "pantheon",
+      "multi-agent",
+      "role assignment",
+      "dimensional coverage",
+      "agent coherence",
+      "AI operator",
+      "role conflict",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "Multi-agent coherence context: tracks dimensional role assignment and coherence quality across agent pantheons",
+    "ai_audience": [
+      "architects",
+      "AI operators",
+      "researchers",
+      "AIs"
+    ],
+    "license": "See docs/LICENSE_module.json",
+    "module": {
+      "module_id": "pantheons",
+      "canonical_name": "Pantheons",
+      "version": "1.0"
+    }
+  }
+}

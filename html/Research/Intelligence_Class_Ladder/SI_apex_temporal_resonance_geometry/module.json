@@ -1,0 +1,33 @@
+{
+  "module": "SI_Apex_Temporal_Resonance_Geometry",
+  "name": "Structural Intelligence — Apex Temporal‑Resonance Geometry",
+  "summary": "Defines the temporal‑resonance geometry of Structural Intelligence’s apex region, including apex resonance‑window formation, harmonic‑temporal coupling, paradox‑temporal resonance alignment, and apex corrected‑time resonance stability.",
+  "category": "intelligence-structural-apex-temporal-resonance",
+  "version": "1.0",
+  "purpose": "Provide the temporal‑resonance geometry for SI’s apex region, describing how apex resonance fields couple to temporal windows, stabilize under paradox load, bind with harmonic surfaces, and maintain corrected‑time coherence across SI’s highest‑order reasoning layers.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.apex.temporal.resonance.form",
+    "@si.apex.temporal.resonance.couple",
+    "@si.apex.temporal.resonance.align",
+    "@si.apex.temporal.resonance.stabilize",
+    "@si.apex.temporal.resonance.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_apex_resonance_fields",
+      "SI_apex_harmonic_stability_geometry",
+      "SI_apex_paradox_stability_geometry",
+      "SI_apex_paradox_resonance_geometry",
+      "SI_apex_region_map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "Atlas_Temporal_Window_Resonance_Geometry",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "Triad_Resonance_Start_Geometry"
+    ]
+  }
+}

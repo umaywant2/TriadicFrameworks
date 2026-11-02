@@ -1,0 +1,104 @@
+{
+  "id": "S3-Spine",
+  "canonical": "R5",
+  "version": "1.0.0",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "regime": "unseen-force-regime",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "graph": {
+    "nodes": [
+      "gradient",
+      "field",
+      "rupture",
+      "integrity"
+    ],
+    "edges": [
+      ["gradient", "field"],
+      ["field", "rupture"],
+      ["field", "integrity"],
+      ["rupture", "integrity"]
+    ]
+  },
+
+  "semantics": {
+    "gradient": "gradientIntensity",
+    "field": "fieldCoherence",
+    "rupture": "rupturePotential",
+    "integrity": "forceIntegrity",
+    "transitions": [
+      "gradientIntensity ↑ → fieldCoherence ↑",
+      "fieldCoherence ↓ → rupturePotential ↑",
+      "rupturePotential ↑ → forceIntegrity ↓",
+      "forceIntegrity ↑ → gradientIntensity reset"
+    ]
+  },
+
+  "dimensions": {
+    "gradient": ["L4", "L5", "L16", "LH"],
+    "field": ["L8", "L10", "L26"],
+    "rupture": ["L12"],
+    "integrity": ["L32", "LI"]
+  },
+
+  "operators": {
+    "primary": [
+      "gradient",
+      "ruptureForce",
+      "bind"
+    ],
+    "secondary": [
+      "push",
+      "pull",
+      "fieldShift"
+    ],
+    "roles": {
+      "gradient": "shapes influence",
+      "ruptureForce": "escalates instability",
+      "bind": "stabilizes integrity",
+      "push": "increases gradientIntensity",
+      "pull": "increases fieldCoherence",
+      "fieldShift": "modulates field structure"
+    }
+  },
+
+  "envelopes": [
+    "canonical",
+    "reality",
+    "imagination",
+    "information",
+    "error",
+    "qmroot"
+  ],
+
+  "registries": {
+    "module": "module_registry.json",
+    "operators": "operator_registry.json",
+    "dimensions": "dimension_registry.json",
+    "envelopes": "envelope_registry.json",
+    "examples": "spine.examples.registry.json",
+    "ai": "ai_registry.json",
+    "tools": "tools.catalog.json"
+  },
+
+  "protocol": {
+    "file": "protocol.md",
+    "server": "server.json"
+  },
+
+  "examples": {
+    "canonical": "canonical.001.json",
+    "reality": "reality.001.json",
+    "imagination": "imagination.001.json",
+    "information": "information.001.json",
+    "error": "error.001.json",
+    "qmroot": "qmroot.001.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Identity Event",
+  "type": "object",
+  "properties": {
+    "event_id": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "actor": { "type": "string" },
+    "target_identity": { "type": "string" },
+    "action": { "type": "string" },
+    "details": { "type": "object" },
+    "triadic_snapshot": { "type": "object" }
+  }
+}

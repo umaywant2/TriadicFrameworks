@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/canon_autofix.py.md">
+  <title>✔ Runs on every PR</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/canon_autofix.py.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/canon_autofix.py.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Absolutely, here is the <strong>GitHub PR Auto‑Fix Bot</strong>, the final piece of your canon‑purity automation stack.<br>
+This bot <strong>automatically corrects drift</strong> in <code>module.json</code> files <em>inside the pull request itself</em>, pushing fixes back into the PR branch.</p>
+<p>This is the <strong>TriadicFrameworks Canon Auto‑Corrector</strong> — the bot that ensures your canon stays pure even when contributors forget the rules.</p>
+<p>It works like this:</p>
+<h3 id="runs-on-every-pr">✔ Runs on every PR</h3>
+<h3 id="detects-drift-in-changed-modulejson-files">✔ Detects drift in changed <code>module.json</code> files</h3>
+<h3 id="autocorrects-all-mismatches">✔ Auto‑corrects all mismatches</h3>
+<h3 id="commits-fixes-directly-to-the-pr-branch">✔ Commits fixes directly to the PR branch</h3>
+<h3 id="adds-a-pr-comment-summarizing-what-was-fixed">✔ Adds a PR comment summarizing what was fixed</h3>
+<h3 id="uses-your-exact-canon-inheritance-rules">✔ Uses your exact canon inheritance rules</h3>
+<h3 id="zero-manual-intervention">✔ Zero manual intervention</h3>
+<p>This is the <strong>self‑healing canon</strong> you’ve been building toward.</p>
+<hr>
+<h1 id="github-pr-autofix-bot">⭐ GitHub PR Auto‑Fix Bot</h1>
+<p>This consists of <strong>two files</strong>:</p>
+<ol>
+<li><code>.github/workflows/canon_autofix.yml</code>  </li>
+<li><code>docs/tools/canon_autofix.py</code></li>
+</ol>
+<hr>
+<h1 id="1-github-action-workflow">🟦 1. GitHub Action Workflow</h1>
+<p>Save as:</p>
+<pre><code>.github/workflows/canon_autofix.yml
+</code></pre>
+<pre><code class="language-yaml">name: TriadicFrameworks Canon Auto-Fix
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout PR branch
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Run Canon Auto-Fix
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        python docs/tools/canon_autofix.py \
+          --repo &quot;${{ github.repository }}&quot; \
+          --pr &quot;${{ github.event.pull_request.number }}&quot; \
+          --branch &quot;${{ github.event.pull_request.head.ref }}&quot;
+</code></pre>
+<hr>
+<h1 id="2-canon-autofix-bot">🟦 2. Canon Auto‑Fix Bot</h1>
+<p>Save as:</p>
+<pre><code>docs/tools/canon_autofix.py
+</code></pre>
+<pre><code class="language-python">import os
+import json
+import argparse
+import requests
+import subprocess
+
+EXPECTED_CANON_REF = &quot;/docs/spine/spine.json&quot;
+
+EXPECTED_INHERIT = {
+    &quot;canon&quot;: True,
+    &quot;session_context&quot;: True,
+    &quot;triad_alias_resolution&quot;: True
+}
+
+EXPECTED_RTT = {
+    &quot;layer&quot;: 1,
+    &quot;source&quot;: &quot;https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html&quot;
+}
+
+EXPECTED_AI_INIT = {
+    &quot;load_spine_first&quot;: True,
+    &quot;load_canon_first&quot;: True,
+    &quot;apply_session_context&quot;: True,
+    &quot;triad_validation&quot;: True
+}
+
+# ---------------------------------------------------------
+# VALIDATION + FIXING
+# ---------------------------------------------------------
+def fix_module_json(path):
+    with open(path, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+        data = json.load(f)
+
+    module = data.get(&quot;module&quot;, {})
+    fixes = []
+
+    # canon_ref
+    if module.get(&quot;canon_ref&quot;) != EXPECTED_CANON_REF:
+        module[&quot;canon_ref&quot;] = EXPECTED_CANON_REF
+        fixes.append(&quot;canon_ref corrected&quot;)
+
+    # inherit
+    inherit = module.setdefault(&quot;inherit&quot;, {})
+    for key, expected in EXPECTED_INHERIT.items():
+        if inherit.get(key) != expected:
+            inherit[key] = expected
+            fixes.append(f&quot;inherit.{key} corrected&quot;)
+
+    # rtt
+    rtt = module.setdefault(&quot;rtt&quot;, {})
+    for key, expected in EXPECTED_RTT.items():
+        if rtt.get(key) != expected:
+            rtt[key] = expected
+            fixes.append(f&quot;rtt.{key} corrected&quot;)
+
+    # ai.initialization
+    ai = module.setdefault(&quot;ai&quot;, {}).setdefault(&quot;initialization&quot;, {})
+    for key, expected in EXPECTED_AI_INIT.items():
+        if ai.get(key) != expected:
+            ai[key] = expected
+            fixes.append(f&quot;ai.initialization.{key} corrected&quot;)
+
+    # Write back if fixes occurred
+    if fixes:
+        with open(path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+            json.dump(data, f, indent=2)
+    return fixes
+
+# ---------------------------------------------------------
+# GITHUB API HELPERS
+# ---------------------------------------------------------
+def github_post(url, token, payload):
+    return requests.post(url, headers={&quot;Authorization&quot;: f&quot;token {token}&quot;}, json=payload)
+
+# ---------------------------------------------------------
+# MAIN BOT LOGIC
+# ---------------------------------------------------------
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(&quot;--repo&quot;)
+    parser.add_argument(&quot;--pr&quot;)
+    parser.add_argument(&quot;--branch&quot;)
+    args = parser.parse_args()
+
+    token = os.environ[&quot;GITHUB_TOKEN&quot;]
+
+    # Get changed files in PR
+    pr_files_url = f&quot;https://api.github.com/repos/{args.repo}/pulls/{args.pr}/files&quot;
+    files = requests.get(pr_files_url, headers={&quot;Authorization&quot;: f&quot;token {token}&quot;}).json()
+
+    fixes_summary = []
+
+    for f in files:
+        filename = f[&quot;filename&quot;]
+
+        if not filename.endswith(&quot;module.json&quot;):
+            continue
+
+        local_path = filename
+
+        if not os.path.exists(local_path):
+            continue
+
+        fixes = fix_module_json(local_path)
+
+        if fixes:
+            fixes_summary.append((filename, fixes))
+
+    # Commit fixes if any
+    if fixes_summary:
+        subprocess.run([&quot;git&quot;, &quot;config&quot;, &quot;user.name&quot;, &quot;TriadicFrameworks-AutoFix&quot;])
+        subprocess.run([&quot;git&quot;, &quot;config&quot;, &quot;user.email&quot;, &quot;autofix@triadicframeworks.org&quot;])
+
+        subprocess.run([&quot;git&quot;, &quot;add&quot;, &quot;.&quot;])
+        subprocess.run([&quot;git&quot;, &quot;commit&quot;, &quot;-m&quot;, &quot;Auto-fix: Canon purity corrections&quot;])
+        subprocess.run([&quot;git&quot;, &quot;push&quot;, &quot;origin&quot;, args.branch])
+
+        # Post PR comment
+        summary = &quot;### Canon Auto-Fix Applied\n\n&quot;
+        for filename, fixes in fixes_summary:
+            summary += f&quot;**{filename}**\n&quot;
+            for fix in fixes:
+                summary += f&quot;- {fix}\n&quot;
+            summary += &quot;\n&quot;
+
+        github_post(
+            f&quot;https://api.github.com/repos/{args.repo}/issues/{args.pr}/comments&quot;,
+            token,
+            {&quot;body&quot;: summary}
+        )
+
+    print(&quot;Canon Auto-Fix completed.&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<h1 id="what-this-bot-does">⭐ What This Bot Does</h1>
+<h3 id="autocorrects-drift-in-prs">✔ Auto‑corrects drift in PRs</h3>
+<p>Every mismatch is fixed automatically.</p>
+<h3 id="commits-fixes-directly-to-the-pr-branch_1">✔ Commits fixes directly to the PR branch</h3>
+<p>No human intervention required.</p>
+<h3 id="posts-a-pr-comment-summarizing-all-corrections">✔ Posts a PR comment summarizing all corrections</h3>
+<p>Contributors see exactly what was fixed.</p>
+<h3 id="uses-your-exact-canon-rules">✔ Uses your exact canon rules</h3>
+<ul>
+<li><code>canon_ref</code>  </li>
+<li><code>inherit.*</code>  </li>
+<li><code>rtt.*</code>  </li>
+<li><code>ai.initialization.*</code></li>
+</ul>
+<h3 id="ensures-triadicframeworks-stays-pure">✔ Ensures TriadicFrameworks stays pure</h3>
+<p>Even if contributors forget the rules.</p>
+<hr>
+<h1 id="you-now-have">⭐ You now have:</h1>
+<ul>
+<li>Full module bundle generator  </li>
+<li>Full canon graph generator  </li>
+<li>Domain graph generator  </li>
+<li>Domain overview generator  </li>
+<li>SVG generators  </li>
+<li>Inheritance validator  </li>
+<li>Drift‑severity validator  </li>
+<li>Triad purity badge generator  </li>
+<li>Drift Guardian PR bot  </li>
+<li><strong>Canon Auto‑Fix Bot ← this one</strong></li>
+</ul>
+<p>Your canon is now <strong>self‑healing, self‑auditing, and self‑documenting</strong>.</p>
+  </main>
+</body>
+</html>

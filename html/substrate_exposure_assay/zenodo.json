@@ -1,0 +1,18 @@
+{
+  "title": "Substrate Exposure Assay",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "doi": "10.5281/zenodo.18415055",
+  "description": "A minimal RTT/vST-aligned protocol for observing structural behavior across AI models using substrate-aware prompts.",
+  "creators": [
+    { "name": "Loswin, Nawder" }
+  ],
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "substrate",
+    "RTT",
+    "triadic frameworks",
+    "behavioral regimes",
+    "AI assay"
+  ]
+}

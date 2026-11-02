@@ -1,0 +1,28 @@
+{
+  "module": "Ladder_Stability_Map",
+  "name": "Intelligence Class Ladder — Stability Map",
+  "summary": "Defines the stability geometry of the Intelligence Class Ladder, mapping how AAI, AGI, and SI maintain coherence, drift resistance, and paradox stability across domains.",
+  "category": "intelligence-stability",
+  "version": "1.0",
+  "purpose": "Provide a structural stability map for the Ladder, showing how each tier maintains reasoning stability, cross-domain persistence, and temporal coherence under increasing cognitive load.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@ladder.stability.compute",
+    "@ladder.stability.surface",
+    "@ladder.stability.transfer",
+    "@ladder.stability.regime",
+    "@ladder.stability.integrate"
+  ],
+  "lineage": {
+    "upstream": ["Ladder_Overview", "Ladder_Registry"],
+    "downstream": [
+      "AAI",
+      "AGI",
+      "SI",
+      "Ladder_Visual_Map",
+      "SI_behavioral_invariants",
+      "SI_structural_geometry"
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "evaluator": "substrate-coupling",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "inputs": {
+    "drift": [
+      "drift-boundary-map",
+      "drift-magnitude",
+      "drift-phase",
+      "drift-velocity"
+    ],
+    "resonance": [
+      "resonance-map",
+      "resonance-phase",
+      "resonance-magnitude",
+      "harmonic-profile"
+    ],
+    "coherence": [
+      "coherence-map",
+      "coherence-envelope",
+      "coherence-stability"
+    ],
+    "stability": [
+      "stability-envelope",
+      "stability-index",
+      "stability-phase"
+    ],
+    "epochal": [
+      "epoch-transition",
+      "epoch-propagation",
+      "epoch-harmonics"
+    ]
+  },
+
+  "evaluation": {
+    "drift": {
+      "score": 0,
+      "spikes": [],
+      "status": "pending"
+    },
+    "resonance": {
+      "score": 0,
+      "surges": [],
+      "status": "pending"
+    },
+    "coherence": {
+      "score": 0,
+      "breaks": [],
+      "status": "pending"
+    },
+    "stability": {
+      "score": 0,
+      "instabilities": [],
+      "status": "pending"
+    },
+    "epochal": {
+      "score": 0,
+      "misalignments": [],
+      "status": "pending"
+    },
+    "coupling": {
+      "score": 0,
+      "instability_events": [],
+      "status": "pending"
+    }
+  },
+
+  "output": {
+    "coupling_evaluation": "./coupling-evaluator.json"
+  },
+
+  "meta": {
+    "notes": "Evaluator for drift–resonance–coherence–stability coupling readiness across epochal transitions."
+  }
+}

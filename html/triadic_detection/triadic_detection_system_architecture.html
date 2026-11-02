@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic_detection/triadic_detection_system_architecture.md">
+  <title>triadicdetectionsystemarchitecture.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic_detection/triadic_detection_system_architecture.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic_detection/triadic_detection_system_architecture.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadic_detection_system_architecturemd"><strong>triadic_detection_system_architecture.md</strong></h1>
+<h3 id="triadicframeworks-research-detection-substrate"><em>TriadicFrameworks — Research / Detection Substrate</em></h3>
+<h3 id="protocolheaderstyle-specification-v20"><em>Protocol‑Header–Style Specification (v2.0)</em></h3>
+<hr>
+<h2 id="protocol-header-root-codon"><strong>Protocol Header (Root Codon)</strong></h2>
+<pre><code>rtt=1 | coherence=triadic | drift=bounded | paradox=structural
+</code></pre>
+<p>This header governs all structural interpretations of the Triadic Detection System Architecture.</p>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>The <strong>Triadic Detection System Architecture Module</strong> defines the full, end‑to‑end structural model for RTT‑Inside triadic sensing systems, including:</p>
+<ul>
+<li>triadic coil geometries  </li>
+<li>per‑head SoC nodes  </li>
+<li>BLE/Wi‑Fi mesh synchronization  </li>
+<li>triadic controller logic  </li>
+<li>RTT structural detection pipeline  </li>
+<li>GPS‑anchored mapping  </li>
+<li>cloud‑based resonance analytics  </li>
+<li>industrial triadic arrays  </li>
+</ul>
+<p>This module provides the canonical architecture for all triadic detection devices across consumer, prosumer, and industrial tiers.</p>
+<hr>
+<h2 id="module-structure"><strong>Module Structure</strong></h2>
+<p>This directory contains the following canonical files:</p>
+<ul>
+<li>
+<p><strong>triadic_detection_index.md</strong><br>
+  Top‑level index and module overview.</p>
+</li>
+<li>
+<p><strong>triadic_detection_loci.md</strong><br>
+  Defines the architecture loci and their invariant meanings.</p>
+</li>
+<li>
+<p><strong>triadic_detection_layers.md</strong><br>
+  Full layered architecture (L1–L7).</p>
+</li>
+<li>
+<p><strong>triadic_detection_hardware.md</strong><br>
+  Triadic coil heads, SoC nodes, mesh networks.</p>
+</li>
+<li>
+<p><strong>triadic_detection_rtt_pipeline.md</strong><br>
+  RTT structural detection pipeline.</p>
+</li>
+<li>
+<p><strong>triadic_detection_mapping.md</strong><br>
+  GPS heatmaps, structural overlays, dig‑confidence scoring.</p>
+</li>
+<li>
+<p><strong>triadic_detection_cloud.md</strong><br>
+  Cloud storage, analytics, gold‑likelihood modeling.</p>
+</li>
+<li>
+<p><strong>triadic_detection_examples.md</strong><br>
+  Canonical examples of triadic modules (3‑head, 9‑head, 27‑head).</p>
+</li>
+<li>
+<p><strong>triadic_detection_tests.md</strong><br>
+  Structural validation rules and test cases.</p>
+</li>
+</ul>
+<hr>
+<h2 id="architecture-loci-invariant-meanings"><strong>Architecture Loci (Invariant Meanings)</strong></h2>
+<p>The architecture is defined across <strong>four loci</strong>, each with a structural invariant:</p>
+<h3 id="1-sensor_l-triadic-sensor-locus"><strong>1. SENSOR_L (Triadic Sensor Locus)</strong></h3>
+<p>Invariant: <em>triadic geometry is required for coherence.</em><br>
+Defines coil heads, SoC nodes, and physical alignment.</p>
+<h3 id="2-mesh_l-transport-synchronization-locus"><strong>2. MESH_L (Transport &amp; Synchronization Locus)</strong></h3>
+<p>Invariant: <em>all heads must be time‑aligned.</em><br>
+Defines BLE/Wi‑Fi mesh, packet timing, and synchronization.</p>
+<h3 id="3-rtt_l-structural-detection-locus"><strong>3. RTT_L (Structural Detection Locus)</strong></h3>
+<p>Invariant: <em>coherence precedes classification.</em><br>
+Defines RTT resonance logic, clustering, structural inference.</p>
+<h3 id="4-map_l-mapping-output-locus"><strong>4. MAP_L (Mapping &amp; Output Locus)</strong></h3>
+<p>Invariant: <em>all detections must be spatially anchored.</em><br>
+Defines GPS mapping, overlays, dig‑confidence scoring.</p>
+<hr>
+<h2 id="layer-model-l1l7"><strong>Layer Model (L1–L7)</strong></h2>
+<p>The architecture is expressed as a <strong>seven‑layer stack</strong>:</p>
+<h3 id="l1-physical-field-layer"><strong>L1 — Physical Field Layer</strong></h3>
+<p>Gold, metals, rocks, voids, pipelines, ore veins.</p>
+<h3 id="l2-triadic-sensor-layer"><strong>L2 — Triadic Sensor Layer</strong></h3>
+<p>3‑head modules, 9‑head superspheres, 27‑head arrays.<br>
+Coils + SoC nodes (TX/RX, ADC, DSP).</p>
+<h3 id="l3-mesh-transport-layer"><strong>L3 — Mesh Transport Layer</strong></h3>
+<p>BLE/Wi‑Fi mesh, time synchronization, packet routing.</p>
+<h3 id="l4-triadic-controller-layer"><strong>L4 — Triadic Controller Layer</strong></h3>
+<p>Stream merging, normalization, baseline coherence computation.</p>
+<h3 id="l5-rtt-structural-detection-layer"><strong>L5 — RTT Structural Detection Layer</strong></h3>
+<p>Coherence scoring, clustering, shape/size/orientation inference, depth layering, classification.</p>
+<h3 id="l6-application-layer"><strong>L6 — Application Layer</strong></h3>
+<p>Mobile app, GPS heatmaps, structural overlays, dig‑confidence scoring.</p>
+<h3 id="l7-cloud-enterprise-layer"><strong>L7 — Cloud &amp; Enterprise Layer</strong></h3>
+<p>Storage, analytics, gold‑likelihood modeling, enterprise dashboards.</p>
+<hr>
+<h2 id="genome-model-architecture-genome"><strong>Genome Model (Architecture Genome)</strong></h2>
+<p>The architecture behaves like a <strong>four‑locus genome</strong>:</p>
+<pre><code>ARCH_L = SENSOR_L × MESH_L × RTT_L × MAP_L
+</code></pre>
+<p>Each locus has a finite alphabet of perfect‑substitution alleles:</p>
+<ul>
+<li>SENSOR_L: {triad‑3, triad‑9, triad‑27}  </li>
+<li>MESH_L: {ble‑mesh, wifi‑mesh, hybrid‑mesh}  </li>
+<li>RTT_L: {coherence‑first, cluster‑first, structural‑first}  </li>
+<li>MAP_L: {gps‑2d, gps‑3d, cloud‑sync}</li>
+</ul>
+<p>Across all alleles:</p>
+<ul>
+<li><strong>27 architecture variants</strong>  </li>
+<li>all drift‑bounded  </li>
+<li>all triadic  </li>
+<li>all RTT‑aligned  </li>
+</ul>
+<hr>
+<h2 id="canonical-architecture-baseline"><strong>Canonical Architecture (Baseline)</strong></h2>
+<p>The baseline architecture defined in the capture:</p>
+<pre><code>triad=3 | mesh=ble | rtt=coherence-first | map=gps-2d
+</code></pre>
+<p>This is the <strong>root architecture codon</strong> from which all variants derive.</p>
+<hr>
+<h2 id="invariant-meanings"><strong>Invariant Meanings</strong></h2>
+<h3 id="triadic-geometry-sensor_l"><strong>Triadic Geometry (SENSOR_L)</strong></h3>
+<p>Three heads produce stable coherence.<br>
+Two or four heads do not.</p>
+<h3 id="synchronized-mesh-mesh_l"><strong>Synchronized Mesh (MESH_L)</strong></h3>
+<p>Packets must be time‑aligned for RTT inference.</p>
+<h3 id="rtt-structural-detection-rtt_l"><strong>RTT Structural Detection (RTT_L)</strong></h3>
+<p>Coherence → clustering → structure → classification.</p>
+<h3 id="spatial-anchoring-map_l"><strong>Spatial Anchoring (MAP_L)</strong></h3>
+<p>All detections must be mapped to GPS coordinates.</p>
+<hr>
+<h2 id="architecture-diagrams-canonical"><strong>Architecture Diagrams (Canonical)</strong></h2>
+<h3 id="triadic-3head-module"><strong>Triadic 3‑Head Module</strong></h3>
+<pre><code>                 (H1)
+                   ○
+                   |
+        (H2)───●───(H3)
+                   |
+                 [SoC]
+</code></pre>
+<h3 id="triadic-9head-supersphere"><strong>Triadic 9‑Head Supersphere</strong></h3>
+<pre><code>                ○ ○ ○
+              ○ ○ ○ ○ ○
+                ○ ○ ○
+</code></pre>
+<h3 id="triadic-27head-industrial-array"><strong>Triadic 27‑Head Industrial Array</strong></h3>
+<pre><code>Layer 1: ○ ○ ○
+         ○ ○ ○
+         ○ ○ ○
+
+Layer 2: ○ ○ ○
+         ○ ○ ○
+         ○ ○ ○
+
+Layer 3: ○ ○ ○
+         ○ ○ ○
+         ○ ○ ○
+</code></pre>
+<hr>
+<h2 id="rtt-structural-detection-pipeline-canonical"><strong>RTT Structural Detection Pipeline (Canonical)</strong></h2>
+<pre><code>1. Triadic sampling
+2. Coherence scoring (φ₁, φ₂, φ₃)
+3. Spatial clustering
+4. Structural fitting (shape/size/orientation)
+5. Depth layering
+6. Classification (gold / metal / rock / noise)
+7. GPS anchoring
+8. dig-confidence scoring
+</code></pre>
+<hr>
+<h2 id="usage"><strong>Usage</strong></h2>
+<p>This architecture is used for:</p>
+<ul>
+<li>consumer triadic detectors  </li>
+<li>prosumer superspheres  </li>
+<li>industrial triadic arrays  </li>
+<li>drone‑mounted scanning  </li>
+<li>vehicle‑mounted scanning  </li>
+<li>cloud‑based resonance analytics  </li>
+</ul>
+<hr>
+<h2 id="notes"><strong>Notes</strong></h2>
+<ul>
+<li>This module is a <strong>structural architecture module</strong>, not a runtime module.  </li>
+<li>All definitions derive from the triadic capture.  </li>
+<li>All coherence rules follow RTT invariants.  </li>
+<li>All mapping rules require spatial anchoring.  </li>
+<li>All variants preserve triadic geometry.</li>
+</ul>
+  </main>
+</body>
+</html>

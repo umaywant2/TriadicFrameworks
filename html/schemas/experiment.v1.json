@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/docs/schemas/experiment.v1.json",
+  "title": "RTT Experiment Metadata v1.0",
+  "description": "Experiment metadata for reproducibility, lineage, and deterministic RTT evolution.",
+  "type": "object",
+  "required": ["experiment_id"],
+  "properties": {
+    "experiment_id": {
+      "type": "string",
+      "description": "Globally unique experiment identifier (UUID recommended)."
+    },
+    "seed": {
+      "type": "integer",
+      "description": "Deterministic seed for resonance-time evolution.",
+      "minimum": 0
+    },
+    "trial": {
+      "type": "integer",
+      "description": "Optional trial index for repeated runs.",
+      "minimum": 0
+    },
+    "tags": {
+      "type": "array",
+      "description": "Arbitrary labels for grouping or filtering.",
+      "items": { "type": "string" }
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Optional metadata describing the source of this packet.",
+      "properties": {
+        "engine": { "type": "string" },
+        "engine_version": { "type": "string" },
+        "user": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sandbox Viewer — Coeus Protocol</title>
+  <link rel="stylesheet" href="../styles/viewer.css" />
+  <script src="../tournaments/emitter/emitter_overlay.js" defer></script>
+</head>
+<body>
+  <h1>🧪 Coeus Sandbox Viewer</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Coin Name</th>
+        <th>Rail Band</th>
+        <th>Denometer</th>
+        <th>Emitter</th>
+        <th>Ethics</th>
+        <th>Realm</th>
+        <th>Glyph</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody id="sandbox-body">
+      <!-- Rows will be injected by viewer.js -->
+    </tbody>
+  </table>
+
+  <script>
+    fetch("../sandbox/logs/observer_trace.json")
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.getElementById("sandbox-body");
+        data.forEach(entry => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${entry.coin_id}</td>
+            <td>${entry.rail_band}</td>
+            <td>${entry.denometer_reading}</td>
+            <td>${entry.emitter_sync ? "Synced" : "Unsynced"}</td>
+            <td>${entry.ethics_passed ? "✅" : "❌"}</td>
+            <td>${entry.realm_safe ? "D3/D4" : "⚠️"}</td>
+            <td>${entry.glyph || "—"}</td>
+            <td>${entry.timestamp}</td>
+          `;
+          tbody.appendChild(row);
+          highlightRails(entry);
+        });
+      });
+  </script>
+</body>
+</html>
+

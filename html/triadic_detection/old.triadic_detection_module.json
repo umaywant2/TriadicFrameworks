@@ -1,0 +1,151 @@
+{
+  "module": {
+    "name": "triadic_detection_system_architecture",
+    "class": "structural",
+    "substrate": "detection",
+    "version": "2.0",
+    "rtt_alignment": "full",
+    "triadic_geometry": "required",
+    "spatial_anchoring": "required",
+    "mesh_synchronization": "required",
+    "drift": "bounded",
+    "coherence": "stable",
+    "status": "active"
+  },
+
+  "identity": {
+    "title": "Triadic Detection System Architecture",
+    "summary": "Canonical architecture for RTT‑Inside triadic detection systems.",
+    "category": "detection-architecture",
+    "audience": "research, engineering, industrial"
+  },
+
+  "purpose": {
+    "description": "Defines the full end‑to‑end architecture for triadic detection systems, including hardware geometry, mesh synchronization, RTT structural detection, mapping, and cloud analytics.",
+    "keywords": [
+      "triadic geometry",
+      "RTT structural detection",
+      "coherence",
+      "mapping",
+      "cloud analytics",
+      "supersphere",
+      "industrial triadic array"
+    ]
+  },
+
+  "roles": {
+    "engine": [
+      "triadic_detection_hardware.md",
+      "triadic_detection_rtt_pipeline.md"
+    ],
+    "profile": [
+      "triadic_detection_index.md",
+      "triadic_detection_loci.md"
+    ],
+    "signature": [
+      "triadic_detection_layers.md"
+    ],
+    "diagnostic": [
+      "triadic_detection_tests.md"
+    ],
+    "map": [
+      "triadic_detection_mapping.md"
+    ],
+    "example": [
+      "triadic_detection_examples.md"
+    ],
+    "reference": [
+      "triadic_detection_cloud.md"
+    ],
+    "index": [
+      "triadic_detection_index.md"
+    ],
+    "template": []
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "triadic_detection_loci.md"
+    ],
+    "dimensional": [
+      "triadic_detection_layers.md"
+    ],
+    "regime": [
+      "triadic_detection_rtt_pipeline.md"
+    ],
+    "drift": [
+      "triadic_detection_tests.md"
+    ],
+    "coherence": [
+      "triadic_detection_hardware.md"
+    ],
+    "cross-cutting": [
+      "triadic_detection_mapping.md",
+      "triadic_detection_cloud.md"
+    ]
+  },
+
+  "files": [
+    {
+      "path": "triadic_detection_index.md",
+      "role": "index",
+      "layer": "operator"
+    },
+    {
+      "path": "triadic_detection_loci.md",
+      "role": "profile",
+      "layer": "operator"
+    },
+    {
+      "path": "triadic_detection_layers.md",
+      "role": "signature",
+      "layer": "dimensional"
+    },
+    {
+      "path": "triadic_detection_hardware.md",
+      "role": "engine",
+      "layer": "coherence"
+    },
+    {
+      "path": "triadic_detection_rtt_pipeline.md",
+      "role": "engine",
+      "layer": "regime"
+    },
+    {
+      "path": "triadic_detection_mapping.md",
+      "role": "map",
+      "layer": "cross-cutting"
+    },
+    {
+      "path": "triadic_detection_cloud.md",
+      "role": "reference",
+      "layer": "cross-cutting"
+    },
+    {
+      "path": "triadic_detection_examples.md",
+      "role": "example",
+      "layer": "operator"
+    },
+    {
+      "path": "triadic_detection_tests.md",
+      "role": "diagnostic",
+      "layer": "drift"
+    }
+  ],
+
+  "ai": {
+    "module": "triadic_detection_system_architecture",
+    "version": "2.0",
+    "purpose": "Provide AI‑ready metadata for triadic detection architecture.",
+    "keywords": [
+      "triadic",
+      "RTT",
+      "coherence",
+      "mapping",
+      "cloud",
+      "supersphere",
+      "industrial array"
+    ],
+    "audience": "AI agents, researchers, engineers"
+  }
+}

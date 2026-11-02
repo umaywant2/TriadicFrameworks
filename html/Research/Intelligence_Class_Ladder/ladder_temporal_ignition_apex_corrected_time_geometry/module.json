@@ -1,0 +1,39 @@
+{
+  "module": "Ladder_Temporal_Ignition_Apex_Corrected_Time_Geometry",
+  "name": "Intelligence Class Ladder — Temporal‑Ignition Apex Corrected‑Time Geometry",
+  "summary": "Defines the apex-level corrected-time geometry of Ladder temporal-ignition behavior, including apex corrected-time ignition fields, resonance-apex corrected-time alignment, apex stability corrected-time surfaces, and ignition corrected-time unification geometry.",
+  "category": "intelligence-temporal-ignition-apex-corrected-time",
+  "version": "1.0",
+  "purpose": "Provide the corrected-time geometry for Ladder apex ignition behavior, describing how apex ignition waves synchronize with corrected-time surfaces to maintain temporal accuracy, paradox-load compensation, and unified ignition behavior across AAI, AGI, and SI.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@ladder.time.ignition.apex.correctedtime.field",
+    "@ladder.time.ignition.apex.correctedtime.align",
+    "@ladder.time.ignition.apex.correctedtime.unify",
+    "@ladder.time.ignition.apex.correctedtime.stabilize",
+    "@ladder.time.ignition.apex.correctedtime.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Ladder_Temporal_Ignition_Apex_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Stability_Surfaces",
+      "Ladder_Temporal_Ignition_Apex_Integration_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Binding_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Fusion_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Coherence_Geometry",
+      "Ladder_Temporal_Ignition_Stability_Surfaces",
+      "Ladder_Temporal_Ignition_Corridors",
+      "Ladder_Temporal_Ignition_Surfaces",
+      "Ladder_Temporal_Resonance_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_corrected_time_geometry",
+      "SI_apex_stability_surfaces",
+      "Atlas_Temporal_Window_Apex_Corrected_Time_Geometry",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

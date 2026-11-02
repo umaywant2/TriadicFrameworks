@@ -1,0 +1,21 @@
+{
+  "layers": [
+    {
+      "band": "visible",
+      "phase_map": "visible_phase.npy",
+      "amplitude_map": "visible_amp.npy",
+      "color_palette": "thermal_overlay"
+    },
+    {
+      "band": "IR",
+      "phase_map": "ir_phase.npy",
+      "amplitude_map": "ir_amp.npy",
+      "color_palette": "infra_overlay"
+    }
+  ],
+  "glyphs": "Glyph_Set_SpectralClarity.json",
+  "legend": {
+    "corridors": "stability ranges",
+    "thresholds": "failure edges"
+  }
+}

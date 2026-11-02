@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Rock_Paper_Scissors/agentic/agent_protocol.md">
+  <title>Agentic Protocol: Move Selection</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Rock_Paper_Scissors/agentic/agent_protocol.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Rock_Paper_Scissors/agentic/agent_protocol.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="agentic-protocol-move-selection">Agentic Protocol: Move Selection</h1>
+<p><strong>Module:</strong> Rock_Paper_Scissors<br>
+<strong>ID:</strong> <code>agent_protocol</code>  </p>
+<hr>
+<h2 id="1-agent-tiers">1. Agent Tiers</h2>
+<h3 id="tier-0-naive-agent-firstness">Tier 0 — Naive Agent (Firstness)</h3>
+<p>Selects uniformly at random. Implements Nash by default.</p>
+<pre><code class="language-python">import random
+def naive_agent():
+    return random.choice([&quot;rock&quot;, &quot;paper&quot;, &quot;scissors&quot;])
+</code></pre>
+<h3 id="tier-1-adaptive-agent-secondness">Tier 1 — Adaptive Agent (Secondness)</h3>
+<p>Maintains frequency model of opponent; responds with dominant counter.</p>
+<pre><code class="language-python">from collections import Counter
+def adaptive_agent(opponent_history: list[str]) -&gt; str:
+    if not opponent_history:
+        return naive_agent()
+    most_frequent = Counter(opponent_history).most_common(1)[0][0]
+    counters = {&quot;rock&quot;: &quot;paper&quot;, &quot;paper&quot;: &quot;scissors&quot;, &quot;scissors&quot;: &quot;rock&quot;}
+    return counters[most_frequent]
+</code></pre>
+<h3 id="tier-2-triadic-agent-thirdness">Tier 2 — Triadic Agent (Thirdness)</h3>
+<p>Models opponent's reasoning tier recursively.</p>
+<pre><code class="language-python">def triadic_agent(opponent_history, opponent_tier_estimate, self_history):
+    counters = {&quot;rock&quot;: &quot;paper&quot;, &quot;paper&quot;: &quot;scissors&quot;, &quot;scissors&quot;: &quot;rock&quot;}
+    if opponent_tier_estimate == 0:
+        if opponent_history:
+            most_freq = Counter(opponent_history).most_common(1)[0][0]
+            return counters[most_freq]
+        return naive_agent()
+    elif opponent_tier_estimate == 1:
+        if self_history:
+            my_most_freq = Counter(self_history).most_common(1)[0][0]
+            their_response = counters[my_most_freq]
+            return counters[their_response]  # counter the counter
+        return naive_agent()
+    else:
+        return naive_agent()  # Nash is optimal vs. triadic opponent
+</code></pre>
+<hr>
+<h2 id="2-triadic-position-priors-pre-history-initialization">2. Triadic Position Priors (Pre-history initialization)</h2>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th style="text-align: center;">Novice Prior</th>
+<th style="text-align: center;">Expert Prior (Nash)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rock</td>
+<td style="text-align: center;">0.354</td>
+<td style="text-align: center;">0.333</td>
+</tr>
+<tr>
+<td>Paper</td>
+<td style="text-align: center;">0.317</td>
+<td style="text-align: center;">0.333</td>
+</tr>
+<tr>
+<td>Scissors</td>
+<td style="text-align: center;">0.329</td>
+<td style="text-align: center;">0.333</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-decision-loop">3. Decision Loop</h2>
+<pre><code>LOOP each round:
+  1. Observe opponent history H
+  2. Estimate opponent tier T ∈ {0, 1, 2}
+  3. Select move M = triadic_agent(H, T, self_history)
+  4. Observe outcome O ∈ {win, draw, loss}
+  5. Update opponent model and self history
+  6. If O = loss → increment tier estimate
+  7. If 3+ consecutive wins → freeze current strategy
+END LOOP
+</code></pre>
+<hr>
+<h2 id="4-sign-mapping-of-agent-strategies">4. Sign Mapping of Agent Strategies</h2>
+<table>
+<thead>
+<tr>
+<th>Strategy Layer</th>
+<th>Triadic Position</th>
+<th>Peirce Mode</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nash (random)</td>
+<td>Firstness</td>
+<td>Qualisign</td>
+<td>Pure potentiality; no relation</td>
+</tr>
+<tr>
+<td>Adaptive (counter)</td>
+<td>Secondness</td>
+<td>Sinsign</td>
+<td>Reactive to observed Other</td>
+</tr>
+<tr>
+<td>Triadic (recursive)</td>
+<td>Thirdness</td>
+<td>Legisign</td>
+<td>Models law governing opponent</td>
+</tr>
+<tr>
+<td>```</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+  </main>
+</body>
+</html>

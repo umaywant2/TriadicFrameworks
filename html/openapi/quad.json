@@ -1,0 +1,65 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Quad Engine API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/quad": {
+      "get": {
+        "summary": "Quad Engine overview",
+        "responses": {
+          "200": { "description": "OK" }
+        }
+      }
+    },
+    "/api/quad/eval": {
+      "post": {
+        "summary": "Execute Quad Engine evaluation",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "type": "object" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Evaluation result" }
+        }
+      }
+    },
+    "/api/quad/operators": {
+      "get": {
+        "summary": "List Quad Engine operators",
+        "responses": {
+          "200": { "description": "OK" }
+        }
+      }
+    },
+    "/api/quad/operators/{id}": {
+      "get": {
+        "summary": "Get Quad Engine operator by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" }
+        }
+      }
+    },
+    "/api/quad/health": {
+      "get": {
+        "summary": "Quad Engine health check",
+        "responses": {
+          "200": { "description": "OK" }
+        }
+      }
+    }
+  }
+}

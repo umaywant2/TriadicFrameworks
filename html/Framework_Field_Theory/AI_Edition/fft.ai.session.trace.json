@@ -1,0 +1,55 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.trace",
+  "title": "FFT AI Session — Trace v1.33",
+  "trace_fields": {
+    "events": [],
+    "event_schema": {
+      "ts": "iso8601",
+      "event_type": "string",
+      "operator_id": "string|null",
+      "R_before": "float",
+      "R_after": "float",
+      "tau": "float",
+      "coherence_event": {
+        "type": "declared|lost|restored",
+        "new_v1_33": true
+      },
+      "drift_event": {
+        "delta": "float",
+        "status": "ok|exceeded",
+        "new_v1_33": true
+      },
+      "paradox_event": {
+        "id": "paradox_id|null",
+        "phase": "detected|resolving|resolved",
+        "new_v1_33": true
+      },
+      "snr_snapshot": {
+        "S": "float",
+        "N": "float",
+        "R_snr": "float",
+        "new_v1_33": true
+      },
+      "set_event": {
+        "axis": "S|E|T",
+        "gradient": "float",
+        "new_v1_33": true
+      }
+    }
+  },
+  "v133_additions": [
+    "coherence_event schema",
+    "drift_event schema",
+    "paradox_event schema",
+    "snr_snapshot schema",
+    "set_event schema"
+  ]
+}

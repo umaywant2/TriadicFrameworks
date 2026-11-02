@@ -1,0 +1,16 @@
+{
+  "id": "structural-detection-engine",
+  "shortName": "SDE",
+  "title": "Structural Detection Engine",
+  "layer": "RTT/2",
+  "role": "Detection backbone of the canon",
+  "status": "canon",
+  "rtt": 2,
+  "dependsOn": [],
+  "projectsTo": [
+    "structural-integration-engine",
+    "tel",
+    "fft",
+    "opacity"
+  ]
+}

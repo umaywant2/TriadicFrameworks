@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Canon/RTT-Inside/Engineering/Microcontrollers_and_Components_Today_then_with_RTT-Inside.md">
+  <title>Microcontrollers and components today, then with RTT‑Inside</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Canon/RTT-Inside/Engineering/Microcontrollers_and_Components_Today_then_with_RTT-Inside.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Canon/RTT-Inside/Engineering/Microcontrollers_and_Components_Today_then_with_RTT-Inside.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Microcontrollers_and_Components_Today_then_with_RTT-Inside" src="https://github.com/user-attachments/assets/212d33b1-62ab-4681-acab-9d9156b37ba6" /></p>
+<h1 id="microcontrollers-and-components-today-then-with-rttinside">Microcontrollers and components today, then with RTT‑Inside</h1>
+<p>Microcontrollers work because they compress a “small computer” (CPU + memory + I/O + timing + interfaces) into one chip, but their real-world difficulty comes from <em>integration drift</em>: power, timing, and environmental stress couple across domains in ways the software stack rarely remembers. RTT‑Inside helps by making <strong>condition (BEING)</strong>, <strong>event lineage (KNOWING)</strong>, <strong>operating intent (MEANING)</strong>, and <strong>trajectory (TIME)</strong> first-class, <em>without</em> seizing control authority. </p>
+<hr>
+<h2 id="component-map-and-todays-challenges">Component map and today’s challenges</h2>
+<table>
+<thead>
+<tr>
+<th>Component type</th>
+<th>What it is in a modern MCU</th>
+<th>Typical challenges today</th>
+<th>What RTT‑Inside adds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU core and execution</td>
+<td>CPU with ALU/control, registers, instruction flow</td>
+<td>Real-time jitter, interrupt storms, opaque load/latency coupling</td>
+<td><strong>BEING:</strong> execution stress; <strong>KNOWING:</strong> “why we missed timing”; <strong>TIME:</strong> overload trajectories</td>
+</tr>
+<tr>
+<td>Memory and storage</td>
+<td>Flash program memory, RAM data memory, sometimes EEPROM</td>
+<td>Flash wait states, wear, corruption narratives lost</td>
+<td><strong>KNOWING:</strong> update/write lineage; <strong>TIME:</strong> wear/retention risk signals</td>
+</tr>
+<tr>
+<td>Interrupt controller</td>
+<td>Prioritizes which sources can interrupt CPU</td>
+<td>Priority inversion, “spiky” latency, noisy wakeups</td>
+<td><strong>KNOWING:</strong> interrupt causality chains; <strong>BEING:</strong> interrupt-pressure state</td>
+</tr>
+<tr>
+<td>Timers and counters</td>
+<td>Timers/counters for intervals, capture/compare, scheduling</td>
+<td>Drift, clock-domain coupling, timestamp ambiguity</td>
+<td><strong>BEING:</strong> clock quality state; <strong>KNOWING:</strong> timebase provenance</td>
+</tr>
+<tr>
+<td>DMA</td>
+<td>Moves data between peripherals and memory</td>
+<td>Silent starvation, bus contention, hard-to-debug corruption</td>
+<td><strong>KNOWING:</strong> transfer lineage; <strong>BEING:</strong> contention margin</td>
+</tr>
+<tr>
+<td>GPIO and digital I/O</td>
+<td>Ports/pins for digital control</td>
+<td>EMI susceptibility, misconfiguration, mode churn</td>
+<td><strong>BEING:</strong> I/O integrity state; <strong>KNOWING:</strong> configuration event log</td>
+</tr>
+<tr>
+<td>Analog I/O</td>
+<td>ADCs (often), sometimes DACs/comparators</td>
+<td>Noise, calibration drift, “garbage-in” decisions</td>
+<td><strong>BEING:</strong> signal confidence; <strong>TIME:</strong> drift; <strong>KNOWING:</strong> saturation/overrange events</td>
+</tr>
+<tr>
+<td>Serial interfaces</td>
+<td>UART/SPI/I²C/etc for device comms</td>
+<td>Bus hangs, arbitration fights, flaky cables, partial transactions</td>
+<td><strong>KNOWING:</strong> bus-fault narrative; <strong>BEING:</strong> link stability state</td>
+</tr>
+<tr>
+<td>Debug and programming</td>
+<td>SWD/JTAG/debug unit</td>
+<td>Debug-only behavior, field invisibility after lock-down</td>
+<td><strong>KNOWING:</strong> safe, non-invasive incident memory (post-debug)</td>
+</tr>
+<tr>
+<td>Power management</td>
+<td>Sleep modes, wake sources, PMU/clock gating</td>
+<td>“Low power” ≠ predictable wake behavior; wake source complexity</td>
+<td><strong>BEING:</strong> readiness/recovery; <strong>KNOWING:</strong> wake lineage; <strong>TIME:</strong> duty-cycle stress tracking</td>
+</tr>
+</tbody>
+</table>
+<p>The basic MCU “parts list” (CPU, RAM, Flash, EEPROM, serial interfaces, timers, interrupts, etc.) is standard, but failures typically happen at <em>boundaries</em>—especially memory↔bus↔DMA↔interrupt timing and power↔sleep↔wake transitions. </p>
+<p>Sleep modes amplify this: reducing power by shutting down blocks introduces wake-source configuration complexity and timing uncertainty (which peripherals can wake the device, what state is retained, and how long resumption takes). This is a dominant pain point in battery products because energy optimization becomes a distributed systems problem, not a single register setting. </p>
+<hr>
+<h2 id="what-rttinside-means-at-mcu-scale">What “RTT‑Inside” means at MCU scale</h2>
+<p>RTT‑Inside at MCU scale is not “an AI MCU” or “more autonomy.” It’s <strong>observability primitives</strong> that let OEM firmware and fleet analytics distinguish:</p>
+<ul>
+<li><strong>BEING:</strong> what condition the MCU <em>is in</em> (stress, margin, readiness)</li>
+<li><strong>KNOWING:</strong> what happened <em>in what order</em> (event lineage, not blame)</li>
+<li><strong>MEANING:</strong> what the system is trying to optimize (purpose mode)</li>
+<li><strong>TIME:</strong> how condition changes (drift, recovery slope, resilience)</li>
+</ul>
+<p>This is the same move you made for PMIC/BMS: tiny state + tiny event memory + explicit intent, so debugging stops being folklore.</p>
+<hr>
+<h2 id="rttinside-mapping-per-component-type">RTT‑Inside mapping per component type</h2>
+<h3 id="cpu-core-and-scheduler">CPU core and scheduler</h3>
+<ul>
+<li><strong>BEING:</strong> run-queue pressure, sustained ISR time ratio, missed-deadline counter, thermal throttling flag (if present).</li>
+<li><strong>KNOWING:</strong> a compact “timing miss ledger” (which task class, which interrupt class, what mode).</li>
+<li><strong>MEANING:</strong> declared purpose mode (performance / efficiency / longevity / safety) to interpret whether high ISR load is acceptable.</li>
+<li><strong>TIME:</strong> overload trajectory (is interrupt pressure trending up across days/weeks).</li>
+</ul>
+<h3 id="memory-and-nvm">Memory and NVM</h3>
+<ul>
+<li><strong>BEING:</strong> flash write stress (erase/program intensity), brownout proximity during writes.</li>
+<li><strong>KNOWING:</strong> append-only “NVM mutation log” (firmware update marker, config write epochs, reset-during-write incidents).</li>
+<li><strong>TIME:</strong> wear/retention risk counters—kept separate from application logs.</li>
+</ul>
+<p>(Flash/EEPROM differences matter: flash rewrites blocks/sectors; EEPROM can rewrite bytes but is costlier—RTT‑Inside makes the <em>write behavior</em> legible in the field.) </p>
+<h3 id="interrupt-controller-and-wake-sources">Interrupt controller and wake sources</h3>
+<ul>
+<li><strong>BEING:</strong> interrupt storm indicator, wake-churn indicator.</li>
+<li><strong>KNOWING:</strong> wake lineage (which wake source, which prior sleep mode, what was enabled).</li>
+<li><strong>TIME:</strong> wake rate and spurious wake trend (especially relevant because wake sources commonly include interrupts, timers/counters, serial interfaces, ADC/RTC). </li>
+</ul>
+<h3 id="timers-clocks-rtc">Timers, clocks, RTC</h3>
+<ul>
+<li><strong>BEING:</strong> clock-quality indicator (PLL lock churn, oscillator switchovers).</li>
+<li><strong>KNOWING:</strong> timebase provenance flags (which clock used for timestamps when an event was recorded).</li>
+<li><strong>TIME:</strong> drift indicator over long horizons (helps explain “it used to wake on time”).</li>
+</ul>
+<h3 id="dma-and-bus-fabric">DMA and bus fabric</h3>
+<ul>
+<li><strong>BEING:</strong> contention margin (how often DMA backlog exceeds threshold).</li>
+<li><strong>KNOWING:</strong> a small ring log of failed/aborted transfers and bus errors (enough to reconstruct causality).</li>
+</ul>
+<h3 id="gpio-analog-io-sensor-front-ends">GPIO, analog I/O, sensor front ends</h3>
+<ul>
+<li><strong>BEING:</strong> sensor-confidence scores (saturation, clipping, out-of-range, calibration stale).</li>
+<li><strong>KNOWING:</strong> event lineage for “bad data episodes” so downstream fusion isn’t guessing.</li>
+<li><strong>TIME:</strong> calibration drift and temperature-gradient correlation.</li>
+</ul>
+<h3 id="serial-interfaces">Serial interfaces</h3>
+<ul>
+<li><strong>BEING:</strong> link stability state (timeouts, retries, arbitration losses).</li>
+<li><strong>KNOWING:</strong> transaction-failure ledger (who initiated, which mode, what error class).</li>
+</ul>
+<hr>
+<h2 id="todays-mcu-integration-pain-points-that-rttinside-specifically-de-risks">Today’s MCU integration pain points that RTT‑Inside specifically de-risks</h2>
+<ul>
+<li><strong>Low-power mode debugging:</strong> it’s common to know <em>that</em> the device wakes, but not <em>why it woke</em> or <em>why it didn’t re-stabilize</em>. RTT‑Inside makes wake source + recovery slope + event history visible without adding control coupling. </li>
+<li><strong>Field failures without repro:</strong> a tiny append-only event buffer turns “can’t reproduce” into “here’s the chain.”</li>
+<li><strong>Cross-team blame cycles:</strong> hardware/firmware/power/sensors stop arguing because they’re looking at the same lineage.</li>
+<li><strong>Forked products:</strong> the same MCU across many SKUs becomes comparable because purpose mode and condition metrics are explicit.</li>
+</ul>
+<hr>
+<h2 id="drop-in-component-contract-for-mcu-class-rttinside">Drop-in “component contract” for MCU-class RTT‑Inside</h2>
+<p>To make this actionable in your <code>.md</code>, here’s the minimal contract OEMs can standardize across MCU families:</p>
+<ul>
+<li><strong>BEING registers:</strong> <code>HEALTH</code>, <code>STRESS</code>, <code>READINESS</code>, <code>BALANCE</code></li>
+<li><strong>KNOWING log:</strong> small ring buffer of normalized events (reset reason, brownout, wake source, bus fault, ADC saturation, DMA abort)</li>
+<li><strong>MEANING register:</strong> <code>PURPOSE_MODE</code> (performance/efficiency/longevity/safety)</li>
+<li><strong>TIME signals:</strong> high-stress dwell, recovery slope, drift/resilience</li>
+</ul>
+<p>If you want, tell me which “on-screen style” you prefer for this file: <strong>(A)</strong> crisp spec sheet (tables + contracts) or <strong>(B)</strong> dual-format (professional + mythmatical canon) and I’ll render <code>Microcontrollers_and_Components_Today_then_with_RTT-Inside.md</code> as a repo-ready page.</p>
+<hr>
+<hr>
+  </main>
+</body>
+</html>

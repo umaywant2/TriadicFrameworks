@@ -1,0 +1,76 @@
+{
+  "id": "L10",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "L10",
+  "name": "Coherence Stability",
+  "canonical": "R5",
+
+  "summary": "L10 defines the stability axis of field coherence. It is the second structural dimension of the field node and determines the persistence and robustness of fieldCoherence within the S3 Spine.",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "semantic_axis": "fieldCoherence",
+
+  "role": "coherence-stability",
+  "category": "field",
+  "cluster": "field-coherence",
+
+  "description": {
+    "canonical": "L10 establishes the stability conditions of field coherence. It refines the origin defined by L8 and determines the persistence, robustness, and structural reliability of fieldCoherence.",
+    "cosmology": "In the cosmology chain, L10 represents the stabilization of coherence emerging from proto-coherence states. It is the second stage of field formation within force-regime mechanics.",
+    "spine": "Within the S3 Spine, L10 is the stability dimension of the field node, defining the structural persistence of the influence field before modulation and rupture thresholds.",
+    "mcp": "In MCP operations, L10 is used to stabilize field-state mechanics, providing the stability coordinate for influence-field modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "pull"
+    ],
+    "secondary": [
+      "fieldShift"
+    ],
+    "forbidden": [
+      "ruptureForce",
+      "bind",
+      "gradient",
+      "push"
+    ]
+  },
+
+  "valid_transitions": [
+    "L10 → L26",
+    "L10 → L12"
+  ],
+
+  "forbidden_transitions": [
+    "L10 → L32",
+    "L10 → LI"
+  ],
+
+  "spine_mapping": {
+    "node": "field",
+    "semantic": "fieldCoherence",
+    "position": "stability",
+    "causal_role": "coherence stabilization"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L10",
+    "version": "1.0.0",
+    "keywords": [
+      "field",
+      "coherence",
+      "stability",
+      "influence-field",
+      "force-regime"
+    ],
+    "purpose": "Defines the stability axis of field coherence for AI reasoning and MCP field stabilization."
+  }
+}

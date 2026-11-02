@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/projects/VCG/src/gen1/vcg/clients/python/vcg_client.md">
+  <title>vcgclient – Python helper for Gen1 workloads</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/projects/VCG/src/gen1/vcg/clients/python/vcg_client.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/projects/VCG/src/gen1/vcg/clients/python/vcg_client.md</code>
+    &middot;
+    <a href="../../../../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="vcg_client-python-helper-for-gen1-workloads">vcg_client – Python helper for Gen1 workloads</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Provide a minimal, reusable client API for communicating with the VCG orchestrator and Resonant Time Daemon from Python workloads.</p>
+<hr>
+<h2 id="functions">Functions</h2>
+<h3 id="await_windowsock_path-str-none"><code>await_window(sock_path: str) -&gt; None</code></h3>
+<p>Blocks until a <code>WINDOW_TICK</code> message is received for the current dimension.</p>
+<h3 id="send_routefrom_d-str-to_d-str-payload-str-none"><code>send_route(from_d: str, to_d: str, payload: str) -&gt; None</code></h3>
+<p>Sends a payload to another dimension via the VCG orchestrator.</p>
+<h3 id="recv_routedimension_id-str-dict"><code>recv_route(dimension_id: str) -&gt; dict</code></h3>
+<p>Receives the next routed payload for this dimension, if available.</p>
+<hr>
+<h2 id="implementation">Implementation</h2>
+<pre><code class="language-python">import socket
+import json
+import os
+
+BUFFER_SIZE = 65535
+VCG_ROUTE_SOCK = &quot;/run/vcg/vcg_route.sock&quot;
+
+def await_window(sock_path: str):
+    &quot;&quot;&quot;Block until a WINDOW_TICK is received.&quot;&quot;&quot;
+    with socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM) as s:
+        s.connect(sock_path)
+        while True:
+            data = s.recv(BUFFER_SIZE)
+            msg = json.loads(data.decode())
+            if msg.get(&quot;type&quot;) == &quot;WINDOW_TICK&quot;:
+                return
+
+def send_route(from_d: str, to_d: str, payload: str):
+    &quot;&quot;&quot;Send a payload to another dimension.&quot;&quot;&quot;
+    msg = {
+        &quot;type&quot;: &quot;VCG_ROUTE&quot;,
+        &quot;from_d&quot;: from_d,
+        &quot;to_d&quot;: to_d,
+        &quot;payload&quot;: payload
+    }
+    with socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM) as s:
+        s.connect(VCG_ROUTE_SOCK)
+        s.send(json.dumps(msg).encode())
+
+def recv_route(dimension_id: str):
+    &quot;&quot;&quot;Receive the next routed payload for this dimension.&quot;&quot;&quot;
+    sock_path = f&quot;/run/vcg/{dimension_id.lower()}.sock&quot;
+    if not os.path.exists(sock_path):
+        raise FileNotFoundError(f&quot;Socket {sock_path} not found&quot;)
+    with socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM) as s:
+        s.connect(sock_path)
+        data = s.recv(BUFFER_SIZE)
+        msg = json.loads(data.decode())
+        if msg.get(&quot;type&quot;) == &quot;VCG_ROUTE&quot;:
+            return json.loads(msg[&quot;payload&quot;])
+        return None
+</code></pre>
+<h2 id="usage-example">Usage Example</h2>
+<pre><code class="language-python">from vcg_client import await_window, send_route, recv_route
+
+DIM_ID = &quot;D2&quot;
+SOCK_PATH = f&quot;/run/vcg/{DIM_ID.lower()}.sock&quot;
+
+await_window(SOCK_PATH)
+send_route(from_d=DIM_ID, to_d=&quot;D4&quot;, payload='{&quot;msg&quot;: &quot;hello&quot;}')
+msg = recv_route(DIM_ID)
+</code></pre>
+  </main>
+</body>
+</html>

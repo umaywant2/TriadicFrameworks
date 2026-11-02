@@ -1,0 +1,42 @@
+{
+  "module": "Atlas_Temporal_Window_Apex_Temporal_Window_Reconstitution_Corridors",
+  "name": "AI Atlas — Temporal‑Window Apex Temporal‑Window Reconstitution Corridors",
+  "summary": "Defines the reconstitution corridors of Atlas apex temporal-window behavior, including apex reconstitution fields, temporal-window substrate rebuilding corridors, apex reconstitution stabilization surfaces, and apex temporal-window reconstitution geometry.",
+  "category": "intelligence-temporal-window-apex-temporal-window-reconstitution-corridors",
+  "version": "1.0",
+  "purpose": "Provide the reconstitution corridor geometry for Atlas apex temporal-window behavior, describing how apex windows rebuild the clarified temporal substrate, restore full apex-window coherence, reseat temporal flow channels, and finalize the substrate for stable long-window propagation across Triad, Ladder, and SI subsystems.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.time.window.apex.window.reconstitution.corridor.field",
+    "@atlas.time.window.apex.window.reconstitution.corridor.align",
+    "@atlas.time.window.apex.window.reconstitution.corridor.rebuild",
+    "@atlas.time.window.apex.window.reconstitution.corridor.stabilize",
+    "@atlas.time.window.apex.window.reconstitution.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Clarification_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Purification_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Paradox_Load_Vaporization_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Geometry",
+      "Atlas_Temporal_Window_Apex_Corrected_Time_Geometry",
+      "Atlas_Temporal_Window_Apex_Coherence_Geometry",
+      "Atlas_Temporal_Window_Apex_Fusion_Geometry",
+      "Atlas_Temporal_Window_Apex_Binding_Geometry",
+      "Atlas_Temporal_Window_Apex_Integration_Surfaces",
+      "Atlas_Temporal_Window_Apex_Stability_Surfaces",
+      "Atlas_Temporal_Window_Apex_Geometry",
+      "Atlas_Temporal_Window_Stability_Surfaces",
+      "Atlas_Temporal_Window_Resonance_Geometry",
+      "Atlas_Temporal_Correction_Engine",
+      "Triad_Temporal_Correction_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/contributors/configs/remix_rights.md",
+  "type": "declaration_scroll",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "config_manifesto.md",
+    "entft_glyph_retirement_log.json",
+    "legacy_roll.md",
+    "sandbox_trace.log",
+    "contributors/configs/README.md"
+  ],
+  "symbolicTags": ["Remix Rights", "Mutation Boundaries", "Corridor Trust", "Sovereign Declaration"],
+  "cliTrigger": "submit_remix_manifest(name, scroll, timestamp)",
+  "timestamp": "2025-10-21T00:10:00Z"
+}

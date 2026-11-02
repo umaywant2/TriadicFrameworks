@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/Catalog/architecture.md">
+  <title>🛒 OpenCatalog — architecture.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/Catalog/architecture.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/Catalog/architecture.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="openloop_Catalog_architecture_" src="https://github.com/user-attachments/assets/97d53b45-76b9-4eb3-96ba-c39049a96602" /></p>
+<h1 id="opencatalog-architecturemd">🛒 <strong>OpenCatalog — architecture.md</strong></h1>
+<p><strong>OpenLoop Suite — Product Catalog Substrate</strong><br>
+<strong>Analyzer Layer:</strong> structural<br>
+<strong>Regime:</strong> open‑catalog-governance<br>
+<strong>Version:</strong> 1.0  </p>
+<hr>
+<h2 id="1-architectural-overview"><strong>1. Architectural Overview</strong></h2>
+<p>OpenCatalog provides a <strong>structural, drift‑aware, coherence‑declared substrate</strong> for product catalogs across the OpenLoop suite.<br>
+Its architecture is built around five canonical components:</p>
+<ol>
+<li><strong>Item Metadata Model</strong>  </li>
+<li><strong>Variant Lineage Engine</strong>  </li>
+<li><strong>Structural Classification Layer</strong>  </li>
+<li><strong>Governance &amp; Drift Control</strong>  </li>
+<li><strong>Cross‑Module Integration Layer</strong></li>
+</ol>
+<p>Each component ensures catalog stability, metadata correctness, and operator‑aligned transformations.</p>
+<hr>
+<h2 id="2-item-metadata-model"><strong>2. Item Metadata Model</strong></h2>
+<p>The Item Metadata Model defines the <strong>identity</strong> of a product using canonical fields.<br>
+It includes:</p>
+<ul>
+<li>structural category  </li>
+<li>semantic cluster (optional)  </li>
+<li>variant signature  </li>
+<li>dimensional attributes  </li>
+<li>coherence score  </li>
+<li>drift status  </li>
+</ul>
+<p>Metadata is designed for:</p>
+<ul>
+<li>search  </li>
+<li>classification  </li>
+<li>recommendation  </li>
+<li>interoperability  </li>
+<li>AI interpretation  </li>
+</ul>
+<h3 id="21-metadata-requirements"><strong>2.1 Metadata Requirements</strong></h3>
+<p>Every item must include:</p>
+<ul>
+<li><code>open.catalog.item</code>  </li>
+<li><code>open.catalog.category</code>  </li>
+<li><code>open.catalog.variant</code>  </li>
+<li><code>open.catalog.lineage</code>  </li>
+<li><code>open.catalog.structure</code>  </li>
+<li><code>open.catalog.coherence</code>  </li>
+<li><code>open.catalog.drift</code>  </li>
+<li><code>open.catalog.version</code>  </li>
+<li><code>open.catalog.module</code>  </li>
+</ul>
+<p>Missing fields trigger drift correction.</p>
+<hr>
+<h2 id="3-variant-lineage-engine"><strong>3. Variant Lineage Engine</strong></h2>
+<p>The Variant Lineage Engine tracks:</p>
+<ul>
+<li>parent → child relationships  </li>
+<li>variant evolution  </li>
+<li>drift events  </li>
+<li>corrections  </li>
+<li>operator usage  </li>
+</ul>
+<p>Lineage ensures:</p>
+<ul>
+<li>transparency  </li>
+<li>auditability  </li>
+<li>structural stability  </li>
+<li>variant clarity  </li>
+</ul>
+<h3 id="31-lineage-rules"><strong>3.1 Lineage Rules</strong></h3>
+<p>Lineage must be:</p>
+<ul>
+<li>canonical  </li>
+<li>immutable  </li>
+<li>drift‑bounded  </li>
+<li>operator‑aligned  </li>
+</ul>
+<p>Variant confusion is treated as structural drift.</p>
+<hr>
+<h2 id="4-structural-classification-layer"><strong>4. Structural Classification Layer</strong></h2>
+<p>Products are organized using:</p>
+<ul>
+<li>hierarchical categories  </li>
+<li>dimensional attributes  </li>
+<li>structural clusters  </li>
+<li>canonical item types  </li>
+</ul>
+<p>Classification is drift‑bounded and coherence‑declared.</p>
+<h3 id="41-category-hierarchy"><strong>4.1 Category Hierarchy</strong></h3>
+<p>Categories must:</p>
+<ul>
+<li>follow canonical structure  </li>
+<li>maintain stable parent/child relationships  </li>
+<li>avoid semantic drift  </li>
+<li>remain operator‑aligned  </li>
+</ul>
+<h3 id="42-dimensional-attributes"><strong>4.2 Dimensional Attributes</strong></h3>
+<p>Attributes describe:</p>
+<ul>
+<li>physical properties  </li>
+<li>functional properties  </li>
+<li>variant differences  </li>
+<li>structural relationships  </li>
+</ul>
+<p>Attributes must be canonical and non‑ambiguous.</p>
+<hr>
+<h2 id="5-governance-drift-control"><strong>5. Governance &amp; Drift Control</strong></h2>
+<p>OpenCatalog enforces strict governance rules inherited from OpenLoop.</p>
+<h3 id="51-drift-types"><strong>5.1 Drift Types</strong></h3>
+<ul>
+<li><strong>Structural Drift</strong> — hierarchy corruption  </li>
+<li><strong>Metadata Drift</strong> — malformed or missing fields  </li>
+<li><strong>Variant Drift</strong> — lineage confusion  </li>
+<li><strong>Category Drift</strong> — misclassification  </li>
+</ul>
+<h3 id="52-drift-responses"><strong>5.2 Drift Responses</strong></h3>
+<ol>
+<li><strong>Flag</strong> — mark item as drifted  </li>
+<li><strong>Suppress</strong> — remove from catalog output  </li>
+<li><strong>Correct</strong> — repair metadata  </li>
+<li><strong>Reclassify</strong> — fix category  </li>
+<li><strong>Update Lineage</strong> — record correction  </li>
+</ol>
+<p>All drift responses are logged.</p>
+<hr>
+<h2 id="6-operator-grammar-alignment"><strong>6. Operator Grammar Alignment</strong></h2>
+<p>OpenCatalog uses the OpenLoop operator grammar:</p>
+<ul>
+<li><strong>extend</strong> — add structural detail  </li>
+<li><strong>condense</strong> — simplify hierarchy  </li>
+<li><strong>refactor</strong> — reorganize metadata  </li>
+<li><strong>capture</strong> — record lineage or drift  </li>
+<li><strong>annotate</strong> — add governance notes  </li>
+<li><strong>correct</strong> — fix drift or misalignment  </li>
+</ul>
+<p>Operators ensure safe, reversible catalog evolution.</p>
+<hr>
+<h2 id="7-crossmodule-integration"><strong>7. Cross‑Module Integration</strong></h2>
+<p>OpenCatalog integrates with:</p>
+<ul>
+<li><strong>OpenSEO</strong> — semantic metadata alignment  </li>
+<li><strong>OpenStream</strong> — recommendation coherence  </li>
+<li><strong>OpenAdEngine</strong> — product‑aligned ad metadata  </li>
+<li><strong>OpenRisk</strong> — anomaly detection for catalog drift  </li>
+<li><strong>OpenIAM</strong> — identity‑safe catalog access rules  </li>
+<li><strong>OpenGeo</strong> — location‑based catalog metadata  </li>
+</ul>
+<p>All integrations are drift‑bounded and coherence‑declared.</p>
+<hr>
+<h2 id="8-canonical-metadata-block-example"><strong>8. Canonical Metadata Block (Example)</strong></h2>
+<pre><code class="language-html">&lt;meta name=&quot;open.catalog.item&quot; content=&quot;laptop&quot;&gt;
+&lt;meta name=&quot;open.catalog.category&quot; content=&quot;electronics.computing&quot;&gt;
+&lt;meta name=&quot;open.catalog.variant&quot; content=&quot;v3&quot;&gt;
+&lt;meta name=&quot;open.catalog.lineage&quot; content=&quot;itemlineage:4b9e&quot;&gt;
+&lt;meta name=&quot;open.catalog.structure&quot; content=&quot;hierarchy:0.92&quot;&gt;
+&lt;meta name=&quot;open.catalog.coherence&quot; content=&quot;0.95&quot;&gt;
+&lt;meta name=&quot;open.catalog.drift&quot; content=&quot;bounded&quot;&gt;
+&lt;meta name=&quot;open.catalog.version&quot; content=&quot;1.0&quot;&gt;
+&lt;meta name=&quot;open.catalog.module&quot; content=&quot;OpenCatalog&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="9-file-structure"><strong>9. File Structure</strong></h2>
+<ul>
+<li><code>README.md</code> — front door  </li>
+<li><code>architecture.md</code> — this file  </li>
+<li><code>canonical_metadata.md</code> — metadata schema  </li>
+<li><code>governance.md</code> — drift &amp; policy rules  </li>
+<li><code>operators.md</code> — operator grammar  </li>
+<li><code>index.html</code> — module front page  </li>
+<li><code>module.json</code> — manifest  </li>
+</ul>
+  </main>
+</body>
+</html>

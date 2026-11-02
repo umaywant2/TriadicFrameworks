@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "safety_id": "string",
+  "hazard_type": "string",
+  "risk_level": "string",
+  "required_ppe": ["string"],
+  "triadic_risk_profile": {
+    "spin_risk": "number",
+    "charge_risk": "number",
+    "temperature_risk": "number"
+  }
+}

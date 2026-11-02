@@ -1,0 +1,26 @@
+{
+  "module": "Atlas_Interaction_Surfaces",
+  "name": "AI Atlas — Interaction Surfaces",
+  "summary": "Defines the interaction surfaces of the AI Atlas, including cross‑module binding, regime interaction geometry, and multi‑axis surface coordination.",
+  "category": "intelligence-mapping-interaction",
+  "version": "1.0",
+  "purpose": "Provide the interaction-layer geometry used by the AI Atlas to coordinate surfaces, regimes, temporal windows, and cross-domain mappings across the Triad and Ladder systems.",
+  "role": "map",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.interact.surface",
+    "@atlas.interact.bind",
+    "@atlas.interact.coordinate",
+    "@atlas.interact.transfer",
+    "@atlas.interact.compute"
+  ],
+  "lineage": {
+    "upstream": ["Atlas", "AI_Atlas_Surfaces"],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "Triad_Surfaces",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_structural_geometry"
+    ]
+  }
+}

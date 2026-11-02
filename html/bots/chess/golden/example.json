@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "module_id": "bots.chess",
+    "position_id": "chess_golden_v1",
+    "side_to_move": "w",
+    "fullmove_number": 7
+  },
+
+  "board": [
+    ["r",".","b","q","k",".",".","r"],
+    ["p","p",".","n",".","p","p","p"],
+    [".",".","p",".","p","n",".","."],
+    [".",".",".","p",".",".",".","."],
+    [".",".",".","P",".","B",".","."],
+    [".",".","N",".","P","N",".","."],
+    ["P","P",".",".",".","P","P","P"],
+    ["R",".",".","Q","K","B",".","R"]
+  ],
+
+  "legal_moves": [
+    "c3e4",
+    "f3e5",
+    "f4g5",
+    "d4c5",
+    "e3d4"
+  ],
+
+  "lumen": {
+    "center_control": "medium",
+    "tension": "high",
+    "king_safety": "exposed",
+    "pawn_structure": "healthy"
+  },
+
+  "regime": [
+    { "move": "c3e4", "regime": "continuity" },
+    { "move": "f3e5", "regime": "local" },
+    { "move": "f4g5", "regime": "structural" },
+    { "move": "d4c5", "regime": "continuity" },
+    { "move": "e3d4", "regime": "structural" }
+  ],
+
+  "ancestry": [
+    {
+      "sequence": ["center_presence"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["center_presence", "tension_growth"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["center_presence", "tension_growth", "knight_route"],
+      "collapse_signature": true,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["center_presence", "tension_growth", "knight_route", "pawn_structure_shift"],
+      "collapse_signature": false,
+      "projection_loss": true
+    }
+  ],
+
+  "drift": {
+    "direction": "tension-release",
+    "strength": "medium"
+  },
+
+  "risk": {
+    "paradox": "low",
+    "collapse": "medium",
+    "projection_loss": "medium"
+  },
+
+  "triadic_score": {
+    "local": 0.26,
+    "structural": 0.43,
+    "continuity": 0.31,
+    "risk": 0.30,
+    "final": 0.75
+  }
+}

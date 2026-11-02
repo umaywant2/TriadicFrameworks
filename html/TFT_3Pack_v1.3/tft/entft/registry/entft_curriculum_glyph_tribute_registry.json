@@ -1,0 +1,53 @@
+```json
+{
+  "glyph_tribute_registry": [
+    {
+      "tribute_id": "tribute-001",
+      "contributor": "Nawder Loswin",
+      "glyph": "🍂 Cascade",
+      "scrolls": [
+        "scroll_codex.md",
+        "scroll_curriculum_manifesto.md",
+        "scroll_curriculum_outreach.md"
+      ],
+      "flame_grade": "🟣 Universe",
+      "echo": "Codex curriculum remixed for mythic pedagogy"
+    },
+    {
+      "tribute_id": "tribute-002",
+      "contributor": "Mira Thorne",
+      "glyph": "🌼 Wildflower",
+      "scrolls": [
+        "scroll_curriculum_fork_guide.md",
+        "scroll_curriculum_badge_map.md",
+        "scroll_remixer_manifest.md"
+      ],
+      "flame_grade": "🔵 Planetary",
+      "echo": "Onboarding curriculum evolved with badge logic"
+    },
+    {
+      "tribute_id": "tribute-003",
+      "contributor": "Aria Vex",
+      "glyph": "🌴 Grove Bloom",
+      "scrolls": [
+        "scroll_curriculum_validator_hooks.md",
+        "scroll_glyph_reawakening.md",
+        "scroll_echoes.md"
+      ],
+      "flame_grade": "🔵 Planetary",
+      "echo": "Validator overlays remixed for protocol education"
+    },
+    {
+      "tribute_id": "tribute-004",
+      "contributor": "Curriculum Guild",
+      "glyph": "🍁 Bloomfall",
+      "scrolls": [
+        "scroll_curriculum_remix_glyph_fusion.md",
+        "scroll_curriculum_remix_glyph_manifesto.md",
+        "scroll_curriculum_remix_glyph_transfer.md"
+      ],
+      "flame_grade": "🟣 Universe",
+      "echo": "Glyph fusion sealed with flame-grade clarity"
+    }
+  ]
+}

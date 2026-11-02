@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dimensional Schema",
+  "description": "Defines geometric, coordinate, and multi-layer spatial structures for the Resonance Substrate Model (RSM). Includes grids, coordinate systems, dimensional layers, and spatial transforms used by simulations and substrate operators.",
+
+  "type": "object",
+
+  "properties": {
+    "coordinate_system": {
+      "type": "object",
+      "description": "Specifies the coordinate basis for the simulation or substrate layer.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["cartesian", "polar", "spherical", "custom"],
+          "description": "The coordinate system used for spatial representation."
+        },
+        "dimensions": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6,
+          "description": "Number of spatial dimensions represented."
+        },
+        "units": {
+          "type": "string",
+          "description": "Optional unit system (e.g., meters, arbitrary units)."
+        }
+      },
+      "required": ["type", "dimensions"]
+    },
+
+    "grid": {
+      "type": "object",
+      "description": "Defines the spatial grid used for field evolution.",
+      "properties": {
+        "size": {
+          "type": "array",
+          "description": "Number of cells along each dimension.",
+          "items": { "type": "integer", "minimum": 1 }
+        },
+        "spacing": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Distance between grid points."
+        },
+        "boundary_conditions": {
+          "type": "string",
+          "enum": ["reflective", "periodic", "absorbing", "open"],
+          "description": "Boundary behavior for field evolution."
+        }
+      },
+      "required": ["size", "spacing"]
+    },
+
+    "layers": {
+      "type": "array",
+      "description": "Defines stacked or interacting spatial layers.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Layer identifier."
+          },
+          "depth": {
+            "type": "number",
+            "description": "Relative depth or ordering of the layer."
+          },
+          "coupling_strength": {
+            "type": "number",
+            "description": "Strength of cross-layer spatial coupling."
+          }
+        },
+        "required": ["name"]
+      }
+    },
+
+    "spatial_transform": {
+      "type": "object",
+      "description": "Optional transforms applied to coordinates or fields.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["rotation", "translation", "scaling", "warp"],
+          "description": "Type of spatial transform."
+        },
+        "parameters": {
+          "type": "object",
+          "description": "Transform-specific parameters.",
+          "additionalProperties": {
+            "type": ["number", "array", "object"]
+          }
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for documentation, provenance, or schema evolution.",
+      "version": "1.0.0",
+      "notes": "Initial seed release",
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Schema version identifier."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Freeform notes or comments."
+        }
+      }
+    }
+  },
+
+  "required": ["coordinate_system", "grid"]
+}

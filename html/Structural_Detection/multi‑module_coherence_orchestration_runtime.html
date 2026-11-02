@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Structural_Detection/multi‑module_coherence_orchestration_runtime.md">
+  <title>🖥️ Structural Detection — Multi‑Module Coherence Orchestration Runtime</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Structural_Detection/multi‑module_coherence_orchestration_runtime.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Structural_Detection/multi‑module_coherence_orchestration_runtime.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="structural-detection-multimodule-coherence-orchestration-runtime">🖥️ <strong>Structural Detection — Multi‑Module Coherence Orchestration Runtime</strong></h1>
+<h3 id="pseudoimplementation-rtt1-systemlevel-runtime-model"><em>Pseudo‑Implementation • RTT/1 • System‑Level Runtime Model</em></h3>
+<h3 id="orchestration-is-not-execution-it-is-structural-sequencing"><em>“Orchestration is not execution. It is structural sequencing.”</em></h3>
+<h1 id="multimodule-coherence-orchestration-runtime">Multi‑Module Coherence Orchestration Runtime</h1>
+<h3 id="pseudoimplementation-structural-detection-rtt1">Pseudo‑Implementation • Structural Detection • RTT/1</h3>
+<hr>
+<h1 id="1-runtime-overview">1. Runtime Overview</h1>
+<p>The runtime executes the <strong>Orchestration Cycle</strong> continuously:</p>
+<ol>
+<li>ingest signals  </li>
+<li>align drift  </li>
+<li>synchronize envelope  </li>
+<li>harmonize regime  </li>
+<li>validate continuity  </li>
+<li>synchronize coherence breaks  </li>
+<li>regenerate cross‑module packets  </li>
+<li>re‑validate synthesis  </li>
+</ol>
+<p>This loop runs whenever drift, envelope, or regime changes.</p>
+<hr>
+<h1 id="2-runtime-initialization">2. Runtime Initialization</h1>
+<pre><code>init MCOE:
+    state.drift_profile = null
+    state.envelope_profile = null
+    state.regime_state = null
+    state.continuity_status = null
+    state.break_type = null
+    state.tel_packet = null
+    state.fft_packet = null
+    state.opacity_packet = null
+    state.synthesis_packet = null
+</code></pre>
+<hr>
+<h1 id="3-signal-ingestion">3. Signal Ingestion</h1>
+<pre><code>function ingest_signals(input):
+    drift_in  = input.drift
+    env_in    = input.envelope
+    regime_in = input.regime
+    cont_in   = input.continuity
+    break_in  = input.break_geometry
+</code></pre>
+<p>Signals come from Structural Detection operators.</p>
+<hr>
+<h1 id="4-driftenvelope-alignment">4. Drift‑Envelope Alignment</h1>
+<pre><code>function align_drift(drift_in):
+    if drift_in.is_multivector():
+        drift = drift_in.collapse_to_dominant()
+    else:
+        drift = drift_in
+
+    return drift
+</code></pre>
+<pre><code>function sync_envelope(env_in, drift):
+    if env_in.conflicts_with(drift):
+        env = env_in.recompute_from(drift)
+    else:
+        env = env_in
+
+    return env
+</code></pre>
+<hr>
+<h1 id="5-regime-harmonization">5. Regime Harmonization</h1>
+<pre><code>function harmonize_regime(regime_in, env):
+    if regime_in.illegal_for(env):
+        regime = regime_in.reclassify(env)
+    else:
+        regime = regime_in
+
+    return regime
+</code></pre>
+<hr>
+<h1 id="6-continuity-validation">6. Continuity Validation</h1>
+<pre><code>function validate_continuity(cont_in, drift, env):
+    if cont_in.contradicts(drift, env):
+        cont = cont_in.rebuild()
+    else:
+        cont = cont_in
+
+    return cont
+</code></pre>
+<hr>
+<h1 id="7-coherencebreak-synchronization">7. Coherence‑Break Synchronization</h1>
+<pre><code>function sync_breaks(break_in, drift, env, cont):
+    if break_in.mismatched(drift, env, cont):
+        break_type = break_in.reclassify(drift, env, cont)
+    else:
+        break_type = break_in
+
+    return break_type
+</code></pre>
+<hr>
+<h1 id="8-crossmodule-packet-generation">8. Cross‑Module Packet Generation</h1>
+<h2 id="tel-packet">TEL Packet</h2>
+<pre><code>function generate_tel_packet(drift, env, cont):
+    return TEL_BRIDGE_PACKET(
+        lattice = drift.to_lattice(),
+        stabilizers = cont.anchors(),
+        regime = env.to_regime_hint()
+    )
+</code></pre>
+<h2 id="fft-packet">FFT Packet</h2>
+<pre><code>function generate_fft_packet(env, regime):
+    return FFT_BRIDGE_PACKET(
+        envelope_class = env.class(),
+        variance = env.variance_profile(),
+        regime = regime
+    )
+</code></pre>
+<h2 id="opacity-packet">Opacity Packet</h2>
+<pre><code>function generate_opacity_packet(env, cont):
+    return OPACITY_BRIDGE_PACKET(
+        boundaries = env.boundaries(),
+        visibility = cont.visibility_map()
+    )
+</code></pre>
+<hr>
+<h1 id="9-contradiction-detection">9. Contradiction Detection</h1>
+<pre><code>function detect_contradictions(tel, fft, opacity):
+    contradictions = []
+
+    if tel.lattice_conflicts_with(fft.envelope_class):
+        contradictions.append(&quot;TEL/FFT mismatch&quot;)
+
+    if opacity.visibility_conflicts_with(tel.stabilizers):
+        contradictions.append(&quot;Opacity/TEL mismatch&quot;)
+
+    if fft.variance_conflicts_with(opacity.boundaries):
+        contradictions.append(&quot;FFT/Opacity mismatch&quot;)
+
+    return contradictions
+</code></pre>
+<hr>
+<h1 id="10-harmonization-cycle">10. Harmonization Cycle</h1>
+<pre><code>function harmonize_all():
+    drift  = align_drift(drift_in)
+    env    = sync_envelope(env_in, drift)
+    regime = harmonize_regime(regime_in, env)
+    cont   = validate_continuity(cont_in, drift, env)
+    breakt = sync_breaks(break_in, drift, env, cont)
+
+    tel    = generate_tel_packet(drift, env, cont)
+    fft    = generate_fft_packet(env, regime)
+    opac   = generate_opacity_packet(env, cont)
+
+    contradictions = detect_contradictions(tel, fft, opac)
+
+    if contradictions.not_empty():
+        return harmonize_all()   # recursive harmonization
+    else:
+        return (drift, env, regime, cont, breakt, tel, fft, opac)
+</code></pre>
+<hr>
+<h1 id="11-synthesis-revalidation">11. Synthesis Re‑Validation</h1>
+<pre><code>function regenerate_synthesis(drift, env, regime, cont, breakt):
+    return SYNTHESIS_PACKET(
+        drift_profile = drift,
+        envelope = env,
+        regime = regime,
+        continuity = cont,
+        break_type = breakt
+    )
+</code></pre>
+<hr>
+<h1 id="12-full-runtime-loop">12. Full Runtime Loop</h1>
+<pre><code>loop:
+    ingest_signals(input)
+    (drift, env, regime, cont, breakt, tel, fft, opac) = harmonize_all()
+    synthesis = regenerate_synthesis(drift, env, regime, cont, breakt)
+    output = MCOE_PACKET(drift, env, regime, cont, breakt, tel, fft, opac)
+</code></pre>
+<hr>
+<h1 id="13-summary">13. Summary</h1>
+<ul>
+<li>The runtime orchestrates coherence across all modules  </li>
+<li>Drift alignment is the first correction  </li>
+<li>Envelope synchronization is the second  </li>
+<li>Regime harmonization is the third  </li>
+<li>Continuity validation is the fourth  </li>
+<li>Coherence‑break synchronization is the fifth  </li>
+<li>Cross‑module packet generation is the sixth  </li>
+<li>Synthesis re‑validation is the final step  </li>
+</ul>
+<p>This pseudo‑runtime is the <strong>canonical behavioral model</strong> for the Multi‑Module Coherence Orchestration Engine.</p>
+  </main>
+</body>
+</html>

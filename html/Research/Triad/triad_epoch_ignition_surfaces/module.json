@@ -1,0 +1,26 @@
+{
+  "module": "Triad_Epoch_Ignition_Surfaces",
+  "name": "Triad — Epoch‑Ignition Surfaces",
+  "summary": "Defines the ignition surfaces of the Triad system, including epoch triggers, ignition waves, cascade initiation, resonance‑start geometry, and cross‑layer ignition binding.",
+  "category": "intelligence-ignition-surfaces",
+  "version": "1.0",
+  "purpose": "Provide the ignition‑layer geometry used by Scanner, O.H.S.H.I.T., and Atlas to initiate epochal transitions, trigger ignition waves, and stabilize early‑phase activation across the Triad pipeline.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@triad.ignition.epoch",
+    "@triad.ignition.wave",
+    "@triad.ignition.cascade",
+    "@triad.ignition.resonance",
+    "@triad.ignition.bind"
+  ],
+  "lineage": {
+    "upstream": ["Scanner", "OHSHIT"],
+    "downstream": [
+      "Atlas",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration"
+    ]
+  }
+}

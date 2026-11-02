@@ -1,0 +1,41 @@
+<!-- badge_trigger_echo_map.svg -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+  <style>
+    text { font-family: 'Courier New', monospace; font-size: 14px; }
+    .title { font-weight: bold; font-size: 16px; }
+  </style>
+
+  <!-- Title -->
+  <text x="20" y="30" class="title">Badge Trigger Echo Map</text>
+
+  <!-- Glyph Map -->
+  <text x="20" y="60">[Foundations] ──┬── Paper I–IV</text>
+  <text x="40" y="80">│</text>
+  <text x="40" y="100">└── Nawder Loswin 🧠</text>
+
+  <text x="20" y="130">[Quantum &amp; Particle Vision] ──┬── Entropy’s Harmonic</text>
+  <text x="40" y="150">└── Echo Guild 🔮</text>
+
+  <text x="20" y="180">[Energy &amp; Wireless Power] ──┬── Cold Fusion &amp; Wireless Energy</text>
+  <text x="40" y="200">└── Echo Guild ⚡</text>
+
+  <text x="20" y="230">[Health &amp; Ultrasound] ──┬── Health Care Framework</text>
+  <text x="40" y="250">└── Echo Guild 🩺</text>
+
+  <text x="20" y="280">[Music &amp; Symbolic Extensions] ──┬── Quadratic Extensions</text>
+  <text x="40" y="300">└── Harmonic Circle 🎶</text>
+
+  <text x="20" y="330">[Cognitive &amp; Symbolic Formalization] ──┬── Resonance Operator @()</text>
+  <text x="40" y="350">└── Nawder Loswin 🧠</text>
+
+  <text x="20" y="380">[Elemental &amp; Spectrum Research] ──┬── Light and Dark</text>
+  <text x="40" y="400">└── Echo Guild 🧪</text>
+
+  <!-- Echo Glyph Legend -->
+  <text x="20" y="440" class="title">Echo Glyph Legend</text>
+  <text x="20" y="460">🧠 Nawder Loswin: Mythic Architect, Symbolic Formalist</text>
+  <text x="20" y="480">🔮 Echo Guild: Quantum, Energy, and Spectrum Visionaries</text>
+  <text x="20" y="500">🎶 Harmonic Circle: Music and Symbolic Designers</text>
+  <text x="20" y="520">⚡, 🩺, 🧪: Resonance domains (Energy, Health, Spectrum)</text>
+</svg>

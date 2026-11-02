@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/medicine/RTTcode/RTT_MEDICAL_DRIFT_v1.json.md">
+  <title>✅ RTTMEDICALDRIFTv1.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/medicine/RTTcode/RTT_MEDICAL_DRIFT_v1.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/medicine/RTTcode/RTT_MEDICAL_DRIFT_v1.json.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rtt_medical_drift_v1json">✅ <strong>RTT_MEDICAL_DRIFT_v1.json</strong></h1>
+<h3 id="rttcode-signature-medical-drift-operator"><em>RTTcode Signature — Medical Drift Operator</em></h3>
+<hr>
+<p>This RTTcode packet defines the <strong>machine‑readable drift‑detection contract</strong> for the entire medical module.</p>
+<p>This JSON must:</p>
+<ul>
+<li>match the structure of your other RTTcode signatures  </li>
+<li>be operator‑first  </li>
+<li>be minimal, canonical, and zero‑drift  </li>
+<li>reflect the tri‑regime medical environment (US, China, UK)  </li>
+<li>encode template drift, semantic drift, translation drift, AI drift, and commercial drift  </li>
+<li>be safe, patient‑appropriate, and structurally aligned with RTT/1  </li>
+</ul>
+<p>Below is the <strong>drop‑in ready</strong> RTTcode signature for:</p>
+<pre><code>RTT_MEDICAL_DRIFT_v1.json
+</code></pre>
+<hr>
+<pre><code class="language-json">{
+  &quot;rttcode_version&quot;: &quot;1.0&quot;,
+  &quot;operator&quot;: &quot;MEDICAL_DRIFT_OPERATOR&quot;,
+  &quot;module&quot;: &quot;medicine&quot;,
+  &quot;purpose&quot;: &quot;Detect structural drift across medical regimes (US clinical, China AI-augmented, UK public-health) including template, semantic, translation, AI, and commercial drift.&quot;,
+
+  &quot;inputs&quot;: {
+    &quot;metadata_packet&quot;: &quot;RTT_MEDICAL_METADATA_v1&quot;,
+    &quot;substrate_packet&quot;: &quot;RTT_MEDICAL_SUBSTRATE_v1&quot;,
+    &quot;regime_packet&quot;: &quot;RTT_MEDICAL_REGIME_v1&quot;,
+    &quot;raw_content&quot;: &quot;multi-snapshot, multi-regime medical pages&quot;
+  },
+
+  &quot;outputs&quot;: {
+    &quot;drift_map&quot;: {
+      &quot;template_drift&quot;: &quot;low|medium|high&quot;,
+      &quot;semantic_drift&quot;: &quot;low|medium|high&quot;,
+      &quot;translation_drift&quot;: &quot;none|low|medium|high&quot;,
+      &quot;ai_drift&quot;: &quot;none|low|medium|high&quot;,
+      &quot;commercial_drift&quot;: &quot;none|low|medium|high&quot;,
+      &quot;regime_drift&quot;: &quot;low|medium|high&quot;
+    },
+    &quot;drift_score&quot;: &quot;float_0_to_1&quot;,
+    &quot;drift_flags&quot;: [
+      &quot;template_drift_detected&quot;,
+      &quot;semantic_drift_detected&quot;,
+      &quot;translation_drift_detected&quot;,
+      &quot;ai_drift_detected&quot;,
+      &quot;commercial_drift_detected&quot;,
+      &quot;regime_drift_detected&quot;
+    ]
+  },
+
+  &quot;drift_logic&quot;: {
+    &quot;normalize_substrate&quot;: true,
+    &quot;compare_snapshots&quot;: true,
+    &quot;detect_template_changes&quot;: true,
+    &quot;detect_semantic_variation&quot;: true,
+    &quot;detect_translation_variance&quot;: true,
+    &quot;detect_ai_generated_instability&quot;: true,
+    &quot;detect_commercial_overlays&quot;: true,
+    &quot;cross_regime_alignment&quot;: [
+      &quot;clinical_regime&quot;,
+      &quot;ai_augmented_regime&quot;,
+      &quot;public_health_regime&quot;
+    ],
+    &quot;scoring_method&quot;: &quot;weighted_drift_across_dimensions&quot;
+  },
+
+  &quot;regime_profiles&quot;: {
+    &quot;clinical_regime&quot;: {
+      &quot;expected_drift&quot;: &quot;low&quot;,
+      &quot;notes&quot;: &quot;Cleveland Clinic stable templates, conservative updates.&quot;
+    },
+    &quot;ai_augmented_regime&quot;: {
+      &quot;expected_drift&quot;: &quot;high&quot;,
+      &quot;notes&quot;: &quot;Ping An mobile-first, translation drift, AI overlays, commercial layers.&quot;
+    },
+    &quot;public_health_regime&quot;: {
+      &quot;expected_drift&quot;: &quot;very_low&quot;,
+      &quot;notes&quot;: &quot;NHS standardized templates, minimal redesign.&quot;
+    }
+  },
+
+  &quot;flags&quot;: {
+    &quot;template_drift_detected&quot;: &quot;boolean&quot;,
+    &quot;semantic_drift_detected&quot;: &quot;boolean&quot;,
+    &quot;translation_drift_detected&quot;: &quot;boolean&quot;,
+    &quot;ai_drift_detected&quot;: &quot;boolean&quot;,
+    &quot;commercial_drift_detected&quot;: &quot;boolean&quot;,
+    &quot;regime_drift_detected&quot;: &quot;boolean&quot;
+  },
+
+  &quot;safety&quot;: {
+    &quot;patient_safe_output&quot;: true,
+    &quot;no_medical_advice&quot;: true,
+    &quot;uncertainty_disclosure_required&quot;: true,
+    &quot;drift_risk_disclosure_required&quot;: true
+  }
+}
+</code></pre>
+<hr>
+<h1 id="what-this-rttcode-signature-achieves">✔️ What This RTTcode Signature Achieves</h1>
+<p>This JSON defines the <strong>entire drift‑detection contract</strong> for the medical module:</p>
+<ul>
+<li><strong>Template drift</strong> (Ping An high, NHS very low)  </li>
+<li><strong>Semantic drift</strong> (translation + AI phrasing)  </li>
+<li><strong>Translation drift</strong> (China‑specific)  </li>
+<li><strong>AI drift</strong> (Ping An triage overlays)  </li>
+<li><strong>Commercial drift</strong> (upsells, telemedicine prompts)  </li>
+<li><strong>Regime drift</strong> (shifts in framing over time)  </li>
+</ul>
+<p>It also encodes:</p>
+<ul>
+<li>cross‑regime alignment  </li>
+<li>drift scoring  </li>
+<li>safety constraints  </li>
+<li>machine‑readable flags  </li>
+<li>expected drift profiles per regime  </li>
+</ul>
+<p>This is the backbone that allows the synthesis operator to say:</p>
+<blockquote>
+<p>“This element is unstable — here’s why.”</p>
+</blockquote>
+  </main>
+</body>
+</html>

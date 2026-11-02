@@ -1,0 +1,90 @@
+{
+  "ai.module": "fel_syzygies_rtt",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT structural map of the paper 'Fel’s Conjecture on Syzygies of Numerical Semigroups'.",
+  "ai.source.pdf": "https://arxiv.org/pdf/2602.03716",
+  "ai.keywords": [
+    "numerical semigroups",
+    "syzygies",
+    "Hilbert series",
+    "gap power sums",
+    "universal symmetric polynomials",
+    "Tn polynomials",
+    "AxiomProver",
+    "formal proof"
+  ],
+
+  "ai.module.summary": "This module exposes the regime structure behind Fel’s conjecture on alternating syzygy power sums Kp(S), the gap power sums Gr(S), and the universal symmetric polynomials Tn. It preserves the authors' results while adding RTT operators for agentic reasoning.",
+
+  "ai.regimes": {
+    "hilbert_series_regime": {
+      "description": "Structure of k[S] encoded via Hilbert numerator QS(z) and syzygy degrees.",
+      "evidence": "Paper defines QS(z) and expresses syzygy degrees through alternating sums."
+    },
+    "gap_power_regime": {
+      "description": "Gap set Δ and power sums Gr(S) determine arithmetic invariants of S.",
+      "evidence": "Gr(S) defined as sum of g^r over gaps; central to Fel’s formula."
+    },
+    "universal_polynomial_regime": {
+      "description": "Universal symmetric polynomials Tn(σ) and Tn(δ) govern the structure of Kp(S).",
+      "evidence": "Conjecture 1.6 expresses Kp(S) entirely in terms of Tn and Gr(S)."
+    },
+    "formalization_regime": {
+      "description": "AxiomProver produces a Lean formalization of the conjecture and its proof.",
+      "evidence": "Appendix describes end-to-end automated theorem proving."
+    }
+  },
+
+  "ai.tensions": {
+    "combinatorial_vs_algebraic": {
+      "description": "Gap power sums (combinatorial) vs syzygy degrees (algebraic).",
+      "paper_alignment": "Kp(S) links Gr(S) to syzygy power sums via universal polynomials."
+    },
+    "explicit_formula_vs_universal_identity": {
+      "description": "Concrete semigroup data vs universal identities for Tn.",
+      "paper_alignment": "Proof isolates universal identities needed for coefficient extraction."
+    },
+    "natural_language_vs_formal_proof": {
+      "description": "Human-readable exposition vs Lean/Mathlib formalization.",
+      "paper_alignment": "Appendix contrasts narrative exposition with kernel-verified proof."
+    }
+  },
+
+  "ai.transitions": {
+    "hilbert_to_gap_transition": {
+      "description": "Convert Hilbert numerator QS(z) into exponential generating functions.",
+      "paper_alignment": "Proof replaces z with e^t to relate QS, Gr, and Tn."
+    },
+    "gap_to_universal_transition": {
+      "description": "Express Kp(S) as a convolution of Gr(S) with Tn(σ) and Tn(δ).",
+      "paper_alignment": "Conjecture 1.6 and Theorem 1.11."
+    },
+    "informal_to_formal_transition": {
+      "description": "AxiomProver transforms natural-language conjecture into Lean code.",
+      "paper_alignment": "Appendix describes the automated pipeline."
+    }
+  },
+
+  "ai.operators": {
+    "syzygy_power_operator": {
+      "type": "operator",
+      "role": "Computes alternating power sums Cr(S) from syzygy degrees."
+    },
+    "gap_power_operator": {
+      "type": "operator",
+      "role": "Computes Gr(S) from the gap set Δ."
+    },
+    "universal_T_operator": {
+      "type": "operator",
+      "role": "Evaluates universal symmetric polynomials Tn(σ) and Tn(δ)."
+    },
+    "egf_operator": {
+      "type": "operator",
+      "role": "Converts algebraic data into exponential generating functions for coefficient extraction."
+    }
+  },
+
+  "ai.audience": "Researchers in numerical semigroups, commutative algebra, and symbolic computation.",
+  "ai.contact.github": "https://github.com/TriadicFrameworks",
+  "ai.license": "Open educational use permitted"
+}

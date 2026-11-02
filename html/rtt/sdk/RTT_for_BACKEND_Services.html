@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/sdk/RTT_for_BACKEND_Services.md">
+  <title>RTT‑Inside for Backend Services (Beta)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/sdk/RTT_for_BACKEND_Services.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/sdk/RTT_for_BACKEND_Services.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rttinside-for-backend-services-beta"><strong>RTT‑Inside for Backend Services (Beta)</strong></h1>
+<p><em>A practical guide for integrating RTT structural awareness into servers, microservices, and full‑stack systems.</em></p>
+<p>Backend services can participate in the RTT ecosystem just as easily as websites.<br>
+RTT‑Inside provides a minimal, stable API surface that allows services to:</p>
+<ul>
+<li>send structural heartbeat events  </li>
+<li>declare RTT‑Inside capabilities  </li>
+<li>prepare for vST‑beta diagnostics  </li>
+<li>unify system‑level clarity and coherence signals  </li>
+</ul>
+<p>This guide walks backend developers through the recommended integration patterns.</p>
+<hr>
+<h1 id="1-install-or-vendor-the-rtt-sdk">1. Install or Vendor the RTT SDK</h1>
+<p>Backend services can use either the <strong>JavaScript</strong> or <strong>Python</strong> SDK.</p>
+<h3 id="javascript-node">JavaScript (Node)</h3>
+<pre><code class="language-js">import { RTTClient } from &quot;./rtt-sdk/index.js&quot;;
+
+const client = new RTTClient();
+</code></pre>
+<h3 id="python">Python</h3>
+<pre><code class="language-python">from rtt_sdk import RTTClient
+client = RTTClient()
+</code></pre>
+<p>The SDK provides a stable, versioned interface for all RTT endpoints.</p>
+<hr>
+<h1 id="2-send-structural-heartbeats">2. Send Structural Heartbeats</h1>
+<p>Backend services don’t have a DOM, so their beacon payloads are simpler — but the shape is identical.</p>
+<h3 id="javascript-example">JavaScript Example</h3>
+<pre><code class="language-js">await client.beacon({
+  site: &quot;auth-service&quot;,
+  session: &quot;srv-&quot; + Date.now(),
+  event: &quot;heartbeat&quot;,
+  ts: new Date().toISOString(),
+  structure: {
+    url: &quot;internal://auth&quot;,
+    title: &quot;Auth Service&quot;,
+    nav_count: 0,
+    main_count: 0,
+    form_count: 0,
+    button_count: 0,
+    dom_nodes: 0
+  }
+});
+</code></pre>
+<h3 id="python-example">Python Example</h3>
+<pre><code class="language-python">payload = {
+    &quot;site&quot;: &quot;auth-service&quot;,
+    &quot;session&quot;: &quot;srv-12345&quot;,
+    &quot;event&quot;: &quot;heartbeat&quot;,
+    &quot;ts&quot;: &quot;2026-01-19T15:00:00Z&quot;,
+    &quot;structure&quot;: {
+        &quot;url&quot;: &quot;internal://auth&quot;,
+        &quot;title&quot;: &quot;Auth Service&quot;,
+        &quot;nav_count&quot;: 0,
+        &quot;main_count&quot;: 0,
+        &quot;form_count&quot;: 0,
+        &quot;button_count&quot;: 0,
+        &quot;dom_nodes&quot;: 0
+    }
+}
+
+client.beacon(payload)
+</code></pre>
+<p><strong>Recommended cadence:</strong><br>
+- every 30–60 seconds for active services<br>
+- on startup and shutdown<br>
+- after major configuration changes  </p>
+<p>These heartbeats help RTT build a structural map of your system.</p>
+<hr>
+<h1 id="3-register-a-service-profile">3. Register a Service Profile</h1>
+<p>Profiles allow RTT to understand what your service supports.</p>
+<h3 id="javascript">JavaScript</h3>
+<pre><code class="language-js">import { create_profile } from &quot;./rtt-sdk/profile.js&quot;;
+
+const profile = create_profile({
+  version: &quot;1.0&quot;,
+  supports: [&quot;coherence&quot;, &quot;drift&quot;],
+  contact: &quot;infra@example.com&quot;
+});
+
+await client.setProfile(&quot;auth-service&quot;, profile);
+</code></pre>
+<h3 id="python_1">Python</h3>
+<pre><code class="language-python">from rtt_sdk import create_profile
+
+profile = create_profile(
+    version=&quot;1.0&quot;,
+    supports=[&quot;coherence&quot;, &quot;drift&quot;],
+    contact=&quot;infra@example.com&quot;
+)
+
+client.set_profile(&quot;auth-service&quot;, profile)
+</code></pre>
+<p>Profiles are optional but recommended for multi‑service architectures.</p>
+<hr>
+<h1 id="4-integrate-rtt-into-your-observability-layer">4. Integrate RTT into Your Observability Layer</h1>
+<p>Backend services can incorporate RTT signals into:</p>
+<ul>
+<li>logs  </li>
+<li>metrics  </li>
+<li>dashboards  </li>
+<li>health checks  </li>
+<li>distributed tracing  </li>
+</ul>
+<h3 id="example-logging-rtt-heartbeats">Example: Logging RTT Heartbeats</h3>
+<pre><code class="language-js">console.log(&quot;[RTT] heartbeat sent&quot;, payload);
+</code></pre>
+<h3 id="example-prometheus-counter">Example: Prometheus Counter</h3>
+<pre><code>rtt_beacons_total{service=&quot;auth&quot;} 42
+</code></pre>
+<h3 id="example-grafana-panel">Example: Grafana Panel</h3>
+<ul>
+<li>RTT heartbeat frequency  </li>
+<li>RTT drift indicators  </li>
+<li>RTT coherence score (future vST)  </li>
+</ul>
+<p>This prepares your observability stack for vST‑beta diagnostics.</p>
+<hr>
+<h1 id="5-prepare-for-vstbeta-diagnostics-reserved">5. Prepare for vST‑Beta Diagnostics (Reserved)</h1>
+<p>Backend services can already shape payloads for future validators.</p>
+<h3 id="javascript-example_1">JavaScript Example</h3>
+<pre><code class="language-js">await client.validate({
+  system_map: { services: [&quot;auth&quot;, &quot;api&quot;, &quot;db&quot;] },
+  flows: [],
+  constraints: []
+});
+</code></pre>
+<h3 id="python-example_1">Python Example</h3>
+<pre><code class="language-python">from rtt_sdk import build_validate_payload
+
+payload = build_validate_payload(
+    system_map={&quot;services&quot;: [&quot;auth&quot;, &quot;api&quot;, &quot;db&quot;]},
+    flows=[],
+    constraints=[]
+)
+
+client.validate(payload)
+</code></pre>
+<p>These endpoints currently return placeholder responses but define the stable API surface.</p>
+<hr>
+<h1 id="6-recommended-integration-patterns">6. Recommended Integration Patterns</h1>
+<h3 id="a-microservices">A. Microservices</h3>
+<p>Each service sends:</p>
+<ul>
+<li>startup beacon  </li>
+<li>periodic heartbeat  </li>
+<li>shutdown beacon  </li>
+<li>optional profile  </li>
+</ul>
+<h3 id="b-monolithic-backends">B. Monolithic Backends</h3>
+<p>Send:</p>
+<ul>
+<li>per‑module heartbeats  </li>
+<li>per‑endpoint drift signals  </li>
+<li>system‑level topology payloads  </li>
+</ul>
+<h3 id="c-datacenters-research-labs">C. Datacenters / Research Labs</h3>
+<p>Use:</p>
+<ul>
+<li><code>/validate</code> for coherence  </li>
+<li><code>/corridor</code> for flow alignment  </li>
+<li><code>/topology</code> for triadic decomposition  </li>
+</ul>
+<p>This is the earliest path to vST‑beta adoption.</p>
+<hr>
+<h1 id="7-verification-checklist">7. Verification Checklist</h1>
+<p>Your backend is RTT‑Inside ready if:</p>
+<ul>
+<li>[ ] RTTClient is configured  </li>
+<li>[ ] periodic beacons are sent  </li>
+<li>[ ] service profile is registered  </li>
+<li>[ ] logs show RTT events  </li>
+<li>[ ] observability stack receives RTT signals  </li>
+<li>[ ] diagnostics payloads can be generated  </li>
+</ul>
+<p>This ensures smooth migration to future vST validators.</p>
+<hr>
+<h1 id="8-where-to-go-next">8. Where to Go Next</h1>
+<ul>
+<li><strong>RTT API Docs:</strong> <code>docs/api/rtt/</code>  </li>
+<li><strong>SDK Reference:</strong> <code>docs/rtt-sdk/README.md</code>  </li>
+<li><strong>Quick‑Start Guide:</strong> <code>docs/rtt-sdk/quickstart.md</code>  </li>
+<li><strong>Router Overview:</strong> <code>docs/api/rtt/router.md</code>  </li>
+</ul>
+<p>These documents provide deeper detail for advanced integrations.</p>
+  </main>
+</body>
+</html>

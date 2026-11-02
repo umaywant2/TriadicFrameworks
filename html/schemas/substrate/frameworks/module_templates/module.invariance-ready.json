@@ -1,0 +1,95 @@
+{
+  "$schema": "../../module.schema.json",
+  "module": "my-invariance-module",
+  "identity": "student.my-invariance-module",
+  "purpose": "An invariance-ready module defining structural, behavioral, temporal, atlas, and activation invariance fields.",
+
+  "files": [
+    {
+      "name": "README.md",
+      "role": "profile"
+    },
+    {
+      "name": "structural-invariance.md",
+      "role": "map"
+    },
+    {
+      "name": "behavioral-invariance.md",
+      "role": "map"
+    },
+    {
+      "name": "temporal-invariance.md",
+      "role": "map"
+    },
+    {
+      "name": "atlas-invariance.md",
+      "role": "map"
+    },
+    {
+      "name": "activation-invariance.md",
+      "role": "map"
+    }
+  ],
+
+  "invariance": {
+    "structural": {
+      "operators": ["string"],
+      "dimensions": ["string"],
+      "regimes": ["string"],
+      "layers": ["string"],
+      "rules": ["string"]
+    },
+    "behavioral": {
+      "drift": ["string"],
+      "coherence": ["string"],
+      "stability": ["string"],
+      "resonance": ["string"],
+      "ignition": ["string"],
+      "rules": ["string"]
+    },
+    "temporal": {
+      "epochs": ["string"],
+      "transitions": ["string"],
+      "propagation": ["string"],
+      "rules": ["string"]
+    },
+    "atlas": {
+      "routes": ["string"],
+      "modes": ["string"],
+      "transitions": ["string"],
+      "rules": ["string"]
+    },
+    "activation": {
+      "waves": ["string"],
+      "cascades": ["string"],
+      "harmonics": ["string"],
+      "rules": ["string"]
+    }
+  },
+
+  "operators": [
+    {
+      "name": "invariance-define",
+      "description": "Define invariance fields for the module.",
+      "example": "Define structural invariance → structural-invariance.md"
+    },
+    {
+      "name": "invariance-extend",
+      "description": "Extend substrate invariance rules with module-specific behavior.",
+      "example": "Extend behavioral invariance → behavioral-invariance.md"
+    },
+    {
+      "name": "invariance-bind",
+      "description": "Bind module invariance fields to substrate invariance engines.",
+      "example": "Bind temporal invariance → temporal-invariance.md"
+    }
+  ],
+
+  "output": {
+    "invariance_ready": "./module.invariance-ready.json"
+  },
+
+  "meta": {
+    "notes": "Invariance-ready module template defining structural, behavioral, temporal, atlas, and activation invariance fields."
+  }
+}

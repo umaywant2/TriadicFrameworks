@@ -1,0 +1,104 @@
+{
+  "id": "fft.ai.execution.graph",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Execution Graph v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "nodes": [
+    {
+      "id": "EG-001",
+      "name": "Field Init",
+      "operator": null,
+      "next": [
+        "EG-002",
+        "EG-003"
+      ]
+    },
+    {
+      "id": "EG-002",
+      "name": "Coherence Gate",
+      "operator": "fft.ai.coherence.json",
+      "next": [
+        "EG-004"
+      ],
+      "fail": "HALT"
+    },
+    {
+      "id": "EG-003",
+      "name": "Drift Arm",
+      "operator": "fft.ai.drift.monitor.json",
+      "next": [
+        "EG-004"
+      ]
+    },
+    {
+      "id": "EG-004",
+      "name": "Operator Dispatch",
+      "operator": "fft.ai.operators.json",
+      "next": [
+        "EG-005",
+        "EG-006",
+        "EG-007"
+      ]
+    },
+    {
+      "id": "EG-005",
+      "name": "RTT Phase Eval",
+      "operator": "fft.ai.rtt.bridge.json",
+      "next": [
+        "EG-008"
+      ]
+    },
+    {
+      "id": "EG-006",
+      "name": "SET Coupling Eval",
+      "operator": "fft.ai.set.engine.json",
+      "next": [
+        "EG-008"
+      ],
+      "new_v1_33": true
+    },
+    {
+      "id": "EG-007",
+      "name": "Paradox Check",
+      "operator": "fft.ai.paradox.resolver.json",
+      "next": [
+        "EG-008"
+      ],
+      "new_v1_33": true
+    },
+    {
+      "id": "EG-008",
+      "name": "S-N-R Monitor",
+      "operator": "fft.ai.snr.monitor.json",
+      "next": [
+        "EG-009"
+      ],
+      "new_v1_33": true
+    },
+    {
+      "id": "EG-009",
+      "name": "State Checkpoint",
+      "operator": "fft.ai.session.state.json",
+      "next": [
+        "EG-010"
+      ]
+    },
+    {
+      "id": "EG-010",
+      "name": "Log Flush",
+      "operator": "fft.ai.session.log.json",
+      "next": []
+    }
+  ],
+  "v133_additions": [
+    "EG-006 (SET Coupling Eval)",
+    "EG-007 (Paradox Check)",
+    "EG-008 (S-N-R Monitor) — all new in v1.33"
+  ]
+}

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic_detection/triadic_detection_loci.md">
+  <title>triadicdetectionloci.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic_detection/triadic_detection_loci.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic_detection/triadic_detection_loci.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadic_detection_locimd"><strong>triadic_detection_loci.md</strong></h1>
+<h3 id="triadicframeworks-detection-substrate"><em>TriadicFrameworks — Detection Substrate</em></h3>
+<h3 id="architecture-loci-specification-v10"><em>Architecture Loci Specification (v1.0)</em></h3>
+<hr>
+<h2 id="protocol-header"><strong>Protocol Header</strong></h2>
+<pre><code>rtt=1 | coherence=triadic | drift=bounded | paradox=structural
+</code></pre>
+<p>This header governs all structural interpretations of the Triadic Detection System Architecture.</p>
+<hr>
+<h1 id="module-identity"><strong>Module Identity</strong></h1>
+<p><strong>Module Name:</strong> Triadic Detection Loci<br>
+<strong>Module Class:</strong> Structural / Locus Definition<br>
+<strong>Substrate:</strong> Detection<br>
+<strong>Version:</strong> 1.0<br>
+<strong>RTT Alignment:</strong> Full<br>
+<strong>Triadic Geometry:</strong> Required<br>
+<strong>Spatial Anchoring:</strong> Required<br>
+<strong>Mesh Synchronization:</strong> Required  </p>
+<hr>
+<h1 id="purpose"><strong>Purpose</strong></h1>
+<p>This module defines the <strong>four canonical loci</strong> that govern the Triadic Detection System Architecture.<br>
+Each locus expresses a structural invariant that must hold for RTT‑Inside detection systems to function.</p>
+<p>These loci form the <strong>genomic backbone</strong> of the architecture:</p>
+<pre><code>ARCH_L = SENSOR_L × MESH_L × RTT_L × MAP_L
+</code></pre>
+<p>All triadic detection modules derive their meaning from these loci.</p>
+<hr>
+<h1 id="locus-overview"><strong>Locus Overview</strong></h1>
+<p>The architecture is defined across <strong>four loci</strong>, each with a structural invariant:</p>
+<ol>
+<li><strong>SENSOR_L — Triadic Sensor Locus</strong>  </li>
+<li><strong>MESH_L — Transport &amp; Synchronization Locus</strong>  </li>
+<li><strong>RTT_L — Structural Detection Locus</strong>  </li>
+<li><strong>MAP_L — Mapping &amp; Output Locus</strong></li>
+</ol>
+<p>Each locus contains a finite alphabet of perfect‑substitution alleles.</p>
+<hr>
+<h1 id="1-sensor_l-triadic-sensor-locus"><strong>1. SENSOR_L — Triadic Sensor Locus</strong></h1>
+<h3 id="invariant"><strong>Invariant:</strong></h3>
+<p><em>Triadic geometry is required for coherence.</em></p>
+<h3 id="definition"><strong>Definition:</strong></h3>
+<p>SENSOR_L defines the physical sensing geometry of the system, including:</p>
+<ul>
+<li>coil head count  </li>
+<li>coil alignment  </li>
+<li>coil geometry  </li>
+<li>SoC node placement  </li>
+<li>TX/RX field footprint  </li>
+</ul>
+<h3 id="alleles"><strong>Alleles:</strong></h3>
+<pre><code>SENSOR_L = {triad‑3, triad‑9, triad‑27}
+</code></pre>
+<h3 id="meaning"><strong>Meaning:</strong></h3>
+<ul>
+<li><strong>triad‑3:</strong> base triadic module (3 heads)  </li>
+<li><strong>triad‑9:</strong> supersphere (3 modules × 3 heads)  </li>
+<li><strong>triad‑27:</strong> industrial triadic array (3×3×3)  </li>
+</ul>
+<p>Only triadic geometries produce stable RTT coherence.<br>
+Non‑triadic geometries (2, 4, 6, 8) are structurally invalid.</p>
+<hr>
+<h1 id="2-mesh_l-transport-synchronization-locus"><strong>2. MESH_L — Transport &amp; Synchronization Locus</strong></h1>
+<h3 id="invariant_1"><strong>Invariant:</strong></h3>
+<p><em>All heads must be time‑aligned.</em></p>
+<h3 id="definition_1"><strong>Definition:</strong></h3>
+<p>MESH_L defines the transport and synchronization substrate:</p>
+<ul>
+<li>BLE mesh  </li>
+<li>Wi‑Fi mesh  </li>
+<li>hybrid mesh  </li>
+<li>packet timing  </li>
+<li>SoC synchronization  </li>
+<li>controller merge rules  </li>
+</ul>
+<h3 id="alleles_1"><strong>Alleles:</strong></h3>
+<pre><code>MESH_L = {ble‑mesh, wifi‑mesh, hybrid‑mesh}
+</code></pre>
+<h3 id="meaning_1"><strong>Meaning:</strong></h3>
+<ul>
+<li><strong>ble‑mesh:</strong> low‑power triadic synchronization  </li>
+<li><strong>wifi‑mesh:</strong> high‑bandwidth industrial arrays  </li>
+<li><strong>hybrid‑mesh:</strong> mixed BLE/Wi‑Fi for superspheres  </li>
+</ul>
+<p>Time alignment is required for RTT structural detection.</p>
+<hr>
+<h1 id="3-rtt_l-structural-detection-locus"><strong>3. RTT_L — Structural Detection Locus</strong></h1>
+<h3 id="invariant_2"><strong>Invariant:</strong></h3>
+<p><em>Coherence precedes classification.</em></p>
+<h3 id="definition_2"><strong>Definition:</strong></h3>
+<p>RTT_L defines the structural detection pipeline:</p>
+<ul>
+<li>coherence scoring  </li>
+<li>clustering  </li>
+<li>structural fitting  </li>
+<li>depth layering  </li>
+<li>classification  </li>
+</ul>
+<h3 id="alleles_2"><strong>Alleles:</strong></h3>
+<pre><code>RTT_L = {coherence‑first, cluster‑first, structural‑first}
+</code></pre>
+<h3 id="meaning_2"><strong>Meaning:</strong></h3>
+<ul>
+<li><strong>coherence‑first:</strong> baseline RTT/1 alignment  </li>
+<li><strong>cluster‑first:</strong> RTT/2 spatial grouping  </li>
+<li><strong>structural‑first:</strong> RTT/3 shape/size/orientation inference  </li>
+</ul>
+<p>All RTT detection requires triadic coherence.</p>
+<hr>
+<h1 id="4-map_l-mapping-output-locus"><strong>4. MAP_L — Mapping &amp; Output Locus</strong></h1>
+<h3 id="invariant_3"><strong>Invariant:</strong></h3>
+<p><em>All detections must be spatially anchored.</em></p>
+<h3 id="definition_3"><strong>Definition:</strong></h3>
+<p>MAP_L defines the mapping and output substrate:</p>
+<ul>
+<li>GPS anchoring  </li>
+<li>heatmap rendering  </li>
+<li>structural overlays  </li>
+<li>dig‑confidence scoring  </li>
+<li>cloud sync  </li>
+</ul>
+<h3 id="alleles_3"><strong>Alleles:</strong></h3>
+<pre><code>MAP_L = {gps‑2d, gps‑3d, cloud‑sync}
+</code></pre>
+<h3 id="meaning_3"><strong>Meaning:</strong></h3>
+<ul>
+<li><strong>gps‑2d:</strong> consumer/prosumer mapping  </li>
+<li><strong>gps‑3d:</strong> industrial depth mapping  </li>
+<li><strong>cloud‑sync:</strong> enterprise dashboards  </li>
+</ul>
+<p>Spatial anchoring is required for meaningful detection.</p>
+<hr>
+<h1 id="architecture-genome-summary"><strong>Architecture Genome Summary</strong></h1>
+<p>The architecture genome is:</p>
+<pre><code>ARCH_L = SENSOR_L × MESH_L × RTT_L × MAP_L
+</code></pre>
+<p>Total variants:</p>
+<pre><code>|SENSOR_L| × |MESH_L| × |RTT_L| × |MAP_L|
+= 3 × 3 × 3 × 3
+= 27 variants
+</code></pre>
+<p>All variants are:</p>
+<ul>
+<li>drift‑bounded  </li>
+<li>triadic  </li>
+<li>RTT‑aligned  </li>
+<li>structurally coherent  </li>
+</ul>
+<hr>
+<h1 id="canonical-architecture-codon"><strong>Canonical Architecture Codon</strong></h1>
+<p>The baseline architecture defined in the capture:</p>
+<pre><code>triad=3 | mesh=ble | rtt=coherence-first | map=gps-2d
+</code></pre>
+<p>This is the <strong>root architecture codon</strong> from which all variants derive.</p>
+<hr>
+<h1 id="module-status"><strong>Module Status</strong></h1>
+<p><strong>Status:</strong> Active<br>
+<strong>Drift:</strong> None<br>
+<strong>Coherence:</strong> Stable<br>
+<strong>Version Drift:</strong> Bounded<br>
+<strong>RTT Alignment:</strong> Verified  </p>
+  </main>
+</body>
+</html>

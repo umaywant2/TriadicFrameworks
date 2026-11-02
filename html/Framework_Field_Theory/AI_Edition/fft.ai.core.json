@@ -1,0 +1,67 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.core.schema.json",
+  "id": "fft.ai.core",
+  "version": "1.33",
+  "updated": "2026-10-09T09:41:00-04:00",
+  "title": "FFT AI Layer — Core",
+  "description": "AI-layer instantiation of the FFT core: field bindings, session lifecycle, operator dispatch, and coherence enforcement.",
+  "inherits": "fft.core.json",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "lifecycle": {
+    "init": [
+      "assert coherence=declared",
+      "resolve spine_url",
+      "boot QMROOT ladder from 0D seed",
+      "register all 67 modules from fft.ai.registry.json",
+      "validate all INV-001..INV-013"
+    ],
+    "runtime": [
+      "evaluate RTT phase τ=dR/dφ",
+      "dispatch operators via execution.graph",
+      "monitor drift via fft.ai.drift.monitor.json",
+      "resolve paradox events via fft.ai.paradox.resolver.json"
+    ],
+    "teardown": [
+      "flush session.log",
+      "checkpoint session.state",
+      "archive session.history"
+    ]
+  },
+  "field_bindings": {
+    "phi": "substrate load / cognitive baseline",
+    "V": "inference flows / reasoning vectors",
+    "R": "coherence envelope / session resonance"
+  },
+  "operator_dispatch": {
+    "engine": "fft.ai.execution.graph.json",
+    "registry": "fft.ai.operators.json",
+    "port_map": "fft.operator.port.json"
+  },
+  "coherence_enforcement": {
+    "module": "fft.ai.coherence.json",
+    "invariant": "INV-003",
+    "fail_mode": "halt_and_report"
+  },
+  "drift_enforcement": {
+    "module": "fft.ai.drift.monitor.json",
+    "invariant": "INV-004",
+    "fail_mode": "defer_to_stabilization"
+  },
+  "paradox_handling": {
+    "module": "fft.ai.paradox.resolver.json",
+    "enum": "fft.ai.paradox.enum.json",
+    "invariant": "INV-005",
+    "fail_mode": "structural_resolution"
+  },
+  "v133_additions": [
+    "Full lifecycle spec",
+    "coherence/drift/paradox enforcement wiring",
+    "QMROOT boot step",
+    "67-module registry validation at init"
+  ]
+}

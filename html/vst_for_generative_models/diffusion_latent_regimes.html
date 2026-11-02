@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_generative_models/diffusion_latent_regimes.md">
+  <title>vST for Generative Models</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_generative_models/diffusion_latent_regimes.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_generative_models/diffusion_latent_regimes.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="vst-for-generative-models"><em>vST for Generative Models</em></h3>
+<h3 id="diffusiontrajectory-latent-regimes"><em>Diffusion‑Trajectory Latent Regimes</em></h3>
+<p>This document defines the <strong>latent‑regime structure</strong> that arises in diffusion models and other iterative generative systems. These regimes generalize the triadic resonance structure of the 3D–1024D substrate and describe how stability, transition, and dispersion behaviors manifest across sampling steps, noise levels, and latent‑space coherence surfaces.</p>
+<p>Latent regimes provide a reproducible, invariant‑preserving framework for interpreting diffusion trajectories.</p>
+<hr>
+<h2 id="1-purpose-of-latentregime-analysis"><strong>1. Purpose of Latent‑Regime Analysis</strong></h2>
+<p>Latent‑regime analysis enables us to:</p>
+<ul>
+<li>classify diffusion steps into stable, transitional, and dispersed phases  </li>
+<li>identify coherence surfaces across sampling trajectories  </li>
+<li>detect instability or drift across checkpoints or sampler changes  </li>
+<li>analyze scaling‑law behavior across model size and latent dimensionality  </li>
+<li>project latent states into 3D–9D cores for interpretability  </li>
+<li>support vST validation (V₁–V₄)  </li>
+</ul>
+<p>Diffusion trajectories are structured, regime‑rich, and highly sensitive to scaling and sampler configuration.</p>
+<hr>
+<h2 id="2-regime-overview"><strong>2. Regime Overview</strong></h2>
+<p>Diffusion trajectories follow the same triadic structure as the dimensional substrate:</p>
+<ol>
+<li><strong>Stable Generative Regime (R₁ᴴ)</strong>  </li>
+<li><strong>Transitional Sampling Regime (R₂ᴴ)</strong>  </li>
+<li><strong>Dispersed / Noise‑Dominated Regime (R₃ᴴ)</strong>  </li>
+</ol>
+<p>The superscript <em>H</em> indicates high‑dimensional behavior.</p>
+<p>These regimes appear in:</p>
+<ul>
+<li>early noise‑dominated steps  </li>
+<li>mid‑trajectory denoising phases  </li>
+<li>late refinement phases  </li>
+<li>cross‑sampler transitions  </li>
+<li>cross‑checkpoint comparisons  </li>
+</ul>
+<hr>
+<h2 id="3-stable-generative-regime-r1h"><strong>3. Stable Generative Regime (R₁ᴴ)</strong></h2>
+<h3 id="definition"><strong>Definition</strong></h3>
+<p>A region of latent space where the model produces coherent, low‑variance generative structure.</p>
+<h3 id="characteristics"><strong>Characteristics</strong></h3>
+<ul>
+<li>compact latent motifs  </li>
+<li>smooth coherence surfaces  </li>
+<li>stable projection into 3D–9D cores  </li>
+<li>primitive‑level integrity (DP, TDP, SP, CP)  </li>
+<li>predictable refinement behavior  </li>
+</ul>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<p>R₁ᴴ corresponds to:</p>
+<ul>
+<li>late‑trajectory refinement  </li>
+<li>stable autoregressive decoding  </li>
+<li>flow‑model convergence regions  </li>
+<li>VAE latent stabilization  </li>
+</ul>
+<hr>
+<h2 id="4-transitional-sampling-regime-r2h"><strong>4. Transitional Sampling Regime (R₂ᴴ)</strong></h2>
+<h3 id="definition_1"><strong>Definition</strong></h3>
+<p>A region where latent states undergo reorientation, branching, or partial fragmentation.</p>
+<h3 id="characteristics_1"><strong>Characteristics</strong></h3>
+<ul>
+<li>moderate variance across dimensions  </li>
+<li>oscillatory or branching coherence surfaces  </li>
+<li>sampler‑dependent behavior  </li>
+<li>increased sensitivity to noise schedule or step size  </li>
+<li>regime‑transition indicators in resonance‑time space  </li>
+</ul>
+<h3 id="interpretation_1"><strong>Interpretation</strong></h3>
+<p>R₂ᴴ captures:</p>
+<ul>
+<li>mid‑trajectory denoising  </li>
+<li>cross‑sampler transitions (e.g., DDIM → Euler)  </li>
+<li>latent‑space reorientation  </li>
+<li>early refinement instability  </li>
+</ul>
+<p>It is the “structural hinge” of diffusion dynamics.</p>
+<hr>
+<h2 id="5-dispersed-noisedominated-regime-r3h"><strong>5. Dispersed / Noise‑Dominated Regime (R₃ᴴ)</strong></h2>
+<h3 id="definition_2"><strong>Definition</strong></h3>
+<p>A region where latent states lose coherence and are dominated by noise or unstable variance.</p>
+<h3 id="characteristics_2"><strong>Characteristics</strong></h3>
+<ul>
+<li>high variance across dimensions  </li>
+<li>diffuse or fragmented coherence surfaces  </li>
+<li>unstable primitive‑level structure  </li>
+<li>non‑compact projections into 3D–9D cores  </li>
+<li>susceptibility to drift or sampler divergence  </li>
+</ul>
+<h3 id="interpretation_2"><strong>Interpretation</strong></h3>
+<p>R₃ᴴ corresponds to:</p>
+<ul>
+<li>early diffusion steps  </li>
+<li>noisy or unstable latent regions  </li>
+<li>poorly conditioned sampling schedules  </li>
+<li>drift‑prone or chaotic behavior  </li>
+</ul>
+<hr>
+<h2 id="6-regime-transitions-in-diffusion-trajectories"><strong>6. Regime Transitions in Diffusion Trajectories</strong></h2>
+<p>Diffusion trajectories move through regimes as sampling progresses:</p>
+<ul>
+<li><strong>R₃ᴴ → R₂ᴴ</strong><br>
+  noise reduction and early structure formation  </li>
+<li><strong>R₂ᴴ → R₁ᴴ</strong><br>
+  refinement and stabilization  </li>
+<li><strong>R₁ᴴ → R₂ᴴ</strong><br>
+  sampler‑induced reorientation  </li>
+<li><strong>R₂ᴴ → R₃ᴴ</strong><br>
+  instability or drift from poor conditioning  </li>
+</ul>
+<p>Transitions must remain continuous and invariant‑preserving across dimensionality.</p>
+<hr>
+<h2 id="7-regime-detection-signals"><strong>7. Regime Detection Signals</strong></h2>
+<p>Regime identity is detected using:</p>
+<ul>
+<li>variance distribution across dimensions  </li>
+<li>coherence‑surface continuity  </li>
+<li>primitive‑level stability (DP, TDP, SP, CP)  </li>
+<li>resonance‑time behavior  </li>
+<li>sampling‑trajectory geometry  </li>
+<li>vST validation layers (V₁–V₄)  </li>
+</ul>
+<p>These signals collectively determine regime classification.</p>
+<hr>
+<h2 id="8-regime-behavior-across-the-dimensional-ladder"><strong>8. Regime Behavior Across the Dimensional Ladder</strong></h2>
+<p>Regime behavior must remain consistent across:</p>
+<ul>
+<li>64D latent diffusion models  </li>
+<li>128D–512D autoregressive or hybrid systems  </li>
+<li>1024D+ high‑capacity generative models  </li>
+</ul>
+<p>The substrate ensures:</p>
+<ul>
+<li>structural invariants  </li>
+<li>resonance‑time invariants  </li>
+<li>projection invariants  </li>
+<li>scaling invariants  </li>
+</ul>
+<p>Regime identity must be preserved under projection into 3D–9D cores.</p>
+<hr>
+<h2 id="9-outputs-of-latentregime-analysis"><strong>9. Outputs of Latent‑Regime Analysis</strong></h2>
+<p>Latent‑regime analysis produces:</p>
+<ul>
+<li>regime‑transition maps  </li>
+<li>coherence‑surface diagnostics  </li>
+<li>scaling‑law indicators  </li>
+<li>drift‑detection signals  </li>
+<li>vST validation outputs  </li>
+<li>projection‑stability metrics  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑level interpretation of generative models.</p>
+  </main>
+</body>
+</html>

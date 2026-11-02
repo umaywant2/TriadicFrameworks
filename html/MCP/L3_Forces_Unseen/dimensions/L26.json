@@ -1,0 +1,79 @@
+{
+  "id": "L26",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "L26",
+  "name": "Field Modulation",
+  "canonical": "R5",
+
+  "summary": "L26 defines the modulation axis of field coherence. It is the third structural dimension of the field node and determines the modulation behavior of fieldCoherence within the S3 Spine.",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "semantic_axis": "fieldCoherence",
+
+  "role": "modulation",
+  "category": "field",
+  "cluster": "field-coherence",
+
+  "description": {
+    "canonical": "L26 establishes the modulation behavior of field coherence. It refines the origin (L8) and stability (L10) by defining how fieldCoherence varies, oscillates, or transforms across influence fields.",
+    "cosmology": "In the cosmology chain, L26 represents the emergence of modulation from coherence stability. It is the third stage of field formation within force-regime mechanics.",
+    "spine": "Within the S3 Spine, L26 is the modulation dimension of the field node, shaping the dynamic behavior of coherence before instability thresholds.",
+    "mcp": "In MCP operations, L26 is used to modulate field-state mechanics, providing the modulation coordinate for influence-field modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "pull"
+    ],
+    "secondary": [
+      "fieldShift"
+    ],
+    "forbidden": [
+      "gradient",
+      "push",
+      "ruptureForce",
+      "bind"
+    ]
+  },
+
+  "valid_transitions": [
+    "L26 → L12"
+  ],
+
+  "forbidden_transitions": [
+    "L26 → L32",
+    "L26 → LI",
+    "L26 → L4",
+    "L26 → L5",
+    "L26 → L16",
+    "L26 → LH"
+  ],
+
+  "spine_mapping": {
+    "node": "field",
+    "semantic": "fieldCoherence",
+    "position": "modulation",
+    "causal_role": "coherence modulation"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L26",
+    "version": "1.0.0",
+    "keywords": [
+      "field",
+      "coherence",
+      "modulation",
+      "influence-field",
+      "force-regime"
+    ],
+    "purpose": "Defines the modulation axis of field coherence for AI reasoning and MCP field modulation."
+  }
+}

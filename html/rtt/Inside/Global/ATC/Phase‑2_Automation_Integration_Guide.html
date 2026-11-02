@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Global/ATC/Phase‑2_Automation_Integration_Guide.md">
+  <title>⚙️ RTT/Inside Phase‑2 Automation Integration Guide</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Global/ATC/Phase‑2_Automation_Integration_Guide.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Global/ATC/Phase‑2_Automation_Integration_Guide.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rttinside-phase2-automation-integration-guide">⚙️ <strong>RTT/Inside Phase‑2 Automation Integration Guide</strong></h1>
+<p><em>Automation, Decision‑Support, and Cross‑Domain Coherence</em></p>
+<hr>
+<h2 id="1-purpose-of-phase2">1. 🎯 Purpose of Phase‑2</h2>
+<p>Phase‑2 introduces RTT/Inside into <strong>automation logic</strong>, not just visualization.<br>
+This phase enhances — but does not replace — existing certified systems.</p>
+<h3 id="phase2-goals">Phase‑2 Goals</h3>
+<ul>
+<li>Integrate RTT/Inside into:</li>
+<li>Conflict Detection &amp; Resolution (CD&amp;R)</li>
+<li>Sequencing &amp; Metering</li>
+<li>Flow Management</li>
+<li>Launch/Re‑entry Corridor Deconfliction</li>
+<li>Space Domain Awareness (SDA) automation</li>
+<li>Provide <strong>resonance‑aware predictions</strong> to automation engines</li>
+<li>Improve system‑level coherence without altering separation minima</li>
+<li>Enable <strong>machine‑driven recommendations</strong> that operators can accept or override</li>
+</ul>
+<h3 id="phase2-nongoals">Phase‑2 Non‑Goals</h3>
+<ul>
+<li>No removal of existing safety nets  </li>
+<li>No changes to certified separation standards  </li>
+<li>No autopilot‑level integration (that’s Phase‑3)  </li>
+<li>No direct aircraft control  </li>
+</ul>
+<p>Phase‑2 is <strong>automation‑support</strong>, not automation‑replacement.</p>
+<hr>
+<h1 id="2-architecture-where-rttinside-enters-the-automation-stack">2. 🧱 Architecture: Where RTT/Inside Enters the Automation Stack</h1>
+<p>Phase‑1 tapped the <strong>track bus</strong> and the <strong>HMI</strong>.</p>
+<p>Phase‑2 taps the <strong>automation engines</strong>:</p>
+<pre><code>[Surveillance → Fusion → Track Bus]
+                 ↓
+        [RTT-Inside Engine]
+                 ↓
+     +---------------------------+
+     |  Automation Integration   |
+     |  (Phase-2 RTT Modules)    |
+     +---------------------------+
+                 ↓
+   [CD&amp;R]   [Sequencing]   [Flow]   [SDA]   [Launch Corridors]
+                 ↓
+         [Operator HMI + Tools]
+</code></pre>
+<p>RTT/Inside becomes a <strong>predictive input</strong> to existing automation modules.</p>
+<hr>
+<h1 id="3-new-rttinside-automation-outputs">3. 🔮 New RTT/Inside Automation Outputs</h1>
+<p>Phase‑2 introduces new machine‑readable outputs:</p>
+<h3 id="31-resonanceaware-trajectory-predictions">3.1 <strong>Resonance‑Aware Trajectory Predictions</strong></h3>
+<ul>
+<li>Multi‑horizon (30s, 2m, 10m, 20m)  </li>
+<li>Drift‑weighted  </li>
+<li>Weather‑aware  </li>
+<li>Traffic‑aware  </li>
+<li>Corridor‑aware (air + space)</li>
+</ul>
+<h3 id="32-conflict-resonance-matrix">3.2 <strong>Conflict Resonance Matrix</strong></h3>
+<p>A pairwise matrix describing how aircraft or orbital objects influence each other’s stability.</p>
+<h3 id="33-corridor-coherence-scores">3.3 <strong>Corridor Coherence Scores</strong></h3>
+<p>For:
+- Departure flows<br>
+- Arrival flows<br>
+- Launch windows<br>
+- Re‑entry paths<br>
+- Orbital shells  </p>
+<h3 id="34-systemlevel-coherence-index">3.4 <strong>System‑Level Coherence Index</strong></h3>
+<p>A single number representing the “health” of the air/space region.</p>
+<p>Automation engines consume these metrics to make better decisions.</p>
+<hr>
+<h1 id="4-integration-with-atc-automation-modules">4. 🧠 Integration with ATC Automation Modules</h1>
+<h2 id="41-conflict-detection-resolution-cdr">4.1 Conflict Detection &amp; Resolution (CD&amp;R)</h2>
+<h3 id="before-rttinside">Before RTT/Inside</h3>
+<ul>
+<li>Kinematic prediction  </li>
+<li>Threshold‑based alerts  </li>
+<li>High false positives in busy airspace  </li>
+</ul>
+<h3 id="with-rttinside">With RTT/Inside</h3>
+<ul>
+<li>CD&amp;R receives <strong>resonance‑weighted trajectories</strong>  </li>
+<li>Alerts are triggered earlier but with fewer false positives  </li>
+<li>Conflict clusters are identified as <strong>resonance nodes</strong>, not isolated pairs  </li>
+<li>Resolution advisories are ranked by <strong>system‑level coherence impact</strong></li>
+</ul>
+<h3 id="example-api-input">Example API Input</h3>
+<pre><code class="language-json">{
+  &quot;trackId&quot;: &quot;AB123&quot;,
+  &quot;predicted_positions&quot;: [...],
+  &quot;drift_risk&quot;: 0.32,
+  &quot;conflict_resonance&quot;: {
+    &quot;AB123-CD456&quot;: 0.71,
+    &quot;AB123-EF789&quot;: 0.12
+  }
+}
+</code></pre>
+<hr>
+<h2 id="42-sequencing-metering">4.2 Sequencing &amp; Metering</h2>
+<p>RTT/Inside improves:</p>
+<ul>
+<li>Arrival spacing  </li>
+<li>Departure slotting  </li>
+<li>Merge‑point stability  </li>
+<li>Holding pattern efficiency  </li>
+</ul>
+<h3 id="new-automation-behavior">New automation behavior</h3>
+<ul>
+<li>Metering fixes are chosen based on <strong>corridor stability</strong>, not just time‑based spacing  </li>
+<li>Sequencing tools prefer aircraft with <strong>high stability</strong> to lead flows  </li>
+<li>Low‑stability aircraft are sequenced earlier to reduce system drift</li>
+</ul>
+<hr>
+<h2 id="43-flow-management">4.3 Flow Management</h2>
+<p>RTT/Inside provides:</p>
+<ul>
+<li><strong>Flow coherence maps</strong>  </li>
+<li><strong>Predictive congestion indicators</strong>  </li>
+<li><strong>Resonance‑aware reroute suggestions</strong>  </li>
+</ul>
+<p>Flow managers can see:</p>
+<ul>
+<li>Where the system will destabilize  </li>
+<li>Which flows will collapse first  </li>
+<li>Which reroutes restore coherence fastest  </li>
+</ul>
+<hr>
+<h1 id="5-integration-with-space-force-automation">5. 🚀 Integration with Space Force Automation</h1>
+<h2 id="51-conjunction-assessment-ca">5.1 Conjunction Assessment (CA)</h2>
+<p>RTT/Inside adds:</p>
+<ul>
+<li>Resonance‑weighted conjunction scoring  </li>
+<li>Multi‑object cluster detection  </li>
+<li>Orbital shell coherence analysis  </li>
+</ul>
+<p>This reduces false alarms and highlights <strong>true systemic risks</strong>.</p>
+<hr>
+<h2 id="52-launch-reentry-corridor-automation">5.2 Launch &amp; Re‑entry Corridor Automation</h2>
+<p>RTT/Inside provides:</p>
+<ul>
+<li><strong>Corridor conflict risk</strong> vs orbital traffic  </li>
+<li><strong>Launch window coherence scoring</strong>  </li>
+<li><strong>Trajectory resonance maps</strong>  </li>
+</ul>
+<p>Automation tools can:</p>
+<ul>
+<li>Recommend optimal launch windows  </li>
+<li>Predict when orbital shells will be “quiet”  </li>
+<li>Identify re‑entry paths with minimal resonance disruption  </li>
+</ul>
+<hr>
+<h1 id="6-developer-integration-steps">6. 🧩 Developer Integration Steps</h1>
+<h2 id="61-subscribe-to-rttinside-predictive-streams">6.1 Subscribe to RTT/Inside predictive streams</h2>
+<p>Automation engines subscribe to:</p>
+<ul>
+<li><code>rtt.predictions</code>  </li>
+<li><code>rtt.conflict_matrix</code>  </li>
+<li><code>rtt.corridor_scores</code>  </li>
+<li><code>rtt.system_coherence</code>  </li>
+</ul>
+<h3 id="example-subscription">Example subscription</h3>
+<pre><code class="language-ts">subscribeRttPredictions((predictions) =&gt; {
+  cdAndR.update(predictions);
+});
+</code></pre>
+<hr>
+<h2 id="62-modify-automation-engines-to-consume-rttinside-metrics">6.2 Modify automation engines to consume RTT/Inside metrics</h2>
+<h3 id="example-cdr-integration">Example: CD&amp;R integration</h3>
+<pre><code class="language-ts">function enhancedConflictDetection(track, predictions) {
+  const drift = predictions[track.id].drift_risk;
+  const resonance = predictions[track.id].conflict_resonance;
+
+  const weightedPrediction = applyResonanceWeighting(track, drift, resonance);
+
+  return detectConflicts(weightedPrediction);
+}
+</code></pre>
+<hr>
+<h2 id="63-provide-rttinsideenhanced-advisories-to-operators">6.3 Provide RTT/Inside‑enhanced advisories to operators</h2>
+<p>Automation engines output:</p>
+<ul>
+<li>Ranked resolution advisories  </li>
+<li>Stability‑aware reroutes  </li>
+<li>Resonance‑aware sequencing suggestions  </li>
+</ul>
+<p>These appear in the operator HMI as:</p>
+<ul>
+<li>“RTT‑Optimized Advisory”  </li>
+<li>“High‑Coherence Reroute Available”  </li>
+<li>“Flow Stability Recommendation”  </li>
+</ul>
+<hr>
+<h1 id="7-validation-safety">7. 🧪 Validation &amp; Safety</h1>
+<p>Phase‑2 requires:</p>
+<ul>
+<li>Shadow‑mode testing  </li>
+<li>Replay validation  </li>
+<li>Operator review cycles  </li>
+<li>Safety case documentation  </li>
+<li>Human‑in‑the‑loop evaluation  </li>
+</ul>
+<p>RTT/Inside must <strong>never</strong> override certified logic — it <strong>augments</strong> it.</p>
+<hr>
+<h1 id="8-example-full-automation-integration-loop">8. 🛠️ Example: Full Automation Integration Loop</h1>
+<pre><code class="language-ts">// Phase-2 automation loop
+subscribeTracks((tracks) =&gt; {
+  const predictions = rttEngine.predict(tracks);
+  const coherence = rttEngine.systemCoherence(tracks);
+
+  cdAndR.update(predictions, coherence);
+  sequencing.update(predictions);
+  flowManager.update(coherence);
+
+  publishAutomationOutputs({
+    cdAndR: cdAndR.getAdvisories(),
+    sequencing: sequencing.getPlan(),
+    flow: flowManager.getFlowState()
+  });
+});
+</code></pre>
+<hr>
+<h1 id="9-summary">9. 🏁 Summary</h1>
+<p>Phase‑2 transforms RTT/Inside from a <strong>visual enhancement</strong> into a <strong>predictive automation engine</strong> that:</p>
+<ul>
+<li>Improves conflict detection  </li>
+<li>Enhances sequencing and metering  </li>
+<li>Stabilizes flows  </li>
+<li>Optimizes launch windows  </li>
+<li>Harmonizes air + space operations  </li>
+<li>Reduces operator workload  </li>
+<li>Increases system‑level coherence  </li>
+</ul>
+<p>It is the bridge between <strong>today’s ATC/SDA systems</strong> and the <strong>Phase‑3 fully resonance‑native architecture</strong>.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.log",
+  "title": "FFT AI Session — Log v1.33",
+  "log_schema": {
+    "session_id": "uuid",
+    "entries": [],
+    "entry_schema": {
+      "ts": "iso8601",
+      "level": "INFO|WARN|ERROR|PARADOX|DRIFT",
+      "event": "string",
+      "operator_id": "string|null",
+      "R": "float",
+      "tau": "float",
+      "coherence": "declared|lost|restoring",
+      "drift_delta": "float",
+      "paradox_id": "string|null",
+      "snr": {
+        "S": "float",
+        "N": "float",
+        "R_snr": "float"
+      }
+    },
+    "log_levels_new_v1_33": [
+      "PARADOX level",
+      "DRIFT level",
+      "snr field in every entry",
+      "coherence field in every entry"
+    ]
+  },
+  "v133_additions": [
+    "PARADOX log level",
+    "DRIFT log level",
+    "snr field",
+    "coherence field per entry"
+  ]
+}

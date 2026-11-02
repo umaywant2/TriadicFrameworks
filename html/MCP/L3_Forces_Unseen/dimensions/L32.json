@@ -1,0 +1,80 @@
+{
+  "id": "L32",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "L32",
+  "name": "Integrity Stability",
+  "canonical": "R5",
+
+  "summary": "L32 defines the stability axis of force integrity. It is the first restorative dimension of the integrity node and determines the structural stability of forceIntegrity within the S3 Spine.",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "semantic_axis": "forceIntegrity",
+
+  "role": "stability",
+  "category": "integrity",
+  "cluster": "integrity-stability",
+
+  "description": {
+    "canonical": "L32 establishes the stability conditions of force integrity. It defines the structural restoration that follows rupture and provides the first stable foothold for returning coherence to the force-regime.",
+    "cosmology": "In the cosmology chain, L32 represents the emergence of stability from rupture mechanics. It is the first stage of integrity formation within force-regime behavior.",
+    "spine": "Within the S3 Spine, L32 is the stability dimension of the integrity node, defining the structural restoration that follows rupturePotential activation.",
+    "mcp": "In MCP operations, L32 is used to stabilize force-state mechanics, providing the stability coordinate for post-rupture restoration."
+  },
+
+  "operators": {
+    "primary": [
+      "bind"
+    ],
+    "secondary": [],
+    "forbidden": [
+      "gradient",
+      "push",
+      "pull",
+      "fieldShift",
+      "ruptureForce"
+    ]
+  },
+
+  "valid_transitions": [
+    "L32 → LI"
+  ],
+
+  "forbidden_transitions": [
+    "L32 → L4",
+    "L32 → L5",
+    "L32 → L16",
+    "L32 → LH",
+    "L32 → L8",
+    "L32 → L10",
+    "L32 → L26",
+    "L32 → L12"
+  ],
+
+  "spine_mapping": {
+    "node": "integrity",
+    "semantic": "forceIntegrity",
+    "position": "stability",
+    "causal_role": "structural restoration"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L32",
+    "version": "1.0.0",
+    "keywords": [
+      "integrity",
+      "stability",
+      "restoration",
+      "force-regime",
+      "post-rupture"
+    ],
+    "purpose": "Defines the stability axis of force integrity for AI reasoning and MCP restoration modeling."
+  }
+}

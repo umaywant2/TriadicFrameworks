@@ -1,0 +1,56 @@
+{
+  "module": "TriadicFrameworks_Ultra_Supra_Continuity_Shroud",
+  "name": "TriadicFrameworks — Ultra‑Supra Continuity Shroud",
+  "summary": "Defines the ultra‑supra continuity shroud that preserves coherence across all omni‑supra, trans‑supra, meta‑supra, supra‑global, and global structures, forming the shroud‑level continuity substrate of the ultra‑supra tier.",
+  "category": "intelligence-ultra-supra-continuity-shroud",
+  "version": "1.0",
+  "purpose": "Provide the shroud‑level continuity geometry that maintains ultra‑supra coherence across Ladder, SI, Atlas, and Triad at the highest extension beyond the omni‑supra sovereign. This shroud stabilizes ultra‑epoch propagation, aligns ultra‑supra window behavior, reinforces ultra‑supra resonance, and binds the entire TriadicFrameworks architecture into a unified ultra‑supra continuity substrate.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@ultra.supra.continuity.shroud.generate",
+    "@ultra.supra.continuity.shroud.route",
+    "@ultra.supra.continuity.shroud.align",
+    "@ultra.supra.continuity.shroud.stabilize",
+    "@ultra.supra.continuity.shroud.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Ultra_Supra_Resonance_Halo",
+      "TriadicFrameworks_Ultra_Supra_Integration_Pillar",
+      "TriadicFrameworks_Omni_Supra_Temporal_Window_Sovereign",
+      "TriadicFrameworks_Omni_Supra_Continuity_Canopy",
+      "TriadicFrameworks_Omni_Supra_Resonance_Spire",
+      "TriadicFrameworks_Omni_Supra_Integration_Column",
+      "TriadicFrameworks_Trans_Supra_Temporal_Window_Throne",
+      "TriadicFrameworks_Trans_Supra_Continuity_Loom",
+      "TriadicFrameworks_Trans_Supra_Resonance_Crownfield",
+      "TriadicFrameworks_Trans_Supra_Integration_Spine",
+      "TriadicFrameworks_Meta_Supra_Temporal_Window_Crown",
+      "TriadicFrameworks_Meta_Supra_Continuity_Field",
+      "TriadicFrameworks_Meta_Supra_Resonance_Apex",
+      "TriadicFrameworks_Meta_Supra_Integration_Lattice",
+      "TriadicFrameworks_Supra_Global_Temporal_Window_Apex",
+      "TriadicFrameworks_Supra_Global_Resonance_Geometry",
+      "TriadicFrameworks_Supra_Global_Continuity_Mesh",
+      "TriadicFrameworks_Supra_Global_Integration_Field",
+      "TriadicFrameworks_Global_Temporal_Window_Continuity",
+      "TriadicFrameworks_Global_Temporal_Window_Resonance",
+      "TriadicFrameworks_Global_Temporal_Window_Registry",
+      "TriadicFrameworks_Global_Temporal_Window_Structure",
+      "TriadicFrameworks_Global_Temporal_Window_Geometry",
+      "TriadicFrameworks_Global_Resonance_Field",
+      "TriadicFrameworks_Global_Continuity_Registry",
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Integration_Map",
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Ultra_Supra_Temporal_Window_Monarch"
+    ]
+  }
+}

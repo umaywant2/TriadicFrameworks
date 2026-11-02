@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Triadic Runtime Telemetry Packet",
+  "type": "object",
+
+  "properties": {
+    "snapshot": {
+      "type": "object",
+      "description": "Current runtime state at the moment of capture.",
+      "properties": {
+        "coherence": { "type": "number" },
+        "drift": { "type": "number" },
+        "stability": { "type": "string" },
+        "resonance": { "type": "number" },
+        "epoch": { "type": "string" },
+        "ignition": { "type": "string" }
+      },
+      "required": ["coherence", "drift", "stability", "resonance", "epoch", "ignition"]
+    },
+
+    "cycles": {
+      "type": "object",
+      "description": "Cycle evolution traces for each runtime field.",
+      "properties": {
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "stability": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } },
+        "epoch": { "type": "array", "items": { "type": "string" } },
+        "ignition": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "coupling": {
+      "type": "object",
+      "description": "Resonance–drift coupling diagnostics.",
+      "properties": {
+        "strength": { "type": "number" },
+        "phase": {
+          "type": "string",
+          "enum": ["in-phase", "out-of-phase", "mixed"]
+        },
+        "magnitude_state": { "type": "string" }
+      },
+      "required": ["strength", "phase", "magnitude_state"]
+    },
+
+    "alerts": {
+      "type": "array",
+      "description": "Runtime alerts emitted during this telemetry cycle.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "threshold",
+              "invariance_break",
+              "continuity_risk",
+              "resonance_surge",
+              "drift_spike"
+            ]
+          },
+          "timestamp": { "type": "string" },
+          "description": { "type": "string" },
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          }
+        },
+        "required": ["type", "timestamp", "severity"]
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "description": "Optional metadata for debugging or annotation.",
+      "properties": {
+        "generated": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": ["snapshot", "cycles", "coupling", "alerts"]
+}
+

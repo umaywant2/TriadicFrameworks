@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "experiment_id": "FPX-2026-01",
+  "disk_material": "copper",
+  "disk_radius_m": 0.12,
+  "rotation_rate_rpm": 500,
+  "magnet_configuration": "disk_rotating_magnet_fixed",
+  "magnet_rotation_rate_rpm": 0,
+  "magnetic_field_tesla": 0.45,
+  "triadic_conditions": {
+    "spin_bias": 0.72,
+    "charge_gradient": 1.85,
+    "temperature_profile": 0.05
+  },
+  "measured_emf_volts": 0.92
+}

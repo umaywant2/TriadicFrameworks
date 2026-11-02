@@ -1,0 +1,92 @@
+{
+  "module": {
+    "name": "DuckDuckGo SEO Interpreter",
+    "id": "research.ddg.seo",
+    "category": "Research-Tools",
+    "version": "RTT/1",
+    "summary": "A dimensional SEO interpreter for DuckDuckGo search results using TriadicFrameworks operator grammar.",
+    "purpose": "Provide regime-aware, dimensional, and triadic interpretation of DuckDuckGo search results using A/B/C/D modes.",
+    "keywords": [
+      "SEO",
+      "DuckDuckGo",
+      "dimensional analysis",
+      "triadic interpretation",
+      "regime awareness",
+      "research tools"
+    ],
+    "audience": ["students", "researchers", "AIs"],
+    "front_door": "DuckDuckGo.md",
+    "format": ["JSON", "Markdown"],
+    "every_page_stands_alone": true
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "module": "Research/SEO/DuckDuckGo",
+    "category": "Research-Tools",
+    "version": "RTT/1",
+    "coherence": "stable",
+    "drift": "none",
+    "format": ["JSON", "Markdown"],
+    "front_door": "DuckDuckGo.md",
+    "audience": ["students", "researchers", "AIs"],
+    "every_page_stands_alone": true
+  },
+
+  "operators": {
+    "A_classifier": {
+      "description": "Classifies DuckDuckGo search results by regime, dimensional depth, drift signatures, and coherence.",
+      "input": ["query"],
+      "output": ["regime_labels", "dimension_scores", "drift_flags", "coherence_notes"]
+    },
+    "B_advisor": {
+      "description": "Advises on alignment between search results and student intent using triadic clarity metrics.",
+      "input": ["query", "intent"],
+      "output": ["alignment_score", "clarity_notes", "intent_match", "triadic_recommendations"]
+    },
+    "C_navigator": {
+      "description": "Maps DuckDuckGo search results into the TriadicFrameworks module graph.",
+      "input": ["query"],
+      "output": ["domain_map", "substrate_links", "operator_paths"]
+    },
+    "D_triple_lens": {
+      "description": "Combines A+B+C into a single dimensional interpretation.",
+      "input": ["query", "intent"],
+      "output": [
+        "regime_labels",
+        "dimension_scores",
+        "drift_flags",
+        "alignment_score",
+        "domain_map",
+        "triadic_summary"
+      ]
+    }
+  },
+
+  "analyzer_layers": {
+    "operator": ["A_classifier", "B_advisor", "C_navigator", "D_triple_lens"],
+    "dimensional": ["regime", "coherence", "drift", "triadic-depth"],
+    "regime": ["external-information", "search-engine", "web-scan"],
+    "cross_cutting": ["research", "interpretation", "triadic-mapping"]
+  },
+
+  "schema": {
+    "input": {
+      "query": "string",
+      "intent": "string (optional)"
+    },
+    "output": {
+      "regime_labels": "array",
+      "dimension_scores": "array",
+      "drift_flags": "array",
+      "coherence_notes": "array",
+      "alignment_score": "number",
+      "intent_match": "string",
+      "triadic_recommendations": "array",
+      "domain_map": "array",
+      "substrate_links": "array",
+      "operator_paths": "array",
+      "triadic_summary": "string"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "module": "Triad",
+  "name": "RTT Triad System",
+  "summary": "Unified detection, hashing, and mapping system for intelligence measurement.",
+  "category": "intelligence-measurement",
+  "version": "1.0",
+  "purpose": "Provide micro-measurement of intelligent signals through detection, holographic hashing, and multi-dimensional mapping.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@triad.scanner.detect",
+    "@triad.hash.compute",
+    "@triad.time.correct",
+    "@triad.atlas.map",
+    "@triad.regime.classify"
+  ],
+  "lineage": {
+    "upstream": [],
+    "downstream": ["AAI", "AGI", "SI"]
+  }
+}

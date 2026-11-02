@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AK_FFT_Simulation_Benchmark_Suite.md">
+  <title>Appendix AK — FFT Simulation Benchmark Suite</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AK_FFT_Simulation_Benchmark_Suite.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AK_FFT_Simulation_Benchmark_Suite.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="appendix-ak-fft-simulation-benchmark-suite"><strong>Appendix AK — FFT Simulation Benchmark Suite</strong></h1>
+<h3 id="standardized-benchmark-problems-for-validating-fft-solvers-operators-kernels-and-regimeaware-dynamics"><em>Standardized benchmark problems for validating FFT solvers, operators, kernels, and regime‑aware dynamics</em></h3>
+<p>Framework Field Theory (FFT) is a multi‑scale, tri‑time, nonlocal, regime‑dependent system.<br>
+To ensure reproducibility and cross‑implementation consistency, FFT requires a <strong>canonical benchmark suite</strong>.</p>
+<p>This appendix defines the <strong>official FFT Simulation Benchmark Suite</strong>, including:</p>
+<ul>
+<li>benchmark categories  </li>
+<li>test problems  </li>
+<li>initial conditions  </li>
+<li>operator configurations  </li>
+<li>kernel selections  </li>
+<li>regime‑transition triggers  </li>
+<li>evaluation metrics  </li>
+<li>expected qualitative behaviors  </li>
+</ul>
+<p>These benchmarks allow researchers to:</p>
+<ul>
+<li>validate numerical stability  </li>
+<li>test operator correctness  </li>
+<li>compare solvers  </li>
+<li>evaluate kernel implementations  </li>
+<li>verify regime transitions  </li>
+<li>detect numerical drift  </li>
+<li>ensure ΔSET consistency  </li>
+</ul>
+<hr>
+<h1 id="1-benchmark-categories"><strong>1. Benchmark Categories</strong></h1>
+<p>FFT benchmarks fall into five categories:</p>
+<ol>
+<li><strong>Local Operator Benchmarks</strong>  </li>
+<li><strong>Nonlocal Kernel Benchmarks</strong>  </li>
+<li><strong>Triadic‑Time Benchmarks</strong>  </li>
+<li><strong>Regime Transition Benchmarks</strong>  </li>
+<li><strong>ΔSET &amp; Drift Benchmarks</strong></li>
+</ol>
+<p>Each category includes multiple standardized tests.</p>
+<hr>
+<h1 id="2-category-i-local-operator-benchmarks"><strong>2. Category I — Local Operator Benchmarks</strong></h1>
+<p>These benchmarks validate:</p>
+<ul>
+<li>diffusion (D)  </li>
+<li>alignment (A)  </li>
+<li>activation (α)  </li>
+<li>stabilization (S)  </li>
+</ul>
+<hr>
+<h2 id="21-diffusion-benchmark-d01"><strong>2.1 Diffusion Benchmark (D‑01)</strong></h2>
+<p><strong>Purpose:</strong> Validate diffusion operator stability and accuracy.</p>
+<p><strong>Setup:</strong></p>
+<ul>
+<li>Domain: 1D, x ∈ [0,1]  </li>
+<li>Initial φ: Gaussian bump  </li>
+<li>Operator: D[φ] = ν∇²φ  </li>
+<li>Boundary: Neumann  </li>
+</ul>
+<p><strong>Expected Behavior:</strong><br>
+Gaussian spreads symmetrically; no drift; mass conserved.</p>
+<hr>
+<h2 id="22-alignment-benchmark-a01"><strong>2.2 Alignment Benchmark (A‑01)</strong></h2>
+<p><strong>Purpose:</strong> Validate advection and flow‑aligned transport.</p>
+<p><strong>Setup:</strong></p>
+<ul>
+<li>Domain: 2D  </li>
+<li>Initial R: circular patch  </li>
+<li>V: constant vector field  </li>
+</ul>
+<p><strong>Expected Behavior:</strong><br>
+Patch translates without distortion.</p>
+<hr>
+<h2 id="23-activationstabilization-benchmark-as01"><strong>2.3 Activation–Stabilization Benchmark (AS‑01)</strong></h2>
+<p><strong>Purpose:</strong> Validate α[R] = aR − bR³ and S[R] = γR.</p>
+<p><strong>Setup:</strong><br>
+- Domain: 1D<br>
+- Initial R: small random noise<br>
+- a &gt; 0, b &gt; 0, γ &gt; 0  </p>
+<p><strong>Expected Behavior:</strong><br>
+R grows, saturates, and stabilizes.</p>
+<hr>
+<h1 id="3-category-ii-nonlocal-kernel-benchmarks"><strong>3. Category II — Nonlocal Kernel Benchmarks</strong></h1>
+<p>These benchmarks validate kernel correctness, normalization, and influence radius.</p>
+<hr>
+<h2 id="31-gaussian-kernel-benchmark-kg01"><strong>3.1 Gaussian Kernel Benchmark (K‑G01)</strong></h2>
+<p><strong>Purpose:</strong> Validate Gaussian convolution.</p>
+<p><strong>Setup:</strong><br>
+- Domain: 2D<br>
+- Kernel: Gaussian with scale ℓ<br>
+- φ: delta spike  </p>
+<p><strong>Expected Behavior:</strong><br>
+Gaussian blur with correct normalization.</p>
+<hr>
+<h2 id="32-powerlaw-kernel-benchmark-kp01"><strong>3.2 Power‑Law Kernel Benchmark (K‑P01)</strong></h2>
+<p><strong>Purpose:</strong> Validate long‑range influence.</p>
+<p><strong>Setup:</strong><br>
+- Domain: 1D<br>
+- Kernel: power‑law with exponent α<br>
+- φ: localized bump  </p>
+<p><strong>Expected Behavior:</strong><br>
+Long‑tail influence; no artificial truncation.</p>
+<hr>
+<h2 id="33-anisotropic-kernel-benchmark-ka01"><strong>3.3 Anisotropic Kernel Benchmark (K‑A01)</strong></h2>
+<p><strong>Purpose:</strong> Validate directional influence.</p>
+<p><strong>Setup:</strong><br>
+- Domain: 2D<br>
+- Kernel: anisotropic Gaussian<br>
+- R: circular patch  </p>
+<p><strong>Expected Behavior:</strong><br>
+Patch elongates along kernel’s major axis.</p>
+<hr>
+<h1 id="4-category-iii-triadictime-benchmarks"><strong>4. Category III — Triadic‑Time Benchmarks</strong></h1>
+<p>These benchmarks validate the triadic‑time engine (Appendix AE).</p>
+<hr>
+<h2 id="41-resonantdominant-benchmark-tr01"><strong>4.1 Resonant‑Dominant Benchmark (T‑R01)</strong></h2>
+<p><strong>Purpose:</strong> Validate fast oscillatory dynamics.</p>
+<p><strong>Setup:</strong><br>
+- R: sinusoidal initial condition<br>
+- a &gt; 0, b &gt; 0<br>
+- Δt_r ≪ Δt_d  </p>
+<p><strong>Expected Behavior:</strong><br>
+Stable oscillations; no drift.</p>
+<hr>
+<h2 id="42-diffusivedominant-benchmark-td01"><strong>4.2 Diffusive‑Dominant Benchmark (T‑D01)</strong></h2>
+<p><strong>Purpose:</strong> Validate slow smoothing dynamics.</p>
+<p><strong>Setup:</strong><br>
+- φ: noisy initial condition<br>
+- ν large<br>
+- Δt_d moderate  </p>
+<p><strong>Expected Behavior:</strong><br>
+Noise smooths; no oscillations.</p>
+<hr>
+<h2 id="43-alignmentdominant-benchmark-ta01"><strong>4.3 Alignment‑Dominant Benchmark (T‑A01)</strong></h2>
+<p><strong>Purpose:</strong> Validate structural evolution.</p>
+<p><strong>Setup:</strong><br>
+- V: vortex field<br>
+- R: uniform<br>
+- Δt_a largest  </p>
+<p><strong>Expected Behavior:</strong><br>
+Flow structure evolves slowly and stably.</p>
+<hr>
+<h1 id="5-category-iv-regime-transition-benchmarks"><strong>5. Category IV — Regime Transition Benchmarks</strong></h1>
+<p>These benchmarks validate regime detection and transition surfaces (Appendix AH).</p>
+<hr>
+<h2 id="51-stable-transitional-rt01"><strong>5.1 Stable → Transitional (RT‑01)</strong></h2>
+<p><strong>Trigger:</strong> CI crosses threshold.</p>
+<p><strong>Expected Behavior:</strong><br>
+Activation begins to rise; diffusion weakens.</p>
+<hr>
+<h2 id="52-transitional-paradox-rt02"><strong>5.2 Transitional → Paradox (RT‑02)</strong></h2>
+<p><strong>Trigger:</strong> OI exceeds critical value.</p>
+<p><strong>Expected Behavior:</strong><br>
+Operator imbalance spikes; system becomes stiff.</p>
+<hr>
+<h2 id="53-paradox-interference-rt03"><strong>5.3 Paradox → Interference (RT‑03)</strong></h2>
+<p><strong>Trigger:</strong> d(OI)/dt = 0.</p>
+<p><strong>Expected Behavior:</strong><br>
+Oscillatory operator dominance emerges.</p>
+<hr>
+<h2 id="54-interference-coherence-rt04"><strong>5.4 Interference → Coherence (RT‑04)</strong></h2>
+<p><strong>Trigger:</strong> Var(OI) → 0 and CI → high.</p>
+<p><strong>Expected Behavior:</strong><br>
+Oscillations collapse into order.</p>
+<hr>
+<h1 id="6-category-v-set-drift-benchmarks"><strong>6. Category V — ΔSET &amp; Drift Benchmarks</strong></h1>
+<p>These benchmarks validate ΔSET correctness and drift detection (Appendix AI).</p>
+<hr>
+<h2 id="61-set-consistency-benchmark-s01"><strong>6.1 ΔSET Consistency Benchmark (ΔS‑01)</strong></h2>
+<p><strong>Purpose:</strong> Validate ΔSET = κ₁R + κ₂‖V‖² + κ₃φ.</p>
+<p><strong>Expected Behavior:</strong><br>
+ΔSET evolves smoothly; no variance spikes.</p>
+<hr>
+<h2 id="62-drift-injection-benchmark-dr01"><strong>6.2 Drift Injection Benchmark (DR‑01)</strong></h2>
+<p><strong>Purpose:</strong> Validate drift detection and correction.</p>
+<p><strong>Setup:</strong><br>
+- artificially perturb R or V<br>
+- run drift detection  </p>
+<p><strong>Expected Behavior:</strong><br>
+Drift detected, classified, corrected.</p>
+<hr>
+<h1 id="7-benchmark-evaluation-metrics"><strong>7. Benchmark Evaluation Metrics</strong></h1>
+<p>Each benchmark includes:</p>
+<ul>
+<li><strong>L2 error norms</strong>  </li>
+<li><strong>operator‑ratio metrics</strong>  </li>
+<li><strong>ΔSET variance</strong>  </li>
+<li><strong>drift metrics (FCE, OIE, KCE, DIV, ΔSE)</strong>  </li>
+<li><strong>regime classification accuracy</strong>  </li>
+<li><strong>transition timing accuracy</strong>  </li>
+<li><strong>kernel normalization error</strong>  </li>
+</ul>
+<p>These metrics ensure cross‑implementation comparability.</p>
+<hr>
+<h1 id="8-benchmark-reporting-format"><strong>8. Benchmark Reporting Format</strong></h1>
+<p>Each benchmark report must include:</p>
+<ul>
+<li>solver details  </li>
+<li>operator definitions  </li>
+<li>kernel family &amp; parameters  </li>
+<li>triadic‑time step sizes  </li>
+<li>regime thresholds  </li>
+<li>drift thresholds  </li>
+<li>visualizations (Appendix AJ)  </li>
+<li>error metrics  </li>
+<li>transition logs  </li>
+</ul>
+<p>This ensures reproducibility.</p>
+<hr>
+<h1 id="closing-statement"><strong>Closing Statement</strong></h1>
+<blockquote>
+<p><strong>Appendix AK defines the official FFT Simulation Benchmark Suite — the standardized tests required to validate solvers, operators, kernels, triadic‑time engines, regime transitions, and ΔSET dynamics. This suite ensures that FFT simulations remain stable, comparable, and scientifically rigorous across all implementations.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

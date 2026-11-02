@@ -1,0 +1,13 @@
+{
+  "CorridorSum": "D1 + D2 + D6",
+  "ResonanceSubstrate": 9,
+  "WrappingTriad": [3, 6, 9],
+  "OrderedVisible": [4, 5, 6],
+  "OrderedInvisible": [6, 7, 8],
+  "CompositeConstant": "F³ ⋅ Tᶠ",
+  "SymbolicExpressions": {
+    "E1": "C = R",
+    "E2": "W ⊇ (Ov ∪ Oi)",
+    "X": "F³ ⋅ Tᶠ"
+  }
+}

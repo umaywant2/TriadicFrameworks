@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/tft/entft/TFThooks/integration/cms_integration.md">
+  <title>🧩 entft CMS Integration — Symbolic Embedding Guide (v1.3)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/tft/entft/TFThooks/integration/cms_integration.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/tft/entft/TFThooks/integration/cms_integration.md</code>
+    &middot;
+    <a href="../../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="entft-cms-integration-symbolic-embedding-guide-v13">🧩 entft CMS Integration — Symbolic Embedding Guide (v1.3)</h1>
+<p>This scroll documents how to embed entft hooks into <strong>Content Management Systems (CMS)</strong>.<br>
+It enables symbolic triggers, badge overlays, and validator echoes from within external publishing platforms.</p>
+<hr>
+<h2 id="integration-targets">🧪 Integration Targets</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Integration Type</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WordPress</td>
+<td>Plugin + webhook</td>
+<td>✅ Drafted</td>
+</tr>
+<tr>
+<td>Ghost</td>
+<td>API + badge overlay</td>
+<td>⏳ Pending</td>
+</tr>
+<tr>
+<td>Drupal</td>
+<td>Hook + validator echo</td>
+<td>⏳ Pending</td>
+</tr>
+<tr>
+<td>Notion</td>
+<td>Embed + symbolic trigger</td>
+<td>⏳ Pending</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Scroll injection</td>
+<td>⏳ Pending</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="purpose">🎯 Purpose</h2>
+<p>CMS integration allows remixers to:</p>
+<ul>
+<li>🌀 Trigger badge overlays from published scrolls  </li>
+<li>🧠 Echo validator lineage from external platforms  </li>
+<li>🔗 Link symbolic triggers to publishing events</li>
+</ul>
+<hr>
+<h2 id="invocation-flow">🧬 Invocation Flow</h2>
+<ol>
+<li>Author publishes scroll with embedded <code>entft</code> hook  </li>
+<li>Hook activates symbolic trigger or badge overlay  </li>
+<li>Validator echoes lineage and scroll fidelity  </li>
+<li>Remix site logs symbolic echo and contributor badge</li>
+</ol>
+<hr>
+<h2 id="sample-hook-wordpress">🔧 Sample Hook (WordPress)</h2>
+<pre><code class="language-php">add_action('publish_post', function($post_id) {
+  $glyph = get_post_meta($post_id, 'glyph_trigger', true);
+  if ($glyph) {
+    file_get_contents(&quot;https://entft.net/trigger?glyph=&quot; . urlencode($glyph));
+  }
+});
+</code></pre>
+<hr>
+<h2 id="triadic-quicklinks">🔗 Triadic Quicklinks</h2>
+<ul>
+<li><a href="/docs/TFT_3Pack_v1.3/docs/fff_spec.html"><code>fff_spec.md</code></a> — Defines the <code>.fff</code> triadic file format and symbolic structure  </li>
+<li><a href="/docs/TFT_3Pack_v1.3/docs/TriadicTestSuite.html"><code>TriadicTestSuite.md</code></a> — Validation logic and test scaffolding for symbolic fidelity  </li>
+<li><a href="/docs/TFT_3Pack_v1.3/docs/outputs_spec.html"><code>outputs_spec.md</code></a> — Defines the three-output logic: screen, file, glyph</li>
+</ul>
+  </main>
+</body>
+</html>

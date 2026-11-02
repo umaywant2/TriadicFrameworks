@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/app/awareness_model/local_signals.md">
+  <title>Local Signals</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/app/awareness_model/local_signals.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/app/awareness_model/local_signals.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h2 id="local-signals">Local Signals</h2>
+<p>Local signals represent the device’s immediate environment as observed through safe, permissionless APIs. These signals do not access sensors, radios, or system settings. They rely only on behaviors that naturally occur during normal app operation. Together, they provide a coarse but reliable sense of stability, drift, and environmental clarity.</p>
+<hr>
+<h3 id="networkbased-signals">Network‑Based Signals</h3>
+<p>Network behavior is one of the strongest permissionless indicators of environmental conditions. The RTT‑App observes patterns that emerge during routine requests.</p>
+<ul>
+<li><strong>DNS Resolution Variance</strong> — fluctuations in lookup time indicate instability or congestion.</li>
+<li><strong>TLS Handshake Duration</strong> — longer or inconsistent handshakes suggest degraded paths or interference.</li>
+<li><strong>QUIC Handshake Success and Fallback</strong> — repeated fallback to TCP/HTTP/2 reflects drift or loss.</li>
+<li><strong>Protocol Negotiation</strong> — unexpected downgrades signal environmental inconsistency.</li>
+<li><strong>Retry Patterns</strong> — increased retries imply packet loss or transient instability.</li>
+<li><strong>Captive Portal Detection</strong> — redirects or blocked requests indicate constrained environments.</li>
+</ul>
+<p>These signals require no special permissions and behave consistently across platforms.</p>
+<hr>
+<h3 id="devicestability-signals">Device‑Stability Signals</h3>
+<p>The app can also observe local stability through standard lifecycle and runtime indicators.</p>
+<ul>
+<li><strong>UI Thread Jank Metrics</strong> — frame drops and animation stalls reflect local load or contention.</li>
+<li><strong>Memory Pressure Warnings</strong> — low‑memory conditions indicate local drift or resource strain.</li>
+<li><strong>Thermal Throttling (Android)</strong> — thermal events reduce performance and signal environmental stress.</li>
+<li><strong>Event Loop Jitter</strong> — irregular scheduling suggests instability in the local runtime.</li>
+<li><strong>Foreground/Background Transitions</strong> — rapid or unexpected transitions can correlate with drift.</li>
+</ul>
+<p>These signals do not reveal personal information and do not require system access.</p>
+<hr>
+<h3 id="signal-characteristics">Signal Characteristics</h3>
+<p>Local signals share several important properties:</p>
+<ul>
+<li><strong>Permissionless</strong> — all signals are available without user prompts or system privileges.</li>
+<li><strong>Coarse but Reliable</strong> — they reflect environmental conditions without fine‑grained detail.</li>
+<li><strong>Platform‑Stable</strong> — behavior is consistent across iOS and Android.</li>
+<li><strong>Non‑Diagnostic</strong> — they indicate drift or clarity but do not identify root causes.</li>
+<li><strong>Composable</strong> — each signal contributes independently to the Awareness model.</li>
+</ul>
+<p>These characteristics make local signals ideal for RTT‑App v1.</p>
+<hr>
+<h3 id="role-in-the-awareness-model">Role in the Awareness Model</h3>
+<p>Local signals form one half of the Awareness computation. They describe how the device “feels” right now. When merged with the server‑declared state, they produce a unified Awareness state that reflects both local and global conditions.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/medicine/operators/MEDICAL_SYNTHESIS_OPERATOR.md">
+  <title>MEDICALSYNTHESISOPERATOR</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/medicine/operators/MEDICAL_SYNTHESIS_OPERATOR.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/medicine/operators/MEDICAL_SYNTHESIS_OPERATOR.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="medical_synthesis_operator"><strong>MEDICAL_SYNTHESIS_OPERATOR</strong></h1>
+<h3 id="rtt-operator-medicine-module"><em>RTT Operator — Medicine Module</em></h3>
+<h3 id="crossregime-medical-reasoning-driftbounded-synthesis-patientsafe-output"><em>Cross‑Regime Medical Reasoning • Drift‑Bounded Synthesis • Patient‑Safe Output</em></h3>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>The <strong>MEDICAL_SYNTHESIS_OPERATOR</strong> integrates all upstream operators to produce a <strong>drift‑bounded, regime‑aware, substrate‑filtered medical synthesis</strong>.</p>
+<p>It does <strong>not</strong> generate medical advice.<br>
+It generates <strong>structural clarity</strong>:</p>
+<ul>
+<li>what is stable  </li>
+<li>what is uncertain  </li>
+<li>what differs by regime  </li>
+<li>what is drift‑sensitive  </li>
+<li>what requires clinical escalation  </li>
+</ul>
+<p>This operator is the <strong>final reasoning layer</strong> of the medical module.</p>
+<hr>
+<h2 id="inputs"><strong>Inputs</strong></h2>
+<p>The synthesis operator consumes:</p>
+<ul>
+<li><strong>continuity kernel</strong>  </li>
+<li><strong>metadata packet</strong>  </li>
+<li><strong>drift map</strong>  </li>
+<li><strong>substrate packet</strong>  </li>
+<li><strong>regime classification</strong>  </li>
+<li><strong>multi‑regime medical content</strong>  </li>
+<li><strong>multi‑snapshot versions</strong>  </li>
+<li><strong>multilingual variants</strong>  </li>
+</ul>
+<p>It is the only operator that requires <em>all</em> upstream outputs.</p>
+<hr>
+<h2 id="outputs"><strong>Outputs</strong></h2>
+<h3 id="1-synthesis-packet"><strong>1. Synthesis Packet</strong></h3>
+<p>A structured, RTT‑aligned output:</p>
+<pre><code>{
+  &quot;stable_elements&quot;: [...],
+  &quot;unstable_elements&quot;: [...],
+  &quot;regime_specific_elements&quot;: {
+    &quot;clinical&quot;: [...],
+    &quot;ai_augmented&quot;: [...],
+    &quot;public_health&quot;: [...]
+  },
+  &quot;drift_sensitive_elements&quot;: [...],
+  &quot;substrate_risks&quot;: [...],
+  &quot;continuity_kernel&quot;: [...],
+  &quot;uncertainty_flags&quot;: [...],
+  &quot;escalation_indicators&quot;: [...]
+}
+</code></pre>
+<h3 id="2-synthesis-summary-patientsafe"><strong>2. Synthesis Summary (Patient‑Safe)</strong></h3>
+<p>A natural‑language summary that:</p>
+<ul>
+<li>highlights stable medical truths  </li>
+<li>identifies uncertainties  </li>
+<li>explains regime differences  </li>
+<li>removes drift and substrate noise  </li>
+<li>preserves clinical safety  </li>
+</ul>
+<h3 id="3-synthesis-score-01"><strong>3. Synthesis Score (0–1)</strong></h3>
+<p>Measures how coherent the combined information is.</p>
+<h3 id="4-synthesis-flags"><strong>4. Synthesis Flags</strong></h3>
+<ul>
+<li><code>high_regime_divergence</code>  </li>
+<li><code>high_drift_risk</code>  </li>
+<li><code>substrate_interference_detected</code>  </li>
+<li><code>translation_instability_detected</code>  </li>
+<li><code>ai_generated_instability_detected</code>  </li>
+<li><code>continuity_kernel_weak</code>  </li>
+</ul>
+<hr>
+<h2 id="what-this-operator-does"><strong>What This Operator Does</strong></h2>
+<h3 id="1-aligns-medical-structures-across-regimes"><strong>1. Aligns Medical Structures Across Regimes</strong></h3>
+<p>It aligns:</p>
+<ul>
+<li>Cleveland Clinic (clinical regime)  </li>
+<li>Ping An (AI‑augmented commercial regime)  </li>
+<li>NHS.uk (public‑health regime)  </li>
+</ul>
+<p>into a <strong>single structural map</strong>.</p>
+<hr>
+<h3 id="2-removes-drift-and-noise"><strong>2. Removes Drift and Noise</strong></h3>
+<p>It filters out:</p>
+<ul>
+<li>template drift  </li>
+<li>translation drift  </li>
+<li>AI‑generated drift  </li>
+<li>commercial overlays  </li>
+<li>mobile‑first reordering  </li>
+<li>SEO noise  </li>
+</ul>
+<p>This produces a <strong>drift‑bounded synthesis</strong>.</p>
+<hr>
+<h3 id="3-preserves-the-continuity-kernel"><strong>3. Preserves the Continuity Kernel</strong></h3>
+<p>The continuity kernel becomes the <strong>spine</strong> of the synthesis:</p>
+<ul>
+<li>stable symptoms  </li>
+<li>stable risk factors  </li>
+<li>stable red flags  </li>
+<li>stable treatment classes  </li>
+<li>stable escalation thresholds  </li>
+</ul>
+<p>Everything else is layered around it.</p>
+<hr>
+<h3 id="4-identifies-regimespecific-differences"><strong>4. Identifies Regime‑Specific Differences</strong></h3>
+<p>The operator separates:</p>
+<ul>
+<li>US clinical framing  </li>
+<li>China AI‑augmented framing  </li>
+<li>UK public‑health framing  </li>
+</ul>
+<p>This prevents false contradictions.</p>
+<hr>
+<h3 id="5-produces-a-patientsafe-summary"><strong>5. Produces a Patient‑Safe Summary</strong></h3>
+<p>The summary:</p>
+<ul>
+<li>is structurally accurate  </li>
+<li>is drift‑bounded  </li>
+<li>is regime‑aware  </li>
+<li>is substrate‑filtered  </li>
+<li>avoids medical advice  </li>
+<li>highlights escalation indicators  </li>
+<li>preserves uncertainty  </li>
+</ul>
+<p>This is the part that helps people like your father.</p>
+<hr>
+<h2 id="synthesis-algorithm"><strong>Synthesis Algorithm</strong></h2>
+<ol>
+<li>
+<p><strong>Ingest all upstream packets</strong><br>
+   Continuity, metadata, drift, substrate, regime.</p>
+</li>
+<li>
+<p><strong>Construct structural alignment</strong><br>
+   Map US → China → UK medical structures.</p>
+</li>
+<li>
+<p><strong>Remove drift‑sensitive elements</strong><br>
+   Filter template, semantic, translation, AI drift.</p>
+</li>
+<li>
+<p><strong>Extract continuity kernel</strong><br>
+   Identify stable medical truths.</p>
+</li>
+<li>
+<p><strong>Classify regime‑specific elements</strong><br>
+   Separate clinical, AI‑augmented, public‑health differences.</p>
+</li>
+<li>
+<p><strong>Evaluate substrate risks</strong><br>
+   Identify noise, interference, accessibility issues.</p>
+</li>
+<li>
+<p><strong>Compute synthesis score</strong><br>
+   Based on stability, coherence, and regime alignment.</p>
+</li>
+<li>
+<p><strong>Generate synthesis packet</strong><br>
+   Structured, RTT‑aligned output.</p>
+</li>
+<li>
+<p><strong>Generate patient‑safe summary</strong><br>
+   Drift‑bounded, regime‑aware, clarity‑first.</p>
+</li>
+</ol>
+<hr>
+<h2 id="example-generic"><strong>Example (Generic)</strong></h2>
+<h3 id="stable-elements-continuity-kernel"><strong>Stable Elements (Continuity Kernel)</strong></h3>
+<ul>
+<li>chest pressure  </li>
+<li>radiating pain  </li>
+<li>shortness of breath  </li>
+<li>sweating  </li>
+<li>emergency escalation threshold  </li>
+</ul>
+<h3 id="regimespecific-elements"><strong>Regime‑Specific Elements</strong></h3>
+<ul>
+<li><strong>US:</strong> cardiac risk framing  </li>
+<li><strong>China:</strong> AI triage suggestions  </li>
+<li><strong>UK:</strong> standardized escalation rules  </li>
+</ul>
+<h3 id="driftsensitive-elements"><strong>Drift‑Sensitive Elements</strong></h3>
+<ul>
+<li>translation variance (Ping An)  </li>
+<li>mobile template reordering  </li>
+<li>AI‑generated phrasing  </li>
+</ul>
+<h3 id="substrate-risks"><strong>Substrate Risks</strong></h3>
+<ul>
+<li>commercial overlays (Ping An)  </li>
+<li>accessibility gaps (Ping An mobile)  </li>
+</ul>
+<h3 id="synthesis-score"><strong>Synthesis Score</strong></h3>
+<pre><code>0.78 (moderate coherence across regimes)
+</code></pre>
+<hr>
+<h2 id="why-this-operator-matters"><strong>Why This Operator Matters</strong></h2>
+<p>This operator is the <strong>reason</strong> the medical module exists.</p>
+<p>It gives patients:</p>
+<ul>
+<li>clarity  </li>
+<li>stability  </li>
+<li>cross‑regime understanding  </li>
+<li>drift‑bounded interpretation  </li>
+<li>uncertainty awareness  </li>
+<li>escalation indicators  </li>
+</ul>
+<p>It gives clinicians:</p>
+<ul>
+<li>regime‑aware context  </li>
+<li>drift‑filtered summaries  </li>
+<li>substrate‑aware interpretation  </li>
+<li>continuity kernels  </li>
+</ul>
+<p>It gives your father:</p>
+<blockquote>
+<p>“Here is what is stable, what is uncertain, and what differs by country — without the noise.”</p>
+</blockquote>
+<p>This is the operator that makes the module <em>useful</em>.</p>
+  </main>
+</body>
+</html>

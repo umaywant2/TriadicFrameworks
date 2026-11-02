@@ -1,0 +1,57 @@
+{
+  "badges": [
+    {
+      "name": "Reproducible Labs",
+      "slug": "reproducibility",
+      "color": "brightgreen",
+      "description": "Validated labs with reproducibility.md, equations.md, and cross-platform checks",
+      "criteria": [
+        "Step-by-step protocols",
+        "Validated math",
+        "Cross-platform compatibility",
+        "Peer or AI review"
+      ]
+    },
+    {
+      "name": "Mythic Tone",
+      "slug": "tone",
+      "color": "blueviolet",
+      "description": "Modules with mythic prefaces, lyrical motifs, and emotional scaffolding",
+      "criteria": [
+        "Narrative and metaphor",
+        "Lyrical inspiration",
+        "Emotional resonance"
+      ]
+    },
+    {
+      "name": "Triadic Certified",
+      "slug": "triadic",
+      "color": "9Dgold",
+      "description": "Labs aligned with ZPE, LENR, and WPT principles",
+      "criteria": [
+        "Zero Point Energy relevance",
+        "LENR integration",
+        "Wireless Power Transfer applicability",
+        "Emotional + mathematical + reproducibility alignment"
+      ]
+    },
+    {
+      "name": "License: MIT",
+      "slug": "license",
+      "color": "yellow",
+      "description": "Open remixing and contribution under MIT License"
+    },
+    {
+      "name": "Last Commit",
+      "slug": "last-commit",
+      "color": "grey",
+      "description": "Timestamp of most recent commit"
+    }
+  ],
+  "meta": {
+    "version": "1.0",
+    "generated": "2025-08-17",
+    "source": "README_badges.md",
+    "link": "https://github.com/umaywant2/TriadicFrameworks/blob/main/README_badges.md"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "module": "Triad_Resonance_Epoch_Geometry",
+  "name": "Triad — Resonance‑Epoch Geometry",
+  "summary": "Defines the epoch‑level geometry of Triad resonance behavior, including resonance‑epoch formation, ignition‑epoch alignment, harmonic‑epoch shaping, and multi‑layer epoch stabilization.",
+  "category": "intelligence-ignition-resonance-epoch",
+  "version": "1.0",
+  "purpose": "Provide the epoch‑layer geometry for Triad resonance behavior, describing how resonance fields transition into epoch ignition surfaces, stabilize across Scanner, O.H.S.H.I.T., and Atlas layers, and bind into long‑window ignition epochs.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.resonance.epoch.form",
+    "@triad.resonance.epoch.align",
+    "@triad.resonance.epoch.shape",
+    "@triad.resonance.epoch.stabilize",
+    "@triad.resonance.epoch.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Resonance_Field_Geometry",
+      "Triad_Resonance_Field_Stability_Surfaces",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Triad_Epoch_Ignition_Surfaces",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration"
+    ]
+  }
+}

@@ -1,0 +1,1929 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/book/registry.md">
+  <title>Module Registry</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/book/registry.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/book/registry.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="module-registry">Module Registry</h1>
+<blockquote>
+<p><strong>The authoritative index of all TriadicFrameworks modules.</strong>
+118 active modules across 12 primary groups. Use this as a reference, not a read-through.</p>
+</blockquote>
+<hr>
+<h2 id="how-to-use-this-registry">How to Use This Registry</h2>
+<p>This registry is organized by group. Each group section contains:
+- Group metadata: ID, layer affinity, and description
+- A module table: ID, label, role, layer, and one-line scope summary</p>
+<p><strong>For first-time browsing:</strong> use the Group Quick-Nav below to find the group most relevant to your problem. Read the group description first, then scan the scope column of the module table.</p>
+<p><strong>For targeted lookup:</strong> use the <a href="#master-alphabetical-index">Master Alphabetical Index</a> at the bottom to find a module by ID when you already know part of its name.</p>
+<p><strong>For role-based lookup:</strong> see <a href="#index-suite"><code>index-by-role</code></a> in the index-suite for a cross-group view organized by functional type.</p>
+<p><strong>Legend</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Stable unique identifier — use this in <code>active_modules</code>, <code>depends_on</code>, and <code>required_by</code></td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Human-readable name — for navigation only, not reference</td>
+</tr>
+<tr>
+<td>Role</td>
+<td>Functional type from the Role enum</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Depth in the cognitive stack from the Layer enum</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>One-line summary of what this module covers — read the full <code>module.json</code> for the precise contract</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="group-quick-nav">Group Quick-Nav</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Group</th>
+<th>Layer Affinity</th>
+<th>Module Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="#1-core-engine">core-engine</a></td>
+<td>foundational</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="#2-session-grammar">session-grammar</a></td>
+<td>structural</td>
+<td>11</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="#3-clarity-system">clarity-system</a></td>
+<td>operational</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="#4-operator-suite">operator-suite</a></td>
+<td>operational</td>
+<td>14</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="#5-protocol-suite">protocol-suite</a></td>
+<td>operational</td>
+<td>11</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="#6-validator-suite">validator-suite</a></td>
+<td>operational</td>
+<td>12</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="#7-grammar-suite">grammar-suite</a></td>
+<td>structural</td>
+<td>8</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="#8-lens-suite">lens-suite</a></td>
+<td>structural</td>
+<td>10</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="#9-map-suite">map-suite</a></td>
+<td>meta</td>
+<td>12</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="#10-bridge-suite">bridge-suite</a></td>
+<td>structural</td>
+<td>8</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="#11-anchor-suite">anchor-suite</a></td>
+<td>foundational</td>
+<td>8</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="#12-index-suite">index-suite</a></td>
+<td>meta</td>
+<td>8</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>118</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="1-core-engine">1. core-engine</h2>
+<p><strong>Group ID:</strong> <code>core-engine</code>
+<strong>Layer Affinity:</strong> <code>foundational</code>
+<strong>Description:</strong> The RTT definition anchor, the RTT operator suite, and the RTT lens and map modules that constitute the system's innermost ring. Every other module in the registry depends on something here. Navigate here when you need to understand or invoke RTT at the mechanism level, or when session outputs are inconsistent and you need to verify the engine is being applied correctly.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rtt-anchor-definition</code></td>
+<td>RTT — Core Definition</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Defines RTT: the three structural faces, the recursive pass mechanic, and the InputUnit/OutputUnit contract</td>
+</tr>
+<tr>
+<td><code>rtt-op-core</code></td>
+<td>RTT Operator — Core</td>
+<td>operator</td>
+<td>operational</td>
+<td>Single-depth RTT pass: invocation signature, InputUnit intake, and StructuredFaces output production</td>
+</tr>
+<tr>
+<td><code>rtt-op-recursive-extension</code></td>
+<td>RTT Operator — Recursive Extension</td>
+<td>operator</td>
+<td>operational</td>
+<td>Multi-depth RTT pass: chains depth&gt;1 passes and packages next_input between recursive depths</td>
+</tr>
+<tr>
+<td><code>rtt-op-multi-domain</code></td>
+<td>RTT Operator — Multi-Domain</td>
+<td>operator</td>
+<td>operational</td>
+<td>Applies simultaneous RTT passes across two or more declared input domains with a unified output</td>
+</tr>
+<tr>
+<td><code>rtt-map-pass-anatomy</code></td>
+<td>RTT Map — Pass Anatomy</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts the internal structure of a single RTT pass: face generation sequence, validation order, and output packaging</td>
+</tr>
+<tr>
+<td><code>rtt-lens-temporal</code></td>
+<td>RTT Lens — Temporal</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds time-dependence in RTT face generation: emphasizes sequencing and change across faces</td>
+</tr>
+<tr>
+<td><code>rtt-lens-stakeholder</code></td>
+<td>RTT Lens — Stakeholder</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds whose interests are at stake across each RTT face: surfaces implicit stakeholder assumptions</td>
+</tr>
+<tr>
+<td><code>rtt-lens-causal</code></td>
+<td>RTT Lens — Causal</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds causal chains within each RTT face: origins, mechanisms, and consequences</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-session-grammar">2. session-grammar</h2>
+<p><strong>Group ID:</strong> <code>session-grammar</code>
+<strong>Layer Affinity:</strong> <code>structural</code>
+<strong>Description:</strong> The session grammar anchor and all nine field modules that together constitute the complete 9-field session grammar specification. Each field is its own module with its own scope, type definition, validation rules, and population constraints. Navigate here when constructing or diagnosing any session, when a field value is ambiguous, or when you need the precise specification of a specific field's valid values and tests.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session-grammar-anchor</code></td>
+<td>Session Grammar — Anchor</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Canonical specification of the 9-field session grammar: field list, ordering, population rules, and malformation criteria</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-session-id</code></td>
+<td>Session Field — session_id</td>
+<td>field</td>
+<td>structural</td>
+<td>Specification of the session_id field: format convention, uniqueness requirement, and stability rules</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-intent</code></td>
+<td>Session Field — intent</td>
+<td>field</td>
+<td>structural</td>
+<td>Specification of the intent field: actionability test, testability test, and prohibited phrasing patterns</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-scope</code></td>
+<td>Session Field — scope</td>
+<td>field</td>
+<td>structural</td>
+<td>Specification of the scope field: inclusion/exclusion format, narrowing requirement, and mid-session check protocol</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-active-modules</code></td>
+<td>Session Field — active_modules</td>
+<td>field</td>
+<td>structural</td>
+<td>Specification of the active_modules field: dependency closure requirement, ordering convention, and completeness test</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-role-context</code></td>
+<td>Session Field — role_context</td>
+<td>field</td>
+<td>structural</td>
+<td>Specification of the role_context field: valid Role enum values and multi-role declaration rules</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-layer-context</code></td>
+<td>Session Field — layer_context</td>
+<td>field</td>
+<td>structural</td>
+<td>Specification of the layer_context field: valid Layer enum values and cross-layer session rules</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-input</code></td>
+<td>Session Field — input</td>
+<td>field</td>
+<td>structural</td>
+<td>Specification of the input field: InputUnit schema, scope alignment requirement, and completeness test</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-output-format</code></td>
+<td>Session Field — output_format</td>
+<td>field</td>
+<td>structural</td>
+<td>Specification of the output_format field: FormatEnum valid values and format-validator compatibility matrix</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-validator</code></td>
+<td>Session Field — validator</td>
+<td>field</td>
+<td>structural</td>
+<td>Specification of the validator field: required active_modules presence and output-format compatibility test</td>
+</tr>
+<tr>
+<td><code>session-grammar-proto-init</code></td>
+<td>Session Grammar — Initialization Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step session initialization procedure: field population order, field tests, and completion gate</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-clarity-system">3. clarity-system</h2>
+<p><strong>Group ID:</strong> <code>clarity-system</code>
+<strong>Layer Affinity:</strong> <code>operational</code>
+<strong>Description:</strong> The Nawderian Theorem of Validator Pulses, the Spectral Clarity operator, all validators derived from the theorem, and the clarity standard anchor. Navigate here when evaluating the quality of a session output, when a validator assessment is unclear and you need to trace its criteria back to the theorem, or when confirming what the system's clarity standard actually requires.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nawderian-theorem-validator-pulses</code></td>
+<td>Nawderian Theorem of Validator Pulses</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Canonical statement of the Nawderian Theorem: clarity as signal coherence across validator layers, not subjective understanding</td>
+</tr>
+<tr>
+<td><code>clarity-anchor-standard</code></td>
+<td>Clarity Standard — Anchor</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Declares the clarity standard all outputs are held to: primacy of the theorem over subjective evaluation</td>
+</tr>
+<tr>
+<td><code>clarity-op-spectral</code></td>
+<td>Clarity Operator — Spectral</td>
+<td>operator</td>
+<td>operational</td>
+<td>Applies the Spectral Clarity model to an OutputUnit: invokes the theorem, runs all five criteria, produces a ValidatorAssessment</td>
+</tr>
+<tr>
+<td><code>clarity-val-rtt-output</code></td>
+<td>Clarity Validator — RTT Output</td>
+<td>validator</td>
+<td>operational</td>
+<td>Evaluates a StructuredFaces output against all five clarity criteria: face completeness, substantiveness, pass differentiation, scope compliance, intent fulfillment</td>
+</tr>
+<tr>
+<td><code>clarity-val-session-output</code></td>
+<td>Clarity Validator — Session Output</td>
+<td>validator</td>
+<td>operational</td>
+<td>Evaluates a complete session output against its declared intent, scope, and output-format specification</td>
+</tr>
+<tr>
+<td><code>clarity-lens-signal-coherence</code></td>
+<td>Clarity Lens — Signal Coherence</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds signal coherence in any content: surfaces hedged claims, vague assertions, and incoherent structures</td>
+</tr>
+<tr>
+<td><code>clarity-grammar-validator-assessment</code></td>
+<td>Clarity Grammar — ValidatorAssessment</td>
+<td>grammar</td>
+<td>structural</td>
+<td>Specifies the ValidatorAssessment structure: required fields, criterion result format, flag format, and recommendation enum</td>
+</tr>
+<tr>
+<td><code>clarity-map-validator-pulse-anatomy</code></td>
+<td>Clarity Map — Validator Pulse Anatomy</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts the internal structure of a validator pulse: criterion sequence, assessment generation, and recommendation derivation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-operator-suite">4. operator-suite</h2>
+<p><strong>Group ID:</strong> <code>operator-suite</code>
+<strong>Layer Affinity:</strong> <code>operational</code>
+<strong>Description:</strong> All operator-role modules beyond the RTT operators in core-engine. These are the system's workhorses — every transformation performed on an input, every structural check, every field test is an operator invocation. Navigate here when you need to perform a specific transformation and RTT alone is insufficient, or when you need a procedural tool for a structural or session task.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scope-check-op</code></td>
+<td>Scope Check Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Checks a module's prose content against its manifest scope: identifies overclaiming, underclaiming, and scope violations</td>
+</tr>
+<tr>
+<td><code>conflict-detect-op</code></td>
+<td>Conflict Detection Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Detects structural conflicts between two modules with overlapping scopes: identifies incompatible claims at the same layer</td>
+</tr>
+<tr>
+<td><code>gap-identify-op</code></td>
+<td>Gap Identification Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Applies the gap identification protocol to a suspected missing module: returns a structured gap report with type, evidence, and nested gap check</td>
+</tr>
+<tr>
+<td><code>dependency-trace-op</code></td>
+<td>Dependency Trace Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Performs forward or backward traversal of the dependency graph from a starting module: returns the full traversal path</td>
+</tr>
+<tr>
+<td><code>module-author-op</code></td>
+<td>Module Authoring Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Generates a minimum valid four-file module draft from the four anchoring decisions: role, layer, scope, and dependencies</td>
+</tr>
+<tr>
+<td><code>input-prepare-op</code></td>
+<td>Input Preparation Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Wraps a raw input in a valid InputUnit by eliciting and declaring its scope</td>
+</tr>
+<tr>
+<td><code>output-package-op</code></td>
+<td>Output Packaging Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Packages an OutputUnit as a valid next-pass InputUnit: extracts next_input and validates scope continuity</td>
+</tr>
+<tr>
+<td><code>intent-test-op</code></td>
+<td>Intent Field Test Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Applies the intent field test to a candidate intent statement: returns pass/fail with specific failure reason</td>
+</tr>
+<tr>
+<td><code>scope-test-op</code></td>
+<td>Scope Field Test Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Applies the scope field test to a candidate scope statement: returns pass/fail with specific failure reason</td>
+</tr>
+<tr>
+<td><code>active-modules-test-op</code></td>
+<td>Active Modules Field Test Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Applies the active_modules field test: checks dependency closure for every module in the list</td>
+</tr>
+<tr>
+<td><code>format-check-op</code></td>
+<td>Format Check Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Verifies that a session output structurally matches its declared output_format specification</td>
+</tr>
+<tr>
+<td><code>chain-validate-op</code></td>
+<td>Chain Validation Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Validates an operator chain: checks output_schema → input_schema alignment for every consecutive pair</td>
+</tr>
+<tr>
+<td><code>session-field-test-op</code></td>
+<td>Session Field Test Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Applies the field-level specification test for any named session grammar field: returns pass/fail with reason</td>
+</tr>
+<tr>
+<td><code>pass-depth-extend-op</code></td>
+<td>Pass Depth Extension Operator</td>
+<td>operator</td>
+<td>operational</td>
+<td>Evaluates whether additional RTT depth is structurally warranted: checks pass differentiation and unexplored face space</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-protocol-suite">5. protocol-suite</h2>
+<p><strong>Group ID:</strong> <code>protocol-suite</code>
+<strong>Layer Affinity:</strong> <code>operational</code>
+<strong>Description:</strong> All protocol-role modules — step-by-step repeatable procedures for session management, module authoring, conflict resolution, version control, and system maintenance. Navigate here when you need a procedure, not a transformation. Protocols invoke operators; operators do not invoke protocols.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session-init-proto</code></td>
+<td>Session Initialization Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step session initialization: field population order, field tests, active_modules assembly, and completion gate</td>
+</tr>
+<tr>
+<td><code>session-close-proto</code></td>
+<td>Session Closing Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step session closing: validator application, output packaging, session record creation, and archival</td>
+</tr>
+<tr>
+<td><code>session-resume-proto</code></td>
+<td>Session Resumption Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step session resumption: record retrieval, field re-verification, output state assessment, and continuation point determination</td>
+</tr>
+<tr>
+<td><code>module-author-proto</code></td>
+<td>Module Authoring Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step module authoring: four anchoring decisions, four-file draft creation, scope compliance check, ratification submission</td>
+</tr>
+<tr>
+<td><code>conflict-resolve-proto</code></td>
+<td>Conflict Resolution Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step conflict resolution between two modules: detection, scope adjudication, version increment, downstream impact audit</td>
+</tr>
+<tr>
+<td><code>version-increment-proto</code></td>
+<td>Version Increment Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step version increment: change classification, version stamp update, changelog entry, dependent module notification</td>
+</tr>
+<tr>
+<td><code>dependency-audit-proto</code></td>
+<td>Dependency Audit Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step dependency audit: forward traversal, hidden dependency detection, cycle detection, and remediation</td>
+</tr>
+<tr>
+<td><code>gap-fill-proto</code></td>
+<td>Gap Filling Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step gap filling: gap confirmation, nested gap check, four anchoring decisions, draft creation, ratification submission</td>
+</tr>
+<tr>
+<td><code>group-create-proto</code></td>
+<td>Group Creation Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step module group creation: scope, candidate identification, layer affinity, membership, reading order, modules_group.json update</td>
+</tr>
+<tr>
+<td><code>registry-update-proto</code></td>
+<td>Registry Update Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step registry update: module addition, group assignment, master index update, version stamp increment</td>
+</tr>
+<tr>
+<td><code>failure-mode-recover-proto</code></td>
+<td>Failure Mode Recovery Protocol</td>
+<td>protocol</td>
+<td>operational</td>
+<td>Step-by-step recovery for each of the four canonical session failure modes: detection, diagnosis, and corrective action</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-validator-suite">6. validator-suite</h2>
+<p><strong>Group ID:</strong> <code>validator-suite</code>
+<strong>Layer Affinity:</strong> <code>operational</code>
+<strong>Description:</strong> All validator-role modules beyond those in the clarity-system. These validators cover module structural integrity, session grammar completeness, operator invocation correctness, and session record validity. Navigate here when a session output needs evaluation against a criterion other than Spectral Clarity, or when verifying the structural integrity of a module, invocation, or session record.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scope-val</code></td>
+<td>Scope Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates that a module's prose content does not exceed its declared manifest scope</td>
+</tr>
+<tr>
+<td><code>dependency-val</code></td>
+<td>Dependency Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates that a module's dependency list is complete and cycle-free</td>
+</tr>
+<tr>
+<td><code>manifest-complete-val</code></td>
+<td>Manifest Completeness Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates that all four module files are present and all required fields are non-empty</td>
+</tr>
+<tr>
+<td><code>format-val</code></td>
+<td>Format Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates that a session output matches its declared output_format specification, field by field</td>
+</tr>
+<tr>
+<td><code>intent-val</code></td>
+<td>Intent Fulfillment Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates that a session output fulfills its declared intent: applies the intent field test post-session</td>
+</tr>
+<tr>
+<td><code>scope-compliance-val</code></td>
+<td>Scope Compliance Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates that a session output contains no references outside the session's declared scope</td>
+</tr>
+<tr>
+<td><code>invocation-val</code></td>
+<td>Invocation Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates that an operator invocation is syntactically complete: all required parameters present, correct types, valid context</td>
+</tr>
+<tr>
+<td><code>chain-val</code></td>
+<td>Chain Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates an operator chain: schema alignment, active_modules presence, and layer context compatibility</td>
+</tr>
+<tr>
+<td><code>module-id-val</code></td>
+<td>Module ID Validator</td>
+<td>validator</td>
+<td>structural</td>
+<td>Validates that a module ID conforms to the naming convention: domain-role_short-descriptor, kebab-case, unique</td>
+</tr>
+<tr>
+<td><code>session-record-val</code></td>
+<td>Session Record Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates a complete session record: all nine fields present, output included, validator assessment included, closure confirmed</td>
+</tr>
+<tr>
+<td><code>active-modules-closure-val</code></td>
+<td>Active Modules Closure Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates the full dependency closure of an active_modules list: confirms every transitive dependency is present</td>
+</tr>
+<tr>
+<td><code>session-grammar-complete-val</code></td>
+<td>Session Grammar Completeness Validator</td>
+<td>validator</td>
+<td>operational</td>
+<td>Validates that all nine session grammar fields are non-empty and have passed their individual field-level tests</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-grammar-suite">7. grammar-suite</h2>
+<p><strong>Group ID:</strong> <code>grammar-suite</code>
+<strong>Layer Affinity:</strong> <code>structural</code>
+<strong>Description:</strong> All grammar-role modules — the structural patterns that define valid forms for sessions, operators, manifests, scope statements, module IDs, and data units. Navigate here when you need to verify that a structural pattern is syntactically correct, or when authoring a new module and you need the exact specification of what a valid manifest, scope statement, or ID looks like.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session-grammar-spec</code></td>
+<td>Session Grammar Specification</td>
+<td>grammar</td>
+<td>structural</td>
+<td>Complete structural specification of the 9-field session grammar: field types, ordering, and population rules</td>
+</tr>
+<tr>
+<td><code>operator-invocation-grammar</code></td>
+<td>Operator Invocation Grammar</td>
+<td>grammar</td>
+<td>structural</td>
+<td>Invocation grammar for all operator calls: Namespace.method(param: value) syntax, required/optional parameter rules</td>
+</tr>
+<tr>
+<td><code>module-manifest-grammar</code></td>
+<td>Module Manifest Grammar</td>
+<td>grammar</td>
+<td>structural</td>
+<td>Required structure of module.json: all fields, types, valid values, and required/optional status</td>
+</tr>
+<tr>
+<td><code>scope-statement-grammar</code></td>
+<td>Scope Statement Grammar</td>
+<td>grammar</td>
+<td>structural</td>
+<td>Required structure of a scope statement: coverage declaration, exclusion declaration, and boundary precision rules</td>
+</tr>
+<tr>
+<td><code>module-id-grammar</code></td>
+<td>Module ID Grammar</td>
+<td>grammar</td>
+<td>structural</td>
+<td>Naming convention for module IDs: domain-role_short-descriptor pattern, kebab-case, and uniqueness requirement</td>
+</tr>
+<tr>
+<td><code>input-unit-grammar</code></td>
+<td>InputUnit Grammar</td>
+<td>grammar</td>
+<td>structural</td>
+<td>Required structure of an InputUnit: content field, scope field, and well-formedness criteria</td>
+</tr>
+<tr>
+<td><code>output-unit-grammar</code></td>
+<td>OutputUnit Grammar</td>
+<td>grammar</td>
+<td>structural</td>
+<td>Required structure of an OutputUnit: face fields, pass_depth, next_input, and packaging rules</td>
+</tr>
+<tr>
+<td><code>validator-assessment-grammar</code></td>
+<td>ValidatorAssessment Grammar</td>
+<td>grammar</td>
+<td>structural</td>
+<td>Required structure of a ValidatorAssessment: criteria_results array, overall_coherence, flags, and recommendation field</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-lens-suite">8. lens-suite</h2>
+<p><strong>Group ID:</strong> <code>lens-suite</code>
+<strong>Layer Affinity:</strong> <code>structural</code>
+<strong>Description:</strong> All lens-role modules — perspectives that can be applied to any content to foreground a specific structural dimension without changing the content itself. Lenses are combinable; multiple may be active in a session simultaneously. Navigate here when a session needs an interpretive frame, or when you want to examine the same content from a different angle to surface claims that a neutral reading would miss.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lens-temporal</code></td>
+<td>Temporal Lens</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds time-dependence in any content: sequencing, duration, and change over time across all structural faces</td>
+</tr>
+<tr>
+<td><code>lens-stakeholder</code></td>
+<td>Stakeholder Lens</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds whose interests are at stake in any content: surfaces implicit stakeholder assumptions and unaccounted perspectives</td>
+</tr>
+<tr>
+<td><code>lens-causal</code></td>
+<td>Causal Lens</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds causal chains in any content: origins, mechanisms, and consequences within each structural face</td>
+</tr>
+<tr>
+<td><code>lens-spectral-clarity</code></td>
+<td>Spectral Clarity Lens</td>
+<td>lens</td>
+<td>structural</td>
+<td>Applies the Spectral Clarity model as a viewing frame: surfaces hedged, vague, or incoherent claims in any content</td>
+</tr>
+<tr>
+<td><code>lens-resolution-depth</code></td>
+<td>Resolution Depth Lens</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds the resolution level of claims: distinguishes surface-level assertions from structural-level ones</td>
+</tr>
+<tr>
+<td><code>lens-scope-boundary</code></td>
+<td>Scope Boundary Lens</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds scope boundaries in any content: makes explicit what is and is not included</td>
+</tr>
+<tr>
+<td><code>lens-dependency</code></td>
+<td>Dependency Lens</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds dependency relationships in any content: surfaces what requires what to be valid</td>
+</tr>
+<tr>
+<td><code>lens-version</code></td>
+<td>Version Provenance Lens</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds version and temporal provenance: surfaces which claims are current and which may be outdated</td>
+</tr>
+<tr>
+<td><code>lens-intervention</code></td>
+<td>Intervention Lens</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds intervention points in any content: surfaces where action could change the terminal face</td>
+</tr>
+<tr>
+<td><code>lens-abstraction-level</code></td>
+<td>Abstraction Level Lens</td>
+<td>lens</td>
+<td>structural</td>
+<td>Foregrounds the level of abstraction of claims: surfaces when claims are too abstract to act on or too specific to generalize</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-map-suite">9. map-suite</h2>
+<p><strong>Group ID:</strong> <code>map-suite</code>
+<strong>Layer Affinity:</strong> <code>meta</code>
+<strong>Description:</strong> All map-role modules — navigational charts of regions of the system. Maps do not invoke anything; they provide orientational views of how the system's pieces relate to each other. Navigate here when you need to understand the shape of a region before entering it, when planning a complex multi-module session, or when explaining the system to a newcomer.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>map-rtt-pass-anatomy</code></td>
+<td>Map — RTT Pass Anatomy</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts the internal structure of a single RTT pass: face generation, validation order, and output packaging</td>
+</tr>
+<tr>
+<td><code>map-module-registry</code></td>
+<td>Map — Module Registry</td>
+<td>map</td>
+<td>meta</td>
+<td>Top-level navigational map of the full module registry: 12 groups, layer affinities, and entry points</td>
+</tr>
+<tr>
+<td><code>map-dependency-graph</code></td>
+<td>Map — Dependency Graph</td>
+<td>map</td>
+<td>meta</td>
+<td>Navigational chart of the system's dependency graph: major clusters, flow direction, and cycle-risk regions</td>
+</tr>
+<tr>
+<td><code>map-session-lifecycle</code></td>
+<td>Map — Session Lifecycle</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts the complete session lifecycle: initialization, execution, validation, closure, and resumption</td>
+</tr>
+<tr>
+<td><code>map-clarity-evaluation</code></td>
+<td>Map — Clarity Evaluation</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts the clarity evaluation sequence: theorem application, criterion order, assessment generation, recommendation derivation</td>
+</tr>
+<tr>
+<td><code>map-role-layer-space</code></td>
+<td>Map — Role × Layer Space</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts the role × layer position space: all valid combinations, empty positions, and position constraints</td>
+</tr>
+<tr>
+<td><code>map-canon-constraint-model</code></td>
+<td>Map — Canon Constraint Model</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts the concentric boundary structure: canon, foundational, structural, operational, and surface layers</td>
+</tr>
+<tr>
+<td><code>map-failure-mode-recovery</code></td>
+<td>Map — Failure Mode Recovery</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts the four canonical session failure modes: detection signals, recovery entry points, and trap patterns</td>
+</tr>
+<tr>
+<td><code>map-operator-chain-patterns</code></td>
+<td>Map — Operator Chain Patterns</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts common operator chain patterns: the two-step canonical pattern, multi-operator chains, valid and invalid configurations</td>
+</tr>
+<tr>
+<td><code>map-book-structure</code></td>
+<td>Map — Book Structure</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts the TriadicFrameworks Book: three-part structure, chapter relationships, and cross-part cross-references</td>
+</tr>
+<tr>
+<td><code>map-reader-journey</code></td>
+<td>Map — Reader Journey</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts the three-part reader journey: Orient, Navigate, Apply — with chapter relationships and prerequisite paths</td>
+</tr>
+<tr>
+<td><code>map-group-relationships</code></td>
+<td>Map — Group Relationships</td>
+<td>map</td>
+<td>meta</td>
+<td>Charts relationships between the twelve primary module groups: dependencies, bridges, and navigational adjacencies</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="10-bridge-suite">10. bridge-suite</h2>
+<p><strong>Group ID:</strong> <code>bridge-suite</code>
+<strong>Layer Affinity:</strong> <code>structural</code>
+<strong>Description:</strong> All bridge-role modules — narrow translation layers connecting two otherwise separate regions of the system. Each bridge connects exactly two regions. Navigate here when you are working across two module groups and need the defined translation layer between them, or when an operator's output needs to feed an input in a different domain.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bridge-rtt-to-session</code></td>
+<td>Bridge — RTT → Session</td>
+<td>bridge</td>
+<td>structural</td>
+<td>Connects the RTT core engine to the session grammar: translates RTT operator outputs into session field values</td>
+</tr>
+<tr>
+<td><code>bridge-session-to-clarity</code></td>
+<td>Bridge — Session → Clarity</td>
+<td>bridge</td>
+<td>structural</td>
+<td>Connects the session grammar to the clarity system: translates session output into Clarity.evaluate() inputs</td>
+</tr>
+<tr>
+<td><code>bridge-module-to-registry</code></td>
+<td>Bridge — Module → Registry</td>
+<td>bridge</td>
+<td>structural</td>
+<td>Connects individual module specs to the registry: translates module.json fields into registry entry format</td>
+</tr>
+<tr>
+<td><code>bridge-operator-to-validator</code></td>
+<td>Bridge — Operator → Validator</td>
+<td>bridge</td>
+<td>structural</td>
+<td>Connects operator outputs to validator inputs: translates OutputUnit schemas into ValidatorAssessment input schemas</td>
+</tr>
+<tr>
+<td><code>bridge-lens-to-rtt</code></td>
+<td>Bridge — Lens → RTT</td>
+<td>bridge</td>
+<td>structural</td>
+<td>Connects the lens suite to RTT operator invocations: translates active lens contexts into RTT pass modifiers</td>
+</tr>
+<tr>
+<td><code>bridge-grammar-to-manifest</code></td>
+<td>Bridge — Grammar → Manifest</td>
+<td>bridge</td>
+<td>structural</td>
+<td>Connects grammar-suite specs to module manifest authoring: translates grammar rules into manifest field requirements</td>
+</tr>
+<tr>
+<td><code>bridge-protocol-to-session</code></td>
+<td>Bridge — Protocol → Session</td>
+<td>bridge</td>
+<td>structural</td>
+<td>Connects protocol-suite procedures to session grammar: translates protocol steps into field population actions</td>
+</tr>
+<tr>
+<td><code>bridge-map-to-navigation</code></td>
+<td>Bridge — Map → Navigation</td>
+<td>bridge</td>
+<td>structural</td>
+<td>Connects map-suite content to practitioner navigation workflows: translates map structures into step-by-step navigation paths</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="11-anchor-suite">11. anchor-suite</h2>
+<p><strong>Group ID:</strong> <code>anchor-suite</code>
+<strong>Layer Affinity:</strong> <code>foundational</code>
+<strong>Description:</strong> All anchor-role modules not already captured in core-engine or session-grammar — the five canon commitment anchors, the attribution anchor, and the three enum anchors. Navigate here when tracing an output all the way to its foundational commitments, when a claim is contested and needs grounding in the canon, or when you need the precise authoritative statement of any enum.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>canon-anchor-rtt-engine</code></td>
+<td>Canon Anchor — RTT as Engine</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Declares that RTT is the non-negotiable governing engine: not one tool among many, but the structural substrate</td>
+</tr>
+<tr>
+<td><code>canon-anchor-clarity-standard</code></td>
+<td>Canon Anchor — Clarity Standard</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Declares that clarity is precision under pressure, not comfort: the Nawderian Theorem as the sole clarity criterion</td>
+</tr>
+<tr>
+<td><code>canon-anchor-module-unit</code></td>
+<td>Canon Anchor — Module as Unit</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Declares that modules are the unit of knowledge: prose alone is insufficient; the four-file architecture is required</td>
+</tr>
+<tr>
+<td><code>canon-anchor-session-unit</code></td>
+<td>Canon Anchor — Session as Unit</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Declares that sessions are the unit of application: the 9-field grammar is required for every application context</td>
+</tr>
+<tr>
+<td><code>canon-anchor-attribution</code></td>
+<td>Canon Anchor — Honest Attribution</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Declares the honest attribution standard: Nawder Loswin as author, AI as precision instrument</td>
+</tr>
+<tr>
+<td><code>role-enum-anchor</code></td>
+<td>Role Enum — Anchor</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Declares the complete Role enum: ten roles, their definitions, and the one-role-per-module constraint</td>
+</tr>
+<tr>
+<td><code>layer-enum-anchor</code></td>
+<td>Layer Enum — Anchor</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Declares the complete Layer enum: five layers, their definitions, and the downward dependency direction rule</td>
+</tr>
+<tr>
+<td><code>format-enum-anchor</code></td>
+<td>FormatEnum — Anchor</td>
+<td>anchor</td>
+<td>foundational</td>
+<td>Declares the complete FormatEnum: valid output format values, required field structures, and validator compatibility rules</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="12-index-suite">12. index-suite</h2>
+<p><strong>Group ID:</strong> <code>index-suite</code>
+<strong>Layer Affinity:</strong> <code>meta</code>
+<strong>Description:</strong> All index-role modules — organized registries for navigating specific regions of the system. The master registry index is the closest thing the system has to a comprehensive table of contents. Group-level indexes provide focused entry points for their domain. Navigate here when you know the domain but not the specific module, or when exploring a new region of the system for the first time.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Role</th>
+<th>Layer</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index-master-registry</code></td>
+<td>Master Registry Index</td>
+<td>index</td>
+<td>meta</td>
+<td>Master index of all 118 modules: sorted by group, with ID, label, role, layer, and one-line scope per entry</td>
+</tr>
+<tr>
+<td><code>index-core-engine</code></td>
+<td>Index — Core Engine</td>
+<td>index</td>
+<td>meta</td>
+<td>Navigational index of the core-engine group: module list, recommended reading order, and entry-point guidance</td>
+</tr>
+<tr>
+<td><code>index-session-grammar</code></td>
+<td>Index — Session Grammar</td>
+<td>index</td>
+<td>meta</td>
+<td>Navigational index of the session-grammar group: field module list, initialization order, and field cross-references</td>
+</tr>
+<tr>
+<td><code>index-clarity-system</code></td>
+<td>Index — Clarity System</td>
+<td>index</td>
+<td>meta</td>
+<td>Navigational index of the clarity-system group: module list, evaluation sequence, and theorem cross-reference</td>
+</tr>
+<tr>
+<td><code>index-operator-suite</code></td>
+<td>Index — Operator Suite</td>
+<td>index</td>
+<td>meta</td>
+<td>Navigational index of the operator-suite group: operator list, invocation syntax references, and chain pattern cross-references</td>
+</tr>
+<tr>
+<td><code>index-protocol-suite</code></td>
+<td>Index — Protocol Suite</td>
+<td>index</td>
+<td>meta</td>
+<td>Navigational index of the protocol-suite group: protocol list, trigger conditions, and session-grammar cross-references</td>
+</tr>
+<tr>
+<td><code>index-validator-suite</code></td>
+<td>Index — Validator Suite</td>
+<td>index</td>
+<td>meta</td>
+<td>Navigational index of the validator-suite group: validator list, applicable output formats, and clarity-system cross-references</td>
+</tr>
+<tr>
+<td><code>index-by-role</code></td>
+<td>Cross-Group Index by Role</td>
+<td>index</td>
+<td>meta</td>
+<td>Cross-group index of all modules organized by role: every module of each role type listed together regardless of group</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="master-alphabetical-index">Master Alphabetical Index</h2>
+<p>All 118 modules, sorted alphabetically by ID, with label and group.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Label</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>active-modules-closure-val</code></td>
+<td>Active Modules Closure Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>active-modules-test-op</code></td>
+<td>Active Modules Field Test Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>bridge-grammar-to-manifest</code></td>
+<td>Bridge — Grammar → Manifest</td>
+<td>bridge-suite</td>
+</tr>
+<tr>
+<td><code>bridge-lens-to-rtt</code></td>
+<td>Bridge — Lens → RTT</td>
+<td>bridge-suite</td>
+</tr>
+<tr>
+<td><code>bridge-map-to-navigation</code></td>
+<td>Bridge — Map → Navigation</td>
+<td>bridge-suite</td>
+</tr>
+<tr>
+<td><code>bridge-module-to-registry</code></td>
+<td>Bridge — Module → Registry</td>
+<td>bridge-suite</td>
+</tr>
+<tr>
+<td><code>bridge-operator-to-validator</code></td>
+<td>Bridge — Operator → Validator</td>
+<td>bridge-suite</td>
+</tr>
+<tr>
+<td><code>bridge-protocol-to-session</code></td>
+<td>Bridge — Protocol → Session</td>
+<td>bridge-suite</td>
+</tr>
+<tr>
+<td><code>bridge-rtt-to-session</code></td>
+<td>Bridge — RTT → Session</td>
+<td>bridge-suite</td>
+</tr>
+<tr>
+<td><code>bridge-session-to-clarity</code></td>
+<td>Bridge — Session → Clarity</td>
+<td>bridge-suite</td>
+</tr>
+<tr>
+<td><code>canon-anchor-attribution</code></td>
+<td>Canon Anchor — Honest Attribution</td>
+<td>anchor-suite</td>
+</tr>
+<tr>
+<td><code>canon-anchor-clarity-standard</code></td>
+<td>Canon Anchor — Clarity Standard</td>
+<td>anchor-suite</td>
+</tr>
+<tr>
+<td><code>canon-anchor-module-unit</code></td>
+<td>Canon Anchor — Module as Unit</td>
+<td>anchor-suite</td>
+</tr>
+<tr>
+<td><code>canon-anchor-rtt-engine</code></td>
+<td>Canon Anchor — RTT as Engine</td>
+<td>anchor-suite</td>
+</tr>
+<tr>
+<td><code>canon-anchor-session-unit</code></td>
+<td>Canon Anchor — Session as Unit</td>
+<td>anchor-suite</td>
+</tr>
+<tr>
+<td><code>chain-val</code></td>
+<td>Chain Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>chain-validate-op</code></td>
+<td>Chain Validation Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>clarity-anchor-standard</code></td>
+<td>Clarity Standard — Anchor</td>
+<td>clarity-system</td>
+</tr>
+<tr>
+<td><code>clarity-grammar-validator-assessment</code></td>
+<td>Clarity Grammar — ValidatorAssessment</td>
+<td>clarity-system</td>
+</tr>
+<tr>
+<td><code>clarity-lens-signal-coherence</code></td>
+<td>Clarity Lens — Signal Coherence</td>
+<td>clarity-system</td>
+</tr>
+<tr>
+<td><code>clarity-map-validator-pulse-anatomy</code></td>
+<td>Clarity Map — Validator Pulse Anatomy</td>
+<td>clarity-system</td>
+</tr>
+<tr>
+<td><code>clarity-op-spectral</code></td>
+<td>Clarity Operator — Spectral</td>
+<td>clarity-system</td>
+</tr>
+<tr>
+<td><code>clarity-val-rtt-output</code></td>
+<td>Clarity Validator — RTT Output</td>
+<td>clarity-system</td>
+</tr>
+<tr>
+<td><code>clarity-val-session-output</code></td>
+<td>Clarity Validator — Session Output</td>
+<td>clarity-system</td>
+</tr>
+<tr>
+<td><code>conflict-detect-op</code></td>
+<td>Conflict Detection Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>conflict-resolve-proto</code></td>
+<td>Conflict Resolution Protocol</td>
+<td>protocol-suite</td>
+</tr>
+<tr>
+<td><code>dependency-audit-proto</code></td>
+<td>Dependency Audit Protocol</td>
+<td>protocol-suite</td>
+</tr>
+<tr>
+<td><code>dependency-trace-op</code></td>
+<td>Dependency Trace Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>dependency-val</code></td>
+<td>Dependency Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>failure-mode-recover-proto</code></td>
+<td>Failure Mode Recovery Protocol</td>
+<td>protocol-suite</td>
+</tr>
+<tr>
+<td><code>format-check-op</code></td>
+<td>Format Check Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>format-enum-anchor</code></td>
+<td>FormatEnum — Anchor</td>
+<td>anchor-suite</td>
+</tr>
+<tr>
+<td><code>format-val</code></td>
+<td>Format Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>gap-fill-proto</code></td>
+<td>Gap Filling Protocol</td>
+<td>protocol-suite</td>
+</tr>
+<tr>
+<td><code>gap-identify-op</code></td>
+<td>Gap Identification Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>group-create-proto</code></td>
+<td>Group Creation Protocol</td>
+<td>protocol-suite</td>
+</tr>
+<tr>
+<td><code>index-by-role</code></td>
+<td>Cross-Group Index by Role</td>
+<td>index-suite</td>
+</tr>
+<tr>
+<td><code>index-clarity-system</code></td>
+<td>Index — Clarity System</td>
+<td>index-suite</td>
+</tr>
+<tr>
+<td><code>index-core-engine</code></td>
+<td>Index — Core Engine</td>
+<td>index-suite</td>
+</tr>
+<tr>
+<td><code>index-master-registry</code></td>
+<td>Master Registry Index</td>
+<td>index-suite</td>
+</tr>
+<tr>
+<td><code>index-operator-suite</code></td>
+<td>Index — Operator Suite</td>
+<td>index-suite</td>
+</tr>
+<tr>
+<td><code>index-protocol-suite</code></td>
+<td>Index — Protocol Suite</td>
+<td>index-suite</td>
+</tr>
+<tr>
+<td><code>index-session-grammar</code></td>
+<td>Index — Session Grammar</td>
+<td>index-suite</td>
+</tr>
+<tr>
+<td><code>index-validator-suite</code></td>
+<td>Index — Validator Suite</td>
+<td>index-suite</td>
+</tr>
+<tr>
+<td><code>input-prepare-op</code></td>
+<td>Input Preparation Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>input-unit-grammar</code></td>
+<td>InputUnit Grammar</td>
+<td>grammar-suite</td>
+</tr>
+<tr>
+<td><code>intent-test-op</code></td>
+<td>Intent Field Test Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>intent-val</code></td>
+<td>Intent Fulfillment Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>invocation-val</code></td>
+<td>Invocation Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>layer-enum-anchor</code></td>
+<td>Layer Enum — Anchor</td>
+<td>anchor-suite</td>
+</tr>
+<tr>
+<td><code>lens-abstraction-level</code></td>
+<td>Abstraction Level Lens</td>
+<td>lens-suite</td>
+</tr>
+<tr>
+<td><code>lens-causal</code></td>
+<td>Causal Lens</td>
+<td>lens-suite</td>
+</tr>
+<tr>
+<td><code>lens-dependency</code></td>
+<td>Dependency Lens</td>
+<td>lens-suite</td>
+</tr>
+<tr>
+<td><code>lens-intervention</code></td>
+<td>Intervention Lens</td>
+<td>lens-suite</td>
+</tr>
+<tr>
+<td><code>lens-resolution-depth</code></td>
+<td>Resolution Depth Lens</td>
+<td>lens-suite</td>
+</tr>
+<tr>
+<td><code>lens-scope-boundary</code></td>
+<td>Scope Boundary Lens</td>
+<td>lens-suite</td>
+</tr>
+<tr>
+<td><code>lens-spectral-clarity</code></td>
+<td>Spectral Clarity Lens</td>
+<td>lens-suite</td>
+</tr>
+<tr>
+<td><code>lens-stakeholder</code></td>
+<td>Stakeholder Lens</td>
+<td>lens-suite</td>
+</tr>
+<tr>
+<td><code>lens-temporal</code></td>
+<td>Temporal Lens</td>
+<td>lens-suite</td>
+</tr>
+<tr>
+<td><code>lens-version</code></td>
+<td>Version Provenance Lens</td>
+<td>lens-suite</td>
+</tr>
+<tr>
+<td><code>manifest-complete-val</code></td>
+<td>Manifest Completeness Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>map-book-structure</code></td>
+<td>Map — Book Structure</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-canon-constraint-model</code></td>
+<td>Map — Canon Constraint Model</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-clarity-evaluation</code></td>
+<td>Map — Clarity Evaluation</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-dependency-graph</code></td>
+<td>Map — Dependency Graph</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-failure-mode-recovery</code></td>
+<td>Map — Failure Mode Recovery</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-group-relationships</code></td>
+<td>Map — Group Relationships</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-module-registry</code></td>
+<td>Map — Module Registry</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-operator-chain-patterns</code></td>
+<td>Map — Operator Chain Patterns</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-reader-journey</code></td>
+<td>Map — Reader Journey</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-role-layer-space</code></td>
+<td>Map — Role × Layer Space</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-rtt-pass-anatomy</code></td>
+<td>Map — RTT Pass Anatomy</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>map-session-lifecycle</code></td>
+<td>Map — Session Lifecycle</td>
+<td>map-suite</td>
+</tr>
+<tr>
+<td><code>module-author-op</code></td>
+<td>Module Authoring Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>module-author-proto</code></td>
+<td>Module Authoring Protocol</td>
+<td>protocol-suite</td>
+</tr>
+<tr>
+<td><code>module-id-grammar</code></td>
+<td>Module ID Grammar</td>
+<td>grammar-suite</td>
+</tr>
+<tr>
+<td><code>module-id-val</code></td>
+<td>Module ID Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>module-manifest-grammar</code></td>
+<td>Module Manifest Grammar</td>
+<td>grammar-suite</td>
+</tr>
+<tr>
+<td><code>nawderian-theorem-validator-pulses</code></td>
+<td>Nawderian Theorem of Validator Pulses</td>
+<td>clarity-system</td>
+</tr>
+<tr>
+<td><code>operator-invocation-grammar</code></td>
+<td>Operator Invocation Grammar</td>
+<td>grammar-suite</td>
+</tr>
+<tr>
+<td><code>output-package-op</code></td>
+<td>Output Packaging Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>output-unit-grammar</code></td>
+<td>OutputUnit Grammar</td>
+<td>grammar-suite</td>
+</tr>
+<tr>
+<td><code>pass-depth-extend-op</code></td>
+<td>Pass Depth Extension Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>registry-update-proto</code></td>
+<td>Registry Update Protocol</td>
+<td>protocol-suite</td>
+</tr>
+<tr>
+<td><code>role-enum-anchor</code></td>
+<td>Role Enum — Anchor</td>
+<td>anchor-suite</td>
+</tr>
+<tr>
+<td><code>rtt-anchor-definition</code></td>
+<td>RTT — Core Definition</td>
+<td>core-engine</td>
+</tr>
+<tr>
+<td><code>rtt-lens-causal</code></td>
+<td>RTT Lens — Causal</td>
+<td>core-engine</td>
+</tr>
+<tr>
+<td><code>rtt-lens-stakeholder</code></td>
+<td>RTT Lens — Stakeholder</td>
+<td>core-engine</td>
+</tr>
+<tr>
+<td><code>rtt-lens-temporal</code></td>
+<td>RTT Lens — Temporal</td>
+<td>core-engine</td>
+</tr>
+<tr>
+<td><code>rtt-map-pass-anatomy</code></td>
+<td>RTT Map — Pass Anatomy</td>
+<td>core-engine</td>
+</tr>
+<tr>
+<td><code>rtt-op-core</code></td>
+<td>RTT Operator — Core</td>
+<td>core-engine</td>
+</tr>
+<tr>
+<td><code>rtt-op-multi-domain</code></td>
+<td>RTT Operator — Multi-Domain</td>
+<td>core-engine</td>
+</tr>
+<tr>
+<td><code>rtt-op-recursive-extension</code></td>
+<td>RTT Operator — Recursive Extension</td>
+<td>core-engine</td>
+</tr>
+<tr>
+<td><code>scope-check-op</code></td>
+<td>Scope Check Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>scope-compliance-val</code></td>
+<td>Scope Compliance Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>scope-statement-grammar</code></td>
+<td>Scope Statement Grammar</td>
+<td>grammar-suite</td>
+</tr>
+<tr>
+<td><code>scope-test-op</code></td>
+<td>Scope Field Test Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>scope-val</code></td>
+<td>Scope Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>session-close-proto</code></td>
+<td>Session Closing Protocol</td>
+<td>protocol-suite</td>
+</tr>
+<tr>
+<td><code>session-field-test-op</code></td>
+<td>Session Field Test Operator</td>
+<td>operator-suite</td>
+</tr>
+<tr>
+<td><code>session-grammar-anchor</code></td>
+<td>Session Grammar — Anchor</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-complete-val</code></td>
+<td>Session Grammar Completeness Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-active-modules</code></td>
+<td>Session Field — active_modules</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-input</code></td>
+<td>Session Field — input</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-intent</code></td>
+<td>Session Field — intent</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-layer-context</code></td>
+<td>Session Field — layer_context</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-output-format</code></td>
+<td>Session Field — output_format</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-role-context</code></td>
+<td>Session Field — role_context</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-scope</code></td>
+<td>Session Field — scope</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-session-id</code></td>
+<td>Session Field — session_id</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-field-validator</code></td>
+<td>Session Field — validator</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-proto-init</code></td>
+<td>Session Grammar — Initialization Protocol</td>
+<td>session-grammar</td>
+</tr>
+<tr>
+<td><code>session-grammar-spec</code></td>
+<td>Session Grammar Specification</td>
+<td>grammar-suite</td>
+</tr>
+<tr>
+<td><code>session-init-proto</code></td>
+<td>Session Initialization Protocol</td>
+<td>protocol-suite</td>
+</tr>
+<tr>
+<td><code>session-record-val</code></td>
+<td>Session Record Validator</td>
+<td>validator-suite</td>
+</tr>
+<tr>
+<td><code>session-resume-proto</code></td>
+<td>Session Resumption Protocol</td>
+<td>protocol-suite</td>
+</tr>
+<tr>
+<td><code>validator-assessment-grammar</code></td>
+<td>ValidatorAssessment Grammar</td>
+<td>grammar-suite</td>
+</tr>
+<tr>
+<td><code>version-increment-proto</code></td>
+<td>Version Increment Protocol</td>
+<td>protocol-suite</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="registry-metadata">Registry Metadata</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total modules</td>
+<td>118</td>
+</tr>
+<tr>
+<td>Active modules</td>
+<td>118</td>
+</tr>
+<tr>
+<td>Draft modules</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Deprecated modules</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Registry version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Last updated</td>
+<td>2026-09-25</td>
+</tr>
+<tr>
+<td>Maintained by</td>
+<td>Nawder Loswin</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>When the registry changes, the version stamp increments per the <code>version-increment-proto</code>. Always check the version stamp when returning to the registry after time away. The first thing to verify is whether any module you rely on has been incremented since your last session.</p>
+</blockquote>
+<hr>
+<p>→ <a href="./index">Return to Book Index</a>
+→ <a href="./sessions">Browse the Canonical Session Library</a>
+→ <a href="../contributing">Contributing Guidelines</a></p>
+<hr>
+<p><em>TriadicFrameworks Book — <code>/docs/book/registry.md</code></em>
+<em>Authored by Nawder Loswin. AI-augmented authorship. All rights reserved.</em></p>
+  </main>
+</body>
+</html>

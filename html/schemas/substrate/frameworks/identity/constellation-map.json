@@ -1,0 +1,87 @@
+{
+  "constellation": "substrate-runtime",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "nodes": [
+    { "id": "execution_engine", "label": "Triadic Execution Engine" },
+    { "id": "atlas_sync", "label": "Atlas Synchronization Fabric" },
+    { "id": "continuity_field", "label": "Substrate Continuity Field" },
+    { "id": "resonance_stabilizer", "label": "Epochal Resonance Stabilizer" },
+    { "id": "epochal_propagation", "label": "Epochal Propagation Engine" },
+    { "id": "coupling_regulator", "label": "Resonance–Drift Coupling Regulator" },
+    { "id": "invariance_kernel", "label": "Substrate Invariance Kernel" },
+    { "id": "runtime_monitor", "label": "Triadic Runtime Monitor" }
+  ],
+
+  "edges": [
+    {
+      "from": "execution_engine",
+      "to": "atlas_sync",
+      "type": "flow",
+      "description": "Execution state feeds atlas synchronization."
+    },
+    {
+      "from": "atlas_sync",
+      "to": "continuity_field",
+      "type": "flow",
+      "description": "Synchronized atlas informs continuity guarantees."
+    },
+    {
+      "from": "continuity_field",
+      "to": "resonance_stabilizer",
+      "type": "flow",
+      "description": "Continuity constraints shape resonance stability."
+    },
+    {
+      "from": "resonance_stabilizer",
+      "to": "epochal_propagation",
+      "type": "flow",
+      "description": "Stable resonance enables epochal propagation."
+    },
+    {
+      "from": "epochal_propagation",
+      "to": "coupling_regulator",
+      "type": "flow",
+      "description": "Propagation cycles feed coupling regulation."
+    },
+    {
+      "from": "coupling_regulator",
+      "to": "invariance_kernel",
+      "type": "flow",
+      "description": "Coupling behavior informs invariance enforcement."
+    },
+    {
+      "from": "invariance_kernel",
+      "to": "runtime_monitor",
+      "type": "flow",
+      "description": "Invariance state is observed by the runtime monitor."
+    },
+
+    /* Feedback loops */
+    {
+      "from": "runtime_monitor",
+      "to": "execution_engine",
+      "type": "feedback",
+      "description": "Monitor telemetry feeds back into execution."
+    },
+    {
+      "from": "runtime_monitor",
+      "to": "epochal_propagation",
+      "type": "feedback",
+      "description": "Monitor cycles adjust propagation behavior."
+    },
+    {
+      "from": "runtime_monitor",
+      "to": "coupling_regulator",
+      "type": "feedback",
+      "description": "Monitor alerts influence coupling regulation."
+    }
+  ],
+
+  "meta": {
+    "canonical": true,
+    "triadic_era": "R5",
+    "notes": "Graph representation of the Substrate Runtime Constellation. Defines nodes and edges for automated tooling and constellation visualization."
+  }
+}

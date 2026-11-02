@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/constellation/substrate-runtime-constellation.schema.json.md">
+  <title>🌌 substrate-runtime-constellation.schema.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/constellation/substrate-runtime-constellation.schema.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/constellation/substrate-runtime-constellation.schema.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="substrate-runtime-constellationschemajson">🌌 <strong>substrate-runtime-constellation.schema.json</strong></h1>
+<h3 id="root-json-schema-for-the-substrate-runtime-constellation"><em>Root JSON Schema for the Substrate Runtime Constellation</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;title&quot;: &quot;Substrate Runtime Constellation Schema&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;properties&quot;: {
+    &quot;runtime_constellation&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;const&quot;: &quot;substrate-runtime-constellation&quot;
+    },
+
+    &quot;version&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+
+    &quot;generated&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;ISO date of generation&quot;
+    },
+
+    &quot;engines&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;execution&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;cycle_start&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;cycle_end&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;state_update&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;ignition_trigger&quot;: { &quot;type&quot;: &quot;object&quot; }
+          }
+        },
+        &quot;atlas&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;sync_event&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;navigation_event&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;interaction_event&quot;: { &quot;type&quot;: &quot;object&quot; }
+          }
+        },
+        &quot;epoch&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;epoch_transition&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;resonance_shift&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;propagation_cycle&quot;: { &quot;type&quot;: &quot;object&quot; }
+          }
+        },
+        &quot;coupling&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;drift_spike&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;resonance_surge&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;coupling_instability&quot;: { &quot;type&quot;: &quot;object&quot; }
+          }
+        },
+        &quot;invariance&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;invariance_break&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;invariance_restore&quot;: { &quot;type&quot;: &quot;object&quot; }
+          }
+        },
+        &quot;monitor&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;telemetry_packet&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;anomaly_alert&quot;: { &quot;type&quot;: &quot;object&quot; },
+            &quot;cycle_report&quot;: { &quot;type&quot;: &quot;object&quot; }
+          }
+        }
+      }
+    },
+
+    &quot;operators&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;patternProperties&quot;: {
+        &quot;^[a-zA-Z0-9_-]+$&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;patternProperties&quot;: {
+            &quot;^[a-zA-Z0-9_-]+$&quot;: {
+              &quot;type&quot;: &quot;object&quot;,
+              &quot;properties&quot;: {
+                &quot;opcode&quot;: { &quot;type&quot;: &quot;string&quot; },
+                &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; }
+              },
+              &quot;required&quot;: [&quot;opcode&quot;]
+            }
+          }
+        }
+      }
+    },
+
+    &quot;hooks&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;patternProperties&quot;: {
+        &quot;^[a-zA-Z0-9_-]+$&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; },
+            &quot;severity&quot;: { &quot;type&quot;: &quot;string&quot; },
+            &quot;constraints&quot;: {
+              &quot;type&quot;: &quot;array&quot;,
+              &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+            }
+          }
+        }
+      }
+    },
+
+    &quot;meta&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;canonical&quot;: { &quot;type&quot;: &quot;boolean&quot; },
+        &quot;triadic_era&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;notes&quot;: { &quot;type&quot;: &quot;string&quot; }
+      }
+    }
+  },
+
+  &quot;required&quot;: [
+    &quot;runtime_constellation&quot;,
+    &quot;version&quot;,
+    &quot;engines&quot;,
+    &quot;operators&quot;,
+    &quot;hooks&quot;
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="why-this-schema-is-correct">⭐ Why this schema is correct</h2>
+<ul>
+<li>Matches the structure of your constellation engines (execution, atlas, epoch, coupling, invariance, monitor).  </li>
+<li>Validates the hook registry and operator registry you already generated.  </li>
+<li>Uses your canonical substrate schema pattern (patternProperties, required blocks, const identity).  </li>
+<li>Fully aligned with the empty file you’re editing right now.  </li>
+<li>Silent‑release compatible and ready for commit.</li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "name": "RTT/Inside Enterprise Identity Substrate",
+  "id": "rtt.inside.enterprise.identity_substrate",
+  "version": "0.1.0",
+  "status": "experimental",
+
+  "summary": "Minimal, substrate-aware enterprise identity module (Zero–Seven) for RTT/Inside.",
+  "description": "Demonstrates triadic substrate semantics across enterprise identity substrates: local, AD, LDAP, DNS SRV, Kerberos, service discovery, modern identity, cloud directories, and zero-trust.",
+
+  "engine": {
+    "profile": "RTT/Inside",
+    "layer": "substrate",
+    "mode": "enterprise_identity"
+  },
+
+  "identity_substrate": {
+    "layers": [
+      { "index": 0, "name": "local_identity_substrate", "path": "identity_substrate/0_local" },
+      { "index": 1, "name": "active_directory", "path": "identity_substrate/1_active_directory" },
+      { "index": 2, "name": "ldap", "path": "identity_substrate/2_ldap" },
+      { "index": 3, "name": "dns_srv", "path": "identity_substrate/3_dns_srv" },
+      { "index": 4, "name": "kerberos_realms", "path": "identity_substrate/4_kerberos" },
+      { "index": 5, "name": "service_discovery_frameworks", "path": "identity_substrate/5_service_discovery" },
+      { "index": 6, "name": "modern_identity_substrates", "path": "identity_substrate/6_modern_identity" },
+      { "index": 7, "name": "cloud_directory_services", "path": "identity_substrate/7_cloud_directory" },
+      { "index": 8, "name": "zero_trust_identity_models", "path": "identity_substrate/8_zero_trust" }
+    ]
+  },
+
+  "substrate_extensions": {
+    "clarity": {
+      "path": "substrate_extensions/clarity",
+      "schema": "substrate_extensions/clarity/schema.json"
+    },
+    "regime": {
+      "path": "substrate_extensions/regime",
+      "schema": "substrate_extensions/regime/schema.json"
+    },
+    "triad_roles": {
+      "path": "substrate_extensions/triad_roles",
+      "schema": "substrate_extensions/triad_roles/schema.json"
+    },
+    "coherence_envelopes": {
+      "path": "substrate_extensions/coherence_envelopes",
+      "schema": "substrate_extensions/coherence_envelopes/schema.json"
+    }
+  },
+
+  "examples": {
+    "minimal_enterprise": {
+      "path": "examples/minimal_enterprise",
+      "description": "Small, end-to-end identity substrate flow across selected layers."
+    },
+    "identity_flow": {
+      "path": "examples/identity_flow",
+      "description": "Triadic identity resolution and regime tagging example."
+    },
+    "substrate_negotiation": {
+      "path": "examples/substrate_negotiation",
+      "description": "Demonstrates substrate-aware negotiation between services and identity substrates."
+    }
+  },
+
+  "rfc": {
+    "substrate_awareness": {
+      "id": "rfc-substrate-awareness",
+      "path": "docs/rfc/rfc-substrate-awareness.md",
+      "anchors": [
+        "RFC 8095",
+        "RFC 8923",
+        "HTTP Semantics"
+      ]
+    }
+  },
+
+  "suite": {
+    "tools": [
+      { "name": "rtt-inside-identify", "path": "tools/rtt-inside-identify" },
+      { "name": "rtt-inside-clarity", "path": "tools/rtt-inside-clarity" },
+      { "name": "rtt-inside-regime", "path": "tools/rtt-inside-regime" },
+      { "name": "rtt-inside-triad", "path": "tools/rtt-inside-triad" },
+      { "name": "rtt-inside-coherence", "path": "tools/rtt-inside-coherence" },
+      { "name": "rtt-inside-discovery", "path": "tools/rtt-inside-discovery" },
+      { "name": "rtt-inside-negotiation", "path": "tools/rtt-inside-negotiation" },
+      { "name": "rtt-inside-enterprise", "path": "tools/rtt-inside-enterprise" }
+    ]
+  },
+
+  "tags": [
+    "triadic",
+    "RTT/Inside",
+    "enterprise",
+    "identity",
+    "substrate",
+    "clarity",
+    "regime",
+    "zero_trust"
+  ]
+}

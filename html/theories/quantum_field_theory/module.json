@@ -1,0 +1,104 @@
+{
+  "ai.module": "quantum_field_theory",
+  "ai.version": "1.0",
+  "ai.purpose": "Provide a regime-aware, excitation-first interface to Quantum Field Theory as a coherence grammar of operators and symmetries.",
+  "ai.keywords": [
+    "quantum field theory",
+    "qft",
+    "excitations",
+    "operators",
+    "propagators",
+    "symmetries",
+    "standard model",
+    "triadic frameworks"
+  ],
+
+  "identity": {
+    "name": "Quantum Field Theory",
+    "category": "Scientific Theory",
+    "summary": "A coherence-level excitation grammar describing matter and interactions through operators, propagators, and symmetries.",
+    "regime": ["R2→R3", "R2", "R3"],
+    "status": "canon-ready"
+  },
+
+  "lineage": {
+    "originators": [
+      "Paul Dirac",
+      "Richard Feynman",
+      "Julian Schwinger",
+      "Sin-Itiro Tomonaga",
+      "Steven Weinberg"
+    ],
+    "historical_period": "20th Century",
+    "source_domain": "Quantum Mechanics and Relativistic Field Theory",
+    "related_theories": [
+      "quantum_mechanics",
+      "special_relativity",
+      "standard_model",
+      "information_theory"
+    ],
+    "notes": "QFT describes excitations and interactions as coherence patterns. Fields are mathematical grammars, not physical substances."
+  },
+
+  "operators": {
+    "primary": [
+      "creation_operator",
+      "annihilation_operator",
+      "propagator",
+      "lagrangian_density",
+      "symmetry_generator"
+    ],
+    "secondary": [
+      "renormalization",
+      "vacuum_structure",
+      "interaction_vertex",
+      "path_integral"
+    ],
+    "description": "Operators describe how excitations arise, propagate, and interact under symmetry and coherence constraints."
+  },
+
+  "drift": {
+    "risks": [
+      "treating fields as physical substances",
+      "interpreting particles as tiny objects",
+      "assuming vacuum is a literal medium",
+      "overextending QFT into non-coherent regimes"
+    ],
+    "boundaries": [
+      "QFT is a coherence grammar, not ontology",
+      "excitations are regime-dependent",
+      "renormalization is a coherence repair mechanism",
+      "fields lose meaning outside R2→R3"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "unitarity",
+      "locality (within regime)",
+      "symmetry conservation",
+      "stable excitation spectra"
+    ],
+    "failure_modes": [
+      "non-renormalizable divergences",
+      "symmetry breaking instabilities",
+      "strong-coupling decoherence",
+      "regime collapse at small scales"
+    ]
+  },
+
+  "cross_module": {
+    "supports": [
+      "standard_model",
+      "particle_physics",
+      "quantum_mechanics",
+      "cosmology"
+    ],
+    "supported_by": [
+      "special_relativity",
+      "information_theory",
+      "regime_awareness"
+    ],
+    "integration_notes": "QFT integrates cleanly with RTT engines as a coherence-level excitation grammar operating in R2→R3 quantum-relativistic regimes."
+  }
+}

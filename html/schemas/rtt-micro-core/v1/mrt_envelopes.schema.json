@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-micro-core/v1/mrt_envelopes.schema.json",
+  "title": "mrt_envelopes",
+  "type": "object",
+  "properties": {
+    "timing_envelope": {
+      "type": "object",
+      "description": "Τμ — timing envelope",
+      "properties": {
+        "sequence": {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      }
+    },
+    "actuation_envelope": {
+      "type": "object",
+      "description": "Αμ — actuation envelope",
+      "properties": {
+        "sequence": {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      }
+    },
+    "stability_envelope": {
+      "type": "object",
+      "description": "Σμ — stability envelope",
+      "properties": {
+        "sequence": {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

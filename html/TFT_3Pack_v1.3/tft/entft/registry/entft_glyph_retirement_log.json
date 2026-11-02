@@ -1,0 +1,15 @@
+{
+  "glyph_retirement_log": [
+    {
+      "retirement_id": "retire-001",
+      "glyph_id": "glyph:grovebloom-003",
+      "symbol": "🌴",
+      "retired_by": "Aria Vex",
+      "scroll": "scroll_curriculum_validator_hooks.md",
+      "timestamp": "2025-10-04T23:40:00Z",
+      "reason": "Overlay drift and validator misalignment",
+      "flame_grade": "🔵 Planetary",
+      "echo": "glyph:grovebloom-003 sealed by Aria Vex — Overlay drift and validator misalignment"
+    }
+  ]
+}

@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/rtt-core/README.md">
+  <title>📘 RTT‑Core Schema Set (v1)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/rtt-core/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/rtt-core/README.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_rtt_core_" src="https://github.com/user-attachments/assets/fd96e223-6a85-4a72-99a9-80c47524ff14" /></p>
+<h1 id="rttcore-schema-set-v1">📘 <strong>RTT‑Core Schema Set (v1)</strong></h1>
+<h3 id="resonance-structural-awareness-dimensional-interface-core-specification"><em>Resonance Structural Awareness Dimensional Interface — Core Specification</em></h3>
+<p>This folder contains the <strong>canonical, domain‑agnostic JSON Schemas</strong> for the RTT‑Inside / RSADI Core.<br>
+All industry extensions (coal, ATC, deep sea, RSADI‑GD, etc.) <strong>MUST</strong> build on these schemas without altering their required fields or semantics.</p>
+<p>These schemas define the <strong>fundamental data structures</strong> used by all resonance‑aware systems:</p>
+<ul>
+<li>field sampling  </li>
+<li>zone aggregation  </li>
+<li>node identity  </li>
+<li>alerting  </li>
+<li>route suggestion  </li>
+<li>multi‑agent clarity/drift interpretation  </li>
+</ul>
+<p>They form the stable substrate that every RTT‑Inside variant depends on.</p>
+<hr>
+<h2 id="folder-contents">📂 Folder Contents</h2>
+<pre><code>ResonanceFieldSample.schema.json
+ResonanceZoneState.schema.json
+NodeDescriptor.schema.json
+ResonanceAlert.schema.json
+RouteSuggestion.schema.json
+README.md   ← (this file)
+</code></pre>
+<p>Each schema is written in <strong>JSON Schema Draft 2020‑12</strong>, uses <strong>UUIDs</strong>, <strong>ISO‑8601 timestamps</strong>, and <strong>SI units</strong>, and is designed for long‑term stability.</p>
+<hr>
+<h2 id="core-principles">🧱 Core Principles</h2>
+<p>RTT‑Core schemas follow these invariants:</p>
+<h3 id="1-domainneutral"><strong>1. Domain‑neutral</strong></h3>
+<p>No coal‑specific, ATC‑specific, or deep‑sea‑specific fields appear here.<br>
+All domain logic lives in <strong>extensions</strong>, not in the core.</p>
+<h3 id="2-extensible"><strong>2. Extensible</strong></h3>
+<p>Every schema includes an <code>extensions</code> object:</p>
+<pre><code class="language-json">&quot;extensions&quot;: {
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;additionalProperties&quot;: true
+}
+</code></pre>
+<p>Domain modules attach their fields here:</p>
+<pre><code class="language-json">&quot;extensions&quot;: {
+  &quot;coal&quot;: { ... },
+  &quot;atc&quot;: { ... },
+  &quot;deepsea&quot;: { ... }
+}
+</code></pre>
+<h3 id="3-stable"><strong>3. Stable</strong></h3>
+<p>Core fields <strong>must not be renamed, removed, or repurposed</strong>.<br>
+Extensions may add fields but never override core meanings.</p>
+<h3 id="4-deterministic"><strong>4. Deterministic</strong></h3>
+<p>All numeric fields use explicit units and ranges.<br>
+All timestamps use ISO‑8601 UTC.<br>
+All IDs use UUIDv4.</p>
+<hr>
+<h2 id="schema-overview">🧩 Schema Overview</h2>
+<h3 id="1-resonancefieldsample"><strong>1. ResonanceFieldSample</strong></h3>
+<p>Represents a single environmental measurement:</p>
+<ul>
+<li>clarity  </li>
+<li>stress  </li>
+<li>vibration  </li>
+<li>gas (optional)  </li>
+<li>drift vector  </li>
+<li>location  </li>
+<li>timestamp  </li>
+<li>node identity  </li>
+</ul>
+<p>This is the atomic unit of resonance sensing.</p>
+<hr>
+<h3 id="2-resonancezonestate"><strong>2. ResonanceZoneState</strong></h3>
+<p>Aggregates multiple field samples into a zone‑level interpretation:</p>
+<ul>
+<li>clarity score  </li>
+<li>stress hint  </li>
+<li>composite risk  </li>
+<li>drift vector  </li>
+<li>source sample IDs  </li>
+</ul>
+<p>Zones are logical partitions (e.g., “Section C”, “Runway 12”, “Deck 3”).</p>
+<hr>
+<h3 id="3-nodedescriptor"><strong>3. NodeDescriptor</strong></h3>
+<p>Describes a node in the mesh:</p>
+<ul>
+<li>node type (fixed, wearable, mobile, vehicle)  </li>
+<li>domain (coal, atc, deepsea, etc.)  </li>
+<li>capabilities  </li>
+<li>firmware version  </li>
+<li>location hint  </li>
+</ul>
+<p>Nodes are the backbone of resonance‑aware meshes.</p>
+<hr>
+<h3 id="4-resonancealert"><strong>4. ResonanceAlert</strong></h3>
+<p>Represents a safety or structural alert:</p>
+<ul>
+<li>severity  </li>
+<li>type (structural, gas, vibration, comms)  </li>
+<li>summary + details  </li>
+<li>recommended actions  </li>
+<li>source nodes  </li>
+</ul>
+<p>Extensions add domain‑specific alert metadata (e.g., collapse vectors).</p>
+<hr>
+<h3 id="5-routesuggestion"><strong>5. RouteSuggestion</strong></h3>
+<p>Represents a clarity‑aware navigation path:</p>
+<ul>
+<li>from/to zones  </li>
+<li>clarity profile  </li>
+<li>risk level  </li>
+<li>instructions  </li>
+</ul>
+<p>Used for evacuation, routing, and multi‑agent coordination.</p>
+<hr>
+<h2 id="how-extensions-should-be-structured">🧬 How Extensions Should Be Structured</h2>
+<p>All domain‑specific schemas must follow this pattern:</p>
+<h3 id="1-never-modify-core-schemas"><strong>1. Never modify core schemas</strong></h3>
+<p>Extensions <strong>must not</strong>:</p>
+<ul>
+<li>change required fields  </li>
+<li>redefine field meanings  </li>
+<li>alter numeric ranges  </li>
+<li>override enums  </li>
+</ul>
+<h3 id="2-add-fields-only-inside-extensions"><strong>2. Add fields only inside <code>extensions</code></strong></h3>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;extensions&quot;: {
+    &quot;coal&quot;: {
+      &quot;methane_ppm&quot;: 1200,
+      &quot;roof_convergence_mm&quot;: 3.2
+    }
+  }
+}
+</code></pre>
+<h3 id="3-use-separate-schema-files"><strong>3. Use separate schema files</strong></h3>
+<p>Each domain gets its own folder:</p>
+<pre><code>docs/schemas/rtt-coal/
+docs/schemas/rtt-atc/
+docs/schemas/rtt-deepsea/
+docs/schemas/rsadi-gd/
+</code></pre>
+<h3 id="4-use-clear-naming"><strong>4. Use clear naming</strong></h3>
+<p>Follow this pattern:</p>
+<pre><code>&lt;Domain&gt;&lt;CoreObject&gt;Extension.schema.json
+</code></pre>
+<p>Examples:</p>
+<ul>
+<li><code>CoalFieldSampleExtension.schema.json</code></li>
+<li><code>ATCZoneExtension.schema.json</code></li>
+<li><code>DeepSeaAlertExtension.schema.json</code></li>
+</ul>
+<h3 id="5-never-break-compatibility"><strong>5. Never break compatibility</strong></h3>
+<p>Extensions must remain optional.<br>
+Core validators must still accept the object without extensions.</p>
+<hr>
+<h2 id="recommended-workflow-for-contributors">🧭 Recommended Workflow for Contributors</h2>
+<ol>
+<li>
+<p><strong>Start with a core object</strong><br>
+   e.g., <code>ResonanceFieldSample</code>.</p>
+</li>
+<li>
+<p><strong>Identify domain‑specific needs</strong><br>
+   e.g., methane, pillar load, runway turbulence, hull pressure.</p>
+</li>
+<li>
+<p><strong>Create a domain extension schema</strong><br>
+   Place it in the appropriate folder.</p>
+</li>
+<li>
+<p><strong>Attach extension fields under <code>extensions.&lt;domain&gt;</code></strong><br>
+   Never modify the core.</p>
+</li>
+<li>
+<p><strong>Validate using JSON Schema tools</strong><br>
+   Ensure both core and extension schemas pass.</p>
+</li>
+</ol>
+<hr>
+<h2 id="why-this-matters">🛡️ Why This Matters</h2>
+<p>A stable, invariant core ensures:</p>
+<ul>
+<li>cross‑industry interoperability  </li>
+<li>predictable agent behavior  </li>
+<li>safe multi‑domain deployments  </li>
+<li>clean separation of physics vs. domain logic  </li>
+<li>long‑term maintainability  </li>
+</ul>
+<p>This is the backbone of the entire RSADI ecosystem.</p>
+<hr>
+<h1 id="folder-structure-docsschemasrtt-core">📦 <strong>Folder Structure: <code>docs/schemas/rtt-core/</code></strong></h1>
+<pre><code>docs/
+ └── schemas/
+      └── rtt-core/
+            ├── ResonanceFieldSample.schema.json
+            ├── ResonanceZoneState.schema.json
+            ├── NodeDescriptor.schema.json
+            ├── ResonanceAlert.schema.json
+            └── RouteSuggestion.schema.json
+</code></pre>
+<p>These five schemas <strong>are the RSADI Core</strong>.<br>
+Everything else — coal, ATC, deep sea, RSADI‑GD, etc. — extends these.</p>
+<hr>
+<h1 id="1-resonancefieldsampleschemajson">📘 <strong>1. ResonanceFieldSample.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rtt-core/v1/ResonanceFieldSample.schema.json&quot;,
+  &quot;title&quot;: &quot;ResonanceFieldSample&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;sample_id&quot;,
+    &quot;node_id&quot;,
+    &quot;mesh_id&quot;,
+    &quot;timestamp&quot;,
+    &quot;location&quot;,
+    &quot;clarity_score&quot;,
+    &quot;stress_hint&quot;,
+    &quot;vibration&quot;,
+    &quot;drift_vector&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;sample_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+    &quot;node_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+    &quot;mesh_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+    &quot;timestamp&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; },
+
+    &quot;location&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;frame&quot;, &quot;x&quot;, &quot;y&quot;, &quot;z&quot;, &quot;units&quot;],
+      &quot;properties&quot;: {
+        &quot;frame&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;pattern&quot;: &quot;^(local|wgs84|custom:.+)$&quot;
+        },
+        &quot;x&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;y&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;z&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;units&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;m&quot;] }
+      }
+    },
+
+    &quot;clarity_score&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0, &quot;maximum&quot;: 255 },
+    &quot;stress_hint&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0, &quot;maximum&quot;: 255 },
+
+    &quot;vibration&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;rms&quot;],
+      &quot;properties&quot;: {
+        &quot;rms&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;minimum&quot;: 0 },
+        &quot;bands&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;required&quot;: [&quot;freq_hz&quot;, &quot;amp&quot;],
+            &quot;properties&quot;: {
+              &quot;freq_hz&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;minimum&quot;: 0 },
+              &quot;amp&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;minimum&quot;: 0 }
+            }
+          }
+        }
+      }
+    },
+
+    &quot;gas&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;type&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;ppm&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;minimum&quot;: 0 }
+      }
+    },
+
+    &quot;temperature_c&quot;: { &quot;type&quot;: &quot;number&quot; },
+    &quot;pressure_pa&quot;: { &quot;type&quot;: &quot;number&quot; },
+
+    &quot;drift_vector&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;dx&quot;, &quot;dy&quot;, &quot;dz&quot;, &quot;magnitude&quot;, &quot;units&quot;],
+      &quot;properties&quot;: {
+        &quot;dx&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;dy&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;dz&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;magnitude&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;minimum&quot;: 0 },
+        &quot;units&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;1/s&quot;] }
+      }
+    },
+
+    &quot;tags&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+
+    &quot;extensions&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: true
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="2-resonancezonestateschemajson">📘 <strong>2. ResonanceZoneState.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rtt-core/v1/ResonanceZoneState.schema.json&quot;,
+  &quot;title&quot;: &quot;ResonanceZoneState&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;zone_id&quot;,
+    &quot;mesh_id&quot;,
+    &quot;timestamp&quot;,
+    &quot;clarity_score&quot;,
+    &quot;stress_hint&quot;,
+    &quot;composite_risk&quot;,
+    &quot;drift_vector&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;zone_id&quot;: { &quot;type&quot;: &quot;string&quot; },
+    &quot;mesh_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+    &quot;timestamp&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; },
+
+    &quot;clarity_score&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0, &quot;maximum&quot;: 255 },
+    &quot;stress_hint&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0, &quot;maximum&quot;: 255 },
+
+    &quot;gas_risk&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;critical&quot;]
+    },
+
+    &quot;vibration_risk&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;critical&quot;]
+    },
+
+    &quot;composite_risk&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [&quot;normal&quot;, &quot;watch&quot;, &quot;degrading&quot;, &quot;evacuate&quot;, &quot;no-entry&quot;]
+    },
+
+    &quot;drift_vector&quot;: {
+      &quot;$ref&quot;: &quot;ResonanceFieldSample.schema.json#/properties/drift_vector&quot;
+    },
+
+    &quot;source_samples&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; }
+    },
+
+    &quot;extensions&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: true
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="3-nodedescriptorschemajson">📘 <strong>3. NodeDescriptor.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rtt-core/v1/NodeDescriptor.schema.json&quot;,
+  &quot;title&quot;: &quot;NodeDescriptor&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [&quot;node_id&quot;, &quot;mesh_id&quot;, &quot;type&quot;, &quot;domain&quot;, &quot;capabilities&quot;],
+  &quot;properties&quot;: {
+    &quot;node_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+    &quot;mesh_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+
+    &quot;type&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [&quot;fixed&quot;, &quot;wearable&quot;, &quot;mobile&quot;, &quot;vehicle&quot;]
+    },
+
+    &quot;domain&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+    &quot;capabilities&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+    },
+
+    &quot;location_hint&quot;: {
+      &quot;$ref&quot;: &quot;ResonanceFieldSample.schema.json#/properties/location&quot;
+    },
+
+    &quot;firmware&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;rtt_core_version&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;vendor_variant&quot;: { &quot;type&quot;: &quot;string&quot; }
+      }
+    },
+
+    &quot;extensions&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: true
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="4-resonancealertschemajson">📘 <strong>4. ResonanceAlert.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rtt-core/v1/ResonanceAlert.schema.json&quot;,
+  &quot;title&quot;: &quot;ResonanceAlert&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;alert_id&quot;,
+    &quot;mesh_id&quot;,
+    &quot;zone_id&quot;,
+    &quot;timestamp&quot;,
+    &quot;severity&quot;,
+    &quot;type&quot;,
+    &quot;summary&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;alert_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+    &quot;mesh_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+    &quot;zone_id&quot;: { &quot;type&quot;: &quot;string&quot; },
+    &quot;timestamp&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; },
+
+    &quot;severity&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [&quot;info&quot;, &quot;warning&quot;, &quot;major&quot;, &quot;critical&quot;]
+    },
+
+    &quot;type&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [&quot;structural&quot;, &quot;gas&quot;, &quot;vibration&quot;, &quot;comms&quot;]
+    },
+
+    &quot;summary&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+    &quot;details&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: true
+    },
+
+    &quot;recommended_actions&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+    },
+
+    &quot;source_nodes&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; }
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="5-routesuggestionschemajson">📘 <strong>5. RouteSuggestion.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rtt-core/v1/RouteSuggestion.schema.json&quot;,
+  &quot;title&quot;: &quot;RouteSuggestion&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;route_id&quot;,
+    &quot;mesh_id&quot;,
+    &quot;from_zone&quot;,
+    &quot;to_zone&quot;,
+    &quot;timestamp&quot;,
+    &quot;clarity_profile&quot;,
+    &quot;risk_level&quot;,
+    &quot;instructions&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;route_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+    &quot;mesh_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+
+    &quot;from_zone&quot;: { &quot;type&quot;: &quot;string&quot; },
+    &quot;to_zone&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+    &quot;timestamp&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; },
+
+    &quot;clarity_profile&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;required&quot;: [&quot;zone_id&quot;, &quot;clarity_score&quot;],
+        &quot;properties&quot;: {
+          &quot;zone_id&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;clarity_score&quot;: {
+            &quot;type&quot;: &quot;integer&quot;,
+            &quot;minimum&quot;: 0,
+            &quot;maximum&quot;: 255
+          }
+        }
+      }
+    },
+
+    &quot;risk_level&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;critical&quot;]
+    },
+
+    &quot;instructions&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+    },
+
+    &quot;extensions&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: true
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="these-are-now-your-canonical-rsadi-core-schemas">🎯 <strong>These are now your canonical RSADI Core Schemas</strong></h1>
+<p>They are:</p>
+<ul>
+<li><strong>strict</strong>  </li>
+<li><strong>clean</strong>  </li>
+<li><strong>domain‑neutral</strong>  </li>
+<li><strong>fully extensible</strong>  </li>
+<li><strong>RFC‑ready</strong>  </li>
+<li><strong>aligned with every doc you’ve built so far</strong>  </li>
+</ul>
+<p>Once these are in place, every other domain (coal, ATC, deep sea, RSADI‑GD, etc.) can safely extend them without breaking invariants.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/unified_operator_diagram.svg.md">
+  <title>Unified Operator Diagram — SVG Specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/unified_operator_diagram.svg.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/unified_operator_diagram.svg.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research__Unified_Operator_Diagram_svg_" src="https://github.com/user-attachments/assets/56f54b81-5f7d-46fd-95d7-037fe8d6f9d8" /></p>
+<h1 id="unified-operator-diagram-svg-specification">Unified Operator Diagram — SVG Specification</h1>
+<h2 id="file">File</h2>
+<ul>
+<li>Name: <code>unified_operator_diagram.svg</code></li>
+<li>ViewBox: <code>0 0 1600 900</code></li>
+<li>Background: linearGradient (black → indigo → violet)</li>
+</ul>
+<h2 id="layers">Layers</h2>
+<ul>
+<li><strong>Layer 1:</strong> Background gradient  </li>
+<li><strong>Layer 2:</strong> Core triad + asymmetry  </li>
+<li><strong>Layer 3:</strong> Three operator branches  </li>
+<li><strong>Layer 4:</strong> Arrival substrate node  </li>
+<li><strong>Layer 5:</strong> Lostational overlay + labels</li>
+</ul>
+<hr>
+<h2 id="core-elements-svg-primitives">Core Elements (SVG primitives)</h2>
+<h3 id="1-core-identity-kernel">1. Core Identity Kernel</h3>
+<ul>
+<li><code>&lt;circle cx="800" cy="200" r="120" fill="none" stroke="#888" stroke-width="2"/&gt;</code></li>
+<li>Three 120° sectors:</li>
+<li>Use <code>&lt;path&gt;</code> arcs from center (800,200) with angles: 0–120, 120–240, 240–360</li>
+<li>Outer asymmetry ring:</li>
+<li><code>&lt;circle cx="800" cy="200" r="135" fill="none" stroke="#AA66FF" stroke-width="4"/&gt;</code></li>
+<li>Text:</li>
+<li><code>T = (s, c, u)</code> at <code>(800, 60)</code></li>
+<li><code>A(T) = 0.01</code> at <code>(800, 90)</code></li>
+</ul>
+<hr>
+<h3 id="2-replicators-branch-left">2. Replicators Branch (Left)</h3>
+<ul>
+<li>Blueprint block:</li>
+<li><code>&lt;rect x="250" y="320" width="220" height="120" rx="10" ry="10" fill="none" stroke="#CCCCCC" stroke-width="2"/&gt;</code></li>
+<li>Text: <code>Blueprint M</code> centered in rect</li>
+<li>Arrow from core triad to blueprint:</li>
+<li><code>&lt;path d="M 740 230 C 600 260 520 290 360 320" ... marker-end="url(#arrow)"/&gt;</code></li>
+<li>Label near path: <code>𝓡</code></li>
+<li>Replicated instance:</li>
+<li>Smaller triad at <code>(300, 520)</code> (same structure, smaller radius, e.g. r=70)</li>
+<li>Small block <code>M'</code> next to it</li>
+</ul>
+<hr>
+<h3 id="3-transporters-branch-center">3. Transporters Branch (Center)</h3>
+<ul>
+<li>Substrate nodes:</li>
+<li>Source: <code>&lt;rect x="650" y="320" width="120" height="60" rx="8" ry="8" ...&gt;</code> text: <code>S₁</code></li>
+<li>Target: <code>&lt;rect x="830" y="320" width="120" height="60" rx="8" ry="8" ...&gt;</code> text: <code>S₂</code></li>
+<li>Arc between S₁ and S₂:</li>
+<li><code>&lt;path d="M 710 320 C 760 260 840 260 890 320" ... marker-end="url(#arrow)"/&gt;</code></li>
+<li>Label: <code>𝓣</code></li>
+<li>Envelope:</li>
+<li><code>&lt;path d="M 680 350 C 760 260 840 260 920 350" fill="none" stroke="#5555FF" stroke-width="2" stroke-dasharray="6 6"/&gt;</code></li>
+<li>Reconstruction window:</li>
+<li>Small highlighted segment near S₂:<ul>
+<li>e.g. short path segment with thicker stroke</li>
+</ul>
+</li>
+<li>Text near it: <code>W = [1−δ, 1]</code></li>
+</ul>
+<hr>
+<h3 id="4-ct-virtual-worlds-branch-right">4. CT / Virtual Worlds Branch (Right)</h3>
+<ul>
+<li>Environment block:</li>
+<li><code>&lt;rect x="1130" y="320" width="260" height="140" rx="12" ry="12" ...&gt;</code></li>
+<li>Sub‑labels inside (smaller text): <code>Regime Graph</code>, <code>Physics</code>, <code>Observer</code>, <code>Rules</code></li>
+<li>Arrow from core triad to environment:</li>
+<li><code>&lt;path d="M 860 230 C 1020 260 1120 290 1200 320" ... marker-end="url(#arrow)"/&gt;</code></li>
+<li>Label: <code>𝓒</code></li>
+<li>Reconstruction window:</li>
+<li>Glow/outline around right side of environment block</li>
+<li>Text: <code>Reconstruction Window</code></li>
+</ul>
+<hr>
+<h3 id="5-arrival-substrate-node">5. Arrival Substrate Node</h3>
+<ul>
+<li>Node:</li>
+<li><code>&lt;circle cx="800" cy="720" r="80" fill="none" stroke="#FFFFFF" stroke-width="2"/&gt;</code></li>
+<li>Small triad inside (mini version)</li>
+<li>Text:</li>
+<li><code>Arrival Substrate</code> at <code>(800, 820)</code></li>
+<li><code>T ≈ T*</code> and <code>A(T) = 0.01</code> inside/near node</li>
+<li>Downward arrows from:</li>
+<li>Replicator instance  </li>
+<li>Transporter target  </li>
+<li>CT environment<br>
+  all converging to <code>(800, 640)</code> then into the node.</li>
+</ul>
+<hr>
+<h3 id="6-lostational-geometry-overlay">6. Lostational Geometry Overlay</h3>
+<ul>
+<li>Supsphere:</li>
+<li>Large faint circle centered near <code>(800, 500)</code> with <code>r=260</code>, stroke <code>#444</code>, low opacity</li>
+<li>Geodesic arcs:</li>
+<li>Curved paths from upper region to near arrival substrate node</li>
+<li>Label near one: <code>Lostational Transport Geodesic</code></li>
+<li>Curvature region:</li>
+<li>Slightly brighter band along one arc, label: <code>κ(t) &gt; 0 ↔ A(T(t)) &gt; 0</code></li>
+</ul>
+<hr>
+<h3 id="7-global-caption">7. Global Caption</h3>
+<ul>
+<li>At bottom:</li>
+<li>Text centered:<br>
+<code>Unified operator diagram: replication (𝓡), transport (𝓣), and CT instantiation (𝓒) share a single continuity kernel and converge at the arrival substrate.</code></li>
+</ul>
+  </main>
+</body>
+</html>

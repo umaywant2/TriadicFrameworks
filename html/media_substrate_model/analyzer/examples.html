@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/media_substrate_model/analyzer/examples.md">
+  <title>🧪 MSM Analyzer — Worked Examples</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/media_substrate_model/analyzer/examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/media_substrate_model/analyzer/examples.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="msm-analyzer-worked-examples">🧪 MSM Analyzer — Worked Examples</h1>
+<p>These examples illustrate how the MSM Analyzer interprets media ecosystem states using the five‑axis MediaVector, invariant evaluation, basin classification, mode determination, drift detection, and transition analysis. Each example shows a full end‑to‑end evaluation, mirroring the Analyzer pipeline.</p>
+<hr>
+<h2 id="example-1-network-system-entering-drift">📘 Example 1 — Network System Entering Drift</h2>
+<h3 id="input-vector">Input Vector</h3>
+<pre><code>{
+  S: 0.58,
+  D: 0.72,
+  A: 0.41,
+  N: 0.63,
+  T: 0.47
+}
+</code></pre>
+<h3 id="invariant-evaluation">Invariant Evaluation</h3>
+<ul>
+<li>Signal–Narrative Coherence: <strong>0.22</strong>  </li>
+<li>Distribution–Attention Fit: <strong>0.18</strong>  </li>
+<li>Temporal–Signal Stability: <strong>0.31</strong>  </li>
+<li>Attention–Narrative Feedback: <strong>0.27</strong></li>
+</ul>
+<p>Moderate strain across multiple invariants indicates early instability.</p>
+<h3 id="basin-classification">Basin Classification</h3>
+<ul>
+<li>Closest basin: <strong>Network</strong>  </li>
+<li>Gate conditions: <strong>Satisfied</strong>  </li>
+<li>Distance: <strong>0.19</strong></li>
+</ul>
+<p>The system remains in the Network basin but is under pressure.</p>
+<h3 id="mode-determination">Mode Determination</h3>
+<ul>
+<li>Drift magnitude: <strong>0.14</strong> (meso drift)  </li>
+<li>Dominant invariant: <strong>Temporal–Signal Stability</strong>  </li>
+<li>Mode: <strong>Tension</strong></li>
+</ul>
+<p>The system is beginning to destabilize but has not yet entered full drift.</p>
+<h3 id="drift-detection">Drift Detection</h3>
+<ul>
+<li>Δ from previous vector: moderate  </li>
+<li>Category: <strong>meso drift</strong></li>
+</ul>
+<h3 id="transition-detection">Transition Detection</h3>
+<ul>
+<li>Previous: Network / Stable  </li>
+<li>Current: Network / Tension  </li>
+<li>Trigger: <strong>cadence acceleration</strong>  </li>
+<li>Severity: <strong>0.42</strong></li>
+</ul>
+<p>The system is shifting toward Drift mode.</p>
+<hr>
+<h2 id="example-2-fragment-system-collapsing-into-cascade">📙 Example 2 — Fragment System Collapsing into Cascade</h2>
+<h3 id="input-vector_1">Input Vector</h3>
+<pre><code>{
+  S: 0.29,
+  D: 0.34,
+  A: 0.88,
+  N: 0.21,
+  T: 0.91
+}
+</code></pre>
+<h3 id="invariant-evaluation_1">Invariant Evaluation</h3>
+<ul>
+<li>Signal–Narrative Coherence: <strong>0.71</strong>  </li>
+<li>Distribution–Attention Fit: <strong>0.83</strong>  </li>
+<li>Temporal–Signal Stability: <strong>0.92</strong>  </li>
+<li>Attention–Narrative Feedback: <strong>0.79</strong></li>
+</ul>
+<p>Multiple invariants are near or above collapse thresholds.</p>
+<h3 id="basin-classification_1">Basin Classification</h3>
+<ul>
+<li>Closest basin: <strong>Cascade</strong>  </li>
+<li>Gate conditions: <strong>Satisfied</strong>  </li>
+<li>Distance: <strong>0.11</strong></li>
+</ul>
+<p>The system has entered the Cascade attractor.</p>
+<h3 id="mode-determination_1">Mode Determination</h3>
+<ul>
+<li>Drift magnitude: <strong>0.37</strong> (macro drift)  </li>
+<li>Dominant invariant: <strong>Temporal–Signal Stability</strong>  </li>
+<li>Mode: <strong>Cascade</strong></li>
+</ul>
+<p>The system is in a high‑energy, unstable state.</p>
+<h3 id="drift-detection_1">Drift Detection</h3>
+<ul>
+<li>Δ from previous vector: large  </li>
+<li>Category: <strong>macro drift</strong></li>
+</ul>
+<h3 id="transition-detection_1">Transition Detection</h3>
+<ul>
+<li>Previous: Fragment / Drift  </li>
+<li>Current: Cascade / Cascade  </li>
+<li>Trigger: <strong>attention spike + cadence acceleration</strong>  </li>
+<li>Severity: <strong>0.87</strong></li>
+</ul>
+<p>This is a high‑severity structural transition.</p>
+<hr>
+<h2 id="example-3-collapse-moving-into-reconstruction">📗 Example 3 — Collapse Moving into Reconstruction</h2>
+<h3 id="input-vector_2">Input Vector</h3>
+<pre><code>{
+  S: 0.44,
+  D: 0.39,
+  A: 0.27,
+  N: 0.36,
+  T: 0.33
+}
+</code></pre>
+<h3 id="invariant-evaluation_2">Invariant Evaluation</h3>
+<ul>
+<li>Signal–Narrative Coherence: <strong>0.41</strong>  </li>
+<li>Distribution–Attention Fit: <strong>0.19</strong>  </li>
+<li>Temporal–Signal Stability: <strong>0.22</strong>  </li>
+<li>Attention–Narrative Feedback: <strong>0.28</strong></li>
+</ul>
+<p>Strain is decreasing across all invariants.</p>
+<h3 id="basin-classification_2">Basin Classification</h3>
+<ul>
+<li>Closest basin: <strong>Reconstruction</strong>  </li>
+<li>Gate conditions: <strong>Satisfied</strong>  </li>
+<li>Distance: <strong>0.17</strong></li>
+</ul>
+<p>The system is stabilizing and rebuilding.</p>
+<h3 id="mode-determination_2">Mode Determination</h3>
+<ul>
+<li>Drift magnitude: <strong>0.09</strong> (micro drift)  </li>
+<li>Dominant invariant: <strong>Signal–Narrative Coherence</strong>  </li>
+<li>Mode: <strong>Reconstruction</strong></li>
+</ul>
+<p>The system is recovering from collapse.</p>
+<h3 id="drift-detection_2">Drift Detection</h3>
+<ul>
+<li>Δ from previous vector: small  </li>
+<li>Category: <strong>micro drift</strong></li>
+</ul>
+<h3 id="transition-detection_2">Transition Detection</h3>
+<ul>
+<li>Previous: Collapse / Collapse  </li>
+<li>Current: Reconstruction / Reconstruction  </li>
+<li>Trigger: <strong>signal recovery + narrative stabilization</strong>  </li>
+<li>Severity: <strong>0.33</strong></li>
+</ul>
+<p>A positive‑direction transition.</p>
+<hr>
+<h2 id="example-4-stagnation-with-minimal-drift">📕 Example 4 — Stagnation with Minimal Drift</h2>
+<h3 id="input-vector_3">Input Vector</h3>
+<pre><code>{
+  S: 0.31,
+  D: 0.28,
+  A: 0.12,
+  N: 0.29,
+  T: 0.14
+}
+</code></pre>
+<h3 id="invariant-evaluation_3">Invariant Evaluation</h3>
+<ul>
+<li>Signal–Narrative Coherence: <strong>0.38</strong>  </li>
+<li>Distribution–Attention Fit: <strong>0.09</strong>  </li>
+<li>Temporal–Signal Stability: <strong>0.12</strong>  </li>
+<li>Attention–Narrative Feedback: <strong>0.17</strong></li>
+</ul>
+<p>Low strain but also low energy.</p>
+<h3 id="basin-classification_3">Basin Classification</h3>
+<ul>
+<li>Closest basin: <strong>Stagnation</strong>  </li>
+<li>Gate conditions: <strong>Satisfied</strong>  </li>
+<li>Distance: <strong>0.13</strong></li>
+</ul>
+<h3 id="mode-determination_3">Mode Determination</h3>
+<ul>
+<li>Drift magnitude: <strong>0.03</strong> (micro drift)  </li>
+<li>Mode: <strong>Stable</strong></li>
+</ul>
+<p>The system is quiet, low‑energy, and structurally inert.</p>
+<h3 id="drift-detection_3">Drift Detection</h3>
+<ul>
+<li>Category: <strong>micro drift</strong></li>
+</ul>
+<h3 id="transition-detection_3">Transition Detection</h3>
+<ul>
+<li>No transition detected  </li>
+<li>Trigger: <strong>none</strong>  </li>
+<li>Severity: <strong>0.00</strong></li>
+</ul>
+<p>The system remains in Stagnation.</p>
+<hr>
+<h2 id="example-5-broadcast-system-under-early-pressure">📓 Example 5 — Broadcast System Under Early Pressure</h2>
+<h3 id="input-vector_4">Input Vector</h3>
+<pre><code>{
+  S: 0.82,
+  D: 0.91,
+  A: 0.22,
+  N: 0.87,
+  T: 0.29
+}
+</code></pre>
+<h3 id="invariant-evaluation_4">Invariant Evaluation</h3>
+<ul>
+<li>Signal–Narrative Coherence: <strong>0.08</strong>  </li>
+<li>Distribution–Attention Fit: <strong>0.11</strong>  </li>
+<li>Temporal–Signal Stability: <strong>0.14</strong>  </li>
+<li>Attention–Narrative Feedback: <strong>0.09</strong></li>
+</ul>
+<p>Very low strain; system is stable.</p>
+<h3 id="basin-classification_4">Basin Classification</h3>
+<ul>
+<li>Closest basin: <strong>Broadcast</strong>  </li>
+<li>Gate conditions: <strong>Satisfied</strong>  </li>
+<li>Distance: <strong>0.07</strong></li>
+</ul>
+<h3 id="mode-determination_4">Mode Determination</h3>
+<ul>
+<li>Drift magnitude: <strong>0.05</strong>  </li>
+<li>Mode: <strong>Stable</strong></li>
+</ul>
+<h3 id="drift-detection_4">Drift Detection</h3>
+<ul>
+<li>Category: <strong>micro drift</strong></li>
+</ul>
+<h3 id="transition-detection_4">Transition Detection</h3>
+<ul>
+<li>No transition  </li>
+<li>System remains stable</li>
+</ul>
+<hr>
+<p>These examples give us a complete set of reference patterns for how the MSM Analyzer behaves across different structural conditions. </p>
+  </main>
+</body>
+</html>

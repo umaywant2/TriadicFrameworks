@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-deepsea/v1/DeepSeaAlertExtension.schema.json",
+  "title": "DeepSeaAlertExtension",
+  "type": "object",
+  "properties": {
+    "implosion_risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Risk of hull collapse due to pressure overload."
+    },
+    "current_shear_risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Risk from sudden current shear (RTT drift spike)."
+    },
+    "thermal_vent_surge": {
+      "type": "boolean",
+      "description": "Indicates a sudden thermal vent event."
+    },
+    "collapse_vector": {
+      "type": "object",
+      "properties": {
+        "dx": { "type": "number" },
+        "dy": { "type": "number" },
+        "dz": { "type": "number" }
+      },
+      "description": "Predicted direction of structural failure (RTT collapse vector)."
+    }
+  }
+}
+

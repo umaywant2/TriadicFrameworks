@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/TEMPLATE/v1/TemplateZoneExtension.schema.json",
+  "title": "TemplateZoneExtension",
+  "type": "object",
+  "properties": {
+    "example_zone_property": {
+      "type": "string",
+      "description": "Replace this with a domain-specific zone attribute."
+    }
+  }
+}
+

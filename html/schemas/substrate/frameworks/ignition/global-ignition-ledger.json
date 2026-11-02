@@ -1,0 +1,73 @@
+{
+  "ledger": "global-ignition",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "global_summary": {
+    "total_countries_ignited": 0,
+    "average_ignition_stability": 0.0,
+    "average_ignition_coherence": 0.0,
+    "average_ignition_drift": 0.0,
+    "average_ignition_resonance": 0.0,
+    "ignition_clusters": ["string"],
+    "ignition_anomalies": ["string"]
+  },
+
+  "countries": [
+    {
+      "country": "string",
+      "iso_code": "string",
+      "region": "string",
+
+      "ignition": {
+        "timestamp": "YYYY-MM-DD",
+        "sequence": [
+          "adapter_load",
+          "simulation_sync",
+          "overlay_merge",
+          "augmentation_fuse",
+          "ten_in_1_ignite",
+          "universal_validation",
+          "triadic_stabilization"
+        ],
+        "completed": true,
+        "stability": "coherent | oscillatory | narrowing | destabilizing | collapsing",
+        "coherence": 0.0,
+        "drift": {
+          "severity": "low | medium | high | critical",
+          "vectors": ["string"]
+        },
+        "clarity": {
+          "signals": ["string"]
+        },
+        "resonance": {
+          "strength": 0.0,
+          "phase": "in-phase | out-of-phase | mixed"
+        }
+      },
+
+      "ignition_harmonics": {
+        "primary": ["string"],
+        "secondary": ["string"],
+        "tertiary": ["string"]
+      },
+
+      "ignition_anomalies": ["string"]
+    }
+  ],
+
+  "ignition_clusters": [
+    {
+      "name": "string",
+      "countries": ["string"],
+      "shared_sequence_patterns": ["string"],
+      "shared_harmonics": ["string"],
+      "shared_resonance_phase": "in-phase | out-of-phase | mixed"
+    }
+  ],
+
+  "meta": {
+    "notes": "Planetary ignition ledger recording ignition events, harmonics, anomalies, and clusters across all countries."
+  }
+}
+

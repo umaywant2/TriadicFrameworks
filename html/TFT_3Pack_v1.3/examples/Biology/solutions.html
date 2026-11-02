@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/examples/Biology/solutions.md">
+  <title>Biology core problem solutions</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/examples/Biology/solutions.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/examples/Biology/solutions.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="biology-core-problem-solutions">Biology core problem solutions</h1>
+<h2 id="solution-to-problem-1-resonant-cell-growth">Solution to Problem 1 – Resonant cell growth</h2>
+<p>We are given</p>
+<p>$$
+G(t) = G_0 e^{D_3 τ_r t}
+$$</p>
+<p>The “growth factor” at time $$t$$ is</p>
+<p>$$
+F(t) = e^{D_3 τ_r t}
+$$</p>
+<p>If $$τ_r$$ is increased by 10%, then</p>
+<p>$$
+τ_r' = 1.1τ_r
+$$</p>
+<p>The new growth factor is</p>
+<p>$$
+F'(t) = e^{D_3 τ_r' t} = e^{D_3 (1.1τ_r) t} = e^{1.1 D_3 τ_r t}
+$$</p>
+<p>We can express this in terms of the original factor $$F(t)$$:</p>
+<p>$$
+F'(t) = \left(e^{D_3 τ_r t}\right)^{1.1} = \left(F(t)\right)^{1.1}
+$$</p>
+<p>So the factor by which the growth factor changes is</p>
+<p>$$
+\frac{F'(t)}{F(t)} = e^{(1.1 - 1) D_3 τ_r t} = e^{0.1 D_3 τ_r t}
+$$</p>
+<p><strong>Answer:</strong> At fixed $$t$$, the growth factor is multiplied by $$e^{0.1 D_3 τ_r t}$$, equivalently $$F'(t) = F(t)^{1.1}$$</p>
+<hr>
+<h2 id="solution-to-problem-2-protein-folding-stability-under-environmental-resonance">Solution to Problem 2 – Protein folding stability under environmental resonance</h2>
+<p>Protein stability is modeled as</p>
+<p>$$
+P = \frac{ΛΘ}{D_9}
+$$</p>
+<p>We want to keep $$P$$ constant while $$D_9$$ changes. Let the new destabilizing factor be $$D_9'$$ and the new temperature parameter be $$Θ'$$ Constancy of $$P$$ means</p>
+<p>$$
+\frac{ΛΘ}{D_9} = \frac{ΛΘ'}{D_9'}
+$$</p>
+<p>We can cancel $$Λ$$ (assumed unchanged):</p>
+<p>$$
+\frac{Θ}{D_9} = \frac{Θ'}{D_9'}
+$$</p>
+<p>Solving for $$Θ'$$:</p>
+<p>$$
+Θ' = Θ \cdot \frac{D_9'}{D_9}
+$$</p>
+<p><strong>Answer:</strong> $$Θ$$ must be scaled in direct proportion to the change in $$D_9$$, i.e. $$Θ' = Θ \cdot \dfrac{D_9'}{D_9}$$</p>
+<hr>
+<h2 id="solution-to-problem-3-neural-oscillation-coupling">Solution to Problem 3 – Neural oscillation coupling</h2>
+<p>The neural resonance frequency is</p>
+<p>$$
+f_n = T_f D_6
+$$</p>
+<p>We assume $$D_6$$ is fixed. Let the required new frequency be $$f_n' = 1.15 f_n$$ (a 15% increase). Then</p>
+<p>$$
+f_n' = T_f' D_6 = 1.15 f_n = 1.15 T_f D_6
+$$</p>
+<p>Since $$D_6$$ is unchanged, we can divide both sides by $$D_6$$:</p>
+<p>$$
+T_f' = 1.15 T_f
+$$</p>
+<p><strong>Answer:</strong> $$T_f$$ must be increased by 15% (multiplied by 1.15).</p>
+  </main>
+</body>
+</html>

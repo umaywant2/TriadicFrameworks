@@ -1,0 +1,116 @@
+{
+  "ai.module": "morphic_resonance.rtt1",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/1 engine layer for Morphic Resonance: operator grammar, recurrence behavior, pattern activation, and minimal coherence examples.",
+  "ai.keywords": [
+    "morphic resonance",
+    "pattern recurrence",
+    "activation",
+    "dimensional coherence",
+    "cross-temporal structure",
+    "rtt1"
+  ],
+
+  "engine": {
+    "layer": "RTT/1",
+    "description": "Defines the operator grammar and dimensional behavior of pattern recurrence, activation, and cross-temporal coherence."
+  },
+
+  "operators": {
+    "core": {
+      "pattern_operator": {
+        "type": "structure_operator",
+        "description": "Represents the underlying operator structure that defines a pattern.",
+        "signals": ["dimensional_signature", "coherence_profile"]
+      },
+      "activation_operator": {
+        "type": "trigger_operator",
+        "description": "Activates a pattern when resonance thresholds are met.",
+        "signals": ["activation_threshold", "pattern_similarity"]
+      },
+      "recurrence_operator": {
+        "type": "coherence_operator",
+        "description": "Describes how patterns recur across time or instances.",
+        "signals": ["lineage_trace", "cross_temporal_alignment"]
+      },
+      "coherence_link": {
+        "type": "relation_operator",
+        "description": "Links similar patterns across systems or epochs.",
+        "signals": ["similarity_metric", "resonance_strength"]
+      },
+      "dimensional_anchor": {
+        "type": "stability_operator",
+        "description": "Anchors a pattern to a stable dimensional configuration.",
+        "signals": ["anchor_depth", "pattern_invariance"]
+      }
+    },
+
+    "supporting": {
+      "pattern_similarity_metric": {
+        "type": "comparison_operator",
+        "description": "Quantifies similarity between pattern operators."
+      },
+      "lineage_trace": {
+        "type": "history_operator",
+        "description": "Tracks recurrence across time or system instances."
+      },
+      "resonance_threshold": {
+        "type": "constraint",
+        "description": "Defines the minimum coherence required for activation."
+      },
+      "cross_temporal_mapping": {
+        "type": "mapping_operator",
+        "description": "Maps patterns across temporal or dimensional boundaries."
+      }
+    }
+  },
+
+  "dimensional_mapping": {
+    "R1": "Weak recurrence; unstable coherence; primitive pattern activation.",
+    "R2": "Stable operator structure; predictable recurrence; strong activation.",
+    "R3": "Cross-temporal resonance; lineage-level stability; high coherence.",
+    "R0": "No pattern substrate; recurrence undefined."
+  },
+
+  "coherence": {
+    "markers": [
+      "stable pattern signatures",
+      "predictable recurrence intervals",
+      "operator similarity across instances",
+      "cross-temporal coherence"
+    ],
+    "instability_signals": [
+      "pattern drift",
+      "operator mismatch",
+      "insufficient resonance",
+      "lineage discontinuity"
+    ]
+  },
+
+  "examples": {
+    "minimal": [
+      {
+        "name": "Repeated Biological Form",
+        "demonstrates": ["pattern_operator", "recurrence_operator"]
+      },
+      {
+        "name": "Activation Threshold Event",
+        "demonstrates": ["activation_operator", "resonance_threshold"]
+      },
+      {
+        "name": "Cross-Temporal Pattern Alignment",
+        "demonstrates": ["coherence_link", "cross_temporal_mapping"]
+      }
+    ]
+  },
+
+  "integration": {
+    "cross_module": [
+      "information_theory.rtt1",
+      "evolutionary_biology.rtt1",
+      "cognition.rtt1",
+      "complex_systems.rtt1"
+    ],
+    "notes": "RTT/1 treats Morphic Resonance as a dimensional recurrence grammar; deeper resonance and substrate integration occur in RTT/2 and RTT/3."
+  }
+}

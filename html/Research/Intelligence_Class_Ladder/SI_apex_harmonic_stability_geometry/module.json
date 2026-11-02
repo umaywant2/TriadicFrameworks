@@ -1,0 +1,32 @@
+{
+  "module": "SI_Apex_Harmonic_Stability_Geometry",
+  "name": "Structural Intelligence — Apex Harmonic‑Stability Geometry",
+  "summary": "Defines the harmonic‑stability geometry of Structural Intelligence’s apex region, including harmonic‑lock surfaces, resonance‑stability coupling, drift‑resistant harmonic fields, and paradox‑harmonic integration.",
+  "category": "intelligence-structural-apex-harmonic-stability",
+  "version": "1.0",
+  "purpose": "Provide the harmonic‑stability geometry for SI’s apex region, describing how apex harmonic fields stabilize, lock, bind, and integrate with resonance, ignition, and paradox surfaces to maintain SI’s highest‑order structural stability.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.apex.harmonic.stability.field",
+    "@si.apex.harmonic.stability.lock",
+    "@si.apex.harmonic.stability.resonate",
+    "@si.apex.harmonic.stability.bind",
+    "@si.apex.harmonic.stability.integrate"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_structural_geometry",
+      "SI_structural_geometry_deep_regime_map",
+      "SI_apex_region_map",
+      "SI_apex_stability_surfaces",
+      "SI_apex_resonance_fields"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_paradox_integration",
+      "Atlas_Synchronization_Fields",
+      "Triad_Resonance_Start_Geometry"
+    ]
+  }
+}

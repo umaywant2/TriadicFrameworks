@@ -1,0 +1,93 @@
+{
+  "id": "S3-Spine",
+  "canonical": "R5",
+  "version": "1.0.0",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "regime": "unseen-force-regime",
+
+  "cosmology": {
+    "lineage": ["qmroot", "frequency", "fluids", "forces"],
+    "inheritance": {
+      "qmroot": "latent potentials of influence, coherence, rupture, stability",
+      "frequency": "oscillation and continuity of unseen influence",
+      "fluids": "seen-state flow and continuity mechanics",
+      "forces": "unseen causal mechanics expressed as gradients, fields, rupture, integrity"
+    },
+    "mapping": {
+      "gradient": "proto-influence → influence → causal gradient",
+      "field": "proto-coherence → coherence → influence field",
+      "rupture": "proto-instability → instability → rupture potential",
+      "integrity": "proto-stability → stability → structural stability"
+    }
+  },
+
+  "graph": {
+    "file": "S3.graph.json",
+    "dot": "S3.dot",
+    "nodes": ["gradient", "field", "rupture", "integrity"],
+    "edges": [
+      ["gradient", "field"],
+      ["field", "rupture"],
+      ["field", "integrity"],
+      ["rupture", "integrity"]
+    ]
+  },
+
+  "operators": {
+    "list": [
+      "gradient",
+      "ruptureForce",
+      "bind",
+      "push",
+      "pull",
+      "fieldShift"
+    ],
+    "interaction_map": "operator_interaction_map.json",
+    "sequencing_rules": "operator_sequencing_rules.json"
+  },
+
+  "dimensions": {
+    "gradient": ["L4", "L5", "L16", "LH"],
+    "field": ["L8", "L10", "L26"],
+    "rupture": ["L12"],
+    "integrity": ["L32", "LI"]
+  },
+
+  "envelopes": {
+    "types": [
+      "canonical",
+      "reality",
+      "imagination",
+      "information",
+      "error",
+      "qmroot"
+    ],
+    "registry": "envelope_registry.json"
+  },
+
+  "registries": {
+    "module": "module_registry.json",
+    "operators": "operator_registry.json",
+    "dimensions": "dimension_registry.json",
+    "envelopes": "envelope_registry.json",
+    "examples": "spine.examples.registry.json",
+    "ai": "ai_registry.json",
+    "tools": "tools.catalog.json"
+  },
+
+  "examples": {
+    "registry": "spine.examples.registry.json",
+    "canonical": "canonical.001.json",
+    "reality": "reality.001.json",
+    "imagination": "imagination.001.json",
+    "information": "information.001.json",
+    "error": "error.001.json",
+    "qmroot": "qmroot.001.json"
+  },
+
+  "protocol": {
+    "file": "protocol.md",
+    "server": "server.json"
+  }
+}

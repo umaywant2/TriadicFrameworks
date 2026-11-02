@@ -1,0 +1,85 @@
+{
+  "id": "S3-Spine-Server",
+  "canonical": "R5",
+  "version": "1.0.0",
+  "module": "S3-Spine",
+
+  "protocol": {
+    "file": "protocol.md"
+  },
+
+  "capabilities": {
+    "graph": [
+      "getNode",
+      "getEdges",
+      "traverse",
+      "describe"
+    ],
+    "operators": [
+      "list",
+      "describe",
+      "validate"
+    ],
+    "dimensions": [
+      "list",
+      "describe",
+      "validate"
+    ],
+    "cosmology": [
+      "trace",
+      "describe"
+    ],
+    "envelopes": [
+      "generate",
+      "compare",
+      "describe"
+    ],
+    "examples": [
+      "load",
+      "validate",
+      "describe"
+    ],
+    "registry": [
+      "load",
+      "describe"
+    ],
+    "diagnostics": [
+      "checkCoherence",
+      "detectDrift",
+      "describeFailureMode"
+    ]
+  },
+
+  "endpoints": {
+    "graph": "S3.graph.json",
+    "dot": "S3.dot",
+    "operators": "operator_interaction_map.json",
+    "sequencing": "operator_sequencing_rules.json",
+    "dimensions": "dimensional_mapping.json",
+    "examples": "spine.examples.registry.json",
+    "exampleSchema": "example.schema.json",
+    "cosmology": "cosmology.md",
+    "source": "m_Source.md",
+    "protocol": "protocol.md",
+    "readme": "README.md"
+  },
+
+  "registries": {
+    "module": "module_registry.json",
+    "operators": "operator_registry.json",
+    "dimensions": "dimension_registry.json",
+    "envelopes": "envelope_registry.json",
+    "examples": "spine.examples.registry.json",
+    "ai": "ai_registry.json",
+    "tools": "tools.catalog.json"
+  },
+
+  "graph": {
+    "file": "S3.graph.json",
+    "dot": "S3.dot"
+  },
+
+  "cosmology": {
+    "lineage": ["qmroot", "frequency", "fluids", "forces"]
+  }
+}

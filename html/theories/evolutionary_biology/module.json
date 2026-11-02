@@ -1,0 +1,98 @@
+{
+  "ai.module": "evolutionary_biology",
+  "ai.version": "1.0",
+  "ai.purpose": "Provide a regime-aware, operator-level interface to Evolutionary Biology as a multi-scale adaptive resonance system.",
+  "ai.keywords": [
+    "evolution",
+    "natural selection",
+    "variation",
+    "inheritance",
+    "lineage",
+    "adaptation",
+    "population dynamics",
+    "triadic frameworks"
+  ],
+
+  "identity": {
+    "name": "Evolutionary Biology",
+    "category": "Scientific Theory",
+    "summary": "A multi-scale adaptive system describing how populations change across generations through variation, selection, inheritance, and environmental interaction.",
+    "regime": ["R3", "R2→R3", "R1"],
+    "status": "canon-ready"
+  },
+
+  "lineage": {
+    "originators": ["Charles Darwin", "Alfred Russel Wallace", "Fisher", "Haldane", "Wright"],
+    "historical_period": "19th–20th Century",
+    "source_domain": "Biology and Population Genetics",
+    "related_theories": [
+      "genetics",
+      "ecology",
+      "information_theory",
+      "chaos_theory"
+    ],
+    "notes": "Evolutionary Biology describes adaptive change across generations. Variation, selection, and inheritance are operators acting on lineage structures, not metaphysical forces."
+  },
+
+  "operators": {
+    "primary": [
+      "variation",
+      "selection",
+      "inheritance",
+      "drift",
+      "mutation",
+      "adaptation"
+    ],
+    "secondary": [
+      "gene_flow",
+      "population_structure",
+      "environmental_pressure",
+      "fitness_landscape"
+    ],
+    "description": "Operators describe how populations change over time through differential reproduction, lineage memory, and adaptive resonance."
+  },
+
+  "drift": {
+    "risks": [
+      "treating evolution as random",
+      "assuming teleology or directionality",
+      "confusing adaptation with progress",
+      "overextending population-level models to individuals"
+    ],
+    "boundaries": [
+      "evolution is lineage-driven",
+      "selection is an operator, not a purpose",
+      "variation is structured, not arbitrary",
+      "adaptation emerges from resonance across generations"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "lineage encodes memory across generations",
+      "variation supplies adaptive potential",
+      "selection filters based on environmental fit",
+      "population-level patterns emerge from individual interactions"
+    ],
+    "failure_modes": [
+      "loss of lineage continuity",
+      "environmental collapse",
+      "genetic bottlenecks",
+      "misinterpreting noise as adaptation"
+    ]
+  },
+
+  "cross_module": {
+    "supports": [
+      "ecology",
+      "genetics",
+      "information_theory",
+      "chaos_theory"
+    ],
+    "supported_by": [
+      "dimensional_analysis",
+      "regime_awareness"
+    ],
+    "integration_notes": "Evolution integrates cleanly with RTT engines as a multi-scale adaptive resonance system with strong lineage structure."
+  }
+}

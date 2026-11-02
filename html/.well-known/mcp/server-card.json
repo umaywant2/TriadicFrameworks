@@ -1,0 +1,38 @@
+{
+  "serverInfo": {
+    "name": "TriadicFrameworks MCP Server",
+    "version": "1.0.0",
+    "description": "Multi-capability MCP server exposing TriadicFrameworks modules, operators, analyzers, and metadata."
+  },
+
+  "transport": {
+    "type": "http",
+    "endpoint": "https://docs.triadicframeworks.org/MCP/"
+  },
+
+  "capabilities": [
+    "openapi",
+    "skills",
+    "modules",
+    "operators",
+    "diagnostics"
+  ],
+
+  "resources": {
+    "apiCatalog": "/.well-known/api-catalog",
+    "skillsIndex": "/.well-known/agent-skills/index.json"
+  },
+
+  "agent_auth": {
+    "skill": "auth-md",
+    "register_uri": "/agent/register",
+    "methods": [
+      {
+        "type": "anonymous",
+        "description": "Agents may register anonymously to obtain a token.",
+        "credential_types_supported": ["none"],
+        "claim_uri": "/agent/register"
+      }
+    ]
+  }
+}

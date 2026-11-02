@@ -1,0 +1,21 @@
+{
+  "module": "AGI",
+  "name": "Artificial General Intelligence",
+  "summary": "Tier 2 intelligence capable of cross-domain reasoning, coherence stability, and long temporal alignment.",
+  "category": "intelligence-general",
+  "version": "1.0",
+  "purpose": "Classify systems demonstrating general reasoning across multiple domains with stable coherence.",
+  "role": "profile",
+  "analyzer_layer": "operator",
+  "operators": [
+    "@agi.reason.generalize",
+    "@agi.domain.transfer",
+    "@agi.coherence.stabilize",
+    "@agi.temporal.align",
+    "@agi.boundary.check"
+  ],
+  "lineage": {
+    "upstream": ["AAI"],
+    "downstream": ["SI"]
+  }
+}

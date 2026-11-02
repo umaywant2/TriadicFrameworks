@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/wikipedia/Category_Taxonomy_Regime_Hierarchy.md">
+  <title>Category Taxonomy Regime Hierarchy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/wikipedia/Category_Taxonomy_Regime_Hierarchy.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/wikipedia/Category_Taxonomy_Regime_Hierarchy.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="category-taxonomy-regime-hierarchy">Category Taxonomy Regime Hierarchy</h1>
+<blockquote>
+<p><strong>Purpose:</strong> Define how to read Wikipedia's category system as a <strong>native
+regime hierarchy</strong> — a massive, community‑maintained classification tree
+that organizes 6.9 million English articles into nested regime boundaries.</p>
+<p>Wikipedia's category tree is not a controlled taxonomy designed by
+information scientists. It is a <strong>crowdsourced, evolving regime map</strong> —
+built by thousands of editors making local classification decisions that
+aggregate into a global structural hierarchy. This makes it messy,
+contradictory in places, and deeply revealing of how humans actually
+organize knowledge.</p>
+<p>Where Wikidata provides <strong>dimensional addressing</strong> (unique identifiers),
+the category tree provides <strong>regime topology</strong> (where a concept sits
+relative to all other concepts).</p>
+</blockquote>
+<hr>
+<h2 id="1-what-is-a-wikipedia-category">1 — What Is a Wikipedia Category?</h2>
+<p>Every Wikipedia article is assigned to one or more <strong>categories</strong> —
+classification labels that place the article within a hierarchical tree
+of related concepts.</p>
+<h3 id="how-categories-work">How Categories Work</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+<th>RTT Mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Category page</td>
+<td>A special page listing all articles and subcategories within it</td>
+<td><strong>Regime boundary declaration</strong></td>
+</tr>
+<tr>
+<td>Parent category</td>
+<td>The category one level up in the tree</td>
+<td><strong>Regime containment</strong></td>
+</tr>
+<tr>
+<td>Subcategory</td>
+<td>A category nested within another</td>
+<td><strong>Sub‑regime</strong></td>
+</tr>
+<tr>
+<td>Article membership</td>
+<td>An article listed in a category</td>
+<td><strong>Regime membership</strong></td>
+</tr>
+<tr>
+<td>Hidden category</td>
+<td>A maintenance/tracking category not shown to readers</td>
+<td><strong>Infrastructure regime</strong> (stewardship layer)</td>
+</tr>
+<tr>
+<td>Category intersection</td>
+<td>Concept belonging to multiple categories</td>
+<td><strong>Cross‑regime membership</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-to-access-categories">How to Access Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>URL / Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View an article's categories</td>
+<td>Bottom of any Wikipedia article</td>
+</tr>
+<tr>
+<td>Browse a category</td>
+<td><code>https://en.wikipedia.org/wiki/Category:CATEGORY_NAME</code></td>
+</tr>
+<tr>
+<td>Category tree tool</td>
+<td><code>https://en.wikipedia.org/wiki/Special:CategoryTree</code></td>
+</tr>
+<tr>
+<td>API</td>
+<td><code>https://en.wikipedia.org/w/api.php?action=query&amp;titles=ARTICLE&amp;prop=categories&amp;format=json</code></td>
+</tr>
+<tr>
+<td>PetScan</td>
+<td><code>https://petscan.wmcloud.org/</code> — advanced category intersection queries</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-the-category-tree-as-regime-hierarchy">2 — The Category Tree as Regime Hierarchy</h2>
+<h3 id="21-structural-anatomy">2.1 — Structural Anatomy</h3>
+<p>Wikipedia's category system forms a <strong>directed acyclic graph</strong> (DAG) — not
+a strict tree. Categories can have multiple parents, creating a web of
+overlapping regime boundaries:</p>
+<pre><code>                    Category:Main topic classifications
+                    (root regime — R0)
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+    Category:Science  Category:Society  Category:Technology
+    (domain regime)   (domain regime)   (domain regime)
+          │                │                │
+    ┌─────┴─────┐    ┌────┴────┐     ┌────┴────┐
+    │           │    │         │     │         │
+  Cat:Physics Cat:Bio Cat:Politics Cat:Law Cat:Computing Cat:Eng
+    │           │         │              │
+  Cat:Quantum Cat:Genetics Cat:Elections Cat:Programming
+  mechanics                                  │
+    │                              ┌─────────┴─────────┐
+    │                              │                   │
+  Cat:Quantum  ←── cross‑link ──→ Cat:Quantum
+  mechanics                       computing
+</code></pre>
+<h3 id="22-the-dag-problem">2.2 — The DAG Problem</h3>
+<p>Because categories form a DAG (not a tree), the same article can be
+reached by multiple paths from the root. This is <strong>not a bug</strong> — it
+reflects the reality that concepts belong to multiple regimes simultaneously:</p>
+<table>
+<thead>
+<tr>
+<th>Article</th>
+<th>Path 1</th>
+<th>Path 2</th>
+<th>Structural Insight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Water</td>
+<td>Science → Chemistry → Chemical compounds</td>
+<td>Technology → Industrial processes → Solvents</td>
+<td>Same concept, different regime contexts</td>
+</tr>
+<tr>
+<td>Alan Turing</td>
+<td>Science → Computer Science → Computer scientists</td>
+<td>Society → LGBT → LGBT scientists</td>
+<td>Same person, different regime framings</td>
+</tr>
+<tr>
+<td>DNA</td>
+<td>Science → Biology → Genetics → Nucleic acids</td>
+<td>Science → Chemistry → Biomolecules</td>
+<td>Same molecule, different domain hierarchies</td>
+</tr>
+</tbody>
+</table>
+<p><strong>RTT reading:</strong> Multiple category paths = <strong>multiple regime memberships</strong>.
+The number of distinct paths from root to an article = the concept's
+<strong>regime multiplicity</strong>. Concepts with high multiplicity sit at regime
+intersections — they are structurally significant because multiple
+classification systems claim them.</p>
+<h3 id="23-depth-and-breadth">2.3 — Depth and Breadth</h3>
+<p>Two key metrics characterize any position in the category hierarchy:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Definition</th>
+<th>Regime Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Depth</strong></td>
+<td>Number of levels from the article's category to a root category</td>
+<td>Regime specificity — deeper = more specialized</td>
+</tr>
+<tr>
+<td><strong>Breadth</strong></td>
+<td>Number of sibling categories at the same level</td>
+<td>Regime diversity — wider = more differentiated domain</td>
+</tr>
+<tr>
+<td><strong>Fan‑out</strong></td>
+<td>Number of subcategories a category contains</td>
+<td>Regime granularity — higher fan‑out = more sub‑regime differentiation</td>
+</tr>
+<tr>
+<td><strong>Fan‑in</strong></td>
+<td>Number of parent categories a category has</td>
+<td>Regime multiplicity — higher fan‑in = cross‑domain concept</td>
+</tr>
+<tr>
+<td><strong>Membership count</strong></td>
+<td>Number of articles in a category</td>
+<td>Regime population — more articles = larger regime</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-category-types-and-their-regime-functions">3 — Category Types and Their Regime Functions</h2>
+<h3 id="31-the-six-category-types">3.1 — The Six Category Types</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+<th>Regime Function</th>
+<th>Structural Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Topic category</strong></td>
+<td>Category:Physics</td>
+<td><strong>Domain regime boundary</strong> — defines a knowledge domain</td>
+<td>Core structural unit</td>
+</tr>
+<tr>
+<td><strong>Set category</strong></td>
+<td>Category:Chemical elements</td>
+<td><strong>Regime inventory</strong> — exhaustive list of members</td>
+<td>Countable, bounded regime</td>
+</tr>
+<tr>
+<td><strong>Object category</strong></td>
+<td>Category:Stars</td>
+<td><strong>Entity regime</strong> — groups instances of a type</td>
+<td>Ontological classification</td>
+</tr>
+<tr>
+<td><strong>Activity category</strong></td>
+<td>Category:Scientific methods</td>
+<td><strong>Process regime</strong> — groups methodologies and practices</td>
+<td>Operational classification</td>
+</tr>
+<tr>
+<td><strong>By‑attribute category</strong></td>
+<td>Category:Physics by country</td>
+<td><strong>Regime faceting</strong> — same domain sliced by an attribute</td>
+<td>Reveals regime variance across a dimension</td>
+</tr>
+<tr>
+<td><strong>Hidden/maintenance category</strong></td>
+<td>Category:Articles needing cleanup</td>
+<td><strong>Infrastructure regime</strong> — stewardship tracking</td>
+<td>Not visible to readers; structural health indicator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-byattribute-categories-as-regime-faceting">3.2 — By‑Attribute Categories as Regime Faceting</h3>
+<p><strong>By‑attribute categories</strong> are structurally special — they slice a domain
+regime by an external dimension, revealing how the regime varies across
+that dimension:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Example</th>
+<th>What It Reveals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>By country</td>
+<td>Category:Physics by country</td>
+<td>Geographic regime variance</td>
+</tr>
+<tr>
+<td>By year</td>
+<td>Category:2024 in science</td>
+<td>Temporal regime segmentation</td>
+</tr>
+<tr>
+<td>By nationality</td>
+<td>Category:American physicists</td>
+<td>Cultural regime attribution</td>
+</tr>
+<tr>
+<td>By century</td>
+<td>Category:19th-century mathematics</td>
+<td>Historical regime periodization</td>
+</tr>
+<tr>
+<td>By type</td>
+<td>Category:Types of chemical reactions</td>
+<td>Internal regime differentiation</td>
+</tr>
+<tr>
+<td>By status</td>
+<td>Category:Superseded scientific theories</td>
+<td>Regime lifecycle classification</td>
+</tr>
+</tbody>
+</table>
+<p><strong>RTT reading:</strong> By‑attribute categories are <strong>regime cross‑sections</strong> —
+they show how a single domain regime manifests differently when sliced
+along an external dimension. The existence of a by‑attribute category
+means the community considers that dimension <strong>structurally significant</strong>
+for that domain.</p>
+<hr>
+<h2 id="4-the-category-tree-vs-wikidata-class-hierarchy">4 — The Category Tree vs. Wikidata Class Hierarchy</h2>
+<p>Wikipedia has <strong>two parallel classification systems</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Category Tree</th>
+<th>Wikidata (P31/P279)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maintained by</td>
+<td>Wikipedia editors (per language)</td>
+<td>Wikidata editors (cross‑language)</td>
+</tr>
+<tr>
+<td>Structure</td>
+<td>DAG (directed acyclic graph)</td>
+<td>Ontological hierarchy (instance‑of / subclass‑of)</td>
+</tr>
+<tr>
+<td>Consistency</td>
+<td>Low — emergent, crowdsourced, sometimes contradictory</td>
+<td>Medium — more structured but still community‑edited</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>2.3M+ categories in English alone</td>
+<td>120M+ entities globally</td>
+</tr>
+<tr>
+<td>Machine‑readable</td>
+<td>Partially (category API, PetScan)</td>
+<td>Fully (SPARQL)</td>
+</tr>
+<tr>
+<td>Cross‑language</td>
+<td><strong>Different per language edition</strong></td>
+<td><strong>Unified across all languages</strong></td>
+</tr>
+<tr>
+<td>RTT mapping</td>
+<td><strong>Regime topology</strong> (neighborhood, adjacency, containment)</td>
+<td><strong>Dimensional addressing</strong> (unique identity, typed relationships)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-insight-these-systems-disagree">Key Insight: These Systems Disagree</h3>
+<p>For any given concept, its Wikipedia category path and its Wikidata
+class hierarchy <strong>may tell different stories</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Wikipedia Categories</th>
+<th>Wikidata P31/P279 Chain</th>
+<th>Discrepancy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pluto</td>
+<td>Category:Dwarf planets</td>
+<td>instance of: trans-Neptunian object → subclass of: minor planet → subclass of: planetary-mass object</td>
+<td>Wikipedia groups by current classification; Wikidata preserves deeper ontological chain</td>
+</tr>
+<tr>
+<td>Tomato</td>
+<td>Category:Vegetables (in culinary contexts)</td>
+<td>instance of: taxon → subclass of: berry (botanical)</td>
+<td>Wikipedia follows cultural regime; Wikidata follows biological regime</td>
+</tr>
+<tr>
+<td>Hong Kong</td>
+<td>Category:Special administrative regions of China</td>
+<td>instance of: special administrative region → subclass of: administrative territorial entity</td>
+<td>Wikipedia categories reflect political framing; Wikidata is more neutral</td>
+</tr>
+</tbody>
+</table>
+<p><strong>RTT reading:</strong> Category tree = <strong>how the community organizes knowledge</strong>
+(cultural, editorial, pragmatic). Wikidata = <strong>how entities are formally
+classified</strong> (ontological, structured, cross‑cultural). Disagreements
+between them reveal <strong>regime framing differences</strong> — the same concept
+declared differently depending on whether the classification is
+community‑editorial or ontologically formal.</p>
+<hr>
+<h2 id="5-structural-pathologies-in-the-category-tree">5 — Structural Pathologies in the Category Tree</h2>
+<p>The category tree is crowdsourced and evolving, which means it contains
+structural pathologies that are themselves regime signals:</p>
+<h3 id="51-overcategorization">5.1 — Overcategorization</h3>
+<p><strong>What it is:</strong> An article assigned to 20+ categories, many of which are
+semantically overlapping.</p>
+<p><strong>Regime reading:</strong> The concept has <strong>regime sprawl</strong> — it has been claimed
+by too many classification systems without consolidation. Overcategorized
+articles often sit at regime intersections where no single domain has
+primary ownership.</p>
+<h3 id="52-undercategorization">5.2 — Undercategorization</h3>
+<p><strong>What it is:</strong> An article assigned to only 1–2 very broad categories,
+with no subcategory refinement.</p>
+<p><strong>Regime reading:</strong> The concept has <strong>regime isolation</strong> — it hasn't been
+claimed by a stewardship group. Often indicates a neglected or newly
+created article that no WikiProject has adopted.</p>
+<h3 id="53-category-cycles">5.3 — Category Cycles</h3>
+<p><strong>What it is:</strong> Category A contains subcategory B, which contains subcategory C,
+which contains subcategory A — a circular reference.</p>
+<p><strong>Regime reading:</strong> <strong>Regime hierarchy failure</strong> — the classification
+system cannot decide which concept is more general. These are rare
+(Wikipedia has bots that detect them) but structurally revealing when
+they occur — they mark genuine ontological ambiguity.</p>
+<h3 id="54-orphan-categories">5.4 — Orphan Categories</h3>
+<p><strong>What it is:</strong> A category with no parent categories (disconnected from
+the main tree).</p>
+<p><strong>Regime reading:</strong> <strong>Unmoored regime</strong> — a classification that exists but
+is not connected to the broader knowledge structure. Often indicates
+a recently created or poorly maintained category.</p>
+<h3 id="55-eponymous-categories">5.5 — Eponymous Categories</h3>
+<p><strong>What it is:</strong> A category named after a person (Category:Albert Einstein,
+Category:Works by Aristotle).</p>
+<p><strong>Regime reading:</strong> <strong>Person‑as‑regime</strong> — the community considers this
+individual's work, influence, or legacy significant enough to constitute
+its own classification node. The category's subcategories reveal how the
+community structures that person's regime (works, influences, legacy,
+biographical details).</p>
+<hr>
+<h2 id="6-api-patterns-for-category-analysis">6 — API Patterns for Category Analysis</h2>
+<h3 id="61-get-an-articles-categories">6.1 — Get an Article's Categories</h3>
+<pre><code class="language-python">import requests
+
+def get_categories(title, lang=&quot;en&quot;):
+    &quot;&quot;&quot;Fetch all categories for a Wikipedia article.&quot;&quot;&quot;
+    url = f&quot;https://{lang}.wikipedia.org/w/api.php&quot;
+    params = {
+        &quot;action&quot;: &quot;query&quot;,
+        &quot;titles&quot;: title,
+        &quot;prop&quot;: &quot;categories&quot;,
+        &quot;cllimit&quot;: &quot;max&quot;,
+        &quot;clshow&quot;: &quot;!hidden&quot;,  # exclude maintenance categories
+        &quot;format&quot;: &quot;json&quot;
+    }
+    resp = requests.get(url, params=params,
+                        headers={&quot;User-Agent&quot;: &quot;TriadicFrameworks/1.0&quot;}).json()
+    page = next(iter(resp[&quot;query&quot;][&quot;pages&quot;].values()))
+    return [cat[&quot;title&quot;].replace(&quot;Category:&quot;, &quot;&quot;)
+            for cat in page.get(&quot;categories&quot;, [])]
+</code></pre>
+<h3 id="62-traverse-the-category-tree-upward">6.2 — Traverse the Category Tree Upward</h3>
+<pre><code class="language-python">def trace_to_root(category, lang=&quot;en&quot;, max_depth=15):
+    &quot;&quot;&quot;Trace a category upward through parent categories toward root.&quot;&quot;&quot;
+    url = f&quot;https://{lang}.wikipedia.org/w/api.php&quot;
+    path = []
+    current = category
+    visited = set()
+
+    for depth in range(max_depth):
+        if current in visited:
+            break  # cycle detection
+        visited.add(current)
+
+        params = {
+            &quot;action&quot;: &quot;query&quot;,
+            &quot;titles&quot;: f&quot;Category:{current}&quot;,
+            &quot;prop&quot;: &quot;categories&quot;,
+            &quot;cllimit&quot;: &quot;max&quot;,
+            &quot;clshow&quot;: &quot;!hidden&quot;,
+            &quot;format&quot;: &quot;json&quot;
+        }
+        resp = requests.get(url, params=params,
+                            headers={&quot;User-Agent&quot;: &quot;TriadicFrameworks/1.0&quot;}).json()
+        page = next(iter(resp[&quot;query&quot;][&quot;pages&quot;].values()))
+        parents = [cat[&quot;title&quot;].replace(&quot;Category:&quot;, &quot;&quot;)
+                   for cat in page.get(&quot;categories&quot;, [])]
+
+        path.append({
+            &quot;depth&quot;: depth,
+            &quot;category&quot;: current,
+            &quot;parents&quot;: parents
+        })
+
+        if not parents or &quot;Contents&quot; in parents[0]:
+            break  # reached root
+        current = parents[0]  # follow first parent
+
+    return path
+</code></pre>
+<h3 id="63-get-subcategories-and-membership-count">6.3 — Get Subcategories and Membership Count</h3>
+<pre><code class="language-python">def get_subcategories(category, lang=&quot;en&quot;):
+    &quot;&quot;&quot;Fetch subcategories and article count for a category.&quot;&quot;&quot;
+    url = f&quot;https://{lang}.wikipedia.org/w/api.php&quot;
+    params = {
+        &quot;action&quot;: &quot;query&quot;,
+        &quot;list&quot;: &quot;categorymembers&quot;,
+        &quot;cmtitle&quot;: f&quot;Category:{category}&quot;,
+        &quot;cmtype&quot;: &quot;subcat&quot;,
+        &quot;cmlimit&quot;: &quot;max&quot;,
+        &quot;format&quot;: &quot;json&quot;
+    }
+    resp = requests.get(url, params=params,
+                        headers={&quot;User-Agent&quot;: &quot;TriadicFrameworks/1.0&quot;}).json()
+    subcats = [m[&quot;title&quot;].replace(&quot;Category:&quot;, &quot;&quot;)
+               for m in resp[&quot;query&quot;][&quot;categorymembers&quot;]]
+
+    # Also get article count
+    params[&quot;cmtype&quot;] = &quot;page&quot;
+    resp2 = requests.get(url, params=params,
+                         headers={&quot;User-Agent&quot;: &quot;TriadicFrameworks/1.0&quot;}).json()
+    articles = len(resp2[&quot;query&quot;][&quot;categorymembers&quot;])
+
+    return {
+        &quot;category&quot;: category,
+        &quot;subcategory_count&quot;: len(subcats),
+        &quot;subcategories&quot;: subcats,
+        &quot;article_count&quot;: articles
+    }
+</code></pre>
+<h3 id="64-compute-regime-topology-metrics">6.4 — Compute Regime Topology Metrics</h3>
+<pre><code class="language-python">def regime_topology(title, lang=&quot;en&quot;):
+    &quot;&quot;&quot;Compute regime topology metrics for an article.&quot;&quot;&quot;
+    categories = get_categories(title, lang)
+
+    # Depth: trace each category to root, take the longest path
+    max_depth = 0
+    all_paths = []
+    for cat in categories[:5]:  # sample first 5 to avoid rate limits
+        path = trace_to_root(cat, lang)
+        depth = len(path)
+        max_depth = max(max_depth, depth)
+        all_paths.append(path)
+
+    return {
+        &quot;article&quot;: title,
+        &quot;category_count&quot;: len(categories),
+        &quot;categories&quot;: categories,
+        &quot;max_depth&quot;: max_depth,
+        &quot;regime_multiplicity&quot;: len(categories),
+        &quot;deepest_path&quot;: all_paths[0] if all_paths else [],
+        &quot;interpretation&quot;: classify_topology(len(categories), max_depth)
+    }
+
+def classify_topology(cat_count, max_depth):
+    &quot;&quot;&quot;Classify an article's regime topology.&quot;&quot;&quot;
+    if cat_count &lt;= 2 and max_depth &lt;= 3:
+        return &quot;isolated_regime&quot;
+    elif cat_count &lt;= 5 and max_depth &lt;= 6:
+        return &quot;well_classified&quot;
+    elif cat_count &lt;= 10 and max_depth &lt;= 10:
+        return &quot;cross_domain_concept&quot;
+    elif cat_count &gt; 15:
+        return &quot;regime_sprawl&quot;
+    else:
+        return &quot;deeply_specialized&quot;
+</code></pre>
+<h3 id="65-crosslanguage-category-comparison">6.5 — Cross‑Language Category Comparison</h3>
+<pre><code class="language-python">def compare_categories_cross_language(wikidata_qid, languages=None):
+    &quot;&quot;&quot;Compare category assignments for the same concept across languages.&quot;&quot;&quot;
+    if languages is None:
+        languages = [&quot;en&quot;, &quot;de&quot;, &quot;ja&quot;, &quot;ar&quot;, &quot;es&quot;]
+
+    url = &quot;https://www.wikidata.org/w/api.php&quot;
+    params = {
+        &quot;action&quot;: &quot;wbgetentities&quot;,
+        &quot;ids&quot;: wikidata_qid,
+        &quot;props&quot;: &quot;sitelinks&quot;,
+        &quot;format&quot;: &quot;json&quot;
+    }
+    resp = requests.get(url, params=params,
+                        headers={&quot;User-Agent&quot;: &quot;TriadicFrameworks/1.0&quot;}).json()
+    sitelinks = resp[&quot;entities&quot;][wikidata_qid].get(&quot;sitelinks&quot;, {})
+
+    results = {}
+    for lang in languages:
+        wiki_key = f&quot;{lang}wiki&quot;
+        if wiki_key in sitelinks:
+            title = sitelinks[wiki_key][&quot;title&quot;]
+            cats = get_categories(title, lang)
+            results[lang] = {
+                &quot;title&quot;: title,
+                &quot;category_count&quot;: len(cats),
+                &quot;categories&quot;: cats
+            }
+
+    return results
+</code></pre>
+<hr>
+<h2 id="7-worked-example-energy">7 — Worked Example: "Energy"</h2>
+<p>The concept <strong>Energy</strong> sits at one of the deepest regime intersections
+in Wikipedia's category tree.</p>
+<h3 id="category-memberships-english-wikipedia">Category Memberships (English Wikipedia)</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Domain Regime</th>
+<th>Depth from Root</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Category:Energy</td>
+<td>Root domain category</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Category:Main topic classifications</td>
+<td>Top‑level regime</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Category:Physical quantities</td>
+<td>Physics sub‑regime</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Category:Conservation laws</td>
+<td>Physics sub‑regime</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Category:Thermodynamic properties</td>
+<td>Chemistry/Physics sub‑regime</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Category:Energy economics</td>
+<td>Economics cross‑regime</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Category:Energy and society</td>
+<td>Sociology cross‑regime</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Category:Energy policy</td>
+<td>Political Science cross‑regime</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="regime-topology-analysis">Regime Topology Analysis</h3>
+<ul>
+<li><strong>Category count:</strong> 8+ (high → cross‑domain concept)</li>
+<li><strong>Max depth:</strong> 6 (moderately specialized)</li>
+<li><strong>Fan‑in:</strong> 3+ domain regimes claim it (Physics, Economics, Political Science)</li>
+<li><strong>Regime multiplicity:</strong> Very high — Energy is one of the most cross‑domain concepts on Wikipedia</li>
+<li><strong>Classification:</strong> <code>cross_domain_concept</code> with elements of <code>regime_sprawl</code></li>
+</ul>
+<h3 id="comparing-wikipedia-categories-vs-wikidata">Comparing Wikipedia Categories vs. Wikidata</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Classification Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wikipedia categories</td>
+<td>Energy → Physical quantities → Physics → Science → Main topic classifications</td>
+</tr>
+<tr>
+<td>Wikidata P31/P279</td>
+<td>energy (Q11379) → instance of: physical quantity (Q107715) → subclass of: property (Q937228)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Divergence:</strong> Wikipedia's category tree routes Energy through both
+Physics AND Economics AND Policy — reflecting its multi‑regime nature.
+Wikidata's class hierarchy routes it strictly through Physics → Physical
+quantity — reflecting a more ontologically narrow classification.</p>
+<p><strong>RTT reading:</strong> Wikipedia's category tree is more <strong>regime‑honest</strong> for
+cross‑domain concepts like Energy because it preserves multiple regime
+memberships. Wikidata's P31/P279 chain is more <strong>ontologically precise</strong>
+but loses the cross‑domain richness.</p>
+<h3 id="crosslanguage-category-comparison">Cross‑Language Category Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Category Count</th>
+<th>Notable Differences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English</td>
+<td>8+</td>
+<td>Strong economics and policy categories</td>
+</tr>
+<tr>
+<td>German</td>
+<td>6</td>
+<td>More physics‑focused, fewer policy categories</td>
+</tr>
+<tr>
+<td>Japanese</td>
+<td>5</td>
+<td>Includes philosophy category ("気" — ki / energy as life force concept)</td>
+</tr>
+<tr>
+<td>Arabic</td>
+<td>4</td>
+<td>Fewer categories overall, physics‑dominant</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Insight:</strong> The Japanese Wikipedia categorizes Energy under a philosophical
+concept that has no equivalent in the English category tree — revealing
+a <strong>cultural regime frame</strong> that Western categorization misses entirely.</p>
+<hr>
+<h2 id="8-the-category-tree-as-a-research-instrument">8 — The Category Tree as a Research Instrument</h2>
+<h3 id="81-regime-boundary-detection">8.1 — Regime Boundary Detection</h3>
+<p>Categories mark <strong>where one regime ends and another begins</strong>. The boundary
+is visible where:</p>
+<ul>
+<li>A category has subcategories belonging to <strong>different WikiProjects</strong></li>
+<li>An article belongs to categories from <strong>multiple domain regimes</strong></li>
+<li>A category's talk page has disputes about <strong>what belongs in it</strong></li>
+</ul>
+<h3 id="82-knowledge-gap-detection">8.2 — Knowledge Gap Detection</h3>
+<p>Missing or underpopulated categories reveal <strong>regime gaps</strong> — areas where
+Wikipedia's structural coverage is incomplete:</p>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>What It Reveals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Category with 0–2 articles</td>
+<td>Declared regime with no content — structural placeholder</td>
+</tr>
+<tr>
+<td>Category with no subcategories in a deep domain</td>
+<td>Missing sub‑regime differentiation</td>
+</tr>
+<tr>
+<td>Category that exists in English but not in other languages</td>
+<td>Culturally specific classification</td>
+</tr>
+<tr>
+<td>"Wikipedia categories needing clarification"</td>
+<td>Community‑acknowledged structural ambiguity</td>
+</tr>
+</tbody>
+</table>
+<h3 id="83-regime-evolution-tracking">8.3 — Regime Evolution Tracking</h3>
+<p>Category changes in an article's revision history reveal <strong>regime reclassification events</strong>:</p>
+<pre><code class="language-python">def find_category_changes(title, lang=&quot;en&quot;):
+    &quot;&quot;&quot;Find revisions that changed an article's categories.&quot;&quot;&quot;
+    url = f&quot;https://{lang}.wikipedia.org/w/api.php&quot;
+    params = {
+        &quot;action&quot;: &quot;query&quot;,
+        &quot;titles&quot;: title,
+        &quot;prop&quot;: &quot;revisions&quot;,
+        &quot;rvlimit&quot;: &quot;50&quot;,
+        &quot;rvprop&quot;: &quot;ids|timestamp|comment|user&quot;,
+        &quot;format&quot;: &quot;json&quot;
+    }
+    resp = requests.get(url, params=params,
+                        headers={&quot;User-Agent&quot;: &quot;TriadicFrameworks/1.0&quot;}).json()
+    page = next(iter(resp[&quot;query&quot;][&quot;pages&quot;].values()))
+
+    cat_changes = []
+    for rev in page.get(&quot;revisions&quot;, []):
+        comment = rev.get(&quot;comment&quot;, &quot;&quot;).lower()
+        if any(kw in comment for kw in
+               [&quot;category&quot;, &quot;cat&quot;, &quot;recat&quot;, &quot;recategoriz&quot;, &quot;reclassif&quot;]):
+            cat_changes.append({
+                &quot;rev_id&quot;: rev[&quot;revid&quot;],
+                &quot;timestamp&quot;: rev[&quot;timestamp&quot;],
+                &quot;user&quot;: rev.get(&quot;user&quot;, &quot;anonymous&quot;),
+                &quot;comment&quot;: rev.get(&quot;comment&quot;, &quot;&quot;)
+            })
+
+    return cat_changes
+</code></pre>
+<p><strong>RTT reading:</strong> Every category change is a <strong>regime reclassification event</strong> —
+the community has decided that this concept belongs to a different regime
+neighborhood than before. Tracking these changes over time reveals the
+concept's <strong>regime migration history</strong>.</p>
+<hr>
+<h2 id="9-petscan-advanced-category-intersection-queries">9 — PetScan: Advanced Category Intersection Queries</h2>
+<p>PetScan (<code>https://petscan.wmcloud.org/</code>) is a powerful tool for querying
+category intersections — finding articles that belong to <strong>multiple
+categories simultaneously</strong>:</p>
+<h3 id="91-use-cases-for-regime-analysis">9.1 — Use Cases for Regime Analysis</h3>
+<table>
+<thead>
+<tr>
+<th>Query Type</th>
+<th>PetScan Setup</th>
+<th>RTT Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cross‑domain entities</strong></td>
+<td>Category A AND Category B (different domains)</td>
+<td>Find concepts at regime intersections</td>
+</tr>
+<tr>
+<td><strong>Domain‑specific gaps</strong></td>
+<td>Category A NOT Category B</td>
+<td>Find articles missing an expected classification</td>
+</tr>
+<tr>
+<td><strong>Temporal subsets</strong></td>
+<td>Category A AND Category "YEAR in [domain]"</td>
+<td>Regime population at a point in time</td>
+</tr>
+<tr>
+<td><strong>Quality filtering</strong></td>
+<td>Category A AND quality ≥ GA</td>
+<td>Find validated regime declarations in a domain</td>
+</tr>
+<tr>
+<td><strong>Language comparison</strong></td>
+<td>Same categories in different wikis</td>
+<td>Cross‑cultural regime coverage</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-example-finding-crossdomain-concepts">9.2 — Example: Finding Cross‑Domain Concepts</h3>
+<p>To find articles that are classified under <strong>both</strong> Physics and Philosophy:</p>
+<ol>
+<li>Go to <code>https://petscan.wmcloud.org/</code></li>
+<li>Set Categories: <code>Physics</code> and <code>Philosophy</code></li>
+<li>Set Combination: <code>Intersection (AND)</code></li>
+<li>Set Depth: 3 (search 3 levels deep into subcategories)</li>
+<li>Run query</li>
+</ol>
+<p><strong>Result:</strong> Articles like "Entropy," "Causality," "Determinism,"
+"Quantum mechanics interpretations" — concepts that sit at the
+Physics↔Philosophy regime boundary.</p>
+<p><strong>RTT reading:</strong> These intersection results are the <strong>regime boundary
+population</strong> — the set of concepts that both domains claim. The size
+and composition of this population reveals how structurally connected
+the two domains are.</p>
+<hr>
+<h2 id="10-crossreference-to-other-module-files">10 — Cross‑Reference to Other Module Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>How Category Taxonomy Connects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Wikidata_Ingestion_Format.md</code></td>
+<td>Wikidata P31/P279 chain = parallel classification system; this file covers the Wikipedia side; that file covers the Wikidata side; Section 4 compares them directly</td>
+</tr>
+<tr>
+<td><code>Wikipedia_RTT_Structural_Mapping.md</code></td>
+<td>Categories are mapped in Section 2.1 as "regime hierarchy" at R2 level</td>
+</tr>
+<tr>
+<td><code>Cross_Domain_Meta_Operators.md</code></td>
+<td>Operator 5 (Category Taxonomy as Regime Hierarchy) is derived directly from this file</td>
+</tr>
+<tr>
+<td><code>Talk_Page_Coherence_Surface.md</code></td>
+<td>Classification Disputes (Pattern 5) are talk page debates about category membership — regime hierarchy disputes surface there</td>
+</tr>
+<tr>
+<td><code>Revision_History_Regime_Analysis.md</code></td>
+<td>Category changes appear in revision history as regime reclassification events — Section 8.3 of this file provides the detection code</td>
+</tr>
+<tr>
+<td><code>NPOV_As_Coherence_Operator.md</code></td>
+<td>Category assignment can be a NPOV issue — placing an article in a politically loaded category is itself a framing decision</td>
+</tr>
+<tr>
+<td>All 15 domain directories</td>
+<td>Every domain's <code>regime_alignment.md</code> traces the domain's category tree as part of its regime position analysis</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="11-student-exercises">11 — Student Exercises</h2>
+<h3 id="exercise-1-category-path-tracing-15-minutes">Exercise 1 — Category Path Tracing (15 minutes)</h3>
+<ol>
+<li>Pick any Wikipedia article</li>
+<li>Scroll to the bottom and find its categories</li>
+<li>Click one category and trace it <strong>upward</strong> through parent categories until you reach "Main topic classifications" or "Contents"</li>
+<li>Count the depth (number of levels)</li>
+<li>Go back and try a <strong>different</strong> category for the same article — does it reach the root through a different domain?</li>
+<li>Write one sentence: <em>"This article reaches the root via [path 1: N levels through Domain X] and [path 2: M levels through Domain Y]. It has a regime multiplicity of [number of top‑level categories]."</em></li>
+</ol>
+<h3 id="exercise-2-crossdomain-intersection-20-minutes">Exercise 2 — Cross‑Domain Intersection (20 minutes)</h3>
+<ol>
+<li>Go to PetScan (<code>https://petscan.wmcloud.org/</code>)</li>
+<li>Pick two domains you find interesting (e.g., Biology and Economics, or Physics and Philosophy)</li>
+<li>Run an intersection query with depth 2</li>
+<li>Examine the results: what concepts sit at the boundary between these two domains?</li>
+<li>Pick one result article and read its lead paragraph — does it acknowledge its cross‑domain nature?</li>
+<li>Write two sentences: <em>"The intersection of [Domain A] and [Domain B] contains [N] articles. The most structurally interesting is [article] because [reason]."</em></li>
+</ol>
+<h3 id="exercise-3-category-pathology-hunting-20-minutes">Exercise 3 — Category Pathology Hunting (20 minutes)</h3>
+<ol>
+<li>Browse Wikipedia's category tree starting from <code>Category:Main topic classifications</code></li>
+<li>Look for one example of each pathology from Section 5:
+   - An overcategorized article (15+ categories)
+   - An undercategorized article (1–2 categories only)
+   - An orphan category (hint: check <code>Category:Orphaned categories</code>)
+   - An eponymous category (person‑as‑regime)</li>
+<li>For each, write one sentence explaining what the pathology reveals about the concept's regime status</li>
+</ol>
+<h3 id="exercise-4-crosslanguage-category-comparison-30-minutes">Exercise 4 — Cross‑Language Category Comparison (30 minutes)</h3>
+<ol>
+<li>Pick a concept you expect to have cultural variance (try: Democracy, Tea, Football, or a religion)</li>
+<li>Find the article in English + 2 other languages</li>
+<li>For each language, list the categories at the bottom of the article</li>
+<li>Compare: Are the categories structurally similar? Do different languages categorize the concept under different domains?</li>
+<li>Answer: <em>"The most striking category difference is [X]. This reveals that [language A] frames the concept as part of [regime], while [language B] frames it as part of [different regime]."</em></li>
+</ol>
+<h3 id="exercise-5-regime-reclassification-detection-30-minutes">Exercise 5 — Regime Reclassification Detection (30 minutes)</h3>
+<ol>
+<li>Pick an article for a concept that has been reclassified in real life (try: Pluto, a renamed country, a reclassified species, or a substance whose legal status changed)</li>
+<li>Use the <code>find_category_changes</code> function from Section 8.3 (or manually search the revision history for "category" in edit summaries)</li>
+<li>Identify when the category change happened and what categories were added/removed</li>
+<li>Answer: <em>"The article was reclassified from [old categories] to [new categories] on [date]. This reflects the real‑world regime transition of [event]. The category change [preceded / followed / coincided with] the article text update by [N days]."</em></li>
+</ol>
+<hr>
+<p><em>This file is part of the <a href="README.html">Wikipedia Awareness Module</a> in the <a href="https://docs.triadicframeworks.org/">TriadicFrameworks</a> canon.</em></p>
+  </main>
+</body>
+</html>

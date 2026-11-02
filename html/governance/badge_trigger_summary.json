@@ -1,0 +1,20 @@
+[
+  {
+    "badge": "Echo Weaver",
+    "trigger": "visitor_ritual.md",
+    "glyph": "lantern_unfolding",
+    "archetype": "Initiator"
+  },
+  {
+    "badge": "Curriculum Weaver",
+    "trigger": "triadic_manifesto.md",
+    "glyph": "aura_pulse",
+    "lineage_depth": 3
+  },
+  {
+    "badge": "Validator Guardian",
+    "trigger": "education-manifesto.md",
+    "glyph": "glyphic_echo",
+    "validator_score": 4
+  }
+]

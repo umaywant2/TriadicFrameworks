@@ -1,0 +1,97 @@
+{
+  "$schema":  "https://json-schema.org/draft/2020-12/schema",
+  "$id":      "https://triadicframeworks.org/schemas/entity.v1.json",
+  "$comment": "RTT Entity sub-schema — refreshed 2026-05-06 to add module metadata and session context.",
+
+  "title":       "RTT Entity Block (v1)",
+  "description": "Defines a minimal entity substrate for RTTcode packets, including identity, micro-state, and resonance alignment. Entities are the participants in a micro-regime — analogous to D369's major functional blocks with source identity (R5.1).",
+
+  "_meta": {
+    "module":          "RTT/codes",
+    "canonical_id":    "RTT_CODES_ENTITY",
+    "role":            "engine",
+    "version":         "1.1",
+    "status":          "canon-stable",
+    "author":          "Nawder Loswin",
+    "license":         "MIT",
+    "canonical_path":  "/docs/schemas/entity.v1.json",
+    "module_home":     "/docs/rtt/codes/",
+    "parent_schema":   "rttcode.v1.json",
+    "last_updated":    "2026-05-06"
+  },
+
+  "_session_context": {
+    "canon":       "active (rtt-codes-core)",
+    "drift":       "minimal (metadata-locked)",
+    "coherence":   "stable (entity grammar)",
+    "audience":    "developers + researchers + tool authors + AIs"
+  },
+
+  "_version_history": [
+    {
+      "version": "1.0",
+      "date":    "2025-01-01",
+      "note":    "Initial entity schema release."
+    },
+    {
+      "version": "1.1",
+      "date":    "2026-05-06",
+      "note":    "Metadata refresh — added _meta, _session_context, _version_history. No property changes."
+    }
+  ],
+
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "entity_version",
+    "id",
+    "state",
+    "resonance"
+  ],
+
+  "properties": {
+
+    "entity_version": {
+      "type":        "string",
+      "const":       "1.0.0",
+      "description": "Version of the entity schema."
+    },
+
+    "id": {
+      "type":        "string",
+      "description": "Unique identifier for the entity. Serves as the source identity within the RTTcode packet — must be stable across the entity's lifecycle."
+    },
+
+    "state": {
+      "type":        "object",
+      "description": "Current micro-state of the entity — the observable scalar snapshot at this tick.",
+      "additionalProperties": false,
+      "required": ["value"],
+      "properties": {
+        "value": {
+          "type":        "number",
+          "description": "Primary scalar representing the entity's micro-state at the current tick."
+        }
+      }
+    },
+
+    "resonance": {
+      "type":        "object",
+      "description": "Resonance alignment parameters — how the entity couples to the micro-regime's oscillatory substrate.",
+      "additionalProperties": false,
+      "required": ["amplitude", "phase"],
+      "properties": {
+        "amplitude": {
+          "type":        "number",
+          "description": "Resonance amplitude of the entity. Higher values indicate stronger coupling."
+        },
+        "phase": {
+          "type":        "number",
+          "description": "Resonance phase of the entity (radians or normalized). Determines alignment relative to other entities."
+        }
+      }
+    }
+
+  }
+}

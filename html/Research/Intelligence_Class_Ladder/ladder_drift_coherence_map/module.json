@@ -1,0 +1,32 @@
+{
+  "module": "Ladder_Drift_Coherence_Map",
+  "name": "Intelligence Class Ladder — Drift‑Coherence Map",
+  "summary": "Defines the drift‑coherence geometry of the Intelligence Class Ladder, mapping how AAI, AGI, and SI manage drift resistance, coherence preservation, and cross‑domain stability across cognitive tiers.",
+  "category": "intelligence-stability-drift-coherence",
+  "version": "1.0",
+  "purpose": "Provide a structural map of drift and coherence behavior across the Ladder, explaining how each tier resists drift, maintains coherence, stabilizes reasoning, and preserves cross‑domain alignment under increasing cognitive load.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@ladder.drift.detect",
+    "@ladder.drift.resist",
+    "@ladder.coherence.preserve",
+    "@ladder.coherence.balance",
+    "@ladder.coherence.integrate"
+  ],
+  "lineage": {
+    "upstream": [
+      "Ladder_Overview",
+      "Ladder_Registry",
+      "Ladder_Stability_Map"
+    ],
+    "downstream": [
+      "AAI",
+      "AGI",
+      "SI",
+      "SI_behavioral_invariants_regime_map",
+      "SI_structural_geometry_deep_regime_map",
+      "SI_apex_region_map"
+    ]
+  }
+}

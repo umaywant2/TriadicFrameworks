@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "module_id": "bots.go",
+    "position_id": "go_golden_v1",
+    "board_size": 9,
+    "moves": 20
+  },
+
+  "timeline": [
+    { "index": 1,  "player": "B", "move": "D4" },
+    { "index": 2,  "player": "W", "move": "F4" },
+    { "index": 3,  "player": "B", "move": "D6" },
+    { "index": 4,  "player": "W", "move": "F6" },
+    { "index": 5,  "player": "B", "move": "C5" },
+    { "index": 6,  "player": "W", "move": "G5" },
+    { "index": 7,  "player": "B", "move": "C4" },
+    { "index": 8,  "player": "W", "move": "G4" },
+    { "index": 9,  "player": "B", "move": "E5" },
+    { "index": 10, "player": "W", "move": "E4" },
+    { "index": 11, "player": "B", "move": "D5" },
+    { "index": 12, "player": "W", "move": "F5" },
+    { "index": 13, "player": "B", "move": "C6" },
+    { "index": 14, "player": "W", "move": "G6" },
+    { "index": 15, "player": "B", "move": "B5" },
+    { "index": 16, "player": "W", "move": "H5" },
+    { "index": 17, "player": "B", "move": "C3" },
+    { "index": 18, "player": "W", "move": "G3" },
+    { "index": 19, "player": "B", "move": "D3" },
+    { "index": 20, "player": "W", "move": "F3" }
+  ],
+
+  "lumen": [
+    { "index": 1,  "signals": ["left_influence_seed"] },
+    { "index": 2,  "signals": ["right_influence_seed"] },
+    { "index": 3,  "signals": ["left_extension"] },
+    { "index": 4,  "signals": ["right_extension"] },
+    { "index": 5,  "signals": ["left_pressure"] },
+    { "index": 6,  "signals": ["right_pressure"] },
+    { "index": 7,  "signals": ["left_shape"] },
+    { "index": 8,  "signals": ["right_shape"] },
+    { "index": 9,  "signals": ["center_tension"] },
+    { "index": 10, "signals": ["center_tension"] },
+    { "index": 11, "signals": ["alignment_growth"] },
+    { "index": 12, "signals": ["alignment_growth"] },
+    { "index": 13, "signals": ["left_enclosure"] },
+    { "index": 14, "signals": ["right_enclosure"] },
+    { "index": 15, "signals": ["collapse_signature"] },
+    { "index": 16, "signals": ["boundary_pressure"] },
+    { "index": 17, "signals": ["shape_extension"] },
+    { "index": 18, "signals": ["projection_loss_trigger"] },
+    { "index": 19, "signals": ["continuity_arc"] },
+    { "index": 20, "signals": ["continuity_arc"] }
+  ],
+
+  "regime": [
+    { "index": 1,  "regime": "local" },
+    { "index": 2,  "regime": "local" },
+    { "index": 3,  "regime": "structural" },
+    { "index": 4,  "regime": "structural" },
+    { "index": 5,  "regime": "local" },
+    { "index": 6,  "regime": "local" },
+    { "index": 7,  "regime": "structural" },
+    { "index": 8,  "regime": "structural" },
+    { "index": 9,  "regime": "continuity" },
+    { "index": 10, "regime": "continuity" },
+    { "index": 11, "regime": "continuity" },
+    { "index": 12, "regime": "continuity" },
+    { "index": 13, "regime": "structural" },
+    { "index": 14, "regime": "structural" },
+    { "index": 15, "regime": "local" },
+    { "index": 16, "regime": "local" },
+    { "index": 17, "regime": "structural" },
+    { "index": 18, "regime": "continuity" },
+    { "index": 19, "regime": "continuity" },
+    { "index": 20, "regime": "continuity" }
+  ],
+
+  "ancestry": [
+    { "index": 1,  "sequence": ["seed"], "collapse_signature": false, "projection_loss": false },
+    { "index": 2,  "sequence": ["seed"], "collapse_signature": false, "projection_loss": false },
+    { "index": 3,  "sequence": ["seed","extension"], "collapse_signature": false, "projection_loss": false },
+    { "index": 4,  "sequence": ["seed","extension"], "collapse_signature": false, "projection_loss": false },
+    { "index": 5,  "sequence": ["seed","pressure"], "collapse_signature": false, "projection_loss": false },
+    { "index": 6,  "sequence": ["seed","pressure"], "collapse_signature": false, "projection_loss": false },
+    { "index": 7,  "sequence": ["seed","shape"], "collapse_signature": false, "projection_loss": false },
+    { "index": 8,  "sequence": ["seed","shape"], "collapse_signature": false, "projection_loss": false },
+    { "index": 9,  "sequence": ["seed","shape","tension"], "collapse_signature": false, "projection_loss": false },
+    { "index": 10, "sequence": ["seed","shape","tension"], "collapse_signature": false, "projection_loss": false },
+    { "index": 11, "sequence": ["seed","shape","alignment"], "collapse_signature": false, "projection_loss": false },
+    { "index": 12, "sequence": ["seed","shape","alignment"], "collapse_signature": false, "projection_loss": false },
+    { "index": 13, "sequence": ["seed","shape","enclosure"], "collapse_signature": false, "projection_loss": false },
+    { "index": 14, "sequence": ["seed","shape","enclosure"], "collapse_signature": false, "projection_loss": false },
+    { "index": 15, "sequence": ["seed","shape","collapse"], "collapse_signature": true, "projection_loss": false },
+    { "index": 16, "sequence": ["seed","shape","collapse"], "collapse_signature": false, "projection_loss": false },
+    { "index": 17, "sequence": ["seed","shape","extension"], "collapse_signature": false, "projection_loss": false },
+    { "index": 18, "sequence": ["seed","shape","projection_loss"], "collapse_signature": false, "projection_loss": true },
+    { "index": 19, "sequence": ["seed","shape","continuity"], "collapse_signature": false, "projection_loss": false },
+    { "index": 20, "sequence": ["seed","shape","continuity"], "collapse_signature": false, "projection_loss": false }
+  ],
+
+  "drift": {
+    "direction": "center-alignment",
+    "strength": "medium",
+    "alignment": "partial"
+  },
+
+  "risk": {
+    "collapse": "medium",
+    "projection_loss": "medium",
+    "instability": "low"
+  },
+
+  "triadic_score": {
+    "local": 0.21,
+    "structural": 0.43,
+    "continuity": 0.36,
+    "risk": 0.29,
+    "final": 0.77
+  }
+}

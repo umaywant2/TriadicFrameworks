@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/module_backgammon_state.json",
+  "title": "RTT Backgammon StateEmitter",
+  "description": "Triadic state output for a backgammon position.",
+  "type": "object",
+
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "module_id": { "type": "string" },
+        "position_id": { "type": "string" },
+        "next_player": { "type": "string", "enum": ["X", "O"] },
+        "dice": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1, "maximum": 6 },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": ["module_id", "position_id", "next_player", "dice"]
+    },
+
+    "board": {
+      "type": "object",
+      "description": "24 points + bar + borne off.",
+      "properties": {
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "index": { "type": "integer", "minimum": 1, "maximum": 24 },
+              "player": { "type": "string", "enum": ["X", "O", "."] },
+              "count": { "type": "integer", "minimum": 0 }
+            },
+            "required": ["index", "player", "count"]
+          },
+          "minItems": 24,
+          "maxItems": 24
+        },
+        "bar": {
+          "type": "object",
+          "properties": {
+            "X": { "type": "integer", "minimum": 0 },
+            "O": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "borne_off": {
+          "type": "object",
+          "properties": {
+            "X": { "type": "integer", "minimum": 0 },
+            "O": { "type": "integer", "minimum": 0 }
+          }
+        }
+      },
+      "required": ["points", "bar", "borne_off"]
+    },
+
+    "legal_moves": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "lumen": {
+      "type": "object",
+      "properties": {
+        "prime_topology": {
+          "type": "string",
+          "enum": ["none", "short", "medium", "long", "full"]
+        },
+        "anchor_stability": {
+          "type": "string",
+          "enum": ["none", "weak", "stable", "strong"]
+        },
+        "race_geometry": {
+          "type": "string",
+          "enum": ["close", "moderate", "far"]
+        },
+        "blot_risk": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        }
+      },
+      "required": ["prime_topology", "anchor_stability", "race_geometry", "blot_risk"]
+    },
+
+    "regime": {
+      "type": "array",
+      "description": "Hephaestus regime classification per move.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "move": { "type": "string" },
+          "regime": {
+            "type": "string",
+            "enum": ["local", "structural", "continuity"]
+          }
+        },
+        "required": ["move", "regime"]
+      }
+    },
+
+    "ancestry": {
+      "type": "array",
+      "description": "Aurion ancestry signals across the position.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sequence": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "collapse_signature": { "type": "boolean" },
+          "projection_loss": { "type": "boolean" }
+        },
+        "required": ["sequence", "collapse_signature", "projection_loss"]
+      }
+    },
+
+    "drift": {
+      "type": "object",
+      "description": "Continuity drift across the race plan.",
+      "properties": {
+        "direction": { "type": "string" },
+        "strength": {
+          "type": "string",
+          "enum": ["none", "weak", "medium", "strong"]
+        }
+      },
+      "required": ["direction", "strength"]
+    },
+
+    "risk": {
+      "type": "object",
+      "properties": {
+        "paradox": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        },
+        "collapse": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        },
+        "projection_loss": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        }
+      },
+      "required": ["paradox", "collapse", "projection_loss"]
+    },
+
+    "triadic_score": {
+      "type": "object",
+      "properties": {
+        "local": { "type": "number", "minimum": 0, "maximum": 1 },
+        "structural": { "type": "number", "minimum": 0, "maximum": 1 },
+        "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "risk": { "type": "number", "minimum": 0, "maximum": 1 },
+        "final": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["local", "structural", "continuity", "risk", "final"]
+    },
+
+    "timeline": {
+      "type": "array",
+      "description": "Move history.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ply": { "type": "integer" },
+          "move": { "type": "string" },
+          "player": { "type": "string" }
+        },
+        "required": ["ply", "move", "player"]
+      }
+    }
+  },
+
+  "required": [
+    "metadata",
+    "board",
+    "legal_moves",
+    "lumen",
+    "regime",
+    "ancestry",
+    "drift",
+    "risk",
+    "triadic_score"
+  ]
+}

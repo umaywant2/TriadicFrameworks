@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Crystal_Mycelial_Engine/teaching/agents/agents.py.md">
+  <title>Crystal–Mycelial Engine (CME)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Crystal_Mycelial_Engine/teaching/agents/agents.py.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Crystal_Mycelial_Engine/teaching/agents/agents.py.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<pre><code class="language-python"># Crystal–Mycelial Engine (CME)
+# Teaching Agents — TriadicFrameworks / RTT / CMH / MSRM
+# Version 1.0 — 2026
+
+
+# ------------------------------------------------------------
+# Biological Trace Agent
+# ------------------------------------------------------------
+
+class BiologicalTraceAgent:
+    def run(self):
+        &quot;&quot;&quot;
+        Capture biological geometry and routing.
+        Required operators:
+            P.trace_extend
+            G.nutrient_gradient
+        Output:
+            bio_map
+        &quot;&quot;&quot;
+        bio_map = {
+            &quot;geometry&quot;: None,
+            &quot;gradients&quot;: None
+        }
+        # TODO: trace geometry
+        # TODO: compute gradients
+        return bio_map
+
+
+# ------------------------------------------------------------
+# Hybrid Alignment Agent
+# ------------------------------------------------------------
+
+class HybridAlignmentAgent:
+    def align(self, bio_map):
+        &quot;&quot;&quot;
+        Align biological geometry with hybrid resonance fields.
+        Required operators:
+            S.channel_fill
+            HybridOps.resonance_bridge
+        Output:
+            hybrid_layer
+        &quot;&quot;&quot;
+        hybrid_layer = {
+            &quot;channels&quot;: None,
+            &quot;alignment&quot;: None
+        }
+        # TODO: fill channels
+        # TODO: bridge resonance
+        return hybrid_layer
+
+
+# ------------------------------------------------------------
+# Mineral Domain Agent
+# ------------------------------------------------------------
+
+class MineralDomainAgent:
+    def crystallize(self, hybrid_layer):
+        &quot;&quot;&quot;
+        Generate mineral lattice domains.
+        Required operators:
+            P.front_propagate
+            M.domain_memory
+        Output:
+            mineral_map
+        &quot;&quot;&quot;
+        mineral_map = {
+            &quot;lattice&quot;: None,
+            &quot;domains&quot;: None
+        }
+        # TODO: propagate lattice
+        # TODO: encode domain memory
+        return mineral_map
+
+
+# ------------------------------------------------------------
+# Envelope Advisor Agent
+# ------------------------------------------------------------
+
+class EnvelopeAdvisorAgent:
+    def advise(self):
+        &quot;&quot;&quot;
+        Recommend envelope values for each regime.
+        Targets:
+            BGR moisture: 0.55–0.65
+            HRR ion saturation: 0.65–0.75
+            MLR supersaturation: ≥ 0.85
+        Output:
+            envelope_plan
+        &quot;&quot;&quot;
+        envelope_plan = {
+            &quot;BGR&quot;: {&quot;moisture&quot;: (0.55, 0.65)},
+            &quot;HRR&quot;: {&quot;ion_saturation&quot;: (0.65, 0.75)},
+            &quot;MLR&quot;: {&quot;supersaturation&quot;: 0.85}
+        }
+        # TODO: refine envelope plan if needed
+        return envelope_plan
+
+
+# ------------------------------------------------------------
+# Memory Transfer Agent
+# ------------------------------------------------------------
+
+class MemoryTransferAgent:
+    def transfer(self, bio_map, hybrid_layer):
+        &quot;&quot;&quot;
+        Move memory through substrate layers.
+        Required operators:
+            M.route_memory
+            HybridOps.memory_transfer
+            M.domain_memory
+        Output:
+            memory_state
+        &quot;&quot;&quot;
+        memory_state = {
+            &quot;bio_memory&quot;: None,
+            &quot;hybrid_memory&quot;: None,
+            &quot;mineral_memory&quot;: None
+        }
+        # TODO: route memory
+        # TODO: transfer memory
+        # TODO: encode domain memory
+        return memory_state
+
+
+# ------------------------------------------------------------
+# Full CME Simulation Agent
+# ------------------------------------------------------------
+
+class CMESimulationAgent:
+    def __init__(self):
+        self.bio_agent = BiologicalTraceAgent()
+        self.hybrid_agent = HybridAlignmentAgent()
+        self.mineral_agent = MineralDomainAgent()
+        self.envelope_agent = EnvelopeAdvisorAgent()
+        self.memory_agent = MemoryTransferAgent()
+
+    def run(self):
+        &quot;&quot;&quot;
+        Full CME substrate transition pipeline.
+        Output:
+            final_state
+        &quot;&quot;&quot;
+        bio_map = self.bio_agent.run()
+        hybrid_layer = self.hybrid_agent.align(bio_map)
+        mineral_map = self.mineral_agent.crystallize(hybrid_layer)
+        envelopes = self.envelope_agent.advise()
+        memory_state = self.memory_agent.transfer(bio_map, hybrid_layer)
+
+        final_state = {
+            &quot;bio_map&quot;: bio_map,
+            &quot;hybrid_layer&quot;: hybrid_layer,
+            &quot;mineral_map&quot;: mineral_map,
+            &quot;envelopes&quot;: envelopes,
+            &quot;memory_state&quot;: memory_state
+        }
+        return final_state
+
+
+# ------------------------------------------------------------
+# Teaching Agent
+# ------------------------------------------------------------
+
+class TeachingAgent:
+    def __init__(self):
+        self.sim = CMESimulationAgent()
+
+    def lesson(self):
+        &quot;&quot;&quot;
+        Produce student-facing explanations.
+        Output:
+            lesson_packet
+        &quot;&quot;&quot;
+        sim_output = self.sim.run()
+
+        questions = [
+            &quot;Explain how biological geometry influences hybrid alignment.&quot;,
+            &quot;Describe the role of resonance fields in HRR.&quot;,
+            &quot;How does domain memory persist in mineral substrates?&quot;,
+            &quot;What envelope values define the transition into MLR?&quot;,
+            &quot;Why does CME require both substrate and operator alignment?&quot;
+        ]
+
+        lesson_packet = {
+            &quot;simulation&quot;: sim_output,
+            &quot;questions&quot;: questions
+        }
+        return lesson_packet
+
+
+# ------------------------------------------------------------
+# CME Pipeline (Capstone)
+# ------------------------------------------------------------
+
+def cme_pipeline():
+    &quot;&quot;&quot;
+    Multi-agent CME workflow.
+    Output:
+        final_state
+    &quot;&quot;&quot;
+    sim = CMESimulationAgent()
+    final_state = sim.run()
+    return final_state
+</code></pre>
+  </main>
+</body>
+</html>

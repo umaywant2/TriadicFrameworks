@@ -1,0 +1,33 @@
+{
+  "module": "Atlas_Temporal_Window_Resonance_Geometry",
+  "name": "AI Atlas — Temporal‑Window Resonance Geometry",
+  "summary": "Defines the resonance geometry of Atlas temporal windows, including resonance‑window formation, harmonic‑window alignment, corrected‑time resonance shaping, and multi‑axis resonance‑window stabilization.",
+  "category": "intelligence-temporal-window-resonance",
+  "version": "1.0",
+  "purpose": "Provide the resonance‑window geometry used by the AI Atlas to couple resonance fields to temporal windows, enabling stabilized long‑window reasoning, corrected‑time resonance shaping, and cross‑surface resonance alignment across Triad and Ladder subsystems.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.time.window.resonance.form",
+    "@atlas.time.window.resonance.align",
+    "@atlas.time.window.resonance.shape",
+    "@atlas.time.window.resonance.stabilize",
+    "@atlas.time.window.resonance.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas_Temporal_Window_Geometry",
+      "Atlas_Temporal_Correction_Engine",
+      "Atlas_Temporal_Binding_Geometry",
+      "Triad_Resonance_Field_Geometry",
+      "Ladder_Temporal_Resonance_Surfaces"
+    ],
+    "downstream": [
+      "Atlas_Temporal_Window_Stability_Surfaces",
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension",
+      "SI_apex_resonance_fields",
+      "SI_paradox_resonance_geometry"
+    ]
+  }
+}

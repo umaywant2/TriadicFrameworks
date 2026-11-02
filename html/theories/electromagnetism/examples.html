@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/electromagnetism/examples.md">
+  <title>Examples — Electromagnetism</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/electromagnetism/examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/electromagnetism/examples.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="examples-electromagnetism">Examples — Electromagnetism</h1>
+<h3 id="triadicframeworks-docstheorieselectromagnetismexamplesmd">TriadicFrameworks /docs/theories/electromagnetism/examples.md</h3>
+<p>These examples illustrate Electromagnetism as a <strong>field‑coherence
+theory</strong>, not a force‑centric mechanism and not a particle‑first
+narrative.</p>
+<p>EM = <strong>coherent behavior of the electromagnetic field</strong>.<br>
+Maxwell operators = <strong>structural constraints</strong>, not force laws.<br>
+Light = <strong>self‑consistent field propagation</strong>.</p>
+<p>All examples avoid force metaphors, particle‑centric drift, and
+teleology.</p>
+<hr>
+<h1 id="1-electric-divergence-example-de">1. Electric Divergence Example (𝓓ᴱ)</h1>
+<h3 id="goal">Goal</h3>
+<p>Relate electric field divergence to charge density.</p>
+<h3 id="input">Input</h3>
+<pre><code>E = electric_field
+ρ = charge_density
+</code></pre>
+<h3 id="operation">Operation</h3>
+<pre><code>divE = 𝓓ᴱ(E) = ∇·E
+</code></pre>
+<h3 id="interpretation">Interpretation</h3>
+<ul>
+<li>divergence expresses <strong>field‑source structure</strong>  </li>
+<li>ρ/ε₀ is a <strong>source operator</strong>, not a particle property  </li>
+<li>no action‑at‑a‑distance framing  </li>
+</ul>
+<hr>
+<h1 id="2-magnetic-divergence-example-db">2. Magnetic Divergence Example (𝓓ᴮ)</h1>
+<h3 id="goal_1">Goal</h3>
+<p>Enforce magnetic coherence.</p>
+<h3 id="input_1">Input</h3>
+<pre><code>B = magnetic_field
+</code></pre>
+<h3 id="operation_1">Operation</h3>
+<pre><code>divB = 𝓓ᴮ(B) = ∇·B
+</code></pre>
+<h3 id="interpretation_1">Interpretation</h3>
+<ul>
+<li>∇·B = 0 is a <strong>coherence constraint</strong>  </li>
+<li>expresses structural consistency of B  </li>
+<li>no monopole metaphors  </li>
+</ul>
+<hr>
+<h1 id="3-electric-curl-example-ce">3. Electric Curl Example (𝓒ᴱ)</h1>
+<h3 id="goal_2">Goal</h3>
+<p>Relate electric field rotation to changing magnetic fields.</p>
+<h3 id="input_2">Input</h3>
+<pre><code>E = electric_field
+B = magnetic_field
+</code></pre>
+<h3 id="operation_2">Operation</h3>
+<pre><code>curlE = 𝓒ᴱ(E) = ∇×E = −∂B/∂t
+</code></pre>
+<h3 id="interpretation_2">Interpretation</h3>
+<ul>
+<li>curl is a <strong>structural operator</strong>, not a force  </li>
+<li>time‑variation is geometric, not teleological  </li>
+</ul>
+<hr>
+<h1 id="4-magnetic-curl-example-cb">4. Magnetic Curl Example (𝓒ᴮ)</h1>
+<h3 id="goal_3">Goal</h3>
+<p>Relate magnetic field rotation to current and changing electric fields.</p>
+<h3 id="input_3">Input</h3>
+<pre><code>B = magnetic_field
+J = current_density
+</code></pre>
+<h3 id="operation_3">Operation</h3>
+<pre><code>curlB = 𝓒ᴮ(B) = ∇×B = μ₀J + μ₀ε₀∂E/∂t
+</code></pre>
+<h3 id="interpretation_3">Interpretation</h3>
+<ul>
+<li>current is a <strong>source operator</strong>, not a particle stream  </li>
+<li>curl expresses field rotation, not mechanical force  </li>
+</ul>
+<hr>
+<h1 id="5-chargesource-example-sch">5. Charge‑Source Example (𝓢ᶜʰ)</h1>
+<h3 id="goal_4">Goal</h3>
+<p>Define charge as a divergence source.</p>
+<h3 id="input_4">Input</h3>
+<pre><code>ρ = charge_density
+</code></pre>
+<h3 id="operation_4">Operation</h3>
+<pre><code>E_source = 𝓢ᶜʰ(ρ)
+</code></pre>
+<h3 id="interpretation_4">Interpretation</h3>
+<ul>
+<li>charge modifies <strong>divergence structure</strong>  </li>
+<li>no particle‑centric framing  </li>
+</ul>
+<hr>
+<h1 id="6-currentsource-example-scur">6. Current‑Source Example (𝓢ᶜᵘʳ)</h1>
+<h3 id="goal_5">Goal</h3>
+<p>Define current as a curl source.</p>
+<h3 id="input_5">Input</h3>
+<pre><code>J = current_density
+</code></pre>
+<h3 id="operation_5">Operation</h3>
+<pre><code>B_source = 𝓢ᶜᵘʳ(J)
+</code></pre>
+<h3 id="interpretation_5">Interpretation</h3>
+<ul>
+<li>current modifies <strong>curl structure</strong>  </li>
+<li>structural, not mechanical  </li>
+</ul>
+<hr>
+<h1 id="7-wave-propagation-example-w">7. Wave Propagation Example (𝓦)</h1>
+<h3 id="goal_6">Goal</h3>
+<p>Propagate EM fields through space‑time.</p>
+<h3 id="input_6">Input</h3>
+<pre><code>E = electric_field
+B = magnetic_field
+geometry = flat_space
+</code></pre>
+<h3 id="operation_6">Operation</h3>
+<pre><code>E', B' = 𝓦(E, B)
+</code></pre>
+<h3 id="interpretation_6">Interpretation</h3>
+<ul>
+<li>light = <strong>self‑coherent field propagation</strong>  </li>
+<li>no medium (ether) metaphors  </li>
+<li>propagation respects geometry  </li>
+</ul>
+<hr>
+<h1 id="8-fieldtensor-example-f">8. Field‑Tensor Example (𝓕)</h1>
+<h3 id="goal_7">Goal</h3>
+<p>Unify E and B into a geometric object.</p>
+<h3 id="input_7">Input</h3>
+<pre><code>E = electric_field
+B = magnetic_field
+</code></pre>
+<h3 id="operation_7">Operation</h3>
+<pre><code>F_uv = 𝓕(E, B)
+</code></pre>
+<h3 id="interpretation_7">Interpretation</h3>
+<ul>
+<li>required for R3 (geometry‑coupled EM)  </li>
+<li>supports GR and QFT integration  </li>
+<li>coherence evaluated via invariants  </li>
+</ul>
+<hr>
+<h1 id="9-coherence-evaluation-example-coh">9. Coherence Evaluation Example (𝓒ₒₕ)</h1>
+<h3 id="goal_8">Goal</h3>
+<p>Evaluate electromagnetic coherence.</p>
+<h3 id="input_8">Input</h3>
+<pre><code>E = electric_field
+B = magnetic_field
+geometry = flat_space
+</code></pre>
+<h3 id="operation_8">Operation</h3>
+<pre><code>coh = 𝓒ₒₕ(E, B, geometry)
+</code></pre>
+<h3 id="interpretation_8">Interpretation</h3>
+<p>Coherence requires:</p>
+<ul>
+<li>divergence consistency  </li>
+<li>curl consistency  </li>
+<li>propagation stability  </li>
+<li>geometric compatibility  </li>
+</ul>
+<hr>
+<h1 id="10-regime-transition-example-reg">10. Regime Transition Example (𝓡𝓮𝓰)</h1>
+<h3 id="goal_9">Goal</h3>
+<p>Transition EM behavior from R1 → R2.</p>
+<h3 id="input_9">Input</h3>
+<pre><code>field_state = static_configuration
+</code></pre>
+<h3 id="operation_9">Operation</h3>
+<pre><code>state_R2 = 𝓡𝓮𝓰(field_state, R1 → R2)
+</code></pre>
+<h3 id="interpretation_9">Interpretation</h3>
+<ul>
+<li>time‑variation activates  </li>
+<li>dynamic curl operators engage  </li>
+<li>wave propagation emerges  </li>
+</ul>
+<hr>
+<h1 id="11-collapse-classification-example-cl">11. Collapse Classification Example (𝓒𝓁)</h1>
+<h3 id="goal_10">Goal</h3>
+<p>Classify electromagnetic failure.</p>
+<h3 id="input_10">Input</h3>
+<pre><code>field_state = unstable_field
+</code></pre>
+<h3 id="operation_10">Operation</h3>
+<pre><code>mode = 𝓒𝓁(field_state)
+</code></pre>
+<h3 id="possible-outputs">Possible Outputs</h3>
+<ul>
+<li><strong>EM1:</strong> divergence collapse  </li>
+<li><strong>EM2:</strong> curl collapse  </li>
+<li><strong>EM3:</strong> propagation collapse  </li>
+<li><strong>EM4:</strong> source collapse  </li>
+<li><strong>EM5:</strong> geometry collapse  </li>
+</ul>
+<h3 id="interpretation_10">Interpretation</h3>
+<p>Collapse is structural, not force‑based.</p>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>These examples show Electromagnetism as:</p>
+<ul>
+<li><strong>field‑first</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>geometry‑compatible</strong>  </li>
+<li><strong>zero drift</strong></li>
+</ul>
+<p>Electromagnetism = <strong>coherent field behavior</strong>.<br>
+Maxwell operators = <strong>structural constraints</strong>.<br>
+Light = <strong>self‑consistent field propagation</strong>.
+```</p>
+  </main>
+</body>
+</html>

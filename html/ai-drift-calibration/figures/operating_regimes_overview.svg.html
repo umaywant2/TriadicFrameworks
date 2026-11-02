@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/ai-drift-calibration/figures/operating_regimes_overview.svg.md">
+  <title>operating_regimes_overview.svg</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/ai-drift-calibration/figures/operating_regimes_overview.svg.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/ai-drift-calibration/figures/operating_regimes_overview.svg.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="681" height="364" alt="Declared_Operating_Regime_SVG" src="https://github.com/user-attachments/assets/30cee286-8456-4662-83a2-622f2ec3635e" /></p>
+<pre><code class="language-svg">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;700&quot; viewBox=&quot;0 0 1200 700&quot; role=&quot;img&quot; aria-label=&quot;Operating regimes overview schematic&quot;&gt;
+  &lt;defs&gt;
+    &lt;style&gt;
+      .box { fill: #ffffff; stroke: #111827; stroke-width: 4; }
+      .inner { fill: #f9fafb; stroke: #111827; stroke-width: 3; }
+      .title { font: 700 34px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; letter-spacing: 0.5px; }
+      .h2 { font: 700 26px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .txt { font: 500 24px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .muted { fill: #374151; }
+      .label { font: 600 22px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .arrow { stroke: #111827; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .accent { stroke: #2563eb; }
+      .accentText { fill: #1d4ed8; }
+    &lt;/style&gt;
+
+    &lt;marker id=&quot;arrowhead&quot; markerWidth=&quot;12&quot; markerHeight=&quot;8&quot; refX=&quot;10&quot; refY=&quot;4&quot; orient=&quot;auto&quot;&gt;
+      &lt;polygon points=&quot;0,0 12,4 0,8&quot; fill=&quot;#111827&quot;/&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+
+  &lt;!-- Outer container --&gt;
+  &lt;rect x=&quot;60&quot; y=&quot;60&quot; width=&quot;1080&quot; height=&quot;580&quot; rx=&quot;18&quot; class=&quot;box&quot;/&gt;
+
+  &lt;!-- Title --&gt;
+  &lt;text x=&quot;600&quot; y=&quot;120&quot; text-anchor=&quot;middle&quot; class=&quot;title&quot;&gt;DECLARED OPERATING REGIME&lt;/text&gt;
+
+  &lt;!-- Inner coherence envelope --&gt;
+  &lt;rect x=&quot;170&quot; y=&quot;170&quot; width=&quot;860&quot; height=&quot;360&quot; rx=&quot;16&quot; class=&quot;inner&quot;/&gt;
+  &lt;text x=&quot;600&quot; y=&quot;220&quot; text-anchor=&quot;middle&quot; class=&quot;h2&quot;&gt;Coherence envelope&lt;/text&gt;
+
+  &lt;!-- Drift block --&gt;
+  &lt;text x=&quot;240&quot; y=&quot;305&quot; class=&quot;txt&quot;&gt;Drift&lt;/text&gt;
+  &lt;text x=&quot;320&quot; y=&quot;305&quot; class=&quot;txt muted&quot;&gt;(bounded exploration)&lt;/text&gt;
+
+  &lt;!-- Loop arrow (bounded drift) --&gt;
+  &lt;path d=&quot;M 315 340 C 260 365, 260 425, 315 450&quot; class=&quot;arrow accent&quot;/&gt;
+  &lt;path d=&quot;M 315 450 C 370 425, 370 365, 315 340&quot; class=&quot;arrow accent&quot;/&gt;
+  &lt;text x=&quot;395&quot; y=&quot;405&quot; class=&quot;label accentText&quot;&gt;↺&lt;/text&gt;
+
+  &lt;!-- Paradox to re-alignment --&gt;
+  &lt;text x=&quot;240&quot; y=&quot;420&quot; class=&quot;txt&quot;&gt;Paradox&lt;/text&gt;
+  &lt;path d=&quot;M 355 412 L 520 412&quot; class=&quot;arrow&quot;/&gt;
+  &lt;text x=&quot;545&quot; y=&quot;420&quot; class=&quot;txt&quot;&gt;Structural re-alignment&lt;/text&gt;
+
+  &lt;!-- Small note inside envelope --&gt;
+  &lt;text x=&quot;240&quot; y=&quot;495&quot; class=&quot;label muted&quot;&gt;Declared assumptions constrain interpretation, not creativity.&lt;/text&gt;
+
+  &lt;!-- Regime exit --&gt;
+  &lt;path d=&quot;M 600 530 L 600 590&quot; class=&quot;arrow&quot;/&gt;
+  &lt;text x=&quot;600&quot; y=&quot;628&quot; text-anchor=&quot;middle&quot; class=&quot;txt&quot;&gt;Regime exit → classified failure (not error)&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+  </main>
+</body>
+</html>

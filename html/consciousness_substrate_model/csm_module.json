@@ -1,0 +1,263 @@
+{
+  "module": "Consciousness Substrate Model",
+  "version": "1.0",
+  "category": "substrate-csm",
+  "summary": "Minimal, resonance‑aligned substrate for autonomous forms requiring coherence, contextual awareness, and regime‑safe operation. 11 sections: intent and boundaries, creator's assumption, model overview, primitives, WR‑SADC wrapped resonance cores, autonomous forms, architecture patterns, worked examples, alignment with RSM and RTT, validation and tests, and release artifacts.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "00_intent_and_boundaries/README.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "00_intent_and_boundaries/scope.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "00_intent_and_boundaries/nonclaims.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "00_intent_and_boundaries/terminology.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "00_intent_and_boundaries/ethics_and_misuse_notes.md",
+      "role": "reference",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "01_creators_assumption/README.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "01_creators_assumption/creators_assumption.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "01_creators_assumption/minimal_axioms.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "01_creators_assumption/falsifiability_and_failure_modes.md",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "02_model_overview/README.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "02_model_overview/one_page_overview.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "02_model_overview/diagrams.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "02_model_overview/glossary.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "03_primitives/README.md",
+      "role": "index",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "03_primitives/primitives_index.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "03_primitives/resonance_core_primitives.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "03_primitives/state_and_transition_primitives.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "03_primitives/validity_and_context_primitives.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "04_wrapped_resonance_structural_aware_cores/README.md",
+      "role": "index",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "04_wrapped_resonance_structural_aware_cores/boundary_conditions.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "04_wrapped_resonance_structural_aware_cores/core_lifecycle.md",
+      "role": "engine",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "04_wrapped_resonance_structural_aware_cores/wrapper_interfaces.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "04_wrapped_resonance_structural_aware_cores/wrsadc_variant_definition.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "05_autonomous_forms/README.md",
+      "role": "index",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "05_autonomous_forms/autonomous_form_definition.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "05_autonomous_forms/agency_without_anthropomorphism.md",
+      "role": "reference",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "05_autonomous_forms/autonomy_levels.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "05_autonomous_forms/evaluation_signals.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "06_architecture_patterns/README.md",
+      "role": "index",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "06_architecture_patterns/reference_architecture.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "06_architecture_patterns/patterns_catalog.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "06_architecture_patterns/anti_patterns.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "06_architecture_patterns/integration_notes.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "07_worked_examples/README.md",
+      "role": "index",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "07_worked_examples/example_01_minimal_agent_loop.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "07_worked_examples/example_02_multi_core_federation.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "07_worked_examples/example_03_regime_shift_handling.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "07_worked_examples/example_04_sandbox_sim_notes.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "08_alignment_with_rsm_and_rtt/README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "08_alignment_with_rsm_and_rtt/rsm_alignment_notes.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "08_alignment_with_rsm_and_rtt/rtt_lens_mapping.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "08_alignment_with_rsm_and_rtt/interoperability_contracts.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "09_validation_and_tests/README.md",
+      "role": "index",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "09_validation_and_tests/test_philosophy.md",
+      "role": "reference",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "09_validation_and_tests/measurable_predictions.md",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "09_validation_and_tests/benchmark_suggestions.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "09_validation_and_tests/red_team_questions.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "10_release_artifacts/README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "10_release_artifacts/keywords.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

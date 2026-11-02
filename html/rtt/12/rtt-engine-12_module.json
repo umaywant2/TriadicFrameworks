@@ -1,0 +1,123 @@
+{
+  "module": "RTT/12",
+  "version": "1.0",
+  "category": "rtt-engine-tier-12",
+  "summary": "Tier‑12 Resonance‑Time Engine — high‑resolution operator families (G1 primary generative, G2 structural transformation, G3 harmonic modulation), harmonic and structural triads, coherence rules, notation standards, bidirectional mapping (harmonic↔structural + triad), contributor guidelines, versioning, future extensions, and 6 validation frameworks (computational, experimental, industry, peer review, sector‑specific, theoretical).",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "overview.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "harmonic_ladder.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "contributors/guidelines.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "contributors/versioning.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "future/extensions.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "mapping/harmonic_to_structural.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "mapping/structural_to_harmonic.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "mapping/triad_mapping.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "notation/notation_standards.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "operators/G1.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "operators/G2.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "operators/G3.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "triads/coherence_rules.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "triads/harmonic_triads.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "triads/structural_triads.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "validation/computational.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "validation/experimental.md",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "validation/industry.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "validation/peer_review.md",
+      "role": "diagnostic",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "validation/sector_specific.md",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "validation/theoretical.md",
+      "role": "diagnostic",
+      "analyzer_layer": "dimensional"
+    }
+  ]
+}

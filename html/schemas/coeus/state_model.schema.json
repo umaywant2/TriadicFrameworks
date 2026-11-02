@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Coeus State Model",
+  "type": "object",
+  "properties": {
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "allowed_operators": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "transitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from_state": { "type": "string" },
+          "operator": { "type": "string" },
+          "to_state": { "type": "string" },
+          "guard_conditions": { "type": "object" },
+          "failure_modes": { "type": "object" }
+        },
+        "required": ["from_state", "operator", "to_state"]
+      }
+    }
+  }
+}

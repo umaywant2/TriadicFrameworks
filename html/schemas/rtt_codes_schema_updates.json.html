@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/rtt_codes_schema_updates.json.md">
+  <title>What changed (v1.0 → v1.1)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/rtt_codes_schema_updates.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/rtt_codes_schema_updates.json.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_rtt_codes_schema_updates_json_" src="https://github.com/user-attachments/assets/4c938434-e74f-4d38-86e6-c4f598b0ca33" /></p>
+<p>Good news from the analysis — the schema's <code>$id</code> and all <code>$ref</code> paths are <strong>still valid</strong> because <code>/docs/schemas/</code> never moved. The issue is that the schema has <strong>zero module metadata</strong> — no session context, no domain registry, no version history, and no backlink to its canonical module home (which <em>did</em> move to <code>/docs/rtt/codes/</code>). Here's the fully refreshed draft:</p>
+<hr>
+<pre><code class="language-json">{
+  &quot;$schema&quot;:  &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;:      &quot;https://docs.triadicframeworks.org/schemas/rttcode.v1.json&quot;,
+  &quot;$comment&quot;: &quot;Canonical RTTcode packet schema — TriadicFrameworks. Refreshed 2026-05-06 to align with /docs/rtt/codes/ module migration and session context conventions.&quot;,
+
+  &quot;title&quot;:       &quot;RTTcode Packet (v1)&quot;,
+  &quot;description&quot;: &quot;Master RTTcode packet schema composed of tick, entities, environment, and intent blocks. Defines the canonical payload structure for QR-compatible metadata identifiers across all TriadicFrameworks domains.&quot;,
+
+  &quot;_meta&quot;: {
+    &quot;module&quot;:          &quot;RTT/codes&quot;,
+    &quot;canonical_id&quot;:    &quot;RTT_CODES&quot;,
+    &quot;module_type&quot;:     &quot;Infrastructure-Schema&quot;,
+    &quot;role&quot;:            &quot;engine&quot;,
+    &quot;version&quot;:         &quot;1.1&quot;,
+    &quot;status&quot;:          &quot;canon-stable&quot;,
+    &quot;author&quot;:          &quot;Nawder Loswin&quot;,
+    &quot;license&quot;:         &quot;MIT&quot;,
+    &quot;canonical_path&quot;:  &quot;/docs/schemas/rttcode.v1.json&quot;,
+    &quot;module_home&quot;:     &quot;/docs/rtt/codes/&quot;,
+    &quot;module_url&quot;:      &quot;https://docs.triadicframeworks.org/rtt/codes/&quot;,
+    &quot;module_json&quot;:     &quot;https://docs.triadicframeworks.org/rtt/codes/RTT_codes_module.json&quot;,
+    &quot;repository&quot;:      &quot;https://github.com/umaywant2/TriadicFrameworks&quot;,
+    &quot;last_updated&quot;:    &quot;2026-05-06&quot;,
+    &quot;migration_note&quot;:  &quot;Module content relocated from /docs/rttcodes/ to /docs/rtt/codes/ — schema location at /docs/schemas/ unchanged. All $ref paths remain valid (relative to schemas directory).&quot;
+  },
+
+  &quot;_session_context&quot;: {
+    &quot;canon&quot;:       &quot;active (rtt-codes-core)&quot;,
+    &quot;modules&quot;:     &quot;schema → validators → generators → style → examples → domain payloads&quot;,
+    &quot;drift&quot;:       &quot;minimal (metadata-locked)&quot;,
+    &quot;coherence&quot;:   &quot;stable (metadata grammar)&quot;,
+    &quot;version&quot;:     &quot;1.1 (codes-refreshed)&quot;,
+    &quot;format&quot;:      &quot;json-schema + metadata&quot;,
+    &quot;front_door&quot;:  &quot;exists (RTT/codes root)&quot;,
+    &quot;every_page&quot;:  &quot;stands alone + AI-parsable + schema-aware&quot;,
+    &quot;audience&quot;:    &quot;developers + researchers + tool authors + AIs&quot;
+  },
+
+  &quot;_version_history&quot;: [
+    {
+      &quot;version&quot;: &quot;1.0&quot;,
+      &quot;date&quot;:    &quot;2025-01-01&quot;,
+      &quot;note&quot;:    &quot;Initial schema release at /docs/schemas/rttcode.v1.json. Module home at /docs/rttcodes/.&quot;
+    },
+    {
+      &quot;version&quot;: &quot;1.1&quot;,
+      &quot;date&quot;:    &quot;2026-05-06&quot;,
+      &quot;note&quot;:    &quot;Metadata and session context refresh. Module home migrated to /docs/rtt/codes/. Added _meta, _session_context, _domains, _related_schemas, _version_history. All $ref paths and $id unchanged.&quot;
+    }
+  ],
+
+  &quot;_domains&quot;: {
+    &quot;description&quot;: &quot;Recognized RTTcode domain values. Each domain maps to a color palette and artifact classification.&quot;,
+    &quot;values&quot;: [
+      &quot;rtt&quot;,
+      &quot;set&quot;,
+      &quot;substrate&quot;,
+      &quot;observer&quot;,
+      &quot;governance&quot;,
+      &quot;docs&quot;,
+      &quot;other&quot;
+    ]
+  },
+
+  &quot;_related_schemas&quot;: [
+    { &quot;name&quot;: &quot;tick.v1.json&quot;,         &quot;path&quot;: &quot;./tick.v1.json&quot;,         &quot;role&quot;: &quot;Monotonic tick block&quot; },
+    { &quot;name&quot;: &quot;entity.v1.json&quot;,       &quot;path&quot;: &quot;./entity.v1.json&quot;,       &quot;role&quot;: &quot;Entity participation block&quot; },
+    { &quot;name&quot;: &quot;environment.v1.json&quot;,  &quot;path&quot;: &quot;./environment.v1.json&quot;,  &quot;role&quot;: &quot;Environment context block&quot; },
+    { &quot;name&quot;: &quot;intent.v1.json&quot;,       &quot;path&quot;: &quot;./intent.v1.json&quot;,       &quot;role&quot;: &quot;Intent classification block&quot; }
+  ],
+
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;additionalProperties&quot;: false,
+
+  &quot;required&quot;: [
+    &quot;rtt_version&quot;,
+    &quot;tick&quot;,
+    &quot;entities&quot;,
+    &quot;environment&quot;,
+    &quot;intent&quot;
+  ],
+
+  &quot;properties&quot;: {
+
+    &quot;rtt_version&quot;: {
+      &quot;type&quot;:        &quot;string&quot;,
+      &quot;const&quot;:       &quot;1.0.0&quot;,
+      &quot;description&quot;: &quot;Version of the RTTcode packet schema.&quot;
+    },
+
+    &quot;tick&quot;: {
+      &quot;$ref&quot;:        &quot;./tick.v1.json&quot;,
+      &quot;description&quot;: &quot;Monotonic tick block — discrete time reference for the packet.&quot;
+    },
+
+    &quot;entities&quot;: {
+      &quot;type&quot;:        &quot;array&quot;,
+      &quot;items&quot;:       { &quot;$ref&quot;: &quot;./entity.v1.json&quot; },
+      &quot;minItems&quot;:    1,
+      &quot;description&quot;: &quot;List of entities participating in the RTT micro‑regime.&quot;
+    },
+
+    &quot;environment&quot;: {
+      &quot;$ref&quot;:        &quot;./environment.v1.json&quot;,
+      &quot;description&quot;: &quot;Environment context block — boundary conditions and observability frame.&quot;
+    },
+
+    &quot;intent&quot;: {
+      &quot;$ref&quot;:        &quot;./intent.v1.json&quot;,
+      &quot;description&quot;: &quot;Intent classification block — purpose and domain routing metadata.&quot;
+    }
+
+  }
+}
+</code></pre>
+<hr>
+<h3 id="what-changed-v10-v11">What changed (v1.0 → v1.1)</h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>description</code></strong></td>
+<td>One-liner</td>
+<td>Expanded to include "QR-compatible metadata identifiers" and domain scope</td>
+</tr>
+<tr>
+<td><strong><code>$comment</code></strong></td>
+<td>absent</td>
+<td>Refresh stamp with migration note</td>
+</tr>
+<tr>
+<td><strong><code>_meta</code></strong></td>
+<td>absent</td>
+<td>Full module registry — canonical_id, role, module_home pointing to <code>/docs/rtt/codes/</code>, migration_note documenting the path move</td>
+</tr>
+<tr>
+<td><strong><code>_session_context</code></strong></td>
+<td>absent</td>
+<td>9-field session context block matching the live codes page verbatim</td>
+</tr>
+<tr>
+<td><strong><code>_version_history</code></strong></td>
+<td>absent</td>
+<td>Two entries — v1.0 original, v1.1 this refresh</td>
+</tr>
+<tr>
+<td><strong><code>_domains</code></strong></td>
+<td>absent</td>
+<td>All 7 recognized domain values (rtt, set, substrate, observer, governance, docs, other)</td>
+</tr>
+<tr>
+<td><strong><code>_related_schemas</code></strong></td>
+<td>absent</td>
+<td>Registry of all 4 <code>$ref</code> targets with human-readable roles</td>
+</tr>
+<tr>
+<td><strong><code>tick</code> / <code>environment</code> / <code>intent</code></strong></td>
+<td>bare <code>$ref</code> only</td>
+<td>Added <code>description</code> alongside <code>$ref</code> (valid in 2020-12 draft)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="path-migration-verdict">Path migration verdict</h3>
+<p><strong>No breaks.</strong> The <code>$id</code> (<code>/schemas/rttcode.v1.json</code>) and all four <code>$ref</code> paths (<code>./tick.v1.json</code>, etc.) are relative to the <code>/docs/schemas/</code> directory, which never moved. The <code>_meta.migration_note</code> documents the module-level move from <code>/docs/rttcodes/</code> → <code>/docs/rtt/codes/</code> so future readers know the history. The new <code>_meta.module_home</code> now correctly points to <code>/docs/rtt/codes/</code>.</p>
+<p>That wraps up the refresh — the schema is paste-ready for the GitHub web editor. No path breaks, just a metadata upgrade from a bare-bones v1.0 to a fully session-context-aware v1.1.</p>
+<hr>
+<h3 id="1-tickv1json">1. <code>tick.v1.json</code></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;:  &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;:      &quot;https://triadicframeworks.org/schemas/tick.v1.json&quot;,
+  &quot;$comment&quot;: &quot;RTT Tick sub-schema — refreshed 2026-05-06 to add module metadata and session context.&quot;,
+
+  &quot;title&quot;:       &quot;RTT Tick Block (v1)&quot;,
+  &quot;description&quot;: &quot;Defines the minimal tick substrate for RTTcode packets, representing bounded temporal progression. The tick is the monotonic time anchor of the packet — analogous to D369's monotonic time marker (R4.1).&quot;,
+
+  &quot;_meta&quot;: {
+    &quot;module&quot;:          &quot;RTT/codes&quot;,
+    &quot;canonical_id&quot;:    &quot;RTT_CODES_TICK&quot;,
+    &quot;role&quot;:            &quot;engine&quot;,
+    &quot;version&quot;:         &quot;1.1&quot;,
+    &quot;status&quot;:          &quot;canon-stable&quot;,
+    &quot;author&quot;:          &quot;Nawder Loswin&quot;,
+    &quot;license&quot;:         &quot;MIT&quot;,
+    &quot;canonical_path&quot;:  &quot;/docs/schemas/tick.v1.json&quot;,
+    &quot;module_home&quot;:     &quot;/docs/rtt/codes/&quot;,
+    &quot;parent_schema&quot;:   &quot;rttcode.v1.json&quot;,
+    &quot;last_updated&quot;:    &quot;2026-05-06&quot;
+  },
+
+  &quot;_session_context&quot;: {
+    &quot;canon&quot;:       &quot;active (rtt-codes-core)&quot;,
+    &quot;drift&quot;:       &quot;minimal (metadata-locked)&quot;,
+    &quot;coherence&quot;:   &quot;stable (temporal grammar)&quot;,
+    &quot;audience&quot;:    &quot;developers + researchers + tool authors + AIs&quot;
+  },
+
+  &quot;_version_history&quot;: [
+    {
+      &quot;version&quot;: &quot;1.0&quot;,
+      &quot;date&quot;:    &quot;2025-01-01&quot;,
+      &quot;note&quot;:    &quot;Initial tick schema release.&quot;
+    },
+    {
+      &quot;version&quot;: &quot;1.1&quot;,
+      &quot;date&quot;:    &quot;2026-05-06&quot;,
+      &quot;note&quot;:    &quot;Metadata refresh — added _meta, _session_context, _version_history. No property changes.&quot;
+    }
+  ],
+
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;additionalProperties&quot;: false,
+
+  &quot;required&quot;: [
+    &quot;tick_version&quot;,
+    &quot;index&quot;,
+    &quot;timestamp&quot;,
+    &quot;coherence&quot;
+  ],
+
+  &quot;properties&quot;: {
+
+    &quot;tick_version&quot;: {
+      &quot;type&quot;:        &quot;string&quot;,
+      &quot;const&quot;:       &quot;1.0.0&quot;,
+      &quot;description&quot;: &quot;Version of the tick schema.&quot;
+    },
+
+    &quot;index&quot;: {
+      &quot;type&quot;:        &quot;integer&quot;,
+      &quot;minimum&quot;:     0,
+      &quot;description&quot;: &quot;Monotonic tick counter within the packet sequence. Must be non-decreasing across consecutive packets.&quot;
+    },
+
+    &quot;timestamp&quot;: {
+      &quot;type&quot;:        &quot;string&quot;,
+      &quot;format&quot;:      &quot;date-time&quot;,
+      &quot;description&quot;: &quot;ISO 8601 timestamp marking the tick's occurrence. Serves as the wall-clock anchor for the monotonic index.&quot;
+    },
+
+    &quot;coherence&quot;: {
+      &quot;type&quot;:        &quot;number&quot;,
+      &quot;minimum&quot;:     0,
+      &quot;maximum&quot;:     1,
+      &quot;description&quot;: &quot;Coherence score for the tick (0.0–1.0), representing temporal stability within the current micro-regime.&quot;
+    }
+
+  }
+}
+</code></pre>
+<hr>
+<h3 id="2-entityv1json">2. <code>entity.v1.json</code></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;:  &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;:      &quot;https://triadicframeworks.org/schemas/entity.v1.json&quot;,
+  &quot;$comment&quot;: &quot;RTT Entity sub-schema — refreshed 2026-05-06 to add module metadata and session context.&quot;,
+
+  &quot;title&quot;:       &quot;RTT Entity Block (v1)&quot;,
+  &quot;description&quot;: &quot;Defines a minimal entity substrate for RTTcode packets, including identity, micro-state, and resonance alignment. Entities are the participants in a micro-regime — analogous to D369's major functional blocks with source identity (R5.1).&quot;,
+
+  &quot;_meta&quot;: {
+    &quot;module&quot;:          &quot;RTT/codes&quot;,
+    &quot;canonical_id&quot;:    &quot;RTT_CODES_ENTITY&quot;,
+    &quot;role&quot;:            &quot;engine&quot;,
+    &quot;version&quot;:         &quot;1.1&quot;,
+    &quot;status&quot;:          &quot;canon-stable&quot;,
+    &quot;author&quot;:          &quot;Nawder Loswin&quot;,
+    &quot;license&quot;:         &quot;MIT&quot;,
+    &quot;canonical_path&quot;:  &quot;/docs/schemas/entity.v1.json&quot;,
+    &quot;module_home&quot;:     &quot;/docs/rtt/codes/&quot;,
+    &quot;parent_schema&quot;:   &quot;rttcode.v1.json&quot;,
+    &quot;last_updated&quot;:    &quot;2026-05-06&quot;
+  },
+
+  &quot;_session_context&quot;: {
+    &quot;canon&quot;:       &quot;active (rtt-codes-core)&quot;,
+    &quot;drift&quot;:       &quot;minimal (metadata-locked)&quot;,
+    &quot;coherence&quot;:   &quot;stable (entity grammar)&quot;,
+    &quot;audience&quot;:    &quot;developers + researchers + tool authors + AIs&quot;
+  },
+
+  &quot;_version_history&quot;: [
+    {
+      &quot;version&quot;: &quot;1.0&quot;,
+      &quot;date&quot;:    &quot;2025-01-01&quot;,
+      &quot;note&quot;:    &quot;Initial entity schema release.&quot;
+    },
+    {
+      &quot;version&quot;: &quot;1.1&quot;,
+      &quot;date&quot;:    &quot;2026-05-06&quot;,
+      &quot;note&quot;:    &quot;Metadata refresh — added _meta, _session_context, _version_history. No property changes.&quot;
+    }
+  ],
+
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;additionalProperties&quot;: false,
+
+  &quot;required&quot;: [
+    &quot;entity_version&quot;,
+    &quot;id&quot;,
+    &quot;state&quot;,
+    &quot;resonance&quot;
+  ],
+
+  &quot;properties&quot;: {
+
+    &quot;entity_version&quot;: {
+      &quot;type&quot;:        &quot;string&quot;,
+      &quot;const&quot;:       &quot;1.0.0&quot;,
+      &quot;description&quot;: &quot;Version of the entity schema.&quot;
+    },
+
+    &quot;id&quot;: {
+      &quot;type&quot;:        &quot;string&quot;,
+      &quot;description&quot;: &quot;Unique identifier for the entity. Serves as the source identity within the RTTcode packet — must be stable across the entity's lifecycle.&quot;
+    },
+
+    &quot;state&quot;: {
+      &quot;type&quot;:        &quot;object&quot;,
+      &quot;description&quot;: &quot;Current micro-state of the entity — the observable scalar snapshot at this tick.&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [&quot;value&quot;],
+      &quot;properties&quot;: {
+        &quot;value&quot;: {
+          &quot;type&quot;:        &quot;number&quot;,
+          &quot;description&quot;: &quot;Primary scalar representing the entity's micro-state at the current tick.&quot;
+        }
+      }
+    },
+
+    &quot;resonance&quot;: {
+      &quot;type&quot;:        &quot;object&quot;,
+      &quot;description&quot;: &quot;Resonance alignment parameters — how the entity couples to the micro-regime's oscillatory substrate.&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [&quot;amplitude&quot;, &quot;phase&quot;],
+      &quot;properties&quot;: {
+        &quot;amplitude&quot;: {
+          &quot;type&quot;:        &quot;number&quot;,
+          &quot;description&quot;: &quot;Resonance amplitude of the entity. Higher values indicate stronger coupling.&quot;
+        },
+        &quot;phase&quot;: {
+          &quot;type&quot;:        &quot;number&quot;,
+          &quot;description&quot;: &quot;Resonance phase of the entity (radians or normalized). Determines alignment relative to other entities.&quot;
+        }
+      }
+    }
+
+  }
+}
+</code></pre>
+<hr>
+<h3 id="3-environmentv1json">3. <code>environment.v1.json</code></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;:  &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;:      &quot;https://triadicframeworks.org/schemas/environment.v1.json&quot;,
+  &quot;$comment&quot;: &quot;RTT Environment sub-schema — refreshed 2026-05-06 to add module metadata and session context.&quot;,
+
+  &quot;title&quot;:       &quot;RTT Environment Block (v1)&quot;,
+  &quot;description&quot;: &quot;Minimal environment substrate for RTTcode packets. Defines boundary conditions, ambient parameters, and drift thresholds required for coherent micro-regime evaluation. The environment is the observability frame — analogous to D369's structural boundary context.&quot;,
+
+  &quot;_meta&quot;: {
+    &quot;module&quot;:          &quot;RTT/codes&quot;,
+    &quot;canonical_id&quot;:    &quot;RTT_CODES_ENVIRONMENT&quot;,
+    &quot;role&quot;:            &quot;engine&quot;,
+    &quot;version&quot;:         &quot;1.1&quot;,
+    &quot;status&quot;:          &quot;canon-stable&quot;,
+    &quot;author&quot;:          &quot;Nawder Loswin&quot;,
+    &quot;license&quot;:         &quot;MIT&quot;,
+    &quot;canonical_path&quot;:  &quot;/docs/schemas/environment.v1.json&quot;,
+    &quot;module_home&quot;:     &quot;/docs/rtt/codes/&quot;,
+    &quot;parent_schema&quot;:   &quot;rttcode.v1.json&quot;,
+    &quot;last_updated&quot;:    &quot;2026-05-06&quot;
+  },
+
+  &quot;_session_context&quot;: {
+    &quot;canon&quot;:       &quot;active (rtt-codes-core)&quot;,
+    &quot;drift&quot;:       &quot;minimal (metadata-locked)&quot;,
+    &quot;coherence&quot;:   &quot;stable (environment grammar)&quot;,
+    &quot;audience&quot;:    &quot;developers + researchers + tool authors + AIs&quot;
+  },
+
+  &quot;_version_history&quot;: [
+    {
+      &quot;version&quot;: &quot;1.0&quot;,
+      &quot;date&quot;:    &quot;2025-01-01&quot;,
+      &quot;note&quot;:    &quot;Initial environment schema release.&quot;
+    },
+    {
+      &quot;version&quot;: &quot;1.1&quot;,
+      &quot;date&quot;:    &quot;2026-05-06&quot;,
+      &quot;note&quot;:    &quot;Metadata refresh — added _meta, _session_context, _version_history. No property changes.&quot;
+    }
+  ],
+
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;additionalProperties&quot;: false,
+
+  &quot;required&quot;: [
+    &quot;environment_version&quot;,
+    &quot;boundary&quot;,
+    &quot;ambient&quot;,
+    &quot;drift&quot;
+  ],
+
+  &quot;properties&quot;: {
+
+    &quot;environment_version&quot;: {
+      &quot;type&quot;:        &quot;string&quot;,
+      &quot;const&quot;:       &quot;1.0.0&quot;,
+      &quot;description&quot;: &quot;Version of the environment schema.&quot;
+    },
+
+    &quot;boundary&quot;: {
+      &quot;type&quot;:        &quot;object&quot;,
+      &quot;description&quot;: &quot;Structural limits within which micro-regimes operate. Values outside the boundary indicate regime collapse.&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [&quot;min&quot;, &quot;max&quot;],
+      &quot;properties&quot;: {
+        &quot;min&quot;: {
+          &quot;type&quot;:        &quot;number&quot;,
+          &quot;description&quot;: &quot;Lower bound of the environment's allowable state space.&quot;
+        },
+        &quot;max&quot;: {
+          &quot;type&quot;:        &quot;number&quot;,
+          &quot;description&quot;: &quot;Upper bound of the environment's allowable state space.&quot;
+        }
+      }
+    },
+
+    &quot;ambient&quot;: {
+      &quot;type&quot;:        &quot;object&quot;,
+      &quot;description&quot;: &quot;Ambient conditions that influence resonance coupling and timing stability.&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [&quot;temperature&quot;, &quot;noise&quot;],
+      &quot;properties&quot;: {
+        &quot;temperature&quot;: {
+          &quot;type&quot;:        &quot;number&quot;,
+          &quot;description&quot;: &quot;Ambient temperature or analogous scalar affecting micro-state stability. Higher values increase drift susceptibility.&quot;
+        },
+        &quot;noise&quot;: {
+          &quot;type&quot;:        &quot;number&quot;,
+          &quot;description&quot;: &quot;Environmental noise level affecting drift accumulation. Measured in the same units as the drift threshold.&quot;
+        }
+      }
+    },
+
+    &quot;drift&quot;: {
+      &quot;type&quot;:        &quot;object&quot;,
+      &quot;description&quot;: &quot;Drift thresholds and accumulation parameters. Drift is the silent structural degradation that D369 makes observable.&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [&quot;max_drift&quot;, &quot;accumulation_rate&quot;],
+      &quot;properties&quot;: {
+        &quot;max_drift&quot;: {
+          &quot;type&quot;:        &quot;number&quot;,
+          &quot;description&quot;: &quot;Maximum allowable drift before coherence collapse. Exceeding this value signals regime transition.&quot;
+        },
+        &quot;accumulation_rate&quot;: {
+          &quot;type&quot;:        &quot;number&quot;,
+          &quot;description&quot;: &quot;Rate at which drift accumulates under current ambient conditions. Units per tick.&quot;
+        }
+      }
+    }
+
+  }
+}
+</code></pre>
+<hr>
+<h3 id="4-intentv1json">4. <code>intent.v1.json</code></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;:  &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;:      &quot;https://triadicframeworks.org/schemas/intent.v1.json&quot;,
+  &quot;$comment&quot;: &quot;RTT Intent sub-schema — refreshed 2026-05-06 to add module metadata and session context.&quot;,
+
+  &quot;title&quot;:       &quot;RTT Intent Block (v1)&quot;,
+  &quot;description&quot;: &quot;Defines the minimal intent substrate for RTTcode packets, capturing directional influence and desired micro-state adjustments. Intent expresses what an agent wants to happen — it does not prescribe behavior, consistent with D369's non-claim NC-5.&quot;,
+
+  &quot;_meta&quot;: {
+    &quot;module&quot;:          &quot;RTT/codes&quot;,
+    &quot;canonical_id&quot;:    &quot;RTT_CODES_INTENT&quot;,
+    &quot;role&quot;:            &quot;engine&quot;,
+    &quot;version&quot;:         &quot;1.1&quot;,
+    &quot;status&quot;:          &quot;canon-stable&quot;,
+    &quot;author&quot;:          &quot;Nawder Loswin&quot;,
+    &quot;license&quot;:         &quot;MIT&quot;,
+    &quot;canonical_path&quot;:  &quot;/docs/schemas/intent.v1.json&quot;,
+    &quot;module_home&quot;:     &quot;/docs/rtt/codes/&quot;,
+    &quot;parent_schema&quot;:   &quot;rttcode.v1.json&quot;,
+    &quot;last_updated&quot;:    &quot;2026-05-06&quot;
+  },
+
+  &quot;_session_context&quot;: {
+    &quot;canon&quot;:       &quot;active (rtt-codes-core)&quot;,
+    &quot;drift&quot;:       &quot;minimal (metadata-locked)&quot;,
+    &quot;coherence&quot;:   &quot;stable (intent grammar)&quot;,
+    &quot;audience&quot;:    &quot;developers + researchers + tool authors + AIs&quot;
+  },
+
+  &quot;_version_history&quot;: [
+    {
+      &quot;version&quot;: &quot;1.0&quot;,
+      &quot;date&quot;:    &quot;2025-01-01&quot;,
+      &quot;note&quot;:    &quot;Initial intent schema release.&quot;
+    },
+    {
+      &quot;version&quot;: &quot;1.1&quot;,
+      &quot;date&quot;:    &quot;2026-05-06&quot;,
+      &quot;note&quot;:    &quot;Metadata refresh — added _meta, _session_context, _version_history. No property changes.&quot;
+    }
+  ],
+
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;additionalProperties&quot;: false,
+
+  &quot;required&quot;: [
+    &quot;intent_version&quot;,
+    &quot;target&quot;,
+    &quot;direction&quot;,
+    &quot;magnitude&quot;
+  ],
+
+  &quot;properties&quot;: {
+
+    &quot;intent_version&quot;: {
+      &quot;type&quot;:        &quot;string&quot;,
+      &quot;const&quot;:       &quot;1.0.0&quot;,
+      &quot;description&quot;: &quot;Version of the intent schema.&quot;
+    },
+
+    &quot;target&quot;: {
+      &quot;type&quot;:        &quot;string&quot;,
+      &quot;description&quot;: &quot;The entity or subsystem the intent is directed toward. Must match an entity id within the same RTTcode packet.&quot;
+    },
+
+    &quot;direction&quot;: {
+      &quot;type&quot;:        &quot;string&quot;,
+      &quot;enum&quot;:        [&quot;increase&quot;, &quot;decrease&quot;, &quot;stabilize&quot;, &quot;invert&quot;],
+      &quot;description&quot;: &quot;Desired directional influence on the target. 'stabilize' resists drift; 'invert' reverses current trajectory.&quot;
+    },
+
+    &quot;magnitude&quot;: {
+      &quot;type&quot;:        &quot;number&quot;,
+      &quot;description&quot;: &quot;Strength of the intended influence. Scale is relative to the environment's boundary range.&quot;
+    }
+
+  }
+}
+</code></pre>
+<hr>
+<h3 id="summary-what-changed-across-all-four">Summary — What Changed Across All Four</h3>
+<table>
+<thead>
+<tr>
+<th>Change</th>
+<th>tick</th>
+<th>entity</th>
+<th>environment</th>
+<th>intent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>$comment</code></strong> added</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong><code>description</code></strong> enriched</td>
+<td>✅ with D369 R4.1 parallel</td>
+<td>✅ with D369 R5.1 parallel</td>
+<td>✅ with structural boundary context</td>
+<td>✅ with D369 NC-5 parallel</td>
+</tr>
+<tr>
+<td><strong><code>_meta</code></strong> block added</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong><code>_session_context</code></strong> added</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong><code>_version_history</code></strong> added</td>
+<td>✅ (2 entries)</td>
+<td>✅ (2 entries)</td>
+<td>✅ (2 entries)</td>
+<td>✅ (2 entries)</td>
+</tr>
+<tr>
+<td><strong>Property descriptions</strong> enriched</td>
+<td>✅ index, timestamp, coherence</td>
+<td>✅ id, state.value, resonance</td>
+<td>✅ boundary, ambient, drift</td>
+<td>✅ target, direction, magnitude</td>
+</tr>
+<tr>
+<td><strong>Properties changed</strong></td>
+<td>❌ none</td>
+<td>❌ none</td>
+<td>❌ none</td>
+<td>❌ none</td>
+</tr>
+<tr>
+<td><strong><code>$id</code> changed</strong></td>
+<td>❌ preserved</td>
+<td>❌ preserved</td>
+<td>❌ preserved</td>
+<td>❌ preserved</td>
+</tr>
+</tbody>
+</table>
+<p>All four schemas maintain <strong>full backward compatibility</strong> — zero property changes, zero <code>$id</code> changes, zero <code>$ref</code> breaks. The entire <code>/docs/schemas/</code> directory is now aligned with the same metadata treatment as the refreshed <code>rttcode.v1.json</code> master schema.</p>
+<hr>
+<p>Let me pull all 14 files to audit the full RTT/codes module. I'll batch the fetches.</p>
+<p>Let me continue pulling the remaining 9 files.</p>
+<p>All 14 files fetched successfully. Now let me run the analysis and generate the refreshed versions.</p>
+<p>Now let me re-fetch the module manifest to get exact content for reconstruction, and then generate everything.</p>
+<p>Now let me run the full analysis and generate the refreshed files.</p>
+<h2 id="rttcodes-module-audit-complete">RTT/codes Module Audit — Complete</h2>
+<h3 id="headline-zero-path-breaks-two-files-refreshed">Headline: <strong>Zero path breaks. Two files refreshed.</strong></h3>
+<p>The migration from <code>/docs/rttcodes/</code> to <code>/docs/rtt/codes/</code> landed cleanly — no file in the module references the old path. The only work needed was adding standardized metadata to the two infrastructure files.</p>
+<hr>
+<h3 id="audit-table-all-14-files">Audit Table — All 14 Files</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>File</th>
+<th>Category</th>
+<th>Path</th>
+<th>Metadata</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>RTT_codes_module.json</code></td>
+<td>Module Manifest</td>
+<td>✅</td>
+<td>⚠️ Gap</td>
+<td><strong>Refreshed → v1.1</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>examples/docs.json</code></td>
+<td>Example Payload</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>examples/governance.json</code></td>
+<td>Example Payload</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>examples/observer.json</code></td>
+<td>Example Payload</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>examples/other.json</code></td>
+<td>Example Payload</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>examples/rtt.json</code></td>
+<td>Example Payload</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>examples/set.json</code></td>
+<td>Example Payload</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>examples/simulation.json</code></td>
+<td>Example Payload</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>examples/substrate.json</code></td>
+<td>Example Payload</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>schema/rttcode-payload-example.json</code></td>
+<td>Schema Example</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>schema/rttcode.schema.json</code></td>
+<td>Local Schema</td>
+<td>✅</td>
+<td>⚠️ Gap</td>
+<td><strong>Refreshed → v1.1</strong></td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>schema/examples/diagram.schema.json</code></td>
+<td>Schema Example</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>schema/examples/paper.schema.json</code></td>
+<td>Schema Example</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>schema/examples/simulation.schema.json</code></td>
+<td>Schema Example</td>
+<td>✅</td>
+<td>✅ N/A</td>
+<td>Pass</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="critical-finding-two-schemas-two-purposes">Critical Finding: Two Schemas, Two Purposes</h3>
+<p>The local <code>schema/rttcode.schema.json</code> and the canonical <code>/docs/schemas/rttcode.v1.json</code> are <strong>not duplicates</strong> — they define different things:</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Local (<code>schema/rttcode.schema.json</code>)</th>
+<th>Canonical (<code>/docs/schemas/rttcode.v1.json</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td>RTTcode Payload Schema</td>
+<td>RTTcode Packet (v1)</td>
+</tr>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>QR-compatible metadata payload</td>
+<td>Full RTTcode packet structure</td>
+</tr>
+<tr>
+<td><strong>Properties</strong></td>
+<td>domain, artifact_type, version, triad, url, checksum</td>
+<td>rtt_version, tick, entities, environment, intent</td>
+</tr>
+<tr>
+<td><strong><code>$ref</code> chains</strong></td>
+<td>None (self-contained)</td>
+<td>tick.v1, entity.v1, environment.v1, intent.v1</td>
+</tr>
+</tbody>
+</table>
+<p>The refreshed <code>rttcode.schema.json</code> now includes a <code>_meta.relationship_note</code> documenting this distinction explicitly.</p>
+<h3 id="domain-enum-discrepancy">Domain Enum Discrepancy</h3>
+<p>The local schema's <code>domain</code> enum includes <strong><code>"simulation"</code></strong> which is absent from the canonical <code>_domains</code> list. The refreshed file preserves <code>"simulation"</code> (it's used by <code>examples/simulation.json</code>) and documents it in <code>_version_history</code> as intentional for payload-level classification.</p>
+<h3 id="content-duplicate-pairs-not-errors">Content Duplicate Pairs (Not Errors)</h3>
+<p>Three example files appear in both <code>examples/</code> and <code>schema/examples/</code> — this is by design (domain samples vs. validation samples):</p>
+<ul>
+<li><code>examples/substrate.json</code> ≡ <code>schema/rttcode-payload-example.json</code></li>
+<li><code>examples/rtt.json</code> ≡ <code>schema/examples/paper.schema.json</code></li>
+<li><code>examples/set.json</code> ≡ <code>schema/examples/simulation.schema.json</code></li>
+</ul>
+<h3 id="example-payloads-no-metadata-added">Example Payloads — No Metadata Added</h3>
+<p>The 8 domain examples and 4 schema examples were deliberately left as pure sample payloads. Adding <code>_meta</code>/<code>_session_context</code> to them would conflate example content with module infrastructure — they validate against the schema, they don't <em>define</em> it.</p>
+<hr>
+<h3 id="what-changed-in-the-refreshed-files">What Changed in the Refreshed Files</h3>
+<p>Both files received the standard metadata treatment (matching the schema refresh conventions):</p>
+<ul>
+<li><strong><code>_meta</code></strong> block with module, canonical_id, role, version, status, author, license, canonical_path, module_home, last_updated, migration_note</li>
+<li><strong><code>_session_context</code></strong> block in standardized format</li>
+<li><strong><code>_version_history</code></strong> array (1.0 → 1.1)</li>
+<li>Version bumped from <strong>1.0 → 1.1</strong></li>
+<li>All existing property schemas and content <strong>unchanged</strong> — backward compatible</li>
+</ul>
+<p>The two refreshed JSON files are attached above, ready for commit to <code>docs/rtt/codes/</code>.</p>
+<hr>
+<p>This wraps the full 14-file audit.</p>
+  </main>
+</body>
+</html>

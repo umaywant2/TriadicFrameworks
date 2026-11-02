@@ -1,0 +1,1162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/post-ASML_era/The_SCR_Specification.md">
+  <title>The SCR Specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/post-ASML_era/The_SCR_Specification.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/post-ASML_era/The_SCR_Specification.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="the-scr-specification">The SCR Specification</h1>
+<p><strong>Repository:</strong> TriadicFrameworks<br>
+<strong>Path:</strong> <code>docs/post-ASML_era/The_SCR_Specification.md</code><br>
+<strong>Status:</strong> Canonical Reference<br>
+<strong>Revision:</strong> 1.0.0</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-purpose-and-scope">Purpose and Scope</a></li>
+<li><a href="#2-scr-architecture-overview">SCR Architecture Overview</a></li>
+<li><a href="#3-coherence-clock-system">Coherence Clock System</a></li>
+<li><a href="#4-zone-architecture">Zone Architecture</a></li>
+<li><a href="#5-commit-arbitration">Commit Arbitration</a></li>
+<li><a href="#6-synchronization-latency-floor">Synchronization Latency Floor</a></li>
+<li><a href="#7-inter-zone-handoff-protocol">Inter-Zone Handoff Protocol</a></li>
+<li><a href="#8-coherence-monitoring">Coherence Monitoring</a></li>
+<li><a href="#9-scr-failure-modes-and-recovery">SCR Failure Modes and Recovery</a></li>
+<li><a href="#10-scr-qualification-and-commissioning">SCR Qualification and Commissioning</a></li>
+<li><a href="#11-scr-interface-contracts">SCR Interface Contracts</a></li>
+<li><a href="#12-conformance-requirements">Conformance Requirements</a></li>
+<li><a href="#13-glossary">Glossary</a></li>
+<li><a href="#14-related-documents">Related Documents</a></li>
+</ol>
+<hr>
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>This document is the normative specification for the <strong>Substrate Coherence Regime (SCR)</strong> as implemented within the TriadicFrameworks manufacturing architecture. It defines the requirements, interfaces, behaviors, and failure semantics that any conformant SCR implementation must satisfy.</p>
+<p>The SCR Specification is the authoritative reference for:</p>
+<ul>
+<li>Fab architects designing SCR infrastructure for new or upgraded facilities</li>
+<li>Equipment vendors supplying components to SCR-conformant fabs</li>
+<li>Process engineers qualifying new processes against an existing SCR installation</li>
+<li>EDA tool developers implementing coherence-aware timing models</li>
+</ul>
+<p>The Temporal Manufacturing Primer (<a href="./The_Temporal_Manufacturing_Primer.html"><code>docs/post-ASML_era/The_Temporal_Manufacturing_Primer.md</code></a>) provides conceptual background. This document assumes familiarity with that primer and does not repeat its introductory material. Where the primer describes the SCR at the level of operational concept, this specification defines it at the level of required behavior.</p>
+<h3 id="12-scope">1.2 Scope</h3>
+<p>This specification covers:</p>
+<ul>
+<li>The logical architecture of the SCR, including its components, interfaces, and data flows</li>
+<li>The coherence clock system: generation, distribution, and integrity requirements</li>
+<li>Zone architecture: zone definitions, boundary conditions, and configuration rules</li>
+<li>Commit arbitration: the protocol by which operations are authorized for substrate commit</li>
+<li>The synchronization latency floor: derivation, measurement, and enforcement</li>
+<li>Inter-zone handoff: the protocol governing operations that cross zone boundaries</li>
+<li>Coherence monitoring: real-time and post-process verification of SCR integrity</li>
+<li>Failure modes, error classification, and recovery procedures</li>
+<li>Qualification and commissioning procedures for new SCR installations</li>
+<li>Interface contracts between the SCR and adjacent systems (TRS stack, fab scheduler, yield management)</li>
+<li>Conformance requirements for SCR implementations</li>
+</ul>
+<h3 id="13-normative-language">1.3 Normative Language</h3>
+<p>Throughout this document, the following conventions apply:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MUST</strong></td>
+<td>Required. Non-conformant if omitted or violated.</td>
+</tr>
+<tr>
+<td><strong>MUST NOT</strong></td>
+<td>Prohibited. Non-conformant if present.</td>
+</tr>
+<tr>
+<td><strong>SHOULD</strong></td>
+<td>Strongly recommended. Deviation requires documented justification.</td>
+</tr>
+<tr>
+<td><strong>SHOULD NOT</strong></td>
+<td>Strongly discouraged. Deviation requires documented justification.</td>
+</tr>
+<tr>
+<td><strong>MAY</strong></td>
+<td>Permitted but not required.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-scr-architecture-overview">2. SCR Architecture Overview</h2>
+<h3 id="21-functional-role">2.1 Functional Role</h3>
+<p>The SCR is the synchronization architecture that enables temporal manufacturing operations to be committed to substrate with defined phase relationships. Without the SCR, the TRS Commit Layer (L4) has no shared time reference against which to place temporal addresses, and no mechanism to prevent conflicting operations from being committed concurrently.</p>
+<p>The SCR provides three capabilities that are prerequisites for temporal manufacturing:</p>
+<ol>
+<li><strong>A common time reference</strong> shared by all commit endpoints within a zone, with bounded phase deviation across the zone</li>
+<li><strong>An arbitration mechanism</strong> that authorizes operations for commit in a defined sequence, enforcing the causal ordering produced by the TRS Sequencing Layer (L2)</li>
+<li><strong>An integrity monitoring system</strong> that detects deviations from the expected coherence state in real time and triggers defined responses before those deviations produce committed defects</li>
+</ol>
+<h3 id="22-component-summary">2.2 Component Summary</h3>
+<p>The SCR comprises five component classes:</p>
+<table>
+<thead>
+<tr>
+<th>Component Class</th>
+<th>Abbreviation</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coherence Clock Generator</td>
+<td>CCG</td>
+<td>Produces the master zone timing reference</td>
+</tr>
+<tr>
+<td>Clock Distribution Network</td>
+<td>CDN</td>
+<td>Propagates the zone clock to all endpoints</td>
+</tr>
+<tr>
+<td>Commit Arbiter</td>
+<td>CA</td>
+<td>Authorizes commit operations per coherence slot</td>
+</tr>
+<tr>
+<td>Coherence Monitor Array</td>
+<td>CMA</td>
+<td>Verifies clock integrity across the zone</td>
+</tr>
+<tr>
+<td>Zone Boundary Interface</td>
+<td>ZBI</td>
+<td>Manages inter-zone handoff</td>
+</tr>
+</tbody>
+</table>
+<p>Each component class is specified in detail in the sections that follow. All five classes MUST be present in any conformant SCR installation. No component class is optional.</p>
+<h3 id="23-system-boundary">2.3 System Boundary</h3>
+<p>The SCR system boundary is defined as follows:</p>
+<ul>
+<li><strong>Upstream interface:</strong> The TRS Sequencing Layer (L2) delivers an ordered operation graph to the Commit Arbiter. The SCR does not interact with TRS layers L1 or L3 directly.</li>
+<li><strong>Downstream interface:</strong> The Commit Arbiter issues authorization signals to TRS Commit Layer (L4) endpoints (Temporal Commit Units). The SCR does not control the physical commit mechanism; it controls only the timing and authorization of commit operations.</li>
+<li><strong>Lateral interface:</strong> The Zone Boundary Interface connects to peer ZBIs in adjacent SCR zones. This interface is symmetric; both sides of a zone boundary are governed by the same handoff protocol.</li>
+<li><strong>Monitoring interface:</strong> The Coherence Monitor Array reports to the fab's yield management system. CMA data is consumed externally; the SCR does not interpret CMA output internally.</li>
+</ul>
+<p>The fab scheduler interacts with the SCR through a defined scheduling interface that is specified in <a href="#11-scr-interface-contracts">Section 11</a>.</p>
+<hr>
+<h2 id="3-coherence-clock-system">3. Coherence Clock System</h2>
+<h3 id="31-coherence-clock-requirements">3.1 Coherence Clock Requirements</h3>
+<p>The coherence clock is the timing backbone of the SCR. All temporal operations within a zone are referenced to it. Its properties directly determine the minimum achievable coherence cycle duration, the maximum temporal density, and the phase deviation budget available to commit endpoints.</p>
+<p>A conformant coherence clock system MUST satisfy the following requirements:</p>
+<p><strong>R-CLK-01:</strong> The CCG MUST produce a periodic reference signal with a period equal to the target coherence cycle duration, within a frequency accuracy of ±0.1 ppm over the qualified operating temperature range.</p>
+<p><strong>R-CLK-02:</strong> The phase noise of the CCG output MUST be below −130 dBc/Hz at 100 Hz offset from the carrier, and below −160 dBc/Hz at 1 MHz offset.</p>
+<p><strong>R-CLK-03:</strong> The CDN MUST deliver the clock signal to all TCU endpoints within the zone such that the worst-case phase deviation between any two endpoints does not exceed <strong>δ_max</strong>, where δ_max is defined per zone during SCR qualification and MUST NOT exceed 5% of the coherence cycle period.</p>
+<p><strong>R-CLK-04:</strong> The CCG MUST include a holdover capability that maintains frequency accuracy within ±1 ppm for a minimum of 100 ms following loss of the primary reference input.</p>
+<p><strong>R-CLK-05:</strong> The CDN MUST support active deskew at each distribution node to compensate for path-length variation introduced by routing geometry.</p>
+<p><strong>R-CLK-06:</strong> The coherence clock system MUST provide a deterministic phase relationship between the zone clock and the fab master clock, with a defined and stable offset measured during commissioning.</p>
+<h3 id="32-clock-generation-architecture">3.2 Clock Generation Architecture</h3>
+<p>The CCG is the sole authoritative source of the zone clock within its zone. Multiple CCGs MUST NOT operate within the same zone. A zone MUST have exactly one CCG.</p>
+<p>The CCG generates the zone clock from a primary reference. The primary reference is provided by the fab master clock system, which operates at a frequency that is a rational multiple of all zone clock frequencies in the fab. This relationship MUST be established during fab commissioning and MUST NOT change without full SCR recommission.</p>
+<p>The CCG contains an internal oscillator that serves as the holdover source (per R-CLK-04). The internal oscillator is disciplined to the primary reference during normal operation and freewheels during holdover events. CCG implementations MUST document the disciplining loop time constant and the holdover frequency drift rate.</p>
+<h3 id="33-clock-distribution-network">3.3 Clock Distribution Network</h3>
+<p>The CDN distributes the zone clock from the CCG output to every TCU endpoint within the zone. It is a physical network of transmission lines, active repeaters, and deskew elements.</p>
+<p><strong>Topology:</strong> The CDN MUST use a balanced H-tree or equivalent topology that equalizes path lengths from the CCG to all endpoints within the deskew correction range of the active deskew nodes. Star topologies with unequal path lengths are non-conformant unless active deskew achieves R-CLK-03 compliance.</p>
+<p><strong>Active deskew nodes:</strong> CDN deskew nodes MUST be placed such that no endpoint is more than one deskew node removed from the CCG. Chains of deskew nodes accumulate jitter and are non-conformant.</p>
+<p><strong>Signal integrity:</strong> The CDN MUST maintain clock signal integrity such that the duty cycle at any endpoint is within 50% ± 2% after deskew. Duty cycle distortion beyond this bound introduces asymmetric timing margins in the commit arbitration protocol.</p>
+<p><strong>Physical medium:</strong> The CDN transmission medium MUST be specified as part of the SCR qualification record. Changes to the CDN medium after qualification require re-measurement of δ_max and, if δ_max increases, partial or full recommission depending on the magnitude of change (see <a href="#10-scr-qualification-and-commissioning">Section 10</a>).</p>
+<h3 id="34-clock-integrity-verification">3.4 Clock Integrity Verification</h3>
+<p>Clock integrity MUST be verified by the CMA (see <a href="#8-coherence-monitoring">Section 8</a>) on a per-coherence-cycle basis. The CMA checks that the clock signal received at each monitored endpoint is within the phase deviation budget δ_max and that no cycle has been missed or doubled.</p>
+<p>A clock integrity failure detected by the CMA MUST cause the Commit Arbiter to withhold authorization for the affected coherence slot. Operations assigned to that slot are suspended, not discarded; they are rescheduled to the next available slot by the L2 Sequencing Layer upon notification.</p>
+<hr>
+<h2 id="4-zone-architecture">4. Zone Architecture</h2>
+<h3 id="41-zone-definition">4.1 Zone Definition</h3>
+<p>An SCR zone is a bounded physical region of a fab within which all TCU endpoints share a single coherence clock and a single Commit Arbiter. The zone is the fundamental unit of SCR organization.</p>
+<p><strong>Zone properties:</strong></p>
+<ul>
+<li><strong>Single CCG:</strong> Exactly one CCG per zone (§3.2)</li>
+<li><strong>Single CA:</strong> Exactly one Commit Arbiter per zone (§5.1)</li>
+<li><strong>Bounded extent:</strong> The zone's physical extent MUST be small enough that the CDN can distribute the zone clock to all endpoints within δ_max at the target coherence cycle period</li>
+<li><strong>Defined boundaries:</strong> Zone boundaries are physically defined by the CDN routing perimeter and the ZBI installation points</li>
+</ul>
+<h3 id="42-zone-sizing">4.2 Zone Sizing</h3>
+<p>Zone size is constrained by the synchronization latency floor (SLF), which is derived from the zone's physical extent and the CDN signal propagation velocity (see <a href="#6-synchronization-latency-floor">Section 6</a>).</p>
+<p>The maximum zone radius r_max for a given coherence cycle period T_c and CDN propagation velocity v_p is:</p>
+<pre><code>r_max = (T_c × δ_max_fraction × v_p) / 2
+
+Where:
+  T_c             = coherence cycle period (ns)
+  δ_max_fraction  = maximum allowed phase deviation as fraction of T_c (≤ 0.05 per R-CLK-03)
+  v_p             = CDN signal propagation velocity (m/ns)
+  r_max           = maximum zone radius (m)
+</code></pre>
+<p>Fab architects MUST verify that all TCU endpoints within a proposed zone fall within r_max of the CCG location before committing to a zone boundary configuration.</p>
+<h3 id="43-zone-configuration-rules">4.3 Zone Configuration Rules</h3>
+<p><strong>R-ZONE-01:</strong> Every TCU in the fab MUST belong to exactly one zone. TCUs MUST NOT be shared between zones.</p>
+<p><strong>R-ZONE-02:</strong> A zone boundary MUST NOT bisect a die. All TCUs that commit operations to the same die MUST be in the same zone, or the die design MUST route all inter-zone signals through defined ZBI paths with explicit latency budgets.</p>
+<p><strong>R-ZONE-03:</strong> Zone boundaries MUST be physically marked and recorded in the fab's SCR configuration record. The configuration record MUST be updated before any zone boundary change takes effect.</p>
+<p><strong>R-ZONE-04:</strong> Zone configuration changes MUST NOT be made while wafers are in process within the affected zone. The zone MUST be quiesced (all in-flight operations completed and no new operations admitted) before any configuration change.</p>
+<p><strong>R-ZONE-05:</strong> Zones MUST NOT be nested. A zone that contains another zone is non-conformant.</p>
+<h3 id="44-multi-zone-fabs">4.4 Multi-Zone Fabs</h3>
+<p>Fabs with multiple zones MUST designate one zone as the <strong>primary zone</strong>. The primary zone's CCG provides the timing reference from which all other zones derive their clocks, maintaining a rational frequency relationship to the fab master clock.</p>
+<p>Secondary zone CCGs MUST lock to the primary zone clock via a defined reference distribution path. The reference distribution path is not the same as the CDN; it is a dedicated low-jitter reference link that connects the primary CCG to each secondary CCG.</p>
+<p>The frequency relationship between zones MUST be an integer ratio. Non-integer ratios between zone clock frequencies are non-conformant because they preclude a common coherence boundary at which inter-zone handoff can occur with deterministic latency.</p>
+<h3 id="45-zone-isolation">4.5 Zone Isolation</h3>
+<p>Zones are electrically and temporally isolated except at ZBI points. A failure within one zone MUST NOT propagate to adjacent zones. This isolation property is enforced by:</p>
+<ul>
+<li><strong>Electrical isolation:</strong> The CDN of each zone is electrically isolated at zone boundaries. CDN signals do not cross zone boundaries; only the ZBI inter-zone reference link crosses zone boundaries.</li>
+<li><strong>Arbiter isolation:</strong> Each zone's Commit Arbiter operates independently. The arbiters do not communicate directly; inter-zone coordination is handled exclusively through the ZBI protocol.</li>
+<li><strong>CMA isolation:</strong> Each zone's CMA monitors only its own zone. CMA alerts from one zone do not directly trigger responses in adjacent zones.</li>
+</ul>
+<hr>
+<h2 id="5-commit-arbitration">5. Commit Arbitration</h2>
+<h3 id="51-commit-arbiter-architecture">5.1 Commit Arbiter Architecture</h3>
+<p>The Commit Arbiter (CA) is the component that authorizes TCUs to execute commit operations during a specified coherence slot. It is the enforcement point for the causal ordering and sequencing constraints produced by the TRS Sequencing Layer (L2).</p>
+<p>The CA receives two inputs:</p>
+<ol>
+<li><strong>The operation graph</strong> from L2, which specifies the set of operations to be committed in the current and upcoming coherence cycles, their coherence slot assignments, and their causal dependencies</li>
+<li><strong>The clock signal</strong> from the CCG via the CDN, which defines the coherence slot boundaries against which authorization signals must be timed</li>
+</ol>
+<p>The CA produces one output:</p>
+<ul>
+<li><strong>Authorization signals</strong> delivered to each TCU, precisely timed to the coherence slot in which the authorized operation must begin</li>
+</ul>
+<h3 id="52-authorization-protocol">5.2 Authorization Protocol</h3>
+<p>The authorization protocol operates on a per-slot basis within each coherence cycle. The cycle is divided into a fixed number of slots N_slots, determined during SCR qualification. N_slots MUST be a power of two and MUST NOT change after qualification without full recommission.</p>
+<p>For each coherence slot s in cycle c, the CA executes the following sequence:</p>
+<ol>
+<li>
+<p><strong>Pre-slot verification:</strong> The CA verifies that all causal predecessors of operations assigned to slot s have received commit-complete acknowledgment from their respective TCUs. If any predecessor is unresolved, the CA withholds authorization for slot s and escalates to the deferred-slot procedure (§5.4).</p>
+</li>
+<li>
+<p><strong>Authorization window:</strong> At the slot boundary, the CA asserts authorization signals to all TCUs assigned to slot s simultaneously. The authorization signal MUST be asserted within a setup window of T_auth before the slot boundary, where T_auth is defined per zone during qualification.</p>
+</li>
+<li>
+<p><strong>Commit window:</strong> Each authorized TCU executes its commit operation within the slot's commit window. The commit window duration MUST be less than the slot period minus the acknowledgment propagation time.</p>
+</li>
+<li>
+<p><strong>Acknowledgment:</strong> Each TCU asserts a commit-complete acknowledgment signal upon completing its operation. The CA MUST receive acknowledgment from all authorized TCUs before the end of the slot's acknowledgment window, or a timeout is declared (§9.2).</p>
+</li>
+<li>
+<p><strong>Slot close:</strong> The CA records the slot's completion status and advances to the next slot.</p>
+</li>
+</ol>
+<p><strong>R-ARB-01:</strong> The CA MUST NOT authorize an operation for commit unless all of its causal predecessors, as specified in the L2 operation graph, have been acknowledged as committed.</p>
+<p><strong>R-ARB-02:</strong> The CA MUST NOT authorize two operations for the same coherence slot if they are assigned to the same spatial region of the substrate and their temporal addresses overlap within the substrate's minimum address spacing for the qualified SC class.</p>
+<p><strong>R-ARB-03:</strong> Authorization signals MUST be asserted within the specified T_auth setup window. Authorization asserted after the slot boundary is a timing violation and MUST cause the CA to void the authorization and treat the operation as deferred (§5.4).</p>
+<p><strong>R-ARB-04:</strong> The CA MUST maintain an audit log of all authorization decisions, including slot assignments, authorization timestamps, and acknowledgment timestamps. The audit log MUST be retained for the duration of the wafer lot and MUST be accessible to the yield management system.</p>
+<h3 id="53-operation-graph-ingestion">5.3 Operation Graph Ingestion</h3>
+<p>The CA ingests the operation graph from L2 via a defined protocol. The operation graph is delivered as a structured record containing:</p>
+<ul>
+<li>Operation identifier (unique within the wafer lot)</li>
+<li>Substrate coordinates (x, y, layer)</li>
+<li>Temporal address</li>
+<li>Coherence slot assignment (zone, cycle index, slot index)</li>
+<li>Causal predecessor list (operation identifiers)</li>
+<li>SC class requirement</li>
+</ul>
+<p>The CA validates each incoming operation record against the following checks before admitting it to the arbitration queue:</p>
+<ul>
+<li>Slot assignment is within the zone's qualified N_slots range</li>
+<li>SC class requirement matches the qualified substrate at the specified layer</li>
+<li>Predecessor operation identifiers are known to the CA (registered in a prior ingestion or the current batch)</li>
+<li>Temporal address is within the substrate's minimum address spacing from any concurrently active operation in the same spatial region</li>
+</ul>
+<p>Operations that fail validation are rejected and returned to L2 with a rejection code. L2 is responsible for resolving the rejection and resubmitting.</p>
+<h3 id="54-deferred-slot-procedure">5.4 Deferred-Slot Procedure</h3>
+<p>When the CA withholds authorization for a slot due to an unresolved predecessor, the affected operations enter the deferred-slot queue. The deferred-slot procedure is:</p>
+<ol>
+<li>The CA notifies L2 that the operation has been deferred, including the reason (unresolved predecessor identifier and its last known status).</li>
+<li>L2 updates the operation's slot assignment to the next available slot in which all predecessors are projected to be resolved.</li>
+<li>The CA re-admits the operation from the deferred queue when L2 delivers the updated slot assignment.</li>
+<li>If an operation has been deferred more than D_max times within a single wafer step (where D_max is a qualified parameter), the CA escalates to the fab scheduler as a sequencing anomaly.</li>
+</ol>
+<p><strong>R-ARB-05:</strong> The deferred-slot queue MUST be FIFO within each priority class. Operations MUST NOT be reordered within the queue except by explicit L2 re-assignment.</p>
+<p><strong>R-ARB-06:</strong> D_max MUST be defined and documented in the SCR qualification record. The default value is 8. Implementations MAY increase D_max; they MUST NOT reduce it below 4.</p>
+<h3 id="55-arbiter-redundancy">5.5 Arbiter Redundancy</h3>
+<p><strong>R-ARB-07:</strong> The CA MUST implement hot-standby redundancy. A standby CA instance MUST be present and synchronized to the primary CA state continuously. Failover from primary to standby MUST complete within one coherence cycle without loss of any operation that had received authorization.</p>
+<p><strong>R-ARB-08:</strong> The standby CA MUST NOT authorize operations independently. It monitors primary CA state and takes over exclusively on detection of primary CA failure. Dual-active arbiter configurations are non-conformant.</p>
+<hr>
+<h2 id="6-synchronization-latency-floor">6. Synchronization Latency Floor</h2>
+<h3 id="61-definition">6.1 Definition</h3>
+<p>The <strong>Synchronization Latency Floor (SLF)</strong> is the minimum coherence cycle duration that a given SCR zone installation can support without risk of partial-cycle commits. It is a physical property of the installed SCR infrastructure, determined by measurement during commissioning and fixed for the life of that installation.</p>
+<p>A coherence cycle duration shorter than the SLF is non-conformant for that installation. The SLF is not a design target; it is a constraint that the designed coherence cycle duration must exceed.</p>
+<h3 id="62-slf-derivation">6.2 SLF Derivation</h3>
+<p>The SLF is the sum of four latency components, measured at the worst-case path within the zone:</p>
+<pre><code>SLF = T_prop + T_arb + T_ack + T_margin
+
+Where:
+  T_prop   = maximum CDN propagation latency from CCG to the farthest TCU endpoint (ns)
+  T_arb    = Commit Arbiter processing latency, from slot boundary detection to
+             authorization signal assertion (ns)
+  T_ack    = maximum acknowledgment propagation latency from the farthest TCU
+             endpoint to the CA (ns)
+  T_margin = implementation margin, MUST NOT be less than 10% of (T_prop + T_arb + T_ack)
+</code></pre>
+<p>Each component is measured independently during commissioning. The SLF value recorded in the SCR qualification record is the sum of the measured worst-case values with the required margin applied.</p>
+<h3 id="63-slf-measurement-protocol">6.3 SLF Measurement Protocol</h3>
+<p>SLF component measurements MUST be performed under the following conditions:</p>
+<ul>
+<li>At the maximum operating temperature of the fab environment</li>
+<li>With all TCU endpoints and CDN active nodes powered and operational</li>
+<li>After a minimum of 30 minutes of thermal stabilization at operating temperature</li>
+<li>Using calibrated time-domain reflectometry for T_prop and T_ack measurements</li>
+<li>Using CA internal instrumentation for T_arb measurement</li>
+</ul>
+<p>Each component MUST be measured at a minimum of 10 representative endpoints distributed across the zone extent. The worst-case measured value across all endpoints is the value used in the SLF calculation.</p>
+<p><strong>R-SLF-01:</strong> The target coherence cycle duration T_c MUST satisfy T_c &gt; SLF × 1.05. The 5% overhead above the SLF is required to provide margin for manufacturing variation in CDN path lengths and for CCG jitter accumulation.</p>
+<p><strong>R-SLF-02:</strong> The SLF MUST be remeasured whenever any of the following occur:
+- A CDN active node is replaced
+- The CDN routing is modified
+- The CA is replaced or its firmware is updated
+- The operating temperature range of the fab changes by more than ±5°C from the qualification measurement conditions</p>
+<p><strong>R-SLF-03:</strong> The SLF value in the SCR qualification record MUST be updated following any remeasurement. If the new SLF exceeds the prior SLF such that the existing T_c no longer satisfies R-SLF-01, production MUST be halted until T_c is adjusted or the SLF is reduced.</p>
+<h3 id="64-slf-reduction-strategies">6.4 SLF Reduction Strategies</h3>
+<p>When a process roadmap requires a shorter coherence cycle duration than the current SLF permits, the SLF must be reduced. The available strategies and their tradeoffs are:</p>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Effect on SLF Component</th>
+<th>Implementation Complexity</th>
+<th>Requires Recommission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reduce zone physical extent (add zones)</td>
+<td>Reduces T_prop, T_ack</td>
+<td>High (infrastructure change)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Upgrade CDN medium to higher propagation velocity</td>
+<td>Reduces T_prop, T_ack</td>
+<td>High (physical replacement)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Replace CA with lower-latency implementation</td>
+<td>Reduces T_arb</td>
+<td>Medium (equipment swap)</td>
+<td>Partial (T_arb only)</td>
+</tr>
+<tr>
+<td>Optimize CDN topology (shorter paths)</td>
+<td>Reduces T_prop, T_ack</td>
+<td>Medium (re-routing)</td>
+<td>Partial (T_prop only)</td>
+</tr>
+<tr>
+<td>Reduce T_margin (requires risk assessment)</td>
+<td>Reduces margin component</td>
+<td>Low (documentation change)</td>
+<td>No, but requires review board approval</td>
+</tr>
+</tbody>
+</table>
+<p>Reducing T_margin below 10% is non-conformant per the SLF derivation formula and requires a formal waiver with documented risk assessment.</p>
+<hr>
+<h2 id="7-inter-zone-handoff-protocol">7. Inter-Zone Handoff Protocol</h2>
+<h3 id="71-purpose">7.1 Purpose</h3>
+<p>When an operation's causal dependencies span two or more zones, or when a die's design requires commit operations in multiple zones, a coordination mechanism is required to ensure that the cross-zone causal constraints are honored. This mechanism is the <strong>inter-zone handoff protocol</strong>, implemented at the Zone Boundary Interface (ZBI).</p>
+<p>The handoff protocol does not synchronize the clocks of adjacent zones. Zone clocks are independent (§4.5). Instead, it provides a defined latency contract: a message sent from Zone A to Zone B via the ZBI arrives at Zone B within a bounded number of Zone B coherence cycles, allowing L2 in Zone B to reserve coherence slots accordingly.</p>
+<h3 id="72-zbi-component-requirements">7.2 ZBI Component Requirements</h3>
+<p><strong>R-ZBI-01:</strong> Every zone boundary MUST be served by at least one ZBI on each side of the boundary. Zones with a large inter-zone operation volume SHOULD install multiple ZBIs per boundary to provide bandwidth headroom.</p>
+<p><strong>R-ZBI-02:</strong> ZBI pairs (one on each side of a boundary) MUST be matched in firmware version and configuration. Mismatched ZBI pairs are non-conformant.</p>
+<p><strong>R-ZBI-03:</strong> Each ZBI MUST implement electrical isolation between the zones it connects. A fault on one zone's power or ground MUST NOT propagate to the adjacent zone through the ZBI.</p>
+<p><strong>R-ZBI-04:</strong> The ZBI MUST buffer outgoing messages independently of incoming messages. A congested incoming path MUST NOT delay outgoing messages.</p>
+<h3 id="73-handoff-latency-contract">7.3 Handoff Latency Contract</h3>
+<p>The ZBI latency contract specifies the maximum number of Zone B coherence cycles that elapse between the transmission of a handoff message from Zone A and its availability for processing by Zone B's Commit Arbiter.</p>
+<pre><code>L_handoff = ceil((T_ZBI + T_CDN_B) / T_c_B)
+
+Where:
+  T_ZBI    = ZBI message transmission latency (measured during commissioning, ns)
+  T_CDN_B  = CDN propagation latency from Zone B ZBI endpoint to Zone B CA (ns)
+  T_c_B    = Zone B coherence cycle period (ns)
+  L_handoff = handoff latency in Zone B coherence cycles (integer, rounded up)
+</code></pre>
+<p>L_handoff MUST be measured and recorded for each zone boundary during commissioning. L2 systems that schedule cross-zone operations MUST use the recorded L_handoff value to compute the earliest coherence slot in Zone B at which a cross-zone operation can be authorized.</p>
+<p><strong>R-ZBI-05:</strong> L_handoff MUST be a positive integer. An L_handoff of zero is non-conformant; it would imply that Zone B can receive and process a handoff message within its current coherence slot, which cannot be guaranteed given the independent zone clocks.</p>
+<p><strong>R-ZBI-06:</strong> L_handoff MUST be remeasured whenever the ZBI firmware is updated or the CDN routing between the ZBI and Zone B's CA is modified.</p>
+<h3 id="74-handoff-message-format">7.4 Handoff Message Format</h3>
+<p>A handoff message transmitted by Zone A to Zone B carries the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source_zone_id</code></td>
+<td>uint16</td>
+<td>Zone A identifier</td>
+</tr>
+<tr>
+<td><code>dest_zone_id</code></td>
+<td>uint16</td>
+<td>Zone B identifier</td>
+</tr>
+<tr>
+<td><code>operation_id</code></td>
+<td>uint64</td>
+<td>Operation identifier (unique within wafer lot)</td>
+</tr>
+<tr>
+<td><code>ack_type</code></td>
+<td>enum</td>
+<td><code>COMMIT_COMPLETE</code> or <code>COMMIT_VOID</code></td>
+</tr>
+<tr>
+<td><code>source_cycle_index</code></td>
+<td>uint64</td>
+<td>Zone A coherence cycle in which the operation was committed or voided</td>
+</tr>
+<tr>
+<td><code>source_slot_index</code></td>
+<td>uint8</td>
+<td>Zone A coherence slot within that cycle</td>
+</tr>
+<tr>
+<td><code>checksum</code></td>
+<td>uint32</td>
+<td>CRC-32 of all preceding fields</td>
+</tr>
+</tbody>
+</table>
+<p>Zone B's ZBI validates the checksum upon receipt. A checksum failure causes the message to be discarded and a retransmission request to be sent to Zone A's ZBI. If three consecutive retransmissions fail validation, the ZBI escalates to the fab's yield management system as a ZBI integrity fault.</p>
+<h3 id="75-cross-zone-operation-scheduling">7.5 Cross-Zone Operation Scheduling</h3>
+<p>The L2 Sequencing Layer is responsible for scheduling cross-zone operations with knowledge of L_handoff for each relevant boundary. The scheduling rules are:</p>
+<ol>
+<li>An operation in Zone B that depends on an operation in Zone A MUST be assigned to a Zone B coherence slot no earlier than L_handoff cycles after the Zone A operation's assigned slot.</li>
+<li>The Zone A CA transmits the handoff message immediately upon receiving commit acknowledgment from the Zone A TCU.</li>
+<li>The Zone B CA does not authorize the dependent operation until the handoff message is received and validated. If the message is not received by the slot deadline, the Zone B operation is deferred (§5.4) and L2 is notified.</li>
+</ol>
+<hr>
+<h2 id="8-coherence-monitoring">8. Coherence Monitoring</h2>
+<h3 id="81-coherence-monitor-array-architecture">8.1 Coherence Monitor Array Architecture</h3>
+<p>The <strong>Coherence Monitor Array (CMA)</strong> is a distributed set of sensor nodes deployed throughout the zone that continuously verify the integrity of the coherence clock as received at representative points across the zone. The CMA is passive with respect to the CDN; it observes but does not modify the clock signal.</p>
+<p><strong>R-CMA-01:</strong> CMA sensor nodes MUST be deployed at a minimum density of one node per 0.5 × r_max radius from the CCG, in at least four angular quadrants. This distribution ensures that phase deviation at the zone periphery is monitored regardless of the angular position of the farthest TCU.</p>
+<p><strong>R-CMA-02:</strong> Each CMA sensor node MUST independently measure and report: clock period, duty cycle, and phase relative to the CCG reference signal. Reports MUST be produced on a per-coherence-cycle basis.</p>
+<p><strong>R-CMA-03:</strong> CMA sensor nodes MUST be electrically isolated from the CDN. Faults in a CMA node MUST NOT affect clock signal integrity at any CDN endpoint.</p>
+<h3 id="82-monitored-parameters">8.2 Monitored Parameters</h3>
+<p>The CMA monitors the following parameters at each sensor node on every coherence cycle:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Alarm Threshold</th>
+<th>Action on Alarm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clock period deviation</td>
+<td>&gt; ±0.5% of T_c</td>
+<td>Advisory; log to yield management</td>
+</tr>
+<tr>
+<td>Duty cycle deviation</td>
+<td>&gt; ±2% of 50%</td>
+<td>Advisory; log to yield management</td>
+</tr>
+<tr>
+<td>Phase deviation from CCG reference</td>
+<td>&gt; 80% of δ_max</td>
+<td>Warning; notify CA</td>
+</tr>
+<tr>
+<td>Phase deviation from CCG reference</td>
+<td>&gt; δ_max</td>
+<td>Critical; CA withholds slot authorization</td>
+</tr>
+<tr>
+<td>Missing clock cycle</td>
+<td>Any occurrence</td>
+<td>Critical; CA withholds slot authorization; CCG holdover initiated</td>
+</tr>
+<tr>
+<td>Doubled clock cycle</td>
+<td>Any occurrence</td>
+<td>Critical; CA withholds slot authorization; fab scheduler notified</td>
+</tr>
+</tbody>
+</table>
+<h3 id="83-cma-data-handling">8.3 CMA Data Handling</h3>
+<p>CMA reports are delivered to two consumers:</p>
+<ol>
+<li>
+<p><strong>The Commit Arbiter:</strong> Receives real-time critical alerts (phase &gt; δ_max, missing/doubled cycle). The CA acts on these alerts within the current coherence cycle. CMA-to-CA alert latency MUST be less than 10% of T_c.</p>
+</li>
+<li>
+<p><strong>The yield management system:</strong> Receives all CMA reports for logging, trend analysis, and correlation with defect maps. The yield management system may use CMA trend data to trigger preventive SCR maintenance before alert thresholds are reached.</p>
+</li>
+</ol>
+<p><strong>R-CMA-04:</strong> The CMA MUST continue to operate and report during CCG holdover events. CMA reports during holdover MUST be flagged to distinguish them from normal-operation reports.</p>
+<p><strong>R-CMA-05:</strong> CMA sensor nodes MUST self-test on power-up and report test results to the yield management system. A sensor node that fails self-test MUST be treated as absent for coverage calculation purposes. If the removal of failed nodes causes coverage to fall below R-CMA-01 requirements, production in the affected zone MUST be halted until coverage is restored.</p>
+<h3 id="84-post-process-coherence-audit">8.4 Post-Process Coherence Audit</h3>
+<p>In addition to real-time monitoring, a post-process coherence audit MUST be performed at the end of each wafer step that includes temporal operations. The audit correlates the CA's authorization log with the CMA's cycle-by-cycle reports to identify any operations that were authorized during a degraded coherence window.</p>
+<p>Operations identified by the post-process audit as having been committed during a degraded coherence window are flagged in the wafer lot record. Flagged operations do not automatically result in wafer rejection; they are forwarded to the yield management system for correlation with post-process inspection results.</p>
+<hr>
+<h2 id="9-scr-failure-modes-and-recovery">9. SCR Failure Modes and Recovery</h2>
+<h3 id="91-failure-classification">9.1 Failure Classification</h3>
+<p>SCR failures are classified into three severity levels:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Definition</th>
+<th>Required Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1</strong></td>
+<td>Advisory</td>
+<td>Parameter deviation within operating range; no immediate risk to commit fidelity</td>
+<td>Log; no operational impact</td>
+</tr>
+<tr>
+<td><strong>L2</strong></td>
+<td>Warning</td>
+<td>Parameter deviation approaching threshold; risk to commit fidelity if not addressed</td>
+<td>Log; notify operators; increase monitoring frequency</td>
+</tr>
+<tr>
+<td><strong>L3</strong></td>
+<td>Critical</td>
+<td>Parameter deviation exceeds threshold or component failure; confirmed or imminent risk to commit fidelity</td>
+<td>Suspend slot authorization; halt production in affected zone; initiate recovery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-specific-failure-modes">9.2 Specific Failure Modes</h3>
+<h4 id="921-ccg-primary-reference-loss">9.2.1 CCG Primary Reference Loss</h4>
+<p><strong>Classification:</strong> L2 if holdover is active and stable; L3 if holdover frequency exceeds ±1 ppm drift</p>
+<p><strong>Cause:</strong> Loss of the primary reference signal from the fab master clock to the CCG.</p>
+<p><strong>Detection:</strong> CCG internal monitoring; CMA will observe slow frequency drift if holdover is not maintaining accuracy.</p>
+<p><strong>Recovery procedure:</strong>
+1. CCG switches to holdover automatically (§3.2); CA and CMA continue normal operation
+2. Fab scheduler notified of holdover condition; new wafer starts in the affected zone are suspended
+3. In-flight wafers continue to process; their records are flagged as processed under holdover
+4. If holdover is restored within the CCG holdover stability window (100 ms per R-CLK-04), production resumes without additional qualification
+5. If holdover exceeds 100 ms, zone is quiesced and SLF is remeasured before production resumes</p>
+<h4 id="922-cdn-node-failure">9.2.2 CDN Node Failure</h4>
+<p><strong>Classification:</strong> L3 if the failed node is in the primary distribution path; L2 if the failed node is a redundant path</p>
+<p><strong>Cause:</strong> Failure of a CDN active repeater or deskew node.</p>
+<p><strong>Detection:</strong> CMA will observe phase deviation increase at endpoints downstream of the failed node; CDN self-monitoring may also report directly.</p>
+<p><strong>Recovery procedure:</strong>
+1. Affected zone is quiesced
+2. Failed node is identified by correlating CMA phase deviation reports with CDN topology
+3. Node is replaced and the CDN is re-deskewed
+4. δ_max is remeasured at endpoints downstream of the replaced node
+5. If measured δ_max is within qualification limits, production resumes
+6. If measured δ_max exceeds qualification limits, partial recommission of the CDN is required</p>
+<h4 id="923-commit-arbiter-primary-failure">9.2.3 Commit Arbiter Primary Failure</h4>
+<p><strong>Classification:</strong> L3</p>
+<p><strong>Cause:</strong> Primary CA hardware failure, firmware fault, or loss of power.</p>
+<p><strong>Detection:</strong> Watchdog timeout; standby CA detects loss of primary CA heartbeat.</p>
+<p><strong>Recovery procedure:</strong>
+1. Standby CA takes over within one coherence cycle per R-ARB-07
+2. Standby CA replays any operations that were in the authorization window at the time of failover, using the synchronized state copy
+3. CA failover event is logged and the wafer lot record is flagged
+4. Primary CA is replaced or restored; standby CA role is re-established before the replacement primary returns to service
+5. A post-failover coherence audit (§8.4) is performed immediately after failover, not waiting for end of wafer step</p>
+<h4 id="924-zbi-integrity-fault">9.2.4 ZBI Integrity Fault</h4>
+<p><strong>Classification:</strong> L3 for the cross-zone operation traffic affected; L1 for traffic on unaffected boundaries</p>
+<p><strong>Cause:</strong> Repeated checksum failures on ZBI messages (§7.4).</p>
+<p><strong>Detection:</strong> ZBI internal monitoring; escalation after three consecutive retransmission failures.</p>
+<p><strong>Recovery procedure:</strong>
+1. Cross-zone operations that depend on the affected boundary are suspended; in-zone operations continue
+2. ZBI is tested using a defined diagnostic sequence
+3. If the fault is in the ZBI hardware, the unit is replaced and L_handoff is remeasured
+4. If the fault is in the inter-zone link medium, the medium is inspected and repaired
+5. Cross-zone operations resume after L_handoff remeasurement confirms compliance</p>
+<h4 id="925-coherence-loss-event">9.2.5 Coherence-Loss Event</h4>
+<p><strong>Classification:</strong> L3</p>
+<p><strong>Cause:</strong> One or more TCUs execute commit operations outside a valid coherence window, either due to a clock integrity failure that was not caught before the commit window, or due to a CA authorization timing violation.</p>
+<p><strong>Detection:</strong> Post-process coherence audit (§8.4); TMU measurement of committed address error rate above the process threshold.</p>
+<p><strong>Recovery procedure:</strong>
+1. Affected wafer lot is quarantined pending inspection
+2. CA authorization log and CMA records are correlated to identify the affected operations and coherence cycles
+3. TMU data is reviewed to assess whether the address error rate falls within the process defect budget
+4. If within budget: wafer lot is released with flagged record
+5. If outside budget: wafer lot disposition follows yield management escalation procedure
+6. Root cause analysis is performed; corrective action is documented and tracked to closure</p>
+<h3 id="93-recovery-validation">9.3 Recovery Validation</h3>
+<p>Following any L3 failure and recovery, the zone MUST pass a <strong>Recovery Validation Test (RVT)</strong> before production resumes. The RVT consists of:</p>
+<ol>
+<li>A full CMA sweep confirming all monitored parameters are within normal operating range</li>
+<li>A CA authorization log verification confirming clean state (no pending deferred operations from before the failure)</li>
+<li>A minimum of one complete coherence cycle at the production T_c with no CMA warnings or critical alerts</li>
+<li>Sign-off by the fab process engineering team</li>
+</ol>
+<p>The RVT is documented and retained in the SCR maintenance record.</p>
+<hr>
+<h2 id="10-scr-qualification-and-commissioning">10. SCR Qualification and Commissioning</h2>
+<h3 id="101-new-installation-qualification">10.1 New Installation Qualification</h3>
+<p>A new SCR installation MUST complete the following qualification sequence before any production wafers are processed. This sequence applies to new fab construction and to installations replacing a prior SCR at the same facility.</p>
+<p><strong>Phase 1 — Infrastructure Verification</strong></p>
+<ol>
+<li>Physical installation of all CCG, CDN, CA, CMA, and ZBI components verified against the design bill of materials</li>
+<li>Electrical isolation between zones verified by continuity measurement</li>
+<li>CCG primary reference lock verified and frequency accuracy measured per R-CLK-01</li>
+<li>Phase noise measured per R-CLK-02</li>
+<li>CDN duty cycle measured at all endpoints per §3.3</li>
+</ol>
+<p><strong>Phase 2 — SLF Measurement</strong></p>
+<ol>
+<li>T_prop measured at all TCU endpoints per §6.3</li>
+<li>T_arb measured using CA instrumentation per §6.3</li>
+<li>T_ack measured at all TCU endpoints per §6.3</li>
+<li>SLF calculated and recorded per §6.2</li>
+<li>Coherence cycle period T_c confirmed to satisfy R-SLF-01</li>
+</ol>
+<p><strong>Phase 3 — δ_max Measurement</strong></p>
+<ol>
+<li>Phase deviation measured between all endpoint pairs per R-CLK-03</li>
+<li>Worst-case δ_max recorded; confirmed to be ≤ 5% of T_c</li>
+</ol>
+<p><strong>Phase 4 — CMA Qualification</strong></p>
+<ol>
+<li>CMA sensor nodes powered and self-test confirmed per R-CMA-05</li>
+<li>CMA coverage density confirmed per R-CMA-01</li>
+<li>CMA alert delivery latency to CA measured and confirmed &lt; 10% of T_c per R-CMA-04</li>
+<li>Simulated phase deviation fault injected; CMA alert and CA response verified</li>
+</ol>
+<p><strong>Phase 5 — Arbiter Qualification</strong></p>
+<ol>
+<li>CA ingests a test operation graph and produces authorization signals against a reference substrate</li>
+<li>Authorization timing verified against T_auth specification</li>
+<li>Causal ordering enforced correctly for a defined set of test cases including dependencies and deferrals</li>
+<li>Standby CA failover tested per R-ARB-07; failover latency confirmed ≤ one coherence cycle</li>
+</ol>
+<p><strong>Phase 6 — ZBI Qualification (multi-zone only)</strong></p>
+<ol>
+<li>ZBI pairs powered and firmware version matched per R-ZBI-02</li>
+<li>L_handoff measured per §7.3 for all zone boundaries</li>
+<li>ZBI checksum validation tested using intentionally corrupted messages</li>
+<li>Retransmission and escalation behavior verified</li>
+</ol>
+<p><strong>Phase 7 — Full-System Operational Test</strong></p>
+<ol>
+<li>End-to-end TRS stack exercised with a qualified test process at minimum temporal density</li>
+<li>CMA, CA audit log, and TMU data reviewed for anomalies</li>
+<li>Recovery Validation Test (§9.3) performed as a baseline</li>
+<li>All Phase 1–7 results compiled into the SCR Qualification Record</li>
+</ol>
+<h3 id="102-partial-recommission-triggers">10.2 Partial Recommission Triggers</h3>
+<p>Partial recommission is required when a component change affects one measurable SCR parameter without affecting others. The scope of recommission is limited to the affected parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Change</th>
+<th>Recommission Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDN node replacement</td>
+<td>Re-measure δ_max at affected endpoints; recalculate T_prop; update SLF</td>
+</tr>
+<tr>
+<td>CA replacement</td>
+<td>Re-measure T_arb; update SLF</td>
+</tr>
+<tr>
+<td>ZBI firmware update</td>
+<td>Re-measure L_handoff for affected boundaries</td>
+</tr>
+<tr>
+<td>Operating temperature range change</td>
+<td>Full SLF remeasurement (Phases 2–3)</td>
+</tr>
+<tr>
+<td>Zone boundary modification</td>
+<td>Full recommission for affected zones (Phases 1–7)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-scr-qualification-record">10.3 SCR Qualification Record</h3>
+<p>The SCR Qualification Record MUST be maintained for the life of the installation. It MUST include:</p>
+<ul>
+<li>Facility identifier and zone map</li>
+<li>Bill of materials for all SCR components (manufacturer, model, firmware version, serial number)</li>
+<li>All Phase 1–7 measurement results from initial qualification</li>
+<li>Chronological log of all partial recommissions with before/after measurements</li>
+<li>Failure events and recovery records per §9</li>
+<li>Current effective values: SLF, δ_max, T_c, N_slots, D_max, L_handoff (per boundary)</li>
+</ul>
+<p>The Qualification Record MUST be available to the yield management system and MUST be producible on request during process audits.</p>
+<hr>
+<h2 id="11-scr-interface-contracts">11. SCR Interface Contracts</h2>
+<h3 id="111-trs-l2-interface-operation-graph-delivery">11.1 TRS L2 Interface (Operation Graph Delivery)</h3>
+<p>The L2-to-CA interface delivers operation graphs for arbitration. The interface contract specifies:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delivery timing</td>
+<td>Operation graph for cycle c MUST be delivered to the CA no later than T_graph before the first slot boundary of cycle c, where T_graph ≥ T_arb</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>Structured record per §5.3</td>
+</tr>
+<tr>
+<td>Rejection handling</td>
+<td>L2 MUST handle CA rejections within 2 coherence cycles; unhandled rejections escalate to the fab scheduler</td>
+</tr>
+<tr>
+<td>Deferral notification</td>
+<td>CA notifies L2 of deferrals within the deferred slot; L2 MUST respond with an updated slot assignment within D_max cycles</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-trs-l4-interface-tcu-authorization">11.2 TRS L4 Interface (TCU Authorization)</h3>
+<p>The CA-to-TCU interface delivers authorization signals and receives acknowledgments. The interface contract specifies:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization signal</td>
+<td>Asserted within T_auth before slot boundary per R-ARB-02</td>
+</tr>
+<tr>
+<td>Authorization duration</td>
+<td>Signal held asserted for the full commit window duration</td>
+</tr>
+<tr>
+<td>Acknowledgment</td>
+<td>TCU asserts commit-complete within the acknowledgment window; width ≥ 5 ns</td>
+</tr>
+<tr>
+<td>Timeout</td>
+<td>If acknowledgment not received within the acknowledgment window, CA treats as timeout (§9.2.4 analog — logged as L2 event, CA scheduler consulted)</td>
+</tr>
+<tr>
+<td>Signal levels</td>
+<td>Defined in the TCU hardware interface specification for the qualified substrate class</td>
+</tr>
+</tbody>
+</table>
+<h3 id="113-fab-scheduler-interface">11.3 Fab Scheduler Interface</h3>
+<p>The fab scheduler interacts with the SCR to manage wafer flow into and out of SCR zones. The interface contract specifies:</p>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>Direction</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone ready</td>
+<td>SCR → Scheduler</td>
+<td>Zone completes RVT or recovers from L3 failure</td>
+</tr>
+<tr>
+<td>Zone quiesce request</td>
+<td>Scheduler → SCR</td>
+<td>New wafer start or zone configuration change</td>
+</tr>
+<tr>
+<td>Zone quiesced</td>
+<td>SCR → Scheduler</td>
+<td>All in-flight operations completed, no new operations</td>
+</tr>
+<tr>
+<td>Holdover active</td>
+<td>SCR → Scheduler</td>
+<td>CCG switches to holdover</td>
+</tr>
+<tr>
+<td>Sequencing anomaly</td>
+<td>CA → Scheduler</td>
+<td>D_max exceeded for an operation</td>
+</tr>
+<tr>
+<td>ZBI integrity fault</td>
+<td>ZBI → Scheduler</td>
+<td>Three consecutive retransmission failures</td>
+</tr>
+</tbody>
+</table>
+<p>The fab scheduler MUST NOT admit new wafers into a zone while a quiesce request is pending or while the zone is in a quiesced state awaiting recovery.</p>
+<h3 id="114-yield-management-interface">11.4 Yield Management Interface</h3>
+<p>The yield management system receives data from the SCR for process control and defect analysis. The interface contract specifies:</p>
+<table>
+<thead>
+<tr>
+<th>Data Stream</th>
+<th>Source</th>
+<th>Frequency</th>
+<th>Retention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMA per-cycle reports</td>
+<td>CMA</td>
+<td>Every coherence cycle</td>
+<td>Lot duration + 90 days</td>
+</tr>
+<tr>
+<td>CA authorization audit log</td>
+<td>CA</td>
+<td>Every coherence cycle</td>
+<td>Lot duration + 90 days</td>
+</tr>
+<tr>
+<td>ZBI message logs</td>
+<td>ZBI</td>
+<td>Per message</td>
+<td>Lot duration + 90 days</td>
+</tr>
+<tr>
+<td>CMA self-test results</td>
+<td>CMA</td>
+<td>Power-up</td>
+<td>Life of installation</td>
+</tr>
+<tr>
+<td>Post-process coherence audit results</td>
+<td>CA + CMA (correlated)</td>
+<td>Per wafer step</td>
+<td>Lot duration + 90 days</td>
+</tr>
+<tr>
+<td>SCR failure events</td>
+<td>All components</td>
+<td>On occurrence</td>
+<td>Life of installation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="12-conformance-requirements">12. Conformance Requirements</h2>
+<h3 id="121-conformance-levels">12.1 Conformance Levels</h3>
+<p>This specification defines two conformance levels:</p>
+<p><strong>Full Conformance:</strong> The SCR installation satisfies all MUST requirements in this specification. Full conformance is required for production use of the SCR for temporal manufacturing operations.</p>
+<p><strong>Partial Conformance:</strong> The SCR installation satisfies all MUST requirements except those explicitly waived through the formal waiver process (§12.2). Partial conformance does not permit production use without explicit approval from the TriadicFrameworks process authority.</p>
+<h3 id="122-waiver-process">12.2 Waiver Process</h3>
+<p>A waiver is required for any deviation from a MUST requirement. Waivers MUST:</p>
+<ul>
+<li>Identify the specific requirement by its requirement identifier (e.g., R-CLK-03)</li>
+<li>Document the reason the requirement cannot be met</li>
+<li>Provide a risk assessment quantifying the impact on temporal manufacturing quality</li>
+<li>Specify compensating measures that partially mitigate the risk</li>
+<li>Be signed by the fab's process authority and retained in the SCR Qualification Record</li>
+</ul>
+<p>Waivers for requirements marked with a specific prohibition against waiver (none in the current revision) are not permitted.</p>
+<h3 id="123-conformance-verification">12.3 Conformance Verification</h3>
+<p>Conformance MUST be verified at the following occasions:</p>
+<ul>
+<li>Initial SCR commissioning (full conformance check across all requirements)</li>
+<li>Following any partial recommission (conformance check for affected requirements)</li>
+<li>Annually, as a standing operational audit (spot-check of measurable requirements)</li>
+<li>Following any L3 failure event (conformance check for requirements related to the failure mode)</li>
+</ul>
+<p>Conformance verification results MUST be recorded in the SCR Qualification Record.</p>
+<h3 id="124-non-conformance-response">12.4 Non-Conformance Response</h3>
+<p>A non-conformance finding MUST result in:</p>
+<ol>
+<li>Immediate cessation of production in the affected zone</li>
+<li>Quarantine of all wafer lots processed in the zone since the last confirmed conformant state</li>
+<li>Corrective action to restore conformance</li>
+<li>Recommission of the affected parameters</li>
+<li>Disposition of quarantined lots by the yield management system</li>
+</ol>
+<p>A zone that has been returned to conformance following a non-conformance finding MUST pass a full Recovery Validation Test (§9.3) before production resumes.</p>
+<hr>
+<h2 id="13-glossary">13. Glossary</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CA</strong></td>
+<td>Commit Arbiter — authorizes TCUs to execute commit operations within specified coherence slots</td>
+</tr>
+<tr>
+<td><strong>CBA</strong></td>
+<td>Coherence Budget Analysis — design verification check; defined in The Temporal Manufacturing Primer</td>
+</tr>
+<tr>
+<td><strong>CCG</strong></td>
+<td>Coherence Clock Generator — master timing source for an SCR zone</td>
+</tr>
+<tr>
+<td><strong>CDN</strong></td>
+<td>Clock Distribution Network — distributes the zone clock to all TCU endpoints</td>
+</tr>
+<tr>
+<td><strong>CMA</strong></td>
+<td>Coherence Monitor Array — distributed sensors verifying clock integrity across a zone</td>
+</tr>
+<tr>
+<td><strong>Coherence cycle</strong></td>
+<td>The fundamental repeating time unit of SCR operation, defined by the CCG output period</td>
+</tr>
+<tr>
+<td><strong>Coherence slot</strong></td>
+<td>A subdivision of the coherence cycle to which specific commit operations are assigned</td>
+</tr>
+<tr>
+<td><strong>Commit window</strong></td>
+<td>The time within a coherence slot during which a TCU may execute a commit operation</td>
+</tr>
+<tr>
+<td><strong>D_max</strong></td>
+<td>Maximum number of times an operation may be deferred before escalation</td>
+</tr>
+<tr>
+<td><strong>δ_max</strong></td>
+<td>Maximum allowed phase deviation between any two CDN endpoints within a zone</td>
+</tr>
+<tr>
+<td><strong>Full conformance</strong></td>
+<td>SCR installation satisfying all MUST requirements in this specification</td>
+</tr>
+<tr>
+<td><strong>L_handoff</strong></td>
+<td>Inter-zone handoff latency measured in Zone B coherence cycles</td>
+</tr>
+<tr>
+<td><strong>N_slots</strong></td>
+<td>Number of coherence slots per coherence cycle; fixed at qualification</td>
+</tr>
+<tr>
+<td><strong>Partial recommission</strong></td>
+<td>Recommission limited to parameters affected by a specific component change</td>
+</tr>
+<tr>
+<td><strong>RVT</strong></td>
+<td>Recovery Validation Test — required test before resuming production after an L3 failure</td>
+</tr>
+<tr>
+<td><strong>SC</strong></td>
+<td>Substrate Clarity — defined in The Temporal Manufacturing Primer</td>
+</tr>
+<tr>
+<td><strong>SCR</strong></td>
+<td>Substrate Coherence Regime — the synchronization architecture for temporal manufacturing</td>
+</tr>
+<tr>
+<td><strong>SCR Qualification Record</strong></td>
+<td>The mandatory record of all qualification measurements and changes for an SCR installation</td>
+</tr>
+<tr>
+<td><strong>SLF</strong></td>
+<td>Synchronization Latency Floor — the minimum conformant coherence cycle duration for a given installation</td>
+</tr>
+<tr>
+<td><strong>T_arb</strong></td>
+<td>Commit Arbiter processing latency component of the SLF</td>
+</tr>
+<tr>
+<td><strong>T_ack</strong></td>
+<td>Acknowledgment propagation latency component of the SLF</td>
+</tr>
+<tr>
+<td><strong>T_auth</strong></td>
+<td>Setup window before slot boundary within which the CA must assert authorization</td>
+</tr>
+<tr>
+<td><strong>T_c</strong></td>
+<td>Coherence cycle period — the target duration of one coherence cycle</td>
+</tr>
+<tr>
+<td><strong>T_graph</strong></td>
+<td>Minimum lead time for L2 to deliver an operation graph before the first slot of the target cycle</td>
+</tr>
+<tr>
+<td><strong>T_margin</strong></td>
+<td>Implementation margin component of the SLF (minimum 10%)</td>
+</tr>
+<tr>
+<td><strong>T_prop</strong></td>
+<td>CDN propagation latency component of the SLF</td>
+</tr>
+<tr>
+<td><strong>T_ZBI</strong></td>
+<td>ZBI message transmission latency</td>
+</tr>
+<tr>
+<td><strong>TCU</strong></td>
+<td>Temporal Commit Unit — the Tier 2 fab tool that executes commit operations</td>
+</tr>
+<tr>
+<td><strong>TMU</strong></td>
+<td>Temporal Metrology Unit — in-line measurement tool for committed address fidelity</td>
+</tr>
+<tr>
+<td><strong>TRS</strong></td>
+<td>Temporal Resolution Stack — defined in The Temporal Manufacturing Primer</td>
+</tr>
+<tr>
+<td><strong>ZBI</strong></td>
+<td>Zone Boundary Interface — implements the inter-zone handoff protocol at zone boundaries</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="14-related-documents">14. Related Documents</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Path</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Temporal Manufacturing Primer</td>
+<td><code>docs/post-ASML_era/The_Temporal_Manufacturing_Primer.md</code></td>
+<td>Conceptual foundation; defines SCR at the operational level</td>
+</tr>
+<tr>
+<td>TRS Stack Qualification Procedure</td>
+<td><code>docs/fab/TRS_Qualification.md</code></td>
+<td>Defines TCU qualification that depends on SCR infrastructure</td>
+</tr>
+<tr>
+<td>SCR Zone Configuration Guide</td>
+<td><code>docs/fab/SCR_Zone_Config.md</code></td>
+<td>Implementation guidance for zone sizing and layout decisions</td>
+</tr>
+<tr>
+<td>Temporal Contrast Test Protocol</td>
+<td><code>docs/metrology/TCT_Protocol.md</code></td>
+<td>Substrate clarity measurement; SC class determines TRS parameters the SCR must support</td>
+</tr>
+<tr>
+<td>Temporal Timing Format Reference</td>
+<td><code>docs/eda/TTF_Reference.md</code></td>
+<td>Defines how L_handoff and T_arb are expressed as timing arcs in EDA tools</td>
+</tr>
+<tr>
+<td>Post-ASML PDK Integration Guide</td>
+<td><code>docs/eda/PostASML_PDK_Integration.md</code></td>
+<td>Specifies how SCR zone boundaries and parameters are embedded in the process design kit</td>
+</tr>
+<tr>
+<td>Substrate Clarity Classification Standard</td>
+<td><code>docs/materials/SC_Classification.md</code></td>
+<td>SC class requirements drive minimum temporal density, which constrains SCR T_c selection</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>This document is part of the TriadicFrameworks canonical reference set. Proposed revisions should be submitted via pull request to the <code>docs/post-ASML_era/</code> directory with a linked issue describing the change rationale. Revisions to normative requirements (MUST / MUST NOT) require review by at least two maintainers.</em></p>
+  </main>
+</body>
+</html>

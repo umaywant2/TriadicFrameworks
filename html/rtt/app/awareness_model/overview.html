@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/app/awareness_model/overview.md">
+  <title>RTT Awareness Overview</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/app/awareness_model/overview.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/app/awareness_model/overview.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h2 id="rtt-awareness-overview">RTT Awareness Overview</h2>
+<p>RTT Awareness provides a lightweight, permissionless layer that helps the RTT‑App sense and express environmental clarity. It does not inspect the system, modify device settings, or rely on privileged APIs. Instead, it combines two stable signal sources:</p>
+<ul>
+<li><strong>Local signals</strong> derived from network behavior and device stability.</li>
+<li><strong>Server‑declared signals</strong> published by the RTT ecosystem.</li>
+</ul>
+<p>The merge of these two sources produces a single Awareness state that reflects how stable, clear, or drift‑prone the user’s environment currently feels.</p>
+<hr>
+<h3 id="purpose-of-the-awareness-layer">Purpose of the Awareness Layer</h3>
+<p>The Awareness layer gives the user a simple, ambient indicator of clarity without requiring sensors, permissions, or background services. It acts as the app’s “first sense,” offering:</p>
+<ul>
+<li>A quick read on environmental stability.</li>
+<li>A consistent interpretation across devices.</li>
+<li>A bridge between the RTT‑App and the broader RTT ecosystem.</li>
+</ul>
+<p>Awareness is not diagnostic and does not attempt to infer intent or behavior. It is a structural signal, not a personal one.</p>
+<hr>
+<h3 id="what-awareness-measures">What Awareness Measures</h3>
+<p>Awareness focuses on conditions that can be observed without permissions:</p>
+<ul>
+<li><strong>Network clarity</strong> such as DNS variance, handshake stability, and protocol fallback.</li>
+<li><strong>Device stability</strong> such as UI thread jitter or memory pressure.</li>
+<li><strong>Global regime state</strong> declared by the RTT server.</li>
+</ul>
+<p>These signals are coarse but reliable. They allow the app to express clarity and drift in a way that is meaningful, consistent, and safe.</p>
+<hr>
+<h3 id="awareness-states">Awareness States</h3>
+<p>The Awareness layer reduces all inputs into a small set of states:</p>
+<ul>
+<li><strong>Clear</strong> — local signals stable, server state stable.</li>
+<li><strong>Local Drift</strong> — local instability with a stable global state.</li>
+<li><strong>Global Drift</strong> — global instability with a stable local state.</li>
+<li><strong>Drift</strong> — both local and global signals unstable.</li>
+</ul>
+<p>These states form the foundation for the app’s indicator UI and for any future features that depend on environmental clarity.</p>
+<hr>
+<h3 id="design-principles">Design Principles</h3>
+<p>The Awareness model follows several principles:</p>
+<ul>
+<li><strong>Permissionless</strong> — no access to sensors, radios, or system settings.</li>
+<li><strong>Predictable</strong> — stable behavior across platforms and devices.</li>
+<li><strong>Composable</strong> — local and server signals can evolve independently.</li>
+<li><strong>Minimal</strong> — no complex inference or opaque scoring.</li>
+<li><strong>Transparent</strong> — the user can understand the meaning of each state.</li>
+</ul>
+<p>These principles ensure that Awareness remains safe, lightweight, and aligned with the RTT philosophy.</p>
+  </main>
+</body>
+</html>

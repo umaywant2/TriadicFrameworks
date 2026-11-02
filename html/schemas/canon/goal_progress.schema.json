@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Goal Progress",
+  "type": "object",
+  "properties": {
+    "goal_id": { "type": "string" },
+    "status": { "type": "string" },
+    "percent_complete": { "type": "number" },
+    "last_update": { "type": "string", "format": "date-time" },
+    "notes": { "type": "string" }
+  }
+}

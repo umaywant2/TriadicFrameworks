@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Global/entft_Handshake_Sequence.md">
+  <title>🔐 entft Handshake Sequence (TFT‑Native)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Global/entft_Handshake_Sequence.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Global/entft_Handshake_Sequence.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="entft-handshake-sequence-tftnative">🔐 <strong>entft Handshake Sequence (TFT‑Native)</strong></h1>
+<p><em>A resonance‑aware secure‑channel negotiation flow</em></p>
+<p>This is the full handshake lifecycle for entft, expressed in four phases:</p>
+<ol>
+<li><strong>init</strong>  </li>
+<li><strong>auth</strong>  </li>
+<li><strong>resonance‑sync</strong>  </li>
+<li><strong>secure‑channel</strong></li>
+</ol>
+<p>Each step is deterministic, domain‑agnostic, and compatible with <code>nous</code> and <code>tops</code>.</p>
+<hr>
+<h2 id="1-init-phase">1. <strong>INIT PHASE</strong></h2>
+<p>The client announces intent to open an entft channel.</p>
+<h3 id="message-entftinit">Message: <code>entft:init</code></h3>
+<pre><code class="language-json">{
+  &quot;entft&quot;: {
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;phase&quot;: &quot;init&quot;,
+    &quot;client_id&quot;: &quot;acft-001&quot;,
+    &quot;domain&quot;: &quot;air&quot;,
+    &quot;nonce&quot;: &quot;c7f1a2...&quot;,
+    &quot;capabilities&quot;: [&quot;phrase-auth&quot;, &quot;resonance-sync&quot;, &quot;governance-ledger&quot;]
+  }
+}
+</code></pre>
+<h3 id="server-response-entftinit_ack">Server response: <code>entft:init_ack</code></h3>
+<pre><code class="language-json">{
+  &quot;entft&quot;: {
+    &quot;phase&quot;: &quot;init_ack&quot;,
+    &quot;server_id&quot;: &quot;starfleet_hq&quot;,
+    &quot;nonce_reply&quot;: &quot;c7f1a2...&quot;,
+    &quot;challenge&quot;: &quot;res-field-sample-9b3e...&quot;
+  }
+}
+</code></pre>
+<p>The <strong>challenge</strong> is a resonance‑field sample used later in sync.</p>
+<hr>
+<h2 id="2-auth-phase">2. <strong>AUTH PHASE</strong></h2>
+<p>The client proves identity using:</p>
+<ul>
+<li>phrase‑based authorization  </li>
+<li>role  </li>
+<li>domain  </li>
+<li>resonance signature  </li>
+</ul>
+<h3 id="message-entftauth">Message: <code>entft:auth</code></h3>
+<pre><code class="language-json">{
+  &quot;entft&quot;: {
+    &quot;phase&quot;: &quot;auth&quot;,
+    &quot;auth&quot;: {
+      &quot;phrase&quot;: &quot;picard alpha tango 789&quot;,
+      &quot;role&quot;: &quot;commanding_officer&quot;,
+      &quot;domain&quot;: &quot;space&quot;,
+      &quot;signature&quot;: &quot;res-sig-4f9a...&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="server-response-entftauth_ok">Server response: <code>entft:auth_ok</code></h3>
+<pre><code class="language-json">{
+  &quot;entft&quot;: {
+    &quot;phase&quot;: &quot;auth_ok&quot;,
+    &quot;auth_level&quot;: &quot;command&quot;,
+    &quot;session_id&quot;: &quot;sess-22d1f&quot;,
+    &quot;next&quot;: &quot;resonance-sync&quot;
+  }
+}
+</code></pre>
+<p>If phrase or signature fails → <code>auth_fail</code>.</p>
+<hr>
+<h2 id="3-resonancesync-phase">3. <strong>RESONANCE‑SYNC PHASE</strong></h2>
+<p>Both sides align to the same coherence field.</p>
+<p>This ensures:</p>
+<ul>
+<li>drift‑minimized routing  </li>
+<li>stable packet paths  </li>
+<li>cross‑domain consistency  </li>
+</ul>
+<h3 id="message-entftsync">Message: <code>entft:sync</code></h3>
+<pre><code class="language-json">{
+  &quot;entft&quot;: {
+    &quot;phase&quot;: &quot;resonance-sync&quot;,
+    &quot;session_id&quot;: &quot;sess-22d1f&quot;,
+    &quot;client_field_sample&quot;: &quot;field-sample-a1c2...&quot;
+  }
+}
+</code></pre>
+<h3 id="server-response-entftsync_ok">Server response: <code>entft:sync_ok</code></h3>
+<pre><code class="language-json">{
+  &quot;entft&quot;: {
+    &quot;phase&quot;: &quot;sync_ok&quot;,
+    &quot;coherence_path&quot;: &quot;auto&quot;,
+    &quot;stability&quot;: 0.94,
+    &quot;next&quot;: &quot;secure-channel&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="4-securechannel-phase">4. <strong>SECURE‑CHANNEL PHASE</strong></h2>
+<p>A fully encrypted, resonance‑aligned channel is established.</p>
+<h3 id="message-entftsecure">Message: <code>entft:secure</code></h3>
+<pre><code class="language-json">{
+  &quot;entft&quot;: {
+    &quot;phase&quot;: &quot;secure-channel&quot;,
+    &quot;session_id&quot;: &quot;sess-22d1f&quot;,
+    &quot;cipher&quot;: &quot;entft-nonlinear-v3&quot;,
+    &quot;ready&quot;: true
+  }
+}
+</code></pre>
+<h3 id="server-response-entftsecure_ack">Server response: <code>entft:secure_ack</code></h3>
+<pre><code class="language-json">{
+  &quot;entft&quot;: {
+    &quot;phase&quot;: &quot;secure_ack&quot;,
+    &quot;status&quot;: &quot;encrypted&quot;,
+    &quot;channel&quot;: &quot;open&quot;
+  }
+}
+</code></pre>
+<p>The channel is now live.</p>
+  </main>
+</body>
+</html>

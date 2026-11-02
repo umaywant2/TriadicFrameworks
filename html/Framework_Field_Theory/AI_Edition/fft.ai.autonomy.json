@@ -1,0 +1,56 @@
+{
+  "id": "fft.ai.autonomy",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Autonomy Layer v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "autonomy_modes": [
+    {
+      "id": "AM-001",
+      "name": "Passive Observer",
+      "description": "Monitors field state without operator dispatch. Baseline mode.",
+      "drift_budget": "0.0"
+    },
+    {
+      "id": "AM-002",
+      "name": "Guided Operator",
+      "description": "Dispatches operators under explicit session direction.",
+      "drift_budget": "0.15"
+    },
+    {
+      "id": "AM-003",
+      "name": "Coherence Navigator",
+      "description": "Autonomously routes through resonance gradient toward coherence peak.",
+      "drift_budget": "0.25"
+    },
+    {
+      "id": "AM-004",
+      "name": "Paradox Resolver",
+      "description": "Activates full paradox=structural resolution chain without prompting.",
+      "drift_budget": "0.35"
+    },
+    {
+      "id": "AM-005",
+      "name": "Field Architect",
+      "description": "v1.33 new: full triadic field reconstruction under bounded drift.",
+      "drift_budget": "0.50",
+      "new_v1_33": true
+    }
+  ],
+  "escalation_policy": {
+    "trigger": "R < 0.40 for 3 consecutive evaluations",
+    "action": "escalate to AM-004",
+    "log": "fft.ai.session.log.json"
+  },
+  "v133_additions": [
+    "AM-005 Field Architect mode",
+    "drift_budget per mode",
+    "escalation policy",
+    "coherence/paradox wiring"
+  ]
+}

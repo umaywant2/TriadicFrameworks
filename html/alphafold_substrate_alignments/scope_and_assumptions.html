@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/alphafold_substrate_alignments/scope_and_assumptions.md">
+  <title>AlphaFold Substrate Alignments</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/alphafold_substrate_alignments/scope_and_assumptions.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/alphafold_substrate_alignments/scope_and_assumptions.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="alphafold-substrate-alignments"><em>AlphaFold Substrate Alignments</em></h3>
+<h3 id="scope-and-assumptions"><em>Scope and Assumptions</em></h3>
+<p>This document defines the operational scope and foundational assumptions for applying the Resonance Substrate Model (RSM) to AlphaFold‑class protein‑folding inference systems. It establishes the boundaries within which substrate alignment is valid, identifies the structural and computational constraints of the domain, and clarifies the conditions required for reproducible substrate‑level interpretation.</p>
+<hr>
+<h2 id="1-scope"><strong>1. Scope</strong></h2>
+<h3 id="11-systems-covered"><strong>1.1 Systems Covered</strong></h3>
+<p>This substrate applies to biological inference engines that exhibit the following characteristics:</p>
+<ul>
+<li>high‑dimensional latent representations of protein structure  </li>
+<li>iterative or multi‑stage inference cycles  </li>
+<li>attention‑based or pairwise‑embedding architectures  </li>
+<li>structural outputs expressed as 3D conformations or residue‑level predictions  </li>
+<li>regime‑dependent folding coherence signals  </li>
+</ul>
+<p>The primary reference system is <strong>AlphaFold</strong>, but the substrate is compatible with any model exhibiting similar inference behavior.</p>
+<h3 id="12-structural-focus"><strong>1.2 Structural Focus</strong></h3>
+<p>The substrate addresses:</p>
+<ul>
+<li>folding‑pathway coherence  </li>
+<li>motif‑level structural stability  </li>
+<li>latent‑space orientation and projection  </li>
+<li>regime transitions during inference  </li>
+<li>dimensional‑core alignment (3D–9D)  </li>
+</ul>
+<p>It does <strong>not</strong> address biochemical energetics, molecular dynamics simulations, or experimental folding mechanisms.</p>
+<h3 id="13-intended-use-cases"><strong>1.3 Intended Use Cases</strong></h3>
+<p>The substrate supports:</p>
+<ul>
+<li>interpretability of protein‑folding inference models  </li>
+<li>cross‑model comparison and alignment  </li>
+<li>drift detection in biological inference systems  </li>
+<li>reproducibility analysis  </li>
+<li>dimensional projection and regime mapping  </li>
+<li>integration with vST validation layers  </li>
+</ul>
+<hr>
+<h2 id="2-assumptions"><strong>2. Assumptions</strong></h2>
+<h3 id="21-model-behavior-assumptions"><strong>2.1 Model Behavior Assumptions</strong></h3>
+<p>The substrate assumes:</p>
+<ul>
+<li>the inference system produces stable latent‑space structures  </li>
+<li>folding predictions converge toward coherent surfaces  </li>
+<li>regime transitions follow identifiable resonance‑time patterns  </li>
+<li>dimensional projections preserve structural invariants  </li>
+<li>inference cycles are deterministic or quasi‑deterministic under fixed inputs  </li>
+</ul>
+<p>These assumptions reflect observed behavior in AlphaFold‑class systems.</p>
+<h3 id="22-data-and-input-assumptions"><strong>2.2 Data and Input Assumptions</strong></h3>
+<p>The substrate assumes:</p>
+<ul>
+<li>input sequences are fixed and pre‑validated  </li>
+<li>multiple sequence alignments (MSAs) or equivalent features are available  </li>
+<li>structural outputs are expressed in 3D coordinate form  </li>
+<li>inference noise is bounded and does not dominate regime transitions  </li>
+</ul>
+<p>The substrate does not require access to training data or model internals.</p>
+<h3 id="23-biological-assumptions"><strong>2.3 Biological Assumptions</strong></h3>
+<p>The substrate assumes:</p>
+<ul>
+<li>protein structures exhibit stable motif‑level coherence  </li>
+<li>folding pathways can be represented within 3D–9D dimensional cores  </li>
+<li>biological variability does not invalidate substrate‑level invariants  </li>
+</ul>
+<p>The substrate does not assume any specific biochemical mechanism.</p>
+<hr>
+<h2 id="3-outofscope-elements"><strong>3. Out‑of‑Scope Elements</strong></h2>
+<p>The following are explicitly out of scope:</p>
+<ul>
+<li>molecular dynamics simulations  </li>
+<li>thermodynamic or kinetic modeling  </li>
+<li>experimental structure determination  </li>
+<li>biochemical pathway analysis  </li>
+<li>evolutionary modeling beyond MSA‑derived features  </li>
+</ul>
+<p>These domains may interface with the substrate but are not defined by it.</p>
+<hr>
+<h2 id="4-validity-conditions"><strong>4. Validity Conditions</strong></h2>
+<p>Substrate alignment is valid when:</p>
+<ul>
+<li>inference outputs are structurally coherent  </li>
+<li>latent‑space representations are stable across inference cycles  </li>
+<li>dimensional projections preserve motif‑level structure  </li>
+<li>regime transitions follow triadic resonance patterns  </li>
+<li>vST validation layers confirm reproducibility  </li>
+</ul>
+<p>If these conditions are not met, substrate interpretation may be incomplete.</p>
+<hr>
+<h2 id="5-dependencies"><strong>5. Dependencies</strong></h2>
+<p>This document depends on:</p>
+<ul>
+<li><strong>substrate_definition.md</strong> for axis and primitive definitions  </li>
+<li><strong>alignment_principles.md</strong> for mapping rules  </li>
+<li><strong>dimensional_cores.md</strong> for 3D–9D substrate structure  </li>
+<li><strong>validation_layers_vst.md</strong> for reproducibility and drift checks  </li>
+</ul>
+  </main>
+</body>
+</html>

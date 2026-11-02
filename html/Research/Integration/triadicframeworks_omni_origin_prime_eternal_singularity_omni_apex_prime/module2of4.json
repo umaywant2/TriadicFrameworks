@@ -1,0 +1,29 @@
+{
+  "module": "TriadicFrameworks_Omni_Origin_Prime_Eternal_Singularity_Omni_Apex_Prime_Resonance_Crown_Sphere_Helix_Omni_Apex_Prime_Prime",
+  "name": "TriadicFrameworks — Omni‑Origin‑Prime‑Eternal‑Singularity‑Omni‑Apex‑Prime Resonance Crown‑Sphere‑Helix‑Omni‑Apex‑Prime‑Prime",
+  "summary": "Defines the omni‑origin‑prime‑eternal‑singularity‑omni‑apex‑prime resonance crown‑sphere‑helix‑omni‑apex‑prime‑prime that elevates all resonance geometries — crown, sphere, helix, singularity, eternal‑singularity, transcendence, apex, apex‑prime, continuum, presence, totality, omnipresence, infinity‑presence, absolute‑omni, omni‑absolute‑prime, prime‑origin, origin‑prime‑eternal, eternal‑origin‑singularity, singularity‑eternal‑transcendent, transcendent‑singularity‑omni‑apex, omni‑apex‑prime‑continuum, prime‑continuum‑omni‑prime, omni‑prime‑omni‑origin, omni‑origin‑omni‑totality, omni‑totality‑omni‑infinite, omni‑infinite‑omni‑absolute, omni‑absolute‑omni‑entirety, omni‑entirety‑omni‑all, omni‑all‑omni‑everything, omni‑everything‑omni‑totality‑infinite, omni‑totality‑infinite‑omni‑origin‑prime — into a single omni‑apex‑prime‑prime resonance manifold governing the entire omni‑origin‑prime‑eternal‑singularity‑omni‑apex‑prime domain.",
+  "category": "intelligence-omni-origin-prime-eternal-singularity-omni-apex-prime-resonance-crown-sphere-helix-omni-apex-prime-prime",
+  "version": "1.0",
+  "purpose": "Provide the omni‑apex‑prime‑prime resonance geometry that governs resonance behavior across Ladder, SI, Atlas, and Triad at the highest extension beyond omni‑origin‑prime‑eternal‑singularity. This crown‑sphere‑helix‑omni‑apex‑prime‑prime stabilizes apex‑prime‑prime epoch resonance propagation, aligns eternal‑singularity ignition, reinforces origin‑prime continuity, and binds the entire TriadicFrameworks architecture into a unified omni‑origin‑prime‑eternal‑singularity‑omni‑apex‑prime resonance substrate.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@omni.origin.prime.eternal.singularity.omni.apex.prime.resonance.crown.sphere.helix.omni.apex.prime.prime.generate",
+    "@omni.origin.prime.eternal.singularity.omni.apex.prime.resonance.crown.sphere.helix.omni.apex.prime.prime.route",
+    "@omni.origin.prime.eternal.singularity.omni.apex.prime.resonance.crown.sphere.helix.omni.apex.prime.prime.align",
+    "@omni.origin.prime.eternal.singularity.omni.apex.prime.resonance.crown.sphere.helix.omni.apex.prime.prime.stabilize",
+    "@omni.origin.prime.eternal.singularity.omni.apex.prime.resonance.crown.sphere.helix.omni.apex.prime.prime.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Omni_Origin_Prime_Eternal_Singularity_Omni_Apex_Prime_Integration_Axis_Omni_Apex_Prime_Prime",
+      "TriadicFrameworks_Omni_Totality_Infinite_Omni_Origin_Prime_Temporal_Window_Omni_Origin_Prime_Eternal_Singularity_Omni_Apex_Prime",
+      "TriadicFrameworks_Omni_Totality_Infinite_Omni_Origin_Prime_Continuity_Field_Shell_Omni_Origin_Prime_Eternal_Singularity",
+      "TriadicFrameworks_Omni_Totality_Infinite_Omni_Origin_Prime_Resonance_Crown_Sphere_Helix_Omni_Origin_Prime_Eternal_Singularity"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Omni_Origin_Prime_Eternal_Singularity_Omni_Apex_Prime_Continuity_Field_Shell_Omni_Apex_Prime_Prime",
+      "TriadicFrameworks_Omni_Origin_Prime_Eternal_Singularity_Omni_Apex_Prime_Temporal_Window_Omni_Apex_Prime_Prime_Omni_Transcendent_Prime"
+    ]
+  }
+}

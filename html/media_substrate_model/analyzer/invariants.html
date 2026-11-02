@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/media_substrate_model/analyzer/invariants.md">
+  <title>🧬 Invariant Evaluation</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/media_substrate_model/analyzer/invariants.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/media_substrate_model/analyzer/invariants.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="invariant-evaluation">🧬 Invariant Evaluation</h1>
+<p>Invariant evaluation is the Analyzer’s first structural test. Invariants measure how well the media ecosystem maintains coherence across its five axes—signal, distribution, attention, narrative, and cadence. When invariants strain or break, the system begins drifting toward new basins or destabilizing into cascade or collapse.</p>
+<p>Each invariant returns a value in the range:</p>
+<pre><code>0.0 = aligned (no strain)
+1.0 = broken (full strain)
+</code></pre>
+<p>These values form the <strong>MediaInvariantState</strong>, which drives basin classification, mode determination, drift detection, and transition analysis.</p>
+<hr>
+<h2 id="signalnarrative-coherence">🛰 Signal–Narrative Coherence</h2>
+<p>This invariant measures whether the system’s <strong>signal integrity (S)</strong> is strong enough to support its <strong>narrative coherence (N)</strong>.</p>
+<ul>
+<li>High S + high N → aligned  </li>
+<li>Low S + high N → unstable (narratives outrun fidelity)  </li>
+<li>High S + low N → fragmented or conflicting narratives  </li>
+<li>Low S + low N → collapse conditions  </li>
+</ul>
+<p>Strain increases when narratives become more complex or volatile than the underlying signal can support.</p>
+<hr>
+<h2 id="distributionattention-fit">🌐 Distribution–Attention Fit</h2>
+<p>This invariant measures whether the <strong>distribution topology (D)</strong> can carry the system’s <strong>attention dynamics (A)</strong> without overload.</p>
+<ul>
+<li>High D + high A → stable amplification  </li>
+<li>Low D + high A → cascade risk  </li>
+<li>High D + low A → underutilized network  </li>
+<li>Low D + low A → stagnation  </li>
+</ul>
+<p>Strain increases when attention spikes exceed the carrying capacity of the distribution structure.</p>
+<hr>
+<h2 id="temporalsignal-stability">⏱ Temporal–Signal Stability</h2>
+<p>This invariant measures whether <strong>temporal cadence (T)</strong> is moving faster than <strong>signal integrity (S)</strong> can sustain.</p>
+<ul>
+<li>Low T + high S → stable long‑form coherence  </li>
+<li>High T + high S → accelerated but stable  </li>
+<li>High T + low S → churn, distortion, collapse  </li>
+<li>Low T + low S → stagnation or decay  </li>
+</ul>
+<p>Strain increases when cadence accelerates beyond the system’s ability to verify or maintain fidelity.</p>
+<hr>
+<h2 id="attentionnarrative-feedback">⚡ Attention–Narrative Feedback</h2>
+<p>This invariant measures whether <strong>attention dynamics (A)</strong> are destabilizing or reinforcing <strong>narrative coherence (N)</strong>.</p>
+<ul>
+<li>Moderate A + high N → stable reinforcement  </li>
+<li>High A + high N → pressure but coherent  </li>
+<li>High A + low N → narrative churn, conflict, collapse  </li>
+<li>Low A + low N → stagnation  </li>
+</ul>
+<p>Strain increases when attention volatility destabilizes weak or conflicting narratives.</p>
+<hr>
+<h2 id="interpreting-invariant-patterns">🧩 Interpreting Invariant Patterns</h2>
+<p>Individual invariants matter, but <strong>patterns</strong> matter more. The Analyzer looks for combinations such as:</p>
+<ul>
+<li>High Distribution–Attention strain + high Attention–Narrative strain → cascade conditions  </li>
+<li>High Signal–Narrative strain + high Temporal–Signal strain → epistemic decay  </li>
+<li>Low strain across all invariants → stable or reconstructing systems  </li>
+<li>Mixed strain patterns → drift or tension modes  </li>
+</ul>
+<p>These patterns determine the system’s behavioral mode and its likelihood of transitioning between basins.</p>
+<hr>
+<h2 id="output-mediainvariantstate">🧭 Output: MediaInvariantState</h2>
+<p>The Analyzer returns a structured object:</p>
+<pre><code>{
+  signalNarrativeCoherence: number,
+  distributionAttentionFit: number,
+  temporalSignalStability: number,
+  attentionNarrativeFeedback: number
+}
+</code></pre>
+<p>This state is used by:</p>
+<ul>
+<li>Basin classification  </li>
+<li>Mode determination  </li>
+<li>Drift detection  </li>
+<li>Transition analysis  </li>
+</ul>
+<p>Invariant strain is the backbone of the MSM Analyzer’s interpretation of media ecosystems.</p>
+  </main>
+</body>
+</html>

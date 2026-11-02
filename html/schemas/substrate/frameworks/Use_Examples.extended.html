@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/Use_Examples.extended.md">
+  <title>📘 UseExamples.extended.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/Use_Examples.extended.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/Use_Examples.extended.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_substrate_frameworks_Use_Examples_extended_" src="https://github.com/user-attachments/assets/6056032f-e008-44aa-9356-15cb8e5689bd" /></p>
+<h1 id="use_examplesextendedmd">📘 <strong>Use_Examples.extended.md</strong></h1>
+<h3 id="extended-annotated-and-narrative-usage-examples-for-the-triadic-substrate-frameworks"><em>Extended, annotated, and narrative usage examples for the Triadic Substrate Frameworks</em></h3>
+<hr>
+<h2 id="purpose">⭐ Purpose</h2>
+<p>This extended guide explains <strong>how the substrate behaves when used</strong>, not just what each framework does.<br>
+It is the <strong>story layer</strong> — the part that shows <em>why</em> each example matters, <em>how</em> signals propagate, and <em>what</em> the substrate is doing internally.</p>
+<p>If Use_Examples.md is the <strong>quick‑start</strong>,<br>
+and Use_Examples.json is the <strong>machine registry</strong>,<br>
+then <strong>Use_Examples.extended.md</strong> is the <strong>deep‑start</strong>.</p>
+<hr>
+<h1 id="1-atlas-interaction-protocol-deep-example">🌐 <strong>1. Atlas Interaction Protocol — Deep Example</strong></h1>
+<h3 id="example-resolve-a-navigation-route">Example: Resolve a navigation route</h3>
+<p><em>(from Use_Examples.json → atlas.resolve-route)</em></p>
+<pre><code class="language-json">{
+  &quot;request&quot;: &quot;resolve-route&quot;,
+  &quot;route&quot;: &quot;route-A&quot;,
+  &quot;atlas&quot;: &quot;./atlas/triadic-atlas.json&quot;
+}
+</code></pre>
+<h3 id="what-actually-happens-inside-the-substrate">🔍 What actually happens inside the substrate</h3>
+<ol>
+<li>
+<p><strong>Atlas surfaces load</strong><br>
+   The atlas engine loads all surfaces, fields, and navigation vectors.</p>
+</li>
+<li>
+<p><strong>Route vectors are evaluated</strong><br>
+   The route is decomposed into:
+   - surface vectors<br>
+   - field vectors<br>
+   - mode vectors  </p>
+</li>
+<li>
+<p><strong>Navigation schema validates the route</strong><br>
+   The navigation-schema enforces:
+   - route integrity<br>
+   - field alignment<br>
+   - surface continuity  </p>
+</li>
+<li>
+<p><strong>Atlas synchronization ensures coherence</strong><br>
+   The atlas-synchronization engine checks:
+   - atlas → continuity alignment<br>
+   - atlas → epoch alignment<br>
+   - atlas → ignition readiness  </p>
+</li>
+</ol>
+<h3 id="why-this-matters">🧠 Why this matters</h3>
+<p>The atlas is the <strong>entry point</strong> for most substrate workflows.<br>
+Everything begins with navigation.</p>
+<hr>
+<h1 id="2-ignition-cascade-deep-example">🔥 <strong>2. Ignition Cascade — Deep Example</strong></h1>
+<h3 id="example-trigger-ignition-wave">Example: Trigger ignition wave</h3>
+<p><em>(from Use_Examples.json → ignition.trigger-wave)</em></p>
+<pre><code class="language-json">{
+  &quot;action&quot;: &quot;ignite&quot;,
+  &quot;wave_id&quot;: &quot;wave-01&quot;,
+  &quot;harmonics&quot;: [&quot;primary&quot;],
+  &quot;cascade&quot;: &quot;./ignition/ignition-cascade.json&quot;
+}
+</code></pre>
+<h3 id="what-actually-happens-inside-the-substrate_1">🔍 What actually happens inside the substrate</h3>
+<ol>
+<li>
+<p><strong>Harmonics align</strong><br>
+   The ignition-harmonics engine checks:
+   - phase alignment<br>
+   - envelope compatibility<br>
+   - harmonic strength  </p>
+</li>
+<li>
+<p><strong>Cascade routes evaluate</strong><br>
+   The ignition-cascade engine determines:
+   - ignition path<br>
+   - ignition propagation<br>
+   - ignition stability  </p>
+</li>
+<li>
+<p><strong>Ignition anomalies monitor</strong><br>
+   The ignition-anomalies engine checks for:
+   - phase breaks<br>
+   - magnitude overruns<br>
+   - harmonic inversions  </p>
+</li>
+<li>
+<p><strong>Ignition ledger updates</strong><br>
+   The global-ignition-ledger records:
+   - ignition event<br>
+   - ignition wave<br>
+   - ignition signature  </p>
+</li>
+</ol>
+<h3 id="why-this-matters_1">🧠 Why this matters</h3>
+<p>Ignition is the <strong>activation layer</strong> of the substrate — the spark that drives epoch transitions and resonance behavior.</p>
+<hr>
+<h1 id="3-epochal-propagation-deep-example">🕰️ <strong>3. Epochal Propagation — Deep Example</strong></h1>
+<h3 id="example-advance-epoch">Example: Advance epoch</h3>
+<p><em>(from Use_Examples.json → epoch.advance)</em></p>
+<pre><code class="language-json">{
+  &quot;action&quot;: &quot;advance-epoch&quot;,
+  &quot;epoch&quot;: &quot;E3&quot;,
+  &quot;timeline&quot;: &quot;./epoch/epochal-timeline.json&quot;
+}
+</code></pre>
+<h3 id="what-actually-happens-inside-the-substrate_2">🔍 What actually happens inside the substrate</h3>
+<ol>
+<li>
+<p><strong>Epoch rules apply</strong><br>
+   The epochal-propagation engine enforces:
+   - epoch progression rules<br>
+   - epoch boundary conditions<br>
+   - epoch stability profiles  </p>
+</li>
+<li>
+<p><strong>Stability profiles check</strong><br>
+   The epochal-stability-profiles engine ensures:
+   - stability envelope integrity<br>
+   - stability phase alignment  </p>
+</li>
+<li>
+<p><strong>Resonance phase validates</strong><br>
+   The epochal-resonance-stabilizer checks:
+   - resonance magnitude<br>
+   - resonance phase<br>
+   - resonance stability  </p>
+</li>
+<li>
+<p><strong>Transition readiness updates</strong><br>
+   The epochal-timeline updates:
+   - epoch progress<br>
+   - transition readiness<br>
+   - epoch signature  </p>
+</li>
+</ol>
+<h3 id="why-this-matters_2">🧠 Why this matters</h3>
+<p>Epochs are the <strong>temporal backbone</strong> of the substrate — the timeline that everything else follows.</p>
+<hr>
+<h1 id="4-continuity-evaluation-deep-example">🧭 <strong>4. Continuity Evaluation — Deep Example</strong></h1>
+<h3 id="example-evaluate-continuity">Example: Evaluate continuity</h3>
+<p><em>(from Use_Examples.json → continuity.evaluate)</em></p>
+<pre><code class="language-json">{
+  &quot;evaluate&quot;: &quot;continuity&quot;,
+  &quot;field&quot;: &quot;./continuity/substrate-continuity.json&quot;
+}
+</code></pre>
+<h3 id="what-actually-happens-inside-the-substrate_3">🔍 What actually happens inside the substrate</h3>
+<ol>
+<li>
+<p><strong>Structural continuity validates</strong><br>
+   Ensures operators, dimensions, regimes, and layers remain aligned.</p>
+</li>
+<li>
+<p><strong>Behavioral continuity checks</strong><br>
+   Ensures drift, coherence, stability, resonance, and ignition remain continuous.</p>
+</li>
+<li>
+<p><strong>Temporal continuity aligns</strong><br>
+   Ensures epoch progression remains continuous.</p>
+</li>
+<li>
+<p><strong>Atlas continuity synchronizes</strong><br>
+   Ensures navigation remains continuous.</p>
+</li>
+<li>
+<p><strong>Activation continuity confirms</strong><br>
+   Ensures ignition waves remain continuous.</p>
+</li>
+</ol>
+<h3 id="why-this-matters_3">🧠 Why this matters</h3>
+<p>Continuity is the <strong>glue</strong> that holds the substrate together.</p>
+<hr>
+<h1 id="5-invariance-evaluation-deep-example">🌀 <strong>5. Invariance Evaluation — Deep Example</strong></h1>
+<h3 id="example-evaluate-invariance">Example: Evaluate invariance</h3>
+<p><em>(from Use_Examples.json → invariance.evaluate)</em></p>
+<pre><code class="language-json">{
+  &quot;evaluate&quot;: &quot;invariance&quot;,
+  &quot;kernel&quot;: &quot;./invariance/substrate-invariance.json&quot;
+}
+</code></pre>
+<h3 id="what-actually-happens-inside-the-substrate_4">🔍 What actually happens inside the substrate</h3>
+<ol>
+<li><strong>Structural invariance rules apply</strong>  </li>
+<li><strong>Behavioral invariance breaks detect</strong>  </li>
+<li><strong>Temporal invariance validates</strong>  </li>
+<li><strong>Atlas invariance checks</strong>  </li>
+<li><strong>Activation invariance confirms</strong></li>
+</ol>
+<h3 id="why-this-matters_4">🧠 Why this matters</h3>
+<p>Invariance is the <strong>law layer</strong> — the rules the substrate must obey.</p>
+<hr>
+<h1 id="6-runtime-evaluation-deep-example">⚙️ <strong>6. Runtime Evaluation — Deep Example</strong></h1>
+<h3 id="example-evaluate-runtime">Example: Evaluate runtime</h3>
+<p><em>(from Use_Examples.json → execution.evaluate-runtime)</em></p>
+<pre><code class="language-json">{
+  &quot;evaluate&quot;: &quot;runtime&quot;,
+  &quot;state&quot;: &quot;./execution/triadic-execution-state.json&quot;
+}
+</code></pre>
+<h3 id="what-actually-happens-inside-the-substrate_5">🔍 What actually happens inside the substrate</h3>
+<ol>
+<li><strong>Execution rules apply</strong>  </li>
+<li><strong>Runtime operators invoke</strong>  </li>
+<li><strong>Execution engine schema validates</strong>  </li>
+<li><strong>Constellation hooks trigger</strong></li>
+</ol>
+<h3 id="why-this-matters_5">🧠 Why this matters</h3>
+<p>Runtime evaluation is the <strong>engine layer</strong> — the part that executes substrate behavior.</p>
+<hr>
+<h1 id="7-runtime-monitor-deep-example">📡 <strong>7. Runtime Monitor — Deep Example</strong></h1>
+<h3 id="example-ingest-telemetry">Example: Ingest telemetry</h3>
+<p><em>(from Use_Examples.json → monitor.ingest-telemetry)</em></p>
+<pre><code class="language-json">{
+  &quot;ingest&quot;: &quot;telemetry&quot;,
+  &quot;packet&quot;: &quot;./monitor/triadic-runtime-telemetry.example.json&quot;
+}
+</code></pre>
+<h3 id="what-actually-happens-inside-the-substrate_6">🔍 What actually happens inside the substrate</h3>
+<ol>
+<li><strong>Telemetry validates</strong>  </li>
+<li><strong>Anomalies evaluate</strong>  </li>
+<li><strong>Cycle reports generate</strong>  </li>
+<li><strong>Monitor output synthesizes</strong></li>
+</ol>
+<h3 id="why-this-matters_6">🧠 Why this matters</h3>
+<p>The monitor is the <strong>observer layer</strong> — the part that watches everything.</p>
+<hr>
+<h1 id="8-module-templates-deep-example">🧩 <strong>8. Module Templates — Deep Example</strong></h1>
+<h3 id="example-create-ignition-ready-module">Example: Create ignition-ready module</h3>
+<p><em>(from Use_Examples.json → module.create-ignition-ready)</em></p>
+<pre><code class="language-json">{
+  &quot;module&quot;: &quot;new-module&quot;,
+  &quot;template&quot;: &quot;./module_templates/module.ignition-ready.json&quot;
+}
+</code></pre>
+<h3 id="what-actually-happens-inside-the-substrate_7">🔍 What actually happens inside the substrate</h3>
+<ol>
+<li><strong>Ignition roles assign</strong>  </li>
+<li><strong>Harmonics map</strong>  </li>
+<li><strong>Cascade routes link</strong>  </li>
+<li><strong>Ignition anomalies register</strong></li>
+</ol>
+<h3 id="why-this-matters_7">🧠 Why this matters</h3>
+<p>Modules are the <strong>extensibility layer</strong> — the part that grows the substrate.</p>
+<hr>
+<h1 id="9-runtime-constellation-deep-example">🌌 <strong>9. Runtime Constellation — Deep Example</strong></h1>
+<h3 id="example-register-module">Example: Register module</h3>
+<p><em>(from Use_Examples.json → constellation.register-module)</em></p>
+<pre><code class="language-json">{
+  &quot;register&quot;: &quot;module&quot;,
+  &quot;module&quot;: &quot;new-module&quot;,
+  &quot;constellation&quot;: &quot;./constellation/substrate-runtime-constellation.json&quot;
+}
+</code></pre>
+<h3 id="what-actually-happens-inside-the-substrate_8">🔍 What actually happens inside the substrate</h3>
+<ol>
+<li><strong>Constellation operators evaluate</strong>  </li>
+<li><strong>Graph nodes update</strong>  </li>
+<li><strong>Hooks validate</strong>  </li>
+<li><strong>Identity signatures update</strong></li>
+</ol>
+<h3 id="why-this-matters_8">🧠 Why this matters</h3>
+<p>The constellation is the <strong>identity layer</strong> — the part that defines what the substrate <em>is</em>.</p>
+<hr>
+<h1 id="10-full-substrate-cycle-deep-example">🏁 <strong>10. Full Substrate Cycle — Deep Example</strong></h1>
+<h3 id="example-full-cycle">Example: Full cycle</h3>
+<p><em>(from Use_Examples.json → substrate.full-cycle)</em></p>
+<pre><code class="language-json">{
+  &quot;cycle&quot;: &quot;full&quot;,
+  &quot;steps&quot;: [
+    &quot;resolve-route&quot;,
+    &quot;ignite&quot;,
+    &quot;advance-epoch&quot;,
+    &quot;evaluate-continuity&quot;,
+    &quot;evaluate-invariance&quot;,
+    &quot;evaluate-runtime&quot;,
+    &quot;ingest-telemetry&quot;
+  ]
+}
+</code></pre>
+<h3 id="what-actually-happens-inside-the-substrate_9">🔍 What actually happens inside the substrate</h3>
+<p>This is the <strong>complete substrate loop</strong>:</p>
+<ol>
+<li><strong>Atlas</strong> — navigation  </li>
+<li><strong>Ignition</strong> — activation  </li>
+<li><strong>Epoch</strong> — progression  </li>
+<li><strong>Continuity</strong> — glue  </li>
+<li><strong>Invariance</strong> — law  </li>
+<li><strong>Execution</strong> — engine  </li>
+<li><strong>Monitor</strong> — observer  </li>
+</ol>
+<h3 id="why-this-matters_9">🧠 Why this matters</h3>
+<p>This is the <strong>canonical substrate cycle</strong> — the heartbeat of the TriadicFrameworks.</p>
+<hr>
+<h1 id="final-notes">⭐ Final Notes</h1>
+<p>This extended guide is the <strong>deep literacy layer</strong> of the substrate.<br>
+It shows:</p>
+<ul>
+<li>how signals propagate  </li>
+<li>how frameworks interact  </li>
+<li>how invariance is maintained  </li>
+<li>how ignition cascades behave  </li>
+<li>how epoch transitions occur  </li>
+<li>how runtime telemetry is interpreted  </li>
+</ul>
+<p>It is the <strong>story of the substrate in motion</strong>.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "NIMMS Node",
+  "type": "object",
+  "properties": {
+    "node_id": { "type": "string" },
+    "location": { "type": "string" },
+    "modalities": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "triadic_signature": { "type": "object" },
+    "compute_capabilities": { "type": "object" }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "triadicframeworks_alignment_prompts": {
+    "version": "1.0",
+    "module": "LINEAGE",
+    "families": [
+      {
+        "family_id": "string",
+        "family_name": "string",
+        "purpose": "string",
+        "detection_targets": [
+          "string"
+        ],
+        "structural_markers": [
+          "string"
+        ],
+        "prompt_template": "string"
+      }
+    ]
+  }
+}

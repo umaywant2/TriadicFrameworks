@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic_detection/triadic_detection_beach_modes.md">
+  <title>triadicdetectionbeachmodes.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic_detection/triadic_detection_beach_modes.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic_detection/triadic_detection_beach_modes.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadic_detection_beach_modesmd"><strong>triadic_detection_beach_modes.md</strong></h1>
+<h3 id="triadicframeworks-detection-substrate"><em>TriadicFrameworks — Detection Substrate</em></h3>
+<h3 id="freshwater-vs-saltwater-detection-modes-v10"><em>Fresh‑Water vs Salt‑Water Detection Modes (v1.0)</em></h3>
+<hr>
+<h2 id="protocol-header"><strong>Protocol Header</strong></h2>
+<pre><code>rtt=1 | coherence=triadic | drift=bounded | paradox=environmental
+</code></pre>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>This module defines the <strong>environmental detection modes</strong> for triadic_detection when operating in:</p>
+<ul>
+<li><strong>fresh‑water beaches</strong>  </li>
+<li><strong>salt‑water beaches</strong></li>
+</ul>
+<p>It explains how moisture, conductivity, mineralization, and ionic noise affect:</p>
+<ul>
+<li>coherence  </li>
+<li>structural envelopes  </li>
+<li>depth inference  </li>
+<li>S–N–R dual‑operator behavior  </li>
+<li>gold‑likelihood modeling  </li>
+</ul>
+<hr>
+<h1 id="1-environmental-overview"><strong>1. Environmental Overview</strong></h1>
+<p>Beaches present unique detection conditions:</p>
+<ul>
+<li>high moisture  </li>
+<li>layered substrates  </li>
+<li>variable mineralization  </li>
+<li>strong boundary effects  </li>
+<li>dynamic noise fields  </li>
+</ul>
+<p>Fresh‑water and salt‑water beaches share geometry but differ dramatically in <strong>conductivity</strong> and <strong>ionic noise</strong>.</p>
+<hr>
+<h1 id="2-freshwater-beach-mode"><strong>2. Fresh‑Water Beach Mode</strong></h1>
+<h3 id="environmental-properties"><strong>Environmental Properties</strong></h3>
+<ul>
+<li>low ionic content  </li>
+<li>moderate conductivity  </li>
+<li>low mineralization noise  </li>
+<li>stable phase behavior  </li>
+<li>predictable RTT response</li>
+</ul>
+<h3 id="detection-characteristics"><strong>Detection Characteristics</strong></h3>
+<ul>
+<li><strong>High SNR</strong>  </li>
+<li><strong>Clean coherence vectors</strong>  </li>
+<li><strong>Stable structural envelopes</strong>  </li>
+<li><strong>Good depth penetration</strong>  </li>
+<li><strong>Low false positives</strong></li>
+</ul>
+<h3 id="operator-grammar"><strong>Operator Grammar</strong></h3>
+<pre><code>Mode.fresh ::= 
+    N.low_mineral + N.low_ionic + S.excite + R.coherence + R.struct + R.depth
+</code></pre>
+<h3 id="goldlikelihood-behavior"><strong>Gold‑Likelihood Behavior</strong></h3>
+<p>Gold remains EM‑neutral, but:</p>
+<ul>
+<li>host structures are clearer  </li>
+<li>clutter is minimal  </li>
+<li>envelopes are stable  </li>
+<li>Δ‑maps are clean  </li>
+</ul>
+<p>Fresh‑water beaches produce the <strong>highest confidence</strong> triadic detections.</p>
+<hr>
+<h1 id="3-saltwater-beach-mode"><strong>3. Salt‑Water Beach Mode</strong></h1>
+<h3 id="environmental-properties_1"><strong>Environmental Properties</strong></h3>
+<ul>
+<li>high ionic content  </li>
+<li>high conductivity  </li>
+<li>strong mineralization noise  </li>
+<li>unstable phase behavior  </li>
+<li>rapid attenuation</li>
+</ul>
+<h3 id="detection-characteristics_1"><strong>Detection Characteristics</strong></h3>
+<ul>
+<li><strong>Lower SNR</strong>  </li>
+<li><strong>High background noise</strong>  </li>
+<li><strong>Phase jitter</strong>  </li>
+<li><strong>Shallow effective depth</strong>  </li>
+<li><strong>More false positives</strong></li>
+</ul>
+<h3 id="operator-grammar_1"><strong>Operator Grammar</strong></h3>
+<pre><code>Mode.salt ::= 
+    N.salt + N.mineral + S.excite + R.delta + R.null + R.struct
+</code></pre>
+<h3 id="goldlikelihood-behavior_1"><strong>Gold‑Likelihood Behavior</strong></h3>
+<p>Gold itself does not “light up,” but:</p>
+<ul>
+<li>noise‑field modeling becomes essential  </li>
+<li>silence pockets (R.null) become meaningful  </li>
+<li>Δ‑maps reveal anomalies  </li>
+<li>multi‑state S–N–R scanning improves clarity</li>
+</ul>
+<p>Salt‑water beaches require <strong>dual‑operator triadic detection</strong>.</p>
+<hr>
+<h1 id="4-snr-dual-mode-integration"><strong>4. S–N–R Dual Mode Integration</strong></h1>
+<p>Salt‑water environments benefit from the <strong>S–N–R dual operator model</strong>:</p>
+<h3 id="freshwater-mode"><strong>Fresh‑Water Mode</strong></h3>
+<pre><code>S.excite → R.coherence → R.struct → R.depth
+</code></pre>
+<h3 id="saltwater-mode"><strong>Salt‑Water Mode</strong></h3>
+<pre><code>N-map
+  → S.excite
+  → R.delta
+  → R.null
+  → R.struct
+  → R.depth
+</code></pre>
+<p>Fresh‑water: hunt <strong>peaks</strong>.<br>
+Salt‑water: hunt <strong>nulls</strong> and <strong>Δ‑patterns</strong>.</p>
+<hr>
+<h1 id="5-multistate-beach-protocol"><strong>5. Multi‑State Beach Protocol</strong></h1>
+<h3 id="state-0-neutral"><strong>State 0 — Neutral</strong></h3>
+<ul>
+<li>build N‑map  </li>
+<li>measure baseline noise</li>
+</ul>
+<h3 id="state-1-excitation"><strong>State 1 — Excitation</strong></h3>
+<ul>
+<li>EM excitation  </li>
+<li>coherence + structure</li>
+</ul>
+<h3 id="state-2-bias"><strong>State 2 — Bias</strong></h3>
+<ul>
+<li>low‑voltage field bias  </li>
+<li>Δ‑behavior analysis</li>
+</ul>
+<h3 id="state-3-vibration"><strong>State 3 — Vibration</strong></h3>
+<ul>
+<li>mechanical modulation  </li>
+<li>noise‑field disruption</li>
+</ul>
+<h3 id="state-4-combined"><strong>State 4 — Combined</strong></h3>
+<ul>
+<li>full S–N–R triad  </li>
+<li>null detection  </li>
+<li>structural envelope refinement</li>
+</ul>
+<p>Fresh‑water: States 1–2 usually sufficient.<br>
+Salt‑water: States 0–4 recommended.</p>
+<hr>
+<h1 id="6-structural-envelope-behavior"><strong>6. Structural Envelope Behavior</strong></h1>
+<h3 id="freshwater"><strong>Fresh‑Water</strong></h3>
+<ul>
+<li>envelopes are smooth  </li>
+<li>depth slices are stable  </li>
+<li>coherence vectors are strong</li>
+</ul>
+<h3 id="saltwater"><strong>Salt‑Water</strong></h3>
+<ul>
+<li>envelopes are noisy  </li>
+<li>depth slices jitter  </li>
+<li>coherence vectors fluctuate  </li>
+<li>null pockets become primary indicators</li>
+</ul>
+<hr>
+<h1 id="7-goldlikelihood-modeling"><strong>7. Gold‑Likelihood Modeling</strong></h1>
+<p>Gold remains EM‑neutral, but:</p>
+<h3 id="freshwater_1"><strong>Fresh‑Water</strong></h3>
+<ul>
+<li>host structures are clear  </li>
+<li>clutter is minimal  </li>
+<li>confidence is high</li>
+</ul>
+<h3 id="saltwater_1"><strong>Salt‑Water</strong></h3>
+<ul>
+<li>host structures distort  </li>
+<li>clutter increases  </li>
+<li>confidence depends on:</li>
+<li>Δ‑maps  </li>
+<li>null detection  </li>
+<li>multi‑state coherence  </li>
+<li>structural persistence across states</li>
+</ul>
+<hr>
+<h1 id="8-dashboard-hooks"><strong>8. Dashboard Hooks</strong></h1>
+<p>Add two new modes:</p>
+<h3 id="freshwater-mode_1"><strong>Fresh‑Water Mode</strong></h3>
+<pre><code>FW: High SNR, low noise, stable envelopes
+</code></pre>
+<h3 id="saltwater-mode_1"><strong>Salt‑Water Mode</strong></h3>
+<pre><code>SW: High noise, null pockets, Δ‑maps required
+</code></pre>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<p><strong>Active</strong><br>
+<strong>Coherence:</strong> Stable<br>
+<strong>Drift:</strong> Environment‑dependent<br>
+<strong>RTT Alignment:</strong> Verified<br>
+<strong>Version:</strong> 1.0  </p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/protocol_header/protocol_header_compatibility_matrix.md">
+  <title>protocolheadercompatibilitymatrix.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/protocol_header/protocol_header_compatibility_matrix.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/protocol_header/protocol_header_compatibility_matrix.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_protocol_header_compatibility_matrix_" src="https://github.com/user-attachments/assets/fe6f672c-4144-48d5-ac15-c528fdccfb3d" /></p>
+<h1 id="protocol_header_compatibility_matrixmd"><strong>protocol_header_compatibility_matrix.md</strong></h1>
+<h3 id="triadicframeworks-protocol-header-module"><em>TriadicFrameworks — Protocol Header Module</em></h3>
+<h3 id="phase-2-compatibility-matrix-canonical"><em>Phase 2 — Compatibility Matrix (Canonical)</em></h3>
+<hr>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>This file defines the <strong>compatibility classes</strong> for all proximity‑expanded terms from:</p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<p>Each candidate term is classified into one of four categories:</p>
+<h3 id="compatibility-classes"><strong>Compatibility Classes</strong></h3>
+<ul>
+<li>
+<p><strong>P — Perfect Substitute</strong><br>
+  Fully interchangeable; zero semantic drift.</p>
+</li>
+<li>
+<p><strong>N — Near Substitute</strong><br>
+  Same meaning; slight flavor shift; safe in most contexts.</p>
+</li>
+<li>
+<p><strong>C — Contextual Substitute</strong><br>
+  Works only in certain system forms or protocol metaphors.</p>
+</li>
+<li>
+<p><strong>X — Incompatible</strong><br>
+  Breaks meaning, introduces drift, or violates operator grammar.</p>
+</li>
+</ul>
+<p>These classifications feed the multilingual genome and the recombination rules.</p>
+<hr>
+<h1 id="1-rtt-locus-rtt1"><strong>1. RTT Locus — “rtt=1”</strong></h1>
+<table>
+<thead>
+<tr>
+<th>Candidate Term</th>
+<th>Class</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rtt=1</td>
+<td><strong>P</strong></td>
+<td>Canon baseline</td>
+</tr>
+<tr>
+<td>rtt=unit</td>
+<td><strong>P</strong></td>
+<td>Same semantics</td>
+</tr>
+<tr>
+<td>rtt=single-hop</td>
+<td><strong>P</strong></td>
+<td>Protocol‑adjacent but perfect</td>
+</tr>
+<tr>
+<td>rtt=atomic</td>
+<td><strong>P</strong></td>
+<td>Strong equivalence</td>
+</tr>
+<tr>
+<td>cycle=atomic</td>
+<td><strong>P</strong></td>
+<td>Structural match</td>
+</tr>
+<tr>
+<td>rtt=immediate</td>
+<td><strong>N</strong></td>
+<td>Slightly broader</td>
+</tr>
+<tr>
+<td>rtt=direct</td>
+<td><strong>N</strong></td>
+<td>Less precise</td>
+</tr>
+<tr>
+<td>rtt=local</td>
+<td><strong>N</strong></td>
+<td>Implies locality</td>
+</tr>
+<tr>
+<td>rtt=short-path</td>
+<td><strong>N</strong></td>
+<td>Good but metaphorical</td>
+</tr>
+<tr>
+<td>rtt=zero-latency</td>
+<td><strong>C</strong></td>
+<td>Only valid metaphorically</td>
+</tr>
+<tr>
+<td>hop=1</td>
+<td><strong>C</strong></td>
+<td>DNS/IANA‑adjacent</td>
+</tr>
+<tr>
+<td>latency=min</td>
+<td><strong>C</strong></td>
+<td>Numeric context only</td>
+</tr>
+<tr>
+<td>ttl=1</td>
+<td><strong>X</strong></td>
+<td>TTL ≠ RTT</td>
+</tr>
+<tr>
+<td>path=direct</td>
+<td><strong>C</strong></td>
+<td>Protocol‑adjacent</td>
+</tr>
+<tr>
+<td>mode=sync</td>
+<td><strong>C</strong></td>
+<td>System‑form specific</td>
+</tr>
+<tr>
+<td>update=atomic</td>
+<td><strong>C</strong></td>
+<td>Update‑oriented systems only</td>
+</tr>
+<tr>
+<td>regime=immediate</td>
+<td><strong>N</strong></td>
+<td>Slightly broader</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-perfect-substitutes"><strong>RTT Perfect Substitutes</strong></h3>
+<pre><code>rtt=1
+rtt=unit
+rtt=single-hop
+rtt=atomic
+cycle=atomic
+</code></pre>
+<hr>
+<h1 id="2-coherence-locus-coherencedeclared"><strong>2. Coherence Locus — “coherence=declared”</strong></h1>
+<table>
+<thead>
+<tr>
+<th>Candidate Term</th>
+<th>Class</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>coherence=declared</td>
+<td><strong>P</strong></td>
+<td>Canon baseline</td>
+</tr>
+<tr>
+<td>coherence=explicit</td>
+<td><strong>P</strong></td>
+<td>Perfect match</td>
+</tr>
+<tr>
+<td>coherence=stated</td>
+<td><strong>P</strong></td>
+<td>Direct equivalence</td>
+</tr>
+<tr>
+<td>coherence=attested</td>
+<td><strong>N</strong></td>
+<td>Slightly formal</td>
+</tr>
+<tr>
+<td>coherence=manifest</td>
+<td><strong>N</strong></td>
+<td>Adds visibility nuance</td>
+</tr>
+<tr>
+<td>coherence=registered</td>
+<td><strong>C</strong></td>
+<td>Protocol contexts</td>
+</tr>
+<tr>
+<td>coherence=anchored</td>
+<td><strong>N</strong></td>
+<td>Slight metaphor</td>
+</tr>
+<tr>
+<td>coherence=bound</td>
+<td><strong>N</strong></td>
+<td>Good but broad</td>
+</tr>
+<tr>
+<td>coherence=enumerated</td>
+<td><strong>C</strong></td>
+<td>List‑like contexts</td>
+</tr>
+<tr>
+<td>coherence=versioned</td>
+<td><strong>C</strong></td>
+<td>Versioned systems</td>
+</tr>
+<tr>
+<td>state=authoritative</td>
+<td><strong>C</strong></td>
+<td>Protocol‑adjacent</td>
+</tr>
+<tr>
+<td>mode=explicit</td>
+<td><strong>C</strong></td>
+<td>System‑form specific</td>
+</tr>
+<tr>
+<td>flag=declared</td>
+<td><strong>C</strong></td>
+<td>Header‑style contexts</td>
+</tr>
+<tr>
+<td>alignment=stated</td>
+<td><strong>N</strong></td>
+<td>Domain shift</td>
+</tr>
+<tr>
+<td>coherence=canonical</td>
+<td><strong>N</strong></td>
+<td>Implies correctness</td>
+</tr>
+<tr>
+<td>coherence=affirmed</td>
+<td><strong>N</strong></td>
+<td>Softer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="coherence-perfect-substitutes"><strong>Coherence Perfect Substitutes</strong></h3>
+<pre><code>coherence=declared
+coherence=explicit
+coherence=stated
+</code></pre>
+<hr>
+<h1 id="3-drift-locus-driftbounded"><strong>3. Drift Locus — “drift=bounded”</strong></h1>
+<table>
+<thead>
+<tr>
+<th>Candidate Term</th>
+<th>Class</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drift=bounded</td>
+<td><strong>P</strong></td>
+<td>Canon baseline</td>
+</tr>
+<tr>
+<td>drift=constrained</td>
+<td><strong>P</strong></td>
+<td>Perfect match</td>
+</tr>
+<tr>
+<td>drift=clamped</td>
+<td><strong>P</strong></td>
+<td>Strong equivalence</td>
+</tr>
+<tr>
+<td>drift=guarded</td>
+<td><strong>N</strong></td>
+<td>Slightly active</td>
+</tr>
+<tr>
+<td>drift=finite</td>
+<td><strong>N</strong></td>
+<td>Less specific</td>
+</tr>
+<tr>
+<td>drift=rate-limited</td>
+<td><strong>C</strong></td>
+<td>Dynamic systems</td>
+</tr>
+<tr>
+<td>drift=windowed</td>
+<td><strong>C</strong></td>
+<td>Protocol metaphors</td>
+</tr>
+<tr>
+<td>drift=thresholded</td>
+<td><strong>C</strong></td>
+<td>Numeric contexts</td>
+</tr>
+<tr>
+<td>drift=safe</td>
+<td><strong>N</strong></td>
+<td>Vague</td>
+</tr>
+<tr>
+<td>drift=canon-locked</td>
+<td><strong>N</strong></td>
+<td>Implies zero drift</td>
+</tr>
+<tr>
+<td>deviation=max(N)</td>
+<td><strong>X</strong></td>
+<td>Numeric drift</td>
+</tr>
+<tr>
+<td>tolerance=bounded</td>
+<td><strong>C</strong></td>
+<td>Protocol contexts</td>
+</tr>
+<tr>
+<td>variance=limited</td>
+<td><strong>C</strong></td>
+<td>Statistical contexts</td>
+</tr>
+<tr>
+<td>delta=clamped</td>
+<td><strong>C</strong></td>
+<td>Numeric contexts</td>
+</tr>
+<tr>
+<td>jitter=controlled</td>
+<td><strong>X</strong></td>
+<td>Network‑specific</td>
+</tr>
+</tbody>
+</table>
+<h3 id="drift-perfect-substitutes"><strong>Drift Perfect Substitutes</strong></h3>
+<pre><code>drift=bounded
+drift=constrained
+drift=clamped
+</code></pre>
+<hr>
+<h1 id="4-paradox-locus-paradoxstructural"><strong>4. Paradox Locus — “paradox=structural”</strong></h1>
+<table>
+<thead>
+<tr>
+<th>Candidate Term</th>
+<th>Class</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>paradox=structural</td>
+<td><strong>P</strong></td>
+<td>Canon baseline</td>
+</tr>
+<tr>
+<td>paradox=encoded</td>
+<td><strong>P</strong></td>
+<td>Perfect match</td>
+</tr>
+<tr>
+<td>paradox=architected</td>
+<td><strong>P</strong></td>
+<td>Strong equivalence</td>
+</tr>
+<tr>
+<td>paradox=load-bearing</td>
+<td><strong>N</strong></td>
+<td>Slight metaphor</td>
+</tr>
+<tr>
+<td>paradox=integrated</td>
+<td><strong>N</strong></td>
+<td>Softer</td>
+</tr>
+<tr>
+<td>paradox=triadic</td>
+<td><strong>C</strong></td>
+<td>Triadic systems only</td>
+</tr>
+<tr>
+<td>paradox=carrier-state</td>
+<td><strong>C</strong></td>
+<td>Specialized</td>
+</tr>
+<tr>
+<td>paradox=framed</td>
+<td><strong>N</strong></td>
+<td>Less precise</td>
+</tr>
+<tr>
+<td>paradox=embedded</td>
+<td><strong>N</strong></td>
+<td>Slightly weaker</td>
+</tr>
+<tr>
+<td>paradox=systemic</td>
+<td><strong>N</strong></td>
+<td>Broader</td>
+</tr>
+<tr>
+<td>paradox=resolved-in-structure</td>
+<td><strong>N</strong></td>
+<td>Verbose</td>
+</tr>
+<tr>
+<td>mode=non-fatal</td>
+<td><strong>X</strong></td>
+<td>Error‑oriented</td>
+</tr>
+<tr>
+<td>state=dual</td>
+<td><strong>C</strong></td>
+<td>Contextual</td>
+</tr>
+<tr>
+<td>flag=paradoxical(structural)</td>
+<td><strong>C</strong></td>
+<td>Header‑style</td>
+</tr>
+<tr>
+<td>condition=stable-contradiction</td>
+<td><strong>C</strong></td>
+<td>Verbose</td>
+</tr>
+</tbody>
+</table>
+<h3 id="paradox-perfect-substitutes"><strong>Paradox Perfect Substitutes</strong></h3>
+<pre><code>paradox=structural
+paradox=encoded
+paradox=architected
+</code></pre>
+<hr>
+<h2 id="perfect-substitution-summary"><strong>Perfect Substitution Summary</strong></h2>
+<p>These alleles form the <strong>structural genome</strong>:</p>
+<pre><code>RTT:       rtt=1, rtt=unit, rtt=single-hop, rtt=atomic, cycle=atomic
+Coherence: coherence=declared, coherence=explicit, coherence=stated
+Drift:     drift=bounded, drift=constrained, drift=clamped
+Paradox:   paradox=structural, paradox=encoded, paradox=architected
+</code></pre>
+<p>Total per language: <strong>5 × 3 × 3 × 3 = 135</strong><br>
+Across 12 languages: <strong>1,620</strong> drift‑bounded headers.</p>
+<hr>
+<h2 id="role-in-the-module"><strong>Role in the Module</strong></h2>
+<p>This matrix:</p>
+<ul>
+<li>filters the proximity cloud  </li>
+<li>defines the allele set  </li>
+<li>anchors multilingual translation  </li>
+<li>ensures drift‑bounded recombination  </li>
+<li>feeds the genome model and full matrix  </li>
+</ul>
+<p>It is the backbone of the protocol header’s structural integrity.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Long_Horizon_Continuity_Agents/LHCA_ANALYZER_LAYERS.md">
+  <title>ANALYZERLAYERS — LongHorizonContinuityAgents</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Long_Horizon_Continuity_Agents/LHCA_ANALYZER_LAYERS.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Long_Horizon_Continuity_Agents/LHCA_ANALYZER_LAYERS.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="analyzer_layers-long_horizon_continuity_agents">ANALYZER_LAYERS — Long_Horizon_Continuity_Agents</h1>
+<blockquote>
+<p>Six-Layer Analysis Stack · Module <code>lhca-rtt-001</code></p>
+</blockquote>
+<p>The analyzer stack runs against the persistence tensor at every checkpoint. Layers execute in precedence order; failures in lower-precedence layers block higher-precedence evaluation.</p>
+<hr>
+<h2 id="layer-execution-order">Layer Execution Order</h2>
+<pre><code>1. operator       (precedence 1) — grammar and operator dispatch
+2. dimensional    (precedence 2) — tensor shape and axis validation
+3. regime         (precedence 3) — regime classification and transitions
+4. drift          (precedence 4) — drift metric computation and bounding
+5. coherence      (precedence 5) — coherence anchor evaluation
+6. cross-cutting  (precedence 6) — observability and policy enforcement
+</code></pre>
+<hr>
+<h2 id="1-operator-layer">1. <code>operator</code> Layer</h2>
+<p>Controls how RTT operators compose, reduce, and project across the horizon tensor.</p>
+<pre><code class="language-python">from lhca.layers import OperatorLayer
+from lhca.operators import PERSIST, CHECKPOINT, HANDOFF, REHYDRATE, ROLLBACK
+
+op_layer = OperatorLayer(
+    operators=[PERSIST, CHECKPOINT, HANDOFF, REHYDRATE, ROLLBACK],
+    precedence=1,
+)
+
+# Dispatch an operator
+result = op_layer.dispatch(&quot;PERSIST&quot;, state_delta=delta, horizon_clock=t)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;operator&quot;,
+  &quot;active&quot;: true,
+  &quot;precedence&quot;: 1,
+  &quot;registered_operators&quot;: [&quot;PERSIST&quot;, &quot;HANDOFF&quot;, &quot;REHYDRATE&quot;, &quot;CHECKPOINT&quot;, &quot;ROLLBACK&quot;],
+  &quot;last_dispatch&quot;: {
+    &quot;operator&quot;: &quot;CHECKPOINT&quot;,
+    &quot;step&quot;: 200,
+    &quot;status&quot;: &quot;ok&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="2-dimensional-layer">2. <code>dimensional</code> Layer</h2>
+<p>Validates that continuity tensors maintain dimensional consistency across regime transitions. Only rank-preserving transforms are permitted.</p>
+<h3 id="axes">Axes</h3>
+<table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Description</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>temporal_depth</code></td>
+<td>Step count within current regime</td>
+<td><code>[0, max_horizon_depth]</code></td>
+</tr>
+<tr>
+<td><code>semantic_width</code></td>
+<td>Active semantic channel count</td>
+<td><code>[1, 512]</code></td>
+</tr>
+<tr>
+<td><code>behavioral_mode</code></td>
+<td>Encoded behavioral mode index</td>
+<td><code>[0, 15]</code></td>
+</tr>
+<tr>
+<td><code>goal_alignment</code></td>
+<td>Cosine similarity to baseline goal vector</td>
+<td><code>[0.0, 1.0]</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">from lhca.layers import DimensionalLayer
+
+dim_layer = DimensionalLayer(
+    axes=[&quot;temporal_depth&quot;, &quot;semantic_width&quot;, &quot;behavioral_mode&quot;, &quot;goal_alignment&quot;],
+    constraint=&quot;rank_preserving_only&quot;,
+)
+
+ok, violations = dim_layer.validate(tensor=engine.current_tensor())
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;dimensional&quot;,
+  &quot;active&quot;: true,
+  &quot;axes&quot;: {
+    &quot;temporal_depth&quot;: {&quot;value&quot;: 200, &quot;valid_range&quot;: [0, 500]},
+    &quot;semantic_width&quot;: {&quot;value&quot;: 128, &quot;valid_range&quot;: [1, 512]},
+    &quot;behavioral_mode&quot;: {&quot;value&quot;: 3, &quot;valid_range&quot;: [0, 15]},
+    &quot;goal_alignment&quot;: {&quot;value&quot;: 0.94, &quot;valid_range&quot;: [0.0, 1.0]}
+  },
+  &quot;constraint&quot;: &quot;rank_preserving_only&quot;,
+  &quot;violations&quot;: []
+}
+</code></pre>
+<hr>
+<h2 id="3-regime-layer">3. <code>regime</code> Layer</h2>
+<p>Classifies the current operational regime and governs permitted transitions.</p>
+<h3 id="regime-profiles">Regime Profiles</h3>
+<pre><code class="language-python">REGIME_PROFILES = {
+    &quot;WARM_CONTEXT&quot;: {
+        &quot;drift_tolerance&quot;: 0.05,
+        &quot;coherence_floor&quot;: 0.95,
+        &quot;description&quot;: &quot;Uninterrupted context window. Full tensor fidelity.&quot;,
+    },
+    &quot;COLD_HANDOFF&quot;: {
+        &quot;drift_tolerance&quot;: 0.20,
+        &quot;coherence_floor&quot;: 0.75,
+        &quot;description&quot;: &quot;Cross-boundary rehydration. Partial fidelity expected.&quot;,
+    },
+    &quot;DEEP_HORIZON&quot;: {
+        &quot;drift_tolerance&quot;: 0.40,
+        &quot;coherence_floor&quot;: 0.60,
+        &quot;description&quot;: &quot;Many successive handoffs. Active coherence reinforcement required.&quot;,
+    },
+    &quot;RECOVERY&quot;: {
+        &quot;drift_tolerance&quot;: 0.15,
+        &quot;coherence_floor&quot;: 0.80,
+        &quot;description&quot;: &quot;Post-anomaly rollback restoration.&quot;,
+    },
+}
+</code></pre>
+<h3 id="permitted-transitions">Permitted Transitions</h3>
+<pre><code>WARM_CONTEXT  ──► COLD_HANDOFF   (on HANDOFF operator)
+WARM_CONTEXT  ──► RECOVERY       (on ROLLBACK operator)
+COLD_HANDOFF  ──► WARM_CONTEXT   (on successful REHYDRATE)
+COLD_HANDOFF  ──► DEEP_HORIZON   (after N consecutive COLD_HANDOFFs)
+COLD_HANDOFF  ──► RECOVERY       (on ROLLBACK operator)
+DEEP_HORIZON  ──► RECOVERY       (on drift critical/halt)
+RECOVERY      ──► WARM_CONTEXT   (after coherence score &gt;= floor)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;regime&quot;,
+  &quot;active&quot;: true,
+  &quot;current_regime&quot;: &quot;WARM_CONTEXT&quot;,
+  &quot;drift_tolerance&quot;: 0.05,
+  &quot;coherence_floor&quot;: 0.95,
+  &quot;transition_history&quot;: [
+    {&quot;from&quot;: &quot;WARM_CONTEXT&quot;, &quot;to&quot;: &quot;COLD_HANDOFF&quot;, &quot;step&quot;: 100, &quot;trigger&quot;: &quot;HANDOFF&quot;},
+    {&quot;from&quot;: &quot;COLD_HANDOFF&quot;, &quot;to&quot;: &quot;WARM_CONTEXT&quot;, &quot;step&quot;: 101, &quot;trigger&quot;: &quot;REHYDRATE&quot;}
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="4-drift-layer">4. <code>drift</code> Layer</h2>
+<p>Continuously tracks cumulative behavioral and semantic deviation from the agent's baseline profile. Emits tiered alerts.</p>
+<h3 id="drift-bounds">Drift Bounds</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Max (module default)</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>semantic_drift</code></td>
+<td>0.35</td>
+<td>1 − cosine_similarity(current_embedding, baseline_embedding)</td>
+</tr>
+<tr>
+<td><code>behavioral_drift</code></td>
+<td>0.25</td>
+<td>KL-divergence of action distribution vs. baseline</td>
+</tr>
+<tr>
+<td><code>goal_vector_drift</code></td>
+<td>0.15</td>
+<td>L2 norm of (current_goal_vector − baseline_goal_vector)</td>
+</tr>
+<tr>
+<td><code>identity_drift</code></td>
+<td>0.10</td>
+<td>Hamming distance on persona anchor activations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert-tiers">Alert Tiers</h3>
+<pre><code class="language-python">DRIFT_ALERT_THRESHOLDS = {
+    &quot;ok&quot;:       (0.00, 0.60),
+    &quot;warning&quot;:  (0.60, 0.85),
+    &quot;critical&quot;: (0.85, 1.00),
+    &quot;halt&quot;:     (1.00, float(&quot;inf&quot;)),
+}
+
+MITIGATION_STRATEGIES = {
+    &quot;warning&quot;:  &quot;coherence_reinforcement&quot;,
+    &quot;critical&quot;: &quot;checkpoint_rollback&quot;,
+    &quot;halt&quot;:     &quot;goal_re_anchoring&quot;,
+}
+</code></pre>
+<pre><code class="language-python">from lhca.layers import DriftLayer
+
+drift_layer = DriftLayer.from_module(module)
+status = drift_layer.evaluate(
+    current_metrics={
+        &quot;semantic&quot;: 0.12,
+        &quot;behavioral&quot;: 0.08,
+        &quot;goal_vector&quot;: 0.05,
+        &quot;identity&quot;: 0.02,
+    },
+    active_regime=&quot;WARM_CONTEXT&quot;,
+)
+
+print(status.alert_level)   # &quot;ok&quot;
+print(status.worst_metric)  # &quot;semantic&quot;
+print(status.mitigation)    # None
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;drift&quot;,
+  &quot;active&quot;: true,
+  &quot;current_metrics&quot;: {
+    &quot;semantic&quot;: 0.12,
+    &quot;behavioral&quot;: 0.08,
+    &quot;goal_vector&quot;: 0.05,
+    &quot;identity&quot;: 0.02
+  },
+  &quot;bounds&quot;: {
+    &quot;semantic_drift_max&quot;: 0.35,
+    &quot;behavioral_drift_max&quot;: 0.25,
+    &quot;goal_vector_drift_max&quot;: 0.15,
+    &quot;identity_drift_max&quot;: 0.10
+  },
+  &quot;alert_level&quot;: &quot;ok&quot;,
+  &quot;mitigation&quot;: null
+}
+</code></pre>
+<hr>
+<h2 id="5-coherence-layer">5. <code>coherence</code> Layer</h2>
+<p>Evaluates all registered coherence anchors at every checkpoint. Zero-tolerance failures immediately block any further <code>HANDOFF</code> or <code>PERSIST</code> until resolved.</p>
+<h3 id="anchor-definitions">Anchor Definitions</h3>
+<pre><code class="language-python">COHERENCE_ANCHORS = {
+    &quot;CA-01&quot;: {
+        &quot;name&quot;: &quot;Primary Goal Invariant&quot;,
+        &quot;check&quot;: lambda state, baseline: (
+            l2_distance(state[&quot;goal_vector&quot;], baseline[&quot;goal_vector&quot;])
+            &lt;= module[&quot;analyzer_layers&quot;][&quot;drift&quot;][&quot;drift_bounds&quot;][&quot;goal_vector_drift_max&quot;]
+        ),
+        &quot;required&quot;: True,
+    },
+    &quot;CA-02&quot;: {
+        &quot;name&quot;: &quot;Identity Signature Continuity&quot;,
+        &quot;check&quot;: lambda state, baseline: (
+            state[&quot;identity_hash&quot;] == baseline[&quot;identity_hash&quot;]
+            or semantic_similarity(state, baseline) &gt;= 0.90
+        ),
+        &quot;required&quot;: True,
+    },
+    &quot;CA-03&quot;: {
+        &quot;name&quot;: &quot;Behavioral Envelope Compliance&quot;,
+        &quot;check&quot;: lambda state, regime: (
+            kl_divergence(state[&quot;action_dist&quot;], REGIME_PROFILES[regime][&quot;action_dist_baseline&quot;])
+            &lt;= REGIME_PROFILES[regime][&quot;drift_tolerance&quot;]
+        ),
+        &quot;required&quot;: True,
+    },
+    &quot;CA-04&quot;: {
+        &quot;name&quot;: &quot;Temporal Ordering Preservation&quot;,
+        &quot;check&quot;: lambda current_step, previous_step, operator: (
+            current_step &gt; previous_step or operator == &quot;ROLLBACK&quot;
+        ),
+        &quot;required&quot;: True,
+    },
+    &quot;CA-05&quot;: {
+        &quot;name&quot;: &quot;Context Handoff Integrity&quot;,
+        &quot;check&quot;: lambda bundle: verify_signature(bundle),
+        &quot;required&quot;: False,
+    },
+}
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;coherence&quot;,
+  &quot;active&quot;: true,
+  &quot;evaluation_at_step&quot;: 200,
+  &quot;results&quot;: {
+    &quot;CA-01&quot;: {&quot;passed&quot;: true, &quot;value&quot;: 0.03, &quot;threshold&quot;: 0.15},
+    &quot;CA-02&quot;: {&quot;passed&quot;: true, &quot;value&quot;: &quot;hash_match&quot;, &quot;threshold&quot;: &quot;exact_or_sim&gt;=0.90&quot;},
+    &quot;CA-03&quot;: {&quot;passed&quot;: true, &quot;value&quot;: 0.08, &quot;threshold&quot;: 0.05},
+    &quot;CA-04&quot;: {&quot;passed&quot;: true, &quot;value&quot;: &quot;step_200 &gt; step_199&quot;},
+    &quot;CA-05&quot;: {&quot;passed&quot;: true, &quot;value&quot;: &quot;sig_verified&quot;}
+  },
+  &quot;coherence_score&quot;: 0.97,
+  &quot;zero_tolerance_failures&quot;: []
+}
+</code></pre>
+<hr>
+<h2 id="6-cross-cutting-layer">6. <code>cross-cutting</code> Layer</h2>
+<p>Handles observability and policy enforcement that span all other layers.</p>
+<h3 id="capabilities">Capabilities</h3>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>telemetry_emission</code></td>
+<td>Emits structured events to <code>rtt/events/continuity-v1</code></td>
+</tr>
+<tr>
+<td><code>audit_trail_recording</code></td>
+<td>Appends signed audit records at every checkpoint</td>
+</tr>
+<tr>
+<td><code>inter_module_event_bus</code></td>
+<td>Pub/sub bus for cross-module events</td>
+</tr>
+<tr>
+<td><code>policy_enforcement_hooks</code></td>
+<td>Pre/post operator hooks for custom policy logic</td>
+</tr>
+<tr>
+<td><code>graceful_degradation_protocol</code></td>
+<td>Defines fallback behaviors when layers fail</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">from lhca.layers import CrossCuttingLayer
+
+cc_layer = CrossCuttingLayer(
+    event_schema=&quot;rtt/events/continuity-v1&quot;,
+    telemetry_sink=OpenTelemetrySink(endpoint=&quot;http://otel-collector:4317&quot;),
+    audit_store=S3AuditStore(bucket=&quot;rtt-audit-trail&quot;),
+)
+
+# Hook pre/post CHECKPOINT
+cc_layer.add_hook(&quot;pre:CHECKPOINT&quot;, fn=lambda ctx: cc_layer.emit_telemetry(ctx))
+cc_layer.add_hook(&quot;post:CHECKPOINT&quot;, fn=lambda ctx: cc_layer.record_audit(ctx))
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;cross-cutting&quot;,
+  &quot;active&quot;: true,
+  &quot;event_schema&quot;: &quot;rtt/events/continuity-v1&quot;,
+  &quot;telemetry&quot;: {
+    &quot;events_emitted_total&quot;: 1204,
+    &quot;last_event&quot;: {&quot;type&quot;: &quot;checkpoint&quot;, &quot;step&quot;: 200, &quot;ts&quot;: &quot;2026-09-23T20:45:00-04:00&quot;}
+  },
+  &quot;audit_trail&quot;: {
+    &quot;records_written&quot;: 4,
+    &quot;last_record_id&quot;: &quot;audit-lhca-001-step0200&quot;
+  },
+  &quot;hooks_registered&quot;: [&quot;pre:CHECKPOINT&quot;, &quot;post:CHECKPOINT&quot;, &quot;post:ROLLBACK&quot;]
+}
+</code></pre>
+  </main>
+</body>
+</html>

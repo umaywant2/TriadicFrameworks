@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "module_id": "bots.validator",
+    "validated_module": "bots.minibot",
+    "status": "pass"
+  },
+
+  "manifest_checks": [
+    { "check": "module.name_present", "result": "pass" },
+    { "check": "module.id_present", "result": "pass" },
+    { "check": "pipeline.steps_present", "result": "pass" },
+    { "check": "operators.listed", "result": "warning" }
+  ],
+
+  "schema_checks": [
+    { "check": "schema.valid_json", "result": "pass" },
+    { "check": "schema.required_fields_present", "result": "pass" },
+    { "check": "schema.triadic_fields_present", "result": "warning" }
+  ],
+
+  "golden_checks": [
+    { "check": "input_matches_schema", "result": "pass" },
+    { "check": "output_matches_schema", "result": "pass" },
+    { "check": "triadic_invariants", "result": "warning" }
+  ],
+
+  "lineage_checks": [
+    { "check": "operator_order_correct", "result": "pass" },
+    { "check": "pipeline_consistent", "result": "pass" },
+    { "check": "collapse_signature", "result": "warning" },
+    { "check": "projection_loss", "result": "warning" }
+  ],
+
+  "triadic_score": {
+    "manifest": 0.92,
+    "schema": 0.88,
+    "golden": 0.95,
+    "lineage": 0.83,
+    "risk": 0.22,
+    "final": 0.86
+  }
+}

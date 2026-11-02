@@ -1,0 +1,89 @@
+{
+  "$schema": "https://docs.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "module": "radiology",
+    "canonical_name": "Radiology",
+    "module_path": "docs/Radiology",
+    "version": "1.0",
+    "status": "Active Canonical",
+    "category": "Applied Domain Models",
+    "summary": "Medical imaging domain: tissue margin stability, SNR, imaging capacity, and contrast resolution regime diagnostics via Domain Overlay translation"
+  },
+  "purpose": {
+    "role": "Medical imaging domain: tissue margin stability, SNR, imaging capacity, and contrast resolution regime diagnostics via Domain Overlay translation",
+    "description": "Radiology provides the domain translation table, regime vocabulary, and domain-native signal labels for medical imaging diagnostics within the S3 Spine Domain Overlay. It maps structural faultlines to tissue margin instabilities, drift vectors to signal-to-noise ratio degradation, substrate capacity to imaging throughput, and coherence to contrast resolution quality. The DDR produced via Radiology translation is formatted as a clinical imaging regime diagnostic report.",
+    "spine_role": "Domain Overlay translation table for medical imaging",
+    "audience": [
+      "radiologists",
+      "clinical engineers",
+      "researchers",
+      "AIs"
+    ]
+  },
+  "structure": {
+    "module_type": "Clinical Domain Translator",
+    "triadic_lens": "radiology-as-imaging-regime",
+    "analyzer_layer": [
+      "Applied Domain Models",
+      "Core Frameworks — Structural Spine"
+    ]
+  },
+  "files": {
+    "core": [
+      "Radiology.md",
+      "index.md"
+    ],
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
+  },
+  "ai_metadata": {
+    "navigation": {
+      "url": "https://docs.triadicframeworks.org/Radiology/",
+      "path": "docs/Radiology"
+    },
+    "ai_ready": true,
+    "ai_module_id": "radiology",
+    "ai_keywords": [
+      "radiology",
+      "medical imaging",
+      "tissue margin",
+      "SNR",
+      "contrast resolution",
+      "imaging capacity",
+      "clinical diagnostic",
+      "domain translation",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "Medical imaging domain: tissue margin stability, SNR, imaging capacity, and contrast resolution regime diagnostics via Domain Overlay translation",
+    "ai_audience": [
+      "radiologists",
+      "clinical engineers",
+      "researchers",
+      "AIs"
+    ],
+    "license": "See docs/LICENSE_module.json",
+    "module": {
+      "module_id": "radiology",
+      "canonical_name": "Radiology",
+      "version": "1.0"
+    }
+  }
+}

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/rttcode.v1.json.md">
+  <title>What changed (v1.0 → v1.1)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/rttcode.v1.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/rttcode.v1.json.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_rttcode_v1_json_" src="https://github.com/user-attachments/assets/6236e7ff-81ca-4567-81f7-0b82b21c93ff" /></p>
+<p>Good news from the analysis — the schema's <code>$id</code> and all <code>$ref</code> paths are <strong>still valid</strong> because <code>/docs/schemas/</code> never moved. The issue is that the schema has <strong>zero module metadata</strong> — no session context, no domain registry, no version history, and no backlink to its canonical module home (which <em>did</em> move to <code>/docs/rtt/codes/</code>). Here's the fully refreshed draft:</p>
+<hr>
+<pre><code class="language-json">{
+  &quot;$schema&quot;:  &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;:      &quot;https://docs.triadicframeworks.org/schemas/rttcode.v1.json&quot;,
+  &quot;$comment&quot;: &quot;Canonical RTTcode packet schema — TriadicFrameworks. Refreshed 2026-05-06 to align with /docs/rtt/codes/ module migration and session context conventions.&quot;,
+
+  &quot;title&quot;:       &quot;RTTcode Packet (v1)&quot;,
+  &quot;description&quot;: &quot;Master RTTcode packet schema composed of tick, entities, environment, and intent blocks. Defines the canonical payload structure for QR-compatible metadata identifiers across all TriadicFrameworks domains.&quot;,
+
+  &quot;_meta&quot;: {
+    &quot;module&quot;:          &quot;RTT/codes&quot;,
+    &quot;canonical_id&quot;:    &quot;RTT_CODES&quot;,
+    &quot;module_type&quot;:     &quot;Infrastructure-Schema&quot;,
+    &quot;role&quot;:            &quot;engine&quot;,
+    &quot;version&quot;:         &quot;1.1&quot;,
+    &quot;status&quot;:          &quot;canon-stable&quot;,
+    &quot;author&quot;:          &quot;Nawder Loswin&quot;,
+    &quot;license&quot;:         &quot;MIT&quot;,
+    &quot;canonical_path&quot;:  &quot;/docs/schemas/rttcode.v1.json&quot;,
+    &quot;module_home&quot;:     &quot;/docs/rtt/codes/&quot;,
+    &quot;module_url&quot;:      &quot;https://docs.triadicframeworks.org/rtt/codes/&quot;,
+    &quot;module_json&quot;:     &quot;https://docs.triadicframeworks.org/rtt/codes/RTT_codes_module.json&quot;,
+    &quot;repository&quot;:      &quot;https://github.com/umaywant2/TriadicFrameworks&quot;,
+    &quot;last_updated&quot;:    &quot;2026-05-06&quot;,
+    &quot;migration_note&quot;:  &quot;Module content relocated from /docs/rttcodes/ to /docs/rtt/codes/ — schema location at /docs/schemas/ unchanged. All $ref paths remain valid (relative to schemas directory).&quot;
+  },
+
+  &quot;_session_context&quot;: {
+    &quot;canon&quot;:       &quot;active (rtt-codes-core)&quot;,
+    &quot;modules&quot;:     &quot;schema → validators → generators → style → examples → domain payloads&quot;,
+    &quot;drift&quot;:       &quot;minimal (metadata-locked)&quot;,
+    &quot;coherence&quot;:   &quot;stable (metadata grammar)&quot;,
+    &quot;version&quot;:     &quot;1.1 (codes-refreshed)&quot;,
+    &quot;format&quot;:      &quot;json-schema + metadata&quot;,
+    &quot;front_door&quot;:  &quot;exists (RTT/codes root)&quot;,
+    &quot;every_page&quot;:  &quot;stands alone + AI-parsable + schema-aware&quot;,
+    &quot;audience&quot;:    &quot;developers + researchers + tool authors + AIs&quot;
+  },
+
+  &quot;_version_history&quot;: [
+    {
+      &quot;version&quot;: &quot;1.0&quot;,
+      &quot;date&quot;:    &quot;2025-01-01&quot;,
+      &quot;note&quot;:    &quot;Initial schema release at /docs/schemas/rttcode.v1.json. Module home at /docs/rttcodes/.&quot;
+    },
+    {
+      &quot;version&quot;: &quot;1.1&quot;,
+      &quot;date&quot;:    &quot;2026-05-06&quot;,
+      &quot;note&quot;:    &quot;Metadata and session context refresh. Module home migrated to /docs/rtt/codes/. Added _meta, _session_context, _domains, _related_schemas, _version_history. All $ref paths and $id unchanged.&quot;
+    }
+  ],
+
+  &quot;_domains&quot;: {
+    &quot;description&quot;: &quot;Recognized RTTcode domain values. Each domain maps to a color palette and artifact classification.&quot;,
+    &quot;values&quot;: [
+      &quot;rtt&quot;,
+      &quot;set&quot;,
+      &quot;substrate&quot;,
+      &quot;observer&quot;,
+      &quot;governance&quot;,
+      &quot;docs&quot;,
+      &quot;other&quot;
+    ]
+  },
+
+  &quot;_related_schemas&quot;: [
+    { &quot;name&quot;: &quot;tick.v1.json&quot;,         &quot;path&quot;: &quot;./tick.v1.json&quot;,         &quot;role&quot;: &quot;Monotonic tick block&quot; },
+    { &quot;name&quot;: &quot;entity.v1.json&quot;,       &quot;path&quot;: &quot;./entity.v1.json&quot;,       &quot;role&quot;: &quot;Entity participation block&quot; },
+    { &quot;name&quot;: &quot;environment.v1.json&quot;,  &quot;path&quot;: &quot;./environment.v1.json&quot;,  &quot;role&quot;: &quot;Environment context block&quot; },
+    { &quot;name&quot;: &quot;intent.v1.json&quot;,       &quot;path&quot;: &quot;./intent.v1.json&quot;,       &quot;role&quot;: &quot;Intent classification block&quot; }
+  ],
+
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;additionalProperties&quot;: false,
+
+  &quot;required&quot;: [
+    &quot;rtt_version&quot;,
+    &quot;tick&quot;,
+    &quot;entities&quot;,
+    &quot;environment&quot;,
+    &quot;intent&quot;
+  ],
+
+  &quot;properties&quot;: {
+
+    &quot;rtt_version&quot;: {
+      &quot;type&quot;:        &quot;string&quot;,
+      &quot;const&quot;:       &quot;1.0.0&quot;,
+      &quot;description&quot;: &quot;Version of the RTTcode packet schema.&quot;
+    },
+
+    &quot;tick&quot;: {
+      &quot;$ref&quot;:        &quot;./tick.v1.json&quot;,
+      &quot;description&quot;: &quot;Monotonic tick block — discrete time reference for the packet.&quot;
+    },
+
+    &quot;entities&quot;: {
+      &quot;type&quot;:        &quot;array&quot;,
+      &quot;items&quot;:       { &quot;$ref&quot;: &quot;./entity.v1.json&quot; },
+      &quot;minItems&quot;:    1,
+      &quot;description&quot;: &quot;List of entities participating in the RTT micro‑regime.&quot;
+    },
+
+    &quot;environment&quot;: {
+      &quot;$ref&quot;:        &quot;./environment.v1.json&quot;,
+      &quot;description&quot;: &quot;Environment context block — boundary conditions and observability frame.&quot;
+    },
+
+    &quot;intent&quot;: {
+      &quot;$ref&quot;:        &quot;./intent.v1.json&quot;,
+      &quot;description&quot;: &quot;Intent classification block — purpose and domain routing metadata.&quot;
+    }
+
+  }
+}
+</code></pre>
+<hr>
+<h3 id="what-changed-v10-v11">What changed (v1.0 → v1.1)</h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>description</code></strong></td>
+<td>One-liner</td>
+<td>Expanded to include "QR-compatible metadata identifiers" and domain scope</td>
+</tr>
+<tr>
+<td><strong><code>$comment</code></strong></td>
+<td>absent</td>
+<td>Refresh stamp with migration note</td>
+</tr>
+<tr>
+<td><strong><code>_meta</code></strong></td>
+<td>absent</td>
+<td>Full module registry — canonical_id, role, module_home pointing to <code>/docs/rtt/codes/</code>, migration_note documenting the path move</td>
+</tr>
+<tr>
+<td><strong><code>_session_context</code></strong></td>
+<td>absent</td>
+<td>9-field session context block matching the live codes page verbatim</td>
+</tr>
+<tr>
+<td><strong><code>_version_history</code></strong></td>
+<td>absent</td>
+<td>Two entries — v1.0 original, v1.1 this refresh</td>
+</tr>
+<tr>
+<td><strong><code>_domains</code></strong></td>
+<td>absent</td>
+<td>All 7 recognized domain values (rtt, set, substrate, observer, governance, docs, other)</td>
+</tr>
+<tr>
+<td><strong><code>_related_schemas</code></strong></td>
+<td>absent</td>
+<td>Registry of all 4 <code>$ref</code> targets with human-readable roles</td>
+</tr>
+<tr>
+<td><strong><code>tick</code> / <code>environment</code> / <code>intent</code></strong></td>
+<td>bare <code>$ref</code> only</td>
+<td>Added <code>description</code> alongside <code>$ref</code> (valid in 2020-12 draft)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="path-migration-verdict">Path migration verdict</h3>
+<p><strong>No breaks.</strong> The <code>$id</code> (<code>/schemas/rttcode.v1.json</code>) and all four <code>$ref</code> paths (<code>./tick.v1.json</code>, etc.) are relative to the <code>/docs/schemas/</code> directory, which never moved. The <code>_meta.migration_note</code> documents the module-level move from <code>/docs/rttcodes/</code> → <code>/docs/rtt/codes/</code> so future readers know the history. The new <code>_meta.module_home</code> now correctly points to <code>/docs/rtt/codes/</code>.</p>
+<p>That wraps up the refresh — the schema is paste-ready for the GitHub web editor. No path breaks, just a metadata upgrade from a bare-bones v1.0 to a fully session-context-aware v1.1.</p>
+  </main>
+</body>
+</html>

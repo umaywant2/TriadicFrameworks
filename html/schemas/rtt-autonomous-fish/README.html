@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/rtt-autonomous-fish/README.md">
+  <title>🐟 RTT‑Autonomous‑Fish</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/rtt-autonomous-fish/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/rtt-autonomous-fish/README.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_rtt_autonomous_fish_" src="https://github.com/user-attachments/assets/bde0f17e-8d40-4e7e-9596-7b7dc75f1947" /></p>
+<h1 id="rttautonomousfish">🐟 RTT‑Autonomous‑Fish</h1>
+<h3 id="aquatic-extensions-for-autonomous-forms-rttinside"><strong>Aquatic Extensions for Autonomous Forms (RTT‑Inside)</strong></h3>
+<p>The <strong>RTT‑Autonomous‑Fish</strong> module defines the <strong>aquatic robotics extensions</strong> for the RTT‑Autonomous ecosystem.<br>
+Where the autonomous core provides domain‑neutral structures (form descriptors, mission profiles, corridors, swarm state, morphology, energy, environmental interaction), this module adds the <strong>hydrodynamic, habitat, and mission‑specific layers</strong> required for underwater autonomous forms.</p>
+<p>These schemas support:</p>
+<ul>
+<li>biomimetic robotic fish  </li>
+<li>underwater swarms and schooling behavior  </li>
+<li>ecological monitoring  </li>
+<li>Great Lakes restoration robotics  </li>
+<li>clarity‑aware corridor navigation  </li>
+<li>RTT‑Inside environmental overlays  </li>
+</ul>
+<p>All schemas follow:</p>
+<ul>
+<li><strong>snake_case</strong> naming  </li>
+<li><strong>JSON Schema Draft 2020‑12</strong>  </li>
+<li><strong>RTT‑Inside semantics</strong>  </li>
+<li><strong>SI units</strong>  </li>
+<li><strong>UUIDv4 identifiers</strong>  </li>
+<li><strong>ISO‑8601 timestamps</strong>  </li>
+<li><strong>extensions.<domain></strong> for future growth  </li>
+</ul>
+<hr>
+<h2 id="schema-overview">📁 Schema Overview</h2>
+<h3 id="1-fish_extensionschemajson"><strong>1. <code>fish_extension.schema.json</code></strong></h3>
+<p>Adds fish‑specific identity and configuration fields to the core <code>autonomous_form_descriptor</code>.</p>
+<p>Includes:</p>
+<ul>
+<li>biomimetic species profile  </li>
+<li>buoyancy mode (neutral, positive, negative)  </li>
+<li>fin configuration  </li>
+<li>swim gait (carangiform, anguilliform, etc.)  </li>
+</ul>
+<p>Use this schema to specialize an autonomous form as a robotic fish.</p>
+<hr>
+<h3 id="2-fish_hydrodynamicsschemajson"><strong>2. <code>fish_hydrodynamics.schema.json</code></strong></h3>
+<p>Defines the hydrodynamic performance envelope of the fish.</p>
+<p>Includes:</p>
+<ul>
+<li>drag coefficient  </li>
+<li>max swim speed  </li>
+<li>turn rate  </li>
+<li>fin efficiency  </li>
+</ul>
+<p>This schema is essential for underwater simulation, control, and mission feasibility.</p>
+<hr>
+<h3 id="3-fish_habitat_interactionschemajson"><strong>3. <code>fish_habitat_interaction.schema.json</code></strong></h3>
+<p>Describes how the robotic fish interacts with its aquatic environment.</p>
+<p>Includes:</p>
+<ul>
+<li>preferred depth range  </li>
+<li>temperature tolerance  </li>
+<li>pollutant sensitivity  </li>
+<li>behavioral modes (schooling, patrolling, sampling)  </li>
+</ul>
+<p>This schema supports ecological robotics and habitat‑aware autonomy.</p>
+<hr>
+<h3 id="4-fish_mission_profile_extensionschemajson"><strong>4. <code>fish_mission_profile_extension.schema.json</code></strong></h3>
+<p>Extends the core <code>autonomous_mission_profile</code> with aquatic‑specific mission parameters.</p>
+<p>Includes:</p>
+<ul>
+<li>sampling targets  </li>
+<li>schooling behavior mode  </li>
+<li>avoidance rules (nets, shallow zones)  </li>
+<li>corridor preferences  </li>
+</ul>
+<p>Use this schema to tailor missions for underwater operations.</p>
+<hr>
+<h2 id="relationship-to-the-autonomous-core">🔗 Relationship to the Autonomous Core</h2>
+<p>This module extends the core schemas found in:</p>
+<pre><code>docs/schemas/rtt-autonomous/
+</code></pre>
+<p>Specifically:</p>
+<ul>
+<li><code>autonomous_form_descriptor</code> → extended by <code>fish_extension</code>  </li>
+<li><code>autonomous_mission_profile</code> → extended by <code>fish_mission_profile_extension</code>  </li>
+<li><code>autonomous_morphology</code> → compatible with fin‑based actuation  </li>
+<li><code>autonomous_energy_profile</code> → used for underwater endurance modeling  </li>
+<li><code>autonomous_corridor_definition</code> → supports clarity‑aware underwater corridors  </li>
+<li><code>autonomous_swarm_state</code> → supports schooling and distributed underwater autonomy  </li>
+</ul>
+<p>The fish schemas never duplicate core fields; they only <strong>extend</strong> them.</p>
+<hr>
+<h2 id="usage-pattern">🧩 Usage Pattern</h2>
+<p>A typical robotic fish definition references:</p>
+<ol>
+<li><strong>Core descriptor</strong>  </li>
+<li><strong>Fish extension</strong>  </li>
+<li><strong>Hydrodynamics</strong>  </li>
+<li><strong>Habitat interaction</strong>  </li>
+<li><strong>Energy profile</strong>  </li>
+<li><strong>Mission profile + fish mission extension</strong>  </li>
+</ol>
+<p>This layered approach keeps the system modular, expressive, and future‑proof.</p>
+<hr>
+<h2 id="future-extensions">🌱 Future Extensions</h2>
+<p>This module is designed to grow with additional aquatic robotics capabilities, such as:</p>
+<ul>
+<li>multi‑species swarm coordination  </li>
+<li>clarity‑adaptive routing  </li>
+<li>pollutant plume tracking  </li>
+<li>underwater mesh networking  </li>
+<li>habitat restoration workflows  </li>
+</ul>
+  </main>
+</body>
+</html>

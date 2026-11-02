@@ -1,0 +1,92 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.render",
+  "title": "FFT AI Session — Render v1.33",
+  "render_modes": {
+    "default": {
+      "fields": [
+        "phi",
+        "V",
+        "R",
+        "tau"
+      ],
+      "layout": "grid"
+    },
+    "coherence_focus": {
+      "fields": [
+        "R",
+        "coherence_state",
+        "clarity_op"
+      ],
+      "layout": "focus",
+      "new_v1_33": true
+    },
+    "drift_watch": {
+      "fields": [
+        "drift_state",
+        "delta_meter",
+        "bound_indicator"
+      ],
+      "layout": "alert",
+      "new_v1_33": true
+    },
+    "paradox_mode": {
+      "fields": [
+        "paradox_active",
+        "resolution_phase",
+        "R"
+      ],
+      "layout": "emergency",
+      "new_v1_33": true
+    },
+    "snr_panel": {
+      "fields": [
+        "S",
+        "N",
+        "R_snr",
+        "partition_bar"
+      ],
+      "layout": "panel",
+      "new_v1_33": true
+    },
+    "set_panel": {
+      "fields": [
+        "S_indicator",
+        "E_indicator",
+        "T_indicator"
+      ],
+      "layout": "panel",
+      "new_v1_33": true
+    },
+    "dco_panel": {
+      "fields": [
+        "active_dim",
+        "operator_label",
+        "resonance_gradient"
+      ],
+      "layout": "panel",
+      "new_v1_33": true
+    },
+    "full_v133": {
+      "fields": "all",
+      "layout": "dashboard",
+      "new_v1_33": true
+    }
+  },
+  "v133_additions": [
+    "coherence_focus mode",
+    "drift_watch mode",
+    "paradox_mode",
+    "snr_panel",
+    "set_panel",
+    "dco_panel",
+    "full_v133 mode"
+  ]
+}

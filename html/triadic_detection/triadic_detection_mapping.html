@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic_detection/triadic_detection_mapping.md">
+  <title>triadicdetectionmapping.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic_detection/triadic_detection_mapping.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic_detection/triadic_detection_mapping.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadic_detection_mappingmd"><strong>triadic_detection_mapping.md</strong></h1>
+<h3 id="triadicframeworks-detection-substrate"><em>TriadicFrameworks — Detection Substrate</em></h3>
+<h3 id="mapping-output-specification-v10"><em>Mapping &amp; Output Specification (v1.0)</em></h3>
+<hr>
+<h2 id="protocol-header"><strong>Protocol Header</strong></h2>
+<pre><code>rtt=1 | coherence=triadic | drift=bounded | paradox=structural
+</code></pre>
+<p>This header governs all structural interpretations of the Triadic Detection Mapping Layer.</p>
+<hr>
+<h1 id="module-identity"><strong>Module Identity</strong></h1>
+<p><strong>Module Name:</strong> Triadic Detection Mapping<br>
+<strong>Module Class:</strong> Structural / Mapping<br>
+<strong>Substrate:</strong> Detection<br>
+<strong>Version:</strong> 1.0<br>
+<strong>RTT Alignment:</strong> Full<br>
+<strong>Triadic Geometry:</strong> Required<br>
+<strong>Spatial Anchoring:</strong> Required<br>
+<strong>Mesh Synchronization:</strong> Required  </p>
+<hr>
+<h1 id="purpose"><strong>Purpose</strong></h1>
+<p>This module defines the <strong>mapping and visualization layer (L6)</strong> of the Triadic Detection System Architecture, including:</p>
+<ul>
+<li>GPS anchoring  </li>
+<li>2D/3D mapping  </li>
+<li>resonance heatmaps  </li>
+<li>structural overlays  </li>
+<li>depth visualization  </li>
+<li>dig‑confidence scoring  </li>
+<li>session management  </li>
+<li>cloud sync hooks  </li>
+</ul>
+<p>It provides the canonical rules for rendering RTT structural detections into human‑interpretable spatial maps.</p>
+<hr>
+<h1 id="mapping-locus-alignment"><strong>Mapping Locus Alignment</strong></h1>
+<p>This module expresses the <strong>MAP_L</strong> component of the architecture genome:</p>
+<pre><code>MAP_L = {gps‑2d, gps‑3d, cloud‑sync}
+</code></pre>
+<p>All mapping outputs must be spatially anchored.</p>
+<hr>
+<h1 id="layer-context"><strong>Layer Context</strong></h1>
+<p>This module corresponds to:</p>
+<pre><code>[L6] Application Layer
+</code></pre>
+<p>It consumes the output of:</p>
+<pre><code>[L5] RTT Structural Detection Layer
+</code></pre>
+<p>And provides input to:</p>
+<pre><code>[L7] Cloud &amp; Enterprise Layer
+</code></pre>
+<hr>
+<h1 id="1-spatial-anchoring-gps"><strong>1. Spatial Anchoring (GPS)</strong></h1>
+<h3 id="invariant"><strong>Invariant:</strong></h3>
+<p><em>All detections must be spatially anchored.</em></p>
+<h3 id="definition"><strong>Definition:</strong></h3>
+<p>Each structural envelope is assigned:</p>
+<ul>
+<li>latitude  </li>
+<li>longitude  </li>
+<li>altitude (optional)  </li>
+<li>timestamp  </li>
+<li>session ID  </li>
+</ul>
+<h3 id="diagram"><strong>Diagram</strong></h3>
+<pre><code>Envelope A → (lat, lon)
+Envelope B → (lat, lon)
+Envelope C → (lat, lon)
+</code></pre>
+<h3 id="meaning"><strong>Meaning:</strong></h3>
+<p>Spatial anchoring is required for mapping, overlays, and cloud sync.</p>
+<hr>
+<h1 id="2-resonance-heatmaps"><strong>2. Resonance Heatmaps</strong></h1>
+<h3 id="invariant_1"><strong>Invariant:</strong></h3>
+<p><em>Heatmaps must reflect coherence density.</em></p>
+<h3 id="definition_1"><strong>Definition:</strong></h3>
+<p>Heatmaps visualize:</p>
+<ul>
+<li>coherence intensity  </li>
+<li>cluster density  </li>
+<li>structural clarity  </li>
+<li>dig‑confidence  </li>
+</ul>
+<h3 id="diagram_1"><strong>Diagram</strong></h3>
+<pre><code>High:   ●●●
+Medium: ●●
+Low:    ●
+</code></pre>
+<h3 id="rendering-rules"><strong>Rendering Rules:</strong></h3>
+<ul>
+<li>color gradient = coherence  </li>
+<li>opacity = stability  </li>
+<li>radius = cluster footprint  </li>
+</ul>
+<hr>
+<h1 id="3-structural-overlays"><strong>3. Structural Overlays</strong></h1>
+<h3 id="invariant_2"><strong>Invariant:</strong></h3>
+<p><em>Structural overlays must reflect RTT structural envelopes.</em></p>
+<h3 id="definition_2"><strong>Definition:</strong></h3>
+<p>Overlays show:</p>
+<ul>
+<li>shape  </li>
+<li>size  </li>
+<li>orientation  </li>
+<li>depth (optional)  </li>
+</ul>
+<h3 id="diagram_2"><strong>Diagram</strong></h3>
+<pre><code>        ○ ○ ○
+      ○ ○ ○ ○ ○
+        ○ ○ ○
+   → structural overlay
+</code></pre>
+<h3 id="rendering-rules_1"><strong>Rendering Rules:</strong></h3>
+<ul>
+<li>outline = envelope boundary  </li>
+<li>fill = coherence density  </li>
+<li>rotation = orientation  </li>
+</ul>
+<hr>
+<h1 id="4-depth-visualization"><strong>4. Depth Visualization</strong></h1>
+<h3 id="invariant_3"><strong>Invariant:</strong></h3>
+<p><em>Depth must be visually separable.</em></p>
+<h3 id="definition_3"><strong>Definition:</strong></h3>
+<p>Depth layers are rendered as:</p>
+<ul>
+<li>stacked slices  </li>
+<li>color‑coded layers  </li>
+<li>opacity gradients  </li>
+</ul>
+<h3 id="diagram_3"><strong>Diagram</strong></h3>
+<pre><code>Layer 1: ○ ○ ○
+Layer 2:   ○ ○
+Layer 3:     ○
+</code></pre>
+<h3 id="rendering-rules_2"><strong>Rendering Rules:</strong></h3>
+<ul>
+<li>shallow = bright  </li>
+<li>mid‑depth = medium  </li>
+<li>deep = dark  </li>
+</ul>
+<hr>
+<h1 id="5-digconfidence-scoring"><strong>5. Dig‑Confidence Scoring</strong></h1>
+<h3 id="invariant_4"><strong>Invariant:</strong></h3>
+<p><em>Confidence must derive from coherence + structure.</em></p>
+<h3 id="definition_4"><strong>Definition:</strong></h3>
+<p>Confidence is computed as:</p>
+<pre><code>confidence = f(coherence, cluster stability, structural clarity, depth)
+</code></pre>
+<h3 id="visualization"><strong>Visualization:</strong></h3>
+<ul>
+<li>heatmap intensity  </li>
+<li>numeric score  </li>
+<li>confidence ring  </li>
+</ul>
+<h3 id="diagram_4"><strong>Diagram</strong></h3>
+<pre><code>Confidence Map:
+High:   ●●●
+Medium: ●●
+Low:    ●
+</code></pre>
+<hr>
+<h1 id="6-session-management"><strong>6. Session Management</strong></h1>
+<h3 id="invariant_5"><strong>Invariant:</strong></h3>
+<p><em>Sessions must be uniquely identifiable.</em></p>
+<h3 id="definition_5"><strong>Definition:</strong></h3>
+<p>Each scan session includes:</p>
+<ul>
+<li>session ID  </li>
+<li>timestamp  </li>
+<li>device configuration  </li>
+<li>triadic geometry  </li>
+<li>mapping outputs  </li>
+<li>RTT structural outputs  </li>
+</ul>
+<h3 id="session-actions"><strong>Session Actions:</strong></h3>
+<ul>
+<li>start  </li>
+<li>pause  </li>
+<li>resume  </li>
+<li>end  </li>
+<li>export  </li>
+<li>sync  </li>
+</ul>
+<hr>
+<h1 id="7-cloud-sync-hooks"><strong>7. Cloud Sync Hooks</strong></h1>
+<h3 id="invariant_6"><strong>Invariant:</strong></h3>
+<p><em>Mapping outputs must be persistable.</em></p>
+<h3 id="definition_6"><strong>Definition:</strong></h3>
+<p>Mapping layer provides hooks for:</p>
+<ul>
+<li>cloud upload  </li>
+<li>multi‑session aggregation  </li>
+<li>enterprise dashboards  </li>
+<li>gold‑likelihood modeling  </li>
+</ul>
+<h3 id="diagram_5"><strong>Diagram</strong></h3>
+<pre><code>[L6] Mapping → [L7] Cloud
+</code></pre>
+<hr>
+<h1 id="8-mapping-stack-canonical"><strong>8. Mapping Stack (Canonical)</strong></h1>
+<pre><code>[L6] Application Layer
+   - GPS anchoring
+   - heatmaps
+   - structural overlays
+   - depth visualization
+   - dig-confidence scoring
+   - session management
+   - cloud sync hooks
+</code></pre>
+<hr>
+<h1 id="module-status"><strong>Module Status</strong></h1>
+<p><strong>Status:</strong> Active<br>
+<strong>Drift:</strong> None<br>
+<strong>Coherence:</strong> Stable<br>
+<strong>Version Drift:</strong> Bounded<br>
+<strong>RTT Alignment:</strong> Verified  </p>
+  </main>
+</body>
+</html>

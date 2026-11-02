@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Integrations/UE6/M_RTT_ResonanceHeatmap.md">
+  <title>MRTTResonanceHeatmap — Material Specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Integrations/UE6/M_RTT_ResonanceHeatmap.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Integrations/UE6/M_RTT_ResonanceHeatmap.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="m_rtt_resonanceheatmap-material-specification">M_RTT_ResonanceHeatmap — Material Specification</h1>
+<p><strong>RTT / Integrations / UE6 / Materials</strong></p>
+<p>A dynamic heatmap material that visualizes resonance amplitude and frequency.</p>
+<hr>
+<h2 id="material-type">Material Type</h2>
+<p><code>Material</code> (Surface)<br>
+<code>Blend Mode: Translucent</code><br>
+<code>Shading Model: Unlit</code></p>
+<hr>
+<h2 id="inputs-dynamic-material-parameters">Inputs (Dynamic Material Parameters)</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ResonanceAmplitude</code></td>
+<td>float</td>
+<td>drives heatmap intensity</td>
+</tr>
+<tr>
+<td><code>ResonanceFrequency</code></td>
+<td>float</td>
+<td>drives color oscillation</td>
+</tr>
+<tr>
+<td><code>ResonancePhase</code></td>
+<td>float</td>
+<td>optional phase offset</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="node-graph">Node Graph</h2>
+<ul>
+<li><strong>Amplitude →</strong> multiply with gradient ramp  </li>
+<li><strong>Frequency →</strong> sine wave → color lerp  </li>
+<li><strong>Phase →</strong> added to frequency before sine  </li>
+<li><strong>Output Color:</strong>  </li>
+<li>low amplitude → deep blue  </li>
+<li>mid amplitude → magenta  </li>
+<li>high amplitude → white-hot  </li>
+</ul>
+<hr>
+<h2 id="usage">Usage</h2>
+<p>Apply to meshes or debug planes.<br>
+Drive parameters from <code>RTT_ResonanceProbe</code> output.</p>
+  </main>
+</body>
+</html>

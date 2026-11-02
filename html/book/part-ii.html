@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/book/part-ii.md">
+  <title>Part II — Navigate</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/book/part-ii.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/book/part-ii.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="part-ii-navigate">Part II — Navigate</h1>
+<blockquote>
+<p><strong>Who this is for:</strong> Practitioners who have completed Part I and can answer every item on its exit checklist.
+<strong>What it requires:</strong> Part I fluency. Comfort with JSON. Willingness to slow down and read precisely.
+<strong>What it produces:</strong> The ability to move through the TriadicFrameworks module system without a guide — reading, tracing, assembling, and extending it independently.</p>
+</blockquote>
+<hr>
+<p>Part II is the system's interior.</p>
+<p>Where Part I gave you a map of the territory, Part II puts you inside the territory and teaches you how to navigate it. This is the reference layer of the book — you will return to it constantly, not read it once and move on. The chapters are ordered for first-time readers, but they are structured for repeated lookup.</p>
+<p>There are six chapters. First-time readers: proceed in order. Returning practitioners: use the chapter list below as a direct index.</p>
+<hr>
+<h2 id="chapters">Chapters</h2>
+<ul>
+<li><a href="#chapter-7--reading-a-module-the-full-specification-walk">Chapter 7 — Reading a Module: The Full Specification Walk</a></li>
+<li><a href="#chapter-8--traversing-the-dependency-graph">Chapter 8 — Traversing the Dependency Graph</a></li>
+<li><a href="#chapter-9--module-groups-and-modules_groupjson">Chapter 9 — Module Groups and modules_group.json</a></li>
+<li><a href="#chapter-10--finding-relevant-modules-for-a-problem">Chapter 10 — Finding Relevant Modules for a Problem</a></li>
+<li><a href="#chapter-11--identifying-gaps-and-proposing-new-modules">Chapter 11 — Identifying Gaps and Proposing New Modules</a></li>
+<li><a href="#chapter-12--the-module-registry-orientation">Chapter 12 — The Module Registry: Orientation</a></li>
+<li><a href="#exit-checklist--you-can-navigate-when">Exit Checklist — You Can Navigate When...</a></li>
+</ul>
+<hr>
+<h2 id="chapter-7-reading-a-module-the-full-specification-walk">Chapter 7 — Reading a Module: The Full Specification Walk</h2>
+<p>Reading a module is not the same as reading a document. A document rewards linear reading — you start at the top and move to the bottom. A module rewards <em>structured</em> reading — you follow a defined sequence across four files, each one constraining how you read the next.</p>
+<p>This chapter walks you through the complete specification read for a module. By the end, you will be able to open any module in the system and extract its full meaning — identity, content, relationships, and runtime behavior — without assistance.</p>
+<h3 id="the-correct-sequence">The Correct Sequence</h3>
+<p>As established in Part I, the reading order is fixed:</p>
+<pre><code>1. module.json          ← What the module IS
+2. module_links.json    ← What the module CONNECTS TO
+3. module.md            ← What the module SAYS
+4. module_session.json  ← How the module BEHAVES at runtime
+</code></pre>
+<p>Violating this order is the single most common source of module misreading. The prose in <code>module.md</code> is persuasive — it is written to be clear and readable. If you read it before <code>module.json</code>, you will unconsciously extend the module's scope beyond what the manifest declares. The manifest is precise. The prose is expressive. Always let the precise constrain the expressive.</p>
+<hr>
+<h3 id="step-1-reading-modulejson">Step 1: Reading <code>module.json</code></h3>
+<p>Open <code>module.json</code> first. Read every field before forming any opinion about the module.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;rtt-operator-core&quot;,
+  &quot;label&quot;: &quot;RTT Operator — Core&quot;,
+  &quot;role&quot;: &quot;operator&quot;,
+  &quot;layer&quot;: &quot;operational&quot;,
+  &quot;scope&quot;: &quot;Defines the invocation signature, input schema, and output schema for a single RTT pass on any well-formed input unit.&quot;,
+  &quot;version&quot;: &quot;1.4.0&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;dependencies&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;
+  ],
+  &quot;tags&quot;: [&quot;core&quot;, &quot;engine&quot;, &quot;transformation&quot;]
+}
+</code></pre>
+<p><strong>Reading each field:</strong></p>
+<p><strong><code>id</code></strong> — This is the module's permanent identity. It does not change across versions. If you are referencing this module from another module's <code>module_links.json</code>, you use this ID. Never use the label — labels can change. IDs are stable.</p>
+<p><strong><code>label</code></strong> — The human-readable name. Useful for navigation; not useful for reference. Do not cite labels in operational contexts.</p>
+<p><strong><code>role</code></strong> — This tells you immediately what the module <em>does</em>. <code>operator</code> means this module performs a transformation. You now know: it takes inputs, applies a process, and produces outputs. Everything in <code>module.md</code> will be about that transformation — nothing else.</p>
+<p><strong><code>layer</code></strong> — <code>operational</code> means this module is invoked at runtime, inside sessions. It is not a static reference — it is an active participant. This also tells you its dependency constraints: it may depend on <code>structural</code> and <code>foundational</code> modules, but not on <code>surface</code> ones.</p>
+<p><strong><code>scope</code></strong> — Read this field as a <em>contract</em>. The module promises to cover exactly what the scope states — no more, no less. If you find yourself expecting the module to explain RTT's history or philosophical grounding, you are reading outside the scope. This module covers the invocation signature, input schema, and output schema for a single RTT pass. That is all.</p>
+<p><strong><code>version</code></strong> — <code>1.4.0</code> means this module has been updated four minor revisions since its first major release. If you have cached knowledge of an earlier version, assume it has changed. Always check the version stamp when returning to a module after time away.</p>
+<p><strong><code>status</code></strong> — <code>active</code> means this module is in full operation. Other valid statuses: <code>draft</code> (not yet ratified), <code>deprecated</code> (still present, but superseded — check <code>module_links.json</code> for <code>superseded_by</code>), <code>archived</code> (removed from active use).</p>
+<p><strong><code>dependencies</code></strong> — Three dependencies are declared. Before this module can be validly invoked, all three must be resolved in the session context. Write them down. You will verify them in Step 2.</p>
+<p><strong><code>tags</code></strong> — Informational. Useful for search and grouping, not for structural reasoning.</p>
+<p><strong>After reading <code>module.json</code>, you know:</strong> What this module is, what it does, where it lives in the stack, exactly what it covers, and what it depends on. You have not yet read a word of prose.</p>
+<hr>
+<h3 id="step-2-reading-module_linksjson">Step 2: Reading <code>module_links.json</code></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;rtt-operator-core&quot;,
+  &quot;depends_on&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;
+  ],
+  &quot;required_by&quot;: [
+    &quot;clarity-operator-spectral&quot;,
+    &quot;session-protocol-initialization&quot;,
+    &quot;scope-check-operator&quot;
+  ],
+  &quot;related&quot;: [
+    &quot;rtt-operator-recursive-extension&quot;,
+    &quot;rtt-lens-temporal&quot;,
+    &quot;rtt-map-full-pass-anatomy&quot;
+  ],
+  &quot;supersedes&quot;: [&quot;rtt-operator-v0-legacy&quot;],
+  &quot;superseded_by&quot;: null
+}
+</code></pre>
+<p><strong>Reading each field:</strong></p>
+<p><strong><code>depends_on</code></strong> — Confirms what <code>module.json</code> declared. These three modules must be active in a session for <code>rtt-operator-core</code> to be validly invoked. If any are absent, the session has a dependency gap. Note: dependencies are transitive — each of these three modules has its own <code>depends_on</code> chain. You are not done at this level; you may need to trace further.</p>
+<p><strong><code>required_by</code></strong> — Three modules require this one. This is critical for impact analysis: if you are considering modifying <code>rtt-operator-core</code>, you must check all three of these modules to understand what downstream effects your change will have. Never modify a module without reading its <code>required_by</code> list first.</p>
+<p><strong><code>related</code></strong> — These are not structural dependencies. They are editorial neighbors — modules in adjacent scope that a practitioner might want to read alongside this one. <code>rtt-operator-recursive-extension</code> handles multi-pass recursion (beyond a single pass), so it is a natural companion. These are suggestions, not requirements.</p>
+<p><strong><code>supersedes</code></strong> — This module replaces <code>rtt-operator-v0-legacy</code>. If you encounter that ID anywhere in the system, treat it as pointing to this module.</p>
+<p><strong><code>superseded_by</code></strong> — <code>null</code> means this module has not been replaced. It is the current version.</p>
+<p><strong>After reading <code>module_links.json</code>, you know:</strong> The module's full dependency chain entry point, its downstream impact surface, its editorial neighbors, and its version lineage.</p>
+<hr>
+<h3 id="step-3-reading-modulemd">Step 3: Reading <code>module.md</code></h3>
+<p>Now — and only now — read the prose. Read it within the boundaries you have established:</p>
+<ul>
+<li><strong>Scope boundary:</strong> The module covers the invocation signature, input schema, and output schema for a single RTT pass. If a paragraph steps outside this boundary, it is a scope violation. Note it; do not let it expand your understanding of the module's domain.</li>
+<li><strong>Role boundary:</strong> This is an <code>operator</code>. The prose should be procedural and transformation-focused. If it reads like a philosophy essay, something is wrong.</li>
+<li><strong>Layer boundary:</strong> This is <code>operational</code>. The prose should address runtime behavior, not historical context.</li>
+</ul>
+<p>Read the prose actively — flag any claims that seem to exceed the scope, any instructions that seem inconsistent with the declared role, and any examples that reference modules not listed in <code>module_links.json</code>. These are signals of authoring errors, not features.</p>
+<hr>
+<h3 id="step-4-reading-module_sessionjson">Step 4: Reading <code>module_session.json</code></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;rtt-operator-core&quot;,
+  &quot;invocation_syntax&quot;: &quot;RTT.pass(input: &lt;InputUnit&gt;, depth: &lt;integer&gt;, output_format: &lt;FormatEnum&gt;)&quot;,
+  &quot;input_schema&quot;: {
+    &quot;input&quot;: &quot;A well-formed InputUnit — any thought, claim, decision, or artifact with a declared scope.&quot;,
+    &quot;depth&quot;: &quot;Integer ≥ 1. Specifies the number of recursive passes. Default: 1.&quot;,
+    &quot;output_format&quot;: &quot;A value from the FormatEnum. Specifies the structure of the output unit.&quot;
+  },
+  &quot;output_schema&quot;: {
+    &quot;generative_face&quot;: &quot;String. The parsed origin of the input.&quot;,
+    &quot;present_face&quot;: &quot;String. The parsed current state of the input.&quot;,
+    &quot;terminal_face&quot;: &quot;String. The parsed forward direction of the input.&quot;,
+    &quot;pass_depth&quot;: &quot;Integer. The depth at which this output was produced.&quot;,
+    &quot;next_input&quot;: &quot;InputUnit. The output repackaged as input for the next pass, if depth &gt; 1.&quot;
+  },
+  &quot;valid_layers&quot;: [&quot;operational&quot;, &quot;structural&quot;],
+  &quot;valid_roles&quot;: [&quot;operator&quot;, &quot;protocol&quot;],
+  &quot;validator_id&quot;: &quot;clarity-validator-rtт-output&quot;
+}
+</code></pre>
+<p><strong>Reading each field:</strong></p>
+<p><strong><code>invocation_syntax</code></strong> — This is the exact call signature. Copy it precisely when invoking this operator in a session. <code>RTT.pass(input: &lt;InputUnit&gt;, depth: &lt;integer&gt;, output_format: &lt;FormatEnum&gt;)</code>. Three parameters: the input unit, the recursion depth, and the output format. All three are required. A call with missing parameters is malformed.</p>
+<p><strong><code>input_schema</code></strong> — Defines what each parameter must be. <code>input</code> must be a "well-formed InputUnit" — a unit of thought with a declared scope. If your input has no declared scope, you must declare one before invoking the operator. <code>depth</code> defaults to 1 — a single RTT pass. <code>output_format</code> must be a value from the FormatEnum.</p>
+<p><strong><code>output_schema</code></strong> — Defines what you will receive. Every invocation of this operator produces exactly these five fields. If you are building a downstream module that consumes RTT output, design its input schema against this output schema.</p>
+<p><strong><code>valid_layers</code></strong> — This operator may be invoked in <code>operational</code> and <code>structural</code> layer contexts. It may not be invoked in <code>surface</code>, <code>foundational</code>, or <code>meta</code> contexts. If a session's <code>layer_context</code> field is <code>foundational</code>, this operator is not available.</p>
+<p><strong><code>valid_roles</code></strong> — This operator may be invoked by <code>operator</code> and <code>protocol</code> role modules. A <code>grammar</code> module cannot directly invoke it.</p>
+<p><strong><code>validator_id</code></strong> — After invocation, outputs are evaluated by <code>clarity-validator-rtт-output</code>. You do not call this manually — it is applied automatically when the session's validator field is active.</p>
+<p><strong>After reading <code>module_session.json</code>, you know:</strong> Exactly how to call this module, what to give it, what to expect back, where it may and may not be used, and how its outputs are validated.</p>
+<hr>
+<h3 id="the-complete-read-summary">The Complete Read: Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>File</th>
+<th>What You Learn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>module.json</code></td>
+<td>Identity, role, layer, scope, version, status, dependencies</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>module_links.json</code></td>
+<td>Upstream dependencies, downstream impact, neighbors, lineage</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>module.md</code></td>
+<td>Content — bounded by the manifest</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>module_session.json</code></td>
+<td>Invocation syntax, input/output schemas, valid contexts, validator</td>
+</tr>
+</tbody>
+</table>
+<p>A practitioner who completes all four steps for any module in the system has a complete, checkable, version-stamped understanding of that module. A practitioner who reads only <code>module.md</code> has an impression.</p>
+<hr>
+<h2 id="chapter-8-traversing-the-dependency-graph">Chapter 8 — Traversing the Dependency Graph</h2>
+<p>Every module exists in a web of dependencies. Navigating that web — tracing a chain from a surface output back to its foundational anchors, or forward from an anchor to its surface expressions — is the core navigation skill of Part II.</p>
+<p>This chapter teaches both directions of traversal, the rules that govern each, and the failure modes that trap practitioners who traverse without discipline.</p>
+<h3 id="the-dependency-graph-what-it-is">The Dependency Graph: What It Is</h3>
+<p>The full set of <code>depends_on</code> and <code>required_by</code> relationships across all modules in the system constitutes the <strong>dependency graph</strong>. It is a directed acyclic graph (DAG) — directed because dependencies have direction (A depends on B ≠ B depends on A), and acyclic because a module cannot depend on itself, directly or through a chain.</p>
+<p>The dependency graph has a natural orientation: it flows from <code>surface</code> down through <code>operational</code> and <code>structural</code> to <code>foundational</code>. Surface modules depend on operational modules, which depend on structural modules, which depend on foundational anchors. Nothing flows upward.</p>
+<h3 id="forward-traversal-surface-to-foundation">Forward Traversal: Surface to Foundation</h3>
+<p>Forward traversal asks: <em>given this surface output, what foundational anchors support it?</em></p>
+<p>This is the direction you traverse when you want to understand <em>why</em> an output is valid — what the chain of commitments and specifications is that makes this output legitimate.</p>
+<p><strong>The procedure:</strong></p>
+<ol>
+<li>Start at the surface module (or the output's producing module).</li>
+<li>Read its <code>module_links.json</code>. Note every entry in <code>depends_on</code>.</li>
+<li>For each dependency, read <em>its</em> <code>module_links.json</code>. Note its <code>depends_on</code>.</li>
+<li>Repeat until you reach modules whose <code>depends_on</code> list is empty or contains only <code>foundational</code>-layer modules.</li>
+<li>The set of <code>foundational</code>-layer modules at the bottom of the chain are the anchors supporting the original output.</li>
+</ol>
+<p><strong>Worked Example — Forward Traversal:</strong></p>
+<p>Starting module: <code>clarity-operator-spectral</code> (role: <code>operator</code>, layer: <code>operational</code>)</p>
+<pre><code>clarity-operator-spectral
+  └─ depends_on:
+       ├─ rtt-operator-core          (operational)
+       │    └─ depends_on:
+       │         ├─ rtt-anchor-definition           (foundational) ✓ ANCHOR
+       │         ├─ session-grammar-field-input      (structural)
+       │         │    └─ depends_on:
+       │         │         └─ session-grammar-anchor (foundational) ✓ ANCHOR
+       │         └─ session-grammar-field-output-format (structural)
+       │              └─ depends_on:
+       │                   └─ session-grammar-anchor (foundational) ✓ ANCHOR
+       └─ nawderian-theorem-validator-pulses (foundational) ✓ ANCHOR
+</code></pre>
+<p><strong>Result of forward traversal:</strong> <code>clarity-operator-spectral</code> ultimately rests on three foundational anchors:
+1. <code>rtt-anchor-definition</code> — the definition of RTT itself
+2. <code>session-grammar-anchor</code> — the 9-field session grammar specification
+3. <code>nawderian-theorem-validator-pulses</code> — the Spectral Clarity theorem</p>
+<p>Any output produced by <code>clarity-operator-spectral</code> is only as valid as these three anchors. If you question the output, you must question one of these anchors — and questioning a foundational anchor is a canon-level matter, not a module-level one.</p>
+<h3 id="backward-traversal-foundation-to-surface">Backward Traversal: Foundation to Surface</h3>
+<p>Backward traversal asks: <em>given this foundational anchor, what surface modules ultimately express it?</em></p>
+<p>This is the direction you traverse when you want to understand the <em>impact</em> of a foundational module — everything in the system that will be affected if the anchor changes.</p>
+<p><strong>The procedure:</strong></p>
+<ol>
+<li>Start at the foundational anchor.</li>
+<li>Read its <code>module_links.json</code>. Note every entry in <code>required_by</code>.</li>
+<li>For each dependent, read <em>its</em> <code>module_links.json</code>. Note its <code>required_by</code>.</li>
+<li>Repeat until you reach modules whose <code>required_by</code> list is empty (surface modules or terminal operational modules with no further dependents).</li>
+<li>The full set of visited modules is the <strong>impact surface</strong> of the foundational anchor.</li>
+</ol>
+<p><strong>Why backward traversal matters for change management:</strong></p>
+<p>Before modifying any module — especially a foundational or structural one — run a backward traversal to determine its full impact surface. A change to a foundational anchor may cascade through dozens of operational and surface modules. If you do not traverse the impact surface before making the change, you will produce invisible inconsistencies that are extremely difficult to diagnose after the fact.</p>
+<p>This is the single most important practice in module maintenance.</p>
+<h3 id="identifying-hidden-dependencies">Identifying Hidden Dependencies</h3>
+<p>A <strong>hidden dependency</strong> is a dependency that does not appear in <code>module_links.json</code> but functionally exists — because the module's prose makes claims that require another module to be valid.</p>
+<p>Hidden dependencies arise from authoring errors: the author of <code>module.md</code> made a claim that depends on another module's content but forgot to declare it in <code>module_links.json</code>. The structural specification is incomplete.</p>
+<p><strong>How to detect a hidden dependency:</strong></p>
+<ol>
+<li>Read <code>module.md</code> carefully.</li>
+<li>For every claim, ask: <em>does this claim require any module that is not in <code>depends_on</code>?</em></li>
+<li>If yes, you have found a hidden dependency.</li>
+</ol>
+<p><strong>What to do with a hidden dependency:</strong></p>
+<p>Do not silently absorb it. Report it as a structural bug. The fix is to add the missing module to <code>depends_on</code> in <code>module_links.json</code>, verify the dependency chain does not create a cycle, and increment the module's version.</p>
+<h3 id="cycle-detection">Cycle Detection</h3>
+<p>The dependency graph must be acyclic. A cycle occurs when Module A depends on Module B, which depends on Module C, which depends on Module A. Cycles are structural failures — they mean the system cannot resolve the dependency chain, because each module in the cycle requires another to be valid first.</p>
+<p><strong>How to detect a cycle:</strong></p>
+<p>During any traversal, maintain a visited set. If you encounter a module ID you have already visited in the current traversal path, you have detected a cycle. Stop. Do not attempt to resolve it by continuing — the cycle must be broken at the authoring level.</p>
+<p><strong>How to break a cycle:</strong></p>
+<p>Find the dependency in the cycle that is the weakest structural claim — the one that could be expressed as a <code>related</code> link rather than a <code>depends_on</code> link. Remove it from <code>depends_on</code> and add it to <code>related</code>. This breaks the cycle while preserving the editorial relationship.</p>
+<hr>
+<h2 id="chapter-9-module-groups-and-modules_groupjson">Chapter 9 — Module Groups and <code>modules_group.json</code></h2>
+<p>Individual modules are the atoms of the system. Module groups are the molecules — clusters of related modules that share a domain, purpose, or structural region. Groups are the primary navigation unit for practitioners who know what domain they are working in but not which specific modules apply.</p>
+<h3 id="what-modules_groupjson-is">What <code>modules_group.json</code> Is</h3>
+<p><code>modules_group.json</code> is a single file at the repository root that defines all module groups in the system. It is not a module itself — it is a registry of groupings.</p>
+<pre><code class="language-json">{
+  &quot;groups&quot;: [
+    {
+      &quot;id&quot;: &quot;core-engine&quot;,
+      &quot;label&quot;: &quot;Core Engine&quot;,
+      &quot;description&quot;: &quot;The foundational and operational modules that constitute the RTT engine and its primary operators.&quot;,
+      &quot;layer_affinity&quot;: &quot;foundational&quot;,
+      &quot;modules&quot;: [
+        &quot;rtt-anchor-definition&quot;,
+        &quot;rtt-operator-core&quot;,
+        &quot;rtt-operator-recursive-extension&quot;,
+        &quot;rtt-map-full-pass-anatomy&quot;,
+        &quot;rtt-lens-temporal&quot;,
+        &quot;rtt-lens-stakeholder&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;session-grammar&quot;,
+      &quot;label&quot;: &quot;Session Grammar&quot;,
+      &quot;description&quot;: &quot;The nine field modules and their governing anchor that constitute the complete session grammar specification.&quot;,
+      &quot;layer_affinity&quot;: &quot;structural&quot;,
+      &quot;modules&quot;: [
+        &quot;session-grammar-anchor&quot;,
+        &quot;session-grammar-field-session-id&quot;,
+        &quot;session-grammar-field-intent&quot;,
+        &quot;session-grammar-field-scope&quot;,
+        &quot;session-grammar-field-active-modules&quot;,
+        &quot;session-grammar-field-role-context&quot;,
+        &quot;session-grammar-field-layer-context&quot;,
+        &quot;session-grammar-field-input&quot;,
+        &quot;session-grammar-field-output-format&quot;,
+        &quot;session-grammar-field-validator&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;clarity-system&quot;,
+      &quot;label&quot;: &quot;Clarity System&quot;,
+      &quot;description&quot;: &quot;The Spectral Clarity model, the Nawderian Theorem of Validator Pulses, and all validators derived from them.&quot;,
+      &quot;layer_affinity&quot;: &quot;operational&quot;,
+      &quot;modules&quot;: [
+        &quot;nawderian-theorem-validator-pulses&quot;,
+        &quot;clarity-operator-spectral&quot;,
+        &quot;clarity-validator-rtt-output&quot;,
+        &quot;clarity-validator-session-output&quot;,
+        &quot;clarity-lens-signal-coherence&quot;,
+        &quot;clarity-map-validator-pulse-anatomy&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+<h3 id="reading-a-group-entry">Reading a Group Entry</h3>
+<p>Each group entry has five fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What It Holds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The group's unique identifier — used in session <code>active_modules</code> when activating a full group</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Human-readable name</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>What the group covers and why these modules belong together</td>
+</tr>
+<tr>
+<td><code>layer_affinity</code></td>
+<td>The layer that best characterizes this group's center of gravity. Not all modules in the group are at this layer, but most are.</td>
+</tr>
+<tr>
+<td><code>modules</code></td>
+<td>Ordered list of module IDs in this group. Order is significant: it reflects recommended reading order for newcomers to the group.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="group-membership-rules">Group Membership Rules</h3>
+<p>A module can belong to more than one group. This is intentional — some modules sit at the intersection of two domains and legitimately serve both.</p>
+<p>However, a module's primary group should be determinable from its <code>module.json</code> alone. The <code>role</code> and <code>layer</code> combination, combined with the <code>scope</code> field, should make it clear which group is the primary home. Secondary group memberships are auxiliary.</p>
+<p>If a module belongs to three or more groups, it is likely a signal that the module's scope is too wide. Consider splitting it.</p>
+<h3 id="constructing-a-new-group">Constructing a New Group</h3>
+<p>When a new domain of modules emerges that does not fit any existing group, a new group must be created. The process:</p>
+<p><strong>Step 1: Establish the group's scope.</strong>
+Write a one-paragraph description of what the group covers and what it does not. Apply RTT to this description before finalizing it — the three faces will surface gaps in the scope definition.</p>
+<p><strong>Step 2: Identify candidate modules.</strong>
+Search the module registry for modules whose <code>scope</code> field intersects with the new group's description. Cast wide at first; you will narrow.</p>
+<p><strong>Step 3: Verify layer affinity.</strong>
+Determine the layer that characterizes most of the candidate modules. If the candidates are spread evenly across three or more layers, the group's scope is too wide — split it into two groups with clearer layer affinity.</p>
+<p><strong>Step 4: Determine membership.</strong>
+For each candidate module, ask: does this module's <code>scope</code> fall primarily within the new group's description? If yes, include it. If its scope falls at the boundary, add it with a note that it may belong to an adjacent group as well.</p>
+<p><strong>Step 5: Establish the reading order.</strong>
+Order the <code>modules</code> array from foundational to surface within the group. Practitioners new to the group should be able to read in array order without encountering forward dependencies.</p>
+<p><strong>Step 6: Add to <code>modules_group.json</code>.</strong>
+Write the new group entry, increment the file's version stamp, and submit for ratification.</p>
+<hr>
+<h2 id="chapter-10-finding-relevant-modules-for-a-problem">Chapter 10 — Finding Relevant Modules for a Problem</h2>
+<p>The system contains approximately 120 named modules across more than a dozen groups. When a practitioner encounters a novel problem, the question is not "which module do I use?" — it is "how do I find the modules that apply to this problem without reading all 120?"</p>
+<p>This chapter defines the <strong>module discovery protocol</strong> — the structured procedure for identifying relevant modules from a problem statement.</p>
+<h3 id="the-module-discovery-protocol">The Module Discovery Protocol</h3>
+<p>The protocol has four stages. Each stage narrows the candidate set. By the end, you have a short list of directly relevant modules and a clear picture of what else needs to be active in the session to support them.</p>
+<hr>
+<p><strong>Stage 1: Parse the problem with RTT.</strong></p>
+<p>Before touching the module system, apply RTT to the problem statement itself.</p>
+<ul>
+<li><em>Generative face:</em> What situation gave rise to this problem? What is its origin context?</li>
+<li><em>Present face:</em> What is the problem, right now, in its current form? What is structurally broken or missing?</li>
+<li><em>Terminal face:</em> What does the problem need to become? What is the desired output state?</li>
+</ul>
+<p>The terminal face is the most important for module discovery — it tells you what the session needs to produce. The output type determines which role of module you need most. For example:</p>
+<table>
+<thead>
+<tr>
+<th>Terminal face output type</th>
+<th>Primary role to look for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A structural pattern</td>
+<td><code>grammar</code></td>
+</tr>
+<tr>
+<td>A repeatable procedure</td>
+<td><code>protocol</code></td>
+</tr>
+<tr>
+<td>A transformed version of the input</td>
+<td><code>operator</code></td>
+</tr>
+<tr>
+<td>An evaluation of quality or correctness</td>
+<td><code>validator</code></td>
+</tr>
+<tr>
+<td>An organizing view of a domain</td>
+<td><code>map</code> or <code>index</code></td>
+</tr>
+<tr>
+<td>An interpretive frame</td>
+<td><code>lens</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Stage 2: Determine the operating layer.</strong></p>
+<p>Ask: at what depth does this problem need to be solved?</p>
+<ul>
+<li>If the problem is about what an output <em>says</em> or <em>looks like</em> → <code>surface</code></li>
+<li>If the problem is about how things are <em>structured or related</em> → <code>structural</code></li>
+<li>If the problem is about how a <em>session or process should run</em> → <code>operational</code></li>
+<li>If the problem is about <em>what the system fundamentally commits to</em> → <code>foundational</code></li>
+<li>If the problem is about <em>understanding the system itself</em> → <code>meta</code></li>
+</ul>
+<p>The answer tells you which layer's modules are the primary candidates.</p>
+<hr>
+<p><strong>Stage 3: Browse the relevant groups.</strong></p>
+<p>With a primary role and primary layer identified, open <code>modules_group.json</code> and find groups whose <code>layer_affinity</code> matches the operating layer. Within those groups, look for modules whose <code>role</code> in <code>module.json</code> matches the primary role from Stage 1.</p>
+<p>Read the <code>scope</code> fields of the matching candidates. The scope field is your filter — a module whose scope does not directly address the terminal face of your problem is not the right module, even if its role and layer match.</p>
+<p>Narrow to a short list of 2–5 candidate modules.</p>
+<hr>
+<p><strong>Stage 4: Trace the dependency chains of your candidates.</strong></p>
+<p>For each candidate module on your short list, run a forward traversal (Chapter 8) to determine its full dependency chain. The union of all dependency chains across your short list is the minimum module set your session must include in <code>active_modules</code>.</p>
+<p>Add this full set to your session's <code>active_modules</code> field. You are now ready to initialize the session.</p>
+<hr>
+<h3 id="worked-example-assembling-a-module-set">Worked Example: Assembling a Module Set</h3>
+<p><strong>Problem statement:</strong> <em>"I have a draft output from a previous session. I need to evaluate whether it is clear — not whether it is well-written, but whether it is structurally coherent and meets the correctness criteria of the system."</em></p>
+<p><strong>Stage 1 — RTT parse:</strong>
+- <em>Generative:</em> A prior session produced an output. The output's validity is uncertain.
+- <em>Present:</em> An unvalidated output exists. The gap is the absence of a systematic clarity evaluation.
+- <em>Terminal:</em> A structured assessment of the output's clarity — stating which criteria it satisfies, which it does not, and which require additional input.</p>
+<p>Terminal output type: an evaluation of quality/correctness → primary role: <strong><code>validator</code></strong>.</p>
+<p><strong>Stage 2 — Operating layer:</strong>
+The problem is about <em>running a check on a session output</em> → <strong><code>operational</code></strong> layer.</p>
+<p><strong>Stage 3 — Browse groups:</strong>
+Looking for <code>validator</code>-role modules in groups with <code>operational</code> layer affinity. The <code>clarity-system</code> group matches. Candidate modules from that group:</p>
+<ul>
+<li><code>clarity-validator-rtt-output</code> — <em>scope: validates that a single RTT pass output contains all three structural faces and that each face is internally coherent.</em></li>
+<li><code>clarity-validator-session-output</code> — <em>scope: validates that a complete session output satisfies the session's declared intent, scope, and output-format specification.</em></li>
+</ul>
+<p>The problem involves a session output (not just a single RTT pass output), so <code>clarity-validator-session-output</code> is the primary module.</p>
+<p><strong>Stage 4 — Trace dependencies:</strong></p>
+<pre><code>clarity-validator-session-output
+  └─ depends_on:
+       ├─ nawderian-theorem-validator-pulses    (foundational) ✓
+       ├─ session-grammar-anchor               (foundational) ✓
+       ├─ session-grammar-field-intent         (structural)
+       │    └─ depends_on: session-grammar-anchor ✓ (already included)
+       ├─ session-grammar-field-scope          (structural)
+       │    └─ depends_on: session-grammar-anchor ✓ (already included)
+       └─ session-grammar-field-output-format  (structural)
+            └─ depends_on: session-grammar-anchor ✓ (already included)
+</code></pre>
+<p><strong>Minimum module set for <code>active_modules</code>:</strong></p>
+<pre><code>- clarity-validator-session-output
+- nawderian-theorem-validator-pulses
+- session-grammar-anchor
+- session-grammar-field-intent
+- session-grammar-field-scope
+- session-grammar-field-output-format
+</code></pre>
+<p>The session is now ready to initialize with a fully resolved <code>active_modules</code> set.</p>
+<hr>
+<h2 id="chapter-11-identifying-gaps-and-proposing-new-modules">Chapter 11 — Identifying Gaps and Proposing New Modules</h2>
+<p>A gap is a module that should exist in the system but does not. Gaps are not failures — they are the system's growth frontier. Every gap identified and filled makes the system more complete.</p>
+<p>This chapter teaches how to detect gaps, distinguish true gaps from apparent ones, and propose new modules in valid schema.</p>
+<h3 id="what-a-gap-looks-like">What a Gap Looks Like</h3>
+<p>A gap manifests in one of three ways:</p>
+<p><strong>Type 1: A missing dependency.</strong> During a forward traversal, you discover that a module's <code>depends_on</code> list references a module ID that does not exist in the registry. The dependency is declared but the module has not been authored. This is a hard gap — the module with the missing dependency is incomplete until the gap is filled.</p>
+<p><strong>Type 2: A missing role/layer intersection.</strong> During the module discovery protocol, you determine that your problem requires a <code>protocol</code>-role module at the <code>structural</code> layer in a specific domain — and no such module exists. The system can handle your problem, but awkwardly, using modules that are adjacent but not precise. This is a soft gap — the system functions, but a targeted module would improve precision and reproducibility.</p>
+<p><strong>Type 3: A missing group.</strong> A set of related modules exists in the registry but no group has been defined to cluster them. Practitioners cannot find them efficiently because <code>modules_group.json</code> has no entry that surfaces them together. This is a navigational gap — the modules exist, but the discovery path is broken.</p>
+<h3 id="distinguishing-true-gaps-from-apparent-ones">Distinguishing True Gaps from Apparent Ones</h3>
+<p>Before proposing a new module, verify the gap is real.</p>
+<p><strong>An apparent gap</strong> occurs when the needed module exists but is named differently than expected, or is in a group you did not think to check. Before declaring a gap, run a broad search of <code>modules_group.json</code> and the module registry using synonyms and adjacent terms. If you find a module with a different ID but a matching scope, there is no gap — there is a discovery path issue (consider proposing a <code>bridge</code> or an <code>index</code> update instead).</p>
+<p><strong>A true gap</strong> is confirmed when:
+1. No existing module has a scope that covers the needed content.
+2. The needed content cannot be reasonably served by combining two adjacent modules.
+3. The needed content is genuinely within the system's canon — it is not an extension that violates the five commitments.</p>
+<h3 id="the-gap-identification-protocol">The Gap Identification Protocol</h3>
+<p>When you suspect a gap, apply this protocol before acting:</p>
+<ol>
+<li>
+<p><strong>Articulate the gap precisely.</strong> Write one sentence stating what module is missing, including its role, layer, and scope. If you cannot write this sentence, the gap is not yet clear enough to fill.</p>
+</li>
+<li>
+<p><strong>Search for alternatives.</strong> Browse all groups with the relevant <code>layer_affinity</code>. Read scope fields of all modules in the relevant role category. Exhaust alternatives before concluding the gap is real.</p>
+</li>
+<li>
+<p><strong>Apply RTT to the gap.</strong> What gave rise to this gap (generative face)? What is the gap's current form — what exactly is missing (present face)? What would filling the gap enable (terminal face)? The terminal face is the justification for the new module.</p>
+</li>
+<li>
+<p><strong>Determine the new module's four anchoring decisions</strong> (see next section).</p>
+</li>
+<li>
+<p><strong>Draft the proposal</strong> and submit it for ratification.</p>
+</li>
+</ol>
+<h3 id="the-four-decisions-before-authoring">The Four Decisions Before Authoring</h3>
+<p>Every new module requires four decisions to be made and committed to before any content is written. These four decisions determine the module's position in the system — and once the module is in the registry, changing these decisions is a major structural event.</p>
+<p><strong>Decision 1: Role.</strong> What functional type is this module? Refer to the Role enum. If you cannot identify a single role without ambiguity, the module's purpose is not yet clear enough — clarify it before proceeding.</p>
+<p><strong>Decision 2: Layer.</strong> At what depth does this module live? Refer to the Layer enum. Apply the dependency rule: the module will depend on modules at this layer and below. It will not depend on modules above. Does this constraint work for the content you need to express?</p>
+<p><strong>Decision 3: Scope.</strong> Write the scope statement. One to three sentences, precisely bounding what the module claims to know. The scope statement is a promise. If you find yourself hedging — "this module covers X and sometimes Y and also touches on Z" — you have not decided on the scope. Decide.</p>
+<p><strong>Decision 4: Dependencies.</strong> What modules does this module depend on? List every module whose content must be valid for this module's content to be meaningful. Trace each dependency to verify it exists in the registry. If a dependency does not exist, you have discovered a nested gap — fill it first.</p>
+<h3 id="proposing-a-new-module-the-minimum-valid-schema">Proposing a New Module: The Minimum Valid Schema</h3>
+<p>A module proposal is a set of four draft files. The minimum valid content for a proposal:</p>
+<p><strong>Draft <code>module.json</code>:</strong></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;[domain]-[role-short]-[descriptor]&quot;,
+  &quot;label&quot;: &quot;[Human-Readable Label]&quot;,
+  &quot;role&quot;: &quot;[role-from-enum]&quot;,
+  &quot;layer&quot;: &quot;[layer-from-enum]&quot;,
+  &quot;scope&quot;: &quot;[Precise one-to-three sentence scope statement.]&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;dependencies&quot;: [&quot;[list]&quot;, &quot;[of]&quot;, &quot;[dependency]&quot;, &quot;[ids]&quot;],
+  &quot;tags&quot;: [&quot;[relevant]&quot;, &quot;[tags]&quot;]
+}
+</code></pre>
+<p><strong>Draft <code>module_links.json</code>:</strong></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;[same-id-as-module.json]&quot;,
+  &quot;depends_on&quot;: [&quot;[same as dependencies in module.json]&quot;],
+  &quot;required_by&quot;: [],
+  &quot;related&quot;: [&quot;[adjacent modules — editorial, not structural]&quot;],
+  &quot;supersedes&quot;: [],
+  &quot;superseded_by&quot;: null
+}
+</code></pre>
+<blockquote>
+<p>Note: <code>required_by</code> is always empty in a proposal — no existing modules can reference a module that does not yet exist. It will be populated as other modules are updated to declare this new module as a dependency.</p>
+</blockquote>
+<p><strong>Draft <code>module.md</code>:</strong>
+Write the canonical prose content — bounded strictly to the declared scope. A draft module should include at minimum: a definition of the module's core concept, a worked example, and any constraints on how the module may be used.</p>
+<p><strong>Draft <code>module_session.json</code>:</strong>
+Specify the invocation syntax, input schema, output schema, valid layers, valid roles, and validator ID. If the validator for this module does not yet exist, flag this in the proposal — it is a nested gap.</p>
+<h3 id="id-naming-convention">ID Naming Convention</h3>
+<p>Module IDs follow the pattern: <code>[domain]-[role-short]-[descriptor]</code></p>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>domain</code></td>
+<td>The primary domain or group this module belongs to (e.g., <code>rtт</code>, <code>session-grammar</code>, <code>clarity</code>)</td>
+</tr>
+<tr>
+<td><code>role-short</code></td>
+<td>A short form of the role (e.g., <code>op</code> for operator, <code>anch</code> for anchor, <code>proto</code> for protocol, <code>val</code> for validator)</td>
+</tr>
+<tr>
+<td><code>descriptor</code></td>
+<td>A specific, unique descriptor for this module within its domain and role</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:
+- <code>rtт-op-core</code> — RTT domain, operator role, core variant
+- <code>session-grammar-field-intent</code> — session grammar domain, field role, intent descriptor
+- <code>clarity-val-session-output</code> — clarity domain, validator role, session output descriptor</p>
+<p>IDs are kebab-case, lowercase, and must be unique across the entire registry. Choose the ID carefully — it is permanent.</p>
+<hr>
+<h2 id="chapter-12-the-module-registry-orientation">Chapter 12 — The Module Registry: Orientation</h2>
+<p>The module registry is the full set of approximately 120 active modules in the TriadicFrameworks system. This chapter provides an orientation to the registry's major regions — not a comprehensive index (that lives at <a href="./registry"><code>/docs/book/registry</code></a>), but a practitioner's map for understanding where things are and how to navigate to them.</p>
+<h3 id="the-major-groups">The Major Groups</h3>
+<p>The registry is organized into 12 primary groups and several auxiliary groups. The primary groups are:</p>
+<hr>
+<p><strong><code>core-engine</code></strong> — Layer affinity: <code>foundational</code></p>
+<p>The RTT definition anchor, the RTT operator suite (core, recursive extension, multi-depth), the RTT lens suite (temporal, stakeholder, spectral), and the RTT map modules. This is the system's innermost ring — everything else depends on something here.</p>
+<p><em>When to navigate here:</em> When you need to understand or invoke RTT at the mechanism level. When a session's outputs are inconsistent with expectation and you need to verify the engine is being applied correctly.</p>
+<hr>
+<p><strong><code>session-grammar</code></strong> — Layer affinity: <code>structural</code></p>
+<p>The session grammar anchor and all nine field modules. The grammar is specified here in complete form — each field as its own module with its own scope, type, validation rules, and default.</p>
+<p><em>When to navigate here:</em> When constructing or diagnosing a session. When a field value is ambiguous or contested. When you need the complete specification of a specific field's valid values.</p>
+<hr>
+<p><strong><code>clarity-system</code></strong> — Layer affinity: <code>operational</code></p>
+<p>The Nawderian Theorem of Validator Pulses, the Spectral Clarity operator, and all validators derived from the theorem. This group is invoked whenever an output needs formal clarity evaluation.</p>
+<p><em>When to navigate here:</em> When evaluating the quality of a session output. When a validator assessment is unclear and you need to trace its criteria back to the theorem.</p>
+<hr>
+<p><strong><code>operator-suite</code></strong> — Layer affinity: <code>operational</code></p>
+<p>All operator-role modules beyond the RTT operators. This includes the scope-check operator, the conflict-detection operator, the gap-identification operator, the dependency-trace operator, and the module-authoring operator.</p>
+<p><em>When to navigate here:</em> When you need to perform a specific transformation on an input and RTT alone is insufficient. When you need a procedural tool for a structural task.</p>
+<hr>
+<p><strong><code>protocol-suite</code></strong> — Layer affinity: <code>operational</code></p>
+<p>All protocol-role modules: session initialization, session closing, module authoring, conflict resolution, version-increment, and dependency-audit protocols.</p>
+<p><em>When to navigate here:</em> When you need a step-by-step procedure for a system maintenance or session management task.</p>
+<hr>
+<p><strong><code>validator-suite</code></strong> — Layer affinity: <code>operational</code></p>
+<p>All validator-role modules beyond those in the clarity system: scope validators, dependency validators, manifest completeness validators, and output-format validators.</p>
+<p><em>When to navigate here:</em> When a session output needs evaluation against a specific criterion other than Spectral Clarity. When you need to verify a module's structural integrity.</p>
+<hr>
+<p><strong><code>grammar-suite</code></strong> — Layer affinity: <code>structural</code></p>
+<p>All grammar-role modules: the session grammar (also in its own group), the operator invocation grammar, the module manifest grammar, the scope statement grammar, and the ID naming grammar.</p>
+<p><em>When to navigate here:</em> When you need to verify that a structural pattern — a session, a module, an invocation — is syntactically correct.</p>
+<hr>
+<p><strong><code>lens-suite</code></strong> — Layer affinity: <code>structural</code></p>
+<p>All lens-role modules: temporal, stakeholder, spectral, causal, and resolution-depth lenses.</p>
+<p><em>When to navigate here:</em> When a session needs an interpretive frame applied to its inputs or outputs. When you want to examine the same content from a different angle without changing the content.</p>
+<hr>
+<p><strong><code>map-suite</code></strong> — Layer affinity: <code>meta</code></p>
+<p>All map-role modules: the full RTT pass anatomy map, the module registry map, the dependency graph map, the session lifecycle map, and the clarity evaluation map.</p>
+<p><em>When to navigate here:</em> When you need a navigational view of a region of the system — not to invoke anything, but to understand how the pieces in that region relate to each other.</p>
+<hr>
+<p><strong><code>bridge-suite</code></strong> — Layer affinity: <code>structural</code></p>
+<p>All bridge-role modules. Bridges are narrow — each one connects exactly two adjacent regions of the system.</p>
+<p><em>When to navigate here:</em> When you are working across two module groups and need the defined translation layer between them.</p>
+<hr>
+<p><strong><code>anchor-suite</code></strong> — Layer affinity: <code>foundational</code></p>
+<p>All anchor-role modules not already captured in <code>core-engine</code> or <code>session-grammar</code>. These include the canon commitment anchors (one per canon commitment), the attribution anchor, and the clarity standard anchor.</p>
+<p><em>When to navigate here:</em> When you need to trace an output all the way to its foundational commitments. When a claim is contested and you need to ground it in the canon.</p>
+<hr>
+<p><strong><code>index-suite</code></strong> — Layer affinity: <code>meta</code></p>
+<p>All index-role modules: group indexes, domain indexes, and the master registry index. The master registry index is the closest thing the system has to a table of contents for all 120 modules.</p>
+<p><em>When to navigate here:</em> When you know the domain but not the specific module. When you are exploring a new region of the system for the first time.</p>
+<hr>
+<h3 id="registry-navigation-decision-tree">Registry Navigation Decision Tree</h3>
+<p>Use this decision tree to locate the right starting point in the registry for any problem:</p>
+<pre><code>What do you need?
+│
+├─ To understand a foundational concept
+│    └─ Start at: anchor-suite → core-engine
+│
+├─ To construct or diagnose a session
+│    └─ Start at: session-grammar → protocol-suite
+│
+├─ To transform an input
+│    └─ Start at: operator-suite → core-engine (RTT operators)
+│
+├─ To evaluate an output
+│    └─ Start at: clarity-system → validator-suite
+│
+├─ To interpret content from a new angle
+│    └─ Start at: lens-suite
+│
+├─ To understand how system regions relate
+│    └─ Start at: map-suite
+│
+├─ To verify structural correctness
+│    └─ Start at: grammar-suite → validator-suite
+│
+├─ To connect two system regions
+│    └─ Start at: bridge-suite
+│
+└─ To find a module in an unfamiliar domain
+     └─ Start at: index-suite → master registry index
+</code></pre>
+<h3 id="a-note-on-registry-growth">A Note on Registry Growth</h3>
+<p>The registry is not static. Modules are added, deprecated, and occasionally restructured as the system matures. When you return to the registry after time away, check the master registry index first — it carries a version stamp and a changelog that will tell you what has changed since your last visit.</p>
+<p>Never assume a module you remember from a previous session is still in its previous state. Always read <code>module.json</code> freshly. Version stamps exist for this reason.</p>
+<hr>
+<h2 id="exit-checklist-you-can-navigate-when">Exit Checklist — You Can Navigate When...</h2>
+<p>Before moving to Part III, verify you can answer every item below without referring back to this document.</p>
+<p><strong>On Reading a Module:</strong>
+- [ ] You can name the four files in the correct reading order and state why the order is non-negotiable.
+- [ ] You can read a <code>module.json</code> and extract: identity, role, layer, scope, version, status, and dependency list.
+- [ ] You can read a <code>module_links.json</code> and identify: upstream dependencies, downstream impact surface, editorial neighbors, and version lineage.
+- [ ] You can read a <code>module.md</code> within the constraints of the manifest — flagging any scope violations you detect.
+- [ ] You can read a <code>module_session.json</code> and construct a valid operator invocation from its syntax field.</p>
+<p><strong>On Dependency Traversal:</strong>
+- [ ] You can perform a forward traversal from a surface module to its foundational anchors.
+- [ ] You can perform a backward traversal from a foundational anchor to its full impact surface.
+- [ ] You can detect a hidden dependency and describe the correct fix.
+- [ ] You can detect a dependency cycle and describe how to break it.</p>
+<p><strong>On Module Groups:</strong>
+- [ ] You can read a group entry in <code>modules_group.json</code> and extract all five fields.
+- [ ] You know the three membership rules for groups.
+- [ ] You can construct a new group entry for a novel domain, applying the six-step procedure.</p>
+<p><strong>On Module Discovery:</strong>
+- [ ] You can apply the four-stage module discovery protocol to a novel problem.
+- [ ] You can determine a primary role from a problem's terminal face.
+- [ ] You can determine an operating layer from a problem's present face.
+- [ ] You can assemble a complete, dependency-resolved <code>active_modules</code> set for a session.</p>
+<p><strong>On Gaps and New Modules:</strong>
+- [ ] You can distinguish a true gap from an apparent one.
+- [ ] You can apply the gap identification protocol to a suspected gap.
+- [ ] You can make the four anchoring decisions required before authoring any module.
+- [ ] You can produce a minimum valid draft of all four module files.
+- [ ] You can construct a valid module ID following the naming convention.</p>
+<p><strong>On the Registry:</strong>
+- [ ] You can name all twelve primary groups and state each one's layer affinity.
+- [ ] You can use the registry navigation decision tree to identify a starting point for any problem.
+- [ ] You know the first thing to check when returning to the registry after time away.</p>
+<hr>
+<p><strong>If every box is checked, you can navigate the system without a guide.</strong></p>
+<p>→ <a href="./part-iii">Proceed to Part III — Apply</a></p>
+<hr>
+<p><em>TriadicFrameworks Book — <code>/docs/book/part-ii.md</code></em>
+<em>Authored by Nawder Loswin. AI-augmented authorship. All rights reserved.</em></p>
+  </main>
+</body>
+</html>

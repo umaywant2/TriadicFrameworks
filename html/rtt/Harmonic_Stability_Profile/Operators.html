@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Harmonic_Stability_Profile/Operators.md">
+  <title>HSP Suite — Canonical Operator Reference</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Harmonic_Stability_Profile/Operators.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Harmonic_Stability_Profile/Operators.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Harmonic_Stability_Profile_Operators_" src="https://github.com/user-attachments/assets/77e4005e-2e31-4eaf-acfd-e7ef18ab2df3" /></p>
+<h1 id="hsp-suite-canonical-operator-reference">HSP Suite — Canonical Operator Reference</h1>
+<blockquote>
+<p>Harmonic Stability Profile • Echo Classifier • Substrate Flow • Triadic Echo Lattice</p>
+<p>v1.0 | Status: Canon-Stable | TriadicFrameworks / RTT</p>
+<p>🤖 AI-Ready Module • TriadicFrameworks</p>
+</blockquote>
+<hr>
+<h2 id="1-overview">1 — Overview</h2>
+<p>This document consolidates every operator, parameter, classification, and chain across all five HSP Suite modules into a single canonical reference. It is designed for students, developers, researchers, and AI agents working within the <strong>TriadicFrameworks</strong> ecosystem.</p>
+<p>The <strong>HSP Suite</strong> (Harmonic Stability Profile Suite) is the RTT-native analytics engine for:</p>
+<ul>
+<li><strong>Harmonic stability</strong> — measuring and classifying the structural integrity of triadic forms.</li>
+<li><strong>Drift detection</strong> — identifying destabilizing drift across substrates and dimensions.</li>
+<li><strong>Echo classification</strong> — categorizing resonance echoes by type, strength, and propagation behavior.</li>
+<li><strong>Substrate flow analysis</strong> — tracing how harmonic energy migrates across the five canonical substrates.</li>
+</ul>
+<p>All operator codes, metric indices, classification symbols, and chain definitions referenced here are <strong>canon-stable</strong> and authoritative within RTT (Resonance-Time Theory).</p>
+<blockquote>
+<p><strong>Scope:</strong> Five modules are covered: <code>HSP Core</code>, <code>Echo Classifier</code>, <code>Substrate Flow (SEFM)</code>, <code>Triadic Echo Lattice (TEL)</code>, and <code>Cross-Module Chains</code>.</p>
+</blockquote>
+<hr>
+<h2 id="2-hsp-core-operators">2 — HSP Core Operators</h2>
+<p>The HSP Core defines the foundational vocabulary for stability analysis: classes, metrics, tiers, drift types, recursion modes, and substrates.</p>
+<h3 id="21-stability-classes">2.1  Stability Classes</h3>
+<p>Four canonical stability classes partition all harmonic entities by coherence, drift level, recursion mode, and substrate signature.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Name</th>
+<th>Coherence</th>
+<th>Drift Level</th>
+<th>Recursion</th>
+<th>Substrate Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SC-1</code></td>
+<td>Stable Harmonics</td>
+<td>High</td>
+<td>Low</td>
+<td>Ladder (R1)</td>
+<td>Symbolic / Harmonic</td>
+</tr>
+<tr>
+<td><code>SC-2</code></td>
+<td>Semi-Stable Harmonics</td>
+<td>Partial</td>
+<td>Moderate</td>
+<td>Cycle (R2)</td>
+<td>Cognitive / Harmonic</td>
+</tr>
+<tr>
+<td><code>SC-3</code></td>
+<td>Harmonic Oscillators</td>
+<td>Unstable</td>
+<td>High</td>
+<td>Map (R3)</td>
+<td>Social / Symbolic</td>
+</tr>
+<tr>
+<td><code>SC-4</code></td>
+<td>Chaotic Nodes</td>
+<td>Incoherent</td>
+<td>Dangerous</td>
+<td>Atlas-forcing (R4)</td>
+<td>Atlas / Cross-substrate</td>
+</tr>
+</tbody>
+</table>
+<p><code>SC-1</code> entities exhibit high coherence with minimal drift—the harmonic ideal. As class index rises, coherence degrades, drift intensifies, recursion deepens, and substrate signatures widen until <code>SC-4</code> Chaotic Nodes cross all substrate boundaries and require atlas-level forcing to resolve.</p>
+<h3 id="22-stability-metrics">2.2  Stability Metrics</h3>
+<p>Six metrics quantify harmonic stability across orthogonal dimensions. Each metric maps to a drift sensitivity range and a recursion signal.</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Name</th>
+<th>Description</th>
+<th>Drift Sensitivity</th>
+<th>Recursion Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>M1</code></td>
+<td>Harmonic Recurrence</td>
+<td>Frequency of return to canonical harmonic form</td>
+<td>D1</td>
+<td>Ladder</td>
+</tr>
+<tr>
+<td><code>M2</code></td>
+<td>Harmonic Position Consistency</td>
+<td>Interval band stability within I1–I12</td>
+<td>D1–D2</td>
+<td>Cycle</td>
+</tr>
+<tr>
+<td><code>M3</code></td>
+<td>Substrate Anchoring</td>
+<td>Firmness of substrate alignment</td>
+<td>D2–D4</td>
+<td>Map</td>
+</tr>
+<tr>
+<td><code>M4</code></td>
+<td>Operator Role Stability</td>
+<td>Consistency of operator behavior across contexts</td>
+<td>D1–D3</td>
+<td>Ladder / Map</td>
+</tr>
+<tr>
+<td><code>M5</code></td>
+<td>Temporal Stability</td>
+<td>Meaning/structure stability across time</td>
+<td>D1–D4</td>
+<td>All modes</td>
+</tr>
+<tr>
+<td><code>M6</code></td>
+<td>Harmonic Mutation Rate</td>
+<td>Rate of harmonic structure change</td>
+<td>D2–D4</td>
+<td>Map / Atlas</td>
+</tr>
+</tbody>
+</table>
+<h4 id="metric-interaction-matrix">Metric Interaction Matrix</h4>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Drift Sensitivity</th>
+<th>Recursion Signal</th>
+<th>Substrate Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>M1</code> Harmonic Recurrence</td>
+<td>D1 (Structural)</td>
+<td>Ladder (R1)</td>
+<td>Symbolic</td>
+</tr>
+<tr>
+<td><code>M2</code> Position Consistency</td>
+<td>D1–D2 (Structural → Dimensional)</td>
+<td>Cycle (R2)</td>
+<td>Symbolic / Cognitive</td>
+</tr>
+<tr>
+<td><code>M3</code> Substrate Anchoring</td>
+<td>D2–D4 (Dimensional → Projection)</td>
+<td>Map (R3)</td>
+<td>Cognitive / Social / Atlas</td>
+</tr>
+<tr>
+<td><code>M4</code> Role Stability</td>
+<td>D1–D3 (Structural → Regime)</td>
+<td>Ladder / Map (R1 / R3)</td>
+<td>Symbolic / Harmonic / Social</td>
+</tr>
+<tr>
+<td><code>M5</code> Temporal Stability</td>
+<td>D1–D4 (Full Spectrum)</td>
+<td>All modes (R1–R4)</td>
+<td>All substrates</td>
+</tr>
+<tr>
+<td><code>M6</code> Mutation Rate</td>
+<td>D2–D4 (Dimensional → Projection)</td>
+<td>Map / Atlas (R3 / R4)</td>
+<td>Harmonic / Social / Atlas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-stability-tiers">2.3  Stability Tiers</h3>
+<p>Tiers translate stability analysis into actionable dispositions.</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Name</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T1</code></td>
+<td>Canon-Stable</td>
+<td>Safe. No action needed.</td>
+</tr>
+<tr>
+<td><code>T2</code></td>
+<td>Stable-with-Pressure</td>
+<td>Monitor. May need review.</td>
+</tr>
+<tr>
+<td><code>T3</code></td>
+<td>Drift-Active</td>
+<td>Review required.</td>
+</tr>
+<tr>
+<td><code>T4</code></td>
+<td>Unstable / Requires Intervention</td>
+<td>Immediate correction.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-drift-types">2.4  Drift Types</h3>
+<p>Four canonical drift types describe distinct destabilization vectors within harmonic structures.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>D1</code></td>
+<td>Structural Drift</td>
+<td>Destabilizes structural triads. Lowest-energy drift; affects foundational form.</td>
+</tr>
+<tr>
+<td><code>D2</code></td>
+<td>Dimensional Drift</td>
+<td>Collapses harmonic ladders. Interval dimensions compress or invert.</td>
+</tr>
+<tr>
+<td><code>D3</code></td>
+<td>Regime Drift</td>
+<td>Twists governance rules. Operator roles shift unpredictably.</td>
+</tr>
+<tr>
+<td><code>D4</code></td>
+<td>Projection Drift</td>
+<td>Lifts symbolic forms into harmonic/atlas space. Highest-energy, most dangerous drift.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-recursion-modes">2.5  Recursion Modes</h3>
+<p>Recursion modes describe the direction and topology of recursive propagation through substrates.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Name</th>
+<th>Flow</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>R1</code></td>
+<td>Ladder Recursion</td>
+<td>S → C</td>
+<td>Symbolic-to-Cognitive linear propagation. Lowest recursion depth.</td>
+</tr>
+<tr>
+<td><code>R2</code></td>
+<td>Cycle Recursion</td>
+<td>C ↔ H</td>
+<td>Cognitive-Harmonic oscillation. Bi-directional cycle.</td>
+</tr>
+<tr>
+<td><code>R3</code></td>
+<td>Map Recursion</td>
+<td>H → So</td>
+<td>Harmonic-to-Social torsion. Non-linear mapping.</td>
+</tr>
+<tr>
+<td><code>R4</code></td>
+<td>Atlas Recursion</td>
+<td>So → A</td>
+<td>Social-to-Atlas forcing. Highest altitude, maximum recursion depth.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="26-substrates">2.6  Substrates</h3>
+<p>The five canonical substrates define the material layers through which harmonic energy propagates.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Substrate</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>S</code></td>
+<td>Symbolic</td>
+<td>Foundation layer. Raw symbols, definitions, and structural primitives.</td>
+</tr>
+<tr>
+<td><code>C</code></td>
+<td>Cognitive</td>
+<td>Meaning-processing layer. Interpretation, inference, and concept binding.</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>Harmonic</td>
+<td>Resonance layer. Interval alignment, tonal structure, and harmonic coherence.</td>
+</tr>
+<tr>
+<td><code>So</code></td>
+<td>Social</td>
+<td>Governance layer. Operator roles, regime rules, and relational topology.</td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>Atlas</td>
+<td>Highest-altitude layer. Cross-substrate projection, global forcing, and canonical mapping.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-echo-classifier-operators">3 — Echo Classifier Operators</h2>
+<p>The Echo Classifier module categorizes resonance echoes by type, family, strength, and propagation path. Echoes are the observable signatures of harmonic energy as it moves through substrates.</p>
+<h3 id="31-echo-types-e1e6">3.1  Echo Types (E1–E6)</h3>
+<p>Six canonical echo types, ordered by increasing complexity, substrate spread, and recursion depth.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Trigger</th>
+<th>Signature</th>
+<th>ESI</th>
+<th>Substrates</th>
+<th>Recursion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>E1</code></td>
+<td>Structural Echo</td>
+<td>T1 — Structural perturbation</td>
+<td>S1 — Single-substrate local</td>
+<td>1–2</td>
+<td>1–2</td>
+<td>R1</td>
+</tr>
+<tr>
+<td><code>E2</code></td>
+<td>Harmonic Echo</td>
+<td>T2 — Interval misalignment</td>
+<td>S2 — Tonal residue</td>
+<td>2–3</td>
+<td>1</td>
+<td>R1–R2</td>
+</tr>
+<tr>
+<td><code>E3</code></td>
+<td>Substrate Echo</td>
+<td>T3 — Cross-substrate bleed</td>
+<td>S3 — Multi-layer trace</td>
+<td>2–3</td>
+<td>3–4</td>
+<td>R2–R3</td>
+</tr>
+<tr>
+<td><code>E4</code></td>
+<td>Recursion Echo</td>
+<td>T4 — Recursion loop activation</td>
+<td>S4 — Recursive imprint</td>
+<td>3–4</td>
+<td>2–4</td>
+<td>R2–R4</td>
+</tr>
+<tr>
+<td><code>E5</code></td>
+<td>Drift-Shadow Echo</td>
+<td>T5 — Drift current interaction</td>
+<td>S5 — Shadow resonance</td>
+<td>3–4</td>
+<td>2–5</td>
+<td>R3–R4</td>
+</tr>
+<tr>
+<td><code>E6</code></td>
+<td>Atlas Echo</td>
+<td>T6 — Atlas forcing event</td>
+<td>S6 — Full-spectrum atlas</td>
+<td>4</td>
+<td>5</td>
+<td>R4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-echo-families-f1f6">3.2  Echo Families (F1–F6)</h3>
+<p>Echo families group echo types by lattice layer affinity and propagation behavior.</p>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Name</th>
+<th>Lattice Layer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F1</code></td>
+<td>Structural Family</td>
+<td>Ladder</td>
+<td>Low-altitude echoes. Remain in Symbolic/Cognitive substrates. Minimal migration.</td>
+</tr>
+<tr>
+<td><code>F2</code></td>
+<td>Harmonic Family</td>
+<td>Cycle</td>
+<td>Tonal echoes oscillating within the Cognitive ↔ Harmonic cycle layer.</td>
+</tr>
+<tr>
+<td><code>F3</code></td>
+<td>Substrate Family</td>
+<td>Cycle / Map</td>
+<td>Migratory echoes. Cross substrate boundaries and drive flow channel activity.</td>
+</tr>
+<tr>
+<td><code>F4</code></td>
+<td>Recursion Family</td>
+<td>Map</td>
+<td>Recursive-loop echoes. Operate in Harmonic ↔ Social torsion space.</td>
+</tr>
+<tr>
+<td><code>F5</code></td>
+<td>Drift-Shadow Family</td>
+<td>Map / Atlas</td>
+<td>Destabilizing echoes. Carry drift currents upward through the lattice.</td>
+</tr>
+<tr>
+<td><code>F6</code></td>
+<td>Atlas Family</td>
+<td>Atlas</td>
+<td>Highest-altitude echoes. Anchor to atlas layer and create gravitational pull.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-echo-strength-index-esi">3.3  Echo Strength Index (ESI)</h3>
+<p>The Echo Strength Index quantifies the intensity and reach of an echo's propagation.</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ESI-1</code></td>
+<td>Local Flow</td>
+<td>Echo contained within a single substrate. Local resonance only.</td>
+</tr>
+<tr>
+<td><code>ESI-2</code></td>
+<td>Mild Migration</td>
+<td>Echo bleeds into one adjacent substrate. Low cross-boundary energy.</td>
+</tr>
+<tr>
+<td><code>ESI-3</code></td>
+<td>Cross-Substrate Flow</td>
+<td>Echo propagates across multiple substrates. Significant migration energy.</td>
+</tr>
+<tr>
+<td><code>ESI-4</code></td>
+<td>Atlas Pull</td>
+<td>Echo reaches atlas layer. Maximum propagation intensity. May trigger forcing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-classification-inputs">3.4  Classification Inputs</h3>
+<p>Five input dimensions are evaluated to classify an echo:</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Trigger Profile</strong></td>
+<td>T1–T6</td>
+<td>The originating event that produced the echo.</td>
+</tr>
+<tr>
+<td><strong>Signature Profile</strong></td>
+<td>S1–S6</td>
+<td>The observable waveform pattern of the echo.</td>
+</tr>
+<tr>
+<td><strong>Echo Strength Index</strong></td>
+<td>ESI-1 – ESI-4</td>
+<td>Propagation intensity (local through atlas pull).</td>
+</tr>
+<tr>
+<td><strong>Substrate Spread</strong></td>
+<td>1–5 substrates</td>
+<td>Number of substrates the echo touches.</td>
+</tr>
+<tr>
+<td><strong>Recursion Mode</strong></td>
+<td>R1–R4</td>
+<td>The recursion topology driving echo propagation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-classification-decision-tree">3.5  Classification Decision Tree</h3>
+<p>The Echo Classifier follows a six-step sequential decision process:</p>
+<ol>
+<li><strong>Identify Trigger</strong> — Determine which trigger profile (T1–T6) initiated the echo event.</li>
+<li><strong>Identify Signature</strong> — Match the observed waveform to a signature profile (S1–S6).</li>
+<li><strong>Measure ESI</strong> — Evaluate propagation intensity on the ESI-1 through ESI-4 scale.</li>
+<li><strong>Count Substrates</strong> — Determine how many substrates (1–5) the echo has reached.</li>
+<li><strong>Determine Recursion Mode</strong> — Identify the active recursion mode (R1–R4).</li>
+<li><strong>Assign Echo Type</strong> — Combine all five inputs to classify the echo as E1–E6.</li>
+</ol>
+<blockquote>
+<p><strong>Rule:</strong> When inputs are ambiguous or span boundaries, the classifier defaults to the <em>higher</em> echo type (higher index). This conservative approach ensures drift-prone echoes are not underclassified.</p>
+</blockquote>
+<hr>
+<h2 id="4-substrate-flow-operators-sefm">4 — Substrate Flow Operators (SEFM)</h2>
+<p>The Substrate Echo Flow Model (SEFM) traces how harmonic energy migrates between substrates. Flow is driven by echo strength, recursion modes, drift currents, and echo family behavior.</p>
+<h3 id="41-flow-channels">4.1  Flow Channels</h3>
+<p>Four canonical flow channels define the primary migration paths between substrates.</p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Path</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CH-1</code></td>
+<td>S → C (Symbolic → Cognitive)</td>
+<td>Definition refinement, meaning consolidation, early echo formation.</td>
+</tr>
+<tr>
+<td><code>CH-2</code></td>
+<td>C ↔ H (Cognitive ↔ Harmonic)</td>
+<td>Harmonic alignment, interval oscillation, cycle recursion.</td>
+</tr>
+<tr>
+<td><code>CH-3</code></td>
+<td>H → So (Harmonic → Social)</td>
+<td>Governance torsion, operator inversion, map recursion.</td>
+</tr>
+<tr>
+<td><code>CH-4</code></td>
+<td>So → A (Social → Atlas)</td>
+<td>High-altitude resonance, atlas forcing, projection drift.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-flow-drivers">4.2  Flow Drivers</h3>
+<p>Four primary forces drive substrate flow:</p>
+<table>
+<thead>
+<tr>
+<th>Driver</th>
+<th>Mechanism</th>
+<th>Effect on Flow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Echo Strength (ESI)</strong></td>
+<td>ESI-1 through ESI-4</td>
+<td>Determines migration intensity. Higher ESI = stronger cross-substrate flow.</td>
+</tr>
+<tr>
+<td><strong>Recursion Mode (R1–R4)</strong></td>
+<td>Ladder, Cycle, Map, Atlas</td>
+<td>Determines flow direction. R1 drives downward; R4 drives upward toward atlas.</td>
+</tr>
+<tr>
+<td><strong>Drift Type (D1–D4)</strong></td>
+<td>Structural through Projection</td>
+<td>Creates drift currents that pull energy along specific substrate paths.</td>
+</tr>
+<tr>
+<td><strong>Echo Family (F1–F6)</strong></td>
+<td>Family-specific behavior</td>
+<td>F1 stays low; F3 migrates; F5 destabilizes; F6 anchors atlas.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-drift-shadow-flow-currents">4.3  Drift-Shadow Flow Currents</h3>
+<p>Each drift type creates a characteristic flow current that pulls echo energy along a specific substrate path:</p>
+<table>
+<thead>
+<tr>
+<th>Drift Type</th>
+<th>Flow Current</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>D1</code> Structural</td>
+<td>D1 → S → C</td>
+<td>Structural drift pulls energy from Symbolic into Cognitive via CH-1.</td>
+</tr>
+<tr>
+<td><code>D2</code> Dimensional</td>
+<td>D2 → C → H</td>
+<td>Dimensional drift collapses Cognitive into Harmonic via CH-2.</td>
+</tr>
+<tr>
+<td><code>D3</code> Regime</td>
+<td>D3 → H → So</td>
+<td>Regime drift forces Harmonic energy into Social via CH-3.</td>
+</tr>
+<tr>
+<td><code>D4</code> Projection</td>
+<td>D4 → So → A</td>
+<td>Projection drift lifts Social forms into Atlas via CH-4.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-atlas-pull">4.4  Atlas Pull</h3>
+<p><code>F6</code> Atlas echoes generate a gravitational pull toward the Atlas layer from all substrates. This pull operates independently of normal flow channel mechanics:</p>
+<ul>
+<li><strong>Origin:</strong> Atlas Pull activates when F6 echoes form in the Atlas layer with ESI-4 strength.</li>
+<li><strong>Effect:</strong> All substrates experience upward pressure. Lower-layer echoes (F1–F5) are drawn toward higher lattice layers.</li>
+<li><strong>Danger:</strong> Sustained Atlas Pull can collapse the entire substrate stack, forcing premature atlas projection and triggering D4 (Projection Drift) cascades.</li>
+<li><strong>Indicator:</strong> Atlas Pull is the primary predictor of system-wide instability when combined with T4 (Unstable) tier classification.</li>
+</ul>
+<hr>
+<h2 id="5-triadic-echo-lattice-operators-tel">5 — Triadic Echo Lattice Operators (TEL)</h2>
+<p>The Triadic Echo Lattice is the structural scaffolding that organizes echoes, recursion lines, drift pathways, and pressure zones into a coherent spatial model.</p>
+<h3 id="51-lattice-layers">5.1  Lattice Layers</h3>
+<p>Four canonical layers stack vertically from lowest altitude (Ladder) to highest (Atlas).</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Substrate Range</th>
+<th>Echo Families</th>
+<th>Recursion</th>
+<th>Drift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ladder</strong></td>
+<td>S → C</td>
+<td>F1 (Structural)</td>
+<td>R1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td><strong>Cycle</strong></td>
+<td>C ↔ H</td>
+<td>F2 (Harmonic), F3 (Substrate)</td>
+<td>R2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td><strong>Map</strong></td>
+<td>H ↔ So</td>
+<td>F4 (Recursion), F5 (Drift-Shadow)</td>
+<td>R3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td><strong>Atlas</strong></td>
+<td>A</td>
+<td>F6 (Atlas)</td>
+<td>R4</td>
+<td>D4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-recursion-lines-through-the-lattice">5.2  Recursion Lines Through the Lattice</h3>
+<table>
+<thead>
+<tr>
+<th>Recursion Mode</th>
+<th>Lattice Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>R1</code></td>
+<td>Ladder</td>
+<td>Recursion contained within the Ladder layer. No upward propagation.</td>
+</tr>
+<tr>
+<td><code>R2</code></td>
+<td>Ladder → Cycle</td>
+<td>Recursion crosses from Ladder into Cycle. Oscillation begins.</td>
+</tr>
+<tr>
+<td><code>R3</code></td>
+<td>Cycle → Map</td>
+<td>Recursion crosses from Cycle into Map. Torsion and non-linearity emerge.</td>
+</tr>
+<tr>
+<td><code>R4</code></td>
+<td>Map → Atlas</td>
+<td>Recursion crosses from Map into Atlas. Maximum forcing; atlas projection active.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-drift-pathways-through-the-lattice">5.3  Drift Pathways Through the Lattice</h3>
+<p>Drift propagates <em>upward</em> through the lattice. Each drift type maps to a specific layer where instability originates:</p>
+<table>
+<thead>
+<tr>
+<th>Drift Type</th>
+<th>Origin Layer</th>
+<th>Propagation Direction</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>D1</code></td>
+<td>Ladder</td>
+<td>Upward</td>
+<td>Ladder instability. Structural foundations weaken.</td>
+</tr>
+<tr>
+<td><code>D2</code></td>
+<td>Cycle</td>
+<td>Upward</td>
+<td>Cycle instability. Harmonic oscillation degrades.</td>
+</tr>
+<tr>
+<td><code>D3</code></td>
+<td>Map</td>
+<td>Upward</td>
+<td>Map instability. Governance torsion destabilizes social layer.</td>
+</tr>
+<tr>
+<td><code>D4</code></td>
+<td>Atlas</td>
+<td>N/A (terminal)</td>
+<td>Atlas projection drift. Terminal drift state; no higher layer to propagate into.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Key Principle:</strong> Drift moves upward through the lattice. A D1 event left unresolved at the Ladder layer will propagate to Cycle (D2), then Map (D3), and ultimately Atlas (D4). Early intervention at lower layers prevents catastrophic atlas-level drift.</p>
+</blockquote>
+<h3 id="54-echo-pressure-zones">5.4  Echo-Pressure Zones</h3>
+<p>Pressure zones are lattice regions where echo density, recursion intensity, and drift currents converge to create escalation risk.</p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Location</th>
+<th>Characteristics</th>
+<th>Predictive Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cycle Pressure Zone</strong></td>
+<td>C ↔ H boundary</td>
+<td>High echo density from F2/F3 oscillation. Cycle recursion (R2) amplifies pressure.</td>
+<td>Predicts D2 escalation to D3.</td>
+</tr>
+<tr>
+<td><strong>Map Pressure Zone</strong></td>
+<td>H ↔ So boundary</td>
+<td>Torsion from F4/F5 echoes. Map recursion (R3) creates non-linear stress.</td>
+<td>Predicts D3 escalation to D4.</td>
+</tr>
+<tr>
+<td><strong>Atlas Boundary Zone</strong></td>
+<td>So → A threshold</td>
+<td>F6 atlas pull. Maximum recursion depth (R4). Projection drift active.</td>
+<td>Predicts system-wide instability and cascade failure.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-cross-module-operator-chains">6 — Cross-Module Operator Chains</h2>
+<p>Operator chains connect HSP Core, Echo Classifier, Substrate Flow, and Triadic Echo Lattice into end-to-end diagnostic and predictive workflows.</p>
+<h3 id="61-stability-classification-chain">6.1  Stability → Classification Chain</h3>
+<p>This chain translates a stability assessment into an echo classification and lattice position:</p>
+<pre><code>HSP Stability Class (SC-1–SC-4)
+↓
+Recursion Mode (R1–R4) — derived from class
+↓
+Echo Type (E1–E6) — determined by recursion + trigger
+↓
+Lattice Layer (Ladder / Cycle / Map / Atlas) — echo family mapping
+↓
+Flow Channel (CH-1–CH-4) — substrate path activated
+</code></pre>
+<hr>
+<h3 id="62-drift-escalation-chain">6.2  Drift Escalation Chain</h3>
+<p>This chain traces how drift escalates from initial detection to atlas-level crisis:</p>
+<pre><code>Drift Type (D1–D4)
+↓
+Echo Pressure — pressure zone activation
+↓
+Drift-Shadow Echo (E5) — drift current generates shadow echoes
+↓
+Lattice Drift Pathway — upward propagation through layers
+↓
+Flow Current — drift-shadow flow activates substrate channels
+↓
+Atlas Pull — F6 echo formation; gravitational collapse risk
+</code></pre>
+<h3 id="63-recursion-propagation-chain">6.3  Recursion Propagation Chain</h3>
+<p>Recursion escalates sequentially through modes. Each step shifts echo families upward through the lattice:</p>
+<pre><code>R1 (Ladder) — F1 echoes, S → C flow
+↓
+R2 (Cycle) — F2/F3 echoes, C ↔ H oscillation
+↓
+R3 (Map) — F4/F5 echoes, H → So torsion
+↓
+R4 (Atlas) — F6 echoes, So → A forcing
+</code></pre>
+<p>Each escalation from R<em>n</em> to R<em>n+1</em> increases substrate spread, echo strength, and drift vulnerability.</p>
+<h3 id="64-full-diagnostic-pipeline">6.4  Full Diagnostic Pipeline</h3>
+<p>The complete diagnostic pipeline integrates all HSP Suite modules into an eight-step workflow:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Operation</th>
+<th>Module</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Evaluate stability metrics</td>
+<td>HSP Core</td>
+<td>M1–M6 scores</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Assign stability class</td>
+<td>HSP Core</td>
+<td>SC-1 to SC-4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Determine stability tier</td>
+<td>HSP Core</td>
+<td>T1–T4 + action</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Identify drift type</td>
+<td>HSP Core</td>
+<td>D1–D4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Classify echo type</td>
+<td>Echo Classifier</td>
+<td>E1–E6</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Map to lattice layer</td>
+<td>TEL</td>
+<td>Ladder / Cycle / Map / Atlas</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Trace flow channel</td>
+<td>SEFM</td>
+<td>CH-1 to CH-4</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Predict escalation path</td>
+<td>Cross-Module</td>
+<td>Drift chain + recursion forecast</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-operator-index-alphabetical">7 — Operator Index (Alphabetical)</h2>
+<p>Comprehensive alphabetical index of every operator, parameter code, and classification symbol in the HSP Suite.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Module</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code></td>
+<td>Atlas (Substrate)</td>
+<td>HSP Core</td>
+<td>Highest-altitude substrate. Cross-substrate projection and canonical mapping.</td>
+</tr>
+<tr>
+<td><code>Atlas</code></td>
+<td>Atlas (Lattice Layer)</td>
+<td>TEL</td>
+<td>Top lattice layer. Houses F6 echoes. R4 recursion. D4 drift.</td>
+</tr>
+<tr>
+<td><code>C</code></td>
+<td>Cognitive (Substrate)</td>
+<td>HSP Core</td>
+<td>Meaning-processing substrate. Interpretation and concept binding.</td>
+</tr>
+<tr>
+<td><code>CH-1</code></td>
+<td>Symbolic → Cognitive Channel</td>
+<td>SEFM</td>
+<td>Flow channel: S → C. Definition refinement, early echo formation.</td>
+</tr>
+<tr>
+<td><code>CH-2</code></td>
+<td>Cognitive ↔ Harmonic Channel</td>
+<td>SEFM</td>
+<td>Flow channel: C ↔ H. Harmonic alignment, interval oscillation.</td>
+</tr>
+<tr>
+<td><code>CH-3</code></td>
+<td>Harmonic → Social Channel</td>
+<td>SEFM</td>
+<td>Flow channel: H → So. Governance torsion, operator inversion.</td>
+</tr>
+<tr>
+<td><code>CH-4</code></td>
+<td>Social → Atlas Channel</td>
+<td>SEFM</td>
+<td>Flow channel: So → A. Atlas forcing, projection drift.</td>
+</tr>
+<tr>
+<td><code>Cycle</code></td>
+<td>Cycle (Lattice Layer)</td>
+<td>TEL</td>
+<td>Second lattice layer. C ↔ H. F2/F3 echoes. R2 recursion. D2 drift.</td>
+</tr>
+<tr>
+<td><code>D1</code></td>
+<td>Structural Drift</td>
+<td>HSP Core</td>
+<td>Destabilizes structural triads. Lowest-energy drift type.</td>
+</tr>
+<tr>
+<td><code>D2</code></td>
+<td>Dimensional Drift</td>
+<td>HSP Core</td>
+<td>Collapses harmonic ladders. Interval dimensions compress or invert.</td>
+</tr>
+<tr>
+<td><code>D3</code></td>
+<td>Regime Drift</td>
+<td>HSP Core</td>
+<td>Twists governance rules. Operator roles shift unpredictably.</td>
+</tr>
+<tr>
+<td><code>D4</code></td>
+<td>Projection Drift</td>
+<td>HSP Core</td>
+<td>Lifts symbolic forms into atlas space. Highest-energy drift.</td>
+</tr>
+<tr>
+<td><code>E1</code></td>
+<td>Structural Echo</td>
+<td>Echo Classifier</td>
+<td>Low-complexity echo. 1–2 substrates. ESI 1–2. R1 recursion.</td>
+</tr>
+<tr>
+<td><code>E2</code></td>
+<td>Harmonic Echo</td>
+<td>Echo Classifier</td>
+<td>Tonal echo. Single substrate. ESI 2–3. R1–R2 recursion.</td>
+</tr>
+<tr>
+<td><code>E3</code></td>
+<td>Substrate Echo</td>
+<td>Echo Classifier</td>
+<td>Migratory echo. 3–4 substrates. ESI 2–3. R2–R3 recursion.</td>
+</tr>
+<tr>
+<td><code>E4</code></td>
+<td>Recursion Echo</td>
+<td>Echo Classifier</td>
+<td>Recursive-loop echo. 2–4 substrates. ESI 3–4. R2–R4 recursion.</td>
+</tr>
+<tr>
+<td><code>E5</code></td>
+<td>Drift-Shadow Echo</td>
+<td>Echo Classifier</td>
+<td>Destabilizing echo. 2–5 substrates. ESI 3–4. R3–R4 recursion.</td>
+</tr>
+<tr>
+<td><code>E6</code></td>
+<td>Atlas Echo</td>
+<td>Echo Classifier</td>
+<td>Maximum-altitude echo. All 5 substrates. ESI-4. R4 recursion only.</td>
+</tr>
+<tr>
+<td><code>ESI-1</code></td>
+<td>Local Flow</td>
+<td>Echo Classifier</td>
+<td>Echo contained within single substrate. Local resonance.</td>
+</tr>
+<tr>
+<td><code>ESI-2</code></td>
+<td>Mild Migration</td>
+<td>Echo Classifier</td>
+<td>Echo bleeds into one adjacent substrate.</td>
+</tr>
+<tr>
+<td><code>ESI-3</code></td>
+<td>Cross-Substrate Flow</td>
+<td>Echo Classifier</td>
+<td>Echo propagates across multiple substrates.</td>
+</tr>
+<tr>
+<td><code>ESI-4</code></td>
+<td>Atlas Pull</td>
+<td>Echo Classifier</td>
+<td>Echo reaches atlas layer. Maximum intensity.</td>
+</tr>
+<tr>
+<td><code>F1</code></td>
+<td>Structural Family</td>
+<td>Echo Classifier</td>
+<td>Low-altitude echoes. Ladder layer. Minimal migration.</td>
+</tr>
+<tr>
+<td><code>F2</code></td>
+<td>Harmonic Family</td>
+<td>Echo Classifier</td>
+<td>Tonal echoes. Cycle layer. C ↔ H oscillation.</td>
+</tr>
+<tr>
+<td><code>F3</code></td>
+<td>Substrate Family</td>
+<td>Echo Classifier</td>
+<td>Migratory echoes. Cycle/Map layers. Cross-boundary flow.</td>
+</tr>
+<tr>
+<td><code>F4</code></td>
+<td>Recursion Family</td>
+<td>Echo Classifier</td>
+<td>Recursive-loop echoes. Map layer. H ↔ So torsion.</td>
+</tr>
+<tr>
+<td><code>F5</code></td>
+<td>Drift-Shadow Family</td>
+<td>Echo Classifier</td>
+<td>Destabilizing echoes. Map/Atlas layers. Drift current carriers.</td>
+</tr>
+<tr>
+<td><code>F6</code></td>
+<td>Atlas Family</td>
+<td>Echo Classifier</td>
+<td>Atlas-anchored echoes. Generate gravitational pull.</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>Harmonic (Substrate)</td>
+<td>HSP Core</td>
+<td>Resonance substrate. Interval alignment and tonal structure.</td>
+</tr>
+<tr>
+<td><code>Ladder</code></td>
+<td>Ladder (Lattice Layer)</td>
+<td>TEL</td>
+<td>Lowest lattice layer. S → C. F1 echoes. R1 recursion. D1 drift.</td>
+</tr>
+<tr>
+<td><code>M1</code></td>
+<td>Harmonic Recurrence</td>
+<td>HSP Core</td>
+<td>Frequency of return to canonical harmonic form. D1 sensitivity.</td>
+</tr>
+<tr>
+<td><code>M2</code></td>
+<td>Harmonic Position Consistency</td>
+<td>HSP Core</td>
+<td>Interval band stability within I1–I12. D1–D2 sensitivity.</td>
+</tr>
+<tr>
+<td><code>M3</code></td>
+<td>Substrate Anchoring</td>
+<td>HSP Core</td>
+<td>Firmness of substrate alignment. D2–D4 sensitivity.</td>
+</tr>
+<tr>
+<td><code>M4</code></td>
+<td>Operator Role Stability</td>
+<td>HSP Core</td>
+<td>Operator behavior consistency across contexts. D1–D3 sensitivity.</td>
+</tr>
+<tr>
+<td><code>M5</code></td>
+<td>Temporal Stability</td>
+<td>HSP Core</td>
+<td>Meaning/structure stability across time. Full drift spectrum.</td>
+</tr>
+<tr>
+<td><code>M6</code></td>
+<td>Harmonic Mutation Rate</td>
+<td>HSP Core</td>
+<td>Rate of harmonic structure change. D2–D4 sensitivity.</td>
+</tr>
+<tr>
+<td><code>Map</code></td>
+<td>Map (Lattice Layer)</td>
+<td>TEL</td>
+<td>Third lattice layer. H ↔ So. F4/F5 echoes. R3 recursion. D3 drift.</td>
+</tr>
+<tr>
+<td><code>R1</code></td>
+<td>Ladder Recursion</td>
+<td>HSP Core</td>
+<td>S → C flow. Linear propagation. Lowest recursion depth.</td>
+</tr>
+<tr>
+<td><code>R2</code></td>
+<td>Cycle Recursion</td>
+<td>HSP Core</td>
+<td>C ↔ H oscillation. Bi-directional cycle.</td>
+</tr>
+<tr>
+<td><code>R3</code></td>
+<td>Map Recursion</td>
+<td>HSP Core</td>
+<td>H → So torsion. Non-linear mapping.</td>
+</tr>
+<tr>
+<td><code>R4</code></td>
+<td>Atlas Recursion</td>
+<td>HSP Core</td>
+<td>So → A forcing. Maximum recursion depth.</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td>Symbolic (Substrate)</td>
+<td>HSP Core</td>
+<td>Foundation substrate. Raw symbols and structural primitives.</td>
+</tr>
+<tr>
+<td><code>S1–S6</code></td>
+<td>Signature Profiles</td>
+<td>Echo Classifier</td>
+<td>Observable waveform patterns. S1 (local) through S6 (full-spectrum atlas).</td>
+</tr>
+<tr>
+<td><code>SC-1</code></td>
+<td>Stable Harmonics</td>
+<td>HSP Core</td>
+<td>High coherence, low drift, ladder recursion. Symbolic/Harmonic substrate.</td>
+</tr>
+<tr>
+<td><code>SC-2</code></td>
+<td>Semi-Stable Harmonics</td>
+<td>HSP Core</td>
+<td>Partial coherence, moderate drift, cycle recursion. Cognitive/Harmonic.</td>
+</tr>
+<tr>
+<td><code>SC-3</code></td>
+<td>Harmonic Oscillators</td>
+<td>HSP Core</td>
+<td>Unstable coherence, high drift, map recursion. Social/Symbolic.</td>
+</tr>
+<tr>
+<td><code>SC-4</code></td>
+<td>Chaotic Nodes</td>
+<td>HSP Core</td>
+<td>Incoherent, dangerous drift, atlas-forcing. Cross-substrate.</td>
+</tr>
+<tr>
+<td><code>So</code></td>
+<td>Social (Substrate)</td>
+<td>HSP Core</td>
+<td>Governance substrate. Operator roles and relational topology.</td>
+</tr>
+<tr>
+<td><code>T1</code></td>
+<td>Canon-Stable (Tier)</td>
+<td>HSP Core</td>
+<td>Safe. No action needed.</td>
+</tr>
+<tr>
+<td><code>T1–T6</code></td>
+<td>Trigger Profiles</td>
+<td>Echo Classifier</td>
+<td>Originating events that produce echoes. T1 (structural) through T6 (atlas).</td>
+</tr>
+<tr>
+<td><code>T2</code></td>
+<td>Stable-with-Pressure (Tier)</td>
+<td>HSP Core</td>
+<td>Monitor. May need review.</td>
+</tr>
+<tr>
+<td><code>T3</code></td>
+<td>Drift-Active (Tier)</td>
+<td>HSP Core</td>
+<td>Review required.</td>
+</tr>
+<tr>
+<td><code>T4</code></td>
+<td>Unstable / Requires Intervention (Tier)</td>
+<td>HSP Core</td>
+<td>Immediate correction.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>HSP Suite Operators.md</strong><br>
+Version: v1.0 | Status: Canon-Stable | Module: HSP Suite Operators<br>
+TriadicFrameworks / Resonance-Time Theory (RTT)<br>
+🤖 AI-Ready Module • Machine-parseable • Canonical reference  </p>
+  </main>
+</body>
+</html>

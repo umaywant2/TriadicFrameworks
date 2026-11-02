@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/triad_purity_auto_repair.py.md">
+  <title>triad_purity_auto_repair.py</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/triad_purity_auto_repair.py.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/triad_purity_auto_repair.py.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Here’s your <strong>triad‑purity auto‑repair engine</strong>, aligned with the rest of your canon tooling and safe to paste into your active <code>docs/tools</code> tab.</p>
+<p>Save as:</p>
+<pre><code class="language-text">docs/tools/triad_purity_auto_repair.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code class="language-bash">python3 docs/tools/triad_purity_auto_repair.py
+</code></pre>
+<p>It will <strong>modify module.json files in place</strong>, repairing structural, harmonic, and coherence triads to canonical shape.</p>
+<hr>
+<pre><code class="language-python">import os
+import json
+
+ROOT = &quot;docs&quot;
+EXCLUDED = {&quot;spine&quot;,&quot;_template&quot;,&quot;assets&quot;,&quot;images&quot;,&quot;tools&quot;}
+
+STRUCTURAL_KEYS = {
+    &quot;generative&quot;: [&quot;resonance_source&quot;,&quot;structural_seed&quot;,&quot;temporal_onset&quot;],
+    &quot;transformational&quot;: [&quot;resonant_input&quot;,&quot;structural_transformation&quot;,&quot;temporal_modulation&quot;],
+    &quot;coherence&quot;: [&quot;resonant_field&quot;,&quot;structural_alignment&quot;,&quot;temporal_continuity&quot;],
+}
+
+HARMONIC_KEYS = {
+    &quot;resonance_harmonic&quot;: [&quot;resonant_mode&quot;,&quot;harmonic_factor&quot;,&quot;temporal_phase&quot;],
+    &quot;structural_harmonic&quot;: [&quot;structural_pattern&quot;,&quot;harmonic_coupling&quot;,&quot;temporal_cycle&quot;],
+    &quot;coherence_harmonic&quot;: [&quot;coherence_field&quot;,&quot;harmonic_alignment&quot;,&quot;temporal_stability&quot;],
+}
+
+COHERENCE_KEYS = {
+    &quot;coherence_core&quot;: [&quot;coherence_field&quot;,&quot;coherence_alignment&quot;,&quot;coherence_stability&quot;],
+    &quot;coherence_harmonic&quot;: [&quot;harmonic_alignment&quot;,&quot;harmonic_balance&quot;,&quot;harmonic_resonance&quot;],
+    &quot;coherence_temporal&quot;: [&quot;temporal_continuity&quot;,&quot;temporal_stability&quot;,&quot;temporal_resonance&quot;],
+}
+
+def find_modules():
+    out = []
+    for root, dirs, files in os.walk(ROOT):
+        if any(ex in root for ex in EXCLUDED):
+            continue
+        if &quot;module.json&quot; in files:
+            out.append(os.path.join(root, &quot;module.json&quot;))
+    return out
+
+def safe_load(path):
+    try:
+        with open(path, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+            return json.load(f)
+    except:
+        return {&quot;module&quot;: {}}
+
+def ensure_block(parent, key):
+    blk = parent.get(key)
+    if not isinstance(blk, dict):
+        blk = {}
+        parent[key] = blk
+    return blk
+
+def repair_family(triads, family_name, expected):
+    fixes = []
+    fam = ensure_block(triads, family_name)
+    for triad_name, keys in expected.items():
+        t = ensure_block(fam, triad_name)
+        # add missing canonical keys
+        for k in keys:
+            if k not in t:
+                t[k] = f&quot;auto_repaired_{k}&quot;
+                fixes.append(f&quot;{family_name}.{triad_name}.{k} added&quot;)
+        # remove non‑canonical keys
+        for k in list(t.keys()):
+            if k not in keys:
+                del t[k]
+                fixes.append(f&quot;{family_name}.{triad_name}.{k} removed&quot;)
+    return fixes
+
+def repair_triads(module):
+    fixes = []
+    triads = ensure_block(module, &quot;triads&quot;)
+
+    fixes += repair_family(triads, &quot;structural_triads&quot;, STRUCTURAL_KEYS)
+    fixes += repair_family(triads, &quot;harmonic_triads&quot;, HARMONIC_KEYS)
+    fixes += repair_family(triads, &quot;coherence_triads&quot;, COHERENCE_KEYS)
+
+    return fixes
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Triad‑Purity Auto‑Repair Engine ===\n&quot;)
+
+    modules = find_modules()
+    repaired = 0
+
+    for path in modules:
+        name = os.path.basename(os.path.dirname(path))
+        data = safe_load(path)
+        module = data.setdefault(&quot;module&quot;, {})
+
+        fixes = repair_triads(module)
+
+        if fixes:
+            repaired += 1
+            with open(path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+                json.dump(data, f, indent=2)
+            print(f&quot;✔ {name} — triad‑purity repaired:&quot;)
+            for fmsg in fixes:
+                print(f&quot;   - {fmsg}&quot;)
+        else:
+            print(f&quot;✔ {name} — already triad‑pure&quot;)
+
+    print(&quot;\n=== Summary ===&quot;)
+    print(f&quot;Modules scanned: {len(modules)}&quot;)
+    print(f&quot;Modules triad‑repaired: {repaired}&quot;)
+    print(f&quot;Modules already triad‑pure: {len(modules) - repaired}&quot;)
+
+    if repaired:
+        print(&quot;\n✨ Triad‑purity restored across modules.&quot;)
+    else:
+        print(&quot;\n✨ All modules already structurally triad‑pure.&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+  </main>
+</body>
+</html>

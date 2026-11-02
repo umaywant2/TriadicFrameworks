@@ -1,0 +1,41 @@
+{
+  "rtt_version": "1.0",
+  "tick": 512,
+  "entities": [
+    {
+      "id": "drone_01",
+      "state": {
+        "position": [0.0, 12.0, 4.0],
+        "velocity": [1.2, 0.0, -0.4],
+        "resonance": 0.33
+      }
+    },
+    {
+      "id": "drone_02",
+      "state": {
+        "position": [-2.0, 12.0, 5.0],
+        "velocity": [1.1, 0.0, -0.3],
+        "resonance": 0.31
+      }
+    }
+  ],
+  "environment": {
+    "field_strength": 0.22,
+    "phase_noise": 0.01,
+    "coupling_radius": 5.0
+  },
+  "intent": "advance",
+  "experiment": {
+    "experiment_id": "exp-2026-01-12-001",
+    "seed": 123456,
+    "trial": 0,
+    "tags": ["baseline", "debug"],
+    "provenance": {
+      "engine": "Unity",
+      "engine_version": "2022.3",
+      "user": "Nawder",
+      "notes": "Initial deterministic run"
+    }
+  }
+}
+

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/medicine/operators/MEDICAL_SUBSTRATE_OPERATOR.md">
+  <title>MEDICALSUBSTRATEOPERATOR</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/medicine/operators/MEDICAL_SUBSTRATE_OPERATOR.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/medicine/operators/MEDICAL_SUBSTRATE_OPERATOR.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="medical_substrate_operator"><strong>MEDICAL_SUBSTRATE_OPERATOR</strong></h1>
+<h3 id="rtt-operator-medicine-module"><em>RTT Operator — Medicine Module</em></h3>
+<h3 id="substrate-classification-stability-layer-interference"><em>Substrate Classification • Stability • Layer Interference</em></h3>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>The <strong>MEDICAL_SUBSTRATE_OPERATOR</strong> identifies and evaluates the <em>substrate</em> of medical information across different regimes.<br>
+Medical content is unusually sensitive to substrate because:</p>
+<ul>
+<li>ads distort meaning  </li>
+<li>mobile templates reorder clinical logic  </li>
+<li>AI overlays introduce dynamic content  </li>
+<li>translation layers create semantic drift  </li>
+<li>PDF vs HTML changes continuity  </li>
+<li>image‑embedded text breaks accessibility  </li>
+</ul>
+<p>This operator ensures that downstream reasoning (continuity, drift, synthesis) is based on <strong>clean, substrate‑aware input</strong>.</p>
+<hr>
+<h2 id="what-this-operator-detects"><strong>What This Operator Detects</strong></h2>
+<h3 id="1-substrate-type"><strong>1. Substrate Type</strong></h3>
+<p>The operator classifies medical content into one of the following:</p>
+<ul>
+<li><code>html</code> — standard web pages (Cleveland Clinic, NHS)  </li>
+<li><code>mobile_html</code> — mobile‑first, dynamic templates (Ping An)  </li>
+<li><code>pdf</code> — clinical guidelines, static documents  </li>
+<li><code>image</code> — screenshots, infographics, embedded text  </li>
+<li><code>ocr</code> — extracted text from images  </li>
+<li><code>mixed</code> — combinations of the above  </li>
+</ul>
+<p>This classification is foundational for drift and continuity analysis.</p>
+<hr>
+<h3 id="2-substrate-stability"><strong>2. Substrate Stability</strong></h3>
+<p>Substrate stability measures how likely the substrate is to:</p>
+<ul>
+<li>preserve structure  </li>
+<li>preserve meaning  </li>
+<li>resist drift  </li>
+<li>resist commercial interference  </li>
+<li>resist translation distortion  </li>
+</ul>
+<p>Expected patterns:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Stability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cleveland Clinic</strong></td>
+<td>high</td>
+</tr>
+<tr>
+<td><strong>NHS.uk</strong></td>
+<td>very high</td>
+</tr>
+<tr>
+<td><strong>Ping An</strong></td>
+<td>low–medium</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="3-substrate-noise"><strong>3. Substrate Noise</strong></h3>
+<p>Noise includes:</p>
+<ul>
+<li>ads  </li>
+<li>trackers  </li>
+<li>telemedicine prompts  </li>
+<li>product suggestions  </li>
+<li>AI triage overlays  </li>
+<li>SEO‑driven blocks  </li>
+<li>mobile‑only reorderings  </li>
+</ul>
+<p>The operator flags:</p>
+<ul>
+<li><code>noise_low</code>  </li>
+<li><code>noise_medium</code>  </li>
+<li><code>noise_high</code>  </li>
+</ul>
+<p>Ping An often triggers <code>noise_high</code>.</p>
+<hr>
+<h3 id="4-substrate-layer-interference"><strong>4. Substrate Layer Interference</strong></h3>
+<p>This detects when substrate layers interfere with medical meaning:</p>
+<ul>
+<li>mobile templates reorder symptom → cause → treatment  </li>
+<li>AI overlays inject dynamic suggestions  </li>
+<li>translation layers alter phrasing  </li>
+<li>ads interrupt clinical flow  </li>
+<li>image‑embedded text breaks continuity  </li>
+</ul>
+<p>The operator flags:</p>
+<ul>
+<li><code>layer_interference_present</code>  </li>
+<li><code>layer_interference_absent</code>  </li>
+</ul>
+<hr>
+<h3 id="5-accessibility-stability"><strong>5. Accessibility Stability</strong></h3>
+<p>Accessibility affects structural clarity:</p>
+<ul>
+<li>alt‑text presence  </li>
+<li>heading hierarchy  </li>
+<li>semantic HTML  </li>
+<li>screen‑reader compatibility  </li>
+</ul>
+<p>NHS is strongest here.<br>
+Ping An is weakest.</p>
+<hr>
+<h2 id="inputs"><strong>Inputs</strong></h2>
+<p>The operator accepts:</p>
+<ul>
+<li>raw medical pages  </li>
+<li>mobile and desktop variants  </li>
+<li>PDFs  </li>
+<li>images  </li>
+<li>OCR text  </li>
+<li>AI‑augmented triage overlays  </li>
+</ul>
+<hr>
+<h2 id="outputs"><strong>Outputs</strong></h2>
+<h3 id="1-substrate-packet"><strong>1. Substrate Packet</strong></h3>
+<p>A structured metadata output:</p>
+<pre><code>{
+  &quot;substrate_type&quot;: &quot;mobile_html&quot;,
+  &quot;substrate_stability&quot;: &quot;medium&quot;,
+  &quot;substrate_noise&quot;: &quot;high&quot;,
+  &quot;layer_interference&quot;: &quot;layer_interference_present&quot;,
+  &quot;accessibility_stability&quot;: &quot;low&quot;
+}
+</code></pre>
+<h3 id="2-substrate-score-01"><strong>2. Substrate Score (0–1)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0.9–1.0</strong></td>
+<td>Very stable (NHS)</td>
+</tr>
+<tr>
+<td><strong>0.7–0.89</strong></td>
+<td>Stable (Cleveland Clinic)</td>
+</tr>
+<tr>
+<td><strong>0.4–0.69</strong></td>
+<td>Moderate stability</td>
+</tr>
+<tr>
+<td><strong>0.0–0.39</strong></td>
+<td>Unstable (Ping An mobile)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-substrate-flags"><strong>3. Substrate Flags</strong></h3>
+<ul>
+<li><code>substrate_unstable</code>  </li>
+<li><code>noise_high</code>  </li>
+<li><code>translation_layer_detected</code>  </li>
+<li><code>ai_overlay_detected</code>  </li>
+<li><code>commercial_layer_detected</code>  </li>
+<li><code>ocr_risk</code>  </li>
+</ul>
+<hr>
+<h2 id="substrate-evaluation-algorithm"><strong>Substrate Evaluation Algorithm</strong></h2>
+<ol>
+<li>
+<p><strong>Identify substrate type</strong><br>
+   HTML, mobile HTML, PDF, image, OCR, mixed.</p>
+</li>
+<li>
+<p><strong>Detect noise layers</strong><br>
+   Ads, AI overlays, commercial prompts.</p>
+</li>
+<li>
+<p><strong>Assess stability</strong><br>
+   Based on structure, consistency, and template volatility.</p>
+</li>
+<li>
+<p><strong>Detect layer interference</strong><br>
+   Reordering, injected content, translation drift.</p>
+</li>
+<li>
+<p><strong>Evaluate accessibility</strong><br>
+   Semantic HTML, alt‑text, heading structure.</p>
+</li>
+<li>
+<p><strong>Compute substrate score</strong><br>
+   Weighted by stability and noise.</p>
+</li>
+<li>
+<p><strong>Produce substrate packet</strong><br>
+   Structured, RTT‑aligned output.</p>
+</li>
+</ol>
+<hr>
+<h2 id="examples-generic"><strong>Examples (Generic)</strong></h2>
+<h3 id="cleveland-clinic"><strong>Cleveland Clinic</strong></h3>
+<pre><code>substrate_type: html
+substrate_stability: high
+substrate_noise: low
+layer_interference: absent
+accessibility_stability: high
+substrate_score: 0.88
+</code></pre>
+<h3 id="ping-an"><strong>Ping An</strong></h3>
+<pre><code>substrate_type: mobile_html
+substrate_stability: medium
+substrate_noise: high
+layer_interference: present
+accessibility_stability: low
+substrate_score: 0.41
+</code></pre>
+<h3 id="nhsuk"><strong>NHS.uk</strong></h3>
+<pre><code>substrate_type: html
+substrate_stability: very_high
+substrate_noise: low
+layer_interference: absent
+accessibility_stability: very_high
+substrate_score: 0.95
+</code></pre>
+<hr>
+<h2 id="why-this-operator-matters"><strong>Why This Operator Matters</strong></h2>
+<p>Medical information is <strong>not substrate‑neutral</strong>.</p>
+<p>Substrate determines:</p>
+<ul>
+<li>how meaning is preserved  </li>
+<li>how drift propagates  </li>
+<li>how continuity kernels survive  </li>
+<li>how AI overlays distort content  </li>
+<li>how translation layers alter semantics  </li>
+<li>how patients interpret risk  </li>
+</ul>
+<p>The <strong>MEDICAL_SUBSTRATE_OPERATOR</strong> ensures that all downstream reasoning is based on <strong>clean, stable, substrate‑aware input</strong>.</p>
+<p>This is the operator that makes the module <em>structurally safe</em>.</p>
+  </main>
+</body>
+</html>

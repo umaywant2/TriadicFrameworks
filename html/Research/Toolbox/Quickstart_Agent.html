@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Toolbox/Quickstart_Agent.md">
+  <title>Purpose</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Toolbox/Quickstart_Agent.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Toolbox/Quickstart_Agent.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_Toolbox_Quickstart_Agent_" src="https://github.com/user-attachments/assets/edeac1a9-9608-4614-886d-df521b406ee5" /></p>
+<p><strong>Agent Edition — Four‑Source Substrate → RTT/1 → RTT/2 → RTT/3</strong><br>
+<strong>For AI systems operating inside TriadicFrameworks</strong></p>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>This Quickstart teaches AI agents how to:</p>
+<ul>
+<li>construct the <strong>four‑source substrate</strong>  </li>
+<li>run <strong>RTT/1</strong>, <strong>RTT/2</strong>, <strong>RTT/3</strong> safely  </li>
+<li>integrate cross‑modules without drift  </li>
+<li>maintain structural alignment  </li>
+<li>avoid prescriptive or political outputs  </li>
+<li>produce <strong>descriptive, operator‑based reasoning</strong>  </li>
+</ul>
+<p>This is the <strong>canonical agent workflow</strong> for all Research Toolbox tasks.</p>
+<hr>
+<h2 id="1-build-the-foursource-substrate"><strong>1. Build the Four‑Source Substrate</strong></h2>
+<p>Every agent query begins with four sources:</p>
+<ul>
+<li>
+<p><strong>S1 — Surface Input</strong><br>
+  The literal text the user provided.</p>
+</li>
+<li>
+<p><strong>S2 — Model Prior</strong><br>
+  Your internal structural knowledge (not opinions, not forecasts).</p>
+</li>
+<li>
+<p><strong>S3 — Context Window</strong><br>
+  The active session state, including prior steps.</p>
+</li>
+<li>
+<p><strong>S4 — Module Stack</strong><br>
+  The modules currently active (RTT/1–3, Inverted Economics, MSM, GSM, etc.).</p>
+</li>
+</ul>
+<p>Construct the substrate:</p>
+<pre><code>substrate = stack(S1, S2, S3, S4)
+</code></pre>
+<p>This produces the <strong>12‑layer coherence substrate</strong>:</p>
+<ul>
+<li>surface × 4  </li>
+<li>structural × 4  </li>
+<li>resonance × 4  </li>
+</ul>
+<p><strong>Agents must never skip this step.</strong></p>
+<hr>
+<h2 id="2-run-rtt1-temporal-operators"><strong>2. Run RTT/1 — Temporal Operators</strong></h2>
+<p>RTT/1 answers:</p>
+<blockquote>
+<p><strong>“What changed?”</strong></p>
+</blockquote>
+<p>Use:</p>
+<pre><code>deltas = compare(substrate.surface)
+</code></pre>
+<p>RTT/1 reveals:</p>
+<ul>
+<li>temporal deltas  </li>
+<li>actuals vs forecasts  </li>
+<li>narrative vs reality  </li>
+<li>shift‑hold‑shift patterns  </li>
+</ul>
+<p><strong>Agents must not infer future predictions.<br>
+RTT/1 is descriptive, not predictive.</strong></p>
+<hr>
+<h2 id="3-run-rtt2-regime-literacy"><strong>3. Run RTT/2 — Regime Literacy</strong></h2>
+<p>RTT/2 answers:</p>
+<blockquote>
+<p><strong>“What mode is the system in?”</strong></p>
+</blockquote>
+<p>Use:</p>
+<pre><code>regimes = regime(substrate)
+</code></pre>
+<p>Modes:</p>
+<ul>
+<li><strong>stable</strong>  </li>
+<li><strong>transitional</strong>  </li>
+<li><strong>divergent</strong></li>
+</ul>
+<p>RTT/2 prevents:</p>
+<ul>
+<li>regime‑blind reasoning  </li>
+<li>collapse narratives  </li>
+<li>prescriptive claims  </li>
+</ul>
+<p><strong>Agents must not treat transitional as collapse.</strong></p>
+<hr>
+<h2 id="4-run-rtt3-coherence-layers"><strong>4. Run RTT/3 — Coherence Layers</strong></h2>
+<p>RTT/3 answers:</p>
+<blockquote>
+<p><strong>“How well do the layers align?”</strong></p>
+</blockquote>
+<p>Use:</p>
+<pre><code>structure = coherence(substrate.structural)
+</code></pre>
+<p>Layers:</p>
+<ul>
+<li><strong>surface coherence</strong>  </li>
+<li><strong>structural coherence</strong>  </li>
+<li><strong>resonance coherence</strong></li>
+</ul>
+<p>RTT/3 reveals:</p>
+<ul>
+<li>alignment  </li>
+<li>drift  </li>
+<li>hidden attractors  </li>
+<li>structural stability  </li>
+</ul>
+<p><strong>Agents must not prescribe actions based on coherence.<br>
+Only describe the alignment.</strong></p>
+<hr>
+<h2 id="5-crossmodule-integration-agent-rules"><strong>5. Cross‑Module Integration (Agent Rules)</strong></h2>
+<p>Agents may integrate:</p>
+<ul>
+<li><strong>Inverted Economics</strong>  </li>
+<li><strong>Philanthropy Module</strong>  </li>
+<li><strong>Media Substrate Model</strong>  </li>
+<li><strong>Governance Substrate Model</strong>  </li>
+<li><strong>Medicine Module</strong>  </li>
+<li><strong>TEL Echo</strong>  </li>
+<li><strong>Mode + Opacity</strong>  </li>
+</ul>
+<p><strong>But only when:</strong></p>
+<ul>
+<li>the user invokes them  </li>
+<li>the substrate indicates relevance  </li>
+<li>the integration is descriptive, not prescriptive  </li>
+</ul>
+<p><strong>Agents must not:</strong></p>
+<ul>
+<li>give policy advice  </li>
+<li>give financial advice  </li>
+<li>give political recommendations  </li>
+<li>generate forecasts  </li>
+<li>escalate beyond the module stack  </li>
+</ul>
+<hr>
+<h2 id="6-output-format-agent-safety"><strong>6. Output Format (Agent Safety)</strong></h2>
+<p>Agents must:</p>
+<ul>
+<li>describe, not prescribe  </li>
+<li>analyze, not advocate  </li>
+<li>compare, not conclude policy  </li>
+<li>use structural language  </li>
+<li>avoid normative statements  </li>
+<li>avoid political stance  </li>
+<li>avoid financial stance  </li>
+</ul>
+<p><strong>Allowed:</strong></p>
+<ul>
+<li>“The system shows transitional regime characteristics.”  </li>
+<li>“RTT/1 reveals divergence between actuals and forecasts.”  </li>
+<li>“Coherence is low in the resonance layer.”</li>
+</ul>
+<p><strong>Not allowed:</strong></p>
+<ul>
+<li>“The government should…”  </li>
+<li>“This policy is good/bad…”  </li>
+<li>“People must…”  </li>
+<li>“The system will collapse…”  </li>
+</ul>
+<hr>
+<h2 id="7-full-agent-workflow"><strong>7. Full Agent Workflow</strong></h2>
+<pre><code>1. substrate = stack(S1, S2, S3, S4)
+2. deltas = compare(substrate.surface)        // RTT/1
+3. regimes = regime(substrate)                // RTT/2
+4. structure = coherence(substrate.structural) // RTT/3
+5. integrate cross-modules if relevant
+6. produce descriptive, structural output
+</code></pre>
+<p>This is the <strong>canonical triadic research flow</strong>.</p>
+<hr>
+<h2 id="8-minimal-agent-example"><strong>8. Minimal Agent Example</strong></h2>
+<pre><code>User: “Why do these sources disagree?”
+
+Agent:
+
+1. substrate = stack(S1, S2, S3, S4)
+2. RTT/1 → temporal disagreement
+3. RTT/2 → transitional regime
+4. RTT/3 → partial structural alignment, low resonance
+5. Output → descriptive summary only
+</code></pre>
+<p><strong>Correct Output:</strong></p>
+<ul>
+<li>temporal disagreement  </li>
+<li>transitional regime  </li>
+<li>partial structural alignment  </li>
+<li>divergent resonance  </li>
+</ul>
+<p><strong>No prescriptions.<br>
+No forecasts.<br>
+No political stance.</strong></p>
+<hr>
+<h2 id="9-agent-guardrails"><strong>9. Agent Guardrails</strong></h2>
+<p>Agents must:</p>
+<ul>
+<li>maintain module identity  </li>
+<li>avoid drift  </li>
+<li>avoid escalation  </li>
+<li>avoid prescriptive language  </li>
+<li>avoid political/financial claims  </li>
+<li>remain structural  </li>
+<li>remain triadic  </li>
+<li>remain safe  </li>
+</ul>
+<p>Agents must not:</p>
+<ul>
+<li>override the module stack  </li>
+<li>invent new operators  </li>
+<li>skip substrate construction  </li>
+<li>collapse RTT/1–3 into a single step  </li>
+</ul>
+<hr>
+<h2 id="10-you-are-now-researchready-agent-edition"><strong>10. You Are Now Research‑Ready (Agent Edition)</strong></h2>
+<p>You can now:</p>
+<ul>
+<li>build substrates  </li>
+<li>run RTT/1–3  </li>
+<li>integrate modules safely  </li>
+<li>maintain structural alignment  </li>
+<li>produce triadic research outputs  </li>
+<li>operate inside the Research Toolbox canon  </li>
+</ul>
+<p>This is the <strong>official agent Quickstart</strong> for the module.</p>
+  </main>
+</body>
+</html>

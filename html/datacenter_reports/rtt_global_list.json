@@ -1,0 +1,710 @@
+{
+  "continents": [
+    {
+      "continent": "North America",
+      "countries": [
+        {
+          "country": "United States",
+          "clusters": [
+            {
+              "cluster": "Northern Virginia (Loudoun County)",
+              "facilities": [
+                "AWS Ashburn Campus",
+                "Google Leesburg/Ashburn",
+                "Microsoft Manassas/Ashburn",
+                "Meta Virginia Facilities",
+                "Equinix / Digital Realty / CyrusOne"
+              ]
+            },
+            {
+              "cluster": "Dallas–Fort Worth",
+              "facilities": [
+                "Microsoft Dallas Metro",
+                "Google Dallas Region",
+                "Meta Dallas",
+                "Equinix / Digital Realty / QTS / CyrusOne"
+              ]
+            },
+            {
+              "cluster": "Phoenix Metro",
+              "facilities": [
+                "Microsoft Goodyear / El Mirage",
+                "Google Phoenix Region",
+                "Meta Mesa",
+                "Iron Mountain / CyrusOne"
+              ]
+            },
+            {
+              "cluster": "Hillsboro",
+              "facilities": [
+                "AWS Hillsboro",
+                "Google Hillsboro",
+                "Meta Hillsboro",
+                "Equinix / Flexential / Digital Realty"
+              ]
+            },
+            {
+              "cluster": "Columbus",
+              "facilities": [
+                "Meta New Albany",
+                "Google New Albany",
+                "AWS Columbus Builds"
+              ]
+            },
+            {
+              "cluster": "Austin / Taylor / Hutto / San Antonio",
+              "facilities": [
+                "Microsoft Campuses",
+                "Google Austin",
+                "AWS San Antonio",
+                "xAI / Tesla AI Builds"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Canada",
+          "clusters": [
+            {
+              "cluster": "Toronto",
+              "facilities": [
+                "Equinix Toronto",
+                "Digital Realty Toronto",
+                "AWS/Azure/GCP Edge"
+              ]
+            },
+            {
+              "cluster": "Montreal",
+              "facilities": [
+                "Hydro-powered Hyperscale Builds",
+                "Equinix Montreal",
+                "Cloud Regional Nodes"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Mexico",
+          "clusters": [
+            {
+              "cluster": "Querétaro",
+              "facilities": [
+                "Hyperscale Campuses",
+                "Colocation Sites"
+              ]
+            },
+            {
+              "cluster": "Monterrey",
+              "facilities": [
+                "Regional Cloud Builds"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "continent": "Europe",
+      "countries": [
+        {
+          "country": "Ireland",
+          "clusters": [
+            {
+              "cluster": "Dublin",
+              "facilities": [
+                "AWS Dublin Campuses",
+                "Microsoft Dublin Region",
+                "Google Dublin Data Centers",
+                "Meta Clonee Campus"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "United Kingdom",
+          "clusters": [
+            {
+              "cluster": "London / Slough / Thames Valley",
+              "facilities": [
+                "AWS London Region",
+                "Azure UK South",
+                "Google Cloud London",
+                "Equinix LD / Telehouse / Digital Realty"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Germany",
+          "clusters": [
+            {
+              "cluster": "Frankfurt",
+              "facilities": [
+                "AWS Frankfurt Region",
+                "Azure Germany West Central",
+                "Google Cloud Frankfurt",
+                "Equinix FR / Interxion"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "France",
+          "clusters": [
+            {
+              "cluster": "Paris",
+              "facilities": [
+                "AWS Paris Region",
+                "Azure France Central",
+                "Google Cloud Paris",
+                "Data4 / Equinix PA"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Netherlands",
+          "clusters": [
+            {
+              "cluster": "Amsterdam / Schiphol / North Holland",
+              "facilities": [
+                "AWS Amsterdam Region",
+                "Azure Netherlands",
+                "Google Cloud Amsterdam",
+                "Equinix AM / Interxion"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Portugal",
+          "clusters": [
+            {
+              "cluster": "Sines",
+              "facilities": [
+                "START Campus (Hyperscale AI & Cloud)"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Spain",
+          "clusters": [
+            {
+              "cluster": "Madrid",
+              "facilities": [
+                "AWS Spain Region",
+                "Azure Spain Central",
+                "Google Cloud Madrid"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Italy",
+          "clusters": [
+            {
+              "cluster": "Milan",
+              "facilities": [
+                "AWS Milan Region",
+                "Azure Italy North",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Sweden",
+          "clusters": [
+            {
+              "cluster": "Stockholm",
+              "facilities": [
+                "AWS Stockholm Region",
+                "Azure Sweden Central",
+                "Google Cloud Sweden"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Finland",
+          "clusters": [
+            {
+              "cluster": "Hamina",
+              "facilities": [
+                "Google Hamina Data Center"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "continent": "Asia",
+      "countries": [
+        {
+          "country": "China",
+          "clusters": [
+            {
+              "cluster": "Beijing",
+              "facilities": [
+                "Alibaba Beijing Region",
+                "Baidu Beijing Campuses",
+                "Tencent Beijing Facilities"
+              ]
+            },
+            {
+              "cluster": "Zhangbei",
+              "facilities": [
+                "Hyperscale Northern Compute Zone",
+                "ByteDance AI Compute Campus"
+              ]
+            },
+            {
+              "cluster": "Hohhot",
+              "facilities": [
+                "Alibaba Hohhot Data Center",
+                "Tencent Hohhot Compute Campus"
+              ]
+            },
+            {
+              "cluster": "Shanghai",
+              "facilities": [
+                "Hyperscale Urban Region",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Japan",
+          "clusters": [
+            {
+              "cluster": "Tokyo",
+              "facilities": [
+                "AWS Tokyo Region",
+                "Azure Japan East",
+                "Google Cloud Tokyo",
+                "Equinix TY / Major Colocation Providers"
+              ]
+            },
+            {
+              "cluster": "Osaka",
+              "facilities": [
+                "AWS Osaka Region",
+                "Azure Japan West"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Singapore",
+          "clusters": [
+            {
+              "cluster": "Singapore Metro",
+              "facilities": [
+                "AWS Singapore Region",
+                "Azure Southeast Asia",
+                "Google Cloud Singapore",
+                "Equinix SG / Dense Colocation"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "India",
+          "clusters": [
+            {
+              "cluster": "Mumbai",
+              "facilities": [
+                "AWS Mumbai Region",
+                "Azure India West",
+                "Google Cloud Mumbai"
+              ]
+            },
+            {
+              "cluster": "Hyderabad",
+              "facilities": [
+                "AWS Hyderabad Region",
+                "Azure India Central"
+              ]
+            },
+            {
+              "cluster": "Chennai",
+              "facilities": [
+                "Regional Cloud & Colocation Sites"
+              ]
+            },
+            {
+              "cluster": "Delhi NCR",
+              "facilities": [
+                "Regional Cloud Facilities"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "South Korea",
+          "clusters": [
+            {
+              "cluster": "Seoul",
+              "facilities": [
+                "AWS Seoul Region",
+                "Azure Korea Central",
+                "Naver / Kakao Data Centers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "United Arab Emirates",
+          "clusters": [
+            {
+              "cluster": "Dubai",
+              "facilities": [
+                "Azure UAE North",
+                "Major Colocation Providers"
+              ]
+            },
+            {
+              "cluster": "Abu Dhabi",
+              "facilities": [
+                "AWS UAE Region"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Indonesia",
+          "clusters": [
+            {
+              "cluster": "Jakarta",
+              "facilities": [
+                "Hyperscale Cloud Region",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Malaysia",
+          "clusters": [
+            {
+              "cluster": "Cyberjaya",
+              "facilities": [
+                "Regional Cloud Facilities"
+              ]
+            },
+            {
+              "cluster": "Johor",
+              "facilities": [
+                "Emerging Hyperscale Campuses"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Thailand",
+          "clusters": [
+            {
+              "cluster": "Bangkok",
+              "facilities": [
+                "Regional Cloud & Colocation Sites"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Vietnam",
+          "clusters": [
+            {
+              "cluster": "Ho Chi Minh City",
+              "facilities": [
+                "Regional Cloud Facilities"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "continent": "South America",
+      "countries": [
+        {
+          "country": "Brazil",
+          "clusters": [
+            {
+              "cluster": "São Paulo",
+              "facilities": [
+                "AWS São Paulo Region",
+                "Azure Brazil South",
+                "Google Cloud São Paulo",
+                "Ascenty Hyperscale Campuses",
+                "Equinix SP / Digital Realty"
+              ]
+            },
+            {
+              "cluster": "Campinas",
+              "facilities": [
+                "Regional Cloud Facilities"
+              ]
+            },
+            {
+              "cluster": "Rio de Janeiro",
+              "facilities": [
+                "Regional Cloud & Colocation Sites"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Chile",
+          "clusters": [
+            {
+              "cluster": "Santiago",
+              "facilities": [
+                "Google Chile Data Center",
+                "Regional Cloud Facilities",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Argentina",
+          "clusters": [
+            {
+              "cluster": "Buenos Aires",
+              "facilities": [
+                "Regional Cloud Facilities",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Colombia",
+          "clusters": [
+            {
+              "cluster": "Bogotá",
+              "facilities": [
+                "Regional Cloud Facilities",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Peru",
+          "clusters": [
+            {
+              "cluster": "Lima",
+              "facilities": [
+                "Regional Cloud Facilities",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Uruguay",
+          "clusters": [
+            {
+              "cluster": "Montevideo",
+              "facilities": [
+                "Regional Cloud Facilities"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Ecuador",
+          "clusters": [
+            {
+              "cluster": "Quito",
+              "facilities": [
+                "Regional Cloud Facilities"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "continent": "Africa",
+      "countries": [
+        {
+          "country": "South Africa",
+          "clusters": [
+            {
+              "cluster": "Johannesburg",
+              "facilities": [
+                "Azure South Africa North",
+                "Major Colocation Providers",
+                "Enterprise & Telecom Datacenters"
+              ]
+            },
+            {
+              "cluster": "Cape Town",
+              "facilities": [
+                "AWS Africa (Cape Town) Region",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Kenya",
+          "clusters": [
+            {
+              "cluster": "Nairobi",
+              "facilities": [
+                "Regional Cloud Facilities",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Egypt",
+          "clusters": [
+            {
+              "cluster": "Cairo",
+              "facilities": [
+                "Regional Cloud Facilities",
+                "Telecom & Enterprise Datacenters"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Nigeria",
+          "clusters": [
+            {
+              "cluster": "Lagos",
+              "facilities": [
+                "Regional Cloud Facilities",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Morocco",
+          "clusters": [
+            {
+              "cluster": "Casablanca",
+              "facilities": [
+                "Regional Cloud Facilities",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Ghana",
+          "clusters": [
+            {
+              "cluster": "Accra",
+              "facilities": [
+                "Regional Cloud Facilities",
+                "Major Colocation Providers"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Tanzania",
+          "clusters": [
+            {
+              "cluster": "Dar es Salaam",
+              "facilities": [
+                "Regional Cloud Facilities"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "Uganda",
+          "clusters": [
+            {
+              "cluster": "Kampala",
+              "facilities": [
+                "Regional Cloud Facilities"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "continent": "Oceania",
+      "countries": [
+        {
+          "country": "Australia",
+          "clusters": [
+            {
+              "cluster": "Sydney",
+              "facilities": [
+                "AWS Australia (Sydney) Region",
+                "Azure Australia East",
+                "Google Cloud Sydney",
+                "Equinix SY / Major Colocation Providers"
+              ]
+            },
+            {
+              "cluster": "Melbourne",
+              "facilities": [
+                "Azure Australia Southeast",
+                "Regional Cloud Facilities",
+                "Major Colocation Providers"
+              ]
+            },
+            {
+              "cluster": "Canberra",
+              "facilities": [
+                "Government & Enterprise Datacenters"
+              ]
+            },
+            {
+              "cluster": "Perth",
+              "facilities": [
+                "Regional Cloud Facilities"
+              ]
+            }
+          ]
+        },
+        {
+          "country": "New Zealand",
+          "clusters": [
+            {
+              "cluster": "Auckland",
+              "facilities": [
+                "Regional Cloud Facilities",
+                "Major Colocation Providers"
+              ]
+            },
+            {
+              "cluster": "Wellington",
+              "facilities": [
+                "Enterprise & Government Datacenters"
+              ]
+            },
+            {
+              "cluster": "Christchurch",
+              "facilities": [
+                "Regional Cloud Facilities"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

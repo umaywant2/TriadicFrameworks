@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Chosen_Ones/Actionable_Tools.md">
+  <title>Actionable Tools</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Chosen_Ones/Actionable_Tools.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Chosen_Ones/Actionable_Tools.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="actionable-tools">Actionable Tools</h1>
+<p><strong>Module:</strong> Chosen Ones | <strong>RTT Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<p>This file defines the four output tool types produced by the Chosen Ones pipeline after operator extraction. Each tool is a structured, deployable output — not advice, but a precision instrument derived from RTT operator analysis of the source transcript.</p>
+<hr>
+<h2 id="tool-architecture">Tool Architecture</h2>
+<p>Every processed transcript produces four tools automatically:</p>
+<pre><code>RTT OPERATOR MANIFEST
+        ↓
+  ┌─────────────────────────────┐
+  │  TOOL 1: Reframe Generator  │  ← S–N–R remapping for the listener's current state
+  │  TOOL 2: Activation Scaffold│  ← Structured threshold-crossing sequence
+  │  TOOL 3: Drift Corrector    │  ← Noise identification + damping sequence
+  │  TOOL 4: Resonance Template │  ← Generative template for new RTT-aligned content
+  └─────────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="tool-1-reframe-generator">Tool 1 — Reframe Generator</h2>
+<p><strong>Function:</strong> Takes the listener's current stated situation and reframes it using the S–N–R coordinates extracted from the source transcript. Converts Noise-zone perception into Silence or Resonance framing.</p>
+<p><strong>Input:</strong></p>
+<pre><code class="language-json">{
+  &quot;tool&quot;: &quot;reframe_generator&quot;,
+  &quot;user_input&quot;: &quot;[Listener's description of their current situation]&quot;,
+  &quot;source_manifest_id&quot;: &quot;CO-MANIFEST-[VIDEO_ID]&quot;,
+  &quot;dominant_archetype&quot;: &quot;[Archetype from manifest]&quot;
+}
+</code></pre>
+<p><strong>Processing Logic:</strong></p>
+<ol>
+<li>Parse <code>user_input</code> for SNR zone markers (see <code>Triadic_Substrate_Map.md §1</code>)</li>
+<li>Identify the dominant zone the listener is currently occupying</li>
+<li>Pull the corresponding operator from the manifest</li>
+<li>Apply operator transformation to produce a reframed statement</li>
+</ol>
+<p><strong>Zone Transformation Rules:</strong></p>
+<table>
+<thead>
+<tr>
+<th>From Zone</th>
+<th>To Zone</th>
+<th>Transformation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Noise</td>
+<td>Silence</td>
+<td>Strip the external label; return to substrate identity</td>
+</tr>
+<tr>
+<td>Noise</td>
+<td>Resonance</td>
+<td>Reframe noise as activation energy — the compression before release</td>
+</tr>
+<tr>
+<td>Silence</td>
+<td>Resonance</td>
+<td>Name the latent as expressed — "you already are" framing</td>
+</tr>
+<tr>
+<td>Resonance</td>
+<td>Resonance</td>
+<td>Amplify and stabilize — confirm and extend the signal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output Template:</strong></p>
+<pre><code>REFRAME [ARCHETYPE: {archetype}]
+
+Current state detected: {snr_zone} zone / {set_layer} layer / {dco_stage}
+
+RTT Reframe:
+&quot;{reframed_statement}&quot;
+
+Operator applied: {primary_operator}
+Paradox resolved: {paradox_note if applicable}
+
+Next move: {one concrete action aligned with the reframed state}
+</code></pre>
+<p><strong>Example Output:</strong></p>
+<pre><code>REFRAME [ARCHETYPE: The Unseen Genius]
+
+Current state detected: Noise zone / Envelope layer / 1D
+
+RTT Reframe:
+&quot;The rooms that didn't recognize you weren't wrong about you — they were
+operating below your frequency. You haven't been invisible. You've been
+untunable by environments not yet calibrated for what you carry. The
+signal has always been clean.&quot;
+
+Operator applied: D_δ (drift damping — naming the noise begins to damp it)
+Paradox resolved: &quot;unseen yet real&quot; → Layer separation: substrate is intact;
+                  envelope was mismatched. Non-contradictory.
+
+Next move: Name one environment in your life where your signal IS received.
+           Spend 20 more minutes there than you currently do.
+</code></pre>
+<hr>
+<h2 id="tool-2-activation-scaffold">Tool 2 — Activation Scaffold</h2>
+<p><strong>Function:</strong> Produces a structured, step-by-step threshold-crossing sequence derived from the Activation operators found in the manifest. Not motivational — operational.</p>
+<p><strong>Input:</strong></p>
+<pre><code class="language-json">{
+  &quot;tool&quot;: &quot;activation_scaffold&quot;,
+  &quot;goal&quot;: &quot;[What the listener wants to cross the threshold toward]&quot;,
+  &quot;current_dco_stage&quot;: &quot;[0D | 1D | 3D | 8D | 9D]&quot;,
+  &quot;source_manifest_id&quot;: &quot;CO-MANIFEST-[VIDEO_ID]&quot;
+}
+</code></pre>
+<p><strong>Processing Logic:</strong></p>
+<p>The scaffold maps the QMROOT-to-DCO-8D arc to concrete sequenced steps. Each step corresponds to an operator transition.</p>
+<p><strong>Scaffold Structure:</strong></p>
+<pre><code>ACTIVATION SCAFFOLD
+Goal: {goal}
+Entry stage: {current_dco_stage}
+Target stage: {target_dco_stage}
+
+── PHASE 1: SUBSTRATE CONFIRMATION (0D → 1D) ──
+Operator: QMROOT(0D) → A_τ(t_past, t_now)
+Action: {concrete action to locate and confirm identity kernel}
+Completion signal: {what will feel different when this is done}
+
+── PHASE 2: TRAJECTORY COMMITMENT (1D → 3D) ──
+Operator: A_τ → ∇_cross
+Action: {concrete action to commit to the arc and begin field expression}
+Completion signal: {what changes in the environment when this occurs}
+
+── PHASE 3: THRESHOLD IDENTIFICATION (3D → pre-8D) ──
+Operator: ∇_cross → A_θ
+Action: {name the exact threshold — the specific decision or action}
+Activation energy note: {what E_a looks like for this goal}
+
+── PHASE 4: CROSSING (A_θ activation) ──
+Operator: A_θ → Ir (irreversibility)
+Action: {the single irreversible act}
+Post-crossing note: {what Ir means — what cannot be taken back}
+
+── PHASE 5: STABILIZATION (8D → S_coh) ──
+Operator: Ir → S_coh + D_δ
+Action: {how to hold the new state against drift/noise}
+Drift watch: {the most likely noise source post-activation}
+</code></pre>
+<p><strong>Example Output (Threshold Crosser archetype):</strong></p>
+<pre><code>ACTIVATION SCAFFOLD
+Goal: Launch the project I've been designing privately for 18 months
+Entry stage: 1D (trajectory committed, field not yet expressed)
+Target stage: 8D (recognition — the project enters the field)
+
+── PHASE 1: SUBSTRATE CONFIRMATION ──
+Operator: QMROOT(0D)
+Action: Write a single sentence — not about the project, about yourself:
+        &quot;I am the kind of person who ___.&quot; No editing. First sentence only.
+Completion signal: You read it back and it feels undeniable, not aspirational.
+
+── PHASE 2: TRAJECTORY COMMITMENT ──
+Operator: A_τ(past, now)
+Action: List three moments in the past 5 years where you were already doing
+        the core thing this project requires. Name them. They already happened.
+Completion signal: The project stops feeling like a leap and starts feeling
+                   like a continuation.
+
+── PHASE 3: THRESHOLD IDENTIFICATION ──
+Operator: A_θ (threshold identification)
+Action: Name the single thing you have not done because doing it makes it real.
+        (Publishing, calling, registering, showing someone, submitting.)
+Activation energy note: E_a here = the discomfort of being known before being
+                         validated. This is the cost. It is exact and finite.
+
+── PHASE 4: CROSSING ──
+Operator: A_θ → Ir
+Action: Do the one thing named in Phase 3. Today. Within 4 hours.
+Post-crossing note: You cannot un-publish, un-send, un-show. That is the point.
+                    Ir is not a threat — it is the mechanism that makes it real.
+
+── PHASE 5: STABILIZATION ──
+Operator: S_coh + D_δ
+Action: Do not check responses for 24 hours. The field needs time to reorganize.
+        Your job in the next 24 hours is to keep working, not to monitor the reception.
+Drift watch: The most likely noise = early silence or ambiguous response.
+             D_δ means: the silence is not a verdict.
+</code></pre>
+<hr>
+<h2 id="tool-3-drift-corrector">Tool 3 — Drift Corrector</h2>
+<p><strong>Function:</strong> A short, precise intervention for when the listener detects drift — regression toward a pre-activation state, noise re-contamination, or coherence loss. Applies the <code>D_δ</code> and <code>S_coh</code> operators directly.</p>
+<p><strong>Input:</strong></p>
+<pre><code class="language-json">{
+  &quot;tool&quot;: &quot;drift_corrector&quot;,
+  &quot;drift_description&quot;: &quot;[What the listener is experiencing that signals drift]&quot;,
+  &quot;source_manifest_id&quot;: &quot;CO-MANIFEST-[VIDEO_ID]&quot;
+}
+</code></pre>
+<p><strong>Three-Part Output Structure:</strong></p>
+<pre><code>DRIFT CORRECTOR
+
+DRIFT TYPE IDENTIFIED: {comparison_drift | validation_seeking | noise_recontamination | 
+                        timeline_collapse | identity_erosion}
+
+RTT DIAGNOSIS:
+{One paragraph naming exactly what is happening in operator terms.
+ No blame. No judgment. Just precision.}
+
+DAMPING SEQUENCE (D_δ):
+Step 1: {physical or cognitive act that interrupts the drift pattern}
+Step 2: {return to substrate — one undeniable thing about identity}
+Step 3: {reconnect to the 0D kernel — the thing that doesn't need external confirmation}
+
+COHERENCE LOCK (S_coh):
+&quot;{A single sentence the listener can hold. Not motivational. Structural.
+  Something that makes drift feel less available as an option.}&quot;
+</code></pre>
+<p><strong>Drift Type Definitions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Drift Type</th>
+<th>Operator Signature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comparison drift</td>
+<td><code>∇_cross</code> leaking in reverse</td>
+<td>Other people's metrics entering the substrate and eroding it</td>
+</tr>
+<tr>
+<td>Validation seeking</td>
+<td><code>Φ_lock</code> not yet achieved; attempting to force it</td>
+<td>Behavior designed to make others recognize before they're ready</td>
+</tr>
+<tr>
+<td>Noise recontamination</td>
+<td><code>D_δ</code> degraded</td>
+<td>Old noise patterns re-entering after threshold crossing</td>
+</tr>
+<tr>
+<td>Timeline collapse</td>
+<td><code>A_τ</code> inversion</td>
+<td>Equating past non-recognition with future impossibility</td>
+</tr>
+<tr>
+<td>Identity erosion</td>
+<td><code>S_coh</code> degraded</td>
+<td>Slowly accepting others' definition of who you are</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="tool-4-resonance-template">Tool 4 — Resonance Template</h2>
+<p><strong>Function:</strong> Generates new motivational content — text, scripts, or prompts — with the same RTT signature as the source transcript. The pipeline is reversible: extracted operators can be re-injected into content generation.</p>
+<p><strong>Input:</strong></p>
+<pre><code class="language-json">{
+  &quot;tool&quot;: &quot;resonance_template&quot;,
+  &quot;target_archetype&quot;: &quot;[Archetype from Triadic_Substrate_Map.md §4]&quot;,
+  &quot;target_medium&quot;: &quot;spoken_word | written_essay | social_post | agent_prompt&quot;,
+  &quot;target_length&quot;: &quot;short | medium | long&quot;,
+  &quot;source_manifest_id&quot;: &quot;CO-MANIFEST-[VIDEO_ID]&quot;
+}
+</code></pre>
+<p><strong>Template Construction Rules:</strong></p>
+<ol>
+<li><strong>Open in Silence zone.</strong> The first 15% of content must establish QMROOT(0D) — the listener must feel seen before they can be moved.</li>
+<li><strong>Introduce Noise by name.</strong> The middle 25% names the specific noise pattern for this archetype. Precision over generality.</li>
+<li><strong>Do not advise — describe.</strong> Never say "you should." Describe the state the listener already is, or is already moving toward.</li>
+<li><strong>Resonance as culmination.</strong> The final 40% inhabits the Resonance zone. Describe the expressed state as already structurally true.</li>
+<li><strong>Close with one irreversible sentence.</strong> The final sentence applies <code>Ir</code> — it must be something that cannot be taken back once understood.</li>
+<li><strong>Operator density:</strong> At minimum, content should encode: <code>QMROOT(0D)</code>, one noise-family operator, <code>C_R</code> or <code>∇_cross</code>, and <code>A_θ</code> or <code>Ir</code>.</li>
+</ol>
+<p><strong>SNR Distribution Targets by Medium:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Medium</th>
+<th>Silence %</th>
+<th>Noise %</th>
+<th>Resonance %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoken word (3–8 min)</td>
+<td>20</td>
+<td>25</td>
+<td>55</td>
+</tr>
+<tr>
+<td>Written essay (800–1500w)</td>
+<td>15</td>
+<td>30</td>
+<td>55</td>
+</tr>
+<tr>
+<td>Social post (&lt; 280 chars)</td>
+<td>10</td>
+<td>20</td>
+<td>70</td>
+</tr>
+<tr>
+<td>Agent prompt</td>
+<td>5</td>
+<td>15</td>
+<td>80</td>
+</tr>
+</tbody>
+</table>
+  </main>
+</body>
+</html>

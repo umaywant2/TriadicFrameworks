@@ -1,0 +1,1503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/TSR-OverlayDiagramPack-v2.6.0-rc_draft.md">
+  <title>TSR Overlay Diagram Pack — v2.6.0-rc</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/TSR-OverlayDiagramPack-v2.6.0-rc_draft.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/TSR-OverlayDiagramPack-v2.6.0-rc_draft.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_TSR-OverlayDiagramPack-v2 6 0-rc_draft" src="https://github.com/user-attachments/assets/45ff67e6-74dc-4eb5-aedf-4a595e70a8a9" /></p>
+<hr>
+<p>title: "TSR Overlay Diagram Pack"
+version: "2.6.0-rc"
+status: "Release Candidate"
+date: "2026-09-03"
+authors:
+  - handle: "Nawder"
+    role: "Lead Architect"
+repository: "TriadicFrameworks"
+path: "docs/Research/TSR-OverlayDiagramPack-v2.6.0-rc_draft.md"
+license: "TriadicFrameworks Canon License v1.2"
+export_targets:
+  - html
+  - pdf
+changelog:
+  - version: "2.6.0-rc"
+    date: "2026-09-03"
+    notes: "Added SL-01 leap-operator sidebar; integrated Grok feedback pass; restructured OD-05 topology; unified canon formatting throughout."
+  - version: "2.5.1"
+    date: "2026-07-18"
+    notes: "Corrected phase-gate labeling in OD-03; extended simulation table S-04."
+  - version: "2.5.0"
+    date: "2026-06-02"
+    notes: "Initial operator grammar formalization; added OD-04 recursive depth chart."
+tags:
+  - TSR
+  - overlay-diagrams
+  - operator-grammar
+  - SL-01
+  - triadic-frameworks
+  - simulation
+  - release-candidate</p>
+<hr>
+<!-- ============================================================
+     TSR OVERLAY DIAGRAM PACK · v2.6.0-rc
+     TriadicFrameworks Canon Document
+     ============================================================ -->
+
+<h1 id="tsr-overlay-diagram-pack-v260-rc">TSR Overlay Diagram Pack — v2.6.0-rc</h1>
+<blockquote>
+<p><strong>Status:</strong> Release Candidate · <strong>Repository:</strong> TriadicFrameworks
+<strong>Path:</strong> <code>docs/Research/TSR-OverlayDiagramPack-v2.6.0-rc_draft.md</code>
+<strong>Last Updated:</strong> 2026-09-03</p>
+</blockquote>
+<ul>
+<li><a href="TSR_Cut_Over_Protocol_RTT_Canonical_Form.html"><code>TSR_Cut_Over_Protocol_RTT_Canonical_Form.md</code></a></li>
+<li><a href="TSR_Cut_Over_Protocol_RTT_Operator_Grammar_Table.html"><code>TSR_Cut_Over_Protocol_RTT_Operator_Grammar_Table.md</code></a></li>
+</ul>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-overview--scope">Overview &amp; Scope</a></li>
+<li><a href="#2-core-tsr-architecture">Core TSR Architecture</a>
+   - 2.1 <a href="#21-triadic-state-model">Triadic State Model</a>
+   - 2.2 <a href="#22-phase-gate-definitions">Phase Gate Definitions</a>
+   - 2.3 <a href="#23-state-encoding-convention">State Encoding Convention</a></li>
+<li><a href="#3-operator-grammar-reference">Operator Grammar Reference</a>
+   - 3.1 <a href="#31-formal-grammar-notation">Formal Grammar Notation</a>
+   - 3.2 <a href="#32-primitive-operators">Primitive Operators</a>
+   - 3.3 <a href="#33-compound-operators">Compound Operators</a>
+   - 3.4 <a href="#34-constraint-rules">Constraint Rules</a></li>
+<li><a href="#4-overlay-diagrams">Overlay Diagrams</a>
+   - OD-01 <a href="#od-01-state-transition-matrix">State Transition Matrix</a>
+   - OD-02 <a href="#od-02-triadic-phase-map">Triadic Phase Map</a>
+   - OD-03 <a href="#od-03-operator-flow-lattice">Operator Flow Lattice</a>
+   - OD-04 <a href="#od-04-recursive-depth-chart">Recursive Depth Chart</a>
+   - OD-05 <a href="#od-05-sl-01-leap-topology">SL-01 Leap Topology</a></li>
+<li><a href="#5-sl-01-leap-operator--sidebar">SL-01 Leap Operator — Sidebar</a></li>
+<li><a href="#6-simulation-tables">Simulation Tables</a>
+   - S-01 <a href="#s-01-linear-traversal-baseline">Linear Traversal Baseline</a>
+   - S-02 <a href="#s-02-phase-gate-collision-matrix">Phase-Gate Collision Matrix</a>
+   - S-03 <a href="#s-03-operator-composition-outcomes">Operator Composition Outcomes</a>
+   - S-04 <a href="#s-04-sl-01-leap-event-log">SL-01 Leap Event Log</a></li>
+<li><a href="#7-grok-feedback-integration">Grok Feedback Integration</a></li>
+<li><a href="#8-retrospective">Retrospective</a></li>
+<li><a href="#9-closing--publication-checklist">Closing &amp; Publication Checklist</a></li>
+<li><a href="#10-appendices">Appendices</a><ul>
+<li>A <a href="#a-notation-glossary">Notation Glossary</a></li>
+<li>B <a href="#b-version-diff-summary">Version Diff Summary</a></li>
+<li>C <a href="#c-canon-formatting-reference">Canon Formatting Reference</a></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="1-overview-scope">1. Overview &amp; Scope</h2>
+<p>The <strong>Triadic State Representation (TSR) Overlay Diagram Pack</strong> is the authoritative visual-reference companion to the TriadicFrameworks specification. It provides a complete set of overlay diagrams, operator grammar tables, and simulation records that define how states, transitions, and operators behave across all three phases of the TSR model.</p>
+<h3 id="purpose">Purpose</h3>
+<p>This pack serves three audiences:</p>
+<table>
+<thead>
+<tr>
+<th>Audience</th>
+<th>Primary Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Framework Authors</strong></td>
+<td>Canonical reference during spec authoring and operator design</td>
+</tr>
+<tr>
+<td><strong>Implementers</strong></td>
+<td>Ground-truth diagrams for encoding state machines and phase schedulers</td>
+</tr>
+<tr>
+<td><strong>Reviewers / Auditors</strong></td>
+<td>Structured baseline for conformance checks and regression validation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scope-of-v260-rc">Scope of v2.6.0-rc</h3>
+<p>This release candidate introduces:</p>
+<ul>
+<li><strong>SL-01 Leap Operator</strong> — full specification, sidebar treatment, and topology diagram (OD-05)</li>
+<li><strong>Grok Feedback Pass</strong> — integrated editorial notes from the Grok review session, resolved inline</li>
+<li><strong>Operator Grammar v2.2</strong> — formalized BNF notation replacing the v2.1 semi-formal tables</li>
+<li><strong>Simulation Table S-04</strong> — new event log covering SL-01 leap events across all phase pairs</li>
+<li><strong>Canon formatting unification</strong> — all sections now conform to TriadicFrameworks Canon Style Guide §4–§7</li>
+</ul>
+<blockquote>
+<p><strong>Out of Scope for this release:</strong> Cross-framework adapter specifications, probabilistic state weighting, and multi-agent TSR federation. These are tracked in the v2.7.x roadmap.</p>
+</blockquote>
+<hr>
+<h2 id="2-core-tsr-architecture">2. Core TSR Architecture</h2>
+<h3 id="21-triadic-state-model">2.1 Triadic State Model</h3>
+<p>The TSR model structures all representational states into a <strong>three-phase lattice</strong>: Generative (Φ₁), Mediative (Φ₂), and Resolvent (Φ₃). Each phase is a distinct ontological register with its own operator set, transition rules, and memory constraints.</p>
+<pre><code>╔══════════════════════════════════════════════════════════════╗
+║                    TSR STATE LATTICE                         ║
+╠══════════════════════╦═══════════════════╦═══════════════════╣
+║  Φ₁  GENERATIVE      ║  Φ₂  MEDIATIVE   ║  Φ₃  RESOLVENT   ║
+║  ─────────────────   ║  ──────────────   ║  ─────────────   ║
+║  · Origin encoding   ║  · Tension hold   ║  · Synthesis     ║
+║  · Raw state birth   ║  · Cross-phase    ║  · Collapse      ║
+║  · Ψ-seed emission   ║    arbitration    ║  · Commitment    ║
+║  · No backflow       ║  · Bidirectional  ║  · Terminal or   ║
+║                      ║    transit        ║    re-entry gate ║
+╠══════════════════════╩═══════════════════╩═══════════════════╣
+║  Transit:  Φ₁ → Φ₂ → Φ₃   (standard)                       ║
+║            Φ₃ → Φ₁          (re-entry via Γ-gate)           ║
+║            Φ₁ ⇒ Φ₃          (SL-01 leap — see § 5)         ║
+╚══════════════════════════════════════════════════════════════╝
+</code></pre>
+<p><strong>Key invariants:</strong></p>
+<ul>
+<li>A state exists in <strong>exactly one phase</strong> at any moment; phase co-residence is undefined behavior.</li>
+<li>Φ₁ has no inbound standard transit; the only legal inbound path is via Γ-gate re-entry from Φ₃.</li>
+<li>Φ₂ is the sole standard bridge between Φ₁ and Φ₃; bypassing Φ₂ requires an explicit leap operator (see SL-01, § 5).</li>
+</ul>
+<h3 id="22-phase-gate-definitions">2.2 Phase Gate Definitions</h3>
+<p>Phase gates are typed transition checkpoints. Every inter-phase edge must pass through a declared gate.</p>
+<table>
+<thead>
+<tr>
+<th>Gate ID</th>
+<th>Edge</th>
+<th>Type</th>
+<th>Guard Condition</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Γ₁₂</strong></td>
+<td>Φ₁ → Φ₂</td>
+<td>Standard</td>
+<td><code>state.ψ ≥ ψ_min</code></td>
+<td>Minimum seed energy required</td>
+</tr>
+<tr>
+<td><strong>Γ₂₃</strong></td>
+<td>Φ₂ → Φ₃</td>
+<td>Standard</td>
+<td><code>tension.resolved = true</code></td>
+<td>Mediative tension must clear</td>
+</tr>
+<tr>
+<td><strong>Γ₃₁</strong></td>
+<td>Φ₃ → Φ₁</td>
+<td>Re-entry</td>
+<td><code>commit.type = REOPEN</code></td>
+<td>Controlled re-genesis only</td>
+</tr>
+<tr>
+<td><strong>Λ₁₃</strong></td>
+<td>Φ₁ ⇒ Φ₃</td>
+<td>Leap (SL-01)</td>
+<td><code>leap.authorized ∧ Φ₂.bypassed</code></td>
+<td>Requires SL-01 operator</td>
+</tr>
+<tr>
+<td><strong>Γ₂₁</strong></td>
+<td>Φ₂ → Φ₁</td>
+<td>Rollback</td>
+<td><code>rollback.depth ≤ R_MAX</code></td>
+<td>Emergency rollback only; audited</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Canon note:</strong> Gate IDs use <code>Γ</code> (Gamma) for standard/re-entry gates and <code>Λ</code> (Lambda) for leap gates. This distinction is load-bearing for parser implementations — do not conflate.</p>
+</blockquote>
+<h3 id="23-state-encoding-convention">2.3 State Encoding Convention</h3>
+<p>All states in the TSR system are encoded as a <strong>four-tuple</strong>:</p>
+<pre><code>S = ⟨ id, phase, ψ, τ ⟩
+
+Where:
+  id    → Unique state identifier (string, UUID-compatible)
+  phase → Phase register: { Φ₁ | Φ₂ | Φ₃ }
+  ψ     → Seed potential (float, 0.0–1.0); meaningful only in Φ₁
+  τ     → Tension index (float, 0.0–1.0); meaningful only in Φ₂
+</code></pre>
+<p>States in Φ₃ carry resolved payloads rather than ψ/τ values; those fields are frozen at entry-time values for audit traceability.</p>
+<hr>
+<h2 id="3-operator-grammar-reference">3. Operator Grammar Reference</h2>
+<h3 id="31-formal-grammar-notation">3.1 Formal Grammar Notation</h3>
+<p>The TSR operator grammar is specified in <strong>Augmented BNF (ABNF)</strong> following RFC 5234 conventions, extended with TriadicFrameworks phase-annotation syntax.</p>
+<pre><code class="language-abnf">; ── TSR Operator Grammar v2.2 ──────────────────────────────────
+
+program        = *( statement )
+statement      = op-expr NEWLINE
+op-expr        = primitive-op / compound-op / leap-op
+
+primitive-op   = op-name &quot;(&quot; arg-list &quot;)&quot; [ phase-tag ]
+compound-op    = &quot;{&quot; *( op-expr ) &quot;}&quot; [ combinator ]
+leap-op        = &quot;SL&quot; &quot;-&quot; leap-id &quot;(&quot; arg-list &quot;)&quot; phase-tag
+
+op-name        = 1*( ALPHA / DIGIT / &quot;_&quot; )
+arg-list       = arg *( &quot;,&quot; arg )
+arg            = literal / state-ref / op-expr
+
+phase-tag      = &quot;@&quot; phase-id
+phase-id       = &quot;Φ1&quot; / &quot;Φ2&quot; / &quot;Φ3&quot;
+
+leap-id        = 1*( DIGIT )
+combinator     = &quot;|&gt;&quot; / &quot;&amp;&gt;&quot; / &quot;?&gt;&quot;
+                ; |&gt; = sequential, &amp;&gt; = parallel, ?&gt; = conditional
+
+literal        = quoted-str / number / bool
+state-ref      = &quot;$&quot; 1*( ALPHA / DIGIT / &quot;_&quot; )
+quoted-str     = DQUOTE *( VCHAR / SP ) DQUOTE
+number         = 1*DIGIT [ &quot;.&quot; 1*DIGIT ]
+bool           = &quot;true&quot; / &quot;false&quot;
+</code></pre>
+<h3 id="32-primitive-operators">3.2 Primitive Operators</h3>
+<p>Primitive operators are atomic, phase-scoped, and non-decomposable at the grammar level.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Phase</th>
+<th>Signature</th>
+<th>Effect</th>
+<th>Idempotent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SEED</code></td>
+<td>Φ₁</td>
+<td><code>SEED(id, ψ)</code></td>
+<td>Instantiates a new state with seed potential ψ</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>EMIT</code></td>
+<td>Φ₁</td>
+<td><code>EMIT($s)</code></td>
+<td>Propagates state forward through Γ₁₂</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>HOLD</code></td>
+<td>Φ₂</td>
+<td><code>HOLD($s, τ)</code></td>
+<td>Sets tension index; suspends forward transit</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>ARBIT</code></td>
+<td>Φ₂</td>
+<td><code>ARBIT($s₁, $s₂)</code></td>
+<td>Resolves tension between two Φ₂ states</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>SYNTH</code></td>
+<td>Φ₃</td>
+<td><code>SYNTH($s)</code></td>
+<td>Collapses state into resolved payload</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>COMMIT</code></td>
+<td>Φ₃</td>
+<td><code>COMMIT($s, type)</code></td>
+<td>Finalizes with type <code>TERMINAL</code> or <code>REOPEN</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>ROLLBACK</code></td>
+<td>Φ₂</td>
+<td><code>ROLLBACK($s, depth)</code></td>
+<td>Walks state back toward Φ₁ up to <code>depth</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>PROBE</code></td>
+<td>Any</td>
+<td><code>PROBE($s)</code></td>
+<td>Read-only state inspection; no side effects</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-compound-operators">3.3 Compound Operators</h3>
+<p>Compound operators compose primitives using the declared combinator semantics.</p>
+<pre><code>Sequential  ( |&gt; )  — ops execute left-to-right; each receives prior output
+Parallel    ( &amp;&gt; )  — ops execute concurrently; outputs merge into state bag
+Conditional ( ?&gt; )  — first op evaluates guard; branches to second or third
+
+Examples:
+
+  { SEED(&quot;x&quot;, 0.7) |&gt; EMIT($x) |&gt; HOLD($x, 0.4) }@Φ₂
+      → Seed, emit through gate, hold in Φ₂ with tension 0.4
+
+  { ARBIT($a, $b) &amp;&gt; PROBE($c) }@Φ₂
+      → Arbitrate a/b in parallel with probing c
+
+  { PROBE($s) ?&gt; SYNTH($s) | HOLD($s, τ_max) }
+      → If s passes probe, synthesize; else max-hold
+</code></pre>
+<h3 id="34-constraint-rules">3.4 Constraint Rules</h3>
+<p>The following rules are <strong>enforced by conforming implementations</strong>. Violations must raise a <code>TSR_CONSTRAINT_VIOLATION</code> error.</p>
+<pre><code>CR-01  SEED may only appear in Φ₁ context.
+CR-02  SYNTH and COMMIT may only appear in Φ₃ context.
+CR-03  ROLLBACK depth must not exceed R_MAX (default: 3).
+CR-04  SL-01 (leap) may not be composed inside a sequential
+       combinator with HOLD; leap and hold are mutually exclusive
+       for the same state in the same expression.
+CR-05  ARBIT requires exactly two distinct state-ref arguments;
+       self-arbitration ($s, $s) is undefined behavior.
+CR-06  A state that has received COMMIT(TERMINAL) is immutable;
+       any subsequent operator targeting it must raise
+       TSR_IMMUTABLE_STATE.
+CR-07  Phase tags on compound ops override inner phase tags for
+       gate-check purposes; inner tags remain for documentation.
+</code></pre>
+<hr>
+<h2 id="4-overlay-diagrams">4. Overlay Diagrams</h2>
+<blockquote>
+<p><strong>Rendering note:</strong> All diagrams are rendered in UTF-8 box-drawing characters for inline Markdown display. HTML export resolves these to <code>&lt;figure&gt;</code> / <code>&lt;pre class="tsr-diagram"&gt;</code> blocks with syntax highlighting via the TriadicFrameworks CSS bundle. Mermaid equivalents are provided as collapsible alternates where noted.</p>
+</blockquote>
+<hr>
+<h3 id="od-01-state-transition-matrix">OD-01: State Transition Matrix</h3>
+<p><strong>Purpose:</strong> Full enumeration of legal state transitions across all phase pairs.</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────┐
+│  OD-01 · STATE TRANSITION MATRIX                          v2.6.0-rc │
+├────────────┬────────────┬───────────┬──────────┬────────────────────┤
+│  FROM \TO  │    Φ₁      │    Φ₂     │    Φ₃    │  Gate Required     │
+├────────────┼────────────┼───────────┼──────────┼────────────────────┤
+│  Φ₁        │  ───       │  LEGAL    │  LEAP ¹  │  Γ₁₂ / Λ₁₃        │
+│  Φ₂        │  ROLLBACK² │  ───      │  LEGAL   │  Γ₂₁ / Γ₂₃        │
+│  Φ₃        │  RE-ENTRY³ │  ILLEGAL  │  ───     │  Γ₃₁               │
+├────────────┴────────────┴───────────┴──────────┴────────────────────┤
+│  ¹ Leap: requires SL-01 authorization; Φ₂ bypassed (logged)         │
+│  ² Rollback: CR-03 depth limit applies; audited event                │
+│  ³ Re-entry: requires COMMIT(REOPEN); initiates new Ψ-seed cycle     │
+│  ILLEGAL transitions raise TSR_ILLEGAL_TRANSITION                    │
+└─────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h3 id="od-02-triadic-phase-map">OD-02: Triadic Phase Map</h3>
+<p><strong>Purpose:</strong> Spatial representation of phase topology, gate positions, and directional flow.</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────┐
+│  OD-02 · TRIADIC PHASE MAP                                   v2.6.0-rc  │
+│                                                                          │
+│                                                                          │
+│    ┌──────────────────┐     Γ₁₂     ┌──────────────────┐               │
+│    │                  │ ──────────► │                  │               │
+│    │    Φ₁            │             │    Φ₂            │               │
+│    │  GENERATIVE      │ ◄────────── │  MEDIATIVE       │               │
+│    │                  │  Γ₂₁(R/B)  │                  │               │
+│    │  · SEED          │             │  · HOLD          │               │
+│    │  · EMIT          │             │  · ARBIT         │               │
+│    │                  │             │  · ROLLBACK      │               │
+│    └─────────┬────────┘             └────────┬─────────┘               │
+│              │                               │ Γ₂₃                     │
+│              │  Λ₁₃                          ▼                          │
+│              │  (SL-01 Leap)      ┌──────────────────┐                 │
+│              └──────────────────► │                  │                 │
+│                                   │    Φ₃            │                 │
+│                                   │  RESOLVENT       │                 │
+│                                   │                  │                 │
+│                                   │  · SYNTH         │                 │
+│                                   │  · COMMIT        │                 │
+│                                   │                  │                 │
+│                                   └────────┬─────────┘                 │
+│                                            │ Γ₃₁ (Re-entry)           │
+│                                            └──────────────────┐        │
+│                                                               ▼        │
+│                                                        [Φ₁ Re-genesis] │
+│                                                                          │
+│  Legend:  ──►  Standard transit    ⇒  Leap transit                      │
+│           R/B  Rollback only       (R) Re-entry gate                    │
+└─────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h3 id="od-03-operator-flow-lattice">OD-03: Operator Flow Lattice</h3>
+<p><strong>Purpose:</strong> Dependency and ordering lattice showing which operators can precede or follow each other in valid programs.</p>
+<pre><code>┌──────────────────────────────────────────────────────────────────────────┐
+│  OD-03 · OPERATOR FLOW LATTICE                                v2.6.0-rc  │
+│                                                                           │
+│    SEED ──► EMIT ──► HOLD ──► ARBIT ──► SYNTH ──► COMMIT                │
+│      │                │         │                    │                   │
+│      │                │         └──► ROLLBACK        │                   │
+│      │                │               │              │                   │
+│      │                └───────────────┘              │                   │
+│      │                                               │                   │
+│      └──────── SL-01 ──────────────────────────────►┘                   │
+│                 (leap; skips HOLD + ARBIT path)                          │
+│                                                                           │
+│   ┌─────────────────────────────────────────────────────────────────┐    │
+│   │  PROBE  →  any operator (read-only; does not advance lattice)   │    │
+│   └─────────────────────────────────────────────────────────────────┘    │
+│                                                                           │
+│   Valid head operators:   { SEED, PROBE }                                 │
+│   Valid tail operators:   { COMMIT, PROBE }                               │
+│   Invalid sequences:      HOLD → SEED  (phase regression without R/B)    │
+│                           COMMIT → EMIT (post-terminal emission)         │
+│                           SL-01 → HOLD  (CR-04 violation)               │
+└──────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h3 id="od-04-recursive-depth-chart">OD-04: Recursive Depth Chart</h3>
+<p><strong>Purpose:</strong> Visualizes the allowed recursion depth for ROLLBACK operations across phase registers, with R_MAX enforcement bands.</p>
+<pre><code>┌──────────────────────────────────────────────────────────────────────────┐
+│  OD-04 · RECURSIVE DEPTH CHART (ROLLBACK)                     v2.6.0-rc  │
+│                                                                           │
+│  Depth                                                                    │
+│    0  ┤  ═══════════════════════════════════════════════ COMMIT point     │
+│       │                                                                   │
+│    1  ┤  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  Φ₃ boundary    │
+│       │                                                                   │
+│    2  ┤  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  Φ₂ zone      │
+│       │                                                                   │
+│    3  ┤  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  Φ₂ floor     │
+│       │                                                                   │
+│  R_MAX┤  ████████████████████████████████████████████  HARD LIMIT        │
+│    =3 │  (CR-03 enforced; depth &gt; 3 → TSR_CONSTRAINT_VIOLATION)          │
+│       │                                                                   │
+│       │  NOTE: Rollback cannot cross Γ₁₂ (Φ₁ boundary).                 │
+│       │  Φ₁ states are read-only once emitted.                           │
+│       │  To return to Φ₁: use COMMIT(REOPEN) → Γ₃₁ re-entry.           │
+│       │                                                                   │
+│  Depth│  0────────1────────2────────3──[R_MAX]                           │
+│  axis │          Φ₃       Φ₂      Φ₂-floor                              │
+└──────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h3 id="od-05-sl-01-leap-topology">OD-05: SL-01 Leap Topology</h3>
+<p><strong>Purpose:</strong> Detailed topology of the SL-01 leap operator path, including authorization checkpoint, Λ₁₃ gate traversal, audit hook, and Φ₂ bypass record.</p>
+<pre><code>┌──────────────────────────────────────────────────────────────────────────┐
+│  OD-05 · SL-01 LEAP TOPOLOGY                                  v2.6.0-rc  │
+│                                                                           │
+│   Φ₁ State                                                                │
+│   ┌─────────┐                                                             │
+│   │  $s     │                                                             │
+│   │ (SEEDED)│                                                             │
+│   └────┬────┘                                                             │
+│        │  SL-01($s, target_id)                                            │
+│        ▼                                                                  │
+│   ┌─────────────────────────────────────────────────┐                    │
+│   │  AUTH CHECKPOINT                                │                    │
+│   │  · Verify: leap.authorized = true               │                    │
+│   │  · Verify: $s.phase = Φ₁                        │                    │
+│   │  · Verify: target_id resolves to valid Φ₃ slot  │                    │
+│   │  · Fail → TSR_LEAP_UNAUTHORIZED                 │                    │
+│   └────────────────────┬────────────────────────────┘                    │
+│                        │ PASS                                             │
+│                        ▼                                                  │
+│   ┌─────────────────────────────────────────────────┐                    │
+│   │  Φ₂ BYPASS RECORD (audit hook)                  │                    │
+│   │  · Write: bypass_log{ state: $s.id,             │                    │
+│   │                       gate: Λ₁₃,                │                    │
+│   │                       Φ₂_bypassed: true,        │                    │
+│   │                       timestamp: &lt;now&gt; }         │                    │
+│   │  · Tension index τ frozen at 0.0 (no mediation) │                    │
+│   └────────────────────┬────────────────────────────┘                    │
+│                        │                                                  │
+│                        ▼                                                  │
+│                   Λ₁₃  GATE                                              │
+│                   ══════════                                              │
+│                        │                                                  │
+│                        ▼                                                  │
+│   ┌─────────────────────────────────────────────────┐                    │
+│   │  Φ₃ SLOT: target_id                             │                    │
+│   │  · $s arrives with ψ intact, τ=0.0              │                    │
+│   │  · SYNTH and COMMIT are now available           │                    │
+│   │  · SL-01 call is logged in Φ₃ arrival record   │                    │
+│   └─────────────────────────────────────────────────┘                    │
+│                                                                           │
+│  Dashed path (standard, bypassed):                                        │
+│  Φ₁ ·─ ─ ─ Γ₁₂ ─ ─ ─► Φ₂ ─ ─ ─ Γ₂₃ ─ ─ ─► Φ₃  (not taken by SL-01)  │
+│                                                                           │
+│  CR-04 reminder: SL-01 + HOLD on same state = constraint violation.      │
+└──────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="5-sl-01-leap-operator-sidebar">5. SL-01 Leap Operator — Sidebar</h2>
+<blockquote>
+<p><strong>Canon Sidebar Format · SB-SL01</strong>
+<em>Sidebars provide deep-reference context for a single operator or concept. They are rendered as offset panels in HTML export.</em></p>
+</blockquote>
+<hr>
+<pre><code>╔══════════════════════════════════════════════════════════════════════════╗
+║  ◈  SL-01 LEAP OPERATOR  ·  SIDEBAR REFERENCE                           ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║                                                                          ║
+║  DESIGNATION    SL-01  (State Leap, generation 01)                       ║
+║  PHASE SCOPE    Φ₁ → Φ₃  (Generative-to-Resolvent leap)                 ║
+║  GATE           Λ₁₃  (Lambda gate; leap-class only)                      ║
+║  INTRODUCED     TSR Grammar v2.2  (this release)                         ║
+║                                                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║  SIGNATURE                                                               ║
+║                                                                          ║
+║    SL-01( state_ref, target_id [, options] ) @Φ₃                        ║
+║                                                                          ║
+║    state_ref   →  $-prefixed reference to the Φ₁ state to leap          ║
+║    target_id   →  Identifier of the Φ₃ destination slot                 ║
+║    options     →  Optional map:                                          ║
+║                   { audit: bool,       // default: true (recommended)   ║
+║                     τ_freeze: float,   // freeze τ value; default 0.0   ║
+║                     memo: string }     // freeform leap annotation       ║
+║                                                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║  PRECONDITIONS                                                           ║
+║                                                                          ║
+║  ✓  leap.authorized = true   (set by framework host or policy engine)   ║
+║  ✓  $state_ref.phase = Φ₁   (leap only valid from Generative phase)     ║
+║  ✓  target_id is a registered, unoccupied Φ₃ slot                       ║
+║  ✓  $state_ref has NOT received EMIT (pre-emission leap only)            ║
+║                                                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║  POSTCONDITIONS                                                          ║
+║                                                                          ║
+║  →  $state_ref.phase transitions to Φ₃                                  ║
+║  →  Φ₂ bypass_log entry written (immutable)                             ║
+║  →  Λ₁₃ gate traversal recorded in audit trail                          ║
+║  →  $state_ref.τ frozen at options.τ_freeze (default 0.0)               ║
+║  →  SYNTH and COMMIT become available on $state_ref                     ║
+║                                                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║  ERRORS &amp; EXCEPTIONS                                                     ║
+║                                                                          ║
+║  TSR_LEAP_UNAUTHORIZED    leap.authorized flag not set                   ║
+║  TSR_INVALID_LEAP_SOURCE  $state_ref not in Φ₁                          ║
+║  TSR_SLOT_OCCUPIED        target_id already holds an active Φ₃ state    ║
+║  TSR_CONSTRAINT_VIOLATION CR-04: SL-01 composed with HOLD on same $s   ║
+║  TSR_POST_EMIT_LEAP       $state_ref already passed through EMIT        ║
+║                                                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║  USAGE EXAMPLE                                                           ║
+║                                                                          ║
+║    SEED(&quot;alpha&quot;, 0.9) @Φ₁                                               ║
+║    SL-01($alpha, &quot;slot:Φ₃-007&quot;,                                         ║
+║           { audit: true, memo: &quot;emergency resolution path&quot; }) @Φ₃       ║
+║    SYNTH($alpha) @Φ₃                                                    ║
+║    COMMIT($alpha, TERMINAL) @Φ₃                                         ║
+║                                                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║  DESIGN RATIONALE                                                        ║
+║                                                                          ║
+║  SL-01 was introduced to address scenarios where mediative arbitration   ║
+║  (Φ₂) would introduce unacceptable latency or where the state's         ║
+║  Ψ-potential is sufficient to commit directly without tension            ║
+║  resolution. Examples include:                                           ║
+║                                                                          ║
+║    · High-confidence synthetic states (ψ ≥ 0.9) with no competing       ║
+║      Φ₂ states requiring arbitration                                     ║
+║    · Time-critical commitment paths in real-time TSR schedulers          ║
+║    · Framework bootstrap sequences where Φ₂ has not yet initialized     ║
+║                                                                          ║
+║  The mandatory audit hook ensures that leap usage is never invisible     ║
+║  to conformance checkers or retrospective analysis.                      ║
+║                                                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║  WARNINGS &amp; ANTI-PATTERNS                                                ║
+║                                                                          ║
+║  ⚠  Do not use SL-01 as a general optimization. The absence of Φ₂       ║
+║     arbitration means no tension resolution occurs; states that carry    ║
+║     hidden conflicts may commit with unresolved contradictions.          ║
+║                                                                          ║
+║  ⚠  audit: false is permitted but strongly discouraged. Disabling the   ║
+║     audit hook makes leap events invisible to conformance tools.         ║
+║                                                                          ║
+║  ⚠  SL-01 does not inherit any HOLD state set on $s in a prior          ║
+║     expression; if HOLD was applied before leap authorization, the       ║
+║     implementation must raise TSR_CONSTRAINT_VIOLATION (CR-04).         ║
+║                                                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║  SEE ALSO                                                                ║
+║                                                                          ║
+║  · OD-05: SL-01 Leap Topology                                            ║
+║  · § 3.4 CR-04 Constraint Rule                                           ║
+║  · Simulation Table S-04: SL-01 Leap Event Log                          ║
+║  · TriadicFrameworks Spec §9.4 &quot;Leap Authorization Policy&quot;               ║
+╚══════════════════════════════════════════════════════════════════════════╝
+</code></pre>
+<hr>
+<h2 id="6-simulation-tables">6. Simulation Tables</h2>
+<p>Simulation tables record the outputs of test runs executed against the TSR reference implementation. All runs use the canonical test harness at <code>tools/tsr-sim/run.sh</code>.</p>
+<blockquote>
+<p><strong>Environment:</strong> TSR Simulator v0.14.2 · Seed RNG: fixed (42) · R_MAX: 3</p>
+</blockquote>
+<hr>
+<h3 id="s-01-linear-traversal-baseline">S-01: Linear Traversal Baseline</h3>
+<p>Tests the standard Φ₁ → Φ₂ → Φ₃ path with no operators beyond the minimum required set.</p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th>State ID</th>
+<th>ψ-seed</th>
+<th>Γ₁₂ Pass</th>
+<th>τ-hold</th>
+<th>ARBIT</th>
+<th>Γ₂₃ Pass</th>
+<th>SYNTH</th>
+<th>COMMIT</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S01-R01</td>
+<td><code>alpha-001</code></td>
+<td>0.75</td>
+<td>✓</td>
+<td>0.30</td>
+<td>—</td>
+<td>✓</td>
+<td>✓</td>
+<td>TERMINAL</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>S01-R02</td>
+<td><code>alpha-002</code></td>
+<td>0.40</td>
+<td>✓</td>
+<td>0.80</td>
+<td>—</td>
+<td>✓</td>
+<td>✓</td>
+<td>TERMINAL</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>S01-R03</td>
+<td><code>alpha-003</code></td>
+<td>0.10</td>
+<td>✗</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>FAIL: ψ &lt; ψ_min</td>
+</tr>
+<tr>
+<td>S01-R04</td>
+<td><code>alpha-004</code></td>
+<td>0.90</td>
+<td>✓</td>
+<td>0.50</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>REOPEN</td>
+<td>PASS → re-genesis</td>
+</tr>
+<tr>
+<td>S01-R05</td>
+<td><code>alpha-005</code></td>
+<td>0.65</td>
+<td>✓</td>
+<td>1.00</td>
+<td>✗</td>
+<td>✗</td>
+<td>—</td>
+<td>—</td>
+<td>BLOCKED: tension unresolved</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong>
+- S01-R03 establishes <code>ψ_min = 0.15</code> as the baseline threshold for Γ₁₂ passage.
+- S01-R05 demonstrates unresolved tension blocking Γ₂₃; ARBIT required before further transit.
+- S01-R04 confirms REOPEN triggers Γ₃₁ re-entry and initiates a clean Φ₁ re-genesis.</p>
+<hr>
+<h3 id="s-02-phase-gate-collision-matrix">S-02: Phase-Gate Collision Matrix</h3>
+<p>Tests what happens when illegal transitions are attempted; verifies error codes.</p>
+<table>
+<thead>
+<tr>
+<th>Attempt</th>
+<th>From</th>
+<th>To</th>
+<th>Gate Used</th>
+<th>Expected Error</th>
+<th>Observed</th>
+<th>Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S02-T01</td>
+<td>Φ₂</td>
+<td>Φ₁</td>
+<td><em>(none)</em></td>
+<td><code>TSR_ILLEGAL_TRANSITION</code></td>
+<td><code>TSR_ILLEGAL_TRANSITION</code></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S02-T02</td>
+<td>Φ₃</td>
+<td>Φ₂</td>
+<td><em>(none)</em></td>
+<td><code>TSR_ILLEGAL_TRANSITION</code></td>
+<td><code>TSR_ILLEGAL_TRANSITION</code></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S02-T03</td>
+<td>Φ₁</td>
+<td>Φ₃</td>
+<td>Λ₁₃ (no auth)</td>
+<td><code>TSR_LEAP_UNAUTHORIZED</code></td>
+<td><code>TSR_LEAP_UNAUTHORIZED</code></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S02-T04</td>
+<td>Φ₃</td>
+<td>Φ₃</td>
+<td><em>(self)</em></td>
+<td><code>TSR_ILLEGAL_TRANSITION</code></td>
+<td><code>TSR_ILLEGAL_TRANSITION</code></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S02-T05</td>
+<td>Φ₁</td>
+<td>Φ₁</td>
+<td><em>(self)</em></td>
+<td><code>TSR_ILLEGAL_TRANSITION</code></td>
+<td><code>TSR_ILLEGAL_TRANSITION</code></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S02-T06</td>
+<td>Φ₂</td>
+<td>Φ₁</td>
+<td>Γ₂₁ (depth=4)</td>
+<td><code>TSR_CONSTRAINT_VIOLATION</code> (CR-03)</td>
+<td><code>TSR_CONSTRAINT_VIOLATION</code></td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong> All 6 collision tests pass. Error codes are canonical and stable.</p>
+<hr>
+<h3 id="s-03-operator-composition-outcomes">S-03: Operator Composition Outcomes</h3>
+<p>Tests compound operator compositions for correctness, including combinator behaviors.</p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th>Expression</th>
+<th>Expected Outcome</th>
+<th>Observed</th>
+<th>Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S03-C01</td>
+<td><code>{ SEED("x",0.7) \|&gt; EMIT($x) \|&gt; HOLD($x,0.4) }</code></td>
+<td>$x in Φ₂, τ=0.4</td>
+<td>$x in Φ₂, τ=0.4</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S03-C02</td>
+<td><code>{ ARBIT($a,$b) &amp;&gt; PROBE($c) }</code></td>
+<td>Both run in parallel; $c unchanged</td>
+<td>Confirmed</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S03-C03</td>
+<td><code>{ PROBE($s) ?&gt; SYNTH($s) \| HOLD($s,1.0) }</code></td>
+<td>Guard passes → SYNTH</td>
+<td>SYNTH executed</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S03-C04</td>
+<td><code>{ SL-01($x,"slot-03") \|&gt; HOLD($x,0.5) }</code></td>
+<td><code>TSR_CONSTRAINT_VIOLATION</code> (CR-04)</td>
+<td>CR-04 raised</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S03-C05</td>
+<td><code>COMMIT($x, TERMINAL); EMIT($x)</code></td>
+<td><code>TSR_IMMUTABLE_STATE</code> (CR-06)</td>
+<td>CR-06 raised</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S03-C06</td>
+<td><code>{ SEED("y",0.8) \|&gt; EMIT($y) \|&gt; SYNTH($y) }</code></td>
+<td><code>TSR_ILLEGAL_TRANSITION</code> (Φ₁→Φ₃ direct)</td>
+<td>Error raised</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong>
+- S03-C04 confirms CR-04 enforcement for SL-01 + HOLD composition.
+- S03-C06 confirms that SYNTH without SL-01 or Φ₂ traversal is rejected.</p>
+<hr>
+<h3 id="s-04-sl-01-leap-event-log">S-04: SL-01 Leap Event Log</h3>
+<p>New in v2.6.0-rc. Records all SL-01 leap executions from the simulation suite with audit trail verification.</p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th>State ID</th>
+<th>ψ</th>
+<th>auth</th>
+<th>target_id</th>
+<th>τ_freeze</th>
+<th>audit</th>
+<th>Leap Result</th>
+<th>Φ₂ Bypass Logged</th>
+<th>Audit Trail Valid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S04-L01</td>
+<td><code>leap-001</code></td>
+<td>0.92</td>
+<td>✓</td>
+<td><code>slot:Φ₃-001</code></td>
+<td>0.0</td>
+<td>true</td>
+<td>PASS</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S04-L02</td>
+<td><code>leap-002</code></td>
+<td>0.85</td>
+<td>✓</td>
+<td><code>slot:Φ₃-002</code></td>
+<td>0.0</td>
+<td>true</td>
+<td>PASS</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>S04-L03</td>
+<td><code>leap-003</code></td>
+<td>0.70</td>
+<td>✗</td>
+<td><code>slot:Φ₃-003</code></td>
+<td>—</td>
+<td>—</td>
+<td>FAIL: LEAP_UNAUTHORIZED</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>S04-L04</td>
+<td><code>leap-004</code></td>
+<td>0.95</td>
+<td>✓</td>
+<td><code>slot:Φ₃-004</code></td>
+<td>0.2</td>
+<td>false</td>
+<td>PASS</td>
+<td>✓</td>
+<td>✗ (disabled)</td>
+</tr>
+<tr>
+<td>S04-L05</td>
+<td><code>leap-005</code></td>
+<td>0.88</td>
+<td>✓</td>
+<td><code>slot:Φ₃-001</code></td>
+<td>0.0</td>
+<td>true</td>
+<td>FAIL: TSR_SLOT_OCCUPIED</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>S04-L06</td>
+<td><code>leap-006</code></td>
+<td>0.91</td>
+<td>✓</td>
+<td><code>slot:Φ₃-006</code></td>
+<td>0.0</td>
+<td>true</td>
+<td>PASS → SYNTH → COMMIT(TERMINAL)</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Post-run verification:</strong>
+- All PASS runs correctly deposited $state in Φ₃ with ψ intact and τ at declared freeze value.
+- S04-L04 (<code>audit: false</code>) is flagged by the conformance checker with <code>WARN_AUDIT_DISABLED</code>.
+- S04-L06 demonstrates the full SL-01 → SYNTH → COMMIT pipeline completing cleanly.</p>
+<hr>
+<h2 id="7-grok-feedback-integration">7. Grok Feedback Integration</h2>
+<p>This section documents the editorial and structural feedback received from the Grok review session conducted during the v2.6.0 development cycle. All items are resolved or explicitly deferred.</p>
+<hr>
+<h3 id="71-feedback-summary">7.1 Feedback Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Item ID</th>
+<th>Category</th>
+<th>Feedback</th>
+<th>Resolution</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GF-01</td>
+<td>Clarity</td>
+<td>"Phase gate naming inconsistent between §2.2 and OD-01"</td>
+<td>Unified to <code>Γ</code>/<code>Λ</code> convention throughout; CR-07 added to grammar</td>
+<td>✅ Resolved</td>
+</tr>
+<tr>
+<td>GF-02</td>
+<td>Completeness</td>
+<td>"SL-01 needs a dedicated sidebar — current inline treatment is insufficient"</td>
+<td>Full sidebar added as § 5 with SB-SL01 format</td>
+<td>✅ Resolved</td>
+</tr>
+<tr>
+<td>GF-03</td>
+<td>Correctness</td>
+<td>"CR-04 constraint was described but not enforced in simulation S03"</td>
+<td>S03-C04 test case added; CR-04 enforcement confirmed</td>
+<td>✅ Resolved</td>
+</tr>
+<tr>
+<td>GF-04</td>
+<td>Formatting</td>
+<td>"Diagram boxes inconsistent width across OD-01 through OD-04"</td>
+<td>All diagram widths normalized to 74-char inner width</td>
+<td>✅ Resolved</td>
+</tr>
+<tr>
+<td>GF-05</td>
+<td>Completeness</td>
+<td>"No simulation data for SL-01 leap events"</td>
+<td>Simulation Table S-04 added</td>
+<td>✅ Resolved</td>
+</tr>
+<tr>
+<td>GF-06</td>
+<td>Correctness</td>
+<td>"ROLLBACK depth=3 in S-01 should show Φ₂-floor, not Φ₁ entry"</td>
+<td>OD-04 corrected; depth-3 labeled Φ₂-floor</td>
+<td>✅ Resolved</td>
+</tr>
+<tr>
+<td>GF-07</td>
+<td>Architecture</td>
+<td>"Consider whether Φ₃ → Φ₂ ILLEGAL is load-bearing or just convention"</td>
+<td>Confirmed load-bearing: CR-02 (SYNTH/COMMIT Φ₃-only) requires it</td>
+<td>✅ Resolved (documented)</td>
+</tr>
+<tr>
+<td>GF-08</td>
+<td>Roadmap</td>
+<td>"SL-02 and SL-03 leap variants mentioned in passing — formalize or remove"</td>
+<td>Removed all SL-02/SL-03 references; deferred to v2.7.x roadmap</td>
+<td>✅ Resolved</td>
+</tr>
+<tr>
+<td>GF-09</td>
+<td>Style</td>
+<td>"τ_max undefined in S01-R05 narrative"</td>
+<td>Replaced with "tension unresolved" (τ=1.0 = max hold)</td>
+<td>✅ Resolved</td>
+</tr>
+<tr>
+<td>GF-10</td>
+<td>Deferred</td>
+<td>"Add formal semantics for PROBE composing with leap operators"</td>
+<td>Deferred — tracked in GitHub Issue #441</td>
+<td>🕐 Deferred</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-structural-changes-driven-by-grok-review">7.2 Structural Changes Driven by Grok Review</h3>
+<p>The Grok review session prompted three structural additions not present in v2.5.x:</p>
+<ol>
+<li><strong>SL-01 Sidebar (§ 5)</strong> — Elevated from a footnote reference to a full canon sidebar block, per GF-02.</li>
+<li><strong>Constraint Rule CR-07</strong> — Added to the grammar to formally document phase-tag override semantics, resolving the ambiguity surfaced in GF-01.</li>
+<li><strong>Simulation Table S-04</strong> — Entirely new table, added per GF-05 to provide empirical coverage of SL-01 behavior.</li>
+</ol>
+<hr>
+<h2 id="8-retrospective">8. Retrospective</h2>
+<h3 id="81-development-cycle-summary-v25x-v260-rc">8.1 Development Cycle Summary — v2.5.x → v2.6.0-rc</h3>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Date</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v2.5.0 branch opened</td>
+<td>2026-06-02</td>
+<td>Operator grammar formalization initiated</td>
+</tr>
+<tr>
+<td>v2.5.1 patch</td>
+<td>2026-07-18</td>
+<td>OD-03 labeling fix; S-04 stub added</td>
+</tr>
+<tr>
+<td>Grok review session</td>
+<td>2026-08-12</td>
+<td>10 items logged; all addressed except GF-10</td>
+</tr>
+<tr>
+<td>SL-01 sidebar drafted</td>
+<td>2026-08-20</td>
+<td>First full sidebar format per SB canon</td>
+</tr>
+<tr>
+<td>v2.6.0-rc cut</td>
+<td>2026-09-03</td>
+<td>This document</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-what-worked">8.2 What Worked</h3>
+<ul>
+<li><strong>ABNF formalization</strong> — Moving from the v2.1 semi-formal tables to ABNF in v2.2 dramatically reduced reviewer ambiguity. GF-01 through GF-03 were all symptoms of under-specified grammar; they dissolved once ABNF was complete.</li>
+<li><strong>Simulation-first verification</strong> — Running simulation tables before finalizing diagram text caught the OD-04 Φ₂-floor mislabeling (GF-06) before publication.</li>
+<li><strong>Sidebar format (SB-SL01)</strong> — The canon sidebar box format proved immediately useful for SL-01. It will be adopted for future complex operator references.</li>
+</ul>
+<h3 id="83-what-to-improve">8.3 What to Improve</h3>
+<ul>
+<li><strong>Earlier Grok engagement</strong> — The Grok review caught issues that should have been caught in the author pass. Consider scheduling review sessions at draft stage, not RC stage.</li>
+<li><strong>SL-02/SL-03 scope creep</strong> — Informal references to future leap variants crept into multiple sections and required cleanup (GF-08). Future operators should not appear by name in a document until they have a formal spec.</li>
+<li><strong>Simulation coverage timing</strong> — S-04 was added reactively (GF-05). Simulation tables for new operators should be authored alongside the operator spec, not after.</li>
+</ul>
+<h3 id="84-open-issues">8.4 Open Issues</h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Tracker</th>
+<th>Priority</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formal semantics for PROBE + leap composition</td>
+<td>GitHub #441</td>
+<td>Medium</td>
+<td>v2.7.0</td>
+</tr>
+<tr>
+<td>SL-02 and SL-03 leap variant specifications</td>
+<td>GitHub #442</td>
+<td>Low</td>
+<td>v2.7.x</td>
+</tr>
+<tr>
+<td>HTML export CSS for sidebar SB format</td>
+<td>GitHub #443</td>
+<td>High</td>
+<td>v2.6.0 release</td>
+</tr>
+<tr>
+<td>Leap authorization policy engine integration guide</td>
+<td>GitHub #444</td>
+<td>Medium</td>
+<td>v2.7.0</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-closing-publication-checklist">9. Closing &amp; Publication Checklist</h2>
+<h3 id="91-checklist">9.1 Checklist</h3>
+<p>Before promoting this RC to stable release, all items below must be confirmed:</p>
+<ul>
+<li>[x] All overlay diagrams (OD-01 through OD-05) present and normalized to 74-char width</li>
+<li>[x] Operator Grammar v2.2 in ABNF notation with all constraint rules (CR-01 through CR-07)</li>
+<li>[x] SL-01 sidebar (§ 5) in canon SB format with preconditions, postconditions, errors, and design rationale</li>
+<li>[x] Simulation Tables S-01 through S-04 complete with run logs and notes</li>
+<li>[x] Grok feedback table (§ 7.1) with all 10 items addressed or deferred with issue references</li>
+<li>[x] Retrospective (§ 8) complete</li>
+<li>[x] Appendix A (Notation Glossary) complete</li>
+<li>[x] Appendix B (Version Diff Summary) complete</li>
+<li>[x] Appendix C (Canon Formatting Reference) complete</li>
+<li>[x] YAML frontmatter metadata block present and valid</li>
+<li>[x] All internal cross-references resolved</li>
+<li>[ ] HTML export tested against TriadicFrameworks CSS bundle (GitHub #443)</li>
+<li>[ ] Final proofreading pass by secondary author</li>
+<li>[ ] PR submitted to <code>docs/Research/</code> with changelog entry</li>
+</ul>
+<h3 id="92-rc-to-stable-gate">9.2 RC to Stable Gate</h3>
+<p>This document transitions from RC to stable when:</p>
+<ol>
+<li>GitHub #443 (HTML export CSS for SB sidebar format) is closed</li>
+<li>HTML export is confirmed rendering correctly in the TriadicFrameworks preview environment</li>
+<li>One secondary author signs off in the PR review</li>
+</ol>
+<hr>
+<h2 id="10-appendices">10. Appendices</h2>
+<hr>
+<h3 id="a-notation-glossary">A. Notation Glossary</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol / Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Φ₁</code></td>
+<td>Generative phase — origin of all states</td>
+</tr>
+<tr>
+<td><code>Φ₂</code></td>
+<td>Mediative phase — tension arbitration and transit bridge</td>
+</tr>
+<tr>
+<td><code>Φ₃</code></td>
+<td>Resolvent phase — synthesis, commitment, and termination</td>
+</tr>
+<tr>
+<td><code>Γ</code></td>
+<td>Standard / re-entry gate prefix (Greek Capital Gamma)</td>
+</tr>
+<tr>
+<td><code>Λ</code></td>
+<td>Leap gate prefix (Greek Capital Lambda)</td>
+</tr>
+<tr>
+<td><code>ψ</code> (psi)</td>
+<td>Seed potential: energy carried by a Φ₁ state (0.0–1.0)</td>
+</tr>
+<tr>
+<td><code>τ</code> (tau)</td>
+<td>Tension index: mediation load on a Φ₂ state (0.0–1.0)</td>
+</tr>
+<tr>
+<td><code>ψ_min</code></td>
+<td>Minimum seed potential required to pass Γ₁₂ (default: 0.15)</td>
+</tr>
+<tr>
+<td><code>R_MAX</code></td>
+<td>Maximum ROLLBACK recursion depth (default: 3)</td>
+</tr>
+<tr>
+<td><code>SL-01</code></td>
+<td>State Leap operator, generation 01; Φ₁ → Φ₃ direct path</td>
+</tr>
+<tr>
+<td><code>ABNF</code></td>
+<td>Augmented Backus-Naur Form (RFC 5234)</td>
+</tr>
+<tr>
+<td><code>bypass_log</code></td>
+<td>Immutable audit record written by every SL-01 execution</td>
+</tr>
+<tr>
+<td><code>CR-nn</code></td>
+<td>Constraint Rule, numbered; enforced by conforming implementations</td>
+</tr>
+<tr>
+<td><code>GF-nn</code></td>
+<td>Grok Feedback item, numbered; tracked in this document</td>
+</tr>
+<tr>
+<td><code>OD-nn</code></td>
+<td>Overlay Diagram, numbered</td>
+</tr>
+<tr>
+<td><code>S-nn</code></td>
+<td>Simulation Table, numbered</td>
+</tr>
+<tr>
+<td><code>SB-nn</code></td>
+<td>Sidebar block, identified by subject code</td>
+</tr>
+<tr>
+<td><code>TERMINAL</code></td>
+<td>COMMIT type: state is finalized, immutable, no re-entry</td>
+</tr>
+<tr>
+<td><code>REOPEN</code></td>
+<td>COMMIT type: state initiates Γ₃₁ re-genesis path</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="b-version-diff-summary">B. Version Diff Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>v2.5.1</th>
+<th>v2.6.0-rc</th>
+<th>Change Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>§ 1 Scope</td>
+<td>Static list</td>
+<td>Added SL-01, Grok pass, grammar v2.2</td>
+<td>Expanded</td>
+</tr>
+<tr>
+<td>§ 2.2 Gates</td>
+<td>Γ₁₂, Γ₂₃, Γ₃₁ only</td>
+<td>Added Λ₁₃, Γ₂₁</td>
+<td>New entries</td>
+</tr>
+<tr>
+<td>§ 3 Grammar</td>
+<td>Semi-formal tables (v2.1)</td>
+<td>Full ABNF (v2.2) + CR-07</td>
+<td>Replaced</td>
+</tr>
+<tr>
+<td>OD-01</td>
+<td>Present</td>
+<td>Width normalized</td>
+<td>Minor fix</td>
+</tr>
+<tr>
+<td>OD-02</td>
+<td>Present</td>
+<td>Λ₁₃ and SL-01 path added</td>
+<td>Updated</td>
+</tr>
+<tr>
+<td>OD-03</td>
+<td>Present</td>
+<td>SL-01 lattice path added</td>
+<td>Updated</td>
+</tr>
+<tr>
+<td>OD-04</td>
+<td>Present</td>
+<td>Φ₂-floor label corrected (GF-06)</td>
+<td>Bug fix</td>
+</tr>
+<tr>
+<td>OD-05</td>
+<td>Not present</td>
+<td>New — SL-01 Leap Topology</td>
+<td><strong>New</strong></td>
+</tr>
+<tr>
+<td>§ 5 Sidebar</td>
+<td>Not present</td>
+<td>New — SL-01 canon sidebar</td>
+<td><strong>New</strong></td>
+</tr>
+<tr>
+<td>S-01</td>
+<td>Present</td>
+<td>Minor note additions</td>
+<td>Minor</td>
+</tr>
+<tr>
+<td>S-02</td>
+<td>Present</td>
+<td>No change</td>
+<td>—</td>
+</tr>
+<tr>
+<td>S-03</td>
+<td>Present</td>
+<td>C04, C05, C06 added</td>
+<td>Expanded</td>
+</tr>
+<tr>
+<td>S-04</td>
+<td>Not present</td>
+<td>New — SL-01 Leap Event Log</td>
+<td><strong>New</strong></td>
+</tr>
+<tr>
+<td>§ 7 Grok Feedback</td>
+<td>Not present</td>
+<td>New section</td>
+<td><strong>New</strong></td>
+</tr>
+<tr>
+<td>§ 8 Retrospective</td>
+<td>Stub only</td>
+<td>Fully written</td>
+<td>Expanded</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="c-canon-formatting-reference">C. Canon Formatting Reference</h3>
+<p>This document adheres to <strong>TriadicFrameworks Canon Style Guide §4–§7</strong>. Key conventions:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Format Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase identifiers</td>
+<td><code>Φ₁</code>, <code>Φ₂</code>, <code>Φ₃</code> — Unicode subscript numerals; never <code>Phi1</code> or <code>P1</code></td>
+</tr>
+<tr>
+<td>Gate identifiers</td>
+<td><code>Γ</code> + subscript pair (e.g., <code>Γ₁₂</code>); <code>Λ</code> for leap gates</td>
+</tr>
+<tr>
+<td>Operator names</td>
+<td>ALL_CAPS in prose; lowercase in ABNF grammar rules</td>
+</tr>
+<tr>
+<td>State references</td>
+<td><code>$</code>-prefixed lowercase identifiers (e.g., <code>$alpha</code>)</td>
+</tr>
+<tr>
+<td>Diagram width</td>
+<td>74-char inner content width; 76-char total with box frame</td>
+</tr>
+<tr>
+<td>Diagram header</td>
+<td><code>OD-nn · TITLE</code> right-aligned version tag at 74th char boundary</td>
+</tr>
+<tr>
+<td>Sidebar format</td>
+<td>Double-line box (<code>╔╗╚╝</code>); section headers centered in <code>║</code> rows</td>
+</tr>
+<tr>
+<td>Constraint rules</td>
+<td><code>CR-nn</code> in monospace; full text block-quoted under § 3.4</td>
+</tr>
+<tr>
+<td>Error codes</td>
+<td><code>TSR_SCREAMING_SNAKE_CASE</code> in monospace</td>
+</tr>
+<tr>
+<td>Footnotes</td>
+<td>Numbered superscripts <code>¹ ² ³</code> inside diagram boxes; prose below</td>
+</tr>
+<tr>
+<td>Changelog</td>
+<td>YAML block in frontmatter; reverse-chronological</td>
+</tr>
+<tr>
+<td>Cross-references</td>
+<td><code>§ n.m</code> for section; <code>OD-nn</code>, <code>S-nn</code>, <code>SB-nn</code> for diagram/table/sidebar</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<!-- ============================================================
+     END OF DOCUMENT
+     TSR Overlay Diagram Pack · v2.6.0-rc
+     TriadicFrameworks Canon Document
+     Generated: 2026-09-03
+     ============================================================ -->
+
+<p><img width="1024" height="1024" alt="Overlay_Diagram_Pack" src="https://github.com/user-attachments/assets/4cb57b4a-b629-48d9-b4d2-a89bf1d8e542" /></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{
+  "map_name": "RTT_Showcase",
+  "map_type": "UE6Level",
+  "path": "/RTT/Maps/RTT_Showcase",
+
+  "areas": [
+    {
+      "name": "PhiVarianceArea",
+      "location": [0, 0, 0],
+      "actors": ["BP_RTT_Primitives"]
+    },
+    {
+      "name": "ResonanceArea",
+      "location": [2000, 0, 0],
+      "actors": ["BP_RTT_ResonanceDemo"]
+    },
+    {
+      "name": "EntropyArea",
+      "location": [0, 2000, 0],
+      "actors": ["BP_RTT_EntropyDemo"]
+    },
+    {
+      "name": "HybridArea",
+      "location": [2000, 2000, 0],
+      "actors": ["BP_RTT_HybridDemo"]
+    }
+  ],
+
+  "global_actors": [
+    { "name": "DirectionalLight", "type": "DirectionalLight" },
+    { "name": "SkyAtmosphere", "type": "SkyAtmosphere" },
+    { "name": "SkyLight", "type": "SkyLight" },
+    { "name": "PlayerStart", "type": "PlayerStart" }
+  ],
+
+  "ui": {
+    "runtime_widget": "WBP_RTT_OperatorPanel",
+    "binding": {
+      "initial_target": "BP_RTT_Primitives",
+      "switch_keys": {
+        "One": "BP_RTT_Primitives",
+        "Two": "BP_RTT_ResonanceDemo",
+        "Three": "BP_RTT_EntropyDemo",
+        "Four": "BP_RTT_HybridDemo"
+      }
+    }
+  },
+
+  "editor_tools": {
+    "menu": "RTT Tools",
+    "actions": [
+      "Visualize Resonance",
+      "Inspect Entropy",
+      "Open Operator Timeline"
+    ]
+  },
+
+  "purpose": "Canonical UE6 showcase scene demonstrating φ, variance, resonance, entropy, and hybrid operators.",
+  "status": "active"
+}

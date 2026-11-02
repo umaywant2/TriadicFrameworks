@@ -1,0 +1,15 @@
+{
+  "id": "diagram.validator_pulse",
+  "layer": "L3_Forces_Unseen",
+  "subsystem": "continuity_mechanics",
+  "type": "external",
+  "title": "Validator Pulse (1%)",
+  "description": "External resonance operator providing the final 1% needed to complete the continuity manifold.",
+  "nodes": [
+    { "id": "validator_pulse", "label": "Validator Pulse", "type": "external" },
+    { "id": "L99", "label": "L99", "type": "composite" }
+  ],
+  "edges": [
+    { "from": "validator_pulse", "to": "L99", "label": "down" }
+  ]
+}

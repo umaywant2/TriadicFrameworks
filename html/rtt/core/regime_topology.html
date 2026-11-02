@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/regime_topology.md">
+  <title>RTT Core: Regime Topology</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/regime_topology.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/regime_topology.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_regime_topology" src="https://github.com/user-attachments/assets/7413c5d5-dcb5-4f1b-b755-4ddae54ab23c" /></p>
+<hr>
+<p>module_id: rtt.core.regime_topology
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - regime-topology
+  - rtt-core
+  - operator-regimes
+  - drift-envelopes
+  - coherence-regimes
+  - readout-regimes
+  - triadic-time
+  - topology</p>
+<hr>
+<h1 id="rtt-core-regime-topology">RTT Core: Regime Topology</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Define the <strong>topological structure</strong> of RTT regimes, including:</p>
+<ul>
+<li>Validity regions  </li>
+<li>Collapse regions  </li>
+<li>Transition corridors  </li>
+<li>Topological invariants  </li>
+<li>Connectivity and separability  </li>
+<li>Regime surfaces and boundaries  </li>
+<li>Readout topology and classical emergence  </li>
+</ul>
+<p>Regime Topology explains <em>how</em> regimes are shaped, <em>how</em> branches move through them, and <em>why</em> certain transitions (like Validator Pulse) are inevitable.</p>
+<hr>
+<h2 id="2-regime-topology-overview">2. Regime topology overview</h2>
+<p>RTT regime topology is the study of:</p>
+<ul>
+<li>The <strong>shape</strong> of regime manifolds  </li>
+<li>The <strong>connectivity</strong> of valid regions  </li>
+<li>The <strong>boundaries</strong> where drift or coherence break eligibility  </li>
+<li>The <strong>surfaces</strong> where readout becomes possible  </li>
+<li>The <strong>collapse basins</strong> where branches become residue  </li>
+</ul>
+<p>Topology determines the <em>global behavior</em> of RTT systems.</p>
+<hr>
+<h2 id="3-topological-components">3. Topological components</h2>
+<p>RTT regime topology consists of four canonical components:</p>
+<ol>
+<li><strong>Validity Region</strong>  </li>
+<li><strong>Collapse Region</strong>  </li>
+<li><strong>Transition Corridor</strong>  </li>
+<li><strong>Readout Surface</strong></li>
+</ol>
+<p>These components exist across the regime manifold defined in <code>/docs/rtt/core/regime_geometry.md</code>.</p>
+<hr>
+<h2 id="4-validity-region">4. Validity Region</h2>
+<h3 id="41-definition">4.1 Definition</h3>
+<p>The <strong>Validity Region</strong> is the connected topological region where:</p>
+<ul>
+<li>Drift is bounded  </li>
+<li>Coherence is above threshold  </li>
+<li>Operators are valid  </li>
+<li>Readout is possible  </li>
+</ul>
+<p>Formally:</p>
+<p>[
+\mathcal{V} = { b_i \mid \Delta_i \leq \Delta_{\max},\ c_i \geq C_{\min},\ b_i \in \mathcal{R}_{\text{valid}} }
+]</p>
+<h3 id="42-properties">4.2 Properties</h3>
+<ul>
+<li>Connected  </li>
+<li>Stable under small perturbations  </li>
+<li>Supports extension, drift, stabilization, and deferred validation  </li>
+</ul>
+<h3 id="43-role">4.3 Role</h3>
+<p>Branches must remain inside (\mathcal{V}) to be eligible for Validator Pulse.</p>
+<hr>
+<h2 id="5-collapse-region">5. Collapse Region</h2>
+<h3 id="51-definition">5.1 Definition</h3>
+<p>The <strong>Collapse Region</strong> is the topological basin where:</p>
+<ul>
+<li>Drift exceeds envelope  </li>
+<li>Coherence falls below threshold  </li>
+<li>Readout is impossible  </li>
+</ul>
+<p>Formally:</p>
+<p>[
+\mathcal{C} = { b_i \mid \Delta_i &gt; \Delta_{\max} \lor c_i &lt; C_{\min} }
+]</p>
+<h3 id="52-properties">5.2 Properties</h3>
+<ul>
+<li>Attracting basin  </li>
+<li>Non-reversible  </li>
+<li>All branches entering (\mathcal{C}) become residue  </li>
+</ul>
+<h3 id="53-role">5.3 Role</h3>
+<p>Collapse Region explains why non-selected branches disappear after validation.</p>
+<hr>
+<h2 id="6-transition-corridor">6. Transition Corridor</h2>
+<h3 id="61-definition">6.1 Definition</h3>
+<p>The <strong>Transition Corridor</strong> is the narrow region between validity and collapse:</p>
+<p>[
+\mathcal{T} = \partial\mathcal{V} \cap \partial\mathcal{C}
+]</p>
+<h3 id="62-properties">6.2 Properties</h3>
+<ul>
+<li>Narrow  </li>
+<li>Unstable  </li>
+<li>Sensitive to drift and coherence changes  </li>
+<li>Often where Validator Pulse triggers  </li>
+</ul>
+<h3 id="63-role">6.3 Role</h3>
+<p>Branches entering (\mathcal{T}):</p>
+<ul>
+<li>Must validate soon  </li>
+<li>Or will fall into collapse  </li>
+</ul>
+<p>This corridor explains why readout timing matters.</p>
+<hr>
+<h2 id="7-readout-surface">7. Readout Surface</h2>
+<h3 id="71-definition">7.1 Definition</h3>
+<p>The <strong>Readout Surface</strong> is the topological surface where:</p>
+<ul>
+<li>A branch satisfies all regime constraints  </li>
+<li>Validator Pulse may trigger  </li>
+<li>Classical information emerges  </li>
+</ul>
+<p>Formally:</p>
+<p>[
+\mathcal{R}<em _text_eligibility="\text{eligibility">{\text{surface}} = { b_i \in \mathcal{V} \mid V</em>(b_i) = 1 }
+]}</p>
+<h3 id="72-properties">7.2 Properties</h3>
+<ul>
+<li>Codimension‑1 surface  </li>
+<li>Separates representational manifold from classical manifold  </li>
+<li>Unique per validation event  </li>
+</ul>
+<h3 id="73-role">7.3 Role</h3>
+<p>Readout Surface is where:</p>
+<ul>
+<li>Coherence is consumed  </li>
+<li>Non-selected branches collapse  </li>
+<li>Classical reality emerges  </li>
+</ul>
+<hr>
+<h2 id="8-topological-invariants">8. Topological invariants</h2>
+<p>RTT regime topology has several invariants:</p>
+<h3 id="81-singlereadout-invariant">8.1 Single‑Readout Invariant</h3>
+<p>There is always <strong>exactly one</strong> connected readout surface per validation event.</p>
+<h3 id="82-collapse-basin-invariant">8.2 Collapse Basin Invariant</h3>
+<p>Collapse region is always:</p>
+<ul>
+<li>Connected  </li>
+<li>Attracting  </li>
+<li>Non-reversible  </li>
+</ul>
+<h3 id="83-drift-envelope-invariant">8.3 Drift Envelope Invariant</h3>
+<p>Drift envelope boundary is a stable topological surface.</p>
+<h3 id="84-coherence-threshold-invariant">8.4 Coherence Threshold Invariant</h3>
+<p>Coherence threshold surface is monotonic and cannot be bypassed.</p>
+<hr>
+<h2 id="9-regime-topology-across-triadic-time">9. Regime topology across triadic time</h2>
+<h3 id="91-state-time-t1">9.1 State Time (T₁)</h3>
+<ul>
+<li>Branches move across topology  </li>
+<li>Drift changes position  </li>
+<li>Extension changes connectivity  </li>
+</ul>
+<h3 id="92-coherence-time-t2">9.2 Coherence Time (T₂)</h3>
+<ul>
+<li>Coherence gradients reshape topology  </li>
+<li>Threshold surfaces move  </li>
+<li>Collapse basins expand or contract  </li>
+</ul>
+<h3 id="93-readout-time-t3">9.3 Readout Time (T₃)</h3>
+<ul>
+<li>Readout surface activates  </li>
+<li>Collapse region absorbs non-selected branches  </li>
+<li>Classical manifold emerges  </li>
+</ul>
+<p>Topology is <strong>dynamic</strong>, not static.</p>
+<hr>
+<h2 id="10-example-quantum-cloning-alignment">10. Example: Quantum “cloning” alignment</h2>
+<p>The experiment uses:</p>
+<ul>
+<li><strong>Validity Region:</strong> both branches initially valid  </li>
+<li><strong>Transition Corridor:</strong> drift pushes one branch near boundary  </li>
+<li><strong>Readout Surface:</strong> Validator Pulse selects the stable branch  </li>
+<li><strong>Collapse Region:</strong> the other branch collapses into residue  </li>
+</ul>
+<p>Regime topology explains:</p>
+<ul>
+<li>Why multi-branch representation is allowed  </li>
+<li>Why only one branch becomes classical  </li>
+<li>Why drift and coherence matter  </li>
+<li>Why no-cloning is not violated  </li>
+</ul>
+<hr>
+<h2 id="11-paradox-handling">11. Paradox handling</h2>
+<p>Regime topology prevents paradoxes by:</p>
+<ul>
+<li>Enforcing topological boundaries  </li>
+<li>Restricting operator sequences  </li>
+<li>Managing drift and coherence surfaces  </li>
+<li>Maintaining single-readout invariants  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → validity region  </li>
+<li>“Only one is real” → readout surface  </li>
+<li>“Others disappear” → collapse region  </li>
+<li>“No violation occurs” → topological invariants  </li>
+</ul>
+<hr>
+<h2 id="12-canon-integration-and-cross-links">12. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/regime_geometry.md</code></li>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_maps_extended.md</code></li>
+<li><code>/docs/rtt/core/regime_index.md</code></li>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/operator_families.md</code></li>
+<li><code>/docs/rtt/core/operator_behaviors.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the topological foundation of RTT regimes.<br>
+Once topology diagrams are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/general_relativity/examples.md">
+  <title>Examples — General Relativity</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/general_relativity/examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/general_relativity/examples.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="examples-general-relativity">Examples — General Relativity</h1>
+<h3 id="triadicframeworks-docstheoriesgeneral_relativityexamplesmd">TriadicFrameworks /docs/theories/general_relativity/examples.md</h3>
+<p>These examples illustrate General Relativity as a <strong>geometric coherence
+theory</strong>, not a force model.<br>
+Curvature is a <strong>geometric operator field</strong>.<br>
+Geodesics are <strong>coherence trajectories</strong>.<br>
+Stress‑energy is a <strong>curvature‑source operator</strong>.</p>
+<p>All examples avoid force metaphors, rubber‑sheet analogies, and
+Newtonian drift.</p>
+<hr>
+<h1 id="1-metric-initialization-example-g">1. Metric Initialization Example (𝓖)</h1>
+<h3 id="goal">Goal</h3>
+<p>Construct a stable metric structure.</p>
+<h3 id="input">Input</h3>
+<pre><code>metric_signature = diag(-1, 1, 1, 1)
+</code></pre>
+<h3 id="operation">Operation</h3>
+<pre><code>g = 𝓖(metric_signature)
+</code></pre>
+<h3 id="interpretation">Interpretation</h3>
+<ul>
+<li>metric is non‑degenerate  </li>
+<li>defines causal cones  </li>
+<li>supports curvature computation  </li>
+</ul>
+<hr>
+<h1 id="2-curvature-computation-example-r">2. Curvature Computation Example (𝓡)</h1>
+<h3 id="goal_1">Goal</h3>
+<p>Compute curvature from a metric.</p>
+<h3 id="input_1">Input</h3>
+<pre><code>g = 𝓖(diag(-1, 1, 1, 1))
+</code></pre>
+<h3 id="operation_1">Operation</h3>
+<pre><code>R = 𝓡(g)
+</code></pre>
+<h3 id="interpretation_1">Interpretation</h3>
+<ul>
+<li>curvature is structural  </li>
+<li>no visual bending  </li>
+<li>determines geodesic deviation  </li>
+</ul>
+<hr>
+<h1 id="3-stressenergy-deformation-example-t">3. Stress‑Energy Deformation Example (𝓣)</h1>
+<h3 id="goal_2">Goal</h3>
+<p>Apply stress‑energy as a curvature‑source operator.</p>
+<h3 id="input_2">Input</h3>
+<pre><code>Tμν = perfect_fluid(ρ, p)
+R = 𝓡(g)
+</code></pre>
+<h3 id="operation_2">Operation</h3>
+<pre><code>R' = 𝓣(Tμν, g)
+</code></pre>
+<h3 id="interpretation_2">Interpretation</h3>
+<ul>
+<li>stress‑energy deforms curvature  </li>
+<li>no “mass attracts” metaphor  </li>
+<li>operator must preserve coherence  </li>
+</ul>
+<hr>
+<h1 id="4-geometric-deformation-example-def">4. Geometric Deformation Example (𝓓𝓮𝓯)</h1>
+<h3 id="goal_3">Goal</h3>
+<p>Apply a geometric deformation to the metric.</p>
+<h3 id="input_3">Input</h3>
+<pre><code>geometry = g
+deformation_signature = small_perturbation(hμν)
+</code></pre>
+<h3 id="operation_3">Operation</h3>
+<pre><code>g' = 𝓓𝓮𝓯(geometry, deformation_signature)
+</code></pre>
+<h3 id="interpretation_3">Interpretation</h3>
+<ul>
+<li>deformation must preserve invariants  </li>
+<li>supports gravitational wave modeling  </li>
+<li>no Newtonian fallback  </li>
+</ul>
+<hr>
+<h1 id="5-geodesic-evolution-example-geo">5. Geodesic Evolution Example (𝓖𝓮𝓸)</h1>
+<h3 id="goal_4">Goal</h3>
+<p>Generate geodesics as coherence trajectories.</p>
+<h3 id="input_4">Input</h3>
+<pre><code>g = Schwarzschild_metric(M)
+initial_conditions = {position, velocity}
+</code></pre>
+<h3 id="operation_4">Operation</h3>
+<pre><code>γ = 𝓖𝓮𝓸(g, initial_conditions)
+</code></pre>
+<h3 id="interpretation_4">Interpretation</h3>
+<ul>
+<li>geodesics are not force‑driven  </li>
+<li>they preserve coherence under curvature  </li>
+<li>causal structure must remain intact  </li>
+</ul>
+<hr>
+<h1 id="6-coherence-evaluation-example-c">6. Coherence Evaluation Example (𝓒)</h1>
+<h3 id="goal_5">Goal</h3>
+<p>Evaluate geometric coherence.</p>
+<h3 id="input_5">Input</h3>
+<pre><code>geometry = g
+curvature = R
+geodesics = γ
+</code></pre>
+<h3 id="operation_5">Operation</h3>
+<pre><code>coh = 𝓒(geometry, curvature, geodesics)
+</code></pre>
+<h3 id="interpretation_5">Interpretation</h3>
+<ul>
+<li>coherence = geometric stability  </li>
+<li>no entropy or probabilistic metrics  </li>
+<li>coherence must be structural  </li>
+</ul>
+<hr>
+<h1 id="7-adjacency-example-a">7. Adjacency Example (𝓐)</h1>
+<h3 id="goal_6">Goal</h3>
+<p>Measure geometric adjacency between two events.</p>
+<h3 id="input_6">Input</h3>
+<pre><code>p, q = events in spacetime
+g = metric
+</code></pre>
+<h3 id="operation_6">Operation</h3>
+<pre><code>adj = 𝓐(p, q, g)
+</code></pre>
+<h3 id="interpretation_6">Interpretation</h3>
+<ul>
+<li>adjacency is geometric, not semantic  </li>
+<li>supports causal and metric neighborhoods  </li>
+<li>must be regime‑stable  </li>
+</ul>
+<hr>
+<h1 id="8-causal-structure-example-s">8. Causal Structure Example (𝓢)</h1>
+<h3 id="goal_7">Goal</h3>
+<p>Construct causal cones.</p>
+<h3 id="input_7">Input</h3>
+<pre><code>g = metric
+</code></pre>
+<h3 id="operation_7">Operation</h3>
+<pre><code>C = 𝓢(g)
+</code></pre>
+<h3 id="interpretation_7">Interpretation</h3>
+<ul>
+<li>causal structure must remain coherent  </li>
+<li>no superluminal drift  </li>
+<li>no semantic interpretations  </li>
+</ul>
+<hr>
+<h1 id="9-regime-transition-example-reg">9. Regime Transition Example (𝓡𝓮𝓰)</h1>
+<h3 id="goal_8">Goal</h3>
+<p>Transition geometry from R1 → R2.</p>
+<h3 id="input_8">Input</h3>
+<pre><code>geometry = g
+</code></pre>
+<h3 id="operation_8">Operation</h3>
+<pre><code>g₂ = 𝓡𝓮𝓰(g, R1 → R2)
+</code></pre>
+<h3 id="interpretation_8">Interpretation</h3>
+<ul>
+<li>curvature operators activate in R2  </li>
+<li>transitions must preserve coherence  </li>
+<li>illegal transitions trigger collapse  </li>
+</ul>
+<hr>
+<h1 id="10-collapse-classification-example-cl">10. Collapse Classification Example (𝓒𝓁)</h1>
+<h3 id="goal_9">Goal</h3>
+<p>Classify geometric failure.</p>
+<h3 id="input_9">Input</h3>
+<pre><code>geometry = g?
+</code></pre>
+<h3 id="operation_9">Operation</h3>
+<pre><code>mode = 𝓒𝓁(geometry)
+</code></pre>
+<h3 id="possible-outputs">Possible Outputs</h3>
+<ul>
+<li><strong>G1:</strong> metric degeneracy  </li>
+<li><strong>G2:</strong> curvature divergence  </li>
+<li><strong>G3:</strong> geodesic incoherence  </li>
+<li><strong>G4:</strong> causal structure failure  </li>
+</ul>
+<h3 id="interpretation_9">Interpretation</h3>
+<p>Collapse is geometric, not probabilistic.</p>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>These examples show GR as:</p>
+<ul>
+<li><strong>curvature‑first</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>zero drift</strong>  </li>
+</ul>
+<p>Gravity = <strong>coherent curvature</strong>.<br>
+Geodesics = <strong>coherence trajectories</strong>.<br>
+Spacetime = <strong>a geometric operator field</strong>.
+```</p>
+  </main>
+</body>
+</html>

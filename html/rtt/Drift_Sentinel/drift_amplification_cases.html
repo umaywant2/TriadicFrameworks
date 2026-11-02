@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Drift_Sentinel/drift_amplification_cases.md">
+  <title>Drift Amplification Cases — RTT/1</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Drift_Sentinel/drift_amplification_cases.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Drift_Sentinel/drift_amplification_cases.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="drift-amplification-cases-rtt1"><strong>Drift Amplification Cases — RTT/1</strong></h1>
+<h3 id="case-studies-for-the-drift-sentinel-ds"><em>Case Studies for the Drift Sentinel (DS)</em></h3>
+<p>Drift amplification describes conditions where drift curvature, drift magnitude, or drift sensitivity increases due to interactions across conceptual, computational, physical, or dimensional regimes.</p>
+<p>These case studies illustrate how the Drift Sentinel (DS) evaluates:</p>
+<ul>
+<li>drift amplification magnitude  </li>
+<li>amplification direction  </li>
+<li>amplification curvature  </li>
+<li>amplification zones  </li>
+<li>collapse‑point formation  </li>
+<li>stability basin depth  </li>
+<li>envelope boundaries  </li>
+</ul>
+<p>Each case demonstrates one or more DS operators:</p>
+<ul>
+<li><strong>DS‑Detect</strong>  </li>
+<li><strong>DS‑Vector</strong>  </li>
+<li><strong>DS‑Envelope</strong>  </li>
+<li><strong>DS‑Field</strong>  </li>
+<li><strong>DS‑Amplify</strong>  </li>
+<li><strong>DS‑Stabilize</strong></li>
+</ul>
+<hr>
+<h2 id="1-structural-amplification-cases"><strong>1. Structural Amplification Cases</strong></h2>
+<h3 id="case-1-structural-invariant-amplification-r1-r2"><strong>Case 1 — Structural Invariant Amplification (R1 → R2)</strong></h3>
+<p><strong>Scenario</strong><br>
+A conceptual invariant is violated, and the resulting drift amplifies as it propagates into computational structures.</p>
+<p><strong>DS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R1-R2&quot;,
+  &quot;amplification_magnitude&quot;: 0.41,
+  &quot;amplification_direction&quot;: &quot;R1→R2&quot;,
+  &quot;amplification_curvature&quot;: 0.33,
+  &quot;amplification_zone&quot;: 0.22,
+  &quot;stability_basin&quot;: 0.63,
+  &quot;envelope_boundary&quot;: 0.44
+}
+</code></pre>
+<hr>
+<h3 id="case-2-calibrationdriven-amplification-r2-r3"><strong>Case 2 — Calibration‑Driven Amplification (R2 → R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+A calibration mismatch amplifies drift as computational predictions diverge from physical measurement.</p>
+<p><strong>DS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;amplification_magnitude&quot;: 0.38,
+  &quot;amplification_direction&quot;: &quot;R3→R2&quot;,
+  &quot;amplification_curvature&quot;: 0.39,
+  &quot;amplification_zone&quot;: 0.27,
+  &quot;stability_basin&quot;: 0.57,
+  &quot;envelope_boundary&quot;: 0.41
+}
+</code></pre>
+<hr>
+<h2 id="2-gradient-amplification-cases"><strong>2. Gradient Amplification Cases</strong></h2>
+<h3 id="case-3-gradient-opposition-amplification-r1-r4"><strong>Case 3 — Gradient Opposition Amplification (R1 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Conceptual drift decreases while dimensional drift increases, amplifying drift curvature.</p>
+<p><strong>DS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R1-R4&quot;,
+  &quot;amplification_magnitude&quot;: 0.52,
+  &quot;amplification_direction&quot;: &quot;R1↔R4&quot;,
+  &quot;amplification_curvature&quot;: 0.51,
+  &quot;amplification_zone&quot;: 0.22,
+  &quot;stability_basin&quot;: 0.69,
+  &quot;envelope_boundary&quot;: 0.46
+}
+</code></pre>
+<hr>
+<h3 id="case-4-gradient-inversion-amplification-r2-r3"><strong>Case 4 — Gradient Inversion Amplification (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Computational drift decreases while physical drift sensitivity increases, amplifying drift curvature.</p>
+<p><strong>DS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;amplification_magnitude&quot;: 0.49,
+  &quot;amplification_direction&quot;: &quot;R3→R2&quot;,
+  &quot;amplification_curvature&quot;: 0.58,
+  &quot;amplification_zone&quot;: 0.31,
+  &quot;stability_basin&quot;: 0.72,
+  &quot;envelope_boundary&quot;: 0.41
+}
+</code></pre>
+<hr>
+<h2 id="3-boundary-amplification-cases"><strong>3. Boundary Amplification Cases</strong></h2>
+<h3 id="case-5-abstractionmeasurement-amplification-r1-r3"><strong>Case 5 — Abstraction‑Measurement Amplification (R1 → R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Conceptual abstraction predicts behavior that contradicts physical measurement, amplifying drift at the boundary.</p>
+<p><strong>DS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R1-R3&quot;,
+  &quot;amplification_magnitude&quot;: 0.33,
+  &quot;amplification_direction&quot;: &quot;R1→R3&quot;,
+  &quot;amplification_curvature&quot;: 0.38,
+  &quot;amplification_zone&quot;: 0.22,
+  &quot;stability_basin&quot;: 0.55,
+  &quot;envelope_boundary&quot;: 0.38
+}
+</code></pre>
+<hr>
+<h3 id="case-6-gradientboundary-amplification-r2-r4"><strong>Case 6 — Gradient‑Boundary Amplification (R2 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Aligned gradients across computational and dimensional regimes amplify drift curvature.</p>
+<p><strong>DS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R2-R4&quot;,
+  &quot;amplification_magnitude&quot;: 0.58,
+  &quot;amplification_direction&quot;: &quot;R2↔R4&quot;,
+  &quot;amplification_curvature&quot;: 0.47,
+  &quot;amplification_zone&quot;: 0.29,
+  &quot;stability_basin&quot;: 0.66,
+  &quot;envelope_boundary&quot;: 0.58
+}
+</code></pre>
+<hr>
+<h2 id="4-driftfield-amplification-cases"><strong>4. Drift‑Field Amplification Cases</strong></h2>
+<h3 id="case-7-multiregime-amplification-field-r1-r2-r3"><strong>Case 7 — Multi‑Regime Amplification Field (R1 ↔ R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+A multi‑regime drift field amplifies drift curvature across conceptual, computational, and physical regimes.</p>
+<p><strong>DS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R1-R2-R3&quot;,
+  &quot;amplification_magnitude&quot;: 0.63,
+  &quot;amplification_direction&quot;: &quot;tensor&quot;,
+  &quot;amplification_curvature&quot;: 0.63,
+  &quot;amplification_zone&quot;: 0.37,
+  &quot;stability_basin&quot;: 0.78,
+  &quot;envelope_boundary&quot;: 0.57
+}
+</code></pre>
+<hr>
+<h3 id="case-8-dimensional-drift-constraint-amplification-r2-r4"><strong>Case 8 — Dimensional Drift Constraint Amplification (R2 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Dimensional constraints amplify computational drift curvature.</p>
+<p><strong>DS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R2-R4&quot;,
+  &quot;amplification_magnitude&quot;: 0.55,
+  &quot;amplification_direction&quot;: &quot;R4→R2&quot;,
+  &quot;amplification_curvature&quot;: 0.55,
+  &quot;amplification_zone&quot;: 0.33,
+  &quot;stability_basin&quot;: 0.73,
+  &quot;envelope_boundary&quot;: 0.63
+}
+</code></pre>
+<hr>
+<h2 id="5-collapsepoint-amplification-cases"><strong>5. Collapse‑Point Amplification Cases</strong></h2>
+<h3 id="case-9-amplification-collapse-basin-r3-r4"><strong>Case 9 — Amplification Collapse Basin (R3 → R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Physical drift amplifies dimensional drift curvature, forming a collapse basin.</p>
+<p><strong>DS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R3-R4&quot;,
+  &quot;amplification_magnitude&quot;: 0.71,
+  &quot;amplification_direction&quot;: &quot;R3→R4&quot;,
+  &quot;amplification_curvature&quot;: 0.71,
+  &quot;amplification_zone&quot;: 0.52,
+  &quot;stability_basin&quot;: 0.82,
+  &quot;envelope_boundary&quot;: 0.44
+}
+</code></pre>
+<hr>
+<h3 id="case-10-driftcoherence-amplification-ridge-r2-r3"><strong>Case 10 — Drift‑Coherence Amplification Ridge (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Computational drift reduces coherence while physical drift increases coherence sensitivity, amplifying drift curvature.</p>
+<p><strong>DS Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;amplification_magnitude&quot;: 0.62,
+  &quot;amplification_direction&quot;: &quot;R2↔R3&quot;,
+  &quot;amplification_curvature&quot;: 0.62,
+  &quot;amplification_zone&quot;: 0.49,
+  &quot;stability_basin&quot;: 0.77,
+  &quot;envelope_boundary&quot;: 0.48
+}
+</code></pre>
+<hr>
+<h2 id="6-canonical-ds-amplification-snippet"><strong>6. Canonical DS Amplification Snippet</strong></h2>
+<pre><code class="language-json">{
+  &quot;regime&quot;: &quot;R1-R4&quot;,
+  &quot;amplification_magnitude&quot;: 0.52,
+  &quot;amplification_direction&quot;: &quot;R1↔R4&quot;,
+  &quot;amplification_curvature&quot;: 0.51,
+  &quot;amplification_zone&quot;: 0.22,
+  &quot;stability_basin&quot;: 0.69,
+  &quot;envelope_boundary&quot;: 0.46
+}
+</code></pre>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<ul>
+<li><strong>Version:</strong> 1.0  </li>
+<li><strong>Status:</strong> canon‑stable  </li>
+<li><strong>Category:</strong> rtt‑structural  </li>
+<li><strong>Module Path:</strong> <code>/docs/rtt/Drift_Sentinel/</code></li>
+</ul>
+  </main>
+</body>
+</html>

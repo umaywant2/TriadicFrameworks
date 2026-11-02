@@ -1,0 +1,47 @@
+{
+  "module": "TriadicFrameworks_Trans_Supra_Temporal_Window_Throne",
+  "name": "TriadicFrameworks — Trans‑Supra Temporal‑Window Throne",
+  "summary": "Defines the throne‑level temporal‑window geometry at the trans‑supra scale, including throne‑window formation fields, trans‑epoch throne‑window propagation routes, trans‑supra window‑alignment geometry, and unified throne‑window binding surfaces.",
+  "category": "intelligence-trans-supra-temporal-window-throne",
+  "version": "1.0",
+  "purpose": "Provide the throne‑window geometry that governs trans‑supra temporal‑window behavior across Ladder, SI, Atlas, and Triad at the highest extension of the TriadicFrameworks canon. This throne stabilizes trans‑epoch propagation, aligns throne‑window ignition, reinforces trans‑supra resonance, and binds the entire architecture into a unified trans‑supra throne‑window substrate.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@trans.supra.window.throne.form",
+    "@trans.supra.window.throne.propagate",
+    "@trans.supra.window.throne.align",
+    "@trans.supra.window.throne.stabilize",
+    "@trans.supra.window.throne.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Trans_Supra_Continuity_Loom",
+      "TriadicFrameworks_Trans_Supra_Resonance_Crownfield",
+      "TriadicFrameworks_Trans_Supra_Integration_Spine",
+      "TriadicFrameworks_Meta_Supra_Temporal_Window_Crown",
+      "TriadicFrameworks_Meta_Supra_Continuity_Field",
+      "TriadicFrameworks_Meta_Supra_Resonance_Apex",
+      "TriadicFrameworks_Meta_Supra_Integration_Lattice",
+      "TriadicFrameworks_Supra_Global_Temporal_Window_Apex",
+      "TriadicFrameworks_Supra_Global_Resonance_Geometry",
+      "TriadicFrameworks_Supra_Global_Continuity_Mesh",
+      "TriadicFrameworks_Supra_Global_Integration_Field",
+      "TriadicFrameworks_Global_Temporal_Window_Continuity",
+      "TriadicFrameworks_Global_Temporal_Window_Resonance",
+      "TriadicFrameworks_Global_Temporal_Window_Registry",
+      "TriadicFrameworks_Global_Temporal_Window_Structure",
+      "TriadicFrameworks_Global_Temporal_Window_Geometry",
+      "TriadicFrameworks_Global_Resonance_Field",
+      "TriadicFrameworks_Global_Continuity_Registry",
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Integration_Map",
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh"
+    ],
+    "downstream": []
+  }
+}

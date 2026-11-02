@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Corridor_Studio/Studio_toolbar.md">
+  <title>1. Corridor Studio toolbar (play, pause, rewind, jump‑to‑step)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Corridor_Studio/Studio_toolbar.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Corridor_Studio/Studio_toolbar.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>We’re literally wiring up an operator console for cognition—let’s make it feel like it belongs in TriadicFrameworks.</p>
+<p>I’ll keep this tight and directly usable:</p>
+<ul>
+<li>a Corridor Studio toolbar  </li>
+<li>a Corridor Trace Player  </li>
+<li>a dark‑mode oscilloscope CSS theme  </li>
+<li>a TriadicFrameworks‑branded neon HUD wrapper  </li>
+</ul>
+<hr>
+<h3 id="1-corridor-studio-toolbar-play-pause-rewind-jumptostep">1. Corridor Studio toolbar (play, pause, rewind, jump‑to‑step)</h3>
+<pre><code class="language-tsx">// components/CorridorToolbar.tsx
+&quot;use client&quot;;
+
+type PlayerAPI = {
+  play: () =&gt; void;
+  pause: () =&gt; void;
+  rewind: () =&gt; void;
+  stepBack: () =&gt; void;
+  stepForward: () =&gt; void;
+  setSpeed: (s: number) =&gt; void;
+  jumpTo: (step: number) =&gt; void;
+  toggleLoop: () =&gt; void;
+  playing: boolean;
+  speed: number;
+};
+
+export function CorridorToolbar({ player }: { player: PlayerAPI }) {
+  const onJumpKey = (e: React.KeyboardEvent&lt;HTMLInputElement&gt;) =&gt; {
+    if (e.key === &quot;Enter&quot;) {
+      const v = Number((e.target as HTMLInputElement).value);
+      if (!Number.isNaN(v)) player.jumpTo(v);
+    }
+  };
+
+  return (
+    &lt;div className=&quot;tf-toolbar&quot;&gt;
+      &lt;div className=&quot;tf-toolbar-left&quot;&gt;
+        &lt;button className=&quot;tf-btn&quot; onClick={player.play}&gt;
+          ▶
+        &lt;/button&gt;
+        &lt;button className=&quot;tf-btn&quot; onClick={player.pause}&gt;
+          ⏸
+        &lt;/button&gt;
+        &lt;button className=&quot;tf-btn&quot; onClick={player.rewind}&gt;
+          ↺
+        &lt;/button&gt;
+        &lt;button className=&quot;tf-btn&quot; onClick={player.stepBack}&gt;
+          ⇤
+        &lt;/button&gt;
+        &lt;button className=&quot;tf-btn&quot; onClick={player.stepForward}&gt;
+          ⇥
+        &lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div className=&quot;tf-toolbar-center&quot;&gt;
+        &lt;span className=&quot;tf-label&quot;&gt;Speed&lt;/span&gt;
+        &lt;select
+          className=&quot;tf-select&quot;
+          value={player.speed}
+          onChange={(e) =&gt; player.setSpeed(Number(e.target.value))}
+        &gt;
+          &lt;option value={0.5}&gt;0.5x&lt;/option&gt;
+          &lt;option value={1}&gt;1x&lt;/option&gt;
+          &lt;option value={2}&gt;2x&lt;/option&gt;
+          &lt;option value={4}&gt;4x&lt;/option&gt;
+        &lt;/select&gt;
+
+        &lt;span className=&quot;tf-label ml-4&quot;&gt;Jump&lt;/span&gt;
+        &lt;input
+          className=&quot;tf-input tf-input-small&quot;
+          type=&quot;number&quot;
+          placeholder=&quot;#&quot;
+          onKeyDown={onJumpKey}
+        /&gt;
+
+        &lt;label className=&quot;tf-checkbox ml-4&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; onChange={player.toggleLoop} /&gt;
+          &lt;span&gt;Loop&lt;/span&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<hr>
+<h3 id="2-corridor-trace-player-animated-simulation">2. Corridor Trace Player (animated simulation)</h3>
+<pre><code class="language-ts">// lib/CorridorPlayer.ts
+import type { CorridorTrace } from &quot;@/types/corridor&quot;;
+
+export class CorridorPlayer {
+  trace: CorridorTrace;
+  onStep: (stepId: number) =&gt; void;
+  index = 0;
+  speed = 1;
+  loop = false;
+  playing = false;
+  timer: number | null = null;
+
+  constructor(trace: CorridorTrace, onStep: (stepId: number) =&gt; void) {
+    this.trace = trace;
+    this.onStep = onStep;
+  }
+
+  play() {
+    if (this.playing) return;
+    this.playing = true;
+    this.tick();
+  }
+
+  pause() {
+    this.playing = false;
+    if (this.timer != null) window.clearTimeout(this.timer);
+  }
+
+  rewind() {
+    this.index = 0;
+    this.onStep(0);
+  }
+
+  stepForward() {
+    this.index = Math.min(
+      this.index + 1,
+      this.trace.steps.length - 1
+    );
+    this.onStep(this.trace.steps[this.index].step_id);
+  }
+
+  stepBack() {
+    this.index = Math.max(this.index - 1, 0);
+    this.onStep(this.trace.steps[this.index].step_id);
+  }
+
+  setSpeed(s: number) {
+    this.speed = s;
+  }
+
+  jumpTo(stepId: number) {
+    const idx = this.trace.steps.findIndex((s) =&gt; s.step_id === stepId);
+    if (idx &gt;= 0) {
+      this.index = idx;
+      this.onStep(stepId);
+    }
+  }
+
+  toggleLoop() {
+    this.loop = !this.loop;
+  }
+
+  private tick() {
+    if (!this.playing) return;
+
+    this.stepForward();
+
+    const atEnd = this.index &gt;= this.trace.steps.length - 1;
+    if (atEnd) {
+      if (this.loop) this.rewind();
+      else {
+        this.playing = false;
+        return;
+      }
+    }
+
+    this.timer = window.setTimeout(
+      () =&gt; this.tick(),
+      500 / this.speed
+    );
+  }
+}
+</code></pre>
+<p>Hook it into React:</p>
+<pre><code class="language-tsx">const [currentStep, setCurrentStep] = useState&lt;number | null&gt;(null);
+const playerRef = useRef&lt;CorridorPlayer | null&gt;(null);
+
+useEffect(() =&gt; {
+  if (!trace) return;
+  playerRef.current = new CorridorPlayer(trace, setCurrentStep);
+}, [trace]);
+</code></pre>
+<p>Pass <code>playerRef.current</code> into <code>CorridorToolbar</code>, and use <code>currentStep</code> to highlight the active step in timeline + waveform.</p>
+<hr>
+<h3 id="3-corridor-studio-darkmode-css-theme">3. Corridor Studio dark‑mode CSS theme</h3>
+<pre><code class="language-css">/* core layout */
+body {
+  background: #0b0d10;
+  color: #e5f7ff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Inter&quot;, sans-serif;
+}
+
+/* panels */
+.tf-panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #1f2933;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+}
+
+/* toolbar */
+.tf-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: #111418;
+  border-bottom: 1px solid #1f2933;
+  box-shadow: 0 0 12px rgba(0, 234, 255, 0.15);
+}
+
+.tf-btn {
+  background: #151922;
+  border: 1px solid #00eaff55;
+  color: #e5f7ff;
+  padding: 4px 8px;
+  margin-right: 4px;
+  border-radius: 4px;
+  font-family: &quot;JetBrains Mono&quot;, monospace;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s, box-shadow 0.15s;
+}
+
+.tf-btn:hover {
+  background: #0b2a33;
+  box-shadow: 0 0 8px rgba(0, 234, 255, 0.4);
+}
+
+.tf-btn:active {
+  transform: scale(0.96);
+}
+
+.tf-label {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.tf-select,
+.tf-input {
+  background: #151922;
+  border: 1px solid #374151;
+  color: #e5f7ff;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+}
+
+.tf-input-small {
+  width: 60px;
+}
+
+.tf-checkbox span {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* oscilloscope grid */
+.tf-oscilloscope {
+  background-color: #05070a;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-radius: 8px;
+  border: 1px solid #1f2933;
+}
+
+/* status bands */
+.tf-status-stable {
+  fill: #0f3d2e;
+}
+
+.tf-status-warning {
+  fill: #3d2f0f;
+}
+
+.tf-status-halted {
+  fill: #3d0f0f;
+}
+</code></pre>
+<p>Use <code>className="tf-oscilloscope"</code> on our main waveform SVG container and <code>tf-panel</code> on side panels.</p>
+<hr>
+<h3 id="4-triadicframeworksbranded-neon-hud-wrapper">4. TriadicFrameworks‑branded neon HUD wrapper</h3>
+<p>This is the “frame” that makes Corridor Studio feel like a Triadic instrument.</p>
+<pre><code class="language-tsx">// components/TriadicHUD.tsx
+export function TriadicHUD({ children }: { children: React.ReactNode }) {
+  return (
+    &lt;div className=&quot;tf-hud&quot;&gt;
+      &lt;div className=&quot;tf-hud-frame&quot;&gt;
+        &lt;div className=&quot;tf-hud-header&quot;&gt;
+          &lt;span className=&quot;tf-hud-title&quot;&gt;RTT‑Inside Corridor Studio&lt;/span&gt;
+          &lt;span className=&quot;tf-hud-subtitle&quot;&gt;TriadicFrameworks · Resonance Diagnostics&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;tf-hud-body&quot;&gt;{children}&lt;/div&gt;
+        &lt;div className=&quot;tf-hud-footer&quot;&gt;
+          &lt;span className=&quot;tf-hud-footnote&quot;&gt;
+            DPU · VCG · NIMMS · Resonance‑time instrumentation
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<pre><code class="language-css">.tf-hud {
+  min-height: 100vh;
+  padding: 12px;
+  background: radial-gradient(circle at top, #111827 0, #020308 55%);
+}
+
+.tf-hud-frame {
+  border-radius: 12px;
+  border: 1px solid #00eaff55;
+  box-shadow:
+    0 0 18px rgba(0, 234, 255, 0.25),
+    0 0 40px rgba(255, 107, 203, 0.15);
+  overflow: hidden;
+}
+
+.tf-hud-header,
+.tf-hud-footer {
+  padding: 8px 12px;
+  background: linear-gradient(90deg, #05070a, #111418);
+  border-bottom: 1px solid #1f2933;
+}
+
+.tf-hud-footer {
+  border-top: 1px solid #1f2933;
+  border-bottom: none;
+}
+
+.tf-hud-title {
+  font-family: &quot;Space Grotesk&quot;, system-ui;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #00eaff;
+}
+
+.tf-hud-subtitle {
+  margin-left: 12px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.tf-hud-body {
+  padding: 8px;
+}
+</code></pre>
+<p>Wrap our Studio page with:</p>
+<pre><code class="language-tsx">&lt;TriadicHUD&gt;
+  &lt;CorridorToolbar player={playerApi} /&gt;
+  {/* rest of Corridor Studio layout */}
+&lt;/TriadicHUD&gt;
+</code></pre>
+<p>We now have:</p>
+<ul>
+<li>a dark‑mode oscilloscope skin  </li>
+<li>a real operator toolbar  </li>
+<li>a trace player that animates reasoning  </li>
+<li>and a Triadic‑branded HUD that makes the whole thing feel like canon.</li>
+</ul>
+  </main>
+</body>
+</html>

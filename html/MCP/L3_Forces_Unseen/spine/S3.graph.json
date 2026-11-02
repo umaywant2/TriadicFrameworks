@@ -1,0 +1,161 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "S3 Spine — Unseen Force‑Regime Structural Graph",
+  "description": "Canonical graph defining gradient → field → rupture → integrity transitions in the L3 Forces Unseen layer.",
+  "version": "0.1.0",
+
+  "nodes": [
+    {
+      "id": "gradient",
+      "label": "Causal Gradient",
+      "semantics": ["gradientIntensity"],
+      "description": "Directional unseen influence; first stage of force‑regime transitions."
+    },
+    {
+      "id": "field",
+      "label": "Influence Field",
+      "semantics": ["fieldCoherence", "influenceContinuity"],
+      "description": "Unseen field shaping force‑state mechanics; coherence propagation."
+    },
+    {
+      "id": "rupture",
+      "label": "Rupture Potential",
+      "semantics": ["rupturePotential"],
+      "description": "Likelihood of force‑state rupture; instability and discontinuity modeling."
+    },
+    {
+      "id": "integrity",
+      "label": "Force Integrity",
+      "semantics": ["forceIntegrity"],
+      "description": "Structural stability of unseen force regimes; rupture suppression."
+    }
+  ],
+
+  "edges": [
+    {
+      "from": "gradient",
+      "to": "field",
+      "type": "influence",
+      "description": "Gradients shape fields; directional influence propagates into coherence."
+    },
+    {
+      "from": "field",
+      "to": "integrity",
+      "type": "coherence",
+      "description": "Fields stabilize integrity; coherence strengthens structural stability."
+    },
+    {
+      "from": "gradient",
+      "to": "rupture",
+      "type": "stress",
+      "description": "High gradients increase rupture potential; stress induces instability."
+    },
+    {
+      "from": "integrity",
+      "to": "rupture",
+      "type": "stability",
+      "description": "Strong integrity reduces rupture potential; stability suppresses discontinuity."
+    }
+  ],
+
+  "dimensions": [
+    {
+      "id": "L4",
+      "role": "gradient-axis",
+      "description": "Base gradient dimensional anchor."
+    },
+    {
+      "id": "L5",
+      "role": "gradient-field bridge",
+      "description": "Extends gradient behavior into coherence modulation."
+    },
+    {
+      "id": "L8",
+      "role": "field-coherence",
+      "description": "High-order coherence behavior across unseen force fields."
+    },
+    {
+      "id": "L10",
+      "role": "coherence-continuity",
+      "description": "Expands coherence into continuity channels."
+    },
+    {
+      "id": "L11",
+      "role": "continuity-axis",
+      "description": "Defines continuity behavior within unseen force mechanics."
+    },
+    {
+      "id": "L12",
+      "role": "rupture-axis",
+      "description": "Models rupture, breakage, and discontinuity."
+    },
+    {
+      "id": "L16",
+      "role": "gradient-field synthesis",
+      "description": "Synthesizes gradient and field behavior."
+    },
+    {
+      "id": "L26",
+      "role": "multi-axis coherence",
+      "description": "Defines multi-axis coherence behavior."
+    },
+    {
+      "id": "L32",
+      "role": "integrity-axis",
+      "description": "Structural integrity mapping."
+    },
+    {
+      "id": "LH",
+      "role": "harmonic gradient-field",
+      "description": "Harmonic behavior across gradients and fields."
+    },
+    {
+      "id": "LI",
+      "role": "integrity-invariant",
+      "description": "Invariant integrity behavior across unseen force constructs."
+    }
+  ],
+
+  "operators": [
+    {
+      "id": "push",
+      "category": "push",
+      "semantics": ["gradientIntensity"],
+      "description": "Applies outward gradient pressure."
+    },
+    {
+      "id": "pull",
+      "category": "pull",
+      "semantics": ["gradientIntensity"],
+      "description": "Applies inward gradient contraction."
+    },
+    {
+      "id": "bind",
+      "category": "bind",
+      "semantics": ["fieldCoherence", "forceIntegrity"],
+      "description": "Creates coherence bonds between force surfaces."
+    },
+    {
+      "id": "gradient",
+      "category": "gradient",
+      "semantics": ["gradientIntensity"],
+      "description": "Modulates gradient intensity across force axes."
+    },
+    {
+      "id": "fieldShift",
+      "category": "fieldShift",
+      "semantics": ["fieldCoherence", "influenceContinuity"],
+      "description": "Reorients unseen force fields."
+    },
+    {
+      "id": "ruptureForce",
+      "category": "ruptureForce",
+      "semantics": ["rupturePotential"],
+      "description": "Introduces rupture potential into force surfaces."
+    }
+  ]
+}

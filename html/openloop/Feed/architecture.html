@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/openloop/Feed/architecture.md">
+  <title>📡 OpenFeed — architecture.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/openloop/Feed/architecture.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/openloop/Feed/architecture.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="openfeed-architecturemd">📡 <strong>OpenFeed — architecture.md</strong></h1>
+<p><strong>OpenWarden Suite — Social Feed Substrate</strong><br>
+<strong>Analyzer Layer:</strong> semantic<br>
+<strong>Regime:</strong> open‑feed-governance<br>
+<strong>Version:</strong> 1.0  </p>
+<hr>
+<h2 id="1-architectural-overview"><strong>1. Architectural Overview</strong></h2>
+<p>OpenFeed provides a <strong>semantic, drift‑aware, coherence‑declared substrate</strong> for social feeds across the OpenWarden suite.<br>
+Its architecture is built around five canonical components:</p>
+<ol>
+<li><strong>Semantic Ranking Model</strong>  </li>
+<li><strong>Feed Lineage Engine</strong>  </li>
+<li><strong>Contextual Relevance Layer</strong>  </li>
+<li><strong>Governance &amp; Drift Control</strong>  </li>
+<li><strong>Cross‑Module Integration Layer</strong></li>
+</ol>
+<p>Each component ensures feed stability, metadata correctness, and operator‑aligned transformations.</p>
+<hr>
+<h2 id="2-semantic-ranking-model"><strong>2. Semantic Ranking Model</strong></h2>
+<p>The Semantic Ranking Model determines <strong>how feed items are ordered</strong> using canonical metadata fields.<br>
+Ranking is based on:</p>
+<ul>
+<li>semantic alignment  </li>
+<li>contextual relevance  </li>
+<li>resonance stability  </li>
+<li>coherence score  </li>
+<li>canonical metadata completeness  </li>
+</ul>
+<h3 id="21-ranking-inputs"><strong>2.1 Ranking Inputs</strong></h3>
+<ul>
+<li><code>open.feed.semantic</code>  </li>
+<li><code>open.feed.contextual</code>  </li>
+<li><code>open.feed.resonance</code>  </li>
+<li><code>open.feed.coherence</code>  </li>
+<li><code>open.feed.lineage</code>  </li>
+</ul>
+<h3 id="22-ranking-rules"><strong>2.2 Ranking Rules</strong></h3>
+<p>Ranking must be:</p>
+<ul>
+<li>semantic, not behavioral  </li>
+<li>context‑aligned  </li>
+<li>drift‑bounded  </li>
+<li>operator‑aligned  </li>
+<li>lineage‑tracked  </li>
+</ul>
+<p>Engagement metrics are never used.</p>
+<hr>
+<h2 id="3-feed-lineage-engine"><strong>3. Feed Lineage Engine</strong></h2>
+<p>The Lineage Engine tracks:</p>
+<ul>
+<li>item evolution  </li>
+<li>ranking changes  </li>
+<li>drift events  </li>
+<li>operator usage  </li>
+<li>semantic corrections  </li>
+</ul>
+<p>Lineage ensures transparency and prevents feed manipulation.</p>
+<h3 id="31-lineage-requirements"><strong>3.1 Lineage Requirements</strong></h3>
+<p>Lineage must be:</p>
+<ul>
+<li>canonical  </li>
+<li>immutable  </li>
+<li>drift‑bounded  </li>
+<li>operator‑aligned  </li>
+</ul>
+<p>Lineage corruption is treated as semantic drift.</p>
+<hr>
+<h2 id="4-contextual-relevance-layer"><strong>4. Contextual Relevance Layer</strong></h2>
+<p>Feed items appear when:</p>
+<ul>
+<li>semantic intent aligns with context  </li>
+<li>dimensional signature matches topic  </li>
+<li>resonance exceeds threshold  </li>
+<li>coherence is stable  </li>
+<li>metadata is canonical  </li>
+</ul>
+<h3 id="41-contextual-inputs"><strong>4.1 Contextual Inputs</strong></h3>
+<ul>
+<li>page topic  </li>
+<li>semantic cluster  </li>
+<li>contextual dimension  </li>
+<li>resonance score  </li>
+<li>operator grammar fields  </li>
+</ul>
+<h3 id="42-contextual-outputs"><strong>4.2 Contextual Outputs</strong></h3>
+<ul>
+<li>feed ordering  </li>
+<li>feed suppression  </li>
+<li>feed lineage update  </li>
+<li>drift correction  </li>
+</ul>
+<p>Context violations trigger immediate suppression.</p>
+<hr>
+<h2 id="5-governance-drift-control"><strong>5. Governance &amp; Drift Control</strong></h2>
+<p>OpenFeed enforces strict governance rules inherited from OpenWarden.</p>
+<h3 id="51-drift-types"><strong>5.1 Drift Types</strong></h3>
+<ul>
+<li><strong>Semantic Drift</strong> — meaning diverges from declared intent  </li>
+<li><strong>Ranking Drift</strong> — ordering becomes unstable or adversarial  </li>
+<li><strong>Metadata Drift</strong> — missing, malformed, or manipulated fields  </li>
+<li><strong>Lineage Drift</strong> — corrupted or ambiguous lineage  </li>
+</ul>
+<h3 id="52-drift-responses"><strong>5.2 Drift Responses</strong></h3>
+<ol>
+<li><strong>Flag</strong> — mark item as drifted  </li>
+<li><strong>Suppress</strong> — remove from feed  </li>
+<li><strong>Correct</strong> — repair metadata  </li>
+<li><strong>Recalibrate</strong> — adjust resonance  </li>
+<li><strong>Update Lineage</strong> — record correction  </li>
+</ol>
+<p>All drift responses are logged.</p>
+<hr>
+<h2 id="6-operator-grammar-alignment"><strong>6. Operator Grammar Alignment</strong></h2>
+<p>OpenFeed uses the OpenWarden operator grammar:</p>
+<ul>
+<li><strong>extend</strong> — add semantic detail  </li>
+<li><strong>condense</strong> — simplify metadata  </li>
+<li><strong>refactor</strong> — reorganize metadata  </li>
+<li><strong>capture</strong> — record drift or lineage  </li>
+<li><strong>annotate</strong> — add governance notes  </li>
+<li><strong>correct</strong> — fix drift or misalignment  </li>
+</ul>
+<p>Operators ensure safe, reversible feed evolution.</p>
+<hr>
+<h2 id="7-crossmodule-integration"><strong>7. Cross‑Module Integration</strong></h2>
+<p>OpenFeed integrates with:</p>
+<ul>
+<li><strong>OpenSEO</strong> — semantic operators  </li>
+<li><strong>OpenSoN</strong> — social context alignment  </li>
+<li><strong>OpenStream</strong> — recommendation coherence  </li>
+<li><strong>OpenCatalog</strong> — product metadata alignment  </li>
+<li><strong>OpenRisk</strong> — anomaly detection  </li>
+<li><strong>OpenIAM</strong> — identity‑safe feed rules  </li>
+</ul>
+<p>All integrations are drift‑bounded and coherence‑declared.</p>
+<hr>
+<h2 id="8-canonical-metadata-block-example"><strong>8. Canonical Metadata Block (Example)</strong></h2>
+<pre><code class="language-html">&lt;meta name=&quot;open.feed.semantic&quot; content=&quot;topic:ai&quot;&gt;
+&lt;meta name=&quot;open.feed.contextual&quot; content=&quot;context:research&quot;&gt;
+&lt;meta name=&quot;open.feed.resonance&quot; content=&quot;0.89&quot;&gt;
+&lt;meta name=&quot;open.feed.coherence&quot; content=&quot;0.93&quot;&gt;
+&lt;meta name=&quot;open.feed.lineage&quot; content=&quot;feedlineage:7c2f&quot;&gt;
+&lt;meta name=&quot;open.feed.drift&quot; content=&quot;bounded&quot;&gt;
+&lt;meta name=&quot;open.feed.version&quot; content=&quot;1.0&quot;&gt;
+&lt;meta name=&quot;open.feed.module&quot; content=&quot;OpenFeed&quot;&gt;
+</code></pre>
+<hr>
+<h2 id="9-file-structure"><strong>9. File Structure</strong></h2>
+<ul>
+<li><code>README.md</code> — front door  </li>
+<li><code>architecture.md</code> — this file  </li>
+<li><code>canonical_metadata.md</code> — metadata schema  </li>
+<li><code>governance.md</code> — drift &amp; policy rules  </li>
+<li><code>operators.md</code> — operator grammar  </li>
+<li><code>index.html</code> — module front page  </li>
+<li><code>module.json</code> — manifest  </li>
+</ul>
+  </main>
+</body>
+</html>

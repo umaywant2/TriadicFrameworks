@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/MCP/L3_Forces_Unseen/spine/operators.md">
+  <title>⚡ S3 Spine — Operators (R5 Canon)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/MCP/L3_Forces_Unseen/spine/operators.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/MCP/L3_Forces_Unseen/spine/operators.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="s3-spine-operators-r5-canon">⚡ S3 Spine — Operators (R5 Canon)</h1>
+<h3 id="operational-reference-for-unseen-forceregime-mechanics">Operational Reference for Unseen Force‑Regime Mechanics</h3>
+<p><strong>Layer:</strong> L3_Forces_Unseen<br>
+<strong>Triad:</strong> forces<br>
+<strong>Lineage:</strong> qmroot → frequency → fluids → forces  </p>
+<p>The S3 Spine uses <strong>six canonical operators</strong> to manipulate unseen force‑regime states.<br>
+These operators act on the four spine nodes:</p>
+<ul>
+<li>gradient  </li>
+<li>field  </li>
+<li>rupture  </li>
+<li>integrity  </li>
+</ul>
+<p>and modify the five force‑regime semantics:</p>
+<ul>
+<li>gradientIntensity  </li>
+<li>fieldCoherence  </li>
+<li>influenceContinuity  </li>
+<li>rupturePotential  </li>
+<li>forceIntegrity  </li>
+</ul>
+<p>This page defines each operator, its purpose, its dimensional amplifiers, its compatibility rules, and its sequencing constraints.</p>
+<hr>
+<h2 id="1-operator-list-canonical">1. Operator List (Canonical)</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Acts On</th>
+<th>Primary Semantic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>push</strong></td>
+<td>gradient</td>
+<td>gradientIntensity</td>
+<td>Amplifies gradient slope; increases rupturePotential.</td>
+</tr>
+<tr>
+<td><strong>pull</strong></td>
+<td>gradient</td>
+<td>gradientIntensity</td>
+<td>Stabilizes gradient; increases forceIntegrity.</td>
+</tr>
+<tr>
+<td><strong>bind</strong></td>
+<td>field, integrity</td>
+<td>fieldCoherence, forceIntegrity</td>
+<td>Increases coherence; suppresses rupture.</td>
+</tr>
+<tr>
+<td><strong>gradient</strong></td>
+<td>gradient</td>
+<td>gradientIntensity</td>
+<td>Modulates gradient slope and intensity.</td>
+</tr>
+<tr>
+<td><strong>fieldShift</strong></td>
+<td>field</td>
+<td>fieldCoherence, influenceContinuity</td>
+<td>Reorients influence fields; may destabilize coherence.</td>
+</tr>
+<tr>
+<td><strong>ruptureForce</strong></td>
+<td>rupture</td>
+<td>rupturePotential</td>
+<td>Sharp increase in rupturePotential; destabilizes integrity.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-operator-definitions">2. Operator Definitions</h2>
+<h3 id="push"><strong>push</strong></h3>
+<p>Push increases <strong>gradientIntensity</strong>, accelerating unseen directional influence.<br>
+It is the primary operator for initiating force‑regime transitions.</p>
+<p>Effects:
+- increases gradientIntensity<br>
+- increases rupturePotential<br>
+- may destabilize integrity  </p>
+<p>Dimensions:
+- L4, L5, L16 (gradient axis)<br>
+- LH (harmonic gradient‑field)</p>
+<hr>
+<h3 id="pull"><strong>pull</strong></h3>
+<p>Pull stabilizes gradients and reinforces integrity.</p>
+<p>Effects:
+- decreases rupturePotential<br>
+- increases forceIntegrity<br>
+- stabilizes gradientIntensity  </p>
+<p>Dimensions:
+- L4, L5 (gradient axis)<br>
+- L32, LI (integrity axis)</p>
+<hr>
+<h3 id="bind"><strong>bind</strong></h3>
+<p>Bind increases coherence and structural stability.</p>
+<p>Effects:
+- increases fieldCoherence<br>
+- increases forceIntegrity<br>
+- suppresses rupturePotential  </p>
+<p>Dimensions:
+- L8, L10 (field axis)<br>
+- L32, LI (integrity axis)</p>
+<hr>
+<h3 id="gradient"><strong>gradient</strong></h3>
+<p>Gradient modulates the slope and intensity of unseen directional influence.</p>
+<p>Effects:
+- adjusts gradientIntensity<br>
+- may increase rupturePotential if slope becomes extreme  </p>
+<p>Dimensions:
+- L4, L5, L16<br>
+- LH</p>
+<hr>
+<h3 id="fieldshift"><strong>fieldShift</strong></h3>
+<p>FieldShift reorients influence fields.</p>
+<p>Effects:
+- modifies fieldCoherence<br>
+- adjusts influenceContinuity<br>
+- may destabilize coherence if misaligned  </p>
+<p>Dimensions:
+- L8, L10, L26</p>
+<hr>
+<h3 id="ruptureforce"><strong>ruptureForce</strong></h3>
+<p>RuptureForce sharply increases rupturePotential.</p>
+<p>Effects:
+- destabilizes integrity<br>
+- collapses fieldCoherence<br>
+- forces transition into rupture state  </p>
+<p>Dimensions:
+- L12 (rupture axis)<br>
+- L32 (integrity counterbalance)</p>
+<hr>
+<h2 id="3-operator-compatibility">3. Operator Compatibility</h2>
+<h3 id="compatible">✔ Compatible</h3>
+<ul>
+<li><strong>push</strong> → gradient, field  </li>
+<li><strong>pull</strong> → gradient, integrity  </li>
+<li><strong>bind</strong> → field, integrity  </li>
+<li><strong>gradient</strong> → gradient, field, rupture  </li>
+<li><strong>fieldShift</strong> → field, integrity  </li>
+<li><strong>ruptureForce</strong> → rupture  </li>
+</ul>
+<h3 id="incompatible">✖ Incompatible</h3>
+<ul>
+<li><strong>push</strong> → integrity  </li>
+<li><strong>pull</strong> → rupture  </li>
+<li><strong>bind</strong> → rupture  </li>
+<li><strong>fieldShift</strong> → rupture  </li>
+<li><strong>ruptureForce</strong> → field, integrity  </li>
+</ul>
+<p>These rules preserve <strong>force‑regime coherence</strong>.</p>
+<hr>
+<h2 id="4-sequencing-rules">4. Sequencing Rules</h2>
+<h3 id="valid-sequences">Valid sequences</h3>
+<ul>
+<li>push → gradient → field  </li>
+<li>bind → field → integrity  </li>
+<li>gradient → rupture → ruptureForce  </li>
+<li>integrity → rupture → ruptureForce  </li>
+</ul>
+<h3 id="forbidden-sequences">Forbidden sequences</h3>
+<ul>
+<li>ruptureForce → fieldShift  </li>
+<li>bind → ruptureForce  </li>
+<li>pull → ruptureForce  </li>
+</ul>
+<p>These rules match the <strong>operator_sequencing_rules.json</strong> file.</p>
+<hr>
+<h2 id="5-dimensional-amplification">5. Dimensional Amplification</h2>
+<p>Operators are amplified by the dimensional subsystem:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Amplifying Dimensions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>push</td>
+<td>L4, L5, L16</td>
+</tr>
+<tr>
+<td>pull</td>
+<td>L4, L5, L32, LI</td>
+</tr>
+<tr>
+<td>bind</td>
+<td>L8, L10, L32, LI</td>
+</tr>
+<tr>
+<td>gradient</td>
+<td>L4, L5, L16, LH</td>
+</tr>
+<tr>
+<td>fieldShift</td>
+<td>L8, L10, L26</td>
+</tr>
+<tr>
+<td>ruptureForce</td>
+<td>L12, L32</td>
+</tr>
+</tbody>
+</table>
+<p>Dimensions must be applied <strong>before</strong> operator execution.</p>
+<hr>
+<h2 id="6-cosmology-alignment">6. Cosmology Alignment</h2>
+<p>Operators inherit from the lineage:</p>
+<p><strong>qmroot → frequency → fluids → forces</strong></p>
+<p>and operate exclusively within:</p>
+<p><strong>L3 Forces Unseen</strong></p>
+<p>They define the <strong>functional mechanics</strong> of unseen force‑regime transitions.</p>
+<hr>
+<h2 id="7-session-context">7. Session Context</h2>
+<pre><code>Canon: R5
+Modules: L3_Forces_Unseen / spine / operators
+Drift: none (freeze-aligned)
+Coherence: force-state coherence
+Version: 1.0.0
+Format: operators.md
+Front door: docs/MCP/L3_Forces_Unseen/spine/
+Every page: inherits qmroot → frequency → fluids → forces
+Audience: MCP implementers, RTT researchers, cosmology engineers
+</code></pre>
+<hr>
+<h2 id="8-badge">8. Badge</h2>
+<p><strong>⚡ S3 Spine — Operators</strong></p>
+<hr>
+<h2 id="summary">✔ Summary</h2>
+<p>This regenerated <code>operators.md</code> provides the <strong>complete operator reference</strong> for the S3 Spine:</p>
+<ul>
+<li>definitions  </li>
+<li>semantics  </li>
+<li>dimensional amplifiers  </li>
+<li>compatibility  </li>
+<li>sequencing  </li>
+<li>cosmology alignment  </li>
+</ul>
+<p>It is now <strong>fully canonical</strong>, <strong>drift‑free</strong>, and <strong>ready for commit</strong>.</p>
+  </main>
+</body>
+</html>

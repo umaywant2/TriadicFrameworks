@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Crystal_Mycelial_Engine/teaching/agents/agent_lab.md">
+  <title>CME Agent Lab — Multi‑Regime Substrate Agents</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Crystal_Mycelial_Engine/teaching/agents/agent_lab.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Crystal_Mycelial_Engine/teaching/agents/agent_lab.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="cme-agent-lab-multiregime-substrate-agents"><strong>CME Agent Lab — Multi‑Regime Substrate Agents</strong></h1>
+<h3 id="rtt-cmh-msrm-crystalmycelial-engine-teaching-module"><em>RTT / CMH / MSRM — Crystal–Mycelial Engine Teaching Module</em></h3>
+<hr>
+<h2 id="1-lab-overview"><strong>1. Lab Overview</strong></h2>
+<p>This lab teaches students how to implement <strong>CME‑aware agents</strong> that operate across:</p>
+<ul>
+<li>Biological Growth Regime (BGR)  </li>
+<li>Hybrid Resonance Regime (HRR)  </li>
+<li>Mineral Lock‑In Regime (MLR)</li>
+</ul>
+<p>Agents use RTT operator families (<strong>P, E, G, M, S, HybridOps</strong>) to simulate substrate transitions:</p>
+<p><strong>Biological → Hybrid → Mineral</strong></p>
+<hr>
+<h2 id="2-exercise-1-biological-trace-agent"><strong>2. Exercise 1 — Biological Trace Agent</strong></h2>
+<h3 id="goal-capture-biological-geometry-and-routing"><em>Goal:</em> Capture biological geometry and routing.</h3>
+<p><strong>Requirements</strong>
+- call <code>P.trace_extend</code><br>
+- call <code>G.nutrient_gradient</code><br>
+- store results in <code>bio_map</code>  </p>
+<p><strong>Starter Scaffold</strong></p>
+<pre><code class="language-python">class BiologicalTraceAgent:
+    def run(self):
+        # TODO: trace geometry
+        # TODO: compute gradients
+        # TODO: return bio_map
+        pass
+</code></pre>
+<hr>
+<h2 id="3-exercise-2-hybrid-alignment-agent"><strong>3. Exercise 2 — Hybrid Alignment Agent</strong></h2>
+<h3 id="goal-align-biological-geometry-with-hybrid-resonance-fields"><em>Goal:</em> Align biological geometry with hybrid resonance fields.</h3>
+<p><strong>Requirements</strong>
+- accept <code>bio_map</code><br>
+- call <code>S.channel_fill</code><br>
+- call <code>HybridOps.resonance_bridge</code><br>
+- produce <code>hybrid_layer</code>  </p>
+<p><strong>Starter Scaffold</strong></p>
+<pre><code class="language-python">class HybridAlignmentAgent:
+    def align(self, bio_map):
+        # TODO: fill channels
+        # TODO: bridge resonance
+        # TODO: return hybrid_layer
+        pass
+</code></pre>
+<hr>
+<h2 id="4-exercise-3-mineral-domain-agent"><strong>4. Exercise 3 — Mineral Domain Agent</strong></h2>
+<h3 id="goal-generate-mineral-lattice-domains-from-hybrid-layer"><em>Goal:</em> Generate mineral lattice domains from hybrid layer.</h3>
+<p><strong>Requirements</strong>
+- call <code>P.front_propagate</code><br>
+- call <code>M.domain_memory</code><br>
+- produce <code>mineral_map</code>  </p>
+<p><strong>Starter Scaffold</strong></p>
+<pre><code class="language-python">class MineralDomainAgent:
+    def crystallize(self, hybrid_layer):
+        # TODO: propagate lattice
+        # TODO: encode domain memory
+        # TODO: return mineral_map
+        pass
+</code></pre>
+<hr>
+<h2 id="5-exercise-4-envelope-advisor-agent"><strong>5. Exercise 4 — Envelope Advisor Agent</strong></h2>
+<h3 id="goal-recommend-envelope-values-for-each-regime"><em>Goal:</em> Recommend envelope values for each regime.</h3>
+<p><strong>Requirements</strong>
+- BGR moisture: 0.55–0.65<br>
+- HRR ion saturation: 0.65–0.75<br>
+- MLR supersaturation: ≥ 0.85  </p>
+<p><strong>Starter Scaffold</strong></p>
+<pre><code class="language-python">class EnvelopeAdvisorAgent:
+    def advise(self):
+        # TODO: propose BGR envelopes
+        # TODO: propose HRR envelopes
+        # TODO: propose MLR envelopes
+        # TODO: return envelope plan
+        pass
+</code></pre>
+<hr>
+<h2 id="6-exercise-5-memory-transfer-agent"><strong>6. Exercise 5 — Memory Transfer Agent</strong></h2>
+<h3 id="goal-move-memory-through-substrate-layers"><em>Goal:</em> Move memory through substrate layers.</h3>
+<p><strong>Requirements</strong>
+- call <code>M.route_memory</code> (bio)<br>
+- call <code>HybridOps.memory_transfer</code> (hybrid)<br>
+- call <code>M.domain_memory</code> (mineral)  </p>
+<p><strong>Starter Scaffold</strong></p>
+<pre><code class="language-python">class MemoryTransferAgent:
+    def transfer(self, bio_map, hybrid_layer):
+        # TODO: route memory
+        # TODO: transfer memory
+        # TODO: encode domain memory
+        pass
+</code></pre>
+<hr>
+<h2 id="7-exercise-6-full-cme-simulation-agent"><strong>7. Exercise 6 — Full CME Simulation Agent</strong></h2>
+<h3 id="goal-integrate-all-substrate-transitions"><em>Goal:</em> Integrate all substrate transitions.</h3>
+<p><strong>Pipeline</strong>
+1. BiologicalTraceAgent<br>
+2. HybridAlignmentAgent<br>
+3. MineralDomainAgent<br>
+4. EnvelopeAdvisorAgent<br>
+5. MemoryTransferAgent  </p>
+<p><strong>Starter Scaffold</strong></p>
+<pre><code class="language-python">class CMESimulationAgent:
+    def run(self):
+        # TODO: run biological stage
+        # TODO: run hybrid stage
+        # TODO: run mineral stage
+        # TODO: compute envelopes
+        # TODO: transfer memory
+        # TODO: return final CME state
+        pass
+</code></pre>
+<hr>
+<h2 id="8-exercise-7-teaching-agent"><strong>8. Exercise 7 — Teaching Agent</strong></h2>
+<h3 id="goal-produce-studentfacing-explanations"><em>Goal:</em> Produce student‑facing explanations.</h3>
+<p><strong>Requirements</strong>
+- run CME simulation<br>
+- generate 3–5 conceptual questions<br>
+- print both simulation output + questions  </p>
+<p><strong>Starter Scaffold</strong></p>
+<pre><code class="language-python">class TeachingAgent:
+    def lesson(self):
+        # TODO: run CME simulation
+        # TODO: generate questions
+        # TODO: print lesson output
+        pass
+</code></pre>
+<hr>
+<h2 id="9-capstone-multiagent-cme-pipeline"><strong>9. Capstone — Multi‑Agent CME Pipeline</strong></h2>
+<h3 id="goal-combine-all-agents-into-a-single-workflow"><em>Goal:</em> Combine all agents into a single workflow.</h3>
+<p><strong>Pipeline</strong>
+- observe biological geometry<br>
+- align hybrid resonance<br>
+- crystallize mineral lattice<br>
+- compute envelopes<br>
+- transfer memory<br>
+- generate teaching output  </p>
+<p><strong>Starter Scaffold</strong></p>
+<pre><code class="language-python">def cme_pipeline():
+    # TODO: instantiate agents
+    # TODO: run each stage
+    # TODO: print final results
+    pass
+</code></pre>
+  </main>
+</body>
+</html>

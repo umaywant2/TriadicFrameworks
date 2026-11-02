@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/module_collatz_state.json",
+  "title": "RTT Collatz StateEmitter",
+  "description": "Triadic state output for a Collatz trajectory starting from integer n.",
+  "type": "object",
+
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "module_id": { "type": "string" },
+        "start": { "type": "integer", "minimum": 1 },
+        "length": { "type": "integer", "minimum": 1 }
+      },
+      "required": ["module_id", "start", "length"]
+    },
+
+    "trajectory": {
+      "type": "array",
+      "description": "Sequence of integers produced by the Collatz function.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer", "minimum": 0 },
+          "value": { "type": "integer", "minimum": 1 },
+          "parity": { "type": "string", "enum": ["even", "odd"] },
+          "step_type": {
+            "type": "string",
+            "enum": ["divide_by_2", "multiply_3_add_1", "terminal"]
+          }
+        },
+        "required": ["index", "value", "parity", "step_type"]
+      }
+    },
+
+    "lumen": {
+      "type": "array",
+      "description": "Structural extraction per step.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "signals": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["index", "signals"]
+      }
+    },
+
+    "regime": {
+      "type": "array",
+      "description": "Hephaestus regime classification per step.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "regime": {
+            "type": "string",
+            "enum": ["local", "structural", "continuity"]
+          }
+        },
+        "required": ["index", "regime"]
+      }
+    },
+
+    "ancestry": {
+      "type": "array",
+      "description": "Aurion ancestry signals across the trajectory.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "collapse_signature": { "type": "boolean" },
+          "projection_loss": { "type": "boolean" }
+        },
+        "required": ["index", "collapse_signature", "projection_loss"]
+      }
+    },
+
+    "drift": {
+      "type": "object",
+      "description": "Continuity drift across the entire trajectory.",
+      "properties": {
+        "direction": { "type": "string" },
+        "strength": {
+          "type": "string",
+          "enum": ["none", "weak", "medium", "strong"]
+        }
+      },
+      "required": ["direction", "strength"]
+    },
+
+    "triadic_identity": {
+      "type": "object",
+      "description": "Harmonia synthesis for the entire trajectory.",
+      "properties": {
+        "local": { "type": "number", "minimum": 0, "maximum": 1 },
+        "structural": { "type": "number", "minimum": 0, "maximum": 1 },
+        "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "final": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["local", "structural", "continuity", "final"]
+    }
+  },
+
+  "required": [
+    "metadata",
+    "trajectory",
+    "lumen",
+    "regime",
+    "ancestry",
+    "drift",
+    "triadic_identity"
+  ]
+}

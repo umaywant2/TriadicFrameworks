@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Networking Schema",
+  "description": "Defines networking topology, channels, protocols, routing, and resonance-network coupling for the Resonance Substrate Model (RSM). Supports distributed agents, substrate communication, and multi-layer coherence.",
+
+  "type": "object",
+
+  "properties": {
+    "topology": {
+      "type": "string",
+      "enum": ["mesh", "star", "ring", "tree", "hybrid", "fully_connected", "custom"],
+      "description": "Network topology describing how nodes are interconnected."
+    },
+
+    "nodes": {
+      "type": "array",
+      "description": "List of network nodes participating in communication.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "role": { "type": "string" },
+          "address": { "type": "string" },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "type": ["string", "number", "boolean"]
+            }
+          }
+        },
+        "required": ["id"]
+      }
+    },
+
+    "channels": {
+      "type": "array",
+      "description": "Communication channels between nodes.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": { "type": "string" },
+          "target": { "type": "string" },
+          "bandwidth": {
+            "type": "number",
+            "description": "Channel bandwidth in arbitrary units."
+          },
+          "latency": {
+            "type": "number",
+            "description": "Channel latency in milliseconds."
+          },
+          "protocol": {
+            "type": "string",
+            "description": "Protocol used on this channel."
+          }
+        },
+        "required": ["source", "target"]
+      }
+    },
+
+    "protocols": {
+      "type": "array",
+      "description": "Supported communication protocols.",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "routing": {
+      "type": "object",
+      "description": "Routing strategy and parameters.",
+      "properties": {
+        "strategy": {
+          "type": "string",
+          "enum": ["shortest_path", "flood", "gossip", "hierarchical", "custom"]
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["string", "number", "boolean"]
+          }
+        }
+      }
+    },
+
+    "resonance_coupling": {
+      "type": "object",
+      "description": "Defines how network behavior interacts with resonance fields.",
+      "properties": {
+        "coherence_transfer": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Degree to which coherence propagates through the network."
+        },
+        "phase_diffusion": {
+          "type": "number",
+          "description": "Rate at which phase information diffuses across nodes."
+        },
+        "amplification_factor": {
+          "type": "number",
+          "description": "Amplification applied to resonance signals transmitted over the network."
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for documentation, provenance, or schema evolution.",
+      "version": "1.0.0",
+      "notes": "Initial seed release",
+      "properties": {
+        "version": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": ["topology", "nodes"]
+}

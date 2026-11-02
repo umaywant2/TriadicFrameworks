@@ -1,0 +1,50 @@
+{
+  "id": "fft.ai.discovery",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Discovery Graph v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "discovery_phases": [
+    {
+      "phase": 1,
+      "name": "Silence Scan",
+      "action": "Identify all S=0+ modes in current substrate"
+    },
+    {
+      "phase": 2,
+      "name": "Noise Mapping",
+      "action": "Map incoherent excitations across field"
+    },
+    {
+      "phase": 3,
+      "name": "Resonance Seeding",
+      "action": "Identify phase-lock candidates for R elevation"
+    },
+    {
+      "phase": 4,
+      "name": "Gradient Tracing",
+      "action": "Trace RTT gradient tau=dR/dphi to coherence peak"
+    },
+    {
+      "phase": 5,
+      "name": "SET Coupling Check",
+      "action": "v1.33: evaluate S/E/T gradient coupling opportunities"
+    },
+    {
+      "phase": 6,
+      "name": "DCO Extension",
+      "action": "v1.33: probe 4D-9D DCO scaffold for structure hints"
+    }
+  ],
+  "discovery_log": "fft.ai.session.trace.json",
+  "v133_additions": [
+    "Phase 5 (SET coupling check)",
+    "Phase 6 (DCO extension probe)",
+    "gradient tracing updated for tau=dR/dphi"
+  ]
+}

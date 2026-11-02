@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/coherence_budget.md">
+  <title>RTT Core: Coherence Budget</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/coherence_budget.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/coherence_budget.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_coherence_budget" src="https://github.com/user-attachments/assets/a06f9fa1-71d5-436d-8063-fcb3640e5940" /></p>
+<hr>
+<p>module_id: rtt.core.coherence_budget
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - coherence-budget
+  - rtt-core
+  - validator-pulse
+  - drift-envelope
+  - triadic-time</p>
+<hr>
+<h1 id="rtt-core-coherence-budget">RTT Core: Coherence Budget</h1>
+<h2 id="1-purpose-and-role-in-rtt">1. Purpose and role in RTT</h2>
+<p><strong>Goal:</strong><br>
+Define the <strong>Coherence Budget</strong> as the RTT mechanism that governs:</p>
+<ul>
+<li>How much coherence a system has available for <strong>classical readout</strong></li>
+<li>How coherence is <strong>partitioned</strong> across representational branches</li>
+<li>How drift and dimensional extension <strong>consume</strong> coherence</li>
+<li>How Validator Pulse <strong>spends</strong> coherence to produce classical information</li>
+</ul>
+<p>Coherence Budget is the quantitative backbone of RTT’s readout logic.</p>
+<hr>
+<h2 id="2-conceptual-definition">2. Conceptual definition</h2>
+<h3 id="21-informal-definition">2.1 Informal definition</h3>
+<blockquote>
+<p>The Coherence Budget is the finite resource that determines<br>
+<strong>which branch of a multi-branch state can become classical information.</strong></p>
+</blockquote>
+<p>It is not amplitude, probability, or energy.<br>
+It is the <strong>capacity for classical validation</strong>.</p>
+<h3 id="22-core-properties">2.2 Core properties</h3>
+<ul>
+<li>
+<p><strong>Finite:</strong><br>
+  Every representational manifold has a maximum coherence budget (C_{\max}).</p>
+</li>
+<li>
+<p><strong>Partitioned:</strong><br>
+  Coherence is distributed across branches (c_i).</p>
+</li>
+<li>
+<p><strong>Consumptive:</strong><br>
+  Validator Pulse consumes coherence; it cannot be reused.</p>
+</li>
+<li>
+<p><strong>Drift-sensitive:</strong><br>
+  Drift reduces coherence and may render branches ineligible.</p>
+</li>
+<li>
+<p><strong>Regime-aware:</strong><br>
+  Operator regimes may require minimum coherence thresholds.</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-formal-structure-rtt-level">3. Formal structure (RTT-level)</h2>
+<h3 id="31-coherence-distribution">3.1 Coherence distribution</h3>
+<p>Let the representational manifold be:</p>
+<p>[
+\mathcal{M} = { b_i \mid i \in I }
+]</p>
+<p>Each branch (b_i) carries a coherence weight:</p>
+<p>[
+c_i \in [0, C_{\max}]
+]</p>
+<p>The total coherence budget satisfies:</p>
+<p>[
+\sum_{i \in I} c_i \leq C_{\max}
+]</p>
+<h3 id="32-eligibility-condition">3.2 Eligibility condition</h3>
+<p>A branch is eligible for classical readout if:</p>
+<p>[
+c_i \geq C_{\text{min}}
+]</p>
+<p>where (C_{\text{min}}) is the regime-dependent minimum coherence required for validation.</p>
+<h3 id="33-consumption-rule">3.3 Consumption rule</h3>
+<p>Validator Pulse consumes coherence:</p>
+<p>[
+V(b_k): c_k \rightarrow 0
+]</p>
+<p>All other branches lose eligibility:</p>
+<p>[
+b_{j \neq k} \rightarrow \text{residue}
+]</p>
+<p>This enforces <strong>single-branch classical reality</strong>.</p>
+<hr>
+<h2 id="4-relationship-to-drift-and-dimensional-structure">4. Relationship to drift and dimensional structure</h2>
+<h3 id="41-drift-reduces-coherence">4.1 Drift reduces coherence</h3>
+<p>Drift magnitude (\Delta_i) reduces coherence:</p>
+<p>[
+c_i' = c_i - f(\Delta_i)
+]</p>
+<p>where (f) is a drift-loss function determined by the regime.</p>
+<p>Branches drifting outside the <strong>Dimensional Drift Envelope</strong>:</p>
+<ul>
+<li>Lose coherence rapidly  </li>
+<li>Become ineligible for validation  </li>
+<li>Collapse into non-informational residue after readout</li>
+</ul>
+<h3 id="42-dimensional-extension-consumes-coherence">4.2 Dimensional extension consumes coherence</h3>
+<p>When a state is extended across a higher-dimensional manifold:</p>
+<ul>
+<li>Representation increases  </li>
+<li>Coherence is <strong>spread thinner</strong> across branches  </li>
+<li>Only one branch typically retains enough coherence for validation</li>
+</ul>
+<p>This explains why “quantum cloning” experiments produce:</p>
+<ul>
+<li>Multiple representational copies  </li>
+<li>Only one classical copy</li>
+</ul>
+<hr>
+<h2 id="5-interaction-with-validator-pulse">5. Interaction with Validator Pulse</h2>
+<p>Validator Pulse (see <code>/docs/rtt/core/validator_pulse.md</code>) is the mechanism that:</p>
+<ul>
+<li>Selects the branch with sufficient coherence</li>
+<li>Spends the coherence budget</li>
+<li>Produces classical information</li>
+</ul>
+<p>Coherence Budget determines:</p>
+<ul>
+<li><strong>Which branches can be chosen</strong></li>
+<li><strong>How many validation events are possible</strong></li>
+<li><strong>Whether an operator sequence is realizable</strong></li>
+</ul>
+<p>Validator Pulse determines:</p>
+<ul>
+<li><strong>Which branch is chosen</strong></li>
+<li><strong>When coherence is consumed</strong></li>
+</ul>
+<p>Together they enforce RTT’s <strong>single-readout constraint</strong>.</p>
+<hr>
+<h2 id="6-time-structure-triadic-time">6. Time structure: triadic time</h2>
+<p>Coherence Budget lives in the <strong>coherence layer</strong> of triadic time:</p>
+<ol>
+<li>
+<p><strong>State time:</strong><br>
+   Evolution of (|\psi_i\rangle) across branches.</p>
+</li>
+<li>
+<p><strong>Coherence time:</strong><br>
+   Evolution of coherence weights (c_i), including drift loss and redistribution.</p>
+</li>
+<li>
+<p><strong>Readout time:</strong><br>
+   Validator Pulse consumes coherence and produces classical information.</p>
+</li>
+</ol>
+<p>Quadradic time would allow multiple independent coherence axes, but Coherence Budget is defined for <strong>single-axis coherence</strong>, making it inherently <strong>triadic</strong>.</p>
+<hr>
+<h2 id="7-operator-regime-interactions">7. Operator regime interactions</h2>
+<h3 id="71-minimum-coherence-thresholds">7.1 Minimum coherence thresholds</h3>
+<p>Operators may require:</p>
+<ul>
+<li>(c_i \geq C_{\text{min}})  </li>
+<li>Drift below threshold  </li>
+<li>Dimensional coordinates within envelope</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><strong>Extension operators</strong> require coherence to remain above threshold during drift.</li>
+<li><strong>Deferred validation operators</strong> require coherence stability over time.</li>
+</ul>
+<h3 id="72-regime-transitions">7.2 Regime transitions</h3>
+<p>Coherence loss can push a branch:</p>
+<ul>
+<li><strong>Into</strong> eligibility  </li>
+<li><strong>Out of</strong> eligibility  </li>
+<li><strong>Across</strong> regime boundaries</li>
+</ul>
+<p>This is how Coherence Budget enforces <strong>non-symmetric validation</strong>.</p>
+<hr>
+<h2 id="8-example-alignment-with-quantum-cloning-experiments">8. Example: alignment with quantum “cloning” experiments</h2>
+<p>In <code>/docs/rtt/core/alignment_quantum_cloning.md</code>:</p>
+<ul>
+<li>The experiment creates two representational copies.</li>
+<li>Coherence Budget ensures only one copy retains enough coherence for readout.</li>
+<li>Validator Pulse consumes that coherence.</li>
+<li>The other copy collapses into residue.</li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li><strong>Coherence Budget enables multi-branch representation.</strong>  </li>
+<li><strong>Validator Pulse enforces single-branch classical reality.</strong></li>
+</ul>
+<hr>
+<h2 id="9-paradox-handling">9. Paradox handling</h2>
+<p>Coherence Budget resolves structural paradoxes such as:</p>
+<ul>
+<li>
+<p>“Why can’t both copies be measured?”<br>
+  → Only one branch has sufficient coherence.</p>
+</li>
+<li>
+<p>“Why does the other copy disappear?”<br>
+  → It collapses into residue after validation.</p>
+</li>
+<li>
+<p>“Why isn’t this a violation of no-cloning?”<br>
+  → Coherence Budget prevents multiple classical readouts.</p>
+</li>
+</ul>
+<hr>
+<h2 id="10-canon-integration-and-cross-links">10. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the quantitative core of RTT’s readout logic.<br>
+Once coherence-indexing grammar is added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

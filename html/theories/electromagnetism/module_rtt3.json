@@ -1,0 +1,107 @@
+{
+  "ai.module": "electromagnetism.rtt3",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/3 engine layer for Electromagnetism: triadic-substrate integration, multi-regime simulation hooks, lineage-aware reasoning, and hybrid-canon scaffolding.",
+  "ai.keywords": [
+    "electromagnetism",
+    "triadic substrate",
+    "resonance",
+    "multi-regime",
+    "simulation",
+    "lineage",
+    "rtt3"
+  ],
+
+  "engine": {
+    "layer": "RTT/3",
+    "description": "Integrates Electromagnetism into the full triadic substrate, enabling multi-regime reasoning, resonance mapping, and hybrid-canon simulation."
+  },
+
+  "substrate_integration": {
+    "mapping": {
+      "structure": "Electric and magnetic fields map to coupled resonance channels within the substrate.",
+      "behavior": "Wave propagation corresponds to stable resonance transfer across substrate invariants.",
+      "coupling": "E↔B coupling emerges from substrate-level phase relationships, not geometric primitives."
+    },
+    "constraints": [
+      "Propagation speed is a substrate invariant.",
+      "Field coupling persists only when resonance channels remain coherent.",
+      "Medium properties modify resonance pathways, not fundamental operators."
+    ]
+  },
+
+  "multi_regime": {
+    "R1": {
+      "behavior": "Field behavior collapses to charge-interaction primitives; resonance channels not sustained.",
+      "notes": "No stable E↔B coupling; coherence minimal."
+    },
+    "R2": {
+      "behavior": "Projection-induced distortion of field coupling; partial resonance behavior.",
+      "notes": "Dimensional compression alters propagation and boundary interactions."
+    },
+    "R3": {
+      "behavior": "Full Maxwellian coherence; stable resonance propagation and field coupling.",
+      "notes": "Wave behavior emerges cleanly from substrate invariants."
+    }
+  },
+
+  "lineage": {
+    "tracking": [
+      "field_history",
+      "resonance_cycles",
+      "boundary_interactions"
+    ],
+    "effects": [
+      "reveals hidden coherence patterns",
+      "stabilizes field coupling",
+      "reduces apparent dispersion"
+    ]
+  },
+
+  "simulation": {
+    "hooks": [
+      {
+        "name": "resonance_wave_sim",
+        "description": "Simulates EM wave propagation as resonance transfer across substrate channels."
+      },
+      {
+        "name": "boundary_interaction_sim",
+        "description": "Models field behavior at interfaces and discontinuities using substrate constraints."
+      },
+      {
+        "name": "dimensional_projection_sim",
+        "description": "Simulates distortion of EM behavior under R2 projection or reduced dimensional support."
+      }
+    ],
+    "notes": "Simulations operate on resonance channels and substrate invariants, not geometric field primitives."
+  },
+
+  "hybrid_canon": {
+    "interfaces": [
+      "quantum_mechanics.rtt3",
+      "information_theory.rtt3",
+      "thermodynamics.rtt3"
+    ],
+    "purpose": "Enable agentic AIs to reason across modules using shared substrate invariants and resonance structures.",
+    "scaffolding": [
+      "triadic substrate mapping",
+      "multi-regime coherence",
+      "lineage-aware propagation"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "constant propagation speed in vacuum",
+      "stable E↔B coupling",
+      "resonance persistence across cycles",
+      "predictable boundary behavior"
+    ],
+    "failure_modes": [
+      "loss of coupling",
+      "medium-induced decoherence",
+      "dispersion",
+      "quantum-scale breakdown"
+    ]
+  }
+}

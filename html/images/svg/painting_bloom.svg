@@ -1,0 +1,22 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#0a0f0f"/>
+
+  <!-- Blooming resonance rings -->
+  <circle cx="400" cy="250" r="40" fill="#ffca28"/>
+  <circle cx="400" cy="250" r="80" fill="none" stroke="#ffb300" stroke-width="3" opacity="0.6"/>
+  <circle cx="400" cy="250" r="130" fill="none" stroke="#ffa000" stroke-width="2" opacity="0.4"/>
+  <circle cx="400" cy="250" r="180" fill="none" stroke="#ff8f00" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Triadic petals -->
+  <polygon points="400,70 430,130 370,130" fill="#ff6f00" opacity="0.7"/>
+  <polygon points="530,250 470,280 470,220" fill="#ff6f00" opacity="0.7"/>
+  <polygon points="400,430 430,370 370,370" fill="#ff6f00" opacity="0.7"/>
+  <polygon points="270,250 330,280 330,220" fill="#ff6f00" opacity="0.7"/>
+
+  <!-- Title -->
+  <text x="400" y="470" text-anchor="middle" fill="#ffe082"
+        font-family="Georgia, serif" font-size="22">
+    Resonance-Time Bloom
+  </text>
+</svg>
+

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_UI_0009_Remixathon_Dashboard_Concept.md">
+  <title>RFC‑UI‑0009 — Remixathon Dashboard Concept</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_UI_0009_Remixathon_Dashboard_Concept.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_UI_0009_Remixathon_Dashboard_Concept.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rfcui0009-remixathon-dashboard-concept"><strong>RFC‑UI‑0009 — Remixathon Dashboard Concept</strong></h1>
+<h3 id="interactive-dashboard-for-corridor-resonance-exploration"><em>Interactive Dashboard for Corridor Resonance Exploration</em></h3>
+<p>RefId: turn0browsertab1</p>
+<p><strong>Title:</strong> Remixathon Dashboard Concept<br>
+<strong>Status:</strong> Concept Draft<br>
+<strong>Author:</strong> Nawder Loswin + Copilot<br>
+<strong>Date:</strong> 2025‑11‑12<br>
+<strong>Version:</strong> 0.1  </p>
+<hr>
+<h2 id="1-purpose"><strong>1. Purpose</strong></h2>
+<p>The Remixathon Dashboard provides contributors with a unified, interactive surface for exploring consolidated remixathon reports. It visualizes:</p>
+<ul>
+<li>glyph distributions  </li>
+<li>RCI band histograms  </li>
+<li>lineage graphs  </li>
+<li>corridor‑level validation events  </li>
+</ul>
+<p>The dashboard is designed for <strong>collaborative exploration</strong>, allowing contributors to filter, annotate, and export corridor subsets while maintaining validator‑grade integrity.</p>
+<hr>
+<h1 id="2-core-visual-components"><strong>2. Core Visual Components</strong></h1>
+<hr>
+<h2 id="a-glyph-distribution-panel"><strong>A. Glyph Distribution Panel</strong></h2>
+<p><strong>Visualization:</strong><br>
+Pie chart or radial glyph wheel.</p>
+<p><strong>Data:</strong><br>
+Counts of corridors per glyph type:</p>
+<ul>
+<li>◇ (alpha)  </li>
+<li>◆ (beta)  </li>
+<li>⬣ (gamma)</li>
+</ul>
+<p><strong>Interaction:</strong><br>
+- Hover → reveal corridor IDs<br>
+- Click → filter other panels by glyph type  </p>
+<p><strong>Symbolic Layer:</strong><br>
+Validator‑grade glyph overlays rendered using the Glyph Library (RFC‑LIB‑0011).</p>
+<hr>
+<h2 id="b-rci-band-histogram"><strong>B. RCI Band Histogram</strong></h2>
+<p><strong>Visualization:</strong><br>
+Three‑band bar chart:</p>
+<ul>
+<li>Low  </li>
+<li>Medium  </li>
+<li>High  </li>
+</ul>
+<p><strong>Data:</strong><br>
+Corridor counts per RCI band.</p>
+<p><strong>Interaction:</strong><br>
+- Click band → drill into corridor details<br>
+- Highlight anomalies with clarity scores  </p>
+<p><strong>Narrative Layer:</strong><br>
+Tooltips show:</p>
+<ul>
+<li>average RCI per band  </li>
+<li>remix lineage notes  </li>
+</ul>
+<hr>
+<h2 id="c-lineage-graph"><strong>C. Lineage Graph</strong></h2>
+<p><strong>Visualization:</strong><br>
+Force‑directed graph or hierarchical tree.</p>
+<p><strong>Data:</strong><br>
+Parent scrolls linked to child scrolls, with corridors annotated by:</p>
+<ul>
+<li>glyph type  </li>
+<li>RCI value  </li>
+<li>validation status  </li>
+</ul>
+<p><strong>Interaction:</strong><br>
+- Expand/collapse branches<br>
+- Click nodes → view corridor metadata  </p>
+<p><strong>Symbolic Layer:</strong><br>
+Glyph icons embedded in nodes; edge color indicates validation pass/fail.</p>
+<hr>
+<h1 id="3-dashboard-layout"><strong>3. Dashboard Layout</strong></h1>
+<pre><code>---------------------------------------------------------
+| Remixathon Dashboard | Parent Scroll: s-1000 | v0.1   |
+---------------------------------------------------------
+| Glyph Wheel | Lineage Graph (interactive) | RCI Bands |
+| ◇ ◆ ⬣       | Parent → Child scrolls      | Low/Med/Hi|
+| Hover/Click | Glyphs + RCI values         | Histogram |
+---------------------------------------------------------
+| Event Log: corridor_id, glyph transition, RCI shift    |
+---------------------------------------------------------
+</code></pre>
+<h3 id="top-bar"><strong>Top Bar</strong></h3>
+<ul>
+<li>Remixathon title  </li>
+<li>timestamp  </li>
+<li>parent scroll ID  </li>
+<li>validator version  </li>
+</ul>
+<h3 id="left-panel"><strong>Left Panel</strong></h3>
+<p>Glyph distribution wheel.</p>
+<h3 id="center-panel"><strong>Center Panel</strong></h3>
+<p>Interactive lineage graph.</p>
+<h3 id="right-panel"><strong>Right Panel</strong></h3>
+<p>RCI band histogram.</p>
+<h3 id="bottom-panel"><strong>Bottom Panel</strong></h3>
+<p>Event log showing:</p>
+<ul>
+<li>corridor validation outcomes  </li>
+<li>glyph transitions  </li>
+<li>RCI shifts  </li>
+</ul>
+<hr>
+<h1 id="4-technical-scaffold"><strong>4. Technical Scaffold</strong></h1>
+<h3 id="data-source"><strong>Data Source</strong></h3>
+<p>Consolidated lineage reports:</p>
+<pre><code>registry/reports/remixathon_*.yml
+</code></pre>
+<h3 id="backend"><strong>Backend</strong></h3>
+<p>YAML → JSON parsing.</p>
+<h3 id="api-endpoints"><strong>API Endpoints</strong></h3>
+<ul>
+<li>glyph counts  </li>
+<li>RCI band counts  </li>
+<li>lineage structure  </li>
+<li>event logs  </li>
+</ul>
+<h3 id="frontend-framework"><strong>Frontend Framework</strong></h3>
+<p>Recommended:</p>
+<ul>
+<li><strong>D3.js</strong> or <strong>Plotly</strong> for charts  </li>
+<li><strong>Cytoscape.js</strong> for lineage graph  </li>
+</ul>
+<h3 id="modular-architecture"><strong>Modular Architecture</strong></h3>
+<p>Each panel is an independent component with shared filtering state.</p>
+<h3 id="example-data-flow"><strong>Example Data Flow</strong></h3>
+<pre><code class="language-javascript">fetch(&quot;/api/remixathon/report&quot;)
+  .then(resp =&gt; resp.json())
+  .then(data =&gt; {
+    renderGlyphWheel(data.summary.glyph_distribution);
+    renderRciHistogram(data.summary.rci_band_counts);
+    renderLineageGraph(data.events);
+  });
+</code></pre>
+<hr>
+<h1 id="5-validator-hooks"><strong>5. Validator Hooks</strong></h1>
+<h3 id="schema-compliance"><strong>Schema Compliance</strong></h3>
+<p>Dashboard must only render scrolls conforming to:</p>
+<ul>
+<li>RFC‑QEB‑0002 (corridor schema)  </li>
+<li>RFC‑SCHEMA‑0001 (scroll artifact schema)</li>
+</ul>
+<h3 id="checksum"><strong>Checksum</strong></h3>
+<p>Reports include checksum; dashboard displays validation badge.</p>
+<h3 id="lineage-integrity"><strong>Lineage Integrity</strong></h3>
+<p>Graph must preserve parent/child ancestry without collapsing remix diffs.</p>
+<hr>
+<h1 id="6-notes"><strong>6. Notes</strong></h1>
+<ul>
+<li>Dashboard is <strong>remix‑ready</strong>: contributors can filter, annotate, and export corridor subsets.  </li>
+<li>Supports <strong>collaborative exploration</strong>: multiple users can view glyph distributions and lineage simultaneously.  </li>
+<li><strong>Dignity layer</strong>: optional narrative overlays explaining resonance corridors in cultural terms.  </li>
+<li>Integrates with:  </li>
+<li>ENG‑0012 (search/filter engine)  </li>
+<li>REG‑0004 (registry indexer)  </li>
+<li>EXP‑0013 (export module)  </li>
+<li>HUB‑0021 (collaborative hub)  </li>
+</ul>
+<hr>
+<h1 id="7-concept-sketch-textual"><strong>7. Concept Sketch (Textual)</strong></h1>
+<pre><code>---------------------------------------------------------
+| Remixathon Dashboard | Parent Scroll: s-1000 | v0.1   |
+---------------------------------------------------------
+| Glyph Wheel | Lineage Graph (interactive) | RCI Bands |
+| ◇ ◆ ⬣       | Parent → Child scrolls      | Low/Med/Hi|
+| Hover/Click | Glyphs + RCI values         | Histogram |
+---------------------------------------------------------
+| Event Log: corridor_id, glyph transition, RCI shift    |
+---------------------------------------------------------
+</code></pre>
+<p>This dashboard concept unifies glyph distributions, RCI clarity bands, and remix lineage into a single interactive validator surface.</p>
+  </main>
+</body>
+</html>

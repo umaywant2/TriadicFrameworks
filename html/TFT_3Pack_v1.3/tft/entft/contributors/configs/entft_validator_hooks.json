@@ -1,0 +1,32 @@
+{
+  "hooks": {
+    "pre_commit": [
+      "validate_block_map",
+      "verify_resonant_hash",
+      "check_entropy_threshold"
+    ],
+    "post_commit": [
+      "assign_badges",
+      "update_legacy_roll",
+      "trigger_scroll_echo"
+    ],
+    "on_pull_request": [
+      "run_benchmark",
+      "scan_scroll_format",
+      "flag_missing_echo"
+    ],
+    "on_scroll_publish": [
+      "sync_badge_panel",
+      "refresh_validator_dashboard",
+      "log_scroll_to_manifesto"
+    ]
+  },
+  "thresholds": {
+    "entropy_min": 1e50,
+    "modulation_required": [3, 6, 9]
+  },
+  "echo": {
+    "style": "[Scroll] <file>: <action>\\nEcho: <impact>",
+    "required": true
+  }
+}

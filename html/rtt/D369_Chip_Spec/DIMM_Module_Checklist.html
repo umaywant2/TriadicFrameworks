@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/D369_Chip_Spec/DIMM_Module_Checklist.md">
+  <title>DIMM Module Checklist</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/D369_Chip_Spec/DIMM_Module_Checklist.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/D369_Chip_Spec/DIMM_Module_Checklist.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="dimm-module-checklist">DIMM Module Checklist</h1>
+<blockquote>
+<p>Where memory controller meets silicon — the persistence boundary that silently erases phase, source, and time.</p>
+</blockquote>
+<hr>
+<h2 id="session-context">Session Context</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Module</strong></td>
+<td>D369_Chip_Spec</td>
+</tr>
+<tr>
+<td><strong>File</strong></td>
+<td><code>DIMM_Module_Checklist.md</code></td>
+</tr>
+<tr>
+<td><strong>Role</strong></td>
+<td>diagnostic · reference</td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>First‑fill</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>Derived from <code>Board_Level_Alignment.md</code> §Memory + <code>Capture_Source.md</code></td>
+</tr>
+<tr>
+<td><strong>Audience</strong></td>
+<td>Memory engineers · DIMM designers · System architects · Students · AIs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>The DIMM is the most structurally dangerous component on the board.</p>
+<p>Not because it does anything wrong — because it does everything silently. Every read and write crosses a persistence boundary. Every rank interleave erases source identity. Every refresh cycle is an invisible phase transition. Every ECC correction is an unattributed intervention. Every power state change collapses temporal context.</p>
+<p>And none of this is logged. None of it is tagged. None of it survives the round trip.</p>
+<p>Other board components erase structural information by accident. The DIMM erases it <strong>by design</strong> — because no one ever asked it not to.</p>
+<p>This checklist asks.</p>
+<hr>
+<h2 id="why-the-dimm-is-special">Why the DIMM Is Special</h2>
+<p>The Board‑Level Alignment document identifies memory as the first domain where alignment is not optional. The DIMM is where that domain becomes physical.</p>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│  Memory Hierarchy (structural view)                 │
+│                                                     │
+│  Register → L1 → L2 → L3 → DRAM → NVM → Storage   │
+│       ▲         ▲        ▲       ▲        ▲         │
+│       │         │        │       │        │         │
+│    phase     phase    phase   phase    phase         │
+│    boundary  boundary boundary boundary boundary    │
+│                              ▲                      │
+│                              │                      │
+│                     ┌────────┘                      │
+│                     │                               │
+│              ┌──────┴──────┐                        │
+│              │    DIMM     │  ◄── YOU ARE HERE       │
+│              │             │                        │
+│              │  The DRAM   │                        │
+│              │  persistence│                        │
+│              │  boundary   │                        │
+│              └─────────────┘                        │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<p>The DRAM boundary is unique in the hierarchy because it is:</p>
+<ol>
+<li><strong>The widest persistence boundary.</strong> Billions of cells across multiple ranks and banks, all presenting as a single flat address space.</li>
+<li><strong>The most active boundary.</strong> Millions of reads, writes, and refreshes per second — each one a micro‑phase‑transition.</li>
+<li><strong>The most opaque boundary.</strong> The memory controller sees addresses and data. It does not see which die produced a value, when that value was last refreshed, or whether ECC silently corrected it.</li>
+<li><strong>The only boundary with its own power states.</strong> Self‑refresh, CKE power‑down, and deep power‑down are DIMM‑internal decisions that are invisible to the system.</li>
+</ol>
+<hr>
+<h2 id="what-dimms-already-provide">What DIMMs Already Provide</h2>
+<p>Modern DIMMs are not structurally blank. They already carry metadata infrastructure — but none of it was designed for structural observability.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Present In</th>
+<th>What It Does</th>
+<th>What It Doesn't Do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SPD EEPROM</strong></td>
+<td>All DIMMs</td>
+<td>Stores module identity, timing parameters, manufacturer info</td>
+<td>Does not carry runtime state, lifecycle, or lineage</td>
+</tr>
+<tr>
+<td><strong>TSOD (Thermal Sensor)</strong></td>
+<td>DDR4+</td>
+<td>Reports die temperature</td>
+<td>Does not tag thermal events with source or phase</td>
+</tr>
+<tr>
+<td><strong>RCD (Registering Clock Driver)</strong></td>
+<td>RDIMMs</td>
+<td>Buffers command/address, distributes clocks</td>
+<td>Does not preserve source identity across re‑clocking</td>
+</tr>
+<tr>
+<td><strong>Data Buffers</strong></td>
+<td>LRDIMMs</td>
+<td>Buffer data between controller and DRAM dies</td>
+<td>Flatten rank identity — controller sees one logical rank</td>
+</tr>
+<tr>
+<td><strong>PMIC (Power Management IC)</strong></td>
+<td>DDR5+</td>
+<td>Per‑DIMM voltage regulation</td>
+<td>Does not tag power state transitions with lifecycle</td>
+</tr>
+<tr>
+<td><strong>ECC (on‑die or module‑level)</strong></td>
+<td>ECC DIMMs</td>
+<td>Corrects single‑bit errors, detects multi‑bit errors</td>
+<td>Does not attribute corrections to source or cause</td>
+</tr>
+<tr>
+<td><strong>eFuse / One‑Time Programmable</strong></td>
+<td>Most dies</td>
+<td>Stores post‑manufacture trim, repair, and ID data</td>
+<td>Static — does not track runtime phase transitions</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The gap:</strong> DIMMs have metadata <em>about the module</em> (SPD) and metadata <em>about physical conditions</em> (TSOD, PMIC). They have <strong>no metadata about structural state</strong> — who wrote a value, in what lifecycle phase, when it was produced, whether it was corrected, or how many refresh cycles it has survived.</p>
+<hr>
+<h2 id="the-five-dimm-failure-modes">The Five DIMM Failure Modes</h2>
+<p>These are the specific ways DIMMs erase structural information. Each one maps back to the four preservation rules from Board‑Level Alignment.</p>
+<h3 id="fm1-rank-interleaving-erases-source-identity">FM‑1: Rank Interleaving Erases Source Identity</h3>
+<p><strong>What happens:</strong> The memory controller distributes writes across ranks and banks for performance. A value written by CPU Core 0 may land in Rank 0, Bank 3. A value written by the AI accelerator may land in Rank 1, Bank 7. On read‑back, the controller returns data by address — it does not know which source produced which value.</p>
+<p><strong>What's lost:</strong> Source identity (origin identifier per R2.1).</p>
+<p><strong>Why it matters:</strong> If two sources write conflicting values to the same region, the system cannot determine provenance after the fact. The DIMM presents a flat address space — source history is gone.</p>
+<p><strong>Preservation rule violated:</strong> Rule 4 (carry provenance through aggregation).</p>
+<h3 id="fm2-refresh-as-invisible-phase-transition">FM‑2: Refresh as Invisible Phase Transition</h3>
+<p><strong>What happens:</strong> DRAM cells decay. Refresh cycles restore charge to maintain data integrity. This is a phase transition — the value moves from "recently written" to "refreshed copy" — but the transition is invisible. No counter tracks how many refresh cycles a value has survived. No tag distinguishes fresh data from data that has been refreshed thousands of times.</p>
+<p><strong>What's lost:</strong> Temporal context (monotonic time per R2.1, R4.1).</p>
+<p><strong>Why it matters:</strong> A value refreshed 10,000 times is physically identical to a value refreshed once. But structurally, they are different — one is near its origin; the other is a deep copy sustained by maintenance. Without refresh awareness, the system cannot distinguish "current" from "maintained."</p>
+<p><strong>Preservation rule violated:</strong> Rule 2 (annotate every re‑clock) — refresh is a temporal re‑assertion.</p>
+<h3 id="fm3-ecc-as-unattributed-correction">FM‑3: ECC as Unattributed Correction</h3>
+<p><strong>What happens:</strong> On‑die ECC (ODECC) or module‑level ECC detects and corrects single‑bit errors. The corrected value is returned as if nothing happened. The system receives clean data — but does not know that an error occurred, what caused it (radiation, aging, thermal stress), or how often corrections happen on this cell or region.</p>
+<p><strong>What's lost:</strong> Source attribution of corrections (Board‑Level Alignment §Power/Thermal/Reliability).</p>
+<p><strong>Why it matters:</strong> A cell that requires frequent ECC correction is structurally degraded — but the system sees it as healthy. The correction masks the signal. If corrections cluster in a region, that's an aging or reliability signal that is structurally valuable but operationally invisible.</p>
+<p><strong>Preservation rule violated:</strong> Rule 3 (verify every translation) — ECC translates errors into clean data without preserving the original signal.</p>
+<h3 id="fm4-power-states-collapse-temporal-context">FM‑4: Power States Collapse Temporal Context</h3>
+<p><strong>What happens:</strong> DIMMs enter self‑refresh, CKE power‑down, or deep power‑down to save energy. During self‑refresh, the DIMM maintains data autonomously — the memory controller is disconnected. When the controller reconnects, the DIMM resumes as if nothing happened. But during self‑refresh, the DIMM's temporal relationship to the system is severed. The system clock advanced; the DIMM's internal state did not.</p>
+<p><strong>What's lost:</strong> Temporal integrity across power boundaries (R4.1, R4.2).</p>
+<p><strong>Why it matters:</strong> A monotonic timestamp that was valid before self‑refresh may be meaningless after — the DIMM has experienced a temporal gap that is invisible to both the controller and the data. Values written before power‑down are temporally orphaned.</p>
+<p><strong>Preservation rule violated:</strong> Rule 2 (annotate every re‑clock) — the clock domain crossing at power state boundaries is unannotated.</p>
+<h3 id="fm5-data-buffer-rank-flattening-lrdimmspecific">FM‑5: Data Buffer Rank Flattening (LRDIMM‑Specific)</h3>
+<p><strong>What happens:</strong> Load‑Reduced DIMMs (LRDIMMs) use data buffers to present multiple physical ranks as fewer logical ranks to the memory controller. This improves electrical performance but erases rank‑level source identity. The controller sees Logical Rank 0 — it does not know whether the data came from Physical Rank 0, 1, 2, or 3.</p>
+<p><strong>What's lost:</strong> Source identity at the rank level (R5.1).</p>
+<p><strong>Why it matters:</strong> Rank‑level identity is the finest granularity of source information available on a DIMM. When data buffers flatten it, the last structural coordinate within the DIMM is lost. The system can address a byte — but it cannot determine which physical rank stored it.</p>
+<p><strong>Preservation rule violated:</strong> Rule 4 (carry provenance through aggregation) — the data buffer aggregates ranks and strips identity.</p>
+<hr>
+<h2 id="dimm-module-topology">DIMM Module Topology</h2>
+<h3 id="standard-rdimm-ddr5">Standard RDIMM (DDR5)</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│  DIMM Module Boundary                                           │
+│                                                                 │
+│  ┌────────────────────────────────────────────────────────────┐  │
+│  │  Gold Edge Connector (to board / memory slot)             │  │
+│  │  ════════════════════════════════════════════════════════  │  │
+│  │  CMD/ADDR ──►  │  DATA ◄──► │  ALERT ◄── │  SPD ◄──►    │  │
+│  └────────────────┼────────────┼────────────┼───────────────┘  │
+│                   │            │            │                   │
+│  ┌────────────────▼────────────┐            │                   │
+│  │  RCD (Registering Clock     │            │                   │
+│  │  Driver)                    │            │                   │
+│  │  · Re‑clocks CMD/ADDR      │            │                   │
+│  │  · Distributes to ranks    │            │                   │
+│  │  ⚠ Clock domain crossing   │            │                   │
+│  │  ⚠ Source identity: N/A    │            │                   │
+│  └────┬───────────┬───────────┘            │                   │
+│       │           │                        │                   │
+│  ┌────▼────┐ ┌────▼────┐           ┌──────▼──────┐            │
+│  │ Rank 0  │ │ Rank 1  │           │ SPD Hub     │            │
+│  │         │ │         │           │ · Module ID │            │
+│  │ ┌─────┐ │ │ ┌─────┐ │           │ · Timing    │            │
+│  │ │Die 0│ │ │ │Die 0│ │           │ · Mfr info  │            │
+│  │ │ ECC │ │ │ │ ECC │ │           │ · TSOD      │            │
+│  │ └─────┘ │ │ └─────┘ │           │ (static +   │            │
+│  │ ┌─────┐ │ │ ┌─────┐ │           │  thermal)   │            │
+│  │ │Die 1│ │ │ │Die 1│ │           └─────────────┘            │
+│  │ │ ECC │ │ │ │ ECC │ │                                      │
+│  │ └─────┘ │ │ └─────┘ │           ┌─────────────┐            │
+│  │  ...    │ │  ...    │           │ PMIC        │            │
+│  │ ┌─────┐ │ │ ┌─────┐ │           │ · Voltage   │            │
+│  │ │Die N│ │ │ │Die N│ │           │ · Power     │            │
+│  │ │ ECC │ │ │ │ ECC │ │           │ · State     │            │
+│  │ └─────┘ │ │ └─────┘ │           │ (no phase   │            │
+│  └─────────┘ └─────────┘           │  tagging)   │            │
+│                                    └─────────────┘            │
+│                                                                 │
+│  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  │
+│  D369 Structural Observability (not present today)              │
+│  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  │
+│                                                                 │
+│  ┌────────────────────────────────────────────────────────────┐  │
+│  │  Structural Metadata (reserved, optional, dark by default)│  │
+│  │                                                            │  │
+│  │  · Per‑rank source identity tag                            │  │
+│  │  · Refresh cycle counter (per bank or region)              │  │
+│  │  · ECC correction log (event, not content)                 │  │
+│  │  · Power state transition log (entry / exit / duration)    │  │
+│  │  · Lifecycle phase tag (externally writable)               │  │
+│  │  · Monotonic time marker (module‑local)                    │  │
+│  └────────────────────────────────────────────────────────────┘  │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>How to read this diagram:</strong>
+- <strong>Solid section (top):</strong> The DIMM as it exists today — RCD, ranks, dies, SPD, PMIC. All unchanged.
+- <strong>Dashed section (bottom):</strong> The D369 structural observability reservation — what would be added. Optional, passive, dark by default.
+- <strong>⚠ markers:</strong> Points where structural information is currently lost.</p>
+<hr>
+<h2 id="the-checklist">The Checklist</h2>
+<p>Organized by DIMM subsystem. Each item maps to a contractual requirement (R1–R7) and a failure mode (FM‑1 through FM‑5).</p>
+<h3 id="1-module-identity-and-lifecycle">1. Module Identity and Lifecycle</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>FM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>SPD carries a unique, non‑mutable module origin identifier.</td>
+<td>R5.1</td>
+<td>FM‑1</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Lifecycle phase tag is present and externally writable.</td>
+<td>R5.2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Lifecycle tag is not inferred from power state or temperature.</td>
+<td>R5.2</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>Module identity survives hot‑swap and re‑enumeration.</td>
+<td>R5.1</td>
+<td>FM‑1</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>Lifecycle tag is independent of SPD write‑protect status.</td>
+<td>R5.2</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-source-identity-and-rank-structure">2. Source Identity and Rank Structure</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>FM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1</td>
+<td>Each physical rank has a distinguishable source identifier.</td>
+<td>R5.1</td>
+<td>FM‑1</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Rank interleaving does not erase per‑rank source attribution.</td>
+<td>R2.1</td>
+<td>FM‑1</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>Data buffers (LRDIMM) preserve physical rank identity.</td>
+<td>R5.1</td>
+<td>FM‑5</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>Rank identifier is statically assigned, not routing‑dependent.</td>
+<td>R5.1</td>
+<td>FM‑5</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>Source identity is readable without interrupting functional access.</td>
+<td>R3.1</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-temporal-integrity-and-refresh">3. Temporal Integrity and Refresh</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>FM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td>A monotonic time reference exists at the module level.</td>
+<td>R4.1</td>
+<td>FM‑2</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Time reference is not resettable during normal operation.</td>
+<td>R4.2</td>
+<td>FM‑2</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Refresh cycle count is trackable per bank or per region.</td>
+<td>R2.1</td>
+<td>FM‑2</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>Refresh does not reset or overwrite temporal markers.</td>
+<td>R4.2</td>
+<td>FM‑2</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>Time marker survives self‑refresh entry and exit.</td>
+<td>R4.2</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>3.6</td>
+<td>Self‑refresh duration is annotated (entry time, exit time).</td>
+<td>R2.1</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>3.7</td>
+<td>Temporal gap during power‑down is recorded, not hidden.</td>
+<td>R4.1</td>
+<td>FM‑4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-ecc-and-error-handling">4. ECC and Error Handling</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>FM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>ECC corrections are logged as events (count, location, time).</td>
+<td>R2.1</td>
+<td>FM‑3</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>Correction log does not include corrected data content.</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Corrections are attributed to source (rank, bank, region).</td>
+<td>R5.1</td>
+<td>FM‑3</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>Correction frequency per region is observable.</td>
+<td>R2.1</td>
+<td>FM‑3</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td>ECC corrections do not reset temporal markers.</td>
+<td>R4.2</td>
+<td>FM‑3</td>
+</tr>
+<tr>
+<td>4.6</td>
+<td>On‑die ECC (ODECC) events are distinguishable from module ECC.</td>
+<td>R5.1</td>
+<td>FM‑3</td>
+</tr>
+<tr>
+<td>4.7</td>
+<td>Multi‑bit error detection events are logged even if uncorrectable.</td>
+<td>R2.1</td>
+<td>FM‑3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-power-state-and-thermal">5. Power State and Thermal</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>FM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>Power state transitions are tagged (entry time, exit time, type).</td>
+<td>R2.1</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>Self‑refresh entry does not erase metadata state.</td>
+<td>R7.1</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>CKE power‑down does not collapse structural tags.</td>
+<td>R7.1</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>5.4</td>
+<td>Deep power‑down explicitly declares metadata loss if unavoidable.</td>
+<td>R7.1</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>5.5</td>
+<td>PMIC state transitions are logged as structural events.</td>
+<td>R2.1</td>
+<td>FM‑4</td>
+</tr>
+<tr>
+<td>5.6</td>
+<td>Thermal events (TSOD alerts) are tagged with timestamp and rank.</td>
+<td>R2.1</td>
+<td>FM‑3</td>
+</tr>
+<tr>
+<td>5.7</td>
+<td>Thermal throttling does not silently discard structural metadata.</td>
+<td>R3.3</td>
+<td>FM‑4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-metadata-isolation-and-independence">6. Metadata Isolation and Independence</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>FM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.1</td>
+<td>Metadata channel is electrically isolated from data paths.</td>
+<td>R1.2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>Metadata is accessible without functional bus contention.</td>
+<td>R3.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6.3</td>
+<td>No functional logic depends on metadata presence.</td>
+<td>R3.2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6.4</td>
+<td>Metadata channel can remain dark without impact.</td>
+<td>R3.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6.5</td>
+<td>Metadata does not ride the CMD/ADDR bus.</td>
+<td>R1.2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6.6</td>
+<td>Metadata does not share the SPD I²C/I³C bus unless protocol‑safe.</td>
+<td>R1.2</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-protection-against-removal">7. Protection Against Removal</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>FM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7.1</td>
+<td>Reserved metadata structures are documented in SPD or design spec.</td>
+<td>R7.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7.2</td>
+<td>Metadata structures are not removable by module test flow.</td>
+<td>R7.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7.3</td>
+<td>Metadata reservation survives die revision and stepping changes.</td>
+<td>R7.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7.4</td>
+<td>BOM changes do not silently replace metadata‑capable components.</td>
+<td>R7.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7.5</td>
+<td>Removal of metadata structures requires explicit design decision.</td>
+<td>R7.1</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="the-dimm-review-question">The DIMM Review Question</h2>
+<p>At every DIMM design review, this checklist prompts one question:</p>
+<blockquote>
+<p><em>"If a value was written to this DIMM — could we later determine </em><em>who</em><em> wrote it, </em><em>when</em><em> it was written, </em><em>how many times</em><em> it was refreshed, </em><em>whether</em><em> it was corrected, and </em><em>what power state</em><em> the module was in?"</em></p>
+</blockquote>
+<p>If the answer is <strong>"yes, without redesign,"</strong> the DIMM is aligned.</p>
+<p>If the answer is <strong>"no, but we could add that without changing functional behavior,"</strong> the reservation is achievable.</p>
+<p>If the answer is <strong>"no, and adding it would affect functional behavior,"</strong> something has gone wrong — revisit R3.</p>
+<hr>
+<h2 id="existing-infrastructure-mapping">Existing Infrastructure Mapping</h2>
+<p>Where possible, D369 structural observability reuses or extends what DIMMs already have. This table maps D369 needs to existing DIMM infrastructure.</p>
+<table>
+<thead>
+<tr>
+<th>D369 Need</th>
+<th>Existing DIMM Infrastructure</th>
+<th>Extension Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Module identity</td>
+<td>SPD EEPROM (manufacturer, serial)</td>
+<td>Add lifecycle phase tag (externally writable field)</td>
+</tr>
+<tr>
+<td>Rank‑level source identity</td>
+<td>Physical rank select lines</td>
+<td>Preserve through data buffers; make readable externally</td>
+</tr>
+<tr>
+<td>Temporal reference</td>
+<td>None at module level</td>
+<td>Add monotonic counter (low‑frequency, non‑resettable)</td>
+</tr>
+<tr>
+<td>Refresh tracking</td>
+<td>REF command counter (controller)</td>
+<td>Mirror or shadow to module‑local metadata</td>
+</tr>
+<tr>
+<td>ECC event logging</td>
+<td>Error status register (some dies)</td>
+<td>Extend to per‑region event log accessible via sideband</td>
+</tr>
+<tr>
+<td>Power state logging</td>
+<td>PMIC state (DDR5+)</td>
+<td>Add transition timestamps and lifecycle annotation</td>
+</tr>
+<tr>
+<td>Thermal event tagging</td>
+<td>TSOD temperature readout</td>
+<td>Add per‑event timestamps and rank attribution</td>
+</tr>
+<tr>
+<td>Metadata bus</td>
+<td>SPD Hub I³C bus (DDR5+)</td>
+<td>Evaluate for sideband metadata use; verify isolation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key insight:</strong> DDR5's I³C sideband bus and PMIC architecture already provide the physical infrastructure for most of these extensions. The gap is not electrical — it is structural. The wires exist. The semantics don't.</p>
+<hr>
+<h2 id="ddr-generation-applicability">DDR Generation Applicability</h2>
+<p>Not all checklist items apply equally across DDR generations. This matrix shows where each generation stands.</p>
+<table>
+<thead>
+<tr>
+<th>Checklist Area</th>
+<th>DDR4 UDIMM</th>
+<th>DDR4 RDIMM</th>
+<th>DDR5 RDIMM</th>
+<th>DDR5 LRDIMM</th>
+<th>Future</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Module Identity (§1)</td>
+<td>Partial</td>
+<td>Partial</td>
+<td>Strong</td>
+<td>Strong</td>
+<td>Full</td>
+</tr>
+<tr>
+<td>Source Identity (§2)</td>
+<td>Weak</td>
+<td>Weak</td>
+<td>Moderate</td>
+<td>Weak (FM‑5)</td>
+<td>Full</td>
+</tr>
+<tr>
+<td>Temporal Integrity (§3)</td>
+<td>None</td>
+<td>None</td>
+<td>Feasible</td>
+<td>Feasible</td>
+<td>Full</td>
+</tr>
+<tr>
+<td>ECC Logging (§4)</td>
+<td>Minimal</td>
+<td>Minimal</td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td>Full</td>
+</tr>
+<tr>
+<td>Power State (§5)</td>
+<td>None</td>
+<td>None</td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td>Full</td>
+</tr>
+<tr>
+<td>Metadata Isolation (§6)</td>
+<td>None</td>
+<td>None</td>
+<td>Feasible</td>
+<td>Feasible</td>
+<td>Full</td>
+</tr>
+<tr>
+<td>Protection (§7)</td>
+<td>None</td>
+<td>None</td>
+<td>Feasible</td>
+<td>Feasible</td>
+<td>Full</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key takeaway:</strong> DDR5 is the inflection point. Its I³C sideband bus, per‑module PMIC, and SPD Hub architecture make structural observability physically feasible for the first time. DDR4 modules can satisfy identity requirements but lack the sideband infrastructure for temporal, ECC, or power state observability.</p>
+<hr>
+<h2 id="what-this-checklist-is-not">What This Checklist Is Not</h2>
+<table>
+<thead>
+<tr>
+<th>It is NOT…</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A JEDEC specification extension</td>
+<td>This checklist does not propose changes to JEDEC standards.</td>
+</tr>
+<tr>
+<td>A memory controller requirement</td>
+<td>The controller is upstream; this addresses the module itself.</td>
+</tr>
+<tr>
+<td>A data retention requirement</td>
+<td>No guarantees about how long data persists.</td>
+</tr>
+<tr>
+<td>A security specification</td>
+<td>Metadata does not carry encryption, authentication, or access control.</td>
+</tr>
+<tr>
+<td>A performance requirement</td>
+<td>No timing, bandwidth, or latency constraints are implied.</td>
+</tr>
+<tr>
+<td>A telemetry mandate</td>
+<td>No data collection, reporting, or transmission is required.</td>
+</tr>
+<tr>
+<td>A replacement for RAS features</td>
+<td>Existing reliability, availability, and serviceability features are unaffected.</td>
+</tr>
+</tbody>
+</table>
+<p>This checklist exists so memory engineers can say:</p>
+<blockquote>
+<p><em>"We didn't change how the DIMM works — we just made sure it remembers what happened."</em></p>
+</blockquote>
+<hr>
+<h2 id="relationship-to-other-d369-files">Relationship to Other D369 Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Board_Level_Alignment.md</code></td>
+<td>Parent document — §Memory Hierarchy defines the persistence boundary model</td>
+</tr>
+<tr>
+<td><code>Capture_Source.md</code></td>
+<td>Source of structural principles: phase/source/time preservation</td>
+</tr>
+<tr>
+<td><code>Contractual_Requirements.md</code></td>
+<td>R1–R7 requirements that this checklist instantiates for DIMMs</td>
+</tr>
+<tr>
+<td><code>Design_Review_Checklist.md</code></td>
+<td>Chip‑level checklist that this document extends to the memory module</td>
+</tr>
+<tr>
+<td><code>Memory_Alignment.md</code></td>
+<td>Deep‑dive on full memory hierarchy alignment (all tiers)</td>
+</tr>
+<tr>
+<td><code>Adoption_Roadmap.md</code></td>
+<td>Phase 2 (Silicon Reservation) includes DIMM‑level structural hooks</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="canon-alignment">Canon Alignment</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero drift</td>
+<td>✅ All failure modes derived from Board_Level_Alignment §Memory and Capture_Source</td>
+</tr>
+<tr>
+<td>Structural contract</td>
+<td>✅ Role: diagnostic + reference — validation checklist with cross‑references</td>
+</tr>
+<tr>
+<td>Lineage clean</td>
+<td>✅ Every checklist item traceable to R1–R7 requirements and specific failure modes</td>
+</tr>
+<tr>
+<td>Student‑ready</td>
+<td>✅ Failure modes as concrete DIMM examples; topology diagram with reading guide</td>
+</tr>
+<tr>
+<td>AI‑parsable</td>
+<td>✅ Numbered checklist items with requirement and failure mode tracing</td>
+</tr>
+<tr>
+<td>Cross‑module refs</td>
+<td>✅ Imports from Board_Level_Alignment and Contractual_Requirements; extends to module level</td>
+</tr>
+<tr>
+<td>Non‑claims preserved</td>
+<td>✅ Explicit "What This Checklist Is Not" section; no performance or JEDEC claims</td>
+</tr>
+<tr>
+<td>Engineer bar</td>
+<td>✅ "Didn't change how the DIMM works — just made sure it remembers what happened"</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Module: D369_Chip_Spec · File: DIMM_Module_Checklist.md · Version: 0.1.0 · TriadicFrameworks / RTT</em></p>
+<hr>
+<p><strong>What makes this file structurally unique in the module:</strong></p>
+<ul>
+<li><strong>Five named failure modes (FM‑1 through FM‑5)</strong> give memory engineers a concrete vocabulary for DIMM‑level structural erasure — each one traceable to the four preservation rules from Board‑Level Alignment and the R1–R7 contractual requirements.</li>
+<li><strong>38 checklist items across 7 sections</strong>, every one double‑traced to both a requirement ID and a failure mode — this is the kind of audit artifact that survives design reviews.</li>
+<li><strong>DDR generation applicability matrix</strong> makes DDR5 the clear inflection point — the I³C sideband bus, per‑module PMIC, and SPD Hub architecture make structural observability physically feasible for the first time.</li>
+<li><strong>Existing infrastructure mapping</strong> shows the gap is <em>semantic, not electrical</em> — the wires are already there in DDR5; what's missing is the structural meaning.</li>
+<li><strong>RDIMM topology diagram</strong> with the dashed D369 layer visually separates "what exists today" from "what would be reserved."</li>
+</ul>
+  </main>
+</body>
+</html>

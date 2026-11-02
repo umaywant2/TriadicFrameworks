@@ -1,0 +1,43 @@
+<svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="50%" stop-color="#1b1f4b"/>
+      <stop offset="100%" stop-color="#5b2b86"/>
+    </linearGradient>
+    <radialGradient id="resGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b39dff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#b39dff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="220" height="220" fill="url(#bgGrad)"/>
+
+  <!-- multi-scale resonance rings -->
+  <circle cx="110" cy="110" r="28" fill="none" stroke="url(#resGrad)" stroke-width="2"/>
+  <circle cx="110" cy="110" r="52" fill="none" stroke="url(#resGrad)" stroke-width="2"/>
+  <circle cx="110" cy="110" r="78" fill="none" stroke="url(#resGrad)" stroke-width="2"/>
+
+  <!-- φ–V–R triad glyph -->
+  <g stroke="#d6c9ff" stroke-width="1.4" fill="none">
+    <path d="M110 60 L88 104 L132 104 Z"/>          <!-- φ: form triangle -->
+    <circle cx="110" cy="118" r="10"/>             <!-- V: energy node -->
+    <path d="M90 140 Q110 160 130 140"/>           <!-- R: resonance arc -->
+  </g>
+
+  <!-- 3C invariant arcs -->
+  <g stroke="#7f6cff" stroke-width="1" fill="none" opacity="0.7">
+    <path d="M40 150 Q110 190 180 150"/>           <!-- continuity -->
+    <path d="M50 135 Q110 175 170 135"/>           <!-- consistency -->
+    <path d="M60 120 Q110 160 160 120"/>           <!-- coherence -->
+  </g>
+
+  <!-- time-crystal accent -->
+  <g transform="translate(24,40)">
+    <rect x="0" y="0" width="6" height="140" rx="3"
+          fill="#5b2b86" opacity="0.9"/>
+    <rect x="0" y="40" width="6" height="40" rx="3"
+          fill="#d6c9ff" opacity="0.95"/>
+  </g>
+</svg>

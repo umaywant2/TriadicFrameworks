@@ -1,0 +1,54 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.awareness",
+  "title": "FFT AI Session — Awareness v1.33",
+  "awareness_channels": {
+    "field_awareness": "continuous monitoring of phi, V, R",
+    "rtt_phase_awareness": "tracks tau=dR/dphi evolution per step",
+    "coherence_awareness": {
+      "status_watch": true,
+      "alert_on": "coherence_lost",
+      "new_v1_33": true
+    },
+    "drift_awareness": {
+      "delta_watch": true,
+      "alert_on": "delta > 0.30",
+      "new_v1_33": true
+    },
+    "paradox_awareness": {
+      "event_watch": true,
+      "alert_on": "paradox_detected",
+      "new_v1_33": true
+    },
+    "snr_awareness": {
+      "partition_watch": true,
+      "alert_on": "overlap_detected",
+      "new_v1_33": true
+    },
+    "set_awareness": {
+      "coupling_watch": true,
+      "alert_on": "premature_coupling",
+      "new_v1_33": true
+    },
+    "spine_awareness": {
+      "live_url_check": true,
+      "alert_on": "cached_reference_used",
+      "new_v1_33": true
+    }
+  },
+  "v133_additions": [
+    "coherence_awareness",
+    "drift_awareness",
+    "paradox_awareness",
+    "snr_awareness",
+    "set_awareness",
+    "spine_awareness"
+  ]
+}

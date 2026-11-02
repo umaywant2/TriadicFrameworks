@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/quantum_field_theory/operators.md">
+  <title>Operators — Quantum Field Theory</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/quantum_field_theory/operators.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/quantum_field_theory/operators.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="operators-quantum-field-theory">Operators — Quantum Field Theory</h1>
+<h3 id="triadicframeworks-docstheoriesquantum_field_theoryoperatorsmd">TriadicFrameworks /docs/theories/quantum_field_theory/operators.md</h3>
+<p>Quantum Field Theory (QFT) defines the <strong>substrate‑level operator<br>
+grammar</strong> from which all excitation‑based theories emerge. These<br>
+operators act on fields, amplitudes, and resonance structures, not on<br>
+particles or objects.</p>
+<p>This file defines the canonical QFT operator set used across<br>
+TriadicFrameworks.</p>
+<hr>
+<h1 id="1-field_operator">1. field_operator</h1>
+<p><strong>Type:</strong> mode_operator<br>
+<strong>Purpose:</strong> Defines the underlying field whose excitations form stable modes.<br>
+<strong>Signal:</strong> φ(x), ψ(x), Aμ(x)  </p>
+<p><strong>Notes:</strong><br>
+- Fields are not physical media.<br>
+- They are mathematical structures encoding excitation possibilities.</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat fields as substances filling space.</p>
+<hr>
+<h1 id="2-creation_operator">2. creation_operator</h1>
+<p><strong>Type:</strong> mode_operator<br>
+<strong>Purpose:</strong> Creates a stable excitation mode of a field.<br>
+<strong>Signal:</strong> a†(k), b†(k), c†(k)  </p>
+<p><strong>Notes:</strong><br>
+- Creates a resonance mode, not a particle.<br>
+- Always tied to field structure + symmetry.</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT describe this as “creating a particle.”</p>
+<hr>
+<h1 id="3-annihilation_operator">3. annihilation_operator</h1>
+<p><strong>Type:</strong> mode_operator<br>
+<strong>Purpose:</strong> Removes an excitation mode from a field.<br>
+<strong>Signal:</strong> a(k), b(k), c(k)  </p>
+<p><strong>Notes:</strong><br>
+- Removes a resonance, not an object.<br>
+- Paired with creation operators via commutation relations.</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT describe this as “destroying a particle.”</p>
+<hr>
+<h1 id="4-propagator_operator">4. propagator_operator</h1>
+<p><strong>Type:</strong> interaction_operator<br>
+<strong>Purpose:</strong> Describes how excitations propagate through spacetime.<br>
+<strong>Signal:</strong> Δ(x − y), S_F(x − y), D_F(x − y)  </p>
+<p><strong>Notes:</strong><br>
+- Encodes correlation structure.<br>
+- Not a physical path or trajectory.</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat propagation as motion of a particle.</p>
+<hr>
+<h1 id="5-interaction_vertex_operator">5. interaction_vertex_operator</h1>
+<p><strong>Type:</strong> interaction_operator<br>
+<strong>Purpose:</strong> Defines allowed interaction channels based on symmetry.<br>
+<strong>Signal:</strong> g φ³, g ψ̄γμψAμ, λ φ⁴  </p>
+<p><strong>Notes:</strong><br>
+- Encodes symmetry‑allowed couplings.<br>
+- Not a literal collision.</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat vertices as physical events.</p>
+<hr>
+<h1 id="6-symmetry_generator_operator">6. symmetry_generator_operator</h1>
+<p><strong>Type:</strong> structure_operator<br>
+<strong>Purpose:</strong> Generates transformations under symmetry groups.<br>
+<strong>Signal:</strong> Tᵃ, Q, Pμ, Mμν  </p>
+<p><strong>Notes:</strong><br>
+- Governs conservation laws.<br>
+- Defines charge, spin, momentum, etc.</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat symmetry as metaphysical or optional.</p>
+<hr>
+<h1 id="7-lagrangian_density_operator">7. lagrangian_density_operator</h1>
+<p><strong>Type:</strong> structure_operator<br>
+<strong>Purpose:</strong> Encodes the full dynamical structure of a field theory.<br>
+<strong>Signal:</strong> ℒ(φ, ∂φ), ℒ(ψ, Aμ), ℒ_SM  </p>
+<p><strong>Notes:</strong><br>
+- Defines equations of motion.<br>
+- Defines interaction structure.<br>
+- Defines renormalization behavior.</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat ℒ as a physical substance.</p>
+<hr>
+<h1 id="8-renormalization_operator">8. renormalization_operator</h1>
+<p><strong>Type:</strong> variation_operator<br>
+<strong>Purpose:</strong> Describes how couplings evolve with energy.<br>
+<strong>Signal:</strong> β(g), β(λ), β(y)  </p>
+<p><strong>Notes:</strong><br>
+- Governs running couplings.<br>
+- Controls high‑energy resonance behavior.</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat running as forces changing strength.</p>
+<hr>
+<h1 id="9-vacuum_operator">9. vacuum_operator</h1>
+<p><strong>Type:</strong> stability_operator<br>
+<strong>Purpose:</strong> Defines the vacuum structure of the field.<br>
+<strong>Signal:</strong> |0⟩, ⟨0|φ|0⟩, V(φ)  </p>
+<p><strong>Notes:</strong><br>
+- Vacuum is a stability surface, not empty space.<br>
+- Determines excitation stability.</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat vacuum as “nothingness.”</p>
+<hr>
+<h1 id="10-commutation_relation_operator">10. commutation_relation_operator</h1>
+<p><strong>Type:</strong> boundary_operator<br>
+<strong>Purpose:</strong> Defines algebraic constraints between operators.<br>
+<strong>Signal:</strong> [a, a†] = 1, {ψ, ψ†} = 1  </p>
+<p><strong>Notes:</strong><br>
+- Ensures consistency of excitation structure.<br>
+- Defines statistics (bosonic vs fermionic).</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat commutators as physical interactions.</p>
+<hr>
+<h1 id="11-path_integral_operator">11. path_integral_operator</h1>
+<p><strong>Type:</strong> structure_operator<br>
+<strong>Purpose:</strong> Encodes full amplitude structure via functional integration.<br>
+<strong>Signal:</strong> ∫ Dφ e^{iS[φ]}  </p>
+<p><strong>Notes:</strong><br>
+- Describes global behavior of fields.<br>
+- Not a literal sum over paths.</p>
+<p><strong>Drift to avoid:</strong><br>
+Do NOT treat paths as physical trajectories.</p>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>QFT operators define:</p>
+<ul>
+<li><strong>fields</strong>  </li>
+<li><strong>excitations</strong>  </li>
+<li><strong>propagation</strong>  </li>
+<li><strong>interactions</strong>  </li>
+<li><strong>symmetry</strong>  </li>
+<li><strong>vacuum structure</strong>  </li>
+<li><strong>renormalization</strong>  </li>
+<li><strong>operator algebra</strong>  </li>
+</ul>
+<p>They form the <strong>substrate grammar</strong> from which the Standard Model and all<br>
+other excitation‑based theories emerge.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_robotics_and_control_policies/substrate_definition.md">
+  <title>vST for Robotics and Control Policies</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_robotics_and_control_policies/substrate_definition.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_robotics_and_control_policies/substrate_definition.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="vst-for-robotics-and-control-policies"><em>vST for Robotics and Control Policies</em></h3>
+<h3 id="substrate-definition"><em>Substrate Definition</em></h3>
+<p>This document defines the substrate used to analyze <strong>robotics and control‑policy systems</strong> within the <strong>Validation‑Space‑Time (vST)</strong> framework and the <strong>1024D dimensional substrate</strong>. It establishes the primitives, latent‑space structure, scaling behavior, and trajectory geometry required to interpret policy dynamics in a stable, invariant‑preserving manner.</p>
+<p>The substrate is model‑agnostic and applies to reinforcement‑learning (RL) policies, classical controllers, hybrid systems, and embodied robotic agents.</p>
+<hr>
+<h2 id="1-purpose-of-the-controlpolicy-substrate"><strong>1. Purpose of the Control‑Policy Substrate</strong></h2>
+<p>The control‑policy substrate provides a structured, reproducible framework for:</p>
+<ul>
+<li>interpreting high‑dimensional latent‑space trajectories  </li>
+<li>identifying stable, transitional, and dispersed control regimes  </li>
+<li>mapping coherence surfaces across time, action sequences, and sensor streams  </li>
+<li>analyzing scaling behavior across policy architectures  </li>
+<li>detecting drift across training runs, checkpoints, or hardware changes  </li>
+<li>projecting latent states into 3D–9D triadic cores  </li>
+</ul>
+<p>Control policies produce structured, regime‑rich trajectories.<br>
+The substrate ensures they remain interpretable across the full dimensional ladder (3D → 1024D).</p>
+<hr>
+<h2 id="2-substrate-overview"><strong>2. Substrate Overview</strong></h2>
+<p>Policy latent spaces typically inhabit 64D–2048D regions.<br>
+The substrate models these spaces using:</p>
+<ul>
+<li><strong>Dimensional Primitives (DP)</strong>  </li>
+<li><strong>Triadic Dimensional Primitives (TDP)</strong>  </li>
+<li><strong>Scaling Primitives (SP)</strong>  </li>
+<li><strong>Coherence Primitives (CP)</strong>  </li>
+</ul>
+<p>These primitives define the structure of latent trajectories, coherence surfaces, and regime transitions.</p>
+<p>The substrate is anchored by the <strong>Triadic Dimensional Cores</strong>:</p>
+<ul>
+<li><strong>3D Structural Core</strong>  </li>
+<li><strong>6D Interaction Core</strong>  </li>
+<li><strong>9D Coherence Core</strong></li>
+</ul>
+<p>and extended through the <strong>1024D high‑dimensional substrate</strong>.</p>
+<hr>
+<h2 id="3-dimensional-primitives-for-control-policies"><strong>3. Dimensional Primitives for Control Policies</strong></h2>
+<h3 id="31-dimensional-primitive-dp"><strong>3.1 Dimensional Primitive (DP)</strong></h3>
+<p>A DP represents the minimal unit of latent‑space structure.<br>
+It captures:</p>
+<ul>
+<li>local coherence across policy layers  </li>
+<li>variance behavior across timesteps  </li>
+<li>projection stability  </li>
+<li>regime alignment  </li>
+</ul>
+<p>DPs appear in hidden states, recurrent activations, attention summaries, and policy embeddings.</p>
+<hr>
+<h3 id="32-triadic-dimensional-primitive-tdp"><strong>3.2 Triadic Dimensional Primitive (TDP)</strong></h3>
+<p>A TDP is a triad of DPs that expresses full control‑regime behavior.<br>
+It captures:</p>
+<ul>
+<li>stable (R₁) behavior  </li>
+<li>transitional (R₂) behavior  </li>
+<li>dispersed (R₃) behavior  </li>
+</ul>
+<p>TDPs form the basis of the 3D–9D triadic cores.</p>
+<hr>
+<h3 id="33-scaling-primitive-sp"><strong>3.3 Scaling Primitive (SP)</strong></h3>
+<p>An SP governs dimensional expansion from 9D → 64D → 1024D.<br>
+It ensures:</p>
+<ul>
+<li>invariant‑preserving scaling  </li>
+<li>continuity of coherence surfaces  </li>
+<li>stable projection into triadic cores  </li>
+</ul>
+<p>SPs model how latent‑space capacity expands with policy size, architecture depth, or training complexity.</p>
+<hr>
+<h3 id="34-coherence-primitive-cp"><strong>3.4 Coherence Primitive (CP)</strong></h3>
+<p>A CP identifies stable or unstable regions in latent space.<br>
+It captures:</p>
+<ul>
+<li>coherence surfaces across time  </li>
+<li>branching behavior in decision transitions  </li>
+<li>dispersion patterns in unstable or exploratory phases  </li>
+<li>regime transitions  </li>
+</ul>
+<p>CPs are essential for drift detection and vST validation.</p>
+<hr>
+<h2 id="4-triadic-dimensional-cores-for-control-policies"><strong>4. Triadic Dimensional Cores for Control Policies</strong></h2>
+<h3 id="41-3d-structural-core"><strong>4.1 3D Structural Core</strong></h3>
+<p>Captures motif‑level geometry in latent activations:</p>
+<ul>
+<li>compact control motifs  </li>
+<li>stable action‑selection patterns  </li>
+<li>low‑variance decision surfaces  </li>
+</ul>
+<h3 id="42-6d-interaction-core"><strong>4.2 6D Interaction Core</strong></h3>
+<p>Captures relational and policy‑driven structure:</p>
+<ul>
+<li>sensor‑to‑action coupling  </li>
+<li>multi‑modal integration  </li>
+<li>early regime transitions  </li>
+</ul>
+<h3 id="43-9d-coherence-core"><strong>4.3 9D Coherence Core</strong></h3>
+<p>Captures pathway‑level coherence across time:</p>
+<ul>
+<li>resonance‑time behavior  </li>
+<li>stable regime classification  </li>
+<li>invertible projection from higher dimensions  </li>
+</ul>
+<p>The 9D core is the anchor for all high‑dimensional interpretation.</p>
+<hr>
+<h2 id="5-highdimensional-substrate-64d1024d"><strong>5. High‑Dimensional Substrate (64D–1024D)</strong></h2>
+<p>Policy latent spaces naturally inhabit high‑dimensional regimes.<br>
+The substrate models these using the dimensional ladder:</p>
+<ul>
+<li><strong>64D</strong> — research‑grade latent substrate  </li>
+<li><strong>128D</strong> — expanded coherence surfaces  </li>
+<li><strong>256D</strong> — multi‑primitive interaction  </li>
+<li><strong>512D</strong> — high‑variance decision regions  </li>
+<li><strong>1024D</strong> — full research‑grade capacity  </li>
+</ul>
+<p>Each step preserves:</p>
+<ul>
+<li>structural invariants  </li>
+<li>resonance‑time invariants  </li>
+<li>projection invariants  </li>
+<li>scaling invariants  </li>
+</ul>
+<p>This ensures stable interpretation across policy architectures.</p>
+<hr>
+<h2 id="6-latenttrajectory-structure"><strong>6. Latent‑Trajectory Structure</strong></h2>
+<p>Control policies produce latent trajectories that move through:</p>
+<ul>
+<li>compact stable regions (R₁ᴴ)  </li>
+<li>branching transitional regions (R₂ᴴ)  </li>
+<li>dispersed or exploratory regions (R₃ᴴ)  </li>
+</ul>
+<p>These trajectories are modeled as:</p>
+<ul>
+<li>sequences of DPs  </li>
+<li>grouped into TDPs  </li>
+<li>expanded through SPs  </li>
+<li>classified using CPs  </li>
+</ul>
+<p>This structure enables regime‑aware analysis and drift detection.</p>
+<hr>
+<h2 id="7-projection-into-triadic-cores"><strong>7. Projection into Triadic Cores</strong></h2>
+<p>High‑dimensional latent states are projected into:</p>
+<ul>
+<li><strong>9D</strong> for coherence analysis  </li>
+<li><strong>6D</strong> for interaction analysis  </li>
+<li><strong>3D</strong> for geometric interpretation  </li>
+</ul>
+<p>Projection must remain:</p>
+<ul>
+<li>invertible  </li>
+<li>primitive‑aligned  </li>
+<li>regime‑aware  </li>
+<li>invariant‑preserving  </li>
+</ul>
+<p>Projection is essential for interpretability and vST validation.</p>
+<hr>
+<h2 id="8-substrate-outputs"><strong>8. Substrate Outputs</strong></h2>
+<p>The control‑policy substrate produces:</p>
+<ul>
+<li>latent‑trajectory regime classifications  </li>
+<li>coherence‑surface maps  </li>
+<li>scaling‑law diagnostics  </li>
+<li>projection‑stability indicators  </li>
+<li>drift‑detection signals  </li>
+<li>vST validation outputs  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑level analysis of robotics and control policies.</p>
+  </main>
+</body>
+</html>

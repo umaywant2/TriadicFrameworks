@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/regime_geometry.md">
+  <title>RTT Core: Regime Geometry</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/regime_geometry.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/regime_geometry.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_regime_geometry" src="https://github.com/user-attachments/assets/37430373-e2dc-4348-acb0-a208f816429b" /></p>
+<hr>
+<p>module_id: rtt.core.regime_geometry
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - regime-geometry
+  - rtt-core
+  - operator-regimes
+  - drift-envelopes
+  - coherence-regimes
+  - readout-regimes
+  - triadic-time
+  - manifold-geometry</p>
+<hr>
+<h1 id="rtt-core-regime-geometry">RTT Core: Regime Geometry</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Define the geometric structure of RTT regimes, including:</p>
+<ul>
+<li>Regime manifolds  </li>
+<li>Regime axes  </li>
+<li>Regime boundaries  </li>
+<li>Regime curvature and topology  </li>
+<li>Regime interactions with drift, coherence, and readout  </li>
+<li>Regime transitions across triadic time  </li>
+</ul>
+<p>This module expands the conceptual regime system into a <strong>geometric model</strong> that operators, drift envelopes, coherence budgets, and Validator Pulse rely on.</p>
+<hr>
+<h2 id="2-regime-manifold-geometry">2. Regime manifold geometry</h2>
+<h3 id="21-regime-manifold-definition">2.1 Regime manifold definition</h3>
+<p>RTT regimes form a <strong>multi‑dimensional geometric manifold</strong>:</p>
+<p>[
+\mathcal{G}<em _text_state="\text{state">{\text{regime}} = \mathcal{G}</em>}} \times \mathcal{G<em _text_drift="\text{drift">{\text{coherence}} \times \mathcal{G}</em>
+]}} \times \mathcal{G}_{\text{readout}</p>
+<p>Each axis has its own geometry:</p>
+<ul>
+<li>
+<p><strong>State geometry:</strong><br>
+  Operator validity, representational topology, extension surfaces.</p>
+</li>
+<li>
+<p><strong>Coherence geometry:</strong><br>
+  Threshold curves, decay surfaces, budget gradients.</p>
+</li>
+<li>
+<p><strong>Drift geometry:</strong><br>
+  Drift envelopes, drift boundaries, drift-loss curvature.</p>
+</li>
+<li>
+<p><strong>Readout geometry:</strong><br>
+  Validator Pulse topology, collapse surfaces, single-readout constraints.</p>
+</li>
+</ul>
+<p>The full regime manifold is the <strong>Cartesian product</strong> of these geometries.</p>
+<hr>
+<h2 id="3-regime-axes">3. Regime axes</h2>
+<h3 id="31-state-axis">3.1 State axis</h3>
+<p>Defines:</p>
+<ul>
+<li>Operator sequences  </li>
+<li>Representational extension  </li>
+<li>Regime inversion  </li>
+<li>Geometry shifts  </li>
+</ul>
+<p>State geometry determines which operators are valid at any point.</p>
+<h3 id="32-coherence-axis">3.2 Coherence axis</h3>
+<p>Defines:</p>
+<ul>
+<li>Minimum coherence thresholds  </li>
+<li>Budget gradients  </li>
+<li>Coherence decay curves  </li>
+<li>Eligibility surfaces  </li>
+</ul>
+<p>Coherence geometry determines which branches can be validated.</p>
+<h3 id="33-drift-axis">3.3 Drift axis</h3>
+<p>Defines:</p>
+<ul>
+<li>Drift magnitude  </li>
+<li>Envelope boundaries  </li>
+<li>Drift-loss curvature  </li>
+<li>Stability surfaces  </li>
+</ul>
+<p>Drift geometry determines which branches remain within the Dimensional Drift Envelope.</p>
+<h3 id="34-readout-axis">3.4 Readout axis</h3>
+<p>Defines:</p>
+<ul>
+<li>Validator Pulse topology  </li>
+<li>Collapse surfaces  </li>
+<li>Single-readout constraints  </li>
+<li>Deferred validation geometry  </li>
+</ul>
+<p>Readout geometry determines how classical information emerges.</p>
+<hr>
+<h2 id="4-regime-boundaries">4. Regime boundaries</h2>
+<p>Regime boundaries are geometric surfaces where:</p>
+<ul>
+<li>Operators become invalid  </li>
+<li>Drift becomes destructive  </li>
+<li>Coherence falls below threshold  </li>
+<li>Readout becomes impossible  </li>
+</ul>
+<p>Examples:</p>
+<h3 id="41-drift-boundary">4.1 Drift boundary</h3>
+<p>[
+\Delta_i = \Delta_{\max}
+]</p>
+<p>Branches crossing this boundary exit DBR.</p>
+<h3 id="42-coherence-boundary">4.2 Coherence boundary</h3>
+<p>[
+c_i = C_{\text{min}}
+]</p>
+<p>Branches crossing this boundary exit CMR.</p>
+<h3 id="43-readout-boundary">4.3 Readout boundary</h3>
+<p>[
+V_{\text{eligibility}} = 0
+]</p>
+<p>Branches crossing this boundary cannot be validated.</p>
+<h3 id="44-composite-boundaries">4.4 Composite boundaries</h3>
+<p>Composite boundaries combine multiple constraints:</p>
+<p>[
+\Delta_i = \Delta_{\max} \quad \land \quad c_i &lt; C_{\text{min}}
+]</p>
+<p>These boundaries define <strong>regime collapse surfaces</strong>.</p>
+<hr>
+<h2 id="5-regime-curvature">5. Regime curvature</h2>
+<p>Regime geometry is not flat — it has curvature.</p>
+<h3 id="51-positive-curvature">5.1 Positive curvature</h3>
+<ul>
+<li>Stabilizes drift  </li>
+<li>Preserves coherence  </li>
+<li>Expands eligibility  </li>
+</ul>
+<h3 id="52-negative-curvature">5.2 Negative curvature</h3>
+<ul>
+<li>Amplifies drift  </li>
+<li>Accelerates coherence loss  </li>
+<li>Shrinks eligibility  </li>
+</ul>
+<p>Curvature determines how branches move across the regime manifold.</p>
+<hr>
+<h2 id="6-regime-topology">6. Regime topology</h2>
+<p>Regime topology defines:</p>
+<ul>
+<li>Connected components  </li>
+<li>Validity regions  </li>
+<li>Collapse regions  </li>
+<li>Transition corridors  </li>
+</ul>
+<p>Examples:</p>
+<h3 id="61-validity-region">6.1 Validity region</h3>
+<p>Region where:</p>
+<ul>
+<li>Drift is bounded  </li>
+<li>Coherence is above threshold  </li>
+<li>Operators are valid  </li>
+<li>Readout is possible  </li>
+</ul>
+<h3 id="62-collapse-region">6.2 Collapse region</h3>
+<p>Region where:</p>
+<ul>
+<li>Drift exceeds envelope  </li>
+<li>Coherence falls below threshold  </li>
+<li>Readout is impossible  </li>
+</ul>
+<p>Branches entering collapse region become residue.</p>
+<h3 id="63-transition-corridor">6.3 Transition corridor</h3>
+<p>Narrow region where:</p>
+<ul>
+<li>Drift is near boundary  </li>
+<li>Coherence is near threshold  </li>
+<li>Validation must occur soon  </li>
+</ul>
+<p>This corridor is where Validator Pulse often triggers.</p>
+<hr>
+<h2 id="7-regime-transitions-across-triadic-time">7. Regime transitions across triadic time</h2>
+<p>Regime geometry evolves across:</p>
+<h3 id="71-state-time-t1">7.1 State time (T₁)</h3>
+<ul>
+<li>Operator-induced geometry shifts  </li>
+<li>Extension surfaces  </li>
+<li>Drift evolution  </li>
+</ul>
+<h3 id="72-coherence-time-t2">7.2 Coherence time (T₂)</h3>
+<ul>
+<li>Coherence gradients  </li>
+<li>Budget redistribution  </li>
+<li>Decay surfaces  </li>
+</ul>
+<h3 id="73-readout-time-t3">7.3 Readout time (T₃)</h3>
+<ul>
+<li>Validator Pulse topology  </li>
+<li>Collapse surfaces  </li>
+<li>Single-readout constraints  </li>
+</ul>
+<p>Regime geometry is <strong>dynamic</strong>, not static.</p>
+<hr>
+<h2 id="8-regime-geometry-under-extension-drift-and-validation">8. Regime geometry under extension, drift, and validation</h2>
+<h3 id="81-under-extension">8.1 Under extension</h3>
+<p>Extension operators:</p>
+<ul>
+<li>Expand state geometry  </li>
+<li>Partition coherence geometry  </li>
+<li>Increase drift geometry  </li>
+<li>Defer readout geometry  </li>
+</ul>
+<h3 id="82-under-drift">8.2 Under drift</h3>
+<p>Drift operators:</p>
+<ul>
+<li>Move branches across drift geometry  </li>
+<li>Reduce coherence geometry  </li>
+<li>Approach collapse surfaces  </li>
+</ul>
+<h3 id="83-under-validation">8.3 Under validation</h3>
+<p>Validator Pulse:</p>
+<ul>
+<li>Selects a branch within valid geometry  </li>
+<li>Collapses all branches outside readout geometry  </li>
+<li>Consumes coherence geometry  </li>
+</ul>
+<hr>
+<h2 id="9-example-quantum-cloning-alignment">9. Example: Quantum “cloning” alignment</h2>
+<p>The experiment uses:</p>
+<ul>
+<li><strong>State geometry:</strong> extension surface  </li>
+<li><strong>Coherence geometry:</strong> partition gradient  </li>
+<li><strong>Drift geometry:</strong> bounded envelope  </li>
+<li><strong>Readout geometry:</strong> single-readout topology  </li>
+</ul>
+<p>Regime geometry explains:</p>
+<ul>
+<li>Why multi-branch representation is allowed  </li>
+<li>Why only one branch becomes classical  </li>
+<li>Why drift and coherence matter  </li>
+<li>Why no-cloning is not violated  </li>
+</ul>
+<hr>
+<h2 id="10-paradox-handling">10. Paradox handling</h2>
+<p>Regime geometry prevents paradoxes by:</p>
+<ul>
+<li>Enforcing geometric boundaries  </li>
+<li>Restricting operator sequences  </li>
+<li>Managing drift curvature  </li>
+<li>Maintaining coherence thresholds  </li>
+<li>Ensuring single-readout topology  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → state geometry  </li>
+<li>“Only one is real” → readout geometry  </li>
+<li>“Others disappear” → coherence/drift geometry  </li>
+<li>“No violation occurs” → regime geometry  </li>
+</ul>
+<hr>
+<h2 id="11-canon-integration-and-cross-links">11. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_maps_extended.md</code></li>
+<li><code>/docs/rtt/core/regime_index.md</code></li>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/operator_families.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the geometric foundation of RTT regimes.<br>
+Once regime-geometry diagrams are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "TriadicFrameworks MCP — Operator Schema (L3 Forces Unseen)",
+  "description": "Real JSON Schema for unseen force‑regime operators. Defines canonical operator identity, category, semantics, and impact profile.",
+  "version": "0.1.0",
+
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "forceRegimeOperator",
+    "description": "JSON Schema for operators that manipulate unseen force‑regime mechanics.",
+    "type": "object",
+
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Canonical operator name."
+      },
+
+      "category": {
+        "type": "string",
+        "description": "Operator category.",
+        "enum": [
+          "push",
+          "pull",
+          "bind",
+          "gradient",
+          "fieldShift",
+          "ruptureForce"
+        ]
+      },
+
+      "description": {
+        "type": "string",
+        "description": "Functional description of the operator."
+      },
+
+      "semantics": {
+        "type": "array",
+        "description": "Force‑regime semantics directly manipulated by the operator.",
+        "items": {
+          "type": "string",
+          "enum": [
+            "gradientIntensity",
+            "fieldCoherence",
+            "influenceContinuity",
+            "rupturePotential",
+            "forceIntegrity"
+          ]
+        }
+      },
+
+      "impactProfile": {
+        "type": "string",
+        "description": "Description of how the operator affects unseen force‑state mechanics."
+      }
+    },
+
+    "required": ["name", "category", "description"]
+  }
+}

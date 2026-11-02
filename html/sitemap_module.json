@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triadicframeworks.org/schemas/sitemap_module.schema.json",
+  "$generated": "2026-08-03T01:39:00",
+  "$version": "1.4",
+  "title": "TriadicFrameworks Sitemap Module Entry",
+  "description": "Schema for a single module entry in the TriadicFrameworks sitemap_modules.json entries[] array. R5: adds enriched_r5 flag.",
+  "type": "object",
+  "required": [
+    "canon_tag",
+    "name",
+    "url",
+    "path",
+    "layer",
+    "status",
+    "depth",
+    "priority",
+    "changefreq"
+  ],
+  "properties": {
+    "canon_tag": {
+      "type": "string",
+      "description": "Unique canonical identifier for the module (kebab-case or UPPER_SNAKE for RTT engines)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable module name"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical public URL"
+    },
+    "path": {
+      "type": "string",
+      "description": "Relative file system path from repo root (e.g. docs/spine/)"
+    },
+    "layer": {
+      "type": "string",
+      "description": "Spine layer assignment (one of 21 canonical layer names)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Active Canonical",
+        "Deprecated",
+        "I2 Excluded",
+        "Draft"
+      ]
+    },
+    "depth": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "priority": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Sitemap crawl priority (1.0=depth-0, 0.9=depth-1, 0.7=depth-2, 0.5=depth-3)"
+    },
+    "changefreq": {
+      "type": "string",
+      "enum": [
+        "always",
+        "hourly",
+        "daily",
+        "weekly",
+        "monthly",
+        "yearly",
+        "never"
+      ]
+    },
+    "file_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "last_modified": {
+      "type": "string",
+      "format": "date"
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "A3",
+        "I2"
+      ]
+    },
+    "enriched_r2": {
+      "type": "boolean"
+    },
+    "enriched_r3": {
+      "type": "boolean"
+    },
+    "enriched_r4": {
+      "type": "boolean"
+    },
+    "enriched_r5": {
+      "type": "boolean",
+      "description": "True when module was added or enriched in Round 5 (S3 Spine Overlay Pack v2.0)"
+    }
+  },
+  "additionalProperties": false,
+  "example": {
+    "canon_tag": "spine-overlay-pack",
+    "name": "S3 Spine Overlay Pack",
+    "url": "https://docs.triadicframeworks.org/spine/",
+    "path": "docs/spine/",
+    "layer": "Core Frameworks \u2014 Structural Spine",
+    "status": "Active Canonical",
+    "depth": 1,
+    "priority": 0.9,
+    "changefreq": "weekly",
+    "file_count": 7,
+    "last_modified": "2026-08-03",
+    "classification": "A3",
+    "enriched_r2": false,
+    "enriched_r3": false,
+    "enriched_r4": false,
+    "enriched_r5": true
+  }
+}

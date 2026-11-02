@@ -1,0 +1,88 @@
+  <link rel="stylesheet" href="rtt.css" />
+  <script src="include.js"></script>
+
+<body class="dark-mode">
+    <div id="rtt-nav"></div>
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
+  <main class="rtt-page">
+
+    <h1 class="rtt-hero-title">RTT Component Library</h1>
+    <p class="rtt-hero-subtitle">A gallery of reusable dimensional UI components.</p>
+
+    <hr class="rtt-divider" />
+
+    <!-- Buttons -->
+    <section>
+      <h2 class="rtt-section-title">Buttons</h2>
+      <div class="rtt-component-row">
+        <a class="rtt-btn rtt-btn-primary">Primary Button</a>
+        <a class="rtt-btn rtt-btn-secondary">Secondary Button</a>
+        <a class="rtt-btn rtt-btn-ghost">Ghost Button</a>
+      </div>
+    </section>
+
+    <hr class="rtt-divider" />
+
+    <!-- Cards -->
+    <section>
+      <h2 class="rtt-section-title">Cards</h2>
+      <div class="rtt-tier-grid">
+        <div class="rtt-card">
+          <div class="rtt-card-title">Card Title</div>
+          <div class="rtt-card-subtitle">Subtitle text.</div>
+          <p>Body content goes here.</p>
+        </div>
+        <div class="rtt-card">
+          <div class="rtt-card-title">Another Card</div>
+          <div class="rtt-card-subtitle">More content.</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rtt-divider" />
+
+    <!-- Badges -->
+    <section>
+      <h2 class="rtt-section-title">Badges</h2>
+      <div class="rtt-component-row">
+        <span class="rtt-badge rtt-badge-foundations">Foundations</span>
+        <span class="rtt-badge rtt-badge-systems">Systems</span>
+        <span class="rtt-badge rtt-badge-intelligence">Intelligence</span>
+        <span class="rtt-badge rtt-badge-aeonic">Aeonic</span>
+      </div>
+    </section>
+
+    <hr class="rtt-divider" />
+
+    <!-- Callouts -->
+    <section>
+      <h2 class="rtt-section-title">Callouts</h2>
+      <div class="rtt-callout-info">Info: Drift‑resilient stability.</div>
+      <div class="rtt-callout-warn">Warning: Requires Systems Tier.</div>
+      <div class="rtt-callout-premium">★ Aeonic‑grade module.</div>
+    </section>
+
+    <hr class="rtt-divider" />
+
+    <!-- Code Block -->
+    <section>
+      <h2 class="rtt-section-title">Code Block</h2>
+      <pre class="rtt-code">
+{
+  "rtt_version": "1.0",
+  "tick": 42,
+  "entities": [...]
+}
+      </pre>
+    </section>
+
+    <footer class="rtt-footer">
+      © TriadicFrameworks — Resonance‑Time Technology
+    </footer>
+
+  </main>

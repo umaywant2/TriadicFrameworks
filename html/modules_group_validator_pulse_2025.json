@@ -1,0 +1,93 @@
+{
+  "pulse_id": "modules_group_validator_pulse_2025",
+  "scope": "global_module_graph",
+  "version": "2025",
+
+  "structural_checks": {
+    "has_root": true,
+    "has_module_entries": true,
+    "module_count_valid": true,
+    "paths_resolvable": true,
+    "manifests_present": true,
+    "graph_edges_valid": true
+  },
+
+  "semantic_checks": {
+    "unique_module_names": true,
+    "unique_paths": true,
+    "no_duplicate_manifests": true,
+    "category_alignment_valid": true,
+    "analyzer_layer_alignment_valid": true,
+    "purpose_fields_present": true,
+    "no_cross_module_conflicts": true
+  },
+
+  "graph_integrity": {
+    "nodes": 63,
+    "expected_nodes": 106,
+    "remaining": 43,
+    "completion_ratio": 0.594,
+    "notes": "Graph expanded with Governance_Substrate_Model → How_To_Flock_with_Governance."
+  },
+
+  "recent_updates": [
+    {
+      "module": "Governance_Substrate_Model",
+      "changes": [
+        "Added How_To_Flock_with_Governance.md",
+        "Added How_To_Flock_with_Governance_module.json",
+        "Updated gsm_module.json",
+        "Updated DOC_MAP in index.html"
+      ]
+    }
+  ],
+
+  "phantom_detection": {
+    "phantoms": [
+      "ALPR_Governance.md",
+      "sensor_governance_notes.txt"
+    ],
+    "severity": "medium",
+    "recommendation": "Remove phantom entries or restore missing files to maintain graph coherence."
+  },
+
+  "layer_alignment": {
+    "regime": [
+      "Governance_Substrate_Model/05_Implementation/How_To_Flock_with_Governance.md",
+      "Governance_Substrate_Model/index.html"
+    ],
+    "operator": [
+      "Governance_Substrate_Model/gsm_module.json",
+      "Governance_Substrate_Model/05_Implementation/How_To_Flock_with_Governance_module.json"
+    ],
+    "adapter": [
+      "Governance_Substrate_Model/Infrastructure_Retrofit_Patterns.md"
+    ],
+    "dimensional": [
+      "Governance_Substrate_Model/AI_Alignment_Surfaces.md"
+    ],
+    "awareness": [
+      "Governance_Substrate_Model/Education_Embedding.md"
+    ]
+  },
+
+  "drift_detection": {
+    "drift": false,
+    "notes": "No drift detected between declared module roles and analyzer layers."
+  },
+
+  "paradox_scan": {
+    "paradox": false,
+    "notes": "No conflicting directives or cross-module contradictions found."
+  },
+
+  "coherence_evaluation": {
+    "coherent": true,
+    "notes": "Global module graph remains structurally and semantically aligned with TriadicFrameworks canon."
+  },
+
+  "regime_declaration": {
+    "status": "routine",
+    "reason": "Graph integrity preserved; updates consistent; phantoms present but non-critical."
+  }
+}

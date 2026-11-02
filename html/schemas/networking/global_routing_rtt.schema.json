@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Global RTT Routing Entry",
+  "type": "object",
+  "properties": {
+    "route_id": { "type": "string" },
+    "source": { "type": "string" },
+    "destination": { "type": "string" },
+    "medium": { "type": "string" },
+    "triadic_path_profile": { "type": "object" }
+  }
+}

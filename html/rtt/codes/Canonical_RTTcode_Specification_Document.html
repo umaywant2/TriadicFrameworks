@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/codes/Canonical_RTTcode_Specification_Document.md">
+  <title>📘 Canonical RTTcode Specification Document</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/codes/Canonical_RTTcode_Specification_Document.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/codes/Canonical_RTTcode_Specification_Document.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="canonical-rttcode-specification-document">📘 <strong>Canonical RTTcode Specification Document</strong></h1>
+<p><em>A formal, stable reference for the entire system.</em></p>
+<h2 id="rttcode-specification-v10">RTTcode Specification (v1.0)</h2>
+<p>This document defines the canonical structure, encoding rules, and visual
+requirements for RTTcodes. All generators, validators, and style tools must
+conform to this specification.</p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>RTTcodes provide a universal, QR‑compatible metadata layer for artifacts across
+the TriadicFrameworks ecosystem. They unify:</p>
+<ul>
+<li>identity</li>
+<li>versioning</li>
+<li>triad metadata</li>
+<li>canonical URLs</li>
+<li>domain classification</li>
+</ul>
+<hr>
+<h2 id="2-data-model">2. Data Model</h2>
+<p>An RTTcode payload MUST be a JSON object with the following fields:</p>
+<h3 id="required">Required</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>domain</code></td>
+<td>string</td>
+<td>Domain identifier (see §3)</td>
+</tr>
+<tr>
+<td><code>artifact_type</code></td>
+<td>string</td>
+<td>Type of artifact (paper, README, diagram, etc.)</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>string</td>
+<td>Semantic version (e.g., <code>v1.0.0</code>)</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>string</td>
+<td>Canonical URL of the artifact</td>
+</tr>
+</tbody>
+</table>
+<h3 id="optional">Optional</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>triad</code></td>
+<td>object</td>
+<td>Resonance‑time triad metadata</td>
+</tr>
+</tbody>
+</table>
+<p>Triad fields:</p>
+<ul>
+<li><code>f_R</code> — resonance frequency  </li>
+<li><code>tau_R</code> — resonance time constant  </li>
+<li><code>Q_R</code> — quality factor  </li>
+</ul>
+<p>All triad fields MUST be strings.</p>
+<hr>
+<h2 id="3-domains">3. Domains</h2>
+<p>Valid domain identifiers:</p>
+<pre><code>rtt
+set
+substrate
+observer
+governance
+docs
+other
+</code></pre>
+<p>Domains MUST be lowercase ASCII.</p>
+<hr>
+<h2 id="4-encoding-rules">4. Encoding Rules</h2>
+<p>The RTTcode URL MUST follow this pattern:</p>
+<pre><code>[https://triadicframeworks.org/rttcode](https://triadicframeworks.org/rttcode)?&lt;domain&gt;=&lt;token&gt;
+</code></pre>
+<p>Where <code>&lt;token&gt;</code> is:</p>
+<pre><code>&lt;version&gt;-f&lt;f_R&gt;-t&lt;tau_R&gt;-Q&lt;Q_R&gt;
+</code></pre>
+<p>Missing triad fields MUST be represented as:</p>
+<pre><code>f?
+t?
+Q?
+</code></pre>
+<p>Example:</p>
+<pre><code>`https://triadicframeworks.org/rttcode?set=v0.9.3-f0.72-t203ms-Q0.88` [(triadicframeworks.org in Bing)](https://www.bing.com/search?q=&quot;https%3A%2F%2Ftriadicframeworks.org%2Frttcode%3Fset%3Dv0.9.3-f0.72-t203ms-Q0.88&quot;)
+</code></pre>
+<hr>
+<h2 id="5-qr-requirements">5. QR Requirements</h2>
+<ul>
+<li>MUST be QR Model 2  </li>
+<li>MUST use Error Correction Level H  </li>
+<li>MUST include a quiet zone of ≥ 2 modules  </li>
+<li>MUST encode the full URL exactly  </li>
+<li>MAY include visual styling if scannability is preserved  </li>
+</ul>
+<hr>
+<h2 id="6-visual-guidelines">6. Visual Guidelines</h2>
+<p>RTTcodes SHOULD follow the domain‑specific palettes and motifs defined in:</p>
+<pre><code>docs/rttcodes/style/visual-guidelines.md
+</code></pre>
+<p>Overlays MUST NOT obscure:</p>
+<ul>
+<li>finder squares  </li>
+<li>alignment patterns  </li>
+<li>dense data regions  </li>
+</ul>
+<hr>
+<h2 id="7-versioning">7. Versioning</h2>
+<p>This specification is versioned independently from RTTcodes themselves.</p>
+<p>Current version: <strong>v1.0</strong></p>
+<p>Future versions MUST remain backward‑compatible unless explicitly stated.</p>
+<hr>
+<h2 id="8-compliance">8. Compliance</h2>
+<p>A valid RTTcode MUST:</p>
+<ol>
+<li>Pass schema validation  </li>
+<li>Produce a valid URL+token  </li>
+<li>Encode that URL in a QR matrix  </li>
+<li>Remain scannable by standard QR readers  </li>
+</ol>
+<p>This document is the authoritative reference for RTTcode behavior.</p>
+  </main>
+</body>
+</html>

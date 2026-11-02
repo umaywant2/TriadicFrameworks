@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triadic Languages Atlas — Starter Edition</title>
+<style>
+  :root {
+    --bg:        #0d1117;
+    --surface:   #161b22;
+    --border:    #30363d;
+    --accent:    #58a6ff;
+    --accent2:   #f78166;
+    --accent3:   #3fb950;
+    --text:      #e6edf3;
+    --muted:     #8b949e;
+    --natural:   #58a6ff;
+    --symbolic:  #d2a8ff;
+    --prog:      #3fb950;
+    --rad:       6px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
+  header h1 span { color: var(--accent); }
+  .badge { font-size: .7rem; background: #21262d; border: 1px solid var(--border); border-radius: 20px; padding: 3px 10px; color: var(--muted); }
+
+  /* ── CONTROLS ── */
+  .controls {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    padding: 14px 32px; border-bottom: 1px solid var(--border); background: var(--surface);
+  }
+  .pill-group { display: flex; gap: 4px; }
+  .pill {
+    padding: 5px 14px; border-radius: 20px; font-size: .8rem; cursor: pointer; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); transition: all .15s;
+  }
+  .pill:hover { border-color: var(--accent); color: var(--accent); }
+  .pill.active { background: var(--accent); border-color: var(--accent); color: #0d1117; font-weight: 600; }
+  .pill.natural.active  { background: var(--natural);  border-color: var(--natural);  }
+  .pill.symbolic.active { background: var(--symbolic); border-color: var(--symbolic); }
+  .pill.prog.active     { background: var(--prog);     border-color: var(--prog);     }
+  select {
+    background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    padding: 5px 10px; border-radius: var(--rad); font-size: .8rem; cursor: pointer;
+  }
+  .sep { width: 1px; height: 24px; background: var(--border); }
+  label.ctrl-label { font-size: .78rem; color: var(--muted); }
+
+  /* ── MAIN ── */
+  main { padding: 28px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--rad);
+    overflow: hidden;
+  }
+  .card-header {
+    padding: 12px 18px; border-bottom: 1px solid var(--border);
+    font-size: .8rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  /* ── BARS ── */
+  .bar-list { padding: 12px 0; max-height: 480px; overflow-y: auto; }
+  .bar-row {
+    display: grid; grid-template-columns: 160px 1fr 42px;
+    align-items: center; gap: 10px; padding: 5px 18px; cursor: pointer; transition: background .1s;
+  }
+  .bar-row:hover { background: rgba(88,166,255,.05); }
+  .bar-row.selected { background: rgba(88,166,255,.1); }
+  .bar-name { font-size: .82rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cat-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; flex-shrink: 0; }
+  .bar-track { height: 10px; background: #21262d; border-radius: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 10px; transition: width .4s cubic-bezier(.4,0,.2,1); }
+  .bar-val { font-size: .78rem; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* ── RADAR ── */
+  .radar-wrap { padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  canvas { display: block; }
+  .radar-legend { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+  .radar-legend-item { display: flex; align-items: center; gap: 6px; font-size: .75rem; color: var(--muted); }
+  .rl-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+  /* ── DETAIL PANEL ── */
+  .detail-panel { grid-column: 1 / -1; }
+  .token-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px; padding: 16px 18px; max-height: 340px; overflow-y: auto;
+  }
+  .token-card {
+    background: #21262d; border: 1px solid var(--border); border-radius: var(--rad);
+    padding: 8px 12px; display: flex; flex-direction: column; gap: 3px;
+  }
+  .token-main { font-size: 1rem; font-weight: 600; }
+  .token-rom  { font-size: .72rem; color: var(--accent); }
+  .token-gloss{ font-size: .72rem; color: var(--muted); line-height: 1.35; }
+  .token-rank { font-size: .65rem; color: #484f58; margin-top: 2px; }
+
+  /* ── SCORE TABLE ── */
+  .score-table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+  .score-table th {
+    text-align: left; padding: 8px 18px; color: var(--muted);
+    border-bottom: 1px solid var(--border); font-weight: 600; font-size: .72rem; text-transform: uppercase;
+  }
+  .score-table td { padding: 7px 18px; border-bottom: 1px solid #21262d; }
+  .score-table tr:last-child td { border-bottom: none; }
+  .score-table tr:hover td { background: rgba(88,166,255,.04); }
+  .rank-num { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .score-chip {
+    display: inline-block; padding: 2px 8px; border-radius: 20px;
+    font-weight: 700; font-size: .78rem; font-variant-numeric: tabular-nums;
+  }
+
+  /* ── AXIS BARS IN TABLE ── */
+  .mini-bar-row { display: flex; align-items: center; gap: 6px; }
+  .mini-bar { height: 6px; background: #21262d; border-radius: 6px; flex: 1; }
+  .mini-fill { height: 100%; border-radius: 6px; }
+  .mini-val { font-size: .72rem; color: var(--muted); width: 20px; text-align: right; }
+
+  /* ── INSIGHTS ── */
+  .insights-list { padding: 14px 18px; display: flex; flex-direction: column; gap: 8px; }
+  .insight-item {
+    background: #21262d; border-left: 3px solid var(--accent);
+    border-radius: 0 var(--rad) var(--rad) 0; padding: 9px 14px;
+    font-size: .8rem; line-height: 1.5; color: #c9d1d9;
+  }
+
+  /* ── EMPTY / PLACEHOLDER ── */
+  .placeholder { padding: 48px 18px; text-align: center; color: var(--muted); font-size: .85rem; }
+  .placeholder span { font-size: 2rem; display: block; margin-bottom: 8px; }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <h1>Triadic Languages <span>Atlas</span></h1>
+    <span class="badge">Starter Edition · v1.0</span>
+    <span class="badge">19 Modules · 884 Tokens</span>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;font-size:.75rem;color:var(--muted);">
+    <span>Axes: Phonemic · Lexical · Structural</span>
+  </div>
+</header>
+
+<div class="controls">
+  <label class="ctrl-label">Filter:</label>
+  <div class="pill-group">
+    <button class="pill active" data-cat="all">All</button>
+    <button class="pill natural" data-cat="natural">Natural</button>
+    <button class="pill symbolic" data-cat="symbolic">Symbolic</button>
+    <button class="pill prog" data-cat="programming">Programming</button>
+  </div>
+  <div class="sep"></div>
+  <label class="ctrl-label">Sort by:</label>
+  <select id="sortSelect">
+    <option value="composite">Composite Score</option>
+    <option value="axis_1">Axis 1 · Phonemic</option>
+    <option value="axis_2">Axis 2 · Lexical</option>
+    <option value="axis_3">Axis 3 · Structural</option>
+    <option value="name">Name (A–Z)</option>
+  </select>
+  <div class="sep"></div>
+  <label class="ctrl-label">Radar axis:</label>
+  <select id="radarMode">
+    <option value="composite">Composite</option>
+    <option value="compare">Compare Selected</option>
+  </select>
+</div>
+
+<main>
+  <!-- LEFT: RANKED BAR LIST -->
+  <div class="card" style="grid-row: span 2;">
+    <div class="card-header">
+      <span id="barListTitle">Languages — Ranked by Composite Score</span>
+      <span id="barCount" style="color:var(--accent);font-weight:700;"></span>
+    </div>
+    <div class="bar-list" id="barList"></div>
+  </div>
+
+  <!-- RIGHT TOP: RADAR -->
+  <div class="card">
+    <div class="card-header">
+      <span>Triadic Radar — Selected Language</span>
+    </div>
+    <div class="radar-wrap">
+      <canvas id="radarCanvas" width="280" height="280"></canvas>
+      <div class="radar-legend">
+        <div class="radar-legend-item"><div class="rl-dot" style="background:#58a6ff"></div>Phonemic (Axis 1)</div>
+        <div class="radar-legend-item"><div class="rl-dot" style="background:#d2a8ff"></div>Lexical (Axis 2)</div>
+        <div class="radar-legend-item"><div class="rl-dot" style="background:#3fb950"></div>Structural (Axis 3)</div>
+      </div>
+      <div id="radarLabel" style="font-size:.78rem;color:var(--muted);text-align:center;min-height:18px;"></div>
+    </div>
+  </div>
+
+  <!-- RIGHT BOTTOM: INSIGHTS -->
+  <div class="card">
+    <div class="card-header"><span>Dataset Insights</span></div>
+    <div class="insights-list" id="insightsList"></div>
+  </div>
+
+  <!-- FULL WIDTH: DETAIL PANEL -->
+  <div class="card detail-panel">
+    <div class="card-header">
+      <span id="detailTitle">Select a language to explore its token list</span>
+      <span id="detailMeta" style="color:var(--muted);font-weight:400;font-size:.75rem;"></span>
+    </div>
+    <div id="detailContent">
+      <div class="placeholder"><span>🌐</span>Click any language in the ranked list to view its full token set.</div>
+    </div>
+  </div>
+
+  <!-- FULL WIDTH: FULL SCORE TABLE -->
+  <div class="card detail-panel">
+    <div class="card-header"><span>Full Triadic Score Table — All 19 Modules</span></div>
+    <div style="overflow-x:auto;">
+      <table class="score-table" id="scoreTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Language</th>
+            <th>Category</th>
+            <th>Phonemic (Axis 1)</th>
+            <th>Lexical (Axis 2)</th>
+            <th>Structural (Axis 3)</th>
+            <th>Composite</th>
+          </tr>
+        </thead>
+        <tbody id="scoreTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  DATASET — embedded directly from /docs/spine/matrix/
+// ═══════════════════════════════════════════════════════
+const LANGUAGES = [
+  {id:"arabic",              name:"Arabic (MSA)",         category:"natural",     axis_1:8, axis_2:8,  axis_3:9,  composite:8.3, script:"Arabic RTL",            speakers:"274M",      file:"arabic.json"},
+  {id:"egyptian_hieroglyphs",name:"Egyptian Hieroglyphs", category:"symbolic",    axis_1:6, axis_2:10, axis_3:10, composite:8.7, script:"Hieroglyphic",           speakers:"ancient",   file:"egyptian_hieroglyphs.json"},
+  {id:"kanji_radicals",      name:"Kanji Radicals",       category:"symbolic",    axis_1:8, axis_2:10, axis_3:7,  composite:8.3, script:"Kangxi",                 speakers:"1.5B (CJK)",file:"kanji_radicals.json"},
+  {id:"russian",             name:"Russian",              category:"natural",     axis_1:5, axis_2:7,  axis_3:9,  composite:7.0, script:"Cyrillic",               speakers:"154M",      file:"russian.json"},
+  {id:"hindi",               name:"Hindi",                category:"natural",     axis_1:6, axis_2:7,  axis_3:7,  composite:6.7, script:"Devanagari",             speakers:"600M",      file:"hindi.json"},
+  {id:"japanese",            name:"Japanese",             category:"natural",     axis_1:3, axis_2:9,  axis_3:8,  composite:6.7, script:"Hiragana/Katakana/Kanji",speakers:"128M",      file:"japanese.json"},
+  {id:"german",              name:"German",               category:"natural",     axis_1:5, axis_2:7,  axis_3:8,  composite:6.7, script:"Latin",                  speakers:"100M",      file:"german.json"},
+  {id:"runes",               name:"Elder Futhark Runes",  category:"symbolic",    axis_1:5, axis_2:9,  axis_3:6,  composite:6.7, script:"Runic",                  speakers:"ancient",   file:"runes.json"},
+  {id:"mathematical_symbols",name:"Mathematical Symbols", category:"symbolic",    axis_1:1, axis_2:10, axis_3:9,  composite:6.7, script:"Universal",              speakers:"universal", file:"mathematical_symbols.json"},
+  {id:"mandarin",            name:"Mandarin Chinese",     category:"natural",     axis_1:7, axis_2:8,  axis_3:4,  composite:6.3, script:"Simplified Han",         speakers:"920M",      file:"mandarin.json"},
+  {id:"french",              name:"French",               category:"natural",     axis_1:6, axis_2:7,  axis_3:6,  composite:6.3, script:"Latin",                  speakers:"275M",      file:"french.json"},
+  {id:"rust",                name:"Rust",                 category:"programming", axis_1:0, axis_2:7,  axis_3:10, composite:5.7, script:"ASCII/Unicode",          speakers:"~3M devs",  file:"rust.json"},
+  {id:"portuguese",          name:"Portuguese",           category:"natural",     axis_1:5, axis_2:7,  axis_3:5,  composite:5.7, script:"Latin",                  speakers:"240M",      file:"portuguese.json"},
+  {id:"swahili",             name:"Swahili",              category:"natural",     axis_1:3, axis_2:6,  axis_3:8,  composite:5.7, script:"Latin",                  speakers:"80M",       file:"swahili.json"},
+  {id:"spanish",             name:"Spanish",              category:"natural",     axis_1:4, axis_2:7,  axis_3:5,  composite:5.3, script:"Latin",                  speakers:"485M",      file:"spanish.json"},
+  {id:"javascript",          name:"JavaScript",           category:"programming", axis_1:0, axis_2:6,  axis_3:8,  composite:4.7, script:"ASCII/Unicode",          speakers:"~18M devs", file:"javascript.json"},
+  {id:"c_language",          name:"C Language",           category:"programming", axis_1:0, axis_2:5,  axis_3:9,  composite:4.7, script:"ASCII",                  speakers:"~5M devs",  file:"c_language.json"},
+  {id:"python",              name:"Python",               category:"programming", axis_1:0, axis_2:6,  axis_3:7,  composite:4.3, script:"ASCII/Unicode",          speakers:"~15M devs", file:"python.json"},
+  {id:"sql",                 name:"SQL",                  category:"programming", axis_1:0, axis_2:5,  axis_3:8,  composite:4.3, script:"ASCII",                  speakers:"~10M devs", file:"sql.json"}
+];
+
+// Embedded sample token lists (top-10 of each for the detail panel)
+const TOKEN_SAMPLES = {
+  arabic:              [{token:"في",rom:"fī",gloss:"in / at"},{token:"من",rom:"min",gloss:"from / of"},{token:"إلى",rom:"ʾilā",gloss:"to / toward"},{token:"على",rom:"ʿalā",gloss:"on / upon"},{token:"أن",rom:"ʾan",gloss:"that / to"},{token:"هذا",rom:"hāḏā",gloss:"this (m.sg)"},{token:"ما",rom:"mā",gloss:"what / not"},{token:"كان",rom:"kāna",gloss:"was / were"},{token:"مع",rom:"maʿa",gloss:"with"},{token:"هو",rom:"huwa",gloss:"he / it"}],
+  egyptian_hieroglyphs:[{token:"𓂀",rom:"ir",gloss:"eye / see / do"},{token:"𓁹",rom:"hr",gloss:"face / upon"},{token:"𓅓",rom:"m",gloss:"in / as / from [owl]"},{token:"𓈖",rom:"n",gloss:"of / for [water]"},{token:"𓇋",rom:"i",gloss:"reed / I"},{token:"𓂋",rom:"r",gloss:"mouth / to / re"},{token:"𓊪",rom:"s",gloss:"bolt / lock"},{token:"𓋹",rom:"ankh",gloss:"life / living"},{token:"𓇳",rom:"ra",gloss:"sun / day"},{token:"𓄤",rom:"nfr",gloss:"good / beautiful"}],
+  kanji_radicals:      [{token:"一",rom:"ichi",gloss:"one"},{token:"人",rom:"hito",gloss:"person"},{token:"口",rom:"kuchi",gloss:"mouth"},{token:"土",rom:"tsuchi",gloss:"earth"},{token:"大",rom:"dai",gloss:"big"},{token:"女",rom:"onna",gloss:"woman"},{token:"子",rom:"ko",gloss:"child"},{token:"山",rom:"yama",gloss:"mountain"},{token:"火",rom:"hi",gloss:"fire"},{token:"心",rom:"kokoro",gloss:"heart / mind"}],
+  russian:             [{token:"и",rom:"i",gloss:"and"},{token:"в",rom:"v",gloss:"in / into"},{token:"не",rom:"ne",gloss:"not"},{token:"на",rom:"na",gloss:"on / at"},{token:"я",rom:"ya",gloss:"I"},{token:"что",rom:"chto",gloss:"what / that"},{token:"он",rom:"on",gloss:"he / it"},{token:"с",rom:"s",gloss:"with / from"},{token:"это",rom:"eto",gloss:"this / it"},{token:"как",rom:"kak",gloss:"how / as"}],
+  hindi:               [{token:"का",rom:"kā",gloss:"of (m)"},{token:"में",rom:"meṃ",gloss:"in"},{token:"की",rom:"kī",gloss:"of (f)"},{token:"है",rom:"hai",gloss:"is / am"},{token:"और",rom:"aur",gloss:"and"},{token:"एक",rom:"ek",gloss:"one / a"},{token:"यह",rom:"yah",gloss:"this / it"},{token:"से",rom:"se",gloss:"from / by"},{token:"को",rom:"ko",gloss:"to (dative)"},{token:"हैं",rom:"haiṃ",gloss:"are (pl/formal)"}],
+  japanese:            [{token:"の",rom:"no",gloss:"possessive particle"},{token:"に",rom:"ni",gloss:"in / at / to"},{token:"は",rom:"wa",gloss:"topic marker"},{token:"を",rom:"o",gloss:"object marker"},{token:"が",rom:"ga",gloss:"subject marker"},{token:"で",rom:"de",gloss:"at / by means of"},{token:"て",rom:"te",gloss:"verb connective"},{token:"も",rom:"mo",gloss:"also / too"},{token:"と",rom:"to",gloss:"and / with"},{token:"か",rom:"ka",gloss:"question particle"}],
+  german:              [{token:"die",rom:"",gloss:"the (f/pl)"},{token:"der",rom:"",gloss:"the (m.sg)"},{token:"und",rom:"",gloss:"and"},{token:"in",rom:"",gloss:"in / into"},{token:"den",rom:"",gloss:"the (m.acc)"},{token:"von",rom:"",gloss:"of / from"},{token:"zu",rom:"",gloss:"to / at"},{token:"das",rom:"",gloss:"the (n.sg)"},{token:"ist",rom:"",gloss:"is (3sg)"},{token:"mit",rom:"",gloss:"with"}],
+  french:              [{token:"le",rom:"",gloss:"the (m.sg)"},{token:"de",rom:"",gloss:"of / from"},{token:"un",rom:"",gloss:"a (m)"},{token:"être",rom:"",gloss:"to be"},{token:"et",rom:"",gloss:"and"},{token:"à",rom:"",gloss:"at / to"},{token:"il",rom:"",gloss:"he / it"},{token:"avoir",rom:"",gloss:"to have"},{token:"ne",rom:"",gloss:"not (1st part)"},{token:"je",rom:"",gloss:"I"}],
+  mandarin:            [{token:"的",rom:"de",gloss:"possessive particle"},{token:"一",rom:"yī",gloss:"one / a"},{token:"是",rom:"shì",gloss:"to be"},{token:"在",rom:"zài",gloss:"at / in"},{token:"不",rom:"bù",gloss:"not / no"},{token:"了",rom:"le",gloss:"aspect particle"},{token:"有",rom:"yǒu",gloss:"to have"},{token:"和",rom:"hé",gloss:"and / with"},{token:"人",rom:"rén",gloss:"person"},{token:"这",rom:"zhè",gloss:"this"}],
+  portuguese:          [{token:"de",rom:"",gloss:"of / from"},{token:"a",rom:"",gloss:"the (f) / to"},{token:"o",rom:"",gloss:"the (m)"},{token:"que",rom:"",gloss:"that / which"},{token:"e",rom:"",gloss:"and"},{token:"do",rom:"",gloss:"of the (m)"},{token:"da",rom:"",gloss:"of the (f)"},{token:"em",rom:"",gloss:"in / at"},{token:"para",rom:"",gloss:"for / to"},{token:"é",rom:"",gloss:"is (3sg)"}],
+  swahili:             [{token:"na",rom:"",gloss:"and / with"},{token:"ya",rom:"",gloss:"of (y-class)"},{token:"kwa",rom:"",gloss:"for / by"},{token:"ni",rom:"",gloss:"is / am (copula)"},{token:"wa",rom:"",gloss:"of (w-class)"},{token:"katika",rom:"",gloss:"in / inside"},{token:"au",rom:"",gloss:"or"},{token:"la",rom:"",gloss:"of (l-class)"},{token:"kuwa",rom:"",gloss:"to be"},{token:"hii",rom:"",gloss:"this (n-class)"}],
+  spanish:             [{token:"el",rom:"",gloss:"the (m.sg)"},{token:"la",rom:"",gloss:"the (f.sg)"},{token:"de",rom:"",gloss:"of / from"},{token:"que",rom:"",gloss:"that / which"},{token:"y",rom:"",gloss:"and"},{token:"en",rom:"",gloss:"in / at"},{token:"un",rom:"",gloss:"a (m)"},{token:"ser",rom:"",gloss:"to be (perm.)"},{token:"se",rom:"",gloss:"reflexive"},{token:"no",rom:"",gloss:"no / not"}],
+  runes:               [{token:"ᚠ",rom:"f",gloss:"Fehu — cattle / wealth"},{token:"ᚢ",rom:"u",gloss:"Uruz — ox / strength"},{token:"ᚦ",rom:"th",gloss:"Thurisaz — thorn / giant"},{token:"ᚨ",rom:"a",gloss:"Ansuz — god / speech"},{token:"ᚱ",rom:"r",gloss:"Raidho — ride / journey"},{token:"ᚲ",rom:"k",gloss:"Kenaz — torch / vision"},{token:"ᚷ",rom:"g",gloss:"Gebo — gift / exchange"},{token:"ᚹ",rom:"w",gloss:"Wunjo — joy / harmony"},{token:"ᚺ",rom:"h",gloss:"Hagalaz — hail / disruption"},{token:"ᚾ",rom:"n",gloss:"Nauthiz — need / necessity"}],
+  mathematical_symbols:[{token:"∑",rom:"Σ",gloss:"summation (sigma)"},{token:"∫",rom:"",gloss:"integral"},{token:"∂",rom:"",gloss:"partial derivative"},{token:"∞",rom:"",gloss:"infinity"},{token:"∇",rom:"nabla",gloss:"gradient / del"},{token:"∀",rom:"",gloss:"for all (universal)"},{token:"∃",rom:"",gloss:"there exists"},{token:"∈",rom:"",gloss:"element of"},{token:"∅",rom:"",gloss:"empty set"},{token:"ℝ",rom:"",gloss:"real numbers"}],
+  python:              [{token:"def",rom:"",gloss:"define a function"},{token:"class",rom:"",gloss:"define a class"},{token:"if",rom:"",gloss:"conditional branch"},{token:"for",rom:"",gloss:"iteration"},{token:"return",rom:"",gloss:"return value"},{token:"import",rom:"",gloss:"import module"},{token:"lambda",rom:"",gloss:"anonymous function"},{token:"yield",rom:"",gloss:"generator value"},{token:"async",rom:"",gloss:"async function"},{token:"with",rom:"",gloss:"context manager"}],
+  javascript:          [{token:"function",rom:"",gloss:"declare function"},{token:"const",rom:"",gloss:"constant binding"},{token:"let",rom:"",gloss:"mutable binding"},{token:"class",rom:"",gloss:"class definition"},{token:"async",rom:"",gloss:"async function"},{token:"await",rom:"",gloss:"await Promise"},{token:"=>",rom:"",gloss:"arrow function"},{token:"new",rom:"",gloss:"instantiate object"},{token:"this",rom:"",gloss:"current context"},{token:"typeof",rom:"",gloss:"type check"}],
+  c_language:          [{token:"int",rom:"",gloss:"integer type"},{token:"char",rom:"",gloss:"character type"},{token:"*",rom:"",gloss:"pointer"},{token:"struct",rom:"",gloss:"record type"},{token:"malloc",rom:"",gloss:"allocate memory"},{token:"sizeof",rom:"",gloss:"size in bytes"},{token:"#include",rom:"",gloss:"include header"},{token:"void",rom:"",gloss:"no type / no return"},{token:"static",rom:"",gloss:"static linkage"},{token:"extern",rom:"",gloss:"external linkage"}],
+  rust:                [{token:"fn",rom:"",gloss:"define function"},{token:"let",rom:"",gloss:"bind value"},{token:"mut",rom:"",gloss:"mutable binding"},{token:"match",rom:"",gloss:"pattern matching"},{token:"impl",rom:"",gloss:"implement trait"},{token:"trait",rom:"",gloss:"shared interface"},{token:"enum",rom:"",gloss:"algebraic type"},{token:"&",rom:"",gloss:"borrow / reference"},{token:"&mut",rom:"",gloss:"mutable borrow"},{token:"?",rom:"",gloss:"propagate error"}],
+  sql:                 [{token:"SELECT",rom:"",gloss:"retrieve columns"},{token:"FROM",rom:"",gloss:"source table"},{token:"WHERE",rom:"",gloss:"filter condition"},{token:"JOIN",rom:"",gloss:"combine tables"},{token:"GROUP BY",rom:"",gloss:"aggregate rows"},{token:"ORDER BY",rom:"",gloss:"sort result"},{token:"HAVING",rom:"",gloss:"post-aggregate filter"},{token:"WITH",rom:"",gloss:"CTE expression"},{token:"CASE",rom:"",gloss:"conditional expression"},{token:"UNION",rom:"",gloss:"combine result sets"}]
+};
+
+const INSIGHTS = [
+  "Egyptian Hieroglyphs tops all 19 systems at composite 8.7 — its three-way sign system (logogram + phonogram + determinative) scores a perfect 10 on both Lexical and Structural axes.",
+  "Arabic and Kanji Radicals both reach composite 8.3 via different paths: Arabic earns it from pharyngeal phonemics + trilateral root morphology; Kanji from radical-based semantic compression.",
+  "Rust scores a perfect 10 on Structural Complexity — the highest single-axis score among all programming languages — reflecting its ownership/borrow-checker compile-time type system.",
+  "Japanese has the smallest phoneme inventory of all 10 natural languages (Axis 1 = 3), yet earns a 9 on Lexical Density from its layered three-script writing system.",
+  "Symbolic systems average Lexical score 9.8 — outperforming all natural (7.3) and programming (5.8) languages — reflecting extreme symbol-to-meaning compression.",
+  "Spanish is the most accessible natural language in the dataset (composite 5.3) — its shallow orthography, consistent verb patterns, and two-gender system minimize structural load."
+];
+
+// ═══════════════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════════════
+let state = {
+  filter: "all",
+  sort: "composite",
+  selected: null
+};
+
+// ═══════════════════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════════════════
+function catColor(cat) {
+  return cat === "natural" ? "#58a6ff" : cat === "symbolic" ? "#d2a8ff" : "#3fb950";
+}
+
+function scoreColor(n) {
+  if (n >= 8.5) return "#f78166";
+  if (n >= 7.0) return "#d2a8ff";
+  if (n >= 5.5) return "#58a6ff";
+  return "#3fb950";
+}
+
+function axisColor(axis) {
+  return axis === 1 ? "#58a6ff" : axis === 2 ? "#d2a8ff" : "#3fb950";
+}
+
+function filtered() {
+  let list = state.filter === "all" ? LANGUAGES : LANGUAGES.filter(l => l.category === state.filter);
+  if (state.sort === "composite") list = [...list].sort((a,b) => b.composite - a.composite);
+  else if (state.sort === "axis_1") list = [...list].sort((a,b) => b.axis_1 - a.axis_1);
+  else if (state.sort === "axis_2") list = [...list].sort((a,b) => b.axis_2 - a.axis_2);
+  else if (state.sort === "axis_3") list = [...list].sort((a,b) => b.axis_3 - a.axis_3);
+  else if (state.sort === "name")   list = [...list].sort((a,b) => a.name.localeCompare(b.name));
+  return list;
+}
+
+function sortKey() {
+  return {composite:"composite",axis_1:"axis_1",axis_2:"axis_2",axis_3:"axis_3",name:"composite"}[state.sort];
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER: BAR LIST
+// ═══════════════════════════════════════════════════════
+function renderBarList() {
+  const list = filtered();
+  const key = sortKey();
+  const max = Math.max(...list.map(l => l[key]));
+  const container = document.getElementById("barList");
+  document.getElementById("barCount").textContent = list.length + " shown";
+
+  let sortLabel = state.sort === "name" ? "Composite Score" :
+    state.sort === "composite" ? "Composite Score" :
+    state.sort === "axis_1" ? "Phonemic (A1)" :
+    state.sort === "axis_2" ? "Lexical (A2)" : "Structural (A3)";
+  document.getElementById("barListTitle").textContent = `Languages — Ranked by ${sortLabel}`;
+
+  container.innerHTML = list.map((lang, i) => {
+    const val = lang[key];
+    const pct = (val / 10) * 100;
+    const cc = catColor(lang.category);
+    const isSelected = state.selected && state.selected.id === lang.id;
+    return `<div class="bar-row ${isSelected ? 'selected' : ''}" data-id="${lang.id}">
+      <div class="bar-name"><span class="cat-dot" style="background:${cc}"></span>${lang.name}</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:${pct}%;background:${cc};"></div>
+      </div>
+      <div class="bar-val">${val}</div>
+    </div>`;
+  }).join("");
+
+  container.querySelectorAll(".bar-row").forEach(row => {
+    row.addEventListener("click", () => {
+      const lang = LANGUAGES.find(l => l.id === row.dataset.id);
+      state.selected = lang;
+      render();
+    });
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER: RADAR CHART
+// ═══════════════════════════════════════════════════════
+function renderRadar() {
+  const canvas = document.getElementById("radarCanvas");
+  const ctx = canvas.getContext("2d");
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H/2;
+  const r = W * 0.38;
+  ctx.clearRect(0,0,W,H);
+
+  // Grid
+  for (let g = 2; g <= 10; g += 2) {
+    const gr = r * (g/10);
+    ctx.beginPath();
+    for (let a = 0; a < 3; a++) {
+      const ang = (a * 2*Math.PI/3) - Math.PI/2;
+      const x = cx + gr * Math.cos(ang);
+      const y = cy + gr * Math.sin(ang);
+      a === 0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.closePath();
+    ctx.strokeStyle = "#21262d";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+
+  // Axis lines + labels
+  const axisLabels = ["Phonemic\n(Axis 1)", "Lexical\n(Axis 2)", "Structural\n(Axis 3)"];
+  const axisColors = ["#58a6ff","#d2a8ff","#3fb950"];
+  for (let a = 0; a < 3; a++) {
+    const ang = (a * 2*Math.PI/3) - Math.PI/2;
+    const x = cx + r * Math.cos(ang);
+    const y = cy + r * Math.sin(ang);
+    ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(x,y);
+    ctx.strokeStyle = "#30363d"; ctx.lineWidth = 1; ctx.stroke();
+
+    const lx = cx + (r+26) * Math.cos(ang);
+    const ly = cy + (r+26) * Math.sin(ang);
+    ctx.fillStyle = axisColors[a];
+    ctx.font = "bold 10px 'Segoe UI', sans-serif";
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    const lines = axisLabels[a].split("\n");
+    ctx.fillText(lines[0], lx, ly - 6);
+    ctx.fillStyle = "#8b949e";
+    ctx.font = "9px 'Segoe UI', sans-serif";
+    ctx.fillText(lines[1], lx, ly + 6);
+  }
+
+  // Score value labels
+  for (let g = 2; g <= 10; g += 4) {
+    const gr = r * (g/10);
+    const ang = -Math.PI/2;
+    const lx = cx + gr * Math.cos(ang) - 4;
+    const ly = cy + gr * Math.sin(ang) - 6;
+    ctx.fillStyle = "#484f58"; ctx.font = "8px monospace"; ctx.textAlign="right";
+    ctx.fillText(g, lx, ly);
+  }
+
+  function drawShape(vals, fillColor, strokeColor) {
+    ctx.beginPath();
+    for (let a = 0; a < 3; a++) {
+      const ang = (a * 2*Math.PI/3) - Math.PI/2;
+      const rv = r * (vals[a]/10);
+      const x = cx + rv * Math.cos(ang);
+      const y = cy + rv * Math.sin(ang);
+      a === 0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.closePath();
+    ctx.fillStyle = fillColor; ctx.fill();
+    ctx.strokeStyle = strokeColor; ctx.lineWidth = 2; ctx.stroke();
+
+    // Dots
+    for (let a = 0; a < 3; a++) {
+      const ang = (a * 2*Math.PI/3) - Math.PI/2;
+      const rv = r * (vals[a]/10);
+      const x = cx + rv * Math.cos(ang);
+      const y = cy + rv * Math.sin(ang);
+      ctx.beginPath(); ctx.arc(x,y,4,0,2*Math.PI);
+      ctx.fillStyle = strokeColor; ctx.fill();
+    }
+  }
+
+  if (state.selected) {
+    const lang = state.selected;
+    const cc = catColor(lang.category);
+    const fill = cc + "33";
+    drawShape([lang.axis_1, lang.axis_2, lang.axis_3], fill, cc);
+    document.getElementById("radarLabel").textContent =
+      `${lang.name} — Composite ${lang.composite} · ${lang.script} · ${lang.speakers}`;
+  } else {
+    // Show category averages
+    const avgNatural  = [5.2, 7.3, 6.9];
+    const avgSymbolic = [5.0, 9.8, 8.0];
+    const avgProg     = [0.0, 5.8, 8.4];
+    drawShape(avgProg,     "#3fb95020", "#3fb950");
+    drawShape(avgSymbolic, "#d2a8ff20", "#d2a8ff");
+    drawShape(avgNatural,  "#58a6ff20", "#58a6ff");
+    document.getElementById("radarLabel").textContent = "Category averages: Natural · Symbolic · Programming";
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER: DETAIL PANEL
+// ═══════════════════════════════════════════════════════
+function renderDetail() {
+  const panel = document.getElementById("detailContent");
+  const title = document.getElementById("detailTitle");
+  const meta  = document.getElementById("detailMeta");
+  if (!state.selected) {
+    title.textContent = "Select a language to explore its token list";
+    meta.textContent = "";
+    panel.innerHTML = `<div class="placeholder"><span>🌐</span>Click any language in the ranked list to view its full token set.</div>`;
+    return;
+  }
+  const lang = state.selected;
+  title.textContent = lang.name + " — Token Samples";
+  meta.textContent = `${lang.script} · ${lang.speakers} speakers · Composite ${lang.composite}`;
+
+  const samples = TOKEN_SAMPLES[lang.id] || [];
+  const axisRows = [
+    {label:"Phonemic (A1)", val:lang.axis_1, axis:1},
+    {label:"Lexical (A2)", val:lang.axis_2, axis:2},
+    {label:"Structural (A3)", val:lang.axis_3, axis:3}
+  ];
+
+  panel.innerHTML = `
+    <div style="display:flex;gap:20px;padding:14px 18px 4px;flex-wrap:wrap;">
+      ${axisRows.map(ax => `
+        <div style="flex:1;min-width:140px;">
+          <div style="font-size:.72rem;color:var(--muted);margin-bottom:4px;">${ax.label}</div>
+          <div class="mini-bar-row">
+            <div class="mini-bar" style="height:10px;">
+              <div class="mini-fill" style="width:${ax.val*10}%;background:${axisColor(ax.axis)};height:100%;border-radius:6px;"></div>
+            </div>
+            <div class="mini-val" style="font-size:.85rem;font-weight:700;color:${axisColor(ax.axis)};">${ax.val}</div>
+          </div>
+        </div>
+      `).join("")}
+    </div>
+    <div class="token-grid">
+      ${samples.map((t,i) => `
+        <div class="token-card">
+          <div class="token-main">${t.token}</div>
+          ${t.rom ? `<div class="token-rom">${t.rom}</div>` : ""}
+          <div class="token-gloss">${t.gloss}</div>
+          <div class="token-rank">#${i+1}</div>
+        </div>
+      `).join("")}
+      <div class="token-card" style="align-items:center;justify-content:center;border-style:dashed;color:var(--muted);font-size:.72rem;">
+        + ${(lang.id === "runes" ? 14 : 40)} more tokens<br>in full dataset file
+      </div>
+    </div>
+  `;
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER: SCORE TABLE
+// ═══════════════════════════════════════════════════════
+function renderTable() {
+  const sorted = [...LANGUAGES].sort((a,b) => b.composite - a.composite);
+  const tbody = document.getElementById("scoreTableBody");
+  tbody.innerHTML = sorted.map((lang, i) => {
+    const cc = catColor(lang.category);
+    function miniBar(val, axis) {
+      return `<div class="mini-bar-row">
+        <div class="mini-bar"><div class="mini-fill" style="width:${val*10}%;background:${axisColor(axis)};"></div></div>
+        <div class="mini-val">${val}</div>
+      </div>`;
+    }
+    return `<tr>
+      <td class="rank-num">${i+1}</td>
+      <td><span class="cat-dot" style="background:${cc}"></span><strong>${lang.name}</strong></td>
+      <td><span style="color:${cc};font-size:.72rem;font-weight:600;">${lang.category}</span></td>
+      <td>${miniBar(lang.axis_1, 1)}</td>
+      <td>${miniBar(lang.axis_2, 2)}</td>
+      <td>${miniBar(lang.axis_3, 3)}</td>
+      <td><span class="score-chip" style="background:${scoreColor(lang.composite)}22;color:${scoreColor(lang.composite)};">${lang.composite}</span></td>
+    </tr>`;
+  }).join("");
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER: INSIGHTS
+// ═══════════════════════════════════════════════════════
+function renderInsights() {
+  document.getElementById("insightsList").innerHTML =
+    INSIGHTS.map(s => `<div class="insight-item">${s}</div>`).join("");
+}
+
+// ═══════════════════════════════════════════════════════
+//  MASTER RENDER
+// ═══════════════════════════════════════════════════════
+function render() {
+  renderBarList();
+  renderRadar();
+  renderDetail();
+}
+
+// ═══════════════════════════════════════════════════════
+//  EVENTS
+// ═══════════════════════════════════════════════════════
+document.querySelectorAll(".pill").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".pill").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    state.filter = btn.dataset.cat;
+    render();
+  });
+});
+
+document.getElementById("sortSelect").addEventListener("change", e => {
+  state.sort = e.target.value;
+  render();
+});
+
+// ═══════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════
+renderTable();
+renderInsights();
+render();
+</script>
+</body>
+</html>

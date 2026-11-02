@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TriadicFrameworks Module Schema",
+  "type": "object",
+
+  "properties": {
+    "module": {
+      "type": "object",
+      "required": ["name", "category", "summary", "purpose", "version"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "category": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "purpose": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "audience": { "type": "string" }
+      }
+    },
+
+    "roles": {
+      "type": "object",
+      "required": ["engine", "profile", "signature", "diagnostic", "map", "example", "index"],
+      "properties": {
+        "engine": { "type": "string" },
+        "profile": { "type": "string" },
+        "signature": { "type": "string" },
+        "diagnostic": { "type": "string" },
+        "map": { "type": "string" },
+        "example": { "type": "string" },
+        "extension": { "type": "string" },
+        "index": { "type": "string" },
+        "reference": { "type": "string" },
+        "template": { "type": "string" }
+      }
+    },
+
+    "analyzer_layer": {
+      "type": "object",
+      "properties": {
+        "operator": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "regime": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "cross-cutting": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "files": {
+      "type": "object",
+      "required": ["README"],
+      "properties": {
+        "README": { "type": "string" },
+        "capture": { "type": "string" },
+        "classify": { "type": "string" },
+        "operators": { "type": "string" },
+        "examples": { "type": "string" },
+        "paper": { "type": "string" },
+        "source": { "type": "string" }
+      }
+    },
+
+    "ai": {
+      "type": "object",
+      "required": ["module", "version", "purpose"],
+      "properties": {
+        "module": { "type": "string" },
+        "version": { "type": "string" },
+        "purpose": { "type": "string" },
+        "navigation": { "type": "string" },
+        "discussions": { "type": "string" },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "string" },
+            "youtube": { "type": "string" }
+          }
+        },
+        "license": { "type": "string" }
+      }
+    },
+
+    "citation": {
+      "type": "object",
+      "required": ["author", "publication_date", "title"],
+      "properties": {
+        "author": { "type": "string" },
+        "publication_date": { "type": "string" },
+        "title": { "type": "string" },
+        "subject": { "type": "string" }
+      }
+    }
+  },
+
+  "required": ["module", "roles", "analyzer_layer", "files", "ai", "citation"]
+}

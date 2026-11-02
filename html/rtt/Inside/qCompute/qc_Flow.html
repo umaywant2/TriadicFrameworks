@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/qCompute/qc_Flow.md">
+  <title>qCompute — Structural Pipeline Flow</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/qCompute/qc_Flow.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/qCompute/qc_Flow.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="qcompute-structural-pipeline-flow">qCompute — Structural Pipeline Flow</h1>
+<p><strong>File:</strong> qc_Flow.md<br>
+<strong>Layer:</strong> RTT‑Inside Compute Harness<br>
+<strong>Status:</strong> Canonical (2026)</p>
+<p>This document provides a <strong>narrative walkthrough</strong> of the qCompute structural pipeline.</p>
+<p>The pipeline is:</p>
+<pre><code>operator → validator → router → frame manager → drift engine → transitions → capture → replay
+</code></pre>
+<p>qCompute computes <strong>structure</strong>, not amplitudes.</p>
+<hr>
+<h1 id="1-operator-entry">1. Operator Entry</h1>
+<p>A structural operator enters the system:</p>
+<pre><code class="language-python">session.h(q=0)
+session.cx(q1=0, q2=1)
+session.pulse(q=0, duration=20, amplitude=0.5)
+session.measure(q=0)
+</code></pre>
+<p>Operators carry:</p>
+<ul>
+<li>name  </li>
+<li>parameters  </li>
+<li>resonance tier (r1 / r2 / r3)  </li>
+<li>drift characteristic  </li>
+<li>backend requirements  </li>
+</ul>
+<p>The operator is passed to the <strong>Validator</strong>.</p>
+<hr>
+<h1 id="2-validator">2. Validator</h1>
+<p>Validator enforces:</p>
+<ul>
+<li>grammar correctness  </li>
+<li>argument correctness  </li>
+<li>environment legality  </li>
+<li>tier legality  </li>
+<li>backend legality  </li>
+<li>token requirements  </li>
+<li>archive terminality  </li>
+</ul>
+<p>If invalid:</p>
+<pre><code>allowed: false
+reason: &quot;&lt;canonical reason&gt;&quot;
+</code></pre>
+<p>Invalid operators are captured but not executed.</p>
+<p>If valid, the operator proceeds to the <strong>Router</strong>.</p>
+<hr>
+<h1 id="3-router">3. Router</h1>
+<p>Router selects:</p>
+<ul>
+<li>backend  </li>
+<li>frame reuse vs. new frame  </li>
+<li>routing reason  </li>
+</ul>
+<p>Routing rules:</p>
+<ul>
+<li>r1 → <code>local-sim</code>  </li>
+<li>r2 → <code>hybrid-sim</code>  </li>
+<li>r3 → <code>hardware-qpu-2</code> (token required)  </li>
+</ul>
+<p>Router may:</p>
+<ul>
+<li>reuse current frame  </li>
+<li>escalate tier → open new frame  </li>
+<li>detect drift overflow → open new frame  </li>
+<li>detect measurement → open new frame  </li>
+</ul>
+<p>Router emits routing metadata and passes the operator to the <strong>Frame Manager</strong>.</p>
+<hr>
+<h1 id="4-frame-manager">4. Frame Manager</h1>
+<p>A <strong>frame</strong> is a structural container with:</p>
+<ul>
+<li>environment  </li>
+<li>backend  </li>
+<li>resonance profile  </li>
+<li>drift bound  </li>
+<li>drift summary  </li>
+<li>operator list  </li>
+</ul>
+<p>Frame Manager:</p>
+<ul>
+<li>opens frames  </li>
+<li>closes frames  </li>
+<li>enforces tier monotonicity  </li>
+<li>enforces backend consistency  </li>
+<li>enforces environment legality  </li>
+</ul>
+<p>Triggers for new frame:</p>
+<ul>
+<li>first operator  </li>
+<li>tier escalation  </li>
+<li>tier decrease (measurement)  </li>
+<li>r3 operator  </li>
+<li>drift overflow  </li>
+<li>meta operator  </li>
+<li>environment transition  </li>
+</ul>
+<p>The operator is appended to the active frame and passed to the <strong>Drift Engine</strong>.</p>
+<hr>
+<h1 id="5-drift-engine">5. Drift Engine</h1>
+<p>Drift Engine computes:</p>
+<ul>
+<li>predicted drift  </li>
+<li>measured drift  </li>
+<li>accumulated drift  </li>
+</ul>
+<p>Drift bounds:</p>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Drift Bound</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sandbox</td>
+<td>relaxed</td>
+</tr>
+<tr>
+<td>production</td>
+<td>strict</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>immutable</td>
+</tr>
+</tbody>
+</table>
+<p>If drift exceeds bound:</p>
+<ul>
+<li>frame closes  </li>
+<li>new frame opens  </li>
+<li>operator is routed into new frame  </li>
+</ul>
+<p>Drift metadata is appended and the operator proceeds to <strong>Transitions</strong>.</p>
+<hr>
+<h1 id="6-transition-engine">6. Transition Engine</h1>
+<p>Transitions are explicit:</p>
+<pre><code class="language-python">session.transition(&quot;production&quot;)
+session.transition(&quot;archive&quot;)
+</code></pre>
+<p>Rules:</p>
+<ul>
+<li>sandbox → production (token required)  </li>
+<li>production → archive (token required)  </li>
+<li>archive → (forbidden)  </li>
+</ul>
+<p>Transition Engine:</p>
+<ul>
+<li>closes current frame  </li>
+<li>updates environment  </li>
+<li>updates drift bound  </li>
+<li>updates backend legality  </li>
+<li>appends lineage  </li>
+</ul>
+<p>Transition events are passed to <strong>Capture</strong>.</p>
+<hr>
+<h1 id="7-capture-engine">7. Capture Engine</h1>
+<p>Capture writes an append‑only <code>.qtrace</code> ledger.</p>
+<p>Each operator produces:</p>
+<ul>
+<li>operator entry  </li>
+<li>validation metadata  </li>
+<li>routing metadata  </li>
+<li>drift metadata  </li>
+<li>timestamp  </li>
+<li>hash_prev / hash_self  </li>
+</ul>
+<p>Each frame produces:</p>
+<ul>
+<li>frame summary  </li>
+<li>drift summary  </li>
+<li>operator list  </li>
+<li>timestamps  </li>
+</ul>
+<p>Each transition produces:</p>
+<ul>
+<li>from / to  </li>
+<li>token used  </li>
+<li>timestamp  </li>
+</ul>
+<p>Capture writes:</p>
+<ol>
+<li>header  </li>
+<li>operator entries  </li>
+<li>frame summaries  </li>
+<li>transitions  </li>
+<li>footer  </li>
+<li>hash chain root  </li>
+</ol>
+<p>The <code>.qtrace</code> file is the <strong>source of truth</strong>.</p>
+<hr>
+<h1 id="8-replay-engine">8. Replay Engine</h1>
+<p>Replay reconstructs:</p>
+<ul>
+<li>session  </li>
+<li>frames  </li>
+<li>operators  </li>
+<li>transitions  </li>
+<li>lineage  </li>
+<li>drift accumulation  </li>
+<li>backend binding  </li>
+<li>tier monotonicity  </li>
+</ul>
+<p>Replay verifies:</p>
+<ul>
+<li>hash chain integrity  </li>
+<li>environment legality  </li>
+<li>drift bounds  </li>
+<li>transition correctness  </li>
+<li>archive terminality  </li>
+<li>canonical field presence  </li>
+</ul>
+<p>Replay is deterministic and read‑only.</p>
+<hr>
+<h1 id="9-full-pipeline-diagram-textual">9. Full Pipeline Diagram (Textual)</h1>
+<pre><code>┌──────────────────────────────────────────────────────────────┐
+│                        Operator Entry                         │
+└───────────────┬──────────────────────────────────────────────┘
+                ▼
+        ┌──────────────┐
+        │   Validator   │  grammar, args, env, tier, backend, token
+        └───────┬──────┘
+                ▼
+        ┌──────────────┐
+        │    Router     │  backend, frame reuse/new, tier escalation
+        └───────┬──────┘
+                ▼
+        ┌──────────────┐
+        │ Frame Manager │  open/close frames, tier monotonicity
+        └───────┬──────┘
+                ▼
+        ┌──────────────┐
+        │ Drift Engine  │  predicted/measured drift, overflow
+        └───────┬──────┘
+                ▼
+        ┌──────────────┐
+        │  Transitions  │  env changes, lineage, token use
+        └───────┬──────┘
+                ▼
+        ┌──────────────┐
+        │   Capture     │  append-only .qtrace ledger
+        └───────┬──────┘
+                ▼
+        ┌──────────────┐
+        │    Replay     │  reconstruct + verify invariants
+        └──────────────┘
+</code></pre>
+<hr>
+<h1 id="10-summary">10. Summary</h1>
+<p>The qCompute pipeline:</p>
+<ul>
+<li>validates  </li>
+<li>routes  </li>
+<li>frames  </li>
+<li>accumulates drift  </li>
+<li>transitions environments  </li>
+<li>captures a ledger  </li>
+<li>replays and verifies  </li>
+</ul>
+<p>qCompute is the <strong>structural compute harness</strong> of RTT‑Inside.</p>
+  </main>
+</body>
+</html>

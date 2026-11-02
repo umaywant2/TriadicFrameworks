@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Crystal_Mycelial_Engine/teaching/exercises/exercise_03_mlr.md">
+  <title>Exercise 03 — MLR (Mineral Lock‑In Regime)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Crystal_Mycelial_Engine/teaching/exercises/exercise_03_mlr.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Crystal_Mycelial_Engine/teaching/exercises/exercise_03_mlr.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="exercise-03-mlr-mineral-lockin-regime"><strong>Exercise 03 — MLR (Mineral Lock‑In Regime)</strong></h1>
+<h3 id="crystalmycelial-engine-teaching-exercise-series"><em>Crystal–Mycelial Engine — Teaching Exercise Series</em></h3>
+<hr>
+<h2 id="1-objective"><strong>1. Objective</strong></h2>
+<p>Students will implement the <strong>Mineral Lock‑In Regime (MLR)</strong> stage of the CME pipeline by:</p>
+<ul>
+<li>propagating mineral lattice fronts  </li>
+<li>encoding domain memory  </li>
+<li>producing the canonical <code>mineral_map</code> substrate  </li>
+</ul>
+<p>This exercise introduces <strong>P</strong> and <strong>M</strong> operator families in their mineral‑domain context.</p>
+<hr>
+<h2 id="2-regime-summary-mlr"><strong>2. Regime Summary — MLR</strong></h2>
+<p><strong>MLR</strong> models the final transition into mineral lattice logic:</p>
+<ul>
+<li>crystal lattice propagation  </li>
+<li>domain formation  </li>
+<li>impurity‑band memory encoding  </li>
+<li>resonance‑locked geometry  </li>
+</ul>
+<p><strong>Envelope Targets</strong>
+- supersaturation: <strong>≥ 0.85</strong><br>
+- thermal shift: <strong>−3 to −5 °C</strong><br>
+- resonance alignment: <strong>TRUE</strong></p>
+<hr>
+<h2 id="3-required-operators"><strong>3. Required Operators</strong></h2>
+<p>Students must use:</p>
+<ul>
+<li><code>P.front_propagate</code> — propagate the mineral lattice front  </li>
+<li><code>M.domain_memory</code> — encode memory into mineral domains  </li>
+</ul>
+<p>These produce the canonical <code>mineral_map</code> structure.</p>
+<hr>
+<h2 id="4-expected-output-structure"><strong>4. Expected Output Structure</strong></h2>
+<p>The student’s agent should return:</p>
+<pre><code class="language-python">mineral_map = {
+    &quot;lattice&quot;: &lt;data&gt;,
+    &quot;domains&quot;: &lt;data&gt;
+}
+</code></pre>
+<p>Values may be placeholders or simulated data depending on lesson level.</p>
+<hr>
+<h2 id="5-starter-scaffold"><strong>5. Starter Scaffold</strong></h2>
+<pre><code class="language-python">class MineralDomainAgent:
+    def crystallize(self, hybrid_layer):
+        &quot;&quot;&quot;
+        Implement the Mineral Lock-In Regime (MLR).
+        Required:
+            P.front_propagate
+            M.domain_memory
+        Output:
+            mineral_map
+        &quot;&quot;&quot;
+        mineral_map = {
+            &quot;lattice&quot;: None,
+            &quot;domains&quot;: None
+        }
+
+        # TODO: call P.front_propagate
+        # TODO: call M.domain_memory
+
+        return mineral_map
+</code></pre>
+<hr>
+<h2 id="6-student-tasks"><strong>6. Student Tasks</strong></h2>
+<ol>
+<li>Accept <code>hybrid_layer</code> from Exercise 02.  </li>
+<li>Implement <code>P.front_propagate</code> to generate lattice propagation.  </li>
+<li>Implement <code>M.domain_memory</code> to encode domain memory.  </li>
+<li>Store results in <code>mineral_map</code>.  </li>
+<li>Print the resulting <code>mineral_map</code> for inspection.  </li>
+<li>Verify envelope targets (supersaturation ≥ 0.85, thermal shift −3 to −5 °C).  </li>
+</ol>
+<hr>
+<h2 id="7-completion-criteria"><strong>7. Completion Criteria</strong></h2>
+<p>A student has successfully completed Exercise 03 when:</p>
+<ul>
+<li><code>mineral_map["lattice"]</code> contains a lattice propagation structure  </li>
+<li><code>mineral_map["domains"]</code> contains domain memory data  </li>
+<li>envelope targets are acknowledged  </li>
+<li>code runs without errors  </li>
+</ul>
+  </main>
+</body>
+</html>

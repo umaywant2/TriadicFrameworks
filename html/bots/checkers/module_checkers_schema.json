@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/module_checkers_state.json",
+  "title": "RTT Checkers StateEmitter",
+  "description": "Triadic state output for a checkers position.",
+  "type": "object",
+
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "module_id": { "type": "string" },
+        "position_id": { "type": "string" },
+        "side_to_move": { "type": "string", "enum": ["X", "O"] }
+      },
+      "required": ["module_id", "position_id", "side_to_move"]
+    },
+
+    "board": {
+      "type": "array",
+      "description": "Dark squares only; each entry is a piece or empty.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "square": { "type": "string" },
+          "player": { "type": "string", "enum": ["X", "O", "."] },
+          "kind": {
+            "type": "string",
+            "enum": ["man", "king", "."]
+          }
+        },
+        "required": ["square", "player", "kind"]
+      }
+    },
+
+    "legal_moves": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "lumen": {
+      "type": "object",
+      "properties": {
+        "piece_balance": {
+          "type": "string",
+          "enum": ["ahead", "equal", "behind"]
+        },
+        "ladder_topology": {
+          "type": "string",
+          "enum": ["none", "weak", "stable", "strong"]
+        },
+        "king_presence": {
+          "type": "string",
+          "enum": ["none", "single", "multiple"]
+        },
+        "tempo_pressure": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        }
+      },
+      "required": ["piece_balance", "ladder_topology", "king_presence", "tempo_pressure"]
+    },
+
+    "regime": {
+      "type": "array",
+      "description": "Hephaestus regime classification per move.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "move": { "type": "string" },
+          "regime": {
+            "type": "string",
+            "enum": ["local", "structural", "continuity"]
+          }
+        },
+        "required": ["move", "regime"]
+      }
+    },
+
+    "ancestry": {
+      "type": "array",
+      "description": "Aurion ancestry signals across the position.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sequence": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "collapse_signature": { "type": "boolean" },
+          "projection_loss": { "type": "boolean" }
+        },
+        "required": ["sequence", "collapse_signature", "projection_loss"]
+      }
+    },
+
+    "drift": {
+      "type": "object",
+      "description": "Continuity drift across the positional plan.",
+      "properties": {
+        "direction": { "type": "string" },
+        "strength": {
+          "type": "string",
+          "enum": ["none", "weak", "medium", "strong"]
+        }
+      },
+      "required": ["direction", "strength"]
+    },
+
+    "risk": {
+      "type": "object",
+      "properties": {
+        "paradox": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        },
+        "collapse": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        },
+        "projection_loss": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"]
+        }
+      },
+      "required": ["paradox", "collapse", "projection_loss"]
+    },
+
+    "triadic_score": {
+      "type": "object",
+      "properties": {
+        "local": { "type": "number", "minimum": 0, "maximum": 1 },
+        "structural": { "type": "number", "minimum": 0, "maximum": 1 },
+        "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "risk": { "type": "number", "minimum": 0, "maximum": 1 },
+        "final": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["local", "structural", "continuity", "risk", "final"]
+    },
+
+    "timeline": {
+      "type": "array",
+      "description": "Move history.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ply": { "type": "integer" },
+          "move": { "type": "string" },
+          "player": { "type": "string" }
+        },
+        "required": ["ply", "move", "player"]
+      }
+    }
+  },
+
+  "required": [
+    "metadata",
+    "board",
+    "legal_moves",
+    "lumen",
+    "regime",
+    "ancestry",
+    "drift",
+    "risk",
+    "triadic_score"
+  ]
+}

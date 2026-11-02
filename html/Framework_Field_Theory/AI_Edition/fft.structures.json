@@ -1,0 +1,86 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.structures",
+  "title": "FFT — Structural Definitions v1.33",
+  "structures": {
+    "TriadicField": {
+      "components": [
+        "phi",
+        "V",
+        "R"
+      ],
+      "invariant": "INV-001"
+    },
+    "ResonanceTriad": {
+      "components": [
+        "f_R",
+        "tau_R",
+        "Q_R"
+      ],
+      "interpretation": "resonant frequency, relaxation time, quality/coherence"
+    },
+    "SNRPartition": {
+      "components": [
+        "S",
+        "N",
+        "R"
+      ],
+      "rule": "S+N+R=1.0 at any snapshot",
+      "invariant": "INV-007"
+    },
+    "SETField": {
+      "components": [
+        "Spin",
+        "Electro-field",
+        "Temperature"
+      ],
+      "invariant": "INV-010"
+    },
+    "DCOScaffold": {
+      "dimensions": [
+        "4D",
+        "5D",
+        "7D",
+        "8D",
+        "9D"
+      ],
+      "invariant": "INV-009"
+    },
+    "QMROOTLadder": {
+      "levels": [
+        "0D",
+        "1D",
+        "2D",
+        "3+1D"
+      ],
+      "root": "Silence S=0+",
+      "invariant": "INV-013"
+    },
+    "C_frame": {
+      "formula": "C_frame = Phi(S)/Psi(N)",
+      "role": "framing ratio — silence strength over noise entropy",
+      "invariant": "INV-003"
+    },
+    "C_clarity": {
+      "formula": "C_clarity = nabla_tau(R) + nabla_R(tau)",
+      "role": "dual operator clarity — 4D+5D composite",
+      "invariant": "INV-003"
+    }
+  },
+  "invariants_checked": [
+    "INV-001",
+    "INV-007",
+    "INV-009",
+    "INV-010",
+    "INV-013"
+  ],
+  "patch": "1.33-p1"
+}

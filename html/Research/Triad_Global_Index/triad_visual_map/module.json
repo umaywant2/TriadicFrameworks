@@ -1,0 +1,21 @@
+{
+  "module": "Triad_Visual_Map",
+  "name": "Triad Visual Map",
+  "summary": "ASCII-based structural visualization of the Triad system, showing Scanner → O.H.S.H.I.T. → Atlas and their geometric relationships.",
+  "category": "intelligence-visual",
+  "version": "1.0",
+  "purpose": "Provide a visual structural representation of the Triad pipeline, its seven-axis manifold, subsystem roles, and integration with the Intelligence Class Ladder.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@triad.map.render",
+    "@triad.map.pipeline",
+    "@triad.map.manifold",
+    "@triad.map.surface",
+    "@triad.map.integration"
+  ],
+  "lineage": {
+    "upstream": ["Triad_Global_Index"],
+    "downstream": ["Ladder_Overview", "Ladder_Visual_Map"]
+  }
+}

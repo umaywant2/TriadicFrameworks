@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Core Metadata -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-08-06">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<!-- Identity -->
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<!-- Description & Keywords -->
+<meta name="description"
+      content="Cadence Library — a unified collection of TriadicFrameworks speech cadences including scientific, comedic, leadership, mythic, and RTT‑canon voices. Provides cross‑cadence alignment, DOC_MAP registry, module navigation, and substrate‑aligned cadence architecture.">
+<meta name="keywords"
+      content="cadence library, TriadicFrameworks, RTT cadence, speech cadences, operators, substrate alignment, DOC_MAP, cadence registry, scientific cadence, comedic cadence, leadership cadence, pantheon cadence">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://docs.triadicframeworks.org/CadenceLibrary/">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow">
+
+<!-- Theme -->
+<meta name="theme-color" content="#111">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Cadence Library — TriadicFrameworks">
+<meta property="og:url" content="https://docs.triadicframeworks.org/CadenceLibrary/">
+<meta property="og:description"
+      content="Unified TriadicFrameworks cadence module — scientific, comedic, leadership, mythic, and RTT‑canon voices with DOC_MAP registry and substrate‑aligned architecture.">
+<meta property="og:image" content="https://docs.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cadence Library — TriadicFrameworks">
+<meta name="twitter:description"
+      content="Unified TriadicFrameworks cadence module — scientific, comedic, leadership, mythic, and RTT‑canon voices.">
+<meta name="twitter:image" content="https://docs.triadicframeworks.org/assets/og-image.png">
+
+<!-- Citation Metadata -->
+<meta name="citation_title" content="Cadence Library">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="cadence, speech architecture, operators, substrate alignment, scientific cadence, comedic cadence, leadership cadence, pantheon cadence">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="Cadence Library Module">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Provide unified cadence architecture for TriadicFrameworks, including scientific, comedic, leadership, mythic, and RTT‑canon voices with DOC_MAP registry and cross‑cadence alignment.">
+<meta name="ai.keywords"
+      content="cadence library, cadence operators, substrate alignment, DOC_MAP, cadence registry, scientific cadence, comedic cadence, leadership cadence, pantheon cadence">
+<meta name="ai.audience" content="students, researchers, developers, creators, AI systems">
+<meta name="ai.navigation" content="https://docs.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<!-- Module-Specific -->
+<meta name="ai.module.name" content="Cadence Library">
+<meta name="ai.module.summary"
+      content="Unified TriadicFrameworks cadence module: scientific (Sagan, Tyson, Hawking), comedic (Williams, Carlin, Pryor, Kinison, Chappelle), leadership (Jobs, MLK, JP Morgan, Pope Leo, Morgan Freeman), mythic (Pantheon), RTT‑canon, DOC_MAP registry, cross‑cadence alignment, and substrate‑aligned architecture.">
+<meta name="ai.module.category" content="tf-cadence">
+
+<!-- Favicon -->
+<link rel="preload" as="image" href="https://docs.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://docs.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://docs.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://docs.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Cadence Library | TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
+
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Neon headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
+}
+
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
+
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+   <details>
+     <summary><h2>🎤 Cadence Library | RTT/1</h2></summary>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://docs.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+   </details>
+   <details>
+     <summary><h3>🧩 Core Cadences</h3></summary>
+      <a href="#CARL_SAGAN">🌌 Carl Sagan</a>
+      <a href="#NEIL_DEGRASSE_TYSON">🌠 Neil deGrasse Tyson</a>
+      <a href="#STEPHEN_HAWKING">🪐 Stephen Hawking</a>
+      <a href="#NIKOLA_TESLA">⚡ Nikola Tesla</a>
+   </details>
+   <details>
+     <summary><h3>🎭 Performance Cadences</h3></summary>
+      <a href="#ROBIN_WILLIAMS">🤹 Robin Williams</a>
+      <a href="#GEORGE_CARLIN">🎤 George Carlin</a>
+      <a href="#SAM_KINISON">🔥 Sam Kinison</a>
+      <a href="#RICHARD_PRYOR">⚡ Richard Pryor</a>
+      <a href="#DAVE_CHAPPELLE">🎙️ Dave Chappelle</a>
+   </details>
+   <details>
+     <summary><h3>🏛️ Leadership Cadences</h3></summary>
+      <a href="#JP_MORGAN">🏦 JP Morgan</a>
+      <a href="#STEVE_JOBS">🖤 Steve Jobs</a>
+      <a href="#MLK">🕊️ MLK</a>
+      <a href="#POPE_LEO">✝️ Pope Leo</a>
+      <a href="#MORGAN_FREEMAN">🌌 Morgan Freeman</a>
+   </details>
+   <details>
+     <summary><h3>🔱 TriadicFrameworks Cadences</h3></summary>
+      <a href="#RTT_CANON">🔷 RTT Canon</a>
+      <a href="#TRIADICFRAMEWORKS_PANTHEON">🜂 Pantheon Cadence</a>
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
+      <a href="https://docs.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://docs.triadicframeworks.org/education/awareness/">🚸 Awareness | RTT</a>
+      <a href="https://docs.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://docs.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://docs.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://docs.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT CLI Tools</a>
+      <a href="https://docs.triadicframeworks.org/schemas/">🕸️ Schemas | RTT</a>
+      <a href="https://docs.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a> 
+      <a href="https://docs.triadicframeworks.org/energy/">🎭 Energy Reframed | RTT</a>
+      <a href="https://docs.triadicframeworks.org/lactos/">🎨 LACTOS | RTT</a>
+      <a href="https://docs.triadicframeworks.org/Mode/">🎛️ Mode| RTT</a>
+      <a href="https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://docs.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://docs.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://docs.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   </details>
+    <!-- Session Context Block -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/CadenceLibrary — Session Context block                -->
+<!-- Canonical RTT/1-aligned session context                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="cadence-session-header"
+         data-rtt="cadence"
+         data-coherence="stable"
+         data-drift="bounded"
+         data-regime="structural">
+
+   <details>
+     <summary><h2>Session Context</h2></summary>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (tf‑cadence)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      DOC_MAP ↔ cadence registry ↔ categories ↔ examples ↔ integration ↔ navigation
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">bounded (cadence‑grammar locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (cross‑cadence architecture)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (cadence‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + DOC_MAP + navigation</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (CadenceLibrary root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + cadence‑aware + substrate‑aligned</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + researchers + developers + creators + AIs</span>
+
+  </div>
+   </details>
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#111;color:#fff;
+            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🎤 Cadence Library • MODULE • v1.0<br>🔷 Unified TriadicFrameworks Cadence Architecture Active
+</div>
+
+  </nav>
+
+  <!-- ═══════════ Main Content ═══════════ -->
+  <main>
+    <div id="content">
+      <div class="loading">Loading module…</div>
+    </div>
+  </main>
+
+  <!-- ═══════════ Script ═══════════ -->
+  <script>
+    // ── DOC_MAP ──
+    const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      CARL_SAGAN: 'Carl_Sagan_Cadence.md',
+      DAVE_CHAPPELLE: 'Dave_Chappele_Cadence.md',
+      GEORGE_CARLIN: 'George_Carlin_Cadence.md',
+      JP_MORGAN: 'JP_Morgan_Cadence.md',
+      MLK: 'MLK_Cadence.md',
+      MORGAN_FREEMAN: 'Morgan_Freeman_Cadence.md',
+      NEIL_DEGRASSE_TYSON: 'Neil_deGrasse_Tyson_Cadence.md',
+      NIKOLA_TESLA: 'Nikola_Tesla_Cadence.md',
+      POPE_LEO: 'Pope_Leo_Cadence.md',
+      RICHARD_PRYOR: 'Richard_Pryor_Cadence.md',
+      ROBIN_WILLIAMS: 'Robin_Williams_Cadence.md',
+      RTT_CANON: 'RTT_Canon_Cadence.md',
+      SAM_KINISON: 'Sam_Kinison_Cadence.md',
+      STEPHEN_HAWKING: 'Stephen_Hawking_Cadence.md',
+      STEVE_JOBS: 'Steve_Jobs_Cadence.md',
+      TRIADICFRAMEWORKS_PANTHEON: 'TriadicFrameworks_Pantheon_Cadence.md'
+};
+
+  const contentEl = document.getElementById('content');
+
+    // ── Load document by key ──
+    async function loadDoc(key) {
+      const file = DOC_MAP[key];
+      if (!file) {
+        contentEl.innerHTML = '<p style="color:var(--text-dim);">Document not found.</p>';
+        return;
+      }
+
+      contentEl.innerHTML = '<div class="loading">Loading module…</div>';
+
+      try {
+        const res = await fetch(file);
+        if (!res.ok) throw new Error(res.statusText);
+        const md = await res.text();
+        contentEl.innerHTML = marked.parse(md);
+      } catch (err) {
+        contentEl.innerHTML =
+          '<p style="color:#c44;">Failed to load <code>' + file + '</code>: ' + err.message + '</p>';
+      }
+
+      // Highlight active nav link
+      document.querySelectorAll('nav a').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + key);
+      });
+
+      // Scroll content to top
+      document.querySelector('main').scrollTop = 0;
+    }
+
+    // ── Hash routing ──
+    function loadFromHash() {
+      const key = location.hash.replace('#', '') || 'README';
+      loadDoc(key);
+    }
+
+    window.addEventListener('hashchange', loadFromHash);
+    window.addEventListener('DOMContentLoaded', loadFromHash);
+  </script>
+
+</body>
+</html>

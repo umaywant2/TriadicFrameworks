@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/identity/runtime-analyzers.json.md">
+  <title>🌌 runtime-analyzers.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/identity/runtime-analyzers.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/identity/runtime-analyzers.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="runtime-analyzersjson">🌌 <strong>runtime-analyzers.json</strong></h1>
+<h3 id="machinereadable-registry-of-analyzers-and-their-operator-sets"><em>Machine‑readable registry of analyzers and their operator sets</em></h3>
+<pre><code class="language-json">{
+  &quot;identity&quot;: &quot;substrate-runtime-analyzers&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;analyzers&quot;: [
+    {
+      &quot;id&quot;: &quot;stability_analyzer&quot;,
+      &quot;label&quot;: &quot;Stability Analyzer&quot;,
+      &quot;operators&quot;: {
+        &quot;lumen&quot;: [&quot;STRUCTURE/EXTRACT&quot;, &quot;PRESSURE/GRADIENT&quot;, &quot;CONTINUITY/ANCHOR&quot;],
+        &quot;hephaestus&quot;: [&quot;REGIME/STRUCTURAL&quot;, &quot;REGIME/CONTINUITY&quot;],
+        &quot;aurion&quot;: [&quot;PROJECTION/LOSS&quot;, &quot;COLLAPSE/DETECT&quot;],
+        &quot;harmonia&quot;: [&quot;TRIADIC/BLEND&quot;, &quot;RESONANCE/SCORE&quot;]
+      },
+      &quot;layers&quot;: [&quot;resonance&quot;, &quot;continuity&quot;, &quot;drift&quot;, &quot;coherence&quot;],
+      &quot;hooks&quot;: [&quot;resonance_shift&quot;, &quot;propagation_cycle&quot;, &quot;drift_spike&quot;, &quot;invariance_break&quot;]
+    },
+
+    {
+      &quot;id&quot;: &quot;invariance_analyzer&quot;,
+      &quot;label&quot;: &quot;Invariance Analyzer&quot;,
+      &quot;operators&quot;: {
+        &quot;lumen&quot;: [&quot;INFLUENCE/FIELD&quot;, &quot;CONTINUITY/ANCHOR&quot;],
+        &quot;hephaestus&quot;: [&quot;REGIME/CONTINUITY&quot;],
+        &quot;aurion&quot;: [&quot;TOPOLOGY/GRAPH&quot;, &quot;ANCESTRY/TRAIL&quot;],
+        &quot;harmonia&quot;: [&quot;INVARIANCE/SEAL&quot;]
+      },
+      &quot;layers&quot;: [&quot;dimensional&quot;, &quot;regime&quot;, &quot;cross_cutting&quot;],
+      &quot;hooks&quot;: [&quot;invariance_break&quot;, &quot;invariance_restore&quot;, &quot;sync_event&quot;, &quot;state_update&quot;]
+    },
+
+    {
+      &quot;id&quot;: &quot;epoch_analyzer&quot;,
+      &quot;label&quot;: &quot;Epoch Analyzer&quot;,
+      &quot;operators&quot;: {
+        &quot;lumen&quot;: [&quot;PRESSURE/GRADIENT&quot;],
+        &quot;hephaestus&quot;: [&quot;REGIME/LOCAL&quot;, &quot;REGIME/STRUCTURAL&quot;],
+        &quot;aurion&quot;: [&quot;ANCESTRY/TRAIL&quot;, &quot;COLLAPSE/DETECT&quot;],
+        &quot;harmonia&quot;: [&quot;RESONANCE/SCORE&quot;, &quot;CONTINUITY/WEIGHT&quot;]
+      },
+      &quot;layers&quot;: [&quot;epoch&quot;, &quot;drift&quot;, &quot;coherence&quot;],
+      &quot;hooks&quot;: [&quot;epoch_transition&quot;, &quot;propagation_cycle&quot;, &quot;resonance_shift&quot;, &quot;ignition_trigger&quot;]
+    },
+
+    {
+      &quot;id&quot;: &quot;coupling_analyzer&quot;,
+      &quot;label&quot;: &quot;Coupling Analyzer&quot;,
+      &quot;operators&quot;: {
+        &quot;lumen&quot;: [&quot;INFLUENCE/FIELD&quot;],
+        &quot;hephaestus&quot;: [&quot;REGIME/STRUCTURAL&quot;],
+        &quot;aurion&quot;: [&quot;TOPOLOGY/GRAPH&quot;],
+        &quot;harmonia&quot;: [&quot;TRIADIC/BLEND&quot;]
+      },
+      &quot;layers&quot;: [&quot;coupling&quot;, &quot;drift&quot;, &quot;resonance&quot;],
+      &quot;hooks&quot;: [&quot;drift_spike&quot;, &quot;resonance_surge&quot;, &quot;coupling_instability&quot;]
+    },
+
+    {
+      &quot;id&quot;: &quot;continuity_analyzer&quot;,
+      &quot;label&quot;: &quot;Continuity Analyzer&quot;,
+      &quot;operators&quot;: {
+        &quot;lumen&quot;: [&quot;CONTINUITY/ANCHOR&quot;],
+        &quot;hephaestus&quot;: [&quot;REGIME/CONTINUITY&quot;],
+        &quot;aurion&quot;: [&quot;ANCESTRY/TRAIL&quot;],
+        &quot;harmonia&quot;: [&quot;CONTINUITY/WEIGHT&quot;]
+      },
+      &quot;layers&quot;: [&quot;continuity&quot;, &quot;regime&quot;, &quot;cross_cutting&quot;],
+      &quot;hooks&quot;: [&quot;cycle_report&quot;, &quot;sync_event&quot;, &quot;invariance_restore&quot;]
+    },
+
+    {
+      &quot;id&quot;: &quot;telemetry_analyzer&quot;,
+      &quot;label&quot;: &quot;Telemetry Analyzer&quot;,
+      &quot;operators&quot;: {
+        &quot;lumen&quot;: [&quot;STRUCTURE/EXTRACT&quot;],
+        &quot;aurion&quot;: [&quot;TOPOLOGY/GRAPH&quot;],
+        &quot;harmonia&quot;: [&quot;TRIADIC/BLEND&quot;]
+      },
+      &quot;layers&quot;: [&quot;monitor&quot;, &quot;cross_cutting&quot;],
+      &quot;hooks&quot;: [&quot;telemetry_packet&quot;, &quot;anomaly_alert&quot;, &quot;cycle_report&quot;]
+    }
+  ],
+
+  &quot;meta&quot;: {
+    &quot;canonical&quot;: true,
+    &quot;triadic_era&quot;: &quot;R5&quot;,
+    &quot;notes&quot;: &quot;Machine-readable registry of all runtime analyzers, their operator sets, evaluated layers, and consumed hooks.&quot;
+  }
+}
+</code></pre>
+  </main>
+</body>
+</html>

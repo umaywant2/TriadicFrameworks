@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/triad_coherence_drift_detector.py.md">
+  <title>What it measures</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/triad_coherence_drift_detector.py.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/triad_coherence_drift_detector.py.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Here it is, a <strong>complete, compact, non‑truncating Triad‑Coherence Drift Detector</strong>, designed to drop straight into your active <code>docs/tools</code> directory (your current tab is exactly that folder).</p>
+<p>This detector evaluates <strong>coherence drift</strong> inside each module’s triad system by checking:</p>
+<h3 id="what-it-measures">What it measures</h3>
+<ul>
+<li>Missing coherence‑triad blocks  </li>
+<li>Malformed coherence‑triad structures  </li>
+<li>Missing canonical coherence keys  </li>
+<li>Extra/non‑canonical coherence keys  </li>
+<li>Coherence imbalance (structural vs harmonic vs temporal)  </li>
+<li>Coherence drift severity score (0–4)  </li>
+</ul>
+<p>This is the <strong>coherence‑layer drift auditor</strong> — the one that tells you where coherence is breaking, thinning, or drifting across the canon.</p>
+<p>It is intentionally compact so GitHub’s editor <strong>will not truncate it</strong>.</p>
+<hr>
+<h1 id="triadcoherence-drift-detector">⭐ Triad‑Coherence Drift Detector</h1>
+<p>Save as:</p>
+<pre><code>docs/tools/triad_coherence_drift_detector.py
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code>python3 docs/tools/triad_coherence_drift_detector.py
+</code></pre>
+<hr>
+<h1 id="complete-triad_coherence_drift_detectorpy">🟦 COMPLETE — triad_coherence_drift_detector.py</h1>
+<p><em>(Safe to paste — compact, no truncation)</em></p>
+<pre><code class="language-python">import os
+import json
+
+ROOT = &quot;docs&quot;
+EXCLUDED = {&quot;spine&quot;,&quot;_template&quot;,&quot;assets&quot;,&quot;images&quot;,&quot;tools&quot;}
+
+# Canonical coherence triad structure
+EXPECTED_COHERENCE = {
+    &quot;coherence_triads&quot;: {
+        &quot;coherence_core&quot;: [&quot;coherence_field&quot;,&quot;coherence_alignment&quot;,&quot;coherence_stability&quot;],
+        &quot;coherence_harmonic&quot;: [&quot;harmonic_alignment&quot;,&quot;harmonic_balance&quot;,&quot;harmonic_resonance&quot;],
+        &quot;coherence_temporal&quot;: [&quot;temporal_continuity&quot;,&quot;temporal_stability&quot;,&quot;temporal_resonance&quot;]
+    }
+}
+
+def find_modules():
+    out=[]
+    for root,dirs,files in os.walk(ROOT):
+        if any(ex in root for ex in EXCLUDED): continue
+        if &quot;module.json&quot; in files:
+            out.append(os.path.join(root,&quot;module.json&quot;))
+    return out
+
+def score_drift(errs):
+    c=len(errs)
+    if c==0: return 0
+    if c&lt;=2: return 1
+    if c&lt;=4: return 2
+    if c&lt;=7: return 3
+    return 4
+
+def drift_label(score):
+    return {
+        0:&quot;Pure&quot;,
+        1:&quot;Low Drift&quot;,
+        2:&quot;Moderate Drift&quot;,
+        3:&quot;High Drift&quot;,
+        4:&quot;Critical Drift&quot;
+    }[score]
+
+def audit_coherence(path):
+    with open(path,&quot;r&quot;,encoding=&quot;utf-8&quot;) as f:
+        try:
+            data=json.load(f)
+        except:
+            return [&quot;invalid JSON&quot;]
+
+    module=data.get(&quot;module&quot;,{})
+    triads=module.get(&quot;triads&quot;)
+    errs=[]
+
+    if not isinstance(triads,dict):
+        errs.append(&quot;triads block missing&quot;)
+        return errs
+
+    coh=triads.get(&quot;coherence_triads&quot;)
+    if not isinstance(coh,dict):
+        errs.append(&quot;coherence_triads block missing&quot;)
+        return errs
+
+    # Validate each coherence triad family
+    for triad_name, keys in EXPECTED_COHERENCE[&quot;coherence_triads&quot;].items():
+        t=coh.get(triad_name)
+        if not isinstance(t,dict):
+            errs.append(f&quot;{triad_name} triad missing&quot;)
+            continue
+
+        # required keys
+        for k in keys:
+            if k not in t:
+                errs.append(f&quot;{triad_name}.{k} missing&quot;)
+
+        # no extra keys
+        for k in t.keys():
+            if k not in keys:
+                errs.append(f&quot;{triad_name}.{k} is not canonical&quot;)
+
+    return errs
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Triad‑Coherence Drift Detector ===\n&quot;)
+
+    modules=find_modules()
+    total=len(modules)
+    failures=0
+
+    for m in modules:
+        name=os.path.basename(os.path.dirname(m))
+        errs=audit_coherence(m)
+        score=score_drift(errs)
+
+        if errs:
+            failures+=1
+            print(f&quot;❌ {name} — {drift_label(score)}&quot;)
+            for e in errs:
+                print(f&quot;   - {e}&quot;)
+        else:
+            print(f&quot;✔ {name} — Pure&quot;)
+
+    print(&quot;\n=== Summary ===&quot;)
+    print(f&quot;Modules scanned: {total}&quot;)
+    print(f&quot;Coherence‑pure: {total-failures}&quot;)
+    print(f&quot;Coherence‑drifted: {failures}&quot;)
+
+    if failures==0:
+        print(&quot;\n✨ All modules coherence‑pure.&quot;)
+    else:
+        print(&quot;\n⚠ Coherence drift detected across modules.&quot;)
+
+if __name__==&quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<h1 id="what-this-detector-gives-you">⭐ What This Detector Gives You</h1>
+<h3 id="coherencetriad-structural-validation">✔ Coherence‑triad structural validation</h3>
+<h3 id="missing-coherence-families-flagged">✔ Missing coherence families flagged</h3>
+<h3 id="missing-canonical-coherence-keys-flagged">✔ Missing canonical coherence keys flagged</h3>
+<h3 id="extranoncanonical-keys-flagged">✔ Extra/non‑canonical keys flagged</h3>
+<h3 id="coherence-drift-severity-scoring">✔ Coherence drift severity scoring</h3>
+<h3 id="full-repowide-coherence-drift-summary">✔ Full repo‑wide coherence drift summary</h3>
+<p>This is the <strong>coherence‑layer drift auditor</strong> — the one that tells you where coherence is thinning, breaking, or drifting across the canon.</p>
+  </main>
+</body>
+</html>

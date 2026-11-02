@@ -1,0 +1,11 @@
+[
+  {
+    "event_id": "mir-2025-10-24-001",
+    "timestamp": "2025-10-24T02:56:10Z",
+    "partition": "rPPS:planet/global",
+    "message_type": "prayer",
+    "description": "Request for relief from chronic pain; seeking clarity tracer stabilization.",
+    "overlap_ref": "ov-2025-10-24-001",
+    "attestation_ref": null
+  }
+]

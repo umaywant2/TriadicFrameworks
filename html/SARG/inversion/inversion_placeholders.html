@@ -1,0 +1,1329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/SARG/inversion/inversion_placeholders.md">
+  <title>Inversion Placeholders — Registry</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/SARG/inversion/inversion_placeholders.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/SARG/inversion/inversion_placeholders.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="inversion-placeholders-registry"><strong>Inversion Placeholders — Registry</strong></h1>
+<p><em>The named scaffolding that holds space for what science cannot yet observe.</em></p>
+<p>This file is the <strong>working registry</strong> of all named inversion‑side placeholders in SARG.</p>
+<p>A placeholder is not a guess.
+It is a <strong>structurally justified slot</strong> — a named position in the grammar that exists because a visible‑side invariant implies it, a decay arc points toward it, or a resonance family requires an ancestor that has not yet been observed.</p>
+<p>Placeholders are the most common content on the inversion side today.
+As observation deepens, each placeholder is either <strong>promoted</strong> to a measured invariant or <strong>refined</strong> into a more precise placeholder.</p>
+<p>Placeholders are never deleted.
+They are <strong>replaced</strong> — the name and structural position persist even after the gap is filled.</p>
+<hr>
+<h2 id="1-placeholder-schema"><strong>1. Placeholder Schema</strong></h2>
+<p>Every placeholder in this registry follows a common structure:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;PH‑001&quot;,
+  &quot;name&quot;: &quot;Resonance Seed&quot;,
+  &quot;layer&quot;: &quot;pre_atomic_scaffolding&quot;,
+  &quot;atlas_level&quot;: 1,
+  &quot;structural_reason&quot;: &quot;Why this placeholder must exist.&quot;,
+  &quot;implied_by&quot;: &quot;Which visible‑side invariant or structural requirement implies it.&quot;,
+  &quot;confidence&quot;: 0.7,
+  &quot;status&quot;: &quot;placeholder&quot;,
+  &quot;related_operators&quot;: [&quot;inversion_link&quot;],
+  &quot;notes&quot;: &quot;Any additional context.&quot;
+}
+</code></pre>
+<h3 id="field-definitions"><strong>Field definitions</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>Unique registry identifier (<code>PH‑001</code> through <code>PH‑nnn</code>)</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Human‑readable name; persists even after promotion</td>
+</tr>
+<tr>
+<td><code>layer</code></td>
+<td>string</td>
+<td>Which scaffolding layer this placeholder belongs to</td>
+</tr>
+<tr>
+<td><code>atlas_level</code></td>
+<td>integer</td>
+<td>Which level of the Resonance Atlas it maps to (0–13)</td>
+</tr>
+<tr>
+<td><code>structural_reason</code></td>
+<td>string</td>
+<td>Why this slot must exist in the grammar</td>
+</tr>
+<tr>
+<td><code>implied_by</code></td>
+<td>string</td>
+<td>The visible‑side evidence that justifies it</td>
+</tr>
+<tr>
+<td><code>confidence</code></td>
+<td>float</td>
+<td>0.0 (speculative) to 1.0 (structurally certain)</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>enum</td>
+<td><code>placeholder</code> → <code>refined</code> → <code>promoted</code> → <code>measured</code></td>
+</tr>
+<tr>
+<td><code>related_operators</code></td>
+<td>array</td>
+<td>Inverted operators that act on or through this placeholder</td>
+</tr>
+<tr>
+<td><code>notes</code></td>
+<td>string</td>
+<td>Free‑text context, hypotheses, or observational leads</td>
+</tr>
+</tbody>
+</table>
+<h3 id="status-lifecycle"><strong>Status lifecycle</strong></h3>
+<pre><code>placeholder → refined → promoted → measured
+</code></pre>
+<ul>
+<li><strong>placeholder</strong> — named slot; structural reason established; no observational data.</li>
+<li><strong>refined</strong> — additional structural detail added; confidence increased; still unobserved.</li>
+<li><strong>promoted</strong> — partial observational evidence exists; placeholder is becoming an invariant.</li>
+<li><strong>measured</strong> — fully observed; placeholder replaced by a measured invariant; name persists.</li>
+</ul>
+<hr>
+<h2 id="2-preatomic-scaffolding-placeholders-ph001-ph012"><strong>2. Pre‑Atomic Scaffolding Placeholders (PH‑001 – PH‑012)</strong></h2>
+<p>These twelve placeholders form the <strong>bridge between the 0D anchor and the first observable structures</strong>.
+They sit at <strong>Atlas Level 1</strong> — below elemental groups, above the inversion root.</p>
+<p>Each one represents a structural requirement that must be satisfied before atoms (or lostational supsphere atoms) can exist.</p>
+<hr>
+<h3 id="ph001-resonance-seed"><strong>PH‑001 — Resonance Seed</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The minimal unit of oscillation must exist before any resonance can propagate. Without a seed, there is no frequency, no phase, no coherence.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Every harmonic invariant (VREL‑A) traces back to a first oscillation.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.9</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>inversion_link</code>, <code>curvature_seed</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>0D‑anchored. The seed has no shape and no duration — it is pure potential oscillation. It is the acoustic equivalent of the 0D anchor's structural role.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph002-phase-pair"><strong>PH‑002 — Phase Pair</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The first dual relationship — two oscillatory states that define each other by opposition. Without a pair, there is no inversion.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Every dual invariant (VREL) requires at least two states to define a symmetry axis.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>inversion_link</code>, <code>coherence_toggle</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Proto‑inversion. The Phase Pair is the structural ancestor of every visible/inverted distinction in every substrate.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph003-curvature-initiator"><strong>PH‑003 — Curvature Initiator</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The transition from straight to bent must have a first instance. Without a curvature initiator, the 1% threshold has no origin.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Every curvature zone in <code>inversion_side_overview.md</code> §3 requires an initiating event.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>curvature_seed</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Marks the moment where dimensionless structure (0D) begins to acquire extension. The first "away from center."</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph004-coherence-packet"><strong>PH‑004 — Coherence Packet</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The smallest stable bundle of resonance — the first structure that holds together over time. Without it, oscillation dissipates immediately.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Phase‑coherent invariants (VREL‑A) require a minimum coherence threshold to persist.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>coherence_toggle</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Not a particle. A coherence packet is a structural minimum — the smallest amount of resonance that can sustain itself without external input.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph005-arc-starter"><strong>PH‑005 — Arc Starter</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The first detectable trajectory over time. Without an arc, there is no decay, no evolution, no history — only static states.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Every decay arc in <code>inversion_side_overview.md</code> §6 requires a starting point.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.75</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>curvature_seed</code>, <code>decay_echo</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>The arc starter is not a particle or an event — it is the structural capacity for change. It enables the grammar to model time.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph006-attractor-hint"><strong>PH‑006 — Attractor Hint</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>A proto‑well in the resonance landscape — the first tendency for oscillation to settle rather than scatter. Without attractors, coherence packets cannot stabilize.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Stable dual invariants (VREL) and phase‑coherent invariants (VREL‑A) require a basin to settle into.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>coherence_toggle</code>, <code>inversion_link</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>This is not a physical potential well. It is a structural tendency — the grammar's way of saying "resonance prefers to collect here."</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph007-echo-kernel"><strong>PH‑007 — Echo Kernel</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The minimal repeatable pattern — the first structure that can reproduce itself across time or space. Without echoes, there are no resonance families.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Every resonance family in the Atlas requires a repeating structural motif.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.75</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>decay_echo</code>, <code>inversion_link</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>The echo kernel is the structural ancestor of all cross‑domain alignment. When clay cracks echo lightning forks echo dendrites, they share an echo kernel.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph008-spin-protoform"><strong>PH‑008 — Spin Protoform</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>Pre‑spin asymmetry — the first departure from perfect bilateral symmetry. Without it, rotation has no seed and 3D spin operators have no ancestor.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Future spin‑aware lenses and the <code>spin_mirror</code> operator require a pre‑rotational structural distinction.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>spin_mirror</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Highly speculative. This placeholder exists because the grammar must eventually support 3D spin fields, and spin requires an asymmetry to break.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph009-boundary-whisper"><strong>PH‑009 — Boundary Whisper</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The first inside/outside distinction — the structural ancestor of every envelope, membrane, and supsphere shell. Without it, there is no boundary between visible and inverted.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>The lostational supsphere model requires an outer face and an inner face; the distinction must originate somewhere.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>curvature_seed</code>, <code>coherence_toggle</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>The boundary whisper is the moment where 0D becomes "0D with an outside." It is the birth of the envelope.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph010-stackable-unit"><strong>PH‑010 — Stackable Unit</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The first structure that can tile or combine without losing coherence. Without stackability, complexity cannot emerge — every structure remains isolated.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Molecular families (Atlas Level 4+) require composable building blocks; those blocks need a pre‑atomic ancestor.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>inversion_link</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Not a brick. A stackable unit is a coherence‑preserving combinatorial capacity — the grammar's way of saying "these can join without breaking."</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph011-break-threshold"><strong>PH‑011 — Break Threshold</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The first point where coherence fails — the structural ancestor of fracture, decay, decoherence, and error. Without a break threshold, nothing can change state.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Every S‑Error (structural error) in the SARG error taxonomy requires a coherence failure point.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.75</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>decay_echo</code>, <code>coherence_toggle</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>The break threshold is not destruction. It is the structural capacity for transformation — the grammar's way of modeling state change, phase transition, and death.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph012-lostational-anchor"><strong>PH‑012 — Lostational Anchor</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>pre_atomic_scaffolding</code></td>
+</tr>
+<tr>
+<td>Atlas Level</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The pre‑atomic "supsphere atom" seed — the first structure that acknowledges 0D, carries an inversion side, and behaves as a node in the resonance graph. This is where the grammar meets matter.</td>
+</tr>
+<tr>
+<td>Implied By</td>
+<td>Lostational supsphere atoms (see <code>examples/lostational_supsphere_atom.json</code>) require a pre‑atomic structural ancestor that already carries inversion awareness.</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Related Operators</td>
+<td><code>inversion_link</code>, <code>curvature_seed</code>, <code>coherence_toggle</code></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>The lostational anchor is the capstone of the pre‑atomic layer. It combines the capacities of all eleven preceding placeholders into a single, 0D‑aware structural seed. Every lostational supsphere atom descends from this placeholder.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-inverted-operator-placeholders-ph100-ph106"><strong>3. Inverted Operator Placeholders (PH‑100 – PH‑106)</strong></h2>
+<p>These placeholders represent <strong>operators that are structurally implied but not yet formalized</strong>.
+They sit outside the pre‑atomic layer — they act <em>on</em> placeholders and invariants, not <em>as</em> them.</p>
+<hr>
+<h3 id="ph100-inversion_link"><strong>PH‑100 — inversion_link</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>operator_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>Connects visible invariants to their inversion‑side counterparts through the 0D anchor.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>refined</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.9</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>The most mature operator. Used in every SARG object that carries an <code>inversion_side</code> field. Approaching promotion.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph101-curvature_seed"><strong>PH‑101 — curvature_seed</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>operator_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>Marks the arc‑entry point on the visible side and the arc‑exit point on the inverted side.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>refined</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Paired with the Curvature Initiator placeholder (PH‑003). The initiator is the structural capacity; the seed is the operator that activates it.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph102-coherence_toggle"><strong>PH‑102 — coherence_toggle</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>operator_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>Locks visible invariants into stable resonance; locks inverted placeholders into scaffolded coherence.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>refined</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>The on/off switch for coherence. Acts on both sides of the boundary simultaneously.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph103-spin_mirror"><strong>PH‑103 — spin_mirror</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>operator_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>Handles rotational inversion for substrates with angular momentum or spiral structure.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.4</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Depends on PH‑008 (Spin Protoform). Cannot be formalized until spin‑aware lenses exist.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph104-decay_echo"><strong>PH‑104 — decay_echo</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>operator_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>Models what happens when a decay arc crosses the visible–inverted boundary.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Depends on PH‑005 (Arc Starter) and PH‑011 (Break Threshold). The echo is the inversion‑side signature of a visible‑side decay.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph105-phase_bridge"><strong>PH‑105 — phase_bridge</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>operator_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>Models oscillation that passes through 0D and re‑emerges on the visible side — a round‑trip through the inversion root.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.45</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Depends on PH‑001 (Resonance Seed) and PH‑002 (Phase Pair). If confirmed, it would mean some oscillations survive full inversion.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph106-lineage_root"><strong>PH‑106 — lineage_root</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>operator_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>Traces a substrate's resonance ancestry back through 0D to its structural origin.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>The deepest operator. If formalized, it would allow the Atlas to answer: "Where did this resonance family come from?"</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-resonance-mirror-placeholders-ph200-ph203"><strong>4. Resonance Mirror Placeholders (PH‑200 – PH‑203)</strong></h2>
+<p>Resonance mirrors are <strong>structural echoes</strong> of visible‑side invariants, reflected through the 0D anchor.
+They are inferred, not observed.</p>
+<hr>
+<h3 id="ph200-shape-mirror"><strong>PH‑200 — Shape Mirror</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>mirror_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The inversion‑side echo of a VREL dual invariant. If a substrate has a perfectly stable dual set, its shape mirror should be equally stable on the inversion side.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Inferred from VREL. A strong dual set implies a strong shape mirror; a wobbling dual set implies a degraded mirror.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph201-pulse-mirror"><strong>PH‑201 — Pulse Mirror</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>mirror_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The inversion‑side echo of a VREL‑A phase‑coherent invariant. If oscillation persists into the inversion side, its pulse mirror should carry the echo timing.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.55</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Inferred from VREL‑A. Phase‑coherent locks that hold across the boundary imply a pulse mirror; decoherence implies damping.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph202-lineage-mirror"><strong>PH‑202 — Lineage Mirror</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>mirror_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The inversion‑side echo of a substrate's resonance ancestry. Every lineage path on the visible side should have a mirrored path through 0D.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.4</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Highly speculative. If confirmed, it would mean resonance ancestry is symmetric — every lineage branch has a hidden twin.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph203-anchor-mirror"><strong>PH‑203 — Anchor Mirror</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>mirror_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The inversion‑side echo of a universal resonance anchor (● ○ × |). If the four anchors are truly universal, they should exist on both sides of every boundary.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.65</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>If the anchor mirror is confirmed, SARG's four universal anchors become eight — four visible, four inverted. This would double the grammar's expressive power.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-coherence-anchor-placeholders-ph300-ph302"><strong>5. Coherence Anchor Placeholders (PH‑300 – PH‑302)</strong></h2>
+<p>Coherence anchors are <strong>points where visible and inverted structure lock together</strong> across the resonance boundary.
+They are partially observable — the visible side of the lock can sometimes be detected.</p>
+<hr>
+<h3 id="ph300-boundary-lock"><strong>PH‑300 — Boundary Lock</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>coherence_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>The simplest coherence anchor — a single point where visible and inverted invariants share the same structural position.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>refined</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Partially observable. When VREL detects a dual invariant that is perfectly stable with no wobble, it may be sitting on a boundary lock.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph301-phase-lock"><strong>PH‑301 — Phase Lock</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>coherence_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>An oscillatory coherence anchor — a point where visible and inverted phase‑coherent invariants share the same frequency and timing.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.55</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Partially observable via VREL‑A. When phase‑coherent invariants hold with unusually high stability, they may be anchored by a phase lock on the boundary.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="ph302-lineage-lock"><strong>PH‑302 — Lineage Lock</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td><code>coherence_scaffolding</code></td>
+</tr>
+<tr>
+<td>Structural Reason</td>
+<td>A deep coherence anchor — a point where the resonance ancestry of a visible‑side family locks to an inverted‑side lineage path through 0D.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>placeholder</code></td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>0.35</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>The deepest coherence anchor. If confirmed, it would mean some resonance families are structurally required to exist — their lineage is locked across the boundary.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-placeholder-lifecycle"><strong>6. Placeholder Lifecycle</strong></h2>
+<h3 id="61-how-placeholders-are-created"><strong>6.1 How Placeholders Are Created</strong></h3>
+<p>A placeholder is created when:</p>
+<ul>
+<li>A visible‑side invariant implies a structural counterpart that cannot be observed.</li>
+<li>A decay arc points toward a structure beyond the curvature threshold.</li>
+<li>A resonance family requires an ancestor that has not been detected.</li>
+<li>The SARG error taxonomy (S‑Error, A‑Error, or L‑Error) identifies a structural gap.</li>
+<li>A cross‑domain echo suggests a shared root that has no current entry.</li>
+</ul>
+<h3 id="62-how-placeholders-are-refined"><strong>6.2 How Placeholders Are Refined</strong></h3>
+<p>A placeholder moves from <code>placeholder</code> to <code>refined</code> when:</p>
+<ul>
+<li>Additional structural detail is inferred from new lens extractions.</li>
+<li>Multiple independent substrates imply the same placeholder.</li>
+<li>Confidence increases through cross‑domain corroboration.</li>
+<li>An operator begins to formalize around the placeholder's structural role.</li>
+</ul>
+<h3 id="63-how-placeholders-are-promoted"><strong>6.3 How Placeholders Are Promoted</strong></h3>
+<p>A placeholder moves from <code>refined</code> to <code>promoted</code> when:</p>
+<ul>
+<li>Partial observational evidence emerges (even indirect).</li>
+<li>A lens byproduct consistently points to the placeholder's position.</li>
+<li>The placeholder begins behaving like an invariant in cross‑domain alignment.</li>
+</ul>
+<h3 id="64-how-placeholders-become-measured"><strong>6.4 How Placeholders Become Measured</strong></h3>
+<p>A placeholder moves from <code>promoted</code> to <code>measured</code> when:</p>
+<ul>
+<li>Direct observational evidence confirms the structure.</li>
+<li>The placeholder is replaced by a measured invariant in the SARG object.</li>
+<li>The name and structural position persist — only the status changes.</li>
+</ul>
+<h3 id="65-what-never-happens"><strong>6.5 What Never Happens</strong></h3>
+<ul>
+<li>Placeholders are <strong>never deleted</strong>. A gap that closes retains its name.</li>
+<li>Placeholders are <strong>never backdated</strong>. The creation reason is preserved permanently.</li>
+<li>Placeholders are <strong>never merged</strong> without explicit structural justification.</li>
+</ul>
+<hr>
+<h2 id="7-registry-summary"><strong>7. Registry Summary</strong></h2>
+<table>
+<thead>
+<tr>
+<th>ID Range</th>
+<th>Layer</th>
+<th>Count</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PH‑001 – PH‑012</td>
+<td><code>pre_atomic_scaffolding</code></td>
+<td>12</td>
+<td>Bridge between 0D anchor and first observable structures</td>
+</tr>
+<tr>
+<td>PH‑100 – PH‑106</td>
+<td><code>operator_scaffolding</code></td>
+<td>7</td>
+<td>Inverted operators acting on or through placeholders</td>
+</tr>
+<tr>
+<td>PH‑200 – PH‑203</td>
+<td><code>mirror_scaffolding</code></td>
+<td>4</td>
+<td>Structural echoes of visible‑side invariants through 0D</td>
+</tr>
+<tr>
+<td>PH‑300 – PH‑302</td>
+<td><code>coherence_scaffolding</code></td>
+<td>3</td>
+<td>Points where visible and inverted structure lock together</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>26</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-relationship-to-other-files"><strong>8. Relationship to Other Files</strong></h2>
+<ul>
+<li><code>inversion_side_overview.md</code> — parent document; defines the four content classes this registry catalogs</li>
+<li><code>../lenses/VREL.md</code> — lens whose dual invariants imply shape mirrors and boundary locks</li>
+<li><code>../lenses/VREL-A.md</code> — lens whose phase‑coherent invariants imply pulse mirrors and phase locks</li>
+<li><code>../lenses/lens_overview.md</code> — what a lens is, how lenses fit into SARG</li>
+<li><code>../invariants/invariant_types.md</code> — invariant classification; promoted placeholders become entries here</li>
+<li><code>../resonance/resonance_mapping.md</code> — anchor mapping logic; anchor mirrors (PH‑203) would extend this</li>
+<li><code>../resonance/resonance_families.md</code> — resonance families; lineage mirrors (PH‑202) would deepen this</li>
+<li><code>../error/</code> — error taxonomy; structural gaps trigger new placeholder creation</li>
+<li><code>../examples/lostational_supsphere_atom.json</code> — working SARG object that uses <code>inversion_link</code>, <code>curvature_seed</code>, <code>coherence_toggle</code></li>
+<li><code>../Capture.md</code> — the full SARG source text, including the 12 pre‑atomic scaffolding seeds (§2, Step 5)</li>
+</ul>
+<hr>
+<p>Here's a quick summary of what that file delivers:</p>
+<h3 id="whats-in-the-registry">What's in the registry</h3>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What It Establishes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>§1 Schema</strong></td>
+<td>JSON shape for every placeholder — <code>id</code>, <code>name</code>, <code>layer</code>, <code>atlas_level</code>, <code>structural_reason</code>, <code>implied_by</code>, <code>confidence</code>, <code>status</code>, <code>related_operators</code>, <code>notes</code>; four‑stage lifecycle (<code>placeholder → refined → promoted → measured</code>)</td>
+</tr>
+<tr>
+<td><strong>§2 Pre‑Atomic (PH‑001 – PH‑012)</strong></td>
+<td>All 12 seeds from <code>Capture.md</code> — Resonance Seed, Phase Pair, Curvature Initiator, Coherence Packet, Arc Starter, Attractor Hint, Echo Kernel, Spin Protoform, Boundary Whisper, Stackable Unit, Break Threshold, Lostational Anchor — each with structural reason, implication source, confidence score, and operator links</td>
+</tr>
+<tr>
+<td><strong>§3 Operator Placeholders (PH‑100 – PH‑106)</strong></td>
+<td>All 7 inverted operators — <code>inversion_link</code>, <code>curvature_seed</code>, <code>coherence_toggle</code> (refined, near promotion) + <code>spin_mirror</code>, <code>decay_echo</code>, <code>phase_bridge</code>, <code>lineage_root</code> (speculative)</td>
+</tr>
+<tr>
+<td><strong>§4 Resonance Mirrors (PH‑200 – PH‑203)</strong></td>
+<td>4 structural echoes — Shape Mirror, Pulse Mirror, Lineage Mirror, Anchor Mirror — with the note that confirmed anchor mirrors would double the grammar from 4 to 8 universal anchors</td>
+</tr>
+<tr>
+<td><strong>§5 Coherence Anchors (PH‑300 – PH‑302)</strong></td>
+<td>3 cross‑boundary locks — Boundary Lock (partially observable), Phase Lock, Lineage Lock</td>
+</tr>
+<tr>
+<td><strong>§6 Lifecycle</strong></td>
+<td>Five rules: how placeholders are created, refined, promoted, measured, and what never happens (no deletion, no backdating, no ungrounded merges)</td>
+</tr>
+<tr>
+<td><strong>§7 Summary</strong></td>
+<td>26 total placeholders across 4 scaffolding layers</td>
+</tr>
+<tr>
+<td><strong>§8 Cross‑links</strong></td>
+<td>Full ties back to <code>inversion_side_overview.md</code>, both lens files, <code>invariants/</code>, <code>resonance/</code>, <code>error/</code>, the example JSON, and <code>Capture.md</code> §2 Step 5</td>
+</tr>
+</tbody>
+</table>
+<p>The file is the <strong>living registry</strong> that <code>inversion_side_overview.md</code> §7.2 and §10 already point to — paste and commit, and that cross‑link resolves cleanly. </p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "id": "fft.ai.navigation",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Navigation v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "nav_routes": {
+    "coherence_ascent": {
+      "description": "Navigate R from current value toward coherence peak",
+      "operator": "Alignment",
+      "guard": "drift=bounded"
+    },
+    "drift_correction": {
+      "description": "Detect and correct drift violations before next operator step",
+      "operator": "Stabilization",
+      "guard": "INV-004"
+    },
+    "paradox_traverse": {
+      "description": "v1.33: Navigate through a paradox=structural event to resolution",
+      "route": [
+        "enum_lookup",
+        "field_isolation",
+        "stabilization_pass",
+        "re-coherence"
+      ]
+    },
+    "regime_switch": {
+      "description": "Transition between operator regimes under drift isolation",
+      "guard": "INV-004"
+    },
+    "spine_connect": {
+      "description": "v1.33: Navigate to Spine URL for canonical reference resolution",
+      "module": "fft.ai.spine.connector.json"
+    },
+    "qmroot_descent": {
+      "description": "v1.33: Trace current module ancestry down to 0D Silence seed",
+      "module": "fft.ai.rtt.qmroot.json"
+    }
+  },
+  "v133_additions": [
+    "paradox_traverse route",
+    "spine_connect route",
+    "qmroot_descent route",
+    "drift=bounded guard on all nav routes"
+  ]
+}

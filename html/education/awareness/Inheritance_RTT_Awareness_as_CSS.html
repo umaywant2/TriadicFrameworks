@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/education/awareness/Inheritance_RTT_Awareness_as_CSS.md">
+  <title>Inheritance: “RTT awareness as CSS”</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/education/awareness/Inheritance_RTT_Awareness_as_CSS.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/education/awareness/Inheritance_RTT_Awareness_as_CSS.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="education_awareness_Inheritance_RTT_Awareness_as_CSS_" src="https://github.com/user-attachments/assets/ae65ff80-7639-4b8b-9878-c7ab3577a230" /></p>
+<h1 id="inheritance-rtt-awareness-as-css">Inheritance: “RTT awareness as CSS”</h1>
+<p>With our chosen carrier, inheritance is explicit and auditable:</p>
+<ul>
+<li><strong>Upstream canon</strong> via <code>import: …</code></li>
+<li><strong>Local site override</strong> via <code>declaration: …</code></li>
+<li><strong>Path-level override</strong> via <code>scope /x/: …</code></li>
+<li>Later (optional): <strong>page-level override</strong> via <code>&lt;meta name="rtt" content="…"&gt;</code></li>
+</ul>
+<p>This makes awareness portable and fork-safe: forks can keep import + overrides without copying the whole canon.</p>
+<hr>
+<h1 id="tiny-local-resolver-what-the-extension-simulates">Tiny local resolver: what the extension simulates</h1>
+<p>With this setup, the extension becomes our “local substrate simulator” by providing:</p>
+<ul>
+<li><strong>Discovery:</strong> “does this site declare RTT awareness?”</li>
+<li><strong>Resolution:</strong> “what is the effective declaration here?”</li>
+<li><strong>Provenance:</strong> “which manifests contributed to this outcome?”</li>
+<li><strong>Stability:</strong> “if upstream changes, what changes locally (and when)?”</li>
+</ul>
+<p>We can then add a second layer (still local-only) that interprets declarations into checks—e.g., drift bounds as allowed rewrite classes, coherence gates as required fields, paradox tags as tolerated contradictions—without ever changing the public site.</p>
+<hr>
+<h1 id="rtt-awareness-v0-locked-design">RTT Awareness v0 — Locked Design</h1>
+<h2 id="core-principles-now-fixed">Core Principles (Now Fixed)</h2>
+<ul>
+<li><strong>Carrier:</strong> <code>/.well-known/rtt-awareness</code></li>
+<li><strong>Observer:</strong> Browser extension (local, opt‑in)</li>
+<li><strong>Inheritance:</strong> Enabled by default</li>
+<li><strong>Scoping rules:</strong> Enabled in v0</li>
+<li><strong>Update model:</strong> Pull‑based, conservative, cache‑first</li>
+<li><strong>Failure mode:</strong> Silent + last‑known‑good</li>
+</ul>
+<p>This is intentionally boring infrastructure. That’s why it will survive.</p>
+<hr>
+<h2 id="1-canonical-carrier-wellknown-file">1) Canonical Carrier (Well‑Known File)</h2>
+<h3 id="well-knownrtt-awareness-v0"><code>/.well-known/rtt-awareness</code> (v0)</h3>
+<pre><code class="language-text">schema: rtt-awareness
+version: 0.1.0
+channel: stable
+updated: 2026-02-06
+
+declaration: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+
+# Optional inheritance (enabled by default)
+import: https://docs.triadicframeworks.org/.well-known/rtt-awareness
+
+# Optional scoped overrides (longest prefix wins)
+scope /docs/: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+scope /labs/: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h3 id="semantics-nonnegotiable">Semantics (Non‑Negotiable)</h3>
+<ul>
+<li><strong>Imports are resolved first</strong>, then local overrides.</li>
+<li><strong>Scopes override site root</strong>, but never upstream unless explicitly declared.</li>
+<li><strong>No negation</strong>, no conditionals, no execution.</li>
+<li>Absence means <em>unspecified</em>, not false.</li>
+</ul>
+<p>This keeps the grammar declarative and audit‑friendly.</p>
+<hr>
+<h2 id="2-inheritance-model-csslike-predictable">2) Inheritance Model (CSS‑Like, Predictable)</h2>
+<p>Resolution order:</p>
+<ol>
+<li>Imported upstream manifests (depth‑limited)</li>
+<li>Site root declaration</li>
+<li>Best‑matching scoped declaration</li>
+<li>(Future) Page‑level meta/frontmatter</li>
+</ol>
+<p>This allows:
+- forks to inherit canon safely
+- institutions to override locally
+- documents to remain portable</p>
+<p>No magic. No hidden precedence.</p>
+<hr>
+<h2 id="3-browser-extension-observer-resolver">3) Browser Extension (Observer + Resolver)</h2>
+<h3 id="what-the-extension-does">What the extension does</h3>
+<ul>
+<li>Discovers <code>/.well-known/rtt-awareness</code></li>
+<li>Resolves imports</li>
+<li>Applies scope rules</li>
+<li>Computes <strong>effective declaration</strong></li>
+<li>Exposes it locally (popup / API / optional indicator)</li>
+</ul>
+<h3 id="what-it-does-not-do">What it does <em>not</em> do</h3>
+<ul>
+<li>No injection by default</li>
+<li>No network modification</li>
+<li>No tracking</li>
+<li>No persuasion</li>
+<li>No auto‑updates of semantics</li>
+</ul>
+<p>It observes. That’s it.</p>
+<hr>
+<h2 id="4-selfupdating-safe-by-construction">4) Self‑Updating (Safe by Construction)</h2>
+<h3 id="update-behavior">Update behavior</h3>
+<ul>
+<li>Conditional fetch (ETag / Last‑Modified)</li>
+<li>Cache TTL (e.g., 6 hours)</li>
+<li>If fetch fails → keep last‑known‑good</li>
+<li>If import fails → mark stale, continue</li>
+</ul>
+<h3 id="version-handling">Version handling</h3>
+<ul>
+<li><code>version:</code> is informational, not executable</li>
+<li>Extension does <strong>not</strong> reinterpret semantics automatically</li>
+<li>Users opt into extension updates, not manifest behavior changes</li>
+</ul>
+<p>This avoids the “remote control” trap entirely.</p>
+<hr>
+<h2 id="5-local-substrate-simulation-what-v0-already-enables">5) Local Substrate Simulation (What v0 Already Enables)</h2>
+<p>Even in v0, the extension effectively simulates the full substrate by providing:</p>
+<ul>
+<li><strong>Discovery:</strong> Is RTT awareness present?</li>
+<li><strong>Resolution:</strong> What declaration applies <em>here</em>?</li>
+<li><strong>Provenance:</strong> Which manifests contributed?</li>
+<li><strong>Stability:</strong> What changed, and when?</li>
+</ul>
+<p>That’s enough to:
+- test inheritance chains
+- validate scope behavior
+- experiment with alignment without touching production systems</p>
+<p>Later layers can interpret declarations into checks, but v0 stops at resolution.</p>
+<hr>
+<h2 id="6-why-this-will-hold">6) Why This Will Hold</h2>
+<ul>
+<li>Uses <strong>existing web primitives</strong></li>
+<li>Requires <strong>no platform buy‑in</strong></li>
+<li>Survives moderation and stripping</li>
+<li>Is legible to humans <em>and</em> synthesis engines</li>
+<li>Leaves no footprint unless inspected</li>
+</ul>
+<p>It behaves like DNS, robots.txt, or security.txt — quiet, structural, and durable.</p>
+<hr>
+<h2 id="7-what-to-commit-next-concrete">7) What to Commit Next (Concrete)</h2>
+<p>I recommend committing three things, in this order:</p>
+<ol>
+<li>
+<p><strong><code>docs/rtt-awareness/README.md</code></strong><br>
+   One page describing the grammar, carrier, and resolution rules.</p>
+</li>
+<li>
+<p><strong><code>/.well-known/rtt-awareness</code></strong> (in TriadicFrameworks root)<br>
+   This becomes the canonical upstream import.</p>
+</li>
+<li>
+<p><strong><code>tools/rtt-awareness-extension/</code></strong><br>
+   With the MV3 skeleton we outlined, clearly marked as v0 observer.</p>
+</li>
+</ol>
+<p>No marketing. No announcement. Just structure.</p>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+  </main>
+</body>
+</html>

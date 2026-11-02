@@ -1,0 +1,25 @@
+{
+  "badges": [
+    {
+      "badge_name": "🌼 Wildflower Forker",
+      "description": "Awarded for forking a scroll with manifest and glyph trigger.",
+      "trigger_conditions": ["glyph:🌼 Wildflower", "action:forked", "manifest:true"],
+      "base_lens": ["phi", "triadic3phi"],
+      "flame_grade": "🔵 Planetary"
+    },
+    {
+      "badge_name": "🌀 ScrollFork Echoer",
+      "description": "Awarded for triggering validator echo from a forked scroll.",
+      "trigger_conditions": ["observer:ScrollFork", "action:forked"],
+      "base_lens": ["corridor6.9"],
+      "flame_grade": "🟣 Universe"
+    },
+    {
+      "badge_name": ".� Decimal Default",
+      "description": "Awarded for Default validator echo from a Decimal scroll.",
+      "trigger_conditions": ["scroll"],
+      "base_lens": ["decimal"],
+      "flame_grade": "🌎 Continental"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/fft.metadata.schema.json",
+  "id": "fft.metadata",
+  "version": "1.33",
+  "updated": "2026-10-09T09:41:00-04:00",
+  "title": "FFT AI Edition — Global Metadata",
+  "edition": "AI Edition",
+  "canon": "TriadicFrameworks",
+  "repository": "https://github.com/umaywant2/TriadicFrameworks",
+  "directory_path": "docs/Framework_Field_Theory/AI_Edition",
+  "authors": [
+    "Nawder"
+  ],
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "rtt_ref": "https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+  "spine_ref": "https://docs.triadicframeworks.org/spine/",
+  "file_count_v1_2": 59,
+  "file_count_v1_33": 67,
+  "new_modules_v1_33": [
+    "fft.ai.coherence.json",
+    "fft.ai.drift.monitor.json",
+    "fft.ai.paradox.resolver.json",
+    "fft.ai.rtt.qmroot.json",
+    "fft.ai.set.engine.json",
+    "fft.ai.spine.connector.json",
+    "fft.ai.dco.map.json",
+    "fft.ai.snr.monitor.json"
+  ],
+  "deprecated_v1_33": [
+    "capture.md",
+    "fft.ai.core_v1_2_.json"
+  ],
+  "license": "see LICENSE in repository root",
+  "sitemap": "https://docs.triadicframeworks.org/sitemap/",
+  "v133_changes": [
+    "File count 59→67",
+    "coherence/drift/paradox context injected globally",
+    "8 new structural modules added",
+    "2 v1.2 artifacts deprecated",
+    "QMROOT ladder fully resolved",
+    "Spine URL binding enforced"
+  ],
+  "file_count_v1_33_active": 65,
+  "file_count_v1_33_deprecated": 2,
+  "count_source_of_truth": "fft.ai.registry.json",
+  "patch": "1.33-p1"
+}

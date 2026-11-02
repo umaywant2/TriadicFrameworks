@@ -1,0 +1,579 @@
+{
+  "$schema": "https://docs.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "Political Science",
+    "path": "docs/education/polisci",
+    "canon_tag": "polisci",
+    "version": "1.1",
+    "layer": "Education Applied Layer",
+    "status": "Active, Canonical",
+    "purpose": "Cross-domain substrate science for population studies, regime physics, governance resonance, independent structural benchmarking, country mappings, civilization-scale analysis, and applied city systems.",
+    "parent": "education",
+    "url": "https://docs.triadicframeworks.org/education/polisci"
+  },
+
+  "session_context": {
+    "canon": "active (education-applied)",
+    "modules_linked": [
+      "population studies → substrate science → regime physics engine → governance resonance → independent structural benchmarking → country mappings → city systems → materials ↔ civics bridges"
+    ],
+    "drift": "bounded (substrate-locked)",
+    "coherence": "stable (civ-substrate grammar)",
+    "format": "markdown + country files + engine specs + governance templates + student leaf notes",
+    "front_door": "exists (PoliSci root)",
+    "every_page": "AI-parsable + substrate-aligned + analysis-scoped",
+    "audience": [
+      "students",
+      "researchers",
+      "policymakers",
+      "independent observers",
+      "AI systems"
+    ]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D4",
+    "regime_envelope": "R0–R3",
+    "coherence_envelope": "C0–C4",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "education-core",
+      "awareness",
+      "alignment"
+    ],
+    "exports": [
+      "population studies",
+      "regime physics engine",
+      "governance resonance templates",
+      "independent structural benchmark",
+      "country regime mappings",
+      "city systems",
+      "leadership analysis",
+      "materials ↔ civics bridges"
+    ]
+  },
+
+  "submodules": [
+    {
+      "name": "Population Studies",
+      "path": "README.md"
+    },
+    {
+      "name": "Regime Physics Engine",
+      "path": "regime-physics-engine.md"
+    },
+    {
+      "name": "Governance Resonance",
+      "path": "Universal_Governance_Resonance_Template.md"
+    },
+    {
+      "name": "Independent Structural Benchmark",
+      "path": "Independant_Structural_Benchmark.md"
+    },
+    {
+      "name": "Country and Regional Studies",
+      "path": "US.md"
+    },
+    {
+      "name": "Future and Applied City Systems",
+      "path": "Future_Desert_Cities.md"
+    },
+    {
+      "name": "Leadership and Applied Structure",
+      "path": "Leadership_Insights.md"
+    }
+  ],
+
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Political Science overview and module entry point.",
+      "role": "profile",
+      "depends_on": []
+    },
+
+    {
+      "filename": "Independant_Structural_Benchmark.md",
+      "path": "Independant_Structural_Benchmark.md",
+      "purpose": "Student Leaf Note defining a distributed independent structural reference layer for consistent political, policy, and candidate analysis without requiring ideological membership.",
+      "role": "student-leaf-note",
+      "depends_on": [
+        "Universal_Governance_Resonance_Template.md",
+        "regime-governance.md"
+      ]
+    },
+
+    {
+      "filename": "Universal_Governance_Resonance_Template.md",
+      "path": "Universal_Governance_Resonance_Template.md",
+      "purpose": "Reusable structural template for governance resonance analysis.",
+      "role": "governance-template",
+      "depends_on": []
+    },
+    {
+      "filename": "regime-governance.md",
+      "path": "regime-governance.md",
+      "purpose": "Maps regime-aware structural analysis into governance systems.",
+      "role": "governance-analysis",
+      "depends_on": [
+        "regime-physics-engine.md"
+      ]
+    },
+    {
+      "filename": "What_regime_are_we_inside.md",
+      "path": "What_regime_are_we_inside.md",
+      "purpose": "Explores regime identification as an observer problem in political and governance systems.",
+      "role": "regime-analysis",
+      "depends_on": [
+        "regime-physics-engine.md"
+      ]
+    },
+
+    {
+      "filename": "regime-physics-engine.md",
+      "path": "regime-physics-engine.md",
+      "purpose": "Core regime-physics engine documentation.",
+      "role": "engine",
+      "depends_on": []
+    },
+    {
+      "filename": "TriadicFrameworks_Regime_Physics_Engine_Spec.md",
+      "path": "TriadicFrameworks_Regime_Physics_Engine_Spec.md",
+      "purpose": "Technical specification for the TriadicFrameworks Regime Physics Engine.",
+      "role": "engine-spec",
+      "depends_on": [
+        "regime-physics-engine.md"
+      ]
+    },
+    {
+      "filename": "TriadicFrameworks_Regime_Physics_Mapping.md",
+      "path": "TriadicFrameworks_Regime_Physics_Mapping.md",
+      "purpose": "Mapping framework for applying regime physics across political and civic structures.",
+      "role": "mapping",
+      "depends_on": [
+        "regime-physics-engine.md",
+        "TriadicFrameworks_Regime_Physics_Engine_Spec.md"
+      ]
+    },
+
+    {
+      "filename": "Leadership_Insights.md",
+      "path": "Leadership_Insights.md",
+      "purpose": "Structural observations and educational insights concerning leadership.",
+      "role": "analysis",
+      "depends_on": []
+    },
+    {
+      "filename": "Technique_Over_Force.md",
+      "path": "Technique_Over_Force.md",
+      "purpose": "Explores structural technique as an alternative to force-centered intervention.",
+      "role": "student-note",
+      "depends_on": []
+    },
+    {
+      "filename": "Last_Restart.md",
+      "path": "Last_Restart.md",
+      "purpose": "Political-science educational artifact examining restart and transition structures.",
+      "role": "student-note",
+      "depends_on": []
+    },
+    {
+      "filename": "The_4k_Year_Trick_They_Buried.md",
+      "path": "The_4k_Year_Trick_They_Buried.md",
+      "purpose": "Exploratory political-science artifact examining long-horizon historical structures.",
+      "role": "exploratory-note",
+      "depends_on": []
+    },
+
+    {
+      "filename": "A_Tiny_History_of_Architecture.md",
+      "path": "A_Tiny_History_of_Architecture.md",
+      "purpose": "Educational bridge between architecture, civilization, and political structure.",
+      "role": "cross-domain-note",
+      "depends_on": []
+    },
+    {
+      "filename": "Biospheres.md",
+      "path": "Biospheres.md",
+      "purpose": "Explores biosphere-scale systems in relation to civilization and governance.",
+      "role": "cross-domain-note",
+      "depends_on": []
+    },
+    {
+      "filename": "Intersection_of_Economics_IP_law_Materials_Science.md",
+      "path": "Intersection_of_Economics_IP_law_Materials_Science.md",
+      "purpose": "Cross-domain analysis connecting economics, intellectual-property law, materials science, and civic structure.",
+      "role": "cross-domain-analysis",
+      "depends_on": []
+    },
+    {
+      "filename": "Dew_Harvesting_as_a_Field_Scale_Micro‑Layer.md",
+      "path": "Dew_Harvesting_as_a_Field_Scale_Micro‑Layer.md",
+      "purpose": "Applied field-scale infrastructure and resource-systems study.",
+      "role": "applied-systems-note",
+      "depends_on": []
+    },
+
+    {
+      "filename": "Future_Desert_Cities.md",
+      "path": "Future_Desert_Cities.md",
+      "purpose": "Explores future desert-city systems through political, infrastructure, and civilization-scale perspectives.",
+      "role": "city-systems",
+      "depends_on": []
+    },
+    {
+      "filename": "Future_Desert_Cities_Technical_Manifesto.md",
+      "path": "Future_Desert_Cities_Technical_Manifesto.md",
+      "purpose": "Technical manifesto for future desert-city systems.",
+      "role": "technical-manifesto",
+      "depends_on": [
+        "Future_Desert_Cities.md"
+      ]
+    },
+    {
+      "filename": "Technical_Appendix_Future_Desert_Cities_RTT‑Aligned.md",
+      "path": "Technical_Appendix_Future_Desert_Cities_RTT‑Aligned.md",
+      "purpose": "RTT-aligned technical appendix for future desert-city analysis.",
+      "role": "technical-appendix",
+      "depends_on": [
+        "Future_Desert_Cities.md",
+        "Future_Desert_Cities_Technical_Manifesto.md"
+      ]
+    },
+    {
+      "filename": "core-city-spec.md",
+      "path": "core-city-spec.md",
+      "purpose": "Core structural specification for city-system modeling.",
+      "role": "city-spec",
+      "depends_on": []
+    },
+    {
+      "filename": "seed-city-spec.md",
+      "path": "seed-city-spec.md",
+      "purpose": "Seed specification for extensible city-system modeling.",
+      "role": "city-spec",
+      "depends_on": [
+        "core-city-spec.md"
+      ]
+    },
+    {
+      "filename": "desert-city-patterns.md",
+      "path": "desert-city-patterns.md",
+      "purpose": "Reusable structural patterns for desert-city systems.",
+      "role": "city-patterns",
+      "depends_on": [
+        "core-city-spec.md",
+        "Future_Desert_Cities.md"
+      ]
+    },
+    {
+      "filename": "Department_of_National_Arrivals.md",
+      "path": "Department_of_National_Arrivals.md",
+      "purpose": "Applied institutional and civic-system design artifact.",
+      "role": "institutional-model",
+      "depends_on": []
+    },
+
+    {
+      "filename": "Argentina.md",
+      "path": "Argentina.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Australia.md",
+      "path": "Australia.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Bangladesh.md",
+      "path": "Bangladesh.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Brazil.md",
+      "path": "Brazil.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Canada.md",
+      "path": "Canada.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Chile.md",
+      "path": "Chile.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "China.md",
+      "path": "China.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Colombia.md",
+      "path": "Colombia.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Egypt.md",
+      "path": "Egypt.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "France.md",
+      "path": "France.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Germany.md",
+      "path": "Germany.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Ghana.md",
+      "path": "Ghana.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "India.md",
+      "path": "India.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Indonesia.md",
+      "path": "Indonesia.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Iran.md",
+      "path": "Iran.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Italy.md",
+      "path": "Italy.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Japan.md",
+      "path": "Japan.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Kenya.md",
+      "path": "Kenya.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Mexico.md",
+      "path": "Mexico.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Morocco.md",
+      "path": "Morocco.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Netherlands.md",
+      "path": "Netherlands.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Nigeria.md",
+      "path": "Nigeria.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Pakistan.md",
+      "path": "Pakistan.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Peru.md",
+      "path": "Peru.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Philippines.md",
+      "path": "Philippines.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Poland.md",
+      "path": "Poland.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Russia.md",
+      "path": "Russia.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "SouthAfrica.md",
+      "path": "SouthAfrica.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "SouthKorea.md",
+      "path": "SouthKorea.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Spain.md",
+      "path": "Spain.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Tanzania.md",
+      "path": "Tanzania.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Thailand.md",
+      "path": "Thailand.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Turkey.md",
+      "path": "Turkey.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Ukraine.md",
+      "path": "Ukraine.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "UnitedKingdom.md",
+      "path": "UnitedKingdom.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "US.md",
+      "path": "US.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Vietnam.md",
+      "path": "Vietnam.md",
+      "purpose": "Country-scale political and regime study.",
+      "role": "country-study",
+      "depends_on": []
+    },
+
+    {
+      "filename": "CaribbeanCluster.md",
+      "path": "CaribbeanCluster.md",
+      "purpose": "Regional political and regime cluster study.",
+      "role": "regional-study",
+      "depends_on": []
+    },
+    {
+      "filename": "EuropeanMicrostatesCluster.md",
+      "path": "EuropeanMicrostatesCluster.md",
+      "purpose": "Regional cluster study of European microstates.",
+      "role": "regional-study",
+      "depends_on": []
+    },
+    {
+      "filename": "MicrostatesCluster.md",
+      "path": "MicrostatesCluster.md",
+      "purpose": "Comparative political and structural study of microstates.",
+      "role": "regional-study",
+      "depends_on": []
+    },
+    {
+      "filename": "Nordics.md",
+      "path": "Nordics.md",
+      "purpose": "Regional political and regime study of Nordic systems.",
+      "role": "regional-study",
+      "depends_on": []
+    },
+    {
+      "filename": "OceaniaCluster.md",
+      "path": "OceaniaCluster.md",
+      "purpose": "Regional political and regime cluster study.",
+      "role": "regional-study",
+      "depends_on": []
+    }
+  ]
+}

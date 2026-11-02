@@ -1,0 +1,88 @@
+{
+  "graph": "triadic-substrate-use-examples",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "nodes": [
+    { "id": "atlas", "label": "Atlas Framework" },
+    { "id": "ignition", "label": "Ignition Framework" },
+    { "id": "epoch", "label": "Epoch Framework" },
+    { "id": "continuity", "label": "Continuity Framework" },
+    { "id": "invariance", "label": "Invariance Framework" },
+    { "id": "execution", "label": "Execution Framework" },
+    { "id": "monitor", "label": "Runtime Monitor" },
+    { "id": "modules", "label": "Module Templates" },
+    { "id": "constellation", "label": "Runtime Constellation" },
+    { "id": "substrate", "label": "Full Substrate Cycle" }
+  ],
+
+  "examples": [
+    {
+      "id": "atlas.resolve-route",
+      "depends_on": ["atlas"]
+    },
+    {
+      "id": "ignition.trigger-wave",
+      "depends_on": ["ignition", "atlas"]
+    },
+    {
+      "id": "epoch.advance",
+      "depends_on": ["epoch", "ignition", "continuity"]
+    },
+    {
+      "id": "continuity.evaluate",
+      "depends_on": ["continuity", "atlas", "epoch", "ignition"]
+    },
+    {
+      "id": "invariance.evaluate",
+      "depends_on": ["invariance", "continuity", "epoch", "ignition", "atlas"]
+    },
+    {
+      "id": "execution.evaluate-runtime",
+      "depends_on": ["execution", "constellation", "invariance", "continuity"]
+    },
+    {
+      "id": "monitor.ingest-telemetry",
+      "depends_on": ["monitor", "execution", "invariance", "continuity", "epoch", "ignition", "atlas"]
+    },
+    {
+      "id": "module.create-ignition-ready",
+      "depends_on": ["modules", "ignition"]
+    },
+    {
+      "id": "constellation.register-module",
+      "depends_on": ["constellation", "modules", "execution"]
+    },
+    {
+      "id": "substrate.full-cycle",
+      "depends_on": [
+        "atlas",
+        "ignition",
+        "epoch",
+        "continuity",
+        "invariance",
+        "execution",
+        "monitor",
+        "modules",
+        "constellation"
+      ]
+    }
+  ],
+
+  "edges": [
+    { "from": "atlas", "to": "ignition" },
+    { "from": "ignition", "to": "epoch" },
+    { "from": "epoch", "to": "continuity" },
+    { "from": "continuity", "to": "invariance" },
+    { "from": "invariance", "to": "execution" },
+    { "from": "execution", "to": "monitor" },
+    { "from": "modules", "to": "constellation" },
+    { "from": "constellation", "to": "execution" },
+    { "from": "monitor", "to": "substrate" }
+  ],
+
+  "meta": {
+    "notes": "Dependency graph describing how usage examples relate to substrate frameworks."
+  }
+}
+

@@ -1,0 +1,23 @@
+```json
+{
+  "transfer_log": [
+    {
+      "transfer_id": "transfer-001",
+      "from": "Nawder Loswin",
+      "to": "Mira Thorne",
+      "scrolls_transferred": ["Contributor Onboarding", "Badge Logic"],
+      "glyphs": ["🌺 Bloom", "🍃 Ivy"],
+      "date": "2025-10-04",
+      "echo": "Scroll stewardship entrusted to Mira for onboarding clarity and badge evolution"
+    },
+    {
+      "transfer_id": "transfer-002",
+      "from": "Nawder Loswin",
+      "to": "Aria Vex",
+      "scrolls_transferred": ["Validator Overlay", "Scroll Echoes"],
+      "glyphs": ["🌿 Vine", "🌼 Wildflower"],
+      "date": "2025-10-04",
+      "echo": "Validator logic and remix impact now stewarded by Aria"
+    }
+  ]
+}

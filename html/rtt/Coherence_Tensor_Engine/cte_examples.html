@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Coherence_Tensor_Engine/cte_examples.md">
+  <title>Coherence Tensor Examples — RTT/1</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Coherence_Tensor_Engine/cte_examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Coherence_Tensor_Engine/cte_examples.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="coherence-tensor-examples-rtt1"><strong>Coherence Tensor Examples — RTT/1</strong></h1>
+<h3 id="example-dictionary-for-the-coherence-tensor-engine-cte"><em>Example Dictionary for the Coherence Tensor Engine (CTE)</em></h3>
+<p>These examples illustrate how the <strong>Coherence Tensor Engine (CTE)</strong> computes coherence tensors, maps coherence fields, detects collapse points, evaluates stability envelopes, and analyzes multi‑regime coherence behavior.</p>
+<p>Each example demonstrates one or more CTE operators:</p>
+<ul>
+<li><strong>CTE‑Compute</strong>  </li>
+<li><strong>CTE‑Tensor</strong>  </li>
+<li><strong>CTE‑Gradient</strong>  </li>
+<li><strong>CTE‑Field</strong>  </li>
+<li><strong>CTE‑Collapse</strong>  </li>
+<li><strong>CTE‑Stabilize</strong></li>
+</ul>
+<p>Examples are grouped by tensor type.</p>
+<hr>
+<h2 id="1-structural-coherence-tensor-examples"><strong>1. Structural Coherence Tensor Examples</strong></h2>
+<h3 id="example-1-structural-invariant-tensor-r1-r2"><strong>Example 1 — Structural Invariant Tensor (R1 ↔ R2)</strong></h3>
+<p><strong>Scenario</strong><br>
+A conceptual invariant (symmetry) is preserved across computational structures, forming a stable coherence tensor.</p>
+<p><strong>CTE Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;structural&quot;,
+  &quot;regime&quot;: &quot;R1-R2&quot;,
+  &quot;tensor_magnitude&quot;: 0.78,
+  &quot;tensor_direction&quot;: &quot;R1→R2&quot;,
+  &quot;coherence_curvature&quot;: 0.33,
+  &quot;collapse_point&quot;: null,
+  &quot;stability_envelope&quot;: 0.82,
+  &quot;gradient_alignment&quot;: 0.71
+}
+</code></pre>
+<hr>
+<h3 id="example-2-structural-constraint-tensor-r2-r3"><strong>Example 2 — Structural Constraint Tensor (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+A computational constraint enforces coherence across physical calibration.</p>
+<p><strong>CTE Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;structural&quot;,
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;tensor_magnitude&quot;: 0.74,
+  &quot;tensor_direction&quot;: &quot;R2→R3&quot;,
+  &quot;coherence_curvature&quot;: 0.41,
+  &quot;collapse_point&quot;: null,
+  &quot;stability_envelope&quot;: 0.77,
+  &quot;gradient_alignment&quot;: 0.66
+}
+</code></pre>
+<hr>
+<h2 id="2-gradient-coherence-tensor-examples"><strong>2. Gradient Coherence Tensor Examples</strong></h2>
+<h3 id="example-3-coherence-gradient-alignment-r1-r4"><strong>Example 3 — Coherence Gradient Alignment (R1 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Conceptual and dimensional coherence gradients align, forming a stable coherence ridge.</p>
+<p><strong>CTE Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;gradient&quot;,
+  &quot;regime&quot;: &quot;R1-R4&quot;,
+  &quot;tensor_magnitude&quot;: 0.83,
+  &quot;tensor_direction&quot;: &quot;R1↔R4&quot;,
+  &quot;coherence_curvature&quot;: 0.52,
+  &quot;collapse_point&quot;: null,
+  &quot;stability_envelope&quot;: 0.79,
+  &quot;gradient_alignment&quot;: 0.88
+}
+</code></pre>
+<hr>
+<h3 id="example-4-driftsensitive-gradient-tensor-r2-r3"><strong>Example 4 — Drift‑Sensitive Gradient Tensor (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Computational drift influences physical coherence gradients.</p>
+<p><strong>CTE Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;gradient&quot;,
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;tensor_magnitude&quot;: 0.81,
+  &quot;tensor_direction&quot;: &quot;R3→R2&quot;,
+  &quot;coherence_curvature&quot;: 0.57,
+  &quot;collapse_point&quot;: null,
+  &quot;stability_envelope&quot;: 0.63,
+  &quot;gradient_alignment&quot;: 0.72
+}
+</code></pre>
+<hr>
+<h2 id="3-boundary-coherence-tensor-examples"><strong>3. Boundary Coherence Tensor Examples</strong></h2>
+<h3 id="example-5-abstractionboundary-tensor-r1-r3"><strong>Example 5 — Abstraction‑Boundary Tensor (R1 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Coherence forms at the boundary between conceptual abstraction and physical measurement.</p>
+<p><strong>CTE Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;boundary&quot;,
+  &quot;regime&quot;: &quot;R1-R3&quot;,
+  &quot;tensor_magnitude&quot;: 0.69,
+  &quot;tensor_direction&quot;: &quot;R1→R3&quot;,
+  &quot;coherence_curvature&quot;: 0.38,
+  &quot;collapse_point&quot;: null,
+  &quot;stability_envelope&quot;: 0.71,
+  &quot;gradient_alignment&quot;: 0.55
+}
+</code></pre>
+<hr>
+<h3 id="example-6-gradientboundary-tensor-r2-r4"><strong>Example 6 — Gradient‑Boundary Tensor (R2 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Aligned gradients across computational and dimensional regimes produce a boundary coherence tensor.</p>
+<p><strong>CTE Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;boundary&quot;,
+  &quot;regime&quot;: &quot;R2-R4&quot;,
+  &quot;tensor_magnitude&quot;: 0.88,
+  &quot;tensor_direction&quot;: &quot;R2↔R4&quot;,
+  &quot;coherence_curvature&quot;: 0.47,
+  &quot;collapse_point&quot;: null,
+  &quot;stability_envelope&quot;: 0.68,
+  &quot;gradient_alignment&quot;: 0.81
+}
+</code></pre>
+<hr>
+<h2 id="4-tensorfield-coherence-examples"><strong>4. Tensor‑Field Coherence Examples</strong></h2>
+<h3 id="example-7-multiregime-coherence-tensor-r1-r2-r3"><strong>Example 7 — Multi‑Regime Coherence Tensor (R1 ↔ R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+A multi‑regime coherence tensor binds conceptual, computational, and physical coherence.</p>
+<p><strong>CTE Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;tensor-field&quot;,
+  &quot;regime&quot;: &quot;R1-R2-R3&quot;,
+  &quot;tensor_magnitude&quot;: 0.94,
+  &quot;tensor_direction&quot;: &quot;tensor&quot;,
+  &quot;coherence_curvature&quot;: 0.63,
+  &quot;collapse_point&quot;: null,
+  &quot;stability_envelope&quot;: 0.84,
+  &quot;gradient_alignment&quot;: 0.92
+}
+</code></pre>
+<hr>
+<h3 id="example-8-dimensional-tensor-constraint-r2-r4"><strong>Example 8 — Dimensional Tensor Constraint (R2 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Dimensional tensors constrain computational coherence pathways.</p>
+<p><strong>CTE Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;tensor-field&quot;,
+  &quot;regime&quot;: &quot;R2-R4&quot;,
+  &quot;tensor_magnitude&quot;: 0.88,
+  &quot;tensor_direction&quot;: &quot;R4→R2&quot;,
+  &quot;coherence_curvature&quot;: 0.55,
+  &quot;collapse_point&quot;: null,
+  &quot;stability_envelope&quot;: 0.73,
+  &quot;gradient_alignment&quot;: 0.79
+}
+</code></pre>
+<hr>
+<h2 id="5-collapsepoint-examples"><strong>5. Collapse‑Point Examples</strong></h2>
+<h3 id="example-9-coherence-collapse-basin-r3-r4"><strong>Example 9 — Coherence Collapse Basin (R3 ↔ R4)</strong></h3>
+<p><strong>Scenario</strong><br>
+Physical drift amplifies dimensional coherence curvature, forming a collapse basin.</p>
+<p><strong>CTE Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;collapse&quot;,
+  &quot;regime&quot;: &quot;R3-R4&quot;,
+  &quot;tensor_magnitude&quot;: 0.91,
+  &quot;tensor_direction&quot;: &quot;R3→R4&quot;,
+  &quot;coherence_curvature&quot;: 0.71,
+  &quot;collapse_point&quot;: &quot;R4:0.82&quot;,
+  &quot;stability_envelope&quot;: 0.44,
+  &quot;gradient_alignment&quot;: 0.63
+}
+</code></pre>
+<hr>
+<h3 id="example-10-coherence-collapse-ridge-r2-r3"><strong>Example 10 — Coherence Collapse Ridge (R2 ↔ R3)</strong></h3>
+<p><strong>Scenario</strong><br>
+Computational drift reduces coherence while physical drift increases coherence sensitivity.</p>
+<p><strong>CTE Output</strong>  </p>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;collapse&quot;,
+  &quot;regime&quot;: &quot;R2-R3&quot;,
+  &quot;tensor_magnitude&quot;: 0.86,
+  &quot;tensor_direction&quot;: &quot;R2↔R3&quot;,
+  &quot;coherence_curvature&quot;: 0.62,
+  &quot;collapse_point&quot;: &quot;R3:0.77&quot;,
+  &quot;stability_envelope&quot;: 0.48,
+  &quot;gradient_alignment&quot;: 0.71
+}
+</code></pre>
+<hr>
+<h2 id="6-example-matrix-snippet"><strong>6. Example Matrix Snippet</strong></h2>
+<pre><code class="language-json">{
+  &quot;tensor_type&quot;: &quot;gradient&quot;,
+  &quot;regime&quot;: &quot;R1-R4&quot;,
+  &quot;tensor_magnitude&quot;: 0.83,
+  &quot;tensor_direction&quot;: &quot;R1↔R4&quot;,
+  &quot;coherence_curvature&quot;: 0.52,
+  &quot;collapse_point&quot;: null,
+  &quot;stability_envelope&quot;: 0.79,
+  &quot;gradient_alignment&quot;: 0.88
+}
+</code></pre>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<ul>
+<li><strong>Version:</strong> 1.0  </li>
+<li><strong>Status:</strong> canon‑stable  </li>
+<li><strong>Category:</strong> rtt‑structural  </li>
+<li><strong>Module Path:</strong> <code>/docs/rtt/Coherence_Tensor_Engine/</code></li>
+</ul>
+  </main>
+</body>
+</html>

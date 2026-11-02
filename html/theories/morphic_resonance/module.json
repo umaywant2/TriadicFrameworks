@@ -1,0 +1,99 @@
+{
+  "ai.module": "morphic_resonance",
+  "ai.version": "1.0",
+  "ai.purpose": "Provide a regime-aware, dimensional-coherence interface to Morphic Resonance as a grammar of pattern recurrence and activation.",
+  "ai.keywords": [
+    "morphic resonance",
+    "pattern recurrence",
+    "dimensional coherence",
+    "activation",
+    "cross-temporal structure",
+    "triadic frameworks"
+  ],
+
+  "identity": {
+    "name": "Morphic Resonance",
+    "category": "Scientific Theory (Reinterpreted)",
+    "summary": "A dimensional coherence grammar describing how patterns recur when operator structure stabilizes across time, lineage, or system instances.",
+    "regime": ["R1→R3", "R1", "R2", "R3"],
+    "status": "canon-ready"
+  },
+
+  "lineage": {
+    "originators": [
+      "Rupert Sheldrake (original 1981 proposal)",
+      "TriadicFrameworks reinterpretation (2026)"
+    ],
+    "historical_period": "Late 20th Century → Reinterpreted 21st Century",
+    "source_domain": "Biology, Cognition, Systems Theory",
+    "related_theories": [
+      "information_theory",
+      "evolutionary_biology",
+      "quantum_mechanics",
+      "complex_systems"
+    ],
+    "notes": "The original 1981 concept is reinterpreted as dimensional coherence, not a physical field or metaphysical influence."
+  },
+
+  "operators": {
+    "primary": [
+      "pattern_operator",
+      "activation_operator",
+      "recurrence_operator",
+      "coherence_link",
+      "dimensional_anchor"
+    ],
+    "secondary": [
+      "lineage_trace",
+      "cross_temporal_mapping",
+      "pattern_similarity_metric",
+      "resonance_threshold"
+    ],
+    "description": "Operators describe how patterns stabilize, recur, and activate across systems when underlying structure aligns."
+  },
+
+  "drift": {
+    "risks": [
+      "interpreting MR as a physical force",
+      "treating recurrence as telepathy or metaphysics",
+      "assuming patterns propagate without structure",
+      "overextending MR into unrelated domains"
+    ],
+    "boundaries": [
+      "MR is dimensional coherence, not a field",
+      "recurrence requires operator similarity",
+      "activation depends on resonance thresholds",
+      "MR operates only within R1→R3"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "pattern stability across instances",
+      "operator similarity across time",
+      "predictable recurrence thresholds",
+      "cross-temporal coherence"
+    ],
+    "failure_modes": [
+      "pattern drift",
+      "operator mismatch",
+      "insufficient resonance",
+      "lineage discontinuity"
+    ]
+  },
+
+  "cross_module": {
+    "supports": [
+      "evolutionary_biology",
+      "cognition",
+      "information_theory",
+      "complex_systems"
+    ],
+    "supported_by": [
+      "dimensional_analysis",
+      "regime_awareness",
+      "pattern_recognition"
+    ],
+    "integration_notes": "MR integrates cleanly with RTT engines as a dimensional recurrence grammar operating across R1→R3 coherence regimes."
+  }
+}

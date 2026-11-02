@@ -1,0 +1,32 @@
+{
+  "module": "Atlas_Regime_Interaction_Map",
+  "name": "AI Atlas — Regime‑Interaction Map",
+  "summary": "Regime-level mapping of the AI Atlas interaction geometry, defining how drift, coherence, stability, resonance, epoch, and ignition regimes coordinate cross‑module surfaces and temporal windows.",
+  "category": "intelligence-mapping-regime",
+  "version": "1.0",
+  "purpose": "Provide a regime-level interaction map for the AI Atlas, explaining how regime behaviors govern cross-domain binding, synchronization, temporal correction, and multi-axis interaction geometry across the Triad and Ladder systems.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@atlas.regime.drift",
+    "@atlas.regime.coherence",
+    "@atlas.regime.stability",
+    "@atlas.regime.resonance",
+    "@atlas.regime.epoch",
+    "@atlas.regime.ignition"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas",
+      "Atlas_Interaction_Surfaces",
+      "Atlas_Synchronization_Fields"
+    ],
+    "downstream": [
+      "Triad_Surfaces",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_structural_geometry",
+      "SI_structural_geometry_deep_regime_map",
+      "SI_apex_region_map"
+    ]
+  }
+}

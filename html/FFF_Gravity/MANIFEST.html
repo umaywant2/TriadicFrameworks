@@ -1,0 +1,1696 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/MANIFEST.md">
+  <title>FFFGravity Module — MANIFEST.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/MANIFEST.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/MANIFEST.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="fff_gravity-module-manifestmd">FFF_Gravity Module — MANIFEST.md</h1>
+<p><strong>Complete Registry: PRIMs · Operators · Conditions · FMs · INVs · State Flags</strong></p>
+<blockquote>
+<p>Sealed: 2026-08-14 · Session: SES-20260814-MANIFEST-001
+Append-only. No entry may be modified without a version bump.</p>
+</blockquote>
+<hr>
+<h2 id="1-module-summary">§1 Module Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Module</td>
+<td>FFF_Gravity</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>umaywant2/TriadicFrameworks</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>docs/FFF_Gravity/</td>
+</tr>
+<tr>
+<td>Total spec files</td>
+<td>29</td>
+</tr>
+<tr>
+<td>Total waves</td>
+<td>5</td>
+</tr>
+<tr>
+<td>PRIM range</td>
+<td>PRIM:001 – PRIM:042</td>
+</tr>
+<tr>
+<td>Total PRIMs</td>
+<td>42</td>
+</tr>
+<tr>
+<td>Total Invariants</td>
+<td>10 (INV-001 – INV-010)</td>
+</tr>
+<tr>
+<td>Total Failure Modes</td>
+<td>10 base (FM-001 – FM-010) + 3 sub-modes</td>
+</tr>
+<tr>
+<td>Total Condition Prefixes</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Total State Flags</td>
+<td>31</td>
+</tr>
+<tr>
+<td>Last updated</td>
+<td>2026-08-14</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>SEALED — all registries frozen pending Wave 6</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-wave-manifest">§2 Wave Manifest</h2>
+<table>
+<thead>
+<tr>
+<th>Wave</th>
+<th>Role</th>
+<th>Files</th>
+<th>PRIM Range</th>
+<th>Sealed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Genesis</td>
+<td>3</td>
+<td>—</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Admin / Registry</td>
+<td>6</td>
+<td>—</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Layer Definitions</td>
+<td>3</td>
+<td>001–006</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Core Functions</td>
+<td>8</td>
+<td>007–024</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Capture Variants</td>
+<td>8</td>
+<td>025–040</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Dismissal</td>
+<td>1</td>
+<td>041–042</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-file-registry">§2.1 File Registry</h3>
+<table>
+<thead>
+<tr>
+<th>Wave</th>
+<th>#</th>
+<th>File</th>
+<th>Type</th>
+<th>PRIM(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>01</td>
+<td>GravityOfDismissal.md</td>
+<td>Conceptual genesis</td>
+<td>—</td>
+</tr>
+<tr>
+<td>0</td>
+<td>02</td>
+<td>f_Capture.md</td>
+<td>Operator genesis</td>
+<td>—</td>
+</tr>
+<tr>
+<td>0</td>
+<td>03</td>
+<td>f_Source.md</td>
+<td>Node registry</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1</td>
+<td>04</td>
+<td>README.md</td>
+<td>Navigation</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1</td>
+<td>05</td>
+<td>INDEX.md</td>
+<td>File index</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1</td>
+<td>06</td>
+<td>OPERATORS.md</td>
+<td>Symbol authority</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1</td>
+<td>07</td>
+<td>GLOSSARY.md</td>
+<td>Term definitions</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1</td>
+<td>08</td>
+<td>CHANGELOG.md</td>
+<td>Change log</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1</td>
+<td>09</td>
+<td>FFF_Gravity_module.json</td>
+<td>Machine registry</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10</td>
+<td>f_Field.md</td>
+<td>Layer 1 — F_freq</td>
+<td>001–002</td>
+</tr>
+<tr>
+<td>2</td>
+<td>11</td>
+<td>f_Force.md</td>
+<td>Layer 2 — F_force</td>
+<td>003–005</td>
+</tr>
+<tr>
+<td>2</td>
+<td>12</td>
+<td>f_Frame.md</td>
+<td>Layer 3 — F_fluid</td>
+<td>004, 006</td>
+</tr>
+<tr>
+<td>3</td>
+<td>13</td>
+<td>f_Orbit.md</td>
+<td>Core function</td>
+<td>007, 012</td>
+</tr>
+<tr>
+<td>3</td>
+<td>14</td>
+<td>f_Release.md</td>
+<td>Core function</td>
+<td>008–009</td>
+</tr>
+<tr>
+<td>3</td>
+<td>15</td>
+<td>f_Decay.md</td>
+<td>Core function</td>
+<td>010–011</td>
+</tr>
+<tr>
+<td>3</td>
+<td>16</td>
+<td>f_Collapse.md</td>
+<td>Core function</td>
+<td>013–014</td>
+</tr>
+<tr>
+<td>3</td>
+<td>17</td>
+<td>f_Emit.md</td>
+<td>Core function</td>
+<td>015–017</td>
+</tr>
+<tr>
+<td>3</td>
+<td>18</td>
+<td>f_Dampen.md</td>
+<td>Core function</td>
+<td>018–020</td>
+</tr>
+<tr>
+<td>3</td>
+<td>19</td>
+<td>f_Amplify.md</td>
+<td>Core function</td>
+<td>021–022</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20</td>
+<td>f_Deflect.md</td>
+<td>Core function</td>
+<td>023–024</td>
+</tr>
+<tr>
+<td>4</td>
+<td>21</td>
+<td>f_Capture_Multi.md</td>
+<td>Capture variant</td>
+<td>025–026</td>
+</tr>
+<tr>
+<td>4</td>
+<td>22</td>
+<td>f_Capture_Cascade.md</td>
+<td>Capture variant</td>
+<td>027–028</td>
+</tr>
+<tr>
+<td>4</td>
+<td>23</td>
+<td>f_Capture_Soft.md</td>
+<td>Capture variant</td>
+<td>029–030</td>
+</tr>
+<tr>
+<td>4</td>
+<td>24</td>
+<td>f_Capture_Hard.md</td>
+<td>Capture variant</td>
+<td>031–032</td>
+</tr>
+<tr>
+<td>4</td>
+<td>25</td>
+<td>f_Capture_Resonant.md</td>
+<td>Capture variant</td>
+<td>033–034</td>
+</tr>
+<tr>
+<td>4</td>
+<td>26</td>
+<td>f_Capture_Asymmetric.md</td>
+<td>Capture variant</td>
+<td>035–036</td>
+</tr>
+<tr>
+<td>4</td>
+<td>27</td>
+<td>f_Capture_Temporal.md</td>
+<td>Capture variant</td>
+<td>037–038</td>
+</tr>
+<tr>
+<td>4</td>
+<td>28</td>
+<td>f_Capture_Networked.md</td>
+<td>Capture variant</td>
+<td>039–040</td>
+</tr>
+<tr>
+<td>5</td>
+<td>29</td>
+<td>f_Dismiss.md</td>
+<td>Dismissal</td>
+<td>041–042</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-prim-registry-full-table">§3 PRIM Registry — Full Table</h2>
+<blockquote>
+<p><strong>INV column key:</strong> ✅ active · — not in scope · ⚠ conditional</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>PRIM</th>
+<th>Name</th>
+<th>Type</th>
+<th>File (Wave)</th>
+<th>INV-001</th>
+<th>INV-002</th>
+<th>INV-003</th>
+<th>INV-004</th>
+<th>INV-005</th>
+<th>INV-006</th>
+<th>INV-007</th>
+<th>INV-008</th>
+<th>INV-009</th>
+<th>INV-010</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>001</td>
+<td><code>compute_field_density</code></td>
+<td>Pure</td>
+<td>f_Field (W2)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>002</td>
+<td><code>update_field_state</code></td>
+<td>Impure</td>
+<td>f_Field (W2)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>003</td>
+<td><code>compute_force_vector</code></td>
+<td>Pure</td>
+<td>f_Force (W2)</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>004</td>
+<td><code>register_capture</code></td>
+<td>Impure</td>
+<td>f_Frame (W2)</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>005</td>
+<td><code>compute_approach_vector</code></td>
+<td>Pure</td>
+<td>f_Force (W2)</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>006</td>
+<td><code>check_frame_capacity</code></td>
+<td>Pure</td>
+<td>f_Frame (W2)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>007</td>
+<td><code>classify_orbit</code></td>
+<td>Pure</td>
+<td>f_Orbit (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>008</td>
+<td><code>compute_release_vector</code></td>
+<td>Pure</td>
+<td>f_Release (W3)</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>009</td>
+<td><code>execute_release</code></td>
+<td>Impure</td>
+<td>f_Release (W3)</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>010</td>
+<td><code>compute_decay_step</code></td>
+<td>Pure</td>
+<td>f_Decay (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>011</td>
+<td><code>evaluate_collapse_eligibility</code></td>
+<td>Pure</td>
+<td>f_Decay (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>012</td>
+<td><code>compute_orbital_period</code></td>
+<td>Pure</td>
+<td>f_Orbit (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>013</td>
+<td><code>evaluate_collapse_path</code></td>
+<td>Pure</td>
+<td>f_Collapse (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>014</td>
+<td><code>execute_collapse</code></td>
+<td>Impure</td>
+<td>f_Collapse (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>015</td>
+<td><code>compute_emit_vector</code></td>
+<td>Pure</td>
+<td>f_Emit (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>016</td>
+<td><code>compute_field_delta</code></td>
+<td>Pure</td>
+<td>f_Emit (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>017</td>
+<td><code>execute_emit</code></td>
+<td>Impure</td>
+<td>f_Emit (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>018</td>
+<td><code>compute_dampen_force</code></td>
+<td>Pure</td>
+<td>f_Dampen (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>019</td>
+<td><code>apply_field_floor</code></td>
+<td>Pure</td>
+<td>f_Dampen (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>020</td>
+<td><code>execute_dampen</code></td>
+<td>Impure</td>
+<td>f_Dampen (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>021</td>
+<td><code>compute_amplify_force</code></td>
+<td>Pure</td>
+<td>f_Amplify (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>022</td>
+<td><code>check_runaway_risk</code></td>
+<td>Pure</td>
+<td>f_Amplify (W3)</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>023</td>
+<td><code>compute_deflection_angle</code></td>
+<td>Pure</td>
+<td>f_Deflect (W3)</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>024</td>
+<td><code>execute_deflect</code></td>
+<td>Impure</td>
+<td>f_Deflect (W3)</td>
+<td>✅</td>
+<td>—</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>025</td>
+<td><code>execute_multi_capture</code></td>
+<td>Impure</td>
+<td>f_Capture_Multi (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>026</td>
+<td><code>compute_perturbation_budget</code></td>
+<td>Pure</td>
+<td>f_Capture_Multi (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>027</td>
+<td><code>evaluate_cascade_eligibility</code></td>
+<td>Pure</td>
+<td>f_Capture_Cascade (W4)</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>028</td>
+<td><code>execute_cascade_step</code></td>
+<td>Impure</td>
+<td>f_Capture_Cascade (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>029</td>
+<td><code>evaluate_soft_eligibility</code></td>
+<td>Pure</td>
+<td>f_Capture_Soft (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>030</td>
+<td><code>execute_soft_capture</code></td>
+<td>Impure</td>
+<td>f_Capture_Soft (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>031</td>
+<td><code>evaluate_hard_eligibility</code></td>
+<td>Pure</td>
+<td>f_Capture_Hard (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>032</td>
+<td><code>execute_hard_lock</code></td>
+<td>Impure</td>
+<td>f_Capture_Hard (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>033</td>
+<td><code>eval_resonance_window</code></td>
+<td>Pure</td>
+<td>f_Capture_Resonant (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>034</td>
+<td><code>lock_resonance</code></td>
+<td>Impure</td>
+<td>f_Capture_Resonant (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>035</td>
+<td><code>eval_asymmetric_approach</code></td>
+<td>Pure</td>
+<td>f_Capture_Asymmetric (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>036</td>
+<td><code>lock_asymmetric</code></td>
+<td>Impure</td>
+<td>f_Capture_Asymmetric (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>037</td>
+<td><code>evaluate_temporal_window</code></td>
+<td>Pure</td>
+<td>f_Capture_Temporal (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>038</td>
+<td><code>lock_temporal_capture</code></td>
+<td>Impure</td>
+<td>f_Capture_Temporal (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>039</td>
+<td><code>evaluate_network_capture</code></td>
+<td>Pure</td>
+<td>f_Capture_Networked (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>040</td>
+<td><code>lock_network_capture</code></td>
+<td>Impure</td>
+<td>f_Capture_Networked (W4)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>041</td>
+<td><code>evaluate_dismissal</code></td>
+<td>Pure</td>
+<td>f_Dismiss (W5)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>042</td>
+<td><code>execute_dismissal</code></td>
+<td>Impure</td>
+<td>f_Dismiss (W5)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>—</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-invariant-registry-inv-001-inv-010">§4 Invariant Registry (INV-001 – INV-010)</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Statement</th>
+<th>Wave</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force — triadic identity must be preserved</td>
+<td>2</td>
+<td>Module-global</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>ρ(Φ) ∈ [0,1]; ρ_D(Φ) ∈ (−1,0] — field density domains are bounded</td>
+<td>2</td>
+<td>Module-global</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>ρ(Φ) = 0 triggers FM-002 unconditionally</td>
+<td>2</td>
+<td>Module-global</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>β &lt; 1.0 triggers FM-001 unconditionally</td>
+<td>2</td>
+<td>Module-global</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>All conditions within a file are conjunctive — any failure aborts</td>
+<td>2</td>
+<td>Module-global</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states are irreversible — no re-entry without explicit reset</td>
+<td>2</td>
+<td>Module-global</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>f_Source.md is read-only — node properties may not be mutated by operators</td>
+<td>2</td>
+<td>Module-global</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Evaluation order within a PRIM is normative — documented order is binding</td>
+<td>3</td>
+<td>All PRIMs</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>OPERATORS.md is the single symbol authority — all symbols pre-registered</td>
+<td>3</td>
+<td>Module-global</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Operators are frozen on first canonical appearance — no redefinition</td>
+<td>3</td>
+<td>Module-global</td>
+</tr>
+</tbody>
+</table>
+<h3 id="41-universal-inv-coverage-rules">§4.1 Universal INV Coverage Rules</h3>
+<table>
+<thead>
+<tr>
+<th>INV</th>
+<th>Pure PRIMs</th>
+<th>Impure PRIMs</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-005</td>
+<td>Required ✅</td>
+<td>Required ✅</td>
+<td>All condition sets are AND-gated</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Must be —</td>
+<td>Required ✅</td>
+<td>Only Impure PRIMs mutate state</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>Required ✅</td>
+<td>Required ✅</td>
+<td>Source nodes are always read-only</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Required ✅</td>
+<td>Required ✅</td>
+<td>Evaluation order always normative</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>Required ✅</td>
+<td>Required ✅</td>
+<td>Symbols always pre-registered</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Required ✅</td>
+<td>Required ✅</td>
+<td>Operators always frozen</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-failure-mode-registry">§5 Failure Mode Registry</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Domain</th>
+<th>Fatal?</th>
+<th>First defined</th>
+<th>Sub-modes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-001</td>
+<td>Flyby/Approach Reject</td>
+<td>F_force</td>
+<td>No</td>
+<td>f_Force (W2)</td>
+<td>WELL_BARRIER, WINDOW_MISS, TRAJECTORY_MISS, TEMPORAL_MISS</td>
+</tr>
+<tr>
+<td>FM-002</td>
+<td>Field Null</td>
+<td>F_freq</td>
+<td>Yes</td>
+<td>f_Field (W2)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FM-003</td>
+<td>Frame Saturation</td>
+<td>F_fluid</td>
+<td>No</td>
+<td>f_Frame (W2)</td>
+<td>FM-003-M, FM-003-C, FM-003-N</td>
+</tr>
+<tr>
+<td>FM-004</td>
+<td>Resonance Drift</td>
+<td>F_freq</td>
+<td>No</td>
+<td>f_Decay (W3)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FM-005</td>
+<td>Decay Spiral</td>
+<td>F_freq/fluid</td>
+<td>Yes*</td>
+<td>f_Decay (W3)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FM-006</td>
+<td>Phantom Capture</td>
+<td>F_force</td>
+<td>Yes</td>
+<td>f_Deflect (W3)</td>
+<td>PHANTOM_RESONANCE, DISMISS_PHANTOM</td>
+</tr>
+<tr>
+<td>FM-007</td>
+<td>Mutual Dissolution</td>
+<td>F_fluid</td>
+<td>Yes</td>
+<td>f_Collapse (W3)</td>
+<td>PARITY_BREACH</td>
+</tr>
+<tr>
+<td>FM-008</td>
+<td>Release Failure</td>
+<td>F_force</td>
+<td>No</td>
+<td>f_Release (W3)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FM-009</td>
+<td>Dampen Cascade</td>
+<td>F_freq</td>
+<td>No</td>
+<td>f_Dampen (W3)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FM-010</td>
+<td>Amplify Ceiling</td>
+<td>F_fluid</td>
+<td>No</td>
+<td>f_Amplify (W3)</td>
+<td>β domain, ρ domain</td>
+</tr>
+</tbody>
+</table>
+<p>*FM-005 fatal for the orbit; entity node survives.</p>
+<h3 id="51-fm-sub-mode-registry">§5.1 FM Sub-mode Registry</h3>
+<table>
+<thead>
+<tr>
+<th>Sub-mode</th>
+<th>Parent</th>
+<th>Introduced in</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-003-M</td>
+<td>FM-003</td>
+<td>f_Capture_Multi (W4)</td>
+<td>Multi-target bind conflict mid-session</td>
+</tr>
+<tr>
+<td>FM-003-C</td>
+<td>FM-003</td>
+<td>f_Capture_Cascade (W4)</td>
+<td>Cascade capacity breach mid-chain</td>
+</tr>
+<tr>
+<td>FM-003-N</td>
+<td>FM-003</td>
+<td>f_Capture_Networked (W4)</td>
+<td>All network node frames simultaneously saturated</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-condition-prefix-registry">§6 Condition Prefix Registry</h2>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Name</th>
+<th>File</th>
+<th>Conditions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SC-</td>
+<td>Stability Conditions</td>
+<td>f_Capture (W0)</td>
+<td>SC-1–SC-5</td>
+</tr>
+<tr>
+<td>DC-</td>
+<td>Decay Conditions</td>
+<td>f_Decay (W3)</td>
+<td>DC-1–DC-4</td>
+</tr>
+<tr>
+<td>MC-</td>
+<td>Multi-Capture Conditions</td>
+<td>f_Capture_Multi (W4)</td>
+<td>MC-1–MC-2</td>
+</tr>
+<tr>
+<td>CAS-</td>
+<td>Cascade Conditions</td>
+<td>f_Capture_Cascade (W4)</td>
+<td>CAS-1–CAS-4</td>
+</tr>
+<tr>
+<td>SCS-</td>
+<td>Soft Capture Conditions</td>
+<td>f_Capture_Soft (W4)</td>
+<td>SCS-1–SCS-4</td>
+</tr>
+<tr>
+<td>HLC-</td>
+<td>Hard Lock Conditions</td>
+<td>f_Capture_Hard (W4)</td>
+<td>HLC-1–HLC-4</td>
+</tr>
+<tr>
+<td>RLC-</td>
+<td>Resonance Lock Conditions</td>
+<td>f_Capture_Resonant (W4)</td>
+<td>RLC-1–RLC-5</td>
+</tr>
+<tr>
+<td>AC-</td>
+<td>Asymmetric Conditions</td>
+<td>f_Capture_Asymmetric (W4)</td>
+<td>AC-1–AC-5</td>
+</tr>
+<tr>
+<td>TC-</td>
+<td>Temporal Conditions</td>
+<td>f_Capture_Temporal (W4)</td>
+<td>TC-1–TC-5</td>
+</tr>
+<tr>
+<td>NC-</td>
+<td>Network Conditions</td>
+<td>f_Capture_Networked (W4)</td>
+<td>NC-1–NC-5</td>
+</tr>
+<tr>
+<td>DISM-</td>
+<td>Dismissal Conditions</td>
+<td>f_Dismiss (W5)</td>
+<td>DISM-1–DISM-5</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-state-flag-registry">§7 State Flag Registry</h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Set by PRIM</th>
+<th>Terminal?</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CAPTURE_LOCKED</td>
+<td>004</td>
+<td>Yes</td>
+<td>Standard capture committed; orbit evaluation begins</td>
+</tr>
+<tr>
+<td>CAPTURE_SOFT</td>
+<td>030</td>
+<td>No</td>
+<td>Provisional binding within grace period</td>
+</tr>
+<tr>
+<td>SOFT_STRENGTHENED</td>
+<td>030</td>
+<td>Yes</td>
+<td>Soft capture promoted to CAPTURE_LOCKED</td>
+</tr>
+<tr>
+<td>SOFT_DISSOLVED</td>
+<td>030</td>
+<td>Yes</td>
+<td>Soft capture fell below soft_threshold</td>
+</tr>
+<tr>
+<td>GRACE_EXPIRED</td>
+<td>030</td>
+<td>Yes</td>
+<td>Grace period exhausted without resolution</td>
+</tr>
+<tr>
+<td>ORBIT_STABLE</td>
+<td>032</td>
+<td>Yes</td>
+<td>Hard lock confirmed; direct ORBIT_STABLE entry</td>
+</tr>
+<tr>
+<td>HARD_ELIGIBLE</td>
+<td>031</td>
+<td>No</td>
+<td>HLC conditions passed; PRIM:032 may proceed</td>
+</tr>
+<tr>
+<td>HARD_REJECTED</td>
+<td>031</td>
+<td>Yes</td>
+<td>HLC conditions failed; no retry this encounter</td>
+</tr>
+<tr>
+<td>FRAME_SATURATED</td>
+<td>032</td>
+<td>No</td>
+<td>FM-003 in hard lock path; retriable</td>
+</tr>
+<tr>
+<td>WINDOW_OPEN</td>
+<td>033</td>
+<td>No</td>
+<td>Resonance phase check passed</td>
+</tr>
+<tr>
+<td>WINDOW_CLOSED</td>
+<td>033</td>
+<td>No</td>
+<td>Resonance phase check failed; retry at t_next_open</td>
+</tr>
+<tr>
+<td>RESONANCE_LOCKED</td>
+<td>034</td>
+<td>Yes</td>
+<td>Resonant orbit committed; orbit_class = RESONANT</td>
+</tr>
+<tr>
+<td>RESONANCE_LOST</td>
+<td>FM-004</td>
+<td>No</td>
+<td>ρ(Φ) &lt; ρ_res_floor; orbit degraded to ELLIPTICAL</td>
+</tr>
+<tr>
+<td>ASYMMETRIC_APPROACH</td>
+<td>035</td>
+<td>No</td>
+<td>mass_ratio &gt; 0; asymmetry corrections active</td>
+</tr>
+<tr>
+<td>PARITY_WARN</td>
+<td>035</td>
+<td>No</td>
+<td>mass_ratio ≥ 0.75 × m_parity; caution zone</td>
+</tr>
+<tr>
+<td>PARITY_BREACH</td>
+<td>035</td>
+<td>Yes</td>
+<td>mass_ratio ≥ m_parity; routed to f_Collapse Path B</td>
+</tr>
+<tr>
+<td>ASYMMETRIC_LOCKED</td>
+<td>036</td>
+<td>Yes</td>
+<td>Asymmetric capture committed</td>
+</tr>
+<tr>
+<td>CAPTURE_TEMPORAL</td>
+<td>038</td>
+<td>Yes</td>
+<td>Temporal window capture committed</td>
+</tr>
+<tr>
+<td>TEMPORAL_MISS</td>
+<td>037</td>
+<td>No</td>
+<td>TC-1, TC-2, or TC-5 failed</td>
+</tr>
+<tr>
+<td>WINDOW_EXHAUSTED</td>
+<td>038</td>
+<td>No</td>
+<td>window_id already consumed; re-entry blocked</td>
+</tr>
+<tr>
+<td>NETWORK_CAPTURED</td>
+<td>040</td>
+<td>Yes</td>
+<td>Entity locked across distributed attractor network</td>
+</tr>
+<tr>
+<td>NETWORK_MISS</td>
+<td>039</td>
+<td>No</td>
+<td>NC- conditions failed; network capture aborted</td>
+</tr>
+<tr>
+<td>NETWORK_SATURATED</td>
+<td>039</td>
+<td>No</td>
+<td>FM-003-N: all node frames at capacity</td>
+</tr>
+<tr>
+<td>DISMISSED</td>
+<td>042</td>
+<td>Yes*</td>
+<td>(A,E) binding severed; Dismissal Well active</td>
+</tr>
+<tr>
+<td>DISMISS_INVALID</td>
+<td>041</td>
+<td>No</td>
+<td>DISM condition failed; no state mutation</td>
+</tr>
+<tr>
+<td>DISMISS_PHANTOM</td>
+<td>041</td>
+<td>No</td>
+<td>FM-006 phantom guard; d_dismiss bounded</td>
+</tr>
+<tr>
+<td>CAPTURE_FAILED</td>
+<td>Various</td>
+<td>No</td>
+<td>Generic capture rejection; retry possible</td>
+</tr>
+<tr>
+<td>PARTIAL_CASCADE</td>
+<td>028</td>
+<td>No</td>
+<td>FM-003-C partial state; prior steps committed</td>
+</tr>
+<tr>
+<td>FIELD_NULL</td>
+<td>002</td>
+<td>Yes</td>
+<td>ρ(Φ) = 0; FM-002 active; no captures possible</td>
+</tr>
+<tr>
+<td>COLLAPSED</td>
+<td>014</td>
+<td>Yes</td>
+<td>Node collapsed; no further operations</td>
+</tr>
+<tr>
+<td>RELEASED</td>
+<td>009</td>
+<td>Yes*</td>
+<td>Entity released from orbit; no Dismissal Well created</td>
+</tr>
+</tbody>
+</table>
+<p><em>DISMISSED terminal for (A,E) relation; entity itself remains active.
+</em>RELEASED terminal for this orbit instance; entity may form new orbits.</p>
+<hr>
+<h2 id="8-manifest-changelog">§8 MANIFEST Changelog</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Session</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>2026-08-14</td>
+<td>SES-20260814-MANIFEST-001</td>
+<td>Initial canonical release. All 5 waves sealed. 42 PRIMs tabulated with full INV matrix.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>End of MANIFEST.md — FFF_Gravity — v1.0.0 — 2026-08-14</em>
+<em>29 files · 42 PRIMs · 10 INVs · 10 FMs (+3 sub-modes) · 11 condition prefixes · 31 state flags</em></p>
+  </main>
+</body>
+</html>

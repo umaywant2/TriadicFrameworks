@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/MCP/L3_Forces_Unseen/spine/docs/registry.md">
+  <title>⚡ S3 Spine — Registry (R5 Canon)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/MCP/L3_Forces_Unseen/spine/docs/registry.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/MCP/L3_Forces_Unseen/spine/docs/registry.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="s3-spine-registry-r5-canon">⚡ <strong>S3 Spine — Registry (R5 Canon)</strong></h1>
+<h3 id="module-registry-operator-registry-dimension-registry-envelope-registry-example-registry-mcp-integration">Module Registry • Operator Registry • Dimension Registry • Envelope Registry • Example Registry • MCP Integration</h3>
+<p><strong>Layer:</strong> L3_Forces_Unseen<br>
+<strong>Triad:</strong> forces<br>
+<strong>Regime:</strong> unseen‑force‑regime<br>
+<strong>Lineage:</strong> qmroot → frequency → fluids → forces  </p>
+<p>The registry layer defines <strong>how the S3 Spine subsystem is indexed, discovered, and integrated</strong> across TriadicFrameworks, Docsbook, and MCP tooling.<br>
+Registries provide canonical mappings for:</p>
+<ul>
+<li>modules  </li>
+<li>operators  </li>
+<li>dimensions  </li>
+<li>envelopes  </li>
+<li>examples  </li>
+<li>AI metadata  </li>
+<li>MCP tools  </li>
+</ul>
+<p>This page provides the <strong>complete R5‑canonical registry definitions</strong> for the S3 Spine module.</p>
+<hr>
+<h2 id="1-module-registry">1. Module Registry</h2>
+<p>Registry file:</p>
+<pre><code>registry/module_registry.json
+</code></pre>
+<h3 id="module-entry">Module Entry</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>S3-Spine</td>
+</tr>
+<tr>
+<td>layer</td>
+<td>L3_Forces_Unseen</td>
+</tr>
+<tr>
+<td>triad</td>
+<td>forces</td>
+</tr>
+<tr>
+<td>regime</td>
+<td>unseen-force-regime</td>
+</tr>
+<tr>
+<td>lineage</td>
+<td>qmroot → frequency → fluids → forces</td>
+</tr>
+<tr>
+<td>manifest</td>
+<td>spine/manifest.json</td>
+</tr>
+<tr>
+<td>module</td>
+<td>spine/module.json</td>
+</tr>
+<tr>
+<td>ai.metadata</td>
+<td>spine/ai.metadata.json</td>
+</tr>
+</tbody>
+</table>
+<p>The module registry is used by MCP tools to <strong>discover</strong>, <strong>load</strong>, and <strong>validate</strong> the S3 Spine subsystem.</p>
+<hr>
+<h2 id="2-operator-registry">2. Operator Registry</h2>
+<p>Registry file:</p>
+<pre><code>registry/operator_registry.json
+</code></pre>
+<h3 id="operator-entries">Operator Entries</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Type</th>
+<th>Dimensions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>gradient</strong></td>
+<td>primary</td>
+<td>L4, L5, L16, LH</td>
+<td>shapes influence into fields</td>
+</tr>
+<tr>
+<td><strong>bind</strong></td>
+<td>primary</td>
+<td>L32, LI</td>
+<td>stabilizes integrity</td>
+</tr>
+<tr>
+<td><strong>ruptureForce</strong></td>
+<td>primary</td>
+<td>L12</td>
+<td>escalates instability</td>
+</tr>
+<tr>
+<td><strong>push</strong></td>
+<td>secondary</td>
+<td>L4, L5</td>
+<td>increases gradientIntensity</td>
+</tr>
+<tr>
+<td><strong>pull</strong></td>
+<td>secondary</td>
+<td>L8, L10</td>
+<td>increases fieldCoherence</td>
+</tr>
+<tr>
+<td><strong>fieldShift</strong></td>
+<td>secondary</td>
+<td>L26</td>
+<td>modulates field structure</td>
+</tr>
+</tbody>
+</table>
+<p>The operator registry defines <strong>all causal mechanics</strong> available in the S3 Spine subsystem.</p>
+<hr>
+<h2 id="3-dimension-registry">3. Dimension Registry</h2>
+<p>Registry file:</p>
+<pre><code>registry/dimension_registry.json
+</code></pre>
+<h3 id="dimension-entries">Dimension Entries</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Node</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L4</strong></td>
+<td>gradient</td>
+<td>influence origin</td>
+</tr>
+<tr>
+<td><strong>L5</strong></td>
+<td>gradient</td>
+<td>influence direction</td>
+</tr>
+<tr>
+<td><strong>L16</strong></td>
+<td>gradient</td>
+<td>influence modulation</td>
+</tr>
+<tr>
+<td><strong>LH</strong></td>
+<td>gradient</td>
+<td>harmonic influence axis</td>
+</tr>
+<tr>
+<td><strong>L8</strong></td>
+<td>field</td>
+<td>coherence origin</td>
+</tr>
+<tr>
+<td><strong>L10</strong></td>
+<td>field</td>
+<td>coherence stability</td>
+</tr>
+<tr>
+<td><strong>L26</strong></td>
+<td>field</td>
+<td>coherence modulation</td>
+</tr>
+<tr>
+<td><strong>L12</strong></td>
+<td>rupture</td>
+<td>instability threshold</td>
+</tr>
+<tr>
+<td><strong>L32</strong></td>
+<td>integrity</td>
+<td>structural stability</td>
+</tr>
+<tr>
+<td><strong>LI</strong></td>
+<td>integrity</td>
+<td>invariance axis</td>
+</tr>
+</tbody>
+</table>
+<p>The dimension registry ensures <strong>dimensional purity</strong> and <strong>cosmological alignment</strong>.</p>
+<hr>
+<h2 id="4-envelope-registry">4. Envelope Registry</h2>
+<p>Registry file:</p>
+<pre><code>registry/envelope_registry.json
+</code></pre>
+<h3 id="envelope-entries">Envelope Entries</h3>
+<table>
+<thead>
+<tr>
+<th>Envelope</th>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>canonical</strong></td>
+<td>canonical.md / canonical.json</td>
+<td>structural interpretation</td>
+</tr>
+<tr>
+<td><strong>reality</strong></td>
+<td>reality.md / reality.json</td>
+<td>machine‑level execution</td>
+</tr>
+<tr>
+<td><strong>imagination</strong></td>
+<td>imagination.md / imagination.json</td>
+<td>symbolic interpretation</td>
+</tr>
+<tr>
+<td><strong>information</strong></td>
+<td>information.md / information.json</td>
+<td>informational encoding</td>
+</tr>
+<tr>
+<td><strong>error</strong></td>
+<td>error.md / error.json</td>
+<td>failure‑mode interpretation</td>
+</tr>
+<tr>
+<td><strong>qmroot</strong></td>
+<td>qmroot.md / qmroot.json</td>
+<td>origin‑state interpretation</td>
+</tr>
+</tbody>
+</table>
+<p>The envelope registry defines the <strong>six‑envelope interpretive system</strong> for the S3 Spine.</p>
+<hr>
+<h2 id="5-example-registry">5. Example Registry</h2>
+<p>Registry file:</p>
+<pre><code>spine.examples.registry.json
+</code></pre>
+<h3 id="example-entries">Example Entries</h3>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Envelope</th>
+<th>Files</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>canonical.001</td>
+<td>canonical</td>
+<td>canonical.001.json, docs/canonical.md</td>
+</tr>
+<tr>
+<td>reality.001</td>
+<td>reality</td>
+<td>reality.001.json, docs/reality.md</td>
+</tr>
+<tr>
+<td>imagination.001</td>
+<td>imagination</td>
+<td>imagination.001.json, docs/imagination.md</td>
+</tr>
+<tr>
+<td>information.001</td>
+<td>information</td>
+<td>information.001.json, docs/information.md</td>
+</tr>
+<tr>
+<td>error.001</td>
+<td>error</td>
+<td>error.001.json, docs/error.md</td>
+</tr>
+<tr>
+<td>qmroot.001</td>
+<td>qmroot</td>
+<td>qmroot.001.json, docs/qmroot.md</td>
+</tr>
+</tbody>
+</table>
+<p>The example registry provides <strong>machine‑level indexing</strong> for all example envelopes.</p>
+<hr>
+<h2 id="6-ai-metadata-registry">6. AI Metadata Registry</h2>
+<p>Registry file:</p>
+<pre><code>ai_registry.json
+</code></pre>
+<h3 id="ai-metadata-entries">AI Metadata Entries</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ai.metadata</td>
+<td>spine/ai.metadata.json</td>
+</tr>
+<tr>
+<td>ai.registry</td>
+<td>spine/ai_registry.json</td>
+</tr>
+</tbody>
+</table>
+<p>This registry is used by AI engines to load <strong>metadata</strong>, <strong>lineage</strong>, and <strong>interpretive context</strong>.</p>
+<hr>
+<h2 id="7-mcp-tool-registry">7. MCP Tool Registry</h2>
+<p>Registry file:</p>
+<pre><code>tools.catalog.json
+</code></pre>
+<h3 id="mcp-tool-families">MCP Tool Families</h3>
+<table>
+<thead>
+<tr>
+<th>Tool Family</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>graph.*</td>
+<td>structural traversal and node/edge inspection</td>
+</tr>
+<tr>
+<td>content.*</td>
+<td>extraction, indexing, search</td>
+</tr>
+<tr>
+<td>diagnostics.*</td>
+<td>drift detection, coherence validation</td>
+</tr>
+<tr>
+<td>lineage.*</td>
+<td>cosmology tracing</td>
+</tr>
+<tr>
+<td>envelope.*</td>
+<td>envelope generation and comparison</td>
+</tr>
+</tbody>
+</table>
+<p>The MCP registry defines <strong>tool‑level integration</strong> for the S3 Spine.</p>
+<hr>
+<h2 id="8-registry-json-for-mcp-tools">8. Registry JSON (for MCP tools)</h2>
+<pre><code class="language-json">{
+  &quot;registry&quot;: {
+    &quot;module&quot;: &quot;registry/module_registry.json&quot;,
+    &quot;operators&quot;: &quot;registry/operator_registry.json&quot;,
+    &quot;dimensions&quot;: &quot;registry/dimension_registry.json&quot;,
+    &quot;envelopes&quot;: &quot;registry/envelope_registry.json&quot;,
+    &quot;examples&quot;: &quot;spine.examples.registry.json&quot;,
+    &quot;ai&quot;: &quot;ai_registry.json&quot;,
+    &quot;tools&quot;: &quot;tools.catalog.json&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="9-session-context">9. Session Context</h2>
+<pre><code>Canon: R5
+Modules: L3_Forces_Unseen / spine / docs / registry
+Drift: none (freeze-aligned)
+Coherence: force-state coherence
+Version: 1.0.0
+Format: registry.md
+Front door: docs/MCP/L3_Forces_Unseen/spine/
+Audience: MCP implementers, RTT researchers, cosmology engineers
+</code></pre>
+<hr>
+<h2 id="summary">✔ Summary</h2>
+<p>Your regenerated <code>registry.md</code> now provides:</p>
+<ul>
+<li>complete module registry  </li>
+<li>complete operator registry  </li>
+<li>complete dimension registry  </li>
+<li>complete envelope registry  </li>
+<li>complete example registry  </li>
+<li>complete AI metadata registry  </li>
+<li>complete MCP tool registry  </li>
+<li>MCP‑ready JSON  </li>
+<li>full R5 canonical alignment  </li>
+</ul>
+<p>It is <strong>fully canonical</strong>, <strong>drift‑free</strong>, and <strong>ready for commit</strong>.</p>
+  </main>
+</body>
+</html>

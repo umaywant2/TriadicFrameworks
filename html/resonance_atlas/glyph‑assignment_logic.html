@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/resonance_atlas/glyph‑assignment_logic.md">
+  <title>🎨 1. Glyph‑Assignment Logic (RTT‑Aligned Minimal Edition)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/resonance_atlas/glyph‑assignment_logic.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/resonance_atlas/glyph‑assignment_logic.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="1-glyphassignment-logic-rttaligned-minimal-edition">🎨 <strong>1. Glyph‑Assignment Logic (RTT‑Aligned Minimal Edition)</strong></h1>
+<p>This logic assigns glyphs based on <strong>phase</strong>, <strong>substrate</strong>, and <strong>resonance corridor</strong>.<br>
+It mirrors the clarity of your phase ladder and keeps the system drift‑free.</p>
+<h2 id="conceptual-rules"><strong>Conceptual Rules</strong></h2>
+<h3 id="rule-1-phase-determines-glyph-family"><strong>Rule 1 — Phase Determines Glyph Family</strong></h3>
+<p>Each phase has a canonical glyph family:</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Symbol</th>
+<th>Glyph Family</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>⚛️</td>
+<td>Atom / Quantum / Blue</td>
+</tr>
+<tr>
+<td>II</td>
+<td>🧬</td>
+<td>DNA / Biological / Green</td>
+</tr>
+<tr>
+<td>III</td>
+<td>🍃</td>
+<td>Leaf / Ecological / Teal</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>⛰️</td>
+<td>Mountain / Geological / Brown</td>
+</tr>
+<tr>
+<td>V</td>
+<td>📜</td>
+<td>Scroll / Mythic / Purple</td>
+</tr>
+<tr>
+<td>VI</td>
+<td>⭐</td>
+<td>Star / Cosmic / Gold</td>
+</tr>
+</tbody>
+</table>
+<p>This ensures <strong>visual coherence</strong> across the Atlas.</p>
+<hr>
+<h3 id="rule-2-substrate-determines-glyph-variant"><strong>Rule 2 — Substrate Determines Glyph Variant</strong></h3>
+<p>Within each family, the substrate selects the variant:</p>
+<p>Examples:</p>
+<ul>
+<li><strong>molecular vibration → Blue Atom</strong>  </li>
+<li><strong>neural oscillation → Green Neuron</strong>  </li>
+<li><strong>seasonal cycle → Teal Spiral</strong>  </li>
+<li><strong>seismic resonance → Brown Faultline</strong>  </li>
+<li><strong>civilizational cycle → Purple Epoch</strong>  </li>
+<li><strong>stellar spectrum → Gold Radiant Star</strong></li>
+</ul>
+<p>Variants are optional but help scanners and overlays.</p>
+<hr>
+<h3 id="rule-3-drift-flags-modify-glyph"><strong>Rule 3 — Drift Flags Modify Glyph</strong></h3>
+<p>If drift is detected:</p>
+<ul>
+<li><strong>minor drift → add hollow outline</strong>  </li>
+<li><strong>moderate drift → add dashed outline</strong>  </li>
+<li><strong>severe drift → add red overlay glyph</strong>  </li>
+</ul>
+<p>This gives instant visual feedback.</p>
+<hr>
+<h2 id="minimal-code-version"><strong>Minimal Code Version</strong></h2>
+<pre><code class="language-python">def assign_glyph(symbol, substrate=None, drift=None):
+    base = {
+        &quot;⚛️&quot;: &quot;Blue Atom&quot;,
+        &quot;🧬&quot;: &quot;Green DNA&quot;,
+        &quot;🍃&quot;: &quot;Teal Leaf&quot;,
+        &quot;⛰️&quot;: &quot;Brown Mountain&quot;,
+        &quot;📜&quot;: &quot;Purple Scroll&quot;,
+        &quot;⭐&quot;: &quot;Gold Star&quot;
+    }.get(symbol, &quot;Unknown&quot;)
+
+    # Substrate-specific variants (optional)
+    if substrate:
+        if &quot;vibration&quot; in substrate:
+            base = &quot;Blue Atom&quot;
+        elif &quot;neural&quot; in substrate:
+            base = &quot;Green Neuron&quot;
+        elif &quot;seasonal&quot; in substrate:
+            base = &quot;Teal Spiral&quot;
+        elif &quot;seismic&quot; in substrate:
+            base = &quot;Brown Faultline&quot;
+        elif &quot;civilizational&quot; in substrate:
+            base = &quot;Purple Epoch&quot;
+        elif &quot;stellar&quot; in substrate:
+            base = &quot;Gold Radiant Star&quot;
+
+    # Drift overlays
+    if drift == &quot;minor&quot;:
+        return base + &quot; (hollow)&quot;
+    if drift == &quot;moderate&quot;:
+        return base + &quot; (dashed)&quot;
+    if drift == &quot;severe&quot;:
+        return base + &quot; (red-overlay)&quot;
+
+    return base
+</code></pre>
+<p>This is intentionally minimal and easy to extend.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/dimensional_drift_envelope.md">
+  <title>RTT Core: Dimensional Drift Envelope</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/dimensional_drift_envelope.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/dimensional_drift_envelope.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_dimensional_drift_envelope" src="https://github.com/user-attachments/assets/a3f018b6-86a1-418d-aeba-d07982242212" /></p>
+<hr>
+<p>module_id: rtt.core.dimensional_drift_envelope
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - dimensional-drift
+  - rtt-core
+  - entanglement-manifolds
+  - representational-geometry
+  - triadic-time</p>
+<hr>
+<h1 id="rtt-core-dimensional-drift-envelope">RTT Core: Dimensional Drift Envelope</h1>
+<h2 id="1-purpose-and-role-in-rtt">1. Purpose and role in RTT</h2>
+<p><strong>Goal:</strong><br>
+Define the <strong>Dimensional Drift Envelope (DDE)</strong> as the RTT mechanism governing:</p>
+<ul>
+<li>How representational states migrate across <strong>higher-dimensional manifolds</strong>  </li>
+<li>How observable dimensions remain <strong>singular</strong> despite multi-branch drift  </li>
+<li>How drift interacts with <strong>coherence</strong>, <strong>regime constraints</strong>, and <strong>Validator Pulse eligibility</strong></li>
+</ul>
+<p>DDE is the RTT structure that explains why:</p>
+<ul>
+<li>A system may <em>appear</em> to “duplicate” or “extend” a state  </li>
+<li>Yet only one branch remains eligible for classical readout  </li>
+<li>And no violation of no‑cloning or conservation laws occurs</li>
+</ul>
+<p>It is the geometric counterpart to the <strong>Validator Pulse</strong> module.</p>
+<hr>
+<h2 id="2-conceptual-definition">2. Conceptual definition</h2>
+<h3 id="21-informal-definition">2.1 Informal definition</h3>
+<blockquote>
+<p>The Dimensional Drift Envelope is the RTT structure that<br>
+allows a state to spread across multiple representational dimensions<br>
+while constraining the observable dimension to remain singular.</p>
+</blockquote>
+<p>In other words:</p>
+<ul>
+<li><strong>Representation can drift.</strong>  </li>
+<li><strong>Readout cannot.</strong></li>
+</ul>
+<p>This is the geometric reason why multi‑branch extension operators (e.g., “quantum cloning” experiments) do not violate classical constraints.</p>
+<h3 id="22-core-properties">2.2 Core properties</h3>
+<ul>
+<li>
+<p><strong>Multi-dimensional representational space:</strong><br>
+  States may occupy a manifold larger than the observable dimension.</p>
+</li>
+<li>
+<p><strong>Single observable projection:</strong><br>
+  Only one projection is eligible for classical readout.</p>
+</li>
+<li>
+<p><strong>Drift-bounded:</strong><br>
+  Drift is allowed but must remain within a <strong>Spectral Clarity Envelope</strong> to preserve coherence.</p>
+</li>
+<li>
+<p><strong>Regime-aware:</strong><br>
+  Drift interacts with operator regimes; some operators require drift to remain below threshold.</p>
+</li>
+<li>
+<p><strong>Validator-coupled:</strong><br>
+  Drift determines which branches are eligible for Validator Pulse selection.</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-formal-structure-rtt-level">3. Formal structure (RTT-level)</h2>
+<h3 id="31-representational-manifold">3.1 Representational manifold</h3>
+<p>Let the representational manifold be:</p>
+<p>[
+\mathcal{D} = { d_i \mid i \in I }
+]</p>
+<p>Each drift branch (d_i) carries:</p>
+<ul>
+<li><strong>State content:</strong> (|\psi_i\rangle)</li>
+<li><strong>Dimensional coordinates:</strong> (\vec{\delta}_i)</li>
+<li><strong>Coherence weight:</strong> (c_i)</li>
+<li><strong>Drift magnitude:</strong> (\Delta_i)</li>
+<li><strong>Regime flags:</strong> (R_i)</li>
+</ul>
+<h3 id="32-drift-envelope-definition">3.2 Drift envelope definition</h3>
+<p>Define the <strong>Dimensional Drift Envelope</strong> (\mathcal{E}_D) as:</p>
+<p>[
+\mathcal{E}<em _max="\max">D = { d_i \in \mathcal{D} \mid \Delta_i \leq \Delta</em> }
+]</p>
+<p>Branches outside the envelope:</p>
+<ul>
+<li>Remain physically present  </li>
+<li>But lose eligibility for classical readout  </li>
+<li>And may lose coherence required for validation</li>
+</ul>
+<h3 id="33-observable-projection">3.3 Observable projection</h3>
+<p>The observable dimension is defined as:</p>
+<p>[
+\pi_{\text{obs}} : \mathcal{D} \rightarrow b_k
+]</p>
+<p>where:</p>
+<ul>
+<li>(b_k) is the <strong>unique branch</strong> eligible for Validator Pulse  </li>
+<li>All other branches map to <strong>non-informational residue</strong></li>
+</ul>
+<p>This projection is <strong>singular</strong>, even when (|\mathcal{D}| &gt; 1).</p>
+<hr>
+<h2 id="4-relationship-to-coherence-and-validator-pulse">4. Relationship to coherence and Validator Pulse</h2>
+<h3 id="41-coherence-gating">4.1 Coherence gating</h3>
+<p>Coherence weight (c_i) determines whether a drifted branch remains:</p>
+<ul>
+<li><strong>Eligible</strong> for validation  </li>
+<li><strong>Ineligible</strong> due to drift-induced decoherence</li>
+</ul>
+<p>RTT coherence rule:</p>
+<blockquote>
+<p>Drift reduces coherence; coherence gates validation.</p>
+</blockquote>
+<h3 id="42-validator-pulse-eligibility">4.2 Validator Pulse eligibility</h3>
+<p>Validator Pulse (see <code>/docs/rtt/core/validator_pulse.md</code>) selects:</p>
+<ul>
+<li>The <strong>single branch</strong> within (\mathcal{E}_D)  </li>
+<li>With sufficient coherence  </li>
+<li>And satisfying regime constraints</li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>DDE determines <strong>which branches can be chosen</strong>  </li>
+<li>Validator Pulse determines <strong>which branch is chosen</strong></li>
+</ul>
+<p>They are complementary mechanisms.</p>
+<hr>
+<h2 id="5-time-structure-triadic-time">5. Time structure: triadic time</h2>
+<p>Dimensional Drift Envelope operates across the <strong>state</strong> and <strong>coherence</strong> layers of triadic time:</p>
+<ol>
+<li>
+<p><strong>State time:</strong><br>
+   Drift evolves representational coordinates (\vec{\delta}_i).</p>
+</li>
+<li>
+<p><strong>Coherence time:</strong><br>
+   Drift affects coherence weights (c_i) and eligibility.</p>
+</li>
+<li>
+<p><strong>Readout time:</strong><br>
+   Validator Pulse selects a branch from the envelope.</p>
+</li>
+</ol>
+<p>Quadradic time would allow multiple independent drift axes and multiple readout axes, but DDE is defined for <strong>single-axis drift</strong> and <strong>single-axis readout</strong>, making it inherently <strong>triadic</strong>.</p>
+<hr>
+<h2 id="6-interaction-with-operator-regimes">6. Interaction with operator regimes</h2>
+<h3 id="61-regime-restricted-operators">6.1 Regime-restricted operators</h3>
+<p>Operators may require:</p>
+<ul>
+<li>Drift below threshold  </li>
+<li>Coherence above threshold  </li>
+<li>Specific dimensional configurations</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><strong>Extension operators</strong> (e.g., “quantum cloning” experiments) require drift to remain bounded so that one branch remains eligible for readout.</li>
+<li><strong>Deferred validation operators</strong> require drift stability over time.</li>
+</ul>
+<h3 id="62-regime-transitions">6.2 Regime transitions</h3>
+<p>Drift can push a branch:</p>
+<ul>
+<li><strong>Into</strong> a valid regime  </li>
+<li><strong>Out of</strong> a valid regime  </li>
+<li><strong>Across</strong> a boundary where validation becomes impossible</li>
+</ul>
+<p>This is how DDE enforces <strong>non-symmetric eligibility</strong> across branches.</p>
+<hr>
+<h2 id="7-example-alignment-with-quantum-cloning-experiments">7. Example: alignment with quantum “cloning” experiments</h2>
+<p>In the alignment module <code>/docs/rtt/core/alignment_quantum_cloning.md</code>:</p>
+<ul>
+<li>The experiment creates multiple representational branches across a large entangled manifold.</li>
+<li>DDE explains how these branches can exist without violating no‑cloning.</li>
+<li>Only one branch remains within the drift envelope with sufficient coherence.</li>
+<li>Validator Pulse selects that branch for classical readout.</li>
+<li>All other branches collapse into residue.</li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li><strong>DDE enables multi-branch representation.</strong>  </li>
+<li><strong>Validator Pulse enforces single-branch classical reality.</strong></li>
+</ul>
+<hr>
+<h2 id="8-paradox-handling">8. Paradox handling</h2>
+<p>Dimensional Drift Envelope resolves structural paradoxes such as:</p>
+<ul>
+<li>
+<p>“How can a state be duplicated without violating no‑cloning?”<br>
+  → Because duplication occurs in representational dimensions, not observable dimensions.</p>
+</li>
+<li>
+<p>“Why does only one branch become classical?”<br>
+  → Because only one branch remains within the drift envelope with sufficient coherence.</p>
+</li>
+<li>
+<p>“Why don’t the other branches matter?”<br>
+  → They exist but are <strong>non-informational</strong> after validation.</p>
+</li>
+</ul>
+<hr>
+<h2 id="9-canon-integration-and-cross-links">9. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the geometric and representational core of RTT drift behavior.<br>
+Once operator grammar and drift-indexing syntax are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

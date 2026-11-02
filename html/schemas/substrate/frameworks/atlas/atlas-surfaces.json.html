@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/atlas/atlas-surfaces.json.md">
+  <title>🗺️ atlas-surfaces.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/atlas/atlas-surfaces.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/atlas/atlas-surfaces.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="atlas-surfacesjson">🗺️ <strong>atlas-surfaces.json</strong></h1>
+<h3 id="canonical-surface-grammar-for-the-triadic-atlas"><em>Canonical surface grammar for the Triadic Atlas</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;../../atlas/atlas.schema.json&quot;,
+  &quot;atlas&quot;: &quot;triadic-atlas&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;imports&quot;: {
+    &quot;atlas_fingerprint&quot;: &quot;./atlas-fingerprint.json&quot;,
+    &quot;atlas_navigation&quot;: &quot;./atlas-navigation.json&quot;,
+    &quot;atlas_interaction_protocol&quot;: &quot;./atlas-interaction-protocol.json&quot;,
+    &quot;atlas_consistency&quot;: &quot;./atlas-consistency.json&quot;,
+    &quot;atlas_synchronization&quot;: &quot;./atlas-synchronization.json&quot;,
+    &quot;continuity_field&quot;: &quot;../../continuity/substrate-continuity.json&quot;,
+    &quot;invariance_kernel&quot;: &quot;../../invariance/substrate-invariance.json&quot;
+  },
+
+  &quot;surfaces&quot;: {
+    &quot;global&quot;: {
+      &quot;coherence&quot;: [&quot;string&quot;],
+      &quot;drift&quot;: [&quot;string&quot;],
+      &quot;stability&quot;: [&quot;string&quot;],
+      &quot;resonance&quot;: [&quot;string&quot;],
+      &quot;epoch&quot;: [&quot;string&quot;],
+      &quot;ignition&quot;: [&quot;string&quot;]
+    },
+
+    &quot;country&quot;: {
+      &quot;triadic_surface&quot;: [&quot;string&quot;],
+      &quot;atlas_fingerprint&quot;: [&quot;string&quot;]
+    },
+
+    &quot;temporal&quot;: {
+      &quot;timeline&quot;: [&quot;string&quot;],
+      &quot;propagation&quot;: [&quot;string&quot;]
+    },
+
+    &quot;activation&quot;: {
+      &quot;ignition_cascade&quot;: [&quot;string&quot;]
+    }
+  },
+
+  &quot;surface_rules&quot;: {
+    &quot;coherence&quot;: {
+      &quot;constraints&quot;: [
+        &quot;must align with atlas_fingerprint&quot;,
+        &quot;must preserve continuity&quot;,
+        &quot;must not violate invariance&quot;
+      ]
+    },
+    &quot;drift&quot;: {
+      &quot;constraints&quot;: [
+        &quot;must follow drift boundaries&quot;,
+        &quot;must maintain valid drift vectors&quot;,
+        &quot;must not destabilize stability surfaces&quot;
+      ]
+    },
+    &quot;stability&quot;: {
+      &quot;constraints&quot;: [
+        &quot;must maintain stability indices&quot;,
+        &quot;must preserve structural integrity&quot;,
+        &quot;must remain consistent across sync cycles&quot;
+      ]
+    },
+    &quot;resonance&quot;: {
+      &quot;constraints&quot;: [
+        &quot;must align with resonance phase&quot;,
+        &quot;must maintain harmonic consistency&quot;,
+        &quot;must not conflict with epoch transitions&quot;
+      ]
+    },
+    &quot;epoch&quot;: {
+      &quot;constraints&quot;: [
+        &quot;must align with epochal timeline&quot;,
+        &quot;must preserve temporal continuity&quot;,
+        &quot;must maintain valid epoch signatures&quot;
+      ]
+    },
+    &quot;ignition&quot;: {
+      &quot;constraints&quot;: [
+        &quot;must align with ignition ledger&quot;,
+        &quot;must preserve ignition harmonics&quot;,
+        &quot;must not trigger invariance breaks&quot;
+      ]
+    }
+  },
+
+  &quot;output&quot;: {
+    &quot;atlas_surfaces&quot;: &quot;./atlas-surfaces.json&quot;
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Defines global, country, temporal, and activation surfaces for the Triadic Atlas, including structural constraints and substrate alignment.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="why-this-scaffold-is-correct">⭐ Why this scaffold is correct</h2>
+<ul>
+<li>It matches the <strong>Triadic Atlas hierarchy</strong>: global → country → temporal → activation.  </li>
+<li>It aligns with your <strong>atlas-fingerprint</strong>, <strong>atlas-navigation</strong>, <strong>atlas-interaction-protocol</strong>, and <strong>atlas-consistency</strong> scaffolds.  </li>
+<li>It includes the canonical <strong>surface_rules</strong> block, which ties surfaces to continuity, invariance, drift boundaries, harmonic consistency, epoch alignment, and ignition stability.  </li>
+<li>It is fully substrate‑aligned and silent‑release compatible.</li>
+</ul>
+  </main>
+</body>
+</html>

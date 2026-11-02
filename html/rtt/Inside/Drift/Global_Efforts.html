@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Drift/Global_Efforts.md">
+  <title>Section 2 — Global Efforts to Reduce Drift: Techniques, Investment, and Limitations</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Drift/Global_Efforts.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Drift/Global_Efforts.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="section-2-global-efforts-to-reduce-drift-techniques-investment-and-limitations"><strong>Section 2 — Global Efforts to Reduce Drift: Techniques, Investment, and Limitations</strong></h1>
+<p>Over the last several years, the global AI research community has invested extraordinary resources into mitigating drift and stabilizing model behavior. Major technology companies, academic institutions, and government‑funded research programs have collectively spent <strong>billions of dollars</strong> attempting to reduce drift in large language models. Despite this unprecedented effort, drift remains a dominant failure mode across all major architectures.</p>
+<p>This section summarizes the primary approaches attempted to date, the rationale behind each, and the structural limitations that have prevented them from fully resolving the problem.</p>
+<hr>
+<h2 id="21-scaling-laws-and-model-size-increases"><strong>2.1 Scaling Laws and Model Size Increases</strong></h2>
+<p>One of the earliest and most heavily funded strategies was the belief that drift would diminish as models grew larger. The assumption was that increased parameter count and training data volume would yield more accurate internal representations of the world.</p>
+<p><strong>Outcome:</strong><br>
+- Larger models do hallucinate <em>less frequently</em> in simple tasks.<br>
+- However, <strong>long‑horizon drift persists</strong>, and in some cases becomes <em>more subtle and harder to detect</em>.<br>
+- Scaling alone has not eliminated drift; it has merely shifted its expression.</p>
+<p><strong>Limitation:</strong><br>
+Scaling improves fluency, not structural reasoning. Autoregressive prediction remains fundamentally unconstrained.</p>
+<hr>
+<h2 id="22-reinforcement-learning-from-human-feedback-rlhf"><strong>2.2 Reinforcement Learning from Human Feedback (RLHF)</strong></h2>
+<p>RLHF became the dominant alignment technique across the industry. Human annotators rate model outputs, and the model learns to avoid undesirable responses.</p>
+<p><strong>Outcome:</strong><br>
+- RLHF reduces <em>overt</em> drifting.<br>
+- It improves politeness, safety, and surface‑level coherence.<br>
+- It does <strong>not</strong> eliminate deeper forms of drift, especially in multi‑step reasoning.</p>
+<p><strong>Limitation:</strong><br>
+RLHF optimizes for <em>likelihood of approval</em>, not <em>truthfulness</em> or <em>structural stability</em>.<br>
+It cannot correct drifts that arise from internal uncertainty or compounding inference errors.</p>
+<hr>
+<h2 id="23-retrievalaugmented-generation-rag"><strong>2.3 Retrieval‑Augmented Generation (RAG)</strong></h2>
+<p>RAG systems attempt to ground model outputs in external documents, databases, or search results.</p>
+<p><strong>Outcome:</strong><br>
+- RAG reduces drift in fact‑based tasks.<br>
+- It improves citation accuracy and reduces fabricated details.<br>
+- However, models still hallucinate when retrieval is ambiguous, incomplete, or misinterpreted.</p>
+<p><strong>Limitation:</strong><br>
+RAG does not constrain the <em>reasoning process</em> — only the <em>input</em>.<br>
+The model can still drift while interpreting retrieved information.</p>
+<hr>
+<h2 id="24-chainofthought-cot-and-structured-reasoning-prompts"><strong>2.4 Chain‑of‑Thought (CoT) and Structured Reasoning Prompts</strong></h2>
+<p>Researchers introduced step‑by‑step reasoning prompts to encourage transparency and reduce drift.</p>
+<p><strong>Outcome:</strong><br>
+- CoT improves performance on math, logic, and multi‑step tasks.<br>
+- It exposes intermediate reasoning steps.<br>
+- However, CoT itself can hallucinate — producing incorrect intermediate steps that appear plausible.</p>
+<p><strong>Limitation:</strong><br>
+CoT amplifies the <em>illusion</em> of reasoning without providing structural guarantees.<br>
+It is still unconstrained autoregression.</p>
+<hr>
+<h2 id="25-guardrails-filters-and-postprocessing"><strong>2.5 Guardrails, Filters, and Post‑Processing</strong></h2>
+<p>Many systems now include layers of rule‑based or model‑based filters that attempt to catch drift's after they occur.</p>
+<p><strong>Outcome:</strong><br>
+- These systems catch some errors.<br>
+- They reduce harmful outputs.<br>
+- They do not prevent drift — they only mask or intercept it.</p>
+<p><strong>Limitation:</strong><br>
+Post‑processing is reactive, not preventative.<br>
+It cannot correct the underlying instability of the reasoning trajectory.</p>
+<hr>
+<h2 id="26-multimodel-crosschecking"><strong>2.6 Multi‑Model Cross‑Checking</strong></h2>
+<p>Some research groups have experimented with ensembles of models that check each other’s outputs.</p>
+<p><strong>Outcome:</strong><br>
+- Cross‑checking reduces certain types of drifting.<br>
+- It increases computational cost dramatically.<br>
+- It often results in “majority‑vote chimeras” when all models share the same blind spots.</p>
+<p><strong>Limitation:</strong><br>
+Redundancy does not equal stability.<br>
+Multiple drifting systems do not produce a stable one.</p>
+<hr>
+<h2 id="27-industrywide-assessment"><strong>2.7 Industry‑Wide Assessment</strong></h2>
+<p>Across all major approaches, the pattern is consistent:</p>
+<ul>
+<li>Techniques reduce <em>surface‑level</em> drift.  </li>
+<li>Techniques do not eliminate <em>structural</em> drift.  </li>
+<li>Drift persists in long‑form reasoning, ambiguous tasks, and multi‑step chains.  </li>
+<li>No existing method provides <strong>deterministic, replayable, bounded reasoning</strong>.</li>
+</ul>
+<p>Despite enormous investment, drift remains the <strong>central unsolved problem</strong> in generative AI.</p>
+<p>This persistent failure suggests that drift is not a bug in the training process, but a <strong>structural property</strong> of unconstrained autoregressive systems — one that cannot be fully corrected without introducing new forms of reasoning physics.</p>
+  </main>
+</body>
+</html>

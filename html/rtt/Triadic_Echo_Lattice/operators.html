@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Triadic_Echo_Lattice/operators.md">
+  <title>🕸️ Triadic Echo Lattice — Operators</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Triadic_Echo_Lattice/operators.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Triadic_Echo_Lattice/operators.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadic-echo-lattice-operators">🕸️ Triadic Echo Lattice — Operators</h1>
+<blockquote>
+<p><em>Four operators. One lattice. Every echo gets an address.</em></p>
+</blockquote>
+<p><strong>Module:</strong> Triadic Echo Lattice
+<strong>Canonical ID:</strong> TEL
+<strong>HSP Section:</strong> 07
+<strong>Badge:</strong> 🕸️ TEL • 07 • v1.0</p>
+<hr>
+<h2 id="operator-pipeline">Operator Pipeline</h2>
+<pre><code>Classified echo (from EC-Tag)
+    │
+    ▼
+┌──────────────┐
+│   TEL-Read   │  Lattice Input Reader
+│  extract     │  Receives classified echo, extracts placement-relevant data
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│  TEL-Place   │  Layer Assignment Engine
+│  assign      │  Assigns echo to layer; detects pressure zones
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│  TEL-Trace   │  Recursion &amp; Drift Tracer
+│  map paths   │  Maps recursion path, drift exposure, escalation risk
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│   TEL-Tag    │  Lattice Output Emitter
+│  emit record │  Packages lattice record with placement status
+└──────────────┘
+       │
+       ▼
+Lattice record → Substrate Flow (SF-Read)
+</code></pre>
+<hr>
+<h2 id="operator-1-tel-read-lattice-input-reader">Operator 1 — TEL-Read (Lattice Input Reader)</h2>
+<h3 id="purpose">Purpose</h3>
+<p>Receives a classified echo from EC‑Tag and extracts the data fields
+required for lattice placement.</p>
+<h3 id="input">Input</h3>
+<pre><code class="language-yaml">source: EC-Tag output
+fields:
+  - echo_type: E1–E6
+  - echo_family: F1–F6
+  - substrate_origin: S | C | H | So | A
+  - substrate_reach: [list of substrates touched]
+  - esi_score: 0.0–1.0
+  - confidence: 0.0–1.0
+  - drift_flag: boolean
+  - tags: []
+</code></pre>
+<h3 id="output">Output</h3>
+<pre><code class="language-yaml">tel_input_packet:
+  echo_id: [inherited]
+  echo_type: E1–E6
+  echo_family: F1–F6
+  substrate_origin: S | C | H | So | A
+  substrate_reach: []
+  esi_score: 0.0–1.0
+  drift_flag: boolean
+  placement_ready: true
+</code></pre>
+<h3 id="logic">Logic</h3>
+<ol>
+<li>Validate that echo carries EC‑Tag classification</li>
+<li>Extract type, family, origin, reach, ESI, drift flag</li>
+<li>Confirm <code>placement_ready: true</code> if all fields present</li>
+<li>Reject echoes without valid classification (return to EC)</li>
+</ol>
+<hr>
+<h2 id="operator-2-tel-place-layer-assignment-engine">Operator 2 — TEL-Place (Layer Assignment Engine)</h2>
+<h3 id="purpose_1">Purpose</h3>
+<p>Assigns a classified echo to its lattice layer based on echo type,
+family, substrate reach, and ESI score. Detects pressure zone conditions.</p>
+<h3 id="input_1">Input</h3>
+<pre><code class="language-yaml">source: TEL-Read output (tel_input_packet)
+</code></pre>
+<h3 id="output_1">Output</h3>
+<pre><code class="language-yaml">placement_record:
+  echo_id: [inherited]
+  assigned_layer: Ladder | Cycle | Map | Atlas
+  family_placement: F1–F6
+  pressure_zone: none | ladder | cycle | atlas
+  pressure_severity: 0.0–1.0
+  placement_confidence: 0.0–1.0
+</code></pre>
+<h3 id="decision-tree">Decision Tree</h3>
+<pre><code>                    ┌─────────────────────┐
+                    │  What is echo_type?  │
+                    └──────────┬──────────┘
+                               │
+        ┌──────────┬───────────┼────────────┬──────────┐
+        ▼          ▼           ▼            ▼          ▼
+       E1         E2        E3/E4          E5         E6
+        │          │           │            │          │
+        ▼          ▼           ▼            ▼          ▼
+    ┌────────┐ ┌────────┐ ┌────────┐  ┌─────────┐ ┌────────┐
+    │ Ladder │ │ Cycle  │ │  Map   │  │Pressure │ │ Atlas  │
+    │  F1    │ │  F2    │ │ F3/F4  │  │  Zone   │ │  F6    │
+    └───┬────┘ └───┬────┘ └───┬────┘  │  F5     │ └───┬────┘
+        │          │          │       └────┬────┘     │
+        ▼          ▼          ▼            ▼          ▼
+   Check for  Check for  Check for   Assign to   Mark as
+    Ladder     Cycle     E4→Atlas    nearest     terminus
+   Pressure   Pressure  escalation  boundary
+</code></pre>
+<h3 id="layer-assignment-rules">Layer Assignment Rules</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Echo Type</th>
+<th style="text-align: left;">Primary Layer</th>
+<th style="text-align: left;">Escalation Path</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">E1</td>
+<td style="text-align: left;">Ladder</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Stays at S→C boundary</td>
+</tr>
+<tr>
+<td style="text-align: left;">E2</td>
+<td style="text-align: left;">Cycle</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Oscillates C↔H</td>
+</tr>
+<tr>
+<td style="text-align: left;">E3</td>
+<td style="text-align: left;">Map</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Migrates across H↔So</td>
+</tr>
+<tr>
+<td style="text-align: left;">E4</td>
+<td style="text-align: left;">Map (upper)</td>
+<td style="text-align: left;">Map → Atlas via R4</td>
+<td style="text-align: left;">Transition family</td>
+</tr>
+<tr>
+<td style="text-align: left;">E5</td>
+<td style="text-align: left;">No home layer</td>
+<td style="text-align: left;">Pressure zones</td>
+<td style="text-align: left;">Instability marker</td>
+</tr>
+<tr>
+<td style="text-align: left;">E6</td>
+<td style="text-align: left;">Atlas</td>
+<td style="text-align: left;">None (terminus)</td>
+<td style="text-align: left;">Full‑spectrum anchor</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pressure-zone-detection">Pressure Zone Detection</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Zone</th>
+<th style="text-align: left;">Trigger Condition</th>
+<th style="text-align: left;">Severity Calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ladder</td>
+<td style="text-align: left;">E1 count in Ladder &gt; threshold</td>
+<td style="text-align: left;">count / capacity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cycle</td>
+<td style="text-align: left;">E2 amplitude &gt; harmonic band ceiling</td>
+<td style="text-align: left;">amplitude / ceiling</td>
+</tr>
+<tr>
+<td style="text-align: left;">Atlas</td>
+<td style="text-align: left;">E5 count at Map→Atlas &gt; threshold</td>
+<td style="text-align: left;">count / capacity</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="operator-3-tel-trace-recursion-drift-tracer">Operator 3 — TEL-Trace (Recursion &amp; Drift Tracer)</h2>
+<h3 id="purpose_2">Purpose</h3>
+<p>Maps the recursion path, drift exposure, vertical reach, oscillation
+status, and escalation risk for a placed echo.</p>
+<h3 id="input_2">Input</h3>
+<pre><code class="language-yaml">source: TEL-Place output (placement_record)
+</code></pre>
+<h3 id="output_2">Output</h3>
+<pre><code class="language-yaml">trace_record:
+  echo_id: [inherited]
+  recursion_line: R1 | R2 | R3 | R4 | none
+  recursion_depth: 0–n
+  drift_pathway: D1 | D2 | D3 | D4 | none
+  drift_severity: 0.0–1.0
+  vertical_reach: [list of layers touched]
+  oscillation_status: true | false
+  escalation_risk: 0.0–1.0
+</code></pre>
+<h3 id="recursion-line-assignment">Recursion Line Assignment</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Condition</th>
+<th style="text-align: left;">Recursion Line</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Echo in Ladder, moving toward Cycle</td>
+<td style="text-align: left;">R1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Echo in Cycle, oscillating C↔H</td>
+<td style="text-align: left;">R2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Echo in Cycle, moving toward Map</td>
+<td style="text-align: left;">R3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Echo in Map, moving toward Atlas</td>
+<td style="text-align: left;">R4</td>
+</tr>
+<tr>
+<td style="text-align: left;">Echo stationary (E1 anchored, E6 terminal)</td>
+<td style="text-align: left;">none</td>
+</tr>
+</tbody>
+</table>
+<h3 id="drift-pathway-assignment">Drift Pathway Assignment</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Condition</th>
+<th style="text-align: left;">Drift Pathway</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Instability at S/C boundary</td>
+<td style="text-align: left;">D1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Instability at C/H boundary</td>
+<td style="text-align: left;">D2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Instability at H/So boundary</td>
+<td style="text-align: left;">D3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Instability at So/A boundary</td>
+<td style="text-align: left;">D4</td>
+</tr>
+<tr>
+<td style="text-align: left;">No instability detected</td>
+<td style="text-align: left;">none</td>
+</tr>
+</tbody>
+</table>
+<h3 id="escalation-risk-calculation">Escalation Risk Calculation</h3>
+<pre><code>escalation_risk = weighted_sum(
+  drift_severity × 0.4,
+  esi_score × 0.3,
+  pressure_severity × 0.2,
+  recursion_depth × 0.1
+)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Risk Band</th>
+<th style="text-align: left;">Range</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Negligible</td>
+<td style="text-align: left;">0.0–0.1</td>
+<td style="text-align: left;">Echo is structurally anchored</td>
+</tr>
+<tr>
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">0.1–0.3</td>
+<td style="text-align: left;">Minor instability; monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Moderate</td>
+<td style="text-align: left;">0.3–0.6</td>
+<td style="text-align: left;">Active migration or oscillation</td>
+</tr>
+<tr>
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">0.6–0.8</td>
+<td style="text-align: left;">Significant drift or escalation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critical</td>
+<td style="text-align: left;">0.8–1.0</td>
+<td style="text-align: left;">Structural forcing or pressure zone saturation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="operator-4-tel-tag-lattice-output-emitter">Operator 4 — TEL-Tag (Lattice Output Emitter)</h2>
+<h3 id="purpose_3">Purpose</h3>
+<p>Packages the final lattice record with a placement status tag and emits
+it downstream to Substrate Flow (SF‑Read).</p>
+<h3 id="input_3">Input</h3>
+<pre><code class="language-yaml">source: TEL-Trace output (trace_record) + TEL-Place output (placement_record)
+</code></pre>
+<h3 id="output_3">Output</h3>
+<pre><code class="language-yaml">lattice_record:
+  echo_id: [inherited]
+  echo_type: E1–E6
+  echo_family: F1–F6
+  assigned_layer: Ladder | Cycle | Map | Atlas
+  recursion_line: R1–R4 | none
+  drift_pathway: D1–D4 | none
+  drift_severity: 0.0–1.0
+  escalation_risk: 0.0–1.0
+  pressure_zone: none | ladder | cycle | atlas
+  pressure_severity: 0.0–1.0
+  oscillation_status: true | false
+  vertical_reach: []
+  placement_status: anchored | oscillating | migrating | pressured | forcing
+  tags: []
+</code></pre>
+<h3 id="placement-status-assignment">Placement Status Assignment</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>anchored</strong></td>
+<td style="text-align: left;">No active recursion, no drift, risk &lt; 0.1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>oscillating</strong></td>
+<td style="text-align: left;">R2 active, oscillation_status = true, risk &lt; 0.3</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>migrating</strong></td>
+<td style="text-align: left;">R1/R3/R4 active, drift mild–moderate, risk 0.3–0.7</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>pressured</strong></td>
+<td style="text-align: left;">Pressure zone active, drift moderate–severe, risk 0.7–0.9</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>forcing</strong></td>
+<td style="text-align: left;">E6 at Atlas terminus OR critical escalation (risk &gt; 0.9)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="type-profiles-lattice-behavior-by-echo-type">Type Profiles — Lattice Behavior by Echo Type</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Echo Type</th>
+<th style="text-align: left;">Typical Layer</th>
+<th style="text-align: left;">Typical Status</th>
+<th style="text-align: left;">Typical Recursion</th>
+<th style="text-align: left;">Typical Drift</th>
+<th style="text-align: left;">Typical Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">E1</td>
+<td style="text-align: left;">Ladder</td>
+<td style="text-align: left;">anchored</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">D1 (rare)</td>
+<td style="text-align: left;">0.0–0.1</td>
+</tr>
+<tr>
+<td style="text-align: left;">E2</td>
+<td style="text-align: left;">Cycle</td>
+<td style="text-align: left;">oscillating</td>
+<td style="text-align: left;">R2</td>
+<td style="text-align: left;">D2 (occasional)</td>
+<td style="text-align: left;">0.1–0.3</td>
+</tr>
+<tr>
+<td style="text-align: left;">E3</td>
+<td style="text-align: left;">Map</td>
+<td style="text-align: left;">migrating</td>
+<td style="text-align: left;">R3</td>
+<td style="text-align: left;">D3 (mild)</td>
+<td style="text-align: left;">0.3–0.5</td>
+</tr>
+<tr>
+<td style="text-align: left;">E4</td>
+<td style="text-align: left;">Map (upper)</td>
+<td style="text-align: left;">migrating</td>
+<td style="text-align: left;">R4</td>
+<td style="text-align: left;">D3 (moderate)</td>
+<td style="text-align: left;">0.5–0.7</td>
+</tr>
+<tr>
+<td style="text-align: left;">E5</td>
+<td style="text-align: left;">Pressure zone</td>
+<td style="text-align: left;">pressured</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">D3/D4 (severe)</td>
+<td style="text-align: left;">0.7–0.9</td>
+</tr>
+<tr>
+<td style="text-align: left;">E6</td>
+<td style="text-align: left;">Atlas</td>
+<td style="text-align: left;">forcing</td>
+<td style="text-align: left;">R4 (terminus)</td>
+<td style="text-align: left;">D4 (moderate)</td>
+<td style="text-align: left;">0.0 (terminal)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="invariants">Invariants</h2>
+<ol>
+<li><strong>Every classified echo receives a layer assignment</strong> — E5 receives a pressure zone assignment instead</li>
+<li><strong>Flow is upward</strong> — all layers except Cycle are unidirectional</li>
+<li><strong>Atlas receives only</strong> — no echo originates at Atlas level</li>
+<li><strong>Pressure zones are emergent</strong> — they are conditions, not designed layers</li>
+<li><strong>Recursion and drift share the vertical axis</strong> — same connections, opposite physics</li>
+<li><strong>Placement is deterministic</strong> — same input always produces the same lattice record</li>
+</ol>
+<hr>
+<!-- SESSION_CONTEXT:START -->
+
+<pre><code class="language-yaml">file: operators.md
+module: Triadic Echo Lattice
+canonical_id: TEL
+hsp_section: 07
+role: operator-definitions
+status: canon-stable
+operators:
+  - TEL-Read
+  - TEL-Place
+  - TEL-Trace
+  - TEL-Tag
+invariant_count: 6
+pipeline_direction: TEL-Read → TEL-Place → TEL-Trace → TEL-Tag
+upstream: EC-Tag (Echo Classifier)
+downstream: SF-Read (Substrate Flow)
+</code></pre>
+<!-- SESSION_CONTEXT:END -->
+  </main>
+</body>
+</html>

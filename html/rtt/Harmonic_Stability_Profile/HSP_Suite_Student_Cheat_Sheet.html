@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Harmonic_Stability_Profile/HSP_Suite_Student_Cheat_Sheet.md">
+  <title>HSP Suite — Student Cheat Sheet</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Harmonic_Stability_Profile/HSP_Suite_Student_Cheat_Sheet.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Harmonic_Stability_Profile/HSP_Suite_Student_Cheat_Sheet.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Harmonic_Stability_Profile_HSP_Suite_Student_Cheat_Sheet_" src="https://github.com/user-attachments/assets/b5266d81-741a-45a9-acf7-60bba6c4f8fe" /></p>
+<h1 id="hsp-suite-student-cheat-sheet">HSP Suite — Student Cheat Sheet</h1>
+<blockquote>
+<p>Quick-Reference for All Operator Families</p>
+<p>🤖 AI-Ready Module • TriadicFrameworks</p>
+<p>Print-friendly • Pin to your workspace</p>
+</blockquote>
+<hr>
+<h2 id="1-what-is-the-hsp-suite">1 · What Is the HSP Suite?</h2>
+<p>The Harmonic Stability Profile (HSP) Suite is the RTT-native analytics engine. It measures harmonic stability, classifies echoes, maps substrate flow, and detects drift. Five modules work together: <strong>HSP Core</strong>, <strong>Echo Classifier</strong>, <strong>Substrate Flow (SEFM)</strong>, <strong>Triadic Echo Lattice (TEL)</strong>, and <strong>cross-module chains</strong>.</p>
+<h2 id="2-the-big-picture-one-line-summary-per-module">2 · The Big Picture — One-Line Summary Per Module</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HSP Core</code></td>
+<td>Classifies stability, measures metrics, assigns tiers</td>
+</tr>
+<tr>
+<td><code>Echo Classifier</code></td>
+<td>Identifies echo type (E1–E6) from triggers, signatures, and strength</td>
+</tr>
+<tr>
+<td><code>Substrate Flow (SEFM)</code></td>
+<td>Maps how echoes move across the five substrates</td>
+</tr>
+<tr>
+<td><code>Triadic Echo Lattice (TEL)</code></td>
+<td>Integrates all echo behavior into a four-layer lattice</td>
+</tr>
+<tr>
+<td><code>Cross-Module Chains</code></td>
+<td>Connects operators across modules into diagnostic pipelines</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-stability-classes-at-a-glance">3 · Stability Classes at a Glance</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Drift</th>
+<th>Recursion</th>
+<th>Think of it as…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SC-1</code></td>
+<td>Stable Harmonics</td>
+<td>Low</td>
+<td>R1 Ladder</td>
+<td>Rock-solid concept</td>
+</tr>
+<tr>
+<td><code>SC-2</code></td>
+<td>Semi-Stable Harmonics</td>
+<td>Moderate</td>
+<td>R2 Cycle</td>
+<td>Needs monitoring</td>
+</tr>
+<tr>
+<td><code>SC-3</code></td>
+<td>Harmonic Oscillators</td>
+<td>High</td>
+<td>R3 Map</td>
+<td>Wobbling — review soon</td>
+</tr>
+<tr>
+<td><code>SC-4</code></td>
+<td>Chaotic Nodes</td>
+<td>Dangerous</td>
+<td>R4 Atlas</td>
+<td>Red alert — fix now</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-the-six-metrics-m1m6">4 · The Six Metrics (M1–M6)</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Measures</th>
+<th>Drift Sensitivity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>M1</code></td>
+<td>Harmonic Recurrence</td>
+<td>How often concept returns to baseline</td>
+<td>D1</td>
+</tr>
+<tr>
+<td><code>M2</code></td>
+<td>Position Consistency</td>
+<td>Interval band stability (I1–I12)</td>
+<td>D1–D2</td>
+</tr>
+<tr>
+<td><code>M3</code></td>
+<td>Substrate Anchoring</td>
+<td>Firmness of substrate alignment</td>
+<td>D2–D4</td>
+</tr>
+<tr>
+<td><code>M4</code></td>
+<td>Role Stability</td>
+<td>Operator behavior consistency</td>
+<td>D1–D3</td>
+</tr>
+<tr>
+<td><code>M5</code></td>
+<td>Temporal Stability</td>
+<td>Stability across time/revisions</td>
+<td>D1–D4</td>
+</tr>
+<tr>
+<td><code>M6</code></td>
+<td>Mutation Rate</td>
+<td>Speed of harmonic structure change</td>
+<td>D2–D4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-stability-tiers-t1t4">5 · Stability Tiers (T1–T4)</h2>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Name</th>
+<th>What to Do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T1</code></td>
+<td>Canon-Stable</td>
+<td>Nothing — you're good</td>
+</tr>
+<tr>
+<td><code>T2</code></td>
+<td>Stable-with-Pressure</td>
+<td>Keep an eye on it</td>
+</tr>
+<tr>
+<td><code>T3</code></td>
+<td>Drift-Active</td>
+<td>Review required</td>
+</tr>
+<tr>
+<td><code>T4</code></td>
+<td>Unstable</td>
+<td>Fix immediately</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-drift-types-d1d4">6 · Drift Types (D1–D4)</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>What It Breaks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>D1</code></td>
+<td>Structural Drift</td>
+<td>Structural triads</td>
+</tr>
+<tr>
+<td><code>D2</code></td>
+<td>Dimensional Drift</td>
+<td>Harmonic ladders</td>
+</tr>
+<tr>
+<td><code>D3</code></td>
+<td>Regime Drift</td>
+<td>Governance rules</td>
+</tr>
+<tr>
+<td><code>D4</code></td>
+<td>Projection Drift</td>
+<td>Lifts symbols into atlas space</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-recursion-modes-r1r4">7 · Recursion Modes (R1–R4)</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Flow Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>R1</code></td>
+<td>Ladder</td>
+<td>S → C</td>
+</tr>
+<tr>
+<td><code>R2</code></td>
+<td>Cycle</td>
+<td>C ↔ H</td>
+</tr>
+<tr>
+<td><code>R3</code></td>
+<td>Map</td>
+<td>H → So</td>
+</tr>
+<tr>
+<td><code>R4</code></td>
+<td>Atlas</td>
+<td>So → A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-the-five-substrates">8 · The Five Substrates</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>S</code></td>
+<td>Symbolic</td>
+</tr>
+<tr>
+<td><code>C</code></td>
+<td>Cognitive</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>Harmonic</td>
+</tr>
+<tr>
+<td><code>So</code></td>
+<td>Social</td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>Atlas</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-echo-types-e1e6-the-classifier-output">9 · Echo Types (E1–E6) — The Classifier Output</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Key Trigger</th>
+<th>ESI Range</th>
+<th>Substrates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>E1</code></td>
+<td>Structural Echo</td>
+<td>Triad/operator recurrence</td>
+<td>1–2</td>
+<td>1–2</td>
+</tr>
+<tr>
+<td><code>E2</code></td>
+<td>Harmonic Echo</td>
+<td>Interval alignment</td>
+<td>2–3</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>E3</code></td>
+<td>Substrate Echo</td>
+<td>Cross-substrate recurrence</td>
+<td>2–3</td>
+<td>3–4</td>
+</tr>
+<tr>
+<td><code>E4</code></td>
+<td>Recursion Echo</td>
+<td>Recursion-pattern repetition</td>
+<td>3–4</td>
+<td>2–4</td>
+</tr>
+<tr>
+<td><code>E5</code></td>
+<td>Drift-Shadow Echo</td>
+<td>Drift-residue recurrence</td>
+<td>3–4</td>
+<td>2–5</td>
+</tr>
+<tr>
+<td><code>E6</code></td>
+<td>Atlas Echo</td>
+<td>High-altitude resonance</td>
+<td>4</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-echo-strength-index-esi">10 · Echo Strength Index (ESI)</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>What Happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ESI-1</code></td>
+<td>Local</td>
+<td>Flow stays local</td>
+</tr>
+<tr>
+<td><code>ESI-2</code></td>
+<td>Mild</td>
+<td>Mild migration begins</td>
+</tr>
+<tr>
+<td><code>ESI-3</code></td>
+<td>Cross-substrate</td>
+<td>Echoes cross substrate boundaries</td>
+</tr>
+<tr>
+<td><code>ESI-4</code></td>
+<td>Atlas pull</td>
+<td>Atlas pull activates</td>
+</tr>
+</tbody>
+</table>
+<h2 id="11-flow-channels-sefm">11 · Flow Channels (SEFM)</h2>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Path</th>
+<th>What Flows Here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CH-1</code></td>
+<td>S → C</td>
+<td>Definitions refine into concepts</td>
+</tr>
+<tr>
+<td><code>CH-2</code></td>
+<td>C ↔ H</td>
+<td>Harmonic alignment oscillation</td>
+</tr>
+<tr>
+<td><code>CH-3</code></td>
+<td>H → So</td>
+<td>Governance torsion, operator inversion</td>
+</tr>
+<tr>
+<td><code>CH-4</code></td>
+<td>So → A</td>
+<td>Atlas forcing, projection drift</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-lattice-layers-tel">12 · Lattice Layers (TEL)</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Substrates</th>
+<th>Echo Families</th>
+<th>Recursion</th>
+<th>Drift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ladder</code></td>
+<td>S → C</td>
+<td>F1</td>
+<td>R1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td><code>Cycle</code></td>
+<td>C ↔ H</td>
+<td>F2, F3</td>
+<td>R2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td><code>Map</code></td>
+<td>H ↔ So</td>
+<td>F4, F5</td>
+<td>R3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td><code>Atlas</code></td>
+<td>A</td>
+<td>F6</td>
+<td>R4</td>
+<td>D4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="13-the-diagnostic-pipeline-how-everything-connects">13 · The Diagnostic Pipeline (How Everything Connects)</h2>
+<ol>
+<li><strong>Evaluate metrics</strong> (M1–M6)</li>
+<li><strong>Assign stability class</strong> (SC-1 to SC-4)</li>
+<li><strong>Determine tier</strong> (T1–T4)</li>
+<li><strong>Identify drift type</strong> (D1–D4)</li>
+<li><strong>Classify echo</strong> (E1–E6)</li>
+<li><strong>Map to lattice layer</strong></li>
+<li><strong>Trace flow channel</strong></li>
+<li><strong>Predict escalation path</strong></li>
+</ol>
+<h2 id="14-key-chains-to-remember">14 · Key Chains to Remember</h2>
+<ul>
+<li><strong>Stability → Classification:</strong> <code>SC → R → E → Lattice Layer → Flow Channel</code></li>
+<li><strong>Drift Escalation:</strong> <code>D → Echo Pressure → E5 → Drift Pathway → Atlas Pull</code></li>
+<li><strong>Recursion Propagation:</strong> <code>R1 → R2 → R3 → R4</code> (echoes shift upward)</li>
+</ul>
+<hr>
+<p>v1.0 | Status: Canon-Stable | HSP Suite Student Cheat Sheet | TriadicFrameworks (RTT)</p>
+  </main>
+</body>
+</html>

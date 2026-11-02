@@ -1,0 +1,21 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Triadic Gravity API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/gravity": {
+      "get": { "summary": "Gravity overview", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/gravity/operators": {
+      "get": { "summary": "List gravity operators", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/gravity/operators/{id}": {
+      "get": { "summary": "Get operator by ID", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/gravity/health": {
+      "get": { "summary": "Health check", "responses": { "200": { "description": "OK" } } }
+    }
+  }
+}

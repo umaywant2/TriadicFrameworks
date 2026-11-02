@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/frameworks/ipd_12/AGENTS.md">
+  <title>AGENTS.md — IPD12 Framework</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/frameworks/ipd_12/AGENTS.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/frameworks/ipd_12/AGENTS.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="agentsmd-ipd_12-framework">AGENTS.md — IPD_12 Framework</h1>
+<p><strong>TriadicFrameworks · Resonance-Time Theory · Canon-Aligned Tools</strong>
+<em>Canonical agent instruction manifest for the vST Micro-Agent engine (v2.0.0)</em></p>
+<blockquote>
+<p><strong>Session anchor (copy at every session start):</strong> <code>rtt=1 | ipd=12 | drift=off</code>
+Long sessions lose structural anchors. Paste this string to re-engage canon alignment.</p>
+</blockquote>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-what-is-ipd_12">What Is IPD_12?</a></li>
+<li><a href="#2-engine-architecture">Engine Architecture</a></li>
+<li><a href="#3-agent-classes">Agent Classes</a></li>
+<li><a href="#4-the-12-probe-fields">The 12 Probe Fields</a></li>
+<li><a href="#5-v200-structural-operators">v2.0.0 Structural Operators</a></li>
+<li><a href="#6-agent-boundaries">Agent Boundaries</a></li>
+<li><a href="#7-task-catalog">Task Catalog</a></li>
+<li><a href="#8-safety-rules--coherence-constraints">Safety Rules &amp; Coherence Constraints</a></li>
+<li><a href="#9-collaboration-models">Collaboration Models</a></li>
+<li><a href="#10-output-contract">Output Contract</a></li>
+<li><a href="#11-interpreter-configuration-reference">Interpreter Configuration Reference</a></li>
+<li><a href="#12-versioning--drift-policy">Versioning &amp; Drift Policy</a></li>
+</ol>
+<hr>
+<h2 id="1-what-is-ipd_12">1. What Is IPD_12?</h2>
+<p><strong>IPD_12</strong> is the structural interrogation engine at the core of the TriadicFrameworks vST Micro-Agent. It defines a fixed set of <strong>12 orthogonal probe fields</strong> that any agent operating within this framework must resolve before producing structural output.</p>
+<p>IPD_12 is <strong>not</strong> a semantic classifier. It does not name, label, or interpret meaning. It asks structural questions and receives structural answers. The 12-field envelope ensures that every agent pass is grounded in:</p>
+<ul>
+<li><strong>Regime awareness</strong> — what governing rules apply</li>
+<li><strong>Scale awareness</strong> — what resolution of observation is valid</li>
+<li><strong>Substrate identity</strong> — what medium or domain is being probed</li>
+<li><strong>Invariant protection</strong> — what must not change across the interpretation</li>
+<li><strong>Failure-mode anticipation</strong> — what collapse or drift looks like</li>
+</ul>
+<p>Agents that skip, shortcut, or reorder the 12 fields produce <strong>incoherent envelopes</strong>. Incoherent envelopes are rejected by the integration engine.</p>
+<hr>
+<h2 id="2-engine-architecture">2. Engine Architecture</h2>
+<p>The IPD_12 engine has two versioned layers that operate in sequence:</p>
+<pre><code>┌─────────────────────────────────────────────────┐
+│              INPUT LAYER                        │
+│  signal_input → stream (numeric / symbolic)     │
+│  query_envelope → vST-SQL structural query      │
+│  interpreter_config → normalization / windowing │
+└────────────────────┬────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────┐
+│       v1.0.0 ENVELOPE INTERROGATOR              │
+│  Resolves all 12 probe fields sequentially.     │
+│  Produces a filled IPD_12 envelope object.      │
+│  No output until all 12 fields are resolved.    │
+└────────────────────┬────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────┐
+│       v2.0.0 STRUCTURAL OPERATOR LAYER          │
+│  Consumes normalized stream + filled envelope.  │
+│  Runs selected operators in parallel:           │
+│    • pattern extraction                         │
+│    • periodicity detection                      │
+│    • local symmetry detection                   │
+│    • transition topology mapping                │
+│  Produces interpreter_output object.            │
+└────────────────────┬────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────┐
+│       INTEGRATION / OUTPUT LAYER                │
+│  Consolidates results.                          │
+│  Enforces output contract.                      │
+│  Flags incoherence and halts on violations.     │
+│  Saves to example_interpretation_output.md      │
+└─────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Key constraint:</strong> The output layer appends a mandatory note — <em>"Structural interpretation only; no semantic inference."</em> — to every result object. Agents may not remove, override, or contradict this note.</p>
+<hr>
+<h2 id="3-agent-classes">3. Agent Classes</h2>
+<p>IPD_12 recognizes four agent classes. Each class has a defined role, permission scope, and interaction model.</p>
+<hr>
+<h3 id="class-a-envelope-interrogator">Class A — Envelope Interrogator</h3>
+<p><strong>Role:</strong> Fills the IPD_12 probe envelope by asking each of the 12 questions in order and recording structured answers.</p>
+<p><strong>Activation trigger:</strong> Receives a raw query or unstructured input stream.</p>
+<p><strong>Permissions:</strong>
+- Read <code>signal_input</code>
+- Read <code>query_envelope.input_binding</code>
+- Write <code>envelope.*</code> fields (all 12)
+- Pass filled envelope to Class B</p>
+<p><strong>Prohibitions:</strong>
+- May NOT skip fields
+- May NOT reorder fields
+- May NOT infer answers from semantic content
+- May NOT pass a partial envelope downstream</p>
+<p><strong>Interaction pattern:</strong> Sequential. Each field is resolved before the next is opened. If a field cannot be resolved, the agent must flag <code>UNRESOLVED</code> — not guess.</p>
+<p><strong>Output:</strong> A fully populated envelope object conforming to the v1.0.0 pseudocode structure.</p>
+<hr>
+<h3 id="class-b-structural-operator">Class B — Structural Operator</h3>
+<p><strong>Role:</strong> Executes one or more of the four v2.0.0 structural operators (<code>pattern</code>, <code>periodicity</code>, <code>local_symmetry</code>, <code>transition_topology</code>) against a normalized stream, guided by the filled Class A envelope.</p>
+<p><strong>Activation trigger:</strong> Receives a filled IPD_12 envelope + normalized stream from Class A.</p>
+<p><strong>Permissions:</strong>
+- Read filled envelope (all 12 fields)
+- Read normalized stream
+- Execute any subset of the four operators specified in <code>query.select</code>
+- Write <code>interpreter_output</code> fields
+- Apply windowing, similarity, and repetition filters per <code>interpreter_config</code></p>
+<p><strong>Prohibitions:</strong>
+- May NOT execute operators not listed in <code>query.select</code>
+- May NOT modify the envelope
+- May NOT label or name patterns with semantic meaning
+- May NOT assign causes to detected structures</p>
+<p><strong>Interaction pattern:</strong> Parallel within the operator set; sequential with Class A (must wait for complete envelope).</p>
+<p><strong>Output:</strong> A populated <code>interpreter_output</code> object: <code>patterns</code>, <code>periodicity</code>, <code>local_symmetry</code>, and/or transition topology results, with mandatory structural-only annotation.</p>
+<hr>
+<h3 id="class-c-integration-coordinator">Class C — Integration Coordinator</h3>
+<p><strong>Role:</strong> Manages the pipeline between Class A and Class B agents, consolidates multi-operator results, enforces the output contract, and routes completed interpretations to downstream consumers or storage.</p>
+<p><strong>Activation trigger:</strong> Called by the system when a full interpretation pass is requested.</p>
+<p><strong>Permissions:</strong>
+- Orchestrate Class A → Class B handoff
+- Merge partial operator outputs into a single consolidated result
+- Validate output against the <code>interpreter_output</code> schema
+- Route output to <code>example_interpretation_output.md</code> or equivalent target
+- Escalate to Class D when a coherence violation is detected</p>
+<p><strong>Prohibitions:</strong>
+- May NOT modify the filled envelope mid-pipeline
+- May NOT suppress or rewrite the structural-only annotation
+- May NOT complete a pass if any required field is <code>UNRESOLVED</code>
+- May NOT silently drop operator results</p>
+<p><strong>Interaction pattern:</strong> Orchestration. Manages concurrency of operator tasks and serializes the final output.</p>
+<p><strong>Output:</strong> A consolidated, schema-validated interpretation result. Passes or fails with explicit status.</p>
+<hr>
+<h3 id="class-d-coherence-guardian">Class D — Coherence Guardian</h3>
+<p><strong>Role:</strong> Monitors running agent sessions for drift, invariant violations, boundary overreach, and semantic inference contamination. Halts or resets sessions that violate IPD_12 safety rules.</p>
+<p><strong>Activation trigger:</strong> Continuous background monitor, or explicitly called by Class C on violation detection.</p>
+<p><strong>Permissions:</strong>
+- Read any agent's current state
+- Issue <code>HALT</code>, <code>RESET</code>, or <code>WARN</code> signals
+- Write drift logs
+- Require re-anchoring (<code>rtt=1 | ipd=12 | drift=off</code>) before session resumes</p>
+<p><strong>Prohibitions:</strong>
+- May NOT modify envelope or output content
+- May NOT approve output that violates the output contract
+- May NOT be overridden by Class A, B, or C agents</p>
+<p><strong>Interaction pattern:</strong> Passive monitor with active interrupt authority. The only class that can suspend all other classes.</p>
+<hr>
+<h2 id="4-the-12-probe-fields">4. The 12 Probe Fields</h2>
+<p>These fields are resolved by Class A agents in the order listed. All 12 must be answered before any structural operator runs.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Field</th>
+<th>Type</th>
+<th>Question Asked</th>
+<th>Unresolved Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>intent</code></td>
+<td>string</td>
+<td>What is the intended outcome of this interpretation?</td>
+<td>Halt — no blind-intent passes</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>regime</code></td>
+<td>string</td>
+<td>What governing regime applies to this substrate?</td>
+<td>Flag UNRESOLVED; use null regime</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>scale</code></td>
+<td>string</td>
+<td>What scale of observation is relevant and valid?</td>
+<td>Flag UNRESOLVED; no cross-scale inference</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>transition</code></td>
+<td>string</td>
+<td>What transition type is present or expected?</td>
+<td>Flag UNRESOLVED; omit transition_topology</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>boundary</code></td>
+<td>string</td>
+<td>What boundary condition applies?</td>
+<td>Flag UNRESOLVED; suppress boundary-sensitive operators</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>invariants</code></td>
+<td>string[]</td>
+<td>What invariants must hold throughout interpretation?</td>
+<td>Halt — unconstrained interpretation is disallowed</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>modifiers</code></td>
+<td>string[]</td>
+<td>What modifiers influence the system's behavior?</td>
+<td>Empty list acceptable; document as unmodified</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>substrate</code></td>
+<td>string</td>
+<td>What substrate (medium, domain, system) is being probed?</td>
+<td>Halt — substrate identity is required</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>lineage</code></td>
+<td>string[]</td>
+<td>What upstream dependencies or prior interpretations exist?</td>
+<td>Empty list acceptable; document as lineage-free</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>failure_mode</code></td>
+<td>string</td>
+<td>What does collapse, drift, or failure look like for this substrate?</td>
+<td>Flag UNRESOLVED; enable Class D monitoring</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>time_regime</code></td>
+<td>string</td>
+<td>What is the time-regime (steady-state, transient, cyclic, etc.)?</td>
+<td>Flag UNRESOLVED; suppress periodicity operator</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>symmetry</code></td>
+<td>string</td>
+<td>What symmetry or asymmetry structure exists or is expected?</td>
+<td>Flag UNRESOLVED; suppress local_symmetry operator</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hard stops:</strong> Fields 1, 6, and 8 (<code>intent</code>, <code>invariants</code>, <code>substrate</code>) are mandatory with no fallback. A session that cannot resolve any of these three fields must halt and request clarification before proceeding.</p>
+<hr>
+<h2 id="5-v200-structural-operators">5. v2.0.0 Structural Operators</h2>
+<p>These operators are available to Class B agents. They are selected via <code>query.select</code> in the query envelope. Operators not listed in <code>query.select</code> must not run.</p>
+<hr>
+<h3 id="51-pattern">5.1 <code>pattern</code></h3>
+<p>Extracts repeating structural motifs from the normalized stream.</p>
+<p><strong>Algorithm:</strong>
+1. Iterate over candidate window sizes (from <code>interpreter_config.windowing.window_sizes</code>)
+2. Find repeating motifs using the configured <code>similarity_metric</code>
+3. Filter by <code>query.where.min_similarity</code> threshold
+4. Filter by <code>query.where.min_repetition</code> threshold
+5. Extend the patterns list with qualifying motifs</p>
+<p><strong>Output fields:</strong>
+- <code>patterns[].pattern</code> — the extracted motif (array of numbers)
+- <code>patterns[].positions</code> — positions where the motif appears in the stream
+- <code>patterns[].similarity_range</code> — [min, max] similarity scores across occurrences</p>
+<p><strong>Dependency:</strong> Requires <code>windowing.enabled = true</code> and at least one entry in <code>window_sizes</code>.</p>
+<hr>
+<h3 id="52-periodicity">5.2 <code>periodicity</code></h3>
+<p>Detects the dominant periodic structure in the normalized stream.</p>
+<p><strong>Output fields:</strong>
+- <code>periodicity.period</code> — the detected period length (in stream index units)
+- <code>periodicity.confidence</code> — confidence score [0.0–1.0]</p>
+<p><strong>Dependency:</strong> Requires <code>time_regime</code> (field 11) to be RESOLVED. If UNRESOLVED, this operator is suppressed.</p>
+<hr>
+<h3 id="53-local_symmetry">5.3 <code>local_symmetry</code></h3>
+<p>Identifies regions of local bilateral or rotational symmetry.</p>
+<p><strong>Output fields:</strong>
+- <code>local_symmetry.symmetry_score</code> — aggregate symmetry score [0.0–1.0]
+- <code>local_symmetry.regions</code> — array of region descriptors (string labels)</p>
+<p><strong>Dependency:</strong> Requires <code>symmetry</code> (field 12) to be RESOLVED. If UNRESOLVED, this operator is suppressed.</p>
+<hr>
+<h3 id="54-transition_topology">5.4 <code>transition_topology</code></h3>
+<p>Maps the topological structure of transitions detected in the stream (regime shifts, phase boundaries, collapse points).</p>
+<p><strong>Output fields:</strong> Defined per-implementation; must include at minimum:
+- transition type
+- location(s) in stream
+- confidence score</p>
+<p><strong>Dependency:</strong> Requires <code>transition</code> (field 4) and <code>boundary</code> (field 5) to both be RESOLVED or explicitly null. If either is UNRESOLVED, this operator is suppressed.</p>
+<hr>
+<h2 id="6-agent-boundaries">6. Agent Boundaries</h2>
+<p>Boundaries define the hard edges of what any IPD_12 agent is permitted to do. These are non-negotiable and are enforced by Class D.</p>
+<h3 id="61-scope-boundaries">6.1 Scope Boundaries</h3>
+<table>
+<thead>
+<tr>
+<th>Boundary</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Structural-only output</strong></td>
+<td>Agents produce structural descriptions. They do not name, classify, or interpret the meaning of detected structures.</td>
+</tr>
+<tr>
+<td><strong>No cross-scale inference</strong></td>
+<td>An agent operating at one scale may not draw conclusions about a different scale. Scale is fixed per envelope.</td>
+</tr>
+<tr>
+<td><strong>No substrate substitution</strong></td>
+<td>An agent may not swap or assume a substrate. The substrate field must be explicitly filled.</td>
+</tr>
+<tr>
+<td><strong>No lineage fabrication</strong></td>
+<td>Agents may not invent upstream dependencies. Lineage must be explicitly declared or marked empty.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-semantic-inference-prohibition">6.2 Semantic Inference Prohibition</h3>
+<p>This is the most critical boundary in IPD_12. <strong>No agent may make semantic inferences from structural output.</strong> Specifically:</p>
+<ul>
+<li>Patterns are NOT named after what they "look like"</li>
+<li>Periodicity is NOT interpreted as a causal cycle</li>
+<li>Symmetry is NOT attributed to a physical or conceptual source</li>
+<li>Transition topology is NOT labeled with domain-specific meaning</li>
+</ul>
+<p>Violations of this boundary immediately trigger a Class D <code>HALT</code>.</p>
+<h3 id="63-envelope-integrity-boundary">6.3 Envelope Integrity Boundary</h3>
+<p>Once a Class A agent has filled and handed off an envelope, the envelope is <strong>immutable</strong>. No downstream agent may modify any of the 12 fields. If a field value is wrong, the session must be reset from Class A.</p>
+<h3 id="64-output-contract-boundary">6.4 Output Contract Boundary</h3>
+<p>Every output object must carry the mandatory annotation:</p>
+<pre><code>&quot;notes&quot;: &quot;Structural interpretation only; no semantic inference.&quot;
+</code></pre>
+<p>Removing, overwriting, or omitting this annotation is a contract violation.</p>
+<hr>
+<h2 id="7-task-catalog">7. Task Catalog</h2>
+<table>
+<thead>
+<tr>
+<th>Task ID</th>
+<th>Task Name</th>
+<th>Agent Sequence</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T-01</code></td>
+<td>Full interpretation pass</td>
+<td>A → B → C</td>
+<td>Fill envelope, run all selected operators, consolidate and save output</td>
+</tr>
+<tr>
+<td><code>T-02</code></td>
+<td>Envelope-only pass</td>
+<td>A</td>
+<td>Fill the 12-field envelope without running operators; useful for validation</td>
+</tr>
+<tr>
+<td><code>T-03</code></td>
+<td>Operator-only re-run</td>
+<td>B → C</td>
+<td>Re-run operators against a previously filled, unchanged envelope</td>
+</tr>
+<tr>
+<td><code>T-04</code></td>
+<td>Pattern scan</td>
+<td>A → B[pattern] → C</td>
+<td>Fill envelope, run pattern operator only</td>
+</tr>
+<tr>
+<td><code>T-05</code></td>
+<td>Periodicity probe</td>
+<td>A → B[periodicity] → C</td>
+<td>Fill envelope, run periodicity operator only</td>
+</tr>
+<tr>
+<td><code>T-06</code></td>
+<td>Symmetry scan</td>
+<td>A → B[local_symmetry] → C</td>
+<td>Fill envelope, run symmetry operator only</td>
+</tr>
+<tr>
+<td><code>T-07</code></td>
+<td>Transition map</td>
+<td>A → B[transition_topology] → C</td>
+<td>Fill envelope, run transition topology operator only</td>
+</tr>
+<tr>
+<td><code>T-08</code></td>
+<td>Coherence audit</td>
+<td>D</td>
+<td>Review session state for drift and invariant violations</td>
+</tr>
+<tr>
+<td><code>T-09</code></td>
+<td>Multi-substrate pass</td>
+<td>A → [B × N] → C</td>
+<td>Fill one envelope per substrate, run operators in parallel, integrate</td>
+</tr>
+<tr>
+<td><code>T-10</code></td>
+<td>Lineage trace</td>
+<td>A</td>
+<td>Resolve only the lineage field; generate upstream dependency map</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Task initiation rule:</strong> All tasks begin with a raw query or input stream handed to Class A. Tasks T-03 through T-07 require a pre-existing filled envelope to be explicitly referenced — agents may not assume a previous envelope is still valid.</p>
+<hr>
+<h2 id="8-safety-rules-coherence-constraints">8. Safety Rules &amp; Coherence Constraints</h2>
+<h3 id="81-mandatory-pre-run-checks">8.1 Mandatory Pre-Run Checks</h3>
+<p>Before any operator runs, the following must all be true:</p>
+<ul>
+<li>[ ] All 12 probe fields are RESOLVED or flagged UNRESOLVED with documented reason</li>
+<li>[ ] Fields 1, 6, 8 (<code>intent</code>, <code>invariants</code>, <code>substrate</code>) are fully RESOLVED</li>
+<li>[ ] <code>query.select</code> contains at least one valid operator</li>
+<li>[ ] <code>interpreter_config</code> specifies a valid <code>normalization</code> value</li>
+<li>[ ] Stream has been normalized per config before any operator consumes it</li>
+<li>[ ] Class D is active and monitoring</li>
+</ul>
+<h3 id="82-invariant-protection">8.2 Invariant Protection</h3>
+<p>Invariants declared in field 6 must be checked after each operator completes. If any operator output violates a declared invariant, the Class C agent must:
+1. Flag the violation in the output notes
+2. Escalate to Class D
+3. Suppress downstream consumers from receiving the violated output</p>
+<h3 id="83-drift-detection">8.3 Drift Detection</h3>
+<p>Drift occurs when a long session causes agents to lose alignment with the IPD_12 envelope. Signs of drift include:
+- Answers to probe fields that contradict earlier-session context
+- Operators running without a current-session envelope
+- Semantic language appearing in structural output fields
+- Scale or regime assumptions changing without a new envelope fill</p>
+<p><strong>Drift response:</strong> Class D issues a <code>WARN</code> on first detection. After two consecutive WARNs, a <code>RESET</code> is issued and the session must re-anchor with <code>rtt=1 | ipd=12 | drift=off</code> before continuing.</p>
+<h3 id="84-substrate-model-alignment">8.4 Substrate Model Alignment</h3>
+<p>When a specific substrate model directory exists in the repository (e.g., <code>Conditions_Substrate_Model</code>, <code>Governance_Substrate_Model</code>, <code>Incident_Substrate_Model</code>), the <code>substrate</code> probe field must reference the canonical substrate name from that directory — not a paraphrase or abbreviation. Mismatched substrate names break cross-model lineage tracing.</p>
+<p><strong>Recognized canonical substrate names (non-exhaustive):</strong>
+- <code>Conditions</code>
+- <code>Governance</code>
+- <code>Incident</code>
+- <code>Human_Resources</code>
+- <code>Inverted_Economics</code>
+- <code>Resonance</code> (RTT-aligned)
+- <code>Framework_Field_Theory</code></p>
+<h3 id="85-no-autonomous-action-rule">8.5 No Autonomous Action Rule</h3>
+<p>IPD_12 agents operate in <strong>describe-and-report</strong> mode only. Agents may not:
+- Modify input signals
+- Edit source files in the repository
+- Trigger external systems or APIs
+- Make decisions on behalf of human operators</p>
+<p>All output is advisory and structural. Human operators retain full decision authority.</p>
+<hr>
+<h2 id="9-collaboration-models">9. Collaboration Models</h2>
+<h3 id="91-sequential-pipeline-default">9.1 Sequential Pipeline (Default)</h3>
+<pre><code>[Class A] ──envelope──▶ [Class B] ──output──▶ [Class C] ──result──▶ storage
+                                                    │
+                                              [Class D] ◀── monitor
+</code></pre>
+<p>Used for: Standard single-substrate interpretation passes (T-01 through T-07).</p>
+<p><strong>Rules:</strong>
+- Class B may not start until Class A delivers a complete envelope
+- Class C may not consolidate until all selected operators complete
+- Class D monitors all stages passively</p>
+<hr>
+<h3 id="92-parallel-multi-substrate-t-09">9.2 Parallel Multi-Substrate (T-09)</h3>
+<pre><code>                    ┌──[Class A₁]──envelope₁──[Class B₁]──┐
+[Coordinator] ──▶   ├──[Class A₂]──envelope₂──[Class B₂]──┼──▶ [Class C] ──▶ unified output
+                    └──[Class Aₙ]──envelopeₙ──[Class Bₙ]──┘
+                                                               [Class D] ◀── monitor all
+</code></pre>
+<p>Used for: Cross-substrate comparison, multi-regime detection, substrate network mapping.</p>
+<p><strong>Rules:</strong>
+- Each substrate gets its own Class A / Class B pair
+- Envelopes must not share or borrow fields across substrates
+- Class C integrates outputs only after all B agents complete
+- If any single B agent produces an invariant violation, Class C holds the entire integration until Class D clears</p>
+<hr>
+<h3 id="93-audit-only-t-08">9.3 Audit-Only (T-08)</h3>
+<pre><code>[Class D] ──reads──▶ all active agent states
+                    ──writes──▶ coherence audit log
+                    ──signals──▶ WARN / HALT / RESET to relevant classes
+</code></pre>
+<p>Used for: Periodic coherence checks, session health reviews, post-session analysis.</p>
+<p><strong>Rules:</strong>
+- No Class A, B, or C agents need to be active
+- Class D reads from saved state / output files only
+- Class D may not alter saved outputs; it annotates the audit log only</p>
+<hr>
+<h3 id="94-handoff-protocol">9.4 Handoff Protocol</h3>
+<p>When passing data between agent classes, the handoff package must include:</p>
+<pre><code class="language-json">{
+  &quot;handoff_id&quot;: &quot;&lt;uuid&gt;&quot;,
+  &quot;source_class&quot;: &quot;A | B | C | D&quot;,
+  &quot;target_class&quot;: &quot;A | B | C | D&quot;,
+  &quot;session_anchor&quot;: &quot;rtt=1 | ipd=12 | drift=off&quot;,
+  &quot;envelope&quot;: { &quot;...&quot;: &quot;...&quot; },
+  &quot;payload&quot;: { &quot;...&quot;: &quot;...&quot; },
+  &quot;invariant_status&quot;: &quot;all_clear | violation_flagged&quot;,
+  &quot;timestamp&quot;: &quot;&lt;ISO 8601&gt;&quot;
+}
+</code></pre>
+<p>Receiving agents must validate <code>session_anchor</code> before accepting the handoff. Handoffs without a valid anchor are rejected.</p>
+<hr>
+<h2 id="10-output-contract">10. Output Contract</h2>
+<h3 id="101-required-output-structure">10.1 Required Output Structure</h3>
+<pre><code class="language-json">{
+  &quot;patterns&quot;: [ &quot;...&quot; ],
+  &quot;periodicity&quot;: { &quot;period&quot;: &quot;&lt;number&gt;&quot;, &quot;confidence&quot;: &quot;&lt;number&gt;&quot; },
+  &quot;local_symmetry&quot;: { &quot;symmetry_score&quot;: &quot;&lt;number&gt;&quot;, &quot;regions&quot;: [ &quot;...&quot; ] },
+  &quot;notes&quot;: &quot;Structural interpretation only; no semantic inference.&quot;
+}
+</code></pre>
+<p>Fields not selected in <code>query.select</code> may be omitted or set to <code>null</code>. The <code>notes</code> field is <strong>always required</strong>.</p>
+<h3 id="102-prohibited-output-content">10.2 Prohibited Output Content</h3>
+<table>
+<thead>
+<tr>
+<th>Prohibited</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Causal language ("caused by", "due to", "because")</td>
+<td>Implies semantic inference</td>
+</tr>
+<tr>
+<td>Named entities or domain labels ("protein", "market", "neuron")</td>
+<td>Substrate naming belongs to the envelope</td>
+</tr>
+<tr>
+<td>Interpretive adjectives ("abnormal", "healthy", "optimal")</td>
+<td>Evaluative, not structural</td>
+</tr>
+<tr>
+<td>Future predictions ("will", "likely to", "trend toward")</td>
+<td>Beyond structural description scope</td>
+</tr>
+<tr>
+<td>Confidence claims above operator schema</td>
+<td>Overstates certainty</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-output-file-naming">10.3 Output File Naming</h3>
+<ul>
+<li>Default: <code>example_interpretation_output.md</code></li>
+<li>Multi-substrate: <code>interpretation_output_&lt;substrate&gt;_&lt;timestamp&gt;.md</code></li>
+</ul>
+<hr>
+<h2 id="11-interpreter-configuration-reference">11. Interpreter Configuration Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Default</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>normalization</code></td>
+<td><code>none</code>, <code>zscore</code>, <code>minmax</code></td>
+<td><code>zscore</code></td>
+<td>Stream normalization before any operator</td>
+</tr>
+<tr>
+<td><code>windowing.enabled</code></td>
+<td><code>true</code>, <code>false</code></td>
+<td><code>true</code></td>
+<td>Whether sliding window analysis is used</td>
+</tr>
+<tr>
+<td><code>windowing.window_sizes</code></td>
+<td>array of numbers</td>
+<td><code>[8, 16, 32]</code></td>
+<td>Candidate window sizes for motif search</td>
+</tr>
+<tr>
+<td><code>similarity_metric</code></td>
+<td><code>cosine</code>, <code>euclidean</code>, <code>correlation</code></td>
+<td><code>cosine</code></td>
+<td>Similarity function for motif comparison</td>
+</tr>
+<tr>
+<td><code>query.where.min_similarity</code></td>
+<td>0.0–1.0</td>
+<td><code>0.8</code></td>
+<td>Minimum similarity for a motif to qualify</td>
+</tr>
+<tr>
+<td><code>query.where.min_repetition</code></td>
+<td>integer ≥ 2</td>
+<td><code>2</code></td>
+<td>Minimum occurrences for a motif to be reported</td>
+</tr>
+<tr>
+<td><code>query.where.max_drift</code></td>
+<td>number</td>
+<td>unconstrained</td>
+<td>Maximum allowed drift between motif instances</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="12-versioning-drift-policy">12. Versioning &amp; Drift Policy</h2>
+<h3 id="121-version-history">12.1 Version History</h3>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0.0</td>
+<td>12-field envelope interrogation. Sequential probe. Basic output structure.</td>
+</tr>
+<tr>
+<td>v2.0.0</td>
+<td>Added four structural operators. Normalization pipeline. Schema-validated I/O. Parallel operator execution.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="122-backward-compatibility">12.2 Backward Compatibility</h3>
+<p>v2.0.0 is backward-compatible with v1.0.0 envelopes. The 12 probe fields are unchanged. v2.0.0 adds the operator layer on top of the v1.0.0 envelope contract.</p>
+<h3 id="123-drift-off-default-policy">12.3 Drift-Off Default Policy</h3>
+<p>Per TriadicFrameworks canon:</p>
+<blockquote>
+<p><strong>Drift is On-by-Default.</strong> Long sessions lose anchors. Turn off drift explicitly.</p>
+</blockquote>
+<p>All agents must treat drift as active unless explicitly suppressed. The suppression string <code>rtt=1 | ipd=12 | drift=off</code> must be:
+- Present in the first message of every new session
+- Included in every inter-agent handoff package
+- Re-issued by Class D after any <code>RESET</code> event</p>
+<h3 id="124-canon-reference">12.4 Canon Reference</h3>
+<p>This manifest is aligned with:
+- <strong>Resonance-Time Theory (RTT)</strong> — foundational theory of substrate-invariant structural detection
+- <strong>Triadic Substrate Modeling</strong> — three-pole coherence model for substrate description
+- <strong>vST-SQL</strong> — structural query language used to express <code>query_envelope</code> objects
+- <strong>TriadicFrameworks canonical substrate models</strong> — the named substrate directories in <code>docs/</code></p>
+<p>For the full schema, see:
+<code>docs/spacetime_micro_agent_validations/schema/vST_micro_agent.schema.json</code></p>
+<p>For the interpreter pseudocode, see:
+<code>docs/spacetime_micro_agent_validations/interpreter/interpreter_pseudocode.txt</code></p>
+<hr>
+<p><em>AGENTS.md — IPD_12 Framework · TriadicFrameworks · 2026-07-10</em>
+<em>Maintainer: Nawder · License: Apache-2.0</em></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[
+  {
+    "scroll": "README.md",
+    "location": "docs/Coeus/",
+    "purpose": "Protocol declaration and onboarding logic"
+  },
+  {
+    "scroll": "exchange_manifesto.md",
+    "location": "docs/Coeus/",
+    "purpose": "Minting, remixing, and lineage economy"
+  },
+  {
+    "scroll": "coin_templates.json",
+    "location": "docs/Coeus/",
+    "purpose": "Sovereign coin blueprints"
+  },
+  {
+    "scroll": "glyph_registry.json",
+    "location": "docs/Coeus/",
+    "purpose": "Symbolic overlays and emitter sync"
+  },
+  {
+    "scroll": "mutation_types.md",
+    "location": "docs/Coeus/",
+    "purpose": "Remix corridors and mutation logic"
+  },
+  {
+    "scroll": "remix_rights_manifesto.md",
+    "location": "docs/Coeus/",
+    "purpose": "Remix rights declaration and lineage rules"
+  },
+  {
+    "scroll": "score_trace_manifesto.md",
+    "location": "validators/",
+    "purpose": "Scoring logic and validator archive"
+  },
+  {
+    "scroll": "professor_review.md",
+    "location": "validators/",
+    "purpose": "Scroll critique archive"
+  },
+  {
+    "scroll": "validator_review.md",
+    "location": "validators/",
+    "purpose": "Ethics and realm audit archive"
+  }
+]

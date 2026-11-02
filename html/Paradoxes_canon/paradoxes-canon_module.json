@@ -1,0 +1,18 @@
+{
+  "module": "Paradoxes Canon",
+  "version": "1.0",
+  "category": "paradoxes-canon",
+  "summary": "Structural paradox layer and gateway — how RTT maintains coherence under paradox stress tests across logic, computation, thermodynamics, cosmology, quantum, and emergence. Links to Resilience Checker (108 paradox analyses across 11 structural categories). Sibling: Resilience Checker.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

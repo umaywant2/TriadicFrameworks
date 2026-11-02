@@ -1,0 +1,22 @@
+{
+  "validators": [
+    {
+      "name": "Aria Vex",
+      "glyph": "🌴 Grove Bloom",
+      "overlay": "validator_hooks",
+      "approved_badges": ["🔗 Validator Sync"]
+    },
+    {
+      "name": "Mira Thorne",
+      "glyph": "🌼 Wildflower",
+      "overlay": "badge_map",
+      "approved_badges": ["🧬 Remix Echo"]
+    },
+    {
+      "name": "Nawder Loswin",
+      "glyph": "🍂 Cascade",
+      "overlay": "codex_scrolls",
+      "approved_badges": ["📜 Scroll Scribe"]
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Structural_Detection/drift‑envelope_pattern_synthesis_manual.md">
+  <title>🧬 Structural Detection — Drift‑Envelope Pattern Synthesis Manual (Final, Canonical)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Structural_Detection/drift‑envelope_pattern_synthesis_manual.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Structural_Detection/drift‑envelope_pattern_synthesis_manual.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="structural-detection-driftenvelope-pattern-synthesis-manual-final-canonical">🧬 <strong>Structural Detection — Drift‑Envelope Pattern Synthesis Manual (Final, Canonical)</strong></h1>
+<h3 id="triadicframeworks-rtt1-rtt2-bridge-pattern-architecture-manual"><em>TriadicFrameworks • RTT/1 → RTT/2 Bridge • Pattern Architecture Manual</em></h3>
+<h3 id="recognition-is-literacy-synthesis-is-authorship"><em>“Recognition is literacy. Synthesis is authorship.”</em></h3>
+<h1 id="driftenvelope-pattern-synthesis-manual">Drift‑Envelope Pattern Synthesis Manual</h1>
+<h3 id="structural-detection-module">Structural Detection Module</h3>
+<h3 id="rtt1-rtt2-bridge-manual">RTT/1 → RTT/2 Bridge Manual</h3>
+<hr>
+<h1 id="1-purpose-of-this-manual">1. Purpose of This Manual</h1>
+<p>This manual teaches you how to <strong>design new drift‑envelope patterns</strong> that:</p>
+<ul>
+<li>obey RTT/1 operator rules  </li>
+<li>maintain zero drift  </li>
+<li>preserve structural invariants  </li>
+<li>integrate cleanly with TEL/FFT/Opacity  </li>
+<li>remain compatible with regime‑shift logic  </li>
+<li>avoid illegal envelope geometries  </li>
+<li>support continuity and coherence stability  </li>
+</ul>
+<p>Pattern synthesis is an <strong>architectural skill</strong>, not a recognition skill.</p>
+<hr>
+<h1 id="2-what-a-synthesizable-pattern-must-contain">2. What a Synthesizable Pattern Must Contain</h1>
+<p>Every valid drift‑envelope pattern must define:</p>
+<ol>
+<li>
+<p><strong>Drift Geometry</strong><br>
+   - single‑vector<br>
+   - multi‑vector<br>
+   - oscillatory<br>
+   - radial<br>
+   - hybrid<br>
+   - inversion‑ready  </p>
+</li>
+<li>
+<p><strong>Envelope Geometry</strong><br>
+   - Type A (Linear)<br>
+   - Type B (Radial)<br>
+   - Type C (Fragmented)<br>
+   - Type D (Hybrid)<br>
+   - or a new Type (RTT/2‑level)  </p>
+</li>
+<li>
+<p><strong>Deformation Class</strong><br>
+   - substitution<br>
+   - displacement<br>
+   - density‑shift<br>
+   - multi‑vector<br>
+   - oscillation<br>
+   - inversion  </p>
+</li>
+<li>
+<p><strong>Continuity Behavior</strong><br>
+   - invariants<br>
+   - anchors<br>
+   - threads<br>
+   - multi‑layer structure  </p>
+</li>
+<li>
+<p><strong>Regime Alignment</strong><br>
+   - Formal<br>
+   - Emergent<br>
+   - Chaotic<br>
+   - Hybrid<br>
+   - Inversion‑Driven  </p>
+</li>
+<li>
+<p><strong>Coherence‑Break Susceptibility</strong><br>
+   - Type 1–5  </p>
+</li>
+<li>
+<p><strong>Cross‑Module Projections</strong><br>
+   - TEL lattice<br>
+   - FFT variance<br>
+   - Opacity boundaries  </p>
+</li>
+</ol>
+<p>If any of these are missing, the pattern is <strong>not synthesizable</strong>.</p>
+<hr>
+<h1 id="3-the-pattern-synthesis-pipeline-canonical">3. The Pattern Synthesis Pipeline (Canonical)</h1>
+<p>Pattern synthesis follows a strict 6‑stage pipeline:</p>
+<ol>
+<li><strong>Define drift geometry</strong>  </li>
+<li><strong>Select envelope geometry</strong>  </li>
+<li><strong>Assign deformation class</strong>  </li>
+<li><strong>Specify continuity behavior</strong>  </li>
+<li><strong>Determine regime alignment</strong>  </li>
+<li><strong>Generate cross‑module projections</strong></li>
+</ol>
+<p>Each stage constrains the next.</p>
+<hr>
+<h1 id="4-stage-1-drift-geometry-design">4. Stage 1 — Drift Geometry Design</h1>
+<p>Choose a drift geometry that is:</p>
+<ul>
+<li>structurally consistent  </li>
+<li>directionally coherent  </li>
+<li>compatible with envelope geometry  </li>
+</ul>
+<h3 id="valid-drift-geometries">Valid Drift Geometries</h3>
+<ul>
+<li><strong>Linear</strong> (Type A)  </li>
+<li><strong>Radial</strong> (Type B)  </li>
+<li><strong>Fragmented</strong> (Type C)  </li>
+<li><strong>Hybrid</strong> (Type D)  </li>
+<li><strong>Oscillatory</strong> (O‑Series)  </li>
+<li><strong>Inversion‑Ready</strong> (I‑Series)  </li>
+</ul>
+<h3 id="invalid-drift-geometries">Invalid Drift Geometries</h3>
+<ul>
+<li>contradictory vectors  </li>
+<li>non‑planar drift  </li>
+<li>drift with no dominant vector  </li>
+<li>drift that violates envelope symmetry  </li>
+</ul>
+<hr>
+<h1 id="5-stage-2-envelope-geometry-selection">5. Stage 2 — Envelope Geometry Selection</h1>
+<p>Envelope geometry must match drift geometry.</p>
+<h3 id="valid-pairings">Valid Pairings</h3>
+<ul>
+<li>Linear drift → Type A  </li>
+<li>Radial drift → Type B  </li>
+<li>Multi‑vector drift → Type C  </li>
+<li>Oscillation → Type D  </li>
+<li>Inversion → Type A or Type B  </li>
+</ul>
+<h3 id="invalid-pairings">Invalid Pairings</h3>
+<ul>
+<li>Linear drift → Type C  </li>
+<li>Radial drift → Type D  </li>
+<li>Fragmented drift → Type A  </li>
+</ul>
+<hr>
+<h1 id="6-stage-3-deformation-class-assignment">6. Stage 3 — Deformation Class Assignment</h1>
+<p>Choose a deformation class that matches both drift and envelope.</p>
+<h3 id="deformation-classes">Deformation Classes</h3>
+<ul>
+<li><strong>Substitution</strong> (Type A)  </li>
+<li><strong>Displacement</strong> (Type A/B)  </li>
+<li><strong>Density‑Shift</strong> (Type B)  </li>
+<li><strong>Multi‑Vector</strong> (Type C)  </li>
+<li><strong>Oscillation</strong> (Type D)  </li>
+<li><strong>Inversion</strong> (I‑Series)  </li>
+</ul>
+<h3 id="rules">Rules</h3>
+<ul>
+<li>Type C must use multi‑vector deformation  </li>
+<li>Type D must use oscillation deformation  </li>
+<li>Inversion must use inversion deformation  </li>
+</ul>
+<hr>
+<h1 id="7-stage-4-continuity-behavior-specification">7. Stage 4 — Continuity Behavior Specification</h1>
+<p>Continuity defines structural stability.</p>
+<h3 id="continuity-components">Continuity Components</h3>
+<ul>
+<li><strong>Invariants</strong> (Type B)  </li>
+<li><strong>Anchors</strong> (Type A/B)  </li>
+<li><strong>Threads</strong> (Type C/D)  </li>
+<li><strong>Multi‑Layer Structure</strong> (Type C)  </li>
+</ul>
+<h3 id="rules_1">Rules</h3>
+<ul>
+<li>Type A requires anchors  </li>
+<li>Type B requires invariants  </li>
+<li>Type C requires threads  </li>
+<li>Type D requires oscillating threads  </li>
+</ul>
+<hr>
+<h1 id="8-stage-5-regime-alignment">8. Stage 5 — Regime Alignment</h1>
+<p>Regime must match drift + envelope + continuity.</p>
+<h3 id="valid-alignments">Valid Alignments</h3>
+<ul>
+<li>Type A → Formal/Emergent  </li>
+<li>Type B → Emergent  </li>
+<li>Type C → Chaotic  </li>
+<li>Type D → Hybrid  </li>
+<li>Inversion → Emergent  </li>
+</ul>
+<h3 id="invalid-alignments">Invalid Alignments</h3>
+<ul>
+<li>Type C → Formal  </li>
+<li>Type D → Formal  </li>
+<li>Type A → Chaotic (without escalation)  </li>
+</ul>
+<hr>
+<h1 id="9-stage-6-crossmodule-projection-generation">9. Stage 6 — Cross‑Module Projection Generation</h1>
+<p>Every pattern must project into:</p>
+<h3 id="tel">TEL</h3>
+<ul>
+<li>lattice geometry  </li>
+<li>stabilizer distribution  </li>
+</ul>
+<h3 id="fft">FFT</h3>
+<ul>
+<li>variance profile  </li>
+<li>spectral envelope  </li>
+</ul>
+<h3 id="opacity">Opacity</h3>
+<ul>
+<li>boundary gradient  </li>
+<li>visibility map  </li>
+</ul>
+<p>These must be <strong>mutually consistent</strong>.</p>
+<hr>
+<h1 id="10-pattern-synthesis-templates">10. Pattern Synthesis Templates</h1>
+<h2 id="101-drift-geometry-template"><strong>10.1 Drift Geometry Template</strong></h2>
+<pre><code>drift:
+  type:
+  dominant_vector:
+  secondary_vectors:
+  oscillation:
+  inversion_ready:
+</code></pre>
+<h2 id="102-envelope-geometry-template"><strong>10.2 Envelope Geometry Template</strong></h2>
+<pre><code>envelope:
+  type:
+  symmetry:
+  density:
+  fragmentation:
+</code></pre>
+<h2 id="103-continuity-template"><strong>10.3 Continuity Template</strong></h2>
+<pre><code>continuity:
+  invariants:
+  anchors:
+  threads:
+  layers:
+</code></pre>
+<h2 id="104-crossmodule-projection-template"><strong>10.4 Cross‑Module Projection Template</strong></h2>
+<pre><code>projections:
+  tel:
+  fft:
+  opacity:
+</code></pre>
+<hr>
+<h1 id="11-full-pattern_synthesis_packet-template">11. Full PATTERN_SYNTHESIS_PACKET Template</h1>
+<pre><code>PATTERN_SYNTHESIS_PACKET:
+  pattern_name:
+  pattern_family:
+  drift_geometry:
+  envelope_geometry:
+  deformation_class:
+  continuity_behavior:
+  regime_alignment:
+  coherence_break_susceptibility:
+  tel_projection:
+  fft_projection:
+  opacity_projection:
+  notes:
+</code></pre>
+<hr>
+<h1 id="12-example-synthesizing-a-new-pattern-type-e-prototype">12. Example: Synthesizing a New Pattern (Type E Prototype)</h1>
+<h3 id="drift-geometry">Drift Geometry</h3>
+<ul>
+<li>spiral drift  </li>
+<li>dominant rotational vector  </li>
+<li>secondary radial vectors  </li>
+</ul>
+<h3 id="envelope-geometry">Envelope Geometry</h3>
+<ul>
+<li>rotational envelope  </li>
+<li>symmetric spiral arms  </li>
+</ul>
+<h3 id="deformation-class">Deformation Class</h3>
+<ul>
+<li>rotational displacement  </li>
+</ul>
+<h3 id="continuity">Continuity</h3>
+<ul>
+<li>rotating anchors  </li>
+<li>spiral threads  </li>
+</ul>
+<h3 id="regime">Regime</h3>
+<ul>
+<li>Hybrid → Emergent  </li>
+</ul>
+<h3 id="crossmodule-projections">Cross‑Module Projections</h3>
+<ul>
+<li>TEL: rotating lattice  </li>
+<li>FFT: spiral variance  </li>
+<li>Opacity: rotational gradient  </li>
+</ul>
+<p>This becomes <strong>Pattern E1 — Spiral Drift Envelope</strong>.</p>
+<hr>
+<h1 id="13-summary">13. Summary</h1>
+<p>Pattern synthesis requires:</p>
+<ul>
+<li>drift correctness  </li>
+<li>envelope correctness  </li>
+<li>deformation correctness  </li>
+<li>continuity correctness  </li>
+<li>regime correctness  </li>
+<li>cross‑module correctness  </li>
+</ul>
+<p>This manual provides the <strong>canonical pipeline</strong> for designing new drift‑envelope patterns.</p>
+  </main>
+</body>
+</html>

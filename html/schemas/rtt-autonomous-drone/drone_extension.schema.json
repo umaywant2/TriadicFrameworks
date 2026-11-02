@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-autonomous-fish/v1/fish_mission_profile_extension.schema.json",
+  "title": "fish_mission_profile_extension",
+  "type": "object",
+  "properties": {
+    "sampling_targets": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Water quality or biological sampling targets."
+    },
+
+    "schooling_behavior": {
+      "type": "string",
+      "enum": ["tight", "loose", "dynamic"],
+      "description": "Desired swarm formation mode."
+    },
+
+    "avoidance_rules": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Hazards or zones to avoid (e.g., nets, shallow areas)."
+    },
+
+    "corridor_preferences": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Preferred underwater corridors or clarity paths."
+    }
+  }
+}
+

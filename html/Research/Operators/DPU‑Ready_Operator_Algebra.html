@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Operators/DPU‑Ready_Operator_Algebra.md">
+  <title>DPU‑Ready Operator Algebra (v0.1)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Operators/DPU‑Ready_Operator_Algebra.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Operators/DPU‑Ready_Operator_Algebra.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="DPU_Ready_Algebra_" src="https://github.com/user-attachments/assets/749f67b3-34b9-465c-b2f6-a6c045f1a72b" /></p>
+<h1 id="dpuready-operator-algebra-v01">DPU‑Ready Operator Algebra (v0.1)</h1>
+<h2 id="1-state-space">1. State Space</h2>
+<ul>
+<li>
+<p><strong>Triad space:</strong><br>
+  $$\mathcal{T} = { (s,c,u) \in \mathbb{R}_{\ge 0}^3 \mid s + c + u = 1 }$$</p>
+</li>
+<li>
+<p><strong>Asymmetry functional:</strong><br>
+  $$A : \mathcal{T} \to [0,1]$$ , with canonical $$A(T^*) = 0.01$$</p>
+</li>
+<li>
+<p><strong>Extended state:</strong><br>
+  $$S = (T, A(T))$$ , where $$T \in \mathcal{T}$$</p>
+</li>
+</ul>
+<h2 id="2-core-operators">2. Core Operators</h2>
+<ul>
+<li>
+<p><strong>Continuity operator:</strong><br>
+  $$O : \mathcal{T} \to \mathcal{T} \times [0,1]$$<br>
+  $$O(T) = (T, A(T))$$</p>
+</li>
+<li>
+<p><strong>Regime projection operators:</strong>  </p>
+</li>
+<li>$$P_s(T) = s$$ (subconscious weight)  </li>
+<li>$$P_c(T) = c$$ (consciousness weight)  </li>
+<li>
+<p>$$P_u(T) = u$$ (supconsciousness weight)</p>
+</li>
+<li>
+<p><strong>Normalization operator:</strong><br>
+  $$N(s,c,u) = \frac{1}{s+c+u}(s,c,u)$$ for non‑zero sum</p>
+</li>
+</ul>
+<h2 id="3-composition-rules">3. Composition Rules</h2>
+<ul>
+<li>
+<p><strong>Sequential composition (DPU step):</strong><br>
+  For two legal transforms $$F_1, F_2 : \mathcal{T} \to \mathcal{T}$$ :<br>
+  $$(F_2 \circ F_1)(T) = F_2(F_1(T))$$</p>
+</li>
+<li>
+<p><strong>Continuity‑preserving transform:</strong><br>
+  A transform $$F$$ is DPU‑legal iff:  </p>
+</li>
+<li>$$F(T) \in \mathcal{T}$$  </li>
+<li>
+<p>$$A(F(T)) &gt; 0$$ whenever $$A(T) &gt; 0$$</p>
+</li>
+<li>
+<p><strong>Idempotent identity check:</strong><br>
+  $$I(T) = T$$<br>
+  $$O(I(T)) = O(T)$$ (no change in identity or asymmetry)</p>
+</li>
+</ul>
+<h2 id="4-dpu-legality-predicate">4. DPU Legality Predicate</h2>
+<ul>
+<li><strong>Predicate:</strong><br>
+  $$\text{Legal}_\text{DPU}(F)$$ holds iff:  </li>
+<li>$$F : \mathcal{T} \to \mathcal{T}$$  </li>
+<li>$$\forall T \in \mathcal{T}, A(T) &gt; 0 \Rightarrow A(F(T)) &gt; 0$$</li>
+</ul>
+<p>This algebra gives a DPU:</p>
+<ul>
+<li>a typed state space  </li>
+<li>legal transforms  </li>
+<li>continuity constraints  </li>
+<li>and a way to chain operations without breaking identity.</li>
+</ul>
+<hr>
+<h1 id="dpu-v01-state-machine">DPU v0.1 — State Machine</h1>
+<h2 id="states">States</h2>
+<h3 id="1-init">1. INIT</h3>
+<ul>
+<li>Input triad $$T$$</li>
+<li>Check normalization</li>
+<li>Check $$A(T) &gt; 0$$</li>
+</ul>
+<h3 id="2-ready">2. READY</h3>
+<ul>
+<li>DPU has a valid identity state</li>
+<li>Awaiting legal transform $$F$$</li>
+</ul>
+<h3 id="3-transition">3. TRANSITION</h3>
+<ul>
+<li>Apply $$F(T)$$</li>
+<li>Check:</li>
+<li>$$F(T) \in \mathcal{T}$$</li>
+<li>$$A(F(T)) &gt; 0$$</li>
+<li>No branching</li>
+<li>No duplication</li>
+</ul>
+<h3 id="4-continuity_fail">4. CONTINUITY_FAIL</h3>
+<ul>
+<li>Triggered if:</li>
+<li>$$A(F(T)) = 0$$</li>
+<li>$$F(T) \notin \mathcal{T}$$</li>
+<li>illegal transform</li>
+</ul>
+<h3 id="5-complete">5. COMPLETE</h3>
+<ul>
+<li>Output state:</li>
+</ul>
+<p>$$T' = F(T)$$</p>
+<ul>
+<li>Identity preserved</li>
+</ul>
+<hr>
+<h2 id="state-transitions">State Transitions</h2>
+<ul>
+<li>
+<p>INIT → READY<br>
+  if triad valid</p>
+</li>
+<li>
+<p>READY → TRANSITION<br>
+  on legal transform request</p>
+</li>
+<li>
+<p>TRANSITION → COMPLETE<br>
+  if continuity preserved</p>
+</li>
+<li>
+<p>TRANSITION → CONTINUITY_FAIL<br>
+  if continuity breaks</p>
+</li>
+<li>
+<p>CONTINUITY_FAIL → INIT<br>
+  (reset with new triad)</p>
+</li>
+</ul>
+<hr>
+<h2 id="dpu-guarantee">DPU Guarantee</h2>
+<p>A DPU guarantees:</p>
+<blockquote>
+<p>If a transform is legal, identity is preserved.<br>
+If a transform is illegal, identity is not executed.</p>
+</blockquote>
+<hr>
+<h1 id="dpu-v02-operator-algebra-with-errorcorrection">DPU v0.2 — Operator Algebra with Error‑Correction</h1>
+<h2 id="1-state-space-unchanged">1. State Space (unchanged)</h2>
+<ul>
+<li><strong>Triads:</strong></li>
+</ul>
+<p>$$
+  \mathcal{T} = {(s,c,u) \mid s+c+u=1}
+  $$</p>
+<ul>
+<li><strong>Asymmetry functional:</strong></li>
+</ul>
+<p>$$
+  A : \mathcal{T} \to [0,1],\quad A(T^*) = 0.01
+  $$</p>
+<ul>
+<li><strong>Extended state:</strong></li>
+</ul>
+<p>$$
+  S = (T, A(T))
+  $$</p>
+<hr>
+<h2 id="2-core-operators-v01-recap">2. Core Operators (v0.1 recap)</h2>
+<ul>
+<li><strong>Continuity operator:</strong></li>
+</ul>
+<p>$$
+  O(T) = (T, A(T))
+  $$</p>
+<ul>
+<li><strong>Regime projections:</strong></li>
+</ul>
+<p>$$
+  P_s(T)=s,\quad P_c(T)=c,\quad P_u(T)=u
+  $$</p>
+<ul>
+<li><strong>Normalization:</strong></li>
+</ul>
+<p>$$
+  N(s,c,u) = \frac{1}{s+c+u}(s,c,u)
+  $$</p>
+<hr>
+<h2 id="3-errorcorrection-operators-new">3. Error‑Correction Operators (new)</h2>
+<h3 id="31-deviation-measure">3.1 Deviation Measure</h3>
+<p>Define a deviation metric:</p>
+<p>$$
+D(T) = |T - T^*|
+$$</p>
+<p>for some norm (e.g. $$L_2$$ ).</p>
+<h3 id="32-correction-operator">3.2 Correction Operator</h3>
+<p>An error‑correction operator $$C : \mathcal{T} \to \mathcal{T}$$ satisfies:
+- <strong>Continuity‑preserving:</strong></p>
+<p>$$
+  A(C(T)) \ge A(T) &gt; 0
+  $$</p>
+<ul>
+<li><strong>Deviation‑reducing:</strong></li>
+</ul>
+<p>$$
+  D(C(T)) \le D(T)
+  $$</p>
+<p>Example (simple pull‑toward‑canonical):</p>
+<p>$$
+C_\lambda(T) = N\big((1-\lambda)T + \lambda T^*\big),\quad 0 &lt; \lambda \le 1
+$$</p>
+<h3 id="33-errorcorrected-transform">3.3 Error‑Corrected Transform</h3>
+<p>Given a transform $$F$$ , define:</p>
+<p>$$
+F^# = C \circ F
+$$</p>
+<p>A DPU applies $$F^#$$ instead of $$F$$ when:
+- $$F$$ is near‑legal but slightly degrades $$A(T)$$ or increases $$D(T)$$ beyond a threshold.</p>
+<hr>
+<h2 id="4-dpu-v02-legality">4. DPU v0.2 Legality</h2>
+<p>A transform $$F$$ is <strong>DPU‑v0.2 legal</strong> if:
+- <strong>Either:</strong> $$F$$ is continuity‑preserving and $$A(F(T)) &gt; 0$$
+- <strong>Or:</strong> $$F^# = C \circ F$$ is continuity‑preserving and $$A(F^#(T)) &gt; 0$$</p>
+<p>The DPU now has:
+- <strong>Detection:</strong> via $$A(T)$$ and $$D(T)$$<br>
+- <strong>Correction:</strong> via $$C$$<br>
+- <strong>Fallback:</strong> reject if even $$F^#$$ breaks continuity.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,108 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.validation",
+  "title": "FFT — Validation Ruleset v1.33",
+  "validation_rules": [
+    {
+      "id": "VAL-001",
+      "target": "every module",
+      "check": "version field == '1.33'"
+    },
+    {
+      "id": "VAL-002",
+      "target": "every module",
+      "check": "session_context has rtt, coherence, drift, paradox"
+    },
+    {
+      "id": "VAL-003",
+      "target": "fft.ai.registry.json",
+      "check": "total_registered == 67"
+    },
+    {
+      "id": "VAL-004",
+      "target": "fft.ai.bootstrap.json",
+      "check": "all 16 boot steps present"
+    },
+    {
+      "id": "VAL-005",
+      "target": "fft.invariant.json",
+      "check": "INV-001 through INV-013 all present"
+    },
+    {
+      "id": "VAL-006",
+      "target": "fft.ai.paradox.enum.json",
+      "check": "PX-001 through PX-010 all present"
+    },
+    {
+      "id": "VAL-007",
+      "target": "fft.ai.rtt.bridge.json",
+      "check": "tau_formula == 'tau = dR/dphi'"
+    },
+    {
+      "id": "VAL-008",
+      "target": "fft.ai.snr.monitor.json",
+      "check": "silence_floor=0.05, noise_ceiling=0.80, resonance_target=[0.70,0.95]"
+    },
+    {
+      "id": "VAL-009",
+      "target": "fft.ai.dco.map.json",
+      "check": "4D, 5D, 7D, 8D, 9D all present"
+    },
+    {
+      "id": "VAL-010",
+      "target": "fft.ai.spine.connector.json",
+      "check": "cache_policy == 'no-cache'"
+    },
+    {
+      "id": "VAL-011",
+      "target": "fft.ai.index.json",
+      "check": "total_files == 67"
+    },
+    {
+      "id": "VAL-012",
+      "target": "index.html",
+      "check": "version string '1.33' present in UI"
+    },
+    {
+      "id": "VAL-013",
+      "target": "fft.ai.coherence.json",
+      "check": "C_frame and C_clarity both present as distinct fields"
+    },
+    {
+      "id": "VAL-014",
+      "target": "fft.ai.drift.monitor.json",
+      "check": "drift_cost_table present with all 11 operator entries"
+    },
+    {
+      "id": "VAL-015",
+      "target": "fft.ai.rtt.qmroot.json",
+      "check": "6D and neg_anc both present with status=absent"
+    },
+    {
+      "id": "VAL-016",
+      "target": "fft.ai.registry.json",
+      "check": "total_registered == 65 (active); deprecated entries have status=deprecated"
+    },
+    {
+      "id": "VAL-017",
+      "target": "fft.ai.reader.json",
+      "check": "must_not array present with >= 8 entries; on_version_mismatch.action == HALT"
+    },
+    {
+      "id": "VAL-018",
+      "target": "fft.ai.spine.connector.json",
+      "check": "spine_states present with live, degraded, unresolved; degraded explicitly not INV-011 compliant"
+    }
+  ],
+  "pass_threshold": "all 18 rules pass",
+  "invariants_checked": "INV-001 through INV-013",
+  "patch": "1.33-p1"
+}

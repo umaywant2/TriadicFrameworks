@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/module_moderation_state.json",
+  "title": "RTT Moderation StateEmitter",
+  "description": "Triadic state output for a sequence of moderation events.",
+  "type": "object",
+
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "module_id": { "type": "string" },
+        "sequence_id": { "type": "string" },
+        "length": { "type": "integer", "minimum": 1 }
+      },
+      "required": ["module_id", "sequence_id", "length"]
+    },
+
+    "timeline": {
+      "type": "array",
+      "description": "Sequence of moderation events.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "timestamp": { "type": "string" },
+          "actor": { "type": "string" },
+          "action": { "type": "string" },
+          "target": { "type": "string" },
+          "reason": { "type": "string" }
+        },
+        "required": ["index", "actor", "action"]
+      }
+    },
+
+    "lumen": {
+      "type": "array",
+      "description": "Structural extraction per event.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "signals": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["index", "signals"]
+      }
+    },
+
+    "regime": {
+      "type": "array",
+      "description": "Hephaestus regime classification per event.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "regime": {
+            "type": "string",
+            "enum": ["local", "structural", "continuity"]
+          }
+        },
+        "required": ["index", "regime"]
+      }
+    },
+
+    "ancestry": {
+      "type": "array",
+      "description": "Aurion ancestry signals across the moderation sequence.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "collapse_signature": { "type": "boolean" },
+          "projection_loss": { "type": "boolean" }
+        },
+        "required": ["index", "collapse_signature", "projection_loss"]
+      }
+    },
+
+    "drift": {
+      "type": "object",
+      "description": "Continuity drift across the governance timeline.",
+      "properties": {
+        "direction": { "type": "string" },
+        "strength": {
+          "type": "string",
+          "enum": ["none", "weak", "medium", "strong"]
+        }
+      },
+      "required": ["direction", "strength"]
+    },
+
+    "triadic_identity": {
+      "type": "object",
+      "description": "Harmonia synthesis for the entire moderation sequence.",
+      "properties": {
+        "local": { "type": "number", "minimum": 0, "maximum": 1 },
+        "structural": { "type": "number", "minimum": 0, "maximum": 1 },
+        "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "risk": { "type": "number", "minimum": 0, "maximum": 1 },
+        "final": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["local", "structural", "continuity", "risk", "final"]
+    }
+  },
+
+  "required": [
+    "metadata",
+    "timeline",
+    "lumen",
+    "regime",
+    "ancestry",
+    "drift",
+    "triadic_identity"
+  ]
+}

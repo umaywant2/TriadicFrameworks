@@ -1,0 +1,46 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "TriadicFrameworks MCP — Example Envelope Schema",
+  "description": "Real JSON Schema defining the canonical example envelope structure used across the Forces Unseen layer.",
+  "version": "0.1.0",
+
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "exampleEnvelope",
+    "description": "JSON Schema for example envelopes containing canonical, reality, imagination, information, error, and qmroot interpretations.",
+    "type": "object",
+
+    "properties": {
+      "canonical": {
+        "type": "string",
+        "description": "Canonical interpretation of the example."
+      },
+      "reality": {
+        "type": "string",
+        "description": "Reality interpretation of the example."
+      },
+      "imagination": {
+        "type": "string",
+        "description": "Imagination interpretation of the example."
+      },
+      "information": {
+        "type": "string",
+        "description": "Information interpretation of the example."
+      },
+      "error": {
+        "type": "string",
+        "description": "Error interpretation of the example."
+      },
+      "qmroot": {
+        "type": "string",
+        "description": "QMROOT interpretation of the example."
+      }
+    },
+
+    "required": ["canonical"]
+  }
+}

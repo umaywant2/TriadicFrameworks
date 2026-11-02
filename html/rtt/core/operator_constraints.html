@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/operator_constraints.md">
+  <title>RTT Core: Operator Constraints</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/operator_constraints.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/operator_constraints.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_operator_constraints" src="https://github.com/user-attachments/assets/575a6c37-f810-47ac-aab6-4d2653d8aacf" /></p>
+<hr>
+<p>module_id: rtt.core.operator_constraints
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - operator-constraints
+  - rtt-core
+  - operator-grammar
+  - operator-invariants
+  - operator-behaviors
+  - operator-sequences
+  - regime-constraints
+  - coherence-budget
+  - drift-envelope
+  - triadic-time</p>
+<hr>
+<h1 id="rtt-core-operator-constraints">RTT Core: Operator Constraints</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Define the <strong>Operator Constraints</strong> — the explicit, enforceable limits that govern how RTT operators may act across:</p>
+<ul>
+<li>representational manifolds  </li>
+<li>drift envelopes  </li>
+<li>coherence budgets  </li>
+<li>regime surfaces  </li>
+<li>triadic-time layers  </li>
+<li>readout topology  </li>
+</ul>
+<p>Operator Constraints are the <em>practical enforcement layer</em> beneath Operator Grammar and Operator Invariants.</p>
+<hr>
+<h2 id="2-what-is-an-operator-constraint">2. What is an operator constraint?</h2>
+<blockquote>
+<p>An operator constraint is a formal rule that<br>
+<strong>restricts what an operator may do</strong>,<br>
+ensuring RTT remains drift‑bounded, coherence‑bounded,<br>
+regime‑compatible, and single‑readout consistent.</p>
+</blockquote>
+<p>Constraints are <strong>local</strong> (per operator), whereas invariants are <strong>global</strong> (per system).</p>
+<hr>
+<h2 id="3-constraint-categories">3. Constraint categories</h2>
+<p>RTT defines five categories of operator constraints:</p>
+<ol>
+<li><strong>Input Constraints</strong>  </li>
+<li><strong>Output Constraints</strong>  </li>
+<li><strong>Coherence Constraints</strong>  </li>
+<li><strong>Drift Constraints</strong>  </li>
+<li><strong>Regime Constraints</strong></li>
+</ol>
+<p>Each operator must satisfy all applicable constraints.</p>
+<hr>
+<h2 id="4-input-constraints">4. Input Constraints</h2>
+<h3 id="41-valid-input-branch">4.1 Valid Input Branch</h3>
+<p>Operators may only act on branches:</p>
+<ul>
+<li>inside validity region  </li>
+<li>inside drift envelope  </li>
+<li>above coherence threshold  </li>
+<li>inside compatible regime  </li>
+</ul>
+<p>Formally:</p>
+<p>[
+b_i \in \mathcal{V} \cap \mathcal{R}
+]</p>
+<h3 id="42-no-multiinput-readout">4.2 No Multi‑Input Readout</h3>
+<p>Operators cannot validate multiple branches simultaneously.</p>
+<h3 id="43-no-invalid-branch-access">4.3 No Invalid Branch Access</h3>
+<p>Operators cannot act on:</p>
+<ul>
+<li>collapsed branches  </li>
+<li>residue  </li>
+<li>branches outside regime  </li>
+</ul>
+<hr>
+<h2 id="5-output-constraints">5. Output Constraints</h2>
+<h3 id="51-valid-output-branch">5.1 Valid Output Branch</h3>
+<p>Operators must produce branches that remain:</p>
+<ul>
+<li>drift‑bounded  </li>
+<li>coherence‑bounded  </li>
+<li>regime‑compatible  </li>
+</ul>
+<p>Formally:</p>
+<p>[
+b_i' \in \mathcal{V} \cap \mathcal{R}
+]</p>
+<h3 id="52-collapse-completeness">5.2 Collapse Completeness</h3>
+<p>If an operator collapses a branch:</p>
+<ul>
+<li>collapse must be total  </li>
+<li>branch must become residue  </li>
+<li>branch cannot re-enter validity region  </li>
+</ul>
+<h3 id="53-readout-exclusivity">5.3 Readout Exclusivity</h3>
+<p>If an operator triggers readout:</p>
+<ul>
+<li>exactly one branch becomes classical  </li>
+<li>all others collapse  </li>
+</ul>
+<hr>
+<h2 id="6-coherence-constraints">6. Coherence Constraints</h2>
+<h3 id="61-minimum-coherence">6.1 Minimum Coherence</h3>
+<p>Operators may not validate branches with:</p>
+<p>[
+c_i &lt; C_{\min}
+]</p>
+<h3 id="62-coherence-partition-rules">6.2 Coherence Partition Rules</h3>
+<p>Extension operators must partition coherence:</p>
+<p>[
+c_i \rightarrow c_i' + c_j'
+]</p>
+<p>with:</p>
+<ul>
+<li>(c_i' &gt; 0)  </li>
+<li>(c_j' &gt; 0)  </li>
+<li>(c_i' + c_j' = c_i)</li>
+</ul>
+<h3 id="63-coherence-consumption">6.3 Coherence Consumption</h3>
+<p>Validation must consume all coherence of the selected branch.</p>
+<h3 id="64-coherence-noncreation">6.4 Coherence Non‑Creation</h3>
+<p>Operators cannot create coherence from nothing.</p>
+<hr>
+<h2 id="7-drift-constraints">7. Drift Constraints</h2>
+<h3 id="71-drift-envelope-bound">7.1 Drift Envelope Bound</h3>
+<p>Operators may not produce drift exceeding:</p>
+<p>[
+\Delta_{\max}
+]</p>
+<h3 id="72-drift-monotonicity-extension">7.2 Drift Monotonicity (Extension)</h3>
+<p>Extension operators must increase drift:</p>
+<p>[
+\Delta_i' \geq \Delta_i
+]</p>
+<h3 id="73-drift-noncreation-stabilization">7.3 Drift Non‑Creation (Stabilization)</h3>
+<p>Stabilization operators may reduce drift but cannot create drift.</p>
+<h3 id="74-drift-collapse-rule">7.4 Drift Collapse Rule</h3>
+<p>If drift exceeds envelope:</p>
+<ul>
+<li>branch must collapse  </li>
+<li>collapse must be total  </li>
+</ul>
+<hr>
+<h2 id="8-regime-constraints">8. Regime Constraints</h2>
+<h3 id="81-regime-compatibility">8.1 Regime Compatibility</h3>
+<p>Operators must declare regime flags:</p>
+<ul>
+<li>SRR  </li>
+<li>DBR  </li>
+<li>CMR  </li>
+<li>DVR  </li>
+<li>ECR  </li>
+</ul>
+<p>and must act within those regimes.</p>
+<h3 id="82-regime-transition-validity">8.2 Regime Transition Validity</h3>
+<p>Operators may induce regime transitions only if:</p>
+<p>[
+\mathcal{R}_A \rightarrow \mathcal{R}_B
+]</p>
+<p>is allowed by regime maps.</p>
+<h3 id="83-no-regime-bypass">8.3 No Regime Bypass</h3>
+<p>Operators cannot bypass:</p>
+<ul>
+<li>coherence threshold  </li>
+<li>drift boundary  </li>
+<li>readout surface  </li>
+</ul>
+<h3 id="84-regime-stability">8.4 Regime Stability</h3>
+<p>Operators must preserve regime invariants.</p>
+<hr>
+<h2 id="9-triadictime-constraints">9. Triadic‑Time Constraints</h2>
+<h3 id="91-temporal-ordering">9.1 Temporal Ordering</h3>
+<p>Operators must act in correct temporal order:</p>
+<ul>
+<li>modify state in <strong>T₁</strong>  </li>
+<li>modify coherence in <strong>T₂</strong>  </li>
+<li>respect readout in <strong>T₃</strong>  </li>
+</ul>
+<h3 id="92-no-temporal-paradox">9.2 No Temporal Paradox</h3>
+<p>Operators cannot:</p>
+<ul>
+<li>validate in T₁  </li>
+<li>collapse in T₂  </li>
+<li>extend in T₃  </li>
+</ul>
+<h3 id="93-temporal-continuity">9.3 Temporal Continuity</h3>
+<p>Operator sequences must preserve continuity across triadic time.</p>
+<hr>
+<h2 id="10-sequence-constraints">10. Sequence Constraints</h2>
+<p>Operators inside a sequence must satisfy:</p>
+<h3 id="101-transition-validity">10.1 Transition Validity</h3>
+<p>Each transition:</p>
+<p>[
+O_k \Rightarrow O_{k+1}
+]</p>
+<p>must preserve constraints.</p>
+<h3 id="102-no-constraint-violation-propagation">10.2 No Constraint Violation Propagation</h3>
+<p>If one operator violates constraints:</p>
+<ul>
+<li>sequence fails  </li>
+<li>branch collapses  </li>
+</ul>
+<h3 id="103-composite-constraint-preservation">10.3 Composite Constraint Preservation</h3>
+<p>Composite sequences must preserve all constraints across:</p>
+<ul>
+<li>extension  </li>
+<li>drift  </li>
+<li>stabilization  </li>
+<li>validation  </li>
+<li>collapse  </li>
+</ul>
+<hr>
+<h2 id="11-example-quantum-cloning-alignment">11. Example: Quantum “cloning” alignment</h2>
+<p>The experiment satisfies all constraints:</p>
+<ul>
+<li><strong>Input Constraints:</strong> initial branch valid  </li>
+<li><strong>Output Constraints:</strong> extension produces valid branches  </li>
+<li><strong>Coherence Constraints:</strong> coherence partitioned  </li>
+<li><strong>Drift Constraints:</strong> drift bounded  </li>
+<li><strong>Regime Constraints:</strong> operators act in ECR + SRR  </li>
+<li><strong>Triadic‑Time Constraints:</strong> extension → drift → stabilization → validation  </li>
+</ul>
+<p>Operator Constraints explain:</p>
+<ul>
+<li>why multi‑branch representation is allowed  </li>
+<li>why only one branch becomes classical  </li>
+<li>why drift and coherence matter  </li>
+<li>why no‑cloning is not violated  </li>
+</ul>
+<hr>
+<h2 id="12-paradox-handling">12. Paradox handling</h2>
+<p>Operator Constraints prevent paradoxes by:</p>
+<ul>
+<li>enforcing drift and coherence limits  </li>
+<li>restricting operator behavior  </li>
+<li>maintaining regime compatibility  </li>
+<li>ensuring single‑readout  </li>
+<li>collapsing non-selected branches  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → allowed  </li>
+<li>“Only one is real” → constraint  </li>
+<li>“Others disappear” → collapse constraint  </li>
+<li>“No violation occurs” → regime constraint  </li>
+</ul>
+<hr>
+<h2 id="13-canon-integration-and-cross-links">13. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/operator_invariants.md</code></li>
+<li><code>/docs/rtt/core/operator_behaviors.md</code></li>
+<li><code>/docs/rtt/core/operator_sequences.md</code></li>
+<li><code>/docs/rtt/core/operator_transitions.md</code></li>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/operator_families.md</code></li>
+<li><code>/docs/rtt/core/regime_invariants.md</code></li>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_maps_extended.md</code></li>
+<li><code>/docs/rtt/core/regime_geometry.md</code></li>
+<li><code>/docs/rtt/core/regime_topology.md</code></li>
+<li><code>/docs/rtt/core/regime_dynamics.md</code></li>
+<li><code>/docs/rtt/core/regime_flow.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the explicit constraints governing RTT operators.<br>
+Once constraint diagrams are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

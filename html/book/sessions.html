@@ -1,0 +1,1703 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/book/sessions.md">
+  <title>Canonical Session Library</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/book/sessions.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/book/sessions.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="canonical-session-library">Canonical Session Library</h1>
+<blockquote>
+<p><strong>A reference collection of fully worked sessions practitioners can study, clone, and adapt.</strong>
+Every session in this library is complete: all nine grammar fields populated, every operator invocation shown in full, every output produced, every validator assessment applied.</p>
+</blockquote>
+<hr>
+<h2 id="what-this-library-is">What This Library Is</h2>
+<p>The canonical session library is the system's worked-example layer. Where Part III taught you <em>how</em> to run sessions, this library shows you sessions that have <em>already been run</em> — correctly, in full, with real inputs and real outputs.</p>
+<p>Use this library in three ways:</p>
+<p><strong>1. Reference</strong> — When you are unsure how a particular kind of session should look, find the closest canonical session here and read it end-to-end before building your own.</p>
+<p><strong>2. Clone</strong> — When your session is structurally similar to a canonical one, use it as a starting template. Swap the input, adjust the intent and scope, re-resolve the active_modules list, and run. The clone guide at the end of each session tells you exactly which fields to change.</p>
+<p><strong>3. Audit</strong> — When a session you have run produces unexpected results, compare its grammar and invocations against the closest canonical session. The difference between your session and the canonical one is usually where the problem lives.</p>
+<hr>
+<h2 id="how-to-read-a-canonical-session">How to Read a Canonical Session</h2>
+<p>Each session is structured in five sections:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What It Contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grammar</strong></td>
+<td>The fully populated 9-field session grammar</td>
+</tr>
+<tr>
+<td><strong>Execution</strong></td>
+<td>The operator invocations, in order, with full signatures</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>The session's complete output, in the declared format</td>
+</tr>
+<tr>
+<td><strong>Assessment</strong></td>
+<td>The validator's assessment of the output</td>
+</tr>
+<tr>
+<td><strong>Clone Guide</strong></td>
+<td>Which fields to change when adapting this session</td>
+</tr>
+</tbody>
+</table>
+<p>Read the grammar first — always. The grammar defines everything the execution is allowed to do. If the execution surprises you, return to the grammar. The answer is there.</p>
+<hr>
+<h2 id="session-index">Session Index</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Primary Operator</th>
+<th>Depth</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#cs-01--baseline-rtt-analysis">CS-01</a></td>
+<td>Baseline RTT Analysis</td>
+<td><code>RTT.pass</code></td>
+<td>1</td>
+<td>Beginner</td>
+</tr>
+<tr>
+<td><a href="#cs-02--two-pass-recursive-rtt-analysis">CS-02</a></td>
+<td>Two-Pass Recursive RTT Analysis</td>
+<td><code>RTT.pass</code></td>
+<td>2</td>
+<td>Beginner</td>
+</tr>
+<tr>
+<td><a href="#cs-03--scope-compliance-check">CS-03</a></td>
+<td>Scope Compliance Check</td>
+<td><code>Scope.check</code></td>
+<td>—</td>
+<td>Intermediate</td>
+</tr>
+<tr>
+<td><a href="#cs-04--dependency-audit">CS-04</a></td>
+<td>Dependency Audit</td>
+<td><code>Dependency.trace</code></td>
+<td>—</td>
+<td>Intermediate</td>
+</tr>
+<tr>
+<td><a href="#cs-05--gap-identification-and-module-draft">CS-05</a></td>
+<td>Gap Identification and Module Draft</td>
+<td><code>Gap.identify</code> + <code>Module.draft</code></td>
+<td>—</td>
+<td>Intermediate</td>
+</tr>
+<tr>
+<td><a href="#cs-06--multi-lens-rtt-analysis">CS-06</a></td>
+<td>Multi-Lens RTT Analysis</td>
+<td><code>RTT.pass</code> + lens activation</td>
+<td>2</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td><a href="#cs-07--session-diagnosis-and-repair">CS-07</a></td>
+<td>Session Diagnosis and Repair</td>
+<td><code>Session.diagnose</code> + field tests</td>
+<td>—</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td><a href="#cs-08--clarity-evaluation-of-an-existing-output">CS-08</a></td>
+<td>Clarity Evaluation of an Existing Output</td>
+<td><code>Clarity.evaluate</code></td>
+<td>—</td>
+<td>Intermediate</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="cs-01-baseline-rtt-analysis">CS-01 — Baseline RTT Analysis</h2>
+<p><strong>Purpose:</strong> The minimum viable session. A single-depth RTT pass on a plain-language problem statement. Use this as your first session template and as the reference for what a correctly formed grammar looks like at its simplest.</p>
+<hr>
+<h3 id="grammar">Grammar</h3>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;cs-01-baseline-rtt-20260925&quot;,
+  &quot;intent&quot;: &quot;Produce a single-depth RTT analysis of the input statement, identifying all three structural faces and packaging the output as a valid StructuredFaces unit.&quot;,
+  &quot;scope&quot;: &quot;This session covers one RTT pass on the single input statement below. It does not cover recursive extension, adjacent inputs, or downstream implications of the output.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;rtt-op-core&quot;,
+    &quot;clarity-val-rtt-output&quot;
+  ],
+  &quot;role_context&quot;: &quot;operator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;Our engineering team ships features on time but the features rarely get adopted. Leadership keeps asking why, and the team keeps pointing to the product roadmap. Nobody is looking at the gap between what ships and what users actually need.&quot;,
+    &quot;scope&quot;: &quot;A single organizational dynamic described by an observer — scoped to the delivery-adoption gap, no broader organizational context.&quot;
+  },
+  &quot;output_format&quot;: &quot;StructuredFaces&quot;,
+  &quot;validator&quot;: &quot;clarity-val-rtt-output&quot;
+}
+</code></pre>
+<hr>
+<h3 id="execution">Execution</h3>
+<pre><code>RTT.pass(
+  input: {
+    content: &quot;Our engineering team ships features on time but the features rarely get adopted...&quot;,
+    scope: &quot;A single organizational dynamic — scoped to the delivery-adoption gap.&quot;
+  },
+  depth: 1,
+  output_format: StructuredFaces
+)
+</code></pre>
+<hr>
+<h3 id="output">Output</h3>
+<pre><code class="language-json">{
+  &quot;generative_face&quot;: &quot;The team's success metric is delivery velocity — shipping on time. This metric was set upstream and has never been challenged. Because the team is evaluated on delivery, it optimizes for delivery. The roadmap is treated as a specification of user need, not a hypothesis about user need. No mechanism exists to close the loop between what ships and what users do with it.&quot;,
+  &quot;present_face&quot;: &quot;A structural decoupling between delivery and adoption. The team is performing correctly against its stated metric (on-time delivery) and incorrectly against the actual goal (user adoption). The gap is not a motivation failure or a skill failure — it is a metric design failure. The wrong thing is being measured, so the wrong thing is being optimized.&quot;,
+  &quot;terminal_face&quot;: &quot;Without intervention, the gap compounds. Each on-time delivery that goes unadopted reinforces the team's belief that the roadmap is the problem, and leadership's belief that the team is the problem. The actual problem — the absence of a feedback loop between delivery and usage — remains unaddressed and undiagnosed. The system drifts toward blame attribution rather than structural correction.&quot;,
+  &quot;pass_depth&quot;: 1,
+  &quot;next_input&quot;: {
+    &quot;content&quot;: &quot;The team optimizes for delivery because delivery is what is measured. No feedback loop connects shipped features to usage data. The metric design is the structural failure.&quot;,
+    &quot;scope&quot;: &quot;The metric design failure identified in the first RTT pass — scoped to the measurement system, not to the team's capabilities or the roadmap's content.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h3 id="assessment">Assessment</h3>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;clarity-val-rtt-output&quot;,
+  &quot;session_id&quot;: &quot;cs-01-baseline-rtt-20260925&quot;,
+  &quot;pass_depth_evaluated&quot;: 1,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;Face completeness&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All three faces present.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Face substantiveness&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Each face makes specific, checkable claims. Present face names the metric design failure precisely. Terminal face identifies a specific drift pattern.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Pass differentiation&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Single pass — differentiation criterion not applicable at depth=1.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Scope compliance&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;No reference to broader organizational context detected. Output stayed within declared scope.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Intent fulfillment&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;StructuredFaces output produced. next_input packaged correctly for potential extension.&quot;
+    }
+  ],
+  &quot;overall_coherence&quot;: &quot;high&quot;,
+  &quot;flags&quot;: [],
+  &quot;recommendation&quot;: &quot;accept&quot;
+}
+</code></pre>
+<hr>
+<h3 id="clone-guide">Clone Guide</h3>
+<p>To adapt CS-01 for your own input:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session_id</code></td>
+<td>New unique ID: <code>[your-domain]-baseline-rtt-[YYYYMMDD]</code></td>
+</tr>
+<tr>
+<td><code>intent</code></td>
+<td>Keep the structure; replace "input statement" with a one-phrase description of your input</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>Replace the example content; keep the exclusion clause ("does not cover recursive extension...")</td>
+</tr>
+<tr>
+<td><code>input.content</code></td>
+<td>Your raw input</td>
+</tr>
+<tr>
+<td><code>input.scope</code></td>
+<td>One sentence declaring exactly what the input represents and what it does not</td>
+</tr>
+<tr>
+<td><code>active_modules</code></td>
+<td>No changes needed — this list is correct for any single-depth RTT session</td>
+</tr>
+</tbody>
+</table>
+<p>Do not change: <code>role_context</code>, <code>layer_context</code>, <code>output_format</code>, <code>validator</code>.</p>
+<hr>
+<h2 id="cs-02-two-pass-recursive-rtt-analysis">CS-02 — Two-Pass Recursive RTT Analysis</h2>
+<p><strong>Purpose:</strong> Extends CS-01 to depth=2. The second pass takes CS-01's <code>next_input</code> and goes deeper — producing claims that the first pass structurally could not reach. Use this when the first pass identifies a structural problem but does not yet explain why the structure exists or what the correct intervention level is.</p>
+<hr>
+<h3 id="grammar_1">Grammar</h3>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;cs-02-two-pass-rtt-20260925&quot;,
+  &quot;intent&quot;: &quot;Produce a depth=2 RTT analysis of the input statement, identifying all three structural faces at both pass levels. The second pass must produce at least one claim that is structurally distinct from all first-pass claims. Package the second-pass output as a valid InputUnit for a potential third pass.&quot;,
+  &quot;scope&quot;: &quot;This session covers two RTT passes on the single input below. It does not cover a third pass, lateral inputs, or the design of any specific intervention.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;rtt-op-core&quot;,
+    &quot;rtt-op-recursive-extension&quot;,
+    &quot;clarity-val-rtt-output&quot;
+  ],
+  &quot;role_context&quot;: &quot;operator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;Our engineering team ships features on time but the features rarely get adopted. Leadership keeps asking why, and the team keeps pointing to the product roadmap. Nobody is looking at the gap between what ships and what users actually need.&quot;,
+    &quot;scope&quot;: &quot;A single organizational dynamic — scoped to the delivery-adoption gap, no broader organizational context.&quot;
+  },
+  &quot;output_format&quot;: &quot;StructuredFaces&quot;,
+  &quot;validator&quot;: &quot;clarity-val-rtt-output&quot;
+}
+</code></pre>
+<hr>
+<h3 id="execution_1">Execution</h3>
+<p><strong>Pass 1:</strong></p>
+<pre><code>RTT.pass(
+  input: &lt;InputUnit from grammar field 7&gt;,
+  depth: 1,
+  output_format: StructuredFaces
+)
+</code></pre>
+<p><em>Output: same as CS-01. Pass 1 next_input:</em></p>
+<pre><code class="language-json">{
+  &quot;content&quot;: &quot;The team optimizes for delivery because delivery is what is measured. No feedback loop connects shipped features to usage data. The metric design is the structural failure.&quot;,
+  &quot;scope&quot;: &quot;The metric design failure — scoped to the measurement system, not to team capability or roadmap content.&quot;
+}
+</code></pre>
+<p><strong>Pass 2:</strong></p>
+<pre><code>RTT.pass(
+  input: &lt;next_input from Pass 1&gt;,
+  depth: 2,
+  output_format: StructuredFaces
+)
+</code></pre>
+<hr>
+<h3 id="output_1">Output</h3>
+<p><strong>Pass 1 output:</strong> <em>(identical to CS-01 — omitted for brevity; see CS-01 output above)</em></p>
+<p><strong>Pass 2 output:</strong></p>
+<pre><code class="language-json">{
+  &quot;generative_face&quot;: &quot;Metric design failures originate in the moment a team is formed and evaluated. At that moment, a proxy metric — one that is measurable, visible, and attributable to team effort — is selected to stand in for the actual goal. Delivery velocity is an excellent proxy metric: it is unambiguous, timely, and clearly within the team's control. The problem is that it was selected without establishing a second metric that tracks the gap between the proxy and the goal. Once the proxy metric is the only metric, the proxy becomes the goal.&quot;,
+  &quot;present_face&quot;: &quot;The team is operating correctly inside a measurement monoculture. A measurement monoculture is a system with one metric, where that metric is used to define success, allocate resources, and evaluate performance. Monocultures are stable but brittle — they optimize efficiently for the metric and fail silently on everything the metric does not capture. The adoption gap is invisible in this system not because nobody cares about it but because no instrument in the current measurement system can detect it.&quot;,
+  &quot;terminal_face&quot;: &quot;Correcting a measurement monoculture requires adding a second metric, not replacing the first. The intervention is not 'stop measuring delivery' — removing the delivery metric destroys the team's operational clarity. The intervention is 'add a usage metric with the same visibility and cadence as the delivery metric.' When both metrics are visible side by side, the gap between them becomes the diagnostic signal the system has been missing.&quot;,
+  &quot;pass_depth&quot;: 2,
+  &quot;next_input&quot;: {
+    &quot;content&quot;: &quot;The team operates inside a measurement monoculture. The correct intervention is not to replace the delivery metric but to add a usage metric with equivalent visibility and cadence. The gap between the two metrics is the diagnostic signal.&quot;,
+    &quot;scope&quot;: &quot;The measurement monoculture diagnosis and the two-metric intervention design — scoped to metric design, not to implementation, tooling, or organizational change management.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h3 id="assessment_1">Assessment</h3>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;clarity-val-rtt-output&quot;,
+  &quot;session_id&quot;: &quot;cs-02-two-pass-rtt-20260925&quot;,
+  &quot;pass_depth_evaluated&quot;: 2,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;Face completeness&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All three faces present in both passes.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Face substantiveness&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Pass 2 present face names the measurement monoculture precisely. Terminal face specifies the intervention type (add, not replace) and the intervention design (usage metric with equivalent visibility and cadence).&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Pass differentiation&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Pass 1 identified the metric design failure. Pass 2 explained why metric design failures form (the proxy substitution moment) and introduced the measurement monoculture concept — structurally distinct from Pass 1.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Scope compliance&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;No reference to implementation, tooling, or organizational change management. Output stayed within declared scope.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Intent fulfillment&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Depth=2 achieved. Pass 2 produced structurally distinct claims. next_input packaged correctly.&quot;
+    }
+  ],
+  &quot;overall_coherence&quot;: &quot;high&quot;,
+  &quot;flags&quot;: [],
+  &quot;recommendation&quot;: &quot;accept&quot;
+}
+</code></pre>
+<hr>
+<h3 id="clone-guide_1">Clone Guide</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session_id</code></td>
+<td>New unique ID</td>
+</tr>
+<tr>
+<td><code>intent</code></td>
+<td>Keep the differentiation requirement clause; replace the input description</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>Replace content; keep the "does not cover a third pass" exclusion</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>Your InputUnit</td>
+</tr>
+<tr>
+<td><code>active_modules</code></td>
+<td>Add <code>rtt-op-recursive-extension</code> if not already present</td>
+</tr>
+</tbody>
+</table>
+<p>CS-02 is CS-01 with <code>rtt-op-recursive-extension</code> added to <code>active_modules</code> and <code>depth</code> set to 2 in the Pass 2 invocation. Everything else is structurally identical.</p>
+<hr>
+<h2 id="cs-03-scope-compliance-check">CS-03 — Scope Compliance Check</h2>
+<p><strong>Purpose:</strong> Verifies that a module's prose content (<code>module.md</code>) does not exceed the scope declared in its manifest (<code>module.json</code>). Use this before ratifying any new module, after any <code>module.md</code> edit, and whenever a module's content feels like it is claiming more than it should.</p>
+<hr>
+<h3 id="grammar_2">Grammar</h3>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;cs-03-scope-check-20260925&quot;,
+  &quot;intent&quot;: &quot;Evaluate whether the prose content of `rtt-op-core`'s module.md stays within the scope declared in its module.json manifest. Produce a ScopeComplianceReport identifying any violations, near-violations, or confirmed compliance.&quot;,
+  &quot;scope&quot;: &quot;This session covers the scope compliance check of rtt-op-core's module.md against its module.json scope field. It does not cover the module's dependency chain, its session bindings, or its compatibility with other modules.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;scope-check-op&quot;,
+    &quot;scope-statement-grammar&quot;,
+    &quot;module-manifest-grammar&quot;,
+    &quot;scope-val&quot;,
+    &quot;manifest-complete-val&quot;
+  ],
+  &quot;role_context&quot;: &quot;validator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;Module: rtt-op-core. Manifest scope: 'Defines the invocation signature, input schema, and output schema for a single RTT pass on any well-formed input unit.' Target file: module.md.&quot;,
+    &quot;scope&quot;: &quot;The scope compliance evaluation of rtt-op-core's module.md — scoped to this single module and this single file.&quot;
+  },
+  &quot;output_format&quot;: &quot;NarrativeAnalysis&quot;,
+  &quot;validator&quot;: &quot;scope-val&quot;
+}
+</code></pre>
+<hr>
+<h3 id="execution_2">Execution</h3>
+<p><strong>Step 1: Verify manifest completeness</strong></p>
+<pre><code>Manifest.validate(
+  module_id: &quot;rtt-op-core&quot;,
+  check: manifest-complete-val
+)
+</code></pre>
+<p><em>Result: all four files present, all required fields non-empty. Proceed.</em></p>
+<p><strong>Step 2: Run scope compliance check</strong></p>
+<pre><code>Scope.check(
+  module_id: &quot;rtt-op-core&quot;,
+  target_file: module.md,
+  manifest_ref: &quot;rtt-op-core&quot;
+)
+</code></pre>
+<hr>
+<h3 id="output_2">Output</h3>
+<pre><code>SCOPE COMPLIANCE REPORT — rtt-op-core / module.md
+Session: cs-03-scope-check-20260925
+
+MANIFEST SCOPE (verbatim):
+&quot;Defines the invocation signature, input schema, and output schema for a single RTT pass
+on any well-formed input unit.&quot;
+
+COMPLIANCE EVALUATION:
+
+SECTION: Invocation Signature
+Status: IN SCOPE
+Notes: The module.md correctly specifies RTT.pass() with all parameters named, typed,
+and marked required or optional. No overclaiming detected.
+
+SECTION: Input Schema
+Status: IN SCOPE
+Notes: The InputUnit definition — content field, scope field, well-formedness criteria —
+is bounded correctly. The module.md does not attempt to define what &quot;well-formed&quot; means
+at the philosophical level; it defines the structural criteria only. Correct.
+
+SECTION: Output Schema
+Status: IN SCOPE
+Notes: The five output fields (generative_face, present_face, terminal_face, pass_depth,
+next_input) are defined with types and constraints. Correct.
+
+SECTION: RTT Conceptual Explanation (paragraphs 3-5)
+Status: NEAR-VIOLATION — FLAG FOR REVIEW
+Notes: Paragraphs 3 through 5 of module.md explain the conceptual basis of the three
+structural faces. This content is informative and accurate, but it exceeds the scope
+declaration, which covers only the invocation signature, input schema, and output schema.
+The conceptual explanation of RTT belongs in rtt-anchor-definition, not in rtt-op-core.
+
+Recommendation: Move paragraphs 3-5 to rtt-anchor-definition or add an editorial
+cross-reference that makes clear this content is provided for reader convenience and
+does not constitute a scope claim by rtt-op-core.
+
+SECTION: Worked Example (final section)
+Status: IN SCOPE
+Notes: The worked example demonstrates the invocation signature and shows a complete
+input/output pair. It does not make conceptual claims beyond the operator's scope.
+
+OVERALL COMPLIANCE: NEAR-COMPLIANT — one near-violation requires resolution before ratification.
+</code></pre>
+<hr>
+<h3 id="assessment_2">Assessment</h3>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;scope-val&quot;,
+  &quot;session_id&quot;: &quot;cs-03-scope-check-20260925&quot;,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;Scope boundary respected&quot;,
+      &quot;status&quot;: &quot;not_satisfied&quot;,
+      &quot;notes&quot;: &quot;Paragraphs 3-5 of module.md exceed the manifest scope. Content belongs in rtt-anchor-definition.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;No underclaiming detected&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All three declared scope elements (invocation signature, input schema, output schema) are addressed in module.md.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Cross-references are editorial not structural&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;No structural cross-references embedded in prose.&quot;
+    }
+  ],
+  &quot;overall_coherence&quot;: &quot;moderate&quot;,
+  &quot;flags&quot;: [&quot;near-violation: paragraphs 3-5 exceed scope&quot;],
+  &quot;recommendation&quot;: &quot;revise&quot;
+}
+</code></pre>
+<hr>
+<h3 id="clone-guide_2">Clone Guide</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session_id</code></td>
+<td>New unique ID</td>
+</tr>
+<tr>
+<td><code>intent</code></td>
+<td>Replace <code>rtt-op-core</code> with your target module ID</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>Replace module name; keep the exclusion clause</td>
+</tr>
+<tr>
+<td><code>input.content</code></td>
+<td>Replace with your module's ID, manifest scope (verbatim), and target file</td>
+</tr>
+<tr>
+<td><code>input.scope</code></td>
+<td>Replace module name</td>
+</tr>
+<tr>
+<td><code>active_modules</code></td>
+<td>No changes needed</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>Scope.check()</code> invocation parameters change: swap <code>module_id</code> and <code>manifest_ref</code> to your target module.</p>
+<hr>
+<h2 id="cs-04-dependency-audit">CS-04 — Dependency Audit</h2>
+<p><strong>Purpose:</strong> Performs a complete forward traversal of a module's dependency chain, detects hidden dependencies, and identifies any cycle risks. Use this before invoking any unfamiliar module in a session, before modifying a foundational module, and as a routine check when assembling a new <code>active_modules</code> list.</p>
+<hr>
+<h3 id="grammar_3">Grammar</h3>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;cs-04-dependency-audit-20260925&quot;,
+  &quot;intent&quot;: &quot;Perform a complete forward traversal of clarity-op-spectral's dependency chain, identify all transitive dependencies, flag any hidden dependencies detected in module.md prose, and confirm the chain is cycle-free. Produce a DependencyTrace report.&quot;,
+  &quot;scope&quot;: &quot;This session covers the dependency audit of clarity-op-spectral only. It does not cover the audit of modules in the traversal chain — those are separate sessions if needed.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;dependency-trace-op&quot;,
+    &quot;dependency-audit-proto&quot;,
+    &quot;dependency-val&quot;,
+    &quot;manifest-complete-val&quot;
+  ],
+  &quot;role_context&quot;: &quot;operator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;Module: clarity-op-spectral. Direction: forward (surface to foundational).&quot;,
+    &quot;scope&quot;: &quot;The dependency audit of clarity-op-spectral — forward traversal only.&quot;
+  },
+  &quot;output_format&quot;: &quot;DependencyTrace&quot;,
+  &quot;validator&quot;: &quot;dependency-val&quot;
+}
+</code></pre>
+<hr>
+<h3 id="execution_3">Execution</h3>
+<pre><code>Dependency.trace(
+  module_id: &quot;clarity-op-spectral&quot;,
+  direction: forward,
+  detect_hidden: true,
+  output_format: DependencyTrace
+)
+</code></pre>
+<hr>
+<h3 id="output_3">Output</h3>
+<pre><code>DEPENDENCY TRACE — clarity-op-spectral (forward)
+Session: cs-04-dependency-audit-20260925
+
+STARTING MODULE: clarity-op-spectral
+  Role: operator | Layer: operational | Status: active | Version: 1.2.0
+
+LEVEL 1 — Direct Dependencies (from module_links.json → depends_on):
+  ├─ rtt-op-core              [operator / operational / active]
+  ├─ nawderian-theorem-validator-pulses  [anchor / foundational / active]
+  └─ clarity-grammar-validator-assessment  [grammar / structural / active]
+
+LEVEL 2 — Dependencies of Level 1:
+
+  rtt-op-core depends on:
+    ├─ rtt-anchor-definition   [anchor / foundational / active] ← ANCHOR REACHED
+    ├─ session-grammar-field-input  [field / structural / active]
+    │    └─ depends on: session-grammar-anchor  [anchor / foundational / active] ← ANCHOR REACHED
+    └─ session-grammar-field-output-format  [field / structural / active]
+         └─ depends on: session-grammar-anchor ← ALREADY RESOLVED
+
+  nawderian-theorem-validator-pulses depends on:
+    └─ (none) ← FOUNDATIONAL ANCHOR — no further traversal
+
+  clarity-grammar-validator-assessment depends on:
+    └─ validator-assessment-grammar  [grammar / structural / active]
+         └─ depends on: (none) ← STRUCTURAL LEAF — no further traversal
+
+FULL RESOLVED DEPENDENCY SET (unique modules):
+  1. clarity-op-spectral
+  2. rtt-op-core
+  3. nawderian-theorem-validator-pulses
+  4. clarity-grammar-validator-assessment
+  5. rtt-anchor-definition
+  6. session-grammar-field-input
+  7. session-grammar-anchor
+  8. session-grammar-field-output-format
+  9. validator-assessment-grammar
+
+HIDDEN DEPENDENCY CHECK:
+  Scanning clarity-op-spectral/module.md for prose references to
+  modules not in the declared depends_on list...
+
+  FINDING: module.md paragraph 6 references &quot;the five clarity criteria&quot;
+  and cites clarity-val-rtt-output as the default validator for RTT outputs.
+  clarity-val-rtt-output does NOT appear in depends_on.
+
+  CLASSIFICATION: NEAR-HIDDEN DEPENDENCY
+  Notes: The reference is editorial (a cross-reference for reader convenience),
+  not structural — the operator does not require clarity-val-rtt-output to function.
+  However, practitioners reading module.md in isolation may invoke
+  clarity-val-rtt-output assuming it is an active dependency. Recommend adding
+  clarity-val-rtt-output to the 'related' field in module_links.json to
+  make the editorial relationship explicit.
+
+CYCLE CHECK:
+  No cycles detected. Graph is acyclic. ✓
+
+MINIMUM active_modules LIST for any session invoking clarity-op-spectral:
+  [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;nawderian-theorem-validator-pulses&quot;,
+    &quot;clarity-grammar-validator-assessment&quot;,
+    &quot;validator-assessment-grammar&quot;,
+    &quot;rtt-op-core&quot;,
+    &quot;clarity-op-spectral&quot;
+  ]
+</code></pre>
+<hr>
+<h3 id="assessment_3">Assessment</h3>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;dependency-val&quot;,
+  &quot;session_id&quot;: &quot;cs-04-dependency-audit-20260925&quot;,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;Dependency list complete&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All transitive dependencies resolved. Minimum active_modules list produced.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;No cycles detected&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Graph is acyclic.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;No hidden structural dependencies&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;The near-hidden dependency on clarity-val-rtt-output is editorial, not structural. Not a structural gap.&quot;
+    }
+  ],
+  &quot;overall_coherence&quot;: &quot;high&quot;,
+  &quot;flags&quot;: [&quot;editorial near-hidden dependency: clarity-val-rtt-output referenced in prose but not in depends_on — recommend adding to related field&quot;],
+  &quot;recommendation&quot;: &quot;accept&quot;
+}
+</code></pre>
+<hr>
+<h3 id="clone-guide_3">Clone Guide</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session_id</code></td>
+<td>New unique ID</td>
+</tr>
+<tr>
+<td><code>intent</code></td>
+<td>Replace <code>clarity-op-spectral</code> with your target module</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>Replace module name</td>
+</tr>
+<tr>
+<td><code>input.content</code></td>
+<td>Replace module ID; keep direction: forward for most audits</td>
+</tr>
+<tr>
+<td><code>active_modules</code></td>
+<td>No changes needed</td>
+</tr>
+</tbody>
+</table>
+<p>For backward traversal (foundation → impact surface), change <code>direction: forward</code> to <code>direction: backward</code> in the invocation. The intent and scope should be updated to reflect the backward direction.</p>
+<hr>
+<h2 id="cs-05-gap-identification-and-module-draft">CS-05 — Gap Identification and Module Draft</h2>
+<p><strong>Purpose:</strong> Confirms a suspected gap in the module registry and produces a minimum valid four-file module draft to fill it. Use this when the module discovery protocol returns no suitable candidates, when a hidden dependency is structural rather than editorial, or when a practitioner identifies a missing operator, validator, or grammar module during session work.</p>
+<hr>
+<h3 id="grammar_4">Grammar</h3>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;cs-05-gap-and-draft-20260925&quot;,
+  &quot;intent&quot;: &quot;Confirm the suspected gap — the absence of a usage-metric-grammar module in the grammar-suite — classify its type, verify it is not an apparent gap, and produce a minimum valid four-file draft for the missing module using the four anchoring decisions.&quot;,
+  &quot;scope&quot;: &quot;This session covers gap confirmation and draft authoring for one suspected module only. It does not cover ratification, dependency chain updates for existing modules, or implementation of the module's content beyond the minimum valid draft.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;gap-identify-op&quot;,
+    &quot;module-author-op&quot;,
+    &quot;module-manifest-grammar&quot;,
+    &quot;module-id-grammar&quot;,
+    &quot;scope-statement-grammar&quot;,
+    &quot;input-unit-grammar&quot;,
+    &quot;module-id-val&quot;,
+    &quot;manifest-complete-val&quot;
+  ],
+  &quot;role_context&quot;: &quot;operator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;Suspected gap: no module in the grammar-suite defines the structure of a usage metric specification — what fields are required, what types are valid, and what validation rules apply. The usage metric concept appears in CS-02's second-pass output and in the measurement-monoculture intervention design, but no grammar module specifies its structure.&quot;,
+    &quot;scope&quot;: &quot;The suspected gap in the grammar-suite — scoped to the single missing grammar module, not to the broader measurement framework.&quot;
+  },
+  &quot;output_format&quot;: &quot;ModuleSpec&quot;,
+  &quot;validator&quot;: &quot;manifest-complete-val&quot;
+}
+</code></pre>
+<hr>
+<h3 id="execution_4">Execution</h3>
+<p><strong>Step 1: Confirm the gap</strong></p>
+<pre><code>Gap.identify(
+  description: &quot;A grammar module specifying the structure of a usage metric specification — required fields, valid types, and validation rules.&quot;,
+  expected_role: grammar,
+  expected_layer: structural,
+  search_groups: [&quot;grammar-suite&quot;, &quot;clarity-system&quot;, &quot;session-grammar&quot;]
+)
+</code></pre>
+<p><em>Gap identification result:</em></p>
+<pre><code>GAP CONFIRMATION REPORT
+Type: Soft gap (Type 2 — missing role/layer intersection)
+Evidence: No module in grammar-suite, clarity-system, or session-grammar has a scope
+covering the structural specification of a usage metric. The closest module is
+'output-unit-grammar' (grammar / structural), whose scope covers OutputUnit structure —
+not usage metric structure. These are distinct domains.
+Apparent gap check: NEGATIVE — no synonym search produced a matching scope.
+Gap is real. Proceed to authoring.
+</code></pre>
+<p><strong>Step 2: Make the four anchoring decisions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Value</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td><code>grammar</code></td>
+<td>This module specifies a structural pattern — the valid form of a usage metric specification</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td><code>structural</code></td>
+<td>Usage metric specifications are structural patterns; they do not perform transformations or define canon</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>"Specifies the required structure of a usage metric specification: required fields, valid field types, validation rules, and the minimum valid form."</td>
+<td>Precise, bounded, testable</td>
+</tr>
+<tr>
+<td>Dependencies</td>
+<td><code>session-grammar-anchor</code>, <code>output-unit-grammar</code></td>
+<td>The usage metric grammar must be consistent with the session grammar's output expectations and the OutputUnit structure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 3: Draft the module</strong></p>
+<pre><code>Module.draft(
+  role: grammar,
+  layer: structural,
+  scope: &quot;Specifies the required structure of a usage metric specification: required fields, valid field types, validation rules, and the minimum valid form.&quot;,
+  dependencies: [&quot;session-grammar-anchor&quot;, &quot;output-unit-grammar&quot;],
+  output_format: ModuleSpec
+)
+</code></pre>
+<hr>
+<h3 id="output_4">Output</h3>
+<p><strong><code>module.json</code> draft:</strong></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;usage-metric-grammar&quot;,
+  &quot;label&quot;: &quot;Usage Metric Grammar&quot;,
+  &quot;role&quot;: &quot;grammar&quot;,
+  &quot;layer&quot;: &quot;structural&quot;,
+  &quot;scope&quot;: &quot;Specifies the required structure of a usage metric specification: required fields, valid field types, validation rules, and the minimum valid form.&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;dependencies&quot;: [
+    &quot;session-grammar-anchor&quot;,
+    &quot;output-unit-grammar&quot;
+  ],
+  &quot;tags&quot;: [&quot;grammar&quot;, &quot;metrics&quot;, &quot;measurement&quot;, &quot;structural&quot;]
+}
+</code></pre>
+<p><strong><code>module_links.json</code> draft:</strong></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;usage-metric-grammar&quot;,
+  &quot;depends_on&quot;: [
+    &quot;session-grammar-anchor&quot;,
+    &quot;output-unit-grammar&quot;
+  ],
+  &quot;required_by&quot;: [],
+  &quot;related&quot;: [
+    &quot;clarity-grammar-validator-assessment&quot;,
+    &quot;scope-statement-grammar&quot;
+  ],
+  &quot;supersedes&quot;: [],
+  &quot;superseded_by&quot;: null
+}
+</code></pre>
+<p><strong><code>module.md</code> draft (minimum content):</strong></p>
+<pre><code class="language-markdown"># Usage Metric Grammar
+
+## Scope
+Specifies the required structure of a usage metric specification: required fields,
+valid field types, validation rules, and the minimum valid form.
+
+## Required Fields
+
+A usage metric specification must contain exactly the following fields:
+
+| Field | Type | Description | Required |
+|-------|------|-------------|----------|
+| `metric_id` | string | Unique identifier for this metric | yes |
+| `label` | string | Human-readable metric name | yes |
+| `measures` | string | What this metric measures, in one sentence | yes |
+| `unit` | string | The unit of measurement (e.g., %, count, score) | yes |
+| `cadence` | string | How often this metric is measured (e.g., weekly, per-deploy) | yes |
+| `visibility` | enum | Who can see this metric: team, leadership, public | yes |
+| `baseline` | number or null | The starting value before any intervention | no |
+| `target` | number or null | The desired value after intervention | no |
+
+## Minimum Valid Form
+
+A minimum valid usage metric specification contains the six required fields.
+The two optional fields (baseline, target) may be omitted when the metric is
+first defined and added later as measurement begins.
+
+## Validation Rules
+
+1. `metric_id` must be unique across all usage metrics in the same session context.
+2. `measures` must be a single declarative sentence ending with a period.
+3. `cadence` must be consistent with the deployment or release cycle of the
+   system being measured.
+4. `visibility` must be one of: team, leadership, public.
+
+## Notes
+This grammar is a draft. The required fields and validation rules are subject to
+revision through the ratification process. Do not treat this as the ratified
+specification until version ≥ 1.0.0.
+</code></pre>
+<p><strong><code>module_session.json</code> draft:</strong></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;usage-metric-grammar&quot;,
+  &quot;invocation_syntax&quot;: &quot;UsageMetric.validate(spec: &lt;UsageMetricSpec&gt;)&quot;,
+  &quot;input_schema&quot;: {
+    &quot;spec&quot;: &quot;A candidate usage metric specification — an object with at minimum the six required fields.&quot;
+  },
+  &quot;output_schema&quot;: {
+    &quot;status&quot;: &quot;valid | invalid&quot;,
+    &quot;missing_fields&quot;: &quot;Array of required field names that are absent.&quot;,
+    &quot;validation_errors&quot;: &quot;Array of validation rule violations with field name and rule reference.&quot;,
+    &quot;minimum_valid&quot;: &quot;Boolean. True if the six required fields are all present and valid.&quot;
+  },
+  &quot;valid_layers&quot;: [&quot;structural&quot;, &quot;operational&quot;],
+  &quot;valid_roles&quot;: [&quot;grammar&quot;, &quot;validator&quot;, &quot;operator&quot;],
+  &quot;validator_id&quot;: &quot;module-id-val&quot;
+}
+</code></pre>
+<hr>
+<h3 id="assessment_4">Assessment</h3>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;manifest-complete-val&quot;,
+  &quot;session_id&quot;: &quot;cs-05-gap-and-draft-20260925&quot;,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;All four files present&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;module.json, module_links.json, module.md, and module_session.json all drafted.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;All required fields non-empty&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All manifest fields populated. Status correctly set to draft.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;ID conforms to naming convention&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;usage-metric-grammar: domain=usage-metric, role_short=grammar. Valid.&quot;
+    }
+  ],
+  &quot;overall_coherence&quot;: &quot;high&quot;,
+  &quot;flags&quot;: [&quot;draft status — requires ratification before active use&quot;],
+  &quot;recommendation&quot;: &quot;accept&quot;
+}
+</code></pre>
+<hr>
+<h3 id="clone-guide_4">Clone Guide</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session_id</code></td>
+<td>New unique ID</td>
+</tr>
+<tr>
+<td><code>intent</code></td>
+<td>Replace the specific gap description with your suspected gap</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>Replace gap description; keep the ratification exclusion</td>
+</tr>
+<tr>
+<td><code>input.content</code></td>
+<td>Your gap description, expected role, expected layer, groups searched</td>
+</tr>
+<tr>
+<td><code>active_modules</code></td>
+<td>No changes needed</td>
+</tr>
+</tbody>
+</table>
+<p>The four anchoring decisions (Step 2) are the most important part of this session to get right. Apply RTT to the gap description before making them — the terminal face will surface the intervention type, which maps to the role.</p>
+<hr>
+<h2 id="cs-06-multi-lens-rtt-analysis">CS-06 — Multi-Lens RTT Analysis</h2>
+<p><strong>Purpose:</strong> Applies two lenses simultaneously during a depth=2 RTT analysis, producing lens-annotated face outputs that surface dimensions the neutral analysis would miss. Use this when a problem has strong temporal dynamics, complex stakeholder interests, or when prior neutral RTT passes feel incomplete or one-dimensional.</p>
+<p><strong>Lenses active in this session:</strong> <code>lens-temporal</code> + <code>lens-stakeholder</code></p>
+<hr>
+<h3 id="grammar_5">Grammar</h3>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;cs-06-multi-lens-rtt-20260925&quot;,
+  &quot;intent&quot;: &quot;Produce a depth=2 RTT analysis of the input statement with temporal and stakeholder lenses simultaneously active. Each face in each pass must include lens-specific annotations — temporal annotations marking time-dependence, stakeholder annotations marking whose interests are at stake. Package the second-pass output as a valid InputUnit.&quot;,
+  &quot;scope&quot;: &quot;This session covers a depth=2 RTT analysis with two active lenses. It does not cover lens-free analysis of the same input, comparison of lens-active vs lens-free outputs, or lens application beyond temporal and stakeholder.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;rtt-op-core&quot;,
+    &quot;rtt-op-recursive-extension&quot;,
+    &quot;rtt-lens-temporal&quot;,
+    &quot;rtt-lens-stakeholder&quot;,
+    &quot;bridge-lens-to-rtt&quot;,
+    &quot;lens-temporal&quot;,
+    &quot;lens-stakeholder&quot;,
+    &quot;clarity-val-rtt-output&quot;
+  ],
+  &quot;role_context&quot;: &quot;operator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;A mid-sized company has been running a hybrid work policy for two years. Productivity metrics are stable. Employee satisfaction scores have split: senior employees report high satisfaction; junior employees report declining satisfaction and increasing feelings of isolation. Leadership sees no problem.&quot;,
+    &quot;scope&quot;: &quot;A single organizational dynamic — the diverging satisfaction split under hybrid work, scoped to the internal dynamic only, no external benchmarks.&quot;
+  },
+  &quot;output_format&quot;: &quot;StructuredFaces&quot;,
+  &quot;validator&quot;: &quot;clarity-val-rtt-output&quot;
+}
+</code></pre>
+<hr>
+<h3 id="execution_5">Execution</h3>
+<pre><code>Lens.activate(lenses: [&quot;lens-temporal&quot;, &quot;lens-stakeholder&quot;])
+
+RTT.pass(
+  input: &lt;InputUnit from grammar field 7&gt;,
+  depth: 1,
+  output_format: StructuredFaces,
+  active_lenses: [&quot;lens-temporal&quot;, &quot;lens-stakeholder&quot;]
+)
+</code></pre>
+<hr>
+<h3 id="output_5">Output</h3>
+<p><strong>Pass 1 — Lens-Annotated:</strong></p>
+<pre><code class="language-json">{
+  &quot;generative_face&quot;: &quot;The hybrid work policy was implemented two years ago during a period when hybrid work was framed as temporary accommodation. [TEMPORAL: The policy has since calcified from temporary accommodation into permanent structure, but without any structural redesign for permanence.] Senior employees built professional networks and social capital in-person before remote work existed; they arrived at hybrid with a full relationship graph to draw on. [STAKEHOLDER: Senior employees are not experiencing hybrid the same way junior employees are — they have pre-existing social infrastructure that hybrid preserves. Junior employees are arriving into a hybrid environment without having built that infrastructure first.] The policy is neutral in design. It is not neutral in effect.&quot;,
+  &quot;present_face&quot;: &quot;A structural equity gap disguised as a policy outcome. The hybrid policy is operating identically for all employees, but its effects are asymmetric because the inputs — social capital at point of hire — are asymmetric. [TEMPORAL: This gap widens over time. Each month a junior employee works hybrid without building sufficient in-person social capital, the deficit compounds.] [STAKEHOLDER: Leadership sees stable productivity and senior satisfaction — their visibility into the junior experience is low. Junior employees see declining satisfaction but do not have organizational voice proportional to their concern. The stakeholders with the problem have the least power to surface it.]&quot;,
+  &quot;terminal_face&quot;: &quot;Without intervention, two trajectories diverge. Senior employees stabilize. Junior employees either adapt (by creating informal in-person workarounds outside the policy) or exit. [TEMPORAL: The exit risk accelerates at the 18-month and 36-month marks — the points at which junior employees make deliberate career decisions.] [STAKEHOLDER: Exits disproportionately remove the employees with the most unmet social capital needs — creating a selection effect where the remaining junior population skews toward those who have found informal workarounds, making the problem invisible in aggregate data.] Leadership continues to see no problem, because the metric (productivity) does not capture what is failing.&quot;,
+  &quot;pass_depth&quot;: 1,
+  &quot;next_input&quot;: {
+    &quot;content&quot;: &quot;The hybrid policy has asymmetric effects because social capital at point of hire is asymmetric. Junior employees arrive without the pre-existing relationship graph that makes hybrid work feel connected. The gap widens over time and the exits it produces are invisible in productivity metrics.&quot;,
+    &quot;scope&quot;: &quot;The social capital asymmetry and its compounding dynamic — scoped to the structural mechanism, not to policy design or implementation.&quot;
+  }
+}
+</code></pre>
+<p><strong>Pass 2 — Lens-Annotated:</strong></p>
+<pre><code class="language-json">{
+  &quot;generative_face&quot;: &quot;Social capital asymmetry in hybrid environments originates in onboarding design. In-person onboarding is a relationship-building mechanism: new employees meet colleagues, establish informal networks, and develop the social infrastructure that makes work feel connected. [TEMPORAL: This relationship-building is front-loaded — it happens in the first 3-6 months and then compounds.] Hybrid onboarding, unless specifically redesigned, provides the same information transfer as in-person onboarding but a fraction of the relationship-building opportunity. The deficit is invisible at hire. [STAKEHOLDER: Hiring managers see successful knowledge transfer and assume successful integration. The new hire sees successful knowledge transfer and underestimates the relationship deficit until 6-12 months later when the absence becomes felt.]&quot;,
+  &quot;present_face&quot;: &quot;A design gap in onboarding — not in the hybrid policy itself. The hybrid policy can remain unchanged. What needs redesigning is the onboarding protocol: it must actively front-load relationship-building opportunities that in-person environments provide passively. [TEMPORAL: The intervention window is narrow — the first 90 days of employment are when relationship infrastructure is most efficiently built.] [STAKEHOLDER: This intervention primarily benefits junior employees and new hires. It does not require senior employees to change behavior. It does not require leadership to change the policy. It requires the HR and onboarding function to redesign one process.]&quot;,
+  &quot;terminal_face&quot;: &quot;A redesigned onboarding protocol that front-loads structured relationship-building closes the social capital gap at the point of hire — before the deficit can compound. [TEMPORAL: Effects are detectable within one cohort cycle (6-12 months).] [STAKEHOLDER: Junior satisfaction scores recover. Exit rates at the 18-month decision point decline. Leadership's productivity metric remains stable — with the additional signal that junior satisfaction is now tracking senior satisfaction rather than diverging from it.] The hybrid policy is validated rather than blamed.&quot;,
+  &quot;pass_depth&quot;: 2,
+  &quot;next_input&quot;: {
+    &quot;content&quot;: &quot;The intervention is onboarding redesign — specifically, structured front-loading of relationship-building opportunities in the first 90 days. The hybrid policy does not need to change. The onboarding protocol does.&quot;,
+    &quot;scope&quot;: &quot;The onboarding redesign intervention — scoped to protocol design, not to content, facilitators, budget, or rollout sequence.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h3 id="assessment_5">Assessment</h3>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;clarity-val-rtt-output&quot;,
+  &quot;session_id&quot;: &quot;cs-06-multi-lens-rtt-20260925&quot;,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;Face completeness&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All three faces present in both passes. Lens annotations present in all six faces.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Face substantiveness&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Lens annotations are specific and additive — they surface claims (exit risk timing, 90-day intervention window, stakeholder power asymmetry) that the neutral analysis would not have produced.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Pass differentiation&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Pass 1 identified the social capital asymmetry. Pass 2 traced it to onboarding design and specified the intervention window and intervention type. Structurally distinct.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Scope compliance&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;No reference to external benchmarks, policy design, or implementation details. Lens annotations stayed within scope.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Intent fulfillment&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Both lenses active in both passes. Annotations present. next_input packaged.&quot;
+    }
+  ],
+  &quot;overall_coherence&quot;: &quot;high&quot;,
+  &quot;flags&quot;: [],
+  &quot;recommendation&quot;: &quot;accept&quot;
+}
+</code></pre>
+<hr>
+<h3 id="clone-guide_5">Clone Guide</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session_id</code></td>
+<td>New unique ID</td>
+</tr>
+<tr>
+<td><code>intent</code></td>
+<td>Replace input description; keep the lens annotation requirement</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>Replace content; keep the lens-comparison exclusion</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>Your InputUnit</td>
+</tr>
+<tr>
+<td><code>active_modules</code></td>
+<td>Swap lenses as needed — remove <code>rtt-lens-temporal</code> / <code>lens-temporal</code> and/or <code>rtt-lens-stakeholder</code> / <code>lens-stakeholder</code>; add your chosen lenses and their bridge modules</td>
+</tr>
+</tbody>
+</table>
+<p>For different lens combinations: add/remove lens pairs (each lens appears twice — its primary ID in core-engine or lens-suite, and its bridge module in bridge-suite). Update the <code>Lens.activate()</code> call and the <code>active_lenses</code> parameter accordingly.</p>
+<hr>
+<h2 id="cs-07-session-diagnosis-and-repair">CS-07 — Session Diagnosis and Repair</h2>
+<p><strong>Purpose:</strong> Diagnoses a malformed session — one that has been initialized with structural errors — and produces a repaired grammar. Use this when a session produces unexpected outputs, when a validator returns <code>insufficient_input</code> for reasons that cannot be traced to the input itself, or when you inherit a session from another practitioner and need to verify its integrity.</p>
+<hr>
+<h3 id="grammar_6">Grammar</h3>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;cs-07-session-diagnosis-20260925&quot;,
+  &quot;intent&quot;: &quot;Diagnose the structural errors in the malformed session below, identify which of the four canonical failure modes apply, produce a repaired version of the malformed grammar, and confirm the repair passes all nine field tests.&quot;,
+  &quot;scope&quot;: &quot;This session covers the diagnosis and repair of the single malformed session presented as input. It does not cover re-running the repaired session or evaluating its outputs.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;session-grammar-complete-val&quot;,
+    &quot;active-modules-closure-val&quot;,
+    &quot;intent-val&quot;,
+    &quot;scope-compliance-val&quot;,
+    &quot;invocation-val&quot;,
+    &quot;session-field-test-op&quot;,
+    &quot;dependency-trace-op&quot;,
+    &quot;dependency-val&quot;
+  ],
+  &quot;role_context&quot;: &quot;validator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;MALFORMED SESSION: { session_id: 'test-1', intent: 'think about whether our hiring process is working', scope: 'hiring', active_modules: ['rtt-op-core', 'clarity-val-rtt-output'], role_context: 'operator', layer_context: 'operational', input: 'Our hiring process.', output_format: 'some kind of analysis', validator: 'clarity-val-rtt-output' }&quot;,
+    &quot;scope&quot;: &quot;The structural diagnosis of the single malformed session above — scoped to grammar errors and active_modules gaps.&quot;
+  },
+  &quot;output_format&quot;: &quot;NarrativeAnalysis&quot;,
+  &quot;validator&quot;: &quot;session-grammar-complete-val&quot;
+}
+</code></pre>
+<hr>
+<h3 id="execution_6">Execution</h3>
+<pre><code>Session.diagnose(
+  target_session: &lt;malformed session from input&gt;,
+  apply_field_tests: all,
+  check_closure: true
+)
+</code></pre>
+<hr>
+<h3 id="output_6">Output</h3>
+<pre><code>SESSION DIAGNOSIS REPORT
+Session: cs-07-session-diagnosis-20260925
+Target: 'test-1' (malformed)
+
+FIELD-BY-FIELD DIAGNOSIS:
+
+Field 1 — session_id: 'test-1'
+  Status: FAIL
+  Reason: 'test-1' is not unique. It does not follow the recommended format
+  [domain]-[date]-[sequence]. It will collide with any other session named
+  'test-1' in the practitioner's history.
+  Fix: Rename to '[domain]-[YYYYMMDD]-01'
+
+Field 2 — intent: 'think about whether our hiring process is working'
+  Status: FAIL
+  Reason: Violates the actionability test. 'Think about' is a prohibited
+  phrasing pattern — it is not directed at a deliverable. No testable
+  success criterion is implied. Cannot answer &quot;did we achieve the intent?&quot;
+  with a binary yes/no.
+  Fix: Rewrite as a deliverable. Example: 'Produce a single-depth RTT
+  analysis of the hiring process input, identifying the structural failure
+  at each face and packaging the output as a valid StructuredFaces unit.'
+
+Field 3 — scope: 'hiring'
+  Status: FAIL
+  Reason: Single word. No inclusion declaration. No exclusion declaration.
+  Does not follow the inclusion/exclusion format. Cannot be used as a
+  scope check at any point during the session.
+  Fix: Rewrite as: 'This session covers a single-depth RTT analysis of
+  the hiring process description in Field 7. It does not cover compensation
+  structure, onboarding, or retention.'
+
+Field 4 — active_modules: ['rtt-op-core', 'clarity-val-rtt-output']
+  Status: FAIL (dependency closure)
+  Running closure check...
+  rtt-op-core depends on: rtt-anchor-definition, session-grammar-field-input,
+    session-grammar-field-output-format, session-grammar-anchor
+  clarity-val-rtt-output depends on: nawderian-theorem-validator-pulses,
+    session-grammar-anchor
+  None of these dependencies appear in the declared active_modules list.
+  MISSING: rtt-anchor-definition, session-grammar-field-input,
+    session-grammar-field-output-format, session-grammar-anchor,
+    nawderian-theorem-validator-pulses
+  Fix: Add all 5 missing modules. Reorder list foundational-first.
+
+Fields 5 &amp; 6 — role_context / layer_context
+  Status: PASS (operator / operational are valid values and correct for
+  RTT analysis sessions)
+
+Field 7 — input: 'Our hiring process.'
+  Status: FAIL
+  Reason: Raw string, not an InputUnit. Missing content/scope structure.
+  'Our hiring process.' has no declared scope — the operator cannot
+  validate that the input is well-formed.
+  Fix: Wrap in InputUnit format with explicit scope declaration.
+
+Field 8 — output_format: 'some kind of analysis'
+  Status: FAIL
+  Reason: Not a FormatEnum value. 'Some kind of analysis' is not
+  checkable — the validator cannot determine whether the output matches
+  this specification. Likely intended: StructuredFaces.
+  Fix: Replace with 'StructuredFaces'
+
+Field 9 — validator: 'clarity-val-rtt-output'
+  Status: PASS (valid module ID, present in active_modules after fix,
+  compatible with StructuredFaces output format)
+
+FAILURE MODE CLASSIFICATION:
+  - Failure Mode 1: Underspecified Intent ✓ (intent field FAIL)
+  - Failure Mode 3: Dependency Gap ✓ (active_modules FAIL)
+  No evidence of Failure Mode 2 (scope creep) or Failure Mode 4
+  (comfort-filtering) — session never ran.
+
+REPAIRED GRAMMAR:
+
+{
+  &quot;session_id&quot;: &quot;hiring-rtt-analysis-20260925-01&quot;,
+  &quot;intent&quot;: &quot;Produce a single-depth RTT analysis of the hiring process input, identifying the structural failure at each face and packaging the output as a valid StructuredFaces unit.&quot;,
+  &quot;scope&quot;: &quot;This session covers a single-depth RTT analysis of the hiring process description in Field 7. It does not cover compensation structure, onboarding, or retention.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;nawderian-theorem-validator-pulses&quot;,
+    &quot;rtt-op-core&quot;,
+    &quot;clarity-val-rtt-output&quot;
+  ],
+  &quot;role_context&quot;: &quot;operator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;[Practitioner to provide actual hiring process description here]&quot;,
+    &quot;scope&quot;: &quot;A description of the current hiring process — scoped to the process steps, not to compensation, onboarding, or retention.&quot;
+  },
+  &quot;output_format&quot;: &quot;StructuredFaces&quot;,
+  &quot;validator&quot;: &quot;clarity-val-rtt-output&quot;
+}
+</code></pre>
+<hr>
+<h3 id="assessment_6">Assessment</h3>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;session-grammar-complete-val&quot;,
+  &quot;session_id&quot;: &quot;cs-07-session-diagnosis-20260925&quot;,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;All nine fields present and non-empty&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Repaired grammar has all nine fields populated.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;All field-level tests pass&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All fields in the repaired grammar pass their individual field tests. Note: input.content is a placeholder — the practitioner must replace it before running.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;active_modules closure complete&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All five missing dependencies added. Closure verified.&quot;
+    }
+  ],
+  &quot;overall_coherence&quot;: &quot;high&quot;,
+  &quot;flags&quot;: [&quot;input.content is a placeholder — must be replaced before session execution&quot;],
+  &quot;recommendation&quot;: &quot;accept&quot;
+}
+</code></pre>
+<hr>
+<h3 id="clone-guide_6">Clone Guide</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session_id</code></td>
+<td>New unique ID</td>
+</tr>
+<tr>
+<td><code>intent</code></td>
+<td>Replace with reference to your malformed session</td>
+</tr>
+<tr>
+<td><code>input.content</code></td>
+<td>The full text of the malformed session grammar to diagnose</td>
+</tr>
+<tr>
+<td><code>active_modules</code></td>
+<td>No changes needed</td>
+</tr>
+</tbody>
+</table>
+<p>This session template works for any malformed session. The diagnostic output is deterministic — it runs all nine field tests and the closure check regardless of the specific errors present.</p>
+<hr>
+<h2 id="cs-08-clarity-evaluation-of-an-existing-output">CS-08 — Clarity Evaluation of an Existing Output</h2>
+<p><strong>Purpose:</strong> Applies the Spectral Clarity model to an output that was produced in a prior session, producing a full ValidatorAssessment. Use this when a prior session closed without a formal validator application, when you want to audit an existing body of work against the system's clarity standard, or when a previously accepted output is being contested.</p>
+<hr>
+<h3 id="grammar_7">Grammar</h3>
+<pre><code class="language-json">{
+  &quot;session_id&quot;: &quot;cs-08-clarity-eval-20260925&quot;,
+  &quot;intent&quot;: &quot;Apply the Spectral Clarity model to the CS-01 output and produce a ValidatorAssessment that states the status of all five clarity criteria, the overall coherence rating, any flags, and a recommendation.&quot;,
+  &quot;scope&quot;: &quot;This session covers clarity evaluation of the CS-01 output only. It does not cover re-running CS-01, modifying its output, or comparison with other outputs.&quot;,
+  &quot;active_modules&quot;: [
+    &quot;rtt-anchor-definition&quot;,
+    &quot;session-grammar-anchor&quot;,
+    &quot;session-grammar-field-input&quot;,
+    &quot;session-grammar-field-output-format&quot;,
+    &quot;session-grammar-field-validator&quot;,
+    &quot;nawderian-theorem-validator-pulses&quot;,
+    &quot;clarity-anchor-standard&quot;,
+    &quot;clarity-op-spectral&quot;,
+    &quot;clarity-val-rtt-output&quot;,
+    &quot;clarity-grammar-validator-assessment&quot;,
+    &quot;bridge-session-to-clarity&quot;
+  ],
+  &quot;role_context&quot;: &quot;validator&quot;,
+  &quot;layer_context&quot;: &quot;operational&quot;,
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;Prior output to evaluate — CS-01 StructuredFaces output: { generative_face: 'The team's success metric is delivery velocity...', present_face: 'A structural decoupling between delivery and adoption...', terminal_face: 'Without intervention, the gap compounds...', pass_depth: 1, next_input: { content: '...', scope: '...' } }&quot;,
+    &quot;scope&quot;: &quot;The CS-01 StructuredFaces output — scoped to this single output unit, depth=1.&quot;
+  },
+  &quot;output_format&quot;: &quot;ValidatorAssessment&quot;,
+  &quot;validator&quot;: &quot;clarity-val-rtt-output&quot;
+}
+</code></pre>
+<hr>
+<h3 id="execution_7">Execution</h3>
+<pre><code>Clarity.evaluate(
+  input: &lt;CS-01 OutputUnit from grammar field 7&gt;,
+  theorem_ref: &quot;nawderian-theorem-validator-pulses&quot;,
+  validator_id: &quot;clarity-val-rtt-output&quot;,
+  output_format: ValidatorAssessment
+)
+</code></pre>
+<hr>
+<h3 id="output_7">Output</h3>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;clarity-val-rtt-output&quot;,
+  &quot;theorem_applied&quot;: &quot;nawderian-theorem-validator-pulses&quot;,
+  &quot;session_id&quot;: &quot;cs-08-clarity-eval-20260925&quot;,
+  &quot;target_session_id&quot;: &quot;cs-01-baseline-rtt-20260925&quot;,
+  &quot;pass_depth_evaluated&quot;: 1,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;Face completeness&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All three faces present. next_input packaged correctly.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Face substantiveness&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Generative face names the specific mechanism (metric selected upstream, never challenged). Present face names the structural decoupling precisely and eliminates alternative explanations (not motivation, not skill). Terminal face names a specific drift pattern (blame attribution replacing structural diagnosis).&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Pass differentiation&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Single pass — criterion not applicable at depth=1.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Scope compliance&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Output does not reference broader organizational context, individual performance, or adjacent systems. Stayed within declared scope.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Intent fulfillment&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;StructuredFaces output produced. Output matches declared format.&quot;
+    }
+  ],
+  &quot;signal_coherence_rating&quot;: {
+    &quot;generative_face&quot;: &quot;high&quot;,
+    &quot;present_face&quot;: &quot;high&quot;,
+    &quot;terminal_face&quot;: &quot;moderate&quot;,
+    &quot;notes&quot;: &quot;Terminal face is the weakest of the three — 'the gap compounds' is directionally correct but less specific than the other two faces. It states the direction of drift without quantifying the compounding mechanism. This is below the threshold for a flag but noted for practitioners who intend to extend this output at depth=2.&quot;
+  },
+  &quot;overall_coherence&quot;: &quot;high&quot;,
+  &quot;flags&quot;: [],
+  &quot;recommendation&quot;: &quot;accept&quot;
+}
+</code></pre>
+<hr>
+<h3 id="assessment_7">Assessment</h3>
+<p><em>This session's output is itself a ValidatorAssessment — the session-level validator evaluates the quality of the assessment produced, not the quality of the CS-01 output.</em></p>
+<pre><code class="language-json">{
+  &quot;validator_id&quot;: &quot;clarity-val-session-output&quot;,
+  &quot;session_id&quot;: &quot;cs-08-clarity-eval-20260925&quot;,
+  &quot;criteria_results&quot;: [
+    {
+      &quot;criterion&quot;: &quot;Output matches declared format&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Output is a ValidatorAssessment with all required fields.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Intent fulfilled&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;All five criteria evaluated. Coherence rating produced. Recommendation stated.&quot;
+    },
+    {
+      &quot;criterion&quot;: &quot;Scope compliance&quot;,
+      &quot;status&quot;: &quot;satisfied&quot;,
+      &quot;notes&quot;: &quot;Evaluation covers CS-01 output only. No reference to re-running or modifying.&quot;
+    }
+  ],
+  &quot;overall_coherence&quot;: &quot;high&quot;,
+  &quot;flags&quot;: [],
+  &quot;recommendation&quot;: &quot;accept&quot;
+}
+</code></pre>
+<hr>
+<h3 id="clone-guide_7">Clone Guide</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session_id</code></td>
+<td>New unique ID</td>
+</tr>
+<tr>
+<td><code>intent</code></td>
+<td>Replace reference to CS-01 with your target session/output</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>Replace CS-01 reference; keep the "does not cover re-running" exclusion</td>
+</tr>
+<tr>
+<td><code>input.content</code></td>
+<td>The full OutputUnit from your target session</td>
+</tr>
+<tr>
+<td><code>input.scope</code></td>
+<td>Describe the target output's session and depth</td>
+</tr>
+<tr>
+<td><code>active_modules</code></td>
+<td>No changes needed — this list is correct for any clarity evaluation</td>
+</tr>
+</tbody>
+</table>
+<p>If the target output is a session output (not a single RTT pass), swap <code>clarity-val-rtt-output</code> for <code>clarity-val-session-output</code> in both <code>active_modules</code> and <code>validator</code>.</p>
+<hr>
+<h2 id="library-notes">Library Notes</h2>
+<h3 id="combining-sessions">Combining Sessions</h3>
+<p>Canonical sessions are designed to compose. Common combinations:</p>
+<table>
+<thead>
+<tr>
+<th>Combination</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CS-01 → CS-08</td>
+<td>Run a baseline analysis, then formally evaluate it</td>
+</tr>
+<tr>
+<td>CS-01 → CS-02</td>
+<td>Run depth=1, then extend to depth=2 if the terminal face warrants it</td>
+</tr>
+<tr>
+<td>CS-04 → CS-03</td>
+<td>Audit dependencies, then check scope compliance of the starting module</td>
+</tr>
+<tr>
+<td>CS-05 → CS-03</td>
+<td>Draft a new module, then immediately check its scope compliance</td>
+</tr>
+<tr>
+<td>CS-07 → CS-01</td>
+<td>Repair a malformed session, then run it correctly</td>
+</tr>
+<tr>
+<td>CS-06 → CS-08</td>
+<td>Run a multi-lens analysis, then formally evaluate the lens-annotated output</td>
+</tr>
+<tr>
+<td>CS-04 → CS-05</td>
+<td>Audit a module's dependencies, then fill any gaps found</td>
+</tr>
+</tbody>
+</table>
+<p>Sessions always close before the next one opens. Never run two sessions simultaneously or allow the output of one session to flow directly into another without first closing the producing session and opening a new one with a fresh grammar. The output of Session A becomes the <code>input</code> field of Session B — not a live feed.</p>
+<hr>
+<h3 id="when-to-use-each-session">When to Use Each Session</h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Start Here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You are new and want to see the system working</td>
+<td>CS-01</td>
+</tr>
+<tr>
+<td>Your first pass did not go deep enough</td>
+<td>CS-02</td>
+</tr>
+<tr>
+<td>You are about to ratify a new module</td>
+<td>CS-03</td>
+</tr>
+<tr>
+<td>You are assembling an active_modules list for a complex session</td>
+<td>CS-04</td>
+</tr>
+<tr>
+<td>The module discovery protocol returned no results</td>
+<td>CS-05</td>
+</tr>
+<tr>
+<td>The problem has strong time dynamics or stakeholder conflict</td>
+<td>CS-06</td>
+</tr>
+<tr>
+<td>A session produced unexpected output and you don't know why</td>
+<td>CS-07</td>
+</tr>
+<tr>
+<td>A prior output was never formally validated</td>
+<td>CS-08</td>
+</tr>
+<tr>
+<td>A validator returned <code>revise</code> and you're not sure what to fix</td>
+<td>CS-08, read assessment flags first</td>
+</tr>
+<tr>
+<td>You inherited a session from another practitioner</td>
+<td>CS-07</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="common-adaptation-errors">Common Adaptation Errors</h3>
+<p>These are the most frequent mistakes when cloning a canonical session. Each one maps to a failure mode from Part III Chapter 17.</p>
+<p><strong>Adapting the intent by copy-pasting and finding-and-replacing the module name — without re-reading the actionability and testability tests.</strong>
+The original intent passed both tests. Your adapted version may not. After any intent edit, apply the intent field test before proceeding: can you answer "did we achieve the intent?" with a binary yes/no from the output alone?</p>
+<p><strong>Keeping the canonical scope while changing the input.</strong>
+The canonical scope is written for the canonical input. If your input is materially different, your scope is wrong — it still names the canonical content boundaries, not yours. Rewrite the scope from scratch for every adapted session.</p>
+<p><strong>Using the canonical active_modules list without re-running the closure check.</strong>
+The canonical list is correct for the canonical session. If you have changed the primary modules, the dependency chain has changed. Run the closure check — or use CS-04 as a diagnostic — before initializing.</p>
+<p><strong>Omitting the InputUnit wrapper because the raw input feels self-explanatory.</strong>
+It always feels self-explanatory. The scope declaration in the InputUnit is not for the practitioner — it is for the operator. Without it, the operator cannot validate well-formedness. Wrap every input.</p>
+<p><strong>Changing the <code>output_format</code> without updating the <code>validator</code>.</strong>
+The canonical validator is matched to the canonical output format. If you change the format, check the format-validator compatibility matrix in <code>session-grammar-field-output-format</code> and update the validator accordingly. A mismatched validator produces <code>insufficient_input</code> flags that are difficult to diagnose.</p>
+<hr>
+<h3 id="adding-a-session-to-the-library">Adding a Session to the Library</h3>
+<p>When you produce a session that:
+- Is structurally complete (all nine fields, all invocations shown, output produced, validator assessment applied)
+- Covers a use case not already represented in the library
+- Has received a validator <code>recommendation: accept</code></p>
+<p>...it is a candidate for inclusion in the library. Submit it as a pull request following the contribution guidelines at <a href="../contributing"><code>/docs/contributing</code></a>. The session will be reviewed against the five canonical session criteria:</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>What the Reviewer Checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grammar completeness</td>
+<td>All nine fields populated, all field tests pass</td>
+</tr>
+<tr>
+<td>Execution correctness</td>
+<td>All invocations syntactically complete, full signatures shown</td>
+</tr>
+<tr>
+<td>Output quality</td>
+<td>Output meets all five clarity criteria</td>
+</tr>
+<tr>
+<td>Assessment completeness</td>
+<td>ValidatorAssessment present, all criteria evaluated</td>
+</tr>
+<tr>
+<td>Clone utility</td>
+<td>Clone guide present, adaptation errors noted where applicable</td>
+</tr>
+</tbody>
+</table>
+<p>Sessions that pass all five criteria are assigned a canonical ID (<code>CS-[NN]</code>) and added to the library index.</p>
+<hr>
+<h3 id="registry-cross-reference">Registry Cross-Reference</h3>
+<p>Every module referenced in this library appears in the <a href="./registry">Module Registry</a>. If a module ID in a session grammar or invocation is unfamiliar, open the registry and locate it by ID in the <a href="./registry#master-alphabetical-index">Master Alphabetical Index</a>. The registry's scope summary will tell you immediately whether the module is what you think it is.</p>
+<hr>
+<p>→ <a href="./index">Return to Book Index</a>
+→ <a href="./registry">Browse the Module Registry</a>
+→ <a href="../contributing">Contributing Guidelines</a></p>
+<hr>
+<p><em>TriadicFrameworks Book — <code>/docs/book/sessions.md</code></em>
+<em>Authored by Nawder Loswin. AI-augmented authorship. All rights reserved.</em></p>
+  </main>
+</body>
+</html>

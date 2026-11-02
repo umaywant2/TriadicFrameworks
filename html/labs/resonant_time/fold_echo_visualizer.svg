@@ -1,0 +1,8 @@
+<!-- Fold echo visualizer for symbolic pulse mapping -->
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="150" cy="150" r="100" fill="#6c00ff" opacity="0.88">
+    <animate attributeName="r" values="100;120;100" dur="1.25s" repeatCount="indefinite"/>
+  </circle>
+  <text x="150" y="155" font-size="16" text-anchor="middle" fill="#ffffff">Fold 144</text>
+</svg>
+<!-- Notes: Pulse strength 0.753, quadrant W, remix lineage confirmed -->

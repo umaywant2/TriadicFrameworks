@@ -1,0 +1,1573 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Triadic_Re-Ignition/observer/observer-transition.md">
+  <title>Observer Transition</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Triadic_Re-Ignition/observer/observer-transition.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Triadic_Re-Ignition/observer/observer-transition.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Triadic_Re-Ignition_observer_observer-transition_" src="https://github.com/user-attachments/assets/dad7c1b4-8828-46a9-908a-3bf4ac722358" /></p>
+<h1 id="observer-transition">Observer Transition</h1>
+<blockquote>
+<p><strong>When observation changes, the transition itself may contain more information than either endpoint.</strong></p>
+</blockquote>
+<p>Observer Transition examines changes in the observer's position, access, context, knowledge, representation, or relationship to an observed structure.</p>
+<p>A minimal transition is:</p>
+<pre><code class="language-text">Observer State A
+        ↓
+    transition
+        ↓
+Observer State B
+</code></pre>
+<p>The important question is not simply:</p>
+<pre><code class="language-text">&quot;What does the observer see now?&quot;
+</code></pre>
+<p>It is also:</p>
+<pre><code class="language-text">&quot;What changed between
+the two observer states?&quot;
+</code></pre>
+<p>Triadic Re-Ignition treats that transition as an object of investigation.</p>
+<hr>
+<h2 id="context">Context</h2>
+<pre><code class="language-text">RTT: 1
+coherence: declared
+drift: bounded
+paradox: structural
+</code></pre>
+<p><strong>Module:</strong> Triadic Re-Ignition<br>
+<strong>Domain:</strong> Observer<br>
+<strong>Status:</strong> Exploratory transition model</p>
+<hr>
+<h1 id="core-proposition">Core Proposition</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Observer State A
+        ↓
+Observation A
+</code></pre>
+<p>and later:</p>
+<pre><code class="language-text">Observer State B
+        ↓
+Observation B
+</code></pre>
+<p>where:</p>
+<pre><code class="language-text">Observation A
+      ≠
+Observation B
+</code></pre>
+<p>Several possibilities remain open:</p>
+<pre><code class="language-text">the observed structure changed
+
+the observer changed
+
+the context changed
+
+the representation changed
+
+access changed
+
+multiple variables changed
+
+or the original observation
+was incomplete or incorrect
+</code></pre>
+<p>Observer Transition investigates the path between the states before assigning the difference to any one cause.</p>
+<hr>
+<h1 id="the-transition">The Transition</h1>
+<p>Represent the transition as:</p>
+<pre><code class="language-text">O₁
+ ↓
+ΔO
+ ↓
+O₂
+</code></pre>
+<p>where:</p>
+<pre><code class="language-text">O₁
+=
+earlier observer state
+</code></pre>
+<pre><code class="language-text">ΔO
+=
+observer transition
+</code></pre>
+<pre><code class="language-text">O₂
+=
+later observer state
+</code></pre>
+<p>The analytical objective is to characterize:</p>
+<pre><code class="language-text">ΔO
+</code></pre>
+<p>without assuming its mechanism in advance.</p>
+<hr>
+<h1 id="why-the-transition-matters">Why the Transition Matters</h1>
+<p>If only the endpoints are compared:</p>
+<pre><code class="language-text">O₁ → Observation A
+
+O₂ → Observation B
+</code></pre>
+<p>we know that a difference exists.</p>
+<p>But we may not know where it entered.</p>
+<p>Studying the transition asks:</p>
+<pre><code class="language-text">What happened first?
+
+What changed next?
+
+What became newly accessible?
+
+When did recognition occur?
+
+When did representation change?
+
+What remained invariant?
+</code></pre>
+<p>The sequence may reveal relationships hidden by endpoint comparison alone.</p>
+<hr>
+<h1 id="transition-variables">Transition Variables</h1>
+<p>An Observer Transition may involve changes in:</p>
+<pre><code class="language-text">position
+
+attention
+
+knowledge
+
+memory access
+
+context
+
+expectation
+
+skill
+
+available information
+
+representation
+
+measurement method
+
+temporal position
+
+interpretive model
+</code></pre>
+<p>These are candidate variables.</p>
+<p>They should not all be assumed to matter in every case.</p>
+<hr>
+<h1 id="observer-state-model">Observer-State Model</h1>
+<p>A working observer state can be represented as:</p>
+<pre><code class="language-text">O =
+{
+  position,
+  access,
+  context,
+  knowledge,
+  memory,
+  representation
+}
+</code></pre>
+<p>This is a conceptual scaffold.</p>
+<p>It is not intended as a complete mathematical definition.</p>
+<p>The model exists to ask:</p>
+<pre><code class="language-text">Which observer variables
+changed during ΔO?
+</code></pre>
+<hr>
+<h1 id="before-during-after">Before, During, After</h1>
+<p>A useful transition structure is:</p>
+<pre><code class="language-text">BEFORE
+   ↓
+Observer State A
+   ↓
+TRANSITION
+   ↓
+trigger / change / recognition
+   ↓
+AFTER
+   ↓
+Observer State B
+</code></pre>
+<p>The transition should be captured separately from the states surrounding it.</p>
+<hr>
+<h1 id="re-ignition-transition">Re-Ignition Transition</h1>
+<p>A Re-Ignition event may fit:</p>
+<pre><code class="language-text">Observer State A
+        ↓
+ relationship inaccessible
+        ↓
+      trigger
+        ↓
+     resonance
+        ↓
+    recognition
+        ↓
+Observer State B
+        ↓
+ relationship accessible
+</code></pre>
+<p>This suggests:</p>
+<pre><code class="language-text">Re-Ignition
+      may contain
+Observer Transition
+</code></pre>
+<p>but it does not establish:</p>
+<pre><code class="language-text">Re-Ignition
+      =
+Observer Transition
+</code></pre>
+<p>The structural relationship remains a candidate model.</p>
+<hr>
+<h1 id="access-transition">Access Transition</h1>
+<p>One of the smallest useful transition models is:</p>
+<pre><code class="language-text">BEFORE
+
+Pattern
+   │
+   X
+   │
+Observer
+</code></pre>
+<p>followed by:</p>
+<pre><code class="language-text">AFTER
+
+Pattern
+   │
+   │
+   ▼
+Observer
+</code></pre>
+<p>The direct observation is:</p>
+<pre><code class="language-text">access differs
+</code></pre>
+<p>The explanation remains open.</p>
+<p>Possible mechanisms include:</p>
+<pre><code class="language-text">learning
+
+memory retrieval
+
+new context
+
+changed representation
+
+new evidence
+
+reconstruction
+
+system change
+
+observer change
+
+or another process
+</code></pre>
+<hr>
+<h1 id="access-versus-structure">Access Versus Structure</h1>
+<p>The observer-transition model explicitly separates:</p>
+<pre><code class="language-text">STRUCTURE CHANGE
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">ACCESS CHANGE
+</code></pre>
+<p>A useful comparison is:</p>
+<pre><code class="language-text">Model A
+
+Structure changes
+Observer remains approximately stable
+</code></pre>
+<pre><code class="language-text">Model B
+
+Structure remains approximately stable
+Observer access changes
+</code></pre>
+<pre><code class="language-text">Model C
+
+Both structure and observer change
+</code></pre>
+<pre><code class="language-text">Model D
+
+The apparent difference results
+from representation or error
+</code></pre>
+<p>All should remain available until evidence distinguishes them.</p>
+<hr>
+<h1 id="transition-and-recognition">Transition and Recognition</h1>
+<p>Recognition may occur at some point inside the observer transition.</p>
+<pre><code class="language-text">O₁
+ ↓
+partial resonance
+ ↓
+recognition threshold
+ ↓
+recognition event
+ ↓
+O₂
+</code></pre>
+<p>This allows the transition to be studied as more than:</p>
+<pre><code class="language-text">before
+versus
+after
+</code></pre>
+<p>It becomes:</p>
+<pre><code class="language-text">before
+   ↓
+approach
+   ↓
+threshold
+   ↓
+recognition
+   ↓
+reorganization
+   ↓
+after
+</code></pre>
+<hr>
+<h1 id="recognition-threshold">Recognition Threshold</h1>
+<p>The transition may contain a boundary between:</p>
+<pre><code class="language-text">&quot;I don't see the relationship.&quot;
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">&quot;I see the relationship.&quot;
+</code></pre>
+<p>Conceptually:</p>
+<pre><code class="language-text">weak / partial access
+       ↓
+-----------------------
+ recognition threshold
+-----------------------
+       ↓
+explicit recognition
+</code></pre>
+<p>The threshold is initially observational.</p>
+<p>It should not be described as a physical threshold unless operational measurements justify that interpretation.</p>
+<hr>
+<h1 id="resonance-before-transition">Resonance Before Transition</h1>
+<p>A trigger may produce resonance before a stable observer transition becomes obvious.</p>
+<pre><code class="language-text">trigger
+   ↓
+resonance
+   ↓
+partial transition
+   ↓
+recognition
+   ↓
+observer reorganization
+</code></pre>
+<p>This creates an open question:</p>
+<blockquote>
+<p><strong>Does resonance initiate the transition, accompany it, or become recognizable only after it has already begun?</strong></p>
+</blockquote>
+<p>The answer may differ across domains.</p>
+<hr>
+<h1 id="transition-after-recognition">Transition After Recognition</h1>
+<p>Recognition may itself alter the observer.</p>
+<pre><code class="language-text">Observer A
+    ↓
+recognition
+    ↓
+learning
+    ↓
+Observer B
+</code></pre>
+<p>The observer after recognition may now possess:</p>
+<pre><code class="language-text">new vocabulary
+
+new model
+
+new pattern access
+
+new expectations
+
+new associations
+
+new questions
+</code></pre>
+<p>This means recognition is not always merely something that happens <strong>to</strong> an observer.</p>
+<p>It can become part of the process that changes future observation.</p>
+<hr>
+<h1 id="observer-history">Observer History</h1>
+<p>An observer is not necessarily reset between observations.</p>
+<pre><code class="language-text">O₁
+ ↓
+observation
+ ↓
+learning
+ ↓
+O₂
+ ↓
+observation
+ ↓
+learning
+ ↓
+O₃
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">O₁ ≠ O₂ ≠ O₃
+</code></pre>
+<p>may be expected in a learning system.</p>
+<p>Repeated testing should account for observer history when observer history materially affects the task.</p>
+<hr>
+<h1 id="irreversible-recognition">Irreversible Recognition</h1>
+<p>Some recognition events appear difficult to undo.</p>
+<p>Before:</p>
+<pre><code class="language-text">&quot;I cannot see the pattern.&quot;
+</code></pre>
+<p>After:</p>
+<pre><code class="language-text">&quot;I cannot stop seeing the pattern.&quot;
+</code></pre>
+<p>This can be represented as:</p>
+<pre><code class="language-text">State A
+  ↓
+recognition
+  ↓
+State B
+</code></pre>
+<p>where direct return to <code>State A</code> may no longer be possible.</p>
+<p>This creates an experimental problem.</p>
+<p>The same observer may not be a perfect control for their own earlier state.</p>
+<hr>
+<h1 id="transition-does-not-mean-improvement">Transition Does Not Mean Improvement</h1>
+<p>Observer State B should not automatically be treated as superior.</p>
+<p>A transition may produce:</p>
+<pre><code class="language-text">better model
+
+worse model
+
+more coherent model
+
+narrative lock
+
+false recognition
+
+misassociation
+
+increased clarity
+
+or increased confusion
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">change
+   ≠
+improvement
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">recognition
+   ≠
+verification
+</code></pre>
+<p>The later observer state still requires evaluation.</p>
+<hr>
+<h1 id="transition-and-error">Transition and Error</h1>
+<p>A changed observer may become more accurate.</p>
+<p>A changed observer may also become less accurate.</p>
+<p>For example:</p>
+<pre><code class="language-text">O₁
+ ↓
+ambiguous evidence
+ ↓
+strong expectation
+ ↓
+O₂
+ ↓
+false recognition
+</code></pre>
+<p>Therefore observer transition should not be used as automatic evidence for Re-Ignition.</p>
+<p>The transition describes change.</p>
+<p>Testing determines whether the resulting model is useful.</p>
+<hr>
+<h1 id="representation-transition">Representation Transition</h1>
+<p>Sometimes the most obvious change occurs in representation.</p>
+<p>Before:</p>
+<pre><code class="language-text">A → B → C
+</code></pre>
+<p>After:</p>
+<pre><code class="language-text">A → B → C
+╲_______╱
+ relationship
+</code></pre>
+<p>The recorded elements remain invariant.</p>
+<p>The observer now represents another relationship.</p>
+<p>This gives:</p>
+<pre><code class="language-text">Representation A
+        ↓
+ΔR
+        ↓
+Representation B
+</code></pre>
+<p>where <code>ΔR</code> is a representational transition.</p>
+<hr>
+<h1 id="representation-transition-versus-structure-transition">Representation Transition Versus Structure Transition</h1>
+<p>These should remain separate:</p>
+<pre><code class="language-text">representation changed
+        ≠
+automatically
+structure changed
+</code></pre>
+<p>Likewise:</p>
+<pre><code class="language-text">structure changed
+        ≠
+automatically
+observer recognized the change correctly
+</code></pre>
+<p>The investigative task is to compare:</p>
+<pre><code class="language-text">physical / external evidence
+
+observer state
+
+representation
+
+and proposed structure
+</code></pre>
+<hr>
+<h1 id="form-transition">Form Transition</h1>
+<p>An Observer Transition may include a Form Transition.</p>
+<pre><code class="language-text">resonance
+    ↓
+partial recognition
+    ↓
+Form A becomes inadequate
+    ↓
+new representation
+    ↓
+Form B
+</code></pre>
+<p>The observer may experience this as:</p>
+<pre><code class="language-text">&quot;I need a different way
+to think about this.&quot;
+</code></pre>
+<p>This is especially relevant when an older representation can no longer preserve all observations coherently.</p>
+<hr>
+<h1 id="paradox-at-the-transition">Paradox at the Transition</h1>
+<p>Paradox often becomes visible during transition.</p>
+<pre><code class="language-text">Old Model
+    +
+New Observation
+    ↓
+CONTRADICTION
+</code></pre>
+<p>The observer may initially experience:</p>
+<pre><code class="language-text">A
+≠
+B
+</code></pre>
+<p>The Triadic Observer adds:</p>
+<pre><code class="language-text">A
++
+B
++
+Observer Transition
+</code></pre>
+<p>Now ask:</p>
+<pre><code class="language-text">Did A belong to State O₁?
+
+Did B become visible in State O₂?
+
+What changed between them?
+
+What remained invariant?
+
+Does one model fail?
+
+Are both incomplete?
+</code></pre>
+<p>The transition may help locate the contradiction.</p>
+<hr>
+<h1 id="transition-as-structural-signal">Transition as Structural Signal</h1>
+<p>A transition may reveal information that neither endpoint exposes alone.</p>
+<p>For example:</p>
+<pre><code class="language-text">State A
+    =
+stable
+
+State B
+    =
+stable
+</code></pre>
+<p>but:</p>
+<pre><code class="language-text">Transition
+    =
+unstable / paradoxical
+</code></pre>
+<p>That instability may identify:</p>
+<pre><code class="language-text">boundary conditions
+
+missing variables
+
+threshold behavior
+
+representation failure
+
+regime shift
+</code></pre>
+<p>The transitional state is therefore not merely noise to discard.</p>
+<hr>
+<h1 id="regime-transition">Regime Transition</h1>
+<p>An observer may operate under one stable regime:</p>
+<pre><code class="language-text">Regime A
+</code></pre>
+<p>then enter a transition:</p>
+<pre><code class="language-text">ΔRegime
+</code></pre>
+<p>and stabilize under:</p>
+<pre><code class="language-text">Regime B
+</code></pre>
+<p>Represented as:</p>
+<pre><code class="language-text">Regime A
+     ↓
+transition
+     ↓
+Regime B
+</code></pre>
+<p>Possible changes include:</p>
+<pre><code class="language-text">available operators
+
+representational rules
+
+attention
+
+access
+
+context
+
+classification
+
+interpretation
+</code></pre>
+<p>The term <strong>regime</strong> remains analytical unless a more specific mechanism is defined.</p>
+<hr>
+<h1 id="observer-regime">Observer Regime</h1>
+<p>A working Observer Regime can be described as:</p>
+<pre><code class="language-text">a relatively stable set
+of conditions under which
+an observer detects,
+represents, and interprets
+relationships
+</code></pre>
+<p>This gives:</p>
+<pre><code class="language-text">Observer Regime A
+        ↓
+same stimulus
+        ↓
+Representation A
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">Observer Regime B
+        ↓
+same stimulus
+        ↓
+Representation B
+</code></pre>
+<p>If this difference is reproducible, observer regime becomes an experimentally useful variable.</p>
+<hr>
+<h1 id="regime-awareness">Regime Awareness</h1>
+<p>A regime-aware observation asks:</p>
+<pre><code class="language-text">Under what conditions
+was this observation produced?
+</code></pre>
+<p>instead of treating every observation as if it emerged from an identical observer state.</p>
+<p>A simple record becomes:</p>
+<pre><code class="language-text">OBSERVATION
+     +
+OBSERVER STATE
+     +
+REGIME
+     +
+CONTEXT
+</code></pre>
+<p>This can significantly improve comparison.</p>
+<hr>
+<h1 id="transition-and-local-time">Transition and Local Time</h1>
+<p>Observer Transition occurs in a local chronology.</p>
+<pre><code class="language-text">t₁
+│
+│ Observer State A
+│
+▼
+t₂
+│
+│ trigger
+│
+▼
+t₃
+│
+│ transition
+│
+▼
+t₄
+│
+│ recognition
+│
+▼
+t₅
+│
+│ Observer State B
+│
+▼
+</code></pre>
+<p>This physical ordering can remain stable even if the observer's interpretation of earlier events changes.</p>
+<hr>
+<h1 id="timeline-revision-after-transition">Timeline Revision After Transition</h1>
+<p>After an observer transition:</p>
+<pre><code class="language-text">Past Event A
+</code></pre>
+<p>may acquire a new relationship to:</p>
+<pre><code class="language-text">Present Observer B
+</code></pre>
+<p>Before:</p>
+<pre><code class="language-text">A → B → C → Present
+</code></pre>
+<p>After recognition:</p>
+<pre><code class="language-text">A ───────────── Present
+╲
+ ╲→ B → C
+</code></pre>
+<p>The earlier event has not necessarily changed.</p>
+<p>Its representation and structural accessibility may have changed.</p>
+<hr>
+<h1 id="observer-transition-and-resonance-time">Observer Transition and Resonance Time</h1>
+<p>Chronologically:</p>
+<pre><code class="language-text">Earlier Pattern
+────────────────────
+Present Observer
+</code></pre>
+<p>After a transition:</p>
+<pre><code class="language-text">Earlier Pattern
+      │
+      │ resonance
+      │
+      ▼
+Present Observer
+</code></pre>
+<p>This suggests:</p>
+<pre><code class="language-text">physical distance
+    remains
+
+accessible structural distance
+    changes
+</code></pre>
+<p>Observer Transition may therefore be one component in Re-Ignition's distinction between chronological and structural distance.</p>
+<hr>
+<h1 id="observer-transition-and-timeline-projection">Observer Transition and Timeline Projection</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Observer Regime A
+        ↓
+Projection A
+        ↓
+Timeline Representation A
+</code></pre>
+<p>then:</p>
+<pre><code class="language-text">Observer Transition
+</code></pre>
+<p>followed by:</p>
+<pre><code class="language-text">Observer Regime B
+        ↓
+Projection B
+        ↓
+Timeline Representation B
+</code></pre>
+<p>If:</p>
+<pre><code class="language-text">Representation A
+        ≠
+Representation B
+</code></pre>
+<p>the difference might exist in:</p>
+<pre><code class="language-text">observer regime
+
+projection
+
+representation
+
+underlying structure
+
+or several layers
+</code></pre>
+<p>This must be investigated rather than assumed.</p>
+<hr>
+<h1 id="apparent-timeline-transition">Apparent Timeline Transition</h1>
+<p>A sufficiently strong observer transition could be experienced as:</p>
+<pre><code class="language-text">&quot;The timeline changed.&quot;
+</code></pre>
+<p>For capture purposes, preserve that language if it accurately describes the experience.</p>
+<p>For analysis, separate:</p>
+<pre><code class="language-text">EXPERIENCE
+
+&quot;The timeline changed.&quot;
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">MINIMUM OBSERVATIONAL CLAIM
+
+&quot;My temporal representation
+changed during the transition.&quot;
+</code></pre>
+<p>Then preserve stronger hypotheses separately.</p>
+<hr>
+<h1 id="observer-transition-and-apparent-multiplicity">Observer Transition and Apparent Multiplicity</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Before Transition
+    ↓
+Timeline Model A
+
+After Transition
+    ↓
+Timeline Model B
+</code></pre>
+<p>The observer may experience:</p>
+<pre><code class="language-text">A
+and
+B
+</code></pre>
+<p>as incompatible timelines.</p>
+<p>The immediate structural question is:</p>
+<pre><code class="language-text">What changed during ΔO?
+</code></pre>
+<p>Possible answers include:</p>
+<pre><code class="language-text">memory access
+
+representation
+
+context
+
+projection
+
+observer regime
+
+physical evidence
+
+or underlying temporal structure
+</code></pre>
+<p>The transition becomes the place to search for discrimination.</p>
+<hr>
+<h1 id="transition-invariants">Transition Invariants</h1>
+<p>A powerful way to study transition is to ask what survives it.</p>
+<pre><code class="language-text">State A ──┐
+          ├── invariant X
+State B ──┘
+</code></pre>
+<p>Possible invariants include:</p>
+<pre><code class="language-text">recorded event
+
+object
+
+measurement
+
+relationship
+
+task
+
+environmental condition
+
+external document
+
+event ordering
+</code></pre>
+<p>The invariant helps reduce the number of possible explanations.</p>
+<hr>
+<h1 id="transition-variables_1">Transition Variables</h1>
+<p>Then isolate what changed.</p>
+<pre><code class="language-text">BEFORE
+│
+├── invariant A
+├── invariant B
+└── variable X
+
+AFTER
+│
+├── invariant A
+├── invariant B
+└── variable Y
+</code></pre>
+<p>Now the research problem becomes:</p>
+<pre><code class="language-text">What explains X → Y?
+</code></pre>
+<p>This is much more useful than:</p>
+<pre><code class="language-text">&quot;Everything changed.&quot;
+</code></pre>
+<hr>
+<h1 id="trigger-versus-transition">Trigger Versus Transition</h1>
+<p>The trigger and transition should not be confused.</p>
+<pre><code class="language-text">Trigger
+    ↓
+Observer Transition
+</code></pre>
+<p>A trigger precedes or accompanies the change.</p>
+<p>The transition is the change process being investigated.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">trigger
+    ≠
+transition
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">trigger
+    ≠
+proven cause
+</code></pre>
+<hr>
+<h1 id="recognition-versus-transition">Recognition Versus Transition</h1>
+<p>Recognition is also not identical to transition.</p>
+<p>Possible ordering:</p>
+<pre><code class="language-text">transition begins
+      ↓
+resonance increases
+      ↓
+recognition occurs
+      ↓
+transition continues
+      ↓
+new observer state stabilizes
+</code></pre>
+<p>Another event may follow a different ordering.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">recognition
+    may be
+one event inside
+observer transition
+</code></pre>
+<p>rather than the complete transition itself.</p>
+<hr>
+<h1 id="reintegration">Reintegration</h1>
+<p>After the transition, the observer may need to reorganize existing knowledge.</p>
+<pre><code class="language-text">Observer State B
+        ↓
+new recognized relationship
+        ↓
+existing model
+        ↓
+reintegration
+</code></pre>
+<p>This process may reveal additional contradictions.</p>
+<p>It may also revise the interpretation of earlier observations.</p>
+<hr>
+<h1 id="stabilization">Stabilization</h1>
+<p>A transition does not end merely because recognition occurred.</p>
+<p>The resulting observer state may initially be unstable.</p>
+<pre><code class="language-text">recognition
+    ↓
+new representation
+    ↓
+comparison
+    ↓
+revision
+    ↓
+repeated access
+    ↓
+stabilization
+</code></pre>
+<p>Stabilization means the new relationship can be revisited more consistently.</p>
+<p>It does not mean the observer's interpretation is proven correct.</p>
+<hr>
+<h1 id="failed-stabilization">Failed Stabilization</h1>
+<p>Some recognition events do not stabilize.</p>
+<p>A pattern may appear compelling initially:</p>
+<pre><code class="language-text">recognition
+    ↓
+strong interpretation
+</code></pre>
+<p>but later become:</p>
+<pre><code class="language-text">weak
+
+inconsistent
+
+unrepeatable
+
+or unsupported
+</code></pre>
+<p>This should be preserved as a legitimate outcome.</p>
+<pre><code class="language-text">FAILED STABILIZATION
+</code></pre>
+<p>may provide useful information about:</p>
+<pre><code class="language-text">false recognition
+
+context dependence
+
+weak resonance
+
+representation error
+
+or unstable observer state
+</code></pre>
+<hr>
+<h1 id="reversal">Reversal</h1>
+<p>Some observer transitions may partially reverse.</p>
+<pre><code class="language-text">O₁
+ ↓
+O₂
+ ↓
+O₁-like state
+</code></pre>
+<p>The return may not be exact.</p>
+<p>Ask:</p>
+<pre><code class="language-text">What remained changed?
+
+What reverted?
+
+What became easier to access?
+
+What was lost?
+</code></pre>
+<p>This can help distinguish transient effects from more persistent observer changes.</p>
+<hr>
+<h1 id="transition-drift">Transition Drift</h1>
+<p>Observer transitions are vulnerable to narrative inflation.</p>
+<p>A possible drift path is:</p>
+<pre><code class="language-text">observation changed
+       ↓
+observer changed
+       ↓
+observer transformation
+       ↓
+fundamental regime shift
+       ↓
+ontological conclusion
+</code></pre>
+<p>A bounded sequence is:</p>
+<pre><code class="language-text">observation changed
+       ↓
+capture before / after
+       ↓
+identify invariants
+       ↓
+identify observer variables
+       ↓
+generate alternatives
+       ↓
+test
+       ↓
+refine
+</code></pre>
+<hr>
+<h1 id="transition-story-versus-transition-data">Transition Story Versus Transition Data</h1>
+<p>The observer may tell a story such as:</p>
+<pre><code class="language-text">&quot;Everything clicked at once.&quot;
+</code></pre>
+<p>That is useful capture language.</p>
+<p>Analysis may reveal a more detailed sequence:</p>
+<pre><code class="language-text">trigger
+   ↓
+partial familiarity
+   ↓
+new comparison
+   ↓
+recognition
+   ↓
+representation change
+   ↓
+reintegration
+</code></pre>
+<p>The story and the sequence can both be preserved.</p>
+<p>They answer different questions.</p>
+<hr>
+<h1 id="minimum-claim-rule">Minimum-Claim Rule</h1>
+<p>Suppose the experience is:</p>
+<pre><code class="language-text">&quot;I became a different observer.&quot;
+</code></pre>
+<p>The minimum analytical claim might be:</p>
+<pre><code class="language-text">&quot;My accessible relationships
+and representations differed
+before and after the event.&quot;
+</code></pre>
+<p>The stronger interpretation can remain:</p>
+<pre><code class="language-text">HYPOTHESIS:
+
+Did a deeper observer-regime
+transition occur?
+</code></pre>
+<p>This separation preserves the experience without making the explanation automatic.</p>
+<hr>
+<h1 id="observer-transition-protocol">Observer Transition Protocol</h1>
+<p>When an observation changes significantly:</p>
+<h3 id="1-capture-state-a">1. Capture State A</h3>
+<pre><code class="language-text">What could the observer
+access beforehand?
+</code></pre>
+<h3 id="2-capture-the-trigger">2. Capture the Trigger</h3>
+<pre><code class="language-text">What happened immediately
+before the transition?
+</code></pre>
+<h3 id="3-capture-early-signals">3. Capture Early Signals</h3>
+<pre><code class="language-text">What changed before
+explicit recognition?
+</code></pre>
+<h3 id="4-identify-recognition">4. Identify Recognition</h3>
+<pre><code class="language-text">When did the relationship
+become explicit?
+</code></pre>
+<h3 id="5-capture-state-b">5. Capture State B</h3>
+<pre><code class="language-text">What became accessible afterward?
+</code></pre>
+<h3 id="6-identify-invariants">6. Identify Invariants</h3>
+<pre><code class="language-text">What remained stable?
+</code></pre>
+<h3 id="7-identify-variables">7. Identify Variables</h3>
+<pre><code class="language-text">What changed?
+</code></pre>
+<h3 id="8-separate-layers">8. Separate Layers</h3>
+<pre><code class="language-text">observer?
+
+structure?
+
+context?
+
+representation?
+
+projection?
+
+interpretation?
+</code></pre>
+<h3 id="9-generate-alternatives">9. Generate Alternatives</h3>
+<pre><code class="language-text">What other explanations fit?
+</code></pre>
+<h3 id="10-define-discriminators">10. Define Discriminators</h3>
+<pre><code class="language-text">What could distinguish
+the hypotheses?
+</code></pre>
+<h3 id="11-revisit">11. Revisit</h3>
+<pre><code class="language-text">Does the new observer state
+remain stable over time?
+</code></pre>
+<h3 id="12-test">12. Test</h3>
+<pre><code class="language-text">Can the transition or its
+effects be reproduced?
+</code></pre>
+<hr>
+<h1 id="observer-transition-capture">Observer Transition Capture</h1>
+<pre><code class="language-text">OBSERVER TRANSITION CAPTURE
+
+Observer State Before:
+________________________________
+
+Trigger:
+________________________________
+
+First noticeable change:
+________________________________
+
+Resonance / familiarity:
+________________________________
+
+Recognition event:
+________________________________
+
+Observer State After:
+________________________________
+
+Representation Before:
+________________________________
+
+Representation After:
+________________________________
+
+What remained invariant:
+________________________________
+
+What changed:
+________________________________
+
+Possible observer variable:
+________________________________
+
+Possible structural variable:
+________________________________
+
+Alternative explanation:
+________________________________
+
+Possible discriminator:
+________________________________
+
+Failure condition:
+________________________________
+
+Did the change stabilize?
+________________________________
+
+What remains unknown:
+________________________________
+</code></pre>
+<hr>
+<h1 id="comparative-transition-model">Comparative Transition Model</h1>
+<p>For research, compare:</p>
+<pre><code class="language-text">Observer A
+    ↓
+Condition X
+    ↓
+Transition A
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">Observer B
+    ↓
+Condition X
+    ↓
+Transition B
+</code></pre>
+<p>Then ask:</p>
+<pre><code class="language-text">What was shared?
+
+What differed?
+
+Did the same trigger matter?
+
+Did recognition occur?
+
+Did the same representation emerge?
+
+What stabilized?
+</code></pre>
+<p>This can help distinguish highly individual transitions from more reproducible relationships.</p>
+<hr>
+<h1 id="claim-ladder">Claim Ladder</h1>
+<p>Observer Transition claims can be organized by strength.</p>
+<h3 id="level-1-observational-difference">Level 1: Observational Difference</h3>
+<pre><code class="language-text">The observer reported
+or demonstrated different access
+before and after the event.
+</code></pre>
+<h3 id="level-2-state-difference">Level 2: State Difference</h3>
+<pre><code class="language-text">Relevant observer variables
+differed across the states.
+</code></pre>
+<h3 id="level-3-transition-relationship">Level 3: Transition Relationship</h3>
+<pre><code class="language-text">A reproducible sequence links
+State A and State B.
+</code></pre>
+<h3 id="level-4-transition-mechanism">Level 4: Transition Mechanism</h3>
+<pre><code class="language-text">A specific process produces
+the state change.
+</code></pre>
+<h3 id="level-5-regime-model">Level 5: Regime Model</h3>
+<pre><code class="language-text">The transition reflects a defined
+change between observer regimes.
+</code></pre>
+<h3 id="level-6-ontological-claim">Level 6: Ontological Claim</h3>
+<pre><code class="language-text">The observer transition reveals
+a fundamental property of reality.
+</code></pre>
+<p>These levels should never be silently merged.</p>
+<hr>
+<h1 id="falsification-boundary">Falsification Boundary</h1>
+<p>An Observer Transition hypothesis should specify:</p>
+<pre><code class="language-text">what changed
+
+what remained invariant
+
+what transition sequence is expected
+
+what conditions support the transition
+
+what outcome would challenge
+the proposed model
+</code></pre>
+<p>If every changed observation can simply be labeled:</p>
+<pre><code class="language-text">observer transition
+</code></pre>
+<p>then the concept loses discriminative value.</p>
+<p>The term should be used only when the transition adds explanatory or testable structure.</p>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>
+<p>What variables define an observer state?</p>
+</li>
+<li>
+<p>Which variables are necessary to identify an Observer Transition?</p>
+</li>
+<li>
+<p>Can transitions be detected before explicit recognition?</p>
+</li>
+<li>
+<p>Does resonance precede, accompany, or follow observer transition?</p>
+</li>
+<li>
+<p>What defines a recognition threshold?</p>
+</li>
+<li>
+<p>Which invariants survive a transition?</p>
+</li>
+<li>
+<p>Which observer changes are reversible?</p>
+</li>
+<li>
+<p>Which observer changes stabilize?</p>
+</li>
+<li>
+<p>Can independent observers undergo structurally similar transitions?</p>
+</li>
+<li>
+<p>How does observer history affect repeated testing?</p>
+</li>
+<li>
+<p>Can observer transition be distinguished from ordinary learning?</p>
+</li>
+<li>
+<p>Can observer transition be distinguished from memory retrieval?</p>
+</li>
+<li>
+<p>Can observer transition be distinguished from representation change alone?</p>
+</li>
+<li>
+<p>When does a representation transition justify a broader regime model?</p>
+</li>
+<li>
+<p>How can false recognition be distinguished from productive Re-Ignition?</p>
+</li>
+<li>
+<p>Can failed stabilization reveal transition boundaries?</p>
+</li>
+<li>
+<p>Can transition dynamics be operationalized quantitatively?</p>
+</li>
+<li>
+<p>Does Observer Transition require a new operator, or can existing structural operators describe it?</p>
+</li>
+</ol>
+<hr>
+<h1 id="boundary-conditions">Boundary Conditions</h1>
+<p>Observer Transition does <strong>not by itself establish</strong>:</p>
+<pre><code class="language-text">that the observed world changed
+
+that the observer changed physically
+
+that consciousness changed reality
+
+that a timeline changed
+
+that another timeline was accessed
+
+that a hidden observer exists
+
+that every recognition event
+is a regime transition
+
+or that the later observer state
+is more accurate than the earlier one
+</code></pre>
+<p>The minimum claim is:</p>
+<blockquote>
+<p><strong>A meaningful difference between observer states can be investigated by identifying what changed, what remained invariant, and where the transition occurred.</strong></p>
+</blockquote>
+<hr>
+<h1 id="relationship-to-triadic-observer">Relationship to Triadic Observer</h1>
+<p>The Triadic Observer asks:</p>
+<pre><code class="language-text">A
++
+B
++
+Observer
+</code></pre>
+<p>Observer Transition adds:</p>
+<pre><code class="language-text">Observer State A
+        ↓
+transition
+        ↓
+Observer State B
+</code></pre>
+<p>Together:</p>
+<pre><code class="language-text">Observation A
+      +
+Observation B
+      +
+Observer Transition
+        ↓
+Locate the Difference
+</code></pre>
+<p>The Triadic Observer provides the analytical third position.</p>
+<p>Observer Transition examines how that position may itself change.</p>
+<hr>
+<h1 id="relationship-to-re-ignition">Relationship to Re-Ignition</h1>
+<p>Observer Transition provides one possible structural layer inside Re-Ignition:</p>
+<pre><code class="language-text">DORMANT / INACCESSIBLE
+          ↓
+       TRIGGER
+          ↓
+      RESONANCE
+          ↓
+     RECOGNITION
+          ↓
+OBSERVER TRANSITION
+          ↓
+    REINTEGRATION
+          ↓
+    STABILIZATION
+</code></pre>
+<p>This ordering is exploratory.</p>
+<p>Different cases may place the observer transition earlier, later, or across several stages.</p>
+<p>That timing is itself a research question.</p>
+<hr>
+<h1 id="related-documents">Related Documents</h1>
+<ul>
+<li><code>./index.md</code></li>
+<li><code>./triadic-observer.md</code></li>
+<li><code>./local-observer.md</code></li>
+<li><code>./hidden-observer.md</code></li>
+<li><code>../index.md</code></li>
+<li><code>../capture.md</code></li>
+<li><code>../foundations/re-ignition-principle.md</code></li>
+<li><code>../foundations/resonance-before-form.md</code></li>
+<li><code>../foundations/form-and-formless.md</code></li>
+<li><code>../time/index.md</code></li>
+<li><code>../time/local-timeline.md</code></li>
+<li><code>../time/resonance-time.md</code></li>
+<li><code>../time/timeline-projection.md</code></li>
+<li><code>../time/apparent-multiple-timelines.md</code></li>
+<li><code>../ignition/resonance-trigger.md</code></li>
+<li><code>../ignition/recognition-event.md</code></li>
+<li><code>../ignition/reintegration.md</code></li>
+<li><code>../ignition/stabilization.md</code></li>
+<li><code>../drift/interpretation-drift.md</code></li>
+<li><code>../drift/narrative-lock.md</code></li>
+<li><code>../drift/paradox-as-signal.md</code></li>
+<li><code>../experiments/observation-protocol.md</code></li>
+<li><code>../experiments/comparative-observer-test.md</code></li>
+<li><code>../student-notes/leaf-note-observer.md</code></li>
+<li><code>../references/terminology.md</code></li>
+<li><code>../references/open-questions.md</code></li>
+</ul>
+<hr>
+<h1 id="working-summary">Working Summary</h1>
+<p>Observer Transition examines:</p>
+<pre><code class="language-text">O₁
+ ↓
+ΔO
+ ↓
+O₂
+</code></pre>
+<p>where the important object is:</p>
+<pre><code class="language-text">ΔO
+</code></pre>
+<p>The transition may involve:</p>
+<pre><code class="language-text">access
+
+knowledge
+
+memory
+
+context
+
+attention
+
+representation
+
+regime
+
+or relationship
+</code></pre>
+<p>The investigation then asks:</p>
+<pre><code class="language-text">WHAT CHANGED?
+      ↓
+WHAT REMAINED INVARIANT?
+      ↓
+WHEN DID RECOGNITION OCCUR?
+      ↓
+WHERE DID THE DIFFERENCE ENTER?
+      ↓
+WHAT ALTERNATIVES FIT?
+      ↓
+WHAT CAN DISTINGUISH THEM?
+</code></pre>
+<p>The central discipline is:</p>
+<blockquote>
+<p><strong>Do not infer a changed world merely from a changed observation.<br>
+Do not infer a changed observer merely from a changed representation.<br>
+Capture the states, study the transition, preserve the invariants, and locate the difference before naming the mechanism.</strong></p>
+</blockquote>
+<p>In its smallest form:</p>
+<pre><code class="language-text">BEFORE
+  ↓
+TRANSITION
+  ↓
+AFTER
+</code></pre>
+<p>but the research lives in:</p>
+<pre><code class="language-text">TRANSITION
+    ↓
+what changed?
+    ↓
+where?
+    ↓
+under what conditions?
+</code></pre>
+<p>The endpoints tell us that something differs.</p>
+<p><strong>The transition may tell us why.</strong></p>
+<p>This keeps the progression clean: triadic-observer.md establishes A + B + Observer, while observer-transition.md now gives us O₁ → ΔO → O₂. The main writing choice was making ΔO itself the research object, instead of treating the observer as a static third point.</p>
+  </main>
+</body>
+</html>

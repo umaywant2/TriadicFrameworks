@@ -1,0 +1,138 @@
+{
+  "id": "fft.ai.operators",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — AI Operator Registry v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "operators": [
+    {
+      "id": "OP-D01",
+      "family": "Diffusion",
+      "name": "Field Spreader",
+      "symbol": "D",
+      "input": "phi",
+      "output": "phi_smooth",
+      "drift_cost": 0.05,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    },
+    {
+      "id": "OP-A01",
+      "family": "Alignment",
+      "name": "Resonance Puller",
+      "symbol": "A",
+      "input": "V",
+      "output": "V_aligned",
+      "drift_cost": 0.1,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    },
+    {
+      "id": "OP-K01",
+      "family": "Coupling",
+      "name": "Field Coupler",
+      "symbol": "K",
+      "input": "phi,V",
+      "output": "R_delta",
+      "drift_cost": 0.12,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    },
+    {
+      "id": "OP-TH01",
+      "family": "Activation",
+      "name": "Threshold Gate",
+      "symbol": "Θ",
+      "input": "R",
+      "output": "R_activated",
+      "drift_cost": 0.08,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    },
+    {
+      "id": "OP-SIG01",
+      "family": "Stabilization",
+      "name": "Resonance Damper",
+      "symbol": "Σ",
+      "input": "R",
+      "output": "R_stable",
+      "drift_cost": 0.03,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    },
+    {
+      "id": "OP-C01",
+      "family": "Coherence",
+      "name": "Coherence Enforcer",
+      "symbol": "C",
+      "input": "session",
+      "output": "coherence_state",
+      "drift_cost": 0.0,
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    },
+    {
+      "id": "OP-DR01",
+      "family": "Drift",
+      "name": "Drift Guard",
+      "symbol": "dG",
+      "input": "delta",
+      "output": "drift_event",
+      "drift_cost": 0.0,
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    },
+    {
+      "id": "OP-PX01",
+      "family": "Paradox",
+      "name": "Paradox Resolver",
+      "symbol": "Px",
+      "input": "paradox_event",
+      "output": "resolved",
+      "drift_cost": 0.2,
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    },
+    {
+      "id": "OP-SET01",
+      "family": "SET",
+      "name": "Spin Coupler",
+      "symbol": "S",
+      "input": "angular_momentum",
+      "output": "vortex",
+      "drift_cost": 0.15,
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    },
+    {
+      "id": "OP-SET02",
+      "family": "SET",
+      "name": "Electro-field Driver",
+      "symbol": "E",
+      "input": "potential",
+      "output": "plasma_state",
+      "drift_cost": 0.15,
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    },
+    {
+      "id": "OP-SET03",
+      "family": "SET",
+      "name": "Temperature Driver",
+      "symbol": "T",
+      "input": "gradient_T",
+      "output": "flow_state",
+      "drift_cost": 0.1,
+      "new_v1_33": true,
+      "cost_source": "fft.ai.drift.monitor.json#drift_cost_table"
+    }
+  ],
+  "v133_additions": [
+    "OP-C01 (Coherence Enforcer)",
+    "OP-DR01 (Drift Guard)",
+    "OP-PX01 (Paradox Resolver)",
+    "OP-SET01/02/03 (SET triad)"
+  ],
+  "drift_cost_table_ref": "fft.ai.drift.monitor.json — canonical source for all operator drift costs",
+  "patch": "1.33-p1"
+}

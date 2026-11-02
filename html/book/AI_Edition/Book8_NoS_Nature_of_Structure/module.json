@@ -1,0 +1,81 @@
+{
+  "book": {
+    "id": "NOS",
+    "number": 8,
+    "title": "NoS: Nature of Structure",
+    "abbreviation": "NoS",
+    "series": "AI Edition",
+    "edition": "AI",
+    "version": "1.0.0",
+    "status": "active"
+  },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "anchors": {
+      "rtt_url": "https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+      "spine_url": "https://docs.triadicframeworks.org/spine/"
+    }
+  },
+
+  "ai": {
+    "module": "book8_nos_nature_of_structure",
+    "version": "1.0.0",
+    "purpose": "Define the ontology of structure — what structure is, how structure exists, how structure persists, and how structure behaves under transformation. Introduces ontological primitives, structural existence conditions, persistence rules, collapse conditions, and the ontology of pattern formation. NoS is the ontological core of the TriadicFrameworks canon.",
+    "keywords": [
+      "ontology",
+      "nature of structure",
+      "structural existence",
+      "persistence",
+      "collapse",
+      "structural ontology",
+      "pattern ontology",
+      "structural primitives",
+      "existence conditions",
+      "ontological grammar"
+    ],
+    "audience": [
+      "AI reasoning systems",
+      "ontologists",
+      "epistemologists",
+      "systems theorists",
+      "advanced researchers"
+    ],
+    "summary": "Book 8 formalizes the ontology of structure. It defines structural existence conditions, persistence rules, collapse conditions, and the ontology of pattern formation. NoS integrates governance logic (Book 6) and structural argumentation (Book 7) to produce the ontological layer required for the synthesis in Book 9."
+  },
+
+  "dependencies": {
+    "requires": [
+      "Book6_Governance_and_Regime_Logic",
+      "Book7_SARG_Structural_Argumentation"
+    ],
+    "unlocks": [
+      "Book9_Pattern_Dynamics"
+    ]
+  },
+
+  "invariants": {
+    "file": "invariants/book8_invariants.json",
+    "references": [
+      "INV-NOS-001: Existence Condition — a structure exists only if its primitive relations satisfy the declared ontological constraints.",
+      "INV-NOS-002: Persistence Rule — structural persistence requires stability of primitive relations under all valid transformations.",
+      "INV-NOS-003: Collapse Condition — structural collapse occurs when coherence falls below the ontological threshold.",
+      "INV-NOS-004: Ontological Closure — ontological operations must remain closed under the canonical ontology grammar."
+    ]
+  },
+
+  "canonical_metadata": {
+    "domain": "TriadicFrameworks",
+    "tier": "Ontology",
+    "reading_order": 8,
+    "prerequisite_books": [
+      "Book6_Governance_and_Regime_Logic",
+      "Book7_SARG_Structural_Argumentation"
+    ],
+    "live_site": null,
+    "last_updated": "2026-10-10"
+  }
+}

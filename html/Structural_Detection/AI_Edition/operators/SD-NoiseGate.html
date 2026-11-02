@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SD-Ξ — NoiseGate (Structural Detection, AI Edition)</title>
+  <link rel="stylesheet" href="../assets/css/ai-edition.css">
+</head>
+<body>
+
+<section>
+  <h1>SD-Ξ — NoiseGate</h1>
+  <div class="context-block">
+    <span class="context-label">Book</span>
+    <span class="context-value">3 — Structural Detection (AI Edition)</span>
+  </div>
+  <div class="context-block">
+    <span class="context-label">Layer</span>
+    <span class="context-value">surface</span>
+  </div>
+  <div class="context-block">
+    <span class="context-label">Role</span>
+    <span class="context-value">noise gating and false-positive suppression</span>
+  </div>
+</section>
+
+<section>
+  <h2>Operator JSON (AI-first)</h2>
+  <pre id="ai-operator">
+{
+  "operator": "SD-Ξ",
+  "name": "NoiseGate",
+  "module": "sd.structural_detection.ai",
+  "version": "3.0-draft",
+
+  "layer": "surface",
+  "alignment": "N",
+
+  "role": "Suppresses noise and false positives in detection fields.",
+
+  "phases": [
+    "filter",
+    "confirm"
+  ],
+
+  "inputs": {
+    "signal_fields": "from SD-Σd",
+    "anomaly_map": "from SD-Γ",
+    "lattice_scan_fields": "from SD-Λ"
+  },
+
+  "outputs": {
+    "noise_gate_fields": true,
+    "filtered_signal_fields": true
+  },
+
+  "constraints": {
+    "false_positive_suppression": true,
+    "must_not_suppress_PX_001_through_PX_010": true
+  }
+}
+  </pre>
+</section>
+
+</body>
+</html>

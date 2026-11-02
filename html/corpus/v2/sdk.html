@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/corpus/v2/sdk.md">
+  <title>RTT/SDK (Beta)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/corpus/v2/sdk.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/corpus/v2/sdk.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>sdk </p>
+<h2 id="rttsdk-beta">RTT/SDK (Beta)</h2>
+<ul>
+<li><a href="RTT_sdk_module.json"><code>RTT_sdk_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+<p>The RTT/SDK provides a minimal, stable, and forward‑compatible interface for interacting with the API/RTT. It supports early RTT‑Inside integrations across browsers, services, and research environments while the full vST substrate remains in development.</p>
+<p>This SDK defines the <strong>shape</strong> of <a href="https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">RTT</a>/<a href="https://zenodo.org/communities/vst">vST</a> interactions without exposing internal substrate logic. It is safe for early adopters and suitable for experimentation, prototyping, and structural‑awareness tooling.</p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<h2 id="features">Features</h2>
+<ul>
+<li>Send RTT beacon events  </li>
+<li>Create and validate RTT site profiles  </li>
+<li>Prepare vST‑beta diagnostics payloads  </li>
+<li>Unified client for all RTT API endpoints  </li>
+<li>Identical API surface across JavaScript and Python  </li>
+<li>Stable versioning (<code>0.1.0</code>) for long‑term compatibility  </li>
+</ul>
+<hr>
+<h2 id="directory-structure">Directory Structure</h2>
+<pre><code>docs/rtt-sdk/
+├── beacon.js
+├── beacon.py
+├── client.js
+├── client.py
+├── diagnostics.js
+├── diagnostics.py
+├── index.js
+├── profile.js
+├── profile.py
+└── __init__.py
+</code></pre>
+<p>Each file provides a minimal, well‑defined interface for its domain:</p>
+<ul>
+<li><strong>beacon</strong> — session IDs, structural snapshots, beacon payloads  </li>
+<li><strong>profile</strong> — RTT‑Inside profile creation and validation  </li>
+<li><strong>diagnostics</strong> — vST‑beta payload builders (placeholders)  </li>
+<li><strong>client</strong> — unified RTT API client (JS + Python)  </li>
+<li><strong>index / __init__</strong> — clean package exports  </li>
+</ul>
+<hr>
+<h2 id="javascript-usage">JavaScript Usage</h2>
+<h3 id="install-local-copy">Install (local copy)</h3>
+<p>Place the SDK folder in your project and import:</p>
+<pre><code class="language-js">import { RTTClient } from &quot;./rtt-sdk/index.js&quot;;
+
+const client = new RTTClient();
+
+await client.beacon({
+  site: &quot;example.com&quot;,
+  event: &quot;page_load&quot;,
+  ts: new Date().toISOString()
+});
+</code></pre>
+<h3 id="build-a-beacon-payload">Build a Beacon Payload</h3>
+<pre><code class="language-js">import { build_beacon_payload, create_session_id } from &quot;./rtt-sdk/beacon.js&quot;;
+
+const payload = build_beacon_payload({
+  site: &quot;example.com&quot;,
+  session: create_session_id(),
+  event: &quot;manual_ping&quot;
+});
+</code></pre>
+<h3 id="manage-profiles">Manage Profiles</h3>
+<pre><code class="language-js">import { create_profile } from &quot;./rtt-sdk/profile.js&quot;;
+
+const profile = create_profile({
+  version: &quot;1.0&quot;,
+  supports: [&quot;coherence&quot;],
+  contact: &quot;ops@example.com&quot;
+});
+
+await client.setProfile(&quot;example.com&quot;, profile);
+</code></pre>
+<hr>
+<h2 id="python-usage">Python Usage</h2>
+<h3 id="import">Import</h3>
+<pre><code class="language-python">from rtt_sdk import RTTClient, build_beacon_payload, create_session_id
+</code></pre>
+<h3 id="send-a-beacon">Send a Beacon</h3>
+<pre><code class="language-python">client = RTTClient()
+
+payload = build_beacon_payload(
+    site=&quot;example.com&quot;,
+    session=create_session_id(),
+    event=&quot;page_load&quot;
+)
+
+resp = client.beacon(payload)
+print(resp)
+</code></pre>
+<h3 id="create-a-profile">Create a Profile</h3>
+<pre><code class="language-python">from rtt_sdk import create_profile
+
+profile = create_profile(
+    version=&quot;1.0&quot;,
+    supports=[&quot;coherence&quot;],
+    contact=&quot;ops@example.com&quot;
+)
+
+client.set_profile(&quot;example.com&quot;, profile)
+</code></pre>
+<hr>
+<h2 id="diagnostics-reserved">Diagnostics (Reserved)</h2>
+<p>The following methods exist for future vST‑beta validators:</p>
+<ul>
+<li><code>validate(payload)</code>  </li>
+<li><code>corridor(payload)</code>  </li>
+<li><code>topology(payload)</code>  </li>
+</ul>
+<p>These endpoints currently return placeholder responses but define the stable API surface for future structural analysis.</p>
+<hr>
+<h2 id="api-reference">API Reference</h2>
+<p>Full RTT API documentation is available in:</p>
+<pre><code>docs/api/rtt/
+</code></pre>
+<p>Key files:</p>
+<ul>
+<li><strong>README.md</strong> — overview of the RTT API  </li>
+<li><strong>beacon.md</strong> — beacon endpoint  </li>
+<li><strong>profile.md</strong> — RTT‑Inside site profiles  </li>
+<li><strong>diagnostics.md</strong> — vST‑beta endpoint shapes  </li>
+<li><strong>router.md</strong> — endpoint wiring and routing philosophy  </li>
+</ul>
+<hr>
+<h2 id="versioning">Versioning</h2>
+<p>The SDK follows semantic versioning:</p>
+<ul>
+<li><strong>0.1.x</strong> — early adopters, stable shapes, no substrate logic  </li>
+<li><strong>0.2.x</strong> — vST‑beta integration  </li>
+<li><strong>1.x.x</strong> — full validator support  </li>
+</ul>
+<hr>
+<h2 id="status">Status</h2>
+<p><strong>Beta.</strong><br>
+The SDK is stable for integration and experimentation.<br>
+Internal substrate logic will activate as vST research becomes public.
+# <strong>RTT‑Inside Quick‑Start Guide (Beta)</strong><br>
+<em>A fast path for developers integrating RTT structural awareness into their sites or services.</em></p>
+<p>RTT‑Inside provides a lightweight, forward‑compatible way for websites, applications, and backend services to participate in the RTT ecosystem. These integrations support early structural awareness, coherence sampling, and future vST‑beta features.</p>
+<p>This guide walks you through the fastest way to get RTT‑Inside running.</p>
+<hr>
+<h1 id="1-add-the-rtt-javascript-snippet-web-integration">1. Add the RTT JavaScript Snippet (Web Integration)</h1>
+<p>The simplest way to enable RTT‑Inside on a website is to include the <code>rtt.js</code> client.</p>
+<pre><code class="language-html">&lt;script src=&quot;https://docs.triadicframeworks.org/rtt.js&quot; data-site=&quot;example.com&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>This automatically:</p>
+<ul>
+<li>sends page‑load and visibility beacons  </li>
+<li>collects lightweight structural snapshots  </li>
+<li>registers the site with RTT  </li>
+<li>exposes a global <code>RTT</code> object for optional manual use  </li>
+</ul>
+<h3 id="optional-manual-beacon">Optional: Manual Beacon</h3>
+<pre><code class="language-js">RTT.ping(&quot;user_action&quot;);
+</code></pre>
+<h3 id="optional-inspect-structure">Optional: Inspect Structure</h3>
+<pre><code class="language-js">console.log(RTT.getStructureSnapshot());
+</code></pre>
+<hr>
+<h1 id="2-declare-rttinside-support-optional-but-recommended">2. Declare RTT‑Inside Support (Optional but Recommended)</h1>
+<p>Add RTT metadata to your site to signal RTT‑Inside compatibility.</p>
+<h3 id="option-a-html-meta-tags">Option A — HTML <code>&lt;meta&gt;</code> tags</h3>
+<pre><code class="language-html">&lt;meta name=&quot;rtt:coherence&quot; content=&quot;declared&quot;&gt;
+&lt;meta name=&quot;rtt:version&quot; content=&quot;1.0&quot;&gt;
+</code></pre>
+<h3 id="option-b-rttjson-manifest">Option B — <code>/rtt.json</code> manifest</h3>
+<p>Create a file at the root of your site:</p>
+<pre><code>/rtt.json
+</code></pre>
+<pre><code class="language-json">{
+  &quot;rtt_version&quot;: &quot;1.0&quot;,
+  &quot;supports&quot;: [&quot;coherence&quot;, &quot;drift&quot;],
+  &quot;contact&quot;: &quot;ops@example.com&quot;
+}
+</code></pre>
+<p>This allows RTT tools and validators to recognize your site.</p>
+<hr>
+<h1 id="3-use-the-rtt-sdk-javascript-or-python">3. Use the RTT SDK (JavaScript or Python)</h1>
+<p>The SDK provides a clean, stable interface for interacting with the RTT API.</p>
+<hr>
+<h2 id="javascript-example">JavaScript Example</h2>
+<pre><code class="language-js">import { RTTClient } from &quot;./rtt-sdk/index.js&quot;;
+
+const client = new RTTClient();
+
+await client.beacon({
+  site: &quot;example.com&quot;,
+  event: &quot;page_load&quot;,
+  ts: new Date().toISOString()
+});
+</code></pre>
+<hr>
+<h2 id="python-example">Python Example</h2>
+<pre><code class="language-python">from rtt_sdk import RTTClient, build_beacon_payload, create_session_id
+
+client = RTTClient()
+
+payload = build_beacon_payload(
+    site=&quot;example.com&quot;,
+    session=create_session_id(),
+    event=&quot;page_load&quot;
+)
+
+resp = client.beacon(payload)
+print(resp)
+</code></pre>
+<hr>
+<h1 id="4-register-a-site-profile-optional">4. Register a Site Profile (Optional)</h1>
+<p>Profiles allow RTT to understand your site’s capabilities.</p>
+<h3 id="javascript">JavaScript</h3>
+<pre><code class="language-js">import { create_profile } from &quot;./rtt-sdk/profile.js&quot;;
+
+const profile = create_profile({
+  version: &quot;1.0&quot;,
+  supports: [&quot;coherence&quot;],
+  contact: &quot;ops@example.com&quot;
+});
+
+await client.setProfile(&quot;example.com&quot;, profile);
+</code></pre>
+<h3 id="python">Python</h3>
+<pre><code class="language-python">from rtt_sdk import create_profile
+
+profile = create_profile(
+    version=&quot;1.0&quot;,
+    supports=[&quot;coherence&quot;],
+    contact=&quot;ops@example.com&quot;
+)
+
+client.set_profile(&quot;example.com&quot;, profile)
+</code></pre>
+<hr>
+<h1 id="5-prepare-for-vstbeta-diagnostics-reserved">5. Prepare for vST‑Beta Diagnostics (Reserved)</h1>
+<p>These endpoints are placeholders but stable:</p>
+<ul>
+<li><code>/validate</code>  </li>
+<li><code>/corridor</code>  </li>
+<li><code>/topology</code>  </li>
+</ul>
+<p>You can already shape your payloads using the SDK.</p>
+<h3 id="example-python">Example (Python)</h3>
+<pre><code class="language-python">from rtt_sdk import build_validate_payload
+
+payload = build_validate_payload(
+    system_map={&quot;services&quot;: [&quot;auth&quot;, &quot;api&quot;, &quot;db&quot;]},
+    flows=[],
+    constraints=[]
+)
+
+client.validate(payload)
+</code></pre>
+<hr>
+<h1 id="6-verify-integration">6. Verify Integration</h1>
+<p>Once RTT‑Inside is active, you can:</p>
+<ul>
+<li>check your server logs for beacon events  </li>
+<li>inspect RTT API responses  </li>
+<li>confirm your profile is registered  </li>
+<li>use the SDK to send manual test events  </li>
+</ul>
+<p>Everything is safe, minimal, and forward‑compatible.</p>
+<hr>
+<h1 id="7-where-to-go-next">7. Where to Go Next</h1>
+<ul>
+<li><strong>RTT API Docs:</strong> <code>docs/api/rtt/</code>  </li>
+<li><strong>SDK Reference:</strong> <code>docs/rtt-sdk/README.md</code>  </li>
+<li><strong>Router Overview:</strong> <code>docs/api/rtt/router.md</code>  </li>
+</ul>
+<p>These documents provide deeper detail for advanced integrations.
+```python</p>
+<h1 id="beaconpy-helper-utilities-for-rtt-beacon-events-beta">beacon.py — helper utilities for RTT beacon events (beta)</h1>
+<p>import time
+import random</p>
+<p>def create_session_id():
+    return "rtt-" + hex(int(time.time()))[2:] + "-" + hex(random.getrandbits(32))[2:]</p>
+<p>def collect_structure_snapshot():
+    # Python SDK cannot inspect browser DOM; placeholder shape only.
+    return {
+        "url": "",
+        "title": "",
+        "nav_count": 0,
+        "main_count": 0,
+        "form_count": 0,
+        "button_count": 0,
+        "dom_nodes": 0
+    }</p>
+<p>def build_beacon_payload(site, session, event):
+    return {
+        "site": site,
+        "session": session,
+        "event": event,
+        "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "structure": collect_structure_snapshot()
+    }</p>
+<pre><code>```python
+import requests
+import json
+
+class RTTClient:
+    def __init__(self, base_url=&quot;https://docs.triadicframeworks.org/api/rtt&quot;):
+        self.base_url = base_url
+        self.version = &quot;0.1.0&quot;
+
+    def beacon(self, payload):
+        r = requests.post(f&quot;{self.base_url}/beacon&quot;, json=payload)
+        return r.json()
+
+    def get_profile(self, site):
+        r = requests.get(f&quot;{self.base_url}/profile/{site}&quot;)
+        return r.json()
+
+    def set_profile(self, site, profile):
+        r = requests.post(f&quot;{self.base_url}/profile/{site}&quot;, json=profile)
+        return r.json()
+
+    # Diagnostics (reserved)
+    def validate(self, payload):
+        r = requests.post(f&quot;{self.base_url}/validate&quot;, json=payload)
+        return r.json()
+
+    def corridor(self, payload):
+        r = requests.post(f&quot;{self.base_url}/corridor&quot;, json=payload)
+        return r.json()
+
+    def topology(self, payload):
+        r = requests.post(f&quot;{self.base_url}/topology&quot;, json=payload)
+        return r.json()
+</code></pre>
+<p>```python</p>
+<h1 id="diagnosticspy-vst-beta-diagnostics-helpers-placeholders">diagnostics.py — vST-beta diagnostics helpers (placeholders)</h1>
+<p>def build_validate_payload(system_map=None, flows=None, constraints=None):
+    return {
+        "system_map": system_map or {},
+        "flows": flows or [],
+        "constraints": constraints or []
+    }</p>
+<p>def build_corridor_payload(data=None):
+    return data or {}</p>
+<p>def build_topology_payload(data=None):
+    return data or {}</p>
+<h1 id="these-helpers-define-the-shape-of-future-vst-interactions">These helpers define the shape of future vST interactions.</h1>
+<h1 id="they-do-not-implement-substrate-logic">They do not implement substrate logic.</h1>
+<pre><code>```json
+{
+  &quot;name&quot;: &quot;rtt-sdk&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;description&quot;: &quot;RTT client SDK (beta) — minimal, stable, forward-compatible with vST.&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;type&quot;: &quot;module&quot;,
+  &quot;keywords&quot;: [
+    &quot;rtt&quot;,
+    &quot;triadicframeworks&quot;,
+    &quot;resonance-time&quot;,
+    &quot;vst&quot;,
+    &quot;sdk&quot;
+  ],
+  &quot;author&quot;: &quot;TriadicFrameworks&quot;,
+  &quot;license&quot;: &quot;MIT&quot;
+}
+</code></pre>
+<p>```python</p>
+<h1 id="profilepy-helper-utilities-for-rtt-site-profiles-beta">profile.py — helper utilities for RTT site profiles (beta)</h1>
+<p>def create_profile(version="1.0", supports=None, contact=""):
+    if supports is None:
+        supports = []
+    return {
+        "rtt_version": version,
+        "supports": supports,
+        "contact": contact
+    }</p>
+<p>def validate_profile(profile):
+    if not isinstance(profile, dict):
+        return False
+    if "rtt_version" not in profile:
+        return False
+    if "supports" not in profile or not isinstance(profile["supports"], list):
+        return False
+    return True</p>
+<pre><code># **RTT‑Inside for Backend Services (Beta)**  
+*A practical guide for integrating RTT structural awareness into servers, microservices, and full‑stack systems.*
+
+Backend services can participate in the RTT ecosystem just as easily as websites.  
+RTT‑Inside provides a minimal, stable API surface that allows services to:
+
+- send structural heartbeat events  
+- declare RTT‑Inside capabilities  
+- prepare for vST‑beta diagnostics  
+- unify system‑level clarity and coherence signals  
+
+This guide walks backend developers through the recommended integration patterns.
+
+---
+
+# 1. Install or Vendor the RTT SDK
+
+Backend services can use either the **JavaScript** or **Python** SDK.
+
+### JavaScript (Node)
+
+```js
+import { RTTClient } from &quot;./rtt-sdk/index.js&quot;;
+
+const client = new RTTClient();
+</code></pre>
+<h3 id="python_1">Python</h3>
+<pre><code class="language-python">from rtt_sdk import RTTClient
+client = RTTClient()
+</code></pre>
+<p>The SDK provides a stable, versioned interface for all RTT endpoints.</p>
+<hr>
+<h1 id="2-send-structural-heartbeats">2. Send Structural Heartbeats</h1>
+<p>Backend services don’t have a DOM, so their beacon payloads are simpler — but the shape is identical.</p>
+<h3 id="javascript-example_1">JavaScript Example</h3>
+<pre><code class="language-js">await client.beacon({
+  site: &quot;auth-service&quot;,
+  session: &quot;srv-&quot; + Date.now(),
+  event: &quot;heartbeat&quot;,
+  ts: new Date().toISOString(),
+  structure: {
+    url: &quot;internal://auth&quot;,
+    title: &quot;Auth Service&quot;,
+    nav_count: 0,
+    main_count: 0,
+    form_count: 0,
+    button_count: 0,
+    dom_nodes: 0
+  }
+});
+</code></pre>
+<h3 id="python-example_1">Python Example</h3>
+<pre><code class="language-python">payload = {
+    &quot;site&quot;: &quot;auth-service&quot;,
+    &quot;session&quot;: &quot;srv-12345&quot;,
+    &quot;event&quot;: &quot;heartbeat&quot;,
+    &quot;ts&quot;: &quot;2026-01-19T15:00:00Z&quot;,
+    &quot;structure&quot;: {
+        &quot;url&quot;: &quot;internal://auth&quot;,
+        &quot;title&quot;: &quot;Auth Service&quot;,
+        &quot;nav_count&quot;: 0,
+        &quot;main_count&quot;: 0,
+        &quot;form_count&quot;: 0,
+        &quot;button_count&quot;: 0,
+        &quot;dom_nodes&quot;: 0
+    }
+}
+
+client.beacon(payload)
+</code></pre>
+<p><strong>Recommended cadence:</strong><br>
+- every 30–60 seconds for active services<br>
+- on startup and shutdown<br>
+- after major configuration changes  </p>
+<p>These heartbeats help RTT build a structural map of your system.</p>
+<hr>
+<h1 id="3-register-a-service-profile">3. Register a Service Profile</h1>
+<p>Profiles allow RTT to understand what your service supports.</p>
+<h3 id="javascript_1">JavaScript</h3>
+<pre><code class="language-js">import { create_profile } from &quot;./rtt-sdk/profile.js&quot;;
+
+const profile = create_profile({
+  version: &quot;1.0&quot;,
+  supports: [&quot;coherence&quot;, &quot;drift&quot;],
+  contact: &quot;infra@example.com&quot;
+});
+
+await client.setProfile(&quot;auth-service&quot;, profile);
+</code></pre>
+<h3 id="python_2">Python</h3>
+<pre><code class="language-python">from rtt_sdk import create_profile
+
+profile = create_profile(
+    version=&quot;1.0&quot;,
+    supports=[&quot;coherence&quot;, &quot;drift&quot;],
+    contact=&quot;infra@example.com&quot;
+)
+
+client.set_profile(&quot;auth-service&quot;, profile)
+</code></pre>
+<p>Profiles are optional but recommended for multi‑service architectures.</p>
+<hr>
+<h1 id="4-integrate-rtt-into-your-observability-layer">4. Integrate RTT into Your Observability Layer</h1>
+<p>Backend services can incorporate RTT signals into:</p>
+<ul>
+<li>logs  </li>
+<li>metrics  </li>
+<li>dashboards  </li>
+<li>health checks  </li>
+<li>distributed tracing  </li>
+</ul>
+<h3 id="example-logging-rtt-heartbeats">Example: Logging RTT Heartbeats</h3>
+<pre><code class="language-js">console.log(&quot;[RTT] heartbeat sent&quot;, payload);
+</code></pre>
+<h3 id="example-prometheus-counter">Example: Prometheus Counter</h3>
+<pre><code>rtt_beacons_total{service=&quot;auth&quot;} 42
+</code></pre>
+<h3 id="example-grafana-panel">Example: Grafana Panel</h3>
+<ul>
+<li>RTT heartbeat frequency  </li>
+<li>RTT drift indicators  </li>
+<li>RTT coherence score (future vST)  </li>
+</ul>
+<p>This prepares your observability stack for vST‑beta diagnostics.</p>
+<hr>
+<h1 id="5-prepare-for-vstbeta-diagnostics-reserved_1">5. Prepare for vST‑Beta Diagnostics (Reserved)</h1>
+<p>Backend services can already shape payloads for future validators.</p>
+<h3 id="javascript-example_2">JavaScript Example</h3>
+<pre><code class="language-js">await client.validate({
+  system_map: { services: [&quot;auth&quot;, &quot;api&quot;, &quot;db&quot;] },
+  flows: [],
+  constraints: []
+});
+</code></pre>
+<h3 id="python-example_2">Python Example</h3>
+<pre><code class="language-python">from rtt_sdk import build_validate_payload
+
+payload = build_validate_payload(
+    system_map={&quot;services&quot;: [&quot;auth&quot;, &quot;api&quot;, &quot;db&quot;]},
+    flows=[],
+    constraints=[]
+)
+
+client.validate(payload)
+</code></pre>
+<p>These endpoints currently return placeholder responses but define the stable API surface.</p>
+<hr>
+<h1 id="6-recommended-integration-patterns">6. Recommended Integration Patterns</h1>
+<h3 id="a-microservices">A. Microservices</h3>
+<p>Each service sends:</p>
+<ul>
+<li>startup beacon  </li>
+<li>periodic heartbeat  </li>
+<li>shutdown beacon  </li>
+<li>optional profile  </li>
+</ul>
+<h3 id="b-monolithic-backends">B. Monolithic Backends</h3>
+<p>Send:</p>
+<ul>
+<li>per‑module heartbeats  </li>
+<li>per‑endpoint drift signals  </li>
+<li>system‑level topology payloads  </li>
+</ul>
+<h3 id="c-datacenters-research-labs">C. Datacenters / Research Labs</h3>
+<p>Use:</p>
+<ul>
+<li><code>/validate</code> for coherence  </li>
+<li><code>/corridor</code> for flow alignment  </li>
+<li><code>/topology</code> for triadic decomposition  </li>
+</ul>
+<p>This is the earliest path to vST‑beta adoption.</p>
+<hr>
+<h1 id="7-verification-checklist">7. Verification Checklist</h1>
+<p>Your backend is RTT‑Inside ready if:</p>
+<ul>
+<li>[ ] RTTClient is configured  </li>
+<li>[ ] periodic beacons are sent  </li>
+<li>[ ] service profile is registered  </li>
+<li>[ ] logs show RTT events  </li>
+<li>[ ] observability stack receives RTT signals  </li>
+<li>[ ] diagnostics payloads can be generated  </li>
+</ul>
+<p>This ensures smooth migration to future vST validators.</p>
+<hr>
+<h1 id="8-where-to-go-next">8. Where to Go Next</h1>
+<ul>
+<li><strong>RTT API Docs:</strong> <code>docs/api/rtt/</code>  </li>
+<li><strong>SDK Reference:</strong> <code>docs/rtt-sdk/README.md</code>  </li>
+<li><strong>Quick‑Start Guide:</strong> <code>docs/rtt-sdk/quickstart.md</code>  </li>
+<li><strong>Router Overview:</strong> <code>docs/api/rtt/router.md</code>  </li>
+</ul>
+<p>These documents provide deeper detail for advanced integrations.
+# <strong>RTT‑Inside for Browser Extensions (Beta)</strong><br>
+<em>A guide for building RTT‑aware extensions for Edge, Firefox, and Chromium‑based browsers.</em></p>
+<p>Browser extensions are a natural fit for RTT‑Inside. They allow end‑users to experience structural clarity, coherence cues, and early resonance‑time awareness directly in their browsing environment — without requiring sites to integrate anything.</p>
+<p>This guide outlines the recommended patterns for building RTT‑aware extensions that interact with the RTT API and the <code>rtt.js</code> ecosystem.</p>
+<hr>
+<h1 id="1-extension-capabilities">1. Extension Capabilities</h1>
+<p>An RTT‑Inside extension can:</p>
+<ul>
+<li>inspect page structure  </li>
+<li>detect drift or clarity issues  </li>
+<li>send RTT beacon events  </li>
+<li>annotate pages with RTT insights  </li>
+<li>read RTT metadata (<code>&lt;meta&gt;</code> tags, <code>/rtt.json</code>)  </li>
+<li>provide a sidebar or popup UI for structural clarity  </li>
+</ul>
+<p>Extensions do <strong>not</strong> need access to vST internals — they rely on the stable RTT API surface.</p>
+<hr>
+<h1 id="2-basic-extension-architecture">2. Basic Extension Architecture</h1>
+<p>A typical RTT‑Inside extension includes:</p>
+<pre><code>manifest.json
+background.js
+content.js
+sidebar.html / popup.html
+rtt-extension.js (optional helper)
+</code></pre>
+<h3 id="key-roles">Key roles:</h3>
+<ul>
+<li><strong>content script</strong>: inspects the page, collects structure, reads RTT metadata  </li>
+<li><strong>background script</strong>: sends RTT beacons, manages sessions  </li>
+<li><strong>UI (popup/sidebar)</strong>: displays clarity indicators, drift warnings, or structure maps  </li>
+</ul>
+<hr>
+<h1 id="3-collecting-structural-snapshots">3. Collecting Structural Snapshots</h1>
+<p>Extensions can reuse the same structural shape as <code>rtt.js</code>.</p>
+<h3 id="example-content-script">Example (content script)</h3>
+<pre><code class="language-js">function collectStructure() {
+  return {
+    url: window.location.href,
+    title: document.title,
+    nav_count: document.querySelectorAll(&quot;nav, header, footer&quot;).length,
+    main_count: document.querySelectorAll(&quot;main, [role='main']&quot;).length,
+    form_count: document.querySelectorAll(&quot;form&quot;).length,
+    button_count: document.querySelectorAll(&quot;button, [role='button']&quot;).length,
+    dom_nodes: document.getElementsByTagName(&quot;*&quot;).length
+  };
+}
+
+browser.runtime.sendMessage({
+  type: &quot;rtt-structure&quot;,
+  structure: collectStructure()
+});
+</code></pre>
+<p>This mirrors the RTT beacon payload shape exactly.</p>
+<hr>
+<h1 id="4-sending-rtt-beacon-events">4. Sending RTT Beacon Events</h1>
+<p>The background script can forward events to the RTT API.</p>
+<h3 id="example-backgroundjs">Example (background.js)</h3>
+<pre><code class="language-js">async function sendBeacon(structure) {
+  const payload = {
+    site: &quot;browser-extension&quot;,
+    session: &quot;ext-&quot; + Date.now(),
+    event: &quot;page_inspect&quot;,
+    ts: new Date().toISOString(),
+    structure
+  };
+
+  await fetch(&quot;https://docs.triadicframeworks.org/api/rtt/beacon&quot;, {
+    method: &quot;POST&quot;,
+    headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+    body: JSON.stringify(payload)
+  });
+}
+
+browser.runtime.onMessage.addListener((msg) =&gt; {
+  if (msg.type === &quot;rtt-structure&quot;) {
+    sendBeacon(msg.structure);
+  }
+});
+</code></pre>
+<p>This allows RTT to build a cross‑site structural map of the user’s browsing environment.</p>
+<hr>
+<h1 id="5-reading-rtt-metadata-from-pages">5. Reading RTT Metadata from Pages</h1>
+<p>Extensions can detect RTT‑Inside sites by reading:</p>
+<h3 id="a-meta-tags">A. <code>&lt;meta&gt;</code> tags</h3>
+<pre><code class="language-js">const coherence = document.querySelector(&quot;meta[name='rtt:coherence']&quot;);
+const version = document.querySelector(&quot;meta[name='rtt:version']&quot;);
+</code></pre>
+<h3 id="b-rttjson-manifest">B. <code>/rtt.json</code> manifest</h3>
+<pre><code class="language-js">fetch(&quot;/rtt.json&quot;)
+  .then(r =&gt; r.json())
+  .then(profile =&gt; {
+    console.log(&quot;RTT profile:&quot;, profile);
+  })
+  .catch(() =&gt; {});
+</code></pre>
+<p>This allows the extension to adapt its UI based on site capabilities.</p>
+<hr>
+<h1 id="6-displaying-rtt-insights-to-users">6. Displaying RTT Insights to Users</h1>
+<p>Extensions can surface RTT clarity indicators through:</p>
+<h3 id="a-popup-ui">A. Popup UI</h3>
+<ul>
+<li>coherence score (placeholder)  </li>
+<li>drift warnings  </li>
+<li>structural summary  </li>
+<li>RTT metadata  </li>
+</ul>
+<h3 id="b-sidebar-panel-edgefriendly">B. Sidebar Panel (Edge‑friendly)</h3>
+<p>A sidebar can show:</p>
+<ul>
+<li>triadic decomposition of the DOM  </li>
+<li>navigation corridor hints  </li>
+<li>clarity/density indicators  </li>
+<li>RTT‑Inside status  </li>
+</ul>
+<h3 id="c-page-overlays-optional">C. Page Overlays (optional)</h3>
+<p>Extensions may highlight:</p>
+<ul>
+<li>confusing UI regions  </li>
+<li>inconsistent navigation  </li>
+<li>structural drift  </li>
+</ul>
+<p>These overlays are purely client‑side and do not modify the site.</p>
+<hr>
+<h1 id="7-optional-integrating-with-rttjs">7. Optional: Integrating with <code>rtt.js</code></h1>
+<p>If a site already includes <code>rtt.js</code>, the extension can:</p>
+<ul>
+<li>read the global <code>RTT</code> object  </li>
+<li>inspect its structure snapshot  </li>
+<li>piggyback on its beacon events  </li>
+<li>enhance its clarity indicators  </li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code class="language-js">if (window.RTT) {
+  const snapshot = window.RTT.getStructureSnapshot();
+  console.log(&quot;RTT snapshot:&quot;, snapshot);
+}
+</code></pre>
+<p>This creates a smooth ecosystem between site‑level and extension‑level RTT awareness.</p>
+<hr>
+<h1 id="8-preparing-for-vstbeta-diagnostics">8. Preparing for vST‑Beta Diagnostics</h1>
+<p>Extensions can prepare payloads for future validators:</p>
+<pre><code class="language-js">const payload = {
+  system_map: { pages: [window.location.href] },
+  flows: [],
+  constraints: []
+};
+
+fetch(&quot;https://docs.triadicframeworks.org/api/rtt/validate&quot;, {
+  method: &quot;POST&quot;,
+  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+  body: JSON.stringify(payload)
+});
+</code></pre>
+<p>These endpoints currently return placeholder responses but define the stable API shape.</p>
+<hr>
+<h1 id="9-recommended-extension-patterns">9. Recommended Extension Patterns</h1>
+<h3 id="a-lightweight-rtt-companion">A. Lightweight RTT Companion</h3>
+<ul>
+<li>structural snapshot  </li>
+<li>beacon sender  </li>
+<li>popup UI  </li>
+</ul>
+<h3 id="b-full-rttaware-browser-console">B. Full RTT‑Aware Browser Console</h3>
+<ul>
+<li>sidebar panel  </li>
+<li>DOM triadic decomposition  </li>
+<li>drift detection  </li>
+<li>clarity overlays  </li>
+</ul>
+<h3 id="c-developermode-rtt-inspector">C. Developer‑Mode RTT Inspector</h3>
+<ul>
+<li>detailed structure maps  </li>
+<li>RTT metadata inspector  </li>
+<li>corridor flow visualizer  </li>
+</ul>
+<p>These patterns can coexist or evolve independently.</p>
+<hr>
+<h1 id="10-verification-checklist">10. Verification Checklist</h1>
+<p>Your extension is RTT‑Inside ready if:</p>
+<ul>
+<li>[ ] it collects structural snapshots  </li>
+<li>[ ] it sends RTT beacon events  </li>
+<li>[ ] it reads RTT metadata  </li>
+<li>[ ] it displays clarity indicators  </li>
+<li>[ ] it can generate diagnostics payloads  </li>
+<li>[ ] it uses the stable RTT API surface  </li>
+</ul>
+<p>This ensures compatibility with future vST‑beta validators.</p>
+<hr>
+<h1 id="11-where-to-go-next">11. Where to Go Next</h1>
+<ul>
+<li><strong>RTT API Docs:</strong> <code>docs/api/rtt/</code>  </li>
+<li><strong>SDK Reference:</strong> <code>docs/rtt-sdk/README.md</code>  </li>
+<li><strong>Quick‑Start Guide:</strong> <code>docs/rtt-sdk/quickstart.md</code>  </li>
+<li><strong>Backend Services Guide:</strong> <code>docs/rtt-sdk/backend.md</code>  </li>
+</ul>
+<p>This completes the RTT‑Inside onboarding suite.
+# <strong>RTT‑Inside for Datacenters &amp; Research Labs (Beta)</strong><br>
+<em>A guide for integrating RTT structural awareness into large‑scale systems, research environments, and full‑stack operational workflows.</em></p>
+<p>Datacenters and research labs operate at a scale where structural clarity, coherence, and drift detection become critical. RTT‑Inside provides a minimal, stable interface for early adopters to evaluate their systems using RTT’s structural lens while preparing for future vST‑beta validators.</p>
+<p>This guide outlines recommended integration patterns for high‑complexity environments.</p>
+<hr>
+<h1 id="1-why-datacenters-benefit-from-rttinside">1. Why Datacenters Benefit from RTT‑Inside</h1>
+<p>Datacenters and research labs often face:</p>
+<ul>
+<li>complex service topologies  </li>
+<li>multi‑layered dependencies  </li>
+<li>drift between intended and actual system behavior  </li>
+<li>unclear or inconsistent operational flows  </li>
+<li>difficulty predicting structural failure modes  </li>
+</ul>
+<p>RTT‑Inside offers:</p>
+<ul>
+<li>early coherence indicators  </li>
+<li>structural drift detection  </li>
+<li>corridor alignment insights  </li>
+<li>topology‑level clarity mapping  </li>
+<li>a future‑ready interface for vST validators  </li>
+</ul>
+<p>These capabilities help operators reason about their systems with greater precision.</p>
+<hr>
+<h1 id="2-install-the-rtt-sdk-python-or-javascript">2. Install the RTT SDK (Python or JavaScript)</h1>
+<p>Most datacenter tooling is Python‑heavy, but both SDKs are supported.</p>
+<h3 id="python_3">Python</h3>
+<pre><code class="language-python">from rtt_sdk import RTTClient
+client = RTTClient()
+</code></pre>
+<h3 id="javascript-node">JavaScript (Node)</h3>
+<pre><code class="language-js">import { RTTClient } from &quot;./rtt-sdk/index.js&quot;;
+const client = new RTTClient();
+</code></pre>
+<p>The SDK provides a unified interface for all RTT endpoints.</p>
+<hr>
+<h1 id="3-send-systemlevel-beacon-events">3. Send System‑Level Beacon Events</h1>
+<p>Datacenters can send periodic structural heartbeats representing:</p>
+<ul>
+<li>cluster state  </li>
+<li>service health  </li>
+<li>topology snapshots  </li>
+<li>configuration changes  </li>
+<li>workload transitions  </li>
+</ul>
+<h3 id="python-example_3">Python Example</h3>
+<pre><code class="language-python">payload = {
+    &quot;site&quot;: &quot;datacenter-east&quot;,
+    &quot;session&quot;: &quot;dc-&quot; + str(int(time.time())),
+    &quot;event&quot;: &quot;cluster_heartbeat&quot;,
+    &quot;ts&quot;: &quot;2026-01-19T15:30:00Z&quot;,
+    &quot;structure&quot;: {
+        &quot;url&quot;: &quot;internal://cluster&quot;,
+        &quot;title&quot;: &quot;Cluster State&quot;,
+        &quot;nav_count&quot;: 0,
+        &quot;main_count&quot;: 0,
+        &quot;form_count&quot;: 0,
+        &quot;button_count&quot;: 0,
+        &quot;dom_nodes&quot;: 0
+    }
+}
+
+client.beacon(payload)
+</code></pre>
+<h3 id="recommended-cadence">Recommended cadence</h3>
+<ul>
+<li>every 30 seconds for active clusters  </li>
+<li>on topology changes  </li>
+<li>before and after deployments  </li>
+<li>during incident response  </li>
+</ul>
+<p>These signals help RTT build a structural timeline of your environment.</p>
+<hr>
+<h1 id="4-register-datacenter-profiles">4. Register Datacenter Profiles</h1>
+<p>Profiles allow RTT to understand the capabilities and scope of your environment.</p>
+<h3 id="example-profile">Example Profile</h3>
+<pre><code class="language-python">from rtt_sdk import create_profile
+
+profile = create_profile(
+    version=&quot;1.0&quot;,
+    supports=[&quot;coherence&quot;, &quot;drift&quot;, &quot;corridor&quot;],
+    contact=&quot;infra@datacenter.example&quot;
+)
+
+client.set_profile(&quot;datacenter-east&quot;, profile)
+</code></pre>
+<p>Profiles are optional but recommended for multi‑cluster or multi‑region setups.</p>
+<hr>
+<h1 id="5-integrate-rtt-with-observability-systems">5. Integrate RTT with Observability Systems</h1>
+<p>Datacenters can incorporate RTT signals into:</p>
+<h3 id="metrics-prometheus">Metrics (Prometheus)</h3>
+<pre><code>rtt_beacons_total{cluster=&quot;east&quot;} 128
+rtt_drift_events_total{cluster=&quot;east&quot;} 3
+</code></pre>
+<h3 id="dashboards-grafana">Dashboards (Grafana)</h3>
+<p>Panels may include:</p>
+<ul>
+<li>RTT heartbeat frequency  </li>
+<li>drift vector trends  </li>
+<li>corridor alignment indicators  </li>
+<li>structural coherence over time  </li>
+</ul>
+<h3 id="logs-elastic-loki">Logs (Elastic / Loki)</h3>
+<pre><code>[RTT] cluster_heartbeat sent
+[RTT] drift detected in service mesh
+</code></pre>
+<h3 id="tracing-opentelemetry">Tracing (OpenTelemetry)</h3>
+<p>RTT metadata can be attached to spans for structural correlation.</p>
+<p>This prepares your observability stack for vST‑beta diagnostics.</p>
+<hr>
+<h1 id="6-prepare-for-vstbeta-diagnostics-reserved">6. Prepare for vST‑Beta Diagnostics (Reserved)</h1>
+<p>Datacenters and research labs are the primary audience for vST‑beta validators.<br>
+Even though the endpoints are placeholders today, the <strong>payload shapes are stable</strong>.</p>
+<h3 id="a-coherence-validation">A. Coherence Validation</h3>
+<pre><code class="language-python">from rtt_sdk import build_validate_payload
+
+payload = build_validate_payload(
+    system_map={&quot;nodes&quot;: 128, &quot;services&quot;: [&quot;auth&quot;, &quot;api&quot;, &quot;db&quot;]},
+    flows=[{&quot;from&quot;: &quot;api&quot;, &quot;to&quot;: &quot;db&quot;}],
+    constraints=[]
+)
+
+client.validate(payload)
+</code></pre>
+<h3 id="b-corridor-alignment">B. Corridor Alignment</h3>
+<pre><code class="language-python">client.corridor({
+    &quot;flows&quot;: [
+        {&quot;path&quot;: [&quot;ingress&quot;, &quot;api&quot;, &quot;db&quot;], &quot;latency_ms&quot;: 12}
+    ]
+})
+</code></pre>
+<h3 id="c-topology-decomposition">C. Topology Decomposition</h3>
+<pre><code class="language-python">client.topology({
+    &quot;graph&quot;: {
+        &quot;auth&quot;: [&quot;api&quot;],
+        &quot;api&quot;: [&quot;db&quot;],
+        &quot;db&quot;: []
+    }
+})
+</code></pre>
+<p>These calls currently return placeholder responses but define the future validator interface.</p>
+<hr>
+<h1 id="7-recommended-integration-patterns">7. Recommended Integration Patterns</h1>
+<h3 id="a-clusterlevel-rtt-integration">A. Cluster‑Level RTT Integration</h3>
+<ul>
+<li>periodic cluster heartbeats  </li>
+<li>topology snapshots  </li>
+<li>drift detection signals  </li>
+</ul>
+<h3 id="b-service-mesh-rtt-integration">B. Service Mesh RTT Integration</h3>
+<ul>
+<li>per‑service RTT profiles  </li>
+<li>corridor flow mapping  </li>
+<li>RTT metadata in service mesh telemetry  </li>
+</ul>
+<h3 id="c-research-lab-integration">C. Research Lab Integration</h3>
+<ul>
+<li>structural analysis of experimental systems  </li>
+<li>RTT‑aware simulation environments  </li>
+<li>vST‑beta payload generation for research workflows  </li>
+</ul>
+<h3 id="d-cicd-integration">D. CI/CD Integration</h3>
+<ul>
+<li>RTT beacon on deployment start  </li>
+<li>RTT beacon on deployment finish  </li>
+<li>drift detection post‑deployment  </li>
+</ul>
+<p>These patterns help operators reason about system behavior across time.</p>
+<hr>
+<h1 id="8-verification-checklist">8. Verification Checklist</h1>
+<p>Your datacenter or research environment is RTT‑Inside ready if:</p>
+<ul>
+<li>[ ] RTTClient is configured  </li>
+<li>[ ] cluster‑level beacons are sent  </li>
+<li>[ ] service‑level profiles are registered  </li>
+<li>[ ] observability stack receives RTT signals  </li>
+<li>[ ] topology and flow payloads can be generated  </li>
+<li>[ ] diagnostics endpoints return stable placeholder responses  </li>
+</ul>
+<p>This ensures a smooth transition to future vST validators.</p>
+<hr>
+<h1 id="9-where-to-go-next">9. Where to Go Next</h1>
+<ul>
+<li><strong>RTT API Docs:</strong> <code>docs/api/rtt/</code>  </li>
+<li><strong>SDK Reference:</strong> <code>docs/rtt-sdk/README.md</code>  </li>
+<li><strong>Backend Services Guide:</strong> <code>docs/rtt-sdk/backend.md</code>  </li>
+<li><strong>Browser Extensions Guide:</strong> <code>docs/rtt-sdk/extensions.md</code>  </li>
+<li><strong>Quick‑Start Guide:</strong> <code>docs/rtt-sdk/quickstart.md</code>  </li>
+</ul>
+<p>This completes the RTT‑Inside onboarding suite.
+```python</p>
+<h1 id="initpy-rtt-sdk-package-initializer-beta"><strong>init</strong>.py — RTT SDK package initializer (beta)</h1>
+<p>from .client import RTTClient
+from .beacon import (
+    create_session_id,
+    collect_structure_snapshot,
+    build_beacon_payload
+)
+from .profile import (
+    create_profile,
+    validate_profile
+)
+from .diagnostics import (
+    build_validate_payload,
+    build_corridor_payload,
+    build_topology_payload
+)</p>
+<p><strong>all</strong> = [
+    "RTTClient",
+    "create_session_id",
+    "collect_structure_snapshot",
+    "build_beacon_payload",
+    "create_profile",
+    "validate_profile",
+    "build_validate_payload",
+    "build_corridor_payload",
+    "build_topology_payload"
+]</p>
+<pre><code>```javascript
+// beacon.js — helper utilities for RTT beacon events (beta)
+
+export function createSessionId() {
+  return &quot;rtt-&quot; + Math.random().toString(36).slice(2) + Date.now().toString(36);
+}
+
+export function collectStructureSnapshot() {
+  return {
+    url: typeof window !== &quot;undefined&quot; ? window.location.href : &quot;&quot;,
+    title: typeof document !== &quot;undefined&quot; ? document.title : &quot;&quot;,
+    nav_count: count(&quot;nav, header, footer&quot;),
+    main_count: count(&quot;main, [role='main']&quot;),
+    form_count: count(&quot;form&quot;),
+    button_count: count(&quot;button, [role='button']&quot;),
+    dom_nodes: typeof document !== &quot;undefined&quot;
+      ? document.getElementsByTagName(&quot;*&quot;).length
+      : 0
+  };
+}
+
+function count(selector) {
+  if (typeof document === &quot;undefined&quot;) return 0;
+  return document.querySelectorAll(selector).length;
+}
+
+export function buildBeaconPayload({ site, session, event }) {
+  return {
+    site,
+    session,
+    event,
+    ts: new Date().toISOString(),
+    structure: collectStructureSnapshot()
+  };
+}
+</code></pre>
+<p>```javascript
+// client.js — unified RTT API client (beta)</p>
+<p>export class RTTClient {
+  constructor(options = {}) {
+    this.baseUrl = options.baseUrl || "https://docs.triadicframeworks.org/api/rtt";
+    this.version = "0.1.0";
+  }</p>
+<p>async beacon(payload) {
+    return this._post("/beacon", payload);
+  }</p>
+<p>async getProfile(site) {
+    return this._get(<code>/profile/${site}</code>);
+  }</p>
+<p>async setProfile(site, profile) {
+    return this._post(<code>/profile/${site}</code>, profile);
+  }</p>
+<p>// Diagnostics (reserved)
+  async validate(payload) {
+    return this._post("/validate", payload);
+  }</p>
+<p>async corridor(payload) {
+    return this._post("/corridor", payload);
+  }</p>
+<p>async topology(payload) {
+    return this._post("/topology", payload);
+  }</p>
+<p>// Internal helpers
+  async _get(path) {
+    const res = await fetch(<code>${this.baseUrl}${path}</code>);
+    return res.json();
+  }</p>
+<p>async _post(path, body) {
+    const res = await fetch(<code>${this.baseUrl}${path}</code>, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    return res.json();
+  }
+}</p>
+<pre><code>```javascript
+// diagnostics.js — vST-beta diagnostics helpers (placeholders)
+
+export function buildValidatePayload({
+  system_map = {},
+  flows = [],
+  constraints = []
+} = {}) {
+  return { system_map, flows, constraints };
+}
+
+export function buildCorridorPayload(data = {}) {
+  return data;
+}
+
+export function buildTopologyPayload(data = {}) {
+  return data;
+}
+
+// These helpers define the shape of future vST interactions.
+// They do not implement substrate logic.
+</code></pre>
+<p>```javascript
+// index.js — RTT SDK entrypoint (beta)</p>
+<p>import { RTTClient } from "./client.js";
+import * as Beacon from "./beacon.js";
+import * as Profile from "./profile.js";
+import * as Diagnostics from "./diagnostics.js";</p>
+<p>export {
+  RTTClient,
+  Beacon,
+  Profile,
+  Diagnostics
+};</p>
+<pre><code>```javascript
+// profile.js — helper utilities for RTT site profiles (beta)
+
+export function createProfile({
+  version = &quot;1.0&quot;,
+  supports = [],
+  contact = &quot;&quot;
+} = {}) {
+  return {
+    rtt_version: version,
+    supports,
+    contact
+  };
+}
+
+export function validateProfile(profile) {
+  if (!profile || typeof profile !== &quot;object&quot;) return false;
+  if (!profile.rtt_version) return false;
+  if (!Array.isArray(profile.supports)) return false;
+  return true;
+}
+</code></pre>
+<p></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+{
+  "identity": "substrate-runtime-analyzers",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "analyzers": [
+    {
+      "id": "stability_analyzer",
+      "label": "Stability Analyzer",
+      "operators": {
+        "lumen": ["STRUCTURE/EXTRACT", "PRESSURE/GRADIENT", "CONTINUITY/ANCHOR"],
+        "hephaestus": ["REGIME/STRUCTURAL", "REGIME/CONTINUITY"],
+        "aurion": ["PROJECTION/LOSS", "COLLAPSE/DETECT"],
+        "harmonia": ["TRIADIC/BLEND", "RESONANCE/SCORE"]
+      },
+      "layers": ["resonance", "continuity", "drift", "coherence"],
+      "hooks": ["resonance_shift", "propagation_cycle", "drift_spike", "invariance_break"]
+    },
+
+    {
+      "id": "invariance_analyzer",
+      "label": "Invariance Analyzer",
+      "operators": {
+        "lumen": ["INFLUENCE/FIELD", "CONTINUITY/ANCHOR"],
+        "hephaestus": ["REGIME/CONTINUITY"],
+        "aurion": ["TOPOLOGY/GRAPH", "ANCESTRY/TRAIL"],
+        "harmonia": ["INVARIANCE/SEAL"]
+      },
+      "layers": ["dimensional", "regime", "cross_cutting"],
+      "hooks": ["invariance_break", "invariance_restore", "sync_event", "state_update"]
+    },
+
+    {
+      "id": "epoch_analyzer",
+      "label": "Epoch Analyzer",
+      "operators": {
+        "lumen": ["PRESSURE/GRADIENT"],
+        "hephaestus": ["REGIME/LOCAL", "REGIME/STRUCTURAL"],
+        "aurion": ["ANCESTRY/TRAIL", "COLLAPSE/DETECT"],
+        "harmonia": ["RESONANCE/SCORE", "CONTINUITY/WEIGHT"]
+      },
+      "layers": ["epoch", "drift", "coherence"],
+      "hooks": ["epoch_transition", "propagation_cycle", "resonance_shift", "ignition_trigger"]
+    },
+
+    {
+      "id": "coupling_analyzer",
+      "label": "Coupling Analyzer",
+      "operators": {
+        "lumen": ["INFLUENCE/FIELD"],
+        "hephaestus": ["REGIME/STRUCTURAL"],
+        "aurion": ["TOPOLOGY/GRAPH"],
+        "harmonia": ["TRIADIC/BLEND"]
+      },
+      "layers": ["coupling", "drift", "resonance"],
+      "hooks": ["drift_spike", "resonance_surge", "coupling_instability"]
+    },
+
+    {
+      "id": "continuity_analyzer",
+      "label": "Continuity Analyzer",
+      "operators": {
+        "lumen": ["CONTINUITY/ANCHOR"],
+        "hephaestus": ["REGIME/CONTINUITY"],
+        "aurion": ["ANCESTRY/TRAIL"],
+        "harmonia": ["CONTINUITY/WEIGHT"]
+      },
+      "layers": ["continuity", "regime", "cross_cutting"],
+      "hooks": ["cycle_report", "sync_event", "invariance_restore"]
+    },
+
+    {
+      "id": "telemetry_analyzer",
+      "label": "Telemetry Analyzer",
+      "operators": {
+        "lumen": ["STRUCTURE/EXTRACT"],
+        "aurion": ["TOPOLOGY/GRAPH"],
+        "harmonia": ["TRIADIC/BLEND"]
+      },
+      "layers": ["monitor", "cross_cutting"],
+      "hooks": ["telemetry_packet", "anomaly_alert", "cycle_report"]
+    }
+  ],
+
+  "meta": {
+    "canonical": true,
+    "triadic_era": "R5",
+    "notes": "Machine-readable registry of all runtime analyzers, their operator sets, evaluated layers, and consumed hooks."
+  }
+}

@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/quantum/Spintronics_Microsoft_Generic.md">
+  <title>🌐 Quantum RTT-Inside examples for Spintronics | Microsoft | Generic</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/quantum/Spintronics_Microsoft_Generic.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/quantum/Spintronics_Microsoft_Generic.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_quantum_Spintronics_Microsoft_Generic_" src="https://github.com/user-attachments/assets/ec4c7c9b-c459-487b-bd56-65939b93475e" /></p>
+<h1 id="quantum-rtt-inside-examples-for-spintronics-microsoft-generic">🌐 Quantum RTT-Inside examples for Spintronics | Microsoft | Generic</h1>
+<p>Let’s build this cleanly and in a way that would actually help three different teams:</p>
+<ol>
+<li><strong>The Chalmers spintronics researchers</strong>  </li>
+<li><strong>A Microsoft silicon team working on next‑gen chips</strong>  </li>
+<li><strong>A generic / student team learning RTT‑Inside for the first time</strong></li>
+</ol>
+<p>Each gets a <strong>minimal JSON awareness‑surface schema</strong>—the smallest, safest RTT‑Inside interface that lets a component participate in a regime‑aware system.</p>
+<p>Then we’ll chart the three and compare.</p>
+<p>No claims, no speculation about confidential work—just a structural, RTT‑aligned design pattern that <em>any</em> team could use.</p>
+<hr>
+<h1 id="1-rttinside-json-spintronics-team-chalmers">1) <strong>RTT‑Inside JSON: Spintronics Team (Chalmers)</strong></h1>
+<p>This version assumes a <strong>quantum‑material substrate</strong>, <strong>spin‑state switching</strong>, and <strong>thermal sensitivity</strong>.</p>
+<pre><code class="language-json">{
+  &quot;component_type&quot;: &quot;spintronic_cell_array&quot;,
+  &quot;awareness_surface&quot;: {
+    &quot;regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+    &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+    &quot;error_rate_band&quot;: &quot;low | elevated | high | critical&quot;,
+    &quot;recent_events&quot;: [
+      &quot;regime_shift&quot;,
+      &quot;thermal_spike&quot;,
+      &quot;switching_anomaly&quot;
+    ]
+  },
+  &quot;control_surface&quot;: {
+    &quot;requested_mode&quot;: &quot;low_power | balanced | high_speed&quot;,
+    &quot;max_safe_temp_band&quot;: &quot;cool | nominal | warm&quot;,
+    &quot;duty_cycle_limit&quot;: 0.0
+  },
+  &quot;qroot_boundary&quot;: {
+    &quot;exposed&quot;: false,
+    &quot;allowed_exports&quot;: [
+      &quot;aggregated_error_rates&quot;,
+      &quot;thermal_bands&quot;,
+      &quot;regime_state&quot;
+    ]
+  }
+}
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Turn the spintronic device into a <strong>self‑describing, regime‑aware module</strong> without exposing raw quantum state.</p>
+<hr>
+<h1 id="2-rttinside-json-microsoft-silicon-team">2) <strong>RTT‑Inside JSON: Microsoft Silicon Team</strong></h1>
+<p>This version assumes a <strong>heterogeneous chip</strong>, <strong>multiple power islands</strong>, <strong>AI accelerators</strong>, <strong>memory controllers</strong>, and <strong>safety envelopes</strong>.</p>
+<pre><code class="language-json">{
+  &quot;component_type&quot;: &quot;heterogeneous_compute_tile&quot;,
+  &quot;awareness_surface&quot;: {
+    &quot;regime&quot;: &quot;normal | throttled | degraded | unsafe&quot;,
+    &quot;power_band&quot;: &quot;low | nominal | elevated | peak&quot;,
+    &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+    &quot;latency_band&quot;: &quot;stable | variable | unstable&quot;,
+    &quot;recent_events&quot;: [
+      &quot;power_throttle&quot;,
+      &quot;thermal_throttle&quot;,
+      &quot;latency_spike&quot;,
+      &quot;island_reset&quot;
+    ]
+  },
+  &quot;control_surface&quot;: {
+    &quot;requested_mode&quot;: &quot;eco | balanced | turbo&quot;,
+    &quot;power_cap_watts&quot;: 0,
+    &quot;thermal_cap_band&quot;: &quot;cool | nominal | warm&quot;,
+    &quot;allowed_islands&quot;: [&quot;cpu&quot;, &quot;gpu&quot;, &quot;ai&quot;, &quot;io&quot;]
+  },
+  &quot;qroot_boundary&quot;: {
+    &quot;exposed&quot;: false,
+    &quot;allowed_exports&quot;: [
+      &quot;aggregated_telemetry&quot;,
+      &quot;regime_transitions&quot;,
+      &quot;island_health&quot;
+    ]
+  }
+}
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Give Microsoft’s chip a <strong>stable, predictable, self‑reporting envelope</strong> that higher layers (OS, firmware, cloud orchestration) can trust.</p>
+<hr>
+<h1 id="3-rttinside-json-generic-student-team">3) <strong>RTT‑Inside JSON: Generic / Student Team</strong></h1>
+<p>This version is simplified for teaching RTT‑Inside fundamentals.</p>
+<pre><code class="language-json">{
+  &quot;component_type&quot;: &quot;generic_rtt_module&quot;,
+  &quot;awareness_surface&quot;: {
+    &quot;regime&quot;: &quot;normal | stressed | unsafe&quot;,
+    &quot;thermal_band&quot;: &quot;cool | warm | hot&quot;,
+    &quot;health&quot;: &quot;good | warning | bad&quot;
+  },
+  &quot;control_surface&quot;: {
+    &quot;requested_mode&quot;: &quot;low_power | normal | high_power&quot;,
+    &quot;max_temp&quot;: 0
+  },
+  &quot;qroot_boundary&quot;: {
+    &quot;exposed&quot;: false,
+    &quot;allowed_exports&quot;: [
+      &quot;regime&quot;,
+      &quot;thermal_band&quot;,
+      &quot;health&quot;
+    ]
+  }
+}
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Teach the idea of <strong>awareness surfaces</strong>, <strong>control surfaces</strong>, and <strong>Qmroot boundaries</strong> without overwhelming complexity.</p>
+<hr>
+<h1 id="4-comparison-chart-spintronics-vs-microsoft-vs-student">4) <strong>Comparison Chart: Spintronics vs. Microsoft vs. Student</strong></h1>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Spintronics Team</th>
+<th>Microsoft Silicon Team</th>
+<th>Student / Generic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Substrate</strong></td>
+<td>Quantum materials, spin states</td>
+<td>Heterogeneous compute, power islands</td>
+<td>Any</td>
+</tr>
+<tr>
+<td><strong>Regime Awareness</strong></td>
+<td>Thermal + switching + error bands</td>
+<td>Thermal + power + latency + island health</td>
+<td>Basic regime + thermal</td>
+</tr>
+<tr>
+<td><strong>Control Surface</strong></td>
+<td>Mode + duty cycle + temp caps</td>
+<td>Mode + power caps + island control</td>
+<td>Mode + temp cap</td>
+</tr>
+<tr>
+<td><strong>Qmroot Boundary</strong></td>
+<td>Strict, no raw spin state</td>
+<td>Strict, no raw hardware counters</td>
+<td>Simplified</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>High</td>
+<td>Very high</td>
+<td>Low</td>
+</tr>
+<tr>
+<td><strong>Use Case</strong></td>
+<td>Research → component</td>
+<td>Product → system</td>
+<td>Education → concept</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="5-what-this-gives-all-three-teams">5) <strong>What this gives all three teams</strong></h1>
+<h3 id="spintronics-team-gets"><strong>Spintronics team gets:</strong></h3>
+<p>A way to turn their device into a <strong>regime‑aware component</strong> that can safely participate in larger systems.</p>
+<h3 id="microsoft-silicon-team-gets"><strong>Microsoft silicon team gets:</strong></h3>
+<p>A <strong>unified awareness surface</strong> across heterogeneous compute tiles—exactly what RTT‑Inside is designed for.</p>
+<h3 id="students-get"><strong>Students get:</strong></h3>
+<p>A minimal, clean introduction to RTT‑Inside without needing to understand quantum materials or chip design.</p>
+<hr>
+<p>Here’s a clean, drop‑in <strong>RTT‑Inside component spec</strong> for a spintronics device, shaped so it can live happily in <code>docs/schemas/quantum/</code> as a first canonical.</p>
+<hr>
+<h2 id="1-component-overview">1. Component overview</h2>
+<ul>
+<li><strong>Name:</strong> <code>SpintronicCellArray</code></li>
+<li><strong>Role:</strong> Low‑power, high‑density state substrate with <strong>regime awareness</strong> and a <strong>Qmroot boundary</strong>.</li>
+<li><strong>Scope:</strong> Component‑level (can be tiled into larger fabrics).</li>
+<li><strong>Guarantee posture:</strong>  </li>
+<li>Never silently crosses out of safe regime.  </li>
+<li>Always exposes a minimal, stable awareness surface.  </li>
+<li>Never exports raw quantum state.</li>
+</ul>
+<hr>
+<h2 id="2-regime-model">2. Regime model</h2>
+<p>The device classifies its own operating condition into coarse, RTT‑Inside‑usable regimes:</p>
+<ul>
+<li><strong><code>normal</code></strong>  </li>
+<li>Thermal band: <code>cool</code> or <code>nominal</code>  </li>
+<li>Error‑rate band: <code>low</code>  </li>
+<li>
+<p>Switching behavior: within spec</p>
+</li>
+<li>
+<p><strong><code>stressed</code></strong>  </p>
+</li>
+<li>Thermal band: <code>warm</code>  </li>
+<li>Error‑rate band: <code>elevated</code>  </li>
+<li>
+<p>Switching behavior: still correct, but margins reduced</p>
+</li>
+<li>
+<p><strong><code>degraded</code></strong>  </p>
+</li>
+<li>Thermal band: <code>warm</code> or <code>hot</code>  </li>
+<li>Error‑rate band: <code>high</code>  </li>
+<li>
+<p>Local quarantines may be active</p>
+</li>
+<li>
+<p><strong><code>unsafe</code></strong>  </p>
+</li>
+<li>Thermal band: <code>hot</code>  </li>
+<li>Error‑rate band: <code>critical</code>  </li>
+<li>Device requests immediate load shedding / shutdown</li>
+</ul>
+<p>Regime transitions are <strong>logged internally</strong> and surfaced as events.</p>
+<hr>
+<h2 id="3-awareness-surface">3. Awareness surface</h2>
+<p>This is what the rest of the system is allowed to <em>see</em>.</p>
+<pre><code class="language-json">{
+  &quot;component_type&quot;: &quot;SpintronicCellArray&quot;,
+  &quot;awareness_surface&quot;: {
+    &quot;regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+    &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+    &quot;error_rate_band&quot;: &quot;low | elevated | high | critical&quot;,
+    &quot;capacity_band&quot;: &quot;full | reduced | limited&quot;,
+    &quot;recent_events&quot;: [
+      {
+        &quot;type&quot;: &quot;regime_shift | thermal_spike | error_spike | quarantine&quot;,
+        &quot;from_regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+        &quot;to_regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+        &quot;timestamp&quot;: &quot;ISO-8601&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<p><strong>Notes:</strong></p>
+<ul>
+<li><code>capacity_band</code> reflects how much of the array is still usable (after quarantines).</li>
+<li><code>recent_events</code> is bounded (e.g., last 16 events) to keep surfaces small.</li>
+</ul>
+<hr>
+<h2 id="4-control-surface">4. Control surface</h2>
+<p>This is what higher layers are allowed to <em>ask</em> the device to do.</p>
+<pre><code class="language-json">{
+  &quot;control_surface&quot;: {
+    &quot;requested_mode&quot;: &quot;low_power | balanced | high_speed&quot;,
+    &quot;max_safe_thermal_band&quot;: &quot;cool | nominal | warm&quot;,
+    &quot;duty_cycle_limit&quot;: 0.0,
+    &quot;maintenance_actions&quot;: [
+      &quot;clear_event_log&quot;,
+      &quot;run_self_test&quot;,
+      &quot;recompute_capacity_band&quot;
+    ]
+  }
+}
+</code></pre>
+<p><strong>Semantics:</strong></p>
+<ul>
+<li><strong><code>requested_mode</code></strong> is a <em>hint</em>, not a command; device may refuse if unsafe.  </li>
+<li><strong><code>max_safe_thermal_band</code></strong> lets system policy tighten the envelope.  </li>
+<li><strong><code>duty_cycle_limit</code></strong> (0.0–1.0) caps how hard the device can be driven.  </li>
+<li><strong><code>maintenance_actions</code></strong> are idempotent, safe operations.</li>
+</ul>
+<hr>
+<h2 id="5-qmroot-boundary">5. Qmroot boundary</h2>
+<p>The device is explicitly <strong>Qmroot‑bounded</strong>:</p>
+<pre><code class="language-json">{
+  &quot;qroot_boundary&quot;: {
+    &quot;exposed&quot;: false,
+    &quot;allowed_exports&quot;: [
+      &quot;regime&quot;,
+      &quot;thermal_band&quot;,
+      &quot;error_rate_band&quot;,
+      &quot;capacity_band&quot;,
+      &quot;recent_events&quot;
+    ],
+    &quot;forbidden_exports&quot;: [
+      &quot;raw_spin_state&quot;,
+      &quot;per_cell_switching_traces&quot;,
+      &quot;unaggregated_error_locations&quot;
+    ]
+  }
+}
+</code></pre>
+<p><strong>Intent:</strong><br>
+- Keep quantum‑level detail <strong>inside</strong> the device.<br>
+- Only export <strong>aggregated, regime‑safe</strong> signals.</p>
+<hr>
+<h2 id="6-telemetry-logging">6. Telemetry &amp; logging</h2>
+<p>Minimal, RTT‑Inside‑compatible telemetry:</p>
+<pre><code class="language-json">{
+  &quot;telemetry&quot;: {
+    &quot;sampling_period_ms&quot;: 1000,
+    &quot;metrics&quot;: {
+      &quot;avg_thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+      &quot;avg_error_rate_band&quot;: &quot;low | elevated | high | critical&quot;,
+      &quot;regime_time_fraction&quot;: {
+        &quot;normal&quot;: 0.0,
+        &quot;stressed&quot;: 0.0,
+        &quot;degraded&quot;: 0.0,
+        &quot;unsafe&quot;: 0.0
+      }
+    }
+  }
+}
+</code></pre>
+<p>This is <strong>optional</strong>, but when present, it lets higher layers reason about <strong>history</strong>, not just current state.</p>
+<hr>
+<h2 id="7-failure-degradation-behavior">7. Failure &amp; degradation behavior</h2>
+<p>RTT‑Inside guarantees:</p>
+<ul>
+<li>On entering <strong><code>unsafe</code></strong>:</li>
+<li>Device <strong>emits a regime event</strong>.  </li>
+<li>Device <strong>requests load shedding</strong> (via control/telemetry channel).  </li>
+<li>
+<p>Device may <strong>lock into degraded / read‑only</strong> mode.</p>
+</li>
+<li>
+<p>On repeated <strong><code>degraded</code></strong>:</p>
+</li>
+<li>Device may <strong>quarantine</strong> parts of the array.  </li>
+<li>
+<p><code>capacity_band</code> is updated accordingly.  </p>
+</li>
+<li>
+<p>Device <strong>never silently returns to <code>normal</code></strong> from <code>unsafe</code> without logging a transition.</p>
+</li>
+</ul>
+<hr>
+<h2 id="8-full-component-spec-merged-json">8. Full component spec (merged JSON)</h2>
+<p>For our <code>docs/schemas/quantum/spintronic_cell_array.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;component_type&quot;: &quot;SpintronicCellArray&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;awareness_surface&quot;: {
+    &quot;regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+    &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+    &quot;error_rate_band&quot;: &quot;low | elevated | high | critical&quot;,
+    &quot;capacity_band&quot;: &quot;full | reduced | limited&quot;,
+    &quot;recent_events&quot;: [
+      {
+        &quot;type&quot;: &quot;regime_shift | thermal_spike | error_spike | quarantine&quot;,
+        &quot;from_regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+        &quot;to_regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+        &quot;timestamp&quot;: &quot;ISO-8601&quot;
+      }
+    ]
+  },
+  &quot;control_surface&quot;: {
+    &quot;requested_mode&quot;: &quot;low_power | balanced | high_speed&quot;,
+    &quot;max_safe_thermal_band&quot;: &quot;cool | nominal | warm&quot;,
+    &quot;duty_cycle_limit&quot;: 0.0,
+    &quot;maintenance_actions&quot;: [
+      &quot;clear_event_log&quot;,
+      &quot;run_self_test&quot;,
+      &quot;recompute_capacity_band&quot;
+    ]
+  },
+  &quot;qroot_boundary&quot;: {
+    &quot;exposed&quot;: false,
+    &quot;allowed_exports&quot;: [
+      &quot;regime&quot;,
+      &quot;thermal_band&quot;,
+      &quot;error_rate_band&quot;,
+      &quot;capacity_band&quot;,
+      &quot;recent_events&quot;
+    ],
+    &quot;forbidden_exports&quot;: [
+      &quot;raw_spin_state&quot;,
+      &quot;per_cell_switching_traces&quot;,
+      &quot;unaggregated_error_locations&quot;
+    ]
+  },
+  &quot;telemetry&quot;: {
+    &quot;sampling_period_ms&quot;: 1000,
+    &quot;metrics&quot;: {
+      &quot;avg_thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+      &quot;avg_error_rate_band&quot;: &quot;low | elevated | high | critical&quot;,
+      &quot;regime_time_fraction&quot;: {
+        &quot;normal&quot;: 0.0,
+        &quot;stressed&quot;: 0.0,
+        &quot;degraded&quot;: 0.0,
+        &quot;unsafe&quot;: 0.0
+      }
+    }
+  }
+}
+</code></pre>
+<hr>
+<p>Here’s a matching <strong>RTT‑Inside orchestrator spec</strong> we can drop next to the spintronics component—treating it as one tile among many (<code>SpintronicCellArray</code>, <code>CmosComputeTile</code>, <code>NvramStateStore</code>) in a single quantum‑aware stack.</p>
+<hr>
+<h3 id="1-orchestrator-overview">1. Orchestrator overview</h3>
+<ul>
+<li><strong>Name:</strong> <code>QuantumStackOrchestrator</code></li>
+<li><strong>Role:</strong> Coordinate multiple RTT‑Inside tiles (spintronics, CMOS, NVRAM) for <strong>stability, safety, and efficiency</strong>.</li>
+<li><strong>Scope:</strong> Node‑level (one physical package / board).</li>
+<li><strong>Core behaviors:</strong></li>
+<li>Read each tile’s <strong>awareness surface</strong>.</li>
+<li>Enforce <strong>policy</strong> (safety, power, thermal, regime).</li>
+<li>Route <strong>workloads and state</strong> across tiles.</li>
+<li>Degrade <strong>gracefully</strong> under stress.</li>
+</ul>
+<hr>
+<h3 id="2-tile-model">2. Tile model</h3>
+<p>The orchestrator assumes each tile exposes an RTT‑Inside surface like:</p>
+<pre><code class="language-json">{
+  &quot;tile_id&quot;: &quot;string&quot;,
+  &quot;component_type&quot;: &quot;SpintronicCellArray | CmosComputeTile | NvramStateStore&quot;,
+  &quot;awareness_surface&quot;: { },
+  &quot;control_surface&quot;: { }
+}
+</code></pre>
+<p>(Each tile’s inner schema is defined in its own spec—spintronics already done.)</p>
+<hr>
+<h3 id="3-orchestrator-awareness-surface">3. Orchestrator awareness surface</h3>
+<p>What the <em>rest of the system</em> sees about the whole stack:</p>
+<pre><code class="language-json">{
+  &quot;orchestrator_type&quot;: &quot;QuantumStackOrchestrator&quot;,
+  &quot;awareness_surface&quot;: {
+    &quot;global_regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+    &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+    &quot;power_band&quot;: &quot;low | nominal | elevated | peak&quot;,
+    &quot;tile_summaries&quot;: [
+      {
+        &quot;tile_id&quot;: &quot;string&quot;,
+        &quot;component_type&quot;: &quot;SpintronicCellArray | CmosComputeTile | NvramStateStore&quot;,
+        &quot;regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+        &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+        &quot;health&quot;: &quot;good | warning | bad&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<hr>
+<h3 id="4-orchestrator-control-surface">4. Orchestrator control surface</h3>
+<p>What higher layers (OS / runtime / supervisor) can request:</p>
+<pre><code class="language-json">{
+  &quot;control_surface&quot;: {
+    &quot;policy&quot;: {
+      &quot;preferred_spintronic_usage&quot;: &quot;foreground_state | logs_only | disabled&quot;,
+      &quot;preferred_nvram_usage&quot;: &quot;critical_state | archival | disabled&quot;,
+      &quot;max_global_thermal_band&quot;: &quot;cool | nominal | warm&quot;,
+      &quot;max_power_band&quot;: &quot;low | nominal | elevated&quot;
+    },
+    &quot;actions&quot;: [
+      &quot;rebalance_state&quot;,
+      &quot;shed_noncritical_load&quot;,
+      &quot;enter_safe_mode&quot;
+    ]
+  }
+}
+</code></pre>
+<p><strong>Semantics:</strong></p>
+<ul>
+<li><code>rebalance_state</code>: move state between tiles (e.g., spintronics → NVRAM) according to policy + regimes.  </li>
+<li><code>shed_noncritical_load</code>: drop / pause non‑essential work on CMOS tiles.  </li>
+<li><code>enter_safe_mode</code>: minimize power, lock critical state, prioritize integrity over performance.</li>
+</ul>
+<hr>
+<h3 id="5-core-orchestration-logic-conceptual">5. Core orchestration logic (conceptual)</h3>
+<p><strong>a) State placement</strong></p>
+<ul>
+<li><strong>Spintronics (<code>SpintronicCellArray</code>):</strong></li>
+<li>Use for <strong>foreground, high‑churn, low‑power state</strong> when:<ul>
+<li>Tile regime ∈ {<code>normal</code>, <code>stressed</code>}  </li>
+</ul>
+</li>
+<li>
+<p>Migrate out to NVRAM when:</p>
+<ul>
+<li>Tile regime ∈ {<code>degraded</code>, <code>unsafe</code>}</li>
+</ul>
+</li>
+<li>
+<p><strong>CMOS (<code>CmosComputeTile</code>):</strong></p>
+</li>
+<li>Use for <strong>active compute</strong> when:<ul>
+<li>Thermal + power bands ≤ policy caps  </li>
+</ul>
+</li>
+<li>
+<p>Throttle / park when:</p>
+<ul>
+<li><code>regime = stressed | degraded | unsafe</code></li>
+</ul>
+</li>
+<li>
+<p><strong>NVRAM (<code>NvramStateStore</code>):</strong></p>
+</li>
+<li>Use for <strong>critical + archival state</strong> always.  </li>
+<li>Accept migrations from spintronics under stress.</li>
+</ul>
+<p><strong>b) Global regime computation</strong></p>
+<ul>
+<li><code>global_regime</code> is derived from tile regimes:</li>
+<li>If any tile <code>unsafe</code> → <code>global_regime = unsafe</code>.  </li>
+<li>Else if any tile <code>degraded</code> → <code>global_regime = degraded</code>.  </li>
+<li>Else if any tile <code>stressed</code> → <code>global_regime = stressed</code>.  </li>
+<li>Else → <code>normal</code>.</li>
+</ul>
+<hr>
+<h3 id="6-qmroot-handling">6. Qmroot handling</h3>
+<p>The orchestrator:</p>
+<ul>
+<li><strong>Never</strong> accesses raw quantum state.  </li>
+<li>Only consumes each tile’s <strong>aggregated, RTT‑safe awareness surface</strong>.  </li>
+<li>Treats spintronics as the <strong>Qmroot edge</strong> of the stack and keeps all decisions at the <strong>regime / band / event</strong> level.</li>
+</ul>
+<hr>
+<h3 id="7-full-orchestrator-spec-json">7. Full orchestrator spec (JSON)</h3>
+<pre><code class="language-json">{
+  &quot;orchestrator_type&quot;: &quot;QuantumStackOrchestrator&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;managed_tiles&quot;: [
+    {
+      &quot;tile_id&quot;: &quot;string&quot;,
+      &quot;component_type&quot;: &quot;SpintronicCellArray | CmosComputeTile | NvramStateStore&quot;,
+      &quot;awareness_surface&quot;: {},
+      &quot;control_surface&quot;: {}
+    }
+  ],
+  &quot;awareness_surface&quot;: {
+    &quot;global_regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+    &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+    &quot;power_band&quot;: &quot;low | nominal | elevated | peak&quot;,
+    &quot;tile_summaries&quot;: [
+      {
+        &quot;tile_id&quot;: &quot;string&quot;,
+        &quot;component_type&quot;: &quot;SpintronicCellArray | CmosComputeTile | NvramStateStore&quot;,
+        &quot;regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+        &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+        &quot;health&quot;: &quot;good | warning | bad&quot;
+      }
+    ]
+  },
+  &quot;control_surface&quot;: {
+    &quot;policy&quot;: {
+      &quot;preferred_spintronic_usage&quot;: &quot;foreground_state | logs_only | disabled&quot;,
+      &quot;preferred_nvram_usage&quot;: &quot;critical_state | archival | disabled&quot;,
+      &quot;max_global_thermal_band&quot;: &quot;cool | nominal | warm&quot;,
+      &quot;max_power_band&quot;: &quot;low | nominal | elevated&quot;
+    },
+    &quot;actions&quot;: [
+      &quot;rebalance_state&quot;,
+      &quot;shed_noncritical_load&quot;,
+      &quot;enter_safe_mode&quot;
+    ]
+  }
+}
+</code></pre>
+<hr>
+<p>Absolutely — here’s the <strong>tiny worked example</strong> we asked for.<br>
+It shows:</p>
+<ul>
+<li><strong>3 tiles</strong> (Spintronics, CMOS, NVRAM)  </li>
+<li><strong>1 orchestrator</strong>  </li>
+<li>A <strong>regime transition</strong> on the spintronics tile:<br>
+<code>normal → stressed → degraded</code>  </li>
+<li>And how the orchestrator <strong>reacts</strong> at each step  </li>
+</ul>
+<p>All in clean, compact JSON we can drop directly into our <code>docs/examples/</code> folder.</p>
+<hr>
+<h1 id="rttinside-worked-example-3-tiles-orchestrator-reaction">🧩 <strong>RTT‑Inside Worked Example: 3 Tiles + Orchestrator Reaction</strong></h1>
+<p>Below is a <strong>single JSON instance</strong> showing the orchestrator’s view of the system at three moments in time.</p>
+<hr>
+<h1 id="1-moment-a-spintronics-tile-in-normal-regime"><strong>1) Moment A — Spintronics tile in <code>normal</code> regime</strong></h1>
+<pre><code class="language-json">{
+  &quot;timestamp&quot;: &quot;2026-03-12T08:50:00Z&quot;,
+  &quot;orchestrator&quot;: {
+    &quot;global_regime&quot;: &quot;normal&quot;,
+    &quot;tile_summaries&quot;: [
+      {
+        &quot;tile_id&quot;: &quot;spin_01&quot;,
+        &quot;component_type&quot;: &quot;SpintronicCellArray&quot;,
+        &quot;regime&quot;: &quot;normal&quot;,
+        &quot;thermal_band&quot;: &quot;nominal&quot;,
+        &quot;health&quot;: &quot;good&quot;
+      },
+      {
+        &quot;tile_id&quot;: &quot;cmos_01&quot;,
+        &quot;component_type&quot;: &quot;CmosComputeTile&quot;,
+        &quot;regime&quot;: &quot;normal&quot;,
+        &quot;thermal_band&quot;: &quot;nominal&quot;,
+        &quot;health&quot;: &quot;good&quot;
+      },
+      {
+        &quot;tile_id&quot;: &quot;nvram_01&quot;,
+        &quot;component_type&quot;: &quot;NvramStateStore&quot;,
+        &quot;regime&quot;: &quot;normal&quot;,
+        &quot;thermal_band&quot;: &quot;cool&quot;,
+        &quot;health&quot;: &quot;good&quot;
+      }
+    ],
+    &quot;actions_taken&quot;: []
+  }
+}
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+Everything is healthy.<br>
+Spintronics is used for <strong>foreground state</strong>.<br>
+CMOS is running normally.<br>
+NVRAM holds critical/archival state.</p>
+<hr>
+<h1 id="2-moment-b-spintronics-tile-enters-stressed"><strong>2) Moment B — Spintronics tile enters <code>stressed</code></strong></h1>
+<pre><code class="language-json">{
+  &quot;timestamp&quot;: &quot;2026-03-12T08:50:05Z&quot;,
+  &quot;orchestrator&quot;: {
+    &quot;global_regime&quot;: &quot;stressed&quot;,
+    &quot;tile_summaries&quot;: [
+      {
+        &quot;tile_id&quot;: &quot;spin_01&quot;,
+        &quot;component_type&quot;: &quot;SpintronicCellArray&quot;,
+        &quot;regime&quot;: &quot;stressed&quot;,
+        &quot;thermal_band&quot;: &quot;warm&quot;,
+        &quot;health&quot;: &quot;warning&quot;
+      },
+      {
+        &quot;tile_id&quot;: &quot;cmos_01&quot;,
+        &quot;component_type&quot;: &quot;CmosComputeTile&quot;,
+        &quot;regime&quot;: &quot;normal&quot;,
+        &quot;thermal_band&quot;: &quot;nominal&quot;,
+        &quot;health&quot;: &quot;good&quot;
+      },
+      {
+        &quot;tile_id&quot;: &quot;nvram_01&quot;,
+        &quot;component_type&quot;: &quot;NvramStateStore&quot;,
+        &quot;regime&quot;: &quot;normal&quot;,
+        &quot;thermal_band&quot;: &quot;cool&quot;,
+        &quot;health&quot;: &quot;good&quot;
+      }
+    ],
+    &quot;actions_taken&quot;: [
+      &quot;reduced_spintronic_duty_cycle&quot;,
+      &quot;shifted_noncritical_state_to_nvram&quot;
+    ]
+  }
+}
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+Spintronics is warming up.<br>
+The orchestrator:</p>
+<ul>
+<li><strong>reduces duty cycle</strong> on spintronics  </li>
+<li><strong>moves non‑critical state</strong> to NVRAM  </li>
+<li>keeps critical foreground state in spintronics (still safe)</li>
+</ul>
+<p>This is classic RTT‑Inside graceful degradation.</p>
+<hr>
+<h1 id="3-moment-c-spintronics-tile-enters-degraded"><strong>3) Moment C — Spintronics tile enters <code>degraded</code></strong></h1>
+<pre><code class="language-json">{
+  &quot;timestamp&quot;: &quot;2026-03-12T08:50:12Z&quot;,
+  &quot;orchestrator&quot;: {
+    &quot;global_regime&quot;: &quot;degraded&quot;,
+    &quot;tile_summaries&quot;: [
+      {
+        &quot;tile_id&quot;: &quot;spin_01&quot;,
+        &quot;component_type&quot;: &quot;SpintronicCellArray&quot;,
+        &quot;regime&quot;: &quot;degraded&quot;,
+        &quot;thermal_band&quot;: &quot;hot&quot;,
+        &quot;health&quot;: &quot;bad&quot;
+      },
+      {
+        &quot;tile_id&quot;: &quot;cmos_01&quot;,
+        &quot;component_type&quot;: &quot;CmosComputeTile&quot;,
+        &quot;regime&quot;: &quot;stressed&quot;,
+        &quot;thermal_band&quot;: &quot;warm&quot;,
+        &quot;health&quot;: &quot;warning&quot;
+      },
+      {
+        &quot;tile_id&quot;: &quot;nvram_01&quot;,
+        &quot;component_type&quot;: &quot;NvramStateStore&quot;,
+        &quot;regime&quot;: &quot;normal&quot;,
+        &quot;thermal_band&quot;: &quot;cool&quot;,
+        &quot;health&quot;: &quot;good&quot;
+      }
+    ],
+    &quot;actions_taken&quot;: [
+      &quot;migrated_all_state_from_spintronic_to_nvram&quot;,
+      &quot;locked_spintronic_tile_read_only&quot;,
+      &quot;shed_noncritical_compute_load&quot;,
+      &quot;entered_safe_mode&quot;
+    ]
+  }
+}
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+Spintronics is now <strong>unsafe for writes</strong>.<br>
+The orchestrator:</p>
+<ul>
+<li><strong>moves all state</strong> out of spintronics  </li>
+<li><strong>locks spintronics read‑only</strong>  </li>
+<li><strong>sheds non‑critical compute load</strong>  </li>
+<li><strong>enters safe mode</strong> to protect the system  </li>
+</ul>
+<p>This is exactly what RTT‑Inside is designed to do:<br>
+<strong>no silent failure, no corruption, no surprises.</strong></p>
+<hr>
+<p>Below are the four deliverables:</p>
+<ol>
+<li><strong>Visual timeline diagram</strong>  </li>
+<li><strong>State‑migration flowchart</strong>  </li>
+<li><strong>Triadic Observer Layer read</strong>  </li>
+<li><strong>Multi‑node orchestrator version</strong></li>
+</ol>
+<p>All formatted so we can drop them directly into <code>docs/diagrams/</code> or <code>docs/examples/</code>.</p>
+<hr>
+<h1 id="1-visual-timeline-diagram">🎞️ 1. Visual Timeline Diagram</h1>
+<h3 id="spintronics-tile-normal-stressed-degraded-and-orchestrator-reactions"><em>Spintronics Tile: <code>normal → stressed → degraded</code> and Orchestrator Reactions</em></h3>
+<pre><code>                                     🎞️
+Time ─────────────────────────────────────────────────────────────────────────▶
+
+t0: NORMAL
+│
+│  spintronics: regime = normal
+│  orchestrator: no action
+│
+├──────────────────────────────────────────────────────────────────────────────┤
+t1: STRESSED
+│
+│  spintronics: thermal ↑ → warm
+│               error_rate ↑ → elevated
+│               regime = stressed
+│
+│  orchestrator:
+│     • reduce spintronic duty cycle
+│     • migrate non‑critical state → NVRAM
+│     • keep critical foreground state in spintronics
+│
+├──────────────────────────────────────────────────────────────────────────────┤
+t2: DEGRADED
+│
+│  spintronics: thermal ↑↑ → hot
+│               error_rate ↑↑ → high
+│               regime = degraded
+│
+│  orchestrator:
+│     • migrate ALL state → NVRAM
+│     • lock spintronics read‑only
+│     • shed non‑critical compute load
+│     • enter safe mode
+│
+└──────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<p>This is the RTT‑Inside “no surprises, no silent corruption” timeline.</p>
+<hr>
+<h1 id="2-statemigration-flowchart">🔁 2. State‑Migration Flowchart</h1>
+<h3 id="how-the-orchestrator-moves-state-as-regimes-change"><em>How the orchestrator moves state as regimes change</em></h3>
+<pre><code>                                🔁
+                   ┌──────────────────────────┐
+                   │ Spintronics Regime:      │
+                   │        NORMAL            │
+                   └─────────────┬────────────┘
+                                 │
+                                 ▼
+                     ┌────────────────────┐
+                     │ Use for foreground │
+                     │ state + fast logs  │
+                     └─────────┬──────────┘
+                               │
+                               ▼
+                 ┌────────────────────────────┐
+                 │ Regime shifts to STRESSED? │
+                 └───────────────┬────────────┘
+                                 │ yes
+                                 ▼
+                     ┌──────────────────────────┐
+                     │ Reduce duty cycle        │
+                     │ Move non‑critical state  │
+                     │        → NVRAM           │
+                     └─────────┬────────────────┘
+                               │
+                               ▼
+                 ┌────────────────────────────┐
+                 │ Regime shifts to DEGRADED? │
+                 └───────────────┬────────────┘
+                                 │ yes
+                                 ▼
+                     ┌───────────────────────────┐
+                     │ Migrate ALL state → NVRAM │
+                     │ Lock spintronics R/O      │
+                     │ Shed non‑critical load    │
+                     │ Enter safe mode           │
+                     └───────────────────────────┘
+</code></pre>
+<p>This is the canonical RTT‑Inside state‑migration pattern.</p>
+<hr>
+<h1 id="3-triadic-observer-layer-read">🧭 3. Triadic Observer Layer Read</h1>
+<h3 id="phase-source-time-analysis-of-orchestrator-behavior"><em>Phase / Source / Time analysis of orchestrator behavior</em></h3>
+<p>Using our Triadic Observer Layer:</p>
+<hr>
+<h2 id="phase"><strong>PHASE</strong></h2>
+<p><strong>Phase 1 — Normal Operation</strong><br>
+- Spintronics handles foreground state.<br>
+- CMOS handles compute.<br>
+- NVRAM holds critical/archival state.<br>
+- Orchestrator is passive, monitoring only.</p>
+<p><strong>Phase 2 — Stress Response</strong><br>
+- Spintronics enters <code>stressed</code>.<br>
+- Orchestrator shifts into <strong>adaptive phase</strong>:
+  - duty‑cycle reduction<br>
+  - partial migration<br>
+  - thermal/power balancing  </p>
+<p><strong>Phase 3 — Degradation Management</strong><br>
+- Spintronics enters <code>degraded</code>.<br>
+- Orchestrator enters <strong>protective phase</strong>:
+  - full migration<br>
+  - read‑only lock<br>
+  - load shedding<br>
+  - safe‑mode entry  </p>
+<hr>
+<h2 id="source"><strong>SOURCE</strong></h2>
+<ul>
+<li><strong>Spintronics tile</strong> provides substrate‑level signals (thermal, error, regime).  </li>
+<li><strong>CMOS tile</strong> provides compute‑level signals (latency, power).  </li>
+<li><strong>NVRAM tile</strong> provides persistence‑level signals (health, capacity).  </li>
+<li><strong>Orchestrator</strong> integrates these into a single, coherent system‑level view.</li>
+</ul>
+<p>Each tile remains the source of truth for its own domain.</p>
+<hr>
+<h2 id="time"><strong>TIME</strong></h2>
+<ul>
+<li>The orchestrator maintains a <strong>temporal model</strong> of the system:</li>
+<li>regime transitions  </li>
+<li>event logs  </li>
+<li>time‑in‑regime fractions  </li>
+<li>Decisions are based not only on <em>current</em> state but on <strong>trajectory</strong>.</li>
+</ul>
+<p>This is classic RTT‑Inside temporal reasoning:<br>
+<strong>“Where is this tile going, not just where is it now?”</strong></p>
+<hr>
+<h1 id="4-multinode-version">🌐 4. Multi‑Node Version</h1>
+<h3 id="several-orchestrators-cooperating-across-a-cluster"><em>Several orchestrators cooperating across a cluster</em></h3>
+<p>Below is a minimal multi‑node RTT‑Inside cluster example:</p>
+<pre><code>                             🌐
+ ┌──────────────────────────┐        ┌────────────────────────────┐
+ │ Node A                   │        │ Node B                     │
+ │ QuantumStackOrchestrator │◀──────▶ QuantumStackOrchestrator   │
+ │  • spintronics (normal)  │        │  • spintronics (stressed)  │
+ │  • CMOS (normal)         │        │  • CMOS (normal)           │
+ │  • NVRAM (normal)        │        │  • NVRAM (normal)          │
+ └───────────┬──────────────┘        └───────────┬────────────────┘
+             │                                   │
+             ▼                                   ▼
+       ┌──────────────────────────────┐   ┌──────────────────────────────┐
+       │ Cluster Coordination Layer   │   │ Cluster Coordination Layer   │
+       │  • share tile summaries      │   │  • share tile summaries      │
+       │  • share global regimes      │   │  • share global regimes      │
+       │  • negotiate load balancing  │   │  • negotiate load balancing  │
+       └──────────────────────────────┘   └──────────────────────────────┘
+</code></pre>
+<h3 id="clusterlevel-behaviors"><strong>Cluster‑level behaviors:</strong></h3>
+<ul>
+<li>If <strong>Node B</strong> spintronics enters <code>stressed</code>:</li>
+<li>Node A may accept <strong>foreground state</strong> from Node B.</li>
+<li>Node B reduces duty cycle.</li>
+<li>
+<p>Cluster regime becomes <code>stressed</code>.</p>
+</li>
+<li>
+<p>If <strong>Node B</strong> enters <code>degraded</code>:</p>
+</li>
+<li>Node B migrates all state → NVRAM.</li>
+<li>Node A may take over compute or state roles.</li>
+<li>Cluster may enter <code>degraded</code> or <code>safe_mode</code>.</li>
+</ul>
+<h3 id="key-rttinside-principle"><strong>Key RTT‑Inside principle:</strong></h3>
+<p>Each orchestrator is autonomous but <strong>cooperative</strong>, sharing only:</p>
+<ul>
+<li>regime summaries  </li>
+<li>load availability  </li>
+<li>safe envelopes  </li>
+</ul>
+<p>Never raw state, never raw quantum data.</p>
+<hr>
+<h3 id="1-clusterlevel-json-spec">1. Cluster‑level JSON spec</h3>
+<pre><code class="language-json">{
+  &quot;cluster_type&quot;: &quot;QuantumStackCluster&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;nodes&quot;: [
+    {
+      &quot;node_id&quot;: &quot;node_A&quot;,
+      &quot;orchestrator_type&quot;: &quot;QuantumStackOrchestrator&quot;,
+      &quot;global_regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+      &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+      &quot;power_band&quot;: &quot;low | nominal | elevated | peak&quot;,
+      &quot;tile_summaries&quot;: [
+        {
+          &quot;tile_id&quot;: &quot;spin_01&quot;,
+          &quot;component_type&quot;: &quot;SpintronicCellArray&quot;,
+          &quot;regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+          &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+          &quot;health&quot;: &quot;good | warning | bad&quot;
+        },
+        {
+          &quot;tile_id&quot;: &quot;cmos_01&quot;,
+          &quot;component_type&quot;: &quot;CmosComputeTile&quot;,
+          &quot;regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+          &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+          &quot;health&quot;: &quot;good | warning | bad&quot;
+        },
+        {
+          &quot;tile_id&quot;: &quot;nvram_01&quot;,
+          &quot;component_type&quot;: &quot;NvramStateStore&quot;,
+          &quot;regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+          &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+          &quot;health&quot;: &quot;good | warning | bad&quot;
+        }
+      ]
+    }
+  ],
+  &quot;cluster_awareness_surface&quot;: {
+    &quot;cluster_regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+    &quot;cluster_thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+    &quot;cluster_power_band&quot;: &quot;low | nominal | elevated | peak&quot;,
+    &quot;node_summaries&quot;: [
+      {
+        &quot;node_id&quot;: &quot;node_A&quot;,
+        &quot;global_regime&quot;: &quot;normal | stressed | degraded | unsafe&quot;,
+        &quot;thermal_band&quot;: &quot;cool | nominal | warm | hot&quot;,
+        &quot;power_band&quot;: &quot;low | nominal | elevated | peak&quot;,
+        &quot;health&quot;: &quot;good | warning | bad&quot;
+      }
+    ]
+  },
+  &quot;cluster_control_surface&quot;: {
+    &quot;policy&quot;: {
+      &quot;max_cluster_thermal_band&quot;: &quot;cool | nominal | warm&quot;,
+      &quot;max_cluster_power_band&quot;: &quot;low | nominal | elevated&quot;,
+      &quot;load_balance_strategy&quot;: &quot;latency | energy | safety&quot;
+    },
+    &quot;actions&quot;: [
+      &quot;rebalance_work_across_nodes&quot;,
+      &quot;migrate_state_across_nodes&quot;,
+      &quot;enter_cluster_safe_mode&quot;
+    ]
+  }
+}
+</code></pre>
+<hr>
+<h3 id="2-diagram-showing-qmroot-boundaries-across-nodes">2. Diagram showing Qmroot boundaries across nodes</h3>
+<pre><code class="language-text">                                      🌐
+                 ┌──────────────── QuantumStackCluster ──────────────┐
+                 │                                                   │
+                 │   ┌──────────── Node A ───────────┐               │
+                 │   │  QuantumStackOrchestrator     │               │
+                 │   │                               │               │
+                 │   │  ┌─────────────────────────┐  │               │
+                 │   │  │  SpintronicCellArray    │  │               │
+                 │   │  │  (Qmroot edge)          │  │               │
+                 │   │  │  ┌───────────────────┐  │  │               │
+                 │   │  │  │  Qmroot (internal)│  │  │               │
+                 │   │  │  └───────────────────┘  │  │               │
+                 │   │  └───────▲─────────────────┘  │               │
+                 │   │          │ awareness surface  │               │
+                 │   │  ┌───────┴─────────────────┐  │               │
+                 │   │  │  CMOS + NVRAM tiles     │  │               │
+                 │   │  └─────────────────────────┘  │               │
+                 │   └───────────────────────────────┘               │
+                 │                                                   │
+                 │   ┌──────────── Node B ───────────┐               │
+                 │   │  QuantumStackOrchestrator     │               │
+                 │   │        (same pattern)         │               │
+                 │   └───────────────────────────────┘               │
+                 │                                                   │
+                 └───────────────────────────────────────────────────┘
+</code></pre>
+<p>Key idea:<br>
+Qmroot never leaves the spintronic device; nodes and cluster only see <strong>aggregated awareness surfaces</strong>.</p>
+<hr>
+<h3 id="3-teaching-version-for-students">3. Teaching version for students</h3>
+<h4 id="a-simple-story">a) Simple story</h4>
+<ul>
+<li><strong>Each device</strong> (spintronics, CMOS, NVRAM) can say:</li>
+<li>“How hot am I?”  </li>
+<li>“How healthy am I?”  </li>
+<li>
+<p>“Am I in a safe regime?”</p>
+</li>
+<li>
+<p><strong>Each node orchestrator</strong>:</p>
+</li>
+<li>Listens to its devices.  </li>
+<li>Moves work and data away from anything getting unsafe.  </li>
+<li>
+<p>Slows down or enters safe mode if needed.</p>
+</li>
+<li>
+<p><strong>The cluster</strong>:</p>
+</li>
+<li>Listens to all nodes.  </li>
+<li>Decides where to send new work.  </li>
+<li>Keeps the whole system inside safe temperature and power limits.</li>
+</ul>
+<h4 id="b-tiny-student-json">b) Tiny student JSON</h4>
+<pre><code class="language-json">{
+  &quot;cluster&quot;: {
+    &quot;nodes&quot;: [
+      {
+        &quot;node_id&quot;: &quot;node_A&quot;,
+        &quot;regime&quot;: &quot;normal&quot;,
+        &quot;tiles&quot;: [
+          { &quot;id&quot;: &quot;spin_01&quot;, &quot;type&quot;: &quot;spintronic&quot;, &quot;regime&quot;: &quot;normal&quot; },
+          { &quot;id&quot;: &quot;cmos_01&quot;, &quot;type&quot;: &quot;cmos&quot;, &quot;regime&quot;: &quot;normal&quot; },
+          { &quot;id&quot;: &quot;nvram_01&quot;, &quot;type&quot;: &quot;nvram&quot;, &quot;regime&quot;: &quot;normal&quot; }
+        ]
+      },
+      {
+        &quot;node_id&quot;: &quot;node_B&quot;,
+        &quot;regime&quot;: &quot;stressed&quot;,
+        &quot;tiles&quot;: [
+          { &quot;id&quot;: &quot;spin_02&quot;, &quot;type&quot;: &quot;spintronic&quot;, &quot;regime&quot;: &quot;stressed&quot; }
+        ]
+      }
+    ],
+    &quot;cluster_regime&quot;: &quot;stressed&quot;
+  }
+}
+</code></pre>
+<p>Then we ask students:</p>
+<ul>
+<li>If <code>spin_02</code> goes to <code>degraded</code>, what should the cluster do?  </li>
+<li>Which node should take over its work?  </li>
+<li>How do we keep <strong>no data lost, no silent corruption</strong> as the invariant?</li>
+</ul>
+<p>That’s RTT‑Inside, in training‑wheels form.</p>
+  </main>
+</body>
+</html>

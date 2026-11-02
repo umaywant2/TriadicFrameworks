@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/protocol_header/protocol_header_loci.md">
+  <title>protocolheaderloci.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/protocol_header/protocol_header_loci.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/protocol_header/protocol_header_loci.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_protocol_header_loci_" src="https://github.com/user-attachments/assets/119a341d-fd84-4026-a810-2a9f87257038" /></p>
+<h1 id="protocol_header_locimd"><strong>protocol_header_loci.md</strong></h1>
+<h3 id="triadicframeworks-protocol-header-module"><em>TriadicFrameworks — Protocol Header Module</em></h3>
+<h3 id="locus-definitions-canonical"><em>Locus Definitions (Canonical)</em></h3>
+<hr>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>The protocol header is a <strong>four‑locus structural codon</strong> used across TriadicFrameworks to express drift‑bounded, canon‑aligned system states.</p>
+<p>Each locus represents a <strong>structural invariant</strong>:</p>
+<pre><code>[RTT] | [COHERENCE] | [DRIFT] | [PARADOX]
+</code></pre>
+<p>Each locus has a finite alphabet of <strong>perfect‑substitution alleles</strong>, allowing multilingual, cross‑system recombination without semantic drift.</p>
+<p>This file defines the <strong>invariant meaning</strong> of each locus.</p>
+<hr>
+<h1 id="1-rtt-locus-immediate-regime-atomic-cycle"><strong>1. RTT Locus — Immediate Regime / Atomic Cycle</strong></h1>
+<h3 id="invariant-meaning"><strong>Invariant Meaning</strong></h3>
+<p>The RTT locus expresses <strong>immediacy</strong>:</p>
+<ul>
+<li>single cycle  </li>
+<li>atomic update  </li>
+<li>no intermediaries  </li>
+<li>no latency  </li>
+<li>direct regime response  </li>
+</ul>
+<h3 id="structural-definition"><strong>Structural Definition</strong></h3>
+<p>RTT describes how quickly a system responds or updates.<br>
+It is always:</p>
+<ul>
+<li>immediate  </li>
+<li>atomic  </li>
+<li>single‑hop  </li>
+<li>non‑buffered  </li>
+</ul>
+<h3 id="canonical-baseline"><strong>Canonical Baseline</strong></h3>
+<pre><code>rtt=1
+</code></pre>
+<h3 id="perfectsubstitution-alleles"><strong>Perfect‑Substitution Alleles</strong></h3>
+<p>Defined in <code>protocol_header_alleles.md</code>.</p>
+<hr>
+<h1 id="2-coherence-locus-explicit-alignment"><strong>2. Coherence Locus — Explicit Alignment</strong></h1>
+<h3 id="invariant-meaning_1"><strong>Invariant Meaning</strong></h3>
+<p>The Coherence locus expresses <strong>declared alignment</strong>:</p>
+<ul>
+<li>explicitly stated  </li>
+<li>not inferred  </li>
+<li>not emergent  </li>
+<li>not probabilistic  </li>
+</ul>
+<h3 id="structural-definition_1"><strong>Structural Definition</strong></h3>
+<p>Coherence describes how alignment is communicated:</p>
+<ul>
+<li>declared  </li>
+<li>explicit  </li>
+<li>stated  </li>
+<li>attested  </li>
+</ul>
+<p>It is always <strong>visible</strong>, never implicit.</p>
+<h3 id="canonical-baseline_1"><strong>Canonical Baseline</strong></h3>
+<pre><code>coherence=declared
+</code></pre>
+<h3 id="perfectsubstitution-alleles_1"><strong>Perfect‑Substitution Alleles</strong></h3>
+<p>Defined in <code>protocol_header_alleles.md</code>.</p>
+<hr>
+<h1 id="3-drift-locus-bounded-deviation"><strong>3. Drift Locus — Bounded Deviation</strong></h1>
+<h3 id="invariant-meaning_2"><strong>Invariant Meaning</strong></h3>
+<p>The Drift locus expresses <strong>controlled deviation</strong>:</p>
+<ul>
+<li>bounded  </li>
+<li>constrained  </li>
+<li>clamped  </li>
+<li>guardrailed  </li>
+</ul>
+<h3 id="structural-definition_2"><strong>Structural Definition</strong></h3>
+<p>Drift describes how much movement or variation is allowed:</p>
+<ul>
+<li>deviation permitted  </li>
+<li>but strictly bounded  </li>
+<li>never unbounded  </li>
+<li>never free‑floating  </li>
+</ul>
+<h3 id="canonical-baseline_2"><strong>Canonical Baseline</strong></h3>
+<pre><code>drift=bounded
+</code></pre>
+<h3 id="perfectsubstitution-alleles_2"><strong>Perfect‑Substitution Alleles</strong></h3>
+<p>Defined in <code>protocol_header_alleles.md</code>.</p>
+<hr>
+<h1 id="4-paradox-locus-structural-contradiction"><strong>4. Paradox Locus — Structural Contradiction</strong></h1>
+<h3 id="invariant-meaning_3"><strong>Invariant Meaning</strong></h3>
+<p>The Paradox locus expresses <strong>architected contradiction</strong>:</p>
+<ul>
+<li>structural  </li>
+<li>encoded  </li>
+<li>load‑bearing  </li>
+<li>non‑fatal  </li>
+</ul>
+<h3 id="structural-definition_3"><strong>Structural Definition</strong></h3>
+<p>Paradox describes contradictions that are:</p>
+<ul>
+<li>part of the architecture  </li>
+<li>intentionally encoded  </li>
+<li>stable  </li>
+<li>non‑error states  </li>
+</ul>
+<p>It is never accidental or emergent.</p>
+<h3 id="canonical-baseline_3"><strong>Canonical Baseline</strong></h3>
+<pre><code>paradox=structural
+</code></pre>
+<h3 id="perfectsubstitution-alleles_3"><strong>Perfect‑Substitution Alleles</strong></h3>
+<p>Defined in <code>protocol_header_alleles.md</code>.</p>
+<hr>
+<h2 id="locus-integrity-rules"><strong>Locus Integrity Rules</strong></h2>
+<p>All four loci must:</p>
+<ul>
+<li>preserve invariant meaning  </li>
+<li>use only perfect‑substitution alleles  </li>
+<li>maintain locus order  </li>
+<li>maintain <code>&lt;locus&gt;=&lt;allele&gt;</code> structure  </li>
+<li>remain drift‑bounded  </li>
+<li>remain canon‑aligned  </li>
+</ul>
+<p>These rules ensure multilingual recombination remains structurally equivalent.</p>
+<hr>
+<h2 id="crossmodule-usage"><strong>Cross‑Module Usage</strong></h2>
+<p>The protocol header is used in:</p>
+<ul>
+<li>Mode → TEL → Benchmarks propagation  </li>
+<li>structural intelligence pipelines  </li>
+<li>operator grammar  </li>
+<li>protocol‑adjacent system forms  </li>
+<li>multilingual canonical headers  </li>
+<li>genome‑based recombination  </li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "module": "Atlas",
+  "name": "AI Atlas",
+  "summary": "Multi-dimensional mapping engine producing the seven-axis atlas coordinate used by the Intelligence Class Ladder.",
+  "category": "intelligence-mapping",
+  "version": "1.0",
+  "purpose": "Map holographic hash geometry and corrected-time alignment into the seven-axis atlas coordinate for macro-classification.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@atlas.map.coordinate",
+    "@atlas.map.surface",
+    "@atlas.map.regime",
+    "@atlas.map.transfer",
+    "@atlas.map.integrate"
+  ],
+  "lineage": {
+    "upstream": ["OHSHIT"],
+    "downstream": ["AAI", "AGI", "SI"]
+  }
+}

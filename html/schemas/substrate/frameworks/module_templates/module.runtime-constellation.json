@@ -1,0 +1,115 @@
+{
+  "$schema": "../../module.schema.json",
+  "module": "my-runtime-constellation-module",
+  "identity": "student.my-runtime-constellation-module",
+  "purpose": "A runtime-constellation-ready module defining bindings to all eight substrate runtime engines.",
+
+  "files": [
+    {
+      "name": "README.md",
+      "role": "profile"
+    },
+    {
+      "name": "execution-binding.md",
+      "role": "extension"
+    },
+    {
+      "name": "synchronization-binding.md",
+      "role": "extension"
+    },
+    {
+      "name": "continuity-binding.md",
+      "role": "extension"
+    },
+    {
+      "name": "resonance-stabilizer-binding.md",
+      "role": "extension"
+    },
+    {
+      "name": "propagation-binding.md",
+      "role": "extension"
+    },
+    {
+      "name": "coupling-regulator-binding.md",
+      "role": "extension"
+    },
+    {
+      "name": "invariance-binding.md",
+      "role": "extension"
+    },
+    {
+      "name": "monitor-binding.md",
+      "role": "extension"
+    }
+  ],
+
+  "runtime_constellation": {
+    "execution": {
+      "engine": "../execution/triadic-execution-engine.json",
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "synchronization": {
+      "engine": "../atlas/atlas-synchronization.json",
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "continuity": {
+      "engine": "../continuity/substrate-continuity.json",
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "resonance_stabilizer": {
+      "engine": "../epoch/epochal-resonance-stabilizer.json",
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "propagation": {
+      "engine": "../epoch/epochal-propagation.json",
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "coupling_regulator": {
+      "engine": "../coupling/resonance-drift-coupling.json",
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "invariance": {
+      "engine": "../invariance/substrate-invariance.json",
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "monitor": {
+      "engine": "../monitor/triadic-runtime-monitor.json",
+      "fields": ["string"],
+      "rules": ["string"]
+    }
+  },
+
+  "operators": [
+    {
+      "name": "constellation-define",
+      "description": "Define runtime-constellation bindings for the module.",
+      "example": "Define execution binding → execution-binding.md"
+    },
+    {
+      "name": "constellation-extend",
+      "description": "Extend runtime engine behavior with module-specific rules.",
+      "example": "Extend propagation binding → propagation-binding.md"
+    },
+    {
+      "name": "constellation-bind",
+      "description": "Bind module fields to all eight runtime engines.",
+      "example": "Bind invariance → invariance-binding.md"
+    }
+  ],
+
+  "output": {
+    "runtime_constellation": "./module.runtime-constellation.json"
+  },
+
+  "meta": {
+    "notes": "Runtime-constellation module template defining bindings to all eight substrate runtime engines."
+  }
+}
+

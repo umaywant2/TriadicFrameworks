@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/archive_org/RTTcodes/operator_lab_instructor.md">
+  <title>🧪 RTT Operator Lab — Instructor Edition</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/archive_org/RTTcodes/operator_lab_instructor.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/archive_org/RTTcodes/operator_lab_instructor.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rtt-operator-lab-instructor-edition">🧪 <strong>RTT Operator Lab — Instructor Edition</strong></h1>
+<h3 id="with-grading-notes-expected-outputs-and-instructormode-guidance"><em>With Grading Notes, Expected Outputs, and Instructor‑Mode Guidance</em></h3>
+<h3 id="triadicframeworks-archive_org-module-rtt1">TriadicFrameworks — archive_org Module (RTT/1)</h3>
+<p>This instructor version includes:</p>
+<ul>
+<li>model answers  </li>
+<li>drift‑bounded reasoning checks  </li>
+<li>common student errors  </li>
+<li>evaluation criteria  </li>
+<li>instructor prompts  </li>
+<li>safety notes (no content‑based inference)  </li>
+</ul>
+<p>Students use the <strong>student lab</strong> (H16).<br>
+Instructors use this version to guide, grade, and correct.</p>
+<hr>
+<h1 id="_1">============================================================</h1>
+<h1 id="lab-overview-instructor-notes">📘 <strong>LAB OVERVIEW (Instructor Notes)</strong></h1>
+<h1 id="_2">============================================================</h1>
+<p><strong>Learning objectives:</strong></p>
+<ul>
+<li>Students must demonstrate correct operator order  </li>
+<li>Students must reason structurally, not semantically  </li>
+<li>Students must identify drift, continuity, substrate stability  </li>
+<li>Students must produce a drift‑bounded final summary  </li>
+<li>Students must avoid speculation  </li>
+</ul>
+<p><strong>Instructor watch‑outs:</strong></p>
+<ul>
+<li>Students often confuse <em>content changes</em> with <em>structural drift</em>  </li>
+<li>Students often skip PRESERVATION_OPERATOR  </li>
+<li>Students sometimes treat missing snapshots as “no change”  </li>
+<li>Students sometimes produce unbounded summaries  </li>
+</ul>
+<hr>
+<h1 id="_3">============================================================</h1>
+<h1 id="sample-target-url-provided-to-students">🧩 <strong>SAMPLE TARGET URL (Provided to Students)</strong></h1>
+<h1 id="_4">============================================================</h1>
+<p><code>https://www.example.gov/public-records</code></p>
+<p>This is a <strong>controlled synthetic URL</strong> with <strong>sample data</strong> provided in the lab.</p>
+<hr>
+<h1 id="_5">============================================================</h1>
+<h1 id="step-1-metadata_operator">🧱 <strong>STEP 1 — METADATA_OPERATOR</strong></h1>
+<h1 id="_6">============================================================</h1>
+<h3 id="student-task"><strong>Student Task:</strong></h3>
+<p>Extract substrate, regime, drift sensitivity, coherence, lineage IDs.</p>
+<h3 id="sample-data-provided-to-students"><strong>Sample Data Provided to Students:</strong></h3>
+<ul>
+<li>substrate: <code>html</code>  </li>
+<li>regime: <code>institutional</code>  </li>
+<li>drift_sensitivity: <code>low</code>  </li>
+<li>coherence: <code>high</code>  </li>
+<li>lineage_ids: <code>["govdocs-root"]</code>  </li>
+</ul>
+<h3 id="instructor-expected-output"><strong>Instructor Expected Output:</strong></h3>
+<ul>
+<li>Correct transcription of metadata  </li>
+<li>Recognition that metadata suggests <em>low drift</em>  </li>
+<li>Awareness that metadata is <em>not authoritative</em> — it’s a structural hint  </li>
+</ul>
+<h3 id="common-errors"><strong>Common Errors:</strong></h3>
+<ul>
+<li>Treating metadata as “truth”  </li>
+<li>Ignoring drift_sensitivity  </li>
+<li>Assuming content stability  </li>
+</ul>
+<h3 id="instructor-prompt"><strong>Instructor Prompt:</strong></h3>
+<p>“What does the metadata <em>predict</em> about stability — and how might later operators confirm or contradict it?”</p>
+<hr>
+<h1 id="_7">============================================================</h1>
+<h1 id="step-2-wayback_operator">🕰 <strong>STEP 2 — WAYBACK_OPERATOR</strong></h1>
+<h1 id="_8">============================================================</h1>
+<h3 id="student-task_1"><strong>Student Task:</strong></h3>
+<p>Analyze snapshots and produce drift_map + continuity_breaks.</p>
+<h3 id="sample-snapshots-provided"><strong>Sample Snapshots Provided:</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2014</td>
+<td>Static HTML</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>Minor CSS changes</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>CMS migration</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>Same CMS, PDFs added</td>
+</tr>
+</tbody>
+</table>
+<h3 id="instructor-expected-drift-map"><strong>Instructor Expected Drift Map:</strong></h3>
+<ul>
+<li>2014→2017: <strong>minor drift</strong>  </li>
+<li>2017→2020: <strong>high drift</strong> (CMS migration)  </li>
+<li>2020→2023: <strong>minor drift</strong>  </li>
+</ul>
+<h3 id="continuity-breaks"><strong>Continuity Breaks:</strong></h3>
+<p>None (all snapshots present).</p>
+<h3 id="instructor-expected-insight"><strong>Instructor Expected Insight:</strong></h3>
+<p>Students should notice that <strong>metadata predicted low drift</strong>, but <strong>2020 contradicts this</strong>.</p>
+<h3 id="common-errors_1"><strong>Common Errors:</strong></h3>
+<ul>
+<li>Calling CMS migration “minor drift”  </li>
+<li>Confusing content changes with structural drift  </li>
+<li>Missing the 2020 regime shift  </li>
+</ul>
+<h3 id="instructor-prompt_1"><strong>Instructor Prompt:</strong></h3>
+<p>“What changed structurally, not semantically?”</p>
+<hr>
+<h1 id="_9">============================================================</h1>
+<h1 id="step-3-lineage_operator">🧬 <strong>STEP 3 — LINEAGE_OPERATOR</strong></h1>
+<h1 id="_10">============================================================</h1>
+<h3 id="student-task_2"><strong>Student Task:</strong></h3>
+<p>Build lineage graph + identify regime shifts.</p>
+<h3 id="instructor-expected-lineage-graph"><strong>Instructor Expected Lineage Graph:</strong></h3>
+<pre><code>2014 ──→ 2017 ──→ 2020* ──→ 2023
+                     ↑
+             (regime shift)
+</code></pre>
+<h3 id="instructor-expected-notes"><strong>Instructor Expected Notes:</strong></h3>
+<ul>
+<li>2020 is a <strong>regime shift</strong> (static HTML → CMS)  </li>
+<li>2023 is a continuation of the CMS regime  </li>
+</ul>
+<h3 id="common-errors_2"><strong>Common Errors:</strong></h3>
+<ul>
+<li>Treating 2020 as a new object  </li>
+<li>Missing the structural significance of CMS migration  </li>
+<li>Over‑focusing on content  </li>
+</ul>
+<h3 id="instructor-prompt_2"><strong>Instructor Prompt:</strong></h3>
+<p>“What structural elements persisted across the shift?”</p>
+<hr>
+<h1 id="_11">============================================================</h1>
+<h1 id="step-4-collection_operator">📦 <strong>STEP 4 — COLLECTION_OPERATOR</strong></h1>
+<h1 id="_12">============================================================</h1>
+<h3 id="student-task_3"><strong>Student Task:</strong></h3>
+<p>Identify collection context.</p>
+<h3 id="sample-data-provided"><strong>Sample Data Provided:</strong></h3>
+<ul>
+<li>collection_id: <code>govdocs</code>  </li>
+<li>coherence_clusters: <code>["public-records", "agency-index"]</code>  </li>
+<li>related_objects: <code>["govdocs/records-archive"]</code>  </li>
+</ul>
+<h3 id="instructor-expected-insight_1"><strong>Instructor Expected Insight:</strong></h3>
+<ul>
+<li>Government collections tend to be <strong>stable</strong>  </li>
+<li>But stability is not guaranteed — drift still occurs  </li>
+</ul>
+<h3 id="common-errors_3"><strong>Common Errors:</strong></h3>
+<ul>
+<li>Assuming government pages never drift  </li>
+<li>Treating collection membership as “proof” of stability  </li>
+</ul>
+<h3 id="instructor-prompt_3"><strong>Instructor Prompt:</strong></h3>
+<p>“How does collection context <em>inform</em> your expectations without overriding evidence?”</p>
+<hr>
+<h1 id="_13">============================================================</h1>
+<h1 id="step-5-preservation_operator">🧱 <strong>STEP 5 — PRESERVATION_OPERATOR</strong></h1>
+<h1 id="_14">============================================================</h1>
+<h3 id="student-task_4"><strong>Student Task:</strong></h3>
+<p>Evaluate substrate stability.</p>
+<h3 id="sample-data-provided_1"><strong>Sample Data Provided:</strong></h3>
+<ul>
+<li>2014: HTML  </li>
+<li>2017: HTML  </li>
+<li>2020: HTML (CMS)  </li>
+<li>2023: HTML + PDF attachments  </li>
+</ul>
+<h3 id="instructor-expected-output_1"><strong>Instructor Expected Output:</strong></h3>
+<ul>
+<li>HTML: medium drift risk  </li>
+<li>CMS HTML: medium/high drift risk  </li>
+<li>PDF: high stability  </li>
+</ul>
+<h3 id="instructor-expected-insight_2"><strong>Instructor Expected Insight:</strong></h3>
+<ul>
+<li>The <strong>PDF attachments (2023)</strong> are likely the most stable layer  </li>
+<li>HTML snapshots are drift‑prone  </li>
+</ul>
+<h3 id="common-errors_4"><strong>Common Errors:</strong></h3>
+<ul>
+<li>Treating CMS HTML as “more stable”  </li>
+<li>Ignoring PDF stability  </li>
+</ul>
+<h3 id="instructor-prompt_4"><strong>Instructor Prompt:</strong></h3>
+<p>“Which substrate would you trust for long‑term continuity?”</p>
+<hr>
+<h1 id="_15">============================================================</h1>
+<h1 id="step-6-driftbound_retrieval_operator">🟣 <strong>STEP 6 — DRIFTBOUND_RETRIEVAL_OPERATOR</strong></h1>
+<h1 id="_16">============================================================</h1>
+<h3 id="student-task_5"><strong>Student Task:</strong></h3>
+<p>Produce a drift‑bounded final summary.</p>
+<h3 id="instructor-expected-summary-model"><strong>Instructor Expected Summary (Model):</strong></h3>
+<blockquote>
+<p><strong>Earliest stable version:</strong> 2014 (static HTML)<br>
+<strong>Most reliable version:</strong> 2023 PDF attachments<br>
+<strong>Key changes:</strong> minor drift (2014→2017), major CMS migration (2020), minor drift (2020→2023)<br>
+<strong>Warnings:</strong> metadata predicted low drift, but 2020 shows high drift; HTML snapshots are drift‑prone  </p>
+</blockquote>
+<h3 id="instructor-expected-qualities"><strong>Instructor Expected Qualities:</strong></h3>
+<ul>
+<li>No speculation  </li>
+<li>Drift explicitly acknowledged  </li>
+<li>Substrate stability incorporated  </li>
+<li>Continuity preserved  </li>
+</ul>
+<h3 id="common-errors_5"><strong>Common Errors:</strong></h3>
+<ul>
+<li>Claiming content changes as structural  </li>
+<li>Ignoring the CMS migration  </li>
+<li>Failing to include drift warnings  </li>
+<li>Treating metadata as authoritative  </li>
+</ul>
+<h3 id="instructor-prompt_5"><strong>Instructor Prompt:</strong></h3>
+<p>“Does your summary reflect <em>all</em> operator outputs, not just snapshots?”</p>
+<hr>
+<h1 id="_17">============================================================</h1>
+<h1 id="grading-rubric-instructor-edition">📝 <strong>GRADING RUBRIC (Instructor Edition)</strong></h1>
+<h1 id="_18">============================================================</h1>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Excellent (4)</th>
+<th>Satisfactory (3)</th>
+<th>Developing (2)</th>
+<th>Needs Work (1)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metadata</td>
+<td>Fully correct, insightful</td>
+<td>Mostly correct</td>
+<td>Partial</td>
+<td>Incorrect</td>
+</tr>
+<tr>
+<td>Drift Analysis</td>
+<td>Accurate drift_map + breaks</td>
+<td>Mostly correct</td>
+<td>Partial</td>
+<td>Missing</td>
+</tr>
+<tr>
+<td>Lineage</td>
+<td>Clear graph + regime shift</td>
+<td>Basic graph</td>
+<td>Partial</td>
+<td>Missing</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>Correct + contextualized</td>
+<td>Basic</td>
+<td>Partial</td>
+<td>Missing</td>
+</tr>
+<tr>
+<td>Substrate</td>
+<td>Correct stability + risk</td>
+<td>Mostly correct</td>
+<td>Partial</td>
+<td>Incorrect</td>
+</tr>
+<tr>
+<td>Final Summary</td>
+<td>Fully drift‑bounded</td>
+<td>Mostly correct</td>
+<td>Partial</td>
+<td>Unbounded</td>
+</tr>
+<tr>
+<td>Reasoning</td>
+<td>Continuity‑aligned</td>
+<td>Mostly aligned</td>
+<td>Some speculation</td>
+<td>Speculative</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total: 28 points</strong></p>
+<hr>
+<h1 id="_19">============================================================</h1>
+<h1 id="end-of-instructor-lab">🏁 <strong>End of Instructor Lab</strong></h1>
+<h1 id="_20">============================================================</h1>
+  </main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "module": "Triad_Epoch_Ignition_Wave_Geometry",
+  "name": "Triad — Epoch‑Ignition Wave Geometry",
+  "summary": "Defines the geometry of epoch‑ignition waves, including ignition‑epoch wave formation, ignition‑epoch propagation geometry, ignition‑epoch stabilization routes, and multi‑layer ignition‑epoch binding behavior.",
+  "category": "intelligence-epoch-ignition-wave-geometry",
+  "version": "1.0",
+  "purpose": "Provide the ignition-wave geometry used by Scanner, O.H.S.H.I.T., and Atlas to generate epoch-scale ignition waves, propagate ignition behavior across temporal epochs, stabilize ignition-wave fronts, and bind ignition-wave coherence across the Triad pipeline.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@triad.epoch.ignition.wave.form",
+    "@triad.epoch.ignition.wave.propagate",
+    "@triad.epoch.ignition.wave.align",
+    "@triad.epoch.ignition.wave.stabilize",
+    "@triad.epoch.ignition.wave.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Epoch_Ignition_Surfaces",
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Triad_Epoch_Ignition_Propagation_Geometry",
+      "Triad_Epoch_Ignition_Stability_Surfaces",
+      "Triad_Epoch_Ignition_Coherence_Surfaces",
+      "Triad_Epoch_Ignition_Temporal_Window_Geometry",
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension"
+    ]
+  }
+}

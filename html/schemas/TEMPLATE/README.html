@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/TEMPLATE/README.md">
+  <title>📦 TEMPLATE/ Folder Structure</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/TEMPLATE/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/TEMPLATE/README.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_TEMPLATE_README_" src="https://github.com/user-attachments/assets/48a2c7cd-1d57-4ce6-9a61-3a974128ad1a" /></p>
+<h1 id="template-folder-structure">📦 <strong>TEMPLATE/ Folder Structure</strong></h1>
+<pre><code>TEMPLATE/
+ ├── README.md
+ ├── TemplateZoneExtension.schema.json
+ ├── TemplateFieldSampleExtension.schema.json
+ ├── TemplateNodeDescriptorExtension.schema.json
+ ├── TemplateAlertExtension.schema.json
+ └── TemplateRouteExtension.schema.json
+</code></pre>
+<p>This mirrors the structure used in <code>rtt-coal/</code>, <code>rsadi-gd/</code>, and future domains like <code>rtt-atc/</code>, <code>rtt-deepsea/</code>, etc.</p>
+<hr>
+<h1 id="templatereadmemd">📘 <strong>TEMPLATE/README.md</strong></h1>
+<h1 id="rsadi-domain-extension-template">RSADI Domain Extension Template</h1>
+<h3 id="how-to-create-a-new-rsadirttinside-domain-module">How to Create a New RSADI/RTT‑Inside Domain Module</h3>
+<p>This folder provides a <strong>boilerplate template</strong> for creating new RSADI domain
+extensions. Copy this folder, rename it (e.g., <code>rtt-atc/</code>, <code>rtt-deepsea/</code>,
+<code>rtt-space/</code>), and update the schema files to match your domain.</p>
+<p>All extensions MUST follow these rules:</p>
+<hr>
+<h2 id="1-core-invariants">1. Core Invariants</h2>
+<ul>
+<li><strong>Do not modify RSADI Core schemas.</strong></li>
+<li><strong>All domain fields MUST be added under <code>extensions.&lt;domain&gt;</code></strong>.</li>
+<li><strong>Extensions MUST remain optional</strong> so core validators still pass.</li>
+<li><strong>Use JSON Schema Draft 2020‑12</strong>.</li>
+<li><strong>Use SI units, ISO‑8601 timestamps, and UUIDv4 IDs</strong>.</li>
+</ul>
+<hr>
+<h2 id="2-schema-naming-convention">2. Schema Naming Convention</h2>
+<p>Each extension schema follows:</p>
+<pre><code>&lt;Domain&gt;&lt;CoreObject&gt;Extension.schema.json
+</code></pre>
+<p>Examples:</p>
+<ul>
+<li><code>ATCZoneExtension.schema.json</code></li>
+<li><code>DeepSeaFieldSampleExtension.schema.json</code></li>
+<li><code>SpaceAlertExtension.schema.json</code></li>
+</ul>
+<hr>
+<h2 id="3-how-to-use-this-template">3. How to Use This Template</h2>
+<ol>
+<li>Copy this folder.</li>
+<li>Rename it to your domain:
+   <code>rtt-atc/
+   rtt-deepsea/
+   rtt-space/
+   rtt-robotics/</code></li>
+<li>Replace all <code>"template"</code> identifiers with your domain name.</li>
+<li>Add domain‑specific fields inside the <code>extensions.&lt;domain&gt;</code> object.</li>
+<li>Validate using any JSON Schema validator.</li>
+<li>Add a README describing your domain semantics.</li>
+</ol>
+<hr>
+<h2 id="4-files-in-this-template">4. Files in This Template</h2>
+<ul>
+<li>
+<p><strong>TemplateZoneExtension.schema.json</strong><br>
+  Adds domain metadata to <code>ResonanceZoneState</code>.</p>
+</li>
+<li>
+<p><strong>TemplateFieldSampleExtension.schema.json</strong><br>
+  Adds domain sensor data to <code>ResonanceFieldSample</code>.</p>
+</li>
+<li>
+<p><strong>TemplateNodeDescriptorExtension.schema.json</strong><br>
+  Adds domain metadata to <code>NodeDescriptor</code>.</p>
+</li>
+<li>
+<p><strong>TemplateAlertExtension.schema.json</strong><br>
+  Adds domain‑specific alert fields.</p>
+</li>
+<li>
+<p><strong>TemplateRouteExtension.schema.json</strong><br>
+  Adds domain‑specific routing metadata.</p>
+</li>
+</ul>
+<hr>
+<h2 id="5-example-usage">5. Example Usage</h2>
+<pre><code class="language-json">{
+  &quot;zone_id&quot;: &quot;urn:rtt:zone:example:sector_7&quot;,
+  &quot;clarity_score&quot;: 180,
+  &quot;extensions&quot;: {
+    &quot;example&quot;: {
+      &quot;custom_field&quot;: 42
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="6-notes">6. Notes</h2>
+<ul>
+<li>Keep domain logic out of the core.</li>
+<li>Keep schemas small, focused, and typed.</li>
+<li>Use <code>additionalProperties: true</code> only inside extension blocks.</li>
+<li>Document all domain semantics in your domain README.</li>
+</ul>
+<hr>
+<p>Happy extending — and welcome to the RSADI ecosystem.</p>
+<hr>
+<h1 id="what-this-gives-you">🎯 What This Gives You</h1>
+<p>This TEMPLATE folder:</p>
+<ul>
+<li>standardizes how new domains are added  </li>
+<li>prevents contributors from breaking core invariants  </li>
+<li>accelerates onboarding  </li>
+<li>ensures every domain follows the same structure  </li>
+<li>keeps RSADI clean, modular, and future‑proof  </li>
+</ul>
+<p>If you want, I can also generate a <strong>TEMPLATE RFC skeleton</strong> so new domains can publish their own RFCs with zero friction.</p>
+  </main>
+</body>
+</html>

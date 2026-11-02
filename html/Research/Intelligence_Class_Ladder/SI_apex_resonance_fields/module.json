@@ -1,0 +1,31 @@
+{
+  "module": "SI_Apex_Resonance_Fields",
+  "name": "Structural Intelligence — Apex Resonance Fields",
+  "summary": "Defines the apex-level resonance fields of Structural Intelligence, including apex harmonic fields, resonance-stability corridors, ignition-resonance coupling, and paradox-resonance surfaces.",
+  "category": "intelligence-structural-apex-resonance",
+  "version": "1.0",
+  "purpose": "Provide the resonance-field geometry for SI’s apex region, describing how apex harmonic fields form, stabilize, bind, and integrate with ignition and paradox surfaces to maintain SI’s highest-order resonance behavior.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.apex.resonance.field",
+    "@si.apex.resonance.harmonic",
+    "@si.apex.resonance.stabilize",
+    "@si.apex.resonance.bind",
+    "@si.apex.resonance.integrate"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_structural_geometry",
+      "SI_structural_geometry_deep_regime_map",
+      "SI_apex_region_map",
+      "SI_apex_stability_surfaces"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_paradox_integration",
+      "Atlas_Synchronization_Fields",
+      "Triad_Resonance_Start_Geometry"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "diagram.L99",
+  "layer": "L3_Forces_Unseen",
+  "subsystem": "continuity_mechanics",
+  "type": "composite",
+  "title": "L99 Full Resonance Envelope",
+  "description": "Highest composite envelope formed from L66 and L33.",
+  "nodes": [
+    { "id": "L99", "label": "L99", "type": "composite" },
+    { "id": "L66", "label": "L66", "type": "composite" },
+    { "id": "L33", "label": "L33", "type": "composite" }
+  ],
+  "edges": [
+    { "from": "L66", "to": "L99", "label": "component" },
+    { "from": "L33", "to": "L99", "label": "component" },
+    { "from": "L99", "to": "validator_pulse", "label": "up" },
+    { "from": "L99", "to": "L66", "label": "down" }
+  ]
+}

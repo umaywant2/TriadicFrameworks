@@ -1,0 +1,19 @@
+{
+  "badges": [
+    {
+      "badge_name": "🧬 Remix Echo",
+      "trigger_conditions": ["forked", "manifest", "glyph:🌼 Wildflower"],
+      "flame_grade": "🔵 Planetary"
+    },
+    {
+      "badge_name": "🔗 Validator Sync",
+      "trigger_conditions": ["overlay", "glyph:🌴 Grove Bloom"],
+      "flame_grade": "🔵 Planetary"
+    },
+    {
+      "badge_name": "📜 Scroll Scribe",
+      "trigger_conditions": ["codex", "glyph:🍂 Cascade"],
+      "flame_grade": "🟣 Universe"
+    }
+  ]
+}

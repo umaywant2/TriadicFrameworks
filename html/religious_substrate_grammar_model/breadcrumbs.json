@@ -1,0 +1,34 @@
+{
+  "module": "Religious Substrate Grammar Model",
+  "slug": "rsgm",
+  "path": "/docs/religious_substrate_grammar_model/",
+  "breadcrumbs": [
+    {
+      "label": "Docs",
+      "url": "/docs/"
+    },
+    {
+      "label": "Religious Substrate Grammar Model",
+      "url": "/docs/religious_substrate_grammar_model/"
+    }
+  ],
+  "children": [
+    {
+      "label": "RSGM_Capture",
+      "url": "/docs/religious_substrate_grammar_model/RSGM_Capture.md"
+    },
+    {
+      "label": "MAS_RTT",
+      "url": "/docs/religious_substrate_grammar_model/MAS_RTT.md"
+    },
+    {
+      "label": "WHDIS_RTT",
+      "url": "/docs/religious_substrate_grammar_model/WHDIS_RTT.md"
+    },
+    {
+      "label": "SSHAI_RTT",
+      "url": "/docs/religious_substrate_grammar_model/SSHAI_RTT.md"
+    }
+  ]
+}
+

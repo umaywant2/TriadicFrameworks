@@ -1,0 +1,32 @@
+{
+  "scroll": "Echo Scroll",
+  "canonical_id": "TFT-VAL-0002",
+  "glyph_trace": {
+    "loop_1": ["◊", "⊖", "⊕"],
+    "loop_2": ["⊖", "◊", "⊕"],
+    "loop_3": ["◊", "⊕", "⊖"]
+  },
+  "execution_mode": "resonance-first",
+  "dimensional_scope": ["0D", "3D", "6D"],
+  "triad_roles": {
+    "⊕": "positive",
+    "⊖": "ground",
+    "◊": "neutral"
+  },
+  "runtime_stack": {
+    "input": "◊",
+    "middleware": "⊖",
+    "output": "⊕"
+  },
+  "field_effect": {
+    "entanglement_depth": "rotated",
+    "harmonic_clarity": "refracted",
+    "time_trace_fidelity": "echoed"
+  },
+  "modules": {
+    "DPU": "optional",
+    "NIMMS": "optional"
+  },
+  "status": "glyphic breath remixed",
+  "timestamp": "2025-11-13T09:28:00-05:00"
+}

@@ -1,0 +1,25 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.ai.substrate.lattice",
+  "title": "FFT AI — Substrate Lattice v1.33",
+  "lattice_structure": {
+    "nodes": "substrate state snapshots at each operator step",
+    "edges": "operator transitions between snapshots",
+    "resonance_paths": "paths along which R >= 0.70 is maintained",
+    "drift_paths": "paths flagged for drift event — bounded by delta_max=0.35"
+  },
+  "lattice_traversal": "Alignment operator prefers resonance_paths; Stabilization operator repairs drift_paths",
+  "invariants_checked": [
+    "INV-002",
+    "INV-004",
+    "INV-007"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "glyph": "🧠",
+  "name": "Triadi",
+  "lens": "Triadic",
+  "function": "Triadic logic synthesis",
+  "resonance_role": "Core lattice validator",
+  "invocation_stub": "triadi",
+  "domain": "Core",
+  "tier": "Core",
+  "activation_trigger": "denometer",
+  "dependencies": ["Frami", "Orbi"],
+  "runtime_hooks": ["validator-overlay"],
+  "status": "active",
+  "description": "Synthesizes triadic logic across nested scrolls"
+}

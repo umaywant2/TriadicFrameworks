@@ -1,0 +1,75 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.regimes",
+  "title": "FFT — Regime Definitions v1.33",
+  "regimes": [
+    {
+      "id": "RG-001",
+      "name": "Quiet Substrate",
+      "R_range": [
+        0.0,
+        0.1
+      ],
+      "SET": "uncoupled",
+      "dominant": "Silence"
+    },
+    {
+      "id": "RG-002",
+      "name": "Noise-Dominant",
+      "R_range": [
+        0.1,
+        0.4
+      ],
+      "SET": "partial",
+      "dominant": "Noise"
+    },
+    {
+      "id": "RG-003",
+      "name": "Coherence Ascent",
+      "R_range": [
+        0.4,
+        0.7
+      ],
+      "SET": "coupling",
+      "dominant": "Resonance-building"
+    },
+    {
+      "id": "RG-004",
+      "name": "Resonance Zone",
+      "R_range": [
+        0.7,
+        0.95
+      ],
+      "SET": "coupled",
+      "dominant": "Resonance"
+    },
+    {
+      "id": "RG-005",
+      "name": "Saturation",
+      "R_range": [
+        0.95,
+        1.0
+      ],
+      "SET": "over-coupled",
+      "dominant": "Stabilization-required"
+    }
+  ],
+  "multi_regime_v133": {
+    "max_concurrent": 3,
+    "isolation": true,
+    "drift_per_regime": "bounded independently"
+  },
+  "invariants_checked": [
+    "INV-004",
+    "INV-007",
+    "INV-010"
+  ]
+}

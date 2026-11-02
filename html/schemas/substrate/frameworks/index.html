@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ========================================================= -->
+<!-- Canonical Metadata — Substrate Frameworks (Triadic Core)  -->
+<!-- ========================================================= -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="en" />
+<meta name="robots" content="index, follow" />
+<meta name="last-modified" content="2026-10-16" />
+
+<title>Substrate Frameworks — Triadic Structural Canon</title>
+
+<!-- Identity -->
+<meta name="description"
+      content="Substrate Frameworks define the structural backbone of TriadicFrameworks: atlas, ignition, epoch, continuity, invariance, execution, identity, coupling, constellation, monitor, and module templates." />
+<meta name="keywords"
+      content="TriadicFrameworks, substrate frameworks, atlas, ignition, epoch, continuity, invariance, execution engine, runtime monitor, constellation, coupling, structural substrate, RTT, triadic canon" />
+<meta name="author" content="Nawder Loswin" />
+<meta name="publisher" content="TriadicFrameworks" />
+<meta name="theme-color" content="#151528" />
+<meta name="license" content="Open educational use permitted" />
+
+<!-- Canonical URL -->
+<script type="module" async fetchpriority="low"
+        src="https://docs.triadicframeworks.org/.webmcp/bridge.js"
+        data-packs="c2pa,mcp-server-client"></script>
+<link rel="canonical"
+      href="https://docs.triadicframeworks.org/docs/schemas/substrate/frameworks/" />
+
+<!-- OpenGraph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="TriadicFrameworks" />
+<meta property="og:title" content="Substrate Frameworks — Triadic Structural Canon" />
+<meta property="og:url"
+      content="https://docs.triadicframeworks.org/docs/schemas/substrate/frameworks/" />
+<meta property="og:description"
+      content="The Substrate Frameworks define the structural, behavioral, temporal, identity, and activation layers of the TriadicFrameworks canon." />
+<meta property="og:image"
+      content="https://docs.triadicframeworks.org/assets/tf_substrate_og.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Substrate Frameworks — Triadic Structural Canon" />
+<meta name="twitter:description"
+      content="Atlas → Ignition → Epoch → Continuity → Invariance → Execution → Monitor — the full structural substrate of TriadicFrameworks." />
+<meta name="twitter:image"
+      content="https://docs.triadicframeworks.org/assets/tf_substrate_og.png" />
+
+<!-- Citation / Dublin Core -->
+<meta name="citation_title" content="Substrate Frameworks — Triadic Structural Canon" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_publication_date" content="2026" />
+<meta name="DC.subject"
+      content="TriadicFrameworks, substrate frameworks, atlas, ignition, epoch, continuity, invariance, execution, identity, coupling, constellation, monitor" />
+<meta name="DC.type" content="Text" />
+<meta name="DC.format" content="text/html" />
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="Substrate Frameworks" />
+<meta name="ai.version" content="1.0" />
+<meta name="ai.purpose"
+      content="Define the structural, behavioral, temporal, identity, and activation layers of the TriadicFrameworks canon." />
+<meta name="ai.keywords"
+      content="substrate frameworks, atlas, ignition, epoch, continuity, invariance, execution, identity, coupling, constellation, monitor, module templates" />
+<meta name="ai.audience"
+      content="researchers, students, theorists, engineers, AIs, multi-sandbox systems" />
+<meta name="ai.navigation" content="/sitemap_main.xml" />
+<meta name="ai.discussions"
+      content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+<meta name="ai.contact.x" content="@TriadicFrameworks" />
+<meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+<meta name="ai.license" content="Open educational use permitted" />
+
+<!-- Favicon -->
+<link rel="preload" as="image"
+      href="https://docs.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon"
+      href="https://docs.triadicframeworks.org/assets/favicon-16.png"
+      sizes="16x16" type="image/png">
+<link rel="icon"
+      href="https://docs.triadicframeworks.org/assets/favicon-32.png"
+      sizes="32x32" type="image/png">
+<link rel="icon"
+      href="https://docs.triadicframeworks.org/assets/favicon-192.png"
+      sizes="192x192" type="image/png">
+  
+<style>
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
+
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Neon headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
+}
+
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
+
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+   <details>
+     <summary><h2>📦 Substrate Frameworks | Root</h2></summary>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://docs.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+   </details>
+<details>
+  <summary><h3>📘 Substrate Frameworks | Use Examples</h3></summary>
+  <a href="#CAPTURE">📸 Capture</a>
+  <a href="#INDEX_JSON">📑 Index (JSON)</a>
+  <a href="#USE_EXAMPLES">📚 Use Examples</a>
+  <a href="#USE_EXAMPLES_INDEX">📂 Use Examples Index</a>
+  <a href="#USE_EXAMPLES_EXTENDED">🔎 Extended</a>
+  <a href="#USE_EXAMPLES_TUTORIAL">🎓 Tutorial</a>
+  <a href="#USE_EXAMPLES_WALKTHROUGH">🚶 Walkthrough</a>
+  <a href="#USE_EXAMPLES_SUMMARY">🧭 Summary</a>
+  <a href="#USE_EXAMPLES_JSON">🧩 Registry (JSON)</a>
+  <a href="#USE_EXAMPLES_SCHEMA">🛡️ Schema</a>
+  <a href="#USE_EXAMPLES_GRAPH">🕸️ Graph</a>
+  <a href="#USE_EXAMPLES_FLOWCHART">📈 Flowchart</a>
+</details>
+<details>
+  <summary><h3>🗺️ Atlas | Navigation & Surfaces</h3></summary>
+  <a href="#TRIADIC_ATLAS">🧭 Triadic Atlas</a>
+  <a href="#TRIADIC_ATLAS_SCHEMA">📐 Triadic Atlas Schema</a>
+  <a href="#TRIADIC_SUBSTRATE">🌌 Triadic Substrate</a>
+  <a href="#TRIADIC_SUBSTRATE_SCHEMA">📐 Triadic Substrate Schema</a>
+  <a href="#ATLAS_NAVIGATION_MD">🧭 Atlas Navigation (MD)</a>
+  <a href="#ATLAS_NAVIGATION_JSON">🧭 Atlas Navigation (JSON)</a>
+  <a href="#ATLAS_SURFACES">🧱 Atlas Surfaces</a>
+  <a href="#ATLAS_SYNCHRONIZATION">🔗 Atlas Synchronization</a>
+  <a href="#ATLAS_SYNCHRONIZATION_SCHEMA">📐 Atlas Synchronization Schema</a>
+  <a href="#ATLAS_CONSISTENCY">⚖️ Atlas Consistency</a>
+  <a href="#ATLAS_FINGERPRINT">🆔 Atlas Fingerprint</a>
+  <a href="#ATLAS_INTERACTION_PROTOCOL">🤝 Atlas Interaction Protocol</a>
+  <a href="#ATLAS_INTERACTION_SCHEMA">📐 Atlas Interaction Schema</a>
+  <a href="#ATLAS_INTERACTION_PROTOCOL_ALT">🤝 Interaction Protocol (Alt)</a>
+  <a href="#ATLAS_NAV_SCHEMA">📜 Navigation Schema</a>
+  <a href="#ATLAS_NAV_SCHEMA_SCHEMA">📐 Navigation Schema Schema</a>
+  <a href="#ATLAS_SUBSTRATE_MODULE_REGISTRY">📚 Substrate Module Registry</a>
+</details>
+<details>
+  <summary><h3>🏅 Badges | Runtime Identity</h3></summary>
+  <a href="#BADGE_CONSTELLATION">✨ Constellation Badge</a>
+  <a href="#BADGE_ENGINE">⚙️ Engine Badges</a>
+  <a href="#BADGE_RUNTIME_CREST">🛡️ Runtime Crest</a>
+  <a href="#BADGE_RUNTIME_FOOTER">📜 Runtime Footer</a>
+  <a href="#BADGE_RUNTIME_IDENTITY">🧬 Runtime Identity</a>
+</details>
+<details>
+  <summary><h3>🛠️ Compiler | Substrate Compilation</h3></summary>
+  <a href="#COMPILER_EVALUATOR">🧮 Compiler Evaluator</a>
+  <a href="#COMPILER_HOOKS">🪝 Compiler Hooks</a>
+  <a href="#COMPILER_REGISTRY">📚 Compiler Registry</a>
+  <a href="#TRIADIC_SUBSTRATE_COMPILER">⚙️ Triadic Substrate Compiler</a>
+</details>
+<details>
+  <summary><h3>🌌 Constellation | Runtime Map</h3></summary>
+  <a href="#CONSTELLATION_MD">🗺️ Runtime Constellation</a>
+  <a href="#CONSTELLATION_HOOKS">🪝 Constellation Hooks</a>
+  <a href="#CONSTELLATION_OPERATORS">⚙️ Constellation Operators</a>
+  <a href="#SUBSTRATE_CONSTELLATION">🌌 Substrate Runtime Constellation</a>
+  <a href="#SUBSTRATE_CONSTELLATION_SCHEMA">📐 Substrate Constellation Schema</a>
+</details>
+<details>
+  <summary><h3>🔗 Continuity | Substrate Integrity</h3></summary>
+  <a href="#SUBSTRATE_CONTINUITY">🧬 Substrate Continuity</a>
+  <a href="#SUBSTRATE_CONTINUITY_SCHEMA">📐 Substrate Continuity Schema</a>
+  <a href="#CONTINUITY_EVALUATOR">🧮 Continuity Evaluator</a>
+  <a href="#CONTINUITY_WEB">🕸️ Continuity Web</a>
+</details>
+<details>
+  <summary><h3>🎛️ Coupling | Resonance–Drift</h3></summary>
+  <a href="#RESONANCE_DRIFT_COUPLING">🎚️ Resonance–Drift Coupling</a>
+  <a href="#RESONANCE_DRIFT_COUPLING_SCHEMA">📐 Resonance–Drift Coupling Schema</a>
+  <a href="#COUPLING_EVALUATOR">🧮 Coupling Evaluator</a>
+  <a href="#COUPLING_PROFILES">📊 Coupling Profiles</a>
+</details>
+<details>
+  <summary><h3>🕰️ Epoch | Temporal Field</h3></summary>
+  <a href="#EPOCH_TIMELINE">📆 Epochal Timeline</a>
+  <a href="#EPOCH_TIMELINE_SCHEMA">📐 Epochal Timeline Schema</a>
+  <a href="#TIMELINE">📆 Timeline (JSON)</a>
+  <a href="#EPOCH_PROPAGATION">🌊 Epochal Propagation</a>
+  <a href="#EPOCH_PROPAGATION_SCHEMA">📐 Epochal Propagation Schema</a>
+  <a href="#EPOCH_RESONANCE_STABILIZER">🎚️ Epochal Resonance Stabilizer</a>
+  <a href="#EPOCH_RESONANCE_STABILIZER_SCHEMA">📐 Resonance Stabilizer Schema</a>
+  <a href="#EPOCH_STABILITY_PROFILES">🧱 Epochal Stability Profiles</a>
+  <a href="#EPOCH_ANOMALIES">⚠️ Epochal Anomalies</a>
+</details>
+<details>
+  <summary><h3>⚙️ Execution | Runtime Engine</h3></summary>
+  <a href="#TRIADIC_EXEC_ENGINE">⚙️ Triadic Execution Engine</a>
+  <a href="#TRIADIC_EXEC_ENGINE_SCHEMA">📐 Execution Engine Schema</a>
+  <a href="#TRIADIC_EXEC_STATE">📊 Triadic Execution State</a>
+  <a href="#EXEC_ENGINE_SCHEMA">📐 Execution Engine (Legacy Schema)</a>
+  <a href="#EXEC_RULES">📜 Execution Rules</a>
+  <a href="#RUNTIME_EVALUATION">🧮 Runtime Evaluation</a>
+</details>
+<details>
+  <summary><h3>🧬 Identity | Runtime Graph & Evaluators</h3></summary>
+  <a href="#RUNTIME_IDENTITY_JSON">🧬 Runtime Identity</a>
+  <a href="#RUNTIME_IDENTITY_SCHEMA">📐 Runtime Identity Schema</a>
+  <a href="#RUNTIME_IDENTITY_EXTENDED">📘 Runtime Identity (Extended)</a>
+  <a href="#RUNTIME_GRAPH_MD">🗺️ Runtime Graph</a>
+  <a href="#RUNTIME_GRAPH_EXTENDED">📘 Runtime Graph (Extended)</a>
+  <a href="#RUNTIME_EVALUATOR_JSON">🧮 Runtime Evaluator</a>
+  <a href="#RUNTIME_EVALUATOR_MD">📘 Runtime Evaluator (MD)</a>
+  <a href="#RUNTIME_ANALYZERS_JSON">🧪 Runtime Analyzers</a>
+  <a href="#RUNTIME_ANALYZERS_MD">📘 Runtime Analyzers (MD)</a>
+  <a href="#RUNTIME_HOOKS_JSON">🪝 Runtime Hooks</a>
+  <a href="#CONSTELLATION_MAP_JSON">🗺️ Constellation Map (JSON)</a>
+  <a href="#CONSTELLATION_MAP_MD">🗺️ Constellation Map (MD)</a>
+  <a href="#CONSTELLATION_OPERATORS_MD">⚙️ Constellation Operators (MD)</a>
+  <a href="#CONSTELLATION_GRAPH_SCHEMA">📐 Constellation Graph Schema</a>
+</details>
+<details>
+  <summary><h3>🔥 Ignition | Cascades & Harmonics</h3></summary>
+  <a href="#GLOBAL_IGNITION_LEDGER">📜 Global Ignition Ledger</a>
+  <a href="#IGNITION_CASCADE">🔥 Ignition Cascade</a>
+  <a href="#IGNITION_CASCADE_SCHEMA">📐 Ignition Cascade Schema</a>
+  <a href="#IGNITION_HARMONICS">🎶 Ignition Harmonics</a>
+  <a href="#IGNITION_ANOMALIES">⚠️ Ignition Anomalies</a>
+</details>
+<details>
+  <summary><h3>🛡️ Invariance | Substrate Law</h3></summary>
+  <a href="#SUBSTRATE_INVARIANCE">⚖️ Substrate Invariance</a>
+  <a href="#SUBSTRATE_INVARIANCE_SCHEMA">📐 Substrate Invariance Schema</a>
+  <a href="#INVARIANCE_EVALUATOR">🧮 Invariance Evaluator</a>
+  <a href="#INVARIANCE_WEB">🕸️ Invariance Web</a>
+</details>
+<details>
+  <summary><h3>🧩 Module Templates | Canonical Shapes</h3></summary>
+  <a href="#MODULE_SCHEMA">📐 Module Schema</a>
+  <a href="#MODULE_SUBSTRATE_READY">🌌 Substrate-Ready Module</a>
+  <a href="#MODULE_ATLAS_READY">🗺️ Atlas-Ready Module</a>
+  <a href="#MODULE_ATLAS_SURFACES">🧱 Atlas Surfaces Module</a>
+  <a href="#MODULE_CONTINUITY_READY">🔗 Continuity-Ready Module</a>
+  <a href="#MODULE_EPOCH_READY">🕰️ Epoch-Ready Module</a>
+  <a href="#MODULE_EXEC_READY">⚙️ Execution-Ready Module</a>
+  <a href="#MODULE_IGNITION_READY">🔥 Ignition-Ready Module</a>
+  <a href="#MODULE_INVARIANCE_READY">🛡️ Invariance-Ready Module</a>
+  <a href="#MODULE_MONITOR_READY">📡 Monitor-Ready Module</a>
+  <a href="#MODULE_RTT_READY">📦 RTT-Ready Module</a>
+  <a href="#MODULE_RUNTIME_CONSTELLATION">🌌 Runtime Constellation Module</a>
+  <a href="#MODULE_RUNTIME_HOOKS">🪝 Runtime Hooks Module</a>
+  <a href="#MODULE_LAYERS">📚 Module Layers</a>
+  <a href="#MODULE_OPERATORS">⚙️ Module Operators</a>
+  <a href="#MODULE_REGIMES">🎛️ Module Regimes</a>
+  <a href="#MODULE_ROLES">🧩 Module Roles</a>
+  <a href="#MODULE_BLANK">📄 Blank Module</a>
+  <a href="#MODULE_EXAMPLE">🧪 Example Module</a>
+</details>
+<details>
+  <summary><h3>📡 Monitor | Runtime Telemetry</h3></summary>
+  <a href="#TRIADIC_RUNTIME_MONITOR_MD">📡 Triadic Runtime Monitor (MD)</a>
+  <a href="#TRIADIC_RUNTIME_MONITOR_JSON">📡 Triadic Runtime Monitor (JSON)</a>
+  <a href="#TRIADIC_RUNTIME_MONITOR_JS">📡 Triadic Runtime Monitor (JS)</a>
+  <a href="#TRIADIC_RUNTIME_MONITOR_EXAMPLE">📡 Monitor Example</a>
+  <a href="#MONITOR_TELEMETRY_TEMPLATE">📨 Telemetry Packet Template</a>
+  <a href="#TRIADIC_RUNTIME_TELEMETRY_JSON">📨 Runtime Telemetry (JSON)</a>
+  <a href="#TRIADIC_RUNTIME_TELEMETRY_EXAMPLE">📨 Runtime Telemetry Example</a>
+  <a href="#MONITOR_ANOMALY_RULESET">⚠️ Monitor Anomaly Ruleset</a>
+  <a href="#MONITOR_CYCLE_REPORT_GENERATOR">📊 Cycle Report Generator</a>
+</details>
+<details>
+  <summary><h3>📑 Headers | Runtime Header</h3></summary>
+  <a href="#RUNTIME_HEADER">📑 Runtime Header</a>
+</details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
+      <a href="https://docs.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://docs.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://docs.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://docs.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://docs.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://docs.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://docs.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://docs.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://docs.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://docs.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://docs.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://docs.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://docs.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../../../">🔙TFT</a>
+   </details>
+   <!-- RTT Session Header (canonical stub) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Substrate Frameworks — Session Context block               -->
+<!-- Replace the existing session context section in index.html -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="substrate-session-header"
+         data-rtt="substrate-frameworks"
+         data-coherence="stable"
+         data-drift="bounded"
+         data-regime="structural">
+
+  <details>
+    <summary><h2>Session Context</h2></summary>
+
+    <div class="context-block">
+
+      <span class="context-label"><strong>Canon:</strong></span>
+      <span class="context-value">
+        active (Triadic Substrate Frameworks)
+      </span><br>
+
+      <span class="context-label"><strong>Modules:</strong></span>
+      <span class="context-value">
+        atlas → ignition → epoch → continuity → invariance → execution → identity →
+        coupling → constellation → monitor → module‑templates → examples → schemas →
+        diagnostics → structural‑maps → flowcharts → registries
+      </span><br>
+
+      <span class="context-label"><strong>Drift:</strong></span>
+      <span class="context-value">
+        bounded (substrate‑stable • operator‑true • coherence‑anchored)
+      </span><br>
+
+      <span class="context-label"><strong>Coherence:</strong></span>
+      <span class="context-value">
+        stable (triadic‑aligned • substrate‑consistent • cross‑module safe)
+      </span><br>
+
+      <span class="context-label"><strong>Version:</strong></span>
+      <span class="context-value">
+        1.0 (substrate‑stable)
+      </span><br>
+
+      <span class="context-label"><strong>Format:</strong></span>
+      <span class="context-value">
+        html + markdown + JSON schemas + structural diagrams + module registries
+      </span><br>
+
+      <span class="context-label"><strong>Front door:</strong></span>
+      <span class="context-value">
+        this page (Substrate Frameworks root)
+      </span><br>
+
+      <span class="context-label"><strong>Every page:</strong></span>
+      <span class="context-value">
+        stands alone + AI‑parsable + module‑aware + operator‑ready
+      </span><br>
+
+      <span class="context-label"><strong>Audience:</strong></span>
+      <span class="context-value">
+        researchers + students + theorists + engineers + AIs + multi‑sandbox systems
+      </span>
+
+    </div>
+  </details>
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#151528;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🜁 Substrate Frameworks<br>🧩 Triadic Structural Canon
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      // RTT-Inside Overview
+      README: 'README.md',
+      ABOUT: '../../../ABOUT.md',
+      CONTRIBUTING: '../../../CONTRIBUTING.md',
+      GLOSSARY: '../../../GLOSSARY.md',
+      LINEAGE: '../../../LINEAGE.md',
+      LICENSE: '../../../LICENSE.md',
+      SITEMAP: '../../../sitemap.md',
+      QUICKSTART: '../../../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../../../CODE_OF_CONDUCT.md',
+      SECURITY: '../../../SECURITY.md',
+      PRINCIPLES: '../../../PRINCIPLES.md',
+      // Root
+      CAPTURE: 'capture.md',
+      INDEX_JSON: 'index.json.md',
+      USE_EXAMPLES_EXTENDED: 'Use_Examples.extended.md',
+      USE_EXAMPLES_FLOWCHART: 'Use_Examples.flowchart.json.md',
+      USE_EXAMPLES_GRAPH: 'Use_Examples.graph.json.md',
+      USE_EXAMPLES_INDEX: 'Use_Examples.index.md',
+      USE_EXAMPLES_JSON: 'Use_Examples.json.md',
+      USE_EXAMPLES: 'Use_Examples.md',
+      USE_EXAMPLES_SCHEMA: 'Use_Examples.schema.json.md',
+      USE_EXAMPLES_SUMMARY: 'Use_Examples.summary.md',
+      USE_EXAMPLES_TUTORIAL: 'Use_Examples.tutorial.md',
+      USE_EXAMPLES_WALKTHROUGH: 'Use_Examples.walkthrough.md',
+      // Atlas
+      ATLAS_CONSISTENCY: 'atlas/atlas-consistency.json.md',
+      ATLAS_FINGERPRINT: 'atlas/atlas-fingerprint.json.md',
+      ATLAS_INTERACTION_PROTOCOL: 'atlas/atlas-interaction-protocol.json.md',
+      ATLAS_INTERACTION_SCHEMA: 'atlas/atlas-interaction.schema.json.md',
+      ATLAS_NAVIGATION_JSON: 'atlas/atlas-navigation.json.md',
+      ATLAS_NAVIGATION_MD: 'atlas/atlas-navigation.md',
+      ATLAS_SURFACES: 'atlas/atlas-surfaces.json.md',
+      ATLAS_SYNCHRONIZATION: 'atlas/atlas-synchronization.json.md',
+      ATLAS_SYNCHRONIZATION_SCHEMA: 'atlas/atlas-synchronization.schema.json.md',
+      ATLAS_INTERACTION_PROTOCOL_ALT: 'atlas/interaction-protocol.json.md',
+      ATLAS_NAV_SCHEMA: 'atlas/navigation-schema.json.md',
+      ATLAS_NAV_SCHEMA_SCHEMA: 'atlas/navigation-schema.schema.json.md',
+      ATLAS_SUBSTRATE_MODULE_REGISTRY: 'atlas/substrate_module_registry.json.md',
+      TRIADIC_ATLAS: 'atlas/triadic-atlas.json.md',
+      TRIADIC_ATLAS_SCHEMA: 'atlas/triadic-atlas.schema.json.md',
+      TRIADIC_SUBSTRATE: 'atlas/triadic-substrate.json.md',
+      TRIADIC_SUBSTRATE_SCHEMA: 'atlas/triadic-substrate.schema.json.md',
+      // Badges
+      BADGE_CONSTELLATION: 'badges/constellation-badge.md',
+      BADGE_ENGINE: 'badges/engine-badges.md',
+      BADGE_RUNTIME_CREST: 'badges/runtime-crest.md',
+      BADGE_RUNTIME_FOOTER: 'badges/runtime-footer.md',
+      BADGE_RUNTIME_IDENTITY: 'badges/runtime-identity.md',
+      // Compiler
+      COMPILER_EVALUATOR: 'compiler/compiler-evaluator.md',
+      COMPILER_HOOKS: 'compiler/compiler-hooks.json.md',
+      COMPILER_REGISTRY: 'compiler/compiler-registry.json.md',
+      TRIADIC_SUBSTRATE_COMPILER: 'compiler/triadic-substrate-compiler.json.md',
+      // Constellation
+      CONSTELLATION_HOOKS: 'constellation/runtime-constellation-hooks.json.md',
+      CONSTELLATION_OPERATORS: 'constellation/runtime-constellation-operators.json.md',
+      CONSTELLATION_MD: 'constellation/runtime-constellation.md',
+      SUBSTRATE_CONSTELLATION: 'constellation/substrate-runtime-constellation.json.md',
+      SUBSTRATE_CONSTELLATION_SCHEMA: 'constellation/substrate-runtime-constellation.schema.json.md',
+      // Continuity
+      CONTINUITY_EVALUATOR: 'continuity/continuity-evaluator.json.md',
+      CONTINUITY_WEB: 'continuity/continuity-web.json.md',
+      SUBSTRATE_CONTINUITY: 'continuity/substrate-continuity.json.md',
+      SUBSTRATE_CONTINUITY_SCHEMA: 'continuity/substrate-continuity.schema.json.md',
+      // Coupling
+      COUPLING_EVALUATOR: 'coupling/coupling-evaluator.json.md',
+      COUPLING_PROFILES: 'coupling/coupling-profiles.json.md',
+      RESONANCE_DRIFT_COUPLING: 'coupling/resonance-drift-coupling.json.md',
+      RESONANCE_DRIFT_COUPLING_SCHEMA: 'coupling/resonance-drift-coupling.schema.json.md',
+      // Epoch
+      EPOCH_ANOMALIES: 'epoch/epochal-anomalies.json.md',
+      EPOCH_PROPAGATION: 'epoch/epochal-propagation.json.md',
+      EPOCH_PROPAGATION_SCHEMA: 'epoch/epochal-propagation.schema.json.md',
+      EPOCH_RESONANCE_STABILIZER: 'epoch/epochal-resonance-stabilizer.json.md',
+      EPOCH_RESONANCE_STABILIZER_SCHEMA: 'epoch/epochal-resonance-stabilizer.schema.json.md',
+      EPOCH_STABILITY_PROFILES: 'epoch/epochal-stability-profiles.json.md',
+      EPOCH_TIMELINE: 'epoch/epochal-timeline.json.md',
+      EPOCH_TIMELINE_SCHEMA: 'epoch/epochal-timeline.schema.json.md',
+      TIMELINE: 'epoch/timeline.json.md',
+      // Execution
+      EXEC_ENGINE_SCHEMA: 'execution/execution-engine.schema.json.md',
+      EXEC_RULES: 'execution/execution-rules.json.md',
+      RUNTIME_EVALUATION: 'execution/runtime-evaluation.json.md',
+      TRIADIC_EXEC_ENGINE: 'execution/triadic-execution-engine.json.md',
+      TRIADIC_EXEC_ENGINE_SCHEMA: 'execution/triadic-execution-engine.schema.json.md',
+      TRIADIC_EXEC_STATE: 'execution/triadic-execution-state.json.md',
+      // Headers
+      RUNTIME_HEADER: 'headers/runtime-header.md',
+      // Identity
+      CONSTELLATION_GRAPH_SCHEMA: 'identity/constellation-graph.schema.json.md',
+      CONSTELLATION_MAP_JSON: 'identity/constellation-map.json.md',
+      CONSTELLATION_MAP_MD: 'identity/constellation-map.md',
+      CONSTELLATION_OPERATORS_MD: 'identity/constellation-operators.md',
+      RUNTIME_ANALYZERS_JSON: 'identity/runtime-analyzers.json.md',
+      RUNTIME_ANALYZERS_MD: 'identity/runtime-analyzers.md',
+      RUNTIME_EVALUATOR_JSON: 'identity/runtime-evaluator.json.md',
+      RUNTIME_EVALUATOR_MD: 'identity/runtime-evaluator.md',
+      RUNTIME_GRAPH_EXTENDED: 'identity/runtime-graph.extended.json.md',
+      RUNTIME_GRAPH_MD: 'identity/runtime-graph.md',
+      RUNTIME_HOOKS_JSON: 'identity/runtime-hooks.json.md',
+      RUNTIME_IDENTITY_EXTENDED: 'identity/runtime-identity.extended.md',
+      RUNTIME_IDENTITY_JSON: 'identity/runtime-identity.json.md',
+      RUNTIME_IDENTITY_SCHEMA: 'identity/runtime-identity.schema.json.md',
+      // Ignition
+      GLOBAL_IGNITION_LEDGER: 'ignition/global-ignition-ledger.json.md',
+      IGNITION_ANOMALIES: 'ignition/ignition-anomalies.json.md',
+      IGNITION_CASCADE: 'ignition/ignition-cascade.json.md',
+      IGNITION_CASCADE_SCHEMA: 'ignition/ignition-cascade.schema.json.md',
+      IGNITION_HARMONICS: 'ignition/ignition-harmonics.json.md',
+      // Invariance
+      INVARIANCE_EVALUATOR: 'invariance/invariance-evaluator.json.md',
+      INVARIANCE_WEB: 'invariance/invariance-web.json.md',
+      SUBSTRATE_INVARIANCE: 'invariance/substrate-invariance.json.md',
+      SUBSTRATE_INVARIANCE_SCHEMA: 'invariance/substrate-invariance.schema.json.md',
+      // Module Templates
+      MODULE_ATLAS_READY: 'module_templates/module.atlas-ready.json.md',
+      MODULE_ATLAS_SURFACES: 'module_templates/module.atlas-surfaces.json.md',
+      MODULE_BLANK: 'module_templates/module.blank.json.md',
+      MODULE_CONTINUITY_READY: 'module_templates/module.continuity-ready.json.md',
+      MODULE_EPOCH_READY: 'module_templates/module.epoch-ready.json.md',
+      MODULE_EXAMPLE: 'module_templates/module.example.json.md',
+      MODULE_EXEC_READY: 'module_templates/module.execution-ready.json.md',
+      MODULE_IGNITION_READY: 'module_templates/module.ignition-ready.json.md',
+      MODULE_INVARIANCE_READY: 'module_templates/module.invariance-ready.json.md',
+      MODULE_LAYERS: 'module_templates/module.layers.json.md',
+      MODULE_MONITOR_READY: 'module_templates/module.monitor-ready.json.md',
+      MODULE_OPERATORS: 'module_templates/module.operators.json.md',
+      MODULE_REGIMES: 'module_templates/module.regimes.json.md',
+      MODULE_ROLES: 'module_templates/module.roles.json.md',
+      MODULE_RTT_READY: 'module_templates/module.rtt-ready.json.md',
+      MODULE_RUNTIME_CONSTELLATION: 'module_templates/module.runtime-constellation.json.md',
+      MODULE_RUNTIME_HOOKS: 'module_templates/module.runtime-hooks.json.md',
+      MODULE_SCHEMA: 'module_templates/module.schema.json.md',
+      MODULE_SUBSTRATE_READY: 'module_templates/module.substrate-ready.json.md',
+      // Monitor
+      MONITOR_ANOMALY_RULESET: 'monitor/monitor_anomaly_ruleset.json.md',
+      MONITOR_CYCLE_REPORT_GENERATOR: 'monitor/monitor_cycle_report_generator.json.md',
+      MONITOR_TELEMETRY_TEMPLATE: 'monitor/monitor_telemetry_packet_template.json.md',
+      TRIADIC_RUNTIME_MONITOR_EXAMPLE: 'monitor/triadic-runtime-monitor.example.json.md',
+      TRIADIC_RUNTIME_MONITOR_JS: 'monitor/triadic-runtime-monitor.js.md',
+      TRIADIC_RUNTIME_MONITOR_JSON: 'monitor/triadic-runtime-monitor.json.md',
+      TRIADIC_RUNTIME_MONITOR_MD: 'monitor/triadic-runtime-monitor.md',
+      TRIADIC_RUNTIME_TELEMETRY_EXAMPLE: 'monitor/triadic-runtime-telemetry.example.json.md',
+      TRIADIC_RUNTIME_TELEMETRY_JSON: 'monitor/triadic-runtime-telemetry.json.md'
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"1465e375ff064f19a4f37c196d2b0f84","spa":2}' crossorigin="anonymous"></script>
+</body>
+  
+</html>

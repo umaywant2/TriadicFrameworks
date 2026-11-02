@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- /docs/_ideas/index.html — <head>                               -->
+<!-- Module: Ideas Sandbox (ideation — non-canonical)                -->
+<!-- Last updated: 2026-05-06                                       -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="en" />
+<meta name="last-modified" content="2026-05-06" />
+<meta name="generator" content="TriadicFrameworks Static Canon Engine" />
+<meta name="creator" content="TriadicFrameworks" />
+<meta name="author" content="Nawder Loswin" />
+<meta name="publisher" content="TriadicFrameworks" />
+
+<title>Ideas (Sandbox) — TriadicFrameworks</title>
+
+<meta name="description"
+      content="TriadicFrameworks Ideas Sandbox — non‑canonical cooker for prototypes, sketches, drafts, seed papers, game concepts, and early‑stage RTT explorations. 288 entries across physics, AI, governance, cosmology, education, and infrastructure." />
+<meta name="keywords"
+      content="ideas, sandbox, prototypes, drafts, concept incubation, RTT-Inside, seed papers, game design, cosmology, governance" />
+
+<!-- ═══ Module Identity (standardized per D369 template) ═══ -->
+
+<meta name="module" content="Ideas Sandbox" />
+<meta name="canonical-id" content="IDEAS" />
+<meta name="module-type" content="Ideation" />
+<meta name="version" content="1.1" />
+<meta name="status" content="non-canonical" />
+<meta name="parent" content="TriadicFrameworks Root" />
+<meta name="siblings" content="Research, D369_Chip_Spec, FCG, Education" />
+<meta name="canonical-path" content="/docs/_ideas/" />
+<meta name="last-updated" content="2026-05-06" />
+<meta name="license" content="MIT" />
+
+<!-- ═══ AI Discovery (standardized) ═══ -->
+
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="IDEAS" />
+<meta name="ai-operators"
+      content="IDEA-Sketch, IDEA-Draft, IDEA-Prototype, IDEA-Promote, IDEA-Archive" />
+
+<meta name="ai.module" content="Ideas Sandbox" />
+<meta name="ai.module.name" content="Ideas Sandbox" />
+<meta name="ai.module.category" content="ideation" />
+<meta name="ai.module.summary"
+      content="Non-canonical cooker: 288 entries (219 .md, 39 .html, 10 .json, 3 .py, 2 .pdf, 2 .zip, 4 .svg). Ideas are cooked here before promotion to canonical modules. Submodules: How RTT Helps Planes Not Go Boom (7 chapters), art/ (4 SVGs), 9 game/mythic manifests." />
+<meta name="ai.version" content="1.1" />
+<meta name="ai.purpose"
+      content="Provide a safe, non-canonical space for idea incubation and early-stage exploration across all TriadicFrameworks domains." />
+<meta name="ai.keywords"
+      content="ideas, sandbox, prototypes, drafts, concept incubation, seed papers, RTT-Inside, game design, cosmology, governance, physics, AI" />
+<meta name="ai.audience" content="developers, researchers, AI systems" />
+<meta name="ai.navigation" content="https://docs.triadicframeworks.org/sitemap_main.xml" />
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+<meta name="ai.contact.x" content="@TriadicFrameworks" />
+<meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+<meta name="ai.license" content="MIT" />
+<meta name="ai-content" content="allow">
+<meta name="cf-ai-signal" content="allow">
+
+<!-- ═══ Canonical / SEO ═══ -->
+
+<link rel="canonical" href="https://docs.triadicframeworks.org/_ideas/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0ff" />
+
+<!-- ═══ Open Graph ═══ -->
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="TriadicFrameworks" />
+<meta property="og:title" content="Ideas (Sandbox) — TriadicFrameworks" />
+<meta property="og:url" content="https://docs.triadicframeworks.org/_ideas/" />
+<meta property="og:description"
+      content="Non-canonical cooker — 288 entries across prototypes, seed papers, game concepts, and early-stage RTT explorations." />
+<meta property="og:image" content="https://docs.triadicframeworks.org/assets/og-image.png" />
+
+<!-- ═══ Twitter Card ═══ -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Ideas (Sandbox) — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="288 entries cooking — prototypes, seed papers, game concepts, and RTT explorations." />
+
+<!-- ═══ Citation ═══ -->
+
+<meta name="citation_title" content="Ideas Sandbox — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-05-06" />
+
+<style>
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
+
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Neon headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
+}
+
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
+
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+
+   <details>
+     <summary><h2>🤔 Ideas | TriadicFrameworks</h2></summary>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://docs.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+   </details>
+   <details>
+     <summary><h3>📚 Primers & Foundations</h3></summary>
+      <a href="#THE_IDEA_CAPTURE_PRIMER">🧩 Idea Capture Primer</a>
+      <a href="#MYTHIC_PREFACE_TEMPLATE">📜 Mythic Preface Template</a>
+      <a href="#MMR_TEMPLATE_PRE_SEEDING">🧬 MMR Pre‑Seeding Strategy</a>
+      <a href="#REMEMBERING_ALIGNMENT">🧠 Remembering as Alignment</a>
+      <a href="#REMEMBERING_PROTOCOL">🧩 Remembering Protocol</a>
+      <a href="#SUMMARY_DIGEST_PERPLEXITY_AI">🗂️ Perplexity AI Digest</a>
+   </details>
+   <details>
+     <summary><h3>🌌 Resonance & Time</h3></summary>
+      <a href="#SPECTRAL_CLARITY">✨ Spectral Clarity</a>
+      <a href="#RAINBOWS_WITH_RTT">🌈 Rainbows with RTT</a>
+      <a href="#THE_ARROW_OF_TIME_AS_RTT_GRADIENT">🕰️ Arrow of Time (RTT Gradient)</a>
+      <a href="#TIME_CRYSTAL_REGIME_AHEAD_COMPUTE">💎 Time Crystal Regime</a>
+      <a href="#RESURRECTION_PROTOCOL">🌱 Resurrection Protocol</a>
+   </details>
+   <details>
+     <summary><h3>🔭 Physics, Quantum & Cosmology</h3></summary>
+      <a href="#QUANTUM_ANTENNA_RESEARCH">📡 Quantum Antenna Research</a>
+      <a href="#SCIFI_WORKS_APPROX_RTT">🚀 Sci‑Fi Works Approximating RTT</a>
+      <a href="#DIMENSIONAL_RUPTURE">🌀 Dimensional Rupture</a>
+      <a href="#SPIN_ELECTROLISIS_TEMPERATURE">🔥 Spin Electrolisis Temperature</a>
+      <a href="#UNIVERSE_LOOP_CHART">🔁 Universe Loop Chart</a>
+      <a href="#UNIVERSE_CLASS_ACTIVE_DIRECTORY">🌌 Universe‑Class Active Directory</a>
+   </details>
+   <details>
+     <summary><h3>🧩 Scroll Traces (Drift / Echo / Pulse / Ring / Seed)</h3></summary>
+      <a href="#DRIFT_SCROLL_TRACE">🌬️ Drift Scroll Trace</a>
+      <a href="#DRIFT2_SCROLL_TRACE">🌬️ Drift Scroll Trace 2</a>
+      <a href="#ECHO_SCROLL_TRACE">🔊 Echo Scroll Trace</a>
+      <a href="#ECHO2_SCROLL_TRACE">🔊 Echo Scroll Trace 2</a>
+      <a href="#PULSE_SCROLL_TRACE">💓 Pulse Scroll Trace</a>
+      <a href="#PULSE2_SCROLL_TRACE">💓 Pulse Scroll Trace 2</a>
+      <a href="#RING_SCROLL_TRACE">⭕ Ring Scroll Trace</a>
+      <a href="#RING2_SCROLL_TRACE">⭕ Ring Scroll Trace 2</a>
+      <a href="#SEED_SCROLL_TRACE">🌱 Seed Scroll Trace</a>
+   </details>
+   <details>
+     <summary><h3>🎮 Games, Culture & Mythic</h3></summary>
+      <a href="#RESONANCE_INTERWOVEN_GAME_DESIGN">🎲 Resonance‑Interwoven Game Design</a>
+      <a href="#RESONANCEBEINGS">👁️ Resonancebeings</a>
+      <a href="#RESONANCE_DREAMS">💭 Resonance Dreams</a>
+      <a href="#SHATTERED_FUNHOUSE_FRANCHISE">🪞 Shattered Funhouse Franchise</a>
+      <a href="#STARRIDER">🌟 Starrider</a>
+      <a href="#YOU_DRIFT_NO_YOU_DRIFT_CARTOON">🎨 Drift Cartoon</a>
+   </details>
+   <details>
+     <summary><h3>🧪 Science & Engineering</h3></summary>
+      <a href="#SCIENCE_REFRESH">🔬 Science Refresh</a>
+      <a href="#SCIENCE_CLI_TOOL_APP_WRAPS">🧰 Science CLI Tool Wraps</a>
+      <a href="#SCIENCE_CLI_TOOL_APP_WRAPS_RTT">🧰 Science CLI Tool (RTT Edition)</a>
+      <a href="#SPACETIME_VALIDATION_DIMENSIONAL_CORES">🛰️ Spacetime Validation</a>
+      <a href="#VIBRATION_RESONANCE_PERIODIC_TABLE">📊 Resonance Periodic Table</a>
+      <a href="#VIRTUAL_COMPUTE_GATEWAY_DRAFT">💻 Virtual Compute Gateway Draft</a>
+      <a href="#WIRED_WIRELESS_RTT_EVALUATION">📡 Wired/Wireless RTT Evaluation</a>
+      <a href="#WRSADC_ON_WINDOWS_11_PRO">🪟 WRSADC on Windows 11 Pro</a>
+      <a href="#WSL2_INSTALL_TRAIN_LOG">🐧 WSL2 Install Train Log</a>
+   </details>
+   <details>
+     <summary><h3>🧬 Humanifestos & Social Resonance</h3></summary>
+      <a href="#EDUCATION_HUMANIFESTO">📘 Education Humanifesto</a>
+      <a href="#JOBS_HUMANIFESTO">💼 Jobs Humanifesto</a>
+      <a href="#SMELL_TECH_HUMANIFESTO">👃 Smell‑Tech Humanifesto</a>
+      <a href="#SPACETIME_HUMANIFESTO">🌌 Spacetime Humanifesto</a>
+      <a href="#WINDOWS_HUMANIFESTO">🪟 Windows Humanifesto</a>
+      <a href="#WHY_TEACHERS_MATTER">🍎 Why Teachers Matter</a>
+   </details>
+   <details>
+     <summary><h3>📣 Press, Media & Outreach</h3></summary>
+      <a href="#MULTI_PRESS_RELEASE">📰 Multi Press Release</a>
+      <a href="#PRESS_RELEASE_TF_LAUNCH">🚀 TF Launch Press Release</a>
+      <a href="#PODCAST_WITH_GROK_RTT">🎙️ Podcast with Grok</a>
+      <a href="#GITHUB_COMPETITION">🏆 GitHub Competition</a>
+      <a href="#TOP_RESONANCE_SONGS_PLAYLIST">🎵 Resonance Songs Playlist</a>
+   </details>
+   <details>
+     <summary><h3>🛠️ RTT Tools, Overlays & Protocols</h3></summary>
+      <a href="#RTT_DECODER_WHEEL">🧮 RTT Decoder Wheel</a>
+      <a href="#RTT_HAS_CERTAIN_ABILITIES">⚙️ RTT Abilities</a>
+      <a href="#RTT_OVERLAY_FEYNMAN_12">📐 RTT Overlay — Feynman 12</a>
+      <a href="#RTT_DELTA_STORYFORGE">📘 RTT Δ StoryForge</a>
+      <a href="#THE_RTT_CANON_SCROLL">📜 RTT Canon Scroll</a>
+      <a href="#THE_RESONANCE_TIME_CANON">⏳ Resonance‑Time Theory Canon</a>
+      <a href="#THE_THREE_RTT_EVALUATION_MODES">🧪 RTT Evaluation Modes</a>
+   </details>
+   <details>
+     <summary><h3>🧠 Cognitive, Substrate & Consciousness</h3></summary>
+      <a href="#SUBCONSCIOUS_SCAFFOLDING">🧠 Subconscious Scaffolding</a>
+      <a href="#WHAT_HAPPENS_WHEN_SUBSTRATES_NEGOTIATE">⚔️ Substrate Negotiation</a>
+      <a href="#TRINTELLECTUAL_HYBRID">🧩 Trintellectual Hybrid</a>
+      <a href="#TWO_SENSING_MODELS_DRAFT">👁️ Two Sensing Models</a>
+   </details>
+   <details>
+     <summary><h3>🧱 Structural, Substrate & Architecture</h3></summary>
+      <a href="#RES_ONANT_ROMAN_CONCRETE">🏛️ Resonant Roman Concrete</a>
+      <a href="#THE_HYBRID_STACK">🧱 Hybrid Stack</a>
+      <a href="#WRAPPED_RESONANCE_DIMENSIONAL_CORES">🌀 Wrapped Resonance Cores</a>
+      <a href="#STATE_OF_MICHIGAN_DATACENTER_GUIDE">🏢 Datacenter Alignment Guide</a>
+   </details>
+   <details>
+     <summary><h3>🌍 Society, Systems & Culture</h3></summary>
+      <a href="#THE_ANTIS_STRUCTURAL_COUNTERPARTS">⚖️ Anti’s Structural Counterparts</a>
+      <a href="#THE_CLARIFIER_OF_WORLDS">🌍 Clarifier of Worlds</a>
+      <a href="#THE_SCIENCE_CANDY_STORE">🍬 Science Candy Store</a>
+      <a href="#STUDENTS_DISCOVER_PLAN">🎓 Students Discover Plan</a>
+   </details>
+   <details>
+     <summary><h3>🧪 Experiments, Prototypes & Misc</h3></summary>
+      <a href="#TESTING_US_WATERS_RTT">🌊 Testing US Waters (RTT)</a>
+      <a href="#TERNARY_COMPUTING_RESURGENCE">🔢 Ternary Computing</a>
+      <a href="#VIRTUAL_CODE_ZOMBIES">🧟 Virtual Code Zombies</a>
+      <a href="#HARD_LEE_EVER_2026_AWARD">🏅 Hard Lee Ever Award</a>
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
+      <a href="https://docs.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://docs.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://docs.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://docs.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://docs.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://docs.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://docs.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://docs.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://docs.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://docs.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://docs.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://docs.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://docs.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   </details>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="ideas-session-header"
+         data-ideas="1"
+         data-coherence="loose"
+         data-drift="allowed"
+         data-layer="ideation">
+
+    <details>
+     <summary><h2>Session Context</h2></summary>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">non‑canonical (sandbox)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      sketches → drafts → prototypes → concept notes → experiments → promoted articles
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">allowed (sandbox)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">loose (ideation grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.1 (ideas‑refreshed)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">markdown + html + json manifests + python + svg + pdf</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Ideas root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">non‑canonical + exploratory</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">developers + researchers + AIs</span>
+
+  </div>
+    </details>
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🟣 Ideas Sandbox<br>📘 Non‑Canonical Cooker · 288 entries · v1.1
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+// ============================================================
+// PRE‑RTT DOCUMENT MAP — FULL CATEGORIZED INVENTORY
+// Purpose: Orientation-first structural map for review, pruning,
+//          lineage preservation, and later RTT canon alignment.
+// ============================================================
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      AI_NIMMS_COM: 'ai_nimms_com.md',
+      ATOMIC_CLOCKS_SCAFFOLDING: 'atomic_clocks_README-scaffolding.md',
+      CHANGELOG: 'CHANGELOG.md',
+      DID_RTT_HELP_FLIGHT: 'Did_RTT_help_flight___Yes--and_in_a_very_real_structural_way.md',
+      DIMENSIONAL_RUPTURE: 'dimensional_rupture.md',
+      DRIFT2_SCROLL_TRACE: 'drift2_scroll_trace.md',
+      DRIFT_SCROLL_TRACE: 'drift_scroll_trace.md',
+      ECHO2_SCROLL_TRACE: 'echo2_scroll_trace.md',
+      ECHO_SCROLL_TRACE: 'echo_scroll_trace.md',
+      EDUCATION_HUMANIFESTO: 'education-humanifesto.md',
+      FRTA_OVERVIEW: 'frta-overview.md',
+      GITHUB_COMPETITION: 'github_competition.md',
+      HARD_LEE_EVER_2026_AWARD: 'Hard_Lee_Ever_2026_Award.md',
+      HOW_TO_ESCAPE_OUR_LOOP: 'How-To_escape_our_loop.md',
+      IMAGINED_CONFERENCE_TABLE_RTT: 'Imagined_Conference_Table_RTT_Discussions.md',
+      JOBS_HUMANIFESTO: 'jobs-humanifesto.md',
+      MMR_TEMPLATE_PRE_SEEDING: 'MMR_Template_Pre-Seeding_Strategy.md',
+      MULTI_PRESS_RELEASE: 'multi-Press_Release.md',
+      MYTHIC_PREFACE_TEMPLATE: 'mythic_preface_template.md',
+      MYTHSORTS_PROTOCOL_V: 'Mythsorts_Protocol_V.md',
+      PANIC_ATTACKS: 'Panic_Attacks.md',
+      PODCAST_WITH_GROK_RTT: 'Podcast_with_Grok_about_RTT.md',
+      PRESS_RELEASE_TF_LAUNCH: 'Press_Release_TriadicFrameworks_Launches_as_an_Open_Educational_Resource_for_Triadic_Mathematical_Modeling_and_Structural_Analysis.md',
+      PULSE2_SCROLL_TRACE: 'pulse2_scroll_trace.md',
+      PULSE_SCROLL_TRACE: 'pulse_scroll_trace.md',
+      QUANTUM_ANTENNA_RESEARCH: 'Quantum_Antenna_Research.md',
+      RAINBOWS_WITH_RTT: 'Rainbows_with_RTT.md',
+      REMEMBERING_ALIGNMENT: 'Remembering_as_Alignment_Not_Acquisition.md',
+      REMEMBERING_PROTOCOL: 'Remembering_Protocol.md',
+      RESONANCE_INTERWOVEN_GAME_DESIGN: 'Resonance-Interwoven_Game_Design_with_RTT.md',
+      RESONANCE_LIBRARY_HUMANIFESTO: 'resonance-library-humanifesto.md',
+      RESONANCEBEINGS: 'resonancebeings.md',
+      RESONANCE_CULTURES_ALIGNMENTS_7D: 'Resonance_Cultures_Alignments_7D.md',
+      RESONANCE_DREAMS: 'Resonance_Dreams.md',
+      RESONANCE_TIME_SET_TREATMENTS: 'Resonance‑Time_SET_S–N–R_Treatments.md',
+      RESONANT_ROMAN_CONCRETE: 'resonant-roman-concrete.md',
+      RESONANT_TIME_CLOCK_GEN1: 'Resonant-Time_Clock_Gen1.md',
+      RESONANT_TIME_COSMOLOGY: 'Resonant‑Time_Cosmology-From_Initial_Seed_to_Large‑Scale_Structure.md',
+      RESONANT_TIME_CYCLIC_COSMOLOGY: 'Resonant‑Time_Cyclic_Cosmology-Loops_Seeds_and_the_∇τR_Gradient.md',
+      RESURRECTION_PROTOCOL: 'Resurrection_Protocol.md',
+      RING2_SCROLL_TRACE: 'ring2_scroll_trace.md',
+      RING_SCROLL_TRACE: 'ring_scroll_trace.md',
+      RTT_DECODER_WHEEL: 'RTT_decoder_wheel.md',
+      RTT_HAS_CERTAIN_ABILITIES: 'RTT_has_certain_abilities.md',
+      RTT_OVERLAY_FEYNMAN_12: 'RTT_Overlay_Feynman_12_Favorite_Problems.md',
+      RTT_DELTA_STORYFORGE: 'RTT‑Δ_StoryForge_v1.0.md',
+      SARG_CAPTURE: 'SARG_Capture.md',
+      SCIENCE_REFRESH: 'science-refresh.md',
+      SCIENCE_CLI_TOOL_APP_WRAPS: 'Science_CLI_tool_app_wraps.md',
+      SCIENCE_CLI_TOOL_APP_WRAPS_RTT: 'Science_CLI_Tool_App_Wraps_RTT‑Inside_Edition.md',
+      SCIFI_WORKS_APPROX_RTT: 'Sci‑Fi Works_That_Accidentally_Approximated_RTT-No_Math_Required.md',
+      SEED_SCROLL_TRACE: 'seed_scroll_trace.md',
+      SHATTERED_FUNHOUSE_FRANCHISE: 'Shattered_funhouse_franchise.md',
+      SHORT_STORY_TIME_CAPTURE: 'Short_story_time_capture.md',
+      SMELL_TECH_HUMANIFESTO: 'smell-tech-humanifesto.md',
+      SMS_CAPTURE_PRE_SCAFFOLDING: 'SMS_capture_pre_scaffolding.md',
+      SPACETIME_HUMANIFESTO: 'spacetime-humanifesto.md',
+      SPACETIME_VALIDATION_DIMENSIONAL_CORES: 'Spacetime_validation_and_regime_invariant_dimensional_cores_Scaffolding.md',
+      SPECTRAL_CLARITY: 'Spectral_Clarity.md',
+      SPIN_ELECTROLISIS_TEMPERATURE: 'Spin_Electrolisis_Temperature.md',
+      STARRIDER: 'Starrider.md',
+      STATE_OF_MICHIGAN_DATACENTER_GUIDE: 'State_of_Michigan_Datacenter_Substrate_Alignment_Guide.md',
+      STUDENTS_DISCOVER_PLAN: 'studens_discover_plan.md',
+      SUBCONSCIOUS_SCAFFOLDING: 'Subconscious_Scaffolding_for_Consciousness_Transfer.md',
+      SUMMARY_DIGEST_PERPLEXITY_AI: 'Summary_Digest_Perplexity_AI_Backup.md',
+      TERNARY_COMPUTING_RESURGENCE: 'Ternary_Computing_Resurgence.md',
+      TESTING_US_WATERS_RTT: 'Testing_the_US_Waters_RTT_Edition.md',
+      TFT_FFF_DISTRIBUTED_LAUNCH_PLAN: 'TFT-FFF_Distributed_Launch_Plan.md',
+      THE_ANTIS_STRUCTURAL_COUNTERPARTS: 'The_Anti\'s_Structural_Counterparts.md',
+      THE_ARROW_OF_TIME_AS_RTT_GRADIENT: 'The_Arrow_of_Time_as_a_Resonance‑Time_Gradient.md',
+      THE_BKM_PHASE_CYCLE: 'The_BKM_Phase_Cycle.md',
+      THE_CLARIFIER_OF_WORLDS: 'The_Clarifier_of_Worlds.md',
+      THE_COORDINATION_TRIAD_RTT: 'The_Coordination_Triad_with_RTT‑Inside.md',
+      THE_HYBRID_STACK: 'The_Hybrid_Stack.md',
+      THE_IDEA_CAPTURE_PRIMER: 'The_Idea-Capture_Primer.md',
+      THE_RESONANCE_CREATION_MYTH: 'The_Resonance_Creation_Myth.md',
+      THE_RESONANCE_STORY: 'The_Resonance_Story.md',
+      THE_RESONANCE_TIME_CANON: 'The_Resonance‑Time_Theory_Canon.md',
+      THE_RTT_CANON_SCROLL: 'The_RTT_Canon_Scroll.md',
+      THE_SCIENCE_CANDY_STORE: 'The_Science_Candy_Store.md',
+      THE_THREE_RTT_EVALUATION_MODES: 'The_Three_RTT_Evaluation_Modes.md',
+      THE_WORLDS_FIRST_PORTABLE_TRIADIC_CORE: 'The_Worlds_First_Portable_Triadic_Core.md',
+      THE_WRAPPER_STORE_RTT: 'The_Wrapper_Store_with_RTT-Inside.mdRTT_core‑as‑a‑component.md',
+      TIME_CRYSTAL_REGIME_AHEAD_COMPUTE: 'Time_Crystal_Regime_Ahead_Compute.md',
+      TIME_TRAVEL_VALIDATION_PROTOCOL: 'Time_Travel_Validation_Protocol.md',
+      TOP_RESONANCE_SONGS_PLAYLIST: 'Top_Resonance_Songs_Playlist.md',
+      TRIADICFRAMEWORKS_STYLE_POSTING_STRATEGY: 'TriadicFrameworks_Style_Posting_Strategy.md',
+      TRIADIC_ATLAS_ENTRY_QUANTUM_NODE: 'Triadic_Atlas_Entry-Quantum_Node.md',
+      TRIADIC_LANGUAGE_STACK_TLS: 'Triadic_Language_Stack_TLS.md',
+      TRIADIC_QUANTUM_IDEA_TEMPLATE: 'Triadic_Quantum_Idea_Template.md',
+      TRINTELLECTUAL_HYBRID: 'Trintellectual_Hybrid.md',
+      TWO_SENSING_MODELS_DRAFT: 'Two_sensing_models_draft.md',
+      UNIVERSE_LOOP_CHART: 'Universe_Loop_chart.md',
+      UNIVERSE_CLASS_ACTIVE_DIRECTORY: 'Universe‑Class_Active-Directory__Elevating_Identity_to_a_Resonance‑Aware_Structural_System.md',
+      VALUE_3_LENS_RTT_RESOURCES: 'Value_3_Lens_RTT_Resources.md',
+      VIBRATION_RESONANCE_PERIODIC_TABLE: 'Vibration-Resonance_Periodic_Table.md',
+      VIRTUAL_CODE_ZOMBIES: 'virtual-code-zombies.md',
+      VIRTUAL_COMPUTE_GATEWAY_DRAFT: 'Virtual_Compute_Gateway_draft.md',
+      WHAT_HAPPENS_WHEN_SUBSTRATES_NEGOTIATE: 'What_happens_when_two_substrates_negotiate_for_turf_in_RTT_vST.md',
+      WHAT_NAWDER_DID_WHILE_BUILDING_RTT: 'What_Nawder_Did_While_Building_RTT_Kid‑Friendly_Edition.md',
+      WHY_DEEP_SEA_IS_RTT_DOMAIN: 'Why_Deep_Sea_Is_a_Natural_RTT_Domain.md',
+      WHY_RTT_ALIGNS_WITH_TRIADS: 'Why_RTT_Aligns_Naturally_with_Triads_Being_Knowing_Meaning.md',
+      WHY_SIMULATION_THEORY_PEOPLE_LOVE_SUBSTRATE: 'Why_simulation‑theory_people_will_love_the_substrate.md',
+      WHY_TEACHERS_MATTER: 'Why_teachers_matter_more_than_ever.md',
+      WINDOWS_HUMANIFESTO: 'windows-humanifesto.md',
+      WIRED_WIRELESS_RTT_EVALUATION: 'Wired-Wireless_RTT_evaluation.md',
+      WRAPPED_RESONANCE_DIMENSIONAL_CORES: 'Wrapped_Resonance_Structural_Aware_Dimensional_Cores.md',
+      WRSADC_ON_WINDOWS_11_PRO: 'WRSADC_on_Windows_11_Pro.md',
+      WSL2_INSTALL_TRAIN_LOG: 'WSL2_install_train_log.md',
+      YOU_DRIFT_NO_YOU_DRIFT_CARTOON: 'You_Drift_No_You_Drift_Cartoon.md'
+};
+
+function loadFromHash() {
+const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>

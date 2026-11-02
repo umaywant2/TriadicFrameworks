@@ -1,0 +1,76 @@
+{
+  "id": "LH",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "LH",
+  "name": "Gradient Harmonic",
+  "canonical": "R5",
+
+  "summary": "LH defines the harmonic-coupling axis of unseen directional influence. It is the fourth and final structural dimension of the gradient node and determines the harmonic behavior of gradientIntensity within the S3 Spine.",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "semantic_axis": "gradientIntensity",
+
+  "role": "harmonic",
+  "category": "gradient",
+  "cluster": "gradient-origin",
+
+  "description": {
+    "canonical": "LH establishes the harmonic behavior of unseen directional influence. It refines modulation (L16) by defining how gradientIntensity couples, resonates, and harmonizes across influence channels.",
+    "cosmology": "In the cosmology chain, LH represents the emergence of harmonic coupling from modulation mechanics. It is the fourth and final stage of gradient formation within force-regime behavior.",
+    "spine": "Within the S3 Spine, LH is the harmonic dimension of the gradient node, defining the resonance behavior that bridges gradient-state mechanics into field-state coherence.",
+    "mcp": "In MCP operations, LH is used to harmonize gradient-state mechanics, providing the harmonic coordinate for influence modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "gradient"
+    ],
+    "secondary": [
+      "push"
+    ],
+    "forbidden": [
+      "pull",
+      "fieldShift",
+      "ruptureForce",
+      "bind"
+    ]
+  },
+
+  "valid_transitions": [
+    "LH → L8"
+  ],
+
+  "forbidden_transitions": [
+    "LH → L12",
+    "LH → L32",
+    "LH → LI"
+  ],
+
+  "spine_mapping": {
+    "node": "gradient",
+    "semantic": "gradientIntensity",
+    "position": "harmonic",
+    "causal_role": "influence harmonic coupling"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "LH",
+    "version": "1.0.0",
+    "keywords": [
+      "gradient",
+      "harmonic",
+      "resonance",
+      "influence",
+      "force-regime"
+    ],
+    "purpose": "Defines the harmonic axis of unseen directional influence for AI reasoning and MCP gradient harmonic modeling."
+  }
+}

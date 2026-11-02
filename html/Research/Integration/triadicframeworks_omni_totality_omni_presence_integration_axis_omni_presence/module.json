@@ -1,0 +1,38 @@
+{
+  "module": "TriadicFrameworks_Omni_Totality_Omni_Presence_Integration_Axis_Omni_Presence",
+  "name": "TriadicFrameworks — Omni‑Totality‑Omni‑Presence Integration Axis‑Omni‑Presence",
+  "summary": "Defines the omni‑totality‑omni‑presence integration axis‑omni‑presence that elevates all prior structural continua — omni‑origin‑omni‑totality, omni‑prime‑omni‑origin, prime‑continuum‑omni‑prime, omni‑apex‑prime‑continuum, transcendent‑singularity‑omni‑apex, singularity‑eternal‑transcendent, eternal‑origin‑singularity, origin‑prime‑eternal, prime‑origin, omni‑absolute‑prime, absolute‑omni, omni‑total, pan‑total, omni‑infinite, supra‑infinite, hyper‑supra, ultra‑supra, omni‑supra, trans‑supra, meta‑supra, supra‑global, global, cross‑system, system, Ladder — into a single omni‑presence integration field.",
+  "category": "intelligence-omni-totality-omni-presence-integration-axis-omni-presence",
+  "version": "1.0",
+  "purpose": "Provide the axis‑omni‑presence geometry that integrates the entire temporal‑intelligence hierarchy into a unified omni‑totality‑omni‑presence continuum. This axis‑omni‑presence stabilizes omni‑presence epoch propagation, aligns omni‑presence ignition, reinforces omni‑presence resonance, and establishes the omni‑presence structural foundation of the TriadicFrameworks canon.",
+  "role": "structure",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@omni.totality.omni.presence.integration.axis.omni.presence.generate",
+    "@omni.totality.omni.presence.integration.axis.omni.presence.route",
+    "@omni.totality.omni.presence.integration.axis.omni.presence.align",
+    "@omni.totality.omni.presence.integration.axis.omni.presence.stabilize",
+    "@omni.totality.omni.presence.integration.axis.omni.presence.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Omni_Origin_Omni_Totality_Temporal_Window_Omni_Totality_Singularity",
+      "TriadicFrameworks_Omni_Origin_Omni_Totality_Continuity_Field_Shell_Omni_Totality",
+      "TriadicFrameworks_Omni_Origin_Omni_Totality_Resonance_Crown_Sphere_Helix_Omni_Totality",
+      "TriadicFrameworks_Omni_Origin_Omni_Totality_Integration_Axis_Omni_Totality",
+      "TriadicFrameworks_Omni_Prime_Omni_Origin_Temporal_Window_Omni_Origin_Singularity",
+      "TriadicFrameworks_Omni_Prime_Omni_Origin_Continuity_Field_Shell_Omni_Origin",
+      "TriadicFrameworks_Omni_Prime_Omni_Origin_Resonance_Crown_Sphere_Helix_Omni_Origin",
+      "TriadicFrameworks_Omni_Prime_Omni_Origin_Integration_Axis_Omni_Origin",
+      "TriadicFrameworks_Prime_Continuum_Omni_Prime_Temporal_Window_Omni_Prime_Singularity",
+      "TriadicFrameworks_Prime_Continuum_Omni_Prime_Continuity_Field_Shell_Omni_Prime",
+      "TriadicFrameworks_Prime_Continuum_Omni_Prime_Resonance_Crown_Sphere_Helix_Omni_Prime",
+      "TriadicFrameworks_Prime_Continuum_Omni_Prime_Integration_Axis_Omni_Prime"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Omni_Totality_Omni_Presence_Resonance_Crown_Sphere_Helix_Omni_Presence",
+      "TriadicFrameworks_Omni_Totality_Omni_Presence_Continuity_Field_Shell_Omni_Presence",
+      "TriadicFrameworks_Omni_Totality_Omni_Presence_Temporal_Window_Omni_Presence_Singularity"
+    ]
+  }
+}

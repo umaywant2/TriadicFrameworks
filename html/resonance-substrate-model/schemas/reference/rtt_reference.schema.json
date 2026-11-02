@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RTT Reference Structure",
+  "description": "A minimal structural echo of RTTcodes, included for conceptual lineage.",
+  "type": "object",
+  "properties": {
+    "cycle": {
+      "type": "string",
+      "enum": ["resonate", "transform", "transmit"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["cycle", "timestamp"]
+}

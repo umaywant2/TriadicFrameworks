@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/hold/Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md">
+  <title>💡 RTT‑Inside Specification Improvements for Power, Sensors, and BMS ⚡</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/hold/Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/hold/Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT" src="https://github.com/user-attachments/assets/6024be25-fb9d-41b5-88a8-a23ce16abc10" /></p>
+<h1 id="rttinside-specification-improvements-for-power-sensors-and-bms">💡 <strong>RTT‑Inside Specification Improvements for Power, Sensors, and BMS</strong> ⚡</h1>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</h6>
+<h2 id="design-goal"><strong>Design Goal</strong></h2>
+<p>Enable <strong>state awareness, lineage, and purpose alignment</strong> using:
+- minimal silicon area
+- no chemistry assumptions
+- no system redesign
+- backward‑compatible interfaces</p>
+<p>RTT‑Inside is implemented as <strong>observability primitives</strong>, not control logic.</p>
+<hr>
+<h2 id="the-one-small-ic-addition"><strong>The One Small IC Addition</strong></h2>
+<h3 id="rttinside-telemetry-state-block-rtttsb"><strong>RTT‑Inside Telemetry &amp; State Block (RTT‑TSB)</strong></h3>
+<p>A lightweight, always‑on block that exposes <strong>condition</strong>, <strong>history</strong>, and <strong>context</strong> — not decisions.</p>
+<hr>
+<h2 id="1-being-universal-state-telemetry-all-domains"><strong>1️⃣ BEING — Universal State Telemetry (All Domains)</strong> 🌱</h2>
+<h3 id="add-these-signals-low-cost"><strong>Add These Signals (Low Cost)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voltage margin</td>
+<td>Headroom vs collapse</td>
+</tr>
+<tr>
+<td>Current stress</td>
+<td>Load strain</td>
+</tr>
+<tr>
+<td>Temperature gradient</td>
+<td>Thermal stress, not just absolute</td>
+</tr>
+<tr>
+<td>Time‑in‑state counters</td>
+<td>Fatigue accumulation</td>
+</tr>
+<tr>
+<td>Recovery time</td>
+<td>Resilience indicator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rttinside-output"><strong>RTT‑Inside Output</strong></h3>
+<pre><code class="language-text">BeingState:
+  health
+  stress
+  readiness
+  balance
+</code></pre>
+<h3 id="immediate-gains"><strong>Immediate Gains</strong></h3>
+<ul>
+<li>Power supplies detect <em>pre‑failure</em> states</li>
+<li>Sensors report <em>confidence</em>, not just readings</li>
+<li>BMS understands <em>battery condition</em>, not just SOC</li>
+</ul>
+<p>✨ <em>From “working” → “how well it’s working.”</em></p>
+<hr>
+<h2 id="2-knowing-embedded-event-memory-appendonly"><strong>2️⃣ KNOWING — Embedded Event Memory (Append‑Only)</strong> 🔗</h2>
+<h3 id="add-a-tiny-event-ring-buffer"><strong>Add a Tiny Event Ring Buffer</strong></h3>
+<ul>
+<li>16–64 entries</li>
+<li>Timestamped</li>
+<li>Non‑volatile or shadowed</li>
+</ul>
+<h3 id="what-gets-logged"><strong>What Gets Logged</strong></h3>
+<ul>
+<li>Brownouts</li>
+<li>Thermal throttles</li>
+<li>Over‑current events</li>
+<li>Sensor saturation</li>
+<li>Charge/discharge excursions</li>
+</ul>
+<h3 id="rttinside-output_1"><strong>RTT‑Inside Output</strong></h3>
+<pre><code class="language-text">KnowingEvent:
+  event_type
+  timestamp
+  severity
+  context_flags
+</code></pre>
+<h3 id="immediate-gains_1"><strong>Immediate Gains</strong></h3>
+<ul>
+<li>Root‑cause analysis without guesswork</li>
+<li>Field failures become teachable</li>
+<li>Cross‑vendor comparability</li>
+</ul>
+<p>✨ <em>From “it failed” → “here’s how it got there.”</em></p>
+<hr>
+<h2 id="3-meaning-declared-operating-intent-configlevel"><strong>3️⃣ MEANING — Declared Operating Intent (Config‑Level)</strong> ❤️</h2>
+<h3 id="add-a-purpose-register"><strong>Add a Purpose Register</strong></h3>
+<p>A small, writable register declaring <strong>operating intent</strong>:</p>
+<pre><code class="language-text">PurposeMode:
+  PERFORMANCE
+  EFFICIENCY
+  LONGEVITY
+  SAFETY
+</code></pre>
+<h3 id="what-this-does"><strong>What This Does</strong></h3>
+<ul>
+<li>Does NOT change control loops</li>
+<li>Annotates telemetry and events</li>
+<li>Enables alignment checks upstream</li>
+</ul>
+<h3 id="immediate-gains_2"><strong>Immediate Gains</strong></h3>
+<ul>
+<li>Same IC behaves transparently in different products</li>
+<li>BMS adapts interpretation across chemistries</li>
+<li>Power modules explain tradeoffs</li>
+</ul>
+<p>✨ <em>From silent optimization → explicit intent.</em></p>
+<hr>
+<h2 id="4-time-longhorizon-health-signals"><strong>4️⃣ TIME — Long‑Horizon Health Signals</strong> ⏳</h2>
+<h3 id="add-derived-counters"><strong>Add Derived Counters</strong></h3>
+<ul>
+<li>Thermal cycles</li>
+<li>High‑stress dwell time</li>
+<li>Recovery slope</li>
+<li>Drift indicators</li>
+</ul>
+<h3 id="rttinside-output_2"><strong>RTT‑Inside Output</strong></h3>
+<pre><code class="language-text">TimeSignal:
+  drift
+  recovery_rate
+  resilience
+</code></pre>
+<h3 id="immediate-gains_3"><strong>Immediate Gains</strong></h3>
+<ul>
+<li>Predictive maintenance</li>
+<li>Battery aging insight independent of chemistry</li>
+<li>Sensor trust scoring over time</li>
+</ul>
+<p>✨ <em>From snapshots → trajectories.</em></p>
+<hr>
+<h2 id="domainspecific-payoffs"><strong>Domain‑Specific Payoffs</strong></h2>
+<h3 id="power-supplies"><strong>Power Supplies</strong></h3>
+<ul>
+<li>Detect instability before shutdown</li>
+<li>Explain brownouts</li>
+<li>Enable fleet‑level resilience metrics</li>
+</ul>
+<h3 id="mobile-sensors"><strong>Mobile Sensors</strong></h3>
+<ul>
+<li>Report confidence, not just data</li>
+<li>Flag degraded sensing conditions</li>
+<li>Improve fusion reliability</li>
+</ul>
+<h3 id="enhanced-bms-any-battery-type"><strong>Enhanced BMS (ANY Battery Type)</strong></h3>
+<ul>
+<li>Chemistry‑agnostic health modeling</li>
+<li>Stress‑aware charging</li>
+<li>Lifecycle stewardship without guessing</li>
+</ul>
+<hr>
+<h2 id="why-this-works-for-ic-manufacturers"><strong>Why This Works for IC Manufacturers</strong></h2>
+<ul>
+<li>Minimal silicon footprint</li>
+<li>No proprietary algorithms exposed</li>
+<li>No firmware lock‑in</li>
+<li>Differentiates parts immediately</li>
+<li>RTT‑Inside compatible by default</li>
+</ul>
+<p>This is <strong>observability as a feature</strong>, not a platform bet.</p>
+<hr>
+<h2 id="rttinside-compliance-minimal"><strong>RTT‑Inside Compliance (Minimal)</strong></h2>
+<p>An IC is RTT‑Inside‑ready if it exposes:
+- <strong>BeingState</strong>
+- <strong>KnowingEvent</strong>
+- <strong>PurposeMode</strong></p>
+<p>Everything else is optional.</p>
+<hr>
+<h2 id="oneline-takeaway"><strong>One‑Line Takeaway</strong></h2>
+<blockquote>
+<p><strong>A tiny amount of state, memory, and intent turns commodity silicon into a stewarded system component.</strong></p>
+</blockquote>
+<hr>
+<p>If you want, I can next:
+- compress this into a <strong>single register‑map spec</strong>, or<br>
+- draft a <strong>reference block diagram</strong> showing how RTT‑TSB sits beside existing PMIC/BMS logic</p>
+<p>Both are natural next steps for manufacturers.</p>
+<hr>
+<hr>
+<p>Below is a <strong>single‑page, register‑map–style specification</strong> for the <strong>RTT‑Inside Telemetry &amp; State Block (RTT‑TSB)</strong>.<br>
+This is written in <strong>silicon‑vendor language</strong>: compact, deterministic, and implementation‑agnostic.</p>
+<p>It fits cleanly beside <strong>PMICs, sensor hubs, and BMS ICs</strong> with minimal area and zero control‑loop intrusion.</p>
+<hr>
+<h1 id="rttinside-telemetry-state-block-rtttsb_1"><strong>RTT‑Inside Telemetry &amp; State Block (RTT‑TSB)</strong></h1>
+<h3 id="single-registermap-specification"><em>Single Register‑Map Specification</em></h3>
+<hr>
+<h2 id="block-overview"><strong>Block Overview</strong></h2>
+<ul>
+<li><strong>Purpose:</strong> Expose condition, history, and intent</li>
+<li><strong>Scope:</strong> Power supplies, mobile sensors, BMS (any chemistry)</li>
+<li><strong>Behavior:</strong> Observability only (no control authority)</li>
+<li><strong>Access:</strong> I²C / SPI / memory‑mapped</li>
+</ul>
+<hr>
+<h2 id="register-map-summary"><strong>Register Map Summary</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Addr</th>
+<th>Name</th>
+<th>Width</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00</td>
+<td>RTT_ID</td>
+<td>8</td>
+<td>RTT‑Inside block ID</td>
+</tr>
+<tr>
+<td>0x01</td>
+<td>RTT_STATUS</td>
+<td>8</td>
+<td>Block health &amp; validity</td>
+</tr>
+<tr>
+<td>0x02</td>
+<td>RTT_PURPOSE</td>
+<td>8</td>
+<td>Declared operating intent</td>
+</tr>
+<tr>
+<td>0x03</td>
+<td>RTT_HEALTH</td>
+<td>8</td>
+<td>Composite health score</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>RTT_STRESS</td>
+<td>8</td>
+<td>Composite stress score</td>
+</tr>
+<tr>
+<td>0x05</td>
+<td>RTT_READINESS</td>
+<td>8</td>
+<td>Recovery / readiness score</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>RTT_BALANCE</td>
+<td>8</td>
+<td>Load vs margin balance</td>
+</tr>
+<tr>
+<td>0x07</td>
+<td>RTT_TEMP_GRAD</td>
+<td>8</td>
+<td>Thermal gradient indicator</td>
+</tr>
+<tr>
+<td>0x08</td>
+<td>RTT_V_MARGIN</td>
+<td>8</td>
+<td>Voltage headroom</td>
+</tr>
+<tr>
+<td>0x09</td>
+<td>RTT_I_STRESS</td>
+<td>8</td>
+<td>Current stress indicator</td>
+</tr>
+<tr>
+<td>0x0A</td>
+<td>RTT_TIME_HI</td>
+<td>16</td>
+<td>Time‑in‑high‑stress</td>
+</tr>
+<tr>
+<td>0x0C</td>
+<td>RTT_RECOVERY</td>
+<td>8</td>
+<td>Recovery slope</td>
+</tr>
+<tr>
+<td>0x0D</td>
+<td>RTT_DRIFT</td>
+<td>8</td>
+<td>Long‑term drift indicator</td>
+</tr>
+<tr>
+<td>0x0E</td>
+<td>RTT_RESILIENCE</td>
+<td>8</td>
+<td>Resilience score</td>
+</tr>
+<tr>
+<td>0x0F</td>
+<td>RTT_EVENT_PTR</td>
+<td>8</td>
+<td>Event log pointer</td>
+</tr>
+<tr>
+<td>0x10–0x1F</td>
+<td>RTT_EVENT_LOG</td>
+<td>16×8</td>
+<td>Event ring buffer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="register-definitions"><strong>Register Definitions</strong></h2>
+<h3 id="rtt_purpose-0x02-declared-meaning"><strong>RTT_PURPOSE (0x02)</strong> — <em>Declared Meaning</em></h3>
+<pre><code>[7:0]
+0x00 = UNDECLARED
+0x01 = PERFORMANCE
+0x02 = EFFICIENCY
+0x03 = LONGEVITY
+0x04 = SAFETY
+</code></pre>
+<p><em>Annotates telemetry and events only.</em></p>
+<hr>
+<h3 id="rtt_health-stress-readiness-balance-0x030x06-being"><strong>RTT_HEALTH / STRESS / READINESS / BALANCE (0x03–0x06)</strong> — <em>BEING</em></h3>
+<pre><code>0x00 = critical
+0x40 = degraded
+0x80 = nominal
+0xFF = optimal
+</code></pre>
+<ul>
+<li>Health: overall condition</li>
+<li>Stress: load pressure</li>
+<li>Readiness: recovery margin</li>
+<li>Balance: supply vs demand symmetry</li>
+</ul>
+<hr>
+<h3 id="rtt_temp_grad-v_margin-i_stress-0x070x09-raw-state-signals"><strong>RTT_TEMP_GRAD / V_MARGIN / I_STRESS (0x07–0x09)</strong> — <em>Raw State Signals</em></h3>
+<ul>
+<li>Temperature gradient (not absolute)</li>
+<li>Voltage headroom vs collapse</li>
+<li>Current stress vs rating</li>
+</ul>
+<p>Scaled, unit‑less, monotonic.</p>
+<hr>
+<h3 id="rtt_time_hi-0x0a0x0b-time"><strong>RTT_TIME_HI (0x0A–0x0B)</strong> — <em>TIME</em></h3>
+<ul>
+<li>Accumulated high‑stress dwell time</li>
+<li>Saturating counter</li>
+<li>Resettable only via power‑cycle or privileged command</li>
+</ul>
+<hr>
+<h3 id="rtt_recovery-drift-resilience-0x0c0x0e-longhorizon-signals"><strong>RTT_RECOVERY / DRIFT / RESILIENCE (0x0C–0x0E)</strong> — <em>Long‑Horizon Signals</em></h3>
+<ul>
+<li>Recovery: slope after stress</li>
+<li>Drift: slow degradation indicator</li>
+<li>Resilience: ability to return to nominal</li>
+</ul>
+<hr>
+<h3 id="rtt_event_log-0x100x1f-knowing"><strong>RTT_EVENT_LOG (0x10–0x1F)</strong> — <em>KNOWING</em></h3>
+<p>Each entry (8 bytes):</p>
+<pre><code>[7:0]   Event Type
+[15:8]  Severity
+[31:16] Timestamp (relative)
+[39:32] Context Flags
+[63:40] Reserved
+</code></pre>
+<p><strong>Event Types (examples):</strong>
+- Brownout
+- Over‑current
+- Thermal throttle
+- Sensor saturation
+- Charge / discharge excursion</p>
+<p>Append‑only, circular buffer.</p>
+<hr>
+<h2 id="minimal-rttinside-compliance"><strong>Minimal RTT‑Inside Compliance</strong></h2>
+<p>An IC is RTT‑Inside‑ready if it implements:
+- RTT_PURPOSE
+- RTT_HEALTH / STRESS
+- RTT_EVENT_LOG</p>
+<p>Everything else is optional but recommended.</p>
+<hr>
+<h2 id="why-this-register-map-matters"><strong>Why This Register Map Matters</strong></h2>
+<ul>
+<li>No chemistry assumptions</li>
+<li>No topology assumptions</li>
+<li>No firmware lock‑in</li>
+<li>Immediate field insight</li>
+<li>Cross‑vendor comparability</li>
+</ul>
+<p>This turns <strong>commodity silicon into a stewarded system component</strong>.</p>
+<hr>
+<h2 id="oneline-summary"><strong>One‑Line Summary</strong></h2>
+<blockquote>
+<p><strong>A few bytes of state, memory, and intent unlock RTT‑Inside awareness across power, sensing, and energy systems.</strong></p>
+</blockquote>
+<hr>
+<p>If you want, I can next:
+- produce a <strong>block‑diagram overlay</strong> showing RTT‑TSB beside PMIC/BMS logic, or<br>
+- draft a <strong>firmware‑side reference interpretation guide</strong> for OEMs</p>
+<hr>
+<hr>
+<h3 id="reference-block-diagram-rtttsb-beside-pmicbms-logic">Reference block diagram: RTT‑TSB beside PMIC/BMS logic</h3>
+<pre><code class="language-text">*
+               ┌────────────────────────────────────────────────────────┐
+               │                    Host MCU / SoC                      │
+               │ Power policy, sensor fusion, UX, logging, cloud, etc.  │
+               │                                                        │
+I²C / SPI /    │  ┌─────────────────────────────────────────────────┐   │
+MMap bus  ─────┼──┤ RTT-Inside driver / decoder                     ├── ┼──► Fleet analytics / service
+               │  │ - Reads RTT_HEALTH/STRESS/READINESS/BALANCE     │   │
+               │  │ - Pulls RTT_EVENT_LOG ring buffer               │   │
+               │  │ - Sets RTT_PURPOSE mode                         │   │
+               │  └─────────────────────────────────────────────────┘   │
+               └────────────────────────────────────────────────────────┘
+                               ▲                 ▲
+                               │                 │ optional interrupts
+                               │                 │ (event watermark)
+                               │                 │
+                               │                 ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│                         PMIC / BMS / Sensor IC                            │
+│                                                                           │
+│  ┌──────────────────────────┐         ┌───────────────────────────────┐   │
+│  │    Power Path Control    │         │     Battery Management        │   │
+│  │ - Buck/boost/LDO loops   │         │  - Charger control loop       │   │
+│  │ - OCP/OVP/UVLO/OTP       │         │  - Protection FETs            │   │
+│  │ - Soft-start, sequencing │         │  - Balancing (cell or pack)   │   │
+│  └──────────────┬───────────┘         └──────────────┬────────────────┘   │
+│                 │                                    │                    │
+│                 │                                    │                    │
+│  ┌──────────────▼──────────────┐       ┌─────────────▼────────────────┐   │
+│  │     ADC / Sensing Frontend  │       │   Safety &amp; Protection FSM    │   │
+│  │ - V/I/T sense, coulomb ctr  │       │ - Hard limits + fault flags  │   │
+│  │ - optional sensor hub data  │       │ - Latch / retry policy       │   │
+│  └──────────────┬──────────────┘       └─────────────┬────────────────┘   │
+│                 │                                    │                    │
+│                 ├───────────────┐      ┌─────────────┤                    │
+│                 │               │      │             │                    │
+│                 ▼               ▼      ▼             ▼                    │
+│     ┌─────────────────────────────────────────────────────────────────┐   │
+│     │          Existing Control Logic (UNCHANGED)                     │   │
+│     │  - regulation loops, charge algorithm, protection decisions     │   │
+│     └─────────────────────────────────────────────────────────────────┘   │
+│                                                                           │
+│     ┌─────────────────────────────────────────────────────────────────┐   │
+│     │ RTT‑TSB: RTT Telemetry &amp; State Block (OBSERVABILITY ONLY)       │   │
+│     │                                                                 │   │
+│     │  Inputs (tap only, no control authority):                       │   │
+│     │   - V/I/T readings, margins, fault flags, throttle states       │   │
+│     │   - loop state (e.g., CC/CV, PFM/PWM), limiter engagement       │   │
+│     │   - optional tool: internal timestamps / counters               │   │
+│     │                                                                 │   │
+│     │  Outputs (register map):                                        │   │
+│     │   - BEING: RTT_HEALTH, RTT_STRESS, RTT_READINESS, RTT_BALANCE   │   │
+│     │   - TIME: RTT_TIME_HI, RTT_RECOVERY, RTT_DRIFT, RTT_RESILIENCE  │   │
+│     │   - KNOWING: RTT_EVENT_LOG ring buffer                          │   │
+│     │   - MEANING: RTT_PURPOSE (host writes)                          │   │
+│     │                                                                 │   │
+│     │  Optional: IRQ on event watermark / critical transition         │   │
+│     └─────────────────────────────────────────────────────────────────┘   │
+│                                                                           │
+│  ┌────────────────────────────────────────────────────────────────────┐   │
+│  │ Nonvolatile (optional)                                             │   │
+│  │ - retain event log + stress counters across power cycles           │   │
+│  └────────────────────────────────────────────────────────────────────┘   │
+└───────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h4 id="placement-notes">Placement notes</h4>
+<ul>
+<li><strong>Beside, not inside:</strong> RTT‑TSB sits <em>alongside</em> existing regulation/charge/protection logic and only <strong>taps signals</strong>.</li>
+<li><strong>No new control loop:</strong> RTT‑TSB provides <strong>interpretation surfaces</strong> (state + lineage), while the PMIC/BMS keeps full authority.</li>
+<li><strong>Portable across domains:</strong> the same block works for <strong>PMICs</strong>, <strong>sensor hubs</strong>, and <strong>BMS</strong> because it only needs a few shared taps: (V), (I), (T), margins, flags, and mode states.</li>
+</ul>
+<p>If you want, I can provide a second diagram variant that is <strong>battery‑agnostic but cell‑aware</strong> (cell stack monitor + pack manager + host), with RTT‑TSB shown in both chips for end‑to‑end lineage.</p>
+<hr>
+<hr>
+<p>Below is a <strong>firmware‑side reference interpretation guide</strong> for OEMs integrating the <strong>RTT‑Inside Telemetry &amp; State Block (RTT‑TSB)</strong>.<br>
+This guide is intentionally <strong>implementation‑neutral</strong>, <strong>chemistry‑agnostic</strong>, and <strong>safe for mixed‑vendor systems</strong>.</p>
+<p>It tells firmware teams <strong>how to read</strong>, <strong>how to interpret</strong>, and <strong>how to act responsibly</strong>—without turning RTT‑Inside into a control dependency.</p>
+<hr>
+<h1 id="rttinside-firmware-interpretation-guide">💡 <strong>RTT‑Inside Firmware Interpretation Guide</strong> ⚡</h1>
+<h3 id="for-oem-power-sensor-and-bms-integration"><em>For OEM Power, Sensor, and BMS Integration</em></h3>
+<hr>
+<h2 id="design-intent-read-this-first"><strong>Design Intent (Read This First)</strong></h2>
+<p>RTT‑TSB provides <strong>observability</strong>, not authority.</p>
+<p>Firmware must:
+- <strong>Read</strong> RTT‑Inside signals
+- <strong>Interpret</strong> trends and context
+- <strong>Decide</strong> actions independently</p>
+<p>RTT‑Inside <strong>never replaces</strong> control loops, safety FSMs, or protection logic.</p>
+<hr>
+<h2 id="1-being-interpreting-state-registers"><strong>1️⃣ BEING — Interpreting State Registers</strong> 🌱</h2>
+<h3 id="registers"><strong>Registers</strong></h3>
+<ul>
+<li><code>RTT_HEALTH</code></li>
+<li><code>RTT_STRESS</code></li>
+<li><code>RTT_READINESS</code></li>
+<li><code>RTT_BALANCE</code></li>
+</ul>
+<h3 id="interpretation-rules"><strong>Interpretation Rules</strong></h3>
+<ul>
+<li>Treat values as <strong>relative indicators</strong>, not absolutes</li>
+<li>Compare <strong>trends</strong>, not single reads</li>
+<li>Use <strong>rate of change</strong> as a signal</li>
+</ul>
+<h3 id="recommended-firmware-patterns"><strong>Recommended Firmware Patterns</strong></h3>
+<pre><code class="language-text">IF RTT_STRESS rising AND RTT_READINESS falling:
+    prepare mitigation (throttle, warn, log)
+</code></pre>
+<pre><code class="language-text">IF RTT_HEALTH stable BUT RTT_BALANCE drifting:
+    investigate load symmetry or margin erosion
+</code></pre>
+<h3 id="what-not-to-do"><strong>What NOT to Do</strong></h3>
+<ul>
+<li>Do not hard‑gate operation solely on RTT values</li>
+<li>Do not assume cross‑vendor numeric equivalence</li>
+</ul>
+<p>✨ <em>BEING answers: “What condition is the system in?”</em></p>
+<hr>
+<h2 id="2-knowing-using-the-event-log-safely"><strong>2️⃣ KNOWING — Using the Event Log Safely</strong> 🔗</h2>
+<h3 id="registers_1"><strong>Registers</strong></h3>
+<ul>
+<li><code>RTT_EVENT_PTR</code></li>
+<li><code>RTT_EVENT_LOG[]</code></li>
+</ul>
+<h3 id="interpretation-rules_1"><strong>Interpretation Rules</strong></h3>
+<ul>
+<li>Events are <strong>context</strong>, not faults</li>
+<li>Severity is <strong>relative to declared purpose</strong></li>
+<li>Event density matters more than event count</li>
+</ul>
+<h3 id="recommended-firmware-patterns_1"><strong>Recommended Firmware Patterns</strong></h3>
+<pre><code class="language-text">IF repeated low‑severity events cluster:
+    flag latent instability
+</code></pre>
+<pre><code class="language-text">IF high‑severity event follows long stress dwell:
+    annotate root‑cause chain
+</code></pre>
+<h3 id="best-practices"><strong>Best Practices</strong></h3>
+<ul>
+<li>Pull logs opportunistically (idle windows)</li>
+<li>Preserve logs across firmware updates</li>
+<li>Correlate with system‑level timestamps</li>
+</ul>
+<p>✨ <em>KNOWING answers: “How did we get here?”</em></p>
+<hr>
+<h2 id="3-meaning-respecting-declared-purpose"><strong>3️⃣ MEANING — Respecting Declared Purpose</strong> ❤️</h2>
+<h3 id="register"><strong>Register</strong></h3>
+<ul>
+<li><code>RTT_PURPOSE</code></li>
+</ul>
+<h3 id="firmware-responsibilities"><strong>Firmware Responsibilities</strong></h3>
+<ul>
+<li>Set purpose <strong>once per operating mode</strong></li>
+<li>Do not toggle rapidly</li>
+<li>Treat purpose as <strong>annotation</strong>, not command</li>
+</ul>
+<h3 id="example-usage"><strong>Example Usage</strong></h3>
+<pre><code class="language-text">PERFORMANCE → tolerate higher stress, shorter recovery
+EFFICIENCY  → favor balance and thermal stability
+LONGEVITY   → prioritize low drift and recovery margin
+SAFETY      → interpret stress conservatively
+</code></pre>
+<h3 id="what-not-to-do_1"><strong>What NOT to Do</strong></h3>
+<ul>
+<li>Do not change control laws based solely on purpose</li>
+<li>Do not assume purpose enforces behavior in silicon</li>
+</ul>
+<p>✨ <em>MEANING answers: “What are we optimizing for?”</em></p>
+<hr>
+<h2 id="4-time-reading-longhorizon-signals"><strong>4️⃣ TIME — Reading Long‑Horizon Signals</strong> ⏳</h2>
+<h3 id="registers_2"><strong>Registers</strong></h3>
+<ul>
+<li><code>RTT_TIME_HI</code></li>
+<li><code>RTT_RECOVERY</code></li>
+<li><code>RTT_DRIFT</code></li>
+<li><code>RTT_RESILIENCE</code></li>
+</ul>
+<h3 id="interpretation-rules_2"><strong>Interpretation Rules</strong></h3>
+<ul>
+<li>These are <strong>trajectory indicators</strong></li>
+<li>Use for maintenance, prediction, and trust scoring</li>
+<li>Reset only with intent (power‑cycle or service mode)</li>
+</ul>
+<h3 id="recommended-firmware-patterns_2"><strong>Recommended Firmware Patterns</strong></h3>
+<pre><code class="language-text">IF RTT_DRIFT increasing over weeks:
+    schedule inspection or derate policy
+</code></pre>
+<pre><code class="language-text">IF RTT_RECOVERY slowing:
+    reduce peak load or adjust duty cycle
+</code></pre>
+<p>✨ <em>TIME answers: “Is the system getting better or worse?”</em></p>
+<hr>
+<h2 id="5-crossdomain-integration-patterns"><strong>5️⃣ Cross‑Domain Integration Patterns</strong></h2>
+<h3 id="power-supplies_1"><strong>Power Supplies</strong></h3>
+<ul>
+<li>Use RTT_STRESS + RTT_RECOVERY to predict brownouts</li>
+<li>Log instability before protection trips</li>
+</ul>
+<h3 id="mobile-sensors_1"><strong>Mobile Sensors</strong></h3>
+<ul>
+<li>Weight sensor confidence using RTT_HEALTH</li>
+<li>Flag degraded sensing environments</li>
+</ul>
+<h3 id="bms-any-chemistry"><strong>BMS (Any Chemistry)</strong></h3>
+<ul>
+<li>Interpret aging via RTT_DRIFT, not SOC alone</li>
+<li>Detect abuse patterns independent of chemistry</li>
+</ul>
+<hr>
+<h2 id="6-safety-governance-guidelines"><strong>6️⃣ Safety &amp; Governance Guidelines</strong></h2>
+<h3 id="rttinside-must-never"><strong>RTT‑Inside Must NEVER</strong></h3>
+<ul>
+<li>Override protection logic</li>
+<li>Mask faults</li>
+<li>Replace certification‑required behavior</li>
+</ul>
+<h3 id="rttinside-should"><strong>RTT‑Inside SHOULD</strong></h3>
+<ul>
+<li>Improve diagnostics</li>
+<li>Enable graceful degradation</li>
+<li>Preserve learning across product generations</li>
+</ul>
+<hr>
+<h2 id="minimal-oem-integration-checklist"><strong>Minimal OEM Integration Checklist</strong></h2>
+<ul>
+<li>[ ] Read RTT registers at a fixed cadence</li>
+<li>[ ] Log RTT_EVENT_LOG during anomalies</li>
+<li>[ ] Set RTT_PURPOSE per operating mode</li>
+<li>[ ] Trend RTT_TIME signals over lifecycle</li>
+<li>[ ] Keep RTT interpretation separate from control loops</li>
+</ul>
+<hr>
+<h2 id="oneline-firmware-takeaway"><strong>One‑Line Firmware Takeaway</strong></h2>
+<blockquote>
+<p><strong>RTT‑Inside gives firmware context, memory, and intent—<br>
+not commands. Use it to see better, not to control harder.</strong></p>
+</blockquote>
+<hr>
+<p>If you want, I can next:
+- produce a <strong>sample firmware pseudocode module</strong>, or<br>
+- draft a <strong>certification‑safe compliance note</strong> explaining RTT‑Inside to regulators</p>
+<hr>
+<hr>
+<h3 id="sample-firmware-pseudocode-module-for-rtttsb-integration">Sample firmware pseudocode module for RTT‑TSB integration</h3>
+<pre><code class="language-c">// RTT-TSB Reference Module (pseudocode)
+// Goal: observe, interpret, and log RTT-Inside signals without affecting safety/control loops.
+
+// ----------------------------
+// Platform hooks you provide
+// ----------------------------
+// rtt_bus_read(addr, *buf, len)  -&gt; returns bool success
+// rtt_bus_write(addr, *buf, len) -&gt; returns bool success
+// now_ms()                       -&gt; monotonic ms
+// persist_store(key, data, len)  -&gt; optional (NVM)
+// persist_load(key, *data, len)  -&gt; optional (NVM)
+// system_log(level, msg, ...)    -&gt; host logging
+// request_soft_mitigation(hint)  -&gt; optional: ask higher-level policy to consider actions
+//                                  (never directly changes PMIC/BMS safety logic)
+
+
+// ----------------------------
+// RTT-TSB register addresses (from your map)
+// ----------------------------
+#define RTT_ID          0x00
+#define RTT_STATUS      0x01
+#define RTT_PURPOSE     0x02
+#define RTT_HEALTH      0x03
+#define RTT_STRESS      0x04
+#define RTT_READINESS   0x05
+#define RTT_BALANCE     0x06
+#define RTT_TEMP_GRAD   0x07
+#define RTT_V_MARGIN    0x08
+#define RTT_I_STRESS    0x09
+#define RTT_TIME_HI_L   0x0A  // 16-bit (0x0A..0x0B)
+#define RTT_RECOVERY    0x0C
+#define RTT_DRIFT       0x0D
+#define RTT_RESILIENCE  0x0E
+#define RTT_EVENT_PTR   0x0F
+#define RTT_EVENT_LOG   0x10  // 0x10..0x1F (16 entries x 8 bytes)
+
+// Event entry size and count
+#define RTT_EVENT_BYTES   8
+#define RTT_EVENT_COUNT  16
+
+// Purpose values
+typedef enum {
+  PURPOSE_UNDECLARED = 0x00,
+  PURPOSE_PERFORMANCE = 0x01,
+  PURPOSE_EFFICIENCY  = 0x02,
+  PURPOSE_LONGEVITY   = 0x03,
+  PURPOSE_SAFETY      = 0x04
+} rtt_purpose_t;
+
+
+// ----------------------------
+// Data model used by OEM firmware
+// ----------------------------
+typedef struct {
+  uint8_t health;
+  uint8_t stress;
+  uint8_t readiness;
+  uint8_t balance;
+
+  uint8_t temp_grad;
+  uint8_t v_margin;
+  uint8_t i_stress;
+
+  uint16_t time_hi;
+  uint8_t recovery;
+  uint8_t drift;
+  uint8_t resilience;
+
+  uint32_t sample_ms;
+} rtt_sample_t;
+
+typedef struct {
+  // Ring-read state
+  uint8_t last_event_ptr;
+
+  // Trend baselines (simple, robust)
+  uint8_t health_ema;
+  uint8_t stress_ema;
+  uint8_t readiness_ema;
+
+  // Escalation debounce / rate limit
+  uint32_t last_notice_ms;
+  uint32_t last_warn_ms;
+
+  // Purpose state
+  rtt_purpose_t purpose;
+
+  // Optional persistence flags
+  bool have_persist;
+} rtt_ctx_t;
+
+
+// ----------------------------
+// Utility: clamp and EMA
+// ----------------------------
+static uint8_t ema_u8(uint8_t prev, uint8_t x, uint8_t alpha_num, uint8_t alpha_den) {
+  // prev = prev*(1-a) + x*a ; a = alpha_num/alpha_den
+  // integer-safe
+  uint16_t p = (uint16_t)prev * (alpha_den - alpha_num);
+  uint16_t n = (uint16_t)x * alpha_num;
+  return (uint8_t)((p + n) / alpha_den);
+}
+
+static bool rtt_read_u8(uint8_t reg, uint8_t *out) {
+  return rtt_bus_read(reg, out, 1);
+}
+
+static bool rtt_read_u16_le(uint8_t reg_lsb, uint16_t *out) {
+  uint8_t b[2];
+  if (!rtt_bus_read(reg_lsb, b, 2)) return false;
+  *out = (uint16_t)b[0] | ((uint16_t)b[1] &lt;&lt; 8);
+  return true;
+}
+
+static bool rtt_write_u8(uint8_t reg, uint8_t val) {
+  return rtt_bus_write(reg, &amp;val, 1);
+}
+
+
+// ----------------------------
+// Init: detect block, restore state, set purpose
+// ----------------------------
+bool rtt_init(rtt_ctx_t *ctx, rtt_purpose_t purpose) {
+  memset(ctx, 0, sizeof(*ctx));
+  ctx-&gt;purpose = purpose;
+
+  uint8_t id = 0;
+  if (!rtt_read_u8(RTT_ID, &amp;id)) {
+    system_log(&quot;INFO&quot;, &quot;RTT-TSB not detected&quot;);
+    return false;
+  }
+
+  // Optional: restore last_event_ptr, EMAs from NVM
+  // (Keep it simple: persistence is nice, not required.)
+  ctx-&gt;have_persist = false;
+  // if (persist_load(&quot;rtt_ctx&quot;, ctx_blob, ...) success) ctx-&gt;have_persist = true;
+
+  // Declare operating intent (annotation only)
+  (void)rtt_write_u8(RTT_PURPOSE, (uint8_t)purpose);
+
+  // Initialize event pointer baseline
+  uint8_t ptr = 0;
+  if (rtt_read_u8(RTT_EVENT_PTR, &amp;ptr)) ctx-&gt;last_event_ptr = ptr;
+
+  ctx-&gt;last_notice_ms = 0;
+  ctx-&gt;last_warn_ms = 0;
+
+  system_log(&quot;INFO&quot;, &quot;RTT-TSB detected (id=0x%02X), purpose=%u&quot;, id, purpose);
+  return true;
+}
+
+
+// ----------------------------
+// Read one sample (single-bus pass if you batch reads on real platform)
+// ----------------------------
+bool rtt_read_sample(rtt_sample_t *s) {
+  memset(s, 0, sizeof(*s));
+  s-&gt;sample_ms = now_ms();
+
+  if (!rtt_read_u8(RTT_HEALTH, &amp;s-&gt;health)) return false;
+  if (!rtt_read_u8(RTT_STRESS, &amp;s-&gt;stress)) return false;
+  if (!rtt_read_u8(RTT_READINESS, &amp;s-&gt;readiness)) return false;
+  if (!rtt_read_u8(RTT_BALANCE, &amp;s-&gt;balance)) return false;
+
+  (void)rtt_read_u8(RTT_TEMP_GRAD, &amp;s-&gt;temp_grad);
+  (void)rtt_read_u8(RTT_V_MARGIN, &amp;s-&gt;v_margin);
+  (void)rtt_read_u8(RTT_I_STRESS, &amp;s-&gt;i_stress);
+
+  (void)rtt_read_u16_le(RTT_TIME_HI_L, &amp;s-&gt;time_hi);
+  (void)rtt_read_u8(RTT_RECOVERY, &amp;s-&gt;recovery);
+  (void)rtt_read_u8(RTT_DRIFT, &amp;s-&gt;drift);
+  (void)rtt_read_u8(RTT_RESILIENCE, &amp;s-&gt;resilience);
+
+  return true;
+}
+
+
+// ----------------------------
+// Event log pull: read only new entries since last pointer
+// Pointer semantics assumed: increments mod (RTT_EVENT_COUNT)
+// If silicon uses different semantics, adapt here.
+// ----------------------------
+typedef struct {
+  uint8_t type;
+  uint8_t severity;
+  uint16_t t_rel;       // relative timestamp
+  uint8_t ctx_flags;
+  uint32_t reserved;    // compact placeholder
+} rtt_event_t;
+
+static bool rtt_read_event_entry(uint8_t index, rtt_event_t *e) {
+  uint8_t addr = (uint8_t)(RTT_EVENT_LOG + (index * RTT_EVENT_BYTES));
+  uint8_t b[RTT_EVENT_BYTES];
+  if (!rtt_bus_read(addr, b, RTT_EVENT_BYTES)) return false;
+
+  e-&gt;type = b[0];
+  e-&gt;severity = b[1];
+  e-&gt;t_rel = (uint16_t)b[2] | ((uint16_t)b[3] &lt;&lt; 8);
+  e-&gt;ctx_flags = b[4];
+  e-&gt;reserved = (uint32_t)b[5] | ((uint32_t)b[6] &lt;&lt; 8) | ((uint32_t)b[7] &lt;&lt; 16);
+  return true;
+}
+
+void rtt_pull_new_events(rtt_ctx_t *ctx) {
+  uint8_t ptr = 0;
+  if (!rtt_read_u8(RTT_EVENT_PTR, &amp;ptr)) return;
+
+  // No new events
+  if (ptr == ctx-&gt;last_event_ptr) return;
+
+  uint8_t i = ctx-&gt;last_event_ptr;
+  while (i != ptr) {
+    rtt_event_t e;
+    if (rtt_read_event_entry(i, &amp;e)) {
+      system_log(&quot;INFO&quot;, &quot;RTT_EVENT type=%u sev=%u trel=%u flags=0x%02X&quot;,
+                 e.type, e.severity, e.t_rel, e.ctx_flags);
+
+      // Optional: persist event in host log store
+      // persist_store(&quot;rtt_evt&quot;, ...)
+
+      // Soft escalation hook (policy layer decides what to do)
+      // Keep this non-invasive: just request attention.
+      if (e.severity &gt;= 0xC0) {
+        request_soft_mitigation(&quot;RTT_EVENT_HIGH_SEVERITY&quot;);
+      }
+    }
+    i = (uint8_t)((i + 1) % RTT_EVENT_COUNT);
+  }
+
+  ctx-&gt;last_event_ptr = ptr;
+  // Optional persistence of pointer
+  // persist_store(&quot;rtt_ptr&quot;, &amp;ctx-&gt;last_event_ptr, 1);
+}
+
+
+// ----------------------------
+// Interpretation: convert samples into stable insights
+// - trend detection (EMA)
+// - thresholding (purpose-aware)
+// - rate limiting messages to avoid spam
+// ----------------------------
+static void rtt_update_trends(rtt_ctx_t *ctx, const rtt_sample_t *s) {
+  // A gentle EMA: a = 1/8
+  ctx-&gt;health_ema = ema_u8(ctx-&gt;health_ema, s-&gt;health, 1, 8);
+  ctx-&gt;stress_ema = ema_u8(ctx-&gt;stress_ema, s-&gt;stress, 1, 8);
+  ctx-&gt;readiness_ema = ema_u8(ctx-&gt;readiness_ema, s-&gt;readiness, 1, 8);
+}
+
+static uint8_t stress_warn_threshold(rtt_purpose_t p) {
+  // Purpose adjusts interpretation, not silicon behavior.
+  switch (p) {
+    case PURPOSE_PERFORMANCE: return 0xD0; // tolerate higher stress
+    case PURPOSE_EFFICIENCY:  return 0xB0;
+    case PURPOSE_LONGEVITY:   return 0xA0;
+    case PURPOSE_SAFETY:      return 0x90; // conservative
+    default:                  return 0xB0;
+  }
+}
+
+static uint8_t readiness_min_threshold(rtt_purpose_t p) {
+  switch (p) {
+    case PURPOSE_PERFORMANCE: return 0x50;
+    case PURPOSE_EFFICIENCY:  return 0x60;
+    case PURPOSE_LONGEVITY:   return 0x70;
+    case PURPOSE_SAFETY:      return 0x80;
+    default:                  return 0x60;
+  }
+}
+
+void rtt_interpret_and_report(rtt_ctx_t *ctx, const rtt_sample_t *s) {
+  rtt_update_trends(ctx, s);
+
+  uint32_t t = s-&gt;sample_ms;
+
+  // Notice: early drift / aging signals (low frequency)
+  if (s-&gt;drift &gt;= 0xB0 &amp;&amp; (t - ctx-&gt;last_notice_ms) &gt; 6UL * 60 * 60 * 1000) {
+    system_log(&quot;NOTICE&quot;, &quot;RTT drift elevated (0x%02X), consider service/derate planning&quot;, s-&gt;drift);
+    ctx-&gt;last_notice_ms = t;
+  }
+
+  // Warning: stress rising + readiness falling (core RTT-Inside pattern)
+  uint8_t s_warn = stress_warn_threshold(ctx-&gt;purpose);
+  uint8_t r_min  = readiness_min_threshold(ctx-&gt;purpose);
+
+  bool high_stress = (s-&gt;stress &gt;= s_warn) || (ctx-&gt;stress_ema &gt;= s_warn);
+  bool low_ready   = (s-&gt;readiness &lt;= r_min) || (ctx-&gt;readiness_ema &lt;= r_min);
+
+  if (high_stress &amp;&amp; low_ready &amp;&amp; (t - ctx-&gt;last_warn_ms) &gt; 60 * 1000) {
+    system_log(&quot;WARN&quot;, &quot;RTT condition risk: stress high (0x%02X), readiness low (0x%02X)&quot;,
+               s-&gt;stress, s-&gt;readiness);
+
+    // Soft mitigation request: policy layer may throttle, reduce duty cycle,
+    // reduce sensor rate, adjust charging profile, or notify user.
+    request_soft_mitigation(&quot;RTT_STRESS_HIGH_READINESS_LOW&quot;);
+    ctx-&gt;last_warn_ms = t;
+  }
+
+  // Optional: if balance is drifting, recommend investigation
+  if (s-&gt;balance &lt;= 0x40 &amp;&amp; (t - ctx-&gt;last_warn_ms) &gt; 2 * 60 * 1000) {
+    system_log(&quot;INFO&quot;, &quot;RTT balance low (0x%02X); check margin symmetry / load transients&quot;, s-&gt;balance);
+  }
+}
+
+
+// ----------------------------
+// Main periodic task (call from scheduler)
+// ----------------------------
+void rtt_task_1s(rtt_ctx_t *ctx) {
+  rtt_sample_t s;
+  if (!rtt_read_sample(&amp;s)) return;
+
+  // 1) Pull events first (causal context)
+  rtt_pull_new_events(ctx);
+
+  // 2) Interpret state safely
+  rtt_interpret_and_report(ctx, &amp;s);
+
+  // 3) Optional: store downsampled trend points (e.g., every 60s)
+  // persist_store(&quot;rtt_trend&quot;, ...)
+}
+
+
+// ----------------------------
+// Mode transitions: declare purpose when product intent changes
+// ----------------------------
+void rtt_set_purpose(rtt_ctx_t *ctx, rtt_purpose_t purpose) {
+  if (ctx-&gt;purpose == purpose) return;
+  ctx-&gt;purpose = purpose;
+  (void)rtt_write_u8(RTT_PURPOSE, (uint8_t)purpose);
+  system_log(&quot;INFO&quot;, &quot;RTT purpose set to %u&quot;, purpose);
+}
+</code></pre>
+<h4 id="notes-oem-firmware-teams-usually-appreciate">Notes OEM firmware teams usually appreciate</h4>
+<ul>
+<li><strong>Batch reads in production:</strong> replace per‑register reads with a single burst read where possible (lower bus overhead, consistent snapshot).</li>
+<li><strong>Keep RTT separate from safety loops:</strong> <code>request_soft_mitigation()</code> should feed a policy layer, never directly manipulate protection thresholds.</li>
+<li><strong>Persist only what matters:</strong> last event pointer + downsampled drift/resilience trends often deliver most lifecycle value with minimal NVM wear.</li>
+</ul>
+<p>If you tell me your expected MCU class (tiny RTOS, Linux, bare metal) and bus (I²C vs SPI vs memory‑mapped), I’ll tailor this into a drop‑in style module (interrupt-driven vs polling, burst reads, and an event watermark IRQ path).</p>
+  </main>
+</body>
+</html>

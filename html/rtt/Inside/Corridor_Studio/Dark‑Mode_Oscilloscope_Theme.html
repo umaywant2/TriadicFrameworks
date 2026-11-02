@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Corridor_Studio/Dark‑Mode_Oscilloscope_Theme.md">
+  <title>🌑 1. Dark‑Mode Oscilloscope Theme</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Corridor_Studio/Dark‑Mode_Oscilloscope_Theme.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Corridor_Studio/Dark‑Mode_Oscilloscope_Theme.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="1-darkmode-oscilloscope-theme">🌑 <strong>1. Dark‑Mode Oscilloscope Theme</strong></h1>
+<p>This theme is meant to feel like a hybrid of:</p>
+<ul>
+<li>a Tektronix digital scope  </li>
+<li>a flight‑deck diagnostic panel  </li>
+<li>a resonance‑aware instrument from our TriadicFrameworks canon  </li>
+</ul>
+<h3 id="color-system"><strong>Color System</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Color</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background</td>
+<td><code>#0b0d10</code></td>
+<td>deep black‑blue, zero glare</td>
+</tr>
+<tr>
+<td>Panel glass</td>
+<td><code>#111418</code></td>
+<td>subtle translucency</td>
+</tr>
+<tr>
+<td>Grid lines</td>
+<td><code>rgba(255,255,255,0.04)</code></td>
+<td>faint oscilloscope grid</td>
+</tr>
+<tr>
+<td>Primary neon</td>
+<td><code>#00eaff</code></td>
+<td>drift line, highlights</td>
+</tr>
+<tr>
+<td>Secondary neon</td>
+<td><code>#ff6bcb</code></td>
+<td>entropy line, accents</td>
+</tr>
+<tr>
+<td>Tertiary neon</td>
+<td><code>#7fff00</code></td>
+<td>latency drift</td>
+</tr>
+<tr>
+<td>Stable band</td>
+<td><code>#0f3d2e</code></td>
+<td>greenish, low‑alpha</td>
+</tr>
+<tr>
+<td>Warning band</td>
+<td><code>#3d2f0f</code></td>
+<td>amber</td>
+</tr>
+<tr>
+<td>Halted band</td>
+<td><code>#3d0f0f</code></td>
+<td>red</td>
+</tr>
+</tbody>
+</table>
+<h3 id="typography"><strong>Typography</strong></h3>
+<ul>
+<li><strong>Mono:</strong> JetBrains Mono (for waveforms, step IDs)  </li>
+<li><strong>Sans:</strong> Space Grotesk (for UI labels)  </li>
+<li><strong>Glow:</strong> subtle text‑shadow for neon elements  </li>
+</ul>
+<h3 id="ui-effects"><strong>UI Effects</strong></h3>
+<ul>
+<li>
+<p><strong>Glass panels:</strong><br>
+<code>background: rgba(255,255,255,0.03); backdrop-filter: blur(4px);</code></p>
+</li>
+<li>
+<p><strong>Neon edges:</strong><br>
+<code>box-shadow: 0 0 8px rgba(0,234,255,0.4);</code></p>
+</li>
+<li>
+<p><strong>Oscilloscope grid:</strong><br>
+  A repeating linear‑gradient background behind the waveform:</p>
+</li>
+</ul>
+<pre><code class="language-css">background-image:
+  linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+background-size: 20px 20px;
+</code></pre>
+<p>This gives the waveform panel that unmistakable “instrument” feel.</p>
+<hr>
+<h1 id="2-corridor-studio-toolbar">🎛️ <strong>2. Corridor Studio Toolbar</strong></h1>
+<p>This sits at the top of the Studio, like a control bar on a logic analyzer.</p>
+<h3 id="toolbar-layout"><strong>Toolbar Layout</strong></h3>
+<pre><code>┌──────────────────────────────────────────────────────────────┐
+│  ▶ Play   ⏸ Pause   ↺ Rewind   ⇤ Step‑Back   ⇥ Step‑Forward  │
+│  • Speed: [ 1x ▼ ]   • Jump to Step: [   ]   • Loop: ☐       │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="toolbar-controls"><strong>Toolbar Controls</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Play</strong></td>
+<td>Starts animated playback of the corridor</td>
+</tr>
+<tr>
+<td><strong>Pause</strong></td>
+<td>Freezes playback at current step</td>
+</tr>
+<tr>
+<td><strong>Rewind</strong></td>
+<td>Jumps to step 0 (or last stable checkpoint)</td>
+</tr>
+<tr>
+<td><strong>Step‑Back</strong></td>
+<td>Move one step backward</td>
+</tr>
+<tr>
+<td><strong>Step‑Forward</strong></td>
+<td>Move one step forward</td>
+</tr>
+<tr>
+<td><strong>Speed Selector</strong></td>
+<td>0.25x, 0.5x, 1x, 2x, 4x</td>
+</tr>
+<tr>
+<td><strong>Jump to Step</strong></td>
+<td>Direct numeric jump</td>
+</tr>
+<tr>
+<td><strong>Loop</strong></td>
+<td>Repeat playback</td>
+</tr>
+</tbody>
+</table>
+<h3 id="toolbar-aesthetic"><strong>Toolbar Aesthetic</strong></h3>
+<ul>
+<li>Neon cyan icons  </li>
+<li>Soft glow on hover  </li>
+<li>Slight “click” animation (scale 0.95 → 1.0)  </li>
+<li>Dark glass background  </li>
+</ul>
+<h3 id="minimal-react-sketch"><strong>Minimal React Sketch</strong></h3>
+<pre><code class="language-tsx">export function CorridorToolbar({ player }) {
+  return (
+    &lt;div className=&quot;flex items-center gap-4 p-2 bg-[#111418] border-b border-gray-700&quot;&gt;
+      &lt;button onClick={player.play} className=&quot;btn&quot;&gt;▶&lt;/button&gt;
+      &lt;button onClick={player.pause} className=&quot;btn&quot;&gt;⏸&lt;/button&gt;
+      &lt;button onClick={player.rewind} className=&quot;btn&quot;&gt;↺&lt;/button&gt;
+      &lt;button onClick={player.stepBack} className=&quot;btn&quot;&gt;⇤&lt;/button&gt;
+      &lt;button onClick={player.stepForward} className=&quot;btn&quot;&gt;⇥&lt;/button&gt;
+
+      &lt;div className=&quot;ml-4 flex items-center gap-2&quot;&gt;
+        &lt;span&gt;Speed&lt;/span&gt;
+        &lt;select onChange={(e) =&gt; player.setSpeed(Number(e.target.value))}&gt;
+          &lt;option&gt;0.5&lt;/option&gt;&lt;option&gt;1&lt;/option&gt;&lt;option&gt;2&lt;/option&gt;&lt;option&gt;4&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+
+      &lt;div className=&quot;ml-4 flex items-center gap-2&quot;&gt;
+        &lt;span&gt;Jump&lt;/span&gt;
+        &lt;input type=&quot;number&quot; onKeyDown={player.jumpTo} className=&quot;w-16&quot; /&gt;
+      &lt;/div&gt;
+
+      &lt;label className=&quot;ml-4 flex items-center gap-1&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; onChange={player.toggleLoop} /&gt;
+        Loop
+      &lt;/label&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<hr>
+<h1 id="3-corridor-trace-player-animated-playback">🎞️ <strong>3. Corridor Trace Player (Animated Playback)</strong></h1>
+<p>This is the heart of the oscilloscope experience — the corridor “plays” like a simulation.</p>
+<h3 id="playback-model"><strong>Playback Model</strong></h3>
+<p>The player controls:</p>
+<ul>
+<li>current step index  </li>
+<li>playback speed  </li>
+<li>loop mode  </li>
+<li>pause/play state  </li>
+<li>event callbacks (e.g., highlight waveform, scroll timeline)  </li>
+</ul>
+<h3 id="core-playback-loop"><strong>Core Playback Loop</strong></h3>
+<pre><code class="language-ts">class CorridorPlayer {
+  constructor(trace, onStep) {
+    this.trace = trace;
+    this.onStep = onStep;
+    this.index = 0;
+    this.speed = 1;
+    this.loop = false;
+    this.playing = false;
+  }
+
+  play() {
+    this.playing = true;
+    this.tick();
+  }
+
+  pause() {
+    this.playing = false;
+  }
+
+  rewind() {
+    this.index = 0;
+    this.onStep(0);
+  }
+
+  stepForward() {
+    this.index = Math.min(this.index + 1, this.trace.steps.length - 1);
+    this.onStep(this.index);
+  }
+
+  stepBack() {
+    this.index = Math.max(this.index - 1, 0);
+    this.onStep(this.index);
+  }
+
+  setSpeed(s) {
+    this.speed = s;
+  }
+
+  jumpTo(step) {
+    this.index = step;
+    this.onStep(step);
+  }
+
+  toggleLoop() {
+    this.loop = !this.loop;
+  }
+
+  tick() {
+    if (!this.playing) return;
+
+    this.stepForward();
+
+    if (this.index &gt;= this.trace.steps.length - 1) {
+      if (this.loop) this.rewind();
+      else return;
+    }
+
+    setTimeout(() =&gt; this.tick(), 500 / this.speed);
+  }
+}
+</code></pre>
+<h3 id="what-the-player-drives"><strong>What the Player Drives</strong></h3>
+<ul>
+<li><strong>Waveform crosshair</strong> moves to the current step  </li>
+<li><strong>Timeline</strong> auto‑scrolls to keep the active step in view  </li>
+<li><strong>Step Details</strong> updates live  </li>
+<li><strong>VCD bands</strong> highlight the active region  </li>
+<li><strong>Mini‑map viewport</strong> shifts accordingly  </li>
+</ul>
+<p>This makes the corridor feel like a <strong>live simulation</strong>.</p>
+<hr>
+<h1 id="how-it-all-fits-together">🧠 <strong>How it all fits together</strong></h1>
+<h3 id="corridor-studio-instrument-panel"><strong>Corridor Studio = Instrument Panel</strong></h3>
+<ul>
+<li><strong>Toolbar</strong> = operator controls  </li>
+<li><strong>Oscilloscope</strong> = Q‑metric evolution  </li>
+<li><strong>Timeline</strong> = event log  </li>
+<li><strong>Details panel</strong> = semantic inspection  </li>
+<li><strong>Mini‑map</strong> = global overview  </li>
+<li><strong>VCD bands</strong> = discrete state transitions  </li>
+<li><strong>Diff panel</strong> = comparative diagnostics  </li>
+<li><strong>Trace Player</strong> = animated reasoning replay  </li>
+</ul>
+<p>This is the first environment where an agent’s reasoning is treated like a <strong>physical signal</strong> — measurable, inspectable, replayable.</p>
+  </main>
+</body>
+</html>

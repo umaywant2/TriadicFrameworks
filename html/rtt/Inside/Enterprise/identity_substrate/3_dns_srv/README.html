@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Enterprise/identity_substrate/3_dns_srv/README.md">
+  <title>DNS SRV Identity Substrate (Layer 3)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Enterprise/identity_substrate/3_dns_srv/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Enterprise/identity_substrate/3_dns_srv/README.md</code>
+    &middot;
+    <a href="../../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="dns-srv-identity-substrate-layer-3"><strong>DNS SRV Identity Substrate (Layer 3)</strong></h1>
+<h3 id="triadic-substrate-semantics-applied-to-servicelocation-identity"><em>Triadic substrate semantics applied to service‑location identity</em></h3>
+<hr>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>The <strong>DNS SRV Identity Substrate</strong> represents <strong>Layer 3</strong> of the RTT/Inside Enterprise Identity model.<br>
+It is the first <em>network‑visible</em> identity substrate — the layer where identity becomes:</p>
+<ul>
+<li>discoverable  </li>
+<li>routable  </li>
+<li>service‑centric  </li>
+<li>protocol‑neutral  </li>
+<li>location‑aware  </li>
+<li>substrate‑extendable  </li>
+</ul>
+<p>DNS SRV records define <em>where</em> services live and <em>how</em> clients should find them.<br>
+This makes SRV the perfect layer to demonstrate <strong>triadic service roles</strong>, <strong>clarity priority</strong>, <strong>regime‑aware routing</strong>, and <strong>coherence envelopes</strong> at the network boundary.</p>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>Layer 3 exists to:</p>
+<ul>
+<li>Show how RTT/Inside substrate metadata attaches to DNS SRV records  </li>
+<li>Demonstrate clarity, regime, triad roles, and coherence envelopes in service discovery  </li>
+<li>Provide a working example of substrate‑aware routing hints  </li>
+<li>Serve as the bridge between LDAP/AD identity (Layers 1–2) and Kerberos/service discovery (Layers 4–5)  </li>
+<li>Offer a minimal, operator‑safe demonstration of substrate‑aware SRV tags  </li>
+</ul>
+<p>DNS SRV is the <strong>identity discovery substrate</strong> — the layer where identity becomes reachable.</p>
+<hr>
+<h2 id="identity-characteristics"><strong>Identity Characteristics</strong></h2>
+<p>DNS SRV provides:</p>
+<h3 id="1-servicelocation-identity"><strong>1. Service‑Location Identity</strong></h3>
+<p>SRV records define:</p>
+<ul>
+<li>service name  </li>
+<li>protocol  </li>
+<li>priority  </li>
+<li>weight  </li>
+<li>target host  </li>
+<li>port  </li>
+</ul>
+<p>This makes SRV ideal for substrate metadata.</p>
+<h3 id="2-crossprotocol-neutrality"><strong>2. Cross‑Protocol Neutrality</strong></h3>
+<p>SRV is used by:</p>
+<ul>
+<li>LDAP  </li>
+<li>Kerberos  </li>
+<li>SIP  </li>
+<li>XMPP  </li>
+<li>AD domain controllers  </li>
+<li>service discovery frameworks  </li>
+<li>cloud identity systems  </li>
+</ul>
+<p>This neutrality makes Layer 3 universally applicable.</p>
+<h3 id="3-metadatafriendly-structure"><strong>3. Metadata‑Friendly Structure</strong></h3>
+<p>SRV records can be extended using:</p>
+<ul>
+<li>TXT records  </li>
+<li>EDNS metadata  </li>
+<li>service‑specific discovery tags  </li>
+<li>substrate‑aware naming conventions  </li>
+</ul>
+<p>These allow triadic metadata without altering DNS behavior.</p>
+<hr>
+<h2 id="substrateaware-srv-metadata"><strong>Substrate‑Aware SRV Metadata</strong></h2>
+<p>A minimal substrate extension for SRV might define:</p>
+<h3 id="option-a-txt-companion-record"><strong>Option A — TXT Companion Record</strong></h3>
+<pre><code>_ldap._tcp.enterprise.local.  IN TXT &quot;triadicClarity=0.77&quot;
+_ldap._tcp.enterprise.local.  IN TXT &quot;triadicRegime=analytic&quot;
+_ldap._tcp.enterprise.local.  IN TXT &quot;triadicRole=A&quot;
+_ldap._tcp.enterprise.local.  IN TXT &quot;triadicCoherence=domain&quot;
+</code></pre>
+<h3 id="option-b-edns-metadata-futurefriendly"><strong>Option B — EDNS Metadata (future‑friendly)</strong></h3>
+<pre><code>EDNS0 option: TRIADIC-SUBSTRATE
+{
+  clarity: 0.77,
+  regime: &quot;analytic&quot;,
+  role: &quot;A&quot;,
+  coherence: &quot;domain&quot;
+}
+</code></pre>
+<h3 id="option-c-substrateaware-naming"><strong>Option C — Substrate‑Aware Naming</strong></h3>
+<pre><code>_kerberos._tcp.A.enterprise.local
+_kerberos._tcp.B.enterprise.local
+_kerberos._tcp.C.enterprise.local
+</code></pre>
+<p>These are optional and non‑breaking.</p>
+<hr>
+<h2 id="example-substrateaware-srv-record"><strong>Example: Substrate‑Aware SRV Record</strong></h2>
+<pre><code>_kerberos._tcp.enterprise.local.  IN SRV 0 100 88 dc1.enterprise.local.
+_kerberos._tcp.enterprise.local.  IN TXT &quot;triadicClarity=0.92&quot;
+_kerberos._tcp.enterprise.local.  IN TXT &quot;triadicRegime=control&quot;
+_kerberos._tcp.enterprise.local.  IN TXT &quot;triadicRole=B&quot;
+_kerberos._tcp.enterprise.local.  IN TXT &quot;triadicCoherence=forest&quot;
+</code></pre>
+<p>This example shows how substrate metadata attaches to SRV records without altering DNS resolution.</p>
+<hr>
+<h2 id="how-layer-3-connects-to-higher-layers"><strong>How Layer 3 Connects to Higher Layers</strong></h2>
+<p>DNS SRV feeds directly into:</p>
+<ul>
+<li><strong>Kerberos (Layer 4)</strong> — SRV locates KDCs  </li>
+<li><strong>Service Discovery (Layer 5)</strong> — SRV is the backbone of service location  </li>
+<li><strong>Modern Identity (Layer 6)</strong> — SRV supports identity‑aware services  </li>
+<li><strong>Cloud Directory (Layer 7)</strong> — SRV bridges hybrid identity  </li>
+<li><strong>Zero‑Trust (Layer 8)</strong> — SRV metadata becomes policy hints  </li>
+</ul>
+<p>DNS SRV is the <strong>identity routing substrate</strong>.</p>
+<hr>
+<h2 id="teaching-notes"><strong>Teaching Notes</strong></h2>
+<p>Students and AIs should study Layer 3 because:</p>
+<ul>
+<li>SRV is the first network‑visible identity substrate  </li>
+<li>It demonstrates substrate semantics in service discovery  </li>
+<li>It shows how clarity and regime tagging map to routing decisions  </li>
+<li>It prepares learners for Kerberos, service discovery, and cloud identity  </li>
+<li>It provides a realistic example for the RFC substrate‑awareness model  </li>
+</ul>
+<p>Layer 3 is where identity becomes <strong>discoverable</strong>, <strong>routable</strong>, and <strong>triadic‑aware</strong>.</p>
+<hr>
+<h2 id="status"><strong>Status</strong></h2>
+<p><strong>Experimental</strong> — stable enough for teaching and RFC anchoring, evolving as substrate semantics expand.</p>
+  </main>
+</body>
+</html>

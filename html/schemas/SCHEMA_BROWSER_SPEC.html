@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/SCHEMA_BROWSER_SPEC.md">
+  <title>Schema Full UI design spec</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/SCHEMA_BROWSER_SPEC.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/SCHEMA_BROWSER_SPEC.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_SCHEMA_BROWSER_SPEC_" src="https://github.com/user-attachments/assets/442d28da-2e35-4e83-9db2-ab1e83a974f8" /></p>
+<h1 id="schema-full-ui-design-spec">Schema Full UI design spec</h1>
+<h1 id="1-product-overview">1. product overview</h1>
+<p><strong>name:</strong> triadicframeworks schema browser<br>
+<strong>purpose:</strong> interactive explorer for the schema universe—helping creators, devs, and researchers:</p>
+<ul>
+<li>discover schemas by domain</li>
+<li>understand structure, fields, and dependencies</li>
+<li>navigate cross‑domain relationships</li>
+<li>launch validation and tooling flows</li>
+</ul>
+<p><strong>primary data source:</strong> <code>docs/schemas/schema-manifest.json</code> + schema files on disk/GitHub.</p>
+<hr>
+<h1 id="2-target-users-core-use-cases">2. target users &amp; core use cases</h1>
+<h3 id="21-personas">2.1 personas</h3>
+<ul>
+<li><strong>creator / canon steward</strong></li>
+<li>wants to see how new ideas fit into existing domains</li>
+<li>
+<p>checks lineage, domains, and structural gaps</p>
+</li>
+<li>
+<p><strong>developer / integrator</strong></p>
+</li>
+<li>needs to find the right schema quickly</li>
+<li>wants field definitions, dependencies, and file paths</li>
+<li>
+<p>may copy paths into code or tooling</p>
+</li>
+<li>
+<p><strong>researcher / operator</strong></p>
+</li>
+<li>wants to understand what’s modeled (e.g., quantum, ATC, lab)</li>
+<li>uses browser as documentation for RTT‑Inside systems</li>
+</ul>
+<h3 id="22-core-use-cases">2.2 core use cases</h3>
+<ol>
+<li>
+<p><strong>browse by domain</strong>
+   - expand “quantum”, see all quantum schemas, click one, inspect details.</p>
+</li>
+<li>
+<p><strong>inspect a schema</strong>
+   - see description, fields, dependencies, used‑by, and file path.</p>
+</li>
+<li>
+<p><strong>follow dependencies</strong>
+   - from <code>coeus_contract</code> → jump to <code>state_model</code>, <code>operator</code>, <code>resonance_constraints</code>.</p>
+</li>
+<li>
+<p><strong>search</strong>
+   - type “drift” → see <code>ai_drift_vector</code>, <code>PlayerDriftProfile</code>, etc.</p>
+</li>
+<li>
+<p><strong>launch tools</strong>
+   - click “Validate Universe” → run CLI or show status.
+   - click “View JSON” → open raw schema.</p>
+</li>
+</ol>
+<hr>
+<h1 id="3-information-architecture">3. information architecture</h1>
+<h3 id="31-toplevel-structure">3.1 top‑level structure</h3>
+<ul>
+<li><strong>global header</strong></li>
+<li>
+<p>app title, universe name, manifest version, quick actions.</p>
+</li>
+<li>
+<p><strong>left sidebar</strong></p>
+</li>
+<li>domain tree (from <code>domains</code> in manifest).</li>
+<li>
+<p>search box (filters schemas by name).</p>
+</li>
+<li>
+<p><strong>main content</strong></p>
+</li>
+<li>schema detail view (when a schema is selected).</li>
+<li>empty state / welcome panel (when nothing selected).</li>
+</ul>
+<h3 id="32-navigation-model">3.2 navigation model</h3>
+<ul>
+<li><strong>primary navigation:</strong> domain → schema</li>
+<li><strong>secondary navigation:</strong> dependency links inside schema detail</li>
+<li><strong>search navigation:</strong> search → filtered list → schema</li>
+</ul>
+<hr>
+<h1 id="4-layout-spec">4. layout spec</h1>
+<h3 id="41-global-layout">4.1 global layout</h3>
+<ul>
+<li><strong>header (top, full width)</strong></li>
+<li>left: <code>TriadicFrameworks Schema Browser</code></li>
+<li>center: <code>Universe: Resonance‑Time</code></li>
+<li>
+<p>right: <code>Manifest v1.0.0</code> + buttons:</p>
+<ul>
+<li><code>Validate Universe</code></li>
+<li><code>View Manifest</code></li>
+<li><code>Generate Graph</code></li>
+</ul>
+</li>
+<li>
+<p><strong>body: two‑column</strong></p>
+</li>
+<li>left: fixed‑width sidebar (280–320px)</li>
+<li>right: flexible main panel</li>
+</ul>
+<h3 id="42-sidebar">4.2 sidebar</h3>
+<p><strong>elements:</strong></p>
+<ul>
+<li><strong>search input</strong></li>
+<li>placeholder: <code>search schemas…</code></li>
+<li>
+<p>filters schema list in real time.</p>
+</li>
+<li>
+<p><strong>domain list</strong></p>
+</li>
+<li>each domain:<ul>
+<li>icon (simple glyph per domain)</li>
+<li>label (e.g., <code>quantum</code>, <code>finance</code>, <code>rtt-atc</code>)</li>
+<li>expand/collapse arrow</li>
+</ul>
+</li>
+<li>expanded domain shows schemas as a flat list:<ul>
+<li><code>quantum_state</code></li>
+<li><code>quantum_substrate</code></li>
+<li><code>quantum_energy_bank</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>behaviors:</strong></p>
+<ul>
+<li>clicking a schema:</li>
+<li>highlights it in sidebar</li>
+<li>loads its details in main panel.</li>
+</ul>
+<hr>
+<h1 id="5-schema-detail-view">5. schema detail view</h1>
+<h3 id="51-header-section">5.1 header section</h3>
+<ul>
+<li><strong>schema title:</strong> humanized from filename (e.g., <code>Quantum State</code>)</li>
+<li><strong>domain:</strong> badge (e.g., <code>quantum</code>)</li>
+<li><strong>file path:</strong> <code>docs/schemas/quantum/quantum_state.schema.json</code></li>
+<li><strong>actions:</strong></li>
+<li><code>View JSON</code> (opens raw file in new tab or modal)</li>
+<li><code>Copy Path</code> (copies repo path)</li>
+<li><code>Open in GitHub</code> (link to GitHub URL)</li>
+</ul>
+<h3 id="52-description-block">5.2 description block</h3>
+<ul>
+<li><strong>description:</strong> from manifest domain description + optional per‑schema metadata (future).</li>
+<li><strong>status (optional future):</strong> <code>stable</code>, <code>experimental</code>, <code>draft</code>.</li>
+</ul>
+<h3 id="53-fields-panel">5.3 fields panel</h3>
+<ul>
+<li>table layout:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>field name</th>
+<th>type</th>
+<th>description (optional)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>state_id</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>basis</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>amplitudes</td>
+<td>object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>types inferred from schema <code>properties</code>.</li>
+</ul>
+<h3 id="54-dependencies-panel">5.4 dependencies panel</h3>
+<ul>
+<li><strong>“Depends on” list</strong></li>
+<li>e.g., <code>dimensional_layer</code>, <code>resonance_profile</code></li>
+<li>
+<p>each item is a clickable chip → navigates to that schema.</p>
+</li>
+<li>
+<p><strong>“Used by” list</strong></p>
+</li>
+<li>reverse dependencies (computed from manifest or precomputed index).</li>
+<li>each item clickable.</li>
+</ul>
+<h3 id="55-triadic-context-optional-but-onbrand">5.5 triadic context (optional but on‑brand)</h3>
+<ul>
+<li>small panel showing if schema includes triadic fields:</li>
+<li><code>spin</code>, <code>charge</code>, <code>temperature</code> presence.</li>
+<li>simple indicator:</li>
+<li><code>Triadic Alignment: Full / Partial / None</code></li>
+</ul>
+<hr>
+<h1 id="6-interactions-flows">6. interactions &amp; flows</h1>
+<h3 id="61-search-flow">6.1 search flow</h3>
+<ol>
+<li>user types <code>drift</code> in search.</li>
+<li>sidebar filters to:
+   - <code>ai_drift_vector</code>
+   - <code>PlayerDriftProfile</code>
+   - <code>GDDriftVector</code></li>
+<li>user clicks <code>ai_drift_vector</code> → detail view updates.</li>
+</ol>
+<h3 id="62-dependency-navigation">6.2 dependency navigation</h3>
+<ol>
+<li>user views <code>coeus_contract</code>.</li>
+<li>in “Depends on”:
+   - sees <code>state_model</code>, <code>operator</code>, <code>resonance_constraints</code>.</li>
+<li>clicks <code>state_model</code> → sidebar auto‑expands <code>coeus</code> domain and selects <code>state_model</code>.</li>
+</ol>
+<h3 id="63-validate-universe">6.3 validate universe</h3>
+<ul>
+<li>clicking <code>Validate Universe</code>:</li>
+<li>either:<ul>
+<li>calls backend endpoint that wraps <code>rtt-schema validate</code>, or</li>
+<li>shows instructions: <code>run: rtt-schema validate</code> in your terminal.</li>
+</ul>
+</li>
+<li>optional: show last validation result + timestamp.</li>
+</ul>
+<hr>
+<h1 id="7-visual-style">7. visual style</h1>
+<h3 id="71-theme">7.1 theme</h3>
+<ul>
+<li><strong>dark mode first</strong>, aligned with triadicframeworks.org:</li>
+<li>background: deep navy/space (<code>#050816</code> style)</li>
+<li>text: light gray (<code>#e5e7eb</code>)</li>
+<li>accents: triadic gradient or cyan/magenta highlights.</li>
+</ul>
+<h3 id="72-components">7.2 components</h3>
+<ul>
+<li><strong>badges:</strong> pill‑shaped, colored by domain (e.g., quantum = purple, finance = green).</li>
+<li><strong>chips:</strong> for dependencies and used‑by.</li>
+<li><strong>monospace:</strong> for file paths and field names.</li>
+</ul>
+<hr>
+<h1 id="8-technical-notes">8. technical notes</h1>
+<h3 id="81-data-loading">8.1 data loading</h3>
+<ul>
+<li>load <code>schema-manifest.json</code> on app init.</li>
+<li>derive:</li>
+<li>domain list</li>
+<li>schema list per domain</li>
+<li>reverse dependency map (schema → used‑by).</li>
+</ul>
+<h3 id="82-schema-parsing">8.2 schema parsing</h3>
+<ul>
+<li>when a schema is selected:</li>
+<li>fetch JSON from <code>docs/schemas/&lt;domain&gt;/&lt;file&gt;</code>.</li>
+<li>parse <code>properties</code> for fields.</li>
+<li>optionally cache results.</li>
+</ul>
+<h3 id="83-routing-optional">8.3 routing (optional)</h3>
+<ul>
+<li>URL pattern:</li>
+<li><code>/schemas/:domain/:schema</code></li>
+<li>deep links:</li>
+<li>shareable URLs for specific schema views.</li>
+</ul>
+<hr>
+<h1 id="9-deliverables-you-can-drop-into-repo">9. deliverables you can drop into repo</h1>
+<p>you could add a design doc like:</p>
+<ul>
+<li><code>docs/schemas/SCHEMA_BROWSER_SPEC.md</code></li>
+</ul>
+<p>containing:</p>
+<ul>
+<li>product overview</li>
+<li>IA</li>
+<li>layout</li>
+<li>interactions</li>
+<li>technical notes</li>
+</ul>
+  </main>
+</body>
+</html>

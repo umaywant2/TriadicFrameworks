@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Long_Horizon_Continuity_Agents/README.md">
+  <title>LongHorizonContinuityAgents</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Long_Horizon_Continuity_Agents/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Long_Horizon_Continuity_Agents/README.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1024" height="1024" alt="Long_Horizon_Continuity_Agents_" src="https://github.com/user-attachments/assets/38ecb8e8-ea90-46f2-b184-75d7c3e8a4d1" /></p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Long_Horizon_Continuity_Agents/Long_Horizon_Continuity_Agents_module.json"><code>Long_Horizon_Continuity_Agents_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h1 id="long_horizon_continuity_agents">Long_Horizon_Continuity_Agents</h1>
+<blockquote>
+<p><strong>RTT Module</strong> · <code>lhca-rtt-001</code> · schema <code>rtt/2.4</code> · category <code>continuity</code> · v<code>1.0.0</code></p>
+</blockquote>
+<h2 id="overview">Overview</h2>
+<p><code>Long_Horizon_Continuity_Agents</code> is an RTT substrate module that governs multi-step, temporally extended agent continuity across divergent regime transitions. It encodes <strong>persistence tensors</strong>, <strong>drift-tolerance envelopes</strong>, and <strong>coherence anchors</strong> for agents that must operate beyond a single context window — across sessions, handoffs, and regime boundaries.</p>
+<p>Where most agentic frameworks treat each invocation as stateless, this module provides the grammar and substrate for agents that carry meaningful identity, goal, and behavioral state forward through time.</p>
+<hr>
+<h2 id="when-to-use-this-module">When to Use This Module</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Fits?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent operates across multiple LLM context windows</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent must maintain goal coherence across days or weeks</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent state is serialized, stored, and rehydrated</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent hands off to sub-agents while preserving identity</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Single-shot, stateless inference task</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="module-layout">Module Layout</h2>
+<pre><code>docs/Long_Horizon_Continuity_Agents/
+├── module.json          # Canonical RTT module descriptor
+├── README.md            # This file
+├── OPERATORS.md         # RTT operator grammar reference
+├── ROLES.md             # Role enum definitions and bindings
+├── ANALYZER_LAYERS.md   # All six analyzer layers with config examples
+├── VALIDATORS.md        # Validator stubs with Python skeletons
+└── EXAMPLES.md          # Worked scenarios with JSON payloads
+</code></pre>
+<hr>
+<h2 id="quick-start">Quick-Start</h2>
+<h3 id="1-load-the-module">1. Load the module</h3>
+<pre><code class="language-python">import json
+from pathlib import Path
+
+MODULE_PATH = Path(&quot;docs/Long_Horizon_Continuity_Agents/module.json&quot;)
+
+with MODULE_PATH.open() as f:
+    module = json.load(f)
+
+print(module[&quot;ai.module.name&quot;])     # Long_Horizon_Continuity_Agents
+print(module[&quot;ai.module.version&quot;])  # 1.0.0
+print(module[&quot;schema_version&quot;])     # rtt/2.4
+</code></pre>
+<h3 id="2-instantiate-a-continuity-engine">2. Instantiate a continuity engine</h3>
+<pre><code class="language-python">from lhca.engine import ContinuityEngine
+
+engine = ContinuityEngine.from_module(module)
+engine.start(regime=&quot;WARM_CONTEXT&quot;)
+</code></pre>
+<h3 id="3-checkpoint-and-rehydrate">3. Checkpoint and rehydrate</h3>
+<pre><code class="language-python"># Save state at a horizon boundary
+checkpoint_id = engine.checkpoint()
+
+# Later — restore from checkpoint
+engine2 = ContinuityEngine.rehydrate(checkpoint_id)
+</code></pre>
+<hr>
+<h2 id="substrate-tensor-shape">Substrate Tensor Shape</h2>
+<pre><code>rank  : 4
+axes  : [time_step, semantic_channel, behavioral_mode, regime_index]
+dtype : float32
+max_horizon_depth : 500 steps
+checkpoint_interval: every 50 steps
+</code></pre>
+<hr>
+<h2 id="regime-summary">Regime Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Drift Tolerance</th>
+<th>Coherence Floor</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WARM_CONTEXT</code></td>
+<td>0.05</td>
+<td>0.95</td>
+<td>Uninterrupted context window</td>
+</tr>
+<tr>
+<td><code>COLD_HANDOFF</code></td>
+<td>0.20</td>
+<td>0.75</td>
+<td>Cross-boundary rehydration</td>
+</tr>
+<tr>
+<td><code>DEEP_HORIZON</code></td>
+<td>0.40</td>
+<td>0.60</td>
+<td>Many successive handoffs</td>
+</tr>
+<tr>
+<td><code>RECOVERY</code></td>
+<td>0.15</td>
+<td>0.80</td>
+<td>Post-anomaly rollback restore</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="coherence-anchors-required">Coherence Anchors (required)</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Zero-Tolerance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CA-01</td>
+<td>Primary Goal Invariant</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CA-02</td>
+<td>Identity Signature Continuity</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CA-03</td>
+<td>Behavioral Envelope Compliance</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CA-04</td>
+<td>Temporal Ordering Preservation</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CA-05</td>
+<td>Context Handoff Integrity</td>
+<td>optional</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="key-operators">Key Operators</h2>
+<p><code>PERSIST</code> · <code>HANDOFF</code> · <code>REHYDRATE</code> · <code>CHECKPOINT</code> · <code>ROLLBACK</code></p>
+<p>See <a href="./OPERATORS.html"><code>OPERATORS.md</code></a> for full grammar and Python examples.</p>
+<hr>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REF-RTT-SPEC</td>
+<td>RTT Operator Grammar Specification v2.4</td>
+</tr>
+<tr>
+<td>REF-CONTINUITY-ALGEBRA</td>
+<td>Continuity Algebra for Agentic Systems</td>
+</tr>
+<tr>
+<td>REF-TEMPORAL-PERSISTENCE</td>
+<td>Temporal Persistence Axioms for LLM Agents</td>
+</tr>
+</tbody>
+</table>
+  </main>
+</body>
+</html>

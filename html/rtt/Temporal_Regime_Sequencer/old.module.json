@@ -1,0 +1,78 @@
+{
+  "identity": {
+    "name": "Temporal Regime Sequencer",
+    "canonical_id": "RTT_TEMPORAL_REGIME_SEQUENCER",
+    "module_path": "/docs/rtt/Temporal_Regime_Sequencer/",
+    "category": "rtt-structural",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "purpose": {
+    "summary": "RTT/1 temporal-intelligence engine for sequencing, mapping, and analyzing temporal regime transitions across conceptual, computational, and physical domains.",
+    "detail": "The Temporal Regime Sequencer identifies temporal transition points, computes temporal gradients, maps temporal fields across RTT regimes (R1–R4), detects temporal instability, and provides temporal diagnostics for higher-level RTT engines such as Causality Weaver and Dimensional Resonance Scanner."
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "primary": [
+      "TRS-Seq",
+      "TRS-Transition",
+      "TRS-Gradient",
+      "TRS-Field",
+      "TRS-Instability",
+      "TRS-Stabilize"
+    ],
+    "secondary": [
+      "RTT-Temporal",
+      "RTT-Sequence",
+      "RTT-Gradient",
+      "RTT-Structural"
+    ]
+  },
+
+  "analyzer_layer": {
+    "layer": "temporal",
+    "sub_layers": [
+      "temporal-sequencing",
+      "transition-analysis",
+      "temporal-gradient-mapping",
+      "instability-detection",
+      "structural-temporal-evaluation"
+    ]
+  },
+
+  "files": {
+    "core": [
+      "README.md",
+      "Temporal_Regime_Sequencer.md",
+      "trs_temporal_examples.md",
+      "trs_temporal_diagrams.svg"
+    ],
+    "support": [
+      "temporal_transition_profiles.md",
+      "temporal_instability_cases.md",
+      "temporal_field_matrix.json"
+    ],
+    "ai": [
+      "trs_temporal_prompts.md",
+      "trs_temporal_operators.md"
+    ]
+  },
+
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "RTT_TEMPORAL_REGIME_SEQUENCER",
+    "ai_keywords": "RTT, temporal regime, temporal sequencing, temporal gradient, temporal field, temporal instability",
+    "ai_purpose": "Provide temporal-level intelligence for RTT/1 by sequencing regime transitions, mapping temporal fields, analyzing temporal gradients, and detecting temporal instability across conceptual, computational, and physical regimes.",
+    "ai_operators": "TRS-Seq, TRS-Transition, TRS-Gradient, TRS-Field, TRS-Instability, TRS-Stabilize",
+    "ai_audience": "researchers, systems designers, AI systems"
+  }
+}
+

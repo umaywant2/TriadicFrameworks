@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/api/rtt/router.md">
+  <title>RTT API Router (Beta)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/api/rtt/router.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/api/rtt/router.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rtt-api-router-beta">RTT API Router (Beta)</h1>
+<p>This document describes how the RTT API endpoints are wired together into a single routing surface.<br>
+It is framework‑agnostic and focuses on the structural flow of requests through the RTT API.</p>
+<p>The router defines three endpoint families:</p>
+<ol>
+<li><strong>Beacon</strong> — lightweight structural signals  </li>
+<li><strong>Profile</strong> — RTT‑Inside site declarations  </li>
+<li><strong>Diagnostics</strong> — reserved vST‑beta endpoints  </li>
+</ol>
+<p>Each family maps to a dedicated handler module.</p>
+<hr>
+<h2 id="router-overview">Router Overview</h2>
+<pre><code>/api/rtt
+│
+├── POST /beacon          → beacon_handler.handleBeacon
+│
+├── GET  /profile/{site}  → profile_handler.getProfile
+└── POST /profile/{site}  → profile_handler.setProfile
+
+# Reserved (inactive)
+├── POST /validate        → diagnostics_handler.validate
+├── POST /corridor        → diagnostics_handler.corridor
+└── POST /topology        → diagnostics_handler.topology
+</code></pre>
+<p>All endpoints are version‑stable and safe for early adopters.</p>
+<hr>
+<h2 id="example-router-pseudocode">Example Router (Pseudo‑Code)</h2>
+<pre><code class="language-js">import { handleBeacon } from &quot;./server/beacon_handler.js&quot;;
+import { getProfile, setProfile } from &quot;./server/profile_handler.js&quot;;
+import {
+  validate,
+  corridor,
+  topology
+} from &quot;./server/diagnostics_handler.js&quot;;
+
+export function registerRTTRoutes(app) {
+  // Beacon events
+  app.post(&quot;/api/rtt/beacon&quot;, handleBeacon);
+
+  // Site profiles
+  app.get(&quot;/api/rtt/profile/:site&quot;, (req, res) =&gt;
+    getProfile(req, res, req.params.site)
+  );
+  app.post(&quot;/api/rtt/profile/:site&quot;, (req, res) =&gt;
+    setProfile(req, res, req.params.site)
+  );
+
+  // Diagnostics (reserved)
+  app.post(&quot;/api/rtt/validate&quot;, validate);
+  app.post(&quot;/api/rtt/corridor&quot;, corridor);
+  app.post(&quot;/api/rtt/topology&quot;, topology);
+}
+</code></pre>
+<p>This example uses a generic <code>app</code> object (Express‑style), but the structure applies to any server framework.</p>
+<hr>
+<h2 id="routing-philosophy">Routing Philosophy</h2>
+<p>The RTT router is designed to:</p>
+<ul>
+<li>keep endpoint families cleanly separated  </li>
+<li>avoid coupling between handlers  </li>
+<li>maintain stable URLs for early adopters  </li>
+<li>allow future vST validators to slot in without breaking changes  </li>
+<li>keep the API surface minimal and predictable  </li>
+</ul>
+<p>The router defines the <em>shape</em> of the RTT API, not the substrate logic behind it.</p>
+<hr>
+<h2 id="future-extensions">Future Extensions</h2>
+<p>The router may eventually include:</p>
+<ul>
+<li><code>/events</code> for SSE/WebSocket structural streams  </li>
+<li><code>/corridors</code> for RTT corridor introspection  </li>
+<li><code>/vst/*</code> for full validator surfaces  </li>
+<li><code>/metrics</code> for RTT‑Inside observability  </li>
+</ul>
+<p>These will be added without altering existing endpoints.</p>
+<hr>
+<h2 id="status">Status</h2>
+<p><strong>Beta.</strong><br>
+Routing is stable, but handler behavior may evolve as the RTT ecosystem grows.</p>
+  </main>
+</body>
+</html>

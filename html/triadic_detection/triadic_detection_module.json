@@ -1,0 +1,88 @@
+{
+  "$schema": "https://docs.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "module": "triadic-detection",
+    "canonical_name": "Triadic Detection",
+    "module_path": "docs/triadic_detection",
+    "version": "RTT/2",
+    "status": "Active Canonical",
+    "category": "Core Frameworks — Structural Spine",
+    "summary": "Pattern-recognition suite for structural signal extraction: feeds raw triadic readings to Drift Sentinel, Structural Faultline Detector, and Domain Overlay"
+  },
+  "purpose": {
+    "role": "Pattern-recognition suite for structural signal extraction: feeds raw triadic readings to Drift Sentinel, Structural Faultline Detector, and Domain Overlay",
+    "description": "Triadic Detection is the primary signal extraction and pattern-recognition layer that sits between raw system input and the RTT engine layer. It applies a suite of structural pattern detectors — Triadic signature recognition, regime boundary detection, load-bearing element identification, and signal-from-noise separation — to produce clean, engine-ready structural readings. These readings are consumed by the Structural Faultline Detector as its primary input, by the Drift Sentinel as its signal source, and by the Domain Overlay for domain signature recognition.",
+    "spine_role": "Primary signal extraction layer feeding all RTT engine inputs",
+    "audience": [
+      "developers",
+      "analysts",
+      "AIs",
+      "engineers"
+    ]
+  },
+  "structure": {
+    "module_type": "Signal Extraction Layer",
+    "triadic_lens": "triadic-detection-as-input-processor",
+    "analyzer_layer": [
+      "Core Frameworks — Structural Spine",
+      "Core Frameworks — Structural Spine"
+    ]
+  },
+  "files": {
+    "core": [
+      "triadic_detection.md",
+      "index.md"
+    ],
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
+  },
+  "ai_metadata": {
+    "navigation": {
+      "url": "https://docs.triadicframeworks.org/triadic_detection/",
+      "path": "docs/triadic_detection"
+    },
+    "ai_ready": true,
+    "ai_module_id": "triadic-detection",
+    "ai_keywords": [
+      "triadic detection",
+      "pattern recognition",
+      "signal extraction",
+      "structural signature",
+      "regime boundary",
+      "input processor",
+      "RTT signal",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "Pattern-recognition suite for structural signal extraction: feeds raw triadic readings to Drift Sentinel, Structural Faultline Detector, and Domain Overlay",
+    "ai_audience": [
+      "developers",
+      "analysts",
+      "AIs",
+      "engineers"
+    ],
+    "license": "See docs/LICENSE_module.json",
+    "module": {
+      "module_id": "triadic-detection",
+      "canonical_name": "Triadic Detection",
+      "version": "RTT/2"
+    }
+  }
+}

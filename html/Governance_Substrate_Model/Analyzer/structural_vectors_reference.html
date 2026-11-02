@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Governance_Substrate_Model/Analyzer/structural_vectors_reference.md">
+  <title>Structural Vectors Reference</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Governance_Substrate_Model/Analyzer/structural_vectors_reference.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Governance_Substrate_Model/Analyzer/structural_vectors_reference.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="structural-vectors-reference">Structural Vectors Reference</h1>
+<p><em>A canonical guide to structural vectors in the Governance Substrate Model (GSM)</em></p>
+<p>Structural vectors are the foundational representation of governance systems within the GSM. Every Analyzer component—drift, physics, invariants, basins, regime modes, projections, and simulations—operates on these vectors. This reference defines their structure, meaning, normalization, and usage.</p>
+<hr>
+<h2 id="the-fiveaxis-manifold">The five‑axis manifold</h2>
+<p>All structural vectors live in a five‑dimensional space:</p>
+<ul>
+<li>
+<p><strong>C — Centralization</strong><br>
+  Degree of concentrated authority and decision power.</p>
+</li>
+<li>
+<p><strong>M — Methods</strong><br>
+  Competitive, procedural, or collaborative mechanisms used to act.</p>
+</li>
+<li>
+<p><strong>O — Oversight</strong><br>
+  Monitoring, review, transparency, and constraint structures.</p>
+</li>
+<li>
+<p><strong>A — Access</strong><br>
+  Who can participate, contribute, or influence.</p>
+</li>
+<li>
+<p><strong>T — Timing</strong><br>
+  Cadence, responsiveness, and temporal structure.</p>
+</li>
+</ul>
+<p>Each axis ranges from <strong>0.0 to 1.0</strong> after normalization.</p>
+<hr>
+<h2 id="vector-format">Vector format</h2>
+<p>A structural vector is always represented as:</p>
+<pre><code>[C, M, O, A, T]
+</code></pre>
+<p>Example:</p>
+<pre><code>[0.62, 0.48, 0.71, 0.33, 0.55]
+</code></pre>
+<hr>
+<h2 id="vector-metadata">Vector metadata</h2>
+<p>Every vector includes metadata used by the Analyzer:</p>
+<ul>
+<li><strong>confidence</strong> — how reliable the vector is  </li>
+<li><strong>source</strong> — DSL, mapping rules, historical record, simulation step, etc.  </li>
+<li><strong>notes</strong> — optional contextual information  </li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-yaml">vector:
+  C: 0.62
+  M: 0.48
+  O: 0.71
+  A: 0.33
+  T: 0.55
+metadata:
+  confidence: 0.92
+  source: &quot;statement_mapping&quot;
+  notes: &quot;Derived from policy declaration&quot;
+</code></pre>
+<hr>
+<h2 id="how-vectors-are-generated">How vectors are generated</h2>
+<p>Vectors may originate from:</p>
+<ul>
+<li><strong>statement mapping rules</strong>  </li>
+<li><strong>DSL substrate adapter</strong>  </li>
+<li><strong>historical profile encoding</strong>  </li>
+<li><strong>simulation engine steps</strong>  </li>
+<li><strong>projection rules</strong>  </li>
+<li><strong>manual analyst input</strong></li>
+</ul>
+<p>All sources must pass through the same normalization pipeline.</p>
+<hr>
+<h2 id="normalization-rules">Normalization rules</h2>
+<p>Normalization ensures vectors remain within manifold bounds:</p>
+<ul>
+<li>clamp each axis to <strong>[0.0, 1.0]</strong>  </li>
+<li>apply min‑max scaling when raw values exceed expected ranges  </li>
+<li>apply coupling adjustments when physics rules require balance  </li>
+<li>preserve relative deltas for drift computation  </li>
+</ul>
+<p>Normalization is mandatory before any Analyzer component consumes a vector.</p>
+<hr>
+<h2 id="vector-deltas">Vector deltas</h2>
+<p>Vector deltas represent structural movement:</p>
+<pre><code>Δ = [dC, dM, dO, dA, dT]
+</code></pre>
+<p>They are used by:</p>
+<ul>
+<li>drift engine  </li>
+<li>physics engine  </li>
+<li>regime‑shift detection  </li>
+<li>simulation engine  </li>
+<li>observer history/now/future lenses  </li>
+</ul>
+<p>Magnitude is computed as:</p>
+<p>[
+\text{magnitude} = \sqrt{dC^2 + dM^2 + dO^2 + dA^2 + dT^2}
+]</p>
+<hr>
+<h2 id="vector-interpretation-lenses">Vector interpretation lenses</h2>
+<p>Vectors are interpreted through multiple lenses:</p>
+<ul>
+<li><strong>Axis lens</strong> — isolates each axis  </li>
+<li><strong>Coupling lens</strong> — evaluates C↔O, M↔A, O↔T  </li>
+<li><strong>Invariant lens</strong> — checks alignment, tension, violation  </li>
+<li><strong>Basin lens</strong> — identifies nearest basin and distance  </li>
+<li><strong>Drift lens</strong> — interprets movement and category  </li>
+<li><strong>Narrative lens</strong> — produces human‑readable summaries  </li>
+</ul>
+<p>These lenses do not modify vectors—they interpret them.</p>
+<hr>
+<h2 id="vector-usage-across-the-analyzer">Vector usage across the Analyzer</h2>
+<p>Structural vectors feed into:</p>
+<ul>
+<li><strong>Invariant checker</strong> — determines strain and violations  </li>
+<li><strong>Physics engine</strong> — computes forces and compensatory movement  </li>
+<li><strong>Drift detector</strong> — classifies micro/meso/macro/regime‑shift drift  </li>
+<li><strong>Basin classifier</strong> — determines basin identity and boundary proximity  </li>
+<li><strong>Regime modes</strong> — identifies operational mode  </li>
+<li><strong>Phase discipline</strong> — determines phase state  </li>
+<li><strong>Projection rules</strong> — generates plausible futures  </li>
+<li><strong>Simulation engine</strong> — evolves vectors stepwise  </li>
+<li><strong>Observer layer</strong> — encodes history, now, and future states  </li>
+</ul>
+<p>Vectors are the universal substrate for all structural analysis.</p>
+<hr>
+<h2 id="canonical-examples">Canonical examples</h2>
+<h3 id="stable-system-example">Stable system example</h3>
+<pre><code>[0.45, 0.52, 0.47, 0.50, 0.48]
+</code></pre>
+<ul>
+<li>low deltas  </li>
+<li>high coherence  </li>
+<li>stable regime mode  </li>
+<li>deep inside basin  </li>
+</ul>
+<h3 id="tensiondriven-drift-example">Tension‑driven drift example</h3>
+<pre><code>[0.82, 0.40, 0.33, 0.28, 0.71]
+</code></pre>
+<ul>
+<li>C↔O imbalance  </li>
+<li>high timing volatility  </li>
+<li>drift category: meso  </li>
+<li>approaching basin boundary  </li>
+</ul>
+<h3 id="regimeshift-vector-example">Regime‑shift vector example</h3>
+<pre><code>[0.91, 0.15, 0.22, 0.11, 0.88]
+</code></pre>
+<ul>
+<li>multiple invariant violations  </li>
+<li>macro drift  </li>
+<li>absorptive failure  </li>
+<li>crossing into new basin  </li>
+</ul>
+<hr>
+<h2 id="purpose-of-this-reference">Purpose of this reference</h2>
+<p>This file provides:</p>
+<ul>
+<li>a canonical definition of structural vectors  </li>
+<li>a shared vocabulary for contributors  </li>
+<li>a stable anchor for all Analyzer components  </li>
+<li>a teaching‑friendly reference for students  </li>
+<li>a foundation for simulation, projection, and observer layers  </li>
+</ul>
+<p>It ensures structural vectors remain coherent, interpretable, and substrate‑aligned across the entire GSM.</p>
+  </main>
+</body>
+</html>

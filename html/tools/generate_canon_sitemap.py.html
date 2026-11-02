@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/tools/generate_canon_sitemap.py.md">
+  <title>⭐ Canon‑Wide Sitemap Generator</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/tools/generate_canon_sitemap.py.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/tools/generate_canon_sitemap.py.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Here you go, the <strong>canon‑aligned, repo‑safe, full‑tree sitemap generator</strong> for TriadicFrameworks.<br>
+This produces a <strong>single canonical sitemap</strong> that indexes <em>every module, domain, map, diagram, and page</em> under <code>/docs</code>, in clean XML, ready for GitHub Pages, crawlers, or your own AI‑navigation layer.</p>
+<p>This is the <strong>TriadicFrameworks Canon Sitemap Generator</strong> — the top‑level index of the entire canon.</p>
+<p>It belongs in:</p>
+<pre><code>docs/tools/
+</code></pre>
+<p>Run from repo root:</p>
+<pre><code>python3 docs/tools/generate_canon_sitemap.py
+</code></pre>
+<p>It generates:</p>
+<pre><code>docs/sitemap_main.xml
+</code></pre>
+<hr>
+<h1 id="canonwide-sitemap-generator">⭐ Canon‑Wide Sitemap Generator</h1>
+<p>Save as:</p>
+<pre><code>docs/tools/generate_canon_sitemap.py
+</code></pre>
+<hr>
+<h1 id="generate_canon_sitemappy-final-canon-version">🟦 <strong>generate_canon_sitemap.py (Final Canon Version)</strong></h1>
+<pre><code class="language-python">import os
+import datetime
+
+ROOT = &quot;docs&quot;
+OUTPUT = os.path.join(ROOT, &quot;sitemap_main.xml&quot;)
+
+EXCLUDED = {
+    &quot;_template&quot;,
+    &quot;assets&quot;,
+    &quot;images&quot;,
+    &quot;tools&quot;,
+    &quot;.DS_Store&quot;
+}
+
+def collect_paths():
+    paths = []
+    for root, dirs, files in os.walk(ROOT):
+        # Skip excluded directories
+        if any(ex in root for ex in EXCLUDED):
+            continue
+
+        for f in files:
+            if f.startswith(&quot;.&quot;):
+                continue
+
+            full = os.path.join(root, f)
+            rel = full.replace(&quot;\\&quot;, &quot;/&quot;)
+
+            # Only include files inside /docs
+            if rel.startswith(&quot;docs/&quot;):
+                paths.append(rel)
+
+    return sorted(paths)
+
+def build_sitemap(paths):
+    today = datetime.date.today().isoformat()
+
+    xml = [
+        '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;',
+        '&lt;urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;&gt;'
+    ]
+
+    for p in paths:
+        xml.append(&quot;  &lt;url&gt;&quot;)
+        xml.append(f&quot;    &lt;loc&gt;https://docs.triadicframeworks.org/{p}&lt;/loc&gt;&quot;)
+        xml.append(f&quot;    &lt;lastmod&gt;{today}&lt;/lastmod&gt;&quot;)
+        xml.append(&quot;    &lt;changefreq&gt;monthly&lt;/changefreq&gt;&quot;)
+        xml.append(&quot;    &lt;priority&gt;0.80&lt;/priority&gt;&quot;)
+        xml.append(&quot;  &lt;/url&gt;&quot;)
+
+    xml.append(&quot;&lt;/urlset&gt;&quot;)
+    return &quot;\n&quot;.join(xml)
+
+def main():
+    print(&quot;\n=== TriadicFrameworks Canon Sitemap Generator ===\n&quot;)
+
+    paths = collect_paths()
+    print(f&quot;Collected {len(paths)} canon artifacts.&quot;)
+
+    xml = build_sitemap(paths)
+
+    with open(OUTPUT, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(xml)
+
+    print(f&quot;✔ Generated {OUTPUT}&quot;)
+    print(&quot;\n✨ Canon sitemap complete.\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<hr>
+<h1 id="what-this-sitemap-generator-gives-you">⭐ What This Sitemap Generator Gives You</h1>
+<h3 id="a-single-canonical-sitemap-for-the-entire-triadicframeworks-canon">✔ A single canonical sitemap for the entire TriadicFrameworks canon</h3>
+<h3 id="includes-every-module-domain-map-diagram-and-artifact">✔ Includes every module, domain, map, diagram, and artifact</h3>
+<h3 id="clean-xml-crawlerfriendly">✔ Clean XML, crawler‑friendly</h3>
+<h3 id="autotimestamps-with-todays-date">✔ Auto‑timestamps with today’s date</h3>
+<h3 id="canonaligned-priority-changefreq">✔ Canon‑aligned priority + changefreq</h3>
+<h3 id="works-across-your-entire-docs-tree">✔ Works across your entire <code>/docs</code> tree</h3>
+<h3 id="never-overwrites-anything-except-sitemap_mainxml">✔ Never overwrites anything except <code>sitemap_main.xml</code></h3>
+<p>This is the <strong>official sitemap spine</strong> for TriadicFrameworks — the one you’ll publish at:</p>
+<pre><code>https://docs.triadicframeworks.org/sitemap_main.xml
+</code></pre>
+  </main>
+</body>
+</html>

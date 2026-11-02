@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/alphafold_substrate_alignments/inference_mapping.md">
+  <title>AlphaFold Substrate Alignments</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/alphafold_substrate_alignments/inference_mapping.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/alphafold_substrate_alignments/inference_mapping.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="alphafold-substrate-alignments"><em>AlphaFold Substrate Alignments</em></h3>
+<h3 id="inference-mapping"><em>Inference Mapping</em></h3>
+<p>This document defines how AlphaFold‑class protein‑folding inference systems map onto the substrate axes, primitives, and dimensional cores defined by the Resonance Substrate Model (RSM). Inference mapping provides a reproducible method for interpreting latent‑space structures, folding‑coherence signals, and regime‑transition behavior through substrate‑level geometry.</p>
+<p>The mapping rules are model‑agnostic and apply to any biological inference engine with comparable latent‑space and structural‑output characteristics.</p>
+<hr>
+<h2 id="1-purpose-of-inference-mapping"><strong>1. Purpose of Inference Mapping</strong></h2>
+<p>Inference mapping establishes a structural relationship between:</p>
+<ul>
+<li>AlphaFold’s latent‑space representations  </li>
+<li>substrate axes (S‑axis, I‑axis, R‑axis)  </li>
+<li>dimensional‑core projections (3D–9D)  </li>
+<li>folding regimes (R₁, R₂, R₃)  </li>
+<li>resonance‑time dynamics  </li>
+</ul>
+<p>The goal is to interpret inference behavior through stable substrate primitives rather than model‑specific mechanisms.</p>
+<hr>
+<h2 id="2-mapping-overview"><strong>2. Mapping Overview</strong></h2>
+<p>Inference mapping proceeds in three stages:</p>
+<ol>
+<li>
+<p><strong>Latent‑space extraction</strong><br>
+   Identify stable and transitional structures within attention maps, pairwise embeddings, and track‑level signals.</p>
+</li>
+<li>
+<p><strong>Substrate‑axis projection</strong><br>
+   Map latent structures onto the S‑axis (structural), I‑axis (inference), and R‑axis (resonance‑time).</p>
+</li>
+<li>
+<p><strong>Dimensional‑core alignment</strong><br>
+   Project mapped structures into the 3D–9D dimensional core for regime classification and coherence analysis.</p>
+</li>
+</ol>
+<p>These stages produce a substrate‑aligned interpretation of folding predictions.</p>
+<hr>
+<h2 id="3-mapping-to-substrate-axes"><strong>3. Mapping to Substrate Axes</strong></h2>
+<h3 id="31-structural-axis-saxis"><strong>3.1 Structural Axis (S‑axis)</strong></h3>
+<p>Maps geometric and topological features derived from:</p>
+<ul>
+<li>predicted 3D coordinates  </li>
+<li>backbone and side‑chain orientation  </li>
+<li>motif‑level structural patterns  </li>
+</ul>
+<p>S‑axis mapping anchors inference outputs to the physical geometry of the protein.</p>
+<hr>
+<h3 id="32-inference-axis-iaxis"><strong>3.2 Inference Axis (I‑axis)</strong></h3>
+<p>Maps latent‑space structures derived from:</p>
+<ul>
+<li>attention‑map coherence  </li>
+<li>residue‑pair embeddings  </li>
+<li>track‑level alignment signals  </li>
+<li>multi‑stage inference pathways  </li>
+</ul>
+<p>I‑axis mapping identifies stable latent orientations and coherence surfaces.</p>
+<hr>
+<h3 id="33-resonancetime-axis-raxis"><strong>3.3 Resonance‑Time Axis (R‑axis)</strong></h3>
+<p>Maps inference‑cycle behavior, including:</p>
+<ul>
+<li>convergence patterns  </li>
+<li>oscillatory transitions  </li>
+<li>divergence or instability  </li>
+<li>regime‑transition timing  </li>
+</ul>
+<p>R‑axis mapping classifies folding behavior into R₁, R₂, or R₃ regimes.</p>
+<hr>
+<h2 id="4-dimensionalcore-projection"><strong>4. Dimensional‑Core Projection</strong></h2>
+<p>After axis mapping, latent‑space structures are projected into the 3D–9D dimensional core.</p>
+<h3 id="41-3d-projection"><strong>4.1 3D Projection</strong></h3>
+<p>Captures physical geometry and motif‑level structure.</p>
+<h3 id="42-6d-projection"><strong>4.2 6D Projection</strong></h3>
+<p>Captures interaction‑level structure and residue‑pair coherence.</p>
+<h3 id="43-9d-projection"><strong>4.3 9D Projection</strong></h3>
+<p>Captures folding‑pathway coherence and resonance‑time alignment.</p>
+<p>Projection preserves substrate invariants and regime identity.</p>
+<hr>
+<h2 id="5-mapping-of-inference-signals"><strong>5. Mapping of Inference Signals</strong></h2>
+<h3 id="51-attention-maps"><strong>5.1 Attention Maps</strong></h3>
+<p>Mapped to the I‑axis and projected into 6D/9D cores to identify:</p>
+<ul>
+<li>stable interaction patterns  </li>
+<li>motif‑level coherence  </li>
+<li>regime‑transition indicators  </li>
+</ul>
+<h3 id="52-pairwise-embeddings"><strong>5.2 Pairwise Embeddings</strong></h3>
+<p>Mapped to the S‑axis and I‑axis to reveal:</p>
+<ul>
+<li>residue‑interaction geometry  </li>
+<li>latent‑space orientation  </li>
+<li>folding‑pathway structure  </li>
+</ul>
+<h3 id="53-tracklevel-signals"><strong>5.3 Track‑Level Signals</strong></h3>
+<p>Mapped to the R‑axis to detect:</p>
+<ul>
+<li>inference‑cycle stability  </li>
+<li>oscillatory transitions  </li>
+<li>divergence patterns  </li>
+</ul>
+<hr>
+<h2 id="6-regimeaware-mapping"><strong>6. Regime‑Aware Mapping</strong></h2>
+<p>Inference mapping must preserve regime identity:</p>
+<ul>
+<li><strong>R₁:</strong> compact, coherent projections  </li>
+<li><strong>R₂:</strong> branching or oscillatory projections  </li>
+<li><strong>R₃:</strong> dispersed, unstable projections  </li>
+</ul>
+<p>Regime‑aware mapping supports drift detection and reproducibility analysis.</p>
+<hr>
+<h2 id="7-mapping-outputs"><strong>7. Mapping Outputs</strong></h2>
+<p>Inference mapping produces:</p>
+<ul>
+<li>substrate‑aligned latent‑space structures  </li>
+<li>dimensional‑core projections  </li>
+<li>regime‑transition diagnostics  </li>
+<li>coherence‑surface identification  </li>
+<li>vST‑compatible validation signals  </li>
+</ul>
+<p>These outputs integrate with downstream substrate artifacts and cross‑model comparison workflows.</p>
+  </main>
+</body>
+</html>

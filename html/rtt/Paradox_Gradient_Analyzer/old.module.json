@@ -1,0 +1,77 @@
+{
+  "identity": {
+    "name": "Paradox Gradient Analyzer",
+    "canonical_id": "RTT_PARADOX_GRADIENT_ANALYZER",
+    "module_path": "/docs/rtt/Paradox_Gradient_Analyzer/",
+    "category": "rtt-structural",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "purpose": {
+    "summary": "RTT/1 paradox-level intelligence engine for detecting, measuring, and analyzing paradox gradients across conceptual, computational, and physical regimes.",
+    "detail": "The Paradox Gradient Analyzer identifies paradox sources, computes paradox gradients, maps paradox intensities across RTT regimes (R1–R4), and provides structural paradox diagnostics for higher-level RTT engines such as the Coherence Tensor Engine, Drift Sentinel, Faultline Detector, and Stability Basin Cartographer."
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "primary": [
+      "PGA-Detect",
+      "PGA-Gradient",
+      "PGA-Intensity",
+      "PGA-Source",
+      "PGA-Field",
+      "PGA-Resolve"
+    ],
+    "secondary": [
+      "RTT-Paradox",
+      "RTT-Gradient",
+      "RTT-Structural",
+      "RTT-Coherence"
+    ]
+  },
+
+  "analyzer_layer": {
+    "layer": "paradox",
+    "sub_layers": [
+      "gradient-detection",
+      "paradox-field-mapping",
+      "intensity-analysis",
+      "structural-paradox-coherence"
+    ]
+  },
+
+  "files": {
+    "core": [
+      "README.md",
+      "Paradox_Gradient_Analyzer.md",
+      "pga_examples.md",
+      "pga_diagrams.svg"
+    ],
+    "support": [
+      "paradox_sources.md",
+      "paradox_gradient_profiles.md",
+      "paradox_gradient_matrix.json"
+    ],
+    "ai": [
+      "pga_prompts.md",
+      "pga_operators.md"
+    ]
+  },
+
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "RTT_PARADOX_GRADIENT_ANALYZER",
+    "ai_keywords": "RTT, paradox gradient, paradox field, paradox intensity, structural paradox analysis",
+    "ai_purpose": "Provide paradox-level intelligence for RTT/1 by detecting paradox sources, computing paradox gradients, mapping paradox fields, and analyzing paradox intensities across conceptual, computational, and physical regimes.",
+    "ai_operators": "PGA-Detect, PGA-Gradient, PGA-Intensity, PGA-Source, PGA-Field, PGA-Resolve",
+    "ai_audience": "researchers, systems designers, AI systems"
+  }
+}
+

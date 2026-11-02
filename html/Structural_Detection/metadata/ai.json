@@ -1,0 +1,66 @@
+{
+  "module": {
+    "name": "Structural Detection",
+    "id": "structural_detection",
+    "version": "1.0",
+    "category": "analysis",
+    "summary": "Detect motifs, drift, regimes, invariants, anomalies, and coherence using a five-operator RTT/1 pipeline.",
+    "purpose": "Provide structural detection capabilities across motifs, drift, regimes, invariants, and continuity.",
+    "audience": ["students", "instructors", "researchers", "AIs"]
+  },
+
+  "ai": {
+    "embedding_priority": "high",
+    "semantic_group": "rtt_structural_analysis",
+    "keywords": [
+      "structural detection",
+      "motifs",
+      "boundaries",
+      "invariants",
+      "anomalies",
+      "drift",
+      "regime",
+      "continuity",
+      "coherence",
+      "RTT/1",
+      "operator pipeline"
+    ],
+    "operators": [
+      "STRUCTURAL_DETECTION_OPERATOR",
+      "DRIFT_SENSE_OPERATOR",
+      "REGIME_AWARENESS_OPERATOR",
+      "CONTINUITY_COMPASS_OPERATOR",
+      "SYNTHESIS_TRIANGULATION_OPERATOR"
+    ],
+    "navigation": {
+      "front_door": "/docs/Structural_Detection/README.md",
+      "index_html": "/docs/Structural_Detection/index.html",
+      "doc_map": "/docs/Structural_Detection/DOC_MAP.md",
+      "student_materials": "/docs/Structural_Detection/student_materials/",
+      "instructor_materials": "/docs/Structural_Detection/instructor_materials/",
+      "operators": "/docs/Structural_Detection/operators/"
+    },
+    "cross_module_links": {
+      "related_modules": [
+        "drift_sense",
+        "regime_awareness",
+        "continuity_compass",
+        "synthesis_triangulation",
+        "opacity",
+        "fft_analyzer",
+        "tel"
+      ],
+      "semantic_neighbors": [
+        "pattern_detection",
+        "structural_analysis",
+        "coherence_mapping"
+      ]
+    },
+    "coherence": {
+      "drift_status": "minimal",
+      "regime": "formal→emergent",
+      "stability": "high",
+      "operator_alignment": "full"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.permissions",
+  "title": "FFT AI Session — Permissions v1.33",
+  "permission_classes": {
+    "PERM-READ-FIELDS": {
+      "scope": "read phi,V,R",
+      "required_mode": "AM-001"
+    },
+    "PERM-DISPATCH-OPS": {
+      "scope": "dispatch operators",
+      "required_mode": "AM-002"
+    },
+    "PERM-COHERENCE-ENFORCE": {
+      "scope": "invoke coherence enforcement",
+      "required_mode": "AM-002",
+      "new_v1_33": true
+    },
+    "PERM-DRIFT-OVERRIDE": {
+      "scope": "override drift bound (emergency only)",
+      "required_mode": "AM-005",
+      "requires_log": true,
+      "new_v1_33": true
+    },
+    "PERM-PARADOX-RESOLVE": {
+      "scope": "invoke paradox resolver",
+      "required_mode": "AM-004",
+      "new_v1_33": true
+    },
+    "PERM-SET-COUPLE": {
+      "scope": "trigger SET field coupling",
+      "required_mode": "AM-003",
+      "new_v1_33": true
+    },
+    "PERM-DCO-TRAVERSE": {
+      "scope": "enter DCO dimensions 4D-9D",
+      "required_mode": "AM-003",
+      "new_v1_33": true
+    },
+    "PERM-SPINE-RESOLVE": {
+      "scope": "resolve Spine URL live",
+      "required_mode": "AM-002",
+      "new_v1_33": true
+    },
+    "PERM-QMROOT-TRACE": {
+      "scope": "trace QMROOT ancestry",
+      "required_mode": "AM-002",
+      "new_v1_33": true
+    },
+    "PERM-FIELD-REBUILD": {
+      "scope": "full triadic field reconstruction",
+      "required_mode": "AM-005",
+      "new_v1_33": true
+    }
+  },
+  "v133_additions": [
+    "PERM-COHERENCE-ENFORCE",
+    "PERM-DRIFT-OVERRIDE",
+    "PERM-PARADOX-RESOLVE",
+    "PERM-SET-COUPLE",
+    "PERM-DCO-TRAVERSE",
+    "PERM-SPINE-RESOLVE",
+    "PERM-QMROOT-TRACE",
+    "PERM-FIELD-REBUILD"
+  ]
+}

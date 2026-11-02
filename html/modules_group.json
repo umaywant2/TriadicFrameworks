@@ -1,0 +1,420 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/modules_group.schema.json",
+  "$generated": "2026-08-03T01:39:00",
+  "$version": "2.4",
+  "$round": "R5",
+  "meta": {
+    "total_groups": 21,
+    "total_a3_modules": 196,
+    "total_files": 1450,
+    "r5_new_a3": 30,
+    "r5_new_files": 166,
+    "generated_at": "2026-08-03T01:39:00"
+  },
+  "_merge_note": "R5 additions. For each layer in r5_additions, append new_modules[] to the existing layer's modules[] and update count and total_files in R4 modules_group.json.",
+  "r5_additions": {
+    "Applied Domain Models": {
+      "r5_new_count": 6,
+      "r5_new_files": 38,
+      "new_modules": [
+        {
+  "module": "Governance_Substrate_Model",
+  "path": "docs/Governance_Substrate_Model",
+  "category": "Governance",
+  "version": "2025",
+
+  "graph_update": {
+    "added": [
+      {
+        "name": "How_To_Flock_with_Governance",
+        "path": "docs/Governance_Substrate_Model/05_Implementation/How_To_Flock_with_Governance.md",
+        "manifest": "docs/Governance_Substrate_Model/05_Implementation/How_To_Flock_with_Governance_module.json",
+        "role": "example",
+        "analyzer_layer": "regime",
+        "purpose": "Demonstrate governance-agentic RTT micro-core behavior applied to ALPR and non-ALPR civic sensor networks."
+      }
+    ],
+
+    "updated": [
+      {
+        "name": "gsm_module",
+        "path": "docs/Governance_Substrate_Model/gsm_module.json",
+        "changes": [
+          "Added How_To_Flock_with_Governance to files{}",
+          "Added How_To_Flock_with_Governance_module.json to files{}",
+          "Updated DOC_MAP entry in index.html",
+          "Refreshed analyzer-layer alignment"
+        ]
+      }
+    ],
+
+    "phantoms_detected": [
+      "ALPR_Governance.md",
+      "sensor_governance_notes.txt"
+    ],
+
+    "module_progress": {
+      "completed": 63,
+      "remaining": 43,
+      "notes": "Governance Substrate Model updated with new implementation document and validator pulse."
+    }
+  }
+},
+        {
+          "canon_tag": "RTT_INSIDE_ENTERPRISE",
+          "name": "Inside \u00b7 Enterprise",
+          "depth": 3,
+          "url": "https://docs.triadicframeworks.org/rtt/Inside/Enterprise/",
+          "file_count": 8,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "RTT_INSIDE_QCOMPUTE",
+          "name": "Inside \u00b7 qCompute",
+          "depth": 3,
+          "url": "https://docs.triadicframeworks.org/rtt/Inside/qCompute/",
+          "file_count": 8,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "expectations",
+          "name": "Expectations",
+          "depth": 1,
+          "url": "https://docs.triadicframeworks.org/Expectations/",
+          "file_count": 5,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "pantheons",
+          "name": "Pantheons",
+          "depth": 1,
+          "url": "https://docs.triadicframeworks.org/pantheons/",
+          "file_count": 5,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "atmosphere",
+          "name": "Atmosphere",
+          "depth": 1,
+          "url": "https://docs.triadicframeworks.org/atmosphere/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "radiology",
+          "name": "Radiology",
+          "depth": 1,
+          "url": "https://docs.triadicframeworks.org/Radiology/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        }
+      ]
+    },
+    "Core Frameworks \u2014 Structural Spine": {
+      "r5_new_count": 11,
+      "r5_new_files": 41,
+      "new_modules": [
+        {
+          "canon_tag": "prompts",
+          "name": "Prompts",
+          "depth": 1,
+          "url": "https://docs.triadicframeworks.org/prompts/",
+          "file_count": 8,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "rtt-infinity-prompts",
+          "name": "RTT Infinity Prompts",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/prompts/rtt_infinity/",
+          "file_count": 5,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "triadic-detection",
+          "name": "Triadic Detection",
+          "depth": 1,
+          "url": "https://docs.triadicframeworks.org/triadic_detection/",
+          "file_count": 7,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "ipd-12",
+          "name": "IPD-12 Framework",
+          "depth": 1,
+          "url": "https://docs.triadicframeworks.org/frameworks/ipd_12/",
+          "file_count": 8,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "spine-overlay-pack",
+          "name": "S3 Spine Overlay Pack",
+          "depth": 1,
+          "url": "https://docs.triadicframeworks.org/spine/",
+          "file_count": 7,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "spine-structural",
+          "name": "Structural Overlay",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/spine/structural/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "spine-drift",
+          "name": "Drift Overlay",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/spine/drift/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "spine-coherence",
+          "name": "Coherence Overlay",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/spine/coherence/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "spine-substrate",
+          "name": "Substrate Overlay",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/spine/substrate/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "spine-dimensional",
+          "name": "Dimensional Overlay",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/spine/dimensional/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "spine-domain",
+          "name": "Domain Overlay",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/spine/domain/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        }
+      ]
+    },
+    "Education & Teaching": {
+      "r5_new_count": 1,
+      "r5_new_files": 12,
+      "new_modules": [
+        {
+          "canon_tag": "grammar-for-intelligence",
+          "name": "Grammar for Intelligence",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/education/ebooks/Grammar_for_Intelligence/",
+          "file_count": 12,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        }
+      ]
+    },
+    "RTT Technology Layer": {
+      "r5_new_count": 11,
+      "r5_new_files": 66,
+      "new_modules": [
+        {
+          "canon_tag": "COHERENCE_TENSOR_ENGINE",
+          "name": "Coherence Tensor Engine",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Coherence_Tensor_Engine/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "CROSS_DOMAIN_CAUSALITY_WEAVER",
+          "name": "Cross-Domain Causality Weaver",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Cross_Domain_Causality_Weaver/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "DIMENSIONAL_RESONANCE_SCANNER",
+          "name": "Dimensional Resonance Scanner",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Dimensional_Resonance_Scanner/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "DRIFT_SENTINEL",
+          "name": "Drift Sentinel",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Drift_Sentinel/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "PARADOX_GRADIENT_ANALYZER",
+          "name": "Paradox Gradient Analyzer",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Paradox_Gradient_Analyzer/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "REGIME_INTERLOCK_MAPPER",
+          "name": "Regime Interlock Mapper",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Regime_Interlock_Mapper/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "STABILITY_BASIN_CARTOGRAPHER",
+          "name": "Stability Basin Cartographer",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Stability_Basin_Cartographer/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "STRUCTURAL_FAULTLINE_DETECTOR",
+          "name": "Structural Faultline Detector",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Structural_Faultline_Detector/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "TEMPORAL_REGIME_SEQUENCER",
+          "name": "Temporal Regime Sequencer",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Temporal_Regime_Sequencer/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "TRIADIC_REGIME_SYNTHESIZER",
+          "name": "Triadic Regime Synthesizer",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Triadic_Regime_Synthesizer/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        },
+        {
+          "canon_tag": "CRYSTAL_MYCELIAL_ENGINE",
+          "name": "Crystal Mycelial Engine",
+          "depth": 2,
+          "url": "https://docs.triadicframeworks.org/rtt/Crystal_Mycelial_Engine/",
+          "file_count": 6,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        }
+      ]
+    },
+    "Tools & Infrastructure": {
+      "r5_new_count": 1,
+      "r5_new_files": 7,
+      "new_modules": [
+        {
+          "canon_tag": "tft-opengpu",
+          "name": "TFT OpenGPU Stack Module",
+          "depth": 1,
+          "url": "https://docs.triadicframeworks.org/TFT.OpenGPU.Stack.Module/",
+          "file_count": 7,
+          "enriched_r2": false,
+          "enriched_r3": false,
+          "enriched_r4": false,
+          "enriched_r5": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "artistName": "Iron Maiden",
+  "scrollTitle": "Seventh Son of a Seventh Son",
+  "lineage": {
+    "origin": "UK",
+    "era": "1980s",
+    "genre": ["Heavy Metal", "Progressive Rock"],
+    "influences": ["Black Sabbath", "UFO", "Deep Purple"],
+    "echoes": ["Avenged Sevenfold", "Ghost", "Trivium"]
+  },
+  "symbolicAttributes": {
+    "themes": ["Prophecy", "Duality", "Destiny"],
+    "signatureMotifs": ["Galloping rhythm", "Operatic vocals", "Mythic storytelling"],
+    "emitterType": "Narrative Pulse",
+    "corridorLogic": "Concept album structure with recursive motifs"
+  },
+  "resonanceScore": {
+    "emotionalImpact": 9.8,
+    "technicalComplexity": 9.2,
+    "remixPotential": 8.7
+  },
+  "badgeLogic": {
+    "scrollType": "Legacy Album",
+    "remixTier": "Mythic",
+    "validator": "Narrative Integrity + Sonic Fidelity"
+  }
+}

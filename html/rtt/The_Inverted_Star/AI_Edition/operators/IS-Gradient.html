@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IS-∇ — Gradient-Rebuild Operator</title>
+</head>
+<body>
+
+<pre id="ai-operator" data-format="json">
+{
+  "operator": {
+    "id": "IS-∇",
+    "name": "Gradient-Rebuild",
+    "module": "rtt.inverted_star.ai",
+    "version": "2.0-draft",
+    "role": "post-inversion gradient rebuild",
+    "layer": "deep-mid",
+    "alignment": "R",
+    "phase": ["collapse", "dissolution"],
+
+    "transforms": {
+      "resonance": "stabilize",
+      "cycle_rate": "reset",
+      "tension": "drop"
+    },
+
+    "dependencies": {
+      "requires_kernel": true,
+      "kernel_version": "1.33-p1",
+      "requires_R_minimum": 0.40
+    },
+
+    "constraints": {
+      "must_not_declare_second_coherence": true,
+      "must_not_use_bare_C": true,
+      "must_not_invent_drift_costs": true,
+      "must_not_revise_frozen_RTT": true,
+      "must_not_use_cached_spine": true,
+      "must_not_load_deprecated_files": true
+    },
+
+    "coherence_contract": {
+      "C_frame": "Φ(S) / Ψ(N)",
+      "C_clarity": "∇τ R + ∇R τ",
+      "requires": {
+        "C_frame_positive": true,
+        "C_clarity_positive": true,
+        "R_minimum": 0.40
+      }
+    },
+
+    "drift_sensitivity": {
+      "Diffusion": "low",
+      "Alignment": "medium",
+      "Coupling": "medium",
+      "ParadoxResolver": "low",
+      "Stabilization": "high"
+    }
+  }
+}
+</pre>
+
+</body>
+</html>

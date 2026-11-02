@@ -1,0 +1,72 @@
+  <link rel="stylesheet" href="rtt.css" />
+
+<body>
+  <!-- Dynamic nav include -->
+   <div id="rtt-nav"></div>
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
+  <main class="rtt-page">
+
+    <h1 class="rtt-hero-title">Developer Zone</h1>
+    <p class="rtt-hero-subtitle">SDKs, CLI tools, schemas, and integration guides.</p>
+
+    <hr class="rtt-divider" />
+
+    <section>
+      <h2 class="rtt-section-title">SDKs</h2>
+      <div class="rtt-tier-grid">
+        <div class="rtt-card">
+          <div class="rtt-card-title">RTT SDK (JavaScript)</div>
+          <div class="rtt-card-subtitle">Core RTT primitives for JS runtimes.</div>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">RTT SDK (Python)</div>
+          <div class="rtt-card-subtitle">Pattern engines and substrate utilities.</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rtt-divider" />
+
+    <section>
+      <h2 class="rtt-section-title">CLI Tools</h2>
+      <div class="rtt-tier-grid">
+        <div class="rtt-card">
+          <div class="rtt-card-title">rtt-cli</div>
+          <div class="rtt-card-subtitle">Interact with RTT engines from the terminal.</div>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">rtt-validate</div>
+          <div class="rtt-card-subtitle">Validate RTTcode packets and schemas.</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rtt-divider" />
+
+    <section>
+      <h2 class="rtt-section-title">Integration Guides</h2>
+      <div class="rtt-tier-grid">
+        <div class="rtt-card">
+          <div class="rtt-card-title">RTT‑Inside</div>
+          <div class="rtt-card-subtitle">Embed RTT logic into agents and pipelines.</div>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">Wrapped Core Integration</div>
+          <div class="rtt-card-subtitle">Add drift/paradox resilience to your stack.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="rtt-footer">
+      © TriadicFrameworks — Resonance‑Time Technology
+    </footer>
+
+  </main>

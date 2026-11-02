@@ -1,0 +1,1312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/D369_Chip_Spec/Memory_Alignment_Spec.md">
+  <title>Memory Alignment Specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/D369_Chip_Spec/Memory_Alignment_Spec.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/D369_Chip_Spec/Memory_Alignment_Spec.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="memory-alignment-specification">Memory Alignment Specification</h1>
+<blockquote>
+<p>Every byte lives in a tier. Every tier is a regime. Every transition between tiers is a phase boundary where structure can silently collapse.</p>
+</blockquote>
+<hr>
+<h2 id="session-context">Session Context</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Module</strong></td>
+<td>D369_Chip_Spec</td>
+</tr>
+<tr>
+<td><strong>File</strong></td>
+<td><code>Memory_Alignment_Spec.md</code></td>
+</tr>
+<tr>
+<td><strong>Role</strong></td>
+<td>engine · profile</td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>First‑fill</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>Unifies <code>Board_Level_Alignment.md</code> §Memory, <code>DIMM_Module_Checklist.md</code>, and <code>Diagram_SoC.md</code> §Cache Hierarchy</td>
+</tr>
+<tr>
+<td><strong>Audience</strong></td>
+<td>Memory architects · Cache designers · Storage engineers · System architects · Students · AIs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>Other D369 files address memory at specific boundaries:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Diagram_SoC.md</code></td>
+<td>Cache hierarchy inside the SoC (L1→L2→L3)</td>
+</tr>
+<tr>
+<td><code>Diagram_SoC.md</code></td>
+<td>Memory controller (gateway to DRAM)</td>
+</tr>
+<tr>
+<td><code>DIMM_Module_Checklist.md</code></td>
+<td>DRAM persistence boundary (the DIMM itself)</td>
+</tr>
+<tr>
+<td><code>Board_Level_Alignment.md</code></td>
+<td>Board‑level memory routing and preservation</td>
+</tr>
+</tbody>
+</table>
+<p>This document is the <strong>unified memory alignment specification</strong>. It covers the <strong>full hierarchy</strong> — from register file to archival storage — and specifies what D369 requires at every tier and at every boundary between tiers.</p>
+<p>The central claim:</p>
+<blockquote>
+<p><strong>Memory is not a flat address space. It is a layered substrate with phase transitions at every boundary. A value that moves between tiers changes structural state — even if its bits don't change.</strong></p>
+</blockquote>
+<p>A byte in L1 cache is not the same structural entity as the same byte in DRAM. The bits may be identical. The phase, source attribution, and temporal context are not. Memory alignment means making those differences visible.</p>
+<hr>
+<h2 id="the-full-hierarchy">The Full Hierarchy</h2>
+<pre><code>-
+┌─────────────────────────────────────────────────────────────────────┐
+│  Memory Hierarchy (structural view — full stack)                    │
+│                                                                     │
+│  Tier 0   Register File          ← fastest, smallest, per-core      │
+│       ▼   ─ ─ ─ boundary ─ ─ ─                                      │
+│  Tier 1   L1 Cache (I + D)       ← per-core, nanoseconds            │
+│       ▼   ─ ─ ─ boundary ─ ─ ─                                      │
+│  Tier 2   L2 Cache               ← shared or per-core, tens of ns   │
+│       ▼   ─ ─ ─ boundary ─ ─ ─                                      │
+│  Tier 3   L3 / LLC               ← shared, hundreds of ns           │
+│       ▼   ─ ─ ─ boundary ─ ─ ─                                      │
+│  Tier 4   DRAM (DIMM / HBM)      ← main memory, ~100 ns             │
+│       ▼   ─ ─ ─ boundary ─ ─ ─                                      │
+│  Tier 4a  CXL‑Attached Memory    ← fabric-attached, ~200-400 ns     │
+│       ▼   ─ ─ ─ boundary ─ ─ ─                                      │
+│  Tier 5   Persistent Memory      ← byte-addressable NVM             │
+│       ▼   ─ ─ ─ boundary ─ ─ ─                                      │
+│  Tier 6   Block Storage (SSD)    ← block-addressed, microseconds    │
+│       ▼   ─ ─ ─ boundary ─ ─ ─                                      │
+│  Tier 7   Archival Storage       ← tape, cold object store, seconds │
+│                                                                     │
+│  Each ─ ─ ─ boundary ─ ─ ─ is a persistence boundary                │
+│  where phase, source, and time can silently collapse.               │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="three-properties-at-risk">Three Properties at Risk</h3>
+<p>At every boundary, three structural properties can collapse:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it means</th>
+<th>What collapse looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Phase</strong></td>
+<td>Which tier currently holds this value; how "current" it is</td>
+<td>Stale data masquerades as current truth</td>
+</tr>
+<tr>
+<td><strong>Source</strong></td>
+<td>Which block, core, or agent produced this value</td>
+<td>Values inherit false provenance from their container</td>
+</tr>
+<tr>
+<td><strong>Time</strong></td>
+<td>When this value was produced vs. when it arrived at this tier</td>
+<td>Temporal ordering becomes unreliable across tiers</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="tierbytier-specification">Tier‑by‑Tier Specification</h2>
+<h3 id="tier-0-register-file">Tier 0 — Register File</h3>
+<pre><code>-
+┌───────────────────────────────────────────────┐
+│  Register File                                │
+│                                               │
+│  Structural character:                        │
+│  · Fastest storage in the system              │
+│  · Per-core, per-thread, architecturally      │
+│    visible                                    │
+│  · Values live here for single-digit cycles   │
+│  · Content is architecturally specified       │
+│    (ISA-defined register set)                 │
+│                                               │
+│  Structural risk:    LOWEST                   │
+│  Source identity:    Implicit (per-core)      │
+│  Temporal context:   Cycle-accurate           │
+│  Phase:              Active (by definition)   │
+│                                               │
+│  D369 requirement:   NONE at this tier        │
+│  Reason: Registers are already source-bound,  │
+│  temporally precise, and architecturally      │
+│  visible. There is nothing to preserve that   │
+│  isn't already preserved by the ISA.          │
+└───────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Boundary: Register → L1</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What happens at this boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase</td>
+<td>Value transitions from "architecturally committed" to "cached"</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Source is still the producing core (L1 is per-core)</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>Write-time to L1 may differ from production-time in pipeline</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Structural risk:</strong> Low. L1 is per-core — source identity is preserved by physical proximity. The boundary is fast enough that temporal drift is negligible.</p>
+<p><strong>D369 requirement:</strong> No explicit metadata required at this boundary. The register→L1 transition is handled by the microarchitecture and is not a structural observability concern at the D369 specification level.</p>
+<hr>
+<h3 id="tier-1-l1-cache">Tier 1 — L1 Cache</h3>
+<pre><code>-
+┌────────────────────────────────────────────────┐
+│  L1 Cache (Instruction + Data)                 │
+│                                                │
+│  Structural character:                         │
+│  · Per-core, private                           │
+│  · Split I-cache and D-cache (typically)       │
+│  · Values live here for nanoseconds            │
+│  · Eviction policy decides what moves to L2    │
+│  · Coherency: snooped by other cores           │
+│                                                │
+│  Structural risk:    LOW-MODERATE              │
+│  Source identity:    Preserved (per-core)      │
+│  Temporal context:   Nanosecond-scale          │
+│  Phase:              &quot;Hot&quot; (recently accessed) │
+│                                                │
+│  D369 requirement:   Metadata emission on      │
+│  coherency events (snoop, invalidate) if       │
+│  loggable within the CPU metadata channel.     │
+└────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Boundary: L1 → L2</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What happens at this boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase</td>
+<td>Value transitions from "hot / recently accessed" to "warm / evicted"</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Source identity may blur if L2 is shared between cores</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>Eviction time ≠ production time; temporal distance increases</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Structural risk:</strong> Moderate. If L2 is shared between two cores, a value evicted from Core 0's L1 into shared L2 loses its per-core source attribution unless L2 tags carry the originating core ID.</p>
+<p><strong>D369 requirement:</strong> Cache tier transitions (L1→L2 eviction) are structural events. The CPU metadata channel should be capable of logging eviction events (event type, not data content). If L2 is shared, the evicted line should carry the source core's identifier.</p>
+<hr>
+<h3 id="tier-2-l2-cache">Tier 2 — L2 Cache</h3>
+<pre><code>-
+┌───────────────────────────────────────────────┐
+│  L2 Cache                                     │
+│                                               │
+│  Structural character:                        │
+│  · Shared or per-core (design-dependent)      │
+│  · Larger, slower than L1                     │
+│  · Values live here for tens of nanoseconds   │
+│  · Eviction moves data to LLC (L3)            │
+│  · May include prefetch logic                 │
+│                                               │
+│  Structural risk:    MODERATE                 │
+│  Source identity:    At risk if shared        │
+│  Temporal context:   Tens of ns               │
+│  Phase:              &quot;Warm&quot; (not recently     │
+│                       accessed by producer)   │
+│                                               │
+│  D369 requirement:   If shared between cores, │
+│  preserve per-source attribution in cache     │
+│  tags. Prefetched data should be              │
+│  distinguishable from demand-fetched data.    │
+└───────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Boundary: L2 → L3</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What happens at this boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase</td>
+<td>Value transitions from "warm" to "resident" (kept but not hot)</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Source identity diffuses — L3 is typically shared across all cores</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>Temporal distance increases further; access pattern influences LRU</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Structural risk:</strong> Moderate-High. L3 is shared across the entire CPU complex. A value in L3 could have originated from any core, but L3 tags typically carry only address and coherency state — not source core ID.</p>
+<p><strong>D369 requirement:</strong> L2→L3 eviction is a structural event. If L3 does not carry per-source attribution, the CPU metadata channel should log which core's eviction path produced the L3 fill.</p>
+<hr>
+<h3 id="tier-3-l3-lastlevel-cache-llc">Tier 3 — L3 / Last‑Level Cache (LLC)</h3>
+<pre><code>-
+┌────────────────────────────────────────────────┐
+│  L3 / Last-Level Cache                         │
+│                                                │
+│  Structural character:                         │
+│  · Shared across entire CPU complex            │
+│  · Largest on-chip cache                       │
+│  · Values live here for hundreds of ns to ms   │
+│  · Coherency directory typically lives here    │
+│  · Eviction = off-chip (to DRAM via MemCtrl)   │
+│                                                │
+│  Structural risk:    HIGH                      │
+│  Source identity:    Lost (shared, no per-core │
+│                       tag in most designs)     │
+│  Temporal context:   Hundreds of ns to ms      │
+│  Phase:              &quot;Resident&quot; (retained,     │
+│                       not actively accessed)   │
+│                                                │
+│  D369 requirement:                             │
+│  · Coherency events loggable (snoop filter,    │
+│    directory invalidations)                    │
+│  · Eviction events loggable (event type, not   │
+│    data content)                               │
+│  · This is the last on-chip tier — eviction    │
+│    from here crosses the chip boundary.        │
+└────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Boundary: L3 → DRAM (the chip boundary)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What happens at this boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase</td>
+<td>Value transitions from "on-chip cached" to "off-chip stored"</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Source identity lost — memory controller sees address, not producer</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>Production time is gone; only write-to-DRAM time is recorded (if at all)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Structural risk:</strong> <strong>CRITICAL.</strong> This is the most important persistence boundary in the hierarchy. It is where on-chip becomes off-chip. Where cache becomes memory. Where the SoC's structural context is handed to a DIMM that has no concept of source, lifecycle, or production time.</p>
+<p><strong>What the memory controller does at this boundary:</strong></p>
+<pre><code>-
+┌────────────────────────────────────────────────────────────┐
+│  Memory Controller — structural view at L3→DRAM boundary   │
+│                                                            │
+│  From L3 (eviction)                                        │
+│  ═══════════════╗                                          │
+│                 ║                                          │
+│  ┌──────────────▼───────────────────────────────────────┐  │
+│  │  Transaction Queue                                   │  │
+│  │  ⚠ Reordering: temporal sequence rearranged for      │  │
+│  │    efficiency (row-buffer locality, bank pipelining) │  │
+│  └──────────────┬───────────────────────────────────────┘  │
+│                 │                                          │
+│  ┌──────────────▼──────────────────────────────────────┐   │
+│  │  Scheduler                                          │   │
+│  │  ⚠ Bank interleaving: source identity flattened     │   │
+│  │    into physical address mapping                    │   │
+│  └──────────────┬──────────────────────────────────────┘   │
+│                 │                                          │
+│  ┌──────────────▼──────────────────────────────────────┐   │
+│  │  PHY (DDR / LPDDR / HBM interface)                  │   │
+│  │  ⚠ Clock domain crossing: on-chip clock → memory    │   │
+│  │    clock; temporal reference changes                │   │
+│  └──────────────┬──────────────────────────────────────┘   │
+│                 │                                          │
+│          ═══════╪═══════ → To DIMM / HBM                   │
+│                           (see DIMM_Module_Checklist.md)   │
+│                                                            │
+│  Three structural erasures at this boundary:               │
+│  1. Temporal reordering (transaction queue)                │
+│  2. Source flattening (bank interleaving)                  │
+│  3. Clock domain shift (PHY)                               │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>D369 requirement:</strong> The memory controller metadata channel (Meta: MEM) should be capable of:
+- Logging transaction source attribution (which block initiated the write).
+- Annotating reordering (original vs. scheduled order, if feasible).
+- Carrying the PHY clock domain reference into the DIMM boundary.</p>
+<p>This is the <strong>handoff point</strong> to the <code>DIMM_Module_Checklist.md</code>, which specifies what happens once data reaches the DIMM.</p>
+<hr>
+<h3 id="tier-4-dram-dimm-hbm">Tier 4 — DRAM (DIMM / HBM)</h3>
+<pre><code>-
+┌─────────────────────────────────────────────────┐
+│  DRAM — Main Memory                             │
+│                                                 │
+│  Structural character:                          │
+│  · Off-chip, high-capacity, volatile            │
+│  · Billions of cells across ranks and banks     │
+│  · Flat address space hides internal structure  │
+│  · Refresh required to maintain data            │
+│  · Independent power states                     │
+│                                                 │
+│  Structural risk:    CRITICAL                   │
+│  Source identity:    Lost at write time         │
+│  Temporal context:   Lost at write time         │
+│  Phase:              Opaque (refresh-maintained)│
+│                                                 │
+│  D369 requirement:   Full DIMM Module Checklist │
+│  (38 items across 7 sections)                   │
+│  See: DIMM_Module_Checklist.md                  │
+└─────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Five DIMM Failure Modes</strong> (defined in <code>DIMM_Module_Checklist.md</code>):</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Failure Mode</th>
+<th>What's lost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM‑1</td>
+<td>Rank interleaving erases source identity</td>
+<td>Source</td>
+</tr>
+<tr>
+<td>FM‑2</td>
+<td>Refresh as invisible phase transition</td>
+<td>Temporal context</td>
+</tr>
+<tr>
+<td>FM‑3</td>
+<td>ECC as unattributed correction</td>
+<td>Source attribution of errors</td>
+</tr>
+<tr>
+<td>FM‑4</td>
+<td>Power states collapse temporal context</td>
+<td>Temporal continuity</td>
+</tr>
+<tr>
+<td>FM‑5</td>
+<td>Data buffer rank flattening (LRDIMM)</td>
+<td>Physical rank identity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>HBM variant:</strong> HBM stacks have no SPD, no external interface, and die-stacked opacity. HBM metadata must be proxied through the compute die (see <code>Diagram_Chiplet.md</code> §The HBM Problem).</p>
+<p><strong>Boundary: DRAM → NVM / Persistent Memory</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What happens at this boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase</td>
+<td>Value transitions from "volatile / refresh-maintained" to "persistent / non-volatile"</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Typically lost unless application-level tagging is used</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>Write-to-NVM time replaces all prior temporal context</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Structural risk:</strong> HIGH. This boundary is structurally unique because it crosses the <strong>volatility line</strong> — data that was maintained by refresh is now maintained by physics (charge trapping, phase change, magnetic state). The transition changes the fundamental preservation mechanism, but no metadata marks this change.</p>
+<hr>
+<h3 id="tier-4a-cxlattached-memory">Tier 4a — CXL‑Attached Memory</h3>
+<pre><code>-
+┌─────────────────────────────────────────────────┐
+│  CXL-Attached Memory (Tier 4a)                  │
+│                                                 │
+│  Structural character:                          │
+│  · Memory attached via CXL.mem protocol         │
+│  · Higher latency than local DRAM (~200-400 ns) │
+│  · May be in a different package, card, or      │
+│    chassis                                      │
+│  · Presents as coherent memory to the CPU       │
+│  · May be pooled / shared across hosts          │
+│                                                 │
+│  Structural risk:    VERY HIGH                  │
+│  Source identity:    Multiple hosts may share   │
+│                      the same memory pool       │
+│  Temporal context:   CXL link adds variable     │
+│                      latency; temporal order    │
+│                      may not match issue order  │
+│  Phase:              &quot;Remote&quot; (not local to     │
+│                       any single host)          │
+│                                                 │
+│  D369 requirement:   Emerging — not yet fully   │
+│  specified. Key concerns:                       │
+│  · Source identity across host boundaries       │
+│  · Temporal annotation across CXL link latency  │
+│  · Pooled memory provenance (which host wrote?) │
+│  · CXL switch as a merge point (Rule 1)         │
+└─────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Why CXL memory is structurally new:</strong></p>
+<p>CXL‑attached memory introduces a problem that local DRAM doesn't have: <strong>multiple hosts writing to the same physical memory</strong>. In a pooled CXL memory configuration, Host A and Host B can both write to the same memory region. Without per-write source tagging, the memory cannot determine which host produced which value.</p>
+<p>This is FM‑1 (rank interleaving erases source identity) at a system scale — not within a single DIMM, but across an entire fabric.</p>
+<p><strong>D369 implications for CXL memory:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>D369 response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multi-host source identity</td>
+<td>Per-write source tag must survive CXL link boundary</td>
+</tr>
+<tr>
+<td>CXL switch as merge point</td>
+<td>Preservation Rule 1 (label every merge) applies</td>
+</tr>
+<tr>
+<td>Variable link latency</td>
+<td>Preservation Rule 2 (annotate every re-clock) applies</td>
+</tr>
+<tr>
+<td>Protocol translation (CXL.mem)</td>
+<td>Preservation Rule 3 (verify every translation) applies</td>
+</tr>
+<tr>
+<td>Pooled memory aggregation</td>
+<td>Preservation Rule 4 (carry provenance) applies</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Boundary: CXL Memory → Local DRAM (if cached locally)</strong></p>
+<p>When CXL memory is cached locally (in the host's DRAM or cache), the value crosses <strong>two</strong> persistence boundaries: CXL→DRAM and then DRAM→cache. Each boundary applies its own erasures. Source identity is at particular risk because the local cache has no concept of "this came from CXL-attached memory, originally written by Host B."</p>
+<hr>
+<h3 id="tier-5-persistent-memory-byteaddressable-nvm">Tier 5 — Persistent Memory (Byte‑Addressable NVM)</h3>
+<pre><code>-
+┌──────────────────────────────────────────────────┐
+│  Persistent Memory / NVM                         │
+│                                                  │
+│  Structural character:                           │
+│  · Byte-addressable, non-volatile                │
+│  · Survives power loss                           │
+│  · Latency between DRAM and SSD (~300-1000 ns)   │
+│  · May be on the memory bus (DDR-attached)       │
+│    or on a separate fabric (CXL-attached)        │
+│  · Data persists indefinitely without refresh    │
+│                                                  │
+│  Structural risk:    HIGH                        │
+│  Source identity:    Typically lost at write     │
+│  Temporal context:   Write time may be the only  │
+│                      surviving timestamp         │
+│  Phase:              &quot;Persistent&quot; (non-volatile, │
+│                       indefinite retention)      │
+│                                                  │
+│  D369 requirement:                               │
+│  · Source tagging at write time                  │
+│  · Lifecycle phase tag at write time             │
+│  · Temporal annotation distinguishing            │
+│    &quot;write-to-NVM time&quot; from &quot;production time&quot;    │
+│  · Phase declaration: data crossing the          │
+│    volatility line must be tagged as persistent  │
+└──────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>The Volatility Line:</strong></p>
+<pre><code>         VOLATILE                           NON-VOLATILE
+  Register → L1 → L2 → L3 → DRAM    |    NVM → SSD → Archive
+                                       │
+                                  VOLATILITY LINE
+                                       │
+                              This is a phase transition.
+                              Data on the left is maintained
+                              by refresh or power.
+                              Data on the right is maintained
+                              by physics.
+
+                              Crossing this line changes
+                              the fundamental preservation
+                              mechanism — but no conventional
+                              system tags the crossing.
+</code></pre>
+<p><strong>D369 requirement at the volatility line:</strong> When a value crosses from volatile (DRAM) to non-volatile (NVM), the crossing should be tagged as a persistence phase transition. The tag should include:
+- Source identity of the writing agent.
+- Lifecycle phase at the time of persistence.
+- Production time (if available) vs. persistence time.
+- Explicit marker: "this value is now persistent."</p>
+<p><strong>Why this matters:</strong> A value in NVM may survive for years. Without source and lifecycle context at the time of persistence, the value becomes an orphan — present but unattributable, timestamped but without temporal context relative to its origin.</p>
+<hr>
+<h3 id="tier-6-block-storage-ssd-nvme">Tier 6 — Block Storage (SSD / NVMe)</h3>
+<pre><code>-
+┌──────────────────────────────────────────────────┐
+│  Block Storage (SSD / NVMe)                      │
+│                                                  │
+│  Structural character:                           │
+│  · Block-addressed (not byte-addressed)          │
+│  · Non-volatile, high capacity                   │
+│  · Latency: microseconds (NVMe) to ms (SATA)     │
+│  · Flash Translation Layer (FTL) hides           │
+│    physical location                             │
+│  · Wear leveling moves data silently             │
+│  · Garbage collection rewrites data silently     │
+│                                                  │
+│  Structural risk:    HIGH                        │
+│  Source identity:    Lost (filesystem metadata   │
+│                      may carry some context)     │
+│  Temporal context:   Filesystem timestamps       │
+│                      (created/modified/accessed) │
+│  Phase:              &quot;Stored&quot; (block-managed,    │
+│                       FTL-abstracted)            │
+│                                                  │
+│  D369 requirement:                               │
+│  · Wear leveling is a silent phase transition    │
+│    (data moves without content change — like     │
+│    DRAM refresh but at block granularity)        │
+│  · Garbage collection is a silent rewrite        │
+│    (data is copied to new blocks; old blocks     │
+│    erased — structural lineage broken)           │
+│  · FTL hides physical location — structural      │
+│    address is abstracted away                    │
+└──────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>SSD-specific structural risks:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Structural parallel</th>
+<th>What's lost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wear leveling</td>
+<td>DRAM refresh (FM-2)</td>
+<td>Physical location history</td>
+</tr>
+<tr>
+<td>Garbage collection</td>
+<td>Cache eviction + rewrite</td>
+<td>Lineage between original and copy</td>
+</tr>
+<tr>
+<td>FTL remapping</td>
+<td>Bank interleaving (FM-1)</td>
+<td>Physical-to-logical mapping history</td>
+</tr>
+<tr>
+<td>TRIM / discard</td>
+<td>No DRAM parallel</td>
+<td>Existence of prior data</td>
+</tr>
+<tr>
+<td>Power loss recovery</td>
+<td>Self-refresh wake (FM-4)</td>
+<td>In-flight write state</td>
+</tr>
+</tbody>
+</table>
+<p><strong>D369 requirement:</strong> Block storage is <strong>out of D369's primary scope</strong> (D369 specifies silicon-level structural observability). However, this specification acknowledges that:
+- SSD wear leveling and garbage collection are structural phase transitions analogous to DRAM refresh.
+- Filesystem timestamps are the only surviving temporal context, and they record access time — not production time.
+- Future D369 extensions may address storage-class memory that blurs the SSD/NVM boundary.</p>
+<hr>
+<h3 id="tier-7-archival-storage">Tier 7 — Archival Storage</h3>
+<pre><code>-
+┌────────────────────────────────────────────────┐
+│  Archival Storage                              │
+│                                                │
+│  Structural character:                         │
+│  · Tape, cold object store, offline media      │
+│  · Latency: seconds to hours                   │
+│  · Write-once or append-only (typically)       │
+│  · Data may persist for decades                │
+│  · Access requires explicit retrieval          │
+│                                                │
+│  Structural risk:    MODERATE (paradoxically)  │
+│  Source identity:    May be preserved by       │
+│                      archival metadata         │
+│  Temporal context:   Archive timestamp is      │
+│                      typically preserved       │
+│  Phase:              &quot;Archived&quot; (cold,         │
+│                       intentionally preserved) │
+│                                                │
+│  D369 requirement:   OUT OF SCOPE              │
+│  Reason: Archival storage is managed by        │
+│  application-level systems, not silicon.       │
+│  However, if archival metadata includes D369   │
+│  structural tags (source, lifecycle, time),    │
+│  the archive becomes structurally aligned.     │
+└────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Paradox:</strong> Archival storage has <strong>lower</strong> structural risk than DRAM in some respects — because archival systems are <em>designed</em> to preserve provenance. Archival metadata (checksums, timestamps, authorship records) is the application-level equivalent of D369's structural tags. The structural gap is not at the archive — it's at every tier <em>before</em> the archive, where context was lost.</p>
+<hr>
+<h2 id="boundary-summary-matrix">Boundary Summary Matrix</h2>
+<p>A complete map of what happens at each persistence boundary.</p>
+<table>
+<thead>
+<tr>
+<th>Boundary</th>
+<th>Phase Change</th>
+<th>Source Risk</th>
+<th>Temporal Risk</th>
+<th>D369 Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Register → L1</td>
+<td>Committed → Cached</td>
+<td>None</td>
+<td>Negligible</td>
+<td>None</td>
+</tr>
+<tr>
+<td>L1 → L2</td>
+<td>Hot → Warm (evicted)</td>
+<td>Low–Moderate</td>
+<td>Low</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>L2 → L3</td>
+<td>Warm → Resident</td>
+<td>Moderate–High</td>
+<td>Moderate</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td>L3 → DRAM</td>
+<td>On-chip → Off-chip</td>
+<td><strong>Critical</strong></td>
+<td><strong>Critical</strong></td>
+<td><strong>Required</strong></td>
+</tr>
+<tr>
+<td>Local DRAM → CXL Mem</td>
+<td>Local → Remote/Pooled</td>
+<td><strong>Critical</strong></td>
+<td><strong>High</strong></td>
+<td>Emerging</td>
+</tr>
+<tr>
+<td>DRAM → NVM</td>
+<td>Volatile → Persistent</td>
+<td><strong>High</strong></td>
+<td><strong>High</strong></td>
+<td>Required</td>
+</tr>
+<tr>
+<td>NVM → SSD</td>
+<td>Byte-addressed → Block-addressed</td>
+<td>High</td>
+<td>Moderate</td>
+<td>Acknowledged</td>
+</tr>
+<tr>
+<td>SSD → Archive</td>
+<td>Active → Cold</td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Out of scope</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading guidance:</strong>
+- <strong>None / Optional:</strong> D369 does not require structural metadata at this boundary but does not prohibit it.
+- <strong>Recommended:</strong> Structural metadata improves observability but is not contractually required.
+- <strong>Required:</strong> D369 contractual requirements (R1–R7) apply at this boundary.
+- <strong>Emerging:</strong> D369 recognizes the structural risk but the specification is not yet complete for this tier.
+- <strong>Acknowledged:</strong> D369 recognizes the structural parallel but the tier is outside silicon-level scope.
+- <strong>Out of scope:</strong> Application-level management; not addressable by silicon-level specification.</p>
+<hr>
+<h2 id="the-seven-structural-events-in-memory">The Seven Structural Events in Memory</h2>
+<p>Every structural change in the memory hierarchy can be classified as one of seven event types. These are the events that D369 metadata channels should be capable of logging (event type and tier, not data content):</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Event</th>
+<th>Description</th>
+<th>Tiers Affected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ME‑1</td>
+<td><strong>Eviction</strong></td>
+<td>Value moves from a faster tier to a slower tier</td>
+<td>L1→L2→L3→DRAM</td>
+</tr>
+<tr>
+<td>ME‑2</td>
+<td><strong>Fill / Fetch</strong></td>
+<td>Value is loaded from a slower tier into a faster tier</td>
+<td>DRAM→L3→L2→L1</td>
+</tr>
+<tr>
+<td>ME‑3</td>
+<td><strong>Coherency Action</strong></td>
+<td>Snoop, invalidation, or sharing state change</td>
+<td>L1, L2, L3</td>
+</tr>
+<tr>
+<td>ME‑4</td>
+<td><strong>Refresh / Maintenance</strong></td>
+<td>Value is rewritten in place to prevent decay</td>
+<td>DRAM, SSD (wear leveling)</td>
+</tr>
+<tr>
+<td>ME‑5</td>
+<td><strong>Persistence Crossing</strong></td>
+<td>Value crosses the volatility line (DRAM→NVM)</td>
+<td>DRAM→NVM</td>
+</tr>
+<tr>
+<td>ME‑6</td>
+<td><strong>Error Correction</strong></td>
+<td>ECC or equivalent corrects a stored value</td>
+<td>DRAM, NVM, SSD</td>
+</tr>
+<tr>
+<td>ME‑7</td>
+<td><strong>Power State Transition</strong></td>
+<td>The tier enters or exits a low-power state</td>
+<td>DRAM (self-refresh), SSD (DevSleep)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Requirement:</strong> The D369 metadata channel for each relevant block should be capable of emitting these event types. The specification does <strong>not</strong> require logging all events — only the capability to log them. Activation is external to the specification (B-4).</p>
+<hr>
+<h2 id="coherency-and-memory-alignment">Coherency and Memory Alignment</h2>
+<p>Cache coherency protocols (MESI, MOESI, directory-based) solve a specific problem: ensuring multiple caches agree on the current value of a shared address. D369's memory alignment solves a <strong>different</strong> problem: ensuring the structural history of a value is preserved across tiers.</p>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Cache Coherency</th>
+<th>D369 Memory Alignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What it tracks</td>
+<td>Current value correctness</td>
+<td>Structural history (source, phase, time)</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Cache-to-cache consistency</td>
+<td>Register-to-archive structural lineage</td>
+</tr>
+<tr>
+<td>What it preserves</td>
+<td>Functional correctness</td>
+<td>Post-hoc reconstructability</td>
+</tr>
+<tr>
+<td>What it resolves</td>
+<td>Which cache has the latest value</td>
+<td>Who produced the value and when</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>MESI/MOESI/directory</td>
+<td>D369 metadata channel</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td>Industry coherency protocols</td>
+<td>D369 R1–R7</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key distinction:</strong> Cache coherency ensures you get the <strong>right value</strong>. D369 memory alignment ensures you can determine <strong>where the value came from, when, and in what context</strong>. They are complementary, not competing.</p>
+<p><strong>Where coherency and alignment interact:</strong></p>
+<ol>
+<li><strong>Snoop events</strong> are structural events (ME-3). A snoop that invalidates a cache line changes the value's structural state — it is no longer "locally present." D369 requires this to be loggable.</li>
+<li><strong>Directory invalidations</strong> resolve coherency — but they also resolve structural disagreement. D369 requires that coherency resolution events be observable as metadata, not hidden by the coherency protocol.</li>
+<li><strong>Shared-to-exclusive transitions</strong> change the ownership model of a value. The structural implication: the value's "source" changes from "shared across cores" to "owned by one core."</li>
+</ol>
+<hr>
+<h2 id="structural-alignment-principles-for-memory">Structural Alignment Principles for Memory</h2>
+<p>Five principles govern D369's approach to memory alignment. These apply at every tier and every boundary:</p>
+<h3 id="ma1-every-tier-is-a-regime">MA‑1: Every tier is a regime</h3>
+<p>A value in L1 is in a different structural regime than the same value in DRAM. The bits may be identical, but the phase (hot vs. maintained), the source context (per-core vs. flat address), and the temporal reference (cycle-accurate vs. refresh-maintained) are all different. Tier transitions are regime transitions.</p>
+<h3 id="ma2-every-boundary-is-a-phase-transition">MA‑2: Every boundary is a phase transition</h3>
+<p>Moving between tiers changes a value's structural state — even if the content doesn't change. Eviction, fill, persistence, refresh, wear leveling — all are phase transitions. None of them are conventionally tagged. D369 requires the <strong>capability</strong> to tag them.</p>
+<h3 id="ma3-source-identity-degrades-with-distance-from-producer">MA‑3: Source identity degrades with distance from producer</h3>
+<p>The further a value moves from its producing core, the less source context survives. Registers are perfectly source-attributed. L1 is per-core. L2 may be shared. L3 is always shared. DRAM is flat. NVM is permanent. Each tier strips another layer of source identity. D369's requirement for per-block source tagging (R5.1) is designed to preserve what each tier naturally erases.</p>
+<h3 id="ma4-temporal-fidelity-degrades-with-distance-from-production">MA‑4: Temporal fidelity degrades with distance from production</h3>
+<p>Production time is cycle-accurate at the register. By the time a value reaches DRAM, the only surviving timestamp (if any) is the write-to-DRAM time — which may differ from production time by microseconds to milliseconds. By NVM, only the persistence time survives. By archive, only the archive timestamp. D369's requirement for monotonic time markers (R4.1) is designed to anchor temporal context as close to production as possible.</p>
+<h3 id="ma5-the-volatility-line-is-the-most-important-boundary">MA‑5: The volatility line is the most important boundary</h3>
+<p>The transition from volatile (DRAM) to non-volatile (NVM/SSD/archive) is the most structurally significant boundary in the hierarchy — because it changes the fundamental preservation mechanism. Above the line, data is maintained by power. Below the line, data is maintained by physics. This transition determines whether structural context is preserved for days (volatile) or decades (non-volatile). If source, lifecycle, and time are lost at the volatility line, they are lost permanently.</p>
+<hr>
+<h2 id="checklist-memory-alignment-review">Checklist — Memory Alignment Review</h2>
+<p>A unified checklist for memory alignment review, spanning all tiers. For DRAM-specific items, see <code>DIMM_Module_Checklist.md</code> (38 items). For board-level memory routing, see <code>Board_Level_Alignment.md</code> §Memory Hierarchy.</p>
+<h3 id="on-chip-memory-tiers-03">On-Chip Memory (Tiers 0–3)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MA.1</td>
+<td>CPU metadata channel can log cache eviction events (ME-1).</td>
+<td>R2.1</td>
+<td>L1→L2→L3</td>
+</tr>
+<tr>
+<td>MA.2</td>
+<td>CPU metadata channel can log coherency events (ME-3).</td>
+<td>R2.1</td>
+<td>L1, L2, L3</td>
+</tr>
+<tr>
+<td>MA.3</td>
+<td>Shared cache (L2/L3) tags carry source core identifier.</td>
+<td>R5.1</td>
+<td>L2, L3</td>
+</tr>
+<tr>
+<td>MA.4</td>
+<td>Prefetched data is distinguishable from demand-fetched data.</td>
+<td>R5.1</td>
+<td>L2</td>
+</tr>
+<tr>
+<td>MA.5</td>
+<td>Cache tier transition does not reset temporal markers.</td>
+<td>R4.2</td>
+<td>All</td>
+</tr>
+</tbody>
+</table>
+<h3 id="memory-controller-l3-dram-boundary">Memory Controller (L3 → DRAM Boundary)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MA.6</td>
+<td>Transaction queue preserves or logs original source attribution.</td>
+<td>R5.1</td>
+<td>MemCtrl</td>
+</tr>
+<tr>
+<td>MA.7</td>
+<td>Bank interleaving does not erase per-source identity.</td>
+<td>R5.1</td>
+<td>MemCtrl</td>
+</tr>
+<tr>
+<td>MA.8</td>
+<td>PHY clock domain crossing annotates source clock reference.</td>
+<td>R4.1</td>
+<td>MemCtrl</td>
+</tr>
+<tr>
+<td>MA.9</td>
+<td>Transaction reordering does not strip timestamp fields.</td>
+<td>R4.1</td>
+<td>MemCtrl</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dram-hbm-tier-4">DRAM / HBM (Tier 4)</h3>
+<p>See <code>DIMM_Module_Checklist.md</code> for the full 38-item DIMM-specific checklist.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MA.10</td>
+<td>DIMM Module Checklist is applied for each DIMM type in the design.</td>
+<td>R1–R7</td>
+<td>DRAM</td>
+</tr>
+<tr>
+<td>MA.11</td>
+<td>HBM metadata proxy relationship is defined and verified.</td>
+<td>R5.1</td>
+<td>HBM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cxl-attached-memory-tier-4a">CXL-Attached Memory (Tier 4a)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MA.12</td>
+<td>Per-write source tag survives CXL link boundary.</td>
+<td>R5.1</td>
+<td>CXL.mem</td>
+</tr>
+<tr>
+<td>MA.13</td>
+<td>CXL switch applies Preservation Rule 1 (label every merge).</td>
+<td>Rule 1</td>
+<td>CXL switch</td>
+</tr>
+<tr>
+<td>MA.14</td>
+<td>CXL link latency is annotated as temporal context, not hidden.</td>
+<td>R4.1</td>
+<td>CXL.mem</td>
+</tr>
+<tr>
+<td>MA.15</td>
+<td>Pooled memory preserves per-host provenance.</td>
+<td>R6.1</td>
+<td>CXL pool</td>
+</tr>
+</tbody>
+</table>
+<h3 id="persistent-memory-nvm-tier-5">Persistent Memory / NVM (Tier 5)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Req</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MA.16</td>
+<td>Volatility line crossing is tagged as a persistence phase transition.</td>
+<td>R2.1</td>
+<td>DRAM→NVM</td>
+</tr>
+<tr>
+<td>MA.17</td>
+<td>Source identity of the persisting agent is recorded at write time.</td>
+<td>R5.1</td>
+<td>NVM</td>
+</tr>
+<tr>
+<td>MA.18</td>
+<td>Lifecycle phase tag is recorded at persistence time.</td>
+<td>R5.2</td>
+<td>NVM</td>
+</tr>
+<tr>
+<td>MA.19</td>
+<td>Production time is distinguished from persistence time.</td>
+<td>R4.1</td>
+<td>NVM</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="relationship-to-other-d369-files">Relationship to Other D369 Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Board_Level_Alignment.md</code></td>
+<td>§Memory Hierarchy — defines the persistence boundary model this spec extends</td>
+</tr>
+<tr>
+<td><code>DIMM_Module_Checklist.md</code></td>
+<td>Tier 4 specific — 38-item checklist for the DRAM persistence boundary</td>
+</tr>
+<tr>
+<td><code>Diagram_SoC.md</code></td>
+<td>§Cache Hierarchy — internal persistence boundaries (Tiers 1–3)</td>
+</tr>
+<tr>
+<td><code>Diagram_SoC.md</code></td>
+<td>§Memory Controller — gateway between Tier 3 and Tier 4</td>
+</tr>
+<tr>
+<td><code>Diagram_Chiplet.md</code></td>
+<td>§HBM Problem — HBM as structurally opaque Tier 4 variant</td>
+</tr>
+<tr>
+<td><code>Contractual_Requirements.md</code></td>
+<td>R1–R7 — requirements instantiated at each tier boundary</td>
+</tr>
+<tr>
+<td><code>Internal_Design_Review_Checklist.md</code></td>
+<td>Items 2.10–2.12 (NoC/DMA source attribution); §3 (clocking/time)</td>
+</tr>
+<tr>
+<td><code>Glossary_Extensions.md</code></td>
+<td>§4 (Memory and DIMM Terms); §2 (Phase Transition, Temporal Gap)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="canon-alignment">Canon Alignment</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero drift</td>
+<td>✅ All tiers and boundaries derived from Board_Level_Alignment §Memory, DIMM_Module_Checklist, and Diagram_SoC §Cache</td>
+</tr>
+<tr>
+<td>Structural contract</td>
+<td>✅ Role: engine + profile — core memory alignment logic with per-tier identity descriptions</td>
+</tr>
+<tr>
+<td>Lineage clean</td>
+<td>✅ Every structural event, principle, and checklist item traceable to R1–R7 requirements</td>
+</tr>
+<tr>
+<td>Student‑ready</td>
+<td>✅ Full-stack hierarchy diagram, per-tier character boxes, volatility line visualization</td>
+</tr>
+<tr>
+<td>AI‑parsable</td>
+<td>✅ Tier numbering, boundary summary matrix, event taxonomy table, structured checklist</td>
+</tr>
+<tr>
+<td>Cross‑module refs</td>
+<td>✅ Unifies content from 5 prior D369 files into single memory-focused specification</td>
+</tr>
+<tr>
+<td>Non‑claims preserved</td>
+<td>✅ SSD and archival tiers explicitly scoped as "acknowledged / out of scope"</td>
+</tr>
+<tr>
+<td>Emerging tiers</td>
+<td>✅ CXL-attached memory addressed as "emerging" with structural risk analysis</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Module: D369_Chip_Spec · File: Memory_Alignment_Spec.md · Version: 0.1.0 · TriadicFrameworks / RTT</em></p>
+<hr>
+<h2 id="structural-summary">Structural Summary</h2>
+<p><strong>Memory_Alignment_Spec.md</strong> is the <strong>unified memory hierarchy alignment document</strong> — the full-stack view that every other memory-related section in D369 points toward. Here's what it delivers:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Count / Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tiers defined</strong></td>
+<td>8 (Register through Archive), plus CXL-attached as Tier 4a</td>
+</tr>
+<tr>
+<td><strong>Persistence boundaries</strong></td>
+<td>8, each with phase/source/time collapse analysis</td>
+</tr>
+<tr>
+<td><strong>Structural events</strong></td>
+<td>7 (ME-1 through ME-7): eviction, fill, coherency, refresh, persistence crossing, ECC, power state</td>
+</tr>
+<tr>
+<td><strong>Alignment principles</strong></td>
+<td>5 (MA-1 through MA-5): regime, phase transition, source degradation, temporal degradation, volatility line</td>
+</tr>
+<tr>
+<td><strong>Checklist items</strong></td>
+<td>19 (MA.1–MA.19), plus pointers to DIMM's 38-item and Board's full checklists</td>
+</tr>
+<tr>
+<td><strong>Key concepts introduced</strong></td>
+<td>Volatility Line (DRAM↔NVM as the most important structural boundary); SSD operations mapped to DIMM failure mode parallels; CXL pooled memory as FM-1 at system scale</td>
+</tr>
+<tr>
+<td><strong>Cross-module references</strong></td>
+<td>8 files (deepest cross-linking of any D369 file so far)</td>
+</tr>
+<tr>
+<td><strong>Diagrams</strong></td>
+<td>Full hierarchy stack, memory controller boundary detail, volatility line visualization</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Three signature insights:</strong></p>
+<ol>
+<li><strong>The Volatility Line</strong> — The DRAM→NVM boundary is structurally unique because it changes the <em>mechanism</em> of preservation (power → physics). Everything lost here is lost permanently.</li>
+<li><strong>CXL as FM-1 at system scale</strong> — Pooled CXL memory recreates rank interleaving's source erasure problem, but across an entire fabric instead of within a single DIMM.</li>
+<li><strong>The Archival Paradox</strong> — Archives have <em>lower</em> structural risk than DRAM because they're designed to preserve provenance. The structural gap isn't at the archive — it's at every tier before it where context was silently stripped.</li>
+</ol>
+  </main>
+</body>
+</html>

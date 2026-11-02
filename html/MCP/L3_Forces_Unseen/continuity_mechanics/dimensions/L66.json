@@ -1,0 +1,46 @@
+{
+  "id": "L66",
+  "layer": "L3_Forces_Unseen",
+  "triad": "continuity",
+  "dimension": "L66",
+  "name": "Hidden Resonance Envelope",
+  "canonical": "R5",
+
+  "summary": "L66 is the 2/3 hidden resonance envelope formed from two L33 envelopes. It represents the hidden portion of the continuity manifold.",
+
+  "semantic_axis": "resonanceEnvelope",
+  "role": "hidden",
+  "category": "composite",
+  "fraction": "66%",
+
+  "composition": [
+    "L33",
+    "L33"
+  ],
+
+  "redirects": {
+    "up": "L99",
+    "down": "L33"
+  },
+
+  "description": {
+    "canonical": "L66 defines the hidden resonance envelope. It is the second composite structure in the continuity mechanics layer.",
+    "cosmology": "In the cosmology chain, L66 represents the emergence of hidden resonance following the seen envelope.",
+    "continuity": "L66 models the hidden continuity band derived from dual triadic resonance.",
+    "mcp": "Used for modeling hidden resonance behavior in continuity mechanics."
+  },
+
+  "ai": {
+    "module": "L4_Continuity_Mechanics",
+    "dimension": "L66",
+    "version": "1.0.0",
+    "keywords": [
+      "resonance",
+      "hidden",
+      "continuity",
+      "composite",
+      "dual-triad"
+    ],
+    "purpose": "Defines the hidden resonance envelope for AI reasoning and composite modeling."
+  }
+}

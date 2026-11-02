@@ -1,0 +1,22 @@
+{
+  "title": "Atomic Clocks and Resonance‑Time: A Structural Alignment",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "doi": "10.5281/zenodo.18316763",
+  "description": "A minimal, architecture‑agnostic structural framework aligning atomic timekeeping with Resonance‑Time and Validated Spacetime (vST).",
+  "creators": [
+    {
+      "name": "Loswin, Nawder",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "keywords": [
+    "atomic clocks",
+    "resonance-time",
+    "validated spacetime",
+    "vST",
+    "timekeeping",
+    "metrology"
+  ],
+  "license": "CC-BY-4.0"
+}

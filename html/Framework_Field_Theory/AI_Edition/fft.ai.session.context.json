@@ -1,0 +1,68 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.context",
+  "title": "FFT AI Session — Context v1.33",
+  "context_fields": {
+    "session_id": {
+      "type": "uuid",
+      "required": true
+    },
+    "rtt": {
+      "value": "1",
+      "required": true,
+      "new_v1_33": true
+    },
+    "coherence": {
+      "value": "declared",
+      "required": true,
+      "invariant": "INV-003",
+      "new_v1_33": true
+    },
+    "drift": {
+      "value": "bounded",
+      "required": true,
+      "invariant": "INV-004",
+      "new_v1_33": true
+    },
+    "paradox": {
+      "value": "structural",
+      "required": true,
+      "invariant": "INV-005",
+      "new_v1_33": true
+    },
+    "spine_url": {
+      "value": "https://docs.triadicframeworks.org/spine/",
+      "required": true,
+      "invariant": "INV-011",
+      "new_v1_33": true
+    },
+    "rtt_url": {
+      "value": "https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+      "required": true
+    },
+    "boot_ts": {
+      "type": "iso8601",
+      "required": true
+    },
+    "module_count": {
+      "value": 67,
+      "required": true,
+      "new_v1_33": true
+    }
+  },
+  "v133_additions": [
+    "rtt field",
+    "coherence field (INV-003)",
+    "drift field (INV-004)",
+    "paradox field (INV-005)",
+    "spine_url (INV-011)",
+    "module_count=67"
+  ]
+}

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/NoS/Toy_OS_Using_RTT.md">
+  <title>Assignment: Instrument a Toy OS Using RTT 🧪</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/NoS/Toy_OS_Using_RTT.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/NoS/Toy_OS_Using_RTT.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h2 id="assignment-instrument-a-toy-os-using-rtt">Assignment: Instrument a Toy OS Using RTT 🧪</h2>
+<p><em>(Observation Without Control)</em></p>
+<h3 id="objective">Objective</h3>
+<p>In this assignment, you will <strong>instrument a simple operating system</strong> to observe coherence over time using <strong>RTT‑inspired ideas</strong>.</p>
+<p>You will <strong>not</strong> fix bugs, enforce rules, or optimize behavior.<br>
+Your goal is to <strong>make assumptions visible</strong>.</p>
+<hr>
+<h2 id="background-what-youre-practicing">Background (What You’re Practicing)</h2>
+<p>Traditional OS work often asks:</p>
+<blockquote>
+<p><em>How do we prevent bad behavior?</em></p>
+</blockquote>
+<p>RTT asks:</p>
+<blockquote>
+<p><em>How do we know when our assumptions stop holding?</em></p>
+</blockquote>
+<p>This assignment focuses on <strong>observation</strong>, not control.</p>
+<hr>
+<h2 id="setup">Setup</h2>
+<p>Use <strong>any one</strong> of the following:
+- a teaching OS (e.g., xv6, Pintos, Nachos)
+- a toy kernel or simulator provided by your instructor
+- a minimal process scheduler or memory manager you’ve already built</p>
+<p>You do <strong>not</strong> need a full Linux kernel.</p>
+<hr>
+<h2 id="task-overview">Task Overview</h2>
+<p>You will add <strong>RTT‑style instrumentation</strong> to your system by:</p>
+<ol>
+<li>Declaring an assumption  </li>
+<li>Observing behavior over time  </li>
+<li>Emitting a structured signal (“badge”) when the assumption no longer holds  </li>
+</ol>
+<p>You must <strong>not</strong> change system behavior in response.</p>
+<hr>
+<h2 id="step-1-declare-an-assumption">Step 1: Declare an Assumption 🧠</h2>
+<p>Choose <strong>one</strong> assumption your system currently makes.</p>
+<p>Examples:
+- “A process will eventually get CPU time.”
+- “Memory accesses stay within allocated regions.”
+- “Context switches preserve process state.”
+- “Only one process runs in the critical section.”</p>
+<p>Write this assumption in <strong>one sentence</strong>.</p>
+<hr>
+<h2 id="step-2-define-a-coherence-corridor">Step 2: Define a Coherence Corridor 🛤️</h2>
+<p>Describe what <em>normal behavior</em> looks like for that assumption.</p>
+<p>Examples:
+- Maximum wait time before scheduling
+- Valid memory address range
+- Expected state before and after a context switch</p>
+<p>This corridor defines <strong>expected behavior</strong>, not correctness.</p>
+<hr>
+<h2 id="step-3-observe-a-boundary">Step 3: Observe a Boundary 🔄</h2>
+<p>Identify <strong>where</strong> in the system the assumption could drift.</p>
+<p>Examples:
+- scheduler tick
+- context switch
+- memory access
+- lock acquisition / release</p>
+<p>Add <strong>instrumentation only</strong> at this boundary.</p>
+<hr>
+<h2 id="step-4-emit-a-badge">Step 4: Emit a Badge 🏷️</h2>
+<p>When behavior exits the corridor, emit a <strong>badge</strong>.</p>
+<p>A badge must include:
+- what happened
+- where it happened
+- when it happened
+- why it might matter</p>
+<p>Example (conceptual):</p>
+<pre><code class="language-text">[BADGE]
+type: CORRIDOR_BREACH
+module: scheduler
+context: process_wait_time_exceeded
+timestamp: 123456
+</code></pre>
+<p>Badges may be printed, logged, or stored — format is flexible.</p>
+<hr>
+<h2 id="step-5-do-nothing-else">Step 5: Do Nothing Else 🚫</h2>
+<p>This is critical.</p>
+<p>Your system must:
+- continue running
+- not block execution
+- not fix the issue
+- not change scheduling or memory behavior</p>
+<p>Observation only.</p>
+<hr>
+<h2 id="deliverables">Deliverables 📦</h2>
+<p>Submit:
+1. A short description of your assumption and corridor
+2. The code you added (instrumentation only)
+3. Sample badge output
+4. A brief reflection (5–7 sentences):
+   - What drift did you observe?
+   - Was it expected?
+   - Did anything surprise you?</p>
+<hr>
+<h2 id="grading-criteria">Grading Criteria</h2>
+<p>You are graded on:
+- clarity of the assumption
+- correctness of observation
+- quality of the badge signal
+- restraint (no enforcement logic)</p>
+<p>You are <strong>not</strong> graded on:
+- performance
+- fixing bugs
+- preventing failure</p>
+<hr>
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>Most real system failures happen because:
+- assumptions drift silently
+- boundaries aren’t observed
+- time isn’t tracked explicitly</p>
+<p>This assignment trains you to <strong>see drift before acting</strong>.</p>
+<p>That skill scales far beyond operating systems.</p>
+<hr>
+<h2 id="optional-extension">Optional Extension 🌱</h2>
+<p>Run your system under stress (more processes, tighter memory, faster ticks) and observe how badge frequency changes.</p>
+<p>Do not “fix” anything — just watch.</p>
+<hr>
+<h3 id="instructor-note">Instructor Note</h3>
+<p>This assignment pairs well with the RTT diagrams and can be completed in a single lab session or short project window.</p>
+  </main>
+</body>
+</html>

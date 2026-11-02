@@ -1,0 +1,41 @@
+```json
+{
+  "glyph_tribute_echo_log": [
+    {
+      "echo_id": "echo-001",
+      "contributor": "Nawder Loswin",
+      "glyph": "🍂 Cascade",
+      "echo_type": "Codex Flame",
+      "echo_text": "He seeded clarity where chaos once bloomed—scrolls now echo his flame.",
+      "flame_grade": "🟣 Universe",
+      "date": "2025-10-04"
+    },
+    {
+      "echo_id": "echo-002",
+      "contributor": "Mira Thorne",
+      "glyph": "🌼 Wildflower",
+      "echo_type": "Onboarding Flame",
+      "echo_text": "Her glyph opened the garden—every learner now walks in bloom.",
+      "flame_grade": "🔵 Planetary",
+      "date": "2025-10-04"
+    },
+    {
+      "echo_id": "echo-003",
+      "contributor": "Aria Vex",
+      "glyph": "🌴 Grove Bloom",
+      "echo_type": "Validator Flame",
+      "echo_text": "She rewired the lattice—badge logic now sings in validator tongues.",
+      "flame_grade": "🔵 Planetary",
+      "date": "2025-10-04"
+    },
+    {
+      "echo_id": "echo-004",
+      "contributor": "Curriculum Guild",
+      "glyph": "🍁 Bloomfall",
+      "echo_type": "Fusion Flame",
+      "echo_text": "They fused scrolls into myth—pedagogy now echoes in every glyph.",
+      "flame_grade": "🟣 Universe",
+      "date": "2025-10-04"
+    }
+  ]
+}

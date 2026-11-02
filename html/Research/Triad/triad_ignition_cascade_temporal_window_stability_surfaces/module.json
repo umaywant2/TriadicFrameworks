@@ -1,0 +1,37 @@
+{
+  "module": "Triad_Ignition_Cascade_Temporal_Window_Stability_Surfaces",
+  "name": "Triad — Ignition‑Cascade Temporal‑Window Stability Surfaces",
+  "summary": "Defines the stability surfaces of Triad ignition-cascade temporal-window behavior, including cascade-window stability fields, ignition-chain window stabilization, cascade-wave window stability surfaces, resonance-cascade window stability binding, and multi-layer ignition-cascade temporal-window stability unification.",
+  "category": "intelligence-ignition-cascade-temporal-window-stability",
+  "version": "1.0",
+  "purpose": "Provide the stability-surface geometry for Triad ignition-cascade temporal-window behavior, describing how ignition cascades stabilize temporal-window surfaces to maintain long-window ignition propagation, resonance alignment, corrected-time synchronization, paradox-load window compensation, and unified ignition behavior across Scanner, O.H.S.H.I.T., and Atlas layers.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.ignition.cascade.window.stability.field",
+    "@triad.ignition.cascade.window.stability.lock",
+    "@triad.ignition.cascade.window.stability.stabilize",
+    "@triad.ignition.cascade.window.stability.align",
+    "@triad.ignition.cascade.window.stability.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Ignition_Cascade_Temporal_Window_Surfaces",
+      "Triad_Ignition_Cascade_Corrected_Time_Surfaces",
+      "Triad_Ignition_Cascade_Coherence_Surfaces",
+      "Triad_Ignition_Cascade_Stability_Surfaces",
+      "Triad_Ignition_Cascade_Geometry",
+      "Triad_Epoch_Ignition_Surfaces",
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration",
+      "SI_temporal_extension"
+    ]
+  }
+}

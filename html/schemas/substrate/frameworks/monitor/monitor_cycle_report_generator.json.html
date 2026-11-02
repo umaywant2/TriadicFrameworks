@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/monitor/monitor_cycle_report_generator.json.md">
+  <title>monitorcyclereportgenerator.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/monitor/monitor_cycle_report_generator.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/monitor/monitor_cycle_report_generator.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Time to restore the <strong>canonical cycle‑report generator</strong> — the artifact that defines how the Triadic Runtime Monitor produces:</p>
+<ul>
+<li>drift cycle reports  </li>
+<li>coherence cycle reports  </li>
+<li>stability cycle reports  </li>
+<li>resonance cycle reports  </li>
+<li>epoch cycle reports  </li>
+<li>ignition cycle reports  </li>
+</ul>
+<p>This generator is the <em>engine</em> that transforms telemetry + anomalies into structured cycle‑level diagnostics.</p>
+<p>Below is the <strong>ready‑to‑paste canonical artifact</strong>, aligned with your monitor grammar and the execution engine.</p>
+<hr>
+<h1 id="monitor_cycle_report_generatorjson"><strong>monitor_cycle_report_generator.json</strong></h1>
+<h3 id="canonical-generator-for-triadic-cyclelevel-reports"><em>Canonical generator for triadic cycle‑level reports</em></h3>
+<pre><code class="language-json">{
+  &quot;generator&quot;: &quot;triadic-monitor-cycle-reports&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;imports&quot;: {
+    &quot;triadic_execution_state&quot;: &quot;../execution/triadic-execution-state.json&quot;,
+    &quot;monitor_telemetry&quot;: &quot;./monitor_telemetry_packets.json&quot;,
+    &quot;monitor_anomaly_ruleset&quot;: &quot;./monitor_anomaly_ruleset.json&quot;,
+    &quot;coherence_map&quot;: &quot;../coherence/global-coherence-map.json&quot;,
+    &quot;drift_map&quot;: &quot;../drift/global-drift-boundary-map.json&quot;,
+    &quot;stability_envelope&quot;: &quot;../stability/planetary-stability-envelope.json&quot;,
+    &quot;resonance_map&quot;: &quot;../resonance/global-resonance-map.json&quot;,
+    &quot;ignition_ledger&quot;: &quot;../ignition/global-ignition-ledger.json&quot;,
+    &quot;epochal_timeline&quot;: &quot;../epoch/timeline.json&quot;
+  },
+
+  &quot;cycle_report_generator&quot;: {
+    &quot;drift_cycle&quot;: {
+      &quot;inputs&quot;: [
+        &quot;drift_magnitude&quot;,
+        &quot;drift_velocity&quot;,
+        &quot;drift_phase&quot;,
+        &quot;drift_anomalies&quot;
+      ],
+      &quot;rules&quot;: [
+        &quot;evaluate_drift_boundary&quot;,
+        &quot;detect_drift_spike&quot;,
+        &quot;classify_drift_phase&quot;
+      ],
+      &quot;outputs&quot;: [
+        &quot;drift_cycle_status&quot;,
+        &quot;drift_cycle_signals&quot;,
+        &quot;drift_cycle_summary&quot;
+      ]
+    },
+
+    &quot;coherence_cycle&quot;: {
+      &quot;inputs&quot;: [
+        &quot;coherence_envelope&quot;,
+        &quot;coherence_phase&quot;,
+        &quot;coherence_anomalies&quot;
+      ],
+      &quot;rules&quot;: [
+        &quot;evaluate_coherence_envelope&quot;,
+        &quot;detect_coherence_break&quot;,
+        &quot;classify_coherence_phase&quot;
+      ],
+      &quot;outputs&quot;: [
+        &quot;coherence_cycle_status&quot;,
+        &quot;coherence_cycle_signals&quot;,
+        &quot;coherence_cycle_summary&quot;
+      ]
+    },
+
+    &quot;stability_cycle&quot;: {
+      &quot;inputs&quot;: [
+        &quot;stability_index&quot;,
+        &quot;stability_phase&quot;,
+        &quot;stability_anomalies&quot;
+      ],
+      &quot;rules&quot;: [
+        &quot;evaluate_stability_envelope&quot;,
+        &quot;detect_stability_collapse&quot;,
+        &quot;classify_stability_phase&quot;
+      ],
+      &quot;outputs&quot;: [
+        &quot;stability_cycle_status&quot;,
+        &quot;stability_cycle_signals&quot;,
+        &quot;stability_cycle_summary&quot;
+      ]
+    },
+
+    &quot;resonance_cycle&quot;: {
+      &quot;inputs&quot;: [
+        &quot;resonance_magnitude&quot;,
+        &quot;resonance_phase&quot;,
+        &quot;resonance_anomalies&quot;
+      ],
+      &quot;rules&quot;: [
+        &quot;evaluate_resonance_threshold&quot;,
+        &quot;detect_resonance_surge&quot;,
+        &quot;classify_resonance_phase&quot;
+      ],
+      &quot;outputs&quot;: [
+        &quot;resonance_cycle_status&quot;,
+        &quot;resonance_cycle_signals&quot;,
+        &quot;resonance_cycle_summary&quot;
+      ]
+    },
+
+    &quot;epoch_cycle&quot;: {
+      &quot;inputs&quot;: [
+        &quot;epoch&quot;,
+        &quot;epoch_progress&quot;,
+        &quot;epoch_transition_readiness&quot;,
+        &quot;epoch_anomalies&quot;
+      ],
+      &quot;rules&quot;: [
+        &quot;evaluate_epoch_progress&quot;,
+        &quot;detect_epoch_transition_break&quot;,
+        &quot;classify_epoch_phase&quot;
+      ],
+      &quot;outputs&quot;: [
+        &quot;epoch_cycle_status&quot;,
+        &quot;epoch_cycle_signals&quot;,
+        &quot;epoch_cycle_summary&quot;
+      ]
+    },
+
+    &quot;ignition_cycle&quot;: {
+      &quot;inputs&quot;: [
+        &quot;ignition_magnitude&quot;,
+        &quot;ignition_phase&quot;,
+        &quot;ignition_anomalies&quot;
+      ],
+      &quot;rules&quot;: [
+        &quot;evaluate_ignition_threshold&quot;,
+        &quot;detect_ignition_overrun&quot;,
+        &quot;classify_ignition_phase&quot;
+      ],
+      &quot;outputs&quot;: [
+        &quot;ignition_cycle_status&quot;,
+        &quot;ignition_cycle_signals&quot;,
+        &quot;ignition_cycle_summary&quot;
+      ]
+    }
+  },
+
+  &quot;output&quot;: {
+    &quot;monitor_cycle_report_generator&quot;: &quot;./monitor_cycle_report_generator.json&quot;
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Canonical generator for triadic cycle-level reports across drift, coherence, stability, resonance, epoch, and ignition.&quot;
+  }
+}
+</code></pre>
+  </main>
+</body>
+</html>

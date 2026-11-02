@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Drift_Taxonomy/module.json.graph.md">
+  <title>TriadicFrameworks Module Dependency Graph</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Drift_Taxonomy/module.json.graph.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Drift_Taxonomy/module.json.graph.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadicframeworks-module-dependency-graph">TriadicFrameworks Module Dependency Graph</h1>
+<p>This graph shows how modules relate to each other across the TriadicFrameworks
+ecosystem. It helps contributors understand conceptual flow, operator reuse,
+and metadata alignment.</p>
+<hr>
+<h2 id="1-high-level-graph">1. High-Level Graph</h2>
+<pre><code>Core_Concepts
+    │
+    ├── Gravity_Foundations
+    │       │
+    │       ├── Drift_Taxonomy
+    │       │       ├── d_Capture
+    │       │       ├── d_Classify
+    │       │       ├── d_Operators
+    │       │       ├── d_Examples
+    │       │       └── d_Paper
+    │       │
+    │       └── FFF_Gravity
+    │
+    ├── RTT_Operators
+    │       └── Operator_Families
+    │
+    └── Module_Graph
+            └── modules_group.json
+</code></pre>
+<hr>
+<h2 id="2-drift-taxonomy-internal-graph">2. Drift Taxonomy Internal Graph</h2>
+<pre><code>Drift_Taxonomy
+    │
+    ├── d_Capture.md
+    │       └── Defines drift types
+    │
+    ├── d_Classify.md
+    │       └── Uses drift types to classify papers
+    │
+    ├── d_Operators.md
+    │       └── Provides algebraic corrections for each drift
+    │
+    ├── d_Examples.md
+    │       └── Applies corrections to representative works
+    │
+    └── d_Paper.md
+            └── Assembles the unified meta-paper
+</code></pre>
+<hr>
+<h2 id="3-cross-module-dependencies">3. Cross-Module Dependencies</h2>
+<h3 id="depends-on"><strong>Depends On</strong></h3>
+<ul>
+<li>Gravity_Foundations (conceptual grounding)</li>
+<li>Operator_Families (operator patterns)</li>
+<li>Module_Graph (metadata consistency)</li>
+</ul>
+<h3 id="provides"><strong>Provides</strong></h3>
+<ul>
+<li>Drift classification system</li>
+<li>Operator correction system</li>
+<li>Publication-ready meta-paper</li>
+<li>Templates for future drift modules</li>
+</ul>
+<hr>
+<h2 id="4-metadata-flow">4. Metadata Flow</h2>
+<pre><code>module.json
+    ├── roles → maps files to conceptual functions
+    ├── analyzer_layer → defines operator/drift/regime sets
+    ├── files → anchors directory structure
+    ├── ai → enables AI discovery and navigation
+    └── citation → anchors publication identity
+</code></pre>
+<hr>
+<h2 id="5-usage">5. Usage</h2>
+<p>This graph helps contributors:</p>
+<ul>
+<li>understand how Drift Taxonomy fits into the broader ecosystem  </li>
+<li>identify where new modules should connect  </li>
+<li>ensure metadata consistency  </li>
+<li>maintain conceptual coherence  </li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/regime_maps_extended.md">
+  <title>RTT Core: Regime Maps (Extended)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/regime_maps_extended.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/regime_maps_extended.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_regime_maps_extended" src="https://github.com/user-attachments/assets/d51b275e-409e-4b9b-ba60-e49ca753404b" /></p>
+<hr>
+<p>module_id: rtt.core.regime_maps_extended
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - regime-maps
+  - extended-regimes
+  - rtt-core
+  - operator-regimes
+  - drift-regimes
+  - coherence-regimes
+  - readout-regimes
+  - triadic-time
+  - composite-regimes</p>
+<hr>
+<h1 id="rtt-core-regime-maps-extended">RTT Core: Regime Maps (Extended)</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Extend the core RTT regime system by defining:</p>
+<ul>
+<li>Composite regime structures  </li>
+<li>Multi‑layer regime geometry  </li>
+<li>Cross‑regime transitions  </li>
+<li>Regime interference and resonance  </li>
+<li>Regime stacking across triadic time  </li>
+<li>Regime behavior under extension, drift, and validation  </li>
+</ul>
+<p>This module expands <code>/docs/rtt/core/regime_maps.md</code> into the full structural map used by RTT operators, drift envelopes, coherence budgets, and Validator Pulse.</p>
+<hr>
+<h2 id="2-regime-geometry-extended">2. Regime geometry (extended)</h2>
+<h3 id="21-regime-manifold">2.1 Regime manifold</h3>
+<p>Regimes form a <strong>multi‑dimensional manifold</strong>:</p>
+<p>[
+\mathcal{R}<em _text_state="\text{state">{\text{ext}} = \mathcal{R}</em>}} \times \mathcal{R<em _text_drift="\text{drift">{\text{coherence}} \times \mathcal{R}</em>
+]}} \times \mathcal{R}_{\text{readout}</p>
+<p>Each axis has its own geometry:</p>
+<ul>
+<li><strong>State axis:</strong> operator validity, representational topology  </li>
+<li><strong>Coherence axis:</strong> thresholds, budgets, decay curves  </li>
+<li><strong>Drift axis:</strong> envelopes, boundaries, drift-loss functions  </li>
+<li><strong>Readout axis:</strong> validation topology, collapse rules  </li>
+</ul>
+<p>Extended regime maps describe how these axes interact.</p>
+<hr>
+<h2 id="3-composite-regime-structures">3. Composite regime structures</h2>
+<p>Composite regimes combine multiple canonical regimes into higher‑order structures.</p>
+<h3 id="31-extension-compatible-composite-ecc">3.1 Extension-Compatible Composite (ECC)</h3>
+<p>[
+ECC = SRR \cap DBR \cap CMR
+]</p>
+<p>Used in quantum “cloning” alignment.</p>
+<h3 id="32-stabilized-drift-composite-sdc">3.2 Stabilized Drift Composite (SDC)</h3>
+<p>[
+SDC = DBR \cap DVR
+]</p>
+<p>Used when drift must be bounded before validation.</p>
+<h3 id="33-high-coherence-composite-hcc">3.3 High-Coherence Composite (HCC)</h3>
+<p>[
+HCC = CMR \cap DVR
+]</p>
+<p>Used in multi-step operator chains requiring deferred validation.</p>
+<h3 id="34-full-regime-composite-frc">3.4 Full-Regime Composite (FRC)</h3>
+<p>[
+FRC = SRR \cap DBR \cap CMR \cap DVR
+]</p>
+<p>Used in complex RTT sequences involving extension, drift, stabilization, and validation.</p>
+<hr>
+<h2 id="4-regime-interference-and-resonance">4. Regime interference and resonance</h2>
+<p>Regimes may <strong>interfere</strong> or <strong>resonate</strong>:</p>
+<h3 id="41-interference">4.1 Interference</h3>
+<p>Two regimes interfere when:</p>
+<ul>
+<li>Their constraints conflict  </li>
+<li>A branch cannot satisfy both simultaneously  </li>
+<li>Operator sequences become invalid  </li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>SRR (single-readout)  </li>
+<li>Multi-readout operator (invalid in RTT core)</li>
+</ul>
+<h3 id="42-resonance">4.2 Resonance</h3>
+<p>Two regimes resonate when:</p>
+<ul>
+<li>Their constraints reinforce each other  </li>
+<li>Eligibility becomes more stable  </li>
+<li>Drift and coherence align  </li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>DBR + CMR  </li>
+<li>Drift remains bounded and coherence remains above threshold</li>
+</ul>
+<hr>
+<h2 id="5-regime-stacking-across-triadic-time">5. Regime stacking across triadic time</h2>
+<p>Regimes may stack across temporal layers:</p>
+<h3 id="51-state-time-stacking-t1">5.1 State-time stacking (T₁)</h3>
+<p>Operators may require:</p>
+<ul>
+<li>Regime entry before extension  </li>
+<li>Regime stability during drift  </li>
+<li>Regime inversion during geometry shifts  </li>
+</ul>
+<h3 id="52-coherence-time-stacking-t2">5.2 Coherence-time stacking (T₂)</h3>
+<p>Coherence thresholds may:</p>
+<ul>
+<li>Increase  </li>
+<li>Decrease  </li>
+<li>Stabilize  </li>
+<li>Redistribute  </li>
+</ul>
+<p>depending on regime transitions.</p>
+<h3 id="53-readout-time-stacking-t3">5.3 Readout-time stacking (T₃)</h3>
+<p>Validator Pulse may require:</p>
+<ul>
+<li>SRR  </li>
+<li>CMR  </li>
+<li>DBR  </li>
+</ul>
+<p>simultaneously.</p>
+<hr>
+<h2 id="6-regime-transitions-extended">6. Regime transitions (extended)</h2>
+<h3 id="61-hard-transitions">6.1 Hard transitions</h3>
+<p>A branch abruptly enters or exits a regime:</p>
+<ul>
+<li>Drift spike  </li>
+<li>Coherence collapse  </li>
+<li>Operator invalidation  </li>
+</ul>
+<h3 id="62-soft-transitions">6.2 Soft transitions</h3>
+<p>A branch gradually moves across regime boundaries:</p>
+<ul>
+<li>Slow drift  </li>
+<li>Gradual coherence decay  </li>
+<li>Deferred validation  </li>
+</ul>
+<h3 id="63-composite-transitions">6.3 Composite transitions</h3>
+<p>A branch transitions across multiple regimes simultaneously:</p>
+<p>[
+ECC \rightarrow SDC \rightarrow SRR
+]</p>
+<p>Used in multi-step RTT operator chains.</p>
+<hr>
+<h2 id="7-regime-maps-under-extension-drift-and-validation">7. Regime maps under extension, drift, and validation</h2>
+<h3 id="71-under-extension">7.1 Under extension</h3>
+<p>Extension operators require:</p>
+<ul>
+<li>ECC  </li>
+<li>Drift increase  </li>
+<li>Coherence partition  </li>
+<li>Deferred validation  </li>
+</ul>
+<h3 id="72-under-drift">7.2 Under drift</h3>
+<p>Drift operators require:</p>
+<ul>
+<li>DBR  </li>
+<li>Coherence loss  </li>
+<li>Envelope boundaries  </li>
+</ul>
+<h3 id="73-under-validation">7.3 Under validation</h3>
+<p>Validator Pulse requires:</p>
+<ul>
+<li>SRR  </li>
+<li>CMR  </li>
+<li>Collapse of non-selected branches  </li>
+</ul>
+<hr>
+<h2 id="8-example-quantum-cloning-alignment-extended">8. Example: Quantum “cloning” alignment (extended)</h2>
+<p>The experiment uses:</p>
+<ol>
+<li><strong>ECC</strong> for extension  </li>
+<li><strong>DBR</strong> for drift  </li>
+<li><strong>CMR</strong> for coherence thresholds  </li>
+<li><strong>SRR</strong> for single-readout  </li>
+<li><strong>FRC</strong> for full operator sequence validity  </li>
+</ol>
+<p>Extended regime maps explain:</p>
+<ul>
+<li>Why multi-branch representation is allowed  </li>
+<li>Why only one branch becomes classical  </li>
+<li>Why drift and coherence matter  </li>
+<li>Why no-cloning is not violated  </li>
+<li>Why the result is fully RTT-aligned  </li>
+</ul>
+<hr>
+<h2 id="9-paradox-handling">9. Paradox handling</h2>
+<p>Extended regime maps prevent paradoxes by:</p>
+<ul>
+<li>Enforcing composite constraints  </li>
+<li>Managing drift and coherence across time  </li>
+<li>Restricting operator sequences  </li>
+<li>Ensuring single-readout consistency  </li>
+<li>Collapsing non-selected branches  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → ECC  </li>
+<li>“Only one is real” → SRR  </li>
+<li>“Others disappear” → CMR + DBR  </li>
+<li>“No violation occurs” → FRC  </li>
+</ul>
+<hr>
+<h2 id="10-canon-integration-and-cross-links">10. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_index.md</code></li>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module extends the RTT regime system into full composite and temporal geometry.<br>
+Once regime-grammar syntax is added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

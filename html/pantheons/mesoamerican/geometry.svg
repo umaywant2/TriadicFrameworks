@@ -1,0 +1,22 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- World-tree axis -->
+  <line x1="400" y1="100" x2="400" y2="700" stroke="#2a2" stroke-width="4" />
+  <text x="420" y="120">World-Tree Axis (Yaxche)</text>
+
+  <!-- Layered heavens and underworlds -->
+  <!-- Heavens -->
+  <rect x="250" y="120" width="300" height="160" fill="none" stroke="#000" />
+  <text x="400" y="150" text-anchor="middle">13 Heavens</text>
+
+  <!-- Earth -->
+  <rect x="250" y="320" width="300" height="160" fill="none" stroke="#000" />
+  <text x="400" y="350" text-anchor="middle">Earth</text>
+
+  <!-- Underworlds -->
+  <rect x="250" y="520" width="300" height="160" fill="none" stroke="#000" />
+  <text x="400" y="550" text-anchor="middle">9 Underworlds</text>
+
+  <!-- Calendar geometry ring -->
+  <circle cx="400" cy="320" r="220" fill="none" stroke="#888" stroke-width="2" />
+  <text x="400" y="90" text-anchor="middle">Calendar Geometry (Tzolk’in / Haab’ / Tonalpohualli)</text>
+</svg>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Governance_Substrate_Model/10_Adapters/Containment_When_Translation_Fails.md">
+  <title>Containment When Translation Fails</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Governance_Substrate_Model/10_Adapters/Containment_When_Translation_Fails.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Governance_Substrate_Model/10_Adapters/Containment_When_Translation_Fails.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="containment-when-translation-fails">Containment When Translation Fails</h1>
+<p>Containment when translation fails defines <strong>how the Governance Substrate Model responds when an adapter introduces misalignment, violates invariants, or produces unintended harm during translation into a real system</strong>. This document exists to prevent translation errors from cascading into substrate‑level damage while preserving learning and correction capacity.</p>
+<p>Translation failure is expected.<br>
+Uncontained translation failure is not.</p>
+<hr>
+<h2 id="what-counts-as-translation-failure">What Counts as Translation Failure</h2>
+<p>Translation has failed when one or more of the following occur:</p>
+<ul>
+<li>Core invariants are weakened, reinterpreted, or bypassed.</li>
+<li>Phase assumptions are incorrect or ignored.</li>
+<li>Authority is introduced to compensate for design gaps.</li>
+<li>Legibility collapses for participants or overseers.</li>
+<li>Reversibility is lost earlier than intended.</li>
+<li>Local adaptations begin propagating beyond their safe scope.</li>
+</ul>
+<p>Failure often appears functional at first — which is why it must be contained early.</p>
+<hr>
+<h2 id="why-containment-is-structurally-required">Why Containment Is Structurally Required</h2>
+<p>Without containment, translation failure leads to:</p>
+<ul>
+<li>Silent drift away from invariants.</li>
+<li>Normalization of misalignment as “pragmatic.”</li>
+<li>Authority creep disguised as efficiency.</li>
+<li>Cross‑domain contamination of flawed structures.</li>
+<li>Loss of trust in the governance substrate itself.</li>
+</ul>
+<p>Containment protects the substrate while preserving the right to learn.</p>
+<hr>
+<h2 id="core-principles-of-containment">Core Principles of Containment</h2>
+<h3 id="invariant-supremacy">Invariant Supremacy</h3>
+<p>When translation conflicts with invariants:
+- Invariants take precedence.
+- Local convenience yields.
+- Expansion pauses immediately.</p>
+<p>Adapters exist to serve invariants — not reinterpret them.</p>
+<hr>
+<h3 id="blast-radius-limitation">Blast Radius Limitation</h3>
+<p>Containment must:
+- Isolate the failing adapter.
+- Prevent propagation to adjacent systems.
+- Avoid global rollback unless substrate integrity is threatened.</p>
+<p>Local failure must remain local.</p>
+<hr>
+<h3 id="reversibility-restoration">Reversibility Restoration</h3>
+<p>Containment actions prioritize:
+- Re‑establishing rollback paths.
+- Undoing irreversible commitments where possible.
+- Treating irreversibility as an escalation signal.</p>
+<p>Loss of reversibility marks the boundary of safe experimentation.</p>
+<hr>
+<h3 id="legibility-recovery">Legibility Recovery</h3>
+<p>Containment includes:
+- Making failure modes explicit.
+- Documenting broken assumptions.
+- Preserving decision context and lineage.</p>
+<p>Opaque failure cannot be corrected.</p>
+<hr>
+<h3 id="authority-restraint">Authority Restraint</h3>
+<p>Containment must not:
+- Expand enforcement.
+- Centralize control.
+- Punish participants for structural failure.</p>
+<p>Containment protects systems, not authority.</p>
+<hr>
+<h2 id="containment-actions">Containment Actions</h2>
+<p>Appropriate containment responses may include:</p>
+<ul>
+<li>Freezing further expansion or replication.</li>
+<li>Rolling back adapter‑introduced structures.</li>
+<li>Suspending integration points.</li>
+<li>Redirecting artifacts back into incubation.</li>
+<li>Triggering RTT re‑evaluation.</li>
+<li>Narrowing scope to restore observability.</li>
+</ul>
+<p>Containment is corrective, not punitive.</p>
+<hr>
+<h2 id="role-of-ai-in-containment">Role of AI in Containment</h2>
+<p>AI may assist by:
+- Detecting invariant violations.
+- Identifying propagation pathways.
+- Highlighting legibility loss.
+- Monitoring rollback effectiveness.</p>
+<p>AI must not:
+- Decide containment scope.
+- Enforce shutdowns.
+- Frame failure narratively.
+- Override human judgment.</p>
+<p>Containment decisions remain human.</p>
+<hr>
+<h2 id="failure-mode">Failure Mode</h2>
+<p>Containment itself fails when:</p>
+<ul>
+<li>Translation errors are defended rather than examined.</li>
+<li>Authority escalates to preserve appearances.</li>
+<li>Rollback is avoided due to sunk cost pressure.</li>
+<li>Learning is sacrificed for continuity.</li>
+</ul>
+<p>At that point, translation failure becomes substrate failure.</p>
+<hr>
+<p>Containment when translation fails is <strong>how governance survives adaptation</strong>.</p>
+<p>By isolating error without suppressing learning,<br>
+the system preserves coherence —<br>
+and earns the right to try again.</p>
+  </main>
+</body>
+</html>

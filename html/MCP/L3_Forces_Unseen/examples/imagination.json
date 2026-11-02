@@ -1,0 +1,20 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "imagination",
+  "module": "examples",
+  "kind": ["imagination"],
+  "path": "docs/MCP/L3_Forces_Unseen/examples/imagination.json",
+
+  "envelope": {
+    "canonical": "Imagination interpretation of the example.",
+    "reality": "Not applicable.",
+    "imagination": "Describes the example as it appears in imaginative or hypothetical contexts.",
+    "information": "Not applicable.",
+    "error": "Not applicable.",
+    "qmroot": "Not applicable."
+  }
+}

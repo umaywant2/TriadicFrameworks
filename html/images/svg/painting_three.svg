@@ -1,0 +1,18 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#0d1b2a"/>
+
+  <!-- Three vertical pillars -->
+  <rect x="150" y="80" width="120" height="300" rx="20" fill="#415a77" opacity="0.8"/>
+  <rect x="340" y="80" width="120" height="300" rx="20" fill="#1b263b" opacity="0.8"/>
+  <rect x="530" y="80" width="120" height="300" rx="20" fill="#778da9" opacity="0.8"/>
+
+  <!-- The spark descending -->
+  <circle cx="400" cy="40" r="18" fill="#ffd60a"/>
+  <line x1="400" y1="60" x2="400" y2="100" stroke="#ffd60a" stroke-width="3" stroke-dasharray="6 6"/>
+
+  <!-- Title -->
+  <text x="400" y="470" text-anchor="middle" fill="#e0e1dd"
+        font-family="Georgia, serif" font-size="22">
+    The Three Who Waited
+  </text>
+</svg>

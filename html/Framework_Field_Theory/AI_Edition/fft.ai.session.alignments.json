@@ -1,0 +1,45 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.alignments",
+  "title": "FFT AI Session — Alignments v1.33",
+  "alignment_targets": {
+    "R_target": {
+      "min": 0.7,
+      "max": 0.95,
+      "new_v1_33": true
+    },
+    "coherence_target": "declared and maintained",
+    "drift_target": {
+      "max_delta": 0.35,
+      "mode": "bounded",
+      "new_v1_33": true
+    },
+    "snr_target": {
+      "S_min": 0.05,
+      "N_max": 0.8,
+      "R_min": 0.7,
+      "new_v1_33": true
+    },
+    "set_target": {
+      "coupling_at": "gradient_threshold",
+      "quiet_phase": "uncoupled",
+      "new_v1_33": true
+    },
+    "tau_alignment": "RTT phase consistent across all RTT-bound modules (INV-006)",
+    "qmroot_alignment": "all modules traceable to 0D seed (INV-013)"
+  },
+  "v133_additions": [
+    "R_target thresholds",
+    "drift_target bound",
+    "snr_target thresholds",
+    "set_target coupling policy",
+    "qmroot alignment"
+  ]
+}

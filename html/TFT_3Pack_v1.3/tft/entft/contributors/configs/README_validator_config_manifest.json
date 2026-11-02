@@ -1,0 +1,17 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/contributors/configs/README_validator_config.md",
+  "type": "scroll_index",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "validator_config.json",
+    "badge_logic_engine.py",
+    "legacy_roll.md",
+    "remix_rights.md",
+    "config_manifesto.md"
+  ],
+  "symbolicTags": ["Validator Config", "Overlay Assignment", "Badge Approval", "Corridor Trust"],
+  "cliTrigger": "cd configs → view validator_config.json",
+  "timestamp": "2025-10-21T00:29:00Z"
+}

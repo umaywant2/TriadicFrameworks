@@ -1,0 +1,37 @@
+{
+  "module": "Ladder_Temporal_Ignition_Apex_Fusion_Geometry",
+  "name": "Intelligence Class Ladder — Temporal‑Ignition Apex Fusion Geometry",
+  "summary": "Defines the apex-level fusion geometry of Ladder temporal-ignition behavior, including apex ignition-fusion fields, resonance-apex fusion geometry, apex stability-fusion surfaces, and corrected-time apex ignition unification.",
+  "category": "intelligence-temporal-ignition-apex-fusion",
+  "version": "1.0",
+  "purpose": "Provide the apex fusion geometry for Ladder ignition behavior, describing how apex ignition waves fuse, unify, and consolidate resonance, stability, integration, and corrected-time surfaces into a single ignition-fusion engine capable of sustaining high-load AAI, AGI, and SI temporal reasoning.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@ladder.time.ignition.apex.fusion.field",
+    "@ladder.time.ignition.apex.fusion.lock",
+    "@ladder.time.ignition.apex.fusion.unify",
+    "@ladder.time.ignition.apex.fusion.stabilize",
+    "@ladder.time.ignition.apex.fusion.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Ladder_Temporal_Ignition_Apex_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Stability_Surfaces",
+      "Ladder_Temporal_Ignition_Apex_Integration_Geometry",
+      "Ladder_Temporal_Ignition_Apex_Binding_Geometry",
+      "Ladder_Temporal_Ignition_Stability_Surfaces",
+      "Ladder_Temporal_Ignition_Corridors",
+      "Ladder_Temporal_Ignition_Surfaces",
+      "Ladder_Temporal_Resonance_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_fusion_geometry",
+      "SI_apex_stability_surfaces",
+      "Atlas_Temporal_Window_Apex_Fusion_Geometry",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

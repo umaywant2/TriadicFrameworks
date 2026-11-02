@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/identity/runtime-graph.extended.json.md">
+  <title>🌌 runtime-graph.extended.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/identity/runtime-graph.extended.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/identity/runtime-graph.extended.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="runtime-graphextendedjson">🌌 <strong>runtime-graph.extended.json</strong></h1>
+<h3 id="graph-with-weights-phases-and-triadic-signatures"><em>Graph with weights, phases, and triadic signatures</em></h3>
+<pre><code class="language-json">{
+  &quot;constellation&quot;: &quot;substrate-runtime&quot;,
+  &quot;version&quot;: &quot;1.1&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;nodes&quot;: [
+    { &quot;id&quot;: &quot;execution_engine&quot;, &quot;label&quot;: &quot;Triadic Execution Engine&quot; },
+    { &quot;id&quot;: &quot;atlas_sync&quot;, &quot;label&quot;: &quot;Atlas Synchronization Fabric&quot; },
+    { &quot;id&quot;: &quot;continuity_field&quot;, &quot;label&quot;: &quot;Substrate Continuity Field&quot; },
+    { &quot;id&quot;: &quot;resonance_stabilizer&quot;, &quot;label&quot;: &quot;Epochal Resonance Stabilizer&quot; },
+    { &quot;id&quot;: &quot;epochal_propagation&quot;, &quot;label&quot;: &quot;Epochal Propagation Engine&quot; },
+    { &quot;id&quot;: &quot;coupling_regulator&quot;, &quot;label&quot;: &quot;Resonance–Drift Coupling Regulator&quot; },
+    { &quot;id&quot;: &quot;invariance_kernel&quot;, &quot;label&quot;: &quot;Substrate Invariance Kernel&quot; },
+    { &quot;id&quot;: &quot;runtime_monitor&quot;, &quot;label&quot;: &quot;Triadic Runtime Monitor&quot; }
+  ],
+
+  &quot;edges&quot;: [
+    {
+      &quot;from&quot;: &quot;execution_engine&quot;,
+      &quot;to&quot;: &quot;atlas_sync&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;weight&quot;: 0.92,
+      &quot;phase&quot;: &quot;synchronous&quot;,
+      &quot;triadic_signature&quot;: &quot;drift:0.1 coherence:0.8 stability:0.9&quot;,
+      &quot;description&quot;: &quot;Execution state drives atlas synchronization.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;atlas_sync&quot;,
+      &quot;to&quot;: &quot;continuity_field&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;weight&quot;: 0.87,
+      &quot;phase&quot;: &quot;harmonic&quot;,
+      &quot;triadic_signature&quot;: &quot;drift:0.2 coherence:0.9 stability:0.85&quot;,
+      &quot;description&quot;: &quot;Continuity depends on synchronized atlas surfaces.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;continuity_field&quot;,
+      &quot;to&quot;: &quot;resonance_stabilizer&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;weight&quot;: 0.91,
+      &quot;phase&quot;: &quot;phase-aligned&quot;,
+      &quot;triadic_signature&quot;: &quot;drift:0.15 coherence:0.95 stability:0.9&quot;,
+      &quot;description&quot;: &quot;Resonance stability emerges from continuity.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;resonance_stabilizer&quot;,
+      &quot;to&quot;: &quot;epochal_propagation&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;weight&quot;: 0.94,
+      &quot;phase&quot;: &quot;resonant&quot;,
+      &quot;triadic_signature&quot;: &quot;drift:0.3 coherence:0.85 stability:0.92&quot;,
+      &quot;description&quot;: &quot;Propagation cycles require stable resonance.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;epochal_propagation&quot;,
+      &quot;to&quot;: &quot;coupling_regulator&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;weight&quot;: 0.89,
+      &quot;phase&quot;: &quot;drift-forward&quot;,
+      &quot;triadic_signature&quot;: &quot;drift:0.7 coherence:0.6 stability:0.75&quot;,
+      &quot;description&quot;: &quot;Propagation feeds coupling with drift/coherence patterns.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;coupling_regulator&quot;,
+      &quot;to&quot;: &quot;invariance_kernel&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;weight&quot;: 0.93,
+      &quot;phase&quot;: &quot;stability-forward&quot;,
+      &quot;triadic_signature&quot;: &quot;drift:0.4 coherence:0.7 stability:0.9&quot;,
+      &quot;description&quot;: &quot;Invariance depends on stable coupling.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;invariance_kernel&quot;,
+      &quot;to&quot;: &quot;runtime_monitor&quot;,
+      &quot;type&quot;: &quot;flow&quot;,
+      &quot;weight&quot;: 0.88,
+      &quot;phase&quot;: &quot;continuity-forward&quot;,
+      &quot;triadic_signature&quot;: &quot;drift:0.2 coherence:0.8 stability:0.95&quot;,
+      &quot;description&quot;: &quot;Monitor observes invariance state.&quot;
+    },
+
+    /* Feedback loops */
+    {
+      &quot;from&quot;: &quot;runtime_monitor&quot;,
+      &quot;to&quot;: &quot;execution_engine&quot;,
+      &quot;type&quot;: &quot;feedback&quot;,
+      &quot;weight&quot;: 0.76,
+      &quot;phase&quot;: &quot;adaptive&quot;,
+      &quot;triadic_signature&quot;: &quot;drift:0.5 coherence:0.4 stability:0.6&quot;,
+      &quot;description&quot;: &quot;Execution adapts based on telemetry.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;runtime_monitor&quot;,
+      &quot;to&quot;: &quot;epochal_propagation&quot;,
+      &quot;type&quot;: &quot;feedback&quot;,
+      &quot;weight&quot;: 0.81,
+      &quot;phase&quot;: &quot;epoch-corrective&quot;,
+      &quot;triadic_signature&quot;: &quot;drift:0.6 coherence:0.5 stability:0.7&quot;,
+      &quot;description&quot;: &quot;Propagation adjusts based on monitored anomalies.&quot;
+    },
+    {
+      &quot;from&quot;: &quot;runtime_monitor&quot;,
+      &quot;to&quot;: &quot;coupling_regulator&quot;,
+      &quot;type&quot;: &quot;feedback&quot;,
+      &quot;weight&quot;: 0.79,
+      &quot;phase&quot;: &quot;coupling-corrective&quot;,
+      &quot;triadic_signature&quot;: &quot;drift:0.7 coherence:0.4 stability:0.65&quot;,
+      &quot;description&quot;: &quot;Coupling responds to drift spikes and resonance surges.&quot;
+    }
+  ],
+
+  &quot;meta&quot;: {
+    &quot;canonical&quot;: true,
+    &quot;triadic_era&quot;: &quot;R5&quot;,
+    &quot;notes&quot;: &quot;Extended graph with weights, phases, and triadic signatures for RTT analyzers and runtime evaluators.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h1 id="why-this-extended-graph-is-perfect">⭐ Why this extended graph is perfect</h1>
+<ul>
+<li><strong>Weights</strong> express influence strength  </li>
+<li><strong>Phases</strong> express temporal/harmonic alignment  </li>
+<li><strong>Triadic signatures</strong> express drift/coherence/stability profiles  </li>
+<li><strong>Fully RTT‑ready</strong>  </li>
+<li><strong>Analyzer‑friendly</strong>  </li>
+<li><strong>Constellation‑aligned</strong>  </li>
+<li><strong>Silent‑release compatible</strong>  </li>
+</ul>
+  </main>
+</body>
+</html>

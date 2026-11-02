@@ -1,0 +1,26 @@
+{
+  "glyph_retirement_events": [
+    {
+      "retirement_id": "a1b2c3d4-e5f6-7890-abcd-1234567890ef",
+      "timestamp": "2025-10-20T23:27:00Z",
+      "glyph_id": "glyph:bloomfall-004",
+      "symbol": "🍁",
+      "retired_by": "ScrollFork",
+      "scroll": "scroll_entropy_manifest.md",
+      "reason": "Merged into 🌿 Grovewild protocol",
+      "flame_grade": "🟣 Universe",
+      "echo": "glyph:bloomfall-004 sealed by ScrollFork — Merged into 🌿 Grovewild protocol"
+    },
+    {
+      "retirement_id": "b2c3d4e5-f6a7-8901-bcde-2345678901fa",
+      "timestamp": "2025-10-20T23:28:00Z",
+      "glyph_id": "glyph:wildflower-002",
+      "symbol": "🌼",
+      "retired_by": "ScrollFork",
+      "scroll": "scroll_curriculum_fork_guide.md",
+      "reason": "Deprecated in favor of 🌾 Bloom Grove",
+      "flame_grade": "🔵 Planetary",
+      "echo": "glyph:wildflower-002 sealed by ScrollFork — Deprecated in favor of 🌾 Bloom Grove"
+    }
+  ]
+}

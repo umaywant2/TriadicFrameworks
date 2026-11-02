@@ -1,0 +1,78 @@
+{
+  "module": "Resilience Checker",
+  "version": "1.0",
+  "category": "paradox-structural",
+  "summary": "108 paradox analyses spanning logic, computation, thermodynamics, cosmology, quantum theory, and emergence — designed as a diagnostic surface for regime literacy and structural clarity. 11 structural categories plus Paradox Resilience Full Chart capstone.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Foundational_Logic_and_Physics.html",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Mind_Identity_and_Observation.html",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Mathematics_Decision_and_Infinity.html",
+      "role": "diagnostic",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Thermodynamics_and_Statistical_Reality.html",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Cosmology_and_Spacetime.html",
+      "role": "diagnostic",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Quantum_Reality_and_Observers.html",
+      "role": "diagnostic",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Anthropic_and_Cosmological_Measure.html",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Quantum_Gravity_and_Holography.html",
+      "role": "diagnostic",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Effective_Theories_and_Backreaction.html",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Information_Computation_and_Causation.html",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Computation_Modeling_and_Emergence.html",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Paradox_Resilience_Full_Chart.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

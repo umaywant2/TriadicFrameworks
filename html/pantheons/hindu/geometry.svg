@@ -1,0 +1,20 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cosmic tree -->
+  <line x1="400" y1="100" x2="400" y2="700" stroke="#2a7" stroke-width="4"/>
+  <text x="420" y="120">Cosmic Axis (Brahman)</text>
+
+  <!-- Lotus geometry -->
+  <circle cx="400" cy="400" r="200" fill="none" stroke="#000" stroke-width="2"/>
+  <path d="M400 200 C460 260 460 540 400 600 C340 540 340 260 400 200Z" fill="none" stroke="#c33" stroke-width="2"/>
+  <text x="400" y="90" text-anchor="middle">Lotus Geometry</text>
+
+  <!-- Chakra markers -->
+  <circle cx="400" cy="250" r="10" fill="#36c"/>
+  <circle cx="400" cy="350" r="10" fill="#36c"/>
+  <circle cx="400" cy="450" r="10" fill="#36c"/>
+  <circle cx="400" cy="550" r="10" fill="#36c"/>
+  <text x="430" y="250" font-size="10">Ajna</text>
+  <text x="430" y="350" font-size="10">Vishuddha</text>
+  <text x="430" y="450" font-size="10">Anahata</text>
+  <text x="430" y="550" font-size="10">Muladhara</text>
+</svg>

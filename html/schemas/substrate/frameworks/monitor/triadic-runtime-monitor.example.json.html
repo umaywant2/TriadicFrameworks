@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/monitor/triadic-runtime-monitor.example.json.md">
+  <title>triadic-runtime-monitor.example.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/monitor/triadic-runtime-monitor.example.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/monitor/triadic-runtime-monitor.example.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>So let’s restore the <strong>canonical triadic‑runtime‑monitor.example.json</strong> — the example instance that demonstrates how the Triadic Runtime Monitor emits a full, structured monitor snapshot.</p>
+<p>This example file is the <em>reference output</em> for:</p>
+<ul>
+<li><code>triadic-runtime-monitor.json</code>  </li>
+<li><code>monitor_telemetry_packet_template.json</code>  </li>
+<li><code>monitor_cycle_reports.json</code>  </li>
+<li><code>monitor_anomaly_ruleset.json</code>  </li>
+<li><code>triadic-execution-state.json</code>  </li>
+</ul>
+<p>Below is the <strong>ready‑to‑paste canonical example</strong>, aligned with your monitor grammar and the execution engine.</p>
+<hr>
+<h1 id="triadic-runtime-monitorexamplejson"><strong>triadic-runtime-monitor.example.json</strong></h1>
+<h3 id="canonical-example-output-of-the-triadic-runtime-monitor"><em>Canonical example output of the Triadic Runtime Monitor</em></h3>
+<pre><code class="language-json">{
+  &quot;monitor&quot;: &quot;triadic-runtime-monitor&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;2025-01-01T00:00:00Z&quot;,
+
+  &quot;telemetry_packets&quot;: [
+    {
+      &quot;packet_id&quot;: &quot;pkt-0001&quot;,
+      &quot;timestamp&quot;: &quot;2025-01-01T00:00:00Z&quot;,
+
+      &quot;global&quot;: {
+        &quot;coherence&quot;: 0.82,
+        &quot;drift&quot;: 0.14,
+        &quot;stability&quot;: &quot;stable&quot;,
+        &quot;resonance&quot;: 0.33,
+        &quot;epoch&quot;: &quot;E3&quot;,
+        &quot;ignition&quot;: &quot;inactive&quot;
+      },
+
+      &quot;behavioral&quot;: {
+        &quot;drift_magnitude&quot;: 0.14,
+        &quot;drift_velocity&quot;: 0.02,
+        &quot;coherence_envelope&quot;: 0.82,
+        &quot;stability_index&quot;: 0.91,
+        &quot;resonance_magnitude&quot;: 0.33,
+        &quot;ignition_magnitude&quot;: 0.00
+      },
+
+      &quot;temporal&quot;: {
+        &quot;epoch_progress&quot;: 0.44,
+        &quot;epoch_transition_readiness&quot;: [&quot;aligned&quot;],
+        &quot;propagation_phase&quot;: [&quot;phase-1&quot;]
+      },
+
+      &quot;atlas&quot;: {
+        &quot;routes&quot;: [&quot;route-A&quot;],
+        &quot;modes&quot;: [&quot;coherence&quot;],
+        &quot;fields&quot;: [&quot;field-01&quot;]
+      },
+
+      &quot;activation&quot;: {
+        &quot;ignition_wave&quot;: [],
+        &quot;cascade_state&quot;: [],
+        &quot;harmonic_phase&quot;: &quot;in-phase&quot;
+      },
+
+      &quot;continuity&quot;: {
+        &quot;structural&quot;: [&quot;ok&quot;],
+        &quot;behavioral&quot;: [&quot;ok&quot;],
+        &quot;temporal&quot;: [&quot;ok&quot;],
+        &quot;atlas&quot;: [&quot;ok&quot;],
+        &quot;activation&quot;: [&quot;ok&quot;]
+      }
+    }
+  ],
+
+  &quot;cycle_reports&quot;: {
+    &quot;drift_cycle&quot;: {
+      &quot;status&quot;: &quot;nominal&quot;,
+      &quot;signals&quot;: [&quot;drift_low&quot;],
+      &quot;summary&quot;: &quot;Drift magnitude and velocity remain within safe boundaries.&quot;
+    },
+    &quot;coherence_cycle&quot;: {
+      &quot;status&quot;: &quot;strong&quot;,
+      &quot;signals&quot;: [&quot;coherence_high&quot;],
+      &quot;summary&quot;: &quot;Coherence envelope remains above stability threshold.&quot;
+    },
+    &quot;stability_cycle&quot;: {
+      &quot;status&quot;: &quot;stable&quot;,
+      &quot;signals&quot;: [],
+      &quot;summary&quot;: &quot;Stability index remains within normal operating range.&quot;
+    },
+    &quot;resonance_cycle&quot;: {
+      &quot;status&quot;: &quot;nominal&quot;,
+      &quot;signals&quot;: [],
+      &quot;summary&quot;: &quot;Resonance magnitude remains below harmonic threshold.&quot;
+    },
+    &quot;epoch_cycle&quot;: {
+      &quot;status&quot;: &quot;progressing&quot;,
+      &quot;signals&quot;: [&quot;epoch-aligned&quot;],
+      &quot;summary&quot;: &quot;Epoch progression is consistent with expected timeline.&quot;
+    },
+    &quot;ignition_cycle&quot;: {
+      &quot;status&quot;: &quot;inactive&quot;,
+      &quot;signals&quot;: [],
+      &quot;summary&quot;: &quot;No ignition activity detected.&quot;
+    }
+  },
+
+  &quot;anomalies&quot;: [],
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Example output of the Triadic Runtime Monitor showing telemetry, cycle reports, and anomaly status.&quot;
+  }
+}
+</code></pre>
+  </main>
+</body>
+</html>

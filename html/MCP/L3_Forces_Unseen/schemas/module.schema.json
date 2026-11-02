@@ -1,0 +1,85 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "TriadicFrameworks MCP — Module Schema (L3 Forces Unseen)",
+  "description": "Real JSON Schema for module identity, metadata, lineage, and force‑regime semantics.",
+  "version": "0.1.0",
+
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "forceRegimeModule",
+    "description": "JSON Schema for modules defined within the Forces Unseen layer.",
+    "type": "object",
+
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Canonical module name."
+      },
+
+      "category": {
+        "type": "string",
+        "description": "Module category.",
+        "enum": [
+          "examples",
+          "registry",
+          "schemas",
+          "spine",
+          "dimension",
+          "operator",
+          "module"
+        ]
+      },
+
+      "purpose": {
+        "type": "string",
+        "description": "Description of the module's cosmological and functional role."
+      },
+
+      "metadata": {
+        "type": "object",
+        "description": "Module metadata including force‑regime semantics and component list.",
+        "properties": {
+          "forceDomain": {
+            "type": "string",
+            "enum": ["forces"],
+            "description": "Domain of unseen force‑regime mechanics."
+          },
+          "contains": {
+            "type": "array",
+            "description": "List of components or semantics defined by the module.",
+            "items": { "type": "string" }
+          },
+          "regimeSemantics": {
+            "type": "array",
+            "description": "Force‑regime semantics relevant to the module.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "gradientIntensity",
+                "fieldCoherence",
+                "influenceContinuity",
+                "rupturePotential",
+                "forceIntegrity"
+              ]
+            }
+          }
+        }
+      },
+
+      "lineage": {
+        "type": "array",
+        "description": "Cosmological lineage inherited by the module.",
+        "items": {
+          "type": "string",
+          "enum": ["qmroot", "frequency", "fluids", "forces"]
+        }
+      }
+    },
+
+    "required": ["name", "category", "purpose"]
+  }
+}

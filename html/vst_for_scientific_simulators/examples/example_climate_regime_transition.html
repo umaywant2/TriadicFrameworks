@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_scientific_simulators/examples/example_climate_regime_transition.md">
+  <title>vST for Scientific Simulators</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_scientific_simulators/examples/example_climate_regime_transition.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_scientific_simulators/examples/example_climate_regime_transition.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="vst-for-scientific-simulators"><em>vST for Scientific Simulators</em></h3>
+<h3 id="example-regime-transitions-in-a-climate-simulation-statetrajectory"><em>Example: Regime Transitions in a Climate Simulation State‑Trajectory</em></h3>
+<p>This example demonstrates how a climate simulator expresses <strong>state‑space regime transitions</strong> (R₁ᴴ → R₂ᴴ → R₃ᴴ) across time and spatial domains. It shows how high‑dimensional climate fields evolve, how coherence surfaces form and break, and how the vST framework classifies transitions using the 1024D substrate.</p>
+<p>The goal is to provide a reproducible, invariant‑preserving demonstration of regime behavior in climate simulation dynamics.</p>
+<hr>
+<h2 id="1-simulation-setup"><strong>1. Simulation Setup</strong></h2>
+<p>For this example, we assume:</p>
+<ul>
+<li>a global climate model (GCM) with multi‑field coupling  </li>
+<li>state vectors spanning ≥1024D (temperature, humidity, wind fields, pressure, radiation, etc.)  </li>
+<li>a simulation window covering several days to weeks  </li>
+<li>stable projection into 3D–9D cores  </li>
+<li>access to solver‑iteration or timestep‑level state snapshots  </li>
+</ul>
+<p>The example is model‑agnostic and applies to any grid‑based climate simulator.</p>
+<hr>
+<h2 id="2-step-1-extract-highdimensional-climate-states"><strong>2. Step 1 — Extract High‑Dimensional Climate States</strong></h2>
+<p>At each timestep ( t ), the simulator produces a high‑dimensional state vector:</p>
+<p>[
+S^{(t)} = [x_1^{(t)}, x_2^{(t)}, \dots, x_{1024}^{(t)}]
+]</p>
+<h3 id="observed-properties"><strong>Observed Properties</strong></h3>
+<ul>
+<li>early timesteps: compact, low‑variance atmospheric fields  </li>
+<li>mid‑simulation: branching behavior as fronts develop  </li>
+<li>late simulation: partial dispersion in unstable regions (e.g., cyclogenesis)  </li>
+</ul>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<p>Climate states trace a high‑dimensional trajectory reflecting physical processes and solver behavior.</p>
+<hr>
+<h2 id="3-step-2-identify-regime-behavior-across-time"><strong>3. Step 2 — Identify Regime Behavior Across Time</strong></h2>
+<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each timestep’s regime.</p>
+<h3 id="example-regime-timeline"><strong>Example Regime Timeline</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Time Range</th>
+<th>Regime</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t₀–t₁₀</td>
+<td><strong>R₁ᴴ</strong></td>
+<td>Stable atmospheric baseline</td>
+</tr>
+<tr>
+<td>t₁₁–t₂₅</td>
+<td><strong>R₂ᴴ</strong></td>
+<td>Development of a frontal boundary</td>
+</tr>
+<tr>
+<td>t₂₆–t₃₈</td>
+<td><strong>R₁ᴴ</strong></td>
+<td>Stabilization after frontal passage</td>
+</tr>
+<tr>
+<td>t₃₉–t₄₅</td>
+<td><strong>R₂ᴴ</strong></td>
+<td>Cyclogenesis onset</td>
+</tr>
+<tr>
+<td>t₄₆–t₅₀</td>
+<td><strong>R₃ᴴ</strong></td>
+<td>Peak instability during storm intensification</td>
+</tr>
+<tr>
+<td>t₅₁–t₆₀</td>
+<td><strong>R₂ᴴ → R₁ᴴ</strong></td>
+<td>Dissipation and return to stability</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpretation_1"><strong>Interpretation</strong></h3>
+<p>The simulation alternates between stable atmospheric phases and transitional or unstable dynamical events.</p>
+<hr>
+<h2 id="4-step-3-project-states-into-the-9d-coherence-core"><strong>4. Step 3 — Project States into the 9D Coherence Core</strong></h2>
+<p>Project each 1024D state into the 9D coherence core.</p>
+<h3 id="preserves"><strong>Preserves</strong></h3>
+<ul>
+<li>regime identity  </li>
+<li>resonance‑time behavior  </li>
+<li>primitive‑level structure (DP, TDP, SP, CP)  </li>
+<li>coherence‑surface continuity  </li>
+</ul>
+<h3 id="reveals"><strong>Reveals</strong></h3>
+<ul>
+<li>smooth surfaces in R₁ᴴ  </li>
+<li>branching in R₂ᴴ  </li>
+<li>fragmentation in R₃ᴴ  </li>
+</ul>
+<h3 id="interpretation_2"><strong>Interpretation</strong></h3>
+<p>The 9D projection exposes the “shape” of the climate system’s dynamical evolution.</p>
+<hr>
+<h2 id="5-step-4-project-9d-6d-3d"><strong>5. Step 4 — Project 9D → 6D → 3D</strong></h2>
+<h3 id="6d-interaction-projection"><strong>6D Interaction Projection</strong></h3>
+<p>Reveals:</p>
+<ul>
+<li>coupling between temperature, pressure, and wind fields  </li>
+<li>reorientation during frontal development  </li>
+<li>multi‑field interaction patterns  </li>
+</ul>
+<h3 id="3d-structural-projection"><strong>3D Structural Projection</strong></h3>
+<p>Reveals:</p>
+<ul>
+<li>compact motifs in stable atmospheric phases  </li>
+<li>oscillatory geometry during transitions  </li>
+<li>diffuse patterns during storm intensification  </li>
+</ul>
+<h3 id="interpretation_3"><strong>Interpretation</strong></h3>
+<p>The 3D projection provides the minimal interpretable representation of the climate state trajectory.</p>
+<hr>
+<h2 id="6-step-5-validate-with-vst-layers"><strong>6. Step 5 — Validate with vST Layers</strong></h2>
+<p>Apply vST layers (V₁–V₄):</p>
+<h3 id="v1-structural-coherence"><strong>V₁ — Structural Coherence</strong></h3>
+<ul>
+<li>stable motifs in R₁ᴴ  </li>
+<li>partial fragmentation in R₃ᴴ  </li>
+</ul>
+<h3 id="v2-dimensional-continuity"><strong>V₂ — Dimensional Continuity</strong></h3>
+<ul>
+<li>smooth projection 1024D → 9D → 6D → 3D  </li>
+<li>no scaling discontinuities  </li>
+</ul>
+<h3 id="v3-regimetransition-stability"><strong>V₃ — Regime‑Transition Stability</strong></h3>
+<ul>
+<li>smooth R₁ᴴ → R₂ᴴ transitions  </li>
+<li>instability localized to R₃ᴴ  </li>
+</ul>
+<h3 id="v4-core-alignment"><strong>V₄ — Core Alignment</strong></h3>
+<ul>
+<li>primitive‑aligned projection  </li>
+<li>stable mapping across timesteps  </li>
+</ul>
+<h3 id="outcome"><strong>Outcome</strong></h3>
+<p>The simulation passes all vST layers with warnings localized to the R₃ᴴ region.</p>
+<hr>
+<h2 id="7-step-6-drift-detection"><strong>7. Step 6 — Drift Detection</strong></h2>
+<p>Evaluate drift using D₁–D₄ categories:</p>
+<ul>
+<li><strong>D₁ Structural Drift:</strong> low (localized to storm core)  </li>
+<li><strong>D₂ Dimensional Drift:</strong> none  </li>
+<li><strong>D₃ Regime Drift:</strong> moderate (R₃ᴴ onset)  </li>
+<li><strong>D₄ Projection Drift:</strong> none  </li>
+</ul>
+<h3 id="interpretation_4"><strong>Interpretation</strong></h3>
+<p>The model exhibits expected dispersion during storm intensification but no harmful drift.</p>
+<hr>
+<h2 id="8-summary"><strong>8. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how climate states trace high‑dimensional trajectories  </li>
+<li>how regime behavior evolves during atmospheric events  </li>
+<li>how projection reveals coherence and instability  </li>
+<li>how vST layers validate structural integrity  </li>
+<li>how drift detection identifies localized dispersion  </li>
+</ul>
+<p>Regime transitions are a core interpretability signal in climate simulation dynamics.</p>
+  </main>
+</body>
+</html>

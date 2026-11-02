@@ -1,0 +1,64 @@
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "title": "TriadicFrameworks MCP — L0 Example Stub",
+  "description": "Template for all L0_QMROOT example files. Defines the canonical example structure for the Origin Layer (0D).",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "example": {
+    "name": "EXAMPLE_NAME",
+    "input": {
+      "placeholder": "Replace with example input payload."
+    },
+    "output": {
+      "placeholder": "Replace with example output payload."
+    },
+    "reality": {
+      "description": "Literal, technical, machine-level interpretation of the example.",
+      "placeholder": "Replace with reality-layer explanation."
+    },
+    "imagination": {
+      "description": "Mythic, symbolic, or narrative interpretation (structure > mythic).",
+      "placeholder": "Replace with imagination-layer explanation."
+    },
+    "information": {
+      "description": "Metadata, lineage, cosmology, or structural notes.",
+      "placeholder": "Replace with information-layer explanation."
+    },
+    "metadata": {
+      "canonical": "R5",
+      "qmroot": "0D",
+      "layer": "L0_QMROOT",
+      "triad": "origin"
+    }
+  },
+
+  "errorExample": {
+    "name": "ERROR_EXAMPLE_NAME",
+    "input": {
+      "placeholder": "Replace with erroneous input payload."
+    },
+    "error": {
+      "code": "ERROR_CODE",
+      "message": "Replace with canonical error message.",
+      "layer": "L0_QMROOT",
+      "triad": "origin",
+      "qmroot": "0D",
+      "canonical": "R5"
+    },
+    "reality": {
+      "description": "Literal, technical explanation of why the error occurred.",
+      "placeholder": "Replace with reality-layer error explanation."
+    },
+    "imagination": {
+      "description": "Mythic or symbolic interpretation of the error (structure > mythic).",
+      "placeholder": "Replace with imagination-layer error explanation."
+    },
+    "information": {
+      "description": "Metadata, lineage, cosmology, or structural notes.",
+      "placeholder": "Replace with information-layer error explanation."
+    }
+  }
+}

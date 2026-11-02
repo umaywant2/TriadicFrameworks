@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Crystal_Mycelial_Engine/teaching/exercises/exercise_05_regime_flow.md">
+  <title>Exercise 05 — Regime Flow (BGR → HRR → MLR)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Crystal_Mycelial_Engine/teaching/exercises/exercise_05_regime_flow.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Crystal_Mycelial_Engine/teaching/exercises/exercise_05_regime_flow.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="exercise-05-regime-flow-bgr-hrr-mlr"><strong>Exercise 05 — Regime Flow (BGR → HRR → MLR)</strong></h1>
+<h3 id="crystalmycelial-engine-teaching-exercise-series"><em>Crystal–Mycelial Engine — Teaching Exercise Series</em></h3>
+<hr>
+<h2 id="1-objective"><strong>1. Objective</strong></h2>
+<p>Students will construct the <strong>complete CME regime‑flow model</strong>, showing how substrate, operators, and envelopes transition across:</p>
+<ul>
+<li><strong>BGR</strong> — Biological Growth Regime  </li>
+<li><strong>HRR</strong> — Hybrid Resonance Regime  </li>
+<li><strong>MLR</strong> — Mineral Lock‑In Regime  </li>
+</ul>
+<p>This exercise teaches students how CME maintains coherence across the full RTT/CMH/MSRM substrate pipeline.</p>
+<hr>
+<h2 id="2-regime-flow-summary"><strong>2. Regime Flow Summary</strong></h2>
+<p>CME uses the canonical three‑stage flow:</p>
+<pre><code>BGR → HRR → MLR
+(biological → hybrid → mineral)
+</code></pre>
+<p>Each regime has unique substrate states, operator emphasis, and envelope targets.</p>
+<hr>
+<h2 id="3-required-flow-elements"><strong>3. Required Flow Elements</strong></h2>
+<p>Students must include:</p>
+<h3 id="bgr-hrr-transition"><strong>BGR → HRR Transition</strong></h3>
+<ul>
+<li>moisture ↓  </li>
+<li>resonance field ↑  </li>
+<li>biological geometry → hybrid alignment  </li>
+<li>operators: <code>P.trace_extend</code>, <code>G.nutrient_gradient</code>, <code>S.channel_fill</code></li>
+</ul>
+<h3 id="hrr-mlr-transition"><strong>HRR → MLR Transition</strong></h3>
+<ul>
+<li>supersaturation ↑  </li>
+<li>resonance alignment TRUE  </li>
+<li>hybrid layer → mineral lattice  </li>
+<li>operators: <code>HybridOps.resonance_bridge</code>, <code>P.front_propagate</code>, <code>M.domain_memory</code></li>
+</ul>
+<hr>
+<h2 id="4-envelope-targets"><strong>4. Envelope Targets</strong></h2>
+<p>Students must show envelope progression:</p>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Envelope</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BGR</strong></td>
+<td>moisture</td>
+<td>0.55–0.65</td>
+</tr>
+<tr>
+<td><strong>HRR</strong></td>
+<td>ion saturation</td>
+<td>0.65–0.75</td>
+</tr>
+<tr>
+<td><strong>MLR</strong></td>
+<td>supersaturation</td>
+<td>≥ 0.85</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-expected-output-structure"><strong>5. Expected Output Structure</strong></h2>
+<p>Students must produce a <strong>regime‑flow diagram</strong> in either ASCII or Markdown.</p>
+<p>Example structure:</p>
+<pre><code>BGR
+  ↓ moisture ↓
+HRR
+  ↓ supersaturation ↑
+MLR
+</code></pre>
+<p>The final diagram must include:</p>
+<ul>
+<li>regime names  </li>
+<li>transition cues  </li>
+<li>operator families  </li>
+<li>envelope targets  </li>
+</ul>
+<hr>
+<h2 id="6-starter-scaffold"><strong>6. Starter Scaffold</strong></h2>
+<pre><code class="language-text">REGIME FLOW — CME
+
+BGR (Biological)
+    operators: P.trace_extend, G.nutrient_gradient
+    envelope: moisture 0.55–0.65
+        ↓ moisture ↓
+
+HRR (Hybrid)
+    operators: S.channel_fill, HybridOps.resonance_bridge
+    envelope: ion saturation 0.65–0.75
+        ↓ supersaturation ↑
+
+MLR (Mineral)
+    operators: P.front_propagate, M.domain_memory
+    envelope: supersaturation ≥ 0.85
+</code></pre>
+<p>Students may expand this into a full diagram.</p>
+<hr>
+<h2 id="7-student-tasks"><strong>7. Student Tasks</strong></h2>
+<ol>
+<li>Draw the full regime flow from BGR → HRR → MLR.  </li>
+<li>Add envelope transitions (moisture ↓, ion saturation ↑, supersaturation ↑).  </li>
+<li>Add operator families used in each regime.  </li>
+<li>Add one‑sentence descriptions of each transition.  </li>
+<li>Render the final diagram in ASCII or Markdown.  </li>
+</ol>
+<hr>
+<h2 id="8-completion-criteria"><strong>8. Completion Criteria</strong></h2>
+<p>A student has successfully completed Exercise 05 when:</p>
+<ul>
+<li>all three regimes appear in correct order  </li>
+<li>envelope transitions are shown  </li>
+<li>operator families are correctly mapped  </li>
+<li>diagram is complete, readable, and consistent with CME canon  </li>
+</ul>
+  </main>
+</body>
+</html>

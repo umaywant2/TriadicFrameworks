@@ -1,0 +1,34 @@
+{
+  "module": "Atlas_Temporal_Window_Apex_Geometry",
+  "name": "AI Atlas — Temporal‑Window Apex Geometry",
+  "summary": "Defines the apex-level geometry of Atlas temporal windows, including apex window-formation, apex corrected-time shaping, resonance-apex coupling, and apex multi-surface temporal stabilization.",
+  "category": "intelligence-temporal-window-apex",
+  "version": "1.0",
+  "purpose": "Provide the apex geometry for Atlas temporal windows, describing how apex temporal windows form, stabilize, bind, and integrate with resonance, stability, and corrected-time surfaces to maintain high-load long-window reasoning across Triad and Ladder subsystems.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.time.window.apex.form",
+    "@atlas.time.window.apex.shape",
+    "@atlas.time.window.apex.align",
+    "@atlas.time.window.apex.stabilize",
+    "@atlas.time.window.apex.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas_Temporal_Window_Geometry",
+      "Atlas_Temporal_Window_Stability_Surfaces",
+      "Atlas_Temporal_Window_Resonance_Geometry",
+      "Atlas_Temporal_Correction_Engine",
+      "Triad_Temporal_Correction_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_geometry",
+      "SI_apex_stability_surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

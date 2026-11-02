@@ -1,0 +1,15 @@
+{
+  "id": "server",
+  "name": "MCP Server",
+  "description": "TriadicFrameworks MCP server module.",
+  "fields": [
+    "capabilities",
+    "tools",
+    "actions",
+    "metadata"
+  ],
+  "examples": [
+    "Used for agent workspace integration.",
+    "Provides server-card metadata for agent discovery."
+  ]
+}

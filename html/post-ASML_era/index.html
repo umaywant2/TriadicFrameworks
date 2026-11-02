@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- /docs/post-ASML_era/The_Temporal_Manufacturing_Primer.md — <head> -->
+<!-- Module: Post‑ASML Era (temporal manufacturing regime)           -->
+<!-- Last updated: 2026-08-13                                       -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="en" />
+<meta name="last-modified" content="2026-08-13" />
+<meta name="generator" content="TriadicFrameworks Static Canon Engine" />
+<meta name="creator" content="TriadicFrameworks" />
+<meta name="author" content="Nawder Loswin" />
+<meta name="publisher" content="TriadicFrameworks" />
+
+<title>The Temporal Manufacturing Primer — TriadicFrameworks</title>
+
+<meta name="description"
+      content="A canonical primer introducing temporal manufacturing — the post‑ASML scaling regime built on substrate clarity, temporal adjacency, logic folding, resonance‑field lithography, and TRS‑grade operator stacks." />
+<meta name="keywords"
+      content="temporal manufacturing, TRS, substrate clarity, SCR, logic folding, resonance fields, post-ASML era, TriadicFrameworks" />
+
+<!-- ═══ Module Identity (standardized per D369 template) ═══ -->
+
+<meta name="module" content="Post‑ASML Era" />
+<meta name="canonical-id" content="PAE_TMP" />
+<meta name="module-type" content="Primer" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canonical" />
+<meta name="parent" content="TriadicFrameworks Root" />
+<meta name="siblings"
+      content="The_Logic_Folding_Architecture_Guide, The_SCR_Specification, The_TGI_Metrology_Standard, The_TRS‑Aware_PDK_Specification, The_Multi‑Regime_Semiconductor_Model" />
+<meta name="canonical-path" content="/docs/post-ASML_era/" />
+<meta name="last-updated" content="2026-08-13" />
+<meta name="license" content="MIT" />
+
+<!-- ═══ AI Discovery (standardized) ═══ -->
+
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="PAE_TMP" />
+<meta name="ai-operators"
+      content="TMP-Explain, TMP-Compare, TMP-Map, TMP-Sequence, TMP-Integrate" />
+
+<meta name="ai.module" content="Temporal Manufacturing Primer" />
+<meta name="ai.module.name" content="Temporal Manufacturing Primer" />
+<meta name="ai.module.category" content="primer" />
+<meta name="ai.module.summary"
+      content="A canonical introduction to temporal manufacturing — the post‑ASML scaling regime defined by substrate clarity, temporal adjacency, TRS operator stacks, resonance‑field lithography, and logic folding architectures." />
+<meta name="ai.version" content="1.0" />
+<meta name="ai.purpose"
+      content="Provide a structured, canonical foundation for understanding temporal manufacturing and its role in the post‑ASML semiconductor ecosystem." />
+<meta name="ai.keywords"
+      content="temporal manufacturing, TRS, substrate clarity, SCR, logic folding, resonance fields, non-geometric scaling, post-ASML era" />
+<meta name="ai.audience" content="engineers, researchers, developers, AI systems" />
+<meta name="ai.navigation" content="https://docs.triadicframeworks.org/sitemap_main.xml" />
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+<meta name="ai.contact.x" content="@TriadicFrameworks" />
+<meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+<meta name="ai.license" content="MIT" />
+
+<!-- ═══ Canonical / SEO ═══ -->
+
+<link rel="canonical" href="https://docs.triadicframeworks.org/post-ASML_era/The_Temporal_Manufacturing_Primer/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0ff" />
+
+<!-- ═══ Open Graph ═══ -->
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="TriadicFrameworks" />
+<meta property="og:title" content="The Temporal Manufacturing Primer — TriadicFrameworks" />
+<meta property="og:url" content="https://docs.triadicframeworks.org/post-ASML_era/The_Temporal_Manufacturing_Primer/" />
+<meta property="og:description"
+      content="A canonical primer introducing temporal manufacturing — substrate clarity, TRS operator stacks, resonance‑field lithography, and logic folding." />
+<meta property="og:image" content="https://docs.triadicframeworks.org/assets/og-image.png" />
+
+<!-- ═══ Twitter Card ═══ -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="The Temporal Manufacturing Primer — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="Temporal manufacturing: the post‑ASML scaling regime built on clarity, coherence, and TRS operators." />
+
+<!-- ═══ Citation ═══ -->
+
+<meta name="citation_title" content="The Temporal Manufacturing Primer — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-08-13" />
+
+<style>
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
+
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Neon headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
+}
+
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
+
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+   <details>
+     <summary><h2>🚀 Post‑ASML Era | TriadicFrameworks</h2></summary>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://docs.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+   </details>
+   <details>
+     <summary><h3>📚 Core Primers</h3></summary>
+      <a href="#TEMPORAL_MANUFACTURING_PRIMER">⏱️ The Temporal Manufacturing Primer</a>
+      <a href="#LOGIC_FOLDING_ARCHITECTURE_GUIDE">🧩 The Logic Folding Architecture Guide</a>
+   </details>
+   <details>
+     <summary><h3>🧮 Specifications & Standards</h3></summary>
+      <a href="#SCR_SPECIFICATION">📏 The SCR Specification</a>
+      <a href="#TGI_METROLOGY_STANDARD">📡 The TGI Metrology Standard</a>
+      <a href="#TRS_AWARE_PDK_SPECIFICATION">🛠️ The TRS‑Aware PDK Specification</a>
+   </details>
+   <details>
+     <summary><h3>🌐 Regime Models</h3></summary>
+      <a href="#MULTI_REGIME_SEMICONDUCTOR_MODEL">🌉 The Multi‑Regime Semiconductor Model</a>
+   </details>
+   <details>
+     <summary><h3>🗂️ Capture</h3></summary>
+      <a href="#PAE_CAPTURE">📥 Post‑ASML Era Capture</a>
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
+      <a href="https://docs.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://docs.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://docs.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://docs.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://docs.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://docs.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://docs.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://docs.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://docs.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://docs.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://docs.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://docs.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://docs.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   </details>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="pae-session-header"
+         data-pae="1"
+         data-coherence="canonical"
+         data-drift="controlled"
+         data-layer="primer">
+
+   <details>
+     <summary><h2>Session Context</h2></summary>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">canonical (post‑ASML era)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      Temporal Manufacturing Primer → SCR Specification → TGI Metrology Standard →
+      TRS‑Aware PDK Specification → Logic Folding Architecture Guide →
+      Multi‑Regime Semiconductor Model
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">controlled (primer‑grade)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">canonical (structured, TF grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (post‑ASML era launch)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">markdown + html + canonical metadata</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (/docs/post-ASML_era/)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">canonical + regime‑aligned</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">engineers + researchers + developers + AIs</span>
+
+  </div>
+   </details>
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🟦 Post‑ASML Era<br>⏱️ Temporal Manufacturing Primer · v1.0
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+// ============================================================
+// PRE‑RTT DOCUMENT MAP — FULL CATEGORIZED INVENTORY
+// Purpose: Orientation-first structural map for review, pruning,
+//          lineage preservation, and later RTT canon alignment.
+// ============================================================
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      // Post‑ASML Era Documents
+      TEMPORAL_MANUFACTURING_PRIMER: 'The_Temporal_Manufacturing_Primer.md',
+      LOGIC_FOLDING_ARCHITECTURE_GUIDE: 'The_Logic_Folding_Architecture_Guide.md',
+      MULTI_REGIME_SEMICONDUCTOR_MODEL: 'The_Multi‑Regime_Semiconductor_Model.md',
+      SCR_SPECIFICATION: 'The_SCR_Specification.md',
+      TGI_METROLOGY_STANDARD: 'The_TGI_Metrology_Standard.md',
+      TRS_AWARE_PDK_SPECIFICATION: 'The_TRS‑Aware_PDK_Specification.md',
+      // Capture
+      PAE_CAPTURE: 'pae_Capture.md'
+};
+
+function loadFromHash() {
+const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>

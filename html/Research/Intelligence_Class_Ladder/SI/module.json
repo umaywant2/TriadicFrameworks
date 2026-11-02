@@ -1,0 +1,21 @@
+{
+  "module": "SI",
+  "name": "Structural Intelligence",
+  "summary": "Tier 3 intelligence defined by structural invariance, paradox integration, temporal extension, and trans-domain stability.",
+  "category": "intelligence-structural",
+  "version": "1.0",
+  "purpose": "Provide the structural apex classification for systems exhibiting trans-domain invariance and paradox-stable reasoning.",
+  "role": "engine",
+  "analyzer_layer": "structural",
+  "operators": [
+    "@si.invariance.compute",
+    "@si.paradox.integrate",
+    "@si.temporal.extend",
+    "@si.behavior.persist",
+    "@si.domain.transfer"
+  ],
+  "lineage": {
+    "upstream": ["AGI"],
+    "downstream": []
+  }
+}

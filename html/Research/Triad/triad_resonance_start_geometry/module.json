@@ -1,0 +1,30 @@
+{
+  "module": "Triad_Resonance_Start_Geometry",
+  "name": "Triad — Resonance‑Start Geometry",
+  "summary": "Defines the resonance‑start geometry of the Triad system, including pre‑ignition resonance fields, harmonic‑start surfaces, phase‑start alignment, and ignition‑ready resonance corridors.",
+  "category": "intelligence-ignition-resonance-start",
+  "version": "1.0",
+  "purpose": "Provide the geometric foundation for resonance‑start behavior within the Triad system, describing how resonance fields form, align, stabilize, and prepare ignition surfaces across Scanner, O.H.S.H.I.T., and Atlas.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.resonance.start.field",
+    "@triad.resonance.start.align",
+    "@triad.resonance.start.phase",
+    "@triad.resonance.start.stabilize",
+    "@triad.resonance.start.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Surfaces",
+      "Triad_Ignition_Harmonics_Geometry",
+      "Triad_Ignition_Cascade_Geometry"
+    ],
+    "downstream": [
+      "Triad_Epoch_Ignition_Surfaces",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration"
+    ]
+  }
+}

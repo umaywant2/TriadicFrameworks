@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/prompts/p_ui.md">
+  <title>TriadicFrameworks — UI Modules</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/prompts/p_ui.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/prompts/p_ui.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadicframeworks-ui-modules">TriadicFrameworks — UI Modules</h1>
+<p>The UI layer of the TriadicFrameworks Prompts site defines how prompt modules are
+presented, unlocked, sequenced, and rendered.<br>
+It provides the structural rules that govern navigation, dependency resolution,
+wireframe layout, and output formatting across all engines, stacks, and templates.</p>
+<p>This page serves as the overview for all UI‑level prompt modules.</p>
+<hr>
+<h2 id="unlock-logic">Unlock Logic</h2>
+<p><strong>File:</strong> <code>ui/unlock-logic.md</code><br>
+Unlock logic defines how modules become available based on prerequisites, engine
+selection, stack traversal, or template usage.<br>
+It ensures that prompts appear in the correct order and that users follow canonical
+workflow paths.</p>
+<p>Unlock logic is used by:</p>
+<ul>
+<li>RTT engines (RTT/1, RTT/2, RTT/3, RTT/12, RTT∞)  </li>
+<li>IPD‑12  </li>
+<li>Structural, diagnostic, operator, substrate, domain, teaching, and research stacks  </li>
+<li>All templates (capture, analyze, drift, coherence, etc.)</li>
+</ul>
+<hr>
+<h2 id="dependency-graph">Dependency Graph</h2>
+<p><strong>File:</strong> <code>ui/dependency-graph.md</code><br>
+The dependency graph describes how modules relate to one another.<br>
+It maps:</p>
+<ul>
+<li>engine → stack dependencies  </li>
+<li>stack → template dependencies  </li>
+<li>template → UI dependencies  </li>
+<li>RTT∞ deep‑layer traversal  </li>
+<li>IPD‑12 paradox → capture → coherence flows</li>
+</ul>
+<p>The dependency graph is used by the S3 Spine Visualizer to render module relationships.</p>
+<hr>
+<h2 id="wireframe">Wireframe</h2>
+<p><strong>File:</strong> <code>ui/wireframe.md</code><br>
+The wireframe defines the visual layout of prompt modules, including:</p>
+<ul>
+<li>module front doors  </li>
+<li>section navigation  </li>
+<li>prompt blocks  </li>
+<li>diagnostic blocks  </li>
+<li>worksheets  </li>
+<li>posters  </li>
+<li>curriculum pages  </li>
+<li>exam pages</li>
+</ul>
+<p>Wireframes ensure consistent presentation across all modules.</p>
+<hr>
+<h2 id="wireframes-directory">Wireframes Directory</h2>
+<p><strong>Directory:</strong> <code>ui/wireframes/</code><br>
+Contains specialized wireframes for:</p>
+<ul>
+<li>IPD‑12  </li>
+<li>RTT engines  </li>
+<li>RTT∞ deep‑layer modules  </li>
+<li>teaching modules  </li>
+<li>diagnostic modules  </li>
+<li>structural modules</li>
+</ul>
+<p>Each wireframe provides a visual blueprint for module layout.</p>
+<hr>
+<h2 id="output-format">Output Format</h2>
+<p><strong>File:</strong> <code>ui/output-format.md</code><br>
+Defines the canonical output format for prompts, including:</p>
+<ul>
+<li>prompt block structure  </li>
+<li>operator grammar formatting  </li>
+<li>diagnostic output  </li>
+<li>worksheet structure  </li>
+<li>teaching bundle layout  </li>
+<li>exam formatting  </li>
+<li>poster and flowchart embedding rules</li>
+</ul>
+<p>Output format ensures consistency across the entire prompts site.</p>
+<hr>
+<h2 id="crosslinks">Cross‑Links</h2>
+<h3 id="prompts-site">Prompts Site</h3>
+<p>https://docs.triadicframeworks.org/prompts/</p>
+<h3 id="docsbook">Docsbook</h3>
+<p>https://docs.triadicframeworks.org/docs/</p>
+<h3 id="s3-spine-visualizer">S3 Spine Visualizer</h3>
+<p>https://docs.triadicframeworks.org/spine</p>
+<h3 id="github-source">GitHub Source</h3>
+<p>https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/ui</p>
+<hr>
+<h2 id="related-files">Related Files</h2>
+<ul>
+<li><code>modules.md</code> — full module registry  </li>
+<li><code>engines.md</code> — RTT engines overview  </li>
+<li><code>stacks.md</code> — stack overview  </li>
+<li><code>templates.md</code> — template overview  </li>
+<li><code>p_Capture.md</code> — capture grammar reference  </li>
+</ul>
+<hr>
+<h2 id="manifest">Manifest</h2>
+<p>See <code>module.json</code> for the full registry of UI modules, engines, stacks, templates, and
+navigation structure.</p>
+  </main>
+</body>
+</html>

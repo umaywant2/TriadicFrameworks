@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Resonance Seed Module Schema",
+  "description": "Schema definition for TriadicFrameworks module.json files, including roles, analyzer layers, and file metadata.",
+  "type": "object",
+
+  "properties": {
+    "module": {
+      "type": "string",
+      "description": "Human-readable module name."
+    },
+
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the module."
+    },
+
+    "category": {
+      "type": "string",
+      "description": "Module category identifier used by the sitemap and registry."
+    },
+
+    "summary": {
+      "type": "string",
+      "description": "Concise description of the module's purpose."
+    },
+
+    "files": {
+      "type": "array",
+      "description": "List of files included in the module.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Relative path to the file or directory."
+          },
+
+          "role": {
+            "type": "string",
+            "description": "Functional role of the file within the module.",
+            "enum": [
+              "engine",
+              "profile",
+              "signature",
+              "diagnostic",
+              "map",
+              "example",
+              "extension",
+              "index",
+              "reference",
+              "template"
+            ]
+          },
+
+          "analyzer_layer": {
+            "type": "string",
+            "description": "Analyzer layer used by TriadicFrameworks metadata systems.",
+            "enum": [
+              "operator",
+              "dimensional",
+              "regime",
+              "drift",
+              "coherence",
+              "cross-cutting"
+            ]
+          }
+        },
+
+        "required": ["path", "role", "analyzer_layer"]
+      }
+    }
+  },
+
+  "required": ["module", "version", "category", "summary", "files"]
+}

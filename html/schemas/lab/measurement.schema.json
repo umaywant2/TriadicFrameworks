@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "measurement_id": "string",
+  "experiment_id": "string",
+  "instrument_id": "string",
+  "timestamp": "string",
+  "value": "number",
+  "units": "string",
+  "triadic_context": {
+    "spin": "number",
+    "charge": "number",
+    "temperature": "number"
+  }
+}

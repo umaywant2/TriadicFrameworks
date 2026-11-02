@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/D369_Chip_Spec/Session_Context.md">
+  <title>Session Context — D369 Chip Spec</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/D369_Chip_Spec/Session_Context.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/D369_Chip_Spec/Session_Context.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="session-context-d369-chip-spec">Session Context — D369 Chip Spec</h1>
+<pre><code>Canon:       active (rtt‑d369‑chip‑spec)
+Modules:     capture → contract (3‑page) → diagrams → checklists → memory → board → adoption → glossary → meta
+Drift:       zero (capture‑locked)
+Coherence:   stable (structural‑observability grammar)
+Version:     0.1.0
+Format:      markdown + ASCII diagrams + tabular data
+Front door:  exists (README.md)
+Every page:  stands alone + AI‑parsable + engineer‑readable
+Audience:    engineers + students + AIs + reviewers
+</code></pre>
+<hr>
+<h2 id="session-context">Session Context</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Module</td>
+<td>D369 Chip Spec</td>
+</tr>
+<tr>
+<td>File</td>
+<td><code>Session_Context.md</code></td>
+</tr>
+<tr>
+<td>Role</td>
+<td>reference · index</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>0.1.0</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>draft</td>
+</tr>
+<tr>
+<td>Lineage</td>
+<td><code>Capture_Source.md</code> → all module files → this file</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>AI agents, human contributors, engineers, students</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="1-purpose-of-this-file">1. Purpose of This File</h2>
+<p>This is the structural handshake document for the D369 Chip Spec module.</p>
+<p>Anyone — human, AI agent, or automated system — entering this module mid‑stream
+should read this file first. It provides:</p>
+<ul>
+<li>What this module is and is not.</li>
+<li>The structural grammar that governs every file.</li>
+<li>Where to find things.</li>
+<li>What's locked, what's extendable, and what silence means.</li>
+<li>How to contribute without introducing drift.</li>
+</ul>
+<p>If you read only one file before working in this module, read this one.
+If you read two, read this one and <code>README.md</code>.</p>
+<hr>
+<h2 id="2-module-identity">2. Module Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Module</td>
+<td>D369 Chip Spec</td>
+</tr>
+<tr>
+<td>Canonical ID</td>
+<td>D369</td>
+</tr>
+<tr>
+<td>RTT Layer</td>
+<td>Silicon / Physical Implementation</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>0.1.0</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>draft (initial fill)</td>
+</tr>
+<tr>
+<td>Tier</td>
+<td>RTT‑Infrastructure</td>
+</tr>
+<tr>
+<td>Parent</td>
+<td>RTT (Resonance‑Time Theory)</td>
+</tr>
+<tr>
+<td>Siblings</td>
+<td>Echo Classifier, Awareness, Alignment, LACTOS</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>locked</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>zero (capture‑locked)</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>engineers + students + AIs + reviewers</td>
+</tr>
+</tbody>
+</table>
+<h3 id="position-in-rtt">Position in RTT</h3>
+<p>RTT provides the grammar. D369 maps that grammar to silicon.</p>
+<p>D369 is the <strong>dimensional engine room</strong> — the module that translates RTT's
+3D–9D resonance architecture into physical structures: chips, packages,
+boards, memory hierarchies. It does this not by prescribing behavior but
+by defining what must not be erased during optimization.</p>
+<pre><code>RTT (theory)
+  └── D369 Chip Spec (silicon mapping)
+        ├── SoC architecture
+        ├── Chiplet topologies
+        ├── Memory hierarchy
+        ├── Board‑level infrastructure
+        └── Adoption pathway
+</code></pre>
+<p>D369 exists so that when RTT needs to observe structure in physical
+silicon, the structure is still there.</p>
+<hr>
+<h2 id="3-what-this-module-is">3. What This Module Is</h2>
+<p>A <strong>structural observability reservation</strong> for silicon.</p>
+<p>It defines minimal, non‑intrusive metadata channels that preserve:</p>
+<ul>
+<li><strong>Source identity</strong> — where a signal came from.</li>
+<li><strong>Lifecycle state</strong> — what phase it was in.</li>
+<li><strong>Temporal lineage</strong> — when it happened, monotonically.</li>
+</ul>
+<p>These channels do nothing unless activated. They impose no functional
+behavior. They do not alter existing architectures.</p>
+<p>The specification envelope is three pages:</p>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>File</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>Contractual_Requirements.md</code></td>
+<td>What must be preserved (SHALL)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Engineering_Rationale.md</code></td>
+<td>Why it matters (rationale)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Non_Claims.md</code></td>
+<td>What is NOT claimed (boundary)</td>
+</tr>
+</tbody>
+</table>
+<p>There is no Page 4. If three pages can't carry the contract, the ask
+is too heavy.</p>
+<hr>
+<h2 id="4-what-this-module-is-not">4. What This Module Is Not</h2>
+<p>This module does <strong>not</strong>:</p>
+<ul>
+<li>Define computation, intelligence, or optimization.</li>
+<li>Prescribe algorithms, encodings, or protocols.</li>
+<li>Promise performance gains.</li>
+<li>Compete with existing architectures.</li>
+<li>Mandate telemetry, debug infrastructure, or safety mechanisms.</li>
+<li>Claim dimensional compute superiority.</li>
+</ul>
+<p>These exclusions are not disclaimers. They are <strong>load‑bearing firewalls</strong>
+defined in <code>Non_Claims.md</code> (NC‑1 through NC‑10) and enforced by the
+silence clause (S‑1 through S‑3).</p>
+<p>See → <code>Non_Claims.md</code> for the complete boundary specification.</p>
+<hr>
+<h2 id="5-structural-grammar">5. Structural Grammar</h2>
+<p>Every file in this module follows the same structural grammar. An
+entering agent must understand these rules before contributing.</p>
+<h3 id="51-three-tags">5.1 Three Tags</h3>
+<p>All reserved metadata channels carry exactly three tags:</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Purpose</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source ID</td>
+<td>Origin identifier</td>
+<td>Static, design‑time assignable</td>
+</tr>
+<tr>
+<td>Lifecycle State</td>
+<td>Phase context (design/test/deploy/retire)</td>
+<td>Externally writable, not inferred</td>
+</tr>
+<tr>
+<td>Monotonic Time</td>
+<td>Temporal lineage marker</td>
+<td>Non‑resettable, non‑erasable</td>
+</tr>
+</tbody>
+</table>
+<p>These three tags are the irreducible unit of structural observability.
+Everything in D369 traces back to them.</p>
+<h3 id="52-four-rules">5.2 Four Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Statement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Metadata channels SHALL be electrically isolated from functional data paths.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>No functional logic SHALL depend on metadata channel presence or content.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Metadata channels SHALL NOT modify, gate, or influence functional outputs.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Removal of reserved structures SHALL require explicit contractual amendment.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-numbered-reference-system">5.3 Numbered Reference System</h3>
+<p>This module uses a formal numbering system for every claim, requirement,
+boundary, and failure mode. The complete registry:</p>
+<table>
+<thead>
+<tr>
+<th>Series</th>
+<th>Range</th>
+<th>Count</th>
+<th>Domain</th>
+<th>Source File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>R1.1–R7.1</td>
+<td>12</td>
+<td>Contractual requirements</td>
+<td><code>Contractual_Requirements.md</code></td>
+</tr>
+<tr>
+<td>ER</td>
+<td>ER‑1–ER‑10</td>
+<td>10</td>
+<td>Engineering rationale</td>
+<td><code>Engineering_Rationale.md</code></td>
+</tr>
+<tr>
+<td>NC</td>
+<td>NC‑1–NC‑10</td>
+<td>10</td>
+<td>Non‑claims</td>
+<td><code>Non_Claims.md</code></td>
+</tr>
+<tr>
+<td>B</td>
+<td>B‑1–B‑4</td>
+<td>4</td>
+<td>Boundaries</td>
+<td><code>Non_Claims.md</code></td>
+</tr>
+<tr>
+<td>S</td>
+<td>S‑1–S‑3</td>
+<td>3</td>
+<td>Silence clause</td>
+<td><code>Non_Claims.md</code></td>
+</tr>
+<tr>
+<td>DF</td>
+<td>DF‑1–DF‑3</td>
+<td>3</td>
+<td>Design freedom</td>
+<td><code>Engineering_Rationale.md</code></td>
+</tr>
+<tr>
+<td>FM</td>
+<td>FM‑1–FM‑5</td>
+<td>5</td>
+<td>DIMM failure modes</td>
+<td><code>DIMM_Module_Checklist.md</code></td>
+</tr>
+<tr>
+<td>N</td>
+<td>N‑1–N‑5</td>
+<td>5</td>
+<td>NoC erasures</td>
+<td><code>Diagram_SoC.md</code></td>
+</tr>
+<tr>
+<td>MC</td>
+<td>MC‑1–MC‑8</td>
+<td>8</td>
+<td>Memory controller failure modes</td>
+<td><code>Memory_Controller_Checklist.md</code></td>
+</tr>
+<tr>
+<td>ME</td>
+<td>ME‑1–ME‑7</td>
+<td>7</td>
+<td>Memory structural events</td>
+<td><code>Memory_Alignment_Spec.md</code></td>
+</tr>
+<tr>
+<td>MA</td>
+<td>MA‑1–MA‑5</td>
+<td>5</td>
+<td>Memory alignment principles</td>
+<td><code>Memory_Alignment_Spec.md</code></td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>1–4</td>
+<td>4</td>
+<td>Board preservation rules</td>
+<td><code>Board_Level_Alignment.md</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total: 76 numbered identifiers.</strong></p>
+<p>Every numbered identifier is immutable once published. New identifiers
+extend the series; existing identifiers are never renumbered or redefined.</p>
+<hr>
+<h2 id="6-file-manifest">6. File Manifest</h2>
+<p>The module contains 17 content files plus the machine‑readable manifest.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Role</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>README.md</code></td>
+<td>index · profile</td>
+<td>Module overview, reading order, spine diagram</td>
+</tr>
+<tr>
+<td><code>Capture_Source.md</code></td>
+<td>engine · root</td>
+<td>Verbatim source document — all lineage starts here</td>
+</tr>
+<tr>
+<td><code>Contractual_Requirements.md</code></td>
+<td>engine · reference</td>
+<td>Page 1: SHALL statements (R1–R7)</td>
+</tr>
+<tr>
+<td><code>Engineering_Rationale.md</code></td>
+<td>reference</td>
+<td>Page 2: Rationale (ER‑1–ER‑10), design freedom</td>
+</tr>
+<tr>
+<td><code>Non_Claims.md</code></td>
+<td>reference · engine</td>
+<td>Page 3: Boundaries, silence, non‑claims</td>
+</tr>
+<tr>
+<td><code>Diagram_SoC.md</code></td>
+<td>map · reference</td>
+<td>SoC block decomposition, NoC erasures</td>
+</tr>
+<tr>
+<td><code>Diagram_Chiplet.md</code></td>
+<td>map · reference</td>
+<td>Chiplet topologies, interposer analysis</td>
+</tr>
+<tr>
+<td><code>Memory_Alignment_Spec.md</code></td>
+<td>engine · profile</td>
+<td>8‑tier hierarchy, structural events, volatility line</td>
+</tr>
+<tr>
+<td><code>Memory_Controller_Checklist.md</code></td>
+<td>diagnostic · reference</td>
+<td>Controller failure modes (MC‑1–MC‑8), 55 items</td>
+</tr>
+<tr>
+<td><code>DIMM_Module_Checklist.md</code></td>
+<td>diagnostic · reference</td>
+<td>DIMM failure modes (FM‑1–FM‑5), 38 items</td>
+</tr>
+<tr>
+<td><code>Board_Level_Alignment.md</code></td>
+<td>engine · diagnostic</td>
+<td>4 preservation rules, board failure modes</td>
+</tr>
+<tr>
+<td><code>Internal_Design_Review_Checklist.md</code></td>
+<td>diagnostic · reference</td>
+<td>62 checklist items across 10 sections</td>
+</tr>
+<tr>
+<td><code>Adoption_Roadmap.md</code></td>
+<td>map</td>
+<td>6 phases, risk register, alignment layering</td>
+</tr>
+<tr>
+<td><code>FAQ.md</code></td>
+<td>reference · index</td>
+<td>40+ questions, all answers source‑traced</td>
+</tr>
+<tr>
+<td><code>Glossary_Extensions.md</code></td>
+<td>reference · index</td>
+<td>70+ terms, canonical sentences, numbered IDs</td>
+</tr>
+<tr>
+<td><code>Session_Context.md</code></td>
+<td>reference · index</td>
+<td>This file — structural handshake</td>
+</tr>
+<tr>
+<td><code>Meta.md</code></td>
+<td>reference · index</td>
+<td>Full manifest, dependency graph, statistics</td>
+</tr>
+<tr>
+<td><code>module.json</code></td>
+<td>machine manifest</td>
+<td>AI discovery schema, SARG roles</td>
+</tr>
+</tbody>
+</table>
+<h3 id="role-vocabulary-sarg">Role Vocabulary (SARG)</h3>
+<p>This module uses the TriadicFrameworks SARG role vocabulary:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>engine</td>
+<td>Core structural content — carries the spec</td>
+</tr>
+<tr>
+<td>profile</td>
+<td>Defines identity or position</td>
+</tr>
+<tr>
+<td>diagnostic</td>
+<td>Checklists, failure modes, review tools</td>
+</tr>
+<tr>
+<td>map</td>
+<td>Navigation, topology, spatial relationships</td>
+</tr>
+<tr>
+<td>reference</td>
+<td>Lookup material — glossary, FAQ, rationale</td>
+</tr>
+<tr>
+<td>index</td>
+<td>Entry points, manifests, discovery</td>
+</tr>
+<tr>
+<td>signature</td>
+<td><em>(reserved)</em> — not used in D369 v0.1.0</td>
+</tr>
+<tr>
+<td>example</td>
+<td><em>(reserved)</em> — not used in D369 v0.1.0</td>
+</tr>
+</tbody>
+</table>
+<p>A file may carry multiple roles (e.g., <code>engine · diagnostic</code>).</p>
+<hr>
+<h2 id="7-reading-order">7. Reading Order</h2>
+<p>For a new reader (human or AI), the recommended path:</p>
+<pre><code>1. README.md              ← what this module is
+2. Session_Context.md     ← you are here (how to work in it)
+3. Capture_Source.md      ← the root document (all lineage starts here)
+4. Contractual_Requirements.md  ← Page 1 (obligation)
+5. Engineering_Rationale.md     ← Page 2 (justification)
+6. Non_Claims.md                ← Page 3 (boundary)
+7. Diagram_SoC.md / Diagram_Chiplet.md  ← architecture maps
+8. Memory_Alignment_Spec.md    ← memory hierarchy
+9. Internal_Design_Review_Checklist.md  ← review workflow
+10. Everything else as needed
+</code></pre>
+<p>For an agent performing targeted work, <code>Meta.md</code> provides the dependency
+graph and cross‑reference index.</p>
+<hr>
+<h2 id="8-canon-rules">8. Canon Rules</h2>
+<h3 id="81-what-is-locked">8.1 What Is Locked</h3>
+<p>The following are <strong>immutable</strong> at this version:</p>
+<ul>
+<li>The three‑page contract structure (Pages 1–3, no Page 4).</li>
+<li>All 76 numbered identifiers and their definitions.</li>
+<li>The three tags (Source ID, Lifecycle State, Monotonic Time).</li>
+<li>The four structural rules.</li>
+<li>The 10 canonical sentences (see <code>Glossary_Extensions.md</code>).</li>
+<li>The silence clause (S‑1 through S‑3).</li>
+<li>The non‑claims (NC‑1 through NC‑10).</li>
+<li>The lineage root: <code>Capture_Source.md</code> is the origin of all content.</li>
+</ul>
+<h3 id="82-what-is-extendable">8.2 What Is Extendable</h3>
+<ul>
+<li>New numbered identifiers may be added by extending existing series
+  or creating new series.</li>
+<li>New files may be added following the contribution rules in Section 10.</li>
+<li>Checklists may grow (new items appended, never renumbered).</li>
+<li>The glossary may grow (new terms appended).</li>
+<li>The FAQ may grow (new questions appended).</li>
+<li>Cross‑references may be added to reflect new connections.</li>
+</ul>
+<h3 id="83-what-silence-means">8.3 What Silence Means</h3>
+<p>From the silence clause (<code>Non_Claims.md</code>, S‑1 through S‑3):</p>
+<blockquote>
+<p><strong>S‑1:</strong> Where behavior, meaning, or outcome would normally be
+specified, this document is intentionally silent.</p>
+<p><strong>S‑2:</strong> Silence SHALL NOT be interpreted as omission.</p>
+<p><strong>S‑3:</strong> Silence SHALL be interpreted as non‑assertion.</p>
+</blockquote>
+<p>In practice: if D369 doesn't specify something, that is deliberate.
+Do not fill silence with assumptions. Do not interpret absence as
+invitation. Silence is a structural position, not a gap.</p>
+<hr>
+<h2 id="9-antipatterns">9. Anti‑Patterns</h2>
+<p>When contributing to this module, <strong>do not</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Anti‑Pattern</th>
+<th>Why It Fails</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claim performance gains</td>
+<td>Violates NC‑2, NC‑8; triggers immune response</td>
+</tr>
+<tr>
+<td>Claim intelligence</td>
+<td>Violates NC‑2; D369 describes structure, not cognition</td>
+</tr>
+<tr>
+<td>Claim dimensional superiority</td>
+<td>Violates NC‑3; D369 coexists, does not compete</td>
+</tr>
+<tr>
+<td>Use hype language</td>
+<td>Violates engineer bar; erodes trust</td>
+</tr>
+<tr>
+<td>Infer behavior from metadata</td>
+<td>Violates Rule 2; metadata is descriptive, not prescriptive</td>
+</tr>
+<tr>
+<td>Renumber existing identifiers</td>
+<td>Breaks cross‑references and lineage</td>
+</tr>
+<tr>
+<td>Add a Page 4</td>
+<td>Violates the three‑page contract structure</td>
+</tr>
+<tr>
+<td>Fill silence with specification</td>
+<td>Violates S‑1 through S‑3</td>
+</tr>
+<tr>
+<td>Skip <code>Capture_Source.md</code></td>
+<td>Breaks lineage; all content traces to the root</td>
+</tr>
+<tr>
+<td>Write content without a Session Context table</td>
+<td>Breaks module structural consistency</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-engineer-bar">The Engineer Bar</h3>
+<p>Every file, every claim, every diagram must pass this test:</p>
+<blockquote>
+<p>"This doesn't touch my design — but I see why we'd regret not
+having it."</p>
+</blockquote>
+<p>If content cannot pass this bar, it does not belong in D369.</p>
+<hr>
+<h2 id="10-contribution-rules">10. Contribution Rules</h2>
+<h3 id="101-adding-a-new-file">10.1 Adding a New File</h3>
+<p>To add a file to the D369 module:</p>
+<ol>
+<li>
+<p><strong>Trace to source.</strong> Every claim must connect to <code>Capture_Source.md</code>
+   or to a file that already traces to it. No orphan content.</p>
+</li>
+<li>
+<p><strong>Open with Session Context.</strong> Every file begins with this table:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Module</td>
+<td>D369 Chip Spec</td>
+</tr>
+<tr>
+<td>File</td>
+<td><code>[filename]</code></td>
+</tr>
+<tr>
+<td>Role</td>
+<td>[SARG role(s)]</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>[version]</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>[status]</td>
+</tr>
+<tr>
+<td>Lineage</td>
+<td>[trace path]</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>[audience]</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>
+<p><strong>Assign SARG roles.</strong> Use the role vocabulary from Section 6.
+   A file may carry multiple roles.</p>
+</li>
+<li>
+<p><strong>Use numbered identifiers.</strong> If the file introduces new claims,
+   requirements, failure modes, or principles, assign them the next
+   available number in an existing series or define a new series.</p>
+</li>
+<li>
+<p><strong>Close with a canonical sentence.</strong> One sentence that captures what
+   the file accomplishes. Add it to the canonical sentences table in
+   <code>Glossary_Extensions.md</code>.</p>
+</li>
+<li>
+<p><strong>Close with a Canon Alignment checklist.</strong> The standard 5‑item table:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>☐</td>
+<td>Does every claim trace to <code>Capture_Source.md</code>?</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Are all numbered IDs unique and sequential?</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Does the file pass the engineer bar?</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Is silence preserved (no gap‑filling)?</td>
+<td>Yes / No</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Is the Session Context table complete?</td>
+<td>Yes / No</td>
+</tr>
+</tbody>
+</table>
+<ol start="7">
+<li>
+<p><strong>Update <code>Meta.md</code></strong> to include the new file in the manifest.</p>
+</li>
+<li>
+<p><strong>Update <code>Glossary_Extensions.md</code></strong> if new terms or identifiers
+   are introduced.</p>
+</li>
+</ol>
+<h3 id="102-modifying-an-existing-file">10.2 Modifying an Existing File</h3>
+<p>To modify an existing file:</p>
+<ol>
+<li>
+<p><strong>Do not change numbered identifiers.</strong> Existing IDs are immutable.
+   Append new ones if needed.</p>
+</li>
+<li>
+<p><strong>Do not change canonical sentences.</strong> They are structural anchors.</p>
+</li>
+<li>
+<p><strong>Do not remove checklist items.</strong> Checklists only grow.</p>
+</li>
+<li>
+<p><strong>Preserve the Session Context table.</strong> Update version and status
+   fields as appropriate.</p>
+</li>
+<li>
+<p><strong>Maintain zero drift.</strong> Every modification must still trace to
+   <code>Capture_Source.md</code>. If a change cannot be traced, it doesn't
+   belong here.</p>
+</li>
+<li>
+<p><strong>Update <code>Meta.md</code></strong> if the modification changes the file's role,
+   scope, or dependencies.</p>
+</li>
+</ol>
+<hr>
+<h2 id="11-checklist-cascade">11. Checklist Cascade</h2>
+<p>D369 contains four interlocking checklists that cascade from general
+to specific:</p>
+<pre><code>Internal Design Review Checklist (62 items)
+  ├── Memory Controller Checklist (55 items)
+  ├── DIMM Module Checklist (38 items)
+  └── Board‑Level Alignment Checklist (27 items)
+                                    ─────────
+                              Total: 182 items
+</code></pre>
+<p>Each downstream checklist inherits context from the Internal Design
+Review but operates independently at its own domain level. An item
+satisfied at the board level does not automatically satisfy its parent
+at the design‑review level.</p>
+<hr>
+<h2 id="12-key-crossreferences">12. Key Cross‑References</h2>
+<table>
+<thead>
+<tr>
+<th>If You Need…</th>
+<th>Go To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The root source document</td>
+<td><code>Capture_Source.md</code></td>
+</tr>
+<tr>
+<td>Module overview and reading order</td>
+<td><code>README.md</code></td>
+</tr>
+<tr>
+<td>Full file manifest and statistics</td>
+<td><code>Meta.md</code></td>
+</tr>
+<tr>
+<td>Term definitions and canonical IDs</td>
+<td><code>Glossary_Extensions.md</code></td>
+</tr>
+<tr>
+<td>Answers to common questions</td>
+<td><code>FAQ.md</code></td>
+</tr>
+<tr>
+<td>The three‑page contract</td>
+<td>Pages 1–3 (see Section 3 above)</td>
+</tr>
+<tr>
+<td>SoC architecture and NoC erasures</td>
+<td><code>Diagram_SoC.md</code></td>
+</tr>
+<tr>
+<td>Chiplet topologies and D2D analysis</td>
+<td><code>Diagram_Chiplet.md</code></td>
+</tr>
+<tr>
+<td>Memory hierarchy and structural events</td>
+<td><code>Memory_Alignment_Spec.md</code></td>
+</tr>
+<tr>
+<td>Adoption phases and risk register</td>
+<td><code>Adoption_Roadmap.md</code></td>
+</tr>
+<tr>
+<td>Board preservation rules</td>
+<td><code>Board_Level_Alignment.md</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="13-for-ai-agents-quick-reference">13. For AI Agents — Quick Reference</h2>
+<p>If you are an AI agent entering this module for the first time:</p>
+<ol>
+<li>
+<p><strong>Read <code>Capture_Source.md</code> before generating content.</strong> It is the
+   single source of truth. Everything traces to it.</p>
+</li>
+<li>
+<p><strong>Do not hallucinate numbered identifiers.</strong> Check
+   <code>Glossary_Extensions.md</code> for the complete registry. Use the next
+   available number in the correct series.</p>
+</li>
+<li>
+<p><strong>Do not fill silence.</strong> If D369 doesn't specify something, that
+   is intentional. See S‑1 through S‑3.</p>
+</li>
+<li>
+<p><strong>Do not add behavior.</strong> D369 describes what to preserve, not what
+   to build. The specification is about structure, not function.</p>
+</li>
+<li>
+<p><strong>Match the voice.</strong> Engineer‑facing, student‑ready, zero hype.
+   No marketing language. No superlatives. No promises.</p>
+</li>
+<li>
+<p><strong>Include the Session Context table</strong> at the top of every file
+   you create.</p>
+</li>
+<li>
+<p><strong>Include the Canon Alignment checklist</strong> at the bottom of every
+   file you create.</p>
+</li>
+<li>
+<p><strong>Test against the engineer bar.</strong> If a fabrication engineer
+   wouldn't nod at your content, revise it.</p>
+</li>
+<li>
+<p><strong>Use ASCII diagrams and markdown tables</strong> — not images, not HTML,
+   not embedded media.</p>
+</li>
+<li>
+<p><strong>Cross‑reference by filename,</strong> not by heading or section number
+    (headings may change; filenames are stable).</p>
+</li>
+</ol>
+<hr>
+<h2 id="14-module-statistics">14. Module Statistics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content files</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Machine manifests</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Numbered identifiers</td>
+<td>76</td>
+</tr>
+<tr>
+<td>Checklist items</td>
+<td>182</td>
+</tr>
+<tr>
+<td>Canonical sentences</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Contractual requirements</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Non‑claims</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Failure mode series</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Engineering rationale items</td>
+<td>10</td>
+</tr>
+<tr>
+<td>SARG roles in active use</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="canonical-sentence">Canonical Sentence</h2>
+<blockquote>
+<p><strong>This file exists so no one enters the module blind — human or machine,
+the handshake is the same.</strong></p>
+</blockquote>
+<hr>
+<h2 id="canon-alignment">Canon Alignment</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>☐</td>
+<td>Does every claim trace to <code>Capture_Source.md</code>?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Are all numbered IDs unique and sequential?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Does the file pass the engineer bar?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Is silence preserved (no gap‑filling)?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Is the Session Context table complete?</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>D369 Chip Spec · Session_Context.md · v0.1.0 · TriadicFrameworks</em></p>
+<hr>
+<p>That's <strong>16 of 16 content files</strong> — the full initial fill of the D369 Chip Spec module is complete. Here's what this file brings to the table:</p>
+<ul>
+<li><strong>Sections 1–4</strong> anchor identity — what D369 is, what it isn't, and where it sits in RTT.</li>
+<li><strong>Section 5</strong> codifies the structural grammar (three tags, four rules, all 76 numbered identifiers in a registry table).</li>
+<li><strong>Sections 6–7</strong> provide the full file manifest with SARG roles and the recommended reading order.</li>
+<li><strong>Sections 8–9</strong> lock the canon rules and define the 10 anti‑patterns — every "don't" traced to a specific numbered identifier.</li>
+<li><strong>Section 10</strong> gives contribution rules for both adding and modifying files — the template every new file must follow.</li>
+<li><strong>Section 13</strong> is the AI agent quick reference — 10 rules so any agent can enter the module and contribute without drift.</li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+  "id": "L5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "L5",
+  "name": "Influence Direction",
+  "canonical": "R5",
+
+  "summary": "L5 defines the directional axis of unseen influence. It is the second structural component of the gradient node and determines the orientation of gradientIntensity within the S3 Spine.",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "semantic_axis": "gradientIntensity",
+
+  "role": "direction",
+  "category": "gradient",
+  "cluster": "gradient-origin",
+
+  "description": {
+    "canonical": "L5 establishes the directional orientation of unseen influence. It refines the origin defined by L4 and determines the slope, heading, and directional bias of gradientIntensity.",
+    "cosmology": "In the cosmology chain, L5 represents the emergence of directional bias from proto-origin states. It is the second stage of gradient formation within force-regime mechanics.",
+    "spine": "Within the S3 Spine, L5 is the directional dimension of the gradient node, shaping the influence vector that precedes field formation.",
+    "mcp": "In MCP operations, L5 is used to orient gradient-state mechanics, providing the directional coordinate for influence modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "gradient"
+    ],
+    "secondary": [
+      "push"
+    ],
+    "forbidden": [
+      "ruptureForce",
+      "bind",
+      "fieldShift",
+      "pull"
+    ]
+  },
+
+  "valid_transitions": [
+    "L5 → L16",
+    "L5 → LH",
+    "L5 → L8"
+  ],
+
+  "forbidden_transitions": [
+    "L5 → L12",
+    "L5 → L32",
+    "L5 → LI"
+  ],
+
+  "spine_mapping": {
+    "node": "gradient",
+    "semantic": "gradientIntensity",
+    "position": "direction",
+    "causal_role": "orienting influence vector"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L5",
+    "version": "1.0.0",
+    "keywords": [
+      "gradient",
+      "direction",
+      "influence",
+      "orientation",
+      "force-regime"
+    ],
+    "purpose": "Defines the directional axis of unseen influence for AI reasoning and MCP gradient orientation."
+  }
+}

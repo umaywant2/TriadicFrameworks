@@ -1,0 +1,109 @@
+{
+  "registry": {
+    "name": "RTT Bots Registry",
+    "id": "bots.registry",
+    "summary": "Unified catalog of all RTT bots and their triadic metadata.",
+    "version": "1.0.0"
+  },
+
+  "bots": [
+    {
+      "id": "bots.archive",
+      "name": "RTT Archive Bot",
+      "path": "./archive",
+      "category": "temporal",
+      "summary": "Temporal identity across snapshots."
+    },
+    {
+      "id": "bots.arrival_substrate_model",
+      "name": "Arrival Substrate Model",
+      "path": "./arrival_substrate_model",
+      "category": "substrate",
+      "summary": "Arrival dynamics across substrate layers."
+    },
+    {
+      "id": "bots.backgammon",
+      "name": "RTT Backgammon Bot",
+      "path": "./backgammon",
+      "category": "games",
+      "summary": "Prime topology, race geometry, collapse signatures."
+    },
+    {
+      "id": "bots.checkers",
+      "name": "RTT Checkers Bot",
+      "path": "./checkers",
+      "category": "games",
+      "summary": "Ladder topology, king routes, capture nets."
+    },
+    {
+      "id": "bots.chess",
+      "name": "RTT Chess Bot",
+      "path": "./chess",
+      "category": "games",
+      "summary": "Deterministic structure, tension, continuity arcs."
+    },
+    {
+      "id": "bots.collatz",
+      "name": "RTT Collatz Bot",
+      "path": "./collatz",
+      "category": "math",
+      "summary": "Regime cycling (S/E/R), collapse, projection-loss."
+    },
+    {
+      "id": "bots.go",
+      "name": "RTT Go Bot",
+      "path": "./go",
+      "category": "games",
+      "summary": "Influence fields, territory resonance, shape ancestry."
+    },
+    {
+      "id": "bots.hanabi",
+      "name": "RTT Hanabi Bot",
+      "path": "./hanabi",
+      "category": "games",
+      "summary": "Hidden-information continuity, hint resonance."
+    },
+    {
+      "id": "bots.moderation",
+      "name": "RTT Moderation Bot",
+      "path": "./moderation",
+      "category": "meta",
+      "summary": "Signal extraction, collapse, projection-loss."
+    },
+    {
+      "id": "bots.observer",
+      "name": "RTT Observer Bot",
+      "path": "./observer",
+      "category": "meta",
+      "summary": "Cross-module state watching and triadic synthesis."
+    },
+    {
+      "id": "bots.poker",
+      "name": "RTT Poker Bot",
+      "path": "./poker",
+      "category": "games",
+      "summary": "Pressure resonance, bluff continuity, range compression."
+    },
+    {
+      "id": "bots.session",
+      "name": "RTT Session Bot",
+      "path": "./session",
+      "category": "meta",
+      "summary": "Multi-bot session identity."
+    },
+    {
+      "id": "bots.tic_tac_toe",
+      "name": "RTT Tic Tac Toe Bot",
+      "path": "./tic_tac_toe",
+      "category": "games",
+      "summary": "Minimal triadic engine."
+    },
+    {
+      "id": "bots.validator",
+      "name": "RTT Validator Bot",
+      "path": "./validator",
+      "category": "meta",
+      "summary": "Manifest/schema/golden validation."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "L4",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "L4",
+  "name": "Influence Origin",
+  "canonical": "R5",
+
+  "summary": "L4 defines the origin point of unseen directional influence. It is the proto-source of gradient formation and the first anchor of gradientIntensity within the S3 Spine.",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "semantic_axis": "gradientIntensity",
+
+  "role": "origin",
+  "category": "gradient",
+  "cluster": "gradient-origin",
+
+  "description": {
+    "canonical": "L4 establishes the origin of unseen directional influence. It is the dimensional anchor from which gradientIntensity emerges and the first structural foothold of the gradient node in the S3 Spine.",
+    "cosmology": "In the cosmology chain, L4 represents the proto-origin of directional bias emerging from continuity mechanics. It is the earliest precursor to force-regime directionality.",
+    "spine": "Within the S3 Spine, L4 is the foundational dimension of the gradient node, defining the initial point from which influence direction is shaped.",
+    "mcp": "In MCP operations, L4 is used to initialize gradient-state mechanics, providing the origin coordinate for influence modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "gradient"
+    ],
+    "secondary": [
+      "push"
+    ],
+    "forbidden": [
+      "ruptureForce",
+      "bind",
+      "fieldShift",
+      "pull"
+    ]
+  },
+
+  "valid_transitions": [
+    "L4 → L5",
+    "L4 → L16",
+    "L4 → LH",
+    "L4 → L8"
+  ],
+
+  "forbidden_transitions": [
+    "L4 → L12",
+    "L4 → L32",
+    "L4 → LI"
+  ],
+
+  "spine_mapping": {
+    "node": "gradient",
+    "semantic": "gradientIntensity",
+    "position": "origin",
+    "causal_role": "initial influence anchor"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L4",
+    "version": "1.0.0",
+    "keywords": [
+      "gradient",
+      "origin",
+      "influence",
+      "direction",
+      "proto-source",
+      "force-regime"
+    ],
+    "purpose": "Defines the origin of unseen directional influence for AI reasoning and MCP gradient initialization."
+  }
+}

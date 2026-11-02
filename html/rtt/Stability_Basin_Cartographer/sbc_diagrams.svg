@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900">
+
+  <!-- Background -->
+  <rect width="1280" height="900" fill="#0d0d0d"/>
+
+  <!-- Title -->
+  <text x="640" y="70" font-size="42" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">
+    Stability Basin Cartographer — RTT/1
+  </text>
+
+  <!-- Regime Blocks -->
+  <rect x="120" y="180" width="260" height="120" rx="12" fill="#2b2b2b"/>
+  <text x="250" y="250" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R1 — Conceptual</text>
+
+  <rect x="500" y="180" width="260" height="120" rx="12" fill="#2b2b2b"/>
+  <text x="630" y="250" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R2 — Computational</text>
+
+  <rect x="880" y="180" width="260" height="120" rx="12" fill="#2b2b2b"/>
+  <text x="1010" y="250" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R3 — Physical</text>
+
+  <rect x="500" y="360" width="260" height="120" rx="12" fill="#2b2b2b"/>
+  <text x="630" y="430" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R4 — Dimensional</text>
+
+  <!-- Basin Nodes -->
+  <circle cx="250" cy="350" r="40" fill="#66ccff"/>
+  <text x="250" y="355" font-size="20" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Basin</text>
+
+  <circle cx="1010" cy="350" r="40" fill="#66ccff"/>
+  <text x="1010" y="355" font-size="20" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Basin</text>
+
+  <!-- Basin Gradient Vectors -->
+  <line x1="250" y1="350" x2="500" y2="240" stroke="#33bbff" stroke-width="4"/>
+  <polygon points="500,240 485,255 495,255" fill="#33bbff"/>
+  <text x="360" y="280" font-size="22" fill="#33bbff"
+        font-family="Segoe UI, sans-serif">Gradient Flow</text>
+
+  <line x1="1010" y1="350" x2="630" y2="430" stroke="#33bbff" stroke-width="4"/>
+  <polygon points="630,430 645,415 635,415" fill="#33bbff"/>
+  <text x="820" y="390" font-size="22" fill="#33bbff"
+        font-family="Segoe UI, sans-serif">Gradient Flow</text>
+
+  <!-- Stability Field -->
+  <ellipse cx="630" cy="600" rx="260" ry="120" fill="none" stroke="#99ddff" stroke-width="4"/>
+  <text x="630" y="610" font-size="26" fill="#99ddff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Stability Field</text>
+
+  <!-- Collapse Zone -->
+  <ellipse cx="630" cy="600" rx="140" ry="60" fill="#1a1a1a" stroke="#ff9966" stroke-width="3"/>
+  <text x="630" y="605" font-size="22" fill="#ff9966" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Collapse Zone</text>
+
+  <!-- Collapse Node -->
+  <circle cx="630" cy="600" r="20" fill="#ff3333"/>
+  <text x="630" y="640" font-size="20" fill="#ff3333" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Collapse</text>
+
+  <!-- Legend -->
+  <rect x="120" y="680" width="1040" height="180" rx="12" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+
+  <text x="640" y="720" font-size="30" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">SBC Diagram Legend</text>
+
+  <text x="200" y="760" font-size="22" fill="#66ccff" font-family="Segoe UI, sans-serif">■ Basin Node</text>
+  <text x="200" y="800" font-size="22" fill="#33bbff" font-family="Segoe UI, sans-serif">■ Basin Gradient</text>
+
+  <text x="600" y="760" font-size="22" fill="#99ddff" font-family="Segoe UI, sans-serif">■ Stability Field</text>
+  <text x="600" y="800" font-size="22" fill="#ff9966" font-family="Segoe UI, sans-serif">■ Collapse Zone</text>
+
+  <text x="950" y="760" font-size="22" fill="#ff3333" font-family="Segoe UI, sans-serif">■ Collapse Node</text>
+
+</svg>
+

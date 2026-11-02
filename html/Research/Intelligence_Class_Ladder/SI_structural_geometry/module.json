@@ -1,0 +1,21 @@
+{
+  "module": "SI_structural_geometry",
+  "name": "Structural Intelligence — Structural Geometry",
+  "summary": "Defines the structural manifold, invariance fields, temporal-extension surfaces, and cross-domain transfer geometry of SI.",
+  "category": "intelligence-structural",
+  "version": "1.0",
+  "purpose": "Provide the deep geometric foundation of SI, including SIF, TES, XTF, and apex-region structural behavior.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.geometry.compute",
+    "@si.geometry.invariance",
+    "@si.geometry.temporal",
+    "@si.geometry.transfer",
+    "@si.geometry.apex"
+  ],
+  "lineage": {
+    "upstream": ["SI"],
+    "downstream": ["SI_visual_map"]
+  }
+}

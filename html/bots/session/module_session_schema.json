@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/module_session_state.json",
+  "title": "RTT Session StateEmitter",
+  "description": "Triadic state output for a conversation session.",
+  "type": "object",
+
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "module_id": { "type": "string" },
+        "session_id": { "type": "string" },
+        "length": { "type": "integer", "minimum": 1 },
+        "participants": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["module_id", "session_id", "length"]
+    },
+
+    "timeline": {
+      "type": "array",
+      "description": "Sequence of messages.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "timestamp": { "type": "string" },
+          "sender": { "type": "string" },
+          "text": { "type": "string" }
+        },
+        "required": ["index", "sender", "text"]
+      }
+    },
+
+    "lumen": {
+      "type": "array",
+      "description": "Structural extraction per message.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "signals": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["index", "signals"]
+      }
+    },
+
+    "regime": {
+      "type": "array",
+      "description": "Hephaestus regime classification per message.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "regime": {
+            "type": "string",
+            "enum": ["local", "structural", "continuity"]
+          }
+        },
+        "required": ["index", "regime"]
+      }
+    },
+
+    "ancestry": {
+      "type": "array",
+      "description": "Aurion ancestry signals across the session.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "integer" },
+          "collapse_signature": { "type": "boolean" },
+          "projection_loss": { "type": "boolean" }
+        },
+        "required": ["index", "collapse_signature", "projection_loss"]
+      }
+    },
+
+    "drift": {
+      "type": "object",
+      "description": "Continuity drift across the entire session.",
+      "properties": {
+        "direction": { "type": "string" },
+        "strength": {
+          "type": "string",
+          "enum": ["none", "weak", "medium", "strong"]
+        }
+      },
+      "required": ["direction", "strength"]
+    },
+
+    "triadic_identity": {
+      "type": "object",
+      "description": "Harmonia synthesis for the entire session.",
+      "properties": {
+        "local": { "type": "number", "minimum": 0, "maximum": 1 },
+        "structural": { "type": "number", "minimum": 0, "maximum": 1 },
+        "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "risk": { "type": "number", "minimum": 0, "maximum": 1 },
+        "final": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["local", "structural", "continuity", "risk", "final"]
+    }
+  },
+
+  "required": [
+    "metadata",
+    "timeline",
+    "lumen",
+    "regime",
+    "ancestry",
+    "drift",
+    "triadic_identity"
+  ]
+}

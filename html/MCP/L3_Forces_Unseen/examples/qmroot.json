@@ -1,0 +1,20 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "qmroot",
+  "module": "examples",
+  "kind": ["qmroot"],
+  "path": "docs/MCP/L3_Forces_Unseen/examples/qmroot.json",
+
+  "envelope": {
+    "canonical": "QMROOT interpretation of the example.",
+    "reality": "Not applicable.",
+    "imagination": "Not applicable.",
+    "information": "Not applicable.",
+    "error": "Not applicable.",
+    "qmroot": "Describes the example as it exists in root‑state, pre‑regime form."
+  }
+}

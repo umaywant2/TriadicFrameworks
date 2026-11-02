@@ -1,0 +1,49 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Coherence Layers API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/coherence": {
+      "get": {
+        "summary": "Coherence overview",
+        "responses": {
+          "200": { "description": "OK" }
+        }
+      }
+    },
+    "/api/coherence/layers": {
+      "get": {
+        "summary": "List coherence layers",
+        "responses": {
+          "200": { "description": "OK" }
+        }
+      }
+    },
+    "/api/coherence/layers/{id}": {
+      "get": {
+        "summary": "Get coherence layer by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" }
+        }
+      }
+    },
+    "/api/coherence/health": {
+      "get": {
+        "summary": "Coherence health check",
+        "responses": {
+          "200": { "description": "OK" }
+        }
+      }
+    }
+  }
+}

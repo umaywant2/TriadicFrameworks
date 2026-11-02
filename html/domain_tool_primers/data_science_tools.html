@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/domain_tool_primers/data_science_tools.md">
+  <title>Data Science Tool Primer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/domain_tool_primers/data_science_tools.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/domain_tool_primers/data_science_tools.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="data-science-tool-primer"><strong>Data Science Tool Primer</strong></h1>
+<p><em>A minimal starting point for exploring vST concepts inside data‑analysis, statistical, and tabular‑modeling environments</em></p>
+<p>This primer provides a lightweight structure for experimenting with Validation‑Space Theory (vST) inside common data‑science tools. Everything here is intentionally minimal, safe to run, and designed to fit naturally into the workflows data scientists already use.</p>
+<p>The functional code runs immediately.<br>
+All vST‑specific mappings are <strong>commented out by default</strong> so validators can read before enabling.</p>
+<hr>
+<h2 id="common-tools-in-this-domain"><strong>Common Tools in This Domain</strong></h2>
+<p>Data‑science practitioners typically work with:</p>
+<ul>
+<li>Python (Pandas, NumPy, Polars)  </li>
+<li>Jupyter / IPython  </li>
+<li>DuckDB  </li>
+<li>Apache Arrow  </li>
+<li>R (tidyverse, data.table)  </li>
+<li>SQL engines  </li>
+<li>Spark / PySpark  </li>
+</ul>
+<p>This primer uses <strong>Python + Pandas</strong> for maximum portability across data‑analysis workflows.</p>
+<hr>
+<h2 id="minimal-functional-example-runs-immediately"><strong>Minimal Functional Example (runs immediately)</strong></h2>
+<pre><code class="language-python">import pandas as pd
+
+# Minimal example: a simple dataset
+df = pd.DataFrame({
+    &quot;value&quot;: [10, 12, 11, 13]
+})
+
+mean_value = df[&quot;value&quot;].mean()
+
+print(&quot;Mean value:&quot;, mean_value)
+</code></pre>
+<p>This ensures the file loads cleanly in any data‑science environment.</p>
+<hr>
+<h2 id="optional-vst-blocks-commented-out"><strong>Optional vST Blocks (commented out)</strong></h2>
+<p>These blocks show how vST concepts can be expressed inside data‑science workflows.<br>
+Uncomment only after reading the usage notes.</p>
+<hr>
+<h3 id="1-dimensional-core-declaration-optional"><strong>1. Dimensional Core Declaration (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Dimensional Core Declaration
+# Uncomment to enable vST dimensional mapping
+# ---------------------------------------------------------
+# dimensional_core = {
+#     &quot;core_id&quot;: &quot;dc_data_01&quot;,
+#     &quot;dimensions&quot;: [&quot;scale&quot;, &quot;rate&quot;, &quot;stability&quot;],
+#     &quot;domain_variable&quot;: mean_value,
+#     &quot;notes&quot;: &quot;Maps a statistical or tabular variable into vST dimensional primitives.&quot;
+# }
+#
+# print(&quot;vST Dimensional Core:&quot;, dimensional_core)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Maps a data‑science variable (mean, variance, anomaly score, trend) into a vST dimensional‑core structure.</p>
+<hr>
+<h3 id="2-regime-anchor-optional"><strong>2. Regime Anchor (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Regime Anchor
+# Uncomment to activate regime validation
+# ---------------------------------------------------------
+# regime_anchor = {
+#     &quot;anchor_id&quot;: &quot;ra_data_01&quot;,
+#     &quot;domain_regime&quot;: &quot;baseline&quot;,
+#     &quot;vst_regime&quot;: &quot;stable&quot;,
+#     &quot;notes&quot;: &quot;Anchors a data regime (baseline, anomaly, drift) to a vST regime.&quot;
+# }
+#
+# print(&quot;vST Regime Anchor:&quot;, regime_anchor)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Anchors a data regime (baseline, anomaly, drift, seasonal pattern) to a vST regime classification.</p>
+<hr>
+<h3 id="3-corridor-boundary-mapping-optional"><strong>3. Corridor Boundary Mapping (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Corridor Boundary Mapping
+# Uncomment to explore corridor transitions
+# ---------------------------------------------------------
+# corridor_boundary = {
+#     &quot;boundary_id&quot;: &quot;cb_data_01&quot;,
+#     &quot;input_variable&quot;: mean_value,
+#     &quot;threshold&quot;: 12.5,
+#     &quot;notes&quot;: &quot;Example corridor boundary for stability vs. anomaly in a data stream.&quot;
+# }
+#
+# print(&quot;vST Corridor Boundary:&quot;, corridor_boundary)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Shows how corridor boundaries can be used to reason about anomalies, drift, or threshold‑based transitions.</p>
+<hr>
+<h3 id="4-triadic-operator-mapping-optional"><strong>4. Triadic Operator Mapping (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Triadic Operator Mapping
+# Uncomment to enable operator-level reasoning
+# ---------------------------------------------------------
+# triadic_operator = {
+#     &quot;input&quot;: &quot;mean_value&quot;,
+#     &quot;operator&quot;: &quot;transition&quot;,
+#     &quot;output&quot;: &quot;vst_regime_shift&quot;,
+#     &quot;notes&quot;: &quot;Demonstrates how data transitions (baseline → anomaly → recovery) can be interpreted through vST triadic structure.&quot;
+# }
+#
+# print(&quot;vST Triadic Operator:&quot;, triadic_operator)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Demonstrates how data‑stream transitions can be interpreted through vST’s triadic operator lens.</p>
+<hr>
+<h2 id="suggested-validation-experiments"><strong>Suggested Validation Experiments</strong></h2>
+<p>These optional experiments help early validators explore vST behavior in data‑science contexts:</p>
+<ul>
+<li>Map statistical metrics (mean, variance, entropy) into dimensional cores  </li>
+<li>Anchor baseline vs. anomaly regimes to vST regimes  </li>
+<li>Explore corridor boundaries around drift or threshold events  </li>
+<li>Compare dimensional‑core behavior across datasets or time windows  </li>
+<li>Use triadic operators to reason about transitions (normal → anomaly → recovery)  </li>
+<li>Test regime shifts in streaming or batch‑processing pipelines  </li>
+</ul>
+<p>These experiments help reveal how vST clarifies cross‑regime behavior in data‑analysis systems.</p>
+<hr>
+<h2 id="notes"><strong>Notes</strong></h2>
+<p>This primer is intentionally minimal.<br>
+It is not a full integration — it is a safe, readable starting point for exploring vST inside data‑science workflows.</p>
+  </main>
+</body>
+</html>

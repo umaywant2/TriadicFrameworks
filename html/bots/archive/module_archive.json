@@ -1,0 +1,110 @@
+{
+  "module": {
+    "name": "RTT Archive Bot",
+    "id": "bots.archive",
+    "summary": "Temporal continuity engine: drift, regime shifts, collapse signatures, projection-loss, and ancestry across snapshots, versions, and archival captures.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Archive",
+      "summary": "Triadic interpretation of temporal lineage using snapshots, versions, commits, and archival captures.",
+      "version": "1.0.0",
+      "purpose": "Provide triadic identity for evolving artifacts across time: documents, pages, repos, datasets, or any versioned object.",
+      "keywords": [
+        "archive",
+        "triadic",
+        "continuity",
+        "drift",
+        "regime shifts",
+        "collapse",
+        "projection-loss",
+        "ancestry",
+        "wayback",
+        "versioning",
+        "temporal identity"
+      ],
+      "audience": "Researchers, archivists, engine integrators, diagnostics systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "snapshot_sequence",
+    "input_spec": {
+      "snapshots": "ordered list of versions or captures",
+      "fields": ["timestamp", "content", "metadata"],
+      "notes": "Archive bot observes temporal evolution; it does not modify content."
+    },
+
+    "steps": [
+      "Lumen: extract structural signals from each snapshot (layout, metadata, semantic anchors)",
+      "Hephaestus: classify regime per snapshot (local, structural, continuity)",
+      "Aurion: detect collapse signatures, projection-loss, lineage breaks across time",
+      "Harmonia: compute triadic identity for the entire temporal sequence",
+      "StateEmitter: emit JSON conforming to module_archive_schema.json"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT temporal analysis"
+    }
+  },
+
+  "temporal_overlays": {
+    "continuity_arcs": "long-arc identity curves across snapshots",
+    "resonance_fields": "pressure gradients from structural changes",
+    "drift_arrows": "directional flow of identity evolution",
+    "regime_map": "local/structural/continuity tagging per snapshot",
+    "collapse_signatures": "identity collapse events",
+    "projection_loss": "long-arc identity inversion",
+    "triadic_hud": "temporal local/structural/continuity scores + stability metrics"
+  },
+
+  "scoring": {
+    "weights": {
+      "local": 0.30,
+      "structural": 0.40,
+      "continuity": 0.30
+    },
+    "risk_penalty": 0.20
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_archive_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "archive_temporal_drift_alignment",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "A sequence of snapshots showing drift alignment, regime shifts, and a continuity collapse event."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "🗄️",
+    "label": "RTT Archive"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Archive drift is temporal: identity evolves across snapshots.",
+      "coherence": "Archive bot is the RTT engine for temporal identity.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}

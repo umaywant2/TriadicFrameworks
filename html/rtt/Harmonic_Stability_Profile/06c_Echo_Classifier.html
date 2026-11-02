@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Harmonic_Stability_Profile/06c_Echo_Classifier.md">
+  <title>🎼 06c — Echo Classifier</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Harmonic_Stability_Profile/06c_Echo_Classifier.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Harmonic_Stability_Profile/06c_Echo_Classifier.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Harmonic_Stability_Profile_06c_Echo_Classifier_" src="https://github.com/user-attachments/assets/38bdaf60-f0d2-4703-b719-8fad2f92d017" /></p>
+<h1 id="06c-echo-classifier">🎼 <strong>06c — Echo Classifier</strong></h1>
+<h3 id="decision-tree-echo-typing-stability-assignment"><em>Decision Tree • Echo Typing • Stability Assignment</em></h3>
+<p>The <strong>Echo Classifier</strong> converts:</p>
+<ul>
+<li><strong>Echo Triggers (06a)</strong>  </li>
+<li><strong>Echo Signatures (06b)</strong>  </li>
+<li><strong>Echo Strength Index (04c)</strong>  </li>
+<li><strong>Substrate Spread (05a)</strong>  </li>
+<li><strong>Recursion Mode (06)</strong>  </li>
+</ul>
+<p>into a <strong>canonical echo type</strong>.</p>
+<p>Echo classification is essential for:</p>
+<ul>
+<li>stability audits  </li>
+<li>drift detection  </li>
+<li>recursion diagnostics  </li>
+<li>echo‑pressure analysis  </li>
+<li>canon sweeps  </li>
+</ul>
+<p>This module defines the <strong>six canonical echo types</strong> and the classifier that assigns them.</p>
+<hr>
+<h1 id="1-the-six-canonical-echo-types">🔷 <strong>1. The Six Canonical Echo Types</strong></h1>
+<p>Echo types represent the <em>final identity</em> of an echo.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>E1</strong></td>
+<td>Structural Echo</td>
+<td>triad/operator/ladder recurrence</td>
+</tr>
+<tr>
+<td><strong>E2</strong></td>
+<td>Harmonic Echo</td>
+<td>interval alignment, resonance peaks</td>
+</tr>
+<tr>
+<td><strong>E3</strong></td>
+<td>Substrate Echo</td>
+<td>cross‑substrate recurrence</td>
+</tr>
+<tr>
+<td><strong>E4</strong></td>
+<td>Recursion Echo</td>
+<td>recursion‑pattern repetition</td>
+</tr>
+<tr>
+<td><strong>E5</strong></td>
+<td>Drift‑Shadow Echo</td>
+<td>drift‑residue recurrence</td>
+</tr>
+<tr>
+<td><strong>E6</strong></td>
+<td>Atlas Echo</td>
+<td>high‑altitude structural resonance</td>
+</tr>
+</tbody>
+</table>
+<p>These types correspond directly to the echo families (F1–F6).</p>
+<hr>
+<h1 id="2-echo-classification-inputs">🔷 <strong>2. Echo Classification Inputs</strong></h1>
+<p>The classifier uses five inputs:</p>
+<h3 id="21-trigger-profile-t1t6"><strong>2.1 Trigger Profile (T1–T6)</strong></h3>
+<p>From <code>06a_Echo_Triggers.md</code>.</p>
+<h3 id="22-signature-profile-s1s6"><strong>2.2 Signature Profile (S1–S6)</strong></h3>
+<p>From <code>06b_Echo_Signatures.md</code>.</p>
+<h3 id="23-echo-strength-index-esi1-esi4"><strong>2.3 Echo Strength Index (ESI‑1 → ESI‑4)</strong></h3>
+<p>From <code>04c_Echo_Strength_Index.md</code>.</p>
+<h3 id="24-substrate-spread-15-substrates"><strong>2.4 Substrate Spread (1–5 substrates)</strong></h3>
+<p>From <code>05a_CrossSubstrate_Echo_Matrix.md</code>.</p>
+<h3 id="25-recursion-mode-r1r4"><strong>2.5 Recursion Mode (R1–R4)</strong></h3>
+<p>From <code>06_Harmonic_Recursion_Detector.md</code>.</p>
+<p>These inputs determine the echo type.</p>
+<hr>
+<h1 id="3-echo-classification-decision-tree">🔷 <strong>3. Echo Classification Decision Tree</strong></h1>
+<pre><code>                     [ Echo Trigger ]
+                             |
+        ------------------------------------------------
+        |              |              |               |
+       A              B              C               D
+ Structural      Harmonic       Substrate       Recursion
+        |              |              |               |
+       v              v              v               v
+     E1?            E2?            E3?             E4?
+        \              \              \               \
+         \              \              \               \
+          -----------------------------------------------
+                              |
+                              v
+                     [ Drift Pressure? ]
+                              |
+                     ---------------------
+                     |                   |
+                    Yes                 No
+                     |                   |
+                     v                   v
+                   E5?                 [ Check Atlas ]
+                                            |
+                                            v
+                                          E6?
+</code></pre>
+<p>Interpretation:</p>
+<ul>
+<li>Structural triggers → E1  </li>
+<li>Harmonic triggers → E2  </li>
+<li>Substrate triggers → E3  </li>
+<li>Recursion triggers → E4  </li>
+<li>Drift pressure → E5  </li>
+<li>Atlas resonance → E6  </li>
+</ul>
+<hr>
+<h1 id="4-echo-type-conditions-formal">🔷 <strong>4. Echo Type Conditions (Formal)</strong></h1>
+<h3 id="e1-structural-echo"><strong>E1 — Structural Echo</strong></h3>
+<ul>
+<li>Trigger A  </li>
+<li>Signature A  </li>
+<li>ESI 1–2  </li>
+<li>Substrates ≤ 2  </li>
+<li>Recursion R1  </li>
+</ul>
+<h3 id="e2-harmonic-echo"><strong>E2 — Harmonic Echo</strong></h3>
+<ul>
+<li>Trigger B  </li>
+<li>Signature B  </li>
+<li>ESI 2–3  </li>
+<li>Harmonic substrate dominant  </li>
+<li>Recursion R1–R2  </li>
+</ul>
+<h3 id="e3-substrate-echo"><strong>E3 — Substrate Echo</strong></h3>
+<ul>
+<li>Trigger C  </li>
+<li>Signature C  </li>
+<li>ESI 2–3  </li>
+<li>Substrates ≥ 3  </li>
+<li>Recursion R2–R3  </li>
+</ul>
+<h3 id="e4-recursion-echo"><strong>E4 — Recursion Echo</strong></h3>
+<ul>
+<li>Trigger D  </li>
+<li>Signature D  </li>
+<li>ESI 3–4  </li>
+<li>Recursion R2–R4  </li>
+</ul>
+<h3 id="e5-driftshadow-echo"><strong>E5 — Drift‑Shadow Echo</strong></h3>
+<ul>
+<li>Trigger E  </li>
+<li>Signature E  </li>
+<li>ESI 3–4  </li>
+<li>Drift D1–D4  </li>
+<li>Recursion R3–R4  </li>
+</ul>
+<h3 id="e6-atlas-echo"><strong>E6 — Atlas Echo</strong></h3>
+<ul>
+<li>Trigger F  </li>
+<li>Signature F  </li>
+<li>ESI 4  </li>
+<li>Substrates = 5  </li>
+<li>Recursion R4  </li>
+</ul>
+<hr>
+<h1 id="5-echo-classifier-matrix">🔷 <strong>5. Echo Classifier Matrix</strong></h1>
+<pre><code>+-----------+-----------+-----------+-----------+-----------+-----------+
+| Input →   |   E1      |    E2     |    E3     |    E4     |    E5     |    E6     |
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+| Trigger   |     A     |     B     |     C     |     D     |     E     |     F     |
+| Signature |     A     |     B     |     C     |     D     |     E     |     F     |
+| ESI       |   1–2     |   2–3     |   2–3     |   3–4     |   3–4     |     4     |
+| Substrates|   1–2     |     1     |   3–4     |   2–4     |   2–5     |     5     |
+| Recursion |    R1     |   R1–R2   |   R2–R3   |   R2–R4   |   R3–R4   |    R4     |
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+</code></pre>
+<hr>
+<h1 id="6-composite-classification-workflow">🔷 <strong>6. Composite Classification Workflow</strong></h1>
+<pre><code>[ Identify Trigger ]
+        ↓
+[ Identify Signature ]
+        ↓
+[ Measure ESI ]
+        ↓
+[ Count Substrates ]
+        ↓
+[ Determine Recursion Mode ]
+        ↓
+[ Assign Echo Type (E1–E6) ]
+</code></pre>
+<p>This workflow ensures <strong>zero‑drift classification</strong>.</p>
+<hr>
+<h1 id="7-usage-notes">🔷 <strong>7. Usage Notes</strong></h1>
+<p>Use this file when:</p>
+<ul>
+<li>classifying echoes  </li>
+<li>diagnosing echo‑pressure  </li>
+<li>predicting drift escalation  </li>
+<li>mapping recursion‑echo alignment  </li>
+<li>performing stability audits  </li>
+<li>preparing canon sweeps  </li>
+</ul>
+<p>Referenced by:</p>
+<ul>
+<li><code>06a_Echo_Triggers.md</code>  </li>
+<li><code>06b_Echo_Signatures.md</code>  </li>
+<li><code>06_Harmonic_Recursion_Detector.md</code>  </li>
+<li><code>04c_Echo_Strength_Index.md</code>  </li>
+</ul>
+<hr>
+<h1 id="footer">🔷 <strong>Footer</strong></h1>
+<pre><code>HSP Module 06c — Loaded
+Version: v1.0
+Status: Canon-Stable
+</code></pre>
+  </main>
+</body>
+</html>

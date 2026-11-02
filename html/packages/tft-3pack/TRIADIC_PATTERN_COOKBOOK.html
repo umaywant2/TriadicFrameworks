@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/packages/tft-3pack/TRIADIC_PATTERN_COOKBOOK.md">
+  <title>🍳 Triadic Pattern Cookbook</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/packages/tft-3pack/TRIADIC_PATTERN_COOKBOOK.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/packages/tft-3pack/TRIADIC_PATTERN_COOKBOOK.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadic-pattern-cookbook">🍳 <strong>Triadic Pattern Cookbook</strong></h1>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</h6>
+<h3 id="realworld-applications-of-the-3pack-in-data-agents-and-simulation"><em>Real‑World Applications of the 3‑Pack in Data, Agents, and Simulation</em></h3>
+<p>The <strong>3‑Pack</strong> (P1 → P2 → P3) is the smallest complete RTT‑aligned action.<br>
+This cookbook shows how to apply triadic patterns to real workflows.</p>
+<p>Each recipe includes:</p>
+<ul>
+<li><strong>What it solves</strong>  </li>
+<li><strong>Which triadic pattern it uses</strong>  </li>
+<li><strong>Shell example</strong>  </li>
+<li><strong>Python example</strong>  </li>
+<li><strong>WRSADC dispatch example</strong>  </li>
+</ul>
+<hr>
+<h1 id="recipe-1-data-pipeline-etl">🥣 <strong>Recipe 1 — Data Pipeline (ETL)</strong></h1>
+<h3 id="pattern-sequential-triads">Pattern: <strong>Sequential Triads</strong></h3>
+<p>A classic Extract → Transform → Load pipeline maps perfectly to the 3‑Pack.</p>
+<h3 id="what-it-solves">What it solves</h3>
+<ul>
+<li>Clean, repeatable data processing  </li>
+<li>Predictable lineage  </li>
+<li>Safe transformations  </li>
+</ul>
+<h3 id="shell">Shell</h3>
+<pre><code class="language-bash">primitive1.sh   # Extract
+primitive2.sh   # Transform
+primitive3.sh   # Load
+</code></pre>
+<h3 id="python">Python</h3>
+<pre><code class="language-python">core.interpret(&quot;extract&quot;)
+core.interpret(&quot;transform&quot;)
+core.interpret(&quot;load&quot;)
+</code></pre>
+<h3 id="wrsadc-dispatch">WRSADC Dispatch</h3>
+<pre><code class="language-python">core.dispatch(extract_data)
+core.dispatch(transform_data)
+core.dispatch(load_data)
+</code></pre>
+<hr>
+<h1 id="recipe-2-multistage-data-refinement">🍱 <strong>Recipe 2 — Multi‑Stage Data Refinement</strong></h1>
+<h3 id="pattern-triadic-ladder">Pattern: <strong>Triadic Ladder</strong></h3>
+<p>Each stage refines the data further.</p>
+<h3 id="what-it-solves_1">What it solves</h3>
+<ul>
+<li>Multi‑level cleaning  </li>
+<li>Progressive enrichment  </li>
+<li>Structured refinement  </li>
+</ul>
+<h3 id="shell_1">Shell</h3>
+<pre><code class="language-bash"># Level 1
+primitive1.sh; primitive2.sh; primitive3.sh
+# Level 2
+primitive1.sh; primitive2.sh; primitive3.sh
+# Level 3
+primitive1.sh; primitive2.sh; primitive3.sh
+</code></pre>
+<h3 id="python_1">Python</h3>
+<pre><code class="language-python">for level in range(3):
+    core.interpret(f&quot;level-{level}-begin&quot;)
+    core.interpret(f&quot;level-{level}-transform&quot;)
+    core.interpret(f&quot;level-{level}-close&quot;)
+</code></pre>
+<hr>
+<h1 id="recipe-3-agent-behavior-loop">🤖 <strong>Recipe 3 — Agent Behavior Loop</strong></h1>
+<h3 id="pattern-triadic-spiral">Pattern: <strong>Triadic Spiral</strong></h3>
+<p>Agents deepen context each cycle.</p>
+<h3 id="what-it-solves_2">What it solves</h3>
+<ul>
+<li>Adaptive behavior  </li>
+<li>Context accumulation  </li>
+<li>Resonance‑aware decision loops  </li>
+</ul>
+<h3 id="shell_2">Shell</h3>
+<pre><code class="language-bash"># Cycle 1
+primitive1.sh; primitive2.sh; primitive3.sh
+# Cycle 2 (expanded)
+primitive1.sh; primitive2.sh; primitive2.sh; primitive3.sh; primitive3.sh; primitive1.sh
+</code></pre>
+<h3 id="python_2">Python</h3>
+<pre><code class="language-python">core.interpret(&quot;sense&quot;)
+core.interpret(&quot;think&quot;)
+core.interpret(&quot;act&quot;)
+
+core.interpret(&quot;sense-deep&quot;)
+core.interpret(&quot;think-deep&quot;)
+core.interpret(&quot;think-deeper&quot;)
+core.interpret(&quot;act-deep&quot;)
+core.interpret(&quot;act-deeper&quot;)
+core.interpret(&quot;reset&quot;)
+</code></pre>
+<hr>
+<h1 id="recipe-4-simulation-step-cycle">🧪 <strong>Recipe 4 — Simulation Step Cycle</strong></h1>
+<h3 id="pattern-triadic-expansion-33">Pattern: <strong>Triadic Expansion (3×3)</strong></h3>
+<p>Each primitive becomes a full triad.</p>
+<h3 id="what-it-solves_3">What it solves</h3>
+<ul>
+<li>Stable simulation loops  </li>
+<li>Multi‑phase updates  </li>
+<li>Clear temporal structure  </li>
+</ul>
+<h3 id="shell_3">Shell</h3>
+<pre><code class="language-bash">for i in 1 2 3; do
+  primitive1.sh
+  primitive2.sh
+  primitive3.sh
+done
+</code></pre>
+<h3 id="python_3">Python</h3>
+<pre><code class="language-python">for phase in [&quot;init&quot;, &quot;update&quot;, &quot;resolve&quot;]:
+    core.interpret(f&quot;{phase}-begin&quot;)
+    core.interpret(f&quot;{phase}-transform&quot;)
+    core.interpret(f&quot;{phase}-close&quot;)
+</code></pre>
+<hr>
+<h1 id="recipe-5-multiagent-coordination">🛰️ <strong>Recipe 5 — Multi‑Agent Coordination</strong></h1>
+<h3 id="pattern-triadic-constellation">Pattern: <strong>Triadic Constellation</strong></h3>
+<p>Each agent runs its own triad around a shared intent.</p>
+<h3 id="what-it-solves_4">What it solves</h3>
+<ul>
+<li>Distributed coordination  </li>
+<li>Multi‑agent alignment  </li>
+<li>Parallel triadic cycles  </li>
+</ul>
+<h3 id="shell_4">Shell</h3>
+<pre><code class="language-bash">(agent1 cycle) &amp;
+(agent2 cycle) &amp;
+(agent3 cycle) &amp;
+wait
+</code></pre>
+<h3 id="python_4">Python</h3>
+<pre><code class="language-python">def agent(name):
+    core.interpret(f&quot;{name}-begin&quot;)
+    core.interpret(f&quot;{name}-transform&quot;)
+    core.interpret(f&quot;{name}-close&quot;)
+</code></pre>
+<hr>
+<h1 id="recipe-6-concurrent-pipelines">🧵 <strong>Recipe 6 — Concurrent Pipelines</strong></h1>
+<h3 id="pattern-triadic-weave">Pattern: <strong>Triadic Weave</strong></h3>
+<p>Interleaving triads across threads or modules.</p>
+<h3 id="what-it-solves_5">What it solves</h3>
+<ul>
+<li>Concurrency  </li>
+<li>Layered processing  </li>
+<li>Multi‑stream workflows  </li>
+</ul>
+<h3 id="python_5">Python</h3>
+<pre><code class="language-python">for stage in [&quot;begin&quot;, &quot;transform&quot;, &quot;close&quot;]:
+    for thread in [0,1,2]:
+        core.interpret(f&quot;{stage}-thread-{thread}&quot;)
+</code></pre>
+<hr>
+<h1 id="recipe-7-staged-deployment-pipeline">🌊 <strong>Recipe 7 — Staged Deployment Pipeline</strong></h1>
+<h3 id="pattern-triadic-cascade">Pattern: <strong>Triadic Cascade</strong></h3>
+<p>Each stage triggers the next.</p>
+<h3 id="what-it-solves_6">What it solves</h3>
+<ul>
+<li>CI/CD pipelines  </li>
+<li>Multi‑stage deployment  </li>
+<li>Controlled rollouts  </li>
+</ul>
+<h3 id="shell_5">Shell</h3>
+<pre><code class="language-bash"># Build
+primitive1.sh; primitive2.sh; primitive3.sh
+# Test
+primitive1.sh; primitive2.sh; primitive3.sh
+# Deploy
+primitive1.sh; primitive2.sh; primitive3.sh
+</code></pre>
+<hr>
+<h1 id="recipe-8-evolutionary-algorithm-step">🧬 <strong>Recipe 8 — Evolutionary Algorithm Step</strong></h1>
+<h3 id="pattern-nested-triads">Pattern: <strong>Nested Triads</strong></h3>
+<p>Inner triad handles mutation; outer triad handles selection.</p>
+<h3 id="what-it-solves_7">What it solves</h3>
+<ul>
+<li>Evolutionary search  </li>
+<li>Genetic algorithms  </li>
+<li>Multi‑layer optimization  </li>
+</ul>
+<h3 id="python_6">Python</h3>
+<pre><code class="language-python">core.interpret(&quot;select&quot;)
+
+core.interpret(&quot;mutate-begin&quot;)
+core.interpret(&quot;mutate-transform&quot;)
+core.interpret(&quot;mutate-close&quot;)
+
+core.interpret(&quot;evaluate&quot;)
+</code></pre>
+<hr>
+<h1 id="recipe-9-overlaydriven-reframing">🔭 <strong>Recipe 9 — Overlay‑Driven Reframing</strong></h1>
+<h3 id="pattern-triadic-mirror">Pattern: <strong>Triadic Mirror</strong></h3>
+<p>Forward pass + reverse pass.</p>
+<h3 id="what-it-solves_8">What it solves</h3>
+<ul>
+<li>Reframing  </li>
+<li>Bidirectional reasoning  </li>
+<li>Symmetry‑aware processing  </li>
+</ul>
+<h3 id="python_7">Python</h3>
+<pre><code class="language-python">for step in [&quot;forward-1&quot;, &quot;forward-2&quot;, &quot;forward-3&quot;, &quot;reverse-2&quot;, &quot;reverse-1&quot;]:
+    core.interpret(step)
+</code></pre>
+<hr>
+<h1 id="mythmatical-architects-note">🧙 Mythmatical Architect’s Note</h1>
+<p>A triad is a gesture.<br>
+A pattern is a rhythm.<br>
+A recipe is a story — a way of applying rhythm to the world.</p>
+<p>This cookbook is your <strong>field guide</strong> for building real systems with RTT‑aligned clarity.</p>
+  </main>
+</body>
+</html>

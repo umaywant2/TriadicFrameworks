@@ -1,0 +1,23 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Five Phases (Wu Xing) ring + axial grid -->
+  <circle cx="400" cy="400" r="220" fill="none" stroke="#000" stroke-width="2"/>
+
+  <!-- Wu Xing points -->
+  <circle cx="400" cy="200" r="20" fill="#fff" stroke="#000"/>
+  <text x="400" y="195" text-anchor="middle" font-size="10">Wood</text>
+
+  <circle cx="550" cy="280" r="20" fill="#fff" stroke="#000"/>
+  <text x="550" y="275" text-anchor="middle" font-size="10">Fire</text>
+
+  <circle cx="520" cy="520" r="20" fill="#fff" stroke="#000"/>
+  <text x="520" y="515" text-anchor="middle" font-size="10">Earth</text>
+
+  <circle cx="280" cy="520" r="20" fill="#fff" stroke="#000"/>
+  <text x="280" y="515" text-anchor="middle" font-size="10">Metal</text>
+
+  <circle cx="250" cy="280" r="20" fill="#fff" stroke="#000"/>
+  <text x="250" y="275" text-anchor="middle" font-size="10">Water</text>
+
+  <!-- Title -->
+  <text x="400" y="120" text-anchor="middle">Wu Xing & Heaven–Earth–Human Geometry</text>
+</svg>

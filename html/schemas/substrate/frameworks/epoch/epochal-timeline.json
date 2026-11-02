@@ -1,0 +1,106 @@
+{
+  "timeline": "epochal",
+  "version": "1.0",
+  "generated": "YYYY-MM-DD",
+
+  "epochs": [
+    {
+      "epoch": "E0",
+      "description": "Baseline epoch with minimal harmonic activity and low drift velocity.",
+      "phase": "baseline",
+      "conditions": [
+        "stability_index >= stability_min",
+        "drift_magnitude <= drift_boundary",
+        "coherence_envelope >= coherence_min"
+      ],
+      "transitions_to": ["E1"]
+    },
+    {
+      "epoch": "E1",
+      "description": "Early harmonic epoch with rising resonance magnitude.",
+      "phase": "harmonic-rise",
+      "conditions": [
+        "resonance_magnitude <= harmonic_threshold",
+        "phase in allowed_window",
+        "stability_index >= stability_min"
+      ],
+      "transitions_to": ["E2"]
+    },
+    {
+      "epoch": "E2",
+      "description": "Epoch of drift–coherence tension with moderate instability risk.",
+      "phase": "tension",
+      "conditions": [
+        "drift_magnitude <= drift_boundary",
+        "coherence_envelope >= coherence_min",
+        "stability_index >= stability_min"
+      ],
+      "transitions_to": ["E3"]
+    },
+    {
+      "epoch": "E3",
+      "description": "High‑resonance epoch with strong harmonic propagation.",
+      "phase": "harmonic-peak",
+      "conditions": [
+        "resonance_phase in harmonic_window",
+        "harmonic_profile_valid",
+        "stability_index >= stability_min"
+      ],
+      "transitions_to": ["E4"]
+    },
+    {
+      "epoch": "E4",
+      "description": "Epoch of stability–drift conflict with elevated collapse risk.",
+      "phase": "conflict",
+      "conditions": [
+        "stability_index >= stability_min",
+        "drift_magnitude <= drift_boundary",
+        "phase in allowed_window"
+      ],
+      "transitions_to": ["E5"]
+    },
+    {
+      "epoch": "E5",
+      "description": "Epoch of coherence–resonance synchronization.",
+      "phase": "synchronization",
+      "conditions": [
+        "coherence_envelope >= coherence_min",
+        "resonance_phase in harmonic_window",
+        "stability_index >= stability_min"
+      ],
+      "transitions_to": ["E6"]
+    },
+    {
+      "epoch": "E6",
+      "description": "Epoch of ignition–resonance interaction with volatile stability.",
+      "phase": "volatile",
+      "conditions": [
+        "ignition_magnitude <= ignition_threshold",
+        "resonance_magnitude <= harmonic_threshold",
+        "stability_index >= stability_min"
+      ],
+      "transitions_to": ["E7"]
+    },
+    {
+      "epoch": "E7",
+      "description": "Terminal epoch with maximum harmonic complexity and stability sensitivity.",
+      "phase": "terminal",
+      "conditions": [
+        "stability_index >= stability_min",
+        "harmonic_profile_valid",
+        "drift_magnitude <= drift_boundary"
+      ],
+      "transitions_to": []
+    }
+  ],
+
+  "sequence": ["E0", "E1", "E2", "E3", "E4", "E5", "E6", "E7"],
+
+  "output": {
+    "epochal_timeline": "./epochal-timeline.json"
+  },
+
+  "meta": {
+    "notes": "Canonical epochal timeline defining phases, conditions, and transitions for epochs E0–E7."
+  }
+}

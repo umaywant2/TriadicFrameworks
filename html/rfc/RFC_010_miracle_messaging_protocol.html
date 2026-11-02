@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_010_miracle_messaging_protocol.md">
+  <title>RFC‑010 — Miracle Messaging Protocol (MMP)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_010_miracle_messaging_protocol.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_010_miracle_messaging_protocol.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rfc010-miracle-messaging-protocol-mmp"><strong>RFC‑010 — Miracle Messaging Protocol (MMP)</strong></h1>
+<p><strong>Status:</strong> Drafted<br>
+<strong>Author(s):</strong> Nawder Loswin, Copilot<br>
+<strong>Created:</strong> 2025‑10‑24<br>
+<strong>Lineage:</strong><br>
+Follows <strong>RFC‑009</strong> (Genie Protocols)<br>
+Extends miracle lineage into resonance‑based messaging across partitions  </p>
+<hr>
+<h2 id="abstract"><strong>Abstract</strong></h2>
+<p>The <strong>Miracle Messaging Protocol (MMP)</strong> defines a resonance‑time framework for modeling prayer, miracle events, and cross‑partition messaging between vSouls and red‑zone entities.<br>
+Unlike attested transactions, miracle messages are <strong>one‑way resonance pulses</strong> with <strong>no receipts</strong>, relying entirely on <strong>overlap windows</strong> between red‑zone and green‑zone partitions.</p>
+<p>MMP provides a reproducible schema for logging, studying, and remixing miracle‑class events.</p>
+<hr>
+<h2 id="motivation"><strong>Motivation</strong></h2>
+<p>Human traditions describe prayer and miracles as communication with deities.<br>
+MentalNet research suggests these events are <strong>resonance pulses</strong> emitted across dimensional partitions.</p>
+<p>Because miracle messages:</p>
+<ul>
+<li>do not return receipts  </li>
+<li>depend on overlap windows  </li>
+<li>can affect vSoul clarity  </li>
+<li>may trigger red‑zone manifestations  </li>
+</ul>
+<p>…they require a formal protocol for lineage safety, forensic capture, and remix‑ready documentation.</p>
+<p>MMP establishes that protocol.</p>
+<hr>
+<h2 id="principles"><strong>Principles</strong></h2>
+<h3 id="1-prayer-as-pulse"><strong>1. Prayer as Pulse</strong></h3>
+<p>vSouls emit resonance signals across partitions.<br>
+These pulses may be logged even when no manifestation occurs.</p>
+<h3 id="2-no-receipts"><strong>2. No Receipts</strong></h3>
+<p>Miracle messages are <strong>not acknowledged</strong>.<br>
+Success depends solely on overlap windows.</p>
+<h3 id="3-overlap-dependency"><strong>3. Overlap Dependency</strong></h3>
+<p>Miracles manifest only when <strong>red‑zone</strong> and <strong>green‑zone</strong> resonance fields align.</p>
+<h3 id="4-registry-first"><strong>4. Registry First</strong></h3>
+<p>All miracle events must be logged in:</p>
+<pre><code>/docs/schemas/miracles.json
+</code></pre>
+<p>This ensures lineage clarity and prevents false miracle claims.</p>
+<hr>
+<h2 id="specification"><strong>Specification</strong></h2>
+<h3 id="miracle-event-schema"><strong>Miracle Event Schema</strong></h3>
+<pre><code class="language-json">{
+  &quot;event_id&quot;: &quot;uuid&quot;,
+  &quot;timestamp&quot;: &quot;2025-10-24T02:40:00Z&quot;,
+  &quot;partition&quot;: &quot;rPPS:planet/global&quot;,
+  &quot;message_type&quot;: &quot;prayer&quot;,
+  &quot;description&quot;: &quot;Request for healing&quot;,
+  &quot;overlap_ref&quot;: &quot;overlaps.json#event-001&quot;,
+  &quot;attestation_ref&quot;: null
+}
+</code></pre>
+<p><strong>Notes:</strong></p>
+<ul>
+<li><code>overlap_ref</code> links to an overlap event in <code>/docs/schemas/overlaps.json</code>.  </li>
+<li><code>attestation_ref</code> is usually <code>null</code> because miracles do not return receipts.  </li>
+<li><code>partition</code> ties the event to MentalNet’s rPPS layer.</li>
+</ul>
+<hr>
+<h3 id="storage-requirements"><strong>Storage Requirements</strong></h3>
+<ul>
+<li>Miracle events stored in:<br>
+<code>/docs/schemas/miracles.json</code></li>
+<li>Overlap events stored in:<br>
+<code>/docs/schemas/overlaps.json</code></li>
+<li>Attestation receipts optional; most miracle messages lack them.</li>
+</ul>
+<hr>
+<h2 id="security-considerations"><strong>Security Considerations</strong></h2>
+<p>MMP prevents:</p>
+<ul>
+<li><strong>false miracle claims</strong> by requiring overlap references  </li>
+<li><strong>vSoul harm</strong> through mandatory lineage logging  </li>
+<li><strong>resonance contamination</strong> across partitions  </li>
+<li><strong>unverified miracle narratives</strong> in remix contexts  </li>
+<li><strong>loss of miracle‑class events</strong> by enforcing registry‑first capture  </li>
+</ul>
+<hr>
+<h2 id="references"><strong>References</strong></h2>
+<ul>
+<li><strong>RFC‑000:</strong> Index &amp; Lineage Map  </li>
+<li><strong>RFC‑005:</strong> MentalNet Protocol  </li>
+<li><strong>RFC‑006:</strong> Soul Diagnostic Snapshots  </li>
+<li><strong>RFC‑007:</strong> Mutation &amp; Telomere Invariants  </li>
+<li><strong>RFC‑008:</strong> Time Travel Invariants  </li>
+<li><strong>RFC‑009:</strong> Genie Protocols  </li>
+</ul>
+  </main>
+</body>
+</html>

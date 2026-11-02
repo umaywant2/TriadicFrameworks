@@ -1,0 +1,123 @@
+{
+  "$schema": "https://qm.framework/schemas/sitemap/v1.0.0",
+  "book": {
+    "id": "book-3",
+    "title": "Structural Detection",
+    "edition": "AI Edition",
+    "root": "Structural_Detection/AI_Edition",
+    "generated": "2026-10-10T05:54:00-04:00"
+  },
+  "nodes": {
+    "operators": {
+      "path": "Structural_Detection/AI_Edition/operators",
+      "description": "Operator definitions for the Structural Detection framework",
+      "items": [
+        { "id": "SD-Σd", "label": "Summation-Delta Operator", "file": "Structural_Detection/AI_Edition/operators/SD-Sd.md", "role": "Aggregates delta signals across detection layers" },
+        { "id": "SD-Γ",  "label": "Gamma Operator",           "file": "Structural_Detection/AI_Edition/operators/SD-G.md", "role": "Governs structural gate transitions" },
+        { "id": "SD-Λ",  "label": "Lambda Operator",          "file": "Structural_Detection/AI_Edition/operators/SD-L.md", "role": "Applies lambda-fold structural filters" },
+        { "id": "SD-Ξ",  "label": "Xi Operator",              "file": "Structural_Detection/AI_Edition/operators/SD-X.md", "role": "Executes cross-layer invariant checks" },
+        { "id": "SD-Π",  "label": "Pi Operator",              "file": "Structural_Detection/AI_Edition/operators/SD-P.md", "role": "Manages phase-level probe sequencing" }
+      ]
+    },
+    "phases": {
+      "path": "Structural_Detection/AI_Edition/phases",
+      "description": "Ordered detection lifecycle phases",
+      "sequence": ["init", "scan", "probe", "filter", "confirm", "catalogue"],
+      "items": [
+        { "id": "phase-init",      "label": "Initialisation", "slug": "init",      "file": "Structural_Detection/AI_Edition/phases/phase_init.md",      "ordinal": 1 },
+        { "id": "phase-scan",      "label": "Scan",           "slug": "scan",      "file": "Structural_Detection/AI_Edition/phases/phase_scan.md",      "ordinal": 2 },
+        { "id": "phase-probe",     "label": "Probe",          "slug": "probe",     "file": "Structural_Detection/AI_Edition/phases/phase_probe.md",     "ordinal": 3 },
+        { "id": "phase-filter",    "label": "Filter",         "slug": "filter",    "file": "Structural_Detection/AI_Edition/phases/phase_filter.md",    "ordinal": 4 },
+        { "id": "phase-confirm",   "label": "Confirm",        "slug": "confirm",   "file": "Structural_Detection/AI_Edition/phases/phase_confirm.md",   "ordinal": 5 },
+        { "id": "phase-catalogue", "label": "Catalogue",      "slug": "catalogue", "file": "Structural_Detection/AI_Edition/phases/phase_catalogue.md", "ordinal": 6 }
+      ]
+    },
+    "maps": {
+      "path": "Structural_Detection/AI_Edition/maps",
+      "description": "Structural maps governing detection behaviour",
+      "items": [
+        { "id": "map-detection-cycle", "label": "Detection Cycle Map",  "file": "Structural_Detection/AI_Edition/maps/detection_cycle.json",  "description": "Full phase-to-phase transition graph for the detection cycle" },
+        { "id": "map-operator-roles",  "label": "Operator Roles Map",   "file": "Structural_Detection/AI_Edition/maps/operator_roles.json",   "description": "Mapping of operators to their authorised phases and responsibilities" },
+        { "id": "map-noise-gate",      "label": "Noise Gate Map",       "file": "Structural_Detection/AI_Edition/maps/noise_gate_map.json",   "description": "Signal thresholds and noise suppression rules across detection phases" }
+      ]
+    },
+    "invariants": {
+      "path": "Structural_Detection/AI_Edition/invariants",
+      "description": "Immutable structural invariants enforced across the detection framework",
+      "items": [
+        { "id": "invariants-core", "label": "Structural Detection Invariants", "file": "Structural_Detection/AI_Edition/invariants/structural_detection.invariants.json", "description": "Master set of invariant constraints for the Structural Detection AI Edition" }
+      ]
+    },
+    "qmroot": {
+      "path": "Structural_Detection/AI_Edition/qmroot",
+      "description": "QMROOT anchor files defining root absence and invariant path bindings",
+      "items": [
+        { "id": "qmroot-absence",     "label": "QMROOT Absence Definition", "file": "Structural_Detection/AI_Edition/qmroot/qmroot.absence.json",  "description": "Defines the canonical absence state at the QMROOT anchor" },
+        { "id": "qmroot-inv013-path", "label": "INV-013 Path Binding",      "file": "Structural_Detection/AI_Edition/qmroot/INV-013.path.json",    "description": "Path resolution record for invariant INV-013 from QMROOT" }
+      ]
+    },
+    "examples": {
+      "path": "Structural_Detection/AI_Edition/examples",
+      "description": "Worked walkthroughs demonstrating detection and noise-gate logic",
+      "items": [
+        { "id": "example-detection-walk",  "label": "Detection Walk",   "file": "Structural_Detection/AI_Edition/examples/detection_walk.md",   "description": "End-to-end walkthrough of a detection cycle across all six phases" },
+        { "id": "example-noise-gate-walk", "label": "Noise Gate Walk",  "file": "Structural_Detection/AI_Edition/examples/noise_gate_walk.md",  "description": "Step-by-step illustration of noise suppression logic using the noise gate map" }
+      ]
+    },
+    "assets": {
+      "path": "Structural_Detection/AI_Edition/assets",
+      "description": "Supporting visual and styling assets",
+      "children": {
+        "diagrams": {
+          "path": "Structural_Detection/AI_Edition/assets/diagrams",
+          "description": "Architectural and flow diagrams for the detection framework",
+          "items": [
+            { "id": "asset-diagram-detection-cycle",  "label": "Detection Cycle Diagram",  "file": "Structural_Detection/AI_Edition/assets/diagrams/detection_cycle.svg",    "mime": "image/svg+xml" },
+            { "id": "asset-diagram-operator-map",     "label": "Operator Map Diagram",     "file": "Structural_Detection/AI_Edition/assets/diagrams/operator_map.svg",      "mime": "image/svg+xml" },
+            { "id": "asset-diagram-noise-gate",       "label": "Noise Gate Diagram",       "file": "Structural_Detection/AI_Edition/assets/diagrams/noise_gate.svg",        "mime": "image/svg+xml" },
+            { "id": "asset-diagram-phase-flow",       "label": "Phase Flow Diagram",       "file": "Structural_Detection/AI_Edition/assets/diagrams/phase_flow.svg",        "mime": "image/svg+xml" },
+            { "id": "asset-diagram-qmroot-binding",   "label": "QMROOT Binding Diagram",   "file": "Structural_Detection/AI_Edition/assets/diagrams/qmroot_binding.svg",   "mime": "image/svg+xml" }
+          ]
+        },
+        "css": {
+          "path": "Structural_Detection/AI_Edition/assets/css",
+          "description": "Stylesheets for rendered documentation",
+          "items": [
+            { "id": "asset-css-main",      "label": "Main Stylesheet",           "file": "Structural_Detection/AI_Edition/assets/css/main.css",      "mime": "text/css" },
+            { "id": "asset-css-diagrams",  "label": "Diagram Stylesheet",        "file": "Structural_Detection/AI_Edition/assets/css/diagrams.css",   "mime": "text/css" },
+            { "id": "asset-css-operators", "label": "Operator Token Stylesheet", "file": "Structural_Detection/AI_Edition/assets/css/operators.css",  "mime": "text/css" }
+          ]
+        }
+      }
+    }
+  },
+  "index": [
+    { "ref": "SD-Σd",                        "type": "operator",  "file": "Structural_Detection/AI_Edition/operators/SD-Sd.md" },
+    { "ref": "SD-Γ",                         "type": "operator",  "file": "Structural_Detection/AI_Edition/operators/SD-G.md" },
+    { "ref": "SD-Λ",                         "type": "operator",  "file": "Structural_Detection/AI_Edition/operators/SD-L.md" },
+    { "ref": "SD-Ξ",                         "type": "operator",  "file": "Structural_Detection/AI_Edition/operators/SD-X.md" },
+    { "ref": "SD-Π",                         "type": "operator",  "file": "Structural_Detection/AI_Edition/operators/SD-P.md" },
+    { "ref": "phase-init",                   "type": "phase",     "file": "Structural_Detection/AI_Edition/phases/phase_init.md" },
+    { "ref": "phase-scan",                   "type": "phase",     "file": "Structural_Detection/AI_Edition/phases/phase_scan.md" },
+    { "ref": "phase-probe",                  "type": "phase",     "file": "Structural_Detection/AI_Edition/phases/phase_probe.md" },
+    { "ref": "phase-filter",                 "type": "phase",     "file": "Structural_Detection/AI_Edition/phases/phase_filter.md" },
+    { "ref": "phase-confirm",                "type": "phase",     "file": "Structural_Detection/AI_Edition/phases/phase_confirm.md" },
+    { "ref": "phase-catalogue",              "type": "phase",     "file": "Structural_Detection/AI_Edition/phases/phase_catalogue.md" },
+    { "ref": "map-detection-cycle",          "type": "map",       "file": "Structural_Detection/AI_Edition/maps/detection_cycle.json" },
+    { "ref": "map-operator-roles",           "type": "map",       "file": "Structural_Detection/AI_Edition/maps/operator_roles.json" },
+    { "ref": "map-noise-gate",               "type": "map",       "file": "Structural_Detection/AI_Edition/maps/noise_gate_map.json" },
+    { "ref": "invariants-core",              "type": "invariant", "file": "Structural_Detection/AI_Edition/invariants/structural_detection.invariants.json" },
+    { "ref": "qmroot-absence",               "type": "qmroot",    "file": "Structural_Detection/AI_Edition/qmroot/qmroot.absence.json" },
+    { "ref": "qmroot-inv013-path",           "type": "qmroot",    "file": "Structural_Detection/AI_Edition/qmroot/INV-013.path.json" },
+    { "ref": "example-detection-walk",       "type": "example",   "file": "Structural_Detection/AI_Edition/examples/detection_walk.md" },
+    { "ref": "example-noise-gate-walk",      "type": "example",   "file": "Structural_Detection/AI_Edition/examples/noise_gate_walk.md" },
+    { "ref": "asset-diagram-detection-cycle","type": "asset",     "file": "Structural_Detection/AI_Edition/assets/diagrams/detection_cycle.svg" },
+    { "ref": "asset-diagram-operator-map",   "type": "asset",     "file": "Structural_Detection/AI_Edition/assets/diagrams/operator_map.svg" },
+    { "ref": "asset-diagram-noise-gate",     "type": "asset",     "file": "Structural_Detection/AI_Edition/assets/diagrams/noise_gate.svg" },
+    { "ref": "asset-diagram-phase-flow",     "type": "asset",     "file": "Structural_Detection/AI_Edition/assets/diagrams/phase_flow.svg" },
+    { "ref": "asset-diagram-qmroot-binding", "type": "asset",     "file": "Structural_Detection/AI_Edition/assets/diagrams/qmroot_binding.svg" },
+    { "ref": "asset-css-main",               "type": "asset",     "file": "Structural_Detection/AI_Edition/assets/css/main.css" },
+    { "ref": "asset-css-diagrams",           "type": "asset",     "file": "Structural_Detection/AI_Edition/assets/css/diagrams.css" },
+    { "ref": "asset-css-operators",          "type": "asset",     "file": "Structural_Detection/AI_Edition/assets/css/operators.css" }
+  ]
+}

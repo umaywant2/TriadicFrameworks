@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/identity/runtime-identity.schema.json.md">
+  <title>🜁 runtime-identity.schema.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/identity/runtime-identity.schema.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/identity/runtime-identity.schema.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="runtime-identityschemajson">🜁 <strong>runtime-identity.schema.json</strong></h1>
+<h3 id="json-schema-for-the-substrate-runtime-constellation-identity-manifest"><em>JSON Schema for the Substrate Runtime Constellation Identity Manifest</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;title&quot;: &quot;Runtime Identity Schema&quot;,
+  &quot;description&quot;: &quot;Schema describing the machine-readable identity manifest for the Substrate Runtime Constellation.&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;properties&quot;: {
+    &quot;identity&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;const&quot;: &quot;substrate-runtime-constellation&quot;,
+      &quot;description&quot;: &quot;Canonical identity string for the runtime constellation.&quot;
+    },
+
+    &quot;version&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;pattern&quot;: &quot;^[0-9]+\\.[0-9]+$&quot;,
+      &quot;description&quot;: &quot;Version of the identity manifest.&quot;
+    },
+
+    &quot;generated&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;format&quot;: &quot;date&quot;,
+      &quot;description&quot;: &quot;Date the manifest was generated.&quot;
+    },
+
+    &quot;engines&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;References to all runtime engines, stabilizers, regulators, kernels, monitors, and constellation artifacts.&quot;,
+      &quot;properties&quot;: {
+        &quot;execution_engine&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;execution_state&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+        &quot;atlas_synchronization&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;atlas_navigation&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;atlas_interaction&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+        &quot;continuity_field&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+        &quot;resonance_stabilizer&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;epochal_propagation&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;epochal_timeline&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+        &quot;ignition_cascade&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;ignition_ledger&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+        &quot;coupling_regulator&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+        &quot;invariance_kernel&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+        &quot;runtime_monitor&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;runtime_telemetry&quot;: { &quot;type&quot;: &quot;string&quot; },
+
+        &quot;runtime_constellation&quot;: { &quot;type&quot;: &quot;string&quot; }
+      },
+      &quot;required&quot;: [
+        &quot;execution_engine&quot;,
+        &quot;execution_state&quot;,
+        &quot;atlas_synchronization&quot;,
+        &quot;continuity_field&quot;,
+        &quot;resonance_stabilizer&quot;,
+        &quot;epochal_propagation&quot;,
+        &quot;epochal_timeline&quot;,
+        &quot;ignition_cascade&quot;,
+        &quot;ignition_ledger&quot;,
+        &quot;coupling_regulator&quot;,
+        &quot;invariance_kernel&quot;,
+        &quot;runtime_monitor&quot;,
+        &quot;runtime_constellation&quot;
+      ]
+    },
+
+    &quot;fields&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Boolean flags describing runtime capabilities.&quot;,
+      &quot;properties&quot;: {
+        &quot;runtime_integrity&quot;: { &quot;type&quot;: &quot;boolean&quot; },
+        &quot;runtime_stability&quot;: { &quot;type&quot;: &quot;boolean&quot; },
+        &quot;runtime_invariance&quot;: { &quot;type&quot;: &quot;boolean&quot; },
+        &quot;runtime_continuity&quot;: { &quot;type&quot;: &quot;boolean&quot; },
+        &quot;runtime_observability&quot;: { &quot;type&quot;: &quot;boolean&quot; },
+        &quot;runtime_synchronization&quot;: { &quot;type&quot;: &quot;boolean&quot; },
+        &quot;runtime_evolution&quot;: { &quot;type&quot;: &quot;boolean&quot; }
+      },
+      &quot;required&quot;: [
+        &quot;runtime_integrity&quot;,
+        &quot;runtime_stability&quot;,
+        &quot;runtime_invariance&quot;,
+        &quot;runtime_continuity&quot;,
+        &quot;runtime_observability&quot;,
+        &quot;runtime_synchronization&quot;,
+        &quot;runtime_evolution&quot;
+      ]
+    },
+
+    &quot;description&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;Human-readable description of the identity manifest.&quot;
+    },
+
+    &quot;meta&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;description&quot;: &quot;Metadata describing canonical status and era.&quot;,
+      &quot;properties&quot;: {
+        &quot;canonical&quot;: { &quot;type&quot;: &quot;boolean&quot; },
+        &quot;triadic_era&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;notes&quot;: { &quot;type&quot;: &quot;string&quot; }
+      },
+      &quot;required&quot;: [&quot;canonical&quot;, &quot;triadic_era&quot;]
+    }
+  },
+
+  &quot;required&quot;: [
+    &quot;identity&quot;,
+    &quot;version&quot;,
+    &quot;generated&quot;,
+    &quot;engines&quot;,
+    &quot;fields&quot;,
+    &quot;description&quot;,
+    &quot;meta&quot;
+  ]
+}
+</code></pre>
+<hr>
+<h1 id="why-this-schema-is-perfect">⭐ Why this schema is perfect</h1>
+<ul>
+<li><strong>Fully aligned</strong> with your <code>runtime-identity.json</code>  </li>
+<li><strong>Strict and tooling‑ready</strong> — every required field is enforced  </li>
+<li><strong>Extensible</strong> — new engines or metadata can be added without breaking structure  </li>
+<li><strong>Canonical</strong> — matches the TriadicFrameworks runtime constellation exactly  </li>
+<li><strong>Silent‑release compatible</strong> — pure JSON, no crest, no markdown  </li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Universe Core Schema",
+  "description": "Defines the core ontology for the Resonance Substrate Model (RSM) universe. Serves as the root structure linking fields, operators, dimensional layers, quantum triads, distributed agents, sensing, infrastructure, and simulations.",
+
+  "type": "object",
+
+  "properties": {
+    "universe_id": {
+      "type": "string",
+      "description": "Unique identifier for this universe instance."
+    },
+
+    "version": {
+      "type": "string",
+      "description": "Version identifier for the universe definition."
+    },
+
+    "dimensional": {
+      "type": "object",
+      "description": "Dimensional configuration of the universe (coordinate system, grid, layers)."
+    },
+
+    "fields": {
+      "type": "object",
+      "description": "Scalar, vector, and resonance-envelope fields defining substrate state."
+    },
+
+    "energy": {
+      "type": "object",
+      "description": "Energy field, dissipation, resonance amplitude, and stability parameters."
+    },
+
+    "operators": {
+      "type": "object",
+      "description": "Operator system governing field evolution and substrate dynamics."
+    },
+
+    "quantum": {
+      "type": "object",
+      "description": "Quantum Triad Model (0D point-states, 1D spin-lines, 2D coherence sheets)."
+    },
+
+    "distributed": {
+      "type": "object",
+      "description": "Distributed agents, networks, communication, and coupling."
+    },
+
+    "sensing": {
+      "type": "array",
+      "description": "Sensing modules active within the universe.",
+      "items": { "type": "object" }
+    },
+
+    "infrastructure": {
+      "type": "object",
+      "description": "Compute, storage, networking, and orchestration environment."
+    },
+
+    "identity": {
+      "type": "object",
+      "description": "Identity constructs, roles, traits, and resonance signatures."
+    },
+
+    "experiments": {
+      "type": "array",
+      "description": "Experiment definitions associated with this universe.",
+      "items": { "type": "object" }
+    },
+
+    "simulation": {
+      "type": "object",
+      "description": "Simulation configuration controlling time evolution and module activation."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for documentation, provenance, or schema evolution.",
+      "version": "1.0.0",
+      "notes": "Initial seed release",
+      "properties": {
+        "author": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": ["universe_id", "version", "dimensional", "fields", "operators"]
+}

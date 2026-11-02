@@ -1,0 +1,62 @@
+{
+  "id": "fft.ai.coherence",
+  "type": "new_v1_33",
+  "version": "1.33",
+  "updated": "2026-10-09T09:49:00-04:00",
+  "title": "FFT AI — Coherence Layer v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "description": "Enforces and monitors coherence=declared invariant (INV-003) across all FFT AI session operations.",
+  "invariant": "INV-003",
+  "coherence_states": {
+    "declared": {
+      "description": "coherence is asserted and active",
+      "action": "continue normal operation"
+    },
+    "lost": {
+      "description": "coherence dropped below threshold",
+      "action": "invoke recovery sequence; log PARADOX PX-006"
+    },
+    "restoring": {
+      "description": "recovery in progress",
+      "action": "hold operator dispatch; run Alignment+Coupling sequence"
+    }
+  },
+  "declaration_protocol": {
+    "assert_at": "session boot step 4",
+    "verify_every": "each RTT phase step",
+    "threshold": "R >= 0.40 AND C_frame > 0 AND C_clarity > 0",
+    "recovery": [
+      "invoke Alignment operator",
+      "invoke Coupling operator",
+      "re-evaluate R",
+      "if R >= 0.40: restore to declared"
+    ]
+  },
+  "log_channel": "fft.ai.session.log.json — PARADOX level on coherence loss",
+  "C_frame": {
+    "name": "Framing Ratio",
+    "formula": "C_frame = Phi(S) / Psi(N)",
+    "components": {
+      "Phi_S": "framing strength of Silence mode",
+      "Psi_N": "entropy pressure of Noise mode"
+    },
+    "interpretation": "How well the substrate frames signal against entropy. High C_frame = strong coherent framing.",
+    "threshold": "R >= 0.40 AND C_frame > 0 required for coherence=declared"
+  },
+  "C_clarity": {
+    "name": "Clarity Operator (Dual Operator Engine)",
+    "formula": "C_clarity = nabla_tau(R) + nabla_R(tau)",
+    "components": {
+      "nabla_tau_R": "4D — time gradients sharpen resonance",
+      "nabla_R_tau": "5D — resonance gradients sharpen time"
+    },
+    "interpretation": "Composite of 4D+5D DCO operators. Positive C_clarity indicates the field is self-clarifying.",
+    "threshold": "C_clarity > 0 required for coherence=declared alongside C_frame > 0"
+  },
+  "patch": "1.33-p1"
+}

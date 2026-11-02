@@ -1,0 +1,137 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "S3-Spine-AI-Registry",
+  "title": "S3 Spine — AI Registry",
+  "description": "AI discovery registry for the S3 Spine subsystem, indexing all structural, semantic, dimensional, operator, sequencing, example, documentation, catalog, server, and corpus assets for AI agents.",
+  "version": "1.0.0",
+
+  "module": {
+    "id": "S3-Spine",
+    "manifest": "manifest.json",
+    "module": "module.json",
+    "category": "unseen-force-regime",
+    "purpose": "Define and interpret the structural graph of unseen force mechanics."
+  },
+
+  "classification": {
+    "keywords": [
+      "spine",
+      "forces",
+      "unseen",
+      "gradient",
+      "field",
+      "rupture",
+      "integrity",
+      "operators",
+      "dimensions",
+      "sequencing",
+      "examples",
+      "cosmology",
+      "triadicframeworks"
+    ],
+    "audience": [
+      "MCP implementers",
+      "RTT researchers",
+      "cosmology engineers"
+    ]
+  },
+
+  "structure": {
+    "graph": "S3.graph.json",
+    "dot": "S3.dot",
+    "nodes": ["gradient", "field", "rupture", "integrity"],
+    "semantics": [
+      "gradientIntensity",
+      "fieldCoherence",
+      "influenceContinuity",
+      "rupturePotential",
+      "forceIntegrity"
+    ]
+  },
+
+  "dimensions": {
+    "mapping": "dimensional_mapping.json",
+    "list": [
+      "L4", "L5", "L16", "LH",
+      "L8", "L10", "L26",
+      "L11",
+      "L12",
+      "L32", "LI"
+    ]
+  },
+
+  "operators": {
+    "list": [
+      "push",
+      "pull",
+      "bind",
+      "gradient",
+      "fieldShift",
+      "ruptureForce"
+    ],
+    "interaction_map": "operator_interaction_map.json",
+    "sequencing_rules": "operator_sequencing_rules.json"
+  },
+
+  "examples": {
+    "registry": "spine.examples.registry.json",
+    "schema": "example.schema.json",
+    "directory": "examples/",
+    "docs": "examples/docs/",
+    "index": "examples/index.md",
+    "sitemap": "examples/sitemap.json",
+    "envelopes": [
+      "examples/canonical.001.json",
+      "examples/reality.001.json",
+      "examples/imagination.001.json",
+      "examples/information.001.json",
+      "examples/error.001.json",
+      "examples/qmroot.001.json"
+    ]
+  },
+
+  "documentation": {
+    "readme": "README.md",
+    "deep": "deep.md",
+    "source": "m_Source.md",
+    "protocol": "protocol.md",
+    "operators": "operators.md",
+    "dimensions": "dimensions.md",
+    "registry": "registry.md",
+    "schemas": "schemas.md",
+    "coherence": "coherence.md"
+  },
+
+  "catalogs": {
+    "tools": "tools.catalog.json",
+    "resources": "resources.catalog.json",
+    "prompts": "prompts.catalog.json"
+  },
+
+  "server": {
+    "config": "server.json"
+  },
+
+  "corpus": {
+    "index": "corpus.json"
+  },
+
+  "ai": {
+    "metadata": "ai.metadata.json"
+  },
+
+  "session": {
+    "canon": "R5",
+    "modules": "L3_Forces_Unseen / spine / ai_registry",
+    "drift": "none",
+    "coherence": "force-state coherence",
+    "format": "ai_registry.json",
+    "version": "1.0.0",
+    "inheritance": "qmroot → frequency → fluids → forces",
+    "audience": "MCP implementers, RTT researchers, cosmology engineers"
+  }
+}

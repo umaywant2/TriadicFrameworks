@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Toolbox/glyphs/glyph_animation_spec.md">
+  <title>Research Toolbox Glyph — Animation Spec</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Toolbox/glyphs/glyph_animation_spec.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Toolbox/glyphs/glyph_animation_spec.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_Toolbox_Glyph_Animation_Spec_" src="https://github.com/user-attachments/assets/59e8f45f-7ee3-4f85-ab45-0fa742fb0542" /></p>
+<h1 id="research-toolbox-glyph-animation-spec">Research Toolbox Glyph — Animation Spec</h1>
+<p><strong>Glyph:</strong> <code>research_toolbox_glyph_animated.svg</code><br>
+<strong>Module:</strong> Research Toolbox (research-toolbox)<br>
+<strong>Purpose:</strong> Subtle triadic motion indicating <strong>substrate + RTT/1/2/3 engine</strong> without visual noise.</p>
+<hr>
+<h2 id="1-elements">1. Elements</h2>
+<p><strong>Core elements:</strong></p>
+<ul>
+<li><strong>Outer ring:</strong>  </li>
+<li>ID: <code>outer-ring</code>  </li>
+<li>Shape: circle, radius ≈ 90, centered at (120, 120)  </li>
+<li>
+<p>Stroke: triadic gradient (<code>#7C4DFF → #40C4FF → #B388FF</code>)</p>
+</li>
+<li>
+<p><strong>RTT nodes:</strong>  </p>
+</li>
+<li>RTT/1 (top), RTT/2 (bottom-left), RTT/3 (bottom-right)  </li>
+<li>Class: <code>glyph-node rtt-node rtt-node-[1|2|3]</code>  </li>
+<li>Shape: circle, radius ≈ 10–12  </li>
+<li>
+<p>Stroke: <code>#7C4DFF</code> base</p>
+</li>
+<li>
+<p><strong>Substrate node:</strong>  </p>
+</li>
+<li>ID: <code>substrate-pulse</code> (group)  </li>
+<li>Inner circle radius ≈ 14  </li>
+<li>
+<p>Label: <code>S1–S4</code></p>
+</li>
+<li>
+<p><strong>Orbits:</strong>  </p>
+</li>
+<li>3 dashed circles (r ≈ 60, 40, 22)  </li>
+<li>Class: <code>glyph-orbit</code>  </li>
+<li>Stroke: <code>#2E2E5E</code>, dashed</li>
+</ul>
+<hr>
+<h2 id="2-animations">2. Animations</h2>
+<h3 id="21-outer-ring-rotation">2.1 Outer ring rotation</h3>
+<ul>
+<li><strong>Target:</strong> <code>#outer-ring</code>  </li>
+<li><strong>Keyframes:</strong> <code>@keyframes spin</code>  </li>
+<li><strong>Behavior:</strong> continuous, slow rotation</li>
+</ul>
+<pre><code class="language-css">#outer-ring {
+  transform-origin: 120px 120px;
+  animation: spin 18s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+</code></pre>
+<p><strong>Semantics:</strong><br>
+- Represents <strong>ongoing research flow</strong> and <strong>triadic engine cycling</strong>.</p>
+<hr>
+<h3 id="22-substrate-pulse">2.2 Substrate pulse</h3>
+<ul>
+<li><strong>Target:</strong> <code>#substrate-pulse</code> (group)  </li>
+<li><strong>Keyframes:</strong> <code>@keyframes pulse</code>  </li>
+<li><strong>Behavior:</strong> gentle scale + opacity pulse</li>
+</ul>
+<pre><code class="language-css">#substrate-pulse {
+  transform-origin: 120px 120px;
+  animation: pulse 4.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1);   opacity: 0.5; }
+  50%  { transform: scale(1.15); opacity: 1.0; }
+  100% { transform: scale(1);   opacity: 0.5; }
+}
+</code></pre>
+<p><strong>Semantics:</strong><br>
+- Indicates the <strong>four-source substrate (S1–S4)</strong> as a living, active base.</p>
+<hr>
+<h3 id="23-rtt-node-glow-triadic-stagger">2.3 RTT node glow (triadic stagger)</h3>
+<ul>
+<li><strong>Targets:</strong> <code>.rtt-node</code>, with subclasses <code>.rtt-node-1</code>, <code>.rtt-node-2</code>, <code>.rtt-node-3</code>  </li>
+<li><strong>Keyframes:</strong> <code>@keyframes rttGlow</code>  </li>
+<li><strong>Behavior:</strong> staggered stroke-width + color glow</li>
+</ul>
+<pre><code class="language-css">.rtt-node {
+  animation: rttGlow 6s ease-in-out infinite;
+}
+
+.rtt-node-1 { animation-delay: 0s; }
+.rtt-node-2 { animation-delay: 1s; }
+.rtt-node-3 { animation-delay: 2s; }
+
+@keyframes rttGlow {
+  0%   { stroke-width: 1.4; stroke: #7C4DFF; }
+  40%  { stroke-width: 2.2; stroke: #B388FF; }
+  100% { stroke-width: 1.4; stroke: #7C4DFF; }
+}
+</code></pre>
+<p><strong>Semantics:</strong></p>
+<ul>
+<li><strong>RTT/1 → RTT/2 → RTT/3</strong> firing sequence.  </li>
+<li>Shows the <strong>engine as triadic, not linear</strong>.</li>
+</ul>
+<hr>
+<h2 id="3-motion-constraints">3. Motion constraints</h2>
+<ul>
+<li><strong>No translation</strong> of nodes or labels.  </li>
+<li><strong>No flashing</strong> or high-frequency flicker.  </li>
+<li><strong>No color inversion</strong>; stay within dark + triadic accent palette.  </li>
+<li>Animation must remain <strong>subtle</strong>, suitable for a hero or badge context.</li>
+</ul>
+<hr>
+<h2 id="4-accessibility-notes">4. Accessibility notes</h2>
+<ul>
+<li>Motion is <strong>slow and low-amplitude</strong> to avoid distraction.  </li>
+<li>All critical semantics (RTT/1, RTT/2, RTT/3, S1–S4) are readable <strong>without animation</strong>.  </li>
+<li>The static glyph (<code>research_toolbox_glyph.svg</code>) is the canonical fallback.</li>
+</ul>
+  </main>
+</body>
+</html>

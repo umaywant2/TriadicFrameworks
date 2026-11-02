@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/scientific_instrument_review/pull_request_template.md">
+  <title>pullrequesttemplate.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/scientific_instrument_review/pull_request_template.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/scientific_instrument_review/pull_request_template.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="pull_request_templatemd"><strong>pull_request_template.md</strong></h1>
+<p><em>(draft — for all contributors)</em></p>
+<h2 id="summary-of-changes"><strong>Summary of Changes</strong></h2>
+<p>Provide a short, clear description of what this PR adds or updates.</p>
+<ul>
+<li>What instrument(s) did you add or modify?  </li>
+<li>Which zone folder did you place them in (Green / Yellow / Red)?  </li>
+<li>Any supporting updates (appendix, glossary links, etc.)?</li>
+</ul>
+<p>Keep this section minimal and structural.</p>
+<hr>
+<h2 id="checklist-for-contributors"><strong>Checklist for Contributors</strong></h2>
+<p>Before submitting, please confirm the following:</p>
+<h3 id="1-template-compliance"><strong>1. Template Compliance</strong></h3>
+<ul>
+<li>[ ] I used <code>template.md</code> as the base for each new instrument file.  </li>
+<li>[ ] All required sections are present (Dimensional Core, Why Zone, Regime Notes, Alignment/Containment Notes).  </li>
+<li>[ ] The tone is minimal, friendly, and aligned with the rest of the review.</li>
+</ul>
+<hr>
+<h3 id="2-correct-zone-placement"><strong>2. Correct Zone Placement</strong></h3>
+<ul>
+<li>[ ] The instrument is placed in the correct folder:  </li>
+<li><code>01_green_zone/</code>  </li>
+<li><code>02_yellow_zone/</code>  </li>
+<li><code>03_red_zone/</code>  </li>
+<li>[ ] The zone justification is clear and matches the triadic glossary.</li>
+</ul>
+<hr>
+<h3 id="3-dimensional-core-set"><strong>3. Dimensional Core (SET)</strong></h3>
+<ul>
+<li>[ ] The SET section is present and accurate.  </li>
+<li>[ ] Only relevant axes are included (Spin, Elec, Temp).  </li>
+<li>[ ] No unnecessary detail or domain‑specific jargon.</li>
+</ul>
+<hr>
+<h3 id="4-regime-notes"><strong>4. Regime Notes</strong></h3>
+<ul>
+<li>[ ] The file includes <strong>pos‑regime</strong>, <strong>Q‑regime</strong>, and <strong>neg‑regime</strong> notes.  </li>
+<li>[ ] Each bullet is one line and describes behavior, not theory.  </li>
+<li>[ ] No deep domain dives or equations.</li>
+</ul>
+<hr>
+<h3 id="5-alignment-or-containment-notes"><strong>5. Alignment or Containment Notes</strong></h3>
+<ul>
+<li>[ ] Green‑zone: “Already aligned” with minimal edge‑case notes.  </li>
+<li>[ ] Yellow‑zone: clear notes on assumptions, drift, or environmental sensitivity.  </li>
+<li>[ ] Red‑zone: explicit containment boundaries for fragile regimes.</li>
+</ul>
+<hr>
+<h3 id="6-file-structure-naming"><strong>6. File Structure &amp; Naming</strong></h3>
+<ul>
+<li>[ ] The filename uses lowercase with underscores (e.g., <code>mass_spectrometer.md</code>).  </li>
+<li>[ ] The file is placed in the correct zone folder.  </li>
+<li>[ ] No spaces or special characters in filenames.</li>
+</ul>
+<hr>
+<h3 id="7-appendix-updates-if-needed"><strong>7. Appendix Updates (if needed)</strong></h3>
+<ul>
+<li>[ ] <code>instrument_list_raw.md</code> updated if this is a new instrument type.  </li>
+<li>[ ] No glossary terms redefined inside instrument files.  </li>
+<li>[ ] Cross‑links added to <code>glossary_links.md</code> only when appropriate.</li>
+</ul>
+<hr>
+<h3 id="8-style-length"><strong>8. Style &amp; Length</strong></h3>
+<ul>
+<li>[ ] The file is short (150–300 words).  </li>
+<li>[ ] Tone is student‑friendly and aligned with the project.  </li>
+<li>[ ] No diagrams, equations, or domain‑heavy explanations.</li>
+</ul>
+<hr>
+<h2 id="additional-notes-optional"><strong>Additional Notes (optional)</strong></h2>
+<p>Add any context, references, or reasoning that may help reviewers understand your choices. Keep it brief.</p>
+  </main>
+</body>
+</html>

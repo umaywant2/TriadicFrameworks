@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "RTT Observation",
+  "type": "object",
+  "properties": {
+    "observation_id": { "type": "string" },
+    "instrument": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "wavelength_range": { "type": "string" },
+    "raw_data_ref": { "type": "string" },
+    "triadic_core_primitive": {
+      "type": "object",
+      "properties": {
+        "spin_channel": { "type": "number" },
+        "charge_channel": { "type": "number" },
+        "temperature_channel": { "type": "number" }
+      }
+    }
+  },
+  "required": ["observation_id", "instrument"]
+}

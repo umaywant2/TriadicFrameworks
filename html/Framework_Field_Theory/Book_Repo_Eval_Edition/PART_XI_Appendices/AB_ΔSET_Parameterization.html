@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AB_ΔSET_Parameterization.md">
+  <title>Appendix AB — ΔSET Parameterization</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AB_ΔSET_Parameterization.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AB_ΔSET_Parameterization.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="appendix-ab-set-parameterization"><strong>Appendix AB — ΔSET Parameterization</strong></h1>
+<h3 id="formalizing-the-set-engine-as-a-measurable-modelready-contribution"><em>Formalizing the SET engine as a measurable, model‑ready contribution</em></h3>
+<p>This appendix defines the <strong>ΔSET</strong> term introduced throughout Framework Field Theory (FFT).<br>
+ΔSET represents an additive contribution to effective mass‑energy, coherence strength, or system‑level behavior arising from the interaction of the core fields:</p>
+<ul>
+<li>Scalar field φ(x,t)  </li>
+<li>Vector field V(x,t)  </li>
+<li>Resonance envelope R(x,t)</li>
+</ul>
+<p>The purpose of this appendix is to provide a <strong>clear, minimal, mathematically consistent parameterization</strong> of ΔSET that can be used for:</p>
+<ul>
+<li>simulation  </li>
+<li>empirical testing  </li>
+<li>theoretical analysis  </li>
+<li>cross‑domain modeling  </li>
+</ul>
+<p>ΔSET is not tied to any specific physical interpretation; it is a <strong>structural term</strong> that captures how coherence, flow, and substrate density modify system behavior.</p>
+<hr>
+<h1 id="1-conceptual-role-of-set"><strong>1. Conceptual Role of ΔSET</strong></h1>
+<p>ΔSET acts as a <strong>coherence‑derived correction term</strong>.<br>
+In FFT, it represents how resonance, flow, and substrate structure contribute to:</p>
+<ul>
+<li>effective mass‑energy  </li>
+<li>system inertia  </li>
+<li>coherence amplification  </li>
+<li>regime transitions  </li>
+<li>large‑scale structural behavior  </li>
+</ul>
+<p>It is analogous to an “order‑parameter contribution” in statistical field theories.</p>
+<hr>
+<h1 id="2-minimal-parameterization"><strong>2. Minimal Parameterization</strong></h1>
+<p>The simplest form consistent with FFT’s architecture is:</p>
+<p>$$\Delta SET(x) = \kappa_1 R(x) + \kappa_2 \lVert V(x) \rVert^2 + \kappa_3 \phi(x)$$</p>
+<p>where:</p>
+<ul>
+<li><strong>κ₁</strong> weights resonance contribution  </li>
+<li><strong>κ₂</strong> weights flow/velocity contribution  </li>
+<li><strong>κ₃</strong> weights scalar/substrate contribution  </li>
+</ul>
+<p>This form is:</p>
+<ul>
+<li>linear in φ and R  </li>
+<li>quadratic in V (energy‑like)  </li>
+<li>easy to fit to data  </li>
+<li>dimensionally flexible  </li>
+<li>domain‑agnostic  </li>
+</ul>
+<hr>
+<h1 id="3-generalized-nonlocal-parameterization"><strong>3. Generalized Nonlocal Parameterization</strong></h1>
+<p>FFT allows ΔSET to incorporate nonlocal coherence effects:</p>
+<pre><code class="language-math">\Delta SET(x) = \kappa_1 R(x)
++ \kappa_2 \lVert V(x) \rVert^2
++ \kappa_3 \phi(x)
++ \int_{\Omega} K(x-y)\, h(\phi(y), V(y), R(y))\, dy
+</code></pre>
+<p>where:</p>
+<ul>
+<li><strong>K</strong> is a kernel (Gaussian, exponential, compact support, etc.)  </li>
+<li><strong>h</strong> is a smooth interaction function  </li>
+</ul>
+<p>This captures:</p>
+<ul>
+<li>long‑range coherence  </li>
+<li>resonance propagation  </li>
+<li>multi‑scale coupling  </li>
+</ul>
+<hr>
+<h1 id="4-dimensional-considerations"><strong>4. Dimensional Considerations</strong></h1>
+<p>ΔSET may be interpreted as:</p>
+<ul>
+<li>mass‑like  </li>
+<li>energy‑like  </li>
+<li>coherence‑strength  </li>
+<li>structural correction  </li>
+<li>informational density  </li>
+</ul>
+<p>FFT does not impose a physical unit system.<br>
+Units are chosen by the domain of application.</p>
+<hr>
+<h1 id="5-relationship-to-governing-equations"><strong>5. Relationship to Governing Equations</strong></h1>
+<p>If ΔSET is inserted into a potential equation (optional):</p>
+<p>$$\nabla^2 \Phi = 4\pi G \left( \rho_{\text{baryon}} + \frac{\Delta SET}{c^2} \right)$$</p>
+<p>This yields:</p>
+<ul>
+<li>rotation curve predictions  </li>
+<li>lensing mass maps  </li>
+<li>structural scaling relations  </li>
+</ul>
+<p>But this is <strong>not required</strong> by FFT.<br>
+It is one possible instantiation.</p>
+<hr>
+<h1 id="6-parameter-estimation"><strong>6. Parameter Estimation</strong></h1>
+<p>Parameters {κ₁, κ₂, κ₃} can be estimated by:</p>
+<ul>
+<li>regression  </li>
+<li>variational methods  </li>
+<li>Bayesian inference  </li>
+<li>simulation fitting  </li>
+<li>empirical calibration  </li>
+</ul>
+<p>For example, in astrophysical applications:</p>
+<ul>
+<li>κ₁ controls resonance contribution  </li>
+<li>κ₂ controls flow‑driven effects  </li>
+<li>κ₃ controls substrate density influence  </li>
+</ul>
+<hr>
+<h1 id="7-regimedependent-parameterization"><strong>7. Regime‑Dependent Parameterization</strong></h1>
+<p>FFT supports regime‑aware parameterization:</p>
+<p>$$\kappa_i = \kappa_i(\text{regime})$$</p>
+<p>Examples:</p>
+<ul>
+<li>high‑coherence regime → κ₁ increases  </li>
+<li>turbulent regime → κ₂ dominates  </li>
+<li>substrate‑dominated regime → κ₃ dominates  </li>
+</ul>
+<p>This allows ΔSET to adapt to system behavior.</p>
+<hr>
+<h1 id="8-interpretation-flexibility"><strong>8. Interpretation Flexibility</strong></h1>
+<p>ΔSET can represent:</p>
+<ul>
+<li>coherence‑derived mass  </li>
+<li>informational inertia  </li>
+<li>structural correction  </li>
+<li>energy‑like contribution  </li>
+<li>regime‑level amplification  </li>
+</ul>
+<p>FFT intentionally leaves interpretation open so ΔSET can be applied across:</p>
+<ul>
+<li>physics  </li>
+<li>biology  </li>
+<li>cognition  </li>
+<li>social systems  </li>
+<li>computational systems  </li>
+</ul>
+<hr>
+<h1 id="closing-statement"><strong>Closing Statement</strong></h1>
+<blockquote>
+<p><strong>ΔSET is the canonical parameterization of coherence‑derived contributions within FFT. This appendix establishes its minimal mathematical form, generalized extensions, and domain‑agnostic interpretation, enabling simulation, empirical testing, and theoretical development.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

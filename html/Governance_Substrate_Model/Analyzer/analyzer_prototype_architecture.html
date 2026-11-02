@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Governance_Substrate_Model/Analyzer/analyzer_prototype_architecture.md">
+  <title>Analyzer Prototype Architecture</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Governance_Substrate_Model/Analyzer/analyzer_prototype_architecture.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Governance_Substrate_Model/Analyzer/analyzer_prototype_architecture.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="analyzer-prototype-architecture">Analyzer Prototype Architecture</h1>
+<p><em>A minimal, end‑to‑end structural analyzer built on the Governance Substrate Model (GSM)</em></p>
+<p>This document defines the prototype architecture for the Governance Alignment Analyzer. It provides a simplified but complete version of the full Analyzer pipeline, enabling developers and students to understand the flow of structural interpretation from raw input to basin classification and drift detection. The prototype is intentionally minimal, modular, and easy to extend.</p>
+<hr>
+<h2 id="purpose-of-the-prototype">Purpose of the Prototype</h2>
+<p>The prototype demonstrates how a governance system can be:</p>
+<ul>
+<li>described in natural language  </li>
+<li>converted into a structural vector  </li>
+<li>evaluated against GSM invariants  </li>
+<li>processed through cross‑axis physics  </li>
+<li>classified into an equilibrium basin  </li>
+<li>analyzed for drift and transition tendencies  </li>
+</ul>
+<p>It is designed as a teaching tool, a developer reference, and a foundation for future full‑scale implementations.</p>
+<hr>
+<h2 id="highlevel-architecture">High‑Level Architecture</h2>
+<p>The prototype consists of <strong>five core modules</strong>, each representing a simplified version of the full Analyzer:</p>
+<ol>
+<li><strong>Input Normalizer</strong>  </li>
+<li><strong>Structural Vectorizer</strong>  </li>
+<li><strong>Invariant Evaluator</strong>  </li>
+<li><strong>Physics Engine</strong>  </li>
+<li><strong>Basin &amp; Drift Evaluator</strong></li>
+</ol>
+<p>These modules form a linear pipeline, with each stage enriching the structural understanding of the system.</p>
+<hr>
+<h2 id="module-1-input-normalizer">Module 1 — Input Normalizer</h2>
+<h3 id="purpose">Purpose</h3>
+<p>Convert raw descriptions into a clean, structured artifact.</p>
+<h3 id="responsibilities">Responsibilities</h3>
+<ul>
+<li>Remove rhetorical or ideological language  </li>
+<li>Extract structural claims  </li>
+<li>Identify references to method, oversight, timing, access, and centralization  </li>
+<li>Prepare data for vectorization</li>
+</ul>
+<h3 id="output">Output</h3>
+<p>A normalized artifact containing only structural content.</p>
+<hr>
+<h2 id="module-2-structural-vectorizer">Module 2 — Structural Vectorizer</h2>
+<h3 id="purpose_1">Purpose</h3>
+<p>Translate normalized descriptions into the five‑axis structural vector:</p>
+<ul>
+<li><strong>C</strong> — Centralization  </li>
+<li><strong>M</strong> — Method  </li>
+<li><strong>O</strong> — Oversight  </li>
+<li><strong>A</strong> — Access  </li>
+<li><strong>T</strong> — Timing  </li>
+</ul>
+<h3 id="logic">Logic</h3>
+<ul>
+<li>Uses mapping rules (prototype version: simple keyword → axis mapping)  </li>
+<li>Produces a vector in the range defined by the governance manifold  </li>
+</ul>
+<h3 id="output_1">Output</h3>
+<p>A structural vector <code>[C, M, O, A, T]</code>.</p>
+<hr>
+<h2 id="module-3-invariant-evaluator">Module 3 — Invariant Evaluator</h2>
+<h3 id="purpose_2">Purpose</h3>
+<p>Check the vector against GSM invariants and awareness layers.</p>
+<h3 id="responsibilities_1">Responsibilities</h3>
+<ul>
+<li>Identify invariant alignment or tension  </li>
+<li>Flag structural contradictions  </li>
+<li>Detect missing absorptive structures  </li>
+<li>Provide early warnings for incoherent configurations</li>
+</ul>
+<h3 id="output_2">Output</h3>
+<p>An invariant report with alignment flags.</p>
+<hr>
+<h2 id="module-4-crossaxis-physics-engine">Module 4 — Cross‑Axis Physics Engine</h2>
+<h3 id="purpose_3">Purpose</h3>
+<p>Apply simplified GSM physics to adjust the vector and compute drift tendencies.</p>
+<h3 id="prototype-physics-rules">Prototype Physics Rules</h3>
+<ul>
+<li>Centralization ↔ Oversight coupling  </li>
+<li>Method ↔ Access coupling  </li>
+<li>Oversight ↔ Timing coupling  </li>
+</ul>
+<h3 id="responsibilities_2">Responsibilities</h3>
+<ul>
+<li>Compute compensatory movement  </li>
+<li>Identify structural tension  </li>
+<li>Produce an adjusted vector  </li>
+</ul>
+<h3 id="output_3">Output</h3>
+<ul>
+<li>Adjusted vector  </li>
+<li>Active forces list  </li>
+</ul>
+<hr>
+<h2 id="module-5-basin-drift-evaluator">Module 5 — Basin &amp; Drift Evaluator</h2>
+<h3 id="purpose_4">Purpose</h3>
+<p>Determine the system’s structural family and drift direction.</p>
+<h3 id="basin-classification">Basin Classification</h3>
+<p>Compares the vector to the five equilibrium basins:</p>
+<ul>
+<li>CPL  </li>
+<li>CPF  </li>
+<li>CTR  </li>
+<li>PCL  </li>
+<li>HCL  </li>
+</ul>
+<h3 id="drift-detection">Drift Detection</h3>
+<ul>
+<li>Computes drift vector  </li>
+<li>Identifies basin approach or departure  </li>
+<li>Detects early transition signals  </li>
+</ul>
+<h3 id="output_4">Output</h3>
+<ul>
+<li>Nearest basin  </li>
+<li>Drift vector  </li>
+<li>Transition likelihood  </li>
+</ul>
+<hr>
+<h2 id="prototype-data-flow">Prototype Data Flow</h2>
+<pre><code>Raw Input
+   ↓
+Input Normalizer
+   ↓
+Structural Vectorizer
+   ↓
+Invariant Evaluator
+   ↓
+Physics Engine
+   ↓
+Basin &amp; Drift Evaluator
+   ↓
+Prototype Output
+</code></pre>
+<hr>
+<h2 id="prototype-output-schema">Prototype Output Schema</h2>
+<p>The prototype returns:</p>
+<ul>
+<li>structural_vector  </li>
+<li>adjusted_vector  </li>
+<li>invariant_flags  </li>
+<li>active_forces  </li>
+<li>nearest_basin  </li>
+<li>drift_vector  </li>
+<li>narrative_summary  </li>
+</ul>
+<p>This schema is intentionally minimal but structurally complete.</p>
+<hr>
+<h2 id="extensibility-notes">Extensibility Notes</h2>
+<p>The prototype is designed to be expanded into the full Analyzer by:</p>
+<ul>
+<li>replacing keyword mapping with full NLP mapping rules  </li>
+<li>expanding invariants and awareness layers  </li>
+<li>adding full physics interactions  </li>
+<li>integrating the transition graph  </li>
+<li>connecting to the triadic observer layer  </li>
+<li>supporting multi‑snapshot historical analysis  </li>
+</ul>
+<hr>
+<h2 id="educational-use">Educational Use</h2>
+<p>The prototype is ideal for:</p>
+<ul>
+<li>classroom demonstrations  </li>
+<li>student worksheets  </li>
+<li>historical reconstruction labs  </li>
+<li>developer onboarding  </li>
+<li>early testing of structural rules  </li>
+</ul>
+<p>It provides a clear, approachable entry point into the GSM.</p>
+  </main>
+</body>
+</html>

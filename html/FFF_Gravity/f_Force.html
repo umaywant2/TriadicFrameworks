@@ -1,0 +1,1830 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/f_Force.md">
+  <title>fForce — Force Node &amp; Fluid Node Definitions</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/f_Force.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/f_Force.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="f_force-force-node-fluid-node-definitions">f_Force — Force Node &amp; Fluid Node Definitions</h1>
+<pre><code># ============================================================
+# f_Force.md — Force Node &amp; Fluid Node Layer Definition
+# Module: FFF_Gravity | TriadicFrameworks v1.0.0
+# ============================================================
+title: &quot;f_Force — Force Node &amp; Fluid Node Definitions&quot;
+module: FFF_Gravity
+layer: &quot;Wave 2 — Layer Definitions&quot;
+node_primary: F_force
+node_secondary: F_fluid
+version: &quot;1.0.0&quot;
+status: canonical
+frozen: true
+
+session_context:
+  session_id: &quot;SES-20260813-FORCE-001&quot;
+  date: &quot;2026-08-13&quot;
+  author: &quot;Nawder (umaywant2)&quot;
+  assistant: &quot;Copilot (Microsoft)&quot;
+  session_note: &gt;
+    Canonical build. Dual-node file covering F_force (gradient/pressure identity)
+    and F_fluid (mass-density identity). Both nodes are defined here because they
+    form a co-dependent lower dyad — splitting creates circular dependencies.
+    Genesis material sourced from f_Source.md dialogue and confirmed by
+    FFF_Gravity_module.json node registry.
+
+dependencies:
+  required:
+    - &quot;README.md&quot;
+    - &quot;INDEX.md&quot;
+    - &quot;OPERATORS.md&quot;
+    - &quot;GLOSSARY.md&quot;
+    - &quot;CHANGELOG.md&quot;
+    - &quot;FFF_Gravity_module.json&quot;
+    - &quot;f_Field.md&quot;
+  referenced_by:
+    - &quot;f_Frame.md&quot;
+    - &quot;f_Orbit.md&quot;
+    - &quot;f_Decay.md&quot;
+    - &quot;f_Release.md&quot;
+    - &quot;f_Collapse.md&quot;
+    - &quot;f_Amplify.md&quot;
+    - &quot;f_Deflect.md&quot;
+    - &quot;f_Dampen.md&quot;
+    - &quot;f_Emit.md&quot;
+    - &quot;f_Capture.md&quot;
+
+changelog:
+  - version: &quot;1.0.0&quot;
+    date: &quot;2026-08-13&quot;
+    author: &quot;Nawder&quot;
+    change: &quot;Initial canonical release. §0–§10 complete. Dual F_force + F_fluid node definitions. SC-1, SC-4, FM-001, FM-006, FM-007 registered.&quot;
+</code></pre>
+<!-- metadata: file=f_Force.md module=FFF_Gravity status=canonical frozen=true wave=2 -->
+
+<blockquote>
+<p><strong>FFF_Gravity Module · Wave 2 · Layer Definitions</strong>
+This file defines two co-dependent nodes: <strong>F_force</strong> (gradient/pressure identity)
+and <strong>F_fluid</strong> (mass-density identity). They are defined together because in every
+physical and engineered gravity scenario they are mutually constraining — neither
+fully describes a state without reference to the other.</p>
+</blockquote>
+<hr>
+<h2 id="0-session-context">§0 · Session Context</h2>
+<!-- section: 0-session-context -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session ID</td>
+<td><code>SES-20260813-FORCE-001</code></td>
+</tr>
+<tr>
+<td>Date</td>
+<td>2026-08-13</td>
+</tr>
+<tr>
+<td>Module</td>
+<td>FFF_Gravity</td>
+</tr>
+<tr>
+<td>File</td>
+<td><code>f_Force.md</code></td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Canonical — frozen at v1.0.0</td>
+</tr>
+<tr>
+<td>Nodes Defined</td>
+<td>F_force, F_fluid</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>2 — Layer Definitions</td>
+</tr>
+<tr>
+<td>Sibling Files</td>
+<td><code>f_Field.md</code> (F_freq), <code>f_Frame.md</code> (Frame Node)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="01-design-decision-why-dual-node">§0.1 · Design Decision: Why Dual-Node?</h3>
+<p>The standard triadic pattern assigns one node per definition file. F_force and F_fluid
+are an exception. Three reasons justify the dual-node design:</p>
+<ol>
+<li>
+<p><strong>Mutual constraint.</strong> SC-4 (Binding Floor) requires F_fluid coupling coefficient
+   <code>β ≥ 1.0</code> — but the floor is enforced by F_force providing the approach vector.
+   Neither condition is meaningful in isolation.</p>
+</li>
+<li>
+<p><strong>Historical isolation.</strong> Every canonical experiment that isolates one node
+   implicitly holds the other constant. The Cavendish torsion balance, for example,
+   isolates F_fluid by making F_force negligible — but it can only be understood as
+   such if both are defined in the same scope.</p>
+</li>
+<li>
+<p><strong>Failure mode co-location.</strong> FM-007 (Mutual Dissolution) requires simultaneous
+   reference to F_fluid mass parity and F_force gradient collapse. Splitting the
+   definitions forces every failure mode analysis to cross-reference two files.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Governance:</strong> This dual-node structure is recorded in <code>FFF_Gravity_module.json</code>
+(<code>defined_in: "f_Force.md"</code> for both nodes). The <code>OPERATORS.md</code> file remains the
+single source of truth for all operator symbols. <code>GLOSSARY.md</code> governs prose
+definitions.</p>
+</blockquote>
+<hr>
+<h2 id="1-node-identity">§1 · Node Identity</h2>
+<!-- section: 1-node-identity -->
+
+<h3 id="11-f_force-force-node">§1.1 · F_force — Force Node</h3>
+<!-- metadata: node=F_force symbol=F_force domain=gradient-pressure role=passive-gradient -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node Name</td>
+<td>Force Node</td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td><code>F_force</code></td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Gradient / Pressure Identity</td>
+</tr>
+<tr>
+<td>Role in Triadic Ratio</td>
+<td>Gradient operator — provides approach vector, atmospheric overlay, pressure differential</td>
+</tr>
+<tr>
+<td>Triadic Position</td>
+<td>Lower-right (see §3)</td>
+</tr>
+<tr>
+<td>Stability Posture</td>
+<td><strong>Passive</strong> — dominance indicates anomaly or engineering</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td>v1.0.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core identity statement:</strong></p>
+<blockquote>
+<p><em>F_force is the gradient component of the local gravitational ratio. It carries
+atmospheric pressure, isomorphic gradients, density layer transitions, and
+regime stabilization. It does not create the coherence well — it shapes the
+approach path to it.</em></p>
+</blockquote>
+<p><strong>Passivity principle.</strong> In all naturally occurring stable gravity regimes, F_force
+is passive — it contributes gradient context without dominating the ratio. A dominant
+F_force (F_force &gt;&gt; F_freq × F_fluid) is always either anomalous or engineered.
+This is one of the most important asymmetries in the FFF_Gravity model: the node
+that most resembles "force" in the colloquial sense is the one that, when dominant,
+signals failure or override.</p>
+<hr>
+<h3 id="12-f_fluid-fluid-node">§1.2 · F_fluid — Fluid Node</h3>
+<!-- metadata: node=F_fluid symbol=F_fluid domain=mass-density role=substrate-continuity -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node Name</td>
+<td>Fluid Node</td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td><code>F_fluid</code></td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Mass-Density Identity</td>
+</tr>
+<tr>
+<td>Role in Triadic Ratio</td>
+<td>Substrate operator — carries mass distribution, pooling, flow potential, mass-energy coupling</td>
+</tr>
+<tr>
+<td>Triadic Position</td>
+<td>Lower-left (see §3)</td>
+</tr>
+<tr>
+<td>Stability Posture</td>
+<td><strong>Neutral</strong> — must meet binding floor <code>β ≥ 1.0</code></td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td>v1.0.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core identity statement:</strong></p>
+<blockquote>
+<p><em>F_fluid is the mass-density component of the local gravitational ratio. Mass is
+not the cause of gravity — mass is the fluid node that interacts with the
+frequency node (F_freq) to produce the coherence well. F_fluid carries
+distribution, pooling, substrate continuity, and flow potential.</em></p>
+</blockquote>
+<p><strong>Mass reframing.</strong> The most important conceptual shift in FFF_Gravity is that mass
+does not generate gravity. Mass is F_fluid — one node in a three-node ratio.
+Without F_freq (the coherence well), F_fluid has no attractor to pool toward.
+Without F_force, F_fluid has no gradient context. This is not a claim that mass is
+irrelevant — it is a claim that mass alone is insufficient to describe a gravity regime.</p>
+<hr>
+<h2 id="2-canonical-description">§2 · Canonical Description</h2>
+<!-- section: 2-canonical-description -->
+
+<h3 id="21-the-triadic-ratio">§2.1 · The Triadic Ratio</h3>
+<p>The FFF_Gravity local gravity ratio is:</p>
+<pre><code>G_local = F_freq · F_fluid · F_force
+</code></pre>
+<p>Where:
+- <code>F_freq</code> — coherence well identity (defined in <code>f_Field.md</code>)
+- <code>F_fluid</code> — mass-density substrate (defined here)
+- <code>F_force</code> — gradient/pressure overlay (defined here)</p>
+<p>All three nodes must be present for a complete gravity description. A reading that
+accounts for only one or two nodes will produce a partial model — accurate in its
+limited scope, blind to the remainder.</p>
+<hr>
+<h3 id="22-f_force-canonical-description">§2.2 · F_force Canonical Description</h3>
+<p><strong>What F_force carries:</strong></p>
+<ul>
+<li>Atmospheric pressure (surface and stratospheric gradients)</li>
+<li>Isomorphic pressure fields (pressure equivalence zones across a body)</li>
+<li>Density layer transitions (interfaces between fluid layers — ocean thermoclines,
+  atmospheric pressure bands, mantle/crust boundaries)</li>
+<li>Regime stabilization (the overlay that maintains a pressure envelope around a
+  coherence well)</li>
+<li>Approach vector magnitude (<code>v_approach</code>) — the rate at which an element is
+  moving toward an attractor</li>
+</ul>
+<p><strong>What F_force does NOT carry:</strong></p>
+<ul>
+<li>The coherence well itself (that is F_freq)</li>
+<li>The mass substrate (that is F_fluid)</li>
+<li>The capture threshold (that is SC-1, computed across all three nodes)</li>
+</ul>
+<p><strong>Force override class.</strong> When an external mechanism artificially elevates F_force
+to dominance — replacing the natural gradient with an engineered pressure field —
+the result is a Force Override state. The coherence well (F_freq) may still be
+present, but the element's behavior is governed by the artificial gradient, not the
+natural triadic ratio. This is designated FM-006 (Phantom Capture). The canonical
+fictional example: a Green Lantern ring creates an artificial gravity that operates
+by F_force dominance — gravity is not broken, but overridden.</p>
+<hr>
+<h3 id="23-f_fluid-canonical-description">§2.3 · F_fluid Canonical Description</h3>
+<p><strong>What F_fluid carries:</strong></p>
+<ul>
+<li>Mass distribution (how mass is distributed within and around an attractor body)</li>
+<li>Pooling (the tendency of mass to accumulate toward coherence well minima)</li>
+<li>Flow potential (the directional bias of mass redistribution over time)</li>
+<li>Mass-energy coupling coefficient (<code>β</code>) — how strongly the element's mass
+  participates in the coherence well interaction</li>
+<li>Attractor mass (<code>M_A</code>) — the total effective mass of the attractor body</li>
+<li>Element mass (<code>M_E</code>) — the total effective mass of the element</li>
+</ul>
+<p><strong>What F_fluid does NOT carry:</strong></p>
+<ul>
+<li>The frequency of the coherence well (that is F_freq)</li>
+<li>The gradient of the approach path (that is F_force)</li>
+<li>The escape threshold (that is SC-1, <code>v_escape(A)</code>, computed from F_freq)</li>
+</ul>
+<p><strong>Mass parity hazard.</strong> When <code>M_E ≈ M_A</code>, the attractor/element distinction
+collapses. Neither body can serve as the stable coherence anchor. This is the
+Subset/Supsphere failure class, designated FM-007 (Mutual Dissolution). The
+model requires <code>M_A &gt;&gt; M_E</code> for standard capture/orbit behavior.</p>
+<hr>
+<h2 id="3-triadic-position">§3 · Triadic Position</h2>
+<!-- section: 3-triadic-position -->
+
+<p>The three FFF_Gravity nodes occupy fixed positions in the triadic diagram.
+F_force and F_fluid form the lower dyad — the operational layer beneath the
+F_freq coherence anchor.</p>
+<pre><code>              ┌─────────────────────────────────┐
+              │           F_freq                │
+              │    (Coherence Well / Field)     │
+              │    [ defined in f_Field.md ]    │
+              └───────────┬─────────────────────┘
+                          │
+              ┌───────────┴─────────────────────┐
+              │         Lower Dyad              │
+              │                                 │
+              │  F_fluid          F_force        │
+              │  (Mass-Density)   (Gradient)    │
+              │  [THIS FILE]      [THIS FILE]   │
+              └─────────────────────────────────┘
+</code></pre>
+<p><strong>Dyad co-dependence.</strong> The lower dyad is not a simple pair of independent nodes.
+F_fluid provides the substrate mass that F_force acts upon. F_force provides the
+gradient context within which F_fluid distributes. In the ratio <code>G_local = F_freq
+· F_fluid · F_force</code>, neither lower node is meaningful without the upper anchor
+(F_freq), and neither is fully interpretable without the other.</p>
+<p><strong>Reading the diagram for engineering:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Operator</th>
+<th>Node to Modify</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Increase effective gravity</td>
+<td>Increase <code>β</code> (coupling)</td>
+<td>F_fluid via <code>amplify_coupling</code></td>
+</tr>
+<tr>
+<td>Change approach path</td>
+<td>Change <code>v_approach</code> heading</td>
+<td>F_force via <code>redirect_force_node</code></td>
+</tr>
+<tr>
+<td>Eliminate F_force entirely</td>
+<td>Set gradient to null</td>
+<td>F_force → ISS/vacuum state</td>
+</tr>
+<tr>
+<td>Replace F_force artificially</td>
+<td>Substitute pressure field</td>
+<td>F_force → Force Override (FM-006)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-operator-definitions">§4 · Operator Definitions</h2>
+<!-- section: 4-operator-definitions -->
+
+<blockquote>
+<p><strong>Authority:</strong> <code>OPERATORS.md</code> is the single source of truth for all operator
+symbols, types, units, and freeze status. The table below is a local reference
+only. In case of conflict, <code>OPERATORS.md</code> governs.</p>
+</blockquote>
+<h3 id="41-f_force-operators">§4.1 · F_force Operators</h3>
+<!-- metadata: operators=F_force frozen=v1.0.0 -->
+
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Type</th>
+<th>Domain</th>
+<th>Definition</th>
+<th>Frozen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v_approach</code></td>
+<td>Approach Vector</td>
+<td>scalar ℝ≥0</td>
+<td>F_force</td>
+<td>Rate and direction of element movement toward attractor; magnitude of closing velocity along the approach path</td>
+<td>v1.0.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>v_approach</code> notes:</strong></p>
+<ul>
+<li>Scalar form (ℝ≥0) represents magnitude only. Direction is carried by the
+  <code>heading_delta</code> operator (defined in <code>f_Deflect.md</code>, Wave 3 — pending).</li>
+<li><code>v_approach = 0</code> → element is stationary relative to attractor (capture
+  threshold crossed or orbit established).</li>
+<li><code>v_approach ≥ v_escape(A)</code> → SC-1 violated; FM-001 (Overshoot) triggered.</li>
+<li><code>v_approach</code> is not a force in the Newtonian sense. It is the approach
+  characterization of the F_force node — the gradient-shaped path the element
+  follows toward the coherence well.</li>
+</ul>
+<hr>
+<h3 id="42-f_fluid-operators">§4.2 · F_fluid Operators</h3>
+<!-- metadata: operators=F_fluid frozen=v1.0.0 -->
+
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Type</th>
+<th>Domain</th>
+<th>Definition</th>
+<th>Frozen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>M_A</code></td>
+<td>Attractor Mass</td>
+<td>scalar ℝ&gt;0</td>
+<td>F_fluid</td>
+<td>Total effective mass of the attractor body; the primary F_fluid contributor to the coherence well</td>
+<td>v1.0.0</td>
+</tr>
+<tr>
+<td><code>M_E</code></td>
+<td>Element Mass</td>
+<td>scalar ℝ&gt;0</td>
+<td>F_fluid</td>
+<td>Total effective mass of the element; the secondary F_fluid participant in the triadic ratio</td>
+<td>v1.0.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>M_A</code> notes:</strong></p>
+<ul>
+<li><code>M_A</code> must be strictly positive (ℝ&gt;0). A zero or negative attractor mass
+  has no defined behavior in the FFF_Gravity model.</li>
+<li><code>M_A &gt;&gt; M_E</code> is required for standard capture/orbit behavior (see FM-007).</li>
+<li><code>M_A</code> is the primary contributor to the coupling coefficient <code>β</code>.
+  Specifically, <code>β</code> is a function of <code>M_A</code>, <code>M_E</code>, and the coherence well
+  density <code>ρ(Φ)</code> (defined in <code>f_Field.md</code>).</li>
+</ul>
+<p><strong><code>M_E</code> notes:</strong></p>
+<ul>
+<li><code>M_E</code> must be strictly positive (ℝ&gt;0).</li>
+<li>As <code>M_E → M_A</code>, FM-007 (Mutual Dissolution) probability increases.</li>
+<li><code>M_E</code> participates in F_fluid but does not define F_freq. This is the
+  explicit statement that mass does not generate the coherence well.</li>
+<li>The Galileo result (all masses fall at the same rate in vacuum) follows
+  directly: F_freq and F_force are independent of <code>M_E</code>; only F_fluid
+  carries <code>M_E</code>, and its contribution cancels in the ratio when F_force → 0.</li>
+</ul>
+<hr>
+<h3 id="43-derived-pending-operators">§4.3 · Derived / Pending Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Defined In</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>heading_delta</code></td>
+<td>Approach heading deflection angle</td>
+<td><code>f_Deflect.md</code></td>
+<td>Scaffold — Wave 3</td>
+</tr>
+<tr>
+<td><code>β</code></td>
+<td>F_fluid coupling coefficient</td>
+<td><code>f_Field.md</code> §4 (inline), <code>f_Force.md</code> §5 (SC-4)</td>
+<td>Canonical — used here</td>
+</tr>
+<tr>
+<td><code>v_escape(A)</code></td>
+<td>Escape velocity of attractor</td>
+<td><code>f_Field.md</code> §4, <code>f_Force.md</code> §5 (SC-1)</td>
+<td>Canonical — used here</td>
+</tr>
+<tr>
+<td><code>ρ(Φ)</code></td>
+<td>Coherence well density</td>
+<td><code>f_Field.md</code> §4</td>
+<td>Canonical — referenced here</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-stability-conditions">§5 · Stability Conditions</h2>
+<!-- section: 5-stability-conditions -->
+
+<blockquote>
+<p>Two stability conditions are registered to <code>f_Force.md</code>. All five module
+stability conditions (SC-1 through SC-5) are listed with their home files
+in <code>INDEX.md</code>.</p>
+</blockquote>
+<h3 id="51-sc-1-approach-bound">§5.1 · SC-1 — Approach Bound</h3>
+<!-- metadata: SC=SC-1 name=Approach-Bound node=F_force home=f_Force.md -->
+
+<p><strong>Condition:</strong></p>
+<pre><code>v_approach &lt; v_escape(A)
+</code></pre>
+<p><strong>Meaning:</strong> The element's approach velocity must remain below the attractor's
+escape velocity for any form of capture, binding, or orbit to be possible.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Condition ID</td>
+<td>SC-1</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Approach Bound</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_force (provides <code>v_approach</code>); F_freq (provides <code>v_escape(A)</code>)</td>
+</tr>
+<tr>
+<td>Home File</td>
+<td><code>f_Force.md</code></td>
+</tr>
+<tr>
+<td>Violation</td>
+<td>FM-001 (Overshoot)</td>
+</tr>
+<tr>
+<td>Applies To</td>
+<td>All capture, orbit, and binding scenarios</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<p><code>v_escape(A)</code> is a property of the attractor's coherence well (F_freq) — it is
+the minimum velocity required to escape the well entirely. <code>v_approach</code> is a
+property of the element's F_force gradient trajectory. SC-1 expresses the
+boundary condition between capture-eligible and non-capture states.</p>
+<p>SC-1 is necessary but not sufficient for capture. An element with <code>v_approach
+&lt; v_escape(A)</code> is capture-eligible, but capture requires SC-4 (Binding Floor)
+to also hold. Both conditions must be satisfied simultaneously for stable
+binding to occur.</p>
+<p><strong>Boundary behavior:</strong></p>
+<pre><code>v_approach &lt;&lt; v_escape(A)   → deep binding eligible; stable orbit or capture
+v_approach → v_escape(A)    → marginal binding; high eccentricity orbit
+v_approach = v_escape(A)    → parabolic trajectory; boundary condition
+v_approach &gt; v_escape(A)    → SC-1 violated; FM-001 (Overshoot) triggered
+</code></pre>
+<hr>
+<h3 id="52-sc-4-binding-floor">§5.2 · SC-4 — Binding Floor</h3>
+<!-- metadata: SC=SC-4 name=Binding-Floor node=F_fluid home=f_Force.md -->
+
+<p><strong>Condition:</strong></p>
+<pre><code>β ≥ 1.0
+</code></pre>
+<p><strong>Meaning:</strong> The F_fluid coupling coefficient must meet or exceed unity for the
+element to participate in the coherence well interaction. Below unity, the
+element's mass substrate is insufficiently coupled to sustain binding.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Condition ID</td>
+<td>SC-4</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Binding Floor</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_fluid (provides <code>β</code>)</td>
+</tr>
+<tr>
+<td>Home File</td>
+<td><code>f_Force.md</code></td>
+</tr>
+<tr>
+<td>Violation</td>
+<td>FM-007 (Mutual Dissolution) partial; also contributes to anomalous decay</td>
+</tr>
+<tr>
+<td>Applies To</td>
+<td>All binding, orbit, and capture scenarios</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<p><code>β</code> is the F_fluid coupling coefficient — a dimensionless ratio capturing how
+effectively the element's mass participates in the attractor's coherence well.
+<code>β = 1.0</code> represents the minimum viable coupling. <code>β &gt;&gt; 1.0</code> represents strong
+coupling (tight orbit, deep binding). <code>β &lt; 1.0</code> represents subcritical coupling
+— the element is present in the gradient but not genuinely bound.</p>
+<p><strong>Coupling coefficient decomposition (informal):</strong></p>
+<pre><code>β ≈ f(M_A, M_E, ρ(Φ))
+</code></pre>
+<p>Where <code>ρ(Φ)</code> is the coherence well density at the element's current position
+(defined in <code>f_Field.md</code>). A denser coherence well (higher <code>ρ(Φ)</code>) permits
+binding at lower <code>M_E</code> — consistent with the observation that small objects
+are captured by massive, dense bodies.</p>
+<p><strong>Boundary behavior:</strong></p>
+<pre><code>β &gt;&gt; 1.0   → strong binding; stable circular/elliptical orbit
+β ≥ 1.0    → SC-4 satisfied; binding eligible
+β → 1.0    → marginal binding; high sensitivity to perturbation
+β &lt; 1.0    → SC-4 violated; element drifts; anomalous decay risk
+β → 0      → no coupling; element passes through coherence well unaffected
+</code></pre>
+<hr>
+<h3 id="53-compound-stability-sc-1-sc-4">§5.3 · Compound Stability: SC-1 ∧ SC-4</h3>
+<p>For stable capture or orbit, both conditions must hold simultaneously:</p>
+<pre><code>v_approach &lt; v_escape(A)    [SC-1: F_force domain]
+β ≥ 1.0                     [SC-4: F_fluid domain]
+</code></pre>
+<p>This is the minimum viable stability compound for the lower dyad. The upper
+anchor condition (SC-2, coherence well continuity, defined in <code>f_Field.md</code>)
+must also hold for the full triadic stability to be satisfied.</p>
+<hr>
+<h2 id="6-failure-modes">§6 · Failure Modes</h2>
+<!-- section: 6-failure-modes -->
+
+<blockquote>
+<p>Three failure modes are registered to <code>f_Force.md</code>. All ten module failure
+modes (FM-001 through FM-010) are catalogued in <code>INDEX.md</code>.</p>
+</blockquote>
+<h3 id="61-fm-001-overshoot">§6.1 · FM-001 — Overshoot</h3>
+<!-- metadata: FM=FM-001 name=Overshoot node=F_force home=f_Force.md terminal=false -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Failure Mode ID</td>
+<td>FM-001</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Overshoot</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_force</td>
+</tr>
+<tr>
+<td>Condition</td>
+<td><code>v_approach ≥ v_escape(A)</code></td>
+</tr>
+<tr>
+<td>Terminal</td>
+<td>No — element exits, does not collapse</td>
+</tr>
+<tr>
+<td>Class</td>
+<td>Non-terminal flyby; approach-velocity excess</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong></p>
+<p>The element's approach velocity meets or exceeds the attractor's escape velocity.
+The coherence well cannot retain the element. The element continues past the
+attractor on a hyperbolic trajectory — it is not captured, but the attractor and
+element both remain intact.</p>
+<p>FM-001 is non-terminal. The element exits the coherence well. If F_force later
+redirects the element (via <code>f_Deflect.md</code>) or if <code>v_approach</code> decays (via
+<code>f_Dampen.md</code>), a subsequent approach may satisfy SC-1.</p>
+<p><strong>Detection:</strong></p>
+<pre><code class="language-python"># FM-001 Detection — Overshoot
+def check_fm001(v_approach, v_escape_A):
+    if v_approach &gt;= v_escape_A:
+        return {
+            &quot;failure_mode&quot;: &quot;FM-001&quot;,
+            &quot;name&quot;: &quot;Overshoot&quot;,
+            &quot;state&quot;: &quot;SC-1_VIOLATED&quot;,
+            &quot;action&quot;: &quot;element_exits_flyby&quot;,
+            &quot;recovery_candidates&quot;: [&quot;f_Deflect&quot;, &quot;f_Dampen&quot;]
+        }
+    return {&quot;state&quot;: &quot;SC-1_SATISFIED&quot;}
+</code></pre>
+<p><strong>Recovery candidates:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Recovery</th>
+<th>Operator</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reduce approach velocity</td>
+<td><code>f_Dampen.md</code> — dampen F_force gradient</td>
+<td>Wave 3</td>
+</tr>
+<tr>
+<td>Redirect approach heading</td>
+<td><code>f_Deflect.md</code> — <code>redirect_force_node</code></td>
+<td>Wave 3</td>
+</tr>
+<tr>
+<td>Wait for natural deceleration</td>
+<td>Environmental F_force damping</td>
+<td>Passive</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="62-fm-006-phantom-capture">§6.2 · FM-006 — Phantom Capture</h3>
+<!-- metadata: FM=FM-006 name=Phantom-Capture node=F_force home=f_Force.md terminal=false class=force-override -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Failure Mode ID</td>
+<td>FM-006</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Phantom Capture</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_force</td>
+</tr>
+<tr>
+<td>Condition</td>
+<td><code>F_force</code> dominant; artificial pressure field substitutes natural gradient</td>
+</tr>
+<tr>
+<td>Terminal</td>
+<td>No — but capture is not genuine triadic closure</td>
+</tr>
+<tr>
+<td>Class</td>
+<td>Force Override Failure; engineered or anomalous gravity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong></p>
+<p>F_force becomes dominant in the local ratio — not because the coherence well
+(F_freq) and mass substrate (F_fluid) support capture, but because an artificial
+or anomalous pressure field overrides the natural gradient. The element behaves
+as if captured, but the binding is F_force-driven, not triadic.</p>
+<p>This is the <strong>Force Override class.</strong> The coherence well may still be present
+and intact. The element's trajectory is governed by the artificial gradient
+rather than the natural triadic ratio. If the artificial F_force is removed,
+the element will revert to behavior dictated by the underlying F_freq × F_fluid
+interaction — which may or may not support genuine capture.</p>
+<p><strong>Canonical fictional reference:</strong> The Green Lantern ring creates an artificial
+gravity field by imposing an engineered F_force dominant overlay. The ring
+overrides gravity — it does not break it. When the ring is removed, the
+underlying triadic ratio reasserts. This is not a toy example: it is the precise
+phenomenology of any engineered gravity system that operates by pressure dominance
+rather than coherence well manipulation.</p>
+<p><strong>Canonical physical reference:</strong> Venus surface gravity (§8.2) is a partial
+FM-006 precursor — F_force (92 atm atmospheric pressure) is so large it
+significantly amplifies experienced gravity beyond what F_freq × F_fluid alone
+would produce. Venus is not in FM-006 (the underlying coherence well is genuine),
+but it demonstrates the amplification pathway.</p>
+<p><strong>Detection:</strong></p>
+<pre><code class="language-python"># FM-006 Detection — Phantom Capture
+def check_fm006(F_force_magnitude, F_freq_magnitude, F_fluid_magnitude, threshold=10.0):
+    baseline = F_freq_magnitude * F_fluid_magnitude
+    if F_force_magnitude &gt; threshold * baseline:
+        return {
+            &quot;failure_mode&quot;: &quot;FM-006&quot;,
+            &quot;name&quot;: &quot;Phantom Capture&quot;,
+            &quot;state&quot;: &quot;FORCE_OVERRIDE&quot;,
+            &quot;warning&quot;: &quot;Capture is F_force-dominant; not genuine triadic closure&quot;,
+            &quot;action&quot;: &quot;verify_F_freq_coherence_well_integrity&quot;,
+            &quot;recovery_candidates&quot;: [&quot;verify_underlying_ratio&quot;, &quot;f_Emit&quot;]
+        }
+    return {&quot;state&quot;: &quot;F_force_NOMINAL&quot;}
+</code></pre>
+<p><strong>Recovery candidates:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Recovery</th>
+<th>Action</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove artificial F_force</td>
+<td>Emit or discharge the override field</td>
+<td><code>f_Emit.md</code> (Wave 3)</td>
+</tr>
+<tr>
+<td>Verify underlying ratio</td>
+<td>Confirm F_freq × F_fluid supports genuine capture</td>
+<td><code>f_Field.md</code>, <code>f_Capture.md</code></td>
+</tr>
+<tr>
+<td>Sustain override intentionally</td>
+<td>Engineering decision — acknowledge non-triadic state</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="63-fm-007-mutual-dissolution">§6.3 · FM-007 — Mutual Dissolution</h3>
+<!-- metadata: FM=FM-007 name=Mutual-Dissolution node=F_fluid home=f_Force.md terminal=partial class=mass-parity -->
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Failure Mode ID</td>
+<td>FM-007</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Mutual Dissolution</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>F_fluid</td>
+</tr>
+<tr>
+<td>Condition</td>
+<td><code>M_E ≈ M_A</code> — mass parity collapses attractor/element distinction</td>
+</tr>
+<tr>
+<td>Terminal</td>
+<td>Partial — system does not collapse but stable capture/orbit cannot be sustained</td>
+</tr>
+<tr>
+<td>Class</td>
+<td>Subset/Supsphere Failure; mass-parity failure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong></p>
+<p>The F_fluid node requires a clear attractor/element mass asymmetry to sustain
+stable binding. When <code>M_E ≈ M_A</code>, neither body can serve as the stable coherence
+anchor. The coherence well identity becomes ambiguous — is it centered on A or E?
+Both bodies begin to exhibit attractor behavior simultaneously. The result is not
+collapse but dissolution of the stable capture geometry.</p>
+<p>This is the <strong>Subset/Supsphere failure class.</strong> In the Subset case, <code>M_E → M_A</code>
+from below (element grows toward attractor mass). In the Supsphere case, <code>M_E &gt;
+M_A</code> (element exceeds attractor mass — roles invert). Both paths lead to FM-007.</p>
+<p><strong>Binary star systems</strong> are the canonical physical case of controlled FM-007 proximity:
+two bodies of comparable mass orbit a common barycenter rather than one orbiting
+the other. The FFF_Gravity model handles this by treating the barycenter as the
+effective coherence well anchor — but this requires a frame re-registration
+(<code>f_Frame.md</code>) to define properly.</p>
+<p><strong>Detection:</strong></p>
+<pre><code class="language-python"># FM-007 Detection — Mutual Dissolution
+def check_fm007(M_E, M_A, parity_threshold=0.1):
+    ratio = M_E / M_A
+    if abs(ratio - 1.0) &lt;= parity_threshold:
+        return {
+            &quot;failure_mode&quot;: &quot;FM-007&quot;,
+            &quot;name&quot;: &quot;Mutual Dissolution&quot;,
+            &quot;state&quot;: &quot;MASS_PARITY_FAILURE&quot;,
+            &quot;M_E_over_M_A&quot;: ratio,
+            &quot;warning&quot;: &quot;Attractor/element distinction collapsing; stable capture geometry at risk&quot;,
+            &quot;action&quot;: &quot;re_register_frame_as_barycenter&quot;,
+            &quot;recovery_candidates&quot;: [&quot;f_Frame&quot;, &quot;f_Amplify&quot;]
+        }
+    if ratio &gt; 1.0:
+        return {
+            &quot;failure_mode&quot;: &quot;FM-007&quot;,
+            &quot;name&quot;: &quot;Mutual Dissolution — Supsphere&quot;,
+            &quot;state&quot;: &quot;ROLES_INVERTED&quot;,
+            &quot;M_E_over_M_A&quot;: ratio,
+            &quot;warning&quot;: &quot;Element mass exceeds attractor mass; roles have inverted&quot;,
+            &quot;action&quot;: &quot;swap_A_and_E_designations_and_re_register&quot;
+        }
+    return {&quot;state&quot;: &quot;MASS_ASYMMETRY_NOMINAL&quot;, &quot;ratio&quot;: ratio}
+</code></pre>
+<p><strong>Recovery candidates:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Recovery</th>
+<th>Action</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Re-register frame as barycenter</td>
+<td>Shift coherence anchor to system barycenter</td>
+<td><code>f_Frame.md</code></td>
+</tr>
+<tr>
+<td>Amplify M_A</td>
+<td>Engineering increase of attractor mass coupling</td>
+<td><code>f_Amplify.md</code> (Wave 3)</td>
+</tr>
+<tr>
+<td>Accept binary topology</td>
+<td>Acknowledge two-attractor system; define sub-ratios</td>
+<td><code>f_Frame.md</code>, <code>f_Orbit.md</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-engineering-interface">§7 · Engineering Interface</h2>
+<!-- section: 7-engineering-interface -->
+
+<p>The F_force and F_fluid nodes are the primary engineering targets in the
+FFF_Gravity module. F_freq (the coherence well) is the most difficult node to
+manipulate — it is the identity of the field itself. F_force and F_fluid are
+the operational levers.</p>
+<h3 id="71-f_force-engineering-interface">§7.1 · F_force Engineering Interface</h3>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Function</th>
+<th>File</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>redirect_force_node</code></td>
+<td>Change approach heading (<code>heading_delta</code>) without changing <code>v_approach</code> magnitude</td>
+<td><code>f_Deflect.md</code></td>
+<td>Wave 3 — scaffold</td>
+</tr>
+<tr>
+<td><code>dampen_gradient</code></td>
+<td>Reduce <code>v_approach</code> by attenuating the F_force gradient</td>
+<td><code>f_Dampen.md</code></td>
+<td>Wave 3 — scaffold</td>
+</tr>
+<tr>
+<td>Force Override injection</td>
+<td>Artificially elevate F_force to dominance (FM-006 class)</td>
+<td><code>f_Emit.md</code></td>
+<td>Wave 3 — scaffold</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>redirect_force_node</code> interface (preview):</strong></p>
+<pre><code>redirect_force_node(
+    current_heading: vector,
+    target_heading:  vector,
+    delta:           heading_delta  # defined in f_Deflect.md
+) → new_v_approach_heading
+</code></pre>
+<p>This function changes the direction of <code>v_approach</code> without altering its
+magnitude. The result is a change in the approach path geometry — affecting
+<code>p_res</code> (resonance parameter, defined in <code>f_Capture.md</code>) and eccentricity,
+but not the raw speed of approach.</p>
+<hr>
+<h3 id="72-f_fluid-engineering-interface">§7.2 · F_fluid Engineering Interface</h3>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Function</th>
+<th>File</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>amplify_coupling</code></td>
+<td>Increase <code>β</code> and effective <code>P_eff</code> via enhanced F_fluid coupling</td>
+<td><code>f_Amplify.md</code></td>
+<td>Wave 3 — scaffold</td>
+</tr>
+<tr>
+<td><code>gravity_amplifier</code></td>
+<td>Macro-level increase of F_fluid coupling to boost effective gravity</td>
+<td><code>f_Amplify.md</code></td>
+<td>Wave 3 — scaffold</td>
+</tr>
+<tr>
+<td>Frame re-registration</td>
+<td>Redefine attractor identity when FM-007 is approached</td>
+<td><code>f_Frame.md</code></td>
+<td>Canonical</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>amplify_coupling</code> interface (preview):</strong></p>
+<pre><code>amplify_coupling(
+    M_A:    attractor_mass,
+    M_E:    element_mass,
+    rho_Φ:  coherence_well_density,  # ρ(Φ) from f_Field.md
+    target_β: float  # desired coupling coefficient ≥ 1.0
+) → {β_new, P_eff_new}
+</code></pre>
+<p>Increasing <code>β</code> increases the element's effective participation in the coherence
+well. This is the primary engineering path for gravity amplification — increase
+the substrate coupling, not the coherence well frequency (which is an F_freq
+operation and far more costly to engineer).</p>
+<hr>
+<h2 id="8-canonical-examples">§8 · Canonical Examples</h2>
+<!-- section: 8-canonical-examples -->
+
+<p>The following examples are drawn from the genesis dialogue (<code>f_Source.md</code>) and
+serve as the primary test cases for the F_force and F_fluid node definitions.
+Each example isolates or varies one or both lower-dyad nodes while holding F_freq
+(approximately) constant.</p>
+<hr>
+<h3 id="81-earth-baseline-all-three-nodes-nominal">§8.1 · Earth — Baseline (All Three Nodes Nominal)</h3>
+<!-- metadata: example=Earth nodes=F_force+F_fluid+F_freq state=nominal -->
+
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>State</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_freq</td>
+<td>Nominal</td>
+<td>Standard coherence well; surface <code>g ≈ 9.81 m/s²</code></td>
+</tr>
+<tr>
+<td>F_fluid</td>
+<td>Nominal</td>
+<td><code>M_A</code> = 5.97 × 10²⁴ kg; <code>β</code> well above binding floor</td>
+</tr>
+<tr>
+<td>F_force</td>
+<td>Nominal</td>
+<td>1 atm surface pressure; gradient passive</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> All three nodes contribute normally. No node is dominant. This is
+the reference state against which all other examples are measured.
+Experienced gravity at surface = F_freq × F_fluid × F_force (all at nominal).</p>
+<hr>
+<h3 id="82-venus-f_force-amplified-92-atm-surface-pressure">§8.2 · Venus — F_force Amplified (92 atm Surface Pressure)</h3>
+<!-- metadata: example=Venus nodes=F_force state=elevated FM=FM-006-precursor -->
+
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>State</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_freq</td>
+<td>Nominal</td>
+<td>Venus coherence well; surface <code>g ≈ 8.87 m/s²</code> (slightly below Earth)</td>
+</tr>
+<tr>
+<td>F_fluid</td>
+<td>Nominal</td>
+<td><code>M_A</code> = 4.87 × 10²⁴ kg; lower than Earth</td>
+</tr>
+<tr>
+<td>F_force</td>
+<td><strong>Elevated</strong></td>
+<td>92 atm surface pressure — enormous atmospheric F_force overlay</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> Venus's F_freq × F_fluid product predicts a gravity slightly weaker
+than Earth's. But the experienced gravity on the surface is amplified by the
+F_force overlay — 92 atm of atmospheric pressure contributes a significant
+gradient component. Venus is an FM-006 precursor example: F_force is not yet
+dominant enough to constitute Phantom Capture, but it is large enough to
+materially shift the experienced gravity beyond the F_freq × F_fluid baseline.</p>
+<p><strong>Implication:</strong> If you predict Venus surface gravity from mass and distance alone
+(pure Newtonian), you underestimate the experienced force. F_force must be
+accounted for.</p>
+<hr>
+<h3 id="83-mars-f_force-near-null-0006-atm-surface-pressure">§8.3 · Mars — F_force Near-Null (0.006 atm Surface Pressure)</h3>
+<!-- metadata: example=Mars nodes=F_force state=near-null -->
+
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>State</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_freq</td>
+<td>Nominal</td>
+<td>Mars coherence well; surface <code>g ≈ 3.72 m/s²</code></td>
+</tr>
+<tr>
+<td>F_fluid</td>
+<td>Reduced</td>
+<td><code>M_A</code> = 6.39 × 10²³ kg; significantly below Earth</td>
+</tr>
+<tr>
+<td>F_force</td>
+<td><strong>Near-null</strong></td>
+<td>0.006 atm — atmospheric gradient nearly absent</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> Mars surface gravity is low primarily because F_fluid (M_A) is much
+smaller than Earth's, and F_force contributes almost nothing (near-vacuum
+atmosphere). The low gravity is a F_freq × F_fluid result — F_force is
+negligible. This makes Mars a near-clean F_freq × F_fluid measurement.</p>
+<hr>
+<h3 id="84-iss-f_force-null-state-experienced-weightlessness">§8.4 · ISS — F_force Null State (Experienced Weightlessness)</h3>
+<!-- metadata: example=ISS nodes=F_force state=null F_freq=present -->
+
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>State</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_freq</td>
+<td><strong>Fully present</strong></td>
+<td>ISS is inside Earth's coherence well; <code>g ≈ 8.7 m/s²</code> at 400 km altitude</td>
+</tr>
+<tr>
+<td>F_fluid</td>
+<td>Nominal</td>
+<td>ISS and occupants are full F_fluid participants</td>
+</tr>
+<tr>
+<td>F_force</td>
+<td><strong>Null</strong></td>
+<td>Free fall = F_force gradient cancelled by orbital velocity; no net gradient force</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> This is the most pedagogically important example in the FFF_Gravity
+canon. The common description of ISS as "zero gravity" is wrong by the FFF_Gravity
+model. There is no zero gravity at ISS altitude — F_freq is approximately 89% of
+surface value. What is zero is the experienced gradient force: F_force is null because
+the station and its occupants are in continuous free fall. They are not outside the
+coherence well; they are in perfect orbital alignment with it.</p>
+<p><strong>FFF_Gravity statement:</strong> Weightlessness is a F_force null state, not a F_freq
+null state. The coherence well is fully present. Only the gradient overlay has been
+eliminated by the orbital condition.</p>
+<hr>
+<h3 id="85-underwater-f_force-replacement-buoyancy-class">§8.5 · Underwater — F_force Replacement (Buoyancy Class)</h3>
+<!-- metadata: example=Underwater nodes=F_force state=replaced class=buoyancy -->
+
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>State</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_freq</td>
+<td>Nominal</td>
+<td>Coherence well unchanged</td>
+</tr>
+<tr>
+<td>F_fluid</td>
+<td>Nominal</td>
+<td>Mass substrate unchanged</td>
+</tr>
+<tr>
+<td>F_force</td>
+<td><strong>Replaced</strong></td>
+<td>Atmospheric pressure gradient is partially or fully replaced by hydrostatic pressure and buoyant force</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> When an element is submerged, the F_force gradient is no longer purely
+atmospheric — it is a composite of hydrostatic pressure (depth-dependent, upward
+component from displaced fluid) and atmospheric pressure. If the buoyant force
+matches the F_freq × F_fluid product, the element experiences apparent weightlessness
+— not because F_freq is zero, but because F_force has been replaced by an opposing
+gradient. This is the <strong>Buoyancy class</strong> — a F_force substitution event.</p>
+<hr>
+<h3 id="86-galileo-drop-experiment-f_freq-isolation">§8.6 · Galileo Drop Experiment — F_freq Isolation</h3>
+<!-- metadata: example=Galileo nodes=F_fluid state=mass-invariance-demonstrated -->
+
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>State</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_freq</td>
+<td>Nominal</td>
+<td>Leaning Tower of Pisa; F_freq is constant for both objects</td>
+</tr>
+<tr>
+<td>F_fluid</td>
+<td><strong>Varied</strong></td>
+<td>Objects of different <code>M_E</code> — heavy cannonball vs. light ball</td>
+</tr>
+<tr>
+<td>F_force</td>
+<td>Nominal</td>
+<td>Atmospheric gradient present but approximately equal for both</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> Galileo showed that objects of different mass fall at the same rate
+(in approximately equal F_force conditions). The FFF_Gravity explanation is direct:
+the fall rate is determined by F_freq (the coherence well's frequency — equal for
+both objects) and F_force (the gradient — equal for both objects). F_fluid (<code>M_E</code>)
+does not appear in the fall rate because in a uniform coherence well, the coupling
+coefficient <code>β</code> scales with <code>M_E</code> in such a way that the <code>M_E</code> terms cancel.</p>
+<p><strong>This directly supports the FFF_Gravity reframing:</strong> mass (<code>M_E</code>, F_fluid) does
+not determine fall rate. Fall rate is a F_freq × F_force result. F_fluid
+determines binding depth and coupling, not trajectory in a uniform field.</p>
+<hr>
+<h3 id="87-apollo-15-hammer-feather-f_force-elimination">§8.7 · Apollo 15 Hammer &amp; Feather — F_force Elimination</h3>
+<!-- metadata: example=Apollo15 nodes=F_force state=null vacuum=true -->
+
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>State</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_freq</td>
+<td>Nominal</td>
+<td>Lunar surface coherence well; <code>g ≈ 1.62 m/s²</code></td>
+</tr>
+<tr>
+<td>F_fluid</td>
+<td>Varied</td>
+<td>Hammer (<code>M_E</code> large) vs. feather (<code>M_E</code> small)</td>
+</tr>
+<tr>
+<td>F_force</td>
+<td><strong>Null</strong></td>
+<td>Lunar vacuum — no atmospheric gradient</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> Apollo 15 Commander David Scott dropped a geological hammer and a
+falcon feather simultaneously on the lunar surface. They hit the ground at the
+same time. With F_force = 0 (no atmosphere), the result is purely F_freq ×
+F_fluid — and since F_fluid <code>M_E</code> cancels in a uniform field (see §8.6 above),
+the fall rates are identical regardless of mass.</p>
+<p>This is the cleanest empirical demonstration of F_force's role: when F_force
+is present (Earth, with air resistance as a F_force differential), objects fall
+at slightly different rates. When F_force is null (lunar vacuum), they fall
+identically. The difference is entirely in the F_force node.</p>
+<hr>
+<h3 id="88-cavendish-torsion-balance-f_fluid-isolation">§8.8 · Cavendish Torsion Balance — F_fluid Isolation</h3>
+<!-- metadata: example=Cavendish nodes=F_fluid state=isolated experiment=1798 -->
+
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>State</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_freq</td>
+<td>Nominal</td>
+<td>Laboratory setting; Earth's coherence well present</td>
+</tr>
+<tr>
+<td>F_fluid</td>
+<td><strong>Isolated</strong></td>
+<td>Small lead spheres — <code>M_A</code> and <code>M_E</code> at laboratory scale</td>
+</tr>
+<tr>
+<td>F_force</td>
+<td><strong>Negligible</strong></td>
+<td>Indoor, controlled, small scale — atmospheric gradient effectively zero</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> Henry Cavendish's 1798 torsion balance experiment measured the
+gravitational attraction between small lead spheres in a controlled laboratory
+environment. By making the apparatus small and indoor, Cavendish effectively
+zeroed F_force — the atmospheric gradient across the apparatus was negligible.
+The result was a nearly pure F_freq × F_fluid measurement at laboratory scale.</p>
+<p><strong>FFF_Gravity reframing:</strong> Cavendish did not measure the gravitational constant G
+in the abstract — he isolated F_fluid by eliminating F_force, and measured the
+F_freq × F_fluid product at small <code>M_A</code> and <code>M_E</code>. This is the foundational
+F_fluid isolation experiment. Every subsequent laboratory gravity measurement
+follows the same protocol: minimize F_force to isolate the F_freq × F_fluid
+interaction.</p>
+<hr>
+<h2 id="9-cross-module-references">§9 · Cross-Module References</h2>
+<!-- section: 9-cross-module-references -->
+
+<h3 id="91-intra-module-dependencies">§9.1 · Intra-Module Dependencies</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Relationship</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f_Field.md</code></td>
+<td>Defines F_freq (upper node); SC-1 uses <code>v_escape(A)</code> from F_freq; SC-4 uses <code>ρ(Φ)</code> from F_freq</td>
+<td><code>f_Force.md</code> depends on <code>f_Field.md</code></td>
+</tr>
+<tr>
+<td><code>f_Frame.md</code></td>
+<td>Frame Node provides <code>r_capture</code> and context registration; FM-007 recovery uses frame re-registration</td>
+<td><code>f_Force.md</code> references <code>f_Frame.md</code></td>
+</tr>
+<tr>
+<td><code>f_Orbit.md</code></td>
+<td>Orbit states depend on SC-1 and SC-4 compound satisfaction</td>
+<td><code>f_Orbit.md</code> depends on <code>f_Force.md</code></td>
+</tr>
+<tr>
+<td><code>f_Capture.md</code></td>
+<td>Capture function depends on F_force <code>v_approach</code> and F_fluid <code>β</code></td>
+<td><code>f_Capture.md</code> depends on <code>f_Force.md</code></td>
+</tr>
+<tr>
+<td><code>f_Deflect.md</code></td>
+<td>Defines <code>redirect_force_node</code> and <code>heading_delta</code> operator</td>
+<td><code>f_Force.md</code> references <code>f_Deflect.md</code></td>
+</tr>
+<tr>
+<td><code>f_Amplify.md</code></td>
+<td>Defines <code>amplify_coupling</code> and Gravity Amplifier engineering</td>
+<td><code>f_Force.md</code> references <code>f_Amplify.md</code></td>
+</tr>
+<tr>
+<td><code>f_Dampen.md</code></td>
+<td>Defines gradient damping (reduces <code>v_approach</code>)</td>
+<td><code>f_Force.md</code> references <code>f_Dampen.md</code></td>
+</tr>
+<tr>
+<td><code>f_Decay.md</code></td>
+<td>Orbit decay depends on F_fluid coupling degradation (β drift)</td>
+<td><code>f_Decay.md</code> depends on <code>f_Force.md</code></td>
+</tr>
+<tr>
+<td><code>f_Release.md</code></td>
+<td>Release conditions require SC-1 and SC-4 violations</td>
+<td><code>f_Release.md</code> depends on <code>f_Force.md</code></td>
+</tr>
+<tr>
+<td><code>f_Collapse.md</code></td>
+<td>Collapse conditions include FM-007 (mass parity) progression</td>
+<td><code>f_Collapse.md</code> depends on <code>f_Force.md</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="92-cross-module-references">§9.2 · Cross-Module References</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Reference</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SoN</code> (System of Nodes)</td>
+<td>Triadic node co-dependence pattern</td>
+<td>Dual-node design follows SoN lower-dyad pattern</td>
+</tr>
+<tr>
+<td><code>GravityOfDismissal.md</code></td>
+<td>Historical dismissal patterns</td>
+<td>F_force and F_fluid reframings are likely dismissal targets; see §9.3</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="93-anticipated-dismissal-vectors">§9.3 · Anticipated Dismissal Vectors</h3>
+<p><code>GravityOfDismissal.md</code> catalogues 15 historical dismissal cases and 7 attack
+vectors. The F_force and F_fluid node definitions are likely targets for the
+following attack patterns:</p>
+<table>
+<thead>
+<tr>
+<th>Attack Vector</th>
+<th>Anticipated Form</th>
+<th>Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Empirical Redundancy</strong></td>
+<td>"This is just GR/Newtonian with new names"</td>
+<td>F_force null state (ISS) and F_force replacement (buoyancy) produce predictions that differ from single-variable models; the triadic structure is not cosmetic</td>
+</tr>
+<tr>
+<td><strong>Undefined Operators</strong></td>
+<td>"β is not formally defined"</td>
+<td>β is formally decomposed in <code>f_Field.md §4</code> and <code>f_Force.md §5.2</code>; pending quantitative derivation in <code>f_Amplify.md</code></td>
+</tr>
+<tr>
+<td><strong>Anthropomorphism</strong></td>
+<td>"Calling mass a 'fluid' is metaphorical, not physical"</td>
+<td>F_fluid is a formal node label, not a claim that mass is a liquid; the node name follows the triadic naming convention (Frequency, Fluid, Force)</td>
+</tr>
+<tr>
+<td><strong>Missing Quantitative Predictions</strong></td>
+<td>"Where are the numbers?"</td>
+<td>Wave 3 files (<code>f_Orbit.md</code>, <code>f_Amplify.md</code>) provide quantitative expressions; Wave 2 establishes the node structure they depend on</td>
+</tr>
+<tr>
+<td><strong>Ignoring Relativity</strong></td>
+<td>"This ignores spacetime curvature"</td>
+<td>FFF_Gravity is a local ratio model, not a claim about spacetime topology; the coherence well (F_freq) is the FFF_Gravity representation of the local curvature effect</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="10-document-metadata">§10 · Document Metadata</h2>
+<!-- section: 10-document-metadata -->
+
+<h3 id="101-file-identity">§10.1 · File Identity</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File</td>
+<td><code>f_Force.md</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td>FFF_Gravity</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Wave 2 — Layer Definitions</td>
+</tr>
+<tr>
+<td>Nodes Defined</td>
+<td>F_force, F_fluid</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Canonical</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>Nawder (umaywant2)</td>
+</tr>
+<tr>
+<td>Session ID</td>
+<td>SES-20260813-FORCE-001</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>2026-08-13</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="102-module-invariant-compliance">§10.2 · Module Invariant Compliance</h3>
+<table>
+<thead>
+<tr>
+<th>Invariant</th>
+<th>ID</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Triadic completeness — all three nodes required</td>
+<td>INV-001</td>
+<td>✅ Compliant</td>
+<td>§2.1 states all three nodes required for complete description</td>
+</tr>
+<tr>
+<td>No single-node gravity claims</td>
+<td>INV-002</td>
+<td>✅ Compliant</td>
+<td>§1.2 explicitly states mass does not generate gravity</td>
+</tr>
+<tr>
+<td>Operator symbols frozen at v1.0.0</td>
+<td>INV-003</td>
+<td>✅ Compliant</td>
+<td>All operators frozen; OPERATORS.md authoritative</td>
+</tr>
+<tr>
+<td>OPERATORS.md is single source of truth</td>
+<td>INV-004</td>
+<td>✅ Compliant</td>
+<td>§4 preamble states this explicitly</td>
+</tr>
+<tr>
+<td>GLOSSARY.md governs prose definitions</td>
+<td>INV-005</td>
+<td>✅ Compliant</td>
+<td>Prose definitions consistent with GLOSSARY.md</td>
+</tr>
+<tr>
+<td>Stability conditions use only frozen operators</td>
+<td>INV-006</td>
+<td>✅ Compliant</td>
+<td>SC-1 and SC-4 use <code>v_approach</code>, <code>v_escape(A)</code>, <code>β</code> — all frozen</td>
+</tr>
+<tr>
+<td>Failure modes are non-terminal unless marked</td>
+<td>INV-007</td>
+<td>✅ Compliant</td>
+<td>FM-001 non-terminal; FM-006 non-terminal; FM-007 partial</td>
+</tr>
+<tr>
+<td>Engineering interfaces reference Wave 3 files only</td>
+<td>INV-008</td>
+<td>✅ Compliant</td>
+<td>All Wave 3 references marked scaffold</td>
+</tr>
+<tr>
+<td>Session IDs follow SES-YYYYMMDD-LABEL-NNN</td>
+<td>INV-009</td>
+<td>✅ Compliant</td>
+<td>SES-20260813-FORCE-001</td>
+</tr>
+<tr>
+<td>Dual-node design recorded in module.json</td>
+<td>INV-010</td>
+<td>✅ Compliant</td>
+<td>FFF_Gravity_module.json records <code>defined_in: "f_Force.md"</code> for both</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="103-stability-conditions-registered-here">§10.3 · Stability Conditions Registered Here</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Node</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SC-1</td>
+<td>Approach Bound</td>
+<td>F_force</td>
+<td><code>v_approach &lt; v_escape(A)</code></td>
+</tr>
+<tr>
+<td>SC-4</td>
+<td>Binding Floor</td>
+<td>F_fluid</td>
+<td><code>β ≥ 1.0</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="104-failure-modes-registered-here">§10.4 · Failure Modes Registered Here</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Node</th>
+<th>Terminal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-001</td>
+<td>Overshoot</td>
+<td>F_force</td>
+<td>No</td>
+</tr>
+<tr>
+<td>FM-006</td>
+<td>Phantom Capture</td>
+<td>F_force</td>
+<td>No</td>
+</tr>
+<tr>
+<td>FM-007</td>
+<td>Mutual Dissolution</td>
+<td>F_fluid</td>
+<td>Partial</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="105-operators-registered-here">§10.5 · Operators Registered Here</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Node</th>
+<th>Frozen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v_approach</code></td>
+<td>F_force</td>
+<td>v1.0.0</td>
+</tr>
+<tr>
+<td><code>M_A</code></td>
+<td>F_fluid</td>
+<td>v1.0.0</td>
+</tr>
+<tr>
+<td><code>M_E</code></td>
+<td>F_fluid</td>
+<td>v1.0.0</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="106-wave-completion-status">§10.6 · Wave Completion Status</h3>
+<table>
+<thead>
+<tr>
+<th>Wave</th>
+<th>Files</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wave 0</td>
+<td><code>f_Capture.md</code>, <code>f_Source.md</code>, <code>GravityOfDismissal.md</code></td>
+<td>✅ Complete</td>
+</tr>
+<tr>
+<td>Wave 1</td>
+<td><code>README.md</code>, <code>INDEX.md</code>, <code>OPERATORS.md</code>, <code>GLOSSARY.md</code>, <code>CHANGELOG.md</code>, <code>FFF_Gravity_module.json</code></td>
+<td>✅ Complete</td>
+</tr>
+<tr>
+<td><strong>Wave 2</strong></td>
+<td><code>f_Field.md</code> ✅, <strong><code>f_Force.md</code> ✅</strong>, <code>f_Frame.md</code> ✅</td>
+<td><strong>✅ Complete with this file</strong></td>
+</tr>
+<tr>
+<td>Wave 3</td>
+<td><code>f_Release.md</code>, <code>f_Decay.md</code>, <code>f_Orbit.md</code>, <code>f_Collapse.md</code>, <code>f_Emit.md</code>, <code>f_Dampen.md</code>, <code>f_Amplify.md</code>, <code>f_Deflect.md</code></td>
+<td>🔵 Scaffold — Wave 2 completion unlocks all</td>
+</tr>
+<tr>
+<td>Wave 4</td>
+<td>Capture variants (6 files)</td>
+<td>🔵 Scaffold</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Wave 2 is complete.</strong> All three layer definition files are canonical.
+Wave 3 is fully unblocked. Recommended first target: <code>f_Orbit.md</code> —
+critical-path dependency for <code>f_Decay.md</code>, <code>f_Release.md</code>, and <code>f_Collapse.md</code>.</p>
+</blockquote>
+<hr>
+<p><em>End of f_Force.md — FFF_Gravity Module — v1.0.0 — canonical</em></p>
+  </main>
+</body>
+</html>

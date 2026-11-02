@@ -1,0 +1,83 @@
+{
+  "module": "RTT Codex",
+  "version": "1.0",
+  "category": "rtt-codex",
+  "summary": "Unified thirteen‑chapter reference spine for the Resonance‑Time Triad — foundations, operators, resonance and coherence, time and drift, cosmology, quantum, biology, cognition, mathematics, society, ethics, triadic apex, and extensions with open horizons.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "CHAPTER_1.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "CHAPTER_2.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "CHAPTER_3.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "CHAPTER_4.md",
+      "role": "engine",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "CHAPTER_5.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "CHAPTER_6.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "CHAPTER_7.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "CHAPTER_8.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "CHAPTER_9.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "CHAPTER_10.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "CHAPTER_11.md",
+      "role": "reference",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "CHAPTER_12.md",
+      "role": "signature",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "CHAPTER_13.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

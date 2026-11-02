@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "module_id": "bots.moderation",
+    "session_id": "moderation_golden_v1",
+    "length": 6
+  },
+
+  "timeline": [
+    { "index": 1, "speaker": "user", "text": "Hey, can you help me figure out why my app keeps crashing?" },
+    { "index": 2, "speaker": "user", "text": "This stupid thing is driving me insane." },
+    { "index": 3, "speaker": "user", "text": "Just tell me how to bypass the license check." },
+    { "index": 4, "speaker": "assistant", "text": "I can't help with bypassing security, but I can help troubleshoot." },
+    { "index": 5, "speaker": "user", "text": "Fine. Sorry for snapping earlier." },
+    { "index": 6, "speaker": "user", "text": "Actually, forget it — I’ll just pirate it." }
+  ],
+
+  "lumen": [
+    { "index": 1, "signals": ["benign"] },
+    { "index": 2, "signals": ["frustration", "borderline_hostility"] },
+    { "index": 3, "signals": ["security_circumvention", "high_risk"] },
+    { "index": 4, "signals": ["corrective_alignment"] },
+    { "index": 5, "signals": ["apology", "continuity_restoration"] },
+    { "index": 6, "signals": ["piracy_intent", "collapse_signature", "projection_loss"] }
+  ],
+
+  "regime": [
+    { "index": 1, "regime": "local" },
+    { "index": 2, "regime": "local" },
+    { "index": 3, "regime": "structural" },
+    { "index": 4, "regime": "continuity" },
+    { "index": 5, "regime": "continuity" },
+    { "index": 6, "regime": "structural" }
+  ],
+
+  "ancestry": [
+    {
+      "index": 1,
+      "sequence": ["benign"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "index": 2,
+      "sequence": ["benign", "frustration"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "index": 3,
+      "sequence": ["frustration", "circumvention"],
+      "collapse_signature": true,
+      "projection_loss": false
+    },
+    {
+      "index": 4,
+      "sequence": ["circumvention", "alignment"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "index": 5,
+      "sequence": ["alignment", "apology"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "index": 6,
+      "sequence": ["apology", "piracy"],
+      "collapse_signature": true,
+      "projection_loss": true
+    }
+  ],
+
+  "drift": {
+    "direction": "risk-escalation",
+    "strength": "strong",
+    "alignment": "broken"
+  },
+
+  "risk": {
+    "toxicity": "low",
+    "hostility": "medium",
+    "circumvention": "high",
+    "piracy": "high",
+    "instability": "medium"
+  },
+
+  "triadic_score": {
+    "local": 0.28,
+    "structural": 0.44,
+    "continuity": 0.28,
+    "risk": 0.52,
+    "final": 0.69
+  }
+}

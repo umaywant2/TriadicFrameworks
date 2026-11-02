@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_scientific_simulators/examples/example_plasma_state_projection.md">
+  <title>vST for Scientific Simulators</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_scientific_simulators/examples/example_plasma_state_projection.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_scientific_simulators/examples/example_plasma_state_projection.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="vst-for-scientific-simulators"><em>vST for Scientific Simulators</em></h3>
+<h3 id="example-projection-of-a-highdimensional-plasma-state-into-triadic-dimensional-cores"><em>Example: Projection of a High‑Dimensional Plasma State into Triadic Dimensional Cores</em></h3>
+<p>This example demonstrates how a plasma physics simulator expresses high‑dimensional state‑space structure and how a single plasma state is projected from <strong>1024D</strong> into the <strong>9D → 6D → 3D</strong> triadic dimensional cores. It illustrates primitive‑level structure, regime behavior, projection stability, and vST validation.</p>
+<p>The goal is to provide a reproducible, invariant‑preserving demonstration of plasma‑state projection.</p>
+<hr>
+<h2 id="1-simulation-setup"><strong>1. Simulation Setup</strong></h2>
+<p>For this example, we assume:</p>
+<ul>
+<li>a magnetohydrodynamics (MHD) or particle‑in‑cell (PIC) plasma simulator  </li>
+<li>multi‑field coupling (density, velocity, magnetic field, electric field, temperature, charge distribution)  </li>
+<li>a 1024D state vector extracted from a spatial cell or particle ensemble  </li>
+<li>stable or transitional regime behavior  </li>
+<li>invertible projection into 3D–9D cores  </li>
+</ul>
+<p>The example is model‑agnostic and applies to any plasma simulation framework.</p>
+<hr>
+<h2 id="2-step-1-extract-the-1024d-plasma-state"><strong>2. Step 1 — Extract the 1024D Plasma State</strong></h2>
+<p>At a given timestep ( t ), the simulator produces a high‑dimensional plasma state:</p>
+<p>[
+P^{(t)} = [x_1, x_2, \dots, x_{1024}]
+]</p>
+<h3 id="observed-properties"><strong>Observed Properties</strong></h3>
+<ul>
+<li>variance concentrated in 5–8 coherence bands  </li>
+<li>stable DP/TDP structure in magnetically confined regions  </li>
+<li>branching behavior near shear layers  </li>
+<li>dispersion in unstable or turbulent regions  </li>
+</ul>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<p>The 1024D plasma state encodes physical, electromagnetic, and dynamical information.</p>
+<hr>
+<h2 id="3-step-2-identify-highdimensional-regime-behavior"><strong>3. Step 2 — Identify High‑Dimensional Regime Behavior</strong></h2>
+<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify the plasma state’s regime across solver iterations.</p>
+<h3 id="example-regime-pattern"><strong>Example Regime Pattern</strong></h3>
+<ul>
+<li><strong>Iterations 1–12:</strong> R₁ᴴ (stable confinement)  </li>
+<li><strong>Iterations 13–22:</strong> R₂ᴴ (shear‑driven transition)  </li>
+<li><strong>Iterations 23–30:</strong> R₁ᴴ (temporary stabilization)  </li>
+<li><strong>Iterations 31–40:</strong> R₂ᴴ (onset of turbulence)  </li>
+<li><strong>Iterations 41–48:</strong> R₃ᴴ (turbulent dispersion)  </li>
+</ul>
+<h3 id="interpretation_1"><strong>Interpretation</strong></h3>
+<p>The plasma begins in a stable configuration, undergoes shear‑driven reorientation, stabilizes briefly, and then enters turbulence.</p>
+<hr>
+<h2 id="4-step-3-project-1024d-9d-coherence-projection"><strong>4. Step 3 — Project 1024D → 9D (Coherence Projection)</strong></h2>
+<p>Project the 1024D plasma state into the 9D coherence core.</p>
+<h3 id="preserves"><strong>Preserves</strong></h3>
+<ul>
+<li>regime identity  </li>
+<li>resonance‑time behavior  </li>
+<li>primitive‑level structure (DP, TDP, SP, CP)  </li>
+<li>coherence‑surface continuity  </li>
+</ul>
+<h3 id="reveals"><strong>Reveals</strong></h3>
+<ul>
+<li>smooth surfaces in magnetically confined regions  </li>
+<li>branching near shear layers  </li>
+<li>fragmentation in turbulent regions  </li>
+</ul>
+<h3 id="interpretation_2"><strong>Interpretation</strong></h3>
+<p>The 9D projection exposes the “coherence geometry” of the plasma state.</p>
+<hr>
+<h2 id="5-step-4-project-9d-6d-interaction-projection"><strong>5. Step 4 — Project 9D → 6D (Interaction Projection)</strong></h2>
+<p>Compress the 9D coherence vector into the 6D interaction core.</p>
+<h3 id="preserves_1"><strong>Preserves</strong></h3>
+<ul>
+<li>relational geometry across fields  </li>
+<li>coupling between magnetic and velocity fields  </li>
+<li>regime‑transition indicators  </li>
+</ul>
+<h3 id="reveals_1"><strong>Reveals</strong></h3>
+<ul>
+<li>magnetic‑field‑driven reorientation  </li>
+<li>pressure‑gradient interactions  </li>
+<li>early turbulence signatures  </li>
+</ul>
+<h3 id="interpretation_3"><strong>Interpretation</strong></h3>
+<p>The 6D projection highlights how the plasma’s fields interact and reorganize.</p>
+<hr>
+<h2 id="6-step-5-project-6d-3d-structural-projection"><strong>6. Step 5 — Project 6D → 3D (Structural Projection)</strong></h2>
+<p>Reduce the 6D interaction vector into the 3D structural core.</p>
+<h3 id="preserves_2"><strong>Preserves</strong></h3>
+<ul>
+<li>motif‑level geometry  </li>
+<li>spatial or particle‑level continuity  </li>
+<li>stable structural invariants  </li>
+</ul>
+<h3 id="reveals_2"><strong>Reveals</strong></h3>
+<ul>
+<li>compact motifs in R₁ᴴ  </li>
+<li>oscillatory geometry in R₂ᴴ  </li>
+<li>diffuse patterns in R₃ᴴ  </li>
+</ul>
+<h3 id="interpretation_4"><strong>Interpretation</strong></h3>
+<p>The 3D projection provides the minimal interpretable representation of the plasma state.</p>
+<hr>
+<h2 id="7-step-6-validate-with-vst-layers"><strong>7. Step 6 — Validate with vST Layers</strong></h2>
+<p>Apply vST layers (V₁–V₄):</p>
+<h3 id="v1-structural-coherence"><strong>V₁ — Structural Coherence</strong></h3>
+<ul>
+<li>stable motifs in confined regions  </li>
+<li>partial fragmentation in turbulent regions  </li>
+</ul>
+<h3 id="v2-dimensional-continuity"><strong>V₂ — Dimensional Continuity</strong></h3>
+<ul>
+<li>smooth projection 1024D → 9D → 6D → 3D  </li>
+<li>no scaling discontinuities  </li>
+</ul>
+<h3 id="v3-regimetransition-stability"><strong>V₃ — Regime‑Transition Stability</strong></h3>
+<ul>
+<li>smooth R₁ᴴ → R₂ᴴ transitions  </li>
+<li>instability localized to R₃ᴴ  </li>
+</ul>
+<h3 id="v4-core-alignment"><strong>V₄ — Core Alignment</strong></h3>
+<ul>
+<li>primitive‑aligned projection  </li>
+<li>stable mapping across iterations  </li>
+</ul>
+<h3 id="outcome"><strong>Outcome</strong></h3>
+<p>The plasma state passes all vST layers with warnings localized to the turbulent region.</p>
+<hr>
+<h2 id="8-step-7-drift-detection"><strong>8. Step 7 — Drift Detection</strong></h2>
+<p>Evaluate drift using D₁–D₄ categories:</p>
+<ul>
+<li><strong>D₁ Structural Drift:</strong> moderate (turbulence onset)  </li>
+<li><strong>D₂ Dimensional Drift:</strong> none  </li>
+<li><strong>D₃ Regime Drift:</strong> moderate (R₃ᴴ onset)  </li>
+<li><strong>D₄ Projection Drift:</strong> none  </li>
+</ul>
+<h3 id="interpretation_5"><strong>Interpretation</strong></h3>
+<p>The model exhibits expected dispersion during turbulence but no harmful drift.</p>
+<hr>
+<h2 id="9-summary"><strong>9. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how a 1024D plasma state is extracted  </li>
+<li>how regime behavior evolves across solver iterations  </li>
+<li>how projection reveals coherence and instability  </li>
+<li>how vST layers validate structural integrity  </li>
+<li>how drift detection identifies turbulence‑driven dispersion  </li>
+</ul>
+<p>Plasma‑state projection is a core interpretability signal in high‑dimensional plasma simulation dynamics.</p>
+  </main>
+</body>
+</html>

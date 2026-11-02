@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "RTT Language Profile",
+  "type": "object",
+  "properties": {
+    "language_id": { "type": "string" },
+    "name": { "type": "string" },
+    "paradigm": { "type": "string" },
+    "rtt_capabilities": {
+      "type": "object",
+      "properties": {
+        "spin_support": { "type": "boolean" },
+        "charge_support": { "type": "boolean" },
+        "temperature_support": { "type": "boolean" }
+      }
+    }
+  }
+}

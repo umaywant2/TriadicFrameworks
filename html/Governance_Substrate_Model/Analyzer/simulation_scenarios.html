@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Governance_Substrate_Model/Analyzer/simulation_scenarios.md">
+  <title>Simulation Scenarios</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Governance_Substrate_Model/Analyzer/simulation_scenarios.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Governance_Substrate_Model/Analyzer/simulation_scenarios.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="simulation-scenarios">Simulation Scenarios</h1>
+<p><em>A catalog of structural scenarios for the GSM Simulation Engine</em></p>
+<p>Simulation scenarios define <strong>starting conditions</strong>, <strong>structural constraints</strong>, and <strong>exploration goals</strong> for running simulations in the Governance Substrate Model (GSM). They allow analysts, students, and contributors to explore how systems evolve under different tensions, drift pressures, basin positions, and awareness configurations.</p>
+<p>Scenarios are not predictions—they are structured explorations of the possibility space.</p>
+<hr>
+<h2 id="scenario-structure">Scenario structure</h2>
+<p>Each scenario includes:</p>
+<ul>
+<li><strong>scenario_id</strong> — unique identifier  </li>
+<li><strong>title</strong> — human‑readable name  </li>
+<li><strong>description</strong> — purpose and context  </li>
+<li><strong>initial_vector</strong> — starting [C, M, O, A, T]  </li>
+<li><strong>initial_conditions</strong> — invariants, drift, physics, awareness, absorptive strength  </li>
+<li><strong>constraints</strong> — fixed or variable parameters  </li>
+<li><strong>goals</strong> — what the scenario is meant to explore  </li>
+<li><strong>expected_patterns</strong> — typical structural behaviors  </li>
+<li><strong>termination_conditions</strong> — when the simulation stops  </li>
+</ul>
+<p>This structure ensures consistency across teaching, analysis, and research.</p>
+<hr>
+<h2 id="core-scenario-types">Core scenario types</h2>
+<h3 id="1-stable-basin-scenario">1. Stable Basin Scenario</h3>
+<p>Explores how a system behaves when starting deep inside a basin with low tension.</p>
+<ul>
+<li><strong>Purpose</strong> — demonstrate stability, micro‑drift, and compensatory physics  </li>
+<li><strong>Initial vector</strong> — near basin centroid  </li>
+<li><strong>Expected patterns</strong> — low drift, high coherence, stable regime mode  </li>
+<li><strong>Termination</strong> — fixed number of steps or stability plateau  </li>
+</ul>
+<hr>
+<h3 id="2-rising-tension-scenario">2. Rising Tension Scenario</h3>
+<p>Models invariant strain and cross‑axis imbalance.</p>
+<ul>
+<li><strong>Purpose</strong> — show how tension accumulates and triggers drift  </li>
+<li><strong>Initial vector</strong> — near basin edge with rising tension  </li>
+<li><strong>Expected patterns</strong> — tension → drift → compensatory mode  </li>
+<li><strong>Termination</strong> — drift category reaches <em>meso</em>  </li>
+</ul>
+<hr>
+<h3 id="3-drift-escalation-scenario">3. Drift Escalation Scenario</h3>
+<p>Focuses on directional movement driven by physics forces.</p>
+<ul>
+<li><strong>Purpose</strong> — illustrate drift amplification and directional consistency  </li>
+<li><strong>Initial vector</strong> — moderate imbalance across C↔O or M↔A  </li>
+<li><strong>Expected patterns</strong> — meso drift, possible transition approach  </li>
+<li><strong>Termination</strong> — boundary proximity &gt; 0.7  </li>
+</ul>
+<hr>
+<h3 id="4-basin-transition-scenario">4. Basin Transition Scenario</h3>
+<p>Simulates crossing from one basin to another.</p>
+<ul>
+<li><strong>Purpose</strong> — teach basin topology and transition thresholds  </li>
+<li><strong>Initial vector</strong> — near boundary with high drift pressure  </li>
+<li><strong>Expected patterns</strong> — drift → transition → reconstruction  </li>
+<li><strong>Termination</strong> — new basin stability_score &gt; 0.5  </li>
+</ul>
+<hr>
+<h3 id="5-regimeshift-scenario">5. Regime‑Shift Scenario</h3>
+<p>Models rare, high‑energy structural reconfiguration.</p>
+<ul>
+<li><strong>Purpose</strong> — demonstrate regime‑shift detection and nonlinear movement  </li>
+<li><strong>Initial vector</strong> — high tension, macro drift, weak absorptive strength  </li>
+<li><strong>Expected patterns</strong> — destabilization → basin crossing → re‑anchoring  </li>
+<li><strong>Termination</strong> — regime_shift_detected == true  </li>
+</ul>
+<hr>
+<h3 id="6-absorptive-recovery-scenario">6. Absorptive Recovery Scenario</h3>
+<p>Explores how systems stabilize after tension or drift.</p>
+<ul>
+<li><strong>Purpose</strong> — show absorptive dampening and return to stability  </li>
+<li><strong>Initial vector</strong> — moderate tension, strong absorptive structures  </li>
+<li><strong>Expected patterns</strong> — drift dampening → tension reduction → stable mode  </li>
+<li><strong>Termination</strong> — coherence_score &gt; 70  </li>
+</ul>
+<hr>
+<h3 id="7-fragmentation-scenario">7. Fragmentation Scenario</h3>
+<p>Models structural breakdown and loss of coherence.</p>
+<ul>
+<li><strong>Purpose</strong> — illustrate invariant violations and physics destabilization  </li>
+<li><strong>Initial vector</strong> — multiple invariant violations, low oversight/timing coherence  </li>
+<li><strong>Expected patterns</strong> — fragmentation → reconstruction or collapse  </li>
+<li><strong>Termination</strong> — reconstruction_phase_entered  </li>
+</ul>
+<hr>
+<h3 id="8-counterfactual-scenario">8. Counterfactual Scenario</h3>
+<p>Allows analysts to explore “what if” structural histories.</p>
+<ul>
+<li><strong>Purpose</strong> — compare alternate structural paths  </li>
+<li><strong>Initial vector</strong> — user‑defined  </li>
+<li><strong>Constraints</strong> — fixed or variable depending on the counterfactual  </li>
+<li><strong>Termination</strong> — user‑defined  </li>
+</ul>
+<hr>
+<h2 id="scenario-definition-template">Scenario definition template</h2>
+<pre><code class="language-yaml">scenario:
+  scenario_id: &quot;&lt;unique_id&gt;&quot;
+  title: &quot;&lt;scenario_name&gt;&quot;
+  description: &quot;&lt;purpose_and_context&gt;&quot;
+  initial_vector:
+    C: &lt;number&gt;
+    M: &lt;number&gt;
+    O: &lt;number&gt;
+    A: &lt;number&gt;
+    T: &lt;number&gt;
+  initial_conditions:
+    invariants:
+      aligned: [...]
+      tension: [...]
+      violated: [...]
+    drift:
+      vector: [...]
+      magnitude: &lt;number&gt;
+      category: &quot;&lt;micro|meso|macro|regime_shift&gt;&quot;
+    physics_forces:
+      - axis_pair: &quot;&lt;C↔O | M↔A | O↔T&gt;&quot;
+        magnitude: &lt;number&gt;
+        direction: &quot;&lt;positive|negative&gt;&quot;
+    awareness_layers:
+      structural: &lt;0–10&gt;
+      procedural: &lt;0–10&gt;
+      historical: &lt;0–10&gt;
+      anticipatory: &lt;0–10&gt;
+      relational: &lt;0–10&gt;
+    absorptive_strength: &lt;0–1&gt;
+    regime_mode: &quot;&lt;mode&gt;&quot;
+    phase_state: &quot;&lt;phase&gt;&quot;
+  constraints:
+    fixed_parameters: [...]
+    variable_parameters: [...]
+  goals:
+    - &quot;&lt;goal_1&gt;&quot;
+    - &quot;&lt;goal_2&gt;&quot;
+  expected_patterns:
+    - &quot;&lt;pattern_1&gt;&quot;
+    - &quot;&lt;pattern_2&gt;&quot;
+  termination_conditions:
+    - &quot;&lt;condition_1&gt;&quot;
+    - &quot;&lt;condition_2&gt;&quot;
+</code></pre>
+<hr>
+<h2 id="how-scenarios-integrate-with-the-analyzer">How scenarios integrate with the Analyzer</h2>
+<p>Scenarios plug directly into:</p>
+<ul>
+<li><strong>Simulation Engine</strong> — stepwise structural evolution  </li>
+<li><strong>Projection Rules</strong> — drift and basin trajectory forecasting  </li>
+<li><strong>Regime Modes</strong> — operational behavior classification  </li>
+<li><strong>Phase Discipline</strong> — phase‑honest transitions  </li>
+<li><strong>Observer Layer</strong> — history/now/future interpretation  </li>
+<li><strong>Dashboards</strong> — scenario visualization  </li>
+</ul>
+<p>This ensures every scenario is structurally coherent and analytically meaningful.</p>
+  </main>
+</body>
+</html>

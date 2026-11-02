@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_multi_model_alignment/validation_layers_vst_multi_model.md">
+  <title>vST for Multi‑Model Alignment</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_multi_model_alignment/validation_layers_vst_multi_model.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_multi_model_alignment/validation_layers_vst_multi_model.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="vst-for-multimodel-alignment"><em>vST for Multi‑Model Alignment</em></h3>
+<h3 id="validationspacetime-layers-for-crossarchitecture-and-crossmodality-alignment"><em>Validation‑Space‑Time Layers for Cross‑Architecture and Cross‑Modality Alignment</em></h3>
+<p>This document defines the <strong>Validation‑Space‑Time (vST)</strong> layers as applied to <strong>multi‑model alignment</strong>. vST provides a structured, invariant‑preserving framework for evaluating cross‑architecture compatibility, cross‑modality coherence, scaling continuity, and projection stability across the dimensional ladder (3D → 1024D).</p>
+<p>The vST layers (V₁–V₄) generalize the substrate‑level validation system to the setting of <strong>heterogeneous model families</strong>, where latent geometries, inference pathways, and scaling behaviors differ.</p>
+<hr>
+<h2 id="1-purpose-of-vst-for-multimodel-alignment"><strong>1. Purpose of vST for Multi‑Model Alignment</strong></h2>
+<p>vST enables reproducible, architecture‑neutral evaluation of:</p>
+<ul>
+<li>structural compatibility across models  </li>
+<li>cross‑model regime transitions (A₁ᴴ, A₂ᴴ, A₃ᴴ)  </li>
+<li>scaling‑law continuity across architectures and modalities  </li>
+<li>projection stability into 3D–9D cores  </li>
+<li>cross‑checkpoint and cross‑sampler alignment  </li>
+<li>drift detection across model families  </li>
+<li>primitive‑level integrity (DP, TDP‑X, SP‑X, CP‑X)  </li>
+</ul>
+<p>Cross‑model alignment is sensitive to architecture, modality, and dimensionality.<br>
+vST ensures these comparisons remain coherent and invariant‑preserving.</p>
+<hr>
+<h2 id="2-overview-of-vst-layers"><strong>2. Overview of vST Layers</strong></h2>
+<p>The vST framework consists of four layers:</p>
+<ol>
+<li><strong>V₁ — Structural Coherence Validation</strong>  </li>
+<li><strong>V₂ — Dimensional Continuity Validation</strong>  </li>
+<li><strong>V₃ — Alignment‑Regime Validation</strong>  </li>
+<li><strong>V₄ — Core‑Alignment Validation</strong></li>
+</ol>
+<p>Each layer evaluates a distinct aspect of cross‑model alignment.</p>
+<hr>
+<h2 id="3-v1-structural-coherence-validation"><strong>3. V₁ — Structural Coherence Validation</strong></h2>
+<h3 id="purpose"><strong>Purpose</strong></h3>
+<p>Evaluate whether cross‑model alignment preserves structural coherence across architectures and modalities.</p>
+<h3 id="checks"><strong>Checks</strong></h3>
+<ul>
+<li>compactness of cross‑model motifs  </li>
+<li>stability of alignment surfaces  </li>
+<li>preservation of primitive‑level structure (DP, TDP‑X, SP‑X, CP‑X)  </li>
+<li>continuity of geometric motifs in 3D projection  </li>
+<li>absence of fragmentation or collapse  </li>
+</ul>
+<h3 id="failure-modes"><strong>Failure Modes</strong></h3>
+<ul>
+<li>incoherent cross‑model activations  </li>
+<li>abrupt variance spikes across architectures  </li>
+<li>loss of primitive‑level compatibility  </li>
+<li>non‑compact 3D alignment motifs  </li>
+</ul>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<p>V₁ ensures that cross‑model alignment maintains a stable structural backbone.</p>
+<hr>
+<h2 id="4-v2-dimensional-continuity-validation"><strong>4. V₂ — Dimensional Continuity Validation</strong></h2>
+<h3 id="purpose_1"><strong>Purpose</strong></h3>
+<p>Ensure that cross‑model alignment remains continuous across the dimensional ladder (64D → 1024D → 9D → 3D).</p>
+<h3 id="checks_1"><strong>Checks</strong></h3>
+<ul>
+<li>smooth expansion of cross‑model coherence surfaces  </li>
+<li>invertible projection into triadic cores  </li>
+<li>stable variance distribution across architectures  </li>
+<li>absence of scaling discontinuities  </li>
+</ul>
+<h3 id="failure-modes_1"><strong>Failure Modes</strong></h3>
+<ul>
+<li>non‑invertible projections  </li>
+<li>dimensional fragmentation  </li>
+<li>scaling‑law divergence across models  </li>
+<li>unstable high‑dimensional variance  </li>
+</ul>
+<h3 id="interpretation_1"><strong>Interpretation</strong></h3>
+<p>V₂ ensures that cross‑model scaling and projection remain invariant‑preserving.</p>
+<hr>
+<h2 id="5-v3-alignmentregime-validation"><strong>5. V₃ — Alignment‑Regime Validation</strong></h2>
+<h3 id="purpose_2"><strong>Purpose</strong></h3>
+<p>Validate that cross‑model alignment follows the triadic alignment‑regime structure (A₁ᴴ, A₂ᴴ, A₃ᴴ).</p>
+<h3 id="checks_2"><strong>Checks</strong></h3>
+<ul>
+<li>correct classification of alignment regimes  </li>
+<li>smooth transitions between A₁ᴴ, A₂ᴴ, A₃ᴴ  </li>
+<li>resonance‑time alignment across architectures  </li>
+<li>absence of abrupt or chaotic regime shifts  </li>
+</ul>
+<h3 id="failure-modes_2"><strong>Failure Modes</strong></h3>
+<ul>
+<li>oscillatory instability across models  </li>
+<li>premature transitions into A₃ᴴ  </li>
+<li>collapse of stable A₁ᴴ regions  </li>
+<li>resonance‑time discontinuities  </li>
+</ul>
+<h3 id="interpretation_2"><strong>Interpretation</strong></h3>
+<p>V₃ ensures that cross‑model dynamics follow stable, predictable alignment behavior.</p>
+<hr>
+<h2 id="6-v4-corealignment-validation"><strong>6. V₄ — Core‑Alignment Validation</strong></h2>
+<h3 id="purpose_3"><strong>Purpose</strong></h3>
+<p>Ensure that heterogeneous latent states align correctly with the triadic cores (3D–9D).</p>
+<h3 id="checks_3"><strong>Checks</strong></h3>
+<ul>
+<li>primitive‑aligned projection across models  </li>
+<li>coherence‑surface preservation  </li>
+<li>stable cross‑architecture alignment  </li>
+<li>consistent mapping across modalities  </li>
+<li>compatibility with 3D–9D structural invariants  </li>
+</ul>
+<h3 id="failure-modes_3"><strong>Failure Modes</strong></h3>
+<ul>
+<li>misaligned projections  </li>
+<li>cross‑modality drift  </li>
+<li>incompatible latent‑space geometry  </li>
+<li>loss of coherence in 9D alignment pathways  </li>
+</ul>
+<h3 id="interpretation_3"><strong>Interpretation</strong></h3>
+<p>V₄ ensures that cross‑model alignment remains interpretable and comparable.</p>
+<hr>
+<h2 id="7-vst-outputs-for-multimodel-alignment"><strong>7. vST Outputs for Multi‑Model Alignment</strong></h2>
+<p>vST produces:</p>
+<ul>
+<li>structural‑coherence diagnostics  </li>
+<li>dimensional‑continuity indicators  </li>
+<li>alignment‑regime maps  </li>
+<li>core‑alignment metrics  </li>
+<li>drift‑detection signals  </li>
+<li>cross‑architecture and cross‑modality comparison surfaces  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑aligned evaluation of multi‑model alignment.</p>
+  </main>
+</body>
+</html>

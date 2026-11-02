@@ -1,0 +1,91 @@
+{
+  "id": "S3-Spine-Tools-Catalog",
+  "canonical": "R5",
+  "version": "1.0.0",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "regime": "unseen-force-regime",
+
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "tools": [
+    {
+      "id": "tool.graph",
+      "category": "graph",
+      "description": "Access the S3 Spine structural graph including nodes, edges, semantics, and causal direction.",
+      "files": ["S3.graph.json", "S3.dot"]
+    },
+    {
+      "id": "tool.operators",
+      "category": "operator",
+      "description": "Access operator interaction maps and sequencing rules.",
+      "files": [
+        "operator_interaction_map.json",
+        "operator_sequencing_rules.json"
+      ]
+    },
+    {
+      "id": "tool.dimensions",
+      "category": "dimension",
+      "description": "Access dimensional mapping for the S3 Spine subsystem.",
+      "files": ["dimensional_mapping.json"]
+    },
+    {
+      "id": "tool.module",
+      "category": "module",
+      "description": "Access the S3 Spine module definition.",
+      "files": ["module.json"]
+    },
+    {
+      "id": "tool.manifest",
+      "category": "module",
+      "description": "Access the canonical manifest for the S3 Spine subsystem.",
+      "files": ["manifest.json"]
+    },
+    {
+      "id": "tool.examples",
+      "category": "example",
+      "description": "Access example envelopes and example registry.",
+      "files": [
+        "spine.examples.registry.json",
+        "example.schema.json"
+      ]
+    },
+    {
+      "id": "tool.server",
+      "category": "server",
+      "description": "Access the MCP server configuration for the S3 Spine subsystem.",
+      "files": ["server.json"]
+    },
+    {
+      "id": "tool.protocol",
+      "category": "protocol",
+      "description": "Access the MCP protocol definition for the S3 Spine subsystem.",
+      "files": ["protocol.md"]
+    },
+    {
+      "id": "tool.ai",
+      "category": "ai",
+      "description": "Access AI metadata and AI registry.",
+      "files": [
+        "ai.metadata.json",
+        "ai_registry.json"
+      ]
+    },
+    {
+      "id": "tool.docs",
+      "category": "documentation",
+      "description": "Access documentation pages for the S3 Spine subsystem.",
+      "files": [
+        "README.md",
+        "m_Source.md",
+        "operators.md",
+        "dimensions.md",
+        "cosmology.md",
+        "coherence.md",
+        "resources.catalog.md",
+        "schemas.md"
+      ]
+    }
+  ]
+}

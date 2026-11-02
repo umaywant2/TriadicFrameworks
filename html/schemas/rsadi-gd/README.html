@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/rsadi-gd/README.md">
+  <title>🎮 Resonance Structural Awareness Dimensional Interface — Game Developer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/rsadi-gd/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/rsadi-gd/README.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_rsadi_gd_" src="https://github.com/user-attachments/assets/4d798b33-c68a-4c91-8338-e68620fdba25" /></p>
+<h1 id="resonance-structural-awareness-dimensional-interface-game-developer">🎮 Resonance Structural Awareness Dimensional Interface — Game Developer</h1>
+<p>JSON Schemas (Draft 2020‑12)  </p>
+<h3 id="game-developer-variant-of-the-resonance-structural-awareness-dimensional-interface"><em>Game Developer Variant of the Resonance Structural Awareness Dimensional Interface</em></h3>
+<p>Below are the canonical schemas for:</p>
+<ol>
+<li><code>GDClaritySample</code>  </li>
+<li><code>GDDriftVector</code>  </li>
+<li><code>GDZoneState</code>  </li>
+<li><code>GDRiskLevel</code>  </li>
+<li><code>GDRouteSuggestion</code>  </li>
+<li><code>GDEventSubscription</code>  </li>
+</ol>
+<p>Each schema is domain‑agnostic and ready for engine integration.</p>
+<hr>
+<h1 id="1-gdclaritysampleschemajson">1. <strong>GDClaritySample.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rsadi/gd/v1/GDClaritySample.schema.json&quot;,
+  &quot;title&quot;: &quot;GDClaritySample&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [&quot;sample_id&quot;, &quot;timestamp&quot;, &quot;position&quot;, &quot;clarity_score&quot;],
+  &quot;properties&quot;: {
+    &quot;sample_id&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;format&quot;: &quot;uuid&quot;
+    },
+    &quot;timestamp&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;format&quot;: &quot;date-time&quot;
+    },
+    &quot;position&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;x&quot;, &quot;y&quot;, &quot;z&quot;],
+      &quot;properties&quot;: {
+        &quot;x&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;y&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;z&quot;: { &quot;type&quot;: &quot;number&quot; }
+      }
+    },
+    &quot;clarity_score&quot;: {
+      &quot;type&quot;: &quot;integer&quot;,
+      &quot;minimum&quot;: 0,
+      &quot;maximum&quot;: 255
+    },
+    &quot;stress_hint&quot;: {
+      &quot;type&quot;: &quot;integer&quot;,
+      &quot;minimum&quot;: 0,
+      &quot;maximum&quot;: 255
+    },
+    &quot;extensions&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: true
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="2-gddriftvectorschemajson">2. <strong>GDDriftVector.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rsadi/gd/v1/GDDriftVector.schema.json&quot;,
+  &quot;title&quot;: &quot;GDDriftVector&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [&quot;dx&quot;, &quot;dy&quot;, &quot;dz&quot;, &quot;magnitude&quot;],
+  &quot;properties&quot;: {
+    &quot;dx&quot;: { &quot;type&quot;: &quot;number&quot; },
+    &quot;dy&quot;: { &quot;type&quot;: &quot;number&quot; },
+    &quot;dz&quot;: { &quot;type&quot;: &quot;number&quot; },
+    &quot;magnitude&quot;: {
+      &quot;type&quot;: &quot;number&quot;,
+      &quot;minimum&quot;: 0
+    },
+    &quot;units&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [&quot;1/s&quot;]
+    },
+    &quot;extensions&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: true
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="3-gdzonestateschemajson">3. <strong>GDZoneState.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rsadi/gd/v1/GDZoneState.schema.json&quot;,
+  &quot;title&quot;: &quot;GDZoneState&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;zone_id&quot;,
+    &quot;timestamp&quot;,
+    &quot;clarity_score&quot;,
+    &quot;stress_hint&quot;,
+    &quot;risk_level&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;zone_id&quot;: { &quot;type&quot;: &quot;string&quot; },
+    &quot;timestamp&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; },
+    &quot;clarity_score&quot;: {
+      &quot;type&quot;: &quot;integer&quot;,
+      &quot;minimum&quot;: 0,
+      &quot;maximum&quot;: 255
+    },
+    &quot;stress_hint&quot;: {
+      &quot;type&quot;: &quot;integer&quot;,
+      &quot;minimum&quot;: 0,
+      &quot;maximum&quot;: 255
+    },
+    &quot;risk_level&quot;: {
+      &quot;$ref&quot;: &quot;GDRiskLevel.schema.json&quot;
+    },
+    &quot;drift_vector&quot;: {
+      &quot;$ref&quot;: &quot;GDDriftVector.schema.json&quot;
+    },
+    &quot;extensions&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: true
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="4-gdrisklevelschemajson">4. <strong>GDRiskLevel.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rsadi/gd/v1/GDRiskLevel.schema.json&quot;,
+  &quot;title&quot;: &quot;GDRiskLevel&quot;,
+  &quot;type&quot;: &quot;string&quot;,
+  &quot;enum&quot;: [&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;critical&quot;]
+}
+</code></pre>
+<hr>
+<h1 id="5-gdroutesuggestionschemajson">5. <strong>GDRouteSuggestion.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rsadi/gd/v1/GDRouteSuggestion.schema.json&quot;,
+  &quot;title&quot;: &quot;GDRouteSuggestion&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;route_id&quot;,
+    &quot;timestamp&quot;,
+    &quot;from_position&quot;,
+    &quot;to_position&quot;,
+    &quot;clarity_profile&quot;,
+    &quot;instructions&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;route_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uuid&quot; },
+    &quot;timestamp&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; },
+    &quot;from_position&quot;: {
+      &quot;$ref&quot;: &quot;GDClaritySample.schema.json#/properties/position&quot;
+    },
+    &quot;to_position&quot;: {
+      &quot;$ref&quot;: &quot;GDClaritySample.schema.json#/properties/position&quot;
+    },
+    &quot;clarity_profile&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;required&quot;: [&quot;position&quot;, &quot;clarity_score&quot;],
+        &quot;properties&quot;: {
+          &quot;position&quot;: {
+            &quot;$ref&quot;: &quot;GDClaritySample.schema.json#/properties/position&quot;
+          },
+          &quot;clarity_score&quot;: {
+            &quot;type&quot;: &quot;integer&quot;,
+            &quot;minimum&quot;: 0,
+            &quot;maximum&quot;: 255
+          }
+        }
+      }
+    },
+    &quot;risk_level&quot;: {
+      &quot;$ref&quot;: &quot;GDRiskLevel.schema.json&quot;
+    },
+    &quot;instructions&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+    },
+    &quot;extensions&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: true
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="6-gdeventsubscriptionschemajson">6. <strong>GDEventSubscription.schema.json</strong></h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/rsadi/gd/v1/GDEventSubscription.schema.json&quot;,
+  &quot;title&quot;: &quot;GDEventSubscription&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [&quot;event_type&quot;, &quot;callback_id&quot;],
+  &quot;properties&quot;: {
+    &quot;event_type&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [
+        &quot;clarity_drop&quot;,
+        &quot;resonance_spike&quot;,
+        &quot;zone_status_change&quot;
+      ]
+    },
+    &quot;callback_id&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;format&quot;: &quot;uuid&quot;
+    },
+    &quot;zone_id&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;filters&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: true
+    }
+  }
+}
+</code></pre>
+<hr>
+<h1 id="these-schemas-are-now-ready-for">🎮 These schemas are now ready for:</h1>
+<ul>
+<li>Unity C# bindings  </li>
+<li>Unreal C++/Blueprint bindings  </li>
+<li>Godot GDScript bindings  </li>
+<li>Custom engine integrations  </li>
+<li>Deterministic multiplayer sync  </li>
+<li>XR/VR resonance‑aware environments  </li>
+<li>Multi‑agent simulation frameworks  </li>
+</ul>
+<p>They’re lean, fast, and fully aligned with the RSADI Core invariants.</p>
+<hr>
+<h3 id="1-unity-c-wrapper-classes-rsadigd">1. Unity C# wrapper classes (RSADI‑GD)</h3>
+<pre><code class="language-csharp">// docs/schemas/rsadi-gd/Unity/GDTypes.cs
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+[Serializable]
+public class GDPosition
+{
+    public float x;
+    public float y;
+    public float z;
+
+    public Vector3 ToVector3() =&gt; new Vector3(x, y, z);
+
+    public static GDPosition FromVector3(Vector3 v) =&gt;
+        new GDPosition { x = v.x, y = v.y, z = v.z };
+}
+
+[Serializable]
+public class GDClaritySample
+{
+    public string sample_id;      // uuid
+    public string timestamp;      // ISO-8601
+    public GDPosition position;
+    public int clarity_score;     // 0–255
+    public int stress_hint;       // 0–255
+    public Dictionary&lt;string, object&gt; extensions;
+}
+
+[Serializable]
+public class GDDriftVector
+{
+    public float dx;
+    public float dy;
+    public float dz;
+    public float magnitude;
+    public string units;          // &quot;1/s&quot;
+}
+
+[Serializable]
+public class GDZoneState
+{
+    public string zone_id;
+    public string timestamp;
+    public int clarity_score;
+    public int stress_hint;
+    public string risk_level;     // &quot;low&quot; | &quot;medium&quot; | &quot;high&quot; | &quot;critical&quot;
+    public GDDriftVector drift_vector;
+    public Dictionary&lt;string, object&gt; extensions;
+}
+
+[Serializable]
+public class GDRoutePoint
+{
+    public GDPosition position;
+    public int clarity_score;
+}
+
+[Serializable]
+public class GDRouteSuggestion
+{
+    public string route_id;
+    public string timestamp;
+    public GDPosition from_position;
+    public GDPosition to_position;
+    public List&lt;GDRoutePoint&gt; clarity_profile;
+    public string risk_level;
+    public List&lt;string&gt; instructions;
+    public Dictionary&lt;string, object&gt; extensions;
+}
+</code></pre>
+<p>You can then add a simple “service” wrapper:</p>
+<pre><code class="language-csharp">public interface IRSADIService
+{
+    GDZoneState GetZoneState(string zoneId);
+    int GetClarity(Vector3 position);
+    GDDriftVector GetDrift(Vector3 position);
+    GDRouteSuggestion GetRoute(Vector3 from, Vector3 to);
+}
+</code></pre>
+<hr>
+<h3 id="2-unreal-ustruct-bindings-rsadigd">2. Unreal USTRUCT bindings (RSADI‑GD)</h3>
+<pre><code class="language-cpp">// docs/schemas/rsadi-gd/Unreal/RSADI_GDTypes.h
+#pragma once
+
+#include &quot;CoreMinimal.h&quot;
+#include &quot;RSADI_GDTypes.generated.h&quot;
+
+USTRUCT(BlueprintType)
+struct FGDPosition
+{
+    GENERATED_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float X;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Y;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Z;
+};
+
+USTRUCT(BlueprintType)
+struct FGDDriftVector
+{
+    GENERATED_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Dx;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Dy;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Dz;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    float Magnitude;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString Units; // &quot;1/s&quot;
+};
+
+USTRUCT(BlueprintType)
+struct FGDClaritySample
+{
+    GENERATED_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString SampleId;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString Timestamp;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FGDPosition Position;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    int32 ClarityScore;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    int32 StressHint;
+};
+
+USTRUCT(BlueprintType)
+struct FGDZoneState
+{
+    GENERATED_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString ZoneId;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString Timestamp;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    int32 ClarityScore;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    int32 StressHint;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString RiskLevel; // &quot;low&quot; | &quot;medium&quot; | &quot;high&quot; | &quot;critical&quot;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FGDDriftVector DriftVector;
+};
+
+USTRUCT(BlueprintType)
+struct FGDRoutePoint
+{
+    GENERATED_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FGDPosition Position;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    int32 ClarityScore;
+};
+
+USTRUCT(BlueprintType)
+struct FGDRouteSuggestion
+{
+    GENERATED_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString RouteId;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString Timestamp;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FGDPosition FromPosition;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FGDPosition ToPosition;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    TArray&lt;FGDRoutePoint&gt; ClarityProfile;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FString RiskLevel;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    TArray&lt;FString&gt; Instructions;
+};
+</code></pre>
+<p>You can expose a <code>URSADIService</code> UObject with BlueprintCallable methods that return these structs.</p>
+<hr>
+<h3 id="3-godot-gdscript-bindings-rsadigd">3. Godot GDScript bindings (RSADI‑GD)</h3>
+<pre><code class="language-gdscript"># docs/schemas/rsadi-gd/godot/rsadi_gd_types.gd
+class_name GDPosition
+extends RefCounted
+
+var x: float
+var y: float
+var z: float
+
+func to_vector3() -&gt; Vector3:
+    return Vector3(x, y, z)
+
+static func from_vector3(v: Vector3) -&gt; GDPosition:
+    var p := GDPosition.new()
+    p.x = v.x
+    p.y = v.y
+    p.z = v.z
+    return p
+
+
+class_name GDDriftVector
+extends RefCounted
+
+var dx: float
+var dy: float
+var dz: float
+var magnitude: float
+var units: String = &quot;1/s&quot;
+
+
+class_name GDClaritySample
+extends RefCounted
+
+var sample_id: String
+var timestamp: String
+var position: GDPosition
+var clarity_score: int
+var stress_hint: int
+var extensions := {}
+
+
+class_name GDZoneState
+extends RefCounted
+
+var zone_id: String
+var timestamp: String
+var clarity_score: int
+var stress_hint: int
+var risk_level: String
+var drift_vector: GDDriftVector
+var extensions := {}
+
+
+class_name GDRoutePoint
+extends RefCounted
+
+var position: GDPosition
+var clarity_score: int
+
+
+class_name GDRouteSuggestion
+extends RefCounted
+
+var route_id: String
+var timestamp: String
+var from_position: GDPosition
+var to_position: GDPosition
+var clarity_profile: Array[GDRoutePoint] = []
+var risk_level: String
+var instructions: Array[String] = []
+var extensions := {}
+</code></pre>
+<p>Then a simple service singleton:</p>
+<pre><code class="language-gdscript"># rsadi_gd_service.gd
+class_name RSADIGDService
+extends Node
+
+func get_clarity(pos: Vector3) -&gt; int:
+    # stub: plug into your RSADI core
+    return 200
+
+func get_drift(pos: Vector3) -&gt; GDDriftVector:
+    var d := GDDriftVector.new()
+    d.dx = 0.0
+    d.dy = 0.0
+    d.dz = 0.0
+    d.magnitude = 0.0
+    return d
+</code></pre>
+<hr>
+<h3 id="4-sample-resonanceaware-ai-agent-engineagnostic-pattern">4. Sample resonance‑aware AI agent (engine‑agnostic pattern)</h3>
+<p>Here’s the behavior pattern you want every game AI to be able to use, regardless of engine:</p>
+<p><strong>Goal:</strong> move toward higher clarity, avoid low‑clarity pockets, respect drift.</p>
+<h4 id="pseudocode">Pseudo‑code</h4>
+<pre><code class="language-text">Inputs:
+  position: Vector3
+  rsadi: RSADI service (engine binding)
+
+Loop:
+  clarity_here = rsadi.getClarity(position)
+  drift = rsadi.getDrift(position)
+
+  // Sample candidate directions
+  candidates = sample_directions_around(position)
+
+  best_dir = null
+  best_score = -INF
+
+  for dir in candidates:
+      test_pos = position + dir * step_size
+      c = rsadi.getClarity(test_pos)
+      s = rsadi.getCompositeRisk(test_pos)  // or derive from clarity + stress
+      score = c - risk_penalty(s)
+
+      // Optionally bias with drift (go with or against)
+      score += dot(drift_direction(drift), dir) * drift_weight
+
+      if score &gt; best_score:
+          best_score = score
+          best_dir = dir
+
+  move_along(best_dir)
+</code></pre>
+<h4 id="unity-c-sketch">Unity C# sketch</h4>
+<pre><code class="language-csharp">public class ResonanceAwareAgent : MonoBehaviour
+{
+    public float stepSize = 1.0f;
+    public float speed = 3.0f;
+    public IRSADIService rsadi;
+
+    void Update()
+    {
+        Vector3 pos = transform.position;
+        int clarityHere = rsadi.GetClarity(pos);
+        GDDriftVector drift = rsadi.GetDrift(pos);
+
+        Vector3 bestDir = Vector3.zero;
+        float bestScore = float.NegativeInfinity;
+
+        foreach (Vector3 dir in SampleDirections())
+        {
+            Vector3 testPos = pos + dir * stepSize;
+            int c = rsadi.GetClarity(testPos);
+            float score = c;
+
+            Vector3 driftDir = new Vector3(drift.dx, drift.dy, drift.dz).normalized;
+            score += Vector3.Dot(driftDir, dir) * 10.0f;
+
+            if (score &gt; bestScore)
+            {
+                bestScore = score;
+                bestDir = dir;
+            }
+        }
+
+        transform.position += bestDir.normalized * speed * Time.deltaTime;
+    }
+
+    IEnumerable&lt;Vector3&gt; SampleDirections()
+    {
+        yield return Vector3.forward;
+        yield return Vector3.back;
+        yield return Vector3.left;
+        yield return Vector3.right;
+        yield return (Vector3.forward + Vector3.left).normalized;
+        yield return (Vector3.forward + Vector3.right).normalized;
+        yield return (Vector3.back + Vector3.left).normalized;
+        yield return (Vector3.back + Vector3.right).normalized;
+    }
+}
+</code></pre>
+<p>Same logic ports cleanly to Unreal Behavior Trees or Godot AI scripts.</p>
+<hr>
+  </main>
+</body>
+</html>

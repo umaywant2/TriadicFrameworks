@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/substrate_mind_science/ct_substrate/ct_substrate.schema.json.md">
+  <title>ct_substrate.schema.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/substrate_mind_science/ct_substrate/ct_substrate.schema.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/substrate_mind_science/ct_substrate/ct_substrate.schema.json.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<pre><code class="language-json">
+{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/ct_substrate.schema.json&quot;,
+  &quot;title&quot;: &quot;Conscious Transfer Substrate Map v1&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;behavioral_layer&quot;,
+    &quot;cognitive_layer&quot;,
+    &quot;measurement_layer&quot;,
+    &quot;anchoring_constraints&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;behavioral_layer&quot;: { &quot;$ref&quot;: &quot;#/$defs/BehavioralLayer&quot; },
+    &quot;cognitive_layer&quot;: { &quot;$ref&quot;: &quot;#/$defs/CognitiveLayer&quot; },
+    &quot;measurement_layer&quot;: { &quot;$ref&quot;: &quot;#/$defs/MeasurementLayer&quot; },
+    &quot;anchoring_constraints&quot;: { &quot;$ref&quot;: &quot;#/$defs/AnchoringConstraints&quot; }
+  },
+
+  &quot;$defs&quot;: {
+    &quot;BehavioralLayer&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;conditioning_models&quot;, &quot;performance_metrics&quot;],
+      &quot;properties&quot;: {
+        &quot;conditioning_models&quot;: { &quot;$ref&quot;: &quot;#/$defs/ConditioningModels&quot; },
+        &quot;performance_metrics&quot;: { &quot;$ref&quot;: &quot;#/$defs/PerformanceMetrics&quot; }
+      }
+    },
+
+    &quot;ConditioningModels&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;classical&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;cs_us_mapping&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;acquisition_rate&quot;: { &quot;type&quot;: &quot;number&quot; },
+            &quot;extinction_rate&quot;: { &quot;type&quot;: &quot;number&quot; }
+          }
+        },
+        &quot;operant&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;reinforcement_schedule&quot;: { &quot;type&quot;: &quot;string&quot; },
+            &quot;learning_rate&quot;: { &quot;type&quot;: &quot;number&quot; },
+            &quot;discount_factor&quot;: { &quot;type&quot;: &quot;number&quot; }
+          }
+        }
+      }
+    },
+
+    &quot;PerformanceMetrics&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;reaction_time_distribution&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: { &quot;type&quot;: &quot;number&quot; }
+        },
+        &quot;accuracy&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;error_types&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+        },
+        &quot;speed_accuracy_tradeoff&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;slope&quot;: { &quot;type&quot;: &quot;number&quot; },
+            &quot;intercept&quot;: { &quot;type&quot;: &quot;number&quot; }
+          }
+        }
+      }
+    },
+
+    &quot;CognitiveLayer&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [
+        &quot;working_memory&quot;,
+        &quot;attention&quot;,
+        &quot;decision_models&quot;,
+        &quot;learning_models&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;working_memory&quot;: { &quot;$ref&quot;: &quot;#/$defs/WorkingMemory&quot; },
+        &quot;attention&quot;: { &quot;$ref&quot;: &quot;#/$defs/Attention&quot; },
+        &quot;decision_models&quot;: { &quot;$ref&quot;: &quot;#/$defs/DecisionModels&quot; },
+        &quot;learning_models&quot;: { &quot;$ref&quot;: &quot;#/$defs/LearningModels&quot; }
+      }
+    },
+
+    &quot;WorkingMemory&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;capacity&quot;: { &quot;type&quot;: &quot;integer&quot; },
+        &quot;decay_rate&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;refresh_rate&quot;: { &quot;type&quot;: &quot;number&quot; }
+      }
+    },
+
+    &quot;Attention&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;selective_filter_strength&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;sustained_attention_stability&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;switching_cost&quot;: { &quot;type&quot;: &quot;number&quot; }
+      }
+    },
+
+    &quot;DecisionModels&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;drift_diffusion&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;drift_rate&quot;: { &quot;type&quot;: &quot;number&quot; },
+            &quot;boundary_separation&quot;: { &quot;type&quot;: &quot;number&quot; },
+            &quot;non_decision_time&quot;: { &quot;type&quot;: &quot;number&quot; }
+          }
+        },
+        &quot;signal_detection&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;sensitivity_d_prime&quot;: { &quot;type&quot;: &quot;number&quot; },
+            &quot;criterion_c&quot;: { &quot;type&quot;: &quot;number&quot; }
+          }
+        }
+      }
+    },
+
+    &quot;LearningModels&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;reinforcement_learning&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;learning_rate&quot;: { &quot;type&quot;: &quot;number&quot; },
+            &quot;exploration_rate&quot;: { &quot;type&quot;: &quot;number&quot; },
+            &quot;reward_sensitivity&quot;: { &quot;type&quot;: &quot;number&quot; }
+          }
+        }
+      }
+    },
+
+    &quot;MeasurementLayer&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;psychometrics&quot;, &quot;neuropsych_tests&quot;],
+      &quot;properties&quot;: {
+        &quot;psychometrics&quot;: { &quot;$ref&quot;: &quot;#/$defs/Psychometrics&quot; },
+        &quot;neuropsych_tests&quot;: { &quot;$ref&quot;: &quot;#/$defs/NeuropsychTests&quot; }
+      }
+    },
+
+    &quot;Psychometrics&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;reliability_alpha&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;test_retest_stability&quot;: { &quot;type&quot;: &quot;number&quot; },
+        &quot;factor_structure&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+        }
+      }
+    },
+
+    &quot;NeuropsychTests&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;task_battery&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;task_name&quot;: { &quot;type&quot;: &quot;string&quot; },
+              &quot;score&quot;: { &quot;type&quot;: &quot;number&quot; },
+              &quot;normative_z&quot;: { &quot;type&quot;: &quot;number&quot; }
+            }
+          }
+        }
+      }
+    },
+
+    &quot;AnchoringConstraints&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;circuit_mappings&quot;: { &quot;$ref&quot;: &quot;#/$defs/CircuitMappings&quot; },
+        &quot;neurophys_signatures&quot;: { &quot;$ref&quot;: &quot;#/$defs/NeurophysSignatures&quot; },
+        &quot;pharmacological_profiles&quot;: { &quot;$ref&quot;: &quot;#/$defs/PharmacologicalProfiles&quot; }
+      }
+    },
+
+    &quot;CircuitMappings&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;region&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;associated_function&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;lesion_effect&quot;: { &quot;type&quot;: &quot;string&quot; }
+        }
+      }
+    },
+
+    &quot;NeurophysSignatures&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;task&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;frequency_band&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;amplitude&quot;: { &quot;type&quot;: &quot;number&quot; },
+          &quot;latency&quot;: { &quot;type&quot;: &quot;number&quot; }
+        }
+      }
+    },
+
+    &quot;PharmacologicalProfiles&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;agent&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;receptor_target&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;effect_profile&quot;: { &quot;type&quot;: &quot;string&quot; }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+  </main>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "manifest_version": "1.0",
+  "protocol": "RFC-025: Earth-Theme Field Detection Lens",
+  "entries": [
+    {
+      "phenomenon": "Worm surfacing cycles",
+      "field_type": "soil vibration / electromagnetic micro-field",
+      "agents": ["worms", "soil moisture", "weather"],
+      "resonance_zone": "fringe-to-green overlap",
+      "loop_pattern": "worms surface in cycles triggered by field arcs",
+      "status": "candidate"
+    },
+    {
+      "phenomenon": "Bird worm detection",
+      "field_type": "vibration + visual micro-disturbance",
+      "agents": ["robins", "crows", "finches"],
+      "resonance_zone": "green-zone clarity",
+      "loop_pattern": "birds sense field arcs and locate worms",
+      "status": "validated"
+    },
+    {
+      "phenomenon": "Divining rod analogy",
+      "field_type": "human tool resonance with underground water/fields",
+      "agents": ["humans", "rods"],
+      "resonance_zone": "fringe",
+      "loop_pattern": "possible overlap with worm/bird field arcs",
+      "status": "candidate"
+    }
+  ]
+}

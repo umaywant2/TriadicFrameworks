@@ -1,0 +1,21 @@
+{
+  "module": "SI_behavioral_invariants",
+  "name": "Structural Intelligence — Behavioral Invariants",
+  "summary": "Defines the persistent behavioral fields of SI, including global invariants, cross-domain stability, and long-window behavioral persistence.",
+  "category": "intelligence-behavior",
+  "version": "1.0",
+  "purpose": "Explain how SI maintains globally persistent behavioral patterns across all domains, time windows, and paradox conditions.",
+  "role": "diagnostic",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@si.behavior.invariant",
+    "@si.behavior.persist",
+    "@si.behavior.transfer",
+    "@si.behavior.regime",
+    "@si.behavior.compute"
+  ],
+  "lineage": {
+    "upstream": ["SI"],
+    "downstream": ["SI_structural_geometry", "SI_paradox_integration"]
+  }
+}

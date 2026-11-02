@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IPD-12 Substrate Engine Schema",
+  "description": "Defines the 4×4×4 substrate primitives for the IPD-12 Intransitive Prime Engine using dual-binary substrate pairs, triadic observer modes, RTT regime shells, and prime-indexed operator states.",
+  "type": "object",
+
+  "properties": {
+    "substrate_pair": {
+      "type": "string",
+      "enum": ["S1", "S2", "S3", "S4"],
+      "description": "Dual-binary substrate primitive: S1=(0/1), S2=(1/0), S3=(1/1), S4=(0/0)."
+    },
+
+    "observer_mode": {
+      "type": "string",
+      "enum": ["O1", "O2", "O3", "O4"],
+      "description": "Triadic observer stance: O1=field, O2=regime, O3=coherence, O4=apex."
+    },
+
+    "regime_shell": {
+      "type": "string",
+      "enum": ["R1", "R2", "R3", "R4"],
+      "description": "RTT regime layer: R1=Regime-0, R2=Regime-1, R3=Regime-2, R4=Regime-3."
+    },
+
+    "prime_state": {
+      "type": "string",
+      "enum": [
+        "P2","P3","P5","P7","P11","P13",
+        "P17","P19","P23","P29","P31","P37"
+      ],
+      "description": "Prime-indexed operator state mapped from (substrate_pair, observer_mode, regime_shell)."
+    },
+
+    "coordinates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Si", "Oj", "Rk"]
+      },
+      "minItems": 3,
+      "maxItems": 3,
+      "description": "Canonical coordinate triple (Si, Oj, Rk) defining one substrate primitive."
+    },
+
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "default": "2026-1.0"
+        },
+        "canonical": {
+          "type": "boolean",
+          "default": true
+        },
+        "notes": {
+          "type": "string",
+          "description": "Optional notes about this substrate primitive."
+        }
+      }
+    }
+  },
+
+  "required": [
+    "substrate_pair",
+    "observer_mode",
+    "regime_shell",
+    "prime_state",
+    "coordinates"
+  ],
+
+  "additionalProperties": false
+}

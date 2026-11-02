@@ -1,0 +1,50 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
+
+  "identity": {
+    "module": "diagrams",
+    "title": "Canonical Diagrams",
+    "canonical_url": "https://triadicframeworks.org/docs/diagrams",
+    "version": "1.0.1"
+  },
+
+  "purpose": "Contains canonical diagrams and visual specifications for TriadicFrameworks, including arrival mechanics and FREQi system overviews.",
+
+  "category": "diagram",
+
+  "analyzer_layer": [
+    "operator",
+    "dimensional",
+    "coherence"
+  ],
+
+  "files": [
+    {
+      "name": "arrival.md",
+      "role": "diagram",
+      "description": "Markdown-based diagram/spec describing the Arrival module’s conceptual and structural visuals."
+    },
+    {
+      "name": "freqi_overview.svg",
+      "role": "diagram",
+      "description": "SVG diagram providing a visual overview of FREQi system mechanics."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Canonical diagrams illustrating Arrival mechanics and FREQi system structure.",
+    "keywords": [
+      "diagram",
+      "arrival",
+      "freqi",
+      "visual-spec",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}

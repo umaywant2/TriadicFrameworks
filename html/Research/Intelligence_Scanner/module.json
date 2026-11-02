@@ -1,0 +1,75 @@
+{
+  "module": "Intelligence_Scanner",
+  "version": "0.1.0",
+  "category": "Research",
+  "summary": "Planetary-style detection system for identifying intelligent signals across the internet using structural, temporal, coherence, drift, paradox, and behavioral invariants.",
+  "purpose": "Provide multi-layer scanning, signal extraction, signature generation, diagnostics, examples, and validation protocols for detecting intelligent behavior across large-scale digital environments.",
+  "audience": ["AI systems", "researchers", "detection engines"],
+
+  "roles": {
+    "index": "index.md",
+    "overview": "intelligence_scanner_overview.md",
+    "geometry": "intelligence_scanner_geometry.md",
+    "pipeline": "intelligence_scanner_pipeline.md",
+    "signatures": "intelligence_scanner_signatures.md",
+    "diagnostic": "intelligence_scanner_diagnostic.md",
+    "examples": "intelligence_scanner_examples.md",
+    "validation": "intelligence_scanner_validation.md"
+  },
+
+  "files": [
+    {
+      "path": "index.md",
+      "role": "index",
+      "purpose": "Root index page defining Intelligence Scanner identity, navigation, and canonical metadata.",
+      "analyzer_layer": ["index", "frontdoor", "navigation"]
+    },
+    {
+      "path": "intelligence_scanner_overview.md",
+      "role": "overview",
+      "purpose": "High-level conceptual overview of the Intelligence Scanner subsystem.",
+      "analyzer_layer": ["operator", "dimensional", "regime"]
+    },
+    {
+      "path": "intelligence_scanner_geometry.md",
+      "role": "geometry",
+      "purpose": "Defines multi-axis geometry for structural, temporal, coherence, drift, paradox, and behavioral signal mapping.",
+      "analyzer_layer": ["dimensional", "regime", "cross-cutting"]
+    },
+    {
+      "path": "intelligence_scanner_pipeline.md",
+      "role": "pipeline",
+      "purpose": "Defines the end-to-end detection pipeline for extracting intelligent signals from internet-scale environments.",
+      "analyzer_layer": ["operator", "temporal", "structural"]
+    },
+    {
+      "path": "intelligence_scanner_signatures.md",
+      "role": "signature",
+      "purpose": "Defines structural, temporal, coherence, drift, paradox, and behavioral signatures for intelligent signal detection.",
+      "analyzer_layer": ["coherence", "drift", "paradox", "behavioral"]
+    },
+    {
+      "path": "intelligence_scanner_diagnostic.md",
+      "role": "diagnostic",
+      "purpose": "Analyzes signal strength, stability, drift, coherence, paradox boundaries, and behavioral invariants.",
+      "analyzer_layer": ["diagnostic", "regime", "cross-cutting"]
+    },
+    {
+      "path": "intelligence_scanner_examples.md",
+      "role": "example",
+      "purpose": "Provides worked examples demonstrating detection, signature extraction, and atlas coordinate mapping.",
+      "analyzer_layer": ["example", "operator", "dimensional"]
+    },
+    {
+      "path": "intelligence_scanner_validation.md",
+      "role": "validation",
+      "purpose": "Defines validation protocols, measurement criteria, thresholds, and falsification tests for intelligent signal detection.",
+      "analyzer_layer": ["validation", "diagnostic", "coherence"]
+    }
+  ],
+
+  "schema": "schemas/module.schema.json",
+  "status": "complete",
+  "phantom_entries": []
+}
+

@@ -1,0 +1,98 @@
+{
+  "module": {
+    "name": "Resonance_Truth",
+    "category": "Resonance",
+    "summary": "RTT/1 analysis of Truth as a resonance-field construct, including coherence operators, drift behavior, paradox signatures, and regime transitions.",
+    "version": "1.0.0",
+    "purpose": "Model Truth as a resonance phenomenon using RTT operators, coherence states, drift profiles, paradox structures, and regime transitions."
+  },
+
+  "analyzer_layer": {
+    "operator": [
+      "Ω1", "Ω2", "Ω3", "Ω4",
+      "C1", "C2", "C3", "C4",
+      "D1", "D2", "D3", "D4",
+      "P1", "P2", "P3"
+    ],
+    "dimensional": [
+      "SemanticTriad",
+      "ResonanceTriad",
+      "InterpretationTriad"
+    ],
+    "regime": [
+      "R12", "R23", "R34",
+      "R21", "R32", "R43"
+    ],
+    "drift": [
+      "bounded",
+      "unbounded",
+      "semantic",
+      "interpretive"
+    ],
+    "coherence": [
+      "declared",
+      "collapsed",
+      "contested",
+      "inverted"
+    ],
+    "cross-cutting": [
+      "paradox_structural",
+      "paradox_semantic",
+      "paradox_regime"
+    ]
+  },
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "purpose": "Front-door overview of Truth as a resonance construct in RTT."
+    },
+    {
+      "path": "Truth_Operator_Table.md",
+      "role": "reference",
+      "purpose": "Defines Ω, C, D, and P operators as they apply to Truth."
+    },
+    {
+      "path": "Truth_Regime_Transitions.md",
+      "role": "map",
+      "purpose": "Maps transitions between declared truth, contested truth, collapsed truth, and inverted truth."
+    },
+    {
+      "path": "Truth_Paradox_Analysis.md",
+      "role": "diagnostic",
+      "purpose": "Analyzes paradox structures such as semantic drift, coherence inversion, and resonance collapse."
+    },
+    {
+      "path": "Truth_Coherence_Study.md",
+      "role": "procedure",
+      "purpose": "Provides methods for studying coherence states of truth claims using RTT operators."
+    },
+    {
+      "path": "Truth_Drift_Walkthrough.md",
+      "role": "example",
+      "purpose": "Walkthrough of how truth claims drift across semantic, interpretive, and resonance domains."
+    },
+    {
+      "path": "Truth_and_SET_Triad.md",
+      "role": "analysis",
+      "purpose": "Applies Spin, Elec, Temp triad to truth alignment, charge separation, and activation thresholds."
+    },
+    {
+      "path": "Truth_Narrative_Synthesis.md",
+      "role": "signature",
+      "purpose": "Narrative synthesis explaining Truth as a resonance-field phenomenon."
+    }
+  ],
+
+  "signature": {
+    "engine": "RTT/1",
+    "profile": "resonance-field",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "triad_spacing": "semantic",
+    "regime_transitions": "interpretive"
+  }
+}
+

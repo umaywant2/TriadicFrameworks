@@ -1,0 +1,43 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.ai.regimes",
+  "title": "FFT AI — AI-Layer Regime Map v1.33",
+  "ai_regime_map": {
+    "RG-001": {
+      "ai_behavior": "Observe only; no operator dispatch",
+      "autonomy_mode": "AM-001"
+    },
+    "RG-002": {
+      "ai_behavior": "Alignment operators only; watch for drift",
+      "autonomy_mode": "AM-002"
+    },
+    "RG-003": {
+      "ai_behavior": "Full operator dispatch; SET coupling begins",
+      "autonomy_mode": "AM-003"
+    },
+    "RG-004": {
+      "ai_behavior": "Maintain resonance; monitor coherence continuously",
+      "autonomy_mode": "AM-003"
+    },
+    "RG-005": {
+      "ai_behavior": "Stabilization priority; escalate if R drops",
+      "autonomy_mode": "AM-004"
+    }
+  },
+  "paradox_override": "Any regime: if paradox_active==true, autonomy escalates to AM-004 minimum",
+  "invariants_checked": [
+    "INV-003",
+    "INV-004",
+    "INV-005",
+    "INV-007",
+    "INV-010"
+  ]
+}

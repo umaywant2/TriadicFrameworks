@@ -1,0 +1,24 @@
+{
+  "title": "Dimensional Substrate Structures: Triadic Dimensional Cores and High-Dimensional Scaling",
+  "upload_type": "software",
+  "publication_date": "2026-01-20",
+  "doi": "10.5281/zenodo.18321015",
+  "creators": [
+    {
+      "name": "Loswin, Nawder",
+      "affiliation": "TriadicFrameworks"
+    }
+  ],
+  "description": "A complete dimensional-substrate framework extending the Resonance Substrate Model from 3D–9D triadic cores to 64D–1024D research-grade substrates. Includes primitives, scaling laws, invariants, high-dimensional regimes, computational implications, validation layers, and examples.",
+  "keywords": [
+    "Resonance Substrate Model",
+    "Dimensional Substrate",
+    "Triadic Dimensional Cores",
+    "High-Dimensional Scaling",
+    "vST Validation",
+    "Regime Analysis"
+  ],
+  "license": "MIT",
+  "version": "1.0.0",
+  "language": "en"
+}

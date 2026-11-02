@@ -1,0 +1,237 @@
+<link rel="stylesheet" href="rtt.css" />
+  <script src="include.js"></script>
+
+  <style>
+    .graph-container {
+      width: 100%;
+      height: 700px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      margin-top: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .node {
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    .node text {
+      font-family: var(--rtt-font-ui);
+      font-size: 12px;
+      fill: var(--rtt-continuum-white);
+      pointer-events: none;
+    }
+
+    .node circle {
+      stroke: rgba(255,255,255,0.3);
+      stroke-width: 1px;
+    }
+
+    .edge {
+      stroke: rgba(255,255,255,0.2);
+      stroke-width: 1px;
+    }
+
+    .legend {
+      margin-top: 16px;
+      display: flex;
+      gap: 20px;
+      font-size: 0.9rem;
+      color: var(--rtt-drift-silver);
+    }
+
+    .legend span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="rtt-nav"></div> 
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
+  <main class="rtt-page">
+
+    <h1 class="rtt-hero-title">RTT Academy Graph</h1>
+    <p class="rtt-hero-subtitle">Courses, docs, engines, and their dimensional relationships.</p>
+
+    <hr class="rtt-divider" />
+
+    <div class="legend">
+      <span><span class="dot" style="background:#3A6FF7"></span> Course</span>
+      <span><span class="dot" style="background:#7C3AED"></span> Engine</span>
+      <span><span class="dot" style="background:#F5C542"></span> Doc</span>
+    </div>
+
+    <div class="graph-container">
+      <svg id="graph" width="100%" height="100%"></svg>
+    </div>
+
+    <footer class="rtt-footer">
+      © TriadicFrameworks — Resonance‑Time Technology
+    </footer>
+
+  </main>
+
+  <script>
+    async function loadGraph() {
+      const [coursesRes, registryRes] = await Promise.all([
+        fetch("docs/academy/academy-courses.json"),
+        fetch("docs/academy/academy-registry.json")
+      ]);
+
+      const coursesData = await coursesRes.json();
+      const registry = await registryRes.json();
+
+      const nodes = [];
+      const edges = [];
+
+      // Add courses
+      coursesData.courses.forEach(c => {
+        nodes.push({
+          id: c.id,
+          label: c.title,
+          type: "course",
+          color: "#3A6FF7"
+        });
+
+        // Docs edges
+        (c.docs || []).forEach(docId => {
+          edges.push({ source: c.id, target: docId });
+        });
+
+        // Engine edges
+        (c.engines || []).forEach(engineId => {
+          edges.push({ source: c.id, target: engineId });
+        });
+
+        // Next lesson edges
+        (c.next || []).forEach(nextId => {
+          edges.push({ source: c.id, target: nextId });
+        });
+      });
+
+      // Add docs
+      registry.docs.forEach(d => {
+        nodes.push({
+          id: d.id,
+          label: d.name,
+          type: "doc",
+          color: "#F5C542"
+        });
+      });
+
+      // Add engines
+      registry.engines.forEach(e => {
+        nodes.push({
+          id: e.id,
+          label: e.name,
+          type: "engine",
+          color: "#7C3AED"
+        });
+      });
+
+      renderGraph(nodes, edges);
+    }
+
+    function renderGraph(nodes, edges) {
+      const svg = document.getElementById("graph");
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+
+      // Initialize random positions
+      nodes.forEach(n => {
+        n.x = Math.random() * width;
+        n.y = Math.random() * height;
+        n.vx = 0;
+        n.vy = 0;
+      });
+
+      function tick() {
+        // Force simulation
+        edges.forEach(e => {
+          const s = nodes.find(n => n.id === e.source);
+          const t = nodes.find(n => n.id === e.target);
+          const dx = t.x - s.x;
+          const dy = t.y - s.y;
+          const dist = Math.sqrt(dx*dx + dy*dy) || 1;
+          const force = 0.01 * (dist - 120);
+
+          const fx = force * dx / dist;
+          const fy = force * dy / dist;
+
+          s.vx += fx;
+          s.vy += fy;
+          t.vx -= fx;
+          t.vy -= fy;
+        });
+
+        nodes.forEach(n => {
+          n.vx *= 0.9;
+          n.vy *= 0.9;
+          n.x += n.vx;
+          n.y += n.vy;
+        });
+
+        draw();
+        requestAnimationFrame(tick);
+      }
+
+      function draw() {
+        svg.innerHTML = "";
+
+        // Draw edges
+        edges.forEach(e => {
+          const s = nodes.find(n => n.id === e.source);
+          const t = nodes.find(n => n.id === e.target);
+
+          const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+          line.setAttribute("x1", s.x);
+          line.setAttribute("y1", s.y);
+          line.setAttribute("x2", t.x);
+          line.setAttribute("y2", t.y);
+          line.setAttribute("class", "edge");
+          svg.appendChild(line);
+        });
+
+        // Draw nodes
+        nodes.forEach(n => {
+          const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+          g.setAttribute("class", "node");
+          g.setAttribute("transform", `translate(${n.x},${n.y})`);
+
+          const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          circle.setAttribute("r", 12);
+          circle.setAttribute("fill", n.color);
+          g.appendChild(circle);
+
+          const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          text.setAttribute("dx", 16);
+          text.setAttribute("dy", 4);
+          text.textContent = n.label;
+          g.appendChild(text);
+
+          svg.appendChild(g);
+        });
+      }
+
+      tick();
+    }
+
+    loadGraph();
+  </script>

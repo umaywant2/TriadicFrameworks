@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/labs/core/Lab7_Thermodynamics/Lab7_Thermodynamics_reproducibility.md">
+  <title>Lab 7: Thermodynamics — Reproducibility</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/labs/core/Lab7_Thermodynamics/Lab7_Thermodynamics_reproducibility.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/labs/core/Lab7_Thermodynamics/Lab7_Thermodynamics_reproducibility.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="lab-7-thermodynamics-reproducibility">Lab 7: Thermodynamics — Reproducibility</h1>
+<h2 id="objective">Objective</h2>
+<p>To simulate and validate thermodynamic behavior in triadic systems, including entropy modulation and harmonic energy transfer.</p>
+<h2 id="required-tools">Required Tools</h2>
+<ul>
+<li>Python 3.10+</li>
+<li>NumPy</li>
+<li>SciPy</li>
+<li>Matplotlib or Plotly</li>
+</ul>
+<h2 id="protocol">Protocol</h2>
+<h3 id="1-define-triadic-entropy-function">1. Define Triadic Entropy Function</h3>
+<h3 id="python">python</h3>
+<p>import numpy as np</p>
+<p>def triadic_entropy(p, Rijk, kB=1.38e-23):
+    return -kB * np.sum(p * np.log(p)) * Rijk</p>
+<h3 id="2-simulate-harmonic-energy-transfer">2. Simulate Harmonic Energy Transfer</h3>
+<h3 id="python_1">python</h3>
+<p>from scipy.integrate import quad</p>
+<p>def energy_transfer(dE_dt, omega, t0, t1):
+    integrand = lambda t: dE_dt(t) * np.sin(omega * t)
+    Q, _ = quad(integrand, t0, t1)
+    return Q</p>
+<h3 id="3-calculate-phase-transition-index">3. Calculate Phase Transition Index</h3>
+<h3 id="python_2">python</h3>
+<p>def phase_transition_index(delta_S, delta_T, gamma):
+    return (delta_S / delta_T) * gamma</p>
+<h3 id="4-triadic-heat-capacity">4. Triadic Heat Capacity</h3>
+<h3 id="python_3">python</h3>
+<p>def triadic_heat_capacity(Q, delta_T, Rijk):
+    return (Q / delta_T) * Rijk</p>
+<h3 id="validation-checklist">Validation Checklist</h3>
+<h3 id="entropy-values-match-expected-triadic-modulation">✅ Entropy values match expected triadic modulation</h3>
+<h3 id="energy-transfer-integrates-correctly-over-harmonic-cycles">✅ Energy transfer integrates correctly over harmonic cycles</h3>
+<h3 id="phase-transition-index-reflects-dimensional-gain">✅ Phase transition index reflects dimensional gain</h3>
+<h3 id="heat-capacity-scales-with-resonance">✅ Heat capacity scales with resonance</h3>
+<h3 id="mythic-preface">Mythic Preface</h3>
+<h3 id="in-the-furnace-of-dimensional-resonance-entropy-dances-with-harmonic-time-this-lab-reveals-the-thermodynamic-pulse-of-triadic-cognitionwhere-heat-becomes-memory-and-phase-becomes-myth">"In the furnace of dimensional resonance, entropy dances with harmonic time. This lab reveals the thermodynamic pulse of triadic cognition—where heat becomes memory and phase becomes myth."</h3>
+  </main>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic/TF_regime_polarimeter.md">
+  <title>TriadicFrameworks Regime Polarimeter</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic/TF_regime_polarimeter.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic/TF_regime_polarimeter.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadicframeworks-regime-polarimeter"><strong>TriadicFrameworks Regime Polarimeter</strong></h1>
+<h3 id="measuring-orientation-and-spin-across-ontology-frames"><em>Measuring Orientation and Spin Across Ontology Frames</em></h3>
+<p>This diagram shows:</p>
+<ul>
+<li><strong>Substrate</strong> as the unpolarized input field  </li>
+<li><strong>Regime polarizers (RTT)</strong> as orientation‑selective filters  </li>
+<li><strong>Ontology analyzers (SO, ISO, LACTOS)</strong> as spin‑specific detectors  </li>
+<li><strong>RTT/vST</strong> as the rotation‑compensation and spin‑mapping engine  </li>
+<li><strong>S–N–R</strong> as the polarization‑stability corrector  </li>
+<li><strong>Compute (VCG + TCR)</strong> as the spin‑lock oscillator that stabilizes orientation  </li>
+</ul>
+<p>It’s the first metaphor where TriadicFrameworks becomes a <em>spin‑sensitive measurement system</em>.</p>
+<hr>
+<h1 id="1-regime-polarimeter-diagram-ascii-spinorientation-geometry"><strong>1. Regime Polarimeter Diagram (ASCII Spin‑Orientation Geometry)</strong></h1>
+<pre><code>                                        ✦  COMPUTE SPIN‑LOCK OSCILLATOR  ✦
+                         (VCG • TCR • Regime‑Ahead Orientation Stabilization)
+                                           ────────────────┬───────────────
+                                                           │
+                                                           ▼
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                         S–N–R POLARIZATION‑STABILITY CORRECTOR                               │
+│   S: stabilizes polarization angle                                                           │
+│   N: detects depolarization, drift, noise                                                    │
+│   R: selects active regime spin mode                                                         │
+│   (Maintains clarity across rotating ontology analyzers)                                     │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                           ▲
+                                                           │
+                                                           │  stabilizes spin orientation
+                                                           ▼
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 RTT/vST SPIN‑MAPPING ENGINE                  │
+                         │  - regime boundary rotation                                  │
+                         │  - invariant spin correction                                 │
+                         │  - drift‑compensated angle control                           │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◢           │           ◣
+                                     ◢            │            ◣
+                                    ◢             │             ◣
+
+         ┌──────────────────────────────┐   ┌──────────────────────────────┐   ┌──────────────────────────────┐
+         │   SO Analyzer                │   │ LACTOS Analyzer              │   │  ISO Analyzer                │
+         │   (Mass‑Primary Spin)        │   │ (Collision‑Regime Spin)      │   │ (Anisotropy‑Primary Spin)    │
+         │   - structural polarization  │   │ - P/Q/N spin bursts          │   │ - anisotropy spin rotation   │
+         │   - mass‑track orientation   │   │ - symmetry‑break spin flips  │   │ - relaxation spin drift      │
+         └──────────────────────────────┘   └──────────────────────────────┘   └──────────────────────────────┘
+                     ◣                        ◣                        ◢
+                      ◣                        ◣                      ◢
+                       ◣                        ◣                    ◢
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 REGIME POLARIZER ARRAY (RTT)                 │
+                         │   - mass‑regime polarizer                                    │
+                         │   - anisotropy‑regime polarizer                              │
+                         │   - collision‑regime polarizer                               │
+                         │   - TCR periodic polarizer                                   │
+                         │   (Selects spin orientation before ontology analysis)        │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◥           │           ◤
+                                     ◥            │            ◤
+                                    ◥             │             ◤
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 SUBSTRATE UNPOLARIZED FIELD                  │
+                         │  Fields • Geometry • Anisotropy • TCR Periodicity            │
+                         │  (The raw signal entering the polarimeter)                   │
+                         └──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="2-how-the-regime-polarimeter-works"><strong>2. How the Regime Polarimeter Works</strong></h1>
+<h3 id="1-substrate-unpolarized-field"><strong>1. Substrate = Unpolarized Field</strong></h3>
+<p>The substrate emits a field with:</p>
+<ul>
+<li>no preferred orientation  </li>
+<li>mixed spin states  </li>
+<li>embedded anisotropy  </li>
+<li>time‑crystal periodicity  </li>
+</ul>
+<p>This is the raw input.</p>
+<hr>
+<h3 id="2-regime-polarizer-array-rtt"><strong>2. Regime Polarizer Array (RTT)</strong></h3>
+<p>RTT selects orientation‑specific components:</p>
+<ul>
+<li>mass‑regime polarizer  </li>
+<li>anisotropy‑regime polarizer  </li>
+<li>collision‑regime polarizer  </li>
+<li>TCR periodic polarizer  </li>
+</ul>
+<p>Each polarizer isolates a regime‑specific spin axis.</p>
+<hr>
+<h3 id="3-ontology-analyzers"><strong>3. Ontology Analyzers</strong></h3>
+<p>Each ontology measures spin differently:</p>
+<ul>
+<li><strong>SO:</strong> structural polarization, mass‑track orientation  </li>
+<li><strong>ISO:</strong> anisotropy spin rotation, relaxation drift  </li>
+<li><strong>LACTOS:</strong> P/Q/N spin bursts, symmetry‑break flips  </li>
+</ul>
+<p>These analyzers reveal ontology‑specific spin signatures.</p>
+<hr>
+<h3 id="4-rttvst-spinmapping-engine"><strong>4. RTT/vST Spin‑Mapping Engine</strong></h3>
+<p>This engine:</p>
+<ul>
+<li>maps regime boundaries to spin angles  </li>
+<li>corrects rotational drift  </li>
+<li>aligns invariant spin states  </li>
+</ul>
+<p>It ensures the analyzers measure comparable orientations.</p>
+<hr>
+<h3 id="5-snr-polarizationstability-corrector"><strong>5. S–N–R Polarization‑Stability Corrector</strong></h3>
+<p>The triadic observer stabilizes the spin measurement:</p>
+<ul>
+<li><strong>S:</strong> locks onto stable polarization angles  </li>
+<li><strong>N:</strong> detects depolarization  </li>
+<li><strong>R:</strong> selects the active regime spin mode  </li>
+</ul>
+<p>It keeps the spin data coherent.</p>
+<hr>
+<h3 id="6-compute-spinlock-oscillator-vcg-tcr"><strong>6. Compute Spin‑Lock Oscillator (VCG + TCR)</strong></h3>
+<p>The compute layer:</p>
+<ul>
+<li>locks spin periodicity  </li>
+<li>stabilizes orientation  </li>
+<li>synchronizes regime‑ahead spin modes  </li>
+</ul>
+<p>It sharpens the polarization measurement.</p>
+<hr>
+<h1 id="3-what-the-regime-polarimeter-reveals"><strong>3. What the Regime Polarimeter Reveals</strong></h1>
+<p>It reveals:</p>
+<ul>
+<li><strong>spin orientation across ontologies</strong>  </li>
+<li><strong>how regimes rotate interpretive frames</strong>  </li>
+<li><strong>how invariants appear as stable spin states</strong>  </li>
+<li><strong>how drift shows up as rotation or depolarization</strong>  </li>
+<li><strong>how cross‑ontology coherence appears as aligned spin axes</strong>  </li>
+</ul>
+<p>It is the architecture’s most orientation‑precise diagnostic tool.</p>
+<hr>
+<h1 id="4-why-the-regime-polarimeter-matters"><strong>4. Why the Regime Polarimeter Matters</strong></h1>
+<p>This diagram shows TriadicFrameworks as:</p>
+<ul>
+<li><strong>spin‑sensitive</strong>  </li>
+<li><strong>orientation‑aware</strong>  </li>
+<li><strong>regime‑filtered</strong>  </li>
+<li><strong>ontology‑analyzed</strong>  </li>
+<li><strong>observer‑corrected</strong>  </li>
+<li><strong>compute‑locked</strong>  </li>
+<li><strong>substrate‑anchored</strong></li>
+</ul>
+<p>It captures how the system <em>measures orientation itself</em> — a perfect complement to the Spectrograph’s frequency decomposition and the Diffraction Engine’s boundary spreading.</p>
+  </main>
+</body>
+</html>

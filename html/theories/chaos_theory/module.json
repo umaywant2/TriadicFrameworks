@@ -1,0 +1,90 @@
+{
+  "ai.module": "chaos_theory",
+  "ai.version": "1.0",
+  "ai.purpose": "Provide a regime-aware, operator-level interface to Chaos Theory as a diagnostic lens for nonlinear behavior.",
+  "ai.keywords": [
+    "chaos",
+    "nonlinear systems",
+    "sensitivity to initial conditions",
+    "divergence",
+    "attractors",
+    "recurrence",
+    "regime awareness",
+    "triadic frameworks"
+  ],
+
+  "identity": {
+    "name": "Chaos Theory",
+    "category": "Scientific Theory",
+    "summary": "A behavioral description of nonlinear systems exhibiting sensitivity to initial conditions, divergence, and complex temporal patterns.",
+    "regime": ["R3", "R2→R3", "R1"],
+    "status": "canon-ready"
+  },
+
+  "lineage": {
+    "originators": ["Edward Lorenz", "Henri Poincaré"],
+    "historical_period": "20th Century",
+    "source_domain": "Nonlinear Dynamics",
+    "related_theories": [
+      "information_theory",
+      "thermodynamics",
+      "quantum_mechanics"
+    ],
+    "notes": "Chaos Theory describes behavior, not substrate. It is a signal of insufficient resolution or incomplete lineage tracking."
+  },
+
+  "operators": {
+    "primary": [
+      "divergence",
+      "recurrence",
+      "attractor",
+      "sensitivity",
+      "nonlinearity"
+    ],
+    "secondary": [
+      "finite_precision",
+      "projection_loss",
+      "dimensional_compression"
+    ],
+    "description": "Operators describe observable behaviors of nonlinear systems under constrained resolution or incomplete lineage."
+  },
+
+  "drift": {
+    "risks": [
+      "treating chaos as ontology",
+      "assuming unpredictability is fundamental",
+      "overextending low-dimensional projections"
+    ],
+    "boundaries": [
+      "chaos is a diagnostic regime",
+      "chaos does not describe substrate",
+      "chaos emerges from insufficient resolution"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "sensitivity increases as resolution decreases",
+      "divergence is bounded by system constraints",
+      "attractors represent stable recurrence patterns"
+    ],
+    "failure_modes": [
+      "misinterpreting noise as chaos",
+      "ignoring lineage effects",
+      "assuming randomness where structure exists"
+    ]
+  },
+
+  "cross_module": {
+    "supports": [
+      "information_theory",
+      "thermodynamics",
+      "quantum_mechanics"
+    ],
+    "supported_by": [
+      "dimensional_analysis",
+      "regime_awareness"
+    ],
+    "integration_notes": "Chaos Theory integrates cleanly with RTT engines as a behavioral diagnostic for nonlinear regime transitions."
+  }
+}

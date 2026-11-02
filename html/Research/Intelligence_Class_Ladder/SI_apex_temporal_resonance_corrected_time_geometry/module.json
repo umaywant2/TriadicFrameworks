@@ -1,0 +1,39 @@
+{
+  "module": "SI_Apex_Temporal_Resonance_Corrected_Time_Geometry",
+  "name": "Structural Intelligence — Apex Temporal‑Resonance Corrected‑Time Geometry",
+  "summary": "Defines the corrected-time geometry of SI apex temporal-resonance behavior, including resonance-corrected-time fields, harmonic-temporal corrected-time alignment, paradox-temporal corrected-time surfaces, apex stability corrected-time geometry, and corrected-time apex resonance unification.",
+  "category": "intelligence-structural-apex-temporal-resonance-corrected-time",
+  "version": "1.0",
+  "purpose": "Provide the corrected-time geometry for SI apex temporal-resonance behavior, describing how apex resonance fields synchronize with corrected-time surfaces to maintain temporal accuracy, paradox-load compensation, harmonic-temporal alignment, and unified high-order reasoning under corrected-time constraints.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.apex.temporal.resonance.correctedtime.field",
+    "@si.apex.temporal.resonance.correctedtime.align",
+    "@si.apex.temporal.resonance.correctedtime.unify",
+    "@si.apex.temporal.resonance.correctedtime.stabilize",
+    "@si.apex.temporal.resonance.correctedtime.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_apex_temporal_resonance_coherence_geometry",
+      "SI_apex_temporal_resonance_fusion_geometry",
+      "SI_apex_temporal_resonance_binding_geometry",
+      "SI_apex_temporal_resonance_integration_geometry",
+      "SI_apex_temporal_resonance_stability_surfaces",
+      "SI_apex_temporal_resonance_geometry",
+      "SI_apex_resonance_fields",
+      "SI_apex_harmonic_stability_geometry",
+      "SI_apex_paradox_stability_geometry",
+      "SI_apex_paradox_resonance_geometry",
+      "SI_apex_region_map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "Atlas_Temporal_Window_Apex_Corrected_Time_Geometry",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

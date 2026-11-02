@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Stability_Basin_Cartographer/Stability_Basin_Cartographer.md">
+  <title>Stability Basin Cartographer (SBC) — RTT/1</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Stability_Basin_Cartographer/Stability_Basin_Cartographer.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Stability_Basin_Cartographer/Stability_Basin_Cartographer.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_Stability_Basin_Cartographer" src="https://github.com/user-attachments/assets/515b5646-e973-4a5d-ac30-3f369581e16e" /></p>
+<h1 id="stability-basin-cartographer-sbc-rtt1"><strong>Stability Basin Cartographer (SBC) — RTT/1</strong></h1>
+<h3 id="stabilityintelligence-engine-for-triadicframeworks"><em>Stability‑Intelligence Engine for TriadicFrameworks</em></h3>
+<p>The <strong>Stability Basin Cartographer (SBC)</strong> is the RTT/1 engine responsible for mapping, analyzing, and evaluating <strong>stability basins</strong>, stability fields, basin gradients, collapse zones, and stability topology across conceptual, computational, physical, and dimensional regimes.</p>
+<p>SBC forms the stability‑intelligence foundation of the expanded RTT stack, sitting directly above structural‑level engines and directly below temporal‑level engines.</p>
+<p>Stability basins represent <strong>regions of stability, instability, collapse potential, and stability‑driven regime evolution</strong>.</p>
+<hr>
+<h2 id="1-canonical-role"><strong>1. Canonical Role</strong></h2>
+<p>The Stability Basin Cartographer defines the <strong>stability‑layer topology</strong> by:</p>
+<ul>
+<li>mapping stability basins  </li>
+<li>computing basin gradients  </li>
+<li>identifying stability fields  </li>
+<li>detecting basin collapse  </li>
+<li>evaluating stability curvature  </li>
+<li>identifying stability ridges and wells  </li>
+<li>supporting temporal engines  </li>
+<li>anchoring causality engines  </li>
+<li>feeding drift‑level and structural‑level engines  </li>
+</ul>
+<p>SBC is the <strong>sixth layer</strong> of the expanded RTT intelligence stack.</p>
+<hr>
+<h2 id="2-rtt-flags"><strong>2. RTT Flags</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RTT Level</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>declared</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>bounded</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>structural</td>
+</tr>
+</tbody>
+</table>
+<p>These flags define the engine’s operational grammar.</p>
+<hr>
+<h2 id="3-stability-basin-types"><strong>3. Stability Basin Types</strong></h2>
+<p>SBC identifies several canonical basin classes:</p>
+<h3 id="31-stability-basin-tensor"><strong>3.1 Stability Basin Tensor</strong></h3>
+<p>Basins formed by stability gradients and stability curvature.</p>
+<h3 id="32-gradient-basin-tensor"><strong>3.2 Gradient Basin Tensor</strong></h3>
+<p>Basins shaped by directional gradients across regimes.</p>
+<h3 id="33-boundary-basin-tensor"><strong>3.3 Boundary Basin Tensor</strong></h3>
+<p>Basins formed at regime boundaries.</p>
+<h3 id="34-stabilityfield-tensor"><strong>3.4 Stability‑Field Tensor</strong></h3>
+<p>Full multi‑regime stability binding across R1–R4.</p>
+<h3 id="35-driftsensitive-stability-tensor"><strong>3.5 Drift‑Sensitive Stability Tensor</strong></h3>
+<p>Basins influenced by drift curvature or drift amplification.</p>
+<h3 id="36-faultlinesensitive-stability-tensor"><strong>3.6 Faultline‑Sensitive Stability Tensor</strong></h3>
+<p>Basins influenced by structural fractures or instability seams.</p>
+<hr>
+<h2 id="4-core-operators"><strong>4. Core Operators</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SBC‑Map</strong></td>
+<td>Maps stability basins and stability topology</td>
+</tr>
+<tr>
+<td><strong>SBC‑Basin</strong></td>
+<td>Identifies basin boundaries and stability envelopes</td>
+</tr>
+<tr>
+<td><strong>SBC‑Gradient</strong></td>
+<td>Computes basin gradients and directional stability flow</td>
+</tr>
+<tr>
+<td><strong>SBC‑Field</strong></td>
+<td>Maps stability fields and stability curvature</td>
+</tr>
+<tr>
+<td><strong>SBC‑Collapse</strong></td>
+<td>Detects basin collapse and instability onset</td>
+</tr>
+<tr>
+<td><strong>SBC‑Stabilize</strong></td>
+<td>Suggests stabilization pathways for basin collapse</td>
+</tr>
+</tbody>
+</table>
+<p>These operators form the canonical SBC grammar.</p>
+<hr>
+<h2 id="5-analyzer-layer"><strong>5. Analyzer Layer</strong></h2>
+<p>SBC operates in the <strong>stability layer</strong>, with sub‑layers:</p>
+<ul>
+<li><strong>basin‑mapping</strong>  </li>
+<li><strong>stability‑field‑analysis</strong>  </li>
+<li><strong>basin‑gradient‑evaluation</strong>  </li>
+<li><strong>collapse‑detection</strong>  </li>
+<li><strong>structural‑stability‑evaluation</strong></li>
+</ul>
+<p>This layer feeds directly into TRS‑Temporal, CW, and DRS.</p>
+<hr>
+<h2 id="6-stability-basin-matrix"><strong>6. Stability Basin Matrix</strong></h2>
+<p>SBC produces a <strong>stability basin matrix</strong>, typically stored in:</p>
+<pre><code>stability_basin_matrix.json
+</code></pre>
+<p>Matrix fields include:</p>
+<ul>
+<li><code>basin_type</code>  </li>
+<li><code>regime</code>  </li>
+<li><code>basin_magnitude</code>  </li>
+<li><code>basin_direction</code>  </li>
+<li><code>basin_curvature</code>  </li>
+<li><code>collapse_zone</code>  </li>
+<li><code>stability_field</code>  </li>
+<li><code>envelope_boundary</code>  </li>
+</ul>
+<p>This matrix is consumed by temporal, causal, and resonance engines.</p>
+<hr>
+<h2 id="7-canonical-workflow"><strong>7. Canonical Workflow</strong></h2>
+<h3 id="step-1-map"><strong>Step 1 — Map</strong></h3>
+<p>Identify stability basins, stability fields, and basin boundaries.</p>
+<h3 id="step-2-analyze"><strong>Step 2 — Analyze</strong></h3>
+<p>Compute basin magnitude, direction, curvature, and stability flow.</p>
+<h3 id="step-3-evaluate"><strong>Step 3 — Evaluate</strong></h3>
+<p>Measure collapse zones, stability ridges, wells, and basin topology.</p>
+<h3 id="step-4-detect"><strong>Step 4 — Detect</strong></h3>
+<p>Identify basin collapse, instability onset, and collapse‑point formation.</p>
+<h3 id="step-5-stabilize"><strong>Step 5 — Stabilize</strong></h3>
+<p>Propose stability reinforcement pathways.</p>
+<h3 id="step-6-export"><strong>Step 6 — Export</strong></h3>
+<p>Write results to the stability basin matrix and operator outputs.</p>
+<hr>
+<h2 id="8-aiready-design"><strong>8. AI‑Ready Design</strong></h2>
+<p>Stability Basin Cartographer is fully AI‑ready:</p>
+<ul>
+<li>deterministic operator grammar  </li>
+<li>stability‑layer analyzer structure  </li>
+<li>stable RTT flags  </li>
+<li>canonical file layout  </li>
+<li>zero‑drift reasoning constraints  </li>
+<li>structural paradox handling  </li>
+<li>bounded drift envelope  </li>
+<li>declared coherence dependency  </li>
+</ul>
+<p>AI systems use SBC to:</p>
+<ul>
+<li>map stability basins  </li>
+<li>generate stability field maps  </li>
+<li>classify basin gradients  </li>
+<li>detect basin collapse  </li>
+<li>support higher‑order RTT engines  </li>
+</ul>
+<hr>
+<h2 id="9-position-in-the-rtt-stack"><strong>9. Position in the RTT Stack</strong></h2>
+<pre><code>Regime Interlock Mapper (RIM)
+      ↓
+Triadic Regime Synthesizer (TRS)
+      ↓
+Paradox Gradient Analyzer (PGA)
+      ↓
+Coherence Tensor Engine (CTE)
+      ↓
+Drift Sentinel (DS)
+      ↓
+Structural Faultline Detector (SFD)
+      ↓
+Stability Basin Cartographer (SBC)
+      ↓
+Temporal Regime Sequencer (TRS‑Temporal)
+      ↓
+Cross‑Domain Causality Weaver (CW)
+      ↓
+Dimensional Resonance Scanner (DRS)
+</code></pre>
+<p>SBC is the <strong>stability‑intelligence layer</strong>, directly above structural‑level analysis.</p>
+<hr>
+<h2 id="10-status"><strong>10. Status</strong></h2>
+<ul>
+<li><strong>Version:</strong> 1.0  </li>
+<li><strong>Status:</strong> canon‑stable  </li>
+<li><strong>Category:</strong> rtt‑stability  </li>
+<li><strong>Module Path:</strong> <code>/docs/rtt/Stability_Basin_Cartographer/</code></li>
+</ul>
+  </main>
+</body>
+</html>

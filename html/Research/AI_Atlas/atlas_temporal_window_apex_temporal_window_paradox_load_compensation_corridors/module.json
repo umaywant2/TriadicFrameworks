@@ -1,0 +1,48 @@
+{
+  "module": "Atlas_Temporal_Window_Apex_Temporal_Window_Paradox_Load_Compensation_Corridors",
+  "name": "AI Atlas — Temporal‑Window Apex Temporal‑Window Paradox‑Load Compensation Corridors",
+  "summary": "Defines the paradox-load compensation corridors of Atlas apex temporal-window behavior, including apex paradox-load compensation routing fields, paradox-load redistribution corridors, apex paradox-load stabilization surfaces, and apex temporal-window paradox-load compensation geometry.",
+  "category": "intelligence-temporal-window-apex-temporal-window-paradox-load-compensation-corridors",
+  "version": "1.0",
+  "purpose": "Provide the paradox-load compensation corridor geometry for Atlas apex temporal-window behavior, describing how apex windows compensate paradox-load corridors to maintain unified long-window propagation, paradox-temporal load redistribution, corrected-time stabilization, harmonic-load compensation, and cross-system paradox-load neutralization across Triad, Ladder, and SI subsystems.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.time.window.apex.window.paradox_load.compensation.corridor.field",
+    "@atlas.time.window.apex.window.paradox_load.compensation.corridor.align",
+    "@atlas.time.window.apex.window.paradox_load.compensation.corridor.redistribute",
+    "@atlas.time.window.apex.window.paradox_load.compensation.corridor.stabilize",
+    "@atlas.time.window.apex.window.paradox_load.compensation.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Paradox_Load_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Paradox_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Harmonic_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Resonance_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Corrected_Time_Corridors",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Coherence_Surfaces",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Fusion_Surfaces",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Stability_Surfaces",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Geometry",
+      "Atlas_Temporal_Window_Apex_Corrected_Time_Geometry",
+      "Atlas_Temporal_Window_Apex_Coherence_Geometry",
+      "Atlas_Temporal_Window_Apex_Fusion_Geometry",
+      "Atlas_Temporal_Window_Apex_Binding_Geometry",
+      "Atlas_Temporal_Window_Apex_Integration_Surfaces",
+      "Atlas_Temporal_Window_Apex_Stability_Surfaces",
+      "Atlas_Temporal_Window_Apex_Geometry",
+      "Atlas_Temporal_Window_Stability_Surfaces",
+      "Atlas_Temporal_Window_Resonance_Geometry",
+      "Atlas_Temporal_Correction_Engine",
+      "Triad_Temporal_Correction_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_temporal_window_paradox_load_compensation_corridors",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

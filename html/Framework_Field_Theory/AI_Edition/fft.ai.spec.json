@@ -1,0 +1,94 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.spec.schema.json",
+  "id": "fft.ai.spec",
+  "version": "1.33",
+  "updated": "2026-10-09T09:41:00-04:00",
+  "title": "FFT AI Edition — Specification v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "compliance_requirements": [
+    "All 67 modules present and registry-validated (INV-012)",
+    "coherence=declared asserted at session init (INV-003)",
+    "drift bounded within δ_max at all times (INV-004)",
+    "paradox states enumerated and structurally resolved (INV-005)",
+    "QMROOT ladder traceable from 0D for all modules (INV-013)",
+    "Spine URL resolved at runtime, not cached (INV-011)",
+    "S-N-R partition maintained without overlap (INV-007)",
+    "RTT phase τ=dR/dφ consistent across RTT-bound modules (INV-006)"
+  ],
+  "spec_sections": {
+    "S1": {
+      "title": "Field Definitions",
+      "ref": "fft.core.json#triadic_fields"
+    },
+    "S2": {
+      "title": "Invariants",
+      "ref": "fft.invariant.json"
+    },
+    "S3": {
+      "title": "Session Lifecycle",
+      "ref": "fft.ai.core.json#lifecycle"
+    },
+    "S4": {
+      "title": "Operator Dispatch",
+      "ref": "fft.ai.execution.graph.json"
+    },
+    "S5": {
+      "title": "RTT Integration",
+      "ref": "fft.ai.rtt.bridge.json"
+    },
+    "S6": {
+      "title": "Coherence Layer",
+      "ref": "fft.ai.coherence.json"
+    },
+    "S7": {
+      "title": "Drift Monitor",
+      "ref": "fft.ai.drift.monitor.json"
+    },
+    "S8": {
+      "title": "Paradox Resolution",
+      "ref": "fft.ai.paradox.resolver.json"
+    },
+    "S9": {
+      "title": "SET Engine",
+      "ref": "fft.ai.set.engine.json"
+    },
+    "S10": {
+      "title": "DCO Scaffold",
+      "ref": "fft.ai.dco.map.json"
+    },
+    "S11": {
+      "title": "S-N-R Monitor",
+      "ref": "fft.ai.snr.monitor.json"
+    },
+    "S12": {
+      "title": "Spine Connector",
+      "ref": "fft.ai.spine.connector.json"
+    },
+    "S13": {
+      "title": "QMROOT Integration",
+      "ref": "fft.ai.rtt.qmroot.json"
+    },
+    "S14": {
+      "title": "Extension Packs",
+      "ref": "ep.harmonic_escalation.json"
+    },
+    "S15": {
+      "title": "Substrate Layer",
+      "ref": "fft.ai.substrate.json"
+    },
+    "S16": {
+      "title": "Validation",
+      "ref": "fft.validation.json"
+    }
+  },
+  "v133_delta": [
+    "Sections S6–S13 new in v1.33",
+    "All session modules updated with coherence/drift/paradox fields",
+    "67-module file count enforced"
+  ]
+}

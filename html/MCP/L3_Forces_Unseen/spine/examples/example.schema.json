@@ -1,0 +1,57 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "S3 Spine — Example Envelope Schema",
+  "description": "Scoped schema defining the structure of example envelopes for the S3 Spine subsystem.",
+  "version": "0.1.0",
+
+  "schema": {
+    "type": "object",
+    "required": [
+      "canonical",
+      "reality",
+      "imagination",
+      "information",
+      "error",
+      "qmroot"
+    ],
+
+    "properties": {
+      "canonical": {
+        "type": "string",
+        "description": "Pure structural traversal of the S3 spine (gradient → field → integrity)."
+      },
+      "reality": {
+        "type": "string",
+        "description": "Machine-level interpretation of spine transitions."
+      },
+      "imagination": {
+        "type": "string",
+        "description": "Symbolic or hypothetical interpretation of unseen force-regime mechanics."
+      },
+      "information": {
+        "type": "string",
+        "description": "Informational mapping of spine semantics and lineage."
+      },
+      "error": {
+        "type": "string",
+        "description": "Failure-mode interpretation describing rupture misalignment or integrity collapse."
+      },
+      "qmroot": {
+        "type": "string",
+        "description": "Origin-state interpretation of spine behavior in pre-regime qmroot substrate."
+      }
+    }
+  },
+
+  "notes": {
+    "spineAlignment": "Schema is scoped to S3 Spine examples only.",
+    "exampleCount": 6,
+    "registry": "spine.examples.registry.json",
+    "docs": "docs/*.md",
+    "envelopes": "*.001.json"
+  }
+}

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Integrations/UE6/Editor/WBP_RTT_Timeline.md">
+  <title>WBPRTTTimeline — UI Widget Blueprint Scaffolding</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Integrations/UE6/Editor/WBP_RTT_Timeline.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Integrations/UE6/Editor/WBP_RTT_Timeline.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="wbp_rtt_timeline-ui-widget-blueprint-scaffolding">WBP_RTT_Timeline — UI Widget Blueprint Scaffolding</h1>
+<p><strong>RTT / Integrations / UE6 / Editor</strong></p>
+<p>This widget displays RTT operator values over time inside the UE6 editor or runtime environment.</p>
+<hr>
+<h2 id="widget-name">Widget Name</h2>
+<p><code>WBP_RTT_Timeline</code></p>
+<h2 id="parent-class">Parent Class</h2>
+<p><code>UserWidget</code></p>
+<hr>
+<h2 id="hierarchy">Hierarchy</h2>
+<pre><code>CanvasPanel
+    ├── Border_Header
+    │       └── TextBlock_Title (&quot;RTT Operator Timeline&quot;)
+    ├── GraphPanel
+    │       ├── Image_BackgroundGrid
+    │       ├── TimelineCanvas (Overlay)
+    │       │       ├── Line_Phi
+    │       │       ├── Line_Variance
+    │       │       ├── Line_Resonance
+    │       │       └── Line_Entropy
+    └── LegendPanel
+            ├── PhiColorSwatch
+            ├── VarianceColorSwatch
+            ├── ResonanceColorSwatch
+            └── EntropyColorSwatch
+</code></pre>
+<hr>
+<h2 id="variables">Variables</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TimelineData</code></td>
+<td>Array\&lt;RTTFrameStruct&gt;</td>
+<td>φ–V–R–Entropy frames</td>
+</tr>
+<tr>
+<td><code>PhiColor</code></td>
+<td>LinearColor</td>
+<td>φ line color</td>
+</tr>
+<tr>
+<td><code>VarianceColor</code></td>
+<td>LinearColor</td>
+<td>V line color</td>
+</tr>
+<tr>
+<td><code>ResonanceColor</code></td>
+<td>LinearColor</td>
+<td>R line color</td>
+</tr>
+<tr>
+<td><code>EntropyColor</code></td>
+<td>LinearColor</td>
+<td>entropy line color</td>
+</tr>
+<tr>
+<td><code>MaxFrames</code></td>
+<td>Integer</td>
+<td>timeline length</td>
+</tr>
+<tr>
+<td><code>AutoScroll</code></td>
+<td>Boolean</td>
+<td>scrolls as new frames arrive</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="struct-rttframestruct">Struct: RTTFrameStruct</h2>
+<pre><code>float Phi
+float Variance
+float Resonance
+float Entropy
+</code></pre>
+<hr>
+<h2 id="graph-logic">Graph Logic</h2>
+<h3 id="event-construct">Event: <code>Construct</code></h3>
+<ul>
+<li>Initialize colors  </li>
+<li>Clear timeline  </li>
+<li>Bind to RTTTools timeline events (optional)</li>
+</ul>
+<h3 id="event-tick">Event: <code>Tick</code></h3>
+<ul>
+<li>If new frame available → append to <code>TimelineData</code></li>
+<li>If <code>AutoScroll</code> → shift view  </li>
+<li>Redraw lines on <code>TimelineCanvas</code></li>
+</ul>
+<h3 id="function-drawtimeline">Function: <code>DrawTimeline()</code></h3>
+<ul>
+<li>Normalize values  </li>
+<li>Plot φ, V, R, entropy as polylines  </li>
+<li>Use color swatches for legend  </li>
+</ul>
+<h3 id="function-addframerttframestruct-frame">Function: <code>AddFrame(RTTFrameStruct Frame)</code></h3>
+<ul>
+<li>Append to <code>TimelineData</code></li>
+<li>If &gt; <code>MaxFrames</code> → remove oldest  </li>
+<li>Call <code>DrawTimeline()</code></li>
+</ul>
+<hr>
+<h2 id="visual-style">Visual Style</h2>
+<ul>
+<li><strong>Background:</strong> subtle grid (dark gray, 10% opacity)  </li>
+<li><strong>Lines:</strong>  </li>
+<li>φ → cyan  </li>
+<li>variance → yellow  </li>
+<li>resonance → magenta  </li>
+<li>entropy → red  </li>
+<li><strong>Legend:</strong> small color boxes with labels  </li>
+</ul>
+<hr>
+<h2 id="status">Status</h2>
+<p>Ready for implementation.<br>
+Fully aligned with the 2026 RTT Integrations standard.</p>
+  </main>
+</body>
+</html>

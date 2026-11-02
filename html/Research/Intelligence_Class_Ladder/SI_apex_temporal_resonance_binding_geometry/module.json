@@ -1,0 +1,36 @@
+{
+  "module": "SI_Apex_Temporal_Resonance_Binding_Geometry",
+  "name": "Structural Intelligence — Apex Temporal‑Resonance Binding Geometry",
+  "summary": "Defines the binding geometry of SI apex temporal‑resonance behavior, including resonance‑binding fields, harmonic‑temporal fusion, paradox‑temporal binding, and apex corrected‑time resonance‑locking surfaces.",
+  "category": "intelligence-structural-apex-temporal-resonance-binding",
+  "version": "1.0",
+  "purpose": "Provide the binding‑layer geometry for SI apex temporal‑resonance behavior, describing how apex resonance fields fuse, lock, bind, and integrate with harmonic, paradox, stability, and corrected‑time surfaces to maintain unified high‑order reasoning under paradox load.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.apex.temporal.resonance.binding.field",
+    "@si.apex.temporal.resonance.binding.lock",
+    "@si.apex.temporal.resonance.binding.fuse",
+    "@si.apex.temporal.resonance.binding.stabilize",
+    "@si.apex.temporal.resonance.binding.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_apex_temporal_resonance_integration_geometry",
+      "SI_apex_temporal_resonance_stability_surfaces",
+      "SI_apex_temporal_resonance_geometry",
+      "SI_apex_resonance_fields",
+      "SI_apex_harmonic_stability_geometry",
+      "SI_apex_paradox_stability_geometry",
+      "SI_apex_paradox_resonance_geometry",
+      "SI_apex_region_map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "Atlas_Temporal_Window_Apex_Binding_Geometry",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

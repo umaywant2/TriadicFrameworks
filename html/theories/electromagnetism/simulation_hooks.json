@@ -1,0 +1,104 @@
+{
+  "module": "electromagnetism",
+  "version": "1.0",
+  "identity": "field-coherence theory",
+  "description": "Simulation hooks for Maxwell-operator evolution, field propagation, charge/current sourcing, coherence evaluation, and regime-aware EM behavior.",
+
+  "hooks": {
+    "initialize_field": {
+      "purpose": "Create the base electromagnetic field configuration.",
+      "inputs": ["E_field", "B_field", "charge_distribution", "current_distribution", "geometry"],
+      "outputs": ["field_state"],
+      "constraints": [
+        "E and B must be structurally valid fields",
+        "no force-centric framing",
+        "geometry must be compatible with field operators"
+      ]
+    },
+
+    "apply_maxwell_operators": {
+      "purpose": "Apply Maxwell operators (divergence and curl) to evolve the field.",
+      "inputs": ["field_state", "charge_distribution", "current_distribution", "geometry"],
+      "outputs": ["updated_field_state"],
+      "operators": {
+        "divE": "∇·E = ρ/ε₀",
+        "divB": "∇·B = 0",
+        "curlE": "∇×E = -∂B/∂t",
+        "curlB": "∇×B = μ₀J + μ₀ε₀∂E/∂t"
+      },
+      "constraints": [
+        "operators must be treated as structural, not force laws",
+        "no particle-first metaphors",
+        "field evolution must preserve coherence"
+      ]
+    },
+
+    "propagate_field": {
+      "purpose": "Propagate the electromagnetic field through space-time.",
+      "inputs": ["field_state", "geometry"],
+      "outputs": ["propagated_field_state"],
+      "constraints": [
+        "light is self-coherent field propagation",
+        "propagation must respect geometric constraints",
+        "no medium-based ether metaphors"
+      ]
+    },
+
+    "update_sources": {
+      "purpose": "Update charge and current distributions as field sources.",
+      "inputs": ["field_state", "charge_rules", "current_rules"],
+      "outputs": ["updated_charge_distribution", "updated_current_distribution"],
+      "constraints": [
+        "sources must remain compatible with divergence and curl operators",
+        "no action-at-a-distance framing"
+      ]
+    },
+
+    "evaluate_field_coherence": {
+      "purpose": "Evaluate electromagnetic coherence.",
+      "inputs": ["field_state", "geometry"],
+      "outputs": ["coherence_score"],
+      "constraints": [
+        "coherence = divergence consistency + curl consistency + propagation stability",
+        "no teleology",
+        "no force-centric metrics"
+      ]
+    },
+
+    "regime_transition": {
+      "purpose": "Transition EM behavior across RTT regimes.",
+      "inputs": ["field_state", "from_regime", "to_regime"],
+      "outputs": ["transitioned_field_state"],
+      "constraints": [
+        "R1: classical field stability",
+        "R2: dynamic field propagation",
+        "R3: geometry-coupled, multi-scale field behavior",
+        "transitions must preserve field coherence"
+      ]
+    },
+
+    "detect_em_collapse": {
+      "purpose": "Classify electromagnetic failure modes.",
+      "inputs": ["field_state"],
+      "outputs": ["collapse_mode"],
+      "modes": {
+        "EM1": "divergence collapse (∇·E or ∇·B invalid)",
+        "EM2": "curl collapse (∇×E or ∇×B invalid)",
+        "EM3": "propagation collapse (unstable wave evolution)",
+        "EM4": "source collapse (invalid charge/current configuration)",
+        "EM5": "geometry incompatibility (field-geometry mismatch)"
+      }
+    },
+
+    "reinforce_field_coherence": {
+      "purpose": "Stabilize electromagnetic behavior through repeated coherent operator cycles.",
+      "inputs": ["field_history", "geometry_history"],
+      "outputs": ["reinforced_field_state"],
+      "constraints": [
+        "reinforcement must increase coherence",
+        "reinforcement is structural, not teleological",
+        "no force-centric or particle-centric framing"
+      ]
+    }
+  }
+}

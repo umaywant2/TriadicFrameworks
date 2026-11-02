@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TFT Scripts • TFT_3Pack</title>
+
+<style>
+    body { background:#0d0d0d; color:#e0e0e0; font-family:"Segoe UI",Roboto,sans-serif; margin:0; padding:0; }
+    h1,h2 { text-align:center; margin-top:40px; color:#fff; letter-spacing:1px; }
+    h1 { font-size:2.4rem; }
+    h2 { font-size:1.6rem; }
+    .section { width:90%; max-width:1000px; margin:40px auto; padding:30px; background:#1a1a1a; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.6); }
+    .emoji { font-size:2.4rem; display:block; text-align:center; margin-bottom:10px; }
+    .file { background:#222; padding:15px; border-radius:10px; border:1px solid #333; margin-top:20px; }
+    code,pre { background:#111; padding:10px; border-radius:8px; display:block; overflow-x:auto; color:#9cd3ff; }
+    a { color:#76c7ff; text-decoration:none; }
+    a:hover { color:#c0e8ff; }
+</style>
+</head>
+
+<body>
+
+<!-- Logo Banner (drop‑in component) start  -->
+<div style="width:100%; padding:60px 0; background:linear-gradient(135deg,#1f1f1f,#0b0b0b); text-align:center;">
+    <span style="font-size:3.2rem; display:block; margin-bottom:10px;">🔱</span>
+    <h1 style="color:#fff; font-size:2.6rem; margin:0;">TFT_3Pack v1.3</h1>
+    <h2 style="color:#ccc; font-size:1.2rem; margin-top:10px;">TriadicFrameworks • Nawderian Theorem • Resonant-Time Engine</h2>
+</div>
+<!-- Logo Banner (drop‑in component) -->
+
+<h1>⚙️ TFT Shell Scripts</h1>
+<h2>Execution • Validation • Conversion</h2>
+
+<div class="section">
+    <span class="emoji">📜</span>
+    <h2>Available Scripts</h2>
+
+    <div class="file">
+        <strong>run_tft.sh</strong><br>
+        Executes a `.fff` resonance file and prints computed values.<br>
+        <a href="run_tft.sh">Open script</a>
+    </div>
+
+    <div class="file">
+        <strong>validate_tft.sh</strong><br>
+        Validates `.fff` file structure and required fields.<br>
+        <a href="validate_tft.sh">Open script</a>
+    </div>
+
+    <div class="file">
+        <strong>convert_tft.sh</strong><br>
+        Converts `.fff` files into readable summaries.<br>
+        <a href="convert_tft.sh">Open script</a>
+    </div>
+
+    <div class="file">
+        <strong>batch_process.sh</strong><br>
+        Runs multiple `.fff` files in sequence.<br>
+        <a href="batch_process.sh">Open script</a>
+    </div>
+
+</div>
+
+<!-- CLI‑Style Terminal UI (for scripts page) start   -->
+<div style="
+    background:#000;
+    color:#33ff66;
+    font-family:Consolas, monospace;
+    padding:20px;
+    border-radius:10px;
+    border:2px solid #0f0;
+    box-shadow:0 0 20px rgba(0,255,0,0.3);
+    margin-top:30px;
+">
+<pre>
+$ ./run_tft.sh formats/example_basic.fff
+→ Loading resonance file...
+→ τ_r = 2.4
+→ D3 = 3, D6 = 6, D9 = 9
+→ T_f = 1.2
+→ ΛΘ = 0.8
+→ F3 = 1.0
+→ X = 1.2
+✔ Execution complete.
+</pre>
+</div>
+<!-- CLI‑Style Terminal UI (for scripts page) end   -->
+
+<div class="section">
+    <span class="emoji">📘</span>
+    <h2>Documentation</h2>
+    <p>See the <a href="docs/">DOCS</a> for usage examples and script descriptions.</p>
+</div>
+
+</body>
+</html>

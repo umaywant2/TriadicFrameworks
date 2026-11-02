@@ -1,0 +1,105 @@
+{
+  "module": "information_theory",
+  "version": "1.0",
+  "identity": "distinction-first coherence grammar",
+  "description": "Simulation hooks for distinction initialization, coherence evaluation, signal operators, and regime-aware information dynamics.",
+
+  "hooks": {
+    "initialize_distinction_space": {
+      "purpose": "Create the base distinction space for all information operations.",
+      "inputs": ["dimensional_profile", "primitive_distinctions"],
+      "outputs": ["distinction_space"],
+      "constraints": [
+        "no semantic assumptions",
+        "no probabilistic assumptions",
+        "distinctions must be structurally valid"
+      ]
+    },
+
+    "construct_signal_operator": {
+      "purpose": "Define a signal as an operator acting on distinction space.",
+      "inputs": ["operator_signature", "distinction_space"],
+      "outputs": ["signal_operator"],
+      "constraints": [
+        "signals are operators, not messages",
+        "operators must preserve distinction integrity"
+      ]
+    },
+
+    "compute_information_coherence": {
+      "purpose": "Evaluate coherence of distinctions under operator action.",
+      "inputs": ["distinction_space", "signal_operator"],
+      "outputs": ["coherence_score"],
+      "constraints": [
+        "coherence = distinction stability",
+        "no entropy or probability required",
+        "coherence must be structural"
+      ]
+    },
+
+    "apply_signal_operator": {
+      "purpose": "Apply a signal operator to a distinction space.",
+      "inputs": ["signal_operator", "distinction_space"],
+      "outputs": ["updated_distinction_space", "operator_trace"],
+      "constraints": [
+        "operator must not collapse distinctions",
+        "operator_trace must be monotonic across regimes"
+      ]
+    },
+
+    "evaluate_distinction_integrity": {
+      "purpose": "Check whether distinctions remain valid after operator action.",
+      "inputs": ["updated_distinction_space"],
+      "outputs": ["integrity_report"],
+      "constraints": [
+        "distinctions must remain non-degenerate",
+        "dimensional profile must remain consistent"
+      ]
+    },
+
+    "compute_distinction_distance": {
+      "purpose": "Measure structural distance between distinctions.",
+      "inputs": ["distinction_A", "distinction_B"],
+      "outputs": ["distance_metric"],
+      "constraints": [
+        "distance is structural, not probabilistic",
+        "metric must be regime-stable"
+      ]
+    },
+
+    "regime_transition": {
+      "purpose": "Transition distinction behavior across RTT regimes.",
+      "inputs": ["distinction_space", "from_regime", "to_regime"],
+      "outputs": ["transitioned_distinction_space"],
+      "constraints": [
+        "R0: primitive distinctions only",
+        "R1: stable distinctions",
+        "R2: operator geometry active",
+        "R3: dimensional operators modify distinctions",
+        "transitions must preserve coherence"
+      ]
+    },
+
+    "detect_collapse_mode": {
+      "purpose": "Classify distinction failures.",
+      "inputs": ["distinction_space"],
+      "outputs": ["collapse_mode"],
+      "modes": {
+        "C1": "distinction ambiguity",
+        "C2": "dimensional inconsistency",
+        "C3": "operator instability",
+        "C4": "coherence failure"
+      }
+    },
+
+    "reinforce_distinction_structure": {
+      "purpose": "Strengthen distinctions through repeated stable operator action.",
+      "inputs": ["distinction_space", "operator_history"],
+      "outputs": ["reinforced_distinction_space"],
+      "constraints": [
+        "reinforcement is structural, not semantic",
+        "reinforcement must increase coherence"
+      ]
+    }
+  }
+}

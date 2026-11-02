@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/D369_Chip_Spec/Student_Learning_Paths.md">
+  <title>Student Learning Paths</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/D369_Chip_Spec/Student_Learning_Paths.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/D369_Chip_Spec/Student_Learning_Paths.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="student-learning-paths">Student Learning Paths</h1>
+<h2 id="d369-chip-spec-guided-reading-journeys">D369 Chip Spec — Guided Reading Journeys</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Module</strong></td>
+<td>D369_Chip_Spec</td>
+</tr>
+<tr>
+<td><strong>File</strong></td>
+<td>Student_Learning_Paths.md</td>
+</tr>
+<tr>
+<td><strong>Role</strong></td>
+<td>reference · map</td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>first-fill</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>Capture_Source.md → this file</td>
+</tr>
+<tr>
+<td><strong>Canon Tag</strong></td>
+<td>rtt-d369-chip-spec</td>
+</tr>
+<tr>
+<td><strong>Audience</strong></td>
+<td>Students · educators · self-directed learners · AIs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="1-purpose">1 — Purpose</h2>
+<p>This file is a navigation guide. It helps students find a path through the D369 Chip Spec module that matches their background, their curiosity, and their available time.</p>
+<p>The module contains 17 files, 76 numbered identifiers, and 182 checklist items. That is a lot of surface area. No student needs all of it at once, and no single reading order works for everyone.</p>
+<p>This file provides:</p>
+<ul>
+<li><strong>Four background-specific paths</strong> — tailored reading sequences for different starting points</li>
+<li><strong>Three depth levels</strong> — newcomer, intermediate, and advanced</li>
+<li><strong>Milestone markers</strong> — what a student should be able to explain after each stage</li>
+<li><strong>Entry guidance</strong> — where this module sits in the broader adoption timeline</li>
+</ul>
+<p>It does not provide a curriculum, a syllabus, or a certification. It is a map, not a school.</p>
+<hr>
+<h2 id="2-who-this-file-is-for">2 — Who This File Is For</h2>
+<p>Any student who has arrived at the D369 module and wants to know where to start.</p>
+<p><strong>No prerequisites.</strong> You do not need to know RTT. You do not need to know chip design. You do not need to know TriadicFrameworks. You need curiosity and the willingness to read carefully.</p>
+<p>If you already know chip architecture, you will move faster. If you do not, the module was written to meet you where you are. Every file was drafted to be engineer-facing <em>and</em> student-ready.</p>
+<blockquote>
+<p>See <code>FAQ.md</code> §12 (Q12.1–Q12.7) for quick answers to the seven most common student questions.</p>
+</blockquote>
+<hr>
+<h2 id="3-before-you-begin">3 — Before You Begin</h2>
+<h3 id="31-the-one-sentence">3.1 — The One Sentence</h3>
+<p>If you remember nothing else from the D369 module:</p>
+<blockquote>
+<p><em>"Nothing here tells us what to build — only what not to erase."</em></p>
+</blockquote>
+<p>That sentence is the entire specification in one breath. Everything else is detail.</p>
+<h3 id="32-the-building-metaphor">3.2 — The Building Metaphor</h3>
+<p>The D369 module asks chip manufacturers to do something simple: when you build a building, run empty conduit in the walls. You do not have to pull wire through it. You do not have to connect it to anything. You just leave room.</p>
+<p>That is what structural observability reservation means. Reserved space. No behavior. No promises. Just space that is cheaper to include now than to retrofit later.</p>
+<blockquote>
+<p>See <code>README.md</code> for the full building metaphor — a 9-floor tower with an electrical system.</p>
+</blockquote>
+<h3 id="33-three-tags">3.3 — Three Tags</h3>
+<p>The entire specification reduces to preserving three metadata tags:</p>
+<pre><code>-
+┌──────────────────────────────────────────┐
+│         Three Structural Tags            │
+├──────────────────────────────────────────┤
+│                                          │
+│  1. Source ID                            │
+│     Who produced this signal?            │
+│     (static, assigned at design time)    │
+│                                          │
+│  2. Lifecycle State                      │
+│     What phase is this signal in?        │
+│     (externally writable, not inferred)  │
+│                                          │
+│  3. Monotonic Time                       │
+│     When did this happen?                │
+│     (non-resettable within clock domain) │
+│                                          │
+└──────────────────────────────────────────┘
+</code></pre>
+<p>If you understand those three tags, you understand what the specification preserves. Everything else — the 12 requirements, the 182 checklist items, the diagrams — exists to ensure those three tags survive the design process.</p>
+<hr>
+<h2 id="4-learning-paths-by-background">4 — Learning Paths by Background</h2>
+<p>Four paths are provided below. Each is a reading sequence through the module's files, ordered to match how a student from that background would naturally approach the material.</p>
+<p><strong>You do not need to pick the "right" path.</strong> Pick the one closest to your background. If none fits, use Path D (Interdisciplinary). If you switch mid-stream, that is fine — every file stands alone.</p>
+<hr>
+<h3 id="path-a-electrical-engineering-hardware-design">Path A — Electrical Engineering / Hardware Design</h3>
+<p><strong>You already know:</strong> RTL, synthesis, timing closure, DFT, physical design flows.
+<strong>You will recognize:</strong> The checklist structure, the design review format, the "what not to erase" framing.
+<strong>Your instinct:</strong> "Show me the requirements and the review checklist."</p>
+<h4 id="reading-sequence">Reading Sequence</h4>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>File</th>
+<th>Why This Order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td><code>README.md</code></td>
+<td>Module overview, building metaphor, structural orientation</td>
+</tr>
+<tr>
+<td>A2</td>
+<td><code>Spec_Overview.md</code></td>
+<td>Executive-level specification summary — your 10-minute brief</td>
+</tr>
+<tr>
+<td>A3</td>
+<td><code>Contractual_Requirements.md</code></td>
+<td>The 12 requirements (R1.1–R7.1) — this is the spec itself</td>
+</tr>
+<tr>
+<td>A4</td>
+<td><code>Internal_Design_Review_Checklist.md</code></td>
+<td>62-item checklist — your carry-in to design review</td>
+</tr>
+<tr>
+<td>A5</td>
+<td><code>Diagram_SoC.md</code></td>
+<td>Full SoC block decomposition, NoC erasures (N-1–N-5)</td>
+</tr>
+<tr>
+<td>A6</td>
+<td><code>Diagram_Chiplet.md</code></td>
+<td>Chiplet topologies, D2D interfaces, interposer types</td>
+</tr>
+<tr>
+<td>A7</td>
+<td><code>Memory_Controller_Checklist.md</code></td>
+<td>55-item controller checklist, 8 failure modes (MC-1–MC-8)</td>
+</tr>
+<tr>
+<td>A8</td>
+<td><code>DIMM_Module_Checklist.md</code></td>
+<td>38-item DIMM checklist, 5 failure modes (FM-1–FM-5)</td>
+</tr>
+<tr>
+<td>A9</td>
+<td><code>Board_Level_Alignment.md</code></td>
+<td>4 preservation rules, board failure modes, 27-item checklist</td>
+</tr>
+<tr>
+<td>A10</td>
+<td><code>Engineering_Rationale.md</code></td>
+<td>Why the spec exists — historical precedents, cost argument</td>
+</tr>
+<tr>
+<td>A11</td>
+<td><code>Non_Claims.md</code></td>
+<td>What the spec explicitly does not do (NC-1–NC-10)</td>
+</tr>
+<tr>
+<td>A12</td>
+<td><code>Memory_Alignment_Spec.md</code></td>
+<td>8-tier memory hierarchy, structural events (ME-1–ME-7)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After A12:</strong> Read <code>Glossary_Extensions.md</code> for term definitions, <code>FAQ.md</code> for edge cases, <code>Adoption_Roadmap.md</code> for where the spec goes next.</p>
+<hr>
+<h3 id="path-b-computer-science-software-engineering">Path B — Computer Science / Software Engineering</h3>
+<p><strong>You already know:</strong> Systems programming, OS internals, debugging, telemetry, APIs.
+<strong>You will recognize:</strong> The metadata-as-separate-channel pattern, the "optional by default" constraint, the TCP/IP parallel.
+<strong>Your instinct:</strong> "What is the abstraction, and where does it sit in the stack?"</p>
+<h4 id="reading-sequence_1">Reading Sequence</h4>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>File</th>
+<th>Why This Order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td><code>README.md</code></td>
+<td>Module overview, building metaphor, structural orientation</td>
+</tr>
+<tr>
+<td>B2</td>
+<td><code>FAQ.md</code></td>
+<td>40+ questions — fastest way to build a mental model</td>
+</tr>
+<tr>
+<td>B3</td>
+<td><code>Spec_Overview.md</code></td>
+<td>Executive-level summary — the whole spec in one file</td>
+</tr>
+<tr>
+<td>B4</td>
+<td><code>Engineering_Rationale.md</code></td>
+<td>The "why" — TCP/IP parallel, DFT comparison, cost argument</td>
+</tr>
+<tr>
+<td>B5</td>
+<td><code>Non_Claims.md</code></td>
+<td>What the spec does not claim — boundaries and silence</td>
+</tr>
+<tr>
+<td>B6</td>
+<td><code>Contractual_Requirements.md</code></td>
+<td>The 12 requirements — now you have context for them</td>
+</tr>
+<tr>
+<td>B7</td>
+<td><code>Diagram_SoC.md</code></td>
+<td>SoC internals — how the metadata layer relates to function</td>
+</tr>
+<tr>
+<td>B8</td>
+<td><code>Board_Level_Alignment.md</code></td>
+<td>How metadata survives board-level integration</td>
+</tr>
+<tr>
+<td>B9</td>
+<td><code>Memory_Alignment_Spec.md</code></td>
+<td>Memory hierarchy as a persistence problem</td>
+</tr>
+<tr>
+<td>B10</td>
+<td><code>Diagram_Chiplet.md</code></td>
+<td>Multi-die topologies — distributed metadata challenge</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After B10:</strong> Read <code>Glossary_Extensions.md</code> for term alignment, <code>Adoption_Roadmap.md</code> for ecosystem context, <code>Internal_Design_Review_Checklist.md</code> if you want to see the hardware engineering side.</p>
+<hr>
+<h3 id="path-c-physics-applied-science">Path C — Physics / Applied Science</h3>
+<p><strong>You already know:</strong> Measurement theory, observability, conservation principles, signal integrity.
+<strong>You will recognize:</strong> The "observation without interference" constraint, the isolation requirement, the monotonic time axiom.
+<strong>Your instinct:</strong> "What is actually being preserved, and why does it matter structurally?"</p>
+<h4 id="reading-sequence_2">Reading Sequence</h4>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>File</th>
+<th>Why This Order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td><code>README.md</code></td>
+<td>Module overview, building metaphor, structural orientation</td>
+</tr>
+<tr>
+<td>C2</td>
+<td><code>Spec_Overview.md</code></td>
+<td>Executive-level summary — the observability frame</td>
+</tr>
+<tr>
+<td>C3</td>
+<td><code>Engineering_Rationale.md</code></td>
+<td>Structural reasoning — why observability is designed in</td>
+</tr>
+<tr>
+<td>C4</td>
+<td><code>Non_Claims.md</code></td>
+<td>Explicit boundaries — what the spec leaves silent</td>
+</tr>
+<tr>
+<td>C5</td>
+<td><code>Contractual_Requirements.md</code></td>
+<td>The 12 requirements — observe the isolation axioms</td>
+</tr>
+<tr>
+<td>C6</td>
+<td><code>Memory_Alignment_Spec.md</code></td>
+<td>Memory as a persistence hierarchy — 8 tiers, volatility line</td>
+</tr>
+<tr>
+<td>C7</td>
+<td><code>Diagram_SoC.md</code></td>
+<td>SoC as a system — where structural information is created and lost</td>
+</tr>
+<tr>
+<td>C8</td>
+<td><code>Memory_Controller_Checklist.md</code></td>
+<td>Controller as structural bottleneck — 8 failure modes</td>
+</tr>
+<tr>
+<td>C9</td>
+<td><code>FAQ.md</code></td>
+<td>Edge cases and conceptual clarifications</td>
+</tr>
+<tr>
+<td>C10</td>
+<td><code>Adoption_Roadmap.md</code></td>
+<td>How a structural reservation becomes infrastructure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After C10:</strong> Read <code>Diagram_Chiplet.md</code> for multi-die structural challenges, <code>Board_Level_Alignment.md</code> for preservation rules at the board boundary, <code>Glossary_Extensions.md</code> for precise term definitions.</p>
+<hr>
+<h3 id="path-d-interdisciplinary-new-to-all-of-it">Path D — Interdisciplinary / New to All of It</h3>
+<p><strong>You already know:</strong> You are curious. That is enough.
+<strong>You will recognize:</strong> Clear writing, honest framing, and a specification that respects your time.
+<strong>Your instinct:</strong> "Start at the beginning and explain things as they come."</p>
+<h4 id="reading-sequence_3">Reading Sequence</h4>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>File</th>
+<th>Why This Order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1</td>
+<td><code>README.md</code></td>
+<td>Start here — the building metaphor makes everything concrete</td>
+</tr>
+<tr>
+<td>D2</td>
+<td><code>FAQ.md</code> §12</td>
+<td>Student Questions section — the 7 most common questions</td>
+</tr>
+<tr>
+<td>D3</td>
+<td><code>Spec_Overview.md</code></td>
+<td>The whole module summarized in one file</td>
+</tr>
+<tr>
+<td>D4</td>
+<td><code>Glossary_Extensions.md</code></td>
+<td>70+ terms defined — keep this open as a reference</td>
+</tr>
+<tr>
+<td>D5</td>
+<td><code>FAQ.md</code> (full)</td>
+<td>All 40+ questions — build understanding through Q&amp;A</td>
+</tr>
+<tr>
+<td>D6</td>
+<td><code>Engineering_Rationale.md</code></td>
+<td>The "why" — real-world failures that motivate the spec</td>
+</tr>
+<tr>
+<td>D7</td>
+<td><code>Non_Claims.md</code></td>
+<td>What the spec refuses to claim — this builds trust</td>
+</tr>
+<tr>
+<td>D8</td>
+<td><code>Contractual_Requirements.md</code></td>
+<td>The actual spec — 12 requirements, now in context</td>
+</tr>
+<tr>
+<td>D9</td>
+<td><code>Adoption_Roadmap.md</code></td>
+<td>Where all of this is going — and where students fit</td>
+</tr>
+<tr>
+<td>D10</td>
+<td><code>Diagram_SoC.md</code></td>
+<td>Visual architecture — take it slow, use the glossary</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After D10:</strong> Explore any file that interests you. Every file stands alone. Use <code>Session_Context.md</code> §7 for the module's own recommended reading order.</p>
+<hr>
+<h2 id="5-depth-levels">5 — Depth Levels</h2>
+<p>Each path above can be traversed at three depths. The depth determines how much of each file you engage with.</p>
+<h3 id="level-1-newcomer">Level 1 — Newcomer</h3>
+<p><strong>Time commitment:</strong> 1–2 hours across the module.
+<strong>Strategy:</strong> Read only the first 3–4 files in your path. Focus on the Session Context table, the opening sections, and the ASCII diagrams. Skip checklists and numbered identifier series on the first pass.</p>
+<p><strong>What you should be able to explain after Level 1:</strong></p>
+<ul>
+<li>What the D369 module is (a structural observability reservation for silicon)</li>
+<li>What the three tags are (Source ID, Lifecycle State, Monotonic Time)</li>
+<li>What the building metaphor means (empty conduit, not pulled wire)</li>
+<li>Why the specification does not define behavior</li>
+<li>Why fabs come before students in the adoption order</li>
+</ul>
+<h3 id="level-2-intermediate">Level 2 — Intermediate</h3>
+<p><strong>Time commitment:</strong> 3–5 hours across the module.
+<strong>Strategy:</strong> Complete your full path (all 10–12 files). Read the numbered identifier series (R1.1–R7.1, ER-1–ER-10, NC-1–NC-10). Review the checklists at a conceptual level — understand what each section checks for, not every individual item.</p>
+<p><strong>What you should be able to explain after Level 2:</strong></p>
+<ul>
+<li>Everything from Level 1, plus:</li>
+<li>The four structural rules (isolation, no dependence, no modification, contractual removal)</li>
+<li>The three-page contract structure (requirements → rationale → non-claims)</li>
+<li>At least three failure modes from any checklist (DIMM, controller, or NoC)</li>
+<li>The difference between debug infrastructure and structural metadata</li>
+<li>Why the specification uses silence as a structural tool (S-1–S-3)</li>
+<li>How memory tiers relate to metadata persistence</li>
+</ul>
+<h3 id="level-3-advanced">Level 3 — Advanced</h3>
+<p><strong>Time commitment:</strong> 6–10 hours across the module (including cross-referencing).
+<strong>Strategy:</strong> Read every file. Follow the cross-references. Trace identifiers across files (e.g., how R1.1 maps through the design review checklist, how MC-1 relates to the memory tier model). Read <code>Meta.md</code> and <code>Session_Context.md</code> to understand the module's own structural grammar.</p>
+<p><strong>What you should be able to explain after Level 3:</strong></p>
+<ul>
+<li>Everything from Levels 1 and 2, plus:</li>
+<li>How all 76 numbered identifiers relate to each other</li>
+<li>The full checklist cascade (182 items across 4 checklists) and what each section protects</li>
+<li>The chiplet-specific challenges (D2D erasure, interposer types, HBM problem)</li>
+<li>The board-level preservation rules and their failure modes</li>
+<li>The adoption roadmap phases and why the ordering matters</li>
+<li>How the D369 module connects to the broader RTT spine</li>
+<li>Why the Anti-Inflation Principle governs the specification's claim surface</li>
+</ul>
+<hr>
+<h2 id="6-milestone-markers">6 — Milestone Markers</h2>
+<p>These markers are reference points, not grades. They describe what understanding looks like at each stage.</p>
+<pre><code>  LEVEL 1                    LEVEL 2                    LEVEL 3
+  Newcomer                   Intermediate               Advanced
+  ─────────────────────────────────────────────────────────────────
+
+  ☐ Three tags               ☐ 12 requirements          ☐ 76 identifiers
+  ☐ Building metaphor        ☐ Four structural rules     ☐ 182 checklist items
+  ☐ &quot;Not behavior&quot;           ☐ Three-page contract       ☐ Chiplet topologies
+  ☐ Fabs before students     ☐ Failure modes (any 3)     ☐ Board preservation rules
+  ☐ No RTT required          ☐ Debug vs. metadata        ☐ Adoption phases (all 6)
+                              ☐ Silence as structure      ☐ Cross-module spine
+                              ☐ Memory tiers              ☐ Anti-Inflation Principle
+</code></pre>
+<p>A student who reaches all Level 1 markers understands the module's intent.
+A student who reaches all Level 2 markers understands the module's structure.
+A student who reaches all Level 3 markers understands the module's architecture.</p>
+<p>None of these levels require RTT knowledge. The module is self-contained.</p>
+<hr>
+<h2 id="7-where-students-enter-the-adoption-timeline">7 — Where Students Enter the Adoption Timeline</h2>
+<p>The Adoption Roadmap (<code>Adoption_Roadmap.md</code>) defines six phases:</p>
+<pre><code>  Phase 1        Phase 2        Phase 3         Phase 4          Phase 5         Phase 6
+  Spec           Fab            Silicon          Ecosystem        Adoption        Cross-
+  Freeze         Engage         Reservation      Seeding          Wave            Domain
+  ═══════════════════════════════════════════════════════════════════════════════════════
+                                                  ▲
+                                                  │
+                                            Students arrive
+                                                here
+</code></pre>
+<p><strong>Students arrive at Phase 4 — Ecosystem Seeding.</strong> Not before.</p>
+<p>This ordering is deliberate:</p>
+<blockquote>
+<p><em>"Fabs before students."</em></p>
+</blockquote>
+<p>If students arrive first, the specification looks academic — an interesting idea without substrate. If fabs arrive first, the specification looks inevitable — silicon already supports it, and students simply learn what is there.</p>
+<p>This is how CUDA won. This is how POSIX won. This is how TCP/IP won. The infrastructure came first. The education followed the infrastructure.</p>
+<p><strong>What this means for you as a student:</strong> You are reading a specification that is designed to exist in silicon before it exists in classrooms. The module does not need you to advocate for it. It needs you to understand it clearly enough that when the silicon arrives, you can use it.</p>
+<hr>
+<h2 id="8-reading-the-module-as-a-whole">8 — Reading the Module as a Whole</h2>
+<p>For students who want to understand the module's internal structure — not just the content, but how the files relate to each other — two files serve as structural maps:</p>
+<ul>
+<li>
+<p><strong><code>Session_Context.md</code></strong> — The module's structural handshake. Section 7 contains the module's own 10-file recommended reading order. Section 6 defines anti-patterns. Section 10 provides AI agent quick-reference rules.</p>
+</li>
+<li>
+<p><strong><code>Meta.md</code></strong> — The module's manifest. Contains the full 17-file table with roles, status, and purpose. Contains the dependency graph, the numbered reference system (all 76 IDs), and the checklist inventory (all 182 items).</p>
+</li>
+</ul>
+<p>Together, these two files let you see the module the way the module sees itself.</p>
+<pre><code>-
+  ┌──────────────────────────────────────────────────────┐
+  │              Module Self-Description                 │
+  │                                                      │
+  │   Session_Context.md          Meta.md                │
+  │   ┌──────────────────┐       ┌───────────────────┐   │
+  │   │ Structural       │       │ Manifest          │   │
+  │   │ grammar          │       │ (17 files)        │   │
+  │   │ Canon rules      │       │ Dependency graph  │   │
+  │   │ Anti-patterns    │       │ 76 identifiers    │   │
+  │   │ Reading order    │       │ 182 checklist     │   │
+  │   │ AI quick-ref     │       │ items             │   │
+  │   │ Contribution     │       │ Version history   │   │
+  │   │ rules            │       │ Cross-module refs │   │
+  │   └──────────────────┘       └───────────────────┘   │
+  │                                                      │
+  │   Together: the module's self-awareness layer        │
+  └──────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h2 id="9-what-this-file-is-not">9 — What This File Is Not</h2>
+<table>
+<thead>
+<tr>
+<th>This file is NOT</th>
+<th>Because</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A curriculum</td>
+<td>It does not define learning objectives or assessments</td>
+</tr>
+<tr>
+<td>A syllabus</td>
+<td>It does not assign readings to dates or sessions</td>
+</tr>
+<tr>
+<td>A certification</td>
+<td>It does not test, grade, or credential</td>
+</tr>
+<tr>
+<td>A textbook</td>
+<td>It does not teach chip design or RTT</td>
+</tr>
+<tr>
+<td>A prerequisite list</td>
+<td>The module has no prerequisites (FAQ Q10.2)</td>
+</tr>
+<tr>
+<td>A pedagogy mandate</td>
+<td>NC-6 excludes analytics; this extends to instructional design</td>
+</tr>
+<tr>
+<td>A promise of learning outcomes</td>
+<td>NC-8 excludes performance improvement claims</td>
+</tr>
+<tr>
+<td>A dependency on external material</td>
+<td>Every file in the module stands alone</td>
+</tr>
+</tbody>
+</table>
+<p>This file is a <strong>map</strong>. It shows you where the trails are. You choose which one to walk and how far to go.</p>
+<hr>
+<h2 id="10-for-educators">10 — For Educators</h2>
+<p>If you are using the D369 module in a classroom, lab, or study group:</p>
+<p><strong>Use the paths as starting templates.</strong> Adjust them for your students' backgrounds. The paths are suggestions, not prescriptions.</p>
+<p><strong>Use the milestone markers as discussion prompts.</strong> "Can you explain the three tags?" is a better classroom question than "Did you read the file?"</p>
+<p><strong>Use the FAQ as a Socratic resource.</strong> The 40+ questions in <code>FAQ.md</code> are designed to surface the most common confusions. Many of them work directly as discussion starters.</p>
+<p><strong>Do not promise outcomes the specification does not promise.</strong> The D369 module is explicit about its non-claims (NC-1–NC-10). Classroom framing should respect those boundaries.</p>
+<p><strong>Do not require RTT as a prerequisite.</strong> The module was designed to be self-contained. Requiring RTT knowledge before entering the module contradicts the module's own design.</p>
+<hr>
+<h2 id="11-quick-reference-all-module-files">11 — Quick Reference: All Module Files</h2>
+<p>For orientation, every file in the module and its role:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Role</th>
+<th>Student Relevance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>README.md</code></td>
+<td>reference</td>
+<td>Start here — building metaphor, orientation</td>
+</tr>
+<tr>
+<td><code>Spec_Overview.md</code></td>
+<td>profile</td>
+<td>10-minute executive summary</td>
+</tr>
+<tr>
+<td><code>Contractual_Requirements.md</code></td>
+<td>engine</td>
+<td>The actual specification (R1.1–R7.1)</td>
+</tr>
+<tr>
+<td><code>Engineering_Rationale.md</code></td>
+<td>engine</td>
+<td>Why the spec exists (ER-1–ER-10)</td>
+</tr>
+<tr>
+<td><code>Non_Claims.md</code></td>
+<td>engine</td>
+<td>What the spec refuses to claim (NC-1–NC-10)</td>
+</tr>
+<tr>
+<td><code>FAQ.md</code></td>
+<td>reference</td>
+<td>40+ questions, including §12 for students</td>
+</tr>
+<tr>
+<td><code>Diagram_SoC.md</code></td>
+<td>map</td>
+<td>SoC visual architecture</td>
+</tr>
+<tr>
+<td><code>Diagram_Chiplet.md</code></td>
+<td>map</td>
+<td>Chiplet topologies and D2D interfaces</td>
+</tr>
+<tr>
+<td><code>Board_Level_Alignment.md</code></td>
+<td>diagnostic</td>
+<td>Board preservation rules and failure modes</td>
+</tr>
+<tr>
+<td><code>Memory_Alignment_Spec.md</code></td>
+<td>engine</td>
+<td>8-tier memory hierarchy, structural events</td>
+</tr>
+<tr>
+<td><code>Memory_Controller_Checklist.md</code></td>
+<td>diagnostic</td>
+<td>Controller failure modes and checklist</td>
+</tr>
+<tr>
+<td><code>DIMM_Module_Checklist.md</code></td>
+<td>diagnostic</td>
+<td>DIMM failure modes and checklist</td>
+</tr>
+<tr>
+<td><code>Internal_Design_Review_Checklist.md</code></td>
+<td>diagnostic</td>
+<td>62-item carry-in checklist for design review</td>
+</tr>
+<tr>
+<td><code>Glossary_Extensions.md</code></td>
+<td>reference</td>
+<td>70+ term definitions — keep open</td>
+</tr>
+<tr>
+<td><code>Adoption_Roadmap.md</code></td>
+<td>map</td>
+<td>6 adoption phases, risk register</td>
+</tr>
+<tr>
+<td><code>Session_Context.md</code></td>
+<td>index</td>
+<td>Module grammar, reading order, canon rules</td>
+</tr>
+<tr>
+<td><code>Meta.md</code></td>
+<td>index</td>
+<td>Full manifest, dependency graph, statistics</td>
+</tr>
+<tr>
+<td><code>Student_Learning_Paths.md</code></td>
+<td>reference · map</td>
+<td>You are here</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="12-cross-module-references">12 — Cross-Module References</h2>
+<table>
+<thead>
+<tr>
+<th>Reference Target</th>
+<th>Relationship to This File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FAQ.md</code> §12 (Q12.1–Q12.7)</td>
+<td>Student-specific questions — companion to this file</td>
+</tr>
+<tr>
+<td><code>README.md</code> (building metaphor)</td>
+<td>Foundational metaphor used in all paths</td>
+</tr>
+<tr>
+<td><code>Session_Context.md</code> §7</td>
+<td>Module's own recommended 10-file reading order</td>
+</tr>
+<tr>
+<td><code>Adoption_Roadmap.md</code> (Phase 4)</td>
+<td>When students enter the adoption timeline</td>
+</tr>
+<tr>
+<td><code>Meta.md</code> (manifest)</td>
+<td>Full file table, identifier inventory, checklist cascade</td>
+</tr>
+<tr>
+<td><code>Glossary_Extensions.md</code></td>
+<td>Term definitions — recommended as open reference</td>
+</tr>
+<tr>
+<td><code>Engineering_Rationale.md</code> (ER-7)</td>
+<td>DFT comparison — helps students understand test overhead</td>
+</tr>
+<tr>
+<td><code>Non_Claims.md</code> (NC-6, NC-8)</td>
+<td>Boundaries that govern this file's framing</td>
+</tr>
+<tr>
+<td><code>Spec_Overview.md</code></td>
+<td>The single-file summary every path includes early</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-spine-context">RTT Spine Context</h3>
+<pre><code>-
+  ┌──────────────────────────────────────────────────────────┐
+  │                     RTT Module Spine                     │
+  │                                                          │
+  │   RTT/1 (Operators)                                      │
+  │     │                                                    │
+  │     ▼                                                    │
+  │   D369_Chip_Spec ◄── Student_Learning_Paths.md           │
+  │     │                 (learning navigation for           │
+  │     │                  the structural reservation        │
+  │     ▼                  module)                           │
+  │   Temperature / Demi-Force / FFF                         │
+  │   (applied substrate modules)                            │
+  │                                                          │
+  └──────────────────────────────────────────────────────────┘
+</code></pre>
+<p>The D369 module sits between foundational operator definitions (RTT/1) and applied substrate modules. Students entering through D369 are entering the RTT spine at the silicon layer — the point where abstract structural grammar meets physical substrate.</p>
+<hr>
+<h2 id="13-the-one-sentence-to-remember">13 — The One Sentence to Remember</h2>
+<blockquote>
+<p><em>"Nothing here tells us what to build — only what not to erase."</em></p>
+</blockquote>
+<p>If you remember that sentence, you understand the specification. Everything else is detail, precision, and engineering rigor built around that single idea.</p>
+<hr>
+<h2 id="canon-alignment">Canon Alignment</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Derived from <code>Capture_Source.md</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Three tags referenced correctly</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Four rules referenced (not restated as novel)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Numbered identifiers cited, not modified</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>No behavioral claims</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>No performance promises</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Silence respected where spec is silent</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Cross-references by filename, not heading</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ASCII diagrams only</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Engineer-facing, student-ready, zero hype</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Student-ready</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Role declared in Session Context (reference · map)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Canon tag present (rtt-d369-chip-spec)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Anti-Inflation Principle observed</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>No RTT prerequisite imposed</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>"Fabs before students" ordering respected</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>NC-6 and NC-8 boundaries observed</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr>
+  </main>
+</body>
+</html>

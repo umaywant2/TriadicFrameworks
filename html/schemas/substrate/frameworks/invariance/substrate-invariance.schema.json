@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Substrate Invariance Schema",
+  "type": "object",
+
+  "properties": {
+    "kernel": {
+      "type": "string",
+      "const": "substrate-invariance"
+    },
+
+    "version": {
+      "type": "string"
+    },
+
+    "generated": {
+      "type": "string",
+      "description": "ISO date of generation"
+    },
+
+    "imports": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]+$": { "type": "string" }
+      }
+    },
+
+    "invariance": {
+      "type": "object",
+      "properties": {
+        "structural": {
+          "type": "object",
+          "properties": {
+            "operators": { "type": "array", "items": { "type": "string" } },
+            "dimensions": { "type": "array", "items": { "type": "string" } },
+            "regimes": { "type": "array", "items": { "type": "string" } },
+            "layers": { "type": "array", "items": { "type": "string" } },
+            "rules": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+
+        "behavioral": {
+          "type": "object",
+          "properties": {
+            "drift": { "type": "array", "items": { "type": "string" } },
+            "coherence": { "type": "array", "items": { "type": "string" } },
+            "stability": { "type": "array", "items": { "type": "string" } },
+            "resonance": { "type": "array", "items": { "type": "string" } },
+            "ignition": { "type": "array", "items": { "type": "string" } },
+            "rules": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+
+        "temporal": {
+          "type": "object",
+          "properties": {
+            "epochs": { "type": "array", "items": { "type": "string" } },
+            "transitions": { "type": "array", "items": { "type": "string" } },
+            "propagation": { "type": "array", "items": { "type": "string" } },
+            "rules": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+
+        "atlas": {
+          "type": "object",
+          "properties": {
+            "routes": { "type": "array", "items": { "type": "string" } },
+            "modes": { "type": "array", "items": { "type": "string" } },
+            "transitions": { "type": "array", "items": { "type": "string" } },
+            "rules": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+
+        "activation": {
+          "type": "object",
+          "properties": {
+            "waves": { "type": "array", "items": { "type": "string" } },
+            "cascades": { "type": "array", "items": { "type": "string" } },
+            "harmonics": { "type": "array", "items": { "type": "string" } },
+            "rules": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+
+    "invariance_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule": { "type": "string" },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["structural", "behavioral", "temporal", "atlas", "activation"]
+            }
+          },
+          "conditions": { "type": "array", "items": { "type": "string" } },
+          "guarantees": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["rule", "scope"]
+      }
+    },
+
+    "invariance_webs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "web_id": { "type": "string" },
+          "nodes": { "type": "array", "items": { "type": "string" } },
+          "edges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source": { "type": "string" },
+                "target": { "type": "string" },
+                "weight": { "type": "number" },
+                "mode": {
+                  "type": "string",
+                  "enum": ["structural", "behavioral", "temporal", "atlas", "activation"]
+                }
+              },
+              "required": ["source", "target", "mode"]
+            }
+          }
+        },
+        "required": ["web_id", "nodes", "edges"]
+      }
+    },
+
+    "output": {
+      "type": "object",
+      "properties": {
+        "substrate_invariance": { "type": "string" }
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "properties": {
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": [
+    "kernel",
+    "version",
+    "invariance",
+    "invariance_rules",
+    "invariance_webs"
+  ]
+}

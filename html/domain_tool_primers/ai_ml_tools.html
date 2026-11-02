@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/domain_tool_primers/ai_ml_tools.md">
+  <title>AI / ML Tool Primer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/domain_tool_primers/ai_ml_tools.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/domain_tool_primers/ai_ml_tools.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="682" height="682" alt="rtt_domain_tool_primers" src="https://github.com/user-attachments/assets/85568d64-16b1-49cf-bc26-bd5a8f1f9ea7" /></p>
+<h1 id="ai-ml-tool-primer"><strong>AI / ML Tool Primer</strong></h1>
+<p><em>A minimal starting point for exploring vST concepts inside AI and machine‑learning environments</em></p>
+<p>This primer provides a lightweight, optional structure for experimenting with Validation‑Space Theory (vST) inside common AI/ML tools. Everything below is intentionally minimal, safe to run, and designed to fit naturally into the workflows practitioners already use.</p>
+<p>The functional code runs as‑is.<br>
+All vST‑specific mappings are <strong>commented out by default</strong> so validators can read before enabling.</p>
+<hr>
+<h2 id="common-tools-in-this-domain"><strong>Common Tools in This Domain</strong></h2>
+<p>AI/ML practitioners typically work with:</p>
+<ul>
+<li>Python  </li>
+<li>Jupyter / IPython  </li>
+<li>PyTorch  </li>
+<li>TensorFlow / Keras  </li>
+<li>NumPy / SciPy  </li>
+<li>ONNX  </li>
+<li>HuggingFace Transformers  </li>
+<li>Scikit‑learn  </li>
+</ul>
+<p>This primer uses <strong>Python + NumPy</strong> for maximum portability.</p>
+<hr>
+<h2 id="minimal-functional-example-runs-immediately"><strong>Minimal Functional Example (runs immediately)</strong></h2>
+<pre><code class="language-python">import numpy as np
+
+# Minimal example: a simple domain variable
+data = np.array([1.0, 2.0, 3.0])
+mean_value = np.mean(data)
+
+print(&quot;Domain mean:&quot;, mean_value)
+</code></pre>
+<p>This is intentionally trivial — it ensures the file loads cleanly in any AI/ML environment.</p>
+<hr>
+<h2 id="optional-vst-blocks-commented-out"><strong>Optional vST Blocks (commented out)</strong></h2>
+<p>These blocks show how vST concepts can be expressed inside AI/ML workflows.<br>
+Uncomment only after reading the usage notes.</p>
+<hr>
+<h3 id="1-dimensional-core-declaration-optional"><strong>1. Dimensional Core Declaration (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Dimensional Core Declaration
+# Uncomment to enable vST dimensional mapping
+# ---------------------------------------------------------
+# dimensional_core = {
+#     &quot;core_id&quot;: &quot;dc_ai_01&quot;,
+#     &quot;dimensions&quot;: [&quot;scale&quot;, &quot;rate&quot;, &quot;stability&quot;],
+#     &quot;domain_variable&quot;: mean_value,
+# }
+#
+# print(&quot;vST Dimensional Core:&quot;, dimensional_core)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Maps a domain variable (e.g., a model metric, loss value, activation mean) into a vST dimensional‑core structure.</p>
+<hr>
+<h3 id="2-regime-anchor-optional"><strong>2. Regime Anchor (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Regime Anchor
+# Uncomment to activate regime validation
+# ---------------------------------------------------------
+# regime_anchor = {
+#     &quot;anchor_id&quot;: &quot;ra_ai_01&quot;,
+#     &quot;domain_regime&quot;: &quot;training&quot;,
+#     &quot;vst_regime&quot;: &quot;mid&quot;,
+#     &quot;notes&quot;: &quot;Maps training-phase behavior into vST mid-regime stability.&quot;
+# }
+#
+# print(&quot;vST Regime Anchor:&quot;, regime_anchor)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Anchors a domain regime (training, inference, fine‑tuning, etc.) to a vST regime classification.</p>
+<hr>
+<h3 id="3-triadic-operator-mapping-optional"><strong>3. Triadic Operator Mapping (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Triadic Operator Mapping
+# Uncomment to enable operator-level reasoning
+# ---------------------------------------------------------
+# triadic_operator = {
+#     &quot;input&quot;: &quot;mean_value&quot;,
+#     &quot;operator&quot;: &quot;balance&quot;,
+#     &quot;output&quot;: &quot;vst_dimensional_shift&quot;,
+#     &quot;notes&quot;: &quot;Example operator showing how AI metrics can be interpreted through vST triadic structure.&quot;
+# }
+#
+# print(&quot;vST Triadic Operator:&quot;, triadic_operator)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Demonstrates how AI/ML variables can be interpreted through vST’s triadic operator lens.</p>
+<hr>
+<h2 id="suggested-validation-experiments"><strong>Suggested Validation Experiments</strong></h2>
+<p>These are optional, low‑effort ways to explore vST behavior in AI/ML contexts:</p>
+<ul>
+<li>Compare dimensional‑core stability across training epochs  </li>
+<li>Anchor different training phases (warmup, plateau, decay) to vST regimes  </li>
+<li>Map model metrics (loss, accuracy, gradient norms) into dimensional primitives  </li>
+<li>Observe how regime transitions correspond to optimizer behavior  </li>
+<li>Use triadic operators to reason about model drift or collapse  </li>
+</ul>
+<p>These experiments help early validators see how vST clarifies cross‑regime behavior in AI/ML systems.</p>
+<hr>
+<h2 id="notes"><strong>Notes</strong></h2>
+<p>This primer is intentionally minimal.<br>
+It is not a full integration — it is a safe, readable starting point for exploring vST inside AI/ML workflows.</p>
+  </main>
+</body>
+</html>

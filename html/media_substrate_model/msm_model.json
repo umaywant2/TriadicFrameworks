@@ -1,0 +1,78 @@
+{
+  "module": "Media Substrate Model",
+  "version": "1.0",
+  "category": "media-substrate-core",
+  "summary": "Structural physics of media ecosystems — [S, D, A, N, T] vector (signal integrity, distribution topology, attention dynamics, narrative coherence, temporal cadence), invariants, basins, modes, conceptual layer (concept capture, attention dynamics, narrative dynamics, media signals), adapters, glossary, lineage, and scaffold capture. Parallel to Governance Substrate Model (GSM). MSM Analyzer tool available.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "vectors.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "invariants.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "basins.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "modes.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "concept_capture.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "attention_dynamics.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "narrative_dynamics.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "media_signals.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "adapters.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "glossary.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "lineage.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "scaffold_capture.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

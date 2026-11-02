@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Mesh_Node/Mine‑wide_deployment_plan.md">
+  <title>Mine‑wide deployment plan for RTT‑Inside mesh nodes</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Mesh_Node/Mine‑wide_deployment_plan.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Mesh_Node/Mine‑wide_deployment_plan.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="minewide-deployment-plan-for-rttinside-mesh-nodes">Mine‑wide deployment plan for RTT‑Inside mesh nodes</h3>
+<p>I’ll assume a medium–large underground operation with multiple sections, panels, belt lines, and shafts. We’ll design for <strong>coverage, redundancy, and survivability</strong>, not just pretty diagrams.</p>
+<hr>
+<h2 id="1-objectives">1. Objectives</h2>
+<ul>
+<li><strong>Continuous resonance field:</strong> no blind spots for vibration, gas, or stress.  </li>
+<li><strong>Robust comms:</strong> mesh survives partial collapses and power loss.  </li>
+<li><strong>Human‑centric safety:</strong> every miner is always within reach of at least 2 nodes.  </li>
+<li><strong>Incremental rollout:</strong> can be deployed section by section without shutting the mine.</li>
+</ul>
+<hr>
+<h2 id="2-zoning-the-mine">2. Zoning the mine</h2>
+<p>Divide the mine into logical <strong>resonance zones</strong>:</p>
+<ul>
+<li><strong>Zone A:</strong> Main entries &amp; shafts  </li>
+<li><strong>Zone B:</strong> Belt lines &amp; conveyor galleries  </li>
+<li><strong>Zone C:</strong> Active production panels (continuous miner / longwall)  </li>
+<li><strong>Zone D:</strong> Crosscuts &amp; intersections  </li>
+<li><strong>Zone E:</strong> Refuge chambers &amp; escape routes  </li>
+<li><strong>Zone F:</strong> Prep plant interface / surface portals  </li>
+</ul>
+<p>Each zone gets a <strong>different density and mix</strong> of wall‑mounted vs wearable nodes.</p>
+<hr>
+<h2 id="3-wallmounted-node-deployment">3. Wall‑mounted node deployment</h2>
+<h4 id="zone-a-main-entries-shafts">Zone A — Main entries &amp; shafts</h4>
+<ul>
+<li><strong>Goal:</strong> backbone + vertical link.  </li>
+<li><strong>Plan:</strong></li>
+<li>Node every 50–75 m along main entries.  </li>
+<li>Extra nodes at shaft bottoms, hoist areas, and major junctions.  </li>
+<li>All powered (where possible) + battery backup.  </li>
+</ul>
+<h4 id="zone-b-belt-lines">Zone B — Belt lines</h4>
+<ul>
+<li><strong>Goal:</strong> fire, vibration, and dust monitoring + comms spine.  </li>
+<li><strong>Plan:</strong></li>
+<li>Node every 40–60 m along belt lines.  </li>
+<li>Extra nodes at:<ul>
+<li>drives  </li>
+<li>take‑ups  </li>
+<li>transfer points  </li>
+</ul>
+</li>
+<li>Tune sensors for vibration + temperature + dust.  </li>
+</ul>
+<h4 id="zone-c-active-production-panels">Zone C — Active production panels</h4>
+<ul>
+<li><strong>Goal:</strong> high‑resolution resonance sensing.  </li>
+<li><strong>Plan:</strong></li>
+<li>Node grid around the face:<ul>
+<li>20–30 m spacing near continuous miner / longwall.  </li>
+<li>Denser near known weak roof or high gas zones.  </li>
+</ul>
+</li>
+<li>Nodes mounted on:<ul>
+<li>roof supports  </li>
+<li>ribs  </li>
+<li>near roof‑bolter work areas.  </li>
+</ul>
+</li>
+</ul>
+<h4 id="zone-d-crosscuts-intersections">Zone D — Crosscuts &amp; intersections</h4>
+<ul>
+<li><strong>Goal:</strong> mesh resilience + routing flexibility.  </li>
+<li><strong>Plan:</strong></li>
+<li>Node at every major intersection.  </li>
+<li>These act as <strong>routing hubs</strong> and <strong>field anchors</strong>.  </li>
+</ul>
+<h4 id="zone-e-refuge-chambers-escape-routes">Zone E — Refuge chambers &amp; escape routes</h4>
+<ul>
+<li><strong>Goal:</strong> guaranteed comms + clarity guidance.  </li>
+<li><strong>Plan:</strong></li>
+<li>Node at each refuge chamber entrance.  </li>
+<li>Node every 40–60 m along primary and secondary escape ways.  </li>
+<li>These nodes store <strong>local maps + last‑known clarity gradients</strong> in case backhaul is lost.  </li>
+</ul>
+<h4 id="zone-f-surface-prep-plant-interface">Zone F — Surface / prep plant interface</h4>
+<ul>
+<li><strong>Goal:</strong> bridge underground mesh to control room + RTT‑Inside core.  </li>
+<li><strong>Plan:</strong></li>
+<li>Gateway nodes at portals and shaft tops.  </li>
+<li>Redundant links (wired + RF) to control systems.  </li>
+</ul>
+<hr>
+<h2 id="4-wearable-node-deployment">4. Wearable node deployment</h2>
+<ul>
+<li><strong>Every underground worker</strong> gets a wearable node:</li>
+<li>Belt‑clip or chest‑mount.  </li>
+<li>Paired with helmet light or handheld.  </li>
+<li><strong>Roles:</strong></li>
+<li>Miners, bolters, belt crews, electricians, mechanics, supervisors, rescue teams.  </li>
+<li><strong>Behavior:</strong></li>
+<li>Wearable nodes:<ul>
+<li>join the mesh as mobile nodes,  </li>
+<li>report local gas + vibration,  </li>
+<li>receive alerts (haptic + LED),  </li>
+<li>act as “moving probes” to refine the resonance map.  </li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="5-redundancy-survivability">5. Redundancy &amp; survivability</h2>
+<ul>
+<li><strong>At least 2 independent paths</strong> from any active panel to the surface gateway.  </li>
+<li><strong>Node overlap:</strong>  </li>
+<li>Every point in an active area should be within range of <strong>≥2 wall nodes</strong>.  </li>
+<li><strong>Collapse planning:</strong>  </li>
+<li>Extra nodes near known weak geology.  </li>
+<li>Simulated collapse paths in the test harness to validate mesh rerouting.  </li>
+</ul>
+<hr>
+<h2 id="6-phased-rollout">6. Phased rollout</h2>
+<h4 id="phase-1-backbone">Phase 1 — Backbone</h4>
+<ul>
+<li>Deploy wall nodes in Zones A + B + E.  </li>
+<li>Bring up basic mesh + RTT‑Inside core.  </li>
+</ul>
+<h4 id="phase-2-production-panels">Phase 2 — Production panels</h4>
+<ul>
+<li>Add dense node grids in Zone C (active panels).  </li>
+<li>Start using resonance clarity + stress hints in operations.  </li>
+</ul>
+<h4 id="phase-3-wearables">Phase 3 — Wearables</h4>
+<ul>
+<li>Issue wearable nodes to crews.  </li>
+<li>Train on alerts, meanings, and evacuation cues.  </li>
+</ul>
+<h4 id="phase-4-optimization">Phase 4 — Optimization</h4>
+<ul>
+<li>Use RTT‑Inside analytics to:</li>
+<li>adjust node spacing,  </li>
+<li>tune thresholds,  </li>
+<li>identify dead zones,  </li>
+<li>refine deployment.  </li>
+</ul>
+<hr>
+<h2 id="7-operator-view">7. Operator view</h2>
+<p>From the control room, the mine appears as:</p>
+<ul>
+<li>a <strong>live resonance map</strong> (stability, gas, vibration, clarity),  </li>
+<li>a <strong>mesh health map</strong> (nodes, links, gateways),  </li>
+<li>a <strong>people map</strong> (wearable nodes, crews, routes),  </li>
+<li>with RTT‑Inside continuously recommending:</li>
+<li>where to add nodes,  </li>
+<li>where to reduce vibration,  </li>
+<li>when to evacuate or reroute.  </li>
+</ul>
+  </main>
+</body>
+</html>

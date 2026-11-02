@@ -1,0 +1,43 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.history",
+  "title": "FFT AI Session — History v1.33",
+  "history_schema": {
+    "version_block": {
+      "schema_version": "1.33",
+      "new_v1_33": true
+    },
+    "sessions": [],
+    "session_summary_schema": {
+      "session_id": "uuid",
+      "start_ts": "iso8601",
+      "end_ts": "iso8601",
+      "R_mean": "float",
+      "R_variance": "float",
+      "tau_trend": "float",
+      "drift_events": "int",
+      "paradox_events": "int",
+      "coherence_breaks": "int",
+      "set_activations": {
+        "S": "int",
+        "E": "int",
+        "T": "int"
+      },
+      "operators_dispatched": "int",
+      "final_autonomy_mode": "AM-xxx"
+    }
+  },
+  "v133_additions": [
+    "version_block",
+    "set_activations in summary",
+    "paradox_events in summary",
+    "coherence_breaks in summary"
+  ]
+}

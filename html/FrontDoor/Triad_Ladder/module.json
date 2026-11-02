@@ -1,0 +1,21 @@
+{
+  "module": "Triad_Ladder_FrontDoor",
+  "name": "Combined Triad + Ladder Front Door",
+  "summary": "Unified entry point for RTT’s intelligence architecture, combining the Triad micro-measurement system with the Intelligence Class Ladder macro-classification system.",
+  "category": "intelligence-frontdoor",
+  "version": "1.0",
+  "purpose": "Provide a single canonical front door that introduces the Triad (Scanner, O.H.S.H.I.T., Atlas) and the Ladder (AAI, AGI, SI), explaining how detection, hashing, and mapping feed into macro-classification.",
+  "role": "index",
+  "analyzer_layer": "operator",
+  "operators": [
+    "@frontdoor.describe",
+    "@frontdoor.pipeline",
+    "@frontdoor.integrate",
+    "@frontdoor.navigate",
+    "@frontdoor.classify"
+  ],
+  "lineage": {
+    "upstream": ["Triad_FrontDoor", "Ladder_Overview"],
+    "downstream": ["AAI", "AGI", "SI", "Triad_Global_Index", "Ladder_Visual_Map"]
+  }
+}

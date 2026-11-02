@@ -1,0 +1,149 @@
+{
+  "module": {
+    "name": "Hindu Pantheon",
+    "slug": "hindu",
+    "category": "pantheon",
+    "summary": "Triadic operator system for Hindu cosmology across Trimurti, Shakti, and Avatar traditions.",
+    "version": "2026.07",
+    "purpose": "Unified triadic operator mapping for Hindu cosmology, enabling cross-pantheon comparison, supersphere fusion, and resonance-cycle analysis.",
+    "audience": "Comparative mythology, cultural analysis, RTT operator research, TriadicFrameworks canon development.",
+    "keywords": [
+      "hindu",
+      "trimurti",
+      "brahma",
+      "vishnu",
+      "shiva",
+      "shakti",
+      "avatars",
+      "yuga",
+      "kalpa",
+      "cosmic tree",
+      "lotus geometry",
+      "chakra axis",
+      "triadic-operators"
+    ]
+  },
+
+  "ai": {
+    "module": "hindu",
+    "version": "2026.07",
+    "purpose": "Triadic operator mapping for Hindu cosmology.",
+    "keywords": "brahma, vishnu, shiva, shakti, avatars, yuga cycle, kalpa cycle, lotus geometry",
+    "audience": "TriadicFrameworks researchers and RTT operator analysts",
+    "module.name": "Hindu Pantheon",
+    "module.summary": "Trimurti triad, Shakti overlay, Avatar projection layers, cosmic cycles, lotus geometry.",
+    "module.category": "pantheon"
+  },
+
+  "identity": {
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2025",
+    "citation_title": "Hindu Pantheon — TriadicFrameworks",
+    "DC.type": "Text",
+    "DC.format": "text/html",
+    "DC.subject": "Hindu cosmology, triadic operators, cultural resonance cycles"
+  },
+
+  "files": {
+    "capture": "Hindu_Triadic_Profile_Capture.md",
+    "readme": "README.md",
+    "profile_image": "Hindu_Triadic_Profile.jpg",
+    "svg": {
+      "cycle": "cycle-diagram.svg",
+      "operators": "operators.svg",
+      "geometry": "geometry.svg",
+      "paradox": "paradox-map.svg",
+      "supersphere": "supersphere-fusion.svg"
+    },
+    "metadata": "hindu_module.json"
+  },
+
+  "roles": {
+    "engine": [
+      "operator-grammar",
+      "cycle-engine",
+      "supersphere-fusion"
+    ],
+    "profile": [
+      "pantheon-profile",
+      "triadic-layering"
+    ],
+    "signature": [
+      "operator-signature",
+      "cycle-signature"
+    ],
+    "diagnostic": [
+      "resonance-diagnostics"
+    ],
+    "map": [
+      "geometry-map",
+      "paradox-map"
+    ],
+    "example": [
+      "operator-examples",
+      "cycle-examples"
+    ],
+    "extension": [
+      "cross-pantheon-extension"
+    ],
+    "index": [
+      "pantheon-index"
+    ],
+    "reference": [
+      "mythology-reference"
+    ],
+    "template": [
+      "svg-template",
+      "profile-template"
+    ]
+  },
+
+  "analyzer_layer": {
+    "operator": [
+      "brahma",
+      "vishnu",
+      "shiva",
+      "shakti",
+      "avatars",
+      "yuga-cycle",
+      "kalpa-cycle",
+      "cosmic-tree",
+      "lotus-geometry"
+    ],
+    "dimensional": [
+      "creation-axis",
+      "preservation-axis",
+      "destruction-axis",
+      "chakra-axis"
+    ],
+    "regime": [
+      "cosmic-cycle-regime",
+      "ritual-regime",
+      "avatar-regime"
+    ],
+    "drift": [
+      "mythic-variant-drift",
+      "regional-drift"
+    ],
+    "coherence": [
+      "triadic-coherence",
+      "cycle-coherence"
+    ],
+    "cross-cutting": [
+      "supersphere-fusion",
+      "pantheon-resonance"
+    ]
+  },
+
+  "cross_pantheon_links": {
+    "greek": "../greek/greek_module.json",
+    "chinese": "../chinese/chinese_module.json",
+    "celtic": "../celtic/celtic_module.json",
+    "mesoamerican": "../mesoamerican/mesoamerican_module.json",
+    "andean": "../andean/andean_module.json",
+    "north_american_woodland": "../north_american_woodland/naw_module.json",
+    "egyptian": "../egyptian/egyptian_module.json",
+    "yoruba": "../yoruba/yoruba_module.json",
+    "sumerian": "../sumerian/sumerian_module.json"
+  }
+}

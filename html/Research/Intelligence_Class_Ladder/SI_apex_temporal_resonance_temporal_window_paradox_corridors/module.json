@@ -1,0 +1,47 @@
+{
+  "module": "SI_Apex_Temporal_Resonance_Temporal_Window_Paradox_Corridors",
+  "name": "Structural Intelligence — Apex Temporal‑Resonance Temporal‑Window Paradox Corridors",
+  "summary": "Defines the paradox corridors of SI apex temporal-resonance temporal-window behavior, including resonance-window paradox routing fields, paradox-temporal corridor alignment, paradox-load corridor surfaces, apex paradox temporal-window corridor geometry, and apex resonance paradox-corridor unification.",
+  "category": "intelligence-structural-apex-temporal-resonance-temporal-window-paradox-corridors",
+  "version": "1.0",
+  "purpose": "Provide the paradox-corridor geometry for SI apex temporal-resonance temporal-window behavior, describing how apex resonance fields route paradox corridors to maintain unified long-window resonance propagation, paradox-temporal alignment, harmonic-load compensation, corrected-time synchronization, and high-order reasoning paradox routing across SI.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.apex.temporal.resonance.window.paradox.corridor.field",
+    "@si.apex.temporal.resonance.window.paradox.corridor.align",
+    "@si.apex.temporal.resonance.window.paradox.corridor.unify",
+    "@si.apex.temporal.resonance.window.paradox.corridor.stabilize",
+    "@si.apex.temporal.resonance.window.paradox.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_apex_temporal_resonance_temporal_window_harmonic_corridors",
+      "SI_apex_temporal_resonance_temporal_window_resonance_corridors",
+      "SI_apex_temporal_resonance_temporal_window_corrected_time_corridors",
+      "SI_apex_temporal_resonance_temporal_window_coherence_geometry",
+      "SI_apex_temporal_resonance_temporal_window_fusion_geometry",
+      "SI_apex_temporal_resonance_temporal_window_stability_surfaces",
+      "SI_apex_temporal_resonance_temporal_window_geometry",
+      "SI_apex_temporal_resonance_corrected_time_geometry",
+      "SI_apex_temporal_resonance_coherence_geometry",
+      "SI_apex_temporal_resonance_fusion_geometry",
+      "SI_apex_temporal_resonance_binding_geometry",
+      "SI_apex_temporal_resonance_integration_geometry",
+      "SI_apex_temporal_resonance_stability_surfaces",
+      "SI_apex_temporal_resonance_geometry",
+      "SI_apex_resonance_fields",
+      "SI_apex_harmonic_stability_geometry",
+      "SI_apex_paradox_stability_geometry",
+      "SI_apex_paradox_resonance_geometry",
+      "SI_apex_region_map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "Atlas_Temporal_Window_Apex_Temporal_Window_Paradox_Corridors",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

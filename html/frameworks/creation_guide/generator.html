@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Framework Creation Guide — Generator</title>
+  <link rel="stylesheet" href="../fcg.css" />
+</head>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+ /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+       
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<!-- 
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+-->
+<body>
+   
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+
+<!-- ========================= -->
+<!-- Session Context Block     -->
+<!-- ========================= -->
+
+<section id="fcg-generator-session-header"
+         data-rtt="0"
+         data-coherence="declared"
+         data-drift="minimal"
+         data-paradox="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (fcg‑generator)</span><br>
+
+    <span class="context-label"><strong>Scope:</strong></span>
+    <span class="context-value">
+      pipeline → stages → operators → constraints →
+      outputs → evaluation
+    </span><br>
+
+    <span class="context-label"><strong>Role:</strong></span>
+    <span class="context-value">
+      define the procedural engine that constructs frameworks from their
+      declared components
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (fcg‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (triadic‑creation grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (generator‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">
+      html + pipeline diagrams + procedural stages
+    </span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">
+      exists (procedural layer of the Framework Creation Guide)
+    </span><br>
+
+    <span class="context-label"><strong>Every section:</strong></span>
+    <span class="context-value">
+      minimal • structural • AI‑parsable
+    </span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">
+      creators • developers • researchers • AIs
+    </span>
+
+  </div>
+
+</section>
+
+<div class="fcg-tag">
+  🧩 FCG — Generator Layer<br>🔧 Procedural Framework Engine Active
+</div>
+
+
+<!-- ========================= -->
+<!-- Page Header               -->
+<!-- ========================= -->
+
+<header class="fcg-header">
+  <h1>Generator</h1>
+  <p class="fcg-subtitle">
+    The Generator is the procedural engine that constructs frameworks from their
+    declared identity, structure, regimes, operators, and validation rules.
+  </p>
+</header>
+
+
+<!-- ========================= -->
+<!-- 1. Generator Identity      -->
+<!-- ========================= -->
+
+<section id="generator-identity">
+  <h2>1. Generator Identity</h2>
+
+  <p>
+    The Generator defines how a framework is assembled. It is not a model, a
+    regime, or an operator — it is the <em>process</em> that turns declarations
+    into a coherent, instantiated framework.
+  </p>
+
+  <ul>
+    <li><strong>Purpose:</strong> construct frameworks procedurally</li>
+    <li><strong>Inputs:</strong> identity, structure, regimes, operators, validation</li>
+    <li><strong>Outputs:</strong> a complete, coherent framework</li>
+    <li><strong>Guarantees:</strong> structural and behavioral consistency</li>
+  </ul>
+</section>
+
+
+<!-- ========================= -->
+<!-- 2. Pipeline Overview       -->
+<!-- ========================= -->
+
+<section id="pipeline-overview">
+  <h2>2. Pipeline Overview</h2>
+
+  <p>
+    The Generator operates as a pipeline. Each stage transforms the framework
+    from an abstract declaration into a concrete, usable system.
+  </p>
+
+  <ol>
+    <li><strong>Identity Stage:</strong> establish the framework’s core</li>
+    <li><strong>Structure Stage:</strong> assemble the structural spine</li>
+    <li><strong>Regime Stage:</strong> attach coherent modes of operation</li>
+    <li><strong>Operator Stage:</strong> bind transformations and evaluations</li>
+    <li><strong>Validation Stage:</strong> verify coherence and integrity</li>
+    <li><strong>Output Stage:</strong> produce the final framework</li>
+  </ol>
+
+  <p>
+    Each stage is deterministic and must preserve the framework’s declared
+    invariants.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- 3. Identity Stage          -->
+<!-- ========================= -->
+
+<section id="identity-stage">
+  <h2>3. Identity Stage</h2>
+
+  <p>
+    The Identity Stage anchors the framework. It extracts the minimal set of
+    declarations that define what the framework is and what it excludes.
+  </p>
+
+  <ul>
+    <li><strong>Extract Purpose:</strong> what the framework resolves</li>
+    <li><strong>Extract Boundaries:</strong> what is inside vs. outside</li>
+    <li><strong>Extract Assumptions:</strong> declared constraints</li>
+    <li><strong>Extract Invariants:</strong> what must always hold true</li>
+  </ul>
+</section>
+
+
+<!-- ========================= -->
+<!-- 4. Structure Stage         -->
+<!-- ========================= -->
+
+<section id="structure-stage">
+  <h2>4. Structure Stage</h2>
+
+  <p>
+    The Structure Stage assembles the framework’s backbone: components,
+    relationships, and constraints.
+  </p>
+
+  <ul>
+    <li><strong>Assemble Components:</strong> minimal building blocks</li>
+    <li><strong>Define Relationships:</strong> how components connect</li>
+    <li><strong>Apply Constraints:</strong> structural limits</li>
+    <li><strong>Check Coherence:</strong> structural consistency</li>
+  </ul>
+</section>
+
+
+<!-- ========================= -->
+<!-- 5. Regime Stage            -->
+<!-- ========================= -->
+
+<section id="regime-stage">
+  <h2>5. Regime Stage</h2>
+
+  <p>
+    The Regime Stage attaches coherent modes of operation to the framework.
+  </p>
+
+  <ul>
+    <li><strong>Define Regimes:</strong> identity and purpose</li>
+    <li><strong>Apply Constraints:</strong> what is fixed or limited</li>
+    <li><strong>Define Gradients:</strong> what drives change</li>
+    <li><strong>Define Transitions:</strong> how regimes shift</li>
+  </ul>
+</section>
+
+
+<!-- ========================= -->
+<!-- 6. Operator Stage          -->
+<!-- ========================= -->
+
+<section id="operator-stage">
+  <h2>6. Operator Stage</h2>
+
+  <p>
+    The Operator Stage binds transformations, evaluations, comparisons, and
+    compositions to the framework.
+  </p>
+
+  <ul>
+    <li><strong>Bind Transformations:</strong> structural actions</li>
+    <li><strong>Bind Evaluations:</strong> metrics and diagnostics</li>
+    <li><strong>Bind Comparisons:</strong> cross‑framework relations</li>
+    <li><strong>Bind Compositions:</strong> building complex behavior</li>
+  </ul>
+</section>
+
+
+<!-- ========================= -->
+<!-- 7. Validation Stage        -->
+<!-- ========================= -->
+
+<section id="validation-stage">
+  <h2>7. Validation Stage</h2>
+
+  <p>
+    The Validation Stage ensures the framework is coherent, consistent, and
+    aligned with its declared identity.
+  </p>
+
+  <ul>
+    <li><strong>Coherence Checks:</strong> internal consistency</li>
+    <li><strong>Boundary Checks:</strong> identity alignment</li>
+    <li><strong>Regime Checks:</strong> behavioral consistency</li>
+    <li><strong>Operator Checks:</strong> transformation stability</li>
+  </ul>
+</section>
+
+
+<!-- ========================= -->
+<!-- 8. Output Stage            -->
+<!-- ========================= -->
+
+<section id="output-stage">
+  <h2>8. Output Stage</h2>
+
+  <p>
+    The Output Stage produces the final framework: a coherent, validated,
+    ready‑to‑use system.
+  </p>
+
+  <ul>
+    <li><strong>Assemble Final Form:</strong> complete framework</li>
+    <li><strong>Export Structure:</strong> model, regimes, operators</li>
+    <li><strong>Export Metadata:</strong> identity, invariants, constraints</li>
+    <li><strong>Export Validation:</strong> coherence envelope</li>
+  </ul>
+</section>
+
+
+<!-- ========================= -->
+<!-- Footer                    -->
+<!-- ========================= -->
+
+<footer class="fcg-footer">
+  <p>Framework Creation Guide — Generator Layer</p>
+</footer>
+
+</body>
+</html>

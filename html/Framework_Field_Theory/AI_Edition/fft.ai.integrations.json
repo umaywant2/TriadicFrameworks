@@ -1,0 +1,76 @@
+{
+  "id": "fft.ai.integrations",
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "title": "FFT AI — Integrations v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "integrations": {
+    "rtt": {
+      "url": "https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+      "binding": "fft.ai.rtt.bridge.json",
+      "status": "active"
+    },
+    "spine": {
+      "url": "https://docs.triadicframeworks.org/spine/",
+      "binding": "fft.ai.spine.connector.json",
+      "status": "active",
+      "cache_policy": "no-cache",
+      "new_v1_33": true
+    },
+    "coherence": {
+      "module": "fft.ai.coherence.json",
+      "endpoint": "coherence_state",
+      "new_v1_33": true
+    },
+    "drift": {
+      "module": "fft.ai.drift.monitor.json",
+      "endpoint": "drift_delta",
+      "new_v1_33": true
+    },
+    "paradox": {
+      "module": "fft.ai.paradox.resolver.json",
+      "endpoint": "resolution_chain",
+      "new_v1_33": true
+    },
+    "set": {
+      "module": "fft.ai.set.engine.json",
+      "endpoint": "coupling_state",
+      "new_v1_33": true
+    },
+    "snr": {
+      "module": "fft.ai.snr.monitor.json",
+      "endpoint": "snr_partition",
+      "new_v1_33": true
+    },
+    "dco": {
+      "module": "fft.ai.dco.map.json",
+      "endpoint": "dco_scaffold",
+      "new_v1_33": true
+    },
+    "qmroot": {
+      "module": "fft.ai.rtt.qmroot.json",
+      "endpoint": "ladder_trace",
+      "new_v1_33": true
+    },
+    "github": {
+      "url": "https://github.com/umaywant2/TriadicFrameworks",
+      "branch": "main",
+      "path": "docs/Framework_Field_Theory/AI_Edition"
+    }
+  },
+  "v133_additions": [
+    "spine (no-cache)",
+    "coherence",
+    "drift",
+    "paradox",
+    "set",
+    "snr",
+    "dco",
+    "qmroot integrations"
+  ]
+}

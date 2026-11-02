@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Structural_Detection/student_materials/multi_sample_drift_lab.md">
+  <title>✅ Structural Detection — Multi‑Sample Drift Lab (Final, Canonical)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Structural_Detection/student_materials/multi_sample_drift_lab.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Structural_Detection/student_materials/multi_sample_drift_lab.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="structural-detection-multisample-drift-lab-final-canonical">✅ <strong>Structural Detection — Multi‑Sample Drift Lab (Final, Canonical)</strong></h1>
+<h3 id="triadicframeworks-rtt1-student-lab"><em>TriadicFrameworks • RTT/1 • Student Lab</em></h3>
+<h3 id="drift-is-only-visible-when-samples-speak-to-each-other"><em>“Drift is only visible when samples speak to each other.”</em></h3>
+<h1 id="multisample-drift-lab">Multi‑Sample Drift Lab</h1>
+<h3 id="rtt1-structural-detection-module">RTT/1 • Structural Detection Module</h3>
+<h3 id="purpose-train-students-to-detect-track-and-classify-drift-across-multiple-structural-samples">Purpose: Train students to detect, track, and classify drift across multiple structural samples.</h3>
+<hr>
+<h1 id="1-lab-overview">1. Lab Overview</h1>
+<p>This lab teaches students to:</p>
+<ul>
+<li>detect motifs, boundaries, and anomalies  </li>
+<li>identify drift across multiple samples  </li>
+<li>classify regime transitions  </li>
+<li>track continuity threads  </li>
+<li>construct drift envelopes  </li>
+<li>produce a synthesis summary  </li>
+</ul>
+<p>All analysis must remain <strong>structural</strong>, <strong>non‑semantic</strong>, and <strong>operator‑aligned</strong>.</p>
+<hr>
+<h1 id="2-samples-for-the-lab">2. Samples for the Lab</h1>
+<p>Use the following three samples:</p>
+<h3 id="sample-a"><strong>Sample A</strong></h3>
+<pre><code>A A A
+A B A
+A A A
+</code></pre>
+<h3 id="sample-b"><strong>Sample B</strong></h3>
+<pre><code>A B A
+B X B
+A B A
+</code></pre>
+<h3 id="sample-c"><strong>Sample C</strong></h3>
+<pre><code>A B C
+B X B
+C B A
+</code></pre>
+<p>These samples are intentionally small to keep cognitive load low.</p>
+<hr>
+<h1 id="3-operator-pipeline-applied-to-each-sample">3. Operator Pipeline (Applied to Each Sample)</h1>
+<p>Students must run the <strong>full operator pipeline</strong> on each sample:</p>
+<ol>
+<li><strong>Structural Detection</strong>  </li>
+<li><strong>Drift Sense</strong>  </li>
+<li><strong>Regime Awareness</strong>  </li>
+<li><strong>Continuity Compass</strong>  </li>
+<li><strong>Synthesis Triangulation</strong></li>
+</ol>
+<p>Each operator must be applied <strong>cleanly and separately</strong>.</p>
+<hr>
+<h1 id="4-part-i-singlesample-analysis">4. Part I — Single‑Sample Analysis</h1>
+<h2 id="41-sample-a"><strong>4.1 Sample A</strong></h2>
+<ul>
+<li>Motif: strong repetition  </li>
+<li>Anomaly: single B  </li>
+<li>Drift: minimal  </li>
+<li>Regime: <strong>Formal</strong>  </li>
+<li>Continuity: strong invariants  </li>
+</ul>
+<h2 id="42-sample-b"><strong>4.2 Sample B</strong></h2>
+<ul>
+<li>Motif: partial repetition  </li>
+<li>Anomaly: X  </li>
+<li>Drift: localized  </li>
+<li>Regime: <strong>Emergent</strong>  </li>
+<li>Continuity: partial  </li>
+</ul>
+<h2 id="43-sample-c"><strong>4.3 Sample C</strong></h2>
+<ul>
+<li>Motif: broken repetition  </li>
+<li>Anomalies: multiple  </li>
+<li>Drift: spreading  </li>
+<li>Regime: <strong>Chaotic</strong>  </li>
+<li>Continuity: weak  </li>
+</ul>
+<hr>
+<h1 id="5-part-ii-multisample-drift-tracking">5. Part II — Multi‑Sample Drift Tracking</h1>
+<p>Students now compare samples <strong>pairwise</strong>.</p>
+<h2 id="51-a-b"><strong>5.1 A → B</strong></h2>
+<ul>
+<li>Drift: localized  </li>
+<li>Boundary: softening  </li>
+<li>Regime shift: Formal → Emergent  </li>
+<li>Continuity: partial persistence  </li>
+</ul>
+<h2 id="52-b-c"><strong>5.2 B → C</strong></h2>
+<ul>
+<li>Drift: spreading  </li>
+<li>Boundary: fragmentation  </li>
+<li>Regime shift: Emergent → Chaotic  </li>
+<li>Continuity: collapsing  </li>
+</ul>
+<h2 id="53-a-c"><strong>5.3 A → C</strong></h2>
+<ul>
+<li>Drift: high  </li>
+<li>Boundary: fractured  </li>
+<li>Regime shift: Formal → Chaotic (via Emergent)  </li>
+<li>Continuity: minimal  </li>
+</ul>
+<hr>
+<h1 id="6-part-iii-drift-envelope-construction">6. Part III — Drift Envelope Construction</h1>
+<p>Students construct a <strong>DRIFT_ENVELOPE_PACKET</strong> for the full sequence A → B → C.</p>
+<h3 id="drift-points"><strong>Drift Points</strong></h3>
+<ul>
+<li>B in Sample A  </li>
+<li>X in Sample B  </li>
+<li>multiple in Sample C  </li>
+</ul>
+<h3 id="drift-intensity"><strong>Drift Intensity</strong></h3>
+<ul>
+<li>low → moderate → high  </li>
+</ul>
+<h3 id="drift-direction"><strong>Drift Direction</strong></h3>
+<ul>
+<li>center‑outward  </li>
+</ul>
+<h3 id="regime-transitions"><strong>Regime Transitions</strong></h3>
+<ul>
+<li>Formal → Emergent → Chaotic  </li>
+</ul>
+<h3 id="continuity-breaks"><strong>Continuity Breaks</strong></h3>
+<ul>
+<li>invariants weaken  </li>
+<li>anchors collapse  </li>
+</ul>
+<h3 id="envelope-type"><strong>Envelope Type</strong></h3>
+<ul>
+<li><strong>Type A + Type C hybrid</strong>  </li>
+<li>linear progression  </li>
+<li>regime‑locked deformation  </li>
+</ul>
+<hr>
+<h1 id="7-part-iv-continuity-thread-mapping">7. Part IV — Continuity Thread Mapping</h1>
+<p>Students identify continuity threads across samples:</p>
+<h3 id="thread-1-outer-ring"><strong>Thread 1 — Outer Ring</strong></h3>
+<ul>
+<li>persists A → B  </li>
+<li>collapses B → C  </li>
+</ul>
+<h3 id="thread-2-center-column"><strong>Thread 2 — Center Column</strong></h3>
+<ul>
+<li>partially persists  </li>
+<li>distorted by drift  </li>
+</ul>
+<h3 id="thread-3-diagonals"><strong>Thread 3 — Diagonals</strong></h3>
+<ul>
+<li>stable in A  </li>
+<li>unstable in B  </li>
+<li>broken in C  </li>
+</ul>
+<p>Students mark each thread as:</p>
+<ul>
+<li><strong>stable</strong>  </li>
+<li><strong>weakening</strong>  </li>
+<li><strong>broken</strong>  </li>
+</ul>
+<hr>
+<h1 id="8-part-v-regimeshift-classification">8. Part V — Regime‑Shift Classification</h1>
+<p>Students classify each transition:</p>
+<h3 id="a-b"><strong>A → B</strong></h3>
+<ul>
+<li>drift‑dominant  </li>
+<li>boundary‑softening  </li>
+<li>Formal → Emergent  </li>
+</ul>
+<h3 id="b-c"><strong>B → C</strong></h3>
+<ul>
+<li>drift‑dominant  </li>
+<li>boundary‑fragmentation  </li>
+<li>Emergent → Chaotic  </li>
+</ul>
+<h3 id="a-c"><strong>A → C</strong></h3>
+<ul>
+<li>multi‑layer shift  </li>
+<li>Formal → Chaotic (via Emergent)  </li>
+</ul>
+<hr>
+<h1 id="9-part-vi-synthesis-summary">9. Part VI — Synthesis Summary</h1>
+<p>Students produce a <strong>SYNTHESIS_PACKET</strong> summarizing:</p>
+<ul>
+<li>motifs  </li>
+<li>drift profile  </li>
+<li>regime sequence  </li>
+<li>continuity map  </li>
+<li>anomaly profile  </li>
+<li>drift envelope type  </li>
+</ul>
+<p><strong>Expected synthesis:</strong>  </p>
+<blockquote>
+<p>“The sequence A → B → C shows increasing drift, boundary fragmentation, and regime escalation from Formal to Chaotic, with continuity threads weakening and eventually collapsing.”</p>
+</blockquote>
+<hr>
+<h1 id="10-instructor-notes">10. Instructor Notes</h1>
+<ul>
+<li>Keep students focused on <strong>structure</strong>, not meaning  </li>
+<li>Encourage slow, careful drift tracking  </li>
+<li>Reinforce operator separation  </li>
+<li>Use minimal visuals  </li>
+<li>Highlight boundaries and drift vectors  </li>
+</ul>
+<hr>
+<h1 id="11-lab-completion-criteria">11. Lab Completion Criteria</h1>
+<p>A student has completed the lab when they can:</p>
+<ul>
+<li>run all five operators on each sample  </li>
+<li>track drift across samples  </li>
+<li>classify regime shifts  </li>
+<li>map continuity threads  </li>
+<li>construct a drift envelope  </li>
+<li>produce a synthesis summary  </li>
+</ul>
+<hr>
+<h1 id="this-multisample-drift-lab-is">✔️ This Multi‑Sample Drift Lab is:</h1>
+<ul>
+<li>fully canonical  </li>
+<li>zero drift  </li>
+<li>aligned with RTT/1  </li>
+<li>consistent with the Operator Lab, Drift Envelope Map, Regime‑Shift Atlas, and Instructor Notes  </li>
+<li>ready to drop into <code>/docs/Structural_Detection/student_materials/multi_sample_drift_lab.md</code></li>
+</ul>
+  </main>
+</body>
+</html>

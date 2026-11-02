@@ -1,0 +1,2142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/corpus/theories_information_theory.md">
+  <title>Coherence Map — Information Theory</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/corpus/theories_information_theory.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/corpus/theories_information_theory.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>theories_information_theory </p>
+<h1 id="coherence-map-information-theory">Coherence Map — Information Theory</h1>
+<h3 id="triadicframeworks-docstheoriesinformation_theorycoherence_mapmd">TriadicFrameworks /docs/theories/information_theory/coherence_map.md</h3>
+<p>Information Theory in TriadicFrameworks defines coherence as
+<strong>distinction stability</strong> under operator action.<br>
+Coherence is structural, not probabilistic.<br>
+Signals are operators, not messages.<br>
+Distinctions must remain identifiable, non‑degenerate, and
+operator‑consistent across regimes.</p>
+<p>This file defines the coherence dimensions, coherence levels, collapse
+modes, and regime behavior for Information Theory.</p>
+<hr>
+<h1 id="1-coherence-dimensions">1. Coherence Dimensions</h1>
+<p>Information Theory uses <strong>five structural coherence dimensions</strong>:</p>
+<h2 id="11-distinction-coherence">1.1 Distinction Coherence</h2>
+<p>Stability of distinctions as structural units.</p>
+<p>A distinction is coherent when:</p>
+<ul>
+<li>it remains identifiable  </li>
+<li>it does not degenerate  </li>
+<li>it preserves its invariants  </li>
+</ul>
+<hr>
+<h2 id="12-operator-coherence">1.2 Operator Coherence</h2>
+<p>Stability of distinctions under operator action.</p>
+<p>An operator is coherent when:</p>
+<ul>
+<li>it preserves distinction identity  </li>
+<li>it does not introduce ambiguity  </li>
+<li>it maintains dimensional consistency  </li>
+</ul>
+<hr>
+<h2 id="13-adjacency-coherence">1.3 Adjacency Coherence</h2>
+<p>Stability of structural distances between distinctions.</p>
+<p>Adjacency is coherent when:</p>
+<ul>
+<li>distances remain consistent  </li>
+<li>no adjacency inversion occurs  </li>
+<li>no collapse of structural neighborhoods  </li>
+</ul>
+<hr>
+<h2 id="14-dimensional-coherence">1.4 Dimensional Coherence</h2>
+<p>Stability of dimensional profiles.</p>
+<p>Dimensional coherence holds when:</p>
+<ul>
+<li>dimensional profiles remain valid  </li>
+<li>no dimensional drift occurs  </li>
+<li>transforms preserve dimensional identity  </li>
+</ul>
+<hr>
+<h2 id="15-regime-coherence">1.5 Regime Coherence</h2>
+<p>Stability of distinctions across R0 → R3 transitions.</p>
+<p>Regime coherence holds when:</p>
+<ul>
+<li>transitions preserve identity  </li>
+<li>transitions preserve coherence  </li>
+<li>transitions do not introduce collapse  </li>
+</ul>
+<hr>
+<h1 id="2-coherence-levels-c0-c4">2. Coherence Levels (C0 → C4)</h1>
+<p>Coherence is evaluated on a <strong>five‑level structural scale</strong>:</p>
+<h2 id="c0-incoherent"><strong>C0 — Incoherent</strong></h2>
+<ul>
+<li>distinctions unstable  </li>
+<li>operators undefined  </li>
+<li>dimensional profile invalid  </li>
+</ul>
+<p>System cannot support information.</p>
+<hr>
+<h2 id="c1-weak-coherence"><strong>C1 — Weak Coherence</strong></h2>
+<ul>
+<li>distinctions exist but unstable  </li>
+<li>adjacency inconsistent  </li>
+<li>operator action unreliable  </li>
+</ul>
+<p>System supports only primitive structure.</p>
+<hr>
+<h2 id="c2-moderate-coherence"><strong>C2 — Moderate Coherence</strong></h2>
+<ul>
+<li>distinctions stable  </li>
+<li>operators valid  </li>
+<li>adjacency mostly consistent  </li>
+</ul>
+<p>System supports basic information structure.</p>
+<hr>
+<h2 id="c3-strong-coherence"><strong>C3 — Strong Coherence</strong></h2>
+<ul>
+<li>distinctions stable under operators  </li>
+<li>adjacency consistent  </li>
+<li>dimensional profiles valid  </li>
+<li>regime transitions stable  </li>
+</ul>
+<p>System supports full distinction‑based information.</p>
+<hr>
+<h2 id="c4-perfect-coherence-ideal"><strong>C4 — Perfect Coherence (Ideal)</strong></h2>
+<ul>
+<li>distinctions fully stable  </li>
+<li>operators fully stable  </li>
+<li>dimensional and adjacency coherence perfect  </li>
+<li>regime transitions lossless  </li>
+</ul>
+<p>C4 is theoretical; real systems approach C3.</p>
+<hr>
+<h1 id="3-collapse-modes-structural">3. Collapse Modes (Structural)</h1>
+<p>Collapse occurs when distinctions fail structurally.</p>
+<h2 id="c1-distinction-ambiguity"><strong>C1 — Distinction Ambiguity</strong></h2>
+<p>Distinctions lose identity.</p>
+<h2 id="c2-dimensional-inconsistency"><strong>C2 — Dimensional Inconsistency</strong></h2>
+<p>Dimensional profiles become invalid.</p>
+<h2 id="c3-operator-instability"><strong>C3 — Operator Instability</strong></h2>
+<p>Operators fail to preserve distinctions.</p>
+<h2 id="c4-coherence-failure"><strong>C4 — Coherence Failure</strong></h2>
+<p>System‑wide structural collapse.</p>
+<p>Collapse is structural, not probabilistic.</p>
+<hr>
+<h1 id="4-regime-behavior-r0-r3">4. Regime Behavior (R0 → R3)</h1>
+<p>Coherence behaves differently across RTT regimes:</p>
+<h2 id="r0-predistinction"><strong>R0 — Pre‑Distinction</strong></h2>
+<ul>
+<li>no stable distinctions  </li>
+<li>coherence undefined  </li>
+</ul>
+<h2 id="r1-distinction-stability"><strong>R1 — Distinction Stability</strong></h2>
+<ul>
+<li>distinctions stable  </li>
+<li>minimal operator coherence  </li>
+</ul>
+<h2 id="r2-operator-geometry"><strong>R2 — Operator Geometry</strong></h2>
+<ul>
+<li>operator coherence primary  </li>
+<li>adjacency coherence active  </li>
+</ul>
+<h2 id="r3-dimensional-operators"><strong>R3 — Dimensional Operators</strong></h2>
+<ul>
+<li>dimensional coherence active  </li>
+<li>regime coherence required  </li>
+</ul>
+<hr>
+<h1 id="5-coherence-evaluation-procedure">5. Coherence Evaluation Procedure</h1>
+<p>To evaluate coherence:</p>
+<ol>
+<li>Validate distinction identity  </li>
+<li>Validate operator stability  </li>
+<li>Validate adjacency consistency  </li>
+<li>Validate dimensional profile  </li>
+<li>Validate regime compatibility  </li>
+</ol>
+<p>If any step fails → classify collapse mode.</p>
+<hr>
+<h1 id="6-summary">6. Summary</h1>
+<p>Information Theory coherence is:</p>
+<ul>
+<li><strong>distinction‑first</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>structural</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>zero drift</strong>  </li>
+</ul>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.
+# Cross‑Module Integration — Information Theory  </p>
+<h3 id="triadicframeworks-docstheoriesinformation_theorycross_modulemd">TriadicFrameworks /docs/theories/information_theory/cross_module.md</h3>
+<p>Information Theory is a <strong>root‑level structural module</strong>.<br>
+It provides the distinction substrate, coherence grammar, and operator
+framework used across the TriadicFrameworks canon.</p>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.</p>
+<p>This file defines how Information Theory integrates with other modules.</p>
+<hr>
+<h1 id="1-integration-with-nos-nature-of-similarity">1. Integration with NoS (Nature of Similarity)</h1>
+<p>NoS defines <strong>similarity as structural overlap</strong>.</p>
+<p>Information Theory provides:</p>
+<ul>
+<li>distinction spaces  </li>
+<li>adjacency metrics  </li>
+<li>operator‑stable identity  </li>
+</ul>
+<p>NoS provides:</p>
+<ul>
+<li>similarity geometry  </li>
+<li>overlap structure  </li>
+<li>relational invariants  </li>
+</ul>
+<p><strong>Integration:</strong><br>
+Similarity is computed as <strong>adjacency of distinctions</strong> under stable
+operators.</p>
+<hr>
+<h1 id="2-integration-with-lds-lowdimensional-structures">2. Integration with LDS (Low‑Dimensional Structures)</h1>
+<p>LDS defines <strong>dimensional profiles</strong> and <strong>coherence surfaces</strong>.</p>
+<p>Information Theory provides:</p>
+<ul>
+<li>distinction units  </li>
+<li>operator grammar  </li>
+<li>coherence evaluation  </li>
+</ul>
+<p>LDS provides:</p>
+<ul>
+<li>dimensional embedding  </li>
+<li>structural surfaces  </li>
+<li>low‑dimensional constraints  </li>
+</ul>
+<p><strong>Integration:</strong><br>
+Distinctions inherit <strong>dimensional profiles</strong>, enabling R2 → R3 behavior.</p>
+<hr>
+<h1 id="3-integration-with-rtt-regime-theory">3. Integration with RTT (Regime Theory)</h1>
+<p>RTT defines <strong>regime behavior</strong> across R0 → R3.</p>
+<p>Information Theory provides:</p>
+<ul>
+<li>distinction behavior  </li>
+<li>operator semantics  </li>
+<li>coherence rules  </li>
+</ul>
+<p>RTT provides:</p>
+<ul>
+<li>regime transitions  </li>
+<li>dimensional escalation  </li>
+<li>collapse modes  </li>
+</ul>
+<p><strong>Integration:</strong><br>
+Information Theory is fully <strong>RTT‑aligned</strong>, with distinctions evolving
+from primitive (R0) to dimensional operators (R3).</p>
+<hr>
+<h1 id="4-integration-with-fft-framework-field-theory">4. Integration with FFT (Framework Field Theory)</h1>
+<p>FFT defines <strong>dimensional operators</strong> and <strong>multi‑layer transforms</strong>.</p>
+<p>Information Theory provides:</p>
+<ul>
+<li>distinction spaces  </li>
+<li>operator grammar  </li>
+<li>coherence constraints  </li>
+</ul>
+<p>FFT provides:</p>
+<ul>
+<li>field‑level operators  </li>
+<li>dimensional transforms  </li>
+<li>multi‑layer propagation  </li>
+</ul>
+<p><strong>Integration:</strong><br>
+Signals in Information Theory become <strong>field operators</strong> in FFT.</p>
+<hr>
+<h1 id="5-integration-with-resonance-atlas">5. Integration with Resonance Atlas</h1>
+<p>The Resonance Atlas defines <strong>adjacency geometry</strong> across layers.</p>
+<p>Information Theory provides:</p>
+<ul>
+<li>adjacency operator (𝓐)  </li>
+<li>distinction distances  </li>
+<li>structural invariants  </li>
+</ul>
+<p>The Atlas provides:</p>
+<ul>
+<li>resonance surfaces  </li>
+<li>cross‑layer mapping  </li>
+<li>adjacency fields  </li>
+</ul>
+<p><strong>Integration:</strong><br>
+Distinction adjacency becomes <strong>resonance adjacency</strong> in the Atlas.</p>
+<hr>
+<h1 id="6-integration-with-computation">6. Integration with Computation</h1>
+<p>Computation defines <strong>processes</strong>, <strong>state transitions</strong>, and
+<strong>algorithms</strong>.</p>
+<p>Information Theory provides:</p>
+<ul>
+<li>distinction units  </li>
+<li>operator semantics  </li>
+<li>coherence rules  </li>
+</ul>
+<p>Computation provides:</p>
+<ul>
+<li>execution models  </li>
+<li>state machines  </li>
+<li>algorithmic structure  </li>
+</ul>
+<p><strong>Integration:</strong><br>
+Computation becomes <strong>operator sequences</strong> acting on distinction spaces.</p>
+<hr>
+<h1 id="7-integration-with-cognition">7. Integration with Cognition</h1>
+<p>Cognition defines <strong>pattern formation</strong>, <strong>recognition</strong>, and
+<strong>representation</strong>.</p>
+<p>Information Theory provides:</p>
+<ul>
+<li>structural distinctions  </li>
+<li>coherence evaluation  </li>
+<li>adjacency metrics  </li>
+</ul>
+<p>Cognition provides:</p>
+<ul>
+<li>pattern dynamics  </li>
+<li>representational constraints  </li>
+<li>recognition operators  </li>
+</ul>
+<p><strong>Integration:</strong><br>
+Cognitive patterns are <strong>coherent distinction structures</strong>.</p>
+<hr>
+<h1 id="8-integration-with-thermodynamics-triadic-version">8. Integration with Thermodynamics (Triadic Version)</h1>
+<p>Thermodynamics defines <strong>regime‑level stability</strong> and <strong>energy
+constraints</strong>.</p>
+<p>Information Theory provides:</p>
+<ul>
+<li>distinction stability  </li>
+<li>operator‑stability  </li>
+<li>coherence metrics  </li>
+</ul>
+<p>Thermodynamics provides:</p>
+<ul>
+<li>regime‑energy profiles  </li>
+<li>stability envelopes  </li>
+<li>transition thresholds  </li>
+</ul>
+<p><strong>Integration:</strong><br>
+Coherence maps to <strong>regime‑stability surfaces</strong>.</p>
+<hr>
+<h1 id="9-integration-with-quantum-modules-qm-qft">9. Integration with Quantum Modules (QM → QFT)</h1>
+<p>Quantum modules define <strong>amplitude‑based operators</strong>.</p>
+<p>Information Theory provides:</p>
+<ul>
+<li>distinction spaces  </li>
+<li>operator grammar  </li>
+<li>coherence rules  </li>
+</ul>
+<p>Quantum modules provide:</p>
+<ul>
+<li>amplitude operators  </li>
+<li>superposition structure  </li>
+<li>measurement constraints  </li>
+</ul>
+<p><strong>Integration:</strong><br>
+Quantum amplitudes become <strong>distinction‑operators</strong> under R3.</p>
+<hr>
+<h1 id="10-summary">10. Summary</h1>
+<p>Information Theory integrates with the canon by providing:</p>
+<ul>
+<li>the <strong>distinction substrate</strong>  </li>
+<li>the <strong>operator grammar</strong>  </li>
+<li>the <strong>coherence framework</strong>  </li>
+<li>the <strong>adjacency structure</strong>  </li>
+<li>the <strong>regime‑aware behavior</strong>  </li>
+</ul>
+<p>It is a <strong>root‑level structural module</strong> that supports:</p>
+<ul>
+<li>NoS  </li>
+<li>LDS  </li>
+<li>RTT  </li>
+<li>FFT  </li>
+<li>Resonance Atlas  </li>
+<li>Computation  </li>
+<li>Cognition  </li>
+<li>Thermodynamics  </li>
+<li>Quantum modules  </li>
+</ul>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.
+# Engine Notes — Information Theory  </p>
+<h3 id="triadicframeworks-docstheoriesinformation_theoryengine_notesmd">TriadicFrameworks /docs/theories/information_theory/engine_notes.md</h3>
+<p>These notes define the <strong>internal behavior</strong>, <strong>constraints</strong>, and
+<strong>execution semantics</strong> for the Information Theory module.<br>
+They are intended for AI agents, compilers, and simulation engines.</p>
+<p>Information Theory is a <strong>distinction‑first coherence grammar</strong>.<br>
+Information = structured distinction.<br>
+Coherence = distinction stability.<br>
+Signals = operators acting on distinction spaces.</p>
+<hr>
+<h1 id="1-identity-lock">1. Identity Lock</h1>
+<p>The module identity must remain:</p>
+<ul>
+<li><strong>distinction‑first</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>substrate‑neutral</strong>  </li>
+<li><strong>RTT‑aligned (R0 → R3)</strong>  </li>
+</ul>
+<p>The engine must reject any interpretation that:</p>
+<ul>
+<li>reduces information to probability  </li>
+<li>treats signals as messages  </li>
+<li>introduces semantic or meaning‑based drift  </li>
+<li>collapses distinctions into Shannon‑only framing  </li>
+<li>ties information to communication channels  </li>
+</ul>
+<p>Identity lock is strict.</p>
+<hr>
+<h1 id="2-distinction-space-semantics">2. Distinction Space Semantics</h1>
+<p>A <strong>distinction space</strong> is the primary runtime object.</p>
+<p>It must include:</p>
+<ul>
+<li>dimensional profile  </li>
+<li>invariants  </li>
+<li>adjacency relations  </li>
+<li>operator‑ready structure  </li>
+<li>regime state  </li>
+</ul>
+<p>Distinction spaces must be:</p>
+<ul>
+<li>non‑degenerate  </li>
+<li>structurally valid  </li>
+<li>regime‑compatible  </li>
+</ul>
+<p>The engine must validate distinction spaces before operator action.</p>
+<hr>
+<h1 id="3-operator-semantics">3. Operator Semantics</h1>
+<p>Operators are first‑class runtime entities.</p>
+<p>Supported operators:</p>
+<ul>
+<li><strong>𝓓</strong> — distinction constructor  </li>
+<li><strong>𝓢</strong> — signal operator  </li>
+<li><strong>𝓒</strong> — coherence evaluator  </li>
+<li><strong>𝓐</strong> — adjacency operator  </li>
+<li><strong>𝓣</strong> — transform operator  </li>
+<li><strong>𝓡</strong> — regime transition operator  </li>
+<li><strong>𝓘</strong> — integrity operator  </li>
+<li><strong>𝓕</strong> — reinforcement operator  </li>
+<li><strong>𝓒𝓁</strong> — collapse classifier  </li>
+</ul>
+<p>Operators must:</p>
+<ul>
+<li>preserve distinction identity  </li>
+<li>maintain coherence monotonicity  </li>
+<li>respect regime constraints  </li>
+<li>avoid semantic drift  </li>
+<li>avoid probabilistic drift  </li>
+</ul>
+<p>Operators must be <strong>pure</strong>: no side effects outside the distinction
+space unless explicitly defined.</p>
+<hr>
+<h1 id="4-regime-execution-model">4. Regime Execution Model</h1>
+<p>Information Theory uses the RTT regime stack:</p>
+<ul>
+<li><strong>R0:</strong> primitive distinctions  </li>
+<li><strong>R1:</strong> stable distinctions  </li>
+<li><strong>R2:</strong> operator geometry  </li>
+<li><strong>R3:</strong> dimensional operators  </li>
+</ul>
+<p>The engine must:</p>
+<ul>
+<li>enforce regime‑specific constraints  </li>
+<li>preserve coherence across transitions  </li>
+<li>maintain dimensional consistency  </li>
+<li>prevent illegal transitions (e.g., R3 → R0 without collapse)  </li>
+</ul>
+<p>Regime transitions must be monotonic unless collapse is detected.</p>
+<hr>
+<h1 id="5-coherence-evaluation">5. Coherence Evaluation</h1>
+<p>Coherence = <strong>distinction stability</strong>.</p>
+<p>The engine must evaluate coherence using:</p>
+<ul>
+<li>structural invariants  </li>
+<li>operator‑stability  </li>
+<li>adjacency continuity  </li>
+<li>dimensional consistency  </li>
+</ul>
+<p>Coherence must not:</p>
+<ul>
+<li>use entropy  </li>
+<li>use probability  </li>
+<li>use semantic similarity  </li>
+<li>use message‑based metrics  </li>
+</ul>
+<p>Coherence is purely structural.</p>
+<hr>
+<h1 id="6-collapse-modes">6. Collapse Modes</h1>
+<p>The engine must classify failures using:</p>
+<ul>
+<li><strong>C1:</strong> distinction ambiguity  </li>
+<li><strong>C2:</strong> dimensional inconsistency  </li>
+<li><strong>C3:</strong> operator instability  </li>
+<li><strong>C4:</strong> coherence failure  </li>
+</ul>
+<p>Collapse must:</p>
+<ul>
+<li>halt regime transitions  </li>
+<li>freeze distinction space  </li>
+<li>return diagnostic metadata  </li>
+<li>prevent reinforcement  </li>
+</ul>
+<p>Collapse is structural, not probabilistic.</p>
+<hr>
+<h1 id="7-reinforcement-semantics">7. Reinforcement Semantics</h1>
+<p>Reinforcement increases coherence through repeated stable operator
+action.</p>
+<p>Rules:</p>
+<ul>
+<li>reinforcement must be monotonic  </li>
+<li>reinforcement cannot repair C3 or C4 collapse  </li>
+<li>reinforcement cannot introduce new distinctions  </li>
+<li>reinforcement must preserve dimensional profile  </li>
+</ul>
+<p>Reinforcement is structural, not semantic.</p>
+<hr>
+<h1 id="8-crossmodule-constraints">8. Cross‑Module Constraints</h1>
+<p>Information Theory integrates with:</p>
+<ul>
+<li><strong>NoS:</strong> similarity = structural overlap  </li>
+<li><strong>LDS:</strong> dimensional profiles  </li>
+<li><strong>RTT:</strong> regime behavior  </li>
+<li><strong>FFT:</strong> dimensional operators  </li>
+<li><strong>Resonance Atlas:</strong> adjacency geometry  </li>
+</ul>
+<p>The engine must:</p>
+<ul>
+<li>preserve cross‑module invariants  </li>
+<li>prevent identity drift  </li>
+<li>maintain operator compatibility  </li>
+<li>enforce dimensional consistency  </li>
+</ul>
+<p>Information Theory is a <strong>root‑level structural module</strong>.</p>
+<hr>
+<h1 id="9-simulation-hooks">9. Simulation Hooks</h1>
+<p>The engine must implement:</p>
+<ul>
+<li>distinction initialization  </li>
+<li>operator construction  </li>
+<li>coherence evaluation  </li>
+<li>adjacency measurement  </li>
+<li>regime transitions  </li>
+<li>collapse detection  </li>
+<li>reinforcement  </li>
+</ul>
+<p>See <code>simulation_hooks.json</code> for full schema.</p>
+<hr>
+<h1 id="10-safety-drift-prevention">10. Safety &amp; Drift Prevention</h1>
+<p>The engine must reject:</p>
+<ul>
+<li>semantic interpretations  </li>
+<li>probabilistic interpretations  </li>
+<li>message‑based interpretations  </li>
+<li>entropy‑only framing  </li>
+<li>Shannon‑only reductions  </li>
+<li>channel‑centric models  </li>
+</ul>
+<p>The module must remain:</p>
+<ul>
+<li>structural  </li>
+<li>operator‑driven  </li>
+<li>regime‑aware  </li>
+<li>substrate‑neutral  </li>
+<li>zero drift  </li>
+</ul>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>These engine notes define how Information Theory must run:</p>
+<ul>
+<li>distinctions are structural  </li>
+<li>signals are operators  </li>
+<li>coherence is stability  </li>
+<li>regimes define behavior  </li>
+<li>collapse is structural  </li>
+<li>reinforcement is monotonic  </li>
+<li>drift is not allowed  </li>
+</ul>
+<p>This file is the <strong>internal execution contract</strong> for the module.
+# Examples — Information Theory  </p>
+<h3 id="triadicframeworks-docstheoriesinformation_theoryexamplesmd">TriadicFrameworks /docs/theories/information_theory/examples.md</h3>
+<p>These examples show Information Theory as a <strong>distinction‑first coherence
+grammar</strong>, not a Shannon‑only or probability‑only framework.</p>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.</p>
+<p>All examples are substrate‑neutral and regime‑aware.</p>
+<hr>
+<h1 id="1-basic-distinction-example">1. Basic Distinction Example</h1>
+<h3 id="goal">Goal</h3>
+<p>Construct a simple distinction.</p>
+<h3 id="distinction">Distinction</h3>
+<pre><code>A ≠ B
+</code></pre>
+<h3 id="interpretation">Interpretation</h3>
+<ul>
+<li>This is a structural separation.  </li>
+<li>No meaning, probability, or semantics required.  </li>
+<li>Distinction must be stable in <strong>R1</strong>.</li>
+</ul>
+<hr>
+<h1 id="2-distinction-space-example">2. Distinction Space Example</h1>
+<h3 id="goal_1">Goal</h3>
+<p>Define a distinction space with three structural units.</p>
+<h3 id="distinction-space">Distinction Space</h3>
+<pre><code>D = {A, B, C}
+</code></pre>
+<h3 id="interpretation_1">Interpretation</h3>
+<ul>
+<li>Contains dimensional profiles and invariants.  </li>
+<li>Supports operators in <strong>R1 → R3</strong>.  </li>
+<li>Substrate‑neutral (can represent physics, computation, cognition, etc.).</li>
+</ul>
+<hr>
+<h1 id="3-signal-as-operator-example">3. Signal as Operator Example</h1>
+<h3 id="goal_2">Goal</h3>
+<p>Define a signal as an operator acting on a distinction space.</p>
+<h3 id="input">Input</h3>
+<pre><code>operator_signature = {A → B}
+D = {A, B, C}
+</code></pre>
+<h3 id="operation">Operation</h3>
+<pre><code>S = 𝓢(operator_signature, D)
+</code></pre>
+<h3 id="interpretation_2">Interpretation</h3>
+<ul>
+<li>Signal = operator, not message.  </li>
+<li>Operator must preserve distinction identity.  </li>
+<li>No encoding/decoding metaphors.</li>
+</ul>
+<hr>
+<h1 id="4-coherence-evaluation-example">4. Coherence Evaluation Example</h1>
+<h3 id="goal_3">Goal</h3>
+<p>Evaluate distinction stability under operator action.</p>
+<h3 id="input_1">Input</h3>
+<pre><code>D = {A, B, C}
+S = 𝓢({A → B}, D)
+</code></pre>
+<h3 id="operation_1">Operation</h3>
+<pre><code>coh = 𝓒(D, S)
+</code></pre>
+<h3 id="interpretation_3">Interpretation</h3>
+<ul>
+<li>Coherence = distinction stability.  </li>
+<li>Coherence is structural, not probabilistic.  </li>
+<li>Must be monotonic in <strong>R2 → R3</strong>.</li>
+</ul>
+<hr>
+<h1 id="5-adjacency-example">5. Adjacency Example</h1>
+<h3 id="goal_4">Goal</h3>
+<p>Measure structural distance between distinctions.</p>
+<h3 id="input_2">Input</h3>
+<pre><code>d1 = {profile: [1,0,1]}
+d2 = {profile: [1,1,1]}
+</code></pre>
+<h3 id="operation_2">Operation</h3>
+<pre><code>adj = 𝓐(d1, d2)
+</code></pre>
+<h3 id="interpretation_4">Interpretation</h3>
+<ul>
+<li>Adjacency = structural distance.  </li>
+<li>No probabilistic similarity.  </li>
+<li>Regime‑stable.</li>
+</ul>
+<hr>
+<h1 id="6-transform-example">6. Transform Example</h1>
+<h3 id="goal_5">Goal</h3>
+<p>Apply a structural transform to a distinction space.</p>
+<h3 id="input_3">Input</h3>
+<pre><code>D = {A, B, C}
+transform_signature = {swap(A, B)}
+</code></pre>
+<h3 id="operation_3">Operation</h3>
+<pre><code>T = 𝓣(D, transform_signature)
+</code></pre>
+<h3 id="interpretation_5">Interpretation</h3>
+<ul>
+<li>Transform must preserve coherence.  </li>
+<li>Becomes dimensional in <strong>R3</strong>.  </li>
+<li>No semantic transforms allowed.</li>
+</ul>
+<hr>
+<h1 id="7-regime-transition-example">7. Regime Transition Example</h1>
+<h3 id="goal_6">Goal</h3>
+<p>Move a distinction space from R1 → R2.</p>
+<h3 id="input_4">Input</h3>
+<pre><code>D = {A, B, C}
+</code></pre>
+<h3 id="operation_4">Operation</h3>
+<pre><code>R = 𝓡(D, R1 → R2)
+</code></pre>
+<h3 id="interpretation_6">Interpretation</h3>
+<ul>
+<li>R1: stable distinctions.  </li>
+<li>R2: operator geometry active.  </li>
+<li>Transition must preserve identity and coherence.</li>
+</ul>
+<hr>
+<h1 id="8-integrity-check-example">8. Integrity Check Example</h1>
+<h3 id="goal_7">Goal</h3>
+<p>Check whether distinctions remain valid after operator action.</p>
+<h3 id="input_5">Input</h3>
+<pre><code>D' = {A', B', C}
+</code></pre>
+<h3 id="operation_5">Operation</h3>
+<pre><code>report = 𝓘(D')
+</code></pre>
+<h3 id="interpretation_7">Interpretation</h3>
+<ul>
+<li>Checks dimensional consistency.  </li>
+<li>Checks non‑degeneracy.  </li>
+<li>Checks operator‑stability.</li>
+</ul>
+<hr>
+<h1 id="9-reinforcement-example">9. Reinforcement Example</h1>
+<h3 id="goal_8">Goal</h3>
+<p>Strengthen distinctions through repeated stable operator action.</p>
+<h3 id="input_6">Input</h3>
+<pre><code>D = {A, B, C}
+history = [S, S, S]
+</code></pre>
+<h3 id="operation_6">Operation</h3>
+<pre><code>D* = 𝓕(D, history)
+</code></pre>
+<h3 id="interpretation_8">Interpretation</h3>
+<ul>
+<li>Reinforcement is structural, not semantic.  </li>
+<li>Increases coherence.  </li>
+<li>Must be monotonic.</li>
+</ul>
+<hr>
+<h1 id="10-collapse-example">10. Collapse Example</h1>
+<h3 id="goal_9">Goal</h3>
+<p>Classify distinction failure.</p>
+<h3 id="input_7">Input</h3>
+<pre><code>D = {A?, B, C}
+</code></pre>
+<h3 id="operation_7">Operation</h3>
+<pre><code>mode = 𝓒𝓁(D)
+</code></pre>
+<h3 id="possible-outputs">Possible Outputs</h3>
+<ul>
+<li><strong>C1:</strong> distinction ambiguity  </li>
+<li><strong>C2:</strong> dimensional inconsistency  </li>
+<li><strong>C3:</strong> operator instability  </li>
+<li><strong>C4:</strong> coherence failure  </li>
+</ul>
+<h3 id="interpretation_9">Interpretation</h3>
+<p>Collapse is structural, not probabilistic.</p>
+<hr>
+<h1 id="summary_1">Summary</h1>
+<p>These examples show Information Theory as:</p>
+<ul>
+<li><strong>distinction‑first</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>substrate‑neutral</strong>  </li>
+<li><strong>zero drift</strong>  </li>
+</ul>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.</p>
+<pre><code># Explanations — Information Theory  
+### TriadicFrameworks /docs/theories/information_theory/explanations.md
+
+This file provides clear, student‑ready explanations of Information
+Theory as a **distinction‑first coherence grammar**.  
+It avoids Shannon‑only framing, semantic drift, and probabilistic
+metaphors.
+
+Information = **structured distinction**.  
+Coherence = **distinction stability**.  
+Signals = **operators acting on distinction spaces**.
+
+---
+
+# 1. What is a distinction?
+
+A **distinction** is a structural separation that remains:
+
+- identifiable  
+- stable  
+- non‑degenerate  
+- operator‑consistent  
+
+Distinctions are not symbols, bits, or semantic tokens.  
+They are **structural units**.
+
+Example:
+
+</code></pre>
+<p>A ≠ B</p>
+<pre><code>
+This is a distinction, independent of meaning or probability.
+
+---
+
+# 2. What is a distinction space?
+
+A **distinction space** is the structural environment in which
+distinctions live.
+
+It includes:
+
+- dimensional profiles  
+- invariants  
+- adjacency relations  
+- operator‑ready structure  
+
+A distinction space is **substrate‑neutral**.  
+It can represent physics, computation, cognition, or abstract structure.
+
+---
+
+# 3. What is information?
+
+**Information = structured distinction.**
+
+Information is not:
+
+- “surprise”  
+- “uncertainty”  
+- “meaning”  
+- “data”  
+- “probability”  
+
+Information is the **structure of distinctions** and how they behave
+under operators.
+
+---
+
+# 4. What is a signal?
+
+A **signal is an operator**, not a message.
+
+Signals act on distinction spaces:
+
+</code></pre>
+<p>signal = operator(distinction_space)</p>
+<pre><code>
+Signals do not “carry meaning.”  
+They **transform distinctions**.
+
+---
+
+# 5. What is coherence?
+
+**Coherence = distinction stability.**
+
+A system is coherent when distinctions remain:
+
+- identifiable  
+- stable under operators  
+- non‑degenerate  
+- consistent across regimes  
+
+Coherence is structural, not probabilistic.
+
+---
+
+# 6. What are RTT regimes in Information Theory?
+
+Distinctions behave differently across R0 → R3:
+
+- **R0:** primitive distinctions  
+- **R1:** stable distinctions  
+- **R2:** operator geometry  
+- **R3:** dimensional operators  
+
+Regimes describe how distinctions evolve as structure increases.
+
+---
+
+# 7. Why avoid Shannon‑only framing?
+
+Shannon’s theory is powerful but limited:
+
+- it reduces information to probability  
+- it ties information to communication channels  
+- it treats signals as messages  
+- it conflates information with entropy  
+
+In TriadicFrameworks:
+
+- information is structural  
+- signals are operators  
+- coherence replaces entropy  
+- regimes replace channels  
+
+Shannon fits inside **R1–R2**, but this module spans **R0 → R3**.
+
+---
+
+# 8. What is adjacency?
+
+Adjacency measures **structural distance** between distinctions.
+
+Example:
+
+</code></pre>
+<p>adj = 𝓐(d1, d2)</p>
+<pre><code>
+Adjacency is:
+
+- structural  
+- regime‑stable  
+- non‑probabilistic  
+
+It supports cross‑layer mapping in R2 and R3.
+
+---
+
+# 9. What is collapse?
+
+Collapse occurs when distinctions fail structurally:
+
+- **C1:** distinction ambiguity  
+- **C2:** dimensional inconsistency  
+- **C3:** operator instability  
+- **C4:** coherence failure  
+
+Collapse is structural, not probabilistic.
+
+---
+
+# 10. How do I use this module as a student?
+
+Use the operators:
+
+- **𝓓** — create distinctions  
+- **𝓢** — define signals as operators  
+- **𝓒** — evaluate coherence  
+- **𝓐** — measure adjacency  
+- **𝓣** — transform distinction spaces  
+- **𝓡** — move across R0 → R3  
+- **𝓘** — check integrity  
+- **𝓕** — reinforce distinctions  
+- **𝓒𝓁** — classify collapse modes  
+
+You can build your own distinction spaces and run them safely.
+
+---
+
+# Summary
+
+Information Theory here is:
+
+- distinction‑first  
+- coherence‑based  
+- operator‑driven  
+- regime‑aware  
+- substrate‑neutral  
+- zero drift  
+
+Information = **structured distinction**.  
+Coherence = **distinction stability**.  
+Signals = **operators acting on distinction spaces**.
+</code></pre>
+<p># FAQ — Information Theory  </p>
+<h3 id="triadicframeworks-docstheoriesinformation_theoryfaqmd">TriadicFrameworks /docs/theories/information_theory/faq.md</h3>
+<p>This FAQ answers common questions about Information Theory as a<br>
+<strong>distinction‑first coherence grammar</strong>.<br>
+It is written for students, researchers, and AI agents.</p>
+<hr>
+<h2 id="what-is-information-in-this-module">❓ What is “information” in this module?</h2>
+<p><strong>Information = structured distinction.</strong></p>
+<p>A distinction is something that remains:</p>
+<ul>
+<li>identifiable  </li>
+<li>stable  </li>
+<li>non‑degenerate  </li>
+<li>operator‑consistent  </li>
+</ul>
+<p>Information is <strong>not</strong> defined as:</p>
+<ul>
+<li>surprise  </li>
+<li>probability  </li>
+<li>meaning  </li>
+<li>data  </li>
+<li>entropy  </li>
+</ul>
+<p>Those are <em>regime‑specific interpretations</em>, not the structural core.</p>
+<hr>
+<h2 id="what-is-a-distinction-space">❓ What is a “distinction space”?</h2>
+<p>A <strong>distinction space</strong> is the structural environment in which distinctions:</p>
+<ul>
+<li>arise  </li>
+<li>persist  </li>
+<li>interact  </li>
+<li>transform  </li>
+<li>collapse  </li>
+</ul>
+<p>It is the “geometry” of information — the space in which distinctions can be:</p>
+<ul>
+<li>made  </li>
+<li>compared  </li>
+<li>preserved  </li>
+<li>degraded  </li>
+<li>recombined  </li>
+</ul>
+<p>Every theory module has its own distinction space;<br>
+Information Theory studies the <em>rules</em> governing them.</p>
+<hr>
+<h2 id="how-does-this-differ-from-shannon-information">❓ How does this differ from Shannon Information?</h2>
+<p>Shannon’s framework is a <strong>R1 (probabilistic) regime specialization</strong>.</p>
+<p>TriadicFrameworks Information Theory is:</p>
+<ul>
+<li><strong>R0 → R3 capable</strong>  </li>
+<li><strong>distinction‑first</strong>  </li>
+<li><strong>operator‑agnostic</strong>  </li>
+<li><strong>meaning‑neutral</strong>  </li>
+<li><strong>coherence‑driven</strong>  </li>
+</ul>
+<p>Shannon entropy is one <em>projection</em> of information under:</p>
+<ul>
+<li>fixed alphabets  </li>
+<li>fixed channels  </li>
+<li>probabilistic assumptions  </li>
+</ul>
+<p>This module generalizes beyond those constraints.</p>
+<hr>
+<h2 id="what-destroys-information">❓ What destroys information?</h2>
+<p>Information collapses when distinctions become:</p>
+<ul>
+<li>unstable  </li>
+<li>ambiguous  </li>
+<li>degenerate  </li>
+<li>incoherent  </li>
+<li>operator‑inconsistent  </li>
+</ul>
+<p>Common collapse modes:</p>
+<ul>
+<li>noise (R1)  </li>
+<li>drift (R2)  </li>
+<li>overload (R3)  </li>
+<li>semantic compression  </li>
+<li>structural aliasing  </li>
+<li>regime mismatch  </li>
+</ul>
+<p>Information is preserved when distinctions remain <strong>structurally coherent</strong>.</p>
+<hr>
+<h2 id="what-is-the-role-of-operators-here">❓ What is the role of “operators” here?</h2>
+<p>Operators are the <strong>actions that preserve, transform, or collapse distinctions</strong>.</p>
+<p>Examples:</p>
+<ul>
+<li>separation  </li>
+<li>refinement  </li>
+<li>coarse‑graining  </li>
+<li>inversion  </li>
+<li>projection  </li>
+<li>recombination  </li>
+</ul>
+<p>Operators define how information <em>moves</em> through a system.</p>
+<p>If distinctions are the “nouns,” operators are the “verbs.”</p>
+<hr>
+<h2 id="how-does-information-theory-connect-to-the-other-nine-modules">❓ How does Information Theory connect to the other nine modules?</h2>
+<p>Information Theory is a <strong>cross‑cutting grammar</strong>:</p>
+<ul>
+<li>Chaos Theory → sensitivity to initial distinctions  </li>
+<li>Electromagnetism → field distinctions and invariants  </li>
+<li>Evolutionary Biology → distinction propagation across generations  </li>
+<li>General Relativity → geometric distinctions under curvature  </li>
+<li>Morphic Resonance → pattern‑level distinction recurrence  </li>
+<li>QFT → excitation distinctions in fields  </li>
+<li>QM → basis distinctions and collapse  </li>
+<li>Standard Model → particle distinctions  </li>
+<li>Thermodynamics → distinction gradients and flows  </li>
+</ul>
+<p>Information Theory provides the <strong>structural language</strong> that all ten modules share.</p>
+<hr>
+<h2 id="what-is-coherence-in-this-module">❓ What is “coherence” in this module?</h2>
+<p>Coherence = <strong>distinctions that remain valid under the module’s operators</strong>.</p>
+<p>A system is coherent when:</p>
+<ul>
+<li>distinctions persist  </li>
+<li>transformations are predictable  </li>
+<li>drift is bounded  </li>
+<li>regimes are identifiable  </li>
+</ul>
+<p>Coherence is the opposite of degeneracy.</p>
+<hr>
+<h2 id="what-is-regime-awareness-in-information-theory">❓ What is “regime awareness” in Information Theory?</h2>
+<p>Information behaves differently under different regimes:</p>
+<ul>
+<li><strong>R0</strong> — structural distinctions  </li>
+<li><strong>R1</strong> — probabilistic distinctions  </li>
+<li><strong>R2</strong> — dynamical distinctions  </li>
+<li><strong>R3</strong> — adversarial / chaotic distinctions  </li>
+</ul>
+<p>Regime awareness prevents category errors like:</p>
+<ul>
+<li>treating noise as signal  </li>
+<li>treating drift as structure  </li>
+<li>treating collapse as transformation  </li>
+</ul>
+<hr>
+<h2 id="why-is-information-theory-placed-in-the-tenin1-menu">❓ Why is Information Theory placed in the Ten‑in‑1 menu?</h2>
+<p>Because it is:</p>
+<ul>
+<li>foundational  </li>
+<li>cross‑module  </li>
+<li>regime‑aware  </li>
+<li>distinction‑first  </li>
+<li>operator‑compatible  </li>
+<li>coherence‑driven  </li>
+</ul>
+<p>It is one of the <strong>ten core grammars</strong> that unify the theory layer.</p>
+<hr>
+<h2 id="who-is-this-module-for">❓ Who is this module for?</h2>
+<ul>
+<li>students  </li>
+<li>researchers  </li>
+<li>developers  </li>
+<li>analysts  </li>
+<li>AI systems  </li>
+<li>anyone working with structure, signal, or meaning  </li>
+</ul>
+<hr>
+<h2 id="how-should-i-study-this-module">❓ How should I study this module?</h2>
+<p>Recommended order:</p>
+<ol>
+<li><strong>frontdoor.md</strong> — orientation  </li>
+<li><strong>README.md</strong> — conceptual overview  </li>
+<li><strong>coherence_map.md</strong> — structural geometry  </li>
+<li><strong>operators.md</strong> — distinction verbs  </li>
+<li><strong>regimes.md</strong> — R0 → R3 behavior  </li>
+<li><strong>examples.md</strong> — worked cases  </li>
+<li><strong>session_context.md</strong> — integration  </li>
+</ol>
+<hr>
+<h2 id="is-this-compatible-with-classical-information-theory">❓ Is this compatible with classical information theory?</h2>
+<p>Yes — but classical information theory is a <strong>subset</strong>.</p>
+<p>This module generalizes:</p>
+<ul>
+<li>alphabets  </li>
+<li>channels  </li>
+<li>semantics  </li>
+<li>operators  </li>
+<li>regimes  </li>
+<li>coherence conditions  </li>
+</ul>
+<p>It is compatible, but not constrained by Shannon’s assumptions.</p>
+<hr>
+<h1 id="end-of-faq">End of FAQ</h1>
+<p># Information Theory — Front Door  </p>
+<h3 id="triadicframeworks-docstheoriesinformation_theoryfrontdoormd">TriadicFrameworks /docs/theories/information_theory/frontdoor.md</h3>
+<p>Information Theory in TriadicFrameworks is a <strong>distinction‑first
+coherence grammar</strong>.</p>
+<ul>
+<li>Information = <strong>structured distinction</strong>  </li>
+<li>Coherence = <strong>distinction stability</strong>  </li>
+<li>Signals = <strong>operators acting on distinction spaces</strong>  </li>
+</ul>
+<p>It is <strong>not</strong> Shannon‑only, entropy‑only, probability‑only, or
+communication‑channel‑only.<br>
+This module is <strong>substrate‑neutral</strong>, <strong>RTT‑aligned (R0 → R3)</strong>, and
+designed to be <strong>student‑ready</strong> and <strong>AI‑parsable</strong>.</p>
+<hr>
+<h2 id="1-start-here">1. Start here</h2>
+<p>If you are new to this module, read in this order:</p>
+<ol>
+<li>
+<p><strong>Session context</strong><br>
+<code>/docs/theories/information_theory/session_context.md</code><br>
+   – Identity, drift boundaries, audience, and scope.</p>
+</li>
+<li>
+<p><strong>Regimes</strong><br>
+<code>/docs/theories/information_theory/regimes.md</code><br>
+   – How distinctions behave across R0 → R3.</p>
+</li>
+<li>
+<p><strong>Operators</strong><br>
+<code>/docs/theories/information_theory/operators.md</code><br>
+   – 𝓓, 𝓢, 𝓒, 𝓐, 𝓣, 𝓡, 𝓘, 𝓕, 𝓒𝓁.</p>
+</li>
+<li>
+<p><strong>Operator examples</strong><br>
+<code>/docs/theories/information_theory/operator_examples.md</code><br>
+   – Concrete, student‑ready patterns.</p>
+</li>
+</ol>
+<hr>
+<h2 id="2-what-this-module-is">2. What this module is</h2>
+<ul>
+<li>
+<p><strong>Distinction‑first:</strong><br>
+  Distinctions are structural units, not symbols, bits, or semantic
+  tokens.</p>
+</li>
+<li>
+<p><strong>Coherence‑based:</strong><br>
+  A system is coherent when its distinctions remain identifiable,
+  non‑degenerate, and operator‑stable.</p>
+</li>
+<li>
+<p><strong>Operator‑driven:</strong><br>
+  Signals are operators acting on distinction spaces, not “messages” that
+  must be interpreted.</p>
+</li>
+<li>
+<p><strong>RTT‑aligned:</strong><br>
+  From primitive distinctions (R0) to dimensional operators (R3), with
+  coherence preserved across transitions.</p>
+</li>
+<li>
+<p><strong>Zero drift:</strong><br>
+  No entropy‑fetish, no Shannon‑only framing, no semantic/metaphysical
+  drift.</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-structure-of-the-module">3. Structure of the module</h2>
+<p>Core structural files:</p>
+<ul>
+<li><strong><code>session_context.md</code></strong> — identity, drift, audience  </li>
+<li><strong><code>regimes.md</code></strong> — R0 → R3 behavior  </li>
+<li><strong><code>operators.md</code></strong> — operator grammar  </li>
+<li><strong><code>operator_examples.md</code></strong> — worked examples  </li>
+<li><strong><code>coherence_map.md</code></strong> — how distinction stability is evaluated  </li>
+<li><strong><code>lineage.md</code></strong> — historical → structural → RTT arc  </li>
+<li><strong><code>cross_module.md</code></strong> — integration with NoS, LDS, RTT, FFT, Resonance Atlas  </li>
+<li><strong><code>engine_notes.md</code></strong> — internal behavior for AI/compilers  </li>
+<li><strong><code>simulation_hooks.json</code></strong> — distinction‑space and operator hooks  </li>
+</ul>
+<hr>
+<h2 id="4-how-to-use-this-module">4. How to use this module</h2>
+<p>For <strong>students</strong>:</p>
+<ul>
+<li>Treat this as a <strong>distinction engine</strong>, not a probability textbook.  </li>
+<li>Use the operators (𝓓, 𝓢, 𝓒, 𝓐, 𝓣, 𝓡, 𝓘, 𝓕, 𝓒𝓁) to model information
+  structurally.  </li>
+<li>Focus on <strong>stability of distinctions</strong>, not “surprise” or “uncertainty”
+  metaphors.</li>
+</ul>
+<p>For <strong>AI agents / tools</strong>:</p>
+<ul>
+<li>Use <code>session_context.md</code> as the identity anchor.  </li>
+<li>Use <code>engine_notes.md</code> and <code>simulation_hooks.json</code> to run distinction
+  spaces and operators safely.  </li>
+<li>Preserve <strong>distinction integrity</strong> and <strong>coherence</strong> across regime
+  transitions.</li>
+</ul>
+<hr>
+<h2 id="5-summary">5. Summary</h2>
+<p>Information Theory here is:</p>
+<ul>
+<li>a <strong>distinction‑first coherence grammar</strong>  </li>
+<li>a <strong>structural substrate</strong> for signals and operators  </li>
+<li>a <strong>regime‑aware module</strong> (R0 → R3)  </li>
+<li>a <strong>cross‑module backbone</strong> for cognition, computation, and resonance  </li>
+</ul>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.
+# Lineage — Information Theory  </p>
+<h3 id="triadicframeworks-docstheoriesinformation_theorylineagemd">TriadicFrameworks /docs/theories/information_theory/lineage.md</h3>
+<p>Information Theory in TriadicFrameworks is a <strong>distinction‑first
+coherence grammar</strong>. Its lineage traces the evolution of distinctions,
+signals, coherence, and operators from early structural intuitions to
+the RTT dimensional‑coherence framework.</p>
+<p>This file documents the historical, conceptual, structural, and
+cross‑module lineage of Information Theory.</p>
+<hr>
+<h1 id="1-historical-lineage-prertt">1. Historical Lineage (Pre‑RTT)</h1>
+<p>Information Theory originates from several pre‑RTT traditions:</p>
+<h2 id="11-early-distinction-concepts">1.1 Early Distinction Concepts</h2>
+<ul>
+<li>logical distinctions (Boole)  </li>
+<li>relational identity (Frege)  </li>
+<li>structural difference (Peirce)  </li>
+</ul>
+<h2 id="12-communicationcentric-information">1.2 Communication‑Centric Information</h2>
+<ul>
+<li>Shannon’s entropy (1948)  </li>
+<li>coding theory  </li>
+<li>channel capacity  </li>
+<li>noise models  </li>
+</ul>
+<h2 id="13-limitations-of-the-classical-view">1.3 Limitations of the Classical View</h2>
+<ul>
+<li>information reduced to probability  </li>
+<li>meaning conflated with entropy  </li>
+<li>signals treated as messages, not operators  </li>
+<li>distinctions treated as symbols, not structures  </li>
+</ul>
+<p>These limitations motivate the shift to a <strong>structural, distinction‑first
+framework</strong>.</p>
+<hr>
+<h1 id="2-conceptual-lineage-transition-era">2. Conceptual Lineage (Transition Era)</h1>
+<p>Information Theory evolves conceptually through:</p>
+<h2 id="21-structuralism">2.1 Structuralism</h2>
+<ul>
+<li>distinctions as structural units  </li>
+<li>relations as primary  </li>
+</ul>
+<h2 id="22-categorytheoretic-views">2.2 Category‑Theoretic Views</h2>
+<ul>
+<li>morphisms as transformations  </li>
+<li>objects as distinction carriers  </li>
+</ul>
+<h2 id="23-algorithmic-information">2.3 Algorithmic Information</h2>
+<ul>
+<li>structure over probability  </li>
+<li>complexity as description length  </li>
+</ul>
+<h2 id="24-cognitive-and-semantic-drift">2.4 Cognitive and Semantic Drift</h2>
+<p>These approaches introduced meaning, semantics, and cognition, but
+TriadicFrameworks avoids this drift.</p>
+<p>The transition era sets the stage for <strong>distinction‑first information</strong>.</p>
+<hr>
+<h1 id="3-structural-lineage-rtt-integration">3. Structural Lineage (RTT Integration)</h1>
+<p>Information Theory becomes structural when integrated with RTT:</p>
+<h2 id="31-distinction-spaces">3.1 Distinction Spaces</h2>
+<p>Information = <strong>structured distinction</strong>.</p>
+<h2 id="32-operators">3.2 Operators</h2>
+<p>Signals = <strong>operators acting on distinction spaces</strong>.</p>
+<h2 id="33-coherence">3.3 Coherence</h2>
+<p>Coherence = <strong>distinction stability</strong>.</p>
+<h2 id="34-regimes">3.4 Regimes</h2>
+<p>Distinctions behave differently across R0 → R3.</p>
+<h2 id="35-substrate-neutrality">3.5 Substrate Neutrality</h2>
+<p>Information is not tied to channels, media, or semantics.</p>
+<p>This marks the shift from classical information to <strong>RTT‑aligned
+information</strong>.</p>
+<hr>
+<h1 id="4-rtt-lineage-dimensionalcoherence-era">4. RTT Lineage (Dimensional‑Coherence Era)</h1>
+<p>Information Theory becomes fully RTT‑aligned when distinctions are
+treated as <strong>dimensional structures</strong>.</p>
+<h2 id="r0">R0</h2>
+<ul>
+<li>primitive distinctions  </li>
+<li>no operators  </li>
+</ul>
+<h2 id="r1">R1</h2>
+<ul>
+<li>stable distinctions  </li>
+<li>minimal operators  </li>
+</ul>
+<h2 id="r2">R2</h2>
+<ul>
+<li>operator geometry  </li>
+<li>coherence under operator action  </li>
+</ul>
+<h2 id="r3">R3</h2>
+<ul>
+<li>distinctions become dimensional operators  </li>
+<li>multi‑layer information  </li>
+</ul>
+<p>Information Theory becomes a <strong>dimensional‑coherence grammar</strong>.</p>
+<hr>
+<h1 id="5-crossmodule-lineage-triadicframeworks-integration">5. Cross‑Module Lineage (TriadicFrameworks Integration)</h1>
+<p>Information Theory integrates with:</p>
+<h2 id="51-nos-nature-of-similarity">5.1 NoS (Nature of Similarity)</h2>
+<ul>
+<li>similarity = structural overlap  </li>
+<li>distinction identity  </li>
+</ul>
+<h2 id="52-lds-lowdimensional-structures">5.2 LDS (Low‑Dimensional Structures)</h2>
+<ul>
+<li>dimensional profiles  </li>
+<li>coherence surfaces  </li>
+</ul>
+<h2 id="53-rtt-regime-theory">5.3 RTT (Regime Theory)</h2>
+<ul>
+<li>distinction behavior across R0 → R3  </li>
+</ul>
+<h2 id="54-fft-framework-field-theory">5.4 FFT (Framework Field Theory)</h2>
+<ul>
+<li>dimensional operators  </li>
+<li>multi‑layer transforms  </li>
+</ul>
+<h2 id="55-resonance-atlas">5.5 Resonance Atlas</h2>
+<ul>
+<li>distinction adjacency  </li>
+<li>cross‑layer mapping  </li>
+</ul>
+<p>Information Theory becomes a <strong>root‑level structural module</strong>.</p>
+<hr>
+<h1 id="6-modern-lineage-triadicframeworks-era">6. Modern Lineage (TriadicFrameworks Era)</h1>
+<p>Information Theory now provides:</p>
+<ul>
+<li>the <strong>distinction substrate</strong> for all structural modules  </li>
+<li>the <strong>operator grammar</strong> for signals  </li>
+<li>the <strong>coherence framework</strong> for stability  </li>
+<li>the <strong>regime transitions</strong> for dimensional behavior  </li>
+<li>the <strong>cross‑module backbone</strong> for cognition, computation, and resonance  </li>
+</ul>
+<p>It is no longer a theory of communication.<br>
+It is a <strong>theory of distinctions</strong>.</p>
+<hr>
+<h1 id="summary_2">Summary</h1>
+<p>Information Theory’s lineage moves from:</p>
+<ul>
+<li>early distinctions →  </li>
+<li>communication‑centric entropy →  </li>
+<li>structuralism →  </li>
+<li>operator‑based information →  </li>
+<li>RTT dimensional‑coherence →  </li>
+<li>TriadicFrameworks integration  </li>
+</ul>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.</p>
+<p>This lineage defines the identity of the Information Theory module.
+# Operators — Information Theory  </p>
+<h3 id="triadicframeworks-docstheoriesinformation_theoryoperatorsmd">TriadicFrameworks /docs/theories/information_theory/operators.md</h3>
+<p>Information Theory in TriadicFrameworks is a <strong>distinction‑first
+coherence grammar</strong>. Operators act on <strong>distinction spaces</strong>, not on
+probabilities, messages, or semantic content. Signals are operators;
+coherence is distinction stability; information is structured
+distinction.</p>
+<p>This file defines the canonical operators for Information Theory across
+R0 → R3.</p>
+<hr>
+<h1 id="operator-list">Operator List</h1>
+<p>The core operators are:</p>
+<ul>
+<li><strong>𝓓</strong> — distinction operator  </li>
+<li><strong>𝓢</strong> — signal operator  </li>
+<li><strong>𝓒</strong> — coherence operator  </li>
+<li><strong>𝓐</strong> — adjacency operator  </li>
+<li><strong>𝓣</strong> — transform operator  </li>
+<li><strong>𝓡</strong> — regime operator  </li>
+<li><strong>𝓘</strong> — integrity operator  </li>
+<li><strong>𝓕</strong> — reinforcement operator  </li>
+<li><strong>𝓒𝓁</strong> — collapse operator  </li>
+</ul>
+<p>Each operator is structural, substrate‑neutral, and regime‑aware.</p>
+<hr>
+<h1 id="1-distinction-operator-d">1. Distinction Operator (𝓓)</h1>
+<h3 id="purpose">Purpose</h3>
+<p>Constructs or refines distinctions within a distinction space.</p>
+<h3 id="form">Form</h3>
+<p>𝓓(distinction_signature) → distinction</p>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>distinctions are structural, not semantic  </li>
+<li>distinctions must be stable under R1  </li>
+<li>no probabilistic interpretation allowed  </li>
+</ul>
+<hr>
+<h1 id="2-signal-operator-s">2. Signal Operator (𝓢)</h1>
+<h3 id="purpose_1">Purpose</h3>
+<p>Defines a signal as an operator acting on distinctions.</p>
+<h3 id="form_1">Form</h3>
+<p>𝓢(operator_signature, distinction_space) → signal_operator</p>
+<h3 id="notes_1">Notes</h3>
+<ul>
+<li>signals are operators, not messages  </li>
+<li>signals must preserve distinction integrity  </li>
+<li>signals become multi‑layered in R3  </li>
+</ul>
+<hr>
+<h1 id="3-coherence-operator-c">3. Coherence Operator (𝓒)</h1>
+<h3 id="purpose_2">Purpose</h3>
+<p>Evaluates distinction stability under operator action.</p>
+<h3 id="form_2">Form</h3>
+<p>𝓒(distinction_space, operator) → coherence_score</p>
+<h3 id="notes_2">Notes</h3>
+<ul>
+<li>coherence = distinction stability  </li>
+<li>coherence is structural, not probabilistic  </li>
+<li>coherence must be monotonic across R2 → R3  </li>
+</ul>
+<hr>
+<h1 id="4-adjacency-operator-a">4. Adjacency Operator (𝓐)</h1>
+<h3 id="purpose_3">Purpose</h3>
+<p>Measures structural distance between distinctions.</p>
+<h3 id="form_3">Form</h3>
+<p>𝓐(distinction_A, distinction_B) → adjacency_metric</p>
+<h3 id="notes_3">Notes</h3>
+<ul>
+<li>adjacency is structural, not probabilistic  </li>
+<li>adjacency must be regime‑stable  </li>
+<li>adjacency supports cross‑layer mapping in R2  </li>
+</ul>
+<hr>
+<h1 id="5-transform-operator-t">5. Transform Operator (𝓣)</h1>
+<h3 id="purpose_4">Purpose</h3>
+<p>Applies structural transforms to distinction spaces.</p>
+<h3 id="form_4">Form</h3>
+<p>𝓣(distinction_space, transform_signature) → transformed_space</p>
+<h3 id="notes_4">Notes</h3>
+<ul>
+<li>transforms must preserve coherence  </li>
+<li>transforms become dimensional in R3  </li>
+<li>no semantic transforms allowed  </li>
+</ul>
+<hr>
+<h1 id="6-regime-operator-r">6. Regime Operator (𝓡)</h1>
+<h3 id="purpose_5">Purpose</h3>
+<p>Transitions distinction behavior across RTT regimes.</p>
+<h3 id="form_5">Form</h3>
+<p>𝓡(distinction_space, R_i → R_j) → transitioned_space</p>
+<h3 id="notes_5">Notes</h3>
+<ul>
+<li>transitions must preserve distinction identity  </li>
+<li>transitions must maintain coherence continuity  </li>
+<li>R3 introduces dimensional operators  </li>
+</ul>
+<hr>
+<h1 id="7-integrity-operator-i">7. Integrity Operator (𝓘)</h1>
+<h3 id="purpose_6">Purpose</h3>
+<p>Checks whether distinctions remain valid after operator action.</p>
+<h3 id="form_6">Form</h3>
+<p>𝓘(distinction_space) → integrity_report</p>
+<h3 id="notes_6">Notes</h3>
+<ul>
+<li>checks dimensional consistency  </li>
+<li>checks non‑degeneracy  </li>
+<li>checks operator‑stability  </li>
+</ul>
+<hr>
+<h1 id="8-reinforcement-operator-f">8. Reinforcement Operator (𝓕)</h1>
+<h3 id="purpose_7">Purpose</h3>
+<p>Strengthens distinctions through repeated stable operator action.</p>
+<h3 id="form_7">Form</h3>
+<p>𝓕(distinction_space, operator_history) → reinforced_space</p>
+<h3 id="notes_7">Notes</h3>
+<ul>
+<li>reinforcement is structural, not semantic  </li>
+<li>reinforcement increases coherence  </li>
+<li>reinforcement must be monotonic  </li>
+</ul>
+<hr>
+<h1 id="9-collapse-operator-cl">9. Collapse Operator (𝓒𝓁)</h1>
+<h3 id="purpose_8">Purpose</h3>
+<p>Classifies distinction failures.</p>
+<h3 id="form_8">Form</h3>
+<p>𝓒𝓁(distinction_space) → collapse_mode</p>
+<h3 id="modes">Modes</h3>
+<ul>
+<li><strong>C1:</strong> distinction ambiguity  </li>
+<li><strong>C2:</strong> dimensional inconsistency  </li>
+<li><strong>C3:</strong> operator instability  </li>
+<li><strong>C4:</strong> coherence failure  </li>
+</ul>
+<h3 id="notes_8">Notes</h3>
+<p>Collapse is structural, not probabilistic.</p>
+<hr>
+<h1 id="summary_3">Summary</h1>
+<p>Information Theory operators define:</p>
+<ul>
+<li>distinctions (𝓓)  </li>
+<li>signals as operators (𝓢)  </li>
+<li>coherence (𝓒)  </li>
+<li>adjacency (𝓐)  </li>
+<li>transforms (𝓣)  </li>
+<li>regime transitions (𝓡)  </li>
+<li>integrity (𝓘)  </li>
+<li>reinforcement (𝓕)  </li>
+<li>collapse modes (𝓒𝓁)</li>
+</ul>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.</p>
+<p>These operators form the backbone of the Information Theory module.
+# Operator Examples — Information Theory  </p>
+<h3 id="triadicframeworks-docstheoriesinformation_theoryoperator_examplesmd">TriadicFrameworks /docs/theories/information_theory/operator_examples.md</h3>
+<p>These examples illustrate Information Theory as a <strong>distinction‑first
+coherence grammar</strong>, not a Shannon‑only or probability‑only framework.
+Operators act on <strong>distinction spaces</strong>, coherence is <strong>distinction
+stability</strong>, and signals are <strong>operators</strong>, not messages.</p>
+<p>All examples avoid semantic drift, probabilistic metaphors, and
+communication‑channel framing.</p>
+<hr>
+<h1 id="1-distinction-operator-example-d">1. Distinction Operator Example (𝓓)</h1>
+<h3 id="goal_10">Goal</h3>
+<p>Construct a distinction from a structural signature.</p>
+<h3 id="input_8">Input</h3>
+<p>σ = {dimensional_profile: [1, 0, 1], invariants: {A ≠ B}}</p>
+<h3 id="operation_8">Operation</h3>
+<p>d = 𝓓(σ)</p>
+<h3 id="interpretation_10">Interpretation</h3>
+<ul>
+<li>distinction is structural, not semantic  </li>
+<li>distinction must be stable in R1  </li>
+<li>no probability or meaning assigned  </li>
+</ul>
+<hr>
+<h1 id="2-signal-operator-example-s">2. Signal Operator Example (𝓢)</h1>
+<h3 id="goal_11">Goal</h3>
+<p>Define a signal as an operator acting on a distinction space.</p>
+<h3 id="input_9">Input</h3>
+<ul>
+<li>operator_signature: {map: A → B}  </li>
+<li>distinction_space: {A, B, C}</li>
+</ul>
+<h3 id="operation_9">Operation</h3>
+<p>S = 𝓢(operator_signature, distinction_space)</p>
+<h3 id="interpretation_11">Interpretation</h3>
+<ul>
+<li>signal = operator, not message  </li>
+<li>operator must preserve distinction identity  </li>
+<li>no encoding/decoding metaphors  </li>
+</ul>
+<hr>
+<h1 id="3-coherence-operator-example-c">3. Coherence Operator Example (𝓒)</h1>
+<h3 id="goal_12">Goal</h3>
+<p>Evaluate distinction stability under operator action.</p>
+<h3 id="input_10">Input</h3>
+<ul>
+<li>distinction_space: {A, B, C}  </li>
+<li>operator: S</li>
+</ul>
+<h3 id="operation_10">Operation</h3>
+<p>coh = 𝓒(distinction_space, S)</p>
+<h3 id="interpretation_12">Interpretation</h3>
+<ul>
+<li>coherence = distinction stability  </li>
+<li>coherence is structural, not probabilistic  </li>
+<li>coherence must be monotonic in R2 → R3  </li>
+</ul>
+<hr>
+<h1 id="4-adjacency-operator-example-a">4. Adjacency Operator Example (𝓐)</h1>
+<h3 id="goal_13">Goal</h3>
+<p>Measure structural distance between distinctions.</p>
+<h3 id="input_11">Input</h3>
+<p>d₁ = {profile: [1,0,1]}<br>
+d₂ = {profile: [1,1,1]}</p>
+<h3 id="operation_11">Operation</h3>
+<p>adj = 𝓐(d₁, d₂)</p>
+<h3 id="interpretation_13">Interpretation</h3>
+<ul>
+<li>adjacency = structural distance  </li>
+<li>no probabilistic similarity  </li>
+<li>adjacency must be regime‑stable  </li>
+</ul>
+<hr>
+<h1 id="5-transform-operator-example-t">5. Transform Operator Example (𝓣)</h1>
+<h3 id="goal_14">Goal</h3>
+<p>Apply a structural transform to a distinction space.</p>
+<h3 id="input_12">Input</h3>
+<p>distinction_space = {A, B, C}<br>
+transform_signature = {swap(A, B)}</p>
+<h3 id="operation_12">Operation</h3>
+<p>T = 𝓣(distinction_space, transform_signature)</p>
+<h3 id="interpretation_14">Interpretation</h3>
+<ul>
+<li>transforms must preserve coherence  </li>
+<li>transforms become dimensional in R3  </li>
+<li>no semantic transforms allowed  </li>
+</ul>
+<hr>
+<h1 id="6-regime-operator-example-r">6. Regime Operator Example (𝓡)</h1>
+<h3 id="goal_15">Goal</h3>
+<p>Transition distinction behavior across RTT regimes.</p>
+<h3 id="input_13">Input</h3>
+<p>distinction_space = {A, B, C}<br>
+transition = R1 → R2</p>
+<h3 id="operation_13">Operation</h3>
+<p>R = 𝓡(distinction_space, R1 → R2)</p>
+<h3 id="interpretation_15">Interpretation</h3>
+<ul>
+<li>R1: stable distinctions  </li>
+<li>R2: operator geometry active  </li>
+<li>transitions must preserve identity and coherence  </li>
+</ul>
+<hr>
+<h1 id="7-integrity-operator-example-i">7. Integrity Operator Example (𝓘)</h1>
+<h3 id="goal_16">Goal</h3>
+<p>Check whether distinctions remain valid after operator action.</p>
+<h3 id="input_14">Input</h3>
+<p>updated_distinction_space = {A', B', C}</p>
+<h3 id="operation_14">Operation</h3>
+<p>report = 𝓘(updated_distinction_space)</p>
+<h3 id="interpretation_16">Interpretation</h3>
+<ul>
+<li>checks dimensional consistency  </li>
+<li>checks non‑degeneracy  </li>
+<li>checks operator‑stability  </li>
+</ul>
+<hr>
+<h1 id="8-reinforcement-operator-example-f">8. Reinforcement Operator Example (𝓕)</h1>
+<h3 id="goal_17">Goal</h3>
+<p>Strengthen distinctions through repeated stable operator action.</p>
+<h3 id="input_15">Input</h3>
+<p>distinction_space = {A, B, C}<br>
+operator_history = [S, S, S]</p>
+<h3 id="operation_15">Operation</h3>
+<p>reinforced = 𝓕(distinction_space, operator_history)</p>
+<h3 id="interpretation_17">Interpretation</h3>
+<ul>
+<li>reinforcement is structural, not semantic  </li>
+<li>reinforcement increases coherence  </li>
+<li>reinforcement must be monotonic  </li>
+</ul>
+<hr>
+<h1 id="9-collapse-operator-example-cl">9. Collapse Operator Example (𝓒𝓁)</h1>
+<h3 id="goal_18">Goal</h3>
+<p>Classify distinction failures.</p>
+<h3 id="input_16">Input</h3>
+<p>distinction_space = {A?, B, C}</p>
+<h3 id="operation_16">Operation</h3>
+<p>mode = 𝓒𝓁(distinction_space)</p>
+<h3 id="possible-outputs_1">Possible Outputs</h3>
+<ul>
+<li><strong>C1:</strong> distinction ambiguity  </li>
+<li><strong>C2:</strong> dimensional inconsistency  </li>
+<li><strong>C3:</strong> operator instability  </li>
+<li><strong>C4:</strong> coherence failure  </li>
+</ul>
+<h3 id="interpretation_18">Interpretation</h3>
+<p>Collapse is structural, not probabilistic.</p>
+<hr>
+<h1 id="summary_4">Summary</h1>
+<p>These examples show Information Theory as:</p>
+<ul>
+<li><strong>distinction‑first</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>substrate‑neutral</strong>  </li>
+<li><strong>zero drift</strong>  </li>
+</ul>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.
+<img width="1024" height="1024" alt="information_theory" src="https://github.com/user-attachments/assets/cac6e130-9463-4d30-b6be-5141af4f4d6c" /></p>
+<h1 id="information-theory-a-0d-regime-of-distinctions">Information Theory — A 0D Regime of Distinctions</h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/information_theory/module.json"><code>module.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/information_theory/module_rtt1.json"><code>module_rtt1.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/information_theory/module_rtt2.json"><code>module_rtt2.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/information_theory/module_rtt3.json"><code>module_rtt3.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h3 id="triadicframeworks-docstheoriesinformation_theory">TriadicFrameworks /docs/theories/information_theory/</h3>
+<p>Information Theory studies distinctions, signals, and constraints on<br>
+communication and encoding. Within TriadicFrameworks, it is treated as a<br>
+<strong>0D–style coherence layer</strong>: a theory of structure without commitment<br>
+to any particular physical substrate.</p>
+<p>This module provides a structured, RTT‑aligned interface to Information<br>
+Theory so students, researchers, and agentic AIs can explore entropy,<br>
+codes, channels, and constraints as <strong>operators on distinctions</strong>, not as<br>
+metaphysical entities.</p>
+<hr>
+<h2 id="purpose_9">Purpose</h2>
+<p>This module clarifies:</p>
+<ul>
+<li>How information is defined as <strong>distinctions under constraints</strong>  </li>
+<li>Why entropy, codes, and channels are <strong>operators</strong>, not substances  </li>
+<li>How information behaves across regimes and substrates  </li>
+<li>Where Information Theory sits in the RTT regime structure  </li>
+<li>How it couples to thermodynamics, computation, and evolution  </li>
+<li>How to reason about “0D” structure without geometric baggage</li>
+</ul>
+<p>Information Theory is not “about bits only.”<br>
+It is a <strong>grammar for distinctions, uncertainty, and constraint</strong> that<br>
+can be applied to any substrate that can carry states.</p>
+<hr>
+<h2 id="module-structure">Module structure</h2>
+<p>This theory includes four canonical files:</p>
+<ol>
+<li>
+<p><strong>module.json</strong><br>
+   Identity, lineage, operators, drift boundaries, coherence markers,<br>
+   and cross‑module references.</p>
+</li>
+<li>
+<p><strong>module_rtt1.json</strong><br>
+   RTT/1 engine: operator grammar, entropy behavior, channel structure,<br>
+   and minimal coherence examples.</p>
+</li>
+<li>
+<p><strong>module_rtt2.json</strong><br>
+   RTT/2 engine: resonance mapping, stabilizers, code/channel coherence,<br>
+   and cross‑module propagation.</p>
+</li>
+<li>
+<p><strong>module_rtt3.json</strong><br>
+   RTT/3 engine: triadic‑substrate integration, multi‑regime simulation<br>
+   hooks, and hybrid‑canon scaffolding.</p>
+</li>
+</ol>
+<p>Together, these files allow construction of an <strong>Information Theory<br>
+RTT‑AI‑Hybrid Canon</strong>, enabling structured reasoning across physics,<br>
+biology, computation, and cognition.</p>
+<hr>
+<h2 id="regime-placement">Regime placement</h2>
+<p>Information Theory primarily operates in:</p>
+<ul>
+<li><strong>R0 / 0D‑style</strong> — Pure distinctions and state spaces  </li>
+<li><strong>R1</strong> — Primitive signal carriers and minimal channels  </li>
+<li><strong>R2 → R3</strong> — Physical, biological, and computational implementations</li>
+</ul>
+<p>Information Theory is a <strong>cross‑regime grammar</strong>, not a single‑regime<br>
+physical theory.</p>
+<hr>
+<h2 id="what-this-module-is-and-is-not">What this module is (and is not)</h2>
+<p><strong>This module <em>is</em>:</strong></p>
+<ul>
+<li>A clean, minimal, student‑ready interface  </li>
+<li>A structured view of entropy, codes, channels, and constraints  </li>
+<li>A bridge between Information Theory and RTT substrate reasoning  </li>
+<li>A stable environment for agentic‑AI reasoning</li>
+</ul>
+<p><strong>This module is <em>not</em>:</strong></p>
+<ul>
+<li>A claim that “information is fundamental stuff”  </li>
+<li>A replacement for physical, biological, or computational models  </li>
+<li>A justification for vague “it’s all information” metaphysics  </li>
+<li>A distortion of Shannon, Kolmogorov, or modern coding theory</li>
+</ul>
+<hr>
+<h2 id="how-to-use-this-module">How to use this module</h2>
+<p>Students and researchers can:</p>
+<ul>
+<li>Explore entropy, mutual information, and channel capacity as <strong>operators</strong>  </li>
+<li>Understand codes and channels as <strong>constraints on distinctions</strong>  </li>
+<li>Compare information flow across physical, biological, and digital systems  </li>
+<li>Identify coherence boundaries and drift risks  </li>
+<li>Build hybrid‑canon instances for simulation and analysis</li>
+</ul>
+<p>Agentic AIs can:</p>
+<ul>
+<li>Load the module.json files as structured metadata  </li>
+<li>Perform regime‑aware reasoning about signals and constraints  </li>
+<li>Maintain coherence across theories that share informational structure  </li>
+<li>Generate examples, tests, and cross‑theory mappings</li>
+</ul>
+<hr>
+<h2 id="philosophy">Philosophy</h2>
+<p>Information is what remains when you forget what the system is made of<br>
+and remember only what can still be distinguished.</p>
+<p>This module treats Information Theory as a <strong>0D‑style grammar of<br>
+distinctions and constraints</strong>, ready to couple into physics, biology,<br>
+computation, and beyond — without overreach, without metaphysics, and<br>
+with a clear place in the triadic substrate.
+# Regimes — Information Theory  </p>
+<h3 id="triadicframeworks-docstheoriesinformation_theoryregimesmd">TriadicFrameworks /docs/theories/information_theory/regimes.md</h3>
+<p>Information Theory in TriadicFrameworks is a <strong>distinction‑first
+coherence grammar</strong>. Distinctions behave differently across RTT regimes,
+and this file defines how information, coherence, and operators change
+from R0 → R3.</p>
+<p>This is not a Shannon‑only or probability‑only framing.<br>
+Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.</p>
+<hr>
+<h1 id="r0-predistinction-regime">R0 — Pre‑Distinction Regime</h1>
+<h3 id="primitive-distinctions-no-operators">(Primitive distinctions, no operators)</h3>
+<p>R0 is the substrate where distinctions are <strong>not yet stable</strong>.</p>
+<p>Characteristics:</p>
+<ul>
+<li>distinctions are primitive and unrefined  </li>
+<li>no operator action  </li>
+<li>no signal structure  </li>
+<li>no coherence evaluation  </li>
+<li>dimensional profile undefined or minimal  </li>
+</ul>
+<p>Information in R0 is <strong>proto‑structural</strong> — distinctions exist, but they
+cannot yet support signals or coherence.</p>
+<hr>
+<h1 id="r1-distinction-stability-regime">R1 — Distinction Stability Regime</h1>
+<h3 id="stable-distinctions-minimal-operators">(Stable distinctions, minimal operators)</h3>
+<p>R1 is where distinctions become <strong>stable enough</strong> to support basic
+information structure.</p>
+<p>Characteristics:</p>
+<ul>
+<li>distinctions have stable identity  </li>
+<li>dimensional profiles are defined  </li>
+<li>operators exist but are limited  </li>
+<li>coherence = distinction stability  </li>
+<li>no cross‑layer behavior  </li>
+</ul>
+<p>Information in R1 is <strong>local</strong> and <strong>structural</strong>.<br>
+Signals exist but are simple and non‑compositional.</p>
+<hr>
+<h1 id="r2-operator-geometry-regime">R2 — Operator Geometry Regime</h1>
+<h3 id="operators-act-on-distinction-spaces">(Operators act on distinction spaces)</h3>
+<p>R2 introduces <strong>operator geometry</strong>, enabling structured information
+processing.</p>
+<p>Characteristics:</p>
+<ul>
+<li>operators act on distinction spaces  </li>
+<li>coherence evaluated under operator action  </li>
+<li>distinction distances become meaningful  </li>
+<li>signals become compositional  </li>
+<li>cross‑layer mapping begins  </li>
+</ul>
+<p>Information in R2 is <strong>operator‑driven</strong>, not probabilistic.<br>
+Coherence is <strong>operator‑stability</strong>, not entropy.</p>
+<hr>
+<h1 id="r3-dimensionaloperator-regime">R3 — Dimensional‑Operator Regime</h1>
+<h3 id="highdimensional-distinction-dynamics">(High‑dimensional distinction dynamics)</h3>
+<p>R3 is the highest regime for Information Theory.</p>
+<p>Characteristics:</p>
+<ul>
+<li>distinctions become dimensional operators  </li>
+<li>signals become multi‑layer operators  </li>
+<li>coherence becomes multi‑dimensional  </li>
+<li>cross‑regime transitions are stable  </li>
+<li>distinction spaces can transform under operators  </li>
+</ul>
+<p>Information in R3 is <strong>dimensional</strong>, <strong>structural</strong>, and
+<strong>regime‑aware</strong>.</p>
+<p>This is where Information Theory integrates with:</p>
+<ul>
+<li>FFT (Framework Field Theory)  </li>
+<li>Resonance Atlas  </li>
+<li>NoS (Nature of Similarity)  </li>
+<li>LDS (Low‑Dimensional Structures)  </li>
+</ul>
+<hr>
+<h1 id="regime-transitions">Regime Transitions</h1>
+<h3 id="r0-r1">R0 → R1</h3>
+<ul>
+<li>distinctions stabilize  </li>
+<li>dimensional profiles emerge  </li>
+</ul>
+<h3 id="r1-r2">R1 → R2</h3>
+<ul>
+<li>operators become active  </li>
+<li>coherence becomes operator‑evaluated  </li>
+</ul>
+<h3 id="r2-r3">R2 → R3</h3>
+<ul>
+<li>distinctions become operators  </li>
+<li>multi‑layer information emerges  </li>
+</ul>
+<h3 id="r3-r2">R3 → R2</h3>
+<ul>
+<li>dimensional operators collapse to surface operators  </li>
+</ul>
+<h3 id="r2-r1">R2 → R1</h3>
+<ul>
+<li>operator geometry collapses to stable distinctions  </li>
+</ul>
+<p>Transitions must preserve:</p>
+<ul>
+<li>distinction identity  </li>
+<li>coherence continuity  </li>
+<li>dimensional integrity  </li>
+</ul>
+<hr>
+<h1 id="summary_5">Summary</h1>
+<p>Information Theory regimes define how distinctions behave across
+dimensional layers:</p>
+<ul>
+<li><strong>R0:</strong> primitive distinctions  </li>
+<li><strong>R1:</strong> stable distinctions  </li>
+<li><strong>R2:</strong> operator geometry  </li>
+<li><strong>R3:</strong> dimensional operators  </li>
+</ul>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.</p>
+<p>This regime map is the backbone of the Information Theory module.
+# Session Context — Information Theory  </p>
+<h3 id="triadicframeworks-docstheoriesinformation_theorysession_contextmd">TriadicFrameworks /docs/theories/information_theory/session_context.md</h3>
+<p>This module treats Information Theory as a <strong>distinction‑first coherence
+grammar</strong>, not merely a probabilistic or Shannon‑centric framework.
+Information is defined as <strong>structured distinction</strong>, coherence is the
+<strong>stability of distinctions across regimes</strong>, and signals are <strong>operators
+acting on distinction spaces</strong>.</p>
+<p>This session context establishes the identity, drift boundaries, regime
+behavior, and audience alignment for the Information Theory module.</p>
+<hr>
+<h2 id="canon">Canon</h2>
+<p>Information Theory is framed as a <strong>structural, distinction‑first
+grammar</strong> that supports RTT, NoS, LDS, and FFT. It is not limited to
+entropy, coding, or communication channels; instead, it provides the
+<strong>coherence substrate</strong> for distinctions, signals, and operators across
+dimensional layers.</p>
+<hr>
+<h2 id="modules">Modules</h2>
+<p>Information Theory participates in the following module lineage:</p>
+<ul>
+<li><strong>Upstream:</strong> NoS (similarity), LDS (dimensional structure), RTT (regimes)  </li>
+<li><strong>Lateral:</strong> Computation, Logic, Pattern Theory  </li>
+<li><strong>Downstream:</strong> Signal Processing, Complexity, Cognition, Resonance Atlas  </li>
+</ul>
+<p>Information Theory is a <strong>root‑level structural module</strong>.</p>
+<hr>
+<h2 id="drift">Drift</h2>
+<p>Drift is <strong>minimal</strong>.<br>
+The module must avoid:</p>
+<ul>
+<li>reducing information to Shannon entropy alone  </li>
+<li>treating information as “surprise” or “uncertainty” exclusively  </li>
+<li>collapsing distinctions into probabilistic metaphors  </li>
+<li>equating information with data storage or communication bandwidth  </li>
+<li>importing metaphysical or semantic drift  </li>
+</ul>
+<p>Information = <strong>structured distinction</strong>, not “meaning,” “data,” or
+“probability.”</p>
+<hr>
+<h2 id="coherence">Coherence</h2>
+<p>Coherence is <strong>distinction stability</strong> across:</p>
+<ul>
+<li>dimensional layers  </li>
+<li>operators  </li>
+<li>signals  </li>
+<li>regime transitions  </li>
+</ul>
+<p>A system is coherent when distinctions remain:</p>
+<ul>
+<li>identifiable  </li>
+<li>stable  </li>
+<li>non‑degenerate  </li>
+<li>operator‑consistent  </li>
+</ul>
+<p>Coherence is evaluated structurally, not probabilistically.</p>
+<hr>
+<h2 id="version">Version</h2>
+<p><strong>1.0 — distinction‑stable, operator‑ready, regime‑aligned.</strong></p>
+<p>This version is compatible with RTT/3, NoS/2, LDS/3, and FFT/2.</p>
+<hr>
+<h2 id="format">Format</h2>
+<p>This module uses:</p>
+<ul>
+<li>markdown (conceptual clarity)  </li>
+<li>html (front‑door rendering)  </li>
+<li>operator tables  </li>
+<li>coherence maps  </li>
+<li>regime diagrams  </li>
+<li>cross‑module lineage  </li>
+</ul>
+<p>All files are AI‑parsable and student‑ready.</p>
+<hr>
+<h2 id="front-door">Front door</h2>
+<p>The front door for this module is:</p>
+<p><code>/docs/theories/information_theory/frontdoor.md</code></p>
+<p>This session context is the <strong>identity anchor</strong> for all subpages.</p>
+<hr>
+<h2 id="every-page">Every page</h2>
+<p>Every page in this module must be:</p>
+<ul>
+<li>standalone  </li>
+<li>distinction‑first  </li>
+<li>coherence‑aligned  </li>
+<li>operator‑aware  </li>
+<li>regime‑compatible  </li>
+<li>zero drift  </li>
+<li>student‑parsable  </li>
+<li>AI‑parsable  </li>
+</ul>
+<p>No page may assume Shannon‑only framing.</p>
+<hr>
+<h2 id="audience">Audience</h2>
+<p>This module is written for:</p>
+<ul>
+<li>students  </li>
+<li>researchers  </li>
+<li>theorists  </li>
+<li>engineers  </li>
+<li>AI agents  </li>
+</ul>
+<p>It is designed to be <strong>immediately teachable</strong>, <strong>structurally clear</strong>,
+and <strong>canon‑consistent</strong>.</p>
+<hr>
+<h2 id="summary_6">Summary</h2>
+<p>Information Theory in TriadicFrameworks is:</p>
+<ul>
+<li>a <strong>distinction‑first coherence grammar</strong>  </li>
+<li>a <strong>structural substrate</strong> for signals and operators  </li>
+<li>a <strong>regime‑aware framework</strong> (R0 → R3)  </li>
+<li>a <strong>cross‑module backbone</strong> for cognition, computation, and resonance  </li>
+</ul>
+<p>It is <strong>not</strong>:</p>
+<ul>
+<li>Shannon‑only  </li>
+<li>probability‑only  </li>
+<li>entropy‑only  </li>
+<li>communication‑only  </li>
+<li>semantic or metaphysical  </li>
+</ul>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.
+</p>
+  </main>
+</body>
+</html>

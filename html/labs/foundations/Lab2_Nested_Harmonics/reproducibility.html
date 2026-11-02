@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/labs/foundations/Lab2_Nested_Harmonics/reproducibility.md">
+  <title>Lab 10: Nested Harmonics — Reproducibility</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/labs/foundations/Lab2_Nested_Harmonics/reproducibility.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/labs/foundations/Lab2_Nested_Harmonics/reproducibility.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="lab-10-nested-harmonics-reproducibility">Lab 10: Nested Harmonics — Reproducibility</h1>
+<h2 id="objective">Objective</h2>
+<p>To simulate nested harmonic structures and observe triadic resonance and interference patterns across dimensions.</p>
+<h2 id="required-tools">Required Tools</h2>
+<ul>
+<li>Python 3.10+</li>
+<li>NumPy</li>
+<li>Matplotlib or Plotly</li>
+</ul>
+<h2 id="protocol">Protocol</h2>
+<h3 id="1-define-nested-harmonics">1. Define Nested Harmonics</h3>
+<h3 id="python">python</h3>
+<p>import numpy as np</p>
+<p>def nested_harmonics(t, omegas, phis):
+    return sum(np.sin(omega * t + phi) for omega, phi in zip(omegas, phis))</p>
+<h3 id="2-triadic-harmonic-resonance-operator">2. Triadic Harmonic Resonance Operator</h3>
+<h3 id="python_1">python</h3>
+<p>def harmonic_resonance(Hi, Hj, Hk):
+    return (Hi * Hj + Hj * Hk + Hk * Hi) / (Hi + Hj + Hk + 1e-9)</p>
+<h3 id="3-harmonic-interference-pattern">3. Harmonic Interference Pattern</h3>
+<h3 id="python_2">python</h3>
+<p>def interference_pattern(t, omegas):
+    product = np.ones_like(t)
+    for omega in omegas:
+        product *= (1 + np.cos(omega * t))
+    return product</p>
+<h3 id="4-visualize-harmonic-cascade">4. Visualize Harmonic Cascade</h3>
+<h3 id="python_3">python</h3>
+<p>import matplotlib.pyplot as plt</p>
+<p>t = np.linspace(0, 10, 1000)
+omegas = [2<em>np.pi, 4</em>np.pi, 6*np.pi]
+phis = [0, np.pi/4, np.pi/2]</p>
+<p>Hn = nested_harmonics(t, omegas, phis)
+RH = harmonic_resonance(Hn, Hn, Hn)
+cascade = np.gradient(Hn, t[1] - t[0]) * RH</p>
+<p>plt.plot(t, cascade)
+plt.title("Dimensional Harmonic Cascade")
+plt.xlabel("Time")
+plt.ylabel("Λ(t)")
+plt.show()</p>
+<h3 id="validation-checklist">Validation Checklist</h3>
+<h3 id="harmonic-nesting-function-reflects-layered-oscillation">✅ Harmonic nesting function reflects layered oscillation</h3>
+<h3 id="resonance-operator-produces-consistent-triadic-values">✅ Resonance operator produces consistent triadic values</h3>
+<h3 id="interference-pattern-shows-expected-modulation">✅ Interference pattern shows expected modulation</h3>
+<h3 id="cascade-visualizes-dimensional-harmonic-change">✅ Cascade visualizes dimensional harmonic change</h3>
+<h3 id="mythic-preface">Mythic Preface</h3>
+<h3 id="in-the-nested-harmonics-of-cognition-time-becomes-melody-and-phase-becomes-myth-this-lab-reveals-the-layered-pulse-of-triadic-resonancewhere-interference-births-insight-and-recursion-sings">"In the nested harmonics of cognition, time becomes melody and phase becomes myth. This lab reveals the layered pulse of triadic resonance—where interference births insight and recursion sings."</h3>
+  </main>
+</body>
+</html>

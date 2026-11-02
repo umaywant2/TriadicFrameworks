@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rfc/RFC_LIB_0011_Tag_Registry_and_Glyph_Library.md">
+  <title>RFC‑LIB‑0011 — Tag Registry and Glyph Library</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rfc/RFC_LIB_0011_Tag_Registry_and_Glyph_Library.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rfc/RFC_LIB_0011_Tag_Registry_and_Glyph_Library.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rfclib0011-tag-registry-and-glyph-library"><strong>RFC‑LIB‑0011 — Tag Registry and Glyph Library</strong></h1>
+<h3 id="canonical-registry-for-remixathon-tags-and-corridor-glyphs"><em>Canonical Registry for Remixathon Tags and Corridor Glyphs</em></h3>
+<p>RefId: turn0browsertab1</p>
+<p><strong>Title:</strong> Canonical Tag Registry and Glyph Library for Remixathon Annotations<br>
+<strong>Status:</strong> Draft<br>
+<strong>Author:</strong> Nawder Loswin + Copilot<br>
+<strong>Date:</strong> 2025‑11‑12<br>
+<strong>Version:</strong> 0.2  </p>
+<hr>
+<h2 id="1-purpose"><strong>1. Purpose</strong></h2>
+<p>The <strong>Tag Registry and Glyph Library (TRGL)</strong> provides a unified, canonical repository for:</p>
+<ul>
+<li>remix tags  </li>
+<li>corridor glyphs  </li>
+<li>symbolic overlays  </li>
+<li>annotation metadata  </li>
+<li>contributor‑defined semantic categories  </li>
+</ul>
+<p>TRGL ensures:</p>
+<ul>
+<li>consistency across Remixathon cycles  </li>
+<li>interoperability across dashboards  </li>
+<li>lineage‑safe tag/glyph inheritance  </li>
+<li>validator‑grade schema compliance  </li>
+<li>drift‑safe annotation reuse  </li>
+</ul>
+<p>It is the foundational library for all annotation‑based workflows in TriadicFrameworks.</p>
+<hr>
+<h2 id="2-tag-registry-schema"><strong>2. Tag Registry Schema</strong></h2>
+<p>File:  </p>
+<pre><code>registry/tags/tag_schema.yml
+</code></pre>
+<h3 id="tag-fields"><strong>Tag Fields</strong></h3>
+<p>Each tag includes:</p>
+<ul>
+<li><strong>id</strong> — canonical tag ID  </li>
+<li><strong>name</strong> — human‑readable tag name  </li>
+<li><strong>description</strong> — semantic meaning  </li>
+<li><strong>category</strong> — semantic / rail / cultural / experimental / cipher‑dense  </li>
+<li><strong>created_by</strong> — contributor identity  </li>
+<li><strong>timestamp</strong> — creation time  </li>
+<li><strong>lineage</strong> — optional parent tag  </li>
+<li><strong>checksum</strong> — validator reproducibility hash  </li>
+</ul>
+<h3 id="example-entries"><strong>Example Entries</strong></h3>
+<pre><code class="language-yaml">- id: t-001
+  name: &quot;cipher-dense&quot;
+  description: &quot;Corridor with high encryption density&quot;
+  category: semantic
+  created_by: user42
+  timestamp: 2025-11-12T10:45:00Z
+
+- id: t-002
+  name: &quot;fluid-turbulent&quot;
+  description: &quot;Corridor with chaotic fluid rail signatures&quot;
+  category: rail
+  created_by: user17
+  timestamp: 2025-11-12T10:46:00Z
+</code></pre>
+<hr>
+<h2 id="3-glyph-library-schema"><strong>3. Glyph Library Schema</strong></h2>
+<p>File:  </p>
+<pre><code>registry/glyphs/glyph_schema.yml
+</code></pre>
+<h3 id="glyph-fields"><strong>Glyph Fields</strong></h3>
+<p>Each glyph includes:</p>
+<ul>
+<li><strong>id</strong> — canonical glyph ID  </li>
+<li><strong>symbol</strong> — Unicode or SVG symbol  </li>
+<li><strong>name</strong> — glyph name  </li>
+<li><strong>meaning</strong> — semantic or rail meaning  </li>
+<li><strong>category</strong> — corridor / rail / cultural / substrate / temporal  </li>
+<li><strong>created_by</strong> — system or contributor  </li>
+<li><strong>timestamp</strong> — creation time  </li>
+<li><strong>lineage</strong> — optional parent glyph  </li>
+<li><strong>checksum</strong> — validator reproducibility hash  </li>
+</ul>
+<h3 id="example-entries_1"><strong>Example Entries</strong></h3>
+<pre><code class="language-yaml">- id: g-001
+  symbol: &quot;◇&quot;
+  name: &quot;Alpha Corridor&quot;
+  meaning: &quot;Low cipher-density resonance zone&quot;
+  category: corridor
+  created_by: system
+  timestamp: 2025-11-12T10:45:00Z
+
+- id: g-002
+  symbol: &quot;◆&quot;
+  name: &quot;Beta Corridor&quot;
+  meaning: &quot;Medium cipher-density resonance zone&quot;
+  category: corridor
+  created_by: system
+  timestamp: 2025-11-12T10:45:00Z
+
+- id: g-003
+  symbol: &quot;⬣&quot;
+  name: &quot;Gamma Corridor&quot;
+  meaning: &quot;High cipher-density resonance zone&quot;
+  category: corridor
+  created_by: system
+  timestamp: 2025-11-12T10:45:00Z
+</code></pre>
+<hr>
+<h2 id="4-api-endpoints"><strong>4. API Endpoints</strong></h2>
+<h3 id="tag-endpoints"><strong>Tag Endpoints</strong></h3>
+<ul>
+<li><code>GET /tags</code> — list all tags  </li>
+<li><code>GET /tags/{id}</code> — retrieve tag details  </li>
+<li><code>POST /tags</code> — create new tag  </li>
+</ul>
+<h3 id="glyph-endpoints"><strong>Glyph Endpoints</strong></h3>
+<ul>
+<li><code>GET /glyphs</code> — list all glyphs  </li>
+<li><code>GET /glyphs/{id}</code> — retrieve glyph details  </li>
+<li><code>POST /glyphs</code> — create new glyph  </li>
+</ul>
+<p>All endpoints enforce:</p>
+<ul>
+<li>schema compliance  </li>
+<li>checksum validation  </li>
+<li>lineage integrity  </li>
+<li>drift‑safe constraints  </li>
+</ul>
+<hr>
+<h2 id="5-dashboard-integration"><strong>5. Dashboard Integration</strong></h2>
+<h3 id="autocomplete"><strong>Autocomplete</strong></h3>
+<p>Annotation panels pull tag registry entries for consistent naming.</p>
+<h3 id="glyph-selector"><strong>Glyph Selector</strong></h3>
+<p>Dashboard nodes display glyph icons from the canonical library.</p>
+<h3 id="search-integration"><strong>Search Integration</strong></h3>
+<p>Corridor search (ENG‑0012) filters by tag or glyph across:</p>
+<ul>
+<li>scrolls  </li>
+<li>dashboards  </li>
+<li>lineage graphs  </li>
+<li>remixathon reports  </li>
+</ul>
+<h3 id="remixathon-integration"><strong>Remixathon Integration</strong></h3>
+<p>Tags and glyphs appear in:</p>
+<ul>
+<li>dignity layers  </li>
+<li>scroll metadata  </li>
+<li>remix lineage diffs  </li>
+<li>export bundles  </li>
+</ul>
+<hr>
+<h2 id="6-validator-hooks"><strong>6. Validator Hooks</strong></h2>
+<p>Validator engines enforce:</p>
+<ul>
+<li>
+<p><strong>Schema compliance</strong><br>
+  All tags/glyphs must match their schemas.</p>
+</li>
+<li>
+<p><strong>Checksum</strong><br>
+  Ensures reproducibility and integrity.</p>
+</li>
+<li>
+<p><strong>Lineage integrity</strong><br>
+  Derived tags/glyphs must cite parent lineage.</p>
+</li>
+<li>
+<p><strong>Separation of concerns</strong><br>
+  Cultural glyphs stored separately from rail glyphs.</p>
+</li>
+<li>
+<p><strong>Drift safety</strong><br>
+  Drift‑unsafe tags/glyphs require override.</p>
+</li>
+</ul>
+<hr>
+<h2 id="7-notes"><strong>7. Notes</strong></h2>
+<ul>
+<li>TRGL ensures Remixathon cycles remain remixable and consistent.  </li>
+<li>Glyph library supports both Unicode symbols and custom SVG paths.  </li>
+<li>Tags and glyphs are validator‑grade artifacts stored in:  </li>
+<li><code>registry/tags/</code>  </li>
+<li><code>registry/glyphs/</code>  </li>
+<li>TRGL integrates with:  </li>
+<li>Search &amp; Filter Engine (ENG‑0012)  </li>
+<li>Remix Export Module (EXP‑0013)  </li>
+<li>Collaborative Hub (HUB‑0021)  </li>
+<li>Archival Protocol (ARC‑0014)  </li>
+</ul>
+<hr>
+<h2 id="8-closing-statement"><strong>8. Closing Statement</strong></h2>
+<p>RFC‑LIB‑0011 formalizes the <strong>Tag Registry and Glyph Library</strong>, the canonical annotation system for Remixathon cycles.<br>
+It ensures tags and glyphs remain consistent, searchable, lineage‑safe, and validator‑grade across all TriadicFrameworks workflows.</p>
+  </main>
+</body>
+</html>

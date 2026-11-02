@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Autonomous_Forms/Web‑based_Corridor_Viewer.md">
+  <title>1. Web‑based Corridor Viewer (React + D3)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Autonomous_Forms/Web‑based_Corridor_Viewer.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Autonomous_Forms/Web‑based_Corridor_Viewer.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h2 id="1-webbased-corridor-viewer-react-d3">1. Web‑based Corridor Viewer (React + D3)</h2>
+<p><strong>Goal:</strong> Load a <code>.ctf</code>, show the corridor as a living object: steps, Q‑metrics, status, rewinds.</p>
+<h3 id="11-highlevel-layout">1.1. High‑level layout</h3>
+<ul>
+<li><strong>Left:</strong> step list + status badges  </li>
+<li><strong>Center:</strong> Q‑metric waveform (D3)  </li>
+<li><strong>Right:</strong> step details + lineage mini‑graph  </li>
+</ul>
+<pre><code class="language-tsx">// components/CorridorViewer.tsx
+import { useState } from &quot;react&quot;;
+import type { CorridorTrace, CorridorStepEvent } from &quot;@/types/corridor&quot;;
+import { QMetricWaveformPanel } from &quot;./QMetricWaveformPanel&quot;;
+import { CorridorTimeline } from &quot;./CorridorTimeline&quot;;
+import { StepDetails } from &quot;./StepDetails&quot;;
+
+export function CorridorViewer({ trace }: { trace: CorridorTrace }) {
+  const [selectedStep, setSelectedStep] = useState&lt;number | null&gt;(null);
+
+  return (
+    &lt;div className=&quot;grid grid-cols-3 gap-4 h-full&quot;&gt;
+      &lt;CorridorTimeline
+        steps={trace.steps}
+        statuses={trace.statuses}
+        selectedStep={selectedStep}
+        onSelectStep={setSelectedStep}
+      /&gt;
+      &lt;div className=&quot;flex flex-col gap-4 col-span-2&quot;&gt;
+        &lt;QMetricWaveformPanel qHistory={trace.qHistory} /&gt;
+        &lt;StepDetails
+          steps={trace.steps}
+          qHistory={trace.qHistory}
+          selectedStep={selectedStep}
+        /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<hr>
+<h2 id="2-corridor-trace-inspector-timeline-panel">2. Corridor Trace Inspector (timeline panel)</h2>
+<p>Think “VSCode timeline” for a single corridor: events stacked over time.</p>
+<h3 id="21-event-timeline-component">2.1. Event timeline component</h3>
+<pre><code class="language-tsx">// components/CorridorTimeline.tsx
+import type {
+  CorridorStepEvent,
+  CorridorStatusEvent,
+} from &quot;@/types/corridor&quot;;
+
+type Props = {
+  steps: CorridorStepEvent[];
+  statuses: CorridorStatusEvent[];
+  selectedStep: number | null;
+  onSelectStep: (id: number) =&gt; void;
+};
+
+export function CorridorTimeline({
+  steps,
+  statuses,
+  selectedStep,
+  onSelectStep,
+}: Props) {
+  const statusByStep = new Map(
+    statuses.map((s) =&gt; [s.step_id, s.corridor_status])
+  );
+
+  return (
+    &lt;section className=&quot;border rounded p-2 overflow-y-auto&quot;&gt;
+      &lt;h2 className=&quot;text-xs font-semibold mb-2&quot;&gt;Corridor Timeline&lt;/h2&gt;
+      &lt;ul className=&quot;space-y-1 text-xs&quot;&gt;
+        {steps.map((s) =&gt; {
+          const status = statusByStep.get(s.step_id) ?? &quot;stable&quot;;
+          const isSelected = selectedStep === s.step_id;
+          return (
+            &lt;li
+              key={s.step_id}
+              onClick={() =&gt; onSelectStep(s.step_id)}
+              className={`cursor-pointer rounded px-2 py-1 flex justify-between ${
+                isSelected ? &quot;bg-blue-100&quot; : &quot;hover:bg-gray-100&quot;
+              }`}
+            &gt;
+              &lt;div&gt;
+                &lt;div className=&quot;font-mono&quot;&gt;
+                  #{s.step_id} → {s.action}
+                &lt;/div&gt;
+                &lt;div className=&quot;text-gray-500&quot;&gt;
+                  tool: {s.tool ?? &quot;n/a&quot;} · {s.latency_ms ?? &quot;?&quot;} ms
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;span
+                className={`text-[10px] px-1 py-0.5 rounded ${
+                  status === &quot;stable&quot;
+                    ? &quot;bg-green-100 text-green-700&quot;
+                    : status === &quot;warning&quot;
+                    ? &quot;bg-yellow-100 text-yellow-700&quot;
+                    : &quot;bg-red-100 text-red-700&quot;
+                }`}
+              &gt;
+                {status}
+              &lt;/span&gt;
+            &lt;/li&gt;
+          );
+        })}
+      &lt;/ul&gt;
+    &lt;/section&gt;
+  );
+}
+</code></pre>
+<p>This <em>is</em> our “timeline panel”: scrollable, clickable, status‑aware.</p>
+<hr>
+<h2 id="3-corridor-diff-tool-compare-two-ctf-files">3. Corridor Diff Tool (compare two <code>.ctf</code> files)</h2>
+<p><strong>Goal:</strong> Show where two runs diverge—by step, Q‑metric, or status.</p>
+<h3 id="31-diff-model">3.1. Diff model</h3>
+<pre><code class="language-ts">// lib/corridorDiff.ts
+import type { CorridorTrace } from &quot;@/types/corridor&quot;;
+
+export type CorridorDiffRow = {
+  step: number;
+  statusA?: string;
+  statusB?: string;
+  driftDelta?: number;
+  entropyDelta?: number;
+};
+
+export function diffCorridors(a: CorridorTrace, b: CorridorTrace): CorridorDiffRow[] {
+  const maxStep = Math.max(
+    a.qHistory.length ? a.qHistory[a.qHistory.length - 1].step_id : 0,
+    b.qHistory.length ? b.qHistory[b.qHistory.length - 1].step_id : 0
+  );
+
+  const qByStepA = new Map(a.qHistory.map((q) =&gt; [q.step_id, q]));
+  const qByStepB = new Map(b.qHistory.map((q) =&gt; [q.step_id, q]));
+
+  const statusByStepA = new Map(a.statuses.map((s) =&gt; [s.step_id, s.corridor_status]));
+  const statusByStepB = new Map(b.statuses.map((s) =&gt; [s.step_id, s.corridor_status]));
+
+  const rows: CorridorDiffRow[] = [];
+  for (let step = 0; step &lt;= maxStep; step++) {
+    const qa = qByStepA.get(step);
+    const qb = qByStepB.get(step);
+    if (!qa &amp;&amp; !qb) continue;
+
+    rows.push({
+      step,
+      statusA: statusByStepA.get(step),
+      statusB: statusByStepB.get(step),
+      driftDelta:
+        qa &amp;&amp; qb ? qb.semantic_drift - qa.semantic_drift : undefined,
+      entropyDelta:
+        qa &amp;&amp; qb ? qb.tool_entropy - qa.tool_entropy : undefined,
+    });
+  }
+  return rows;
+}
+</code></pre>
+<h3 id="32-diff-view">3.2. Diff view</h3>
+<pre><code class="language-tsx">// components/CorridorDiffView.tsx
+import type { CorridorTrace } from &quot;@/types/corridor&quot;;
+import { diffCorridors } from &quot;@/lib/corridorDiff&quot;;
+
+export function CorridorDiffView({
+  left,
+  right,
+}: {
+  left: CorridorTrace;
+  right: CorridorTrace;
+}) {
+  const rows = diffCorridors(left, right);
+
+  return (
+    &lt;div className=&quot;border rounded p-2 text-xs&quot;&gt;
+      &lt;h2 className=&quot;font-semibold mb-2&quot;&gt;Corridor Diff&lt;/h2&gt;
+      &lt;table className=&quot;w-full border-collapse&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr className=&quot;border-b&quot;&gt;
+            &lt;th className=&quot;text-left&quot;&gt;Step&lt;/th&gt;
+            &lt;th&gt;A status&lt;/th&gt;
+            &lt;th&gt;B status&lt;/th&gt;
+            &lt;th&gt;Δ drift&lt;/th&gt;
+            &lt;th&gt;Δ entropy&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          {rows.map((r) =&gt; (
+            &lt;tr key={r.step} className=&quot;border-b&quot;&gt;
+              &lt;td&gt;#{r.step}&lt;/td&gt;
+              &lt;td&gt;{r.statusA ?? &quot;-&quot;}&lt;/td&gt;
+              &lt;td&gt;{r.statusB ?? &quot;-&quot;}&lt;/td&gt;
+              &lt;td&gt;{r.driftDelta?.toFixed(3) ?? &quot;-&quot;}&lt;/td&gt;
+              &lt;td&gt;{r.entropyDelta?.toFixed(3) ?? &quot;-&quot;}&lt;/td&gt;
+            &lt;/tr&gt;
+          ))}
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>Now we can put two runs side‑by‑side and <em>see</em> where they structurally diverge.</p>
+<hr>
+<h2 id="4-vcdstyle-trace-viewer-for-agent-corridors">4. VCD‑style trace viewer for agent corridors</h2>
+<p><strong>Goal:</strong> Treat Q‑metrics and status like digital signals over time.</p>
+<p>We’ll render:</p>
+<ul>
+<li>X: step index  </li>
+<li>Y: stacked “tracks”:</li>
+<li>semantic_drift (analog line)  </li>
+<li>tool_entropy (analog line)  </li>
+<li>corridor_status (discrete bands: stable/warning/halted)  </li>
+</ul>
+<h3 id="41-vcdstyle-viewer-component">4.1. VCD‑style viewer component</h3>
+<pre><code class="language-tsx">// components/CorridorVCDView.tsx
+&quot;use client&quot;;
+
+import * as d3 from &quot;d3&quot;;
+import { useEffect, useRef } from &quot;react&quot;;
+import type { CorridorQEvent, CorridorStatusEvent } from &quot;@/types/corridor&quot;;
+
+type Props = {
+  qHistory: CorridorQEvent[];
+  statuses: CorridorStatusEvent[];
+};
+
+export function CorridorVCDView({ qHistory, statuses }: Props) {
+  const ref = useRef&lt;SVGSVGElement | null&gt;(null);
+
+  useEffect(() =&gt; {
+    if (!ref.current || qHistory.length === 0) return;
+
+    const svg = d3.select(ref.current);
+    const width = Number(svg.attr(&quot;width&quot;)) || 800;
+    const height = Number(svg.attr(&quot;height&quot;)) || 260;
+    svg.selectAll(&quot;*&quot;).remove();
+
+    const steps = qHistory.map((q) =&gt; q.step_id);
+    const x = d3
+      .scaleLinear()
+      .domain(d3.extent(steps) as [number, number])
+      .range([40, width - 10]);
+
+    const yAnalog = d3.scaleLinear().domain([0, 1]).range([100, 20]);
+    const yStatusTop = 140;
+    const yStatusBottom = 240;
+
+    const statusByStep = new Map(
+      statuses.map((s) =&gt; [s.step_id, s.corridor_status])
+    );
+
+    // axes
+    const xAxis = d3.axisBottom(x).ticks(8).tickFormat((d) =&gt; `#${d}`);
+    svg
+      .append(&quot;g&quot;)
+      .attr(&quot;transform&quot;, `translate(0,${yStatusBottom})`)
+      .call(xAxis as any)
+      .selectAll(&quot;text&quot;)
+      .style(&quot;font-size&quot;, &quot;9px&quot;);
+
+    const yAxis = d3.axisLeft(yAnalog).ticks(4);
+    svg
+      .append(&quot;g&quot;)
+      .attr(&quot;transform&quot;, `translate(40,0)`)
+      .call(yAxis as any)
+      .selectAll(&quot;text&quot;)
+      .style(&quot;font-size&quot;, &quot;9px&quot;);
+
+    // semantic_drift line
+    const driftLine = d3
+      .line&lt;CorridorQEvent&gt;()
+      .x((d) =&gt; x(d.step_id))
+      .y((d) =&gt; yAnalog(d.semantic_drift))
+      .curve(d3.curveMonotoneX);
+
+    svg
+      .append(&quot;path&quot;)
+      .datum(qHistory)
+      .attr(&quot;fill&quot;, &quot;none&quot;)
+      .attr(&quot;stroke&quot;, &quot;#1f77b4&quot;)
+      .attr(&quot;stroke-width&quot;, 1.5)
+      .attr(&quot;d&quot;, driftLine as any);
+
+    // tool_entropy line
+    const maxEntropy = d3.max(qHistory, (d) =&gt; d.tool_entropy) || 1;
+    const entropyScale = d3.scaleLinear().domain([0, maxEntropy]).range([100, 20]);
+
+    const entropyLine = d3
+      .line&lt;CorridorQEvent&gt;()
+      .x((d) =&gt; x(d.step_id))
+      .y((d) =&gt; entropyScale(d.tool_entropy))
+      .curve(d3.curveMonotoneX);
+
+    svg
+      .append(&quot;path&quot;)
+      .datum(qHistory)
+      .attr(&quot;fill&quot;, &quot;none&quot;)
+      .attr(&quot;stroke&quot;, &quot;#ff7f0e&quot;)
+      .attr(&quot;stroke-width&quot;, 1.2)
+      .attr(&quot;d&quot;, entropyLine as any);
+
+    // status bands (VCD‑style)
+    const bandHeight = (yStatusBottom - yStatusTop) / 3;
+    const statusColor = (s: string) =&gt;
+      s === &quot;stable&quot;
+        ? &quot;#e5f9e7&quot;
+        : s === &quot;warning&quot;
+        ? &quot;#fff7d6&quot;
+        : &quot;#fde2e1&quot;;
+
+    steps.forEach((step, i) =&gt; {
+      const status = statusByStep.get(step) ?? &quot;stable&quot;;
+      const x0 = x(step);
+      const x1 = i + 1 &lt; steps.length ? x(steps[i + 1]) : x(step) + 8;
+
+      svg
+        .append(&quot;rect&quot;)
+        .attr(&quot;x&quot;, x0)
+        .attr(&quot;y&quot;, yStatusTop)
+        .attr(&quot;width&quot;, x1 - x0)
+        .attr(&quot;height&quot;, bandHeight)
+        .attr(&quot;fill&quot;, statusColor(status))
+        .attr(&quot;stroke&quot;, &quot;#ddd&quot;)
+        .attr(&quot;stroke-width&quot;, 0.5);
+    });
+
+    svg
+      .append(&quot;text&quot;)
+      .attr(&quot;x&quot;, 45)
+      .attr(&quot;y&quot;, yStatusTop - 4)
+      .text(&quot;corridor_status&quot;)
+      .style(&quot;font-size&quot;, &quot;9px&quot;)
+      .style(&quot;fill&quot;, &quot;#555&quot;);
+  }, [qHistory, statuses]);
+
+  return &lt;svg ref={ref} width={800} height={260} className=&quot;border rounded&quot; /&gt;;
+}
+</code></pre>
+<p>This gives us a <strong>VCD‑like panel</strong>:</p>
+<ul>
+<li>top: analog “signals” (drift, entropy)  </li>
+<li>bottom: discrete status bands over time  </li>
+</ul>
+<hr>
+<p>We now have, in blueprint form:</p>
+<ul>
+<li>a <strong>web‑based Corridor Viewer</strong> (React shell)  </li>
+<li>a <strong>Trace Inspector</strong> (timeline panel)  </li>
+<li>a <strong>Diff Tool</strong> (structural comparison of two runs)  </li>
+<li>a <strong>VCD‑style trace viewer</strong> (Q + status as signals)</li>
+</ul>
+  </main>
+</body>
+</html>

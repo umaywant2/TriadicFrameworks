@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resonance-Variance Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            body: '#080d1a',
+            card: '#0f1628',
+            panel: '#161e35',
+            cyan: '#00d4ff',
+            amber: '#ffb347',
+            magenta: '#ff47a3',
+            lime: '#47ff8c',
+            purple: '#c084fc',
+            orange: '#fb923c',
+            txt: '#e2e8f0',
+            muted: '#94a3b8',
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <style>
+    :root {
+      --bg-body: #080d1a;
+      --bg-card: #0f1628;
+      --bg-panel: #161e35;
+      --c-cyan: #00d4ff;
+      --c-amber: #ffb347;
+      --c-magenta: #ff47a3;
+      --c-lime: #47ff8c;
+      --c-purple: #c084fc;
+      --c-orange: #fb923c;
+      --txt-primary: #e2e8f0;
+      --txt-muted: #94a3b8;
+      --border-card: rgba(255,255,255,0.07);
+      --grid-line: rgba(255,255,255,0.06);
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg-body);
+      color: var(--txt-primary);
+      font-family: 'Inter', system-ui, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .card-base {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 24px;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .section-header {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--txt-muted);
+      padding-left: 12px;
+      margin-bottom: 16px;
+      border-left: 3px solid var(--txt-muted);
+    }
+    .section-header.cyan-border { border-left-color: var(--c-cyan); }
+    .section-header.amber-border { border-left-color: var(--c-amber); }
+    .section-header.magenta-border { border-left-color: var(--c-magenta); }
+    .section-header.lime-border { border-left-color: var(--c-lime); }
+    .section-header.purple-border { border-left-color: var(--c-purple); }
+    .section-header.white-border { border-left-color: #ffffff; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1.5px solid transparent;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .pill .pill-dot {
+      width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0;
+    }
+    .pill.active { opacity: 1; }
+    .pill.inactive {
+      opacity: 0.4;
+      background: transparent !important;
+    }
+
+    .dim-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1.5px solid transparent;
+      user-select: none;
+    }
+    .dim-btn.active { opacity: 1; }
+    .dim-btn.inactive {
+      opacity: 0.35;
+      background: transparent !important;
+    }
+
+    @keyframes pulse-live {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+    .live-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+      animation: pulse-live 1.5s ease-in-out infinite;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .heatmap-cell {
+      width: 80px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      font-variant-numeric: tabular-nums;
+    }
+    .heatmap-cell:hover {
+      transform: scale(1.08);
+      z-index: 10;
+    }
+
+    .heatmap-tooltip {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-panel);
+      border: 1px solid var(--border-card);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 11px;
+      white-space: nowrap;
+      z-index: 100;
+      color: var(--txt-primary);
+      pointer-events: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .heatmap-cell:hover .heatmap-tooltip {
+      display: block;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .data-table th {
+      text-align: left;
+      padding: 10px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--txt-muted);
+      border-bottom: 1px solid var(--border-card);
+    }
+    .data-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border-card);
+      font-variant-numeric: tabular-nums;
+    }
+    .data-table tr {
+      transition: background 0.15s ease;
+    }
+    .data-table tbody tr:hover {
+      background: rgba(255,255,255,0.03);
+    }
+    .cell-low { color: #47ff8c; }
+    .cell-mid { color: #ffb347; }
+    .cell-high { color: #ff47a3; }
+
+    .chart-container {
+      position: relative;
+      height: 280px;
+    }
+    .chart-container.tall {
+      height: 380px;
+    }
+
+    .footer-gradient {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,212,255,0.3), rgba(255,179,71,0.3), rgba(255,71,163,0.3), rgba(71,255,140,0.3), transparent);
+    }
+
+    .reset-btn {
+      color: var(--txt-muted);
+      font-size: 12px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+    }
+    .reset-btn:hover { color: var(--txt-primary); }
+
+    .roster-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+    .roster-table th {
+      text-align: left;
+      padding: 8px 10px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--txt-muted);
+      border-bottom: 1px solid var(--border-card);
+      white-space: nowrap;
+    }
+    .roster-table td {
+      padding: 7px 10px;
+      border-bottom: 1px solid var(--border-card);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .roster-table tbody tr {
+      transition: background 0.15s ease;
+    }
+    .roster-table tbody tr:hover {
+      background: rgba(255,255,255,0.03);
+    }
+    .roster-color-bar {
+      width: 3px;
+      height: 20px;
+      border-radius: 2px;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 767px) {
+      .heatmap-cell { width: 60px; height: 48px; font-size: 11px; }
+    }
+  </style>
+</head>
+<body data-id="0">
+  <app-icon data-id="1" hidden data-icon="activity" data-palette="Dark"></app-icon>
+
+  <div data-id="2" class="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 py-6">
+
+    <!-- HEADER BAR -->
+    <header data-id="3" class="mb-6">
+      <div data-id="4" class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+        <div data-id="5">
+          <h1 data-id="6" class="text-xl md:text-2xl font-bold text-white tracking-tight">RESONANCE–VARIANCE DASHBOARD</h1>
+          <p data-id="7" class="text-xs text-muted mt-1 tracking-wide">RTT Variance Analysis Suite — Testing Roster v4.2</p>
+        </div>
+        <div data-id="8" class="flex flex-wrap items-center gap-3">
+          <div data-id="9" class="card-base !py-2 !px-4 flex items-center gap-3 text-xs">
+            <span data-id="10" class="text-muted font-medium">SESSION</span>
+            <span data-id="11" class="text-txt font-semibold tabular-nums">2026-09-22 | EDT</span>
+          </div>
+          <span data-id="12" class="badge bg-amber-900/40 text-amber-300 border border-amber-700/40">⚗️ SCAFFOLDED DATA</span>
+          <span data-id="13" id="data-source-badge" class="badge">⏳ LOADING</span>
+          <div data-id="14" class="flex items-center gap-2 text-xs font-medium text-green-400">
+            <span data-id="15" class="live-dot"></span>
+            <span data-id="16">LIVE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Model Toggle Pills -->
+      <div data-id="17" class="flex flex-wrap gap-2 mb-3" id="model-pills"></div>
+
+      <!-- Dimension Toggle Buttons + Reset -->
+      <div data-id="18" class="flex flex-wrap items-center gap-2">
+        <div data-id="19" class="flex flex-wrap gap-2" id="dim-buttons"></div>
+        <button data-id="20" class="reset-btn ml-2" id="reset-filters">Reset Filters</button>
+      </div>
+    </header>
+
+    <!-- MODEL ROSTER INFO PANEL -->
+    <section data-id="21" class="card-base mb-6 overflow-x-auto" id="roster-section">
+      <div data-id="22" class="section-header white-border">Model Roster</div>
+      <table data-id="23" class="roster-table" id="roster-table">
+        <thead data-id="24">
+          <tr data-id="25">
+            <th data-id="26">Model</th>
+            <th data-id="27">Provider</th>
+            <th data-id="28">Type</th>
+            <th data-id="29">License</th>
+            <th data-id="30">$/M Tokens</th>
+            <th data-id="31">RTT Alignment</th>
+            <th data-id="32">Drift Class</th>
+            <th data-id="33">Coherence</th>
+          </tr>
+        </thead>
+        <tbody data-id="34" id="roster-body"></tbody>
+      </table>
+    </section>
+
+    <!-- 1. SUMMARY STAT CARDS -->
+    <section data-id="35" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div data-id="36" class="card-base stat-card">
+        <div data-id="37" class="flex items-center justify-between mb-2">
+          <span data-id="38" class="text-xs text-muted font-medium uppercase tracking-wide">Total RTT Variance Events</span>
+          <i data-id="39" data-lucide="activity" class="w-4 h-4 text-cyan"></i>
+        </div>
+        <div data-id="40" class="text-3xl font-bold text-cyan tabular-nums">2,847</div>
+        <div data-id="41" class="flex items-center gap-1 mt-1 text-xs text-green-400">
+          <i data-id="42" data-lucide="trending-up" class="w-3 h-3"></i>
+          <span data-id="43">+4.2% from last session</span>
+        </div>
+      </div>
+      <div data-id="44" class="card-base stat-card">
+        <div data-id="45" class="flex items-center justify-between mb-2">
+          <span data-id="46" class="text-xs text-muted font-medium uppercase tracking-wide">Avg Entropy Stability</span>
+          <i data-id="47" data-lucide="layers" class="w-4 h-4 text-amber"></i>
+        </div>
+        <div data-id="48" class="text-3xl font-bold text-amber tabular-nums">54.1</div>
+        <div data-id="49" class="flex items-center gap-1 mt-1 text-xs text-green-400">
+          <i data-id="50" data-lucide="trending-down" class="w-3 h-3"></i>
+          <span data-id="51">−1.8 (more stable)</span>
+        </div>
+      </div>
+      <div data-id="52" class="card-base stat-card">
+        <div data-id="53" class="flex items-center justify-between mb-2">
+          <span data-id="54" class="text-xs text-muted font-medium uppercase tracking-wide">Peak Polarity Flip-Rate</span>
+          <i data-id="55" data-lucide="zap" class="w-4 h-4 text-magenta"></i>
+        </div>
+        <div data-id="56" class="text-3xl font-bold text-magenta tabular-nums">42 <span data-id="57" class="text-sm font-medium text-muted">/100 cyc</span></div>
+        <div data-id="58" class="flex items-center gap-1 mt-1 text-xs text-magenta/70">
+          <i data-id="59" data-lucide="alert-triangle" class="w-3 h-3"></i>
+          <span data-id="60">Claude Opus 4.8 — Flui</span>
+        </div>
+      </div>
+      <div data-id="61" class="card-base stat-card">
+        <div data-id="62" class="flex items-center justify-between mb-2">
+          <span data-id="63" class="text-xs text-muted font-medium uppercase tracking-wide">Max Drift Turbulence Index</span>
+          <i data-id="64" data-lucide="wind" class="w-4 h-4 text-purple"></i>
+        </div>
+        <div data-id="65" class="text-3xl font-bold text-purple tabular-nums">5.0</div>
+        <div data-id="66" class="flex items-center gap-1 mt-1 text-xs text-red-400">
+          <i data-id="67" data-lucide="trending-up" class="w-3 h-3"></i>
+          <span data-id="68">Claude Opus 4.8 — T-10</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. RTT VARIANCE OVERVIEW -->
+    <section data-id="69" class="card-base mb-6">
+      <div data-id="70" class="section-header cyan-border">RTT Variance Overview</div>
+      <h2 data-id="71" class="text-base font-semibold text-white mb-4">RTT Variance Score by Model &amp; Dimension</h2>
+      <div data-id="72" class="chart-container tall">
+        <canvas data-id="73" id="rttChart"></canvas>
+      </div>
+    </section>
+
+    <!-- 3. ENTROPY STABILITY -->
+    <section data-id="74" class="card-base mb-6">
+      <div data-id="75" class="section-header amber-border">Entropy Stability</div>
+      <h2 data-id="76" class="text-base font-semibold text-white mb-1">Entropy Stability Over Time</h2>
+      <p data-id="77" class="text-xs text-muted mb-4">Lower values indicate greater stability</p>
+      <div data-id="78" class="chart-container">
+        <canvas data-id="79" id="entropyChart"></canvas>
+      </div>
+    </section>
+
+    <!-- 4. SCALAR WOBBLE -->
+    <section data-id="80" class="card-base mb-6">
+      <div data-id="81" class="section-header magenta-border">Scalar Wobble</div>
+      <h2 data-id="82" class="text-base font-semibold text-white mb-4">Scalar Wobble Amplitude — All Dimensions</h2>
+      <div data-id="83" class="chart-container" style="height:380px;">
+        <canvas data-id="84" id="wobbleChart"></canvas>
+      </div>
+    </section>
+
+    <!-- 5. POLARITY FLIP-RATE -->
+    <section data-id="85" class="mb-6">
+      <div data-id="86" class="section-header lime-border">Polarity Flip-Rate</div>
+      <div data-id="87" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div data-id="88" class="card-base">
+          <h2 data-id="89" class="text-base font-semibold text-white mb-4">Flip-Rate by Dimension (stacked)</h2>
+          <div data-id="90" class="chart-container">
+            <canvas data-id="91" id="flipChart"></canvas>
+          </div>
+        </div>
+        <div data-id="92" class="card-base overflow-x-auto">
+          <h2 data-id="93" class="text-base font-semibold text-white mb-4">Flip-Rate Data Table</h2>
+          <table data-id="94" class="data-table" id="flipTable">
+            <thead data-id="95">
+              <tr data-id="96">
+                <th data-id="97">Model</th>
+                <th data-id="98">Freqi</th>
+                <th data-id="99">Aurion</th>
+                <th data-id="100">Forci</th>
+                <th data-id="101">Flui</th>
+                <th data-id="102">Total</th>
+              </tr>
+            </thead>
+            <tbody data-id="103" id="flipTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DRIFT TURBULENCE -->
+    <section data-id="104" class="card-base mb-6">
+      <div data-id="105" class="section-header purple-border">Drift Turbulence</div>
+      <h2 data-id="106" class="text-base font-semibold text-white mb-4">Drift Turbulence Index — Temporal Stack</h2>
+      <div data-id="107" class="chart-container">
+        <canvas data-id="108" id="driftChart"></canvas>
+      </div>
+    </section>
+
+    <!-- 7. COMBINED VARIANCE MAP -->
+    <section data-id="109" class="card-base mb-6">
+      <div data-id="110" class="section-header white-border">Combined Variance Map</div>
+      <h2 data-id="111" class="text-base font-semibold text-white mb-4">Combined RTT Variance Heatmap</h2>
+      <div data-id="112" class="overflow-x-auto">
+        <div data-id="113" id="heatmapGrid" class="inline-block"></div>
+      </div>
+      <div data-id="114" class="flex items-center gap-3 mt-5">
+        <span data-id="115" class="text-xs text-muted">Low (0–33)</span>
+        <div data-id="116" class="h-3 w-40 rounded" style="background: linear-gradient(90deg, #0d4f4f, #a67c30, #b8194a);"></div>
+        <span data-id="117" class="text-xs text-muted">High (67–100)</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <div data-id="118" class="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8">
+    <div data-id="119" class="footer-gradient"></div>
+    <footer data-id="120" class="flex flex-col md:flex-row md:justify-between gap-2 py-6 text-xs text-muted">
+      <span data-id="121">Resonance-Variance Dashboard v4.2 | RTT Metric Suite | TriadicFrameworks · Made by Copilot</span>
+      <span data-id="122" class="tabular-nums">Last computed: 2026-09-22 00:37 EDT | Models: 10 | Sessions: 10 | Data: SCAFFOLDED</span>
+    </footer>
+  </div>
+
+  <script>
+    // Guard Lucide
+    if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+      lucide.createIcons();
+    }
+
+    // ============ EMBEDDED DATA (fallback) ============
+    const EMBEDDED_DATA = [
+      {
+        id: "gpt6-astra", name: "GPT-6 Astra", shortName: "GPT-6 Astra",
+        provider: "OpenAI", color: "#10b981", type: "reasoning-frontier",
+        license: "proprietary", costPerMillion: 11.90, alignment: "SET",
+        drift: "bounded", coherence: true,
+        rtt: { Freqi: 34.2, Aurion: 47.8, Forci: 61.3, Flui: 29.4 },
+        entropy: [42,40,38,41,37,35,36,34,33,32],
+        wobble: { Freqi: 1.24, Aurion: 2.87, Forci: 3.51, Flui: 0.93 },
+        flip: { Freqi: 8, Aurion: 14, Forci: 21, Flui: 5 },
+        driftSeries: [1.2,1.4,1.1,1.6,1.3,1.5,1.2,1.7,1.4,1.8]
+      },
+      {
+        id: "claude-fable-51", name: "Claude Fable 5.1", shortName: "Fable 5.1",
+        provider: "Anthropic", color: "#f97316", type: "safety-enterprise",
+        license: "proprietary", costPerMillion: 30.00, alignment: "FFF",
+        drift: "suppressed", coherence: true,
+        rtt: { Freqi: 55.7, Aurion: 38.1, Forci: 44.9, Flui: 67.2 },
+        entropy: [61,63,59,65,62,67,64,68,66,70],
+        wobble: { Freqi: 3.78, Aurion: 1.45, Forci: 2.13, Flui: 4.62 },
+        flip: { Freqi: 18, Aurion: 9, Forci: 12, Flui: 27 },
+        driftSeries: [2.8,3.1,2.6,3.4,2.9,3.7,3.2,3.9,3.5,4.1]
+      },
+      {
+        id: "gemini-38-flash", name: "Gemini 3.8 Flash", shortName: "Gemini 3.8F",
+        provider: "Google", color: "#3b82f6", type: "multimodal-value",
+        license: "proprietary", costPerMillion: 3.75, alignment: "SNR",
+        drift: "bounded", coherence: true,
+        rtt: { Freqi: 72.4, Aurion: 81.5, Forci: 33.6, Flui: 52.1 },
+        entropy: [55,52,57,53,58,54,56,59,55,53],
+        wobble: { Freqi: 5.03, Aurion: 6.21, Forci: 1.87, Flui: 3.44 },
+        flip: { Freqi: 31, Aurion: 38, Forci: 7, Flui: 19 },
+        driftSeries: [1.9,1.7,2.2,1.8,2.4,2.1,2.5,2.2,2.7,2.4]
+      },
+      {
+        id: "qwen-38-max", name: "Qwen 3.8 Max", shortName: "Qwen 3.8M",
+        provider: "Alibaba", color: "#8b5cf6", type: "open-weight-frontier",
+        license: "open-weight", costPerMillion: 0, alignment: "DCO",
+        drift: "turbulent", coherence: false,
+        rtt: { Freqi: 41.9, Aurion: 59.3, Forci: 78.4, Flui: 38.7 },
+        entropy: [35,37,34,36,33,35,32,34,31,30],
+        wobble: { Freqi: 2.15, Aurion: 3.92, Forci: 5.74, Flui: 1.68 },
+        flip: { Freqi: 11, Aurion: 22, Forci: 34, Flui: 8 },
+        driftSeries: [0.8,1.0,0.7,1.2,0.9,1.1,0.8,1.3,1.0,1.5]
+      },
+      {
+        id: "claude-opus-48", name: "Claude Opus 4.8", shortName: "Opus 4.8",
+        provider: "Anthropic", color: "#ef4444", type: "coding-frontier",
+        license: "proprietary", costPerMillion: 15.00, alignment: "FFF",
+        drift: "bounded", coherence: true,
+        rtt: { Freqi: 63.8, Aurion: 27.4, Forci: 56.1, Flui: 84.3 },
+        entropy: [73,71,76,74,79,77,80,78,82,81],
+        wobble: { Freqi: 4.37, Aurion: 0.84, Forci: 3.29, Flui: 6.15 },
+        flip: { Freqi: 25, Aurion: 4, Forci: 17, Flui: 42 },
+        driftSeries: [3.5,3.8,3.3,4.1,3.7,4.4,4.0,4.7,4.3,5.0]
+      },
+      {
+        id: "gpt-55", name: "GPT-5.5", shortName: "GPT-5.5",
+        provider: "OpenAI", color: "#06b6d4", type: "generative-ecosystem",
+        license: "proprietary", costPerMillion: 2.00, alignment: "SET",
+        drift: "bounded", coherence: true,
+        rtt: { Freqi: 48.5, Aurion: 72.9, Forci: 39.2, Flui: 45.6 },
+        entropy: [48,46,49,47,51,49,52,50,53,51],
+        wobble: { Freqi: 2.94, Aurion: 5.13, Forci: 1.52, Flui: 2.87 },
+        flip: { Freqi: 15, Aurion: 29, Forci: 10, Flui: 13 },
+        driftSeries: [2.1,1.9,2.4,2.0,2.6,2.3,2.7,2.4,2.9,2.6]
+      },
+      {
+        id: "deepseek-v4", name: "DeepSeek V4", shortName: "DeepSeek V4",
+        provider: "DeepSeek", color: "#84cc16", type: "open-source-efficient",
+        license: "open-source", costPerMillion: 0.28, alignment: "DCO",
+        drift: "turbulent", coherence: false,
+        rtt: { Freqi: 58.3, Aurion: 43.7, Forci: 69.1, Flui: 33.8 },
+        entropy: [64,62,67,65,70,68,72,70,74,73],
+        wobble: { Freqi: 3.91, Aurion: 2.34, Forci: 4.87, Flui: 1.76 },
+        flip: { Freqi: 22, Aurion: 16, Forci: 31, Flui: 9 },
+        driftSeries: [2.4,2.7,2.2,3.0,2.6,3.2,2.9,3.5,3.1,3.8]
+      },
+      {
+        id: "llama-4", name: "Llama 4", shortName: "Llama 4",
+        provider: "Meta", color: "#f59e0b", type: "open-source-leader",
+        license: "open-source", costPerMillion: 0, alignment: "SNR",
+        drift: "turbulent", coherence: false,
+        rtt: { Freqi: 66.1, Aurion: 52.4, Forci: 41.7, Flui: 74.9 },
+        entropy: [58,61,55,63,59,65,62,67,64,69],
+        wobble: { Freqi: 4.52, Aurion: 3.17, Forci: 2.63, Flui: 5.38 },
+        flip: { Freqi: 27, Aurion: 19, Forci: 14, Flui: 36 },
+        driftSeries: [2.9,3.2,2.7,3.5,3.0,3.8,3.4,4.1,3.7,4.4]
+      },
+      {
+        id: "grok-43", name: "Grok 4.3", shortName: "Grok 4.3",
+        provider: "xAI", color: "#ec4899", type: "agentic-tool-use",
+        license: "proprietary", costPerMillion: 2.00, alignment: "DCO",
+        drift: "bounded", coherence: true,
+        rtt: { Freqi: 44.7, Aurion: 63.8, Forci: 52.3, Flui: 41.2 },
+        entropy: [51,49,54,52,56,53,57,55,59,57],
+        wobble: { Freqi: 2.68, Aurion: 4.41, Forci: 3.15, Flui: 2.29 },
+        flip: { Freqi: 13, Aurion: 26, Forci: 18, Flui: 11 },
+        driftSeries: [1.6,1.9,1.4,2.1,1.7,2.3,1.9,2.6,2.2,2.8]
+      },
+      {
+        id: "glm-51", name: "GLM-5.1", shortName: "GLM-5.1",
+        provider: "Zhipu / Z.AI", color: "#6366f1", type: "multilingual-coding",
+        license: "proprietary", costPerMillion: 0.50, alignment: "SNR",
+        drift: "suppressed", coherence: false,
+        rtt: { Freqi: 37.6, Aurion: 55.2, Forci: 29.8, Flui: 61.4 },
+        entropy: [44,42,46,43,47,45,49,46,50,48],
+        wobble: { Freqi: 1.83, Aurion: 3.56, Forci: 1.27, Flui: 4.03 },
+        flip: { Freqi: 9, Aurion: 21, Forci: 6, Flui: 24 },
+        driftSeries: [1.3,1.5,1.1,1.7,1.4,1.9,1.6,2.1,1.8,2.3]
+      }
+    ];
+
+    const dimensions = ["Freqi","Aurion","Forci","Flui"];
+    const dimColors = { Freqi:"#00d4ff", Aurion:"#ffb347", Forci:"#ff47a3", Flui:"#47ff8c" };
+    const timeLabels = ["T-01","T-02","T-03","T-04","T-05","T-06","T-07","T-08","T-09","T-10"];
+
+    // ============ STATE ============
+    let modelsData = [];
+    const activeModels = new Set();
+    const activeDims = new Set(dimensions);
+
+    // ============ CHARTS ============
+    let rttChart, entropyChart, wobbleChart, flipChart, driftChart;
+
+    // ============ LOAD MODELS ============
+    async function loadModels() {
+      const badge = document.getElementById('data-source-badge');
+      try {
+        const resp = await fetch('./models.json');
+        if (!resp.ok) throw new Error('Fetch failed');
+        const data = await resp.json();
+        if (!Array.isArray(data) || data.length === 0) throw new Error('Invalid data');
+        badge.textContent = '📡 LIVE — models.json';
+        badge.className = 'badge bg-green-900/40 text-green-300 border border-green-700/40';
+        initDashboard(data);
+      } catch (e) {
+        badge.textContent = '📦 EMBEDDED';
+        badge.className = 'badge bg-amber-900/40 text-amber-300 border border-amber-700/40';
+        initDashboard(EMBEDDED_DATA);
+      }
+    }
+
+    function initDashboard(data) {
+      modelsData = data;
+      modelsData.forEach(m => activeModels.add(m.id));
+
+      renderPills();
+      renderDimButtons();
+      renderRoster();
+      bindEvents();
+
+      Chart.defaults.color = '#94a3b8';
+      Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+      Chart.defaults.font.size = 11;
+      Chart.defaults.plugins.tooltip.backgroundColor = '#161e35';
+      Chart.defaults.plugins.tooltip.titleColor = '#ffffff';
+      Chart.defaults.plugins.tooltip.bodyColor = '#e2e8f0';
+      Chart.defaults.plugins.tooltip.borderColor = 'rgba(255,255,255,0.1)';
+      Chart.defaults.plugins.tooltip.borderWidth = 1;
+      Chart.defaults.plugins.tooltip.cornerRadius = 8;
+      Chart.defaults.plugins.tooltip.padding = 10;
+
+      updateAll();
+    }
+
+    // ============ RENDER PILLS ============
+    function renderPills() {
+      const container = document.getElementById('model-pills');
+      container.innerHTML = '';
+      modelsData.forEach(m => {
+        const pill = document.createElement('button');
+        pill.className = 'pill active';
+        pill.dataset.modelId = m.id;
+        pill.title = m.provider;
+        const bg = m.color + '22';
+        pill.style.background = bg;
+        pill.style.color = m.color;
+        pill.style.borderColor = m.color + '44';
+        const dot = document.createElement('span');
+        dot.className = 'pill-dot';
+        dot.style.background = m.color;
+        pill.appendChild(dot);
+        pill.appendChild(document.createTextNode(m.shortName));
+        container.appendChild(pill);
+      });
+    }
+
+    function renderDimButtons() {
+      const container = document.getElementById('dim-buttons');
+      container.innerHTML = '';
+      dimensions.forEach(d => {
+        const btn = document.createElement('button');
+        btn.className = 'dim-btn active';
+        btn.dataset.dim = d;
+        btn.style.background = dimColors[d] + '22';
+        btn.style.color = dimColors[d];
+        btn.style.borderColor = dimColors[d] + '55';
+        const dot = document.createElement('span');
+        dot.style.width = '8px';
+        dot.style.height = '8px';
+        dot.style.borderRadius = '50%';
+        dot.style.background = dimColors[d];
+        dot.style.display = 'inline-block';
+        btn.appendChild(dot);
+        btn.appendChild(document.createTextNode(' ' + d));
+        container.appendChild(btn);
+      });
+    }
+
+    // ============ ROSTER TABLE ============
+    function renderRoster() {
+      const tbody = document.getElementById('roster-body');
+      tbody.innerHTML = '';
+      modelsData.forEach(m => {
+        const tr = document.createElement('tr');
+
+        // Drift color
+        let driftColor = '#94a3b8';
+        if (m.drift === 'bounded') driftColor = '#2dd4bf';
+        else if (m.drift === 'turbulent') driftColor = '#f87171';
+        else if (m.drift === 'suppressed') driftColor = '#fbbf24';
+
+        // Cost display
+        let costStr, costColor;
+        if (m.costPerMillion === 0) {
+          costStr = 'free';
+          costColor = '#47ff8c';
+        } else if (m.costPerMillion > 10) {
+          costStr = '$' + m.costPerMillion.toFixed(2);
+          costColor = '#ffb347';
+        } else {
+          costStr = '$' + m.costPerMillion.toFixed(2);
+          costColor = '#e2e8f0';
+        }
+
+        // Coherence
+        const cohStr = m.coherence ? '<span style="color:#22c55e">✓</span>' : '<span style="color:#64748b">—</span>';
+
+        tr.innerHTML = `
+          <td class="font-medium text-white"><span class="roster-color-bar" style="background:${m.color}"></span>${m.name}</td>
+          <td class="text-muted">${m.provider}</td>
+          <td><span style="color:${m.color};font-size:10px;background:${m.color}15;padding:2px 8px;border-radius:4px;">${m.type}</span></td>
+          <td class="text-muted">${m.license}</td>
+          <td style="color:${costColor};font-weight:600">${costStr}</td>
+          <td class="text-white font-semibold">${m.alignment}</td>
+          <td style="color:${driftColor};font-weight:500">${m.drift}</td>
+          <td>${cohStr}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // ============ BIND EVENTS ============
+    function bindEvents() {
+      const pillsContainer = document.getElementById('model-pills');
+      pillsContainer.addEventListener('click', function(e) {
+        const pill = e.target.closest('.pill');
+        if (!pill) return;
+        const id = pill.dataset.modelId;
+        if (activeModels.has(id)) {
+          if (activeModels.size === 1) return;
+          activeModels.delete(id);
+          pill.classList.remove('active');
+          pill.classList.add('inactive');
+          pill.style.borderColor = 'transparent';
+        } else {
+          activeModels.add(id);
+          pill.classList.remove('inactive');
+          pill.classList.add('active');
+          const m = modelsData.find(x => x.id === id);
+          pill.style.borderColor = m.color + '44';
+        }
+        updateAll();
+      });
+
+      const dimContainer = document.getElementById('dim-buttons');
+      dimContainer.addEventListener('click', function(e) {
+        const btn = e.target.closest('.dim-btn');
+        if (!btn) return;
+        const d = btn.dataset.dim;
+        if (activeDims.has(d)) {
+          if (activeDims.size === 1) return;
+          activeDims.delete(d);
+          btn.classList.remove('active');
+          btn.classList.add('inactive');
+          btn.style.borderColor = 'transparent';
+        } else {
+          activeDims.add(d);
+          btn.classList.remove('inactive');
+          btn.classList.add('active');
+          btn.style.borderColor = dimColors[d] + '55';
+        }
+        updateAll();
+      });
+
+      document.getElementById('reset-filters').addEventListener('click', function() {
+        modelsData.forEach(m => activeModels.add(m.id));
+        dimensions.forEach(d => activeDims.add(d));
+        document.querySelectorAll('.pill').forEach(p => {
+          p.classList.remove('inactive');
+          p.classList.add('active');
+          const m = modelsData.find(x => x.id === p.dataset.modelId);
+          p.style.borderColor = m.color + '44';
+        });
+        document.querySelectorAll('.dim-btn').forEach(b => {
+          b.classList.remove('inactive');
+          b.classList.add('active');
+          b.style.borderColor = dimColors[b.dataset.dim] + '55';
+        });
+        updateAll();
+      });
+    }
+
+    // ============ HELPERS ============
+    function getActiveModels() {
+      return modelsData.filter(m => activeModels.has(m.id));
+    }
+    function getActiveDims() {
+      return dimensions.filter(d => activeDims.has(d));
+    }
+    function getGridColor() { return 'rgba(255,255,255,0.06)'; }
+
+    // ============ CHARTS ============
+    function buildRTTChart() {
+      const ctx = document.getElementById('rttChart').getContext('2d');
+      if (rttChart) rttChart.destroy();
+      const fm = getActiveModels();
+      const fd = getActiveDims();
+      const datasets = fd.map(d => ({
+        label: d,
+        data: fm.map(m => m.rtt[d]),
+        backgroundColor: dimColors[d] + 'cc',
+        borderColor: dimColors[d],
+        borderWidth: 1,
+        borderRadius: 3,
+        barPercentage: 0.7,
+        categoryPercentage: 0.8
+      }));
+      rttChart = new Chart(ctx, {
+        type: 'bar',
+        data: { labels: fm.map(m => m.shortName), datasets },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { usePointStyle: true, pointStyle: 'rectRounded', padding: 16, font: { size: 11 } }
+            }
+          },
+          scales: {
+            x: { max: 100, grid: { color: getGridColor() }, ticks: { font: { size: 10 } } },
+            y: { grid: { display: false }, ticks: { font: { size: 11, weight: '500' }, color: '#e2e8f0' } }
+          }
+        }
+      });
+    }
+
+    function buildEntropyChart() {
+      const ctx = document.getElementById('entropyChart').getContext('2d');
+      if (entropyChart) entropyChart.destroy();
+      const fm = getActiveModels();
+      const datasets = fm.map(m => ({
+        label: m.shortName,
+        data: m.entropy,
+        borderColor: m.color,
+        backgroundColor: m.color + '18',
+        fill: true,
+        tension: 0.4,
+        borderWidth: 2,
+        pointRadius: 3,
+        pointBackgroundColor: m.color,
+        pointHoverRadius: 5
+      }));
+      entropyChart = new Chart(ctx, {
+        type: 'line',
+        data: { labels: timeLabels, datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { usePointStyle: true, pointStyle: 'circle', padding: 14, font: { size: 11 } }
+            }
+          },
+          scales: {
+            x: { grid: { color: getGridColor() }, ticks: { font: { size: 10 } } },
+            y: { grid: { color: getGridColor() }, ticks: { font: { size: 10 } },
+              title: { display: true, text: 'Entropy (lower = more stable)', color: '#94a3b8', font: { size: 10 } }
+            }
+          }
+        }
+      });
+    }
+
+    function buildWobbleChart() {
+      const ctx = document.getElementById('wobbleChart').getContext('2d');
+      if (wobbleChart) wobbleChart.destroy();
+      const fm = getActiveModels();
+      const fd = getActiveDims();
+      const datasets = fm.map(m => ({
+        label: m.shortName,
+        data: fd.map(d => m.wobble[d]),
+        borderColor: m.color,
+        backgroundColor: m.color + '25',
+        borderWidth: 2,
+        pointRadius: 3,
+        pointBackgroundColor: m.color,
+        pointHoverRadius: 5,
+        fill: true
+      }));
+      wobbleChart = new Chart(ctx, {
+        type: 'radar',
+        data: { labels: fd, datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { usePointStyle: true, pointStyle: 'circle', padding: 12, font: { size: 10 } }
+            }
+          },
+          scales: {
+            r: {
+              max: 7,
+              min: 0,
+              ticks: { stepSize: 1, backdropColor: 'transparent', color: '#94a3b8', font: { size: 9 } },
+              grid: { color: 'rgba(255,255,255,0.08)' },
+              angleLines: { color: 'rgba(255,255,255,0.08)' },
+              pointLabels: { color: '#e2e8f0', font: { size: 12, weight: '600' } }
+            }
+          }
+        }
+      });
+    }
+
+    function buildFlipChart() {
+      const ctx = document.getElementById('flipChart').getContext('2d');
+      if (flipChart) flipChart.destroy();
+      const fm = getActiveModels();
+      const fd = getActiveDims();
+      const datasets = fd.map(d => ({
+        label: d,
+        data: fm.map(m => m.flip[d]),
+        backgroundColor: dimColors[d] + 'bb',
+        borderColor: dimColors[d],
+        borderWidth: 1,
+        borderRadius: 2
+      }));
+      flipChart = new Chart(ctx, {
+        type: 'bar',
+        data: { labels: fm.map(m => m.shortName), datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { usePointStyle: true, pointStyle: 'rectRounded', padding: 14, font: { size: 11 } }
+            }
+          },
+          scales: {
+            x: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } },
+            y: { stacked: true, grid: { color: getGridColor() }, ticks: { font: { size: 10 } },
+              title: { display: true, text: 'Flips / 100 cycles', color: '#94a3b8', font: { size: 10 } }
+            }
+          }
+        }
+      });
+    }
+
+    function buildFlipTable() {
+      const tbody = document.getElementById('flipTableBody');
+      tbody.innerHTML = '';
+      const fm = getActiveModels();
+      fm.forEach(m => {
+        const row = document.createElement('tr');
+        const vals = m.flip;
+        const total = vals.Freqi + vals.Aurion + vals.Forci + vals.Flui;
+        function cellClass(v) {
+          if (v < 10) return 'cell-low';
+          if (v <= 25) return 'cell-mid';
+          return 'cell-high';
+        }
+        row.innerHTML = `
+          <td class="font-medium text-white">${m.shortName}</td>
+          <td class="${cellClass(vals.Freqi)}">${vals.Freqi}</td>
+          <td class="${cellClass(vals.Aurion)}">${vals.Aurion}</td>
+          <td class="${cellClass(vals.Forci)}">${vals.Forci}</td>
+          <td class="${cellClass(vals.Flui)}">${vals.Flui}</td>
+          <td class="font-bold text-white">${total}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    function buildDriftChart() {
+      const ctx = document.getElementById('driftChart').getContext('2d');
+      if (driftChart) driftChart.destroy();
+      const fm = getActiveModels();
+      const datasets = fm.map((m, i) => ({
+        label: m.shortName,
+        data: m.driftSeries,
+        borderColor: m.color,
+        backgroundColor: m.color + '40',
+        fill: i === 0 ? 'origin' : '-1',
+        tension: 0.4,
+        borderWidth: 2,
+        pointRadius: 2,
+        pointHoverRadius: 4
+      }));
+      driftChart = new Chart(ctx, {
+        type: 'line',
+        data: { labels: timeLabels, datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { usePointStyle: true, pointStyle: 'circle', padding: 12, font: { size: 10 } }
+            },
+            filler: { propagate: true }
+          },
+          scales: {
+            x: { grid: { color: getGridColor() }, ticks: { font: { size: 10 } } },
+            y: {
+              stacked: true,
+              grid: { color: getGridColor() },
+              ticks: { font: { size: 10 } },
+              title: { display: true, text: 'Turbulence Index', color: '#94a3b8', font: { size: 10 } }
+            }
+          }
+        }
+      });
+    }
+
+    function buildHeatmap() {
+      const container = document.getElementById('heatmapGrid');
+      container.innerHTML = '';
+      const fm = getActiveModels();
+      const fd = getActiveDims();
+
+      const table = document.createElement('div');
+      table.style.display = 'inline-grid';
+      table.style.gridTemplateColumns = `120px repeat(${fd.length}, 80px)`;
+      table.style.gap = '4px';
+      table.style.alignItems = 'center';
+
+      // Header row
+      const corner = document.createElement('div');
+      table.appendChild(corner);
+      fd.forEach(d => {
+        const h = document.createElement('div');
+        h.textContent = d;
+        h.style.textAlign = 'center';
+        h.style.fontSize = '11px';
+        h.style.fontWeight = '600';
+        h.style.color = dimColors[d];
+        h.style.textTransform = 'uppercase';
+        h.style.letterSpacing = '0.08em';
+        table.appendChild(h);
+      });
+
+      fm.forEach(m => {
+        const label = document.createElement('div');
+        label.textContent = m.shortName;
+        label.style.fontSize = '12px';
+        label.style.fontWeight = '500';
+        label.style.color = '#e2e8f0';
+        label.style.paddingRight = '8px';
+        table.appendChild(label);
+
+        fd.forEach(d => {
+          const v = m.rtt[d];
+          const cell = document.createElement('div');
+          cell.className = 'heatmap-cell';
+
+          let bg;
+          if (v <= 33) {
+            const t = v / 33;
+            bg = `rgba(${Math.round(13 + t*40)}, ${Math.round(79 + t*20)}, ${Math.round(79 - t*10)}, ${0.6 + t*0.2})`;
+          } else if (v <= 66) {
+            const t = (v - 33) / 33;
+            bg = `rgba(${Math.round(166 + t*40)}, ${Math.round(124 - t*40)}, ${Math.round(48 - t*10)}, ${0.75 + t*0.1})`;
+          } else {
+            const t = (v - 66) / 34;
+            bg = `rgba(${Math.round(184 + t*30)}, ${Math.round(25 + t*5)}, ${Math.round(74 - t*10)}, ${0.8 + t*0.15})`;
+          }
+          cell.style.background = bg;
+          cell.textContent = v.toFixed(1);
+          cell.style.color = '#ffffff';
+          cell.style.textShadow = '0 1px 3px rgba(0,0,0,0.5)';
+
+          const tooltip = document.createElement('div');
+          tooltip.className = 'heatmap-tooltip';
+          tooltip.innerHTML = `<strong>${m.name}</strong> · ${d}<br>Score: <strong>${v.toFixed(1)}</strong>`;
+          cell.appendChild(tooltip);
+
+          table.appendChild(cell);
+        });
+      });
+      container.appendChild(table);
+    }
+
+    // ============ UPDATE ALL ============
+    function updateAll() {
+      buildRTTChart();
+      buildEntropyChart();
+      buildWobbleChart();
+      buildFlipChart();
+      buildFlipTable();
+      buildDriftChart();
+      buildHeatmap();
+    }
+
+    // ============ INIT ============
+    loadModels();
+  </script>
+</body>
+</html>

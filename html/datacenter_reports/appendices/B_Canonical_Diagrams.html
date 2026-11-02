@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/datacenter_reports/appendices/B_Canonical_Diagrams.md">
+  <title>Appendix B — Canonical Diagrams</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/datacenter_reports/appendices/B_Canonical_Diagrams.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/datacenter_reports/appendices/B_Canonical_Diagrams.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="appendix-b-canonical-diagrams"><strong>Appendix B — Canonical Diagrams</strong></h1>
+<p>RTT‑Inside • Structural • Operator‑First<br>
+<em>(Datacenter Reports — Appendix B)</em></p>
+<p>This appendix provides the canonical diagrams used throughout the Datacenter Reports module.<br>
+Each diagram is expressed in <strong>text form</strong> (ASCII + structural description) so it is:</p>
+<ul>
+<li>student‑readable  </li>
+<li>operator‑usable  </li>
+<li>AI‑parsable  </li>
+<li>drift‑bounded  </li>
+<li>consistent across modules  </li>
+</ul>
+<p>These diagrams appear in evaluators, tensors, dashboards, and cross‑module integrations.</p>
+<hr>
+<h1 id="b1-triadic-datacenter-stack-canonical-structural-diagram">🏗️ <strong>B.1 — Triadic Datacenter Stack (Canonical Structural Diagram)</strong></h1>
+<pre><code>+-----------------------------+
+|        Layer 3 — Human      |
+|  Operators • Governance •   |
+|  Culture • Communication     |
++-----------------------------+
+|        Layer 2 — Logical    |
+|  Workloads • Routing •      |
+|  Scheduling • Orchestration |
++-----------------------------+
+|        Layer 1 — Physical   |
+|  Racks • Cooling • Power •  |
+|  Fiber • Facilities          |
++-----------------------------+
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+The datacenter is a triadic structure.<br>
+Every failure, drift event, or regime shift originates in one layer and propagates upward or downward.</p>
+<hr>
+<h1 id="b2-dimensional-field-map-rtt-dimensional-diagram">🌍 <strong>B.2 — Dimensional Field Map (RTT Dimensional Diagram)</strong></h1>
+<pre><code>Planetary     Cultural     Governance     Economic     Compute     Infrastructure
+    |             |             |             |            |              |
+    +-------------+-------------+-------------+------------+--------------+
+                     Multi-Dimensional Interaction Zone
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+Dimensional fields interact in a shared zone.<br>
+Drift often emerges from misalignment between two or more dimensions.</p>
+<hr>
+<h1 id="b3-regime-transition-diagram-rtt-regime-map">🔺 <strong>B.3 — Regime Transition Diagram (RTT Regime Map)</strong></h1>
+<pre><code>Stable  ---&gt;  Transitional  ---&gt;  Emergent  ---&gt;  Chaotic
+   ^                                              |
+   |----------------------------------------------+
+                (Recovery / Stabilization)
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+Systems move through regimes in predictable arcs.<br>
+Recovery loops exist but require stabilizers and governance alignment.</p>
+<hr>
+<h1 id="b4-drift-coherence-diagram">🧬 <strong>B.4 — Drift &amp; Coherence Diagram</strong></h1>
+<pre><code>Coherence ↑
+          |        Stable Zone
+      1.0 |------------------------------ 
+          |            Transitional Zone
+      0.5 |------------------------------
+          |                 Emergent Zone
+      0.2 |------------------------------
+          | Chaotic Zone
+      0.0 +------------------------------
+            0.0      Drift →      1.0
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+High drift + low coherence = chaotic behavior.<br>
+Low drift + high coherence = stable behavior.</p>
+<hr>
+<h1 id="b5-structural-field-tensor-diagram">📦 <strong>B.5 — Structural Field Tensor Diagram</strong></h1>
+<pre><code>+--------------------------------------------------+
+| Facilities | Governance | Culture | Standards | Human |
++--------------------------------------------------+
+|   L1       |    L1      |   L1    |    L1     |   L1  |
+|   L2       |    L2      |   L2    |    L2     |   L2  |
+|   L3       |    L3      |   L3    |    L3     |   L3  |
++--------------------------------------------------+
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+Rows = layers<br>
+Columns = structural fields<br>
+Values = normalized structural intensity</p>
+<hr>
+<h1 id="b6-dimensional-field-tensor-diagram">🌐 <strong>B.6 — Dimensional Field Tensor Diagram</strong></h1>
+<pre><code>+---------------------------------------------------------------+
+| Planetary | Cultural | Governance | Economic | Compute | Infra |
++---------------------------------------------------------------+
+|   Site 1  |   S1     |    S1      |    S1    |   S1    |  S1   |
+|   Site 2  |   S2     |    S2      |    S2    |   S2    |  S2   |
+|   Site 3  |   S3     |    S3      |    S3    |   S3    |  S3   |
++---------------------------------------------------------------+
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+Rows = sites<br>
+Columns = dimensions<br>
+Values = normalized dimensional intensity</p>
+<hr>
+<h1 id="b7-qcompute-tensor-diagram">🔥 <strong>B.7 — qCompute Tensor Diagram</strong></h1>
+<pre><code>+----------------------------------------+
+| Density | Energy Envelope | Thermal    |
++----------------------------------------+
+|  Site 1 |      S1         |    S1      |
+|  Site 2 |      S2         |    S2      |
+|  Site 3 |      S3         |    S3      |
++----------------------------------------+
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+Shows compute capacity constraints across sites.</p>
+<hr>
+<h1 id="b8-crossmodule-propagation-diagram">🔗 <strong>B.8 — Cross‑Module Propagation Diagram</strong></h1>
+<pre><code>Datacenter Reports
+        |
+        +--&gt; Governance Substrate
+        |
+        +--&gt; NoS (Network of Substrate)
+        |
+        +--&gt; Integrations
+        |
+        +--&gt; Framework Field Theory
+        |
+        +--&gt; Low Dimensional Structures
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+Tensors propagate into other modules without losing coherence.</p>
+<hr>
+<h1 id="b9-aiparsable-metadata-diagram">🧠 <strong>B.9 — AI‑Parsable Metadata Diagram</strong></h1>
+<pre><code>+---------------------------+
+| analyzer_layer            |
+| dimensional_fields        |
+| regime                    |
+| coherence                 |
+| drift                     |
+| lineage                   |
+| cross_module_propagation |
++---------------------------+
+</code></pre>
+<p><strong>Interpretation:</strong><br>
+These fields allow AI systems to reason structurally without drift.</p>
+<hr>
+<h1 id="end-of-appendix-b">End of Appendix B</h1>
+  </main>
+</body>
+</html>

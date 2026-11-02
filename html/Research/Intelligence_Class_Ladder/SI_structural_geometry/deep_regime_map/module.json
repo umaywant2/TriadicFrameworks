@@ -1,0 +1,31 @@
+{
+  "module": "SI_structural_geometry_deep_regime_map",
+  "name": "Structural Intelligence — Structural Geometry (Deep Regime Map)",
+  "summary": "Deep regime-level mapping of SI’s structural geometry, defining drift, coherence, stability, resonance, epoch, and ignition regimes as they apply to SI’s apex structural manifold.",
+  "category": "intelligence-structural-regime",
+  "version": "1.0",
+  "purpose": "Provide a deep regime map for SI’s structural geometry, explaining how each regime governs apex-region invariance, cross-domain transfer geometry, temporal-extension surfaces, and paradox-stability behavior.",
+  "role": "map",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@si.geometry.regime.drift",
+    "@si.geometry.regime.coherence",
+    "@si.geometry.regime.stability",
+    "@si.geometry.regime.resonance",
+    "@si.geometry.regime.epoch",
+    "@si.geometry.regime.ignition"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_structural_geometry",
+      "SI_behavioral_invariants_deep_geometry",
+      "SI_behavioral_invariants_regime_map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_paradox_integration",
+      "AI_Atlas_Surfaces",
+      "Atlas_Interaction_Surfaces"
+    ]
+  }
+}

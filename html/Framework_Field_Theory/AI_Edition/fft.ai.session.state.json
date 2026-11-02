@@ -1,0 +1,70 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.state",
+  "title": "FFT AI Session — State v1.33",
+  "state_fields": {
+    "phi": "current scalar field value",
+    "V": "current vector field",
+    "R": "current resonance envelope",
+    "tau": "current RTT phase = dR/dphi",
+    "coherence_state": {
+      "options": [
+        "declared",
+        "lost",
+        "restoring"
+      ],
+      "new_v1_33": true
+    },
+    "drift_state": {
+      "current_delta": "float",
+      "max_delta": 0.35,
+      "status": "within_bound|exceeded",
+      "new_v1_33": true
+    },
+    "snr_state": {
+      "S": "float",
+      "N": "float",
+      "R_snr": "float",
+      "new_v1_33": true
+    },
+    "set_state": {
+      "S_coupled": "bool",
+      "E_coupled": "bool",
+      "T_coupled": "bool",
+      "new_v1_33": true
+    },
+    "paradox_active": {
+      "type": "bool",
+      "current_paradox": "paradox_id|null",
+      "new_v1_33": true
+    },
+    "active_dco": {
+      "dimensions": [
+        "4D",
+        "5D",
+        "7D",
+        "8D",
+        "9D"
+      ],
+      "new_v1_33": true
+    },
+    "autonomy_mode": "AM-001..AM-005",
+    "last_operator": "operator_id",
+    "last_checkpoint": "iso8601"
+  },
+  "v133_additions": [
+    "coherence_state",
+    "drift_state",
+    "snr_state",
+    "set_state",
+    "paradox_active",
+    "active_dco"
+  ]
+}

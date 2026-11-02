@@ -1,0 +1,99 @@
+{
+  "module": "triadic-substrate-module",
+  "version": "1.0",
+  "generated": "2025-01-01",
+
+  "identity": {
+    "name": "",
+    "summary": "",
+    "category": "",
+    "keywords": []
+  },
+
+  "roles": {
+    "primary": "",
+    "secondary": [],
+    "role_enum": [
+      "engine",
+      "profile",
+      "signature",
+      "diagnostic",
+      "map",
+      "example",
+      "extension",
+      "index",
+      "reference",
+      "template"
+    ]
+  },
+
+  "analyzer_layers": {
+    "layer_enum": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence",
+      "cross-cutting"
+    ],
+    "layers": []
+  },
+
+  "files": [
+    {
+      "path": "",
+      "purpose": "",
+      "role": "",
+      "layer": ""
+    }
+  ],
+
+  "metadata": {
+    "ai": {
+      "module": "",
+      "version": "1.0",
+      "purpose": "",
+      "keywords": [],
+      "audience": "",
+      "navigation": "sitemap_main.xml",
+      "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+      "contact": {
+        "x": "@TriadicFrameworks",
+        "youtube": "@TriadicFrameworks"
+      },
+      "license": "Open educational use permitted"
+    },
+    "citation": {
+      "author": "Nawder Loswin",
+      "publication_date": "2025",
+      "title": ""
+    },
+    "dc": {
+      "type": "Text",
+      "format": "text/json",
+      "subject": ""
+    }
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "modules": "Substrate Frameworks",
+    "drift": "",
+    "coherence": "",
+    "version": "1.0",
+    "format": "JSON",
+    "front_door": "",
+    "every_page": "",
+    "audience": ""
+  },
+
+  "badge": {
+    "emoji": "",
+    "label": ""
+  },
+
+  "sidebar_audit": {
+    "phantom_entries": []
+  }
+}
+

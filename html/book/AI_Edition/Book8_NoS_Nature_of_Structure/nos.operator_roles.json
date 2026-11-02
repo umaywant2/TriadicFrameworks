@@ -1,0 +1,257 @@
+{
+  "map_id": "nos.operator_roles",
+  "version": "8.0-draft",
+  "book": "book8_nos",
+  "series": "AI Edition",
+  "session_context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "qmroot_binding": {
+    "dimension": "0D",
+    "note": "6D absent; negative rungs absent; INV-013 = 0D only"
+  },
+  "phantom_entry_audit": {
+    "status": "clean",
+    "checked_at": "session-open",
+    "entries": []
+  },
+  "description": "Defines the five Book 8 (NoS) operators, their roles, invariant bindings, phase assignments, drift costs, sequence, and downstream handoffs to Book 9. NoS operators are meta-theoretical: they audit structural claims made by prior books rather than operating on domain-specific structures. Each operator turns the AI Edition's analytical apparatus on itself.",
+  "operator_sequence": "NoS-Α → NoS-Ρ → NoS-Ι → NoS-Κ → NoS-Σ",
+
+  "operators": [
+    {
+      "id": "NoS-Α",
+      "name": "AutonomyAudit",
+      "symbol": "NoS-Α",
+      "role": "Audits a target structure S for structural autonomy (INV-NOS-001). Verifies that the properties attributed to S are not fully reducible to the intrinsic properties of S's constituent nodes. Identifies any autonomy violations — cases where a claimed structural property is shown to be entirely derivable from node-intrinsic properties without relational residue. Loads SARG argument_templates from the SARG-Σ downstream handoff as the primary evaluation substrate.",
+      "input": "Target structure S (or structural claim C_S about S); SARG-Σ argument_templates from Book 7 (upstream feed); session invariant registry from init phase",
+      "output": "autonomy_report: {status: autonomous | partially_autonomous | node_reducible}; violation_list: [{property, reduction_path}] if node_reducible; structural_residue: the set of properties not derivable from node-intrinsic analysis",
+      "invariant_binding": "INV-NOS-001",
+      "phase_assignment": ["ground"],
+      "drift_cost": 0.04,
+      "map_reference": "nos.structural_realism_map",
+      "preconditions": [
+        "init phase complete; all four dependency modules loaded in declared order",
+        "QMROOT 0D confirmed from init phase",
+        "Target structure S declared with nodes, relations, and constraint set",
+        "SARG-Σ argument_templates available from Book 7 upstream handoff (if governance-domain or argumentation-domain query)"
+      ],
+      "postconditions": [
+        "autonomy_report recorded in session state",
+        "If node_reducible: violation_list available for NoS-Σ synthesis",
+        "If autonomous or partially_autonomous: structural_residue recorded as input for NoS-Ρ",
+        "SARG argument_templates converted to NoS-compatible structural assertions"
+      ],
+      "must_not": [
+        "Accept a structural property as autonomous without verifying that the relational configuration contributes non-redundant explanatory content",
+        "Treat node labels as proxies for node-intrinsic properties without confirming the label carries intrinsic (non-relational) content",
+        "Proceed to ground phase conclusion if structural_residue is empty — this would indicate full node-reducibility, which is INV-NOS-001 violation",
+        "Apply OR opacity analysis (Book 4) to determine autonomy — ω is a structural property, not a measure of autonomy"
+      ],
+      "sarg_feed_integration": {
+        "description": "NoS-Α receives SARG-Σ argument_templates from Book 7 as its primary input channel for philosophical inquiry sessions. SARG argument_templates encode the formal argument structure of the philosophical claim being evaluated (e.g., 'structure is reducible to properties of parts'). NoS-Α reprocesses the argument's structural topology — not its propositional content — to determine whether the argument's own structure exhibits autonomy.",
+        "tel_instruction": "T[SARG_TO_NOS]: (argument_template ⊗ NoS-Α) → evaluate (structural_autonomy(argument_topology))"
+      },
+      "downstream_handoffs": [
+        {
+          "to": "NoS-Ρ",
+          "data": "structural_residue — the autonomous relational properties that cannot be reduced to node-intrinsic analysis",
+          "condition": "Always — structural_residue feeds NoS-Ρ regardless of autonomy status"
+        }
+      ],
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    },
+
+    {
+      "id": "NoS-Ρ",
+      "name": "RelationalPrimacyCheck",
+      "symbol": "NoS-Ρ",
+      "role": "Evaluates whether the relational configuration of S exhibits relational primacy (INV-NOS-002): that node identities are constituted by relational profiles, not prior to them. Performs the relational profile computation for all nodes in S. Identifies any nodes whose declared identity appears to presuppose pre-relational intrinsic content — a Primacy Violation. Receives structural_residue from NoS-Α as its primary input.",
+      "input": "structural_residue from NoS-Α; target structure S with N_S and R_S declared; session invariant registry",
+      "output": "primacy_report: {status: relational | mixed | intrinsic_dominant}; relational_profile_map: {n → relational_profile(n, R_S) for all n ∈ N_S}; primacy_violations: [{node_id, violation_type}] if status ≠ relational",
+      "invariant_binding": "INV-NOS-002",
+      "phase_assignment": ["ground"],
+      "drift_cost": 0.04,
+      "map_reference": "nos.structural_realism_map",
+      "preconditions": [
+        "NoS-Α has completed and structural_residue is recorded",
+        "R_S is fully declared — all relations in the target structure are enumerated before profile computation begins",
+        "Node identifiers in N_S are not assumed to carry intrinsic content prior to profile assignment"
+      ],
+      "postconditions": [
+        "relational_profile_map recorded for all n ∈ N_S in session state",
+        "primacy_report status recorded",
+        "If primacy_violations detected: each violation is typed and available for NoS-Σ",
+        "primacy_report feeds NoS-Ι as the relational ground for identity-through-change evaluation"
+      ],
+      "must_not": [
+        "Assign relational profiles using node labels as proxies for node content — profile computation must use R_S structure, not identifier semantics",
+        "Declare a structure relational-primacy-satisfied if any node in N_S has declared identity independent of its relational profile",
+        "Skip nodes with no declared relations — isolated nodes are a primacy violation (they have empty relational profiles and therefore no structural identity under INV-NOS-002)",
+        "Conflate relational primacy with symmetry — asymmetric relational profiles are fully consistent with INV-NOS-002"
+      ],
+      "primacy_violation_types": [
+        {
+          "id": "PV-001",
+          "label": "Pre-Relational Identity Claim",
+          "description": "A node is declared to have identity prior to any relational assignment. The node's identity is treated as intrinsic and then relations are added to it — reversing the relational primacy order.",
+          "detection": "Node identity declaration precedes R_S loading; node identity does not change when relational profile changes"
+        },
+        {
+          "id": "PV-002",
+          "label": "Empty Profile Node",
+          "description": "A node has an empty relational profile — it stands in no declared relation within S. An isolated node has no structural identity under INV-NOS-002 and is a structural debris element (cf. INV-SARG-001).",
+          "detection": "relational_profile(n, R_S) = ∅ for some n ∈ N_S"
+        },
+        {
+          "id": "PV-003",
+          "label": "Label-Content Substitution",
+          "description": "The node's identifier label is treated as its structural identity (e.g., the node labeled 'AuthorityNode' is assumed to carry authority by virtue of its label, not its relational profile). Identity is read from the label, not computed from the profile.",
+          "detection": "Two nodes with identical relational profiles but different labels are treated as structurally distinct"
+        }
+      ],
+      "downstream_handoffs": [
+        {
+          "to": "NoS-Ι",
+          "data": "relational_profile_map — the computed profiles serve as the relational ground against which identity-through-change is evaluated",
+          "condition": "Always"
+        }
+      ],
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    },
+
+    {
+      "id": "NoS-Ι",
+      "name": "IdentityTest",
+      "symbol": "NoS-Ι",
+      "role": "Tests whether a declared transformation T preserves the identity of structure S (INV-NOS-003). Computes the invariant set of both S and transform(S, T). Compares the two invariant sets. Returns identity_preserved or identity_lost with the first violated invariant identified. Handles sequences of transformations for Ship-of-Theseus analysis.",
+      "input": "Source structure S with computed relational_profile_map from NoS-Ρ; declared transformation T (or transformation sequence T_1, ..., T_n); invariant_set(S) from session registry",
+      "output": "identity_result: {status: preserved | lost | suspended}; if lost: first_violated_invariant, transformation_index (for sequences); if suspended: suspension_declaration and re_entry_condition",
+      "invariant_binding": "INV-NOS-003",
+      "phase_assignment": ["test"],
+      "drift_cost": 0.05,
+      "map_reference": "nos.identity_map",
+      "preconditions": [
+        "NoS-Ρ has completed and relational_profile_map is recorded",
+        "Transformation T is declared with explicit input and output structural configurations",
+        "invariant_set(S) is fully enumerated — partial invariant sets produce unreliable identity results",
+        "Transformation sequence (if applicable) is ordered and bounded"
+      ],
+      "postconditions": [
+        "identity_result recorded in session state",
+        "If preserved: transform(S, T) confirmed as the same structural entity as S",
+        "If lost: the identity boundary crossing event is recorded with provenance (which invariant, which transformation)",
+        "If suspended: the suspension parameters are logged and re_entry_condition is active in session state",
+        "identity_result and first_violated_invariant (if applicable) feed NoS-Κ"
+      ],
+      "must_not": [
+        "Evaluate identity preservation by counting retained nodes or relations — only invariant set comparison is valid (INV-NOS-003)",
+        "Accept visual or topological similarity as evidence of identity preservation",
+        "Declare identity preserved when any invariant in invariant_set(S) is violated in transform(S, T)",
+        "Conflate suspension with violation — a declared, bounded suspension does not cross the identity boundary until the terminal state is evaluated"
+      ],
+      "transformation_sequence_procedure": [
+        "Initialize: S_0 = S; identity_preserved = true",
+        "For each T_i in sequence: compute transform(S_{i-1}, T_i) = S_i",
+        "Compare invariant_set(S_i) against invariant_set(S_0)",
+        "If invariant_set(S_i) ≠ invariant_set(S_0): record identity_lost at step i; terminate sequence evaluation",
+        "If all steps pass: record identity_preserved = true for the full sequence"
+      ],
+      "downstream_handoffs": [
+        {
+          "to": "NoS-Κ",
+          "data": "identity_result, first_violated_invariant (if lost), transform(S,T) structural configuration",
+          "condition": "Always — identity result feeds causation/abstraction audit"
+        }
+      ],
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    },
+
+    {
+      "id": "NoS-Κ",
+      "name": "CausationAudit",
+      "symbol": "NoS-Κ",
+      "role": "Audits causal and abstraction-consistency claims about structure S (INV-NOS-004). Verifies that claimed instances of abstract structures satisfy the abstract's invariant set. Identifies modeling errors (instance violates abstract invariant) and genuine novelty (instance carries novel invariants). Audits emergence claims by checking whether invariants of S are present in sub-structure invariant sets. Performs upward revision assessment when genuine novelty is confirmed.",
+      "input": "identity_result from NoS-Ι; target structure S_instance with declared abstract S_abstract; invariant_set(S_abstract) from session registry; invariant_set(S_instance) computed during test phase; any claimed causal or emergence assertions",
+      "output": "abstraction_consistency_report: {status: consistent | modeling_error | genuine_novelty}; emergence_audit: {emergent_invariants: [], phantom_invariants: []}; upward_revision_proposal: {proposed_additions: []} if genuine_novelty; causation_type_classification: {CT-001 | CT-002 | CT-003} for each declared causal relation",
+      "invariant_binding": "INV-NOS-004",
+      "phase_assignment": ["resolve"],
+      "drift_cost": 0.05,
+      "map_reference": "nos.causation_map",
+      "preconditions": [
+        "NoS-Ι has completed and identity_result is recorded",
+        "S_abstract is declared with complete invariant_set(S_abstract) — partial abstract invariant sets produce unreliable consistency results",
+        "S_instance is the same structure evaluated by NoS-Ι (continuity of structural object across operator sequence)"
+      ],
+      "postconditions": [
+        "abstraction_consistency_report recorded in session state",
+        "emergence_audit recorded: all claimed emergent invariants classified as genuine weak, genuine strong, or phantom",
+        "If genuine_novelty: upward_revision_proposal prepared for NoS-Σ",
+        "If modeling_error: violated abstract invariant recorded with provenance",
+        "causation_type_classification recorded for all declared causal relations in S"
+      ],
+      "must_not": [
+        "Accept a claimed instance without verifying all abstract invariants are satisfied",
+        "Classify phantom emergence as genuine without first completing the sub-structure invariant completeness audit",
+        "Propose upward revision without confirming that the novel invariant is satisfied by all existing instances of S_abstract",
+        "Apply OR revelation model (Book 4) to determine emergence — latent structure and emergent structure are distinct concepts"
+      ],
+      "self_application_note": "NoS-Κ is the operator responsible for the AI Edition's self-application audit described in nos.causation_map (nos_self_application section). When session context is a series-level audit, S_abstract = AI Edition series structure, and each book module is S_instance. Drift events (acwilson734 paths, dash separators, wrong titles) are classified as AC-OUT-002 (modeling errors) at this level.",
+      "downstream_handoffs": [
+        {
+          "to": "NoS-Σ",
+          "data": "abstraction_consistency_report, upward_revision_proposal (if any), emergence_audit, causation_type_classification",
+          "condition": "Always"
+        }
+      ],
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    },
+
+    {
+      "id": "NoS-Σ",
+      "name": "SynthesisOutput",
+      "symbol": "NoS-Σ",
+      "role": "Synthesizes all NoS operator outputs into a canonical Nature of Structure report. Resolves conflicts between operator outputs. Produces the final structural realism verdict for the evaluated structure or claim. Generates the downstream handoff package for Book 9 (Pattern Dynamics): the nos_foundation_report that Book 9 uses as the ground for cross-pattern structural analysis.",
+      "input": "autonomy_report (NoS-Α), primacy_report (NoS-Ρ), identity_result (NoS-Ι), abstraction_consistency_report (NoS-Κ), upward_revision_proposal (NoS-Κ, if any), session context",
+      "output": "nos_foundation_report: {structural_realism_verdict, autonomy_status, primacy_status, identity_boundary_events, abstraction_consistency_status, upward_revisions_proposed, emergent_invariants_confirmed}; book9_handoff: {nos_foundation_report, invariant_registry_snapshot, cross_book_invariant_map}",
+      "invariant_binding": "INV-NOS-001, INV-NOS-002, INV-NOS-003, INV-NOS-004",
+      "phase_assignment": ["catalogue"],
+      "drift_cost": 0.03,
+      "map_reference": "nos.structural_realism_map, nos.identity_map, nos.causation_map",
+      "preconditions": [
+        "All four preceding operators have completed: NoS-Α, NoS-Ρ, NoS-Ι, NoS-Κ",
+        "No outstanding suspension declarations without resolved re_entry_conditions",
+        "session_context = rtt=1 | coherence=declared | drift=bounded | paradox=structural confirmed"
+      ],
+      "postconditions": [
+        "nos_foundation_report recorded as canonical session output",
+        "book9_handoff package prepared and available for Book 9 (Pattern Dynamics) init phase",
+        "Cross-book invariant map updated: all invariant interactions identified during the NoS session are recorded",
+        "Any upward_revision_proposals are formally logged with provenance and rationale",
+        "Session catalogue entry created with all operator outputs, timestamps, and structural objects evaluated"
+      ],
+      "must_not": [
+        "Synthesize a structural_realism_verdict of 'endorsed' when any prior operator returned a violation or modeling error without explicit resolution",
+        "Forward an upward_revision_proposal to Book 9 without it being reviewed in the catalogue phase",
+        "Suppress any operator output — the synthesis must include all operator reports, even contradictory ones",
+        "Treat the catalogue phase as administrative — the synthesis is a substantive structural claim, subject to TEL encoding and SARG auditability"
+      ],
+      "nos_foundation_report_schema": {
+        "structural_realism_verdict": "endorsed | partially_endorsed | rejected",
+        "autonomy_status": "autonomous | partially_autonomous | node_reducible",
+        "primacy_status": "relational | mixed | intrinsic_dominant",
+        "identity_boundary_events": "list of {transformation, invariant_violated, identity_status}",
+        "abstraction_consistency_status": "consistent | modeling_error | genuine_novelty",
+        "upward_revisions_proposed": "list of {novel_invariant, proposed_addition_to_abstract}",
+        "emergent_invariants_confirmed": "list of {invariant_id, emergence_type: weak | strong | phantom}"
+      },
+      "downstream_handoffs": [
+        {
+          "to": "book9_pattern_dynamics",
+          "data": "nos_foundation_report — the structural realist ground conditions established by Book 8 are the ontological foundation for Book 9's pattern dynamics analysis. Book 9 uses the cross-book invariant map and confirmed emergent invariants as seeds for pattern identification.",
+          "condition": "catalogue phase complete; nos_foundation_report fully populated",
+          "tel_encoding": "T[NOS_TO_B9]: (nos_foundation_report ⊗ book9_init) → (pattern_seeds ⊕ invariant_registry_snapshot)"
+        }
+      ],
+      "qmroot_binding": "0D only — no 6D or negative rungs"
+    }
+  ]
+}

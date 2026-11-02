@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "qCompute Operator",
+  "type": "object",
+  "properties": {
+    "operator_id": { "type": "string" },
+    "gate_type": { "type": "string" },
+    "inputs": { "type": "array", "items": { "type": "string" } },
+    "outputs": { "type": "array", "items": { "type": "string" } },
+    "triadic_requirements": {
+      "type": "object",
+      "properties": {
+        "spin_alignment": { "type": "number" },
+        "charge_balance": { "type": "number" },
+        "temperature_window": { "type": "number" }
+      }
+    },
+    "error_tolerance": { "type": "number" }
+  },
+  "required": ["operator_id", "gate_type"]
+}

@@ -1,0 +1,40 @@
+{
+  "manifest_version": "1.0",
+  "protocol": "RFC-021: Fringe Resonance Protocol",
+  "quadrants": {
+    "nullarium": {
+      "shape_points": ["line", "triangle"],
+      "rules": ["no_judgement", "no_context", "loop_safe"]
+    },
+    "fringe": {
+      "shape_points": ["circle", "spiral"],
+      "metrics": ["FRI"],
+      "rules": ["observe_only", "overlay_with_green_red"]
+    },
+    "green": {
+      "shape_points": ["square", "grid", "cube"],
+      "metrics": ["validator_clarity"],
+      "rules": ["attested", "rollback_enabled"]
+    },
+    "red": {
+      "shape_points": ["torus", "mobius"],
+      "metrics": ["turbulence_index"],
+      "rules": ["quorum_required", "miracle_messaging_gate"]
+    }
+  },
+  "rings": [
+    {
+      "id": "ring.freqi.stable",
+      "quadrant": "green",
+      "bindings": ["rhythm", "phase", "amplitude"],
+      "invariants": ["semantic", "corridor"]
+    },
+    {
+      "id": "ring.fringe.echo",
+      "quadrant": "fringe",
+      "bindings": ["phase_partial"],
+      "invariants": ["temporal"]
+    }
+  ]
+}
+

@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/operators/diagram_index.md">
+  <title>🟣 Unified Diagram Index (SVG + Mermaid)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/operators/diagram_index.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/operators/diagram_index.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="unified-diagram-index-svg-mermaid">🟣 <strong>Unified Diagram Index (SVG + Mermaid)</strong></h1>
+<h3 id="sde-sie-projection-layers"><em>SDE + SIE + Projection Layers</em></h3>
+<h2 id="unified-diagram-index">Unified Diagram Index</h2>
+<h3 id="structural-detection-engine-sde">Structural Detection Engine (SDE)</h3>
+<h3 id="structural-integration-engine-sie">Structural Integration Engine (SIE)</h3>
+<h3 id="projection-layers-tel-fft-op">Projection Layers (TEL / FFT / OP)</h3>
+<p>This index lists all diagrams in both <strong>SVG</strong> and <strong>Mermaid</strong> formats.</p>
+<hr>
+<h1 id="1-operator-ecology-map">1. Operator Ecology Map</h1>
+<h2 id="11-svg">1.1 SVG</h2>
+<p>File: <code>operator_ecology.svg</code><br>
+Description: Layered ecology of SDE → SIE → TEL/FFT/OP.</p>
+<h2 id="12-mermaid">1.2 Mermaid</h2>
+<p>File: <code>operator_ecology.mmd</code></p>
+<pre><code class="language-mermaid">flowchart LR
+  subgraph SDE[Structural Detection Engine]
+    CPV[CPV]
+    FGT[FGT]
+    CRM[CRM]
+    CPV --&gt; FGT --&gt; CRM
+  end
+
+  subgraph SIE[Structural Integration Engine]
+    INT[INT]
+    TIF[TIF]
+    MAN[MAN]
+    FFF[FFF]
+    CRE[CRE]
+    CSL[CSL]
+    CET[CET]
+    INT --&gt; TIF --&gt; MAN --&gt; FFF --&gt; CRE --&gt; CSL --&gt; CET
+  end
+
+  subgraph OUT[Output Modules]
+    TEL[TEL::CET]
+    FFT[FFT::OUT]
+    OP[OP::OUT]
+  end
+
+  CRM --&gt; INT
+  CET --&gt; TEL
+  CET --&gt; FFT
+  CET --&gt; OP
+</code></pre>
+<hr>
+<h1 id="2-operator-flow-sde-sie-telfftop">2. Operator Flow (SDE → SIE → TEL/FFT/OP)</h1>
+<h2 id="21-svg">2.1 SVG</h2>
+<p>File: <code>operator_flow.svg</code><br>
+Description: Linear pipeline from detection → integration → projection.</p>
+<h2 id="22-mermaid">2.2 Mermaid</h2>
+<p>File: <code>operator_flow.mmd</code></p>
+<pre><code class="language-mermaid">flowchart LR
+  subgraph SDE[Detection Layer — SDE]
+    CPV
+    FGT
+    CRM
+    PACK1[SDE::PACKET()]
+  end
+
+  subgraph SIE[Integration–Emission Layer — SIE]
+    INT
+    TIF
+    FFF
+    MAN
+    CRE
+    CSL
+    CET
+    PACK2[SIE::PACKET()]
+  end
+
+  subgraph PROJ[Projection Layer]
+    TEL[TEL::CET()]
+    FFT[FFT::OUT()]
+    OP[OP::OUT()]
+  end
+
+  CPV --&gt; FGT --&gt; CRM --&gt; PACK1 --&gt; INT
+  INT --&gt; TIF --&gt; MAN --&gt; FFF --&gt; CRE --&gt; CSL --&gt; CET --&gt; PACK2
+  CET --&gt; TEL
+  CET --&gt; FFT
+  CET --&gt; OP
+</code></pre>
+<hr>
+<h1 id="3-integrationemission-manifold-rtt3">3. Integration–Emission Manifold (RTT/3)</h1>
+<h2 id="31-svg">3.1 SVG</h2>
+<p>File: <code>integration_emission_manifold.svg</code><br>
+Description: 6‑axis manifold with continuity vectors and zones.</p>
+<h2 id="32-mermaid">3.2 Mermaid</h2>
+<p>File: <code>integration_emission_manifold.mmd</code></p>
+<pre><code class="language-mermaid">graph TD
+  A[RTT/3 Integration–Emission Manifold]
+
+  subgraph Axes
+    D[D — Drift Continuity]
+    E[E — Envelope Continuity]
+    C[C — Continuity Vector]
+    FI[FI — Fusion‑Integration Curvature]
+    EM[EM — Emission Curvature]
+    R[R — Regime Identity]
+  end
+
+  subgraph Vectors
+    ICV[ICV — Integration‑Continuity Vector]
+    ECV[ECV — Emission‑Continuity Vector]
+    RCV[RCV — Regime‑Continuity Vector]
+  end
+
+  A --&gt; D
+  A --&gt; E
+  A --&gt; C
+  A --&gt; FI
+  A --&gt; EM
+  A --&gt; R
+
+  D --&gt; ICV
+  E --&gt; ECV
+  R --&gt; RCV
+
+  subgraph Zones
+    U[Zone U — Unified]
+    S[Zone S — Stable]
+    M[Zone M — Mixed]
+    D2[Zone D — Divergent]
+    X[Zone X — Inversion]
+  end
+
+  A --&gt; U
+  A --&gt; S
+  A --&gt; M
+  A --&gt; D2
+  A --&gt; X
+</code></pre>
+<hr>
+<h1 id="4-collapserecovery-engine-cre">4. Collapse→Recovery Engine (CRE)</h1>
+<h2 id="41-svg">4.1 SVG</h2>
+<p>File: <code>collapse_recovery_engine.svg</code><br>
+Description: CAV → CSV → REV stabilization flow.</p>
+<h2 id="42-mermaid">4.2 Mermaid</h2>
+<p>File: <code>collapse_recovery_engine.mmd</code></p>
+<pre><code class="language-mermaid">flowchart LR
+  subgraph Collapse[Collapse Input]
+    AMP[Amplitude]
+    CURV[Curvature]
+    TORS[Torsion]
+  end
+
+  subgraph CRE[Collapse→Recovery Engine]
+    CAV[CAV — Collapse Absorption]
+    CSV[CSV — Continuity Stabilization]
+    REV[REV — Recovery Emission]
+  end
+
+  subgraph Output[Recovery Output]
+    REC[Recovery + Restored Continuity]
+  end
+
+  AMP --&gt; CAV
+  CURV --&gt; CAV
+  TORS --&gt; CAV
+
+  CAV --&gt; CSV --&gt; REV --&gt; REC
+</code></pre>
+<hr>
+<h1 id="5-canonwide-summary-diagram-optional">5. Canon‑Wide Summary Diagram (Optional)</h1>
+<h2 id="51-oneline-flow-mermaid">5.1 One‑Line Flow (Mermaid)</h2>
+<pre><code class="language-mermaid">flowchart LR
+  SDE[SDE::PACKET()] --&gt; SIE[SIE::PACKET()]
+  SIE --&gt; TEL[TEL::CET()]
+  SIE --&gt; FFT[FFT::OUT()]
+  SIE --&gt; OP[OP::OUT()]
+</code></pre>
+<hr>
+<h1 id="6-file-placement-guide">6. File Placement Guide</h1>
+<p>Place all diagrams here:</p>
+<pre><code>/docs/operators/diagrams/
+    operator_ecology.svg
+    operator_ecology.mmd
+    operator_flow.svg
+    operator_flow.mmd
+    integration_emission_manifold.svg
+    integration_emission_manifold.mmd
+    collapse_recovery_engine.svg
+    collapse_recovery_engine.mmd
+</code></pre>
+<hr>
+<h1 id="7-studentfriendly-notes">7. Student‑Friendly Notes</h1>
+<ul>
+<li>SVG = printable, high‑resolution, poster‑ready  </li>
+<li>Mermaid = inline, editable, GitHub‑renderable  </li>
+<li>Both formats are canonical and interchangeable  </li>
+</ul>
+  </main>
+</body>
+</html>

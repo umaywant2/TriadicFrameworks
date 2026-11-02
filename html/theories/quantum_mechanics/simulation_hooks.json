@@ -1,0 +1,110 @@
+{
+  "ai.module": "quantum_mechanics.simulations",
+  "ai.version": "1.0",
+  "ai.purpose": "R1 amplitude-level simulation entry points for Quantum Mechanics",
+  "ai.keywords": [
+    "amplitudes",
+    "operators",
+    "measurement",
+    "basis",
+    "states",
+    "unitary",
+    "decoherence",
+    "rtt"
+  ],
+
+  "simulation_hooks": [
+
+    {
+      "hook_name": "state_evolution_unitary",
+      "description": "Evolve a quantum state under a unitary operator U(t).",
+      "inputs": ["initial_state", "hamiltonian", "time_t"],
+      "outputs": ["final_state", "phase_structure", "norm_preservation"],
+      "regime_behavior": {
+        "R1": "fully valid; amplitude evolution is fundamental",
+        "R2": "becomes low-energy limit of QFT field evolution",
+        "R3": "embedded inside high-energy field behavior",
+        "R4": "insufficient; cosmological fields dominate"
+      }
+    },
+
+    {
+      "hook_name": "measurement_projection",
+      "description": "Apply a measurement operator and compute post-measurement state.",
+      "inputs": ["state", "observable", "basis"],
+      "outputs": ["eigenvalue_distribution", "post_measurement_state", "collapse_map"],
+      "regime_behavior": {
+        "R1": "measurement rules fully active",
+        "R2": "measurement emerges from field excitations",
+        "R3": "measurement behavior modified by resonance surfaces",
+        "R4": "measurement incomplete at horizon scales"
+      }
+    },
+
+    {
+      "hook_name": "basis_transformation",
+      "description": "Transform a quantum state between bases using a unitary matrix.",
+      "inputs": ["state", "initial_basis", "target_basis"],
+      "outputs": ["transformed_state", "phase_relations", "unitarity_check"],
+      "regime_behavior": {
+        "R1": "basis structure fundamental",
+        "R2": "basis embedded in field operator structure",
+        "R3": "basis deforms under symmetry restoration",
+        "R4": "basis loses meaning at cosmological scales"
+      }
+    },
+
+    {
+      "hook_name": "operator_expectation_value",
+      "description": "Compute ⟨ψ|Ô|ψ⟩ for a given operator and state.",
+      "inputs": ["state", "operator"],
+      "outputs": ["expectation_value", "variance", "operator_spectrum"],
+      "regime_behavior": {
+        "R1": "expectation values define observable structure",
+        "R2": "expectation values become field-level integrals",
+        "R3": "operator spectra shift under running couplings",
+        "R4": "expectation values incomplete"
+      }
+    },
+
+    {
+      "hook_name": "density_matrix_evolution",
+      "description": "Evolve a mixed state under unitary or decohering dynamics.",
+      "inputs": ["density_matrix", "hamiltonian", "environment_coupling"],
+      "outputs": ["evolved_density_matrix", "purity", "entropy_flow"],
+      "regime_behavior": {
+        "R1": "decoherence fully meaningful",
+        "R2": "density matrices map to field ensembles",
+        "R3": "entropy flow dominated by resonance behavior",
+        "R4": "density matrix formalism insufficient"
+      }
+    },
+
+    {
+      "hook_name": "superposition_constructor",
+      "description": "Construct a superposition of basis states with given amplitudes.",
+      "inputs": ["basis_states", "amplitudes"],
+      "outputs": ["superposed_state", "normalization_factor", "phase_map"],
+      "regime_behavior": {
+        "R1": "superposition fundamental",
+        "R2": "superposition becomes field-mode combination",
+        "R3": "superposition surfaces merge",
+        "R4": "superposition loses meaning"
+      }
+    },
+
+    {
+      "hook_name": "entanglement_analyzer",
+      "description": "Analyze entanglement structure between subsystems.",
+      "inputs": ["state_or_density_matrix", "subsystem_partition"],
+      "outputs": ["entanglement_entropy", "reduced_states", "correlation_structure"],
+      "regime_behavior": {
+        "R1": "entanglement fully meaningful",
+        "R2": "entanglement maps to field correlations",
+        "R3": "correlation structure dominated by resonance",
+        "R4": "entanglement incomplete at horizon scales"
+      }
+    }
+
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "version": "1.0.0",
+  "generated": "2026-01-09",
+  "universe": "Resonance-Time",
+  "domains": {
+    "canon": {
+      "description": "Foundational universe definitions, lineage, creator goals, and codex structures.",
+      "schemas": [
+        "canon_entry.schema.json",
+        "codex_chapter.schema.json",
+        "universe_definition.schema.json",
+        "lineage_manifest.json",
+        "creator_goal.schema.json",
+        "goal_progress.schema.json",
+        "miracles.json",
+        "survival_traits.json"
+      ]
+    },
+    "dimensional": {
+      "description": "Dimensional layers, operators, resonance envelopes, and structural awareness.",
+      "schemas": [
+        "dimensional_core.schema.json",
+        "dimensional_layer.schema.json",
+        "dimensional_operator.schema.json",
+        "dimensional_role.schema.json",
+        "resonance_interface.schema.json",
+        "structural_awareness.schema.json",
+        "structural_awareness_layer.schema.json",
+        "resonance_envelope.schema.json",
+        "resonance_profile.schema.json",
+        "resonance_constraints.schema.json"
+      ]
+    },
+    "identity": {
+      "description": "Identity substrates, directory nodes, trust channels, and identity events.",
+      "schemas": [
+        "identity_substrate.schema.json",
+        "identity_event.schema.json",
+        "directory_node.schema.json",
+        "trust_channel.schema.json"
+      ]
+    },
+    "coeus": {
+      "description": "Contracts, operators, state models, attestation receipts, and constraint packs.",
+      "schemas": [
+        "coeus_contract.schema.json",
+        "operator.schema.json",
+        "state_model.schema.json",
+        "event.schema.json",
+        "constraint_pack.json",
+        "attestation_receipt.schema.json",
+        "corridor_env_manifest.json"
+      ]
+    },
+    "finance": {
+      "description": "Financial instruments, markets, pricing models, portfolios, and risk vectors.",
+      "schemas": [
+        "finance_instrument.schema.json",
+        "finance_event.schema.json",
+        "market_state.schema.json",
+        "pricing_model.schema.json",
+        "portfolio.schema.json",
+        "transaction.schema.json",
+        "risk_model.schema.json"
+      ]
+    },
+    "quantum": {
+      "description": "Quantum substrates, states, operators, energy banks, and quantum events.",
+      "schemas": [
+        "qcompute_operator.schema.json",
+        "quantum_substrate.schema.json",
+        "quantum_state.schema.json",
+        "quantum_energy_bank.schema.json",
+        "quantum_event.schema.json"
+      ]
+    },
+    "networking": {
+      "description": "RTT-aware network nodes, links, packets, radio channels, and routing profiles.",
+      "schemas": [
+        "network_node.schema.json",
+        "network_node_rtt.schema.json",
+        "network_link_rtt.schema.json",
+        "rtt_packet.schema.json",
+        "radio_channel_rtt.schema.json",
+        "global_routing_rtt.schema.json"
+      ]
+    },
+    "sensing": {
+      "description": "GPR, seismic, holographic, and observational RTT‑Inside sensor schemas.",
+      "schemas": [
+        "gpr_sensor.schema.json",
+        "seismic_sensor.schema.json",
+        "hologram_reconstruction.schema.json",
+        "observation_rtt.schema.json",
+        "instrument_rtt.schema.json",
+        "mobile_sensor_rtt.schema.json"
+      ]
+    },
+    "lab": {
+      "description": "Lab instruments, environments, samples, measurements, experiments, and safety.",
+      "schemas": [
+        "lab_instrument.schema.json",
+        "lab_environment.schema.json",
+        "sample_specimen.schema.json",
+        "measurement.schema.json",
+        "experiment.schema.json",
+        "safety_compliance.schema.json"
+      ]
+    },
+    "energy": {
+      "description": "Power modules, BMS systems, energy corridors, and supply metadata.",
+      "schemas": [
+        "power_module_rtt.schema.json",
+        "power_supply.schema.json",
+        "bms_rtt.schema.json",
+        "energy_corridor.schema.json"
+      ]
+    },
+    "ai": {
+      "description": "AI drift vectors, correction layers, model profiles, and triadic anchors.",
+      "schemas": [
+        "ai_model_profile.schema.json",
+        "ai_drift_vector.schema.json",
+        "ai_correction_layer.schema.json"
+      ]
+    },
+    "language": {
+      "description": "RTT‑Inside language profiles, code blocks, API endpoints, and runtime metadata.",
+      "schemas": [
+        "language_profile_rtt.schema.json",
+        "rtt_code_block.schema.json",
+        "rtt_api_endpoint.schema.json",
+        "rtt_variant.schema.json",
+        "rtt_variant_runtime.schema.json",
+        "runtime_rtt.schema.json"
+      ]
+    },
+    "infrastructure": {
+      "description": "Access fields, protocol metadata, and cross‑domain structural definitions.",
+      "schemas": [
+        "access_field.schema.json",
+        "protocol_metadata.schema.json"
+      ]
+    },
+    "vcg": {
+      "description": "Virtual Compute Gateway routing and compute‑path metadata.",
+      "schemas": [
+        "vcg_route.schema.json"
+      ]
+    },
+    "dpu": {
+      "description": "RTT‑Inside Data Processing Unit definitions.",
+      "schemas": [
+        "dpu_rtt.schema.json"
+      ]
+    },
+    "nimms": {
+      "description": "Network‑Integrated Multi‑Modal Substrate nodes.",
+      "schemas": [
+        "nimms_node.schema.json"
+      ]
+    },
+    "universe-core": {
+      "description": "Universe‑level field samples and object definitions.",
+      "schemas": [
+        "UniverseFieldSample.schema.json",
+        "UniverseObject.schema.json"
+      ]
+    }
+  }
+}

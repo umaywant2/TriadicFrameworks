@@ -1,0 +1,68 @@
+{
+  "module": "Charts",
+  "version": "1.0",
+  "category": "visual-structural",
+  "summary": "Visual backbone of the RTT canon — resonance‑aware diagrams, glyph maps, lineage charts, quadrant maps, dashboards, and structural visualizations. 4 root charts (freqi bindings, genie protocols, resonance partitions, time‑travel matrix), 4 maps and traces (glyph map SVG, lineage loophole echo, loophole trace, quadrant maps), and 2 dashboards (spiral remix ring, vSoul dashboard).",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "chart-freqi-bindings.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "chart-genie-protocols.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "chart-resonance-partitions.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "chart-time-travel-matrix.md",
+      "role": "map",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "glyph_map_svg.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "lineage_loophole_echo.md",
+      "role": "map",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "loophole_trace.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "quadrant_maps.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "spiral_remix_ring.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "vsoul_dashboard.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

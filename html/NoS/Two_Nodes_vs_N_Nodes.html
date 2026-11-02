@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/NoS/Two_Nodes_vs_N_Nodes.md">
+  <title>Lab: RTT Instrumentation — Two Nodes vs N Nodes 🌐</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/NoS/Two_Nodes_vs_N_Nodes.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/NoS/Two_Nodes_vs_N_Nodes.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h2 id="lab-rtt-instrumentation-two-nodes-vs-n-nodes">Lab: RTT Instrumentation — Two Nodes vs N Nodes 🌐</h2>
+<p><em>(Seeing Coherence Collapse as Scale Increases)</em></p>
+<h3 id="objective">Objective</h3>
+<p>In this lab, you will instrument a distributed system using <strong>RTT‑style observation</strong> and compare system behavior in:</p>
+<ul>
+<li>a <strong>two‑node configuration</strong></li>
+<li>an <strong>N‑node configuration</strong> (N ≥ 5)</li>
+</ul>
+<p>You will observe how <strong>coherence drift changes with scale</strong>, without adding coordination, retries, or enforcement.</p>
+<hr>
+<h2 id="core-question">Core Question</h2>
+<blockquote>
+<p><em>What assumptions hold at two nodes that quietly fail at N nodes?</em></p>
+</blockquote>
+<p>RTT helps you see the answer.</p>
+<hr>
+<h2 id="system-setup">System Setup</h2>
+<p>Use any distributed system you already have access to:
+- message‑passing nodes
+- replicated key‑value store
+- leader‑based service
+- consensus simulator (without enforcing consensus)</p>
+<p>You may simulate all nodes on one machine.</p>
+<hr>
+<h2 id="phase-1-twonode-instrumentation">Phase 1: Two‑Node Instrumentation 🔁</h2>
+<h3 id="step-1-declare-an-assumption">Step 1: Declare an Assumption</h3>
+<p>Choose <strong>one distributed assumption</strong>.</p>
+<p>Examples:
+- “Both nodes eventually agree on the latest value.”
+- “Messages arrive within a bounded time.”
+- “Only one node believes it is leader.”</p>
+<p>Write it in <strong>one sentence</strong>.</p>
+<hr>
+<h3 id="step-2-define-a-coherence-corridor">Step 2: Define a Coherence Corridor</h3>
+<p>Define what <em>normal behavior</em> looks like <strong>between two nodes</strong>.</p>
+<p>Examples:
+- Maximum message delay
+- Allowed version divergence
+- Heartbeat interval</p>
+<p>This corridor defines <em>expected coherence</em>, not correctness.</p>
+<hr>
+<h3 id="step-3-observe-a-boundary">Step 3: Observe a Boundary</h3>
+<p>Instrument <strong>one boundary</strong>:
+- message send / receive
+- state update
+- timeout
+- leadership change</p>
+<p>Add <strong>observation only</strong>.</p>
+<hr>
+<h3 id="step-4-emit-badges">Step 4: Emit Badges</h3>
+<p>When behavior exits the corridor, emit a badge:</p>
+<pre><code class="language-text">[BADGE]
+type: COHERENCE_DRIFT
+node: node_A
+context: version_lag_exceeded
+timestamp: 10234
+</code></pre>
+<p>Run the system and collect badge output.</p>
+<hr>
+<h2 id="phase-2-nnode-instrumentation">Phase 2: N‑Node Instrumentation 🔗</h2>
+<p>Now scale the <strong>same system</strong> to <strong>N nodes (≥5)</strong>.</p>
+<p>Do <strong>not</strong>:
+- change logic
+- add coordination
+- tighten timeouts
+- fix anything</p>
+<p>Only scale the node count.</p>
+<hr>
+<h3 id="observe-and-record">Observe and Record</h3>
+<p>Run the system under similar load and record:</p>
+<ul>
+<li>badge frequency</li>
+<li>badge symmetry (which nodes emit)</li>
+<li>time to first drift</li>
+<li>whether drift stabilizes or cascades</li>
+</ul>
+<hr>
+<h2 id="comparison-analysis">Comparison Analysis 📊</h2>
+<p>Create a short comparison table:</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Two Nodes</th>
+<th>N Nodes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First drift observed</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Badge frequency</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Drift symmetry</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Time sensitivity</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reflection-questions">Reflection Questions 🧠</h2>
+<p>Answer briefly:</p>
+<ol>
+<li>Which assumptions held at two nodes but failed at N?</li>
+<li>Did drift appear gradually or suddenly?</li>
+<li>Did time matter more than state?</li>
+<li>Did any node “know” the system was incoherent?</li>
+<li>Would enforcement have helped — or hidden the problem?</li>
+</ol>
+<hr>
+<h2 id="key-insight-what-you-should-notice">Key Insight (What You Should Notice)</h2>
+<p>At two nodes:
+- assumptions feel stable
+- drift is rare and symmetric
+- time feels manageable</p>
+<p>At N nodes:
+- drift appears earlier
+- assumptions fragment
+- time dominates behavior
+- coherence becomes <em>emergent</em>, not guaranteed</p>
+<p>RTT makes this visible <strong>without fixing anything</strong>.</p>
+<hr>
+<h2 id="what-you-must-not-do">What You Must Not Do 🚫</h2>
+<ul>
+<li>No retries</li>
+<li>No leader re‑election</li>
+<li>No resynchronization</li>
+<li>No consistency enforcement</li>
+</ul>
+<p>Observation only.</p>
+<hr>
+<h2 id="deliverables">Deliverables 📦</h2>
+<p>Submit:
+1. Assumption and corridor definition
+2. Instrumentation code
+3. Badge samples from two‑node and N‑node runs
+4. Comparison table
+5. Short reflection (8–10 sentences)</p>
+<hr>
+<h2 id="why-this-lab-matters">Why This Lab Matters</h2>
+<p>Most distributed systems are designed at small scale and <strong>fail at large scale</strong> — not because logic breaks, but because <strong>assumptions stop holding silently</strong>.</p>
+<p>RTT trains you to:
+- see that moment
+- name it
+- reason about it</p>
+<p>Before you try to fix it.</p>
+<hr>
+<h3 id="instructor-note">Instructor Note</h3>
+<p>This lab pairs well with lectures on:
+- CAP theorem
+- failure detectors
+- eventual consistency
+- clock skew and partial order</p>
+<p>Students often report that this is the first time they <em>see</em> scale as a coherence problem, not just a performance one.</p>
+  </main>
+</body>
+</html>

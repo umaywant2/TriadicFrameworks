@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-core/v1/ResonanceAlert.schema.json",
+  "title": "ResonanceAlert",
+  "type": "object",
+  "required": [
+    "alert_id",
+    "mesh_id",
+    "zone_id",
+    "timestamp",
+    "severity",
+    "type",
+    "summary"
+  ],
+  "properties": {
+    "alert_id": { "type": "string", "format": "uuid" },
+    "mesh_id": { "type": "string", "format": "uuid" },
+    "zone_id": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+
+    "severity": {
+      "type": "string",
+      "enum": ["info", "warning", "major", "critical"]
+    },
+
+    "type": {
+      "type": "string",
+      "enum": ["structural", "gas", "vibration", "comms"]
+    },
+
+    "summary": { "type": "string" },
+
+    "details": {
+      "type": "object",
+      "additionalProperties": true
+    },
+
+    "recommended_actions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "source_nodes": {
+      "type": "array",
+      "items": { "type": "string", "format": "uuid" }
+    }
+  }
+}

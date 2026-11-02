@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/guild/Little_Science_Series/LSS_manifest_doc.md">
+  <title>LSS manifest doc</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/guild/Little_Science_Series/LSS_manifest_doc.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/guild/Little_Science_Series/LSS_manifest_doc.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="lss-manifest-doc">LSS manifest doc</h1>
+<blockquote>
+<p>Generate a complete 144‑item JSON manifest for the Little Science Series, including all books (1–6), all scenes (1–6), all variants (A and B), and all asset types (STILL and ANIM). Each entry must include: filename, book number, book name, domain, scene number, scene name, variant, type, and the exact Imagine prompt text previously defined. The output must be a single JSON array with 144 objects, fully validated and ready for ingestion into the TriadicFrameworks repo.</p>
+</blockquote>
+<p>I'll build the complete 144-item manifest now — generating all 6 books × 6 scenes × 2 variants × 2 types with proper filenames, metadata, and prompt text.</p>
+<p><code>LSS_manifest.json</code> is ready — <strong>144 entries, fully validated, zero duplicate filenames.</strong> Here's a quick structural breakdown:</p>
+<hr>
+<h3 id="manifest-at-a-glance">Manifest at a Glance</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Books</strong></td>
+<td>1 Gravity · 2 Light · 3 Motion · 4 Time · 5 Matter · 6 Heat</td>
+</tr>
+<tr>
+<td><strong>Domains</strong></td>
+<td><code>GRAV</code> · <code>LGHT</code> · <code>MOTN</code> · <code>TIME</code> · <code>MATTR</code> · <code>HEAT</code></td>
+</tr>
+<tr>
+<td><strong>Scenes per book</strong></td>
+<td>6 (S1–S6)</td>
+</tr>
+<tr>
+<td><strong>Variants</strong></td>
+<td>A · B</td>
+</tr>
+<tr>
+<td><strong>Asset types</strong></td>
+<td><code>STILL</code> (<code>.png</code>) · <code>ANIM</code> (<code>.gif</code>)</td>
+</tr>
+<tr>
+<td><strong>Items per book</strong></td>
+<td>24 (6 scenes × 2 variants × 2 types)</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>144</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="filename-convention">Filename Convention</h3>
+<pre><code>LSS_B{book#}_{domain}_S{scene#}_{type}_{variant}.{ext}
+
+Example:  LSS_B1_GRAV_S1_STILL_A.png
+          LSS_B6_HEAT_S6_ANIM_B.gif
+</code></pre>
+<h3 id="fields-per-object">Fields per object</h3>
+<pre><code class="language-json">{
+  &quot;filename&quot;:     &quot;LSS_B2_LGHT_S3_ANIM_B.gif&quot;,
+  &quot;book_number&quot;:  2,
+  &quot;book_name&quot;:    &quot;Light&quot;,
+  &quot;domain&quot;:       &quot;LGHT&quot;,
+  &quot;scene_number&quot;: 3,
+  &quot;scene_name&quot;:   &quot;Reflection&quot;,
+  &quot;variant&quot;:      &quot;B&quot;,
+  &quot;type&quot;:         &quot;ANIM&quot;,
+  &quot;prompt&quot;:       &quot;Seamless loop of a concave mirror focusing multiple parallel rays...&quot;
+}
+</code></pre>
+  </main>
+</body>
+</html>

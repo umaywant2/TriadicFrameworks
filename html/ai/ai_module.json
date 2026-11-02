@@ -1,0 +1,71 @@
+{
+  "module": {
+    "name": "AI Instrument Architecture",
+    "id": "ai.core",
+    "category": "AI-Core",
+    "version": "1.0",
+    "summary": "Minimal, constitutional AI instrument architecture defining NoS AI, Regime Header, Lineage Ledger, and the Minimal AI Stack.",
+    "purpose": "Provide a reproducible, regime-declared, append-only constitutional architecture for AI systems within TriadicFrameworks.",
+    "keywords": [
+      "AI-core",
+      "NoS AI",
+      "Regime Header",
+      "Lineage Ledger",
+      "Minimal AI Stack",
+      "constitutional AI",
+      "agentic modules"
+    ],
+    "audience": ["researchers", "developers", "AIs"],
+    "front_door": "index.html",
+    "format": ["html", "markdown", "schema"],
+    "every_page_stands_alone": true
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "module": "AI Instrument Architecture",
+    "category": "AI-Core",
+    "version": "1.0",
+    "coherence": "stable",
+    "drift": "bounded",
+    "format": ["html", "markdown", "schema"],
+    "front_door": "index.html",
+    "audience": ["researchers", "developers", "AIs"],
+    "every_page_stands_alone": true
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "constitution",
+      "regime-header",
+      "lineage-ledger",
+      "minimal-ai-stack"
+    ],
+    "dimensional": [
+      "coherence",
+      "drift",
+      "regime"
+    ],
+    "regime": [
+      "ai-core",
+      "constitutional",
+      "append-only"
+    ],
+    "cross_cutting": [
+      "schema",
+      "lineage",
+      "retrieval-scope"
+    ]
+  },
+
+  "schema": {
+    "input": {
+      "event": "object (append-only)",
+      "regime": "string"
+    },
+    "output": {
+      "ledger_state": "object",
+      "regime_constraints": "object"
+    }
+  }
+}

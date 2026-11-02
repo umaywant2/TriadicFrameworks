@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XIV_Mathematical_Foundations/README.md">
+  <title>PART XIV — Mathematical Foundations</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XIV_Mathematical_Foundations/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XIV_Mathematical_Foundations/README.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1536" height="1024" alt="PART_XIV_The_Substrate_Equation" src="https://github.com/user-attachments/assets/27882d13-35e9-4a07-988b-105f7dbe4d63" /></p>
+<h1 id="part-xiv-mathematical-foundations"><strong>PART XIV — Mathematical Foundations</strong></h1>
+<h3 id="establishing-the-formal-substrate-beneath-framework-field-theory"><em>Establishing the formal substrate beneath Framework Field Theory</em></h3>
+<p>Framework Field Theory (FFT) was designed as a conceptual and structural field.<br>
+Its operators, dimensions, and coherence engines were intentionally defined at the level of <strong>behavior</strong>, <strong>regime</strong>, and <strong>interaction</strong>, not at the level of differential equations or physical units.</p>
+<p>However, the emergence of a fourth external reviewer — Duck.ai — revealed something important:</p>
+<blockquote>
+<p><strong>FFT is mathematically suggestive enough that independent systems can reconstruct it as a multi‑field dynamical theory.</strong></p>
+</blockquote>
+<p>This chapter formalizes the minimal mathematical substrate implied by FFT.<br>
+It does not convert FFT into a physics theory; instead, it provides a <strong>rigorous foundation</strong> for simulation, analysis, and future extensions.</p>
+<hr>
+<h1 id="1-mathematical-objects-of-the-field"><strong>1. Mathematical Objects of the Field</strong></h1>
+<p>FFT’s conceptual structure implies three primary fields:</p>
+<h3 id="1-scalar-field-xt"><strong>1. Scalar Field — φ(x,t)</strong></h3>
+<p>Represents baseline structural potential or substrate density.</p>
+<h3 id="2-vector-field-vxt"><strong>2. Vector Field — V(x,t)</strong></h3>
+<p>Represents directional flow, alignment, or coherence transport.</p>
+<h3 id="3-resonance-envelope-rxt"><strong>3. Resonance Envelope — R(x,t)</strong></h3>
+<p>Represents amplitude, coherence strength, or regime‑level order.</p>
+<p>These fields live on a shared domain:</p>
+<ul>
+<li>Spatial domain: Ω ⊂ ℝⁿ  </li>
+<li>Time domain: t ∈ [0, T]</li>
+</ul>
+<p>For mathematical clarity, we assume:</p>
+<ul>
+<li>φ ∈ C²(Ω×[0,T])  </li>
+<li>V ∈ C²(Ω×[0,T]; ℝⁿ)  </li>
+<li>R ∈ C²(Ω×[0,T])</li>
+</ul>
+<p>This establishes the smoothness required for differential operators.</p>
+<hr>
+<h1 id="2-operator-families"><strong>2. Operator Families</strong></h1>
+<p>FFT defines operator families conceptually.<br>
+Here we provide minimal mathematical representatives that preserve the intended behavior.</p>
+<h3 id="diffusion-operator-dx"><strong>Diffusion Operator — D[X]</strong></h3>
+<p>Represents spreading, smoothing, or dissipation.</p>
+<p>A minimal form:</p>
+<p>$$D[X] = \nu \nabla^2 X$$</p>
+<h3 id="alignment-operator-arv"><strong>Alignment Operator — A[R,V]</strong></h3>
+<p>Represents directional influence or coherence transport.</p>
+<p>$$A[R,V] = (V \cdot \nabla) R$$</p>
+<h3 id="coupling-operator-cv"><strong>Coupling Operator — C[φ,V]</strong></h3>
+<p>Represents nonlocal influence between fields.</p>
+<pre><code class="language-math">C[φ,V](x) = \int_{\Omega} K(x - y)\, g(\phi(y), V(y))\, dy
+</code></pre>
+<h3 id="activation-operator-r"><strong>Activation Operator — α[R]</strong></h3>
+<p>Represents local amplification or resonance growth.</p>
+<p>$$\alpha[R] = aR - bR^3$$</p>
+<h3 id="stabilization-operator-sr"><strong>Stabilization Operator — S[R]</strong></h3>
+<p>Represents damping or coherence decay.</p>
+<p>$$S[R] = \gamma R$$</p>
+<p>These definitions are intentionally minimal; they can be generalized.</p>
+<hr>
+<h1 id="3-governing-pde-system-minimal-form"><strong>3. Governing PDE System (Minimal Form)</strong></h1>
+<p>FFT does not prescribe a specific PDE system, but the conceptual structure implies a tri‑field dynamical system.</p>
+<p>A minimal consistent system is:</p>
+<h3 id="scalar-field"><strong>Scalar Field</strong></h3>
+<p>$$\partial_t \phi = D_\phi[\phi] + C_\phi[\phi, V, R] + S_\phi$$</p>
+<h3 id="vector-field"><strong>Vector Field</strong></h3>
+<p>$$\partial_t V = -\nabla P + \nu_V \nabla^2 V + C_V[\phi, R] + S_V$$</p>
+<h3 id="resonance-envelope"><strong>Resonance Envelope</strong></h3>
+<p>$$\partial_t R = -(V \cdot \nabla)R + \nu_R \nabla^2 R + C[\phi, V] + aR - bR^3 - \gamma R$$</p>
+<p>This system is not “the” FFT equation — it is the <strong>minimal mathematical realization</strong> consistent with the field’s conceptual architecture.</p>
+<hr>
+<h1 id="4-triadic-time-decomposition"><strong>4. Triadic Time Decomposition</strong></h1>
+<p>FFT introduces three temporal modes:</p>
+<ul>
+<li><strong>Resonant time</strong> tr  </li>
+<li><strong>Diffusive time</strong> td  </li>
+<li><strong>Alignment time</strong> ta  </li>
+</ul>
+<p>These can be formalized as projections of physical time:</p>
+<p>$$t \mapsto (t_r, t_d, t_a)$$</p>
+<p>or as multi‑scale expansions:</p>
+<p>$$t_r = t,\quad t_d = \epsilon t,\quad t_a = \epsilon^2 t$$</p>
+<p>This provides a mathematical basis for multi‑scale coherence.</p>
+<hr>
+<h1 id="5-the-set-engine-set"><strong>5. The SET Engine (ΔSET)</strong></h1>
+<p>FFT’s SET engine contributes an additional mass‑energy‑like term.</p>
+<p>A minimal parameterization:</p>
+<p>$$\Delta SET(x) = \kappa_1 R(x) + \kappa_2 |V(x)|^2 + \kappa_3 \phi(x)$$</p>
+<p>This can be inserted into gravitational or energetic equations if desired, but FFT does not require a physical interpretation.</p>
+<hr>
+<h1 id="6-measurement-mapping"><strong>6. Measurement Mapping</strong></h1>
+<p>To connect FFT to observable quantities, define measurement operators:</p>
+<ul>
+<li><strong>M_φ</strong>: maps φ to structural observables  </li>
+<li><strong>M_V</strong>: maps V to flow or alignment observables  </li>
+<li><strong>M_R</strong>: maps R to coherence or regime observables  </li>
+</ul>
+<p>These operators are left abstract to allow domain‑specific instantiation.</p>
+<hr>
+<h1 id="7-conservation-symmetry-and-invariance"><strong>7. Conservation, Symmetry, and Invariance</strong></h1>
+<p>FFT does not assume:</p>
+<ul>
+<li>Lorentz invariance  </li>
+<li>Gauge symmetry  </li>
+<li>Energy conservation  </li>
+</ul>
+<p>However, these can be added if FFT is applied to physical systems.</p>
+<p>The minimal mathematical substrate is agnostic.</p>
+<hr>
+<h1 id="8-simulation-framework"><strong>8. Simulation Framework</strong></h1>
+<p>FFT’s mathematical form supports:</p>
+<ul>
+<li>1D radial solvers  </li>
+<li>2D pattern formation  </li>
+<li>3D coherence evolution  </li>
+<li>Nonlocal kernel simulations  </li>
+<li>Bifurcation analysis  </li>
+<li>Regime transition mapping  </li>
+</ul>
+<p>This opens the door to computational exploration.</p>
+<hr>
+<h1 id="9-purpose-of-this-chapter"><strong>9. Purpose of This Chapter</strong></h1>
+<p>This chapter does <strong>not</strong> convert FFT into a physics theory.<br>
+It provides:</p>
+<ul>
+<li>a rigorous substrate  </li>
+<li>a simulation‑ready structure  </li>
+<li>a foundation for future extensions  </li>
+<li>a bridge between conceptual and mathematical domains  </li>
+</ul>
+<p>FFT remains a <strong>framework field</strong>, not a physical model.</p>
+<hr>
+<h1 id="closing-statement"><strong>Closing Statement</strong></h1>
+<blockquote>
+<p><strong>The mathematical foundations presented here establish FFT as a coherent, simulation‑ready field with a clear substrate, operator families, and governing dynamics. This chapter marks the beginning of the field’s quantitative evolution.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

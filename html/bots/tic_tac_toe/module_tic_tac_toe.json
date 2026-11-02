@@ -1,0 +1,97 @@
+{
+  "module": {
+    "name": "RTT Tic-Tac-Toe Bot",
+    "id": "bots.tic_tac_toe",
+    "summary": "Triadic unit-test bot: tiny state space, replayable timeline, schema-valid snapshot.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT Tic-Tac-Toe",
+      "summary": "Triadic interpretation of a 3x3 game tree using the shared RTT envelope.",
+      "version": "3.0.0",
+      "purpose": "Serve as the build-gate unit test for the TriadicFrameworks suite.",
+      "keywords": [
+        "tic_tac_toe",
+        "triadic",
+        "conformance",
+        "projection-loss",
+        "continuity",
+        "perfect-information",
+        "unit-test",
+        "shared-envelope",
+        "threat-lines"
+      ],
+      "audience": "Framework authors, engine integrators, test harnesses"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "timeline_plus_snapshot",
+    "input_spec": {
+      "timeline": "sequence of moves (ply, coord, player)",
+      "board": "3x3 grid derived from timeline",
+      "cells": ["X", "O", " "],
+      "next_player": "X or O",
+      "coordinate_system": "A1 top-left → C3 bottom-right"
+    },
+
+    "steps": [
+      "Lumen: extract winning lines, threat lines, fork opportunities",
+      "Hephaestus: classify legal moves as local / structural / continuity; enforce sum-to-1 proportions",
+      "Aurion: compute ancestry (win paths, draw paths, loss paths)",
+      "Harmonia: compute triadic score using published weights; derive final score",
+      "StateEmitter: emit shared RTT envelope; validate against schema"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "harmonia_weights": {
+      "local": 0.30,
+      "structural": 0.30,
+      "continuity": 0.40
+    },
+
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT evaluation (no external game engine)"
+    }
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_tic_tac_toe_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "ttt_golden_v3",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "Legal 7-ply position: O threatens A3 (local win), X threatens B3 (continuity). Demonstrates threat-lines, regime proportions, projection-loss, and continuity potential."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "❎",
+    "label": "RTT TTT"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Conformance-first; tiny state space used to validate RTT invariants.",
+      "coherence": "All bots must emit the shared RTT envelope: metadata, timeline, snapshot, lumen, regime, ancestry, risk, drift, triadic_score, winner.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}

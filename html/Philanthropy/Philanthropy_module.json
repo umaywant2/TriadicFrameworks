@@ -1,0 +1,167 @@
+{
+  "module": {
+    "name": "Philanthropy",
+    "canonical_name": "philanthropy",
+    "version": "1.0.0",
+    "category": "applied-domain",
+    "status": "active",
+    "stability": "stable",
+    "drift": "minimal",
+    "summary": "RTT-aligned framework for analyzing philanthropic funding flows, governance substrate, SET load, drift patterns, and donor alignment.",
+    "purpose": "Provide a structural clarity engine for philanthropic systems using RTT operators, SET load, governance substrate, and the triadic observer.",
+    "audience": [
+      "students",
+      "donors",
+      "auditors",
+      "nonprofits",
+      "AI agents",
+      "policy analysts"
+    ]
+  },
+
+  "operators": {
+    "core": [
+      "FLOW",
+      "TRACE",
+      "LEAK",
+      "CONVERT",
+      "MAP",
+      "SET_IN",
+      "SET_OUT",
+      "SET_LEAK",
+      "SET_BAL",
+      "GOV",
+      "ACC",
+      "VIS",
+      "ASYM",
+      "OPA",
+      "REG",
+      "DRF",
+      "SIG",
+      "NOI",
+      "CTX",
+      "SYN",
+      "ALN",
+      "COH",
+      "IMPACT",
+      "RED",
+      "FIX"
+    ],
+    "analyzer_layers": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence",
+      "cross-cutting"
+    ]
+  },
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "profile",
+      "purpose": "Module overview and conceptual introduction."
+    },
+    {
+      "path": "funding_flow_map.md",
+      "role": "map",
+      "purpose": "Structural map of philanthropic funding flows."
+    },
+    {
+      "path": "funding_flow_operators.md",
+      "role": "engine",
+      "purpose": "Expanded operator set for philanthropic analysis."
+    },
+    {
+      "path": "governance_substrate.md",
+      "role": "signature",
+      "purpose": "Authority, accountability, visibility, incentives, and flow integrity substrate."
+    },
+    {
+      "path": "fraud_indicators.md",
+      "role": "diagnostic",
+      "purpose": "Structural red indicators for misuse, leakage, and drift."
+    },
+    {
+      "path": "triadic_observer_funds.md",
+      "role": "engine",
+      "purpose": "Triadic observer stack for philanthropic flows."
+    },
+    {
+      "path": "SET_load_map.md",
+      "role": "engine",
+      "purpose": "Structural Energy Theory applied to funding flows."
+    },
+    {
+      "path": "donor_alignment_scoring.md",
+      "role": "diagnostic",
+      "purpose": "Intent ↔ flow ↔ outcome alignment scoring model."
+    },
+    {
+      "path": "case_studies.md",
+      "role": "example",
+      "purpose": "Fictional but structurally accurate case studies."
+    },
+    {
+      "path": "corpus_rewrite_examples.md",
+      "role": "example",
+      "purpose": "Narrative-to-structural rewrite training examples."
+    },
+    {
+      "path": "training_slides.md",
+      "role": "reference",
+      "purpose": "Instructor slide deck for teaching the module."
+    },
+    {
+      "path": "DOC_MAP.md",
+      "role": "index",
+      "purpose": "Human-readable documentation map."
+    },
+
+    /* SVG Diagrams */
+    {
+      "path": "funding_flow_diagram.svg",
+      "role": "visual",
+      "purpose": "Funding chain visualization."
+    },
+    {
+      "path": "triadic_observer_diagram.svg",
+      "role": "visual",
+      "purpose": "Triadic observer visualization."
+    },
+    {
+      "path": "governance_substrate_diagram.svg",
+      "role": "visual",
+      "purpose": "Governance substrate visualization."
+    },
+    {
+      "path": "SET_load_diagram.svg",
+      "role": "visual",
+      "purpose": "SET load visualization."
+    },
+    {
+      "path": "full_system_overview.svg",
+      "role": "visual",
+      "purpose": "Mega-diagram combining flow, substrate, SET, and observer."
+    }
+  ],
+
+  "imports": [
+    "RTT",
+    "SET",
+    "Governance Substrate Model",
+    "Triadic Observer",
+    "Drift Framework",
+    "Coherence Framework"
+  ],
+
+  "exports": [
+    "Funding Flow Operators",
+    "Philanthropy Governance Substrate",
+    "SET Load Model (Philanthropy)",
+    "Triadic Observer for Funding",
+    "Donor Alignment Score",
+    "Fraud Indicator Framework"
+  ]
+}

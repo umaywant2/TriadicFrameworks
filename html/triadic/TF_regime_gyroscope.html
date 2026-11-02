@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic/TF_regime_gyroscope.md">
+  <title>TriadicFrameworks Regime Gyroscope</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic/TF_regime_gyroscope.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic/TF_regime_gyroscope.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadicframeworks-regime-gyroscope"><strong>TriadicFrameworks Regime Gyroscope</strong></h1>
+<h3 id="maintaining-stability-across-rotating-ontology-frames"><em>Maintaining Stability Across Rotating Ontology Frames</em></h3>
+<p>This diagram shows:</p>
+<ul>
+<li><strong>SO, ISO, and LACTOS</strong> as rotating outer rings  </li>
+<li><strong>RTT/vST</strong> as the inner gimbal  </li>
+<li><strong>S–N–R</strong> as the tri‑axis stabilizer  </li>
+<li><strong>Compute (VCG + TCR)</strong> as the spin‑lock  </li>
+<li><strong>Substrate</strong> as the inertial reference frame  </li>
+</ul>
+<p>It’s the internal dynamics of stability inside TriadicFrameworks.</p>
+<hr>
+<h1 id="1-regime-gyroscope-diagram-ascii-multiaxis-geometry"><strong>1. Regime Gyroscope Diagram (ASCII Multi‑Axis Geometry)</strong></h1>
+<pre><code>                                   ✦  COMPUTE SPIN‑LOCK  ✦
+                         (VCG • TCR Periodicity • Drift‑Free Rotation)
+                                ────────────────┬───────────────
+                                                │
+                                                ▼
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                               S–N–R TRI‑AXIS STABILIZER                                      │
+│   S‑Axis: stable pattern alignment                                                           │
+│   N‑Axis: drift detection &amp; correction                                                       │
+│   R‑Axis: active regime orientation                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                           ▲
+                                                           │
+                                                           │  stabilizes inner gimbal
+                                                           ▼
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 RTT/vST INNER GIMBAL                         │
+                         │  - regime boundaries                                         │
+                         │  - invariant validation                                      │
+                         │  - rotational drift mapping                                  │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◢           │           ◣
+                                     ◢            │            ◣
+                                    ◢             │             ◣
+
+         ┌──────────────────────────────┐   ┌──────────────────────────────┐   ┌──────────────────────────────┐
+         │   SO Rotation Ring           │   │ LACTOS Rotation Ring         │   │  ISO Rotation Ring           │
+         │   (Mass‑Primary Frame)       │   │ (Collision P/Q/N Frame)      │   │ (Anisotropy‑Primary Frame)   │
+         │   - structural cycles        │   │ - symmetry‑breaking cycles   │   │ - relaxation cycles          │
+         │   - mass‑regime spin         │   │ - cascade oscillations       │   │ - anisotropy precession      │
+         └──────────────────────────────┘   └──────────────────────────────┘   └──────────────────────────────┘
+                     ◣                        ◣                        ◢
+                      ◣                        ◣                      ◢
+                       ◣                        ◣                    ◢
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 SUBSTRATE INERTIAL FRAME                     │
+                         │  Fields • Geometry • Anisotropy • TCR Periodicity            │
+                         │  (The absolute reference for rotational stability)           │
+                         └──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="2-how-the-regime-gyroscope-works"><strong>2. How the Regime Gyroscope Works</strong></h1>
+<h3 id="1-substrate-inertial-frame"><strong>1. Substrate = Inertial Frame</strong></h3>
+<p>The substrate provides the absolute reference:</p>
+<ul>
+<li>field geometry  </li>
+<li>anisotropy  </li>
+<li>symmetry states  </li>
+<li>time‑crystal periodicity  </li>
+</ul>
+<p>It’s the “non‑moving” frame the gyroscope stabilizes against.</p>
+<hr>
+<h3 id="2-ontology-rotation-rings"><strong>2. Ontology Rotation Rings</strong></h3>
+<p>Each ontology rotates in its own interpretive frame:</p>
+<ul>
+<li><strong>SO:</strong> mass‑primary rotation  </li>
+<li><strong>ISO:</strong> anisotropy‑primary precession  </li>
+<li><strong>LACTOS:</strong> collision‑regime oscillation  </li>
+</ul>
+<p>These rotations are natural — the gyroscope doesn’t stop them; it stabilizes them.</p>
+<hr>
+<h3 id="3-rttvst-inner-gimbal"><strong>3. RTT/vST = Inner Gimbal</strong></h3>
+<p>The gimbal allows controlled rotation:</p>
+<ul>
+<li>RTT defines regime axes  </li>
+<li>vST validates invariants  </li>
+<li>Together they prevent chaotic spin  </li>
+</ul>
+<p>This is the mechanical heart of the gyroscope.</p>
+<hr>
+<h3 id="4-snr-triaxis-stabilizer"><strong>4. S–N–R = Tri‑Axis Stabilizer</strong></h3>
+<p>The triadic observer provides three stabilizing axes:</p>
+<ul>
+<li><strong>S‑Axis:</strong> locks onto stable patterns  </li>
+<li><strong>N‑Axis:</strong> detects and corrects drift  </li>
+<li><strong>R‑Axis:</strong> aligns to the active regime  </li>
+</ul>
+<p>This keeps the system upright even when ontologies rotate independently.</p>
+<hr>
+<h3 id="5-compute-spinlock"><strong>5. Compute = Spin‑Lock</strong></h3>
+<p>VCG + TCR provide:</p>
+<ul>
+<li>drift‑free timing  </li>
+<li>regime‑ahead checkpoints  </li>
+<li>stable periodicity  </li>
+</ul>
+<p>This is the gyroscope’s flywheel — the source of its persistent spin.</p>
+<hr>
+<h1 id="3-why-the-regime-gyroscope-matters"><strong>3. Why the Regime Gyroscope Matters</strong></h1>
+<p>This diagram shows TriadicFrameworks as:</p>
+<ul>
+<li><strong>rotationally stable</strong>  </li>
+<li><strong>regime‑aligned</strong>  </li>
+<li><strong>observer‑balanced</strong>  </li>
+<li><strong>compute‑anchored</strong>  </li>
+<li><strong>substrate‑referenced</strong></li>
+</ul>
+<p>It explains how the system stays coherent even when:</p>
+<ul>
+<li>ontologies rotate  </li>
+<li>regimes shift  </li>
+<li>invariants drift  </li>
+<li>substrate conditions change  </li>
+</ul>
+<p>The gyroscope is the architecture’s internal stabilizer.</p>
+  </main>
+</body>
+</html>

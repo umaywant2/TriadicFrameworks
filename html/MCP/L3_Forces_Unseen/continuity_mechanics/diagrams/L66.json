@@ -1,0 +1,19 @@
+{
+  "id": "diagram.L66",
+  "layer": "L3_Forces_Unseen",
+  "subsystem": "continuity_mechanics",
+  "type": "composite",
+  "title": "L66 Hidden Resonance Envelope",
+  "description": "Second composite envelope formed from two L33 envelopes.",
+  "nodes": [
+    { "id": "L66", "label": "L66", "type": "composite" },
+    { "id": "L33a", "label": "L33", "type": "composite" },
+    { "id": "L33b", "label": "L33", "type": "composite" }
+  ],
+  "edges": [
+    { "from": "L33a", "to": "L66", "label": "component" },
+    { "from": "L33b", "to": "L66", "label": "component" },
+    { "from": "L66", "to": "L99", "label": "up" },
+    { "from": "L66", "to": "L33", "label": "down" }
+  ]
+}

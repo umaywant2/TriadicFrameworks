@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AC_Simulation_Protocols.md">
+  <title>Appendix AC — Simulation Protocols</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AC_Simulation_Protocols.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AC_Simulation_Protocols.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="appendix-ac-simulation-protocols"><strong>Appendix AC — Simulation Protocols</strong></h1>
+<h3 id="standardized-procedures-for-simulating-framework-field-theory-fft-systems"><em>Standardized procedures for simulating Framework Field Theory (FFT) systems</em></h3>
+<p>This appendix defines the <strong>canonical simulation protocols</strong> for Framework Field Theory.<br>
+These protocols ensure that simulations across domains, scales, and research groups remain:</p>
+<ul>
+<li>reproducible  </li>
+<li>invariant‑preserving  </li>
+<li>operator‑consistent  </li>
+<li>regime‑aware  </li>
+<li>comparable across implementations  </li>
+</ul>
+<p>FFT does <strong>not</strong> prescribe a single governing PDE system; instead, it provides a <strong>simulation framework</strong> that can be instantiated with domain‑specific operators, kernels, and boundary conditions.</p>
+<hr>
+<h1 id="1-simulation-overview"><strong>1. Simulation Overview</strong></h1>
+<p>FFT simulations evolve three core fields:</p>
+<ul>
+<li><strong>φ(x,t)</strong> — scalar substrate field  </li>
+<li><strong>V(x,t)</strong> — vector flow/alignment field  </li>
+<li><strong>R(x,t)</strong> — resonance envelope / coherence field  </li>
+</ul>
+<p>Simulations may be:</p>
+<ul>
+<li>1D (radial or linear)  </li>
+<li>2D (planar, pattern‑forming)  </li>
+<li>3D (volumetric, structural)  </li>
+<li>nonlocal (kernel‑based)  </li>
+<li>multi‑scale (triadic‑time decomposition)  </li>
+</ul>
+<p>The protocols below define the <strong>minimum required structure</strong> for any FFT simulation.</p>
+<hr>
+<h1 id="2-domain-discretization-protocol"><strong>2. Domain &amp; Discretization Protocol</strong></h1>
+<h3 id="21-spatial-domain"><strong>2.1 Spatial Domain</strong></h3>
+<p>Choose Ω ⊂ ℝⁿ with n ∈ {1,2,3}.<br>
+Common choices:</p>
+<ul>
+<li>1D: [0, L]  </li>
+<li>2D: [0, L]²  </li>
+<li>3D: [0, L]³  </li>
+</ul>
+<h3 id="22-grid"><strong>2.2 Grid</strong></h3>
+<p>Use a uniform or adaptive grid:</p>
+<ul>
+<li>uniform grid: Δx constant  </li>
+<li>adaptive grid: Δx = Δx(x)  </li>
+</ul>
+<h3 id="23-time-discretization"><strong>2.3 Time Discretization</strong></h3>
+<p>Use a stable time‑stepping scheme:</p>
+<ul>
+<li>explicit Euler (simple, unstable for stiff systems)  </li>
+<li>semi‑implicit (recommended)  </li>
+<li>Crank–Nicolson (balanced)  </li>
+<li>operator‑splitting (for multi‑scale systems)  </li>
+</ul>
+<hr>
+<h1 id="3-initialization-protocol"><strong>3. Initialization Protocol</strong></h1>
+<h3 id="31-scalar-field-x0"><strong>3.1 Scalar Field φ(x,0)</strong></h3>
+<p>Choose one:</p>
+<ul>
+<li>uniform baseline  </li>
+<li>Gaussian bump  </li>
+<li>random low‑amplitude noise  </li>
+<li>domain‑specific initial condition  </li>
+</ul>
+<h3 id="32-vector-field-vx0"><strong>3.2 Vector Field V(x,0)</strong></h3>
+<p>Options:</p>
+<ul>
+<li>zero flow  </li>
+<li>random small flow  </li>
+<li>structured flow (e.g., vortex, shear)  </li>
+</ul>
+<h3 id="33-resonance-envelope-rx0"><strong>3.3 Resonance Envelope R(x,0)</strong></h3>
+<p>Options:</p>
+<ul>
+<li>low‑amplitude noise  </li>
+<li>localized seed  </li>
+<li>multi‑peak structure  </li>
+</ul>
+<h3 id="34-parameter-initialization"><strong>3.4 Parameter Initialization</strong></h3>
+<p>Set:</p>
+<ul>
+<li>diffusion coefficients (ν, ν_R, ν_φ)  </li>
+<li>activation parameters (a, b)  </li>
+<li>damping γ  </li>
+<li>coupling kernel scale ℓ  </li>
+<li>ΔSET parameters κ₁, κ₂, κ₃  </li>
+</ul>
+<hr>
+<h1 id="4-operator-evaluation-protocol"><strong>4. Operator Evaluation Protocol</strong></h1>
+<p>FFT simulations must evaluate the operator families defined in Appendix AA:</p>
+<ul>
+<li><strong>Diffusion:</strong> D[X] = ν∇²X  </li>
+<li><strong>Alignment:</strong> A[R,V] = (V·∇)R  </li>
+<li><strong>Coupling:</strong> C[φ,V] = ∫ K(x−y) g(φ(y),V(y)) dy  </li>
+<li><strong>Activation:</strong> α[R] = aR − bR³  </li>
+<li><strong>Stabilization:</strong> S[R] = γR  </li>
+</ul>
+<h3 id="41-local-operators"><strong>4.1 Local Operators</strong></h3>
+<p>Compute using finite differences, finite elements, or spectral methods.</p>
+<h3 id="42-nonlocal-operators"><strong>4.2 Nonlocal Operators</strong></h3>
+<p>Compute using:</p>
+<ul>
+<li>FFT‑based convolution  </li>
+<li>direct integration (small grids)  </li>
+<li>kernel truncation (compact support)  </li>
+</ul>
+<hr>
+<h1 id="5-timeevolution-protocol"><strong>5. Time‑Evolution Protocol</strong></h1>
+<p>The minimal evolution system is:</p>
+<h3 id="scalar-field"><strong>Scalar Field</strong></h3>
+<p>$$\partial_t \phi = D_\phi[\phi] + C_\phi[\phi, V, R] + S_\phi$$</p>
+<h3 id="vector-field"><strong>Vector Field</strong></h3>
+<p>$$\partial_t V = -\nabla P + \nu_V \nabla^2 V + C_V[\phi, R] + S_V$$</p>
+<h3 id="resonance-envelope"><strong>Resonance Envelope</strong></h3>
+<p>$$\partial_t R = -(V \cdot \nabla)R + \nu_R \nabla^2 R + C[\phi, V] + aR - bR^3 - \gamma R$$</p>
+<h3 id="51-timestepping-loop"><strong>5.1 Time‑Stepping Loop</strong></h3>
+<p>For each timestep:</p>
+<ol>
+<li>Evaluate all operators  </li>
+<li>Update φ, V, R  </li>
+<li>Apply boundary conditions  </li>
+<li>Compute ΔSET  </li>
+<li>Log diagnostics  </li>
+<li>Check regime transitions  </li>
+</ol>
+<hr>
+<h1 id="6-set-evaluation-protocol"><strong>6. ΔSET Evaluation Protocol</strong></h1>
+<p>Using Appendix AB:</p>
+<p>$$\Delta SET(x) = \kappa_1 R(x) + \kappa_2 \lVert V(x) \rVert^2 + \kappa_3 \phi(x)$$</p>
+<h3 id="61-optional-nonlocal-extension"><strong>6.1 Optional Nonlocal Extension</strong></h3>
+<p>Include kernel‑based contributions if required.</p>
+<h3 id="62-logging"><strong>6.2 Logging</strong></h3>
+<p>Record:</p>
+<ul>
+<li>ΔSET mean  </li>
+<li>ΔSET variance  </li>
+<li>ΔSET spatial distribution  </li>
+<li>ΔSET contribution ratios (R vs V vs φ)  </li>
+</ul>
+<hr>
+<h1 id="7-boundary-condition-protocol"><strong>7. Boundary Condition Protocol</strong></h1>
+<p>Choose one:</p>
+<ul>
+<li><strong>Dirichlet:</strong> X = constant  </li>
+<li><strong>Neumann:</strong> ∂n X = 0  </li>
+<li><strong>Periodic:</strong> wraparound  </li>
+<li><strong>Absorbing:</strong> damped boundary layer  </li>
+</ul>
+<p>FFT simulations must document boundary choices explicitly.</p>
+<hr>
+<h1 id="8-diagnostics-regime-detection"><strong>8. Diagnostics &amp; Regime Detection</strong></h1>
+<h3 id="81-coherence-metrics"><strong>8.1 Coherence Metrics</strong></h3>
+<p>Track:</p>
+<ul>
+<li>R amplitude  </li>
+<li>R spatial gradients  </li>
+<li>coherence length  </li>
+<li>alignment index  </li>
+</ul>
+<h3 id="82-regime-classification"><strong>8.2 Regime Classification</strong></h3>
+<p>Use thresholds on:</p>
+<ul>
+<li>|R|  </li>
+<li>|V|  </li>
+<li>ΔSET  </li>
+<li>operator ratios (activation vs damping)  </li>
+</ul>
+<h3 id="83-stability-indicators"><strong>8.3 Stability Indicators</strong></h3>
+<p>Monitor:</p>
+<ul>
+<li>energy‑like quantities  </li>
+<li>divergence of V  </li>
+<li>growth rates of R  </li>
+</ul>
+<hr>
+<h1 id="9-visualization-protocol"><strong>9. Visualization Protocol</strong></h1>
+<p>Recommended outputs:</p>
+<ul>
+<li>φ(x,t) heatmaps  </li>
+<li>V(x,t) vector fields  </li>
+<li>R(x,t) coherence maps  </li>
+<li>ΔSET(x,t) overlays  </li>
+<li>regime‑transition timelines  </li>
+</ul>
+<hr>
+<h1 id="10-reproducibility-requirements"><strong>10. Reproducibility Requirements</strong></h1>
+<p>Every FFT simulation must include:</p>
+<ul>
+<li>operator definitions  </li>
+<li>parameter values  </li>
+<li>kernel forms  </li>
+<li>boundary conditions  </li>
+<li>grid resolution  </li>
+<li>timestep size  </li>
+<li>random seeds  </li>
+<li>ΔSET parameterization  </li>
+</ul>
+<p>This ensures cross‑research comparability.</p>
+<hr>
+<h1 id="closing-statement"><strong>Closing Statement</strong></h1>
+<blockquote>
+<p><strong>Appendix AC establishes the canonical simulation protocols for FFT. These procedures ensure that simulations are reproducible, operator‑consistent, and aligned with the mathematical substrate introduced in PART XIV.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

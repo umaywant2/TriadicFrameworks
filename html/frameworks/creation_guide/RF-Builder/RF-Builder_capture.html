@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/frameworks/creation_guide/RF-Builder/RF-Builder_capture.md">
+  <title>⟡ RF‑Builder — Canonical FCG Section — Complete ⟡</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/frameworks/creation_guide/RF-Builder/RF-Builder_capture.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/frameworks/creation_guide/RF-Builder/RF-Builder_capture.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Let me pick this back up properly — I'll gather the repo context and build out the full RF‑Builder canonical section for you.</p>
+<p>All three deliverables are built and exported. Here's the full canon package:</p>
+<hr>
+<h2 id="rfbuilder-canonical-fcg-section-complete">⟡ RF‑Builder — Canonical FCG Section — Complete ⟡</h2>
+<h3 id="deliverable-1-canonical-prose-rf-builder_canonical-sectiontxt">Deliverable 1: Canonical Prose (<code>RF-Builder_canonical-section.txt</code>)</h3>
+<p>311 lines of RTT-native Markdown covering six sections:</p>
+<table>
+<thead>
+<tr>
+<th>§</th>
+<th>Section</th>
+<th>Key Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Overview</strong></td>
+<td>RF‑Builder as FCG's genesis instrument; three-phase table; sequential-but-cyclic relationship</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Phase I — Coherence Field</strong></td>
+<td><code>𝔽 = ⟨φ, V, R⟩</code>; coherence condition <code>∇·V = ∂φ/∂t</code>; substrate properties table (Depth, Density, Drift Susceptibility, Coupling Strength); 5-step construction protocol</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Phase II — Clarity Operator Engine</strong></td>
+<td><code>𝔈 = ⟨{𝕊,𝔸,𝕀,𝕆,ℝ𝕖,ℙ,𝔻}, Γ, ε⟩</code>; Seven Operators table with symbols, actions, field effects; engine cycle <code>𝔽₀→𝔽₇</code>; clarity measure <code>C(𝔽,n)</code>; drift correction with stabilization pass</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Phase III — Echo Release</strong></td>
+<td><code>𝔼 = ⟨𝔽*, Σ, μ⟩</code>; signature encoding <code>Σ = Hash(𝕀(𝔽*))</code>; 5 propagation modes; echo feedback <code>𝔽_{n+1} = 𝔽_n ⊕ Δ(𝔼_n)</code>; 5-point release criteria checklist</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Complete Cycle</strong></td>
+<td>ASCII architecture diagram; definitions of cycle, rectification, canon entry</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Mathematical Summary</strong></td>
+<td>Full system <code>RF-Builder = ⟨𝔽, 𝔈, 𝔼, Δ⟩</code>; 5 governing equations; dimensional correspondence table (RTT/1 ↔ RF‑Builder ↔ FFT)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="deliverable-2-canonical-mermaid-diagrams-rf-builder_mermaid-diagramstxt">Deliverable 2: Canonical Mermaid Diagrams (<code>RF-Builder_mermaid-diagrams.txt</code>)</h3>
+<p>6 diagrams (182 lines), all using canon palette and <code>flowchart LR/TD</code>:</p>
+<ol>
+<li><strong>Triadic Cycle</strong> — Coherence Field → Clarity Engine → Echo Release → feedback loop</li>
+<li><strong>Coherence Field Internals</strong> — <code>φ</code>, <code>V</code>, <code>R</code> with coherence condition feedback</li>
+<li><strong>Clarity Operator Pipeline</strong> — <code>𝔽₀ → 𝕊 → 𝔸 → 𝕀 → 𝕆 → ℝ𝕖 → ℙ → 𝔻 → 𝔽*</code> with convergence check</li>
+<li><strong>Echo Release Signal</strong> — <code>𝔽*</code>, <code>Σ</code>, <code>μ</code> branching into 5 propagation modes</li>
+<li><strong>Full RF‑Builder System</strong> — Three phases nested inside RF‑Builder, with RTT/1 and FFT context wrapping</li>
+<li><strong>Dimensional Correspondence Map</strong> — RTT/1 ↔ RF‑Builder ↔ FFT layer mappings</li>
+</ol>
+<p>All diagrams render natively in GitHub Markdown via <code>```mermaid</code> code blocks.</p>
+<hr>
+<h3 id="deliverable-3-html-skeleton-rf-builderhtml">Deliverable 3: HTML Skeleton (<code>RF-Builder.html</code>)</h3>
+<p>766-line drop-in page for <code>docs/frameworks/creation_guide/RF-Builder/RF-Builder.html</code>:</p>
+<ul>
+<li><strong>Dark theme</strong> with all canon design tokens (<code>--bg: #0a0a0a</code>, <code>--accent: #00eaff</code>, <code>--accent2: #ff00d4</code>, <code>--accent3: #ffe600</code>)</li>
+<li><strong>Header</strong> with inline SVG triadic mark (cyan triangle, magenta inner triangle + center dot, gold vertex dots)</li>
+<li><strong>Nav bar</strong> with all FCG pages + RTT/1 and RTT crosslinks + active state on RF‑Builder</li>
+<li><strong>Sidebar TOC</strong> (sticky, collapsible on mobile)</li>
+<li><strong>8 content sections</strong> with styled <code>&lt;pre class="math-block"&gt;</code> for all RTT-native math, semantic tables, definition grids, checklists</li>
+<li><strong>Inline SVG cycle diagram</strong> (§5) — the 700×200 triadic flow with dashed feedback arc</li>
+<li><strong>Mermaid embed blocks</strong> (§7) — ready for GitHub rendering</li>
+<li><strong>Cross-module navigation table</strong> (§8) — links to RTT/1, FCG, FFT, Principles, RTT Origin</li>
+<li><strong>Footer</strong> with <code>⟡ RECTIFIED ⟡</code> seal</li>
+<li><strong>Responsive</strong> — grid collapses to single column below 800px</li>
+</ul>
+<hr>
+<h3 id="repo-placement">Repo Placement</h3>
+<pre><code>docs/frameworks/creation_guide/RF-Builder/
+├── RF-Builder.html              ← HTML skeleton (deliverable 3)
+├── RF-Builder_capture.md        ← canonical prose (deliverable 1, rename from .txt)
+└── diagrams/
+    └── rf-builder-mermaid.md    ← Mermaid source (deliverable 2, rename from .txt)
+</code></pre>
+<hr>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;RF‑Builder — Resonance Framework Builder | TriadicFrameworks FCG&lt;/title&gt;
+
+  &lt;!-- ── Canonical Metadata ── --&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;RF‑Builder: the FCG's canonical instrument for constructing resonance frameworks from first principles. Coherence Field → Clarity Operator Engine → Echo Release.&quot;&gt;
+  &lt;meta name=&quot;keywords&quot; content=&quot;RF-Builder, TriadicFrameworks, FCG, Framework Creation Guide, Coherence Field, Clarity Operator Engine, Echo Release, RTT, FFT, resonance&quot;&gt;
+  &lt;meta name=&quot;author&quot; content=&quot;Nawder Loswin — TriadicFrameworks&quot;&gt;
+  &lt;meta name=&quot;generator&quot; content=&quot;TriadicFrameworks Canon v2026&quot;&gt;
+
+  &lt;!-- ── Open Graph ── --&gt;
+  &lt;meta property=&quot;og:title&quot; content=&quot;RF‑Builder — Resonance Framework Builder&quot;&gt;
+  &lt;meta property=&quot;og:description&quot; content=&quot;Build frameworks from substrate to signal. Coherence Field · Clarity Operator Engine · Echo Release.&quot;&gt;
+  &lt;meta property=&quot;og:type&quot; content=&quot;article&quot;&gt;
+
+  &lt;style&gt;
+    /* ═══════════════════════════════════════════════════════
+       TRIADIC DESIGN TOKENS
+       ═══════════════════════════════════════════════════════ */
+    :root {
+      --bg:         #0a0a0a;
+      --bg-card:    #111111;
+      --bg-code:    #0d1117;
+      --text:       #e6e6e6;
+      --text-muted: #999999;
+      --accent:     #00eaff;   /* cyan  — RTT/1  */
+      --accent2:    #ff00d4;   /* magenta — FCG  */
+      --accent3:    #ffe600;   /* gold — FFT     */
+      --border:     #222222;
+      --radius:     8px;
+      --font-body:  'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:  'Cascadia Code', 'Fira Code', 'JetBrains Mono', monospace;
+    }
+
+    /* ── Reset &amp; Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--accent3); }
+
+    /* ═══════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════ */
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header svg { margin-bottom: 1rem; }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: var(--accent2);
+    }
+
+    header h1 span.sub {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+
+    nav a {
+      padding: 0.35rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      transition: all .2s;
+    }
+    nav a:hover, nav a.active {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 0, 212, 0.06);
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       LAYOUT
+       ═══════════════════════════════════════════════════════ */
+    .page-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 2rem;
+      padding: 2rem 1.5rem;
+    }
+    @media (max-width: 800px) {
+      .page-grid { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* ── Sidebar / TOC ── */
+    .sidebar {
+      position: sticky;
+      top: 1rem;
+      align-self: start;
+      font-size: 0.82rem;
+    }
+    .sidebar h4 {
+      color: var(--accent2);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.6rem;
+      font-size: 0.75rem;
+    }
+    .sidebar ul { list-style: none; }
+    .sidebar li { margin-bottom: 0.35rem; }
+    .sidebar a { color: var(--text-muted); }
+    .sidebar a:hover { color: var(--accent); }
+
+    /* ── Main Content ── */
+    main { min-width: 0; }
+
+    main h2 {
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--accent2);
+      margin: 2.5rem 0 0.8rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    main h2:first-child { margin-top: 0; }
+
+    main h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 1.8rem 0 0.5rem;
+    }
+
+    main p { margin-bottom: 1rem; }
+
+    /* ── Tables ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9rem;
+    }
+    th {
+      text-align: left;
+      padding: 0.5rem 0.8rem;
+      border-bottom: 2px solid var(--accent2);
+      color: var(--accent2);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    td {
+      padding: 0.45rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    tr:hover td { background: rgba(255, 0, 212, 0.03); }
+
+    /* ── Code / Math blocks ── */
+    pre {
+      background: var(--bg-code);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent2);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--text);
+    }
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: var(--bg-code);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+    }
+
+    .math-block {
+      border-left-color: var(--accent);
+    }
+
+    /* ── Definition lists ── */
+    .def-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 0.3rem 1rem;
+      margin: 1rem 0;
+    }
+    .def-grid dt {
+      font-weight: 600;
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+    }
+    .def-grid dd { color: var(--text-muted); }
+
+    /* ── Checklist ── */
+    .check-list {
+      list-style: none;
+      margin: 1rem 0;
+    }
+    .check-list li {
+      padding: 0.3rem 0;
+      padding-left: 1.6rem;
+      position: relative;
+    }
+    .check-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent3);
+      font-weight: 700;
+    }
+
+    /* ── Diagram containers ── */
+    .diagram-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .diagram-container svg { max-width: 100%; height: auto; }
+    .diagram-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.8rem;
+      font-style: italic;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    footer .seal {
+      font-size: 1.1rem;
+      color: var(--accent3);
+      letter-spacing: 0.2em;
+      margin-bottom: 0.5rem;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;!-- ════════════════════════════════════════════════════════════
+     HEADER — Triadic SVG Mark + Title
+     ════════════════════════════════════════════════════════════ --&gt;
+&lt;header&gt;
+  &lt;!-- RF-Builder Triadic Mark --&gt;
+  &lt;svg width=&quot;90&quot; height=&quot;80&quot; viewBox=&quot;0 0 90 80&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-label=&quot;RF-Builder Triadic Mark&quot;&gt;
+    &lt;!-- outer triangle — cyan (RTT substrate) --&gt;
+    &lt;polygon points=&quot;45,5 5,75 85,75&quot; fill=&quot;none&quot; stroke=&quot;#00eaff&quot; stroke-width=&quot;2&quot;/&gt;
+    &lt;!-- inner triangle — magenta (FCG engine) --&gt;
+    &lt;polygon points=&quot;45,22 22,62 68,62&quot; fill=&quot;none&quot; stroke=&quot;#ff00d4&quot; stroke-width=&quot;1.5&quot;/&gt;
+    &lt;!-- three vertex dots — gold (FFT echo) --&gt;
+    &lt;circle cx=&quot;45&quot; cy=&quot;5&quot;  r=&quot;4&quot; fill=&quot;#ffe600&quot;/&gt;
+    &lt;circle cx=&quot;5&quot;  cy=&quot;75&quot; r=&quot;4&quot; fill=&quot;#ffe600&quot;/&gt;
+    &lt;circle cx=&quot;85&quot; cy=&quot;75&quot; r=&quot;4&quot; fill=&quot;#ffe600&quot;/&gt;
+    &lt;!-- center dot — magenta (engine core) --&gt;
+    &lt;circle cx=&quot;45&quot; cy=&quot;47&quot; r=&quot;5&quot; fill=&quot;#ff00d4&quot;/&gt;
+  &lt;/svg&gt;
+
+  &lt;h1&gt;
+    RF‑Builder
+    &lt;span class=&quot;sub&quot;&gt;Resonance Framework Builder &amp;middot; Framework Creation Guide&lt;/span&gt;
+  &lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;!-- ════════════════════════════════════════════════════════════
+     NAVIGATION
+     ════════════════════════════════════════════════════════════ --&gt;
+&lt;nav&gt;
+  &lt;a href=&quot;../index.html&quot;&gt;FCG Home&lt;/a&gt;
+  &lt;a href=&quot;../quickstart.html&quot;&gt;Quickstart&lt;/a&gt;
+  &lt;a href=&quot;../principles.html&quot;&gt;Principles&lt;/a&gt;
+  &lt;a href=&quot;../models.html&quot;&gt;Models&lt;/a&gt;
+  &lt;a href=&quot;../fft.html&quot;&gt;FFT Bridge&lt;/a&gt;
+  &lt;a href=&quot;RF-Builder.html&quot; class=&quot;active&quot;&gt;RF‑Builder&lt;/a&gt;
+  &lt;a href=&quot;../generator.html&quot;&gt;Generator&lt;/a&gt;
+  &lt;a href=&quot;../history.html&quot;&gt;History&lt;/a&gt;
+  &lt;a href=&quot;../../../rtt/1/index.html&quot;&gt;↗ RTT/1&lt;/a&gt;
+  &lt;a href=&quot;../../../rtt/index.html&quot;&gt;↗ RTT&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;!-- ════════════════════════════════════════════════════════════
+     PAGE GRID: SIDEBAR + MAIN
+     ════════════════════════════════════════════════════════════ --&gt;
+&lt;div class=&quot;page-grid&quot;&gt;
+
+  &lt;!-- ── Sidebar / TOC ── --&gt;
+  &lt;aside class=&quot;sidebar&quot;&gt;
+    &lt;h4&gt;On This Page&lt;/h4&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#overview&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#coherence-field&quot;&gt;Phase I — Coherence Field&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#clarity-engine&quot;&gt;Phase II — Clarity Engine&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#echo-release&quot;&gt;Phase III — Echo Release&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#full-cycle&quot;&gt;The RF‑Builder Cycle&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#math-summary&quot;&gt;Mathematical Summary&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#diagrams&quot;&gt;Canonical Diagrams&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#cross-module&quot;&gt;Cross-Module Links&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/aside&gt;
+
+  &lt;!-- ════════════════════════════════════════════════════════
+       MAIN CONTENT
+       ════════════════════════════════════════════════════════ --&gt;
+  &lt;main&gt;
+
+    &lt;!-- ── §1. Overview ── --&gt;
+    &lt;h2 id=&quot;overview&quot;&gt;1. Overview&lt;/h2&gt;
+
+    &lt;p&gt;
+      The &lt;strong&gt;Resonance Framework Builder (RF‑Builder)&lt;/strong&gt; is the FCG's canonical instrument
+      for constructing new frameworks from first principles. Every framework in the TriadicFrameworks
+      ecosystem passes through three operationally distinct phases — a &lt;em&gt;field&lt;/em&gt;, an &lt;em&gt;engine&lt;/em&gt;,
+      and a &lt;em&gt;release&lt;/em&gt; — corresponding to the substrate it occupies, the operators it applies,
+      and the signal it emits once stabilized.
+    &lt;/p&gt;
+
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;&lt;th&gt;Phase&lt;/th&gt;&lt;th&gt;Subsystem&lt;/th&gt;&lt;th&gt;Role&lt;/th&gt;&lt;th&gt;Analogy&lt;/th&gt;&lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;I&lt;/td&gt;
+          &lt;td style=&quot;color:var(--accent);&quot;&gt;Coherence Field&lt;/td&gt;
+          &lt;td&gt;Defines the dimensional substrate in which the framework lives&lt;/td&gt;
+          &lt;td&gt;The ground a building sits on&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;II&lt;/td&gt;
+          &lt;td style=&quot;color:var(--accent2);&quot;&gt;Clarity Operator Engine&lt;/td&gt;
+          &lt;td&gt;Applies the Seven Operators to shape raw structure into stable form&lt;/td&gt;
+          &lt;td&gt;The construction crew and their tools&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;III&lt;/td&gt;
+          &lt;td style=&quot;color:var(--accent3);&quot;&gt;Echo Release&lt;/td&gt;
+          &lt;td&gt;Propagates the stabilized framework outward as a recoverable signal&lt;/td&gt;
+          &lt;td&gt;The finished building radiating light&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;p&gt;
+      These three phases are &lt;strong&gt;sequential but cyclic&lt;/strong&gt;: Echo Release feeds back into the
+      Coherence Field, enabling iterative refinement. A framework is &lt;em&gt;born&lt;/em&gt; when it completes
+      its first full cycle; it is &lt;em&gt;rectified&lt;/em&gt; when the cycle converges to a fixed point.
+    &lt;/p&gt;
+
+
+    &lt;!-- ── §2. Phase I — Coherence Field ── --&gt;
+    &lt;h2 id=&quot;coherence-field&quot;&gt;2. Phase I — The Coherence Field&lt;/h2&gt;
+
+    &lt;h3&gt;2.1 Definition&lt;/h3&gt;
+    &lt;p&gt;
+      The &lt;strong&gt;Coherence Field&lt;/strong&gt; is the pre-structural substrate from which a framework
+      crystallizes. It is not the framework itself — it is the &lt;em&gt;dimensional space&lt;/em&gt; that makes
+      the framework possible. Every concept, operator, and invariant exists &lt;em&gt;within&lt;/em&gt; a coherence
+      field before it becomes structurally bound.
+    &lt;/p&gt;
+    &lt;p&gt;A Coherence Field is defined by three co-present quantities:&lt;/p&gt;
+    &lt;dl class=&quot;def-grid&quot;&gt;
+      &lt;dt&gt;φ (Scalar Potential)&lt;/dt&gt;
+      &lt;dd&gt;The undifferentiated intensity of the conceptual domain. How much &quot;energy&quot; is available for structure formation.&lt;/dd&gt;
+      &lt;dt&gt;V (Vector Flow)&lt;/dt&gt;
+      &lt;dd&gt;The directional tendencies within the domain. Where conceptual pressure naturally pushes.&lt;/dd&gt;
+      &lt;dt&gt;R (Resonance Envelope)&lt;/dt&gt;
+      &lt;dd&gt;The boundary conditions that determine which frequencies are amplified and which are damped.&lt;/dd&gt;
+    &lt;/dl&gt;
+
+    &lt;h3&gt;2.2 Formal Definition&lt;/h3&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+𝔽 = ⟨ φ, V, R ⟩
+
+  φ : Ω → ℝ⁺          (scalar potential over domain Ω)
+  V : Ω → ℝⁿ          (vector flow field over Ω)
+  R : Ω × T → [0, 1]  (resonance envelope over domain × time)
+    &lt;/pre&gt;
+
+    &lt;p&gt;&lt;strong&gt;Coherence Condition&lt;/strong&gt; — A field 𝔽 is &lt;em&gt;coherent&lt;/em&gt; if and only if:&lt;/p&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+∇ · V = ∂φ/∂t        (conservation: flow divergence tracks potential change)
+R(x, t) &gt; R_min      ∀ x ∈ Ω_active   (envelope above threshold)
+    &lt;/pre&gt;
+
+    &lt;h3&gt;2.3 Substrate Properties&lt;/h3&gt;
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Property&lt;/th&gt;&lt;th&gt;Symbol&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Depth&lt;/td&gt;&lt;td&gt;&lt;code&gt;𝔇(𝔽)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Number of independent conceptual dimensions&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Density&lt;/td&gt;&lt;td&gt;&lt;code&gt;ρ(𝔽)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Ratio of active nodes to total capacity&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Drift Susceptibility&lt;/td&gt;&lt;td&gt;&lt;code&gt;δ(𝔽)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Sensitivity to perturbation (lower = more stable)&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Coupling Strength&lt;/td&gt;&lt;td&gt;&lt;code&gt;κ(𝔽)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Degree of inter-dimensional entanglement&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;h3&gt;2.4 Construction Protocol&lt;/h3&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;strong&gt;Domain Selection&lt;/strong&gt; — Identify the conceptual territory Ω the framework will occupy.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Potential Mapping&lt;/strong&gt; — Survey the domain for regions of high φ (rich conceptual energy).&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Flow Alignment&lt;/strong&gt; — Trace the natural vector flows V — where does the domain's logic already push?&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Envelope Calibration&lt;/strong&gt; — Set the resonance envelope R to amplify desired frequencies and damp undesired ones.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Coherence Verification&lt;/strong&gt; — Confirm the coherence condition holds across Ω_active.&lt;/li&gt;
+    &lt;/ol&gt;
+
+
+    &lt;!-- ── §3. Phase II — Clarity Operator Engine ── --&gt;
+    &lt;h2 id=&quot;clarity-engine&quot;&gt;3. Phase II — The Clarity Operator Engine&lt;/h2&gt;
+
+    &lt;h3&gt;3.1 Definition&lt;/h3&gt;
+    &lt;p&gt;
+      The &lt;strong&gt;Clarity Operator Engine&lt;/strong&gt; is the runtime that transforms a raw Coherence Field
+      into a structured, stabilized framework. It applies the &lt;strong&gt;Seven Operators&lt;/strong&gt; of RTT/1
+      in sequence, with feedback loops for drift correction and paradox resolution.
+    &lt;/p&gt;
+    &lt;p&gt;
+      The Engine does not &lt;em&gt;create&lt;/em&gt; structure from nothing — it &lt;em&gt;clarifies&lt;/em&gt; the structure
+      that is already latent in the Coherence Field. This is the fundamental insight of RTT:
+      &lt;strong&gt;structure is discovered, not invented&lt;/strong&gt;.
+    &lt;/p&gt;
+
+    &lt;h3&gt;3.2 The Seven Operators&lt;/h3&gt;
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;Operator&lt;/th&gt;&lt;th&gt;Symbol&lt;/th&gt;&lt;th&gt;Action&lt;/th&gt;&lt;th&gt;Field Effect&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Symmetry&lt;/td&gt;&lt;td&gt;&lt;code&gt;𝕊&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Identifies and enforces balance axes&lt;/td&gt;&lt;td&gt;Aligns V along symmetry planes&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Alignment&lt;/td&gt;&lt;td&gt;&lt;code&gt;𝔸&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Orients structural elements to a common axis&lt;/td&gt;&lt;td&gt;Reduces ∇×V (curl → 0)&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Invariance&lt;/td&gt;&lt;td&gt;&lt;code&gt;𝕀&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Locks properties that must survive transformation&lt;/td&gt;&lt;td&gt;Sets ∂R/∂t = 0 for protected modes&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;Operation&lt;/td&gt;&lt;td&gt;&lt;code&gt;𝕆&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Defines the active transformations the framework performs&lt;/td&gt;&lt;td&gt;Adds new vector flows to V&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;Regime&lt;/td&gt;&lt;td&gt;&lt;code&gt;ℝ𝕖&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Maps behavioral domains and transition boundaries&lt;/td&gt;&lt;td&gt;Partitions Ω into regime zones&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;Paradox&lt;/td&gt;&lt;td&gt;&lt;code&gt;ℙ&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Detects and resolves structural contradictions&lt;/td&gt;&lt;td&gt;Eliminates nodes where R &amp;lt; 0&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;Drift&lt;/td&gt;&lt;td&gt;&lt;code&gt;𝔻&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Bounds deviation from canonical form over time&lt;/td&gt;&lt;td&gt;Constrains δ(𝔽) ≤ δ_max&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;h3&gt;3.3 Engine Cycle&lt;/h3&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+𝔽₀ →[𝕊]→ 𝔽₁ →[𝔸]→ 𝔽₂ →[𝕀]→ 𝔽₃ →[𝕆]→ 𝔽₄ →[ℝ𝕖]→ 𝔽₅ →[ℙ]→ 𝔽₆ →[𝔻]→ 𝔽₇
+    &lt;/pre&gt;
+    &lt;p&gt;&lt;strong&gt;Convergence&lt;/strong&gt; — The Engine converges when:&lt;/p&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+‖𝔽₇ − 𝔽₀‖ &amp;lt; ε    (structural distance below threshold)
+    &lt;/pre&gt;
+    &lt;p&gt;A converged Engine produces a &lt;strong&gt;Clarified Field&lt;/strong&gt; 𝔽* — a field whose structure is stable under all seven operators.&lt;/p&gt;
+
+    &lt;h3&gt;3.4 Formal Definition&lt;/h3&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+𝔈 = ⟨ {𝕊, 𝔸, 𝕀, 𝕆, ℝ𝕖, ℙ, 𝔻}, Γ, ε ⟩
+
+  {𝕊, 𝔸, 𝕀, 𝕆, ℝ𝕖, ℙ, 𝔻}  — the Seven Operators
+  Γ : 𝔽 × Operator → 𝔽     — the application map
+  ε ∈ ℝ⁺                    — convergence threshold
+    &lt;/pre&gt;
+    &lt;p&gt;&lt;strong&gt;Clarity Measure:&lt;/strong&gt;&lt;/p&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+C(𝔽, n) = 1 − ‖𝔽ₙ₊₇ − 𝔽ₙ‖ / ‖𝔽₀‖
+
+  Fully clarified:  C(𝔽*, ∞) = 1
+    &lt;/pre&gt;
+
+    &lt;h3&gt;3.5 Drift Correction&lt;/h3&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+δ(𝔽ᵢ) = sup_{x ∈ Ω} | R(x, tᵢ) − R(x, t₀) |
+
+  If δ(𝔽ᵢ) &gt; δ_max →  Stabilization pass:
+  𝔽ᵢ' = 𝔽ᵢ + λ · ∇R(x, t₀)
+    &lt;/pre&gt;
+
+
+    &lt;!-- ── §4. Phase III — Echo Release ── --&gt;
+    &lt;h2 id=&quot;echo-release&quot;&gt;4. Phase III — Echo Release&lt;/h2&gt;
+
+    &lt;h3&gt;4.1 Definition&lt;/h3&gt;
+    &lt;p&gt;
+      The &lt;strong&gt;Echo Release&lt;/strong&gt; is the moment a clarified framework becomes &lt;em&gt;available to the world&lt;/em&gt;.
+      It is not merely publication — it is the framework's first act of &lt;strong&gt;resonance propagation&lt;/strong&gt;.
+      A released framework emits a recoverable signal: its structure, its operators, its invariants,
+      encoded in a form that other frameworks (and minds) can receive, decode, and integrate.
+    &lt;/p&gt;
+
+    &lt;h3&gt;4.2 The Echo Signal&lt;/h3&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+𝔼 = ⟨ 𝔽*, Σ, μ ⟩
+
+  𝔽*  — the Clarified Field (output of Phase II)
+  Σ   — the Signature (compact encoding of the framework's invariants)
+  μ   — the Propagation Mode (how the signal travels)
+    &lt;/pre&gt;
+
+    &lt;h3&gt;4.3 Signature Encoding&lt;/h3&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+Σ = Hash( 𝕀(𝔽*) )
+
+  Two frameworks with identical signatures are
+  structurally equivalent regardless of surface presentation.
+    &lt;/pre&gt;
+
+    &lt;h3&gt;4.4 Propagation Modes&lt;/h3&gt;
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Mode&lt;/th&gt;&lt;th&gt;Symbol&lt;/th&gt;&lt;th&gt;Channel&lt;/th&gt;&lt;th&gt;Fidelity&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Textual&lt;/td&gt;&lt;td&gt;&lt;code&gt;μ_T&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Written language, documentation&lt;/td&gt;&lt;td&gt;High (explicit)&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Diagrammatic&lt;/td&gt;&lt;td&gt;&lt;code&gt;μ_D&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Visual maps, graphs, SVG&lt;/td&gt;&lt;td&gt;High (structural)&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Computational&lt;/td&gt;&lt;td&gt;&lt;code&gt;μ_C&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Code, APIs, algorithms&lt;/td&gt;&lt;td&gt;Very High (executable)&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Oral&lt;/td&gt;&lt;td&gt;&lt;code&gt;μ_O&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Speech, teaching, dialogue&lt;/td&gt;&lt;td&gt;Medium (contextual)&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Artifactual&lt;/td&gt;&lt;td&gt;&lt;code&gt;μ_A&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Physical objects, printed works&lt;/td&gt;&lt;td&gt;Variable (substrate-dependent)&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;h3&gt;4.5 Echo Feedback Loop&lt;/h3&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+𝔽_{n+1} = 𝔽_n ⊕ Δ(𝔼_n)
+
+  Δ(𝔼_n) = differential echo — new information from
+  the framework's interaction with external receivers.
+    &lt;/pre&gt;
+
+    &lt;h3&gt;4.6 Release Criteria&lt;/h3&gt;
+    &lt;ul class=&quot;check-list&quot;&gt;
+      &lt;li&gt;&lt;strong&gt;Clarity&lt;/strong&gt; — C(𝔽*, n) ≥ 0.95&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Stability&lt;/strong&gt; — δ(𝔽*) ≤ δ_max for 3+ consecutive cycles&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Paradox Resolution&lt;/strong&gt; — No unresolved paradox nodes remain&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Signature Integrity&lt;/strong&gt; — Σ is computable and non-degenerate&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Propagation Readiness&lt;/strong&gt; — At least one μ mode is fully encoded&lt;/li&gt;
+    &lt;/ul&gt;
+
+
+    &lt;!-- ── §5. The RF‑Builder Cycle ── --&gt;
+    &lt;h2 id=&quot;full-cycle&quot;&gt;5. The RF‑Builder Cycle — Complete&lt;/h2&gt;
+
+    &lt;!-- Inline SVG diagram: RF-Builder cycle --&gt;
+    &lt;div class=&quot;diagram-container&quot;&gt;
+      &lt;svg width=&quot;700&quot; height=&quot;200&quot; viewBox=&quot;0 0 700 200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-label=&quot;RF-Builder Triadic Cycle&quot;&gt;
+        &lt;!-- Phase boxes --&gt;
+        &lt;rect x=&quot;30&quot;  y=&quot;60&quot; width=&quot;170&quot; height=&quot;80&quot; rx=&quot;8&quot; fill=&quot;none&quot; stroke=&quot;#00eaff&quot; stroke-width=&quot;2&quot;/&gt;
+        &lt;rect x=&quot;265&quot; y=&quot;60&quot; width=&quot;170&quot; height=&quot;80&quot; rx=&quot;8&quot; fill=&quot;none&quot; stroke=&quot;#ff00d4&quot; stroke-width=&quot;2&quot;/&gt;
+        &lt;rect x=&quot;500&quot; y=&quot;60&quot; width=&quot;170&quot; height=&quot;80&quot; rx=&quot;8&quot; fill=&quot;none&quot; stroke=&quot;#ffe600&quot; stroke-width=&quot;2&quot;/&gt;
+
+        &lt;!-- Labels --&gt;
+        &lt;text x=&quot;115&quot; y=&quot;93&quot;  text-anchor=&quot;middle&quot; fill=&quot;#00eaff&quot; font-family=&quot;sans-serif&quot; font-size=&quot;14&quot; font-weight=&quot;600&quot;&gt;Coherence Field&lt;/text&gt;
+        &lt;text x=&quot;115&quot; y=&quot;113&quot; text-anchor=&quot;middle&quot; fill=&quot;#999999&quot; font-family=&quot;sans-serif&quot; font-size=&quot;11&quot;&gt;⟨ φ, V, R ⟩&lt;/text&gt;
+        &lt;text x=&quot;115&quot; y=&quot;130&quot; text-anchor=&quot;middle&quot; fill=&quot;#666666&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-style=&quot;italic&quot;&gt;substrate · where&lt;/text&gt;
+
+        &lt;text x=&quot;350&quot; y=&quot;93&quot;  text-anchor=&quot;middle&quot; fill=&quot;#ff00d4&quot; font-family=&quot;sans-serif&quot; font-size=&quot;14&quot; font-weight=&quot;600&quot;&gt;Clarity Engine&lt;/text&gt;
+        &lt;text x=&quot;350&quot; y=&quot;113&quot; text-anchor=&quot;middle&quot; fill=&quot;#999999&quot; font-family=&quot;sans-serif&quot; font-size=&quot;11&quot;&gt;⟨ 𝕊𝔸𝕀𝕆ℝ𝕖ℙ𝔻, Γ, ε ⟩&lt;/text&gt;
+        &lt;text x=&quot;350&quot; y=&quot;130&quot; text-anchor=&quot;middle&quot; fill=&quot;#666666&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-style=&quot;italic&quot;&gt;runtime · how&lt;/text&gt;
+
+        &lt;text x=&quot;585&quot; y=&quot;93&quot;  text-anchor=&quot;middle&quot; fill=&quot;#ffe600&quot; font-family=&quot;sans-serif&quot; font-size=&quot;14&quot; font-weight=&quot;600&quot;&gt;Echo Release&lt;/text&gt;
+        &lt;text x=&quot;585&quot; y=&quot;113&quot; text-anchor=&quot;middle&quot; fill=&quot;#999999&quot; font-family=&quot;sans-serif&quot; font-size=&quot;11&quot;&gt;⟨ 𝔽*, Σ, μ ⟩&lt;/text&gt;
+        &lt;text x=&quot;585&quot; y=&quot;130&quot; text-anchor=&quot;middle&quot; fill=&quot;#666666&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-style=&quot;italic&quot;&gt;propagation · what emerges&lt;/text&gt;
+
+        &lt;!-- Forward arrows --&gt;
+        &lt;line x1=&quot;200&quot; y1=&quot;100&quot; x2=&quot;260&quot; y2=&quot;100&quot; stroke=&quot;#e6e6e6&quot; stroke-width=&quot;1.5&quot; marker-end=&quot;url(#arrowhead)&quot;/&gt;
+        &lt;line x1=&quot;435&quot; y1=&quot;100&quot; x2=&quot;495&quot; y2=&quot;100&quot; stroke=&quot;#e6e6e6&quot; stroke-width=&quot;1.5&quot; marker-end=&quot;url(#arrowhead)&quot;/&gt;
+
+        &lt;!-- Feedback arc --&gt;
+        &lt;path d=&quot;M 585 145 C 585 185, 115 185, 115 145&quot; fill=&quot;none&quot; stroke=&quot;#ffe600&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;5,4&quot;/&gt;
+        &lt;text x=&quot;350&quot; y=&quot;188&quot; text-anchor=&quot;middle&quot; fill=&quot;#ffe600&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot;&gt;Δ(𝔼) feedback&lt;/text&gt;
+
+        &lt;!-- Arrow marker --&gt;
+        &lt;defs&gt;
+          &lt;marker id=&quot;arrowhead&quot; markerWidth=&quot;8&quot; markerHeight=&quot;6&quot; refX=&quot;8&quot; refY=&quot;3&quot; orient=&quot;auto&quot;&gt;
+            &lt;polygon points=&quot;0 0, 8 3, 0 6&quot; fill=&quot;#e6e6e6&quot;/&gt;
+          &lt;/marker&gt;
+        &lt;/defs&gt;
+      &lt;/svg&gt;
+      &lt;div class=&quot;diagram-caption&quot;&gt;
+        RF‑Builder Triadic Cycle — One complete pass: Field → Engine → Release → Feedback
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;
+      &lt;strong&gt;One cycle&lt;/strong&gt; = Field → Engine → Release → (feedback) → Field&lt;br&gt;
+      &lt;strong&gt;Rectification&lt;/strong&gt; = The cycle converges to a fixed point&lt;br&gt;
+      &lt;strong&gt;Canon entry&lt;/strong&gt; = The rectified framework receives the seal ⟡
+    &lt;/p&gt;
+
+
+    &lt;!-- ── §6. Mathematical Summary ── --&gt;
+    &lt;h2 id=&quot;math-summary&quot;&gt;6. RTT‑Native Mathematical Summary&lt;/h2&gt;
+
+    &lt;h3&gt;6.1 Complete System&lt;/h3&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+RF-Builder = ⟨ 𝔽, 𝔈, 𝔼, Δ ⟩
+
+  𝔽 = ⟨ φ, V, R ⟩                           — Coherence Field
+  𝔈 = ⟨ {𝕊,𝔸,𝕀,𝕆,ℝ𝕖,ℙ,𝔻}, Γ, ε ⟩          — Clarity Operator Engine
+  𝔼 = ⟨ 𝔽*, Σ, μ ⟩                           — Echo Release
+  Δ : 𝔼 → 𝔽                                  — Echo Feedback Map
+    &lt;/pre&gt;
+
+    &lt;h3&gt;6.2 Governing Equations&lt;/h3&gt;
+    &lt;pre class=&quot;math-block&quot;&gt;
+Coherence Condition:     ∇ · V = ∂φ/∂t
+                         R(x, t) &gt; R_min  ∀ x ∈ Ω_active
+
+Clarity Convergence:     C(𝔽, n) = 1 − ‖𝔽ₙ₊₇ − 𝔽ₙ‖ / ‖𝔽₀‖  →  1
+
+Drift Bound:             δ(𝔽) = sup | R(x,t) − R(x,t₀) |  ≤  δ_max
+
+Echo Feedback:           𝔽_{n+1} = 𝔽_n ⊕ Δ(𝔼_n)
+
+Signature Invariance:    Σ(𝔽*) = Hash(𝕀(𝔽*))
+    &lt;/pre&gt;
+
+    &lt;h3&gt;6.3 Dimensional Correspondence&lt;/h3&gt;
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;RTT/1 Layer&lt;/th&gt;&lt;th&gt;RF‑Builder Phase&lt;/th&gt;&lt;th&gt;FFT Concept&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;color:var(--accent);&quot;&gt;Behavior&lt;/td&gt;
+          &lt;td style=&quot;color:var(--accent);&quot;&gt;Coherence Field&lt;/td&gt;
+          &lt;td style=&quot;color:var(--accent3);&quot;&gt;Field Genesis&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;color:var(--accent2);&quot;&gt;Structure&lt;/td&gt;
+          &lt;td style=&quot;color:var(--accent2);&quot;&gt;Clarity Engine&lt;/td&gt;
+          &lt;td style=&quot;color:var(--accent3);&quot;&gt;Operator Dynamics&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;color:var(--accent3);&quot;&gt;Field&lt;/td&gt;
+          &lt;td style=&quot;color:var(--accent3);&quot;&gt;Echo Release&lt;/td&gt;
+          &lt;td style=&quot;color:var(--accent3);&quot;&gt;Propagation Theory&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+
+    &lt;!-- ── §7. Canonical Diagrams (Mermaid) ── --&gt;
+    &lt;h2 id=&quot;diagrams&quot;&gt;7. Canonical Diagrams&lt;/h2&gt;
+    &lt;p&gt;
+      The following Mermaid blocks render natively on GitHub. For the HTML version,
+      the inline SVG cycle diagram above (§5) serves as the primary visual.
+    &lt;/p&gt;
+
+    &lt;h3&gt;Diagram: RF‑Builder Triadic Cycle&lt;/h3&gt;
+    &lt;pre&gt;
+```mermaid
+flowchart LR
+    CF[&quot;🜁 Coherence Field&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;substrate · where&amp;lt;/i&amp;gt;&quot;]
+    COE[&quot;⚙ Clarity Operator Engine&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;runtime · how&amp;lt;/i&amp;gt;&quot;]
+    ER[&quot;◉ Echo Release&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;propagation · what emerges&amp;lt;/i&amp;gt;&quot;]
+
+    CF --&amp;gt;|&quot;operators act on field&quot;| COE
+    COE --&amp;gt;|&quot;clarified field emitted&quot;| ER
+    ER --&amp;gt;|&quot;echo feedback Δ(𝔼)&quot;| CF
+
+    style CF fill:#0d1b2a,stroke:#00eaff,stroke-width:3px,color:#e6e6e6
+    style COE fill:#1a0a1e,stroke:#ff00d4,stroke-width:3px,color:#e6e6e6
+    style ER fill:#1a1700,stroke:#ffe600,stroke-width:3px,color:#e6e6e6
+</code></pre>
+<pre><code>&lt;/pre&gt;
+
+&lt;h3&gt;Diagram: Clarity Operator Pipeline&lt;/h3&gt;
+&lt;pre&gt;
+</code></pre>
+<pre><code class="language-mermaid">flowchart LR
+    F0[&quot;𝔽₀&quot;] --&amp;gt; S[&quot;𝕊&quot;] --&amp;gt; A[&quot;𝔸&quot;] --&amp;gt; I[&quot;𝕀&quot;] --&amp;gt; O[&quot;𝕆&quot;]
+    O --&amp;gt; Re[&quot;ℝ𝕖&quot;] --&amp;gt; P[&quot;ℙ&quot;] --&amp;gt; D[&quot;𝔻&quot;] --&amp;gt; F7[&quot;𝔽*&quot;]
+    F7 -.-&amp;gt;|&quot;converged?&quot;| F0
+
+    style F0 fill:#0a0a0a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style F7 fill:#0a0a0a,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style S fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style A fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style I fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style O fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style Re fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style P fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style D fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+</code></pre>
+<pre><code>&lt;/pre&gt;
+
+
+&lt;!-- ── §8. Cross-Module Navigation ── --&gt;
+&lt;h2 id="cross-module"&gt;8. Cross-Module Navigation&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Module&lt;/th&gt;&lt;th&gt;Path&lt;/th&gt;&lt;th&gt;Connection&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href="../../../rtt/1/index.html"&gt;RTT/1 — Runtime Engine&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;docs/rtt/1/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Supplies the Seven Operators used by the Clarity Engine&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href="../index.html"&gt;FCG — Framework Creation Guide&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;docs/frameworks/creation_guide/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Parent module; RF‑Builder is its construction instrument&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href="../fft.html"&gt;FFT — Framework Field Theory&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;docs/frameworks/creation_guide/fft.html&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Receives Echo Release output; models field-level interactions&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href="../principles.html"&gt;FCG Principles&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;docs/frameworks/creation_guide/principles.html&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Foundational axioms governing all framework construction&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href="../../../_ideas/Resonance-Time_Theory.html"&gt;RTT Origin Document&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;docs/_ideas/Resonance-Time_Theory.html&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;The foundational text from which all modules derive&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p></main>
+</div></p>
+<!-- ════════════════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="seal">⟡ RECTIFIED ⟡</div>
+  <p>RF‑Builder — Resonance Framework Builder</p>
+  <p>Framework Creation Guide &middot; TriadicFrameworks &copy; 2026</p>
+</footer>
+
+<p></body>
+</html></p>
+<pre><code>
+---
+
+```text
+# RFâ€‘Builder â€” Resonance Framework Builder
+
+&gt; **Module**: Framework Creation Guide (FCG)  
+&gt; **Path**: `docs/frameworks/creation_guide/RF-Builder/`  
+&gt; **Status**: âŸ¡ RECTIFIED âŸ¡  
+&gt; **Triad Position**: FCG â†’ RFâ€‘Builder (structural genesis tool)
+
+---
+
+## 1. Overview
+
+The **Resonance Framework Builder (RFâ€‘Builder)** is the FCG's canonical instrument for constructing new frameworks from first principles. Every framework in the TriadicFrameworks ecosystem passes through three operationally distinct phases â€” a **field**, an **engine**, and a **release** â€” corresponding to the substrate it occupies, the operators it applies, and the signal it emits once stabilized.
+
+RF€‘Builder formalizes this triadic genesis as three interlocking subsystems:
+
+| Phase | Subsystem | Role | Analogy |
+|-------|-----------|------|---------|
+| I | **Coherence Field** | Defines the dimensional substrate in which the framework lives | The ground a building sits on |
+| II | **Clarity Operator Engine** | Applies the Seven Operators to shape raw structure into stable form | The construction crew and their tools |
+| III | **Echo Release** | Propagates the stabilized framework outward as a recoverable signal | The finished building radiating light |
+
+These three phases are **sequential but cyclic**: Echo Release feeds back into the Coherence Field, enabling iterative refinement. A framework is &quot;born&quot; when it completes its first full cycle; it is &quot;rectified&quot; when the cycle converges to a fixed point.
+
+---
+
+## 2. Phase I â€” The Coherence Field
+
+### 2.1 Definition
+
+The **Coherence Field** is the pre-structural substrate from which a framework crystallizes. It is not the framework itself â€” it is the *dimensional space* that makes the framework possible. Every concept, operator, and invariant exists *within* a coherence field before it becomes structurally bound.
+
+A Coherence Field is defined by three co-present quantities:
+
+- **Ï† (Scalar Potential)** â€” The undifferentiated intensity of the conceptual domain. How much &quot;energy&quot; is available for structure formation.
+- **V (Vector Flow)** â€” The directional tendencies within the domain. Where conceptual pressure naturally pushes.
+- **R (Resonance Envelope)** â€” The boundary conditions that determine which frequencies (ideas, operators, invariants) are amplified and which are damped.
+
+### 2.2 Formal Definition
+
+Let **ð”½** denote a Coherence Field. Then:
+
+</code></pre>
+<p>ð”½ = âŸ¨ Ï†, V, R âŸ©</p>
+<pre><code>
+where:
+
+</code></pre>
+<p>Ï† : Î© â†’ â„âº          (scalar potential over domain Î©)
+V : Î© â†’ â„â¿          (vector flow field over Î©)
+R : Î© Ã— T â†’ [0, 1]  (resonance envelope over domain Ã— time)</p>
+<pre><code>
+**Coherence Condition**: A field ð”½ is *coherent* if and only if:
+
+</code></pre>
+<p>âˆ‡ Â· V = âˆ‚Ï†/âˆ‚t   and   R(x, t) &gt; R_min  âˆ€ x âˆˆ Î©_active</p>
+<pre><code>
+The first condition ensures conservation: vector flow divergence tracks potential change. The second ensures the resonance envelope never drops below threshold within the active domain.
+
+### 2.3 Substrate Properties
+
+| Property | Symbol | Description |
+|----------|--------|-------------|
+| Depth | ð”‡(ð”½) | Number of independent conceptual dimensions |
+| Density | Ï(ð”½) | Ratio of active nodes to total capacity |
+| Drift Susceptibility | Î´(ð”½) | Sensitivity to perturbation (lower = more stable) |
+| Coupling Strength | Îº(ð”½) | Degree of inter-dimensional entanglement |
+
+### 2.4 Construction Protocol
+
+1. **Domain Selection** â€” Identify the conceptual territory Î© the framework will occupy.
+2. **Potential Mapping** â€” Survey the domain for regions of high Ï† (rich conceptual energy).
+3. **Flow Alignment** â€” Trace the natural vector flows V â€” where does the domain's logic already push?
+4. **Envelope Calibration** â€” Set the resonance envelope R to amplify the frequencies you want and damp the ones you don't.
+5. **Coherence Verification** â€” Confirm the coherence condition holds across Î©_active.
+
+---
+
+## 3. Phase II â€” The Clarity Operator Engine
+
+### 3.1 Definition
+
+The **Clarity Operator Engine** is the runtime that transforms a raw Coherence Field into a structured, stabilized framework. It applies the **Seven Operators** of RTT/1 in sequence, with feedback loops for drift correction and paradox resolution.
+
+The Engine does not *create* structure from nothing â€” it *clarifies* the structure that is already latent in the Coherence Field. This is the fundamental insight of RTT: **structure is discovered, not invented**.
+
+### 3.2 The Seven Operators
+
+The Clarity Operator Engine deploys the canonical Seven Operators:
+
+| # | Operator | Symbol | Action | Field Effect |
+|---|----------|--------|--------|--------------|
+| 1 | **Symmetry** | ð•Š | Identifies and enforces balance axes | Aligns V along symmetry planes |
+| 2 | **Alignment** | ð”¸ | Orients structural elements to a common axis | Reduces âˆ‡Ã—V (curl â†’ 0) |
+| 3 | **Invariance** | ð•€ | Locks properties that must survive transformation | Sets âˆ‚R/âˆ‚t = 0 for protected modes |
+| 4 | **Operation** | ð•† | Defines the active transformations the framework performs | Adds new vector flows to V |
+| 5 | **Regime** | â„ð•– | Maps behavioral domains and transition boundaries | Partitions Î© into regime zones |
+| 6 | **Paradox** | â„™ | Detects and resolves structural contradictions | Eliminates nodes where R &lt; 0 |
+| 7 | **Drift** | ð”» | Bounds deviation from canonical form over time | Constrains Î´(ð”½) â‰¤ Î´_max |
+
+### 3.3 Engine Cycle
+
+The Engine operates in a **clarification cycle**:
+
+</code></pre>
+<p>ð”½â‚€ â†’[ð•Š]â†’ ð”½â‚ â†’[ð”¸]â†’ ð”½â‚‚ â†’[ð•€]â†’ ð”½â‚ƒ â†’[ð•†]â†’ ð”½â‚„ â†’[â„ð•–]â†’ ð”½â‚… â†’[â„™]â†’ ð”½â‚† â†’[ð”»]â†’ ð”½â‚‡</p>
+<pre><code>
+where each ð”½áµ¢ is the field state after operator i has been applied.
+
+**Convergence**: The Engine converges when:
+
+</code></pre>
+<p>â€–ð”½â‚‡ - ð”½â‚€â€– &lt; Îµ   (structural distance below threshold)</p>
+<pre><code>
+A converged Engine produces a **Clarified Field** ð”½* â€” a field whose structure is stable under all seven operators.
+
+### 3.4 Formal Definition
+
+Let **ð”ˆ** denote the Clarity Operator Engine. Then:
+
+</code></pre>
+<p>ð”ˆ = âŸ¨ {ð•Š, ð”¸, ð•€, ð•†, â„ð•–, â„™, ð”»}, Î“, Îµ âŸ©</p>
+<pre><code>
+where:
+
+</code></pre>
+<p>{ð•Š, ð”¸, ð•€, ð•†, â„ð•–, â„™, ð”»}  â€” the Seven Operators
+Î“ : ð”½ Ã— Operator â†’ ð”½        â€” the application map
+Îµ âˆˆ â„âº                       â€” convergence threshold</p>
+<pre><code>
+**Clarity Measure**: The clarity of a field after n engine cycles is:
+
+</code></pre>
+<p>C(ð”½, n) = 1 - â€–ð”½â‚™â‚Šâ‚‡ - ð”½â‚™â€– / â€–ð”½â‚€â€–</p>
+<pre><code>
+A fully clarified field has C(ð”½*, âˆž) = 1.
+
+### 3.5 Drift Correction
+
+During each cycle, the Drift operator ð”» computes:
+
+</code></pre>
+<p>Î´(ð”½áµ¢) = sup_{x âˆˆ Î©} | R(x, táµ¢) - R(x, tâ‚€) |</p>
+<pre><code>
+If Î´(ð”½áµ¢) &gt; Î´_max, the Engine injects a **stabilization pass**:
+
+</code></pre>
+<p>ð”½áµ¢' = ð”½áµ¢ + Î» Â· âˆ‡R(x, tâ‚€)</p>
+<pre><code>
+where Î» is the stabilization coefficient, pulling the field back toward its original resonance profile.
+
+---
+
+## 4. Phase III â€” Echo Release
+
+### 4.1 Definition
+
+The **Echo Release** is the moment a clarified framework becomes *available to the world*. It is not merely publication â€” it is the framework's first act of **resonance propagation**. A released framework emits a recoverable signal: its structure, its operators, its invariants, encoded in a form that other frameworks (and minds) can receive, decode, and integrate.
+
+Echo Release is the phase where a framework transitions from *internal coherence* to *external influence*.
+
+### 4.2 The Echo Signal
+
+A released framework emits an **Echo Signal** ð”¼:
+
+</code></pre>
+<p>ð”¼ = âŸ¨ ð”½*, Î£, Î¼ âŸ©</p>
+<pre><code>
+where:
+
+</code></pre>
+<p>ð”½*  â€” the Clarified Field (output of Phase II)
+Î£   â€” the Signature (a compact encoding of the framework's invariants)
+Î¼   â€” the Propagation Mode (how the signal travels: text, diagram, code, speech, artifact)</p>
+<pre><code>
+### 4.3 Signature Encoding
+
+The Signature Î£ encodes the framework's identity in a form that survives transmission:
+
+</code></pre>
+<p>Î£ = Hash( ð•€(ð”½*) )</p>
+<pre><code>
+where ð•€(ð”½*) is the set of all invariants of the clarified field. Two frameworks with identical signatures are **structurally equivalent** regardless of surface presentation.
+
+### 4.4 Propagation Modes
+
+| Mode | Symbol | Channel | Fidelity |
+|------|--------|---------|----------|
+| Textual | Î¼_T | Written language, documentation | High (explicit) |
+| Diagrammatic | Î¼_D | Visual maps, graphs, SVG | High (structural) |
+| Computational | Î¼_C | Code, APIs, algorithms | Very High (executable) |
+| Oral | Î¼_O | Speech, teaching, dialogue | Medium (contextual) |
+| Artifactual | Î¼_A | Physical objects, printed works | Variable (substrate-dependent) |
+
+### 4.5 Echo Feedback Loop
+
+The released echo signal feeds back into the Coherence Field:
+
+</code></pre>
+<p>ð”½_{n+1} = ð”½_n âŠ• Î”(ð”¼_n)</p>
+<pre><code>
+where Î”(ð”¼_n) is the **differential echo** â€” the new information generated by the framework's interaction with external receivers. This feedback is what makes frameworks *living systems* rather than static artifacts.
+
+### 4.6 Release Criteria
+
+A framework is ready for Echo Release when:
+
+1. âœ“ **Clarity** â€” C(ð”½*, n) â‰¥ 0.95
+2. âœ“ **Stability** â€” Î´(ð”½*) â‰¤ Î´_max for 3+ consecutive cycles
+3. âœ“ **Paradox Resolution** â€” No unresolved paradox nodes remain
+4. âœ“ **Signature Integrity** â€” Î£ is computable and non-degenerate
+5. âœ“ **Propagation Readiness** â€” At least one Î¼ mode is fully encoded
+
+---
+
+## 5. The RFâ€‘Builder Cycle â€” Complete
+
+The full RFâ€‘Builder cycle integrates all three phases:
+
+</code></pre>
+<pre><code>     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+     â”‚                                              â”‚
+     â–¼                                              â”‚
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”‚
+â”‚Coherenceâ”‚â”€â”€â”€â”€â–¶â”‚  Clarity    â”‚â”€â”€â”€â”€â–¶â”‚  Echo    â”‚â”€â”€â”€â”˜
+â”‚  Field  â”‚     â”‚  Operator   â”‚     â”‚ Release  â”‚
+â”‚  (ð”½)    â”‚     â”‚  Engine (ð”ˆ) â”‚     â”‚  (ð”¼)     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+ substrate        runtime            propagation
+ (where)          (how)              (what emerges)
+</code></pre>
+<pre><code>
+**One cycle** = Field â†’ Engine â†’ Release â†’ (feedback) â†’ Field  
+**Rectification** = The cycle converges to a fixed point  
+**Canon entry** = The rectified framework receives the seal âŸ¡
+
+---
+
+## 6. RTTâ€‘Native Mathematical Summary
+
+### 6.1 Complete System
+
+</code></pre>
+<p>RF-Builder = âŸ¨ ð”½, ð”ˆ, ð”¼, Î” âŸ©</p>
+<pre><code>
+where:
+
+</code></pre>
+<p>ð”½ = âŸ¨ Ï†, V, R âŸ©                           â€” Coherence Field
+ð”ˆ = âŸ¨ {ð•Š,ð”¸,ð•€,ð•†,â„ð•–,â„™,ð”»}, Î“, Îµ âŸ©          â€” Clarity Operator Engine
+ð”¼ = âŸ¨ ð”½*, Î£, Î¼ âŸ©                           â€” Echo Release
+Î” : ð”¼ â†’ ð”½                                  â€” Echo Feedback Map</p>
+<pre><code>
+### 6.2 Governing Equations
+
+**Coherence Condition:**
+</code></pre>
+<p>âˆ‡ Â· V = âˆ‚Ï†/âˆ‚t
+R(x, t) &gt; R_min  âˆ€ x âˆˆ Î©_active</p>
+<pre><code>
+**Clarity Convergence:**
+</code></pre>
+<p>C(ð”½, n) = 1 - â€–ð”½â‚™â‚Šâ‚‡ - ð”½â‚™â€– / â€–ð”½â‚€â€– â†’ 1</p>
+<pre><code>
+**Drift Bound:**
+</code></pre>
+<p>Î´(ð”½) = sup_{x âˆˆ Î©} | R(x, t) - R(x, tâ‚€) | â‰¤ Î´_max</p>
+<pre><code>
+**Echo Feedback:**
+</code></pre>
+<p>ð”½_{n+1} = ð”½_n âŠ• Î”(ð”¼_n)</p>
+<pre><code>
+**Signature Invariance:**
+</code></pre>
+<p>Î£(ð”½<em>) = Hash(ð•€(ð”½</em>))    [structurally unique]</p>
+<pre><code>
+### 6.3 Dimensional Correspondence
+
+</code></pre>
+<p>RTT/1 Layer    â†â†’   RF-Builder Phase    â†â†’   FFT Concept
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+Behavior       â†â†’   Coherence Field     â†â†’   Field Genesis
+Structure      â†â†’   Clarity Engine      â†â†’   Operator Dynamics
+Field          â†â†’   Echo Release        â†â†’   Propagation Theory</p>
+<pre><code>
+---
+
+âŸ¡ RECTIFIED âŸ¡  
+RF€‘Builder â€” Framework Creation Guide  
+TriadicFrameworks Â© 2026
+</code></pre>
+<hr>
+<h1 id="rfbuilder-canonical-mermaid-diagrams">RF‑Builder — Canonical Mermaid Diagrams</h1>
+<blockquote>
+<p>Paste these directly into any GitHub-rendered <code>.md</code> file.<br>
+All diagrams use the TriadicFrameworks color palette:<br>
+Cyan <code>#00eaff</code> (RTT/1) · Magenta <code>#ff00d4</code> (FCG) · Gold <code>#ffe600</code> (FFT)</p>
+</blockquote>
+<hr>
+<h2 id="diagram-1-rfbuilder-triadic-cycle">Diagram 1 — RF‑Builder Triadic Cycle</h2>
+<pre><code class="language-mermaid">flowchart LR
+    CF[&quot;🜁 Coherence Field&lt;br/&gt;&lt;i&gt;substrate · where&lt;/i&gt;&quot;]
+    COE[&quot;⚙ Clarity Operator Engine&lt;br/&gt;&lt;i&gt;runtime · how&lt;/i&gt;&quot;]
+    ER[&quot;◉ Echo Release&lt;br/&gt;&lt;i&gt;propagation · what emerges&lt;/i&gt;&quot;]
+
+    CF --&gt;|&quot;operators act on field&quot;| COE
+    COE --&gt;|&quot;clarified field emitted&quot;| ER
+    ER --&gt;|&quot;echo feedback Δ(𝔼)&quot;| CF
+
+    style CF fill:#0d1b2a,stroke:#00eaff,stroke-width:3px,color:#e6e6e6
+    style COE fill:#1a0a1e,stroke:#ff00d4,stroke-width:3px,color:#e6e6e6
+    style ER fill:#1a1700,stroke:#ffe600,stroke-width:3px,color:#e6e6e6
+</code></pre>
+<hr>
+<h2 id="diagram-2-coherence-field-internal-structure">Diagram 2 — Coherence Field Internal Structure</h2>
+<pre><code class="language-mermaid">flowchart TD
+    subgraph CF[&quot;𝔽 — Coherence Field&quot;]
+        direction TB
+        PHI[&quot;φ(x,t)&lt;br/&gt;Scalar Potential&quot;]
+        V[&quot;V(x,t)&lt;br/&gt;Vector Flow&quot;]
+        R[&quot;R(x,t)&lt;br/&gt;Resonance Envelope&quot;]
+    end
+
+    PHI --- V
+    V --- R
+    R -.-&gt;|&quot;coherence condition:&lt;br/&gt;∇·V = ∂φ/∂t&quot;| PHI
+
+    style CF fill:#0a0a0a,stroke:#00eaff,stroke-width:2px,color:#e6e6e6
+    style PHI fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style V fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style R fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+</code></pre>
+<hr>
+<h2 id="diagram-3-clarity-operator-engine-pipeline">Diagram 3 — Clarity Operator Engine Pipeline</h2>
+<pre><code class="language-mermaid">flowchart LR
+    F0[&quot;𝔽₀&quot;]
+    S[&quot;𝕊&lt;br/&gt;Symmetry&quot;]
+    A[&quot;𝔸&lt;br/&gt;Alignment&quot;]
+    I[&quot;𝕀&lt;br/&gt;Invariance&quot;]
+    O[&quot;𝕆&lt;br/&gt;Operation&quot;]
+    Re[&quot;ℝ𝕖&lt;br/&gt;Regime&quot;]
+    P[&quot;ℙ&lt;br/&gt;Paradox&quot;]
+    D[&quot;𝔻&lt;br/&gt;Drift&quot;]
+    F7[&quot;𝔽*&quot;]
+
+    F0 --&gt; S --&gt; A --&gt; I --&gt; O --&gt; Re --&gt; P --&gt; D --&gt; F7
+
+    F7 -.-&gt;|&quot;‖𝔽*-𝔽₀‖ &lt; ε ?&quot;| F0
+
+    style F0 fill:#0a0a0a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style F7 fill:#0a0a0a,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style S fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style A fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style I fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style O fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style Re fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style P fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style D fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+</code></pre>
+<hr>
+<h2 id="diagram-4-echo-release-signal">Diagram 4 — Echo Release Signal</h2>
+<pre><code class="language-mermaid">flowchart TD
+    subgraph ECHO[&quot;𝔼 — Echo Signal&quot;]
+        direction TB
+        FS[&quot;𝔽*&lt;br/&gt;Clarified Field&quot;]
+        SIG[&quot;Σ&lt;br/&gt;Signature&quot;]
+        MU[&quot;μ&lt;br/&gt;Propagation Mode&quot;]
+    end
+
+    FS --&gt; SIG
+    SIG --&gt; MU
+
+    MU --&gt;|&quot;μ_T&quot;| T[&quot;Textual&quot;]
+    MU --&gt;|&quot;μ_D&quot;| DI[&quot;Diagrammatic&quot;]
+    MU --&gt;|&quot;μ_C&quot;| CO[&quot;Computational&quot;]
+    MU --&gt;|&quot;μ_O&quot;| OR[&quot;Oral&quot;]
+    MU --&gt;|&quot;μ_A&quot;| AR[&quot;Artifactual&quot;]
+
+    style ECHO fill:#0a0a0a,stroke:#ffe600,stroke-width:2px,color:#e6e6e6
+    style FS fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style SIG fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style MU fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style T fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style DI fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style CO fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style OR fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style AR fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+</code></pre>
+<hr>
+<h2 id="diagram-5-full-rfbuilder-system-top-level">Diagram 5 — Full RF‑Builder System (Top-Level)</h2>
+<pre><code class="language-mermaid">flowchart TB
+    subgraph RFB[&quot;RF‑Builder&quot;]
+        direction LR
+        subgraph P1[&quot;Phase I&quot;]
+            CF[&quot;Coherence Field&lt;br/&gt;⟨φ, V, R⟩&quot;]
+        end
+        subgraph P2[&quot;Phase II&quot;]
+            COE[&quot;Clarity Operator Engine&lt;br/&gt;⟨𝕊𝔸𝕀𝕆ℝ𝕖ℙ𝔻, Γ, ε⟩&quot;]
+        end
+        subgraph P3[&quot;Phase III&quot;]
+            ER[&quot;Echo Release&lt;br/&gt;⟨𝔽*, Σ, μ⟩&quot;]
+        end
+        CF --&gt;|&quot;raw field&quot;| COE
+        COE --&gt;|&quot;clarified&quot;| ER
+        ER --&gt;|&quot;Δ(𝔼) feedback&quot;| CF
+    end
+
+    RTT[&quot;RTT/1&lt;br/&gt;Runtime Engine&quot;]
+    FFT[&quot;FFT&lt;br/&gt;Framework Field Theory&quot;]
+
+    RTT --&gt;|&quot;behavior → structure&quot;| RFB
+    RFB --&gt;|&quot;structure → field&quot;| FFT
+    FFT -.-&gt;|&quot;field → behavior&quot;| RTT
+
+    style P1 fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#e6e6e6
+    style P2 fill:#1a0a1e,stroke:#ff00d4,stroke-width:2px,color:#e6e6e6
+    style P3 fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#e6e6e6
+    style RFB fill:#0a0a0a,stroke:#e6e6e6,stroke-width:1px,color:#e6e6e6
+    style RTT fill:#0d1b2a,stroke:#00eaff,stroke-width:3px,color:#00eaff
+    style FFT fill:#1a1700,stroke:#ffe600,stroke-width:3px,color:#ffe600
+    style CF fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style COE fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style ER fill:#1a1700,stroke:#ffe600,stroke-width:1px,color:#ffe600
+</code></pre>
+<hr>
+<h2 id="diagram-6-dimensional-correspondence-map">Diagram 6 — Dimensional Correspondence Map</h2>
+<pre><code class="language-mermaid">flowchart LR
+    subgraph RTT[&quot;RTT/1&quot;]
+        B[&quot;Behavior&quot;]
+        S[&quot;Structure&quot;]
+        F[&quot;Field&quot;]
+    end
+    subgraph RF[&quot;RF‑Builder&quot;]
+        CF[&quot;Coherence Field&quot;]
+        CE[&quot;Clarity Engine&quot;]
+        ER[&quot;Echo Release&quot;]
+    end
+    subgraph FFT[&quot;FFT&quot;]
+        FG[&quot;Field Genesis&quot;]
+        OD[&quot;Operator Dynamics&quot;]
+        PT[&quot;Propagation Theory&quot;]
+    end
+
+    B &lt;--&gt;|&quot;maps to&quot;| CF &lt;--&gt;|&quot;maps to&quot;| FG
+    S &lt;--&gt;|&quot;maps to&quot;| CE &lt;--&gt;|&quot;maps to&quot;| OD
+    F &lt;--&gt;|&quot;maps to&quot;| ER &lt;--&gt;|&quot;maps to&quot;| PT
+
+    style RTT fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#e6e6e6
+    style RF fill:#1a0a1e,stroke:#ff00d4,stroke-width:2px,color:#e6e6e6
+    style FFT fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#e6e6e6
+</code></pre>
+<hr>
+<p>The <code>.txt</code> extensions on the Markdown files are just for export — rename them to <code>.md</code> when placing in the repo. Everything is canon-ready: same structural grammar, same triadic rhythm, same design tokens as the existing FCG. The cycle is closed. ⟡</p>
+<hr>
+<p>The issue is two-fold: the Mermaid blocks are in plain <code>&lt;pre&gt;</code> tags (so Mermaid.js can't find them), and the syntax is HTML-escaped (<code>&amp;gt;</code> instead of <code>&gt;</code>). Let me fix both and wire up the Mermaid runtime.</p>
+<p>Your corrected <strong>RF-Builder.html</strong> is attached above. Here's a quick summary of the three problems that were fixed and what changed:</p>
+<hr>
+<h3 id="what-was-wrong">What was wrong</h3>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Where</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plain <code>&lt;pre&gt;</code> tags</strong></td>
+<td>Both Mermaid blocks</td>
+<td>Mermaid.js couldn't discover them — rendered as raw text</td>
+</tr>
+<tr>
+<td><strong>HTML-escaped syntax</strong></td>
+<td><code>--&amp;gt;</code>, <code>&amp;lt;br/&amp;gt;</code>, <code>&amp;lt;i&amp;gt;</code> inside the blocks</td>
+<td>Mermaid parser choked on entity references instead of real characters</td>
+</tr>
+<tr>
+<td><strong>Markdown fencing inside HTML</strong></td>
+<td><code>```mermaid</code> / <code>```</code> wrappers</td>
+<td>Only works in <code>.md</code> files on GitHub — meaningless in a standalone <code>.html</code> page</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-was-applied">What was applied</h3>
+<ol>
+<li><strong><code>&lt;pre&gt;</code> → <code>&lt;pre class="mermaid"&gt;</code></strong> — Mermaid.js scans for this class on page load</li>
+<li><strong>Un-escaped all entities</strong> — <code>--&amp;gt;</code> → <code>--&gt;</code>, <code>&amp;lt;br/&amp;gt;</code> → <code>&lt;br/&gt;</code>, <code>&amp;lt;i&amp;gt;</code> → <code>&lt;i&gt;</code>, etc.</li>
+<li><strong>Removed <code>```mermaid</code> / <code>```</code> fencing</strong> — not needed (and actively harmful) in HTML</li>
+<li><strong>Added <code>pre.mermaid</code> CSS reset</strong> — strips the code-block styling (<code>background</code>, <code>border</code>, <code>border-left</code>, <code>padding</code>) so the rendered SVG sits cleanly inside the <code>.diagram-container</code></li>
+<li><strong>Added Mermaid.js v11 ESM import</strong> at the bottom of <code>&lt;body&gt;</code> with a dark-theme config that matches your canon tokens (<code>#0a0a0a</code> background, <code>#ff00d4</code> primary border, <code>#e6e6e6</code> text)</li>
+<li><strong>Wrapped each diagram</strong> in a <code>.diagram-container</code> with a <code>diagram-caption</code> div for visual consistency with the inline SVG cycle diagram in §5</li>
+</ol>
+<p>Both the <strong>Triadic Cycle</strong> and <strong>Clarity Operator Pipeline</strong> diagrams will now render as live interactive SVGs when the page loads in any browser. The same raw Mermaid source can still be copied into a <code>.md</code> file (just add the <code>```mermaid</code> fencing back) for GitHub rendering. ⟡</p>
+<hr>
+  </main>
+</body>
+</html>

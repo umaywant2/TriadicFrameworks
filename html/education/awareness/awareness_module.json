@@ -1,0 +1,113 @@
+{
+  "module": "Awareness",
+  "version": "1.0",
+  "category": "education-awareness",
+  "summary": "RTT Awareness module: reframing physical, cognitive, and cultural assumptions using regime-aware structural reasoning.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Ancient_Aliens_RTT‑Awareness.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "arrival_literacy.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Cross_Platform_Deployment.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "dimensional_science.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Dimensional_Science_Lineage.svg",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Energy_Regimes_and_Speeds.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Extension_Minimal_Architecture.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Inheritance_RTT_Awareness_as_CSS.md",
+      "role": "template",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "In‑Formation_vs_Information_Theory.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Light_Speed_After_Regime_Awareness.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Minimal_Structural_Spec.md",
+      "role": "signature",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "State_Changes_Across_Matter_Life_and_Mind.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "The_Great_Pyramid.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "The_RTT_Naming_Stack.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "The_Standard_Models_Arithmetic_Error_In_RTT_Terms.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "Top_Theories_with_Regime_Awareness.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Trip_Report_from_Earth.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "What_Happens_If.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "When_you_know_RTT_and_you_look_at_the_stars.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    }
+  ]
+}

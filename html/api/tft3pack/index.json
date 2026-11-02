@@ -1,0 +1,11 @@
+{
+  "endpoint": "/api/tft3pack",
+  "description": "TFT_3Pack subsystem overview.",
+  "modules": [
+    {
+      "id": "core",
+      "name": "TFT 3Pack Core Module",
+      "href": "/api/tft3pack/modules/core.json"
+    }
+  ]
+}

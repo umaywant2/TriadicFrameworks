@@ -1,0 +1,108 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.ui",
+  "title": "FFT AI Session — UI v1.33",
+  "components": {
+    "field_triad": {
+      "type": "display",
+      "fields": [
+        "phi",
+        "V",
+        "R"
+      ]
+    },
+    "tau_gauge": {
+      "type": "gauge",
+      "field": "tau",
+      "range": [
+        -1,
+        1
+      ]
+    },
+    "coherence_badge": {
+      "type": "badge",
+      "states": [
+        "declared",
+        "lost",
+        "restoring"
+      ],
+      "color_map": {
+        "declared": "green",
+        "lost": "red",
+        "restoring": "amber"
+      },
+      "new_v1_33": true
+    },
+    "drift_meter": {
+      "type": "meter",
+      "field": "delta",
+      "max": 0.35,
+      "alert_at": 0.3,
+      "new_v1_33": true
+    },
+    "paradox_alert": {
+      "type": "alert_banner",
+      "trigger": "paradox_active==true",
+      "color": "orange",
+      "new_v1_33": true
+    },
+    "snr_bar": {
+      "type": "stacked_bar",
+      "segments": [
+        "S",
+        "N",
+        "R_snr"
+      ],
+      "new_v1_33": true
+    },
+    "set_triad": {
+      "type": "indicator_row",
+      "fields": [
+        "S_coupled",
+        "E_coupled",
+        "T_coupled"
+      ],
+      "new_v1_33": true
+    },
+    "dco_indicator": {
+      "type": "dimension_selector",
+      "dims": [
+        "4D",
+        "5D",
+        "7D",
+        "8D",
+        "9D"
+      ],
+      "new_v1_33": true
+    },
+    "autonomy_selector": {
+      "type": "mode_selector",
+      "modes": [
+        "AM-001",
+        "AM-002",
+        "AM-003",
+        "AM-004",
+        "AM-005"
+      ]
+    },
+    "operator_log": {
+      "type": "scrolling_log",
+      "source": "fft.ai.session.log.json"
+    }
+  },
+  "v133_additions": [
+    "coherence_badge",
+    "drift_meter",
+    "paradox_alert",
+    "snr_bar",
+    "set_triad",
+    "dco_indicator"
+  ]
+}

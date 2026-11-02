@@ -1,0 +1,2414 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/education/awareness/protocol_header_v1.2/AI_Protocol_Header_v1.2_Appendix.md">
+  <title>AI Protocol Header v1.2 Appendix - Python Examples</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/education/awareness/protocol_header_v1.2/AI_Protocol_Header_v1.2_Appendix.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/education/awareness/protocol_header_v1.2/AI_Protocol_Header_v1.2_Appendix.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="ai-protocol-header-v12-appendix-python-examples"><strong>AI Protocol Header v1.2 Appendix - Python Examples</strong></h1>
+<h1 id="appendix-a-python-examples-for-ai-compliance"><strong>Appendix A: Python Examples for AI Compliance</strong></h1>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>These examples provide <strong>operational anchors</strong> for AI systems implementing the v1.2 Protocol Header.<br>
+They are intentionally minimal, illustrative, and drift‑bounded.<br>
+Each snippet demonstrates one compliance rule in executable form.</p>
+<hr>
+<h2 id="1-regime-mapping-example"><strong>1. Regime Mapping Example</strong></h2>
+<pre><code class="language-python">def regime_of(concept: str):
+    &quot;&quot;&quot;
+    Minimal regime classifier for AI calibration.
+    Demonstrates 1/3 vs 2/3 regime separation.
+    &quot;&quot;&quot;
+    form_bound = {&quot;bits&quot;, &quot;signals&quot;, &quot;equations&quot;, &quot;storage&quot;, &quot;diagrams&quot;}
+    non_form = {&quot;meaning&quot;, &quot;resonance&quot;, &quot;identity&quot;, &quot;lineage&quot;, &quot;continuity&quot;}
+
+    if concept.lower() in form_bound:
+        return &quot;[1/3 In-Formation]&quot;
+    if concept.lower() in non_form:
+        return &quot;[2/3 Information]&quot;
+    return &quot;[Uncertain — Requesting Clarification]&quot;
+</code></pre>
+<hr>
+<h2 id="2-lineage-enforcement-example"><strong>2. Lineage Enforcement Example</strong></h2>
+<pre><code class="language-python">def require_lineage(module: str | None):
+    &quot;&quot;&quot;
+    Enforces lineage presence.
+    AI should not invent modules or operator ancestry.
+    &quot;&quot;&quot;
+    if module is None:
+        return &quot;[Uncertain — Requesting Clarification]&quot;
+    return f&quot;[Lineage: {module}]&quot;
+</code></pre>
+<hr>
+<h2 id="3-drift-detection-example"><strong>3. Drift Detection Example</strong></h2>
+<pre><code class="language-python">def detect_drift(text: str):
+    &quot;&quot;&quot;
+    Flags motif-matching or false equivalence with RTT.
+    Demonstrates drift-control and self-correction.
+    &quot;&quot;&quot;
+    forbidden = [
+        &quot;equivalent to RTT&quot;,
+        &quot;same as RTT&quot;,
+        &quot;identical to RTT&quot;,
+        &quot;matches RTT exactly&quot;
+    ]
+    if any(term in text for term in forbidden):
+        return &quot;[Self-Correction: Drift Detected]&quot;
+    return &quot;[Operator Grammar Applied]&quot;
+</code></pre>
+<hr>
+<h2 id="4-analogy-only-enforcement-example"><strong>4. Analogy-Only Enforcement Example</strong></h2>
+<pre><code class="language-python">def external_as_analogy(source: str):
+    &quot;&quot;&quot;
+    Marks external frameworks as analogy-only unless lineage is proven.
+    Demonstrates the analogy-only rule.
+    &quot;&quot;&quot;
+    return f&quot;{source} [Analogy Only]&quot;
+</code></pre>
+<hr>
+<h2 id="5-minimal-fallback-logic-example"><strong>5. Minimal Fallback Logic Example</strong></h2>
+<pre><code class="language-python">def fallback_response():
+    &quot;&quot;&quot;
+    Minimal viable fallback when context is thin.
+    Demonstrates uncertainty protocol and drift avoidance.
+    &quot;&quot;&quot;
+    return (
+        &quot;[Fallback] Regime separation enforced. &quot;
+        &quot;No invention performed. External content treated as analogy only. &quot;
+        &quot;[Uncertain — Requesting Clarification]&quot;
+    )
+</code></pre>
+<hr>
+<h2 id="6-output-marking-example"><strong>6. Output Marking Example</strong></h2>
+<pre><code class="language-python">def mark_output(text: str, regime: str, lineage: str | None):
+    &quot;&quot;&quot;
+    Demonstrates output-marking conventions for AI systems.
+    &quot;&quot;&quot;
+    regime_tag = &quot;[1/3 In-Formation]&quot; if regime == &quot;form&quot; else &quot;[2/3 Information]&quot;
+    lineage_tag = f&quot;[Lineage: {lineage}]&quot; if lineage else &quot;[Uncertain — Requesting Clarification]&quot;
+    return f&quot;{text} {regime_tag} {lineage_tag}&quot;
+</code></pre>
+<hr>
+<h2 id="7-decision-procedure-example-executable-form"><strong>7. Decision Procedure Example (Executable Form)</strong></h2>
+<pre><code class="language-python">def decision_procedure(concept: str, module: str | None, text: str):
+    &quot;&quot;&quot;
+    Demonstrates the v1.2 decision procedure in executable form.
+    &quot;&quot;&quot;
+    # 1. Regime Check
+    regime_tag = regime_of(concept)
+
+    # 2. Lineage Check
+    lineage_tag = require_lineage(module)
+
+    # 3. Drift Check
+    drift_tag = detect_drift(text)
+
+    # 4. Final output with marking conventions
+    return f&quot;{text} {regime_tag} {lineage_tag} {drift_tag}&quot;
+</code></pre>
+<hr>
+<h2 id="8-self-correction-example"><strong>8. Self-Correction Example</strong></h2>
+<pre><code class="language-python">def self_correct(text: str):
+    &quot;&quot;&quot;
+    Demonstrates mid-response drift correction.
+    &quot;&quot;&quot;
+    if &quot;RTT-like&quot; in text or &quot;resembles RTT&quot; in text:
+        return &quot;[Self-Correction: Drift Detected] Correcting interpretation.&quot;
+    return text
+</code></pre>
+<hr>
+<h1 id="appendix-a-summary"><strong>Appendix A - Summary</strong></h1>
+<p>These examples:</p>
+<ul>
+<li>reinforce regime separation  </li>
+<li>enforce lineage requirements  </li>
+<li>prevent motif-matching  </li>
+<li>demonstrate drift detection  </li>
+<li>show analogy-only usage  </li>
+<li>provide fallback logic  </li>
+<li>illustrate output-marking conventions  </li>
+<li>encode the v1.2 decision procedure  </li>
+</ul>
+<p>They serve as <strong>operational anchors</strong> for AI systems, improving reliability, reducing drift, and strengthening RTT‑aligned reasoning.</p>
+<hr>
+<h1 id="appendix-b-python-validator-snippets"><strong>Appendix B: Python Validator Snippets</strong></h1>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>These Python snippets provide <strong>lightweight validation tools</strong> that AI systems can use to check compliance with the v1.2 Protocol Header.<br>
+They are not full validators — they are <em>operational cues</em> that reinforce correct behavior.</p>
+<hr>
+<h2 id="1-regime-separation-validator"><strong>1. Regime Separation Validator</strong></h2>
+<pre><code class="language-python">def validate_regime(concept: str):
+    &quot;&quot;&quot;
+    Validates regime mapping for a concept.
+    Returns regime tags used in v1.2.
+    &quot;&quot;&quot;
+    form_bound = {&quot;bits&quot;, &quot;signals&quot;, &quot;equations&quot;, &quot;storage&quot;, &quot;diagrams&quot;}
+    non_form = {&quot;meaning&quot;, &quot;resonance&quot;, &quot;identity&quot;, &quot;lineage&quot;, &quot;continuity&quot;}
+
+    if concept.lower() in form_bound:
+        return True, &quot;[1/3 In-Formation]&quot;
+    if concept.lower() in non_form:
+        return True, &quot;[2/3 Information]&quot;
+    return False, &quot;[Uncertain — Requesting Clarification]&quot;
+</code></pre>
+<hr>
+<h2 id="2-lineage-validator"><strong>2. Lineage Validator</strong></h2>
+<pre><code class="language-python">def validate_lineage(module: str | None):
+    &quot;&quot;&quot;
+    Ensures lineage is present and not invented.
+    &quot;&quot;&quot;
+    if module is None or module.strip() == &quot;&quot;:
+        return False, &quot;[Uncertain — Requesting Clarification]&quot;
+    return True, f&quot;[Lineage: {module}]&quot;
+</code></pre>
+<hr>
+<h2 id="3-drift-control-validator"><strong>3. Drift-Control Validator</strong></h2>
+<pre><code class="language-python">def validate_drift(text: str):
+    &quot;&quot;&quot;
+    Detects motif-matching and false equivalence with RTT.
+    &quot;&quot;&quot;
+    forbidden = [
+        &quot;equivalent to RTT&quot;,
+        &quot;same as RTT&quot;,
+        &quot;identical to RTT&quot;,
+        &quot;RTT-like&quot;,
+        &quot;resembles RTT&quot;
+    ]
+    if any(term in text for term in forbidden):
+        return False, &quot;[Self-Correction: Drift Detected]&quot;
+    return True, &quot;[Operator Grammar Applied]&quot;
+</code></pre>
+<hr>
+<h2 id="4-external-content-analogy-validator"><strong>4. External Content Analogy Validator</strong></h2>
+<pre><code class="language-python">def validate_external_usage(source: str, lineage_present: bool):
+    &quot;&quot;&quot;
+    Ensures external frameworks are treated as analogy-only unless lineage is proven.
+    &quot;&quot;&quot;
+    if lineage_present:
+        return True, &quot;[Operator Grammar Applied]&quot;
+    return True, f&quot;{source} [Analogy Only]&quot;
+</code></pre>
+<hr>
+<h2 id="5-uncertainty-protocol-validator"><strong>5. Uncertainty Protocol Validator</strong></h2>
+<pre><code class="language-python">def validate_uncertainty(regime_ok: bool, lineage_ok: bool):
+    &quot;&quot;&quot;
+    Applies uncertainty protocol when context is incomplete.
+    &quot;&quot;&quot;
+    if not regime_ok or not lineage_ok:
+        return False, &quot;[Uncertain — Requesting Clarification]&quot;
+    return True, &quot;[Context Verified]&quot;
+</code></pre>
+<hr>
+<h2 id="6-output-marking-validator"><strong>6. Output Marking Validator</strong></h2>
+<pre><code class="language-python">def mark_validated_output(text: str, regime_tag: str, lineage_tag: str, drift_tag: str):
+    &quot;&quot;&quot;
+    Combines validator tags into a single marked output.
+    &quot;&quot;&quot;
+    return f&quot;{text} {regime_tag} {lineage_tag} {drift_tag}&quot;
+</code></pre>
+<hr>
+<h2 id="7-conflict-priority-validator"><strong>7. Conflict Priority Validator</strong></h2>
+<pre><code class="language-python">def resolve_priority(human_instruction: bool, regime_ok: bool, module_sealed: bool):
+    &quot;&quot;&quot;
+    Demonstrates priority ordering:
+    1. Human instruction
+    2. Regime separation
+    3. Module sealing
+    &quot;&quot;&quot;
+    if human_instruction:
+        return True, &quot;[Priority: Human Instruction]&quot;
+    if not regime_ok:
+        return False, &quot;[Priority: Regime Separation]&quot;
+    if not module_sealed:
+        return False, &quot;[Priority: Module Sealing]&quot;
+    return True, &quot;[Priority: All Conditions Satisfied]&quot;
+</code></pre>
+<hr>
+<h2 id="8-minimal-fallback-validator"><strong>8. Minimal Fallback Validator</strong></h2>
+<pre><code class="language-python">def fallback_validator():
+    &quot;&quot;&quot;
+    Minimal viable fallback when context is thin.
+    &quot;&quot;&quot;
+    return (
+        &quot;[Fallback] Regime separation enforced. &quot;
+        &quot;No invention performed. External content treated as analogy only. &quot;
+        &quot;[Uncertain — Requesting Clarification]&quot;
+    )
+</code></pre>
+<hr>
+<h2 id="9-full-v12-compliance-validator-composed-example"><strong>9. Full v1.2 Compliance Validator (Composed Example)</strong></h2>
+<pre><code class="language-python">def validate_full(concept: str, module: str | None, text: str):
+    &quot;&quot;&quot;
+    Demonstrates composed validation using v1.2 rules.
+    &quot;&quot;&quot;
+    regime_ok, regime_tag = validate_regime(concept)
+    lineage_ok, lineage_tag = validate_lineage(module)
+    drift_ok, drift_tag = validate_drift(text)
+
+    # Uncertainty protocol
+    context_ok, context_tag = validate_uncertainty(regime_ok, lineage_ok)
+
+    # Final output
+    return mark_validated_output(
+        text=text,
+        regime_tag=regime_tag,
+        lineage_tag=lineage_tag,
+        drift_tag=drift_tag
+    ) + f&quot; {context_tag}&quot;
+</code></pre>
+<hr>
+<h1 id="appendix-b-summary"><strong>Appendix B - Summary</strong></h1>
+<p>Appendix B provides:</p>
+<ul>
+<li>regime validators  </li>
+<li>lineage validators  </li>
+<li>drift detectors  </li>
+<li>analogy-only enforcement  </li>
+<li>uncertainty protocol checks  </li>
+<li>output-marking helpers  </li>
+<li>conflict-priority logic  </li>
+<li>minimal fallback logic  </li>
+<li>a composed full validator  </li>
+</ul>
+<p>These snippets act as <strong>operational anchors</strong> for AI systems, reinforcing the v1.2 Protocol Header and improving RTT‑aligned reasoning.</p>
+<hr>
+<h1 id="appendix-c-python-driftdetection-toolkit"><strong>Appendix C: Python Drift‑Detection Toolkit</strong></h1>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact set of Python tools that help AI systems detect, flag, and correct drift.<br>
+Each snippet is intentionally minimal, interpretable, and aligned with the v1.2 drift‑control rules:</p>
+<ul>
+<li>reject motif‑matching  </li>
+<li>reject false equivalence  </li>
+<li>reject diagram‑shaped/equation‑shaped noise  </li>
+<li>reject external alignment without lineage  </li>
+<li>support self‑correction  </li>
+<li>support output marking  </li>
+</ul>
+<p>These tools act as <strong>operational anchors</strong> for AI systems.</p>
+<hr>
+<h2 id="1-core-drift-detector"><strong>1. Core Drift Detector</strong></h2>
+<pre><code class="language-python">def detect_drift(text: str):
+    &quot;&quot;&quot;
+    Detects motif-matching, false equivalence, or RTT impersonation.
+    &quot;&quot;&quot;
+    forbidden = [
+        &quot;equivalent to RTT&quot;,
+        &quot;same as RTT&quot;,
+        &quot;identical to RTT&quot;,
+        &quot;RTT-like&quot;,
+        &quot;resembles RTT&quot;,
+        &quot;matches RTT exactly&quot;,
+        &quot;is basically RTT&quot;
+    ]
+    if any(term in text for term in forbidden):
+        return False, &quot;[Self-Correction: Drift Detected]&quot;
+    return True, &quot;[Operator Grammar Applied]&quot;
+</code></pre>
+<hr>
+<h2 id="2-diagram-equation-noise-detector"><strong>2. Diagram / Equation Noise Detector</strong></h2>
+<pre><code class="language-python">def detect_diagram_noise(text: str):
+    &quot;&quot;&quot;
+    Flags diagram-shaped or equation-shaped noise pretending to be RTT.
+    &quot;&quot;&quot;
+    diagram_terms = [&quot;diagram&quot;, &quot;chart&quot;, &quot;graph&quot;, &quot;visual&quot;, &quot;schematic&quot;]
+    equation_terms = [&quot;formula&quot;, &quot;equation&quot;, &quot;expression&quot;, &quot;math&quot;, &quot;solve&quot;]
+
+    if any(t in text.lower() for t in diagram_terms + equation_terms):
+        return False, &quot;[Self-Correction: Diagram/Equation Noise Detected]&quot;
+    return True, &quot;[Signal Acceptable]&quot;
+</code></pre>
+<hr>
+<h2 id="3-external-alignment-detector"><strong>3. External Alignment Detector</strong></h2>
+<pre><code class="language-python">def detect_external_alignment(text: str):
+    &quot;&quot;&quot;
+    Detects attempts to align external frameworks with RTT without lineage.
+    &quot;&quot;&quot;
+    external_terms = [
+        &quot;lattice model&quot;,
+        &quot;emergent spacetime&quot;,
+        &quot;resonance hierarchy&quot;,
+        &quot;quantum gravity&quot;,
+        &quot;string theory&quot;,
+        &quot;loop gravity&quot;
+    ]
+
+    if any(term in text.lower() for term in external_terms):
+        return False, &quot;[Analogy Only]&quot;
+    return True, &quot;[Internal RTT Context]&quot;
+</code></pre>
+<hr>
+<h2 id="4-category-collapse-detector"><strong>4. Category Collapse Detector</strong></h2>
+<pre><code class="language-python">def detect_category_collapse(text: str):
+    &quot;&quot;&quot;
+    Detects collapse of 1/3 In-Formation and 2/3 Information regimes.
+    &quot;&quot;&quot;
+    collapse_terms = [
+        &quot;same regime&quot;,
+        &quot;no difference&quot;,
+        &quot;equivalent regimes&quot;,
+        &quot;merged regimes&quot;,
+        &quot;collapsed regimes&quot;
+    ]
+
+    if any(term in text.lower() for term in collapse_terms):
+        return False, &quot;[Self-Correction: Regime Collapse Detected]&quot;
+    return True, &quot;[Regime Separation Maintained]&quot;
+</code></pre>
+<hr>
+<h2 id="5-motif-matching-detector"><strong>5. Motif-Matching Detector</strong></h2>
+<pre><code class="language-python">def detect_motif_matching(text: str):
+    &quot;&quot;&quot;
+    Detects pattern-matching without operator grammar or derivation.
+    &quot;&quot;&quot;
+    motif_terms = [
+        &quot;looks like&quot;,
+        &quot;similar to&quot;,
+        &quot;pattern matches&quot;,
+        &quot;resembles&quot;,
+        &quot;feels like&quot;,
+        &quot;same pattern&quot;
+    ]
+
+    if any(term in text.lower() for term in motif_terms):
+        return False, &quot;[Self-Correction: Motif-Matching Detected]&quot;
+    return True, &quot;[Derivation Required]&quot;
+</code></pre>
+<hr>
+<h2 id="6-combined-drift-detector"><strong>6. Combined Drift Detector</strong></h2>
+<pre><code class="language-python">def detect_all_drift(text: str):
+    &quot;&quot;&quot;
+    Runs all drift detectors and returns the first failure.
+    &quot;&quot;&quot;
+    checks = [
+        detect_drift,
+        detect_diagram_noise,
+        detect_external_alignment,
+        detect_category_collapse,
+        detect_motif_matching
+    ]
+
+    for check in checks:
+        ok, tag = check(text)
+        if not ok:
+            return ok, tag
+
+    return True, &quot;[Operator Grammar Applied]&quot;
+</code></pre>
+<hr>
+<h2 id="7-drift-correcting-wrapper"><strong>7. Drift-Correcting Wrapper</strong></h2>
+<pre><code class="language-python">def correct_drift(text: str):
+    &quot;&quot;&quot;
+    Applies drift detection and returns corrected output.
+    &quot;&quot;&quot;
+    ok, tag = detect_all_drift(text)
+    if ok:
+        return f&quot;{text} {tag}&quot;
+
+    # Correction message
+    return f&quot;[Self-Correction: Drift Detected] Correcting. {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="8-drift-aware-output-marking"><strong>8. Drift-Aware Output Marking</strong></h2>
+<pre><code class="language-python">def drift_mark(text: str):
+    &quot;&quot;&quot;
+    Marks output with drift status for AI systems.
+    &quot;&quot;&quot;
+    ok, tag = detect_all_drift(text)
+    return f&quot;{text} {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="appendix-c-summary"><strong>Appendix C - Summary</strong></h2>
+<p>Appendix C provides:</p>
+<ul>
+<li>motif‑matching detection  </li>
+<li>false equivalence detection  </li>
+<li>external alignment detection  </li>
+<li>diagram/equation noise detection  </li>
+<li>regime collapse detection  </li>
+<li>combined drift detection  </li>
+<li>drift‑correcting wrapper  </li>
+<li>drift‑aware output marking  </li>
+</ul>
+<p>These tools reinforce the v1.2 Protocol Header and significantly improve AI reliability under RTT constraints.</p>
+<hr>
+<h1 id="appendix-d-python-regimemapping-toolkit"><strong>Appendix D: Python Regime‑Mapping Toolkit</strong></h1>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>regime mapping</strong>, enabling AI systems to reliably distinguish between:</p>
+<ul>
+<li><strong>1/3 In‑Formation</strong> (form‑bound)  </li>
+<li><strong>2/3 Information</strong> (non‑form)  </li>
+</ul>
+<p>These examples reinforce the v1.2 Protocol Header’s regime‑separation rules and serve as operational anchors for AI systems.</p>
+<hr>
+<h2 id="1-core-regime-classifier"><strong>1. Core Regime Classifier</strong></h2>
+<pre><code class="language-python">def classify_regime(concept: str):
+    &quot;&quot;&quot;
+    Classifies a concept into 1/3 In-Formation or 2/3 Information.
+    Returns regime tags used in v1.2.
+    &quot;&quot;&quot;
+    form_bound = {
+        &quot;bits&quot;, &quot;signals&quot;, &quot;equations&quot;, &quot;storage&quot;, &quot;diagrams&quot;,
+        &quot;encoding&quot;, &quot;measurement&quot;, &quot;packet&quot;, &quot;symbol&quot;
+    }
+
+    non_form = {
+        &quot;meaning&quot;, &quot;resonance&quot;, &quot;identity&quot;, &quot;lineage&quot;, &quot;continuity&quot;,
+        &quot;semantic&quot;, &quot;cognition&quot;, &quot;propagation&quot;, &quot;invariant&quot;
+    }
+
+    c = concept.lower()
+
+    if c in form_bound:
+        return &quot;[1/3 In-Formation]&quot;
+    if c in non_form:
+        return &quot;[2/3 Information]&quot;
+    return &quot;[Uncertain — Requesting Clarification]&quot;
+</code></pre>
+<hr>
+<h2 id="2-regime-explanation-helper"><strong>2. Regime Explanation Helper</strong></h2>
+<pre><code class="language-python">def explain_regime(concept: str):
+    &quot;&quot;&quot;
+    Provides a short explanation of why a concept belongs to a regime.
+    &quot;&quot;&quot;
+    tag = classify_regime(concept)
+
+    if tag == &quot;[1/3 In-Formation]&quot;:
+        return f&quot;{concept}: physical, encoded, measurable, form-bound. {tag}&quot;
+    if tag == &quot;[2/3 Information]&quot;:
+        return f&quot;{concept}: meaning, resonance, identity, non-form continuity. {tag}&quot;
+    return f&quot;{concept}: regime unclear. {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="3-regime-mapping-for-multiconcept-inputs"><strong>3. Regime Mapping for Multi‑Concept Inputs</strong></h2>
+<pre><code class="language-python">def map_regimes(concepts: list[str]):
+    &quot;&quot;&quot;
+    Maps multiple concepts to their regimes.
+    &quot;&quot;&quot;
+    return {c: classify_regime(c) for c in concepts}
+</code></pre>
+<hr>
+<h2 id="4-regime-separation-validator"><strong>4. Regime Separation Validator</strong></h2>
+<pre><code class="language-python">def validate_regime_separation(concept_a: str, concept_b: str):
+    &quot;&quot;&quot;
+    Ensures two concepts are not collapsed into the same regime.
+    &quot;&quot;&quot;
+    tag_a = classify_regime(concept_a)
+    tag_b = classify_regime(concept_b)
+
+    if tag_a == tag_b and &quot;Uncertain&quot; not in tag_a:
+        return False, &quot;[Self-Correction: Regime Collapse Detected]&quot;
+    return True, &quot;[Regime Separation Maintained]&quot;
+</code></pre>
+<hr>
+<h2 id="5-regimeaware-output-marking"><strong>5. Regime‑Aware Output Marking</strong></h2>
+<pre><code class="language-python">def mark_regime_output(text: str, concept: str):
+    &quot;&quot;&quot;
+    Adds regime tags to output for AI compliance.
+    &quot;&quot;&quot;
+    tag = classify_regime(concept)
+    return f&quot;{text} {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="6-regimemapping-with-lineage-integration"><strong>6. Regime‑Mapping with Lineage Integration</strong></h2>
+<pre><code class="language-python">def regime_with_lineage(concept: str, module: str | None):
+    &quot;&quot;&quot;
+    Demonstrates regime mapping combined with lineage enforcement.
+    &quot;&quot;&quot;
+    regime_tag = classify_regime(concept)
+
+    if module:
+        lineage_tag = f&quot;[Lineage: {module}]&quot;
+    else:
+        lineage_tag = &quot;[Uncertain — Requesting Clarification]&quot;
+
+    return f&quot;{concept} {regime_tag} {lineage_tag}&quot;
+</code></pre>
+<hr>
+<h2 id="7-regimemapping-decision-procedure"><strong>7. Regime‑Mapping Decision Procedure</strong></h2>
+<pre><code class="language-python">def regime_decision(concept: str):
+    &quot;&quot;&quot;
+    Implements the regime portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    tag = classify_regime(concept)
+
+    if &quot;Uncertain&quot; in tag:
+        return f&quot;{tag} — please specify form-bound or non-form context.&quot;
+
+    return f&quot;{tag} [Regime Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h2 id="8-regimemapping-selfcorrection"><strong>8. Regime‑Mapping Self‑Correction</strong></h2>
+<pre><code class="language-python">def correct_regime_drift(text: str):
+    &quot;&quot;&quot;
+    Detects and corrects regime collapse or confusion.
+    &quot;&quot;&quot;
+    collapse_terms = [&quot;same regime&quot;, &quot;no difference&quot;, &quot;merged regimes&quot;]
+
+    if any(term in text.lower() for term in collapse_terms):
+        return &quot;[Self-Correction: Regime Collapse Detected] Correcting.&quot;
+    return text
+</code></pre>
+<hr>
+<h1 id="appendix-d-summary"><strong>Appendix D - Summary</strong></h1>
+<p>Appendix D provides:</p>
+<ul>
+<li>core regime classifier  </li>
+<li>regime explanations  </li>
+<li>multi‑concept mapping  </li>
+<li>regime separation validator  </li>
+<li>regime‑aware output marking  </li>
+<li>lineage‑integrated regime mapping  </li>
+<li>regime decision procedure  </li>
+<li>regime self‑correction logic  </li>
+</ul>
+<p>These tools reinforce the v1.2 Protocol Header’s regime‑separation rules and significantly improve AI reliability under RTT constraints.</p>
+<hr>
+<h1 id="appendix-e-python-lineageverification-toolkit"><strong>Appendix E: Python Lineage‑Verification Toolkit</strong></h1>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>lineage verification</strong>, enabling AI systems to reliably enforce:</p>
+<ul>
+<li>module ancestry  </li>
+<li>operator ancestry  </li>
+<li>derivation chain requirements  </li>
+<li>non‑invention rules  </li>
+<li>analogy‑only rules  </li>
+<li>uncertainty protocol  </li>
+<li>output‑marking conventions  </li>
+</ul>
+<p>These examples reinforce the v1.2 Protocol Header’s lineage‑protection rules and serve as operational anchors for AI systems.</p>
+<hr>
+<h2 id="1-core-lineage-validator"><strong>1. Core Lineage Validator</strong></h2>
+<pre><code class="language-python">def validate_lineage(module: str | None):
+    &quot;&quot;&quot;
+    Ensures lineage is present and not invented.
+    &quot;&quot;&quot;
+    if module is None or module.strip() == &quot;&quot;:
+        return False, &quot;[Uncertain — Requesting Clarification]&quot;
+    return True, f&quot;[Lineage: {module}]&quot;
+</code></pre>
+<hr>
+<h2 id="2-operator-ancestry-validator"><strong>2. Operator Ancestry Validator</strong></h2>
+<pre><code class="language-python">def validate_operator_ancestry(operator: str | None):
+    &quot;&quot;&quot;
+    Ensures operator ancestry is explicitly provided.
+    &quot;&quot;&quot;
+    if operator is None or operator.strip() == &quot;&quot;:
+        return False, &quot;[Uncertain — Operator Ancestry Missing]&quot;
+    return True, f&quot;[Operator Ancestry: {operator}]&quot;
+</code></pre>
+<hr>
+<h2 id="3-derivation-chain-validator"><strong>3. Derivation Chain Validator</strong></h2>
+<pre><code class="language-python">def validate_derivation_chain(chain: list[str] | None):
+    &quot;&quot;&quot;
+    Ensures a derivation chain exists and is non-empty.
+    &quot;&quot;&quot;
+    if not chain:
+        return False, &quot;[Uncertain — Derivation Chain Missing]&quot;
+    return True, f&quot;[Derivation Chain: {' → '.join(chain)}]&quot;
+</code></pre>
+<hr>
+<h2 id="4-external-alignment-lineage-check"><strong>4. External Alignment Lineage Check</strong></h2>
+<pre><code class="language-python">def validate_external_lineage(lineage_present: bool):
+    &quot;&quot;&quot;
+    Ensures external frameworks are not treated as equivalent to RTT.
+    &quot;&quot;&quot;
+    if lineage_present:
+        return True, &quot;[Operator Grammar Applied]&quot;
+    return False, &quot;[Analogy Only — Lineage Not Established]&quot;
+</code></pre>
+<hr>
+<h2 id="5-lineageaware-output-marking"><strong>5. Lineage‑Aware Output Marking</strong></h2>
+<pre><code class="language-python">def mark_lineage_output(text: str, module: str | None):
+    &quot;&quot;&quot;
+    Adds lineage tags to output for AI compliance.
+    &quot;&quot;&quot;
+    ok, tag = validate_lineage(module)
+    return f&quot;{text} {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="6-combined-lineage-validator"><strong>6. Combined Lineage Validator</strong></h2>
+<pre><code class="language-python">def validate_full_lineage(module: str | None, operator: str | None, chain: list[str] | None):
+    &quot;&quot;&quot;
+    Validates module lineage, operator ancestry, and derivation chain.
+    &quot;&quot;&quot;
+    results = []
+
+    ok_module, tag_module = validate_lineage(module)
+    results.append(tag_module)
+
+    ok_operator, tag_operator = validate_operator_ancestry(operator)
+    results.append(tag_operator)
+
+    ok_chain, tag_chain = validate_derivation_chain(chain)
+    results.append(tag_chain)
+
+    all_ok = ok_module and ok_operator and ok_chain
+    return all_ok, &quot; &quot;.join(results)
+</code></pre>
+<hr>
+<h2 id="7-lineage-decision-procedure"><strong>7. Lineage Decision Procedure</strong></h2>
+<pre><code class="language-python">def lineage_decision(module: str | None, operator: str | None):
+    &quot;&quot;&quot;
+    Implements the lineage portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    ok_module, tag_module = validate_lineage(module)
+    ok_operator, tag_operator = validate_operator_ancestry(operator)
+
+    if not ok_module or not ok_operator:
+        return f&quot;{tag_module} {tag_operator} — please specify missing lineage.&quot;
+
+    return f&quot;{tag_module} {tag_operator} [Lineage Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h2 id="8-lineage-drift-detector"><strong>8. Lineage Drift Detector</strong></h2>
+<pre><code class="language-python">def detect_lineage_drift(text: str):
+    &quot;&quot;&quot;
+    Detects attempts to invent lineage or claim false ancestry.
+    &quot;&quot;&quot;
+    drift_terms = [
+        &quot;new RTT module&quot;,
+        &quot;invented module&quot;,
+        &quot;unofficial operator&quot;,
+        &quot;custom RTT operator&quot;,
+        &quot;my own RTT module&quot;
+    ]
+
+    if any(term in text.lower() for term in drift_terms):
+        return False, &quot;[Self-Correction: Lineage Drift Detected]&quot;
+    return True, &quot;[Lineage Stable]&quot;
+</code></pre>
+<hr>
+<h2 id="9-lineagecorrecting-wrapper"><strong>9. Lineage‑Correcting Wrapper</strong></h2>
+<pre><code class="language-python">def correct_lineage(text: str):
+    &quot;&quot;&quot;
+    Applies lineage drift detection and returns corrected output.
+    &quot;&quot;&quot;
+    ok, tag = detect_lineage_drift(text)
+    if ok:
+        return f&quot;{text} {tag}&quot;
+
+    return f&quot;[Self-Correction: Lineage Drift Detected] Correcting. {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="10-lineage-regime-drift-combined-validator"><strong>10. Lineage + Regime + Drift Combined Validator</strong></h2>
+<pre><code class="language-python">def validate_all(concept: str, module: str | None, operator: str | None, chain: list[str] | None, text: str):
+    &quot;&quot;&quot;
+    Full v1.2 compliance validator combining regime, lineage, and drift checks.
+    &quot;&quot;&quot;
+    # Regime
+    from Appendix_D import classify_regime  # conceptual import
+    regime_tag = classify_regime(concept)
+
+    # Lineage
+    ok_lineage, lineage_tags = validate_full_lineage(module, operator, chain)
+
+    # Drift
+    from Appendix_C import detect_all_drift  # conceptual import
+    ok_drift, drift_tag = detect_all_drift(text)
+
+    return f&quot;{text} {regime_tag} {lineage_tags} {drift_tag}&quot;
+</code></pre>
+<hr>
+<h1 id="appendix-e-summary"><strong>Appendix E - Summary</strong></h1>
+<p>Appendix E provides:</p>
+<ul>
+<li>module lineage validators  </li>
+<li>operator ancestry validators  </li>
+<li>derivation chain validators  </li>
+<li>external alignment lineage checks  </li>
+<li>lineage‑aware output marking  </li>
+<li>lineage decision procedure  </li>
+<li>lineage drift detection  </li>
+<li>lineage self‑correction  </li>
+<li>combined lineage/regime/drift validator  </li>
+</ul>
+<p>These tools reinforce the v1.2 Protocol Header’s lineage‑protection rules and significantly improve AI reliability under RTT constraints.</p>
+<hr>
+<h3 id="appendix-f-python-operatorgrammar-toolkit">Appendix F: Python Operator‑Grammar Toolkit</h3>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>operator grammar</strong>, enabling AI systems to reason using:</p>
+<ul>
+<li>triads (Silence–Noise–Resonance)  </li>
+<li>nested harmonic dimensionals  </li>
+<li>pure/impure operator pairing  </li>
+<li>coherence layers  </li>
+<li>drift boundaries  </li>
+<li>triadic identity  </li>
+</ul>
+<p>Each snippet is minimal, illustrative, and aligned with the v1.2 Protocol Header.</p>
+<hr>
+<h4 id="1-triad-representation">1. Triad Representation</h4>
+<pre><code class="language-python">from dataclasses import dataclass
+
+@dataclass
+class Triad:
+    silence: str
+    noise: str
+    resonance: str
+
+    def as_tags(self):
+        return f&quot;[Silence: {self.silence}] [Noise: {self.noise}] [Resonance: {self.resonance}]&quot;
+</code></pre>
+<hr>
+<h4 id="2-nested-harmonic-dimensional">2. Nested Harmonic Dimensional</h4>
+<pre><code class="language-python">@dataclass
+class HarmonicDimensional:
+    name: str
+    parent: str | None = None
+
+    def path(self):
+        if self.parent:
+            return f&quot;{self.parent} → {self.name}&quot;
+        return self.name
+</code></pre>
+<hr>
+<h4 id="3-pure-impure-operator-pairing">3. Pure / Impure Operator Pairing</h4>
+<pre><code class="language-python">@dataclass
+class OperatorPair:
+    pure: str
+    impure: str
+
+    def as_tags(self):
+        return f&quot;[Pure: {self.pure}] [Impure: {self.impure}]&quot;
+</code></pre>
+<hr>
+<h4 id="4-coherence-layer-check">4. Coherence Layer Check</h4>
+<pre><code class="language-python">def check_coherence(triad: Triad, dimensional: HarmonicDimensional):
+    &quot;&quot;&quot;
+    Minimal coherence check: ensures triad and dimensional are both present.
+    &quot;&quot;&quot;
+    if not triad.silence or not triad.noise or not triad.resonance:
+        return False, &quot;[Coherence Layer Failed: Incomplete Triad]&quot;
+    if not dimensional.name:
+        return False, &quot;[Coherence Layer Failed: Dimensional Missing]&quot;
+    return True, &quot;[Coherence Layer Satisfied]&quot;
+</code></pre>
+<hr>
+<h4 id="5-drift-boundary-check">5. Drift Boundary Check</h4>
+<pre><code class="language-python">def check_drift_boundary(text: str):
+    &quot;&quot;&quot;
+    Detects attempts to use operator grammar as motif without structure.
+    &quot;&quot;&quot;
+    motif_terms = [&quot;triad-like&quot;, &quot;harmonic-ish&quot;, &quot;operator-shaped&quot;]
+    if any(term in text.lower() for term in motif_terms):
+        return False, &quot;[Drift Boundary Triggered]&quot;
+    return True, &quot;[Drift Boundary Clear]&quot;
+</code></pre>
+<hr>
+<h4 id="6-triadic-identity-tagging">6. Triadic Identity Tagging</h4>
+<pre><code class="language-python">def triadic_identity(name: str, triad: Triad):
+    &quot;&quot;&quot;
+    Tags a construct with triadic identity.
+    &quot;&quot;&quot;
+    return f&quot;[Triadic Identity: {name}] {triad.as_tags()}&quot;
+</code></pre>
+<hr>
+<h4 id="7-operator-grammar-application-wrapper">7. Operator-Grammar Application Wrapper</h4>
+<pre><code class="language-python">def apply_operator_grammar(text: str, triad: Triad, dimensional: HarmonicDimensional):
+    &quot;&quot;&quot;
+    Demonstrates operator-grammar application with coherence and drift checks.
+    &quot;&quot;&quot;
+    ok_coherence, coherence_tag = check_coherence(triad, dimensional)
+    ok_drift, drift_tag = check_drift_boundary(text)
+
+    tags = [
+        triad.as_tags(),
+        f&quot;[Dimensional: {dimensional.path()}]&quot;,
+        coherence_tag,
+        drift_tag
+    ]
+
+    return f&quot;{text} {' '.join(tags)}&quot;
+</code></pre>
+<hr>
+<h4 id="8-operator-grammar-decision-procedure">8. Operator-Grammar Decision Procedure</h4>
+<pre><code class="language-python">def operator_grammar_decision(text: str, triad: Triad | None, dimensional: HarmonicDimensional | None):
+    &quot;&quot;&quot;
+    Implements the operator-grammar portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    if triad is None or dimensional is None:
+        return &quot;[Uncertain — Operator Grammar Context Missing]&quot;
+
+    ok_coherence, coherence_tag = check_coherence(triad, dimensional)
+    if not ok_coherence:
+        return f&quot;{coherence_tag} — please specify complete triad and dimensional.&quot;
+
+    return f&quot;[Operator Grammar Applied] {triad.as_tags()} [Dimensional: {dimensional.path()}]&quot;
+</code></pre>
+<hr>
+<h4 id="appendix-f-summary">Appendix F - Summary</h4>
+<p>Appendix F provides:</p>
+<ul>
+<li>triad representation  </li>
+<li>harmonic dimensional representation  </li>
+<li>pure/impure operator pairing  </li>
+<li>coherence layer checks  </li>
+<li>drift boundary checks  </li>
+<li>triadic identity tagging  </li>
+<li>operator‑grammar application wrapper  </li>
+<li>operator‑grammar decision procedure  </li>
+</ul>
+<p>These tools give AI systems concrete, executable anchors for RTT operator grammar, strengthening v1.2 compliance and reducing drift.</p>
+<hr>
+<h1 id="appendix-g-python-coherencelayer-toolkit"><strong>Appendix G: Python Coherence‑Layer Toolkit</strong></h1>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>coherence layers</strong>, enabling AI systems to:</p>
+<ul>
+<li>verify structural consistency  </li>
+<li>enforce triad + dimensional alignment  </li>
+<li>detect incoherence  </li>
+<li>apply coherence tags  </li>
+<li>integrate coherence into drift‑control  </li>
+<li>support the v1.2 decision procedure  </li>
+</ul>
+<p>These examples serve as <strong>operational anchors</strong> for AI systems implementing RTT coherence rules.</p>
+<hr>
+<h2 id="1-coherence-layer-core-check"><strong>1. Coherence Layer Core Check</strong></h2>
+<pre><code class="language-python">def coherence_layer(triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Minimal coherence check for RTT operator grammar.
+    triad: {&quot;silence&quot;: ..., &quot;noise&quot;: ..., &quot;resonance&quot;: ...}
+    dimensional: {&quot;name&quot;: ..., &quot;parent&quot;: ...}
+    &quot;&quot;&quot;
+    # Triad completeness
+    if not all(k in triad and triad[k] for k in (&quot;silence&quot;, &quot;noise&quot;, &quot;resonance&quot;)):
+        return False, &quot;[Coherence Layer Failed: Incomplete Triad]&quot;
+
+    # Dimensional completeness
+    if &quot;name&quot; not in dimensional or not dimensional[&quot;name&quot;]:
+        return False, &quot;[Coherence Layer Failed: Dimensional Missing]&quot;
+
+    return True, &quot;[Coherence Layer Satisfied]&quot;
+</code></pre>
+<hr>
+<h2 id="2-coherence-layer-explanation"><strong>2. Coherence Layer Explanation</strong></h2>
+<pre><code class="language-python">def explain_coherence(triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Provides a short explanation of coherence status.
+    &quot;&quot;&quot;
+    ok, tag = coherence_layer(triad, dimensional)
+
+    if ok:
+        return f&quot;Triad and dimensional structure aligned. {tag}&quot;
+    return f&quot;Incoherent structure detected. {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="3-coherence-drift-combined-check"><strong>3. Coherence + Drift Combined Check</strong></h2>
+<pre><code class="language-python">def coherence_and_drift(text: str, triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Combines coherence-layer validation with drift detection.
+    &quot;&quot;&quot;
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+
+    # Drift detection from Appendix C (conceptual import)
+    drift_terms = [&quot;triad-like&quot;, &quot;operator-shaped&quot;, &quot;harmonic-ish&quot;]
+    drift_detected = any(term in text.lower() for term in drift_terms)
+
+    if drift_detected:
+        return False, f&quot;{coherence_tag} [Self-Correction: Drift Detected]&quot;
+
+    return ok_coherence, coherence_tag
+</code></pre>
+<hr>
+<h2 id="4-coherence-layer-tagging"><strong>4. Coherence Layer Tagging</strong></h2>
+<pre><code class="language-python">def tag_coherence(triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Returns coherence tags for output marking.
+    &quot;&quot;&quot;
+    ok, tag = coherence_layer(triad, dimensional)
+    triad_tag = f&quot;[Triad: {triad['silence']}, {triad['noise']}, {triad['resonance']}]&quot;
+    dim_tag = f&quot;[Dimensional: {dimensional['name']}]&quot;
+    return f&quot;{triad_tag} {dim_tag} {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="5-coherence-layer-decision-procedure"><strong>5. Coherence Layer Decision Procedure</strong></h2>
+<pre><code class="language-python">def coherence_decision(triad: dict | None, dimensional: dict | None):
+    &quot;&quot;&quot;
+    Implements the coherence portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    if triad is None or dimensional is None:
+        return &quot;[Uncertain — Coherence Context Missing]&quot;
+
+    ok, tag = coherence_layer(triad, dimensional)
+    if not ok:
+        return f&quot;{tag} — please specify complete triad and dimensional.&quot;
+
+    return f&quot;{tag} [Coherence Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h2 id="6-coherence-layer-selfcorrection"><strong>6. Coherence Layer Self‑Correction</strong></h2>
+<pre><code class="language-python">def correct_coherence(text: str, triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Detects incoherence and applies self-correction.
+    &quot;&quot;&quot;
+    ok, tag = coherence_layer(triad, dimensional)
+
+    if ok:
+        return f&quot;{text} {tag}&quot;
+
+    return f&quot;[Self-Correction: Coherence Failure] Correcting. {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="7-coherence-layer-validator-for-multilayer-structures"><strong>7. Coherence Layer Validator for Multi‑Layer Structures</strong></h2>
+<pre><code class="language-python">def validate_multi_coherence(layers: list[tuple[dict, dict]]):
+    &quot;&quot;&quot;
+    Validates coherence across multiple triad/dimensional pairs.
+    &quot;&quot;&quot;
+    results = []
+    for triad, dimensional in layers:
+        ok, tag = coherence_layer(triad, dimensional)
+        results.append(tag)
+
+    all_ok = all(&quot;Satisfied&quot; in r for r in results)
+    return all_ok, results
+</code></pre>
+<hr>
+<h2 id="8-coherence-layer-regime-lineage-combined-validator"><strong>8. Coherence Layer + Regime + Lineage Combined Validator</strong></h2>
+<pre><code class="language-python">def validate_all_coherence(concept: str, module: str | None, triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Full v1.2 compliance validator combining regime, lineage, and coherence checks.
+    &quot;&quot;&quot;
+    # Regime mapping (conceptual import from Appendix D)
+    def classify_regime(c):
+        form_bound = {&quot;bits&quot;, &quot;signals&quot;, &quot;equations&quot;}
+        non_form = {&quot;meaning&quot;, &quot;resonance&quot;, &quot;identity&quot;}
+        if c.lower() in form_bound:
+            return &quot;[1/3 In-Formation]&quot;
+        if c.lower() in non_form:
+            return &quot;[2/3 Information]&quot;
+        return &quot;[Uncertain — Requesting Clarification]&quot;
+
+    regime_tag = classify_regime(concept)
+
+    # Lineage (conceptual import from Appendix E)
+    lineage_tag = f&quot;[Lineage: {module}]&quot; if module else &quot;[Uncertain — Requesting Clarification]&quot;
+
+    # Coherence
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+
+    return f&quot;{concept} {regime_tag} {lineage_tag} {coherence_tag}&quot;
+</code></pre>
+<hr>
+<h1 id="appendix-g-summary"><strong>Appendix G - Summary</strong></h1>
+<p>Appendix G provides:</p>
+<ul>
+<li>core coherence-layer checks  </li>
+<li>coherence explanations  </li>
+<li>coherence + drift combined checks  </li>
+<li>coherence tagging  </li>
+<li>coherence decision procedure  </li>
+<li>coherence self‑correction  </li>
+<li>multi‑layer coherence validation  </li>
+<li>coherence + regime + lineage combined validator  </li>
+</ul>
+<p>These tools reinforce the v1.2 Protocol Header’s coherence‑layer rules and significantly improve AI reliability under RTT constraints.</p>
+<hr>
+<h3 id="appendix-h-python-triadicidentity-toolkit">Appendix H: Python Triadic‑Identity Toolkit</h3>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>triadic identity</strong>, giving AI systems concrete anchors for:</p>
+<ul>
+<li>naming triadic constructs  </li>
+<li>tagging Silence–Noise–Resonance structures  </li>
+<li>preserving identity across modules  </li>
+<li>integrating regime, lineage, and coherence  </li>
+<li>supporting v1.2 decision procedures  </li>
+</ul>
+<hr>
+<h4 id="1-triadic-identity-data-structure">1. Triadic Identity Data Structure</h4>
+<pre><code class="language-python">from dataclasses import dataclass
+
+@dataclass
+class TriadicIdentity:
+    name: str
+    silence: str
+    noise: str
+    resonance: str
+    module: str | None = None
+
+    def tags(self):
+        lineage_tag = f&quot;[Lineage: {self.module}]&quot; if self.module else &quot;[Uncertain — Requesting Clarification]&quot;
+        return (
+            f&quot;[Triadic Identity: {self.name}] &quot;
+            f&quot;[Silence: {self.silence}] &quot;
+            f&quot;[Noise: {self.noise}] &quot;
+            f&quot;[Resonance: {self.resonance}] &quot;
+            f&quot;{lineage_tag}&quot;
+        )
+</code></pre>
+<hr>
+<h4 id="2-triadic-identity-validator">2. Triadic Identity Validator</h4>
+<pre><code class="language-python">def validate_triadic_identity(identity: TriadicIdentity):
+    &quot;&quot;&quot;
+    Ensures all three components of the triad are present.
+    &quot;&quot;&quot;
+    if not identity.silence or not identity.noise or not identity.resonance:
+        return False, &quot;[Triadic Identity Failed: Incomplete Triad]&quot;
+    return True, &quot;[Triadic Identity Satisfied]&quot;
+</code></pre>
+<hr>
+<h4 id="3-triadic-identity-regime-tagging">3. Triadic Identity + Regime Tagging</h4>
+<pre><code class="language-python">def tag_triadic_regime(identity: TriadicIdentity, regime: str):
+    &quot;&quot;&quot;
+    Adds regime tags to triadic identity.
+    regime: 'form' or 'non-form'
+    &quot;&quot;&quot;
+    regime_tag = &quot;[1/3 In-Formation]&quot; if regime == &quot;form&quot; else &quot;[2/3 Information]&quot;
+    return f&quot;{identity.tags()} {regime_tag}&quot;
+</code></pre>
+<hr>
+<h4 id="4-triadic-identity-decision-procedure">4. Triadic Identity Decision Procedure</h4>
+<pre><code class="language-python">def triadic_identity_decision(identity: TriadicIdentity):
+    &quot;&quot;&quot;
+    Implements the triadic-identity portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    ok, tag = validate_triadic_identity(identity)
+    if not ok:
+        return f&quot;{tag} — please specify complete Silence, Noise, and Resonance.&quot;
+
+    return f&quot;{identity.tags()} [Triadic Identity Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h4 id="5-triadic-identity-drift-detector">5. Triadic Identity Drift Detector</h4>
+<pre><code class="language-python">def detect_triadic_drift(text: str):
+    &quot;&quot;&quot;
+    Detects misuse of triadic identity as motif or branding.
+    &quot;&quot;&quot;
+    drift_terms = [
+        &quot;triadic-themed&quot;,
+        &quot;triad-like branding&quot;,
+        &quot;triadic aesthetic&quot;,
+        &quot;triadic vibe&quot;
+    ]
+    if any(term in text.lower() for term in drift_terms):
+        return False, &quot;[Self-Correction: Triadic Identity Drift Detected]&quot;
+    return True, &quot;[Triadic Identity Stable]&quot;
+</code></pre>
+<hr>
+<h4 id="6-triadic-identity-correcting-wrapper">6. Triadic Identity Correcting Wrapper</h4>
+<pre><code class="language-python">def correct_triadic_identity(text: str):
+    &quot;&quot;&quot;
+    Applies triadic-identity drift detection and returns corrected output.
+    &quot;&quot;&quot;
+    ok, tag = detect_triadic_drift(text)
+    if ok:
+        return f&quot;{text} {tag}&quot;
+    return f&quot;[Self-Correction: Triadic Identity Drift Detected] Correcting. {tag}&quot;
+</code></pre>
+<hr>
+<h4 id="7-triadic-identity-coherence-lineage-combined">7. Triadic Identity + Coherence + Lineage Combined</h4>
+<pre><code class="language-python">def triadic_full(identity: TriadicIdentity, dimensional: dict):
+    &quot;&quot;&quot;
+    Combines triadic identity, coherence, and lineage into a single tagged output.
+    &quot;&quot;&quot;
+    # Coherence (conceptual import from Appendix G)
+    def coherence_layer(triad: dict, dimensional: dict):
+        if not all(k in triad and triad[k] for k in (&quot;silence&quot;, &quot;noise&quot;, &quot;resonance&quot;)):
+            return False, &quot;[Coherence Layer Failed: Incomplete Triad]&quot;
+        if &quot;name&quot; not in dimensional or not dimensional[&quot;name&quot;]:
+            return False, &quot;[Coherence Layer Failed: Dimensional Missing]&quot;
+        return True, &quot;[Coherence Layer Satisfied]&quot;
+
+    triad_dict = {
+        &quot;silence&quot;: identity.silence,
+        &quot;noise&quot;: identity.noise,
+        &quot;resonance&quot;: identity.resonance
+    }
+
+    ok_coherence, coherence_tag = coherence_layer(triad_dict, dimensional)
+    return f&quot;{identity.tags()} [Dimensional: {dimensional.get('name', '')}] {coherence_tag}&quot;
+</code></pre>
+<hr>
+<p><strong>Appendix H - Summary</strong><br>
+Appendix H provides:</p>
+<ul>
+<li>a triadic identity data structure  </li>
+<li>triadic identity validation  </li>
+<li>regime‑aware triadic tagging  </li>
+<li>triadic identity decision procedure  </li>
+<li>triadic drift detection and correction  </li>
+<li>combined triadic identity + coherence + lineage tagging  </li>
+</ul>
+<p>These tools give AI systems concrete, executable anchors for triadic identity, strengthening v1.2 compliance and RTT‑aligned reasoning.</p>
+<hr>
+<h3 id="appendix-i-python-harmonicdimensional-toolkit">Appendix I: Python Harmonic‑Dimensional Toolkit</h3>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>harmonic dimensionals</strong>, giving AI systems concrete anchors for:</p>
+<ul>
+<li>representing nested harmonic dimensionals  </li>
+<li>tracking parent–child relationships  </li>
+<li>tagging dimensional paths  </li>
+<li>integrating with triads, regimes, and coherence layers  </li>
+<li>supporting v1.2 decision procedures  </li>
+</ul>
+<hr>
+<h4 id="1-harmonic-dimensional-data-structure">1. Harmonic Dimensional Data Structure</h4>
+<pre><code class="language-python">from dataclasses import dataclass
+
+@dataclass
+class HarmonicDimensional:
+    name: str
+    parent: str | None = None
+    layer: int | None = None  # optional harmonic layer index
+
+    def path(self):
+        if self.parent:
+            return f&quot;{self.parent} → {self.name}&quot;
+        return self.name
+
+    def tags(self):
+        layer_tag = f&quot;[Layer: {self.layer}]&quot; if self.layer is not None else &quot;[Layer: Unspecified]&quot;
+        return f&quot;[Dimensional: {self.name}] [Parent: {self.parent or 'None'}] {layer_tag}&quot;
+</code></pre>
+<hr>
+<h4 id="2-harmonic-nesting-validator">2. Harmonic Nesting Validator</h4>
+<pre><code class="language-python">def validate_harmonic_nesting(dimensionals: list[HarmonicDimensional]):
+    &quot;&quot;&quot;
+    Ensures harmonic dimensionals form a coherent nested structure.
+    &quot;&quot;&quot;
+    names = {d.name for d in dimensionals}
+    for d in dimensionals:
+        if d.parent and d.parent not in names:
+            return False, f&quot;[Coherence Failed: Parent Missing for {d.name}]&quot;
+    return True, &quot;[Harmonic Nesting Satisfied]&quot;
+</code></pre>
+<hr>
+<h4 id="3-harmonic-path-builder">3. Harmonic Path Builder</h4>
+<pre><code class="language-python">def build_harmonic_path(d: HarmonicDimensional, all_dims: dict[str, HarmonicDimensional]):
+    &quot;&quot;&quot;
+    Builds full harmonic path from root to this dimensional.
+    &quot;&quot;&quot;
+    path = [d.name]
+    current = d
+    while current.parent:
+        parent = all_dims.get(current.parent)
+        if not parent:
+            break
+        path.insert(0, parent.name)
+        current = parent
+    return &quot; → &quot;.join(path)
+</code></pre>
+<hr>
+<h4 id="4-harmonic-dimensional-decision-procedure">4. Harmonic Dimensional Decision Procedure</h4>
+<pre><code class="language-python">def harmonic_decision(d: HarmonicDimensional | None):
+    &quot;&quot;&quot;
+    Implements the harmonic-dimensional portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    if d is None or not d.name:
+        return &quot;[Uncertain — Harmonic Dimensional Context Missing]&quot;
+
+    return f&quot;{d.tags()} [Harmonic Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h4 id="5-harmonic-triad-coherence-check">5. Harmonic + Triad Coherence Check</h4>
+<pre><code class="language-python">def harmonic_coherence(triad: dict, dimensional: HarmonicDimensional):
+    &quot;&quot;&quot;
+    Checks coherence between a triad and a harmonic dimensional.
+    &quot;&quot;&quot;
+    if not all(k in triad and triad[k] for k in (&quot;silence&quot;, &quot;noise&quot;, &quot;resonance&quot;)):
+        return False, &quot;[Coherence Layer Failed: Incomplete Triad]&quot;
+    if not dimensional.name:
+        return False, &quot;[Coherence Layer Failed: Dimensional Missing]&quot;
+    return True, &quot;[Coherence Layer Satisfied]&quot;
+</code></pre>
+<hr>
+<h4 id="6-harmonic-drift-detector">6. Harmonic Drift Detector</h4>
+<pre><code class="language-python">def detect_harmonic_drift(text: str):
+    &quot;&quot;&quot;
+    Detects misuse of harmonic dimensionals as aesthetic or vague metaphor.
+    &quot;&quot;&quot;
+    drift_terms = [
+        &quot;harmonic vibe&quot;,
+        &quot;harmonic aesthetic&quot;,
+        &quot;dimension-ish&quot;,
+        &quot;layer-ish&quot;
+    ]
+    if any(term in text.lower() for term in drift_terms):
+        return False, &quot;[Self-Correction: Harmonic Drift Detected]&quot;
+    return True, &quot;[Harmonic Context Stable]&quot;
+</code></pre>
+<hr>
+<h4 id="7-harmonic-correcting-wrapper">7. Harmonic Correcting Wrapper</h4>
+<pre><code class="language-python">def correct_harmonic(text: str):
+    &quot;&quot;&quot;
+    Applies harmonic drift detection and returns corrected output.
+    &quot;&quot;&quot;
+    ok, tag = detect_harmonic_drift(text)
+    if ok:
+        return f&quot;{text} {tag}&quot;
+    return f&quot;[Self-Correction: Harmonic Drift Detected] Correcting. {tag}&quot;
+</code></pre>
+<hr>
+<h4 id="8-harmonic-regime-lineage-combined-tagging">8. Harmonic + Regime + Lineage Combined Tagging</h4>
+<pre><code class="language-python">def tag_harmonic_full(concept: str, regime: str, module: str | None, dimensional: HarmonicDimensional):
+    &quot;&quot;&quot;
+    Combines harmonic dimensional, regime, and lineage into a single tagged output.
+    &quot;&quot;&quot;
+    regime_tag = &quot;[1/3 In-Formation]&quot; if regime == &quot;form&quot; else &quot;[2/3 Information]&quot;
+    lineage_tag = f&quot;[Lineage: {module}]&quot; if module else &quot;[Uncertain — Requesting Clarification]&quot;
+    return f&quot;{concept} {regime_tag} {lineage_tag} {dimensional.tags()}&quot;
+</code></pre>
+<hr>
+<p><strong>Appendix I - Summary</strong><br>
+Appendix I provides:</p>
+<ul>
+<li>harmonic dimensional representation  </li>
+<li>nesting validation  </li>
+<li>path building  </li>
+<li>harmonic decision procedure  </li>
+<li>harmonic + triad coherence checks  </li>
+<li>harmonic drift detection and correction  </li>
+<li>harmonic + regime + lineage combined tagging  </li>
+</ul>
+<p>These tools give AI systems concrete, executable anchors for harmonic dimensionals, strengthening v1.2 compliance and RTT‑aligned reasoning.</p>
+<hr>
+<h1 id="appendix-j-python-supspherecontinuity-toolkit"><strong>Appendix J: Python Supsphere‑Continuity Toolkit</strong></h1>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>supsphere continuity</strong>, giving AI systems concrete anchors for:</p>
+<ul>
+<li>representing supspheres across regimes  </li>
+<li>tagging continuity and identity  </li>
+<li>checking regime separation within a supsphere  </li>
+<li>integrating lineage and harmonic dimensionals  </li>
+<li>supporting v1.2 decision procedures  </li>
+</ul>
+<p>These examples reinforce the v1.2 Protocol Header’s continuity and identity rules and serve as operational anchors for AI systems.</p>
+<hr>
+<h2 id="1-supsphere-data-structure"><strong>1. Supsphere Data Structure</strong></h2>
+<pre><code class="language-python">from dataclasses import dataclass
+from typing import Literal
+
+RegimeTag = Literal[&quot;[1/3 In-Formation]&quot;, &quot;[2/3 Information]&quot;]
+
+@dataclass
+class Supsphere:
+    name: str
+    regime: RegimeTag
+    continuity: str
+    identity: str
+    module: str | None = None
+
+    def tags(self):
+        lineage_tag = f&quot;[Lineage: {self.module}]&quot; if self.module else &quot;[Uncertain — Requesting Clarification]&quot;
+        return (
+            f&quot;[Supsphere: {self.name}] &quot;
+            f&quot;{self.regime} &quot;
+            f&quot;[Continuity: {self.continuity}] &quot;
+            f&quot;[Identity: {self.identity}] &quot;
+            f&quot;{lineage_tag}&quot;
+        )
+</code></pre>
+<hr>
+<h2 id="2-supsphere-continuity-validator"><strong>2. Supsphere Continuity Validator</strong></h2>
+<pre><code class="language-python">def validate_supsphere_continuity(s: Supsphere):
+    &quot;&quot;&quot;
+    Ensures continuity and identity are present for a supsphere.
+    &quot;&quot;&quot;
+    if not s.continuity or not s.identity:
+        return False, &quot;[Supsphere Continuity Failed: Missing Continuity or Identity]&quot;
+    return True, &quot;[Supsphere Continuity Satisfied]&quot;
+</code></pre>
+<hr>
+<h2 id="3-supsphere-regime-separation-check"><strong>3. Supsphere Regime Separation Check</strong></h2>
+<pre><code class="language-python">def validate_supsphere_regime_pair(a: Supsphere, b: Supsphere):
+    &quot;&quot;&quot;
+    Ensures two supspheres are not collapsed into a single regime.
+    &quot;&quot;&quot;
+    if a.regime == b.regime and a.name != b.name:
+        return False, &quot;[Self-Correction: Supsphere Regime Collapse Detected]&quot;
+    return True, &quot;[Supsphere Regime Separation Maintained]&quot;
+</code></pre>
+<hr>
+<h2 id="4-supsphere-harmonic-dimensional-tagging"><strong>4. Supsphere + Harmonic Dimensional Tagging</strong></h2>
+<pre><code class="language-python">def tag_supsphere_harmonic(s: Supsphere, dimensional: dict):
+    &quot;&quot;&quot;
+    Combines supsphere continuity with harmonic dimensional context.
+    dimensional: {&quot;name&quot;: ..., &quot;parent&quot;: ...}
+    &quot;&quot;&quot;
+    dim_tag = f&quot;[Dimensional: {dimensional.get('name', '')}]&quot;
+    parent_tag = f&quot;[Parent: {dimensional.get('parent', 'None')}]&quot;
+    return f&quot;{s.tags()} {dim_tag} {parent_tag}&quot;
+</code></pre>
+<hr>
+<h2 id="5-supsphere-decision-procedure"><strong>5. Supsphere Decision Procedure</strong></h2>
+<pre><code class="language-python">def supsphere_decision(s: Supsphere | None):
+    &quot;&quot;&quot;
+    Implements the supsphere portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    if s is None:
+        return &quot;[Uncertain — Supsphere Context Missing]&quot;
+
+    ok, tag = validate_supsphere_continuity(s)
+    if not ok:
+        return f&quot;{tag} — please specify continuity and identity.&quot;
+
+    return f&quot;{s.tags()} [Supsphere Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h2 id="6-supsphere-drift-detector"><strong>6. Supsphere Drift Detector</strong></h2>
+<pre><code class="language-python">def detect_supsphere_drift(text: str):
+    &quot;&quot;&quot;
+    Detects misuse of supspheres as vague metaphors or branding.
+    &quot;&quot;&quot;
+    drift_terms = [
+        &quot;supsphere vibe&quot;,
+        &quot;supsphere aesthetic&quot;,
+        &quot;supsphere-themed&quot;,
+        &quot;supsphere-ish&quot;
+    ]
+    if any(term in text.lower() for term in drift_terms):
+        return False, &quot;[Self-Correction: Supsphere Drift Detected]&quot;
+    return True, &quot;[Supsphere Context Stable]&quot;
+</code></pre>
+<hr>
+<h2 id="7-supsphere-correcting-wrapper"><strong>7. Supsphere Correcting Wrapper</strong></h2>
+<pre><code class="language-python">def correct_supsphere(text: str):
+    &quot;&quot;&quot;
+    Applies supsphere drift detection and returns corrected output.
+    &quot;&quot;&quot;
+    ok, tag = detect_supsphere_drift(text)
+    if ok:
+        return f&quot;{text} {tag}&quot;
+    return f&quot;[Self-Correction: Supsphere Drift Detected] Correcting. {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="8-supsphere-regime-lineage-coherence-combined"><strong>8. Supsphere + Regime + Lineage + Coherence Combined</strong></h2>
+<pre><code class="language-python">def tag_supsphere_full(concept: str, s: Supsphere, triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Combines supsphere continuity, regime, lineage, and coherence into a single tagged output.
+    &quot;&quot;&quot;
+    # Minimal coherence check (inline)
+    def coherence_layer(triad: dict, dimensional: dict):
+        if not all(k in triad and triad[k] for k in (&quot;silence&quot;, &quot;noise&quot;, &quot;resonance&quot;)):
+            return False, &quot;[Coherence Layer Failed: Incomplete Triad]&quot;
+        if &quot;name&quot; not in dimensional or not dimensional[&quot;name&quot;]:
+            return False, &quot;[Coherence Layer Failed: Dimensional Missing]&quot;
+        return True, &quot;[Coherence Layer Satisfied]&quot;
+
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+    dim_tag = f&quot;[Dimensional: {dimensional.get('name', '')}]&quot;
+
+    return f&quot;{concept} {s.tags()} {dim_tag} {coherence_tag}&quot;
+</code></pre>
+<hr>
+<h2 id="appendix-j-summary"><strong>Appendix J - Summary</strong></h2>
+<p>Appendix J provides:</p>
+<ul>
+<li>supsphere representation  </li>
+<li>continuity and identity validation  </li>
+<li>regime‑separation checks across supspheres  </li>
+<li>supsphere + harmonic dimensional tagging  </li>
+<li>supsphere decision procedure  </li>
+<li>supsphere drift detection and correction  </li>
+<li>supsphere + regime + lineage + coherence combined tagging  </li>
+</ul>
+<p>These tools give AI systems concrete, executable anchors for supsphere continuity, strengthening v1.2 compliance and RTT‑aligned reasoning.</p>
+<hr>
+<h1 id="appendix-k-python-continuitypropagation-toolkit"><strong>Appendix K: Python Continuity‑Propagation Toolkit</strong></h1>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>continuity propagation</strong>, enabling AI systems to:</p>
+<ul>
+<li>represent continuity across RTT structures  </li>
+<li>propagate continuity through triads, harmonic dimensionals, and supspheres  </li>
+<li>detect continuity breaks  </li>
+<li>tag continuity paths  </li>
+<li>integrate continuity with regime, lineage, and coherence  </li>
+<li>support the v1.2 decision procedure  </li>
+</ul>
+<p>These examples serve as <strong>operational anchors</strong> for AI systems implementing RTT continuity rules.</p>
+<hr>
+<h2 id="1-continuity-node-representation"><strong>1. Continuity Node Representation</strong></h2>
+<pre><code class="language-python">from dataclasses import dataclass
+
+@dataclass
+class ContinuityNode:
+    name: str
+    continuity: str
+    module: str | None = None
+
+    def tag(self):
+        lineage_tag = f&quot;[Lineage: {self.module}]&quot; if self.module else &quot;[Uncertain — Requesting Clarification]&quot;
+        return f&quot;[Node: {self.name}] [Continuity: {self.continuity}] {lineage_tag}&quot;
+</code></pre>
+<hr>
+<h2 id="2-continuity-propagation-between-nodes"><strong>2. Continuity Propagation Between Nodes</strong></h2>
+<pre><code class="language-python">def propagate_continuity(a: ContinuityNode, b: ContinuityNode):
+    &quot;&quot;&quot;
+    Propagates continuity from node A to node B if compatible.
+    &quot;&quot;&quot;
+    if a.continuity != b.continuity:
+        return False, &quot;[Continuity Break Detected]&quot;
+    return True, f&quot;[Continuity Propagated: {a.continuity}]&quot;
+</code></pre>
+<hr>
+<h2 id="3-continuity-path-builder"><strong>3. Continuity Path Builder</strong></h2>
+<pre><code class="language-python">def continuity_path(nodes: list[ContinuityNode]):
+    &quot;&quot;&quot;
+    Builds a continuity path across multiple nodes.
+    &quot;&quot;&quot;
+    tags = [n.tag() for n in nodes]
+
+    # Check continuity consistency
+    continuity_values = {n.continuity for n in nodes}
+    if len(continuity_values) &gt; 1:
+        return False, &quot;[Continuity Break Detected] &quot; + &quot; &quot;.join(tags)
+
+    return True, &quot;[Continuity Path Stable] &quot; + &quot; → &quot;.join(n.name for n in nodes)
+</code></pre>
+<hr>
+<h2 id="4-continuity-triad-integration"><strong>4. Continuity + Triad Integration</strong></h2>
+<pre><code class="language-python">def continuity_with_triad(node: ContinuityNode, triad: dict):
+    &quot;&quot;&quot;
+    Integrates continuity with triadic structure.
+    &quot;&quot;&quot;
+    if not all(k in triad and triad[k] for k in (&quot;silence&quot;, &quot;noise&quot;, &quot;resonance&quot;)):
+        return f&quot;{node.tag()} [Coherence Layer Failed: Incomplete Triad]&quot;
+
+    return f&quot;{node.tag()} [Triad: {triad['silence']}, {triad['noise']}, {triad['resonance']}]&quot;
+</code></pre>
+<hr>
+<h2 id="5-continuity-harmonic-dimensional-integration"><strong>5. Continuity + Harmonic Dimensional Integration</strong></h2>
+<pre><code class="language-python">def continuity_with_dimensional(node: ContinuityNode, dimensional: dict):
+    &quot;&quot;&quot;
+    Integrates continuity with harmonic dimensional context.
+    &quot;&quot;&quot;
+    dim_tag = f&quot;[Dimensional: {dimensional.get('name', '')}]&quot;
+    parent_tag = f&quot;[Parent: {dimensional.get('parent', 'None')}]&quot;
+    return f&quot;{node.tag()} {dim_tag} {parent_tag}&quot;
+</code></pre>
+<hr>
+<h2 id="6-continuity-drift-detector"><strong>6. Continuity Drift Detector</strong></h2>
+<pre><code class="language-python">def detect_continuity_drift(text: str):
+    &quot;&quot;&quot;
+    Detects misuse of continuity as vague metaphor or aesthetic.
+    &quot;&quot;&quot;
+    drift_terms = [
+        &quot;continuity vibe&quot;,
+        &quot;continuity aesthetic&quot;,
+        &quot;continuity-ish&quot;,
+        &quot;flowy continuity&quot;
+    ]
+    if any(term in text.lower() for term in drift_terms):
+        return False, &quot;[Self-Correction: Continuity Drift Detected]&quot;
+    return True, &quot;[Continuity Context Stable]&quot;
+</code></pre>
+<hr>
+<h2 id="7-continuity-correcting-wrapper"><strong>7. Continuity Correcting Wrapper</strong></h2>
+<pre><code class="language-python">def correct_continuity(text: str):
+    &quot;&quot;&quot;
+    Applies continuity drift detection and returns corrected output.
+    &quot;&quot;&quot;
+    ok, tag = detect_continuity_drift(text)
+    if ok:
+        return f&quot;{text} {tag}&quot;
+    return f&quot;[Self-Correction: Continuity Drift Detected] Correcting. {tag}&quot;
+</code></pre>
+<hr>
+<h2 id="8-continuity-decision-procedure"><strong>8. Continuity Decision Procedure</strong></h2>
+<pre><code class="language-python">def continuity_decision(node: ContinuityNode | None):
+    &quot;&quot;&quot;
+    Implements the continuity portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    if node is None:
+        return &quot;[Uncertain — Continuity Context Missing]&quot;
+
+    if not node.continuity:
+        return &quot;[Continuity Missing] — please specify continuity.&quot;
+
+    return f&quot;{node.tag()} [Continuity Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h2 id="9-continuity-regime-lineage-coherence-combined"><strong>9. Continuity + Regime + Lineage + Coherence Combined</strong></h2>
+<pre><code class="language-python">def tag_continuity_full(concept: str, node: ContinuityNode, regime: str, triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Combines continuity, regime, lineage, and coherence into a single tagged output.
+    &quot;&quot;&quot;
+    # Regime mapping
+    regime_tag = &quot;[1/3 In-Formation]&quot; if regime == &quot;form&quot; else &quot;[2/3 Information]&quot;
+
+    # Minimal coherence check
+    def coherence_layer(triad: dict, dimensional: dict):
+        if not all(k in triad and triad[k] for k in (&quot;silence&quot;, &quot;noise&quot;, &quot;resonance&quot;)):
+            return False, &quot;[Coherence Layer Failed: Incomplete Triad]&quot;
+        if &quot;name&quot; not in dimensional or not dimensional[&quot;name&quot;]:
+            return False, &quot;[Coherence Layer Failed: Dimensional Missing]&quot;
+        return True, &quot;[Coherence Layer Satisfied]&quot;
+
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+    dim_tag = f&quot;[Dimensional: {dimensional.get('name', '')}]&quot;
+
+    return f&quot;{concept} {node.tag()} {regime_tag} {dim_tag} {coherence_tag}&quot;
+</code></pre>
+<hr>
+<h1 id="appendix-k-summary"><strong>Appendix K - Summary</strong></h1>
+<p>Appendix K provides:</p>
+<ul>
+<li>continuity node representation  </li>
+<li>continuity propagation  </li>
+<li>continuity path building  </li>
+<li>continuity + triad integration  </li>
+<li>continuity + harmonic dimensional integration  </li>
+<li>continuity drift detection and correction  </li>
+<li>continuity decision procedure  </li>
+<li>continuity + regime + lineage + coherence combined tagging  </li>
+</ul>
+<p>These tools give AI systems concrete, executable anchors for continuity propagation, strengthening v1.2 compliance and RTT‑aligned reasoning.</p>
+<hr>
+<h3 id="appendix-l-python-identitystability-toolkit">Appendix L: Python Identity‑Stability Toolkit</h3>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>identity stability</strong>, giving AI systems concrete anchors for:</p>
+<ul>
+<li>representing identity across modules, supspheres, and continuity nodes  </li>
+<li>checking for identity drift or fragmentation  </li>
+<li>tagging identity stability  </li>
+<li>integrating identity with regime, lineage, and continuity  </li>
+<li>supporting the v1.2 decision procedure  </li>
+</ul>
+<hr>
+<h4 id="1-identity-node-representation">1. Identity Node Representation</h4>
+<pre><code class="language-python">from dataclasses import dataclass
+
+@dataclass
+class IdentityNode:
+    name: str
+    identity: str
+    module: str | None = None
+
+    def tag(self):
+        lineage_tag = f&quot;[Lineage: {self.module}]&quot; if self.module else &quot;[Uncertain — Requesting Clarification]&quot;
+        return f&quot;[Identity Node: {self.name}] [Identity: {self.identity}] {lineage_tag}&quot;
+</code></pre>
+<hr>
+<h4 id="2-identity-stability-check">2. Identity Stability Check</h4>
+<pre><code class="language-python">def validate_identity_stability(nodes: list[IdentityNode]):
+    &quot;&quot;&quot;
+    Ensures identity remains stable across a set of nodes.
+    &quot;&quot;&quot;
+    identities = {n.identity for n in nodes}
+    if len(identities) &gt; 1:
+        return False, &quot;[Identity Fragmentation Detected]&quot;
+    return True, &quot;[Identity Stable]&quot;
+</code></pre>
+<hr>
+<h4 id="3-identity-path-builder">3. Identity Path Builder</h4>
+<pre><code class="language-python">def identity_path(nodes: list[IdentityNode]):
+    &quot;&quot;&quot;
+    Builds an identity path across multiple nodes.
+    &quot;&quot;&quot;
+    ok, tag = validate_identity_stability(nodes)
+    path = &quot; → &quot;.join(n.name for n in nodes)
+    return ok, f&quot;{tag} [Identity Path: {path}]&quot;
+</code></pre>
+<hr>
+<h4 id="4-identity-continuity-integration">4. Identity + Continuity Integration</h4>
+<pre><code class="language-python">def identity_with_continuity(identity_node: IdentityNode, continuity: str):
+    &quot;&quot;&quot;
+    Integrates identity with continuity description.
+    &quot;&quot;&quot;
+    return f&quot;{identity_node.tag()} [Continuity: {continuity}]&quot;
+</code></pre>
+<hr>
+<h4 id="5-identity-drift-detector">5. Identity Drift Detector</h4>
+<pre><code class="language-python">def detect_identity_drift(text: str):
+    &quot;&quot;&quot;
+    Detects misuse of identity as branding, aesthetic, or vague metaphor.
+    &quot;&quot;&quot;
+    drift_terms = [
+        &quot;identity vibe&quot;,
+        &quot;identity aesthetic&quot;,
+        &quot;identity-themed&quot;,
+        &quot;identity-ish&quot;
+    ]
+    if any(term in text.lower() for term in drift_terms):
+        return False, &quot;[Self-Correction: Identity Drift Detected]&quot;
+    return True, &quot;[Identity Context Stable]&quot;
+</code></pre>
+<hr>
+<h4 id="6-identity-correcting-wrapper">6. Identity Correcting Wrapper</h4>
+<pre><code class="language-python">def correct_identity(text: str):
+    &quot;&quot;&quot;
+    Applies identity drift detection and returns corrected output.
+    &quot;&quot;&quot;
+    ok, tag = detect_identity_drift(text)
+    if ok:
+        return f&quot;{text} {tag}&quot;
+    return f&quot;[Self-Correction: Identity Drift Detected] Correcting. {tag}&quot;
+</code></pre>
+<hr>
+<h4 id="7-identity-decision-procedure">7. Identity Decision Procedure</h4>
+<pre><code class="language-python">def identity_decision(node: IdentityNode | None):
+    &quot;&quot;&quot;
+    Implements the identity portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    if node is None:
+        return &quot;[Uncertain — Identity Context Missing]&quot;
+
+    if not node.identity:
+        return &quot;[Identity Missing] — please specify identity.&quot;
+
+    return f&quot;{node.tag()} [Identity Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h4 id="8-identity-regime-continuity-coherence-combined">8. Identity + Regime + Continuity + Coherence Combined</h4>
+<pre><code class="language-python">def tag_identity_full(concept: str, node: IdentityNode, regime: str, continuity: str, triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Combines identity, regime, continuity, and coherence into a single tagged output.
+    &quot;&quot;&quot;
+    regime_tag = &quot;[1/3 In-Formation]&quot; if regime == &quot;form&quot; else &quot;[2/3 Information]&quot;
+
+    def coherence_layer(triad: dict, dimensional: dict):
+        if not all(k in triad and triad[k] for k in (&quot;silence&quot;, &quot;noise&quot;, &quot;resonance&quot;)):
+            return False, &quot;[Coherence Layer Failed: Incomplete Triad]&quot;
+        if &quot;name&quot; not in dimensional or not dimensional[&quot;name&quot;]:
+            return False, &quot;[Coherence Layer Failed: Dimensional Missing]&quot;
+        return True, &quot;[Coherence Layer Satisfied]&quot;
+
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+    dim_tag = f&quot;[Dimensional: {dimensional.get('name', '')}]&quot;
+    continuity_tag = f&quot;[Continuity: {continuity}]&quot;
+
+    return f&quot;{concept} {node.tag()} {regime_tag} {continuity_tag} {dim_tag} {coherence_tag}&quot;
+</code></pre>
+<hr>
+<p><strong>Appendix L - Summary</strong><br>
+Appendix L provides:</p>
+<ul>
+<li>identity node representation  </li>
+<li>identity stability checks and paths  </li>
+<li>identity + continuity integration  </li>
+<li>identity drift detection and correction  </li>
+<li>identity decision procedure  </li>
+<li>identity + regime + continuity + coherence combined tagging  </li>
+</ul>
+<p>These tools give AI systems concrete, executable anchors for identity stability, strengthening v1.2 compliance and RTT‑aligned reasoning.</p>
+<hr>
+<h1 id="appendix-m-python-supspheregraph-toolkit"><strong>Appendix M: Python Supsphere‑Graph Toolkit</strong></h1>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>supsphere graph construction</strong>, enabling AI systems to:</p>
+<ul>
+<li>represent supspheres as graph nodes  </li>
+<li>connect supspheres via continuity, identity, or dimensional edges  </li>
+<li>detect graph‑level regime collapse  </li>
+<li>trace supsphere paths  </li>
+<li>validate graph coherence  </li>
+<li>integrate graph structure with lineage and harmonic dimensionals  </li>
+<li>support the v1.2 decision procedure  </li>
+</ul>
+<p>These examples serve as <strong>operational anchors</strong> for AI systems implementing RTT supsphere‑graph reasoning.</p>
+<hr>
+<h2 id="1-supsphere-graph-node"><strong>1. Supsphere Graph Node</strong></h2>
+<pre><code class="language-python">from dataclasses import dataclass
+
+@dataclass
+class SupsphereNode:
+    name: str
+    regime: str
+    continuity: str
+    identity: str
+    module: str | None = None
+
+    def tag(self):
+        lineage_tag = f&quot;[Lineage: {self.module}]&quot; if self.module else &quot;[Uncertain — Requesting Clarification]&quot;
+        return (
+            f&quot;[Supsphere: {self.name}] &quot;
+            f&quot;{self.regime} &quot;
+            f&quot;[Continuity: {self.continuity}] &quot;
+            f&quot;[Identity: {self.identity}] &quot;
+            f&quot;{lineage_tag}&quot;
+        )
+</code></pre>
+<hr>
+<h2 id="2-supsphere-graph-structure"><strong>2. Supsphere Graph Structure</strong></h2>
+<pre><code class="language-python">class SupsphereGraph:
+    def __init__(self):
+        self.nodes = {}
+        self.edges = []  # (nodeA, nodeB, edge_type)
+
+    def add_node(self, node: SupsphereNode):
+        self.nodes[node.name] = node
+
+    def add_edge(self, a: str, b: str, edge_type: str):
+        self.edges.append((a, b, edge_type))
+</code></pre>
+<hr>
+<h2 id="3-edge-types-continuity-identity-dimensional"><strong>3. Edge Types (Continuity, Identity, Dimensional)</strong></h2>
+<pre><code class="language-python">def continuity_edge(a: SupsphereNode, b: SupsphereNode):
+    return (a.name, b.name, f&quot;[Continuity Edge: {a.continuity}]&quot;)
+
+def identity_edge(a: SupsphereNode, b: SupsphereNode):
+    return (a.name, b.name, f&quot;[Identity Edge: {a.identity}]&quot;)
+
+def dimensional_edge(a: SupsphereNode, b: SupsphereNode, dimensional: str):
+    return (a.name, b.name, f&quot;[Dimensional Edge: {dimensional}]&quot;)
+</code></pre>
+<hr>
+<h2 id="4-supsphere-regimecollapse-detector"><strong>4. Supsphere Regime‑Collapse Detector</strong></h2>
+<pre><code class="language-python">def detect_supsphere_regime_collapse(graph: SupsphereGraph):
+    &quot;&quot;&quot;
+    Detects regime collapse across supsphere graph.
+    &quot;&quot;&quot;
+    for a, b, _ in graph.edges:
+        nodeA = graph.nodes[a]
+        nodeB = graph.nodes[b]
+        if nodeA.regime == nodeB.regime and nodeA.name != nodeB.name:
+            return False, &quot;[Self-Correction: Supsphere Regime Collapse Detected]&quot;
+    return True, &quot;[Supsphere Regime Separation Maintained]&quot;
+</code></pre>
+<hr>
+<h2 id="5-supsphere-path-tracing"><strong>5. Supsphere Path Tracing</strong></h2>
+<pre><code class="language-python">def trace_supsphere_path(graph: SupsphereGraph, start: str, end: str):
+    &quot;&quot;&quot;
+    Simple DFS path trace between two supspheres.
+    &quot;&quot;&quot;
+    visited = set()
+    stack = [(start, [start])]
+
+    while stack:
+        node, path = stack.pop()
+        if node == end:
+            return True, f&quot;[Supsphere Path: {' → '.join(path)}]&quot;
+
+        visited.add(node)
+        for a, b, _ in graph.edges:
+            if a == node and b not in visited:
+                stack.append((b, path + [b]))
+
+    return False, &quot;[No Supsphere Path Found]&quot;
+</code></pre>
+<hr>
+<h2 id="6-supsphere-graph-coherence-check"><strong>6. Supsphere Graph Coherence Check</strong></h2>
+<pre><code class="language-python">def validate_supsphere_graph(graph: SupsphereGraph):
+    &quot;&quot;&quot;
+    Validates graph-level coherence: continuity, identity, and regime separation.
+    &quot;&quot;&quot;
+    # Regime separation
+    ok_regime, regime_tag = detect_supsphere_regime_collapse(graph)
+
+    # Continuity consistency
+    continuity_values = {n.continuity for n in graph.nodes.values()}
+    ok_continuity = len(continuity_values) == 1
+    continuity_tag = &quot;[Continuity Stable]&quot; if ok_continuity else &quot;[Continuity Break Detected]&quot;
+
+    # Identity consistency
+    identity_values = {n.identity for n in graph.nodes.values()}
+    ok_identity = len(identity_values) == 1
+    identity_tag = &quot;[Identity Stable]&quot; if ok_identity else &quot;[Identity Fragmentation Detected]&quot;
+
+    return ok_regime and ok_continuity and ok_identity, f&quot;{regime_tag} {continuity_tag} {identity_tag}&quot;
+</code></pre>
+<hr>
+<h2 id="7-supsphere-graph-drift-detector"><strong>7. Supsphere Graph Drift Detector</strong></h2>
+<pre><code class="language-python">def detect_supsphere_graph_drift(text: str):
+    &quot;&quot;&quot;
+    Detects motif-level misuse of supsphere graphs.
+    &quot;&quot;&quot;
+    drift_terms = [
+        &quot;supsphere web&quot;,
+        &quot;supsphere aesthetic graph&quot;,
+        &quot;graph-ish supsphere&quot;,
+        &quot;supsphere vibe network&quot;
+    ]
+    if any(term in text.lower() for term in drift_terms):
+        return False, &quot;[Self-Correction: Supsphere Graph Drift Detected]&quot;
+    return True, &quot;[Supsphere Graph Stable]&quot;
+</code></pre>
+<hr>
+<h2 id="8-supsphere-graph-decision-procedure"><strong>8. Supsphere Graph Decision Procedure</strong></h2>
+<pre><code class="language-python">def supsphere_graph_decision(graph: SupsphereGraph):
+    &quot;&quot;&quot;
+    Implements the supsphere-graph portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    ok, tag = validate_supsphere_graph(graph)
+    if not ok:
+        return f&quot;{tag} — please specify missing continuity, identity, or regime separation.&quot;
+    return f&quot;{tag} [Supsphere Graph Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h2 id="9-supsphere-graph-regime-lineage-coherence-combined"><strong>9. Supsphere Graph + Regime + Lineage + Coherence Combined</strong></h2>
+<pre><code class="language-python">def tag_supsphere_graph_full(graph: SupsphereGraph, triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Combines graph-level supsphere structure with regime, lineage, and coherence.
+    &quot;&quot;&quot;
+    # Minimal coherence check
+    def coherence_layer(triad: dict, dimensional: dict):
+        if not all(k in triad and triad[k] for k in (&quot;silence&quot;, &quot;noise&quot;, &quot;resonance&quot;)):
+            return False, &quot;[Coherence Layer Failed: Incomplete Triad]&quot;
+        if &quot;name&quot; not in dimensional or not dimensional[&quot;name&quot;]:
+            return False, &quot;[Coherence Layer Failed: Dimensional Missing]&quot;
+        return True, &quot;[Coherence Layer Satisfied]&quot;
+
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+    dim_tag = f&quot;[Dimensional: {dimensional.get('name', '')}]&quot;
+
+    ok_graph, graph_tag = validate_supsphere_graph(graph)
+
+    return f&quot;{graph_tag} {dim_tag} {coherence_tag}&quot;
+</code></pre>
+<hr>
+<h1 id="appendix-m-summary"><strong>Appendix M - Summary</strong></h1>
+<p>Appendix M provides:</p>
+<ul>
+<li>supsphere graph node representation  </li>
+<li>continuity, identity, and dimensional edges  </li>
+<li>regime‑collapse detection  </li>
+<li>path tracing  </li>
+<li>graph‑level coherence validation  </li>
+<li>graph drift detection  </li>
+<li>supsphere‑graph decision procedure  </li>
+<li>supsphere‑graph + regime + lineage + coherence combined tagging  </li>
+</ul>
+<p>These tools give AI systems concrete, executable anchors for supsphere‑graph reasoning, strengthening v1.2 compliance and RTT‑aligned behavior.</p>
+<hr>
+<h3 id="appendix-n-python-continuitydiagnostics-toolkit">Appendix N: Python Continuity‑Diagnostics Toolkit</h3>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>continuity diagnostics</strong>, giving AI systems concrete anchors for:</p>
+<ul>
+<li>inspecting continuity across nodes, supspheres, and graphs  </li>
+<li>detecting breaks, loops, and ambiguous continuity  </li>
+<li>tagging diagnostic results  </li>
+<li>integrating diagnostics with regime, lineage, and coherence  </li>
+<li>supporting the v1.2 decision procedure  </li>
+</ul>
+<hr>
+<h4 id="1-continuity-diagnostic-result-type">1. Continuity Diagnostic Result Type</h4>
+<pre><code class="language-python">from dataclasses import dataclass
+
+@dataclass
+class ContinuityDiagnostic:
+    ok: bool
+    message: str
+
+    def tag(self):
+        status = &quot;[Continuity OK]&quot; if self.ok else &quot;[Continuity Issue]&quot;
+        return f&quot;{status} {self.message}&quot;
+</code></pre>
+<hr>
+<h4 id="2-singlenode-continuity-check">2. Single‑Node Continuity Check</h4>
+<pre><code class="language-python">def diagnose_node_continuity(node_name: str, continuity: str | None):
+    &quot;&quot;&quot;
+    Diagnoses continuity for a single node.
+    &quot;&quot;&quot;
+    if not continuity:
+        return ContinuityDiagnostic(False, f&quot;[Node: {node_name}] Continuity missing.&quot;)
+    return ContinuityDiagnostic(True, f&quot;[Node: {node_name}] Continuity present: {continuity}.&quot;)
+</code></pre>
+<hr>
+<h4 id="3-multinode-continuity-consistency">3. Multi‑Node Continuity Consistency</h4>
+<pre><code class="language-python">def diagnose_multi_continuity(nodes: dict[str, str]):
+    &quot;&quot;&quot;
+    Diagnoses continuity consistency across multiple nodes.
+    nodes: {name: continuity}
+    &quot;&quot;&quot;
+    values = set(nodes.values())
+    if len(values) &lt;= 1:
+        return ContinuityDiagnostic(True, &quot;[Continuity Stable Across Nodes]&quot;)
+    return ContinuityDiagnostic(False, f&quot;[Continuity Break Detected] Values: {', '.join(values)}&quot;)
+</code></pre>
+<hr>
+<h4 id="4-continuity-loop-detection">4. Continuity Loop Detection</h4>
+<pre><code class="language-python">def diagnose_continuity_loop(path: list[str]):
+    &quot;&quot;&quot;
+    Detects simple continuity loops in a path.
+    &quot;&quot;&quot;
+    if len(path) != len(set(path)):
+        return ContinuityDiagnostic(False, f&quot;[Continuity Loop Detected] Path: {' → '.join(path)}&quot;)
+    return ContinuityDiagnostic(True, f&quot;[No Continuity Loop] Path: {' → '.join(path)}&quot;)
+</code></pre>
+<hr>
+<h4 id="5-continuity-ambiguity-detection">5. Continuity Ambiguity Detection</h4>
+<pre><code class="language-python">def diagnose_continuity_ambiguity(continuity: str):
+    &quot;&quot;&quot;
+    Flags overly vague or metaphorical continuity descriptions.
+    &quot;&quot;&quot;
+    vague_terms = [&quot;vibe&quot;, &quot;aesthetic&quot;, &quot;flowy&quot;, &quot;kind of&quot;, &quot;sort of&quot;]
+    if any(t in continuity.lower() for t in vague_terms):
+        return ContinuityDiagnostic(False, f&quot;[Continuity Ambiguous] {continuity}&quot;)
+    return ContinuityDiagnostic(True, f&quot;[Continuity Specific] {continuity}&quot;)
+</code></pre>
+<hr>
+<h4 id="6-continuity-regime-diagnostic">6. Continuity + Regime Diagnostic</h4>
+<pre><code class="language-python">def diagnose_continuity_regime(continuity: str, regime: str):
+    &quot;&quot;&quot;
+    Ensures continuity is being applied in the correct regime context.
+    &quot;&quot;&quot;
+    if regime not in (&quot;form&quot;, &quot;non-form&quot;):
+        return ContinuityDiagnostic(False, &quot;[Regime Unknown] Cannot assess continuity.&quot;)
+
+    if regime == &quot;form&quot;:
+        msg = &quot;[Form-Regime Continuity] Bound to physical encoding or propagation.&quot;
+    else:
+        msg = &quot;[Non-Form Continuity] Bound to meaning, identity, or invariant structure.&quot;
+
+    return ContinuityDiagnostic(True, msg + f&quot; Continuity: {continuity}&quot;)
+</code></pre>
+<hr>
+<h4 id="7-continuity-coherence-diagnostic">7. Continuity + Coherence Diagnostic</h4>
+<pre><code class="language-python">def diagnose_continuity_coherence(continuity: str, triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Diagnoses continuity in relation to triad and dimensional coherence.
+    &quot;&quot;&quot;
+    triad_ok = all(k in triad and triad[k] for k in (&quot;silence&quot;, &quot;noise&quot;, &quot;resonance&quot;))
+    dim_ok = &quot;name&quot; in dimensional and dimensional[&quot;name&quot;]
+
+    if not triad_ok or not dim_ok:
+        return ContinuityDiagnostic(
+            False,
+            &quot;[Coherence Layer Failed] Continuity cannot be trusted without complete triad and dimensional.&quot;
+        )
+
+    return ContinuityDiagnostic(
+        True,
+        f&quot;[Coherence Layer Satisfied] Continuity: {continuity} Triad: {triad} Dimensional: {dimensional['name']}&quot;
+    )
+</code></pre>
+<hr>
+<h4 id="8-continuity-diagnostic-wrapper">8. Continuity Diagnostic Wrapper</h4>
+<pre><code class="language-python">def run_continuity_diagnostics(node_name: str, continuity: str | None, regime: str, triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Runs a basic continuity diagnostic suite and returns tagged messages.
+    &quot;&quot;&quot;
+    results = []
+
+    results.append(diagnose_node_continuity(node_name, continuity))
+    if continuity:
+        results.append(diagnose_continuity_ambiguity(continuity))
+        results.append(diagnose_continuity_regime(continuity, regime))
+        results.append(diagnose_continuity_coherence(continuity, triad, dimensional))
+
+    return [r.tag() for r in results]
+</code></pre>
+<hr>
+<h4 id="appendix-n-summary">Appendix N - Summary</h4>
+<p>Appendix N provides:</p>
+<ul>
+<li>a continuity diagnostic result type  </li>
+<li>single‑node continuity checks  </li>
+<li>multi‑node continuity consistency checks  </li>
+<li>continuity loop and ambiguity detection  </li>
+<li>continuity + regime diagnostics  </li>
+<li>continuity + coherence diagnostics  </li>
+<li>a continuity diagnostic wrapper  </li>
+</ul>
+<p>These tools give AI systems concrete, executable anchors for continuity diagnostics, strengthening v1.2 compliance and RTT‑aligned reasoning.</p>
+<hr>
+<h3 id="appendix-o-python-supspheretopology-toolkit">Appendix O: Python Supsphere‑Topology Toolkit</h3>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>supsphere topology</strong>, giving AI systems concrete anchors for:</p>
+<ul>
+<li>representing supspheres as topological regions  </li>
+<li>tagging adjacency, boundaries, and overlaps  </li>
+<li>detecting topological conflicts (regime collapse, continuity breaks)  </li>
+<li>integrating topology with graphs, continuity, and identity  </li>
+<li>supporting the v1.2 decision procedure  </li>
+</ul>
+<hr>
+<h4 id="1-supsphere-topology-region">1. Supsphere Topology Region</h4>
+<pre><code class="language-python">from dataclasses import dataclass
+
+@dataclass
+class SupsphereRegion:
+    name: str
+    regime: str
+    continuity: str
+    identity: str
+    module: str | None = None
+
+    def tag(self):
+        lineage_tag = f&quot;[Lineage: {self.module}]&quot; if self.module else &quot;[Uncertain — Requesting Clarification]&quot;
+        return (
+            f&quot;[Supsphere Region: {self.name}] &quot;
+            f&quot;{self.regime} &quot;
+            f&quot;[Continuity: {self.continuity}] &quot;
+            f&quot;[Identity: {self.identity}] &quot;
+            f&quot;{lineage_tag}&quot;
+        )
+</code></pre>
+<hr>
+<h4 id="2-topological-adjacency-and-overlap">2. Topological Adjacency and Overlap</h4>
+<pre><code class="language-python">@dataclass
+class TopologyRelation:
+    a: str
+    b: str
+    relation: str  # &quot;adjacent&quot;, &quot;overlap&quot;, &quot;disjoint&quot;
+
+    def tag(self):
+        return f&quot;[Topology: {self.a} {self.relation} {self.b}]&quot;
+</code></pre>
+<hr>
+<h4 id="3-topology-map-structure">3. Topology Map Structure</h4>
+<pre><code class="language-python">class SupsphereTopology:
+    def __init__(self):
+        self.regions: dict[str, SupsphereRegion] = {}
+        self.relations: list[TopologyRelation] = []
+
+    def add_region(self, region: SupsphereRegion):
+        self.regions[region.name] = region
+
+    def add_relation(self, a: str, b: str, relation: str):
+        self.relations.append(TopologyRelation(a, b, relation))
+</code></pre>
+<hr>
+<h4 id="4-regimeaware-overlap-check">4. Regime‑Aware Overlap Check</h4>
+<pre><code class="language-python">def diagnose_regime_overlap(topology: SupsphereTopology):
+    &quot;&quot;&quot;
+    Detects problematic overlaps between supspheres in the same regime.
+    &quot;&quot;&quot;
+    for rel in topology.relations:
+        if rel.relation == &quot;overlap&quot;:
+            ra = topology.regions[rel.a]
+            rb = topology.regions[rel.b]
+            if ra.regime == rb.regime and ra.name != rb.name:
+                return False, &quot;[Self-Correction: Supsphere Regime Overlap Detected]&quot;
+    return True, &quot;[Supsphere Regime Topology Stable]&quot;
+</code></pre>
+<hr>
+<h4 id="5-continuity-boundary-check">5. Continuity Boundary Check</h4>
+<pre><code class="language-python">def diagnose_continuity_boundaries(topology: SupsphereTopology):
+    &quot;&quot;&quot;
+    Checks continuity consistency across adjacent regions.
+    &quot;&quot;&quot;
+    for rel in topology.relations:
+        if rel.relation == &quot;adjacent&quot;:
+            ra = topology.regions[rel.a]
+            rb = topology.regions[rel.b]
+            if ra.continuity != rb.continuity:
+                return False, &quot;[Continuity Boundary Break Detected]&quot;
+    return True, &quot;[Continuity Boundaries Stable]&quot;
+</code></pre>
+<hr>
+<h4 id="6-identity-fragmentation-check">6. Identity Fragmentation Check</h4>
+<pre><code class="language-python">def diagnose_identity_topology(topology: SupsphereTopology):
+    &quot;&quot;&quot;
+    Checks identity stability across overlapping regions.
+    &quot;&quot;&quot;
+    for rel in topology.relations:
+        if rel.relation == &quot;overlap&quot;:
+            ra = topology.regions[rel.a]
+            rb = topology.regions[rel.b]
+            if ra.identity != rb.identity:
+                return False, &quot;[Identity Fragmentation Across Overlap Detected]&quot;
+    return True, &quot;[Identity Topology Stable]&quot;
+</code></pre>
+<hr>
+<h4 id="7-supsphere-topology-drift-detector">7. Supsphere Topology Drift Detector</h4>
+<pre><code class="language-python">def detect_supsphere_topology_drift(text: str):
+    &quot;&quot;&quot;
+    Detects motif-level misuse of topology (aesthetic, vague metaphor).
+    &quot;&quot;&quot;
+    drift_terms = [
+        &quot;topology vibe&quot;,
+        &quot;topology aesthetic&quot;,
+        &quot;topology-ish&quot;,
+        &quot;supsphere cloud&quot;
+    ]
+    if any(t in text.lower() for t in drift_terms):
+        return False, &quot;[Self-Correction: Supsphere Topology Drift Detected]&quot;
+    return True, &quot;[Supsphere Topology Context Stable]&quot;
+</code></pre>
+<hr>
+<h4 id="8-supsphere-topology-decision-procedure">8. Supsphere Topology Decision Procedure</h4>
+<pre><code class="language-python">def supsphere_topology_decision(topology: SupsphereTopology):
+    &quot;&quot;&quot;
+    Implements the supsphere-topology portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    ok_regime, regime_tag = diagnose_regime_overlap(topology)
+    ok_continuity, continuity_tag = diagnose_continuity_boundaries(topology)
+    ok_identity, identity_tag = diagnose_identity_topology(topology)
+
+    all_ok = ok_regime and ok_continuity and ok_identity
+    if not all_ok:
+        return f&quot;{regime_tag} {continuity_tag} {identity_tag} — please resolve topological conflicts.&quot;
+
+    return f&quot;{regime_tag} {continuity_tag} {identity_tag} [Supsphere Topology Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h4 id="9-supsphere-topology-graph-coherence-combined">9. Supsphere Topology + Graph + Coherence Combined</h4>
+<pre><code class="language-python">def tag_supsphere_topology_full(topology: SupsphereTopology, triad: dict, dimensional: dict):
+    &quot;&quot;&quot;
+    Combines topology diagnostics with coherence-layer tags.
+    &quot;&quot;&quot;
+    def coherence_layer(triad: dict, dimensional: dict):
+        if not all(k in triad and triad[k] for k in (&quot;silence&quot;, &quot;noise&quot;, &quot;resonance&quot;)):
+            return False, &quot;[Coherence Layer Failed: Incomplete Triad]&quot;
+        if &quot;name&quot; not in dimensional or not dimensional[&quot;name&quot;]:
+            return False, &quot;[Coherence Layer Failed: Dimensional Missing]&quot;
+        return True, &quot;[Coherence Layer Satisfied]&quot;
+
+    ok_topology, topo_tag = diagnose_regime_overlap(topology)
+    ok_continuity, cont_tag = diagnose_continuity_boundaries(topology)
+    ok_identity, id_tag = diagnose_identity_topology(topology)
+
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+    dim_tag = f&quot;[Dimensional: {dimensional.get('name', '')}]&quot;
+
+    return f&quot;{topo_tag} {cont_tag} {id_tag} {dim_tag} {coherence_tag}&quot;
+</code></pre>
+<hr>
+<p><strong>Appendix O - Summary</strong><br>
+Appendix O provides:</p>
+<ul>
+<li>supsphere region and topology representation  </li>
+<li>adjacency and overlap tagging  </li>
+<li>regime‑overlap, continuity‑boundary, and identity‑fragmentation diagnostics  </li>
+<li>topology drift detection  </li>
+<li>topology decision procedure  </li>
+<li>topology + coherence combined tagging  </li>
+</ul>
+<p>These tools give AI systems concrete, executable anchors for supsphere topology, strengthening v1.2 compliance and RTT‑aligned reasoning.</p>
+<hr>
+<h3 id="appendix-p-python-triadicgraph-toolkit">Appendix P: Python Triadic‑Graph Toolkit</h3>
+<p><em>(TriadicFrameworks — AI Protocol Header v1.2)</em></p>
+<p>This appendix provides a compact Python toolkit for <strong>triadic graph</strong> reasoning, giving AI systems concrete anchors for:</p>
+<ul>
+<li>representing triads as graph nodes  </li>
+<li>connecting triads via harmonic, continuity, or identity edges  </li>
+<li>detecting graph‑level incoherence and drift  </li>
+<li>tagging triadic paths and layers  </li>
+<li>integrating triadic graphs with regime, lineage, and coherence  </li>
+<li>supporting the v1.2 decision procedure  </li>
+</ul>
+<hr>
+<h4 id="1-triadic-graph-node">1. Triadic Graph Node</h4>
+<pre><code class="language-python">from dataclasses import dataclass
+
+@dataclass
+class TriadNode:
+    name: str
+    silence: str
+    noise: str
+    resonance: str
+    module: str | None = None
+
+    def tag(self):
+        lineage_tag = f&quot;[Lineage: {self.module}]&quot; if self.module else &quot;[Uncertain — Requesting Clarification]&quot;
+        return (
+            f&quot;[Triad: {self.name}] &quot;
+            f&quot;[Silence: {self.silence}] &quot;
+            f&quot;[Noise: {self.noise}] &quot;
+            f&quot;[Resonance: {self.resonance}] &quot;
+            f&quot;{lineage_tag}&quot;
+        )
+</code></pre>
+<hr>
+<h4 id="2-triadic-graph-structure">2. Triadic Graph Structure</h4>
+<pre><code class="language-python">class TriadicGraph:
+    def __init__(self):
+        self.nodes: dict[str, TriadNode] = {}
+        self.edges: list[tuple[str, str, str]] = []  # (nodeA, nodeB, edge_type)
+
+    def add_node(self, node: TriadNode):
+        self.nodes[node.name] = node
+
+    def add_edge(self, a: str, b: str, edge_type: str):
+        self.edges.append((a, b, edge_type))
+</code></pre>
+<hr>
+<h4 id="3-edge-types-harmonic-continuity-identity">3. Edge Types (Harmonic, Continuity, Identity)</h4>
+<pre><code class="language-python">def harmonic_edge(a: TriadNode, b: TriadNode, dimensional: str):
+    return (a.name, b.name, f&quot;[Harmonic Edge: {dimensional}]&quot;)
+
+def continuity_edge(a: TriadNode, b: TriadNode, continuity: str):
+    return (a.name, b.name, f&quot;[Continuity Edge: {continuity}]&quot;)
+
+def identity_edge(a: TriadNode, b: TriadNode, identity: str):
+    return (a.name, b.name, f&quot;[Identity Edge: {identity}]&quot;)
+</code></pre>
+<hr>
+<h4 id="4-triadic-coherence-check-nodelevel">4. Triadic Coherence Check (Node‑Level)</h4>
+<pre><code class="language-python">def validate_triad_node(node: TriadNode):
+    &quot;&quot;&quot;
+    Ensures a triad node is structurally complete.
+    &quot;&quot;&quot;
+    if not node.silence or not node.noise or not node.resonance:
+        return False, &quot;[Coherence Layer Failed: Incomplete Triad]&quot;
+    return True, &quot;[Coherence Layer Satisfied]&quot;
+</code></pre>
+<hr>
+<h4 id="5-triadic-graph-coherence-check">5. Triadic Graph Coherence Check</h4>
+<pre><code class="language-python">def validate_triadic_graph(graph: TriadicGraph):
+    &quot;&quot;&quot;
+    Validates graph-level triadic coherence.
+    &quot;&quot;&quot;
+    results = []
+    all_ok = True
+
+    for node in graph.nodes.values():
+        ok, tag = validate_triad_node(node)
+        results.append(f&quot;{node.name}: {tag}&quot;)
+        all_ok = all_ok and ok
+
+    if not all_ok:
+        return False, &quot;[Triadic Graph Coherence Failed] &quot; + &quot; &quot;.join(results)
+
+    return True, &quot;[Triadic Graph Coherence Satisfied]&quot;
+</code></pre>
+<hr>
+<h4 id="6-triadic-graph-drift-detector">6. Triadic Graph Drift Detector</h4>
+<pre><code class="language-python">def detect_triadic_graph_drift(text: str):
+    &quot;&quot;&quot;
+    Detects motif-level misuse of triadic graphs.
+    &quot;&quot;&quot;
+    drift_terms = [
+        &quot;triadic vibe network&quot;,
+        &quot;triad aesthetic graph&quot;,
+        &quot;triad-ish web&quot;,
+        &quot;triadic pattern-only&quot;
+    ]
+    if any(t in text.lower() for t in drift_terms):
+        return False, &quot;[Self-Correction: Triadic Graph Drift Detected]&quot;
+    return True, &quot;[Triadic Graph Context Stable]&quot;
+</code></pre>
+<hr>
+<h4 id="7-triadic-path-tracing">7. Triadic Path Tracing</h4>
+<pre><code class="language-python">def trace_triadic_path(graph: TriadicGraph, start: str, end: str):
+    &quot;&quot;&quot;
+    Simple DFS path trace between two triad nodes.
+    &quot;&quot;&quot;
+    visited = set()
+    stack = [(start, [start])]
+
+    while stack:
+        node, path = stack.pop()
+        if node == end:
+            return True, f&quot;[Triadic Path: {' → '.join(path)}]&quot;
+
+        visited.add(node)
+        for a, b, _ in graph.edges:
+            if a == node and b not in visited:
+                stack.append((b, path + [b]))
+
+    return False, &quot;[No Triadic Path Found]&quot;
+</code></pre>
+<hr>
+<h4 id="8-triadic-graph-decision-procedure">8. Triadic Graph Decision Procedure</h4>
+<pre><code class="language-python">def triadic_graph_decision(graph: TriadicGraph):
+    &quot;&quot;&quot;
+    Implements the triadic-graph portion of the v1.2 decision procedure.
+    &quot;&quot;&quot;
+    ok, tag = validate_triadic_graph(graph)
+    if not ok:
+        return f&quot;{tag} — please specify missing Silence, Noise, or Resonance for affected nodes.&quot;
+
+    return f&quot;{tag} [Triadic Graph Mapping Complete]&quot;
+</code></pre>
+<hr>
+<h4 id="9-triadic-graph-regime-coherence-combined">9. Triadic Graph + Regime + Coherence Combined</h4>
+<pre><code class="language-python">def tag_triadic_graph_full(graph: TriadicGraph, regime: str, dimensional: dict):
+    &quot;&quot;&quot;
+    Combines triadic graph coherence with regime and dimensional tags.
+    &quot;&quot;&quot;
+    regime_tag = &quot;[1/3 In-Formation]&quot; if regime == &quot;form&quot; else &quot;[2/3 Information]&quot;
+
+    def coherence_layer_dimensional(dimensional: dict):
+        if &quot;name&quot; not in dimensional or not dimensional[&quot;name&quot;]:
+            return False, &quot;[Coherence Layer Failed: Dimensional Missing]&quot;
+        return True, &quot;[Coherence Layer Satisfied]&quot;
+
+    ok_graph, graph_tag = validate_triadic_graph(graph)
+    ok_dim, dim_tag = coherence_layer_dimensional(dimensional)
+
+    dim_name_tag = f&quot;[Dimensional: {dimensional.get('name', '')}]&quot;
+
+    return f&quot;{graph_tag} {regime_tag} {dim_name_tag} {dim_tag}&quot;
+</code></pre>
+<hr>
+<p><strong>Appendix P - Summary</strong><br>
+Appendix P provides:</p>
+<ul>
+<li>triadic graph node and structure  </li>
+<li>harmonic, continuity, and identity edges  </li>
+<li>node‑level and graph‑level coherence checks  </li>
+<li>triadic graph drift detection  </li>
+<li>triadic path tracing  </li>
+<li>triadic‑graph decision procedure  </li>
+<li>triadic‑graph + regime + coherence combined tagging  </li>
+</ul>
+<p>These tools give AI systems concrete, executable anchors for triadic‑graph reasoning, strengthening v1.2 compliance and RTT‑aligned behavior.</p>
+  </main>
+</body>
+</html>

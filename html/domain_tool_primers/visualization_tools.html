@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/domain_tool_primers/visualization_tools.md">
+  <title>Visualization Tool Primer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/domain_tool_primers/visualization_tools.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/domain_tool_primers/visualization_tools.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="visualization-tool-primer"><strong>Visualization Tool Primer</strong></h1>
+<p><em>A minimal starting point for exploring vST concepts inside scientific, analytic, and creative visualization environments</em></p>
+<p>This primer provides a lightweight structure for experimenting with Validation‑Space Theory (vST) inside common visualization tools. Everything here is intentionally minimal, safe to run, and designed to fit naturally into the workflows visualization practitioners already use.</p>
+<p>The functional code runs immediately.<br>
+All vST‑specific mappings are <strong>commented out by default</strong> so validators can read before enabling.</p>
+<hr>
+<h2 id="common-tools-in-this-domain"><strong>Common Tools in This Domain</strong></h2>
+<p>Visualization practitioners typically work with:</p>
+<ul>
+<li>Python (Matplotlib, Plotly, Seaborn)  </li>
+<li>Blender  </li>
+<li>ParaView  </li>
+<li>Unity / Unreal visualization pipelines  </li>
+<li>D3.js  </li>
+<li>Processing  </li>
+<li>GIS visualization stacks (QGIS, ArcGIS)  </li>
+</ul>
+<p>This primer uses <strong>Python + Matplotlib</strong> for maximum portability across scientific and analytic visualization workflows.</p>
+<hr>
+<h2 id="minimal-functional-example-runs-immediately"><strong>Minimal Functional Example (runs immediately)</strong></h2>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+# Minimal example: a simple line plot
+values = [1, 2, 3, 2, 1]
+plt.plot(values)
+plt.title(&quot;Simple Visualization Example&quot;)
+plt.show()
+</code></pre>
+<p>This ensures the file loads cleanly in any visualization environment.</p>
+<hr>
+<h2 id="optional-vst-blocks-commented-out"><strong>Optional vST Blocks (commented out)</strong></h2>
+<p>These blocks show how vST concepts can be expressed inside visualization workflows.<br>
+Uncomment only after reading the usage notes.</p>
+<hr>
+<h3 id="1-dimensional-core-declaration-optional"><strong>1. Dimensional Core Declaration (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Dimensional Core Declaration
+# Uncomment to enable vST dimensional mapping
+# ---------------------------------------------------------
+# dimensional_core = {
+#     &quot;core_id&quot;: &quot;dc_vis_01&quot;,
+#     &quot;dimensions&quot;: [&quot;scale&quot;, &quot;rate&quot;, &quot;stability&quot;],
+#     &quot;domain_variable&quot;: values,
+#     &quot;notes&quot;: &quot;Maps a visualized variable into vST dimensional primitives.&quot;
+# }
+#
+# print(&quot;vST Dimensional Core:&quot;, dimensional_core)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Maps a visualized variable (time series, field intensity, mesh deformation, color gradient) into a vST dimensional‑core structure.</p>
+<hr>
+<h3 id="2-regime-anchor-optional"><strong>2. Regime Anchor (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Regime Anchor
+# Uncomment to activate regime validation
+# ---------------------------------------------------------
+# regime_anchor = {
+#     &quot;anchor_id&quot;: &quot;ra_vis_01&quot;,
+#     &quot;domain_regime&quot;: &quot;steady-pattern&quot;,
+#     &quot;vst_regime&quot;: &quot;stable&quot;,
+#     &quot;notes&quot;: &quot;Anchors a visual regime (steady, oscillatory, chaotic) to a vST regime.&quot;
+# }
+#
+# print(&quot;vST Regime Anchor:&quot;, regime_anchor)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Anchors a visual regime (steady pattern, oscillation, drift, collapse) to a vST regime classification.</p>
+<hr>
+<h3 id="3-corridor-boundary-mapping-optional"><strong>3. Corridor Boundary Mapping (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Corridor Boundary Mapping
+# Uncomment to explore corridor transitions
+# ---------------------------------------------------------
+# corridor_boundary = {
+#     &quot;boundary_id&quot;: &quot;cb_vis_01&quot;,
+#     &quot;input_variable&quot;: values,
+#     &quot;threshold&quot;: 2.5,
+#     &quot;notes&quot;: &quot;Example corridor boundary for stability vs. anomaly in a visualized signal.&quot;
+# }
+#
+# print(&quot;vST Corridor Boundary:&quot;, corridor_boundary)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Shows how corridor boundaries can be used to reason about visual transitions, anomalies, or threshold‑based behavior.</p>
+<hr>
+<h3 id="4-triadic-operator-mapping-optional"><strong>4. Triadic Operator Mapping (optional)</strong></h3>
+<pre><code class="language-python"># ---------------------------------------------------------
+# vST: Triadic Operator Mapping
+# Uncomment to enable operator-level reasoning
+# ---------------------------------------------------------
+# triadic_operator = {
+#     &quot;input&quot;: &quot;values&quot;,
+#     &quot;operator&quot;: &quot;transition&quot;,
+#     &quot;output&quot;: &quot;vst_regime_shift&quot;,
+#     &quot;notes&quot;: &quot;Demonstrates how visual transitions (rise → peak → decay) can be interpreted through vST triadic structure.&quot;
+# }
+#
+# print(&quot;vST Triadic Operator:&quot;, triadic_operator)
+</code></pre>
+<p><strong>Purpose:</strong><br>
+Demonstrates how visual transitions can be interpreted through vST’s triadic operator lens.</p>
+<hr>
+<h2 id="suggested-validation-experiments"><strong>Suggested Validation Experiments</strong></h2>
+<p>These optional experiments help early validators explore vST behavior in visualization contexts:</p>
+<ul>
+<li>Map visualized variables (time series, fields, meshes) into dimensional cores  </li>
+<li>Anchor visual regimes (steady, oscillatory, chaotic) to vST regimes  </li>
+<li>Explore corridor boundaries around peaks, anomalies, or transitions  </li>
+<li>Compare dimensional‑core behavior across different visualization tools  </li>
+<li>Use triadic operators to reason about shape changes or pattern evolution  </li>
+<li>Test regime shifts in Blender, ParaView, or Matplotlib animations  </li>
+</ul>
+<p>These experiments help reveal how vST clarifies cross‑regime behavior through visual form.</p>
+<hr>
+<h2 id="notes"><strong>Notes</strong></h2>
+<p>This primer is intentionally minimal.<br>
+It is not a full integration — it is a safe, readable starting point for exploring vST inside visualization workflows.</p>
+  </main>
+</body>
+</html>

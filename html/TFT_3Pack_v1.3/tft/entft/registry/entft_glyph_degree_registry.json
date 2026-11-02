@@ -1,0 +1,37 @@
+```json
+{
+  "glyph_degrees": [
+    {
+      "glyph_id": "glyph:wildflower-002",
+      "symbol": "🌼",
+      "modules_used": ["Curriculum", "Validator", "Labs:Onboarding"],
+      "remix_degree": "🔵 Planetary",
+      "fusion_links": ["🌾 Bloom Grove", "🌿 Grovewild"],
+      "aliases": ["glyph:petal-echo", "glyph:bloom-init"]
+    },
+    {
+      "glyph_id": "glyph:grovebloom-003",
+      "symbol": "🌴",
+      "modules_used": ["Validator", "Fusion", "Labs:Overlay"],
+      "remix_degree": "🔵 Planetary",
+      "fusion_links": ["🌾 Bloom Grove", "🌿 Grovewild"],
+      "aliases": ["glyph:grove-init", "glyph:validator-bloom"]
+    },
+    {
+      "glyph_id": "glyph:bloomfall-004",
+      "symbol": "🍁",
+      "modules_used": ["Fusion", "Guild", "Labs:Pedagogy", "Codex"],
+      "remix_degree": "🟣 Universe",
+      "fusion_links": [],
+      "aliases": ["glyph:codex-bloom", "glyph:pedagogy-fusion"]
+    },
+    {
+      "glyph_id": "glyph:cascade-001",
+      "symbol": "🍂",
+      "modules_used": ["Codex", "Curriculum", "Labs:Legacy"],
+      "remix_degree": "🟣 Universe",
+      "fusion_links": ["🍁 Bloomfall"],
+      "aliases": ["glyph:codex-init", "glyph:clarity-seed"]
+    }
+  ]
+}

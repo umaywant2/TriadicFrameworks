@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Superspheres -->
+  <circle cx="350" cy="400" r="200" fill="none" stroke="#36c" stroke-width="3"/>
+  <text x="350" y="190" text-anchor="middle">Genesis</text>
+
+  <circle cx="550" cy="400" r="200" fill="none" stroke="#c33" stroke-width="3"/>
+  <text x="550" y="190" text-anchor="middle">Continuance</text>
+
+  <circle cx="450" cy="550" r="200" fill="none" stroke="#2a7" stroke-width="3"/>
+  <text x="450" y="770" text-anchor="middle">Dissolution</text>
+
+  <!-- Liminal overlay -->
+  <circle cx="450" cy="450" r="120" fill="none" stroke="#f0a" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="450" y="450" text-anchor="middle" font-size="12">Liminal (Ma’at · Thoth · Anubis)</text>
+
+  <!-- Intersection labels -->
+  <text x="450" y="400" text-anchor="middle" font-size="12">
+    Regional Genesis · Dual Sovereignty · Desert Entropy
+  </text>
+  <text x="450" y="450" text-anchor="middle" font-size="12">
+    Nile Cycles · Solar Cycles · Duat Mediation
+  </text>
+
+  <!-- Title -->
+  <text x="450" y="80" text-anchor="middle">
+    Kemetic Supersphere Fusion (Pantheon-Level)
+  </text>
+</svg>

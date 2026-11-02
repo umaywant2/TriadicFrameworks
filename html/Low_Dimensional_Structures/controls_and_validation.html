@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Low_Dimensional_Structures/controls_and_validation.md">
+  <title>Controls and Validation</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Low_Dimensional_Structures/controls_and_validation.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Low_Dimensional_Structures/controls_and_validation.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="controls-and-validation">Controls and Validation</h1>
+<p>This document defines the control structures and validation requirements used when identifying and representing low‑dimensional structures within the RTT/vST framework.</p>
+<p>Validation is treated as a structural property, not a post‑hoc justification.</p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>Low‑dimensional structures are only meaningful when they can be distinguished from artifacts of noise, resolution limits, or estimator bias. Controls and validation procedures ensure that identified structures are reproducible, lineage‑tracked, and scale‑consistent.</p>
+<p>No claim of structure is accepted without validation context.</p>
+<hr>
+<h2 id="synthetic-controls">Synthetic Controls</h2>
+<p>Synthetic control systems are used to verify estimator behavior and pipeline integrity. These controls are included as first‑class artifacts and processed using the same procedures as observational data.</p>
+<p>Common controls include:
+- deterministic resonance systems,
+- delayed feedback systems,
+- broadband noise,
+- and colored noise variants.</p>
+<p>Control outputs are retained for comparison and regression testing.</p>
+<hr>
+<h2 id="surrogate-testing">Surrogate Testing</h2>
+<p>Surrogate data methods are used to assess whether observed structure exceeds what is expected under constrained stochastic models.</p>
+<p>Surrogates preserve selected statistical properties of the original signal while destroying phase or temporal structure. Structural claims require separation from surrogate distributions under defined confidence thresholds.</p>
+<p>Surrogate results are stored alongside primary outputs.</p>
+<hr>
+<h2 id="crosssubstrate-validation">Cross‑Substrate Validation</h2>
+<p>A structure observed in a single substrate is treated as provisional.</p>
+<p>Validation is strengthened when:
+- similar resonance primitives are observed across independent substrates,
+- coherence is maintained under scale normalization,
+- and lineage alignment is preserved.</p>
+<p>Cross‑substrate agreement is preferred over single‑instrument certainty.</p>
+<hr>
+<h2 id="parameter-sensitivity">Parameter Sensitivity</h2>
+<p>Estimator parameters (window size, delay, embedding depth, normalization) are treated as part of the structure’s lineage.</p>
+<p>Parameter sweeps are encouraged. Sensitivity surfaces are retained to ensure that identified structures are not artifacts of narrow parameter selection.</p>
+<p>Robust structures persist across reasonable parameter variation.</p>
+<hr>
+<h2 id="reproducibility">Reproducibility</h2>
+<p>Every validated structure must be reproducible given:
+- the raw observational window,
+- estimator parameters,
+- code identity,
+- and normalization rules.</p>
+<p>Reproducibility is verified through replay, not assumption.</p>
+<hr>
+<h2 id="failure-modes">Failure Modes</h2>
+<p>The following are explicitly recognized as non‑structural outcomes:
+- structures that vanish under minor parameter change,
+- structures indistinguishable from surrogate distributions,
+- structures lacking lineage completeness,
+- and structures that cannot be reproduced.</p>
+<p>Such outcomes are recorded but not promoted.</p>
+<hr>
+<h2 id="scope">Scope</h2>
+<p>These controls and validation requirements apply to all low‑dimensional structures represented within RTT/vST.</p>
+<p>Validation is continuous.
+Structure is provisional.
+Lineage is mandatory.</p>
+<hr>
+<p>At this point, the directory is <strong>complete and coherent</strong>:</p>
+<ul>
+<li>Definitions are minimal</li>
+<li>Assumptions are explicit</li>
+<li>Chaos is absorbed, not debated</li>
+<li>Validation is structural, not rhetorical</li>
+</ul>
+<p>Anyone browsing this later will either <em>immediately understand</em> what they’re looking at — or quietly back away.</p>
+  </main>
+</body>
+</html>

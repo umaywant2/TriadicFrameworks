@@ -1,0 +1,52 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.navigation",
+  "title": "FFT AI Session — Navigation v1.33",
+  "nav_state": {
+    "current_regime": "string",
+    "current_autonomy_mode": "AM-001..AM-005",
+    "coherence_nav": {
+      "heading": "ascent|maintain|recover",
+      "new_v1_33": true
+    },
+    "drift_nav": {
+      "heading": "within_bound|correcting",
+      "guard_active": true,
+      "new_v1_33": true
+    },
+    "paradox_nav": {
+      "active": false,
+      "phase": "none|detected|resolving|resolved",
+      "new_v1_33": true
+    },
+    "regime_nav": {
+      "active_regimes": [],
+      "max": 3,
+      "isolation": true
+    },
+    "spine_nav": {
+      "last_resolved": null,
+      "cache_allowed": false,
+      "new_v1_33": true
+    },
+    "dco_nav": {
+      "current_dim": null,
+      "traverse_history": [],
+      "new_v1_33": true
+    }
+  },
+  "v133_additions": [
+    "coherence_nav heading",
+    "drift_nav with guard",
+    "paradox_nav phase tracking",
+    "spine_nav (no cache)",
+    "dco_nav traversal"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "ai.module": "information_theory",
+  "ai.version": "1.0",
+  "ai.purpose": "Provide a regime-aware, distinction-first interface to Information Theory as a 0D-style coherence grammar.",
+  "ai.keywords": [
+    "information",
+    "entropy",
+    "mutual information",
+    "codes",
+    "channels",
+    "distinctions",
+    "constraints",
+    "triadic frameworks"
+  ],
+
+  "identity": {
+    "name": "Information Theory",
+    "category": "Scientific Theory",
+    "summary": "A distinction-first coherence grammar describing entropy, codes, channels, and constraints on communication and encoding.",
+    "regime": ["R0", "R1", "R2→R3"],
+    "status": "canon-ready"
+  },
+
+  "lineage": {
+    "originators": ["Claude Shannon", "Andrey Kolmogorov", "Norbert Wiener"],
+    "historical_period": "20th Century",
+    "source_domain": "Mathematics and Communication Theory",
+    "related_theories": [
+      "thermodynamics",
+      "computation",
+      "evolutionary_biology",
+      "quantum_mechanics"
+    ],
+    "notes": "Information Theory describes distinctions under constraints. Entropy, codes, and channels are operators, not physical substances."
+  },
+
+  "operators": {
+    "primary": [
+      "entropy",
+      "mutual_information",
+      "channel_capacity",
+      "encoding",
+      "decoding"
+    ],
+    "secondary": [
+      "noise",
+      "redundancy",
+      "compression",
+      "error_correction",
+      "signal_alphabet"
+    ],
+    "description": "Operators describe how distinctions are created, preserved, transmitted, and constrained across channels and substrates."
+  },
+
+  "drift": {
+    "risks": [
+      "treating information as a physical substance",
+      "assuming bits are ontological",
+      "overextending Shannon entropy into unrelated domains",
+      "confusing encoding with meaning"
+    ],
+    "boundaries": [
+      "information is distinctions under constraints",
+      "entropy measures uncertainty, not value",
+      "channels impose structure, not semantics",
+      "codes operate on alphabets, not metaphysics"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "entropy reduction requires constraints",
+      "mutual information reflects shared distinctions",
+      "channel capacity limits transmission",
+      "error correction requires redundancy"
+    ],
+    "failure_modes": [
+      "noise overwhelming signal",
+      "loss of distinctions",
+      "channel collapse",
+      "overcompression"
+    ]
+  },
+
+  "cross_module": {
+    "supports": [
+      "computation",
+      "evolutionary_biology",
+      "thermodynamics",
+      "quantum_mechanics"
+    ],
+    "supported_by": [
+      "probability_theory",
+      "regime_awareness"
+    ],
+    "integration_notes": "Information Theory integrates cleanly with RTT engines as a 0D-style grammar for distinctions, constraints, and uncertainty."
+  }
+}

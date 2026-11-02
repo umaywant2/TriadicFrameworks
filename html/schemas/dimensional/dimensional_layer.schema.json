@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Dimensional Layer",
+  "type": "object",
+  "properties": {
+    "dimension_id": { "type": "string" },
+    "name": { "type": "string" },
+    "order": { "type": "number" },
+    "structural_properties": { "type": "object" },
+    "triadic_signature": { "type": "object" }
+  },
+  "required": ["dimension_id", "order"]
+}

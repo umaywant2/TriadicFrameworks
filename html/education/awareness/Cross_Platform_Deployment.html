@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/education/awareness/Cross_Platform_Deployment.md">
+  <title>Safest cross-platform deployment</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/education/awareness/Cross_Platform_Deployment.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/education/awareness/Cross_Platform_Deployment.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="education_awareness_Cross_Platform_Deployment_" src="https://github.com/user-attachments/assets/228741bf-10ee-4b9b-a6e9-db349cc1ab13" /></p>
+<h1 id="safest-cross-platform-deployment">Safest cross-platform deployment</h1>
+<h3 id="minimal-carrier-formats-that-almost-never-break">Minimal carrier formats that almost never break</h3>
+<ul>
+<li><strong>Plain-text signature line:</strong><br>
+<code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code><br>
+  Works in comments, markdown, email footers, issue templates, commit messages, and documents.</li>
+<li><strong>HTML meta tag:</strong><br>
+<code>&lt;meta name="rtt" content="rtt=1 | coherence=declared | drift=bounded | paradox=structural; v=0.1"&gt;</code></li>
+<li><strong>HTTP response header:</strong><br>
+<code>RTT-Awareness: rtt=1; coherence=declared; drift=bounded; paradox=structural; v=0.1</code><br>
+  (Headers are ideal because they’re “invisible” but first-class to tooling.)</li>
+<li><strong><code>/.well-known/</code> declaration file:</strong><br>
+<code>/.well-known/rtt-awareness</code> (text) so crawlers/tools can discover it without scraping HTML.</li>
+<li><strong><code>rtt.json</code> manifest:</strong><br>
+  Machine-readable canonical form for tooling and local resolvers.</li>
+</ul>
+<h3 id="practical-rule">Practical rule</h3>
+<p>Use <strong>at least two carriers</strong> per site: one human-visible (meta/markdown) + one machine-stable (header or well-known). That gives us resilience when one layer is stripped.</p>
+<hr>
+<h2 id="self-updating-without-breaking-trust">Self-updating without breaking trust</h2>
+<p>“Self-updating” is where projects accidentally become spooky. The safe pattern is: <strong>pull-based, signed, and pinned by default</strong>.</p>
+<h3 id="a-sane-update-model">A sane update model</h3>
+<ul>
+<li><strong>Pinned default:</strong> Sites pin to a specific manifest version (e.g., <code>v=0.1.0</code>) and only update when explicitly allowed.</li>
+<li><strong>Optional update channel:</strong> <code>stable</code> / <code>candidate</code> / <code>local</code> channels.</li>
+<li><strong>Signed manifest:</strong> Publish a small <code>rtt.manifest.json</code> plus a detached signature file. Local tools verify before adopting.</li>
+<li><strong>ETag/Last-Modified polling:</strong> Cheap update checks without hammering servers.</li>
+</ul>
+<h3 id="manifest-sketch">Manifest sketch</h3>
+<pre><code class="language-json">{
+  &quot;schema&quot;: &quot;rtt-awareness-manifest&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;declaration&quot;: &quot;rtt=1 | coherence=declared | drift=bounded | paradox=structural&quot;,
+  &quot;ruleset&quot;: &quot;https://example.org/rtt/ruleset/0.1.0&quot;,
+  &quot;channel&quot;: &quot;stable&quot;,
+  &quot;updated&quot;: &quot;2026-02-06&quot;
+}
+</code></pre>
+<hr>
+<h2 id="letting-sites-inherit-rtt-awareness">Letting sites inherit RTT awareness</h2>
+<p>“Inheritance” should feel like CSS inheritance: <strong>local overrides, upstream defaults, explicit precedence</strong>.</p>
+<h3 id="inheritance-primitives">Inheritance primitives</h3>
+<ul>
+<li><strong>Base declaration:</strong> site-wide default in one place (header or well-known file).</li>
+<li><strong>Scoped override:</strong> per-path or per-document overrides (meta tag in page, frontmatter in markdown).</li>
+<li><strong>Precedence order (simple and predictable):</strong>
+  1. <strong>Document-local</strong> (frontmatter/meta)
+  2. <strong>Path-local</strong> (directory manifest)
+  3. <strong>Site-wide</strong> (<code>/.well-known/…</code> or server header)
+  4. <strong>Upstream</strong> (imported manifest)</li>
+</ul>
+<h3 id="import-mechanism">“Import” mechanism</h3>
+<p>Allow a site to point to an upstream canon:</p>
+<ul>
+<li>In <code>/.well-known/rtt-awareness</code>:
+  <code>import: https://docs.triadicframeworks.org/.well-known/rtt-awareness</code></li>
+</ul>
+<p>Then the resolver merges: upstream → local overrides. No magic—just declared composition.</p>
+<hr>
+<h2 id="tiny-local-resolver-that-simulates-the-full-substrate">Tiny local resolver that simulates the full substrate</h2>
+<p>We want something that can <em>act like the world</em> locally: ingest declarations, resolve inheritance, and expose a stable view.</p>
+<h3 id="minimal-architecture">Minimal architecture</h3>
+<ul>
+<li><strong>Input adapters:</strong> read from</li>
+<li>local files/folders (docs trees)</li>
+<li>HTTP headers</li>
+<li>HTML meta tags</li>
+<li>well-known declarations</li>
+<li>manifests</li>
+<li><strong>Resolver core:</strong> merges declarations by precedence; produces an “effective awareness” object.</li>
+<li><strong>Simulator:</strong> represents “substrate” as a graph of regimes/contexts and runs constraint checks (drift bounds, coherence gates, recurrence assumptions).</li>
+<li><strong>Outputs:</strong></li>
+<li>CLI summary (<code>rtt resolve &lt;url-or-path&gt;</code>)</li>
+<li>local web UI (optional)</li>
+<li>JSON export for other tools</li>
+</ul>
+<h3 id="concrete-lowest-friction-implementation">Concrete lowest-friction implementation</h3>
+<ul>
+<li><strong>Local reverse proxy</strong> (single binary/script) that:</li>
+<li>fetches a page</li>
+<li>reads headers + HTML meta</li>
+<li>computes effective RTT awareness</li>
+<li>optionally injects a small “awareness panel” into the HTML <em>only on localhost</em></li>
+<li>Or <strong>browser extension</strong> that does the same resolution in-page (no server changes required).</li>
+</ul>
+<h3 id="effective-resolution-object">Effective resolution object</h3>
+<pre><code class="language-json">{
+  &quot;effective_declaration&quot;: {
+    &quot;rtt&quot;: &quot;1&quot;,
+    &quot;coherence&quot;: &quot;declared&quot;,
+    &quot;drift&quot;: &quot;bounded&quot;,
+    &quot;paradox&quot;: &quot;structural&quot;
+  },
+  &quot;sources&quot;: [
+    {&quot;type&quot;: &quot;well-known&quot;, &quot;uri&quot;: &quot;https://site/.well-known/rtt-awareness&quot;},
+    {&quot;type&quot;: &quot;meta&quot;, &quot;uri&quot;: &quot;https://site/page&quot;}
+  ],
+  &quot;version&quot;: &quot;0.1.0&quot;
+}
+</code></pre>
+<hr>
+<h2 id="pairing-browser-extension-observer-well-known-carrier">Pairing: <strong>browser extension (observer)</strong> + <strong><code>/.well-known/</code> (carrier)</strong></h2>
+<p>This keeps RTT awareness <strong>pull-based, local-first, opt-in, and reversible</strong>—no platform permissions required beyond what a user installs.</p>
+<hr>
+<h1 id="carrier-well-knownrtt-awareness">Carrier: <code>/.well-known/rtt-awareness</code></h1>
+<h2 id="file-format-v0">File format v0</h2>
+<p>Plain text is the most resilient across hosts/CDNs and easiest to debug:</p>
+<pre><code class="language-text">schema: rtt-awareness
+version: 0.1.0
+declaration: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+channel: stable
+updated: 2026-02-06
+
+# optional inheritance
+import: https://docs.triadicframeworks.org/.well-known/rtt-awareness
+
+# optional scoping (prefix match)
+scope /docs/: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+scope /labs/: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h3 id="inheritance-semantics">Inheritance semantics</h3>
+<ul>
+<li><strong>Upstream first</strong>, then local overrides.</li>
+<li><strong>Local scope overrides</strong> beat site root.</li>
+<li><strong>Page-level meta</strong> (if we later add it) beats everything.</li>
+</ul>
+<hr>
+<h1 id="self-updating-safe-by-default-update-model">Self-updating: safe-by-default update model</h1>
+<p>Because the extension is local, “self-updating” really means: <em>the extension periodically re-reads the site’s own well-known file</em> plus any declared imports.</p>
+<h2 id="rules">Rules</h2>
+<ul>
+<li><strong>Default is pinned:</strong> honor whatever <code>version:</code> is returned; do not “upgrade” semantics automatically.</li>
+<li><strong>Channel only selects <em>which</em> manifest we fetch</strong>, not what we interpret.</li>
+<li><strong>Caching:</strong> store <code>(url, etag, lastModified, fetchedAt, parsedManifest)</code> and revalidate with conditional requests.</li>
+<li><strong>Failure mode:</strong> if fetch fails, keep last-known-good and mark status stale.</li>
+</ul>
+<p>This makes the system behave like DNS caching: stable, conservative, and predictable.</p>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+  </main>
+</body>
+</html>

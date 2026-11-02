@@ -1,0 +1,51 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.state.refresh",
+  "title": "FFT AI Session — State Refresh v1.33",
+  "refresh_triggers": {
+    "on_operator_complete": {
+      "action": "recompute phi,V,R,tau",
+      "log": true
+    },
+    "on_coherence_change": {
+      "action": "recompute coherence_state; if lost invoke recovery",
+      "new_v1_33": true
+    },
+    "on_drift_exceed": {
+      "action": "defer next op; invoke Stabilization; log DRIFT",
+      "new_v1_33": true
+    },
+    "on_paradox_detect": {
+      "action": "snapshot all state; invoke paradox.resolver; log PARADOX",
+      "new_v1_33": true
+    },
+    "on_snr_imbalance": {
+      "action": "rebalance partition; alert if overlap persists",
+      "new_v1_33": true
+    },
+    "on_set_event": {
+      "action": "update set_state; recompute phi delta",
+      "new_v1_33": true
+    },
+    "on_session_open": {
+      "action": "full state init from bootstrap sequence"
+    },
+    "on_session_close": {
+      "action": "flush log; checkpoint state; archive to history"
+    }
+  },
+  "v133_additions": [
+    "on_coherence_change",
+    "on_drift_exceed",
+    "on_paradox_detect",
+    "on_snr_imbalance",
+    "on_set_event"
+  ]
+}

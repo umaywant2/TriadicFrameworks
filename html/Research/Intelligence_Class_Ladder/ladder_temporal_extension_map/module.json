@@ -1,0 +1,28 @@
+{
+  "module": "Ladder_Temporal_Extension_Map",
+  "name": "Intelligence Class Ladder — Temporal‑Extension Map",
+  "summary": "Defines the temporal‑extension geometry of the Intelligence Class Ladder, showing how AAI, AGI, and SI maintain corrected‑time stability, long‑window reasoning, and temporal persistence across cognitive tiers.",
+  "category": "intelligence-temporal-map",
+  "version": "1.0",
+  "purpose": "Provide a temporal‑extension map for the Ladder, explaining how each tier handles extended reasoning windows, temporal distortion correction, and cross‑domain temporal alignment under increasing cognitive load.",
+  "role": "map",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@ladder.time.extend",
+    "@ladder.time.correct",
+    "@ladder.time.persist",
+    "@ladder.time.align",
+    "@ladder.time.compute"
+  ],
+  "lineage": {
+    "upstream": ["Ladder_Overview", "Ladder_Registry"],
+    "downstream": [
+      "AAI",
+      "AGI",
+      "SI",
+      "SI_temporal_extension",
+      "Triad_Temporal_Correction_Surfaces",
+      "Atlas_Synchronization_Fields"
+    ]
+  }
+}

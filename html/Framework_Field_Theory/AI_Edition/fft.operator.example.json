@@ -1,0 +1,73 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.operator.example",
+  "title": "FFT — Operator Examples v1.33",
+  "examples": [
+    {
+      "id": "OPX-001",
+      "operator": "Alignment",
+      "scenario": "R=0.35, V misaligned",
+      "input": {
+        "R": 0.35,
+        "V": 0.2
+      },
+      "output": {
+        "R": 0.58,
+        "V_aligned": 0.55
+      },
+      "drift_cost": 0.1
+    },
+    {
+      "id": "OPX-002",
+      "operator": "Stabilization",
+      "scenario": "R=0.97 (overload)",
+      "input": {
+        "R": 0.97
+      },
+      "output": {
+        "R_stable": 0.91
+      },
+      "drift_cost": 0.03
+    },
+    {
+      "id": "OPX-003",
+      "operator": "Coupling",
+      "scenario": "phi=0.6, V=0.7",
+      "input": {
+        "phi": 0.6,
+        "V": 0.7
+      },
+      "output": {
+        "R_delta": 0.18
+      },
+      "drift_cost": 0.12
+    },
+    {
+      "id": "OPX-004",
+      "operator": "Drift Guard (v1.33)",
+      "scenario": "delta=0.37 exceeds bound",
+      "input": {
+        "delta": 0.37
+      },
+      "output": {
+        "action": "deferred",
+        "log": "DRIFT"
+      },
+      "drift_cost": 0.0,
+      "new_v1_33": true
+    }
+  ],
+  "invariants_checked": [
+    "INV-002",
+    "INV-004",
+    "INV-008"
+  ]
+}

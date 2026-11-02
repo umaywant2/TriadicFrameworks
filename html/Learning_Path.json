@@ -1,0 +1,134 @@
+{
+  "learning_path": {
+    "beginner": {
+      "track_name": "Beginner Track",
+      "modules": [
+        {
+          "name": "Docs Root",
+          "role": "Home",
+          "description": "Entry point to the TriadicFrameworks canon"
+        },
+        {
+          "name": "Paradoxes Canon",
+          "role": "Reference",
+          "description": "Survey of foundational structural paradoxes"
+        },
+        {
+          "name": "NoS",
+          "role": "Operator",
+          "description": "Nature of Structure — core operator grammar primer"
+        },
+        {
+          "name": "Resilience Checker",
+          "role": "Diagnostic",
+          "description": "Validate your structural understanding"
+        },
+        {
+          "name": "Glossary",
+          "role": "Reference",
+          "description": "Master operator term definitions"
+        }
+      ]
+    },
+    "intermediate": {
+      "track_name": "Intermediate Track",
+      "modules": [
+        {
+          "name": "Docs Root",
+          "role": "Home",
+          "description": "Entry point to the TriadicFrameworks canon"
+        },
+        {
+          "name": "SARG",
+          "role": "Engine",
+          "description": "Structural analysis and resonance generator"
+        },
+        {
+          "name": "Framework Field Theory",
+          "role": "Engine",
+          "description": "Field-theoretic model of module interactions"
+        },
+        {
+          "name": "Governance Substrate Model",
+          "role": "Operator",
+          "description": "Governance layer for operator authorization"
+        },
+        {
+          "name": "Mode",
+          "role": "Operator",
+          "description": "Discrete operational postures with guardrails"
+        },
+        {
+          "name": "Opacity",
+          "role": "Coherence",
+          "description": "Coherence visibility and transparency model"
+        },
+        {
+          "name": "Drift Map",
+          "role": "Map",
+          "description": "Visualize divergence from canonical baselines"
+        },
+        {
+          "name": "Coherence Index",
+          "role": "Index",
+          "description": "Aggregated coherence measurement index"
+        }
+      ]
+    },
+    "advanced": {
+      "track_name": "Advanced Track",
+      "modules": [
+        {
+          "name": "Docs Root",
+          "role": "Home",
+          "description": "Entry point to the TriadicFrameworks canon"
+        },
+        {
+          "name": "FFT Analyzer",
+          "role": "Diagnostic",
+          "description": "Frequency-domain diagnostic engine"
+        },
+        {
+          "name": "Low Dimensional Structures",
+          "role": "Dimensional",
+          "description": "Reduced-dimension structural analysis"
+        },
+        {
+          "name": "Inverted Economics",
+          "role": "Regime",
+          "description": "Regime-inverted economic operator models"
+        },
+        {
+          "name": "Spectral Clarity",
+          "role": "Signature",
+          "description": "C(f) = Σ [Resonance(f) / Drift(f)]"
+        },
+        {
+          "name": "Nawderian Theorem",
+          "role": "Signature",
+          "description": "V(t) = ∫ [Coherence(t) × Mode(t)] dt"
+        },
+        {
+          "name": "TEL",
+          "role": "Coherence",
+          "description": "Triadic Echo Lattice coherence architecture"
+        },
+        {
+          "name": "JWST-RTT",
+          "role": "Extension",
+          "description": "RTT extension for JWST observational data"
+        },
+        {
+          "name": "Integrations",
+          "role": "Cross-Cutting",
+          "description": "Cross-module integration patterns"
+        },
+        {
+          "name": "Wikipedia Module",
+          "role": "Reference",
+          "description": "Wikidata-aligned reference integration"
+        }
+      ]
+    }
+  }
+}

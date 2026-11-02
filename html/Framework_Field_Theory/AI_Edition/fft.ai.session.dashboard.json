@@ -1,0 +1,77 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.dashboard",
+  "title": "FFT AI Session — Dashboard v1.33",
+  "widgets": [
+    {
+      "id": "W01",
+      "name": "Field Triad",
+      "component": "field_triad",
+      "position": "top-left"
+    },
+    {
+      "id": "W02",
+      "name": "RTT Tau Gauge",
+      "component": "tau_gauge",
+      "position": "top-center"
+    },
+    {
+      "id": "W03",
+      "name": "Coherence Badge",
+      "component": "coherence_badge",
+      "position": "top-right",
+      "new_v1_33": true
+    },
+    {
+      "id": "W04",
+      "name": "Drift Meter",
+      "component": "drift_meter",
+      "position": "mid-left",
+      "new_v1_33": true
+    },
+    {
+      "id": "W05",
+      "name": "S-N-R Bar",
+      "component": "snr_bar",
+      "position": "mid-center",
+      "new_v1_33": true
+    },
+    {
+      "id": "W06",
+      "name": "Paradox Alert",
+      "component": "paradox_alert",
+      "position": "mid-right",
+      "new_v1_33": true
+    },
+    {
+      "id": "W07",
+      "name": "SET Triad",
+      "component": "set_triad",
+      "position": "bot-left",
+      "new_v1_33": true
+    },
+    {
+      "id": "W08",
+      "name": "DCO Indicator",
+      "component": "dco_indicator",
+      "position": "bot-center",
+      "new_v1_33": true
+    },
+    {
+      "id": "W09",
+      "name": "Operator Log",
+      "component": "operator_log",
+      "position": "bot-right"
+    }
+  ],
+  "v133_additions": [
+    "W03-W08 all new in v1.33: coherence, drift, S-N-R, paradox, SET, DCO widgets"
+  ]
+}

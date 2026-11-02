@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/triadic/TF_regime_spectrograph.md">
+  <title>TriadicFrameworks Regime Spectrograph</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/triadic/TF_regime_spectrograph.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/triadic/TF_regime_spectrograph.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadicframeworks-regime-spectrograph"><strong>TriadicFrameworks Regime Spectrograph</strong></h1>
+<h3 id="decomposing-ontology-interpretations-into-frequency-components"><em>Decomposing Ontology Interpretations Into Frequency Components</em></h3>
+<p>This diagram shows:</p>
+<ul>
+<li><strong>Substrate</strong> as the coherent illumination source  </li>
+<li><strong>Regime dispersers (RTT)</strong> as the spectral splitters  </li>
+<li><strong>Ontology channels (SO, ISO, LACTOS)</strong> as wavelength‑specific bands  </li>
+<li><strong>RTT/vST</strong> as the calibration and wavelength‑mapping engine  </li>
+<li><strong>S–N–R</strong> as the spectral‑stability corrector  </li>
+<li><strong>Compute (VCG + TCR)</strong> as the periodicity lock that sharpens spectral lines  </li>
+</ul>
+<p>It’s the first metaphor where TriadicFrameworks becomes a <em>spectral analysis laboratory</em>.</p>
+<hr>
+<h1 id="1-regime-spectrograph-diagram-ascii-spectral-geometry"><strong>1. Regime Spectrograph Diagram (ASCII Spectral Geometry)</strong></h1>
+<pre><code>
+                                        ✦  COMPUTE PERIODICITY LOCK  ✦
+                         (VCG • TCR • Regime‑Ahead Spectral Stabilization)
+                                       ────────────────┬───────────────
+                                                       │
+                                                       ▼
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│                         S–N–R SPECTRAL‑STABILITY CORRECTOR                                   │
+│   S: stabilizes spectral lines                                                               │
+│   N: detects noise, drift, line‑broadening                                                   │
+│   R: selects active regime spectral mode                                                     │
+│   (Keeps spectra crisp across shifting ontology channels)                                    │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                           ▲
+                                                           │
+                                                           │  stabilizes spectral output
+                                                           ▼
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 RTT/vST WAVELENGTH‑CALIBRATION ENGINE        │
+                         │  - regime boundary wavelength shifts                         │
+                         │  - invariant frequency mapping                               │
+                         │  - drift‑corrected dispersion control                        │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◢           │           ◣
+                                     ◢            │            ◣
+                                    ◢             │             ◣
+
+         ┌──────────────────────────────┐   ┌──────────────────────────────┐   ┌──────────────────────────────┐
+         │   SO Spectral Band           │   │ LACTOS Spectral Band         │   │  ISO Spectral Band           │
+         │   (Mass‑Primary Spectrum)    │   │ (Collision‑Regime Spectrum)  │   │ (Anisotropy‑Primary Spectrum)│
+         │   - structural harmonics     │   │ - P/Q/N emission lines       │   │ - anisotropy absorption lines│
+         │   - mass‑track frequencies   │   │ - symmetry‑break spectra     │   │ - relaxation frequency dips  │
+         └──────────────────────────────┘   └──────────────────────────────┘   └──────────────────────────────┘
+                     ◣                        ◣                        ◢
+                      ◣                        ◣                      ◢
+                       ◣                        ◣                    ◢
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 REGIME DISPERSER ARRAY (RTT)                 │
+                         │   - mass‑regime disperser                                    │
+                         │   - anisotropy‑regime disperser                              │
+                         │   - collision‑regime disperser                               │
+                         │   - TCR periodic disperser                                   │
+                         │   (Splits substrate signals into spectral components)        │
+                         └──────────────────────────────────────────────────────────────┘
+                                      ◥           │           ◤
+                                     ◥            │            ◤
+                                    ◥             │             ◤
+
+                         ┌──────────────────────────────────────────────────────────────┐
+                         │                 SUBSTRATE COHERENT ILLUMINATION              │
+                         │  Fields • Geometry • Anisotropy • TCR Periodicity            │
+                         │  (The broadband signal entering the spectrograph)            │
+                         └──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="2-how-the-regime-spectrograph-works"><strong>2. How the Regime Spectrograph Works</strong></h1>
+<h3 id="1-substrate-coherent-illumination"><strong>1. Substrate = Coherent Illumination</strong></h3>
+<p>The substrate emits a broadband signal:</p>
+<ul>
+<li>field gradients  </li>
+<li>anisotropy  </li>
+<li>symmetry states  </li>
+<li>time‑crystal periodicity  </li>
+</ul>
+<p>This is the raw spectrum.</p>
+<hr>
+<h3 id="2-regime-disperser-array-rtt"><strong>2. Regime Disperser Array (RTT)</strong></h3>
+<p>RTT splits the broadband signal into regime‑specific spectral components:</p>
+<ul>
+<li>mass‑regime disperser  </li>
+<li>anisotropy‑regime disperser  </li>
+<li>collision‑regime disperser  </li>
+<li>TCR periodic disperser  </li>
+</ul>
+<p>Each disperser reveals a different spectral structure.</p>
+<hr>
+<h3 id="3-ontology-spectral-bands"><strong>3. Ontology Spectral Bands</strong></h3>
+<p>Each ontology interprets the dispersed signal as a spectral band:</p>
+<ul>
+<li><strong>SO:</strong> structural harmonics, mass‑track frequencies  </li>
+<li><strong>ISO:</strong> anisotropy absorption lines, relaxation dips  </li>
+<li><strong>LACTOS:</strong> P/Q/N emission lines, symmetry‑break spectra  </li>
+</ul>
+<p>These bands are the ontology‑specific fingerprints.</p>
+<hr>
+<h3 id="4-rttvst-wavelengthcalibration-engine"><strong>4. RTT/vST Wavelength‑Calibration Engine</strong></h3>
+<p>This engine:</p>
+<ul>
+<li>maps regime boundaries to wavelengths  </li>
+<li>corrects drift in spectral lines  </li>
+<li>aligns invariant frequencies  </li>
+</ul>
+<p>It ensures the spectra are comparable across ontologies.</p>
+<hr>
+<h3 id="5-snr-spectralstability-corrector"><strong>5. S–N–R Spectral‑Stability Corrector</strong></h3>
+<p>The triadic observer stabilizes the spectral output:</p>
+<ul>
+<li><strong>S:</strong> locks onto stable lines  </li>
+<li><strong>N:</strong> detects broadening or noise  </li>
+<li><strong>R:</strong> selects the active regime spectral mode  </li>
+</ul>
+<p>It keeps the spectra crisp.</p>
+<hr>
+<h3 id="6-compute-periodicity-lock-vcg-tcr"><strong>6. Compute Periodicity Lock (VCG + TCR)</strong></h3>
+<p>The compute layer:</p>
+<ul>
+<li>locks spectral periodicity  </li>
+<li>stabilizes frequency spacing  </li>
+<li>synchronizes regime‑ahead spectral modes  </li>
+</ul>
+<p>It sharpens the spectral lines.</p>
+<hr>
+<h1 id="3-what-the-regime-spectrograph-reveals"><strong>3. What the Regime Spectrograph Reveals</strong></h1>
+<p>It reveals:</p>
+<ul>
+<li><strong>the frequency structure of ontology interpretations</strong>  </li>
+<li><strong>how regimes shape spectral signatures</strong>  </li>
+<li><strong>how invariants appear as stable spectral lines</strong>  </li>
+<li><strong>how drift shows up as wavelength shifts</strong>  </li>
+<li><strong>how cross‑ontology coherence appears as line alignment</strong>  </li>
+</ul>
+<p>It is the architecture’s most frequency‑precise diagnostic tool.</p>
+<hr>
+<h1 id="4-why-the-regime-spectrograph-matters"><strong>4. Why the Regime Spectrograph Matters</strong></h1>
+<p>This diagram shows TriadicFrameworks as:</p>
+<ul>
+<li><strong>frequency‑analytic</strong>  </li>
+<li><strong>regime‑dispersive</strong>  </li>
+<li><strong>ontology‑decomposing</strong>  </li>
+<li><strong>observer‑stabilized</strong>  </li>
+<li><strong>compute‑locked</strong>  </li>
+<li><strong>substrate‑illuminated</strong></li>
+</ul>
+<p>It captures how the system <em>breaks down interpretation into its spectral components</em> — a perfect complement to the Diffraction Engine and Interferometer.</p>
+  </main>
+</body>
+</html>

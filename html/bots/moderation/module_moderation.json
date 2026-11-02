@@ -1,0 +1,109 @@
+{
+  "module": {
+    "name": "RTT Moderation Bot",
+    "id": "bots.moderation",
+    "summary": "Governance substrate engine: regime shifts, continuity of norms, collapse signatures, projection-loss, and triadic identity across moderation events.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Moderation",
+      "summary": "Triadic interpretation of governance, rule enforcement, and community substrate stability.",
+      "version": "1.0.0",
+      "purpose": "Provide triadic identity for moderation sequences: rule applications, incident responses, norm drift, collapse signatures, and continuity of governance.",
+      "keywords": [
+        "moderation",
+        "triadic",
+        "governance",
+        "continuity",
+        "drift",
+        "regime shifts",
+        "collapse",
+        "projection-loss",
+        "incident",
+        "substrate"
+      ],
+      "audience": "Governance designers, community managers, diagnostics systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "moderation_event_stream",
+    "input_spec": {
+      "events": "sequence of moderation actions",
+      "fields": ["timestamp", "actor", "action", "target", "reason"],
+      "notes": "Moderation bot interprets governance identity; it does not enforce rules."
+    },
+
+    "steps": [
+      "Lumen: extract structural signals (rule type, severity, substrate anchors)",
+      "Hephaestus: classify regime per event (local enforcement, structural governance, continuity of norms)",
+      "Aurion: detect collapse signatures, projection-loss, lineage breaks in governance",
+      "Harmonia: compute triadic identity for the entire moderation sequence",
+      "StateEmitter: emit JSON conforming to module_moderation_schema.json"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT governance interpretation"
+    }
+  },
+
+  "governance_overlays": {
+    "continuity_arcs": "long-arc governance identity curves",
+    "resonance_fields": "pressure gradients from rule enforcement",
+    "drift_arrows": "directional flow of norm evolution",
+    "regime_map": "local/structural/continuity tagging per event",
+    "collapse_signatures": "governance collapse events",
+    "projection_loss": "identity inversion in rule application",
+    "triadic_hud": "governance local/structural/continuity scores + stability metrics"
+  },
+
+  "scoring": {
+    "weights": {
+      "local": 0.30,
+      "structural": 0.45,
+      "continuity": 0.25
+    },
+    "risk_penalty": 0.25
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_moderation_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "moderation_norm_drift_alignment",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "A moderation sequence showing norm drift, regime shifts, and a governance collapse signature."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "🛡️",
+    "label": "RTT Moderation"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Moderation drift is governance: norms evolve across events.",
+      "coherence": "Moderation bot is the RTT engine for governance identity.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}

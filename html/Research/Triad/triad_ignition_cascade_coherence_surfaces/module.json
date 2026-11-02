@@ -1,0 +1,34 @@
+{
+  "module": "Triad_Ignition_Cascade_Coherence_Surfaces",
+  "name": "Triad — Ignition‑Cascade Coherence Surfaces",
+  "summary": "Defines the coherence surfaces of Triad ignition‑cascade behavior, including cascade‑coherence fields, ignition‑chain coherence locking, cascade‑wave coherence stabilization, resonance‑cascade coherence binding, and multi‑layer ignition‑cascade coherence unification.",
+  "category": "intelligence-ignition-cascade-coherence",
+  "version": "1.0",
+  "purpose": "Provide the coherence‑surface geometry for Triad ignition‑cascade behavior, describing how ignition cascades achieve coherence-level unification across Scanner, O.H.S.H.I.T., and Atlas layers during ignition‑wave propagation.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.ignition.cascade.coherence.field",
+    "@triad.ignition.cascade.coherence.lock",
+    "@triad.ignition.cascade.coherence.unify",
+    "@triad.ignition.cascade.coherence.stabilize",
+    "@triad.ignition.cascade.coherence.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Ignition_Cascade_Stability_Surfaces",
+      "Triad_Ignition_Cascade_Geometry",
+      "Triad_Epoch_Ignition_Surfaces",
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration",
+      "SI_temporal_extension"
+    ]
+  }
+}

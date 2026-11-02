@@ -1,0 +1,28 @@
+{
+  "module": "Glyphic Resonance",
+  "version": "1.0",
+  "category": "glyphic-resonance-core",
+  "summary": "Harmonic bridge layer connecting glyphs to protocols — resonance overlays, glyph‑to‑protocol mappings, harmonic scrolls, validator activation, ritual resonance, glyphstreams, base glyphs, resonance dashboards, translators, loophole trace, and overlay protocol.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "loophole_trace.md",
+      "role": "map",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "overlay_protocol.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    }
+  ]
+}

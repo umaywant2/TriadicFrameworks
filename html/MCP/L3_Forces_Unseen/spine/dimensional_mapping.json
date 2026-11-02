@@ -1,0 +1,70 @@
+{
+  "id": "S3-Spine-Dimensional-Mapping",
+  "canonical": "R5",
+  "version": "1.0.0",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "regime": "unseen-force-regime",
+
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "nodes": [
+    {
+      "id": "gradient",
+      "semantics": ["gradientIntensity"],
+      "dimensions": [
+        { "id": "L4", "role": "influence-origin" },
+        { "id": "L5", "role": "influence-direction" },
+        { "id": "L16", "role": "influence-modulation" },
+        { "id": "LH", "role": "harmonic-influence-axis" }
+      ],
+      "operators": ["push", "gradient"]
+    },
+
+    {
+      "id": "field",
+      "semantics": ["fieldCoherence"],
+      "dimensions": [
+        { "id": "L8", "role": "coherence-origin" },
+        { "id": "L10", "role": "coherence-stability" },
+        { "id": "L26", "role": "coherence-modulation" }
+      ],
+      "operators": ["pull", "fieldShift", "bind"]
+    },
+
+    {
+      "id": "rupture",
+      "semantics": ["rupturePotential"],
+      "dimensions": [
+        { "id": "L12", "role": "instability-threshold" }
+      ],
+      "operators": ["ruptureForce"]
+    },
+
+    {
+      "id": "integrity",
+      "semantics": ["forceIntegrity"],
+      "dimensions": [
+        { "id": "L32", "role": "structural-stability" },
+        { "id": "LI", "role": "invariance-axis" }
+      ],
+      "operators": ["bind"]
+    }
+  ],
+
+  "dimensionRoles": {
+    "L4": "Influence origin axis",
+    "L5": "Influence direction axis",
+    "L16": "Influence modulation axis",
+    "LH": "Harmonic influence axis",
+
+    "L8": "Field coherence origin",
+    "L10": "Field coherence stability",
+    "L26": "Field coherence modulation",
+
+    "L12": "Rupture instability threshold",
+
+    "L32": "Structural stability axis",
+    "LI": "Integrity invariance axis"
+  }
+}

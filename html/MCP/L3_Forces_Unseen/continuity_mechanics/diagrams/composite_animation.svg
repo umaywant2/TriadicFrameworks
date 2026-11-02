@@ -1,0 +1,143 @@
+<!--
+Composite Resonance Animation Metadata
+--------------------------------------
+id: diagram.composite_animation
+title: Composite Resonance Animation
+layer: L3_Forces_Unseen
+subsystem: continuity_mechanics
+triad: continuity
+canonical: R5
+version: 1.0.0
+
+description: Animated visualization of the composite resonance chain
+L11 → L33 → L66 → L99 → validator_pulse. The animation highlights the
+assembly of resonance envelopes and the upward continuity flow using
+timed fill cycles and a moving glow indicator.
+
+dimensions:
+  L11:
+    role: proto-resonance seed
+    position: (170, 400)
+    size: 180×50
+    fill: #222
+    stroke: #555
+    animation: fill cycle (4s, begin 0s)
+
+  L33:
+    role: seen resonance envelope
+    position: (170, 320)
+    size: 180×50
+    fill: #333
+    stroke: #666
+    animation: fill cycle (4s, begin 0.5s)
+
+  L66:
+    role: hidden resonance envelope
+    position: (170, 240)
+    size: 180×50
+    fill: #444
+    stroke: #777
+    animation: fill cycle (4s, begin 1s)
+
+  L99:
+    role: full resonance envelope
+    position: (170, 160)
+    size: 180×50
+    fill: #555
+    stroke: #888
+    animation: fill cycle (4s, begin 1.5s)
+
+  validator_pulse:
+    role: external resonance operator
+    position: (260, 80)
+    radius: 30
+    fill: #880000
+    stroke: #aa3333
+    animation: radius + fill pulse (2.5s)
+
+flow_indicator:
+  type: glow
+  position: (260, 400)
+  radius: 6
+  color: #00ffff
+  animation: vertical cycle (400→80→400 over 6s)
+
+arrows:
+  marker: arrow (#aaa)
+  edges:
+    L11 → L33
+    L33 → L66
+    L66 → L99
+    L99 → validator_pulse
+
+redirects:
+  L11: L33, L66, L99
+  L33: L66
+  L66: L99
+  L99: validator_pulse
+  validator_pulse: L99
+
+ai:
+  keywords: resonance, triad, composite, continuity, L11, L33, L66, L99, validator_pulse, animation, svg
+  purpose: Structured metadata describing the composite resonance animation for continuity_mechanics.
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="480">
+
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="6" refX="10" refY="3" orient="auto">
+      <polygon points="0 0,10 3,0 6" fill="#aaa"/>
+    </marker>
+  </defs>
+
+  <!-- Shared Styles -->
+  <style>
+    .box { rx:8; stroke-width:1; }
+    .text { fill:#fff; font-family:Arial, sans-serif; text-anchor:middle; }
+  </style>
+
+  <!-- L11 -->
+  <rect x="170" y="400" width="180" height="50" class="box" fill="#222" stroke="#555">
+    <animate attributeName="fill" values="#222;#444;#222" dur="4s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="260" y="430" class="text" font-size="16">L11 • Proto Seed</text>
+
+  <!-- L33 -->
+  <rect x="170" y="320" width="180" height="50" class="box" fill="#333" stroke="#666">
+    <animate attributeName="fill" values="#333;#666;#333" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="260" y="350" class="text" font-size="16">L33 • Seen Envelope</text>
+
+  <!-- L66 -->
+  <rect x="170" y="240" width="180" height="50" class="box" fill="#444" stroke="#777">
+    <animate attributeName="fill" values="#444;#777;#444" dur="4s" begin="1s" repeatCount="indefinite"/>
+  </rect>
+  <text x="260" y="270" class="text" font-size="16">L66 • Hidden Envelope</text>
+
+  <!-- L99 -->
+  <rect x="170" y="160" width="180" height="50" class="box" fill="#555" stroke="#888">
+    <animate attributeName="fill" values="#555;#999;#555" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="260" y="190" class="text" font-size="16">L99 • Full Resonance</text>
+
+  <!-- Validator Pulse -->
+  <circle cx="260" cy="80" r="30" fill="#880000" stroke="#aa3333">
+    <animate attributeName="r" values="30;38;30" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#880000;#ff3333;#880000" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="260" y="85" class="text" font-size="14">Validator Pulse</text>
+
+  <!-- Glow Indicator -->
+  <circle cx="260" cy="400" r="6" fill="#00ffff">
+    <animate attributeName="cy" values="400;320;240;160;80;400" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;1;1;0" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Arrows -->
+  <line x1="260" y1="400" x2="260" y2="320" stroke="#aaa" marker-end="url(#arrow)"/>
+  <line x1="260" y1="320" x2="260" y2="240" stroke="#aaa" marker-end="url(#arrow)"/>
+  <line x1="260" y1="240" x2="260" y2="160" stroke="#aaa" marker-end="url(#arrow)"/>
+  <line x1="260" y1="160" x2="260" y2="80" stroke="#aaa" marker-end="url(#arrow)"/>
+
+</svg>

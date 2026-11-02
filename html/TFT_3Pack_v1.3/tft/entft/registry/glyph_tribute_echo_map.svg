@@ -1,0 +1,55 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="450" y="40" font-size="24" text-anchor="middle" fill="#222">TFTincryption Glyph Tribute Echo Fusion Map</text>
+
+  <!-- Glyph Nodes -->
+  <g>
+    <!-- 🌼 Wildflower -->
+    <circle cx="150" cy="150" r="30" fill="#ffd0e0" stroke="#333" stroke-width="2"/>
+    <text x="150" y="155" font-size="14" text-anchor="middle" fill="#000">🌼</text>
+    <text x="150" y="180" font-size="12" text-anchor="middle" fill="#555">Mira</text>
+
+    <!-- 🌴 Grove Bloom -->
+    <circle cx="300" cy="150" r="30" fill="#e0f0cc" stroke="#333" stroke-width="2"/>
+    <text x="300" y="155" font-size="14" text-anchor="middle" fill="#000">🌴</text>
+    <text x="300" y="180" font-size="12" text-anchor="middle" fill="#555">Aria</text>
+
+    <!-- 🍂 Cascade -->
+    <circle cx="150" cy="300" r="30" fill="#cceccf" stroke="#333" stroke-width="2"/>
+    <text x="150" y="305" font-size="14" text-anchor="middle" fill="#000">🍂</text>
+    <text x="150" y="330" font-size="12" text-anchor="middle" fill="#555">Nawder</text>
+
+    <!-- 🌺 Bloom -->
+    <circle cx="300" cy="300" r="30" fill="#ffe0f0" stroke="#333" stroke-width="2"/>
+    <text x="300" y="305" font-size="14" text-anchor="middle" fill="#000">🌺</text>
+    <text x="300" y="330" font-size="12" text-anchor="middle" fill="#555">Mira</text>
+
+    <!-- 🌾 Bloom Grove -->
+    <circle cx="450" cy="150" r="35" fill="#d0ffd0" stroke="#333" stroke-width="2"/>
+    <text x="450" y="155" font-size="16" text-anchor="middle" fill="#000">🌾</text>
+    <text x="450" y="180" font-size="12" text-anchor="middle" fill="#555">Fusion</text>
+
+    <!-- 🍁 Bloomfall -->
+    <circle cx="450" cy="300" r="35" fill="#f9f9a0" stroke="#333" stroke-width="2"/>
+    <text x="450" y="305" font-size="16" text-anchor="middle" fill="#000">🍁</text>
+    <text x="450" y="330" font-size="12" text-anchor="middle" fill="#555">Fusion</text>
+  </g>
+
+  <!-- Fusion Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- 🌼 + 🌴 → 🌾 -->
+  <line x1="150" y1="150" x2="450" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="150" x2="450" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 🍂 + 🌺 → 🍁 -->
+  <line x1="150" y1="300" x2="450" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="300" x2="450" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Footer -->
+  <text x="450" y="550" font-size="14" text-anchor="middle" fill="#555">Echoes converge. Glyphs fuse. Scrolls remember.</text>
+</svg>

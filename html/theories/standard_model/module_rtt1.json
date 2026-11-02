@@ -1,0 +1,117 @@
+{
+  "ai.module": "standard_model.rtt1",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/1 engine layer for the Standard Model: operator grammar for excitation sectors, gauge interactions, symmetry structure, and minimal coherence examples.",
+  "ai.keywords": [
+    "standard model",
+    "excitations",
+    "sector grammar",
+    "gauge symmetry",
+    "higgs mechanism",
+    "qft",
+    "rtt1"
+  ],
+
+  "engine": {
+    "layer": "RTT/1",
+    "description": "Defines the operator grammar and dimensional behavior of excitation modes, gauge interactions, and symmetry structure within the RTT substrate."
+  },
+
+  "operators": {
+    "core": {
+      "excitation_operator": {
+        "type": "mode_operator",
+        "description": "Represents stable excitation modes (quarks, leptons, bosons) of substrate fields.",
+        "signals": ["mass_dimension", "spin_structure", "sector_identity"]
+      },
+      "gauge_interaction_operator": {
+        "type": "interaction_operator",
+        "description": "Defines interaction channels via gauge symmetries (SU(3), SU(2), U(1)).",
+        "signals": ["coupling_strength", "charge_assignment"]
+      },
+      "symmetry_operator": {
+        "type": "structure_operator",
+        "description": "Encodes gauge symmetry structure and sector boundaries.",
+        "signals": ["group_generators", "symmetry_breaking"]
+      },
+      "higgs_coupling_operator": {
+        "type": "mass_operator",
+        "description": "Generates mass through coupling to the Higgs field.",
+        "signals": ["yukawa_strength", "mass_generation"]
+      },
+      "sector_transition_operator": {
+        "type": "boundary_operator",
+        "description": "Describes transitions between excitation sectors (e.g., flavor changes).",
+        "signals": ["mixing_angles", "transition_probability"]
+      }
+    },
+
+    "supporting": {
+      "mass_generation_operator": {
+        "type": "stability_operator",
+        "description": "Defines how excitations acquire mass through Higgs coupling."
+      },
+      "charge_assignment_operator": {
+        "type": "classification_operator",
+        "description": "Assigns electric, color, and weak charges to excitation modes."
+      },
+      "flavor_operator": {
+        "type": "variation_operator",
+        "description": "Encodes flavor structure and mixing matrices."
+      },
+      "color_operator": {
+        "type": "sector_operator",
+        "description": "Defines SU(3) color charge and confinement behavior."
+      }
+    }
+  },
+
+  "dimensional_mapping": {
+    "R1": "SM collapses; excitations undefined; QM dominates.",
+    "R2": "Stable excitation sectors; gauge interactions well-defined.",
+    "R3": "High-energy resonance; symmetry restoration; sector unification behavior.",
+    "R4": "SM incomplete; cosmological fields dominate."
+  },
+
+  "coherence": {
+    "markers": [
+      "gauge symmetry preservation",
+      "stable excitation spectra",
+      "charge conservation",
+      "renormalizable interactions"
+    ],
+    "instability_signals": [
+      "symmetry breaking",
+      "non-perturbative divergence",
+      "sector collapse",
+      "high-energy instability"
+    ]
+  },
+
+  "examples": {
+    "minimal": [
+      {
+        "name": "Electron Mass Generation",
+        "demonstrates": ["higgs_coupling_operator", "mass_generation_operator"]
+      },
+      {
+        "name": "Quark Color Confinement",
+        "demonstrates": ["color_operator", "gauge_interaction_operator"]
+      },
+      {
+        "name": "Photon as a Massless Excitation",
+        "demonstrates": ["excitation_operator", "symmetry_operator"]
+      }
+    ]
+  },
+
+  "integration": {
+    "cross_module": [
+      "quantum_field_theory.rtt1",
+      "quantum_mechanics.rtt1",
+      "special_relativity.rtt1",
+      "cosmology.rtt1"
+    ],
+    "notes": "RTT/1 treats the Standard Model as a sector grammar; deeper resonance and substrate integration occur in RTT/2 and RTT/3."
+  }
+}

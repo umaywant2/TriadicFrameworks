@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/primitives/resonance_envelope.schema.json",
+  "title": "ResonanceEnvelope",
+  "description": "A resonance envelope field R(x,y) and its binary activation mask.",
+  "type": "object",
+  "properties": {
+    "grid": {
+      "$ref": "grid_coordinates.schema.json",
+      "description": "Grid spacing and origin metadata."
+    },
+    "nx": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of grid points in the x-direction."
+    },
+    "ny": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of grid points in the y-direction."
+    },
+    "R": {
+      "type": "array",
+      "description": "Row-major 2D array of resonance envelope values.",
+      "items": {
+        "type": "array",
+        "items": { "type": "number" }
+      }
+    },
+    "mask": {
+      "type": "array",
+      "description": "Binary mask indicating active resonance regions.",
+      "items": {
+        "type": "array",
+        "items": { "type": "boolean" }
+      }
+    }
+  },
+  "required": ["grid", "nx", "ny", "R", "mask"]
+}

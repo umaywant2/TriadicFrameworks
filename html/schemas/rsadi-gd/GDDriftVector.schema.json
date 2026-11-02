@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rsadi/gd/v1/GDDriftVector.schema.json",
+  "title": "GDDriftVector",
+  "type": "object",
+  "required": ["dx", "dy", "dz", "magnitude"],
+  "properties": {
+    "dx": { "type": "number" },
+    "dy": { "type": "number" },
+    "dz": { "type": "number" },
+    "magnitude": {
+      "type": "number",
+      "minimum": 0
+    },
+    "units": {
+      "type": "string",
+      "enum": ["1/s"]
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

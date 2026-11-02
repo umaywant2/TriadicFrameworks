@@ -1,0 +1,99 @@
+{
+  "id": "fft.ai.rtt.spine.examples",
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "title": "FFT AI — RTT Spine Examples v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "spine_url": "https://docs.triadicframeworks.org/spine/",
+  "examples": [
+    {
+      "id": "EX-RTT-001",
+      "title": "Basic Resonance Init",
+      "phi": 0.5,
+      "V": 0.3,
+      "R_initial": 0.2,
+      "operator": "Alignment",
+      "R_after": 0.55,
+      "tau": 0.35,
+      "notes": "Standard coherence ascent"
+    },
+    {
+      "id": "EX-RTT-002",
+      "title": "Drift Bound Trigger",
+      "phi": 0.8,
+      "V": 0.9,
+      "R_initial": 0.4,
+      "delta": 0.38,
+      "guard": "DRIFT_EXCEED",
+      "action": "defer operator, invoke Stabilization",
+      "notes": "v1.33: drift guard fires at delta>0.35"
+    },
+    {
+      "id": "EX-RTT-003",
+      "title": "Paradox=Structural Event",
+      "phi": 0.3,
+      "V": 0.7,
+      "paradox_type": "anti_time_violation",
+      "resolution": "field_isolation then re-coherence",
+      "notes": "v1.33: structural paradox — not an error"
+    },
+    {
+      "id": "EX-RTT-004",
+      "title": "SET Coupling — Temperature",
+      "T_hot": 1.0,
+      "T_cold": 0.1,
+      "gradient_T": 0.9,
+      "phi_delta": 0.15,
+      "R_lift": 0.2,
+      "notes": "v1.33: temperature gradient feeds RTT phase"
+    },
+    {
+      "id": "EX-RTT-005",
+      "title": "QMROOT 0D Seed Trace",
+      "module": "fft.ai.session.context.json",
+      "trace": [
+        "3+1D",
+        "2D",
+        "1D",
+        "0D"
+      ],
+      "seed": "Silence S=0+",
+      "notes": "v1.33: every module traceable to 0D"
+    },
+    {
+      "id": "EX-RTT-006",
+      "title": "Spine URL Live Resolution",
+      "spine_url": "https://docs.triadicframeworks.org/spine/",
+      "resolved_at": "2026-10-09T09:46:00-04:00",
+      "cached": false,
+      "notes": "v1.33: INV-011 enforced"
+    },
+    {
+      "id": "EX-RTT-007",
+      "title": "S-N-R Phase Snapshot",
+      "S": 0.08,
+      "N": 0.22,
+      "R": 0.7,
+      "sum": 1.0,
+      "status": "resonance_zone",
+      "notes": "v1.33: partitions sum to 1.0"
+    },
+    {
+      "id": "EX-RTT-008",
+      "title": "DCO 5D Relational-Resonance",
+      "DCO": "5D",
+      "operator": "nabla_R(tau)",
+      "input_R": 0.75,
+      "output_tau_sharpened": 0.88,
+      "notes": "v1.33: DCO scaffold active"
+    }
+  ],
+  "v133_additions": [
+    "EX-RTT-002 through EX-RTT-008 — all new v1.33 examples covering drift, paradox, SET, QMROOT, Spine, S-N-R, DCO"
+  ]
+}

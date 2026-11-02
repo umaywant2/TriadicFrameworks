@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="520" height="280" viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill:#050505; }
+    .title { fill:#fff; font-family:system-ui,sans-serif; font-size:18px; font-weight:bold; }
+    .header { fill:#9cf; font-family:system-ui,sans-serif; font-size:13px; }
+    .cell { fill:#111; stroke:#666; stroke-width:1; }
+    .cell-text { fill:#ccc; font-family:system-ui,sans-serif; font-size:12px; }
+  </style>
+
+  <rect x="0" y="0" width="520" height="280" class="bg"/>
+
+  <text x="260" y="32" text-anchor="middle" class="title">
+    Φ — Phase‑Map (phase → operator)
+  </text>
+
+  <!-- header row -->
+  <rect x="40" y="60" width="200" height="30" class="cell"/>
+  <rect x="260" y="60" width="220" height="30" class="cell"/>
+  <text x="140" y="80" text-anchor="middle" class="header">phase</text>
+  <text x="370" y="80" text-anchor="middle" class="header">operator mapping</text>
+
+  <!-- rows -->
+  <rect x="40" y="100" width="200" height="30" class="cell"/>
+  <rect x="260" y="100" width="220" height="30" class="cell"/>
+  <text x="140" y="120" text-anchor="middle" class="cell-text">rise</text>
+  <text x="370" y="120" text-anchor="middle" class="cell-text">Δ</text>
+
+  <rect x="40" y="140" width="200" height="30" class="cell"/>
+  <rect x="260" y="140" width="220" height="30" class="cell"/>
+  <text x="140" y="160" text-anchor="middle" class="cell-text">saturation</text>
+  <text x="370" y="160" text-anchor="middle" class="cell-text">Δ</text>
+
+  <rect x="40" y="180" width="200" height="30" class="cell"/>
+  <rect x="260" y="180" width="220" height="30" class="cell"/>
+  <text x="140" y="200" text-anchor="middle" class="cell-text">fracture</text>
+  <text x="370" y="200" text-anchor="middle" class="cell-text">Δ→Ω</text>
+
+  <rect x="40" y="220" width="200" height="30" class="cell"/>
+  <rect x="260" y="220" width="220" height="30" class="cell"/>
+  <text x="140" y="240" text-anchor="middle" class="cell-text">inversion</text>
+  <text x="370" y="240" text-anchor="middle" class="cell-text">Ω</text>
+
+  <rect x="40" y="260" width="200" height="30" class="cell"/>
+  <rect x="260" y="260" width="220" height="30" class="cell"/>
+  <text x="140" y="280" text-anchor="middle" class="cell-text">collapse / dissolution / silence</text>
+  <text x="370" y="280" text-anchor="middle" class="cell-text">∇ → ∇→Σ → Σ</text>
+</svg>

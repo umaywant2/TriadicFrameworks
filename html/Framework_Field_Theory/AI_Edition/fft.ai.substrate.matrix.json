@@ -1,0 +1,44 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:48:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "v133_status": "verified_and_stamped",
+  "id": "fft.ai.substrate.matrix",
+  "title": "FFT AI — Substrate Matrix v1.33",
+  "matrix_dimensions": {
+    "phi_axis": "0.0–1.0",
+    "V_axis": "0.0–1.0",
+    "R_axis": "0.0–1.0"
+  },
+  "zones": {
+    "silence_zone": {
+      "phi": "<0.10",
+      "R": "<0.10",
+      "label": "Quiet Substrate — SET uncoupled"
+    },
+    "noise_zone": {
+      "phi": "0.10–0.50",
+      "R": "0.10–0.50",
+      "label": "Noise-dominant — Alignment needed"
+    },
+    "resonance_zone": {
+      "phi": "0.30–0.80",
+      "R": "0.70–0.95",
+      "label": "Target zone — coherence maintained"
+    },
+    "overload_zone": {
+      "R": ">0.95",
+      "label": "Saturation — Stabilization required"
+    }
+  },
+  "invariants_checked": [
+    "INV-001",
+    "INV-007",
+    "INV-010"
+  ]
+}

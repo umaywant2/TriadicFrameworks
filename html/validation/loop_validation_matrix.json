@@ -1,0 +1,50 @@
+{
+  "Foundations": {
+    "papers": ["Paper I", "Paper II", "Paper III", "Paper IV"],
+    "loop_type": "Dimensional recursion",
+    "equations": true,
+    "reproducibility": true
+  },
+  "Quantum & Particle Vision": {
+    "papers": ["Ghost Particle", "Quantum Computers", "Entropy’s Harmonic"],
+    "loop_type": "Quantum recursion",
+    "equations": true,
+    "reproducibility": true
+  },
+  "Energy & Wireless Power": {
+    "papers": ["Cold Fusion", "WiFi Energy Protocols", "Zero Point"],
+    "loop_type": "Wireless resonance",
+    "equations": true,
+    "reproducibility": true
+  },
+  "Health & Ultrasound": {
+    "papers": ["Health Care Framework", "Ultrasound Enhancement"],
+    "loop_type": "Sonic healing",
+    "equations": true,
+    "reproducibility": true
+  },
+  "Music & Symbolic Extensions": {
+    "papers": ["Quadratic Extensions", "Prescription Lenses"],
+    "loop_type": "Harmonic scaffolding",
+    "equations": true,
+    "reproducibility": true
+  },
+  "Cognitive & Symbolic Formalization": {
+    "papers": ["Resonance Operator @()", "ISO Standards", "Nested Loops"],
+    "loop_type": "Symbolic cognition",
+    "equations": true,
+    "reproducibility": true
+  },
+  "Elemental & Spectrum Research": {
+    "papers": ["Light and Dark", "10 Rarest Elements", "Spectral Flux"],
+    "loop_type": "Spectral flux integrity",
+    "equations": true,
+    "reproducibility": true
+  },
+  "Planetary & Temporal": {
+    "papers": ["Resonant Time", "Planetary Science", "Time and Anti-Time"],
+    "loop_type": "Temporal recursion",
+    "equations": true,
+    "reproducibility": true
+  }
+}

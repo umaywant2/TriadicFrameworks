@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "supply_id": "string",
+  "type": "string",
+  "quantity": "number",
+  "units": "string",
+  "triadic_stability": {
+    "spin": "number",
+    "charge": "number",
+    "temperature": "number"
+  }
+}

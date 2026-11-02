@@ -1,0 +1,16 @@
+{
+  "id": "core",
+  "name": "TFT 3Pack Core Module",
+  "description": "Core module for TFT_3Pack_v1.3, providing triadic evaluation structures.",
+  "fields": [
+    "triad",
+    "state",
+    "operator",
+    "coherence",
+    "diagnostic"
+  ],
+  "examples": [
+    "Used for triadic evaluation in RTT workflows.",
+    "Provides core structures for 3Pack module integration."
+  ]
+}

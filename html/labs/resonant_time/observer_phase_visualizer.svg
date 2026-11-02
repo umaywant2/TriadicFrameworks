@@ -1,0 +1,10 @@
+<!-- Observer Phase Visualizer: Quadrant Pulse Mapping -->
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="150" cy="150" r="120" fill="#1a1a1a" />
+  <text x="150" y="30" text-anchor="middle" fill="#6c00ff">N</text>
+  <text x="150" y="290" text-anchor="middle" fill="#ffcc00">S</text>
+  <text x="30" y="150" text-anchor="middle" fill="#00cc99">W</text>
+  <text x="270" y="150" text-anchor="middle" fill="#ff6699">E</text>
+  <circle cx="150" cy="150" r="20" fill="#ffffff" />
+</svg>
+<!-- Notes: Observer quadrant mapping for glyph overlays -->

@@ -1,0 +1,63 @@
+{
+  "telemetry": "triadic-monitor",
+  "version": "1.0",
+  "generated": "2025-01-01T00:00:00Z",
+
+  "packet_id": "pkt-telemetry-0001",
+  "timestamp": "2025-01-01T00:00:00Z",
+
+  "global": {
+    "coherence": 0.82,
+    "drift": 0.14,
+    "stability": "stable",
+    "resonance": 0.33,
+    "epoch": "E3",
+    "ignition": "inactive"
+  },
+
+  "structural": {
+    "operators": ["Δ", "Σ", "Ω"],
+    "dimensions": ["D1", "D2"],
+    "regimes": ["baseline"],
+    "layers": ["L0", "L1"]
+  },
+
+  "behavioral": {
+    "drift_magnitude": 0.14,
+    "drift_velocity": 0.02,
+    "coherence_envelope": 0.82,
+    "stability_index": 0.91,
+    "resonance_magnitude": 0.33,
+    "ignition_magnitude": 0.00
+  },
+
+  "temporal": {
+    "epoch_progress": 0.44,
+    "epoch_transition_readiness": ["aligned"],
+    "propagation_phase": ["phase-1"]
+  },
+
+  "atlas": {
+    "routes": ["route-A"],
+    "modes": ["coherence"],
+    "fields": ["field-01"]
+  },
+
+  "activation": {
+    "ignition_wave": [],
+    "cascade_state": [],
+    "harmonic_phase": "in-phase"
+  },
+
+  "continuity": {
+    "structural": ["ok"],
+    "behavioral": ["ok"],
+    "temporal": ["ok"],
+    "atlas": ["ok"],
+    "activation": ["ok"]
+  },
+
+  "meta": {
+    "notes": "Example telemetry packet demonstrating canonical triadic monitor fields."
+  }
+}

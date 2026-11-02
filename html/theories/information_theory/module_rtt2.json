@@ -1,0 +1,129 @@
+{
+  "ai.module": "information_theory.rtt2",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/2 engine layer for Information Theory: resonance mapping, stabilizers, code/channel coherence, and cross-module propagation.",
+  "ai.keywords": [
+    "information",
+    "entropy",
+    "mutual information",
+    "codes",
+    "channels",
+    "resonance",
+    "constraints",
+    "rtt2"
+  ],
+
+  "engine": {
+    "layer": "RTT/2",
+    "description": "Integrates Information Theory into the RTT resonance substrate, exposing stabilizers, distinction propagation, and cross-module coherence patterns."
+  },
+
+  "resonance": {
+    "patterns": [
+      {
+        "name": "distinction_resonance",
+        "description": "Stable distinctions propagate across channels when constraints align with signal structure."
+      },
+      {
+        "name": "entropy_resonance",
+        "description": "Entropy gradients behave as resonance flows between uncertainty and constraint."
+      },
+      {
+        "name": "code_resonance",
+        "description": "Codes stabilize distinctions by aligning redundancy with channel noise patterns."
+      }
+    ],
+    "failure_modes": [
+      "noise_overwhelm",
+      "loss_of_distinctions",
+      "channel_collapse",
+      "overcompression"
+    ]
+  },
+
+  "stabilizers": {
+    "primary": [
+      {
+        "name": "redundancy",
+        "description": "Adds structure that protects distinctions from noise."
+      },
+      {
+        "name": "alphabet_constraints",
+        "description": "Defines the set of distinguishable symbols available for encoding."
+      },
+      {
+        "name": "error_correction",
+        "description": "Stabilizes distinction propagation across noisy channels."
+      }
+    ],
+    "secondary": [
+      {
+        "name": "compression",
+        "description": "Optimizes redundancy while preserving distinctions."
+      },
+      {
+        "name": "channel_structure",
+        "description": "Bandwidth, noise, and symbol constraints shape resonance behavior."
+      }
+    ]
+  },
+
+  "distinction_propagation": {
+    "mechanisms": [
+      "encoding",
+      "decoding",
+      "error_detection",
+      "error_correction"
+    ],
+    "signals": [
+      "entropy_change",
+      "mutual_information_flow",
+      "noise_profile"
+    ],
+    "notes": "Distinction propagation is the core stabilizer of information resonance across channels."
+  },
+
+  "cross_module": {
+    "interactions": [
+      {
+        "module": "thermodynamics.rtt2",
+        "interaction": "Entropy and information share constraint structures and resonance flows."
+      },
+      {
+        "module": "evolutionary_biology.rtt2",
+        "interaction": "Lineage memory and genetic encoding follow information-theoretic constraints."
+      },
+      {
+        "module": "computation.rtt2",
+        "interaction": "Algorithms and data structures operate on distinctions under resource constraints."
+      },
+      {
+        "module": "quantum_mechanics.rtt2",
+        "interaction": "Quantum information imposes substrate-specific distinction limits."
+      }
+    ],
+    "notes": "Information resonance propagates across physical, biological, and computational modules."
+  },
+
+  "dimensional_behavior": {
+    "R0": "Pure distinctions; resonance defined without physical substrate.",
+    "R1": "Primitive channels; minimal signal carriers and noise.",
+    "R2": "Physical, biological, or computational implementations of codes and channels.",
+    "R3": "Complex multi-channel systems with stable error correction and redundancy."
+  },
+
+  "coherence": {
+    "markers": [
+      "stable distinction preservation",
+      "predictable entropy gradients",
+      "bounded noise",
+      "consistent channel capacity"
+    ],
+    "instability_signals": [
+      "noise overwhelming signal",
+      "loss of distinctions",
+      "channel collapse",
+      "overcompression"
+    ]
+  }
+}

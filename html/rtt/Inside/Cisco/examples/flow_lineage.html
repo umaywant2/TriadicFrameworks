@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Cisco/examples/flow_lineage.md">
+  <title>Flow Lineage Example (Cisco RTT/Inside)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Cisco/examples/flow_lineage.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Cisco/examples/flow_lineage.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="flow-lineage-example-cisco-rttinside">Flow Lineage Example (Cisco RTT/Inside)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Demonstrate how RTT‑Inside reconstructs <strong>causal lineage</strong> for a flow traversing
+Cisco‑class systems. This example uses the base Cisco operator grammar and shows
+how telemetry, management actions, and forwarding behavior combine into a single
+RTT causal object.</p>
+<hr>
+<h1 id="scenario">Scenario</h1>
+<p>A flow enters a Cisco fabric, triggers a policy‑driven management action, is
+forwarded across multiple devices, and emits telemetry at each hop. RTT‑Inside
+stitches these signals into a coherent lineage chain.</p>
+<hr>
+<h1 id="operator-chain">Operator Chain</h1>
+<pre><code>intent      = INTENT_CISCO(device_policy)
+signal      = TIF_CISCO(telemetry)
+mgmt        = MAN_CISCO(controller_action)
+flow        = FFF_CISCO(flow_record)
+
+resolved    = CRE_CISCO(intent, signal, mgmt)
+lineage     = CSL_CISCO([resolved])
+time        = CET_CISCO(lineage)
+
+output      = RTT_CISCO(time)
+</code></pre>
+<hr>
+<h1 id="interpretation-studentreadable">Interpretation (Student‑Readable)</h1>
+<ul>
+<li><strong>INTENT_CISCO</strong> captures the declared network intent (policy, routing objective).</li>
+<li><strong>TIF_CISCO</strong> interprets telemetry emitted by the device during flow handling.</li>
+<li><strong>MAN_CISCO</strong> records any management‑plane actions (controller updates, config pushes).</li>
+<li><strong>FFF_CISCO</strong> extracts flow‑level causality (forwarding decisions, path selection).</li>
+<li><strong>CRE_CISCO</strong> resolves these into a unified causal event.</li>
+<li><strong>CSL_CISCO</strong> stitches events into a lineage chain.</li>
+<li><strong>CET_CISCO</strong> applies antitime ordering for temporal clarity.</li>
+<li><strong>RTT_CISCO</strong> produces the final causal object.</li>
+</ul>
+<hr>
+<h1 id="result">Result</h1>
+<p>RTT reconstructs a clear causal narrative:</p>
+<ul>
+<li>why the flow was forwarded  </li>
+<li>which policies influenced it  </li>
+<li>what telemetry was emitted  </li>
+<li>what management actions occurred  </li>
+<li>how the final state emerged  </li>
+</ul>
+<p>This is the foundation for higher‑level reasoning in grid‑scale, DSRSP‑aware, and
+Internet3‑class substrates.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Philanthropy/philanthropy_api.md">
+  <title>Philanthropy API</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Philanthropy/philanthropy_api.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Philanthropy/philanthropy_api.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="philanthropy-api">Philanthropy API</h1>
+<h2 id="operatorlevel-interface-rtt1">Operator‑Level Interface (RTT/1)</h2>
+<p>This document defines the callable operators used in the <strong>Philanthropy &amp; Funding Transparency</strong> module.<br>
+All operators follow RTT grammar and integrate with SET load, governance substrate, drift detection, and the triadic observer.</p>
+<p>Each operator includes:
+- signature<br>
+- description<br>
+- inputs<br>
+- outputs<br>
+- structural notes  </p>
+<hr>
+<h1 id="1-flow-operators">1. Flow Operators</h1>
+<h2 id="flowsrc-dst"><strong>FLOW(src → dst)</strong></h2>
+<p>Moves funding from one node to another.</p>
+<p><strong>Inputs:</strong><br>
+- src (node)<br>
+- dst (node)<br>
+- amount (numeric)</p>
+<p><strong>Outputs:</strong><br>
+- updated flow state</p>
+<p><strong>Notes:</strong><br>
+Backbone of all philanthropic routing.</p>
+<hr>
+<h2 id="tracepath"><strong>TRACE(path)</strong></h2>
+<p>Reveals the full funding chain.</p>
+<p><strong>Inputs:</strong><br>
+- ordered list of nodes</p>
+<p><strong>Outputs:</strong><br>
+- visibility map<br>
+- missing segments</p>
+<p><strong>Notes:</strong><br>
+Used for transparency and auditability.</p>
+<hr>
+<h2 id="leaknode"><strong>LEAK(node)</strong></h2>
+<p>Measures loss at a node.</p>
+<p><strong>Inputs:</strong><br>
+- node</p>
+<p><strong>Outputs:</strong><br>
+- leakage percentage</p>
+<p><strong>Notes:</strong><br>
+High leakage is a structural red indicator.</p>
+<hr>
+<h2 id="convertinput-output"><strong>CONVERT(input → output)</strong></h2>
+<p>Transforms funding into outputs or outcomes.</p>
+<p><strong>Inputs:</strong><br>
+- input (funding)<br>
+- output (deliverable)</p>
+<p><strong>Outputs:</strong><br>
+- conversion ratio</p>
+<p><strong>Notes:</strong><br>
+Used for outcome analysis.</p>
+<hr>
+<h1 id="2-set-load-operators">2. SET Load Operators</h1>
+<h2 id="set_innode"><strong>SET_IN(node)</strong></h2>
+<p>Energy entering a node.</p>
+<h2 id="set_outnode"><strong>SET_OUT(node)</strong></h2>
+<p>Energy leaving a node.</p>
+<h2 id="set_leaknode"><strong>SET_LEAK(node)</strong></h2>
+<p>Energy lost at a node.</p>
+<h2 id="set_balnode"><strong>SET_BAL(node)</strong></h2>
+<p>Efficiency ratio.</p>
+<p><strong>Notes:</strong><br>
+SET load is the energy model for philanthropic systems.</p>
+<hr>
+<h1 id="3-governance-substrate-operators">3. Governance Substrate Operators</h1>
+<h2 id="govnode"><strong>GOV(node)</strong></h2>
+<p>Authority structure.</p>
+<h2 id="accnode"><strong>ACC(node)</strong></h2>
+<p>Accountability structure.</p>
+<h2 id="visnode"><strong>VIS(node)</strong></h2>
+<p>Visibility / transparency.</p>
+<h2 id="asymnode"><strong>ASYM(node)</strong></h2>
+<p>Asymmetry of power or information.</p>
+<h2 id="opanode"><strong>OPA(node)</strong></h2>
+<p>Opacity level.</p>
+<p><strong>Notes:</strong><br>
+Weak substrate predicts drift.</p>
+<hr>
+<h1 id="4-regime-operators">4. Regime Operators</h1>
+<h2 id="regnode-auth-nar-emo-str"><strong>REG(node) = AUTH / NAR / EMO / STR</strong></h2>
+<p>Classifies the dominant regime.</p>
+<p><strong>Notes:</strong><br>
+- AUTH → authority<br>
+- NAR → narrative<br>
+- EMO → emotional<br>
+- STR → structural  </p>
+<hr>
+<h1 id="5-observer-operators">5. Observer Operators</h1>
+<h2 id="sigdata"><strong>SIG(data)</strong></h2>
+<p>Extracts structural truth.</p>
+<h2 id="noidata"><strong>NOI(data)</strong></h2>
+<p>Extracts narrative/emotional noise.</p>
+<h2 id="ctxnode"><strong>CTX(node)</strong></h2>
+<p>Contextual metadata.</p>
+<h2 id="synsystem"><strong>SYN(system)</strong></h2>
+<p>Synthesizes signal, noise, and regime.</p>
+<p><strong>Notes:</strong><br>
+Used for drift detection and alignment scoring.</p>
+<hr>
+<h1 id="6-drift-operators">6. Drift Operators</h1>
+<h2 id="drftype"><strong>DRF(type)</strong></h2>
+<p>Detects drift.</p>
+<p><strong>Types:</strong><br>
+- mission<br>
+- financial<br>
+- governance<br>
+- reporting<br>
+- structural<br>
+- regime</p>
+<p><strong>Outputs:</strong><br>
+- drift severity<br>
+- drift signature</p>
+<hr>
+<h1 id="7-alignment-operators">7. Alignment Operators</h1>
+<h2 id="alndonor"><strong>ALN(donor)</strong></h2>
+<p>Computes donor alignment score.</p>
+<p><strong>Formula:</strong>  </p>
+<pre><code>DAS =
+  w1 * IntentClarity
++ w2 * FlowIntegrity
++ w3 * OutcomeCoherence
++ w4 * RegimeStability
+</code></pre>
+<hr>
+<h2 id="cohsystem"><strong>COH(system)</strong></h2>
+<p>Measures coherence between flows, outcomes, and governance.</p>
+<hr>
+<h2 id="impactflow"><strong>IMPACT(flow)</strong></h2>
+<p>Measures beneficiary‑level effect.</p>
+<hr>
+<h1 id="8-red-indicator-operators">8. Red Indicator Operators</h1>
+<h2 id="redflag"><strong>RED(flag)</strong></h2>
+<p>Flags structural anomalies.</p>
+<p><strong>Flags:</strong><br>
+- flow_break<br>
+- opacity<br>
+- overhead_spike<br>
+- narrative_inflation<br>
+- governance_asymmetry<br>
+- leakage  </p>
+<hr>
+<h1 id="9-correction-operators">9. Correction Operators</h1>
+<h2 id="fixnode"><strong>FIX(node)</strong></h2>
+<p>Applies structural correction.</p>
+<p><strong>Examples:</strong>  </p>
+<pre><code>FIX(Foundation) → increase payout rate
+FIX(Intermediary) → reduce overhead
+FIX(NGO) → improve reporting clarity
+</code></pre>
+<hr>
+<h1 id="10-api-usage-pattern">10. API Usage Pattern</h1>
+<p>Standard RTT analysis loop:</p>
+<pre><code>1. FLOW + TRACE
+2. SET_IN/OUT/LEAK/BAL
+3. GOV/ACC/VIS/ASYM/OPA
+4. REG + SIG/NOI/CTX/SYN
+5. DRF classification
+6. ALN scoring
+7. FIX recommendations
+</code></pre>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>The Philanthropy API provides a complete operator‑level interface for analyzing:</p>
+<ul>
+<li>funding flows  </li>
+<li>governance substrate  </li>
+<li>SET load  </li>
+<li>regime patterns  </li>
+<li>drift  </li>
+<li>alignment  </li>
+<li>structural corrections  </li>
+</ul>
+<p>All operators are minimal, composable, and fully RTT/1‑aligned.</p>
+  </main>
+</body>
+</html>

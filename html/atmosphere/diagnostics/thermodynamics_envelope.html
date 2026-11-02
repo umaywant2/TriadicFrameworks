@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/atmosphere/diagnostics/thermodynamics_envelope.md">
+  <title>Thermodynamics Envelope — Atmosphere Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/atmosphere/diagnostics/thermodynamics_envelope.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/atmosphere/diagnostics/thermodynamics_envelope.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="thermodynamics-envelope-atmosphere-module"><strong>Thermodynamics Envelope — Atmosphere Module</strong></h1>
+<p>TriadicFrameworks Canon</p>
+<p>The Thermodynamics Envelope defines the structural wrapper for atmospheric energy interpretation. It organizes envelope fields, thresholds, regime zones, and operator overlays used by the Thermodynamics Diagnostic, Map, and Trace.</p>
+<hr>
+<h2 id="1-envelope-metadata"><strong>1. Envelope Metadata</strong></h2>
+<p><strong>Module:</strong> Atmosphere<br>
+<strong>Diagnostic:</strong> Thermodynamics<br>
+<strong>Category:</strong> Envelope<br>
+<strong>Version:</strong> 1.0<br>
+<strong>Purpose:</strong> Provide envelope‑level structure for thermodynamic evaluation.</p>
+<hr>
+<h2 id="2-envelope-fields"><strong>2. Envelope Fields</strong></h2>
+<h3 id="temperature-field"><strong>Temperature Field</strong></h3>
+<ul>
+<li>vertical lapse rate  </li>
+<li>inversion layers  </li>
+<li>adiabatic zones  </li>
+<li>radiative cooling layers  </li>
+</ul>
+<h3 id="energy-flux-field"><strong>Energy Flux Field</strong></h3>
+<ul>
+<li>sensible heat flux  </li>
+<li>latent heat flux  </li>
+<li>radiative flux  </li>
+<li>convective flux  </li>
+</ul>
+<h3 id="phasechange-field"><strong>Phase‑Change Field</strong></h3>
+<ul>
+<li>condensation boundaries  </li>
+<li>evaporation zones  </li>
+<li>freezing/melting layers  </li>
+<li>sublimation regions  </li>
+</ul>
+<h3 id="radiative-balance-field"><strong>Radiative Balance Field</strong></h3>
+<ul>
+<li>shortwave absorption  </li>
+<li>longwave emission  </li>
+<li>albedo feedback  </li>
+<li>greenhouse trapping  </li>
+</ul>
+<hr>
+<h2 id="3-thresholds"><strong>3. Thresholds</strong></h2>
+<ul>
+<li><strong>gradient_clarity_min:</strong> 0.7  </li>
+<li><strong>flux_stability_min:</strong> 0.6  </li>
+<li><strong>radiative_balance_tolerance:</strong> 0.15  </li>
+</ul>
+<p>Thresholds determine envelope regime classification.</p>
+<hr>
+<h2 id="4-regime-zones"><strong>4. Regime Zones</strong></h2>
+<h3 id="stable"><strong>Stable</strong></h3>
+<ul>
+<li>monotonic gradients  </li>
+<li>coherent energy flux  </li>
+<li>predictable radiative balance  </li>
+</ul>
+<h3 id="transition"><strong>Transition</strong></h3>
+<ul>
+<li>inversion formation  </li>
+<li>boundary‑layer breakdown  </li>
+<li>moisture‑driven instability  </li>
+</ul>
+<h3 id="unstable"><strong>Unstable</strong></h3>
+<ul>
+<li>convective bursts  </li>
+<li>rapid lapse‑rate shifts  </li>
+<li>radiative imbalance  </li>
+</ul>
+<hr>
+<h2 id="5-operator-overlays"><strong>5. Operator Overlays</strong></h2>
+<h3 id="thermodynamics-operators"><strong>Thermodynamics Operators</strong></h3>
+<ul>
+<li>gradient_interpretation  </li>
+<li>flux_alignment  </li>
+<li>radiative_balance_check  </li>
+<li>phase_boundary_detection  </li>
+</ul>
+<h3 id="continuity-operators"><strong>Continuity Operators</strong></h3>
+<ul>
+<li>energy_conservation  </li>
+<li>flux_continuity  </li>
+</ul>
+<h3 id="coherence-operators"><strong>Coherence Operators</strong></h3>
+<ul>
+<li>stable_thermodynamic_regime  </li>
+<li>coherent_flux_behavior  </li>
+</ul>
+<h3 id="clarity-operators"><strong>Clarity Operators</strong></h3>
+<ul>
+<li>noise_free_gradient  </li>
+<li>radiative_signal_clarity  </li>
+</ul>
+<h3 id="dimensional-operators"><strong>Dimensional Operators</strong></h3>
+<ul>
+<li>micro → meso thermodynamic scaling  </li>
+<li>meso → macro flux alignment  </li>
+</ul>
+<h3 id="drift-operators"><strong>Drift Operators</strong></h3>
+<ul>
+<li>instability_propagation  </li>
+<li>thermodynamic_drift_detection  </li>
+</ul>
+<h3 id="paradox-operators"><strong>Paradox Operators</strong></h3>
+<ul>
+<li>conflicting_flux_signals  </li>
+<li>inversion_paradox  </li>
+</ul>
+<h3 id="resonance-operators"><strong>Resonance Operators</strong></h3>
+<ul>
+<li>thermodynamic_oscillations  </li>
+<li>harmonic_flux_alignment  </li>
+</ul>
+<hr>
+<h2 id="6-envelope-role"><strong>6. Envelope Role</strong></h2>
+<p>The Thermodynamics Envelope:</p>
+<ul>
+<li>defines thermodynamic envelope fields  </li>
+<li>establishes clarity and stability thresholds  </li>
+<li>provides regime classification  </li>
+<li>overlays operator families  </li>
+<li>supports diagnostic, map, and trace interpretation  </li>
+</ul>
+<p>It is the structural envelope companion to the Thermodynamics Diagnostic family.</p>
+  </main>
+</body>
+</html>

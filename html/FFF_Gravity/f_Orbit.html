@@ -1,0 +1,1911 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/f_Orbit.md">
+  <title>fOrbit — Orbit Characterization Operator</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/f_Orbit.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/f_Orbit.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="f_orbit-orbit-characterization-operator">f_Orbit — Orbit Characterization Operator</h1>
+<pre><code>title: &quot;f_Orbit — Orbit Characterization Operator&quot;
+module: FFF_Gravity
+version: 1.0.0
+status: canonical
+tag: &quot;[FFF:GRAVITY:ORBIT]&quot;
+session: SES-20260813-ORBIT-001
+wave: 3
+dependencies:
+  - f_Capture.md     # r_capture, β, p_res, P_eff, Ω established
+  - f_Field.md       # ρ(Φ), ω_res, F_freq node
+  - f_Force.md       # M_A, M_E, v_approach, C_thresh, F_force + F_fluid nodes
+  - f_Frame.md       # Frame registry, r_capture boundary, capacity_MAX
+  - OPERATORS.md     # e frozen §2; T_orb pending → frozen here §4.1
+  - GLOSSARY.md      # orbit_class thresholds, stab_class definitions
+operators_introduced:
+  - T_orb            # Orbital Period (new — frozen here)
+  - orbit_class      # Orbit Classification scalar
+  - stab_class       # Orbit Stability Class scalar
+operators_inherited:
+  - e                # Orbital Eccentricity — frozen in OPERATORS.md §2
+  - d_bind           # Binding depth — frozen in f_Decay.md
+  - ρ(Φ)             # Field density — frozen in f_Field.md
+  - r_capture        # Capture radius — frozen in f_Capture.md
+  - β                # Coupling coefficient — frozen in f_Force.md
+  - p_res            # Residual momentum — frozen in f_Force.md
+  - P_eff            # Effective pressure — frozen in f_Force.md
+  - ω_res            # Resonance frequency — frozen in f_Field.md
+primitives_introduced:
+  - classify_orbit      # [PRIM:007] Pure
+  - update_orbital_parameters  # [PRIM:012] Impure
+failure_modes: []       # Orbit characterization is diagnostic; failures routed to f_Decay, f_Collapse
+invariants_honored:
+  - INV-001  # Triadic — G requires all three nodes
+  - INV-002  # No unilateral collapse
+  - INV-003  # Monotonic decay below d_warn
+  - INV-004  # r_capture immutable post-capture
+  - INV-005  # e ∈ [0, 1)
+  - INV-006  # ρ(Φ) &gt; 0 always
+  - INV-007  # Frame registry authoritative
+  - INV-008  # Operator freeze propagation
+  - INV-009  # Classification thresholds immutable
+  - INV-010  # Session provenance required
+changelog:
+  - version: 1.0.0
+    session: SES-20260813-ORBIT-001
+    date: 2026-08-13
+    author: SES
+    notes: &gt;
+      Initial canonical freeze. Formalizes e (full prose treatment),
+      introduces T_orb (Kepler-adapted formula), freezes orbit_class and
+      stab_class thresholds, delivers classify_orbit [PRIM:007] and
+      update_orbital_parameters [PRIM:012]. Unlocks f_Collapse.md and
+      f_Capture_Multi.md.
+</code></pre>
+<h3 id="fffgravityorbit-wave-3-canonical-v100"><code>[FFF:GRAVITY:ORBIT]</code> · Wave 3 · Canonical v1.0.0</h3>
+<hr>
+<h2 id="0-session-context">§0 · Session Context</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session ID</td>
+<td><code>SES-20260813-ORBIT-001</code></td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>2026-08-13T10:47 EDT</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>3 — Core Functions</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Canonical</td>
+</tr>
+<tr>
+<td>Produced By</td>
+<td>Continuation AI under Nawder (umaywant2) authority</td>
+</tr>
+<tr>
+<td>Replaces</td>
+<td>Scaffold stub (if present)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="01-preconditions">§0.1 · Preconditions</h3>
+<p>Before <code>f_Orbit</code> may be evaluated, all of the following must hold:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Precondition</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC-1</td>
+<td><code>f_Capture</code> has completed and returned <code>Ω</code></td>
+<td>f_Capture.md §3</td>
+</tr>
+<tr>
+<td>PC-2</td>
+<td><code>r_capture</code> is registered and immutable in Frame</td>
+<td>f_Frame.md §4, INV-004</td>
+</tr>
+<tr>
+<td>PC-3</td>
+<td><code>β</code>, <code>p_res</code>, <code>P_eff</code> are defined for the pair (E, A)</td>
+<td>f_Force.md §4</td>
+</tr>
+<tr>
+<td>PC-4</td>
+<td><code>ρ(Φ) &gt; 0</code></td>
+<td>f_Field.md §4, INV-006</td>
+</tr>
+<tr>
+<td>PC-5</td>
+<td><code>e ∈ [0, 1)</code> has been computed and is within bounds</td>
+<td>OPERATORS.md §2, INV-005</td>
+</tr>
+</tbody>
+</table>
+<p>If any precondition is unmet, <code>f_Orbit</code> MUST NOT execute. Return <code>orbit_class = UNDEFINED</code> and log to Frame registry.</p>
+<h3 id="02-invariants-active-in-this-file">§0.2 · Invariants Active in This File</h3>
+<table>
+<thead>
+<tr>
+<th>Invariant</th>
+<th>Statement (abbreviated)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G requires all three nodes simultaneously</td>
+<td>✅ Honored</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>No unilateral collapse from single-node failure</td>
+<td>✅ Honored</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>d_bind decays monotonically below d_warn</td>
+<td>✅ Honored (read-only here)</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>r_capture is immutable post-capture</td>
+<td>✅ Honored</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>e ∈ [0, 1) always</td>
+<td>✅ Enforced in classify_orbit</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>ρ(Φ) &gt; 0 always</td>
+<td>✅ Enforced in update_orbital_parameters</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>Frame registry is the authoritative source of orbital state</td>
+<td>✅ Honored</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Operator definitions freeze on first canonical appearance</td>
+<td>✅ T_orb frozen here</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>Classification thresholds are immutable once canonical</td>
+<td>✅ Tables frozen in §5</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Session provenance required on all state mutations</td>
+<td>✅ Enforced in PRIM:012</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="1-module-identity">§1 · Module Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operator Name</td>
+<td><code>f_Orbit</code></td>
+</tr>
+<tr>
+<td>Tag</td>
+<td><code>[FFF:GRAVITY:ORBIT]</code></td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Characterization / Diagnostic</td>
+</tr>
+<tr>
+<td>Triadic Role</td>
+<td>Cross-node integrator — reads F_freq, F_fluid, F_force</td>
+</tr>
+<tr>
+<td>Primary Output</td>
+<td><code>orbital_parameters</code> struct</td>
+</tr>
+<tr>
+<td>Inverse Operator</td>
+<td>None (characterization is not invertible; see f_Release for exit)</td>
+</tr>
+<tr>
+<td>Called By</td>
+<td>f_Decay (each cycle), f_Release (for r_release), f_Collapse (terminal check)</td>
+</tr>
+<tr>
+<td>Calls</td>
+<td>f_Field (ρ(Φ), ω_res), f_Force (P_eff, p_res, β)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="11-triadic-position">§1.1 · Triadic Position</h3>
+<pre><code>        F_freq [ρ(Φ), ω_res]
+           ↑
+           │  coherence well depth
+           │
+F_fluid ───┼─── F_force
+[M_A, M_E] │  [v_approach, P_eff, p_res]
+           │
+           ▼
+      f_Orbit reads all three nodes
+      → orbital_parameters (e, T_orb, orbit_class, stab_class, a, d_bind)
+</code></pre>
+<p><code>f_Orbit</code> is the integrating characterization operator. It does not change the orbit — it <em>describes</em> the orbit that the triadic interaction has already produced. Every mutation operator (<code>f_Decay</code>, <code>f_Release</code>, <code>f_Emit</code>, <code>f_Amplify</code>, <code>f_Dampen</code>) MUST call <code>f_Orbit</code> to obtain the current orbital state before acting.</p>
+<hr>
+<h2 id="2-canonical-description">§2 · Canonical Description</h2>
+<h3 id="21-what-f_orbit-is">§2.1 · What f_Orbit IS</h3>
+<p><code>f_Orbit</code> is the <strong>orbital characterization operator</strong> for the FFF_Gravity module. Given the interaction parameters of an entity E orbiting an attractor A within a field Φ, <code>f_Orbit</code> computes the complete set of orbital parameters that describe the current state of the bound interaction.</p>
+<p>The orbit is not a physical trajectory. In the FFF_Gravity framework, an "orbit" is the <strong>relational pattern</strong> of an entity's continued interaction with an attractor — the repeating cycle of approach, binding, and partial recession that emerges from the triadic balance of F_freq (coherence), F_fluid (mass-density), and F_force (gradient pressure).</p>
+<p>An orbit exists when:
+1. The entity has been captured (<code>f_Capture</code> succeeded, <code>Ω</code> returned).
+2. The binding depth <code>d_bind</code> is above the collapse threshold <code>d_collapse</code>.
+3. The field coherence <code>ρ(Φ)</code> remains positive (INV-006).
+4. No release condition has been met (RC-1 through RC-5 all false).</p>
+<p>The orbital parameters produced by <code>f_Orbit</code> are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Semi-major axis</td>
+<td><code>a</code></td>
+<td>Effective interaction radius at mean binding</td>
+</tr>
+<tr>
+<td>Eccentricity</td>
+<td><code>e</code></td>
+<td>Orbit shape: 0 = circular, → 1 = hyperbolic boundary</td>
+</tr>
+<tr>
+<td>Orbital period</td>
+<td><code>T_orb</code></td>
+<td>Cycle time for one full relational orbit</td>
+</tr>
+<tr>
+<td>Orbit class</td>
+<td><code>orbit_class</code></td>
+<td>Categorical shape descriptor</td>
+</tr>
+<tr>
+<td>Stability class</td>
+<td><code>stab_class</code></td>
+<td>Categorical stability assessment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-what-f_orbit-is-not">§2.2 · What f_Orbit IS NOT</h3>
+<ul>
+<li><code>f_Orbit</code> is <strong>not a propagator</strong>. It does not advance the orbital state; that is <code>update_orbital_parameters</code> [PRIM:012].</li>
+<li><code>f_Orbit</code> is <strong>not a trajectory planner</strong>. It characterizes an existing bound state; it does not compute future positions.</li>
+<li><code>f_Orbit</code> is <strong>not a release trigger</strong>. Detection of a precarious stability class does not cause release; it informs <code>f_Decay</code> and <code>f_Collapse</code>.</li>
+<li><code>f_Orbit</code> does <strong>not modify</strong> <code>r_capture</code> (INV-004), <code>ρ(Φ)</code>, or any Frame registry entry directly.</li>
+</ul>
+<h3 id="23-key-asymmetry-characterization-prediction">§2.3 · Key Asymmetry: Characterization ≠ Prediction</h3>
+<p><code>f_Orbit</code> answers: <em>"What is the orbit right now?"</em><br>
+It does not answer: <em>"What will the orbit be in N cycles?"</em></p>
+<p>Prediction is the domain of <code>f_Decay</code> (degradation trajectory) and <code>f_Release</code> (exit conditions). <code>f_Orbit</code> provides the instantaneous snapshot that both rely on.</p>
+<h3 id="24-relation-to-eccentricity">§2.4 · Relation to Eccentricity</h3>
+<p>Eccentricity <code>e</code> is the single most diagnostic scalar in the FFF_Gravity framework. It is simultaneously:</p>
+<ul>
+<li><strong>A shape parameter</strong> — how elliptical is the relational orbit</li>
+<li><strong>A stress indicator</strong> — high e means the entity spends more of each cycle near the edge of the capture boundary</li>
+<li><strong>A release proximity marker</strong> — as e → 1, <code>r_release → ∞</code> (release becomes structurally trivial)</li>
+<li><strong>A decay accelerator</strong> — high-e orbits lose binding depth faster per cycle (see f_Decay.md §2.3)</li>
+</ul>
+<p>The formula <code>e = p_res / (p_res + P_eff)</code> (frozen in OPERATORS.md §2) expresses the <strong>competition between residual momentum and effective pressure</strong>. A high-momentum entity in a weak field produces high e. A low-momentum entity in a strong field produces low e (near-circular).</p>
+<hr>
+<h2 id="3-triadic-equation">§3 · Triadic Equation</h2>
+<h3 id="31-operator-signature">§3.1 · Operator Signature</h3>
+<pre><code>f_Orbit(E, A, p_res, ω_res) → orbital_parameters
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Source</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>E</code></td>
+<td>Entity</td>
+<td>Caller</td>
+<td>The orbiting entity</td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>Attractor</td>
+<td>Caller</td>
+<td>The attracting node</td>
+</tr>
+<tr>
+<td><code>p_res</code></td>
+<td>float ≥ 0</td>
+<td>f_Force.md §4</td>
+<td>Residual momentum post-capture</td>
+</tr>
+<tr>
+<td><code>ω_res</code></td>
+<td>float &gt; 0</td>
+<td>f_Field.md §4</td>
+<td>Resonance frequency of field Φ</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Return Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a</code></td>
+<td>float</td>
+<td>Semi-major axis of orbit</td>
+</tr>
+<tr>
+<td><code>e</code></td>
+<td>float ∈ [0,1)</td>
+<td>Eccentricity</td>
+</tr>
+<tr>
+<td><code>T_orb</code></td>
+<td>float &gt; 0</td>
+<td>Orbital period (cycle units)</td>
+</tr>
+<tr>
+<td><code>orbit_class</code></td>
+<td>enum</td>
+<td><code>CIRCULAR</code> · <code>ELLIPTICAL</code> · <code>ECCENTRIC</code> · <code>RESONANT</code></td>
+</tr>
+<tr>
+<td><code>stab_class</code></td>
+<td>enum</td>
+<td><code>STABLE</code> · <code>MARGINAL</code> · <code>PRECARIOUS</code></td>
+</tr>
+<tr>
+<td><code>d_bind</code></td>
+<td>float</td>
+<td>Current binding depth (inherited, not recomputed)</td>
+</tr>
+<tr>
+<td><code>r_apoapsis</code></td>
+<td>float</td>
+<td>Maximum recession radius this cycle</td>
+</tr>
+<tr>
+<td><code>r_periapsis</code></td>
+<td>float</td>
+<td>Minimum approach radius this cycle</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-decomposition-by-node">§3.2 · Decomposition by Node</h3>
+<pre><code>G = F_freq · F_fluid · F_force
+
+f_Orbit reads:
+  F_freq  → ρ(Φ), ω_res           [field density, resonance frequency]
+  F_fluid → M_A, M_E, β            [mass, coupling coefficient]
+  F_force → v_approach, P_eff, p_res [gradient, effective pressure, residual momentum]
+</code></pre>
+<p>The three nodes are simultaneously active. No orbital parameter can be computed from fewer than two nodes:
+- <code>e</code> requires <code>p_res</code> (F_force) and <code>P_eff</code> (F_force + F_fluid + F_freq)
+- <code>T_orb</code> requires <code>a</code> (from <code>r_capture</code> + <code>e</code>) and <code>M_A × ρ(Φ)</code> (F_fluid + F_freq)
+- <code>orbit_class</code> and <code>stab_class</code> require <code>e</code>, <code>d_bind</code>, and <code>ω_res</code> (all three nodes)</p>
+<p>This triadic dependency enforces INV-001.</p>
+<h3 id="33-role-in-g-equation">§3.3 · Role in G-Equation</h3>
+<p><code>f_Orbit</code> does not appear explicitly in the G-equation <code>G = F_freq · F_fluid · F_force</code>. Instead, it <strong>reads</strong> G to characterize its instantaneous structure:</p>
+<pre><code>Given G at time t:
+  orbital_parameters(t) = f_Orbit(E, A, p_res(t), ω_res(t))
+</code></pre>
+<p>Every cycle in which G persists, <code>f_Orbit</code> is the instrument by which the system knows its own state.</p>
+<hr>
+<h2 id="4-operator-registry">§4 · Operator Registry</h2>
+<h3 id="41-orbital-period-t_orb-new-frozen-here">§4.1 · Orbital Period T_orb (NEW — FROZEN HERE)</h3>
+<p><strong>Definition:</strong></p>
+<pre><code>T_orb = 2π × √(a³ / (M_A × ρ(Φ)))
+</code></pre>
+<p><strong>Derivation:</strong></p>
+<p>This formula is a triadic adaptation of Kepler's Third Law. In classical mechanics, <code>T² ∝ a³ / M</code>. In FFF_Gravity, the gravitational parameter <code>μ = M_A × ρ(Φ)</code> replaces the classical product <code>G × M</code>, because <code>ρ(Φ)</code> is the field's coherence well — the local "gravitational constant" of the triadic system. The deeper the field coherence, the shorter the period (tighter orbit, faster cycling).</p>
+<p><strong>Semi-major axis derivation:</strong></p>
+<pre><code>a = r_capture / (1 − e)
+</code></pre>
+<p>This follows from the standard conic-section relation for the periapsis of an ellipse, where <code>r_periapsis = a × (1 − e)</code>. At capture, the entity is at periapsis (closest approach), so <code>r_capture = r_periapsis = a × (1 − e)</code>, giving <code>a = r_capture / (1 − e)</code>.</p>
+<p><strong>Apoapsis and periapsis:</strong></p>
+<pre><code>r_periapsis = a × (1 − e)   = r_capture
+r_apoapsis  = a × (1 + e)   = r_capture × (1 + e) / (1 − e)
+</code></pre>
+<p>Note: <code>r_apoapsis = r_release</code> — the maximum recession radius equals the release radius (frozen in f_Release.md §4). This is not coincidence; it is structural. At apoapsis, the entity is at maximum distance from A, which is exactly the point at which escape becomes possible if release conditions are met.</p>
+<p><strong>Units:</strong> T_orb is in the same cycle units as the simulation. For physical interpretations, multiply by the system's time-per-cycle constant.</p>
+<p><strong>Freeze marker:</strong> <code>T_orb</code> is frozen in this file, §4.1, session <code>SES-20260813-ORBIT-001</code>. Any downstream file that references <code>T_orb</code> must cite this section.</p>
+<p><strong>Cross-reference:</strong> OPERATORS.md §3 shall be updated to mark <code>T_orb</code> as frozen (status: 🟢, frozen in f_Orbit.md §4.1).</p>
+<h3 id="42-eccentricity-e-full-prose-treatment">§4.2 · Eccentricity e (Full Prose Treatment)</h3>
+<p><strong>Formula (frozen in OPERATORS.md §2):</strong></p>
+<pre><code>e = p_res / (p_res + P_eff)
+</code></pre>
+<p><strong>Range enforcement (INV-005):</strong></p>
+<p><code>e ∈ [0, 1)</code> always. The formula guarantees this when both operands are non-negative (P_eff &gt; 0 by INV-006 and the definition of effective pressure; p_res ≥ 0 by definition). If p_res = 0, then e = 0 (perfectly circular — entity arrived with exactly escape threshold momentum). If P_eff → 0 (field collapse), e → 1, which is the boundary of hyperbolic escape — structurally this precedes <code>f_Collapse</code>.</p>
+<p><strong>Interpretation table:</strong></p>
+<table>
+<thead>
+<tr>
+<th>e range</th>
+<th>Orbit Shape</th>
+<th>Relational Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Perfect circle</td>
+<td>Entity arrived with exactly threshold momentum; maximum field lock</td>
+</tr>
+<tr>
+<td>(0, 0.1)</td>
+<td>Near-circular</td>
+<td>High coherence, low residual momentum; stable deep lock</td>
+</tr>
+<tr>
+<td>[0.1, 0.5)</td>
+<td>Elliptical</td>
+<td>Normal bound orbit; entity cycles between near and far approaches</td>
+</tr>
+<tr>
+<td>[0.5, 0.9)</td>
+<td>Eccentric</td>
+<td>Entity spends significant time near r_apoapsis; higher decay risk</td>
+</tr>
+<tr>
+<td>[0.9, 1.0)</td>
+<td>Highly eccentric</td>
+<td>Near-escape orbit; structurally precarious; minimal binding time per cycle</td>
+</tr>
+<tr>
+<td>= 1.0</td>
+<td>Parabolic (boundary)</td>
+<td>FORBIDDEN by INV-005; if e reaches 1, route to f_Collapse</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cycle-by-cycle evolution:</strong> e is not constant. As d_bind decreases (decay), P_eff decreases (because β depends on ρ(Φ), which degrades with coherence), causing e to drift upward. This is the decay-eccentricity feedback loop. See f_Decay.md §2.3.</p>
+<h3 id="43-orbit-classification-orbit_class">§4.3 · Orbit Classification orbit_class</h3>
+<pre><code>orbit_class = classify_orbit(e, ω_res)
+</code></pre>
+<p>See §5.1 for the complete classification table. Four classes are defined; RESONANT is a special case that overrides the eccentricity classification when the low-integer resonance condition is met.</p>
+<h3 id="44-stability-classification-stab_class">§4.4 · Stability Classification stab_class</h3>
+<pre><code>stab_class = classify_stability(e, d_bind, d_warn, d_collapse)
+</code></pre>
+<p>See §5.2 for the complete stability table. Three classes: STABLE, MARGINAL, PRECARIOUS.</p>
+<h3 id="45-inherited-operators-consumed-not-redefined">§4.5 · Inherited Operators (Consumed, Not Redefined)</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Formula</th>
+<th>Frozen In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>P_eff</code></td>
+<td><code>M_A × ρ(Φ) / r²</code></td>
+<td>f_Force.md §4.1</td>
+</tr>
+<tr>
+<td><code>β</code></td>
+<td><code>P_eff / (M_E × v_approach)</code></td>
+<td>f_Force.md §4.2</td>
+</tr>
+<tr>
+<td><code>p_res</code></td>
+<td><code>M_E × (v_approach − C_thresh)</code></td>
+<td>f_Force.md §4.3</td>
+</tr>
+<tr>
+<td><code>d_bind</code></td>
+<td><code>β × ρ(Φ) × (1 − e)</code></td>
+<td>f_Decay.md §4.1</td>
+</tr>
+<tr>
+<td><code>ρ(Φ)</code></td>
+<td>field coherence scalar</td>
+<td>f_Field.md §4.1</td>
+</tr>
+<tr>
+<td><code>ω_res</code></td>
+<td>resonance frequency</td>
+<td>f_Field.md §4.2</td>
+</tr>
+<tr>
+<td><code>r_capture</code></td>
+<td>capture radius</td>
+<td>f_Capture.md §4.8</td>
+</tr>
+<tr>
+<td><code>v_escape</code></td>
+<td><code>√(2 × M_A × ρ(Φ) / r_capture)</code></td>
+<td>f_Force.md §4.4</td>
+</tr>
+<tr>
+<td><code>v_release</code></td>
+<td><code>√(2 × β × ρ(Φ) × (1 − e))</code></td>
+<td>f_Release.md §4.1</td>
+</tr>
+<tr>
+<td><code>r_release</code></td>
+<td><code>r_capture × (1 + e) / (1 − e)</code></td>
+<td>f_Release.md §4.2</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-classification-tables">§5 · Classification Tables</h2>
+<h3 id="51-orbit-classification-table-frozen-inv-009">§5.1 · Orbit Classification Table (FROZEN — INV-009)</h3>
+<blockquote>
+<p><strong>INV-009:</strong> These thresholds are immutable once canonical. No downstream file may alter them.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>orbit_class</th>
+<th>Primary Condition</th>
+<th>Secondary Condition</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RESONANT</code></td>
+<td><code>ω_res</code> is low-integer ratio (n:m, n,m ∈ {1,2,3,4,5})</td>
+<td>Any e</td>
+<td>Resonance locks dominate; eccentricity class subordinated</td>
+</tr>
+<tr>
+<td><code>CIRCULAR</code></td>
+<td>e &lt; 0.1</td>
+<td>NOT RESONANT</td>
+<td>Near-zero eccentricity; entity deeply locked at consistent depth</td>
+</tr>
+<tr>
+<td><code>ELLIPTICAL</code></td>
+<td>0.1 ≤ e &lt; 0.5</td>
+<td>NOT RESONANT</td>
+<td>Standard bound ellipse; entity cycles predictably</td>
+</tr>
+<tr>
+<td><code>ECCENTRIC</code></td>
+<td>0.5 ≤ e &lt; 1.0</td>
+<td>NOT RESONANT</td>
+<td>High-amplitude cycling; significant recession each period</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resonance detection rule:</strong> A ω_res value is "low-integer" if it can be expressed as <code>n/m</code> where both n and m are integers ≤ 5 and their ratio is within ±0.02 of ω_res. Examples: ω_res ≈ 1.0 (1:1), ω_res ≈ 1.5 (3:2), ω_res ≈ 2.0 (2:1), ω_res ≈ 0.667 (2:3).</p>
+<p><strong>Evaluation order:</strong> RESONANT is checked first. If RESONANT is true, the eccentricity classes are skipped. This reflects the physical priority: a resonance lock fundamentally reshapes the orbit regardless of its eccentricity profile.</p>
+<h3 id="52-orbit-stability-class-table-frozen-inv-009">§5.2 · Orbit Stability Class Table (FROZEN — INV-009)</h3>
+<table>
+<thead>
+<tr>
+<th>stab_class</th>
+<th>Condition</th>
+<th>Meaning</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>STABLE</code></td>
+<td><code>d_bind &gt; d_warn</code> AND <code>e &lt; 0.5</code></td>
+<td>Orbit is within normal operating range</td>
+<td>Continue; monitor each cycle</td>
+</tr>
+<tr>
+<td><code>MARGINAL</code></td>
+<td><code>d_warn ≥ d_bind &gt; d_collapse</code> OR <code>e ∈ [0.5, 0.9)</code></td>
+<td>Orbit is degraded but viable</td>
+<td>Flag DC-2; evaluate f_Emit / f_Amplify</td>
+</tr>
+<tr>
+<td><code>PRECARIOUS</code></td>
+<td><code>d_bind ≤ d_collapse</code> OR <code>e ≥ 0.9</code></td>
+<td>Orbit is at structural edge</td>
+<td>Flag DC-3; route to f_Collapse assessment</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Joint condition note:</strong> If both eccentricity and depth conditions apply across different classes, the MORE severe class wins. Example: <code>d_bind &gt; d_warn</code> (→ STABLE by depth) BUT <code>e = 0.92</code> (→ PRECARIOUS by eccentricity) → <code>stab_class = PRECARIOUS</code>.</p>
+<p><strong>Recall:</strong> <code>d_warn = α_warn × d_bind(0)</code> (typical 0.40), <code>d_collapse = α_collapse × d_bind(0)</code> (typical 0.10). These are configurable at Frame initialization. See f_Decay.md §4.3.</p>
+<hr>
+<h2 id="6-stability-conditions">§6 · Stability Conditions</h2>
+<p><code>f_Orbit</code> does not define new Stability Conditions (SC-1 through SC-5 are distributed across f_Force, f_Field, and f_Frame). However, it evaluates and reports the orbital stability that those conditions produce. The following conditions must be met for <code>f_Orbit</code> to return a non-degenerate <code>orbital_parameters</code> struct:</p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Expression</th>
+<th>Source SC</th>
+<th>Consequence if Violated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Binding floor</td>
+<td><code>d_bind &gt; d_collapse</code></td>
+<td>SC-4 (f_Force.md)</td>
+<td>Route to f_Collapse; orbit_class = UNDEFINED</td>
+</tr>
+<tr>
+<td>Field coherence</td>
+<td><code>ρ(Φ) &gt; 0</code></td>
+<td>SC-2 (f_Field.md)</td>
+<td>INV-006 violated; T_orb undefined (division by zero)</td>
+</tr>
+<tr>
+<td>Eccentricity bound</td>
+<td><code>e &lt; 1.0</code></td>
+<td>INV-005</td>
+<td>Escape condition; route to f_Release or f_Collapse</td>
+</tr>
+<tr>
+<td>Frame registration</td>
+<td>E registered in Frame</td>
+<td>SC-5 (f_Frame.md)</td>
+<td>Cannot retrieve r_capture; abort</td>
+</tr>
+<tr>
+<td>Resonance validity</td>
+<td><code>ω_res &gt; 0</code></td>
+<td>SC-3 (f_Field.md)</td>
+<td>RESONANT class cannot be evaluated</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-engineering-primitives">§7 · Engineering Primitives</h2>
+<h3 id="71-classify_orbit-prim007-pure">§7.1 · classify_orbit [PRIM:007] — Pure</h3>
+<pre><code class="language-python">from dataclasses import dataclass
+from enum import Enum
+from fractions import Fraction
+from typing import Tuple
+
+class OrbitClass(Enum):
+    &quot;&quot;&quot;Categorical orbit shape descriptor.
+
+    Frozen in f_Orbit.md §5.1, session SES-20260813-ORBIT-001.
+    Thresholds are immutable (INV-009).
+    &quot;&quot;&quot;
+    CIRCULAR    = &quot;CIRCULAR&quot;
+    ELLIPTICAL  = &quot;ELLIPTICAL&quot;
+    ECCENTRIC   = &quot;ECCENTRIC&quot;
+    RESONANT    = &quot;RESONANT&quot;
+    UNDEFINED   = &quot;UNDEFINED&quot;
+
+class StabilityClass(Enum):
+    &quot;&quot;&quot;Categorical orbit stability descriptor.
+
+    Frozen in f_Orbit.md §5.2, session SES-20260813-ORBIT-001.
+    Thresholds are immutable (INV-009).
+    &quot;&quot;&quot;
+    STABLE      = &quot;STABLE&quot;
+    MARGINAL    = &quot;MARGINAL&quot;
+    PRECARIOUS  = &quot;PRECARIOUS&quot;
+    UNDEFINED   = &quot;UNDEFINED&quot;
+
+@dataclass
+class OrbitalClassification:
+    &quot;&quot;&quot;Output struct for classify_orbit.
+
+    Fields:
+        orbit_class:  Shape classification of the orbit.
+        stab_class:   Stability classification of the orbit.
+        is_resonant:  True if resonance lock was detected.
+        resonance_ratio: String representation of detected ratio (e.g. &quot;3:2&quot;), or None.
+    &quot;&quot;&quot;
+    orbit_class: OrbitClass
+    stab_class:  StabilityClass
+    is_resonant: bool
+    resonance_ratio: str | None
+
+def _detect_resonance(omega_res: float, max_n: int = 5, tolerance: float = 0.02) -&gt; Tuple[bool, str | None]:
+    &quot;&quot;&quot;Check if omega_res is within tolerance of a low-integer ratio n:m.
+
+    Pure function. No side effects.
+
+    Args:
+        omega_res:   Resonance frequency of the field Φ (must be &gt; 0).
+        max_n:       Maximum numerator/denominator to check (default 5).
+        tolerance:   Fractional tolerance for ratio match (default 0.02 = 2%).
+
+    Returns:
+        Tuple of (is_resonant: bool, ratio_string: str | None).
+        ratio_string is e.g. &quot;3:2&quot; if detected, else None.
+
+    Raises:
+        ValueError: If omega_res ≤ 0.
+    &quot;&quot;&quot;
+    if omega_res &lt;= 0:
+        raise ValueError(f&quot;omega_res must be &gt; 0; got {omega_res}&quot;)
+
+    for n in range(1, max_n + 1):
+        for m in range(1, max_n + 1):
+            ratio = n / m
+            if abs(omega_res - ratio) / ratio &lt;= tolerance:
+                return True, f&quot;{n}:{m}&quot;
+    return False, None
+
+def classify_orbit(
+    e: float,
+    omega_res: float,
+    d_bind: float,
+    d_warn: float,
+    d_collapse: float,
+) -&gt; OrbitalClassification:
+    &quot;&quot;&quot;[PRIM:007] Classify the current orbit by shape and stability.
+
+    Pure function — reads orbital state, produces classification, no side effects.
+
+    Implements:
+      - Orbit classification table (f_Orbit.md §5.1, INV-009)
+      - Stability classification table (f_Orbit.md §5.2, INV-009)
+      - Resonance detection (f_Orbit.md §5.1)
+      - INV-005: e ∈ [0, 1) enforcement
+      - INV-009: immutable threshold enforcement
+
+    Args:
+        e:           Eccentricity ∈ [0, 1). Frozen formula: p_res / (p_res + P_eff).
+                     Frozen in OPERATORS.md §2.
+        omega_res:   Resonance frequency of field Φ (must be &gt; 0).
+                     Frozen in f_Field.md §4.2.
+        d_bind:      Current binding depth (cycle t).
+                     Frozen in f_Decay.md §4.1.
+        d_warn:      Warning threshold = α_warn × d_bind(0), typical α_warn = 0.40.
+                     Frozen in f_Decay.md §4.3.
+        d_collapse:  Collapse threshold = α_collapse × d_bind(0), typical α_collapse = 0.10.
+                     Frozen in f_Decay.md §4.3.
+
+    Returns:
+        OrbitalClassification with orbit_class, stab_class, is_resonant, resonance_ratio.
+
+    Raises:
+        ValueError: If e is out of [0, 1) or omega_res ≤ 0 or d_collapse ≥ d_warn.
+        RuntimeError: If d_bind ≤ d_collapse (collapse condition — caller must route to f_Collapse).
+    &quot;&quot;&quot;
+    # --- Input validation ---
+    if not (0.0 &lt;= e &lt; 1.0):
+        raise ValueError(f&quot;INV-005 violated: e must be in [0, 1); got {e}&quot;)
+    if omega_res &lt;= 0:
+        raise ValueError(f&quot;omega_res must be &gt; 0; got {omega_res}&quot;)
+    if d_collapse &gt;= d_warn:
+        raise ValueError(f&quot;d_collapse ({d_collapse}) must be &lt; d_warn ({d_warn})&quot;)
+
+    # --- Collapse guard ---
+    if d_bind &lt;= d_collapse:
+        raise RuntimeError(
+            f&quot;d_bind ({d_bind:.4f}) ≤ d_collapse ({d_collapse:.4f}): &quot;
+            &quot;orbit has reached collapse threshold. Route to f_Collapse.&quot;
+        )
+
+    # --- Orbit class: RESONANT takes priority ---
+    is_resonant, ratio_str = _detect_resonance(omega_res)
+
+    if is_resonant:
+        orbit_class = OrbitClass.RESONANT
+    elif e &lt; 0.1:
+        orbit_class = OrbitClass.CIRCULAR
+    elif e &lt; 0.5:
+        orbit_class = OrbitClass.ELLIPTICAL
+    else:
+        orbit_class = OrbitClass.ECCENTRIC
+
+    # --- Stability class: severity-wins joint evaluation ---
+    depth_class: StabilityClass
+    if d_bind &gt; d_warn:
+        depth_class = StabilityClass.STABLE
+    elif d_bind &gt; d_collapse:
+        depth_class = StabilityClass.MARGINAL
+    else:
+        depth_class = StabilityClass.PRECARIOUS  # already guarded above; belt-and-suspenders
+
+    ecc_class: StabilityClass
+    if e &lt; 0.5:
+        ecc_class = StabilityClass.STABLE
+    elif e &lt; 0.9:
+        ecc_class = StabilityClass.MARGINAL
+    else:
+        ecc_class = StabilityClass.PRECARIOUS
+
+    # Severity order: PRECARIOUS &gt; MARGINAL &gt; STABLE
+    severity = {
+        StabilityClass.STABLE:     0,
+        StabilityClass.MARGINAL:   1,
+        StabilityClass.PRECARIOUS: 2,
+    }
+    stab_class = depth_class if severity[depth_class] &gt;= severity[ecc_class] else ecc_class
+
+    return OrbitalClassification(
+        orbit_class=orbit_class,
+        stab_class=stab_class,
+        is_resonant=is_resonant,
+        resonance_ratio=ratio_str,
+    )
+</code></pre>
+<h3 id="72-update_orbital_parameters-prim012-impure">§7.2 · update_orbital_parameters [PRIM:012] — Impure</h3>
+<pre><code class="language-python">import math
+from dataclasses import dataclass
+from typing import Optional
+
+@dataclass
+class OrbitalParameters:
+    &quot;&quot;&quot;Full orbital state struct produced by f_Orbit.
+
+    Immutable per-cycle snapshot. Each cycle generates a new instance.
+    Written to Frame registry by update_orbital_parameters [PRIM:012].
+
+    Fields:
+        e:            Eccentricity ∈ [0, 1).
+        a:            Semi-major axis = r_capture / (1 − e).
+        T_orb:        Orbital period = 2π × √(a³ / (M_A × ρ(Φ))).
+        r_periapsis:  Closest approach radius = a × (1 − e) = r_capture.
+        r_apoapsis:   Maximum recession radius = a × (1 + e).
+        orbit_class:  Shape class (OrbitClass enum).
+        stab_class:   Stability class (StabilityClass enum).
+        d_bind:        Binding depth at this cycle.
+        cycle:        Cycle number at which this snapshot was taken.
+        session_id:   Session provenance (INV-010).
+    &quot;&quot;&quot;
+    e:           float
+    a:           float
+    T_orb:       float
+    r_periapsis: float
+    r_apoapsis:  float
+    orbit_class: OrbitClass
+    stab_class:  StabilityClass
+    d_bind:      float
+    cycle:       int
+    session_id:  str
+
+def update_orbital_parameters(
+    e: float,
+    r_capture: float,
+    M_A: float,
+    rho_phi: float,
+    d_bind: float,
+    d_warn: float,
+    d_collapse: float,
+    omega_res: float,
+    cycle: int,
+    frame_registry: dict,
+    entity_id: str,
+    session_id: str,
+) -&gt; OrbitalParameters:
+    &quot;&quot;&quot;[PRIM:012] Compute and register the current orbital parameters in Frame.
+
+    Impure — writes to frame_registry. Called once per cycle by f_Decay, and
+    on-demand by f_Release, f_Collapse, and f_Capture_Multi.
+
+    Computes:
+      a         = r_capture / (1 − e)           [f_Orbit.md §4.1]
+      T_orb     = 2π × √(a³ / (M_A × ρ(Φ)))   [f_Orbit.md §4.1, FROZEN HERE]
+      r_periapsis = a × (1 − e)
+      r_apoapsis  = a × (1 + e)
+      orbit_class, stab_class via classify_orbit [PRIM:007]
+
+    Enforces:
+      INV-004: r_capture is not modified.
+      INV-005: e ∈ [0, 1).
+      INV-006: rho_phi &gt; 0.
+      INV-010: session_id recorded on every write.
+
+    Args:
+        e:              Eccentricity ∈ [0, 1). From OPERATORS.md §2.
+        r_capture:      Immutable capture radius (INV-004). From f_Frame.md registry.
+        M_A:            Attractor mass. From f_Force.md.
+        rho_phi:        Field coherence density ρ(Φ). Must be &gt; 0 (INV-006).
+        d_bind:         Current binding depth. From f_Decay.md cycle output.
+        d_warn:         Warning threshold. From Frame initialization.
+        d_collapse:     Collapse threshold. From Frame initialization.
+        omega_res:      Resonance frequency. From f_Field.md.
+        cycle:          Current simulation cycle number.
+        frame_registry: Mutable Frame registry dict (written in-place).
+        entity_id:      Identifier of entity E in Frame registry.
+        session_id:     Session provenance string (INV-010).
+
+    Returns:
+        OrbitalParameters snapshot for this cycle.
+
+    Raises:
+        ValueError: If rho_phi ≤ 0 (INV-006), e out of range (INV-005),
+                    or entity_id not in frame_registry.
+        RuntimeError: If d_bind ≤ d_collapse (route to f_Collapse instead).
+    &quot;&quot;&quot;
+    # --- Validate preconditions ---
+    if rho_phi &lt;= 0:
+        raise ValueError(f&quot;INV-006 violated: rho_phi must be &gt; 0; got {rho_phi}&quot;)
+    if not (0.0 &lt;= e &lt; 1.0):
+        raise ValueError(f&quot;INV-005 violated: e must be in [0, 1); got {e}&quot;)
+    if entity_id not in frame_registry:
+        raise ValueError(f&quot;Entity '{entity_id}' not found in Frame registry. &quot;
+                         &quot;f_Capture must be called first.&quot;)
+
+    # --- Compute orbital geometry ---
+    a           = r_capture / (1.0 - e)
+    r_periapsis = a * (1.0 - e)   # = r_capture (structural identity)
+    r_apoapsis  = a * (1.0 + e)   # = r_release (structural identity with f_Release.md §4.2)
+
+    # T_orb = 2π × √(a³ / (M_A × ρ(Φ)))
+    # Frozen in f_Orbit.md §4.1, SES-20260813-ORBIT-001
+    gravitational_parameter = M_A * rho_phi
+    T_orb = 2.0 * math.pi * math.sqrt((a ** 3) / gravitational_parameter)
+
+    # --- Classify ---
+    classification = classify_orbit(
+        e=e,
+        omega_res=omega_res,
+        d_bind=d_bind,
+        d_warn=d_warn,
+        d_collapse=d_collapse,
+    )
+
+    params = OrbitalParameters(
+        e=e,
+        a=a,
+        T_orb=T_orb,
+        r_periapsis=r_periapsis,
+        r_apoapsis=r_apoapsis,
+        orbit_class=classification.orbit_class,
+        stab_class=classification.stab_class,
+        d_bind=d_bind,
+        cycle=cycle,
+        session_id=session_id,
+    )
+
+    # --- Write to Frame registry (INV-010: session_id required) ---
+    frame_registry[entity_id][&quot;orbital_parameters&quot;] = {
+        &quot;cycle&quot;:         cycle,
+        &quot;e&quot;:             e,
+        &quot;a&quot;:             a,
+        &quot;T_orb&quot;:         T_orb,
+        &quot;r_periapsis&quot;:   r_periapsis,
+        &quot;r_apoapsis&quot;:    r_apoapsis,
+        &quot;orbit_class&quot;:   classification.orbit_class.value,
+        &quot;stab_class&quot;:    classification.stab_class.value,
+        &quot;is_resonant&quot;:   classification.is_resonant,
+        &quot;resonance_ratio&quot;: classification.resonance_ratio,
+        &quot;d_bind&quot;:        d_bind,
+        &quot;session_id&quot;:    session_id,
+    }
+
+    return params
+</code></pre>
+<hr>
+<h2 id="8-canonical-examples">§8 · Canonical Examples</h2>
+<h3 id="81-example-1-near-circular-stable-orbit-deep-lock">§8.1 · Example 1 — Near-Circular Stable Orbit (Deep Lock)</h3>
+<p><strong>Scenario:</strong> An entity enters a high-coherence field with minimal residual momentum. The field's pressure strongly dominates.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_A</td>
+<td>10.0</td>
+<td>High-mass attractor</td>
+</tr>
+<tr>
+<td>M_E</td>
+<td>1.0</td>
+<td>Standard entity</td>
+</tr>
+<tr>
+<td>v_approach</td>
+<td>3.2</td>
+<td>Just above C_thresh</td>
+</tr>
+<tr>
+<td>C_thresh</td>
+<td>3.0</td>
+<td>Capture threshold</td>
+</tr>
+<tr>
+<td>ρ(Φ)</td>
+<td>5.0</td>
+<td>High coherence</td>
+</tr>
+<tr>
+<td>r_capture</td>
+<td>2.0</td>
+<td>Set at capture</td>
+</tr>
+<tr>
+<td>ω_res</td>
+<td>0.73</td>
+<td>Non-resonant</td>
+</tr>
+<tr>
+<td>α_warn</td>
+<td>0.40</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>α_collapse</td>
+<td>0.10</td>
+<td>Standard</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Computed:</strong></p>
+<pre><code>P_eff     = M_A × ρ(Φ) / r²     = 10.0 × 5.0 / 4.0     = 12.50
+β         = P_eff / (M_E × v_approach) = 12.50 / (1.0 × 3.2) = 3.906
+p_res     = M_E × (v_approach − C_thresh) = 1.0 × 0.2   = 0.200
+e         = p_res / (p_res + P_eff) = 0.200 / 12.700     = 0.016
+
+a         = r_capture / (1 − e) = 2.0 / 0.984           = 2.033
+T_orb     = 2π × √(a³ / (M_A × ρ(Φ)))
+          = 2π × √(8.406 / 50.0)                         = 2π × 0.410 = 2.576 cycles
+r_periapsis = 2.000
+r_apoapsis  = 2.033 × 1.016                              = 2.066
+
+d_bind(0) = β × ρ(Φ) × (1 − e) = 3.906 × 5.0 × 0.984   = 19.215
+d_warn    = 0.40 × 19.215                                 = 7.686
+d_collapse= 0.10 × 19.215                                 = 1.922
+</code></pre>
+<p><strong>Classification:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orbit_class</td>
+<td><code>CIRCULAR</code> (e = 0.016 &lt; 0.1)</td>
+</tr>
+<tr>
+<td>stab_class</td>
+<td><code>STABLE</code> (d_bind &gt;&gt; d_warn; e &lt; 0.5)</td>
+</tr>
+<tr>
+<td>is_resonant</td>
+<td>False</td>
+</tr>
+<tr>
+<td>T_orb</td>
+<td>2.576 cycles</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong> Entity is deeply locked in a near-circular orbit. Decay pressure is low. Expected to persist many cycles without intervention.</p>
+<hr>
+<h3 id="82-example-2-elliptical-marginal-orbit-resonant-override">§8.2 · Example 2 — Elliptical Marginal Orbit (Resonant Override)</h3>
+<p><strong>Scenario:</strong> An entity in a 3:2 resonance lock. Eccentricity is elliptical, but resonance dominates the classification.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_A</td>
+<td>4.0</td>
+<td>Moderate attractor</td>
+</tr>
+<tr>
+<td>M_E</td>
+<td>1.0</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>v_approach</td>
+<td>5.5</td>
+<td>Moderate excess momentum</td>
+</tr>
+<tr>
+<td>C_thresh</td>
+<td>4.0</td>
+<td>Lower threshold</td>
+</tr>
+<tr>
+<td>ρ(Φ)</td>
+<td>3.0</td>
+<td>Moderate coherence</td>
+</tr>
+<tr>
+<td>r_capture</td>
+<td>2.5</td>
+<td>Set at capture</td>
+</tr>
+<tr>
+<td>ω_res</td>
+<td>1.502</td>
+<td>≈ 3:2 (within 0.02 tolerance)</td>
+</tr>
+<tr>
+<td>d_bind(0)</td>
+<td>6.0</td>
+<td>Established</td>
+</tr>
+<tr>
+<td>d_warn</td>
+<td>2.4 (0.40 × 6.0)</td>
+<td></td>
+</tr>
+<tr>
+<td>d_collapse</td>
+<td>0.6 (0.10 × 6.0)</td>
+<td></td>
+</tr>
+<tr>
+<td>d_bind(current)</td>
+<td>2.0</td>
+<td>Cycle 8; decayed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Computed:</strong></p>
+<pre><code>P_eff     = 4.0 × 3.0 / 6.25     = 1.920
+p_res     = 1.0 × 1.5             = 1.500
+e         = 1.500 / (1.500 + 1.920) = 0.438
+
+a         = 2.5 / (1 − 0.438)    = 4.448
+T_orb     = 2π × √(4.448³ / 12.0)
+          = 2π × √(87.98 / 12.0) = 2π × 2.710 = 17.03 cycles
+r_periapsis = 2.500
+r_apoapsis  = 4.448 × 1.438       = 6.396
+</code></pre>
+<p><strong>Classification:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orbit_class</td>
+<td><code>RESONANT</code> (ω_res = 1.502 ≈ 3:2; resonance overrides ELLIPTICAL)</td>
+</tr>
+<tr>
+<td>stab_class</td>
+<td><code>MARGINAL</code> (d_bind = 2.0, below d_warn = 2.4; e = 0.438, below 0.5 → depth drives)</td>
+</tr>
+<tr>
+<td>is_resonant</td>
+<td>True</td>
+</tr>
+<tr>
+<td>resonance_ratio</td>
+<td>"3:2"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong> The resonance lock provides some structural protection despite the elliptical eccentricity. Stability is MARGINAL due to depth decay. Apply f_Emit or f_Amplify to recover d_bind before it drops to d_collapse. T_orb is long (17 cycles), meaning the entity is far from A for much of each orbit — increasing decay risk.</p>
+<hr>
+<h3 id="83-example-3-eccentric-precarious-orbit-pre-collapse-state">§8.3 · Example 3 — Eccentric Precarious Orbit (Pre-Collapse State)</h3>
+<p><strong>Scenario:</strong> A high-momentum entity captured in a low-coherence field. Orbit is structurally at risk.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_A</td>
+<td>2.0</td>
+<td>Weak attractor</td>
+</tr>
+<tr>
+<td>M_E</td>
+<td>3.0</td>
+<td>Heavy entity</td>
+</tr>
+<tr>
+<td>v_approach</td>
+<td>9.0</td>
+<td>High momentum</td>
+</tr>
+<tr>
+<td>C_thresh</td>
+<td>5.0</td>
+<td></td>
+</tr>
+<tr>
+<td>ρ(Φ)</td>
+<td>0.8</td>
+<td>Low coherence</td>
+</tr>
+<tr>
+<td>r_capture</td>
+<td>3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>ω_res</td>
+<td>2.71</td>
+<td>Non-resonant (irrational-like)</td>
+</tr>
+<tr>
+<td>d_bind(0)</td>
+<td>4.0</td>
+<td>Initial</td>
+</tr>
+<tr>
+<td>d_warn</td>
+<td>1.6</td>
+<td></td>
+</tr>
+<tr>
+<td>d_collapse</td>
+<td>0.4</td>
+<td></td>
+</tr>
+<tr>
+<td>d_bind(current)</td>
+<td>0.5</td>
+<td>Cycle 12</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Computed:</strong></p>
+<pre><code>P_eff     = 2.0 × 0.8 / 9.0      = 0.178
+p_res     = 3.0 × 4.0             = 12.000
+e         = 12.000 / 12.178       = 0.985
+
+a         = 3.0 / (1 − 0.985)    = 200.0
+T_orb     = 2π × √(200³ / (2.0 × 0.8))
+          = 2π × √(8,000,000 / 1.6) = 2π × 2236.1 = 14,049 cycles
+r_periapsis = 3.000
+r_apoapsis  = 200.0 × 1.985       = 397.0
+</code></pre>
+<p><strong>Classification:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orbit_class</td>
+<td><code>ECCENTRIC</code> (e = 0.985)</td>
+</tr>
+<tr>
+<td>stab_class</td>
+<td><code>PRECARIOUS</code> (e ≥ 0.9 → PRECARIOUS; d_bind = 0.5 &gt; d_collapse → MARGINAL; severity-wins → PRECARIOUS)</td>
+</tr>
+<tr>
+<td>is_resonant</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong> This orbit is at the edge of structural collapse. The entity barely captured — it arrives with 98.5% of escape momentum. r_apoapsis = 397 means the entity recedes to 132× the capture radius each orbit. T_orb is astronomically long; in practice, the entity will escape or collapse long before completing one orbit. Route to f_Collapse for assessment. If f_Release conditions are met at apoapsis, execute release immediately.</p>
+<hr>
+<h3 id="84-example-4-stable-circular-orbit-tracked-over-5-cycles">§8.4 · Example 4 — Stable Circular Orbit Tracked Over 5 Cycles</h3>
+<p><strong>Scenario:</strong> A standard capture with moderate parameters, tracked cycle-by-cycle to show how orbital parameters evolve with decay.</p>
+<p><strong>Initial Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_A</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>M_E</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>v_approach</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>C_thresh</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>ρ(Φ)</td>
+<td>4.0 (decays 5%/cycle)</td>
+</tr>
+<tr>
+<td>r_capture</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>ω_res</td>
+<td>1.0 (1:1 resonance)</td>
+</tr>
+<tr>
+<td>d_bind(0)</td>
+<td>8.64</td>
+</tr>
+<tr>
+<td>d_warn</td>
+<td>3.456</td>
+</tr>
+<tr>
+<td>d_collapse</td>
+<td>0.864</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cycle Trace:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Cycle</th>
+<th>ρ(Φ)</th>
+<th>P_eff</th>
+<th>p_res</th>
+<th>e</th>
+<th>a</th>
+<th>T_orb</th>
+<th>d_bind</th>
+<th>orbit_class</th>
+<th>stab_class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4.000</td>
+<td>6.000</td>
+<td>0.750</td>
+<td>0.111</td>
+<td>2.250</td>
+<td>2.985</td>
+<td>8.640</td>
+<td>RESONANT (1:1)</td>
+<td>STABLE</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3.800</td>
+<td>5.700</td>
+<td>0.750</td>
+<td>0.116</td>
+<td>2.263</td>
+<td>3.076</td>
+<td>7.981</td>
+<td>RESONANT</td>
+<td>STABLE</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3.610</td>
+<td>5.415</td>
+<td>0.750</td>
+<td>0.122</td>
+<td>2.278</td>
+<td>3.181</td>
+<td>7.310</td>
+<td>RESONANT</td>
+<td>STABLE</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3.430</td>
+<td>5.144</td>
+<td>0.750</td>
+<td>0.127</td>
+<td>2.294</td>
+<td>3.302</td>
+<td>6.617</td>
+<td>RESONANT</td>
+<td>STABLE</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3.258</td>
+<td>4.887</td>
+<td>0.750</td>
+<td>0.133</td>
+<td>2.311</td>
+<td>3.441</td>
+<td>5.890</td>
+<td>RESONANT</td>
+<td>STABLE</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3.095</td>
+<td>4.643</td>
+<td>0.750</td>
+<td>0.139</td>
+<td>2.325</td>
+<td>3.556</td>
+<td>5.128</td>
+<td>RESONANT</td>
+<td>STABLE</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observations:</strong>
+- ρ(Φ) decay causes P_eff to decline, driving e upward gradually.
+- T_orb lengthens each cycle as the orbit loosens (a increases as e grows).
+- The 1:1 resonance lock holds throughout, keeping orbit_class = RESONANT.
+- d_bind remains well above d_warn (3.456) through cycle 5. Extrapolating the decay trajectory: d_warn breach occurs around cycle 18–19. Action point: schedule f_Amplify intervention at cycle 15 to maintain STABLE classification.</p>
+<hr>
+<h2 id="9-cross-module-references">§9 · Cross-Module References</h2>
+<h3 id="91-files-that-read-from-f_orbit">§9.1 · Files That Read From f_Orbit</h3>
+<table>
+<thead>
+<tr>
+<th>Consumer File</th>
+<th>What It Reads</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Decay.md</td>
+<td><code>e</code>, <code>T_orb</code>, <code>orbit_class</code>, <code>stab_class</code>, <code>d_bind</code></td>
+<td>Each cycle: assess decay rate, flag DC-2/DC-3/DC-4</td>
+</tr>
+<tr>
+<td>f_Release.md</td>
+<td><code>e</code>, <code>r_apoapsis</code>, <code>stab_class</code></td>
+<td>Compute r_release, evaluate RC-1 through RC-5</td>
+</tr>
+<tr>
+<td>f_Collapse.md</td>
+<td><code>stab_class = PRECARIOUS</code>, <code>e ≥ 0.9</code>, <code>d_bind ≤ d_collapse</code></td>
+<td>Entry condition for collapse sequence</td>
+</tr>
+<tr>
+<td>f_Capture_Multi.md</td>
+<td><code>orbit_class</code>, <code>T_orb</code></td>
+<td>Multi-capture scheduling, resonance conflict detection</td>
+</tr>
+<tr>
+<td>f_Emit.md</td>
+<td><code>stab_class</code>, <code>d_bind</code>, <code>T_orb</code></td>
+<td>Determine emission timing within orbit cycle</td>
+</tr>
+<tr>
+<td>f_Amplify.md</td>
+<td><code>stab_class</code>, <code>d_bind</code></td>
+<td>Target amplification to orbit depth recovery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-files-that-write-to-f_orbit-provide-inputs">§9.2 · Files That Write To f_Orbit (Provide Inputs)</h3>
+<table>
+<thead>
+<tr>
+<th>Provider File</th>
+<th>What It Provides</th>
+<th>Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Capture.md</td>
+<td><code>r_capture</code>, <code>β</code>, <code>p_res</code>, <code>P_eff</code>, <code>Ω</code></td>
+<td>f_Capture §4.8</td>
+</tr>
+<tr>
+<td>f_Field.md</td>
+<td><code>ρ(Φ)</code>, <code>ω_res</code></td>
+<td>f_Field §4.1, §4.2</td>
+</tr>
+<tr>
+<td>f_Force.md</td>
+<td><code>M_A</code>, <code>M_E</code>, <code>v_approach</code>, <code>C_thresh</code></td>
+<td>f_Force §4.1–4.4</td>
+</tr>
+<tr>
+<td>f_Frame.md</td>
+<td>Frame registry (r_capture retrieval)</td>
+<td>f_Frame §4.3</td>
+</tr>
+<tr>
+<td>f_Decay.md</td>
+<td><code>d_bind(t)</code> (current cycle value)</td>
+<td>f_Decay §4.1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-operatorsmd-update-required">§9.3 · OPERATORS.md Update Required</h3>
+<p>The following entries in OPERATORS.md must be updated to reflect this file's canonical status:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>OPERATORS.md Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T_orb</code></td>
+<td>Status: 🔵 pending → 🟢 frozen; source: f_Orbit.md §4.1</td>
+</tr>
+<tr>
+<td><code>orbit_class</code></td>
+<td>Status: 🔵 pending → 🟢 frozen; source: f_Orbit.md §5.1</td>
+</tr>
+<tr>
+<td><code>stab_class</code></td>
+<td>Status: 🔵 pending → 🟢 frozen; source: f_Orbit.md §5.2</td>
+</tr>
+<tr>
+<td><code>classify_orbit</code></td>
+<td>PRIM:007 status: pending → frozen; source: f_Orbit.md §7.1</td>
+</tr>
+<tr>
+<td><code>update_orbital_parameters</code></td>
+<td>PRIM:012 status: pending → frozen; source: f_Orbit.md §7.2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="94-evaluation-order-within-a-cycle">§9.4 · Evaluation Order Within a Cycle</h3>
+<pre><code>Cycle t:
+  1. f_Field     → ρ(Φ)(t), ω_res(t)
+  2. f_Force     → P_eff(t), p_res(t)
+  3. OPERATORS   → e(t) = p_res / (p_res + P_eff)
+  4. f_Orbit     → a(t), T_orb(t), orbit_class(t), stab_class(t)
+  5. f_Decay     → δ(t), d_bind(t), DC flags
+  6. f_Release   → RC evaluation (if triggered externally or by stab_class)
+  7. f_Collapse  → collapse check (if stab_class = PRECARIOUS)
+</code></pre>
+<p><code>f_Orbit</code> is step 4 of 7. It may not be called before steps 1–3 complete.</p>
+<hr>
+<h2 id="10-document-metadata">§10 · Document Metadata</h2>
+<h3 id="101-inv-compliance-table">§10.1 · INV Compliance Table</h3>
+<table>
+<thead>
+<tr>
+<th>Invariant</th>
+<th>Description</th>
+<th>Status in This File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G requires all three nodes</td>
+<td>✅ §3.2 proves all three nodes contribute to every orbital parameter</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>No unilateral collapse from single-node failure</td>
+<td>✅ Multi-condition checks in classify_orbit; no single flag triggers collapse</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>d_bind decays monotonically below d_warn</td>
+<td>✅ Read-only; decay managed by f_Decay</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>r_capture immutable post-capture</td>
+<td>✅ update_orbital_parameters validates; never writes r_capture</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>e ∈ [0, 1)</td>
+<td>✅ classify_orbit raises ValueError on violation; enforced in PRIM:007 and PRIM:012</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>ρ(Φ) &gt; 0</td>
+<td>✅ update_orbital_parameters raises ValueError if rho_phi ≤ 0</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>Frame registry authoritative</td>
+<td>✅ PRIM:012 writes to frame_registry; reads r_capture from it</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Operator freeze propagation</td>
+<td>✅ T_orb frozen here §4.1; orbit_class, stab_class frozen §5</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>Classification thresholds immutable</td>
+<td>✅ §5 tables frozen and labeled INV-009; code uses hardcoded thresholds</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Session provenance required</td>
+<td>✅ session_id parameter required in PRIM:012; recorded in Frame registry</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-wave-status">§10.2 · Wave Status</h3>
+<table>
+<thead>
+<tr>
+<th>Wave</th>
+<th>File</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>f_Capture.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>0</td>
+<td>f_Source.md</td>
+<td>✅ Archived</td>
+</tr>
+<tr>
+<td>0</td>
+<td>GravityOfDismissal.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>1</td>
+<td>README.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>1</td>
+<td>INDEX.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>1</td>
+<td>OPERATORS.md</td>
+<td>✅ Canonical (T_orb pending → frozen here)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>GLOSSARY.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>1</td>
+<td>CHANGELOG.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>1</td>
+<td>FFF_Gravity_module.json</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>2</td>
+<td>f_Field.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>2</td>
+<td>f_Force.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>2</td>
+<td>f_Frame.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>3</td>
+<td>f_Release.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td>3</td>
+<td>f_Decay.md</td>
+<td>✅ Canonical</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>f_Orbit.md</strong></td>
+<td><strong>✅ Canonical ← THIS FILE</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>f_Collapse.md</td>
+<td>🔵 Scaffold → NOW UNBLOCKED</td>
+</tr>
+<tr>
+<td>3</td>
+<td>f_Emit.md</td>
+<td>🔵 Scaffold → unblocked</td>
+</tr>
+<tr>
+<td>3</td>
+<td>f_Dampen.md</td>
+<td>🔵 Scaffold → unblocked</td>
+</tr>
+<tr>
+<td>3</td>
+<td>f_Amplify.md</td>
+<td>🔵 Scaffold → unblocked</td>
+</tr>
+<tr>
+<td>3</td>
+<td>f_Deflect.md</td>
+<td>🔵 Scaffold → unblocked</td>
+</tr>
+<tr>
+<td>4</td>
+<td>f_Capture_Multi.md</td>
+<td>🔵 Scaffold → NOW UNBLOCKED</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-changelog-entry">§10.3 · Changelog Entry</h3>
+<pre><code>## [1.0.0] — 2026-08-13 — SES-20260813-ORBIT-001
+
+### Added
+- Initial canonical freeze of f_Orbit.md.
+- Operator T_orb defined and frozen (§4.1):
+    T_orb = 2π × √(a³ / (M_A × ρ(Φ)))
+    a = r_capture / (1 − e)
+- Operator orbit_class frozen with 4 categories (§5.1, INV-009):
+    RESONANT · CIRCULAR · ELLIPTICAL · ECCENTRIC
+- Operator stab_class frozen with 3 categories (§5.2, INV-009):
+    STABLE · MARGINAL · PRECARIOUS
+- Primitive classify_orbit [PRIM:007] frozen (§7.1) — Pure.
+- Primitive update_orbital_parameters [PRIM:012] frozen (§7.2) — Impure.
+- 4 canonical examples: near-circular stable, resonant elliptical,
+  eccentric precarious, 5-cycle decay trace.
+- Cross-module reference table: 6 consumers, 5 providers.
+- Evaluation order within cycle codified (§9.4).
+- INV compliance table complete (§10.1).
+
+### Unlocks
+- f_Collapse.md (was blocked on f_Decay.md ✅ + f_Orbit.md → now fully unblocked)
+- f_Capture_Multi.md (was blocked on f_Orbit.md + f_Frame.md → now fully unblocked)
+
+### Operator Status Updates Required in OPERATORS.md
+- T_orb: 🔵 → 🟢 frozen in f_Orbit.md §4.1
+- orbit_class: 🔵 → 🟢 frozen in f_Orbit.md §5.1
+- stab_class: 🔵 → 🟢 frozen in f_Orbit.md §5.2
+- PRIM:007 classify_orbit: pending → frozen in f_Orbit.md §7.1
+- PRIM:012 update_orbital_parameters: pending → frozen in f_Orbit.md §7.2
+</code></pre>
+<hr>
+<p><em>f_Orbit.md — Canonical v1.0.0 — [FFF:GRAVITY:ORBIT] — SES-20260813-ORBIT-001</em>
+<em>FFF_Gravity Module · TriadicFrameworks · umaywant2</em></p>
+  </main>
+</body>
+</html>

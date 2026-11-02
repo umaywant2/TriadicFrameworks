@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="100%" stop-color="#0b1233"/>
+    </linearGradient>
+
+    <linearGradient id="filamentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f5d46b"/>
+      <stop offset="50%" stop-color="#6fd5ff"/>
+      <stop offset="100%" stop-color="#f5d46b"/>
+    </linearGradient>
+
+    <radialGradient id="nodeGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#6fd5ff"/>
+    </radialGradient>
+
+    <radialGradient id="treeGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5d46b"/>
+      <stop offset="100%" stop-color="#ff9f43"/>
+    </radialGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Central filament -->
+  <path
+    d="M 50 300
+       C 200 150, 400 450, 600 300
+       C 800 150, 1000 450, 1150 300"
+    fill="none"
+    stroke="url(#filamentGrad)"
+    stroke-width="6"
+    filter="url(#glow)"
+  />
+
+  <!-- Left: Triadic glyph -->
+  <g transform="translate(150,260)" fill="none" stroke="#f5d46b" stroke-width="3">
+    <circle cx="0" cy="-30" r="22"/>
+    <circle cx="-20" cy="10" r="22"/>
+    <circle cx="20" cy="10" r="22"/>
+    <path d="M 0 -8 L -20 32 L 20 32 Z" fill="none"/>
+  </g>
+
+  <!-- Left: Helix -->
+  <g transform="translate(230,260)" stroke="#6fd5ff" stroke-width="2">
+    <path d="M 0 -80 C 20 -60, -20 -40, 0 -20
+             C 20 0, -20 20, 0 40
+             C 20 60, -20 80, 0 100" fill="none"/>
+    <line x1="-10" y1="-70" x2="10" y2="-60"/>
+    <line x1="-10" y1="-30" x2="10" y2="-20"/>
+    <line x1="-10" y1="10" x2="10" y2="20"/>
+    <line x1="-10" y1="50" x2="10" y2="60"/>
+    <line x1="-10" y1="90" x2="10" y2="100"/>
+  </g>
+
+  <!-- Center: polyhedra nodes -->
+  <g transform="translate(600,280)" fill="url(#nodeGrad)" stroke="#6fd5ff" stroke-width="2" filter="url(#glow)">
+    <polygon points="-80,-40 -60,-70 -30,-70 -10,-40 -30,-10 -60,-10"/>
+    <polygon points="0,-20 30,-50 60,-20 45,10 15,10"/>
+    <polygon points="40,40 70,20 100,40 90,70 50,70"/>
+  </g>
+
+  <!-- Center: scrolls of canon -->
+  <g transform="translate(600,320)" stroke="#f5d46b" stroke-width="2" fill="none">
+    <rect x="-120" y="40" width="80" height="40" rx="8"/>
+    <path d="M -120 40 C -130 30, -130 20, -120 10"/>
+    <path d="M -40 40 C -30 30, -30 20, -40 10"/>
+
+    <rect x="40" y="40" width="80" height="40" rx="8"/>
+    <path d="M 40 40 C 30 30, 30 20, 40 10"/>
+    <path d="M 120 40 C 130 30, 130 20, 120 10"/>
+  </g>
+
+  <!-- Right: branching tree -->
+  <g transform="translate(950,260)" stroke="#f5d46b" stroke-width="3" fill="none" filter="url(#glow)">
+    <path d="M 0 80 L 0 20"/>
+    <path d="M 0 40 L -40 0"/>
+    <path d="M 0 40 L 40 0"/>
+    <path d="M -40 0 L -70 -40"/>
+    <path d="M -40 0 L -10 -40"/>
+    <path d="M 40 0 L 10 -40"/>
+    <path d="M 40 0 L 70 -40"/>
+  </g>
+
+  <!-- Right: concentric rings -->
+  <g transform="translate(950,260)" stroke="#6fd5ff" stroke-width="2" fill="none">
+    <circle cx="0" cy="-80" r="20"/>
+    <circle cx="0" cy="-80" r="40" opacity="0.7"/>
+    <circle cx="0" cy="-80" r="60" opacity="0.4"/>
+  </g>
+
+  <!-- Small nodes along filament -->
+  <g fill="url(#nodeGrad)" filter="url(#glow)">
+    <circle cx="250" cy="260" r="6"/>
+    <circle cx="450" cy="340" r="6"/>
+    <circle cx="650" cy="260" r="6"/>
+    <circle cx="850" cy="340" r="6"/>
+  </g>
+
+  <!-- Caption -->
+  <text x="50" y="550" fill="#f5d46b" font-family="system-ui, sans-serif" font-size="20">
+    LINEAGE — Structural Genealogy Constellation
+  </text>
+</svg>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/CHANGELOG.md">
+  <title>Changelog — /docs/schemas/</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/CHANGELOG.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/CHANGELOG.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="changelog-docsschemas">Changelog — <code>/docs/schemas/</code></h1>
+<blockquote>
+<p>Canonical RTTcode schema directory — master packet schema and sub-schemas.</p>
+</blockquote>
+<p>All notable changes to files in <code>/docs/schemas/</code> are documented in this file.
+Format follows <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>.</p>
+<hr>
+<h2 id="11-2026-05-06">[1.1] — 2026-05-06</h2>
+<h3 id="context">Context</h3>
+<p>Metadata and session context refresh across all five canonical schemas.
+Triggered by the RTT/codes module migration from <code>/docs/rttcodes/</code> to <code>/docs/rtt/codes/</code>.
+Schema directory (<code>/docs/schemas/</code>) was <strong>not</strong> relocated — all <code>$id</code> and <code>$ref</code> paths remain unchanged.</p>
+<h3 id="changed-rttcodev1json-master-packet-schema">Changed — <code>rttcode.v1.json</code> (Master Packet Schema)</h3>
+<ul>
+<li><strong><code>$comment</code></strong> — Added refresh stamp with migration note.</li>
+<li><strong><code>description</code></strong> — Expanded to include "QR-compatible metadata identifiers" and domain scope.</li>
+<li><strong><code>_meta</code></strong> — Added full module registry block:</li>
+<li><code>module</code>, <code>canonical_id</code>, <code>role</code>, <code>version</code>, <code>status</code>, <code>author</code>, <code>license</code></li>
+<li><code>canonical_path</code>, <code>module_home</code> (now <code>/docs/rtt/codes/</code>), <code>module_url</code>, <code>module_json</code></li>
+<li><code>repository</code>, <code>last_updated</code>, <code>migration_note</code></li>
+<li><strong><code>_session_context</code></strong> — Added 9-field session context block matching TriadicFrameworks conventions.</li>
+<li><strong><code>_version_history</code></strong> — Added array with v1.0 and v1.1 entries.</li>
+<li><strong><code>_domains</code></strong> — Added recognized domain values registry (rtt, set, substrate, observer, governance, docs, other).</li>
+<li><strong><code>_related_schemas</code></strong> — Added registry of all four <code>$ref</code> targets with human-readable roles.</li>
+<li><strong>Property descriptions</strong> — Added <code>description</code> fields alongside <code>$ref</code> for tick, entities, environment, intent.</li>
+<li><strong>Version</strong> — Bumped from 1.0 → 1.1.</li>
+</ul>
+<h3 id="changed-tickv1json">Changed — <code>tick.v1.json</code></h3>
+<ul>
+<li><strong><code>$comment</code></strong> — Added refresh stamp.</li>
+<li><strong><code>description</code></strong> — Enriched with D369 R4.1 (monotonic time marker) parallel.</li>
+<li><strong><code>_meta</code></strong> — Added full module registry block with <code>parent_schema: rttcode.v1.json</code>.</li>
+<li><strong><code>_session_context</code></strong> — Added 4-field session context block.</li>
+<li><strong><code>_version_history</code></strong> — Added array with v1.0 and v1.1 entries.</li>
+<li><strong>Property descriptions</strong> — Enriched <code>index</code>, <code>timestamp</code>, <code>coherence</code> with structural context.</li>
+<li><strong>Version</strong> — Bumped from 1.0 → 1.1.</li>
+</ul>
+<h3 id="changed-entityv1json">Changed — <code>entity.v1.json</code></h3>
+<ul>
+<li><strong><code>$comment</code></strong> — Added refresh stamp.</li>
+<li><strong><code>description</code></strong> — Enriched with D369 R5.1 (source identity) parallel.</li>
+<li><strong><code>_meta</code></strong> — Added full module registry block with <code>parent_schema: rttcode.v1.json</code>.</li>
+<li><strong><code>_session_context</code></strong> — Added 4-field session context block.</li>
+<li><strong><code>_version_history</code></strong> — Added array with v1.0 and v1.1 entries.</li>
+<li><strong>Property descriptions</strong> — Enriched <code>id</code>, <code>state.value</code>, <code>resonance.amplitude</code>, <code>resonance.phase</code>.</li>
+<li><strong>Version</strong> — Bumped from 1.0 → 1.1.</li>
+</ul>
+<h3 id="changed-environmentv1json">Changed — <code>environment.v1.json</code></h3>
+<ul>
+<li><strong><code>$comment</code></strong> — Added refresh stamp.</li>
+<li><strong><code>description</code></strong> — Enriched with structural boundary context parallel.</li>
+<li><strong><code>_meta</code></strong> — Added full module registry block with <code>parent_schema: rttcode.v1.json</code>.</li>
+<li><strong><code>_session_context</code></strong> — Added 4-field session context block.</li>
+<li><strong><code>_version_history</code></strong> — Added array with v1.0 and v1.1 entries.</li>
+<li><strong>Property descriptions</strong> — Enriched <code>boundary.min/max</code>, <code>ambient.temperature/noise</code>, <code>drift.max_drift/accumulation_rate</code>.</li>
+<li><strong>Version</strong> — Bumped from 1.0 → 1.1.</li>
+</ul>
+<h3 id="changed-intentv1json">Changed — <code>intent.v1.json</code></h3>
+<ul>
+<li><strong><code>$comment</code></strong> — Added refresh stamp.</li>
+<li><strong><code>description</code></strong> — Enriched with D369 NC-5 (does not define control logic) parallel.</li>
+<li><strong><code>_meta</code></strong> — Added full module registry block with <code>parent_schema: rttcode.v1.json</code>.</li>
+<li><strong><code>_session_context</code></strong> — Added 4-field session context block.</li>
+<li><strong><code>_version_history</code></strong> — Added array with v1.0 and v1.1 entries.</li>
+<li><strong>Property descriptions</strong> — Enriched <code>target</code>, <code>direction</code>, <code>magnitude</code>.</li>
+<li><strong>Version</strong> — Bumped from 1.0 → 1.1.</li>
+</ul>
+<h3 id="not-changed">Not Changed</h3>
+<ul>
+<li><strong>All <code>$id</code> URLs</strong> — Preserved exactly (no path migration affected this directory).</li>
+<li><strong>All <code>$ref</code> paths</strong> — Preserved exactly (relative to <code>/docs/schemas/</code>).</li>
+<li><strong>All property schemas</strong> — Zero changes to types, enums, required fields, or validation logic.</li>
+<li><strong>Full backward compatibility</strong> — Any payload valid under v1.0 is valid under v1.1.</li>
+</ul>
+<hr>
+<h2 id="10-2025-01-01">[1.0] — 2025-01-01</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li><code>rttcode.v1.json</code> — Master RTTcode packet schema (tick + entities + environment + intent).</li>
+<li><code>tick.v1.json</code> — Monotonic tick sub-schema.</li>
+<li><code>entity.v1.json</code> — Entity participation sub-schema.</li>
+<li><code>environment.v1.json</code> — Environment context sub-schema.</li>
+<li><code>intent.v1.json</code> — Intent classification sub-schema.</li>
+</ul>
+<hr>
+<h2 id="file-inventory">File Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Current Version</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rttcode.v1.json</code></td>
+<td>1.1</td>
+<td>canon-stable</td>
+</tr>
+<tr>
+<td><code>tick.v1.json</code></td>
+<td>1.1</td>
+<td>canon-stable</td>
+</tr>
+<tr>
+<td><code>entity.v1.json</code></td>
+<td>1.1</td>
+<td>canon-stable</td>
+</tr>
+<tr>
+<td><code>environment.v1.json</code></td>
+<td>1.1</td>
+<td>canon-stable</td>
+</tr>
+<tr>
+<td><code>intent.v1.json</code></td>
+<td>1.1</td>
+<td>canon-stable</td>
+</tr>
+<tr>
+<td><code>CHANGELOG.md</code></td>
+<td>—</td>
+<td>this file</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Maintained by: Nawder Loswin · TriadicFrameworks · Apache 2.0 / MIT</em></p>
+  </main>
+</body>
+</html>

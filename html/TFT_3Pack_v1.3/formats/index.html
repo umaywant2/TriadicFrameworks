@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TFT File Format • TFT_3Pack</title>
+
+<style>
+    body { background:#0d0d0d; color:#e0e0e0; font-family:"Segoe UI",Roboto,sans-serif; margin:0; padding:0; }
+    h1,h2 { text-align:center; margin-top:40px; color:#fff; letter-spacing:1px; }
+    h1 { font-size:2.4rem; }
+    h2 { font-size:1.6rem; }
+    .section { width:90%; max-width:1000px; margin:40px auto; padding:30px; background:#1a1a1a; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.6); }
+    .emoji { font-size:2.4rem; display:block; text-align:center; margin-bottom:10px; }
+    .file { background:#222; padding:15px; border-radius:10px; border:1px solid #333; margin-top:20px; }
+    code,pre { background:#111; padding:10px; border-radius:8px; display:block; overflow-x:auto; color:#9cd3ff; }
+    a { color:#76c7ff; text-decoration:none; }
+    a:hover { color:#c0e8ff; }
+</style>
+</head>
+
+<body>
+
+<!-- Logo Banner (drop‑in component) start  -->
+<div style="width:100%; padding:60px 0; background:linear-gradient(135deg,#1f1f1f,#0b0b0b); text-align:center;">
+    <span style="font-size:3.2rem; display:block; margin-bottom:10px;">🔱</span>
+    <h1 style="color:#fff; font-size:2.6rem; margin:0;">TFT_3Pack v1.3</h1>
+    <h2 style="color:#ccc; font-size:1.2rem; margin-top:10px;">TriadicFrameworks • Nawderian Theorem • Resonant-Time Engine</h2>
+</div>
+<!-- Logo Banner (drop‑in component) end   -->
+
+<h2>📁 TFT Framework File Format (.fff)</h2>
+<h3>Structure • Metadata • Resonance Definitions</h3>
+
+<div class="section">
+    <span class="emoji">📄</span>
+    <h2>Format Specification</h2>
+
+    <p>The <strong>.fff</strong> format defines resonance-time, triadic operators, and TFT constants.</p>
+
+    <pre>
+[TFT]
+version = 1.3
+tau_r = <float>
+D3 = <float>
+D6 = <float>
+D9 = <float>
+Tf = <float>
+LambdaTheta = <float>
+F3 = <float>
+description = "optional"
+tags = "optional"
+    </pre>
+
+    <p>See <a href="README.md">README.md</a> for full documentation.</p>
+</div>
+
+<div class="section">
+    <span class="emoji">📚</span>
+    <h2>Example Files</h2>
+
+    <div class="file">
+        <strong>example_basic.fff</strong><br>
+        A minimal resonance definition.<br>
+        <a href="example_basic.fff">Open file</a>
+    </div>
+
+    <div class="file">
+        <strong>example_extended.fff</strong><br>
+        Includes metadata and descriptive tags.<br>
+        <a href="example_extended.fff">Open file</a>
+    </div>
+
+    <div class="file">
+        <strong>example_reflection_inversion.fff</strong><br>
+        Includes sample reflect invert modes.<br>
+        <a href="example_reflection_inversion.fff">Open file</a>
+    </div>
+
+</div>
+
+</body>
+</html>

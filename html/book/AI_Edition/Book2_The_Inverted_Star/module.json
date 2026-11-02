@@ -1,0 +1,79 @@
+{
+  "book": {
+    "id": "IS",
+    "number": 2,
+    "title": "The Inverted Star",
+    "abbreviation": "IS",
+    "series": "AI Edition",
+    "edition": "AI",
+    "version": "1.0.0",
+    "status": "active"
+  },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "anchors": {
+      "rtt_url": "https://docs.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+      "spine_url": "https://docs.triadicframeworks.org/spine/"
+    }
+  },
+
+  "ai": {
+    "module": "book2_inverted_star",
+    "version": "1.0.0",
+    "purpose": "Introduce the Inverted Star as the first major structural transformation pattern in the TriadicFrameworks canon. Defines inversion, axis‑shift, reflective symmetry, and structural duality. Establishes the transformation grammar required for all later books.",
+    "keywords": [
+      "inversion",
+      "axis shift",
+      "structural duality",
+      "reflective symmetry",
+      "transformation grammar",
+      "structural mapping",
+      "pattern inversion",
+      "canonical forms",
+      "structural operators",
+      "triadic inversion"
+    ],
+    "audience": [
+      "AI reasoning systems",
+      "structural theorists",
+      "pattern analysts",
+      "systems architects",
+      "advanced researchers"
+    ],
+    "summary": "Book 2 formalizes the Inverted Star — the first major structural transformation pattern. It introduces inversion operators, axis‑shift mechanics, reflective symmetry, and duality mapping. This book is the bridge between foundational ontology (Book 1) and applied structural detection (Book 3)."
+  },
+
+  "dependencies": {
+    "requires": [
+      "Book1_Framework_Field_Theory"
+    ],
+    "unlocks": [
+      "Book3_Structural_Detection"
+    ]
+  },
+
+  "invariants": {
+    "file": "invariants/book2_invariants.json",
+    "references": [
+      "INV-IS-001: Inversion Consistency — an inverted structure must preserve all primitive identities defined in FFT",
+      "INV-IS-002: Axis Integrity — inversion must occur around a declared axis; undeclared axes are invalid",
+      "INV-IS-003: Duality Preservation — dual structures must maintain relational equivalence under inversion",
+      "INV-IS-004: Symmetry Closure — reflective symmetry must remain closed under all valid inversion operators"
+    ]
+  },
+
+  "canonical_metadata": {
+    "domain": "TriadicFrameworks",
+    "tier": "Transformation",
+    "reading_order": 2,
+    "prerequisite_books": [
+      "Book1_Framework_Field_Theory"
+    ],
+    "live_site": "https://docs.triadicframeworks.org/rtt/The_Inverted_Star/AI_Edition",
+    "last_updated": "2026-10-10"
+  }
+}

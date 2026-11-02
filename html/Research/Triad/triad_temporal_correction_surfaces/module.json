@@ -1,0 +1,26 @@
+{
+  "module": "Triad_Temporal_Correction_Surfaces",
+  "name": "Triad — Temporal‑Correction Surfaces",
+  "summary": "Defines the temporal-correction surfaces of the Triad system, including corrected-time geometry, temporal drift compensation, and cross-layer temporal binding.",
+  "category": "intelligence-temporal-surfaces",
+  "version": "1.0",
+  "purpose": "Provide the temporal-correction geometry used by Scanner, O.H.S.H.I.T., and Atlas to stabilize reasoning across time windows, correct illusionary-time distortion, and maintain cross-domain temporal alignment.",
+  "role": "map",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@triad.time.surface",
+    "@triad.time.correct",
+    "@triad.time.bind",
+    "@triad.time.compensate",
+    "@triad.time.compute"
+  ],
+  "lineage": {
+    "upstream": ["Scanner", "OHSHIT"],
+    "downstream": [
+      "Atlas",
+      "AI_Atlas_Surfaces",
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension"
+    ]
+  }
+}

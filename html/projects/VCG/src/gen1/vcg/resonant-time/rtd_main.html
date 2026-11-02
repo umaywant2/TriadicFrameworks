@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/projects/VCG/src/gen1/vcg/resonant-time/rtd_main.md">
+  <title>Resonant Time Daemon main loop (Rust)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/projects/VCG/src/gen1/vcg/resonant-time/rtd_main.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/projects/VCG/src/gen1/vcg/resonant-time/rtd_main.md</code>
+    &middot;
+    <a href="../../../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="resonant-time-daemon-main-loop-rust">Resonant Time Daemon main loop (Rust)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>A minimal RTD that:
+- Reads dimensions.yml to determine cadence, harmonics, and phase offsets.
+- Emits WINDOW_TICK messages per dimension on schedule.
+- Supports “standalone mode” that also mirrors ticks directly to per‑dimension sockets for early testing, even without the orchestrator running.</p>
+<hr>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Single clock:</strong> CLOCK_MONOTONIC_RAW as the timing source.</li>
+<li><strong>Harmonics:</strong> Base frequency f; harmonics define window sizes and phase offsets.</li>
+<li><strong>Emission:</strong> Sends JSON messages over Unix datagram sockets.</li>
+<li><strong>Config reload:</strong> SIGHUP to reload dimensions.yml..</li>
+</ul>
+<hr>
+<h2 id="cargo-skeleton">Cargo skeleton</h2>
+<pre><code class="language-toml"># Cargo.toml
+[package]
+name = &quot;rtd&quot;
+version = &quot;0.1.0&quot;
+edition = &quot;2021&quot;
+
+[dependencies]
+serde = { version = &quot;1&quot;, features = [&quot;derive&quot;] }
+serde_yaml = &quot;0.9&quot;
+serde_json = &quot;1.0&quot;
+tokio = { version = &quot;1&quot;, features = [&quot;full&quot;] }
+nix = &quot;0.28&quot;
+</code></pre>
+<h2 id="data-structures">Data structures</h2>
+<pre><code class="language-rust">// src/main.rs (excerpt)
+use serde::Deserialize;
+
+#[derive(Debug, Deserialize, Clone)]
+struct Dimension {
+    id: String,                // &quot;D1&quot;..&quot;D9&quot;
+    phase_offset_deg: f64,     // 0, 40, 80, ...
+    harmonic: u32,             // 1, 2, 3
+    qos_weight: f64,           // not used by RTD, passed through
+    numa_node: i32,
+    cpu_set: String,
+    fs_type: String,
+    size_gb: u64,
+}
+
+#[derive(Debug, Deserialize)]
+struct Config { dimensions: Vec&lt;Dimension&gt; }
+</code></pre>
+<h2 id="main-loop">Main loop</h2>
+<pre><code class="language-rust">// src/main.rs
+use serde_json::json;
+use std::{fs, time::{Duration, Instant}};
+use tokio::time::sleep;
+use tokio::signal::unix::{signal, SignalKind};
+use std::os::unix::net::UnixDatagram;
+
+const RT_SOCK: &amp;str = &quot;/run/vcg/rt.sock&quot;;
+const STANDALONE: bool = true; // mirror ticks to /run/vcg/dX.sock for early testing
+
+fn deg_to_frac(deg: f64) -&gt; f64 { deg / 360.0 }
+
+fn sock_connect(path: &amp;str) -&gt; std::io::Result&lt;UnixDatagram&gt; {
+    let sock = UnixDatagram::unbound()?;
+    sock.connect(path)?;
+    Ok(sock)
+}
+
+#[tokio::main]
+async fn main() -&gt; anyhow::Result&lt;()&gt; {
+    fs::create_dir_all(&quot;/run/vcg&quot;)?;
+    let mut cfg = load_cfg()?;
+    let mut hup = signal(SignalKind::hangup())?;
+
+    // base frequency (Hz) for Gen1 testing; adjust as needed
+    let mut base_hz: f64 = 10.0;
+
+    let start = Instant::now();
+    let mut seq: u64 = 0;
+
+    loop {
+        tokio::select! {
+            _ = hup.recv() =&gt; {
+                cfg = load_cfg()?;
+                eprintln!(&quot;[RTD] reloaded dimensions.yml&quot;);
+            }
+            _ = tick_once(&amp;cfg, start, seq, base_hz) =&gt; {
+                seq += 1;
+            }
+        }
+    }
+}
+
+fn load_cfg() -&gt; anyhow::Result&lt;Config&gt; {
+    let txt = fs::read_to_string(&quot;/src/gen1/vcg/config/dimensions.yml&quot;)?;
+    let cfg: Config = serde_yaml::from_str(&amp;txt)?;
+    Ok(cfg)
+}
+
+async fn tick_once(cfg: &amp;Config, start: Instant, seq: u64, base_hz: f64) {
+    let base_period = Duration::from_secs_f64(1.0 / base_hz);
+    let now = Instant::now();
+    let next_boundary = start + base_period * (seq as u32 + 1);
+    let sleep_dur = next_boundary.saturating_duration_since(now);
+    sleep(sleep_dur).await;
+
+    for d in &amp;cfg.dimensions {
+        let period = base_period / (d.harmonic as u32);
+        let phase = period.mul_f64(deg_to_frac(d.phase_offset_deg));
+        let t_start = Instant::now() + phase;
+        let t_end = t_start + period;
+
+        let msg = json!({
+            &quot;type&quot;: &quot;WINDOW_TICK&quot;,
+            &quot;dimension_id&quot;: d.id,
+            &quot;seq&quot;: seq,
+            &quot;t_start_ns&quot;: to_ns(t_start, start),
+            &quot;t_end_ns&quot;: to_ns(t_end, start),
+            &quot;phase_deg&quot;: d.phase_offset_deg,
+            &quot;cadence_hz&quot;: (1.0/period.as_secs_f64())
+        }).to_string();
+
+        // Publish to RT socket (orchestrator subscribes)
+        if let Ok(sock) = sock_connect(RT_SOCK) {
+            let _ = sock.send(msg.as_bytes());
+        }
+
+        // Standalone: mirror directly to per-dimension socket
+        if STANDALONE {
+            let dim_sock = format!(&quot;/run/vcg/{}.sock&quot;, d.id.to_lowercase());
+            if let Ok(sock) = sock_connect(&amp;dim_sock) {
+                let _ = sock.send(msg.as_bytes());
+            }
+        }
+    }
+}
+
+fn to_ns(t: Instant, epoch: Instant) -&gt; u128 {
+    let d = t.duration_since(epoch);
+    (d.as_secs() as u128) * 1_000_000_000u128 + (d.subsec_nanos() as u128)
+}
+</code></pre>
+<hr>
+<h2 id="run">Run</h2>
+<ul>
+<li>Build: cargo build --release</li>
+<li>Ensure /run/vcg exists: sudo mkdir -p /run/vcg</li>
+<li>Start RTD: sudo ./target/release/rtd</li>
+<li>Use your example workloads; they’ll receive WINDOW_TICK on /run/vcg/dX.sock in standalone mode.</li>
+</ul>
+  </main>
+</body>
+</html>

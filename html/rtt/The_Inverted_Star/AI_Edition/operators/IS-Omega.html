@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IS-Ω — Omega-Turn Operator</title>
+</head>
+<body>
+
+<pre id="ai-operator" data-format="json">
+{
+  "operator": {
+    "id": "IS-Ω",
+    "name": "Omega-Turn",
+    "module": "rtt.inverted_star.ai",
+    "version": "2.0-draft",
+    "role": "inversion moment",
+    "layer": "deep",
+    "alignment": "N→S",
+    "phase": ["inversion"],
+
+    "transforms": {
+      "cycle_rate": "collapse",
+      "echo_depth": "orientation_flip",
+      "tension": "discharge"
+    },
+
+    "dependencies": {
+      "requires_kernel": true,
+      "kernel_version": "1.33-p1"
+    },
+
+    "constraints": {
+      "must_not_invent_6D_operator": true,
+      "must_not_redeclare_RTT": true,
+      "must_not_declare_second_coherence": true,
+      "must_not_use_bare_C": true,
+      "must_not_invent_drift_costs": true,
+      "must_not_use_cached_spine": true,
+      "must_not_load_deprecated_files": true
+    },
+
+    "drift_sensitivity": {
+      "Diffusion": "medium",
+      "Alignment": "high",
+      "Coupling": "high",
+      "ParadoxResolver": "maximum",
+      "Stabilization": "medium"
+    }
+  }
+}
+</pre>
+
+</body>
+</html>

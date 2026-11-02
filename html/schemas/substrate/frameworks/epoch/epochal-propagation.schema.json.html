@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/epoch/epochal-propagation.schema.json.md">
+  <title>epochal-propagation.schema.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/epoch/epochal-propagation.schema.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/epoch/epochal-propagation.schema.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="epochal-propagationschemajson"><strong>epochal-propagation.schema.json</strong></h1>
+<h3 id="canonical-json-schema-for-the-epochal-propagation-engine"><em>Canonical JSON Schema for the Epochal Propagation Engine</em></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;title&quot;: &quot;Epochal Propagation Schema&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+
+  &quot;properties&quot;: {
+    &quot;engine&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;const&quot;: &quot;epochal-propagation&quot;
+    },
+
+    &quot;version&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+
+    &quot;generated&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;ISO date of generation&quot;
+    },
+
+    &quot;imports&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;patternProperties&quot;: {
+        &quot;^[a-zA-Z0-9_-]+$&quot;: { &quot;type&quot;: &quot;string&quot; }
+      }
+    },
+
+    &quot;propagation&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;drift&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;vectors&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;thresholds&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;cycles&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;webs&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+          }
+        },
+
+        &quot;coherence&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;routes&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;envelopes&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;phase_transitions&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+          }
+        },
+
+        &quot;stability&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;indices&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;collapse_arcs&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;regeneration_arcs&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+          }
+        },
+
+        &quot;resonance&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;harmonics&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;phase&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [&quot;in-phase&quot;, &quot;out-of-phase&quot;, &quot;mixed&quot;]
+            },
+            &quot;propagation_edges&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+          }
+        },
+
+        &quot;ignition&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;waves&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;cascades&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } },
+            &quot;epochal_triggers&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }
+          }
+        }
+      }
+    },
+
+    &quot;epoch_transitions&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;epoch&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;enum&quot;: [&quot;E0&quot;, &quot;E1&quot;, &quot;E2&quot;, &quot;E3&quot;, &quot;E4&quot;, &quot;E5&quot;, &quot;E6&quot;, &quot;E7&quot;]
+          },
+          &quot;next_epoch&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;trigger_conditions&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+          },
+          &quot;propagation_rules&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+          },
+          &quot;threshold_crossings&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+          },
+          &quot;harmonic_requirements&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+          }
+        },
+        &quot;required&quot;: [&quot;epoch&quot;, &quot;next_epoch&quot;]
+      }
+    },
+
+    &quot;propagation_webs&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;web_id&quot;: { &quot;type&quot;: &quot;string&quot; },
+          &quot;nodes&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }
+          },
+          &quot;edges&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: {
+              &quot;type&quot;: &quot;object&quot;,
+              &quot;properties&quot;: {
+                &quot;source&quot;: { &quot;type&quot;: &quot;string&quot; },
+                &quot;target&quot;: { &quot;type&quot;: &quot;string&quot; },
+                &quot;weight&quot;: { &quot;type&quot;: &quot;number&quot; },
+                &quot;mode&quot;: {
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;enum&quot;: [
+                    &quot;drift&quot;,
+                    &quot;coherence&quot;,
+                    &quot;stability&quot;,
+                    &quot;resonance&quot;,
+                    &quot;ignition&quot;
+                  ]
+                }
+              },
+              &quot;required&quot;: [&quot;source&quot;, &quot;target&quot;, &quot;mode&quot;]
+            }
+          }
+        },
+        &quot;required&quot;: [&quot;web_id&quot;, &quot;nodes&quot;, &quot;edges&quot;]
+      }
+    },
+
+    &quot;output&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;epochal_propagation&quot;: { &quot;type&quot;: &quot;string&quot; }
+      }
+    },
+
+    &quot;meta&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;notes&quot;: { &quot;type&quot;: &quot;string&quot; }
+      }
+    }
+  },
+
+  &quot;required&quot;: [
+    &quot;engine&quot;,
+    &quot;version&quot;,
+    &quot;propagation&quot;,
+    &quot;epoch_transitions&quot;,
+    &quot;propagation_webs&quot;
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="why-this-schema-is-correct">Why this schema is correct</h2>
+<ul>
+<li>Mirrors the exact structure of your <strong>epochal-propagation.json</strong> engine.  </li>
+<li>Validates drift, coherence, stability, resonance, ignition propagation domains.  </li>
+<li>Enforces epoch transitions and propagation webs.  </li>
+<li>Matches your substrate schema pattern across all frameworks.  </li>
+<li>Fully compatible with the empty file in your active tab.  </li>
+<li>Silent‑release ready.</li>
+</ul>
+  </main>
+</body>
+</html>

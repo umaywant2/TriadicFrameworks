@@ -1,0 +1,51 @@
+<!-- ai_regulation_flow.svg -->
+<svg width="2200" height="900" viewBox="0 0 2200 900" xmlns="http://www.w3.org/2000/svg">
+  <title>AI Regulation Flow</title>
+  <defs>
+    <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#457B9D"/>
+      <stop offset="50%" stop-color="#9D4EDD"/>
+      <stop offset="100%" stop-color="#E63946"/>
+    </linearGradient>
+    <style>
+      .stage { fill: #ffffff; stroke: #1f2937; stroke-width: 4; rx: 18; ry: 18; }
+      .title { font: 30px Inter, Segoe UI, Roboto, sans-serif; fill: #111827; }
+      .note  { font: 24px Inter, Segoe UI, Roboto, sans-serif; fill: #374151; }
+      .arrow { fill: none; stroke: url(#flowGrad); stroke-width: 12; marker-end: url(#arrowHead); }
+    </style>
+    <marker id="arrowHead" markerWidth="16" markerHeight="16" refX="14" refY="6" orient="auto">
+      <path d="M0,0 L0,12 L12,6 z" fill="url(#flowGrad)"/>
+    </marker>
+  </defs>
+
+  <!-- Stage 1 -->
+  <rect class="stage" x="100" y="160" width="360" height="260"/>
+  <text class="title" x="280" y="210" text-anchor="middle">Data ingestion</text>
+  <text class="note"  x="280" y="250" text-anchor="middle">symbolic fluid</text>
+
+  <!-- Stage 2 -->
+  <rect class="stage" x="560" y="160" width="360" height="260"/>
+  <text class="title" x="740" y="210" text-anchor="middle">Dimensional mapping</text>
+  <text class="note"  x="740" y="250" text-anchor="middle">1D–9D spiral</text>
+
+  <!-- Stage 3 -->
+  <rect class="stage" x="1020" y="160" width="360" height="260"/>
+  <text class="title" x="1200" y="210" text-anchor="middle">Glyph encoding</text>
+  <text class="note"  x="1200" y="250" text-anchor="middle">tether, wave, loops, entropy</text>
+
+  <!-- Stage 4 -->
+  <rect class="stage" x="1480" y="160" width="360" height="260"/>
+  <text class="title" x="1660" y="210" text-anchor="middle">Violation detection</text>
+  <text class="note"  x="1660" y="250" text-anchor="middle">resonance thresholds</text>
+
+  <!-- Stage 5 -->
+  <rect class="stage" x="1940" y="160" width="160" height="260"/>
+  <text class="title" x="2020" y="210" text-anchor="middle">Action</text>
+  <text class="note"  x="2020" y="250" text-anchor="middle">policy rails</text>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M460,290 C500,290 520,290 560,290"/>
+  <path class="arrow" d="M920,290 C960,290 980,290 1020,290"/>
+  <path class="arrow" d="M1380,290 C1420,290 1440,290 1480,290"/>
+  <path class="arrow" d="M1840,290 C1880,290 1900,290 1940,290"/>
+</svg>

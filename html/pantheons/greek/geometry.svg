@@ -1,0 +1,17 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Olympus / Polis / Underworld axis -->
+  <!-- Olympus peak -->
+  <polygon points="400,120 470,260 430,360 370,360 330,260" fill="none" stroke="#2a7" stroke-width="3"/>
+  <text x="400" y="110" text-anchor="middle">Mount Olympus</text>
+
+  <!-- Polis band -->
+  <rect x="220" y="380" width="360" height="80" fill="none" stroke="#000"/>
+  <text x="400" y="430" text-anchor="middle">Polis / Civic Space</text>
+
+  <!-- Underworld gate -->
+  <rect x="260" y="520" width="280" height="80" fill="none" stroke="#c33"/>
+  <text x="400" y="565" text-anchor="middle">Underworld Gate</text>
+
+  <!-- Title -->
+  <text x="400" y="80" text-anchor="middle">Olympus–Polis–Underworld Geometry</text>
+</svg>

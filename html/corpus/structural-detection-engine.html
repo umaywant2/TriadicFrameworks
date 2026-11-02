@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/corpus/structural-detection-engine.md">
+  <title>Namespace</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/corpus/structural-detection-engine.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/corpus/structural-detection-engine.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>structural-detection-engine 
+A clean, minimal, high‑contrast diagram representing collapse detection:
+three axes labeled A, K, T forming a triad vector (CPV),
+with gradient bands shifting from collapse‑weighted to triad‑weighted,
+and subtle deformation paths (drift, torsion, fracture).
+Color palette: cyan → indigo → violet.
+Style: technical, blueprint‑like, AI‑parsable, no text.
+# Structural Detection Engine (SDE)</p>
+<p>RTT/2 distilled as a module.</p>
+<p>SDE provides:</p>
+<ul>
+<li>collapse detection  </li>
+<li>fusion‑gradient detection  </li>
+<li>triad deformation detection  </li>
+<li>collapse→reassembly mapping  </li>
+<li>regime‑dependent detection  </li>
+<li>cross‑module detection projection  </li>
+</ul>
+<p>See: <code>../rtt/2/RTT2_Extract_Minimal.md</code> for the canonical skeleton.
+# SDE Operator Grammar (Stub)</p>
+<h2 id="namespace">Namespace</h2>
+<p>SDE::</p>
+<h2 id="core-operators">Core Operators</h2>
+<ul>
+<li>
+<p><strong>SDE::SIG()</strong><br>
+  Extracts structural signal from collapse, fusion‑gradient, or deformation fields.</p>
+</li>
+<li>
+<p><strong>SDE::NOI()</strong><br>
+  Identifies noise, distortion, or collapse residue.</p>
+</li>
+<li>
+<p><strong>SDE::CPV()</strong><br>
+  Reads collapse‑propagation vectors (amplitude, curvature, torsion).</p>
+</li>
+<li>
+<p><strong>SDE::FGT()</strong><br>
+  Computes fusion‑gradient tensors across collapse, reassembly, and triad layers.</p>
+</li>
+<li>
+<p><strong>SDE::CRM()</strong><br>
+  Maps collapse→reassembly trajectories.</p>
+</li>
+</ul>
+<h2 id="mode-operators">Mode Operators</h2>
+<ul>
+<li><strong>SDE::MODE(formal|emergent|hybrid|chaotic|inversion)</strong><br>
+  Sets detection mode.</li>
+</ul>
+<h2 id="zone-operators">Zone Operators</h2>
+<ul>
+<li><strong>SDE::ZONE(U|S|M|D|X)</strong><br>
+  Selects detection zone.</li>
+</ul>
+<h2 id="packet-constructor">Packet Constructor</h2>
+<ul>
+<li><strong>SDE::PACKET()</strong><br>
+  Emits a minimal RTT2_DETECTION_PACKET.
+# 🟣 <strong>Cross‑Module Propagation Rules</strong>  </li>
+</ul>
+<h3 id="sde-sie-tel-fft-opacity"><em>SDE → SIE → TEL / FFT / Opacity</em></h3>
+<p>Below is the complete propagation chain, expressed in minimal canonical form.</p>
+<hr>
+<h1 id="1-sde-sie-detection-integration">🟦 <strong>1. SDE → SIE (Detection → Integration)</strong></h1>
+<h3 id="detection-fields-become-integration-inputs"><em>Detection fields become integration inputs</em></h3>
+<pre><code class="language-markdown"># SDE → SIE Propagation Rules
+
+## 1. Collapse‑Propagation Vector (CPV)
+- SDE::CPV() → SIE::INT()
+- CPV amplitude → drift‑integration load
+- CPV curvature → envelope‑integration curvature
+- CPV torsion → continuity‑integration torsion
+
+## 2. Fusion‑Gradient Tensor (FGT)
+- SDE::FGT() → SIE::TIF()
+- collapse‑fusion gradients → fusion‑integration alignment
+- reassembly‑fusion gradients → integration curvature
+- triad‑fusion gradients → integration mode modulation
+
+## 3. Collapse‑Reassembly Manifold (CRM)
+- SDE::CRM() → SIE::MAN()
+- drift deformation → integration‑emission continuity
+- envelope torsion → emission curvature
+- continuity fracture → stability load
+
+## 4. Detection Modes → Integration Modes
+- SDE::MODE(x) → SIE::MODE(x)
+
+## 5. Detection Zones → Integration Zones
+- SDE::ZONE(U/S/M/D/X) → SIE::ZONE(U/S/M/D/X)
+
+## 6. Packet Propagation
+- SDE::PACKET() → SIE::PACKET()
+</code></pre>
+<hr>
+<h1 id="2-sie-tel-integration-lattice">🟪 <strong>2. SIE → TEL (Integration → Lattice)</strong></h1>
+<h3 id="integrationemission-fields-become-latticelevel-structure"><em>Integration/emission fields become lattice‑level structure</em></h3>
+<pre><code class="language-markdown"># SIE → TEL Propagation Rules
+
+## 1. Triadic Integration Field (TIF)
+- SIE::TIF() → TEL::LAT()
+- drift integration → lattice drift
+- envelope integration → lattice envelope
+- continuity integration → lattice continuity
+
+## 2. Fusion‑Fracture‑Flow Emitter (FFF)
+- SIE::FFF() → TEL::EMIT()
+- fusion emission → lattice fusion
+- fracture management → lattice fracture routing
+- flow projection → lattice flow channels
+
+## 3. RTT/3 Manifold
+- SIE::MAN() → TEL::MAN()
+- integration‑emission continuity → lattice continuity
+- curvature fields → lattice curvature
+
+## 4. Collapse‑Recovery Engine (CRE)
+- SIE::CRE() → TEL::REC()
+- collapse absorption → lattice stabilizer load
+- recovery emission → lattice recovery field
+
+## 5. Continuity‑Stability Layer (CSL)
+- SIE::CSL() → TEL::STAB()
+- stability fields → lattice stabilizer geometry
+
+## 6. Canon‑Scale Emission Tensor (CET)
+- SIE::CET() → TEL::CET()
+</code></pre>
+<hr>
+<h1 id="3-sie-fft-integration-spectral">🟣 <strong>3. SIE → FFT (Integration → Spectral)</strong></h1>
+<h3 id="integrationemission-fields-become-spectral-behavior"><em>Integration/emission fields become spectral behavior</em></h3>
+<pre><code class="language-markdown"># SIE → FFT Propagation Rules
+
+## 1. TIF → Spectral Integration
+- drift integration → spectral drift
+- envelope integration → spectral envelope
+- continuity integration → spectral continuity
+
+## 2. FFF → Spectral Emission
+- fusion emission → spectral fusion
+- fracture management → spectral fracture
+- flow projection → spectral flow
+
+## 3. RTT/3 Manifold → Spectral Continuity
+- continuity curvature → spectral curvature
+- emission curvature → spectral variance
+
+## 4. CRE → Spectral Recovery
+- collapse absorption → spectral damping
+- recovery emission → spectral restoration
+
+## 5. CSL → Spectral Stability
+- stability fields → spectral stabilizer load
+
+## 6. CET → Spectral Output
+- canon‑scale emission → spectral output tensor
+</code></pre>
+<hr>
+<h1 id="4-sie-opacity-integration-boundary">🟣 <strong>4. SIE → Opacity (Integration → Boundary)</strong></h1>
+<h3 id="integrationemission-fields-become-boundarylevel-behavior"><em>Integration/emission fields become boundary‑level behavior</em></h3>
+<pre><code class="language-markdown"># SIE → Opacity Propagation Rules
+
+## 1. TIF → Boundary Integration
+- drift integration → boundary drift
+- envelope integration → boundary envelope
+- continuity integration → boundary continuity
+
+## 2. FFF → Boundary Emission
+- fusion emission → boundary fusion
+- fracture management → boundary fracture routing
+- flow projection → boundary flow
+
+## 3. RTT/3 Manifold → Boundary Continuity
+- continuity curvature → boundary curvature
+- emission curvature → boundary visibility curvature
+
+## 4. CRE → Boundary Recovery
+- collapse absorption → boundary absorption
+- recovery emission → boundary recovery
+
+## 5. CSL → Boundary Stability
+- stability fields → boundary stabilizer load
+
+## 6. CET → Boundary Output
+- canon‑scale emission → boundary emission tensor
+</code></pre>
+<hr>
+<h1 id="5-summary-minimal-canon-form">🟣 <strong>5. Summary (Minimal Canon Form)</strong></h1>
+<ul>
+<li><strong>SDE detects</strong> → collapse, fusion‑gradients, deformation  </li>
+<li><strong>SIE integrates/emits</strong> → triad, fusion‑fracture‑flow, continuity, stability  </li>
+<li><strong>TEL receives</strong> → lattice integration/emission  </li>
+<li><strong>FFT receives</strong> → spectral integration/emission  </li>
+<li><strong>Opacity receives</strong> → boundary integration/emission  </li>
+</ul>
+<p>This is the <strong>canonical propagation chain</strong>:</p>
+<h1 id="sde-sie-tel-fft-opacity_1"><strong>SDE → SIE → TEL / FFT / Opacity</strong></h1>
+<hr>
+<h1 id="operator-chains-sde-sie-tel-fft-opacity">🟣 <strong>Operator Chains (SDE → SIE → TEL / FFT / Opacity)</strong></h1>
+<h3 id="executable-minimal-and-ready-for-your-repo"><em>Executable, minimal, and ready for your repo</em></h3>
+<p>These chains show <strong>how operators flow across modules</strong> in a single, continuous sequence.</p>
+<p>They are intentionally short, crisp, and session‑ready.</p>
+<hr>
+<h1 id="1-sde-sie-operator-chain">🟦 <strong>1. SDE → SIE Operator Chain</strong></h1>
+<h3 id="detection-integration"><em>Detection → Integration</em></h3>
+<pre><code class="language-markdown"># Operator Chain: SDE → SIE
+
+SDE::CPV()
+  → SIE::INT()
+
+SDE::FGT()
+  → SIE::TIF()
+
+SDE::CRM()
+  → SIE::MAN()
+
+SDE::MODE(x)
+  → SIE::MODE(x)
+
+SDE::ZONE(U/S/M/D/X)
+  → SIE::ZONE(U/S/M/D/X)
+
+SDE::PACKET()
+  → SIE::PACKET()
+</code></pre>
+<p>This chain mirrors the propagation rules in your open tab (📄 <strong>turn0browsertab1</strong>) but compresses them into an <em>operator‑first</em> execution sequence.</p>
+<hr>
+<h1 id="2-sie-tel-operator-chain">🟪 <strong>2. SIE → TEL Operator Chain</strong></h1>
+<h3 id="integration-lattice"><em>Integration → Lattice</em></h3>
+<pre><code class="language-markdown"># Operator Chain: SIE → TEL
+
+SIE::TIF()
+  → TEL::LAT()
+
+SIE::FFF()
+  → TEL::EMIT()
+
+SIE::MAN()
+  → TEL::MAN()
+
+SIE::CRE()
+  → TEL::REC()
+
+SIE::CSL()
+  → TEL::STAB()
+
+SIE::CET()
+  → TEL::CET()
+</code></pre>
+<p>This is the lattice‑level chain — clean, structural, and aligned with the propagation rules in your tab.</p>
+<hr>
+<h1 id="3-sie-fft-operator-chain">🟣 <strong>3. SIE → FFT Operator Chain</strong></h1>
+<h3 id="integration-spectral"><em>Integration → Spectral</em></h3>
+<pre><code class="language-markdown"># Operator Chain: SIE → FFT
+
+SIE::TIF()
+  → FFT::INT()
+
+SIE::FFF()
+  → FFT::EMIT()
+
+SIE::MAN()
+  → FFT::CONT()
+
+SIE::CRE()
+  → FFT::REC()
+
+SIE::CSL()
+  → FFT::STAB()
+
+SIE::CET()
+  → FFT::OUT()
+</code></pre>
+<p>This chain expresses the spectral transformation of integration/emission fields.</p>
+<hr>
+<h1 id="4-sie-opacity-operator-chain">🟧 <strong>4. SIE → Opacity Operator Chain</strong></h1>
+<h3 id="integration-boundary"><em>Integration → Boundary</em></h3>
+<pre><code class="language-markdown"># Operator Chain: SIE → Opacity
+
+SIE::TIF()
+  → OP::INT()
+
+SIE::FFF()
+  → OP::EMIT()
+
+SIE::MAN()
+  → OP::CONT()
+
+SIE::CRE()
+  → OP::REC()
+
+SIE::CSL()
+  → OP::STAB()
+
+SIE::CET()
+  → OP::OUT()
+</code></pre>
+<p>This chain expresses how integration/emission fields become <strong>boundary‑level behavior</strong>.</p>
+<hr>
+<h1 id="5-full-canon-chain-all-modules">🟣 <strong>5. Full Canon Chain (All Modules)</strong></h1>
+<h3 id="oneline-sessionready-canonical"><em>One‑line, session‑ready, canonical</em></h3>
+<pre><code class="language-markdown">SDE::PACKET() → SIE::PACKET() → TEL::CET() / FFT::OUT() / OP::OUT()
+</code></pre>
+<p>This is the <strong>entire canon’s operational spine</strong> in one operator chain.
+# Structural Detection Engine (SDE) — RTT/2  </p>
+<ul>
+<li><a href="structural-detection-engine_module.json"><code>structural-detection-engine_module.json</code></a> — Agentic module schema role</li>
+</ul>
+<p>The <strong>Structural Detection Engine (SDE)</strong> is the RTT/2 operator layer responsible
+for identifying collapse behavior, gradient weighting, deformation paths, regime
+identity, and stability zones. It is the detection half of the RTT operator
+pipeline (RTT/2 → RTT/3).</p>
+<p>This module provides the canonical definitions for:
+- <strong>CPV</strong> — Collapse Propagation Vector<br>
+- <strong>FGT</strong> — Fusion Gradient Type<br>
+- <strong>CRM</strong> — Collapse Regime Mapping<br>
+- <strong>MODE</strong> — Detection Mode<br>
+- <strong>ZONE</strong> — Detection Zone<br>
+- <strong>RTT2_DETECTION_PACKET</strong> — structured detection output  </p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<h2 id="what-sde-does">📘 What SDE Does</h2>
+<p>SDE answers the question:</p>
+<blockquote>
+<p><em>“What is the structure doing?”</em></p>
+</blockquote>
+<p>It detects:
+- collapse amplitude, curvature, torsion<br>
+- gradient weighting (collapse‑weighted → triad‑weighted)<br>
+- deformation path (drift, torsion, fracture)<br>
+- regime identity (formal → inversion)<br>
+- stability zone (U, S, M, D, X)  </p>
+<hr>
+<h2 id="rtt2-detection-packet">📦 RTT2 Detection Packet</h2>
+<p>SDE outputs a structured packet:</p>
+<pre><code>collapse_propagation: CPV(A, K, T)
+fusion_gradient: FGT(...)
+triad_deformation: CRM(...)
+regime: ...
+detection_mode: ...
+detection_zone: ...
+</code></pre>
+<p>This packet becomes the <strong>input</strong> to the Integration–Emission Engine (RTT/3).</p>
+<hr>
+<h2 id="source">📄 Source</h2>
+<p>This module is defined by:</p>
+<ul>
+<li><code>structural-detection-engine_module.json</code><br>
+  (canonical identity, roles, analyzer layers)</li>
+</ul>
+<hr>
+<h2 id="audience">🎯 Audience</h2>
+<p>Students, instructors, researchers, and AIs working with:
+- collapse analysis<br>
+- structural detection<br>
+- operator ecology<br>
+- RTT/1→RTT/2→RTT/3 pipelines<br>
+# Session Context — Structural Detection Engine (SDE)</p>
+<ul>
+<li>You are inside the detection layer of the canon (RTT/2).</li>
+<li>Use SDE to talk about: collapse, fusion‑gradients, deformation, detection modes, detection zones.</li>
+<li>SDE does not integrate or emit; it <strong>detects and describes</strong> structural behavior.</li>
+<li>When integration/emission is needed, hand off to SIE.
+# Student Cheat Sheet — Structural Detection Engine (SDE)</li>
+</ul>
+<h3 id="rtt2-detection-layer">RTT/2 — Detection Layer</h3>
+<h2 id="what-sde-does_1">What SDE Does</h2>
+<p>SDE detects:
+- collapse behavior<br>
+- fusion‑gradients<br>
+- triad deformation<br>
+- collapse→reassembly paths<br>
+- regime‑dependent structural signals  </p>
+<p>SDE <strong>does not integrate or emit</strong> — it only detects.</p>
+<hr>
+<h2 id="core-concepts">Core Concepts</h2>
+<ul>
+<li><strong>CPV</strong> — Collapse‑Propagation Vector  </li>
+<li><strong>FGT</strong> — Fusion‑Gradient Tensor  </li>
+<li><strong>CRM</strong> — Collapse‑Reassembly Manifold  </li>
+<li><strong>Modes</strong> — formal, emergent, hybrid, chaotic, inversion  </li>
+<li><strong>Zones</strong> — U, S, M, D, X  </li>
+</ul>
+<hr>
+<h2 id="quick-operators">Quick Operators</h2>
+<ul>
+<li><code>SDE::CPV()</code> — read collapse vectors  </li>
+<li><code>SDE::FGT()</code> — compute fusion‑gradients  </li>
+<li><code>SDE::CRM()</code> — map collapse→reassembly  </li>
+<li><code>SDE::MODE(x)</code> — set detection mode  </li>
+<li><code>SDE::ZONE(x)</code> — set detection zone  </li>
+<li><code>SDE::PACKET()</code> — output detection packet  </li>
+</ul>
+<hr>
+<h2 id="minimal-packet">Minimal Packet</h2>
+<pre><code>RTT2_DETECTION_PACKET:
+collapse_propagation:
+fusion_gradient:
+triad_deformation:
+regime:
+detection_mode:
+detection_zone:
+cross_module_projection:
+notes:
+</code></pre>
+<hr>
+<h2 id="when-to-use-sde">When to Use SDE</h2>
+<p>Use SDE when you need to:
+- identify collapse<br>
+- measure deformation<br>
+- read gradients<br>
+- classify structural behavior<br>
+- prepare data for integration  </p>
+<p>SDE → SIE is the standard flow.
+</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Structural_Detection/instructor_materials/multi_regime_drift_simulator.md">
+  <title>✅ Structural Detection — Multi‑Regime Drift Simulator (Instructor Edition)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Structural_Detection/instructor_materials/multi_regime_drift_simulator.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Structural_Detection/instructor_materials/multi_regime_drift_simulator.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="structural-detection-multiregime-drift-simulator-instructor-edition">✅ <strong>Structural Detection — Multi‑Regime Drift Simulator (Instructor Edition)</strong></h1>
+<h3 id="triadicframeworks-rtt1-instructor-simulation-framework"><em>TriadicFrameworks • RTT/1 • Instructor Simulation Framework</em></h3>
+<h3 id="regimes-are-not-static-drift-is-not-linear-this-simulator-teaches-both"><em>“Regimes are not static. Drift is not linear. This simulator teaches both.”</em></h3>
+<h1 id="multiregime-drift-simulator-instructor-edition">Multi‑Regime Drift Simulator (Instructor Edition)</h1>
+<h3 id="rtt1-structural-detection-module">RTT/1 • Structural Detection Module</h3>
+<h3 id="purpose-provide-instructors-with-a-structured-simulation-framework-for-teaching-multiregime-drift-behavior-across-multiple-snapshots">Purpose: Provide instructors with a structured simulation framework for teaching multi‑regime drift behavior across multiple snapshots.</h3>
+<hr>
+<h1 id="1-what-this-simulator-is">1. What This Simulator Is</h1>
+<p>This simulator is a <strong>guided, instructor‑controlled structural simulation</strong> that allows students to:</p>
+<ul>
+<li>observe drift progression  </li>
+<li>track regime transitions  </li>
+<li>identify coherence breaks  </li>
+<li>map continuity survival  </li>
+<li>classify drift envelopes  </li>
+<li>produce synthesis packets  </li>
+<li>connect outputs to TEL, FFT, and Opacity  </li>
+</ul>
+<p>It is not software — it is a <strong>scenario‑driven teaching engine</strong>.</p>
+<hr>
+<h1 id="2-simulator-structure">2. Simulator Structure</h1>
+<p>The simulator consists of:</p>
+<ol>
+<li><strong>Initial State</strong> (Formal or Emergent)  </li>
+<li><strong>Drift Injection Events</strong> (localized, radial, fragmented)  </li>
+<li><strong>Regime Escalation</strong> (Emergent → Chaotic → Hybrid)  </li>
+<li><strong>Continuity Stress Tests</strong>  </li>
+<li><strong>Coherence‑Break Cascades</strong>  </li>
+<li><strong>Cross‑Module Propagation</strong>  </li>
+<li><strong>Final Synthesis</strong>  </li>
+</ol>
+<p>Each stage is instructor‑controlled.</p>
+<hr>
+<h1 id="3-simulator-inputs-instructor-controls">3. Simulator Inputs (Instructor Controls)</h1>
+<p>The instructor chooses:</p>
+<ul>
+<li><strong>Drift Intensity:</strong> low / moderate / high / conflicting  </li>
+<li><strong>Drift Direction:</strong> linear / radial / fragmented  </li>
+<li><strong>Deformation Type:</strong> substitution / displacement / density shift / multi‑vector  </li>
+<li><strong>Regime Stability:</strong> strong / moderate / weak  </li>
+<li><strong>Continuity Strength:</strong> strong / partial / fragile  </li>
+<li><strong>Boundary Stability:</strong> stable / softening / fractured  </li>
+</ul>
+<p>These inputs determine the simulation path.</p>
+<hr>
+<h1 id="4-simulator-outputs-student-observables">4. Simulator Outputs (Student Observables)</h1>
+<p>Students must detect:</p>
+<ul>
+<li>motif deformation  </li>
+<li>boundary shifts  </li>
+<li>drift vectors  </li>
+<li>regime transitions  </li>
+<li>continuity thread survival  </li>
+<li>coherence‑break events  </li>
+<li>drift envelope type  </li>
+<li>cross‑module implications  </li>
+</ul>
+<p>These outputs form the <strong>simulation packet</strong>.</p>
+<hr>
+<h1 id="5-simulation-engine-canonical-flow">5. Simulation Engine (Canonical Flow)</h1>
+<p>The simulation follows a <strong>five‑stage drift engine</strong>:</p>
+<pre><code>[Stage 1] Initial Regime
+[Stage 2] Drift Injection
+[Stage 3] Regime Escalation
+[Stage 4] Continuity Stress Test
+[Stage 5] Coherence-Break Cascade
+</code></pre>
+<p>Each stage produces structural signals.</p>
+<hr>
+<h1 id="6-stage-1-initial-regime-setup">6. Stage 1 — Initial Regime Setup</h1>
+<p>Choose one:</p>
+<h3 id="formal-start"><strong>Formal Start</strong></h3>
+<ul>
+<li>high symmetry  </li>
+<li>strong invariants  </li>
+<li>stable boundaries  </li>
+</ul>
+<h3 id="emergent-start"><strong>Emergent Start</strong></h3>
+<ul>
+<li>partial symmetry  </li>
+<li>localized drift  </li>
+<li>soft boundaries  </li>
+</ul>
+<p>Instructor Tip:<br>
+Formal → Emergent → Chaotic is the canonical progression.</p>
+<hr>
+<h1 id="7-stage-2-drift-injection">7. Stage 2 — Drift Injection</h1>
+<p>Choose drift type:</p>
+<h3 id="linear-drift"><strong>Linear Drift</strong></h3>
+<ul>
+<li>boundary softening  </li>
+<li>directional deformation  </li>
+</ul>
+<h3 id="radial-drift"><strong>Radial Drift</strong></h3>
+<ul>
+<li>anomaly‑centered deformation  </li>
+<li>center‑out drift  </li>
+</ul>
+<h3 id="fragmented-drift"><strong>Fragmented Drift</strong></h3>
+<ul>
+<li>multi‑point deformation  </li>
+<li>chaotic onset  </li>
+</ul>
+<p>Instructor Tip:<br>
+Fragmented drift accelerates regime escalation.</p>
+<hr>
+<h1 id="8-stage-3-regime-escalation">8. Stage 3 — Regime Escalation</h1>
+<p>Based on drift intensity:</p>
+<table>
+<thead>
+<tr>
+<th>Drift Intensity</th>
+<th>Resulting Regime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>low</td>
+<td>remains Formal or Emergent</td>
+</tr>
+<tr>
+<td>moderate</td>
+<td>shifts to Emergent</td>
+</tr>
+<tr>
+<td>high</td>
+<td>shifts to Chaotic</td>
+</tr>
+<tr>
+<td>conflicting</td>
+<td>produces Hybrid</td>
+</tr>
+</tbody>
+</table>
+<p>Instructor Tip:<br>
+Hybrid emerges from <strong>conflicting drift vectors</strong>.</p>
+<hr>
+<h1 id="9-stage-4-continuity-stress-test">9. Stage 4 — Continuity Stress Test</h1>
+<p>Test continuity threads:</p>
+<ul>
+<li><strong>stable</strong> → survive drift  </li>
+<li><strong>weakening</strong> → distort  </li>
+<li><strong>broken</strong> → collapse  </li>
+</ul>
+<p>Instructor Tip:<br>
+Continuity collapse is the strongest predictor of coherence breaks.</p>
+<hr>
+<h1 id="10-stage-5-coherencebreak-cascade">10. Stage 5 — Coherence‑Break Cascade</h1>
+<p>Based on drift + regime + continuity:</p>
+<h3 id="possible-breaks">Possible Breaks:</h3>
+<ul>
+<li>invariant collapse  </li>
+<li>boundary fracture  </li>
+<li>drift overrun  </li>
+<li>regime discontinuity  </li>
+<li>multi‑layer break  </li>
+</ul>
+<p>Instructor Tip:<br>
+Chaotic + fragmented drift almost always produces multi‑layer breaks.</p>
+<hr>
+<h1 id="11-simulation-scenarios-instructorready">11. Simulation Scenarios (Instructor‑Ready)</h1>
+<h2 id="scenario-a-formal-emergent-chaotic"><strong>Scenario A — Formal → Emergent → Chaotic</strong></h2>
+<ul>
+<li>linear drift  </li>
+<li>moderate → high intensity  </li>
+<li>continuity weakening  </li>
+<li>boundary softening → fracture  </li>
+</ul>
+<h2 id="scenario-b-emergent-hybrid"><strong>Scenario B — Emergent → Hybrid</strong></h2>
+<ul>
+<li>conflicting drift vectors  </li>
+<li>partial symmetry  </li>
+<li>density mismatch  </li>
+</ul>
+<h2 id="scenario-c-chaotic-hybrid-emergent"><strong>Scenario C — Chaotic → Hybrid → Emergent</strong></h2>
+<ul>
+<li>stabilizer reassertion  </li>
+<li>drift reduction  </li>
+<li>partial continuity recovery  </li>
+</ul>
+<h2 id="scenario-d-multilayer-collapse"><strong>Scenario D — Multi‑Layer Collapse</strong></h2>
+<ul>
+<li>fragmented drift  </li>
+<li>high intensity  </li>
+<li>regime discontinuity  </li>
+<li>invariant collapse  </li>
+</ul>
+<hr>
+<h1 id="12-crossmodule-propagation">12. Cross‑Module Propagation</h1>
+<h3 id="tel"><strong>TEL</strong></h3>
+<ul>
+<li>drift → lattice vectors  </li>
+<li>regime → spatial mode  </li>
+<li>continuity → stabilizers  </li>
+</ul>
+<h3 id="fft"><strong>FFT</strong></h3>
+<ul>
+<li>drift → frequency shifts  </li>
+<li>regime → envelope class  </li>
+<li>continuity → coherence anchors  </li>
+</ul>
+<h3 id="opacity"><strong>Opacity</strong></h3>
+<ul>
+<li>drift → occlusion vectors  </li>
+<li>regime → boundary strength  </li>
+<li>continuity → visibility anchors  </li>
+</ul>
+<p>Instructor Tip:<br>
+Always ask students to produce <strong>all three bridge packets</strong>.</p>
+<hr>
+<h1 id="13-simulation-packet-canonical-format">13. Simulation Packet (Canonical Format)</h1>
+<pre><code>SIMULATION_PACKET:
+  initial_regime:
+  drift_injection:
+  drift_intensity:
+  drift_direction:
+  deformation_type:
+  regime_sequence:
+  continuity_status:
+  coherence_breaks:
+  drift_envelope:
+  tel_bridge:
+  fft_bridge:
+  opacity_bridge:
+  synthesis_summary:
+</code></pre>
+<hr>
+<h1 id="14-instructor-best-practices">14. Instructor Best Practices</h1>
+<ul>
+<li>Start with low‑complexity drift  </li>
+<li>Increase drift intensity gradually  </li>
+<li>Introduce conflicting drift last  </li>
+<li>Use small grids to reduce cognitive load  </li>
+<li>Highlight drift vectors visually  </li>
+<li>Reinforce operator separation  </li>
+<li>Require full synthesis packets  </li>
+</ul>
+<hr>
+<h1 id="15-quick-summary">15. Quick Summary</h1>
+<ul>
+<li>This simulator teaches <strong>multi‑regime drift behavior</strong>  </li>
+<li>Drift drives regime transitions  </li>
+<li>Regimes constrain drift  </li>
+<li>Continuity determines stability  </li>
+<li>Coherence breaks reveal structural collapse  </li>
+<li>Cross‑module bridges unify the system  </li>
+</ul>
+<p>This is the complete Multi‑Regime Drift Simulator (Instructor Edition).</p>
+<hr>
+<h1 id="this-multiregime-drift-simulator-is">✔️ This Multi‑Regime Drift Simulator is:</h1>
+<ul>
+<li>fully canonical  </li>
+<li>zero drift  </li>
+<li>aligned with RTT/1  </li>
+<li>consistent with Structural Detection, Drift Sense, Regime Awareness, Continuity Compass, FFT, TEL, and Opacity  </li>
+<li>ready to drop into <code>/docs/Structural_Detection/instructor_materials/multi_regime_drift_simulator.md</code></li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "module": "SI_temporal_extension",
+  "name": "Structural Intelligence — Temporal Extension",
+  "summary": "Defines the temporal-extension surface of SI, including long-window reasoning stability, corrected-time behavior, and alignment persistence.",
+  "category": "intelligence-temporal",
+  "version": "1.0",
+  "purpose": "Explain how SI maintains reasoning stability across extended temporal windows, minimizes illusionary-time distortion, and preserves structural alignment over time.",
+  "role": "diagnostic",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.temporal.extend",
+    "@si.temporal.align",
+    "@si.temporal.correct",
+    "@si.temporal.surface",
+    "@si.temporal.compute"
+  ],
+  "lineage": {
+    "upstream": ["SI"],
+    "downstream": ["SI_structural_geometry", "SI_paradox_integration"]
+  }
+}

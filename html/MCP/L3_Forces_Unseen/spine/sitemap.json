@@ -1,0 +1,52 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+  "id": "S3-Spine-Examples-Sitemap",
+  "version": "1.0.0",
+  "front_door": "examples/index.md",
+
+  "sections": [
+    {
+      "id": "registry",
+      "title": "Example Registry",
+      "files": [
+        "spine.examples.registry.json",
+        "example.schema.json"
+      ]
+    },
+    {
+      "id": "envelopes",
+      "title": "Example Envelopes",
+      "files": [
+        "canonical.001.json",
+        "reality.001.json",
+        "imagination.001.json",
+        "information.001.json",
+        "error.001.json",
+        "qmroot.001.json"
+      ]
+    },
+    {
+      "id": "docs",
+      "title": "Example Documentation",
+      "files": [
+        "docs/canonical.md",
+        "docs/reality.md",
+        "docs/imagination.md",
+        "docs/information.md",
+        "docs/error.md",
+        "docs/qmroot.md"
+      ]
+    },
+    {
+      "id": "navigation",
+      "title": "Navigation",
+      "files": [
+        "index.md",
+        "sitemap.json"
+      ]
+    }
+  ]
+}

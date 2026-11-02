@@ -1,0 +1,77 @@
+{
+  "id": "L16",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "L16",
+  "name": "Gradient Modulation",
+  "canonical": "R5",
+
+  "summary": "L16 defines the modulation axis of unseen directional influence. It is the third structural dimension of the gradient node and determines the modulation behavior of gradientIntensity within the S3 Spine.",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "semantic_axis": "gradientIntensity",
+
+  "role": "modulation",
+  "category": "gradient",
+  "cluster": "gradient-origin",
+
+  "description": {
+    "canonical": "L16 establishes the modulation behavior of unseen directional influence. It refines the origin (L4) and direction (L5) by defining how gradientIntensity varies, oscillates, or transforms across influence channels.",
+    "cosmology": "In the cosmology chain, L16 represents the emergence of modulation from directional bias. It is the third stage of gradient formation within force-regime mechanics.",
+    "spine": "Within the S3 Spine, L16 is the modulation dimension of the gradient node, shaping the dynamic behavior of influence before harmonic coupling.",
+    "mcp": "In MCP operations, L16 is used to modulate gradient-state mechanics, providing the modulation coordinate for influence modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "gradient"
+    ],
+    "secondary": [
+      "push"
+    ],
+    "forbidden": [
+      "ruptureForce",
+      "bind",
+      "pull",
+      "fieldShift"
+    ]
+  },
+
+  "valid_transitions": [
+    "L16 → LH",
+    "L16 → L8"
+  ],
+
+  "forbidden_transitions": [
+    "L16 → L12",
+    "L16 → L32",
+    "L16 → LI"
+  ],
+
+  "spine_mapping": {
+    "node": "gradient",
+    "semantic": "gradientIntensity",
+    "position": "modulation",
+    "causal_role": "influence modulation"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L16",
+    "version": "1.0.0",
+    "keywords": [
+      "gradient",
+      "modulation",
+      "influence",
+      "force-regime",
+      "dynamic"
+    ],
+    "purpose": "Defines the modulation axis of unseen directional influence for AI reasoning and MCP gradient modulation."
+  }
+}

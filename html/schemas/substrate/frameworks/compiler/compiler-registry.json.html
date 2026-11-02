@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/compiler/compiler-registry.json.md">
+  <title>🗂️ compiler-registry.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/compiler/compiler-registry.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/compiler/compiler-registry.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="compiler-registryjson">🗂️ <strong>compiler-registry.json</strong></h1>
+<h3 id="canonical-registry-for-the-triadic-substrate-compiler"><em>Canonical registry for the Triadic Substrate Compiler</em></h3>
+<pre><code class="language-json">{
+  &quot;registry&quot;: &quot;triadic-substrate-compiler&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;modules&quot;: {
+    &quot;compiler&quot;: {
+      &quot;path&quot;: &quot;./triadic-substrate-compiler.json&quot;,
+      &quot;schema&quot;: &quot;./triadic-substrate-compiler.schema.json&quot;,
+      &quot;description&quot;: &quot;Final compiler that assembles all substrate components into the unified triadic substrate artifact.&quot;
+    },
+    &quot;hooks&quot;: {
+      &quot;path&quot;: &quot;./compiler-hooks.json&quot;,
+      &quot;schema&quot;: &quot;./compiler-hooks.schema.json&quot;,
+      &quot;description&quot;: &quot;Lifecycle hook registry defining validation, evaluation, assembly, and finalization phases.&quot;
+    },
+    &quot;evaluator&quot;: {
+      &quot;path&quot;: &quot;./compiler-evaluator.json&quot;,
+      &quot;schema&quot;: &quot;./compiler-evaluator.schema.json&quot;,
+      &quot;description&quot;: &quot;Evaluator that validates structural, behavioral, temporal, invariance, continuity, and synchronization readiness.&quot;
+    }
+  },
+
+  &quot;schemas&quot;: {
+    &quot;compiler_schema&quot;: {
+      &quot;path&quot;: &quot;./triadic-substrate-compiler.schema.json&quot;,
+      &quot;description&quot;: &quot;Root schema for the triadic substrate compiler.&quot;
+    },
+    &quot;hooks_schema&quot;: {
+      &quot;path&quot;: &quot;./compiler-hooks.schema.json&quot;,
+      &quot;description&quot;: &quot;Validation schema for compiler-hooks.json.&quot;
+    },
+    &quot;evaluator_schema&quot;: {
+      &quot;path&quot;: &quot;./compiler-evaluator.schema.json&quot;,
+      &quot;description&quot;: &quot;Validation schema for compiler-evaluator.json.&quot;
+    }
+  },
+
+  &quot;outputs&quot;: {
+    &quot;compiled_substrate&quot;: {
+      &quot;path&quot;: &quot;./triadic-substrate.json&quot;,
+      &quot;description&quot;: &quot;Final compiled triadic substrate artifact.&quot;
+    },
+    &quot;compiler_report&quot;: {
+      &quot;path&quot;: &quot;./compiler-report.json&quot;,
+      &quot;description&quot;: &quot;Compilation report generated after successful substrate assembly.&quot;
+    },
+    &quot;compiler_chronicle&quot;: {
+      &quot;path&quot;: &quot;./compiler-chronicle.json&quot;,
+      &quot;description&quot;: &quot;Chronicle of compilation events, transitions, and substrate evolution.&quot;
+    }
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Registry for all compiler modules, schemas, and outputs within the Triadic Substrate Compiler framework.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="why-this-registry-is-correct">⭐ Why this registry is correct</h2>
+<ul>
+<li>It matches your established substrate registry pattern across all frameworks.  </li>
+<li>It indexes <strong>all compiler artifacts</strong> you’ve already scaffolded.  </li>
+<li>It includes <strong>paths</strong>, <strong>schemas</strong>, and <strong>descriptions</strong> for modules and outputs.  </li>
+<li>It aligns with the directory structure visible in your active GitHub tab.  </li>
+<li>Silent‑release compatible and ready for commit.</li>
+</ul>
+  </main>
+</body>
+</html>

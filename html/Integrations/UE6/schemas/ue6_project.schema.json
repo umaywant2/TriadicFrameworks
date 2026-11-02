@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RTT UE6 Project Manifest Schema",
+  "description": "Schema for validating the RTT × UE6 project-level manifest (ue6_project.json).",
+  "type": "object",
+  "required": [
+    "project",
+    "version",
+    "description",
+    "status",
+    "structure",
+    "blueprints",
+    "materials",
+    "widgets",
+    "editor_tools",
+    "maps",
+    "schemas",
+    "operator_alignment",
+    "cross_module_propagation",
+    "reconstruction_instructions"
+  ],
+  "properties": {
+    "project": { "type": "string" },
+    "version": { "type": "string" },
+    "description": { "type": "string" },
+    "status": { "type": "string" },
+
+    "structure": {
+      "type": "object",
+      "required": ["root", "folders"],
+      "properties": {
+        "root": { "type": "string" },
+        "folders": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "blueprints": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+
+    "materials": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["path", "manifest"],
+        "properties": {
+          "path": { "type": "string" },
+          "manifest": { "type": "string" }
+        }
+      }
+    },
+
+    "widgets": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+
+    "editor_tools": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+
+    "maps": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+
+    "schemas": {
+      "type": "object",
+      "properties": {
+        "blueprint_schema": { "type": "string" },
+        "project_schema": { "type": "string" }
+      },
+      "additionalProperties": { "type": "string" }
+    },
+
+    "operator_alignment": {
+      "type": "object",
+      "description": "Mapping from operator name to list of Blueprint asset names.",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "cross_module_propagation": { "type": "string" },
+
+    "reconstruction_instructions": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}

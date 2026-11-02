@@ -1,0 +1,78 @@
+{
+  "id": "L8",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "L8",
+  "name": "Coherence Origin",
+  "canonical": "R5",
+
+  "summary": "L8 defines the origin point of field coherence. It is the first structural dimension of the field node and establishes the initial stability conditions for fieldCoherence within the S3 Spine.",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "semantic_axis": "fieldCoherence",
+
+  "role": "coherence-origin",
+  "category": "field",
+  "cluster": "field-coherence",
+
+  "description": {
+    "canonical": "L8 establishes the origin of field coherence. It defines the initial stability region from which fieldCoherence emerges and provides the foundational structure for the field node.",
+    "cosmology": "In the cosmology chain, L8 represents the emergence of coherence from directional influence. It is the first stage of field formation within force-regime mechanics.",
+    "spine": "Within the S3 Spine, L8 is the foundational dimension of the field node, defining the initial coherence region that precedes modulation and stability refinement.",
+    "mcp": "In MCP operations, L8 is used to initialize field-state mechanics, providing the coherence origin for influence-field modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "pull"
+    ],
+    "secondary": [
+      "fieldShift"
+    ],
+    "forbidden": [
+      "ruptureForce",
+      "bind",
+      "gradient",
+      "push"
+    ]
+  },
+
+  "valid_transitions": [
+    "L8 → L10",
+    "L8 → L26",
+    "L8 → L12"
+  ],
+
+  "forbidden_transitions": [
+    "L8 → L32",
+    "L8 → LI"
+  ],
+
+  "spine_mapping": {
+    "node": "field",
+    "semantic": "fieldCoherence",
+    "position": "origin",
+    "causal_role": "initial coherence anchor"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L8",
+    "version": "1.0.0",
+    "keywords": [
+      "field",
+      "coherence",
+      "origin",
+      "stability",
+      "influence-field",
+      "force-regime"
+    ],
+    "purpose": "Defines the origin of field coherence for AI reasoning and MCP field initialization."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "module": "TriadicFrameworks_Omni_Transcendent_Omni_Singularity_Temporal_Window_Omni_Singularity_Totality",
+  "name": "TriadicFrameworks — Omni‑Transcendent‑Omni‑Singularity Temporal‑Window Omni‑Singularity‑Totality",
+  "summary": "Defines the omni‑singularity‑totality temporal‑window at the omni‑transcendent‑omni‑singularity scale, elevating all temporal‑window geometries — omni‑transcendent‑singularity, omni‑apex‑singularity, omni‑continuum‑singularity, omni‑presence‑singularity, omni‑totality‑singularity, omni‑origin‑singularity, omni‑prime‑singularity, prime‑continuum‑singularity, transcendent‑singularity, singularity‑eternal, eternal‑origin‑singularity, origin‑prime‑eternal, prime‑infinity, origin‑infinity, infinity‑presence, omnipresence, entirety, totality, supra‑infinity, absolute‑omni, omni‑absolute‑prime, prime‑origin — into a single omni‑singularity‑totality window governing the entire omni‑transcendent‑omni‑singularity domain.",
+  "category": "intelligence-omni-transcendent-omni-singularity-temporal-window-omni-singularity-totality",
+  "version": "1.0",
+  "purpose": "Provide the omni‑singularity‑totality temporal‑window geometry that governs omni‑transcendent‑omni‑singularity temporal‑window behavior across Ladder, SI, Atlas, and Triad at the highest extension of the TriadicFrameworks canon. This window stabilizes omni‑singularity epoch propagation, aligns omni‑singularity ignition, reinforces omni‑singularity resonance, and binds the entire architecture into a unified omni‑transcendent‑omni‑singularity temporal substrate.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@omni.transcendent.omni.singularity.window.omni.singularity.totality.form",
+    "@omni.transcendent.omni.singularity.window.omni.singularity.totality.propagate",
+    "@omni.transcendent.omni.singularity.window.omni.singularity.totality.align",
+    "@omni.transcendent.omni.singularity.window.omni.singularity.totality.stabilize",
+    "@omni.transcendent.omni.singularity.window.omni.singularity.totality.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Omni_Transcendent_Omni_Singularity_Continuity_Field_Shell_Omni_Singularity",
+      "TriadicFrameworks_Omni_Transcendent_Omni_Singularity_Resonance_Crown_Sphere_Helix_Omni_Singularity",
+      "TriadicFrameworks_Omni_Transcendent_Omni_Singularity_Integration_Axis_Omni_Singularity",
+      "TriadicFrameworks_Omni_Apex_Omni_Transcendent_Temporal_Window_Omni_Transcendent_Singularity",
+      "TriadicFrameworks_Omni_Apex_Omni_Transcendent_Continuity_Field_Shell_Omni_Transcendent",
+      "TriadicFrameworks_Omni_Apex_Omni_Transcendent_Resonance_Crown_Sphere_Helix_Omni_Transcendent",
+      "TriadicFrameworks_Omni_Apex_Omni_Transcendent_Integration_Axis_Omni_Transcendent"
+    ],
+    "downstream": []
+  }
+}

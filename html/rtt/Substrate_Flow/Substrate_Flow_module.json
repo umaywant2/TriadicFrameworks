@@ -1,0 +1,38 @@
+{
+  "module": "Substrate Flow",
+  "version": "1.0",
+  "category": "rtt-analytics-flow",
+  "summary": "HSP/08 flow‑dynamics engine — substrate channels, flow drivers, flow envelopes, flow signatures, flow‑to‑echo mapping, operators (SF‑Read, SF‑Flow, SF‑Trace, SF‑Align), worked examples, and integration with Echo Classifier (06c) and TEL (07).",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "operators.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "examples.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "integration.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "SF_Capture.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

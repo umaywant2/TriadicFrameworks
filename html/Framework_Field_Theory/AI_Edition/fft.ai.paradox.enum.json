@@ -1,0 +1,83 @@
+{
+  "id": "fft.ai.paradox.enum",
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "title": "FFT AI — Paradox Enumeration v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "paradox_mode": "structural",
+  "paradoxes": [
+    {
+      "id": "PX-001",
+      "name": "Anti-Time INV-006 Violation",
+      "description": "RTT phase inversion violates tau consistency across modules",
+      "resolution": "field_isolation then re-coherence"
+    },
+    {
+      "id": "PX-002",
+      "name": "S-N-R Overlap",
+      "description": "Silence and Noise modes overlap — INV-007 violated",
+      "resolution": "rebalance partition via snr.monitor"
+    },
+    {
+      "id": "PX-003",
+      "name": "Drift Cascade",
+      "description": "Drift exceeds delta_max across 3+ consecutive operator steps",
+      "resolution": "Stabilization chain; autonomy escalate to AM-004"
+    },
+    {
+      "id": "PX-004",
+      "name": "Premature SET Coupling",
+      "description": "SET fields couple during Quiet Substrate phase — INV-010 violated",
+      "resolution": "SET decoupling; restore quiet phase"
+    },
+    {
+      "id": "PX-005",
+      "name": "QMROOT Orphan",
+      "description": "Module cannot be traced to 0D Silence seed — INV-013 violated",
+      "resolution": "re-anchor to 0D via qmroot.json"
+    },
+    {
+      "id": "PX-006",
+      "name": "Coherence Loss",
+      "description": "coherence drops from declared; INV-003 violated",
+      "resolution": "re-assertion via coherence.json; log PARADOX"
+    },
+    {
+      "id": "PX-007",
+      "name": "Spine Cache Drift",
+      "description": "Spine URL resolved from cache instead of live — INV-011 violated",
+      "resolution": "force live resolution via spine.connector.json"
+    },
+    {
+      "id": "PX-008",
+      "name": "Registry Gap",
+      "description": "One or more active modules absent from registry — INV-012 violated. Active count must equal fft.ai.registry.json#total_registered (currently 65). Deprecated modules are excluded from this count.",
+      "resolution": "re-register missing modules; halt if critical"
+    },
+    {
+      "id": "PX-009",
+      "name": "Triadic Field Collapse",
+      "description": "One of phi, V, R reduced to null — INV-001 violated",
+      "resolution": "full triadic field reconstruction (AM-005)"
+    },
+    {
+      "id": "PX-010",
+      "name": "DCO Independence Violation",
+      "description": "Higher DCO depends on lower DCO internal state — INV-009 violated",
+      "resolution": "isolate DCO; rebuild scaffold via dco.map.json"
+    }
+  ],
+  "v133_additions": [
+    "All 10 paradox types formalized in v1.33",
+    "paradox=structural mode binding",
+    "resolution chains for each"
+  ],
+  "count_source": "fft.ai.registry.json — single source of truth for all module counts",
+  "active_modules": 65,
+  "patch": "1.33-p1"
+}

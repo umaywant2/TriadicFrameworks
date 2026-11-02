@@ -1,0 +1,69 @@
+{
+  "module": {
+    "name": "Schemas",
+    "id": "schemas.core",
+    "category": "Infrastructure-Core",
+    "version": "1.0",
+    "summary": "The schema universe of TriadicFrameworks: deterministic, extensible, reviewer-ready structural contracts across all domains.",
+    "purpose": "Provide stable, interoperable schemas for all RTT-aligned systems, ensuring consistency, clarity, and long-term extensibility.",
+    "keywords": [
+      "schemas",
+      "infrastructure-core",
+      "RTTcode",
+      "domain schemas",
+      "dependency graph",
+      "validation pipeline",
+      "structural contracts"
+    ],
+    "audience": ["developers", "researchers", "educators", "AIs"],
+    "front_door": "index.html",
+    "format": ["html", "markdown", "json"],
+    "every_page_stands_alone": true
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "module": "Schemas",
+    "category": "Infrastructure-Core",
+    "version": "1.0",
+    "coherence": "stable",
+    "drift": "minimal",
+    "format": ["html", "markdown", "json"],
+    "front_door": "index.html",
+    "audience": ["developers", "researchers", "educators", "AIs"],
+    "every_page_stands_alone": true
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "schema-definition",
+      "contract-validation",
+      "dependency-graph",
+      "domain-interfaces"
+    ],
+    "dimensional": [
+      "coherence",
+      "schema-structure"
+    ],
+    "regime": [
+      "infrastructure-core",
+      "schema-universe"
+    ],
+    "cross_cutting": [
+      "interoperability",
+      "validation",
+      "extensibility"
+    ]
+  },
+
+  "schema": {
+    "input": {
+      "schema_id": "string",
+      "domain": "string"
+    },
+    "output": {
+      "contract": "object",
+      "validation_profile": "object"
+    }
+  }
+}

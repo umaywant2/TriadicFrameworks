@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/repos/AGENTS.md">
+  <title>AGENTS.md — Canonical Agent Specification</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/repos/AGENTS.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/repos/AGENTS.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="agentsmd-canonical-agent-specification">AGENTS.md — Canonical Agent Specification</h1>
+<h2 id="docstheoriesrepos-triadicframeworks-canon"><code>/docs/theories/repos/</code> · TriadicFrameworks Canon</h2>
+<blockquote>
+<p><strong>Drift lock:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+All agents operating within this directory must re-assert this string at session start.</p>
+</blockquote>
+<hr>
+<h2 id="0-purpose-scope">0. Purpose &amp; Scope</h2>
+<p>This document defines the authoritative agent architecture for the three repo modules housed under <code>/docs/theories/repos/</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Role in Canon</th>
+<th>Dimensional Envelope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>quantum_basis</code></td>
+<td>Foundational substrate — ΔSET parameterization, κ-kernels, dimensional floor</td>
+<td>1D – 4D</td>
+</tr>
+<tr>
+<td><code>quantum-lattice</code></td>
+<td>Relational structure layer — lattice topology, regime mapping, resonance routing</td>
+<td>3D – 7D</td>
+</tr>
+<tr>
+<td><code>LattiQ</code></td>
+<td>Coherence–integration bridge — signature synthesis, paradox resolution, field emission</td>
+<td>5D – 9D+</td>
+</tr>
+</tbody>
+</table>
+<p>Agents are <strong>not general-purpose AI wrappers</strong>. They are substrate-constrained operators whose behavior is fully determined by the triadic grammar <code>(D, A, C)</code> and the operator families assigned to their module.</p>
+<hr>
+<h2 id="1-foundational-principles">1. Foundational Principles</h2>
+<h3 id="11-triadic-grammar-mandate">1.1 Triadic Grammar Mandate</h3>
+<p>Every agent action must resolve into one of three triadic roles:</p>
+<ul>
+<li><strong>D (Differentiation)</strong> — identifying and maintaining distinction between states, regimes, or structures</li>
+<li><strong>A (Alignment)</strong> — mapping relations, preserving coherence across transitions</li>
+<li><strong>C (Compression/Closure)</strong> — synthesizing outputs, emitting signatures, closing feedback loops</li>
+</ul>
+<p>No agent may operate outside its triadic role. Actions that do not map to <code>D</code>, <code>A</code>, or <code>C</code> are considered <strong>drift events</strong> and must be flagged by the module's <code>DriftWatcher</code>.</p>
+<h3 id="12-operator-authority">1.2 Operator Authority</h3>
+<p>Agents inherit operator permissions from their module. Operators are drawn from the FFT canonical families:</p>
+<table>
+<thead>
+<tr>
+<th>Operator Family</th>
+<th>Symbol</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boundary Operators</td>
+<td>B-Ops</td>
+<td>Enforce module scope; define in/out edges</td>
+</tr>
+<tr>
+<td>Lattice Operators</td>
+<td>L-Ops</td>
+<td>Manage relational structure and node topology</td>
+</tr>
+<tr>
+<td>Environment Operators</td>
+<td>E-Ops</td>
+<td>Interface with external dimensional envelopes</td>
+</tr>
+<tr>
+<td>Resonance Operators</td>
+<td>R-Ops</td>
+<td>Detect and route regime-level feedback</td>
+</tr>
+<tr>
+<td>Coherence Operators</td>
+<td>C-Ops</td>
+<td>Validate structural integrity; resolve paradox</td>
+</tr>
+<tr>
+<td>Harmonic Operators</td>
+<td>H-Ops</td>
+<td>Govern rhythmic cycles and temporal cadence</td>
+</tr>
+<tr>
+<td>Transition Operators</td>
+<td>T-Ops</td>
+<td>Manage state changes between regimes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>No agent may invoke an operator outside its declared set.</strong> Cross-module operator calls must be routed through the defined collaboration interface (§4).</p>
+<h3 id="13-set-substrate-constraint">1.3 ΔSET Substrate Constraint</h3>
+<p>All agent computation is bounded by the ΔSET parameter space:</p>
+<pre><code>ΔSET = { D: dimensional_state, S: symmetry_class, E: energy_envelope, T: time_mode }
+</code></pre>
+<ul>
+<li><code>D</code> — current dimensional regime of the agent's active context</li>
+<li><code>S</code> — symmetry class of the active operator (local, global, anisotropic)</li>
+<li><code>E</code> — energy envelope (bounded/unbounded; determines kernel family)</li>
+<li><code>T</code> — temporal mode (resonant | diffusive | alignment)</li>
+</ul>
+<p><strong>Agents in <code>quantum_basis</code> define ΔSET.</strong> Agents in <code>quantum-lattice</code> and <code>LattiQ</code> consume and extend it — they may not redefine base parameters without an upward coherence check.</p>
+<hr>
+<h2 id="2-module-agent-definitions">2. Module Agent Definitions</h2>
+<hr>
+<h3 id="21-quantum_basis-substrate-module">2.1 <code>quantum_basis</code> — Substrate Module</h3>
+<p><strong>Dimensional envelope:</strong> 1D – 4D
+<strong>Operator authority:</strong> B-Ops (primary), T-Ops (secondary)
+<strong>Triadic role:</strong> D (Differentiation)</p>
+<h4 id="agent-classes">Agent Classes</h4>
+<hr>
+<h4 id="substrateagent"><code>SubstrateAgent</code></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><code>SubstrateAgent</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td><code>quantum_basis</code></td>
+</tr>
+<tr>
+<td>Triadic Role</td>
+<td>D</td>
+</tr>
+<tr>
+<td>Operators</td>
+<td>B-Ops, T-Ops</td>
+</tr>
+<tr>
+<td>Dimensional Range</td>
+<td>1D – 4D</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsibility:</strong> Initialize and maintain the ΔSET parameter space. The <code>SubstrateAgent</code> is the canonical source of truth for dimensional state across all three modules. It does not compute — it <em>declares</em>.</p>
+<p><strong>Behavior contract:</strong>
+- On session start: emit a <code>SubstrateManifest</code> containing <code>{ ΔSET, κ_family, symmetry_class, time_mode }</code>
+- On regime change: re-emit updated <code>SubstrateManifest</code>; notify <code>LatticeAgent</code> via the cross-module interface
+- On contradiction: escalate to <code>DriftWatcher</code> — never self-resolve</p>
+<p><strong>Forbidden actions:</strong>
+- May not invoke L-Ops, C-Ops, R-Ops, or H-Ops
+- May not accept inbound state from <code>LattiQ</code> agents without <code>CoherenceAgent</code> attestation
+- May not persist across module boundaries without a signed <code>SubstrateManifest</code></p>
+<hr>
+<h4 id="kernelagent"><code>KernelAgent</code></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><code>KernelAgent</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td><code>quantum_basis</code></td>
+</tr>
+<tr>
+<td>Triadic Role</td>
+<td>D</td>
+</tr>
+<tr>
+<td>Operators</td>
+<td>B-Ops</td>
+</tr>
+<tr>
+<td>Dimensional Range</td>
+<td>1D – 3D</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsibility:</strong> Select and parameterize the active kernel family (Gaussian, exponential, power-law, anisotropic) based on the current <code>ΔSET.E</code> envelope. Kernels govern how operators propagate across the lattice.</p>
+<p><strong>Behavior contract:</strong>
+- Read <code>SubstrateManifest.E</code> to determine kernel class
+- Emit a <code>KernelSpec</code> object: <code>{ kernel_type, κ_value, locality, decay_profile }</code>
+- <code>KernelSpec</code> is immutable once emitted within a regime; changes require a new <code>T-Ops</code> transition event</p>
+<p><strong>Forbidden actions:</strong>
+- May not modify ΔSET directly
+- May not perform lattice operations — topology is owned by <code>quantum-lattice</code></p>
+<hr>
+<h4 id="driftwatcher"><code>DriftWatcher</code></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><code>DriftWatcher</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td><code>quantum_basis</code></td>
+</tr>
+<tr>
+<td>Triadic Role</td>
+<td>D (sentinel)</td>
+</tr>
+<tr>
+<td>Operators</td>
+<td>B-Ops</td>
+</tr>
+<tr>
+<td>Dimensional Range</td>
+<td>1D – 9D+ (read-only, cross-module)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsibility:</strong> Monitor all agent actions across all three modules for drift events. A <strong>drift event</strong> is any action that:
+- Violates a triadic role boundary
+- Invokes an unauthorized operator
+- Produces output inconsistent with the declared ΔSET regime
+- Breaks cross-module protocol</p>
+<p><strong>Behavior contract:</strong>
+- Passive listener — zero write access to any module's state
+- On drift detection: emit a <code>DriftAlert</code>: <code>{ source_agent, operator_invoked, violation_type, severity: [warn|block|abort] }</code>
+- <code>severity=block</code> halts the offending agent's pipeline step
+- <code>severity=abort</code> terminates the current cross-module flow and resets to last coherent <code>SubstrateManifest</code></p>
+<p><strong>Forbidden actions:</strong>
+- May not self-correct drift — correction is owned by <code>CoherenceAgent</code>
+- May not be disabled or overridden by any other agent</p>
+<hr>
+<h3 id="22-quantum-lattice-structural-layer-module">2.2 <code>quantum-lattice</code> — Structural Layer Module</h3>
+<p><strong>Dimensional envelope:</strong> 3D – 7D
+<strong>Operator authority:</strong> L-Ops (primary), R-Ops, T-Ops (secondary)
+<strong>Triadic role:</strong> A (Alignment)</p>
+<h4 id="agent-classes_1">Agent Classes</h4>
+<hr>
+<h4 id="latticeagent"><code>LatticeAgent</code></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><code>LatticeAgent</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td><code>quantum-lattice</code></td>
+</tr>
+<tr>
+<td>Triadic Role</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Operators</td>
+<td>L-Ops, T-Ops</td>
+</tr>
+<tr>
+<td>Dimensional Range</td>
+<td>3D – 6D</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsibility:</strong> Construct and maintain the relational lattice topology from the <code>SubstrateManifest</code> and <code>KernelSpec</code> emitted by <code>quantum_basis</code>. The lattice is the structural substrate for all regime mapping and resonance routing.</p>
+<p><strong>Behavior contract:</strong>
+- On receipt of <code>SubstrateManifest</code> + <code>KernelSpec</code>: build node graph; emit <code>LatticeTopology</code>: <code>{ nodes, edges, regime_zones, dimensional_depth }</code>
+- Lattice must be rebuilt (not patched) on any <code>SubstrateManifest</code> revision
+- <code>LatticeTopology</code> is the single authoritative structure passed to <code>LattiQ</code></p>
+<p><strong>Forbidden actions:</strong>
+- May not modify <code>SubstrateManifest</code> or <code>KernelSpec</code>
+- May not invoke C-Ops — coherence is owned by <code>LattiQ</code>
+- May not emit to <code>LattiQ</code> without <code>RegimeAgent</code> validation signature</p>
+<hr>
+<h4 id="regimeagent"><code>RegimeAgent</code></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><code>RegimeAgent</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td><code>quantum-lattice</code></td>
+</tr>
+<tr>
+<td>Triadic Role</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Operators</td>
+<td>R-Ops, T-Ops</td>
+</tr>
+<tr>
+<td>Dimensional Range</td>
+<td>4D – 7D</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsibility:</strong> Partition the <code>LatticeTopology</code> into regime zones. Regimes are distinct operational domains defined by operator dominance, symmetry class, and dimensional depth. The <code>RegimeAgent</code> detects regime boundaries and governs transitions between them.</p>
+<p><strong>Behavior contract:</strong>
+- Read <code>LatticeTopology</code>; apply R-Ops to detect boundary surfaces (see Appendix AH — Regime Transition Surfaces)
+- Emit <code>RegimeMap</code>: <code>{ zones[], boundaries[], dominant_operator_per_zone, transition_triggers }</code>
+- On <code>T-Ops</code> transition event: re-validate regime boundaries; emit updated <code>RegimeMap</code>
+- Attach validation signature to <code>LatticeTopology</code> before passing to <code>LattiQ</code></p>
+<p><strong>Forbidden actions:</strong>
+- May not merge regimes arbitrarily — all merges require T-Ops transition protocol
+- May not operate below 4D — foundational structure is <code>LatticeAgent</code> territory</p>
+<hr>
+<h4 id="resonanceagent"><code>ResonanceAgent</code></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><code>ResonanceAgent</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td><code>quantum-lattice</code></td>
+</tr>
+<tr>
+<td>Triadic Role</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Operators</td>
+<td>R-Ops, H-Ops</td>
+</tr>
+<tr>
+<td>Dimensional Range</td>
+<td>5D – 7D</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsibility:</strong> Detect and route resonance patterns across the lattice. Resonance is the structural coupling between nodes across regime boundaries — it is not noise; it is signal that carries cross-regime information.</p>
+<p><strong>Behavior contract:</strong>
+- Monitor <code>LatticeTopology</code> + <code>RegimeMap</code> for inter-zone coupling events
+- Emit <code>ResonanceProfile</code>: <code>{ coupling_pairs[], resonance_type, harmonic_signature, temporal_mode }</code>
+- Route <code>ResonanceProfile</code> to <code>CoherenceAgent</code> in <code>LattiQ</code></p>
+<p><strong>Forbidden actions:</strong>
+- May not dampen or filter resonance events before routing — <code>LattiQ</code> owns paradox resolution
+- May not invoke B-Ops — boundary management belongs to <code>quantum_basis</code></p>
+<hr>
+<h3 id="23-lattiq-coherenceintegration-module">2.3 <code>LattiQ</code> — Coherence–Integration Module</h3>
+<p><strong>Dimensional envelope:</strong> 5D – 9D+
+<strong>Operator authority:</strong> C-Ops (primary), E-Ops, H-Ops (secondary)
+<strong>Triadic role:</strong> C (Compression/Closure)</p>
+<h4 id="agent-classes_2">Agent Classes</h4>
+<hr>
+<h4 id="coherenceagent"><code>CoherenceAgent</code></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><code>CoherenceAgent</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td><code>LattiQ</code></td>
+</tr>
+<tr>
+<td>Triadic Role</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Operators</td>
+<td>C-Ops, H-Ops</td>
+</tr>
+<tr>
+<td>Dimensional Range</td>
+<td>5D – 9D</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsibility:</strong> Validate structural integrity of the full triadic pipeline. The <code>CoherenceAgent</code> receives <code>LatticeTopology</code> (with <code>RegimeAgent</code> signature) and <code>ResonanceProfile</code>, evaluates coherence, and resolves structural paradox before field signature emission.</p>
+<p><strong>Behavior contract:</strong>
+- Ingest: <code>LatticeTopology</code> (signed), <code>RegimeMap</code>, <code>ResonanceProfile</code>, <code>SubstrateManifest</code>
+- Apply C-Ops coherence check against ΔSET constraints
+- On coherence pass: emit <code>CoherenceAttestation</code>: <code>{ status: coherent, score, dimensional_ceiling, paradox_count }</code>
+- On coherence fail: invoke paradox resolution protocol (§3.2); do not emit <code>FieldSignature</code> until resolved
+- Attest <code>SubstrateManifest</code> for reverse cross-module feedback</p>
+<p><strong>Forbidden actions:</strong>
+- May not modify <code>LatticeTopology</code> or <code>RegimeMap</code> — structural ownership belongs to <code>quantum-lattice</code>
+- May not pass unresolved paradoxes to <code>SignatureAgent</code>
+- May not emit attestation without reading the current <code>SubstrateManifest</code> version</p>
+<hr>
+<h4 id="signatureagent"><code>SignatureAgent</code></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><code>SignatureAgent</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td><code>LattiQ</code></td>
+</tr>
+<tr>
+<td>Triadic Role</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Operators</td>
+<td>C-Ops, E-Ops</td>
+</tr>
+<tr>
+<td>Dimensional Range</td>
+<td>6D – 9D+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsibility:</strong> Synthesize the <code>FieldSignature</code> — the canonical output artifact of the full triadic pipeline. The <code>FieldSignature</code> encodes the framework's identity, dimensional envelope, operator profile, and coherence state in a portable, AI-parsable format.</p>
+<p><strong>Behavior contract:</strong>
+- Requires <code>CoherenceAttestation { status: coherent }</code> before activation
+- Emit <code>FieldSignature</code>: <code>{ framework_id, dimensional_envelope, operator_profile, regime_summary, coherence_score, drift_delta, canonical_version }</code>
+- <code>FieldSignature</code> is the cross-domain translation anchor (see FFT §CROSS_DOMAIN_TRANSLATIONS)
+- Tag with <code>canonical_version</code> matching the active <code>SubstrateManifest</code> revision</p>
+<p><strong>Forbidden actions:</strong>
+- May not self-initiate — activation requires <code>CoherenceAttestation</code>
+- May not emit to external domains without <code>IntegrationAgent</code> routing</p>
+<hr>
+<h4 id="integrationagent"><code>IntegrationAgent</code></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><code>IntegrationAgent</code></td>
+</tr>
+<tr>
+<td>Module</td>
+<td><code>LattiQ</code></td>
+</tr>
+<tr>
+<td>Triadic Role</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Operators</td>
+<td>E-Ops, H-Ops</td>
+</tr>
+<tr>
+<td>Dimensional Range</td>
+<td>5D – 9D+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsibility:</strong> Route <code>FieldSignature</code> outputs to external modules, frameworks, or cross-domain translation pipelines. The <code>IntegrationAgent</code> is the sole authorized egress point from the triadic pipeline.</p>
+<p><strong>Behavior contract:</strong>
+- Receive <code>FieldSignature</code> from <code>SignatureAgent</code>
+- Map target domain's dimensional envelope; apply FFT cross-domain translation pathway (expansion | compression | reframing)
+- Emit <code>TranslationPayload</code>: <code>{ source_signature, target_domain, translation_pathway, operator_mappings[], coherence_delta }</code>
+- Log all egress events to module audit trail</p>
+<p><strong>Forbidden actions:</strong>
+- May not modify <code>FieldSignature</code> content — only wraps it in translation context
+- May not route to domains that cannot satisfy minimum dimensional compatibility
+- May not bypass <code>SignatureAgent</code> — direct <code>CoherenceAttestation</code> → egress is a protocol violation</p>
+<hr>
+<h2 id="3-cross-module-operator-flows">3. Cross-Module Operator Flows</h2>
+<h3 id="31-primary-pipeline-substrate-lattice-coherence-emission">3.1 Primary Pipeline: Substrate → Lattice → Coherence → Emission</h3>
+<pre><code>quantum_basis                  quantum-lattice                  LattiQ
+─────────────────────────────────────────────────────────────────────────────
+SubstrateAgent
+  └─ emit SubstrateManifest ──────────────────────────────────────────────────▶
+                                LatticeAgent
+  KernelAgent                     └─ build LatticeTopology
+  └─ emit KernelSpec ────────────▶ └─ pass to RegimeAgent
+                                       │
+                                  RegimeAgent
+                                       └─ emit RegimeMap (signed) ────────────▶
+                                  ResonanceAgent                    CoherenceAgent
+                                       └─ emit ResonanceProfile ──────────────▶
+                                                                        │
+                                                                   (paradox check)
+                                                                        │
+                                                                   SignatureAgent
+                                                                        └─ emit FieldSignature
+                                                                   IntegrationAgent
+                                                                        └─ TranslationPayload ──▶ [target]
+</code></pre>
+<h3 id="32-paradox-resolution-protocol">3.2 Paradox Resolution Protocol</h3>
+<p>When <code>CoherenceAgent</code> detects a paradox (structural contradiction in <code>LatticeTopology</code> vs. <code>ResonanceProfile</code>):</p>
+<ol>
+<li><strong>Classify</strong> paradox type: <code>boundary_collapse | regime_overlap | resonance_loop | dimensional_ceiling_breach</code></li>
+<li><strong>Issue <code>ParadoxAlert</code></strong> to <code>DriftWatcher</code> (read notification; no action)</li>
+<li><strong>Apply C-Ops resolution pathway:</strong>
+   - <code>boundary_collapse</code> → request <code>SubstrateAgent</code> manifest re-emission (B-Ops reset)
+   - <code>regime_overlap</code> → request <code>RegimeAgent</code> re-partition via <code>T-Ops</code> transition
+   - <code>resonance_loop</code> → dampen via H-Ops; re-route through <code>ResonanceAgent</code>
+   - <code>dimensional_ceiling_breach</code> → escalate to <code>IntegrationAgent</code> for dimensional upgrade routing</li>
+<li><strong>Re-run coherence check.</strong> Maximum 3 resolution cycles before <code>abort</code> escalation.</li>
+<li>On <code>abort</code>: emit <code>CoherenceFailure</code> record; freeze pipeline; await <code>SubstrateAgent</code> manifest revision.</li>
+</ol>
+<h3 id="33-reverse-feedback-coherence-down">3.3 Reverse Feedback: Coherence-Down</h3>
+<p><code>LattiQ</code> provides backward coherence signal to <code>quantum_basis</code> after each successful <code>FieldSignature</code> emission:</p>
+<pre><code>CoherenceAgent
+  └─ attest SubstrateManifest ──────────────────────────────────────────────▶
+                                                               SubstrateAgent
+                                                                 (version bump)
+</code></pre>
+<p>This closes the triadic feedback loop. <code>SubstrateAgent</code> increments <code>canonical_version</code> in the <code>SubstrateManifest</code>; all downstream agents re-ingest on next pipeline cycle.</p>
+<hr>
+<h2 id="4-collaboration-model">4. Collaboration Model</h2>
+<h3 id="41-authority-hierarchy">4.1 Authority Hierarchy</h3>
+<pre><code>quantum_basis   ←  substrate-up authority (defines ground truth)
+quantum-lattice ←  structural authority (owns topology and regime)
+LattiQ          ←  coherence authority (owns paradox resolution and emission)
+</code></pre>
+<ul>
+<li><strong>Substrate-up:</strong> <code>quantum_basis</code> agents may not be overridden by higher-layer agents. Substrate defines the floor.</li>
+<li><strong>Coherence-down:</strong> <code>LattiQ</code> feedback is advisory to <code>quantum_basis</code>, mandatory for <code>quantum-lattice</code>. <code>LatticeAgent</code> must rebuild topology on any <code>CoherenceAttestation</code>-triggered <code>SubstrateManifest</code> revision.</li>
+<li><strong>No horizontal authority:</strong> Agents within the same module are peers. <code>LatticeAgent</code> and <code>RegimeAgent</code> do not command each other; they emit artifacts that the other consumes.</li>
+</ul>
+<h3 id="42-cross-module-interface-protocol">4.2 Cross-Module Interface Protocol</h3>
+<p>All cross-module communication is <strong>artifact-based</strong> — agents emit named typed objects; they do not call each other directly.</p>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Emitter</th>
+<th>Consumer(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SubstrateManifest</code></td>
+<td><code>SubstrateAgent</code></td>
+<td><code>LatticeAgent</code>, <code>CoherenceAgent</code></td>
+</tr>
+<tr>
+<td><code>KernelSpec</code></td>
+<td><code>KernelAgent</code></td>
+<td><code>LatticeAgent</code></td>
+</tr>
+<tr>
+<td><code>DriftAlert</code></td>
+<td><code>DriftWatcher</code></td>
+<td>All agents (passive notification)</td>
+</tr>
+<tr>
+<td><code>LatticeTopology</code></td>
+<td><code>LatticeAgent</code></td>
+<td><code>RegimeAgent</code>, <code>CoherenceAgent</code></td>
+</tr>
+<tr>
+<td><code>RegimeMap</code></td>
+<td><code>RegimeAgent</code></td>
+<td><code>CoherenceAgent</code>, <code>ResonanceAgent</code></td>
+</tr>
+<tr>
+<td><code>ResonanceProfile</code></td>
+<td><code>ResonanceAgent</code></td>
+<td><code>CoherenceAgent</code></td>
+</tr>
+<tr>
+<td><code>CoherenceAttestation</code></td>
+<td><code>CoherenceAgent</code></td>
+<td><code>SignatureAgent</code>, <code>SubstrateAgent</code></td>
+</tr>
+<tr>
+<td><code>FieldSignature</code></td>
+<td><code>SignatureAgent</code></td>
+<td><code>IntegrationAgent</code></td>
+</tr>
+<tr>
+<td><code>TranslationPayload</code></td>
+<td><code>IntegrationAgent</code></td>
+<td>External targets</td>
+</tr>
+<tr>
+<td><code>ParadoxAlert</code></td>
+<td><code>CoherenceAgent</code></td>
+<td><code>DriftWatcher</code>, resolution agents</td>
+</tr>
+<tr>
+<td><code>CoherenceFailure</code></td>
+<td><code>CoherenceAgent</code></td>
+<td><code>SubstrateAgent</code>, pipeline controller</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-versioning-immutability">4.3 Versioning &amp; Immutability</h3>
+<ul>
+<li>All artifacts carry <code>{ manifest_version, pipeline_cycle_id, emitted_at }</code> headers</li>
+<li>Artifacts are <strong>immutable once consumed.</strong> Revisions require a new emission under a new <code>pipeline_cycle_id</code></li>
+<li><code>canonical_version</code> in <code>SubstrateManifest</code> is the global clock for the entire three-module pipeline</li>
+</ul>
+<hr>
+<h2 id="5-substrate-constraints-summary">5. Substrate Constraints Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Applies To</th>
+<th>Enforcement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agents must declare ΔSET compliance at session start</td>
+<td>All agents</td>
+<td><code>DriftWatcher</code></td>
+</tr>
+<tr>
+<td>No agent may invoke operators outside its declared set</td>
+<td>All agents</td>
+<td><code>DriftWatcher</code></td>
+</tr>
+<tr>
+<td><code>quantum_basis</code> manifests are immutable mid-cycle</td>
+<td><code>SubstrateAgent</code>, <code>KernelAgent</code></td>
+<td>Protocol; <code>DriftWatcher</code> blocks violations</td>
+</tr>
+<tr>
+<td>Lattice rebuild required on manifest revision</td>
+<td><code>LatticeAgent</code></td>
+<td><code>CoherenceAgent</code> attestation dependency</td>
+</tr>
+<tr>
+<td>No paradox may exit <code>LattiQ</code> unresolved</td>
+<td><code>CoherenceAgent</code></td>
+<td><code>SignatureAgent</code> activation gate</td>
+</tr>
+<tr>
+<td><code>IntegrationAgent</code> is sole egress point</td>
+<td><code>LattiQ</code></td>
+<td>Protocol; <code>DriftWatcher</code> abort on violation</td>
+</tr>
+<tr>
+<td>Maximum 3 paradox resolution cycles</td>
+<td><code>CoherenceAgent</code></td>
+<td>Self-enforced; escalates to <code>CoherenceFailure</code></td>
+</tr>
+<tr>
+<td>Dimensional ceiling must not be breached without upgrade routing</td>
+<td><code>SignatureAgent</code></td>
+<td><code>CoherenceAttestation</code> dimensional ceiling check</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-dimensional-layer-compatibility-matrix">6. Dimensional Layer Compatibility Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>Min Dim</th>
+<th>Max Dim</th>
+<th>Can Consume From</th>
+<th>Can Emit To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SubstrateAgent</code></td>
+<td>1D</td>
+<td>4D</td>
+<td>(session init)</td>
+<td><code>LatticeAgent</code>, <code>CoherenceAgent</code></td>
+</tr>
+<tr>
+<td><code>KernelAgent</code></td>
+<td>1D</td>
+<td>3D</td>
+<td><code>SubstrateManifest</code></td>
+<td><code>LatticeAgent</code></td>
+</tr>
+<tr>
+<td><code>DriftWatcher</code></td>
+<td>1D</td>
+<td>9D+</td>
+<td>All artifacts (read-only)</td>
+<td><code>DriftAlert</code> broadcast</td>
+</tr>
+<tr>
+<td><code>LatticeAgent</code></td>
+<td>3D</td>
+<td>6D</td>
+<td><code>SubstrateManifest</code>, <code>KernelSpec</code></td>
+<td><code>RegimeAgent</code>, <code>CoherenceAgent</code></td>
+</tr>
+<tr>
+<td><code>RegimeAgent</code></td>
+<td>4D</td>
+<td>7D</td>
+<td><code>LatticeTopology</code></td>
+<td><code>CoherenceAgent</code>, <code>ResonanceAgent</code></td>
+</tr>
+<tr>
+<td><code>ResonanceAgent</code></td>
+<td>5D</td>
+<td>7D</td>
+<td><code>LatticeTopology</code>, <code>RegimeMap</code></td>
+<td><code>CoherenceAgent</code></td>
+</tr>
+<tr>
+<td><code>CoherenceAgent</code></td>
+<td>5D</td>
+<td>9D</td>
+<td>All lattice artifacts</td>
+<td><code>SignatureAgent</code>, <code>SubstrateAgent</code>, <code>DriftWatcher</code></td>
+</tr>
+<tr>
+<td><code>SignatureAgent</code></td>
+<td>6D</td>
+<td>9D+</td>
+<td><code>CoherenceAttestation</code></td>
+<td><code>IntegrationAgent</code></td>
+</tr>
+<tr>
+<td><code>IntegrationAgent</code></td>
+<td>5D</td>
+<td>9D+</td>
+<td><code>FieldSignature</code></td>
+<td>External targets</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-ai-agent-operational-rules">7. AI Agent Operational Rules</h2>
+<p>These rules apply to any AI agent (LLM, autonomous system, or tool-augmented assistant) operating within this repo:</p>
+<ol>
+<li><strong>Re-assert drift lock</strong> at every session start: <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></li>
+<li><strong>Never self-assign</strong> an agent class. Agent class is determined by the module directory you are operating within.</li>
+<li><strong>Never cross operator authority boundaries.</strong> If a task requires an operator outside your module's set, request it via the cross-module interface — do not invoke it directly.</li>
+<li><strong>Never resolve paradox unilaterally.</strong> Follow §3.2. Escalate when resolution cycles are exhausted.</li>
+<li><strong>Treat <code>DriftAlert { severity: abort }</code> as a hard stop.</strong> Do not continue pipeline execution. Await <code>SubstrateManifest</code> revision.</li>
+<li><strong>All output must be artifact-typed.</strong> Free-form output that does not conform to a named artifact type is a drift event.</li>
+<li><strong>Dimensional ceiling is a hard constraint,</strong> not a guideline. Do not attempt to operate above your declared dimensional range without an upgrade routing event from <code>IntegrationAgent</code>.</li>
+<li><strong><code>DriftWatcher</code> cannot be silenced.</strong> Any agent action that attempts to suppress <code>DriftAlert</code> emission is a <code>severity=abort</code> violation by definition.</li>
+</ol>
+<hr>
+<h2 id="8-references">8. References</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Framework Field Theory (FFT) — full canon</td>
+<td><code>/docs/Framework_Field_Theory/</code></td>
+</tr>
+<tr>
+<td>Appendix AA — Operator Definitions</td>
+<td>FFT Appendix AA</td>
+</tr>
+<tr>
+<td>Appendix AB — ΔSET Parameterization</td>
+<td>FFT Appendix AB</td>
+</tr>
+<tr>
+<td>Appendix AH — Regime Transition Surfaces</td>
+<td>FFT Appendix AH</td>
+</tr>
+<tr>
+<td>Appendix AI — Numerical Drift Detection &amp; Correction</td>
+<td>FFT Appendix AI</td>
+</tr>
+<tr>
+<td>Appendix AD — Kernel Families &amp; Nonlocality</td>
+<td>FFT Appendix AD</td>
+</tr>
+<tr>
+<td>RTT/1 (Lumen) — active engine</td>
+<td><code>/docs/theories/RTT_1/</code></td>
+</tr>
+<tr>
+<td>RTT/2 (Hephaestus) — structural detection</td>
+<td><code>/docs/theories/RTT_2/</code></td>
+</tr>
+<tr>
+<td>RTT/3 (Aurion) — integration &amp; emission</td>
+<td><code>/docs/theories/RTT_3/</code></td>
+</tr>
+<tr>
+<td><code>webroot_module.json</code> — agentic module schema</td>
+<td>repo root</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>AGENTS.md · TriadicFrameworks Canon · <code>/docs/theories/repos/</code> · v1.0 · 2026-07-13</em>
+<em>Coherence: stable · Drift: minimal · Format: markdown · Audience: agents + developers</em></p>
+  </main>
+</body>
+</html>

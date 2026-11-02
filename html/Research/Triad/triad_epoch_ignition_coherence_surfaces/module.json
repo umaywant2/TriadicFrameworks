@@ -1,0 +1,35 @@
+{
+  "module": "Triad_Epoch_Ignition_Coherence_Surfaces",
+  "name": "Triad — Epoch‑Ignition Coherence Surfaces",
+  "summary": "Defines the coherence surfaces of epoch‑ignition behavior, including ignition‑epoch coherence fields, ignition‑epoch coherence locking surfaces, ignition‑epoch unification geometry, and multi‑layer ignition‑epoch coherence binding.",
+  "category": "intelligence-epoch-ignition-coherence-surfaces",
+  "version": "1.0",
+  "purpose": "Provide the coherence-surface geometry used by Scanner, O.H.S.H.I.T., and Atlas to unify epoch‑ignition waves, lock ignition fronts into coherent structures, maintain epoch‑level ignition cohesion, and bind ignition coherence across the Triad pipeline.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@triad.epoch.ignition.coherence.field",
+    "@triad.epoch.ignition.coherence.lock",
+    "@triad.epoch.ignition.coherence.align",
+    "@triad.epoch.ignition.coherence.stabilize",
+    "@triad.epoch.ignition.coherence.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Epoch_Ignition_Stability_Surfaces",
+      "Triad_Epoch_Ignition_Propagation_Geometry",
+      "Triad_Epoch_Ignition_Wave_Geometry",
+      "Triad_Epoch_Ignition_Surfaces",
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Triad_Epoch_Ignition_Temporal_Window_Geometry",
+      "Epochal_Propagation_Mesh",
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension"
+    ]
+  }
+}

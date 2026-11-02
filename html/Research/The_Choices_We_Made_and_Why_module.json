@@ -1,0 +1,47 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
+
+  "identity": {
+    "module": "The_Choices_We_Made_and_Why",
+    "title": "The Choices We Made and Why",
+    "canonical_url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Research/The_Choices_We_Made_and_Why.md",
+    "version": "1.0.0"
+  },
+
+  "purpose": "A reflective research ledger documenting the philosophical, structural, and developmental choices that shaped TriadicFrameworks. Explains the reasoning behind design decisions, the chosen audience, the post-research convergence phase, and the partnership with AI during the canon’s formation.",
+
+  "category": "research",
+
+  "analyzer_layer": [
+    "coherence",
+    "operator",
+    "regime"
+  ],
+
+  "files": [
+    {
+      "name": "The_Choices_We_Made_and_Why.md",
+      "role": "research",
+      "description": "Primary reflective document detailing the choices, reasoning, and development timeline behind TriadicFrameworks."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Reflective research document explaining the philosophical and structural choices behind TriadicFrameworks, including its development timeline and AI partnership.",
+    "keywords": [
+      "research",
+      "choices",
+      "development",
+      "timeline",
+      "philosophy",
+      "triadicframeworks",
+      "rtt"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}

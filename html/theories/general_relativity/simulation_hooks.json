@@ -1,0 +1,97 @@
+{
+  "module": "general_relativity",
+  "version": "1.0",
+  "identity": "geometric coherence theory of gravity",
+  "description": "Simulation hooks for curvature initialization, geodesic evolution, stress-energy deformation, and regime-aware spacetime coherence.",
+
+  "hooks": {
+    "initialize_spacetime_geometry": {
+      "purpose": "Create the base geometric manifold and metric structure.",
+      "inputs": ["dimensional_profile", "initial_metric", "topology_signature"],
+      "outputs": ["spacetime_geometry"],
+      "constraints": [
+        "no force metaphors",
+        "metric must be non-degenerate",
+        "geometry must be regime-compatible"
+      ]
+    },
+
+    "compute_curvature_tensor": {
+      "purpose": "Compute curvature as a geometric operator field.",
+      "inputs": ["spacetime_geometry"],
+      "outputs": ["curvature_tensor"],
+      "constraints": [
+        "curvature is structural, not visualized as a rubber sheet",
+        "tensor must preserve geometric invariants"
+      ]
+    },
+
+    "apply_stress_energy_operator": {
+      "purpose": "Deform curvature according to stress-energy distribution.",
+      "inputs": ["curvature_tensor", "stress_energy_tensor"],
+      "outputs": ["updated_curvature_tensor"],
+      "constraints": [
+        "stress-energy acts as a geometric source operator",
+        "no Newtonian fallback",
+        "deformation must preserve coherence"
+      ]
+    },
+
+    "evolve_geodesics": {
+      "purpose": "Evolve geodesics as coherence-preserving trajectories.",
+      "inputs": ["spacetime_geometry", "initial_conditions"],
+      "outputs": ["geodesic_bundle"],
+      "constraints": [
+        "geodesics are coherence trajectories, not force-driven paths",
+        "evolution must respect causal structure"
+      ]
+    },
+
+    "evaluate_spacetime_coherence": {
+      "purpose": "Evaluate geometric coherence under curvature and geodesic evolution.",
+      "inputs": ["spacetime_geometry", "curvature_tensor", "geodesic_bundle"],
+      "outputs": ["coherence_score"],
+      "constraints": [
+        "coherence = geometric stability",
+        "no entropy or probabilistic metrics",
+        "coherence must be structural"
+      ]
+    },
+
+    "regime_transition": {
+      "purpose": "Transition geometric behavior across RTT regimes.",
+      "inputs": ["spacetime_geometry", "from_regime", "to_regime"],
+      "outputs": ["transitioned_geometry"],
+      "constraints": [
+        "R0: pre-geometric distinctions",
+        "R1: stable metric structure",
+        "R2: curvature operators active",
+        "R3: dimensional curvature operators",
+        "transitions must preserve geometric coherence"
+      ]
+    },
+
+    "detect_geometric_collapse": {
+      "purpose": "Classify geometric failure modes.",
+      "inputs": ["spacetime_geometry"],
+      "outputs": ["collapse_mode"],
+      "modes": {
+        "G1": "metric degeneracy",
+        "G2": "curvature divergence",
+        "G3": "geodesic incoherence",
+        "G4": "causal structure failure"
+      }
+    },
+
+    "reinforce_geometric_structure": {
+      "purpose": "Stabilize geometry through repeated coherent evolution.",
+      "inputs": ["spacetime_geometry", "evolution_history"],
+      "outputs": ["reinforced_geometry"],
+      "constraints": [
+        "reinforcement must increase coherence",
+        "reinforcement is geometric, not semantic",
+        "no introduction of non-physical structures"
+      ]
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "map_id": "or.latent_structure_map",
+  "version": "4.0-draft",
+  "book": "book4_opacity_revelation",
+  "series": "AI Edition",
+  "invariant": "INV-OR-004",
+  "operator_binding": "OR-Λ (LatentProbe)",
+  "description": "Models latent structure: internal configuration that is not currently accessible (δ ≤ ω for that sub-structure) but structurally exists and may become accessible if δ increases or ω decreases.",
+  "core_definitions": {
+    "latent_structure": {
+      "informal": "Any sub-structure of S that is not accessible to observer O at their current detection capacity.",
+      "formal": "S_latent(S, O) = { s_i ∈ sub(S) : ω(s_i) ≥ δ(O) }",
+      "key_note": "Latent structure is NOT absent structure. It exists within S. Its inaccessibility is observation-relative, not a structural property of S itself."
+    },
+    "accessible_structure": {
+      "formal": "S_access(S, O) = { s_i ∈ sub(S) : ω(s_i) < δ(O) }",
+      "key_note": "S_access and S_latent partition sub(S). Their union equals the complete sub-structure set."
+    },
+    "partition_identity": {
+      "formal": "S_access(S,O) ∪ S_latent(S,O) = sub(S)  and  S_access(S,O) ∩ S_latent(S,O) = ∅"
+    }
+  },
+  "partial_revelation_mechanics": {
+    "description": "When sub-structures of S carry heterogeneous opacity values, partial revelation is the typical state: some s_i are revealed, others remain latent. This is the generic case; full revelation and full opacity are the edge cases.",
+    "invariant_binding": "INV-OR-004",
+    "evaluation_sequence": [
+      "Step 1: Enumerate sub(S) = { s_1, s_2, ..., s_n }",
+      "Step 2: Assign ω(s_i) for each s_i via OR-Ω",
+      "Step 3: Declare δ(O) via OR-Δ",
+      "Step 4: For each s_i, evaluate: reveal(s_i) ⟺ ω(s_i) < δ(O)",
+      "Step 5: Classify S_latent and S_access",
+      "Step 6: If |S_access| > 0 and |S_latent| > 0, state is partial revelation",
+      "Step 7: Forward results to OR-Π (PartialIndex) for revelation_map construction"
+    ],
+    "edge_cases": {
+      "full_revelation": { "condition": "S_latent = ∅", "description": "All sub-structures revealed; δ exceeds every ω(s_i)" },
+      "full_opacity": { "condition": "S_access = ∅", "description": "No sub-structures revealed; δ does not exceed any ω(s_i)" }
+    }
+  },
+  "latent_accessibility_pathways": [
+    {
+      "pathway": "Increase δ",
+      "mechanism": "Observer improves detection capacity through better methodology, tools, access, or contextual resources.",
+      "constraint": "δ is bounded by [0,1]. Some ω values may be unreachable regardless of observer capability.",
+      "example": "Applying additional Book 3 SD operators raises effective δ, revealing previously latent sub-structures."
+    },
+    {
+      "pathway": "Decrease ω",
+      "mechanism": "The structure undergoes a configuration change that reduces concealment — a structural transformation.",
+      "constraint": "ω change requires a genuine reconfiguration of S. Observer action cannot directly alter ω (INV-OR-003).",
+      "example": "A governance structure (Book 6) forces opacity reduction by mandating disclosure, lowering ω(S)."
+    },
+    {
+      "pathway": "Structural Shadow Inference",
+      "mechanism": "Latent structure is partially characterized through its observable effects on accessible sub-structures.",
+      "constraint": "Shadow inference produces probabilistic characterizations, not confirmed revelation. Treat outputs as hypotheses.",
+      "book3_binding": "Uses SD-Σd and SD-Γ operators with OR-context opacity adjustment."
+    }
+  ],
+  "structural_shadow": {
+    "definition": "Observable effects — accessible to the observer — produced by latent sub-structures acting through or upon accessible sub-structures.",
+    "formal": "shadow(s_latent) ⊆ S_access — the set of observable signatures of s_latent detectable within S_access",
+    "significance": "Structural shadows are the only window into latent structure without direct revelation. They support constrained inference about hidden configuration.",
+    "shadow_types": [
+      {
+        "id": "ST-001",
+        "label": "Constraint Shadow",
+        "description": "Accessible sub-structures exhibit constraint patterns that can only be explained by a latent constraining structure."
+      },
+      {
+        "id": "ST-002",
+        "label": "Relational Shadow",
+        "description": "Accessible sub-structures maintain relations whose form implies a hidden relational partner."
+      },
+      {
+        "id": "ST-003",
+        "label": "Behavioral Shadow",
+        "description": "System behavior observable at the accessible layer is inconsistent with S_access alone — excess behavior attributable to S_latent."
+      }
+    ],
+    "inference_limit": "Shadow inference does not constitute revelation. Reveal(s_i) remains false until δ > ω(s_i) is directly confirmed."
+  },
+  "or_lambda_procedure": {
+    "operator": "OR-Λ (LatentProbe)",
+    "preconditions": [
+      "revelation_state from OR-Ρ has been determined",
+      "ω(s_i) has been assigned for all s_i ∈ sub(S)",
+      "δ(O) has been declared"
+    ],
+    "outputs": [
+      "S_latent: set of latent sub-structures",
+      "S_access: set of accessible sub-structures",
+      "shadow_set: detected structural shadows within S_access (may be empty)",
+      "accessibility_pathways: applicable pathways from latent_accessibility_pathways above"
+    ],
+    "post_condition": "Forward S_latent, S_access, and shadow_set to OR-Π (PartialIndex)"
+  }
+}

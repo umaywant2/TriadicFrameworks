@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/substrate_mind_science/ct_substrate/examples/ct_example_annotations.md">
+  <title>ctexampleannotations.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/substrate_mind_science/ct_substrate/examples/ct_example_annotations.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/substrate_mind_science/ct_substrate/examples/ct_example_annotations.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="ct_example_annotationsmd"><strong>ct_example_annotations.md</strong></h1>
+<h3 id="humanreadable-explanation-of-every-field-in-ct_examplejson"><em>Human‑readable explanation of every field in <code>ct_example.json</code></em></h3>
+<p>This document explains the meaning of each field in the <strong>Conscious Transfer Substrate Map v1</strong> example instance.<br>
+It is written for clarity, not for formal specification — the schema remains the authoritative source.</p>
+<hr>
+<h1 id="1-behavioral-layer"><strong>1. Behavioral Layer</strong></h1>
+<p>The behavioral layer captures <strong>observable, repeatable patterns</strong> in how an agent learns and performs tasks.</p>
+<h2 id="11-conditioning-models"><strong>1.1 Conditioning Models</strong></h2>
+<h3 id="classicalcs_us_mapping"><strong>classical.cs_us_mapping</strong></h3>
+<p>Pairs of stimuli showing which conditioned stimulus (CS) predicts which unconditioned stimulus (US).<br>
+Example: “tone → airpuff” means the tone reliably precedes an airpuff.</p>
+<h3 id="classicalacquisition_rate"><strong>classical.acquisition_rate</strong></h3>
+<p>How quickly the agent learns the CS–US association.</p>
+<h3 id="classicalextinction_rate"><strong>classical.extinction_rate</strong></h3>
+<p>How quickly the association fades when the CS is no longer followed by the US.</p>
+<h3 id="operantreinforcement_schedule"><strong>operant.reinforcement_schedule</strong></h3>
+<p>The rule governing when rewards are delivered (e.g., variable interval 30 seconds).</p>
+<h3 id="operantlearning_rate"><strong>operant.learning_rate</strong></h3>
+<p>How strongly new outcomes update behavior.</p>
+<h3 id="operantdiscount_factor"><strong>operant.discount_factor</strong></h3>
+<p>How much future rewards matter relative to immediate ones.</p>
+<hr>
+<h2 id="12-performance-metrics"><strong>1.2 Performance Metrics</strong></h2>
+<h3 id="reaction_time_distribution"><strong>reaction_time_distribution</strong></h3>
+<p>A sample of reaction times (in milliseconds) from a standard task.</p>
+<h3 id="accuracy"><strong>accuracy</strong></h3>
+<p>Proportion of correct responses.</p>
+<h3 id="error_types"><strong>error_types</strong></h3>
+<p>Categories of mistakes the agent makes (e.g., omissions, commissions).</p>
+<h3 id="speed_accuracy_tradeoffslope-intercept"><strong>speed_accuracy_tradeoff.slope / intercept</strong></h3>
+<p>How the agent balances speed vs. accuracy — a stable behavioral signature.</p>
+<hr>
+<h1 id="2-cognitive-layer"><strong>2. Cognitive Layer</strong></h1>
+<p>The cognitive layer captures <strong>task‑bound computational operators</strong> that survive RTT filtering.</p>
+<h2 id="21-working-memory"><strong>2.1 Working Memory</strong></h2>
+<h3 id="capacity"><strong>capacity</strong></h3>
+<p>How many items can be actively maintained at once.</p>
+<h3 id="decay_rate"><strong>decay_rate</strong></h3>
+<p>How quickly information fades without rehearsal.</p>
+<h3 id="refresh_rate"><strong>refresh_rate</strong></h3>
+<p>How quickly the agent can refresh or cycle items to keep them active.</p>
+<hr>
+<h2 id="22-attention"><strong>2.2 Attention</strong></h2>
+<h3 id="selective_filter_strength"><strong>selective_filter_strength</strong></h3>
+<p>How effectively irrelevant information is filtered out.</p>
+<h3 id="sustained_attention_stability"><strong>sustained_attention_stability</strong></h3>
+<p>How consistently attention is maintained over time.</p>
+<h3 id="switching_cost"><strong>switching_cost</strong></h3>
+<p>Extra time required to switch between tasks or rules.</p>
+<hr>
+<h2 id="23-decision-models"><strong>2.3 Decision Models</strong></h2>
+<h3 id="drift_diffusiondrift_rate"><strong>drift_diffusion.drift_rate</strong></h3>
+<p>How quickly evidence accumulates toward a decision.</p>
+<h3 id="drift_diffusionboundary_separation"><strong>drift_diffusion.boundary_separation</strong></h3>
+<p>How cautious or bold the decision threshold is.</p>
+<h3 id="drift_diffusionnon_decision_time"><strong>drift_diffusion.non_decision_time</strong></h3>
+<p>Time spent on perception and motor execution, not decision‑making.</p>
+<h3 id="signal_detectionsensitivity_d_prime"><strong>signal_detection.sensitivity_d_prime</strong></h3>
+<p>How well the agent distinguishes signal from noise.</p>
+<h3 id="signal_detectioncriterion_c"><strong>signal_detection.criterion_c</strong></h3>
+<p>Bias toward saying “yes” or “no” when uncertain.</p>
+<hr>
+<h2 id="24-learning-models"><strong>2.4 Learning Models</strong></h2>
+<h3 id="reinforcement_learninglearning_rate"><strong>reinforcement_learning.learning_rate</strong></h3>
+<p>How strongly new outcomes update value estimates.</p>
+<h3 id="reinforcement_learningexploration_rate"><strong>reinforcement_learning.exploration_rate</strong></h3>
+<p>How often the agent tries new actions instead of exploiting known ones.</p>
+<h3 id="reinforcement_learningreward_sensitivity"><strong>reinforcement_learning.reward_sensitivity</strong></h3>
+<p>How strongly rewards influence behavior.</p>
+<hr>
+<h1 id="3-measurement-layer"><strong>3. Measurement Layer</strong></h1>
+<p>The measurement layer defines <strong>how the substrate is validated</strong>, not the substrate itself.</p>
+<h2 id="31-psychometrics"><strong>3.1 Psychometrics</strong></h2>
+<h3 id="reliability_alpha"><strong>reliability_alpha</strong></h3>
+<p>Internal consistency of measurement instruments.</p>
+<h3 id="test_retest_stability"><strong>test_retest_stability</strong></h3>
+<p>How stable scores are across repeated testing.</p>
+<h3 id="factor_structure"><strong>factor_structure</strong></h3>
+<p>Latent dimensions extracted from performance (e.g., working memory, attention).</p>
+<hr>
+<h2 id="32-neuropsych-tests"><strong>3.2 Neuropsych Tests</strong></h2>
+<h3 id="task_batterytask_name"><strong>task_battery.task_name</strong></h3>
+<p>Name of a standardized cognitive test.</p>
+<h3 id="task_batteryscore"><strong>task_battery.score</strong></h3>
+<p>Raw performance score.</p>
+<h3 id="task_batterynormative_z"><strong>task_battery.normative_z</strong></h3>
+<p>How the score compares to population norms (in standard deviations).</p>
+<hr>
+<h1 id="4-anchoring-constraints"><strong>4. Anchoring Constraints</strong></h1>
+<p>These are <strong>biological correlates</strong> that meet RTT criteria — stable, traceable, and functionally meaningful.</p>
+<h2 id="41-circuit-mappings"><strong>4.1 Circuit Mappings</strong></h2>
+<h3 id="region"><strong>region</strong></h3>
+<p>Brain region with a known functional role.</p>
+<h3 id="associated_function"><strong>associated_function</strong></h3>
+<p>What cognitive/behavioral process the region supports.</p>
+<h3 id="lesion_effect"><strong>lesion_effect</strong></h3>
+<p>What happens when the region is damaged — a functional anchor.</p>
+<hr>
+<h2 id="42-neurophysiological-signatures"><strong>4.2 Neurophysiological Signatures</strong></h2>
+<h3 id="task"><strong>task</strong></h3>
+<p>The task during which the signature appears.</p>
+<h3 id="frequency_band"><strong>frequency_band</strong></h3>
+<p>EEG/MEG frequency or ERP component.</p>
+<h3 id="amplitude"><strong>amplitude</strong></h3>
+<p>Strength of the signal.</p>
+<h3 id="latency"><strong>latency</strong></h3>
+<p>Time delay between stimulus and neural response.</p>
+<hr>
+<h2 id="43-pharmacological-profiles"><strong>4.3 Pharmacological Profiles</strong></h2>
+<h3 id="agent"><strong>agent</strong></h3>
+<p>Drug or compound with a known effect profile.</p>
+<h3 id="receptor_target"><strong>receptor_target</strong></h3>
+<p>Primary biological target (e.g., dopamine transporter).</p>
+<h3 id="effect_profile"><strong>effect_profile</strong></h3>
+<p>How the agent modulates behavior or cognitive parameters.</p>
+<hr>
+<h1 id="how-to-use-this-file"><strong>How to Use This File</strong></h1>
+<p>This annotation file is meant to:</p>
+<ul>
+<li>help researchers understand the meaning of each field  </li>
+<li>support onboarding into the Conscious Transfer substrate  </li>
+<li>clarify how the example instance relates to the schema  </li>
+<li>maintain conceptual cleanliness without narrative drift  </li>
+</ul>
+<p>It is not a substitute for the schema — it is a <strong>guide</strong> to interpreting instances.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "endpoint": "/api/openloop",
+  "description": "OpenLoop module overview.",
+  "modules": [
+    {
+      "id": "OL1",
+      "name": "OpenLoop Module 1",
+      "href": "/api/openloop/modules/OL1.json"
+    }
+  ]
+}

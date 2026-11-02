@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" data-tf-dev="false" data-module="invariants">
+<head>
+  <!-- ═══════════════════════════════════════════════════════════
+       TriadicFrameworks · Module: Invariants
+       Canonical Index · v2.0.0 · AI-first
+       Author: Nawder Loswin · Protocol: Metadata Refresh v1
+       Last Refreshed: 2026-08-26T15:21:00-04:00
+       ═══════════════════════════════════════════════════════════ -->
+
+  <!-- Core Encoding & Viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Canonical Identity -->
+  <title>Invariants | TriadicFrameworks</title>
+  <link rel="canonical" href="https://triadicframeworks.org/invariants/" />
+
+  <!-- Primary SEO Meta -->
+  <meta name="description" content="Invariants — a TriadicFrameworks module cataloguing the fixed structural properties that hold across all triadic configurations, regardless of domain or context." />
+  <meta name="keywords" content="TriadicFrameworks, Invariants, Nawder Loswin, triadic, fixed properties, structural constants, universals, proof conditions" />
+  <meta name="author" content="Nawder Loswin" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- TriadicFrameworks RTT Session Meta (AI-readable) -->
+  <meta name="tf:module"      content="invariants" />
+  <meta name="tf:layer"       content="Structural Layer" />
+  <meta name="tf:version"     content="2.0.0" />
+  <meta name="tf:author"      content="Nawder Loswin" />
+  <meta name="tf:protocol"    content="metadata-refresh-v1" />
+  <meta name="tf:rtt"         content="rtt=1 | coherence=declared | drift=bounded | paradox=structural" />
+  <meta name="tf:session"     content="__SESSION_ID__" />
+  <meta name="tf:timestamp"   content="__SESSION_TIMESTAMP__" />
+  <meta name="tf:canonical"   content="https://triadicframeworks.org/invariants/" />
+  <meta name="tf:cross-links" content="son,vocabulary,hooks" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:title"       content="Invariants | TriadicFrameworks" />
+  <meta property="og:description" content="Cataloguing the fixed structural properties that hold across all triadic configurations, regardless of domain or context." />
+  <meta property="og:url"         content="https://triadicframeworks.org/invariants/" />
+  <meta property="og:image"       content="https://triadicframeworks.org/assets/og/invariants-cover.png" />
+  <meta property="og:locale"      content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Invariants | TriadicFrameworks" />
+  <meta name="twitter:description" content="Cataloguing the fixed structural properties that hold across all triadic configurations, regardless of domain or context." />
+  <meta name="twitter:image"       content="https://triadicframeworks.org/assets/og/invariants-cover.png" />
+
+  <!-- Schema.org JSON-LD (AI-first: full structured data) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Invariants",
+    "description": "A TriadicFrameworks module cataloguing the fixed structural properties that hold across all triadic configurations.",
+    "author": {
+      "@type": "Person",
+      "name": "Nawder Loswin"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "TriadicFrameworks",
+      "url": "https://triadicframeworks.org"
+    },
+    "url": "https://triadicframeworks.org/invariants/",
+    "inLanguage": "en",
+    "dateModified": "2026-08-26",
+    "version": "2.0.0",
+    "educationalLevel": "advanced",
+    "keywords": [
+      "invariants",
+      "structural constants",
+      "triadic",
+      "proof conditions",
+      "TriadicFrameworks",
+      "Nawder Loswin"
+    ],
+    "hasPart": [
+      { "@type": "WebPageElement", "name": "Overview",                         "cssSelector": "#overview" },
+      { "@type": "WebPageElement", "name": "Invariant Catalog",                "cssSelector": "#catalog" },
+      { "@type": "WebPageElement", "name": "Proof Conditions",                 "cssSelector": "#proof" },
+      { "@type": "WebPageElement", "name": "Domain Applications",              "cssSelector": "#domains" },
+      { "@type": "WebPageElement", "name": "Apparent Violations & Edge Cases", "cssSelector": "#violations" },
+      { "@type": "WebPageElement", "name": "Cross-Module Links",               "cssSelector": "#cross-links" }
+    ]
+  }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/triadic-base.css" />
+  <link rel="stylesheet" href="/assets/css/modules/invariants.css" />
+
+  <!-- Favicon / module icon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/invariants.svg" />
+</head>
+
+<body data-module="invariants" data-user="Nawder Loswin" data-layer="structural">
+
+  <!-- ── SKIP LINK ─────────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── HEADER ───────────────────────────────────────────── -->
+  <header class="tf-header" role="banner">
+    <nav class="tf-nav" aria-label="TriadicFrameworks global navigation">
+      <a class="tf-nav__home" href="/">TriadicFrameworks</a>
+
+      <!-- 2-level breadcrumb: Home → Invariants -->
+      <ol class="tf-breadcrumb" aria-label="Breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Invariants</li>
+      </ol>
+
+      <!-- Module switcher -->
+      <nav class="tf-module-switcher" aria-label="Switch module">
+        <a href="/son/"        class="tf-module-switcher__link" data-module="son">SoN</a>
+        <a href="/vocabulary/" class="tf-module-switcher__link" data-module="vocabulary">Vocabulary</a>
+        <a href="/invariants/" class="tf-module-switcher__link tf-module-switcher__link--active" data-module="invariants" aria-current="page">Invariants</a>
+        <a href="/hooks/"      class="tf-module-switcher__link" data-module="hooks">Hooks</a>
+      </nav>
+    </nav>
+  </header>
+
+  <!-- ── SESSION CONTEXT STRIP ────────────────────────────── -->
+  <aside class="tf-session-context"
+         aria-label="Session context"
+         data-session-id="__SESSION_ID__"
+         data-tf-component="session-context">
+    <span class="tf-session-context__user">Nawder Loswin</span>
+    <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>
+    <span class="tf-session-context__module">Invariants</span>
+    <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>
+    <time class="tf-session-context__timestamp"
+          datetime="__SESSION_TIMESTAMP__">__SESSION_TIMESTAMP__</time>
+    <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>
+    <span class="tf-session-context__protocol">Metadata Refresh v1</span>
+  </aside>
+
+  <!-- ── MAIN ─────────────────────────────────────────────── -->
+  <main id="main-content" class="tf-main" role="main">
+
+    <!-- MODULE HERO -->
+    <section class="tf-hero" aria-labelledby="module-title" data-section="hero">
+      <div class="tf-hero__inner tf-container">
+        <div class="tf-hero__badge">
+          <img class="tf-hero__icon" src="/assets/icons/invariants.svg" alt="" aria-hidden="true" width="48" height="48" />
+          <span class="tf-badge tf-badge--draft" data-tf-badge="status">Draft</span>
+          <span class="tf-badge tf-badge--layer" style="--badge-color:#d36b5f">Structural Layer</span>
+        </div>
+        <h1 id="module-title" class="tf-hero__title">Invariants</h1>
+        <p class="tf-hero__lead">
+          Fixed structural properties that hold across all triadic configurations, regardless of domain or context.
+        </p>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 1 · OVERVIEW
+         ────────────────────────────────────────────────────── -->
+    <section id="overview"
+             class="tf-section"
+             aria-labelledby="h-overview"
+             data-section-id="overview"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-overview" class="tf-section__title">Overview</h2>
+        <div class="tf-placeholder" data-placeholder="overview">
+          <p class="tf-placeholder__label">[ Overview — awaiting content population ]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 2 · INVARIANT CATALOG
+         ────────────────────────────────────────────────────── -->
+    <section id="catalog"
+             class="tf-section"
+             aria-labelledby="h-catalog"
+             data-section-id="catalog"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-catalog" class="tf-section__title">Invariant Catalog</h2>
+        <div class="tf-table-wrap" role="region" aria-labelledby="h-catalog" tabindex="0">
+          <table class="tf-table tf-invariant-table" aria-label="Invariant catalog">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Applies To</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- PLACEHOLDER: rows populated from invariants.json / docs -->
+              <tr data-inv="INV-000" tabindex="0">
+                <td>INV-000</td>
+                <td class="tf-placeholder__label">[ Invariant name ]</td>
+                <td class="tf-placeholder__label">[ Description — TBD ]</td>
+                <td class="tf-placeholder__label">[ Scope — TBD ]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 3 · PROOF CONDITIONS
+         ────────────────────────────────────────────────────── -->
+    <section id="proof"
+             class="tf-section"
+             aria-labelledby="h-proof"
+             data-section-id="proof"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-proof" class="tf-section__title">Proof Conditions</h2>
+        <div class="tf-proof-conditions" role="list" aria-label="Proof conditions for each invariant">
+          <!-- PLACEHOLDER: one .tf-proof-condition block per invariant -->
+          <article class="tf-proof-condition"
+                   role="listitem"
+                   tabindex="0"
+                   data-inv="INV-000"
+                   aria-labelledby="proof-title-000">
+            <h3 id="proof-title-000" class="tf-proof-condition__title tf-placeholder__label">
+              INV-000 · [ Invariant name ]
+            </h3>
+            <p class="tf-proof-condition__condition tf-placeholder__label">
+              Verification condition: [ TBD ]
+            </p>
+            <p class="tf-proof-condition__falsifier tf-placeholder__label">
+              Falsification condition: [ TBD ]
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 4 · DOMAIN APPLICATIONS
+         ────────────────────────────────────────────────────── -->
+    <section id="domains"
+             class="tf-section"
+             aria-labelledby="h-domains"
+             data-section-id="domains"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-domains" class="tf-section__title">Domain Applications</h2>
+        <div class="tf-domain-grid" role="list" aria-label="Domain application areas">
+          <article class="tf-domain-card tf-card" role="listitem" tabindex="0" data-domain="narrative">
+            <h3 class="tf-card__title">Narrative</h3>
+            <p class="tf-placeholder__label">[ Narrative domain application — TBD ]</p>
+          </article>
+          <article class="tf-domain-card tf-card" role="listitem" tabindex="0" data-domain="cognitive">
+            <h3 class="tf-card__title">Cognitive</h3>
+            <p class="tf-placeholder__label">[ Cognitive domain application — TBD ]</p>
+          </article>
+          <article class="tf-domain-card tf-card" role="listitem" tabindex="0" data-domain="social">
+            <h3 class="tf-card__title">Social</h3>
+            <p class="tf-placeholder__label">[ Social domain application — TBD ]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 5 · APPARENT VIOLATIONS & EDGE CASES
+         ────────────────────────────────────────────────────── -->
+    <section id="violations"
+             class="tf-section"
+             aria-labelledby="h-violations"
+             data-section-id="violations"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-violations" class="tf-section__title">Apparent Violations &amp; Edge Cases</h2>
+        <div class="tf-placeholder" data-placeholder="violations">
+          <p class="tf-placeholder__label">[ Apparent violations &amp; edge cases — awaiting content population ]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 6 · CROSS-MODULE LINKS
+         ────────────────────────────────────────────────────── -->
+    <section id="cross-links"
+             class="tf-section tf-section--cross-links"
+             aria-labelledby="h-cross-links"
+             data-section-id="cross-links"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-cross-links" class="tf-section__title">Cross-Module Connections</h2>
+        <nav class="tf-cross-link-grid" aria-label="Linked modules">
+          <a class="tf-cross-link-card tf-card" href="/son/" data-module="son">
+            <img class="tf-cross-link-card__icon" src="/assets/icons/son.svg" alt="" aria-hidden="true" width="32" height="32" />
+            <span class="tf-cross-link-card__label">SoN</span>
+            <span class="tf-cross-link-card__layer">Core Layer</span>
+          </a>
+          <a class="tf-cross-link-card tf-card" href="/vocabulary/" data-module="vocabulary">
+            <img class="tf-cross-link-card__icon" src="/assets/icons/vocabulary.svg" alt="" aria-hidden="true" width="32" height="32" />
+            <span class="tf-cross-link-card__label">Vocabulary</span>
+            <span class="tf-cross-link-card__layer">Linguistic Layer</span>
+          </a>
+          <a class="tf-cross-link-card tf-card" href="/hooks/" data-module="hooks">
+            <img class="tf-cross-link-card__icon" src="/assets/icons/hooks.svg" alt="" aria-hidden="true" width="32" height="32" />
+            <span class="tf-cross-link-card__label">Hooks</span>
+            <span class="tf-cross-link-card__layer">Engagement Layer</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer class="tf-footer" role="contentinfo">
+    <p class="tf-footer__copy">
+      &copy; <span id="tf-year">2026</span> Nawder Loswin &middot; TriadicFrameworks
+    </p>
+    <p class="tf-footer__meta">
+      Module: Invariants &middot;
+      Protocol: Metadata Refresh v1 &middot;
+      Session: <span class="tf-footer__session-id">__SESSION_ID__</span>
+    </p>
+    <p class="tf-footer__links">
+      <a href="https://triadicframeworks.org/">Home</a>
+      <a href="https://docs.triadicframeworks.org/">Docs</a>
+      <a href="https://github.com/umaywant2/TriadicFrameworks">GitHub</a>
+    </p>
+  </footer>
+
+  <!-- ── SCRIPTS ───────────────────────────────────────────── -->
+  <script src="/assets/js/triadic-core.js"></script>
+  <script src="/assets/js/modules/invariants.js"></script>
+
+</body>
+</html>

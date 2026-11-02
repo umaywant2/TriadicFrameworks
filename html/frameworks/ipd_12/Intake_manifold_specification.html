@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/frameworks/ipd_12/Intake_manifold_specification.md">
+  <title>Intake manifold specification document</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/frameworks/ipd_12/Intake_manifold_specification.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/frameworks/ipd_12/Intake_manifold_specification.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="intake-manifold-specification-document">Intake manifold specification document</h1>
+<p><strong>IPD‑12 Electric Intake Manifolds</strong><br>
+<strong>SIM / DIM / TIM / QIM / FSI</strong><br>
+<strong>Module:</strong> IPD‑12 Framework<br>
+<strong>Version:</strong> 2026‑1.0<br>
+<strong>Role:</strong> Input / Coupling / Integration Layer</p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document defines the <strong>intake manifold types</strong> for the IPD‑12 engine:</p>
+<ul>
+<li><strong>SIM</strong> — Single Intake Manifold (1 triad)  </li>
+<li><strong>DIM</strong> — Double Intake Manifold (2 triads)  </li>
+<li><strong>TIM</strong> — Triple Intake Manifold (3 triads)  </li>
+<li><strong>QIM</strong> — Quad Intake Manifold (4 triads, full IPD‑12)  </li>
+<li><strong>FSI</strong> — Full 12‑Stack Intake (3×QIM, full saturation)  </li>
+</ul>
+<p>Each manifold is an <strong>electric, multi‑phase intake assembly</strong> that couples external frameworks/theories into the IPD‑12 substrate engine.</p>
+<hr>
+<h2 id="2-manifold-types-overview">2. Manifold types overview</h2>
+<h3 id="sim-single-intake-manifold"><strong>SIM — Single Intake Manifold</strong></h3>
+<p><strong>Definition:</strong><br>
+Single‑phase intake feeding <strong>one triad</strong> (3 primes).</p>
+<p><strong>Cycle coverage:</strong></p>
+<ul>
+<li>Triad: any one of T1–T4  </li>
+<li>Hex: none  </li>
+<li>Full 12‑cycle: partial (3/12)</li>
+</ul>
+<p><strong>Substrate mapping:</strong></p>
+<ul>
+<li><strong>Si:</strong> one substrate pair (e.g., S1)  </li>
+<li><strong>Oj:</strong> one dominant observer mode (O1 or O2)  </li>
+<li><strong>Rk:</strong> one regime shell (typically R1 or R2)</li>
+</ul>
+<p><strong>Observer mapping:</strong></p>
+<ul>
+<li><strong>Primary:</strong> O1 (field) or O2 (regime)  </li>
+<li><strong>Secondary:</strong> O3/O4 only as inferred, not directly driven</li>
+</ul>
+<p><strong>Regime mapping:</strong></p>
+<ul>
+<li><strong>Regime span:</strong> single regime (e.g., Regime‑1 via T1)  </li>
+<li><strong>Use case:</strong> local cycle, local drift/transition, single‑tier Pantheon alignment</li>
+</ul>
+<p><strong>Prime mapping (example SIM on Triad 1):</strong></p>
+<ul>
+<li>P2 (seed, neutral)  </li>
+<li>P3 (transition lift)  </li>
+<li>P5 (drift collapse)</li>
+</ul>
+<hr>
+<h3 id="dim-double-intake-manifold"><strong>DIM — Double Intake Manifold</strong></h3>
+<p><strong>Definition:</strong><br>
+Dual‑phase intake feeding <strong>two triads</strong> (6 primes).</p>
+<p><strong>Cycle coverage:</strong></p>
+<ul>
+<li>Triads: any two of T1–T4 (often adjacent)  </li>
+<li>Hex: <strong>one hex shell</strong> (H1 or H2)  </li>
+<li>Full 12‑cycle: partial (6/12)</li>
+</ul>
+<p><strong>Substrate mapping:</strong></p>
+<ul>
+<li><strong>Si:</strong> two substrate pairs (e.g., S1+S2 or S3+S4)  </li>
+<li><strong>Oj:</strong> two observer modes (O1+O2 or O2+O3)  </li>
+<li><strong>Rk:</strong> one or two regime shells (R1↔R2 or R2↔R3)</li>
+</ul>
+<p><strong>Observer mapping:</strong></p>
+<ul>
+<li><strong>Primary:</strong> O2 (regime)  </li>
+<li><strong>Secondary:</strong> O1/O3 depending on triad selection</li>
+</ul>
+<p><strong>Regime mapping:</strong></p>
+<ul>
+<li><strong>Regime span:</strong> two regimes or one regime plus boundary  </li>
+<li><strong>Use case:</strong> frameworks that need <strong>shell‑level</strong> paradox behavior (e.g., RTT drift+paradox, GU connection+curvature)</li>
+</ul>
+<p><strong>Prime mapping (example DIM on Hex 1: T1+T2):</strong></p>
+<ul>
+<li>P2, P3, P5, P7, P11, P13  </li>
+</ul>
+<hr>
+<h3 id="tim-triple-intake-manifold"><strong>TIM — Triple Intake Manifold</strong></h3>
+<p><strong>Definition:</strong><br>
+Three‑phase intake feeding <strong>three triads</strong> (9 primes).</p>
+<p><strong>Cycle coverage:</strong></p>
+<ul>
+<li>Triads: any three of T1–T4  </li>
+<li>Hex: both shells partially  </li>
+<li>Full 12‑cycle: partial (9/12), missing one triad</li>
+</ul>
+<p><strong>Substrate mapping:</strong></p>
+<ul>
+<li><strong>Si:</strong> three substrate pairs (e.g., S1+S2+S3)  </li>
+<li><strong>Oj:</strong> three observer modes (O1+O2+O3)  </li>
+<li><strong>Rk:</strong> three regime shells (R1+R2+R3)</li>
+</ul>
+<p><strong>Observer mapping:</strong></p>
+<ul>
+<li><strong>Primary:</strong> O2 (regime), O3 (coherence)  </li>
+<li><strong>Secondary:</strong> O1; O4 only via apex‑adjacent primes if T4 included</li>
+</ul>
+<p><strong>Regime mapping:</strong></p>
+<ul>
+<li><strong>Regime span:</strong> full regime traversal <strong>except apex regime</strong> if T4 omitted  </li>
+<li><strong>Use case:</strong> frameworks needing <strong>full paradox handling</strong> but not full apex lift/collapse (e.g., civilizational+chthonic without apex)</li>
+</ul>
+<p><strong>Prime mapping (example TIM on T1+T2+T3):</strong></p>
+<ul>
+<li>P2, P3, P5, P7, P11, P13, P17, P19, P23  </li>
+</ul>
+<hr>
+<h3 id="qim-quad-intake-manifold"><strong>QIM — Quad Intake Manifold</strong></h3>
+<p><strong>Definition:</strong><br>
+Four‑phase intake feeding <strong>all four triads</strong> (12 primes).<br>
+This is the <strong>canonical full IPD‑12 intake</strong>.</p>
+<p><strong>Cycle coverage:</strong></p>
+<ul>
+<li>Triads: T1, T2, T3, T4  </li>
+<li>Hex: H1, H2  </li>
+<li>Full 12‑cycle: complete (12/12)</li>
+</ul>
+<p><strong>Substrate mapping:</strong></p>
+<ul>
+<li><strong>Si:</strong> all four substrate pairs (S1–S4)  </li>
+<li><strong>Oj:</strong> all observer modes (O1–O4)  </li>
+<li><strong>Rk:</strong> all regime shells (R1–R4)</li>
+</ul>
+<p><strong>Observer mapping:</strong></p>
+<ul>
+<li><strong>Primary:</strong> O2 (regime), O3 (coherence), O4 (apex)  </li>
+<li><strong>Secondary:</strong> O1 (field) as entry stance</li>
+</ul>
+<p><strong>Regime mapping:</strong></p>
+<ul>
+<li><strong>Regime span:</strong> full regime traversal including apex  </li>
+<li><strong>Use case:</strong> frameworks that must operate as <strong>true IPD‑12 engines</strong>, with full dimensional lift/collapse and paradox resolution.</li>
+</ul>
+<p><strong>Prime mapping:</strong></p>
+<ul>
+<li>P2, P3, P5, P7, P11, P13, P17, P19, P23, P29, P31, P37  </li>
+</ul>
+<hr>
+<h3 id="fsi-full-12stack-intake"><strong>FSI — Full 12‑Stack Intake</strong></h3>
+<p><strong>Definition:</strong><br>
+Three <strong>QIMs</strong> arranged as a <strong>12‑stack lattice</strong>:</p>
+<ul>
+<li><strong>FSI = QIM₁ + QIM₂ + QIM₃</strong></li>
+</ul>
+<p>Each QIM can be:</p>
+<ul>
+<li>a different <strong>framework manifold</strong> (RTT, GU, Pantheon)  </li>
+<li>a different <strong>substrate specialization</strong>  </li>
+<li>a different <strong>observer emphasis</strong></li>
+</ul>
+<p><strong>Cycle coverage:</strong></p>
+<ul>
+<li>Full IPD‑12 cycle per QIM  </li>
+<li>3× full cycles in stacked configuration  </li>
+<li>Supports <strong>multi‑framework resonance</strong> and <strong>cross‑canon coupling</strong></li>
+</ul>
+<p><strong>Substrate mapping:</strong></p>
+<ul>
+<li><strong>Si:</strong> 3×(S1–S4) with distinct parameterization per QIM  </li>
+<li><strong>Oj:</strong> 3×(O1–O4) with different observer models (e.g., RTT observer, GU observer, Pantheon observer)  </li>
+<li><strong>Rk:</strong> 3×(R1–R4) with regime specialization</li>
+</ul>
+<p><strong>Observer mapping:</strong></p>
+<ul>
+<li>Layered observers:  </li>
+<li>QIM₁: RTT observer stack  </li>
+<li>QIM₂: GU geometric observer stack  </li>
+<li>QIM₃: Pantheon mythic‑structural observer stack  </li>
+</ul>
+<p><strong>Regime mapping:</strong></p>
+<ul>
+<li><strong>Regime span:</strong> full regime traversal per manifold, plus <strong>meta‑regime</strong> across manifolds  </li>
+<li><strong>Use case:</strong> TriadicFrameworks meta‑engines, substrate‑aware transport services, cross‑framework alignment engines.</li>
+</ul>
+<p><strong>Prime mapping:</strong></p>
+<ul>
+<li>Each QIM: full 12 primes  </li>
+<li>FSI: <strong>36 prime‑state channels</strong> (12×3), all canon‑aligned, no new primes introduced—only replicated manifolds.</li>
+</ul>
+<hr>
+<h2 id="3-diagrams-conceptual-ascii">3. Diagrams (conceptual ASCII)</h2>
+<h3 id="sim-1-triad"><strong>SIM (1 triad)</strong></h3>
+<pre><code class="language-text">External Framework
+      │
+   [ SIM ]
+      │
+   Triad X (3 primes)
+      │
+   IPD‑12 Engine
+</code></pre>
+<h3 id="dim-2-triads-1-hex"><strong>DIM (2 triads / 1 hex)</strong></h3>
+<pre><code class="language-text">External Framework
+      │
+   [ DIM ]
+      │
+   Triad A + Triad B
+      │
+     Hex Shell
+      │
+   IPD‑12 Engine
+</code></pre>
+<h3 id="tim-3-triads"><strong>TIM (3 triads)</strong></h3>
+<pre><code class="language-text">External Framework
+      │
+   [ TIM ]
+      │
+ Triad A + Triad B + Triad C
+      │
+  Regime Span (R1–R3)
+      │
+   IPD‑12 Engine
+</code></pre>
+<h3 id="qim-4-triads-full-ipd12"><strong>QIM (4 triads / full IPD‑12)</strong></h3>
+<pre><code class="language-text">External Framework
+      │
+   [ QIM ]
+      │
+ Triads T1–T4 (all primes)
+      │
+ Full 12‑Cycle + Hex Shells
+      │
+   IPD‑12 Engine Block
+</code></pre>
+<h3 id="fsi-3qim"><strong>FSI (3×QIM)</strong></h3>
+<pre><code class="language-text">Framework A ─┐
+             ├─ [ QIM₁ ]
+Framework B ─┤
+             ├─ [ QIM₂ ]
+Framework C ─┘
+             └─ [ QIM₃ ]
+                 │
+           Full 12‑Stack Intake
+                 │
+             IPD‑12 Engine Block
+</code></pre>
+<hr>
+<h2 id="4-substrate-observer-regime-mapping-summary">4. Substrate / observer / regime mapping summary</h2>
+<ul>
+<li><strong>SIM:</strong>  </li>
+<li>Substrate: 1 pair  </li>
+<li>Observer: 1 dominant mode  </li>
+<li>
+<p>Regime: 1 shell  </p>
+</li>
+<li>
+<p><strong>DIM:</strong>  </p>
+</li>
+<li>Substrate: 2 pairs  </li>
+<li>Observer: 2 modes  </li>
+<li>
+<p>Regime: 1–2 shells (hex shell)  </p>
+</li>
+<li>
+<p><strong>TIM:</strong>  </p>
+</li>
+<li>Substrate: 3 pairs  </li>
+<li>Observer: 3 modes  </li>
+<li>
+<p>Regime: 3 shells  </p>
+</li>
+<li>
+<p><strong>QIM:</strong>  </p>
+</li>
+<li>Substrate: all 4 pairs  </li>
+<li>Observer: all 4 modes  </li>
+<li>
+<p>Regime: all 4 shells  </p>
+</li>
+<li>
+<p><strong>FSI:</strong>  </p>
+</li>
+<li>Substrate: 3×(all pairs)  </li>
+<li>Observer: 3×(all modes)  </li>
+<li>Regime: 3×(all shells) + meta‑regime</li>
+</ul>
+<hr>
+<h2 id="5-prime-mapping-summary">5. Prime mapping summary</h2>
+<ul>
+<li><strong>SIM:</strong> 3 primes (1 triad)  </li>
+<li><strong>DIM:</strong> 6 primes (2 triads / 1 hex)  </li>
+<li><strong>TIM:</strong> 9 primes (3 triads)  </li>
+<li><strong>QIM:</strong> 12 primes (4 triads, full IPD‑12)  </li>
+<li><strong>FSI:</strong> 36 prime channels (3×QIM, replicated, not extended)</li>
+</ul>
+  </main>
+</body>
+</html>

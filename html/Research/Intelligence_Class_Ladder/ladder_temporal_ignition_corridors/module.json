@@ -1,0 +1,31 @@
+{
+  "module": "Ladder_Temporal_Ignition_Corridors",
+  "name": "Intelligence Class Ladder — Temporal‑Ignition Corridors",
+  "summary": "Defines the temporal‑ignition corridors of the Intelligence Class Ladder, mapping how AAI, AGI, and SI form, stabilize, and propagate ignition corridors across long‑window reasoning surfaces.",
+  "category": "intelligence-temporal-ignition-corridor",
+  "version": "1.0",
+  "purpose": "Provide the corridor‑layer ignition geometry for the Ladder, describing how ignition corridors form, extend, stabilize, and bind across corrected‑time surfaces under increasing cognitive load.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@ladder.time.ignition.corridor.form",
+    "@ladder.time.ignition.corridor.extend",
+    "@ladder.time.ignition.corridor.stabilize",
+    "@ladder.time.ignition.corridor.flow",
+    "@ladder.time.ignition.corridor.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Ladder_Temporal_Extension_Map",
+      "Ladder_Temporal_Resonance_Surfaces",
+      "Ladder_Temporal_Ignition_Surfaces"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "SI_apex_stability_surfaces",
+      "Atlas_Temporal_Binding_Geometry",
+      "Triad_Temporal_Correction_Surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

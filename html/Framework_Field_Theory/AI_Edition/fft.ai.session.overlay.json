@@ -1,0 +1,62 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.overlay",
+  "title": "FFT AI Session — Overlay v1.33",
+  "overlay_layers": {
+    "field_overlay": {
+      "phi": true,
+      "V": true,
+      "R": true
+    },
+    "rtt_overlay": {
+      "tau": true,
+      "clarity_op": true
+    },
+    "coherence_overlay": {
+      "status_badge": true,
+      "value_display": true,
+      "new_v1_33": true
+    },
+    "drift_overlay": {
+      "delta_meter": true,
+      "bound_indicator": true,
+      "new_v1_33": true
+    },
+    "paradox_overlay": {
+      "active_flag": true,
+      "resolution_phase": true,
+      "new_v1_33": true
+    },
+    "snr_overlay": {
+      "partition_bar": true,
+      "zone_indicator": true,
+      "new_v1_33": true
+    },
+    "set_overlay": {
+      "S_indicator": true,
+      "E_indicator": true,
+      "T_indicator": true,
+      "new_v1_33": true
+    },
+    "dco_overlay": {
+      "active_dim": true,
+      "operator_label": true,
+      "new_v1_33": true
+    }
+  },
+  "v133_additions": [
+    "coherence_overlay",
+    "drift_overlay",
+    "paradox_overlay",
+    "snr_overlay",
+    "set_overlay",
+    "dco_overlay"
+  ]
+}

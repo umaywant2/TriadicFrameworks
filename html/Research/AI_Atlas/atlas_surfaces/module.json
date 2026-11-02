@@ -1,0 +1,26 @@
+{
+  "module": "AI_Atlas_Surfaces",
+  "name": "AI Atlas — Surfaces",
+  "summary": "Defines the surface grammar of the AI Atlas, including coherence, drift, stability, resonance, epoch, ignition, and temporal propagation surfaces.",
+  "category": "intelligence-mapping-surfaces",
+  "version": "1.0",
+  "purpose": "Provide the surface-level geometry used by the AI Atlas to map structural, temporal, behavioral, and hash-derived fields into atlas coordinates.",
+  "role": "map",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.surface.define",
+    "@atlas.surface.extend",
+    "@atlas.surface.bind",
+    "@atlas.surface.propagate",
+    "@atlas.surface.compute"
+  ],
+  "lineage": {
+    "upstream": ["Atlas"],
+    "downstream": [
+      "Triad_Visual_Map",
+      "Triad_Global_Index",
+      "SI_structural_geometry",
+      "SI_paradox_integration"
+    ]
+  }
+}

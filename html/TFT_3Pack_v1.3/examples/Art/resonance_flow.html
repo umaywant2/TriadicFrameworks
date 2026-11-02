@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/examples/Art/resonance_flow.md">
+  <title>Art resonance-flow diagrams</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/examples/Art/resonance_flow.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/examples/Art/resonance_flow.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="art-resonance-flow-diagrams">Art resonance-flow diagrams</h1>
+<p>This file describes conceptual diagrams you can render as SVG, Mermaid, or other formats.</p>
+<h2 id="diagram-1-color-resonance-pipeline-problem-1">Diagram 1 – Color resonance pipeline (Problem 1)</h2>
+<p><strong>Nodes:</strong></p>
+<ul>
+<li>Input frequencies: $$f_1, f_2, f_3$$</li>
+<li>Triadic combiner: $$D_3$$</li>
+<li>Frequency elevation: $$T_f$$</li>
+<li>Composite constant: $$X = F_3 \cdot T_f$$</li>
+<li>Output color resonance: $$C$$</li>
+</ul>
+<p><strong>Flow:</strong></p>
+<ol>
+<li>Three input nodes $$f_1, f_2, f_3$$ feed into a "Triadic Combiner" node labeled $$D_3$$.</li>
+<li>The output of the combiner goes into a "Frequency Elevation" node labeled $$T_f$$.</li>
+<li>A parallel branch injects $$F_3$$ into a multiplier node to form $$X$$.</li>
+<li>The final node computes $$C = X(f_1 + f_2 + f_3)$$.</li>
+<li>An external control node $$τ_r$$ feeds into the $$T_f$$ node or $$X$$ node, indicating how time-resonance modulates saturation.</li>
+</ol>
+<hr>
+<h2 id="diagram-2-kinetic-sculpture-stress-loop-problem-2">Diagram 2 – Kinetic sculpture stress loop (Problem 2)</h2>
+<p><strong>Nodes:</strong></p>
+<ul>
+<li>Resonant-time: $$τ_r$$</li>
+<li>Structural operator: $$D_6(τ_r)$$</li>
+<li>Thermal coupling: $$ΛΘ$$</li>
+<li>Harmonic stress output: $$S$$</li>
+</ul>
+<p><strong>Flow:</strong></p>
+<ol>
+<li>A node "Resonant-time" outputs $$τ_r$$ into the triadic node $$D_6$$.</li>
+<li>In parallel, a "Temperature" node holds $$Θ$$, and an "Environment" node holds $$Λ$$.</li>
+<li>Both $$Λ$$ and $$Θ$$ merge at a "Coupler" node outputting $$ΛΘ$$.</li>
+<li>The product of $$D_6(τ_r)$$ and $$ΛΘ$$ is computed at a final node labeled $$S$$.</li>
+<li>Annotate a feedback arrow from $$S$$ back to $$τ_r$$ showing that perceived stress may cause the artist to adjust timing.</li>
+</ol>
+<hr>
+<h2 id="diagram-3-led-timing-resonance-problem-3">Diagram 3 – LED timing resonance (Problem 3)</h2>
+<p><strong>Core idea:</strong> Map how $$τ_r$$ reshapes the effective frequency.</p>
+<p><strong>Nodes and edges:</strong></p>
+<ul>
+<li>Base frequency node labeled $$T_f$$.</li>
+<li>Time scaling node labeled $$τ_r^{-1}$$.</li>
+<li>Effective frequency node labeled $$T_f' = T_f / τ_r$$.</li>
+<li>Sine generator node computing $$B(t) = F_3 \sin(T_f' t)$$.</li>
+<li>Period node calculating $$T_{\text{period}} = 2\pi / T_f'$$.</li>
+<li>Constraint node "Target period = 4 s" feeding back to solve for $$τ_r$$.</li>
+</ul>
+<p>You can draw arrows:</p>
+<p>$$T_f \rightarrow ( \div τ_r ) \rightarrow T_f' \rightarrow B(t) \rightarrow T_{\text{period}}$$</p>
+<p>with a constraint arrow from "4 s" back to the $$\div τ_r$$ node to show solving for $$τ_r$$.</p>
+  </main>
+</body>
+</html>

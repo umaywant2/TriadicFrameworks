@@ -1,0 +1,57 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.profile",
+  "title": "FFT AI Session — Profile v1.33",
+  "profile_fields": {
+    "session_id": "uuid",
+    "edition": "AI Edition v1.33",
+    "rtt_version": "rtt=1",
+    "coherence_profile": {
+      "declared": true,
+      "last_verified": null,
+      "new_v1_33": true
+    },
+    "drift_profile": {
+      "max_delta_allowed": 0.35,
+      "events_this_session": 0,
+      "new_v1_33": true
+    },
+    "paradox_profile": {
+      "mode": "structural",
+      "events_this_session": 0,
+      "new_v1_33": true
+    },
+    "autonomy_profile": {
+      "current_mode": "AM-001",
+      "mode_history": []
+    },
+    "set_profile": {
+      "S_active": false,
+      "E_active": false,
+      "T_active": false,
+      "new_v1_33": true
+    },
+    "dco_profile": {
+      "dims_visited": [],
+      "new_v1_33": true
+    },
+    "operator_profile": {
+      "total_dispatched": 0,
+      "families_used": []
+    }
+  },
+  "v133_additions": [
+    "coherence_profile",
+    "drift_profile",
+    "paradox_profile",
+    "set_profile",
+    "dco_profile"
+  ]
+}

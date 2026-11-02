@@ -1,0 +1,86 @@
+{
+  "pulse_id": "gsm_validator_pulse_2025",
+  "module": "Governance_Substrate_Model",
+  "version": "2025",
+  "scope": "module_manifest",
+
+  "structural_checks": {
+    "has_ai_module": true,
+    "has_ai_version": true,
+    "has_ai_purpose": true,
+    "has_keywords": true,
+    "has_category": true,
+    "has_audience": true,
+    "directories_defined": true,
+    "files_defined": true,
+    "phantoms_present": true
+  },
+
+  "semantic_checks": {
+    "directory_roles_valid": true,
+    "directory_layers_valid": true,
+    "file_roles_valid": true,
+    "file_layers_valid": true,
+    "purpose_fields_present": true,
+    "no_duplicate_entries": true,
+    "no_cross_layer_conflicts": true,
+    "adapter_layer_consistent": true,
+    "regime_layer_consistent": true
+  },
+
+  "layer_alignment": {
+    "dimensional": ["01_Invariants", "AI_Alignment_Surfaces.md"],
+    "awareness": ["02_Awareness", "Education_Embedding.md"],
+    "evaluation": ["03_Evaluation"],
+    "validation": ["04_Validation"],
+    "regime": [
+      "05_Implementation",
+      "index.html",
+      "overview.md",
+      "How_To_Flock_with_Governance.md"
+    ],
+    "leadership": ["06_Leadership"],
+    "incubation": ["07_Incubation"],
+    "lineage": ["08_History"],
+    "reference": ["09_Appendices"],
+    "adapter": [
+      "10_Adapters",
+      "Infrastructure_Retrofit_Patterns.md"
+    ],
+    "operator": [
+      "gsm_module.json",
+      "How_To_Flock_with_Governance_module.json",
+      "Core_System_Design.md"
+    ]
+  },
+
+  "phantom_detection": {
+    "phantoms": [
+      "ALPR_Governance.md",
+      "sensor_governance_notes.txt"
+    ],
+    "severity": "medium",
+    "recommendation": "Remove phantom entries or restore missing files to maintain sitemap integrity."
+  },
+
+  "regime_declaration": {
+    "status": "routine",
+    "reason": "All structural and semantic checks passed; phantoms detected but non-critical."
+  },
+
+  "coherence_evaluation": {
+    "coherent": true,
+    "notes": "Module manifest aligns with Governance Substrate Model grammar, analyzer layers, and updated DOC_MAP entries."
+  },
+
+  "drift_detection": {
+    "drift": false,
+    "notes": "No drift detected between declared analyzer layers and file roles."
+  },
+
+  "paradox_scan": {
+    "paradox": false,
+    "notes": "No conflicting directives or layer-role contradictions found."
+  }
+}
+

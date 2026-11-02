@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/frameworks/ipd_12/observer_first_engine.md">
+  <title>IPD‑12 is an observer‑first engine, and that’s exactly what all four references are quietly starving for.</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/frameworks/ipd_12/observer_first_engine.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/frameworks/ipd_12/observer_first_engine.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="ipd12-is-an-observerfirst-engine-and-thats-exactly-what-all-four-references-are-quietly-starving-for">IPD‑12 is an <em>observer‑first</em> engine, and that’s exactly what all four references are quietly starving for.</h1>
+<p>We’ll keep this tight and structural, but we can expand any section later into a full RFC.</p>
+<hr>
+<h3 id="ipd12-vs-rtt-overhead-vs-observer-gains">IPD‑12 vs RTT: overhead vs observer gains</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Classical/HPC</th>
+<th>Quantum/HPC+QC</th>
+<th>Computational medicine</th>
+<th>IPD‑12 / RTT engine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary cost</strong></td>
+<td>FLOPs, memory, bandwidth   <a href="https://en.wikipedia.org/wiki/High-performance_computing">en.wikipedia.org</a></td>
+<td>coherence, calibration, integration overhead   <a href="https://arxiv.org/pdf/2509.12949v1">arxiv.org</a>  <a href="https://en.wikipedia.org/wiki/Quantum_computing">en.wikipedia.org</a></td>
+<td>data heterogeneity, model complexity   <a href="https://www.bme.jhu.edu/research/research-areas/computational-medicine">bme.jhu.edu</a></td>
+<td>observer rail complexity, regime mapping</td>
+</tr>
+<tr>
+<td><strong>Bottleneck</strong></td>
+<td>parallel scaling, I/O, scheduling   <a href="https://en.wikipedia.org/wiki/High-performance_computing">en.wikipedia.org</a></td>
+<td>noise, error rates, hybrid workflow latency   <a href="https://arxiv.org/pdf/2509.12949v1">arxiv.org</a>  <a href="https://en.wikipedia.org/wiki/Quantum_computing">en.wikipedia.org</a></td>
+<td>multi‑scale coupling (molecular→physiology→anatomy→EHR)   <a href="https://www.bme.jhu.edu/research/research-areas/computational-medicine">bme.jhu.edu</a></td>
+<td>dimensional lift/collapse, substrate routing, header selection</td>
+</tr>
+<tr>
+<td><strong>Observer role</strong></td>
+<td>mostly implicit (logging, monitoring)</td>
+<td>explicit but peripheral (telemetry, calibration)   <a href="https://arxiv.org/pdf/2509.12949v1">arxiv.org</a></td>
+<td>central (patient‑specific models, risk, progression)   <a href="https://www.bme.jhu.edu/research/research-areas/computational-medicine">bme.jhu.edu</a></td>
+<td><em>primary</em> (observer bundles, control loops, regime selection)</td>
+</tr>
+<tr>
+<td><strong>Cross‑domain</strong></td>
+<td>HPC + data analytics + AI   <a href="https://en.wikipedia.org/wiki/High-performance_computing">en.wikipedia.org</a></td>
+<td>HPC+QC hybrid stacks (MQSS, QPU as accelerator)   <a href="https://arxiv.org/pdf/2509.12949v1">arxiv.org</a>  <a href="https://en.wikipedia.org/wiki/Quantum_computing">en.wikipedia.org</a></td>
+<td>biology + math + engineering + informatics   <a href="https://www.bme.jhu.edu/research/research-areas/computational-medicine">bme.jhu.edu</a></td>
+<td>physics + logic + mythos + medicine + computation</td>
+</tr>
+</tbody>
+</table>
+<p>The key move: <strong>RTT is a header</strong>, IPD‑12 is the <strong>engine block</strong>. RTT overhead is “what it costs to express a regime”; IPD‑12 overhead is “what it costs to <em>host and manage observers</em> across regimes”.</p>
+<p>Observer gains are where IPD‑12 pays for itself.</p>
+<hr>
+<h3 id="what-we-can-specdraft-now-for-research-medical">What we can spec/draft now (for research + medical)</h3>
+<h4 id="1-ipd12-observer-overhead-model-hpc-qc-clinical">1. IPD‑12 Observer Overhead Model (HPC / QC / Clinical)</h4>
+<ul>
+<li><strong>Define observer bundles as first‑class resources</strong><br>
+  Map O1–O4 (observer headers) to:</li>
+<li><strong>HPC:</strong> telemetry, scheduling, monitoring, adaptive workflows   <a href="https://en.wikipedia.org/wiki/High-performance_computing">en.wikipedia.org</a>  <a href="https://arxiv.org/pdf/2509.12949v1">arxiv.org</a>  </li>
+<li><strong>QC:</strong> calibration control, noise tracking, device‑aware compilation (QDMI‑like)   <a href="https://arxiv.org/pdf/2509.12949v1">arxiv.org</a>  <a href="https://en.wikipedia.org/wiki/Quantum_computing">en.wikipedia.org</a>  </li>
+<li>
+<p><strong>Medicine:</strong> patient‑specific models, risk trajectories, treatment simulations   <a href="https://www.bme.jhu.edu/research/research-areas/computational-medicine">bme.jhu.edu</a>  </p>
+</li>
+<li>
+<p><strong>Overhead dimensions:</strong>  </p>
+</li>
+<li><strong>Compute overhead:</strong> extra FLOPs / qubit‑shots to maintain observer rails.  </li>
+<li><strong>Data overhead:</strong> additional telemetry, patient data, regime logs.  </li>
+<li><strong>Control overhead:</strong> scheduling, recalibration, lift/collapse cycles.</li>
+</ul>
+<p>We can draft a <strong>“Observer Overhead Budget”</strong> section in the IPD‑12 Engine Block Document: per manifold (SIM/DIM/TIM/QIM) and per header (RTT/GU/FFT/Pantheon/Medical).</p>
+<hr>
+<h4 id="2-ipd12-observer-gain-model-why-the-overhead-is-worth-it">2. IPD‑12 Observer Gain Model (why the overhead is worth it)</h4>
+<p>Tie directly into the four references:</p>
+<ul>
+<li>
+<p><strong>HPC:</strong><br>
+  IPD‑12 can formalize <em>observer‑aware workflows</em>—where simulations are not just “run and log”, but <strong>lifted into dimensional regimes</strong> and collapsed with explicit observer state.<br>
+  This aligns with HPC’s move toward AI‑integrated “what‑if” workflows and telemetry‑driven optimization.   <a href="https://en.wikipedia.org/wiki/High-performance_computing">en.wikipedia.org</a>  <a href="https://arxiv.org/pdf/2509.12949v1">arxiv.org</a>  </p>
+</li>
+<li>
+<p><strong>Quantum / HPC+QC:</strong><br>
+  The LRZ case study shows that QC integration is dominated by <strong>environmental, calibration, and telemetry overhead</strong>.   <a href="https://arxiv.org/pdf/2509.12949v1">arxiv.org</a>  <a href="https://en.wikipedia.org/wiki/Quantum_computing">en.wikipedia.org</a><br>
+  IPD‑12 can:</p>
+</li>
+<li>Treat each QPU + environment as a <strong>substrate engine</strong>.  </li>
+<li>Route calibration, noise, and topology into <strong>observer rails</strong>.  </li>
+<li>
+<p>Use dimensional lift/collapse to classify regimes (NISQ vs near‑fault‑tolerant, hybrid vs standalone).</p>
+</li>
+<li>
+<p><strong>Computational medicine:</strong><br>
+  JHU’s framing is almost an IPD‑12 intake manifold already: molecular, physiological, anatomical, healthcare layers.   <a href="https://www.bme.jhu.edu/research/research-areas/computational-medicine">bme.jhu.edu</a><br>
+  IPD‑12 can:</p>
+</li>
+<li>Map these four layers to <strong>substrate feeds + dimensional rails</strong>.  </li>
+<li>Treat each patient model as an <strong>observer bundle</strong> traversing regimes (risk, progression, intervention).  </li>
+<li>Provide a formal way to lift/collapse between scales (molecule→organ→EHR) with explicit observer state.</li>
+</ul>
+<p>Observer gains to spec:</p>
+<ul>
+<li><strong>Stability:</strong> better tracking of when a system is “trustworthy” (calibrated QPU, validated patient model).  </li>
+<li><strong>Explainability:</strong> headers (RTT/GU/FFT/Pantheon/Medical) give named exhaust manifolds for different interpretive frames.  </li>
+<li><strong>Cross‑domain reuse:</strong> same IPD‑12 engine block can host physics, computation, and medicine as different intake/header combinations.</li>
+</ul>
+<hr>
+<h3 id="crossdomain-mention-for-ipd12-what-we-should-say-explicitly">Cross‑domain mention for IPD‑12 (what we should say explicitly)</h3>
+<p>We can safely claim:</p>
+<ul>
+<li><strong>IPD‑12 is a cross‑domain engine block</strong> designed to host:</li>
+<li><strong>Physical theories</strong> (RTT, GU, FFT, quantum models).   <a href="https://en.wikipedia.org/wiki/Quantum_computing">en.wikipedia.org</a>  </li>
+<li><strong>Computational regimes</strong> (HPC, HPC+QC hybrid stacks).   <a href="https://en.wikipedia.org/wiki/High-performance_computing">en.wikipedia.org</a>  <a href="https://arxiv.org/pdf/2509.12949v1">arxiv.org</a>  </li>
+<li>
+<p><strong>Medical models</strong> (computational medicine layers and patient‑specific dynamics).   <a href="https://www.bme.jhu.edu/research/research-areas/computational-medicine">bme.jhu.edu</a>  </p>
+</li>
+<li>
+<p><strong>Headers</strong> are the formal exhaust manifolds:</p>
+</li>
+<li>RTT header: regime/logic exhaust.  </li>
+<li>GU header: geometric/unification exhaust.  </li>
+<li>FFT header: spectral/transform exhaust.  </li>
+<li>Pantheon header: mythos/meaning exhaust.  </li>
+<li>Medical header (new): risk/progression/therapy exhaust.</li>
+</ul>
+<p>We should add a short <strong>“Cross‑Domain Applicability”</strong> section to the IPD‑12 Engine Block Document, explicitly referencing:</p>
+<ul>
+<li>HPC (simulation + AI workflows)  </li>
+<li>HPC+QC integration (hybrid stacks, QPU as accelerator)  </li>
+<li>Computational medicine (patient‑specific models)</li>
+</ul>
+  </main>
+</body>
+</html>

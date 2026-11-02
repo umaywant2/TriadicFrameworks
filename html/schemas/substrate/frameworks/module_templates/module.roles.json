@@ -1,0 +1,119 @@
+{
+  "$schema": "../../module.schema.json",
+  "module": "my-roles-module",
+  "identity": "student.my-roles-module",
+  "purpose": "Defines canonical roles for module architecture, including engine, profile, signature, diagnostic, map, example, extension, index, reference, and template.",
+
+  "files": [
+    {
+      "name": "README.md",
+      "role": "profile"
+    },
+    {
+      "name": "engine.md",
+      "role": "engine"
+    },
+    {
+      "name": "signature.md",
+      "role": "signature"
+    },
+    {
+      "name": "diagnostic.md",
+      "role": "diagnostic"
+    },
+    {
+      "name": "map.md",
+      "role": "map"
+    },
+    {
+      "name": "example.md",
+      "role": "example"
+    },
+    {
+      "name": "extension.md",
+      "role": "extension"
+    },
+    {
+      "name": "index.md",
+      "role": "index"
+    },
+    {
+      "name": "reference.md",
+      "role": "reference"
+    },
+    {
+      "name": "template.md",
+      "role": "template"
+    }
+  ],
+
+  "roles": {
+    "engine": {
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "profile": {
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "signature": {
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "diagnostic": {
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "map": {
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "example": {
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "extension": {
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "index": {
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "reference": {
+      "fields": ["string"],
+      "rules": ["string"]
+    },
+    "template": {
+      "fields": ["string"],
+      "rules": ["string"]
+    }
+  },
+
+  "operators": [
+    {
+      "name": "role-define",
+      "description": "Define a new role for the module.",
+      "example": "Define engine role → engine.md"
+    },
+    {
+      "name": "role-extend",
+      "description": "Extend an existing role with module-specific fields.",
+      "example": "Extend signature role → signature.md"
+    },
+    {
+      "name": "role-bind",
+      "description": "Bind module roles to substrate structural engines.",
+      "example": "Bind diagnostic role → diagnostic.md"
+    }
+  ],
+
+  "output": {
+    "roles_template": "./module.roles.json"
+  },
+
+  "meta": {
+    "notes": "Structural role grammar for module-level role declarations."
+  }
+}
+

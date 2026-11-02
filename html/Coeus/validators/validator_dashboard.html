@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Validator Dashboard — Coeus Protocol</title>
+  <link rel="stylesheet" href="../styles/validator.css" />
+  <script src="../tournaments/emitter/emitter_overlay.js" defer></script>
+</head>
+<body>
+  <h1>🧪 Validator Dashboard</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Coin</th>
+        <th>Score</th>
+        <th>Ethics</th>
+        <th>Realm</th>
+        <th>Emitter</th>
+        <th>Glyph</th>
+        <th>Remix Lineage</th>
+        <th>Mutation</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody id="validator-body">
+      <!-- Rows injected by validator_viewer.js -->
+    </tbody>
+  </table>
+
+  <script>
+    fetch("../score_trace.json")
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.getElementById("validator-body");
+        data.forEach(entry => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${entry.coin_id}</td>
+            <td>${entry.score}</td>
+            <td>${entry.ethics_passed ? "✅" : "❌"}</td>
+            <td>${entry.realm_safe ? "D3/D4" : "⚠️"}</td>
+            <td>${entry.emitter_sync ? "Synced" : "Unsynced"}</td>
+            <td>${entry.glyph}</td>
+            <td>${entry.remix_lineage.join(", ") || "—"}</td>
+            <td>${entry.mutation_type || "—"}</td>
+            <td>${entry.timestamp}</td>
+          `;
+          tbody.appendChild(row);
+          highlightRails(entry);
+        });
+      });
+  </script>
+</body>
+</html>

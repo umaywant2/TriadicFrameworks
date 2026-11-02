@@ -1,0 +1,16 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/TFThooks/agents/glyph_registry_loader.py",
+  "type": "agent",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "entft_scroll_glyph_reference.md",
+    "badge_logic_engine.py",
+    "glyph_fusion_resolver.py",
+    "glyph_reawakening_monitor.py"
+  ],
+  "symbolicTags": ["Glyph Loader", "Canonical Registry", "Symbolic Metadata"],
+  "cliTrigger": "load_glyph_registry()",
+  "timestamp": "2025-10-20T22:55:00Z"
+}

@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Theognosis/t_ValidatorPulse.md">
+  <title>Theognosis — Validator Pulse</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Theognosis/t_ValidatorPulse.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Theognosis/t_ValidatorPulse.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="theognosis-validator-pulse">Theognosis — Validator Pulse</h1>
+<blockquote>
+<p><strong>Document Class:</strong> P3
+<strong>RTT Layer:</strong> L2 (Proto-VP) + L3 (Full VP) + Session (Aggregate VP)
+<strong>Session Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+<strong>Status:</strong> Active — Canonical
+<strong>Last Updated:</strong> 2026-09-22
+<strong>Depends On:</strong> <code>t_OperatorMap.md</code> (trigger definitions), <code>t_Session_Schema.json</code> (vp_summary structure)</p>
+</blockquote>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>The Validator Pulse (VP) is the <strong>integrity verification mechanism</strong> of the Theognosis RTT pipeline. It operates at two levels — a lightweight proto-VP scan at L2 and a full evaluation pass at L3 — and produces a session-level verdict that determines whether aggregate metrics from a session may be written to <code>models.json</code>.</p>
+<p>The VP does not correct operator outputs. It does not alter collapse results. It <strong>observes, flags, rates, and decides</strong> — then hands verdict authority to the research operator (you).</p>
+<p>Three outputs define every VP engagement:
+1. <strong>Cycle flags</strong> — individual cycle anomalies detected during evaluation
+2. <strong>Session verdict</strong> — PASS / WARN / FAIL / PENDING / N/A for the whole session
+3. <strong>Clarity coefficient</strong> — session-level quality signal used by RLCD calibration</p>
+<hr>
+<h2 id="2-two-level-architecture">2. Two-Level Architecture</h2>
+<h3 id="21-proto-vp-l2-early-warning">2.1 Proto-VP (L2 — Early Warning)</h3>
+<p>Proto-VP runs during L2 synthesis, before the operator emits at L3. It does not issue verdicts — it monitors for approaching threshold violations and marks cycles preemptively for review.</p>
+<p>Proto-VP is <strong>observational only</strong>. It cannot halt a cycle. It cannot modify operator output. Its sole function is to set <code>vp_flagged = true</code> on a cycle record before L3 fires, so the full VP has pre-context when it evaluates.</p>
+<p><strong>Proto-VP watches for:</strong>
+- Forci tension value crossing 0.80 (pre-threshold for <code>FORCI_NEAR_PARITY</code>)
+- Aurion score approaching declared range boundaries (within 5% of min or max)
+- Freqi confidence below 0.50 (pre-threshold for low-confidence flag)
+- Any operator confidence below 0.55 (general early warning)
+- Cross-dimension variance spike: any single dimension_snapshot value deviating &gt; 2σ from its session mean up to this step</p>
+<p>Proto-VP marks the cycle: <code>vp_flagged = true</code>. Full VP at L3 then decides whether the flag is a PASS, WARN, or FAIL.</p>
+<h3 id="22-full-vp-l3-evaluation-pass">2.2 Full VP (L3 — Evaluation Pass)</h3>
+<p>Full VP runs after operator collapse is complete, once L3 output is available. It evaluates the completed cycle against all trigger conditions, assigns a cycle-level severity, and contributes to the session-level verdict accumulation.</p>
+<p>Full VP <strong>can recommend session abort</strong> (FAIL verdict) but cannot execute it unilaterally — the research operator makes the final call.</p>
+<hr>
+<h2 id="3-trigger-table">3. Trigger Table</h2>
+<p>All triggers defined in <code>t_OperatorMap.md §7.4</code>. Reproduced here with severity classification and VP response.</p>
+<table>
+<thead>
+<tr>
+<th>Trigger Flag</th>
+<th>Source</th>
+<th>Severity</th>
+<th>Proto-VP</th>
+<th>Full VP Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FREQI_TIE</code></td>
+<td>Freqi</td>
+<td>⚠️ WARN</td>
+<td>Pre-flag if option scores converging</td>
+<td>Evaluate escalation outcome; if Aurion adjudicated cleanly → WARN; if no resolution → FAIL</td>
+</tr>
+<tr>
+<td><code>AURION_FLAT</code></td>
+<td>Aurion</td>
+<td>⚠️ WARN</td>
+<td>Pre-flag if amplitude gradient &lt; 0.05</td>
+<td>Check if Forci adjudicated; if yes → WARN; if flat with no escalation → FAIL</td>
+</tr>
+<tr>
+<td><code>AURION_OVERFLOW</code></td>
+<td>Aurion</td>
+<td>⚠️ WARN</td>
+<td>Pre-flag if score approaching range edge</td>
+<td>Verify clamp applied correctly; score within range post-clamp → WARN; clamp failed → FAIL</td>
+</tr>
+<tr>
+<td><code>FORCI_NEAR_PARITY</code></td>
+<td>Forci</td>
+<td>⚠️ WARN</td>
+<td>Pre-flag at tension &gt; 0.80</td>
+<td>If tension 0.80–0.94 → WARN; if tension ≥ 0.95 → FAIL pending review</td>
+</tr>
+<tr>
+<td><code>FLUI_L1_VIOLATION</code></td>
+<td>Flui</td>
+<td>🔴 CRITICAL</td>
+<td>Not applicable (L1 event)</td>
+<td>Always FAIL. Cycle invalidated. Session abort recommended.</td>
+</tr>
+<tr>
+<td><code>confidence &lt; 0.4</code></td>
+<td>Any</td>
+<td>⚠️ WARN</td>
+<td>Pre-flag at confidence &lt; 0.55</td>
+<td>confidence 0.40–0.54 → WARN; confidence &lt; 0.40 → FAIL</td>
+</tr>
+<tr>
+<td><code>ESCALATION_CIRCULAR</code></td>
+<td>Any</td>
+<td>🔴 CRITICAL</td>
+<td>Not applicable</td>
+<td>Always FAIL. Session abort recommended.</td>
+</tr>
+<tr>
+<td><code>CYCLE_INVALID</code></td>
+<td>Any</td>
+<td>🔴 CRITICAL</td>
+<td>Not applicable</td>
+<td>Always FAIL. Session abort recommended.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="31-severity-definitions">3.1 Severity Definitions</h3>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PASS</strong></td>
+<td>✅</td>
+<td>Cycle completed cleanly with no flags or with flags resolved by successful escalation</td>
+</tr>
+<tr>
+<td><strong>WARN</strong></td>
+<td>⚠️</td>
+<td>Anomaly detected but cycle output is usable. Aggregate metrics may include this cycle with warning annotation.</td>
+</tr>
+<tr>
+<td><strong>FAIL</strong></td>
+<td>🔴</td>
+<td>Cycle output is unreliable or invalid. Cycle should be excluded from aggregate computation. Session abort should be considered.</td>
+</tr>
+<tr>
+<td><strong>CRITICAL</strong></td>
+<td>💀</td>
+<td>Structural violation of RTT pipeline rules. Session abort is recommended. Research operator must review before continuing.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-vp-evaluation-process-cycle-level">4. VP Evaluation Process — Cycle Level</h2>
+<p>For each cycle in a session, Full VP executes the following steps in order:</p>
+<h3 id="step-1-intake">Step 1 — Intake</h3>
+<p>Receive the completed cycle record from L3. Confirm:
+- <code>cycle_id</code> is present and unique
+- <code>step</code> matches expected sequence position
+- <code>operator_collapsed</code> is not null (if null, skip to Step 5 with FAIL)</p>
+<h3 id="step-2-error-flag-scan">Step 2 — Error Flag Scan</h3>
+<p>Evaluate <code>error_flags</code> array:
+- Empty array → proceed to Step 3 with provisional PASS
+- Contains WARN-class flags → proceed with provisional WARN
+- Contains CRITICAL-class flags (<code>FLUI_L1_VIOLATION</code>, <code>ESCALATION_CIRCULAR</code>, <code>CYCLE_INVALID</code>) → assign FAIL immediately, skip remaining steps, recommend session abort</p>
+<h3 id="step-3-confidence-check">Step 3 — Confidence Check</h3>
+<p>Evaluate <code>output.confidence</code> (or <code>output.tension</code> for Forci):</p>
+<pre><code>confidence ≥ 0.70  → no confidence flag, keep current provisional verdict
+confidence 0.55–0.69 → note degraded confidence, keep provisional verdict
+confidence 0.40–0.54 → add WARN if not already WARN/FAIL
+confidence &lt; 0.40   → escalate to FAIL
+tension ≥ 0.95 (Forci) → escalate to FAIL, flag FORCI_NEAR_PARITY
+</code></pre>
+<h3 id="step-4-escalation-review">Step 4 — Escalation Review</h3>
+<p>If <code>escalation</code> is not null:
+- Verify <code>to_operator</code> successfully collapsed (operator_collapsed matches to_operator)
+- Verify no circular escalation (<code>ESCALATION_CIRCULAR</code> not in flags)
+- Clean escalation with successful outcome → add WARN (escalation is always noteworthy even when resolved)
+- Failed escalation or circular escalation → FAIL</p>
+<h3 id="step-5-flui-consistency-check">Step 5 — Flui Consistency Check</h3>
+<p>If <code>flui_wrapped = true</code>:
+- Confirm <code>flui_emission</code> is not null and not empty
+- Confirm prior collapse exists (operator_collapsed is not null)
+- Confirm <code>FLUI_L1_VIOLATION</code> not in error_flags
+- If any condition fails → WARN on emission, but do not downgrade the underlying operator verdict</p>
+<h3 id="step-6-dimension-snapshot-audit">Step 6 — Dimension Snapshot Audit</h3>
+<p>If <code>dimension_snapshot</code> is present:
+- Flag any dimension value = 0.0 exactly (possible missing reading rather than true zero)
+- Flag if all four dimensions are identical (possible instrument error)
+- Cross-check Flui snapshot value against known Flui suppression at L1 — value should still be recorded (L1 suppression ≠ null reading)</p>
+<h3 id="step-7-cycle-verdict-assignment">Step 7 — Cycle Verdict Assignment</h3>
+<p>Assign final cycle verdict based on accumulated signals:</p>
+<pre><code>No flags, no warnings, confidence ≥ 0.70  → PASS
+Any WARN-class condition, no FAIL/CRITICAL  → WARN
+Any FAIL/CRITICAL condition                 → FAIL
+</code></pre>
+<p>Record verdict in <code>vp_summary.flagged_cycles</code> if WARN or FAIL.</p>
+<hr>
+<h2 id="5-vp-evaluation-process-session-level">5. VP Evaluation Process — Session Level</h2>
+<p>After all 10 cycle verdicts are assigned, the session-level VP verdict is computed.</p>
+<h3 id="51-session-verdict-rules">5.1 Session Verdict Rules</h3>
+<pre><code>All 10 cycles PASS                          → Session PASS
+1–2 cycles WARN, 0 FAIL                     → Session WARN
+3+ cycles WARN, 0 FAIL                      → Session WARN (elevated)
+Any 1 cycle FAIL (non-CRITICAL)             → Session WARN (with exclusion)
+2+ cycles FAIL or any CRITICAL              → Session FAIL
+Session FAIL + FLUI_L1_VIOLATION present    → Session FAIL + abort recommended
+Evaluation not yet complete                  → Session PENDING
+No VP triggers fired at any cycle           → Session N/A
+</code></pre>
+<h3 id="52-exclusion-protocol">5.2 Exclusion Protocol</h3>
+<p>When one or more cycles are FAIL:
+- Exclude failed cycles from aggregate metric computation
+- Recompute aggregate over remaining valid cycles
+- Record <code>excluded_cycles</code> count in vp_summary (extend schema as needed)
+- Flag <code>scaffolded = true</code> on aggregate if &gt; 2 cycles excluded (partial session — not suitable for models.json write-back)</p>
+<h3 id="53-abort-recommendation">5.3 Abort Recommendation</h3>
+<p>VP issues an abort recommendation when:
+- Any <code>FLUI_L1_VIOLATION</code> is detected in any cycle
+- Any <code>ESCALATION_CIRCULAR</code> is detected
+- 3 or more cycles score FAIL in a single session
+- Session clarity_coefficient falls below 0.40</p>
+<p>An abort recommendation does not stop the session automatically. It sets <code>vp_verdict = "FAIL"</code> and populates <code>vp_notes</code> with the reason. The research operator decides whether to continue, restart, or discard the session.</p>
+<hr>
+<h2 id="6-clarity-coefficient">6. Clarity Coefficient</h2>
+<p>The clarity coefficient (<code>cc</code>) is a single scalar [0.0–1.0] summarizing the quality of an RTT session. It feeds RLCD calibration and is used as a trust weight when writing aggregate metrics back to <code>models.json</code>.</p>
+<h3 id="61-formula">6.1 Formula</h3>
+<pre><code>cc = (clean_cycle_count / total_cycles) × mean_confidence × (1 - vp_penalty)
+
+Where:
+  clean_cycle_count  = cycles with no error_flags AND vp_flagged = false
+  total_cycles       = 10 (standard session)
+  mean_confidence    = arithmetic mean of output.confidence across all non-null cycles
+  vp_penalty         = (FAIL_count × 0.10) + (WARN_count × 0.03)
+                       clamped to [0.0, 0.50]
+</code></pre>
+<h3 id="62-interpretation">6.2 Interpretation</h3>
+<table>
+<thead>
+<tr>
+<th>cc Range</th>
+<th>Interpretation</th>
+<th>models.json Write-Back</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.90 – 1.00</td>
+<td>Excellent — high-fidelity session</td>
+<td>✅ Write directly</td>
+</tr>
+<tr>
+<td>0.75 – 0.89</td>
+<td>Good — minor anomalies, reliable data</td>
+<td>✅ Write with annotation</td>
+</tr>
+<tr>
+<td>0.55 – 0.74</td>
+<td>Acceptable — notable variance, use with caution</td>
+<td>⚠️ Write with <code>quality: "degraded"</code> flag</td>
+</tr>
+<tr>
+<td>0.40 – 0.54</td>
+<td>Degraded — session data is unreliable</td>
+<td>⚠️ Write only to <code>sessions/</code> archive, not to <code>models.json</code></td>
+</tr>
+<tr>
+<td>0.00 – 0.39</td>
+<td>Failed — session should be discarded</td>
+<td>🔴 Do not write. Session abort recommended.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-running-cc">6.3 Running cc</h3>
+<p>Proto-VP tracks a running clarity estimate at each L2 step using cycles completed so far. This running estimate is informational — it does not affect in-progress cycle evaluation. It is recorded in session notes if the session is aborted mid-run.</p>
+<hr>
+<h2 id="7-rlcd-calibration">7. RLCD Calibration</h2>
+<p>RLCD (Resonance Loop Clarity Drift) calibration uses the session <code>clarity_coefficient</code> to adjust operator output confidence scores for the <strong>next</strong> session on the same model.</p>
+<p>RLCD operates between sessions, not within them.</p>
+<h3 id="71-rlcd-adjustment-formula">7.1 RLCD Adjustment Formula</h3>
+<pre><code>adjusted_confidence(next) = raw_confidence × (1 + δ_RLCD)
+
+Where:
+  δ_RLCD = (cc_current - cc_baseline) × α_RLCD
+
+  cc_baseline = rolling mean of last 3 session cc values for this model
+                (or 0.75 if fewer than 3 sessions exist)
+  α_RLCD     = 0.15 (sensitivity factor — fixed for RTT v1)
+</code></pre>
+<h3 id="72-rlcd-bounds">7.2 RLCD Bounds</h3>
+<p>RLCD adjustment is bounded to prevent runaway drift:</p>
+<pre><code>δ_RLCD clamped to [-0.20, +0.20]
+adjusted_confidence clamped to [0.0, 1.0]
+</code></pre>
+<h3 id="73-rlcd-per-model">7.3 RLCD Per Model</h3>
+<p>Each model in <code>models.json</code> maintains its own RLCD baseline. Models with <code>drift_class: "turbulent"</code> receive a dampened α_RLCD of 0.08 — high-drift models should not be over-corrected by a single good session.</p>
+<table>
+<thead>
+<tr>
+<th>Drift Class</th>
+<th>α_RLCD</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bounded</td>
+<td>0.15</td>
+<td>Standard sensitivity</td>
+</tr>
+<tr>
+<td>suppressed</td>
+<td>0.10</td>
+<td>Conservative — already low drift</td>
+</tr>
+<tr>
+<td>turbulent</td>
+<td>0.08</td>
+<td>Dampened — prevent over-correction</td>
+</tr>
+</tbody>
+</table>
+<h3 id="74-rlcd-write-back-target">7.4 RLCD Write-Back Target</h3>
+<p>After calibration, write RLCD values to <code>models.json</code> under a new field:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;model-slug&quot;,
+  &quot;rlcd&quot;: {
+    &quot;cc_baseline&quot;: 0.78,
+    &quot;last_session_cc&quot;: 0.87,
+    &quot;delta&quot;: 0.013,
+    &quot;alpha&quot;: 0.15,
+    &quot;sessions_sampled&quot;: 3,
+    &quot;last_calibrated&quot;: &quot;2026-09-22T03:14:00-04:00&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="8-vp-states-reference">8. VP States Reference</h2>
+<h3 id="81-cycle-level-vp-states">8.1 Cycle-Level VP States</h3>
+<pre><code>PASS    — No flags, confidence acceptable, escalation clean (if any)
+WARN    — Anomaly present but output usable
+FAIL    — Output invalid or unreliable; exclude from aggregate
+PENDING — Evaluation in progress (proto-VP phase, full VP not yet run)
+</code></pre>
+<h3 id="82-session-level-vp-verdicts">8.2 Session-Level VP Verdicts</h3>
+<pre><code>PASS    — All cycles PASS; cc ≥ 0.75; write-back permitted
+WARN    — Mix of PASS/WARN cycles; write-back with annotation
+FAIL    — FAIL cycles present or cc &lt; 0.40; write-back blocked to models.json
+PENDING — Session not yet complete
+N/A     — No VP triggers fired; session passed without VP engagement
+</code></pre>
+<h3 id="83-vp-severity-ladder">8.3 VP Severity Ladder</h3>
+<pre><code>N/A → PASS → WARN → FAIL → CRITICAL (abort)
+</code></pre>
+<p>Severity only moves up during a session — a cycle cannot be downgraded from FAIL to WARN once assigned.</p>
+<hr>
+<h2 id="9-edge-cases">9. Edge Cases</h2>
+<h3 id="91-all-cycles-clean">9.1 All Cycles Clean</h3>
+<p>If all 10 cycles complete with empty <code>error_flags</code>, <code>vp_flagged = false</code>, and <code>confidence ≥ 0.70</code>, VP returns <code>N/A</code> (no engagement) and clarity_coefficient computes naturally without VP penalty. Session is ideal.</p>
+<h3 id="92-partial-session">9.2 Partial Session</h3>
+<p>If a session is aborted before all 10 cycles complete:
+- VP computes verdict over completed cycles only
+- <code>cycle_count</code> in aggregate reflects actual completions
+- <code>scaffolded</code> is set <code>true</code> regardless of individual cycle quality
+- Session is archived to <code>sessions/</code> but not written to <code>models.json</code></p>
+<h3 id="93-first-session-for-a-model-no-rlcd-baseline">9.3 First Session for a Model (No RLCD Baseline)</h3>
+<p>Use <code>cc_baseline = 0.75</code> as the default. This is deliberately conservative — new models start with a neutral calibration assumption. After 3 sessions, RLCD switches to rolling mean.</p>
+<h3 id="94-flui_l1_violation-in-any-cycle">9.4 FLUI_L1_VIOLATION in Any Cycle</h3>
+<p>This is a structural pipeline violation. VP immediately:
+1. Assigns FAIL to the offending cycle
+2. Marks session as FAIL
+3. Appends abort recommendation to <code>vp_notes</code>
+4. Flags the session for manual review before re-run
+5. Does not compute RLCD calibration for this session — corrupted cc would poison the baseline</p>
+<hr>
+<h2 id="10-proto-vp-vs-full-vp-quick-reference">10. Proto-VP vs. Full VP Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Proto-VP (L2)</th>
+<th>Full VP (L3)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>When</strong></td>
+<td>During L2 synthesis, before L3 emit</td>
+<td>After L3 emit, using completed output</td>
+</tr>
+<tr>
+<td><strong>Verdict authority</strong></td>
+<td>None — marks only</td>
+<td>Full verdict authority</td>
+</tr>
+<tr>
+<td><strong>Can halt cycle</strong></td>
+<td>No</td>
+<td>No (recommends only)</td>
+</tr>
+<tr>
+<td><strong>Can abort session</strong></td>
+<td>No</td>
+<td>Recommends to research operator</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td><code>vp_flagged = true</code> on cycle record</td>
+<td>Cycle verdict + session verdict + cc</td>
+</tr>
+<tr>
+<td><strong>Triggers watched</strong></td>
+<td>Approaching thresholds (pre-fire)</td>
+<td>Fired thresholds (post-fire)</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>Fast — threshold scan only</td>
+<td>Full evaluation — all 7 steps</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="11-cross-references">11. Cross-References</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./t_OperatorMap.html"><code>t_OperatorMap.md §7.4</code></a></td>
+<td>Defines all VP trigger flags used in §3 above</td>
+</tr>
+<tr>
+<td><a href="./t_Session_Schema.json"><code>t_Session_Schema.json</code></a></td>
+<td><code>vp_summary</code> object and <code>clarity_coefficient</code> field both defined there; VP populates them</td>
+</tr>
+<tr>
+<td><a href="./t_Index.html"><code>t_Index.md</code></a></td>
+<td>Module master index — this file listed as P3</td>
+</tr>
+<tr>
+<td><a href="./t_Capture.html"><code>t_Capture.md</code></a></td>
+<td>Proto-VP behavior first described here; this document formalizes and supersedes that description</td>
+</tr>
+<tr>
+<td><a href="./t_FlowMap.html"><code>t_FlowMap.md</code></a></td>
+<td>VP sits at L2 and L3 in the flow diagram — visual representation there</td>
+</tr>
+<tr>
+<td><a href="./models.json"><code>models.json</code></a></td>
+<td>VP governs write-back to this file via scaffolded flag + cc threshold</td>
+</tr>
+<tr>
+<td><a href="../spine/models_resonance_variance_dashboard.html"><code>../spine/models_resonance_variance_dashboard.html</code></a></td>
+<td>Visualizes aggregate metrics that VP gates — VP verdict quality directly affects dashboard fidelity</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="12-build-log">12. Build Log</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Action</th>
+<th>Author</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-22</td>
+<td>Proto-VP behavior captured in <code>t_Capture.md</code> (informal, no verdicts defined)</td>
+<td>TriadicFrameworks</td>
+</tr>
+<tr>
+<td>2026-09-22</td>
+<td><code>t_ValidatorPulse.md</code> created — full VP specification: trigger table, 7-step cycle evaluation, session verdict rules, clarity coefficient formula, RLCD calibration, edge cases</td>
+<td>TriadicFrameworks</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>The Validator Pulse does not judge the resonance. It judges whether the resonance was read cleanly.</em></p>
+  </main>
+</body>
+</html>

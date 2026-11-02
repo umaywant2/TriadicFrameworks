@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Resonance-Time Universe Definition",
+  "type": "object",
+  "properties": {
+    "universe_id": { "type": "string" },
+    "dimensions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "core_principles": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "triadic_constants": { "type": "object" },
+    "canonical_sources": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

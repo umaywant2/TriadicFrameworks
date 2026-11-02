@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Light/06_stellar_interior_mapping.md">
+  <title>Section 6 — Stellar Interior Mapping</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Light/06_stellar_interior_mapping.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Light/06_stellar_interior_mapping.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="section-6-stellar-interior-mapping">Section 6 — Stellar Interior Mapping</h1>
+<h3 id="triadicframeworks-docslight06_stellar_interior_mappingmd">TriadicFrameworks · /docs/Light/06_stellar_interior_mapping.md</h3>
+<hr>
+<h2 id="60-overview">6.0 Overview</h2>
+<p>Stellar Interior Mapping (SIM) is the structural analysis of how a star's internal gradients produce the spectral fingerprints that define Light Regime Epochs. This section explains <em>why</em> the Sun's light changes over millions of years — not in brightness, but in <strong>spectral identity</strong>, <strong>coherence stability</strong>, and <strong>modulation patterns</strong>.</p>
+<p>SIM is the <strong>root cause layer</strong> of the Light module.</p>
+<hr>
+<h2 id="61-definition-stellar-interior-mapping-sim">6.1 Definition: Stellar Interior Mapping (SIM)</h2>
+<p><strong>Stellar Interior Mapping</strong> is the process of identifying how internal stellar structures generate external spectral fingerprints. SIM tracks: core fusion gradients, radiative zone behavior, convection zone dynamics, magnetic field generation, differential rotation, helium settling, and solar wind modulation.</p>
+<hr>
+<h2 id="62-the-four-interior-layers-that-shape-light">6.2 The Four Interior Layers That Shape Light</h2>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│  STELLAR INTERIOR → SPECTRAL OUTPUT                 │
+│                                                     │
+│  SIM-1  CORE GRADIENT        ← spectral baseline    │
+│  SIM-2  RADIATIVE ZONE       ← coherence stability  │
+│  SIM-3  CONVECTION ZONE      ← modulation patterns  │
+│  SIM-4  PHOTOSPHERE/CHROMOSPHERE ← final identity   │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="sim-1-core-gradient">SIM-1: Core Gradient</h3>
+<p>Determines: fusion rate, neutrino flux, photon generation, spectral baseline. Changes in core temperature or composition shift the entire spectral fingerprint.</p>
+<h3 id="sim-2-radiative-zone">SIM-2: Radiative Zone</h3>
+<p>Determines: photon transport time, spectral smoothing, coherence stability. A more stable RZ → more stable spectral fingerprint → larger biospheric scale. Origin of SCS (Spectral Coherence Stability).</p>
+<h3 id="sim-3-convection-zone">SIM-3: Convection Zone</h3>
+<p>Determines: surface granulation, spectral modulation, magnetic field generation, solar cycle behavior. Changes in convection patterns directly alter spectral coherence. The 11-year solar cycle is a surface expression of convection zone dynamics.</p>
+<h3 id="sim-4-photosphere-chromosphere">SIM-4: Photosphere \&amp; Chromosphere</h3>
+<p>Determines: visible spectrum identity, UV output, IR distribution, spectral noise. The <strong>final translation layer</strong> before light leaves the star.</p>
+<hr>
+<h2 id="63-the-interiorexterior-coupling-equation">6.3 The Interior–Exterior Coupling Equation</h2>
+<pre><code>SF\_star = f(CG, RZ, CZ, PC)
+</code></pre>
+<ul>
+<li><strong>CG</strong> sets the spectral baseline</li>
+<li><strong>RZ</strong> sets coherence stability</li>
+<li><strong>CZ</strong> sets modulation patterns</li>
+<li><strong>PC</strong> sets final spectral identity</li>
+</ul>
+<hr>
+<h2 id="64-mapping-interior-changes-to-biospheric-effects">6.4 Mapping Interior Changes to Biospheric Effects</h2>
+<table>
+<thead>
+<tr>
+<th>Interior Layer</th>
+<th>Changes</th>
+<th>BSL Variable Affected</th>
+<th>Biospheric Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core Gradient (CG)</td>
+<td>Temperature/composition shift</td>
+<td>SED</td>
+<td>Energy density change</td>
+</tr>
+<tr>
+<td>Radiative Zone (RZ)</td>
+<td>Stability change</td>
+<td>SCS</td>
+<td>Coherence stability change</td>
+</tr>
+<tr>
+<td>Convection Zone (CZ)</td>
+<td>Reorganization</td>
+<td>Modulation</td>
+<td>Spectral cycle change</td>
+</tr>
+<tr>
+<td>Photosphere/Chromosphere (PC)</td>
+<td>Output shift</td>
+<td>SPD</td>
+<td>Penetration depth change</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="65-the-inverted-star-integration">6.5 The Inverted Star Integration</h2>
+<p>This section integrates directly with the <strong>Inverted Star</strong> module (<code>/docs/InvertedStar/</code>). The Inverted Star explains how interior gradients map outward; SIM explains how those gradients become spectral fingerprints; Light Regime Epochs explain how those fingerprints shape life.</p>
+<hr>
+<h2 id="66-forward-linkage">6.6 Forward Linkage</h2>
+<ul>
+<li><strong><a href="07_artificial_light_regimes.html">07_artificial_light_regimes.md</a></strong> — using SIM knowledge to design artificial spectral sources</li>
+<li><strong><a href="08_substrate_safety_protocols.html">08_substrate_safety_protocols.md</a></strong> — protecting substrates from interior-change analogs</li>
+<li><strong><a href="09_regime_transition_architecture.html">09_regime_transition_architecture.md</a></strong> — designing transitions that mirror natural LRE shifts</li>
+</ul>
+<hr>
+<p><em>TriadicFrameworks Canon · Light Module · Section 6 of 10</em>
+<em>← <a href="05_light_substrate_engineering.html">05_light_substrate_engineering.md</a> · <a href="07_artificial_light_regimes.html">07_artificial_light_regimes.md →</a></em></p>
+  </main>
+</body>
+</html>

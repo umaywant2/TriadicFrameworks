@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/resonance-substrate-model/docs/experiments/faraday_paradox_experiment.md">
+  <title>Faraday Paradox Experiment</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/resonance-substrate-model/docs/experiments/faraday_paradox_experiment.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/resonance-substrate-model/docs/experiments/faraday_paradox_experiment.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="faraday-paradox-experiment">Faraday Paradox Experiment</h1>
+<p>This document provides a conceptual overview of the Faraday Paradox experiment as implemented within the Resonance Substrate Model.</p>
+<hr>
+<h1 id="quicklinks">Quicklinks</h1>
+<ul>
+<li><a href="../README.html">docs README</a></li>
+<li><a href="../api/integration_examples.html">docs api integration examples</a></li>
+<li><a href="../api/README.html">docs api README</a></li>
+<li><a href="../api/schema_overview.html">docs api schema overview</a></li>
+<li><a href="../api/using_the_schemas.html">docs api using the schemas</a></li>
+<li><a href="faraday_paradox_experiment.html">docs experiments faraday paradox experiment</a></li>
+<li><a href="README.html">docs experiments README</a></li>
+<li><a href="replication_checklist.html">docs experiments replication checklist</a></li>
+<li><a href="resonance_alignment_tests.html">docs experiments resonance alignment tests</a></li>
+<li><a href="rotating_conductor_tests.html">docs experiments rotating conductor tests</a></li>
+<li><a href="../methods/dimensional_layers.html">docs methods dimensional layers</a></li>
+<li><a href="../methods/field_equations.html">docs methods field equations</a></li>
+<li><a href="../methods/operator_definitions.html">docs methods operator definitions</a></li>
+<li><a href="../methods/README.html">docs methods README</a></li>
+<li><a href="../methods/substrate_dynamics.html">docs methods substrate dynamics</a></li>
+<li><a href="../methods/triadic_fields.html">docs methods triadic fields</a></li>
+<li><a href="../onboarding/model_map.html">docs onboarding model map</a></li>
+<li><a href="../onboarding/reading_guide.html">docs onboarding reading guide</a></li>
+<li><a href="../onboarding/triadic_quickstart.html">docs onboarding triadic quickstart</a></li>
+<li><a href="../onboarding/verification_tests.html">docs onboarding verification tests</a></li>
+<li><a href="../overview/comparison_to_gr_models.html">docs overview comparison to gr models</a></li>
+<li><a href="../overview/glossary.html">docs overview glossary</a></li>
+<li><a href="../overview/introduction.html">docs overview introduction</a></li>
+<li><a href="../overview/README.html">docs overview README</a></li>
+<li><a href="../overview/resonance_primitives.html">docs overview resonance primitives</a></li>
+<li><a href="../overview/theoretical_background.html">docs overview theoretical background</a></li>
+<li><a href="../simulations/boundary_conditions.html">docs simulations boundary conditions</a></li>
+<li><a href="../simulations/numerical_methods.html">docs simulations numerical methods</a></li>
+<li><a href="../simulations/README.html">docs simulations README</a></li>
+<li><a href="../simulations/solver_architecture.html">docs simulations solver_architecture</a></li>
+<li><a href="../simulations/validation_metrics.html">docs simulations validation metrics</a></li>
+<li><a href="../simulations/core/README.html">docs simulations core README</a></li>
+<li><a href="../">previous folder</a></li>
+</ul>
+<h2 id="1-background">1. Background</h2>
+<p>Faraday’s Paradox describes a counterintuitive induction phenomenon involving rotating magnets and stationary conductors.<br>
+In the substrate model, this experiment is adapted to explore:
+- paradox-class induction behavior<br>
+- resonance envelope deformation<br>
+- spin-field alignment under rotation  </p>
+<hr>
+<h2 id="2-experimental-goals">2. Experimental Goals</h2>
+<ul>
+<li>reproduce classical paradox behavior  </li>
+<li>compare classical and substrate predictions  </li>
+<li>identify resonance-specific deviations  </li>
+<li>analyze coherence and alignment responses  </li>
+</ul>
+<hr>
+<h2 id="3-setup-summary">3. Setup Summary</h2>
+<p>The experiment typically includes:
+- rotating magnetic field source<br>
+- stationary conductor or substrate grid<br>
+- field probes or sensors<br>
+- apparatus diagram (see <code>experiments/faraday_paradox/apparatus_diagram.svg</code>)  </p>
+<hr>
+<h2 id="4-expected-outcomes">4. Expected Outcomes</h2>
+<ul>
+<li>induced signal patterns consistent with paradox-class behavior  </li>
+<li>resonance pockets forming under rotational forcing  </li>
+<li>alignment waves or coherence structures  </li>
+<li>deviations from classical EM predictions  </li>
+</ul>
+<hr>
+<h2 id="5-related-files">5. Related Files</h2>
+<ul>
+<li>protocol: <code>experiments/faraday_paradox/protocol.md</code>  </li>
+<li>raw data: <code>experiments/faraday_paradox/raw_data/</code>  </li>
+<li>analysis notebook: <code>experiments/faraday_paradox/analysis.ipynb</code>  </li>
+</ul>
+  </main>
+</body>
+</html>

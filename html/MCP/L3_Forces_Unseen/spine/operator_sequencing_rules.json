@@ -1,0 +1,70 @@
+{
+  "id": "S3-Spine-Operator-Sequencing",
+  "canonical": "R5",
+  "version": "1.0.0",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "regime": "unseen-force-regime",
+
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "nodes": ["gradient", "field", "rupture", "integrity"],
+
+  "validSequences": [
+    {
+      "pattern": ["gradient", "field"],
+      "operators": ["push", "gradient", "fieldShift"],
+      "constraints": {
+        "semantics": ["gradientIntensity", "fieldCoherence"],
+        "dimensions": ["L4", "L5", "L16", "LH", "L8", "L10", "L26"],
+        "description": "Gradient operators may precede field operators when gradientIntensity is stable or increasing."
+      }
+    },
+    {
+      "pattern": ["field", "rupture"],
+      "operators": ["ruptureForce"],
+      "constraints": {
+        "semantics": ["fieldCoherence", "rupturePotential"],
+        "dimensions": ["L8", "L10", "L26", "L12"],
+        "description": "Field coherence collapse may induce rupture; ruptureForce accelerates this transition."
+      }
+    },
+    {
+      "pattern": ["field", "integrity"],
+      "operators": ["bind", "fieldShift"],
+      "constraints": {
+        "semantics": ["fieldCoherence", "forceIntegrity"],
+        "dimensions": ["L8", "L10", "L26", "L32", "LI"],
+        "description": "Field operators may precede integrity operators when fieldCoherence supports structural stability."
+      }
+    },
+    {
+      "pattern": ["rupture", "integrity"],
+      "operators": ["bind"],
+      "constraints": {
+        "semantics": ["rupturePotential", "forceIntegrity"],
+        "dimensions": ["L12", "L32", "LI"],
+        "description": "Integrity may be restored after rupture when bind stabilizes forceIntegrity."
+      }
+    }
+  ],
+
+  "forbiddenSequences": [
+    {
+      "pattern": ["rupture", "gradient"],
+      "reason": "Rupture cannot produce gradient; violates causal direction of S3 spine."
+    },
+    {
+      "pattern": ["integrity", "gradient"],
+      "reason": "Integrity cannot generate gradient; requires field or continuity mediation."
+    },
+    {
+      "pattern": ["rupture", "field"],
+      "reason": "Rupture disrupts fieldCoherence; field cannot be reconstructed without gradient stabilization."
+    },
+    {
+      "pattern": ["integrity", "rupture"],
+      "reason": "Integrity cannot escalate directly into rupture; requires field instability."
+    }
+  ]
+}

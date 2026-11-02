@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/substrate/frameworks/atlas/triadic-substrate.json.md">
+  <title>🌐 triadic-substrate.json</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/substrate/frameworks/atlas/triadic-substrate.json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/substrate/frameworks/atlas/triadic-substrate.json.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="triadic-substratejson">🌐 <strong>triadic-substrate.json</strong></h1>
+<h3 id="canonical-substrate-declaration-for-the-triadic-atlas-framework"><em>Canonical substrate declaration for the Triadic Atlas framework</em></h3>
+<p><a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/schemas/substrate/frameworks/atlas/triadic-substrate.json">github.com</a></p>
+<pre><code class="language-json">{
+  &quot;substrate&quot;: &quot;triadic-atlas&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;YYYY-MM-DD&quot;,
+
+  &quot;modules&quot;: {
+    &quot;atlas_surfaces&quot;: {
+      &quot;path&quot;: &quot;./atlas-surfaces.json&quot;,
+      &quot;schema&quot;: &quot;./triadic-atlas.schema.json&quot;,
+      &quot;description&quot;: &quot;Defines global, country, temporal, and activation surfaces of the Triadic Atlas.&quot;
+    },
+    &quot;atlas_navigation&quot;: {
+      &quot;path&quot;: &quot;./atlas-navigation.json&quot;,
+      &quot;schema&quot;: &quot;./navigation-schema.schema.json&quot;,
+      &quot;description&quot;: &quot;Navigation grammar for traversing coherence, drift, stability, resonance, epoch, and ignition surfaces.&quot;
+    },
+    &quot;atlas_fingerprint&quot;: {
+      &quot;path&quot;: &quot;./atlas-fingerprint.json&quot;,
+      &quot;schema&quot;: &quot;./triadic-atlas.schema.json&quot;,
+      &quot;description&quot;: &quot;Structural, behavioral, temporal, invariance, and continuity fingerprints for atlas surfaces.&quot;
+    },
+    &quot;atlas_interaction_protocol&quot;: {
+      &quot;path&quot;: &quot;./atlas-interaction-protocol.json&quot;,
+      &quot;schema&quot;: &quot;./atlas-interaction.schema.json&quot;,
+      &quot;description&quot;: &quot;Interaction modes, gestures, transitions, events, and queries for atlas traversal.&quot;
+    },
+    &quot;atlas_consistency&quot;: {
+      &quot;path&quot;: &quot;./atlas-consistency.json&quot;,
+      &quot;schema&quot;: &quot;./triadic-atlas.schema.json&quot;,
+      &quot;description&quot;: &quot;Consistency rules across surfaces, navigation, interaction, synchronization, continuity, and invariance.&quot;
+    },
+    &quot;atlas_synchronization&quot;: {
+      &quot;path&quot;: &quot;./atlas-synchronization.json&quot;,
+      &quot;schema&quot;: &quot;./atlas-synchronization.schema.json&quot;,
+      &quot;description&quot;: &quot;Synchronization fabric for atlas surfaces, including global and country fields, modes, routes, and consistency rules.&quot;
+    }
+  },
+
+  &quot;schemas&quot;: {
+    &quot;root_schema&quot;: {
+      &quot;path&quot;: &quot;./triadic-atlas.schema.json&quot;,
+      &quot;description&quot;: &quot;Root schema for all Triadic Atlas artifacts.&quot;
+    },
+    &quot;navigation_schema&quot;: {
+      &quot;path&quot;: &quot;./navigation-schema.schema.json&quot;,
+      &quot;description&quot;: &quot;Validation schema for atlas-navigation.json.&quot;
+    },
+    &quot;interaction_schema&quot;: {
+      &quot;path&quot;: &quot;./atlas-interaction.schema.json&quot;,
+      &quot;description&quot;: &quot;Validation schema for atlas-interaction-protocol.json.&quot;
+    },
+    &quot;synchronization_schema&quot;: {
+      &quot;path&quot;: &quot;./atlas-synchronization.schema.json&quot;,
+      &quot;description&quot;: &quot;Validation schema for atlas-synchronization.json.&quot;
+    }
+  },
+
+  &quot;meta&quot;: {
+    &quot;notes&quot;: &quot;Substrate declaration for the Triadic Atlas framework, defining module paths, schemas, and structural alignment.&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="why-this-is-the-correct-substrate-file">⭐ Why this is the correct substrate file</h2>
+<ul>
+<li>Mirrors your substrate pattern used across all other frameworks.  </li>
+<li>Wraps the Atlas cluster cleanly: surfaces, navigation, fingerprint, interaction, consistency, synchronization.  </li>
+<li>Includes all schema validators.  </li>
+<li>Fully aligned with the directory structure visible in your tab.  </li>
+<li>Silent‑release compatible and ready for commit.</li>
+</ul>
+  </main>
+</body>
+</html>

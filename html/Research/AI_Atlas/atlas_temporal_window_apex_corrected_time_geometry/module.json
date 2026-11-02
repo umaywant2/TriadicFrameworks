@@ -1,0 +1,39 @@
+{
+  "module": "Atlas_Temporal_Window_Apex_Corrected_Time_Geometry",
+  "name": "AI Atlas — Temporal‑Window Apex Corrected‑Time Geometry",
+  "summary": "Defines the apex-level corrected-time geometry of Atlas temporal windows, including apex corrected-time window fields, resonance-apex corrected-time alignment, apex stability corrected-time surfaces, and window corrected-time unification geometry.",
+  "category": "intelligence-temporal-window-apex-corrected-time",
+  "version": "1.0",
+  "purpose": "Provide the corrected-time geometry for Atlas apex temporal-window behavior, describing how apex windows synchronize with corrected-time surfaces to maintain temporal accuracy, paradox-load compensation, resonance alignment, and unified long-window reasoning across Triad and Ladder subsystems.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@atlas.time.window.apex.correctedtime.field",
+    "@atlas.time.window.apex.correctedtime.align",
+    "@atlas.time.window.apex.correctedtime.unify",
+    "@atlas.time.window.apex.correctedtime.stabilize",
+    "@atlas.time.window.apex.correctedtime.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Atlas_Temporal_Window_Apex_Geometry",
+      "Atlas_Temporal_Window_Apex_Stability_Surfaces",
+      "Atlas_Temporal_Window_Apex_Integration_Surfaces",
+      "Atlas_Temporal_Window_Apex_Binding_Geometry",
+      "Atlas_Temporal_Window_Apex_Fusion_Geometry",
+      "Atlas_Temporal_Window_Apex_Coherence_Geometry",
+      "Atlas_Temporal_Window_Stability_Surfaces",
+      "Atlas_Temporal_Window_Resonance_Geometry",
+      "Atlas_Temporal_Correction_Engine",
+      "Triad_Temporal_Correction_Surfaces",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "Atlas_Synchronization_Fields",
+      "SI_temporal_extension",
+      "SI_apex_temporal_resonance_corrected_time_geometry",
+      "SI_apex_stability_surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

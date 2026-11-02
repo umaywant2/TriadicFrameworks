@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/schemas/rtt-autonomous/README.md">
+  <title>🤖 RTT‑Autonomous</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/schemas/rtt-autonomous/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/schemas/rtt-autonomous/README.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="schemas_rtt_autonomous_" src="https://github.com/user-attachments/assets/4bd856b8-e018-4a98-b994-8eb009c6dcf9" /></p>
+<h1 id="rttautonomous">🤖 RTT‑Autonomous</h1>
+<h3 id="core-schemas-for-autonomous-forms-rttinside"><strong>Core Schemas for Autonomous Forms (RTT‑Inside)</strong></h3>
+<p>The <strong>RTT‑Autonomous</strong> module defines the <strong>domain‑neutral foundation</strong> for all autonomous robotic forms within the Triadic Frameworks ecosystem.<br>
+Where other folders provide domain‑specific extensions (fish, drones, rovers, etc.), this module captures the <strong>universal structures</strong> shared across all autonomous agents.</p>
+<p>These schemas describe:</p>
+<ul>
+<li>identity and morphology  </li>
+<li>sensor fusion  </li>
+<li>mission planning  </li>
+<li>environmental interaction  </li>
+<li>swarm coherence  </li>
+<li>energy profiles  </li>
+<li>3D corridors and operational envelopes  </li>
+</ul>
+<p>All schemas follow:</p>
+<ul>
+<li><strong>snake_case</strong> naming  </li>
+<li><strong>JSON Schema Draft 2020‑12</strong>  </li>
+<li><strong>RTT‑Inside semantics</strong>  </li>
+<li><strong>SI units</strong>  </li>
+<li><strong>UUIDv4 identifiers</strong>  </li>
+<li><strong>ISO‑8601 timestamps</strong>  </li>
+<li><strong>extensions.<domain></strong> for specialization  </li>
+</ul>
+<p>This module is the backbone for every autonomous form in the Triadic Frameworks universe.</p>
+<hr>
+<h2 id="schema-overview">📁 Schema Overview</h2>
+<h3 id="1-autonomous_form_descriptorschemajson"><strong>1. <code>autonomous_form_descriptor.schema.json</code></strong></h3>
+<p>Defines the identity, morphology, and capabilities of an autonomous form.</p>
+<p>Includes:</p>
+<ul>
+<li>operating domain (air, water, land, hybrid)  </li>
+<li>morphology type (fish, quadcopter, rover, walker)  </li>
+<li>capability list  </li>
+<li>extension hooks  </li>
+</ul>
+<p>This schema is the entry point for defining any autonomous agent.</p>
+<hr>
+<h3 id="2-autonomous_sensor_sampleschemajson"><strong>2. <code>autonomous_sensor_sample.schema.json</code></strong></h3>
+<p>Captures a single fused sensor sample from an autonomous form.</p>
+<p>Includes:</p>
+<ul>
+<li>position + velocity  </li>
+<li>IMU readings  </li>
+<li>environmental data (temperature, pressure, salinity)  </li>
+<li>RTT clarity + drift overlays  </li>
+<li>extension hooks  </li>
+</ul>
+<p>This schema is used for telemetry, replay, analysis, and real‑time autonomy.</p>
+<hr>
+<h3 id="3-autonomous_mission_profileschemajson"><strong>3. <code>autonomous_mission_profile.schema.json</code></strong></h3>
+<p>Defines a mission as a sequence of phases and tasks.</p>
+<p>Includes:</p>
+<ul>
+<li>mission ID  </li>
+<li>phase definitions  </li>
+<li>constraints  </li>
+<li>extension hooks for domain‑specific mission logic  </li>
+</ul>
+<p>This schema is extended by fish, drone, and rover mission modules.</p>
+<hr>
+<h3 id="4-autonomous_corridor_definitionschemajson"><strong>4. <code>autonomous_corridor_definition.schema.json</code></strong></h3>
+<p>Describes a 3D operational corridor with time windows and RTT overlays.</p>
+<p>Includes:</p>
+<ul>
+<li>3D volume (min/max)  </li>
+<li>time window  </li>
+<li>clarity profiles  </li>
+<li>extension hooks  </li>
+</ul>
+<p>Used for safe navigation, multi‑agent coordination, and environmental routing.</p>
+<hr>
+<h3 id="5-autonomous_swarm_stateschemajson"><strong>5. <code>autonomous_swarm_state.schema.json</code></strong></h3>
+<p>Represents the state of a swarm or multi‑agent collective.</p>
+<p>Includes:</p>
+<ul>
+<li>swarm ID  </li>
+<li>member list  </li>
+<li>positions  </li>
+<li>coherence scores  </li>
+<li>extension hooks  </li>
+</ul>
+<p>Supports schooling, flocking, formation flight, and distributed autonomy.</p>
+<hr>
+<h3 id="6-autonomous_morphologyschemajson"><strong>6. <code>autonomous_morphology.schema.json</code></strong></h3>
+<p>Describes the physical body plan and actuation layout.</p>
+<p>Includes:</p>
+<ul>
+<li>body plan (fish, quadcopter, rover, walker)  </li>
+<li>actuators  </li>
+<li>control surfaces  </li>
+<li>extension hooks  </li>
+</ul>
+<p>This schema is extended by fish hydrodynamics and drone flight envelopes.</p>
+<hr>
+<h3 id="7-autonomous_energy_profileschemajson"><strong>7. <code>autonomous_energy_profile.schema.json</code></strong></h3>
+<p>Defines the energy storage and thermal envelope of the autonomous form.</p>
+<p>Includes:</p>
+<ul>
+<li>battery capacity  </li>
+<li>fuel energy  </li>
+<li>thermal limits  </li>
+<li>extension hooks  </li>
+</ul>
+<p>Used for endurance prediction and mission feasibility.</p>
+<hr>
+<h3 id="8-autonomous_environmental_interactionschemajson"><strong>8. <code>autonomous_environmental_interaction.schema.json</code></strong></h3>
+<p>Describes how the autonomous form interacts with its environment.</p>
+<p>Includes:</p>
+<ul>
+<li>interaction modes (sonar, lidar, fins, wheels)  </li>
+<li>environmental constraints  </li>
+<li>extension hooks  </li>
+</ul>
+<p>This schema is extended by aquatic and aerial modules.</p>
+<hr>
+<h2 id="relationship-to-domain-extensions">🔗 Relationship to Domain Extensions</h2>
+<p>This module is extended by:</p>
+<ul>
+<li><code>rtt-autonomous-fish/</code>  </li>
+<li><code>rtt-autonomous-drone/</code>  </li>
+<li>future modules (rovers, walkers, hybrids)</li>
+</ul>
+<p>Each extension adds <strong>domain‑specific fields</strong> without duplicating core logic.</p>
+<p>The core schemas remain <strong>clean, minimal, and universal</strong>.</p>
+<hr>
+<h2 id="usage-pattern">🧩 Usage Pattern</h2>
+<p>A typical autonomous form uses:</p>
+<ol>
+<li><strong>Core descriptor</strong>  </li>
+<li><strong>Core morphology</strong>  </li>
+<li><strong>Core energy profile</strong>  </li>
+<li><strong>Core environmental interaction</strong>  </li>
+<li><strong>Domain extension</strong> (fish, drone, rover)  </li>
+<li><strong>Mission profile + domain mission extension</strong>  </li>
+</ol>
+<p>This layered approach keeps the system modular and future‑proof.</p>
+<hr>
+<h1 id="rttautonomous-ecosystem">🤖 RTT‑Autonomous Ecosystem</h1>
+<h3 id="unified-schema-framework-for-autonomous-forms-rttinside"><strong>Unified Schema Framework for Autonomous Forms (RTT‑Inside)</strong></h3>
+<p>The <strong>RTT‑Autonomous Ecosystem</strong> provides a complete, extensible, and domain‑neutral foundation for defining autonomous robotic forms across air, water, land, and hybrid environments.<br>
+It is built on the principles of <strong>Resonance‑Time Theory (RTT‑Inside)</strong>, enabling autonomous agents to operate with clarity‑aware navigation, drift‑aware behavior, and multi‑agent coherence.</p>
+<p>This ecosystem is composed of:</p>
+<ul>
+<li><strong>RTT‑Autonomous Core</strong> — universal schemas for all autonomous forms  </li>
+<li><strong>RTT‑Autonomous‑Fish</strong> — aquatic extensions for biomimetic robotic fish  </li>
+<li><strong>RTT‑Autonomous‑Drone</strong> — aerial extensions for drones, multirotors, and fixed‑wing craft  </li>
+</ul>
+<p>Together, these modules form a <strong>cohesive, future‑proof substrate</strong> for ecological robotics, distributed autonomy, and multi‑domain mission planning.</p>
+<p>All schemas follow:</p>
+<ul>
+<li><strong>snake_case</strong> naming  </li>
+<li><strong>JSON Schema Draft 2020‑12</strong>  </li>
+<li><strong>RTT‑Inside semantics</strong>  </li>
+<li><strong>SI units</strong>  </li>
+<li><strong>UUIDv4 identifiers</strong>  </li>
+<li><strong>ISO‑8601 timestamps</strong>  </li>
+<li><strong>extensions.<domain></strong> for specialization  </li>
+</ul>
+<hr>
+<h1 id="architecture-overview">🧩 Architecture Overview</h1>
+<p>The RTT‑Autonomous ecosystem is structured in <strong>three layers</strong>:</p>
+<h2 id="1-core-layer-universal-autonomous-structures"><strong>1. Core Layer — Universal Autonomous Structures</strong></h2>
+<p>Located in:</p>
+<pre><code>docs/schemas/rtt-autonomous/
+</code></pre>
+<p>This layer defines the <strong>fundamental building blocks</strong> shared by all autonomous forms:</p>
+<ul>
+<li>identity and morphology  </li>
+<li>sensor fusion  </li>
+<li>mission profiles  </li>
+<li>3D corridors  </li>
+<li>swarm state  </li>
+<li>energy profiles  </li>
+<li>environmental interaction  </li>
+</ul>
+<p>These schemas are intentionally domain‑neutral and serve as the <strong>substrate</strong> for all extensions.</p>
+<hr>
+<h2 id="2-domain-extensions-specialized-capabilities"><strong>2. Domain Extensions — Specialized Capabilities</strong></h2>
+<p>Each domain builds on the core through clean, additive schemas.</p>
+<h3 id="rttautonomousfish">🐟 <strong>RTT‑Autonomous‑Fish</strong></h3>
+<p>Located in:</p>
+<pre><code>docs/schemas/rtt-autonomous-fish/
+</code></pre>
+<p>Adds aquatic‑specific structures:</p>
+<ul>
+<li>biomimetic species profiles  </li>
+<li>hydrodynamics  </li>
+<li>habitat interaction  </li>
+<li>underwater mission extensions  </li>
+<li>schooling and swarm behavior  </li>
+</ul>
+<p>Ideal for ecological robotics, Great Lakes restoration, and underwater swarms.</p>
+<hr>
+<h3 id="rttautonomousdrone">🚁 <strong>RTT‑Autonomous‑Drone</strong></h3>
+<p>Located in:</p>
+<pre><code>docs/schemas/rtt-autonomous-drone/
+</code></pre>
+<p>Adds aerial‑specific structures:</p>
+<ul>
+<li>frame types (quadcopter, VTOL, fixed‑wing)  </li>
+<li>flight envelopes  </li>
+<li>battery and thermal constraints  </li>
+<li>geofencing and altitude rules  </li>
+<li>payload and landing behaviors  </li>
+</ul>
+<p>Supports multirotor autonomy, fixed‑wing missions, and airspace corridor navigation.</p>
+<hr>
+<h2 id="3-future-domains-plugandplay-growth"><strong>3. Future Domains — Plug‑and‑Play Growth</strong></h2>
+<p>The architecture is designed to support additional modules, such as:</p>
+<ul>
+<li><strong>RTT‑Autonomous‑Rover</strong> (ground vehicles)  </li>
+<li><strong>RTT‑Autonomous‑Walker</strong> (legged robots)  </li>
+<li><strong>RTT‑Autonomous‑Hybrid</strong> (air/water, land/air, amphibious)  </li>
+<li><strong>RTT‑Autonomous‑Swarm</strong> (cross‑domain collectives)  </li>
+</ul>
+<p>Each new domain extends the core without modifying it.</p>
+<hr>
+<h1 id="how-the-modules-work-together">🔗 How the Modules Work Together</h1>
+<p>A typical autonomous form uses:</p>
+<ol>
+<li><strong>Core descriptor</strong>  </li>
+<li><strong>Core morphology</strong>  </li>
+<li><strong>Core energy profile</strong>  </li>
+<li><strong>Core environmental interaction</strong>  </li>
+<li><strong>Domain extension</strong> (fish, drone, rover, etc.)  </li>
+<li><strong>Mission profile + domain mission extension</strong>  </li>
+</ol>
+<p>This layered approach ensures:</p>
+<ul>
+<li><strong>clean separation of concerns</strong>  </li>
+<li><strong>maximum reuse</strong>  </li>
+<li><strong>minimal duplication</strong>  </li>
+<li><strong>future‑proof extensibility</strong>  </li>
+<li><strong>RTT‑Inside clarity/drift integration</strong>  </li>
+</ul>
+<hr>
+<h1 id="rttinside-integration">🌐 RTT‑Inside Integration</h1>
+<p>All autonomous schemas are designed to integrate with RTT‑Inside concepts:</p>
+<ul>
+<li><strong>clarity_score</strong> → environmental signal quality  </li>
+<li><strong>drift_vector</strong> → behavioral or environmental drift  </li>
+<li><strong>coherence_score</strong> → swarm alignment  </li>
+<li><strong>corridor clarity overlays</strong> → clarity‑aware routing  </li>
+<li><strong>temporal windows</strong> → time‑bounded mission phases  </li>
+</ul>
+<p>This allows autonomous forms to operate in <strong>resonance‑aware environments</strong>, adapting behavior based on clarity, drift, and temporal structure.</p>
+<hr>
+<h1 id="example-workflow">🧭 Example Workflow</h1>
+<p>A robotic fish mission might use:</p>
+<ul>
+<li><code>autonomous_form_descriptor</code>  </li>
+<li><code>fish_extension</code>  </li>
+<li><code>fish_hydrodynamics</code>  </li>
+<li><code>autonomous_mission_profile</code>  </li>
+<li><code>fish_mission_profile_extension</code>  </li>
+<li><code>autonomous_corridor_definition</code>  </li>
+<li><code>autonomous_swarm_state</code>  </li>
+</ul>
+<p>A drone mission might use:</p>
+<ul>
+<li><code>autonomous_form_descriptor</code>  </li>
+<li><code>drone_extension</code>  </li>
+<li><code>drone_flight_envelope</code>  </li>
+<li><code>drone_energy_and_battery</code>  </li>
+<li><code>autonomous_mission_profile</code>  </li>
+<li><code>drone_mission_profile_extension</code>  </li>
+</ul>
+<p>Both share the same <strong>core substrate</strong>, ensuring consistency across domains.</p>
+<hr>
+<h1 id="future-directions">🌱 Future Directions</h1>
+<p>The RTT‑Autonomous ecosystem is designed to evolve toward:</p>
+<ul>
+<li>cross‑domain swarms  </li>
+<li>clarity‑adaptive routing  </li>
+<li>ecological restoration robotics  </li>
+<li>distributed mission planning  </li>
+<li>hybrid morphologies  </li>
+<li>real‑time RTT‑Inside feedback loops  </li>
+</ul>
+<p>This top‑level module provides the <strong>conceptual and structural foundation</strong> for all future autonomous robotics work in Triadic Frameworks.</p>
+<hr>
+<h1 id="rttautonomous-ecosystem-architecture-diagram-mermaid">🧭 <strong>RTT‑Autonomous Ecosystem — Architecture Diagram (Mermaid)</strong></h1>
+<pre><code class="language-mermaid">flowchart TD
+
+    %% Core Layer
+    A[RTT‑Autonomous Core\n(domain‑neutral)]:::core
+
+    A1[autonomous_form_descriptor]:::core
+    A2[autonomous_sensor_sample]:::core
+    A3[autonomous_mission_profile]:::core
+    A4[autonomous_corridor_definition]:::core
+    A5[autonomous_swarm_state]:::core
+    A6[autonomous_morphology]:::core
+    A7[autonomous_energy_profile]:::core
+    A8[autonomous_environmental_interaction]:::core
+
+    %% Fish Layer
+    subgraph F[RTT‑Autonomous‑Fish\n(aquatic extensions)]
+        F1[fish_extension]
+        F2[fish_hydrodynamics]
+        F3[fish_habitat_interaction]
+        F4[fish_mission_profile_extension]
+    end
+
+    %% Drone Layer
+    subgraph D[RTT‑Autonomous‑Drone\n(aerial extensions)]
+        D1[drone_extension]
+        D2[drone_flight_envelope]
+        D3[drone_energy_and_battery]
+        D4[drone_mission_profile_extension]
+    end
+
+    %% Relationships
+    A --&gt; A1
+    A --&gt; A2
+    A --&gt; A3
+    A --&gt; A4
+    A --&gt; A5
+    A --&gt; A6
+    A --&gt; A7
+    A --&gt; A8
+
+    %% Extensions
+    A1 --&gt; F1
+    A6 --&gt; F2
+    A8 --&gt; F3
+    A3 --&gt; F4
+
+    A1 --&gt; D1
+    A6 --&gt; D2
+    A7 --&gt; D3
+    A3 --&gt; D4
+
+    classDef core fill:#1e3a8a,stroke:#0f172a,color:#fff;
+    classDef fish fill:#0f766e,stroke:#064e3b,color:#fff;
+    classDef drone fill:#7c2d12,stroke:#431407,color:#fff;
+</code></pre>
+<hr>
+<h1 id="what-this-diagram-communicates">📝 <strong>What this diagram communicates</strong></h1>
+<ul>
+<li><strong>RTT‑Autonomous Core</strong> is the universal substrate.  </li>
+<li><strong>Fish</strong> and <strong>Drone</strong> modules extend the core cleanly without duplication.  </li>
+<li>Each extension attaches to the appropriate core schema:</li>
+<li><code>autonomous_form_descriptor</code> → identity extensions  </li>
+<li><code>autonomous_morphology</code> → physical/actuation extensions  </li>
+<li><code>autonomous_mission_profile</code> → mission extensions  </li>
+<li><code>autonomous_energy_profile</code> / <code>environmental_interaction</code> → domain constraints  </li>
+</ul>
+<p>It’s a <strong>modular, layered, future‑proof architecture</strong> — exactly the pattern you’ve been building across Triadic Frameworks.</p>
+<hr>
+<h1 id="rttautonomous-ecosystem-ascii-architecture-diagram">🧭 <strong>RTT‑Autonomous Ecosystem — ASCII Architecture Diagram</strong></h1>
+<pre><code>                   +--------------------------------------+
+                   |      RTT‑AUTONOMOUS CORE (neutral)    |
+                   +--------------------------------------+
+                   |  autonomous_form_descriptor           |
+                   |  autonomous_sensor_sample             |
+                   |  autonomous_mission_profile           |
+                   |  autonomous_corridor_definition       |
+                   |  autonomous_swarm_state               |
+                   |  autonomous_morphology                |
+                   |  autonomous_energy_profile            |
+                   |  autonomous_environmental_interaction |
+                   +----------------------+----------------+
+                                          |
+                                          |
+                +-------------------------+--------------------------+
+                |                                                        |
+                |                                                        |
++----------------------------------+                 +----------------------------------+
+|   RTT‑AUTONOMOUS‑FISH            |                 |   RTT‑AUTONOMOUS‑DRONE           |
+|   (aquatic extensions)           |                 |   (aerial extensions)            |
++----------------------------------+                 +----------------------------------+
+|  fish_extension                  |                 |  drone_extension                 |
+|  fish_hydrodynamics              |                 |  drone_flight_envelope           |
+|  fish_habitat_interaction        |                 |  drone_energy_and_battery        |
+|  fish_mission_profile_extension  |                 |  drone_mission_profile_extension |
++----------------------------------+                 +----------------------------------+
+
+</code></pre>
+<hr>
+<h1 id="how-to-read-this-diagram">📝 <strong>How to read this diagram</strong></h1>
+<ul>
+<li>The <strong>core</strong> is the universal substrate — everything plugs into it.  </li>
+<li>The <strong>fish</strong> and <strong>drone</strong> modules extend the core but never modify it.  </li>
+<li>Each extension attaches to the appropriate core schema:</li>
+<li>identity → <code>autonomous_form_descriptor</code>  </li>
+<li>morphology → <code>autonomous_morphology</code>  </li>
+<li>mission → <code>autonomous_mission_profile</code>  </li>
+<li>energy/environment → corresponding core schemas  </li>
+</ul>
+<p>This ASCII version is intentionally compact, readable, and portable.</p>
+  </main>
+</body>
+</html>

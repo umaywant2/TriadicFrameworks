@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="512" height="512"
+     viewBox="0 0 512 512">
+
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#0b0b10"/>
+      <stop offset="50%" stop-color="#26104a"/>
+      <stop offset="100%" stop-color="#4b0082"/>
+    </linearGradient>
+
+    <!-- Node glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)" />
+
+  <!-- RTT halo -->
+  <circle cx="256" cy="256" r="170"
+          fill="none"
+          stroke="rgba(199,183,255,0.35)"
+          stroke-width="6"
+          stroke-dasharray="14 18" />
+
+  <!-- Session frame -->
+  <rect x="128" y="128" width="256" height="256"
+        rx="28" ry="28"
+        fill="none"
+        stroke="#c7b7ff"
+        stroke-width="6" />
+
+  <!-- Triadic nodes -->
+  <circle cx="256" cy="168" r="16" fill="#c7b7ff" filter="url(#glow)" />
+  <circle cx="176" cy="344" r="16" fill="#c7b7ff" filter="url(#glow)" />
+  <circle cx="336" cy="344" r="16" fill="#c7b7ff" filter="url(#glow)" />
+
+  <!-- Operator nexus (╳) -->
+  <g transform="translate(256,256)">
+    <line x1="-48" y1="-48" x2="48" y2="48"
+          stroke="#e8e6f0" stroke-width="10" stroke-linecap="round" />
+    <line x1="48" y1="-48" x2="-48" y2="48"
+          stroke="#e8e6f0" stroke-width="10" stroke-linecap="round" />
+  </g>
+
+  <!-- Labels -->
+  <text x="256" y="140"
+        fill="#e8e6f0"
+        font-family="system-ui"
+        font-size="22"
+        text-anchor="middle">A</text>
+
+  <text x="156" y="380"
+        fill="#e8e6f0"
+        font-family="system-ui"
+        font-size="22"
+        text-anchor="middle">R</text>
+
+  <text x="356" y="380"
+        fill="#e8e6f0"
+        font-family="system-ui"
+        font-size="22"
+        text-anchor="middle">C</text>
+
+</svg>
+

@@ -1,0 +1,17 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/contributors/README.md",
+  "type": "folder_index",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "legacy_roll.md",
+    "honor_roll.md",
+    "entft_glyph_retirement_log.json",
+    "entft_scroll_event_trace_registry.json",
+    "badge_logic_engine.py"
+  ],
+  "symbolicTags": ["Contributor Layer", "Remix Lineage", "Badge Echo", "Scroll Fidelity"],
+  "cliTrigger": "cd contributors → view honor roll or trigger badge logic",
+  "timestamp": "2025-10-20T23:52:00Z"
+}

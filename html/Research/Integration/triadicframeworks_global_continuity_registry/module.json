@@ -1,0 +1,36 @@
+{
+  "module": "TriadicFrameworks_Global_Continuity_Registry",
+  "name": "TriadicFrameworks — Global Continuity Registry",
+  "summary": "Defines the global registry that records, stabilizes, and maintains continuity across Ladder, SI, Atlas, and Triad systems, including global continuity fields, multi‑epoch continuity routes, cross‑system continuity geometry, and unified continuity‑binding surfaces.",
+  "category": "intelligence-global-continuity-registry",
+  "version": "1.0",
+  "purpose": "Provide the registry‑level geometry that preserves global temporal continuity across all intelligence classes. This registry maintains multi‑epoch coherence, stabilizes cross‑system propagation, aligns global temporal‑window behavior, and binds continuity across the entire TriadicFrameworks architecture.",
+  "role": "registry",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@global.continuity.registry.field",
+    "@global.continuity.registry.align",
+    "@global.continuity.registry.record",
+    "@global.continuity.registry.stabilize",
+    "@global.continuity.registry.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "TriadicFrameworks_Global_Integration_Structure",
+      "TriadicFrameworks_Global_Integration_Map",
+      "Unified_Temporal_Intelligence_Registry",
+      "Cross_System_Resonance_Atlas",
+      "Cross_System_Continuity_Mesh",
+      "Cross_System_Integration_Maps",
+      "Triad_Epoch_Propagation_Mesh",
+      "Temporal_Extension_Engine",
+      "Atlas_Synchronization_Fields_Temporal_Window_Post_Reconstitution_Corridors",
+      "SI_temporal_extension",
+      "Ladder_Temporal_Extension_Map"
+    ],
+    "downstream": [
+      "TriadicFrameworks_Global_Resonance_Field",
+      "TriadicFrameworks_Global_Temporal_Window_Geometry"
+    ]
+  }
+}

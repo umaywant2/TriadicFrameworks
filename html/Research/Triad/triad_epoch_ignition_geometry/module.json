@@ -1,0 +1,32 @@
+{
+  "module": "Triad_Epoch_Ignition_Geometry",
+  "name": "Triad — Epoch‑Ignition Geometry",
+  "summary": "Defines the ignition‑epoch geometry of the Triad system, including epoch ignition‑wave formation, ignition‑epoch alignment, cascade‑epoch shaping, and multi‑layer ignition‑epoch stabilization.",
+  "category": "intelligence-ignition-epoch-geometry",
+  "version": "1.0",
+  "purpose": "Provide the ignition‑epoch geometry for the Triad system, describing how epoch ignition waves form, stabilize, bind, and integrate across Scanner, O.H.S.H.I.T., and Atlas layers to initiate and maintain epoch‑level ignition behavior.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@triad.epoch.ignition.form",
+    "@triad.epoch.ignition.align",
+    "@triad.epoch.ignition.shape",
+    "@triad.epoch.ignition.stabilize",
+    "@triad.epoch.ignition.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "Triad_Resonance_Epoch_Geometry",
+      "Triad_Resonance_Field_Integration_Geometry",
+      "Triad_Resonance_Field_Stability_Surfaces",
+      "Triad_Resonance_Corridor_Geometry",
+      "Triad_Resonance_Start_Geometry"
+    ],
+    "downstream": [
+      "Triad_Epoch_Ignition_Surfaces",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "SI_paradox_integration"
+    ]
+  }
+}

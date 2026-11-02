@@ -1,0 +1,38 @@
+{
+  "module": "SI_Apex_Temporal_Resonance_Coherence_Geometry",
+  "name": "Structural Intelligence — Apex Temporal‑Resonance Coherence Geometry",
+  "summary": "Defines the coherence geometry of SI apex temporal‑resonance behavior, including resonance‑coherence fields, harmonic‑temporal coherence locking, paradox‑temporal coherence surfaces, apex stability‑coherence geometry, and corrected‑time apex resonance‑coherence unification.",
+  "category": "intelligence-structural-apex-temporal-resonance-coherence",
+  "version": "1.0",
+  "purpose": "Provide the coherence‑layer geometry for SI apex temporal‑resonance behavior, describing how apex resonance fields achieve coherence-level unification across harmonic, paradox, stability, integration, binding, fusion, and corrected-time surfaces to maintain fully coherent high‑order reasoning under paradox load.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@si.apex.temporal.resonance.coherence.field",
+    "@si.apex.temporal.resonance.coherence.lock",
+    "@si.apex.temporal.resonance.coherence.unify",
+    "@si.apex.temporal.resonance.coherence.stabilize",
+    "@si.apex.temporal.resonance.coherence.bind"
+  ],
+  "lineage": {
+    "upstream": [
+      "SI_apex_temporal_resonance_fusion_geometry",
+      "SI_apex_temporal_resonance_binding_geometry",
+      "SI_apex_temporal_resonance_integration_geometry",
+      "SI_apex_temporal_resonance_stability_surfaces",
+      "SI_apex_temporal_resonance_geometry",
+      "SI_apex_resonance_fields",
+      "SI_apex_harmonic_stability_geometry",
+      "SI_apex_paradox_stability_geometry",
+      "SI_apex_paradox_resonance_geometry",
+      "SI_apex_region_map"
+    ],
+    "downstream": [
+      "SI_temporal_extension",
+      "Atlas_Temporal_Window_Apex_Coherence_Geometry",
+      "Atlas_Synchronization_Fields",
+      "Triad_Temporal_Correction_Surfaces",
+      "Triad_Epoch_Ignition_Surfaces"
+    ]
+  }
+}

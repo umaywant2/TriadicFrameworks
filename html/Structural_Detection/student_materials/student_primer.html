@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Structural_Detection/student_materials/student_primer.md">
+  <title>✅ Structural Detection — Student Primer (Final, Canonical)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Structural_Detection/student_materials/student_primer.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Structural_Detection/student_materials/student_primer.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="structural-detection-student-primer-final-canonical">✅ <strong>Structural Detection — Student Primer (Final, Canonical)</strong></h1>
+<h3 id="rtt1-student-primer"><em>RTT/1 • Student Primer</em></h3>
+<h3 id="learn-to-see-structure-without-being-told-what-it-means"><em>“Learn to see structure without being told what it means.”</em></h3>
+<h1 id="structural-detection-student-primer">Structural Detection — Student Primer</h1>
+<h3 id="rtt1-student-edition">RTT/1 • Student Edition</h3>
+<h3 id="purpose-introduce-the-fiveoperator-pipeline-for-detecting-structure-drift-regimes-invariants-and-coherence">Purpose: Introduce the five‑operator pipeline for detecting structure, drift, regimes, invariants, and coherence.</h3>
+<hr>
+<h1 id="1-what-this-primer-is">1. What This Primer Is</h1>
+<p>This primer teaches you how to:</p>
+<ul>
+<li>scan a sample without assumptions  </li>
+<li>detect structure without interpreting meaning  </li>
+<li>identify drift, boundaries, invariants, and regimes  </li>
+<li>combine signals into a structural synthesis  </li>
+</ul>
+<p>You will not be told:</p>
+<ul>
+<li>what the sample means  </li>
+<li>what domain it comes from  </li>
+<li>what the author intended  </li>
+</ul>
+<p>Your task is to detect <strong>structure</strong>, not interpret content.</p>
+<hr>
+<h1 id="2-the-five-operators-quick-overview">2. The Five Operators (Quick Overview)</h1>
+<h3 id="1-structural_detection_operator"><strong>1. STRUCTURAL_DETECTION_OPERATOR</strong></h3>
+<p>Finds:
+- motifs<br>
+- boundaries<br>
+- invariants<br>
+- anomalies  </p>
+<h3 id="2-drift_sense_operator"><strong>2. DRIFT_SENSE_OPERATOR</strong></h3>
+<p>Finds:
+- drift points<br>
+- deformation types<br>
+- drift intensity<br>
+- drift direction  </p>
+<h3 id="3-regime_awareness_operator"><strong>3. REGIME_AWARENESS_OPERATOR</strong></h3>
+<p>Classifies:
+- formal<br>
+- emergent<br>
+- chaotic<br>
+- hybrid  </p>
+<h3 id="4-continuity_compass_operator"><strong>4. CONTINUITY_COMPASS_OPERATOR</strong></h3>
+<p>Finds:
+- invariants<br>
+- stable motifs<br>
+- anchor points<br>
+- cross‑sample signals  </p>
+<h3 id="5-synthesis_triangulation_operator"><strong>5. SYNTHESIS_TRIANGULATION_OPERATOR</strong></h3>
+<p>Combines:
+- detection<br>
+- drift<br>
+- regime<br>
+- continuity  </p>
+<p>Produces:
+- a structural summary<br>
+- triangulated motifs<br>
+- drift profile<br>
+- regime alignment<br>
+- continuity map<br>
+- anomaly profile  </p>
+<hr>
+<h1 id="3-core-heuristics">3. Core Heuristics</h1>
+<p>These five heuristics guide all detection:</p>
+<h3 id="repetition"><strong>Repetition</strong></h3>
+<p>What repeats?</p>
+<h3 id="boundary"><strong>Boundary</strong></h3>
+<p>Where does the structure shift?</p>
+<h3 id="invariant"><strong>Invariant</strong></h3>
+<p>What stays stable?</p>
+<h3 id="deformation"><strong>Deformation</strong></h3>
+<p>What bends or breaks?</p>
+<h3 id="coherence"><strong>Coherence</strong></h3>
+<p>What aligns across samples?</p>
+<hr>
+<h1 id="4-sample-a-cold-scan">4. Sample A — Cold Scan</h1>
+<pre><code>A B A
+A B A
+A X A
+</code></pre>
+<h3 id="what-to-look-for">What to look for:</h3>
+<ul>
+<li>repeated shapes  </li>
+<li>breaks in repetition  </li>
+<li>stable outer elements  </li>
+<li>localized anomalies  </li>
+</ul>
+<hr>
+<h1 id="5-sample-b-drift-scan">5. Sample B — Drift Scan</h1>
+<pre><code>L1 L2 L3
+L1 L2 L4
+L1 L5 L4
+</code></pre>
+<h3 id="what-to-look-for_1">What to look for:</h3>
+<ul>
+<li>drift points  </li>
+<li>deformation types  </li>
+<li>drift direction  </li>
+<li>coherence anchors  </li>
+</ul>
+<hr>
+<h1 id="6-sample-c-regime-scan">6. Sample C — Regime Scan</h1>
+<p><strong>Block 1</strong></p>
+<pre><code>P Q P
+P Q P
+</code></pre>
+<p><strong>Block 2</strong></p>
+<pre><code>R S
+T
+U V W X
+</code></pre>
+<h3 id="what-to-look-for_2">What to look for:</h3>
+<ul>
+<li>symmetry vs. broken symmetry  </li>
+<li>density vs. irregular density  </li>
+<li>drift level  </li>
+<li>regime boundaries  </li>
+</ul>
+<hr>
+<h1 id="7-packet-templates">7. Packet Templates</h1>
+<p>Use these templates to record your findings.</p>
+<h3 id="structural_detection_packet"><strong>STRUCTURAL_DETECTION_PACKET</strong></h3>
+<pre><code>motifs_detected:
+boundaries:
+invariants:
+anomalies:
+regime_hints:
+confidence:
+notes:
+</code></pre>
+<h3 id="drift_packet"><strong>DRIFT_PACKET</strong></h3>
+<pre><code>drift_points:
+deformation_types:
+drift_intensity:
+drift_direction:
+coherence_breaks:
+regime_transition_signals:
+confidence:
+notes:
+</code></pre>
+<h3 id="regime_packet"><strong>REGIME_PACKET</strong></h3>
+<pre><code>regime:
+regime_signals:
+boundary_signals:
+drift_alignment:
+coherence_level:
+confidence:
+notes:
+</code></pre>
+<h3 id="continuity_packet"><strong>CONTINUITY_PACKET</strong></h3>
+<pre><code>invariants:
+stable_motifs:
+anchor_points:
+cross_sample_signals:
+regime_stability:
+coherence_threads:
+confidence:
+notes:
+</code></pre>
+<h3 id="synthesis_packet"><strong>SYNTHESIS_PACKET</strong></h3>
+<pre><code>structural_summary:
+triangulated_motifs:
+drift_profile:
+regime_alignment:
+continuity_map:
+anomaly_profile:
+confidence:
+notes:
+</code></pre>
+<hr>
+<h1 id="8-zerointerpretation-rule">8. Zero‑Interpretation Rule</h1>
+<p>You must avoid:</p>
+<ul>
+<li>meaning  </li>
+<li>narrative  </li>
+<li>topic inference  </li>
+<li>domain assumptions  </li>
+</ul>
+<p>Stay with <strong>structure only</strong>.</p>
+<hr>
+<h1 id="9-workflow-summary">9. Workflow Summary</h1>
+<ol>
+<li>Cold scan  </li>
+<li>Detect motifs + boundaries  </li>
+<li>Map drift  </li>
+<li>Classify regime  </li>
+<li>Identify continuity  </li>
+<li>Triangulate synthesis  </li>
+</ol>
+<hr>
+<h1 id="10-what-mastery-looks-like">10. What Mastery Looks Like</h1>
+<p>You can:</p>
+<ul>
+<li>detect motifs, boundaries, invariants, anomalies  </li>
+<li>identify drift and regime signals  </li>
+<li>find continuity across samples  </li>
+<li>produce a stable structural synthesis  </li>
+<li>maintain zero interpretation  </li>
+</ul>
+<p>This primer is your entry point into structural literacy.</p>
+<hr>
+<h1 id="this-student-primer-is">✔️ This Student Primer is:</h1>
+<ul>
+<li>fully canonical  </li>
+<li>zero drift  </li>
+<li>aligned with RTT/1  </li>
+<li>consistent with the cheat sheet, worksheet, rubric, gauntlet, and operator lab  </li>
+<li>ready to drop into <code>/docs/Structural_Detection/student_materials/student_primer.md</code></li>
+</ul>
+  </main>
+</body>
+</html>

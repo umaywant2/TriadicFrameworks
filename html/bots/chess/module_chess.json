@@ -1,0 +1,114 @@
+{
+  "module": {
+    "name": "RTT Chess Bot",
+    "id": "bots.chess",
+    "summary": "Deterministic triadic engine: initiative drift, structural regimes, collapse signatures, projection-loss, ancestry of plans, and unified triadic scoring.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Chess",
+      "summary": "Triadic interpretation of chess positions: initiative, structure, continuity, collapse, and drift.",
+      "version": "1.0.0",
+      "purpose": "Provide triadic identity for chess positions using regime mapping, continuity arcs, resonance fields, ancestry lines, drift, collapse signatures, and Harmonia synthesis.",
+      "keywords": [
+        "chess",
+        "triadic",
+        "initiative",
+        "structure",
+        "continuity",
+        "resonance",
+        "ancestry",
+        "drift",
+        "collapse",
+        "projection-loss"
+      ],
+      "audience": "AI researchers, chess theorists, engine integrators, diagnostics systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "chess_state_json",
+    "input_spec": {
+      "board": "8x8 FEN-expanded piece placement",
+      "side_to_move": "w or b",
+      "castling": "KQkq flags",
+      "ep_square": "en passant square or '-'",
+      "halfmove_clock": "integer",
+      "fullmove_number": "integer",
+      "legal_moves": "list of legal moves",
+      "history": "move history"
+    },
+
+    "steps": [
+      "Lumen: extract structural signals (center control, tension, king safety, pawn structure)",
+      "Hephaestus: classify regime per move (local tactics, structural plans, continuity arcs)",
+      "Aurion: compute ancestry (plan lineage, structural regime shifts, collapse signatures, projection-loss)",
+      "Harmonia: synthesize triadic identity for the position (local, structural, continuity, risk)",
+      "StateEmitter: emit JSON conforming to module_chess_schema.json"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT deterministic interpretation"
+    }
+  },
+
+  "triadic_overlays": {
+    "continuity_arcs": "long-arc plan identity curves",
+    "resonance_fields": "pressure gradients from tension and king safety",
+    "drift_arrows": "directional flow of initiative",
+    "topology_graphs": "pawn structure, tension graph, king safety graph",
+    "ancestry_lines": "lineage of plans and structural regimes",
+    "risk_indicators": "paradox, collapse, projection-loss",
+    "triadic_hud": "local/structural/continuity scores + stability metrics"
+  },
+
+  "scoring": {
+    "weights": {
+      "local": 0.35,
+      "structural": 0.40,
+      "continuity": 0.25
+    },
+    "risk_penalty": 0.20
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_chess_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "chess_structural_collapse",
+        "input": "./golden/example_input.fen",
+        "output": "./golden/example.json",
+        "description": "A position showing structural tension, initiative drift, pawn-structure resonance, and a projection-loss collapse event."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "♟️",
+    "label": "RTT Chess"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Chess drift is initiative-driven: tension → structure → collapse.",
+      "coherence": "Chess is the RTT module for deterministic structural identity.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}

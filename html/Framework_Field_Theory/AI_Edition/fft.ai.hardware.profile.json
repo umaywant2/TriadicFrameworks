@@ -1,0 +1,44 @@
+{
+  "id": "fft.ai.hardware.profile",
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "title": "FFT AI — Hardware Profile v1.33",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "runtime_tiers": {
+    "minimal": {
+      "description": "Basic FFT session: fields + operators + session lifecycle",
+      "min_context_window": "8k tokens",
+      "modules_required": [
+        "fft.core.json",
+        "fft.invariant.json",
+        "fft.ai.core.json",
+        "fft.ai.bootstrap.json",
+        "fft.ai.session.context.json"
+      ],
+      "v1_33_compliance": "partial"
+    },
+    "standard": {
+      "description": "Full v1.33 compliance: all 67 modules, all invariants enforced",
+      "min_context_window": "32k tokens",
+      "modules_required": "all 67",
+      "v1_33_compliance": "full"
+    },
+    "extended": {
+      "description": "Multi-regime, full DCO scaffold, SET coupling, long session history",
+      "min_context_window": "128k tokens",
+      "modules_required": "all 67 + ep.*",
+      "v1_33_compliance": "full+extended",
+      "new_v1_33": true
+    }
+  },
+  "v133_additions": [
+    "extended runtime tier",
+    "32k minimum for full compliance",
+    "v1_33_compliance field per tier"
+  ]
+}

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Governance_Substrate_Model/Analyzer/worksheet_simulation_steps.md">
+  <title>Worksheet: Simulation Steps</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Governance_Substrate_Model/Analyzer/worksheet_simulation_steps.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Governance_Substrate_Model/Analyzer/worksheet_simulation_steps.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="worksheet-simulation-steps">Worksheet: Simulation Steps</h1>
+<p><em>A guided exercise for running step‑by‑step GSM simulations</em></p>
+<p>This worksheet helps students practice evaluating structural states, computing drift, interpreting physics forces, classifying regime modes, and determining transitions. It is designed for classroom use, workshops, and self‑guided learning.</p>
+<hr>
+<h2 id="1-starting-structural-state">1. Starting structural state</h2>
+<p>Record the initial vector and metadata.</p>
+<pre><code class="language-yaml">initial_state:
+  vector: [C, M, O, A, T]
+  invariants:
+    aligned: [...]
+    tension: [...]
+    violated: [...]
+    tension_score: &lt;number&gt;
+  drift:
+    vector: [0, 0, 0, 0, 0]
+    magnitude: 0
+    category: micro
+  physics_forces: [...]
+  basin:
+    nearest_basin: &lt;CPL|CPF|CTR|PCL|HCL&gt;
+    basin_distance: &lt;number&gt;
+    boundary_proximity: &lt;number&gt;
+    stability_score: &lt;number&gt;
+  regime_mode: &lt;mode&gt;
+  phase_state: &lt;phase&gt;
+  absorptive_strength: &lt;0–1&gt;
+  notes: &quot;&lt;context&gt;&quot;
+</code></pre>
+<hr>
+<h2 id="2-step-evaluation-template">2. Step evaluation template</h2>
+<p>Use this template for each simulation step.</p>
+<h3 id="step-n">Step N</h3>
+<pre><code class="language-yaml">step_N:
+  input_vector: [C, M, O, A, T]
+
+  # 1. Invariant evaluation
+  invariants:
+    aligned: [...]
+    tension: [...]
+    violated: [...]
+    tension_score: &lt;number&gt;
+
+  # 2. Physics forces
+  physics_forces:
+    - axis_pair: &quot;&lt;C↔O | M↔A | O↔T&gt;&quot;
+      magnitude: &lt;number&gt;
+      direction: &quot;&lt;positive|negative&gt;&quot;
+
+  # 3. Drift computation
+  drift:
+    vector: [dC, dM, dO, dA, dT]
+    magnitude: &lt;number&gt;
+    category: &quot;&lt;micro|meso|macro|regime_shift&gt;&quot;
+
+  # 4. Updated structural vector
+  updated_vector: [C', M', O', A', T']
+
+  # 5. Basin classification
+  basin:
+    nearest_basin: &lt;CPL|CPF|CTR|PCL|HCL&gt;
+    basin_distance: &lt;number&gt;
+    boundary_proximity: &lt;number&gt;
+    stability_score: &lt;number&gt;
+
+  # 6. Regime mode
+  regime_mode: &quot;&lt;mode&gt;&quot;
+
+  # 7. Phase state
+  phase_state: &quot;&lt;phase&gt;&quot;
+
+  # 8. Events
+  events:
+    - type: &quot;&lt;alignment|tension|drift|transition|regime_shift|reconstruction&gt;&quot;
+      summary: &quot;&lt;short description&gt;&quot;
+
+  # 9. Narrative
+  narrative:
+    summary: &quot;&lt;short interpretation&gt;&quot;
+    highlights:
+      - &quot;&lt;key insight&gt;&quot;
+      - &quot;&lt;key insight&gt;&quot;
+</code></pre>
+<hr>
+<h2 id="3-stepbystep-practice-sequence">3. Step‑by‑step practice sequence</h2>
+<p>Students repeat the template for each step.</p>
+<h3 id="step-1">Step 1</h3>
+<p>Evaluate invariants → physics → drift → basin → mode → phase → events → narrative.</p>
+<h3 id="step-2">Step 2</h3>
+<p>Use the updated vector from Step 1 as the new input.</p>
+<h3 id="step-3">Step 3</h3>
+<p>Continue until a transition, reconstruction, or stabilization occurs.</p>
+<hr>
+<h2 id="4-transition-checkpoints">4. Transition checkpoints</h2>
+<p>At each step, check for:</p>
+<ul>
+<li><strong>tension rise</strong> (tension_score &gt; 3)  </li>
+<li><strong>drift escalation</strong> (meso → macro → regime_shift)  </li>
+<li><strong>boundary proximity</strong> (&gt; 0.7)  </li>
+<li><strong>absorptive failure</strong> (&lt; 0.3)  </li>
+<li><strong>invariant violations</strong> (≥ 2)  </li>
+<li><strong>regime mode changes</strong>  </li>
+<li><strong>phase transitions</strong>  </li>
+</ul>
+<p>These checkpoints help determine whether the system is stabilizing, escalating, or transitioning.</p>
+<hr>
+<h2 id="5-endofsimulation-summary">5. End‑of‑simulation summary</h2>
+<p>After completing all steps, fill out:</p>
+<pre><code class="language-yaml">simulation_summary:
+  total_steps: &lt;number&gt;
+  final_vector: [C, M, O, A, T]
+  final_basin: &lt;CPL|CPF|CTR|PCL|HCL&gt;
+  final_regime_mode: &lt;mode&gt;
+  final_phase_state: &lt;phase&gt;
+  cumulative_drift: &lt;number&gt;
+  invariant_violations: &lt;number&gt;
+  transitions_detected: &lt;number&gt;
+  regime_shifts_detected: &lt;number&gt;
+  narrative:
+    - &quot;&lt;summary insight&gt;&quot;
+    - &quot;&lt;summary insight&gt;&quot;
+</code></pre>
+<hr>
+<h2 id="6-reflection-prompts">6. Reflection prompts</h2>
+<ul>
+<li>What forces drove the system’s movement?  </li>
+<li>Where did tension accumulate?  </li>
+<li>How did drift evolve across steps?  </li>
+<li>Did the system approach or cross a basin boundary?  </li>
+<li>Which regime modes appeared, and why?  </li>
+<li>Was the transition phase‑honest?  </li>
+<li>What structural narrative emerges from the sequence?</li>
+</ul>
+<p>These prompts help students build structural intuition.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "description": "Calibration curves for sensors and measurement devices.",
+  "curves": {
+    "emf_sensor": {
+      "type": "linear",
+      "parameters": {
+        "slope": 1.0,
+        "intercept": 0.0
+      },
+      "notes": "Placeholder calibration curve."
+    },
+    "rotation_sensor": {
+      "type": "polynomial",
+      "parameters": [0.0, 1.0],
+      "notes": "Placeholder polynomial calibration."
+    }
+  }
+}

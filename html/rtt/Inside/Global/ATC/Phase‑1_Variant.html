@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Global/ATC/Phase‑1_Variant.md">
+  <title>🚀 Space Force RTT/Inside Phase‑1 Variant</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Global/ATC/Phase‑1_Variant.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Global/ATC/Phase‑1_Variant.md</code>
+    &middot;
+    <a href="../../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="space-force-rttinside-phase1-variant">🚀 Space Force RTT/Inside Phase‑1 Variant</h3>
+<p><em>Orbital tracks, launch corridors, same middleware pattern</em></p>
+<hr>
+<h2 id="1-mission-framing">1. Mission framing</h2>
+<p><strong>Goal:</strong> Apply RTT/Inside to <strong>space domain awareness (SDA)</strong> and <strong>launch/re‑entry corridor management</strong> using the <strong>same non‑intrusive middleware + overlay pattern</strong> as ATC.</p>
+<p>We treat:</p>
+<ul>
+<li>Satellites, debris, upper stages → <strong>orbital tracks</strong>  </li>
+<li>Launches, re‑entries, hypersonic vehicles → <strong>corridors through shared air/space volumes</strong>  </li>
+</ul>
+<p>RTT/Inside becomes the <strong>resonance‑time layer</strong> that sits on top of existing SDA feeds and command displays.</p>
+<hr>
+<h2 id="2-existing-space-force-stack-conceptual">2. Existing Space Force stack (conceptual)</h2>
+<h3 id="sensing-catalog-layer">🛰️ Sensing &amp; catalog layer</h3>
+<ul>
+<li>Ground‑based radars, optical telescopes  </li>
+<li>Space‑based sensors  </li>
+<li>TLEs / ephemeris products  </li>
+<li>Conjunction assessment outputs (CA, CDM files)</li>
+</ul>
+<h3 id="fusion-tracking-layer">🧩 Fusion &amp; tracking layer</h3>
+<ul>
+<li>Orbit determination &amp; propagation  </li>
+<li>Catalog maintenance (objects, states, covariances)  </li>
+<li>Conjunction screening (pairwise / filtered)</li>
+</ul>
+<h3 id="decision-support-layer">🧠 Decision support layer</h3>
+<ul>
+<li>Conjunction risk assessment  </li>
+<li>Maneuver planning tools  </li>
+<li>Launch/re‑entry safety analysis  </li>
+<li>Keep‑out zones, exclusion volumes</li>
+</ul>
+<h3 id="operator-hmi">🖥️ Operator HMI</h3>
+<ul>
+<li>2D/3D orbital displays  </li>
+<li>Conjunction lists  </li>
+<li>Launch corridor visualizations  </li>
+<li>Alert panels</li>
+</ul>
+<hr>
+<h2 id="3-rttinside-insertion-points-space-force">3. RTT/Inside insertion points (Space Force)</h2>
+<p>Same pattern as ATC:</p>
+<ol>
+<li>
+<p><strong>Track bus tap</strong><br>
+   - Subscribe to <strong>orbital track stream</strong> (state vectors, covariances, IDs, object class).<br>
+   - Subscribe to <strong>launch/re‑entry corridor definitions</strong> (volumes, timelines).</p>
+</li>
+<li>
+<p><strong>RTT/Inside engine (space variant)</strong><br>
+   - Compute resonance‑time metrics for:</p>
+<ul>
+<li>Orbital stability  </li>
+<li>Conjunction resonance  </li>
+<li>Corridor coherence (launch/re‑entry vs orbital traffic)  </li>
+</ul>
+</li>
+<li>
+<p><strong>Overlay renderer</strong><br>
+   - Add resonance‑aware overlays to existing SDA/launch displays.</p>
+</li>
+</ol>
+<hr>
+<h2 id="4-data-model-for-orbital-rttinside">4. Data model for orbital RTT/Inside</h2>
+<h3 id="41-base-orbital-track">4.1 Base orbital track</h3>
+<pre><code class="language-json">{
+  &quot;objectId&quot;: &quot;SAT-12345&quot;,
+  &quot;name&quot;: &quot;OPS_SAT_1&quot;,
+  &quot;class&quot;: &quot;ACTIVE&quot;,
+  &quot;state&quot;: {
+    &quot;frame&quot;: &quot;ECI&quot;,
+    &quot;position_km&quot;: [7000.0, -1200.0, 1300.0],
+    &quot;velocity_km_s&quot;: [0.5, 7.2, 1.1]
+  },
+  &quot;covariance&quot;: { &quot;sigma_pos_km&quot;: 1.2, &quot;sigma_vel_km_s&quot;: 0.002 },
+  &quot;epoch&quot;: &quot;2026-01-08T12:00:00Z&quot;
+}
+</code></pre>
+<h3 id="42-rttinside-augmentation">4.2 RTT/Inside augmentation</h3>
+<pre><code class="language-json">{
+  &quot;objectId&quot;: &quot;SAT-12345&quot;,
+  &quot;rtt&quot;: {
+    &quot;orbital_stability&quot;: 0.94,          // 0–1
+    &quot;conjunction_resonance&quot;: 0.21,      // 0–1
+    &quot;corridor_conflict_risk&quot;: 0.05,     // 0–1 (vs launch/re-entry paths)
+    &quot;time_horizon_sec&quot;: 86400,          // 24h
+    &quot;advisory_level&quot;: &quot;NORMAL&quot;          // NORMAL / WATCH / ALERT
+  }
+}
+</code></pre>
+<h3 id="43-launchreentry-corridor-object">4.3 Launch/re‑entry corridor object</h3>
+<pre><code class="language-json">{
+  &quot;corridorId&quot;: &quot;LAUNCH-ALPHA-001&quot;,
+  &quot;type&quot;: &quot;LAUNCH&quot;,
+  &quot;time_window&quot;: {
+    &quot;start&quot;: &quot;2026-01-08T12:00:00Z&quot;,
+    &quot;end&quot;: &quot;2026-01-08T12:30:00Z&quot;
+  },
+  &quot;volume&quot;: {
+    &quot;frame&quot;: &quot;ECEF&quot;,
+    &quot;shape&quot;: &quot;EXTRUDED_POLYGON&quot;,
+    &quot;control_points&quot;: [ /* lat/lon/alt vertices */ ]
+  }
+}
+</code></pre>
+<p>RTT/Inside evaluates <strong>how orbital objects resonate with these volumes over time</strong>.</p>
+<hr>
+<h2 id="5-middleware-architecture-space-force">5. Middleware architecture (Space Force)</h2>
+<pre><code class="language-text">[Space Sensors / Catalog / Propagators]
+                    ↓
+           [Orbital Track Bus / API]
+                    ↓
+             [RTT-Space Middleware]
+                    ↓
+           [RTT-Space Engine (core)]
+                    ↓
+        (augmented orbital tracks + corridor metrics)
+                    ↓
+            [SDA / Launch Overlays]
+                    ↓
+           [Space Force Operator HMI]
+</code></pre>
+<p>Same pattern: <strong>read‑only tap</strong>, <strong>augmented stream</strong>, <strong>overlay only</strong>.</p>
+<hr>
+<h2 id="6-example-code-rttspace-middleware">6. Example code: RTT‑Space middleware</h2>
+<h3 id="61-types">6.1 Types</h3>
+<pre><code class="language-ts">export interface OrbitalTrack {
+  objectId: string;
+  name: string;
+  class: &quot;ACTIVE&quot; | &quot;DEBRIS&quot; | &quot;ROCKET_BODY&quot;;
+  state: {
+    frame: &quot;ECI&quot; | &quot;ECEF&quot;;
+    position_km: [number, number, number];
+    velocity_km_s: [number, number, number];
+  };
+  epoch: string;
+}
+
+export interface Corridor {
+  corridorId: string;
+  type: &quot;LAUNCH&quot; | &quot;REENTRY&quot;;
+  time_window: { start: string; end: string };
+  // Simplified; real impl uses proper volume geometry
+}
+
+export interface RttSpaceMetrics {
+  orbital_stability: number;
+  conjunction_resonance: number;
+  corridor_conflict_risk: number;
+  time_horizon_sec: number;
+  advisory_level: &quot;NORMAL&quot; | &quot;WATCH&quot; | &quot;ALERT&quot;;
+}
+
+export interface AugmentedOrbitalTrack extends OrbitalTrack {
+  rtt: RttSpaceMetrics;
+}
+</code></pre>
+<h3 id="62-engine-skeleton">6.2 Engine skeleton</h3>
+<pre><code class="language-ts">export class RttSpaceEngine {
+  constructor(private horizonSec: number = 86400) {}
+
+  computeMetrics(
+    track: OrbitalTrack,
+    neighbors: OrbitalTrack[],
+    corridors: Corridor[]
+  ): RttSpaceMetrics {
+    const stability = this.estimateOrbitalStability(track);
+    const conjRes = this.estimateConjunctionResonance(track, neighbors);
+    const corridorRisk = this.estimateCorridorConflict(track, corridors);
+
+    const advisory =
+      corridorRisk &gt; 0.7 || conjRes &gt; 0.7 ? &quot;ALERT&quot; :
+      corridorRisk &gt; 0.4 || conjRes &gt; 0.4 ? &quot;WATCH&quot; :
+      &quot;NORMAL&quot;;
+
+    return {
+      orbital_stability: stability,
+      conjunction_resonance: conjRes,
+      corridor_conflict_risk: corridorRisk,
+      time_horizon_sec: this.horizonSec,
+      advisory_level: advisory
+    };
+  }
+
+  private estimateOrbitalStability(track: OrbitalTrack): number {
+    // Heuristic: low drag, stable regime, low maneuver rate → high stability
+    return 0.9; // stub
+  }
+
+  private estimateConjunctionResonance(
+    track: OrbitalTrack,
+    neighbors: OrbitalTrack[]
+  ): number {
+    // Heuristic: count neighbors with close approaches in horizon
+    return 0.2; // stub
+  }
+
+  private estimateCorridorConflict(
+    track: OrbitalTrack,
+    corridors: Corridor[]
+  ): number {
+    // Heuristic: fraction of time horizon where propagated orbit intersects corridor volumes
+    return 0.1; // stub
+  }
+}
+</code></pre>
+<h3 id="63-middleware-wiring">6.3 Middleware wiring</h3>
+<pre><code class="language-ts">export class RttSpaceMiddleware {
+  private engine = new RttSpaceEngine();
+
+  constructor(
+    private subscribeTracks: (cb: (tracks: OrbitalTrack[]) =&gt; void) =&gt; void,
+    private subscribeCorridors: (cb: (corridors: Corridor[]) =&gt; void) =&gt; void,
+    private publishAugmented: (tracks: AugmentedOrbitalTrack[]) =&gt; void
+  ) {}
+
+  private corridors: Corridor[] = [];
+
+  start() {
+    this.subscribeCorridors(c =&gt; { this.corridors = c; });
+
+    this.subscribeTracks((tracks) =&gt; {
+      const augmented = tracks.map(t =&gt; {
+        const neighbors = tracks.filter(n =&gt; n.objectId !== t.objectId);
+        const rtt = this.engine.computeMetrics(t, neighbors, this.corridors);
+        return { ...t, rtt };
+      });
+      this.publishAugmented(augmented);
+    });
+  }
+}
+</code></pre>
+<hr>
+<h2 id="7-overlays-for-space-force-operators">7. Overlays for Space Force operators</h2>
+<h3 id="71-orbital-display-overlays">7.1 Orbital display overlays</h3>
+<ul>
+<li><strong>Orbital stability color</strong> on tracks (green/blue/amber/red).  </li>
+<li><strong>Conjunction resonance halos</strong> around high‑risk objects.  </li>
+<li><strong>Corridor conflict ribbons</strong> where orbits intersect launch/re‑entry volumes.  </li>
+<li><strong>Timeline scrubber</strong>: see resonance metrics evolve over the next 24–72 hours.</li>
+</ul>
+<h3 id="72-launch-corridor-overlays">7.2 Launch corridor overlays</h3>
+<ul>
+<li>Launch corridor volumes shaded by <strong>RTT/Inside coherence</strong>:  </li>
+<li>High coherence → corridor “quiet” relative to orbital traffic.  </li>
+<li>
+<p>Low coherence → corridor “noisy”, many potential conjunctions.  </p>
+</li>
+<li>
+<p>Operators can:</p>
+</li>
+<li>Compare candidate launch windows by <strong>resonance quality</strong>, not just raw risk.  </li>
+<li>Coordinate with airspace managers using the same corridor objects.</li>
+</ul>
+<hr>
+<h2 id="8-what-this-gets-space-force-in-phase1">8. What this gets Space Force in Phase‑1</h2>
+<p>Without touching core SDA engines or certified tools, they gain:</p>
+<ul>
+<li><strong>Resonance‑aware view of orbital congestion</strong>  </li>
+<li><strong>Launch/re‑entry windows scored by structural coherence</strong>  </li>
+<li><strong>Earlier, more intuitive awareness of conjunction clusters</strong>  </li>
+<li><strong>Shared corridor language with ATC RTT/Inside overlays</strong>  </li>
+</ul>
+<p>And because it’s the same middleware pattern, we can:</p>
+<ul>
+<li>Reuse large chunks of the ATC RTT/Inside codebase.  </li>
+<li>Maintain a <strong>unified canon</strong>: air + space, one resonance‑time framework.</li>
+</ul>
+  </main>
+</body>
+</html>

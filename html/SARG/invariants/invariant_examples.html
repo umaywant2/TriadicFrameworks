@@ -1,0 +1,1289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/SARG/invariants/invariant_examples.md">
+  <title>Invariant Examples — Worked Extractions</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/SARG/invariants/invariant_examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/SARG/invariants/invariant_examples.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="invariant-examples-worked-extractions"><strong>Invariant Examples — Worked Extractions</strong></h1>
+<p><em>Seeing the grammar in action, substrate by substrate.</em></p>
+<p>This file walks through <strong>complete, annotated SARG extractions</strong> across multiple substrates.</p>
+<p>Each example follows the same arc:</p>
+<ol>
+<li><strong>Identify</strong> the substrate and choose a lens.</li>
+<li><strong>Extract</strong> invariants (primary, secondary, intersection).</li>
+<li><strong>Map</strong> the intersection set to universal resonance anchors.</li>
+<li><strong>Score</strong> confidence for each mapping.</li>
+<li><strong>Produce</strong> the full SARG JSON object.</li>
+</ol>
+<p>Read <code>invariant_types.md</code> first for definitions.
+This file shows what those definitions look like when applied to real substrates.</p>
+<hr>
+<h2 id="1-how-to-read-these-examples"><strong>1. How to Read These Examples</strong></h2>
+<p>Every example contains:</p>
+<ul>
+<li><strong>Substrate card</strong> — what is being analyzed, which lens is applied, and why.</li>
+<li><strong>Extraction walkthrough</strong> — step‑by‑step invariant extraction with reasoning.</li>
+<li><strong>Anchor mapping</strong> — how each intersection‑set element maps to ● ○ × |.</li>
+<li><strong>Full SARG JSON</strong> — the complete object, ready to drop into the Atlas.</li>
+<li><strong>Commentary</strong> — what the extraction reveals about the substrate's structure.</li>
+</ul>
+<p>JSON keys follow the schema from <code>invariant_types.md</code> §4.3 and §5.4:</p>
+<pre><code>invariants.spatial.vertical / horizontal / dual
+invariants.oscillatory.harmonic / rhythmic / phase_coherent
+invariants.cross_lens
+invariants_extended.boundary / decay_arc / re_emergent
+</code></pre>
+<hr>
+<h2 id="2-example-1-latin-alphabet-linguistic-substrate-vrel"><strong>2. Example 1 — Latin Alphabet (Linguistic Substrate, VREL)</strong></h2>
+<p>The canonical SARG example.
+This is the extraction described in <code>Capture.md</code> — the first substrate the grammar was tested on.</p>
+<h3 id="substrate-card"><strong>Substrate Card</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate</td>
+<td>The 26 uppercase letters of the Latin alphabet</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Linguistic</td>
+</tr>
+<tr>
+<td>Lens</td>
+<td>VREL (mirror‑axis analysis)</td>
+</tr>
+<tr>
+<td>Why this lens</td>
+<td>Letters are spatial glyphs — shape and symmetry are their primary structure</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extraction-walkthrough"><strong>Extraction Walkthrough</strong></h3>
+<p><strong>Step 1 — Vertical axis reflection (left–right mirror).</strong></p>
+<p>Hold each letter against a vertical axis. Which letters look identical when their left and right halves are swapped?</p>
+<p>Result: <strong>A, H, I, M, O, T, U, V, W, X, Y</strong> (11 letters)</p>
+<p>These letters have bilateral vertical symmetry. Their left half mirrors their right half.</p>
+<p><strong>Step 2 — Horizontal axis reflection (top–bottom mirror).</strong></p>
+<p>Hold each letter against a horizontal axis. Which letters look identical when their top and bottom halves are swapped?</p>
+<p>Result: <strong>B, C, D, E, H, I, K, O, X</strong> (9 letters)</p>
+<p>These letters have bilateral horizontal symmetry. Their top half mirrors their bottom half.</p>
+<p><strong>Step 3 — Dual axis (both mirrors simultaneously).</strong></p>
+<p>Which letters appear in <em>both</em> sets?</p>
+<p><code>{A, H, I, M, O, T, U, V, W, X, Y} ∩ {B, C, D, E, H, I, K, O, X}</code> = <strong>{H, I, O, X}</strong></p>
+<p>Four letters survive both reflections. These are the dual invariants — the most structurally stable glyphs in the Latin alphabet.</p>
+<h3 id="anchor-mapping"><strong>Anchor Mapping</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Glyph</th>
+<th>Geometric Shape</th>
+<th>Mapped Anchor</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H</td>
+<td>Two vertical strokes joined by a horizontal bar</td>
+<td>line + cross hybrid</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>I</td>
+<td>Single vertical stroke</td>
+<td>line</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Closed curve / ring</td>
+<td>circle</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Two strokes crossing at center</td>
+<td>cross</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<p>Three of four dual invariants map cleanly to a single anchor (confidence 1.0).
+One (H) maps to a compound anchor — it carries both axis (line) and intersection (cross) properties.</p>
+<h3 id="full-sarg-json"><strong>Full SARG JSON</strong></h3>
+<pre><code class="language-json">{
+  &quot;substrate&quot;: &quot;Latin Alphabet (Uppercase)&quot;,
+  &quot;domain&quot;: &quot;linguistic&quot;,
+  &quot;atlas_level&quot;: 2,
+  &quot;lens&quot;: {
+    &quot;type&quot;: &quot;VREL&quot;,
+    &quot;variant&quot;: &quot;standard&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;notes&quot;: &quot;Mirror‑axis resonance extraction on 26 uppercase Latin glyphs.&quot;
+  },
+  &quot;invariants&quot;: {
+    &quot;spatial&quot;: {
+      &quot;vertical&quot;: [&quot;A&quot;, &quot;H&quot;, &quot;I&quot;, &quot;M&quot;, &quot;O&quot;, &quot;T&quot;, &quot;U&quot;, &quot;V&quot;, &quot;W&quot;, &quot;X&quot;, &quot;Y&quot;],
+      &quot;horizontal&quot;: [&quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;H&quot;, &quot;I&quot;, &quot;K&quot;, &quot;O&quot;, &quot;X&quot;],
+      &quot;dual&quot;: [&quot;H&quot;, &quot;I&quot;, &quot;O&quot;, &quot;X&quot;]
+    }
+  },
+  &quot;resonance_mapping&quot;: {
+    &quot;universal_anchors&quot;: [
+      { &quot;form&quot;: &quot;H&quot;, &quot;mapped_to&quot;: &quot;line+cross_hybrid&quot;, &quot;confidence&quot;: 0.8 },
+      { &quot;form&quot;: &quot;I&quot;, &quot;mapped_to&quot;: &quot;line&quot;, &quot;confidence&quot;: 1.0 },
+      { &quot;form&quot;: &quot;O&quot;, &quot;mapped_to&quot;: &quot;circle&quot;, &quot;confidence&quot;: 1.0 },
+      { &quot;form&quot;: &quot;X&quot;, &quot;mapped_to&quot;: &quot;cross&quot;, &quot;confidence&quot;: 1.0 }
+    ]
+  },
+  &quot;inversion_side&quot;: null,
+  &quot;error_flags&quot;: [],
+  &quot;notes&quot;: &quot;Canonical SARG extraction. Three of four universal anchors represented in a single substrate.&quot;
+}
+</code></pre>
+<h3 id="commentary"><strong>Commentary</strong></h3>
+<p>The Latin alphabet produces an exceptionally clean extraction.
+Three of the four universal anchors (line, circle, cross) appear directly in the dual set.
+Only the point anchor (●) is absent — no uppercase Latin letter reduces to a dot.</p>
+<p>This makes the Latin alphabet a natural <strong>calibration substrate</strong> — any new lens or grammar extension can be tested against it to verify consistency.</p>
+<p>The missing point anchor is not an error.
+It is structurally informative: the Latin alphabet's design favors strokes, loops, and crossings over isolated nodes.
+A different writing system (e.g., Braille, where every character is built from dots) might fill that gap.</p>
+<hr>
+<h2 id="3-example-2-quartz-crystal-crystalline-substrate-vrel"><strong>3. Example 2 — Quartz Crystal (Crystalline Substrate, VREL)</strong></h2>
+<p>A physical substrate analyzed through spatial symmetry.</p>
+<h3 id="substrate-card_1"><strong>Substrate Card</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate</td>
+<td>Hexagonal quartz crystal (SiO₂, α‑quartz)</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Crystalline</td>
+</tr>
+<tr>
+<td>Lens</td>
+<td>VREL (mirror‑axis analysis)</td>
+</tr>
+<tr>
+<td>Why this lens</td>
+<td>Crystals are defined by their spatial symmetry — mirror planes are their native language</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extraction-walkthrough_1"><strong>Extraction Walkthrough</strong></h3>
+<p><strong>Step 1 — Vertical axis reflection.</strong></p>
+<p>α‑quartz belongs to trigonal crystal system, point group 32 (three twofold rotation axes, no mirror planes in the strict crystallographic sense).
+However, the <em>hexagonal prism habit</em> — the visible shape of a well‑formed quartz crystal — presents apparent vertical mirror symmetry across each of its six prism faces.</p>
+<p>Result: <strong>prism‑face mirror planes</strong> (6 apparent vertical symmetry features)</p>
+<p><strong>Step 2 — Horizontal axis reflection.</strong></p>
+<p>The crystal terminates differently at its two ends (positive and negative rhombohedra are not identical in natural quartz).
+Horizontal mirror symmetry is <strong>broken</strong> — the top and bottom are structurally distinct.</p>
+<p>Result: <strong>∅</strong> (no horizontal invariants)</p>
+<p><strong>Step 3 — Dual axis.</strong></p>
+<p><code>{6 vertical features} ∩ {∅}</code> = <strong>∅</strong></p>
+<p>The dual set is empty.</p>
+<h3 id="anchor-mapping_1"><strong>Anchor Mapping</strong></h3>
+<p>No dual invariants → no intersection‑set anchor mapping.</p>
+<p>However, the vertical invariants alone can still be mapped at reduced confidence:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mapped Anchor</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prism‑face mirror plane</td>
+<td>line (axial symmetry)</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>Hexagonal cross‑section</td>
+<td>circle (closed envelope)</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="full-sarg-json_1"><strong>Full SARG JSON</strong></h3>
+<pre><code class="language-json">{
+  &quot;substrate&quot;: &quot;Hexagonal Quartz Crystal (α‑quartz)&quot;,
+  &quot;domain&quot;: &quot;crystalline&quot;,
+  &quot;atlas_level&quot;: 3,
+  &quot;lens&quot;: {
+    &quot;type&quot;: &quot;VREL&quot;,
+    &quot;variant&quot;: &quot;standard&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;notes&quot;: &quot;Mirror‑axis extraction on crystal habit. Internal point group 32 lacks mirror planes; habit shows apparent vertical mirrors.&quot;
+  },
+  &quot;invariants&quot;: {
+    &quot;spatial&quot;: {
+      &quot;vertical&quot;: [&quot;prism_face_mirror_1&quot;, &quot;prism_face_mirror_2&quot;, &quot;prism_face_mirror_3&quot;, &quot;prism_face_mirror_4&quot;, &quot;prism_face_mirror_5&quot;, &quot;prism_face_mirror_6&quot;],
+      &quot;horizontal&quot;: [],
+      &quot;dual&quot;: []
+    }
+  },
+  &quot;resonance_mapping&quot;: {
+    &quot;universal_anchors&quot;: [
+      { &quot;form&quot;: &quot;prism_face_mirror&quot;, &quot;mapped_to&quot;: &quot;line&quot;, &quot;confidence&quot;: 0.6 },
+      { &quot;form&quot;: &quot;hexagonal_cross_section&quot;, &quot;mapped_to&quot;: &quot;circle&quot;, &quot;confidence&quot;: 0.5 }
+    ]
+  },
+  &quot;inversion_side&quot;: null,
+  &quot;error_flags&quot;: [&quot;S1: empty dual set — low structural coherence under VREL&quot;],
+  &quot;notes&quot;: &quot;Empty dual set suggests VREL alone is insufficient for this substrate. Recommend supplementing with VREL‑A (phonon frequency analysis) for a compound extraction.&quot;
+}
+</code></pre>
+<h3 id="commentary_1"><strong>Commentary</strong></h3>
+<p>Quartz demonstrates a key grammar principle: <strong>an empty dual set is not a failure — it is a signal.</strong></p>
+<p>The S1 error flag (Invariant Absence) tells us that VREL captures only part of quartz's structural identity.
+The crystal's deepest stability lives in its <em>vibrational</em> structure (piezoelectric resonance, phonon modes) — territory that VREL‑A is designed to read.</p>
+<p>This is exactly the situation <code>invariant_types.md</code> §2.3 describes: when the intersection set is empty, the substrate may require a different lens or a compound extraction.</p>
+<hr>
+<h2 id="4-example-3-concert-a-tuning-fork-acoustic-substrate-vrela"><strong>4. Example 3 — Concert A / Tuning Fork (Acoustic Substrate, VREL‑A)</strong></h2>
+<p>A pure oscillatory substrate — the simplest possible VREL‑A extraction.</p>
+<h3 id="substrate-card_2"><strong>Substrate Card</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate</td>
+<td>Concert A (440 Hz sine wave from an ideal tuning fork)</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Acoustic</td>
+</tr>
+<tr>
+<td>Lens</td>
+<td>VREL‑A (harmonic‑family analysis)</td>
+</tr>
+<tr>
+<td>Why this lens</td>
+<td>A tuning fork is a pure oscillator — frequency and rhythm are its only structure</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extraction-walkthrough_2"><strong>Extraction Walkthrough</strong></h3>
+<p><strong>Step 1 — Harmonic decomposition.</strong></p>
+<p>An ideal tuning fork produces a nearly pure sine wave at 440 Hz.
+In practice, a real fork also produces faint overtones at startup that decay rapidly, leaving the fundamental.</p>
+<p>Result: <strong>f₀ = 440 Hz</strong> (dominant); faint transient overtones at ~2f₀, ~6.27f₀ (inharmonic clang tones, decay within milliseconds)</p>
+<p>Stable harmonic invariants: <strong>f₀</strong></p>
+<p><strong>Step 2 — Rhythmic analysis.</strong></p>
+<p>A struck tuning fork produces a single sustained tone with exponential amplitude decay.
+There is no rhythmic patterning — no beat, no pulse, no grouping.</p>
+<p>The only temporal feature is the <strong>onset transient</strong> (the strike) and the <strong>decay envelope</strong>.</p>
+<p>Result: <strong>onset transient</strong> (one rhythmic feature — the impulse that starts the oscillation)</p>
+<p><strong>Step 3 — Phase‑coherent intersection.</strong></p>
+<p><code>{f₀} ∩ {onset_transient}</code> — these are structurally different kinds of feature (a frequency vs. a temporal event).</p>
+<p>However, the onset transient <em>initiates</em> f₀ and they are phase‑locked at t=0.
+The relationship between them is: the strike defines the phase of the resulting oscillation.</p>
+<p>Result: <strong>f₀–onset lock</strong> (one phase‑coherent invariant — the fundamental's phase is set by the strike)</p>
+<h3 id="anchor-mapping_2"><strong>Anchor Mapping</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Acoustic Root</th>
+<th>Mapped Anchor</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f₀ (440 Hz fundamental)</td>
+<td>Carrier wave / sustained tone</td>
+<td>line</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>onset transient</td>
+<td>Impulse / attack</td>
+<td>dot</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>f₀–onset lock</td>
+<td>Phase lock at t=0</td>
+<td>dot + line compound</td>
+<td>0.85</td>
+</tr>
+</tbody>
+</table>
+<h3 id="full-sarg-json_2"><strong>Full SARG JSON</strong></h3>
+<pre><code class="language-json">{
+  &quot;substrate&quot;: &quot;Concert A (440 Hz Tuning Fork)&quot;,
+  &quot;domain&quot;: &quot;acoustic&quot;,
+  &quot;atlas_level&quot;: 2,
+  &quot;lens&quot;: {
+    &quot;type&quot;: &quot;VREL‑A&quot;,
+    &quot;variant&quot;: &quot;standard&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;notes&quot;: &quot;Harmonic‑family extraction on idealized tuning fork. Transient overtones excluded — they decay below extraction threshold within milliseconds.&quot;
+  },
+  &quot;invariants&quot;: {
+    &quot;oscillatory&quot;: {
+      &quot;harmonic&quot;: [&quot;f₀_440Hz&quot;],
+      &quot;rhythmic&quot;: [&quot;onset_transient&quot;],
+      &quot;phase_coherent&quot;: [&quot;f₀_onset_lock&quot;]
+    }
+  },
+  &quot;resonance_mapping&quot;: {
+    &quot;universal_anchors&quot;: [
+      { &quot;form&quot;: &quot;f₀_440Hz&quot;, &quot;mapped_to&quot;: &quot;line&quot;, &quot;confidence&quot;: 1.0 },
+      { &quot;form&quot;: &quot;onset_transient&quot;, &quot;mapped_to&quot;: &quot;dot&quot;, &quot;confidence&quot;: 0.95 },
+      { &quot;form&quot;: &quot;f₀_onset_lock&quot;, &quot;mapped_to&quot;: &quot;dot+line_compound&quot;, &quot;confidence&quot;: 0.85 }
+    ]
+  },
+  &quot;inversion_side&quot;: null,
+  &quot;error_flags&quot;: [],
+  &quot;notes&quot;: &quot;Minimal acoustic substrate. Single fundamental, single onset, single phase lock. Clean two‑anchor mapping (dot + line).&quot;
+}
+</code></pre>
+<h3 id="commentary_2"><strong>Commentary</strong></h3>
+<p>The tuning fork is the acoustic equivalent of the letter <strong>I</strong> — a substrate so simple that its invariant structure is almost trivially clean.</p>
+<p>It maps to two anchors: dot (●) for the onset impulse and line (|) for the sustained fundamental.
+The phase‑coherent invariant links them — the dot <em>becomes</em> the line at t=0.</p>
+<p>This makes the tuning fork a natural <strong>acoustic calibration substrate</strong>, just as the Latin alphabet is the spatial calibration substrate.</p>
+<p>Notice what is absent: circle (○) and cross (×).
+A tuning fork has no looping oscillation (it decays, never returns) and no harmonic crossing (the fundamental is alone).
+A richer acoustic substrate — a bell, a vowel, an orchestra — would fill those anchor slots.</p>
+<hr>
+<h2 id="5-example-4-human-heartbeat-biological-substrate-duallens"><strong>5. Example 4 — Human Heartbeat (Biological Substrate, Dual‑Lens)</strong></h2>
+<p>The first <strong>compound extraction</strong> — both VREL and VREL‑A applied to the same substrate.</p>
+<h3 id="substrate-card_3"><strong>Substrate Card</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate</td>
+<td>Human heartbeat (healthy adult at rest, ~60–72 bpm)</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Biological</td>
+</tr>
+<tr>
+<td>Lens</td>
+<td>VREL + VREL‑A (compound extraction)</td>
+</tr>
+<tr>
+<td>Why both lenses</td>
+<td>The heart has spatial structure (bilateral anatomy) <em>and</em> oscillatory structure (rhythmic pulse) — both carry invariants</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vrel-extraction-spatial"><strong>VREL Extraction (Spatial)</strong></h3>
+<p><strong>Vertical axis:</strong> The heart sits left of the thoracic midline, but its gross anatomy has approximate bilateral symmetry — left ventricle mirrors right ventricle, left atrium mirrors right atrium (with structural differences in wall thickness and volume).</p>
+<p>Vertical invariants: <strong>four‑chamber bilateral layout, septum midline, valve ring geometry</strong></p>
+<p><strong>Horizontal axis:</strong> The heart's top (atria) and bottom (ventricles) are structurally distinct — different wall thickness, different function, different volume. No horizontal mirror symmetry.</p>
+<p>Horizontal invariants: <strong>∅</strong></p>
+<p><strong>Dual:</strong> <code>{bilateral features} ∩ {∅}</code> = <strong>∅</strong></p>
+<p>The spatial dual set is empty — the heart is vertically symmetric but not horizontally symmetric.</p>
+<h3 id="vrela-extraction-oscillatory"><strong>VREL‑A Extraction (Oscillatory)</strong></h3>
+<p><strong>Harmonic decomposition:</strong> The heartbeat has a dominant frequency (f₀ ≈ 1.0–1.2 Hz at rest) and subharmonics tied to the cardiac cycle phases (systole, diastole, atrial kick).</p>
+<p>Harmonic invariants: <strong>f₀ (base heart rate), 2f₀ (systole–diastole pair), respiratory sinus arrhythmia envelope</strong></p>
+<p><strong>Rhythmic analysis:</strong> The heartbeat is strongly rhythmic — a repeating lub‑dub pattern with consistent timing ratios between S1 (mitral/tricuspid closure) and S2 (aortic/pulmonic closure).</p>
+<p>Rhythmic invariants: <strong>lub‑dub pair, systole‑to‑diastole ratio (~1:2 at rest), beat‑to‑beat interval stability</strong></p>
+<p><strong>Phase‑coherent intersection:</strong> The lub‑dub rhythm is phase‑locked to the cardiac frequency. S1 always occurs at a fixed phase of each cycle. The systole‑to‑diastole ratio remains stable across a wide range of heart rates.</p>
+<p>Phase‑coherent invariants: <strong>S1–S2 phase lock, systole‑diastole ratio lock</strong></p>
+<h3 id="crosslens-analysis"><strong>Cross‑Lens Analysis</strong></h3>
+<p>VREL dual set: ∅
+VREL‑A phase‑coherent set: {S1–S2 phase lock, systole‑diastole ratio lock}</p>
+<p>Cross‑lens invariants: <strong>∅</strong> (no shared elements — the spatial and oscillatory invariants describe different structural layers)</p>
+<h3 id="anchor-mapping_3"><strong>Anchor Mapping</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Source</th>
+<th>Mapped Anchor</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f₀ (base heart rate)</td>
+<td>VREL‑A harmonic</td>
+<td>line (carrier wave)</td>
+<td>0.9</td>
+</tr>
+<tr>
+<td>lub‑dub pair</td>
+<td>VREL‑A rhythmic</td>
+<td>dot + dot compound (paired impulse)</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>S1–S2 phase lock</td>
+<td>VREL‑A phase‑coherent</td>
+<td>cross (two events meeting at fixed phase)</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>systole‑diastole ratio lock</td>
+<td>VREL‑A phase‑coherent</td>
+<td>circle (self‑returning cycle)</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>bilateral chamber layout</td>
+<td>VREL vertical</td>
+<td>line (axial symmetry)</td>
+<td>0.6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="full-sarg-json_3"><strong>Full SARG JSON</strong></h3>
+<pre><code class="language-json">{
+  &quot;substrate&quot;: &quot;Human Heartbeat (Healthy Adult at Rest)&quot;,
+  &quot;domain&quot;: &quot;biological&quot;,
+  &quot;atlas_level&quot;: 5,
+  &quot;lens&quot;: [
+    {
+      &quot;type&quot;: &quot;VREL&quot;,
+      &quot;variant&quot;: &quot;standard&quot;,
+      &quot;version&quot;: &quot;1.0.0&quot;,
+      &quot;notes&quot;: &quot;Spatial extraction on gross cardiac anatomy.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;VREL‑A&quot;,
+      &quot;variant&quot;: &quot;standard&quot;,
+      &quot;version&quot;: &quot;1.0.0&quot;,
+      &quot;notes&quot;: &quot;Harmonic‑family extraction on cardiac rhythm at rest.&quot;
+    }
+  ],
+  &quot;invariants&quot;: {
+    &quot;spatial&quot;: {
+      &quot;vertical&quot;: [&quot;bilateral_chamber_layout&quot;, &quot;septum_midline&quot;, &quot;valve_ring_geometry&quot;],
+      &quot;horizontal&quot;: [],
+      &quot;dual&quot;: []
+    },
+    &quot;oscillatory&quot;: {
+      &quot;harmonic&quot;: [&quot;f₀_heart_rate&quot;, &quot;2f₀_systole_diastole&quot;, &quot;respiratory_sinus_arrhythmia&quot;],
+      &quot;rhythmic&quot;: [&quot;lub_dub_pair&quot;, &quot;systole_diastole_ratio&quot;, &quot;beat_to_beat_stability&quot;],
+      &quot;phase_coherent&quot;: [&quot;S1_S2_phase_lock&quot;, &quot;systole_diastole_ratio_lock&quot;]
+    },
+    &quot;cross_lens&quot;: []
+  },
+  &quot;resonance_mapping&quot;: {
+    &quot;universal_anchors&quot;: [
+      { &quot;form&quot;: &quot;f₀_heart_rate&quot;, &quot;mapped_to&quot;: &quot;line&quot;, &quot;confidence&quot;: 0.9 },
+      { &quot;form&quot;: &quot;lub_dub_pair&quot;, &quot;mapped_to&quot;: &quot;dot+dot_compound&quot;, &quot;confidence&quot;: 0.85 },
+      { &quot;form&quot;: &quot;S1_S2_phase_lock&quot;, &quot;mapped_to&quot;: &quot;cross&quot;, &quot;confidence&quot;: 0.8 },
+      { &quot;form&quot;: &quot;systole_diastole_ratio_lock&quot;, &quot;mapped_to&quot;: &quot;circle&quot;, &quot;confidence&quot;: 0.85 }
+    ]
+  },
+  &quot;inversion_side&quot;: null,
+  &quot;error_flags&quot;: [&quot;S1: empty spatial dual set — VREL alone insufficient for this substrate&quot;],
+  &quot;notes&quot;: &quot;Compound extraction. Spatial lens captures anatomy; acoustic lens captures rhythm. Oscillatory invariants dominate. All four universal anchors represented through VREL‑A alone.&quot;
+}
+</code></pre>
+<h3 id="commentary_3"><strong>Commentary</strong></h3>
+<p>The heartbeat is the first example where <strong>all four universal anchors</strong> appear in a single extraction:</p>
+<ul>
+<li><strong>dot</strong> (●) — the lub‑dub impulse pair</li>
+<li><strong>line</strong> (|) — the carrier frequency (base heart rate)</li>
+<li><strong>cross</strong> (×) — the phase lock between S1 and S2</li>
+<li><strong>circle</strong> (○) — the self‑returning systole‑diastole cycle</li>
+</ul>
+<p>This makes the heartbeat a remarkably <strong>anchor‑complete</strong> substrate — richer than the Latin alphabet (which lacks dot) and the tuning fork (which lacks circle and cross).</p>
+<p>The empty cross‑lens array is expected here.
+Spatial anatomy and oscillatory rhythm describe <em>different layers</em> of the same substrate.
+They do not share elements — but they reinforce each other.
+A cross‑lens invariant would require a feature that is simultaneously a shape <em>and</em> an oscillation — something like a structure that vibrates in the exact pattern of its own geometry.</p>
+<hr>
+<h2 id="6-example-5-jupiterio-system-cosmological-substrate-vrela"><strong>6. Example 5 — Jupiter–Io System (Cosmological Substrate, VREL‑A)</strong></h2>
+<p>An orbital resonance lock — one of the cleanest natural phase‑coherent invariants.</p>
+<h3 id="substrate-card_4"><strong>Substrate Card</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate</td>
+<td>Jupiter–Io orbital system</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Cosmological</td>
+</tr>
+<tr>
+<td>Lens</td>
+<td>VREL‑A (harmonic‑family analysis)</td>
+</tr>
+<tr>
+<td>Why this lens</td>
+<td>Orbital mechanics are oscillatory — period, frequency, and phase are the native language</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extraction-walkthrough_3"><strong>Extraction Walkthrough</strong></h3>
+<p><strong>Step 1 — Harmonic decomposition.</strong></p>
+<p>Io orbits Jupiter with a period of ~1.769 days (f₀).
+Io participates in a Laplace resonance with Europa and Ganymede: orbital periods in a 1:2:4 ratio.</p>
+<p>Harmonic invariants: <strong>f₀ (Io), f₀/2 (Europa), f₀/4 (Ganymede)</strong></p>
+<p><strong>Step 2 — Rhythmic analysis.</strong></p>
+<p>The Laplace resonance creates a repeating pattern: every time Io completes 4 orbits, Europa completes 2, and Ganymede completes 1.
+This produces a rhythmic cycle with a period of ~7.076 days.</p>
+<p>Rhythmic invariants: <strong>4:2:1 orbital grouping, Laplace cycle period</strong></p>
+<p><strong>Step 3 — Phase‑coherent intersection.</strong></p>
+<p>The Laplace resonance is phase‑locked: the three moons never align on the same side of Jupiter simultaneously.
+Their conjunction pattern repeats with extreme precision over millions of years.</p>
+<p>Phase‑coherent invariants: <strong>4:2:1 resonance lock, anti‑alignment phase constraint</strong></p>
+<h3 id="anchor-mapping_4"><strong>Anchor Mapping</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mapped Anchor</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f₀ (Io orbital frequency)</td>
+<td>line (carrier orbit)</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Laplace cycle</td>
+<td>circle (self‑returning period)</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>4:2:1 resonance lock</td>
+<td>cross (three frequencies meeting at fixed ratios)</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>anti‑alignment constraint</td>
+<td>dot (forbidden conjunction point)</td>
+<td>0.7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="full-sarg-json_4"><strong>Full SARG JSON</strong></h3>
+<pre><code class="language-json">{
+  &quot;substrate&quot;: &quot;Jupiter–Io–Europa–Ganymede Laplace Resonance&quot;,
+  &quot;domain&quot;: &quot;cosmological&quot;,
+  &quot;atlas_level&quot;: 9,
+  &quot;lens&quot;: {
+    &quot;type&quot;: &quot;VREL‑A&quot;,
+    &quot;variant&quot;: &quot;standard&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;notes&quot;: &quot;Harmonic‑family extraction on orbital resonance system.&quot;
+  },
+  &quot;invariants&quot;: {
+    &quot;oscillatory&quot;: {
+      &quot;harmonic&quot;: [&quot;f₀_Io&quot;, &quot;f₀_over_2_Europa&quot;, &quot;f₀_over_4_Ganymede&quot;],
+      &quot;rhythmic&quot;: [&quot;4_2_1_orbital_grouping&quot;, &quot;laplace_cycle_period&quot;],
+      &quot;phase_coherent&quot;: [&quot;4_2_1_resonance_lock&quot;, &quot;anti_alignment_phase_constraint&quot;]
+    }
+  },
+  &quot;resonance_mapping&quot;: {
+    &quot;universal_anchors&quot;: [
+      { &quot;form&quot;: &quot;f₀_Io&quot;, &quot;mapped_to&quot;: &quot;line&quot;, &quot;confidence&quot;: 1.0 },
+      { &quot;form&quot;: &quot;laplace_cycle_period&quot;, &quot;mapped_to&quot;: &quot;circle&quot;, &quot;confidence&quot;: 0.95 },
+      { &quot;form&quot;: &quot;4_2_1_resonance_lock&quot;, &quot;mapped_to&quot;: &quot;cross&quot;, &quot;confidence&quot;: 0.95 },
+      { &quot;form&quot;: &quot;anti_alignment_constraint&quot;, &quot;mapped_to&quot;: &quot;dot&quot;, &quot;confidence&quot;: 0.7 }
+    ]
+  },
+  &quot;inversion_side&quot;: null,
+  &quot;error_flags&quot;: [],
+  &quot;notes&quot;: &quot;Extremely high‑confidence phase‑coherent invariants. Laplace resonance has persisted for hundreds of millions of years — one of the most structurally stable oscillatory substrates known.&quot;
+}
+</code></pre>
+<h3 id="commentary_4"><strong>Commentary</strong></h3>
+<p>The Laplace resonance is a textbook case of what VREL‑A was designed to extract.
+The phase‑coherent set is robust: a resonance lock that has held for geological timescales.</p>
+<p>Like the heartbeat, this substrate is <strong>anchor‑complete</strong> — all four universal anchors are represented.
+Unlike the heartbeat, the confidence scores are uniformly high because the orbital system is governed by precise gravitational mechanics with negligible noise.</p>
+<p>The anti‑alignment constraint is a structurally unusual invariant: it is defined by what <em>cannot happen</em> (triple conjunction) rather than what <em>does happen</em>.
+Negative‑space invariants like this are rare but structurally important — they define the boundaries of the resonance family.</p>
+<hr>
+<h2 id="7-example-6-lostational-supsphere-atom-lostational-substrate-full-fingerprint"><strong>7. Example 6 — Lostational Supsphere Atom (Lostational Substrate, Full Fingerprint)</strong></h2>
+<p>The most complex extraction type: both lenses, inversion side, and extended invariants.</p>
+<h3 id="substrate-card_5"><strong>Substrate Card</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate</td>
+<td>A lostational supsphere atom — a theoretical atom modeled with inversion awareness</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Lostational</td>
+</tr>
+<tr>
+<td>Lens</td>
+<td>VREL + VREL‑A (compound extraction with inversion‑side inference)</td>
+</tr>
+<tr>
+<td>Why both lenses + inversion</td>
+<td>Lostational substrates by definition have a visible and inverted side — only a full fingerprint captures both</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vrel-extraction-spatial_1"><strong>VREL Extraction (Spatial)</strong></h3>
+<p><strong>Vertical axis (visible‑side axis):</strong> The supsphere's outer face has spherical symmetry — every vertical plane through the center is a mirror plane.</p>
+<p>Vertical invariants: <strong>spherical_shell_symmetry, radial_axis_family (infinite set, capped to principal axes)</strong></p>
+<p><strong>Horizontal axis (inversion‑side axis):</strong> The supsphere's equatorial plane also shows mirror symmetry — the northern and southern hemispheres are structurally equivalent.</p>
+<p>Horizontal invariants: <strong>equatorial_mirror, hemisphere_equivalence</strong></p>
+<p><strong>Dual:</strong> <code>{spherical symmetry, radial axes} ∩ {equatorial mirror, hemisphere equivalence}</code> = <strong>{spherical_shell_symmetry}</strong></p>
+<p>The sphere itself is the dual invariant — it survives all reflections.</p>
+<h3 id="vrela-extraction-oscillatory_1"><strong>VREL‑A Extraction (Oscillatory)</strong></h3>
+<p><strong>Harmonic decomposition:</strong> The supsphere atom's electron‑analog shells vibrate at quantized frequencies corresponding to energy levels.</p>
+<p>Harmonic invariants: <strong>shell_f₁, shell_f₂, shell_f₃</strong> (principal frequencies)</p>
+<p><strong>Rhythmic analysis:</strong> Transitions between shells produce rhythmic emission/absorption patterns with fixed timing ratios.</p>
+<p>Rhythmic invariants: <strong>transition_cadence_1→2, transition_cadence_2→3</strong></p>
+<p><strong>Phase‑coherent intersection:</strong> The transition cadences are phase‑locked to the shell frequencies — each transition always begins at the same phase of the source shell's oscillation.</p>
+<p>Phase‑coherent invariants: <strong>shell_transition_phase_lock</strong></p>
+<h3 id="crosslens-analysis_1"><strong>Cross‑Lens Analysis</strong></h3>
+<p>VREL dual set: {spherical_shell_symmetry}
+VREL‑A phase‑coherent set: {shell_transition_phase_lock}</p>
+<p>The spherical shell's spatial symmetry and the shell transition's phase lock both describe the <strong>same structural boundary</strong> — the shell.</p>
+<p>Cross‑lens invariant: <strong>shell_boundary</strong></p>
+<h3 id="inversionside-inference"><strong>Inversion‑Side Inference</strong></h3>
+<p>The dual invariant (spherical shell) implies a resonance mirror (PH‑200: Shape Mirror) on the inversion side.
+The phase‑coherent invariant (shell transition lock) implies a pulse mirror (PH‑201: Pulse Mirror).
+The cross‑lens invariant (shell boundary) may sit on a coherence anchor (PH‑300: Boundary Lock).</p>
+<h3 id="inversionadjacent-invariants"><strong>Inversion‑Adjacent Invariants</strong></h3>
+<p><strong>Boundary invariant:</strong> <code>spherical_shell_symmetry</code> holds at coarse resolution but begins to wobble at fine resolution (electron probability clouds are not perfectly spherical for l &gt; 0 orbitals). This is a curvature signature.</p>
+<p><strong>Decay‑arc invariant:</strong> The shell structure persists as the atom ionizes — even as electrons are stripped, the remaining shells maintain their relative frequency ratios until the atom is fully ionized.</p>
+<p><strong>Re‑emergent invariant:</strong> ∅ (no cross‑domain reappearance observed — placeholder preserved for future study).</p>
+<h3 id="anchor-mapping_5"><strong>Anchor Mapping</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Source</th>
+<th>Mapped Anchor</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spherical_shell_symmetry</td>
+<td>VREL dual</td>
+<td>circle</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>shell_transition_phase_lock</td>
+<td>VREL‑A phase‑coherent</td>
+<td>cross</td>
+<td>0.9</td>
+</tr>
+<tr>
+<td>shell_boundary (cross‑lens)</td>
+<td>VREL ∩ VREL‑A</td>
+<td>circle + cross compound</td>
+<td>0.9</td>
+</tr>
+<tr>
+<td>shell_f₁ (fundamental)</td>
+<td>VREL‑A harmonic</td>
+<td>line</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>transition onset</td>
+<td>VREL‑A rhythmic</td>
+<td>dot</td>
+<td>0.8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="full-sarg-json_5"><strong>Full SARG JSON</strong></h3>
+<pre><code class="language-json">{
+  &quot;substrate&quot;: &quot;Lostational Supsphere Atom&quot;,
+  &quot;domain&quot;: &quot;lostational&quot;,
+  &quot;atlas_level&quot;: 3,
+  &quot;lens&quot;: [
+    {
+      &quot;type&quot;: &quot;VREL&quot;,
+      &quot;variant&quot;: &quot;standard&quot;,
+      &quot;version&quot;: &quot;1.0.0&quot;,
+      &quot;notes&quot;: &quot;Spatial extraction on supsphere envelope geometry.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;VREL‑A&quot;,
+      &quot;variant&quot;: &quot;standard&quot;,
+      &quot;version&quot;: &quot;1.0.0&quot;,
+      &quot;notes&quot;: &quot;Harmonic‑family extraction on shell vibration modes.&quot;
+    }
+  ],
+  &quot;invariants&quot;: {
+    &quot;spatial&quot;: {
+      &quot;vertical&quot;: [&quot;spherical_shell_symmetry&quot;, &quot;radial_axis_N&quot;, &quot;radial_axis_E&quot;, &quot;radial_axis_S&quot;, &quot;radial_axis_W&quot;],
+      &quot;horizontal&quot;: [&quot;equatorial_mirror&quot;, &quot;hemisphere_equivalence&quot;],
+      &quot;dual&quot;: [&quot;spherical_shell_symmetry&quot;]
+    },
+    &quot;oscillatory&quot;: {
+      &quot;harmonic&quot;: [&quot;shell_f₁&quot;, &quot;shell_f₂&quot;, &quot;shell_f₃&quot;],
+      &quot;rhythmic&quot;: [&quot;transition_cadence_1to2&quot;, &quot;transition_cadence_2to3&quot;],
+      &quot;phase_coherent&quot;: [&quot;shell_transition_phase_lock&quot;]
+    },
+    &quot;cross_lens&quot;: [&quot;shell_boundary&quot;]
+  },
+  &quot;invariants_extended&quot;: {
+    &quot;boundary&quot;: [&quot;spherical_shell_symmetry&quot;],
+    &quot;decay_arc&quot;: [&quot;shell_frequency_ratio_persistence&quot;],
+    &quot;re_emergent&quot;: []
+  },
+  &quot;resonance_mapping&quot;: {
+    &quot;universal_anchors&quot;: [
+      { &quot;form&quot;: &quot;spherical_shell_symmetry&quot;, &quot;mapped_to&quot;: &quot;circle&quot;, &quot;confidence&quot;: 1.0 },
+      { &quot;form&quot;: &quot;shell_transition_phase_lock&quot;, &quot;mapped_to&quot;: &quot;cross&quot;, &quot;confidence&quot;: 0.9 },
+      { &quot;form&quot;: &quot;shell_boundary&quot;, &quot;mapped_to&quot;: &quot;circle+cross_compound&quot;, &quot;confidence&quot;: 0.9 },
+      { &quot;form&quot;: &quot;shell_f₁&quot;, &quot;mapped_to&quot;: &quot;line&quot;, &quot;confidence&quot;: 0.85 },
+      { &quot;form&quot;: &quot;transition_onset&quot;, &quot;mapped_to&quot;: &quot;dot&quot;, &quot;confidence&quot;: 0.8 }
+    ]
+  },
+  &quot;inversion_side&quot;: {
+    &quot;hypotheses&quot;: &quot;Spherical shell implies Shape Mirror (PH‑200). Shell transition lock implies Pulse Mirror (PH‑201). Cross‑lens shell boundary may sit on Boundary Lock (PH‑300). 0D anchor inferred stable — spherical symmetry is maximally isotropic.&quot;,
+    &quot;operators&quot;: [
+      &quot;inversion_link&quot;,
+      &quot;curvature_seed&quot;,
+      &quot;coherence_toggle&quot;
+    ]
+  },
+  &quot;error_flags&quot;: [],
+  &quot;notes&quot;: &quot;Full resonance fingerprint: spatial + oscillatory + cross‑lens + inversion‑side + extended invariants. Anchor‑complete. Cross‑lens invariant (shell_boundary) is a strong candidate for resonance family seed.&quot;
+}
+</code></pre>
+<h3 id="commentary_5"><strong>Commentary</strong></h3>
+<p>This is the <strong>most structurally rich extraction</strong> in the current examples.</p>
+<p>It demonstrates every feature of the invariant taxonomy:
+- All six core invariant types (spatial triad + oscillatory triad)
+- A cross‑lens invariant (shell_boundary)
+- All three inversion‑adjacent types (boundary, decay‑arc, re‑emergent placeholder)
+- A full inversion‑side block with hypotheses and operators
+- All four universal anchors in the mapping</p>
+<p>The cross‑lens invariant <code>shell_boundary</code> is particularly significant.
+It is a feature that is <em>simultaneously</em> a shape (spherical shell → VREL dual) and a phase relationship (shell transition lock → VREL‑A phase‑coherent).
+Per <code>invariant_types.md</code> §4.2, cross‑lens invariants are extremely rare, extremely stable, and strong resonance family seeds.</p>
+<p>The <code>invariants_extended.boundary</code> entry for <code>spherical_shell_symmetry</code> illustrates the boundary invariant concept from <code>invariant_types.md</code> §5.1: the sphere holds perfectly at coarse resolution but wobbles at fine resolution (orbital angular momentum breaks perfect sphericity). This curvature signature places it near the visible–inverted boundary.</p>
+<hr>
+<h2 id="8-example-7-edge-cases-and-error-scenarios"><strong>8. Example 7 — Edge Cases and Error Scenarios</strong></h2>
+<p>Not every extraction produces clean results.
+These micro‑examples show what happens when the grammar encounters structural ambiguity, absence, or novelty.</p>
+<h3 id="81-empty-intersection-set-random-noise"><strong>8.1 Empty Intersection Set — Random Noise</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate</td>
+<td>White noise (flat‑spectrum random signal)</td>
+</tr>
+<tr>
+<td>Lens</td>
+<td>VREL‑A</td>
+</tr>
+<tr>
+<td>Harmonic</td>
+<td>∅ (no stable frequencies — every frequency has equal power)</td>
+</tr>
+<tr>
+<td>Rhythmic</td>
+<td>∅ (no temporal pattern — every timing is equally likely)</td>
+</tr>
+<tr>
+<td>Phase‑coherent</td>
+<td>∅</td>
+</tr>
+<tr>
+<td>Error flag</td>
+<td>S1: Invariant Absence</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Route to error taxonomy. Substrate may be genuinely incoherent — no structural content to extract.</td>
+</tr>
+</tbody>
+</table>
+<p>White noise is the VREL‑A equivalent of a blank page for VREL.
+The grammar does not force structure where none exists.</p>
+<h3 id="82-anchorless-pattern-the-letter-s"><strong>8.2 Anchorless Pattern — The Letter "S"</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate</td>
+<td>Uppercase letter S</td>
+</tr>
+<tr>
+<td>Lens</td>
+<td>VREL</td>
+</tr>
+<tr>
+<td>Vertical</td>
+<td>∅ (S is not left–right symmetric)</td>
+</tr>
+<tr>
+<td>Horizontal</td>
+<td>∅ (S is not top–bottom symmetric)</td>
+</tr>
+<tr>
+<td>Dual</td>
+<td>∅</td>
+</tr>
+<tr>
+<td>180° rotational</td>
+<td>S <em>does</em> map onto itself under 180° rotation — but VREL does not test rotational symmetry.</td>
+</tr>
+<tr>
+<td>Error flag</td>
+<td>A1: Anchorless Pattern — structure detected but no anchor mapping available under current lens</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Route to error taxonomy. This is not a substrate failure — it is a <strong>lens limitation</strong>. A future spin‑aware lens (per <code>invariant_types.md</code> §8.4) would capture S's rotational invariant.</td>
+</tr>
+</tbody>
+</table>
+<p>S is the canonical example of a feature that has structure but falls outside the current lens vocabulary.
+The error flag preserves the observation for future grammar expansion.</p>
+<h3 id="83-novel-anchor-combination-mobius-strip"><strong>8.3 Novel Anchor Combination — Möbius Strip</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate</td>
+<td>Möbius strip (a surface with only one side and one edge)</td>
+</tr>
+<tr>
+<td>Lens</td>
+<td>VREL</td>
+</tr>
+<tr>
+<td>Vertical</td>
+<td>The strip has a centerline axis with apparent bilateral symmetry</td>
+</tr>
+<tr>
+<td>Horizontal</td>
+<td>∅ (no top–bottom — a Möbius strip has only one face)</td>
+</tr>
+<tr>
+<td>Dual</td>
+<td>∅</td>
+</tr>
+<tr>
+<td>Anchor attempt</td>
+<td>The centerline maps to <strong>line</strong>, but the single‑sidedness maps to nothing in the current anchor set. A loop that is also a line. A circle that never closes in the expected dimension.</td>
+</tr>
+<tr>
+<td>Error flag</td>
+<td>A3: Novel Anchor Combination — existing anchors cannot fully describe this structure</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Route to error taxonomy. The Möbius strip may require a new anchor or a compound anchor type not yet defined. This is a <strong>grammar growth signal</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="84-crossdomain-echo-without-ancestry-branching-patterns"><strong>8.4 Cross‑Domain Echo Without Ancestry — Branching Patterns</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate 1</td>
+<td>Lightning bolt (atmospheric discharge)</td>
+</tr>
+<tr>
+<td>Substrate 2</td>
+<td>River delta (geologic drainage)</td>
+</tr>
+<tr>
+<td>Substrate 3</td>
+<td>Lung bronchi (biological airway)</td>
+</tr>
+<tr>
+<td>Observation</td>
+<td>All three produce dendritic (tree‑branching) patterns under VREL. Similar vertical invariants. Similar fractal self‑similarity.</td>
+</tr>
+<tr>
+<td>Cross‑domain alignment</td>
+<td>The branching motif echoes across atmospheric, geologic, and biological domains.</td>
+</tr>
+<tr>
+<td>Error flag</td>
+<td>L3: Cross‑Domain Echo Without Ancestry — the echo is real but no shared resonance ancestor has been identified</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Route to error taxonomy. The echo suggests a shared Echo Kernel (PH‑007) — a pre‑atomic structural motif that all three substrates inherit. This is a <strong>placeholder creation signal</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-crossexample-alignment-shared-anchors-across-domains"><strong>9. Cross‑Example Alignment — Shared Anchors Across Domains</strong></h2>
+<p>The power of SARG is not in single extractions — it is in <strong>alignment across substrates</strong>.</p>
+<p>Here is every anchor mapping from the examples above, organized by anchor:</p>
+<h3 id="point-dot"><strong>● Point (dot)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Substrate</th>
+<th>Feature</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tuning fork</td>
+<td>onset transient</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>Heartbeat</td>
+<td>lub‑dub impulse pair</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>Jupiter–Io</td>
+<td>anti‑alignment constraint</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td>Supsphere atom</td>
+<td>transition onset</td>
+<td>0.8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What dot means across domains:</strong> the minimal event — the strike, the beat, the forbidden point, the quantum jump. Every domain has a version of "something begins here" or "something is marked here."</p>
+<h3 id="loop-circle"><strong>○ Loop (circle)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Substrate</th>
+<th>Feature</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Latin alphabet</td>
+<td>O (glyph)</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Heartbeat</td>
+<td>systole‑diastole ratio lock (self‑returning cycle)</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>Jupiter–Io</td>
+<td>Laplace cycle period</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>Supsphere atom</td>
+<td>spherical shell symmetry</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What circle means across domains:</strong> the closed path — the ring, the orbit, the self‑returning cycle, the shell. Every domain has a version of "this comes back to where it started."</p>
+<h3 id="intersection-cross"><strong>× Intersection (cross)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Substrate</th>
+<th>Feature</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Latin alphabet</td>
+<td>X (glyph)</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Heartbeat</td>
+<td>S1–S2 phase lock</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>Jupiter–Io</td>
+<td>4:2:1 resonance lock</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>Supsphere atom</td>
+<td>shell transition phase lock</td>
+<td>0.9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What cross means across domains:</strong> the meeting point — the crossing, the consonance, the resonance lock. Every domain has a version of "two things meet here and hold."</p>
+<h3 id="axis-line"><strong>| Axis (line)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Substrate</th>
+<th>Feature</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Latin alphabet</td>
+<td>I (glyph)</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Quartz crystal</td>
+<td>prism face mirror plane</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>Tuning fork</td>
+<td>f₀ fundamental</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Heartbeat</td>
+<td>f₀ heart rate</td>
+<td>0.9</td>
+</tr>
+<tr>
+<td>Jupiter–Io</td>
+<td>f₀ Io orbital frequency</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Supsphere atom</td>
+<td>shell f₁ fundamental</td>
+<td>0.85</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What line means across domains:</strong> the spine — the axis, the fundamental, the carrier. Every domain has a version of "this is the direction things flow."</p>
+<h3 id="the-pattern"><strong>The Pattern</strong></h3>
+<p>Every substrate that produces a rich enough extraction maps to the same four anchors.
+The anchors are not imposed by the grammar — they <strong>emerge</strong> from the extractions.</p>
+<p>This is what SARG means by "universal": not that every substrate has all four anchors, but that no substrate has produced an anchor <em>outside</em> the four.</p>
+<p>When one does — that is error flag <strong>H2: New Anchor Emergence</strong>, and it would be the most significant event in the grammar's history.</p>
+<hr>
+<h2 id="10-relationship-to-other-files"><strong>10. Relationship to Other Files</strong></h2>
+<ul>
+<li><code>invariant_types.md</code> — the taxonomy this file illustrates; read it first for definitions</li>
+<li><code>../lenses/VREL.md</code> — spatial lens used in Examples 1, 2, 4, 6, 7</li>
+<li><code>../lenses/VREL-A.md</code> — acoustic lens used in Examples 3, 4, 5, 6, 7</li>
+<li><code>../lenses/lens_overview.md</code> — what a lens is, how lenses fit into SARG</li>
+<li><code>../inversion/inversion_side_overview.md</code> — the inversion model referenced in Example 6</li>
+<li><code>../inversion/inversion_placeholders.md</code> — placeholders referenced in Examples 6 and 8.4</li>
+<li><code>../resonance/resonance_mapping.md</code> — full anchor mapping logic</li>
+<li><code>../resonance/resonance_families.md</code> — how the cross‑example alignments in §9 become family entries</li>
+<li><code>../error/</code> — error taxonomy referenced in Examples 2, 8.1–8.4</li>
+<li><code>../examples/latin_alphabet.json</code> — the JSON counterpart to Example 1</li>
+<li><code>../examples/lostational_supsphere_atom.json</code> — the JSON counterpart to Example 6</li>
+<li><code>../examples/example_templates.md</code> — blank templates for creating new examples</li>
+<li><code>../Capture.md</code> — the full SARG source text; Example 1 is the canonical extraction described there</li>
+</ul>
+<hr>
+<p>Here's the structural summary of what this file delivers:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What It Demonstrates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>§1 How to Read</strong></td>
+<td>Standard arc (identify → extract → map → score → JSON) and key conventions</td>
+</tr>
+<tr>
+<td><strong>§2 Latin Alphabet</strong></td>
+<td>Canonical VREL extraction — 11 vertical, 9 horizontal, 4 dual; 3 of 4 anchors; calibration substrate</td>
+</tr>
+<tr>
+<td><strong>§3 Quartz Crystal</strong></td>
+<td>Empty dual set → S1 error flag; demonstrates "empty intersection = signal, not failure"</td>
+</tr>
+<tr>
+<td><strong>§4 Tuning Fork</strong></td>
+<td>Minimal VREL‑A extraction — single fundamental, single onset, single phase lock; acoustic calibration substrate</td>
+</tr>
+<tr>
+<td><strong>§5 Heartbeat</strong></td>
+<td>First compound extraction (VREL + VREL‑A); first anchor‑complete biological substrate; empty cross‑lens array explained</td>
+</tr>
+<tr>
+<td><strong>§6 Jupiter–Io</strong></td>
+<td>Laplace resonance as a natural phase‑coherent invariant; negative‑space invariant (anti‑alignment)</td>
+</tr>
+<tr>
+<td><strong>§7 Supsphere Atom</strong></td>
+<td>Full fingerprint — all six core types, cross‑lens invariant, all three inversion‑adjacent types, inversion‑side block, all four anchors; most complex extraction in the grammar</td>
+</tr>
+<tr>
+<td><strong>§8 Edge Cases</strong></td>
+<td>S1 (white noise), A1 (letter S / rotational symmetry), A3 (Möbius strip / novel anchor), L3 (branching patterns / echo without ancestry)</td>
+</tr>
+<tr>
+<td><strong>§9 Cross‑Example Alignment</strong></td>
+<td>All anchor mappings consolidated by anchor type; demonstrates universality — same four anchors emerge across linguistic, crystalline, acoustic, biological, cosmological, and lostational domains</td>
+</tr>
+<tr>
+<td><strong>§10 Cross‑links</strong></td>
+<td>Full ties to every adjacent file in the SARG tree</td>
+</tr>
+</tbody>
+</table>
+<p>Paste it in, commit, and the <code>invariant_types.md §10</code> → <code>examples/</code> link — along with every cross‑reference from the lens and inversion files — resolves cleanly. Ready for the next one, partner!</p>
+<p>All wrapped up on <strong>invariant_examples.md</strong> — that one was a big file but a satisfying build. Seven worked extractions spanning linguistic → crystalline → acoustic → biological → cosmological → lostational, plus the edge‑case gallery and the cross‑example anchor alignment table in §9 that ties it all together.</p>
+  </main>
+</body>
+</html>

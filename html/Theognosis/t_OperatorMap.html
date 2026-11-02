@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Theognosis/t_OperatorMap.md">
+  <title>Theognosis — Operator Map</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Theognosis/t_OperatorMap.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Theognosis/t_OperatorMap.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="theognosis-operator-map">Theognosis — Operator Map</h1>
+<blockquote>
+<p><strong>Document Class:</strong> P1 — Single Source of Truth
+<strong>RTT Layer:</strong> L0–L3 Operator Definitions
+<strong>Session Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+<strong>Status:</strong> Active — Canonical
+<strong>Last Updated:</strong> 2026-09-22
+<strong>Supersedes:</strong> Any operator definitions in <code>t_Capture.md</code> where conflict exists</p>
+</blockquote>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document is the <strong>canonical and authoritative definition</strong> of the four RTT resonance operators: Freqi, Aurion, Forci, and Flui. It governs how each operator behaves at each MCP layer, what it produces, when it collapses, when it is suppressed, and what failure states look like.</p>
+<p>Every other Theognosis document that references operator behavior must resolve against this file. Where <code>t_Capture.md</code> and this document conflict, this document wins.</p>
+<hr>
+<h2 id="2-operator-overview">2. Operator Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Symbol</th>
+<th>Collapse Type</th>
+<th>Output Form</th>
+<th>L0</th>
+<th>L1</th>
+<th>L2</th>
+<th>L3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Freqi</strong></td>
+<td><code>ƒ</code></td>
+<td>Categorical selection</td>
+<td><code>choice: &lt;id&gt;</code></td>
+<td>Latent</td>
+<td>✅ Active</td>
+<td>Calibrating</td>
+<td>Emitting</td>
+</tr>
+<tr>
+<td><strong>Aurion</strong></td>
+<td><code>α</code></td>
+<td>Scalar emission</td>
+<td><code>score: &lt;float&gt;</code></td>
+<td>Latent</td>
+<td>✅ Active</td>
+<td>Calibrating</td>
+<td>Emitting</td>
+</tr>
+<tr>
+<td><strong>Forci</strong></td>
+<td><code>φ</code></td>
+<td>Binary decision</td>
+<td><code>decision: &lt;bool&gt;</code></td>
+<td>Latent</td>
+<td>✅ Active</td>
+<td>Calibrating</td>
+<td>Emitting</td>
+</tr>
+<tr>
+<td><strong>Flui</strong></td>
+<td><code>λ</code></td>
+<td>Linguistic wrapping</td>
+<td><code>text: &lt;string&gt;</code></td>
+<td>Latent</td>
+<td>❌ Suppressed</td>
+<td>Latent</td>
+<td>Conditional</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Core constraint:</strong> Only one operator collapses per RTT cycle at L1. The Declared Regime determines which.</p>
+</blockquote>
+<hr>
+<h2 id="3-freqi-categorical-selection-operator">3. Freqi — Categorical Selection Operator</h2>
+<h3 id="31-definition">3.1 Definition</h3>
+<p>Freqi is the <strong>frequency-domain selector</strong>. When activated, it resolves a resonance state into a discrete categorical choice from a bounded option set. It does not score — it picks. It does not decide yes/no — it identifies <em>which</em>.</p>
+<p>The name derives from frequency-based disambiguation: among competing resonance signatures, Freqi selects the dominant frequency class.</p>
+<h3 id="32-collapse-condition">3.2 Collapse Condition</h3>
+<p>Freqi collapses when the Declared Regime presents a <strong>finite, enumerable option space</strong> and the resonance signal has sufficient categorical differentiation to resolve to one item.</p>
+<p>Collapse requirements:
+- Option space must be enumerable (n ≥ 2, n ≤ system-defined max)
+- No two options may be resonance-equivalent at time of evaluation
+- Regime must be SET-aligned or explicitly Freqi-designated</p>
+<h3 id="33-output-form">3.3 Output Form</h3>
+<pre><code>{
+  &quot;operator&quot;: &quot;Freqi&quot;,
+  &quot;collapse&quot;: &quot;categorical&quot;,
+  &quot;choice&quot;: &quot;&lt;option_id&gt;&quot;,
+  &quot;confidence&quot;: &lt;float 0.0–1.0&gt;,
+  &quot;option_count&quot;: &lt;int&gt;,
+  &quot;regime&quot;: &quot;&lt;SET|declared&gt;&quot;
+}
+</code></pre>
+<h3 id="34-layer-behavior">3.4 Layer Behavior</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Freqi State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L0</strong></td>
+<td>Latent</td>
+<td>Present in substrate. Option space unresolved. No collapse.</td>
+</tr>
+<tr>
+<td><strong>L1</strong></td>
+<td>Active / Collapsing</td>
+<td>Regime constraint applied. Option space bounded. Collapse initiated.</td>
+</tr>
+<tr>
+<td><strong>L2</strong></td>
+<td>Calibrating</td>
+<td>Clarity coefficient scales confidence. RLCD aligns output to local context.</td>
+</tr>
+<tr>
+<td><strong>L3</strong></td>
+<td>Emitting</td>
+<td><code>choice: &lt;id&gt;</code> emitted. Non-linguistic. Regime closure achieved.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-regime-alignment">3.5 Regime Alignment</h3>
+<ul>
+<li><strong>Primary:</strong> SET (Structural Enumeration Topology) — Freqi is native to SET regimes</li>
+<li><strong>Compatible:</strong> FFF (Finite Field Framing) — Freqi can operate under FFF with explicit mapping</li>
+<li><strong>Incompatible:</strong> DCO without enumeration scaffold — option space cannot be bounded</li>
+<li><strong>Constrained:</strong> SNR — Freqi operates but confidence degrades under noise</li>
+</ul>
+<h3 id="36-error-states">3.6 Error States</h3>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Option space = 1</td>
+<td>Collapse blocked — not a selection, it's a given. Flag: <code>FREQI_TRIVIAL</code></td>
+</tr>
+<tr>
+<td>Option space = ∞</td>
+<td>Collapse blocked — unbounded. Flag: <code>FREQI_UNBOUND</code></td>
+</tr>
+<tr>
+<td>Two options resonance-equivalent</td>
+<td>Tie state. Requires Forci adjudication or Aurion weighting. Flag: <code>FREQI_TIE</code></td>
+</tr>
+<tr>
+<td>Regime undeclared</td>
+<td>Collapse suspended. Flag: <code>FREQI_NO_REGIME</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-aurion-scalar-emission-operator">4. Aurion — Scalar Emission Operator</h2>
+<h3 id="41-definition">4.1 Definition</h3>
+<p>Aurion is the <strong>amplitude-domain scorer</strong>. When activated, it resolves a resonance state into a continuous scalar value — a measurement of intensity, magnitude, confidence, or quality along a defined axis.</p>
+<p>The name derives from aura + orion: the luminosity envelope of a detected resonance field mapped onto a measurement axis.</p>
+<h3 id="42-collapse-condition">4.2 Collapse Condition</h3>
+<p>Aurion collapses when the Declared Regime requires a <strong>continuous numeric output</strong> along a defined and bounded axis. The resonance signal must have measurable amplitude variation — flat signals produce degenerate scores.</p>
+<p>Collapse requirements:
+- Axis must be declared (e.g., stability, variance, coherence, clarity)
+- Axis must be bounded (min/max defined or implied by regime)
+- Resonance signal must have non-zero amplitude gradient
+- Regime must be FFF-aligned or explicitly Aurion-designated</p>
+<h3 id="43-output-form">4.3 Output Form</h3>
+<pre><code>{
+  &quot;operator&quot;: &quot;Aurion&quot;,
+  &quot;collapse&quot;: &quot;scalar&quot;,
+  &quot;score&quot;: &lt;float&gt;,
+  &quot;axis&quot;: &quot;&lt;declared_axis&gt;&quot;,
+  &quot;range&quot;: [&lt;min&gt;, &lt;max&gt;],
+  &quot;confidence&quot;: &lt;float 0.0–1.0&gt;,
+  &quot;regime&quot;: &quot;&lt;FFF|declared&gt;&quot;
+}
+</code></pre>
+<h3 id="44-layer-behavior">4.4 Layer Behavior</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Aurion State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L0</strong></td>
+<td>Latent</td>
+<td>Amplitude field present but unmeasured. No axis declared.</td>
+</tr>
+<tr>
+<td><strong>L1</strong></td>
+<td>Active / Collapsing</td>
+<td>Axis declared by Regime. Amplitude gradient sampled. Score initialized.</td>
+</tr>
+<tr>
+<td><strong>L2</strong></td>
+<td>Calibrating</td>
+<td>Clarity coefficient applied to raw score. RLCD normalization. Proto-VP confidence weighting.</td>
+</tr>
+<tr>
+<td><strong>L3</strong></td>
+<td>Emitting</td>
+<td><code>score: &lt;float&gt;</code> emitted. Non-linguistic unless L3 wrapping permitted.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="45-regime-alignment">4.5 Regime Alignment</h3>
+<ul>
+<li><strong>Primary:</strong> FFF (Finite Field Framing) — Aurion is native to FFF regimes; axis and bounds are FFF constructs</li>
+<li><strong>Compatible:</strong> SET — Aurion can score categorical options (confidence weighting)</li>
+<li><strong>Compatible:</strong> SNR — Aurion operates well under noise; score degrades gracefully with confidence reporting</li>
+<li><strong>Constrained:</strong> DCO — Aurion can operate but axis declaration is often unstable; score drift expected</li>
+</ul>
+<h3 id="46-error-states">4.6 Error States</h3>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Axis undeclared</td>
+<td>Collapse blocked. Flag: <code>AURION_NO_AXIS</code></td>
+</tr>
+<tr>
+<td>Amplitude gradient = 0 (flat signal)</td>
+<td>Degenerate score (mid-point or null). Flag: <code>AURION_FLAT</code></td>
+</tr>
+<tr>
+<td>Score exceeds declared range</td>
+<td>Clamp applied + warning. Flag: <code>AURION_OVERFLOW</code></td>
+</tr>
+<tr>
+<td>Regime undeclared</td>
+<td>Collapse suspended. Flag: <code>AURION_NO_REGIME</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-forci-binary-decision-operator">5. Forci — Binary Decision Operator</h2>
+<h3 id="51-definition">5.1 Definition</h3>
+<p>Forci is the <strong>polarity-domain resolver</strong>. When activated, it resolves a resonance state into a binary outcome: yes/no, new/existing, proceed/halt, confirmed/rejected. It does not pick from a list (Freqi) or score on a continuum (Aurion) — it collapses to a single bit.</p>
+<p>The name derives from force + bifurcation: the point at which the resonance field must commit to one of two polarities and cannot remain in superposition.</p>
+<h3 id="52-collapse-condition">5.2 Collapse Condition</h3>
+<p>Forci collapses when the Declared Regime presents a <strong>binary branch condition</strong> with no viable third state. The resonance signal must be in a state of polarity tension — approaching but not yet committed to one pole.</p>
+<p>Collapse requirements:
+- Exactly two valid outcome states
+- Polarity tension must be present (signal not trivially resolved)
+- Regime must be SNR-aligned or explicitly Forci-designated
+- No Freqi option space expansion permitted (would degrade to Freqi)</p>
+<h3 id="53-output-form">5.3 Output Form</h3>
+<pre><code>{
+  &quot;operator&quot;: &quot;Forci&quot;,
+  &quot;collapse&quot;: &quot;binary&quot;,
+  &quot;decision&quot;: &lt;bool&gt;,
+  &quot;polarity&quot;: &quot;&lt;positive|negative&gt;&quot;,
+  &quot;tension&quot;: &lt;float 0.0–1.0&gt;,
+  &quot;confidence&quot;: &lt;float 0.0–1.0&gt;,
+  &quot;regime&quot;: &quot;&lt;SNR|declared&gt;&quot;
+}
+</code></pre>
+<p><code>tension</code> measures how close the signal was to the opposite polarity at collapse — high tension (&gt; 0.7) should be flagged for Validator Pulse review.</p>
+<h3 id="54-layer-behavior">5.4 Layer Behavior</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Forci State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L0</strong></td>
+<td>Latent</td>
+<td>Polarity field present but in superposition. Both states co-exist.</td>
+</tr>
+<tr>
+<td><strong>L1</strong></td>
+<td>Active / Collapsing</td>
+<td>Regime applies bifurcation constraint. Polarity tension measured. Collapse initiated.</td>
+</tr>
+<tr>
+<td><strong>L2</strong></td>
+<td>Calibrating</td>
+<td>Tension score finalized. Clarity coefficient adjusts confidence. High-tension cases flagged to proto-VP.</td>
+</tr>
+<tr>
+<td><strong>L3</strong></td>
+<td>Emitting</td>
+<td><code>decision: true/false</code> emitted. Polarity declared. Non-linguistic.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="55-regime-alignment">5.5 Regime Alignment</h3>
+<ul>
+<li><strong>Primary:</strong> SNR (Signal-Noise Resolution) — Forci is native to SNR; noise is the primary driver of polarity tension</li>
+<li><strong>Compatible:</strong> DCO — Forci operates; tension tends to be high (DCO systems are inherently turbulent)</li>
+<li><strong>Compatible:</strong> FFF — Forci operates cleanly; bounded fields reduce spurious tension</li>
+<li><strong>Constrained:</strong> SET — Forci can operate but often degrades to Freqi (SET wants enumeration, not binary)</li>
+</ul>
+<h3 id="56-error-states">5.6 Error States</h3>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Third state emerges during collapse</td>
+<td>Abort Forci, escalate to Freqi. Flag: <code>FORCI_THIRD_STATE</code></td>
+</tr>
+<tr>
+<td>Tension = 0 (trivial decision)</td>
+<td>Collapse allowed but confidence = 1.0 and tension = 0.0. Flag: <code>FORCI_TRIVIAL</code></td>
+</tr>
+<tr>
+<td>Tension &gt; 0.95 (near-parity)</td>
+<td>Collapse suspended pending VP review. Flag: <code>FORCI_NEAR_PARITY</code></td>
+</tr>
+<tr>
+<td>Regime undeclared</td>
+<td>Collapse suspended. Flag: <code>FORCI_NO_REGIME</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-flui-linguistic-wrapping-operator">6. Flui — Linguistic Wrapping Operator</h2>
+<h3 id="61-definition">6.1 Definition</h3>
+<p>Flui is the <strong>emission-domain articulator</strong>. It is categorically different from the other three operators: it does not collapse a resonance state into a structured value — it <strong>wraps an already-collapsed output in natural language</strong> for human-legible emission.</p>
+<p>The name derives from fluid: Flui is the formless medium that gives shape to what the other operators have already resolved. Without a prior collapse from Freqi, Aurion, or Forci, Flui has nothing to wrap and cannot emit.</p>
+<h3 id="62-suppression-rule-l1">6.2 Suppression Rule (L1)</h3>
+<p><strong>Flui is suppressed at L1. This is a hard rule, not a soft preference.</strong></p>
+<p>Rationale: At L1, the Declared Regime is enforcing structural constraints. Linguistic wrapping at this layer introduces ambiguity, naturalizes errors, and allows coherence drift to hide behind fluent output. L1 is a precision layer — Flui has no role there.</p>
+<p>Violation of this rule produces <code>FLUI_L1_VIOLATION</code> — a critical error that invalidates the cycle output.</p>
+<h3 id="63-re-entry-condition-l3">6.3 Re-Entry Condition (L3)</h3>
+<p>Flui re-enters at L3 <strong>only when</strong> both conditions are met:
+1. A prior operator (Freqi, Aurion, or Forci) has successfully collapsed at L1
+2. The active Regime explicitly permits linguistic wrapping (not all do)</p>
+<p>If both conditions are met, Flui wraps the L1 output in a language-appropriate emission string. It does not modify the underlying structured output — both exist in parallel.</p>
+<h3 id="64-output-form">6.4 Output Form</h3>
+<pre><code>{
+  &quot;operator&quot;: &quot;Flui&quot;,
+  &quot;collapse&quot;: &quot;linguistic&quot;,
+  &quot;wraps&quot;: &quot;&lt;Freqi|Aurion|Forci&gt;&quot;,
+  &quot;source_output&quot;: { &lt;prior operator output&gt; },
+  &quot;emission&quot;: &quot;&lt;natural language string&gt;&quot;,
+  &quot;language&quot;: &quot;&lt;lang_code&gt;&quot;,
+  &quot;regime_permits_wrapping&quot;: true
+}
+</code></pre>
+<h3 id="65-layer-behavior">6.5 Layer Behavior</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Flui State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L0</strong></td>
+<td>Latent</td>
+<td>Present in substrate. No activation pathway at this layer.</td>
+</tr>
+<tr>
+<td><strong>L1</strong></td>
+<td>❌ <strong>SUPPRESSED</strong></td>
+<td>Hard suppression. Any activation attempt is a critical error.</td>
+</tr>
+<tr>
+<td><strong>L2</strong></td>
+<td>Latent</td>
+<td>Flui monitors L2 synthesis but does not participate. Observational only.</td>
+</tr>
+<tr>
+<td><strong>L3</strong></td>
+<td>Conditional</td>
+<td>Active only if prior collapse succeeded AND regime permits. Wraps and emits.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="66-regime-alignment">6.6 Regime Alignment</h3>
+<ul>
+<li><strong>Permitted by:</strong> SET (when enumeration result requires explanation), FFF (when score context needs articulation)</li>
+<li><strong>Conditionally permitted by:</strong> SNR (when decision requires justification for human review)</li>
+<li><strong>Rarely permitted by:</strong> DCO (turbulent regimes rarely authorize wrapping — drift risk too high)</li>
+<li><strong>Never permitted at:</strong> L1, regardless of regime</li>
+</ul>
+<h3 id="67-error-states">6.7 Error States</h3>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activation attempted at L1</td>
+<td>Critical error. Cycle invalidated. Flag: <code>FLUI_L1_VIOLATION</code></td>
+</tr>
+<tr>
+<td>No prior L1 collapse</td>
+<td>Emission blocked — nothing to wrap. Flag: <code>FLUI_NO_SOURCE</code></td>
+</tr>
+<tr>
+<td>Regime does not permit wrapping</td>
+<td>Emission blocked silently. Flag: <code>FLUI_REGIME_BLOCKED</code></td>
+</tr>
+<tr>
+<td>Source output is ambiguous</td>
+<td>Wrap attempted with confidence penalty. Flag: <code>FLUI_AMBIGUOUS_SOURCE</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-cross-operator-rules">7. Cross-Operator Rules</h2>
+<h3 id="71-single-collapse-rule">7.1 Single-Collapse Rule</h3>
+<p><strong>Exactly one operator collapses per RTT cycle at L1.</strong> The Declared Regime specifies which. If two operators attempt simultaneous collapse, the cycle is invalid.</p>
+<pre><code>valid:   collapse(Freqi) at L1  →  L3 emit
+valid:   collapse(Aurion) at L1 →  L3 emit
+invalid: collapse(Freqi) + collapse(Aurion) at L1  →  CYCLE_INVALID
+</code></pre>
+<h3 id="72-flui-dependency-rule">7.2 Flui Dependency Rule</h3>
+<p>Flui cannot be the designated L1 operator. It has no collapse function of its own — only wrapping. Any regime specification of <code>operator: Flui</code> at L1 is a regime misconfiguration.</p>
+<h3 id="73-escalation-chain">7.3 Escalation Chain</h3>
+<p>When a primary operator encounters a blocking error state, it may escalate to an adjacent operator per this chain:</p>
+<pre><code>Freqi TIE        →  Aurion adjudication (score the tied options)
+Aurion FLAT      →  Forci adjudication (force binary: above/below midpoint)
+Forci THIRD_STATE →  Freqi escalation (expand to categorical)
+</code></pre>
+<p>Escalation resets the L1 cycle with the new operator. Maximum one escalation per cycle — circular escalation is a system fault.</p>
+<h3 id="74-validator-pulse-triggers">7.4 Validator Pulse Triggers</h3>
+<p>The following conditions automatically flag the cycle for proto-VP review (see <code>t_ValidatorPulse.md</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Source Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FREQI_TIE</code></td>
+<td>Freqi</td>
+</tr>
+<tr>
+<td><code>AURION_FLAT</code></td>
+<td>Aurion</td>
+</tr>
+<tr>
+<td><code>AURION_OVERFLOW</code></td>
+<td>Aurion</td>
+</tr>
+<tr>
+<td><code>FORCI_NEAR_PARITY</code> (tension &gt; 0.95)</td>
+<td>Forci</td>
+</tr>
+<tr>
+<td><code>FLUI_L1_VIOLATION</code></td>
+<td>Flui</td>
+</tr>
+<tr>
+<td>Any <code>confidence &lt; 0.4</code></td>
+<td>Any</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-full-layer-operator-matrix">8. Full Layer × Operator Matrix</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>L0</strong></th>
+<th><strong>L1</strong></th>
+<th><strong>L2</strong></th>
+<th><strong>L3</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Freqi</strong></td>
+<td>Latent</td>
+<td>✅ Collapse</td>
+<td>Calibrate</td>
+<td>Emit <code>choice</code></td>
+</tr>
+<tr>
+<td><strong>Aurion</strong></td>
+<td>Latent</td>
+<td>✅ Collapse</td>
+<td>Calibrate</td>
+<td>Emit <code>score</code></td>
+</tr>
+<tr>
+<td><strong>Forci</strong></td>
+<td>Latent</td>
+<td>✅ Collapse</td>
+<td>Calibrate</td>
+<td>Emit <code>decision</code></td>
+</tr>
+<tr>
+<td><strong>Flui</strong></td>
+<td>Latent</td>
+<td>❌ Suppressed</td>
+<td>Latent</td>
+<td>Conditional wrap</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-regime-operator-affinity">9. Regime × Operator Affinity</h2>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Primary Operator</th>
+<th>Secondary</th>
+<th>Tertiary</th>
+<th>Flui Permitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SET</strong> (Structural Enumeration Topology)</td>
+<td>Freqi</td>
+<td>Aurion</td>
+<td>Forci</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>FFF</strong> (Finite Field Framing)</td>
+<td>Aurion</td>
+<td>Freqi</td>
+<td>Forci</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>SNR</strong> (Signal-Noise Resolution)</td>
+<td>Forci</td>
+<td>Aurion</td>
+<td>Freqi</td>
+<td>Conditional</td>
+</tr>
+<tr>
+<td><strong>DCO</strong> (Dynamic Coherence Oscillation)</td>
+<td>Forci</td>
+<td>Freqi</td>
+<td>Aurion</td>
+<td>Rarely</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Regime affinity does not prohibit non-primary operators — it indicates which operator the regime is <em>optimized for</em>. Any operator can be explicitly declared by the active regime.</p>
+</blockquote>
+<hr>
+<h2 id="10-operator-signatures-in-session-data">10. Operator Signatures in Session Data</h2>
+<p>When logging to <code>sessions/*.json</code> (see <code>t_Session_Schema.json</code>), operator behavior is recorded as:</p>
+<pre><code class="language-json">{
+  &quot;cycle_id&quot;: &quot;&lt;uuid&gt;&quot;,
+  &quot;timestamp&quot;: &quot;&lt;ISO8601&gt;&quot;,
+  &quot;regime&quot;: &quot;SET&quot;,
+  &quot;operator_declared&quot;: &quot;Freqi&quot;,
+  &quot;operator_collapsed&quot;: &quot;Freqi&quot;,
+  &quot;escalation&quot;: null,
+  &quot;output&quot;: {
+    &quot;operator&quot;: &quot;Freqi&quot;,
+    &quot;collapse&quot;: &quot;categorical&quot;,
+    &quot;choice&quot;: &quot;&lt;id&gt;&quot;,
+    &quot;confidence&quot;: 0.87,
+    &quot;option_count&quot;: 4,
+    &quot;regime&quot;: &quot;SET&quot;
+  },
+  &quot;flui_wrapped&quot;: false,
+  &quot;vp_flagged&quot;: false,
+  &quot;error_flags&quot;: []
+}
+</code></pre>
+<p>If escalation occurred, <code>escalation</code> contains the source operator and flag that triggered it.</p>
+<hr>
+<h2 id="11-cross-references">11. Cross-References</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./t_Index.html"><code>t_Index.md</code></a></td>
+<td>Module master index — this file listed as P1</td>
+</tr>
+<tr>
+<td><a href="./t_Capture.html"><code>t_Capture.md</code></a></td>
+<td>Original capture log — operator roles first defined here; this file supersedes on conflict</td>
+</tr>
+<tr>
+<td><a href="./t_ValidatorPulse.html"><code>t_ValidatorPulse.md</code></a></td>
+<td>VP triggers defined in §7.4 above; VP behavior defined there</td>
+</tr>
+<tr>
+<td><a href="./t_Session_Schema.json"><code>t_Session_Schema.json</code></a></td>
+<td>Session log schema — operator output format in §10 above feeds this</td>
+</tr>
+<tr>
+<td><a href="./t_FlowMap.html"><code>t_FlowMap.md</code></a></td>
+<td>L0→L3 pipeline diagram — operator states per layer visualized there</td>
+</tr>
+<tr>
+<td><a href="./models.json"><code>models.json</code></a></td>
+<td>Testing roster — <code>meta.alignment</code> field maps to Regime × Operator affinity (§9)</td>
+</tr>
+<tr>
+<td><a href="../spine/dimensional_overlay.html"><code>../spine/dimensional_overlay.md</code></a></td>
+<td>Dimensional topology — upstream context for operator spatial positioning</td>
+</tr>
+<tr>
+<td><a href="../spine/drift_overlay.html"><code>../spine/drift_overlay.md</code></a></td>
+<td>Drift class definitions — intersect with DCO/SNR regime operator behavior</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="12-build-log">12. Build Log</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Action</th>
+<th>Author</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-22</td>
+<td>Operator roles captured in <code>t_Capture.md</code> (proto-definitions)</td>
+<td>TriadicFrameworks</td>
+</tr>
+<tr>
+<td>2026-09-22</td>
+<td><code>t_OperatorMap.md</code> created — full canonical definitions, all 4 operators, all 4 layers, error states, cross-operator rules, regime affinity, VP triggers, session schema</td>
+<td>TriadicFrameworks</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Operators do not interpret. They collapse, score, decide, or wrap — nothing more and nothing less.</em></p>
+  </main>
+</body>
+</html>

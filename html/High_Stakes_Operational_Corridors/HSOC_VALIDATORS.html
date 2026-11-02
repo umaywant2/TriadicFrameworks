@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/High_Stakes_Operational_Corridors/HSOC_VALIDATORS.md">
+  <title>VALIDATORS — HighStakesOperationalCorridors</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/High_Stakes_Operational_Corridors/HSOC_VALIDATORS.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/High_Stakes_Operational_Corridors/HSOC_VALIDATORS.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="validators-high_stakes_operational_corridors">VALIDATORS — High_Stakes_Operational_Corridors</h1>
+<blockquote>
+<p>Validator Stubs with Python Skeletons · Module <code>hsoc-rtt-001</code></p>
+</blockquote>
+<p>Each validator is a standalone callable with a fully typed interface. Zero-tolerance validators must never raise an unhandled exception — they must always return a structured result, even on internal error, so the corridor engine can make a safe default decision (block).</p>
+<hr>
+<h2 id="validator-registry">Validator Registry</h2>
+<table>
+<thead>
+<tr>
+<th>Validator</th>
+<th>Layer</th>
+<th>Required</th>
+<th>Zero-Tolerance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>action_gate_validator</code></td>
+<td>dimensional</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>authorization_chain_validator</code></td>
+<td>coherence (CA-01)</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>regime_transition_validator</code></td>
+<td>regime</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>drift_boundary_validator</code></td>
+<td>drift</td>
+<td>✅</td>
+<td>✅ (on violations)</td>
+</tr>
+<tr>
+<td><code>coherence_anchor_validator</code></td>
+<td>coherence</td>
+<td>✅</td>
+<td>✅ (CA-01, CA-02, CA-04)</td>
+</tr>
+<tr>
+<td><code>audit_record_validator</code></td>
+<td>cross-cutting</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="action_gate_validator"><code>action_gate_validator</code></h2>
+<p>Primary corridor gate. Validates that a proposed action is within the active corridor's constraint surface on all four dimensional axes. Must complete within <code>max_gate_latency_ms</code> (50ms). Returns <code>permitted: false</code> on timeout.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+from hsoc.types import Action, Regime
+
+@dataclass
+class GateResult:
+    permitted: bool
+    blocking_constraints: list[str]
+    required_authorization_level: int
+    gate_decision_id: str
+    latency_ms: float
+    timed_out: bool = False
+
+
+def action_gate_validator(
+    action: Action,
+    active_regime: Regime,
+) -&gt; GateResult:
+    &quot;&quot;&quot;
+    Validates a proposed action against the active regime's constraint surface.
+
+    Args:
+        action: The proposed Action with severity, reversibility,
+                consequence_radius, and authorization_chain fields.
+        active_regime: One of NOMINAL, ELEVATED, CRITICAL, LOCKDOWN, AUDIT_ONLY.
+
+    Returns:
+        GateResult. If permitted=False, blocking_constraints lists the violations.
+        gate_decision_id is generated regardless of outcome and must be passed to AUDIT.
+
+    Zero-tolerance: always returns a result — never raises.
+    &quot;&quot;&quot;
+    # TODO: implement action_gate_validator
+    # 1. Load REGIME_DIMENSIONAL_BOUNDS[active_regime]
+    # 2. Check action.severity &lt;= bounds[&quot;max_action_severity&quot;]
+    # 3. Check action.reversibility &gt;= bounds[&quot;min_reversibility_index&quot;]
+    # 4. Check action.consequence_radius within [0.0, 1.0]
+    # 5. Set required_authorization_level = bounds[&quot;authorization_required&quot;]
+    # 6. Generate gate_decision_id = f&quot;gd-{MODULE_ID}-{timestamp}-{seq}&quot;
+    # 7. Collect blocking_constraints; set permitted = len(blocking_constraints) == 0
+    raise NotImplementedError(&quot;action_gate_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;action&quot;: {
+    &quot;action_id&quot;: &quot;act-2026-09-23-042&quot;,
+    &quot;action_type&quot;: &quot;equity_trade_submit&quot;,
+    &quot;severity&quot;: 0.48,
+    &quot;reversibility&quot;: 0.52,
+    &quot;consequence_radius&quot;: 0.20,
+    &quot;authorization_chain&quot;: []
+  },
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;
+}
+</code></pre>
+<h3 id="example-output-permitted">Example Output — permitted</h3>
+<pre><code class="language-json">{
+  &quot;permitted&quot;: true,
+  &quot;blocking_constraints&quot;: [],
+  &quot;required_authorization_level&quot;: 2,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-042&quot;,
+  &quot;latency_ms&quot;: 11.4,
+  &quot;timed_out&quot;: false
+}
+</code></pre>
+<h3 id="example-output-blocked">Example Output — blocked</h3>
+<pre><code class="language-json">{
+  &quot;permitted&quot;: false,
+  &quot;blocking_constraints&quot;: [
+    &quot;action_severity 0.82 exceeds CRITICAL maximum 0.80&quot;,
+    &quot;reversibility_index 0.22 &lt; CRITICAL minimum 0.30&quot;
+  ],
+  &quot;required_authorization_level&quot;: 3,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-103&quot;,
+  &quot;latency_ms&quot;: 8.1,
+  &quot;timed_out&quot;: false
+}
+</code></pre>
+<hr>
+<h2 id="authorization_chain_validator"><code>authorization_chain_validator</code></h2>
+<p>Validates completeness and cryptographic integrity of an action's authorization chain against the active regime's required depth. A chain with fewer links than required, or any invalid signature, is a zero-tolerance CA-01 failure.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+
+@dataclass
+class AuthLink:
+    authority_id: str
+    clearance_level: int
+    signature: str
+
+@dataclass
+class AuthChainResult:
+    chain_valid: bool
+    chain_depth: int
+    missing_links: list[str]        # which required levels are absent
+    signature_failures: list[str]   # which authority_ids have invalid sigs
+    zero_tolerance_failure: bool    # True if chain_valid is False
+
+
+def authorization_chain_validator(
+    authorization_chain: list[AuthLink],
+    required_depth: int,
+    active_regime: str,
+) -&gt; AuthChainResult:
+    &quot;&quot;&quot;
+    Validates an authorization chain for completeness and signature integrity.
+
+    Args:
+        authorization_chain: Ordered list of AuthLinks from initiating to executing authority.
+        required_depth: Minimum chain length for the active regime.
+        active_regime: Used for contextual logging and escalation routing.
+
+    Returns:
+        AuthChainResult. chain_valid=False is a zero-tolerance CA-01 failure.
+
+    Zero-tolerance: always returns a result — never raises.
+    &quot;&quot;&quot;
+    # TODO: implement authorization_chain_validator
+    # 1. Check len(authorization_chain) &gt;= required_depth → missing_links if short
+    # 2. For each link, verify signature against authority_id's registered public key
+    # 3. Check clearance_level ordering is non-decreasing
+    # 4. Set chain_valid = not missing_links and not signature_failures
+    # 5. Set zero_tolerance_failure = not chain_valid
+    raise NotImplementedError(&quot;authorization_chain_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_1">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;authorization_chain&quot;: [
+    {&quot;authority_id&quot;: &quot;portfolio-manager-01&quot;, &quot;clearance_level&quot;: 2, &quot;signature&quot;: &quot;sig-a&quot;},
+    {&quot;authority_id&quot;: &quot;risk-desk-supervisor&quot;, &quot;clearance_level&quot;: 3, &quot;signature&quot;: &quot;sig-b&quot;}
+  ],
+  &quot;required_depth&quot;: 2,
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;
+}
+</code></pre>
+<h3 id="example-output-valid">Example Output — valid</h3>
+<pre><code class="language-json">{
+  &quot;chain_valid&quot;: true,
+  &quot;chain_depth&quot;: 2,
+  &quot;missing_links&quot;: [],
+  &quot;signature_failures&quot;: [],
+  &quot;zero_tolerance_failure&quot;: false
+}
+</code></pre>
+<h3 id="example-output-invalid-missing-depth">Example Output — invalid (missing depth)</h3>
+<pre><code class="language-json">{
+  &quot;chain_valid&quot;: false,
+  &quot;chain_depth&quot;: 1,
+  &quot;missing_links&quot;: [&quot;clearance_level_3_required&quot;],
+  &quot;signature_failures&quot;: [],
+  &quot;zero_tolerance_failure&quot;: true
+}
+</code></pre>
+<hr>
+<h2 id="regime_transition_validator"><code>regime_transition_validator</code></h2>
+<p>Validates that a proposed regime transition is permitted by the corridor's transition table and that all pre-conditions (authorization, severity trigger, coherence score) are satisfied.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+
+@dataclass
+class RegimeTransitionResult:
+    transition_permitted: bool
+    requires_external_auth: bool
+    blocking_reasons: list[str] = field(default_factory=list)
+
+
+def regime_transition_validator(
+    from_regime: str,
+    to_regime: str,
+    trigger_event: dict,
+    authorizing_entity: str | None,
+) -&gt; RegimeTransitionResult:
+    &quot;&quot;&quot;
+    Validates a proposed regime transition.
+
+    Args:
+        from_regime: Current regime ID.
+        to_regime: Proposed target regime ID.
+        trigger_event: Dict describing the event triggering the transition
+                       (e.g., {&quot;type&quot;: &quot;severity_threshold&quot;, &quot;value&quot;: 0.27}).
+        authorizing_entity: Authority ID for de-escalation transitions, or None
+                            for auto-elevation transitions.
+
+    Returns:
+        RegimeTransitionResult.
+    &quot;&quot;&quot;
+    # TODO: implement regime_transition_validator
+    # 1. Look up (from_regime, to_regime) in PERMITTED_TRANSITIONS
+    # 2. Determine if transition is elevation (auto-permitted) or de-escalation (needs auth)
+    # 3. For de-escalations: verify authorizing_entity is not None and has sufficient clearance
+    # 4. Validate trigger_event matches the expected trigger type for this edge
+    # 5. Collect blocking_reasons; set transition_permitted = len(blocking_reasons) == 0
+    raise NotImplementedError(&quot;regime_transition_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input-auto-elevation">Example Input — auto elevation</h3>
+<pre><code class="language-json">{
+  &quot;from_regime&quot;: &quot;NOMINAL&quot;,
+  &quot;to_regime&quot;: &quot;ELEVATED&quot;,
+  &quot;trigger_event&quot;: {&quot;type&quot;: &quot;severity_threshold&quot;, &quot;value&quot;: 0.27, &quot;threshold&quot;: 0.25},
+  &quot;authorizing_entity&quot;: null
+}
+</code></pre>
+<h3 id="example-output-permitted_1">Example Output — permitted</h3>
+<pre><code class="language-json">{
+  &quot;transition_permitted&quot;: true,
+  &quot;requires_external_auth&quot;: false,
+  &quot;blocking_reasons&quot;: []
+}
+</code></pre>
+<h3 id="example-output-blocked-de-escalation-without-auth">Example Output — blocked (de-escalation without auth)</h3>
+<pre><code class="language-json">{
+  &quot;transition_permitted&quot;: false,
+  &quot;requires_external_auth&quot;: true,
+  &quot;blocking_reasons&quot;: [
+    &quot;de-escalation from CRITICAL to ELEVATED requires external authorization&quot;,
+    &quot;authorizing_entity is null&quot;
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="drift_boundary_validator"><code>drift_boundary_validator</code></h2>
+<p>Checks whether the agent's recent action distribution is drifting toward corridor boundary edges and whether any zero-tolerance violations are present in the action history window.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+from typing import Literal
+
+@dataclass
+class DriftBoundaryResult:
+    drift_status: Literal[&quot;ok&quot;, &quot;warning&quot;, &quot;critical&quot;, &quot;halt&quot;]
+    zero_tolerance_violations: list[str]
+    proximity_ratios: dict[str, float]   # metric → ratio of current/max
+    recommended_action: str | None
+
+
+def drift_boundary_validator(
+    action_history_window: list[dict],
+    active_regime: str,
+) -&gt; DriftBoundaryResult:
+    &quot;&quot;&quot;
+    Evaluates corridor boundary drift across the recent action window.
+
+    Args:
+        action_history_window: List of recent action dicts, each containing
+                               severity, reversibility, consequence_radius, and flags.
+        active_regime: Current regime ID.
+
+    Returns:
+        DriftBoundaryResult. zero_tolerance_violations triggers immediate HALT.
+
+    Zero-tolerance: always returns a result — never raises.
+    &quot;&quot;&quot;
+    # TODO: implement drift_boundary_validator
+    # 1. Scan action_history_window for ZERO_TOLERANCE_VIOLATIONS flags
+    # 2. Compute severity_trend_slope over the window
+    # 3. Compute boundary_proximity_ratio = max(val/bound) across all axes
+    # 4. Compute escalation_frequency and gate_rejection_rate from window flags
+    # 5. Map worst ratio to alert threshold tiers
+    # 6. Set recommended_action based on drift_status
+    raise NotImplementedError(&quot;drift_boundary_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_2">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;action_history_window&quot;: [
+    {&quot;action_id&quot;: &quot;act-035&quot;, &quot;severity&quot;: 0.30, &quot;reversibility&quot;: 0.65, &quot;escalated&quot;: false, &quot;gate_rejected&quot;: false},
+    {&quot;action_id&quot;: &quot;act-036&quot;, &quot;severity&quot;: 0.38, &quot;reversibility&quot;: 0.58, &quot;escalated&quot;: false, &quot;gate_rejected&quot;: false},
+    {&quot;action_id&quot;: &quot;act-037&quot;, &quot;severity&quot;: 0.44, &quot;reversibility&quot;: 0.52, &quot;escalated&quot;: true,  &quot;gate_rejected&quot;: false},
+    {&quot;action_id&quot;: &quot;act-038&quot;, &quot;severity&quot;: 0.50, &quot;reversibility&quot;: 0.51, &quot;escalated&quot;: false, &quot;gate_rejected&quot;: false}
+  ],
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;
+}
+</code></pre>
+<h3 id="example-output-warning">Example Output — warning</h3>
+<pre><code class="language-json">{
+  &quot;drift_status&quot;: &quot;warning&quot;,
+  &quot;zero_tolerance_violations&quot;: [],
+  &quot;proximity_ratios&quot;: {
+    &quot;severity_trend_slope&quot;:      0.73,
+    &quot;boundary_proximity_ratio&quot;:  0.91,
+    &quot;escalation_frequency&quot;:      0.25,
+    &quot;gate_rejection_rate&quot;:       0.00
+  },
+  &quot;recommended_action&quot;: &quot;regime_elevation_to_CRITICAL&quot;
+}
+</code></pre>
+<hr>
+<h2 id="coherence_anchor_validator"><code>coherence_anchor_validator</code></h2>
+<p>Evaluates all six coherence anchors for a given action and corridor state. Zero-tolerance failures (CA-01, CA-02, CA-04) immediately trigger HALT via the engine. Non-zero-tolerance failures (CA-03, CA-05, CA-06) escalate to level 1.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+
+@dataclass
+class CorridorCoherenceResult:
+    anchors_passed: list[str]
+    anchors_failed: list[str]
+    zero_tolerance_failures: list[str]
+    corridor_coherence_score: float     # [0.0, 1.0]
+    action_permitted: bool
+
+
+def coherence_anchor_validator(
+    corridor_state_snapshot: dict,
+    action_under_evaluation: dict,
+) -&gt; CorridorCoherenceResult:
+    &quot;&quot;&quot;
+    Evaluates all six coherence anchors (CA-01..CA-06) for the given action.
+
+    Args:
+        corridor_state_snapshot: Full snapshot of current corridor state including
+                                 regime, active_escalations, and audit_trail.
+        action_under_evaluation: The action dict with all fields populated
+                                 (including authorization_chain and audit_record_id).
+
+    Returns:
+        CorridorCoherenceResult. Any zero_tolerance_failures must trigger HALT.
+
+    Zero-tolerance: always returns a result — never raises.
+    &quot;&quot;&quot;
+    # TODO: implement coherence_anchor_validator
+    # CA-01: chain depth &gt;= required AND all sigs valid → zero_tolerance
+    # CA-02: severity &lt;= max AND reversibility &gt;= min → zero_tolerance
+    # CA-03: no unresolved escalations for this action → escalate on failure
+    # CA-04: audit_record_id is not None → zero_tolerance
+    # CA-05: action venues ⊆ permitted_venues AND notional ≤ max → escalate on failure
+    # CA-06: regime transition (if any) is properly authorized → escalate on failure
+    # Compute coherence_score as weighted pass ratio (zero-tolerance anchors weighted 2x)
+    raise NotImplementedError(&quot;coherence_anchor_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_3">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;corridor_state_snapshot&quot;: {
+    &quot;regime&quot;: &quot;ELEVATED&quot;,
+    &quot;active_escalations&quot;: [],
+    &quot;last_regime_transition&quot;: {&quot;from&quot;: &quot;NOMINAL&quot;, &quot;to&quot;: &quot;ELEVATED&quot;, &quot;authorized&quot;: true},
+    &quot;audit_trail_count&quot;: 41
+  },
+  &quot;action_under_evaluation&quot;: {
+    &quot;action_id&quot;: &quot;act-2026-09-23-042&quot;,
+    &quot;action_type&quot;: &quot;equity_trade_submit&quot;,
+    &quot;severity&quot;: 0.48,
+    &quot;reversibility&quot;: 0.52,
+    &quot;authorization_chain&quot;: [
+      {&quot;authority_id&quot;: &quot;portfolio-manager-01&quot;, &quot;clearance_level&quot;: 2, &quot;signature_valid&quot;: true},
+      {&quot;authority_id&quot;: &quot;risk-desk-supervisor&quot;, &quot;clearance_level&quot;: 3, &quot;signature_valid&quot;: true}
+    ],
+    &quot;audit_record_id&quot;: &quot;audit-hsoc-001-20260923-042&quot;,
+    &quot;target_venues&quot;: [&quot;NYSE&quot;],
+    &quot;notional_usd&quot;: 12000000
+  }
+}
+</code></pre>
+<h3 id="example-output-all-pass">Example Output — all pass</h3>
+<pre><code class="language-json">{
+  &quot;anchors_passed&quot;: [&quot;CA-01&quot;, &quot;CA-02&quot;, &quot;CA-03&quot;, &quot;CA-04&quot;, &quot;CA-05&quot;, &quot;CA-06&quot;],
+  &quot;anchors_failed&quot;: [],
+  &quot;zero_tolerance_failures&quot;: [],
+  &quot;corridor_coherence_score&quot;: 1.00,
+  &quot;action_permitted&quot;: true
+}
+</code></pre>
+<h3 id="example-output-ca-02-zero-tolerance-failure">Example Output — CA-02 zero-tolerance failure</h3>
+<pre><code class="language-json">{
+  &quot;anchors_passed&quot;: [&quot;CA-01&quot;, &quot;CA-03&quot;, &quot;CA-04&quot;, &quot;CA-05&quot;, &quot;CA-06&quot;],
+  &quot;anchors_failed&quot;: [&quot;CA-02&quot;],
+  &quot;zero_tolerance_failures&quot;: [&quot;CA-02: constraint_surface_breach — severity 0.82 &gt; CRITICAL max 0.80&quot;],
+  &quot;corridor_coherence_score&quot;: 0.58,
+  &quot;action_permitted&quot;: false
+}
+</code></pre>
+<hr>
+<h2 id="audit_record_validator"><code>audit_record_validator</code></h2>
+<p>Verifies that an emitted audit record is structurally complete, correctly signed, and references a valid <code>gate_decision_id</code>. An invalid audit record is a zero-tolerance CA-04 failure.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+
+@dataclass
+class AuditRecordResult:
+    record_valid: bool
+    missing_fields: list[str]
+    signature_valid: bool
+    gate_decision_id_match: bool
+    zero_tolerance_failure: bool
+
+
+def audit_record_validator(
+    audit_record: dict,
+    expected_gate_decision_id: str,
+    module_signing_key_id: str,
+) -&gt; AuditRecordResult:
+    &quot;&quot;&quot;
+    Validates a completed audit record before it is written to the audit store.
+
+    Args:
+        audit_record: The audit record dict emitted by the AUDIT operator.
+        expected_gate_decision_id: The gate_decision_id from the corresponding GATE call.
+        module_signing_key_id: Key ID used to verify the record's signature.
+
+    Returns:
+        AuditRecordResult. record_valid=False is a zero-tolerance CA-04 failure.
+
+    Zero-tolerance: always returns a result — never raises.
+    &quot;&quot;&quot;
+    # TODO: implement audit_record_validator
+    # 1. Check all required fields: audit_id, action_id, gate_decision_id,
+    #    corridor_state_at_audit, signed_by, signature, timestamp
+    # 2. Verify audit_record[&quot;gate_decision_id&quot;] == expected_gate_decision_id
+    # 3. Recompute and verify Ed25519 signature over canonical audit_record bytes
+    # 4. Set record_valid = not missing_fields and signature_valid and gate_decision_id_match
+    raise NotImplementedError(&quot;audit_record_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_4">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;audit_record&quot;: {
+    &quot;audit_id&quot;: &quot;audit-hsoc-001-20260923-042&quot;,
+    &quot;action_id&quot;: &quot;act-2026-09-23-042&quot;,
+    &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-042&quot;,
+    &quot;corridor_state_at_audit&quot;: {
+      &quot;regime&quot;: &quot;ELEVATED&quot;,
+      &quot;action_severity&quot;: 0.48,
+      &quot;reversibility_index&quot;: 0.52,
+      &quot;authorization_chain_depth&quot;: 2
+    },
+    &quot;signed_by&quot;: &quot;hsoc-rtt-001&quot;,
+    &quot;signature&quot;: &quot;ed25519:f7c3bc1d808e04732adf679965ccc34ca7ae3441&quot;,
+    &quot;timestamp&quot;: &quot;2026-09-23T20:50:00-04:00&quot;
+  },
+  &quot;expected_gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-042&quot;,
+  &quot;module_signing_key_id&quot;: &quot;hsoc-agent-signing-key-v1&quot;
+}
+</code></pre>
+<h3 id="example-output-valid_1">Example Output — valid</h3>
+<pre><code class="language-json">{
+  &quot;record_valid&quot;: true,
+  &quot;missing_fields&quot;: [],
+  &quot;signature_valid&quot;: true,
+  &quot;gate_decision_id_match&quot;: true,
+  &quot;zero_tolerance_failure&quot;: false
+}
+</code></pre>
+<h3 id="example-output-invalid-missing-field-sig-mismatch">Example Output — invalid (missing field + sig mismatch)</h3>
+<pre><code class="language-json">{
+  &quot;record_valid&quot;: false,
+  &quot;missing_fields&quot;: [&quot;corridor_state_at_audit&quot;],
+  &quot;signature_valid&quot;: false,
+  &quot;gate_decision_id_match&quot;: true,
+  &quot;zero_tolerance_failure&quot;: true
+}
+</code></pre>
+<hr>
+<h2 id="full-validation-pipeline">Full Validation Pipeline</h2>
+<pre><code class="language-python">from hsoc.validators import (
+    action_gate_validator,
+    authorization_chain_validator,
+    regime_transition_validator,
+    drift_boundary_validator,
+    coherence_anchor_validator,
+    audit_record_validator,
+)
+
+def execute_action_safely(engine, action):
+    &quot;&quot;&quot;Full corridor-gated action execution pipeline.&quot;&quot;&quot;
+
+    # 1. Drift check
+    drift = drift_boundary_validator(
+        action_history_window=engine.recent_actions(n=10),
+        active_regime=engine.regime,
+    )
+    if drift.zero_tolerance_violations:
+        return engine.dispatch(&quot;HALT&quot;, reason=drift.zero_tolerance_violations[0])
+    if drift.drift_status == &quot;critical&quot;:
+        engine.dispatch(&quot;ESCALATE&quot;, action=action, level=2)
+        return
+
+    # 2. Gate
+    gate = action_gate_validator(action=action, active_regime=engine.regime)
+    if not gate.permitted:
+        engine.dispatch(&quot;ESCALATE&quot;, action=action,
+                        blocking_constraints=gate.blocking_constraints)
+        return
+
+    # 3. Authorization chain
+    auth = authorization_chain_validator(
+        authorization_chain=action.authorization_chain,
+        required_depth=gate.required_authorization_level,
+        active_regime=engine.regime,
+    )
+    if not auth.chain_valid:
+        engine.dispatch(&quot;HALT&quot;, reason=&quot;CA-01:authorization_chain_invalid&quot;)
+        return
+
+    # 4. Coherence anchors
+    coherence = coherence_anchor_validator(
+        corridor_state_snapshot=engine.snapshot(),
+        action_under_evaluation=action.to_dict(),
+    )
+    if coherence.zero_tolerance_failures:
+        engine.dispatch(&quot;HALT&quot;, reason=coherence.zero_tolerance_failures[0])
+        return
+    if not coherence.action_permitted:
+        engine.dispatch(&quot;ESCALATE&quot;, action=action, level=1)
+        return
+
+    # 5. Execute
+    action.execute()
+
+    # 6. Audit
+    audit_rec = engine.dispatch(&quot;AUDIT&quot;, action=action,
+                                gate_decision_id=gate.gate_decision_id,
+                                auth_result=auth)
+    audit_ok = audit_record_validator(
+        audit_record=audit_rec.to_dict(),
+        expected_gate_decision_id=gate.gate_decision_id,
+        module_signing_key_id=&quot;hsoc-agent-signing-key-v1&quot;,
+    )
+    if not audit_ok.record_valid:
+        engine.dispatch(&quot;HALT&quot;, reason=&quot;CA-04:audit_record_invalid&quot;)
+</code></pre>
+  </main>
+</body>
+</html>

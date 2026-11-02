@@ -1,0 +1,256 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/webroot_module.schema.json",
+  "$generated": "2026-08-03T01:39:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "_merge_note": "R5 update block. Merge r5_stats, new_webroot_children, spine_overlay_pack, new_rtt_engines, and new_domain_models into existing R4 webroot_module.json.",
+  "r5_stats": {
+    "round": "R5",
+    "generated": "2026-08-03T01:39:00",
+    "total_a3_modules": 196,
+    "total_i2_excluded": 11,
+    "total_files_catalogued": 1450,
+    "r5_new_a3": 30,
+    "r5_file_delta": 166,
+    "enrichment_source": "S3-Spine-Overlay-Pack-v2.0"
+  },
+  "spine_reference": {
+    "file": "docs/hub.json",
+    "url": "https://docs.triadicframeworks.org/docs/hub.json",
+    "type": "S3-hybrid-hierarchical-directed",
+    "description": "Full A3 functional canon spine \u2014 R5: 196 modules, 11 I2 excluded"
+  },
+  "new_webroot_children": [
+    "expectations",
+    "pantheons",
+    "atmosphere",
+    "radiology",
+    "prompts",
+    "triadic-detection",
+    "ipd-12",
+    "tft-opengpu",
+    "spine-overlay-pack"
+  ],
+  "spine_overlay_pack": {
+    "canon_tag": "spine-overlay-pack",
+    "name": "S3 Spine Overlay Pack",
+    "version": "2.0",
+    "url": "https://docs.triadicframeworks.org/spine/",
+    "path": "docs/spine/",
+    "category": "Core Frameworks \u2014 Structural Spine",
+    "role": "Six-overlay canonical diagnostic layer system for all S3 Spine runs",
+    "front_door": "https://docs.triadicframeworks.org/spine/",
+    "module_json": "docs/spine/index.md",
+    "ai_ready": true,
+    "overlays": [
+      {
+        "canon_tag": "spine-overlay-pack",
+        "name": "S3 Spine Overlay Pack",
+        "url": "https://docs.triadicframeworks.org/spine/",
+        "version": "2.0",
+        "status": "Active Canonical",
+        "purpose": "Six-overlay canonical diagnostic layer system: Structural \u2192 Drift \u2192 Coherence \u2192 Substrate \u2192 Dimensional \u2192 Domain; produces DDR, DAM, CDCS"
+      },
+      {
+        "canon_tag": "spine-structural",
+        "name": "Structural Overlay",
+        "url": "https://docs.triadicframeworks.org/spine/structural/",
+        "version": "2.0",
+        "status": "Active Canonical",
+        "purpose": "Overlay 1 of 6: maps faultlines (SCS) and regime interlock geometry; registers structural frame for all downstream overlays"
+      },
+      {
+        "canon_tag": "spine-drift",
+        "name": "Drift Overlay",
+        "url": "https://docs.triadicframeworks.org/spine/drift/",
+        "version": "2.0",
+        "status": "Active Canonical",
+        "purpose": "Overlay 2 of 6: monitors regime migration velocity and trajectory; collapse-precursor early-warning via \u0394M, \u0394D, \u0394V"
+      },
+      {
+        "canon_tag": "spine-coherence",
+        "name": "Coherence Overlay",
+        "url": "https://docs.triadicframeworks.org/spine/coherence/",
+        "version": "2.0",
+        "status": "Active Canonical",
+        "purpose": "Overlay 3 of 6: evaluates integration quality via CI tensor; gates Triadic Regime Synthesizer; detects fragmentation zones"
+      },
+      {
+        "canon_tag": "spine-substrate",
+        "name": "Substrate Overlay",
+        "url": "https://docs.triadicframeworks.org/spine/substrate/",
+        "version": "2.0",
+        "status": "Active Canonical",
+        "purpose": "Overlay 4 of 6: evaluates foundational capacity, saturation (SI), and substrate runway beneath active regimes"
+      },
+      {
+        "canon_tag": "spine-dimensional",
+        "name": "Dimensional Overlay",
+        "url": "https://docs.triadicframeworks.org/spine/dimensional/",
+        "version": "2.0",
+        "status": "Active Canonical",
+        "purpose": "Overlay 5 of 6: maps all prior overlay signals across IPD-12 axes; produces Dimensional Resonance Map (DRM)"
+      },
+      {
+        "canon_tag": "spine-domain",
+        "name": "Domain Overlay",
+        "url": "https://docs.triadicframeworks.org/spine/domain/",
+        "version": "2.0",
+        "status": "Active Canonical",
+        "purpose": "Overlay 6 of 6: terminal overlay; translates spine diagnostics into domain-native DDR, DAM, and CDCS practitioner outputs"
+      }
+    ]
+  },
+  "new_rtt_engines": [
+    {
+      "canon_tag": "COHERENCE_TENSOR_ENGINE",
+      "name": "Coherence Tensor Engine",
+      "url": "https://docs.triadicframeworks.org/rtt/Coherence_Tensor_Engine/",
+      "version": "RTT/3"
+    },
+    {
+      "canon_tag": "CROSS_DOMAIN_CAUSALITY_WEAVER",
+      "name": "Cross-Domain Causality Weaver",
+      "url": "https://docs.triadicframeworks.org/rtt/Cross_Domain_Causality_Weaver/",
+      "version": "RTT/3"
+    },
+    {
+      "canon_tag": "DIMENSIONAL_RESONANCE_SCANNER",
+      "name": "Dimensional Resonance Scanner",
+      "url": "https://docs.triadicframeworks.org/rtt/Dimensional_Resonance_Scanner/",
+      "version": "RTT/3"
+    },
+    {
+      "canon_tag": "DRIFT_SENTINEL",
+      "name": "Drift Sentinel",
+      "url": "https://docs.triadicframeworks.org/rtt/Drift_Sentinel/",
+      "version": "RTT/2"
+    },
+    {
+      "canon_tag": "PARADOX_GRADIENT_ANALYZER",
+      "name": "Paradox Gradient Analyzer",
+      "url": "https://docs.triadicframeworks.org/rtt/Paradox_Gradient_Analyzer/",
+      "version": "RTT/2"
+    },
+    {
+      "canon_tag": "REGIME_INTERLOCK_MAPPER",
+      "name": "Regime Interlock Mapper",
+      "url": "https://docs.triadicframeworks.org/rtt/Regime_Interlock_Mapper/",
+      "version": "RTT/2"
+    },
+    {
+      "canon_tag": "STABILITY_BASIN_CARTOGRAPHER",
+      "name": "Stability Basin Cartographer",
+      "url": "https://docs.triadicframeworks.org/rtt/Stability_Basin_Cartographer/",
+      "version": "RTT/2"
+    },
+    {
+      "canon_tag": "STRUCTURAL_FAULTLINE_DETECTOR",
+      "name": "Structural Faultline Detector",
+      "url": "https://docs.triadicframeworks.org/rtt/Structural_Faultline_Detector/",
+      "version": "RTT/2"
+    },
+    {
+      "canon_tag": "TEMPORAL_REGIME_SEQUENCER",
+      "name": "Temporal Regime Sequencer",
+      "url": "https://docs.triadicframeworks.org/rtt/Temporal_Regime_Sequencer/",
+      "version": "RTT/2"
+    },
+    {
+      "canon_tag": "TRIADIC_REGIME_SYNTHESIZER",
+      "name": "Triadic Regime Synthesizer",
+      "url": "https://docs.triadicframeworks.org/rtt/Triadic_Regime_Synthesizer/",
+      "version": "RTT/3"
+    },
+    {
+      "canon_tag": "CRYSTAL_MYCELIAL_ENGINE",
+      "name": "Crystal Mycelial Engine",
+      "url": "https://docs.triadicframeworks.org/rtt/Crystal_Mycelial_Engine/",
+      "version": "RTT/3"
+    }
+  ],
+  "new_domain_models": [
+    {
+      "canon_tag": "RTT_INSIDE_ENTERPRISE",
+      "name": "Inside \u00b7 Enterprise",
+      "url": "https://docs.triadicframeworks.org/rtt/Inside/Enterprise/",
+      "purpose": "Enterprise-domain RTT context: capital, labor, and infrastructure capacity regime diagnostics; org-structure coherence metrics"
+    },
+    {
+      "canon_tag": "RTT_INSIDE_QCOMPUTE",
+      "name": "Inside \u00b7 qCompute",
+      "url": "https://docs.triadicframeworks.org/rtt/Inside/qCompute/",
+      "purpose": "Quantum compute RTT context: qubit coherence, error budgets, thermal limits, decoherence rate, and entanglement regime diagnostics"
+    },
+    {
+      "canon_tag": "expectations",
+      "name": "Expectations",
+      "url": "https://docs.triadicframeworks.org/Expectations/",
+      "purpose": "Expectation-state modelling; provides nominal trajectory envelopes for Drift Overlay baseline acquisition and DDR contextualisation"
+    },
+    {
+      "canon_tag": "pantheons",
+      "name": "Pantheons",
+      "url": "https://docs.triadicframeworks.org/pantheons/",
+      "purpose": "Multi-agent coherence contexts; tracks coherence and dimensional role assignment across agent pantheons"
+    },
+    {
+      "canon_tag": "atmosphere",
+      "name": "Atmosphere",
+      "url": "https://docs.triadicframeworks.org/atmosphere/",
+      "purpose": "Atmospheric and environmental domain: pressure analogs, ecological substrate signals feeding Drift and Substrate overlays"
+    },
+    {
+      "canon_tag": "radiology",
+      "name": "Radiology",
+      "url": "https://docs.triadicframeworks.org/Radiology/",
+      "purpose": "Medical imaging domain: tissue, SNR, signal attenuation, imaging capacity, and contrast resolution regime diagnostics"
+    }
+  ],
+  "new_tools_infrastructure": [
+    {
+      "canon_tag": "tft-opengpu",
+      "name": "TFT OpenGPU Stack Module",
+      "url": "https://docs.triadicframeworks.org/TFT.OpenGPU.Stack.Module/",
+      "version": "1.0"
+    }
+  ],
+  "new_education_modules": [
+    {
+      "canon_tag": "grammar-for-intelligence",
+      "name": "Grammar for Intelligence",
+      "url": "https://docs.triadicframeworks.org/education/ebooks/Grammar_for_Intelligence/",
+      "parent": "education",
+      "version": "1.0"
+    }
+  ],
+  "updated_supplemental_modules": {
+    "Taxes": {
+      "note": "Taxes module (taxes) confirmed A3 depth-1 \u2014 retain in supplemental_modules for incentive-grammar reference; now also registered in module_registry R5."
+    }
+  },
+  "analyzer_layers_r5_additions": {
+    "dimensional": [
+      "DIMENSIONAL_RESONANCE_SCANNER",
+      "ipd-12"
+    ],
+    "regime": [
+      "REGIME_INTERLOCK_MAPPER",
+      "TEMPORAL_REGIME_SEQUENCER",
+      "TRIADIC_REGIME_SYNTHESIZER"
+    ],
+    "operator": [
+      "STRUCTURAL_FAULTLINE_DETECTOR",
+      "DRIFT_SENTINEL",
+      "COHERENCE_TENSOR_ENGINE",
+      "STABILITY_BASIN_CARTOGRAPHER",
+      "PARADOX_GRADIENT_ANALYZER",
+      "CRYSTAL_MYCELIAL_ENGINE"
+    ],
+    "cross_cutting": [
+      "CROSS_DOMAIN_CAUSALITY_WEAVER",
+      "triadic-detection",
+      "tft-opengpu"
+    ]
+  }
+}

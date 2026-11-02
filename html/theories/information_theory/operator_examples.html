@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/theories/information_theory/operator_examples.md">
+  <title>Operator Examples — Information Theory</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/theories/information_theory/operator_examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/theories/information_theory/operator_examples.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="operator-examples-information-theory">Operator Examples — Information Theory</h1>
+<h3 id="triadicframeworks-docstheoriesinformation_theoryoperator_examplesmd">TriadicFrameworks /docs/theories/information_theory/operator_examples.md</h3>
+<p>These examples illustrate Information Theory as a <strong>distinction‑first
+coherence grammar</strong>, not a Shannon‑only or probability‑only framework.
+Operators act on <strong>distinction spaces</strong>, coherence is <strong>distinction
+stability</strong>, and signals are <strong>operators</strong>, not messages.</p>
+<p>All examples avoid semantic drift, probabilistic metaphors, and
+communication‑channel framing.</p>
+<hr>
+<h1 id="1-distinction-operator-example-d">1. Distinction Operator Example (𝓓)</h1>
+<h3 id="goal">Goal</h3>
+<p>Construct a distinction from a structural signature.</p>
+<h3 id="input">Input</h3>
+<p>σ = {dimensional_profile: [1, 0, 1], invariants: {A ≠ B}}</p>
+<h3 id="operation">Operation</h3>
+<p>d = 𝓓(σ)</p>
+<h3 id="interpretation">Interpretation</h3>
+<ul>
+<li>distinction is structural, not semantic  </li>
+<li>distinction must be stable in R1  </li>
+<li>no probability or meaning assigned  </li>
+</ul>
+<hr>
+<h1 id="2-signal-operator-example-s">2. Signal Operator Example (𝓢)</h1>
+<h3 id="goal_1">Goal</h3>
+<p>Define a signal as an operator acting on a distinction space.</p>
+<h3 id="input_1">Input</h3>
+<ul>
+<li>operator_signature: {map: A → B}  </li>
+<li>distinction_space: {A, B, C}</li>
+</ul>
+<h3 id="operation_1">Operation</h3>
+<p>S = 𝓢(operator_signature, distinction_space)</p>
+<h3 id="interpretation_1">Interpretation</h3>
+<ul>
+<li>signal = operator, not message  </li>
+<li>operator must preserve distinction identity  </li>
+<li>no encoding/decoding metaphors  </li>
+</ul>
+<hr>
+<h1 id="3-coherence-operator-example-c">3. Coherence Operator Example (𝓒)</h1>
+<h3 id="goal_2">Goal</h3>
+<p>Evaluate distinction stability under operator action.</p>
+<h3 id="input_2">Input</h3>
+<ul>
+<li>distinction_space: {A, B, C}  </li>
+<li>operator: S</li>
+</ul>
+<h3 id="operation_2">Operation</h3>
+<p>coh = 𝓒(distinction_space, S)</p>
+<h3 id="interpretation_2">Interpretation</h3>
+<ul>
+<li>coherence = distinction stability  </li>
+<li>coherence is structural, not probabilistic  </li>
+<li>coherence must be monotonic in R2 → R3  </li>
+</ul>
+<hr>
+<h1 id="4-adjacency-operator-example-a">4. Adjacency Operator Example (𝓐)</h1>
+<h3 id="goal_3">Goal</h3>
+<p>Measure structural distance between distinctions.</p>
+<h3 id="input_3">Input</h3>
+<p>d₁ = {profile: [1,0,1]}<br>
+d₂ = {profile: [1,1,1]}</p>
+<h3 id="operation_3">Operation</h3>
+<p>adj = 𝓐(d₁, d₂)</p>
+<h3 id="interpretation_3">Interpretation</h3>
+<ul>
+<li>adjacency = structural distance  </li>
+<li>no probabilistic similarity  </li>
+<li>adjacency must be regime‑stable  </li>
+</ul>
+<hr>
+<h1 id="5-transform-operator-example-t">5. Transform Operator Example (𝓣)</h1>
+<h3 id="goal_4">Goal</h3>
+<p>Apply a structural transform to a distinction space.</p>
+<h3 id="input_4">Input</h3>
+<p>distinction_space = {A, B, C}<br>
+transform_signature = {swap(A, B)}</p>
+<h3 id="operation_4">Operation</h3>
+<p>T = 𝓣(distinction_space, transform_signature)</p>
+<h3 id="interpretation_4">Interpretation</h3>
+<ul>
+<li>transforms must preserve coherence  </li>
+<li>transforms become dimensional in R3  </li>
+<li>no semantic transforms allowed  </li>
+</ul>
+<hr>
+<h1 id="6-regime-operator-example-r">6. Regime Operator Example (𝓡)</h1>
+<h3 id="goal_5">Goal</h3>
+<p>Transition distinction behavior across RTT regimes.</p>
+<h3 id="input_5">Input</h3>
+<p>distinction_space = {A, B, C}<br>
+transition = R1 → R2</p>
+<h3 id="operation_5">Operation</h3>
+<p>R = 𝓡(distinction_space, R1 → R2)</p>
+<h3 id="interpretation_5">Interpretation</h3>
+<ul>
+<li>R1: stable distinctions  </li>
+<li>R2: operator geometry active  </li>
+<li>transitions must preserve identity and coherence  </li>
+</ul>
+<hr>
+<h1 id="7-integrity-operator-example-i">7. Integrity Operator Example (𝓘)</h1>
+<h3 id="goal_6">Goal</h3>
+<p>Check whether distinctions remain valid after operator action.</p>
+<h3 id="input_6">Input</h3>
+<p>updated_distinction_space = {A', B', C}</p>
+<h3 id="operation_6">Operation</h3>
+<p>report = 𝓘(updated_distinction_space)</p>
+<h3 id="interpretation_6">Interpretation</h3>
+<ul>
+<li>checks dimensional consistency  </li>
+<li>checks non‑degeneracy  </li>
+<li>checks operator‑stability  </li>
+</ul>
+<hr>
+<h1 id="8-reinforcement-operator-example-f">8. Reinforcement Operator Example (𝓕)</h1>
+<h3 id="goal_7">Goal</h3>
+<p>Strengthen distinctions through repeated stable operator action.</p>
+<h3 id="input_7">Input</h3>
+<p>distinction_space = {A, B, C}<br>
+operator_history = [S, S, S]</p>
+<h3 id="operation_7">Operation</h3>
+<p>reinforced = 𝓕(distinction_space, operator_history)</p>
+<h3 id="interpretation_7">Interpretation</h3>
+<ul>
+<li>reinforcement is structural, not semantic  </li>
+<li>reinforcement increases coherence  </li>
+<li>reinforcement must be monotonic  </li>
+</ul>
+<hr>
+<h1 id="9-collapse-operator-example-cl">9. Collapse Operator Example (𝓒𝓁)</h1>
+<h3 id="goal_8">Goal</h3>
+<p>Classify distinction failures.</p>
+<h3 id="input_8">Input</h3>
+<p>distinction_space = {A?, B, C}</p>
+<h3 id="operation_8">Operation</h3>
+<p>mode = 𝓒𝓁(distinction_space)</p>
+<h3 id="possible-outputs">Possible Outputs</h3>
+<ul>
+<li><strong>C1:</strong> distinction ambiguity  </li>
+<li><strong>C2:</strong> dimensional inconsistency  </li>
+<li><strong>C3:</strong> operator instability  </li>
+<li><strong>C4:</strong> coherence failure  </li>
+</ul>
+<h3 id="interpretation_8">Interpretation</h3>
+<p>Collapse is structural, not probabilistic.</p>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>These examples show Information Theory as:</p>
+<ul>
+<li><strong>distinction‑first</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>substrate‑neutral</strong>  </li>
+<li><strong>zero drift</strong>  </li>
+</ul>
+<p>Information = <strong>structured distinction</strong>.<br>
+Coherence = <strong>distinction stability</strong>.<br>
+Signals = <strong>operators acting on distinction spaces</strong>.</p>
+  </main>
+</body>
+</html>

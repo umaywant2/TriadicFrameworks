@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Integrations/UE6/RTT_TEL‑Side_Index.md">
+  <title>RTT TEL‑Side Index</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Integrations/UE6/RTT_TEL‑Side_Index.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Integrations/UE6/RTT_TEL‑Side_Index.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="rtt-telside-index"><strong>RTT TEL‑Side Index</strong></h1>
+<h3 id="how-benchmarks-and-ue6-operator-surfaces-enter-the-lattice"><em>How Benchmarks and UE6 Operator Surfaces Enter the Lattice</em></h3>
+<p>This page explains, from the <strong>TEL perspective</strong>, how operator signals arriving from UE6 and Benchmarks are absorbed, normalized, and placed into the lattice.</p>
+<p>It mirrors the UE6‑side index, but now the student stands <em>inside</em> TEL looking outward.</p>
+<hr>
+<h1 id="1-tels-role-in-the-operator-chain"><strong>1. TEL’s Role in the Operator Chain</strong></h1>
+<p>TEL is the <strong>structural layer</strong> of RTT.</p>
+<p>Where UE6 shows operators <em>moving</em><br>
+and Benchmarks measure operators <em>behaving</em>,<br>
+TEL encodes operators as <strong>stable lattice primitives</strong>:</p>
+<ul>
+<li>channels  </li>
+<li>harmonics  </li>
+<li>collapse regimes  </li>
+<li>hybrid operators  </li>
+<li>cross‑module propagation lines  </li>
+</ul>
+<p>TEL is the <strong>final abstraction layer</strong> before operators propagate into other modules (e.g., SARG, Structural Detection, Integrations, Mode, Opacity).</p>
+<hr>
+<h1 id="2-how-tel-receives-operators"><strong>2. How TEL Receives Operators</strong></h1>
+<p>TEL does <strong>not</strong> receive raw φ–V–R–Entropy values.</p>
+<p>It receives <strong>Benchmark‑normalized operator signatures</strong>, each already:</p>
+<ul>
+<li>stabilized  </li>
+<li>scored  </li>
+<li>regime‑classified  </li>
+<li>coherence‑checked  </li>
+</ul>
+<p>This ensures TEL only works with <strong>canonical operator behavior</strong>, not noisy runtime fields.</p>
+<h3 id="tel-receives">TEL receives:</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>From Benchmarks</th>
+<th>TEL Node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>φ</td>
+<td>Phi Stability, Emergence Coherence</td>
+<td>TEL.Operator.Phi</td>
+</tr>
+<tr>
+<td>variance</td>
+<td>Variance Smoothing, Temporal Stability</td>
+<td>TEL.Operator.Variance</td>
+</tr>
+<tr>
+<td>resonance</td>
+<td>Resonance Envelope, Harmonic Stability</td>
+<td>TEL.Resonance.Core / Harmonics</td>
+</tr>
+<tr>
+<td>entropy</td>
+<td>Entropy Boundary Detection, Collapse Signature</td>
+<td>TEL.Entropy.Field / Collapse</td>
+</tr>
+<tr>
+<td>hybrid</td>
+<td>Hybrid Coherence, Cross‑Operator Stability</td>
+<td>TEL.Hybrid.Operator</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="3-tels-internal-structure-student-view"><strong>3. TEL’s Internal Structure (Student View)</strong></h1>
+<p>TEL organizes operators into <strong>four lattice layers</strong>:</p>
+<pre><code>Ladder (S→C)
+Cycle (C↔H)
+Map (H↔So)
+Atlas (A)
+</code></pre>
+<p>Each operator enters the lattice at a specific layer:</p>
+<ul>
+<li><strong>φ</strong> enters at Ladder (S→C)  </li>
+<li><strong>variance</strong> stabilizes across Ladder → Cycle  </li>
+<li><strong>resonance</strong> spans Cycle → Map  </li>
+<li><strong>entropy</strong> spans Map → Atlas  </li>
+<li><strong>hybrid</strong> crosses layers (Cycle ↔ Map ↔ Atlas)</li>
+</ul>
+<p>This is why hybrid operators feel “cross‑regime”:<br>
+they literally cross lattice layers.</p>
+<hr>
+<h1 id="4-how-ue6-operators-map-into-tel"><strong>4. How UE6 Operators Map Into TEL</strong></h1>
+<p>From TEL’s perspective:</p>
+<ul>
+<li>UE6 is the <strong>raw field generator</strong>  </li>
+<li>Benchmarks are the <strong>behavioral filters</strong>  </li>
+<li>TEL is the <strong>structural integrator</strong></li>
+</ul>
+<h3 id="example-resonance">Example: Resonance</h3>
+<ol>
+<li>UE6: heatmap shows amplitude + frequency  </li>
+<li>Benchmarks: extract envelope + harmonic stability  </li>
+<li>TEL: places resonance into<br>
+   - <code>TEL.Resonance.Core</code><br>
+   - <code>TEL.Resonance.Harmonics</code>  </li>
+</ol>
+<h3 id="example-entropy">Example: Entropy</h3>
+<ol>
+<li>UE6: entropy field material shows collapse zones  </li>
+<li>Benchmarks: detect boundaries + collapse signatures  </li>
+<li>TEL: places entropy into<br>
+   - <code>TEL.Entropy.Field</code><br>
+   - <code>TEL.Entropy.Collapse</code>  </li>
+</ol>
+<h3 id="example-hybrid">Example: Hybrid</h3>
+<ol>
+<li>UE6: hybrid demo blends resonance × entropy  </li>
+<li>Benchmarks: score coherence + cross‑operator stability  </li>
+<li>TEL: places hybrid into<br>
+   - <code>TEL.Hybrid.Operator</code>  </li>
+</ol>
+<hr>
+<h1 id="5-why-tel-needs-benchmarks"><strong>5. Why TEL Needs Benchmarks</strong></h1>
+<p>TEL cannot accept raw UE6 values because:</p>
+<ul>
+<li>UE6 is <strong>continuous</strong>, <strong>visual</strong>, <strong>runtime</strong>  </li>
+<li>TEL is <strong>discrete</strong>, <strong>structural</strong>, <strong>cross‑module</strong>  </li>
+</ul>
+<p>Benchmarks act as the <strong>bridge</strong>:</p>
+<ul>
+<li>smoothing  </li>
+<li>scoring  </li>
+<li>normalizing  </li>
+<li>classifying  </li>
+<li>extracting regime signatures  </li>
+</ul>
+<p>TEL only accepts <strong>canonical operator signatures</strong>, not raw fields.</p>
+<hr>
+<h1 id="6-the-whole-chain-tel-perspective"><strong>6. The Whole Chain (TEL Perspective)</strong></h1>
+<p><strong>UE6 generates → Benchmarks evaluate → TEL integrates.</strong></p>
+<p>From inside TEL, the chain looks like:</p>
+<pre><code>UE6 (fields)
+   ↓
+Benchmarks (behavior)
+   ↓
+TEL (structure)
+   ↓
+Other Modules (propagation)
+</code></pre>
+<p>TEL is the <strong>first layer</strong> where operators become:</p>
+<ul>
+<li>queryable  </li>
+<li>cross‑module  </li>
+<li>stable  </li>
+<li>lattice‑aligned  </li>
+<li>drift‑resistant  </li>
+</ul>
+<hr>
+<h1 id="7-how-students-should-use-this"><strong>7. How Students Should Use This</strong></h1>
+<p>When learning RTT:</p>
+<ol>
+<li>
+<p><strong>Start in UE6</strong><br>
+   See the operators visually.</p>
+</li>
+<li>
+<p><strong>Move to Benchmarks</strong><br>
+   Understand how operators behave.</p>
+</li>
+<li>
+<p><strong>Enter TEL</strong><br>
+   Understand how operators become structure.</p>
+</li>
+<li>
+<p><strong>Explore cross‑module propagation</strong><br>
+   See how TEL feeds SARG, Structural Detection, Mode, Opacity, etc.</p>
+</li>
+</ol>
+<p>This index gives students the <strong>lattice‑first mental model</strong>.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SD-Π — PatternIndex (Structural Detection, AI Edition)</title>
+  <link rel="stylesheet" href="../assets/css/ai-edition.css">
+</head>
+<body>
+
+<section>
+  <h1>SD-Π — PatternIndex</h1>
+  <div class="context-block">
+    <span class="context-label">Book</span>
+    <span class="context-value">3 — Structural Detection (AI Edition)</span>
+  </div>
+  <div class="context-block">
+    <span class="context-label">Layer</span>
+    <span class="context-value">surface–deep</span>
+  </div>
+  <div class="context-block">
+    <span class="context-label">Role</span>
+    <span class="context-value">pattern indexing and structural cataloguing</span>
+  </div>
+</section>
+
+<section>
+  <h2>Operator JSON (AI-first)</h2>
+  <pre id="ai-operator">
+{
+  "operator": "SD-Π",
+  "name": "PatternIndex",
+  "module": "sd.structural_detection.ai",
+  "version": "3.0-draft",
+
+  "layer": "surface-deep",
+  "alignment": "structural",
+
+  "role": "Indexes detected patterns and emits structural catalogues for downstream modules.",
+
+  "phases": [
+    "confirm",
+    "catalogue"
+  ],
+
+  "inputs": {
+    "filtered_signal_fields": "from SD-Ξ",
+    "consistency_report": "from SD-Λ"
+  },
+
+  "outputs": {
+    "pattern_index": true,
+    "structural_catalogue": true
+  },
+
+  "constraints": {
+    "catalogue_output": "structural",
+    "must_not_revise_frozen_RTT": true
+  }
+}
+  </pre>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IS-Rₓ — Reversal-Cross Operator</title>
+</head>
+<body>
+
+<pre id="ai-operator" data-format="json">
+{
+  "operator": {
+    "id": "IS-Rx",
+    "name": "Reversal-Cross",
+    "module": "rtt.inverted_star.ai",
+    "version": "2.0-draft",
+    "role": "cross-operator reversal interactions",
+    "layer": "cross-cutting",
+    "alignment": "mixed",
+    "phase": ["fracture", "inversion", "collapse"],
+
+    "dominance_cycle": ["Δ", "Ω", "∇", "Σ"],
+
+    "transforms": {
+      "triadic_alignment": "flip→stabilize",
+      "operator_priority": {
+        "fracture": "Δ",
+        "inversion": "Ω",
+        "collapse": "∇",
+        "silence": "Σ"
+      }
+    },
+
+    "dependencies": {
+      "requires_kernel": true,
+      "kernel_version": "1.33-p1"
+    },
+
+    "constraints": {
+      "must_not_suppress_paradox": true,
+      "must_not_use_cached_spine": true,
+      "must_not_redeclare_RTT": true,
+      "must_not_declare_second_coherence": true,
+      "must_not_use_bare_C": true,
+      "must_not_invent_drift_costs": true,
+      "must_not_invent_6D_operator": true,
+      "must_not_load_deprecated_files": true
+    },
+
+    "drift_sensitivity": {
+      "Diffusion": "high",
+      "Alignment": "high",
+      "Coupling": "high",
+      "ParadoxResolver": "high",
+      "Stabilization": "medium"
+    }
+  }
+}
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+{
+  "ai.module": "nekr_okounkov_dominant_zeros_rtt",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT structural map of the paper 'Dominant Zeros of Nekrasov–Okounkov Polynomials'.",
+  "ai.source.pdf": "https://arxiv.org/pdf/2606.15394",
+  "ai.keywords": [
+    "Nekrasov–Okounkov polynomials",
+    "partition theory",
+    "dominant zeros",
+    "zero distribution",
+    "asymptotics",
+    "saddle point method",
+    "analytic continuation",
+    "q-series"
+  ],
+
+  "ai.module.summary": "This module exposes the regime structure behind the dominant-zero phenomenon for Nekrasov–Okounkov polynomials, connecting partition-theoretic expansions, analytic continuation, saddle-point asymptotics, and zero localization. It preserves the authors' results while adding RTT operators for agentic reasoning.",
+
+  "ai.regimes": {
+    "partition_expansion_regime": {
+      "description": "Nekrasov–Okounkov polynomials expressed via weighted sums over partitions.",
+      "evidence": "Paper recalls the partition-product definition and combinatorial weights."
+    },
+    "analytic_continuation_regime": {
+      "description": "Polynomials extended to complex x with controlled analytic structure.",
+      "evidence": "Authors analyze analytic continuation to locate zeros."
+    },
+    "saddle_point_regime": {
+      "description": "Asymptotic behavior governed by saddle points of the partition-generating integrals.",
+      "evidence": "Main asymptotic theorems use steepest-descent analysis."
+    },
+    "dominant_zero_regime": {
+      "description": "A unique dominant zero emerges on the negative real axis for large n.",
+      "evidence": "Theorem 1.1 and subsequent localization results."
+    },
+    "bulk_zero_regime": {
+      "description": "Remaining zeros form a structured cloud with predictable scaling.",
+      "evidence": "Authors describe non-dominant zero distribution asymptotically."
+    }
+  },
+
+  "ai.tensions": {
+    "combinatorial_vs_analytic": {
+      "description": "Partition expansions vs analytic continuation and complex zeros.",
+      "paper_alignment": "Proofs move between q-series combinatorics and analytic methods."
+    },
+    "dominant_vs_bulk_zeros": {
+      "description": "A single large negative zero vs the cloud of smaller complex zeros.",
+      "paper_alignment": "Theorem 1.1 isolates the dominant zero."
+    },
+    "local_saddle_vs_global_distribution": {
+      "description": "Local saddle-point behavior vs global zero distribution.",
+      "paper_alignment": "Asymptotic analysis determines both local and global structure."
+    }
+  },
+
+  "ai.transitions": {
+    "partition_to_analytic_transition": {
+      "description": "Translate partition-product formulas into analytic generating functions.",
+      "paper_alignment": "Initial analytic setup of the polynomials."
+    },
+    "analytic_to_saddle_transition": {
+      "description": "Apply steepest-descent to extract asymptotic behavior.",
+      "paper_alignment": "Main asymptotic theorems."
+    },
+    "saddle_to_zero_localization_transition": {
+      "description": "Use saddle geometry to locate dominant and bulk zeros.",
+      "paper_alignment": "Zero localization results."
+    }
+  },
+
+  "ai.operators": {
+    "partition_weight_operator": {
+      "type": "operator",
+      "role": "Constructs Nekrasov–Okounkov polynomials from partition data."
+    },
+    "analytic_continuation_operator": {
+      "type": "operator",
+      "role": "Extends polynomials to complex x and tracks singularities."
+    },
+    "saddle_point_operator": {
+      "type": "operator",
+      "role": "Performs steepest-descent analysis to obtain asymptotics."
+    },
+    "zero_localization_operator": {
+      "type": "operator",
+      "role": "Identifies dominant and bulk zeros from asymptotic data."
+    }
+  },
+
+  "ai.audience": "Researchers in analytic number theory, partition theory, and complex asymptotics.",
+  "ai.contact.github": "https://github.com/TriadicFrameworks",
+  "ai.license": "Open educational use permitted"
+}

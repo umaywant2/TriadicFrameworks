@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT.OpenGPU.Stack.Module/examples.md">
+  <title>examples — TFT.OpenGPU.Stack.Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT.OpenGPU.Stack.Module/examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT.OpenGPU.Stack.Module/examples.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="examples-tftopengpustackmodule">examples — TFT.OpenGPU.Stack.Module</h1>
+<p><strong>Example Scenarios for TFT.OpenGPU.Stack.Module</strong><br>
+<strong>RTT:</strong> 1<br>
+<strong>Coherence:</strong> Declared<br>
+<strong>Drift:</strong> Bounded<br>
+<strong>Paradox:</strong> Structural  </p>
+<hr>
+<h2 id="example-1-remote-desktop-reconstruction">Example 1 — Remote Desktop Reconstruction</h2>
+<p><strong>Scenario:</strong><br>
+A Cloud PC session sends TFT primitive streams instead of pixel frames.</p>
+<p><strong>Flow:</strong><br>
+1. Substrate declares dimensional intent (<code>Op.Intent</code>).<br>
+2. Rendering reconstructs scene (<code>Render.Scene</code>).<br>
+3. Execution resolves GPU work (<code>Exec.Dispatch</code>).<br>
+4. Endpoint reconstructs viewport (<code>Exec.Reconstruct.Viewport</code>).  </p>
+<p><strong>Result:</strong><br>
+Smooth remote desktop with GPU-native fidelity.</p>
+<hr>
+<h2 id="example-2-cloud-pc-tiering">Example 2 — Cloud PC Tiering</h2>
+<p><strong>Scenario:</strong><br>
+User selects a mid-tier Cloud PC.</p>
+<p><strong>Flow:</strong><br>
+1. Tier defines vGPU slice (<code>Tier.Cycle</code>).<br>
+2. Substrate cycles map to execution cycles.<br>
+3. Rendering fidelity adjusts automatically.<br>
+4. Endpoint reconstructs dimensional surfaces.  </p>
+<p><strong>Result:</strong><br>
+Consistent performance across tiers.</p>
+<hr>
+<h2 id="example-3-amd-partnership-surface">Example 3 — AMD Partnership Surface</h2>
+<p><strong>Scenario:</strong><br>
+AMD adopts TFT substrate primitives under NDA.</p>
+<p><strong>Flow:</strong><br>
+1. Substrate primitives map to ROCm kernels.<br>
+2. Rendering layer uses Vulkan/WebGPU.<br>
+3. Execution layer uses SR‑IOV vGPU slices.<br>
+4. Cloud PC stack becomes AMD-first.  </p>
+<p><strong>Result:</strong><br>
+Open GPU stack independent of NVIDIA.</p>
+<hr>
+<h2 id="example-4-rdp-graphics-pipeline-extension">Example 4 — RDP Graphics Pipeline Extension</h2>
+<p><strong>Scenario:</strong><br>
+TFT primitives inserted into RDPEGFX.</p>
+<p><strong>Flow:</strong><br>
+1. Primitive stream encoded (<code>RDP.PrimitiveStream</code>).<br>
+2. Transport via secure RDP channel.<br>
+3. Endpoint decodes (<code>RDP.Decode</code>).<br>
+4. GPU reconstructs dimensional intent.  </p>
+<p><strong>Result:</strong><br>
+High-fidelity remote rendering with minimal bandwidth.</p>
+<hr>
+<h2 id="example-5-ue6-optional-integration">Example 5 — UE6 Optional Integration</h2>
+<p><strong>Scenario:</strong><br>
+UE6 scene graph mapped to TFT substrate.</p>
+<p><strong>Flow:</strong><br>
+1. UE6 mesh → <code>Dim.Surface</code>.<br>
+2. UE6 material → <code>Dim.Material</code>.<br>
+3. UE6 transform → <code>Dim.Transform</code>.<br>
+4. Rendering layer reconstructs scene.  </p>
+<p><strong>Result:</strong><br>
+Game-engine-level fidelity in remote rendering.</p>
+  </main>
+</body>
+</html>

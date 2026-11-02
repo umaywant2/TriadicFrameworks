@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Inside/Robofish/Ecological_Robos.md">
+  <title>A Spark for Autonomous Forms: RTT‑Inside for Ecological Robotics in the Great Lakes</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Inside/Robofish/Ecological_Robos.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Inside/Robofish/Ecological_Robos.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="a-spark-for-autonomous-forms-rttinside-for-ecological-robotics-in-the-great-lakes"><strong>A Spark for Autonomous Forms: RTT‑Inside for Ecological Robotics in the Great Lakes</strong></h1>
+<p><em>(Draft for TriadicFrameworks Canon)</em></p>
+<h2 id="1-introduction"><strong>1. Introduction</strong></h2>
+<p>The Great Lakes are facing an accelerating ecological imbalance driven by invasive species such as zebra mussels, quagga mussels, round gobies, and sea lamprey. Traditional mitigation strategies are slow, labor‑intensive, and often blunt instruments. At the same time, the robotics and autonomy world is racing to deploy AI‑driven systems into real environments — often without the structural safeguards needed to ensure stability, traceability, and ecological safety.</p>
+<p>This document proposes a new path: <strong>RTT‑Inside as the foundational stability model for autonomous ecological robotics</strong>, beginning with a concrete, near‑term application — <strong>biomimetic robotic fish designed to support Great Lakes restoration</strong>.</p>
+<p>Rather than “AI inside,” this approach places <strong>corridor‑bounded autonomy</strong> at the core, ensuring that every decision is measurable, reversible, and structurally safe.</p>
+<hr>
+<h2 id="2-why-rttinside-matters-for-ecological-robotics"><strong>2. Why RTT‑Inside Matters for Ecological Robotics</strong></h2>
+<p>Most autonomous systems today operate on a “best guess” loop: perception → action → correction.<br>
+This is brittle in the presence of uncertainty, noise, or ambiguous classification — exactly the conditions found in underwater environments.</p>
+<p>RTT‑Inside introduces:</p>
+<ul>
+<li><strong>Corridors</strong> — bounded manifolds of allowed behavior  </li>
+<li><strong>Q‑metrics</strong> — real‑time stability signals  </li>
+<li><strong>Lineage</strong> — causal traceability for every decision  </li>
+<li><strong>VCG‑style envelopes</strong> — structural safety constraints  </li>
+<li><strong>Deterministic replay</strong> — full post‑mission auditability  </li>
+<li><strong>Rewind mechanics</strong> — rollback to last stable state  </li>
+</ul>
+<p>These properties transform autonomy from “hope it behaves” into <strong>instrumented, physics‑like reasoning</strong>.<br>
+For ecological robotics, this is not optional — it is the difference between safe restoration and unintended harm.</p>
+<hr>
+<h2 id="3-robotic-fish-architecture-rttinside-enabled"><strong>3. Robotic Fish Architecture (RTT‑Inside Enabled)</strong></h2>
+<h3 id="31-physical-platform"><strong>3.1. Physical Platform</strong></h3>
+<ul>
+<li><strong>Biomimetic body</strong> (30–60 cm), soft‑fin propulsion for low noise  </li>
+<li><strong>Sensors:</strong>  </li>
+<li>low‑light camera (visible + NIR)  </li>
+<li>forward sonar  </li>
+<li>IMU + depth sensor  </li>
+<li>environmental sensors (temperature, turbidity, dissolved oxygen)  </li>
+<li><strong>Compute:</strong>  </li>
+<li>onboard SBC (Jetson‑class)  </li>
+<li>low‑level motor control  </li>
+<li>mid‑level navigation  </li>
+<li>high‑level RTT‑Inside corridor engine  </li>
+<li><strong>Comms:</strong>  </li>
+<li>acoustic modem underwater  </li>
+<li>Wi‑Fi/4G when surfaced  </li>
+<li><strong>Power:</strong>  </li>
+<li>modular battery pack  </li>
+<li>docking station for recharge + data offload  </li>
+</ul>
+<h3 id="32-software-stack"><strong>3.2. Software Stack</strong></h3>
+<ul>
+<li><strong>Perception:</strong>  </li>
+<li>species‑ID model  </li>
+<li>habitat classifier  </li>
+<li>obstacle detection  </li>
+<li><strong>Control:</strong>  </li>
+<li>PID for fins/actuators  </li>
+<li>waypoint navigation  </li>
+<li>geofence enforcement  </li>
+<li><strong>RTT‑Inside Layer:</strong>  </li>
+<li>corridor specification  </li>
+<li>Q‑metric computation  </li>
+<li>lineage logging  </li>
+<li>VCG envelope enforcement  </li>
+<li>rewind + safe‑mode transitions  </li>
+</ul>
+<hr>
+<h2 id="4-speciesid-corridor-model"><strong>4. Species‑ID Corridor Model</strong></h2>
+<p>Species identification is treated as a <strong>corridor‑bounded task</strong>, not a free‑running classifier.</p>
+<h3 id="41-corridorspec"><strong>4.1. CorridorSpec</strong></h3>
+<ul>
+<li><strong>min_species_confidence</strong> (e.g., 0.85)  </li>
+<li><strong>max_label_entropy</strong> (avoid classification thrashing)  </li>
+<li><strong>max_geofence_drift</strong>  </li>
+<li><strong>max_energy_drift</strong>  </li>
+<li><strong>max_ambiguous_ratio</strong> (vision degraded → no action)  </li>
+</ul>
+<h3 id="42-qmetrics"><strong>4.2. Q‑metrics</strong></h3>
+<ul>
+<li><strong>Q1 — Species confidence stability</strong>  </li>
+<li><strong>Q2 — Label entropy</strong>  </li>
+<li><strong>Q3 — Spatial drift</strong>  </li>
+<li><strong>Q4 — Observation quality</strong>  </li>
+</ul>
+<h3 id="43-behavior-rules"><strong>4.3. Behavior Rules</strong></h3>
+<ul>
+<li>Low confidence → <strong>no action</strong>, log + continue mapping  </li>
+<li>High entropy → <strong>halt species‑related behaviors</strong>  </li>
+<li>Geofence violation → <strong>surface or return‑to‑dock</strong>  </li>
+<li>Vision degraded → <strong>navigation‑only mode</strong>  </li>
+</ul>
+<p>This ensures the robot fish <strong>never acts on uncertain data</strong>.</p>
+<hr>
+<h2 id="5-swarm-coordination-protocol-resonanceaware"><strong>5. Swarm Coordination Protocol (Resonance‑Aware)</strong></h2>
+<p>A fleet of robotic fish forms a <strong>meta‑corridor</strong> with group‑level stability.</p>
+<h3 id="51-swarm-qmetrics"><strong>5.1. Swarm Q‑metrics</strong></h3>
+<ul>
+<li><strong>S1 — Coverage resonance</strong> (uniformity of area coverage)  </li>
+<li><strong>S2 — Overlap pressure</strong> (avoid clustering)  </li>
+<li><strong>S3 — Comms stability</strong>  </li>
+<li><strong>S4 — Mission coherence</strong>  </li>
+</ul>
+<h3 id="52-coordination-mechanisms"><strong>5.2. Coordination Mechanisms</strong></h3>
+<ul>
+<li>periodic gossip‑style state sharing  </li>
+<li>buoy or shore‑based coordinator running a meta‑corridor  </li>
+<li>suggestions only — each fish’s local corridor can veto unsafe commands  </li>
+</ul>
+<p>This produces a <strong>resonant, stable swarm</strong> rather than chaotic drift.</p>
+<hr>
+<h2 id="6-great-lakes-deployment-plan"><strong>6. Great Lakes Deployment Plan</strong></h2>
+<h3 id="phase-1-lab-trials"><strong>Phase 1 — Lab Trials</strong></h3>
+<ul>
+<li>locomotion tuning  </li>
+<li>perception validation  </li>
+<li>corridor stability tests  </li>
+</ul>
+<h3 id="phase-2-enclosed-field-trials"><strong>Phase 2 — Enclosed Field Trials</strong></h3>
+<ul>
+<li>obstacle avoidance  </li>
+<li>mapping  </li>
+<li>non‑lethal behavioral tests  </li>
+</ul>
+<h3 id="phase-3-limited-openwater-pilots"><strong>Phase 3 — Limited Open‑Water Pilots</strong></h3>
+<ul>
+<li>invasive species monitoring  </li>
+<li>spawning ground mapping  </li>
+<li>supervised herding behaviors  </li>
+</ul>
+<h3 id="phase-4-operational-mesh"><strong>Phase 4 — Operational Mesh</strong></h3>
+<ul>
+<li>distributed fleet  </li>
+<li>continuous monitoring  </li>
+<li>data fusion with human surveys  </li>
+</ul>
+<p>Every mission produces a <strong>Corridor Trace File</strong> for audit, research, and ecological oversight.</p>
+<hr>
+<h2 id="7-ethical-and-ecological-safeguards"><strong>7. Ethical and Ecological Safeguards</strong></h2>
+<p>RTT‑Inside ensures:</p>
+<ul>
+<li><strong>no autonomous lethal action</strong>  </li>
+<li><strong>no irreversible behavior under uncertainty</strong>  </li>
+<li><strong>full traceability</strong>  </li>
+<li><strong>bounded autonomy</strong>  </li>
+<li><strong>human‑in‑the‑loop escalation</strong>  </li>
+</ul>
+<p>This aligns with ecological restoration principles and avoids the pitfalls of “AI‑inside everything” approaches.</p>
+<hr>
+<h2 id="8-conclusion"><strong>8. Conclusion</strong></h2>
+<p>RTT‑Inside provides the missing structural physics for safe autonomy.<br>
+Applied to ecological robotics, it enables a new class of tools — precise, reversible, measurable, and aligned with environmental stewardship.</p>
+<p>Robotic fish for the Great Lakes are not science fiction.<br>
+With corridor‑bounded autonomy, they become <strong>responsible instruments</strong> for restoration, not risks to the ecosystem.</p>
+<p>This is the spark:<br>
+<strong>Autonomous forms that behave not because we hope they will, but because the structure guarantees it.</strong></p>
+  </main>
+</body>
+</html>

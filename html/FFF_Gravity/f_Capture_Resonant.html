@@ -1,0 +1,1398 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/FFF_Gravity/f_Capture_Resonant.md">
+  <title>fCaptureResonant — Resonance-Locked Capture</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/FFF_Gravity/f_Capture_Resonant.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/FFF_Gravity/f_Capture_Resonant.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="f_capture_resonant-resonance-locked-capture">f_Capture_Resonant — Resonance-Locked Capture</h1>
+<pre><code>id: f_Capture_Resonant
+title: &quot;f_Capture_Resonant — Resonance-Locked Capture&quot;
+module: FFF_Gravity
+version: 1.0.0
+status: canonical
+wave: 4
+session: SES-20260813-FGRAV-033
+date: 2026-08-13
+authors:
+  - umaywant2
+invariants_enforced:
+  - INV-001
+  - INV-002
+  - INV-003
+  - INV-004
+  - INV-005
+  - INV-006
+  - INV-008
+  - INV-009
+failure_modes_referenced:
+  - FM-001
+  - FM-002
+  - FM-003
+  - FM-004
+  - FM-006
+primitives_defined:
+  - PRIM:033
+  - PRIM:034
+depends_on:
+  - f_Capture.md
+  - f_Orbit.md
+  - f_Field.md
+  - f_Force.md
+  - OPERATORS.md
+</code></pre>
+<hr>
+<p><strong>Module:</strong> FFF_Gravity
+<strong>Wave:</strong> 4 — Capture Variants
+<strong>Version:</strong> 1.0.0
+<strong>Status:</strong> Canonical
+<strong>Session:</strong> SES-20260813-FGRAV-033
+<strong>Date:</strong> 2026-08-13</p>
+<hr>
+<h2 id="0-session-context">§0 Session Context</h2>
+<p>This file is the fifth of six capture-variant documents in Wave 4 of the
+FFF_Gravity module. It specifies the <strong>resonance-locked capture</strong> pathway:
+a capture that succeeds only when the entity E arrives within a narrow
+orbital timing window defined by the attractor A's resonance frequency
+ω_res.</p>
+<p>Resonance-locked capture is the rarest canonical capture mode. Where soft
+capture tolerates partial binding and hard capture demands threshold excess,
+resonant capture demands <em>timing precision</em>: the approach vector must phase-
+align with A's field oscillation cycle. An otherwise-qualified approach
+(β ≥ 1.0, ρ(Φ) sufficient) is rejected as a flyby (FM-001) if it arrives
+outside the resonance window.</p>
+<p>Successful resonant capture writes <code>orbit_class = RESONANT</code> (defined in
+f_Orbit.md §3) and produces the highest possible d_bind stability — resonant
+orbits are deeply phase-locked and resist perturbation until field coherence
+falls below a dedicated resonance-floor threshold.</p>
+<p><strong>Symbols introduced here are registered in OPERATORS.md per INV-009.</strong>
+No new FM IDs are created per the FM freeze protocol; FM-004 (resonance drift)
+serves as the recoverable warning for resonance degradation.</p>
+<hr>
+<h2 id="1-module-identity">§1 Module Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File path</td>
+<td>docs/FFF_Gravity/f_Capture_Resonant.md</td>
+</tr>
+<tr>
+<td>Parent operator</td>
+<td>f_Capture.md (base capture contract)</td>
+</tr>
+<tr>
+<td>Peer variants</td>
+<td>f_Capture_Multi.md, f_Capture_Cascade.md, f_Capture_Soft.md, f_Capture_Hard.md</td>
+</tr>
+<tr>
+<td>Successor</td>
+<td>f_Capture_Asymmetric.md</td>
+</tr>
+<tr>
+<td>Orbit class written</td>
+<td>RESONANT</td>
+</tr>
+<tr>
+<td>Condition prefix</td>
+<td>RLC- (Resonance Lock Condition)</td>
+</tr>
+<tr>
+<td>State flags</td>
+<td>WINDOW_OPEN, WINDOW_CLOSED, RESONANCE_LOCKED, RESONANCE_LOST</td>
+</tr>
+<tr>
+<td>Primitives</td>
+<td>PRIM:033 (eval_resonance_window), PRIM:034 (lock_resonance)</td>
+</tr>
+<tr>
+<td>Failure modes used</td>
+<td>FM-001 (flyby), FM-002 (field null), FM-003 (saturation),</td>
+</tr>
+<tr>
+<td></td>
+<td>FM-004 (resonance drift), FM-006 (phantom capture)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-canonical-description">§2 Canonical Description</h2>
+<h3 id="21-motivation">2.1 Motivation</h3>
+<p>Standard capture (f_Capture.md) requires β ≥ 1.0 and ρ(Φ) &gt; 0 to bind E
+to A. These conditions are necessary but not sufficient for resonant capture:
+resonant capture additionally requires that E's arrival phase aligns with A's
+oscillation cycle.</p>
+<p>A's field coherence ρ(Φ) is not static — it oscillates at angular frequency
+ω_res (radians per unit time). At resonance peaks, the binding force is
+amplified; at troughs, it is suppressed. An entity arriving at a trough may
+not achieve orbit even if all scalar conditions pass.</p>
+<p>Resonance-locked capture exploits this oscillation: E must arrive within a
+phase window [φ_open, φ_close] relative to ω_res. If it does, d_bind is
+multiplied by a resonance gain factor (ρ_res_gain). If it does not, capture
+is rejected and E continues on its approach trajectory — recorded as FM-001
+with the sub-annotation <code>REASON: WINDOW_MISS</code>.</p>
+<h3 id="22-physical-analogy">2.2 Physical Analogy</h3>
+<p>In orbital mechanics, resonance describes configurations where two bodies'
+orbital periods form a small integer ratio (e.g., 2:1, 3:2). Here, resonance
+describes the phase relationship between E's approach timing and A's field
+cycle. The Laplace resonances of Jupiter's moons provide the canonical
+physical analogue: only entities arriving in the correct phase slot achieve
+stable co-orbiting configurations.</p>
+<h3 id="23-relationship-to-orbit_class-resonant">2.3 Relationship to orbit_class = RESONANT</h3>
+<p>f_Orbit.md §3 defines four orbit classes: CIRCULAR, ELLIPTICAL, ECCENTRIC,
+RESONANT. The RESONANT class is only reachable via this file. No other
+capture pathway writes <code>orbit_class = RESONANT</code>.</p>
+<p>A RESONANT orbit has the following properties (inherited from f_Orbit.md):
+- <code>stab_class</code> is forced to STABLE (resonant phase-lock implies stability)
+- <code>T_orb</code> is pinned to a rational multiple of A's resonance period <code>T_res</code>
+- Perturbations are dampened by the phase-lock force until ρ(Φ) &lt; ρ_res_floor
+- FM-004 (resonance drift) is the only non-fatal degradation mode</p>
+<h3 id="24-resonance-window-geometry">2.4 Resonance Window Geometry</h3>
+<p>The resonance window is defined in phase space, not time space:</p>
+<pre><code>φ_open  = 2π × n_window_start     (n_window_start ∈ [0, 1))
+φ_close = 2π × n_window_end       (n_window_end ∈ (0, 1], n_window_end &gt; n_window_start)
+window_width = φ_close - φ_open
+</code></pre>
+<p>At any clock tick t, A's current phase is:</p>
+<pre><code>φ_A(t) = (ω_res × t) mod 2π
+</code></pre>
+<p>E's arrival phase is <code>φ_E = φ_A(t_arrive)</code>. Capture proceeds if and only if:</p>
+<pre><code>φ_open ≤ φ_E ≤ φ_close        ← RLC-1
+</code></pre>
+<p>Window width <code>window_width</code> is a property of A registered at f_Source.md
+initialization. Narrower windows produce rarer but deeper captures.</p>
+<h3 id="25-resonance-gain-and-d_bind-enhancement">2.5 Resonance Gain and d_bind Enhancement</h3>
+<p>When E arrives in-window, d_bind is computed with a resonance gain multiplier:</p>
+<pre><code>ρ_res_gain ∈ (1.0, ∞)          (registered in f_Source.md for A)
+d_bind_res = β × (ρ(Φ) × ρ_res_gain) × (1 − e)
+</code></pre>
+<p>Note: ρ(Φ) × ρ_res_gain must be capped at 1.0 for the coherence product,
+then d_bind_res is computed. The gain amplifies the effective field density
+but does not violate the ρ(Φ) ∈ [0, 1] invariant on the base field.</p>
+<pre><code>ρ_eff = min(1.0, ρ(Φ) × ρ_res_gain)
+d_bind_res = β × ρ_eff × (1 − e)
+</code></pre>
+<p>This is the governing d_bind for RESONANT orbits. It is always ≥ standard
+d_bind when ρ_res_gain ≥ 1.0.</p>
+<h3 id="26-resonance-lock-vs-resonance-drift">2.6 Resonance Lock vs. Resonance Drift</h3>
+<p>Once locked, a RESONANT orbit remains locked as long as:</p>
+<pre><code>ρ(Φ)(t) ≥ ρ_res_floor          ← RLC-4
+</code></pre>
+<p>where <code>ρ_res_floor</code> is a registered threshold (default 0.30, stricter than
+the general field-null threshold of 0.0 in INV-003).</p>
+<p>If ρ(Φ) drops below ρ_res_floor but remains above 0:
+- FM-004 (resonance drift) is raised as a recoverable warning
+- <code>orbit_class</code> degrades from RESONANT → ELLIPTICAL
+- <code>stab_class</code> degrades from STABLE → MARGINAL
+- Lock is not yet lost; recovery is possible if ρ(Φ) recovers above ρ_res_floor</p>
+<p>If ρ(Φ) subsequently falls to 0: INV-003 triggers FM-002 (field null/collapse),
+and the orbit is terminal regardless of prior resonance.</p>
+<hr>
+<h2 id="3-triadic-equation-mapping">§3 Triadic Equation Mapping</h2>
+<pre><code>G = F_freq · F_fluid · F_force
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Resonant-capture contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_freq</td>
+<td>ω_res (oscillation frequency), φ_A(t) (current phase),</td>
+</tr>
+<tr>
+<td></td>
+<td>T_res (resonance period), window_width (phase gate width)</td>
+</tr>
+<tr>
+<td>F_fluid</td>
+<td>ρ(Φ) (field coherence), ρ_res_gain (amplification factor),</td>
+</tr>
+<tr>
+<td></td>
+<td>ρ_eff (capped effective coherence), ρ_res_floor (lock floor)</td>
+</tr>
+<tr>
+<td>F_force</td>
+<td>β (binding coefficient), d_bind_res (resonance-enhanced depth),</td>
+</tr>
+<tr>
+<td></td>
+<td>v_approach, r_capture (base capture scalars inherited from</td>
+</tr>
+<tr>
+<td></td>
+<td>f_Capture.md), heading_delta (from f_Force.md §4.3)</td>
+</tr>
+</tbody>
+</table>
+<p>INV-001 compliance: All three nodes participate. ω_res is a F_freq primitive;
+ρ_eff is a F_fluid primitive; d_bind_res is a F_force primitive. No resonant
+capture computation is possible with any node absent.</p>
+<hr>
+<h2 id="4-operator-registry">§4 Operator Registry</h2>
+<p>All symbols below are registered in OPERATORS.md per INV-009.</p>
+<h3 id="41-resonance-frequency-and-phase">4.1 Resonance Frequency and Phase</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Domain</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ω_res</code></td>
+<td>ℝ, &gt; 0</td>
+<td>Angular resonance frequency of attractor A (rad/unit time)</td>
+</tr>
+<tr>
+<td><code>T_res</code></td>
+<td>ℝ, &gt; 0</td>
+<td>Resonance period = 2π / ω_res</td>
+</tr>
+<tr>
+<td><code>φ_A(t)</code></td>
+<td>[0, 2π)</td>
+<td>Current phase of A at time t = (ω_res × t) mod 2π</td>
+</tr>
+<tr>
+<td><code>φ_E</code></td>
+<td>[0, 2π)</td>
+<td>Arrival phase of E = φ_A(t_arrive)</td>
+</tr>
+<tr>
+<td><code>φ_open</code></td>
+<td>[0, 2π)</td>
+<td>Window open phase boundary</td>
+</tr>
+<tr>
+<td><code>φ_close</code></td>
+<td>(0, 2π]</td>
+<td>Window close phase boundary (&gt; φ_open)</td>
+</tr>
+<tr>
+<td><code>window_width</code></td>
+<td>(0, 2π]</td>
+<td>φ_close − φ_open</td>
+</tr>
+<tr>
+<td><code>t_arrive</code></td>
+<td>ℝ, ≥ 0</td>
+<td>Clock tick at which E reaches r_capture</td>
+</tr>
+<tr>
+<td><code>t_next_open</code></td>
+<td>ℝ, &gt; t_arrive</td>
+<td>Earliest future t where WINDOW_OPEN holds</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-field-enhancement">4.2 Field Enhancement</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Domain</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ρ_res_gain</code></td>
+<td>ℝ, &gt; 1.0</td>
+<td>Field amplification factor during resonance window</td>
+</tr>
+<tr>
+<td><code>ρ_eff</code></td>
+<td>[0, 1]</td>
+<td>min(1.0, ρ(Φ) × ρ_res_gain)</td>
+</tr>
+<tr>
+<td><code>ρ_res_floor</code></td>
+<td>(0, 1)</td>
+<td>Minimum ρ(Φ) to maintain resonance lock (default 0.30)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-enhanced-binding">4.3 Enhanced Binding</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Domain</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d_bind_res</code></td>
+<td>ℝ, ≥ 0</td>
+<td>Resonance-enhanced binding depth = β × ρ_eff × (1 − e)</td>
+</tr>
+<tr>
+<td><code>orbit_class</code></td>
+<td>enum</td>
+<td>Set to RESONANT on successful lock</td>
+</tr>
+<tr>
+<td><code>stab_class</code></td>
+<td>enum</td>
+<td>Forced STABLE on resonance lock</td>
+</tr>
+<tr>
+<td><code>T_orb_res</code></td>
+<td>ℝ, &gt; 0</td>
+<td>Orbital period under resonance lock = p/q × T_res (p, q ∈ ℤ⁺)</td>
+</tr>
+<tr>
+<td><code>p_ratio</code></td>
+<td>ℤ⁺</td>
+<td>Numerator of orbital resonance ratio p:q</td>
+</tr>
+<tr>
+<td><code>q_ratio</code></td>
+<td>ℤ⁺</td>
+<td>Denominator of orbital resonance ratio p:q</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-window-state-flags">4.4 Window State Flags</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WINDOW_OPEN</code></td>
+<td>φ_E is within [φ_open, φ_close] — capture eligible</td>
+</tr>
+<tr>
+<td><code>WINDOW_CLOSED</code></td>
+<td>φ_E is outside window — capture rejected (FM-001)</td>
+</tr>
+<tr>
+<td><code>RESONANCE_LOCKED</code></td>
+<td>Orbit is actively phase-locked; ρ(Φ) ≥ ρ_res_floor</td>
+</tr>
+<tr>
+<td><code>RESONANCE_LOST</code></td>
+<td>ρ(Φ) dropped below ρ_res_floor; FM-004 raised</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-resonance-lock-conditions-rlc-">§5 Resonance Lock Conditions (RLC-)</h2>
+<p>All five conditions are <strong>conjunctive</strong> (INV-005). All must hold simultaneously
+for resonance-locked capture to complete.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Condition</th>
+<th>Failure if violated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RLC-1</td>
+<td>φ_open ≤ φ_E ≤ φ_close (in-window arrival)</td>
+<td>FM-001 (WINDOW_MISS)</td>
+</tr>
+<tr>
+<td>RLC-2</td>
+<td>β ≥ 1.0 (standard capture binding threshold)</td>
+<td>FM-001 (APPROACH_REJECTION)</td>
+</tr>
+<tr>
+<td>RLC-3</td>
+<td>ρ(Φ) &gt; 0 at t_arrive (field non-null)</td>
+<td>FM-002 (FIELD_NULL)</td>
+</tr>
+<tr>
+<td>RLC-4</td>
+<td>ρ(Φ) ≥ ρ_res_floor post-capture (lock floor)</td>
+<td>FM-004 (RESONANCE_DRIFT)</td>
+</tr>
+<tr>
+<td>RLC-5</td>
+<td>v_approach &lt; v_escape(A) (not hyperbolic)</td>
+<td>FM-001 (OVERSHOOT)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>RLC-1 is the distinguishing condition</strong> of this variant. All other capture
+variants ignore φ_E entirely. A WINDOW_MISS rejection is annotated distinctly
+from standard FM-001 overshoot to aid diagnostics.</p>
+<p><strong>RLC-4 is a post-capture maintenance condition</strong>, not an entry gate. It is
+evaluated on every subsequent tick after capture, not at t_arrive.</p>
+<hr>
+<h2 id="6-failure-modes">§6 Failure Modes</h2>
+<p>No new FM IDs are introduced. The following FM entries apply:</p>
+<h3 id="fm-001-flyby-two-sub-cases-in-this-variant">FM-001 — Flyby (two sub-cases in this variant)</h3>
+<p><strong>Sub-case A: WINDOW_MISS (RLC-1 violated)</strong></p>
+<pre><code>FM-001 raised with annotation: REASON=WINDOW_MISS
+φ_E           := computed arrival phase
+t_next_open   := next tick where WINDOW_OPEN will hold
+                 = t_arrive + (φ_open − φ_E + 2π) mod 2π / ω_res
+orbit_class   := not written (capture did not occur)
+</code></pre>
+<p>E continues on its pre-capture trajectory. The caller may retry by holding
+E at a waiting state until t_next_open.</p>
+<p><strong>Sub-case B: APPROACH_REJECTION or OVERSHOOT (RLC-2 or RLC-5 violated)</strong>
+Identical to base f_Capture.md FM-001 behavior; φ_E is irrelevant if scalar
+conditions fail first.</p>
+<p>Evaluation order per INV-008: RLC-3 → RLC-2 → RLC-5 → RLC-1.
+(Field null checked first; window checked last to avoid phase calculation
+on degenerate inputs.)</p>
+<h3 id="fm-002-field-null-rlc-3-violated">FM-002 — Field Null (RLC-3 violated)</h3>
+<pre><code>FM-002 raised
+ρ(Φ) = 0 confirmed
+d_bind_res is undefined (not computed)
+orbit_class := not written
+</code></pre>
+<p>Behavior identical to base f_Capture.md FM-002.</p>
+<h3 id="fm-003-frame-saturation">FM-003 — Frame Saturation</h3>
+<p>Evaluated against A's orbit count prior to resonant capture attempt. If A
+has reached its max_orbits ceiling, the capture is refused pre-phase-check.
+FM-003 annotation includes <code>VARIANT=RESONANT</code> for tracing.</p>
+<h3 id="fm-004-resonance-drift-post-capture-recoverable">FM-004 — Resonance Drift (post-capture, recoverable)</h3>
+<pre><code>Trigger: ρ(Φ)(t) &lt; ρ_res_floor (RLC-4 violated post-capture)
+State:   RESONANCE_LOCKED → RESONANCE_LOST
+orbit_class: RESONANT → ELLIPTICAL
+stab_class:  STABLE → MARGINAL
+Action:  warning raised; orbit continues as ELLIPTICAL
+Recovery: if ρ(Φ) recovers ≥ ρ_res_floor → RESONANCE_LOCKED re-asserted,
+          orbit_class re-promoted to RESONANT
+</code></pre>
+<p>FM-004 is the only non-fatal degradation mode for a RESONANT orbit.</p>
+<h3 id="fm-006-phantom-capture">FM-006 — Phantom Capture</h3>
+<p>If φ_E is in-window but ρ(Φ) is non-zero and β ≥ 1.0, yet the computed
+d_bind_res resolves to 0.0 (due to eccentricity e = 1.0, i.e., p_res = 0
+with P_eff = 0), FM-006 is raised: the phase alignment was real but the
+binding force was phantom.</p>
+<p>Phantom resonance is rare; the usual cause is a degenerate orbit where
+the entity has zero effective momentum. The guard condition is:</p>
+<pre><code>if d_bind_res == 0.0 and all RLC pass:
+    raise FM-006 (PHANTOM_RESONANCE)
+</code></pre>
+<hr>
+<h2 id="7-engineering-primitives">§7 Engineering Primitives</h2>
+<h3 id="prim033-eval_resonance_window">PRIM:033 — eval_resonance_window</h3>
+<pre><code class="language-python">def eval_resonance_window(
+    omega_res: float,
+    phi_open: float,
+    phi_close: float,
+    t_arrive: float,
+    beta: float,
+    rho_phi: float,
+    v_approach: float,
+    v_escape: float,
+    max_orbits: int,
+    current_orbit_count: int,
+) -&gt; dict:
+    &quot;&quot;&quot;
+    PRIM:033 — Resonance Window Evaluator
+    ======================================
+    Evaluate whether entity E's arrival at attractor A satisfies all
+    pre-capture Resonance Lock Conditions (RLC-1 through RLC-3, RLC-5)
+    and compute the resonance arrival phase.
+
+    This primitive performs the gate-check phase of resonant capture.
+    It does NOT write orbit state — that is PRIM:034's responsibility.
+
+    Evaluation order (INV-008):
+        1. FM-003 check  — saturation guard
+        2. RLC-3         — ρ(Φ) &gt; 0
+        3. RLC-2         — β ≥ 1.0
+        4. RLC-5         — v_approach &lt; v_escape
+        5. RLC-1         — φ_E in [φ_open, φ_close]
+
+    Parameters
+    ----------
+    omega_res : float
+        Angular resonance frequency of attractor A (rad / unit time). &gt; 0.
+    phi_open : float
+        Window open phase boundary. In [0, 2π).
+    phi_close : float
+        Window close phase boundary. In (0, 2π]. Must exceed phi_open.
+    t_arrive : float
+        Clock tick at which E reaches r_capture. ≥ 0.
+    beta : float
+        Binding coefficient of E with respect to A. ≥ 0.
+    rho_phi : float
+        Field coherence density at t_arrive. In [0, 1].
+    v_approach : float
+        Approach velocity of E toward A. ≥ 0.
+    v_escape : float
+        Escape velocity of A's capture field. ≥ 0. v_escape(A) from f_Force.md.
+    max_orbits : int
+        Frame saturation ceiling for A. From f_Frame.md.
+    current_orbit_count : int
+        Current number of bound orbits around A. ≥ 0.
+
+    Returns
+    -------
+    dict with keys:
+        status : str
+            &quot;WINDOW_OPEN&quot; | &quot;WINDOW_CLOSED&quot; | &quot;FM-001&quot; | &quot;FM-002&quot; | &quot;FM-003&quot;
+        phi_E : float
+            Computed arrival phase = (omega_res × t_arrive) mod 2π.
+        t_next_open : float | None
+            If status == &quot;WINDOW_CLOSED&quot;: earliest future tick where WINDOW_OPEN
+            holds. None otherwise.
+        failure_mode : str | None
+            FM code if status is a failure. None on WINDOW_OPEN.
+        reason : str | None
+            Sub-annotation string (e.g., &quot;WINDOW_MISS&quot;, &quot;APPROACH_REJECTION&quot;).
+
+    Invariants
+    ----------
+    INV-001 : F_freq (omega_res), F_fluid (rho_phi), F_force (beta) all present.
+    INV-003 : rho_phi = 0 → FM-002 raised unconditionally.
+    INV-004 : beta &lt; 1.0 → FM-001 raised (flyby, approach rejection).
+    INV-005 : All RLC evaluated conjunctively; first failure terminates.
+    INV-008 : Evaluation order normative (saturation → null → binding → velocity → phase).
+    &quot;&quot;&quot;
+    import math
+
+    T_res = (2 * math.pi) / omega_res
+
+    # Compute arrival phase unconditionally (used in all branches)
+    phi_E = (omega_res * t_arrive) % (2 * math.pi)
+
+    # Step 1: FM-003 — frame saturation
+    if current_orbit_count &gt;= max_orbits:
+        return {
+            &quot;status&quot;: &quot;FM-003&quot;,
+            &quot;phi_E&quot;: phi_E,
+            &quot;t_next_open&quot;: None,
+            &quot;failure_mode&quot;: &quot;FM-003&quot;,
+            &quot;reason&quot;: &quot;FRAME_SATURATION (VARIANT=RESONANT)&quot;,
+        }
+
+    # Step 2: RLC-3 — field non-null (INV-003)
+    if rho_phi &lt;= 0.0:
+        return {
+            &quot;status&quot;: &quot;FM-002&quot;,
+            &quot;phi_E&quot;: phi_E,
+            &quot;t_next_open&quot;: None,
+            &quot;failure_mode&quot;: &quot;FM-002&quot;,
+            &quot;reason&quot;: &quot;FIELD_NULL&quot;,
+        }
+
+    # Step 3: RLC-2 — binding threshold (INV-004)
+    if beta &lt; 1.0:
+        return {
+            &quot;status&quot;: &quot;FM-001&quot;,
+            &quot;phi_E&quot;: phi_E,
+            &quot;t_next_open&quot;: None,
+            &quot;failure_mode&quot;: &quot;FM-001&quot;,
+            &quot;reason&quot;: &quot;APPROACH_REJECTION&quot;,
+        }
+
+    # Step 4: RLC-5 — not hyperbolic
+    if v_approach &gt;= v_escape:
+        return {
+            &quot;status&quot;: &quot;FM-001&quot;,
+            &quot;phi_E&quot;: phi_E,
+            &quot;t_next_open&quot;: None,
+            &quot;failure_mode&quot;: &quot;FM-001&quot;,
+            &quot;reason&quot;: &quot;OVERSHOOT&quot;,
+        }
+
+    # Step 5: RLC-1 — phase window check
+    if phi_open &lt;= phi_E &lt;= phi_close:
+        return {
+            &quot;status&quot;: &quot;WINDOW_OPEN&quot;,
+            &quot;phi_E&quot;: phi_E,
+            &quot;t_next_open&quot;: None,
+            &quot;failure_mode&quot;: None,
+            &quot;reason&quot;: None,
+        }
+    else:
+        # Compute next open tick
+        phase_gap = (phi_open - phi_E + 2 * math.pi) % (2 * math.pi)
+        t_next_open = t_arrive + phase_gap / omega_res
+        return {
+            &quot;status&quot;: &quot;WINDOW_CLOSED&quot;,
+            &quot;phi_E&quot;: phi_E,
+            &quot;t_next_open&quot;: t_next_open,
+            &quot;failure_mode&quot;: &quot;FM-001&quot;,
+            &quot;reason&quot;: &quot;WINDOW_MISS&quot;,
+        }
+</code></pre>
+<hr>
+<h3 id="prim034-lock_resonance">PRIM:034 — lock_resonance</h3>
+<pre><code class="language-python">def lock_resonance(
+    beta: float,
+    rho_phi: float,
+    rho_res_gain: float,
+    rho_res_floor: float,
+    eccentricity: float,
+    p_ratio: int,
+    q_ratio: int,
+    T_res: float,
+    phi_E: float,
+    phi_open: float,
+    phi_close: float,
+) -&gt; dict:
+    &quot;&quot;&quot;
+    PRIM:034 — Resonance Lock Writer
+    =================================
+    Given that PRIM:033 returned WINDOW_OPEN, compute and write the full
+    resonance-locked orbit state.
+
+    This primitive is called only after PRIM:033 confirms WINDOW_OPEN.
+    Calling it without that confirmation violates INV-008 (evaluation order).
+
+    Computes:
+        ρ_eff       = min(1.0, rho_phi × rho_res_gain)
+        d_bind_res  = beta × ρ_eff × (1 − eccentricity)
+        T_orb_res   = (p_ratio / q_ratio) × T_res
+        orbit_class = RESONANT
+        stab_class  = STABLE
+
+    Raises FM-006 (phantom) if d_bind_res resolves to 0.0 despite all
+    RLC passing — indicating degenerate eccentricity (e = 1.0).
+
+    Parameters
+    ----------
+    beta : float
+        Binding coefficient. ≥ 1.0 (already verified by PRIM:033).
+    rho_phi : float
+        Field coherence density. In (0, 1] (non-null verified by PRIM:033).
+    rho_res_gain : float
+        Field amplification factor during resonance window. &gt; 1.0.
+    rho_res_floor : float
+        Minimum ρ(Φ) to maintain resonance lock post-capture. In (0, 1).
+    eccentricity : float
+        Orbital eccentricity e = p_res / (p_res + P_eff). In [0, 1).
+        e must be &lt; 1.0; e = 1.0 triggers FM-006.
+    p_ratio : int
+        Numerator of orbital period resonance ratio p:q. ≥ 1.
+    q_ratio : int
+        Denominator of orbital period resonance ratio p:q. ≥ 1.
+    T_res : float
+        Resonance period of A = 2π / omega_res. &gt; 0.
+    phi_E : float
+        Arrival phase (from PRIM:033). In [phi_open, phi_close].
+    phi_open : float
+        Window open phase. Informational; used in output record only.
+    phi_close : float
+        Window close phase. Informational; used in output record only.
+
+    Returns
+    -------
+    dict with keys:
+        status : str
+            &quot;RESONANCE_LOCKED&quot; | &quot;FM-006&quot;
+        rho_eff : float
+            Effective coherence used in binding computation.
+        d_bind_res : float
+            Resonance-enhanced binding depth.
+        T_orb_res : float
+            Pinned orbital period for this resonant orbit.
+        orbit_class : str
+            &quot;RESONANT&quot; on success; None on FM-006.
+        stab_class : str
+            &quot;STABLE&quot; on success; None on FM-006.
+        failure_mode : str | None
+            &quot;FM-006&quot; on phantom; None on success.
+        lock_record : dict
+            Structured record for appending to f_Source.md orbit registry.
+
+    Invariants
+    ----------
+    INV-001 : All three nodes contribute to d_bind_res.
+    INV-002 : Ω is frozen upon RESONANCE_LOCKED; orbit_class = RESONANT.
+    INV-006 : RESONANCE_LOCKED is a terminal capture state (reversible only
+              via FM-004 drift degradation, not arbitrary release).
+    INV-008 : Must be called after PRIM:033 confirms WINDOW_OPEN.
+    &quot;&quot;&quot;
+    # Compute effective coherence (ρ_eff capped at 1.0)
+    rho_eff = min(1.0, rho_phi * rho_res_gain)
+
+    # Compute resonance-enhanced binding depth
+    d_bind_res = beta * rho_eff * (1.0 - eccentricity)
+
+    # FM-006: phantom resonance guard
+    if d_bind_res == 0.0:
+        return {
+            &quot;status&quot;: &quot;FM-006&quot;,
+            &quot;rho_eff&quot;: rho_eff,
+            &quot;d_bind_res&quot;: 0.0,
+            &quot;T_orb_res&quot;: None,
+            &quot;orbit_class&quot;: None,
+            &quot;stab_class&quot;: None,
+            &quot;failure_mode&quot;: &quot;FM-006&quot;,
+            &quot;lock_record&quot;: None,
+        }
+
+    # Compute pinned orbital period (rational multiple of T_res)
+    T_orb_res = (p_ratio / q_ratio) * T_res
+
+    # Build lock record for f_Source.md orbit registry
+    lock_record = {
+        &quot;orbit_class&quot;: &quot;RESONANT&quot;,
+        &quot;stab_class&quot;: &quot;STABLE&quot;,
+        &quot;d_bind_res&quot;: d_bind_res,
+        &quot;rho_eff&quot;: rho_eff,
+        &quot;T_orb_res&quot;: T_orb_res,
+        &quot;p_ratio&quot;: p_ratio,
+        &quot;q_ratio&quot;: q_ratio,
+        &quot;rho_res_floor&quot;: rho_res_floor,
+        &quot;phi_lock&quot;: phi_E,
+        &quot;phi_open&quot;: phi_open,
+        &quot;phi_close&quot;: phi_close,
+        &quot;state_flag&quot;: &quot;RESONANCE_LOCKED&quot;,
+    }
+
+    return {
+        &quot;status&quot;: &quot;RESONANCE_LOCKED&quot;,
+        &quot;rho_eff&quot;: rho_eff,
+        &quot;d_bind_res&quot;: d_bind_res,
+        &quot;T_orb_res&quot;: T_orb_res,
+        &quot;orbit_class&quot;: &quot;RESONANT&quot;,
+        &quot;stab_class&quot;: &quot;STABLE&quot;,
+        &quot;failure_mode&quot;: None,
+        &quot;lock_record&quot;: lock_record,
+    }
+</code></pre>
+<hr>
+<h2 id="8-canonical-examples">§8 Canonical Examples</h2>
+<h3 id="example-1-clean-in-window-resonant-capture-21-resonance">Example 1 — Clean In-Window Resonant Capture (2:1 Resonance)</h3>
+<p><strong>Scenario:</strong> Entity E approaches attractor A at exactly the resonance peak.
+A has a 2:1 orbital resonance configuration; E arrives perfectly centered
+in the window.</p>
+<p><strong>Given:</strong></p>
+<pre><code>omega_res       = π / 5          (T_res = 10 time units)
+phi_open        = π / 3          (≈ 1.047 rad)
+phi_close       = π              (≈ 3.142 rad)
+window_width    = 2π / 3         (≈ 2.094 rad; wide window)
+
+t_arrive        = 7.5
+phi_A(7.5)      = (π/5 × 7.5) mod 2π
+                = (1.5π) mod 2π
+                = 3π/2           (≈ 4.712 rad)
+</code></pre>
+<p>Wait — φ_E = 4.712 &gt; φ_close = 3.142. RLC-1 fails. Let us recalibrate:</p>
+<pre><code>t_arrive        = 3.5
+phi_A(3.5)      = (π/5 × 3.5) mod 2π
+                = 0.7π           (≈ 2.199 rad)
+</code></pre>
+<p>RLC-1: 1.047 ≤ 2.199 ≤ 3.142  ✓ — WINDOW_OPEN</p>
+<p><strong>Scalar checks:</strong></p>
+<pre><code>rho_phi         = 0.75
+beta            = 1.8
+v_approach      = 3.2, v_escape = 5.0   ← RLC-5: 3.2 &lt; 5.0  ✓
+current_orbits  = 3, max_orbits = 10    ← FM-003: clear       ✓
+</code></pre>
+<p><strong>PRIM:033 result:</strong></p>
+<pre><code>status      = WINDOW_OPEN
+phi_E       = 2.199 rad
+failure_mode = None
+</code></pre>
+<p><strong>PRIM:034 inputs:</strong></p>
+<pre><code>rho_res_gain    = 1.4
+rho_eff         = min(1.0, 0.75 × 1.4) = min(1.0, 1.05) = 1.0
+eccentricity    = 0.15  (p_res=0.3, P_eff=1.7)
+d_bind_res      = 1.8 × 1.0 × (1 − 0.15) = 1.8 × 0.85 = 1.530
+p_ratio=2, q_ratio=1
+T_orb_res       = (2/1) × 10 = 20.0 time units
+</code></pre>
+<p><strong>PRIM:034 result:</strong></p>
+<pre><code>status      = RESONANCE_LOCKED
+orbit_class = RESONANT
+stab_class  = STABLE
+d_bind_res  = 1.530
+rho_eff     = 1.000 (gain saturated — field fully coherent)
+T_orb_res   = 20.0
+</code></pre>
+<p><strong>Observation:</strong> ρ_res_gain of 1.4 on ρ(Φ) = 0.75 saturates the ρ_eff cap,
+demonstrating that resonance gain does not produce super-unity coherence.
+d_bind_res (1.530) exceeds standard d_bind (1.8 × 0.75 × 0.85 = 1.148) by
+33% — the practical benefit of resonance capture.</p>
+<hr>
+<h3 id="example-2-window-miss-arrival-out-of-phase-fm-001-window_miss">Example 2 — Window Miss: Arrival Out of Phase (FM-001, WINDOW_MISS)</h3>
+<p><strong>Scenario:</strong> E has fully qualifying scalar properties but arrives between
+resonance windows. FM-001 is raised; t_next_open is computed for retry.</p>
+<p><strong>Given:</strong></p>
+<pre><code>omega_res       = π / 4          (T_res = 8 time units)
+phi_open        = π/6            (≈ 0.524 rad)
+phi_close       = π/2            (≈ 1.571 rad)
+window_width    = π/3            (≈ 1.047 rad; narrow window)
+
+t_arrive        = 6.0
+phi_A(6.0)      = (π/4 × 6.0) mod 2π
+                = 1.5π           (≈ 4.712 rad)
+</code></pre>
+<p>RLC-1: 0.524 ≤ 4.712 ≤ 1.571  ✗ — WINDOW_CLOSED</p>
+<p><strong>Scalar checks (all pass):</strong></p>
+<pre><code>rho_phi         = 0.80   ← RLC-3 ✓
+beta            = 1.5    ← RLC-2 ✓
+v_approach      = 2.0, v_escape = 4.5  ← RLC-5 ✓
+current_orbits  = 0, max_orbits = 5    ← FM-003 clear ✓
+</code></pre>
+<p><strong>PRIM:033 result:</strong></p>
+<pre><code>status          = WINDOW_CLOSED
+phi_E           = 4.712 rad
+failure_mode    = FM-001
+reason          = WINDOW_MISS
+
+phase_gap       = (0.524 − 4.712 + 2π) mod 2π
+                = (0.524 − 4.712 + 6.283) mod 2π
+                = 2.095 mod 2π
+                = 2.095 rad
+
+t_next_open     = 6.0 + 2.095 / (π/4)
+                = 6.0 + 2.095 / 0.785
+                = 6.0 + 2.668
+                = 8.668 time units
+</code></pre>
+<p><strong>Retry guidance:</strong></p>
+<pre><code>Hold E on approach trajectory.
+Re-attempt PRIM:033 at t_arrive = 8.668.
+phi_A(8.668) = (π/4 × 8.668) mod 2π ≈ 0.524 rad = φ_open  ← window just opens
+</code></pre>
+<p><strong>Observation:</strong> The WINDOW_MISS path provides a concrete retry timestamp —
+this is the key operational difference between resonant and standard capture.
+A caller that treats FM-001 as terminal (rather than retry-able) would
+incorrectly abandon a qualifying entity. The t_next_open return value exists
+specifically to support retry scheduling.</p>
+<hr>
+<h3 id="example-3-resonance-drift-mid-orbit-fm-004-triggered-recovery-succeeds">Example 3 — Resonance Drift Mid-Orbit (FM-004 Triggered, Recovery Succeeds)</h3>
+<p><strong>Scenario:</strong> E is already in a RESONANCE_LOCKED orbit. A field perturbation
+drops ρ(Φ) below ρ_res_floor. FM-004 triggers. Field recovers; lock is
+re-asserted.</p>
+<p><strong>Initial locked state:</strong></p>
+<pre><code>orbit_class     = RESONANT
+stab_class      = STABLE
+d_bind_res      = 1.200
+rho_res_floor   = 0.30
+</code></pre>
+<p><strong>Tick-by-tick ρ(Φ) sequence:</strong></p>
+<pre><code>t=10: ρ(Φ) = 0.72  ← RESONANCE_LOCKED  ✓ (0.72 ≥ 0.30)
+t=11: ρ(Φ) = 0.48  ← RESONANCE_LOCKED  ✓ (0.48 ≥ 0.30)
+t=12: ρ(Φ) = 0.26  ← RLC-4 violated!   ✗ (0.26 &lt; 0.30)
+</code></pre>
+<p><strong>FM-004 trigger at t=12:</strong></p>
+<pre><code>state:        RESONANCE_LOCKED → RESONANCE_LOST
+orbit_class:  RESONANT         → ELLIPTICAL
+stab_class:   STABLE           → MARGINAL
+FM-004 raised (recoverable warning)
+d_bind_res    retained (binding depth does not vanish — orbit continues as ELLIPTICAL)
+</code></pre>
+<p><strong>Recovery sequence:</strong></p>
+<pre><code>t=13: ρ(Φ) = 0.28  ← still below floor  (RESONANCE_LOST, MARGINAL)
+t=14: ρ(Φ) = 0.35  ← above floor        ← RLC-4 re-satisfied
+</code></pre>
+<p><strong>Re-lock at t=14:</strong></p>
+<pre><code>state:        RESONANCE_LOST → RESONANCE_LOCKED
+orbit_class:  ELLIPTICAL     → RESONANT
+stab_class:   MARGINAL       → STABLE
+FM-004 cleared
+</code></pre>
+<p><strong>Observation:</strong> FM-004 (resonance drift) is the sole recoverable degradation
+for RESONANT orbits. Unlike FM-005 (decay spiral, fatal) or FM-007 (mutual
+dissolution, fatal), FM-004 preserves the orbit as ELLIPTICAL during drift
+and allows full restoration. The orbit never enters a terminal state unless
+ρ(Φ) drops to 0, which escalates to FM-002.</p>
+<hr>
+<h3 id="example-4-phantom-resonance-fm-006-on-degenerate-eccentricity">Example 4 — Phantom Resonance (FM-006) on Degenerate Eccentricity</h3>
+<p><strong>Scenario:</strong> E arrives in-window with β = 1.2 and ρ(Φ) = 0.6, but has
+reached maximum eccentricity (e = 1.0) due to a prior failed capture that
+left it in a radial fall trajectory. PRIM:033 passes; PRIM:034 raises FM-006.</p>
+<p><strong>PRIM:033 evaluation:</strong></p>
+<pre><code>omega_res       = π/3
+phi_open        = π/4    (≈ 0.785 rad)
+phi_close       = 3π/4   (≈ 2.356 rad)
+t_arrive        = 4.5
+phi_E           = (π/3 × 4.5) mod 2π = 1.5π mod 2π = (4.712) — MISS?
+</code></pre>
+<p>Let us use t_arrive = 1.5:</p>
+<pre><code>phi_E           = (π/3 × 1.5) mod 2π = π/2 ≈ 1.571 rad
+RLC-1: 0.785 ≤ 1.571 ≤ 2.356  ✓  — WINDOW_OPEN
+rho_phi = 0.60   ✓  (RLC-3)
+beta    = 1.20   ✓  (RLC-2)
+v_approach = 2.0 &lt; v_escape = 3.5  ✓  (RLC-5)
+PRIM:033 → status = WINDOW_OPEN
+</code></pre>
+<p><strong>PRIM:034 evaluation:</strong></p>
+<pre><code>eccentricity    = 1.0    ← degenerate radial trajectory
+rho_res_gain    = 1.3
+rho_eff         = min(1.0, 0.60 × 1.3) = 0.78
+d_bind_res      = 1.2 × 0.78 × (1 − 1.0)
+                = 1.2 × 0.78 × 0.0
+                = 0.000
+</code></pre>
+<p><strong>FM-006 raised:</strong></p>
+<pre><code>status          = FM-006
+reason          = PHANTOM_RESONANCE
+d_bind_res      = 0.000
+orbit_class     = not written
+stab_class      = not written
+</code></pre>
+<p><strong>Diagnosis and remediation:</strong></p>
+<pre><code>Root cause: eccentricity = 1.0 (p_res = 0, P_eff = 0 — radial infall)
+            Phase alignment was genuine but force was absent.
+Remediation: f_Force.md heading_delta adjustment to give E non-zero
+             transverse momentum before next approach attempt.
+             Until e &lt; 1.0, resonant capture is structurally impossible.
+</code></pre>
+<p><strong>Observation:</strong> FM-006 is the rarest failure mode in this file. It requires
+the improbable combination of correct phase alignment AND degenerate orbital
+geometry. It is not a retry-able condition without structural correction —
+the caller must address e before re-attempting.</p>
+<hr>
+<h2 id="9-cross-module-references">§9 Cross-Module References</h2>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Symbol used</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Capture.md</td>
+<td>β, ρ(Φ), v_approach, v_escape, r_capture, d_bind base formula</td>
+<td>Parent</td>
+</tr>
+<tr>
+<td>f_Orbit.md</td>
+<td>orbit_class = RESONANT, T_orb, stab_class, classify_orbit (PRIM:007)</td>
+<td>Peer</td>
+</tr>
+<tr>
+<td>f_Field.md</td>
+<td>ρ(Φ) oscillation model, field source</td>
+<td>Parent</td>
+</tr>
+<tr>
+<td>f_Force.md</td>
+<td>v_escape(A), heading_delta</td>
+<td>Parent</td>
+</tr>
+<tr>
+<td>f_Source.md</td>
+<td>ω_res, T_res, φ_open, φ_close, ρ_res_gain, ρ_res_floor, max_orbits</td>
+<td>Read-only (INV-007)</td>
+</tr>
+<tr>
+<td>f_Decay.md</td>
+<td>d_warn, d_collapse monitoring for RESONANT orbits post-lock</td>
+<td>Downstream</td>
+</tr>
+<tr>
+<td>f_Dampen.md</td>
+<td>ρ(Φ) floor enforcement; cascade guard relevant if resonance chain</td>
+<td>Downstream</td>
+</tr>
+<tr>
+<td>f_Capture_Cascade.md</td>
+<td>Ω_cascade — resonant capture can be a cascade step</td>
+<td>Peer</td>
+</tr>
+<tr>
+<td>OPERATORS.md</td>
+<td>Symbol authority for all operators in §4</td>
+<td>Authority (INV-009)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="10-operator-integration-notes">§10 Operator Integration Notes</h2>
+<h3 id="101-operatorsmd-registration-block">10.1 OPERATORS.md Registration Block</h3>
+<p>The following symbols are added to OPERATORS.md upon this file's ratification:</p>
+<pre><code>| ω_res          | Angular resonance frequency       | ℝ, &gt; 0       | f_Capture_Resonant.md §4.1 |
+| T_res          | Resonance period (2π / ω_res)    | ℝ, &gt; 0       | f_Capture_Resonant.md §4.1 |
+| φ_A(t)         | Current phase of A at time t     | [0, 2π)      | f_Capture_Resonant.md §4.1 |
+| φ_E            | Arrival phase of E               | [0, 2π)      | f_Capture_Resonant.md §4.1 |
+| φ_open         | Window open phase boundary       | [0, 2π)      | f_Capture_Resonant.md §4.1 |
+| φ_close        | Window close phase boundary      | (0, 2π]      | f_Capture_Resonant.md §4.1 |
+| window_width   | φ_close − φ_open                 | (0, 2π]      | f_Capture_Resonant.md §4.1 |
+| t_arrive       | Clock tick at E reaching r_cap   | ℝ, ≥ 0       | f_Capture_Resonant.md §4.1 |
+| t_next_open    | Earliest future WINDOW_OPEN tick | ℝ, &gt; t_arrive| f_Capture_Resonant.md §4.1 |
+| ρ_res_gain     | Field amplification in window    | ℝ, &gt; 1.0     | f_Capture_Resonant.md §4.2 |
+| ρ_eff          | min(1.0, ρ(Φ) × ρ_res_gain)     | [0, 1]       | f_Capture_Resonant.md §4.2 |
+| ρ_res_floor    | Minimum ρ(Φ) for lock maintenance| (0, 1)       | f_Capture_Resonant.md §4.2 |
+| d_bind_res     | Resonance-enhanced binding depth | ℝ, ≥ 0       | f_Capture_Resonant.md §4.3 |
+| T_orb_res      | Pinned orbital period (p/q×T_res)| ℝ, &gt; 0       | f_Capture_Resonant.md §4.3 |
+| p_ratio        | Numerator of resonance ratio p:q | ℤ⁺           | f_Capture_Resonant.md §4.3 |
+| q_ratio        | Denominator of resonance ratio   | ℤ⁺           | f_Capture_Resonant.md §4.3 |
+</code></pre>
+<h3 id="102-f_sourcemd-fields-required">10.2 f_Source.md Fields Required</h3>
+<p>Per INV-007 (f_Source.md read-only), the following fields must be set at
+source initialization and never modified by this file:</p>
+<pre><code>omega_res       : float    — registered by source author at A creation
+phi_open        : float    — window geometry, source-specific
+phi_close       : float    — window geometry, source-specific
+rho_res_gain    : float    — amplification factor, source-specific
+rho_res_floor   : float    — lock maintenance floor, default 0.30
+p_ratio         : int      — resonance ratio numerator
+q_ratio         : int      — resonance ratio denominator
+</code></pre>
+<h3 id="103-condition-prefix-uniqueness">10.3 Condition Prefix Uniqueness</h3>
+<p><code>RLC-</code> (Resonance Lock Condition) is unique to this file. No other Wave 4
+file uses this prefix. Full prefix registry across Wave 4:</p>
+<pre><code>MC-    f_Capture_Multi.md
+CAS-   f_Capture_Cascade.md
+SCS-   f_Capture_Soft.md
+HLC-   f_Capture_Hard.md
+RLC-   f_Capture_Resonant.md    ← this file
+       f_Capture_Asymmetric.md  (prefix: AC-, to be assigned)
+</code></pre>
+<hr>
+<h2 id="11-document-metadata">§11 Document Metadata</h2>
+<h3 id="111-inv-compliance-table">11.1 INV Compliance Table</h3>
+<table>
+<thead>
+<tr>
+<th>Invariant</th>
+<th>Description (abbreviated)</th>
+<th>Status in this file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001</td>
+<td>G = F_freq · F_fluid · F_force</td>
+<td>✅ All three nodes in §3</td>
+</tr>
+<tr>
+<td>INV-002</td>
+<td>f_Capture → Ω frozen</td>
+<td>✅ RESONANCE_LOCKED freezes Ω</td>
+</tr>
+<tr>
+<td>INV-003</td>
+<td>ρ(Φ) = 0 → FM-002</td>
+<td>✅ RLC-3 + PRIM:033 step 2</td>
+</tr>
+<tr>
+<td>INV-004</td>
+<td>β &lt; 1.0 → flyby</td>
+<td>✅ RLC-2 + PRIM:033 step 3</td>
+</tr>
+<tr>
+<td>INV-005</td>
+<td>Conditions conjunctive</td>
+<td>✅ RLC-1–5 all required</td>
+</tr>
+<tr>
+<td>INV-006</td>
+<td>Terminal states irreversible</td>
+<td>✅ FM-006 terminal; LOCKED→LOST reversible only via FM-004</td>
+</tr>
+<tr>
+<td>INV-007</td>
+<td>f_Source.md read-only</td>
+<td>✅ §10.2 lists read-only fields</td>
+</tr>
+<tr>
+<td>INV-008</td>
+<td>Evaluation order normative</td>
+<td>✅ PRIM:033 docstring + §5 table</td>
+</tr>
+<tr>
+<td>INV-009</td>
+<td>OPERATORS.md is symbol authority</td>
+<td>✅ §10.1 registration block</td>
+</tr>
+<tr>
+<td>INV-010</td>
+<td>Frozen symbols unrenameable</td>
+<td>✅ No renames; new symbols only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-primitive-registry-this-file">11.2 Primitive Registry (this file)</h3>
+<table>
+<thead>
+<tr>
+<th>PRIM</th>
+<th>Name</th>
+<th>Type</th>
+<th>Pure?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>033</td>
+<td>eval_resonance_window</td>
+<td>Guard</td>
+<td>Yes</td>
+<td>Phase-gate check; returns WINDOW_OPEN/CLOSED or FM code</td>
+</tr>
+<tr>
+<td>034</td>
+<td>lock_resonance</td>
+<td>Writer</td>
+<td>No</td>
+<td>Computes ρ_eff, d_bind_res, T_orb_res; writes RESONANCE_LOCKED state</td>
+</tr>
+</tbody>
+</table>
+<p>Running total after this file: <strong>PRIM:034</strong></p>
+<h3 id="113-failure-mode-summary-this-file">11.3 Failure Mode Summary (this file)</h3>
+<table>
+<thead>
+<tr>
+<th>FM</th>
+<th>Trigger in this file</th>
+<th>Fatal?</th>
+<th>Sub-annotation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FM-001</td>
+<td>RLC-1, RLC-2, or RLC-5 violated</td>
+<td>No</td>
+<td>WINDOW_MISS / APPROACH_REJECTION / OVERSHOOT</td>
+</tr>
+<tr>
+<td>FM-002</td>
+<td>RLC-3 violated (ρ(Φ) = 0)</td>
+<td>Yes</td>
+<td>FIELD_NULL</td>
+</tr>
+<tr>
+<td>FM-003</td>
+<td>max_orbits ceiling reached</td>
+<td>Yes</td>
+<td>FRAME_SATURATION (VARIANT=RESONANT)</td>
+</tr>
+<tr>
+<td>FM-004</td>
+<td>RLC-4 violated post-capture</td>
+<td>No</td>
+<td>RESONANCE_DRIFT (recoverable)</td>
+</tr>
+<tr>
+<td>FM-006</td>
+<td>d_bind_res = 0 despite RLC pass</td>
+<td>Yes</td>
+<td>PHANTOM_RESONANCE</td>
+</tr>
+</tbody>
+</table>
+<h3 id="114-state-flag-registry">11.4 State Flag Registry</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Set by</th>
+<th>Cleared by</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WINDOW_OPEN</td>
+<td>PRIM:033</td>
+<td>next tick</td>
+<td>E's arrival phase is in window</td>
+</tr>
+<tr>
+<td>WINDOW_CLOSED</td>
+<td>PRIM:033</td>
+<td>next tick</td>
+<td>E's arrival phase is out of window</td>
+</tr>
+<tr>
+<td>RESONANCE_LOCKED</td>
+<td>PRIM:034</td>
+<td>FM-004 trigger</td>
+<td>Orbit is actively phase-locked</td>
+</tr>
+<tr>
+<td>RESONANCE_LOST</td>
+<td>FM-004</td>
+<td>ρ(Φ) recovery</td>
+<td>Lock broken; orbit downgraded</td>
+</tr>
+</tbody>
+</table>
+<h3 id="115-wave-4-status-tracker">11.5 Wave 4 Status Tracker</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Status</th>
+<th>PRIM range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f_Capture_Multi.md</td>
+<td>✅ Complete</td>
+<td>025–026</td>
+</tr>
+<tr>
+<td>f_Capture_Cascade.md</td>
+<td>✅ Complete</td>
+<td>027–028</td>
+</tr>
+<tr>
+<td>f_Capture_Soft.md</td>
+<td>✅ Complete</td>
+<td>029–030</td>
+</tr>
+<tr>
+<td>f_Capture_Hard.md</td>
+<td>✅ Complete</td>
+<td>031–032</td>
+</tr>
+<tr>
+<td>f_Capture_Resonant.md</td>
+<td>✅ Complete</td>
+<td>033–034</td>
+</tr>
+<tr>
+<td>f_Capture_Asymmetric.md</td>
+<td>⏳ Pending</td>
+<td>035–036</td>
+</tr>
+</tbody>
+</table>
+<p>Wave 4 is <strong>5/6 complete.</strong></p>
+<h3 id="116-changelog">11.6 Changelog</h3>
+<pre><code>## [1.0.0] — 2026-08-13
+### Added
+- Initial canonical release of f_Capture_Resonant.md
+- PRIM:033 (eval_resonance_window): phase-gate guard with FM-001/002/003 routing
+- PRIM:034 (lock_resonance): resonance-enhanced d_bind_res writer
+- RLC-1 through RLC-5 conditions (conjunctive, INV-005 compliant)
+- ω_res, T_res, φ_open, φ_close, φ_E, t_next_open operator family
+- ρ_res_gain, ρ_eff, ρ_res_floor field enhancement family
+- d_bind_res, T_orb_res, p_ratio, q_ratio binding/period family
+- WINDOW_OPEN/WINDOW_CLOSED/RESONANCE_LOCKED/RESONANCE_LOST state flags
+- FM-004 drift/recovery cycle for post-capture maintenance (RLC-4)
+- FM-006 phantom resonance guard on degenerate eccentricity
+- Four canonical examples: clean lock (2:1), window miss with retry,
+  FM-004 drift + recovery, FM-006 phantom resonance
+- Full INV-001–010 compliance table
+- OPERATORS.md registration block for all 14 new symbols
+</code></pre>
+<h3 id="117-suggested-commit-message">11.7 Suggested Commit Message</h3>
+<pre><code>feat(FFF_Gravity): add f_Capture_Resonant.md — PRIM:033–034, Wave 4 file 5/6
+
+Introduces resonance-locked capture variant for orbit_class=RESONANT.
+Defines ω_res-gated capture windows (RLC-1), resonance gain (ρ_res_gain,
+ρ_eff), enhanced binding depth (d_bind_res), and orbital period pinning
+(T_orb_res = p/q × T_res). PRIM:033 evaluates phase gate with FM-001/002/003
+routing and t_next_open retry computation. PRIM:034 writes RESONANCE_LOCKED
+state with stab_class=STABLE forcing. FM-004 drift/recovery cycle defined
+for post-capture ρ(Φ) maintenance (RLC-4). FM-006 phantom resonance guard
+added for degenerate eccentricity case. Wave 4 now 5/6 complete; running
+primitive total: PRIM:034.
+</code></pre>
+<hr>
+<p><em>f_Capture_Resonant.md — FFF_Gravity v1.0.0 — Session SES-20260813-FGRAV-033</em>
+<em>Wave 4 file 5/6 — PRIM:033–034 — 2026-08-13</em></p>
+  </main>
+</body>
+</html>

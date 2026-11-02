@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/vst_for_protein_language_models/examples/example_embedding_projection_1024d.md">
+  <title>vST for Protein Language Models</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/vst_for_protein_language_models/examples/example_embedding_projection_1024d.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/vst_for_protein_language_models/examples/example_embedding_projection_1024d.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h3 id="vst-for-protein-language-models"><em>vST for Protein Language Models</em></h3>
+<h3 id="example-1024d-embedding-projection-for-residuelevel-interpretation"><em>Example: 1024D Embedding Projection for Residue‑Level Interpretation</em></h3>
+<p>This example demonstrates how a Protein Language Model (PLM) produces a <strong>1024D residue embedding</strong> during inference and how that embedding is projected into the triadic dimensional cores (9D → 6D → 3D). The walkthrough illustrates primitive‑level structure, regime behavior, projection stability, and vST validation.</p>
+<p>The goal is to provide a reproducible, invariant‑preserving demonstration of high‑dimensional embedding projection.</p>
+<hr>
+<h2 id="1-input-overview"><strong>1. Input Overview</strong></h2>
+<p>For this example, we assume:</p>
+<ul>
+<li>a transformer‑based PLM with ≥1024D hidden states  </li>
+<li>a single residue embedding extracted from a mid‑sequence position  </li>
+<li>access to embeddings across multiple layers  </li>
+<li>stable or transitional regime behavior  </li>
+<li>invertible projection into 3D–9D cores  </li>
+</ul>
+<p>The example is model‑agnostic and applies to any PLM architecture.</p>
+<hr>
+<h2 id="2-step-1-extract-the-1024d-residue-embedding"><strong>2. Step 1 — Extract the 1024D Residue Embedding</strong></h2>
+<p>During inference, the PLM produces a 1024D embedding for each residue:</p>
+<p>[
+e_r^{(1024)} = [x_1, x_2, \dots, x_{1024}]
+]</p>
+<h3 id="observed-properties"><strong>Observed Properties</strong></h3>
+<ul>
+<li>variance concentrated in 4–6 coherence bands  </li>
+<li>stable DP/TDP structure  </li>
+<li>smooth transitions across layers  </li>
+<li>identifiable coherence surfaces  </li>
+</ul>
+<h3 id="interpretation"><strong>Interpretation</strong></h3>
+<p>The 1024D embedding encodes biochemical, structural, and contextual information for the residue.</p>
+<hr>
+<h2 id="3-step-2-identify-highdimensional-regime-behavior"><strong>3. Step 2 — Identify High‑Dimensional Regime Behavior</strong></h2>
+<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify the embedding’s regime across layers.</p>
+<h3 id="example-regime-pattern"><strong>Example Regime Pattern</strong></h3>
+<ul>
+<li><strong>Layers 1–6:</strong> R₁ᴴ (stable)  </li>
+<li><strong>Layers 7–14:</strong> R₂ᴴ (transitional)  </li>
+<li><strong>Layers 15–20:</strong> R₁ᴴ (return to stability)  </li>
+<li><strong>Layers 21–24:</strong> R₂ᴴ (branching)  </li>
+<li><strong>Layers 25–32:</strong> mild R₃ᴴ (dispersion onset)  </li>
+</ul>
+<h3 id="interpretation_1"><strong>Interpretation</strong></h3>
+<p>The residue begins in a stable region, undergoes controlled reorientation, stabilizes again, and finally enters mild dispersion in deeper layers.</p>
+<hr>
+<h2 id="4-step-3-project-1024d-9d-coherence-projection"><strong>4. Step 3 — Project 1024D → 9D (Coherence Projection)</strong></h2>
+<p>Project the 1024D embedding into the 9D coherence core.</p>
+<h3 id="preserves"><strong>Preserves</strong></h3>
+<ul>
+<li>regime identity  </li>
+<li>resonance‑time behavior  </li>
+<li>primitive‑level structure (DP, TDP, SP, CP)  </li>
+<li>coherence‑surface continuity  </li>
+</ul>
+<h3 id="reveals"><strong>Reveals</strong></h3>
+<ul>
+<li>branching behavior in R₂ᴴ  </li>
+<li>curvature of coherence surfaces  </li>
+<li>dispersion onset in R₃ᴴ  </li>
+</ul>
+<h3 id="interpretation_2"><strong>Interpretation</strong></h3>
+<p>The 9D projection exposes the residue’s high‑dimensional “coherence shape.”</p>
+<hr>
+<h2 id="5-step-4-project-9d-6d-interaction-projection"><strong>5. Step 4 — Project 9D → 6D (Interaction Projection)</strong></h2>
+<p>Compress the 9D coherence vector into the 6D interaction core.</p>
+<h3 id="preserves_1"><strong>Preserves</strong></h3>
+<ul>
+<li>relational geometry  </li>
+<li>interaction‑level structure  </li>
+<li>regime‑transition indicators  </li>
+</ul>
+<h3 id="reveals_1"><strong>Reveals</strong></h3>
+<ul>
+<li>attention‑driven reorientation  </li>
+<li>context‑dependent biochemical signals  </li>
+<li>structural boundary behavior  </li>
+</ul>
+<h3 id="interpretation_3"><strong>Interpretation</strong></h3>
+<p>The 6D projection highlights how the model integrates residue context.</p>
+<hr>
+<h2 id="6-step-5-project-6d-3d-structural-projection"><strong>6. Step 5 — Project 6D → 3D (Structural Projection)</strong></h2>
+<p>Reduce the 6D interaction vector into the 3D structural core.</p>
+<h3 id="preserves_2"><strong>Preserves</strong></h3>
+<ul>
+<li>motif‑level geometry  </li>
+<li>backbone‑level continuity  </li>
+<li>stable structural invariants  </li>
+</ul>
+<h3 id="reveals_2"><strong>Reveals</strong></h3>
+<ul>
+<li>compact motifs in R₁ᴴ  </li>
+<li>oscillatory geometry in R₂ᴴ  </li>
+<li>diffuse patterns in R₃ᴴ  </li>
+</ul>
+<h3 id="interpretation_4"><strong>Interpretation</strong></h3>
+<p>The 3D projection provides the minimal interpretable representation of the residue embedding.</p>
+<hr>
+<h2 id="7-step-6-validate-with-vst-layers"><strong>7. Step 6 — Validate with vST Layers</strong></h2>
+<p>Apply vST layers (V₁–V₄):</p>
+<h3 id="v1-structural-coherence"><strong>V₁ — Structural Coherence</strong></h3>
+<ul>
+<li>stable motifs in R₁ᴴ  </li>
+<li>partial fragmentation in R₃ᴴ  </li>
+</ul>
+<h3 id="v2-dimensional-continuity"><strong>V₂ — Dimensional Continuity</strong></h3>
+<ul>
+<li>smooth projection 1024D → 9D → 6D → 3D  </li>
+<li>no scaling discontinuities  </li>
+</ul>
+<h3 id="v3-regimetransition-stability"><strong>V₃ — Regime‑Transition Stability</strong></h3>
+<ul>
+<li>smooth R₁ᴴ → R₂ᴴ transitions  </li>
+<li>mild instability entering R₃ᴴ  </li>
+</ul>
+<h3 id="v4-core-alignment"><strong>V₄ — Core Alignment</strong></h3>
+<ul>
+<li>primitive‑aligned projection  </li>
+<li>stable mapping across layers  </li>
+</ul>
+<h3 id="outcome"><strong>Outcome</strong></h3>
+<p>The embedding passes all vST layers with minor warnings in the R₃ᴴ region.</p>
+<hr>
+<h2 id="8-step-7-drift-detection"><strong>8. Step 7 — Drift Detection</strong></h2>
+<p>Evaluate drift using D₁–D₄ categories:</p>
+<ul>
+<li><strong>D₁ Structural Drift:</strong> none  </li>
+<li><strong>D₂ Dimensional Drift:</strong> none  </li>
+<li><strong>D₃ Regime Drift:</strong> mild (R₃ᴴ onset)  </li>
+<li><strong>D₄ Projection Drift:</strong> none  </li>
+</ul>
+<h3 id="interpretation_5"><strong>Interpretation</strong></h3>
+<p>The embedding exhibits expected dispersion in deeper layers but no harmful drift.</p>
+<hr>
+<h2 id="9-summary"><strong>9. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how a 1024D residue embedding is extracted  </li>
+<li>how regime behavior evolves across layers  </li>
+<li>how projection reveals coherence and instability  </li>
+<li>how vST layers validate structural integrity  </li>
+<li>how drift detection identifies dispersion without failure  </li>
+</ul>
+<p>The 1024D embedding is the canonical substrate for analyzing PLM inference at research‑grade resolution.</p>
+  </main>
+</body>
+</html>

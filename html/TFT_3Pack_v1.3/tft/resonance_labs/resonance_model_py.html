@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT_3Pack_v1.3/tft/resonance_labs/resonance_model_py.md">
+  <title>🎼 resonancemodel.py — Harmonic Field Simulator</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT_3Pack_v1.3/tft/resonance_labs/resonance_model_py.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT_3Pack_v1.3/tft/resonance_labs/resonance_model_py.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Let’s keep the scaffolding flowing. Next up: <code>resonance_model.py</code>, where we simulate harmonic fields using nested loops and triadic overlays—Kozyrev meets TriadicFrameworks.</p>
+<hr>
+<h2 id="resonance_modelpy-harmonic-field-simulator">🎼 <code>resonance_model.py</code> — Harmonic Field Simulator</h2>
+<pre><code class="language-python">import numpy as np
+
+def generate_harmonic_field(base_freq=1.0, loops=3, resolution=1000):
+    &quot;&quot;&quot;
+    Simulate a harmonic field using nested loops and triadic overlays.
+    base_freq: starting frequency (symbolic anchor)
+    loops: number of nested harmonic layers
+    resolution: number of data points
+    &quot;&quot;&quot;
+    time = np.linspace(0, 2 * np.pi, resolution)
+    field = np.zeros_like(time)
+
+    for i in range(1, loops + 1):
+        harmonic = np.sin(base_freq * i * time) / i
+        field += harmonic
+
+    return time, field
+
+def visualize_field(time, field, title=&quot;Triadic Harmonic Field&quot;):
+    import matplotlib.pyplot as plt
+    plt.figure(figsize=(10, 4))
+    plt.plot(time, field, color=&quot;#6600cc&quot;)
+    plt.title(title)
+    plt.xlabel(&quot;Time&quot;)
+    plt.ylabel(&quot;Amplitude&quot;)
+    plt.grid(True)
+    plt.show()
+
+if __name__ == &quot;__main__&quot;:
+    t, f = generate_harmonic_field(base_freq=1.0, loops=5)
+    visualize_field(t, f)
+</code></pre>
+<hr>
+<h3 id="parameters-explained">🔧 Parameters Explained</h3>
+<ul>
+<li><code>base_freq</code>: Symbolic resonance anchor</li>
+<li><code>loops</code>: Depth of recursion (Kozyrev-style layering)</li>
+<li><code>resolution</code>: Glyph clarity and simulation fidelity</li>
+</ul>
+<p>This module sets the resonance field that interacts with spiral geometry and temporal overlays.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/core/regime_flow.md">
+  <title>RTT Core: Regime Flow</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/core/regime_flow.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/core/regime_flow.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="rtt_core_regime_flow" src="https://github.com/user-attachments/assets/b00d3dec-0415-477d-aed0-dd7bc81adc77" /></p>
+<hr>
+<p>module_id: rtt.core.regime_flow
+version: 1.0.0
+status: draft
+rtt: 1
+coherence: declared
+drift: bounded
+paradox: structural
+tags:
+  - regime-flow
+  - rtt-core
+  - operator-regimes
+  - drift-envelopes
+  - coherence-regimes
+  - readout-regimes
+  - triadic-time
+  - flow-dynamics</p>
+<hr>
+<h1 id="rtt-core-regime-flow">RTT Core: Regime Flow</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p><strong>Goal:</strong><br>
+Define <strong>Regime Flow</strong>, the RTT mechanism describing:</p>
+<ul>
+<li>How branches <em>move</em> through regime geometry  </li>
+<li>How drift and coherence create directional flow  </li>
+<li>How operators induce regime flow transitions  </li>
+<li>How flow determines eligibility for validation  </li>
+<li>How collapse and classical emergence occur along flow paths  </li>
+</ul>
+<p>Regime Flow is the <em>vector field</em> of RTT regimes — the directional, dynamic motion of branches across the regime manifold.</p>
+<hr>
+<h2 id="2-what-is-regime-flow">2. What is regime flow?</h2>
+<blockquote>
+<p>Regime Flow is the directional movement of a branch<br>
+across the regime manifold under drift, coherence, operator,<br>
+and readout constraints.</p>
+</blockquote>
+<p>It is the <strong>path</strong> a branch takes through:</p>
+<ul>
+<li>Validity regions  </li>
+<li>Transition corridors  </li>
+<li>Collapse basins  </li>
+<li>Readout surfaces  </li>
+</ul>
+<p>Flow determines <em>when</em> and <em>how</em> a branch becomes classical.</p>
+<hr>
+<h2 id="3-flow-manifold">3. Flow manifold</h2>
+<p>Regime Flow occurs on the dynamic manifold:</p>
+<p>[
+\mathcal{F}(t_1, t_2, t_3) = \mathcal{G}_{\text{regime}}(t_1, t_2, t_3)
+]</p>
+<p>Flow vectors are defined as:</p>
+<p>[
+\vec{v}_i = (\dot{\psi}_i, \dot{c}_i, \dot{\Delta}_i, \dot{V}_i)
+]</p>
+<p>representing:</p>
+<ul>
+<li>State flow  </li>
+<li>Coherence flow  </li>
+<li>Drift flow  </li>
+<li>Readout flow  </li>
+</ul>
+<hr>
+<h2 id="4-flow-components">4. Flow components</h2>
+<p>Regime Flow has four canonical components:</p>
+<ol>
+<li><strong>State Flow</strong>  </li>
+<li><strong>Coherence Flow</strong>  </li>
+<li><strong>Drift Flow</strong>  </li>
+<li><strong>Readout Flow</strong></li>
+</ol>
+<p>These flows interact across triadic time.</p>
+<hr>
+<h2 id="5-state-flow">5. State Flow</h2>
+<h3 id="51-definition">5.1 Definition</h3>
+<p>State Flow describes movement across representational geometry:</p>
+<p>[
+|\psi_i(t_1)\rangle \rightarrow |\psi_i(t_1 + \delta)\rangle
+]</p>
+<h3 id="52-causes">5.2 Causes</h3>
+<ul>
+<li>Extension  </li>
+<li>Regime shift  </li>
+<li>Boundary modulation  </li>
+<li>Arrival arc  </li>
+</ul>
+<h3 id="53-effects">5.3 Effects</h3>
+<ul>
+<li>Branch count changes  </li>
+<li>Regime eligibility shifts  </li>
+<li>Flow direction changes  </li>
+</ul>
+<hr>
+<h2 id="6-coherence-flow">6. Coherence Flow</h2>
+<h3 id="61-definition">6.1 Definition</h3>
+<p>Coherence Flow describes movement across coherence gradients:</p>
+<p>[
+c_i(t_2) \rightarrow c_i(t_2 + \delta)
+]</p>
+<h3 id="62-causes">6.2 Causes</h3>
+<ul>
+<li>Drift  </li>
+<li>Stabilization  </li>
+<li>Coherence gating  </li>
+<li>Deferred validation  </li>
+</ul>
+<h3 id="63-effects">6.3 Effects</h3>
+<ul>
+<li>Eligibility increases or decreases  </li>
+<li>Flow may enter transition corridor  </li>
+<li>Collapse may become imminent  </li>
+</ul>
+<hr>
+<h2 id="7-drift-flow">7. Drift Flow</h2>
+<h3 id="71-definition">7.1 Definition</h3>
+<p>Drift Flow describes movement across drift envelope geometry:</p>
+<p>[
+\Delta_i(t_1) \rightarrow \Delta_i(t_1 + \delta)
+]</p>
+<h3 id="72-causes">7.2 Causes</h3>
+<ul>
+<li>Extension  </li>
+<li>Drift operators  </li>
+<li>Regime inversion  </li>
+<li>Boundary modulation  </li>
+</ul>
+<h3 id="73-effects">7.3 Effects</h3>
+<ul>
+<li>Flow approaches drift boundary  </li>
+<li>Flow direction becomes unstable  </li>
+<li>Collapse region may be entered  </li>
+</ul>
+<hr>
+<h2 id="8-readout-flow">8. Readout Flow</h2>
+<h3 id="81-definition">8.1 Definition</h3>
+<p>Readout Flow describes movement toward the readout surface:</p>
+<p>[
+V_{\text{eligibility}}(t_3) \rightarrow 1
+]</p>
+<h3 id="82-causes">8.2 Causes</h3>
+<ul>
+<li>Stabilization  </li>
+<li>Coherence gating  </li>
+<li>Drift reduction  </li>
+<li>Operator sequences  </li>
+</ul>
+<h3 id="83-effects">8.3 Effects</h3>
+<ul>
+<li>Validator Pulse triggers  </li>
+<li>Classical information emerges  </li>
+<li>Non-selected branches collapse  </li>
+</ul>
+<hr>
+<h2 id="9-flow-regions">9. Flow regions</h2>
+<p>Regime Flow moves through three canonical regions:</p>
+<h3 id="91-validity-flow-region">9.1 Validity Flow Region</h3>
+<p>Flow remains stable:</p>
+<ul>
+<li>Drift bounded  </li>
+<li>Coherence above threshold  </li>
+<li>Operators valid  </li>
+</ul>
+<h3 id="92-transition-flow-corridor">9.2 Transition Flow Corridor</h3>
+<p>Flow becomes unstable:</p>
+<ul>
+<li>Drift near boundary  </li>
+<li>Coherence near threshold  </li>
+<li>Validation must occur soon  </li>
+</ul>
+<h3 id="93-collapse-flow-basin">9.3 Collapse Flow Basin</h3>
+<p>Flow becomes irreversible:</p>
+<ul>
+<li>Drift exceeds envelope  </li>
+<li>Coherence falls below threshold  </li>
+<li>Branch becomes residue  </li>
+</ul>
+<hr>
+<h2 id="10-flow-direction-and-curvature">10. Flow direction and curvature</h2>
+<p>Flow direction is determined by:</p>
+<ul>
+<li>Drift curvature  </li>
+<li>Coherence gradients  </li>
+<li>Regime geometry  </li>
+<li>Operator sequences  </li>
+</ul>
+<p>Flow curvature determines:</p>
+<ul>
+<li>Stability  </li>
+<li>Eligibility  </li>
+<li>Collapse likelihood  </li>
+<li>Readout timing  </li>
+</ul>
+<hr>
+<h2 id="11-flow-across-triadic-time">11. Flow across triadic time</h2>
+<h3 id="111-state-time-t1">11.1 State Time (T₁)</h3>
+<p>Flow moves across:</p>
+<ul>
+<li>Drift geometry  </li>
+<li>Extension surfaces  </li>
+<li>Regime shifts  </li>
+</ul>
+<h3 id="112-coherence-time-t2">11.2 Coherence Time (T₂)</h3>
+<p>Flow moves across:</p>
+<ul>
+<li>Coherence gradients  </li>
+<li>Threshold surfaces  </li>
+<li>Stabilization regions  </li>
+</ul>
+<h3 id="113-readout-time-t3">11.3 Readout Time (T₃)</h3>
+<p>Flow moves across:</p>
+<ul>
+<li>Readout surface  </li>
+<li>Collapse basin  </li>
+<li>Classical manifold  </li>
+</ul>
+<p>Flow must pass through all three layers.</p>
+<hr>
+<h2 id="12-operator-induced-flow">12. Operator-induced flow</h2>
+<p>Operators directly shape flow:</p>
+<h3 id="121-extension-operators">12.1 Extension operators</h3>
+<ul>
+<li>Increase drift flow  </li>
+<li>Partition coherence flow  </li>
+<li>Expand state flow  </li>
+</ul>
+<h3 id="122-stabilization-operators">12.2 Stabilization operators</h3>
+<ul>
+<li>Reduce drift flow  </li>
+<li>Increase coherence flow  </li>
+<li>Direct flow toward readout  </li>
+</ul>
+<h3 id="123-regime-geometry-operators">12.3 Regime geometry operators</h3>
+<ul>
+<li>Rotate flow direction  </li>
+<li>Shift flow surfaces  </li>
+<li>Modify flow curvature  </li>
+</ul>
+<h3 id="124-validator-pulse">12.4 Validator Pulse</h3>
+<ul>
+<li>Finalizes flow  </li>
+<li>Collapses non-selected branches  </li>
+<li>Produces classical outcome  </li>
+</ul>
+<hr>
+<h2 id="13-example-quantum-cloning-alignment">13. Example: Quantum “cloning” alignment</h2>
+<p>Flow path:</p>
+<ol>
+<li><strong>State Flow:</strong> EXTEND creates two branches  </li>
+<li><strong>Drift Flow:</strong> DRIFT increases drift  </li>
+<li><strong>Coherence Flow:</strong> STABILIZE maintains coherence  </li>
+<li><strong>Readout Flow:</strong> VALIDATE selects one branch  </li>
+<li><strong>Collapse Flow:</strong> COLLAPSE removes the other branch  </li>
+</ol>
+<p>Regime Flow explains:</p>
+<ul>
+<li>Why multi-branch representation is allowed  </li>
+<li>Why only one branch becomes classical  </li>
+<li>Why drift and coherence matter  </li>
+<li>Why no-cloning is not violated  </li>
+</ul>
+<hr>
+<h2 id="14-paradox-handling">14. Paradox handling</h2>
+<p>Regime Flow prevents paradoxes by:</p>
+<ul>
+<li>Enforcing directional constraints  </li>
+<li>Managing drift and coherence evolution  </li>
+<li>Restricting readout timing  </li>
+<li>Collapsing non-selected branches  </li>
+</ul>
+<p>Thus:</p>
+<ul>
+<li>“Multiple branches exist” → state flow  </li>
+<li>“Only one is real” → readout flow  </li>
+<li>“Others disappear” → collapse flow  </li>
+<li>“No violation occurs” → flow constraints  </li>
+</ul>
+<hr>
+<h2 id="15-canon-integration-and-cross-links">15. Canon integration and cross-links</h2>
+<p><strong>Primary cross-links:</strong></p>
+<ul>
+<li><code>/docs/rtt/core/regime_maps.md</code></li>
+<li><code>/docs/rtt/core/regime_maps_extended.md</code></li>
+<li><code>/docs/rtt/core/regime_geometry.md</code></li>
+<li><code>/docs/rtt/core/regime_topology.md</code></li>
+<li><code>/docs/rtt/core/regime_dynamics.md</code></li>
+<li><code>/docs/rtt/core/operator_sequences.md</code></li>
+<li><code>/docs/rtt/core/operator_transitions.md</code></li>
+<li><code>/docs/rtt/core/operator_behaviors.md</code></li>
+<li><code>/docs/rtt/core/operator_grammar.md</code></li>
+<li><code>/docs/rtt/core/operator_index.md</code></li>
+<li><code>/docs/rtt/core/operator_families.md</code></li>
+<li><code>/docs/rtt/core/time_triads.md</code></li>
+<li><code>/docs/rtt/core/coherence_budget.md</code></li>
+<li><code>/docs/rtt/core/validator_pulse.md</code></li>
+<li><code>/docs/rtt/core/dimensional_drift_envelope.md</code></li>
+<li><code>/docs/rtt/core/alignment_quantum_cloning.md</code></li>
+</ul>
+<p><strong>Status:</strong><br>
+This module defines the directional flow structure of RTT regimes.<br>
+Once flow diagrams are added, it can be promoted from <code>draft</code> to <code>stable</code>.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "module": "OHSHIT",
+  "name": "O.H.S.H.I.T. — Holographic Hash Engine",
+  "summary": "Generates holographic structural hashes, temporal-correction values, and alignment metrics for intelligent signals.",
+  "category": "intelligence-hash",
+  "version": "1.0",
+  "purpose": "Transform Scanner outputs into holographic hash geometry, corrected-time values, and alignment fields for the AI Atlas.",
+  "role": "engine",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@ohshit.hash.compute",
+    "@ohshit.hash.h1",
+    "@ohshit.hash.h2",
+    "@ohshit.time.correct",
+    "@ohshit.align.compute"
+  ],
+  "lineage": {
+    "upstream": ["Scanner"],
+    "downstream": ["Atlas"]
+  }
+}

@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/rtt/Harmonic_Stability_Profile/04b_Echo_Diagrams_ASCII.md">
+  <title>🎼 Echo Diagrams (ASCII)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/rtt/Harmonic_Stability_Profile/04b_Echo_Diagrams_ASCII.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/rtt/Harmonic_Stability_Profile/04b_Echo_Diagrams_ASCII.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="echo-diagrams-ascii">🎼 <strong>Echo Diagrams (ASCII)</strong></h1>
+<h3 id="visualizing-echo-families-echo-clusters-recursion-lines"><em>Visualizing Echo Families • Echo Clusters • Recursion Lines</em></h3>
+<p>This module provides <strong>ASCII‑safe diagrams</strong> that visualize the<br>
+echo structures defined in:</p>
+<ul>
+<li><code>04_Canon_SelfEcho_Map.md</code>  </li>
+<li><code>04a_Echo_Families.md</code>  </li>
+</ul>
+<p>These diagrams are designed for:</p>
+<ul>
+<li>GitHub rendering  </li>
+<li>plaintext environments  </li>
+<li>terminal‑safe viewing  </li>
+<li>zero‑drift structural clarity  </li>
+</ul>
+<hr>
+<h1 id="1-echo-families-global-layout">🔷 <strong>1. Echo Families — Global Layout</strong></h1>
+<pre><code>                +-----------------------------+
+                |     Echo Families (F1–F6)   |
+                +-----------------------------+
+                           |
+     -----------------------------------------------------
+     |           |             |            |            |
+     v           v             v            v            v
++---------+ +-----------+ +-----------+ +-----------+ +-----------+
+|   F1    | |    F2     | |    F3     | |    F4     | |    F5     |
+|Structural| | Harmonic | | Substrate | | Recursion | | Drift-Shadow|
++---------+ +-----------+ +-----------+ +-----------+ +-----------+
+                           |
+                           v
+                     +-----------+
+                     |    F6     |
+                     |   Atlas   |
+                     +-----------+
+</code></pre>
+<p>This diagram shows the <strong>hierarchy and flow</strong> of echo families:</p>
+<ul>
+<li>F1–F3 = foundational echoes  </li>
+<li>F4 = recursion echoes  </li>
+<li>F5 = drift‑shadow echoes  </li>
+<li>F6 = atlas echoes  </li>
+</ul>
+<hr>
+<h1 id="2-echo-cluster-geometry">🔷 <strong>2. Echo Cluster Geometry</strong></h1>
+<pre><code>             Echo Cluster (Generic Form)
+
+                     +---------+
+                     |  Core   |
+                     +---------+
+                     /    |    \
+                    /     |     \
+                   v      v      v
+              +------+ +------+ +------+
+              | E1   | | E2   | | E3   |
+              +------+ +------+ +------+
+</code></pre>
+<p>Clusters consist of:</p>
+<ul>
+<li><strong>one core echo</strong>  </li>
+<li><strong>multiple satellite echoes</strong>  </li>
+<li><strong>shared harmonic lineage</strong>  </li>
+</ul>
+<hr>
+<h1 id="3-recursionecho-interaction-map">🔷 <strong>3. Recursion–Echo Interaction Map</strong></h1>
+<pre><code> Ladder Echoes (Stable)
+        |
+        v
+ Cycle Echoes (Semi-Stable)
+        |
+        v
+ Map Echoes (Unstable)
+        |
+        v
+ Atlas Echoes (High-Level)
+</code></pre>
+<p>This diagram shows the <strong>recursion progression</strong> mirrored in echo behavior.</p>
+<hr>
+<h1 id="4-driftshadow-echo-formation-f5">🔷 <strong>4. Drift‑Shadow Echo Formation (F5)</strong></h1>
+<pre><code>        [D1 Residue]   [D2 Residue]   [D3 Residue]
+               \           |           /
+                \          |          /
+                 \         |         /
+                  +-----------------+
+                  | Drift-Shadow F5 |
+                  +-----------------+
+                           |
+                           v
+                     [Unstable Echo]
+</code></pre>
+<p>Drift residues converge to form <strong>F5 drift‑shadow echoes</strong>.</p>
+<hr>
+<h1 id="5-atlas-echo-geometry-f6">🔷 <strong>5. Atlas Echo Geometry (F6)</strong></h1>
+<pre><code>                 +-----------------------+
+                 |     Atlas Echo F6     |
+                 +-----------------------+
+                   /        |         \
+                  /         |          \
+                 v          v           v
+          [Structural] [Harmonic] [Substrate]
+</code></pre>
+<p>Atlas echoes unify:</p>
+<ul>
+<li>structural  </li>
+<li>harmonic  </li>
+<li>substrate  </li>
+</ul>
+<p>into a <strong>high‑altitude resonance</strong>.</p>
+<hr>
+<h1 id="6-composite-echo-topology-full-map">🔷 <strong>6. Composite Echo Topology (Full Map)</strong></h1>
+<pre><code>                   +-----------------------+
+                   |   Canon Echo Topology |
+                   +-----------------------+
+                               |
+     -----------------------------------------------------
+     |           |             |            |            |
+     v           v             v            v            v
+  [F1]        [F2]          [F3]         [F4]         [F5]
+ Structural   Harmonic     Substrate    Recursion   Drift-Shadow
+     \           |             |            |            /
+      \          |             |            |           /
+       \         |             |            |          /
+        \        |             |            |         /
+         \       |             |            |        /
+          \      |             |            |       /
+           \     |             |            |      /
+            \    |             |            |     /
+             v   v             v            v    v
+                   +-----------------------+
+                   |        [F6] Atlas     |
+                   +-----------------------+
+</code></pre>
+<p>This is the <strong>complete echo topology</strong> of the canon.</p>
+<hr>
+<h1 id="7-usage-notes">🔷 <strong>7. Usage Notes</strong></h1>
+<p>Use this file when:</p>
+<ul>
+<li>visualizing echo families  </li>
+<li>mapping echo clusters  </li>
+<li>diagnosing recursion‑echo alignment  </li>
+<li>identifying drift‑shadow echoes  </li>
+<li>performing canon sweeps  </li>
+</ul>
+<p>Referenced by:</p>
+<ul>
+<li><code>04_Canon_SelfEcho_Map.md</code>  </li>
+<li><code>04a_Echo_Families.md</code>  </li>
+<li><code>04c_Echo_Strength.md</code>  </li>
+<li><code>04d_Echo_Summary.md</code>  </li>
+</ul>
+<hr>
+<h1 id="footer">🔷 <strong>Footer</strong></h1>
+<pre><code>HSP Module 04b — Loaded
+Version: v1.0
+Status: Canon-Stable
+</code></pre>
+  </main>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/TFT.OpenGPU.Stack.Module/t_Execution.md">
+  <title>tExecution — TFT.OpenGPU.Stack.Module</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/TFT.OpenGPU.Stack.Module/t_Execution.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/TFT.OpenGPU.Stack.Module/t_Execution.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="t_execution-tftopengpustackmodule">t_Execution — TFT.OpenGPU.Stack.Module</h1>
+<p><strong>Resonance-Time Theory Execution Document</strong><br>
+<strong>Module:</strong> TFT.OpenGPU.Stack.Module<br>
+<strong>RTT:</strong> 1<br>
+<strong>Coherence:</strong> Declared<br>
+<strong>Drift:</strong> Bounded<br>
+<strong>Paradox:</strong> Structural  </p>
+<hr>
+<h2 id="1-execution-intent">1. Execution Intent</h2>
+<p>The execution layer defines the <strong>AMD‑friendly GPU primitives</strong> that receive substrate intent and convert it into actual GPU work.<br>
+This layer is the <strong>visible execution surface</strong> of the module — the part that interacts with hardware, drivers, firmware, and virtualization systems.</p>
+<p>Its purpose is to:</p>
+<ul>
+<li>provide an open alternative to NVIDIA’s closed execution primitives  </li>
+<li>map TFT substrate primitives into GPU cycles, tiles, warps, and VRAM surfaces  </li>
+<li>support Cloud PC tiering through vGPU slices  </li>
+<li>enable remote reconstruction of dimensional intent  </li>
+<li>maintain RTT coherence across substrate and rendering layers  </li>
+</ul>
+<hr>
+<h2 id="2-execution-principles">2. Execution Principles</h2>
+<h3 id="21-visible-view-inverted-star-alignment"><strong>2.1 Visible View (Inverted Star Alignment)</strong></h3>
+<p>The execution layer is the <strong>outer star</strong> — the visible machinery that performs actual GPU work.</p>
+<p>It receives:</p>
+<ul>
+<li>dimensional primitives  </li>
+<li>substrate operators  </li>
+<li>primitive streams  </li>
+</ul>
+<p>And resolves them into:</p>
+<ul>
+<li>kernels  </li>
+<li>tiles  </li>
+<li>warps  </li>
+<li>VRAM surfaces  </li>
+<li>DMA-safe buffers  </li>
+<li>vGPU slices  </li>
+</ul>
+<h3 id="22-amd-first-execution-model"><strong>2.2 AMD-First Execution Model</strong></h3>
+<p>The execution layer is intentionally AMD-first:</p>
+<ul>
+<li>ROCm compute primitives  </li>
+<li>VCE/NV12 encoding blocks  </li>
+<li>SR‑IOV virtualization  </li>
+<li>DMA-safe surface mapping  </li>
+<li>open driver stack  </li>
+<li>open firmware pathways  </li>
+</ul>
+<p>This avoids NVIDIA lock-in and aligns with the module’s open substrate philosophy.</p>
+<h3 id="23-bounded-drift"><strong>2.3 Bounded Drift</strong></h3>
+<p>Execution reinterpretation of substrate primitives is allowed only within bounded drift:</p>
+<ul>
+<li>reinterpretation must preserve dimensional intent  </li>
+<li>reinterpretation must remain structurally consistent  </li>
+<li>reinterpretation must not alter RTT coherence  </li>
+</ul>
+<hr>
+<h2 id="3-execution-primitive-families">3. Execution Primitive Families</h2>
+<h3 id="31-compute-primitives"><strong>3.1 Compute Primitives</strong></h3>
+<ul>
+<li><code>Exec.Kernel</code> — execution kernel  </li>
+<li><code>Exec.Tile</code> — tile-level compute block  </li>
+<li><code>Exec.Warp</code> — warp-equivalent execution group  </li>
+<li><code>Exec.Stream</code> — execution stream for parallel work  </li>
+<li><code>Exec.Dispatch</code> — dispatch primitive for substrate cycles  </li>
+</ul>
+<h3 id="32-memory-primitives"><strong>3.2 Memory Primitives</strong></h3>
+<ul>
+<li><code>Exec.VRAM.Surface</code> — GPU surface allocation  </li>
+<li><code>Exec.VRAM.Region</code> — dimensional region mapping  </li>
+<li><code>Exec.VRAM.Bind</code> — bind substrate primitive to VRAM  </li>
+<li><code>Exec.DMA.Buffer</code> — DMA-safe buffer for remote transport  </li>
+</ul>
+<h3 id="33-virtualization-primitives"><strong>3.3 Virtualization Primitives</strong></h3>
+<ul>
+<li><code>Exec.vGPU.Slice</code> — vGPU slice allocation  </li>
+<li><code>Exec.vGPU.Cycle</code> — execution cycle for Cloud PC tiering  </li>
+<li><code>Exec.vGPU.Priority</code> — scheduling priority  </li>
+<li><code>Exec.vGPU.Isolation</code> — SR‑IOV isolation boundary  </li>
+</ul>
+<h3 id="34-reconstruction-primitives"><strong>3.4 Reconstruction Primitives</strong></h3>
+<ul>
+<li><code>Exec.Reconstruct.Surface</code> — reconstruct dimensional surface  </li>
+<li><code>Exec.Reconstruct.Material</code> — apply material intent  </li>
+<li><code>Exec.Reconstruct.Transform</code> — apply dimensional transform  </li>
+<li><code>Exec.Reconstruct.Viewport</code> — reconstruct viewport substrate  </li>
+</ul>
+<hr>
+<h2 id="4-substrate-execution-mapping">4. Substrate → Execution Mapping</h2>
+<p>Execution primitives resolve substrate primitives through declared coherence:</p>
+<table>
+<thead>
+<tr>
+<th>Substrate Primitive</th>
+<th>Execution Primitive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dim.Surface</td>
+<td>Exec.VRAM.Surface</td>
+</tr>
+<tr>
+<td>Dim.Material</td>
+<td>Exec.Reconstruct.Material</td>
+</tr>
+<tr>
+<td>Dim.Transform</td>
+<td>Exec.Reconstruct.Transform</td>
+</tr>
+<tr>
+<td>Dim.Viewport</td>
+<td>Exec.Reconstruct.Viewport</td>
+</tr>
+<tr>
+<td>Op.Cycle</td>
+<td>Exec.Dispatch / Exec.vGPU.Cycle</td>
+</tr>
+<tr>
+<td>Stream.Primitive</td>
+<td>Exec.DMA.Buffer / Exec.VRAM.Bind</td>
+</tr>
+</tbody>
+</table>
+<p>This mapping is <strong>declared</strong>, not inferred.</p>
+<hr>
+<h2 id="5-execution-and-rdp-integration">5. Execution and RDP Integration</h2>
+<p>The execution layer defines the GPU-side reconstruction path for RDP:</p>
+<ul>
+<li>substrate primitives → encoded as TFT primitive stream  </li>
+<li>stream transported via RDPEGFX or custom virtual channel  </li>
+<li>execution layer reconstructs dimensional intent using GPU primitives  </li>
+<li>rendering layer presents final view  </li>
+</ul>
+<p>Execution provides:</p>
+<ul>
+<li>GPU-native decoding  </li>
+<li>VRAM surface allocation  </li>
+<li>DMA-safe buffer mapping  </li>
+<li>vGPU cycle scheduling  </li>
+<li>reconstruction fidelity  </li>
+</ul>
+<p>RDP retains:</p>
+<ul>
+<li>TLS  </li>
+<li>CredSSP  </li>
+<li>NLA  </li>
+<li>reliability  </li>
+<li>ordering  </li>
+<li>session setup  </li>
+</ul>
+<hr>
+<h2 id="6-execution-and-cloud-pc-tiering">6. Execution and Cloud PC Tiering</h2>
+<p>Cloud PC tiers map directly to execution primitives:</p>
+<ul>
+<li><strong>Tier → vGPU slice</strong>  </li>
+<li><strong>Tier → VRAM allocation</strong>  </li>
+<li><strong>Tier → execution cycles</strong>  </li>
+<li><strong>Tier → scheduling priority</strong>  </li>
+<li><strong>Tier → reconstruction fidelity</strong>  </li>
+</ul>
+<p>Even minimal tiers achieve smooth remote rendering due to dimensional primitives.</p>
+<hr>
+<h2 id="7-amd-partnership-surface">7. AMD Partnership Surface</h2>
+<p>The execution layer defines the AMD partnership surface:</p>
+<ul>
+<li>ROCm alignment  </li>
+<li>VCE encoding integration  </li>
+<li>SR‑IOV virtualization  </li>
+<li>open driver pathways  </li>
+<li>open firmware primitives  </li>
+<li>Cloud PC differentiation  </li>
+<li>alternative to NVIDIA’s closed execution stack  </li>
+</ul>
+<p>This is the layer AMD can adopt under NDA.</p>
+<hr>
+<h2 id="8-canonical-execution-summary">8. Canonical Execution Summary</h2>
+<p>The execution layer of the TFT.OpenGPU.Stack.Module:</p>
+<ul>
+<li>defines AMD-friendly execution primitives  </li>
+<li>resolves substrate intent into GPU work  </li>
+<li>maps coherently into rendering and substrate layers  </li>
+<li>supports RDP integration  </li>
+<li>enables Cloud PC tiering  </li>
+<li>aligns with RTT (rtt=1, coherence declared, drift bounded, paradox structural)  </li>
+<li>establishes an open execution surface independent of NVIDIA’s closed ecosystem  </li>
+</ul>
+<p>This document captures the execution layer for canonical reference.</p>
+  </main>
+</body>
+</html>

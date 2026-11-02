@@ -1,0 +1,22 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Nile axis -->
+  <line x1="400" y1="100" x2="400" y2="700" stroke="#2a7" stroke-width="4"/>
+  <text x="420" y="120">Nile Axis (Upper ↔ Lower Egypt)</text>
+
+  <!-- Cult centers -->
+  <circle cx="300" cy="250" r="40" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="300" y="245" text-anchor="middle" font-size="10">Heliopolis</text>
+
+  <circle cx="500" cy="250" r="40" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="500" y="245" text-anchor="middle" font-size="10">Memphis</text>
+
+  <circle cx="300" cy="450" r="40" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="300" y="445" text-anchor="middle" font-size="10">Elephantine</text>
+
+  <circle cx="500" cy="450" r="40" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="500" y="445" text-anchor="middle" font-size="10">Sais</text>
+
+  <!-- Desert boundary -->
+  <rect x="150" y="600" width="500" height="80" fill="none" stroke="#c33" stroke-width="3"/>
+  <text x="400" y="645" text-anchor="middle">Desert Boundary (Set / Sekhmet)</text>
+</svg>

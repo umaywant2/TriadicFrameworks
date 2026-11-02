@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TriadicFrameworks Example Envelope",
+  "description": "Shared envelope for all canonical, reality, imagination, information, and qmroot examples in the TriadicFrameworks corpus.",
+  "type": "object",
+
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique example identifier (e.g., fft-analyzer.canonical.001)."
+    },
+
+    "module": {
+      "type": "string",
+      "description": "Name of the module this example belongs to."
+    },
+
+    "layer": {
+      "type": "string",
+      "description": "MCP layer of the module (L0, L1, L2, L3)."
+    },
+
+    "kind": {
+      "type": "array",
+      "description": "Example categories: canonical, error, reality, imagination, information, qmroot.",
+      "items": { "type": "string" }
+    },
+
+    "input": {
+      "type": "object",
+      "description": "Example input payload for the module or operator.",
+      "additionalProperties": true
+    },
+
+    "output": {
+      "type": "object",
+      "description": "Example output payload for the module or operator.",
+      "additionalProperties": true
+    },
+
+    "reality": {
+      "type": "object",
+      "description": "Real-world interpretation of the example.",
+      "properties": {
+        "description": { "type": "string" },
+        "details": { "type": "string" }
+      },
+      "required": ["description"]
+    },
+
+    "imagination": {
+      "type": "object",
+      "description": "Speculative or narrative interpretation of the example.",
+      "properties": {
+        "description": { "type": "string" },
+        "details": { "type": "string" }
+      },
+      "required": ["description"]
+    },
+
+    "information": {
+      "type": "object",
+      "description": "Technical interpretation of the example.",
+      "properties": {
+        "description": { "type": "string" },
+        "details": { "type": "string" }
+      },
+      "required": ["description"]
+    },
+
+    "meta": {
+      "type": "object",
+      "description": "Cosmology metadata for AIs. Not used by MCP protocol.",
+      "properties": {
+        "qmroot": { "type": "string" },
+        "canonical": { "type": "string" },
+        "triad": { "type": "string" },
+        "lineage": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  },
+
+  "required": ["id", "module", "layer", "kind"]
+}

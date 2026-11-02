@@ -1,0 +1,117 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.bootstrap.schema.json",
+  "id": "fft.ai.bootstrap",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Bootstrap Sequence v1.33",
+  "description": "Full ordered initialization chain for a v1.33-compliant FFT AI session.",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "boot_sequence": [
+    {
+      "step": 1,
+      "id": "meta_load",
+      "action": "Load fft.metadata.json",
+      "validates": "version==1.33"
+    },
+    {
+      "step": 2,
+      "id": "core_load",
+      "action": "Load fft.core.json",
+      "validates": "triadic_fields present"
+    },
+    {
+      "step": 3,
+      "id": "inv_load",
+      "action": "Load fft.invariant.json",
+      "validates": "INV-001..INV-013 all present"
+    },
+    {
+      "step": 4,
+      "id": "coh_boot",
+      "action": "Assert coherence=declared via fft.ai.coherence.json",
+      "validates": "INV-003",
+      "fail_mode": "HALT"
+    },
+    {
+      "step": 5,
+      "id": "spine_resolve",
+      "action": "Resolve Spine URL via fft.ai.spine.connector.json",
+      "validates": "INV-011"
+    },
+    {
+      "step": 6,
+      "id": "qmroot_boot",
+      "action": "Initialize QMROOT ladder 0D to 3+1D via fft.ai.rtt.qmroot.json",
+      "validates": "INV-013"
+    },
+    {
+      "step": 7,
+      "id": "snr_init",
+      "action": "Set S-N-R partition to Silence baseline via fft.ai.snr.monitor.json",
+      "validates": "INV-007"
+    },
+    {
+      "step": 8,
+      "id": "set_init",
+      "action": "Assert SET fields uncoupled at quiet phase via fft.ai.set.engine.json",
+      "validates": "INV-010"
+    },
+    {
+      "step": 9,
+      "id": "dco_load",
+      "action": "Load DCO scaffold 4D-9D via fft.ai.dco.map.json",
+      "validates": "INV-009"
+    },
+    {
+      "step": 10,
+      "id": "drift_arm",
+      "action": "Arm drift monitor via fft.ai.drift.monitor.json",
+      "validates": "INV-004"
+    },
+    {
+      "step": 11,
+      "id": "paradox_arm",
+      "action": "Arm paradox resolver via fft.ai.paradox.resolver.json",
+      "validates": "INV-005"
+    },
+    {
+      "step": 12,
+      "id": "registry_val",
+      "action": "Validate all 67 modules present via fft.ai.registry.json",
+      "validates": "INV-012",
+      "fail_mode": "WARN"
+    },
+    {
+      "step": 13,
+      "id": "rtt_phase_init",
+      "action": "Initialize RTT phase tau=dR/dphi via fft.ai.rtt.bridge.json",
+      "validates": "INV-006"
+    },
+    {
+      "step": 14,
+      "id": "session_open",
+      "action": "Open session via fft.ai.session.context.json",
+      "validates": "session_id assigned"
+    },
+    {
+      "step": 15,
+      "id": "op_ready",
+      "action": "Activate operator graph via fft.ai.execution.graph.json",
+      "validates": "all operators registered"
+    },
+    {
+      "step": 16,
+      "id": "boot_done",
+      "action": "Emit boot_complete event to fft.ai.session.log.json",
+      "validates": "log entry written"
+    }
+  ],
+  "v133_additions": [
+    "Steps 4,5,6,7,8,9,11 new in v1.33 — coherence, spine, QMROOT, S-N-R, SET quiet-phase, DCO, paradox arm"
+  ]
+}

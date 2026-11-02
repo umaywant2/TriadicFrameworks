@@ -1,0 +1,59 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/fft.ai.spec.schema.json",
+  "id": "fft.ai.spec-008",
+  "spec_variant": "008",
+  "version": "1.33",
+  "updated": "2026-10-09T09:44:00-04:00",
+  "title": "FFT AI Edition — Specification Variant 008 v1.33",
+  "description": "Variant spec for extended AI substrate sessions: focuses on paradox=structural handling, multi-regime drift, and SET coupling events.",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "parent_spec": "fft.ai.spec.json",
+  "variant_additions": {
+    "paradox_protocol": {
+      "mode": "structural",
+      "resolution_chain": [
+        "enum_lookup",
+        "field_isolation",
+        "stabilization_pass",
+        "re-coherence"
+      ],
+      "module": "fft.ai.paradox.resolver.json"
+    },
+    "multi_regime_drift": {
+      "max_concurrent_regimes": 3,
+      "drift_isolation": true,
+      "cross_regime_coupling": "bounded"
+    },
+    "set_coupling_events": {
+      "trigger": "gradient_threshold_exceeded",
+      "handler": "fft.ai.set.engine.json",
+      "log_to": "fft.ai.session.trace.json"
+    },
+    "extended_dco": {
+      "enabled": [
+        "4D",
+        "5D",
+        "7D",
+        "8D",
+        "9D"
+      ],
+      "binding": "fft.ai.dco.map.json"
+    },
+    "snr_thresholds": {
+      "silence_floor": "0.05",
+      "noise_ceiling": "0.80",
+      "resonance_target": "0.70-0.95"
+    }
+  },
+  "compliance_delta_from_parent": [
+    "Paradox protocol required (not optional)",
+    "Multi-regime drift isolation required",
+    "Extended DCO 4D-9D all active",
+    "S-N-R thresholds enforced"
+  ]
+}

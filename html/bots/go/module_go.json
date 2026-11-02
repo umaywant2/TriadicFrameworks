@@ -1,0 +1,122 @@
+{
+  "module": {
+    "name": "RTT Go Bot",
+    "id": "bots.go",
+    "summary": "Flagship triadic engine for Go: continuity arcs, resonance fields, topology graphs, ancestry lines, drift phases, paradox/collapse detection, and unified triadic scoring.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Go",
+      "summary": "Triadic interpretation layer for Go built on KataGo analysis JSON.",
+      "version": "1.0.0",
+      "purpose": "Provide full triadic identity for Go positions using continuity, resonance, topology, ancestry, drift, risk, and Harmonia scoring.",
+      "keywords": [
+        "go",
+        "triadic",
+        "continuity",
+        "resonance",
+        "topology",
+        "ancestry",
+        "drift",
+        "paradox",
+        "collapse",
+        "projection-loss",
+        "mcts",
+        "kataGo"
+      ],
+      "audience": "Go players, AI researchers, engine integrators, teaching systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "katago_analysis_json",
+    "input_spec": {
+      "policy": "float[361]",
+      "ownership": "float[361]",
+      "scoreLead": "float",
+      "rootInfo": "object",
+      "pv": "array",
+      "visits": "integer"
+    },
+
+    "steps": [
+      "Lumen: structural extraction (influence, pressure, connectivity, weak points)",
+      "Hephaestus: regime mapping (local, structural, continuity)",
+      "Aurion: topology + ancestry (ladders, ko, cut points, collapse signatures)",
+      "Harmonia: unified triadic scoring (local, structural, continuity, risk)",
+      "StateEmitter: emit JSON conforming to module_go_schema.json"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "integration_surface": {
+      "engine": "KataGo",
+      "mode": "analysis_json",
+      "notes": "RTT-Go does not fork KataGo; it consumes KataGo's analysis JSON."
+    }
+  },
+
+  "triadic_overlays": {
+    "continuity_arcs": "long-arc identity curves",
+    "resonance_fields": "pressure gradients from ownership",
+    "drift_arrows": "directional flow of influence",
+    "topology_graphs": "cut points, weak points, ladder paths, ko nodes",
+    "ancestry_lines": "lineage of tactical sequences",
+    "risk_indicators": "paradox, collapse, projection-loss",
+    "triadic_hud": "local/structural/continuity scores + stability metrics"
+  },
+
+  "mcts_hooks": {
+    "policy_reweight": "softmax(log(policy) + α * triadic_logit)",
+    "value_adjust": "continuity-aware value blending",
+    "child_ordering": "triadic priority ordering",
+    "pruning": "never hard-prune; triadic signals are advisory only"
+  },
+
+  "scoring": {
+    "weights": {
+      "local": 0.35,
+      "structural": 0.40,
+      "continuity": 0.25
+    },
+    "risk_penalty": 0.15
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_go_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "lee_sedol_game4_move78",
+        "input": "./golden/example_input.sgf",
+        "output": "./golden/example.json",
+        "description": "AlphaGo vs Lee Sedol, Game 4, Move 78 — the flagship triadic example."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "⚫",
+    "label": "RTT-Go"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Go drift is influence → continuity → identity.",
+      "coherence": "Go is the flagship RTT module.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}

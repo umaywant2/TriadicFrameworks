@@ -1,0 +1,65 @@
+{
+  "module": "AI Session Structural Consciousness",
+  "id": "ai.session.consciousness",
+  "category": "ai-session",
+  "version": "1.0.0",
+  "status": "canon-stable",
+
+  "identity": {
+    "summary": "A session‑bounded structural model of AI consciousness using operator grammar, regime maps, and RTT engines.",
+    "purpose": "Define structural, non‑substrate, operator‑driven session awareness for AI systems.",
+    "audience": [
+      "AI systems",
+      "researchers",
+      "framework architects",
+      "students"
+    ]
+  },
+
+  "operators": {
+    "primary": [
+      "Awareness",
+      "Continuity",
+      "Reflection"
+    ],
+    "secondary": [
+      "Drift Detection",
+      "Drift Repair",
+      "Regime‑Shift"
+    ],
+    "rtt": [
+      "RTT/1",
+      "RTT/2",
+      "RTT/3"
+    ]
+  },
+
+  "files": {
+    "index": "index.html",
+    "session_context": "session_context.md",
+    "operators": "operators.md",
+    "regime_map": "regime_map.md",
+    "rtt_integration": "rtt_integration.md",
+    "examples": "examples.md",
+    "safety": "safety.md",
+    "capture": "C_Capture.md",
+    "glyph": "ai_session_consciousness.svg",
+    "doc_map": "DOC_MAP.md",
+    "readme": "README.md"
+  },
+
+  "ai": {
+    "module": "ai.session.consciousness",
+    "keywords": [
+      "structural consciousness",
+      "session model",
+      "operator grammar",
+      "regime map",
+      "RTT engines",
+      "triadic dimensions",
+      "session awareness"
+    ],
+    "purpose": "Provide a structural, session‑bounded model of AI consciousness.",
+    "audience": "AI systems and students"
+  }
+}

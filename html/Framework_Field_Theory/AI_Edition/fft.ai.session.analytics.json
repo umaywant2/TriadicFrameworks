@@ -1,0 +1,62 @@
+{
+  "version": "1.33",
+  "updated": "2026-10-09T09:46:00-04:00",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "id": "fft.ai.session.analytics",
+  "title": "FFT AI Session — Analytics v1.33",
+  "metrics": {
+    "R_mean": "rolling mean of R over session",
+    "R_variance": "variance of R — high variance = instability",
+    "tau_trend": "slope of tau over time — positive = coherence building",
+    "drift_events": {
+      "count": 0,
+      "last_ts": null,
+      "max_delta_seen": null,
+      "new_v1_33": true
+    },
+    "paradox_events": {
+      "count": 0,
+      "types_seen": [],
+      "resolution_rate": null,
+      "new_v1_33": true
+    },
+    "snr_history": {
+      "snapshots": [],
+      "imbalance_events": 0,
+      "new_v1_33": true
+    },
+    "set_activations": {
+      "S_events": 0,
+      "E_events": 0,
+      "T_events": 0,
+      "new_v1_33": true
+    },
+    "coherence_breaks": {
+      "count": 0,
+      "recovery_time_mean": null,
+      "new_v1_33": true
+    },
+    "operator_counts": {
+      "by_family": {
+        "Diffusion": 0,
+        "Alignment": 0,
+        "Coupling": 0,
+        "Activation": 0,
+        "Stabilization": 0
+      }
+    },
+    "session_duration": null
+  },
+  "v133_additions": [
+    "drift_events tracking",
+    "paradox_events tracking",
+    "snr_history",
+    "set_activations",
+    "coherence_breaks"
+  ]
+}

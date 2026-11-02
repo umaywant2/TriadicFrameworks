@@ -1,0 +1,88 @@
+{
+  "$schema": "https://docs.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "module": "prompts",
+    "canonical_name": "Prompts",
+    "module_path": "docs/prompts",
+    "version": "1.0",
+    "status": "Active Canonical",
+    "category": "Core Frameworks — Structural Spine",
+    "summary": "Structured prompt template library for Triadic diagnostic workflows across all six overlay types and domain contexts"
+  },
+  "purpose": {
+    "role": "Structured prompt template library for Triadic diagnostic workflows across all six overlay types and domain contexts",
+    "description": "The Prompts module contains the canonical set of structured prompt templates used to initiate, guide, and interpret S3 Spine diagnostic runs. Templates are organised by overlay type (Structural, Drift, Coherence, Substrate, Dimensional, Domain) and domain context (Enterprise, qCompute, Radiology, etc.). Each template carries session context declarations (rtt=, coherence=, drift=, paradox=) and instructs the AI operator on which RTT engines to invoke, which signals to monitor, and how to structure the DDR output.",
+    "spine_role": "Diagnostic entry point for AI-guided S3 Spine runs",
+    "audience": [
+      "AI operators",
+      "practitioners",
+      "AIs",
+      "developers"
+    ]
+  },
+  "structure": {
+    "module_type": "Prompt Template Library",
+    "triadic_lens": "prompts-as-diagnostic-scaffold",
+    "analyzer_layer": [
+      "Core Frameworks — Structural Spine",
+      "Core Frameworks — Structural Spine"
+    ]
+  },
+  "files": {
+    "core": [
+      "prompts.md",
+      "index.md"
+    ],
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
+  },
+  "ai_metadata": {
+    "navigation": {
+      "url": "https://docs.triadicframeworks.org/prompts/",
+      "path": "docs/prompts"
+    },
+    "ai_ready": true,
+    "ai_module_id": "prompts",
+    "ai_keywords": [
+      "prompt templates",
+      "diagnostic prompts",
+      "session context",
+      "overlay prompts",
+      "domain prompts",
+      "RTT prompts",
+      "AI-guided diagnostics",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "Structured prompt template library for Triadic diagnostic workflows across all six overlay types and domain contexts",
+    "ai_audience": [
+      "AI operators",
+      "practitioners",
+      "AIs",
+      "developers"
+    ],
+    "license": "See docs/LICENSE_module.json",
+    "module": {
+      "module_id": "prompts",
+      "canonical_name": "Prompts",
+      "version": "1.0"
+    }
+  }
+}

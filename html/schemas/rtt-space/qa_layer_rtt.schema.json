@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "RTT QA Layer",
+  "type": "object",
+  "properties": {
+    "qa_id": { "type": "string" },
+    "observation_id": { "type": "string" },
+    "checks": { "type": "array", "items": { "type": "string" } },
+    "triadic_validation": {
+      "type": "object",
+      "properties": {
+        "spin_valid": { "type": "boolean" },
+        "charge_valid": { "type": "boolean" },
+        "temperature_valid": { "type": "boolean" }
+      }
+    }
+  }
+}

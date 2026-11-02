@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/CONTRIBUTING.md">
+  <title>💞 Contributing to TriadicFrameworks</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/CONTRIBUTING.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/CONTRIBUTING.md</code>
+    &middot;
+    <a href="sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="CONTRIBUTING_" src="https://github.com/user-attachments/assets/930f67ad-adb3-41a3-84fd-0f4ded376dc6" /></p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/CONTRIBUTING_module.json"><code>CONTRIBUTING_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h1 id="contributing-to-triadicframeworks">💞 Contributing to TriadicFrameworks</h1>
+<blockquote>
+<p><strong>This document governs all contributions to the TriadicFrameworks repository.</strong>
+Read it in full before opening a pull request. There are no exceptions to the standards here — not for experience level, not for urgency, not for the size of the change.</p>
+</blockquote>
+<hr>
+<h2 id="before-you-contribute">Before You Contribute</h2>
+<p>TriadicFrameworks is a precision system. Its value depends entirely on the structural integrity of its modules, the coherence of its canon, and the correctness of its session grammar. A contribution that is well-intentioned but structurally incorrect is not a partial improvement — it is a source of invisible errors that propagate through the dependency graph and corrupt downstream sessions.</p>
+<p>This document is not a formality. It is a set of standards that protect the system's integrity. Every section exists because a class of errors was identified that these standards prevent.</p>
+<p>Read Part II of the Book (Navigate) before contributing modules. Read Part III (Apply) before contributing sessions. If you have not read both, your contribution is not ready.</p>
+<hr>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#what-you-can-contribute">What You Can Contribute</a></li>
+<li><a href="#what-you-cannot-contribute">What You Cannot Contribute</a></li>
+<li><a href="#the-pr-process">The PR Process</a></li>
+<li><a href="#module-authoring-standards">Module Authoring Standards</a></li>
+<li><a href="#the-ratification-flow">The Ratification Flow</a></li>
+<li><a href="#session-library-contributions">Session Library Contributions</a></li>
+<li><a href="#book-contributions">Book Contributions</a></li>
+<li><a href="#versioning-standards">Versioning Standards</a></li>
+<li><a href="#review-criteria">Review Criteria</a></li>
+<li><a href="#contribution-principles">Contribution Principles</a></li>
+</ul>
+<hr>
+<h2 id="what-you-can-contribute">What You Can Contribute</h2>
+<p>Contributions fall into five categories. Each has its own standards and review path.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+<th>Review Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>New module</strong></td>
+<td>A missing operator, validator, grammar, lens, or map module</td>
+<td>Full ratification flow</td>
+</tr>
+<tr>
+<td><strong>Module revision</strong></td>
+<td>Corrections, scope clarifications, prose improvements, dependency additions</td>
+<td>Version increment + reviewer sign-off</td>
+</tr>
+<tr>
+<td><strong>New canonical session</strong></td>
+<td>A fully worked session covering a use case not in the library</td>
+<td>Session review checklist</td>
+</tr>
+<tr>
+<td><strong>Book contribution</strong></td>
+<td>Corrections, clarifications, worked examples, cross-reference additions</td>
+<td>Editorial review</td>
+</tr>
+<tr>
+<td><strong>Registry update</strong></td>
+<td>Group creation, group membership change, index update</td>
+<td>Structural review</td>
+</tr>
+</tbody>
+</table>
+<p>Each category is detailed in its own section below.</p>
+<hr>
+<h2 id="what-you-cannot-contribute">What You Cannot Contribute</h2>
+<p>The following are not open for contribution. No PR that touches these will be merged.</p>
+<p><strong>The five canon commitments.</strong>
+The canon is irreversible. A PR that attempts to add, remove, modify, or reframe any of the five canon commitments will be closed without review. If you believe a canon commitment is wrong, that is a conversation to have with the author — not a pull request.</p>
+<p><strong>The Role or Layer enums.</strong>
+Adding, removing, or redefining roles or layers changes the position of every module in the system. These enums are author-controlled. PRs touching <code>role-enum-anchor</code> or <code>layer-enum-anchor</code> will be closed without review.</p>
+<p><strong>The Nawderian Theorem.</strong>
+<code>nawderian-theorem-validator-pulses</code> is a foundational anchor authored by Nawder Loswin. Its content is not open for revision. PRs touching this module will be closed without review.</p>
+<p><strong>The session grammar field count or order.</strong>
+The nine fields are specified in <code>session-grammar-anchor</code>. Adding, removing, or reordering fields changes every session in the system. This is author-controlled. PRs touching the field list or ordering will be closed without review.</p>
+<p><strong>Attribution.</strong>
+The honest attribution standard is canonical. Do not modify any attribution field, author credit, or AI-authorship disclosure in any file.</p>
+<blockquote>
+<p>If you are uncertain whether your contribution touches a non-contributable area, open an issue and ask before writing any code or prose.</p>
+</blockquote>
+<hr>
+<h2 id="the-pr-process">The PR Process</h2>
+<p>Every contribution follows this sequence. No step may be skipped.</p>
+<hr>
+<h3 id="step-1-open-an-issue-first">Step 1: Open an Issue First</h3>
+<p>Before writing anything, open an issue describing:</p>
+<ul>
+<li><strong>What</strong> you want to contribute (module, session, book edit, registry change)</li>
+<li><strong>Why</strong> it is needed (gap identification, error correction, coverage expansion)</li>
+<li><strong>Which existing modules</strong> your contribution depends on or affects</li>
+</ul>
+<p>This step exists to catch two things early:
+1. <strong>Apparent gaps</strong> — your contribution may already exist under a different ID. A reviewer will search the registry and confirm.
+2. <strong>Scope conflicts</strong> — your proposed module may overlap with an existing module's scope in ways you did not see. A reviewer will flag this before you write four files.</p>
+<p>Issues are lightweight. A few sentences plus the expected role, layer, and scope statement is enough to start the conversation. Do not spend significant effort on the contribution before the issue is reviewed.</p>
+<p><strong>Exception:</strong> Book contributions (typo fixes, broken link corrections, factual corrections) may be submitted as a PR without a prior issue. All other contributions require an issue first.</p>
+<hr>
+<h3 id="step-2-branch">Step 2: Branch</h3>
+<p>Create a branch from <code>main</code> following this naming convention:</p>
+<pre><code>[type]/[short-descriptor]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Type prefix</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>module/</code></td>
+<td>New module or module revision</td>
+</tr>
+<tr>
+<td><code>session/</code></td>
+<td>New canonical session</td>
+</tr>
+<tr>
+<td><code>book/</code></td>
+<td>Book documentation change</td>
+</tr>
+<tr>
+<td><code>registry/</code></td>
+<td>Registry or group change</td>
+</tr>
+<tr>
+<td><code>fix/</code></td>
+<td>Error correction in any file</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<pre><code>module/usage-metric-grammar
+session/cs-09-multi-module-conflict-detection
+book/part-ii-chapter-8-cycle-detection-example
+fix/rtt-op-core-scope-near-violation
+</code></pre>
+<hr>
+<h3 id="step-3-write">Step 3: Write</h3>
+<p>Follow the authoring standards for your contribution type (detailed in the sections below). Write the content. Do not submit until the content is complete — partial PRs are not accepted.</p>
+<hr>
+<h3 id="step-4-self-review">Step 4: Self-Review</h3>
+<p>Before opening the PR, apply this self-review checklist:</p>
+<p><strong>For modules:</strong>
+- [ ] All four files are present and non-empty
+- [ ] <code>module.json</code> scope statement is one to three sentences, precisely bounded
+- [ ] <code>module.md</code> prose does not exceed the declared scope
+- [ ] <code>module_links.json</code> <code>depends_on</code> list is complete and closure-verified
+- [ ] <code>module_session.json</code> invocation syntax is complete and all parameters are named
+- [ ] Module ID follows the <code>domain-role_short-descriptor</code> convention
+- [ ] Version is <code>0.1.0</code> (all new modules start at draft version)
+- [ ] Status is <code>draft</code>
+- [ ] The scope-check operator has been applied and returned compliant or near-compliant</p>
+<p><strong>For sessions:</strong>
+- [ ] All nine grammar fields are populated
+- [ ] All field-level tests pass
+- [ ] All invocations show full signatures
+- [ ] Output is complete and in the declared format
+- [ ] ValidatorAssessment is present and returns <code>recommendation: accept</code>
+- [ ] Clone guide is present</p>
+<p><strong>For book contributions:</strong>
+- [ ] No content contradicts an existing module's declared scope
+- [ ] No content contradicts the canon commitments
+- [ ] Cross-references use module IDs, not labels
+- [ ] Version stamps are not modified (book versioning is managed separately)</p>
+<hr>
+<h3 id="step-5-open-the-pr">Step 5: Open the PR</h3>
+<p>PR title format:</p>
+<pre><code>[TYPE] Short description
+</code></pre>
+<p>Examples:</p>
+<pre><code>[MODULE] Add usage-metric-grammar to grammar-suite
+[SESSION] Add CS-09: Multi-Module Conflict Detection
+[BOOK] Correct dependency traversal example in Part II Chapter 8
+[FIX] Resolve scope near-violation in rtt-op-core module.md
+</code></pre>
+<p>PR description must include:</p>
+<ol>
+<li><strong>Link to the originating issue</strong></li>
+<li><strong>Summary of changes</strong> — what files were added or modified</li>
+<li><strong>Self-review checklist</strong> — completed (copy from Step 4 above)</li>
+<li><strong>Dependency impact statement</strong> — which existing modules, if any, are affected by this change and how</li>
+<li><strong>Scope compliance statement</strong> — one sentence confirming the new content stays within its declared scope</li>
+</ol>
+<p>PRs without all five elements will be returned for revision before review begins.</p>
+<hr>
+<h3 id="step-6-review">Step 6: Review</h3>
+<p>A reviewer will be assigned within five business days. Reviews evaluate against the criteria in the <a href="#review-criteria">Review Criteria</a> section below. Reviewers may:</p>
+<ul>
+<li><strong>Approve</strong> — contribution meets all standards, ready to merge</li>
+<li><strong>Request changes</strong> — specific issues identified, must be addressed before re-review</li>
+<li><strong>Close</strong> — contribution touches a non-contributable area, or the gap is apparent rather than real</li>
+</ul>
+<p>All reviewer feedback is structural, not stylistic. If a reviewer asks for a change, it is because a standard is not met — not because of personal preference.</p>
+<hr>
+<h3 id="step-7-ratification-modules-only">Step 7: Ratification (modules only)</h3>
+<p>New modules require ratification before their status changes from <code>draft</code> to <code>active</code>. See <a href="#the-ratification-flow">The Ratification Flow</a> for the complete procedure.</p>
+<p>Non-module contributions (sessions, book edits, registry updates) do not require ratification — they merge on reviewer approval.</p>
+<hr>
+<h3 id="step-8-merge-and-registry-update">Step 8: Merge and Registry Update</h3>
+<p>On merge:
+- The module is added to <code>modules_group.json</code> in its assigned group(s)
+- The master registry index is updated
+- The registry version stamp is incremented per the <code>version-increment-proto</code>
+- The book changelog is updated</p>
+<p>Registry and changelog updates are handled by the maintainer — contributors do not need to manage these.</p>
+<hr>
+<h2 id="module-authoring-standards">Module Authoring Standards</h2>
+<p>This section is the complete specification for what a valid module contribution looks like. Every requirement here corresponds to a structural rule in the system. None are stylistic preferences.</p>
+<hr>
+<h3 id="the-four-anchoring-decisions">The Four Anchoring Decisions</h3>
+<p>Before writing a single line of content, make and commit to these four decisions. Write them down. They are your contract with the system.</p>
+<p><strong>Decision 1: Role</strong>
+Choose exactly one value from the Role enum. If you cannot choose without ambiguity, the module's purpose is not yet clear. Clarify the purpose — do not proceed.</p>
+<p><strong>Decision 2: Layer</strong>
+Choose exactly one value from the Layer enum. Apply the dependency direction rule: your module will depend on modules at this layer and below. Confirm this constraint works for the content you need to express before proceeding.</p>
+<p><strong>Decision 3: Scope</strong>
+Write the scope statement. One to three sentences. State what the module covers. State what it does not cover if the boundary is non-obvious. The scope statement is a promise — the module's prose must not exceed it. Write the scope before writing any prose.</p>
+<p><strong>Decision 4: Dependencies</strong>
+List every module whose content must be valid for your module's content to be meaningful. Verify each dependency exists in the registry. If a dependency does not exist, you have found a nested gap — fill it first.</p>
+<hr>
+<h3 id="modulejson-requirements"><code>module.json</code> Requirements</h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;required — follows domain-role_short-descriptor convention&quot;,
+  &quot;label&quot;: &quot;required — human-readable, title case&quot;,
+  &quot;role&quot;: &quot;required — exactly one value from Role enum&quot;,
+  &quot;layer&quot;: &quot;required — exactly one value from Layer enum&quot;,
+  &quot;scope&quot;: &quot;required — one to three sentences, precisely bounded&quot;,
+  &quot;version&quot;: &quot;required — 0.1.0 for all new modules&quot;,
+  &quot;status&quot;: &quot;required — draft for all new modules&quot;,
+  &quot;dependencies&quot;: [&quot;required — may be empty array if no dependencies&quot;],
+  &quot;tags&quot;: [&quot;optional — lowercase, relevant keywords&quot;]
+}
+</code></pre>
+<p><strong>ID naming convention:</strong> <code>[domain]-[role_short]-[descriptor]</code></p>
+<p>Role short forms:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Short Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>anchor</code></td>
+<td><code>anch</code></td>
+</tr>
+<tr>
+<td><code>lens</code></td>
+<td><code>lens</code></td>
+</tr>
+<tr>
+<td><code>protocol</code></td>
+<td><code>proto</code></td>
+</tr>
+<tr>
+<td><code>grammar</code></td>
+<td><code>gram</code></td>
+</tr>
+<tr>
+<td><code>operator</code></td>
+<td><code>op</code></td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td><code>idx</code></td>
+</tr>
+<tr>
+<td><code>map</code></td>
+<td><code>map</code></td>
+</tr>
+<tr>
+<td><code>bridge</code></td>
+<td><code>bridge</code></td>
+</tr>
+<tr>
+<td><code>validator</code></td>
+<td><code>val</code></td>
+</tr>
+<tr>
+<td><code>field</code></td>
+<td><code>field</code></td>
+</tr>
+</tbody>
+</table>
+<p>Valid ID examples:
+- <code>usage-metric-gram</code> — domain: usage-metric, role: grammar
+- <code>intervention-lens</code> — domain: intervention, role: lens
+- <code>module-conflict-val</code> — domain: module-conflict, role: validator</p>
+<p>Invalid ID examples:
+- <code>UsageMetricGrammar</code> — not kebab-case
+- <code>grammar-usage-metric</code> — role before domain, wrong order
+- <code>usage_metric_grammar</code> — underscores, not hyphens
+- <code>ugram</code> — too abbreviated to be meaningful</p>
+<hr>
+<h3 id="module_linksjson-requirements"><code>module_links.json</code> Requirements</h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;required — must match module.json id exactly&quot;,
+  &quot;depends_on&quot;: [&quot;required — same list as module.json dependencies&quot;],
+  &quot;required_by&quot;: [&quot;required — empty array for all new modules&quot;],
+  &quot;related&quot;: [&quot;optional — editorial neighbors, not structural dependencies&quot;],
+  &quot;supersedes&quot;: [&quot;required — empty array if not replacing an existing module&quot;],
+  &quot;superseded_by&quot;: &quot;required — null for all new modules&quot;
+}
+</code></pre>
+<p><strong>The closure rule:</strong> Every module ID in <code>depends_on</code> must exist in the registry. If it does not exist, the contribution is blocked until the dependency is authored and merged.</p>
+<p><strong>The <code>required_by</code> rule:</strong> New modules always have an empty <code>required_by</code>. This field is populated when existing modules are updated to declare a dependency on the new module. Do not pre-populate it.</p>
+<p><strong>The <code>related</code> rule:</strong> <code>related</code> is editorial, not structural. A module in <code>related</code> is not required for the module to be valid — it is a suggested companion for practitioners. Do not put a structural dependency in <code>related</code> to avoid the closure rule. Reviewers check this.</p>
+<hr>
+<h3 id="modulemd-requirements"><code>module.md</code> Requirements</h3>
+<p><code>module.md</code> is the human-readable face of the module. It must be written <em>within</em> the scope declared in <code>module.json</code> — not up to the edge of the scope, and not beyond it.</p>
+<p><strong>Required sections for all modules:</strong>
+1. <strong>Definition</strong> — What this module is, in plain language. One paragraph.
+2. <strong>Scope statement</strong> — The verbatim scope from <code>module.json</code>, set off in a blockquote.
+3. <strong>Content</strong> — The module's substantive content, organized by the module's role type (see role-specific requirements below).
+4. <strong>Constraints</strong> — What this module does not cover and what it must not be used for. Explicit exclusions prevent scope creep by future editors.</p>
+<p><strong>Role-specific content requirements:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Required content sections</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>anchor</code></td>
+<td>The commitment stated, its non-negotiability explained, what breaks if violated</td>
+</tr>
+<tr>
+<td><code>lens</code></td>
+<td>What the lens foregrounds, what it does not change, how to activate it, combination rules</td>
+</tr>
+<tr>
+<td><code>protocol</code></td>
+<td>Numbered step sequence, trigger conditions, completion gate, what to do if a step fails</td>
+</tr>
+<tr>
+<td><code>grammar</code></td>
+<td>Required fields/structure, field types, validation rules, minimum valid form, worked example</td>
+</tr>
+<tr>
+<td><code>operator</code></td>
+<td>Invocation syntax (verbatim from <code>module_session.json</code>), parameter definitions, output structure, worked example</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>What is indexed, how entries are organized, how to use the index for navigation</td>
+</tr>
+<tr>
+<td><code>map</code></td>
+<td>What is charted, the relationships shown, how to read the map, limitations</td>
+</tr>
+<tr>
+<td><code>bridge</code></td>
+<td>What two regions are connected, what the translation layer does, valid input/output types</td>
+</tr>
+<tr>
+<td><code>validator</code></td>
+<td>What is validated, the criteria applied, how to interpret the assessment, how to act on each recommendation</td>
+</tr>
+<tr>
+<td><code>field</code></td>
+<td>Field name, type, valid values, validation rules, default (if any), field test</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prose standards:</strong>
+- Write in the second person ("you") for practitioner-facing content, third person ("the module") for system-facing content
+- No hedging language in scope-claiming sections ("roughly," "generally," "sometimes") — the scope is precise or it is wrong
+- All cross-references to other modules use module IDs, not labels
+- Examples must be worked examples — not hypothetical sketches, but complete inputs-and-outputs pairs
+- Maximum one editorial cross-reference per section ("see also: <code>rtt-anchor-definition</code>") — prose is not a link farm</p>
+<hr>
+<h3 id="module_sessionjson-requirements"><code>module_session.json</code> Requirements</h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;required — must match module.json id exactly&quot;,
+  &quot;invocation_syntax&quot;: &quot;required — OperatorNamespace.method(param: &lt;Type&gt;, ...) format&quot;,
+  &quot;input_schema&quot;: {
+    &quot;param_name&quot;: &quot;required — description of valid values and constraints for each parameter&quot;
+  },
+  &quot;output_schema&quot;: {
+    &quot;field_name&quot;: &quot;required — type and description for each output field&quot;
+  },
+  &quot;valid_layers&quot;: [&quot;required — at least one Layer enum value&quot;],
+  &quot;valid_roles&quot;: [&quot;required — at least one Role enum value&quot;],
+  &quot;validator_id&quot;: &quot;required — a valid validator module ID from the registry&quot;
+}
+</code></pre>
+<p><strong>Invocation syntax rules:</strong>
+- OperatorNamespace is derived from the module's domain (e.g., <code>RTT</code>, <code>Clarity</code>, <code>Scope</code>, <code>Session</code>, <code>Module</code>, <code>Gap</code>)
+- Method name is a verb that describes the transformation (<code>pass</code>, <code>evaluate</code>, <code>check</code>, <code>trace</code>, <code>identify</code>, <code>draft</code>)
+- Every parameter in the syntax must appear in <code>input_schema</code> with a description
+- Parameters are named, not positional — every call must name its parameters explicitly
+- If a parameter is optional, mark it with <code>optional:</code> in the description field of <code>input_schema</code></p>
+<p><strong>Validator ID rule:</strong> The <code>validator_id</code> must reference an existing validator module in the registry. If no suitable validator exists, this is a nested gap. The nested gap must be filed as a separate issue. In the interim, the <code>validator_id</code> may reference <code>manifest-complete-val</code> as a structural placeholder — but the PR must include a linked issue for the missing validator.</p>
+<hr>
+<h2 id="the-ratification-flow">The Ratification Flow</h2>
+<p>Ratification is the process by which a module's status changes from <code>draft</code> to <code>active</code>. It is separate from the PR review process — a PR can be merged with a module in <code>draft</code> status, and ratification happens afterward.</p>
+<hr>
+<h3 id="why-ratification-is-separate">Why Ratification Is Separate</h3>
+<p>Merging a draft module adds it to the repository. Ratifying a module declares it fit for production use. These are different events. A draft module may be merged to:
+- Unblock a dependency chain (another module needs this one to exist)
+- Begin the ratification clock (a module must be in <code>draft</code> for a minimum observation period)
+- Allow integration testing before the module is declared production-ready</p>
+<p>A draft module in the registry is visible and usable, but practitioners should treat it as experimental. Sessions that use draft modules should note this in their session records.</p>
+<hr>
+<h3 id="ratification-criteria">Ratification Criteria</h3>
+<p>A module is ready for ratification when all of the following are true:</p>
+<p><strong>1. Minimum observation period elapsed.</strong>
+The module has been in <code>draft</code> status for at least 14 days. This period allows practitioners to use the module in real sessions and surface issues before ratification.</p>
+<p><strong>2. At least one production session completed.</strong>
+At least one session using this module has been run to completion, received a <code>recommendation: accept</code> from its validator, and been submitted to the session library or documented in the issue thread.</p>
+<p><strong>3. No open issues against the module.</strong>
+All issues tagged with the module's ID have been resolved. No unresolved scope disputes, dependency questions, or content concerns.</p>
+<p><strong>4. Scope compliance confirmed.</strong>
+The scope-check operator (<code>Scope.check</code>) has been applied to <code>module.md</code> against <code>module.json</code> and returned <code>COMPLIANT</code> (not <code>NEAR-COMPLIANT</code>) — or any near-violation identified has been resolved and the check re-run.</p>
+<p><strong>5. Dependency chain audit passed.</strong>
+The dependency-audit protocol (<code>CS-04</code>) has been run on the module and returned no hidden dependencies and no cycles.</p>
+<hr>
+<h3 id="ratification-request">Ratification Request</h3>
+<p>When all five criteria are met, open a ratification request issue with:</p>
+<ul>
+<li>Module ID and current version</li>
+<li>Link to the original PR</li>
+<li>Link to the production session record (or inline session summary)</li>
+<li>Scope compliance check result (copy the output)</li>
+<li>Dependency audit result (copy the DependencyTrace output)</li>
+</ul>
+<p>The maintainer reviews the ratification request within 10 business days. On approval:</p>
+<ol>
+<li><code>module.json</code> <code>status</code> changes from <code>draft</code> to <code>active</code></li>
+<li><code>module.json</code> <code>version</code> increments from <code>0.x.x</code> to <code>1.0.0</code></li>
+<li><code>module_links.json</code> <code>required_by</code> is updated for all modules that now declare this module as a dependency</li>
+<li>The registry version stamp increments</li>
+<li>The book changelog is updated</li>
+</ol>
+<hr>
+<h3 id="fast-track-ratification">Fast-Track Ratification</h3>
+<p>Modules that fill a hard gap — a missing dependency that blocks an existing active module — are eligible for fast-track ratification. Fast-track reduces the minimum observation period to 7 days and waives the production session requirement (a diagnostic session using the gap-fill protocol may substitute). All other criteria apply.</p>
+<p>To request fast-track ratification, include <code>[FAST-TRACK]</code> in the ratification request issue title and link to the blocked module's dependency audit output confirming the hard gap.</p>
+<hr>
+<h2 id="session-library-contributions">Session Library Contributions</h2>
+<p>A new canonical session must meet all five criteria before it will be added to the library:</p>
+<hr>
+<h3 id="criterion-1-grammar-completeness">Criterion 1: Grammar Completeness</h3>
+<p>All nine session grammar fields are populated. Each field passes its field-level test (Chapter 13, Part III). The <code>active_modules</code> list is dependency-closed — run <code>CS-04</code> against every primary module to confirm.</p>
+<hr>
+<h3 id="criterion-2-execution-correctness">Criterion 2: Execution Correctness</h3>
+<p>Every operator invocation shows the full signature — no parameter omissions, no raw strings where InputUnits are required, no invocations outside a module's <code>valid_layers</code> or <code>valid_roles</code>. Invocations are shown in the order they were called. If an invocation produced an intermediate result that fed the next invocation, that intermediate result is shown.</p>
+<hr>
+<h3 id="criterion-3-output-quality">Criterion 3: Output Quality</h3>
+<p>The session output is complete, in the declared format, and structurally substantive. "Substantive" means each face (for StructuredFaces outputs) or each criterion result (for ValidatorAssessment outputs) makes specific, checkable claims — not vague directional statements.</p>
+<hr>
+<h3 id="criterion-4-assessment-completeness">Criterion 4: Assessment Completeness</h3>
+<p>A ValidatorAssessment is present and shows all five criteria evaluated. The recommendation is <code>accept</code>. If the recommendation is <code>revise</code> or <code>re-run</code>, the session was revised and the final accepted output is what appears in the library entry — not the intermediate rejected version.</p>
+<hr>
+<h3 id="criterion-5-clone-utility">Criterion 5: Clone Utility</h3>
+<p>A Clone Guide is present. It lists every field that must change when adapting the session, with a note on what the correct change looks like. It does not list fields that should stay the same — only fields that must change.</p>
+<hr>
+<h3 id="session-id-assignment">Session ID Assignment</h3>
+<p>Session IDs (<code>CS-[NN]</code>) are assigned by the maintainer on merge. Do not pre-assign an ID in your PR — you will not know what the next available number is. Submit with a descriptive working title in the session metadata; the ID will be assigned at merge.</p>
+<hr>
+<h2 id="book-contributions">Book Contributions</h2>
+<p>Book contributions include corrections, clarifications, new worked examples, additional cross-references, and structural improvements to the three parts, the registry, and the session library.</p>
+<hr>
+<h3 id="what-requires-a-book-contribution-pr">What Requires a Book Contribution PR</h3>
+<ul>
+<li>Factual corrections (wrong module ID, incorrect scope summary, outdated version number)</li>
+<li>Prose clarifications (a section is genuinely ambiguous and can be made clearer)</li>
+<li>New worked examples (adding an example that illuminates a concept the existing text handles abstractly)</li>
+<li>Cross-reference additions (adding a "see also" link to a related module or section)</li>
+<li>Structural improvements (reorganizing a section for better scannability without changing its content)</li>
+</ul>
+<hr>
+<h3 id="what-does-not-belong-in-a-book-pr">What Does Not Belong in a Book PR</h3>
+<ul>
+<li>Content that contradicts an existing module's declared scope — if the book is wrong about a module, fix the book to match the module (not the reverse)</li>
+<li>New doctrine or new system commitments — these require a module PR or, if canon-level, a direct conversation with the maintainer</li>
+<li>Rewrites of sections you disagree with on stylistic grounds — book prose is intentional</li>
+</ul>
+<hr>
+<h3 id="prose-standards-for-book-contributions">Prose Standards for Book Contributions</h3>
+<p>Follow the existing voice: second person, practitioner-facing, directive without being prescriptive. The book's voice is precise and direct — it does not hedge, does not use filler transitions, and does not repeat what was already said in a prior section.</p>
+<p>If you are adding a worked example, follow the example format established in Part III Chapter 15: InputUnit → invocation → output → assessment. Do not abbreviate the structure.</p>
+<hr>
+<h2 id="versioning-standards">Versioning Standards</h2>
+<p>Every module has a version stamp in <code>module.json</code>. Every change to a module requires a version increment. The increment type depends on the nature of the change.</p>
+<hr>
+<h3 id="version-format">Version Format</h3>
+<p><code>MAJOR.MINOR.PATCH</code></p>
+<table>
+<thead>
+<tr>
+<th>Increment</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATCH</code></td>
+<td>Prose corrections (typos, clarity improvements) that do not change the scope, the invocation syntax, or the dependency list</td>
+</tr>
+<tr>
+<td><code>MINOR</code></td>
+<td>Scope clarifications, additional examples, new <code>related</code> entries, documentation improvements that add content without changing the structural specification</td>
+</tr>
+<tr>
+<td><code>MAJOR</code></td>
+<td>Scope changes, role or layer changes, dependency additions or removals, invocation syntax changes, output schema changes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The major version rule:</strong> A <code>MAJOR</code> increment changes the module's structural contract. Every module in the <code>required_by</code> list must be audited for compatibility after a major increment. The PR must include a dependency impact statement listing all affected modules and confirming compatibility.</p>
+<p><strong>Draft modules:</strong> All draft modules use <code>0.x.x</code> versioning. The first <code>MAJOR</code> increment on ratification is <code>1.0.0</code>. Subsequent major increments follow the standard scheme.</p>
+<p><strong>The golden rule:</strong> When in doubt, increment higher. A <code>MINOR</code> increment when a <code>MAJOR</code> was warranted is a structural lie — it tells the system that no contract changed when one did.</p>
+<hr>
+<h3 id="changelog-requirements">Changelog Requirements</h3>
+<p>Every version increment requires a changelog entry. The changelog lives at <a href="./book/changelog"><code>/docs/book/changelog</code></a>. Each entry follows this format:</p>
+<pre><code class="language-markdown">## [MODULE-ID] v[VERSION] — [YYYY-MM-DD]
+
+**Type:** PATCH | MINOR | MAJOR
+**Changed by:** [contributor handle]
+
+### Changes
+- [Specific change 1]
+- [Specific change 2]
+
+### Impact
+[For MAJOR only: list of affected modules and compatibility confirmation]
+</code></pre>
+<p>Changelog entries are written by the contributor and included in the PR. The maintainer verifies and merges.</p>
+<hr>
+<h2 id="review-criteria">Review Criteria</h2>
+<p>This section defines what reviewers check and what constitutes a passing review. Reviewers do not evaluate subjective quality — they evaluate structural correctness against published standards.</p>
+<hr>
+<h3 id="module-review-criteria">Module Review Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>What the Reviewer Checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ID validity</strong></td>
+<td>Follows <code>domain-role_short-descriptor</code>, kebab-case, unique in registry</td>
+</tr>
+<tr>
+<td><strong>Role correctness</strong></td>
+<td>The declared role matches the module's actual function</td>
+</tr>
+<tr>
+<td><strong>Layer correctness</strong></td>
+<td>The declared layer is appropriate for the content; dependency direction rule is satisfied</td>
+</tr>
+<tr>
+<td><strong>Scope precision</strong></td>
+<td>Scope statement is one to three sentences, precisely bounded, testable</td>
+</tr>
+<tr>
+<td><strong>Scope compliance</strong></td>
+<td><code>module.md</code> prose does not exceed the declared scope</td>
+</tr>
+<tr>
+<td><strong>Dependency completeness</strong></td>
+<td>All declared dependencies exist in the registry; closure verified</td>
+</tr>
+<tr>
+<td><strong>No hidden dependencies</strong></td>
+<td>Prose does not implicitly require a module not in <code>depends_on</code></td>
+</tr>
+<tr>
+<td><strong>No cycles</strong></td>
+<td>Adding this module does not introduce a dependency cycle</td>
+</tr>
+<tr>
+<td><strong>Invocation completeness</strong></td>
+<td>All parameters named, typed, and present in both syntax and <code>input_schema</code></td>
+</tr>
+<tr>
+<td><strong>Output schema completeness</strong></td>
+<td>All output fields named and typed</td>
+</tr>
+<tr>
+<td><strong>Validator appropriateness</strong></td>
+<td><code>validator_id</code> is a valid validator module appropriate for the output type</td>
+</tr>
+<tr>
+<td><strong>Version and status</strong></td>
+<td><code>0.1.0</code> / <code>draft</code> for new modules; correct increment type for revisions</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="session-review-criteria">Session Review Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>What the Reviewer Checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grammar completeness</strong></td>
+<td>All nine fields populated</td>
+</tr>
+<tr>
+<td><strong>Field test compliance</strong></td>
+<td>Each field passes its documented field-level test</td>
+</tr>
+<tr>
+<td><strong>active_modules closure</strong></td>
+<td>Dependency closure verified for all primary modules</td>
+</tr>
+<tr>
+<td><strong>Invocation correctness</strong></td>
+<td>Full signatures, correct parameter types, valid context</td>
+</tr>
+<tr>
+<td><strong>Output completeness</strong></td>
+<td>Output is in declared format, all required fields present</td>
+</tr>
+<tr>
+<td><strong>Assessment presence</strong></td>
+<td>ValidatorAssessment present, all criteria evaluated, recommendation <code>accept</code></td>
+</tr>
+<tr>
+<td><strong>Clone guide presence</strong></td>
+<td>Clone guide lists all fields that must change</td>
+</tr>
+<tr>
+<td><strong>Use case novelty</strong></td>
+<td>Session covers a use case not already in the library</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="book-review-criteria">Book Review Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>What the Reviewer Checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Factual accuracy</strong></td>
+<td>Claims match the system's canonical specifications</td>
+</tr>
+<tr>
+<td><strong>Scope consistency</strong></td>
+<td>New content does not contradict existing module scopes</td>
+</tr>
+<tr>
+<td><strong>Canon consistency</strong></td>
+<td>New content does not contradict or weaken any canon commitment</td>
+</tr>
+<tr>
+<td><strong>Voice consistency</strong></td>
+<td>Prose matches the book's established voice</td>
+</tr>
+<tr>
+<td><strong>Cross-reference accuracy</strong></td>
+<td>Module IDs referenced are valid and in the registry</td>
+</tr>
+<tr>
+<td><strong>No duplication</strong></td>
+<td>New content does not restate what another section already covers clearly</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="contribution-principles">Contribution Principles</h2>
+<p>These principles are not rules with enforcement mechanisms — they are the values that explain why the rules exist. Understanding them makes the rules easier to follow and harder to inadvertently violate.</p>
+<hr>
+<p><strong>Precision over completeness.</strong>
+A module that covers three things precisely is better than a module that covers ten things roughly. When you find yourself widening a scope to include adjacent content, stop and ask whether the adjacent content is a gap that deserves its own module. It usually is.</p>
+<p><strong>Structure over prose.</strong>
+The structural specification (<code>module.json</code>, <code>module_links.json</code>, <code>module_session.json</code>) is more important than the prose (<code>module.md</code>). A module with imprecise prose but correct structure can be fixed. A module with correct prose but wrong structure propagates errors silently through every session that invokes it. Get the structure right first.</p>
+<p><strong>Gaps are valuable.</strong>
+Identifying a genuine gap in the module registry is a contribution even before you fill it. If you find a gap, open an issue. The gap identification is useful on its own — it may prompt a different contributor with the right expertise to fill it, or the maintainer to prioritize it.</p>
+<p><strong>The canon protects everyone.</strong>
+The five canon commitments are not restrictions on creativity — they are the shared ground that makes the system coherent across all contributors. A contribution that violates the canon does not expand the system. It creates a fork that is incompatible with the rest of it.</p>
+<p><strong>Ratification is a gift, not a gate.</strong>
+The 14-day observation period and the production session requirement are not bureaucratic delays — they are protection for practitioners who will depend on your module. A module that has been tested in real sessions before ratification is a module you can trust. Ratification is the system's way of saying: this module has been tested and it holds.</p>
+<p><strong>Your session record is your evidence.</strong>
+The best evidence that a module or session contribution is correct is a production session that uses it and returns <code>recommendation: accept</code>. Before submitting anything for ratification, run the session. The output will tell you whether the contribution does what you think it does.</p>
+<hr>
+<p>→ <a href="./book/index">Return to Book Index</a>
+→ <a href="./book/registry">Browse the Module Registry</a>
+→ <a href="./book/sessions">Canonical Session Library</a>
+→ <a href="./book/changelog">Book Changelog</a></p>
+<hr>
+<p><em>TriadicFrameworks — <code>/docs/contributing.md</code></em>
+<em>Authored by Nawder Loswin. AI-augmented authorship. All rights reserved.</em></p>
+<p>🔺 <strong>Triadic Support Path</strong><br>
+<strong>Clarity • Alignment • Lineage</strong></p>
+<hr>
+<p>🔺 <em>Support the Triad</em></p>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/🛠️Contributing%20Module-🧩Workflow%20Lineage%20Active-4c8eda?style=for-the-badge" alt="🛠️Contributing Module | 🧩Workflow & Lineage Active"/></p>
+<p><img width="682" height="682" alt="tft_contributing_module" src="https://github.com/user-attachments/assets/1e8a8a49-1ed5-42b7-95b0-5e3e23853125" /></p>
+  </main>
+</body>
+</html>

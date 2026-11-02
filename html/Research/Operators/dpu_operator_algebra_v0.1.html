@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Operators/dpu_operator_algebra_v0.1.md">
+  <title>DPU‑Ready Operator Algebra (v0.1)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Operators/dpu_operator_algebra_v0.1.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Operators/dpu_operator_algebra_v0.1.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="DPU_Operator_Algebra_" src="https://github.com/user-attachments/assets/f7a6fb4d-61fb-42cc-a1e9-2411d786c563" /></p>
+<h1 id="dpuready-operator-algebra-v01">DPU‑Ready Operator Algebra (v0.1)</h1>
+<h2 id="1-state-space">1. State Space</h2>
+<ul>
+<li>Triads:</li>
+</ul>
+<p>$$\mathcal{T} = {(s,c,u) \mid s+c+u=1}$$</p>
+<ul>
+<li>Asymmetry functional:</li>
+</ul>
+<p>$$A : \mathcal{T} \to [0,1]$$</p>
+<ul>
+<li>Extended state:</li>
+</ul>
+<p>$$S = (T, A(T))$$</p>
+<hr>
+<h2 id="2-core-operators">2. Core Operators</h2>
+<h3 id="continuity-operator">Continuity Operator</h3>
+<p>$$O(T) = (T, A(T))$$</p>
+<h3 id="regime-projections">Regime Projections</h3>
+<p>$$P_s(T)=s,\quad P_c(T)=c,\quad P_u(T)=u$$</p>
+<h3 id="normalization">Normalization</h3>
+<p>$$N(s,c,u) = \frac{1}{s+c+u}(s,c,u)$$</p>
+<hr>
+<h2 id="3-composition-rules">3. Composition Rules</h2>
+<h3 id="sequential-composition">Sequential Composition</h3>
+<p>$$(F_2 \circ F_1)(T) = F_2(F_1(T))$$</p>
+<h3 id="continuitypreserving-transform">Continuity‑Preserving Transform</h3>
+<p>A transform $$F$$ is DPU‑legal iff:
+- $$F(T) \in \mathcal{T}$$
+- $$A(F(T)) &gt; 0$$</p>
+<h3 id="identity">Identity</h3>
+<p>$$I(T) = T$$</p>
+<p>$$O(I(T)) = O(T)$$</p>
+<hr>
+<h2 id="4-dpu-legality-predicate">4. DPU Legality Predicate</h2>
+<p>$$\text{Legal}_{\text{DPU}}(F) \iff \forall T \in \mathcal{T},\ A(T)&gt;0 \Rightarrow A(F(T))&gt;0$$</p>
+<p>This algebra provides:
+- typed state space<br>
+- legal transforms<br>
+- continuity constraints<br>
+- composability<br>
+- identity preservation  </p>
+<p>It is the algebraic backbone of DPU behavior.</p>
+  </main>
+</body>
+</html>

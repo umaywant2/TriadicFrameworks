@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Structural_Detection/reference/operator_surface_cards.md">
+  <title>🎴 Structural Detection — Operator‑Surface Reference Cards (Final, Canonical)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Structural_Detection/reference/operator_surface_cards.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Structural_Detection/reference/operator_surface_cards.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="structural-detection-operatorsurface-reference-cards-final-canonical">🎴 <strong>Structural Detection — Operator‑Surface Reference Cards (Final, Canonical)</strong></h1>
+<h3 id="triadicframeworks-rtt1-operator-surface-cards"><em>TriadicFrameworks • RTT/1 • Operator Surface Cards</em></h3>
+<h3 id="each-operator-has-one-surface-these-cards-show-the-surface"><em>“Each operator has one surface. These cards show the surface.”</em></h3>
+<h1 id="operatorsurface-reference-cards">Operator‑Surface Reference Cards</h1>
+<h3 id="rtt1-structural-detection-module">RTT/1 • Structural Detection Module</h3>
+<h3 id="purpose-provide-minimal-zerodrift-operatorsurface-cards-for-quick-reference">Purpose: Provide minimal, zero‑drift operator‑surface cards for quick reference.</h3>
+<hr>
+<h1 id="card-1-structural-detection-operator">CARD 1 — STRUCTURAL DETECTION OPERATOR</h1>
+<h3 id="surface-motifs-boundaries-anomalies">Surface: <strong>Motifs • Boundaries • Anomalies</strong></h3>
+<p><strong>Inputs:</strong> raw structure<br>
+<strong>Outputs:</strong><br>
+- motif map<br>
+- boundary map<br>
+- anomaly locations  </p>
+<p><strong>Surface Rules:</strong><br>
+- no drift detection<br>
+- no regime inference<br>
+- no continuity mapping  </p>
+<p><strong>Failure Modes:</strong><br>
+- motif misidentification<br>
+- boundary drift<br>
+- anomaly inflation  </p>
+<hr>
+<h1 id="card-2-drift-sense-operator">CARD 2 — DRIFT SENSE OPERATOR</h1>
+<h3 id="surface-drift-vectors-drift-intensity-deformation-class">Surface: <strong>Drift Vectors • Drift Intensity • Deformation Class</strong></h3>
+<p><strong>Inputs:</strong> motifs + boundaries<br>
+<strong>Outputs:</strong><br>
+- drift vectors<br>
+- drift intensity<br>
+- deformation type<br>
+- drift envelope type  </p>
+<p><strong>Surface Rules:</strong><br>
+- cannot reinterpret motifs<br>
+- cannot classify regime<br>
+- cannot map continuity  </p>
+<p><strong>Failure Modes:</strong><br>
+- vector inversion<br>
+- intensity mis-scaling<br>
+- deformation misclassification  </p>
+<hr>
+<h1 id="card-3-regime-awareness-operator">CARD 3 — REGIME AWARENESS OPERATOR</h1>
+<h3 id="surface-regime-class-regime-stability-regime-envelope">Surface: <strong>Regime Class • Regime Stability • Regime Envelope</strong></h3>
+<p><strong>Inputs:</strong> drift profile<br>
+<strong>Outputs:</strong><br>
+- regime class (Formal / Emergent / Chaotic / Hybrid)<br>
+- regime stability<br>
+- regime envelope  </p>
+<p><strong>Surface Rules:</strong><br>
+- cannot reinterpret drift<br>
+- cannot modify drift envelope<br>
+- cannot map continuity  </p>
+<p><strong>Failure Modes:</strong><br>
+- illegal transitions<br>
+- hybrid misclassification<br>
+- stability inversion  </p>
+<hr>
+<h1 id="card-4-continuity-compass-operator">CARD 4 — CONTINUITY COMPASS OPERATOR</h1>
+<h3 id="surface-invariants-anchors-continuity-threads">Surface: <strong>Invariants • Anchors • Continuity Threads</strong></h3>
+<p><strong>Inputs:</strong> regime + drift<br>
+<strong>Outputs:</strong><br>
+- invariant map<br>
+- anchor stability<br>
+- continuity thread map  </p>
+<p><strong>Surface Rules:</strong><br>
+- cannot reinterpret regime<br>
+- cannot override drift<br>
+- cannot produce synthesis  </p>
+<p><strong>Failure Modes:</strong><br>
+- thread inflation<br>
+- invariant collapse misread<br>
+- anchor misalignment  </p>
+<hr>
+<h1 id="card-5-synthesis-triangulation-operator">CARD 5 — SYNTHESIS TRIANGULATION OPERATOR</h1>
+<h3 id="surface-structural-summary-coherence-map-crossmodule-packets">Surface: <strong>Structural Summary • Coherence Map • Cross‑Module Packets</strong></h3>
+<p><strong>Inputs:</strong> all upstream operator outputs<br>
+<strong>Outputs:</strong><br>
+- structural summary<br>
+- coherence‑break classification<br>
+- TEL / FFT / Opacity packets  </p>
+<p><strong>Surface Rules:</strong><br>
+- cannot reinterpret upstream signals<br>
+- cannot introduce new structure<br>
+- must integrate all signals  </p>
+<p><strong>Failure Modes:</strong><br>
+- synthesis contradiction<br>
+- packet misalignment<br>
+- coherence‑break omission  </p>
+<hr>
+<h1 id="card-6-metaoperator-of-constraint">CARD 6 — META‑OPERATOR OF CONSTRAINT</h1>
+<h3 id="surface-operator-boundaries">Surface: <strong>Operator Boundaries</strong></h3>
+<p><strong>Function:</strong><br>
+- prevents operator mixing<br>
+- enforces upstream → downstream flow  </p>
+<p><strong>Failure Mode:</strong><br>
+- backward overwrite  </p>
+<hr>
+<h1 id="card-7-metaoperator-of-propagation">CARD 7 — META‑OPERATOR OF PROPAGATION</h1>
+<h3 id="surface-signal-flow">Surface: <strong>Signal Flow</strong></h3>
+<p><strong>Function:</strong><br>
+- ensures motifs, drift, regime, continuity all reach synthesis  </p>
+<p><strong>Failure Mode:</strong><br>
+- dropped signals  </p>
+<hr>
+<h1 id="card-8-metaoperator-of-coherence">CARD 8 — META‑OPERATOR OF COHERENCE</h1>
+<h3 id="surface-systemlevel-alignment">Surface: <strong>System‑Level Alignment</strong></h3>
+<p><strong>Function:</strong><br>
+- ensures all operators produce a unified structural summary  </p>
+<p><strong>Failure Mode:</strong><br>
+- cross‑operator contradiction  </p>
+<hr>
+<h1 id="card-9-drift-envelope-surface">CARD 9 — DRIFT ENVELOPE SURFACE</h1>
+<h3 id="surface-envelope-geometry-deformation-class">Surface: <strong>Envelope Geometry • Deformation Class</strong></h3>
+<p><strong>Types:</strong><br>
+- Type A (Linear)<br>
+- Type B (Radial)<br>
+- Type C (Fragmented)<br>
+- Type D (Hybrid)  </p>
+<p><strong>Deformations:</strong><br>
+- substitution<br>
+- displacement<br>
+- density‑shift<br>
+- multi‑vector  </p>
+<hr>
+<h1 id="card-10-regimeshift-surface">CARD 10 — REGIME‑SHIFT SURFACE</h1>
+<h3 id="surface-transition-conditions">Surface: <strong>Transition Conditions</strong></h3>
+<p><strong>Transitions:</strong><br>
+- Formal → Emergent<br>
+- Emergent → Chaotic<br>
+- Chaotic → Hybrid<br>
+- Hybrid → Emergent<br>
+- Hybrid → Formal (rare)  </p>
+<p><strong>Drivers:</strong><br>
+- drift intensity<br>
+- drift direction<br>
+- deformation class  </p>
+<hr>
+<h1 id="card-11-continuity-ledger-surface">CARD 11 — CONTINUITY LEDGER SURFACE</h1>
+<h3 id="surface-thread-status-codes">Surface: <strong>Thread Status Codes</strong></h3>
+<p><strong>Codes:</strong><br>
+- S — Stable<br>
+- W — Weakening<br>
+- D — Distorted<br>
+- B — Broken<br>
+- R — Recovered  </p>
+<hr>
+<h1 id="card-12-crossmodule-bridge-surfaces">CARD 12 — CROSS‑MODULE BRIDGE SURFACES</h1>
+<h3 id="tel-surface">TEL Surface</h3>
+<ul>
+<li>nodes  </li>
+<li>vectors  </li>
+<li>stabilizers  </li>
+</ul>
+<h3 id="fft-surface">FFT Surface</h3>
+<ul>
+<li>envelope class  </li>
+<li>spectral deformation  </li>
+</ul>
+<h3 id="opacity-surface">Opacity Surface</h3>
+<ul>
+<li>boundary strength  </li>
+<li>occlusion vectors  </li>
+</ul>
+<hr>
+<h1 id="card-13-coherencebreak-surface">CARD 13 — COHERENCE‑BREAK SURFACE</h1>
+<h3 id="types">Types</h3>
+<ul>
+<li>Type 1: invariant collapse  </li>
+<li>Type 2: boundary fracture  </li>
+<li>Type 3: multi‑layer break  </li>
+<li>Type 4: hybrid oscillation  </li>
+</ul>
+<hr>
+<h1 id="card-14-packet-formats">CARD 14 — PACKET FORMATS</h1>
+<h3 id="synthesis_packet">SYNTHESIS_PACKET</h3>
+<h3 id="drift_envelope_packet">DRIFT_ENVELOPE_PACKET</h3>
+<h3 id="regime_shift_packet">REGIME_SHIFT_PACKET</h3>
+<h3 id="continuity_ledger_packet">CONTINUITY_LEDGER_PACKET</h3>
+<h3 id="stress_grid_packet">STRESS_GRID_PACKET</h3>
+<p>(All packets must be zero‑drift and cross‑module consistent.)</p>
+<hr>
+<h1 id="end-of-operatorsurface-reference-cards">END OF OPERATOR‑SURFACE REFERENCE CARDS</h1>
+<hr>
+<h1 id="these-operatorsurface-reference-cards-are">✔️ These Operator‑Surface Reference Cards are:</h1>
+<ul>
+<li>fully canonical  </li>
+<li>zero drift  </li>
+<li>aligned with RTT/1  </li>
+<li>consistent with the Operator‑Family Alignment Map, Meta‑Operator Field Guide, Drift‑Envelope Atlas, Regime‑Shift Manual, and Stress‑Test Suite  </li>
+<li>ready to drop into <code>/docs/Structural_Detection/reference/operator_surface_cards.md</code></li>
+</ul>
+  </main>
+</body>
+</html>
