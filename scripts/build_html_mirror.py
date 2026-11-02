@@ -307,7 +307,7 @@ def rewrite_public_hostname(text: str) -> str:
         SOURCE_HOSTNAME,
         PUBLIC_HOSTNAME,
     )
-
+    
 
 def rewrite_index_doc_map(content: str) -> str:
     """
@@ -766,26 +766,21 @@ def transform_text_asset(
 
     All copied HTML and JSON files receive the hostname rewrite.
 
-    Copied files specifically named index.html also receive the
-    DOC_MAP Markdown-target rewrite.
+    Copied files specifically named index.html also receive:
+    - DOC_MAP Markdown-target rewriting.
+    - README.md fallback rewriting.
     """
     content = rewrite_public_hostname(
         content
     )
 
-    if (
-        lowered.startswith(
-            (
-                "http://",
-                "https://",
-                "mailto:",
-                "tel:",
-                "data:",
-            )
+    if source.name.lower() == "index.html":
+        content = rewrite_index_navigation(
+            content
         )
-        or url.startswith(("#", "//"))
-    ):
-        return url
+
+    return content
+    
 
 def copy_asset(
     source: Path,
