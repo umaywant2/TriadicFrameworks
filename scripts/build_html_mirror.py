@@ -406,6 +406,28 @@ def rewrite_html_links(rendered_html: str) -> str:
     )
 
 
+def rewrite_index_navigation(content: str) -> str:
+    """
+    Rewrite Markdown targets used by copied index.html navigation pages.
+
+    - Rewrites .md/.markdown targets inside const DOC_MAP.
+    - Rewrites the default README.md fallback to README.html.
+    """
+    content = rewrite_index_doc_map(content)
+
+    content = content.replace(
+        "loadDoc('README.md');",
+        "loadDoc('README.html');",
+    )
+
+    content = content.replace(
+        'loadDoc("README.md");',
+        'loadDoc("README.html");',
+    )
+
+    return content
+
+
 # ---------------------------------------------------------------------------
 # Source discovery and target mapping
 # ---------------------------------------------------------------------------
@@ -751,10 +773,8 @@ def transform_text_asset(
         content
     )
 
-    if source.name.lower() == "index.html":
-        content = rewrite_index_doc_map(
-            content
-        )
+   if source.name.lower() == "index.html":
+        content = rewrite_index_navigation(content)
 
     return content
 
