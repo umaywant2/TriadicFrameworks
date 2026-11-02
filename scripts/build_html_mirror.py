@@ -773,7 +773,7 @@ def transform_text_asset(
         content
     )
 
-   if source.name.lower() == "index.html":
+    if source.name.lower() == "index.html":
         content = rewrite_index_navigation(content)
 
     return content
