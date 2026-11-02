@@ -6,7 +6,7 @@
 # 🌐 Site‑Map | TriadicFrameworks  
 *Structural, harmonic, and substrate‑aligned overview*
 
-_Alternate Site_ 🥈 [HTML mirror online](https://docs.triadicframeworks.org) 
+_Alternate Site_ 🥈 [HTML mirror online](https://docs.triadicframeworks.org/sitemap.html) 
 
 _Inventory refresh: **2026-09-02** · **410** public URLs_
 
