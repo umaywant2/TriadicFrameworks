@@ -13,4 +13,7 @@ echo No output means it compiled successfully. Then:
 echo python -m pytest -q
 echo.
 echo And finally our mirror invariant:
-echo python scripts\build_html_mirror.py --check*
+echo python scripts\build_html_mirror.py --check
+echo.
+echo.
+echo python -m pytest tests\test_build_html_mirror.py -q
