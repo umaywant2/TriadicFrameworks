@@ -146,3 +146,21 @@ const DOC_MAP = {
     assert "'/docs/Foo/README.html'" in result
     assert "'/docs/Foo/README.md.backup'" in result
     assert "'README.md is canonical'" in result
+
+
+def test_index_navigation_rewrites_readme_fallback():
+    source = """
+function loadFromHash() {
+    const key = window.location.hash.replace('#', '');
+    if (DOC_MAP[key]) {
+        loadDoc(DOC_MAP[key]);
+    } else {
+        loadDoc('README.md');
+    }
+}
+"""
+
+    result = mirror.rewrite_index_navigation(source)
+
+    assert "loadDoc('README.html');" in result
+    assert "loadDoc('README.md');" not in result
