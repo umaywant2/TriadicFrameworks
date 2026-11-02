@@ -773,11 +773,19 @@ def transform_text_asset(
         content
     )
 
-    if source.name.lower() == "index.html":
-        content = rewrite_index_navigation(content)
-
-    return content
-
+    if (
+        lowered.startswith(
+            (
+                "http://",
+                "https://",
+                "mailto:",
+                "tel:",
+                "data:",
+            )
+        )
+        or url.startswith(("#", "//"))
+    ):
+        return url
 
 def copy_asset(
     source: Path,
