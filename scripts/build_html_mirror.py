@@ -26,6 +26,15 @@ are rewritten to:
     docs.triadicframeworks.org
 
 inside rendered Markdown, copied HTML, and copied JSON files.
+
+For copied index.html navigation files, Markdown targets inside:
+    const DOC_MAP = { ... };
+
+are rewritten from:
+    .md
+to:
+    .html
+
 SVG files are preserved byte-for-byte.
 
 Usage:
@@ -240,7 +249,11 @@ def strip_front_matter(text: str) -> tuple[str, dict[str, str]]:
     metadata: dict[str, str] = {}
 
     for line in raw_front_matter.splitlines():
-        if not line.strip() or line.lstrip().startswith("#") or ":" not in line:
+        if (
+            not line.strip()
+            or line.lstrip().startswith("#")
+            or ":" not in line
+        ):
             continue
 
         key, value = line.split(":", 1)
@@ -273,10 +286,57 @@ _HTML_URL_ATTR_RE = re.compile(
     flags=re.IGNORECASE,
 )
 
+_DOC_MAP_RE = re.compile(
+    r"(?P<doc_map>"
+    r"\bconst\s+DOC_MAP\s*=\s*\{"
+    r".*?"
+    r"\}\s*;"
+    r")",
+    flags=re.DOTALL,
+)
+
+_DOC_MAP_MARKDOWN_TARGET_RE = re.compile(
+    r"\.(?:md|markdown)(?=['\"])",
+    flags=re.IGNORECASE,
+)
+
 
 def rewrite_public_hostname(text: str) -> str:
     """Rewrite the canonical hostname for the published HTML mirror."""
-    return text.replace(SOURCE_HOSTNAME, PUBLIC_HOSTNAME)
+    return text.replace(
+        SOURCE_HOSTNAME,
+        PUBLIC_HOSTNAME,
+    )
+
+
+def rewrite_index_doc_map(content: str) -> str:
+    """
+    Rewrite Markdown targets inside a copied index.html DOC_MAP.
+
+    Only the const DOC_MAP section is modified.
+
+    Examples:
+        '/docs/Foo/README.md'
+            -> '/docs/Foo/README.html'
+
+        "/docs/Foo/index.markdown"
+            -> "/docs/Foo/index.html"
+
+    Markdown references outside DOC_MAP are left untouched.
+    """
+
+    def replace_doc_map(match: re.Match[str]) -> str:
+        doc_map = match.group("doc_map")
+
+        return _DOC_MAP_MARKDOWN_TARGET_RE.sub(
+            ".html",
+            doc_map,
+        )
+
+    return _DOC_MAP_RE.sub(
+        replace_doc_map,
+        content,
+    )
 
 
 def rewrite_markdown_url(url: str) -> str:
@@ -287,27 +347,42 @@ def rewrite_markdown_url(url: str) -> str:
     lowered = url.lower()
 
     if (
-        lowered.startswith(("http://", "https://", "mailto:", "tel:", "data:"))
+        lowered.startswith(
+            (
+                "http://",
+                "https://",
+                "mailto:",
+                "tel:",
+                "data:",
+            )
+        )
         or url.startswith(("#", "//"))
     ):
         return url
 
     parts = urlsplit(url)
     path = parts.path
+    lowered_path = path.lower()
 
-    if path.lower().endswith("/index.md"):
+    if lowered_path.endswith("/index.md"):
         path = path[:-9] + "/index_md.html"
-    elif path.lower().endswith("/index.markdown"):
+    elif lowered_path.endswith("/index.markdown"):
         path = path[:-15] + "/index_md.html"
-    elif path.lower().endswith(".md"):
+    elif lowered_path.endswith(".md"):
         path = path[:-3] + ".html"
-    elif path.lower().endswith(".markdown"):
+    elif lowered_path.endswith(".markdown"):
         path = path[:-9] + ".html"
     else:
         return url
 
     return urlunsplit(
-        (parts.scheme, parts.netloc, path, parts.query, parts.fragment)
+        (
+            parts.scheme,
+            parts.netloc,
+            path,
+            parts.query,
+            parts.fragment,
+        )
     )
 
 
@@ -315,55 +390,90 @@ def rewrite_html_links(rendered_html: str) -> str:
     """Rewrite local .md/.markdown links in generated href/src attributes."""
 
     def replace(match: re.Match[str]) -> str:
-        rewritten = rewrite_markdown_url(match.group("url"))
-        return match.group("prefix") + rewritten + match.group("suffix")
+        rewritten = rewrite_markdown_url(
+            match.group("url")
+        )
 
-    return _HTML_URL_ATTR_RE.sub(replace, rendered_html)
+        return (
+            match.group("prefix")
+            + rewritten
+            + match.group("suffix")
+        )
+
+    return _HTML_URL_ATTR_RE.sub(
+        replace,
+        rendered_html,
+    )
 
 
 # ---------------------------------------------------------------------------
 # Source discovery and target mapping
 # ---------------------------------------------------------------------------
 
-
-def discover_files(suffixes: set[str]) -> list[Path]:
+def discover_files(
+    suffixes: set[str],
+) -> list[Path]:
     """Return matching files under /docs in deterministic order."""
     files = [
         path
         for path in DOCS_ROOT.rglob("*")
-        if path.is_file() and path.suffix.lower() in suffixes
+        if path.is_file()
+        and path.suffix.lower() in suffixes
     ]
 
     return sorted(
         files,
-        key=lambda path: path.relative_to(DOCS_ROOT).as_posix().lower(),
+        key=lambda path: (
+            path.relative_to(DOCS_ROOT)
+            .as_posix()
+            .lower()
+        ),
     )
 
 
 def discover_markdown_files() -> list[Path]:
-    return discover_files(MARKDOWN_SUFFIXES)
+    """Return all Markdown sources under /docs."""
+    return discover_files(
+        MARKDOWN_SUFFIXES
+    )
 
 
 def discover_asset_files() -> list[Path]:
-    return discover_files(COPY_SUFFIXES)
+    """Return all copied HTML, JSON, and SVG assets under /docs."""
+    return discover_files(
+        COPY_SUFFIXES
+    )
 
 
 def target_for_markdown(source: Path) -> Path:
     """Map a Markdown source to its final HTML publication target."""
-    relative = source.relative_to(DOCS_ROOT)
+    relative = source.relative_to(
+        DOCS_ROOT
+    )
 
     if relative == Path("README.md"):
         return HTML_ROOT / "index.html"
 
-    if relative.name.lower() in {"index.md", "index.markdown"}:
-        return (HTML_ROOT / relative).with_name("index_md.html")
+    if relative.name.lower() in {
+        "index.md",
+        "index.markdown",
+    }:
+        return (
+            HTML_ROOT
+            / relative
+        ).with_name("index_md.html")
 
-    return (HTML_ROOT / relative).with_suffix(".html")
+    return (
+        HTML_ROOT
+        / relative
+    ).with_suffix(".html")
 
 
 def target_for_asset(source: Path) -> Path:
     """Map a copied HTML/JSON/SVG source to its publication target."""
-    relative = source.relative_to(DOCS_ROOT)
+    relative = source.relative_to(
+        DOCS_ROOT
+    )
 
     if relative == Path("index.html"):
         return HTML_ROOT / "repo-index.html"
@@ -385,10 +495,11 @@ def build_target_map(
 
         if resolved in owners:
             raise ValueError(
-                f"Target collision: {source} and {owners[resolved]} -> {target}"
+                "Target collision: "
+                f"{source} and {owners[resolved]} "
+                f"-> {target}"
             )
 
-        target_map[source] = target
         owners[resolved] = source
 
     for source in markdown_sources:
@@ -397,7 +508,9 @@ def build_target_map(
 
         if resolved in owners:
             raise ValueError(
-                f"Target collision: {source} and {owners[resolved]} -> {target}"
+                "Target collision: "
+                f"{source} and {owners[resolved]} "
+                f"-> {target}"
             )
 
         target_map[source] = target
@@ -406,8 +519,13 @@ def build_target_map(
     return target_map
 
 
-def expected_output_files(target_map: dict[Path, Path]) -> set[Path]:
-    return {target.resolve() for target in target_map.values()}
+def expected_output_files(
+    target_map: dict[Path, Path],
+) -> set"""Return the complete set of expected mirror output paths."""
+    return {
+        target.resolve()
+        for target in target_map.values()
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -418,8 +536,14 @@ _ATX_HEADING_RE = re.compile(
     r"^\s{0,3}#{1,6}\s+(.+?)\s*#*\s*$",
     flags=re.MULTILINE,
 )
-_MARKDOWN_LINK_RE = re.compile(r"!?\[([^\]]+)\]\([^)]*\)")
-_MARKDOWN_INLINE_RE = re.compile(r"[*_`~]")
+
+_MARKDOWN_LINK_RE = re.compile(
+    r"!?\[([^\]]+)\]\([^)]*\)"
+)
+
+_MARKDOWN_INLINE_RE = re.compile(
+    r"[*_`~]"
+)
 
 
 def title_from_markdown(
@@ -433,12 +557,22 @@ def title_from_markdown(
     if metadata_title:
         return metadata_title.strip()
 
-    heading = _ATX_HEADING_RE.search(markdown_text)
+    heading = _ATX_HEADING_RE.search(
+        markdown_text
+    )
 
     if heading:
         title = heading.group(1)
-        title = _MARKDOWN_LINK_RE.sub(lambda match: match.group(1), title)
-        title = _MARKDOWN_INLINE_RE.sub("", title).strip()
+
+        title = _MARKDOWN_LINK_RE.sub(
+            lambda match: match.group(1),
+            title,
+        )
+
+        title = _MARKDOWN_INLINE_RE.sub(
+            "",
+            title,
+        ).strip()
 
         if title:
             return title
@@ -447,7 +581,10 @@ def title_from_markdown(
 
 
 def render_markdown(source_text: str) -> str:
-    source_text = rewrite_public_hostname(source_text)
+    """Render Markdown into publication-ready HTML."""
+    source_text = rewrite_public_hostname(
+        source_text
+    )
 
     md = markdown.Markdown(
         extensions=MARKDOWN_EXTENSIONS,
@@ -455,30 +592,73 @@ def render_markdown(source_text: str) -> str:
         output_format="html5",
     )
 
-    rendered = md.convert(source_text)
-    return rewrite_html_links(rendered)
+    rendered = md.convert(
+        source_text
+    )
+
+    return rewrite_html_links(
+        rendered
+    )
 
 
-def sitemap_href_for_target(target: Path) -> str:
-    """Return a relative URL from a generated page to /html/sitemap.html."""
-    relative = os.path.relpath(SITEMAP_TARGET, start=target.parent)
+def sitemap_href_for_target(
+    target: Path,
+) -> str:
+    """Return a relative URL from a generated page to sitemap.html."""
+    relative = os.path.relpath(
+        SITEMAP_TARGET,
+        start=target.parent,
+    )
+
     return Path(relative).as_posix()
 
 
-def build_markdown_document(source: Path, target: Path) -> str:
-    source_text = source.read_text(encoding="utf-8", errors="strict")
-    markdown_body, metadata = strip_front_matter(source_text)
-    title = title_from_markdown(markdown_body, metadata, source)
-    rendered_body = render_markdown(markdown_body)
+def build_markdown_document(
+    source: Path,
+    target: Path,
+) -> str:
+    """Build the complete HTML document for one Markdown source."""
+    source_text = source.read_text(
+        encoding="utf-8",
+        errors="strict",
+    )
+
+    markdown_body, metadata = strip_front_matter(
+        source_text
+    )
+
+    title = title_from_markdown(
+        markdown_body,
+        metadata,
+        source,
+    )
+
+    rendered_body = render_markdown(
+        markdown_body
+    )
 
     canonical_source = (
-        Path("/docs") / source.relative_to(DOCS_ROOT)
+        Path("/docs")
+        / source.relative_to(DOCS_ROOT)
     ).as_posix()
 
+    sitemap_href = sitemap_href_for_target(
+        target
+    )
+
     return HTML_TEMPLATE.format(
-        source_path=html.escape(canonical_source, quote=True),
-        title=html.escape(title, quote=True),
-        sitemap_href=html.escape(sitemap_href_for_target(target), quote=True),
+        source_path=html.escape(
+            canonical_source,
+            quote=True,
+        ),
+        title=html.escape(
+            title,
+            quote=True,
+        ),
+        sitemap_href=html.escape(
+            sitemap_href,
+            quote=True,
+        ),
         body=rendered_body,
     )
 
@@ -487,24 +667,46 @@ def build_markdown_document(source: Path, target: Path) -> str:
 # File writing and copying
 # ---------------------------------------------------------------------------
 
-
-def write_text_if_changed(target: Path, content: str, *, check: bool) -> str:
+def write_text_if_changed(
+    target: Path,
+    content: str,
+    *,
+    check: bool,
+) -> str:
+    """Write UTF-8 text only when its target content differs."""
     existing: str | None = None
 
     if target.exists():
-        existing = target.read_text(encoding="utf-8", errors="strict")
+        existing = target.read_text(
+            encoding="utf-8",
+            errors="strict",
+        )
 
     if existing == content:
         return "unchanged"
 
     if not check:
-        target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(content, encoding="utf-8", newline="\n")
+        target.parent.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
+        target.write_text(
+            content,
+            encoding="utf-8",
+            newline="\n",
+        )
 
     return "changed"
 
 
-def write_bytes_if_changed(target: Path, content: bytes, *, check: bool) -> str:
+def write_bytes_if_changed(
+    target: Path,
+    content: bytes,
+    *,
+    check: bool,
+) -> str:
+    """Write binary content only when its target content differs."""
     existing: bytes | None = None
 
     if target.exists():
@@ -514,42 +716,97 @@ def write_bytes_if_changed(target: Path, content: bytes, *, check: bool) -> str:
         return "unchanged"
 
     if not check:
-        target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_bytes(content)
+        target.parent.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
+        target.write_bytes(
+            content
+        )
 
     return "changed"
 
 
-def copy_asset(source: Path, target: Path, *, check: bool) -> str:
+def transform_text_asset(
+    source: Path,
+    content: str,
+) -> str:
+    """
+    Apply publication transformations to a copied text asset.
+
+    All copied HTML and JSON files receive the hostname rewrite.
+
+    Copied files specifically named index.html also receive the
+    DOC_MAP Markdown-target rewrite.
+    """
+    content = rewrite_public_hostname(
+        content
+    )
+
+    if source.name.lower() == "index.html":
+        content = rewrite_index_doc_map(
+            content
+        )
+
+    return content
+
+
+def copy_asset(
+    source: Path,
+    target: Path,
+    *,
+    check: bool,
+) -> str:
     """Copy one support asset, applying publication rewriting where needed."""
     suffix = source.suffix.lower()
 
     if suffix in TEXT_COPY_SUFFIXES:
-        content = source.read_text(encoding="utf-8", errors="strict")
-        content = rewrite_public_hostname(content)
-        return write_text_if_changed(target, content, check=check)
+        content = source.read_text(
+            encoding="utf-8",
+            errors="strict",
+        )
 
-    return write_bytes_if_changed(target, source.read_bytes(), check=check)
+        content = transform_text_asset(
+            source,
+            content,
+        )
+
+        return write_text_if_changed(
+            target,
+            content,
+            check=check,
+        )
+
+    return write_bytes_if_changed(
+        target,
+        source.read_bytes(),
+        check=check,
+    )
 
 
 # ---------------------------------------------------------------------------
 # Orphan reconciliation and validation
 # ---------------------------------------------------------------------------
 
-
-def discover_managed_outputs() -> list[Path]:
+def discover_managed_outputs() -> list"""Return all managed files currently present under /html."""
     if not HTML_ROOT.exists():
         return []
 
     outputs = [
         path
         for path in HTML_ROOT.rglob("*")
-        if path.is_file() and path.suffix.lower() in MANAGED_SUFFIXES
+        if path.is_file()
+        and path.suffix.lower() in MANAGED_SUFFIXES
     ]
 
     return sorted(
         outputs,
-        key=lambda path: path.relative_to(HTML_ROOT).as_posix().lower(),
+        key=lambda path: (
+            path.relative_to(HTML_ROOT)
+            .as_posix()
+            .lower()
+        ),
     )
 
 
@@ -559,6 +816,7 @@ def remove_orphans(
     check: bool,
     verbose: bool,
 ) -> int:
+    """Remove or report managed outputs that have no current source."""
     removed = 0
 
     for output_file in discover_managed_outputs():
@@ -566,27 +824,47 @@ def remove_orphans(
             continue
 
         removed += 1
-        relative = output_file.relative_to(REPO_ROOT)
+
+        relative = output_file.relative_to(
+            REPO_ROOT
+        )
 
         if verbose or check:
-            action = "ORPHAN" if check else "REMOVE"
-            print(f"[{action}] {relative.as_posix()}")
+            action = (
+                "ORPHAN"
+                if check
+                else "REMOVE"
+            )
+
+            print(
+                f"[{action}] "
+                f"{relative.as_posix()}"
+            )
 
         if not check:
             output_file.unlink()
 
     if not check:
-        remove_empty_directories(HTML_ROOT)
+        remove_empty_directories(
+            HTML_ROOT
+        )
 
     return removed
 
 
-def remove_empty_directories(root: Path) -> None:
+def remove_empty_directories(
+    root: Path,
+) -> None:
+    """Remove empty generated directories after orphan cleanup."""
     if not root.exists():
         return
 
     directories = sorted(
-        (path for path in root.rglob("*") if path.is_dir()),
+        (
+            path
+            for path in root.rglob("*")
+            if path.is_dir()
+        ),
         key=lambda path: len(path.parts),
         reverse=True,
     )
@@ -595,52 +873,290 @@ def remove_empty_directories(root: Path) -> None:
         try:
             directory.rmdir()
         except OSError:
+            # Directory is not empty.
             pass
 
 
-def validate_mirror(expected: set[Path]) -> tuple[list[Path], list[Path]]:
-    actual = {path.resolve() for path in discover_managed_outputs()}
+def validate_mirror(
+    expected: set[Path],
+) -> tuple[list[Path], list[Path]]:
+    """Return missing and orphaned managed outputs."""
+    actual = {
+        path.resolve()
+        for path in discover_managed_outputs()
+    }
 
     missing = sorted(
         expected - actual,
-        key=lambda path: path.as_posix().lower(),
+        key=lambda path: (
+            path.as_posix().lower()
+        ),
     )
+
     orphaned = sorted(
         actual - expected,
-        key=lambda path: path.as_posix().lower(),
+        key=lambda path: (
+            path.as_posix().lower()
+        ),
     )
 
     return missing, orphaned
 
 
 # ---------------------------------------------------------------------------
+# Processing helpers
+# ---------------------------------------------------------------------------
+
+def record_result(
+    *,
+    result: str,
+    action: str,
+    source: Path,
+    target: Path,
+    stats: BuildStats,
+    check: bool,
+    verbose: bool,
+) -> None:
+    """Record and optionally print one copy or render operation."""
+    source_rel = source.relative_to(
+        REPO_ROOT
+    )
+
+    target_rel = target.relative_to(
+        REPO_ROOT
+    )
+
+    if result == "changed":
+        stats.changed += 1
+
+        if verbose or check:
+            displayed_action = (
+                "STALE"
+                if check
+                else action
+            )
+
+            print(
+                f"[{displayed_action}] "
+                f"{source_rel.as_posix()} -> "
+                f"{target_rel.as_posix()}"
+            )
+
+        return
+
+    stats.unchanged += 1
+
+    if verbose:
+        print(
+            "[OK]    "
+            f"{source_rel.as_posix()} -> "
+            f"{target_rel.as_posix()}"
+        )
+
+
+def process_assets(
+    asset_sources: Iterable[Path],
+    target_map: dict[Path, Path],
+    stats: BuildStats,
+    *,
+    check: bool,
+    verbose: bool,
+) -> None:
+    """Copy all support assets into the HTML mirror."""
+    for source in asset_sources:
+        target = target_map[source]
+
+        try:
+            result = copy_asset(
+                source,
+                target,
+                check=check,
+            )
+
+            record_result(
+                result=result,
+                action="COPY",
+                source=source,
+                target=target,
+                stats=stats,
+                check=check,
+                verbose=verbose,
+            )
+
+        except Exception as exc:
+            stats.errors += 1
+
+            source_rel = source.relative_to(
+                REPO_ROOT
+            )
+
+            print(
+                f"[ERROR] "
+                f"{source_rel.as_posix()}: "
+                f"{exc}",
+                file=sys.stderr,
+            )
+
+
+def process_markdown(
+    markdown_sources: Iterable[Path],
+    target_map: dict[Path, Path],
+    stats: BuildStats,
+    *,
+    check: bool,
+    verbose: bool,
+) -> None:
+    """Render all Markdown sources into the HTML mirror."""
+    for source in markdown_sources:
+        target = target_map[source]
+
+        try:
+            content = build_markdown_document(
+                source,
+                target,
+            )
+
+            result = write_text_if_changed(
+                target,
+                content,
+                check=check,
+            )
+
+            record_result(
+                result=result,
+                action="WRITE",
+                source=source,
+                target=target,
+                stats=stats,
+                check=check,
+                verbose=verbose,
+            )
+
+        except Exception as exc:
+            stats.errors += 1
+
+            source_rel = source.relative_to(
+                REPO_ROOT
+            )
+
+            print(
+                f"[ERROR] "
+                f"{source_rel.as_posix()}: "
+                f"{exc}",
+                file=sys.stderr,
+            )
+
+
+# ---------------------------------------------------------------------------
+# Status reporting
+# ---------------------------------------------------------------------------
+
+def print_summary(
+    stats: BuildStats,
+) -> None:
+    """Print the final mirror processing summary."""
+    print()
+    print("Mirror Summary")
+    print("-" * 32)
+    print(
+        f"Markdown sources : "
+        f"{stats.markdown_sources}"
+    )
+    print(
+        f"Copied assets    : "
+        f"{stats.asset_sources}"
+    )
+    print(
+        f"Files changed    : "
+        f"{stats.changed}"
+    )
+    print(
+        f"Files unchanged  : "
+        f"{stats.unchanged}"
+    )
+    print(
+        f"Orphan files     : "
+        f"{stats.removed}"
+    )
+    print(
+        f"Processing errors: "
+        f"{stats.errors}"
+    )
+
+
+def print_validation_paths(
+    missing: Iterable[Path],
+    orphaned: Iterable[Path],
+) -> None:
+    """Print missing and orphaned paths relative to the repository."""
+    for path in missing:
+        print(
+            "[MISSING] "
+            + path.relative_to(
+                REPO_ROOT
+            ).as_posix()
+        )
+
+    for path in orphaned:
+        print(
+            "[ORPHAN] "
+            + path.relative_to(
+                REPO_ROOT
+            ).as_posix()
+        )
+
+
+# ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
 
-
-def build(*, check: bool, verbose: bool) -> int:
+def build(
+    *,
+    check: bool,
+    verbose: bool,
+) -> int:
+    """Build or validate the complete docs-to-HTML mirror."""
     if not DOCS_ROOT.is_dir():
         print(
-            f"ERROR: docs directory does not exist: {DOCS_ROOT}",
+            (
+                "ERROR: docs directory does not exist: "
+                f"{DOCS_ROOT}"
+            ),
             file=sys.stderr,
         )
+
         return 2
 
     markdown_sources = discover_markdown_files()
     asset_sources = discover_asset_files()
 
     try:
-        target_map = build_target_map(markdown_sources, asset_sources)
+        target_map = build_target_map(
+            markdown_sources,
+            asset_sources,
+        )
     except ValueError as exc:
-        print(f"ERROR: {exc}", file=sys.stderr)
+        print(
+            f"ERROR: {exc}",
+            file=sys.stderr,
+        )
+
         return 2
 
-    expected = expected_output_files(target_map)
+    expected = expected_output_files(
+        target_map
+    )
+
     stats = BuildStats(
         markdown_sources=len(markdown_sources),
         asset_sources=len(asset_sources),
     )
-    mode = "CHECK" if check else "BUILD"
+
+    mode = (
+        "CHECK"
+        if check
+        else "BUILD"
+    )
 
     print()
     print("TriadicFrameworks HTML Mirror")
@@ -650,64 +1166,22 @@ def build(*, check: bool, verbose: bool) -> int:
     print(f"Mirror            : {HTML_ROOT}")
     print()
 
-    # Copy support assets first so Markdown generation is the final projection pass.
-    for source in asset_sources:
-        target = target_map[source]
-        source_rel = source.relative_to(REPO_ROOT)
-        target_rel = target.relative_to(REPO_ROOT)
+    # Copy support assets first. Markdown rendering is the final projection.
+    process_assets(
+        asset_sources,
+        target_map,
+        stats,
+        check=check,
+        verbose=verbose,
+    )
 
-        try:
-            result = copy_asset(source, target, check=check)
-
-            if result == "changed":
-                stats.changed += 1
-                if verbose or check:
-                    action = "STALE" if check else "COPY"
-                    print(
-                        f"[{action}] {source_rel.as_posix()} -> "
-                        f"{target_rel.as_posix()}"
-                    )
-            else:
-                stats.unchanged += 1
-                if verbose:
-                    print(
-                        f"[OK]    {source_rel.as_posix()} -> "
-                        f"{target_rel.as_posix()}"
-                    )
-
-        except Exception as exc:
-            stats.errors += 1
-            print(f"[ERROR] {source_rel.as_posix()}: {exc}", file=sys.stderr)
-
-    # Render Markdown after support assets have been copied.
-    for source in markdown_sources:
-        target = target_map[source]
-        source_rel = source.relative_to(REPO_ROOT)
-        target_rel = target.relative_to(REPO_ROOT)
-
-        try:
-            content = build_markdown_document(source, target)
-            result = write_text_if_changed(target, content, check=check)
-
-            if result == "changed":
-                stats.changed += 1
-                if verbose or check:
-                    action = "STALE" if check else "WRITE"
-                    print(
-                        f"[{action}] {source_rel.as_posix()} -> "
-                        f"{target_rel.as_posix()}"
-                    )
-            else:
-                stats.unchanged += 1
-                if verbose:
-                    print(
-                        f"[OK]    {source_rel.as_posix()} -> "
-                        f"{target_rel.as_posix()}"
-                    )
-
-        except Exception as exc:
-            stats.errors += 1
-            print(f"[ERROR] {source_rel.as_posix()}: {exc}", file=sys.stderr)
+    process_markdown(
+        markdown_sources,
+        target_map,
+        stats,
+        check=check,
+        verbose=verbose,
+    )
 
     stats.removed = remove_orphans(
         expected,
@@ -715,43 +1189,55 @@ def build(*, check: bool, verbose: bool) -> int:
         verbose=verbose,
     )
 
-    print()
-    print("Mirror Summary")
-    print("-" * 32)
-    print(f"Markdown sources : {stats.markdown_sources}")
-    print(f"Copied assets    : {stats.asset_sources}")
-    print(f"Files changed    : {stats.changed}")
-    print(f"Files unchanged  : {stats.unchanged}")
-    print(f"Orphan files     : {stats.removed}")
-    print(f"Processing errors: {stats.errors}")
+    print_summary(
+        stats
+    )
 
     if stats.errors:
         print()
         print("MIRROR STATUS: ERROR")
         return 1
 
-    if check and (stats.changed or stats.removed):
+    if check and (
+        stats.changed
+        or stats.removed
+    ):
         print()
         print("MIRROR STATUS: OUT OF SYNC")
-        print("Run scripts/build_html_mirror.py to reconcile the mirror.")
+        print(
+            "Run scripts/build_html_mirror.py "
+            "to reconcile the mirror."
+        )
+
         return 1
 
-    missing, orphaned = validate_mirror(expected)
+    missing, orphaned = validate_mirror(
+        expected
+    )
 
     if missing or orphaned:
         print()
-        print("MIRROR STATUS: OUT OF SYNC" if check else "MIRROR STATUS: ERROR")
 
-        for path in missing:
-            print("[MISSING] " + path.relative_to(REPO_ROOT).as_posix())
+        status = (
+            "OUT OF SYNC"
+            if check
+            else "ERROR"
+        )
 
-        for path in orphaned:
-            print("[ORPHAN] " + path.relative_to(REPO_ROOT).as_posix())
+        print(
+            f"MIRROR STATUS: {status}"
+        )
+
+        print_validation_paths(
+            missing,
+            orphaned,
+        )
 
         return 1
 
     print()
     print("MIRROR STATUS: OK")
+
     return 0
 
 
@@ -759,32 +1245,43 @@ def build(*, check: bool, verbose: bool) -> int:
 # CLI
 # ---------------------------------------------------------------------------
 
-
 def parse_args() -> argparse.Namespace:
+    """Parse command-line arguments."""
     parser = argparse.ArgumentParser(
         description=(
-            "Build and validate the TriadicFrameworks /docs -> /html mirror."
+            "Build and validate the "
+            "TriadicFrameworks "
+            "/docs -> /html mirror."
         )
     )
+
     parser.add_argument(
         "--check",
         action="store_true",
         help=(
-            "Do not modify files. Exit nonzero if generated or copied content "
-            "would change, or if orphaned mirror files exist."
+            "Do not modify files. Exit nonzero if generated "
+            "or copied content would change, or if orphaned "
+            "mirror files exist."
         ),
     )
+
     parser.add_argument(
         "--verbose",
         action="store_true",
         help="Print each mirror operation.",
     )
+
     return parser.parse_args()
 
 
 def main() -> int:
+    """Run the HTML mirror command."""
     args = parse_args()
-    return build(check=args.check, verbose=args.verbose)
+
+    return build(
+        check=args.check,
+        verbose=args.verbose,
+    )
 
 
 if __name__ == "__main__":
