@@ -58,4 +58,4 @@ TriadicFrameworks is archived and curated through the [Zenodo VST community](htt
 
 Use the [documentation site](https://docs.triadicframeworks.org) to browse the complete canon, or visit the [GitHub repository](https://github.com/umaywant2/TriadicFrameworks) for source code, examples, and active development.
 
-###### #CoherenceBeforeCommerce — Unofficial footnote: We would only sell to Microsoft... unless they pass. Until then, carry on. :)
+###### ⛩️ #CoherenceBeforeCommerce — Unofficial footnote: We would only sell to Microsoft... unless they pass. Until then, carry on. :)
