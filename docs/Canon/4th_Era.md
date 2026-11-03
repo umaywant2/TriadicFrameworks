@@ -1,5 +1,7 @@
 <img width="1194" height="672" alt="Perspective_Primer_" src="https://github.com/user-attachments/assets/d3d3f8aa-6295-4ce9-9385-a469c6b562eb" />
 
+# ⛩️ 4th Era
+
 **“You are entering the fourth era.”**
 
 ### ⭐ The concept we just articulated is bigger than a single image  
