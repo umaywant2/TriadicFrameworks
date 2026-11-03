@@ -98,4 +98,4 @@ Every folder has:
 
 <img src="https://img.shields.io/badge/📘Docs%20Root-🧩Structural%20Canon%20Active-4c8eda?style=for-the-badge" alt="📘Docs Root | 🧩Structural Canon Active"/>  
 
-###### #CoherenceBeforeCommerce — Unofficial footnote: We would only sell to Microsoft... unless they pass. Until then, carry on. :)
+###### ⛩️ #CoherenceBeforeCommerce — Unofficial footnote: We would only sell to Microsoft... unless they pass. Until then, carry on. 🫶
