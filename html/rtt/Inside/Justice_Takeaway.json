@@ -1,0 +1,164 @@
+{
+  "artifact": {
+    "name": "RTT/Inside JUSTICE TAKEAWAY",
+    "path": "/docs/rtt/Inside/Justice_Takeaway.json",
+    "type": "takeaway",
+    "domain": "science_and_research",
+    "framework": "RTT/Inside",
+    "principle": {
+      "statement": "RTT doesn't change justice. It reveals the structure of fairness that already exists.",
+      "takeaway": "Justice was always dimensional. RTT helps us see it."
+    }
+  },
+
+  "capture": {
+    "template": "RTT/Inside Capture Template",
+    "domain": "Science & Research",
+    "theme": "Seeing Discovery with Dimensional Clarity",
+
+    "being": {
+      "dimension": "Identity & State",
+      "question": "What Science & Research Is",
+      "states": [
+        "Questions and hypotheses",
+        "Researchers and collaborators",
+        "Experiments and observations",
+        "Data as living evidence",
+        "Models and theories",
+        "Knowledge in formation"
+      ],
+      "summary": "Science is the structured pursuit of understanding."
+    },
+
+    "knowing": {
+      "dimension": "Behavior & Flow",
+      "question": "How Science & Research Works",
+      "states": [
+        "Observation and measurement",
+        "Hypothesis testing",
+        "Experimentation",
+        "Data collection and analysis",
+        "Peer review",
+        "Replication and refinement",
+        "Knowledge accumulation over time"
+      ],
+      "summary": "Science unfolds through curiosity, testing, and correction."
+    },
+
+    "meaning": {
+      "dimension": "Purpose & Outcome",
+      "question": "Why Science & Research Matters",
+      "states": [
+        "Truth-seeking",
+        "Understanding the world",
+        "Innovation",
+        "Problem-solving",
+        "Shared knowledge",
+        "Progress for humanity"
+      ],
+      "summary": "Science exists to help us understand reality."
+    }
+  },
+
+  "current_artifacts": {
+    "description": "What exists today",
+    "items": [
+      "Research papers",
+      "Data sets",
+      "Lab notebooks",
+      "Models and simulations",
+      "Experimental protocols",
+      "Peer reviews",
+      "Citations and references"
+    ],
+    "observation": "Many artifacts, often separated from their full context."
+  },
+
+  "misalignments_observed": {
+    "description": "Where friction appears",
+    "items": [
+      "Results emphasized over process",
+      "Data divorced from experimental lineage",
+      "Reproducibility challenges",
+      "Incentives misaligned with truth-seeking",
+      "Knowledge siloed by discipline",
+      "Meaning (why) lost behind publication (what)"
+    ],
+    "observation": "The structure exists — alignment is missing."
+  },
+
+  "prioritized_fixes": [
+    {
+      "priority": 1,
+      "name": "Treat Knowledge as a Living Being",
+      "actions": [
+        "Track hypotheses, revisions, and uncertainty",
+        "Make scientific state visible, not just conclusions"
+      ],
+      "takeaway": "Understanding grows through transparency."
+    },
+    {
+      "priority": 2,
+      "name": "Preserve Research Lineage",
+      "actions": [
+        "Connect question → method → data → interpretation",
+        "Make Knowing traceable and reproducible"
+      ],
+      "takeaway": "Truth gains memory."
+    },
+    {
+      "priority": 3,
+      "name": "Restore Meaning to Discovery",
+      "actions": [
+        "Emphasize curiosity and purpose",
+        "Help people understand why a question matters"
+      ],
+      "takeaway": "Science stays human when wonder is honored."
+    }
+  ],
+
+  "triadic_structure": {
+    "being": "identity_and_state",
+    "knowing": "behavior_and_flow",
+    "meaning": "purpose_and_outcome"
+  },
+
+  "alignment": {
+    "being": {
+      "preserve": "scientific state",
+      "visibility": [
+        "hypotheses",
+        "revisions",
+        "uncertainty",
+        "conclusions"
+      ]
+    },
+    "knowing": {
+      "preserve": "research lineage",
+      "trace": [
+        "question",
+        "method",
+        "data",
+        "interpretation"
+      ]
+    },
+    "meaning": {
+      "preserve": "purpose of discovery",
+      "visibility": [
+        "curiosity",
+        "purpose",
+        "why the question matters"
+      ]
+    }
+  },
+
+  "machine_takeaway": {
+    "structure_exists": true,
+    "alignment_missing": true,
+    "desired_shift": [
+      "Make scientific state visible",
+      "Preserve research lineage",
+      "Restore meaning to discovery"
+    ]
+  }
+}
