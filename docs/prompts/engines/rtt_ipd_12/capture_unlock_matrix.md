@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_capture_unlock_matrix_" src="https://github.com/user-attachments/assets/aeea9444-56a2-4b46-bdb2-25cf1c91e7f9" />
+
 # **IPD‑12 Capture → Drift Unlock Matrix**  
 ### *Formal Operator Unlock Conditions for Inter‑Process Drift*
 
