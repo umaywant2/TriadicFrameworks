@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_vacuum_layer_explainer_" src="https://github.com/user-attachments/assets/a79add39-7103-4621-a45b-62f807762c9a" />
+
 # **RTT/∞ Vacuum‑Layer Explainer**  
 ### *How RTT/∞ Uses Vacuum Logic to Resolve Infinite‑Regime Structures*  
   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
