@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_templates_" src="https://github.com/user-attachments/assets/b202dc6c-5799-412f-ba2a-e04705601072" />
+
 # TriadicFrameworks — Prompt Templates
 
 The TriadicFrameworks Prompt Templates provide reusable structures for building sessions,
