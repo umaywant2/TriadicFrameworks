@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_transport_backbone_" src="https://github.com/user-attachments/assets/b7334715-eacc-40e8-96d5-49ae6939e6d0" />
+
 # **RTT/∞ Dimensional‑Rails Explainer**  
 ### *How RTT/∞ Uses Dimensional Rails to Lift, Align, and Transport Structure Across Infinite Regimes*
 
