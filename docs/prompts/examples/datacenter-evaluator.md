@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_examples_datacenter-evaluator_" src="https://github.com/user-attachments/assets/6d0fd345-5d0e-4856-9f56-2ab9d6db68c1" />
+
 # Datacenter Evaluator — RTT Structural Example
 
 This example module demonstrates how to evaluate a datacenter using the RTT structural
