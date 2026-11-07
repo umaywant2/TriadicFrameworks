@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_examples_violin-structural_" src="https://github.com/user-attachments/assets/9758c669-ede6-42b8-908f-c851b4ea3abb" />
+
 # Violin Structural Example — RTT Analysis
 
 This example module demonstrates how to evaluate a violin using the RTT structural
