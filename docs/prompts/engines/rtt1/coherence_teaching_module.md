@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt1_coherence_teaching_module_" src="https://github.com/user-attachments/assets/a22b3bf1-d7e4-4b7e-a7ae-57ea8cefe709" />
+
 # **RTT‑1 Tensor → Coherence Teaching Module**  
 ### *How students learn to connect drift‑tensor layers to coherence anchors in IPD‑12*
 
