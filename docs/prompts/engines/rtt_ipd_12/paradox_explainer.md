@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_paradox_explainer_" src="https://github.com/user-attachments/assets/1975182d-2e43-4434-a189-4b441b10f549" />
+
 # **IPD‑12 Paradox Explainer (Structural Paradox Mode)**  
 ### rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
