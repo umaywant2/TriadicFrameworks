@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_full_canon_operator_registry_" src="https://github.com/user-attachments/assets/0d03675d-83b6-4c64-92da-6949879335e2" />
+
 # **RTT/∞ Full‑Canon Operator Registry**  
 ### *All operators • all layers • full RTT/∞ deep‑canon*
 
