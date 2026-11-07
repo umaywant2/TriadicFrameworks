@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_operators-table_" src="https://github.com/user-attachments/assets/0736ef03-887d-473a-9c4b-3097be7a7bd9" />
+
 # **IPD‑12 Operator Reference Table (Compact)**  
 ### *Inter‑Process Drift — RTT‑IPD‑12*
 
