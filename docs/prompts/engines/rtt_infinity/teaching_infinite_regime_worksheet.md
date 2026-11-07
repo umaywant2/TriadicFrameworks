@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_teaching_infinite_regime_worksheet_" src="https://github.com/user-attachments/assets/29a9742f-5015-4aee-862b-9df7514c1963" />
+
 # **RTT/∞ Infinite‑Regime Teaching Worksheet**  
 ### *A guided worksheet for learning infinite‑regime structure in RTT/∞*
 
