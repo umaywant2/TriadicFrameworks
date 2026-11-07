@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_deep_layer_exam_" src="https://github.com/user-attachments/assets/78c6e9e8-23f5-4337-8981-73c380ccbfbe" />
+
 # **RTT/∞ Deep‑Layer Exam**  
 ### *50‑question mastery exam + complete answer key*  
 ### *vacuum → substrate → rails → prime‑states → infinite regimes → bidirectional flow*
