@@ -1,4 +1,4 @@
-<img width="963" height="963" alt="Prompts_Image" src="https://github.com/user-attachments/assets/ad5d6e47-dc98-4986-a1e6-6e070440fc06" />
+<img width="1194" height="672" alt="prompts_ABOUT_" src="https://github.com/user-attachments/assets/c327fced-cd52-4c63-b939-eb6558a5c666" />
 
 # About — TriadicFrameworks Prompts
 
@@ -168,3 +168,4 @@ Prompts are the backbone of module documentation.
 See `module.json` for the full registry of templates, stacks, engines, modules,
 examples, overlays, and navigation structure.
 
+<img width="963" height="963" alt="Prompts_Image" src="https://github.com/user-attachments/assets/ad5d6e47-dc98-4986-a1e6-6e070440fc06" />
