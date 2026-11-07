@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt2_" src="https://github.com/user-attachments/assets/bde5bb71-f951-4c38-a166-623925d39a9c" />
+
 # RTT/2 — Intermediate Engine
 
 RTT/2 is the intermediate engine of the TriadicFrameworks canon.  
