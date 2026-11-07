@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_teaching_infinite_regime_classroom_pack_" src="https://github.com/user-attachments/assets/7670cf11-58d7-4d8e-9403-f5fcac640333" />
+
 # **RTT/∞ Infinite‑Regime Classroom Pack**  
 ### *A complete teaching module for understanding infinite‑regime structure in RTT/∞*
 
