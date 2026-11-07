@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_full_canon_flowchart_" src="https://github.com/user-attachments/assets/6a9d92bd-ad45-4fa3-908d-dab4879ad217" />
+
 # RTT/∞ full‑canon flowchart (ASCII + SVG‑ready)
 
 ## 1. ASCII master flowchart
