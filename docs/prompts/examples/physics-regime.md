@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_examples_physics-regime_" src="https://github.com/user-attachments/assets/1989a289-5697-4a8b-a26b-1b08328c4202" />
+
 # Physics Regime — RTT Structural Example
 
 This example module demonstrates how to evaluate a physics regime using the RTT
