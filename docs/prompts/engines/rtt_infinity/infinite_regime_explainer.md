@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_infinite_regime_explainer_" src="https://github.com/user-attachments/assets/b07668fa-82f9-4a99-870c-64de0ecdd492" />
+
 # **RTT/∞ Infinite‑Regime Explainer**  
 ### *How RTT/∞ Constructs, Traverses, and Synthesizes Infinite Regimes*
 
