@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_coherence_synthesis_module_" src="https://github.com/user-attachments/assets/f3c2c745-8782-4502-a725-0122ccd938e6" />
+
 # **RTT‑1 Coherence → Synthesis Teaching Module**  
 ### *A beginner‑friendly module showing how coherence leads to synthesis in IPD‑12*
 
