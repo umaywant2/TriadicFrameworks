@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt3_" src="https://github.com/user-attachments/assets/21498f92-b586-4071-ae9f-bf424691983a" />
+
 # RTT/3 — Advanced Engine
 
 RTT/3 is the advanced engine of the TriadicFrameworks canon.  
