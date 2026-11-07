@@ -1,3 +1,4 @@
+
 # **RTT/∞ Prime‑State Explainer**  
 ### *How RTT/∞ Uses Prime‑States to Anchor Structure Across Infinite Regimes*
 
