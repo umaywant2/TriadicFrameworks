@@ -1,3 +1,4 @@
+
 # TriadicFrameworks — Prompts Site
 
 The TriadicFrameworks Prompts site provides structured, engine‑aligned prompt modules for
