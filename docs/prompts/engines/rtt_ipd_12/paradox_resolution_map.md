@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_paradox_resolution_map_" src="https://github.com/user-attachments/assets/77853e20-b39a-4959-8722-71acc07f8f7c" />
+
 # **IPD‑12 → RTT/3 Paradox Resolution Map**  
 ### *How RTT/3 resolves IPD‑12 structural paradoxes through cross‑domain synthesis*
 
