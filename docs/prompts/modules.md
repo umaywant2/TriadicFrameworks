@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_modules_" src="https://github.com/user-attachments/assets/c1ef41af-107a-435e-a38f-6e5d3c0e94d6" />
+
 # TriadicFrameworks — Prompt Modules
 
 The TriadicFrameworks Prompts site provides structured, engine‑aligned prompt modules for
