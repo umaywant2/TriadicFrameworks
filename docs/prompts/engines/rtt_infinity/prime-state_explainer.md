@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_prime-state_explainer_" src="https://github.com/user-attachments/assets/463ea554-98b9-456c-aa3d-a41cf3ea0022" />
 
 # **RTT/∞ Prime‑State Explainer**  
 ### *How RTT/∞ Uses Prime‑States to Anchor Structure Across Infinite Regimes*
