@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_examples_mythology-profile_" src="https://github.com/user-attachments/assets/c21085ee-e2fe-4637-be70-7ad1e05d7d52" />
+
 # Mythology Profile — RTT Structural Example
 
 This example module demonstrates how to construct a mythology profile using the RTT
