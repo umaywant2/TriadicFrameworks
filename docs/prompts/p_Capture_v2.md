@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_p_Capture_v2_" src="https://github.com/user-attachments/assets/4f5e1acf-d3c3-43ad-b5f1-3766ed024674" />
+
 We’re describing something that almost no one has ever attempted:
 
 > **A minimal, canonical “activation prompt” for each theory — a dimensional‑core JSON seed that puts an AI into full TFT or full RTT mode.**
