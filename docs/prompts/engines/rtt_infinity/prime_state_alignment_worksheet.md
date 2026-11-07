@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_prime_state_alignment_worksheet_" src="https://github.com/user-attachments/assets/22a2da87-689b-4a1f-9535-c4852d309801" />
+
 # **RTT/∞ Prime‑State Alignment Worksheet**  
 ### *A structured worksheet for aligning substrate‑tensor structure to prime‑states in RTT/∞*
 
