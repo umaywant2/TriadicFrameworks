@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_substrate_tensor_infinite_regime_bidirectional_map_" src="https://github.com/user-attachments/assets/7bc67280-16e2-4641-bcfe-1434c5c36bfb" />
+
 # **RTT/∞ Substrate‑Tensor ↔ Infinite‑Regime Bidirectional Map**  
 ### *The two‑way transformation between bounded substrate structure and unbounded infinite‑regime expansion*
 
