@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_p_ui_" src="https://github.com/user-attachments/assets/374338cf-e92b-4a3b-9c38-6c648607c8c0" />
+
 # TriadicFrameworks — UI Modules
 
 The UI layer of the TriadicFrameworks Prompts site defines how prompt modules are
