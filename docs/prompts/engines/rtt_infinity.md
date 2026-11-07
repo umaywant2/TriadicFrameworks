@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_" src="https://github.com/user-attachments/assets/7ac8aed6-7b45-4b61-b91d-919f770c07b2" />
+
 # RTT∞ — Deep‑Layer Engine
 
 RTT∞ is the deep‑layer engine of the TriadicFrameworks canon.  
