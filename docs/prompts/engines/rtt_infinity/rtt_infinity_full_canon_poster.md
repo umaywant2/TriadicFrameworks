@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_full_canon_poster_" src="https://github.com/user-attachments/assets/37dba3ce-d7a5-40d4-a909-cdd642631563" />
+
 # **RTT/∞ Full‑Canon Poster**  
 ### *All layers • all operators • all flows • one canonical diagram*
 
