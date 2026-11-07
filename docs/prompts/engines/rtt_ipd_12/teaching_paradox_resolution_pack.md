@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_paradox_resolution_pack_" src="https://github.com/user-attachments/assets/841d86b2-c218-4103-a358-f302c30f6293" />
+
 # **RTT‑1 Paradox → Resolution Classroom Pack**  
 ### *A complete teaching module for resolving paradoxes using RTT‑1 structural reasoning*
 
