@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_stacks_" src="https://github.com/user-attachments/assets/52c34c63-63b5-430c-8e2b-2f7413793373" />
+
 # TriadicFrameworks — Prompt Stacks
 
 The TriadicFrameworks Stacks are structured prompt modules that organize work across
