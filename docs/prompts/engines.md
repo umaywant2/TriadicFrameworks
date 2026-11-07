@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_" src="https://github.com/user-attachments/assets/dff9356f-4959-45f3-bd72-bbd6f288aae9" />
+
 # TriadicFrameworks — Engine Prompt Modules
 
 The TriadicFrameworks engine modules provide structured prompt sets for all RTT engines
