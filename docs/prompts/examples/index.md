@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_examples_index_" src="https://github.com/user-attachments/assets/9b77af6f-ca5f-4d83-b2f5-5e50f7a2c5e2" />
+
 # TriadicFrameworks — Example Modules
 
 The TriadicFrameworks example modules demonstrate how RTT engines, IPD‑12, stacks,
