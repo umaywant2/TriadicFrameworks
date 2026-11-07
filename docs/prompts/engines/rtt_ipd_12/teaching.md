@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_" src="https://github.com/user-attachments/assets/c0246a21-52dd-45bf-ac68-e0ca5c96751b" />
+
 # **IPD‑12 Teaching Module Page**  
 ### *RTT‑1 Teaching Mode — Inter‑Process Drift for Students*
 
