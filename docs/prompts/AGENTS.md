@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_AGENTS_" src="https://github.com/user-attachments/assets/8f44da8b-a71a-4cfa-a58d-b309a45d5cd0" />
+
 # AGENTS — TriadicFrameworks Prompts
 
 The AGENTS page defines how AI agents operate inside the TriadicFrameworks ecosystem.
