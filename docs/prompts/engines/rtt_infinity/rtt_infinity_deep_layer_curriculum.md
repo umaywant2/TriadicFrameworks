@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_deep_layer_curriculum_" src="https://github.com/user-attachments/assets/153c8cb5-87ed-4cd2-bf70-f08ed92c8097" />
+
 # **RTT/∞ Deep‑Layer Curriculum**  
 ### *vacuum → substrate → dimensional rails → prime‑states → infinite regimes*
 
