@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_drift_worksheet_" src="https://github.com/user-attachments/assets/07467255-1cbc-4d6c-aef1-18d73d361ff5" />
+
 # **RTT‑1 Student Drift Worksheet**  
 ### *A beginner‑friendly worksheet for learning drift in IPD‑12*
 
