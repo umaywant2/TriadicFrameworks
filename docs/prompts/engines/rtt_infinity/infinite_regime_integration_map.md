@@ -1,3 +1,4 @@
+
 # **RTT/∞ Infinite‑Regime → Substrate‑Tensor Integration Map**  
 ### *How RTT/∞ collapses infinite‑regime composites back into substrate‑tensor form*
 
