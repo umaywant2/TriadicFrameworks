@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_capture_bundle_" src="https://github.com/user-attachments/assets/aedc52d1-bc6a-4b36-bfac-8e9cc5f5e39b" />
+
 # **IPD‑12 Multi‑Process Capture Bundle Template (JSON)**
 
 ```json
