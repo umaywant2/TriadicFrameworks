@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_capture_worksheet_" src="https://github.com/user-attachments/assets/2d67e35c-fcce-489e-96fb-59d93f2b44c1" />
+
 # **RTT‑1 Teaching Capture Worksheet**  
 ### *Beginner‑friendly worksheet for capturing processes in IPD‑12*
 
