@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="prompts_index_" src="https://github.com/user-attachments/assets/4e9b1052-b91b-4d79-9db5-af1b931fecaa" />
 
 # TriadicFrameworks — Prompts Site
 
