@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_examples_teaching-session_" src="https://github.com/user-attachments/assets/b145054e-7646-4a60-a1a5-fa09beeaf5df" />
+
 # Teaching Session — RTT Structural Example
 
 This example module demonstrates how to run a complete RTT teaching session using the
