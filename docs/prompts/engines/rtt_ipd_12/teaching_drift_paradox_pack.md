@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_drift_paradox_pack_" src="https://github.com/user-attachments/assets/dfefcf19-53a7-478b-b31b-a83947ce8b67" />
+
 # **RTT‑1 Drift → Paradox Classroom Pack**  
 ### *A complete teaching module for understanding how drift leads to paradox in IPD‑12*
 
