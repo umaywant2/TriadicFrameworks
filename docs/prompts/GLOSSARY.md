@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_GLOSSARY_" src="https://github.com/user-attachments/assets/4cd2daf3-8161-48e8-9afc-7d521252dc66" />
+
 # TriadicFrameworks Glossary
 
 The TriadicFrameworks Glossary defines all core terms used across RTT engines,
