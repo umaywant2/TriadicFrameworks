@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt12_" src="https://github.com/user-attachments/assets/56d53dc8-1db1-4976-b66b-a5f543c3abe6" />
+
 # RTT/12 — Full‑Spectrum Engine
 
 RTT/12 is the full‑spectrum engine of the TriadicFrameworks canon.  
