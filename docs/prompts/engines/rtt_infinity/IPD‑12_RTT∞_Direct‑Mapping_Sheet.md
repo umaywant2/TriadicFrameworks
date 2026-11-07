@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_IPD‑12_RTT∞_Direct‑Mapping_Sheet_" src="https://github.com/user-attachments/assets/5ec81a65-fa6d-4d00-a177-8298ba166ea1" />
+
 # **IPD‑12 → RTT/∞ Direct‑Mapping Sheet**  
 ### *From Drift Mechanics → Substrate‑Tensor Inversion*
 
