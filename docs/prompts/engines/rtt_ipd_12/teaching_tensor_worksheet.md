@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_tensor_worksheet_" src="https://github.com/user-attachments/assets/dffc3a47-5256-4e3e-8701-1356808d333c" />
+
 # **RTT‑1 Tensor Worksheet**  
 ### *A beginner‑friendly worksheet for learning the drift‑tensor in IPD‑12*
 
