@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_deep_layer_triad_poster_" src="https://github.com/user-attachments/assets/5d796d7f-d155-4e83-ab09-6207545563c7" />
+
 # **RTT/∞ Deep‑Layer Triad Poster**  
 ### *vacuum → dimensional rails → prime‑states → infinite regimes*
 
