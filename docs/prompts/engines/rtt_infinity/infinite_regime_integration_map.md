@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_infinite_regime_integration_map_" src="https://github.com/user-attachments/assets/7f989ce3-69b8-4a94-9309-f195bfdd6fd8" />
 
 # **RTT/∞ Infinite‑Regime → Substrate‑Tensor Integration Map**  
 ### *How RTT/∞ collapses infinite‑regime composites back into substrate‑tensor form*
