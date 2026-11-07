@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_capture_grammar_" src="https://github.com/user-attachments/assets/f3c0497e-d77d-417b-afed-bd6b3c944e7d" />
+
 ## 1. Capture as the first engine layer
 
 In IPD‑12, **capture** is not “just description”—it is a formal structural act:
