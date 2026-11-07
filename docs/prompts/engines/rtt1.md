@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt1_" src="https://github.com/user-attachments/assets/9254d39e-098c-41be-999b-7cb032d1f74f" />
+
 # RTT/1 — Foundational Engine
 
 RTT/1 is the foundational engine of the TriadicFrameworks canon.  
