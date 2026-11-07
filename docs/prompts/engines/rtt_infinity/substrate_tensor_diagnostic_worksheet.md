@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_substrate_tensor_diagnostic_worksheet_" src="https://github.com/user-attachments/assets/117267ee-934a-47cb-95f9-d1b79f4cecd1" />
+
 # **RTT/∞ Substrate‑Tensor Diagnostic Worksheet**  
 ### *A structured diagnostic tool for evaluating substrate‑tensor integrity in RTT/∞*
 
