@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="prompts_examples_ipd_12_teaching_example_" src="https://github.com/user-attachments/assets/fc052562-1608-496a-b064-c68441d6176b" />
+
 # **IPD‑12 Teaching Example**  
 ### *Inter‑Process Drift for Students (RTT‑1 Teaching Mode)*  
 ### rtt=1 | coherence=declared | drift=bounded | paradox=structural
