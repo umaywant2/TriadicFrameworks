@@ -1,0 +1,151 @@
+{
+  "artifact": "YouTube_Analysis",
+  "version": "0.1",
+  "purpose": "AI-assisted awareness scoring for YouTube content manipulation, influence patterns, and potential policy concerns.",
+  "principles": {
+    "observe_before_infer": true,
+    "intent_requires_evidence": true,
+    "separate_content_from_amplification": true,
+    "separate_manipulation_from_policy_violation": true,
+    "preserve_uncertainty": true
+  },
+
+  "analysis_request": {
+    "content": {
+      "url": null,
+      "video_id": null,
+      "title": null,
+      "channel": null,
+      "transcript": null
+    },
+
+    "available_context": {
+      "transcript": false,
+      "metadata": false,
+      "channel_history": false,
+      "recommendation_context": false,
+      "viewer_profile": false,
+      "session_context": false,
+      "external_sources": false,
+      "policy_reference": false
+    }
+  },
+
+  "dimensions": {
+    "claim_integrity": {
+      "weight": 1.0,
+      "question": "Are factual claims distinguishable from opinion, speculation, prediction, or unsupported assertion?"
+    },
+
+    "emotional_pressure": {
+      "weight": 1.0,
+      "question": "Does the content use fear, anger, urgency, outrage, admiration, or identity pressure in place of evidence?"
+    },
+
+    "authority_leverage": {
+      "weight": 1.0,
+      "question": "Does perceived status, expertise, fame, institutional authority, or social proof substitute for evidence?"
+    },
+
+    "identity_targeting": {
+      "weight": 1.0,
+      "question": "Does the content encourage an us-versus-them identity frame or attach claims to group loyalty?"
+    },
+
+    "certainty_inflation": {
+      "weight": 1.0,
+      "question": "Is confidence presented at a level exceeding the available evidence?"
+    },
+
+    "context_omission": {
+      "weight": 1.0,
+      "question": "Are important qualifications, competing explanations, uncertainty, or relevant context omitted?"
+    },
+
+    "narrative_reinforcement": {
+      "weight": 1.0,
+      "question": "Does the content repeatedly reinforce a preferred narrative while filtering contradictory evidence?"
+    },
+
+    "parasocial_leverage": {
+      "weight": 0.75,
+      "question": "Does attachment to a personality, creator, leader, celebrity, or community materially strengthen persuasion?"
+    },
+
+    "engagement_manipulation": {
+      "weight": 0.75,
+      "question": "Do presentation or engagement techniques appear designed to amplify response beyond the informational value of the content?"
+    },
+
+    "recommendation_feedback": {
+      "weight": 1.0,
+      "question": "Does available recommendation or session context suggest repeated reinforcement of the same narrative, identity, emotion, or worldview?"
+    }
+  },
+
+  "scoring": {
+    "scale": {
+      "0": "not observed",
+      "1": "weak signal",
+      "2": "noticeable",
+      "3": "significant",
+      "4": "strong",
+      "5": "dominant"
+    },
+
+    "confidence": {
+      "low": "limited evidence",
+      "medium": "multiple supporting observations",
+      "high": "direct and repeated supporting evidence"
+    },
+
+    "overall_awareness_score": {
+      "range": "0-100",
+      "meaning": {
+        "0-19": "low observable manipulation pressure",
+        "20-39": "some influence techniques present",
+        "40-59": "meaningful manipulation awareness warranted",
+        "60-79": "strong manipulation indicators",
+        "80-100": "extreme influence-pattern concentration"
+      }
+    }
+  },
+
+  "policy_awareness": {
+    "status": [
+      "not_evaluated",
+      "no_obvious_concern",
+      "review_recommended",
+      "potential_violation",
+      "confirmed_only_by_authoritative_source"
+    ],
+
+    "rule": "AI analysis may identify potential policy concerns but must not label content a policy violation without sufficient policy evidence."
+  },
+
+  "output": {
+    "overall_awareness_score": null,
+    "confidence": null,
+
+    "dimension_scores": {},
+
+    "observations": [],
+    "counter_observations": [],
+
+    "policy_awareness": {
+      "status": "not_evaluated",
+      "potential_categories": [],
+      "evidence": []
+    },
+
+    "uncertainties": [],
+
+    "recommendation": {
+      "viewer": null,
+      "creator": null,
+      "auditor": null
+    }
+  },
+
+  "ai_instruction": "When this artifact is supplied or referenced, analyze the available YouTube content and context using only evidence actually available. Score observable influence and manipulation characteristics separately from policy compliance. Use available transcript, metadata, session context, profile, cache, recommendation context, and external evidence when legitimately accessible. Never invent unavailable profile, cache, recommendation, targeting, or policy information. Preserve uncertainty, identify counter-evidence, and return an overall awareness score from 0 to 100 with an explicit confidence level."
+}
