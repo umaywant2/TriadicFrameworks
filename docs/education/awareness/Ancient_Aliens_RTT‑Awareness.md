@@ -426,6 +426,7 @@ Caption:
 
 <img width="1194" height="672" alt="Oblate_Lenticular_Body_" src="https://github.com/user-attachments/assets/237f9f40-8b44-429c-bc3d-1afb1359cdd3" />
 
+<img width="1194" height="672" alt="Triadic_Lift_Platform_" src="https://github.com/user-attachments/assets/f666db51-5e25-4a7f-9b34-70b4ef54fd40" />
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
