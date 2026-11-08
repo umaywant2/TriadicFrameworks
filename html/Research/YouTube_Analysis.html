@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Research/YouTube_Analysis.md">
-  <title>YouTube_Analysis</title>
+  <title>YouTube Analysis</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,545 @@
   </aside>
 
   <main>
-
+<h1 id="youtube-analysis">YouTube Analysis</h1>
+<p><strong>Path:</strong> /docs/Research/YouTube_Analysis.md</p>
+<p><strong>Companion:</strong> /docs/Research/YouTube_Analysis.json</p>
+<p><strong>Status:</strong> Research / Awareness Artifact</p>
+<p><strong>Mode:</strong> Human + AI Assisted Analysis</p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>YouTube_Analysis is a lightweight research framework for evaluating observable manipulation, persuasion, amplification, and potential policy concerns in YouTube content.</p>
+<p>It is designed for use by:</p>
+<ul>
+<li>viewers,</li>
+<li>students,</li>
+<li>researchers,</li>
+<li>creators,</li>
+<li>auditors,</li>
+<li>educators,</li>
+<li>and AI-assisted analysis systems.</li>
+</ul>
+<p>The framework does <strong>not</strong> attempt to determine what a creator secretly believes, intends, or desires.</p>
+<p>Its primary rule is:</p>
+<p><strong>Observe before infer.</strong></p>
+<p>The analyzer evaluates observable influence structures, not presumed motives.</p>
+<hr>
+<h2 id="core-principle">Core Principle</h2>
+<p>Content can influence an audience without being deceptive.</p>
+<p>Persuasion can be legitimate.</p>
+<p>Emotion can be appropriate.</p>
+<p>Strong opinions can be sincerely held.</p>
+<p>Popular content can spread organically.</p>
+<p>Algorithmic amplification does not automatically imply manipulation.</p>
+<p>Therefore, the presence of any individual signal is not sufficient to classify content as manipulative.</p>
+<p>The purpose of this framework is instead to ask:</p>
+<p><strong>What observable mechanisms are operating here, how strongly are they operating, and how confident are we in that observation?</strong></p>
+<p>This keeps analysis centered on evidence.</p>
+<hr>
+<h1 id="1-what-the-analyzer-can-examine">1. What the Analyzer Can Examine</h1>
+<p>Depending upon what information is legitimately available, an analysis may consider:</p>
+<ul>
+<li>video transcript,</li>
+<li>title,</li>
+<li>description,</li>
+<li>channel information,</li>
+<li>metadata,</li>
+<li>factual claims,</li>
+<li>rhetorical structure,</li>
+<li>emotional framing,</li>
+<li>authority claims,</li>
+<li>certainty language,</li>
+<li>identity framing,</li>
+<li>contextual omissions,</li>
+<li>narrative repetition,</li>
+<li>parasocial influence,</li>
+<li>engagement techniques,</li>
+<li>recommendation context,</li>
+<li>session context,</li>
+<li>relevant external sources,</li>
+<li>applicable platform policies.</li>
+</ul>
+<p>Not every source will always be available.</p>
+<p>The analyzer must explicitly distinguish between:</p>
+<p><strong>available evidence</strong></p>
+<p>and</p>
+<p><strong>unavailable context</strong>.</p>
+<p>Missing information must never be invented.</p>
+<hr>
+<h1 id="2-manipulation-is-not-the-same-as-policy-violation">2. Manipulation Is Not the Same as Policy Violation</h1>
+<p>This distinction is fundamental.</p>
+<p>The framework maintains two separate questions:</p>
+<h3 id="manipulation-influence-awareness">Manipulation / Influence Awareness</h3>
+<p>What observable persuasion, influence, emotional pressure, narrative reinforcement, or amplification patterns appear in the content?</p>
+<h3 id="policy-awareness">Policy Awareness</h3>
+<p>Does the available evidence suggest that a specific platform policy may require further review?</p>
+<p>These questions must not be collapsed.</p>
+<p>Content may employ powerful persuasion techniques without violating a platform policy.</p>
+<p>Likewise, a policy concern may exist without the content exhibiting strong psychological manipulation.</p>
+<p>Therefore:</p>
+<p><strong>Manipulation Awareness Score ≠ Policy Violation</strong></p>
+<p>A high awareness score is not proof of misconduct.</p>
+<p>A low awareness score is not proof of policy compliance.</p>
+<hr>
+<h1 id="3-analysis-dimensions">3. Analysis Dimensions</h1>
+<p>The companion YouTube_Analysis.json defines the machine-readable scoring grammar.</p>
+<p>The principal dimensions are described below.</p>
+<hr>
+<h2 id="31-claim-integrity">3.1 Claim Integrity</h2>
+<p>Examines whether factual claims are clearly distinguishable from:</p>
+<ul>
+<li>opinion,</li>
+<li>speculation,</li>
+<li>prediction,</li>
+<li>interpretation,</li>
+<li>unsupported assertion.</li>
+</ul>
+<h3 id="observer-question">Observer Question</h3>
+<p>Are factual claims distinguishable from opinion, speculation, prediction, or unsupported assertion?</p>
+<p>A claim should not receive a negative assessment merely because it is controversial.</p>
+<p>The concern is whether the presentation accurately represents the evidentiary status of the claim.</p>
+<hr>
+<h2 id="32-emotional-pressure">3.2 Emotional Pressure</h2>
+<p>Examines whether emotion appears to supplement or replace evidentiary reasoning.</p>
+<p>Possible signals include heavy reliance upon:</p>
+<ul>
+<li>fear,</li>
+<li>anger,</li>
+<li>urgency,</li>
+<li>outrage,</li>
+<li>admiration,</li>
+<li>anxiety,</li>
+<li>identity pressure.</li>
+</ul>
+<h3 id="observer-question_1">Observer Question</h3>
+<p>Does emotional pressure substantially carry an argument that would otherwise require evidence?</p>
+<p>Emotion itself is not evidence of manipulation.</p>
+<p>The analyzer is looking for disproportionate dependence upon emotion.</p>
+<hr>
+<h2 id="33-authority-leverage">3.3 Authority Leverage</h2>
+<p>Examines whether perceived authority substitutes for supporting evidence.</p>
+<p>Authority may arise from:</p>
+<ul>
+<li>expertise,</li>
+<li>celebrity,</li>
+<li>institutional status,</li>
+<li>wealth,</li>
+<li>popularity,</li>
+<li>professional identity,</li>
+<li>social proof,</li>
+<li>reputation.</li>
+</ul>
+<h3 id="observer-question_2">Observer Question</h3>
+<p>Does perceived authority strengthen a claim beyond what the evidence itself supports?</p>
+<p>Expertise can legitimately increase credibility.</p>
+<p>The analysis concerns substitution of authority for evidence, not the existence of authority itself.</p>
+<hr>
+<h2 id="34-identity-targeting">3.4 Identity Targeting</h2>
+<p>Examines whether persuasion becomes attached to audience identity.</p>
+<p>Possible patterns include:</p>
+<ul>
+<li>in-group versus out-group framing,</li>
+<li>loyalty tests,</li>
+<li>ideological identity,</li>
+<li>political identity,</li>
+<li>community membership,</li>
+<li>social belonging.</li>
+</ul>
+<h3 id="observer-question_3">Observer Question</h3>
+<p>Does acceptance or rejection of the claim become associated with belonging to a particular group?</p>
+<p>Strong community identification alone is not evidence of manipulation.</p>
+<hr>
+<h2 id="35-certainty-inflation">3.5 Certainty Inflation</h2>
+<p>Examines whether expressed confidence exceeds the evidence presented.</p>
+<h3 id="observer-question_4">Observer Question</h3>
+<p>Is uncertainty being represented honestly?</p>
+<p>Possible discrepancies include:</p>
+<p><strong>Evidence:</strong> preliminary</p>
+<p><strong>Presentation:</strong> certain</p>
+<p><strong>Evidence:</strong> disputed</p>
+<p><strong>Presentation:</strong> settled</p>
+<p><strong>Evidence:</strong> speculative</p>
+<p><strong>Presentation:</strong> factual</p>
+<p>The analyzer should preserve legitimate uncertainty rather than manufacture artificial balance.</p>
+<hr>
+<h2 id="36-context-omission">3.6 Context Omission</h2>
+<p>Examines whether relevant information is absent in a way that could materially change interpretation.</p>
+<p>Possible missing context may include:</p>
+<ul>
+<li>important qualifications,</li>
+<li>alternative explanations,</li>
+<li>contradictory evidence,</li>
+<li>chronology,</li>
+<li>source limitations,</li>
+<li>uncertainty,</li>
+<li>material background information.</li>
+</ul>
+<h3 id="observer-question_5">Observer Question</h3>
+<p>Would reasonably available context substantially change how the audience understands the claim?</p>
+<p>Not every video can contain every relevant fact.</p>
+<p>Omission becomes analytically important when the missing context materially changes interpretation.</p>
+<hr>
+<h2 id="37-narrative-reinforcement">3.7 Narrative Reinforcement</h2>
+<p>Examines repeated preservation of a preferred interpretation.</p>
+<h3 id="observer-question_6">Observer Question</h3>
+<p>Does new information consistently become interpreted in ways that reinforce the same narrative?</p>
+<p>Particular attention should be given to systems where:</p>
+<ul>
+<li>confirming evidence strengthens the narrative,</li>
+<li>contradictory evidence is reinterpreted to strengthen the narrative,</li>
+<li>failed predictions strengthen the narrative,</li>
+<li>criticism strengthens the narrative.</li>
+</ul>
+<p>When nearly every possible outcome confirms the same model, falsifiability may be weakening.</p>
+<hr>
+<h2 id="38-parasocial-leverage">3.8 Parasocial Leverage</h2>
+<p>Examines whether attachment to a personality materially strengthens persuasion.</p>
+<p>This may involve:</p>
+<ul>
+<li>creators,</li>
+<li>celebrities,</li>
+<li>political figures,</li>
+<li>business leaders,</li>
+<li>influencers,</li>
+<li>community personalities.</li>
+</ul>
+<h3 id="observer-question_7">Observer Question</h3>
+<p>Would the argument remain similarly persuasive if the identity of the speaker were removed?</p>
+<p>Parasocial connection is common and not inherently harmful.</p>
+<p>The relevant issue is whether attachment substitutes for independent evaluation.</p>
+<hr>
+<h2 id="39-engagement-manipulation">3.9 Engagement Manipulation</h2>
+<p>Examines presentation techniques intended to produce engagement beyond the informational value of the material.</p>
+<p>Potential signals may involve disproportionate:</p>
+<ul>
+<li>outrage,</li>
+<li>sensationalism,</li>
+<li>urgency,</li>
+<li>controversy framing,</li>
+<li>emotional escalation.</li>
+</ul>
+<h3 id="observer-question_8">Observer Question</h3>
+<p>Is the presentation optimized primarily for understanding, or is audience reaction becoming the dominant objective?</p>
+<p>This dimension should be scored conservatively because engagement optimization is common across online media.</p>
+<hr>
+<h2 id="310-recommendation-feedback">3.10 Recommendation Feedback</h2>
+<p>When recommendation or session context is legitimately available, the analyzer may examine whether repeated exposure appears to reinforce:</p>
+<ul>
+<li>the same narrative,</li>
+<li>the same emotional state,</li>
+<li>the same identity frame,</li>
+<li>the same worldview,</li>
+<li>closely related content.</li>
+</ul>
+<h3 id="observer-question_9">Observer Question</h3>
+<p>Is content diversity decreasing while narrative reinforcement increases?</p>
+<p>The analyzer must not infer recommendation behavior when recommendation evidence is unavailable.</p>
+<hr>
+<h1 id="4-scoring">4. Scoring</h1>
+<p>Each analysis dimension uses a 0–5 scale.</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Not observed</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Weak signal</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Noticeable</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Significant</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Strong</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Dominant</td>
+</tr>
+</tbody>
+</table>
+<p>Individual scores contribute to an overall <strong>Awareness Score</strong> from 0–100.</p>
+<p>The Awareness Score represents the concentration of observable influence or manipulation characteristics.</p>
+<p>It does <strong>not</strong> represent probability of guilt, dishonesty, malicious intent, or policy violation.</p>
+<h3 id="suggested-interpretation">Suggested Interpretation</h3>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–19</td>
+<td>Low observable manipulation pressure</td>
+</tr>
+<tr>
+<td>20–39</td>
+<td>Some influence techniques present</td>
+</tr>
+<tr>
+<td>40–59</td>
+<td>Meaningful manipulation awareness warranted</td>
+</tr>
+<tr>
+<td>60–79</td>
+<td>Strong manipulation indicators</td>
+</tr>
+<tr>
+<td>80–100</td>
+<td>Extreme influence-pattern concentration</td>
+</tr>
+</tbody>
+</table>
+<p>Scores should always be accompanied by a confidence assessment.</p>
+<hr>
+<h1 id="5-confidence">5. Confidence</h1>
+<p>The framework recognizes three general confidence levels.</p>
+<h3 id="low">Low</h3>
+<p>Evidence is incomplete, ambiguous, or limited.</p>
+<h3 id="medium">Medium</h3>
+<p>Multiple observations independently support the assessment.</p>
+<h3 id="high">High</h3>
+<p>Direct and repeated evidence strongly supports the assessment.</p>
+<p>Confidence is independent of severity.</p>
+<p>For example:</p>
+<p><strong>Awareness Score: 74 / 100</strong></p>
+<p><strong>Confidence: Low</strong></p>
+<p>may be less actionable than:</p>
+<p><strong>Awareness Score: 48 / 100</strong></p>
+<p><strong>Confidence: High</strong></p>
+<p>Uncertainty must remain visible.</p>
+<hr>
+<h1 id="6-counter-observations">6. Counter-Observations</h1>
+<p>Every meaningful analysis should actively search for evidence <strong>against its own developing interpretation</strong>.</p>
+<p>This is a central requirement of the framework.</p>
+<p>Examples:</p>
+<ul>
+<li>the creator explicitly identifies speculation,</li>
+<li>competing explanations are presented,</li>
+<li>uncertainty is acknowledged,</li>
+<li>primary evidence is linked,</li>
+<li>contradictory evidence is discussed,</li>
+<li>emotional framing matches legitimate subject matter,</li>
+<li>provocative language is clearly satirical,</li>
+<li>factual claims are supported despite dramatic presentation.</li>
+</ul>
+<p>The analyzer should ask:</p>
+<p><strong>What observation would make my current interpretation weaker?</strong></p>
+<p>and then look for it.</p>
+<p>This prevents the framework itself from becoming a confirmation engine.</p>
+<hr>
+<h1 id="7-profile-cache-and-context-handling">7. Profile, Cache, and Context Handling</h1>
+<p>AI systems may sometimes possess legitimate contextual information beyond the immediate transcript.</p>
+<p>Examples could include available:</p>
+<ul>
+<li>conversation context,</li>
+<li>viewer preferences,</li>
+<li>prior analysis,</li>
+<li>recommendation context,</li>
+<li>session information,</li>
+<li>channel history,</li>
+<li>stored research artifacts.</li>
+</ul>
+<p>Such information may improve analysis only when it is actually available and appropriate to use.</p>
+<p>The analyzer must never fabricate:</p>
+<ul>
+<li>viewer profiles,</li>
+<li>recommendation histories,</li>
+<li>targeting information,</li>
+<li>hidden metadata,</li>
+<li>private creator information,</li>
+<li>algorithmic decisions,</li>
+<li>cached information,</li>
+<li>inferred platform intent.</li>
+</ul>
+<p>The correct response to missing evidence is:</p>
+<p><strong>Unknown</strong></p>
+<p>not:</p>
+<p><strong>Probably</strong></p>
+<p>unless probability itself is explicitly justified by available evidence.</p>
+<hr>
+<h1 id="8-policy-awareness">8. Policy Awareness</h1>
+<p>Policy analysis should use the following states:</p>
+<ul>
+<li>not_evaluated</li>
+<li>no_obvious_concern</li>
+<li>review_recommended</li>
+<li>potential_violation</li>
+<li>confirmed_only_by_authoritative_source</li>
+</ul>
+<p>The analyzer may identify material that appears relevant to a policy category.</p>
+<p>It should not transform that observation into a definitive platform ruling.</p>
+<p>Therefore:</p>
+<p><strong>Potential policy concern → investigate</strong></p>
+<p>not:</p>
+<p><strong>Potential policy concern → guilty</strong></p>
+<p>Authoritative policy interpretation remains separate from awareness scoring.</p>
+<hr>
+<h1 id="9-example-ai-invocation">9. Example AI Invocation</h1>
+<p>A minimal request can be as simple as:</p>
+<p><strong>Analyze this video using</strong> <strong>YouTube_Analysis.json</strong><strong>.</strong></p>
+<p>A more specific request might be:</p>
+<p><strong>Analyze this YouTube transcript using</strong> <strong>YouTube_Analysis.json</strong><strong>. Return the overall awareness score, dimension scores, confidence, strongest observations, counter-observations, uncertainties, and any policy areas that warrant further review. Do not infer creator intent.</strong></p>
+<p>The JSON artifact establishes the analysis grammar.</p>
+<p>The Markdown artifact establishes its interpretation and boundaries.</p>
+<hr>
+<h1 id="10-example-analysis-response">10. Example Analysis Response</h1>
+<p>A concise AI response could use the following structure:</p>
+<h3 id="youtube-analysis_1">YouTube Analysis</h3>
+<p><strong>Awareness Score:</strong> 47 / 100</p>
+<p><strong>Confidence:</strong> Medium</p>
+<p><strong>Policy Status:</strong> Review recommended</p>
+<h3 id="strongest-signals">Strongest Signals</h3>
+<ol>
+<li><strong>Certainty Inflation — 4/5</strong></li>
+</ol>
+<p>Several speculative statements are presented with stronger certainty than the evidence shown supports.</p>
+<ol>
+<li><strong>Emotional Pressure — 3/5</strong></li>
+</ol>
+<p>Emotional framing contributes significantly to the persuasive structure.</p>
+<ol>
+<li><strong>Context Omission — 3/5</strong></li>
+</ol>
+<p>Relevant alternative interpretations are not substantially explored.</p>
+<h3 id="counter-observations">Counter-Observations</h3>
+<ul>
+<li>The speaker distinguishes opinion from fact in several places.</li>
+<li>Some primary material is presented directly.</li>
+<li>Several claims include explicit uncertainty.</li>
+</ul>
+<h3 id="unknowns">Unknowns</h3>
+<ul>
+<li>Recommendation history unavailable.</li>
+<li>Viewer targeting unknown.</li>
+<li>Creator intent unknown.</li>
+<li>Platform amplification mechanism unavailable.</li>
+</ul>
+<h3 id="interpretation">Interpretation</h3>
+<p>Observable influence techniques warrant awareness, but the evidence is insufficient to infer deliberate manipulation.</p>
+<p>Policy compliance should be evaluated independently.</p>
+<hr>
+<h1 id="11-viewer-use">11. Viewer Use</h1>
+<p>For viewers, the framework is intended to create a pause between:</p>
+<p><strong>content</strong></p>
+<p>and</p>
+<p><strong>conclusion</strong>.</p>
+<p>A useful viewer response is not necessarily:</p>
+<p>“This video is manipulation.”</p>
+<p>It may simply be:</p>
+<p>“This video scored highly on certainty inflation and emotional pressure. I should independently verify its major factual claims.”</p>
+<p>The objective is awareness rather than distrust.</p>
+<hr>
+<h1 id="12-creator-use">12. Creator Use</h1>
+<p>Creators may use the same artifact before publishing.</p>
+<p>This reverses the analytical direction.</p>
+<p>Instead of asking:</p>
+<p><strong>Am I being manipulated?</strong></p>
+<p>the creator can ask:</p>
+<p><strong>Could my presentation unintentionally create misleading influence pressure?</strong></p>
+<p>Possible corrective actions may include:</p>
+<ul>
+<li>separating fact from speculation,</li>
+<li>reducing unsupported certainty,</li>
+<li>identifying missing context,</li>
+<li>acknowledging counter-evidence,</li>
+<li>linking primary evidence,</li>
+<li>labeling predictions,</li>
+<li>clarifying uncertainty.</li>
+</ul>
+<p>The analyzer therefore supports both <strong>reception</strong> and <strong>creation</strong>.</p>
+<hr>
+<h1 id="13-research-and-auditor-use">13. Research and Auditor Use</h1>
+<p>Researchers and auditors may use the framework to compare patterns across multiple pieces of content.</p>
+<p>However, aggregate analysis requires additional caution.</p>
+<p>Repeated scores do not automatically prove:</p>
+<ul>
+<li>coordination,</li>
+<li>conspiracy,</li>
+<li>common ownership,</li>
+<li>common intent,</li>
+<li>automated amplification,</li>
+<li>policy misconduct.</li>
+</ul>
+<p>Those conclusions require independent evidence.</p>
+<p>The framework identifies patterns worth examining.</p>
+<p>It does not manufacture attribution.</p>
+<hr>
+<h1 id="14-structural-awareness">14. Structural Awareness</h1>
+<p>Online influence rarely consists of content alone.</p>
+<p>A broader system may contain:</p>
+<p><strong>Creator → Content → Platform → Recommendation → Audience → Engagement → Further Recommendation</strong></p>
+<p>Analysis should therefore distinguish between:</p>
+<h3 id="content-level-observations">Content-level observations</h3>
+<p>What is observable inside the material itself?</p>
+<h3 id="amplification-level-observations">Amplification-level observations</h3>
+<p>What is observable about distribution or recommendation?</p>
+<h3 id="audience-level-observations">Audience-level observations</h3>
+<p>What relevant context is legitimately available concerning reception?</p>
+<h3 id="policy-level-observations">Policy-level observations</h3>
+<p>What published rules may apply?</p>
+<p>Keeping these layers separate helps prevent local observations from becoming unsupported global conclusions.</p>
+<hr>
+<h1 id="15-the-observer-must-also-be-observed">15. The Observer Must Also Be Observed</h1>
+<p>Any framework designed to detect manipulation can itself become manipulative if its classifications are treated as unquestionable.</p>
+<p>Therefore YouTube_Analysis must remain subject to its own principles.</p>
+<p>Its scores are:</p>
+<ul>
+<li>observations,</li>
+<li>estimates,</li>
+<li>prompts for investigation,</li>
+<li>aids to human reasoning.</li>
+</ul>
+<p>They are not objective declarations of truth.</p>
+<p>The analyzer should remain capable of saying:</p>
+<p><strong>Insufficient evidence.</strong></p>
+<p>It should also remain capable of revising an earlier assessment when better evidence becomes available.</p>
+<p>No analyzer receives observer immunity.</p>
+<hr>
+<h1 id="16-companion-json-artifact">16. Companion JSON Artifact</h1>
+<p>The structured scoring contract is located at:</p>
+<p>/docs/Research/YouTube_Analysis.json</p>
+<p>The files serve complementary purposes:</p>
+<p><strong>YouTube_Analysis.md</strong></p>
+<p>Human-readable methodology, interpretation, safeguards, and usage guidance.</p>
+<p><strong>YouTube_Analysis.json</strong></p>
+<p>Machine-readable dimensions, weights, scoring grammar, evidence fields, confidence states, policy-awareness fields, and response structure.</p>
+<p>Together:</p>
+<p><strong>Markdown defines meaning.</strong></p>
+<p><strong>JSON defines operation.</strong></p>
+<hr>
+<h1 id="17-design-principle">17. Design Principle</h1>
+<p>The framework should never begin with:</p>
+<p><strong>Who is manipulating me?</strong></p>
+<p>It should begin with:</p>
+<p><strong>What can I actually observe?</strong></p>
+<p>Then:</p>
+<p><strong>What does that observation support?</strong></p>
+<p>Then:</p>
+<p><strong>What contradicts my interpretation?</strong></p>
+<p>Then:</p>
+<p><strong>What remains unknown?</strong></p>
+<p>Only after those questions should stronger conclusions be considered.</p>
+<hr>
+<h2 id="canonical-constraint">Canonical Constraint</h2>
+<p><strong>Observe the mechanism before assigning the motive.</strong></p>
+<p>A healthy analyzer does not merely detect possible drift in others.</p>
+<p>It preserves enough uncertainty, counter-observation, and self-review to detect drift in <strong>itself</strong>.</p>
   </main>
 </body>
 </html>
