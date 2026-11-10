@@ -1,0 +1,70 @@
+name: Build TriadicFrameworks Spine
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "scripts/build_spine.py"
+      - ".github/workflows/build-spine.yml"
+
+  workflow_dispatch:
+
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: triadicframeworks-spine
+  cancel-in-progress: false
+
+jobs:
+  build-spine:
+    name: Discover, compile, diff, publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Discover modules and build both spines
+        run: |
+          python scripts/build_spine.py
+
+      - name: Show generated differences
+        id: diff
+        shell: bash
+        run: |
+          if git diff --quiet -- docs/spine; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Spine already synchronized."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Generated Spine changes:"
+            git status --short docs/spine
+            git diff --stat -- docs/spine
+          fi
+
+      - name: Commit generated Spine
+        if: steps.diff.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "triadicframeworks-spine-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add docs/spine
+
+          git commit \
+            -m "build(spine): refresh module and grammar spines"
+
+          git push
