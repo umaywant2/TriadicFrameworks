@@ -252,3 +252,81 @@ def test_common_classification_is_deterministic():
         "Alpha",
         "Zeta",
     ]
+
+def test_end_to_end_grammar_extraction(tmp_path, monkeypatch):
+    import scripts.build_spine as build_spine
+
+    docs = tmp_path / "docs"
+
+    alpha = docs / "alpha"
+    beta = docs / "beta"
+
+    alpha.mkdir(parents=True)
+    beta.mkdir(parents=True)
+
+    (alpha / "module.json").write_text(
+        '{"id": "alpha"}',
+        encoding="utf-8",
+    )
+
+    (beta / "module.json").write_text(
+        '{"id": "beta"}',
+        encoding="utf-8",
+    )
+
+    (alpha / "index.md").write_text(
+        """
+# Alpha Grammar
+
+**Coherence**
+
+`AlphaOperator`
+""",
+        encoding="utf-8",
+    )
+
+    (beta / "index.md").write_text(
+        """
+# Beta Grammar
+
+**Coherence**
+
+`BetaOperator`
+""",
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr(build_spine, "ROOT", tmp_path)
+    monkeypatch.setattr(build_spine, "DOCS", docs)
+
+    module_files = build_spine.discover_module_files()
+
+    _, module_roots = build_spine.build_module_inventory(
+        module_files
+    )
+
+    markdown_files = build_spine.discover_markdown_files()
+
+    terms = build_spine.extract_grammar(
+        markdown_files,
+        module_roots,
+    )
+
+    common, per_module = build_spine.classify_terms(terms)
+
+    common_names = {
+        item.term.casefold()
+        for item in common
+    }
+
+    assert "coherence" in common_names
+
+    assert any(
+        item.term == "AlphaOperator"
+        for item in per_module["alpha"]
+    )
+
+    assert any(
+        item.term == "BetaOperator"
+        for item in per_module["beta"]
+    )
