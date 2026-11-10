@@ -1,0 +1,125 @@
+{
+  "id": "combustion_boundary_suppression",
+  "title": "Combustion Boundary Suppression",
+  "subtitle": "Adaptive Acoustic Sensing with Dielectric-Foam Intervention",
+  "artifact_type": "Student Leaf Note",
+  "status": "Conceptual Research Hypothesis",
+  "domain": [
+    "Research",
+    "Fire Dynamics",
+    "Battery Safety"
+  ],
+  "framework": "RTT-Spine",
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "evidence_boundary": "Preliminary and public-source only",
+  "concept": {
+    "working_name": "Combustion Boundary Suppression",
+    "method": "Adaptive acoustic sensing and counter-pulsing with dielectric-foam deposition",
+    "primary_mechanism": "Foam-based cooling, isolation, and propagation control",
+    "acoustic_role": [
+      "Detection",
+      "Diagnostic probing",
+      "Boundary perturbation",
+      "Adaptive feedback"
+    ],
+    "control_mode": "Closed-loop and state-dependent"
+  },
+  "control_cycle": [
+    "listen",
+    "classify",
+    "pulse",
+    "observe",
+    "compare",
+    "retune",
+    "coat",
+    "verify"
+  ],
+  "rtt_registration": {
+    "scalar_field": "Observable system state",
+    "vector_fields": [
+      "Heat flow",
+      "Gas flow",
+      "Flame movement",
+      "Acoustic-pressure propagation",
+      "Foam transport",
+      "Suppressant spreading",
+      "Cell-to-cell thermal coupling"
+    ],
+    "resonance_envelope": [
+      "Thermal runaway",
+      "Gas release",
+      "External combustion",
+      "Pack geometry",
+      "Acoustic excitation",
+      "Foam deposition",
+      "Cooling response"
+    ],
+    "target_transition": [
+      "Runaway propagation",
+      "Bounded combustion",
+      "Surface access",
+      "Coating",
+      "Cooling",
+      "Stabilization"
+    ]
+  },
+  "spine": {
+    "structure": "Sense -> estimate -> perturb -> deposit -> measure -> adapt",
+    "coherence": "Suppression requires agreement among sensing, acoustic intervention, foam delivery, gas conditions, and thermal measurements.",
+    "drift": [
+      "Irrelevant signal tracking",
+      "Flame movement mistaken for reduction",
+      "Visible extinguishment masking hidden heating",
+      "Foam coverage masking unresolved thermal activity"
+    ],
+    "substrates": [
+      "Cells",
+      "Pack structure",
+      "Gases",
+      "Flame",
+      "Acoustic field",
+      "Foam",
+      "Sensors",
+      "Controller",
+      "Surrounding environment"
+    ],
+    "symmetry_shift": {
+      "from": "Self-reinforcing propagation",
+      "to": "Externally bounded and thermally controlled state"
+    }
+  },
+  "structural_paradox": {
+    "description": "The acoustic field may function as detector, diagnostic probe, suppressive actuator, or destabilizing input.",
+    "control_requirement": "The controller must determine both when to perturb and when not to perturb.",
+    "safe_state": "Acoustic silence may sometimes be the correct state."
+  },
+  "success_conditions": [
+    "External combustion reduced or beneficially displaced",
+    "Suppressant coverage improved",
+    "Temperatures declining",
+    "Heat removal exceeds continuing heat generation",
+    "Propagation indicators diminish",
+    "Stability persists after active acoustic intervention ends"
+  ],
+  "failure_boundary": [
+    "Adverse combustion response",
+    "False classification",
+    "Hidden propagation",
+    "Apparent extinguishment without thermal stability"
+  ],
+  "claims_boundary": {
+    "demonstrated_suppression_technology": false,
+    "single_stable_battery_frequency_claimed": false,
+    "acoustic_termination_of_internal_decomposition_claimed": false,
+    "foam_guarantees_runaway_termination_claimed": false
+  },
+  "testing_domain": "Professional, remote, instrumented fire laboratory only",
+  "student_takeaway": "The research target is not the flame alone. The target is the transition structure sustaining the event.",
+  "final_leaf": "Do not fight only the visible flame. Detect the regime, perturb its boundary when beneficial, establish cooling and isolation, and verify that the hidden transition has actually stopped.",
+  "source_document": "/docs/Research/Combustion_Boundary_Suppression_Student_Leaf_Note.md"
+}
