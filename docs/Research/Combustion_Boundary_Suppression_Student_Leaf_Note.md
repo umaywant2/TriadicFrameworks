@@ -1,3 +1,5 @@
+<img width="1194" height="699" alt="Combustion_Boundary_Suppression_Student_Leaf_Note_" src="https://github.com/user-attachments/assets/effa4426-0f83-4eef-8b4c-15a88b354c1f" />
+
 <!-- ---
 
 ## title: "Combustion Boundary Suppression" subtitle: "Adaptive Acoustic Sensing with Dielectric\-Foam Intervention" type: "Student Leaf Note" status: "Conceptual Research Hypothesis" domain: "Research / Fire Dynamics / Battery Safety" framework: "RTT–Spine" session\_context: "rtt=1 \| coherence=declared \| drift=bounded \| paradox=structural" evidence\_boundary: "Preliminary and public\-source only" -->
