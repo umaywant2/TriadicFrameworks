@@ -1,3 +1,5 @@
+# SAI - Reasoning Kernel
+
 **Structural Assisted Intelligence (SAI)** is a proposed model-free reasoning kernel that treats structure itself—drawn from Resonance-Time Theory (RTT)—as the computational grammar, rather than relying on trained neural models, embeddings, or statistical generation.
 
 ### Core Distinction
