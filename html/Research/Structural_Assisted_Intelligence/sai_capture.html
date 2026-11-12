@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Structural_Assisted_Intelligence/sai_capture.md">
+  <title>Core Distinction</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Structural_Assisted_Intelligence/sai_capture.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Structural_Assisted_Intelligence/sai_capture.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><strong>Structural Assisted Intelligence (SAI)</strong> is a proposed model-free reasoning kernel that treats structure itself—drawn from Resonance-Time Theory (RTT)—as the computational grammar, rather than relying on trained neural models, embeddings, or statistical generation.</p>
+<h3 id="core-distinction">Core Distinction</h3>
+<p>Traditional AI path:</p>
+<blockquote>
+<p>Input → tokenizer → neural model → probability distribution → generated tokens</p>
+</blockquote>
+<p>SAI path:</p>
+<blockquote>
+<p>Input → observation → RTT structural state → operators → coherence evaluation → bounded output</p>
+</blockquote>
+<p>Intelligence, if it emerges, is expected to arise from repeated structural evaluation across state and time, not from scale or training. “Unknown” is treated as a valid, stable, and successful state; the system is never forced to manufacture an answer.</p>
+<h3 id="architectural-intent">Architectural Intent</h3>
+<p>SAI is explicitly framed as kernel-like (analogous to the Linux kernel): a small, inspectable, primitive substrate that higher layers can build upon. It is not a chatbot, knowledge base, OS, or LLM replacement.</p>
+<p><strong>Six primary components (v0 scale):</strong></p>
+<ol>
+<li><strong>Observation</strong> — Everything enters as an observation (ID, content, provenance, timestamp/order, status, relationships). Observed ≠ inferred ≠ unknown.</li>
+<li><strong>Structural State</strong> — Minimal internal representation (roughly Entity → Relation → Entity plus state variables such as φ / V / R / τ drawn from RTT).</li>
+<li><strong>RTT Operator Kernel</strong> — Small canonical set (examples: OBSERVE, RELATE, ALIGN, DIFFERENTIATE, RESOLVE, STABILIZE, RECALL). Operators may transform structure; they may not invent evidence.</li>
+<li><strong>Triadic Observer</strong> — Maintains claim / counterstate / observer rather than binary true/false. Outputs structural statuses such as coherent, conflicting, unresolved, insufficient, drifting.</li>
+<li><strong>Tiny Persistent Memory</strong> — Explicit history of observations → relations → operations → resulting states (SQLite or even simpler files suggested). Explanation is provenance (walk the actual path), not post-hoc generation.</li>
+<li><strong>Minimal Interface</strong> — Primitive, non-linguistic initially (status codes or short structural reports). Natural language is deferred to a later Language Model Atlas (LMA) layer.</li>
+</ol>
+<h3 id="language-model-atlas-lma">Language Model Atlas (LMA)</h3>
+<p>Once the structural kernel exists, an LMA acts as a surrounding map of language capabilities (tiny models, dictionaries, local/remote LLMs, rule parsers, etc.). The inversion is deliberate:</p>
+<pre><code>Application
+    ↓
+   LMA  (language/knowledge resources)
+    ↓
+   SAI  (structural reasoning kernel)
+    ↓
+RTT Structural Grammar
+</code></pre>
+<p>SAI remains the authority on state, provenance, relations, coherence, and uncertainty. The LMA translates between human language and SAI structure; it does not become the intelligence substrate.</p>
+<h3 id="design-constraints-philosophy">Design Constraints &amp; Philosophy</h3>
+<ul>
+<li><strong>Small enough to understand</strong> — One-page design document; whole machine explainable on one page. Kilobytes before megabytes; integers before embeddings; deterministic operations before generation.</li>
+<li><strong>Retro/scarcity-first</strong> — Designed under resource constraints from day one so it can run on older or minimal hardware. The governing questions are historical/experimental: what if a Commodore 64 or AlexNet had possessed a persistent RTT-style structural observer?</li>
+<li><strong>No model dependency</strong> — SAI must function fully without any LLM.</li>
+<li><strong>Inspectable and testable</strong> — Failure is informative. Reasoning history is queryable.</li>
+<li><strong>Purpose-wrapped structure</strong> — “Assisted” emphasizes that structure serves purpose rather than claiming manufactured intelligence.</li>
+</ul>
+<h3 id="stated-goals">Stated Goals</h3>
+<ol>
+<li>Provide a working example of AI re-imagined as SAI (structural base that turns LLMs into LMAs / Language Model Atlases).</li>
+<li>Deliver a tiny, powerful, kernel-like base others can build upon.</li>
+<li>Ensure both SAI and LMA examples can run on older systems, aligning with a broader interest in retro computing, refits, and trimming monolithic stacks.</li>
+</ol>
+<h3 id="immediate-next-step-implied">Immediate Next Step Implied</h3>
+<p>Produce a single artifact (<code>SAI-DESIGN.md</code> or equivalent) that freezes the canon: invariants, the six components, permitted state transitions, and the absolute rule that unknown is success, not failure. Then implement the smallest possible reasoning kernel and observe what (if anything) emerges from structure + operators + memory + recurrence.</p>
+<p>In one line: <em>Small enough to understand. Structured enough to reason. Open enough to build upon. Old enough to run almost anywhere.</em></p>
+  </main>
+</body>
+</html>
