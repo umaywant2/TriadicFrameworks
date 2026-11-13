@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_examples_" src="https://github.com/user-attachments/assets/6a3abb35-233e-46b4-a0a7-1dd439a85e93" />
+
 # **examples.md**
 
 ## *Structural Assisted Intelligence — Primitive Sessions*
