@@ -1,1 +1,114 @@
+{
+  "module": {
+    "name": "Structural Assisted Intelligence",
+    "id": "research.sai.kernel",
+    "category": "Research-Kernel",
+    "version": "SAI/0.1",
+    "summary": "Minimal model-independent structural reasoning kernel implementing RTT as executable grammar.",
+    "purpose": "Provide a small, inspectable, scarcity-first substrate in which useful reasoning can emerge from observation, operators, state, and provenance before any model is introduced.",
+    "keywords": [
+      "SAI",
+      "Structural Assisted Intelligence",
+      "RTT",
+      "model-free",
+      "reasoning kernel",
+      "provenance",
+      "coherence",
+      "triadic observer",
+      "LMA"
+    ],
+    "audience": ["students", "researchers", "developers", "AIs"],
+    "front_door": "README.md",
+    "format": ["JSON", "Markdown"],
+    "every_page_stands_alone": true
+  },
 
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "module": "Research/Structural_Assisted_Intelligence",
+    "category": "Research-Kernel",
+    "version": "SAI/0.1",
+    "header": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": ["JSON", "Markdown"],
+    "front_door": "README.md",
+    "audience": ["students", "researchers", "developers", "AIs"],
+    "every_page_stands_alone": true
+  },
+
+  "components": {
+    "observation": {
+      "role": "Entry of any input with identity, content, provenance, order, and status.",
+      "invariant": "Observed ≠ inferred ≠ unknown."
+    },
+    "structural_state": {
+      "role": "Minimal internal representation (Entity–Relation–Entity + RTT state).",
+      "invariant": "State is explicit and inspectable."
+    },
+    "operator_kernel": {
+      "role": "Small canonical operator set that transforms structure.",
+      "invariant": "Operators may transform structure. They may not invent evidence."
+    },
+    "triadic_observer": {
+      "role": "Maintains claim / counterstate / observer and emits structural statuses.",
+      "invariant": "Paradox has somewhere to live."
+    },
+    "memory": {
+      "role": "Persistent history of observations, relations, operations, and resulting states.",
+      "invariant": "Explanation is provenance, not generation."
+    },
+    "interface": {
+      "role": "Primitive status reporting. Natural language deferred to LMA.",
+      "invariant": "Unknown is a valid, stable, successful result."
+    }
+  },
+
+  "operators": {
+    "OBSERVE": { "description": "Register an observation with provenance." },
+    "RELATE": { "description": "Declare or detect a connection between observations or states." },
+    "ALIGN": { "description": "Evaluate or increase structural alignment." },
+    "DIFFERENTIATE": { "description": "Surface distinction or counterstate." },
+    "RESOLVE": { "description": "Attempt resolution of an unresolved structure." },
+    "STABILIZE": { "description": "Dampen or lock a coherent state." },
+    "RECALL": { "description": "Retrieve prior observation, relation, or path." }
+  },
+
+  "statuses": [
+    "UNKNOWN",
+    "OBSERVED",
+    "RELATED",
+    "ALIGNED",
+    "CONFLICT",
+    "DRIFT",
+    "STABLE",
+    "INSUFFICIENT",
+    "UNRESOLVED"
+  ],
+
+  "invariants": [
+    "Unknown is a valid stable state.",
+    "Operators may not invent evidence.",
+    "Explanation is provenance.",
+    "No model dependency for core function.",
+    "Design under scarcity from day one."
+  ],
+
+  "architecture": {
+    "stack": [
+      "Application",
+      "LMA (Language Model Atlas)",
+      "SAI (Structural Kernel)",
+      "RTT Structural Grammar"
+    ],
+    "separation": "SAI remains the authority on state, relations, coherence, provenance, and uncertainty. LMA is a surrounding map of language resources."
+  },
+
+  "analyzer_layers": {
+    "operator": ["OBSERVE", "RELATE", "ALIGN", "DIFFERENTIATE", "RESOLVE", "STABILIZE", "RECALL"],
+    "dimensional": ["state", "relation", "coherence", "provenance"],
+    "regime": ["structural-kernel", "model-free", "scarcity-first"],
+    "cross_cutting": ["research", "kernel", "LMA-adapter"]
+  }
+}
