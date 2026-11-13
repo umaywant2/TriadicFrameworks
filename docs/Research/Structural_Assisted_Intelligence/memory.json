@@ -1,1 +1,53 @@
+{
+  "schema": "sai.memory",
+  "version": "SAI/0.1",
+  "description": "Minimal persistent memory for Structural Assisted Intelligence. Explanation is provenance. All records are append-only.",
 
+  "observation": {
+    "id": "string (obs-NNNN)",
+    "content": "string | number | object",
+    "source": "string",
+    "order": "integer | timestamp",
+    "status": "UNKNOWN | OBSERVED | RELATED | ALIGNED | CONFLICT | DRIFT | STABLE | INSUFFICIENT | UNRESOLVED",
+    "provenance": "string (operation id that created it)"
+  },
+
+  "relation": {
+    "id": "string (rel-NNNN)",
+    "from": "string (observation or state id)",
+    "to": "string (observation or state id)",
+    "type": "string (optional, e.g. suggests, conflicts, supports)",
+    "coherence": "aligned | conflicting | unresolved | drifting | stable",
+    "provenance": "string (operation id that created or last updated it)"
+  },
+
+  "operation": {
+    "id": "string (op-NNNN)",
+    "operator": "OBSERVE | RELATE | ALIGN | DIFFERENTIATE | RESOLVE | STABILIZE | RECALL",
+    "target": "string | array (ids acted upon)",
+    "result_status": "string",
+    "note": "string (optional, structural only)",
+    "order": "integer | timestamp"
+  },
+
+  "state": {
+    "current": "string (status)",
+    "active_observations": ["string"],
+    "active_relations": ["string"],
+    "last_operation": "string (operation id)"
+  },
+
+  "log": {
+    "description": "Append-only sequence of operation records. The full path is reconstructed by walking operation → relation → observation links.",
+    "order": "strictly increasing"
+  },
+
+  "invariants": [
+    "All records are immutable once written.",
+    "No observation exists without an OBSERVE operation.",
+    "No relation exists without a RELATE operation.",
+    "RECALL never writes.",
+    "Unknown and Insufficient are valid stored statuses.",
+    "Deletion is forbidden; withdrawal creates a new differentiating operation."
+  ]
+}
