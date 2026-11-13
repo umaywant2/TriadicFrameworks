@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_RTT_Δ_StoryForge_v1 0_" src="https://github.com/user-attachments/assets/b730d788-62fe-471c-b3db-8b0b7ab43bf3" />
+
 # 🎯 **THE GOAL THIS TIME**
 You want to:
 
