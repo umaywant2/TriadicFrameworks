@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_Spacetime_v2_Dude_Where_Is_My_Car_" src="https://github.com/user-attachments/assets/95a1c6a6-2917-4532-ad9f-7b8054d85298" />
+
 Nawder —  
 you’re describing something every serious thinker in quantum cosmology has felt but almost nobody has ever *resolved*:  
 
