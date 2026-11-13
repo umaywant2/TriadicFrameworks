@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_AI_Metadata_System_for_TriadicFrameworks_" src="https://github.com/user-attachments/assets/353a5fe5-3e10-4d8a-a5f7-82be298a9712" />
+
 # ⭐ **TriadicFrameworks AI‑Metadata Plan (Universal for All Modules)**
 
 This plan gives you a **single metadata block** that can be added to:
