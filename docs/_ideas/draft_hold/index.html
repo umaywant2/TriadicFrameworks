@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Draft Hold — Ideas & Working Notes — TriadicFrameworks</title>
+
+<meta name="description"
+      content="Draft Hold: incubation space for RTT and TriadicFrameworks ideas, unfinished modules, narrative experiments, and promotion-candidate notes." />
+<meta name="keywords"
+      content="draft hold, ideas, working notes, RTT drafts, incubation, promotion candidates, experimental modules" />
+<meta name="author" content="Nawder Loswin" />
+
+<meta name="module" content="Draft Hold" />
+<meta name="canonical-id" content="DRAFT_HOLD" />
+<meta name="module-type" content="Ideas-Incubation" />
+<meta name="version" content="0.9" />
+<meta name="status" content="draft-holding" />
+<meta name="parent" content="_ideas" />
+<meta name="siblings" content="promoted, archive, scratch" />
+<meta name="canonical-path" content="/docs/_ideas/draft_hold/" />
+<meta name="last-updated" content="2026-11-13" />
+<meta name="license" content="MIT" />
+
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="DRAFT_HOLD" />
+<meta name="ai-operators"
+      content="DRAFT-Incubate, DRAFT-Promote, DRAFT-Groom, DRAFT-Archive, DRAFT-Experiment, DRAFT-Lineage" />
+
+<meta property="og:title" content="Draft Hold — Ideas & Working Notes — TriadicFrameworks" />
+<meta property="og:description"
+      content="Incubation space for unfinished RTT ideas and promotion candidates." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.triadicframeworks.org/docs/_ideas/draft_hold" />
+
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-code.png">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Draft Hold — Ideas & Working Notes — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="Holding area for RTT drafts and experimental notes." />
+
+<meta name="citation_title" content="Draft Hold — Ideas & Working Notes — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-11-13" />
+
+<!-- Favicon -->
+<script type="module" async fetchpriority="low" src="https://www.triadicframeworks.org/.webmcp/bridge.js" data-packs="c2pa,mcp-server-client"></script>
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+      
+<style>
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
+
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Neon headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
+}
+
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
+
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+   <details>
+     <summary><h2>🔆 _ideas draft_hold</h2></summary>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+   </details>
+<details>
+  <summary><h3>🔆 Awareness</h3></summary>
+  <a href="#RTT_INSIDE_AWARENESS_THINK_ACROSS_ALL_DOMAINS">🌀 RTT Inside Awareness (Think Across All Domains)</a><br>
+  <a href="#WAY_BACK_AND_WAY_FORWARD">🔁 Way Back and Way Forward</a>
+</details>
+<details>
+  <summary><h3>💫 Foundations + Cores</h3></summary>
+  <a href="#AI_METADATA_SYSTEM_FOR_TRIADIC_FRAMEWORKS">🧠 AI Metadata System for Triadic Frameworks</a><br>
+  <a href="#RTT_FULL_SPECTRUM_DIMENSIONAL_RESONANCE_CORES">🌈 Full Spectrum Dimensional Resonance Cores</a><br>
+  <a href="#RTT_MACRO_MICRO_CORES">🔭 Macro-Micro Cores</a><br>
+  <a href="#RTT_MICRO_CORE_PACKAGED">📦 Micro Core Packaged</a><br>
+  <a href="#RTT_MAKES_A_30_LEVEL_SYSTEM_NATURAL">📊 Makes a 30-Level System Natural</a><br>
+  <a href="#RTT_LINEAGE_MAP_TRIADIC_HEXADIC_ENNEADIC">🗺️ Lineage Map (Triadic · Hexadic · Enneadic)</a><br>
+  <a href="#RTT_SCIQUANTUM_ALIGNMENT_SUMMARY">⚛️ SciQuantum Alignment Summary</a>
+</details>
+<details>
+  <summary><h3>🌊 Forces + Engines</h3></summary>
+  <a href="#NARDERIAN_FREQUENCY_FLUIDS_FORCES_AND_THE_INVERTED_CYCLES">💧 Narderian Frequency Fluids, Forces & Inverted Cycles</a><br>
+  <a href="#NAWDERIAN_SET_DEMI_FORCE_SYSTEM_MODEL_SCRIPT">⚙️ Nawderian SET Demi-Force System Model</a><br>
+  <a href="#NAWDERIAN_TEMPERATURE_ENGINE_SCRIPT">🔥 Nawderian Temperature Engine</a>
+</details>
+<details>
+  <summary><h3>🛠️ Modules + Guides</h3></summary>
+  <a href="#RTT_DEVELOPER_QUICK_START">🚀 Developer Quick-Start</a><br>
+  <a href="#RTT_AVIATION_SAFETY_MODULE">✈️ Aviation Safety Module</a><br>
+  <a href="#RTT_LIFE_GUIDE_FOR_KIDS_TOP_100_THINGS_TO_KNOW_ON_EARTH">👶 Life Guide for Kids (Top 100)</a><br>
+  <a href="#RTT_ALIGNED_TOOL_IMPROVEMENT_FRAMEWORK">🔧 Aligned Tool Improvement Framework</a><br>
+  <a href="#RTT_NATIVE_ANALYTICS_SUITE_CAPTURE">📈 Native Analytics Suite Capture</a><br>
+  <a href="#BADGES_FOR_RECOGNITION">🏅 Badges for Recognition</a>
+</details>
+<details>
+  <summary><h3>📖 Stories + Saga</h3></summary>
+  <a href="#RTT_DELTA_SAGA_MYTH_PRIME_ERA_PLAN">📜 Δ Saga Myth Prime Era Plan</a><br>
+  <a href="#THE_RTT_DELTA_SAGA_NOVEL_FORMAT">📘 The RTT-Δ Saga (Novel Format)</a><br>
+  <a href="#THE_RTT_NABLA_AGAS_NOVELLA">📗 The RTT ▽ AGAS Novella</a><br>
+  <a href="#RTT_DELTA_SAGA_COMING_FOR_YOU_YOUTUBE_SHORT_SCRIPT">🎬 Δ Saga “Coming For You” YouTube Short</a><br>
+  <a href="#RTT_TOP_100_FRINGE_STORY_SHORTS">✨ Top 100 Fringe Story Shorts</a><br>
+  <a href="#A_LONG_ARC_TRIADUSICAL_ROCKING_RTT_STYLE">🎸 A Long Arc Triadusical Rocking (RTT Style)</a><br>
+  <a href="#SPACETIME_V2_DUDE_WHERE_IS_MY_CAR">🚗 Spacetime v2: Dude Where Is My Car</a><br>
+  <a href="#PARALLEL_UNIVERSE_WITH_RTT_IN_1959">🕰️ Parallel Universe with RTT in 1959</a><br>
+  <a href="#REMIX_CIVCYCLES_PLANET_OF_THE_APES_UNEDITED">🦍 Remix CivCycles: Planet of the Apes</a><br>
+  <a href="#JUDGE_ME_BY_MY_SIZE_DO_YOU">👁️ Judge Me By My Size Do You</a>
+</details>
+<details>
+  <summary><h3>🏪 Planning + Store + Meta</h3></summary>
+  <a href="#THREE_BOOKS_TO_PUBLISH_PLAN">📚 3 Books to Publish Plan</a><br>
+  <a href="#RTT_STORE_PLANNING">🛒 RTT Store Planning</a><br>
+  <a href="#THE_WRAPPER_STORE_WITH_RTT_INSIDE">🎁 The Wrapper Store with RTT Inside</a><br>
+  <a href="#RTT_CORE_AS_A_COMPONENT">🧩 RTT Core as a Component</a><br>
+  <a href="#RTT_VST_FILM_REALISM_CERTIFICATION_PROGRAM">🎥 vST Film Realism Certification Program</a><br>
+  <a href="#RTT_ALIGNED_CULTURAL_THEORIST">🎭 RTT-Aligned Cultural Theorist</a><br>
+  <a href="#GROK_COPILOT_QNA">💬 Grok + Copilot QnA</a>
+</details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../../">🔙TFT</a>
+   </details>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="draft-hold-session-header"
+         data-awareness="0"
+         data-coherence="variable"
+         data-drift="expected"
+         data-layer="ideas-incubation">
+
+   <details>
+     <summary><h2>Session Context</h2></summary>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">inactive (incubation / pre-promotion)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      drafts → experiments → promotion candidates → structural assets → narrative fragments → metadata notes
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">expected (working notes, not locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">variable (per-file; some near-stable, some exploratory)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">0.9 (holding / grooming stage)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + conceptual text + scripts</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Draft Hold index)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">exploratory + non-canonical + AI-parsable + promotion-aware</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">author + collaborators + AIs (internal working use)</span>
+
+  </div>
+   </details>
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#222;color:#eee;border-radius:6px;font-size:13px;">
+  🗂️ Draft Hold<br>📝 Ideas & Incubation Layer
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../../ABOUT.md',
+      CONTRIBUTING: '../../CONTRIBUTING.md',
+      GLOSSARY: '../../GLOSSARY.md',
+      LINEAGE: '../../LINEAGE.md',
+      LICENSE: '../../LICENSE.md',
+      SITEMAP: '../../sitemap.md',
+      QUICKSTART: '../../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../../CODE_OF_CONDUCT.md',
+      SECURITY: '../../SECURITY.md',
+      PRINCIPLES: '../../PRINCIPLES.md',
+      THREE_BOOKS_TO_PUBLISH_PLAN: '3_Books_to_Publish_plan.md',
+      AI_METADATA_SYSTEM_FOR_TRIADIC_FRAMEWORKS: 'AI‑Metadata_System_for_TriadicFrameworks.md',
+      A_LONG_ARC_TRIADUSICAL_ROCKING_RTT_STYLE: 'A_Long_Arc_Triadusical_Rocking_RTT_Style.md',
+      BADGES_FOR_RECOGNITION: 'Badges_for_Recognition.md',
+      GROK_COPILOT_QNA: 'Grok_Copilot_QnA.md',
+      JUDGE_ME_BY_MY_SIZE_DO_YOU: 'Judge_me_by_my_size_do_you.md',
+      NARDERIAN_FREQUENCY_FLUIDS_FORCES_AND_THE_INVERTED_CYCLES: 'Narderian_Frequency_Fluids_Forces_and_the_Inverted_Cycles.md',
+      NAWDERIAN_SET_DEMI_FORCE_SYSTEM_MODEL_SCRIPT: 'Nawderian_SET_Demi-Force_System_model_script.md',
+      NAWDERIAN_TEMPERATURE_ENGINE_SCRIPT: 'Nawderian_Temperature_Engine_script.md',
+      PARALLEL_UNIVERSE_WITH_RTT_IN_1959: 'Parallel_Universe_with_RTT_in_1959.md',
+      REMIX_CIVCYCLES_PLANET_OF_THE_APES_UNEDITED: 'Remix_CivCycles_Planet_of_the_Apes_unedited.md',
+      RTT_INSIDE_AWARENESS_THINK_ACROSS_ALL_DOMAINS: 'RTT-Inside_Awareness_Think_Across_ALL_Domains.md',
+      RTT_AVIATION_SAFETY_MODULE: 'RTT_Aviation_Safety_Module.md',
+      RTT_DEVELOPER_QUICK_START: 'RTT_Developer_Quick-Start.md',
+      RTT_FULL_SPECTRUM_DIMENSIONAL_RESONANCE_CORES: 'RTT_Full_Spectrum_Dimensional_Resonance_Cores.md',
+      RTT_LIFE_GUIDE_FOR_KIDS_TOP_100_THINGS_TO_KNOW_ON_EARTH: 'RTT_Life-Guide-for-Kids_Top-100_Things-to-Know-on-Earth.md',
+      RTT_LINEAGE_MAP_TRIADIC_HEXADIC_ENNEADIC: 'RTT_Lineage_Map-Triadic_Hexadic_Enneadic.md',
+      RTT_MACRO_MICRO_CORES: 'RTT_Macro-Micro_Cores.md',
+      RTT_MAKES_A_30_LEVEL_SYSTEM_NATURAL: 'RTT_Makes_a_30‑Level_System_Natural.md',
+      RTT_MICRO_CORE_PACKAGED: 'RTT_Micro_Core_Packaged.md',
+      RTT_SCIQUANTUM_ALIGNMENT_SUMMARY: 'RTT_SciQuantum_Alignment_Summary.md',
+      RTT_STORE_PLANNING: 'RTT_Store_Planning.md',
+      RTT_TOP_100_FRINGE_STORY_SHORTS: 'RTT_Top‑100_Fringe_Story_Shorts.md',
+      RTT_VST_FILM_REALISM_CERTIFICATION_PROGRAM: 'RTT_vST_Film_Realism_Certification_Program.md',
+      RTT_DELTA_SAGA_MYTH_PRIME_ERA_PLAN: 'RTT_Δ_Saga_Myth_Prime_Era_Plan.md',
+      RTT_ALIGNED_CULTURAL_THEORIST: 'RTT‑Aligned_Cultural_Theorist.md',
+      RTT_ALIGNED_TOOL_IMPROVEMENT_FRAMEWORK: 'RTT‑Aligned_Tool_Improvement_Framework.md',
+      RTT_NATIVE_ANALYTICS_SUITE_CAPTURE: 'RTT‑native_analytics_suite_Capture.md',
+      RTT_DELTA_SAGA_COMING_FOR_YOU_YOUTUBE_SHORT_SCRIPT: 'RTT‑Δ_SAGA_COMING_FOR_YOU_youtube_short_script.md',
+      SPACETIME_V2_DUDE_WHERE_IS_MY_CAR: 'Spacetime_v2_Dude_Where_Is_My_Car.md',
+      THE_RTT_NABLA_AGAS_NOVELLA: 'The_RTT_▽_AGAS_Novella.md',
+      THE_RTT_DELTA_SAGA_NOVEL_FORMAT: 'The_RTT‑Δ_Saga_novel_format.md',
+      THE_WRAPPER_STORE_WITH_RTT_INSIDE: 'The_Wrapper_Store_with_RTT-Inside.md',
+      RTT_CORE_AS_A_COMPONENT: 'RTT_core‑as‑a‑component.md',
+      WAY_BACK_AND_WAY_FORWARD: 'Way_Back_and_Way_Forward.md'
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"1465e375ff064f19a4f37c196d2b0f84","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
