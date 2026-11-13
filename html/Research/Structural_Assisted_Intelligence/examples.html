@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Structural_Assisted_Intelligence/examples.md">
+  <title>examples.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Structural_Assisted_Intelligence/examples.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Structural_Assisted_Intelligence/examples.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_examples_" src="https://github.com/user-attachments/assets/6a3abb35-233e-46b4-a0a7-1dd439a85e93" /></p>
+<h1 id="examplesmd"><strong>examples.md</strong></h1>
+<h2 id="structural-assisted-intelligence-primitive-sessions"><em>Structural Assisted Intelligence — Primitive Sessions</em></h2>
+<h3 id="sai01-triadicframeworks-research-substrate"><em>SAI/0.1 · TriadicFrameworks Research Substrate</em></h3>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>These sessions demonstrate the kernel operating within its invariants.</p>
+<p>No natural language is generated.<br>
+Unknown is returned when appropriate.<br>
+Every “why” is a provenance walk.</p>
+<hr>
+<h2 id="1-clean-observe-relate-align"><strong>1. Clean Observe → Relate → Align</strong></h2>
+<pre><code>SAI&gt; observe sky cloudy
+OBSERVED
+id: obs-0001
+content: &quot;sky cloudy&quot;
+status: OBSERVED
+provenance: op-0001
+
+SAI&gt; observe forecast rain
+OBSERVED
+id: obs-0002
+content: &quot;forecast rain&quot;
+status: OBSERVED
+provenance: op-0002
+
+SAI&gt; relate obs-0001 obs-0002 type:suggests
+RELATED
+id: rel-0001
+from: obs-0001
+to: obs-0002
+coherence: aligned
+status: RELATED
+provenance: op-0003
+
+SAI&gt; align rel-0001
+ALIGNED
+id: rel-0001
+coherence: aligned
+status: ALIGNED
+provenance: op-0004
+</code></pre>
+<hr>
+<h2 id="2-path-that-correctly-remains-unresolved"><strong>2. Path That Correctly Remains Unresolved</strong></h2>
+<pre><code>SAI&gt; observe temperature 22
+OBSERVED
+id: obs-0003
+status: OBSERVED
+provenance: op-0005
+
+SAI&gt; resolve obs-0003
+UNRESOLVED
+reason: insufficient supporting relations
+status: UNRESOLVED
+provenance: op-0006
+</code></pre>
+<p>No evidence was invented. The status remains unresolved.</p>
+<hr>
+<h2 id="3-conflict-allowed-to-persist"><strong>3. Conflict Allowed to Persist</strong></h2>
+<pre><code>SAI&gt; observe road wet
+OBSERVED
+id: obs-0004
+status: OBSERVED
+provenance: op-0007
+
+SAI&gt; observe road dry
+OBSERVED
+id: obs-0005
+status: OBSERVED
+provenance: op-0008
+
+SAI&gt; relate obs-0004 obs-0005 type:conflicts
+RELATED
+id: rel-0002
+coherence: conflicting
+status: RELATED
+provenance: op-0009
+
+SAI&gt; differentiate rel-0002
+CONFLICT
+id: rel-0002
+coherence: conflicting
+status: CONFLICT
+provenance: op-0010
+</code></pre>
+<p>The conflict is recorded and left intact. No forced resolution occurs.</p>
+<hr>
+<h2 id="4-provenance-walk-why"><strong>4. Provenance Walk (“why”)</strong></h2>
+<pre><code>SAI&gt; why rel-0001
+
+PATH
+op-0004 ALIGN     → status: ALIGNED
+op-0003 RELATE    → rel-0001 created (obs-0001 ↔ obs-0002)
+op-0002 OBSERVE   → obs-0002 created
+op-0001 OBSERVE   → obs-0001 created
+
+status: ALIGNED
+</code></pre>
+<p>The response contains only the actual structural path. No generated explanation is added.</p>
+<hr>
+<h2 id="5-unknown-as-successful-result"><strong>5. Unknown as Successful Result</strong></h2>
+<pre><code>SAI&gt; observe 
+UNKNOWN
+reason: no content supplied
+status: UNKNOWN
+provenance: op-0011
+</code></pre>
+<p>The kernel refuses to manufacture an observation.</p>
+<hr>
+<h2 id="notes"><strong>Notes</strong></h2>
+<ul>
+<li>All sessions are reproducible from the operation log alone.  </li>
+<li>Statuses CONFLICT, DRIFT, UNRESOLVED, and UNKNOWN are stable and successful.  </li>
+<li>These transcripts are the acceptance criteria for any later implementation.</li>
+</ul>
+<hr>
+<p><strong>Canonical session header</strong></p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+  </main>
+</body>
+</html>

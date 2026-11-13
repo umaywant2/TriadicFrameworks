@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Research/Structural_Assisted_Intelligence/sai_capture.md">
-  <title>Core Distinction</title>
+  <title>SAI - Reasoning Kernel</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,6 +92,8 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_sai_capture_" src="https://github.com/user-attachments/assets/45de5bc8-90bc-405f-a305-1843f585b4e1" /></p>
+<h1 id="sai-reasoning-kernel">SAI - Reasoning Kernel</h1>
 <p><strong>Structural Assisted Intelligence (SAI)</strong> is a proposed model-free reasoning kernel that treats structure itself—drawn from Resonance-Time Theory (RTT)—as the computational grammar, rather than relying on trained neural models, embeddings, or statistical generation.</p>
 <h3 id="core-distinction">Core Distinction</h3>
 <p>Traditional AI path:</p>
@@ -142,6 +144,140 @@ RTT Structural Grammar
 <h3 id="immediate-next-step-implied">Immediate Next Step Implied</h3>
 <p>Produce a single artifact (<code>SAI-DESIGN.md</code> or equivalent) that freezes the canon: invariants, the six components, permitted state transitions, and the absolute rule that unknown is success, not failure. Then implement the smallest possible reasoning kernel and observe what (if anything) emerges from structure + operators + memory + recurrence.</p>
 <p>In one line: <em>Small enough to understand. Structured enough to reason. Open enough to build upon. Old enough to run almost anywhere.</em></p>
+<hr>
+<p>I’m ready. This feels like a clean place to shift from canon documents into supporting scaffolding.</p>
+<p>Looking at the <code>sai_module.json</code> pieces we already locked (components, operators, statuses, invariants, architecture), the highest-leverage next artifacts are the ones that make the kernel <em>runnable in the mind</em> before we write any code. Here’s how I’d prioritize them, in roughly the order I’d build:</p>
+<ol>
+<li>
+<p><strong>Operator contracts</strong> (<code>operators.md</code> or a small set of one-page files)<br>
+   For each of the seven operators (OBSERVE, RELATE, ALIGN, DIFFERENTIATE, RESOLVE, STABILIZE, RECALL):<br>
+   - Inputs it is allowed to see<br>
+   - What it may change<br>
+   - What it must never change<br>
+   - Exact status transitions it can produce<br>
+   - One concrete micro-example<br>
+   This turns the operator list from names into enforceable rules.</p>
+</li>
+<li>
+<p><strong>Minimal state &amp; memory schema</strong> (<code>schema.md</code> or <code>memory.json</code> sketch)<br>
+   The smallest possible structures for:<br>
+   - Observation record<br>
+   - Relation record<br>
+   - Operation / provenance record<br>
+   - Current structural state<br>
+   Keep it boring and SQLite-friendly (or even just JSONL) so the “explanation is provenance” rule is literally walkable.</p>
+</li>
+<li>
+<p><strong>Interface transcript examples</strong> (<code>examples.md</code>)<br>
+   A handful of complete, primitive sessions that show:<br>
+   - A clean observe → relate → align path<br>
+   - A path that correctly stays UNKNOWN or UNRESOLVED<br>
+   - A conflict that is allowed to persist<br>
+   - A “why” walk that only returns the actual path<br>
+   These become the acceptance tests for any later implementation.</p>
+</li>
+<li>
+<p><strong>Status transition table</strong> (can live inside SAI-DESIGN.md or as its own tiny file)<br>
+   Explicit allowed / forbidden transitions between the statuses we listed. Prevents later drift.</p>
+</li>
+<li>
+<p><strong>LMA boundary sketch</strong> (very thin)<br>
+   Just the contract: what SAI emits that an LMA is allowed to consume, and what the LMA is forbidden from writing back into SAI state. Keeps the architectural inversion sharp.</p>
+</li>
+</ol>
+<p>Everything else (actual code, adapters, retro ports, richer RTT field mappings) can wait until these five are solid. They stay small, stay inspectable, and directly stress the invariants we already wrote down.</p>
+<p>Which of these do you want to tackle first? Or is there a different supporting piece you’re already seeing that should jump the queue?</p>
+<hr>
+<p>I’ll do a quick pass over the current folder and the original goals so we can see what’s already captured and what still needs a concrete test.</p>
+<p><strong>Goal Capture Check</strong></p>
+<table>
+<thead>
+<tr>
+<th>Original Goal</th>
+<th>Captured?</th>
+<th>Where</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Working example of AI re-imagined as SAI (structural base)</td>
+<td>Yes</td>
+<td>SAI-DESIGN.md, README.md, examples.md</td>
+<td>Clear kernel path, six components, absolute rules</td>
+</tr>
+<tr>
+<td>Turn LLMs into LMAs</td>
+<td>Yes</td>
+<td>LMA_boundary.md, architecture sections</td>
+<td>Inversion is explicit; LMA cannot write structural truth</td>
+</tr>
+<tr>
+<td>Linux-kernel-like tiny powerful base</td>
+<td>Yes</td>
+<td>SAI-DESIGN.md, operators.md, memory.json</td>
+<td>Small, inspectable, append-only, no model dependency</td>
+</tr>
+<tr>
+<td>Runnable on older / constrained systems</td>
+<td>Partially</td>
+<td>Design principles only</td>
+<td>Scarcity-first is stated; no concrete size or retro target yet</td>
+</tr>
+<tr>
+<td>Unknown is valid success</td>
+<td>Yes</td>
+<td>Absolute rules, examples.md, operators.md</td>
+<td>Multiple examples enforce it</td>
+</tr>
+<tr>
+<td>Operators never invent evidence</td>
+<td>Yes</td>
+<td>operators.md contracts, schema invariants</td>
+<td>Explicit per operator</td>
+</tr>
+<tr>
+<td>Explanation is provenance</td>
+<td>Yes</td>
+<td>schema.md, examples.md (“why” walk)</td>
+<td>Walkable path required</td>
+</tr>
+<tr>
+<td>Small enough to understand / open enough to build upon</td>
+<td>Yes</td>
+<td>All files stay one-page or near</td>
+<td>Consistent tone</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Summary:</strong> The conceptual and structural goals are solidly captured in brief, example-backed form. The retro/scarcity goal is declared but not yet made concrete.</p>
+<p><strong>Suggested Next Steps / Validation Actions</strong></p>
+<ol>
+<li>
+<p><strong>Tiny reference kernel (highest leverage)</strong><br>
+   A single-file or &lt;200-line implementation (Python or C) that can execute the five sessions in <code>examples.md</code> exactly.<br>
+   Success = all transcripts pass, provenance walks match, no invented evidence, unknown returned when required.</p>
+</li>
+<li>
+<p><strong>Size &amp; dependency audit</strong><br>
+   Measure the reference kernel: lines, binary size, external dependencies.<br>
+   Explicit target: “runs in &lt;64 KB RAM, zero network, no LLM.” Document the number.</p>
+</li>
+<li>
+<p><strong>Operator contract tests</strong><br>
+   One small test per operator that tries to violate its “must never” rule and confirms rejection or no-op.</p>
+</li>
+<li>
+<p><strong>LMA boundary smoke test</strong><br>
+   A 20-line mock that only speaks OBSERVE / RELATE / RECALL and confirms SAI refuses everything else.</p>
+</li>
+<li>
+<p><strong>Optional retro sketch</strong><br>
+   A one-page note: “What would the observation + relate loop look like in 6502 or a 1980s BASIC subset?” Not full port—just proof the operations are representable.</p>
+</li>
+</ol>
+<p>These five actions turn the current documents into a falsifiable kernel without adding scope.</p>
+<p>Would you like to draft the tiny reference kernel next, or start with the size/dependency target and operator tests?</p>
   </main>
 </body>
 </html>

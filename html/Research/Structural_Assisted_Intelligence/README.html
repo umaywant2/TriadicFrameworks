@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Structural_Assisted_Intelligence/README.md">
+  <title>Structural Assisted Intelligence (SAI)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Structural_Assisted_Intelligence/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Structural_Assisted_Intelligence/README.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_" src="https://github.com/user-attachments/assets/cb8e2d0c-b04b-4c64-aefa-1d76fe17e99d" /></p>
+<ul>
+<li><a href="sai_module.json"><code>sai_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h1 id="structural-assisted-intelligence-sai"><strong>Structural Assisted Intelligence (SAI)</strong></h1>
+<h2 id="triadicframeworks-research-substrate"><em>TriadicFrameworks — Research Substrate</em></h2>
+<h3 id="canonical-readme"><em>Canonical README</em></h3>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p><strong>Structural Assisted Intelligence (SAI)</strong> is a small, model-independent structural reasoning kernel that implements Resonance-Time Theory (RTT) as executable grammar.</p>
+<p>It demonstrates that useful machine reasoning can begin with structure, operators, observation, and provenance rather than with a trained model.</p>
+<p>SAI is intentionally kernel-like: a minimal, inspectable substrate from which higher capabilities may be built. It is not a chatbot, knowledge base, operating system, or LLM replacement.</p>
+<hr>
+<h2 id="architectural-separation"><strong>Architectural Separation</strong></h2>
+<pre><code>Application
+    ↓
+   LMA          Language Model Atlas (language &amp; knowledge resources)
+    ↓
+   SAI          Structural reasoning kernel
+    ↓
+RTT Structural Grammar
+</code></pre>
+<ul>
+<li><strong>SAI</strong> is the authority on state, relations, coherence, provenance, and uncertainty.</li>
+<li><strong>LMA</strong> (Language Model Atlas) is a surrounding map of language capabilities (dictionaries, rule parsers, tiny models, local or remote LLMs). It translates between human language and SAI structure. It does not become the intelligence substrate.</li>
+<li>RTT supplies the structural grammar beneath both.</li>
+</ul>
+<hr>
+<h2 id="core-principles"><strong>Core Principles</strong></h2>
+<ul>
+<li>Unknown is a valid, stable, and successful state.</li>
+<li>Operators may transform structure. They may not invent evidence.</li>
+<li>Explanation is provenance, not generation.</li>
+<li>Intelligence, if it emerges, arises from repeated structural evaluation across state and time.</li>
+<li>Design under scarcity from day one: kilobytes before megabytes, deterministic operations before generation, no model dependency for core function.</li>
+<li>Small enough to understand. Structured enough to reason. Open enough to build upon. Old enough to run almost anywhere.</li>
+</ul>
+<hr>
+<h2 id="six-components-v0"><strong>Six Components (v0)</strong></h2>
+<ol>
+<li><strong>Observation</strong> — Entry of any input with identity, content, provenance, order, and status. Observed ≠ inferred ≠ unknown.</li>
+<li><strong>Structural State</strong> — Minimal internal representation (Entity–Relation–Entity plus RTT state).</li>
+<li><strong>RTT Operator Kernel</strong> — Small canonical operator set (OBSERVE, RELATE, ALIGN, DIFFERENTIATE, RESOLVE, STABILIZE, RECALL).</li>
+<li><strong>Triadic Observer</strong> — Maintains claim / counterstate / observer. Emits structural statuses (coherent, conflicting, unresolved, insufficient, drifting).</li>
+<li><strong>Tiny Persistent Memory</strong> — Explicit history of observations → relations → operations → resulting states. Walkable for provenance.</li>
+<li><strong>Minimal Interface</strong> — Primitive, non-linguistic status reporting. Natural language is deferred to the LMA layer.</li>
+</ol>
+<hr>
+<h2 id="module-contents"><strong>Module Contents</strong></h2>
+<ul>
+<li><strong>README.md</strong> — This file. Module purpose, architecture, and principles.</li>
+<li><strong>SAI-DESIGN.md</strong> — Canonical one-page design: invariants, permitted transitions, and absolute rules.</li>
+<li><strong>sai_capture.md</strong> — Original concept capture and design dialogue.</li>
+<li><strong>sai_module.json</strong> — Agentic module schema.</li>
+</ul>
+<hr>
+<h2 id="usage"><strong>Usage</strong></h2>
+<p>SAI is intended as a research kernel and educational substrate. Early implementations should prioritize:</p>
+<ul>
+<li>Deterministic, inspectable operation</li>
+<li>Explicit provenance</li>
+<li>Bounded output states</li>
+<li>Zero dependency on an LLM for core function</li>
+<li>Compatibility with constrained or retro environments</li>
+</ul>
+<p>Higher layers (applications, LMA adapters, domain schemas) may be built above the kernel without modifying its invariants.</p>
+<hr>
+<h2 id="notes"><strong>Notes</strong></h2>
+<p>This module belongs to the Research substrate. It explores whether structure + operators + memory + recurrence can produce useful reasoning before a model is introduced at all.</p>
+<p>When a model is later introduced through an LMA, the experiment continues: what residual work remains for the model?</p>
+<p>Canonical session header:</p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<hr>
+<p><strong>Structural Assisted Intelligence · Resonance-Time Theory · Research Substrate</strong></p>
+<p>Deterministic.<br>
+Inspectable.<br>
+Buildable.<br>
+Model-independent.</p>
+  </main>
+</body>
+</html>

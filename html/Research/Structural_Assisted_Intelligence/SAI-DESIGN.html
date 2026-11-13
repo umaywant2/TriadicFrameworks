@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Structural_Assisted_Intelligence/SAI-DESIGN.md">
+  <title>SAI-DESIGN.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Structural_Assisted_Intelligence/SAI-DESIGN.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Structural_Assisted_Intelligence/SAI-DESIGN.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_sai_design_" src="https://github.com/user-attachments/assets/1c345c73-4a8e-4c7b-ace2-b761012d15cb" /></p>
+<h1 id="sai-designmd"><strong>SAI-DESIGN.md</strong></h1>
+<h2 id="structural-assisted-intelligence-canonical-design"><em>Structural Assisted Intelligence — Canonical Design</em></h2>
+<h3 id="sai01-triadicframeworks-research-substrate"><em>SAI/0.1 · TriadicFrameworks Research Substrate</em></h3>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>SAI is a minimal, model-independent structural reasoning kernel.</p>
+<p>It implements Resonance-Time Theory as executable grammar and exists to test whether useful reasoning can arise from structure, operators, observation, and provenance before any trained model is introduced.</p>
+<p>SAI is kernel-like. It supplies primitive machinery. Higher layers (applications, Language Model Atlas adapters, domain schemas) may be built above it without altering its invariants.</p>
+<hr>
+<h2 id="absolute-rules"><strong>Absolute Rules</strong></h2>
+<ol>
+<li>
+<p><strong>Unknown is a successful result.</strong><br>
+   The system is never forced to manufacture an answer.</p>
+</li>
+<li>
+<p><strong>Operators may transform structure. They may not invent evidence.</strong><br>
+   All state changes must be traceable to observations or prior structure.</p>
+</li>
+<li>
+<p><strong>Explanation is provenance.</strong><br>
+   “Why” is answered by walking the actual path of observations, relations, and operators—not by generating an explanation after the fact.</p>
+</li>
+<li>
+<p><strong>No model dependency for core function.</strong><br>
+   SAI must operate fully without an LLM, embeddings, or statistical generation.</p>
+</li>
+<li>
+<p><strong>Design under scarcity.</strong><br>
+   Kilobytes before megabytes. Deterministic operations before generation. Explicit state before probabilities.</p>
+</li>
+<li>
+<p><strong>All records are append-only.</strong><br>
+   History is never deleted. Correction or withdrawal is expressed by a new operation.</p>
+</li>
+</ol>
+<hr>
+<h2 id="six-components"><strong>Six Components</strong></h2>
+<h3 id="1-observation">1. Observation</h3>
+<p>Everything enters as an observation, not as truth.</p>
+<p>Fields: <code>id</code>, <code>content</code>, <code>source</code>, <code>order</code>, <code>status</code>, <code>provenance</code>.</p>
+<p><strong>Invariant:</strong> Observed ≠ inferred ≠ unknown.<br>
+No observation exists without an OBSERVE operation.</p>
+<h3 id="2-structural-state">2. Structural State</h3>
+<p>Minimal internal representation.</p>
+<p>Preferred form: <code>Entity → Relation → Entity</code> + current status.</p>
+<p>The stored state snapshot is recomputable from the operation log.</p>
+<h3 id="3-rtt-operator-kernel">3. RTT Operator Kernel</h3>
+<p>Canonical operators (v0.1):</p>
+<ul>
+<li><strong>OBSERVE</strong> — register an observation with provenance  </li>
+<li><strong>RELATE</strong> — declare or detect a connection  </li>
+<li><strong>ALIGN</strong> — evaluate or increase structural alignment  </li>
+<li><strong>DIFFERENTIATE</strong> — surface distinction or counterstate  </li>
+<li><strong>RESOLVE</strong> — attempt resolution of an unresolved structure  </li>
+<li><strong>STABILIZE</strong> — dampen or lock a coherent state  </li>
+<li><strong>RECALL</strong> — retrieve prior observation, relation, or path (read-only)</li>
+</ul>
+<p>Full contracts live in <code>operators.md</code>.</p>
+<h3 id="4-triadic-observer">4. Triadic Observer</h3>
+<p>Maintains claim / counterstate / observer.</p>
+<p>Permitted structural statuses:</p>
+<pre><code>UNKNOWN | OBSERVED | RELATED | ALIGNED | CONFLICT | DRIFT | STABLE | INSUFFICIENT | UNRESOLVED
+</code></pre>
+<p>Paradox (<code>CONFLICT</code>, <code>DRIFT</code>) is allowed to persist.</p>
+<h3 id="5-tiny-persistent-memory">5. Tiny Persistent Memory</h3>
+<p>Four append-only record types:</p>
+<ul>
+<li>observation  </li>
+<li>relation  </li>
+<li>operation  </li>
+<li>state (snapshot)</li>
+</ul>
+<p>Defined in <code>memory.json</code> and <code>schema.md</code>.<br>
+Full provenance paths are reconstructed by walking <code>operation → relation → observation</code>.</p>
+<h3 id="6-minimal-interface">6. Minimal Interface</h3>
+<p>Primitive, non-linguistic by default.</p>
+<p>Acceptance transcripts live in <code>examples.md</code>.</p>
+<p>Natural language is deferred to the Language Model Atlas (LMA) layer.</p>
+<hr>
+<h2 id="permitted-state-transitions-v01"><strong>Permitted State Transitions (v0.1)</strong></h2>
+<pre><code>UNKNOWN
+  ↓ OBSERVE
+OBSERVED
+  ↓ RELATE
+RELATED
+  ↓ ALIGN
+ALIGNED
+  ↓ STABILIZE
+STABLE
+
+RELATED or ALIGNED
+  ↓ DIFFERENTIATE
+CONFLICT | DRIFT
+
+Any non-terminal
+  ↓ RESOLVE (insufficient support)
+UNRESOLVED | INSUFFICIENT
+
+Any
+  ↓ (no content / no path)
+UNKNOWN
+</code></pre>
+<ul>
+<li>CONFLICT and DRIFT are stable states, not errors.  </li>
+<li>STABLE means structural coherence under current observations, not truth.  </li>
+<li>Any state may remain unchanged if an operator cannot act without inventing evidence.</li>
+</ul>
+<hr>
+<h2 id="architectural-separation"><strong>Architectural Separation</strong></h2>
+<pre><code>Application
+    ↓
+   LMA          Language Model Atlas
+    ↓
+   SAI          Structural reasoning kernel
+    ↓
+RTT Structural Grammar
+</code></pre>
+<ul>
+<li>SAI is the authority on state, relations, coherence, provenance, and uncertainty.  </li>
+<li>LMA is a surrounding map of language and knowledge resources. It translates; it does not write structural truth back into SAI.</li>
+</ul>
+<hr>
+<h2 id="success-criteria-for-v01"><strong>Success Criteria for v0.1</strong></h2>
+<ul>
+<li>The entire machine is explainable on one page.  </li>
+<li>All reasoning paths are inspectable via the operation log.  </li>
+<li>Unknown is returned without fabrication.  </li>
+<li>Core function requires no model, GPU, or network.  </li>
+<li>The sessions in <code>examples.md</code> pass without violation of operator contracts.</li>
+</ul>
+<hr>
+<h2 id="philosophy"><strong>Philosophy</strong></h2>
+<p>Small enough to understand.<br>
+Structured enough to reason.<br>
+Open enough to build upon.<br>
+Old enough to run almost anywhere.</p>
+<p>SAI/0: let structure earn the word intelligence.</p>
+<hr>
+<p><strong>Canonical session header</strong></p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<p><strong>Supporting files</strong></p>
+<ul>
+<li><code>operators.md</code> — operator contracts  </li>
+<li><code>memory.json</code> / <code>schema.md</code> — persistent structures  </li>
+<li><code>examples.md</code> — acceptance transcripts  </li>
+<li><code>sai_module.json</code> — agentic module descriptor  </li>
+<li><code>README.md</code> — module overview</li>
+</ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Structural_Assisted_Intelligence/schema.md">
+  <title>schema.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Structural_Assisted_Intelligence/schema.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Structural_Assisted_Intelligence/schema.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_schema_" src="https://github.com/user-attachments/assets/6dd011d3-6468-47ca-826e-af324d872c3b" /></p>
+<h1 id="schemamd"><strong>schema.md</strong></h1>
+<h2 id="structural-assisted-intelligence-memory-state-schema"><em>Structural Assisted Intelligence — Memory &amp; State Schema</em></h2>
+<h3 id="sai01-triadicframeworks-research-substrate"><em>SAI/0.1 · TriadicFrameworks Research Substrate</em></h3>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>This document defines the minimal persistent structures used by the SAI kernel.</p>
+<p>All records are append-only.<br>
+Explanation is provenance.<br>
+Unknown and Insufficient are valid stored results.</p>
+<p>The schema is intentionally flat so it can be stored as four simple tables (or four JSONL streams) without loss of walkability.</p>
+<hr>
+<h2 id="observation"><strong>Observation</strong></h2>
+<p>An observation is the atomic entry of anything into the system.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string (<code>obs-NNNN</code>)</td>
+<td>yes</td>
+<td>Unique, sequential</td>
+</tr>
+<tr>
+<td>content</td>
+<td>string | number | object</td>
+<td>yes</td>
+<td>Raw asserted value; never rewritten</td>
+</tr>
+<tr>
+<td>source</td>
+<td>string</td>
+<td>yes</td>
+<td>Provenance of the input</td>
+</tr>
+<tr>
+<td>order</td>
+<td>integer | timestamp</td>
+<td>yes</td>
+<td>Arrival or sequence order</td>
+</tr>
+<tr>
+<td>status</td>
+<td>status enum</td>
+<td>yes</td>
+<td>Initial value is <code>OBSERVED</code></td>
+</tr>
+<tr>
+<td>provenance</td>
+<td>string (operation id)</td>
+<td>yes</td>
+<td>The OBSERVE operation that created it</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Invariant:</strong> No observation exists without a corresponding OBSERVE operation.</p>
+<hr>
+<h2 id="relation"><strong>Relation</strong></h2>
+<p>A relation is a declared or detected connection between two observations or states.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string (<code>rel-NNNN</code>)</td>
+<td>yes</td>
+<td>Unique, sequential</td>
+</tr>
+<tr>
+<td>from</td>
+<td>string (id)</td>
+<td>yes</td>
+<td>Source observation or state</td>
+</tr>
+<tr>
+<td>to</td>
+<td>string (id)</td>
+<td>yes</td>
+<td>Target observation or state</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>no</td>
+<td>Optional label (suggests, conflicts, etc.)</td>
+</tr>
+<tr>
+<td>coherence</td>
+<td>coherence enum</td>
+<td>yes</td>
+<td>aligned | conflicting | unresolved | drifting | stable</td>
+</tr>
+<tr>
+<td>provenance</td>
+<td>string (operation id)</td>
+<td>yes</td>
+<td>The RELATE (or later) operation that wrote it</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Invariant:</strong> Relations never alter the content of the observations they link.</p>
+<hr>
+<h2 id="operation"><strong>Operation</strong></h2>
+<p>An operation is the permanent record of a single operator invocation.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string (<code>op-NNNN</code>)</td>
+<td>yes</td>
+<td>Unique, sequential</td>
+</tr>
+<tr>
+<td>operator</td>
+<td>operator enum</td>
+<td>yes</td>
+<td>OBSERVE | RELATE | ALIGN | DIFFERENTIATE | RESOLVE | STABILIZE | RECALL</td>
+</tr>
+<tr>
+<td>target</td>
+<td>string | array of strings</td>
+<td>yes</td>
+<td>Ids acted upon</td>
+</tr>
+<tr>
+<td>result_status</td>
+<td>status enum</td>
+<td>yes</td>
+<td>Status after the operation</td>
+</tr>
+<tr>
+<td>note</td>
+<td>string</td>
+<td>no</td>
+<td>Optional structural annotation only</td>
+</tr>
+<tr>
+<td>order</td>
+<td>integer | timestamp</td>
+<td>yes</td>
+<td>Strictly increasing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Invariant:</strong> Every operator writes exactly one operation record. RECALL writes a record but changes no other state.</p>
+<hr>
+<h2 id="state"><strong>State</strong></h2>
+<p>The current structural snapshot. Recomputable from the log; stored only for convenience.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>current</td>
+<td>status enum</td>
+<td>yes</td>
+<td>Highest-level status</td>
+</tr>
+<tr>
+<td>active_observations</td>
+<td>array of strings</td>
+<td>yes</td>
+<td>Currently relevant observation ids</td>
+</tr>
+<tr>
+<td>active_relations</td>
+<td>array of strings</td>
+<td>yes</td>
+<td>Currently relevant relation ids</td>
+</tr>
+<tr>
+<td>last_operation</td>
+<td>string (op id)</td>
+<td>yes</td>
+<td>Most recent operation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="status-enum"><strong>Status Enum</strong></h2>
+<pre><code>UNKNOWN
+OBSERVED
+RELATED
+ALIGNED
+CONFLICT
+DRIFT
+STABLE
+INSUFFICIENT
+UNRESOLVED
+</code></pre>
+<ul>
+<li><code>UNKNOWN</code> and <code>INSUFFICIENT</code> are successful terminal states.  </li>
+<li><code>CONFLICT</code> and <code>DRIFT</code> are stable and must not be auto-erased.  </li>
+<li><code>STABLE</code> means structural coherence under current observations, not truth.</li>
+</ul>
+<hr>
+<h2 id="log"><strong>Log</strong></h2>
+<p>The log is the ordered sequence of all operation records.</p>
+<ul>
+<li>Append-only.  </li>
+<li>Strictly increasing <code>order</code>.  </li>
+<li>Full provenance paths are reconstructed by walking:<br>
+<code>operation → relation → observation</code>.</li>
+</ul>
+<p>No deletion. Withdrawal or correction is expressed by a new DIFFERENTIATE or OBSERVE operation that references the prior record.</p>
+<hr>
+<h2 id="global-invariants"><strong>Global Invariants</strong></h2>
+<ol>
+<li>All records are immutable once written.  </li>
+<li>No observation exists without an OBSERVE operation.  </li>
+<li>No relation exists without a RELATE operation.  </li>
+<li>Operators may not invent evidence.  </li>
+<li>RECALL is read-only with respect to observations and relations.  </li>
+<li>Unknown is a valid stored result.</li>
+</ol>
+<hr>
+<p><strong>Canonical session header</strong></p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+  </main>
+</body>
+</html>

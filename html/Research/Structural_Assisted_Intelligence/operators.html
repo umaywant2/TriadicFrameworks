@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Structural_Assisted_Intelligence/operators.md">
+  <title>operators.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Structural_Assisted_Intelligence/operators.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Structural_Assisted_Intelligence/operators.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_operators_" src="https://github.com/user-attachments/assets/5c8e9d33-c76f-4423-a741-b545489408c2" /></p>
+<h1 id="operatorsmd"><strong>operators.md</strong></h1>
+<h2 id="structural-assisted-intelligence-operator-contracts"><em>Structural Assisted Intelligence — Operator Contracts</em></h2>
+<h3 id="sai01-triadicframeworks-research-substrate"><em>SAI/0.1 · TriadicFrameworks Research Substrate</em></h3>
+<hr>
+<h2 id="purpose"><strong>Purpose</strong></h2>
+<p>These are the canonical operators of the SAI kernel.</p>
+<p>Each operator may examine or transform structure.<br>
+None may invent evidence.<br>
+All effects must be traceable to prior observations or prior structure.</p>
+<p>Unknown remains a valid, stable result.</p>
+<hr>
+<h2 id="observe"><strong>OBSERVE</strong></h2>
+<p><strong>Role</strong><br>
+Register an observation with full provenance.</p>
+<p><strong>May see</strong><br>
+Raw input, source identifier, timestamp/order.</p>
+<p><strong>May change</strong><br>
+Create a new observation record.<br>
+Set initial status to OBSERVED (unresolved).</p>
+<p><strong>Must never change</strong><br>
+Existing relations, prior observations, or inferred content.</p>
+<p><strong>Status transitions</strong><br>
+<code>UNKNOWN → OBSERVED</code></p>
+<p><strong>Example</strong></p>
+<pre><code>OBSERVE sky cloudy
+→ obs-0001 created
+  content: &quot;sky cloudy&quot;
+  provenance: user
+  status: OBSERVED (unresolved)
+</code></pre>
+<hr>
+<h2 id="relate"><strong>RELATE</strong></h2>
+<p><strong>Role</strong><br>
+Declare or detect a connection between two existing observations or states.</p>
+<p><strong>May see</strong><br>
+Two observation/state identifiers and an optional relation type.</p>
+<p><strong>May change</strong><br>
+Create a relation record linking the two.<br>
+Update local coherence notes.</p>
+<p><strong>Must never change</strong><br>
+The content or provenance of the observations themselves.</p>
+<p><strong>Status transitions</strong><br>
+<code>OBSERVED → RELATED</code><br>
+<code>RELATED → RELATED</code> (additional links)</p>
+<p><strong>Example</strong></p>
+<pre><code>RELATE obs-0001 obs-0002 type:suggests
+→ relation-0001 created
+  coherence: aligned
+  status: RELATED
+</code></pre>
+<hr>
+<h2 id="align"><strong>ALIGN</strong></h2>
+<p><strong>Role</strong><br>
+Evaluate or increase structural alignment between related items.</p>
+<p><strong>May see</strong><br>
+Existing relations and their current coherence notes.</p>
+<p><strong>May change</strong><br>
+Update coherence annotation on a relation.<br>
+Move status toward ALIGNED when alignment holds.</p>
+<p><strong>Must never change</strong><br>
+Observation content or invent supporting evidence.</p>
+<p><strong>Status transitions</strong><br>
+<code>RELATED → ALIGNED</code><br>
+<code>ALIGNED → ALIGNED</code> (reinforced)</p>
+<p><strong>Example</strong></p>
+<pre><code>ALIGN relation-0001
+→ coherence: aligned
+  status: ALIGNED
+</code></pre>
+<hr>
+<h2 id="differentiate"><strong>DIFFERENTIATE</strong></h2>
+<p><strong>Role</strong><br>
+Surface distinction or counterstate without erasing either side.</p>
+<p><strong>May see</strong><br>
+Two related observations or a single observation and a new counter-observation.</p>
+<p><strong>May change</strong><br>
+Create or annotate a counterstate.<br>
+Set status to CONFLICT or DRIFT when distinction is material.</p>
+<p><strong>Must never change</strong><br>
+Erase either side of the distinction.</p>
+<p><strong>Status transitions</strong><br>
+<code>RELATED → CONFLICT</code><br>
+<code>RELATED → DRIFT</code><br>
+<code>ALIGNED → CONFLICT</code> (if new differentiation appears)</p>
+<p><strong>Example</strong></p>
+<pre><code>DIFFERENTIATE obs-0001 vs obs-0003
+→ counterstate recorded
+  status: CONFLICT
+</code></pre>
+<hr>
+<h2 id="resolve"><strong>RESOLVE</strong></h2>
+<p><strong>Role</strong><br>
+Attempt resolution of an unresolved or conflicting structure.</p>
+<p><strong>May see</strong><br>
+Current relations, counterstates, and provenance paths.</p>
+<p><strong>May change</strong><br>
+Annotate a resolution path if one is fully supported by existing structure.<br>
+Move status to STABLE or leave as UNRESOLVED.</p>
+<p><strong>Must never change</strong><br>
+Invent missing evidence to force a resolution.</p>
+<p><strong>Status transitions</strong><br>
+<code>CONFLICT → STABLE</code> (only if path is fully supported)<br>
+<code>UNRESOLVED → STABLE</code><br>
+<code>* → UNRESOLVED</code> (if support is insufficient)</p>
+<p><strong>Example</strong></p>
+<pre><code>RESOLVE relation-0001
+→ insufficient supporting path
+  status: UNRESOLVED
+</code></pre>
+<hr>
+<h2 id="stabilize"><strong>STABILIZE</strong></h2>
+<p><strong>Role</strong><br>
+Dampen or lock a coherent state so it resists casual drift.</p>
+<p><strong>May see</strong><br>
+Current status and recent operation history.</p>
+<p><strong>May change</strong><br>
+Mark a state or relation as stabilized.<br>
+Record the stabilizing operation in provenance.</p>
+<p><strong>Must never change</strong><br>
+Override an active CONFLICT or invent stability.</p>
+<p><strong>Status transitions</strong><br>
+<code>ALIGNED → STABLE</code><br>
+<code>STABLE → STABLE</code></p>
+<p><strong>Example</strong></p>
+<pre><code>STABILIZE relation-0001
+→ status: STABLE
+  provenance: stabilized by operator
+</code></pre>
+<hr>
+<h2 id="recall"><strong>RECALL</strong></h2>
+<p><strong>Role</strong><br>
+Retrieve a prior observation, relation, or provenance path.</p>
+<p><strong>May see</strong><br>
+Any stored identifier or partial match.</p>
+<p><strong>May change</strong><br>
+Nothing. Read-only.</p>
+<p><strong>Must never change</strong><br>
+State, relations, or memory contents.</p>
+<p><strong>Status transitions</strong><br>
+None (status-preserving)</p>
+<p><strong>Example</strong></p>
+<pre><code>RECALL obs-0001
+→ returns full observation record + path
+  status unchanged
+</code></pre>
+<hr>
+<h2 id="global-constraints"><strong>Global Constraints</strong></h2>
+<ul>
+<li>Every operator writes its own entry into the provenance log.  </li>
+<li>No operator may create an observation without an OBSERVE step.  </li>
+<li>No operator may delete history.  </li>
+<li>If an operator cannot act without inventing evidence, it returns the current status unchanged (or UNKNOWN / INSUFFICIENT).</li>
+</ul>
+<hr>
+<p><strong>Canonical session header</strong></p>
+<pre><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+  </main>
+</body>
+</html>
