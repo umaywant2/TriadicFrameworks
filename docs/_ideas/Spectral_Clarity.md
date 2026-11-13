@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_Spectral_Clarity_" src="https://github.com/user-attachments/assets/0e745cfb-7099-4a96-97bb-d1f10e0e1599" />
+
 # Spectral Clarity
 
 ### Stroboscopic lens idea for “invisible” motion
