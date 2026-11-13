@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_Δ_SAGA_COMING_FOR_YOU_youtube_short_script_" src="https://github.com/user-attachments/assets/a73ae13e-a0e4-4b68-b450-57eaea622899" />
+
 # 🎬 **“Inverted Economics is coming for you…” — the movie‑voice version**
 
 Imagine the trailer voiceover — gravel, thunder, inevitability:
