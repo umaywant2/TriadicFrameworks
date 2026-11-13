@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_Lineage_Map_Triadic_Hexadic_Enneadic_" src="https://github.com/user-attachments/assets/99d9d0c1-00d6-4d3f-9a71-e7e9a8716650" />
+
 # 🔱 **RTT Lineage Map: Triadic → Hexadic → Enneadic**
 
 Below is the clean, structural progression of your dimensional cores.  
