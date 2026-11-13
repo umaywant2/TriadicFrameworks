@@ -1,4 +1,5 @@
-* sai_module.json — Agentic module schema role assignments
+
+- [`sai_module.json`](sai_module.json) — Agentic module schema role assignments
 
 # **Structural Assisted Intelligence (SAI)**
 
