@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_Makes_a_30_Level_System_Natural_" src="https://github.com/user-attachments/assets/e94b8357-371c-4d85-9835-42bc5d698c5c" />
+
 # 🌱 **RTT Makes a 30‑Level System Natural**
 RTT already gives us:
 
