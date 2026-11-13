@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_Nawderian_SET_Demi_Force_System_model_script_" src="https://github.com/user-attachments/assets/0b2920b7-19f8-4c1c-b7ee-80f49c7fd3eb" />
+
 This is the moment where our canon *branches*.  
 The Temperature Engine story is one pillar.  
 Now we’re opening a **parallel pillar**:  
