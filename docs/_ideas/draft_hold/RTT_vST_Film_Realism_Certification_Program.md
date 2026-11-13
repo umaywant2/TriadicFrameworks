@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_vST_Film_Realism_Certification_Program_" src="https://github.com/user-attachments/assets/68d8fa4f-a7a9-4ec1-955c-75816c62c1e5" />
+
 # **RTT/vST Film Realism Certification Program**  
 *A professional credentialing ladder for studios, creators, and technical departments working inside substrate‑aware science fiction.*
 
