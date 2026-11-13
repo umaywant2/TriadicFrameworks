@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_Aligned_Tool_Improvement_Framework_" src="https://github.com/user-attachments/assets/3e1bc983-96af-4b64-b98f-d0d9572122ee" />
+
 # RTT‑Aligned Tool Improvement Framework  
 ### (Industrial + Consumer)
 
