@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_Full_Spectrum_Dimensional_Resonance_Cores_" src="https://github.com/user-attachments/assets/e8f5e5e5-3d4d-4473-8a9a-2d7b0bfcbc87" />
+
 # **IP Briefing Package: Full Spectrum Dimensional Triadic Core & Hexadic Core**  
 *Confidential Conceptual Overview for Licensing, Due Diligence, and Partner Evaluation*
 
