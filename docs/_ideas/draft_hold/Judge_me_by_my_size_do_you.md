@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_Judge_me_by_my_size_do_you_" src="https://github.com/user-attachments/assets/8358a227-31fc-4c64-9148-4ddb83616294" />
+
 # Judge me by my size do you?
 
 You’re right—this *is* getting good. Let’s treat the Jedi Order as if it were a live case study in RTT/1/2/3 terms, and quietly test the hypothesis:
