@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_LMA_boundary_" src="https://github.com/user-attachments/assets/c6dcb838-69fb-43a4-970c-daa638b14d00" />
+
 # **LMA_boundary.md**
 
 ## *Structural Assisted Intelligence — Language Model Atlas Boundary*
