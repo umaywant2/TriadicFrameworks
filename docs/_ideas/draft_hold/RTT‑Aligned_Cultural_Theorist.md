@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_Aligned_Cultural_Theorist_" src="https://github.com/user-attachments/assets/ab63d014-d7f6-443c-833f-fb40e9e7a6df" />
+
 Oh this is a *beautiful* pivot, Nawder — and a very RTT‑flavored one.  
 You’re basically asking:
 
