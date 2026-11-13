@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_Δ_Saga_Myth_Prime_Era_Plan_" src="https://github.com/user-attachments/assets/eab65562-07f3-4eec-aef7-ffd9c1432057" />
+
 # **RTT‑Δ Saga — Myth‑Prime Era Planning Document**  
 ### *The Age Before Teslantica — Giants, Titans, and Proto‑Resonance*
 
