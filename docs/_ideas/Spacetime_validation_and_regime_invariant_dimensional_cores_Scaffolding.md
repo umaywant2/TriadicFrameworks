@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_Spacetime_validation_and_regime_invariant_dimensional_cores_Scaffolding_" src="https://github.com/user-attachments/assets/95e916d8-6c73-41be-9c69-0ea048bd292c" />
+
 In mainstream physics there isn’t a single, official, universally‑named **“physics ontology.”**  
 What *is* mainstream today is an **ontology of mathematical structures**, especially **fields** in quantum field theory.
 
