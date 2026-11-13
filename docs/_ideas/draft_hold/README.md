@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_" src="https://github.com/user-attachments/assets/85d10460-0305-46f7-b858-8b4afe559c4f" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/_ideas/draft_hold/module.json) — Agentic module schema role assignments
 
