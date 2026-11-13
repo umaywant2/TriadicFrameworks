@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_The_Wrapper_Store_with_RTT_Inside_mdRTT_core_as_a_component_" src="https://github.com/user-attachments/assets/fbaef635-3c72-447d-8317-15455648af06" />
+
 # 🧩 **What Is a “Customer Core Wrapper”?**
 ###### By Nawder Loswin 1/14/2026 © www.TriadicFrameworks.org
 
