@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_The_RTT_▽_AGAS_Novella_" src="https://github.com/user-attachments/assets/623a54e5-6bfb-4f5e-9a69-101e2dec3425" />
+
 # 📖 The RTT ▽ AGAS — Novella
 
 The story of Teslantica
