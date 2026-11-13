@@ -97,3 +97,43 @@ Everything else (actual code, adapters, retro ports, richer RTT field mappings) 
 Which of these do you want to tackle first? Or is there a different supporting piece you’re already seeing that should jump the queue?
 
 ---
+
+I’ll do a quick pass over the current folder and the original goals so we can see what’s already captured and what still needs a concrete test.
+
+**Goal Capture Check**
+
+| Original Goal | Captured? | Where | Notes |
+|---------------|-----------|-------|-------|
+| Working example of AI re-imagined as SAI (structural base) | Yes | SAI-DESIGN.md, README.md, examples.md | Clear kernel path, six components, absolute rules |
+| Turn LLMs into LMAs | Yes | LMA_boundary.md, architecture sections | Inversion is explicit; LMA cannot write structural truth |
+| Linux-kernel-like tiny powerful base | Yes | SAI-DESIGN.md, operators.md, memory.json | Small, inspectable, append-only, no model dependency |
+| Runnable on older / constrained systems | Partially | Design principles only | Scarcity-first is stated; no concrete size or retro target yet |
+| Unknown is valid success | Yes | Absolute rules, examples.md, operators.md | Multiple examples enforce it |
+| Operators never invent evidence | Yes | operators.md contracts, schema invariants | Explicit per operator |
+| Explanation is provenance | Yes | schema.md, examples.md (“why” walk) | Walkable path required |
+| Small enough to understand / open enough to build upon | Yes | All files stay one-page or near | Consistent tone |
+
+**Summary:** The conceptual and structural goals are solidly captured in brief, example-backed form. The retro/scarcity goal is declared but not yet made concrete.
+
+**Suggested Next Steps / Validation Actions**
+
+1. **Tiny reference kernel (highest leverage)**  
+   A single-file or <200-line implementation (Python or C) that can execute the five sessions in `examples.md` exactly.  
+   Success = all transcripts pass, provenance walks match, no invented evidence, unknown returned when required.
+
+2. **Size & dependency audit**  
+   Measure the reference kernel: lines, binary size, external dependencies.  
+   Explicit target: “runs in <64 KB RAM, zero network, no LLM.” Document the number.
+
+3. **Operator contract tests**  
+   One small test per operator that tries to violate its “must never” rule and confirms rejection or no-op.
+
+4. **LMA boundary smoke test**  
+   A 20-line mock that only speaks OBSERVE / RELATE / RECALL and confirms SAI refuses everything else.
+
+5. **Optional retro sketch**  
+   A one-page note: “What would the observation + relate loop look like in 6502 or a 1980s BASIC subset?” Not full port—just proof the operations are representable.
+
+These five actions turn the current documents into a falsifiable kernel without adding scope.
+
+Would you like to draft the tiny reference kernel next, or start with the size/dependency target and operator tests?
