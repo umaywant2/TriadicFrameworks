@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_Micro_Core_Packaged_" src="https://github.com/user-attachments/assets/6aa0d313-6d66-41e8-a265-809394e696ca" />
+
 # 🍨 **RTT MICRO CORE WHITEPAPER** 🛸
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
