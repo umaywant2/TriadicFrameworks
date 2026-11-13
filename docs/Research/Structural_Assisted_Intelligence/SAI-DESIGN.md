@@ -32,6 +32,9 @@ SAI is kernel-like. It supplies primitive machinery. Higher layers (applications
 5. **Design under scarcity.**  
    Kilobytes before megabytes. Deterministic operations before generation. Explicit state before probabilities.
 
+6. **All records are append-only.**  
+   History is never deleted. Correction or withdrawal is expressed by a new operation.
+
 ---
 
 ## **Six Components**
@@ -39,22 +42,17 @@ SAI is kernel-like. It supplies primitive machinery. Higher layers (applications
 ### 1. Observation
 Everything enters as an observation, not as truth.
 
-- Identity  
-- Content / value  
-- Source / provenance  
-- Timestamp / order  
-- Status / confidence  
-- Relationships  
+Fields: `id`, `content`, `source`, `order`, `status`, `provenance`.
 
-**Invariant:** Observed ≠ inferred ≠ unknown.
+**Invariant:** Observed ≠ inferred ≠ unknown.  
+No observation exists without an OBSERVE operation.
 
 ### 2. Structural State
 Minimal internal representation.
 
-Preferred form:  
-`Entity → Relation → Entity` + RTT state variables.
+Preferred form: `Entity → Relation → Entity` + current status.
 
-SAI does not require linguistic understanding of the content. It requires that three structural objects have been asserted and that their provenance is known.
+The stored state snapshot is recomputable from the operation log.
 
 ### 3. RTT Operator Kernel
 Canonical operators (v0.1):
@@ -65,50 +63,36 @@ Canonical operators (v0.1):
 - **DIFFERENTIATE** — surface distinction or counterstate  
 - **RESOLVE** — attempt resolution of an unresolved structure  
 - **STABILIZE** — dampen or lock a coherent state  
-- **RECALL** — retrieve prior observation, relation, or path  
+- **RECALL** — retrieve prior observation, relation, or path (read-only)
 
-Operators transform or examine structure. They do not create evidence.
+Full contracts live in `operators.md`.
 
 ### 4. Triadic Observer
-Maintains:
+Maintains claim / counterstate / observer.
 
-- claim  
-- counterstate  
-- observer  
+Permitted structural statuses:
 
-Permitted structural statuses include:
+```
+UNKNOWN | OBSERVED | RELATED | ALIGNED | CONFLICT | DRIFT | STABLE | INSUFFICIENT | UNRESOLVED
+```
 
-- coherent  
-- conflicting  
-- unresolved  
-- insufficient  
-- drifting  
-
-Paradox is allowed to persist rather than being erased.
+Paradox (`CONFLICT`, `DRIFT`) is allowed to persist.
 
 ### 5. Tiny Persistent Memory
-Stores:
+Four append-only record types:
 
-`observations → relations → operations → resulting states`
+- observation  
+- relation  
+- operation  
+- state (snapshot)
 
-Memory is explicit and walkable. The reasoning history itself is the explanation.
+Defined in `memory.json` and `schema.md`.  
+Full provenance paths are reconstructed by walking `operation → relation → observation`.
 
 ### 6. Minimal Interface
 Primitive, non-linguistic by default.
 
-Example exchange:
-
-```
-SAI> observe sky cloudy
-OBSERVED
-id: obs-0001
-state: unresolved
-
-SAI> relate
-RELATION DETECTED
-obs-0001 <-> obs-0002
-coherence: aligned
-```
+Acceptance transcripts live in `examples.md`.
 
 Natural language is deferred to the Language Model Atlas (LMA) layer.
 
@@ -119,18 +103,30 @@ Natural language is deferred to the Language Model Atlas (LMA) layer.
 ```
 UNKNOWN
   ↓ OBSERVE
-OBSERVED (unresolved)
+OBSERVED
   ↓ RELATE
 RELATED
-  ↓ ALIGN / DIFFERENTIATE
-ALIGNED | CONFLICT | DRIFT
-  ↓ RESOLVE / STABILIZE
-STABLE | UNRESOLVED | INSUFFICIENT
+  ↓ ALIGN
+ALIGNED
+  ↓ STABILIZE
+STABLE
+
+RELATED or ALIGNED
+  ↓ DIFFERENTIATE
+CONFLICT | DRIFT
+
+Any non-terminal
+  ↓ RESOLVE (insufficient support)
+UNRESOLVED | INSUFFICIENT
+
+Any
+  ↓ (no content / no path)
+UNKNOWN
 ```
 
-- Any state may return to UNKNOWN if evidence is withdrawn or found insufficient.  
 - CONFLICT and DRIFT are stable states, not errors.  
-- STABLE does not imply truth; it implies structural coherence under current observations.
+- STABLE means structural coherence under current observations, not truth.  
+- Any state may remain unchanged if an operator cannot act without inventing evidence.
 
 ---
 
@@ -147,17 +143,17 @@ RTT Structural Grammar
 ```
 
 - SAI is the authority on state, relations, coherence, provenance, and uncertainty.  
-- LMA is a surrounding map of language and knowledge resources. It translates between human language and SAI structure. It does not become the intelligence substrate.
+- LMA is a surrounding map of language and knowledge resources. It translates; it does not write structural truth back into SAI.
 
 ---
 
 ## **Success Criteria for v0.1**
 
 - The entire machine is explainable on one page.  
-- All reasoning paths are inspectable.  
+- All reasoning paths are inspectable via the operation log.  
 - Unknown is returned without fabrication.  
 - Core function requires no model, GPU, or network.  
-- Failure is informative.
+- The sessions in `examples.md` pass without violation of operator contracts.
 
 ---
 
@@ -177,3 +173,11 @@ SAI/0: let structure earn the word intelligence.
 ```
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
+
+**Supporting files**
+
+- `operators.md` — operator contracts  
+- `memory.json` / `schema.md` — persistent structures  
+- `examples.md` — acceptance transcripts  
+- `sai_module.json` — agentic module descriptor  
+- `README.md` — module overview
