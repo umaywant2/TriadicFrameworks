@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_Life-Guide-for-Kids_Top-100_Things-to-Know-on-Earth_" src="https://github.com/user-attachments/assets/f9fc89a7-ecb9-4468-9fd1-9cc2c86fc62e" />
+
 # 🌍✨ **RTT Life Guide for Kids — Top 100 Things to Know on Earth**  
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
