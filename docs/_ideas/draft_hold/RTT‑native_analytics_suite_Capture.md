@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_native_analytics_suite_Capture_" src="https://github.com/user-attachments/assets/4231d0d9-d2ed-4f6e-bcfa-4dea7bc59186" />
+
 # ⭐ What *existing* analytics would say about your sessions  
 If we ran your full Copilot history through standard NLP metrics, you’d get:
 
