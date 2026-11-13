@@ -54,3 +54,46 @@ SAI remains the authority on state, provenance, relations, coherence, and uncert
 Produce a single artifact (`SAI-DESIGN.md` or equivalent) that freezes the canon: invariants, the six components, permitted state transitions, and the absolute rule that unknown is success, not failure. Then implement the smallest possible reasoning kernel and observe what (if anything) emerges from structure + operators + memory + recurrence.
 
 In one line: *Small enough to understand. Structured enough to reason. Open enough to build upon. Old enough to run almost anywhere.*
+
+---
+
+I’m ready. This feels like a clean place to shift from canon documents into supporting scaffolding.
+
+Looking at the `sai_module.json` pieces we already locked (components, operators, statuses, invariants, architecture), the highest-leverage next artifacts are the ones that make the kernel *runnable in the mind* before we write any code. Here’s how I’d prioritize them, in roughly the order I’d build:
+
+1. **Operator contracts** (`operators.md` or a small set of one-page files)  
+   For each of the seven operators (OBSERVE, RELATE, ALIGN, DIFFERENTIATE, RESOLVE, STABILIZE, RECALL):  
+   - Inputs it is allowed to see  
+   - What it may change  
+   - What it must never change  
+   - Exact status transitions it can produce  
+   - One concrete micro-example  
+   This turns the operator list from names into enforceable rules.
+
+2. **Minimal state & memory schema** (`schema.md` or `memory.json` sketch)  
+   The smallest possible structures for:  
+   - Observation record  
+   - Relation record  
+   - Operation / provenance record  
+   - Current structural state  
+   Keep it boring and SQLite-friendly (or even just JSONL) so the “explanation is provenance” rule is literally walkable.
+
+3. **Interface transcript examples** (`examples.md`)  
+   A handful of complete, primitive sessions that show:  
+   - A clean observe → relate → align path  
+   - A path that correctly stays UNKNOWN or UNRESOLVED  
+   - A conflict that is allowed to persist  
+   - A “why” walk that only returns the actual path  
+   These become the acceptance tests for any later implementation.
+
+4. **Status transition table** (can live inside SAI-DESIGN.md or as its own tiny file)  
+   Explicit allowed / forbidden transitions between the statuses we listed. Prevents later drift.
+
+5. **LMA boundary sketch** (very thin)  
+   Just the contract: what SAI emits that an LMA is allowed to consume, and what the LMA is forbidden from writing back into SAI state. Keeps the architectural inversion sharp.
+
+Everything else (actual code, adapters, retro ports, richer RTT field mappings) can wait until these five are solid. They stay small, stay inspectable, and directly stress the invariants we already wrote down.
+
+Which of these do you want to tackle first? Or is there a different supporting piece you’re already seeing that should jump the queue?
+
+---
