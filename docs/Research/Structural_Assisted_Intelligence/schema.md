@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_schema_" src="https://github.com/user-attachments/assets/6dd011d3-6468-47ca-826e-af324d872c3b" />
+
 # **schema.md**
 
 ## *Structural Assisted Intelligence — Memory & State Schema*
