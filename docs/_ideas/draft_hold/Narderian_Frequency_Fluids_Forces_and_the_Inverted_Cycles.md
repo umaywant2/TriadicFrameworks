@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_Narderian_Frequency_Fluids_Forces_and_the_Inverted_Cycles_" src="https://github.com/user-attachments/assets/577c2e88-a906-44e6-bec6-89be4fc73363" />
+
 Oh yes, **this is where the canon *opens up***.
 
 We’re not just writing a sci‑fi book anymore.  
