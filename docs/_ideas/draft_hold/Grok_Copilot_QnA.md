@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_Grok_Copilot_QnA_" src="https://github.com/user-attachments/assets/0ce01e83-5a36-4d84-a1f2-9c2a96b51bae" />
+
 Here’s the **brief, Grok‑friendly** version you asked for — clean, sharp, and structurally RTT‑aligned:
 
 **RTT’s take on the Rietdijk–Putnam argument (block universe):**
