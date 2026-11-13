@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_sai_design_" src="https://github.com/user-attachments/assets/1c345c73-4a8e-4c7b-ace2-b761012d15cb" />
+
 # **SAI-DESIGN.md**
 
 ## *Structural Assisted Intelligence — Canonical Design*
