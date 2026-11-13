@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_Spin_Electrolisis_Temperature_" src="https://github.com/user-attachments/assets/04931946-3265-405a-ab2f-ee6460d23671" />
+
 # 🌅 Spin Electrolisis Temperature - SET
 
 Resonance-Time Theory names three triadic demi-forces - Spin, Electrolisis, Temperature - to better explain motion within our Universe.  See our canon piece on Silence Noise Resonance (SNR) for measurements.
