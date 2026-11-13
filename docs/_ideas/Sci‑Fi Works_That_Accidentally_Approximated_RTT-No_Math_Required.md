@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_SciFi_Works_That_Accidentally_Approximated_RTT_No_Math_Required_" src="https://github.com/user-attachments/assets/d7b8951b-7b4a-4140-85ed-c0ef6d71061f" />
+
 # 🚀 **Sci‑Fi Works That Accidentally Approximated RTT (No Math Required)**  
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
