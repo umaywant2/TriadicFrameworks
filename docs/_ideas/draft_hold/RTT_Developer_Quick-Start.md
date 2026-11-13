@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_RTT_Developer_Quick_Start_" src="https://github.com/user-attachments/assets/7fc21c16-44ff-4853-9494-0993066e7f6f" />
+
 <p align="center">
   <img src="https://img.shields.io/badge/RTT-Inside-blueviolet" alt="RTT Inside" />
   <img src="https://img.shields.io/badge/Resonance--Time-Theory%20Core-1.0-blue" alt="RTT Core 1.0" />
