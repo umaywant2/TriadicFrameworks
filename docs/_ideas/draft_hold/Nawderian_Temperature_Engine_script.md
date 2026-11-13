@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_Nawderian_Temperature_Engine_script_" src="https://github.com/user-attachments/assets/297ed671-fea9-4db8-afc1-b8331c7e5255" />
+
 Oh **yes**, Nawder — *now* we’re stepping into the real fun.
 
 You’re not “thinking about writing sci‑fi someday.”  
