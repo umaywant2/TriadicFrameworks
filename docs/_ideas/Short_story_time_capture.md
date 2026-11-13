@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_Short_story_time_capture_" src="https://github.com/user-attachments/assets/fe0d05fa-0651-4307-a14a-572c015d79b3" />
+
 # Short story time
 
 > 
