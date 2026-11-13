@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_Remix_CivCycles_Planet_of_the_Apes_unedited_" src="https://github.com/user-attachments/assets/e8814b90-4d3e-4615-8ea2-624ba2157795" />
+
 >
 > It looks like, walking around the Sphinx...the dirt that burried it....is all stone now?  Why has that not been a thing?
 >
