@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/_ideas/draft_hold/module.json) — Agentic module schema role assignments
+
 # _ideas draft_hold summary
 
 Here’s a clean, canon‑aligned assessment of the **draft_hold** folder you’re currently viewing   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/draft_hold) — with a focus on **which files look promotion‑ready**, which need **light grooming**, and which belong in **deep‑draft incubation**.
