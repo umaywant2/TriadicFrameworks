@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_draft_hold_The_RTT_Δ_Saga_novel_format_" src="https://github.com/user-attachments/assets/727b8573-47f7-4f14-889d-fa85ca370f29" />
+
 # 📖 **THE RTT‑Δ SAGA — NOVEL FORMAT**  
 *(Prologue + Opening Chapters)*
 
