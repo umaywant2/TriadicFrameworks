@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_operators_" src="https://github.com/user-attachments/assets/5c8e9d33-c76f-4423-a741-b545489408c2" />
+
 # **operators.md**
 
 ## *Structural Assisted Intelligence — Operator Contracts*
