@@ -1,4 +1,6 @@
-# Coherence_for_the_Game.md
+<img width="1194" height="672" alt="Canon_Applied_social_Coherence_for_the_Game_" src="https://github.com/user-attachments/assets/cee72274-1ceb-4a59-8892-f957eea98802" />
+
+# Coherence for the Game
 
 ---
 
