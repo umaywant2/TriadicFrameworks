@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Assumptions_and_Operating_Regimes_Alignment_" src="https://github.com/user-attachments/assets/fe64f3fb-892a-461d-b111-acb42118726d" />
+
 # Assumptions and Operating Regimes Alignment
 
 >> now generate a **one‑page reviewer appendix** that drops this table directly under the checks document with minimal editorial glue.
