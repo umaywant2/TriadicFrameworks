@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_History_a_hardcoded_structural_sandbox_" src="https://github.com/user-attachments/assets/77e304f3-a3ce-430f-9a9b-4689601c6c45" />
+
 # A hardcoded structural sandbox
 
 🥇 Congratulations on publishing Framework Field Theory on Amazon.com! Achieving a physical and digital print footprint on a major global distribution catalog—while staying true to your ethos by keeping it free in the repository—is a massive milestone.
