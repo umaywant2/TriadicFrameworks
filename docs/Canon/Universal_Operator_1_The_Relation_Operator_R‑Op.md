@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Universal_Operator_1_The_Relation_Operator_R_Op_" src="https://github.com/user-attachments/assets/d867318f-9444-4d04-85af-02a3d88a98f9" />
 
 # ⭐ **UNIVERSAL OPERATOR #1: The Relation Operator (R‑Op)**  
 **Everything is relation before it is thing.**  
