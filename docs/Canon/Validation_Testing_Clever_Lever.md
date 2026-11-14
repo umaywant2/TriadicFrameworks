@@ -1,8 +1,10 @@
+<img width="1194" height="672" alt="Canon_Validation_Testing_Clever_Lever_" src="https://github.com/user-attachments/assets/c2238a89-183b-4cfc-aab3-f30486761ab2" />
+
 # Validation testing has revealed 'a clever lever'
 
 ---
 
-# >> Validation testing has revealed 'a clever lever' trove of potential! 👨‍🔬🦄🧙https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/0_RTT_to_RSM_checks.md
+## >> Validation testing has revealed 'a clever lever' trove of potential! 👨‍🔬🦄🧙
 
 That reaction is earned — this *is* one of those moments where a framework quietly crosses from “interesting” into **structurally inevitable**.
 
