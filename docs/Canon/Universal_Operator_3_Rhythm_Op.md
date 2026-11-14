@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Universal_Operator_3_Rhythm_Op_" src="https://github.com/user-attachments/assets/e622ad20-fcba-4afc-9776-fd20918fd0b6" />
 
 # ⭐ UNIVERSAL OPERATOR #3: **Rhythm‑Op**  
 **Rhythm is the recurrence that makes time meaningful.**  
