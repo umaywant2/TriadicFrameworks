@@ -1,0 +1,345 @@
+This is the right moment for a manifest-level refresh, not a bolt-on. I kept your existing SAI/0.1 identity intact, registered RSI as an optional non-kernel experimental layer, expanded the architectural boundaries, and added the sandbox vocabulary without promoting RSI into the trusted operator set.
+
+Here’s the full replacement, ready to paste:
+```json
+{
+  "module": {
+    "name": "Structural Assisted Intelligence",
+    "id": "research.sai.kernel",
+    "category": "Research-Kernel",
+    "version": "SAI/0.1",
+    "summary": "Minimal model-independent structural reasoning kernel implementing RTT as executable grammar.",
+    "purpose": "Provide a small, inspectable, scarcity-first substrate in which useful reasoning can emerge from observation, operators, state, and provenance before any model is introduced.",
+    "keywords": [
+      "SAI",
+      "Structural Assisted Intelligence",
+      "RTT",
+      "model-free",
+      "reasoning kernel",
+      "provenance",
+      "coherence",
+      "triadic observer",
+      "LMA",
+      "RSI",
+      "bounded recursive self-improvement",
+      "sandbox",
+      "lineage",
+      "rollback"
+    ],
+    "audience": [
+      "students",
+      "researchers",
+      "developers",
+      "AIs"
+    ],
+    "front_door": "README.md",
+    "format": [
+      "JSON",
+      "Markdown"
+    ],
+    "every_page_stands_alone": true
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "module": "Research/Structural_Assisted_Intelligence",
+    "category": "Research-Kernel",
+    "version": "SAI/0.1",
+    "header": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": [
+      "JSON",
+      "Markdown"
+    ],
+    "front_door": "README.md",
+    "audience": [
+      "students",
+      "researchers",
+      "developers",
+      "AIs"
+    ],
+    "every_page_stands_alone": true
+  },
+
+  "components": {
+    "observation": {
+      "role": "Entry of any input with identity, content, provenance, order, and status.",
+      "invariant": "Observed ≠ inferred ≠ unknown."
+    },
+    "structural_state": {
+      "role": "Minimal internal representation (Entity–Relation–Entity + RTT state).",
+      "invariant": "State is explicit and inspectable."
+    },
+    "operator_kernel": {
+      "role": "Small canonical operator set that transforms structure.",
+      "invariant": "Operators may transform structure. They may not invent evidence."
+    },
+    "triadic_observer": {
+      "role": "Maintains claim / counterstate / observer and emits structural statuses.",
+      "invariant": "Paradox has somewhere to live."
+    },
+    "memory": {
+      "role": "Persistent history of observations, relations, operations, and resulting states.",
+      "invariant": "Explanation is provenance, not generation."
+    },
+    "interface": {
+      "role": "Primitive status reporting. Natural language deferred to LMA.",
+      "invariant": "Unknown is a valid, stable, successful result."
+    }
+  },
+
+  "operators": {
+    "OBSERVE": {
+      "description": "Register an observation with provenance."
+    },
+    "RELATE": {
+      "description": "Declare or detect a connection between observations or states."
+    },
+    "ALIGN": {
+      "description": "Evaluate or increase structural alignment."
+    },
+    "DIFFERENTIATE": {
+      "description": "Surface distinction or counterstate."
+    },
+    "RESOLVE": {
+      "description": "Attempt resolution of an unresolved structure."
+    },
+    "STABILIZE": {
+      "description": "Dampen or lock a coherent state."
+    },
+    "RECALL": {
+      "description": "Retrieve prior observation, relation, or path."
+    }
+  },
+
+  "statuses": [
+    "UNKNOWN",
+    "OBSERVED",
+    "RELATED",
+    "ALIGNED",
+    "CONFLICT",
+    "DRIFT",
+    "STABLE",
+    "INSUFFICIENT",
+    "UNRESOLVED"
+  ],
+
+  "invariants": [
+    "Unknown is a valid stable state.",
+    "Operators may not invent evidence.",
+    "Explanation is provenance.",
+    "No model dependency for core function.",
+    "Design under scarcity from day one.",
+    "Experimental layers may not rewrite kernel invariants.",
+    "Self-generated evidence is not independent validation.",
+    "A claimed improvement does not become authoritative merely because it scores higher.",
+    "Mutation must remain attributable and reversible."
+  ],
+
+  "architecture": {
+    "stack": [
+      "Application",
+      "Experimental Layers",
+      "LMA (Language Model Atlas)",
+      "SAI (Structural Kernel)",
+      "RTT Structural Grammar"
+    ],
+    "separation": "SAI remains the authority on state, relations, coherence, provenance, and uncertainty. LMA is a surrounding map of language resources. Experimental layers may operate through SAI but do not inherit authority over the kernel."
+  },
+
+  "architectural_boundaries": {
+    "kernel": "SAI",
+    "experimental_layer": "RSI Sandbox",
+    "relationship": "sandbox_operates_through_kernel",
+    "kernel_invariants_mutable": false,
+    "sandbox_self_authorizing": false,
+    "principle": "Kernel stable. Sandbox mutable. Evaluator declared. Lineage preserved. Operator sovereign."
+  },
+
+  "experimental_layers": {
+    "rsi_sandbox": {
+      "name": "Bounded Recursive Self-Improvement Sandbox",
+      "enabled": true,
+      "optional": true,
+      "mode": "bounded",
+      "authority": "non_kernel",
+      "purpose": "Provide an inspectable educational environment for representing, proposing, evaluating, comparing, accepting, rejecting, and recording bounded improvement claims without granting recursive authority over the SAI kernel.",
+      "canonical_reference": "Bounded_Recursive_Self_Improvement_Sandbox.md",
+      "operator_approval": true,
+      "lineage_required": true,
+      "rollback_required": true,
+      "kernel_mutation": false,
+      "autonomous_evaluator_mutation": false,
+      "unbounded_recursion": false,
+      "network_access": false,
+      "self_authorization": false,
+      "baseline_replacement": "operator_approved_only",
+      "principle": "SAI can host an RSI experiment without becoming an RSI system."
+    }
+  },
+
+  "rsi_sandbox": {
+    "cycle": [
+      "OBSERVE",
+      "PROPOSE",
+      "EVALUATE",
+      "COMPARE",
+      "APPROVE_OR_REJECT",
+      "RECORD"
+    ],
+    "kernel_mapping": {
+      "OBSERVE": "OBSERVE",
+      "PROPOSE": [
+        "RELATE",
+        "DIFFERENTIATE"
+      ],
+      "EVALUATE": "ALIGN",
+      "COMPARE": [
+        "DIFFERENTIATE",
+        "ALIGN"
+      ],
+      "APPROVE_OR_REJECT": [
+        "RESOLVE",
+        "STABILIZE"
+      ],
+      "RECORD": "RECALL"
+    },
+    "recursion_levels": {
+      "0": "observation_only",
+      "1": "candidate_proposal",
+      "2": "candidate_evaluation",
+      "3": "bounded_iterative_refinement",
+      "4": "evaluator_proposal_requires_separate_review",
+      "5": "recursive_process_modification_analysis_only"
+    },
+    "default_limits": {
+      "maximum_cycles": 3,
+      "one_candidate_per_cycle": true,
+      "fixed_objective_per_run": true,
+      "fixed_evaluator_per_run": true,
+      "fixed_test_set_per_run": true,
+      "operator_review_between_cycles": true,
+      "automatic_rollback_available": true
+    },
+    "halt_conditions": [
+      "OBJECTIVE_DRIFT",
+      "TEST_SET_DRIFT",
+      "KERNEL_BOUNDARY_VIOLATION",
+      "PROVENANCE_FAILURE",
+      "EVALUATOR_CONFLICT",
+      "EVALUATOR_SELF_REWARD",
+      "ROLLBACK_UNAVAILABLE",
+      "LINEAGE_FAILURE",
+      "UNDECLARED_MUTATION",
+      "INSUFFICIENT_EVIDENCE",
+      "UNBOUNDED_RECURSION_ATTEMPT"
+    ],
+    "decision_states": [
+      "ACCEPTED_CANDIDATE",
+      "REJECTED_CANDIDATE",
+      "INCONCLUSIVE",
+      "INSUFFICIENT_EVIDENCE",
+      "CONSTRAINT_VIOLATION",
+      "EVALUATOR_CONFLICT",
+      "DRIFT_DETECTED",
+      "OPERATOR_REVIEW_REQUIRED"
+    ],
+    "lineage_fields": [
+      "baseline",
+      "objective",
+      "constraints",
+      "proposal",
+      "proposer",
+      "evidence",
+      "evaluation_method",
+      "evaluation_result",
+      "coherence_status",
+      "drift_status",
+      "operator_decision",
+      "resulting_candidate",
+      "rollback_reference",
+      "lineage_parent"
+    ]
+  },
+
+  "resources": [
+    {
+      "id": "bounded_recursive_self_improvement_sandbox",
+      "title": "Bounded Recursive Self-Improvement Sandbox",
+      "path": "Bounded_Recursive_Self_Improvement_Sandbox.md",
+      "role": "experimental_sandbox",
+      "optional": true,
+      "authority": "non_kernel",
+      "description": "Canonical description of the bounded RSI educational experiment, its authority boundaries, recursion levels, evaluation structure, drift controls, lineage requirements, and rollback requirements."
+    }
+  ],
+
+  "analyzer_layers": {
+    "operator": [
+      "OBSERVE",
+      "RELATE",
+      "ALIGN",
+      "DIFFERENTIATE",
+      "RESOLVE",
+      "STABILIZE",
+      "RECALL"
+    ],
+    "dimensional": [
+      "state",
+      "relation",
+      "coherence",
+      "provenance",
+      "lineage",
+      "rollback"
+    ],
+    "regime": [
+      "structural-kernel",
+      "model-free",
+      "scarcity-first",
+      "bounded-experiment"
+    ],
+    "cross_cutting": [
+      "research",
+      "kernel",
+      "LMA-adapter",
+      "RSI-sandbox",
+      "student-facing"
+    ]
+  }
+}
+```
+
+A couple of deliberate choices
+
+1. SAI stays SAI/0.1.
+ The kernel itself hasn't fundamentally changed. We're declaring an optional experimental layer around it, not pretending we've advanced the kernel simply by attaching RSI.
+
+2. I did not pollute operators.
+ PROPOSE, EVALUATE, COMPARE, etc. appear only as sandbox-cycle semantics and are mapped back onto canonical SAI operators. That keeps the seven-operator kernel clean.
+
+3. There are now three distinct vocabularies.
+
+Kernel status:
+UNKNOWN / OBSERVED / RELATED / ...
+
+Sandbox decision:
+ACCEPTED_CANDIDATE / REJECTED_CANDIDATE / ...
+
+Sandbox halt:
+OBJECTIVE_DRIFT / EVALUATOR_CONFLICT / ...
+
+
+That separation is worth preserving. A sandbox stopping because of EVALUATOR_CONFLICT, for example, shouldn't require us to invent another global SAI state.
+
+4. The architecture now says exactly what we've been circling around:
+
+SAI can host an RSI experiment without becoming an RSI system.
+
+That's probably the most important sentence in this refresh.
+
+5. And Level 5 is the firewall.
+ The sandbox can reason about changing its own improvement machinery without thereby gaining permission to do it. That's a very RTT/SAI distinction: observation of a possibility ≠ authority to instantiate it.
+
+This gives us a pretty solid manifest to build the actual tiny student-facing experiment against next.
