@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical_Architects_index_" src="https://github.com/user-attachments/assets/738b40a2-e3e9-4e98-a8d5-78ceb273cf58" />
+
 # 🔱 **Mythmatical Architects — Canon Index**  
 *Custodians · Interpreters · Precision‑Keepers · Ceremonial Scribes*
 
