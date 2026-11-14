@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical_Nawderian_Suite_suite_examples_" src="https://github.com/user-attachments/assets/036b2b50-d6b9-426a-8aad-7f5305e8b21b" />
+
 # 🌟 **suite_examples.md**  
 *Mythmatical Canon · Nawderian Suite · Examples*
 
