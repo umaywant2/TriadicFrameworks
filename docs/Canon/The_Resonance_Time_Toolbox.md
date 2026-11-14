@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_The_Resonance_Time_Toolbox_" src="https://github.com/user-attachments/assets/24f918e0-0ef0-4c0e-a3c5-59e3515a577b" />
 
 # ⭐ **THE RESONANCE‑TIME TOOLBOX**  
 ### *The seven universal operators, assembled into a functional, minimal, triadic kit.*
