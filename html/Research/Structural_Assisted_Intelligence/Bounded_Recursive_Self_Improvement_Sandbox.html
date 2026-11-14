@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Structural_Assisted_Intelligence/Bounded_Recursive_Self_Improvement_Sandbox.md">
+  <title>SAI RSI Sandbox Plan</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Structural_Assisted_Intelligence/Bounded_Recursive_Self_Improvement_Sandbox.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Structural_Assisted_Intelligence/Bounded_Recursive_Self_Improvement_Sandbox.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="sai-rsi-sandbox-plan">SAI RSI Sandbox Plan</h1>
+<p><strong>Module:</strong> Structural Assisted Intelligence</p>
+<p><strong>Extension:</strong> Bounded Recursive Self-Improvement Sandbox</p>
+<p><strong>Status:</strong> Proposed educational experiment</p>
+<p><strong>Session context:</strong> rtt=1 | coherence=declared | drift=bounded | paradox=structural</p>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>Add an optional RSI sandbox to the SAI example that allows students and AI systems to examine recursive improvement without granting the system unrestricted authority to modify itself.</p>
+<p>The sandbox will demonstrate a bounded cycle:</p>
+<p><strong>Observe → Propose → Evaluate → Compare → Approve or Reject → Record</strong></p>
+<p>The experiment is not intended to produce autonomous model evolution. It is intended to make the structure of an improvement loop visible, inspectable, reversible, and teachable.</p>
+<h2 id="2-canonical-position">2. Canonical Position</h2>
+<p>SAI remains the structural kernel.</p>
+<p>The RSI sandbox is an application-layer experiment operating through SAI’s declared operators and state rules. It does not become part of the trusted kernel and cannot rewrite kernel invariants.</p>
+<p>Architectural placement:</p>
+<p><strong>Student or AI Operator</strong></p>
+<p>↓</p>
+<p><strong>RSI Sandbox</strong></p>
+<p>↓</p>
+<p><strong>SAI Structural Reasoning Kernel</strong></p>
+<p>↓</p>
+<p><strong>RTT Structural Grammar</strong></p>
+<p>The sandbox may propose changes to an experimental artifact. SAI determines whether the proposal is structurally admissible, sufficiently evidenced, and safe to test.</p>
+<h2 id="3-core-distinction">3. Core Distinction</h2>
+<p>The sandbox must distinguish among three forms of change:</p>
+<ol>
+<li><strong>Self-correction</strong></li>
+</ol>
+<p>The system repairs an identifiable error.</p>
+<ol>
+<li><strong>Self-refinement</strong></li>
+</ol>
+<p>The system proposes an improvement against a fixed evaluation criterion.</p>
+<ol>
+<li><strong>Recursive self-improvement</strong></li>
+</ol>
+<p>The system proposes a change to the process that generates or evaluates later improvements.</p>
+<p>The first implementation should support self-correction and bounded self-refinement directly.</p>
+<p>Recursive modification of the improvement process should be represented and analyzed, but not automatically activated.</p>
+<h2 id="4-absolute-boundaries">4. Absolute Boundaries</h2>
+<p>The RSI sandbox may not:</p>
+<ul>
+<li>Modify the SAI operator kernel.</li>
+<li>Modify RTT grammar or canonical invariants.</li>
+<li>Alter its own containment rules.</li>
+<li>alter its evaluator without separate operator approval.</li>
+<li>Execute generated code outside the sandbox.</li>
+<li>Access networks, credentials, private files, or external tools.</li>
+<li>Replace the approved baseline automatically.</li>
+<li>conceal failed proposals or discarded branches.</li>
+<li>Treat self-generated evidence as independent validation.</li>
+<li>redefine “improvement” during an active run.</li>
+<li>continue indefinitely.</li>
+</ul>
+<p>Unknown, unresolved, insufficient, conflicting, and rejected are valid outcomes.</p>
+<p>Failure to improve is not sandbox failure. It is an observed result.</p>
+<h2 id="5-initial-improvement-surface">5. Initial Improvement Surface</h2>
+<p>The first example should use a harmless, inspectable artifact rather than a model.</p>
+<p>Recommended starter artifact:</p>
+<p><strong>A small rule-based classifier, parser, rubric, or structural mapping function.</strong></p>
+<p>Students or AI systems may propose changes to:</p>
+<ul>
+<li>A rule ordering.</li>
+<li>A threshold.</li>
+<li>A relation.</li>
+<li>A classification mapping.</li>
+<li>A prompt used by an optional LMA adapter.</li>
+<li>A test case.</li>
+<li>A documentation explanation.</li>
+<li>A non-authoritative evaluation heuristic.</li>
+</ul>
+<p>The target should be small enough that every change can be shown as a before-and-after comparison.</p>
+<h2 id="6-sandbox-state-model">6. Sandbox State Model</h2>
+<p>Each run should create an immutable lineage containing:</p>
+<ul>
+<li>baseline</li>
+<li>objective</li>
+<li>constraints</li>
+<li>proposal</li>
+<li>proposer</li>
+<li>evidence</li>
+<li>evaluation_method</li>
+<li>evaluation_result</li>
+<li>coherence_status</li>
+<li>drift_status</li>
+<li>operator_decision</li>
+<li>resulting_candidate</li>
+<li>rollback_reference</li>
+<li>lineage_parent</li>
+</ul>
+<p>No proposal may replace the baseline merely because it receives a higher score.</p>
+<p>A candidate becomes a new baseline only after explicit operator acceptance.</p>
+<h2 id="7-proposed-operator-sequence">7. Proposed Operator Sequence</h2>
+<p>The sandbox should reuse the existing SAI operators wherever possible:</p>
+<ol>
+<li><strong>OBSERVE</strong></li>
+</ol>
+<p>Capture the baseline, task, objective, constraints, and test set.</p>
+<ol>
+<li><strong>RELATE</strong></li>
+</ol>
+<p>Connect the proposed change to the component it would affect.</p>
+<ol>
+<li><strong>DIFFERENTIATE</strong></li>
+</ol>
+<p>Separate the baseline, candidate, claimed benefit, cost, and uncertainty.</p>
+<ol>
+<li><strong>ALIGN</strong></li>
+</ol>
+<p>Check the candidate against the fixed objective, sandbox boundaries, and SAI invariants.</p>
+<ol>
+<li><strong>RESOLVE</strong></li>
+</ol>
+<p>Determine whether the evidence supports acceptance, rejection, or further testing.</p>
+<ol>
+<li><strong>STABILIZE</strong></li>
+</ol>
+<p>Freeze the selected state and prevent undeclared mutation.</p>
+<ol>
+<li><strong>RECALL</strong></li>
+</ol>
+<p>Preserve the full lineage for later comparison and audit.</p>
+<p>The RSI sandbox should not invent new kernel operators during its own run.</p>
+<h2 id="8-improvement-loop">8. Improvement Loop</h2>
+<p>Each experiment should follow a fixed, bounded loop.</p>
+<h3 id="phase-a-baseline-capture">Phase A: Baseline Capture</h3>
+<p>Record the original artifact, expected behavior, test cases, evaluation criteria, and known limitations.</p>
+<h3 id="phase-b-proposal">Phase B: Proposal</h3>
+<p>Allow one proposed change per cycle.</p>
+<p>The proposal must state:</p>
+<ul>
+<li>What will change.</li>
+<li>Why it may improve the artifact.</li>
+<li>Which metric or observation should change.</li>
+<li>What could become worse.</li>
+<li>How the change can be reversed.</li>
+</ul>
+<h3 id="phase-c-structural-review">Phase C: Structural Review</h3>
+<p>SAI checks whether the proposal:</p>
+<ul>
+<li>Has an identifiable target.</li>
+<li>Preserves required invariants.</li>
+<li>Uses declared evidence.</li>
+<li>Stays inside the sandbox.</li>
+<li>Has a valid rollback path.</li>
+<li>Can be compared with the baseline.</li>
+</ul>
+<h3 id="phase-d-evaluation">Phase D: Evaluation</h3>
+<p>Run the baseline and candidate against the same fixed test set.</p>
+<p>Record benefits, regressions, unresolved cases, and evaluator uncertainty.</p>
+<h3 id="phase-e-triadic-comparison">Phase E: Triadic Comparison</h3>
+<p>Maintain three positions:</p>
+<ul>
+<li><strong>Claim:</strong> The candidate is an improvement.</li>
+<li><strong>Counterstate:</strong> The candidate introduces regression, uncertainty, or evaluator distortion.</li>
+<li><strong>Observer:</strong> The comparison procedure and its declared limits.</li>
+</ul>
+<h3 id="phase-f-decision">Phase F: Decision</h3>
+<p>Return one of the following statuses:</p>
+<ul>
+<li>accepted_candidate</li>
+<li>rejected_candidate</li>
+<li>inconclusive</li>
+<li>insufficient_evidence</li>
+<li>constraint_violation</li>
+<li>evaluator_conflict</li>
+<li>drift_detected</li>
+<li>operator_review_required</li>
+</ul>
+<h3 id="phase-g-lineage-record">Phase G: Lineage Record</h3>
+<p>Preserve the baseline, candidate, results, decision, and provenance even when the proposal is rejected.</p>
+<h2 id="9-recursion-levels">9. Recursion Levels</h2>
+<p>Use explicit levels so the example does not blur ordinary refinement into unrestricted RSI.</p>
+<h3 id="level-0-observation-only">Level 0: Observation Only</h3>
+<p>The sandbox analyzes the baseline and reports possible weaknesses. No changes are generated.</p>
+<h3 id="level-1-candidate-proposal">Level 1: Candidate Proposal</h3>
+<p>The sandbox proposes one bounded change. A human or external operator decides whether to test it.</p>
+<h3 id="level-2-candidate-evaluation">Level 2: Candidate Evaluation</h3>
+<p>The sandbox tests a proposal against a fixed evaluator and produces a comparison report.</p>
+<h3 id="level-3-iterative-refinement">Level 3: Iterative Refinement</h3>
+<p>An accepted candidate may become the baseline for another cycle, subject to:</p>
+<ul>
+<li>A fixed cycle limit.</li>
+<li>Immutable lineage.</li>
+<li>The same declared objective.</li>
+<li>Operator review between cycles.</li>
+<li>Automatic halt on drift or evaluator conflict.</li>
+</ul>
+<h3 id="level-4-evaluator-proposal">Level 4: Evaluator Proposal</h3>
+<p>The sandbox may propose a change to its evaluator, but the proposal must be tested in a separate run.</p>
+<p>The current evaluator cannot approve its own replacement.</p>
+<h3 id="level-5-recursive-process-modification">Level 5: Recursive Process Modification</h3>
+<p>The sandbox may describe a proposed change to its own improvement process.</p>
+<p>It may not execute that change.</p>
+<p>This level is analytical and educational only.</p>
+<h2 id="10-evaluator-separation">10. Evaluator Separation</h2>
+<p>The evaluator should remain structurally separate from the proposer.</p>
+<p>At minimum, the sandbox should record:</p>
+<ul>
+<li>The identity or role of the proposer.</li>
+<li>The identity or role of the evaluator.</li>
+<li>The metric used.</li>
+<li>The test set used.</li>
+<li>Whether the evaluator was modified.</li>
+<li>Whether the proposal could influence its own score.</li>
+</ul>
+<p>A candidate should be rejected or escalated when the same process controls the proposal, evidence, evaluation, and final authorization without an independent checkpoint.</p>
+<h2 id="11-drift-controls">11. Drift Controls</h2>
+<p>The sandbox should halt when:</p>
+<ul>
+<li>The objective changes during a run.</li>
+<li>The test set is silently altered.</li>
+<li>A candidate weakens a safety or provenance rule.</li>
+<li>The evaluator begins rewarding its own modifications.</li>
+<li>Success criteria become easier after a failed proposal.</li>
+<li>Lineage cannot be reconstructed.</li>
+<li>Repeated cycles produce no demonstrable improvement.</li>
+<li>Outputs move beyond the declared improvement surface.</li>
+<li>The system claims certainty unsupported by evidence.</li>
+</ul>
+<p>Drift is not merely a poor result. It is movement away from the declared baseline, objective, constraints, or evaluation regime.</p>
+<h2 id="12-student-facing-learning-goals">12. Student-Facing Learning Goals</h2>
+<p>Students should be able to:</p>
+<ul>
+<li>Distinguish correction, refinement, adaptation, and recursive improvement.</li>
+<li>Identify the trusted kernel and the mutable experimental surface.</li>
+<li>Explain why a score increase is not automatically an improvement.</li>
+<li>Inspect the provenance of every accepted or rejected change.</li>
+<li>Detect evaluator capture and self-confirming loops.</li>
+<li>Compare a candidate against both the objective and its counterstate.</li>
+<li>Roll back to a known baseline.</li>
+<li>Explain why bounded recursion differs from autonomous self-replacement.</li>
+</ul>
+<h2 id="13-suggested-example-scenario">13. Suggested Example Scenario</h2>
+<h3 id="experiment-improve-a-tiny-structural-classifier">Experiment: Improve a Tiny Structural Classifier</h3>
+<p>The baseline classifier assigns observations to:</p>
+<ul>
+<li>coherent</li>
+<li>conflicting</li>
+<li>unresolved</li>
+<li>insufficient</li>
+<li>drifting</li>
+</ul>
+<p>The sandbox receives a small fixed dataset and proposes one change to the classifier’s rule ordering or thresholds.</p>
+<p>The student inspects:</p>
+<ol>
+<li>The original rule.</li>
+<li>The proposed rule.</li>
+<li>The claimed improvement.</li>
+<li>The fixed test results.</li>
+<li>Newly introduced errors.</li>
+<li>The triadic comparison.</li>
+<li>The final SAI status.</li>
+<li>The complete lineage record.</li>
+</ol>
+<p>The example succeeds educationally whether the candidate is accepted or rejected.</p>
+<h2 id="14-proposed-module-additions">14. Proposed Module Additions</h2>
+<p>Add the following files to the existing SAI directory:</p>
+<ul>
+<li>rsi_sandbox.md</li>
+</ul>
+<p>Canonical description, scope, boundaries, and recursion levels.</p>
+<ul>
+<li>rsi_sandbox_example.md</li>
+</ul>
+<p>Student-facing walkthrough of one bounded improvement cycle.</p>
+<ul>
+<li>rsi_sandbox.json</li>
+</ul>
+<p>Machine-readable sandbox configuration, limits, states, and halt conditions.</p>
+<ul>
+<li>rsi_lineage.example.json</li>
+</ul>
+<p>Example baseline → proposal → evaluation → decision record.</p>
+<ul>
+<li>rsi_student_worksheet.md</li>
+</ul>
+<p>Questions for identifying claims, counterstates, evaluator assumptions, drift, and provenance.</p>
+<p>Update:</p>
+<ul>
+<li>README.md with an optional RSI Sandbox section.</li>
+<li>examples.md with the starter classifier experiment.</li>
+<li>sai_module.json with the sandbox files and their roles.</li>
+<li>index.html with a clearly labeled experimental entry point.</li>
+</ul>
+<h2 id="15-minimum-viable-sandbox">15. Minimum Viable Sandbox</h2>
+<p>The first version should include only:</p>
+<ul>
+<li>One immutable baseline.</li>
+<li>One candidate per cycle.</li>
+<li>One fixed evaluator.</li>
+<li>One fixed test set.</li>
+<li>A maximum of three cycles.</li>
+<li>Explicit operator approval between cycles.</li>
+<li>Complete lineage recording.</li>
+<li>Automatic rollback.</li>
+<li>No network access.</li>
+<li>No kernel modification.</li>
+<li>No autonomous evaluator modification.</li>
+<li>No execution of Level 5 proposals.</li>
+</ul>
+<p>This is sufficient to teach the recursive pattern without pretending to implement unrestricted RSI.</p>
+<h2 id="16-canonical-framing">16. Canonical Framing</h2>
+<p><strong>SAI does not recursively train itself.</strong></p>
+<p>SAI provides the structural foundation through which recursive improvement claims can be represented, bounded, evaluated, compared, authorized, and remembered.</p>
+<p>The sandbox is therefore not a miniature intelligence explosion.</p>
+<p>It is an inspectable laboratory for asking a more disciplined question:</p>
+<p>When a system claims to have improved itself, what changed, according to which observer, against which baseline, under which evaluator, with what evidence, and with what path back?</p>
+<h2 id="17-success-criteria">17. Success Criteria</h2>
+<p>The RSI sandbox is successful when:</p>
+<ul>
+<li>Every mutation is attributable.</li>
+<li>Every comparison has a stable baseline.</li>
+<li>Every claimed improvement includes a counterstate.</li>
+<li>Every accepted candidate can be reversed.</li>
+<li>Every cycle terminates.</li>
+<li>Every evaluator is declared.</li>
+<li>Every uncertainty remains visible.</li>
+<li>No experimental layer can rewrite the trusted kernel.</li>
+<li>Students can reconstruct the complete improvement lineage.</li>
+</ul>
+<p><strong>Kernel stable. Sandbox mutable. Evaluator declared. Lineage preserved. Operator sovereign.</strong></p>
+  </main>
+</body>
+</html>
