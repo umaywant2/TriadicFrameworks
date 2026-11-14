@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_Bounded_Recursive_Self_Improvement_Sandbox_" src="https://github.com/user-attachments/assets/20478eca-8e6f-47fc-8a45-8e925cfe69fa" />
+
 # SAI RSI Sandbox Plan
 
 **Module:** Structural Assisted Intelligence
