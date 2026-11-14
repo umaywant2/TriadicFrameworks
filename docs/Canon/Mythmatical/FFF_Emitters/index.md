@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical_FFF_Emitters_index_" src="https://github.com/user-attachments/assets/cb28c447-b0a9-49cf-a00b-71b221cfef70" />
+
 # 🔱 **FFF Emitters — Mythmatical Canon Index**  
 *Frequency · Fluids · Forces · Triadic Emitters of Resonance*
 
