@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical_Architects_" src="https://github.com/user-attachments/assets/c1307acf-ac7d-4bc3-9075-6b6b26b265e2" />
+
 # 🔱 **Mythmatical Architects — Directory README**  
 *Custodians · Interpreters · Precision‑Keepers · Ceremonial Scribes*
 
