@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Universal_Operator_5_Lineage_Op_" src="https://github.com/user-attachments/assets/60d85fda-a2c0-44cb-b5a2-6e8460658524" />
 
 # ⭐ UNIVERSAL OPERATOR #5: **Lineage‑Op**  
 **Lineage is the persistence of coherence across time, scale, and transformation.**
