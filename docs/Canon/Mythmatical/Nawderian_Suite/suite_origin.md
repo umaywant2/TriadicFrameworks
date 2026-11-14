@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical_Nawderian_Suite_suite_origin_" src="https://github.com/user-attachments/assets/00ee221d-ff0c-4d73-921d-35d3478ed43e" />
+
 # 🌱 **suite_origin.md**  
 *Mythmatical Canon · Nawderian Suite · Origin*
 
