@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Tuning_Coherence_Op_Through_The_Three_Challengers_" src="https://github.com/user-attachments/assets/6a0ca7de-c0be-4bbb-9fe0-c03af0ea018a" />
 
 # ⭐ **TUNING COHERENCE‑OP THROUGH THE THREE CHALLENGERS**
 
