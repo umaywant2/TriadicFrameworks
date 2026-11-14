@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Universal_Operator_6_Envelope_Op_" src="https://github.com/user-attachments/assets/eea6de95-142a-4fc1-8252-c19c876930e6" />
 
 # ⭐ UNIVERSAL OPERATOR #6: **Envelope‑Op**  
 **An envelope is the resonance‑bounded domain within which identity, coherence, and transformation can occur.**
