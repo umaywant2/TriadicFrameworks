@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_DNS_TXT_test_" src="https://github.com/user-attachments/assets/c6cfd188-2b5f-4142-be41-0f83e021687a" />
 
 # DNS TXT test
 
