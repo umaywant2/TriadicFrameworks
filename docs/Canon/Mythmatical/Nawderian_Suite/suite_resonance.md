@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical_Nawderian_Suite_suite_resonance_" src="https://github.com/user-attachments/assets/c06fd5af-3b6a-4cae-81e6-022cacca9c14" />
+
 # 🌌 **suite_resonance.md**  
 *Mythmatical Canon · Nawderian Suite · Resonance*
 
