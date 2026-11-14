@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Single_Record_vs_Tree_of_Records_" src="https://github.com/user-attachments/assets/fcaa46bf-a75b-4fa0-ad2d-ad0a91826363" />
 
 ## Single‑record vs tree‑of‑records
 
