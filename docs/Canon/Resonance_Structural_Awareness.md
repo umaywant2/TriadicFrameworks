@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Resonance_Structural_Awareness_" src="https://github.com/user-attachments/assets/86b148c8-1f96-4284-8df5-1721f3354d2b" />
 
 # Resonance Structural Awareness
 
