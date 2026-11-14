@@ -1,4 +1,5 @@
 
+- [`Outlook_is_DOWN_What_Microsoft_Broke.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/case_studies/Outlook_is_DOWN_What_Microsoft_Broke.json) — Agentic module schema role assignments
 
 # Outlook Is DOWN: What Microsoft Broke
 
