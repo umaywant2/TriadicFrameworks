@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_4th_Era_" src="https://github.com/user-attachments/assets/71e1fcac-068b-4d83-98dc-3d3ccccb70c4" />
 
 # ⛩️ 4th Era
 
