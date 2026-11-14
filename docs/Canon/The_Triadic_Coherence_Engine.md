@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_The_Triadic_Coherence_Engine_" src="https://github.com/user-attachments/assets/d141d176-658b-485b-b07d-d76087619433" />
 
 # ⭐ **THE TRIADIC COHERENCE ENGINE**  
 **The meta‑operator that emerges when all seven universal operators align.**
