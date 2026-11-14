@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_index_" src="https://github.com/user-attachments/assets/692d6fbd-29ca-4684-a714-9b535520a325" />
+
 # 🔵 **TriadicFrameworks Canon**  
 **Coherence‑Locked Root · v1.0**  
 **RTT‑Inside | Structural Backbone | Module Registry**
