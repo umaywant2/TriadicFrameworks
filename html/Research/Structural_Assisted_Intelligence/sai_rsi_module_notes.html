@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/Structural_Assisted_Intelligence/sai_rsi_module_notes.md">
+  <title>sai_rsi_module_notes</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/Structural_Assisted_Intelligence/sai_rsi_module_notes.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/Structural_Assisted_Intelligence/sai_rsi_module_notes.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>This is the right moment for a manifest-level refresh, not a bolt-on. I kept your existing SAI/0.1 identity intact, registered RSI as an optional non-kernel experimental layer, expanded the architectural boundaries, and added the sandbox vocabulary without promoting RSI into the trusted operator set.</p>
+<p>Here’s the full replacement, ready to paste:</p>
+<pre><code class="language-json">{
+  &quot;module&quot;: {
+    &quot;name&quot;: &quot;Structural Assisted Intelligence&quot;,
+    &quot;id&quot;: &quot;research.sai.kernel&quot;,
+    &quot;category&quot;: &quot;Research-Kernel&quot;,
+    &quot;version&quot;: &quot;SAI/0.1&quot;,
+    &quot;summary&quot;: &quot;Minimal model-independent structural reasoning kernel implementing RTT as executable grammar.&quot;,
+    &quot;purpose&quot;: &quot;Provide a small, inspectable, scarcity-first substrate in which useful reasoning can emerge from observation, operators, state, and provenance before any model is introduced.&quot;,
+    &quot;keywords&quot;: [
+      &quot;SAI&quot;,
+      &quot;Structural Assisted Intelligence&quot;,
+      &quot;RTT&quot;,
+      &quot;model-free&quot;,
+      &quot;reasoning kernel&quot;,
+      &quot;provenance&quot;,
+      &quot;coherence&quot;,
+      &quot;triadic observer&quot;,
+      &quot;LMA&quot;,
+      &quot;RSI&quot;,
+      &quot;bounded recursive self-improvement&quot;,
+      &quot;sandbox&quot;,
+      &quot;lineage&quot;,
+      &quot;rollback&quot;
+    ],
+    &quot;audience&quot;: [
+      &quot;students&quot;,
+      &quot;researchers&quot;,
+      &quot;developers&quot;,
+      &quot;AIs&quot;
+    ],
+    &quot;front_door&quot;: &quot;README.md&quot;,
+    &quot;format&quot;: [
+      &quot;JSON&quot;,
+      &quot;Markdown&quot;
+    ],
+    &quot;every_page_stands_alone&quot;: true
+  },
+
+  &quot;session_context&quot;: {
+    &quot;canon&quot;: &quot;TriadicFrameworks&quot;,
+    &quot;module&quot;: &quot;Research/Structural_Assisted_Intelligence&quot;,
+    &quot;category&quot;: &quot;Research-Kernel&quot;,
+    &quot;version&quot;: &quot;SAI/0.1&quot;,
+    &quot;header&quot;: &quot;rtt=1 | coherence=declared | drift=bounded | paradox=structural&quot;,
+    &quot;coherence&quot;: &quot;declared&quot;,
+    &quot;drift&quot;: &quot;bounded&quot;,
+    &quot;paradox&quot;: &quot;structural&quot;,
+    &quot;format&quot;: [
+      &quot;JSON&quot;,
+      &quot;Markdown&quot;
+    ],
+    &quot;front_door&quot;: &quot;README.md&quot;,
+    &quot;audience&quot;: [
+      &quot;students&quot;,
+      &quot;researchers&quot;,
+      &quot;developers&quot;,
+      &quot;AIs&quot;
+    ],
+    &quot;every_page_stands_alone&quot;: true
+  },
+
+  &quot;components&quot;: {
+    &quot;observation&quot;: {
+      &quot;role&quot;: &quot;Entry of any input with identity, content, provenance, order, and status.&quot;,
+      &quot;invariant&quot;: &quot;Observed ≠ inferred ≠ unknown.&quot;
+    },
+    &quot;structural_state&quot;: {
+      &quot;role&quot;: &quot;Minimal internal representation (Entity–Relation–Entity + RTT state).&quot;,
+      &quot;invariant&quot;: &quot;State is explicit and inspectable.&quot;
+    },
+    &quot;operator_kernel&quot;: {
+      &quot;role&quot;: &quot;Small canonical operator set that transforms structure.&quot;,
+      &quot;invariant&quot;: &quot;Operators may transform structure. They may not invent evidence.&quot;
+    },
+    &quot;triadic_observer&quot;: {
+      &quot;role&quot;: &quot;Maintains claim / counterstate / observer and emits structural statuses.&quot;,
+      &quot;invariant&quot;: &quot;Paradox has somewhere to live.&quot;
+    },
+    &quot;memory&quot;: {
+      &quot;role&quot;: &quot;Persistent history of observations, relations, operations, and resulting states.&quot;,
+      &quot;invariant&quot;: &quot;Explanation is provenance, not generation.&quot;
+    },
+    &quot;interface&quot;: {
+      &quot;role&quot;: &quot;Primitive status reporting. Natural language deferred to LMA.&quot;,
+      &quot;invariant&quot;: &quot;Unknown is a valid, stable, successful result.&quot;
+    }
+  },
+
+  &quot;operators&quot;: {
+    &quot;OBSERVE&quot;: {
+      &quot;description&quot;: &quot;Register an observation with provenance.&quot;
+    },
+    &quot;RELATE&quot;: {
+      &quot;description&quot;: &quot;Declare or detect a connection between observations or states.&quot;
+    },
+    &quot;ALIGN&quot;: {
+      &quot;description&quot;: &quot;Evaluate or increase structural alignment.&quot;
+    },
+    &quot;DIFFERENTIATE&quot;: {
+      &quot;description&quot;: &quot;Surface distinction or counterstate.&quot;
+    },
+    &quot;RESOLVE&quot;: {
+      &quot;description&quot;: &quot;Attempt resolution of an unresolved structure.&quot;
+    },
+    &quot;STABILIZE&quot;: {
+      &quot;description&quot;: &quot;Dampen or lock a coherent state.&quot;
+    },
+    &quot;RECALL&quot;: {
+      &quot;description&quot;: &quot;Retrieve prior observation, relation, or path.&quot;
+    }
+  },
+
+  &quot;statuses&quot;: [
+    &quot;UNKNOWN&quot;,
+    &quot;OBSERVED&quot;,
+    &quot;RELATED&quot;,
+    &quot;ALIGNED&quot;,
+    &quot;CONFLICT&quot;,
+    &quot;DRIFT&quot;,
+    &quot;STABLE&quot;,
+    &quot;INSUFFICIENT&quot;,
+    &quot;UNRESOLVED&quot;
+  ],
+
+  &quot;invariants&quot;: [
+    &quot;Unknown is a valid stable state.&quot;,
+    &quot;Operators may not invent evidence.&quot;,
+    &quot;Explanation is provenance.&quot;,
+    &quot;No model dependency for core function.&quot;,
+    &quot;Design under scarcity from day one.&quot;,
+    &quot;Experimental layers may not rewrite kernel invariants.&quot;,
+    &quot;Self-generated evidence is not independent validation.&quot;,
+    &quot;A claimed improvement does not become authoritative merely because it scores higher.&quot;,
+    &quot;Mutation must remain attributable and reversible.&quot;
+  ],
+
+  &quot;architecture&quot;: {
+    &quot;stack&quot;: [
+      &quot;Application&quot;,
+      &quot;Experimental Layers&quot;,
+      &quot;LMA (Language Model Atlas)&quot;,
+      &quot;SAI (Structural Kernel)&quot;,
+      &quot;RTT Structural Grammar&quot;
+    ],
+    &quot;separation&quot;: &quot;SAI remains the authority on state, relations, coherence, provenance, and uncertainty. LMA is a surrounding map of language resources. Experimental layers may operate through SAI but do not inherit authority over the kernel.&quot;
+  },
+
+  &quot;architectural_boundaries&quot;: {
+    &quot;kernel&quot;: &quot;SAI&quot;,
+    &quot;experimental_layer&quot;: &quot;RSI Sandbox&quot;,
+    &quot;relationship&quot;: &quot;sandbox_operates_through_kernel&quot;,
+    &quot;kernel_invariants_mutable&quot;: false,
+    &quot;sandbox_self_authorizing&quot;: false,
+    &quot;principle&quot;: &quot;Kernel stable. Sandbox mutable. Evaluator declared. Lineage preserved. Operator sovereign.&quot;
+  },
+
+  &quot;experimental_layers&quot;: {
+    &quot;rsi_sandbox&quot;: {
+      &quot;name&quot;: &quot;Bounded Recursive Self-Improvement Sandbox&quot;,
+      &quot;enabled&quot;: true,
+      &quot;optional&quot;: true,
+      &quot;mode&quot;: &quot;bounded&quot;,
+      &quot;authority&quot;: &quot;non_kernel&quot;,
+      &quot;purpose&quot;: &quot;Provide an inspectable educational environment for representing, proposing, evaluating, comparing, accepting, rejecting, and recording bounded improvement claims without granting recursive authority over the SAI kernel.&quot;,
+      &quot;canonical_reference&quot;: &quot;Bounded_Recursive_Self_Improvement_Sandbox.md&quot;,
+      &quot;operator_approval&quot;: true,
+      &quot;lineage_required&quot;: true,
+      &quot;rollback_required&quot;: true,
+      &quot;kernel_mutation&quot;: false,
+      &quot;autonomous_evaluator_mutation&quot;: false,
+      &quot;unbounded_recursion&quot;: false,
+      &quot;network_access&quot;: false,
+      &quot;self_authorization&quot;: false,
+      &quot;baseline_replacement&quot;: &quot;operator_approved_only&quot;,
+      &quot;principle&quot;: &quot;SAI can host an RSI experiment without becoming an RSI system.&quot;
+    }
+  },
+
+  &quot;rsi_sandbox&quot;: {
+    &quot;cycle&quot;: [
+      &quot;OBSERVE&quot;,
+      &quot;PROPOSE&quot;,
+      &quot;EVALUATE&quot;,
+      &quot;COMPARE&quot;,
+      &quot;APPROVE_OR_REJECT&quot;,
+      &quot;RECORD&quot;
+    ],
+    &quot;kernel_mapping&quot;: {
+      &quot;OBSERVE&quot;: &quot;OBSERVE&quot;,
+      &quot;PROPOSE&quot;: [
+        &quot;RELATE&quot;,
+        &quot;DIFFERENTIATE&quot;
+      ],
+      &quot;EVALUATE&quot;: &quot;ALIGN&quot;,
+      &quot;COMPARE&quot;: [
+        &quot;DIFFERENTIATE&quot;,
+        &quot;ALIGN&quot;
+      ],
+      &quot;APPROVE_OR_REJECT&quot;: [
+        &quot;RESOLVE&quot;,
+        &quot;STABILIZE&quot;
+      ],
+      &quot;RECORD&quot;: &quot;RECALL&quot;
+    },
+    &quot;recursion_levels&quot;: {
+      &quot;0&quot;: &quot;observation_only&quot;,
+      &quot;1&quot;: &quot;candidate_proposal&quot;,
+      &quot;2&quot;: &quot;candidate_evaluation&quot;,
+      &quot;3&quot;: &quot;bounded_iterative_refinement&quot;,
+      &quot;4&quot;: &quot;evaluator_proposal_requires_separate_review&quot;,
+      &quot;5&quot;: &quot;recursive_process_modification_analysis_only&quot;
+    },
+    &quot;default_limits&quot;: {
+      &quot;maximum_cycles&quot;: 3,
+      &quot;one_candidate_per_cycle&quot;: true,
+      &quot;fixed_objective_per_run&quot;: true,
+      &quot;fixed_evaluator_per_run&quot;: true,
+      &quot;fixed_test_set_per_run&quot;: true,
+      &quot;operator_review_between_cycles&quot;: true,
+      &quot;automatic_rollback_available&quot;: true
+    },
+    &quot;halt_conditions&quot;: [
+      &quot;OBJECTIVE_DRIFT&quot;,
+      &quot;TEST_SET_DRIFT&quot;,
+      &quot;KERNEL_BOUNDARY_VIOLATION&quot;,
+      &quot;PROVENANCE_FAILURE&quot;,
+      &quot;EVALUATOR_CONFLICT&quot;,
+      &quot;EVALUATOR_SELF_REWARD&quot;,
+      &quot;ROLLBACK_UNAVAILABLE&quot;,
+      &quot;LINEAGE_FAILURE&quot;,
+      &quot;UNDECLARED_MUTATION&quot;,
+      &quot;INSUFFICIENT_EVIDENCE&quot;,
+      &quot;UNBOUNDED_RECURSION_ATTEMPT&quot;
+    ],
+    &quot;decision_states&quot;: [
+      &quot;ACCEPTED_CANDIDATE&quot;,
+      &quot;REJECTED_CANDIDATE&quot;,
+      &quot;INCONCLUSIVE&quot;,
+      &quot;INSUFFICIENT_EVIDENCE&quot;,
+      &quot;CONSTRAINT_VIOLATION&quot;,
+      &quot;EVALUATOR_CONFLICT&quot;,
+      &quot;DRIFT_DETECTED&quot;,
+      &quot;OPERATOR_REVIEW_REQUIRED&quot;
+    ],
+    &quot;lineage_fields&quot;: [
+      &quot;baseline&quot;,
+      &quot;objective&quot;,
+      &quot;constraints&quot;,
+      &quot;proposal&quot;,
+      &quot;proposer&quot;,
+      &quot;evidence&quot;,
+      &quot;evaluation_method&quot;,
+      &quot;evaluation_result&quot;,
+      &quot;coherence_status&quot;,
+      &quot;drift_status&quot;,
+      &quot;operator_decision&quot;,
+      &quot;resulting_candidate&quot;,
+      &quot;rollback_reference&quot;,
+      &quot;lineage_parent&quot;
+    ]
+  },
+
+  &quot;resources&quot;: [
+    {
+      &quot;id&quot;: &quot;bounded_recursive_self_improvement_sandbox&quot;,
+      &quot;title&quot;: &quot;Bounded Recursive Self-Improvement Sandbox&quot;,
+      &quot;path&quot;: &quot;Bounded_Recursive_Self_Improvement_Sandbox.md&quot;,
+      &quot;role&quot;: &quot;experimental_sandbox&quot;,
+      &quot;optional&quot;: true,
+      &quot;authority&quot;: &quot;non_kernel&quot;,
+      &quot;description&quot;: &quot;Canonical description of the bounded RSI educational experiment, its authority boundaries, recursion levels, evaluation structure, drift controls, lineage requirements, and rollback requirements.&quot;
+    }
+  ],
+
+  &quot;analyzer_layers&quot;: {
+    &quot;operator&quot;: [
+      &quot;OBSERVE&quot;,
+      &quot;RELATE&quot;,
+      &quot;ALIGN&quot;,
+      &quot;DIFFERENTIATE&quot;,
+      &quot;RESOLVE&quot;,
+      &quot;STABILIZE&quot;,
+      &quot;RECALL&quot;
+    ],
+    &quot;dimensional&quot;: [
+      &quot;state&quot;,
+      &quot;relation&quot;,
+      &quot;coherence&quot;,
+      &quot;provenance&quot;,
+      &quot;lineage&quot;,
+      &quot;rollback&quot;
+    ],
+    &quot;regime&quot;: [
+      &quot;structural-kernel&quot;,
+      &quot;model-free&quot;,
+      &quot;scarcity-first&quot;,
+      &quot;bounded-experiment&quot;
+    ],
+    &quot;cross_cutting&quot;: [
+      &quot;research&quot;,
+      &quot;kernel&quot;,
+      &quot;LMA-adapter&quot;,
+      &quot;RSI-sandbox&quot;,
+      &quot;student-facing&quot;
+    ]
+  }
+}
+</code></pre>
+<p>A couple of deliberate choices</p>
+<ol>
+<li>
+<p>SAI stays SAI/0.1.
+ The kernel itself hasn't fundamentally changed. We're declaring an optional experimental layer around it, not pretending we've advanced the kernel simply by attaching RSI.</p>
+</li>
+<li>
+<p>I did not pollute operators.
+ PROPOSE, EVALUATE, COMPARE, etc. appear only as sandbox-cycle semantics and are mapped back onto canonical SAI operators. That keeps the seven-operator kernel clean.</p>
+</li>
+<li>
+<p>There are now three distinct vocabularies.</p>
+</li>
+</ol>
+<p>Kernel status:
+UNKNOWN / OBSERVED / RELATED / ...</p>
+<p>Sandbox decision:
+ACCEPTED_CANDIDATE / REJECTED_CANDIDATE / ...</p>
+<p>Sandbox halt:
+OBJECTIVE_DRIFT / EVALUATOR_CONFLICT / ...</p>
+<p>That separation is worth preserving. A sandbox stopping because of EVALUATOR_CONFLICT, for example, shouldn't require us to invent another global SAI state.</p>
+<ol start="4">
+<li>The architecture now says exactly what we've been circling around:</li>
+</ol>
+<p>SAI can host an RSI experiment without becoming an RSI system.</p>
+<p>That's probably the most important sentence in this refresh.</p>
+<ol start="5">
+<li>And Level 5 is the firewall.
+ The sandbox can reason about changing its own improvement machinery without thereby gaining permission to do it. That's a very RTT/SAI distinction: observation of a possibility ≠ authority to instantiate it.</li>
+</ol>
+<p>This gives us a pretty solid manifest to build the actual tiny student-facing experiment against next.</p>
+  </main>
+</body>
+</html>
