@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_We_know_how_to_calibrate_AI_drift_" src="https://github.com/user-attachments/assets/efa0691a-baf2-488e-adf4-e5a4e0567dd5" />
+
 # We know how to calibrate AI drift
 
 ---
