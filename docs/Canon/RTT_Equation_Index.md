@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_RTT_Equation_Index_" src="https://github.com/user-attachments/assets/e1b30162-03bb-41fe-8ba0-ffaa3a140d52" />
 
 # RTT Equation Index
 
