@@ -364,7 +364,13 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [ /projects/VictorG/ ](https://www.triadicframeworks.org/projects/VictorG/)
 - [ /Research/ ](https://www.triadicframeworks.org/Research/)
 - [ /Research/agentic/ ](https://www.triadicframeworks.org/Research/agentic/)
+- [ /Research/AI_Atlas/ ](https://www.triadicframeworks.org/Research/AI_Atlas/)
+- [ /Research/Intelligence_Class_Ladder/OHSHIT/ ](https://www.triadicframeworks.org/Research/Intelligence_Class_Ladder/OHSHIT/)
+- [ /Research/Intelligence_Scanner/ ](https://www.triadicframeworks.org/Research/Intelligence_Scanner/)
+- [ /Research/mercury/ ](https://www.triadicframeworks.org/Research/mercury/)
+- [ /Research/Structural_Assisted_Intelligence/ ](https://www.triadicframeworks.org/Research/Structural_Assisted_Intelligence/)
 - [ /Research/Toolbox/ ](https://www.triadicframeworks.org/Research/Toolbox/)
+- [ /Research/Toolbox/visuals/ ](https://www.triadicframeworks.org/Research/Toolbox/visuals/)
 - [ /simulations/ ](https://www.triadicframeworks.org/simulations/)
 - [ /snapshots/ ](https://www.triadicframeworks.org/snapshots/)
 
