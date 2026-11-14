@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical_Nawderian_Suite_index_" src="https://github.com/user-attachments/assets/3b4b66cc-7dc0-4342-b6b3-68363d039944" />
+
 # 🌟 **The Nawderian Suite — Canonical Index**  
 *Mythmatical Canon · TriadicFrameworks*
 
