@@ -1,1 +1,300 @@
+{
+  "id": "outlook_is_down_what_microsoft_broke",
+  "title": "Outlook Is DOWN: What Microsoft Broke",
+  "type": "rtt_outage_case_study",
+  "status": "active_pre_rca",
+  "framework": "Resonance-Time Theory (RTT)",
+  "research_domain": "distributed_systems_outage_analysis",
+  "purpose": "Evaluate whether RTT can expose outage dynamics, relationships, or diagnostic signals that conventional incident analysis may miss or underweight.",
 
+  "source_event": {
+    "reference_type": "initial_observational_reference",
+    "title": "Outlook is DOWN: What Microsoft Broke (Retired Microsoft Engineer Explains)",
+    "url": "https://www.youtube.com/watch?v=wwVxCRYaYfs",
+    "final_rca_incorporated": false
+  },
+
+  "research_question": "Can Resonance-Time Theory provide meaningful insight into a large distributed-service outage by examining relationships between load, coupling, timing, recovery, and system coherence?",
+
+  "primary_test": "Does RTT expose outage behavior that might otherwise be missed, overlooked, or treated as secondary by conventional infrastructure monitoring and root-cause analysis?",
+
+  "scientific_guardrail": {
+    "causal_claim": false,
+    "statement": "RTT is not being used to claim the cause of the outage. It is being evaluated as an analytical framework for characterizing system stability, load sensitivity, temporal behavior, dependency coupling, transition thresholds, recovery behavior, re-entry behavior, and coherence.",
+    "method": "Freeze RTT-derived observations before incorporating a definitive root-cause analysis, then compare those observations against independent evidence.",
+    "retrofit_prohibited": true
+  },
+
+  "conventional_model": {
+    "basic_states": [
+      "UP",
+      "DOWN"
+    ],
+    "extended_states": [
+      "Healthy",
+      "Degraded",
+      "Unavailable",
+      "Recovering",
+      "Healthy"
+    ],
+    "rtt_question": "Under what conditions does the system remain coherent?"
+  },
+
+  "rtt_outage_analyzer": {
+    "sequence": [
+      "Load",
+      "Coupling",
+      "Threshold",
+      "Collapse",
+      "Recovery",
+      "Re-entry",
+      "Coherence"
+    ],
+
+    "stages": {
+      "load": {
+        "question": "What pressure is being applied to the system?",
+        "candidate_inputs": [
+          "client requests",
+          "authentication activity",
+          "connection establishment",
+          "retries",
+          "background services",
+          "dependent-service traffic",
+          "reconnecting clients"
+        ],
+        "focus": "Determine whether patterns of load interacting with time and system state move infrastructure toward or away from a stable operating regime."
+      },
+
+      "coupling": {
+        "question": "Which systems influence the state of other systems?",
+        "distinction": [
+          "component failure",
+          "coupled instability"
+        ],
+        "diagnostic_question": "Are investigators observing multiple failures, or multiple expressions of the same unstable relationship?"
+      },
+
+      "threshold": {
+        "question": "Does instability emerge gradually, or does the system cross a boundary after which behavior changes rapidly?",
+        "candidate_regimes": {
+          "R0": "comfortably stable",
+          "R1": "elevated pressure",
+          "R2": "degraded response",
+          "R3": "critical transition region",
+          "R4": "incoherent or unavailable state"
+        }
+      },
+
+      "collapse": {
+        "interpretation": "Collapse is treated as a system state rather than automatically as the root cause.",
+        "questions": [
+          "What conditions preceded collapse?",
+          "Which relationships changed?",
+          "What was accumulating?",
+          "Which timing relationships shifted?",
+          "Did dependencies amplify the disturbance?",
+          "Was there a recognizable transition boundary?"
+        ]
+      },
+
+      "recovery": {
+        "distinction": [
+          "restart recovery",
+          "operational recovery"
+        ],
+        "principle": "A component that successfully restarts has not necessarily demonstrated that it can sustain production conditions."
+      },
+
+      "re_entry": {
+        "definition": "The transition where normal workload and dependency relationships are restored to a recovering system.",
+        "candidate_inputs": [
+          "returning users",
+          "reconnecting clients",
+          "retrying requests",
+          "dependent services",
+          "queued activity",
+          "synchronization processes"
+        ],
+        "outcomes": [
+          "stable",
+          "unstable"
+        ]
+      },
+
+      "coherence": {
+        "definition": "The ability of relevant system relationships to remain inside an operationally stable regime over time.",
+        "requires": [
+          "sustained operation",
+          "production workload tolerance",
+          "dependency stability",
+          "temporal stability",
+          "feedback stability"
+        ]
+      }
+    }
+  },
+
+  "re_entry_threshold": {
+    "hypothesis": "Recovery capacity and operating capacity may represent different system states.",
+    "definition": "The operating boundary at which restored workload, dependencies, timing, or feedback cause a recovering system to transition toward either stable coherence or renewed instability.",
+    "importance": "A successful restart may not demonstrate sustainable production health."
+  },
+
+  "recovery_feedback_model": {
+    "sequence": [
+      "Service becomes unavailable",
+      "Clients and dependent systems lose connectivity",
+      "Service begins recovering",
+      "Connections and requests return",
+      "System load changes",
+      "Recovery conditions change"
+    ],
+    "hypothesis": "Recovery may behave as a dynamic operating regime rather than a single event."
+  },
+
+  "temporal_model": {
+    "states": {
+      "T0": "unavailable",
+      "T1": "service restored",
+      "T2": "workload begins returning",
+      "T3": "coupled demand rises",
+      "T4": "system stabilizes or destabilizes"
+    },
+    "hypothesis": "Health may be trajectory-dependent rather than state-dependent.",
+    "diagnostic_risk": "A health check near T1 may not characterize system behavior across T1 through T4."
+  },
+
+  "exploratory_variables": {
+    "R": "request / workload pressure",
+    "T": "temporal response and recovery behavior",
+    "C": "system coherence"
+  },
+
+  "exploratory_relationships": [
+    "R increases -> temporal response changes -> C may decrease",
+    "C increases during recovery -> workload reconnects -> R increases -> C may remain stable or decrease"
+  ],
+
+  "stability_envelope_question": "Across what combinations of load, time, dependency state, and recovery phase does the service remain coherent?",
+
+  "candidate_added_insights": [
+    {
+      "id": "AI-01",
+      "statement": "Apparent health may not equal sustainable health."
+    },
+    {
+      "id": "AI-02",
+      "statement": "Recovery may itself generate destabilizing conditions."
+    },
+    {
+      "id": "AI-03",
+      "statement": "Dependency failures may appear broader than their origin."
+    },
+    {
+      "id": "AI-04",
+      "statement": "Threshold behavior may contain more diagnostic information than binary status."
+    },
+    {
+      "id": "AI-05",
+      "statement": "Time may need to be treated as a first-class operational variable."
+    },
+    {
+      "id": "AI-06",
+      "statement": "Recovery and normal operation may occupy different stability regimes."
+    }
+  ],
+
+  "frozen_pre_rca_questions": [
+    {
+      "id": "Q01",
+      "question": "Did workload intensity influence whether recovered infrastructure remained stable?",
+      "validation": null
+    },
+    {
+      "id": "Q02",
+      "question": "Was there a distinguishable threshold between sustainable and unsustainable operating conditions?",
+      "validation": null
+    },
+    {
+      "id": "Q03",
+      "question": "Did returning traffic materially affect recovery behavior?",
+      "validation": null
+    },
+    {
+      "id": "Q04",
+      "question": "Did retries, reconnections, or dependent systems create meaningful feedback during recovery?",
+      "validation": null
+    },
+    {
+      "id": "Q05",
+      "question": "Did apparently healthy infrastructure later become unhealthy when normal operating relationships were restored?",
+      "validation": null
+    },
+    {
+      "id": "Q06",
+      "question": "Were multiple affected services coupled through common infrastructure or dependency relationships?",
+      "validation": null
+    },
+    {
+      "id": "Q07",
+      "question": "Did engineers need to restrict, stage, redirect, or otherwise manage workload during recovery?",
+      "validation": null
+    },
+    {
+      "id": "Q08",
+      "question": "Was the system's temporal trajectory more diagnostically useful than individual health-check states?",
+      "validation": null
+    },
+    {
+      "id": "Q09",
+      "question": "Could monitoring have declared components healthy before those components demonstrated sustained coherence under production conditions?",
+      "validation": null
+    },
+    {
+      "id": "Q10",
+      "question": "Does the eventual root-cause analysis describe phenomena that map naturally onto the RTT sequence without requiring the RTT model to be rewritten after the fact?",
+      "validation": null
+    }
+  ],
+
+  "validation_protocol": {
+    "trigger": "authoritative post-incident findings become available",
+    "allowed_results": [
+      "SUPPORTED",
+      "PARTIALLY_SUPPORTED",
+      "NOT_SUPPORTED",
+      "NOT_DETERMINABLE"
+    ],
+    "rules": [
+      "Evaluate each frozen observation independently.",
+      "Do not rewrite pre-RCA hypotheses after authoritative findings are known.",
+      "Do not reinterpret NOT_SUPPORTED observations as successful predictions.",
+      "Preserve negative results.",
+      "Distinguish RTT-specific added insight from concepts already captured by conventional incident analysis."
+    ]
+  },
+
+  "success_criterion": {
+    "requirement": "RTT must provide additional diagnostic value rather than merely rename familiar outage concepts.",
+    "test": "Did RTT cause investigators to examine a relationship, transition, temporal pattern, recovery condition, or coupling effect that would otherwise have been overlooked or underemphasized?",
+    "negative_result_allowed": true
+  },
+
+  "case_study_principle": "Do not use RTT to explain everything after it happens. Use RTT to identify what to look for before the answer is known.",
+
+  "tags": [
+    "RTT",
+    "Resonance-Time-Theory",
+    "outage-analysis",
+    "distributed-systems",
+    "Microsoft-365",
+    "Outlook",
+    "system-coherence",
+    "re-entry-threshold",
+    "recovery-dynamics",
+    "coupled-systems",
+    "falsifiability",
+    "pre-RCA"
+  ]
+}
