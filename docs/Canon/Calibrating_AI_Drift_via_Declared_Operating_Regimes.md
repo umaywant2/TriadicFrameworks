@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Calibrating_AI_Drift_via_Declared_Operating_Regimes_" src="https://github.com/user-attachments/assets/63c6cc92-5b66-4139-aabb-a3eb5dc25609" />
+
 # Calibrating AI Drift via Declared Operating Regimes
 
 ---
