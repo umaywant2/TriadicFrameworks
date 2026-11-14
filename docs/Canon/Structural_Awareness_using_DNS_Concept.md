@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Structural_Awareness_using_DNS_Concept_" src="https://github.com/user-attachments/assets/80f1408f-5826-49cc-8cf2-2c5e3d0136ba" />
 
 # Structural Awareness using DNS - Concept
 
