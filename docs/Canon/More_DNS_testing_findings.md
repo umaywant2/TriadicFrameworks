@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_More_DNS_testing_findings_" src="https://github.com/user-attachments/assets/121f113a-8120-4ffe-8d5f-f4a3330af0b5" />
+
 # More DNS testing findings
 
 ---
