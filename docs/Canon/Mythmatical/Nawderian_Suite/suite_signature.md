@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical_Nawderian_Suite_suite_signature_" src="https://github.com/user-attachments/assets/0869f92b-1dd0-4eea-80c8-d74c0271e7b1" />
+
 # 🌟 **suite_signature.md**  
 *Mythmatical Canon · Nawderian Suite · Signature*
 
