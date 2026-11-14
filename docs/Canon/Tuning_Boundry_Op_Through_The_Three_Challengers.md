@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Tuning_Boundry_Op_Through_The_Three_Challengers_" src="https://github.com/user-attachments/assets/214f34b4-b91a-42b1-9012-7b334014a1dd" />
 
 # ⭐ **TUNING BOUNDARY‑OP THROUGH THE THREE CHALLENGERS**
 
