@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Universal_Operator_7_Coherence_Op_" src="https://github.com/user-attachments/assets/802eed3b-4e98-4a6f-8b2c-2160654f1297" />
 
 # ⭐ UNIVERSAL OPERATOR #7: **Coherence‑Op**  
 **Coherence is the alignment of relations, boundaries, rhythms, transitions, and lineage within an envelope such that the system remains intelligible as itself.**
