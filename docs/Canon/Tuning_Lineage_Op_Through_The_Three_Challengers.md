@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Tuning_Lineage_Op_Through_The_Three_Challengers_" src="https://github.com/user-attachments/assets/c598ab3b-ff4a-408e-9904-25ca60986c05" />
 
 # ⭐ **TUNING LINEAGE‑OP THROUGH THE THREE CHALLENGERS**
 
