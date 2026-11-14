@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_RTT_Chart_Operators_Across_the_3D_9D_Rung_" src="https://github.com/user-attachments/assets/40a95d41-33ff-46db-b5a2-d64f239af8c3" />
 
 # ⭐ **Canonical RTT Chart: Operators Across the 3D–9D Rung**  
 ### *With RTT equations showing how each operator expresses at each dimensional level*
