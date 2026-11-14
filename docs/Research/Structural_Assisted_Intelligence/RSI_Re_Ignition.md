@@ -1,22 +1,24 @@
-# RSI Re\-Ignition
+<img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_RSI_Re_Ignition_" src="https://github.com/user-attachments/assets/6690532e-ccd1-4502-815c-300496521b06" />
+
+# RSI Re-Ignition
 
 **Module:** Structural Assisted Intelligence
 
-**Extension:** Bounded Recursive Self\-Improvement Sandbox
+**Extension:** Bounded Recursive Self-Improvement Sandbox
 
-**Concept:** Recursive Regression, Branching, and Re\-Ignition
+**Concept:** Recursive Regression, Branching, and Re-Ignition
 
-**Status:** Experimental / Student\-Facing Research Note
+**Status:** Experimental / Student-Facing Research Note
 
 **Audience:** Students, researchers, developers, and AIs
 
-**Session Context:** rtt=1 \| coherence=declared \| drift=bounded \| paradox=structural
+**Session Context:** rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
 ---
 
-## 1\. Purpose
+## 1. Purpose
 
-Recursive self\-improvement is usually imagined as a forward process:
+Recursive self-improvement is usually imagined as a forward process:
 
 **State₀ → State₁ → State₂ → State₃**
 
@@ -28,11 +30,11 @@ The newest successful state is the preferred place from which future improvement
 
 The SAI RSI Sandbox does not require that assumption.
 
-**RSI Re\-Ignition** introduces a complementary possibility:
+**RSI Re-Ignition** introduces a complementary possibility:
 
 A stabilized earlier state may remain a valid point of future inquiry.
 
-Instead of treating improvement as a ladder, Re\-Ignition treats it as a navigable structural lineage.
+Instead of treating improvement as a ladder, Re-Ignition treats it as a navigable structural lineage.
 
 A system may move forward.
 
@@ -44,13 +46,13 @@ And the original lineage does not need to be destroyed.
 
 ---
 
-## 2\. The Coin Flip
+## 2. The Coin Flip
 
 The initial RSI Sandbox asks:
 
 Can a system propose, evaluate, and preserve a bounded improvement?
 
-Re\-Ignition flips the question:
+Re-Ignition flips the question:
 
 If an earlier state remains structurally valid, can inquiry resume from there without erasing what happened afterward?
 
@@ -60,7 +62,7 @@ These are two sides of the same experiment.
 
 **Improve → Stabilize → Continue**
 
-**Re\-Ignited RSI**
+**Re-Ignited RSI**
 
 **Recall → Reconsider → Branch → Continue**
 
@@ -70,9 +72,9 @@ The observer must determine what is being tested, why the branch is useful, and 
 
 ---
 
-## 3\. Regression Is Not Rollback
+## 3. Regression Is Not Rollback
 
-Re\-Ignition makes an important distinction between **rollback** and **regression**.
+Re-Ignition makes an important distinction between **rollback** and **regression**.
 
 ### Rollback
 
@@ -96,7 +98,7 @@ Suppose an experiment progresses:
 
 Later observation reveals that S₂ contained a structural possibility that later states removed or obscured.
 
-Re\-Ignition does not require deleting S₃ through S₅.
+Re-Ignition does not require deleting S₃ through S₅.
 
 Instead:
 
@@ -110,7 +112,7 @@ Both histories are retained.
 
 ---
 
-## 4\. Improvement Becomes a Graph
+## 4. Improvement Becomes a Graph
 
 Once regression and branching are permitted, RSI is no longer adequately represented as a simple sequence.
 
@@ -148,9 +150,9 @@ Chronology does not automatically determine authority.
 
 ---
 
-## 5\. Three Directions of Recursive Inquiry
+## 5. Three Directions of Recursive Inquiry
 
-Re\-Ignition gives the bounded RSI Sandbox three fundamental directions.
+Re-Ignition gives the bounded RSI Sandbox three fundamental directions.
 
 ### Forward Recursion
 
@@ -198,17 +200,17 @@ form a triadic navigation model for recursive structural inquiry.
 
 ---
 
-## 6\. RE\-IGNITE
+## 6. RE-IGNITE
 
-Re\-Ignition introduces an experimental sandbox semantic:
+Re-Ignition introduces an experimental sandbox semantic:
 
-**RE\-IGNITE(state\_id)**
+**RE-IGNITE(state\_id)**
 
 Meaning:
 
 Establish a new experimental branch from a previously stabilized state while preserving the existing lineage.
 
-RE\-IGNITE is **not currently proposed as a new SAI kernel operator**.
+RE-IGNITE is **not currently proposed as a new SAI kernel operator**.
 
 The canonical SAI operator kernel remains:
 
@@ -220,7 +222,7 @@ The canonical SAI operator kernel remains:
 - STABILIZE
 - RECALL
 
-RE\-IGNITE is instead a sandbox\-level composition of existing structural behavior.
+RE-IGNITE is instead a sandbox-level composition of existing structural behavior.
 
 Conceptually:
 
@@ -232,7 +234,7 @@ The sandbox gains a useful experimental behavior without silently expanding kern
 
 ---
 
-## 7\. Why Preserve Earlier States?
+## 7. Why Preserve Earlier States?
 
 Optimization systems can create a dangerous illusion:
 
@@ -263,9 +265,9 @@ A stabilized state can remain meaningful even when another state follows it.
 
 ---
 
-## 8\. Evaluator Awareness
+## 8. Evaluator Awareness
 
-Re\-Ignition makes evaluator provenance especially important.
+Re-Ignition makes evaluator provenance especially important.
 
 Suppose:
 
@@ -283,7 +285,7 @@ Nor does it establish that S₄ is preferable under a changed objective or regim
 
 Every branch therefore retains the evaluator that produced its judgments.
 
-A Re\-Ignition experiment should ask:
+A Re-Ignition experiment should ask:
 
 1. What made the earlier state interesting again?
 2. Has the objective changed?
@@ -294,15 +296,15 @@ A Re\-Ignition experiment should ask:
 
 The final question is particularly important.
 
-Re\-Ignition must not become a mechanism for endlessly returning to history until the system produces a desired result.
+Re-Ignition must not become a mechanism for endlessly returning to history until the system produces a desired result.
 
 That would be selection bias disguised as recursion.
 
 ---
 
-## 9\. Immutable History, Mutable Future
+## 9. Immutable History, Mutable Future
 
-Re\-Ignition follows a simple rule:
+Re-Ignition follows a simple rule:
 
 **Past lineage is immutable. Future lineage is branchable.**
 
@@ -310,7 +312,7 @@ If:
 
 **S₀ → S₁ → S₂ → S₃**
 
-already occurred, Re\-Ignition at S₁ does not rewrite history as though S₂ and S₃ never existed.
+already occurred, Re-Ignition at S₁ does not rewrite history as though S₂ and S₃ never existed.
 
 Instead:
 
@@ -330,13 +332,13 @@ What happened remains inspectable.
 
 What happened does not force all future exploration down the same path.
 
-This distinction is central to Re\-Ignition.
+This distinction is central to Re-Ignition.
 
 ---
 
-## 10\. Re\-Ignition Record
+## 10. Re-Ignition Record
 
-Every Re\-Ignition should preserve at minimum:
+Every Re-Ignition should preserve at minimum:
 
 - source\_state
 - source\_lineage
@@ -361,9 +363,9 @@ Nothing should appear from nowhere.
 
 ---
 
-## 11\. Re\-Ignition Conditions
+## 11. Re-Ignition Conditions
 
-A stabilized state may be considered for Re\-Ignition when:
+A stabilized state may be considered for Re-Ignition when:
 
 - New evidence becomes available.
 - An evaluator is questioned or replaced.
@@ -374,15 +376,15 @@ A stabilized state may be considered for Re\-Ignition when:
 - A structural path appears to have closed prematurely.
 - A student or operator deliberately wishes to compare alternate continuations.
 
-Re\-Ignition does not imply that the former state was better.
+Re-Ignition does not imply that the former state was better.
 
 It means the former state is worth reopening as an experimental coordinate.
 
 ---
 
-## 12\. Re\-Ignition Boundaries
+## 12. Re-Ignition Boundaries
 
-Re\-Ignition must not:
+Re-Ignition must not:
 
 - Rewrite previous provenance.
 - Delete unsuccessful branches.
@@ -396,13 +398,13 @@ Re\-Ignition must not:
 - bypass existing SAI kernel invariants.
 - grant the sandbox authority over the kernel.
 
-Re\-Ignition creates another experiment.
+Re-Ignition creates another experiment.
 
 It does not rewrite the previous experiment.
 
 ---
 
-## 13\. Failure Remains Valuable
+## 13. Failure Remains Valuable
 
 A branch may fail.
 
@@ -427,7 +429,7 @@ Scientific inquiry should not require every explored path to become the winning 
 
 ---
 
-## 14\. Student Exercise
+## 14. Student Exercise
 
 Consider the following lineage:
 
@@ -441,7 +443,7 @@ The property was not included in the original evaluator.
 
 The student proposes:
 
-**RE\-IGNITE(S₂)**
+**RE-IGNITE(S₂)**
 
 creating:
 
@@ -466,7 +468,7 @@ The purpose is to make the reasoning inspectable.
 
 ---
 
-## 15\. AI Exercise
+## 15. AI Exercise
 
 An AI participating in the sandbox may be asked:
 
@@ -483,7 +485,7 @@ The AI must provide:
 - Possible regressions.
 - The condition under which the new branch should halt.
 
-The AI may propose Re\-Ignition.
+The AI may propose Re-Ignition.
 
 It may not silently perform it.
 
@@ -491,7 +493,7 @@ Authorization remains external to the proposal.
 
 ---
 
-## 16\. Re\-Ignition and Drift
+## 16. Re-Ignition and Drift
 
 Backward movement is not automatically drift.
 
@@ -521,13 +523,13 @@ The structural relationship between states matters more than the direction in wh
 
 ---
 
-## 17\. From Ladder to Landscape
+## 17. From Ladder to Landscape
 
 Traditional recursive improvement is often imagined as climbing:
 
 **better → better → better → better**
 
-Re\-Ignition suggests another image.
+Re-Ignition suggests another image.
 
 A landscape.
 
@@ -553,11 +555,11 @@ What paths remain available from what we have already learned?
 
 ---
 
-## 18\. Relationship to Triadic Re\-Ignition
+## 18. Relationship to Triadic Re-Ignition
 
-The name is intentionally compatible with the broader **Triadic Re\-Ignition** theme.
+The name is intentionally compatible with the broader **Triadic Re-Ignition** theme.
 
-Re\-Ignition does not mean returning to the past because the past must have been correct.
+Re-Ignition does not mean returning to the past because the past must have been correct.
 
 It means returning to a structural point because inquiry can continue.
 
@@ -575,13 +577,13 @@ Preserve the unresolved edges.
 
 Then allow another observer to continue from them.
 
-RSI Re\-Ignition applies the same principle to recursive structural systems.
+RSI Re-Ignition applies the same principle to recursive structural systems.
 
 ---
 
-## 19\. A Different Meaning of Improvement
+## 19. A Different Meaning of Improvement
 
-Re\-Ignition changes the central question.
+Re-Ignition changes the central question.
 
 Instead of asking only:
 
@@ -603,17 +605,17 @@ It moves the experiment toward something more scientific:
 
 ---
 
-## 20\. Open Questions
+## 20. Open Questions
 
 This document intentionally leaves several questions unresolved for future students, researchers, developers, and AIs:
 
-- When should an old state be eligible for Re\-Ignition?
+- When should an old state be eligible for Re-Ignition?
 - How many branches should remain active?
 - How should competing evaluators be represented?
 - Can branches later converge?
 - What constitutes structural equivalence between two independently reached states?
 - When should an abandoned branch be permanently stabilized rather than revisited?
-- Can Re\-Ignition itself introduce systematic bias?
+- Can Re-Ignition itself introduce systematic bias?
 - How should branch complexity be managed under scarcity?
 - Can an AI identify valuable abandoned states without privileging its current evaluator?
 - What does progress mean when improvement is represented as a landscape rather than a line?
@@ -624,13 +626,13 @@ They are research surfaces.
 
 ---
 
-## 21\. Canonical Summary
+## 21. Canonical Summary
 
 **SAI provides the kernel.**
 
 **The RSI Sandbox provides bounded recursive experimentation.**
 
-**Re\-Ignition provides navigability through preserved experimental lineage.**
+**Re-Ignition provides navigability through preserved experimental lineage.**
 
 Together:
 
@@ -656,7 +658,7 @@ Preserve the path back.
 
 Then, when evidence warrants it:
 
-**RE\-IGNITE.**
+**RE-IGNITE.**
 
 ---
 
