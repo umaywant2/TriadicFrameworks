@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Canon_Universal_Operator_4_Transition_Op_" src="https://github.com/user-attachments/assets/8b36a100-1d64-4844-a960-76f14b056011" />
 
 # ⭐ UNIVERSAL OPERATOR #4: **Transition‑Op**  
 **A transition is the reconfiguration of relations, boundaries, and rhythms into a new regime.**
