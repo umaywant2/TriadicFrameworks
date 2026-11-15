@@ -1,0 +1,151 @@
+{
+  "module_id": "research-case-studies",
+  "module_name": "Research Case Studies",
+  "module_type": "case_study_registry",
+  "framework": "TriadicFrameworks",
+  "lens": "Resonance-Time Theory (RTT)",
+
+  "description": "A student-facing and research-facing collection of applied case studies using structural observation, declared envelopes, alignment, coherence, clarity, evidence, and governed agency without requiring the framework to predetermine the result.",
+
+  "purpose": [
+    "Apply TriadicFrameworks and RTT lenses to concrete examples.",
+    "Teach structural observation before conclusion.",
+    "Preserve uncertainty, lineage, evidence, and alternative explanations.",
+    "Test whether the framework provides useful insight rather than assuming that it does.",
+    "Provide reusable examples for students, researchers, humans, and AI systems."
+  ],
+
+  "core_method": [
+    "Observe",
+    "Map",
+    "Predict",
+    "Check",
+    "Score",
+    "Reflect"
+  ],
+
+  "shared_principles": [
+    "Reality precedes complete awareness.",
+    "Awareness is necessarily partial.",
+    "Alignment must be evaluated within a declared envelope.",
+    "Coherence does not establish truth.",
+    "Clarity should remain proportional to available awareness.",
+    "Trust should remain proportional to evidence.",
+    "Capability does not establish permission.",
+    "Agency introduces consequence.",
+    "Governance bounds consequential agency.",
+    "Models and simulations must not be confused with the containing reality.",
+    "Resonance is earned."
+  ],
+
+  "case_studies": [
+    {
+      "id": "modern-scams-and-misalignments-developing-resilience-through-awareness",
+      "title": "Modern Scams and Misalignments: Developing Resilience Through Awareness",
+      "markdown": "Modern_Scams_and_Misalignments_Developing_Resilience_Through_Awareness.md",
+      "metadata": "Modern_Scams_and_Misalignments_Developing_Resilience_Through_Awareness.json",
+      "focus": [
+        "digital resilience",
+        "awareness",
+        "alignment",
+        "trust",
+        "evidence",
+        "AI-assisted reasoning"
+      ],
+      "primary_principle": "Do not grant more trust than the available evidence supports.",
+      "status": "case-study"
+    },
+    {
+      "id": "reality-before-awareness",
+      "title": "Reality Before Awareness",
+      "markdown": "Reality_Before_Awareness.md",
+      "metadata": "Reality_Before_Awareness.json",
+      "focus": [
+        "reality",
+        "observation",
+        "partial awareness",
+        "alignment",
+        "bounded coherence",
+        "conditional clarity",
+        "imagination",
+        "simulation",
+        "agency",
+        "governance"
+      ],
+      "primary_principle": "Do not grant more certainty than awareness supports.",
+      "status": "case-study"
+    },
+    {
+      "id": "outlook-is-down-what-microsoft-broke",
+      "title": "Outlook is DOWN: What Microsoft Broke",
+      "markdown": "Outlook_is_DOWN_What_Microsoft_Broke.md",
+      "metadata": "Outlook_is_DOWN_What_Microsoft_Broke.json",
+      "focus": [
+        "systems analysis",
+        "service disruption",
+        "observation",
+        "failure",
+        "structural reasoning"
+      ],
+      "status": "case-study"
+    }
+  ],
+
+  "student_lens": {
+    "questions": [
+      "What can actually be observed?",
+      "What remains unknown?",
+      "What is the declared envelope?",
+      "Which relationships appear aligned or misaligned?",
+      "What evidence supports the interpretation?",
+      "Does apparent coherence survive changes in observational position?",
+      "What alternate explanations remain possible?",
+      "What consequences follow from acting on the interpretation?"
+    ],
+    "goal": "Develop structural awareness and disciplined inquiry rather than memorize predetermined conclusions."
+  },
+
+  "ai_lens": {
+    "role": "Assist observation, comparison, evidence organization, uncertainty representation, and structural analysis.",
+    "not_role": "Act as an unquestioned oracle of truth, safety, alignment, or correctness.",
+    "requirements": [
+      "Preserve uncertainty.",
+      "Distinguish observation from interpretation.",
+      "Identify source lineage where available.",
+      "Represent conflicting evidence.",
+      "Avoid converting coherence into certainty.",
+      "Keep simulated or inferred structures distinguishable from observed structures."
+    ]
+  },
+
+  "failure_conditions": [
+    "Forcing evidence to fit the framework.",
+    "Treating coherence as proof.",
+    "Hiding uncertainty.",
+    "Ignoring contradictory observations.",
+    "Confusing correlation with explanation.",
+    "Confusing a model with the system modeled.",
+    "Treating misalignment as automatic proof of wrongdoing.",
+    "Allowing framework terminology to replace evidence."
+  ],
+
+  "stewardship": {
+    "principle": "Use the framework to improve observation, not to predetermine reality.",
+    "practice": [
+      "Observe before concluding.",
+      "Declare the envelope.",
+      "Preserve unknowns.",
+      "Seek contradiction as well as confirmation.",
+      "Act proportionally to available evidence and awareness.",
+      "Govern consequences.",
+      "Observe again."
+    ]
+  },
+
+  "navigation": {
+    "readme": "README.md",
+    "path": "/docs/Research/case_studies/"
+  },
+
+  "status": "active"
+}

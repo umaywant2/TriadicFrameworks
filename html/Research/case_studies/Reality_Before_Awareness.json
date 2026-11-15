@@ -1,0 +1,218 @@
+{
+  "id": "reality-before-awareness",
+  "title": "Reality Before Awareness",
+  "subtitle": "Partial Views, Bounded Possibility, and Governed Agency",
+  "type": "case_study",
+  "domain": [
+    "awareness",
+    "observation",
+    "alignment",
+    "coherence",
+    "clarity",
+    "agency",
+    "governance",
+    "simulation"
+  ],
+  "framework": "TriadicFrameworks",
+  "lens": "Resonance-Time Theory (RTT)",
+
+  "primary_question": "How should an observer understand and act within a reality that can never be completely observed?",
+
+  "hypothesis": "Partial awareness may be the normal condition of an observer embedded within reality. Reliable action therefore depends not on complete knowledge, but on bounded observation, declared uncertainty, proportional clarity, and governed agency.",
+
+  "core_sequence": [
+    "Reality",
+    "Observation",
+    "Partial Awareness",
+    "Alignment",
+    "Bounded Coherence",
+    "Conditional Clarity",
+    "Agency",
+    "Constraint / Governance",
+    "Consequence",
+    "Changed Reality",
+    "Observe Again"
+  ],
+
+  "principles": {
+    "reality": "Reality is not the same thing as awareness of reality.",
+    "awareness": "Awareness is necessarily partial.",
+    "sufficiency": "Awareness need not be complete. It must be sufficient for the consequence under consideration.",
+    "alignment": "Alignment must be evaluated within a declared envelope.",
+    "clarity": "Clarity is bounded and should remain proportional to available awareness.",
+    "agency": "Capability does not automatically establish permission.",
+    "imagination": "Imagination may exceed what has been observed without establishing external reality.",
+    "simulation": "A model may contain a reality without becoming the Reality containing the model.",
+    "stewardship": "Explore freely within. Intervene humbly without."
+  },
+
+  "constraints": [
+    "Partial awareness must not be mistaken for complete knowledge.",
+    "Coherence does not establish truth.",
+    "An imagined possibility does not establish external existence.",
+    "A model must not be confused with the system being modeled.",
+    "Capability does not establish permission.",
+    "Uncertainty should be represented rather than hidden.",
+    "Different observational perspectives are not automatically incompatible.",
+    "Constructed assumptions should not cross into external consequence without sufficient evaluation."
+  ],
+
+  "observer_model": {
+    "metaphor": "landscape",
+    "positions": [
+      "valley",
+      "trail",
+      "above"
+    ],
+    "principle": "The landscape need not change for awareness of it to change.",
+    "interpretation": "Changes in observational position expose different relationships within the same larger reality."
+  },
+
+  "envelope_model": {
+    "principle": "Alignment is incomplete without a declared observational and consequential envelope.",
+    "questions": [
+      "What system is being observed?",
+      "From what position?",
+      "Across what relationships?",
+      "At what scale?",
+      "Under what conditions?",
+      "Toward what consequence?"
+    ]
+  },
+
+  "realms": {
+    "R0": {
+      "name": "Containing Reality",
+      "definition": "The reality within which the observer, observation, model, and consequences exist."
+    },
+    "R1": {
+      "name": "Observed Reality",
+      "definition": "The partial representation currently available to an observer."
+    },
+    "R2": {
+      "name": "Constructed Possibility",
+      "definition": "Models, simulations, imagined worlds, and possibilities produced from or inspired by observed reality."
+    }
+  },
+
+  "realm_flow": {
+    "construction": [
+      "R0",
+      "Observation",
+      "R1",
+      "Imagination / Modeling",
+      "R2"
+    ],
+    "testing": [
+      "R2",
+      "Test",
+      "Observation",
+      "R0"
+    ],
+    "critical_error": "R2 must not automatically be treated as equivalent to R0."
+  },
+
+  "storm_model": {
+    "internal_storm": {
+      "description": "Human imagination can represent possibilities not required to correspond directly to external reality.",
+      "status": "Real as mental representation without requiring the represented possibility to exist externally."
+    },
+    "constructed_storm": {
+      "description": "Models, simulations, software, virtual environments, and artificial systems can externalize and manipulate imagined possibilities.",
+      "purpose": "Provide bounded environments in which alternate structures, assumptions, failures, and possibilities may be explored."
+    },
+    "boundary_principle": "Freedom to explore a possibility does not automatically produce permission to impose that possibility on the containing world.",
+    "design_principle": "Strong envelopes permit wild storms."
+  },
+
+  "nature_model": {
+    "principle": "Incomplete awareness is not necessarily defective awareness.",
+    "constraint": "Natural systems operate within physical, ecological, relational, and consequential constraints without requiring human-style governance.",
+    "distinction": "Deliberate governance becomes relevant when capable agents can anticipate and intentionally produce consequences."
+  },
+
+  "agency_model": {
+    "knowledge_is_not_agency": true,
+    "agency_is_not_authority": true,
+    "capability_is_not_permission": true,
+    "principle": "Agency turns possibility into consequence.",
+    "governance_role": "Governance bounds agency when consequences can extend beyond the exploratory or simulated envelope."
+  },
+
+  "reality_loop": [
+    "Reality",
+    "Observation",
+    "Partial Awareness",
+    "Alignment within a declared envelope",
+    "Bounded Coherence",
+    "Conditional Clarity",
+    "Agency",
+    "Constraint / Governance",
+    "Consequence",
+    "Changed Reality",
+    "Observe Again"
+  ],
+
+  "required_complete_knowledge": false,
+
+  "student_protocol": {
+    "steps": [
+      "Observe",
+      "Change Position",
+      "Declare the Envelope",
+      "Identify Unknowns",
+      "Construct",
+      "Separate",
+      "Consider Agency",
+      "Apply Governance",
+      "Reflect"
+    ],
+    "reflection_question": "Did greater awareness change reality, or did it change the observer's relationship with reality?"
+  },
+
+  "failure_conditions": [
+    "Mistaking partial awareness for complete knowledge.",
+    "Treating coherence as proof of truth.",
+    "Confusing imagination with external evidence.",
+    "Mistaking a model for the system being modeled.",
+    "Assuming capability grants permission.",
+    "Hiding uncertainty rather than representing it.",
+    "Treating different perspectives as automatically incompatible.",
+    "Allowing simulated assumptions to cross into external consequence without sufficient evaluation."
+  ],
+
+  "relationship_to_previous_leaf": {
+    "previous": "Modern Scams and Misalignments: Developing Resilience Through Awareness",
+    "previous_principle": "Do not grant more trust than the evidence supports.",
+    "current_principle": "Do not grant more certainty than awareness supports.",
+    "combined": [
+      "Trust should be proportional to evidence.",
+      "Certainty should be proportional to awareness.",
+      "Agency should be proportional to both.",
+      "Governance should bound consequences when those assessments prove incomplete."
+    ]
+  },
+
+  "stewardship_protocol": [
+    "Observe what can be observed.",
+    "Declare what remains unknown.",
+    "Explore possibilities within appropriate boundaries.",
+    "Act proportionally to what is understood.",
+    "Govern consequences that extend beyond the boundary.",
+    "Observe again."
+  ],
+
+  "working_conclusion": [
+    "Reality comes before awareness.",
+    "Awareness is necessarily partial.",
+    "Clarity is therefore bounded.",
+    "Imagination may exceed observation.",
+    "Simulation gives possibility an envelope.",
+    "Agency turns possibility into consequence.",
+    "Governance determines how responsibly those consequences may cross the boundary.",
+    "Observe again."
+  ],
+
+  "status": "case-study",
+  "paired_document": "Reality_Before_Awareness.md"
+}
