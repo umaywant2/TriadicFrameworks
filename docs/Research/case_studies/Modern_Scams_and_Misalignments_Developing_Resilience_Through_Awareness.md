@@ -1,3 +1,6 @@
+
+- [`Modern_Scams_and_Misalignments_Developing_Resilience_Through_Awareness.json`](Modern_Scams_and_Misalignments_Developing_Resilience_Through_Awareness.json) — Agentic module schema role assignments
+
 # Modern Scams and Misalignments
 
 ## Developing Resilience Through Awareness
