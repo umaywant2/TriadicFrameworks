@@ -1,3 +1,6 @@
+
+- [`cs_module.json`](cs_module.json) — Agentic module schema role assignments
+
 # RTT Case Studies
 
 This directory contains applied case studies exploring whether **Resonance\-Time Theory (RTT)** can provide useful analytical or diagnostic insight when applied to real\-world systems and events.
