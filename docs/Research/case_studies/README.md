@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_case_studies_" src="https://github.com/user-attachments/assets/619c8721-7bb1-45ca-9f6e-cfb2c6191c22" />
 
 - [`cs_module.json`](cs_module.json) — Agentic module schema role assignments
 
