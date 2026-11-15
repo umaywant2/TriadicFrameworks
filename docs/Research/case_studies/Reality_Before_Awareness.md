@@ -1,3 +1,6 @@
+
+- [`Reality_Before_Awareness.json`](Reality_Before_Awareness.json) — Agentic module schema role assignments
+
 # Reality Before Awareness
 
 ## Partial Views, Bounded Possibility, and Governed Agency
