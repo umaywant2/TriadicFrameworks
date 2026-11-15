@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_case_studies_Reality_Before_Awareness_" src="https://github.com/user-attachments/assets/073074ed-5635-4bf2-a6f7-e11ba0daae41" />
 
 - [`Reality_Before_Awareness.json`](Reality_Before_Awareness.json) — Agentic module schema role assignments
 
