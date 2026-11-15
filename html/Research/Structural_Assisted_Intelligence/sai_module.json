@@ -20,7 +20,11 @@
       "bounded recursive self-improvement",
       "sandbox",
       "lineage",
-      "rollback"
+      "rollback",
+      "regression",
+      "Re-Ignition",
+      "branching",
+      "navigable lineage"
     ],
     "audience": [
       "students",
@@ -131,7 +135,13 @@
     "Experimental layers may not rewrite kernel invariants.",
     "Self-generated evidence is not independent validation.",
     "A claimed improvement does not become authoritative merely because it scores higher.",
-    "Mutation must remain attributable and reversible."
+    "Mutation must remain attributable and reversible.",
+    "Past lineage is immutable; future lineage is branchable.",
+    "Accepted does not mean permanently preferred.",
+    "Superseded does not mean disproven.",
+    "Forward does not inherently mean improvement.",
+    "Backward does not inherently mean failure.",
+    "Branching does not inherently mean incoherence."
   ],
 
   "architecture": {
@@ -151,7 +161,9 @@
     "relationship": "sandbox_operates_through_kernel",
     "kernel_invariants_mutable": false,
     "sandbox_self_authorizing": false,
-    "principle": "Kernel stable. Sandbox mutable. Evaluator declared. Lineage preserved. Operator sovereign."
+    "historical_lineage_mutable": false,
+    "future_lineage_branchable": true,
+    "principle": "Kernel stable. History immutable. Future branchable. Evaluator declared. Lineage preserved. Operator sovereign."
   },
 
   "experimental_layers": {
@@ -161,17 +173,21 @@
       "optional": true,
       "mode": "bounded",
       "authority": "non_kernel",
-      "purpose": "Provide an inspectable educational environment for representing, proposing, evaluating, comparing, accepting, rejecting, and recording bounded improvement claims without granting recursive authority over the SAI kernel.",
+      "purpose": "Provide an inspectable educational environment for representing, proposing, evaluating, comparing, accepting, rejecting, recording, revisiting, and branching bounded improvement claims without granting recursive authority over the SAI kernel.",
       "canonical_reference": "Bounded_Recursive_Self_Improvement_Sandbox.md",
+      "companion_reference": "RSI_Re_Ignition.md",
       "operator_approval": true,
       "lineage_required": true,
       "rollback_required": true,
+      "branch_provenance_required": true,
       "kernel_mutation": false,
       "autonomous_evaluator_mutation": false,
       "unbounded_recursion": false,
       "network_access": false,
       "self_authorization": false,
       "baseline_replacement": "operator_approved_only",
+      "historical_rewrite": false,
+      "re_ignition_enabled": true,
       "principle": "SAI can host an RSI experiment without becoming an RSI system."
     }
   },
@@ -230,7 +246,10 @@
       "LINEAGE_FAILURE",
       "UNDECLARED_MUTATION",
       "INSUFFICIENT_EVIDENCE",
-      "UNBOUNDED_RECURSION_ATTEMPT"
+      "UNBOUNDED_RECURSION_ATTEMPT",
+      "HISTORICAL_REWRITE_ATTEMPT",
+      "UNDECLARED_BRANCH",
+      "RE_IGNITION_WITHOUT_PROVENANCE"
     ],
     "decision_states": [
       "ACCEPTED_CANDIDATE",
@@ -256,8 +275,108 @@
       "operator_decision",
       "resulting_candidate",
       "rollback_reference",
-      "lineage_parent"
+      "lineage_parent",
+      "branch_id",
+      "parent_branch"
     ]
+  },
+
+  "rsi_re_ignition": {
+    "name": "RSI Re-Ignition",
+    "enabled": true,
+    "optional": true,
+    "authority": "non_kernel",
+    "canonical_reference": "RSI_Re_Ignition.md",
+    "purpose": "Allow a previously stabilized state to become a new point of bounded inquiry without deleting, overwriting, or invalidating subsequent lineage.",
+    "principle": "Regression is not rollback. Rollback restores. Regression reopens.",
+    "history_rule": "Past lineage is immutable. Future lineage is branchable.",
+    "improvement_rule": "Accepted does not mean permanently preferred.",
+    "supersession_rule": "Superseded does not mean disproven.",
+    "navigation": {
+      "forward": {
+        "semantic": "CONTINUE",
+        "description": "Continue experimental inquiry from the currently stabilized state."
+      },
+      "backward": {
+        "semantic": "RECONSIDER",
+        "description": "Return analytically to a previously stabilized state as a candidate point for renewed inquiry."
+      },
+      "lateral": {
+        "semantic": "RE_IGNITE",
+        "description": "Establish a new experimental branch from a previously stabilized state while preserving the original lineage."
+      }
+    },
+    "re_ignite": {
+      "semantic": "RE-IGNITE(state_id)",
+      "kernel_operator": false,
+      "sandbox_semantic": true,
+      "requires_operator_approval": true,
+      "requires_stabilized_source": true,
+      "requires_branch_provenance": true,
+      "preserves_original_lineage": true,
+      "modifies_original_state": false,
+      "kernel_composition": [
+        "RECALL",
+        "OBSERVE",
+        "DIFFERENTIATE",
+        "RELATE",
+        "ALIGN"
+      ]
+    },
+    "regression_vs_rollback": {
+      "rollback": {
+        "intent": "restoration",
+        "description": "Restore a prior known state because the present state is invalid, unsafe, corrupted, or unwanted."
+      },
+      "regression": {
+        "intent": "exploration",
+        "description": "Select an earlier valid structural state as a new point of inquiry without erasing later history."
+      }
+    },
+    "re_ignition_conditions": [
+      "NEW_EVIDENCE",
+      "EVALUATOR_RECONSIDERATION",
+      "INCOMPLETE_ASSUMPTION",
+      "LATER_BRANCH_TRADEOFF",
+      "COUNTERSTATE_BECOMES_TESTABLE",
+      "NEW_OBJECTIVE",
+      "PREMATURE_PATH_CLOSURE",
+      "ALTERNATE_CONTINUATION_REQUEST"
+    ],
+    "re_ignition_record_fields": [
+      "source_state",
+      "source_lineage",
+      "source_status",
+      "re_ignition_reason",
+      "observer",
+      "objective",
+      "constraints",
+      "evaluator",
+      "new_evidence",
+      "changed_assumptions",
+      "branch_id",
+      "parent_branch",
+      "resulting_candidate",
+      "comparison_reference",
+      "provenance",
+      "operator_decision"
+    ],
+    "boundaries": {
+      "rewrite_previous_provenance": false,
+      "delete_failed_branches": false,
+      "modify_original_state_retrospectively": false,
+      "conceal_re_ignition_reason": false,
+      "undeclared_objective_change": false,
+      "undeclared_evaluator_change": false,
+      "kernel_authority": false,
+      "self_authorization": false
+    },
+    "direction_principles": [
+      "Forward does not inherently mean improvement.",
+      "Backward does not inherently mean failure.",
+      "Branching does not inherently mean incoherence."
+    ],
+    "educational_principle": "A branch can fail as an improvement and succeed as evidence."
   },
 
   "resources": [
@@ -269,6 +388,15 @@
       "optional": true,
       "authority": "non_kernel",
       "description": "Canonical description of the bounded RSI educational experiment, its authority boundaries, recursion levels, evaluation structure, drift controls, lineage requirements, and rollback requirements."
+    },
+    {
+      "id": "rsi_re_ignition",
+      "title": "RSI Re-Ignition",
+      "path": "RSI_Re_Ignition.md",
+      "role": "experimental_lineage_navigation",
+      "optional": true,
+      "authority": "non_kernel",
+      "description": "Student- and AI-facing research note defining recursive regression, branching, Re-Ignition, and navigable experimental lineage while preserving immutable history and kernel boundaries."
     }
   ],
 
@@ -288,20 +416,25 @@
       "coherence",
       "provenance",
       "lineage",
-      "rollback"
+      "rollback",
+      "regression",
+      "branch"
     ],
     "regime": [
       "structural-kernel",
       "model-free",
       "scarcity-first",
-      "bounded-experiment"
+      "bounded-experiment",
+      "navigable-lineage"
     ],
     "cross_cutting": [
       "research",
       "kernel",
       "LMA-adapter",
       "RSI-sandbox",
-      "student-facing"
+      "RSI-Re-Ignition",
+      "student-facing",
+      "AI-facing"
     ]
   }
 }

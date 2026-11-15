@@ -1,0 +1,139 @@
+{
+  "id": "modern-scams-and-misalignments-developing-resilience-through-awareness",
+  "title": "Modern Scams and Misalignments: Developing Resilience Through Awareness",
+  "type": "case_study",
+  "domain": [
+    "digital_resilience",
+    "online_safety",
+    "trust",
+    "ai_assisted_reasoning"
+  ],
+  "framework": "TriadicFrameworks",
+  "lens": "Resonance-Time Theory (RTT)",
+
+  "primary_question": "Can awareness of structural alignment help people and AI systems recognize potentially deceptive situations without teaching generalized distrust?",
+
+  "hypothesis": "People and AI systems may become more resilient to changing forms of deception when taught to inspect structural alignment rather than memorize lists of known scams.",
+
+  "core_sequence": [
+    "Awareness",
+    "Alignment",
+    "Coherence",
+    "Clarity"
+  ],
+
+  "principles": {
+    "resonance": "Resonance is earned.",
+    "awareness": "Awareness makes alignment possible.",
+    "alignment": "Alignment makes coherence visible.",
+    "coherence": "Coherence can permit clarity.",
+    "trust": "Do not grant more trust than the available evidence supports."
+  },
+
+  "constraints": [
+    "Resonance does not certify truth.",
+    "Coherence does not equal truth.",
+    "Repetition does not equal evidence.",
+    "Confidence does not equal verification.",
+    "Connectivity does not equal trust.",
+    "Misalignment does not automatically prove fraud."
+  ],
+
+  "structural_triads": {
+    "evidence_triad": [
+      "Claim",
+      "Structure",
+      "Evidence"
+    ],
+    "trust_triad": [
+      "Identity",
+      "Incentive",
+      "Verification"
+    ]
+  },
+
+  "trust_gradient": {
+    "positive_path": [
+      "Unknown",
+      "Plausible",
+      "Corroborated",
+      "Trusted"
+    ],
+    "risk_path": [
+      "Unknown",
+      "Inconsistent",
+      "High Risk",
+      "Reject"
+    ]
+  },
+
+  "student_protocol": {
+    "name": "Pause Inspect Verify",
+    "steps": {
+      "pause": "Determine whether action or commitment is being encouraged before the situation is sufficiently understood.",
+      "inspect": "Examine identities, incentives, claims, evidence, relationships, and requested actions for alignment.",
+      "verify": "Establish important claims through sources independent of the party making them."
+    },
+    "fallback": "If verification remains insufficient, do not escalate trust."
+  },
+
+  "case_study_method": [
+    "Observe",
+    "Map",
+    "Predict",
+    "Check",
+    "Score",
+    "Reflect"
+  ],
+
+  "observer_model": {
+    "metaphor": "landscape",
+    "positions": [
+      "valley",
+      "trail",
+      "above"
+    ],
+    "principle": "The landscape may remain unchanged while changes in observational position reveal previously unavailable relationships."
+  },
+
+  "ai_role": {
+    "preferred": "Increase human awareness and assist investigation.",
+    "avoid": "Act as an unquestioned binary oracle of SAFE or SCAM.",
+    "functions": [
+      "organize claims",
+      "identify questions",
+      "seek independent evidence",
+      "compare representations",
+      "distinguish knowns from unknowns",
+      "surface contradictions for investigation"
+    ],
+    "self_check": [
+      "AI claim",
+      "source",
+      "independent verification"
+    ]
+  },
+
+  "example_domains": [
+    "fake job postings",
+    "misrepresented business opportunities",
+    "impersonation",
+    "phishing",
+    "social engineering",
+    "fraudulent investment offers"
+  ],
+
+  "learning_objective": "Develop the ability to observe relationships and recognize when available evidence is insufficient before assigning or escalating trust.",
+
+  "stewardship_principle": "Good stewardship does not teach people whom to trust. It helps them develop the awareness required to make better trust decisions themselves.",
+
+  "working_conclusion": [
+    "Awareness makes alignment possible.",
+    "Alignment makes coherence visible.",
+    "Coherence can permit clarity.",
+    "Resonance is earned."
+  ],
+
+  "status": "case-study",
+  "paired_document": "Modern_Scams_and_Misalignments_Developing_Resilience_Through_Awareness.md"
+}
