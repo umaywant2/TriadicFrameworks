@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_case_studies_Modern_Scams_and_Misalignments_Developing_Resilience_Through_Awareness_" src="https://github.com/user-attachments/assets/6eb6a318-ef02-4d95-886e-3b27bf924824" />
 
 - [`Modern_Scams_and_Misalignments_Developing_Resilience_Through_Awareness.json`](Modern_Scams_and_Misalignments_Developing_Resilience_Through_Awareness.json) — Agentic module schema role assignments
 
