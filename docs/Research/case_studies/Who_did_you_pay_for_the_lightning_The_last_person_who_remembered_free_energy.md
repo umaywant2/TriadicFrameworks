@@ -1,3 +1,7 @@
+<img width="1194" height="672" alt="Research_case_studies_Who_did_you_pay_for_the_lightning_The_last_person_who_remembered_free_energy_" src="https://github.com/user-attachments/assets/adbb1c64-48ea-42ac-9ce5-29176d30dcb8" />
+
+- [`Who_did_you_pay_for_the_lightning_The_last_person_who_remembered_free_energy.json`](Who_did_you_pay_for_the_lightning_The_last_person_who_remembered_free_energy.json) — Agentic module schema role assignments 
+
 > We’ll keep the title deliberately provocative, then make the document scientifically conservative: known physics → observation gap → translated visualization → RTT experiment → only then the energy hypothesis. That lets students and AI explore something genuinely ambitious without quietly turning the hypothesis into a conclusion.
 > Inspired by: https://youtu.be/8vwGRWYdB50?si=V8Itoakg9prGg9Gd
 
