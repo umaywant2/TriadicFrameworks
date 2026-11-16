@@ -1,1 +1,411 @@
+{
+  "id": "who_did_you_pay_for_the_lightning",
+  "title": "Who Did You Pay for the Lightning?",
+  "subtitle": "The Last Person Who Remembered Free Energy",
+  "type": "research_case_study",
+  "class": "student_ai_research_leaf",
+  "status": "exploratory",
+  "canon": "TriadicFrameworks",
+  "path": "/docs/Research/case_studies/Who_did_you_pay_for_the_lightning_The_last_person_who_remembered_free_energy.md",
 
+  "purpose": {
+    "primary": "Develop a disciplined framework for observing, mapping, translating, and comparing atmospheric electrical fields across space and time.",
+    "secondary": "Provide students and AI systems with a reproducible research pathway for separating established atmospheric physics from experimental hypotheses and speculative energy applications.",
+    "rule": "Map before harvesting."
+  },
+
+  "core_question": "What would happen if we learned to see the atmospheric electrical landscape before trying to use it?",
+
+  "canonical_sequence": [
+    "Spark",
+    "Observe",
+    "Translate",
+    "Map",
+    "Compare",
+    "Repeat",
+    "Model",
+    "Predict",
+    "Test",
+    "Measure Transfer",
+    "Reproduce",
+    "Then Ask What It Can Do"
+  ],
+
+  "research_principle": "Do not argue with the spark. Instrument it.",
+
+  "concepts": {
+    "ELI": {
+      "name": "Electrical Landscape Imaging",
+      "status": "proposed",
+      "definition": "A translated spatial and temporal visualization of measured atmospheric electrical-field behavior.",
+      "analogy": "Uses the perceptual strategy of translated imaging systems: detect an invisible physical quantity, measure it, transform the measurements, and display the resulting structure in a representation humans can inspect."
+    },
+
+    "ELO": {
+      "name": "Electrical Landscape Observatory",
+      "status": "proposed",
+      "definition": "A standardized observation station participating in a distributed electrical-landscape measurement network.",
+      "example_ids": [
+        "ELO-01",
+        "ELO-02",
+        "ELO-03",
+        "ELO-04"
+      ]
+    }
+  },
+
+  "established_physics": [
+    "Atmospheric electric fields are measurable.",
+    "Atmospheric electrical conductivity is measurable.",
+    "Earth and the atmosphere participate in a global atmospheric electrical circuit.",
+    "Fair-weather electric fields exist near Earth's surface.",
+    "Weather and environmental conditions can alter atmospheric electrical measurements.",
+    "Conductive objects and structures can alter local electric-field geometry.",
+    "Electric-field measurement instruments already exist."
+  ],
+
+  "scientific_boundaries": {
+    "potential_is_not_current": true,
+    "current_is_not_power": true,
+    "power_is_not_harvestable_energy": true,
+    "high_voltage_does_not_imply_high_available_power": true,
+    "correlation_does_not_establish_mechanism": true,
+    "visual_pattern_does_not_establish_energy_source": true,
+    "site_variation_does_not_establish_harvestability": true,
+    "large_scale_energy_replacement_claimed": false
+  },
+
+  "measurement_channels": [
+    {
+      "name": "electric_field",
+      "symbol": "E",
+      "examples": [
+        "magnitude",
+        "direction",
+        "polarity"
+      ]
+    },
+    {
+      "name": "spatial_gradient",
+      "purpose": "Identify locations where measured field behavior changes across space."
+    },
+    {
+      "name": "temporal_change",
+      "purpose": "Track movement, persistence, recurrence, transitions, and rapid changes."
+    },
+    {
+      "name": "environment",
+      "examples": [
+        "weather",
+        "humidity",
+        "pressure",
+        "temperature",
+        "wind",
+        "precipitation",
+        "ground conditions"
+      ]
+    },
+    {
+      "name": "geometry",
+      "examples": [
+        "terrain",
+        "elevation",
+        "buildings",
+        "trees",
+        "towers",
+        "conductive structures"
+      ]
+    },
+    {
+      "name": "collector_response",
+      "status": "later_phase",
+      "examples": [
+        "potential",
+        "current",
+        "charge transfer",
+        "power",
+        "energy over time"
+      ]
+    }
+  ],
+
+  "visualization_layers": [
+    {
+      "layer": "A",
+      "name": "Field",
+      "description": "Measured electric-field magnitude and direction."
+    },
+    {
+      "layer": "B",
+      "name": "Gradient",
+      "description": "Spatial changes in measured field behavior."
+    },
+    {
+      "layer": "C",
+      "name": "Time",
+      "description": "Persistence, recurrence, movement, periodicity, and transitions."
+    },
+    {
+      "layer": "D",
+      "name": "Structure",
+      "description": "Terrain, vegetation, buildings, towers, and other objects that may affect measurements."
+    },
+    {
+      "layer": "E",
+      "name": "Confidence",
+      "description": "Measurement quality, uncertainty, repeatability, and reconstruction confidence."
+    },
+    {
+      "layer": "F",
+      "name": "Collector Response",
+      "status": "later_phase",
+      "description": "Controlled measurements of electrical transfer at experimental receiving devices."
+    }
+  ],
+
+  "rtt_overlay": {
+    "purpose": "Organize observation without replacing established atmospheric physics.",
+
+    "resonance": {
+      "question": "Which patterns recur?",
+      "observables": [
+        "recurrence",
+        "similarity",
+        "site persistence",
+        "condition dependence"
+      ]
+    },
+
+    "time": {
+      "question": "How does the observation behave through time?",
+      "observables": [
+        "duration",
+        "rate of change",
+        "periodicity",
+        "stability",
+        "transition",
+        "recurrence"
+      ]
+    },
+
+    "triadic_observation": {
+      "components": [
+        "environment",
+        "interacting structure",
+        "observer or instrument"
+      ],
+      "purpose": "Separate environmental behavior from structural distortion and measurement-system effects."
+    }
+  },
+
+  "experimental_phases": [
+    {
+      "phase": 1,
+      "name": "See",
+      "objective": "Measure and translate atmospheric electrical observations into an interpretable visual landscape."
+    },
+    {
+      "phase": 2,
+      "name": "Learn",
+      "objective": "Accumulate synchronized observations across locations, conditions, structures, and time."
+    },
+    {
+      "phase": 3,
+      "name": "Compare",
+      "objective": "Identify repeatable differences while testing environmental, geometric, and instrumentation explanations."
+    },
+    {
+      "phase": 4,
+      "name": "Predict",
+      "objective": "Use accumulated observations to predict where and when specific electrical signatures should recur."
+    },
+    {
+      "phase": 5,
+      "name": "Test Reception",
+      "objective": "Place controlled experimental collectors at predicted locations and directly measure electrical transfer.",
+      "status": "future"
+    },
+    {
+      "phase": 6,
+      "name": "Optimize",
+      "objective": "Investigate receiving, rectification, conditioning, storage, or related architectures only after measurable transfer has been established.",
+      "status": "future"
+    }
+  ],
+
+  "hypotheses": {
+    "H1": {
+      "name": "Electrical Landscape Hypothesis",
+      "statement": "Distributed atmospheric electrical measurements can reveal reproducible spatial and temporal structure.",
+      "status": "testable"
+    },
+
+    "H2": {
+      "name": "Site Hypothesis",
+      "statement": "After known environmental, structural, and instrumentation effects are considered, some locations may exhibit persistent differences in measured atmospheric electrical behavior.",
+      "status": "open"
+    },
+
+    "H3": {
+      "name": "Receiver Hypothesis",
+      "statement": "If persistent site- and geometry-dependent differences are discovered, investigate whether those differences correspond to measurably different rates of electrical energy collection.",
+      "status": "open_unproven"
+    },
+
+    "H4": {
+      "name": "Large-Scale Energy Hypothesis",
+      "statement": "Atmospheric electrical collection might eventually prove useful at scales larger than sensing or small electronics.",
+      "status": "speculative",
+      "claim_established": false,
+      "required_evidence": [
+        "repeatable current measurements",
+        "repeatable power measurements",
+        "energy integrated over time",
+        "net energy accounting",
+        "independent replication"
+      ]
+    }
+  },
+
+  "falsification_conditions": [
+    "Distributed measurements fail to reveal reproducible spatial structure.",
+    "Apparent site differences disappear after instrument effects are controlled.",
+    "Apparent site differences are sufficiently explained by known environmental or structural variables.",
+    "Candidate receiving locations do not produce reproducible differences in measured charge transfer.",
+    "Observed voltage differences do not correspond to meaningful current, power, or energy transfer."
+  ],
+
+  "student_protocol": {
+    "priority": "measurement_before_explanation",
+    "instructions": [
+      "Measure before theorizing about mechanism.",
+      "Document environmental and structural context.",
+      "Repeat measurements across time.",
+      "Compare multiple locations.",
+      "Change or relocate instruments to test measurement artifacts.",
+      "Record negative and null results.",
+      "Preserve raw measurements.",
+      "Separate observation from interpretation.",
+      "Seek independent replication."
+    ]
+  },
+
+  "ai_protocol": {
+    "role": "research_assistant_not_oracle",
+
+    "allowed_assistance": [
+      "pattern detection",
+      "time-series comparison",
+      "site comparison",
+      "sensor-drift detection",
+      "anomaly detection",
+      "environmental correlation analysis",
+      "clustering of similar observations",
+      "candidate selection for human review"
+    ],
+
+    "required_distinctions": {
+      "established_observation": "Atmospheric electric fields, atmospheric conductivity, atmospheric electrical phenomena, and their measurement belong to established physical research.",
+      "proposed_instrumentation": "Electrical Landscape Imaging and the Electrical Landscape Observatory network are proposed research concepts in this case study.",
+      "hypothesis": "Persistent site-dependent receiving characteristics must be experimentally demonstrated.",
+      "speculation": "Large-scale useful energy generation is not established by this case study."
+    },
+
+    "guardrails": [
+      "Do not convert correlation into causation.",
+      "Do not convert field magnitude directly into available power.",
+      "Do not treat visualization artifacts as physical discoveries.",
+      "Do not treat AI pattern recognition as experimental confirmation.",
+      "Label hypotheses as hypotheses.",
+      "Preserve uncertainty.",
+      "Prefer reproducible measurements over narrative fit."
+    ]
+  },
+
+  "energy_accounting": {
+    "relationship": "P = V * I",
+    "energy_relationship": "W = integral(P(t) dt)",
+    "requirements": [
+      "measure voltage",
+      "measure current",
+      "measure duration",
+      "account for measurement-system energy consumption",
+      "report net transfer separately from gross observations"
+    ]
+  },
+
+  "tower_context": {
+    "principle": "A tall conductive structure should be treated as part of the electrical system being measured, not as a passive height ruler.",
+    "research_interest": [
+      "local field distortion",
+      "charge redistribution",
+      "grounding behavior",
+      "geometry-dependent effects",
+      "comparison with surrounding ambient measurements"
+    ]
+  },
+
+  "educational_value": {
+    "primary": "Give students a visual and experimental interface to an otherwise invisible physical environment.",
+    "failure_is_useful": true,
+    "failure_value": "Even if useful atmospheric energy harvesting is not demonstrated, measurement, visualization, replication, and analysis of atmospheric electrical behavior remain valid educational and scientific outcomes."
+  },
+
+  "research_questions": [
+    "Can distributed measurements produce reproducible spatial maps of near-surface atmospheric electric fields?",
+    "How strongly do terrain, vegetation, structures, grounding, weather, and atmospheric conditions alter the reconstructed landscape?",
+    "Can temporal analysis distinguish persistent structures from transient environmental effects?",
+    "How much of an observed feature is produced by the measuring instrument or nearby conductive geometry?",
+    "Can separated observatories produce sufficiently comparable measurements for regional analysis?",
+    "Do persistent site-dependent signatures remain after major known variables are controlled?",
+    "If persistent differences remain, do they predict measurable differences in charge transfer to controlled collectors?",
+    "If collection differences exist, what are the measured voltage, current, power, and energy over time?",
+    "Can independent observers reproduce the result?",
+    "What new questions emerge after the electrical landscape becomes visible?"
+  ],
+
+  "success_criteria": [
+    "calibrated measurements",
+    "documented metadata",
+    "repeatable spatial observations",
+    "repeatable temporal observations",
+    "explicit uncertainty",
+    "control experiments",
+    "independent replication"
+  ],
+
+  "failure_policy": {
+    "principle": "A falsified harvesting hypothesis does not invalidate the observation system.",
+    "retain": [
+      "measurement data",
+      "visualization methods",
+      "instrumentation lessons",
+      "environmental correlations",
+      "null results",
+      "educational value"
+    ]
+  },
+
+  "canonical_statement": "RTT Electrical Landscape Imaging converts distributed atmospheric-field measurements into a time-resolved visual map, then uses controlled experiments to determine whether persistent patterns correspond to physically measurable electrical transfer.",
+
+  "closing": "Before building the generator, build the eyes. Before choosing the tower, map the landscape. Before claiming free energy, measure the transfer. And before assuming there is nothing left to discover, look again.",
+
+  "tags": [
+    "RTT",
+    "TriadicFrameworks",
+    "atmospheric-electricity",
+    "electrical-landscape-imaging",
+    "ELI",
+    "electrical-landscape-observatory",
+    "ELO",
+    "field-mapping",
+    "student-research",
+    "AI-research",
+    "instrumentation",
+    "visualization",
+    "energy-hypothesis",
+    "experimental-method",
+    "falsifiability",
+    "replication"
+  ]
+}
