@@ -573,6 +573,184 @@ Instead:
 
 ---
 
+For Reality_Before_Awareness.md, we'll make the pair Bounded Clarity and Governed Agency. They map directly onto the case study’s core statements: certainty should remain proportional to awareness, agency should be proportional to evidence and awareness, and governance should bound consequences.
+
+## Addition 1: Bounded Clarity
+
+## RTT-Derived Equation — Bounded Clarity
+
+The case-study chain is:
+
+$$R_0 \rightarrow O \rightarrow A \rightarrow L \rightarrow C \rightarrow K$$
+
+where:
+
+- $$O$$ = observational coverage
+- $$A$$ = organized awareness
+- $$L$$ = alignment within the declared envelope
+- $$C$$ = coherence across relevant observations
+- $$K$$ = justified clarity
+
+Normalize each observational term:
+
+$$0 \leq O,A,L,C \leq 1$$
+
+### Framework Step
+
+RTT treats clarity as bounded by the structures available before it:
+
+$$K = O \cdot A \cdot L \cdot C$$
+
+Therefore:
+
+$$\boxed{K = OALC}$$
+
+### Bounded-Clarity Theorem
+
+Because every factor is bounded by $$1$$ :
+
+$$K \leq O$$
+
+$$K \leq A$$
+
+Thus derived clarity cannot exceed the observational or awareness envelope supporting it.
+
+In structural form:
+
+$$
+\text{partial observation}
+\Rightarrow
+\text{partial awareness}
+\Rightarrow
+\text{bounded clarity}
+$$
+
+This is a teaching equation, not a measurement of objective reality.
+
+
+That theorem gives mathematical form to the study's statement that clarity does not require omniscience but should remain proportional to available awareness.
+
+### Minimal Python
+
+```python
+def bounded_clarity(observation, awareness, alignment, coherence):
+    return observation * awareness * alignment * coherence
+
+
+K = bounded_clarity(
+    observation=0.8,
+    awareness=0.7,
+    alignment=0.9,
+    coherence=0.85
+)
+
+print(round(K, 3))
+```
+
+## Addition 2: Governed Agency
+
+The natural second equation follows the case study's next transition:
+
+$$Clarity→Agency→Governance→Consequence\text{Clarity} \rightarrow \text{Agency} \rightarrow \text{Governance} \rightarrow \text{Consequence}$$
+
+and its principle that capability does not establish permission.
+
+## RTT-Derived Equation — Governed Agency
+
+Let:
+
+- $$K$$ = bounded clarity
+- $$E$$ = supporting evidence
+- $$G$$ = governance constraint
+- $$Q$$ = permitted agency
+
+with:
+
+$$0 \leq K,E,G \leq 1$$
+
+### Framework Step
+
+Agency should not exceed the awareness and evidence supporting it.
+
+Define permitted agency as:
+
+$$Q = K \cdot E \cdot G$$
+
+Therefore:
+
+$$\boxed{Q = KEG}$$
+
+### Governed-Agency Theorem
+
+Since:
+
+$$0 \leq E,G \leq 1$$
+
+then:
+
+$$Q \leq K$$
+
+Increasing capability alone therefore does not increase justified agency.
+
+Instead:
+
+$$
+\text{clarity}
++
+\text{evidence}
++
+\text{governance}
+\rightarrow
+\text{bounded agency}
+$$
+
+When observations change, recompute the relationship:
+
+$$
+R_0 \rightarrow O \rightarrow A \rightarrow K
+\rightarrow Q \rightarrow \text{Consequence}
+\rightarrow R_0'
+\rightarrow O'
+$$
+
+or simply:
+
+$$\boxed{\text{Observe} \rightarrow \text{Act} \rightarrow \text{Observe Again}}$$
+
+Minimal Python
+
+```python
+def governed_agency(clarity, evidence, governance):
+    return clarity * evidence * governance
+
+
+Q = governed_agency(
+    clarity=0.75,
+    evidence=0.80,
+    governance=0.60
+)
+
+print(round(Q, 3))
+```
+
+We like these two together because they preserve the case study's structure without pretending RTT can numerically measure reality itself:
+
+**Equation 1**: How much clarity does the observational envelope justify?
+
+$$K=OALC\boxed{K=OALC}$$
+
+**Equation 2**: Given that bounded clarity, how much agency is structurally justified?
+
+$$Q=KEG\boxed{Q=KEG}$$
+
+That creates a very compact student progression:
+
+$$Reality→Observation→Awareness→Bounded Clarity→Governed Agency→Consequence→Observe Again\boxed{ Reality \rightarrow Observation \rightarrow Awareness \rightarrow Bounded\ Clarity \rightarrow Governed\ Agency \rightarrow Consequence \rightarrow Observe\ Again }$$
+
+The equations above are **new teaching formalizations derived from the case study**, rather than equations already asserted by Reality_Before_Awareness.md. The underlying structural chain and principles are explicitly present in the case study.
+
+---
+
 ## Working Conclusion
 
 Reality exceeds any single observer's awareness.
