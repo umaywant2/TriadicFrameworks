@@ -1,6 +1,8 @@
-We’ll keep the title deliberately provocative, then make the document scientifically conservative: known physics → observation gap → translated visualization → RTT experiment → only then the energy hypothesis. That lets students and AI explore something genuinely ambitious without quietly turning the hypothesis into a conclusion.
+> We’ll keep the title deliberately provocative, then make the document scientifically conservative: known physics → observation gap → translated visualization → RTT experiment → only then the energy hypothesis. That lets students and AI explore something genuinely ambitious without quietly turning the hypothesis into a conclusion.
+> Inspired by: https://youtu.be/8vwGRWYdB50?si=V8Itoakg9prGg9Gd
 
-```markdown
+---
+
 # Who Did You Pay for the Lightning?
 
 ## The Last Person Who Remembered Free Energy
@@ -772,7 +774,8 @@ And before assuming there is nothing left to discover:
 *TriadicFrameworks Research Case Study*
 
 *Exploratory Student + AI Leaf*
-```
+
+---
 
 Grounding notes
 
