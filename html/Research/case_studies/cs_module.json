@@ -5,13 +5,14 @@
   "framework": "TriadicFrameworks",
   "lens": "Resonance-Time Theory (RTT)",
 
-  "description": "A student-facing and research-facing collection of applied case studies using structural observation, declared envelopes, alignment, coherence, clarity, evidence, and governed agency without requiring the framework to predetermine the result.",
+  "description": "A student-facing and research-facing collection of applied case studies using structural observation, declared envelopes, alignment, coherence, clarity, evidence, reproducibility, and governed agency without requiring the framework to predetermine the result.",
 
   "purpose": [
     "Apply TriadicFrameworks and RTT lenses to concrete examples.",
     "Teach structural observation before conclusion.",
     "Preserve uncertainty, lineage, evidence, and alternative explanations.",
     "Test whether the framework provides useful insight rather than assuming that it does.",
+    "Distinguish observation, interpretation, hypothesis, and speculation.",
     "Provide reusable examples for students, researchers, humans, and AI systems."
   ],
 
@@ -21,7 +22,8 @@
     "Predict",
     "Check",
     "Score",
-    "Reflect"
+    "Reflect",
+    "Repeat"
   ],
 
   "shared_principles": [
@@ -31,10 +33,13 @@
     "Coherence does not establish truth.",
     "Clarity should remain proportional to available awareness.",
     "Trust should remain proportional to evidence.",
+    "Correlation does not establish mechanism.",
     "Capability does not establish permission.",
     "Agency introduces consequence.",
     "Governance bounds consequential agency.",
     "Models and simulations must not be confused with the containing reality.",
+    "Measurement should precede extraordinary claims.",
+    "Failure and null results remain evidence.",
     "Resonance is earned."
   ],
 
@@ -88,6 +93,64 @@
         "structural reasoning"
       ],
       "status": "case-study"
+    },
+    {
+      "id": "who-did-you-pay-for-the-lightning",
+      "title": "Who Did You Pay for the Lightning?",
+      "subtitle": "The Last Person Who Remembered Free Energy",
+      "markdown": "Who_did_you_pay_for_the_lightning_The_last_person_who_remembered_free_energy.md",
+      "metadata": "Who_did_you_pay_for_the_lightning_The_last_person_who_remembered_free_energy.json",
+      "focus": [
+        "atmospheric electricity",
+        "electrical landscape imaging",
+        "field mapping",
+        "instrumentation",
+        "spatial observation",
+        "temporal observation",
+        "student research",
+        "AI-assisted research",
+        "hypothesis testing",
+        "falsifiability",
+        "replication",
+        "energy hypothesis"
+      ],
+      "primary_principle": "Do not argue with the spark. Instrument it.",
+      "research_sequence": [
+        "Observe",
+        "Translate",
+        "Map",
+        "Compare",
+        "Repeat",
+        "Model",
+        "Predict",
+        "Test",
+        "Measure Transfer",
+        "Reproduce"
+      ],
+      "established": [
+        "Atmospheric electric fields are measurable.",
+        "Atmospheric electrical conductivity is measurable.",
+        "Atmospheric electrical behavior can be instrumented and studied."
+      ],
+      "proposed": [
+        "Electrical Landscape Imaging (ELI)",
+        "Electrical Landscape Observatory (ELO)"
+      ],
+      "open_hypotheses": [
+        "Persistent site-dependent electrical signatures may exist.",
+        "Persistent signatures may predict differences in electrical reception.",
+        "Measurable reception differences may justify later investigation of collection and rectification."
+      ],
+      "guardrails": [
+        "Potential does not establish current.",
+        "Current does not establish useful power.",
+        "Field magnitude does not establish harvestable energy.",
+        "Correlation does not establish mechanism.",
+        "Visualization does not establish discovery.",
+        "AI pattern recognition does not establish experimental confirmation.",
+        "Large-scale energy implications remain speculative until experimentally demonstrated."
+      ],
+      "status": "exploratory-case-study"
     }
   ],
 
@@ -100,21 +163,27 @@
       "What evidence supports the interpretation?",
       "Does apparent coherence survive changes in observational position?",
       "What alternate explanations remain possible?",
+      "What observation would weaken or falsify the hypothesis?",
+      "Can the result be repeated?",
       "What consequences follow from acting on the interpretation?"
     ],
     "goal": "Develop structural awareness and disciplined inquiry rather than memorize predetermined conclusions."
   },
 
   "ai_lens": {
-    "role": "Assist observation, comparison, evidence organization, uncertainty representation, and structural analysis.",
-    "not_role": "Act as an unquestioned oracle of truth, safety, alignment, or correctness.",
+    "role": "Assist observation, comparison, evidence organization, uncertainty representation, pattern detection, and structural analysis.",
+    "not_role": "Act as an unquestioned oracle of truth, safety, alignment, correctness, causation, or experimental confirmation.",
     "requirements": [
       "Preserve uncertainty.",
       "Distinguish observation from interpretation.",
+      "Distinguish established knowledge from proposed instrumentation, hypothesis, and speculation.",
       "Identify source lineage where available.",
       "Represent conflicting evidence.",
       "Avoid converting coherence into certainty.",
-      "Keep simulated or inferred structures distinguishable from observed structures."
+      "Avoid converting correlation into causation.",
+      "Keep simulated or inferred structures distinguishable from observed structures.",
+      "Treat null results and failed predictions as evidence.",
+      "Prefer independently reproducible observations over narrative fit."
     ]
   },
 
@@ -125,7 +194,11 @@
     "Ignoring contradictory observations.",
     "Confusing correlation with explanation.",
     "Confusing a model with the system modeled.",
+    "Confusing visualization with physical confirmation.",
+    "Confusing measured potential with available energy.",
+    "Treating AI-detected patterns as experimental proof.",
     "Treating misalignment as automatic proof of wrongdoing.",
+    "Discarding null or negative results because they weaken a preferred hypothesis.",
     "Allowing framework terminology to replace evidence."
   ],
 
@@ -135,7 +208,12 @@
       "Observe before concluding.",
       "Declare the envelope.",
       "Preserve unknowns.",
+      "Separate measurement from interpretation.",
+      "Separate established knowledge from hypothesis.",
       "Seek contradiction as well as confirmation.",
+      "Design observations capable of falsifying preferred explanations.",
+      "Repeat where possible.",
+      "Seek independent reproduction.",
       "Act proportionally to available evidence and awareness.",
       "Govern consequences.",
       "Observe again."
