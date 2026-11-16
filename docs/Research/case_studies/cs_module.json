@@ -1,229 +1,302 @@
 {
-  "module_id": "research-case-studies",
-  "module_name": "Research Case Studies",
-  "module_type": "case_study_registry",
-  "framework": "TriadicFrameworks",
-  "lens": "Resonance-Time Theory (RTT)",
-
-  "description": "A student-facing and research-facing collection of applied case studies using structural observation, declared envelopes, alignment, coherence, clarity, evidence, reproducibility, and governed agency without requiring the framework to predetermine the result.",
-
-  "purpose": [
-    "Apply TriadicFrameworks and RTT lenses to concrete examples.",
-    "Teach structural observation before conclusion.",
-    "Preserve uncertainty, lineage, evidence, and alternative explanations.",
-    "Test whether the framework provides useful insight rather than assuming that it does.",
-    "Distinguish observation, interpretation, hypothesis, and speculation.",
-    "Provide reusable examples for students, researchers, humans, and AI systems."
-  ],
-
-  "core_method": [
-    "Observe",
-    "Map",
-    "Predict",
-    "Check",
-    "Score",
-    "Reflect",
-    "Repeat"
-  ],
-
-  "shared_principles": [
-    "Reality precedes complete awareness.",
-    "Awareness is necessarily partial.",
-    "Alignment must be evaluated within a declared envelope.",
-    "Coherence does not establish truth.",
-    "Clarity should remain proportional to available awareness.",
-    "Trust should remain proportional to evidence.",
-    "Correlation does not establish mechanism.",
-    "Capability does not establish permission.",
-    "Agency introduces consequence.",
-    "Governance bounds consequential agency.",
-    "Models and simulations must not be confused with the containing reality.",
-    "Measurement should precede extraordinary claims.",
-    "Failure and null results remain evidence.",
-    "Resonance is earned."
-  ],
-
-  "case_studies": [
-    {
-      "id": "modern-scams-and-misalignments-developing-resilience-through-awareness",
-      "title": "Modern Scams and Misalignments: Developing Resilience Through Awareness",
-      "markdown": "Modern_Scams_and_Misalignments_Developing_Resilience_Through_Awareness.md",
-      "metadata": "Modern_Scams_and_Misalignments_Developing_Resilience_Through_Awareness.json",
-      "focus": [
-        "digital resilience",
-        "awareness",
-        "alignment",
-        "trust",
-        "evidence",
-        "AI-assisted reasoning"
-      ],
-      "primary_principle": "Do not grant more trust than the available evidence supports.",
-      "status": "case-study"
-    },
-    {
-      "id": "reality-before-awareness",
-      "title": "Reality Before Awareness",
-      "markdown": "Reality_Before_Awareness.md",
-      "metadata": "Reality_Before_Awareness.json",
-      "focus": [
-        "reality",
-        "observation",
-        "partial awareness",
-        "alignment",
-        "bounded coherence",
-        "conditional clarity",
-        "imagination",
-        "simulation",
-        "agency",
-        "governance"
-      ],
-      "primary_principle": "Do not grant more certainty than awareness supports.",
-      "status": "case-study"
-    },
-    {
-      "id": "outlook-is-down-what-microsoft-broke",
-      "title": "Outlook is DOWN: What Microsoft Broke",
-      "markdown": "Outlook_is_DOWN_What_Microsoft_Broke.md",
-      "metadata": "Outlook_is_DOWN_What_Microsoft_Broke.json",
-      "focus": [
-        "systems analysis",
-        "service disruption",
-        "observation",
-        "failure",
-        "structural reasoning"
-      ],
-      "status": "case-study"
-    },
-    {
-      "id": "who-did-you-pay-for-the-lightning",
-      "title": "Who Did You Pay for the Lightning?",
-      "subtitle": "The Last Person Who Remembered Free Energy",
-      "markdown": "Who_did_you_pay_for_the_lightning_The_last_person_who_remembered_free_energy.md",
-      "metadata": "Who_did_you_pay_for_the_lightning_The_last_person_who_remembered_free_energy.json",
-      "focus": [
-        "atmospheric electricity",
-        "electrical landscape imaging",
-        "field mapping",
-        "instrumentation",
-        "spatial observation",
-        "temporal observation",
-        "student research",
-        "AI-assisted research",
-        "hypothesis testing",
-        "falsifiability",
-        "replication",
-        "energy hypothesis"
-      ],
-      "primary_principle": "Do not argue with the spark. Instrument it.",
-      "research_sequence": [
-        "Observe",
-        "Translate",
-        "Map",
-        "Compare",
-        "Repeat",
-        "Model",
-        "Predict",
-        "Test",
-        "Measure Transfer",
-        "Reproduce"
-      ],
-      "established": [
-        "Atmospheric electric fields are measurable.",
-        "Atmospheric electrical conductivity is measurable.",
-        "Atmospheric electrical behavior can be instrumented and studied."
-      ],
-      "proposed": [
-        "Electrical Landscape Imaging (ELI)",
-        "Electrical Landscape Observatory (ELO)"
-      ],
-      "open_hypotheses": [
-        "Persistent site-dependent electrical signatures may exist.",
-        "Persistent signatures may predict differences in electrical reception.",
-        "Measurable reception differences may justify later investigation of collection and rectification."
-      ],
-      "guardrails": [
-        "Potential does not establish current.",
-        "Current does not establish useful power.",
-        "Field magnitude does not establish harvestable energy.",
-        "Correlation does not establish mechanism.",
-        "Visualization does not establish discovery.",
-        "AI pattern recognition does not establish experimental confirmation.",
-        "Large-scale energy implications remain speculative until experimentally demonstrated."
-      ],
-      "status": "exploratory-case-study"
-    }
-  ],
-
-  "student_lens": {
-    "questions": [
-      "What can actually be observed?",
-      "What remains unknown?",
-      "What is the declared envelope?",
-      "Which relationships appear aligned or misaligned?",
-      "What evidence supports the interpretation?",
-      "Does apparent coherence survive changes in observational position?",
-      "What alternate explanations remain possible?",
-      "What observation would weaken or falsify the hypothesis?",
-      "Can the result be repeated?",
-      "What consequences follow from acting on the interpretation?"
+  "case_study": {
+    "id": "the_tire_was_already_there",
+    "title": "The Tire Was Already There",
+    "subtitle": "Ten Examples of Resonance Inspection, Testing, and Bounded Tuning",
+    "type": "RTT case study",
+    "status": "teaching_example",
+    "purpose": "Demonstrate a reusable structural method for observing system behavior, locating relevant relationships, applying bounded adjustments, and retesting the whole system.",
+    "central_proposition": "Inspect the whole. Locate the bit. Tune the relationship. Retest the whole.",
+    "scope_note": "The examples range from literal physical resonance to broader systems in which the same inspection grammar is used as a structural analogy. The case study does not claim that mechanical, acoustic, structural, electrical, cybernetic, and informational systems are physically equivalent.",
+    "core_cycle": [
+      "system",
+      "stimulus",
+      "response",
+      "observation",
+      "localization",
+      "adjustment",
+      "retest",
+      "integration"
     ],
-    "goal": "Develop structural awareness and disciplined inquiry rather than memorize predetermined conclusions."
-  },
-
-  "ai_lens": {
-    "role": "Assist observation, comparison, evidence organization, uncertainty representation, pattern detection, and structural analysis.",
-    "not_role": "Act as an unquestioned oracle of truth, safety, alignment, correctness, causation, or experimental confirmation.",
-    "requirements": [
-      "Preserve uncertainty.",
-      "Distinguish observation from interpretation.",
-      "Distinguish established knowledge from proposed instrumentation, hypothesis, and speculation.",
-      "Identify source lineage where available.",
-      "Represent conflicting evidence.",
-      "Avoid converting coherence into certainty.",
-      "Avoid converting correlation into causation.",
-      "Keep simulated or inferred structures distinguishable from observed structures.",
-      "Treat null results and failed predictions as evidence.",
-      "Prefer independently reproducible observations over narrative fit."
-    ]
-  },
-
-  "failure_conditions": [
-    "Forcing evidence to fit the framework.",
-    "Treating coherence as proof.",
-    "Hiding uncertainty.",
-    "Ignoring contradictory observations.",
-    "Confusing correlation with explanation.",
-    "Confusing a model with the system modeled.",
-    "Confusing visualization with physical confirmation.",
-    "Confusing measured potential with available energy.",
-    "Treating AI-detected patterns as experimental proof.",
-    "Treating misalignment as automatic proof of wrongdoing.",
-    "Discarding null or negative results because they weaken a preferred hypothesis.",
-    "Allowing framework terminology to replace evidence."
-  ],
-
-  "stewardship": {
-    "principle": "Use the framework to improve observation, not to predetermine reality.",
-    "practice": [
-      "Observe before concluding.",
-      "Declare the envelope.",
-      "Preserve unknowns.",
-      "Separate measurement from interpretation.",
-      "Separate established knowledge from hypothesis.",
-      "Seek contradiction as well as confirmation.",
-      "Design observations capable of falsifying preferred explanations.",
-      "Repeat where possible.",
-      "Seek independent reproduction.",
-      "Act proportionally to available evidence and awareness.",
-      "Govern consequences.",
-      "Observe again."
-    ]
-  },
-
-  "navigation": {
-    "readme": "README.md",
-    "path": "/docs/Research/case_studies/"
-  },
-
-  "status": "active"
+    "principles": {
+      "calibration_is_not_creation": "The system and its behavior may already exist before calibration begins. Calibration reveals relationships and tests bounded corrections.",
+      "resonance_is_contextual": "Resonance is neither inherently desirable nor undesirable. The desired response depends on the system and its operating context.",
+      "observable_location_is_not_always_causal_location": "The place where behavior becomes visible may differ from the relationship where intervention is appropriate.",
+      "local_change_requires_global_retest": "An improvement to one component or relationship must be evaluated against the behavior of the whole system.",
+      "coherence_is_not_stillness": "A coherent system may remain dynamic. Calibration is concerned with improving behavior, not eliminating motion or change."
+    },
+    "examples": [
+      {
+        "number": 1,
+        "name": "Tire Balancing",
+        "domain": "physical / rotational",
+        "relationship_to_resonance": "literal physical vibration and balancing",
+        "system": "wheel and tire assembly",
+        "stimulus": "rotation",
+        "observable_response": "vibration associated with imbalance",
+        "inspection": "Rotate the wheel and observe its dynamic behavior.",
+        "localization": "Identify where the rotating assembly's effective mass distribution requires correction.",
+        "bounded_tuning": "Apply an appropriate balancing correction without redesigning the larger vehicle.",
+        "retest": "Rotate the wheel again and compare the resulting behavior.",
+        "structural_lesson": "A small local correction can substantially alter whole-system behavior.",
+        "key_phrase": "Tune the bit. Retest the whole."
+      },
+      {
+        "number": 2,
+        "name": "Musical Instrument Tuning",
+        "domain": "acoustic",
+        "relationship_to_resonance": "literal acoustic resonance",
+        "system": "instrument and its resonant elements",
+        "stimulus": "excitation of a string, membrane, air column, or resonant body",
+        "observable_response": "pitch, harmonics, beating, and interaction among frequencies",
+        "inspection": "Excite the instrument and observe its acoustic response.",
+        "localization": "Identify the parameter responsible for the relevant frequency relationship.",
+        "bounded_tuning": "Adjust an appropriate parameter such as tension or effective length.",
+        "retest": "Excite the instrument again and compare the resulting response.",
+        "structural_lesson": "Resonance is neither inherently good nor inherently bad. Context determines whether alignment, attenuation, or displacement is desirable."
+      },
+      {
+        "number": 3,
+        "name": "Structural Vibration",
+        "domain": "structural",
+        "relationship_to_resonance": "literal mechanical and structural vibration",
+        "system": "building, bridge, tower, or comparable structure",
+        "stimulus": "external dynamic forces",
+        "observable_response": "modes, oscillation, or amplified structural response",
+        "inspection": "Characterize how the structure responds to relevant excitation.",
+        "localization": "Determine which structural relationship contributes to the undesirable response.",
+        "bounded_tuning": "Modify an appropriate structural, mass, stiffness, or damping relationship.",
+        "retest": "Measure the structural response again after the intervention.",
+        "structural_lesson": "The location where a problem becomes visible is not necessarily the location where the most effective correction belongs."
+      },
+      {
+        "number": 4,
+        "name": "Washing Machine Spin Cycle",
+        "domain": "everyday dynamic system",
+        "relationship_to_resonance": "physical vibration across changing operating states",
+        "system": "washing machine, rotating load, supports, and surrounding mechanical relationships",
+        "stimulus": "changing rotational speed",
+        "observable_response": "changes in vibration or movement",
+        "inspection": "Observe system behavior across multiple operating states.",
+        "localization": "Identify load, support, leveling, damping, or design relationships associated with the unwanted behavior.",
+        "bounded_tuning": "Correct the relevant relationship where justified.",
+        "retest": "Traverse the operating range again.",
+        "structural_lesson": "A system can appear coherent in one operating state and become unstable in another."
+      },
+      {
+        "number": 5,
+        "name": "Rotating Machinery",
+        "domain": "mechanical / operational",
+        "relationship_to_resonance": "literal dynamic vibration",
+        "system": "motor, pump, fan, turbine, gearbox, or other rotating machinery",
+        "stimulus": "operation across a range of rotational conditions",
+        "observable_response": "vibration peaks or changing dynamic behavior",
+        "inspection": "Observe the machine across its operating range.",
+        "localization": "Distinguish the component displaying the symptom from the relationship producing it.",
+        "bounded_tuning": "Address the relevant excitation or system relationship.",
+        "retest": "Repeat the operating range and compare responses.",
+        "structural_lesson": "Observable location and causal location are different questions."
+      },
+      {
+        "number": 6,
+        "name": "Vehicle Suspension",
+        "domain": "coupled dynamic system",
+        "relationship_to_resonance": "coupled mechanical response",
+        "system": "road, tire, wheel, suspension, chassis, seat, and occupant",
+        "stimulus": "road disturbance",
+        "observable_response": "movement, transmitted vibration, oscillation, and settling behavior",
+        "inspection": "Introduce known or repeatable disturbances and observe the coupled response.",
+        "localization": "Identify which subsystem relationship contributes to undesirable behavior.",
+        "bounded_tuning": "Adjust an appropriate local parameter.",
+        "retest": "Repeat the disturbance and inspect both local and system-wide consequences.",
+        "structural_lesson": "Local improvement must be evaluated against system-level behavior.",
+        "whole_bit_relation": {
+          "whole_to_bit": "Use system behavior to locate relationships requiring inspection.",
+          "bit_to_whole": "Evaluate every local intervention by observing its consequences throughout the larger system."
+        }
+      },
+      {
+        "number": 7,
+        "name": "Room Acoustics",
+        "domain": "environmental / acoustic field",
+        "relationship_to_resonance": "literal acoustic resonance with observer-position dependence",
+        "system": "sound source, room geometry, surfaces, boundaries, and observer position",
+        "stimulus": "sound across relevant frequencies",
+        "observable_response": "spatial differences in amplitude, decay, peaks, or nulls",
+        "inspection": "Excite the environment and observe the response across frequencies and positions.",
+        "localization": "Determine which source-environment-observer relationships produce the observed behavior.",
+        "bounded_tuning": "Adjust placement, absorption, diffusion, geometry, or listening position where appropriate.",
+        "retest": "Measure or listen again from relevant positions.",
+        "structural_lesson": "Some observed properties belong to relationships rather than isolated objects.",
+        "observer_note": "Observation should preserve information about position, conditions, and interaction with the system."
+      },
+      {
+        "number": 8,
+        "name": "Electronic and Signal Systems",
+        "domain": "electrical / signal",
+        "relationship_to_resonance": "frequency-selective electrical response",
+        "system": "circuit, filter, or related signal-processing system",
+        "stimulus": "systematically varied input signal",
+        "observable_response": "changes in frequency or signal response",
+        "inspection": "Sweep or vary the input and measure the response.",
+        "localization": "Identify the component or parameter relationship responsible for the observed response.",
+        "bounded_tuning": "Modify justified circuit or system parameters.",
+        "retest": "Repeat the measurement and compare.",
+        "structural_lesson": "Calibration can alter what a system amplifies, attenuates, passes, or rejects without replacing the entire system."
+      },
+      {
+        "number": 9,
+        "name": "Feedback and Control Systems",
+        "domain": "cybernetic / control",
+        "relationship_to_resonance": "structural analogy with possible literal oscillatory behavior",
+        "system": "feedback-controlled process",
+        "stimulus": "input, disturbance, or deviation from a desired condition",
+        "observable_response": "output behavior including possible overshoot, oscillation, or instability",
+        "inspection": "Observe output and compare behavior with the desired condition.",
+        "localization": "Identify which feedback relationship contributes to undesirable behavior.",
+        "bounded_tuning": "Adjust an appropriate control parameter.",
+        "retest": "Return the result of the adjustment through the observation loop.",
+        "structural_lesson": "A correction becomes meaningful only after its effect re-enters observation.",
+        "boundary_note": "The resonance-calibration pattern is used here as a structural analogy. The example does not assert that every feedback process is an instance of physical resonance."
+      },
+      {
+        "number": 10,
+        "name": "Human and Machine Knowledge Systems",
+        "domain": "informational / structural",
+        "relationship_to_resonance": "structural analogy",
+        "system": "documentation, terminology, diagrams, references, educational material, software, metadata, historical records, and machine-readable structures",
+        "stimulus": "human or machine traversal, questioning, lookup, interpretation, or validation",
+        "observable_response": "confusion, missing definitions, contradictions, broken navigation, terminology drift, provenance gaps, or successful traversal",
+        "inspection": "Probe the knowledge system through questions, references, navigation, machine traversal, and newcomer experience.",
+        "localization": "Identify the relationship where information becomes unclear, disconnected, contradictory, inaccessible, or difficult to reuse.",
+        "bounded_tuning": [
+          "clarify a definition",
+          "improve an entry point",
+          "add an example",
+          "correct a link",
+          "make lineage explicit",
+          "add machine-readable metadata",
+          "separate concepts that have drifted together",
+          "reconnect concepts that have drifted apart"
+        ],
+        "retest": "Traverse the knowledge system again with humans and machines and compare results.",
+        "structural_lesson": "The knowledge may already exist while its relationships remain poorly calibrated.",
+        "key_phrase": "The tire was already there. So was the knowledge."
+      }
+    ],
+    "cross_domain_progression": [
+      "rotational",
+      "acoustic",
+      "structural",
+      "dynamic",
+      "mechanical",
+      "coupled",
+      "environmental",
+      "electrical",
+      "cybernetic",
+      "informational"
+    ],
+    "reusable_inspection_grammar": [
+      {
+        "step": 1,
+        "operator": "BOUND",
+        "action": "Establish the system boundary."
+      },
+      {
+        "step": 2,
+        "operator": "STIMULATE",
+        "action": "Introduce or identify a stimulus."
+      },
+      {
+        "step": 3,
+        "operator": "OBSERVE",
+        "action": "Measure or inspect the response."
+      },
+      {
+        "step": 4,
+        "operator": "DETECT",
+        "action": "Identify amplification, attenuation, drift, oscillation, or instability."
+      },
+      {
+        "step": 5,
+        "operator": "LOCALIZE",
+        "action": "Locate the relationship associated with the behavior."
+      },
+      {
+        "step": 6,
+        "operator": "TUNE",
+        "action": "Apply the smallest justified correction."
+      },
+      {
+        "step": 7,
+        "operator": "RETEST",
+        "action": "Repeat the original or equivalent test."
+      },
+      {
+        "step": 8,
+        "operator": "COMPARE",
+        "action": "Compare before and after behavior."
+      },
+      {
+        "step": 9,
+        "operator": "INTEGRATE",
+        "action": "Inspect consequences elsewhere in the system."
+      },
+      {
+        "step": 10,
+        "operator": "PRESERVE",
+        "action": "Preserve what was learned, including observations, interventions, and results."
+      }
+    ],
+    "whole_and_bits": {
+      "whole_to_bits": {
+        "question": "What behavior is visible at the system level, and which relationships deserve closer inspection?",
+        "purpose": "Use whole-system behavior to guide localization."
+      },
+      "bits_to_whole": {
+        "question": "After changing a local relationship, what happened to the complete system?",
+        "purpose": "Prevent local optimization from being mistaken for global improvement."
+      },
+      "loop": [
+        "observe the whole",
+        "isolate a relationship",
+        "inspect the bit",
+        "tune carefully",
+        "reintegrate",
+        "observe the whole again"
+      ]
+    },
+    "rtt_calibration_view": {
+      "objective": "Observe relationships across time, identify where behavior departs from the intended or coherent regime, make the smallest defensible intervention, and observe again.",
+      "not_the_objective": [
+        "Find resonance everywhere.",
+        "Force every system into alignment.",
+        "Assume that all cross-domain examples share identical physical mechanisms."
+      ],
+      "possible_calibration_outcomes": [
+        "alignment",
+        "attenuation",
+        "damping",
+        "separation",
+        "redistribution",
+        "no intervention"
+      ],
+      "discipline": "Calibration begins with observation rather than assumption."
+    },
+    "boundary_conditions": {
+      "physical_claim": "Examples involving mechanical, acoustic, structural, and electrical systems may involve literal physical resonance or frequency response.",
+      "analogy_claim": "Cybernetic and informational examples primarily demonstrate transfer of the inspection and calibration grammar.",
+      "non_equivalence": "Cross-domain structural similarity does not establish physical equivalence.",
+      "evidence_rule": "Observed improvement should be evaluated through retesting rather than inferred from the intention or elegance of an intervention."
+    },
+    "closing_principles": [
+      "Tune the bit. Retest the whole.",
+      "Inspect the whole. Locate the bit. Tune the relationship. Retest the whole.",
+      "A successful intervention is demonstrated by what the system does afterward.",
+      "Coherence is not stillness.",
+      "Calibration is not control.",
+      "The goal is not to eliminate dynamics, but to understand them well enough that the system can move without unnecessary internal opposition."
+    ],
+    "closing_statement": "The tire was already there. We simply learned how to listen to what its motion was telling us."
+  }
 }
