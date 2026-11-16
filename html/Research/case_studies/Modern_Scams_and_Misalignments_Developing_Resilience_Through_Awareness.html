@@ -309,6 +309,75 @@
 <p>The objective is not to successfully label every example.</p>
 <p>The objective is to improve the student's ability to <strong>know when they do not yet know enough.</strong></p>
 <hr>
+<p>This case study already gives us the ingredients: Claim ↔ Structure ↔ Evidence, Identity ↔ Incentive ↔ Verification, bounded trust, and the RTT sequence Awareness → Alignment → Coherence → Clarity.</p>
+<p>For the first small addition, we'll keep it deliberately student-sized and derive the math from the case study rather than introduce a large RTT formalism.</p>
+<ol>
+<li>Minimal Markdown</li>
+</ol>
+<h2 id="rtt-derived-student-equation">RTT-Derived Student Equation</h2>
+<p>The case-study sequence</p>
+<p><strong>Awareness → Alignment → Coherence → Clarity</strong></p>
+<p>can be converted into a small observational model.</p>
+<h3 id="step-1-observe-three-structures">Step 1 — Observe three structures</h3>
+<p>Using the case-study triad:</p>
+<p>$$\text{Claim} \leftrightarrow \text{Structure} \leftrightarrow \text{Evidence}$$</p>
+<p>assign normalized values:</p>
+<ul>
+<li>$$A_c$$ = claim-to-structure alignment</li>
+<li>$$A_e$$ = claim-to-evidence alignment</li>
+<li>$$V$$ = independent verification</li>
+</ul>
+<p>with each value in the interval:</p>
+<p>$$0 \leq x \leq 1$$</p>
+<h3 id="step-2-compute-structural-alignment">Step 2 — Compute structural alignment</h3>
+<p>$$A = \frac{A_c + A_e}{2}$$</p>
+<h3 id="step-3-bound-coherence-by-verification">Step 3 — Bound coherence by verification</h3>
+<p>A coherent story is not necessarily true, so verification acts as a constraint:</p>
+<p>$$C = A \cdot V$$</p>
+<h3 id="step-4-derive-provisional-clarity">Step 4 — Derive provisional clarity</h3>
+<p>$$K = C \cdot W$$</p>
+<p>where $$W$$ represents observational awareness or completeness.</p>
+<p>Therefore:</p>
+<p>$$\boxed{K = W \cdot V \cdot \frac{A_c + A_e}{2}}$$</p>
+<p>This is not a probability that an interaction is a scam.</p>
+<p>It is a <strong>structural confidence measure</strong> describing how much clarity the current observations justify.</p>
+<h3 id="rtt-interpretation">RTT interpretation</h3>
+<p>$$W \rightarrow A \rightarrow C \rightarrow K$$</p>
+<p>Awareness enables alignment testing.<br>
+Alignment combined with verification supports coherence.<br>
+Coherence under sufficient observation permits provisional clarity.</p>
+<p>The equation therefore follows the case-study rule:</p>
+<blockquote>
+<p>Do not grant more trust than the available evidence supports.</p>
+</blockquote>
+<hr>
+<p>That preserves the study's explicit distinction that coherence is not truth and that trust should not exceed the evidence available.</p>
+<ol start="2">
+<li>Minimal Python companion</li>
+</ol>
+<pre><code class="language-python">def rtt_clarity(awareness, claim_structure, claim_evidence, verification):
+    alignment = (claim_structure + claim_evidence) / 2
+    coherence = alignment * verification
+    clarity = awareness * coherence
+    return clarity
+
+
+K = rtt_clarity(
+    awareness=0.80,
+    claim_structure=0.70,
+    claim_evidence=0.50,
+    verification=0.60
+)
+
+print(round(K, 3))
+</code></pre>
+<p>This gives students a very clean chain:</p>
+<p>observe → score alignment → constrain by verification → derive provisional clarity</p>
+<p>Importantly, K should not be called a scam probability. It's a teaching metric for the amount of structurally supported clarity available to the observer, which stays aligned with the case study's refusal to reduce AI judgment to simply SAFE or SCAM.</p>
+<p>For the second addition, I'd build directly on this with a misalignment/drift equation, so the two artifacts become complementary:</p>
+<p>$$Clarity K↔Misalignment D\text{Clarity } K \quad\leftrightarrow\quad \text{Misalignment } D$$</p>
+<p>That would give the student both sides of the observational problem without making the math heavy.</p>
+<hr>
 <h2 id="14-stewardship-principle">14. Stewardship Principle</h2>
 <p>Good stewardship does not teach people whom to trust.</p>
 <p>It helps them develop the awareness required to make better trust decisions themselves.</p>
