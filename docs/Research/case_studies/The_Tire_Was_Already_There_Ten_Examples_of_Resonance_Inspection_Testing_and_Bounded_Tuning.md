@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_case_studies_The_Tire_Was_Already_There_Ten_Examples_of_Resonance_Inspection_Testing_and_Bounded_Tuning_" src="https://github.com/user-attachments/assets/e4b36057-ac8e-4690-9f68-78b3705a73ba" />
 
 - [`The_Tire_Was_Already_There_Ten_Examples_of_Resonance_Inspection_Testing_and_Bounded_Tuning.json`](The_Tire_Was_Already_There_Ten_Examples_of_Resonance_Inspection_Testing_and_Bounded_Tuning.json) — Agentic module schema role assignments
 
