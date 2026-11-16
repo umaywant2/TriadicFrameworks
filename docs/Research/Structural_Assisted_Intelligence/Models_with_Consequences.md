@@ -1,6 +1,4 @@
 
-- [``]() — Agentic module schema role assignments
-
 # Models with Consequences
 
 ## A Structural Kernel for an AI\-Assisted World
