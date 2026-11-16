@@ -6,9 +6,9 @@
 
 ## An RTT Outage Analysis
 
-**Status:** Active Case Study / Pre\-RCA Analysis
+**Status:** Active Case Study / Pre-RCA Analysis
 
-**Framework:** Resonance\-Time Theory (RTT)
+**Framework:** Resonance-Time Theory (RTT)
 
 **Purpose:** Evaluate whether RTT can expose outage dynamics, relationships, or diagnostic signals that conventional incident analysis may miss or underweight.
 
@@ -22,9 +22,9 @@ Initial observational reference:
 
 [https://www.youtube.com/watch?v=wwVxCRYaYfs](https://www.youtube.com/watch?v=wwVxCRYaYfs)
 
-This case study intentionally begins before a final root\-cause analysis is incorporated.
+This case study intentionally begins before a final root-cause analysis is incorporated.
 
-The objective is not to use RTT to retrospectively reproduce an already\-known explanation.
+The objective is not to use RTT to retrospectively reproduce an already-known explanation.
 
 The objective is to ask:
 
@@ -34,11 +34,11 @@ The objective is to ask:
 
 # Research Question
 
-Can Resonance\-Time Theory provide meaningful insight into a large distributed\-service outage by examining relationships between load, coupling, timing, recovery, and system coherence?
+Can Resonance-Time Theory provide meaningful insight into a large distributed-service outage by examining relationships between load, coupling, timing, recovery, and system coherence?
 
 More specifically:
 
-**Does RTT expose outage behavior that might otherwise be missed, overlooked, or treated as secondary by conventional infrastructure monitoring and root\-cause analysis?**
+**Does RTT expose outage behavior that might otherwise be missed, overlooked, or treated as secondary by conventional infrastructure monitoring and root-cause analysis?**
 
 ---
 
@@ -56,16 +56,16 @@ Instead, RTT is used here as an analytical framework for characterizing:
 - dependency coupling,
 - transition thresholds,
 - recovery behavior,
-- re\-entry behavior,
+- re-entry behavior,
 - and coherence across the larger service environment.
 
 The distinction is important.
 
 A useful outage framework should not merely explain an event after all facts are known. It should generate observations or questions that can later be compared with independently established evidence.
 
-Therefore this analysis should be considered a **pre\-RCA hypothesis record**.
+Therefore this analysis should be considered a **pre-RCA hypothesis record**.
 
-Once authoritative post\-incident findings become available, the RTT observations should be compared against them without rewriting the original hypotheses to make them fit.
+Once authoritative post-incident findings become available, the RTT observations should be compared against them without rewriting the original hypotheses to make them fit.
 
 ---
 
@@ -97,13 +97,13 @@ RTT therefore asks a different question:
 
 For this case study, the initial RTT diagnostic chain is:
 
-**Load → Coupling → Threshold → Collapse → Recovery → Re\-entry → Coherence**
+**Load → Coupling → Threshold → Collapse → Recovery → Re-entry → Coherence**
 
 Each stage represents a different question about system behavior.
 
 ---
 
-## 1\. Load
+## 1. Load
 
 What pressure is being applied to the system?
 
@@ -114,7 +114,7 @@ Possible classes include:
 - connection establishment,
 - retries,
 - background services,
-- dependent\-service traffic,
+- dependent-service traffic,
 - reconnecting clients.
 
 RTT does not initially assume that absolute load alone determines stability.
@@ -123,13 +123,13 @@ Instead it asks whether particular **patterns of load interacting with time and 
 
 ---
 
-## 2\. Coupling
+## 2. Coupling
 
 Which systems influence the state of other systems?
 
 Modern cloud services are not isolated.
 
-A user\-visible service may depend on multiple supporting systems, while other products may simultaneously depend upon the same infrastructure.
+A user-visible service may depend on multiple supporting systems, while other products may simultaneously depend upon the same infrastructure.
 
 RTT therefore distinguishes:
 
@@ -147,7 +147,7 @@ Are investigators looking at multiple failures, or multiple expressions of the s
 
 ---
 
-## 3\. Threshold
+## 3. Threshold
 
 Does instability emerge gradually, or does the system cross a boundary after which behavior changes rapidly?
 
@@ -169,7 +169,7 @@ It may be the boundary separating stable and unstable operating regimes.
 
 ---
 
-## 4\. Collapse
+## 4. Collapse
 
 RTT treats collapse as a system state rather than automatically treating it as the root cause.
 
@@ -186,7 +186,7 @@ This prevents the visible failure from automatically being mistaken for the init
 
 ---
 
-## 5\. Recovery
+## 5. Recovery
 
 Recovery deserves independent analysis.
 
@@ -206,9 +206,9 @@ This distinction may be extremely important in distributed infrastructure.
 
 ---
 
-## 6\. Re\-entry
+## 6. Re-entry
 
-Re\-entry is the point where real workload and dependencies are restored to a recovering system.
+Re-entry is the point where real workload and dependencies are restored to a recovering system.
 
 This may include:
 
@@ -219,7 +219,7 @@ This may include:
 - queued activity,
 - synchronization processes.
 
-RTT treats re\-entry as its own transition.
+RTT treats re-entry as its own transition.
 
 Conceptually:
 
@@ -235,17 +235,17 @@ Conceptually:
 
 ↓
 
-**Workload Re\-entry**
+**Workload Re-entry**
 
 ↓
 
 **Stable OR Unstable**
 
-A system that survives restart but fails during re\-entry is revealing something that a binary health test cannot adequately describe.
+A system that survives restart but fails during re-entry is revealing something that a binary health test cannot adequately describe.
 
 ---
 
-# The Re\-entry Threshold
+# The Re-entry Threshold
 
 This produces one of the central hypotheses of the case study:
 
@@ -255,9 +255,9 @@ A server can potentially appear healthy while isolated or lightly loaded and sti
 
 RTT therefore introduces the concept of a:
 
-## Re\-entry Threshold
+## Re-entry Threshold
 
-The re\-entry threshold is the operating boundary at which restored workload, dependencies, timing, or feedback cause a recovering system to transition toward either:
+The re-entry threshold is the operating boundary at which restored workload, dependencies, timing, or feedback cause a recovering system to transition toward either:
 
 **stable coherence**
 
@@ -317,7 +317,7 @@ Traditional monitoring might observe:
 
 **server healthy = TRUE**
 
-An RTT\-style evaluation asks whether that statement remains true across time and operating conditions.
+An RTT-style evaluation asks whether that statement remains true across time and operating conditions.
 
 For example:
 
@@ -343,7 +343,7 @@ A health check performed only near **T₁** might produce a materially different
 
 Therefore:
 
-**Health may be trajectory\-dependent rather than state\-dependent.**
+**Health may be trajectory-dependent rather than state-dependent.**
 
 This is one of the most important RTT propositions being tested by this case study.
 
@@ -367,7 +367,105 @@ It should remain stable while participating in the workload, dependencies, timin
 
 This gives us the complete diagnostic sequence:
 
-**Load → Coupling → Threshold → Collapse → Recovery → Re\-entry → Coherence**
+**Load → Coupling → Threshold → Collapse → Recovery → Re-entry → Coherence**
+
+---
+
+We'll make the first addition a Re-entry Coherence Equation. It follows the case study’s existing chain Load → Coupling → Threshold → Collapse → Recovery → Re-entry → Coherence and directly formalizes its key proposition that restart health and sustained production health are different states.
+
+1. Minimal Markdown
+
+## RTT-Derived Equation — Re-entry Coherence
+
+The RTT outage chain is:
+
+**Load → Coupling → Threshold → Collapse → Recovery → Re-entry → Coherence**
+
+A minimal student model can express the relationship between returning workload and system stability.
+
+### Step 1 — Define normalized variables
+
+$$L = \text{re-entry load}$$
+
+$$D = \text{dependency coupling}$$
+
+$$T = \text{available operating threshold}$$
+
+where:
+
+$$0 \leq L,D,T \leq 1$$
+
+### Step 2 — Define effective pressure
+
+Returning workload is more significant when coupled dependencies amplify it:
+
+$$P = L(1 + D)$$
+
+### Step 3 — Compare pressure with the threshold
+
+Define the RTT stability margin:
+
+$$M = T - P$$
+
+therefore:
+
+$$\boxed{M = T - L(1 + D)}$$
+
+### Step 4 — Interpret the regimes
+
+$$M > 0 \Rightarrow \text{coherent re-entry}$$
+
+$$M = 0 \Rightarrow \text{transition boundary}$$
+
+$$M < 0 \Rightarrow \text{unstable re-entry}$$
+
+### RTT theorem step
+
+If recovery restores a system but re-entry increases effective pressure beyond its operating threshold, then:
+
+$$L(1+D) > T$$
+
+and therefore:
+
+$$M < 0$$
+
+So:
+
+**Restart health does not imply sustainable operating health.**
+
+This equation is an exploratory RTT teaching model, not a claim about the cause of the Outlook outage.
+
+
+That last guardrail fits the case study especially well because it explicitly treats the document as a pre-RCA hypothesis record and says independent evidence should get the final word.
+
+2. Minimal Python
+
+```python
+def reentry_margin(load, coupling, threshold):
+    pressure = load * (1 + coupling)
+    return threshold - pressure
+
+
+M = reentry_margin(
+    load=0.60,
+    coupling=0.40,
+    threshold=0.90
+)
+
+print(round(M, 3))
+```
+
+For those illustrative values:
+
+$$P=0.60(1+0.40)=0.84P=0.60(1+0.40)=0.84$$ 
+
+$$M=0.90−0.84=0.06M=0.90-0.84=0.06$$
+
+so the example lands just inside the coherent regime.
+
+This is a nice fit for Outlook_is_DOWN_What_Microsoft_Broke.md because the existing study already identifies the **re-entry threshold**, feedback during recovery, temporal trajectory, and the distinction between restart recovery and operational recovery.
+
+For the **second small addition**, we'll complement this with a **Trajectory Coherence equation**, essentially measuring whether stability persists across $$T1→T4T_1 \rightarrow T_4$$ , rather than trusting the single "healthy" observation at $$T1T_1$$ . That would give students two compact mathematical lenses: **threshold stability + temporal stability**.
 
 ---
 
@@ -405,35 +503,35 @@ But:
 
 This case study specifically tests whether RTT adds useful emphasis to several areas.
 
-### 1\. Apparent health may not equal sustainable health.
+### 1. Apparent health may not equal sustainable health.
 
-A recovered component should be evaluated across production re\-entry, not merely immediately after restart.
+A recovered component should be evaluated across production re-entry, not merely immediately after restart.
 
-### 2\. Recovery may itself generate destabilizing conditions.
+### 2. Recovery may itself generate destabilizing conditions.
 
 Returning workload can change the state of the system being recovered.
 
-### 3\. Dependency failures may appear broader than their origin.
+### 3. Dependency failures may appear broader than their origin.
 
-Multiple user\-visible symptoms may represent coupled manifestations rather than independent failures.
+Multiple user-visible symptoms may represent coupled manifestations rather than independent failures.
 
-### 4\. Threshold behavior may matter more than binary status.
+### 4. Threshold behavior may matter more than binary status.
 
 The important diagnostic signal may be the transition boundary at which the system ceases to remain coherent.
 
-### 5\. Time may be a first\-class operational variable.
+### 5. Time may be a first-class operational variable.
 
 A snapshot can say **healthy** while a trajectory says **unstable**.
 
-### 6\. Recovery and normal operations may occupy different stability regimes.
+### 6. Recovery and normal operations may occupy different stability regimes.
 
-Infrastructure capable of recovering under constrained conditions may still be incapable of surviving unrestricted workload re\-entry.
+Infrastructure capable of recovering under constrained conditions may still be incapable of surviving unrestricted workload re-entry.
 
 ---
 
 # Predictions / Questions to Freeze Before RCA
 
-Before incorporating a definitive incident report, preserve the following RTT\-derived questions:
+Before incorporating a definitive incident report, preserve the following RTT-derived questions:
 
 1. Did workload intensity influence whether recovered infrastructure remained stable?
 2. Was there a distinguishable threshold between sustainable and unsustainable operating conditions?
@@ -442,15 +540,15 @@ Before incorporating a definitive incident report, preserve the following RTT\-d
 5. Did apparently healthy infrastructure later become unhealthy when normal operating relationships were restored?
 6. Were multiple affected services coupled through common infrastructure or dependency relationships?
 7. Did engineers need to restrict, stage, redirect, or otherwise manage workload during recovery?
-8. Was the system's temporal trajectory more diagnostically useful than individual health\-check states?
+8. Was the system's temporal trajectory more diagnostically useful than individual health-check states?
 9. Could monitoring have declared components healthy before those components demonstrated sustained coherence under production conditions?
-10. Does the eventual root\-cause analysis describe phenomena that map naturally onto the RTT sequence without requiring the RTT model to be rewritten after the fact?
+10. Does the eventual root-cause analysis describe phenomena that map naturally onto the RTT sequence without requiring the RTT model to be rewritten after the fact?
 
 These questions form the falsifiable core of the exercise.
 
 ---
 
-# Post\-RCA Validation Plan
+# Post-RCA Validation Plan
 
 When authoritative incident findings become available, evaluate each frozen RTT observation independently.
 
