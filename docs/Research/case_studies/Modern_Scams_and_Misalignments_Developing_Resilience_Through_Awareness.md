@@ -410,6 +410,109 @@ The objective is to improve the student's ability to **know when they do not yet
 
 ---
 
+This case study already gives us the ingredients: Claim ↔ Structure ↔ Evidence, Identity ↔ Incentive ↔ Verification, bounded trust, and the RTT sequence Awareness → Alignment → Coherence → Clarity.
+
+For the first small addition, we'll keep it deliberately student-sized and derive the math from the case study rather than introduce a large RTT formalism.
+
+1. Minimal Markdown
+## RTT-Derived Student Equation
+
+The case-study sequence
+
+**Awareness → Alignment → Coherence → Clarity**
+
+can be converted into a small observational model.
+
+### Step 1 — Observe three structures
+
+Using the case-study triad:
+
+$$\text{Claim} \leftrightarrow \text{Structure} \leftrightarrow \text{Evidence}$$
+
+assign normalized values:
+
+- $$A_c$$ = claim-to-structure alignment
+- $$A_e$$ = claim-to-evidence alignment
+- $$V$$ = independent verification
+
+with each value in the interval:
+
+$$0 \leq x \leq 1$$
+
+### Step 2 — Compute structural alignment
+
+$$A = \frac{A_c + A_e}{2}$$
+
+### Step 3 — Bound coherence by verification
+
+A coherent story is not necessarily true, so verification acts as a constraint:
+
+$$C = A \cdot V$$
+
+### Step 4 — Derive provisional clarity
+
+$$K = C \cdot W$$
+
+where $$W$$ represents observational awareness or completeness.
+
+Therefore:
+
+$$\boxed{K = W \cdot V \cdot \frac{A_c + A_e}{2}}$$
+
+This is not a probability that an interaction is a scam.
+
+It is a **structural confidence measure** describing how much clarity the current observations justify.
+
+### RTT interpretation
+
+$$W \rightarrow A \rightarrow C \rightarrow K$$
+
+Awareness enables alignment testing.  
+Alignment combined with verification supports coherence.  
+Coherence under sufficient observation permits provisional clarity.
+
+The equation therefore follows the case-study rule:
+
+> Do not grant more trust than the available evidence supports.
+
+---
+
+That preserves the study's explicit distinction that coherence is not truth and that trust should not exceed the evidence available.
+
+2. Minimal Python companion
+
+```python
+def rtt_clarity(awareness, claim_structure, claim_evidence, verification):
+    alignment = (claim_structure + claim_evidence) / 2
+    coherence = alignment * verification
+    clarity = awareness * coherence
+    return clarity
+
+
+K = rtt_clarity(
+    awareness=0.80,
+    claim_structure=0.70,
+    claim_evidence=0.50,
+    verification=0.60
+)
+
+print(round(K, 3))
+```
+
+This gives students a very clean chain:
+
+observe → score alignment → constrain by verification → derive provisional clarity
+
+Importantly, K should not be called a scam probability. It's a teaching metric for the amount of structurally supported clarity available to the observer, which stays aligned with the case study's refusal to reduce AI judgment to simply SAFE or SCAM.
+
+For the second addition, I'd build directly on this with a misalignment/drift equation, so the two artifacts become complementary:
+
+$$Clarity K↔Misalignment D\text{Clarity } K \quad\leftrightarrow\quad \text{Misalignment } D$$
+
+That would give the student both sides of the observational problem without making the math heavy.
+
+---
+
 ## 14. Stewardship Principle
 
 Good stewardship does not teach people whom to trust.
