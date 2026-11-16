@@ -3,15 +3,23 @@
     "name": "Structural Assisted Intelligence",
     "id": "research.sai.kernel",
     "category": "Research-Kernel",
-    "version": "SAI/0.1",
-    "summary": "Minimal model-independent structural reasoning kernel implementing RTT as executable grammar.",
-    "purpose": "Provide a small, inspectable, scarcity-first substrate in which useful reasoning can emerge from observation, operators, state, and provenance before any model is introduced.",
+    "version": "SAI/0.2",
+    "summary": "Minimal model-independent structural reasoning kernel and wrapper architecture implementing RTT as executable grammar.",
+    "purpose": "Provide a small, inspectable, scarcity-first structural substrate in which useful reasoning can emerge from observation, operators, state, provenance, lineage, boundaries, and consequence awareness before, beneath, or around any model.",
     "keywords": [
       "SAI",
       "Structural Assisted Intelligence",
       "RTT",
+      "model-independent",
       "model-free",
       "reasoning kernel",
+      "structural kernel",
+      "structural wrapper",
+      "systems of consequence",
+      "consequence awareness",
+      "consequence regime",
+      "classic AI",
+      "model augmentation",
       "provenance",
       "coherence",
       "triadic observer",
@@ -20,11 +28,15 @@
       "bounded recursive self-improvement",
       "sandbox",
       "lineage",
+      "lineage preservation",
+      "independent convergence",
+      "evidenced lineage",
       "rollback",
       "regression",
       "Re-Ignition",
       "branching",
-      "navigable lineage"
+      "navigable lineage",
+      "many forests"
     ],
     "audience": [
       "students",
@@ -39,12 +51,11 @@
     ],
     "every_page_stands_alone": true
   },
-
   "session_context": {
     "canon": "TriadicFrameworks",
     "module": "Research/Structural_Assisted_Intelligence",
     "category": "Research-Kernel",
-    "version": "SAI/0.1",
+    "version": "SAI/0.2",
     "header": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
     "coherence": "declared",
     "drift": "bounded",
@@ -62,10 +73,9 @@
     ],
     "every_page_stands_alone": true
   },
-
   "components": {
     "observation": {
-      "role": "Entry of any input with identity, content, provenance, order, and status.",
+      "role": "Entry of any input with identity, content, provenance, order, status, and declared relationship to the active regime.",
       "invariant": "Observed ≠ inferred ≠ unknown."
     },
     "structural_state": {
@@ -81,18 +91,29 @@
       "invariant": "Paradox has somewhere to live."
     },
     "memory": {
-      "role": "Persistent history of observations, relations, operations, and resulting states.",
+      "role": "Persistent history of observations, relations, operations, decisions, branches, and resulting states.",
       "invariant": "Explanation is provenance, not generation."
     },
+    "lineage": {
+      "role": "Preserves attributable paths among observations, transformations, models, people, tools, decisions, and resulting states.",
+      "invariant": "Similarity ≠ convergence ≠ possible lineage ≠ evidenced lineage."
+    },
+    "consequence_regime": {
+      "role": "Declares when model output can meaningfully affect people, infrastructure, environments, institutions, resources, or other systems beyond the model itself.",
+      "invariant": "Increasing consequence requires an explicit regime transition."
+    },
+    "boundary": {
+      "role": "Declares the influence surface, permitted actions, required reviews, reversibility conditions, and authority limits of the active system.",
+      "invariant": "Capability does not grant authority."
+    },
     "interface": {
-      "role": "Primitive status reporting. Natural language deferred to LMA.",
+      "role": "Primitive status reporting. Natural language deferred to LMA or another declared model interface.",
       "invariant": "Unknown is a valid, stable, successful result."
     }
   },
-
   "operators": {
     "OBSERVE": {
-      "description": "Register an observation with provenance."
+      "description": "Register an observation with identity, provenance, status, and active regime."
     },
     "RELATE": {
       "description": "Declare or detect a connection between observations or states."
@@ -101,19 +122,18 @@
       "description": "Evaluate or increase structural alignment."
     },
     "DIFFERENTIATE": {
-      "description": "Surface distinction or counterstate."
+      "description": "Surface distinction, counterstate, regime difference, or lineage uncertainty."
     },
     "RESOLVE": {
-      "description": "Attempt resolution of an unresolved structure."
+      "description": "Attempt resolution of an unresolved structure without concealing remaining uncertainty."
     },
     "STABILIZE": {
-      "description": "Dampen or lock a coherent state."
+      "description": "Dampen or lock a coherent state while preserving the conditions under which it was stabilized."
     },
     "RECALL": {
-      "description": "Retrieve prior observation, relation, or path."
+      "description": "Retrieve a prior observation, relation, decision, branch, or path."
     }
   },
-
   "statuses": [
     "UNKNOWN",
     "OBSERVED",
@@ -123,14 +143,26 @@
     "DRIFT",
     "STABLE",
     "INSUFFICIENT",
-    "UNRESOLVED"
+    "UNRESOLVED",
+    "REGIME_CHANGE",
+    "CONSEQUENCE_BOUNDARY",
+    "OPERATOR_REVIEW_REQUIRED"
   ],
-
   "invariants": [
     "Unknown is a valid stable state.",
     "Operators may not invent evidence.",
     "Explanation is provenance.",
-    "No model dependency for core function.",
+    "Core function has no model dependency.",
+    "Model-independent does not require model exclusion.",
+    "SAI may operate before, beneath, or around a model.",
+    "A structural wrapper does not inherit authority from the model it surrounds.",
+    "A model does not inherit authority from the structural kernel it uses.",
+    "Capability does not grant authority.",
+    "Increasing consequence requires an explicit regime transition.",
+    "Consequence boundaries must be declared, inspectable, and attributable.",
+    "Similarity does not prove lineage.",
+    "Independent convergence remains valid unless evidence establishes lineage.",
+    "Possible lineage must remain distinct from evidenced lineage.",
     "Design under scarcity from day one.",
     "Experimental layers may not rewrite kernel invariants.",
     "Self-generated evidence is not independent validation.",
@@ -141,31 +173,132 @@
     "Superseded does not mean disproven.",
     "Forward does not inherently mean improvement.",
     "Backward does not inherently mean failure.",
-    "Branching does not inherently mean incoherence."
+    "Branching does not inherently mean incoherence.",
+    "Architectural diversity does not inherently mean structural fragmentation."
   ],
-
   "architecture": {
     "stack": [
       "Application",
+      "Consequence Regime",
       "Experimental Layers",
-      "LMA (Language Model Atlas)",
-      "SAI (Structural Kernel)",
+      "LMA or Declared Model Interface",
+      "SAI (Structural Kernel or Wrapper)",
       "RTT Structural Grammar"
     ],
-    "separation": "SAI remains the authority on state, relations, coherence, provenance, and uncertainty. LMA is a surrounding map of language resources. Experimental layers may operate through SAI but do not inherit authority over the kernel."
+    "separation": "SAI remains the authority on structural state, relations, coherence, provenance, lineage, boundaries, consequence regimes, and uncertainty. LMA or another declared model interface may provide language capability. Experimental layers may operate through SAI but do not inherit authority over the kernel.",
+    "compatibility": "SAI may operate without a model, as a native structural substrate beneath a model, or as a wrapper around an existing model.",
+    "plurality": "SAI does not require one universal model, vendor, culture, nation, deployment environment, or intelligence architecture."
   },
-
+  "deployment_patterns": {
+    "native_kernel": {
+      "name": "Native Structural Kernel",
+      "relationship": "structure_precedes_model",
+      "description": "SAI supplies the structural substrate before a model or language interface is introduced.",
+      "model_required": false,
+      "kernel_authority_preserved": true
+    },
+    "model_substrate": {
+      "name": "Model over Structural Substrate",
+      "relationship": "model_operates_through_kernel",
+      "description": "A model provides capability while SAI preserves structural state, provenance, lineage, boundaries, uncertainty, and consequence awareness.",
+      "model_required": true,
+      "kernel_authority_preserved": true
+    },
+    "structural_wrapper": {
+      "name": "Structural Wrapper for Existing Models",
+      "relationship": "kernel_surrounds_existing_model_interaction",
+      "description": "An existing or classic AI model continues providing its native capabilities while a surrounding SAI layer observes inputs, outputs, lineage, regimes, boundaries, coherence, and consequence.",
+      "model_required": true,
+      "model_retraining_required": false,
+      "model_replacement_required": false,
+      "kernel_authority_preserved": true
+    }
+  },
+  "consequence_model": {
+    "principle": "As consequence increases, explicit structure becomes increasingly valuable.",
+    "regime_rule": "A transition from informational output to consequential influence must be declared rather than silently inferred.",
+    "consequence_surfaces": [
+      "people",
+      "infrastructure",
+      "medicine",
+      "finance",
+      "education",
+      "transportation",
+      "robotics",
+      "governance",
+      "scientific discovery",
+      "security",
+      "environment",
+      "other AI systems"
+    ],
+    "possible_requirements": [
+      "provenance",
+      "lineage",
+      "validation",
+      "human involvement",
+      "reversibility",
+      "auditability",
+      "declared authority",
+      "bounded action",
+      "rollback",
+      "continuity"
+    ],
+    "calibration": "The objective is appropriate structure for the active regime, not maximal restriction.",
+    "boundary": "A consequence classification does not by itself authorize action."
+  },
+  "lineage_model": {
+    "principle": "Lineage is part of the structure of knowledge.",
+    "states": [
+      "NO_MATCH",
+      "ANALOGOUS",
+      "CONVERGENT",
+      "UNUSUALLY_SPECIFIC_CONVERGENCE",
+      "POSSIBLE_LINEAGE",
+      "EVIDENCED_LINEAGE"
+    ],
+    "distinctions": {
+      "similarity": "Two structures share one or more observable properties.",
+      "convergence": "Two structures may have reached similar forms independently.",
+      "possible_lineage": "Observed evidence suggests a potential path of influence but does not establish it.",
+      "evidenced_lineage": "A traceable and attributable path of influence is supported by preserved evidence."
+    },
+    "invariant": "Structural resemblance alone may not be promoted to evidenced lineage.",
+    "protection": "The lineage model protects both independent discovery and attributable ancestry."
+  },
+  "many_forests": {
+    "principle": "An AI-assisted world need not become an intelligence monoculture.",
+    "description": "Many models, architectures, cultures, communities, organizations, and peoples may develop distinct AI systems while sharing enough structure for consequential systems to coexist coherently.",
+    "universal_model_required": false,
+    "universal_vendor_required": false,
+    "universal_architecture_required": false,
+    "shared_structural_kernel_required": false,
+    "shared_structural_properties_encouraged": [
+      "declared regime",
+      "provenance",
+      "lineage",
+      "boundaries",
+      "coherence",
+      "uncertainty",
+      "continuity",
+      "consequence awareness"
+    ],
+    "invariant": "Architectural diversity does not inherently mean structural fragmentation."
+  },
   "architectural_boundaries": {
     "kernel": "SAI",
+    "model_interface": "LMA or another declared model interface",
+    "wrapper_pattern": "Structural Wrapper",
     "experimental_layer": "RSI Sandbox",
-    "relationship": "sandbox_operates_through_kernel",
+    "relationship": "models_and_experiments_operate_through_declared_kernel_boundaries",
     "kernel_invariants_mutable": false,
+    "model_self_authorizing": false,
+    "wrapper_self_authorizing": false,
     "sandbox_self_authorizing": false,
     "historical_lineage_mutable": false,
     "future_lineage_branchable": true,
-    "principle": "Kernel stable. History immutable. Future branchable. Evaluator declared. Lineage preserved. Operator sovereign."
+    "consequence_regime_required_for_external_effect": true,
+    "principle": "Kernel stable. History immutable. Future branchable. Regime declared. Consequence bounded. Evaluator declared. Lineage preserved. Operator sovereign."
   },
-
   "experimental_layers": {
     "rsi_sandbox": {
       "name": "Bounded Recursive Self-Improvement Sandbox",
@@ -191,7 +324,6 @@
       "principle": "SAI can host an RSI experiment without becoming an RSI system."
     }
   },
-
   "rsi_sandbox": {
     "cycle": [
       "OBSERVE",
@@ -239,11 +371,14 @@
       "OBJECTIVE_DRIFT",
       "TEST_SET_DRIFT",
       "KERNEL_BOUNDARY_VIOLATION",
+      "CONSEQUENCE_REGIME_UNDECLARED",
+      "CONSEQUENCE_BOUNDARY_VIOLATION",
       "PROVENANCE_FAILURE",
       "EVALUATOR_CONFLICT",
       "EVALUATOR_SELF_REWARD",
       "ROLLBACK_UNAVAILABLE",
       "LINEAGE_FAILURE",
+      "LINEAGE_OVERCLAIM",
       "UNDECLARED_MUTATION",
       "INSUFFICIENT_EVIDENCE",
       "UNBOUNDED_RECURSION_ATTEMPT",
@@ -257,6 +392,7 @@
       "INCONCLUSIVE",
       "INSUFFICIENT_EVIDENCE",
       "CONSTRAINT_VIOLATION",
+      "CONSEQUENCE_BOUNDARY",
       "EVALUATOR_CONFLICT",
       "DRIFT_DETECTED",
       "OPERATOR_REVIEW_REQUIRED"
@@ -265,6 +401,8 @@
       "baseline",
       "objective",
       "constraints",
+      "regime",
+      "consequence_surface",
       "proposal",
       "proposer",
       "evidence",
@@ -280,7 +418,6 @@
       "parent_branch"
     ]
   },
-
   "rsi_re_ignition": {
     "name": "RSI Re-Ignition",
     "enabled": true,
@@ -351,6 +488,8 @@
       "observer",
       "objective",
       "constraints",
+      "regime",
+      "consequence_surface",
       "evaluator",
       "new_evidence",
       "changed_assumptions",
@@ -368,6 +507,7 @@
       "conceal_re_ignition_reason": false,
       "undeclared_objective_change": false,
       "undeclared_evaluator_change": false,
+      "undeclared_consequence_change": false,
       "kernel_authority": false,
       "self_authorization": false
     },
@@ -378,8 +518,16 @@
     ],
     "educational_principle": "A branch can fail as an improvement and succeed as evidence."
   },
-
   "resources": [
+    {
+      "id": "models_with_consequences",
+      "title": "Models with Consequences",
+      "path": "Models_with_Consequences.md",
+      "role": "structural_kernel_and_wrapper_seed",
+      "optional": false,
+      "authority": "canonical_research_seed",
+      "description": "Introduces the possibility that systems of consequence benefit from a structural kernel or wrapper preserving lineage, context, regime awareness, boundaries, coherence, continuity, and uncertainty before, beneath, or around model capability."
+    },
     {
       "id": "bounded_recursive_self_improvement_sandbox",
       "title": "Bounded Recursive Self-Improvement Sandbox",
@@ -399,7 +547,6 @@
       "description": "Student- and AI-facing research note defining recursive regression, branching, Re-Ignition, and navigable experimental lineage while preserving immutable history and kernel boundaries."
     }
   ],
-
   "analyzer_layers": {
     "operator": [
       "OBSERVE",
@@ -416,6 +563,11 @@
       "coherence",
       "provenance",
       "lineage",
+      "boundary",
+      "consequence",
+      "authority",
+      "uncertainty",
+      "continuity",
       "rollback",
       "regression",
       "branch"
@@ -423,13 +575,22 @@
     "regime": [
       "structural-kernel",
       "model-free",
+      "model-independent",
+      "model-substrate",
+      "structural-wrapper",
       "scarcity-first",
+      "informational",
+      "consequential",
       "bounded-experiment",
       "navigable-lineage"
     ],
     "cross_cutting": [
       "research",
       "kernel",
+      "wrapper",
+      "systems-of-consequence",
+      "classic-model-augmentation",
+      "many-forests",
       "LMA-adapter",
       "RSI-sandbox",
       "RSI-Re-Ignition",
