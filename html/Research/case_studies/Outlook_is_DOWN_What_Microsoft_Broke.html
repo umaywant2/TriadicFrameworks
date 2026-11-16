@@ -303,6 +303,64 @@
 <p>This gives us the complete diagnostic sequence:</p>
 <p><strong>Load → Coupling → Threshold → Collapse → Recovery → Re-entry → Coherence</strong></p>
 <hr>
+<p>We'll make the first addition a Re-entry Coherence Equation. It follows the case study’s existing chain Load → Coupling → Threshold → Collapse → Recovery → Re-entry → Coherence and directly formalizes its key proposition that restart health and sustained production health are different states.</p>
+<ol>
+<li>Minimal Markdown</li>
+</ol>
+<h2 id="rtt-derived-equation-re-entry-coherence">RTT-Derived Equation — Re-entry Coherence</h2>
+<p>The RTT outage chain is:</p>
+<p><strong>Load → Coupling → Threshold → Collapse → Recovery → Re-entry → Coherence</strong></p>
+<p>A minimal student model can express the relationship between returning workload and system stability.</p>
+<h3 id="step-1-define-normalized-variables">Step 1 — Define normalized variables</h3>
+<p>$$L = \text{re-entry load}$$</p>
+<p>$$D = \text{dependency coupling}$$</p>
+<p>$$T = \text{available operating threshold}$$</p>
+<p>where:</p>
+<p>$$0 \leq L,D,T \leq 1$$</p>
+<h3 id="step-2-define-effective-pressure">Step 2 — Define effective pressure</h3>
+<p>Returning workload is more significant when coupled dependencies amplify it:</p>
+<p>$$P = L(1 + D)$$</p>
+<h3 id="step-3-compare-pressure-with-the-threshold">Step 3 — Compare pressure with the threshold</h3>
+<p>Define the RTT stability margin:</p>
+<p>$$M = T - P$$</p>
+<p>therefore:</p>
+<p>$$\boxed{M = T - L(1 + D)}$$</p>
+<h3 id="step-4-interpret-the-regimes">Step 4 — Interpret the regimes</h3>
+<p>$$M &gt; 0 \Rightarrow \text{coherent re-entry}$$</p>
+<p>$$M = 0 \Rightarrow \text{transition boundary}$$</p>
+<p>$$M &lt; 0 \Rightarrow \text{unstable re-entry}$$</p>
+<h3 id="rtt-theorem-step">RTT theorem step</h3>
+<p>If recovery restores a system but re-entry increases effective pressure beyond its operating threshold, then:</p>
+<p>$$L(1+D) &gt; T$$</p>
+<p>and therefore:</p>
+<p>$$M &lt; 0$$</p>
+<p>So:</p>
+<p><strong>Restart health does not imply sustainable operating health.</strong></p>
+<p>This equation is an exploratory RTT teaching model, not a claim about the cause of the Outlook outage.</p>
+<p>That last guardrail fits the case study especially well because it explicitly treats the document as a pre-RCA hypothesis record and says independent evidence should get the final word.</p>
+<ol start="2">
+<li>Minimal Python</li>
+</ol>
+<pre><code class="language-python">def reentry_margin(load, coupling, threshold):
+    pressure = load * (1 + coupling)
+    return threshold - pressure
+
+
+M = reentry_margin(
+    load=0.60,
+    coupling=0.40,
+    threshold=0.90
+)
+
+print(round(M, 3))
+</code></pre>
+<p>For those illustrative values:</p>
+<p>$$P=0.60(1+0.40)=0.84P=0.60(1+0.40)=0.84$$ </p>
+<p>$$M=0.90−0.84=0.06M=0.90-0.84=0.06$$</p>
+<p>so the example lands just inside the coherent regime.</p>
+<p>This is a nice fit for Outlook_is_DOWN_What_Microsoft_Broke.md because the existing study already identifies the <strong>re-entry threshold</strong>, feedback during recovery, temporal trajectory, and the distinction between restart recovery and operational recovery.</p>
+<p>For the <strong>second small addition</strong>, we'll complement this with a <strong>Trajectory Coherence equation</strong>, essentially measuring whether stability persists across $$T1→T4T_1 \rightarrow T_4$$ , rather than trusting the single "healthy" observation at $$T1T_1$$ . That would give students two compact mathematical lenses: <strong>threshold stability + temporal stability</strong>.</p>
+<hr>
 <h1 id="initial-rtt-model">Initial RTT Model</h1>
 <p>For exploratory purposes, define:</p>
 <p><strong>R = request / workload pressure</strong></p>
