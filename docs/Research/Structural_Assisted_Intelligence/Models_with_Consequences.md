@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_Models_with_Consequences_" src="https://github.com/user-attachments/assets/46fe506e-a5ca-4a4c-b8c4-08fe0f7de547" />
 
 # Models with Consequences
 
