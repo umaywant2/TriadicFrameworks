@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_Truth_vs_Belief_vs_Evidence_RTT_comparison_" src="https://github.com/user-attachments/assets/26e6173e-d56e-4215-8d81-8fb6091a5b6a" />
 
 <!DOCTYPE html>
 <html lang="en">
