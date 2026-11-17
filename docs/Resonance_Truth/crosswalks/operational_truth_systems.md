@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_operational_truth_systems_" src="https://github.com/user-attachments/assets/7a7264a8-9bd1-4e4e-ad7d-c9a50fdbceed" />
+
 # Operational Truth Systems — RTT Crosswalk
 
 **Module:** Resonance Truth  
