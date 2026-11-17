@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_fixtures_" src="https://github.com/user-attachments/assets/f3128a2d-099b-4b55-85ca-f3ea4d64b669" />
+
 # Resonance Truth — Fixtures
 
 > **Deterministic reference scenarios for the RTT Resonance Truth Service**
@@ -26,6 +28,7 @@ Fixtures provide controlled operational scenarios containing known:
 - expected qualification behavior
 - expected Coherence conditions
 - expected Drift
+
 - expected Paradox behavior
 - expected Truth-State outcomes
 - expected Correction behavior
