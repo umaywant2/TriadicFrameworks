@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_tests_" src="https://github.com/user-attachments/assets/3ae0f728-f57f-4c13-8f75-7ec0080f98a6" />
+
 # Resonance Truth — Tests
 
 > **Deterministic behavioral validation for the RTT Resonance Truth Service**
