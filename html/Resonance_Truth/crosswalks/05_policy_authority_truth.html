@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/05_policy_authority_truth.md">
-  <title>05_policy_authority_truth</title>
+  <title>Crosswalk #5 — Policy, Authorization, and Authority Truth</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2936 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_crosswalks_05_policy_authority_truth_" src="https://github.com/user-attachments/assets/38d09e0e-2286-4334-a19c-a6a110c3c1fe" /></p>
+<h1 id="crosswalk-5-policy-authorization-and-authority-truth">Crosswalk #5 — Policy, Authorization, and Authority Truth</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Crosswalk #5<br>
+<strong>Truth Class:</strong> Authority Truth<br>
+<strong>Reference System:</strong> Access Control Policy / IAM / Attribute-Based Access Control (ABAC)<br>
+<strong>Primary RTT Dimensions:</strong> Regime · Elec · Lineage · Coherence<br>
+<strong>Supporting RTT Dimensions:</strong> Spin · Temp · Drift · Paradox · Intent<br>
+<strong>Status:</strong> Research Crosswalk / Architecture Challenge<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This crosswalk examines access-control policy, authorization, and Attribute-Based Access Control as the fifth operational reference system for the RTT Resonance Truth Service.</p>
+<p>The governing question is:</p>
+<blockquote>
+<p><strong>Who may declare, validate, access, modify, or act?</strong></p>
+</blockquote>
+<p>Crosswalk #1 examined:</p>
+<pre><code>NTP
+  ↓
+Temporal Truth
+  ↓
+When?
+</code></pre>
+<p>Crosswalk #2 examined:</p>
+<pre><code>DNS
+  ↓
+Locational Truth
+  ↓
+Where?
+</code></pre>
+<p>Crosswalk #3 examined:</p>
+<pre><code>IAM
+  ↓
+Identity Truth
+  ↓
+Who?
+</code></pre>
+<p>Crosswalk #4 examined:</p>
+<pre><code>PKI
+  ↓
+Integrity Truth
+  ↓
+Is it still intact and operationally valid?
+</code></pre>
+<p>Crosswalk #5 now separates another dimension:</p>
+<pre><code>Policy / Authorization
+  ↓
+Authority Truth
+  ↓
+Who may?
+</code></pre>
+<p>This distinction is fundamental.</p>
+<p>A Subject may be:</p>
+<pre><code>correctly identified
+</code></pre>
+<p>while still:</p>
+<pre><code>unauthorized
+</code></pre>
+<p>A Source may be:</p>
+<pre><code>authoritative within Scope A
+</code></pre>
+<p>while having:</p>
+<pre><code>no authority within Scope B
+</code></pre>
+<p>An actor may be:</p>
+<pre><code>authorized to perform Operation X
+</code></pre>
+<p>while being:</p>
+<pre><code>unauthorized to perform Operation Y
+</code></pre>
+<p>Therefore Authority Truth must remain separate from:</p>
+<pre><code>Identity Truth
+Integrity Truth
+correctness
+capability
+successful action
+</code></pre>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Can authority be represented as a Regime-qualified relationship among actor, role or attributes, action, object, scope, policy, delegation, Lineage, and time without conflating permission with truth?</strong></p>
+</blockquote>
+<hr>
+<h1 id="1-evidence-boundary">1. Evidence Boundary</h1>
+<p>Primary grounding for this crosswalk includes:</p>
+<pre><code>NIST SP 800-162
+Guide to Attribute Based Access Control (ABAC)
+Definition and Considerations
+</code></pre>
+<p>The NIST ABAC model defines authorization as an evaluation involving attributes associated with:</p>
+<pre><code>subject
+object
+requested operation
+</code></pre>
+<p>and, in some cases:</p>
+<pre><code>environment conditions
+</code></pre>
+<p>against:</p>
+<pre><code>policy
+rules
+relationships
+</code></pre>
+<p>that describe allowable operations.</p>
+<p>Supporting access-control material may also include applicable NIST access-enforcement concepts.</p>
+<p>This crosswalk focuses on:</p>
+<pre><code>authorization
+subject
+object
+operation
+attributes
+environment
+policy
+rules
+relationships
+access enforcement
+delegation
+scope
+authority lifecycle
+</code></pre>
+<p>It does not attempt to model every IAM product or access-control implementation.</p>
+<hr>
+<h1 id="2-evidence-discipline">2. Evidence Discipline</h1>
+<p>This document distinguishes four statement types.</p>
+<h2 id="policy-authorization-fact">Policy / Authorization Fact</h2>
+<p>A mechanism explicitly represented in the bounded reference material.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>A structural interpretation introduced through Resonance Truth.</p>
+<h2 id="candidate-generalization">Candidate Generalization</h2>
+<p>A mechanism potentially reusable beyond Authority Truth.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A proposed abstraction requiring further crosswalk evidence.</p>
+<p>Example:</p>
+<pre><code>Authorization Fact:
+  Access may be determined by evaluating Subject,
+  Object, Operation, and Environment attributes
+  against policy.
+
+RTT Interpretation:
+  Authority is a relationship evaluated within a Regime.
+
+Candidate Generalization:
+  Relationships governing Truth usage should be
+  representable independently from Subject identity.
+
+Hypothesis:
+  AuthorityRelationship should become a first-class
+  generalized Truth-Service object.
+</code></pre>
+<p>The final statement remains provisional until testing against later crosswalks.</p>
+<hr>
+<h1 id="3-why-authority-comes-fifth">3. Why Authority Comes Fifth</h1>
+<p>Authority has appeared repeatedly in the first four crosswalks.</p>
+<h2 id="ntp">NTP</h2>
+<p>Reference Sources introduced bounded reference relationships.</p>
+<h2 id="dns">DNS</h2>
+<p>Delegation introduced:</p>
+<pre><code>Authority Scope
+Authority Lineage
+</code></pre>
+<h2 id="iam">IAM</h2>
+<p>Federation introduced:</p>
+<pre><code>role
+audience
+relying party
+scoped identity authority
+</code></pre>
+<h2 id="pki">PKI</h2>
+<p>Certification paths introduced:</p>
+<pre><code>delegated authority
+trust Anchors
+role constraints
+scope constraints
+consumer-local trust
+</code></pre>
+<p>By Crosswalk #4, a candidate structure had emerged:</p>
+<pre><code>Authority
+  =
+Actor / Source
+  +
+Role
+  +
+Scope
+  +
+Lineage
+  +
+Regime
+  +
+Time
+</code></pre>
+<p>Crosswalk #5 tests that abstraction directly.</p>
+<hr>
+<h1 id="4-authority-truth">4. Authority Truth</h1>
+<p>The primary Truth Class is:</p>
+<pre><code>Authority Truth
+</code></pre>
+<p>Its operational question is:</p>
+<blockquote>
+<p><strong>Who may declare, validate, access, modify, or act?</strong></p>
+</blockquote>
+<p>A more precise generalized formulation is:</p>
+<blockquote>
+<p><strong>Within this Regime, is this Subject authorized to perform this Operation on this Object under the currently applicable policy, attributes, relationships, and environmental conditions?</strong></p>
+</blockquote>
+<p>This means Authority Truth is intrinsically relational.</p>
+<p>It cannot safely be reduced to:</p>
+<pre><code>Actor:
+  authorized = true
+</code></pre>
+<p>Instead:</p>
+<pre><code>Authority
+  =
+Subject
+  ×
+Operation
+  ×
+Object
+  ×
+Policy
+  ×
+Environment
+  ×
+Regime
+</code></pre>
+<p>The relationship is the evaluated object.</p>
+<hr>
+<h1 id="5-authorization-on-its-own-terms">5. Authorization on Its Own Terms</h1>
+<p>Attribute-based access control evaluates whether requested operations are allowable using attributes and governing rules.</p>
+<p>A simplified conceptual form is:</p>
+<pre><code>Subject Attributes
+        │
+        ├───────────┐
+        │           │
+        ▼           ▼
+Requested       Object
+Operation       Attributes
+        │           │
+        └─────┬─────┘
+              │
+              ▼
+       Environment
+       Conditions
+              │
+              ▼
+           Policy
+              │
+              ▼
+       Authorization
+         Decision
+              │
+              ▼
+         Enforcement
+</code></pre>
+<p>This exposes several distinctions important to Resonance Truth:</p>
+<pre><code>Subject
+  ≠
+Permission
+
+Identity
+  ≠
+Authority
+
+Policy
+  ≠
+Decision
+
+Decision
+  ≠
+Enforcement
+
+Authorization
+  ≠
+Successful Action
+</code></pre>
+<p>Those distinctions are foundational to this crosswalk.</p>
+<hr>
+<h1 id="6-initial-structural-crosswalk">6. Initial Structural Crosswalk</h1>
+<table>
+<thead>
+<tr>
+<th>Authorization Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subject</td>
+<td>Truth Subject / actor</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>Target / Truth object</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Operation</td>
+<td>Requested action</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Subject attribute</td>
+<td>Evidence / qualification input</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Object attribute</td>
+<td>Target-state qualification input</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Environment condition</td>
+<td>Regime input</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Policy</td>
+<td>Declared Intent / Regime rule</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Rule</td>
+<td>Qualification constraint</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Relationship</td>
+<td>Authority relationship</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Authorization decision</td>
+<td>Regime-qualified Authority Truth State</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Permit</td>
+<td>Positive operational authority state</td>
+<td>Domain-Specific state</td>
+</tr>
+<tr>
+<td>Deny</td>
+<td>Negative operational authority state</td>
+<td>Domain-Specific state</td>
+</tr>
+<tr>
+<td>Enforcement</td>
+<td>Downstream action governance</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Delegation</td>
+<td>Authority Lineage</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Revocation</td>
+<td>Authority-state transition</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Role / attribute assignment</td>
+<td>Authority Evidence</td>
+<td>Candidate General</td>
+</tr>
+</tbody>
+</table>
+<p>This crosswalk immediately gives us a cleaner model of authority than:</p>
+<pre><code>Source.authoritative = true
+</code></pre>
+<hr>
+<h1 id="7-subject-actor">7. Subject → Actor</h1>
+<p>IAM established:</p>
+<pre><code>Subject
+  ≠
+Identity
+</code></pre>
+<p>Authority Truth now adds:</p>
+<pre><code>Subject
+  ≠
+Permission
+</code></pre>
+<p>The Subject is the active entity requesting or attempting an Operation.</p>
+<p>RTT interpretation:</p>
+<pre><code>Actor
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Subject
+  +
+Identity State
+  +
+Attributes
+  ↓
+Actor Context
+</code></pre>
+<p>This becomes one input into authorization.</p>
+<p>It does not itself establish permission.</p>
+<hr>
+<h1 id="8-object-target">8. Object → Target</h1>
+<p>Authorization requires something upon which an Operation is requested.</p>
+<p>RTT interpretation:</p>
+<pre><code>Target
+</code></pre>
+<p>The Target may be:</p>
+<ul>
+<li>file</li>
+<li>record</li>
+<li>service</li>
+<li>API</li>
+<li>device</li>
+<li>process</li>
+<li>command</li>
+<li>configuration</li>
+<li>information resource</li>
+<li>another protected object</li>
+</ul>
+<p>This introduces a useful general distinction:</p>
+<pre><code>Subject
+  acts upon
+Target
+</code></pre>
+<p>Potential future generalized relationship:</p>
+<pre><code>ActionRequest(
+  subject,
+  operation,
+  target,
+  regime
+)
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>This will likely matter again in:</p>
+<pre><code>State Truth
+Transactional Truth
+Intent Truth
+</code></pre>
+<hr>
+<h1 id="9-operation-requested-action">9. Operation → Requested Action</h1>
+<p>Authority is meaningless without knowing:</p>
+<blockquote>
+<p><strong>Authority to do what?</strong></p>
+</blockquote>
+<p>Therefore:</p>
+<pre><code>Actor authorized?
+  =
+incomplete question
+</code></pre>
+<p>The actual question is:</p>
+<blockquote>
+<p><strong>Is Actor A authorized to perform Operation O on Target T under Regime R?</strong></p>
+</blockquote>
+<p>This strongly reinforces:</p>
+<pre><code>permitted_uses
+prohibited_uses
+</code></pre>
+<p>from the Truth-State data model.</p>
+<p>Authority attaches to actions.</p>
+<p>It should not be modeled as a universal actor property.</p>
+<hr>
+<h1 id="10-authority-is-relational">10. Authority Is Relational</h1>
+<p>After DNS, IAM, PKI, and now ABAC, the recurring structure is strong enough to state more firmly:</p>
+<blockquote>
+<p><strong>Authority is a relationship, not an intrinsic property.</strong></p>
+</blockquote>
+<p>Canonical candidate structure:</p>
+<pre><code>AuthorityRelationship
+  ├── actor
+  ├── role / attributes
+  ├── operation
+  ├── target / scope
+  ├── policy
+  ├── delegation / Lineage
+  ├── Regime
+  ├── valid_from
+  └── valid_until
+</code></pre>
+<p>This is substantially richer than:</p>
+<pre><code>source:
+  authoritative: true
+</code></pre>
+<p>Crosswalk #5 therefore provides direct evidence for promoting:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>from tentative abstraction toward a core architecture candidate.</p>
+<hr>
+<h1 id="11-subject-attributes-qualification-evidence">11. Subject Attributes → Qualification Evidence</h1>
+<p>ABAC evaluates attributes associated with the Subject.</p>
+<p>RTT interpretation:</p>
+<pre><code>Qualification Evidence
+</code></pre>
+<p>Possible attributes may represent characteristics relevant to authorization.</p>
+<p>The important architectural principle is:</p>
+<blockquote>
+<p><strong>An attribute is evidence used by policy evaluation, not permission itself.</strong></p>
+</blockquote>
+<p>Conceptually:</p>
+<pre><code>Subject Attribute
+      ↓
+Policy Evaluation
+      ↓
+Authorization Decision
+</code></pre>
+<p>not:</p>
+<pre><code>Subject Attribute
+      =
+Authorization
+</code></pre>
+<p>This parallels:</p>
+<pre><code>certificate
+  ≠
+accepted Truth State
+</code></pre>
+<p>and:</p>
+<pre><code>identity credential
+  ≠
+identity acceptance
+</code></pre>
+<hr>
+<h1 id="12-object-attributes-target-evidence">12. Object Attributes → Target Evidence</h1>
+<p>ABAC also evaluates attributes associated with the protected Object.</p>
+<p>RTT interpretation:</p>
+<pre><code>Target Evidence
+</code></pre>
+<p>This is significant because previous crosswalks focused strongly on evidence about the Claim Subject.</p>
+<p>Authority Truth shows that evidence may also describe:</p>
+<pre><code>what is being acted upon
+</code></pre>
+<p>Potential generalized architecture:</p>
+<pre><code>Evidence
+   │
+   ├── Subject Evidence
+   ├── Target Evidence
+   ├── Environment Evidence
+   └── Relationship Evidence
+</code></pre>
+<p>This is a strong argument for moving away from:</p>
+<pre><code>flat Observation[]
+</code></pre>
+<p>toward:</p>
+<pre><code>typed Evidence Graph
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="13-environment-conditions-regime-input">13. Environment Conditions → Regime Input</h1>
+<p>ABAC may evaluate environmental conditions.</p>
+<p>RTT interpretation:</p>
+<pre><code>Regime Input
+</code></pre>
+<p>This strongly supports the Regime model.</p>
+<p>Authorization can depend upon conditions beyond:</p>
+<pre><code>Subject
+Object
+Operation
+</code></pre>
+<p>Potential conditions may be contextual.</p>
+<p>The generalized principle is:</p>
+<blockquote>
+<p><strong>The operational boundary may participate directly in qualification.</strong></p>
+</blockquote>
+<p>This means Regime is increasingly not merely:</p>
+<pre><code>metadata describing evaluation
+</code></pre>
+<p>but:</p>
+<pre><code>input to evaluation
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="14-policy-declared-intent">14. Policy → Declared Intent</h1>
+<p>Authority Truth introduces an unusually clean connection to:</p>
+<pre><code>Intent Truth
+</code></pre>
+<p>A policy describes allowable behavior.</p>
+<p>RTT interpretation:</p>
+<pre><code>Declared Intent
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Policy
+  =
+desired authority relationship
+</code></pre>
+<p>The current request represents:</p>
+<pre><code>observed / proposed operation
+</code></pre>
+<p>Authorization compares:</p>
+<pre><code>declared Intent
+</code></pre>
+<p>with:</p>
+<pre><code>current request context
+</code></pre>
+<p>This suggests a useful cross-class relationship:</p>
+<pre><code>Authority Truth
+      depends on
+Intent Truth
+</code></pre>
+<p>Crosswalk #8 will examine Intent Truth directly.</p>
+<hr>
+<h1 id="15-policy-decision">15. Policy ≠ Decision</h1>
+<p>A policy describes governing rules.</p>
+<p>It does not itself constitute a particular authorization decision.</p>
+<p>Conceptually:</p>
+<pre><code>Policy
+  +
+Current Attributes
+  +
+Operation
+  +
+Environment
+    ↓
+Decision
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Policy
+  ≠
+Truth State
+</code></pre>
+<p>This parallels earlier distinctions:</p>
+<pre><code>Claim
+  ≠
+Truth State
+
+Certificate
+  ≠
+Truth State
+
+Assertion
+  ≠
+Truth State
+</code></pre>
+<p>The system increasingly operates through:</p>
+<pre><code>Input Structure
+    ↓
+Evaluation
+    ↓
+Qualified State
+</code></pre>
+<hr>
+<h1 id="16-rule-qualification-constraint">16. Rule → Qualification Constraint</h1>
+<p>Policy rules become constraints used during authority evaluation.</p>
+<p>RTT interpretation:</p>
+<pre><code>Qualification Constraint
+</code></pre>
+<p>A constraint may evaluate:</p>
+<ul>
+<li>Subject properties</li>
+<li>Target properties</li>
+<li>requested Operation</li>
+<li>Environment</li>
+<li>relationships</li>
+<li>policy context</li>
+</ul>
+<p>This reinforces the PKI finding:</p>
+<blockquote>
+<p><strong>Qualification applies to relationships, not merely Evidence items.</strong></p>
+</blockquote>
+<p>The object being qualified here is effectively:</p>
+<pre><code>proposed authority relationship
+</code></pre>
+<hr>
+<h1 id="17-relationship-authority-relationship">17. Relationship → Authority Relationship</h1>
+<p>NIST ABAC explicitly allows policies, rules, or relationships to describe allowable operations under attribute combinations.</p>
+<p>This directly supports the emerging RTT abstraction:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>At this point the concept has survived:</p>
+<pre><code>DNS delegation
+
+IAM federation
+
+PKI certification paths
+
+ABAC authorization relationships
+</code></pre>
+<p>This is considerably stronger evidence than existed when the abstraction first appeared.</p>
+<h2 id="promotion-status">Promotion Status</h2>
+<p>Recommended:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>rather than:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>This means:</p>
+<blockquote>
+<p>Strong enough to model explicitly in the next architecture revision, subject to reconciliation with the remaining crosswalks.</p>
+</blockquote>
+<p>It does not yet require immediate mutation of the current schema.</p>
+<hr>
+<h1 id="18-authorization-decision-authority-truth-state">18. Authorization Decision → Authority Truth State</h1>
+<p>Policy evaluation produces an authorization result.</p>
+<p>RTT interpretation:</p>
+<pre><code>Authority Truth State
+</code></pre>
+<p>The domain-native result may be:</p>
+<pre><code>permit
+</code></pre>
+<p>or:</p>
+<pre><code>deny
+</code></pre>
+<p>Potentially other implementation-specific states may exist, but the canonical generalized point is:</p>
+<pre><code>Authority evaluation
+      ↓
+domain-native authority result
+</code></pre>
+<p>This should remain separate from generic Truth-State lifecycle.</p>
+<p>Example:</p>
+<pre><code>truth_state:
+  operationally_accepted
+
+accepted_value:
+  authorization: permit
+</code></pre>
+<p>versus:</p>
+<pre><code>truth_state:
+  operationally_accepted
+
+accepted_value:
+  authorization: deny
+</code></pre>
+<p>This may initially seem strange, but it preserves an important distinction.</p>
+<p>The system may be highly confident and fully coherent that:</p>
+<pre><code>access is denied
+</code></pre>
+<p>A negative domain result is still a successfully qualified Truth State.</p>
+<hr>
+<h1 id="19-deny-rejected-evaluation">19. Deny ≠ Rejected Evaluation</h1>
+<p>This is one of Crosswalk #5's most important contributions.</p>
+<p>Consider:</p>
+<pre><code>Policy evaluation:
+  DENY
+</code></pre>
+<p>The Truth Service itself may have successfully evaluated all evidence.</p>
+<p>Therefore:</p>
+<pre><code>Truth State:
+  operationally_accepted
+
+accepted_value:
+  authority:
+    denied
+</code></pre>
+<p>is structurally different from:</p>
+<pre><code>Truth State:
+  rejected
+</code></pre>
+<p>where the evidence itself failed to support a qualified result.</p>
+<p>This strongly reinforces the DNS finding:</p>
+<pre><code>qualified absence
+  ≠
+indeterminate
+</code></pre>
+<p>and generalizes it:</p>
+<blockquote>
+<p><strong>A negative domain result is not the same as evaluation failure.</strong></p>
+</blockquote>
+<hr>
+<h1 id="20-permit-truth">20. Permit ≠ Truth</h1>
+<p>The inverse is equally important.</p>
+<p>A policy decision may return:</p>
+<pre><code>PERMIT
+</code></pre>
+<p>That means:</p>
+<blockquote>
+<p><strong>The requested Operation is authorized under the evaluated policy conditions.</strong></p>
+</blockquote>
+<p>It does not establish that:</p>
+<ul>
+<li>the action is wise</li>
+<li>the action is safe</li>
+<li>the underlying Claim is correct</li>
+<li>the Subject's statement is true</li>
+<li>the system state is valid</li>
+<li>execution will succeed</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>authorization
+  ≠
+correctness
+</code></pre>
+<p>This distinction must remain canonical.</p>
+<hr>
+<h1 id="21-authority-capability">21. Authority ≠ Capability</h1>
+<p>A Subject may be:</p>
+<pre><code>authorized
+</code></pre>
+<p>but technically unable to perform the Operation.</p>
+<p>Likewise, a Subject may be:</p>
+<pre><code>technically capable
+</code></pre>
+<p>but unauthorized.</p>
+<p>Therefore:</p>
+<pre><code>may
+  ≠
+can
+</code></pre>
+<p>Authority Truth answers:</p>
+<blockquote>
+<p><strong>May this action occur?</strong></p>
+</blockquote>
+<p>Capability asks:</p>
+<blockquote>
+<p><strong>Can this action occur?</strong></p>
+</blockquote>
+<p>Those are separate operational dimensions.</p>
+<p>The Truth Service should not collapse them.</p>
+<hr>
+<h1 id="22-authority-identity">22. Authority ≠ Identity</h1>
+<p>IAM established an identity relationship.</p>
+<p>Authority Truth evaluates what that identified Subject may do.</p>
+<p>Conceptually:</p>
+<pre><code>Identity Truth
+      ↓
+Who is this?
+
+Authority Truth
+      ↓
+What may this Subject do?
+</code></pre>
+<p>A successful identity result may become evidence inside an Authority evaluation.</p>
+<p>Therefore Truth Classes may compose.</p>
+<p>They should not collapse.</p>
+<hr>
+<h1 id="23-authority-integrity">23. Authority ≠ Integrity</h1>
+<p>PKI may establish evidence integrity and Authority Lineage.</p>
+<p>Authorization policy may then determine whether the identified actor may perform a requested Operation.</p>
+<p>Therefore:</p>
+<pre><code>valid certificate
+  ≠
+authorized action
+</code></pre>
+<p>and:</p>
+<pre><code>intact signed assertion
+  ≠
+permit
+</code></pre>
+<p>Again, Truth Classes compose.</p>
+<hr>
+<h1 id="24-enforcement-downstream-action-governance">24. Enforcement → Downstream Action Governance</h1>
+<p>Authorization decision and enforcement are different stages.</p>
+<p>Conceptually:</p>
+<pre><code>Decision
+  ↓
+Enforcement
+  ↓
+Operational Result
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Truth State
+  ↓
+Correction / Action Policy
+  ↓
+Downstream Enforcement
+</code></pre>
+<p>This strongly validates the architecture's separation:</p>
+<pre><code>Evaluation
+  ≠
+Correction / Mutation
+</code></pre>
+<p>Crosswalk #5 gives us a second very clear operational example after NTP.</p>
+<hr>
+<h1 id="25-decision-enforcement">25. Decision ≠ Enforcement</h1>
+<p>Suppose policy evaluation says:</p>
+<pre><code>DENY
+</code></pre>
+<p>but an enforcement mechanism fails to apply that result.</p>
+<p>Then:</p>
+<pre><code>Authority Truth:
+  denied
+</code></pre>
+<p>while:</p>
+<pre><code>Observed System State:
+  unauthorized action occurred
+</code></pre>
+<p>Those states are different.</p>
+<p>This introduces an important relationship between:</p>
+<pre><code>Authority Truth
+</code></pre>
+<p>and:</p>
+<pre><code>Observational Truth
+</code></pre>
+<p>The policy answer can be correct while enforcement fails.</p>
+<p>That difference is:</p>
+<pre><code>operational Drift
+</code></pre>
+<p>between:</p>
+<pre><code>intended authority state
+</code></pre>
+<p>and:</p>
+<pre><code>observed system behavior
+</code></pre>
+<hr>
+<h1 id="26-policy-enforcement-drift">26. Policy Enforcement Drift</h1>
+<p>Consider:</p>
+<pre><code>Policy:
+  deny operation O
+</code></pre>
+<p>but:</p>
+<pre><code>System:
+  permits operation O
+</code></pre>
+<p>This represents:</p>
+<pre><code>Intent:
+  deny
+
+Observed State:
+  permit occurred
+</code></pre>
+<p>Potential RTT interpretation:</p>
+<pre><code>Policy Drift
+State Drift
+Authority Drift
+</code></pre>
+<p>The key principle is:</p>
+<blockquote>
+<p><strong>Truth about what should be allowed and truth about what actually occurred are different objects.</strong></p>
+</blockquote>
+<p>This becomes a bridge toward:</p>
+<pre><code>Desired-State Systems
+Telemetry
+</code></pre>
+<p>later in the series.</p>
+<hr>
+<h1 id="27-delegation-authority-lineage">27. Delegation → Authority Lineage</h1>
+<p>DNS introduced delegated namespace authority.</p>
+<p>IAM introduced federated identity authority.</p>
+<p>PKI introduced path-constrained certification authority.</p>
+<p>Policy systems may also represent delegated authority relationships.</p>
+<p>RTT interpretation:</p>
+<pre><code>Authority Lineage
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Authority A
+   ↓
+Delegates bounded authority
+   ↓
+Authority B
+   ↓
+Exercises permitted action
+</code></pre>
+<p>The Lineage matters because:</p>
+<pre><code>B's authority
+</code></pre>
+<p>may derive from:</p>
+<pre><code>A's authority
+</code></pre>
+<p>under:</p>
+<pre><code>scope
+constraints
+time
+policy
+</code></pre>
+<p>This is now a strongly recurring cross-system structure.</p>
+<hr>
+<h1 id="28-delegation-is-not-authority-duplication">28. Delegation Is Not Authority Duplication</h1>
+<p>When authority is delegated:</p>
+<pre><code>Delegate
+  ≠
+Delegator
+</code></pre>
+<p>The delegate may receive only a bounded subset.</p>
+<p>Conceptually:</p>
+<pre><code>Original Authority:
+  operations = [A, B, C]
+  scope = S
+
+Delegated Authority:
+  operations = [B]
+  scope = S1
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Authority Lineage must preserve constraints rather than merely ancestry.</strong></p>
+</blockquote>
+<p>This is a major refinement to generalized Lineage.</p>
+<p>Lineage edges may need their own:</p>
+<pre><code>scope
+constraints
+validity
+</code></pre>
+<p>not merely:</p>
+<pre><code>relation
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="29-role-authority-grouping">29. Role → Authority Grouping</h1>
+<p>Role-based systems group permissions or authority relationships.</p>
+<p>RTT interpretation:</p>
+<pre><code>Authority Grouping
+</code></pre>
+<p>A role is not itself:</p>
+<pre><code>authorization result
+</code></pre>
+<p>It participates in evaluation.</p>
+<p>Potential structure:</p>
+<pre><code>Subject
+  ↓
+Role
+  ↓
+Permissions
+  ↓
+Policy
+  ↓
+Decision
+</code></pre>
+<p>This further supports typed evidence and relationships.</p>
+<p>The precise role model remains domain-specific.</p>
+<hr>
+<h1 id="30-attribute-evidence">30. Attribute → Evidence</h1>
+<p>ABAC strengthens the broader:</p>
+<pre><code>EvidenceItem
+</code></pre>
+<p>candidate.</p>
+<p>Attributes may describe:</p>
+<pre><code>Subject
+Object
+Environment
+</code></pre>
+<p>They become inputs into evaluation.</p>
+<p>They are not all Observations in the NTP sense.</p>
+<p>This provides another independent reason to generalize:</p>
+<pre><code>Observation
+</code></pre>
+<p>toward:</p>
+<pre><code>Evidence
+</code></pre>
+<p>After:</p>
+<pre><code>IAM
+PKI
+Policy / ABAC
+</code></pre>
+<p>the evidence abstraction has now survived three consecutive challenges.</p>
+<h2 id="recommended-status">Recommended Status</h2>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>The architecture revision after Crosswalk #5 should seriously consider:</p>
+<pre><code>EvidenceItem
+</code></pre>
+<p>as the generalized superclass.</p>
+<hr>
+<h1 id="31-evidence-roles">31. Evidence Roles</h1>
+<p>Crosswalk #5 suggests that evidence needs contextual roles.</p>
+<p>Potential categories include:</p>
+<pre><code>Subject Evidence
+Target Evidence
+Policy Evidence
+Environment Evidence
+Relationship Evidence
+Status Evidence
+</code></pre>
+<p>This may be modeled through:</p>
+<pre><code>EvidenceItem.role
+</code></pre>
+<p>rather than adding a separate object type for every domain.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="32-environment-dynamic-regime">32. Environment → Dynamic Regime</h1>
+<p>Previous crosswalks showed Regime as:</p>
+<ul>
+<li>precision requirement</li>
+<li>namespace</li>
+<li>consumer context</li>
+<li>trust configuration</li>
+</ul>
+<p>Authority Truth adds:</p>
+<pre><code>dynamic environment
+</code></pre>
+<p>Therefore Regime can include conditions that change during operation.</p>
+<p>Conceptually:</p>
+<pre><code>Regime
+  =
+relatively stable policy context
+  +
+current environmental state
+</code></pre>
+<p>This raises a modeling question.</p>
+<p>Should:</p>
+<pre><code>Environment Evidence
+</code></pre>
+<p>belong inside:</p>
+<pre><code>Regime
+</code></pre>
+<p>or:</p>
+<pre><code>Evidence
+</code></pre>
+<p>Potential answer:</p>
+<pre><code>stable constraints
+  → Regime
+
+observed current conditions
+  → Evidence
+</code></pre>
+<p>This distinction should remain provisional.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="33-static-regime-vs-dynamic-context">33. Static Regime vs Dynamic Context</h1>
+<p>A useful provisional split is:</p>
+<h2 id="regime">Regime</h2>
+<p>The declared operational rules within which evaluation occurs.</p>
+<p>Examples:</p>
+<pre><code>applicable policy
+jurisdiction
+trust domain
+security boundary
+intended use
+</code></pre>
+<h2 id="context-evidence">Context Evidence</h2>
+<p>Current conditions used during evaluation.</p>
+<p>Examples:</p>
+<pre><code>current environment
+resource state
+current Subject attributes
+</code></pre>
+<p>This prevents Regime from becoming an unbounded container for every input.</p>
+<p>Potential generalized pattern:</p>
+<pre><code>Regime
+  +
+Context Evidence
+  ↓
+Evaluation
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="34-policy-version-regime-version">34. Policy Version → Regime Version</h1>
+<p>Authorization changes when policy changes.</p>
+<p>Therefore:</p>
+<pre><code>policy version
+</code></pre>
+<p>should participate in:</p>
+<pre><code>Evaluation history
+</code></pre>
+<p>This strongly validates:</p>
+<pre><code>Regime.policy_version
+</code></pre>
+<p>from the current architecture.</p>
+<p>Example:</p>
+<pre><code>Evaluation 1:
+  policy: v1
+  result: permit
+
+Evaluation 2:
+  policy: v2
+  result: deny
+</code></pre>
+<p>No Subject change is required.</p>
+<p>The Regime changed.</p>
+<hr>
+<h1 id="35-policy-drift">35. Policy Drift</h1>
+<p>Authority Truth introduces clear Policy Drift.</p>
+<p>Potential causes include:</p>
+<ul>
+<li>rule change</li>
+<li>permission change</li>
+<li>role change</li>
+<li>attribute-definition change</li>
+<li>delegation change</li>
+<li>scope change</li>
+</ul>
+<p>The resulting accepted authority state may change even when:</p>
+<pre><code>Subject unchanged
+Object unchanged
+Operation unchanged
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Policy itself is a truth-bearing structural dependency.</strong></p>
+</blockquote>
+<p>This strongly reinforces multidimensional Drift.</p>
+<hr>
+<h1 id="36-attribute-drift">36. Attribute Drift</h1>
+<p>Attributes may change.</p>
+<p>Examples structurally include:</p>
+<pre><code>Subject attribute changed
+
+Object attribute changed
+
+Environment attribute changed
+</code></pre>
+<p>A previously permitted relationship may then become denied.</p>
+<p>Therefore:</p>
+<pre><code>Authority Truth
+</code></pre>
+<p>is sensitive not only to policy Drift but:</p>
+<pre><code>evidence Drift
+</code></pre>
+<p>The Truth Service must preserve which input dimension caused the changed result.</p>
+<hr>
+<h1 id="37-authority-drift">37. Authority Drift</h1>
+<p>Authority Drift may occur when:</p>
+<ul>
+<li>delegation changes</li>
+<li>role changes</li>
+<li>permissions change</li>
+<li>policy changes</li>
+<li>scope changes</li>
+<li>validity ends</li>
+<li>relationship is revoked</li>
+</ul>
+<p>The Actor may remain the same.</p>
+<p>Identity may remain the same.</p>
+<p>The authority relationship changes.</p>
+<p>This strongly validates Authority as an independently inspectable Truth Class.</p>
+<hr>
+<h1 id="38-temporal-authority">38. Temporal Authority</h1>
+<p>Authority can be time-bounded.</p>
+<p>Conceptually:</p>
+<pre><code>authorized from:
+  T1
+
+authorized until:
+  T2
+</code></pre>
+<p>At:</p>
+<pre><code>T3
+</code></pre>
+<p>the identity remains intact.</p>
+<p>The authority no longer applies.</p>
+<p>This gives another clean example of:</p>
+<pre><code>Identity Truth:
+  coherent
+
+Authority Truth:
+  expired / denied
+</code></pre>
+<p>No contradiction exists.</p>
+<p>Truth-Class orthogonality prevents false Paradox.</p>
+<hr>
+<h1 id="39-revocation-authority-state-transition">39. Revocation → Authority-State Transition</h1>
+<p>Revocation or removal of authority provides another event-driven Revalidation mechanism.</p>
+<p>Conceptually:</p>
+<pre><code>AuthorityRelationship
+  active
+    ↓
+revocation event
+    ↓
+Revalidation
+    ↓
+authority no longer accepted
+</code></pre>
+<p>This strengthens:</p>
+<pre><code>event-driven Revalidation
+</code></pre>
+<p>across yet another Truth Class.</p>
+<p>At this point Revalidation is strongly generalized.</p>
+<hr>
+<h1 id="40-authority-coherence">40. Authority Coherence</h1>
+<p>What does Coherence mean for Authority Truth?</p>
+<p>It may involve compatibility among:</p>
+<ul>
+<li>Subject identity</li>
+<li>Subject attributes</li>
+<li>Object attributes</li>
+<li>requested Operation</li>
+<li>policy</li>
+<li>environment</li>
+<li>delegation</li>
+<li>scope</li>
+<li>applicable relationships</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>Coherence
+  =
+structural compatibility of the authority relationship
+under the applicable policy Regime
+</code></pre>
+<p>This continues to validate:</p>
+<blockquote>
+<p><strong>Coherence is domain-semantic.</strong></p>
+</blockquote>
+<p>Generic equality has now failed across:</p>
+<pre><code>DNS
+IAM
+PKI
+Authority
+</code></pre>
+<p>It should no longer be considered a viable generalized definition.</p>
+<hr>
+<h1 id="41-conflicting-policies">41. Conflicting Policies</h1>
+<p>Authority systems may expose apparently conflicting rules or policies.</p>
+<p>Possible situations include:</p>
+<pre><code>Policy A:
+  permit
+
+Policy B:
+  deny
+</code></pre>
+<p>Before declaring Paradox, the architecture must determine:</p>
+<ul>
+<li>which policy applies</li>
+<li>scope</li>
+<li>precedence</li>
+<li>Regime</li>
+<li>Subject</li>
+<li>Object</li>
+<li>Operation</li>
+<li>time</li>
+</ul>
+<p>If a defined policy-combination rule resolves the conflict:</p>
+<pre><code>no Paradox
+</code></pre>
+<p>If equally qualified policies remain structurally incompatible inside the same Regime:</p>
+<pre><code>potential Paradox
+</code></pre>
+<p>Again:</p>
+<blockquote>
+<p><strong>Classification and policy resolution precede Paradox registration.</strong></p>
+</blockquote>
+<hr>
+<h1 id="42-authority-paradox">42. Authority Paradox</h1>
+<p>A genuine Authority Paradox may arise when:</p>
+<ul>
+<li>overlapping recognized authorities provide incompatible decisions</li>
+<li>delegation chains overlap inconsistently</li>
+<li>policies of equal applicability conflict without resolution rule</li>
+<li>Authority relationships remain mutually incompatible after scope and Regime resolution</li>
+</ul>
+<p>Potential result:</p>
+<pre><code>contested
+</code></pre>
+<p>or:</p>
+<pre><code>indeterminate
+</code></pre>
+<p>depending on the Regime.</p>
+<p>The system should not guess simply because an action is waiting.</p>
+<hr>
+<h1 id="43-deny-is-not-paradox">43. Deny Is Not Paradox</h1>
+<p>A denied request may be:</p>
+<pre><code>fully coherent
+fully qualified
+fully explainable
+</code></pre>
+<p>Therefore:</p>
+<pre><code>DENY
+  ≠
+contested
+</code></pre>
+<p>Likewise:</p>
+<pre><code>PERMIT
+  ≠
+operationally safe
+</code></pre>
+<p>Domain-native result and Truth-State qualification remain separate.</p>
+<p>This is a major recurring pattern.</p>
+<hr>
+<h1 id="44-negative-domain-results">44. Negative Domain Results</h1>
+<p>Across the crosswalks we now have multiple examples:</p>
+<h2 id="dns_1">DNS</h2>
+<pre><code>qualified absence
+</code></pre>
+<h2 id="iam_1">IAM</h2>
+<pre><code>authentication failure
+</code></pre>
+<h2 id="pki_1">PKI</h2>
+<pre><code>certificate rejected for use
+</code></pre>
+<h2 id="authority">Authority</h2>
+<pre><code>authorization denied
+</code></pre>
+<p>This suggests a strong generalized principle:</p>
+<blockquote>
+<p><strong>Negative domain results must not be represented as generic Truth-Service failure.</strong></p>
+</blockquote>
+<p>The Truth Service asks:</p>
+<pre><code>Was the domain result determined coherently?
+</code></pre>
+<p>not:</p>
+<pre><code>Was the domain result positive?
+</code></pre>
+<p>This distinction is now strongly generalized.</p>
+<hr>
+<h1 id="45-truth-state-polarity-vs-qualification">45. Truth-State Polarity vs Qualification</h1>
+<p>A future model may need to distinguish:</p>
+<pre><code>qualification_status
+</code></pre>
+<p>from:</p>
+<pre><code>domain_result
+</code></pre>
+<p>Current pattern:</p>
+<pre><code>Truth State:
+  operationally_accepted
+
+accepted_value:
+  authorization: denied
+</code></pre>
+<p>This works.</p>
+<p>However, repeated crosswalk evidence suggests possible future structure:</p>
+<pre><code>qualification:
+  operationally_accepted
+
+domain_result:
+  denied
+</code></pre>
+<p>This should remain a model candidate rather than immediate schema change.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="46-enforcement-failure-example">46. Enforcement Failure Example</h1>
+<h2 id="subject">Subject</h2>
+<pre><code>Subject S
+</code></pre>
+<h2 id="operation">Operation</h2>
+<pre><code>read
+</code></pre>
+<h2 id="object">Object</h2>
+<pre><code>Object O
+</code></pre>
+<h2 id="policy-evaluation">Policy Evaluation</h2>
+<pre><code>deny
+</code></pre>
+<h2 id="enforcement">Enforcement</h2>
+<pre><code>incorrectly permits action
+</code></pre>
+<h2 id="authority-truth">Authority Truth</h2>
+<pre><code>denied
+</code></pre>
+<h2 id="observational-truth">Observational Truth</h2>
+<pre><code>action occurred
+</code></pre>
+<h2 id="drift">Drift</h2>
+<pre><code>dimensions:
+  policy
+  state
+</code></pre>
+<h2 id="architectural-finding">Architectural Finding</h2>
+<blockquote>
+<p><strong>Authority Truth can remain correct while enforcement state Drifts away from it.</strong></p>
+</blockquote>
+<p>This shows why Evaluation and action must remain separated.</p>
+<hr>
+<h1 id="47-worked-example-simple-permit">47. Worked Example — Simple Permit</h1>
+<h2 id="subject_1">Subject</h2>
+<pre><code>S
+</code></pre>
+<h2 id="operation_1">Operation</h2>
+<pre><code>read
+</code></pre>
+<h2 id="object_1">Object</h2>
+<pre><code>O
+</code></pre>
+<h2 id="subject-evidence">Subject Evidence</h2>
+<pre><code>attributes satisfy required conditions
+</code></pre>
+<h2 id="object-evidence">Object Evidence</h2>
+<pre><code>attributes compatible
+</code></pre>
+<h2 id="policy">Policy</h2>
+<pre><code>permits S-like Subjects to read O-like Objects
+</code></pre>
+<h2 id="environment">Environment</h2>
+<pre><code>applicable conditions satisfied
+</code></pre>
+<h2 id="result">Result</h2>
+<pre><code>Truth State:
+  operationally_accepted
+
+accepted_value:
+  authorization: permit
+</code></pre>
+<h2 id="architectural-finding_1">Architectural Finding</h2>
+<p>Authority Truth is the evaluated relationship.</p>
+<p>The Subject itself did not become globally "authorized."</p>
+<hr>
+<h1 id="48-worked-example-simple-deny">48. Worked Example — Simple Deny</h1>
+<h2 id="subject_2">Subject</h2>
+<pre><code>S
+</code></pre>
+<h2 id="operation_2">Operation</h2>
+<pre><code>write
+</code></pre>
+<h2 id="object_2">Object</h2>
+<pre><code>O
+</code></pre>
+<h2 id="policy-evaluation_1">Policy Evaluation</h2>
+<pre><code>conditions do not permit requested Operation
+</code></pre>
+<h2 id="result_1">Result</h2>
+<pre><code>Truth State:
+  operationally_accepted
+
+accepted_value:
+  authorization: deny
+</code></pre>
+<h2 id="architectural-finding_2">Architectural Finding</h2>
+<p>The Truth Service successfully established a negative domain result.</p>
+<p>No service <code>rejected</code> state is required.</p>
+<hr>
+<h1 id="49-worked-example-same-subject-different-operation">49. Worked Example — Same Subject, Different Operation</h1>
+<h2 id="subject_3">Subject</h2>
+<pre><code>S
+</code></pre>
+<h2 id="object_3">Object</h2>
+<pre><code>O
+</code></pre>
+<h2 id="operation-a">Operation A</h2>
+<pre><code>read
+</code></pre>
+<p>Result:</p>
+<pre><code>permit
+</code></pre>
+<h2 id="operation-b">Operation B</h2>
+<pre><code>delete
+</code></pre>
+<p>Result:</p>
+<pre><code>deny
+</code></pre>
+<h2 id="architectural-finding_3">Architectural Finding</h2>
+<p>Authority is operation-scoped.</p>
+<p>Therefore:</p>
+<pre><code>Subject.authorized = true
+</code></pre>
+<p>is structurally insufficient.</p>
+<hr>
+<h1 id="50-worked-example-same-subject-different-object">50. Worked Example — Same Subject, Different Object</h1>
+<h2 id="subject_4">Subject</h2>
+<pre><code>S
+</code></pre>
+<h2 id="operation_3">Operation</h2>
+<pre><code>read
+</code></pre>
+<h2 id="object-a">Object A</h2>
+<p>Result:</p>
+<pre><code>permit
+</code></pre>
+<h2 id="object-b">Object B</h2>
+<p>Result:</p>
+<pre><code>deny
+</code></pre>
+<h2 id="architectural-finding_4">Architectural Finding</h2>
+<p>Authority is target-scoped.</p>
+<p>This strengthens:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>as a multi-party relationship.</p>
+<hr>
+<h1 id="51-worked-example-environment-change">51. Worked Example — Environment Change</h1>
+<h2 id="initial-context">Initial Context</h2>
+<pre><code>Subject:
+  S
+
+Operation:
+  O
+
+Object:
+  X
+
+Environment:
+  E1
+</code></pre>
+<p>Result:</p>
+<pre><code>permit
+</code></pre>
+<h2 id="changed-context">Changed Context</h2>
+<pre><code>Subject:
+  S
+
+Operation:
+  O
+
+Object:
+  X
+
+Environment:
+  E2
+</code></pre>
+<p>Result:</p>
+<pre><code>deny
+</code></pre>
+<h2 id="architectural-finding_5">Architectural Finding</h2>
+<p>No Subject, Object, or requested Operation changed.</p>
+<p>Dynamic context changed the Authority Truth State.</p>
+<p>This strongly validates:</p>
+<pre><code>Context Evidence
+</code></pre>
+<p>as distinct from relatively stable Regime rules.</p>
+<hr>
+<h1 id="52-worked-example-policy-change">52. Worked Example — Policy Change</h1>
+<h2 id="evaluation-1">Evaluation 1</h2>
+<pre><code>Policy:
+  v1
+
+Result:
+  permit
+</code></pre>
+<h2 id="evaluation-2">Evaluation 2</h2>
+<pre><code>Policy:
+  v2
+
+Result:
+  deny
+</code></pre>
+<p>Subject, Object, and Operation remain unchanged.</p>
+<h2 id="drift_1">Drift</h2>
+<pre><code>dimension:
+  policy
+  regime
+</code></pre>
+<h2 id="architectural-finding_6">Architectural Finding</h2>
+<p>Truth-State changes can originate in governing Intent rather than observed entity state.</p>
+<hr>
+<h1 id="53-worked-example-delegated-authority">53. Worked Example — Delegated Authority</h1>
+<h2 id="authority-a">Authority A</h2>
+<p>May administer:</p>
+<pre><code>Scope S
+</code></pre>
+<h2 id="delegation">Delegation</h2>
+<p>Authority A delegates to Authority B:</p>
+<pre><code>Operation:
+  approve
+
+Scope:
+  S1
+</code></pre>
+<h2 id="request">Request</h2>
+<p>Authority B attempts:</p>
+<pre><code>approve
+within S1
+</code></pre>
+<p>Result:</p>
+<pre><code>potentially permitted
+</code></pre>
+<p>Authority B attempts:</p>
+<pre><code>approve
+within S2
+</code></pre>
+<p>Result:</p>
+<pre><code>deny
+</code></pre>
+<h2 id="architectural-finding_7">Architectural Finding</h2>
+<p>Delegation transfers bounded authority relationships.</p>
+<p>It does not clone the delegator's entire authority.</p>
+<hr>
+<h1 id="54-worked-example-revoked-delegation">54. Worked Example — Revoked Delegation</h1>
+<h2 id="prior-state">Prior State</h2>
+<pre><code>Authority B
+  delegated Operation O
+  over Scope S
+</code></pre>
+<h2 id="event">Event</h2>
+<pre><code>delegation revoked
+</code></pre>
+<h2 id="new-evaluation">New Evaluation</h2>
+<pre><code>same Actor
+same Operation
+same Target
+</code></pre>
+<p>Result:</p>
+<pre><code>deny
+</code></pre>
+<h2 id="architectural-finding_8">Architectural Finding</h2>
+<p>Identity remained unchanged.</p>
+<p>Authority relationship changed.</p>
+<p>Revalidation must be event-driven.</p>
+<hr>
+<h1 id="55-rtt-dimension-mapping">55. RTT Dimension Mapping</h1>
+<table>
+<thead>
+<tr>
+<th>RTT Dimension</th>
+<th>Authority Crosswalk Interpretation</th>
+<th>General Truth-Service Candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Policy and authority relationships propagate into decisions</td>
+<td>Governing Claims influence downstream qualification</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Subject, Target, Operation, policy, attributes, and context remain compatible</td>
+<td>Domain-semantic relationship compatibility</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Policy, attribute, scope, delegation, or authority changes</td>
+<td>Multi-dimensional relationship Drift</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Equally applicable authority structures remain incompatible</td>
+<td>Preserved policy / authority contradiction</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Policy, scope, environment, intended use, and context govern authority</td>
+<td>Operational boundary participates directly</td>
+</tr>
+<tr>
+<td><strong>Spin</strong></td>
+<td>Subject, roles, delegated relationships, and policy structures persist</td>
+<td>Relationship persistence</td>
+</tr>
+<tr>
+<td><strong>Elec</strong></td>
+<td>Subject, Object, Operation, role, policy, scope, and authority stay distinct</td>
+<td>Structural separation</td>
+</tr>
+<tr>
+<td><strong>Temp</strong></td>
+<td>Authority is granted, changed, revoked, and Revalidated</td>
+<td>Lifecycle and state transition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="56-set-mapping">56. SET Mapping</h1>
+<h2 id="spin">Spin</h2>
+<p>Authority Truth expresses Spin through persistence of:</p>
+<ul>
+<li>Subject identity</li>
+<li>roles</li>
+<li>policy relationships</li>
+<li>delegated authority</li>
+<li>scope relationships</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>Authority Truth strongly expresses Elec through distinction among:</p>
+<ul>
+<li>Subject</li>
+<li>Object</li>
+<li>Operation</li>
+<li>role</li>
+<li>policy</li>
+<li>rule</li>
+<li>attribute</li>
+<li>delegation</li>
+<li>scope</li>
+<li>permit</li>
+<li>deny</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>Authority Truth expresses Temp through:</p>
+<ul>
+<li>policy revision</li>
+<li>attribute change</li>
+<li>authority grant</li>
+<li>delegation</li>
+<li>revocation</li>
+<li>expiry</li>
+<li>environmental change</li>
+<li>Revalidation</li>
+</ul>
+<p>Compactly:</p>
+<blockquote>
+<p><strong>Spin preserves authority relationships.</strong></p>
+<p><strong>Elec distinguishes who, what, which action, and under which boundary.</strong></p>
+<p><strong>Temp governs grant, change, revocation, and renewed qualification.</strong></p>
+</blockquote>
+<hr>
+<h1 id="57-ntp-derived-candidate-review">57. NTP-Derived Candidate Review</h1>
+<table>
+<thead>
+<tr>
+<th>Candidate from NTP</th>
+<th>Authority Result</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Truth Anchor</td>
+<td>Survives abstractly</td>
+<td>Policy/authority source rather than time reference</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Survives</td>
+<td>Role semantics essential</td>
+</tr>
+<tr>
+<td>Observation</td>
+<td>Too narrow alone</td>
+<td>Evidence abstraction strengthened</td>
+</tr>
+<tr>
+<td>Lineage</td>
+<td>Strongly survives</td>
+<td>Delegation path important</td>
+</tr>
+<tr>
+<td>Qualification</td>
+<td>Strongly survives</td>
+<td>Core authorization mechanism</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>Strongly survives</td>
+<td>Domain-semantic</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>Strongly survives</td>
+<td>Policy / relationship dimensions</td>
+</tr>
+<tr>
+<td>Paradox</td>
+<td>Survives</td>
+<td>After policy-resolution semantics</td>
+</tr>
+<tr>
+<td>Regime</td>
+<td>Strongly survives</td>
+<td>Direct Evaluation input</td>
+</tr>
+<tr>
+<td>Truth-State synthesis</td>
+<td>Strongly survives</td>
+<td>Domain result permit/deny</td>
+</tr>
+<tr>
+<td>Correction</td>
+<td>Survives as enforcement</td>
+<td>Separate from decision</td>
+</tr>
+<tr>
+<td>Holdover</td>
+<td>Weak / policy-specific</td>
+<td>Not a generic authority assumption</td>
+</tr>
+<tr>
+<td>Revalidation</td>
+<td>Strongly survives</td>
+<td>Policy / attribute / revocation triggers</td>
+</tr>
+<tr>
+<td>Failure transparency</td>
+<td>Strongly survives</td>
+<td>Deny vs indeterminate must remain distinct</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="58-dns-derived-candidate-review">58. DNS-Derived Candidate Review</h1>
+<table>
+<thead>
+<tr>
+<th>Candidate from DNS</th>
+<th>Authority Result</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authority Scope</td>
+<td>Directly validated</td>
+<td>Strongly strengthened</td>
+</tr>
+<tr>
+<td>Authority Lineage</td>
+<td>Directly validated</td>
+<td>Strongly strengthened</td>
+</tr>
+<tr>
+<td>Observer Context</td>
+<td>Survives</td>
+<td>Request / evaluator context matters</td>
+</tr>
+<tr>
+<td>Delegated Authority</td>
+<td>Directly validated</td>
+<td>Strong</td>
+</tr>
+<tr>
+<td>Materialized Truth State</td>
+<td>Context-dependent</td>
+<td>Policy decision caching requires separate study</td>
+</tr>
+<tr>
+<td>Multi-valued Truth</td>
+<td>Relevant to permissions</td>
+<td>Domain-specific representation</td>
+</tr>
+<tr>
+<td>Explicit Absence</td>
+<td>Survives</td>
+<td>No permission vs unknown authority distinct</td>
+</tr>
+<tr>
+<td>Domain-semantic Coherence</td>
+<td>Strongly survives</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Transformation Lineage</td>
+<td>Relevant to delegation</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Freshness Revalidation</td>
+<td>Strongly survives</td>
+<td>Grants/revocations/policy changes</td>
+</tr>
+<tr>
+<td>Stable-value structural Drift</td>
+<td>Strongly survives</td>
+<td>Identity may stay stable while authority changes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="59-iam-derived-candidate-review">59. IAM-Derived Candidate Review</h1>
+<table>
+<thead>
+<tr>
+<th>Candidate from IAM</th>
+<th>Authority Result</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Truth Subject</td>
+<td>Strongly survives</td>
+<td>Subject central</td>
+</tr>
+<tr>
+<td>Identity Relationship</td>
+<td>Becomes input</td>
+<td>Identity ≠ Authority</td>
+</tr>
+<tr>
+<td>Assertion</td>
+<td>Survives</td>
+<td>Policy/attribute assertions relevant</td>
+</tr>
+<tr>
+<td>Evidence typing</td>
+<td>Strongly survives</td>
+<td>Attribute inputs strengthen it</td>
+</tr>
+<tr>
+<td>Source Role</td>
+<td>Strongly survives</td>
+<td>Authority roles central</td>
+</tr>
+<tr>
+<td>Consumer Context</td>
+<td>Survives</td>
+<td>Resource/request context central</td>
+</tr>
+<tr>
+<td>Assurance Requirement</td>
+<td>Becomes rule/Regime input</td>
+<td>Qualification profile strengthened</td>
+</tr>
+<tr>
+<td>Cross-Regime Propagation</td>
+<td>Relevant to delegated/federated policy</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Revalidation Depth</td>
+<td>Survives</td>
+<td>Depends on changed input</td>
+</tr>
+<tr>
+<td>Relationship Lifecycle</td>
+<td>Strongly survives</td>
+<td>Authority grants/revocation</td>
+</tr>
+<tr>
+<td>Revocation Revalidation</td>
+<td>Strongly survives</td>
+<td>Directly supported conceptually</td>
+</tr>
+<tr>
+<td>Stable identifier structural Drift</td>
+<td>Strongly survives</td>
+<td>Authority may change independently</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="60-pki-derived-candidate-review">60. PKI-Derived Candidate Review</h1>
+<table>
+<thead>
+<tr>
+<th>Candidate from PKI</th>
+<th>Authority Result</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Signed Assertion</td>
+<td>Survives conceptually</td>
+<td>One Evidence subtype</td>
+</tr>
+<tr>
+<td>Evidence about Evidence</td>
+<td>Survives</td>
+<td>Attributes/status may qualify relationships</td>
+</tr>
+<tr>
+<td>Evidence Graph</td>
+<td>Strongly strengthened</td>
+<td>Subject/Object/policy relationships form graph-like structure</td>
+</tr>
+<tr>
+<td>Qualification of Lineage</td>
+<td>Strongly survives</td>
+<td>Delegation paths matter</td>
+</tr>
+<tr>
+<td>Consumer-Local Anchor Set</td>
+<td>Analog in applicable policy/authority set</td>
+<td>Broadened</td>
+</tr>
+<tr>
+<td>Permitted-Use Constraints</td>
+<td>Directly central</td>
+<td>Strongly strengthened</td>
+</tr>
+<tr>
+<td>Policy-Qualified Truth State</td>
+<td>Directly validated</td>
+<td>Strongly strengthened</td>
+</tr>
+<tr>
+<td>Role-Constrained Authority</td>
+<td>Directly validated</td>
+<td>Strong</td>
+</tr>
+<tr>
+<td>Multi-Class Synthesis</td>
+<td>Strongly survives</td>
+<td>Identity + Authority + Intent + State</td>
+</tr>
+<tr>
+<td>Causal Drift Dimension</td>
+<td>Strongly survives</td>
+<td>Policy/attribute/delegation causes differ</td>
+</tr>
+<tr>
+<td>Integrity vs Operational Acceptance</td>
+<td>Parallel becomes identity vs authorization</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Trust-Configuration Drift</td>
+<td>Analog becomes policy/authority-configuration Drift</td>
+<td>Broadened</td>
+</tr>
+</tbody>
+</table>
+<p>Crosswalk #5 therefore confirms much of the structural direction produced by PKI.</p>
+<hr>
+<h1 id="61-architecture-decision-1-promote-authorityrelationship-to-candidate-core">61. Architecture Decision #1 — Promote AuthorityRelationship to Candidate Core</h1>
+<p>After four prior systems and direct evaluation in Crosswalk #5:</p>
+<pre><code>DNS
+  delegated authority
+
+IAM
+  federated authority
+
+PKI
+  certification authority
+
+Policy / ABAC
+  authorization relationships
+</code></pre>
+<p>the abstraction:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>has sufficient recurring evidence to move from:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>to:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Proposed conceptual fields:</p>
+<pre><code>authority_relationship_id
+
+subject_id
+
+actor_id
+
+role
+
+operation
+
+target_scope
+
+delegator_id
+
+policy_reference
+
+regime_id
+
+valid_from
+
+valid_until
+
+constraints
+
+lineage_reference
+
+status
+</code></pre>
+<p>This is a research promotion.</p>
+<p>Core schema changes should occur during the next formal architecture consolidation pass rather than silently inside this crosswalk.</p>
+<hr>
+<h1 id="62-architecture-decision-2-promote-evidenceitem-to-candidate-core">62. Architecture Decision #2 — Promote EvidenceItem to Candidate Core</h1>
+<p>The evidence abstraction now has support from:</p>
+<pre><code>NTP:
+  Observation
+
+DNS:
+  records / returned state
+
+IAM:
+  identity evidence + assertions
+
+PKI:
+  signed assertions + status evidence
+
+Authority:
+  Subject/Object/environment attributes
+</code></pre>
+<p>Therefore:</p>
+<pre><code>EvidenceItem
+</code></pre>
+<p>should move to:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Potential conceptual structure:</p>
+<pre><code>EvidenceItem
+  ├── Observation
+  ├── Assertion
+  ├── SignedAssertion
+  ├── Attribute
+  ├── StatusEvidence
+  └── Attestation
+</code></pre>
+<p>The type list should remain open.</p>
+<p>The general abstraction is more important than prematurely fixing every subtype.</p>
+<hr>
+<h1 id="63-architecture-decision-3-qualification-is-generalized">63. Architecture Decision #3 — Qualification Is Generalized</h1>
+<p>Evidence now strongly supports:</p>
+<blockquote>
+<p><strong>Qualification is not merely Observation filtering.</strong></p>
+</blockquote>
+<p>Qualification may apply to:</p>
+<ul>
+<li>Evidence</li>
+<li>Source</li>
+<li>Authority relationship</li>
+<li>Lineage</li>
+<li>policy compatibility</li>
+<li>Regime compatibility</li>
+<li>requested use</li>
+</ul>
+<p>Therefore the generalized mechanism should become:</p>
+<pre><code>Qualification Engine
+</code></pre>
+<p>rather than conceptually:</p>
+<pre><code>Observation Filter
+</code></pre>
+<p>This already matches the current component name.</p>
+<p>The architecture interpretation should now be updated accordingly during consolidation.</p>
+<hr>
+<h1 id="64-architecture-decision-4-domain-result-must-remain-separate-from-qualification-state">64. Architecture Decision #4 — Domain Result Must Remain Separate from Qualification State</h1>
+<p>Crosswalks now repeatedly show:</p>
+<pre><code>qualified absence
+authentication failure
+certificate rejection
+authorization deny
+</code></pre>
+<p>These are domain results.</p>
+<p>They must remain separate from:</p>
+<pre><code>Evaluation failed
+evidence rejected
+Truth State indeterminate
+</code></pre>
+<p>Proposed generalized structure:</p>
+<pre><code>TruthState
+  ├── qualification_status
+  └── domain_result
+</code></pre>
+<p>Current implementation may continue using:</p>
+<pre><code>status
+accepted_value
+</code></pre>
+<p>until a formal schema revision.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="65-architecture-decision-5-regime-and-context-should-remain-separate">65. Architecture Decision #5 — Regime and Context Should Remain Separate</h1>
+<p>Authority Truth clarifies that:</p>
+<pre><code>policy / stable operating rules
+  ≠
+current environmental values
+</code></pre>
+<p>Proposed distinction:</p>
+<pre><code>Regime
+  =
+declared operating boundary
+
+Context Evidence
+  =
+current conditions participating in Evaluation
+</code></pre>
+<p>This avoids turning Regime into an arbitrary bag of changing values.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<p>Further test:</p>
+<pre><code>Distributed Systems
+Telemetry
+</code></pre>
+<hr>
+<h1 id="66-architecture-decision-6-decision-and-enforcement-remain-separate">66. Architecture Decision #6 — Decision and Enforcement Remain Separate</h1>
+<p>Crosswalk #5 provides direct validation for:</p>
+<pre><code>Evaluation
+  ≠
+Action
+</code></pre>
+<p>Authorization:</p>
+<pre><code>decision
+  ↓
+enforcement
+</code></pre>
+<p>maps cleanly into:</p>
+<pre><code>Truth State
+  ↓
+Correction / Action Policy
+  ↓
+Mutation / Enforcement
+</code></pre>
+<p>This architectural invariant should now be considered:</p>
+<pre><code>CONFIRMED_GENERAL
+</code></pre>
+<p>pending later contradiction.</p>
+<hr>
+<h1 id="67-architecture-decision-7-negative-results-are-first-class">67. Architecture Decision #7 — Negative Results Are First-Class</h1>
+<p>The crosswalk sequence now provides repeated evidence that:</p>
+<pre><code>negative domain result
+  ≠
+architectural failure
+</code></pre>
+<p>Examples:</p>
+<pre><code>DNS:
+  absent
+
+IAM:
+  authentication unsuccessful
+
+PKI:
+  validation rejected
+
+Authorization:
+  deny
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Truth-State qualification must remain independent from the polarity of the domain result.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strong
+</code></pre>
+<hr>
+<h1 id="68-scoring-boundary">68. Scoring Boundary</h1>
+<p>The scoring boundary for this crosswalk is:</p>
+<pre><code>System:
+  Policy / Authorization / ABAC
+
+Primary Truth Class:
+  Authority Truth
+
+Evaluated Scope:
+  logical access-control authorization
+  Subject attributes
+  Object attributes
+  requested operations
+  environment conditions
+  policy / rule evaluation
+  authority relationships
+  access enforcement distinction
+
+Primary Evidence:
+  NIST SP 800-162
+
+Supporting Evidence:
+  applicable NIST access-control guidance
+
+Deferred Scope:
+  proprietary policy engines
+  vendor-specific IAM products
+  physical access control
+  organization-specific governance
+  risk-engine implementation details
+  enforcement technologies outside the defined boundary
+</code></pre>
+<p>This boundary keeps:</p>
+<pre><code>Identity Truth
+</code></pre>
+<p>and:</p>
+<pre><code>Authority Truth
+</code></pre>
+<p>separate.</p>
+<hr>
+<h1 id="69-preliminary-scoring-status">69. Preliminary Scoring Status</h1>
+<p>Current score status:</p>
+<pre><code>provisional
+</code></pre>
+<p>Likely areas of strong structural representation include:</p>
+<ul>
+<li>Regime Awareness</li>
+<li>Authority / Anchor Quality</li>
+<li>Observation / Evidence Quality</li>
+<li>Correction / Enforcement Discipline</li>
+<li>Failure Transparency</li>
+</ul>
+<p>Areas requiring careful interpretation include:</p>
+<ul>
+<li>Lineage Visibility</li>
+<li>Coherence Detection</li>
+<li>Drift Detection</li>
+<li>Paradox Handling</li>
+<li>Freshness / Revalidation</li>
+</ul>
+<p>The scoring pass should follow evidence rather than expected architectural strength.</p>
+<hr>
+<h1 id="70-provisional-scorecard-template">70. Provisional Scorecard Template</h1>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score</th>
+<th>Delegation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anchor Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Observation Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+<td>Deferred</td>
+</tr>
+</tbody>
+</table>
+<p>The rubric issue identified in Crosswalk #4 remains:</p>
+<pre><code>Observation Quality
+</code></pre>
+<p>may eventually need to become:</p>
+<pre><code>Evidence Quality
+</code></pre>
+<p>Crosswalk #5 strengthens that case.</p>
+<hr>
+<h1 id="71-scoring-rubric-challenge">71. Scoring-Rubric Challenge</h1>
+<p>Authority Truth puts substantial pressure on several scoring criteria.</p>
+<h2 id="anchor-quality">Anchor Quality</h2>
+<p>Authority may not derive from one Anchor in the PKI sense.</p>
+<p>Policy may define allowable relationships.</p>
+<p>The criterion must accommodate:</p>
+<pre><code>governing reference
+</code></pre>
+<p>rather than only:</p>
+<pre><code>root-like authority
+</code></pre>
+<h2 id="observation-quality">Observation Quality</h2>
+<p>Attributes, assertions, policy inputs, and environmental conditions are better described collectively as Evidence.</p>
+<p>This is now the fourth crosswalk challenging Observation-only language.</p>
+<h2 id="coherence-detection">Coherence Detection</h2>
+<p>Policy evaluation is not necessarily Coherence detection.</p>
+<p>The rubric must distinguish:</p>
+<pre><code>constraint satisfaction
+</code></pre>
+<p>from:</p>
+<pre><code>multi-Source Coherence
+</code></pre>
+<h2 id="drift-detection">Drift Detection</h2>
+<p>Policy systems may not explicitly call state changes Drift.</p>
+<p>The scoring process must evaluate actual mechanism visibility rather than RTT interpretability alone.</p>
+<h2 id="correction-discipline">Correction Discipline</h2>
+<p>Authorization decision and access enforcement provide an excellent separation, but enforcement may be delegated outside the policy engine.</p>
+<p>Delegation must remain visible.</p>
+<hr>
+<h1 id="72-rubric-recommendation-rename-observation-quality">72. Rubric Recommendation — Rename Observation Quality</h1>
+<p>After:</p>
+<pre><code>IAM
+PKI
+Authority
+</code></pre>
+<p>the evidence for renaming:</p>
+<pre><code>Observation Quality
+</code></pre>
+<p>to:</p>
+<pre><code>Evidence Quality
+</code></pre>
+<p>is now substantial.</p>
+<p>This change would preserve compatibility with NTP:</p>
+<pre><code>time samples
+  =
+Observational Evidence
+</code></pre>
+<p>and DNS:</p>
+<pre><code>resolution / record evidence
+</code></pre>
+<p>while naturally supporting:</p>
+<pre><code>assertions
+attributes
+status evidence
+attestations
+</code></pre>
+<h2 id="recommendation">Recommendation</h2>
+<p>At the next scoring-rubric revision:</p>
+<pre><code>Observation Quality
+  →
+Evidence Quality
+</code></pre>
+<p>Existing crosswalks should then be reviewed for terminology consistency.</p>
+<p>Do not silently change historical score meanings.</p>
+<p>Version the rubric.</p>
+<p>Status:</p>
+<pre><code>RECOMMENDED_RUBRIC_REVISION
+</code></pre>
+<hr>
+<h1 id="73-crosswalk-5-findings">73. Crosswalk #5 Findings</h1>
+<h2 id="finding-1-authority-is-relational">Finding 1 — Authority Is Relational</h2>
+<p>Authority belongs to a relationship among Subject, Operation, Target, policy, context, scope, and Regime.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-2-identity-does-not-imply-authority">Finding 2 — Identity Does Not Imply Authority</h2>
+<p>A correctly identified Subject may still be denied an Operation.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-3-authority-does-not-imply-correctness">Finding 3 — Authority Does Not Imply Correctness</h2>
+<p>Permission to act does not establish the truth or wisdom of the action.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-4-authority-does-not-imply-capability">Finding 4 — Authority Does Not Imply Capability</h2>
+<p>A Subject may be permitted but unable, or able but forbidden.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-5-policy-represents-declared-intent">Finding 5 — Policy Represents Declared Intent</h2>
+<p>Authority Truth depends on Intent Truth.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-6-policy-is-not-the-decision">Finding 6 — Policy Is Not the Decision</h2>
+<p>Policy requires current Evidence and context to produce an authorization result.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-7-authorization-decision-is-not-enforcement">Finding 7 — Authorization Decision Is Not Enforcement</h2>
+<p>Evaluation and downstream action remain distinct.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-8-deny-is-a-valid-qualified-result">Finding 8 — Deny Is a Valid Qualified Result</h2>
+<p>A negative domain result is not evaluation failure.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-9-delegation-preserves-constraints">Finding 9 — Delegation Preserves Constraints</h2>
+<p>Authority Lineage must preserve scope and limitations.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-10-regime-is-an-evaluation-input">Finding 10 — Regime Is an Evaluation Input</h2>
+<p>Policy and operational boundary directly participate in qualification.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<h2 id="finding-11-dynamic-context-should-remain-distinct-from-stable-regime">Finding 11 — Dynamic Context Should Remain Distinct from Stable Regime</h2>
+<p>Current environmental values are better treated as Evidence than as the Regime itself.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-12-evidence-is-broader-than-observation">Finding 12 — Evidence Is Broader Than Observation</h2>
+<p>Attributes and governed relationships reinforce EvidenceItem as the more general abstraction.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-13-truth-classes-compose">Finding 13 — Truth Classes Compose</h2>
+<p>Identity, Intent, Authority, State, and Observational Truth may participate in one authorization decision without becoming one Truth Class.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-14-stable-identity-can-hide-authority-drift">Finding 14 — Stable Identity Can Hide Authority Drift</h2>
+<p>The Subject can remain unchanged while permission structure changes.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="74-five-crosswalk-architecture-check">74. Five-Crosswalk Architecture Check</h1>
+<p>After:</p>
+<pre><code>NTP
+DNS
+IAM
+PKI
+Policy / Authorization
+</code></pre>
+<p>the architecture has reached its first meaningful consolidation point.</p>
+<h2 id="strongly-surviving">Strongly Surviving</h2>
+<pre><code>Claim
+
+Subject
+
+Regime
+
+Evidence
+
+Source / Actor
+
+Lineage
+
+Qualification
+
+domain-semantic Coherence
+
+multi-dimensional Drift
+
+Truth State
+
+Revalidation
+
+Failure Transparency
+</code></pre>
+<h2 id="promoted-to-candidate-core">Promoted to Candidate Core</h2>
+<pre><code>EvidenceItem
+
+AuthorityRelationship
+
+domain result separate from qualification state
+
+constrained Authority Lineage
+</code></pre>
+<h2 id="strongly-supported-invariants">Strongly Supported Invariants</h2>
+<pre><code>Observation ≠ Truth State
+
+Evidence ≠ Truth State
+
+Identity ≠ Authority
+
+Authority ≠ Correctness
+
+Evaluation ≠ Action
+
+Negative Domain Result ≠ Evaluation Failure
+
+Regime participates in qualification
+
+Lineage can participate operationally
+</code></pre>
+<h2 id="under-continued-pressure">Under Continued Pressure</h2>
+<pre><code>flat Evidence lists
+
+global Anchor assumptions
+
+Source without role
+
+one flattened Truth-State status
+
+Regime containing dynamic context
+
+Correction terminology outside state-adjustment domains
+</code></pre>
+<h2 id="narrowing-further">Narrowing Further</h2>
+<pre><code>Holdover as a universal mechanism
+
+scalar Lineage distance
+
+numeric Confidence as universal truth qualification
+</code></pre>
+<p>The model is becoming more relational and less value-centric.</p>
+<hr>
+<h1 id="75-emerging-architecture-after-authority-truth">75. Emerging Architecture After Authority Truth</h1>
+<p>The generalized pattern is now evolving toward:</p>
+<pre><code>SUBJECT / ACTOR
+      ↓
+CLAIM / REQUEST
+      ↓
+TARGET + OPERATION
+      ↓
+INTENDED USE
+      ↓
+CONSUMER / OBSERVER
+      ↓
+REGIME
+      ↓
+AUTHORITY RELATIONSHIPS
+      ↓
+EVIDENCE GRAPH
+   │
+   ├── Observations
+   ├── Assertions
+   ├── Attributes
+   ├── Signed Assertions
+   └── Status Evidence
+      ↓
+LINEAGE + CONSTRAINTS
+      ↓
+QUALIFICATION
+      ↓
+DOMAIN-SEMANTIC COHERENCE
+      ↓
+MULTIDIMENSIONAL DRIFT
+      ↓
+PARADOX
+      ↓
+DOMAIN RESULT
+      ↓
+TRUTH-STATE QUALIFICATION
+      ↓
+ACTION / CORRECTION POLICY
+      ↓
+ENFORCEMENT / MUTATION
+      ↓
+REVALIDATION
+      ↓
+IMMUTABLE HISTORY
+</code></pre>
+<p>This is substantially richer than the original NTP-derived sequence.</p>
+<p>That evolution is evidence that the crosswalk process is working.</p>
+<hr>
+<h1 id="76-first-consolidation-candidate">76. First Consolidation Candidate</h1>
+<p>After five crosswalks, several concepts may be ready for a formal architecture-review pass before implementation progresses too far.</p>
+<p>Candidate changes:</p>
+<pre><code>Observation
+  ↓
+EvidenceItem
+</code></pre>
+<p>with:</p>
+<pre><code>Observation
+</code></pre>
+<p>remaining one Evidence subtype.</p>
+<p>Add candidate:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>Consider:</p>
+<pre><code>ContextEvidence
+</code></pre>
+<p>Clarify:</p>
+<pre><code>TruthState.status
+  =
+qualification / lifecycle
+</code></pre>
+<p>while:</p>
+<pre><code>TruthState.accepted_value
+  =
+domain-native result
+</code></pre>
+<p>Potentially later formalize:</p>
+<pre><code>domain_result
+</code></pre>
+<p>These should be handled in a versioned architecture revision rather than patched informally across files.</p>
+<hr>
+<h1 id="77-next-crosswalk-challenge">77. Next Crosswalk Challenge</h1>
+<p>Crosswalk #6 examines:</p>
+<pre><code>Distributed Systems
+  ↓
+State Truth
+</code></pre>
+<p>The governing question becomes:</p>
+<blockquote>
+<p><strong>What is presently the case?</strong></p>
+</blockquote>
+<p>This is the correct next challenge because distributed systems will pressure concepts that have so far been evaluated primarily through:</p>
+<pre><code>reference
+hierarchy
+authority
+policy
+</code></pre>
+<p>Distributed systems may instead introduce:</p>
+<ul>
+<li>replicas</li>
+<li>quorum</li>
+<li>leadership</li>
+<li>epochs</li>
+<li>partitions</li>
+<li>state histories</li>
+<li>convergence</li>
+<li>consensus</li>
+<li>eventual consistency</li>
+<li>competing states</li>
+</ul>
+<p>The central question becomes:</p>
+<blockquote>
+<p><strong>Can the Truth Service represent operational State Truth when accepted state emerges through distributed agreement rather than direct reference to one authority?</strong></p>
+</blockquote>
+<p>That should be a serious test of:</p>
+<pre><code>Anchor
+
+Authority
+
+Coherence
+
+Paradox
+
+Regime
+</code></pre>
+<p>and:</p>
+<pre><code>Truth-State synthesis
+</code></pre>
+<hr>
+<h1 id="78-canonical-authority-truth-statement">78. Canonical Authority Truth Statement</h1>
+<blockquote>
+<p><strong>Authority Truth is not a property attached permanently to an actor. It is a Regime-qualified relationship among Subject, Operation, Target, policy, attributes, scope, delegation, Lineage, context, and time that determines whether a particular action is presently permitted.</strong></p>
+</blockquote>
+<p>This means:</p>
+<pre><code>identified
+  ≠
+authorized
+
+authorized
+  ≠
+correct
+
+authorized
+  ≠
+capable
+
+decision
+  ≠
+enforcement
+
+deny
+  ≠
+evaluation failure
+</code></pre>
+<p>Authority Truth is therefore fundamentally relational.</p>
+<hr>
+<h1 id="79-canonical-crosswalk-finding">79. Canonical Crosswalk Finding</h1>
+<p>Crosswalk #5 demonstrates that the architecture can no longer treat authority as metadata attached to a Source.</p>
+<p>Across four independent authority-bearing systems:</p>
+<pre><code>DNS
+IAM
+PKI
+Authorization Policy
+</code></pre>
+<p>authority repeatedly appears as:</p>
+<pre><code>actor
+  +
+role
+  +
+scope
+  +
+relationship
+  +
+Lineage
+  +
+Regime
+  +
+constraints
+  +
+time
+</code></pre>
+<p>This provides the strongest evidence yet for:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>as a generalized architectural object.</p>
+<p>At the same time, Authorization introduces another major distinction:</p>
+<blockquote>
+<p><strong>A system can coherently determine that an action is denied.</strong></p>
+</blockquote>
+<p>Therefore:</p>
+<pre><code>negative result
+  ≠
+failed truth evaluation
+</code></pre>
+<p>The Truth Service must evaluate:</p>
+<pre><code>quality of the relationship determination
+</code></pre>
+<p>separately from:</p>
+<pre><code>polarity of the domain result
+</code></pre>
+<p>That pattern now spans:</p>
+<pre><code>absence
+authentication
+certificate validation
+authorization
+</code></pre>
+<p>and appears increasingly general.</p>
+<hr>
+<h1 id="80-references">80. References</h1>
+<p>Primary technical reference:</p>
+<pre><code>NIST SP 800-162
+Guide to Attribute Based Access Control (ABAC)
+Definition and Considerations
+</code></pre>
+<p>National Institute of Standards and Technology.</p>
+<p>The reference defines ABAC as a logical access-control methodology in which authorization is determined by evaluating attributes associated with the Subject, Object, requested Operations, and, in some cases, environmental conditions against policy, rules, or relationships describing allowable operations.</p>
+<p>Supporting access-control guidance may be introduced where the detailed Authority crosswalk requires additional bounded mechanisms.</p>
+<p>RTT terminology, Truth Classes, Authority Relationship, Evidence Graph interpretation, Drift dimensions, Regime model, and proposed architectural generalizations remain the analytical contribution of Resonance Truth.</p>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>Crosswalk #1 asked:</p>
+<pre><code>When?
+</code></pre>
+<p>Crosswalk #2 asked:</p>
+<pre><code>Where?
+</code></pre>
+<p>Crosswalk #3 asked:</p>
+<pre><code>Who?
+</code></pre>
+<p>Crosswalk #4 asked:</p>
+<pre><code>Is it intact and qualified?
+</code></pre>
+<p>Crosswalk #5 asks:</p>
+<pre><code>May it act?
+</code></pre>
+<p>That progression exposes a crucial separation:</p>
+<pre><code>TIME
+  does not grant authority
+
+LOCATION
+  does not grant authority
+
+IDENTITY
+  does not grant authority
+
+INTEGRITY
+  does not grant authority
+</code></pre>
+<p>Authority must still be evaluated.</p>
+<p>And when it is evaluated, the answer belongs to a relationship:</p>
+<pre><code>Who?
+
+Wants to do what?
+
+To which thing?
+
+Under which policy?
+
+Using which attributes?
+
+Through which delegation?
+
+Within which scope?
+
+Under which current conditions?
+
+At what time?
+</code></pre>
+<p>The answer may be:</p>
+<pre><code>PERMIT
+</code></pre>
+<p>or:</p>
+<pre><code>DENY
+</code></pre>
+<p>and either may represent a fully coherent operational Truth State.</p>
+<p>That may be the cleanest result of Crosswalk #5:</p>
+<blockquote>
+<p><strong>Truth qualification is about whether the answer is structurally supported, not whether the answer is positive.</strong></p>
+</blockquote>
+<p><strong>NTP taught truth to synchronize.</strong></p>
+<p><strong>DNS taught it to resolve.</strong></p>
+<p><strong>IAM taught it to identify.</strong></p>
+<p><strong>PKI taught it to validate a chain.</strong></p>
+<p><strong>Policy teaches it that even a perfectly identified, intact, well-qualified actor still has to ask permission.</strong></p>
+<p><strong>Crosswalk #6 now removes the single authority from center stage and asks a distributed system what it believes the current state actually is.</strong></p>
   </main>
 </body>
 </html>

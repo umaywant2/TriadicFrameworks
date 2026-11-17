@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/06_distributed_state_truth.md">
-  <title>06_distributed_state_truth</title>
+  <title>Crosswalk #6 — Distributed Systems and State Truth</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2850 @@
   </aside>
 
   <main>
-<p>. </p>
+<h1 id="crosswalk-6-distributed-systems-and-state-truth">Crosswalk #6 — Distributed Systems and State Truth</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Crosswalk #6<br>
+<strong>Truth Class:</strong> State Truth<br>
+<strong>Reference System:</strong> Distributed Consensus / Replicated State Machines<br>
+<strong>Primary Reference Case:</strong> Raft<br>
+<strong>Supporting Reference Family:</strong> Paxos / Distributed Consensus<br>
+<strong>Primary RTT Dimensions:</strong> Coherence · Drift · Paradox · Regime<br>
+<strong>Supporting RTT Dimensions:</strong> Temp · Lineage · Spin · Elec · Authority<br>
+<strong>Status:</strong> Research Crosswalk / Architecture Challenge<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This crosswalk examines distributed consensus and replicated state machines as the sixth operational reference system for the RTT Resonance Truth Service.</p>
+<p>The governing question is:</p>
+<blockquote>
+<p><strong>What is presently the case?</strong></p>
+</blockquote>
+<p>Crosswalk #1 examined:</p>
+<pre><code>NTP
+  ↓
+Temporal Truth
+  ↓
+When?
+</code></pre>
+<p>Crosswalk #2 examined:</p>
+<pre><code>DNS
+  ↓
+Locational Truth
+  ↓
+Where?
+</code></pre>
+<p>Crosswalk #3 examined:</p>
+<pre><code>IAM
+  ↓
+Identity Truth
+  ↓
+Who?
+</code></pre>
+<p>Crosswalk #4 examined:</p>
+<pre><code>PKI
+  ↓
+Integrity Truth
+  ↓
+Is it intact and qualified?
+</code></pre>
+<p>Crosswalk #5 examined:</p>
+<pre><code>Policy / Authorization
+  ↓
+Authority Truth
+  ↓
+Who may?
+</code></pre>
+<p>Crosswalk #6 now asks:</p>
+<pre><code>Distributed Systems
+  ↓
+State Truth
+  ↓
+What is presently accepted as current?
+</code></pre>
+<p>This introduces an important architectural shift.</p>
+<p>The previous crosswalks frequently relied upon:</p>
+<ul>
+<li>reference Sources</li>
+<li>bounded authorities</li>
+<li>delegated authority</li>
+<li>trust Anchors</li>
+<li>policy</li>
+<li>consumer qualification</li>
+</ul>
+<p>Distributed consensus introduces another pattern:</p>
+<blockquote>
+<p><strong>Operational state may emerge from protocol-governed agreement among multiple participants.</strong></p>
+</blockquote>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Can the Truth Service represent State Truth when accepted state is established through distributed agreement rather than direct consultation with one external truth authority?</strong></p>
+</blockquote>
+<hr>
+<h1 id="1-evidence-boundary">1. Evidence Boundary</h1>
+<p>The primary reference case for this crosswalk is:</p>
+<pre><code>Raft
+Consensus for replicated state machines
+</code></pre>
+<p>The reference case is useful because it exposes several mechanisms clearly:</p>
+<ul>
+<li>replicated state machines</li>
+<li>replicated logs</li>
+<li>leader election</li>
+<li>follower / candidate / leader roles</li>
+<li>terms</li>
+<li>log entries</li>
+<li>log replication</li>
+<li>majority-based commitment</li>
+<li>ordered application of committed commands</li>
+<li>safety properties</li>
+<li>stale-term detection</li>
+<li>recovery after leader change</li>
+</ul>
+<p>The supporting distributed-consensus family includes:</p>
+<pre><code>Paxos
+</code></pre>
+<p>for the broader principle that distributed participants can use protocol-governed agreement to choose values or maintain replicated state despite failures.</p>
+<p>The purpose of this crosswalk is not to compare Raft and Paxos comprehensively.</p>
+<p>Raft provides the primary structural reference case.</p>
+<hr>
+<h1 id="2-evidence-discipline">2. Evidence Discipline</h1>
+<p>This crosswalk distinguishes:</p>
+<h2 id="distributed-system-fact">Distributed-System Fact</h2>
+<p>A mechanism explicitly represented by the bounded reference material.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>A structural interpretation introduced through Resonance Truth.</p>
+<h2 id="candidate-generalization">Candidate Generalization</h2>
+<p>A mechanism potentially reusable outside distributed State Truth.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A proposed abstraction requiring further crosswalk evidence.</p>
+<p>Example:</p>
+<pre><code>Distributed-System Fact:
+  A Raft log entry becomes committed after the protocol's
+  required replication condition is satisfied.
+
+RTT Interpretation:
+  A proposed state transition crosses a protocol-defined
+  acceptance boundary.
+
+Candidate Generalization:
+  Truth systems may require explicit distinction between
+  proposed, observed, accepted, and committed state.
+
+Hypothesis:
+  Commitment should become a first-class generalized
+  Truth-State transition.
+</code></pre>
+<p>Crosswalk #7 will test that hypothesis directly through Transactional Truth.</p>
+<hr>
+<h1 id="3-why-distributed-state-comes-sixth">3. Why Distributed State Comes Sixth</h1>
+<p>The first five crosswalks produced an increasingly relational architecture.</p>
+<p>By Crosswalk #5, the pattern included:</p>
+<pre><code>Subject
+  ↓
+Claim / Request
+  ↓
+Evidence
+  ↓
+Authority Relationships
+  ↓
+Regime
+  ↓
+Qualification
+  ↓
+Coherence
+  ↓
+Truth State
+</code></pre>
+<p>Much of that development involved identifiable authority structures.</p>
+<p>Distributed consensus challenges that orientation.</p>
+<p>A replicated state machine may establish accepted state through:</p>
+<pre><code>protocol
+  +
+participant roles
+  +
+ordered history
+  +
+quorum / majority relationships
+  +
+safety conditions
+</code></pre>
+<p>rather than:</p>
+<pre><code>ask one external authority what the state is
+</code></pre>
+<p>This creates the first serious challenge to:</p>
+<pre><code>Truth Anchor
+</code></pre>
+<p>as a universal architecture assumption.</p>
+<hr>
+<h1 id="4-state-truth">4. State Truth</h1>
+<p>The primary Truth Class is:</p>
+<pre><code>State Truth
+</code></pre>
+<p>Its operational question is:</p>
+<blockquote>
+<p><strong>What is presently the case?</strong></p>
+</blockquote>
+<p>For distributed systems, a more precise question is:</p>
+<blockquote>
+<p><strong>Which state or state transition has become operationally accepted by the distributed protocol?</strong></p>
+</blockquote>
+<p>That distinction matters.</p>
+<p>One replica may locally contain information that:</p>
+<pre><code>exists
+</code></pre>
+<p>but has not yet become:</p>
+<pre><code>committed
+</code></pre>
+<p>Likewise, one node may possess:</p>
+<pre><code>stale state
+</code></pre>
+<p>while another possesses:</p>
+<pre><code>newer state
+</code></pre>
+<p>The architecture must therefore distinguish:</p>
+<pre><code>locally observed state
+</code></pre>
+<p>from:</p>
+<pre><code>protocol-accepted state
+</code></pre>
+<p>and:</p>
+<pre><code>committed state
+</code></pre>
+<hr>
+<h1 id="5-distributed-state-on-its-own-terms">5. Distributed State on Its Own Terms</h1>
+<p>Replicated state-machine systems maintain multiple instances whose behavior is coordinated through an ordered sequence of commands.</p>
+<p>A simplified Raft-like sequence is:</p>
+<pre><code>Client Command
+     ↓
+   Leader
+     ↓
+Local Log Entry
+     ↓
+Replication
+     ↓
+Majority Condition
+     ↓
+   Commit
+     ↓
+State-Machine Application
+     ↓
+Replicated State
+</code></pre>
+<p>The important point is:</p>
+<blockquote>
+<p><strong>A proposed command does not become accepted state merely because one participant observed it.</strong></p>
+</blockquote>
+<p>The protocol defines a transition from:</p>
+<pre><code>proposal
+</code></pre>
+<p>to:</p>
+<pre><code>replicated entry
+</code></pre>
+<p>to:</p>
+<pre><code>committed entry
+</code></pre>
+<p>to:</p>
+<pre><code>applied state
+</code></pre>
+<p>This distinction becomes central to State Truth.</p>
+<hr>
+<h1 id="6-initial-structural-crosswalk">6. Initial Structural Crosswalk</h1>
+<table>
+<thead>
+<tr>
+<th>Distributed-System Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Replicated state machine</td>
+<td>Distributed Truth-State materialization</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Replica</td>
+<td>Observer / participant / local state holder</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Client command</td>
+<td>Proposed state transition</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Log entry</td>
+<td>Recorded transition Claim</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Replicated log</td>
+<td>Ordered state Lineage</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Leader</td>
+<td>Temporary protocol authority / coordinator</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Follower</td>
+<td>Replica / participating observer</td>
+<td>Domain-Specific role</td>
+</tr>
+<tr>
+<td>Candidate</td>
+<td>Transitional authority role</td>
+<td>Domain-Specific role</td>
+</tr>
+<tr>
+<td>Term</td>
+<td>Regime epoch</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Election</td>
+<td>Authority transition</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Majority</td>
+<td>Agreement threshold</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>Operational acceptance boundary</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Applied entry</td>
+<td>Materialized State Truth</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Log matching</td>
+<td>Historical Coherence</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Stale term</td>
+<td>Regime-stale information</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Partition / communication loss</td>
+<td>Observation / participation boundary</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Leader change</td>
+<td>Authority-Regime transition</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Recovery / reconciliation</td>
+<td>Coherence restoration</td>
+<td>Strong Candidate General</td>
+</tr>
+</tbody>
+</table>
+<p>Distributed systems add an especially strong new distinction:</p>
+<pre><code>PROPOSED
+  ≠
+REPLICATED
+  ≠
+COMMITTED
+  ≠
+APPLIED
+</code></pre>
+<p>This will strongly influence later Transactional Truth.</p>
+<hr>
+<h1 id="7-replica-observer-and-state-holder">7. Replica → Observer and State Holder</h1>
+<p>A replica maintains local protocol state and may hold a local copy of the replicated log/state machine.</p>
+<p>RTT interpretation:</p>
+<pre><code>Observer
+  +
+Local State Holder
+  +
+Participant
+</code></pre>
+<p>This strengthens the Observer candidate introduced by DNS, IAM, and PKI.</p>
+<p>However, distributed systems add something new.</p>
+<p>The Observer is not merely:</p>
+<pre><code>consuming Truth
+</code></pre>
+<p>It may also participate in:</p>
+<pre><code>establishing accepted state
+</code></pre>
+<p>Therefore the generalized architecture should distinguish potentially:</p>
+<pre><code>passive observer
+</code></pre>
+<p>from:</p>
+<pre><code>participating observer
+</code></pre>
+<p>or more broadly:</p>
+<pre><code>participant role
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="8-local-state-accepted-state">8. Local State ≠ Accepted State</h1>
+<p>This is one of the most important contributions from Crosswalk #6.</p>
+<p>A replica may locally possess:</p>
+<pre><code>an entry
+</code></pre>
+<p>without that entry being:</p>
+<pre><code>committed
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Presence in local state does not necessarily imply protocol acceptance.</strong></p>
+</blockquote>
+<p>Conceptually:</p>
+<pre><code>Local Observation
+      ↓
+Protocol Evaluation
+      ↓
+Accepted / Committed State
+</code></pre>
+<p>This reinforces the Truth-Service distinction:</p>
+<pre><code>Observation
+  ≠
+Truth State
+</code></pre>
+<p>in a new domain.</p>
+<hr>
+<h1 id="9-client-command-proposed-state-transition">9. Client Command → Proposed State Transition</h1>
+<p>A client may submit a command intended to change replicated state.</p>
+<p>RTT interpretation:</p>
+<pre><code>Proposed State Transition
+</code></pre>
+<p>This is not yet:</p>
+<pre><code>State Truth
+</code></pre>
+<p>It represents:</p>
+<pre><code>proposed Intent
+</code></pre>
+<p>or:</p>
+<pre><code>requested transition
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Command
+  ↓
+Proposal
+  ↓
+Protocol
+  ↓
+Commitment
+  ↓
+State Transition
+</code></pre>
+<p>This reveals interaction between:</p>
+<pre><code>Intent Truth
+</code></pre>
+<p>and:</p>
+<pre><code>State Truth
+</code></pre>
+<p>A desired transition does not become State Truth merely because it was requested.</p>
+<hr>
+<h1 id="10-proposal-state">10. Proposal ≠ State</h1>
+<p>This distinction parallels prior crosswalk findings.</p>
+<pre><code>Policy
+  ≠
+Authorization Decision
+
+Certificate
+  ≠
+Accepted Truth State
+
+Identity Assertion
+  ≠
+Relying-Party Acceptance
+</code></pre>
+<p>Now:</p>
+<pre><code>Proposed Command
+  ≠
+Distributed State Truth
+</code></pre>
+<p>The generalized pattern is becoming:</p>
+<pre><code>input Claim / proposal
+    ↓
+governed evaluation
+    ↓
+accepted state
+</code></pre>
+<p>This is now strongly cross-domain.</p>
+<hr>
+<h1 id="11-log-entry-recorded-transition-claim">11. Log Entry → Recorded Transition Claim</h1>
+<p>A Raft log contains commands associated with log positions and terms.</p>
+<p>RTT interpretation:</p>
+<pre><code>Recorded Transition Claim
+</code></pre>
+<p>The entry expresses:</p>
+<blockquote>
+<p>A particular state transition is proposed or recorded at this logical position.</p>
+</blockquote>
+<p>However:</p>
+<pre><code>log entry exists
+</code></pre>
+<p>does not necessarily mean:</p>
+<pre><code>log entry committed
+</code></pre>
+<p>Again, lifecycle matters.</p>
+<p>Potential generalized stages:</p>
+<pre><code>proposed
+recorded
+replicated
+committed
+applied
+</code></pre>
+<p>These should not be collapsed.</p>
+<hr>
+<h1 id="12-replicated-log-ordered-state-lineage">12. Replicated Log → Ordered State Lineage</h1>
+<p>A replicated log provides more than storage.</p>
+<p>It represents the ordered history through which replicated state is derived.</p>
+<p>RTT interpretation:</p>
+<pre><code>Ordered State Lineage
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Initial State
+    ↓
+Command 1
+    ↓
+State 1
+    ↓
+Command 2
+    ↓
+State 2
+    ↓
+Command 3
+    ↓
+State 3
+</code></pre>
+<p>This strongly broadens Lineage.</p>
+<p>Previous crosswalks used Lineage primarily for:</p>
+<ul>
+<li>reference ancestry</li>
+<li>delegation</li>
+<li>identity federation</li>
+<li>certification paths</li>
+<li>authority delegation</li>
+</ul>
+<p>Distributed systems add:</p>
+<pre><code>transition history
+</code></pre>
+<p>Therefore Lineage now has at least two broad forms:</p>
+<pre><code>provenance Lineage
+</code></pre>
+<p>and:</p>
+<pre><code>transition Lineage
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="13-lineage-is-not-only-provenance">13. Lineage Is Not Only Provenance</h1>
+<p>This is a significant architecture refinement.</p>
+<p>Earlier generalized meaning:</p>
+<blockquote>
+<p>Where did this come from?</p>
+</blockquote>
+<p>Distributed State Truth adds:</p>
+<blockquote>
+<p><strong>Through which ordered transitions did the current state emerge?</strong></p>
+</blockquote>
+<p>Therefore Lineage can describe:</p>
+<pre><code>ancestry
+</code></pre>
+<p>and:</p>
+<pre><code>evolution
+</code></pre>
+<p>Candidate conceptual split:</p>
+<pre><code>ProvenanceLineage
+
+TransitionLineage
+</code></pre>
+<p>Do not introduce separate core entities yet.</p>
+<p>The generalized Lineage graph may already represent both through edge semantics.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="14-leader-temporary-protocol-authority">14. Leader → Temporary Protocol Authority</h1>
+<p>Raft uses a leader to coordinate normal operation and log replication.</p>
+<p>RTT interpretation:</p>
+<pre><code>Temporary Protocol Authority
+</code></pre>
+<p>This challenges the AuthorityRelationship developed in earlier crosswalks.</p>
+<p>The leader is authoritative:</p>
+<pre><code>within a term
+for defined protocol operations
+</code></pre>
+<p>Its authority is not:</p>
+<pre><code>permanent
+</code></pre>
+<p>nor:</p>
+<pre><code>universal
+</code></pre>
+<p>nor:</p>
+<pre><code>externally inherent
+</code></pre>
+<p>It emerges from:</p>
+<pre><code>election
+  +
+protocol state
+  +
+current term
+</code></pre>
+<p>This strongly validates:</p>
+<blockquote>
+<p><strong>Authority can be temporary, relational, scoped, and Regime-bound.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strengthened
+</code></pre>
+<hr>
+<h1 id="15-protocol-authority-truth-anchor">15. Protocol Authority ≠ Truth Anchor</h1>
+<p>This distinction is extremely useful.</p>
+<p>The leader may coordinate accepted state.</p>
+<p>But it should not automatically be interpreted as:</p>
+<pre><code>ultimate Truth Anchor
+</code></pre>
+<p>Its authority is derived from the protocol.</p>
+<p>Conceptually:</p>
+<pre><code>Protocol Rules
+    ↓
+Election
+    ↓
+Leader for Term N
+    ↓
+Coordination Authority
+</code></pre>
+<p>This suggests:</p>
+<blockquote>
+<p><strong>Authority may emerge from procedure rather than descend from one external Anchor.</strong></p>
+</blockquote>
+<p>This seriously challenges:</p>
+<pre><code>Anchor
+</code></pre>
+<p>as a mandatory generalized object.</p>
+<hr>
+<h1 id="16-anchor-challenge">16. Anchor Challenge</h1>
+<p>After the first five crosswalks, Anchor appeared increasingly stable.</p>
+<p>Distributed consensus forces a sharper question:</p>
+<blockquote>
+<p><strong>What is the Anchor of distributed State Truth?</strong></p>
+</blockquote>
+<p>Possible candidates include:</p>
+<pre><code>protocol definition
+
+committed history
+
+quorum intersection properties
+
+current term
+
+replicated log
+</code></pre>
+<p>But none maps cleanly to:</p>
+<pre><code>external reference source
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Truth Anchor
+</code></pre>
+<p>may need to become:</p>
+<pre><code>Reference Basis
+</code></pre>
+<p>as the more general abstraction.</p>
+<p>Potential subtypes:</p>
+<pre><code>External Anchor
+
+Governing Protocol
+
+Accepted History
+
+Policy Basis
+</code></pre>
+<p>This is a major architecture challenge.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<p>Do not rename the core object yet.</p>
+<hr>
+<h1 id="17-election-authority-transition">17. Election → Authority Transition</h1>
+<p>Raft elects a new leader when required by protocol conditions.</p>
+<p>RTT interpretation:</p>
+<pre><code>Authority Transition
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Term N
+  ↓
+Leader A
+</code></pre>
+<p>then:</p>
+<pre><code>Term N+1
+  ↓
+Leader B
+</code></pre>
+<p>The authority relationship changes.</p>
+<p>The distributed system does not necessarily regard this as failure.</p>
+<p>It is a protocol-governed transition.</p>
+<p>This provides a particularly clean example of:</p>
+<pre><code>Authority Drift
+</code></pre>
+<p>and:</p>
+<pre><code>Regime Transition
+</code></pre>
+<p>without necessarily implying:</p>
+<pre><code>State Truth failure
+</code></pre>
+<hr>
+<h1 id="18-term-regime-epoch">18. Term → Regime Epoch</h1>
+<p>Raft terms are monotonically increasing logical periods used to distinguish leadership epochs and identify stale information.</p>
+<p>RTT interpretation:</p>
+<pre><code>Regime Epoch
+</code></pre>
+<p>Within:</p>
+<pre><code>Term N
+</code></pre>
+<p>one leader may be authoritative.</p>
+<p>When:</p>
+<pre><code>Term N+1
+</code></pre>
+<p>begins, previous leadership information may become stale.</p>
+<p>This gives the Truth Service an important generalized candidate:</p>
+<pre><code>Epoch
+</code></pre>
+<p>An Epoch is:</p>
+<blockquote>
+<p><strong>A versioned operational Regime interval within which particular authority and state assumptions remain valid.</strong></p>
+</blockquote>
+<p>Potential broader uses:</p>
+<ul>
+<li>policy revisions</li>
+<li>configuration generations</li>
+<li>transaction rounds</li>
+<li>trust-store versions</li>
+<li>consensus terms</li>
+</ul>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="19-epoch-wall-clock-time">19. Epoch ≠ Wall-Clock Time</h1>
+<p>This is important.</p>
+<p>A Regime Epoch may progress logically without corresponding directly to physical time intervals.</p>
+<p>Therefore:</p>
+<pre><code>Temp
+</code></pre>
+<p>must not be reduced to:</p>
+<pre><code>wall-clock timestamp
+</code></pre>
+<p>The architecture should support:</p>
+<pre><code>temporal ordering
+logical ordering
+generation ordering
+epoch ordering
+</code></pre>
+<p>This broadens Temporal structure significantly.</p>
+<hr>
+<h1 id="20-stale-term-regime-stale-evidence">20. Stale Term → Regime-Stale Evidence</h1>
+<p>Raft terms allow nodes to detect stale information from earlier terms.</p>
+<p>RTT interpretation:</p>
+<pre><code>Regime-Stale Evidence
+</code></pre>
+<p>This is conceptually different from:</p>
+<pre><code>chronologically old
+</code></pre>
+<p>An Observation or message may be recent in wall-clock time but belong to:</p>
+<pre><code>an obsolete Regime Epoch
+</code></pre>
+<p>Therefore Freshness may have at least two dimensions:</p>
+<pre><code>temporal freshness
+</code></pre>
+<p>and:</p>
+<pre><code>regime freshness
+</code></pre>
+<p>This is a major candidate generalization.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="21-majority-agreement-threshold">21. Majority → Agreement Threshold</h1>
+<p>Raft uses majority relationships for elections and commitment behavior.</p>
+<p>RTT interpretation:</p>
+<pre><code>Agreement Threshold
+</code></pre>
+<p>This should not be generalized naïvely into:</p>
+<pre><code>truth = majority vote
+</code></pre>
+<p>The important mechanism is:</p>
+<blockquote>
+<p><strong>The protocol defines a sufficient agreement condition for accepting particular distributed state transitions.</strong></p>
+</blockquote>
+<p>Therefore:</p>
+<pre><code>Agreement Threshold
+</code></pre>
+<p>is Regime / protocol-specific.</p>
+<p>Different systems may use:</p>
+<ul>
+<li>majority</li>
+<li>quorum</li>
+<li>unanimity</li>
+<li>weighted agreement</li>
+<li>authority rules</li>
+<li>other acceptance conditions</li>
+</ul>
+<h2 id="generalized-candidate">Generalized Candidate</h2>
+<pre><code>AcceptanceRule
+</code></pre>
+<p>rather than:</p>
+<pre><code>MajorityRule
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="22-majority-truth-by-popularity">22. Majority ≠ Truth by Popularity</h1>
+<p>This distinction must be explicit.</p>
+<p>The crosswalk does not conclude:</p>
+<blockquote>
+<p>If most observers say X, X is true.</p>
+</blockquote>
+<p>Instead:</p>
+<blockquote>
+<p><strong>Within this distributed protocol, a defined quorum relationship participates in establishing a safe accepted state.</strong></p>
+</blockquote>
+<p>The acceptance condition has meaning because of:</p>
+<ul>
+<li>protocol rules</li>
+<li>participant set</li>
+<li>failure assumptions</li>
+<li>history</li>
+<li>quorum structure</li>
+</ul>
+<p>This is fundamentally different from unstructured voting.</p>
+<hr>
+<h1 id="23-quorum-structural-coherence">23. Quorum → Structural Coherence</h1>
+<p>Distributed systems provide perhaps the strongest challenge yet to the RTT Coherence abstraction.</p>
+<p>Coherence here does not mean:</p>
+<pre><code>similar observations
+</code></pre>
+<p>It may instead involve:</p>
+<pre><code>compatible logs
+valid terms
+quorum relationships
+protocol safety
+ordered state
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Structural Coherence
+</code></pre>
+<p>This further confirms:</p>
+<blockquote>
+<p><strong>Coherence is domain-semantic and protocol-governed.</strong></p>
+</blockquote>
+<p>Generic similarity/equality should now be rejected as a canonical generalized definition.</p>
+<hr>
+<h1 id="24-commitment-operational-acceptance-boundary">24. Commitment → Operational Acceptance Boundary</h1>
+<p>Raft distinguishes between entries that are merely present and entries that are committed under protocol conditions.</p>
+<p>RTT interpretation:</p>
+<pre><code>Operational Acceptance Boundary
+</code></pre>
+<p>This is one of the strongest candidates introduced by Crosswalk #6.</p>
+<p>Conceptually:</p>
+<pre><code>Proposed
+   ↓
+Recorded
+   ↓
+Replicated
+   ↓
+COMMITTED
+   ↓
+Applied
+</code></pre>
+<p>The commit boundary changes the semantic status of the entry.</p>
+<p>Potential generalized concept:</p>
+<pre><code>CommitmentState
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<p>Crosswalk #7 will test this directly.</p>
+<hr>
+<h1 id="25-committed-applied">25. Committed ≠ Applied</h1>
+<p>A committed command may then be applied to the state machine.</p>
+<p>Therefore:</p>
+<pre><code>Commitment
+  ≠
+Materialization
+</code></pre>
+<p>This parallels:</p>
+<pre><code>Authorization Decision
+  ≠
+Enforcement
+</code></pre>
+<p>and:</p>
+<pre><code>Truth State
+  ≠
+Downstream Mutation
+</code></pre>
+<p>Distributed systems therefore strongly reinforce:</p>
+<blockquote>
+<p><strong>Accepted state transition and physical/local state application are separate stages.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CONFIRMED_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="26-applied-state-materialized-truth-state">26. Applied State → Materialized Truth State</h1>
+<p>Once committed commands are applied, the local state machine materializes the resulting state.</p>
+<p>RTT interpretation:</p>
+<pre><code>Materialized State Truth
+</code></pre>
+<p>This strongly revisits the DNS candidate:</p>
+<pre><code>Materialized Truth State
+</code></pre>
+<p>The pattern now exists in two significantly different domains.</p>
+<p>DNS:</p>
+<pre><code>cached qualified resolution state
+</code></pre>
+<p>Distributed Systems:</p>
+<pre><code>locally applied committed state
+</code></pre>
+<p>Potential generalized meaning:</p>
+<blockquote>
+<p><strong>A Truth State may have one or more operational materializations derived from an accepted evaluation/history.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>This may deserve promotion in the next consolidation pass.</p>
+<hr>
+<h1 id="27-materialization-can-lag-acceptance">27. Materialization Can Lag Acceptance</h1>
+<p>One replica may not yet have applied all committed entries.</p>
+<p>Therefore:</p>
+<pre><code>accepted shared state
+</code></pre>
+<p>and:</p>
+<pre><code>local materialization
+</code></pre>
+<p>may temporarily differ.</p>
+<p>This creates:</p>
+<pre><code>Materialization Drift
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>committed index:
+  N
+
+local applied index:
+  N-2
+</code></pre>
+<p>The local replica may be:</p>
+<pre><code>behind
+</code></pre>
+<p>without the committed history itself being contested.</p>
+<p>This is a powerful distinction.</p>
+<hr>
+<h1 id="28-state-truth-vs-observational-truth">28. State Truth vs Observational Truth</h1>
+<p>Suppose a node reports:</p>
+<pre><code>local state = S1
+</code></pre>
+<p>while the committed distributed state corresponds to:</p>
+<pre><code>S2
+</code></pre>
+<p>Both observations may be accurate in different dimensions.</p>
+<pre><code>Observational Truth:
+  node currently possesses S1
+
+State Truth:
+  protocol has accepted S2
+</code></pre>
+<p>No contradiction is required.</p>
+<p>This strongly validates Truth-Class orthogonality.</p>
+<hr>
+<h1 id="29-log-matching-historical-coherence">29. Log Matching → Historical Coherence</h1>
+<p>Raft includes log-matching safety relationships.</p>
+<p>RTT interpretation:</p>
+<pre><code>Historical Coherence
+</code></pre>
+<p>The relevant question is not merely:</p>
+<blockquote>
+<p>Do replicas have the same current value?</p>
+</blockquote>
+<p>It is also:</p>
+<blockquote>
+<p><strong>Are their histories compatible through the relevant committed positions?</strong></p>
+</blockquote>
+<p>This adds another Coherence form:</p>
+<pre><code>value Coherence
+</code></pre>
+<p>vs:</p>
+<pre><code>historical Coherence
+</code></pre>
+<p>Potential generalized principle:</p>
+<blockquote>
+<p><strong>Two current states may appear identical while possessing materially different Lineage.</strong></p>
+</blockquote>
+<p>This echoes DNS and PKI.</p>
+<hr>
+<h1 id="30-state-equality-lineage-equality">30. State Equality ≠ Lineage Equality</h1>
+<p>Consider two replicas whose current state values appear identical.</p>
+<p>If their transition histories differ materially, the apparent equality may not imply structural equivalence.</p>
+<p>Therefore:</p>
+<pre><code>current value equality
+  ≠
+historical Coherence
+</code></pre>
+<p>This directly strengthens:</p>
+<blockquote>
+<p><strong>Stable value can conceal structural Drift.</strong></p>
+</blockquote>
+<p>That finding has now survived:</p>
+<pre><code>DNS
+IAM
+PKI
+Authority
+Distributed State
+</code></pre>
+<p>It is becoming strongly generalized.</p>
+<hr>
+<h1 id="31-log-divergence-state-drift">31. Log Divergence → State Drift</h1>
+<p>After failures or leadership changes, replicas may temporarily contain divergent uncommitted log entries.</p>
+<p>RTT interpretation:</p>
+<pre><code>State / Lineage Drift
+</code></pre>
+<p>Potential dimensions:</p>
+<pre><code>value
+lineage
+regime
+authority
+</code></pre>
+<p>The protocol then restores compatible state according to its safety rules.</p>
+<p>This makes distributed systems a strong example of:</p>
+<pre><code>Drift
+  ↓
+detection
+  ↓
+bounded reconciliation
+  ↓
+restored Coherence
+</code></pre>
+<hr>
+<h1 id="32-reconciliation-correction">32. Reconciliation → Correction</h1>
+<p>NTP contributed bounded clock Correction.</p>
+<p>DNS contributed cache replacement / resolution refresh.</p>
+<p>Authorization contributed enforcement separation.</p>
+<p>Distributed systems contribute:</p>
+<pre><code>replica reconciliation
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Correction / Coherence Restoration
+</code></pre>
+<p>The local state may be brought back into compatibility with accepted history.</p>
+<p>This strongly supports:</p>
+<pre><code>Correction
+</code></pre>
+<p>as generalized,</p>
+<p>but correction mechanisms remain domain-specific.</p>
+<hr>
+<h1 id="33-correction-does-not-rewrite-accepted-history-arbitrarily">33. Correction Does Not Rewrite Accepted History Arbitrarily</h1>
+<p>A key safety property of consensus systems is that recovery should preserve committed state.</p>
+<p>RTT interpretation:</p>
+<blockquote>
+<p><strong>Correction should reconcile local Drift toward qualified accepted state without arbitrarily rewriting the evidence basis that made that state accepted.</strong></p>
+</blockquote>
+<p>This supports immutable:</p>
+<pre><code>Evaluation history
+Truth-State history
+Lineage
+</code></pre>
+<p>in the Resonance Truth architecture.</p>
+<hr>
+<h1 id="34-partition-observation-boundary">34. Partition → Observation Boundary</h1>
+<p>A network partition can prevent some participants from communicating.</p>
+<p>RTT interpretation:</p>
+<pre><code>Observation / Participation Boundary
+</code></pre>
+<p>During a partition:</p>
+<ul>
+<li>some nodes may remain connected</li>
+<li>some may be isolated</li>
+<li>local states may differ</li>
+<li>progress conditions may differ</li>
+</ul>
+<p>The important architecture lesson is:</p>
+<blockquote>
+<p><strong>An observer's inability to see current accepted state does not necessarily mean no accepted state exists.</strong></p>
+</blockquote>
+<p>This mirrors:</p>
+<pre><code>evidence absence
+  ≠
+state absence
+</code></pre>
+<p>from earlier crosswalks.</p>
+<hr>
+<h1 id="35-partition-automatic-paradox">35. Partition ≠ Automatic Paradox</h1>
+<p>Different replicas may show different local states during disrupted communication.</p>
+<p>Before classifying Paradox, ask:</p>
+<pre><code>committed or uncommitted?
+
+same term?
+
+stale replica?
+
+different Regime Epoch?
+
+local materialization lag?
+
+incompatible accepted histories?
+</code></pre>
+<p>Many apparent contradictions are resolvable through:</p>
+<pre><code>protocol semantics
+Regime
+Lineage
+commitment status
+</code></pre>
+<p>Again:</p>
+<blockquote>
+<p><strong>Classification precedes Paradox.</strong></p>
+</blockquote>
+<hr>
+<h1 id="36-split-brain-like-conditions-structural-paradox-candidate">36. Split-Brain-Like Conditions → Structural Paradox Candidate</h1>
+<p>A genuinely problematic state can arise when components behave as though incompatible authorities or states are simultaneously valid.</p>
+<p>RTT interpretation:</p>
+<pre><code>Structural Paradox Candidate
+</code></pre>
+<p>However, the exact meaning depends on the distributed protocol.</p>
+<p>The Truth Service should not use:</p>
+<pre><code>split brain
+</code></pre>
+<p>as a generic label for any replica difference.</p>
+<p>A true structural contradiction requires incompatible authority or accepted-state relationships within the same intended Regime.</p>
+<hr>
+<h1 id="37-leader-authority-is-protocol-bounded">37. Leader Authority Is Protocol-Bounded</h1>
+<p>The leader has authority to coordinate log replication during its valid term.</p>
+<p>But:</p>
+<pre><code>leader says X
+</code></pre>
+<p>is not equivalent to:</p>
+<pre><code>X committed
+</code></pre>
+<p>The protocol still governs acceptance.</p>
+<p>This is a profound Authority Truth refinement.</p>
+<p>Conceptually:</p>
+<pre><code>Leader Authority
+  permits
+Proposal / Replication
+</code></pre>
+<p>but:</p>
+<pre><code>Protocol Acceptance Rule
+  determines
+Commitment
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Authority to propose or coordinate does not imply authority to declare final accepted state unilaterally.</strong></p>
+</blockquote>
+<p>This should be preserved as a generalized Authority principle.</p>
+<hr>
+<h1 id="38-authority-to-propose-authority-to-commit">38. Authority to Propose ≠ Authority to Commit</h1>
+<p>Crosswalk #5 taught:</p>
+<pre><code>authorized to act
+  ≠
+action correctness
+</code></pre>
+<p>Crosswalk #6 adds:</p>
+<pre><code>authorized to propose
+  ≠
+accepted commitment
+</code></pre>
+<p>Different authority roles may govern different lifecycle stages.</p>
+<p>Potential generalized model:</p>
+<pre><code>AuthorityRelationship.operation
+</code></pre>
+<p>already supports this concept.</p>
+<p>Example:</p>
+<pre><code>role:
+  leader
+
+permitted operation:
+  propose / replicate
+</code></pre>
+<p>while commitment remains:</p>
+<pre><code>protocol-governed
+</code></pre>
+<p>This strongly validates operation-scoped AuthorityRelationship.</p>
+<hr>
+<h1 id="39-consensus-one-universal-truth-oracle">39. Consensus ≠ One Universal Truth Oracle</h1>
+<p>The crosswalk should resist another naïve conclusion:</p>
+<pre><code>consensus
+  =
+objective truth
+</code></pre>
+<p>A distributed consensus protocol establishes:</p>
+<blockquote>
+<p><strong>an accepted value, ordering, or state under defined protocol assumptions.</strong></p>
+</blockquote>
+<p>It does not prove that the committed command corresponds to an external physical-world fact.</p>
+<p>Therefore:</p>
+<pre><code>consensus Truth
+  =
+operational State Truth
+</code></pre>
+<p>not:</p>
+<pre><code>universal factual truth
+</code></pre>
+<p>This distinction is essential.</p>
+<hr>
+<h1 id="40-agreement-can-establish-operational-truth">40. Agreement Can Establish Operational Truth</h1>
+<p>At the same time, distributed consensus demonstrates something important:</p>
+<blockquote>
+<p><strong>Some operational Truth States can be created by successful agreement rather than discovered from an external reference.</strong></p>
+</blockquote>
+<p>Examples include:</p>
+<pre><code>chosen leader
+
+committed log position
+
+agreed command ordering
+</code></pre>
+<p>These states become operationally real within the system because the protocol establishes them.</p>
+<p>This is different from:</p>
+<pre><code>measuring time
+</code></pre>
+<p>or:</p>
+<pre><code>resolving an externally declared DNS record
+</code></pre>
+<p>Therefore the Truth Service must support both:</p>
+<pre><code>discovered Truth
+</code></pre>
+<p>and:</p>
+<pre><code>constituted operational Truth
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="41-discovered-vs-constituted-truth">41. Discovered vs Constituted Truth</h1>
+<p>Candidate distinction:</p>
+<h2 id="discovered-operational-truth">Discovered Operational Truth</h2>
+<p>The system attempts to determine a state that exists independently of the agreement process.</p>
+<p>Examples:</p>
+<pre><code>measured temporal relationship
+observed telemetry
+</code></pre>
+<h2 id="constituted-operational-truth">Constituted Operational Truth</h2>
+<p>The system's accepted process itself establishes the operational state.</p>
+<p>Examples:</p>
+<pre><code>elected leader
+committed ordering
+authorization decision
+transaction settlement
+</code></pre>
+<p>This distinction may become very important.</p>
+<p>Authority Truth already hinted at it.</p>
+<p>Distributed State Truth makes it explicit.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="42-protocol-reference-basis">42. Protocol → Reference Basis</h1>
+<p>Crosswalk #6 challenges Anchor but introduces a broader candidate.</p>
+<p>Instead of requiring:</p>
+<pre><code>Truth Anchor
+</code></pre>
+<p>everywhere, the architecture may need:</p>
+<pre><code>Reference Basis
+</code></pre>
+<p>Potential forms:</p>
+<pre><code>external reference
+policy
+protocol
+accepted history
+authority relationship
+measurement standard
+</code></pre>
+<p>Candidate structure:</p>
+<pre><code>ReferenceBasis
+  ├── ExternalAnchor
+  ├── GoverningPolicy
+  ├── GoverningProtocol
+  └── AcceptedHistory
+</code></pre>
+<p>This is a major candidate model change.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<p>Do not promote until:</p>
+<pre><code>Transactional Truth
+Intent Truth
+</code></pre>
+<p>have tested it.</p>
+<hr>
+<h1 id="43-regime-in-distributed-state">43. Regime in Distributed State</h1>
+<p>A distributed State Truth Regime may include:</p>
+<ul>
+<li>participant membership</li>
+<li>current term / epoch</li>
+<li>protocol version</li>
+<li>quorum requirement</li>
+<li>failure assumptions</li>
+<li>leadership state</li>
+<li>configuration generation</li>
+</ul>
+<p>This demonstrates again that Regime is domain-specific but structurally general.</p>
+<p>Important distinction:</p>
+<pre><code>Regime
+  ≠
+current state value
+</code></pre>
+<p>Instead:</p>
+<pre><code>Regime
+</code></pre>
+<p>defines:</p>
+<blockquote>
+<p><strong>the rules under which current state is established and interpreted.</strong></p>
+</blockquote>
+<hr>
+<h1 id="44-membership-regime-boundary">44. Membership → Regime Boundary</h1>
+<p>The participant set matters.</p>
+<p>If cluster membership changes, the conditions for:</p>
+<pre><code>majority
+election
+commitment
+</code></pre>
+<p>may also change.</p>
+<p>RTT interpretation:</p>
+<pre><code>Regime Boundary
+</code></pre>
+<p>This gives another generalized Regime dimension:</p>
+<pre><code>membership
+</code></pre>
+<p>Potential future Regime fields may need domain extensions.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="45-membership-drift">45. Membership Drift</h1>
+<p>A change in participant set is:</p>
+<pre><code>membership Drift
+</code></pre>
+<p>It can affect:</p>
+<ul>
+<li>authority</li>
+<li>quorum</li>
+<li>availability</li>
+<li>state propagation</li>
+<li>acceptance rules</li>
+</ul>
+<p>even when:</p>
+<pre><code>application state
+</code></pre>
+<p>does not immediately change.</p>
+<p>Again:</p>
+<blockquote>
+<p><strong>Structural Drift can occur around a stable visible value.</strong></p>
+</blockquote>
+<p>Strongly generalized.</p>
+<hr>
+<h1 id="46-safety-vs-availability">46. Safety vs Availability</h1>
+<p>Distributed consensus introduces an important distinction between:</p>
+<pre><code>state safety
+</code></pre>
+<p>and:</p>
+<pre><code>ability to make progress
+</code></pre>
+<p>A system may temporarily be unable to commit new state while preserving previously accepted state safely.</p>
+<p>RTT interpretation:</p>
+<pre><code>Coherence retained
+  +
+progression unavailable
+</code></pre>
+<p>This is structurally different from:</p>
+<pre><code>Truth State invalid
+</code></pre>
+<p>Potential generalized distinction:</p>
+<pre><code>epistemic / state qualification
+</code></pre>
+<p>vs:</p>
+<pre><code>operational availability
+</code></pre>
+<p>The Truth Service should not infer:</p>
+<pre><code>cannot progress
+  =
+current state false
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="47-no-progress-no-truth">47. No Progress ≠ No Truth</h1>
+<p>Suppose the protocol cannot achieve the required agreement to commit new changes.</p>
+<p>Previously committed state may remain valid.</p>
+<p>Therefore:</p>
+<pre><code>liveness failure
+  ≠
+state invalidation
+</code></pre>
+<p>This mirrors earlier distinctions:</p>
+<pre><code>source unavailable
+  ≠
+previous state false
+
+authentication failure
+  ≠
+identity nonexistent
+
+deny
+  ≠
+evaluation failure
+</code></pre>
+<p>Another structural pattern is surviving.</p>
+<hr>
+<h1 id="48-distributed-failure-transparency">48. Distributed Failure Transparency</h1>
+<p>Distributed systems may expose conditions such as:</p>
+<pre><code>no leader
+
+no quorum
+
+stale replica
+
+uncommitted entry
+
+unavailable participant
+</code></pre>
+<p>These states should not be flattened into:</p>
+<pre><code>false
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Failure Transparency
+</code></pre>
+<p>The service should preserve:</p>
+<pre><code>what is known
+
+what is committed
+
+what is only local
+
+what cannot presently progress
+</code></pre>
+<p>This provides strong support for typed failure states.</p>
+<hr>
+<h1 id="49-worked-example-committed-state">49. Worked Example — Committed State</h1>
+<h2 id="claim">Claim</h2>
+<pre><code>"Command C is part of the accepted replicated state history."
+</code></pre>
+<h2 id="truth-class">Truth Class</h2>
+<pre><code>state
+</code></pre>
+<h2 id="regime">Regime</h2>
+<pre><code>protocol:
+  Raft-like consensus
+
+epoch:
+  Term N
+</code></pre>
+<h2 id="proposal">Proposal</h2>
+<pre><code>Leader records Command C.
+</code></pre>
+<h2 id="replication">Replication</h2>
+<pre><code>Required majority condition satisfied.
+</code></pre>
+<h2 id="commitment">Commitment</h2>
+<pre><code>C becomes committed.
+</code></pre>
+<h2 id="application">Application</h2>
+<pre><code>State machine applies C.
+</code></pre>
+<h2 id="result">Result</h2>
+<pre><code>Truth State:
+  operationally_accepted
+
+accepted_value:
+  committed_transition: C
+</code></pre>
+<h2 id="architectural-finding">Architectural Finding</h2>
+<p>Accepted State Truth emerges through protocol-governed agreement.</p>
+<p>No external Truth Anchor is required to declare C committed.</p>
+<hr>
+<h1 id="50-worked-example-uncommitted-local-entry">50. Worked Example — Uncommitted Local Entry</h1>
+<h2 id="node-a">Node A</h2>
+<p>Contains:</p>
+<pre><code>log entry C
+</code></pre>
+<h2 id="cluster-state">Cluster State</h2>
+<p>C has not reached the protocol's commit condition.</p>
+<h2 id="correct-interpretation">Correct Interpretation</h2>
+<pre><code>local Observation:
+  entry C exists on Node A
+
+distributed State Truth:
+  C not yet committed
+</code></pre>
+<h2 id="architectural-finding_1">Architectural Finding</h2>
+<p>Local presence and accepted state remain separate.</p>
+<hr>
+<h1 id="51-worked-example-stale-replica">51. Worked Example — Stale Replica</h1>
+<h2 id="committed-state">Committed State</h2>
+<pre><code>S10
+</code></pre>
+<h2 id="replica-r">Replica R</h2>
+<p>Locally materialized:</p>
+<pre><code>S8
+</code></pre>
+<h2 id="observational-truth">Observational Truth</h2>
+<pre><code>Replica R currently exposes S8
+</code></pre>
+<h2 id="state-truth">State Truth</h2>
+<pre><code>accepted committed state corresponds to S10
+</code></pre>
+<h2 id="drift">Drift</h2>
+<pre><code>dimensions:
+  state
+  lineage
+</code></pre>
+<h2 id="result_1">Result</h2>
+<p>Replica R may require reconciliation.</p>
+<h2 id="architectural-finding_2">Architectural Finding</h2>
+<p>An accurate local Observation may still represent stale distributed State Truth.</p>
+<hr>
+<h1 id="52-worked-example-leader-change">52. Worked Example — Leader Change</h1>
+<h2 id="term-n">Term N</h2>
+<pre><code>Leader:
+  A
+</code></pre>
+<h2 id="event">Event</h2>
+<pre><code>A fails or leadership changes according to protocol.
+</code></pre>
+<h2 id="term-n1">Term N+1</h2>
+<pre><code>Leader:
+  B
+</code></pre>
+<h2 id="state">State</h2>
+<p>Previously committed history remains protected by protocol safety rules.</p>
+<h2 id="drift_1">Drift</h2>
+<pre><code>authority
+regime
+</code></pre>
+<h2 id="architectural-finding_3">Architectural Finding</h2>
+<p>Authority can transition while accepted history remains stable.</p>
+<hr>
+<h1 id="53-worked-example-no-majority">53. Worked Example — No Majority</h1>
+<h2 id="cluster">Cluster</h2>
+<p>Insufficient participants are available to satisfy the agreement condition.</p>
+<h2 id="new-state">New State</h2>
+<p>Cannot presently become committed.</p>
+<h2 id="existing-state">Existing State</h2>
+<p>Previously committed history remains.</p>
+<h2 id="possible-operational-result">Possible Operational Result</h2>
+<pre><code>current committed Truth State:
+  retained
+
+progression:
+  unavailable
+</code></pre>
+<h2 id="architectural-finding_4">Architectural Finding</h2>
+<p>Loss of ability to establish new truth does not automatically invalidate existing accepted state.</p>
+<hr>
+<h1 id="54-worked-example-divergent-uncommitted-histories">54. Worked Example — Divergent Uncommitted Histories</h1>
+<h2 id="replica-a">Replica A</h2>
+<pre><code>committed prefix:
+  H
+
+uncommitted suffix:
+  X
+</code></pre>
+<h2 id="replica-b">Replica B</h2>
+<pre><code>committed prefix:
+  H
+
+uncommitted suffix:
+  Y
+</code></pre>
+<h2 id="coherence">Coherence</h2>
+<p>The committed history remains coherent.</p>
+<p>Uncommitted local histories diverge.</p>
+<h2 id="correct-interpretation_1">Correct Interpretation</h2>
+<pre><code>committed State Truth:
+  coherent
+
+local provisional state:
+  fragmented
+</code></pre>
+<h2 id="architectural-finding_5">Architectural Finding</h2>
+<p>Coherence may differ by lifecycle layer.</p>
+<p>This strongly suggests:</p>
+<pre><code>per-layer
+or
+per-dimension
+</code></pre>
+<p>Truth-State evaluation.</p>
+<hr>
+<h1 id="55-worked-example-committed-vs-applied">55. Worked Example — Committed vs Applied</h1>
+<h2 id="protocol-state">Protocol State</h2>
+<pre><code>Command C:
+  committed
+</code></pre>
+<h2 id="replica-r_1">Replica R</h2>
+<pre><code>Command C:
+  not yet applied locally
+</code></pre>
+<h2 id="truth-dimensions">Truth Dimensions</h2>
+<pre><code>Transactional / State acceptance:
+  committed
+
+Local materialization:
+  pending
+</code></pre>
+<h2 id="architectural-finding_6">Architectural Finding</h2>
+<p>Acceptance and application are separate transitions.</p>
+<p>This becomes a direct bridge to Crosswalk #7.</p>
+<hr>
+<h1 id="56-rtt-dimension-mapping">56. RTT Dimension Mapping</h1>
+<table>
+<thead>
+<tr>
+<th>RTT Dimension</th>
+<th>Distributed-State Interpretation</th>
+<th>General Truth-Service Candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Commands/log entries propagate across participants</td>
+<td>Evidence/state propagates through participant relationships</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Replicas preserve compatible committed history under protocol rules</td>
+<td>Domain-semantic structural compatibility</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Local logs, state, membership, authority, or applied state diverge</td>
+<td>Multi-dimensional state and relationship Drift</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Incompatible accepted states remain within one intended Regime</td>
+<td>Structural contradiction after lifecycle/epoch qualification</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Protocol, term, membership, quorum, and failure assumptions define state acceptance</td>
+<td>Governing rules define operational truth</td>
+</tr>
+<tr>
+<td><strong>Spin</strong></td>
+<td>Committed history and participant identity persist</td>
+<td>Accepted-state continuity</td>
+</tr>
+<tr>
+<td><strong>Elec</strong></td>
+<td>Proposed, replicated, committed, applied, leader, follower, and terms remain distinct</td>
+<td>Lifecycle and role distinction</td>
+</tr>
+<tr>
+<td><strong>Temp</strong></td>
+<td>Terms, elections, commits, application, and reconciliation transition state</td>
+<td>Logical and temporal state transition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="57-set-mapping">57. SET Mapping</h1>
+<h2 id="spin">Spin</h2>
+<p>Distributed State Truth expresses Spin through:</p>
+<ul>
+<li>committed-history persistence</li>
+<li>replica identity</li>
+<li>protocol continuity</li>
+<li>log continuity</li>
+<li>accepted state</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>It strongly expresses Elec through distinctions among:</p>
+<ul>
+<li>leader</li>
+<li>follower</li>
+<li>candidate</li>
+<li>proposal</li>
+<li>replication</li>
+<li>commit</li>
+<li>application</li>
+<li>local state</li>
+<li>shared state</li>
+<li>term</li>
+<li>membership</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>It expresses Temp through:</p>
+<ul>
+<li>elections</li>
+<li>term changes</li>
+<li>log growth</li>
+<li>commitment</li>
+<li>application</li>
+<li>failure</li>
+<li>recovery</li>
+<li>reconciliation</li>
+</ul>
+<p>Compactly:</p>
+<blockquote>
+<p><strong>Spin preserves accepted history.</strong></p>
+<p><strong>Elec distinguishes roles, lifecycle stages, and local versus shared state.</strong></p>
+<p><strong>Temp governs elections, commitment, application, and recovery.</strong></p>
+</blockquote>
+<hr>
+<h1 id="58-prior-candidate-review-anchor">58. Prior Candidate Review — Anchor</h1>
+<p>Prior status:</p>
+<pre><code>strongly surviving
+</code></pre>
+<p>Distributed-State result:</p>
+<pre><code>CHALLENGED
+</code></pre>
+<p>A direct external Anchor is not obviously necessary for State Truth established by protocol agreement.</p>
+<p>Potential broader abstraction:</p>
+<pre><code>ReferenceBasis
+</code></pre>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<p>Do not remove Anchor.</p>
+<p>Instead ask whether:</p>
+<pre><code>Anchor
+</code></pre>
+<p>is one subtype of a broader reference concept.</p>
+<hr>
+<h1 id="59-prior-candidate-review-subject">59. Prior Candidate Review — Subject</h1>
+<p>Prior status:</p>
+<pre><code>increasingly strong
+</code></pre>
+<p>Distributed-State result:</p>
+<pre><code>SURVIVES BUT NOT CENTRAL
+</code></pre>
+<p>A State Truth Claim may concern:</p>
+<pre><code>system
+log position
+command
+cluster
+state machine
+</code></pre>
+<p>rather than a person-like Subject.</p>
+<p>Therefore Subject should remain generalized as:</p>
+<pre><code>Claim Subject
+</code></pre>
+<p>not:</p>
+<pre><code>human / identity subject
+</code></pre>
+<p>This supports a broad Subject abstraction.</p>
+<hr>
+<h1 id="60-prior-candidate-review-evidenceitem">60. Prior Candidate Review — EvidenceItem</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Distributed-State result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Potential Evidence includes:</p>
+<pre><code>log entry
+term
+replication acknowledgement
+participant state
+membership state
+commit information
+</code></pre>
+<p>Not all of these fit naturally into:</p>
+<pre><code>Observation
+</code></pre>
+<p>Therefore EvidenceItem remains strongly supported.</p>
+<hr>
+<h1 id="61-prior-candidate-review-authorityrelationship">61. Prior Candidate Review — AuthorityRelationship</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Distributed-State result:</p>
+<pre><code>STRONGLY SURVIVES WITH REFINEMENT
+</code></pre>
+<p>Leader authority is:</p>
+<pre><code>role-based
+epoch-bounded
+protocol-derived
+operation-scoped
+</code></pre>
+<p>This fits AuthorityRelationship extremely well.</p>
+<p>New requirement:</p>
+<pre><code>authority may be procedurally constituted
+</code></pre>
+<p>rather than only delegated from an external authority.</p>
+<hr>
+<h1 id="62-prior-candidate-review-domain-result-vs-qualification-state">62. Prior Candidate Review — Domain Result vs Qualification State</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Distributed-State result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Example:</p>
+<pre><code>Truth-State qualification:
+  operationally_accepted
+
+domain result:
+  committed = false
+</code></pre>
+<p>can be meaningful.</p>
+<p>The system may coherently establish:</p>
+<pre><code>entry C is not committed
+</code></pre>
+<p>That negative state is not an evaluation failure.</p>
+<p>This candidate continues to strengthen.</p>
+<hr>
+<h1 id="63-prior-candidate-review-regime-vs-context">63. Prior Candidate Review — Regime vs Context</h1>
+<p>Prior status:</p>
+<pre><code>strong candidate distinction
+</code></pre>
+<p>Distributed-State result:</p>
+<pre><code>STRENGTHENED
+</code></pre>
+<p>Regime:</p>
+<pre><code>protocol
+term semantics
+membership rules
+quorum rules
+</code></pre>
+<p>Context Evidence:</p>
+<pre><code>current participant availability
+current log states
+current leader state
+</code></pre>
+<p>The distinction works well.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="64-new-candidate-acceptancerule">64. New Candidate — AcceptanceRule</h1>
+<p>Distributed consensus exposes a strong generalized abstraction:</p>
+<pre><code>AcceptanceRule
+</code></pre>
+<p>An AcceptanceRule defines:</p>
+<blockquote>
+<p><strong>What structural condition must be satisfied before a proposed domain state crosses into accepted operational state?</strong></p>
+</blockquote>
+<p>Examples across prior systems:</p>
+<pre><code>NTP:
+  Source selection / synthesis rules
+
+DNS:
+  authoritative / freshness qualification
+
+IAM:
+  proofing / authentication requirements
+
+PKI:
+  path-validation rules
+
+Authority:
+  policy rules
+
+Distributed State:
+  quorum / commit rules
+</code></pre>
+<p>This may be more general than any single domain mechanism.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="65-new-candidate-state-transition-stage">65. New Candidate — State Transition Stage</h1>
+<p>Repeated crosswalks increasingly expose lifecycle stages.</p>
+<p>Distributed State makes them explicit:</p>
+<pre><code>proposed
+recorded
+replicated
+committed
+applied
+</code></pre>
+<p>Prior systems also had staged relationships:</p>
+<pre><code>declared
+observed
+corroborated
+accepted
+</code></pre>
+<p>Candidate generalized abstraction:</p>
+<pre><code>TransitionStage
+</code></pre>
+<p>or:</p>
+<pre><code>DomainLifecycleState
+</code></pre>
+<p>However, lifecycle stages vary significantly by domain.</p>
+<p>Recommendation:</p>
+<pre><code>keep domain-native stages
+</code></pre>
+<p>while preserving generic:</p>
+<pre><code>TruthStatus
+</code></pre>
+<p>until Crosswalk #7 tests Transactional Truth.</p>
+<p>Status:</p>
+<pre><code>DEFERRED
+</code></pre>
+<hr>
+<h1 id="66-new-candidate-regimeepoch">66. New Candidate — RegimeEpoch</h1>
+<p>The term mechanism demonstrates a broadly useful concept:</p>
+<pre><code>RegimeEpoch
+</code></pre>
+<p>Properties may include:</p>
+<pre><code>epoch_id
+regime_id
+sequence
+authority context
+valid relationships
+predecessor
+status
+</code></pre>
+<p>Potentially useful for:</p>
+<ul>
+<li>policy versions</li>
+<li>consensus terms</li>
+<li>configuration generations</li>
+<li>trust-store generations</li>
+<li>transaction rounds</li>
+</ul>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<p>Further test needed.</p>
+<hr>
+<h1 id="67-new-candidate-materializedtruthstate">67. New Candidate — MaterializedTruthState</h1>
+<p>DNS first introduced local materialization.</p>
+<p>Distributed State strongly reinforces it.</p>
+<p>Potential structure:</p>
+<pre><code>Truth State
+    ↓
+Materialization A
+Materialization B
+Materialization C
+</code></pre>
+<p>Each materialization may have:</p>
+<pre><code>local state
+last applied transition
+freshness
+Drift
+Source / node
+Revalidation status
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>This should be reviewed formally after Crosswalk #7.</p>
+<hr>
+<h1 id="68-new-candidate-constituted-operational-truth">68. New Candidate — Constituted Operational Truth</h1>
+<p>Distributed consensus provides strong evidence for:</p>
+<pre><code>Constituted Operational Truth
+</code></pre>
+<p>Definition:</p>
+<blockquote>
+<p><strong>A Truth State whose operational validity is established by successful execution of a governing procedure rather than solely by discovering an externally pre-existing state.</strong></p>
+</blockquote>
+<p>Examples may include:</p>
+<pre><code>elected leader
+committed state transition
+authorization decision
+</code></pre>
+<p>Potential opposite:</p>
+<pre><code>Observed / Discovered Operational Truth
+</code></pre>
+<p>This distinction may clarify several later crosswalks.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="69-architecture-refinement-1-anchor-may-need-generalization">69. Architecture Refinement #1 — Anchor May Need Generalization</h1>
+<p>Current model:</p>
+<pre><code>Anchor
+</code></pre>
+<p>Proposed broader pattern:</p>
+<pre><code>ReferenceBasis
+   │
+   ├── ExternalAnchor
+   ├── GoverningPolicy
+   ├── GoverningProtocol
+   └── AcceptedHistory
+</code></pre>
+<p>Rationale:</p>
+<p>Distributed State Truth may not derive from one external Anchor.</p>
+<p>The protocol and accepted history may provide the relevant basis.</p>
+<p>Do not change schema yet.</p>
+<p>Crosswalk #7 and #8 should test this.</p>
+<hr>
+<h1 id="70-architecture-refinement-2-coherence-needs-layers">70. Architecture Refinement #2 — Coherence Needs Layers</h1>
+<p>Distributed State shows that a system may have:</p>
+<pre><code>committed-history Coherence:
+  strong
+</code></pre>
+<p>while:</p>
+<pre><code>local provisional Coherence:
+  fragmented
+</code></pre>
+<p>and:</p>
+<pre><code>materialization Coherence:
+  lagging
+</code></pre>
+<p>Therefore a single flattened:</p>
+<pre><code>coherence.status
+</code></pre>
+<p>may eventually be insufficient.</p>
+<p>Potential future:</p>
+<pre><code>coherence_dimensions:
+  committed_history:
+    coherent
+
+  provisional_state:
+    fragmented
+
+  materialization:
+    weakly_coherent
+</code></pre>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<p>Do not promote until more evidence exists.</p>
+<hr>
+<h1 id="71-architecture-refinement-3-truth-state-may-need-commitment-semantics">71. Architecture Refinement #3 — Truth State May Need Commitment Semantics</h1>
+<p>Current:</p>
+<pre><code>operationally_accepted
+</code></pre>
+<p>may not fully express:</p>
+<pre><code>committed
+</code></pre>
+<p>Distributed systems distinguish:</p>
+<pre><code>accepted evaluation
+</code></pre>
+<p>from:</p>
+<pre><code>committed domain transition
+</code></pre>
+<p>Therefore:</p>
+<pre><code>domain_result
+</code></pre>
+<p>or:</p>
+<pre><code>domain_state
+</code></pre>
+<p>should carry:</p>
+<pre><code>commitment
+</code></pre>
+<p>while TruthState.status retains:</p>
+<pre><code>qualification lifecycle
+</code></pre>
+<p>This strongly supports the model emerging from Crosswalk #5.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strengthened
+</code></pre>
+<hr>
+<h1 id="72-architecture-refinement-4-logical-time-matters">72. Architecture Refinement #4 — Logical Time Matters</h1>
+<p>NTP introduced physical time.</p>
+<p>Distributed consensus introduces:</p>
+<pre><code>logical time / term ordering
+</code></pre>
+<p>Therefore temporal metadata should eventually distinguish:</p>
+<pre><code>wall-clock time
+</code></pre>
+<p>from:</p>
+<pre><code>logical epoch / generation
+</code></pre>
+<p>The current model can represent both using domain metadata.</p>
+<p>A dedicated abstraction may become useful later.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="73-architecture-refinement-5-participant-roles-matter">73. Architecture Refinement #5 — Participant Roles Matter</h1>
+<p>Earlier SourceRole candidates included:</p>
+<pre><code>origin
+authority
+intermediary
+consumer
+</code></pre>
+<p>Distributed State adds:</p>
+<pre><code>leader
+follower
+candidate
+participant
+</code></pre>
+<p>The exact roles are domain-specific.</p>
+<p>However the generalized need for:</p>
+<pre><code>EntityRole
+</code></pre>
+<p>or:</p>
+<pre><code>ParticipantRole
+</code></pre>
+<p>continues to strengthen.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Potential generalized form:</p>
+<pre><code>Entity
+  ↓
+Role Assignment
+  ↓
+Regime / Epoch
+  ↓
+permitted relationships
+</code></pre>
+<hr>
+<h1 id="74-architecture-refinement-6-state-truth-may-be-layered">74. Architecture Refinement #6 — State Truth May Be Layered</h1>
+<p>Distributed systems expose several simultaneous state notions:</p>
+<pre><code>local state
+
+replicated state
+
+committed state
+
+applied state
+
+observable client state
+</code></pre>
+<p>The generic Truth Service should resist forcing these into one value.</p>
+<p>Potential pattern:</p>
+<pre><code>StateView
+</code></pre>
+<p>with:</p>
+<pre><code>observer
+lifecycle stage
+epoch
+value
+lineage
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>Telemetry may later provide additional evidence for View / Perspective objects.</p>
+<hr>
+<h1 id="75-architecture-refinement-7-acceptance-may-be-constitutive">75. Architecture Refinement #7 — Acceptance May Be Constitutive</h1>
+<p>Prior architecture often implied:</p>
+<pre><code>truth exists
+  ↓
+service discovers it
+</code></pre>
+<p>Distributed systems show:</p>
+<pre><code>procedure executes
+  ↓
+accepted state comes into existence
+</code></pre>
+<p>Examples:</p>
+<pre><code>leader elected
+entry committed
+</code></pre>
+<p>Therefore the generalized Truth Service needs to accommodate:</p>
+<pre><code>discovery
+</code></pre>
+<p>and:</p>
+<pre><code>constitution
+</code></pre>
+<p>without declaring one epistemically superior.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="76-scoring-boundary">76. Scoring Boundary</h1>
+<p>The scoring boundary for this crosswalk is:</p>
+<pre><code>System:
+  Distributed Consensus / Replicated State Machine
+
+Primary Reference Case:
+  Raft
+
+Primary Truth Class:
+  State Truth
+
+Evaluated Scope:
+  replicated state-machine model
+  leader election
+  terms
+  replicated logs
+  majority-based commitment
+  ordered state-machine application
+  safety relationships
+  stale-term handling
+  leadership change
+
+Supporting Reference Family:
+  Paxos / distributed consensus
+
+Deferred Scope:
+  Byzantine fault tolerance
+  arbitrary distributed databases
+  CRDTs
+  vendor-specific implementations
+  storage-engine internals
+  geo-distributed tuning
+  application-specific consistency semantics
+</code></pre>
+<p>The crosswalk should not silently treat all distributed systems as Raft systems.</p>
+<hr>
+<h1 id="77-preliminary-scoring-status">77. Preliminary Scoring Status</h1>
+<p>Current score status:</p>
+<pre><code>provisional
+</code></pre>
+<p>Likely areas of strong structural representation include:</p>
+<ul>
+<li>Coherence Detection</li>
+<li>Drift Detection</li>
+<li>Regime Awareness</li>
+<li>Correction Discipline</li>
+<li>Failure Transparency</li>
+<li>Lineage Visibility</li>
+</ul>
+<p>Areas needing careful interpretation include:</p>
+<ul>
+<li>Anchor Quality</li>
+<li>Evidence Quality</li>
+<li>Paradox Handling</li>
+<li>Freshness / Revalidation</li>
+</ul>
+<p>The Anchor criterion is specifically challenged by distributed consensus.</p>
+<p>This is useful evidence for possible rubric evolution.</p>
+<hr>
+<h1 id="78-provisional-scorecard-template">78. Provisional Scorecard Template</h1>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score</th>
+<th>Delegation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anchor Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Rubric challenged</td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Observation / Evidence Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+<td>Deferred</td>
+</tr>
+</tbody>
+</table>
+<p>The terminology:</p>
+<pre><code>Observation Quality
+</code></pre>
+<p>is increasingly better represented as:</p>
+<pre><code>Evidence Quality
+</code></pre>
+<p>following the recommendation from Crosswalk #5.</p>
+<hr>
+<h1 id="79-scoring-rubric-challenge-anchor-quality">79. Scoring-Rubric Challenge — Anchor Quality</h1>
+<p>Distributed State Truth creates the strongest challenge yet to:</p>
+<pre><code>Anchor Quality
+</code></pre>
+<p>The criterion currently asks:</p>
+<blockquote>
+<p>How clearly can the system identify the reference against which an operational truth Claim is evaluated?</p>
+</blockquote>
+<p>That remains usable if:</p>
+<pre><code>reference
+</code></pre>
+<p>is interpreted broadly.</p>
+<p>But:</p>
+<pre><code>Anchor
+</code></pre>
+<p>may imply a single authoritative source too strongly.</p>
+<p>Potential future rename:</p>
+<pre><code>Reference Basis Quality
+</code></pre>
+<p>Possible Reference Bases:</p>
+<pre><code>external Anchor
+protocol
+policy
+accepted history
+authority set
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>defer rubric change until Crosswalk #7 and #8.
+</code></pre>
+<p>Status:</p>
+<pre><code>RUBRIC_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="80-scoring-rubric-challenge-freshness">80. Scoring-Rubric Challenge — Freshness</h1>
+<p>Distributed systems introduce:</p>
+<pre><code>regime freshness
+</code></pre>
+<p>through terms / epochs.</p>
+<p>An item may be:</p>
+<pre><code>wall-clock recent
+</code></pre>
+<p>but:</p>
+<pre><code>protocol-stale
+</code></pre>
+<p>Therefore the Freshness / Revalidation criterion should eventually clarify that freshness may be:</p>
+<pre><code>temporal
+epoch-based
+version-based
+state-based
+</code></pre>
+<p>not merely age in seconds.</p>
+<p>Status:</p>
+<pre><code>RUBRIC_REFINEMENT_CANDIDATE
+</code></pre>
+<hr>
+<h1 id="81-crosswalk-6-findings">81. Crosswalk #6 Findings</h1>
+<h2 id="finding-1-state-truth-can-emerge-through-agreement">Finding 1 — State Truth Can Emerge Through Agreement</h2>
+<p>Operational state may be established by protocol-governed agreement rather than an external truth authority.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-2-local-state-is-not-accepted-state">Finding 2 — Local State Is Not Accepted State</h2>
+<p>A participant may possess state that has not become committed.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-3-proposal-is-not-commitment">Finding 3 — Proposal Is Not Commitment</h2>
+<p>Requested transitions and accepted transitions remain distinct.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<h2 id="finding-4-commitment-is-an-operational-boundary">Finding 4 — Commitment Is an Operational Boundary</h2>
+<p>The domain meaning of a transition changes when protocol commitment occurs.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<h2 id="finding-5-commitment-is-not-materialization">Finding 5 — Commitment Is Not Materialization</h2>
+<p>Accepted state and local application remain separate stages.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-6-lineage-includes-transition-history">Finding 6 — Lineage Includes Transition History</h2>
+<p>Lineage describes not only ancestry but ordered state evolution.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-7-authority-can-be-procedurally-constituted">Finding 7 — Authority Can Be Procedurally Constituted</h2>
+<p>Leadership authority may arise from protocol-governed election.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<h2 id="finding-8-authority-to-propose-is-not-authority-to-commit">Finding 8 — Authority to Propose Is Not Authority to Commit</h2>
+<p>Authority roles may govern different lifecycle stages.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-9-regime-may-have-logical-epochs">Finding 9 — Regime May Have Logical Epochs</h2>
+<p>Terms provide non-wall-clock operational freshness and authority boundaries.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<h2 id="finding-10-coherence-can-be-layered">Finding 10 — Coherence Can Be Layered</h2>
+<p>Committed history may remain coherent while local provisional state is fragmented.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-11-materialized-truth-can-lag-accepted-truth">Finding 11 — Materialized Truth Can Lag Accepted Truth</h2>
+<p>Local state may be behind committed state without invalidating the accepted history.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-12-no-progress-does-not-mean-no-truth">Finding 12 — No Progress Does Not Mean No Truth</h2>
+<p>Loss of liveness does not automatically invalidate previously accepted state.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-13-majority-is-an-acceptance-mechanism-not-truth-by-popularity">Finding 13 — Majority Is an Acceptance Mechanism, Not Truth by Popularity</h2>
+<p>Agreement thresholds derive meaning from protocol structure and assumptions.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-14-anchor-may-be-too-narrow-a-generalized-abstraction">Finding 14 — Anchor May Be Too Narrow a Generalized Abstraction</h2>
+<p>Distributed State Truth may instead rely on a broader Reference Basis.</p>
+<pre><code>Status:
+  ARCHITECTURE_CHALLENGE
+</code></pre>
+<h2 id="finding-15-evidence-freshness-can-be-regime-based">Finding 15 — Evidence Freshness Can Be Regime-Based</h2>
+<p>Staleness may be determined by term / epoch rather than wall-clock age.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-16-truth-may-be-constituted-operationally">Finding 16 — Truth May Be Constituted Operationally</h2>
+<p>Some operational states exist because a valid procedure successfully established them.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="82-six-crosswalk-architecture-check">82. Six-Crosswalk Architecture Check</h1>
+<p>After:</p>
+<pre><code>NTP
+DNS
+IAM
+PKI
+Policy / Authorization
+Distributed State
+</code></pre>
+<p>the model has reached another meaningful consolidation point.</p>
+<h2 id="very-strongly-surviving">Very Strongly Surviving</h2>
+<pre><code>Claim
+
+Subject / Target
+
+Regime
+
+Evidence
+
+Entity / Participant
+
+Role
+
+Lineage
+
+Qualification
+
+domain-semantic Coherence
+
+multi-dimensional Drift
+
+domain result
+
+Truth-State qualification
+
+Revalidation
+
+immutable history
+</code></pre>
+<h2 id="candidate-core">Candidate Core</h2>
+<pre><code>EvidenceItem
+
+AuthorityRelationship
+
+AcceptanceRule
+
+MaterializedTruthState
+
+constrained Lineage relationships
+
+domain-result / qualification separation
+
+Regime vs ContextEvidence separation
+</code></pre>
+<h2 id="increasingly-strong-candidates">Increasingly Strong Candidates</h2>
+<pre><code>RegimeEpoch
+
+ParticipantRole
+
+TransitionLineage
+
+ConstitutedOperationalTruth
+
+CommitmentState
+</code></pre>
+<h2 id="under-serious-challenge">Under Serious Challenge</h2>
+<pre><code>external Anchor as universal abstraction
+
+flat Evidence arrays
+
+single Coherence state
+
+one flattened state value
+
+wall-clock-only freshness
+</code></pre>
+<h2 id="increasingly-narrow">Increasingly Narrow</h2>
+<pre><code>Holdover as universal
+
+simple scalar Lineage distance
+
+generic numeric Confidence
+</code></pre>
+<p>The architecture is no longer primarily:</p>
+<pre><code>reference → Observation → answer
+</code></pre>
+<p>It is becoming:</p>
+<pre><code>governed relationships
+  +
+evidence
+  +
+history
+  +
+acceptance rules
+  +
+Regime
+  →
+qualified operational state
+</code></pre>
+<hr>
+<h1 id="83-emerging-architecture-after-distributed-state">83. Emerging Architecture After Distributed State</h1>
+<p>The generalized model now appears closer to:</p>
+<pre><code>SUBJECT / SYSTEM / TARGET
+          ↓
+    CLAIM / PROPOSAL
+          ↓
+    INTENDED USE / ACTION
+          ↓
+    CONSUMER / PARTICIPANTS
+          ↓
+         REGIME
+          │
+          ├── Policy
+          ├── Protocol
+          ├── Membership
+          └── Epoch
+          ↓
+    REFERENCE BASIS
+          │
+          ├── External Anchor
+          ├── Authority Relationship
+          ├── Governing Policy
+          ├── Governing Protocol
+          └── Accepted History
+          ↓
+    EVIDENCE GRAPH
+          │
+          ├── Observation
+          ├── Assertion
+          ├── Attribute
+          ├── Status Evidence
+          ├── Proposal
+          └── Replication Evidence
+          ↓
+        LINEAGE
+          │
+          ├── Provenance
+          └── Transition History
+          ↓
+    QUALIFICATION
+          ↓
+    ACCEPTANCE RULE
+          ↓
+    DOMAIN-SEMANTIC COHERENCE
+          ↓
+    MULTIDIMENSIONAL DRIFT
+          ↓
+        PARADOX
+          ↓
+      DOMAIN RESULT
+          ↓
+  TRUTH-STATE QUALIFICATION
+          ↓
+     COMMITMENT?
+          ↓
+     MATERIALIZATION
+          ↓
+   ACTION / CORRECTION
+          ↓
+     REVALIDATION
+          ↓
+   IMMUTABLE HISTORY
+</code></pre>
+<p>Not every Truth Class will use every stage.</p>
+<p>That is increasingly important.</p>
+<p>The generalized architecture should provide composable mechanisms rather than one mandatory linear pipeline.</p>
+<hr>
+<h1 id="84-pipeline-challenge">84. Pipeline Challenge</h1>
+<p>The first architecture diagrams implied a largely linear processing path:</p>
+<pre><code>Claim
+  ↓
+Observation
+  ↓
+Qualification
+  ↓
+Coherence
+  ↓
+Drift
+  ↓
+Truth State
+</code></pre>
+<p>After six crosswalks, that may be too rigid.</p>
+<p>Distributed systems especially suggest:</p>
+<pre><code>graph of evidence
+  +
+role relationships
+  +
+protocol state
+  +
+history
+  +
+acceptance rules
+</code></pre>
+<p>feeding multiple analytical components.</p>
+<p>Potential future architecture:</p>
+<pre><code>Evidence Graph
+     │
+┌────┼────┬───────┐
+│    │    │       │
+▼    ▼    ▼       ▼
+Q    C    D       P
+│    │    │       │
+└────┴────┴───────┘
+         │
+         ▼
+    Synthesis
+</code></pre>
+<p>where:</p>
+<pre><code>Q = Qualification
+C = Coherence
+D = Drift
+P = Paradox
+</code></pre>
+<p>This may better represent the emerging system than one strict data pipeline.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="85-next-crosswalk-challenge">85. Next Crosswalk Challenge</h1>
+<p>Crosswalk #7 examines:</p>
+<pre><code>Ledgers
+  ↓
+Transactional Truth
+</code></pre>
+<p>The governing question becomes:</p>
+<blockquote>
+<p><strong>What became committed?</strong></p>
+</blockquote>
+<p>This is the natural next challenge because distributed State Truth has now exposed:</p>
+<pre><code>proposed
+replicated
+committed
+applied
+</code></pre>
+<p>Transactional systems should pressure:</p>
+<pre><code>commitment
+ordering
+durability
+finality
+reversal
+reconciliation
+history
+</code></pre>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Is commitment itself a generalized Truth-State transition, and how should the architecture distinguish committed state from final, settled, reversible, or merely recorded state?</strong></p>
+</blockquote>
+<p>Crosswalk #7 should directly test:</p>
+<pre><code>CommitmentState
+
+AcceptanceRule
+
+TransitionLineage
+
+ConstitutedOperationalTruth
+
+MaterializedTruthState
+</code></pre>
+<p>and the emerging:</p>
+<pre><code>ReferenceBasis
+</code></pre>
+<p>abstraction.</p>
+<hr>
+<h1 id="86-canonical-state-truth-statement">86. Canonical State Truth Statement</h1>
+<blockquote>
+<p><strong>State Truth is not merely the value visible on one participant. It is a Regime-qualified relationship among participant state, protocol rules, ordered history, authority roles, agreement conditions, commitment boundaries, local materializations, and the lifecycle through which distributed state becomes accepted.</strong></p>
+</blockquote>
+<p>State Truth therefore requires the architecture to distinguish:</p>
+<pre><code>local
+</code></pre>
+<p>from:</p>
+<pre><code>replicated
+</code></pre>
+<p>from:</p>
+<pre><code>committed
+</code></pre>
+<p>from:</p>
+<pre><code>applied
+</code></pre>
+<p>and:</p>
+<pre><code>proposal
+</code></pre>
+<p>from:</p>
+<pre><code>accepted transition
+</code></pre>
+<p>without assuming that every difference is a contradiction.</p>
+<hr>
+<h1 id="87-canonical-crosswalk-finding">87. Canonical Crosswalk Finding</h1>
+<p>Crosswalk #6 produces the strongest challenge yet to the assumption that operational truth always derives from an external Anchor.</p>
+<p>Distributed consensus demonstrates that:</p>
+<blockquote>
+<p><strong>Some operational Truth States are constituted by a successful, bounded agreement procedure.</strong></p>
+</blockquote>
+<p>A committed state transition is not merely:</p>
+<pre><code>"most nodes think this happened"
+</code></pre>
+<p>It is:</p>
+<pre><code>a state transition accepted according to
+the governing protocol's rules,
+participant relationships,
+history,
+and current Regime.
+</code></pre>
+<p>This forces several architectural refinements:</p>
+<pre><code>Anchor may need to generalize into Reference Basis.
+
+Coherence must support protocol semantics.
+
+Authority may arise procedurally.
+
+Lineage must include transition history.
+
+Freshness may be epoch-based.
+
+Accepted state and materialized state may differ.
+
+Commitment and application are separate.
+
+No progress does not imply no valid state.
+
+Majority does not mean truth by popularity.
+</code></pre>
+<p>The Truth Service is therefore moving farther away from:</p>
+<pre><code>determine the correct value
+</code></pre>
+<p>and closer to:</p>
+<blockquote>
+<p><strong>Determine which state has become operationally qualified, through which evidence, relationships, history, rules, and Regime.</strong></p>
+</blockquote>
+<hr>
+<h1 id="88-references">88. References</h1>
+<p>Primary technical reference case:</p>
+<pre><code>Raft
+Consensus algorithm for replicated state machines
+</code></pre>
+<p>Primary grounded concepts used in this crosswalk include:</p>
+<pre><code>replicated state machines
+leader / follower / candidate roles
+terms
+leader election
+log replication
+majority-based commitment
+log matching
+application of committed commands
+stale-term detection
+</code></pre>
+<p>Supporting reference family:</p>
+<pre><code>Paxos
+Distributed consensus
+</code></pre>
+<p>Paxos is used here only as supporting evidence that consensus protocols more broadly address agreement among distributed participants under failure conditions.</p>
+<p>The RTT terminology, State Truth model, Reference Basis candidate, Commitment interpretation, Regime Epoch, Materialized Truth State, Drift categories, and proposed architectural generalizations remain the analytical contribution of Resonance Truth.</p>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>Crosswalk #1 asked:</p>
+<pre><code>When?
+</code></pre>
+<p>Crosswalk #2 asked:</p>
+<pre><code>Where?
+</code></pre>
+<p>Crosswalk #3 asked:</p>
+<pre><code>Who?
+</code></pre>
+<p>Crosswalk #4 asked:</p>
+<pre><code>Is it intact?
+</code></pre>
+<p>Crosswalk #5 asked:</p>
+<pre><code>May it act?
+</code></pre>
+<p>Crosswalk #6 asks:</p>
+<pre><code>What state did the system actually accept?
+</code></pre>
+<p>That question breaks one of the easiest assumptions to make about truth:</p>
+<pre><code>there must always be one external authority
+waiting somewhere with the answer
+</code></pre>
+<p>Distributed systems demonstrate another possibility.</p>
+<p>Sometimes the operational answer is created through:</p>
+<pre><code>participants
+  +
+protocol
+  +
+evidence
+  +
+history
+  +
+acceptance rule
+  +
+successful agreement
+</code></pre>
+<p>The system then has to preserve the difference between:</p>
+<pre><code>proposed
+
+replicated
+
+committed
+
+applied
+
+stale
+
+divergent
+
+reconciled
+</code></pre>
+<p>Those are not merely implementation details.</p>
+<p>They are part of the structure through which State Truth becomes operational.</p>
+<p><strong>NTP gave truth a reference.</strong></p>
+<p><strong>DNS gave it scope.</strong></p>
+<p><strong>IAM gave it relationship.</strong></p>
+<p><strong>PKI gave it an evidence chain.</strong></p>
+<p><strong>Policy gave it permission.</strong></p>
+<p><strong>Distributed consensus gives it agreement, but only under explicit rules and history.</strong></p>
+<p><strong>Crosswalk #7 now gets to draw the line that matters next: when does an accepted transition become committed enough to count as part of the record?</strong></p>
   </main>
 </body>
 </html>

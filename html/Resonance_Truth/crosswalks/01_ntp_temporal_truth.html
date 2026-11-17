@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/01_ntp_temporal_truth.md">
-  <title>01_ntp_temporal_truth</title>
+  <title>Crosswalk #1 — NTP and Temporal Truth</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1891 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_crosswalks_01_ntp_temporal_truth_" src="https://github.com/user-attachments/assets/648933da-ab12-452f-9381-8ac0d75816b6" /></p>
+<h1 id="crosswalk-1-ntp-and-temporal-truth">Crosswalk #1 — NTP and Temporal Truth</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Crosswalk #1<br>
+<strong>Truth Class:</strong> Temporal Truth<br>
+<strong>Reference System:</strong> Network Time Protocol (NTP)<br>
+<strong>Primary RTT Dimensions:</strong> Temp · Coherence · Drift · Regime<br>
+<strong>Supporting RTT Dimensions:</strong> Resonance · Paradox · Lineage<br>
+<strong>Status:</strong> Research Crosswalk / Reference Architecture<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This crosswalk examines the Network Time Protocol as the first operational reference system for the RTT Resonance Truth Service.</p>
+<p>The governing question is:</p>
+<blockquote>
+<p><strong>When is it true?</strong></p>
+</blockquote>
+<p>NTP is useful because time synchronization requires a distributed system to maintain an operationally usable temporal state while accounting for:</p>
+<ul>
+<li>multiple Sources</li>
+<li>distance from reference</li>
+<li>network delay</li>
+<li>local clock offset</li>
+<li>Observation history</li>
+<li>Source selection</li>
+<li>Source disagreement</li>
+<li>instability</li>
+<li>uncertainty</li>
+<li>local state Correction</li>
+<li>repeated Revalidation</li>
+</ul>
+<p>The objective is not to claim:</p>
+<pre><code>NTP
+ =
+RTT
+</code></pre>
+<p>or:</p>
+<pre><code>time synchronization
+ =
+all truth
+</code></pre>
+<p>Instead, the crosswalk asks:</p>
+<blockquote>
+<p><strong>Which NTP mechanisms reveal structures that may generalize into an operational Truth Service?</strong></p>
+</blockquote>
+<hr>
+<h1 id="1-evidence-boundary">1. Evidence Boundary</h1>
+<p>The primary technical reference for this crosswalk is:</p>
+<pre><code>RFC 5905
+Network Time Protocol Version 4:
+Protocol and Algorithms Specification
+</code></pre>
+<p>The RFC defines the NTPv4 protocol and implementation model.</p>
+<p>Relevant mechanisms include:</p>
+<ul>
+<li>Peer Process</li>
+<li>Clock Filter Algorithm</li>
+<li>Selection Algorithm</li>
+<li>Cluster Algorithm</li>
+<li>Combine Algorithm</li>
+<li>Clock Discipline Algorithm</li>
+<li>Clock-Adjust Process</li>
+<li>Poll Process</li>
+</ul>
+<p>These mechanisms provide the concrete reference-system behavior used in this crosswalk.</p>
+<p>RTT terms introduced in this document are analytical interpretations.</p>
+<p>They are not terminology used by NTP itself unless explicitly stated otherwise.</p>
+<hr>
+<h1 id="2-evidence-discipline">2. Evidence Discipline</h1>
+<p>This crosswalk distinguishes four statement types.</p>
+<h2 id="ntp-fact">NTP Fact</h2>
+<p>A mechanism explicitly described by the NTP specification.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>A proposed structural interpretation of that mechanism through the RTT lens.</p>
+<h2 id="candidate-generalization">Candidate Generalization</h2>
+<p>A proposed architectural mechanism that may apply beyond Temporal Truth.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A proposed generalization that remains insufficiently tested across other Truth Classes.</p>
+<p>Example:</p>
+<pre><code>NTP Fact:
+  NTP compares timing information from multiple associations.
+
+RTT Interpretation:
+  Multiple timing Sources form a candidate Coherence field.
+
+Candidate Generalization:
+  Operational truth systems may benefit from multi-Source comparison.
+
+Hypothesis:
+  All Truth Classes require explicit Coherence clustering.
+</code></pre>
+<p>The final statement remains provisional until later crosswalks challenge it.</p>
+<hr>
+<h1 id="3-why-ntp-comes-first">3. Why NTP Comes First</h1>
+<p>NTP addresses a deceptively simple question:</p>
+<blockquote>
+<p><strong>What time is it?</strong></p>
+</blockquote>
+<p>A local system cannot safely assume that its own clock remains perfectly aligned with its reference.</p>
+<p>A distributed timing system must account for:</p>
+<ul>
+<li>local clock behavior</li>
+<li>network transport</li>
+<li>remote Sources</li>
+<li>multiple observations</li>
+<li>changing measurements</li>
+<li>Source suitability</li>
+<li>local adjustment</li>
+</ul>
+<p>This makes NTP a useful first operational truth system because several important structural conditions are measurable.</p>
+<p>Temporal Drift, for example, can be represented quantitatively.</p>
+<p>This gives the Resonance Truth research a comparatively concrete starting point before moving into less directly measurable domains such as:</p>
+<ul>
+<li>Identity Truth</li>
+<li>Authority Truth</li>
+<li>Intent Truth</li>
+<li>Observational Truth</li>
+<li>Lineage Truth</li>
+</ul>
+<hr>
+<h1 id="4-temporal-truth">4. Temporal Truth</h1>
+<p>The primary Truth Class is:</p>
+<pre><code>Temporal Truth
+</code></pre>
+<p>Its operational question is:</p>
+<blockquote>
+<p><strong>When does this Claim hold?</strong></p>
+</blockquote>
+<p>Temporal Truth includes more than a timestamp.</p>
+<p>It may involve:</p>
+<ul>
+<li>observation time</li>
+<li>reference time</li>
+<li>local time</li>
+<li>Source time</li>
+<li>transport delay</li>
+<li>freshness</li>
+<li>validity intervals</li>
+<li>temporal Drift</li>
+<li>re-observation</li>
+<li>expiration</li>
+</ul>
+<p>The generalized Temporal Truth relationship is therefore:</p>
+<pre><code>local temporal state
+      ↕
+qualified external Observations
+      ↕
+recognized references
+      ↕
+time
+</code></pre>
+<hr>
+<h1 id="5-ntp-on-its-own-terms">5. NTP on Its Own Terms</h1>
+<p>At a high level, NTP is a protocol used to synchronize computer clocks.</p>
+<p>Its specification includes mechanisms for:</p>
+<ul>
+<li>exchanging timing information</li>
+<li>maintaining peer associations</li>
+<li>processing timing samples</li>
+<li>filtering samples</li>
+<li>selecting candidate Sources</li>
+<li>clustering candidates</li>
+<li>combining timing information</li>
+<li>disciplining the local clock</li>
+<li>adjusting the local clock</li>
+<li>determining polling behavior</li>
+</ul>
+<p>The system therefore contains more structure than:</p>
+<pre><code>ask server for time
+    ↓
+set clock
+</code></pre>
+<p>A more useful conceptual sequence is:</p>
+<pre><code>RECEIVE TIMING INFORMATION
+          ↓
+MAINTAIN SOURCE ASSOCIATIONS
+          ↓
+FILTER SAMPLES
+          ↓
+SELECT CANDIDATES
+          ↓
+CLUSTER / MITIGATE OUTLIERS
+          ↓
+COMBINE
+          ↓
+DISCIPLINE LOCAL CLOCK
+          ↓
+ADJUST LOCAL CLOCK
+          ↓
+POLL AGAIN
+</code></pre>
+<p>This process provides the operational substrate for the RTT crosswalk.</p>
+<hr>
+<h1 id="6-initial-structural-crosswalk">6. Initial Structural Crosswalk</h1>
+<table>
+<thead>
+<tr>
+<th>NTP Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference clock</td>
+<td>Truth Anchor</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Server / peer</td>
+<td>Source</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Association</td>
+<td>Source relationship</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Stratum</td>
+<td>Lineage distance</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Time sample</td>
+<td>Observation</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>Observation time</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Delay</td>
+<td>Observation distance / propagation condition</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Drift</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>Instability</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Dispersion</td>
+<td>Uncertainty growth</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Clock filter</td>
+<td>Evidence qualification / filtering</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Selection algorithm</td>
+<td>Source qualification</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Cluster algorithm</td>
+<td>Coherence / outlier containment</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Combine algorithm</td>
+<td>Truth-State synthesis</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Clock discipline</td>
+<td>Bounded Correction</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Clock adjustment</td>
+<td>Local state mutation</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Poll process</td>
+<td>Revalidation</td>
+<td>Strong Candidate General</td>
+</tr>
+</tbody>
+</table>
+<p>The table intentionally labels these mappings as candidates.</p>
+<p>Later crosswalks must determine which survive beyond Temporal Truth.</p>
+<hr>
+<h1 id="7-truth-anchor">7. Truth Anchor</h1>
+<h2 id="ntp-reference-system-view">NTP Reference-System View</h2>
+<p>NTP ultimately operates relative to timing references.</p>
+<p>Reference clocks and upstream timing Sources participate in a hierarchy through which timing information reaches downstream systems.</p>
+<h2 id="rtt-interpretation_1">RTT Interpretation</h2>
+<p>The crosswalk introduces:</p>
+<pre><code>Truth Anchor
+</code></pre>
+<p>A Truth Anchor is:</p>
+<blockquote>
+<p><strong>A recognized reference within a declared operational domain and Regime.</strong></p>
+</blockquote>
+<p>For Temporal Truth:</p>
+<pre><code>recognized temporal reference
+      ↓
+timing Source
+      ↓
+downstream Source
+      ↓
+local Observation
+</code></pre>
+<h2 id="candidate-generalization_1">Candidate Generalization</h2>
+<p>Operational truth systems may benefit from explicitly representing:</p>
+<ul>
+<li>reference identity</li>
+<li>reference domain</li>
+<li>authority</li>
+<li>validity</li>
+<li>Lineage distance</li>
+<li>Source relationship</li>
+</ul>
+<h2 id="open-question">Open Question</h2>
+<p>Does every Truth Class require an Anchor?</p>
+<p>Later crosswalks may reveal systems where:</p>
+<ul>
+<li>authority is distributed</li>
+<li>state emerges through agreement</li>
+<li>no single reference exists</li>
+<li>multiple Anchors legitimately coexist</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>Anchor
+</code></pre>
+<p>remains a candidate generalized abstraction rather than a universal requirement.</p>
+<hr>
+<h1 id="8-source">8. Source</h1>
+<h2 id="ntp-reference-system-view_1">NTP Reference-System View</h2>
+<p>NTP maintains associations with timing peers or servers.</p>
+<p>These associations provide timing information used by the protocol's algorithms.</p>
+<h2 id="rtt-interpretation_2">RTT Interpretation</h2>
+<p>The generalized entity is:</p>
+<pre><code>Source
+</code></pre>
+<p>A Source is:</p>
+<blockquote>
+<p><strong>An entity capable of supplying an Observation relevant to a Claim.</strong></p>
+</blockquote>
+<p>For NTP:</p>
+<pre><code>timing Source
+    ↓
+time sample
+</code></pre>
+<p>For the generalized Truth Service:</p>
+<pre><code>Source
+    ↓
+Observation
+</code></pre>
+<h2 id="candidate-generalization_2">Candidate Generalization</h2>
+<p>Separating:</p>
+<pre><code>Source
+</code></pre>
+<p>from:</p>
+<pre><code>Observation
+</code></pre>
+<p>is likely useful beyond Temporal Truth because it preserves:</p>
+<ul>
+<li>identity</li>
+<li>history</li>
+<li>reliability</li>
+<li>dependencies</li>
+<li>Lineage</li>
+<li>independence</li>
+</ul>
+<p>These properties cannot be represented adequately if the Observation alone is retained.</p>
+<hr>
+<h1 id="9-source-association">9. Source Association</h1>
+<h2 id="ntp-reference-system-view_2">NTP Reference-System View</h2>
+<p>NTP maintains state associated with peers.</p>
+<p>A peer relationship is not merely one isolated timing packet.</p>
+<p>The protocol retains data used in processing and selection.</p>
+<h2 id="rtt-interpretation_3">RTT Interpretation</h2>
+<p>This suggests:</p>
+<pre><code>Source relationship
+</code></pre>
+<p>The Truth Service may need to preserve the ongoing structural relationship between:</p>
+<ul>
+<li>observer</li>
+<li>Source</li>
+<li>Anchor</li>
+<li>Observation history</li>
+</ul>
+<p>rather than treating every Observation as independent.</p>
+<h2 id="candidate-generalization_3">Candidate Generalization</h2>
+<p>A Source relationship may eventually contain:</p>
+<ul>
+<li>Source identity</li>
+<li>Anchor relationship</li>
+<li>Observation history</li>
+<li>dependency information</li>
+<li>stability</li>
+<li>rejection history</li>
+<li>freshness</li>
+</ul>
+<h2 id="architectural-status">Architectural Status</h2>
+<p>The current generalized model carries much of this through:</p>
+<pre><code>Source
+Observation
+Lineage
+Evaluation history
+</code></pre>
+<p>A dedicated SourceAssociation entity has not yet been promoted into the core data model.</p>
+<p>Further crosswalk evidence is required.</p>
+<hr>
+<h1 id="10-stratum-lineage-distance">10. Stratum → Lineage Distance</h1>
+<h2 id="ntp-reference-system-view_3">NTP Reference-System View</h2>
+<p>NTP exposes a hierarchy related to distance from reference timing Sources through stratum.</p>
+<h2 id="rtt-interpretation_4">RTT Interpretation</h2>
+<p>The crosswalk generalizes this as:</p>
+<pre><code>Lineage Distance
+</code></pre>
+<p>The useful structural question becomes:</p>
+<blockquote>
+<p><strong>How far has this Observation traveled from the reference relationship from which it derives?</strong></p>
+</blockquote>
+<p>This may involve:</p>
+<ul>
+<li>Source hops</li>
+<li>transformations</li>
+<li>aggregators</li>
+<li>delegations</li>
+<li>caches</li>
+<li>intermediaries</li>
+</ul>
+<h2 id="candidate-generalization_4">Candidate Generalization</h2>
+<p>Lineage Distance should not necessarily be one integer in every Truth Class.</p>
+<p>Possible representations include:</p>
+<ul>
+<li>hop count</li>
+<li>transformation count</li>
+<li>authority chain</li>
+<li>dependency depth</li>
+<li>graph path</li>
+</ul>
+<p>The important principle is:</p>
+<blockquote>
+<p><strong>Distance from reference may itself be truth metadata.</strong></p>
+</blockquote>
+<h2 id="architectural-caution">Architectural Caution</h2>
+<pre><code>greater Lineage distance
+    ≠
+false
+</code></pre>
+<p>Distance changes qualification context.</p>
+<p>It does not automatically determine correctness.</p>
+<hr>
+<h1 id="11-time-sample-observation">11. Time Sample → Observation</h1>
+<h2 id="ntp-reference-system-view_4">NTP Reference-System View</h2>
+<p>Timing samples provide information used by the protocol's filtering and selection mechanisms.</p>
+<h2 id="rtt-interpretation_5">RTT Interpretation</h2>
+<p>The generalized object is:</p>
+<pre><code>Observation
+</code></pre>
+<p>An Observation records:</p>
+<blockquote>
+<p><strong>What a Source reported or measured under identifiable conditions.</strong></p>
+</blockquote>
+<p>A Temporal Observation may contain:</p>
+<pre><code>Source
+observed timestamp
+receipt timestamp
+timing data
+freshness information
+Source Lineage
+</code></pre>
+<h2 id="candidate-generalization_5">Candidate Generalization</h2>
+<p>The Truth Service separates:</p>
+<pre><code>Observation
+</code></pre>
+<p>from:</p>
+<pre><code>Truth State
+</code></pre>
+<p>This is one of the strongest initial architectural distinctions.</p>
+<p>An Observation participates in Evaluation.</p>
+<p>It is not itself the final state.</p>
+<hr>
+<h1 id="12-observation-time">12. Observation Time</h1>
+<p>NTP makes temporal relationships unusually visible because timestamps participate directly in protocol behavior.</p>
+<p>The generalized Truth Service should preserve several different temporal fields.</p>
+<h2 id="observation-time">Observation Time</h2>
+<p>When the Source observed the state.</p>
+<h2 id="receipt-time">Receipt Time</h2>
+<p>When the evaluator received the Observation.</p>
+<h2 id="evaluation-time">Evaluation Time</h2>
+<p>When the Observation was used.</p>
+<h2 id="expiration-time">Expiration Time</h2>
+<p>When the Observation no longer satisfies a freshness requirement.</p>
+<h2 id="revalidation-time">Revalidation Time</h2>
+<p>When the resulting Truth State must be challenged again.</p>
+<p>These are structurally different moments.</p>
+<p>The crosswalk therefore supports:</p>
+<blockquote>
+<p><strong>Time should be attached to evidence and evaluation, not merely to the final Claim.</strong></p>
+</blockquote>
+<hr>
+<h1 id="13-delay-observation-distance">13. Delay → Observation Distance</h1>
+<h2 id="ntp-reference-system-view_5">NTP Reference-System View</h2>
+<p>Network delay affects temporal measurement.</p>
+<p>The Observation does not arrive under ideal zero-distance conditions.</p>
+<h2 id="rtt-interpretation_6">RTT Interpretation</h2>
+<p>The candidate generalized concept is:</p>
+<pre><code>Observation Distance
+</code></pre>
+<p>Observation Distance represents structural separation between:</p>
+<pre><code>original state
+</code></pre>
+<p>and:</p>
+<pre><code>received evidence
+</code></pre>
+<p>Potential contributors beyond NTP may include:</p>
+<ul>
+<li>network propagation</li>
+<li>caching</li>
+<li>transformation</li>
+<li>aggregation</li>
+<li>translation</li>
+<li>replication</li>
+<li>summarization</li>
+<li>inference</li>
+</ul>
+<h2 id="candidate-generalization_6">Candidate Generalization</h2>
+<p>An Observation without any information about its path may be structurally weaker than apparently identical evidence whose path is known.</p>
+<p>This overlaps with Lineage.</p>
+<p>Later crosswalks should determine whether:</p>
+<pre><code>Observation Distance
+</code></pre>
+<p>deserves a distinct architectural field or should remain a property derived from Lineage.</p>
+<hr>
+<h1 id="14-offset-drift">14. Offset → Drift</h1>
+<h2 id="ntp-reference-system-view_6">NTP Reference-System View</h2>
+<p>Offset concerns the difference between temporal states involved in synchronization.</p>
+<h2 id="rtt-interpretation_7">RTT Interpretation</h2>
+<p>This maps strongly to:</p>
+<pre><code>Drift
+</code></pre>
+<p>General form:</p>
+<pre><code>Drift
+  =
+displacement between relevant states
+</code></pre>
+<p>Potential comparisons include:</p>
+<pre><code>local vs reference
+
+current vs prior
+
+declared vs observed
+
+Source A vs Source B
+
+expected vs actual
+</code></pre>
+<h2 id="temporal-example">Temporal Example</h2>
+<pre><code>local:
+  09:00:00.000
+
+qualified observed:
+  09:00:00.014
+
+temporal Drift:
+  +14 ms
+</code></pre>
+<h2 id="candidate-generalization_7">Candidate Generalization</h2>
+<p>Drift is currently one of the strongest generalized mechanisms obtained from the NTP crosswalk.</p>
+<p>Not every Truth Class will provide a meaningful numeric magnitude.</p>
+<p>Therefore:</p>
+<pre><code>magnitude:
+  null
+</code></pre>
+<p>must remain valid for semantic or structural Drift.</p>
+<hr>
+<h1 id="15-jitter-instability">15. Jitter → Instability</h1>
+<h2 id="ntp-reference-system-view_7">NTP Reference-System View</h2>
+<p>Variation among timing measurements is operationally relevant to NTP processing.</p>
+<h2 id="rtt-interpretation_8">RTT Interpretation</h2>
+<p>The candidate generalized concept is:</p>
+<pre><code>Instability
+</code></pre>
+<p>Instability asks:</p>
+<blockquote>
+<p><strong>How much does the Observation stream vary over repeated measurement?</strong></p>
+</blockquote>
+<p>Potential manifestations include:</p>
+<ul>
+<li>fluctuating measurements</li>
+<li>inconsistent Source behavior</li>
+<li>alternating classifications</li>
+<li>unstable state</li>
+<li>rapidly changing evidence</li>
+<li>changing interpretation</li>
+</ul>
+<h2 id="candidate-generalization_8">Candidate Generalization</h2>
+<p>A system should not necessarily evaluate only:</p>
+<pre><code>latest Observation
+</code></pre>
+<p>It may also need to evaluate:</p>
+<pre><code>behavior of Observation history
+</code></pre>
+<p>This remains a candidate abstraction.</p>
+<p>Later crosswalks should determine whether Instability belongs:</p>
+<ul>
+<li>inside Drift</li>
+<li>inside Observation Quality</li>
+<li>as its own object</li>
+<li>as domain-specific metadata</li>
+</ul>
+<hr>
+<h1 id="16-dispersion-uncertainty-growth">16. Dispersion → Uncertainty Growth</h1>
+<h2 id="ntp-reference-system-view_8">NTP Reference-System View</h2>
+<p>NTP represents error and uncertainty-related timing conditions as part of its synchronization machinery.</p>
+<h2 id="rtt-interpretation_9">RTT Interpretation</h2>
+<p>The candidate generalized mechanism is:</p>
+<pre><code>Uncertainty Growth
+</code></pre>
+<p>The generalized principle is:</p>
+<blockquote>
+<p><strong>Evidence may become less useful without becoming explicitly false.</strong></p>
+</blockquote>
+<p>Potential causes include:</p>
+<ul>
+<li>age</li>
+<li>Source loss</li>
+<li>increasing Lineage distance</li>
+<li>transformation</li>
+<li>reduced corroboration</li>
+<li>changing conditions</li>
+<li>unresolved contradiction</li>
+</ul>
+<h2 id="candidate-state-progression">Candidate State Progression</h2>
+<pre><code>OPERATIONALLY_ACCEPTED
+        ↓
+    DEGRADED
+        ↓
+    HELD_OVER
+        ↓
+     EXPIRED
+</code></pre>
+<p>This progression is an RTT architectural generalization.</p>
+<p>It is not presented as NTP terminology.</p>
+<hr>
+<h1 id="17-clock-filter-evidence-qualification">17. Clock Filter → Evidence Qualification</h1>
+<h2 id="ntp-reference-system-view_9">NTP Reference-System View</h2>
+<p>RFC 5905 defines a Clock Filter Algorithm used in processing timing samples.</p>
+<h2 id="rtt-interpretation_10">RTT Interpretation</h2>
+<p>The generalized mechanism is:</p>
+<pre><code>Evidence Qualification
+</code></pre>
+<p>Potential Observation checks include:</p>
+<ul>
+<li>structural validity</li>
+<li>freshness</li>
+<li>integrity</li>
+<li>Source status</li>
+<li>precision</li>
+<li>Lineage</li>
+<li>duplication</li>
+<li>Regime compatibility</li>
+</ul>
+<h2 id="qualification-outcomes">Qualification Outcomes</h2>
+<p>The Truth Service currently proposes:</p>
+<pre><code>qualified
+degraded
+rejected
+expired
+indeterminate
+</code></pre>
+<h2 id="critical-rule">Critical Rule</h2>
+<pre><code>rejected from synthesis
+      ≠
+false
+</code></pre>
+<p>The crosswalk preserves this distinction because an Observation may be unsuitable for the current operational Evaluation without supporting a universal claim of falsehood.</p>
+<hr>
+<h1 id="18-selection-source-qualification">18. Selection → Source Qualification</h1>
+<h2 id="ntp-reference-system-view_10">NTP Reference-System View</h2>
+<p>NTP includes a Selection Algorithm as part of its system process.</p>
+<h2 id="rtt-interpretation_11">RTT Interpretation</h2>
+<p>The generalized mechanism is:</p>
+<pre><code>Source Qualification
+</code></pre>
+<p>The Truth Service distinguishes:</p>
+<pre><code>Source exists
+</code></pre>
+<p>from:</p>
+<pre><code>Source may influence this Evaluation
+</code></pre>
+<p>Potential qualification factors include:</p>
+<ul>
+<li>Source status</li>
+<li>Anchor relationship</li>
+<li>Lineage</li>
+<li>Observation quality</li>
+<li>independence</li>
+<li>freshness</li>
+<li>Regime compatibility</li>
+</ul>
+<h2 id="candidate-generalization_9">Candidate Generalization</h2>
+<p>This separation appears strong enough to remain in the current architecture.</p>
+<p>Later crosswalks should test whether Source qualification differs meaningfully from Observation qualification.</p>
+<hr>
+<h1 id="19-clustering-coherence">19. Clustering → Coherence</h1>
+<h2 id="ntp-reference-system-view_11">NTP Reference-System View</h2>
+<p>RFC 5905 defines a Cluster Algorithm as part of the system process.</p>
+<h2 id="rtt-interpretation_12">RTT Interpretation</h2>
+<p>This suggests:</p>
+<pre><code>Coherence Clustering
+</code></pre>
+<p>Qualified Observations may form:</p>
+<pre><code>Cluster A
+  Observation 1
+  Observation 2
+  Observation 3
+</code></pre>
+<p>while another Observation or cluster remains separate.</p>
+<h2 id="rtt-question">RTT Question</h2>
+<blockquote>
+<p><strong>Do qualified Observations form a mutually usable operational field?</strong></p>
+</blockquote>
+<p>Possible Coherence states:</p>
+<pre><code>coherent
+weakly_coherent
+fragmented
+contested
+inverted
+indeterminate
+</code></pre>
+<p>These states are RTT architectural constructs.</p>
+<p>They are not NTP protocol terminology.</p>
+<hr>
+<h1 id="20-outliers-paradox-containment">20. Outliers → Paradox Containment</h1>
+<p>NTP motivates a useful distinction between:</p>
+<pre><code>identifying disagreement
+</code></pre>
+<p>and:</p>
+<pre><code>destroying evidence of disagreement
+</code></pre>
+<p>For the generalized Truth Service, dissenting evidence should remain available for audit even when it does not influence the accepted state.</p>
+<h2 id="candidate-pattern">Candidate Pattern</h2>
+<pre><code>Qualified Observations
+      ↓
+Coherence Analysis
+      ↓
+   ┌──┴──┐
+   │     │
+Cluster  Dissent
+   │     │
+   ▼     ▼
+Synthesis  Preserve
+</code></pre>
+<h2 id="rtt-interpretation_13">RTT Interpretation</h2>
+<p>Where incompatible qualified states remain significant:</p>
+<pre><code>Paradox
+</code></pre>
+<p>may be registered.</p>
+<h2 id="important-constraint">Important Constraint</h2>
+<p>Not every NTP outlier is an RTT Paradox.</p>
+<p>The crosswalk distinguishes:</p>
+<pre><code>outlier
+</code></pre>
+<p>from:</p>
+<pre><code>structurally meaningful unresolved contradiction
+</code></pre>
+<p>Paradox should be reserved for the latter.</p>
+<hr>
+<h1 id="21-combine-truth-state-synthesis">21. Combine → Truth-State Synthesis</h1>
+<h2 id="ntp-reference-system-view_12">NTP Reference-System View</h2>
+<p>RFC 5905 defines a Combine Algorithm after Source selection and clustering.</p>
+<h2 id="rtt-interpretation_14">RTT Interpretation</h2>
+<p>The generalized mechanism is:</p>
+<pre><code>Truth-State Synthesis
+</code></pre>
+<p>The operation asks:</p>
+<blockquote>
+<p><strong>Given the surviving qualified evidence, what operational state can presently be supported?</strong></p>
+</blockquote>
+<h2 id="candidate-output">Candidate Output</h2>
+<p>A Truth State may preserve:</p>
+<ul>
+<li>accepted value</li>
+<li>Sources</li>
+<li>Observations</li>
+<li>Anchor</li>
+<li>Lineage</li>
+<li>Coherence</li>
+<li>Drift</li>
+<li>uncertainty</li>
+<li>Paradox</li>
+<li>Regime</li>
+<li>expiration</li>
+<li>Revalidation</li>
+</ul>
+<h2 id="critical-distinction">Critical Distinction</h2>
+<p>Synthesis produces:</p>
+<pre><code>operationally qualified state
+</code></pre>
+<p>not:</p>
+<pre><code>universal absolute truth
+</code></pre>
+<p>This is a central Resonance Truth principle.</p>
+<hr>
+<h1 id="22-clock-discipline-bounded-correction">22. Clock Discipline → Bounded Correction</h1>
+<h2 id="ntp-reference-system-view_13">NTP Reference-System View</h2>
+<p>NTP includes a Clock Discipline Algorithm that governs the local clock relationship with synchronization results.</p>
+<h2 id="rtt-interpretation_15">RTT Interpretation</h2>
+<p>This maps strongly to:</p>
+<pre><code>Bounded Correction
+</code></pre>
+<p>The generalized distinction is:</p>
+<pre><code>determine better-supported state
+            ≠
+immediately replace local state
+</code></pre>
+<h2 id="candidate-correction-modes">Candidate Correction Modes</h2>
+<p>The Truth Service currently proposes:</p>
+<pre><code>none
+step
+gradual
+quarantine
+dual_state
+human_escalation
+holdover
+fail_closed
+fail_bounded
+</code></pre>
+<p>These modes are generalized Truth-Service concepts.</p>
+<p>They should not be interpreted as NTP's own correction vocabulary.</p>
+<h2 id="architectural-contribution">Architectural Contribution</h2>
+<p>NTP strongly motivates separation between:</p>
+<pre><code>Evaluation
+</code></pre>
+<p>and:</p>
+<pre><code>state adjustment
+</code></pre>
+<p>This is one of the most important mechanisms contributed by Crosswalk #1.</p>
+<hr>
+<h1 id="23-clock-adjustment-state-mutation">23. Clock Adjustment → State Mutation</h1>
+<p>NTP also makes another distinction useful:</p>
+<pre><code>deciding how correction should occur
+</code></pre>
+<p>and:</p>
+<pre><code>executing the local adjustment
+</code></pre>
+<p>These need not be the same operation.</p>
+<p>In the Truth Service architecture:</p>
+<pre><code>Truth State
+    ↓
+Correction Policy
+    ↓
+Downstream System
+    ↓
+State Mutation
+</code></pre>
+<p>The Truth Service may determine that:</p>
+<pre><code>correction:
+  gradual
+</code></pre>
+<p>without itself owning the system being corrected.</p>
+<p>This preserves:</p>
+<pre><code>truth evaluation
+    ≠
+mutation authority
+</code></pre>
+<hr>
+<h1 id="24-poll-process-revalidation">24. Poll Process → Revalidation</h1>
+<h2 id="ntp-reference-system-view_14">NTP Reference-System View</h2>
+<p>RFC 5905 defines a Poll Process governing repeated timing exchange behavior.</p>
+<h2 id="rtt-interpretation_16">RTT Interpretation</h2>
+<p>This strongly suggests:</p>
+<pre><code>Revalidation
+</code></pre>
+<p>The service should not assume that a Truth State remains operationally acceptable indefinitely.</p>
+<h2 id="general-lifecycle">General Lifecycle</h2>
+<pre><code>OBSERVE
+   ↓
+QUALIFY
+   ↓
+EVALUATE
+   ↓
+ACCEPT
+   ↓
+USE
+   ↓
+AGE
+   ↓
+REVALIDATE
+</code></pre>
+<p>Then:</p>
+<pre><code>RENEW
+DEGRADE
+CONTEST
+HOLD OVER
+REJECT
+EXPIRE
+</code></pre>
+<h2 id="architectural-contribution_1">Architectural Contribution</h2>
+<p>Revalidation is one of the strongest mechanisms contributed by NTP.</p>
+<p>Operational truth has a lifecycle.</p>
+<hr>
+<h1 id="25-loss-of-fresh-sources-holdover">25. Loss of Fresh Sources → Holdover</h1>
+<p>A useful architectural question arises when a previously supported local state loses access to fresh qualified observations.</p>
+<p>The Truth Service distinguishes:</p>
+<pre><code>no fresh evidence
+</code></pre>
+<p>from:</p>
+<pre><code>evidence that prior state is false
+</code></pre>
+<p>This makes room for:</p>
+<pre><code>HELD_OVER
+</code></pre>
+<h2 id="rtt-holdover">RTT Holdover</h2>
+<p>A Truth State may remain provisionally usable when:</p>
+<ul>
+<li>it was previously qualified</li>
+<li>fresh evidence temporarily disappears</li>
+<li>no strong contradicting evidence has appeared</li>
+<li>expected Drift remains bounded</li>
+<li>the Regime permits temporary continuation</li>
+</ul>
+<h2 id="candidate-lifecycle">Candidate Lifecycle</h2>
+<pre><code>OPERATIONALLY_ACCEPTED
+        ↓
+   Source Loss
+        ↓
+    HELD_OVER
+        ↓
+   ┌────┴────┐
+   │         │
+Renew      Expire
+</code></pre>
+<p>Holdover is an RTT architecture generalization.</p>
+<p>Later crosswalks must determine whether it generalizes usefully beyond Temporal Truth.</p>
+<hr>
+<h1 id="26-failure-transparency">26. Failure Transparency</h1>
+<p>NTP provides an important operational lesson:</p>
+<blockquote>
+<p>A synchronization system must represent when it cannot establish a usable synchronized state.</p>
+</blockquote>
+<p>The generalized RTT principle becomes:</p>
+<blockquote>
+<p><strong>A Truth Service must be able to admit that it does not presently possess enough qualified evidence to produce an accepted state.</strong></p>
+</blockquote>
+<p>The corresponding Truth State is:</p>
+<pre><code>INDETERMINATE
+</code></pre>
+<p>This should be considered:</p>
+<pre><code>successful evaluation
+</code></pre>
+<p>rather than:</p>
+<pre><code>service failure
+</code></pre>
+<p>The inability to establish a qualified state is itself useful operational information.</p>
+<hr>
+<h1 id="27-temporal-regime">27. Temporal Regime</h1>
+<p>Temporal Claims are meaningful only relative to operational requirements.</p>
+<p>Consider:</p>
+<pre><code>"The clock is synchronized."
+</code></pre>
+<p>This Claim is incomplete without asking:</p>
+<blockquote>
+<p><strong>Synchronized sufficiently for what?</strong></p>
+</blockquote>
+<p>Potential Regimes include:</p>
+<ul>
+<li>human-readable display</li>
+<li>log correlation</li>
+<li>distributed processing</li>
+<li>measurement</li>
+<li>transaction ordering</li>
+</ul>
+<p>The same measured offset may be acceptable in one Regime and unacceptable in another.</p>
+<p>Therefore:</p>
+<pre><code>measurement
+    +
+Regime
+    ↓
+operational qualification
+</code></pre>
+<p>This supports the core architectural principle:</p>
+<blockquote>
+<p><strong>Truth qualification may depend on Regime without truth becoming arbitrary.</strong></p>
+</blockquote>
+<hr>
+<h1 id="28-worked-example-coherent-temporal-truth">28. Worked Example — Coherent Temporal Truth</h1>
+<p>Consider a deterministic fixture.</p>
+<h2 id="claim">Claim</h2>
+<pre><code>Current reference time is T.
+</code></pre>
+<h2 id="truth-class">Truth Class</h2>
+<pre><code>temporal
+</code></pre>
+<h2 id="regime">Regime</h2>
+<pre><code>low-consequence display clock
+</code></pre>
+<h2 id="anchor">Anchor</h2>
+<pre><code>recognized temporal reference
+</code></pre>
+<h2 id="sources">Sources</h2>
+<pre><code>Source A
+Source B
+Source C
+</code></pre>
+<h2 id="observations">Observations</h2>
+<pre><code>A:
+  offset: +12 ms
+
+B:
+  offset: +15 ms
+
+C:
+  offset: +14 ms
+</code></pre>
+<h2 id="qualification">Qualification</h2>
+<pre><code>A:
+  qualified
+
+B:
+  qualified
+
+C:
+  qualified
+</code></pre>
+<h2 id="coherence">Coherence</h2>
+<pre><code>coherent
+</code></pre>
+<h2 id="drift">Drift</h2>
+<pre><code>magnitude:
+  bounded
+</code></pre>
+<h2 id="paradox">Paradox</h2>
+<pre><code>no material unresolved contradiction
+</code></pre>
+<h2 id="truth-state">Truth State</h2>
+<pre><code>operationally_accepted
+</code></pre>
+<h2 id="correction">Correction</h2>
+<pre><code>regime-defined bounded correction
+</code></pre>
+<h2 id="revalidation">Revalidation</h2>
+<pre><code>scheduled
+</code></pre>
+<p>The important result is not merely the accepted time value.</p>
+<p>The important result is that the path to acceptance remains inspectable.</p>
+<hr>
+<h1 id="29-worked-example-outlier">29. Worked Example — Outlier</h1>
+<p>Now alter Source C.</p>
+<h2 id="observations_1">Observations</h2>
+<pre><code>A:
+  offset: +12 ms
+
+B:
+  offset: +15 ms
+
+C:
+  offset: +900 ms
+</code></pre>
+<p>The service should evaluate:</p>
+<ul>
+<li>whether C remains qualified</li>
+<li>whether C belongs to the same Coherence cluster</li>
+<li>whether its Lineage differs</li>
+<li>whether Source independence is meaningful</li>
+<li>whether the disagreement is an outlier</li>
+<li>whether it becomes a material Paradox</li>
+</ul>
+<p>Possible result:</p>
+<pre><code>supporting cluster:
+  A
+  B
+
+dissenting:
+  C
+</code></pre>
+<p>The dissent should remain visible even if it does not influence the accepted temporal state.</p>
+<hr>
+<h1 id="30-worked-example-fragmented-sources">30. Worked Example — Fragmented Sources</h1>
+<p>Consider:</p>
+<pre><code>A:
+  state → X
+
+B:
+  state → X
+
+C:
+  state → Y
+
+D:
+  state → Y
+</code></pre>
+<p>The correct response is not automatically:</p>
+<pre><code>average X and Y
+</code></pre>
+<p>The Coherence Engine may produce:</p>
+<pre><code>Cluster X:
+  A
+  B
+
+Cluster Y:
+  C
+  D
+</code></pre>
+<p>with:</p>
+<pre><code>coherence:
+  fragmented
+</code></pre>
+<p>and:</p>
+<pre><code>Truth State:
+  contested
+</code></pre>
+<p>or:</p>
+<pre><code>Truth State:
+  indeterminate
+</code></pre>
+<p>depending on Regime.</p>
+<p>This fixture tests whether:</p>
+<blockquote>
+<p><strong>The implementation can resist manufacturing certainty.</strong></p>
+</blockquote>
+<hr>
+<h1 id="31-worked-example-stale-sources">31. Worked Example — Stale Sources</h1>
+<p>Suppose previously qualified Observations age beyond the Regime's freshness requirement.</p>
+<p>Possible lifecycle:</p>
+<pre><code>OPERATIONALLY_ACCEPTED
+        ↓
+    DEGRADED
+        ↓
+    HELD_OVER
+        ↓
+     EXPIRED
+</code></pre>
+<p>The exact transitions are Regime-specific.</p>
+<p>This fixture tests:</p>
+<ul>
+<li>freshness</li>
+<li>uncertainty growth</li>
+<li>Holdover</li>
+<li>expiration</li>
+<li>Revalidation</li>
+</ul>
+<hr>
+<h1 id="32-worked-example-no-qualified-sources">32. Worked Example — No Qualified Sources</h1>
+<p>Suppose:</p>
+<pre><code>Observation A:
+  expired
+
+Observation B:
+  rejected
+
+Observation C:
+  indeterminate
+</code></pre>
+<p>Then:</p>
+<pre><code>selected Observations:
+  none
+</code></pre>
+<p>Possible result:</p>
+<pre><code>coherence:
+  indeterminate
+
+Drift:
+  unknown
+
+Truth State:
+  indeterminate
+
+accepted_value:
+  null
+</code></pre>
+<p>This is a successful result.</p>
+<p>The service has answered:</p>
+<blockquote>
+<p><strong>The available evidence does not presently support a qualified temporal state.</strong></p>
+</blockquote>
+<hr>
+<h1 id="33-rtt-dimension-mapping">33. RTT Dimension Mapping</h1>
+<table>
+<thead>
+<tr>
+<th>RTT Dimension</th>
+<th>NTP Crosswalk Interpretation</th>
+<th>General Truth-Service Candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Timing information propagates through Source relationships</td>
+<td>Evidence propagates through Source relationships</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Qualified timing Sources form a usable timing field</td>
+<td>Qualified Observations form a mutually usable state</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Local temporal state differs from qualified timing state</td>
+<td>Accepted state differs from relevant evidence/reference</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Significant qualified disagreement remains unresolved</td>
+<td>Competing qualified states remain structurally incompatible</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Timing precision and suitability depend on operational need</td>
+<td>Truth acceptance depends on declared operational conditions</td>
+</tr>
+<tr>
+<td><strong>Spin</strong></td>
+<td>Temporal relationship persists across observations</td>
+<td>Claim / Source / Lineage identity persists</td>
+</tr>
+<tr>
+<td><strong>Elec</strong></td>
+<td>Sources and observations remain distinguishable</td>
+<td>Evidence and boundaries remain separable</td>
+</tr>
+<tr>
+<td><strong>Temp</strong></td>
+<td>Synchronization requires repeated adjustment</td>
+<td>Truth States age, transition, and require Revalidation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="34-set-mapping">34. SET Mapping</h1>
+<h2 id="spin">Spin</h2>
+<p>Within the Temporal Truth crosswalk, Spin corresponds to persistence of:</p>
+<ul>
+<li>Source identity</li>
+<li>Anchor relationship</li>
+<li>timing relationship</li>
+<li>Lineage</li>
+<li>local temporal state</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>Elec corresponds to distinction among:</p>
+<ul>
+<li>Sources</li>
+<li>peers</li>
+<li>candidate observations</li>
+<li>rejected observations</li>
+<li>clusters</li>
+<li>operational boundaries</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>Temp is particularly visible in NTP because the system directly manages:</p>
+<ul>
+<li>temporal change</li>
+<li>freshness</li>
+<li>polling</li>
+<li>Drift</li>
+<li>correction</li>
+<li>synchronization state</li>
+</ul>
+<p>The generalized interpretation is:</p>
+<blockquote>
+<p><strong>Spin preserves temporal relationship.</strong></p>
+<p><strong>Elec distinguishes Sources and observations.</strong></p>
+<p><strong>Temp governs synchronization, transition, and renewal.</strong></p>
+</blockquote>
+<hr>
+<h1 id="35-candidate-general-mechanisms-from-ntp">35. Candidate General Mechanisms from NTP</h1>
+<p>Crosswalk #1 produces the following candidate generalized mechanisms:</p>
+<ol>
+<li>Truth Anchor</li>
+<li>Source</li>
+<li>Source relationship</li>
+<li>Observation</li>
+<li>Lineage</li>
+<li>Lineage distance</li>
+<li>Observation distance</li>
+<li>Qualification</li>
+<li>Coherence</li>
+<li>Coherence clustering</li>
+<li>Drift</li>
+<li>Instability</li>
+<li>uncertainty growth</li>
+<li>Paradox containment</li>
+<li>Regime qualification</li>
+<li>Truth-State synthesis</li>
+<li>bounded Correction</li>
+<li>Holdover</li>
+<li>Revalidation</li>
+<li>failure transparency</li>
+</ol>
+<p>These should not all be promoted blindly.</p>
+<p>Crosswalks #2 through #10 must challenge them.</p>
+<hr>
+<h1 id="36-strongest-architectural-contributions">36. Strongest Architectural Contributions</h1>
+<p>Crosswalk #1 currently provides particularly strong support for the following ideas.</p>
+<h2 id="observation-truth-state">Observation ≠ Truth State</h2>
+<p>Timing samples participate in state determination.</p>
+<p>They are not themselves identical to the local synchronized state.</p>
+<h2 id="source-observation">Source ≠ Observation</h2>
+<p>The Source has identity and history beyond one sample.</p>
+<h2 id="drift-is-first-class">Drift Is First-Class</h2>
+<p>Displacement between local and reference-related state can be operationally important.</p>
+<h2 id="qualification-precedes-synthesis">Qualification Precedes Synthesis</h2>
+<p>Not every available Observation should influence accepted state.</p>
+<h2 id="multi-source-coherence-matters">Multi-Source Coherence Matters</h2>
+<p>A system benefits from comparing candidate Sources rather than blindly trusting one Observation.</p>
+<h2 id="correction-is-separate-from-evaluation">Correction Is Separate from Evaluation</h2>
+<p>Determining state and adjusting local state are distinct functions.</p>
+<h2 id="revalidation-is-continuous">Revalidation Is Continuous</h2>
+<p>Operational state ages and must be refreshed.</p>
+<h2 id="indeterminate-must-exist">Indeterminate Must Exist</h2>
+<p>Loss of sufficient qualification should remain visible.</p>
+<hr>
+<h1 id="37-mechanisms-still-under-question">37. Mechanisms Still Under Question</h1>
+<p>Some NTP-inspired concepts require additional validation before becoming core generalized abstractions.</p>
+<h2 id="lineage-distance">Lineage Distance</h2>
+<p>Strong in hierarchical systems.</p>
+<p>May behave differently in:</p>
+<ul>
+<li>consensus systems</li>
+<li>peer systems</li>
+<li>decentralized systems</li>
+</ul>
+<h2 id="observation-distance">Observation Distance</h2>
+<p>May overlap too strongly with Lineage.</p>
+<p>DNS and provenance may clarify this.</p>
+<h2 id="instability">Instability</h2>
+<p>May belong inside Drift or Observation Quality rather than remaining independent.</p>
+<h2 id="uncertainty-growth">Uncertainty Growth</h2>
+<p>May differ significantly by Truth Class.</p>
+<h2 id="holdover">Holdover</h2>
+<p>Strong for temporal continuity.</p>
+<p>May not generalize cleanly into Identity or Authority Truth.</p>
+<h2 id="coherence-clustering">Coherence Clustering</h2>
+<p>Strong candidate, but later systems may use fundamentally different agreement structures.</p>
+<p>These remain:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>rather than:</p>
+<pre><code>CONFIRMED_GENERAL
+</code></pre>
+<hr>
+<h1 id="38-architectural-challenge-produced-by-ntp">38. Architectural Challenge Produced by NTP</h1>
+<p>NTP immediately challenges a simplistic Truth Service architecture.</p>
+<p>A naïve design might use:</p>
+<pre><code>Claim
+  ↓
+Single Source
+  ↓
+Boolean Result
+</code></pre>
+<p>The NTP crosswalk instead suggests:</p>
+<pre><code>Claim
+  ↓
+Multiple Sources
+  ↓
+Multiple Observations
+  ↓
+Qualification
+  ↓
+Comparison
+  ↓
+Coherence
+  ↓
+Drift
+  ↓
+Synthesis
+  ↓
+Correction
+  ↓
+Revalidation
+</code></pre>
+<p>This is the first major structural expansion of the Truth-Service model.</p>
+<hr>
+<h1 id="39-ntp-bias-risk">39. NTP Bias Risk</h1>
+<p>Because NTP is the first reference system, it may exert too much influence over the initial architecture.</p>
+<p>Known risks include assuming that every Truth Class requires:</p>
+<ul>
+<li>one external reference hierarchy</li>
+<li>measurable Drift</li>
+<li>numeric uncertainty</li>
+<li>periodic polling</li>
+<li>Source clustering</li>
+<li>local convergence</li>
+<li>Holdover</li>
+</ul>
+<p>These assumptions must be challenged.</p>
+<p>The next crosswalk therefore has a specific research role.</p>
+<hr>
+<h1 id="40-crosswalk-2-challenge">40. Crosswalk #2 Challenge</h1>
+<p>Crosswalk #2 examines:</p>
+<pre><code>DNS
+  ↓
+Locational Truth
+</code></pre>
+<p>DNS introduces mechanisms such as:</p>
+<ul>
+<li>namespace hierarchy</li>
+<li>delegation</li>
+<li>authoritative zones</li>
+<li>recursive resolution</li>
+<li>caching</li>
+<li>TTL</li>
+<li>observer-dependent answers</li>
+<li>negative responses</li>
+</ul>
+<p>The primary challenge becomes:</p>
+<blockquote>
+<p><strong>Can the Truth-Service architecture represent Locational Truth without pretending DNS is another clock?</strong></p>
+</blockquote>
+<p>Crosswalk #2 should explicitly revisit every NTP-derived candidate generalization.</p>
+<hr>
+<h1 id="41-scoring-boundary">41. Scoring Boundary</h1>
+<p>The scoring boundary for this crosswalk is:</p>
+<pre><code>System:
+  Network Time Protocol
+
+Primary Truth Class:
+  Temporal Truth
+
+Evaluated Scope:
+  NTPv4 protocol and algorithms represented by RFC 5905
+
+Primary Evidence:
+  RFC 5905
+
+Excluded / Deferred:
+  deployment-specific monitoring
+  vendor-specific implementation behavior
+  external operational policy
+  mechanisms not established by the reviewed evidence
+</code></pre>
+<p>This boundary matters.</p>
+<p>The crosswalk should not score an idealized global "NTP ecosystem" unless that broader scope is explicitly declared.</p>
+<hr>
+<h1 id="42-preliminary-scoring-status">42. Preliminary Scoring Status</h1>
+<p>At this stage:</p>
+<pre><code>Score Status:
+  provisional
+</code></pre>
+<p>Scores should be assigned only where the evidence boundary supports them.</p>
+<p>The current specification review supports detailed examination of:</p>
+<ul>
+<li>Observation processing</li>
+<li>filtering</li>
+<li>Source selection</li>
+<li>clustering</li>
+<li>combination</li>
+<li>clock discipline</li>
+<li>polling</li>
+</ul>
+<p>Other dimensions may require additional evidence before receiving stable scores.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Do not force completion of the scorecard merely because the rubric contains ten rows.</strong></p>
+</blockquote>
+<hr>
+<h1 id="43-provisional-scorecard-template">43. Provisional Scorecard Template</h1>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score</th>
+<th>Delegation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anchor Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Observation Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+<td>Deferred</td>
+</tr>
+</tbody>
+</table>
+<p>The blank scores are deliberate.</p>
+<p>The detailed scoring pass should attach rationale and evidence to each value.</p>
+<hr>
+<h1 id="44-expected-scoring-strengths">44. Expected Scoring Strengths</h1>
+<p>Before scoring, the crosswalk suggests likely areas of strong structural representation.</p>
+<p>These are hypotheses, not scores.</p>
+<p>Likely strong areas include:</p>
+<ul>
+<li>Observation Quality</li>
+<li>Coherence Detection</li>
+<li>Drift Detection</li>
+<li>Freshness / Revalidation</li>
+<li>Correction Discipline</li>
+</ul>
+<p>Potentially more nuanced areas include:</p>
+<ul>
+<li>Lineage Visibility</li>
+<li>Paradox Handling</li>
+<li>Regime Awareness</li>
+<li>Failure Transparency</li>
+</ul>
+<p>The scoring pass should confirm or reject these expectations from evidence.</p>
+<hr>
+<h1 id="45-fixture-requirements">45. Fixture Requirements</h1>
+<p>Crosswalk #1 should eventually be represented by deterministic fixtures under:</p>
+<pre><code>../fixtures/ntp/
+</code></pre>
+<p>Initial fixtures are:</p>
+<pre><code>coherent.json
+minor_drift.json
+outlier.json
+fragmented.json
+stale.json
+indeterminate.json
+</code></pre>
+<p>Each fixture should preserve:</p>
+<ul>
+<li>Claim</li>
+<li>Truth Class</li>
+<li>Regime</li>
+<li>Anchor</li>
+<li>Sources</li>
+<li>Observations</li>
+<li>Lineage</li>
+<li>Qualification</li>
+<li>Coherence</li>
+<li>Drift</li>
+<li>Paradox where applicable</li>
+<li>Truth State</li>
+<li>Correction policy</li>
+<li>Revalidation condition</li>
+</ul>
+<p>The fixture result should be explainable from those objects.</p>
+<hr>
+<h1 id="46-test-requirements">46. Test Requirements</h1>
+<p>The NTP reference implementation should eventually test:</p>
+<h2 id="qualification_1">Qualification</h2>
+<p>Can stale or unsuitable Observations be excluded with explicit rationale?</p>
+<h2 id="coherence_1">Coherence</h2>
+<p>Can compatible Observations be identified without relying solely on Source count?</p>
+<h2 id="drift_1">Drift</h2>
+<p>Can temporal displacement be represented quantitatively?</p>
+<h2 id="paradox_1">Paradox</h2>
+<p>Can materially conflicting qualified evidence remain visible?</p>
+<h2 id="regime_1">Regime</h2>
+<p>Can the same temporal evidence produce different operational qualification under different requirements?</p>
+<h2 id="lifecycle">Lifecycle</h2>
+<p>Can a Truth State:</p>
+<pre><code>operationally_accepted
+    ↓
+degraded
+    ↓
+held_over
+    ↓
+expired
+</code></pre>
+<p>without being rewritten historically?</p>
+<hr>
+<h1 id="47-findings-classification">47. Findings Classification</h1>
+<p>At the completion of this crosswalk, findings should be classified using:</p>
+<pre><code>CONFIRMED_GENERAL
+
+CANDIDATE_GENERAL
+
+DOMAIN_SPECIFIC
+
+ARCHITECTURE_GAP
+
+REGIME_SPECIFIC
+
+PARADOX_PRESERVED
+
+REJECTED_GENERALIZATION
+</code></pre>
+<p>Current NTP-derived mechanisms should generally remain:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>until later Truth Classes provide additional evidence.</p>
+<hr>
+<h1 id="48-initial-findings">48. Initial Findings</h1>
+<h2 id="finding-1">Finding 1</h2>
+<p>Operational temporal state is synthesized from relationships among local state, Sources, Observations, and reference structure.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-2">Finding 2</h2>
+<p>An Observation should remain distinct from the state produced using it.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-3">Finding 3</h2>
+<p>Source identity and Observation identity should remain separate.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-4">Finding 4</h2>
+<p>Drift can be a first-class property of operational truth.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-5">Finding 5</h2>
+<p>Evidence qualification should precede Truth-State synthesis.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-6">Finding 6</h2>
+<p>Contradictory Observations should remain inspectable after Source selection.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-7">Finding 7</h2>
+<p>Determining a better-supported state should remain separate from correcting local state.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-8">Finding 8</h2>
+<p>Operational Truth States require Revalidation.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-9">Finding 9</h2>
+<p>Loss of fresh evidence does not necessarily imply immediate falsehood.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-10">Finding 10</h2>
+<p>A Truth Service should be able to expose loss of qualification without fabricating an accepted state.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="49-ntp-to-truth-service-processing-crosswalk">49. NTP-to-Truth-Service Processing Crosswalk</h1>
+<p>The complete candidate processing crosswalk is:</p>
+<pre><code>NTP REFERENCE                    RTT TRUTH SERVICE
+─────────────                    ─────────────────
+
+Reference timing source
+          ↓
+                                  Truth Anchor
+
+Server / peer
+          ↓
+                                  Source
+
+Association
+          ↓
+                                  Source relationship
+
+Stratum
+          ↓
+                                  Lineage distance
+
+Time sample
+          ↓
+                                  Observation
+
+Delay
+          ↓
+                                  Observation distance
+
+Offset
+          ↓
+                                  Drift
+
+Jitter
+          ↓
+                                  Instability
+
+Dispersion
+          ↓
+                                  Uncertainty growth
+
+Clock filter
+          ↓
+                                  Qualification
+
+Selection
+          ↓
+                                  Source qualification
+
+Clustering
+          ↓
+                                  Coherence analysis
+
+Outlier handling
+          ↓
+                                  Dissent / Paradox containment
+
+Combination
+          ↓
+                                  Truth-State synthesis
+
+Clock discipline
+          ↓
+                                  Correction policy
+
+Clock adjustment
+          ↓
+                                  Downstream state mutation
+
+Poll process
+          ↓
+                                  Revalidation
+</code></pre>
+<p>The right-hand side remains the RTT interpretation.</p>
+<p>It should change if later crosswalk evidence demonstrates that these abstractions are incorrect or over-generalized.</p>
+<hr>
+<h1 id="50-crosswalk-evaluation">50. Crosswalk Evaluation</h1>
+<p>Crosswalk #1 establishes an important starting result:</p>
+<blockquote>
+<p><strong>Operational truth does not necessarily require a system to possess an absolute, context-free answer.</strong></p>
+</blockquote>
+<p>NTP demonstrates an operational architecture in which useful local state can be maintained through structured relationships among:</p>
+<ul>
+<li>reference</li>
+<li>Source</li>
+<li>Observation</li>
+<li>filtering</li>
+<li>comparison</li>
+<li>Drift</li>
+<li>Correction</li>
+<li>repeated reevaluation</li>
+</ul>
+<p>The RTT Resonance Truth Service proposes to generalize those relationships cautiously.</p>
+<p>The crucial word is:</p>
+<blockquote>
+<p><strong>cautiously</strong></p>
+</blockquote>
+<p>NTP is evidence for Temporal Truth mechanisms.</p>
+<p>It is not proof that every Truth Class shares the same structure.</p>
+<hr>
+<h1 id="51-canonical-temporal-truth-statement">51. Canonical Temporal Truth Statement</h1>
+<blockquote>
+<p><strong>Temporal Truth is not merely a timestamp. It is a Regime-qualified relationship between an observer's local temporal state and a Lineage of external Observations, maintained through qualification, Coherence evaluation, Drift measurement, bounded Correction, and repeated Revalidation.</strong></p>
+</blockquote>
+<p>This statement is the RTT interpretation produced by Crosswalk #1.</p>
+<p>It is not an NTP protocol definition.</p>
+<hr>
+<h1 id="52-canonical-crosswalk-finding">52. Canonical Crosswalk Finding</h1>
+<p>Crosswalk #1 contributes the following candidate architecture:</p>
+<pre><code>REFERENCE
+    ↓
+SOURCE
+    ↓
+OBSERVATION
+    ↓
+LINEAGE
+    ↓
+QUALIFICATION
+    ↓
+COHERENCE
+    ↓
+DRIFT
+    ↓
+PARADOX CONTAINMENT
+    ↓
+REGIME-QUALIFIED SYNTHESIS
+    ↓
+TRUTH STATE
+    ↓
+BOUNDED CORRECTION
+    ↓
+REVALIDATION
+</code></pre>
+<p>Crosswalk #2 must now attempt to break it.</p>
+<p>If DNS cannot be represented without distorting Locational Truth, the architecture must change.</p>
+<p>The objective is not to preserve the NTP-derived model.</p>
+<p>The objective is to discover which structures survive repeated operational challenge.</p>
+<hr>
+<h1 id="53-reference">53. Reference</h1>
+<p>Primary technical reference:</p>
+<pre><code>RFC 5905
+Network Time Protocol Version 4:
+Protocol and Algorithms Specification
+Internet Engineering Task Force
+</code></pre>
+<p>Relevant specification areas include:</p>
+<pre><code>Peer Process
+Clock Filter Algorithm
+Selection Algorithm
+Cluster Algorithm
+Combine Algorithm
+Clock Discipline Algorithm
+Clock-Adjust Process
+Poll Process
+</code></pre>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>Crosswalk #1 begins with:</p>
+<pre><code>"What time is it?"
+</code></pre>
+<p>and discovers a deeper operational problem:</p>
+<pre><code>Which reference?
+
+Which Source?
+
+Which Observation?
+
+How far from reference?
+
+How stable?
+
+How fresh?
+
+Which Sources agree?
+
+What has Drifted?
+
+What disagreement remains?
+
+Which Regime determines acceptability?
+
+How should local state respond?
+
+When must the question be asked again?
+</code></pre>
+<p>NTP provides one mature operational answer to those questions within Temporal Truth.</p>
+<p>RTT does not copy that answer.</p>
+<p>It extracts candidate structural mechanisms and exposes them to later crosswalks.</p>
+<p><strong>NTP starts the model.</strong></p>
+<p><strong>DNS gets the first chance to break it.</strong></p>
   </main>
 </body>
 </html>

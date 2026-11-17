@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/architecture/truth_service_data_model.md">
-  <title>truth_service_data_model</title>
+  <title>RTT Resonance Truth Service — Data Model</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2956 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_architecture_truth_service_data_model_" src="https://github.com/user-attachments/assets/b8723b8e-559a-461f-8fc2-9f11ce40bbf2" /></p>
+<h1 id="rtt-resonance-truth-service-data-model">RTT Resonance Truth Service — Data Model</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Logical Data Model<br>
+<strong>Framework:</strong> Resonance-Time Theory (RTT)<br>
+<strong>Status:</strong> Research Architecture / Reference Model<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This document defines the logical data model for the RTT Resonance Truth Service.</p>
+<p>The conceptual architecture is defined in:</p>
+<pre><code>truth_service_architecture.md
+</code></pre>
+<p>Functional component responsibilities are defined in:</p>
+<pre><code>truth_service_components.md
+</code></pre>
+<p>The machine-facing contract is defined in:</p>
+<pre><code>truth_service_api.yaml
+</code></pre>
+<p>Machine-readable object schemas are maintained under:</p>
+<pre><code>../schemas/
+</code></pre>
+<p>This document focuses on the persistent structural question:</p>
+<blockquote>
+<p><strong>What information must exist, and what relationships must be preserved, for a qualified Truth State to remain inspectable, explainable, and revalidatable?</strong></p>
+</blockquote>
+<p>The model is intentionally storage-neutral.</p>
+<p>It may eventually be implemented using:</p>
+<ul>
+<li>relational storage</li>
+<li>document storage</li>
+<li>graph storage</li>
+<li>event-oriented storage</li>
+<li>hybrid persistence</li>
+</ul>
+<p>The logical model should remain stable independently of those implementation choices.</p>
+<hr>
+<h1 id="1-data-model-principles">1. Data-Model Principles</h1>
+<p>The model follows several architectural rules.</p>
+<h2 id="11-claims-are-not-truth-states">1.1 Claims Are Not Truth States</h2>
+<p>A Claim represents an assertion.</p>
+<p>A Truth State represents the result of evaluating that assertion.</p>
+<pre><code>CLAIM ≠ TRUTH_STATE
+</code></pre>
+<p>The model should never require a Claim row or object to carry its current truth as an intrinsic property.</p>
+<hr>
+<h2 id="12-observations-are-evidence">1.2 Observations Are Evidence</h2>
+<p>An Observation represents evidence associated with a Claim.</p>
+<pre><code>OBSERVATION ≠ TRUTH_STATE
+</code></pre>
+<p>Observations may be:</p>
+<ul>
+<li>qualified</li>
+<li>degraded</li>
+<li>rejected</li>
+<li>expired</li>
+<li>indeterminate</li>
+</ul>
+<p>without being deleted.</p>
+<hr>
+<h2 id="13-evaluations-are-immutable-events">1.3 Evaluations Are Immutable Events</h2>
+<p>An Evaluation records the structural conditions under which a Truth State was produced.</p>
+<p>A later Revalidation creates:</p>
+<pre><code>new Evaluation
+    ↓
+new Truth State
+</code></pre>
+<p>rather than rewriting historical evaluation results.</p>
+<hr>
+<h2 id="14-truth-states-are-regime-qualified">1.4 Truth States Are Regime-Qualified</h2>
+<p>Every evaluated Truth State belongs to a Regime.</p>
+<p>A Truth State without an identifiable Regime is structurally incomplete.</p>
+<hr>
+<h2 id="15-lineage-is-first-class">1.5 Lineage Is First-Class</h2>
+<p>Lineage must be represented explicitly enough to reconstruct:</p>
+<ul>
+<li>where evidence originated</li>
+<li>which Sources participated</li>
+<li>which Anchors were referenced</li>
+<li>which transformations occurred</li>
+<li>which dependencies exist</li>
+<li>where Lineage is incomplete</li>
+</ul>
+<hr>
+<h2 id="16-contradiction-is-preserved">1.6 Contradiction Is Preserved</h2>
+<p>Paradox and dissent should be modeled explicitly.</p>
+<p>Conflicting qualified evidence should not disappear merely because a Truth State was synthesized.</p>
+<hr>
+<h2 id="17-null-may-be-meaningful">1.7 Null May Be Meaningful</h2>
+<p>The model should distinguish:</p>
+<pre><code>unknown
+</code></pre>
+<p>from:</p>
+<pre><code>zero
+</code></pre>
+<p>and:</p>
+<pre><code>no accepted value
+</code></pre>
+<p>from:</p>
+<pre><code>false
+</code></pre>
+<p>For example:</p>
+<pre><code>truth_state.status:
+  indeterminate
+
+truth_state.accepted_value:
+  null
+</code></pre>
+<p>is a valid result.</p>
+<hr>
+<h2 id="18-domain-values-remain-domain-native">1.8 Domain Values Remain Domain-Native</h2>
+<p>Temporal Truth, Identity Truth, State Truth, and Lineage Truth do not necessarily share a useful scalar representation.</p>
+<p>The data model should permit domain-specific Observation and accepted values without forcing them into one universal numeric field.</p>
+<hr>
+<h1 id="2-core-entity-model">2. Core Entity Model</h1>
+<p>The primary logical entities are:</p>
+<pre><code>Claim
+TruthClass
+Observation
+Source
+Anchor
+Lineage
+Regime
+Evaluation
+Qualification
+CoherenceState
+CoherenceCluster
+DriftState
+Paradox
+TruthState
+CorrectionPolicy
+RevalidationEvent
+</code></pre>
+<p>Their high-level relationships are:</p>
+<pre><code>┌───────────────┐
+│    REGIME     │
+└───────┬───────┘
+        │
+        │ qualifies
+        ▼
+┌───────────────┐
+│  EVALUATION   │◄──────────────┐
+└───────┬───────┘               │
+        │                       │
+        │ evaluates             │
+        ▼                       │
+┌───────────────┐               │
+│     CLAIM     │               │
+└───────┬───────┘               │
+        │                       │
+        │ has                   │
+        ▼                       │
+┌───────────────┐               │
+│ OBSERVATIONS  │               │
+└───────┬───────┘               │
+        │                       │
+   ┌────┴────┐                  │
+   │         │                  │
+   ▼         ▼                  │
+SOURCE    LINEAGE               │
+   │         │                  │
+   ▼         │                  │
+ANCHOR ◄─────┘                  │
+                                │
+EVALUATION                      │
+   │                            │
+   ├── Qualification            │
+   ├── CoherenceState           │
+   ├── DriftState               │
+   ├── Paradox                  │
+   │                            │
+   ▼                            │
+TRUTH_STATE                     │
+   │                            │
+   ├── CorrectionPolicy         │
+   └── RevalidationEvent ───────┘
+</code></pre>
+<hr>
+<h1 id="3-relationship-summary">3. Relationship Summary</h1>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Primary Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claim</td>
+<td>has one or more Truth Classes and zero or more Observations</td>
+</tr>
+<tr>
+<td>TruthClass</td>
+<td>classifies one or more dimensions of a Claim</td>
+</tr>
+<tr>
+<td>Observation</td>
+<td>belongs to a Claim and originates from a Source</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>may derive from or reference an Anchor</td>
+</tr>
+<tr>
+<td>Anchor</td>
+<td>defines a bounded reference</td>
+</tr>
+<tr>
+<td>Lineage</td>
+<td>describes provenance and transformation relationships</td>
+</tr>
+<tr>
+<td>Regime</td>
+<td>defines operational Evaluation conditions</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>evaluates one Claim under one Regime</td>
+</tr>
+<tr>
+<td>Qualification</td>
+<td>records Observation eligibility within an Evaluation</td>
+</tr>
+<tr>
+<td>CoherenceState</td>
+<td>describes structural agreement within an Evaluation</td>
+</tr>
+<tr>
+<td>CoherenceCluster</td>
+<td>groups compatible qualified Observations</td>
+</tr>
+<tr>
+<td>DriftState</td>
+<td>describes displacement detected during Evaluation</td>
+</tr>
+<tr>
+<td>Paradox</td>
+<td>preserves qualified unresolved contradiction</td>
+</tr>
+<tr>
+<td>TruthState</td>
+<td>records the synthesized Evaluation result</td>
+</tr>
+<tr>
+<td>CorrectionPolicy</td>
+<td>governs possible downstream reaction</td>
+</tr>
+<tr>
+<td>RevalidationEvent</td>
+<td>causes or records reevaluation of a prior Truth State</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="4-identifier-strategy">4. Identifier Strategy</h1>
+<p>Every persistent entity should have a stable identifier.</p>
+<p>Examples:</p>
+<pre><code>claim-temporal-001
+observation-ntp-a-001
+source-ntp-a
+anchor-utc
+regime-display-clock
+evaluation-001
+truth-state-001
+paradox-001
+</code></pre>
+<p>Identifiers should be:</p>
+<ul>
+<li>stable</li>
+<li>opaque to application logic where possible</li>
+<li>unique within their entity domain</li>
+<li>persistent across retrieval operations</li>
+</ul>
+<p>Semantic meaning should not depend on parsing an identifier.</p>
+<p>The readable examples above are intended for fixtures and documentation.</p>
+<p>Production implementations may use another identifier strategy.</p>
+<hr>
+<h1 id="5-claim">5. Claim</h1>
+<h2 id="purpose_1">Purpose</h2>
+<p>A Claim represents the statement being evaluated.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>What is being asserted?</strong></p>
+</blockquote>
+<h2 id="fields">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>claim_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable Claim identifier</td>
+</tr>
+<tr>
+<td><code>statement</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Original assertion</td>
+</tr>
+<tr>
+<td><code>truth_classes</code></td>
+<td style="text-align: right;">Yes</td>
+<td>One or more Truth Classes</td>
+</tr>
+<tr>
+<td><code>intended_use</code></td>
+<td style="text-align: right;">No</td>
+<td>Operational purpose of the evaluation</td>
+</tr>
+<tr>
+<td><code>external_reference</code></td>
+<td style="text-align: right;">No</td>
+<td>External identifier or reference</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Registration lifecycle state</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Claim registration time</td>
+</tr>
+<tr>
+<td><code>updated_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Latest Claim metadata update</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td style="text-align: right;">No</td>
+<td>Non-canonical additional data</td>
+</tr>
+</tbody>
+</table>
+<h2 id="claim-status">Claim Status</h2>
+<p>Initial states:</p>
+<pre><code>registered
+active
+archived
+</code></pre>
+<p>These are Claim-record lifecycle states.</p>
+<p>They are not Truth States.</p>
+<h2 id="example">Example</h2>
+<pre><code>claim_id: claim-temporal-001
+statement: "The current reference time is 09:00:00 UTC."
+truth_classes:
+  - temporal
+intended_use: "Synchronize a low-consequence display clock."
+status: active
+</code></pre>
+<hr>
+<h1 id="6-truthclass">6. TruthClass</h1>
+<h2 id="purpose_2">Purpose</h2>
+<p>TruthClass identifies the operational dimensions participating in Claim evaluation.</p>
+<h2 id="values">Values</h2>
+<p>Initial canonical values:</p>
+<pre><code>temporal
+locational
+identity
+integrity
+authority
+state
+transactional
+intent
+observational
+lineage
+</code></pre>
+<h2 id="cardinality">Cardinality</h2>
+<p>A Claim:</p>
+<pre><code>MUST have &gt;= 1 TruthClass
+</code></pre>
+<p>and:</p>
+<pre><code>MAY have &gt; 1 TruthClass
+</code></pre>
+<p>Example:</p>
+<pre><code>claim:
+  "This TLS certificate is valid."
+
+truth_classes:
+  - identity
+  - integrity
+  - authority
+  - temporal
+  - lineage
+</code></pre>
+<p>Truth Classes should not be treated as mutually exclusive categories.</p>
+<hr>
+<h1 id="7-observation">7. Observation</h1>
+<h2 id="purpose_3">Purpose</h2>
+<p>An Observation represents evidence associated with a Claim.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>What was observed?</strong></p>
+</blockquote>
+<h2 id="fields_1">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>observation_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable Observation identifier</td>
+</tr>
+<tr>
+<td><code>claim_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Associated Claim</td>
+</tr>
+<tr>
+<td><code>source_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Producing Source</td>
+</tr>
+<tr>
+<td><code>anchor_id</code></td>
+<td style="text-align: right;">No</td>
+<td>Directly associated Anchor if applicable</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Domain-native observed value</td>
+</tr>
+<tr>
+<td><code>observed_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Time at which the observation was made</td>
+</tr>
+<tr>
+<td><code>received_at</code></td>
+<td style="text-align: right;">No</td>
+<td>Time received by the Truth Service</td>
+</tr>
+<tr>
+<td><code>expires_at</code></td>
+<td style="text-align: right;">No</td>
+<td>Explicit freshness boundary</td>
+</tr>
+<tr>
+<td><code>declared_confidence</code></td>
+<td style="text-align: right;">No</td>
+<td>Confidence supplied by Observation producer</td>
+</tr>
+<tr>
+<td><code>integrity</code></td>
+<td style="text-align: right;">No</td>
+<td>Integrity information</td>
+</tr>
+<tr>
+<td><code>lineage</code></td>
+<td style="text-align: right;">No</td>
+<td>Supplied Lineage information</td>
+</tr>
+<tr>
+<td><code>qualification</code></td>
+<td style="text-align: right;">No</td>
+<td>Latest or contextual qualification result</td>
+</tr>
+<tr>
+<td><code>registered_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Registration time</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td style="text-align: right;">No</td>
+<td>Domain-specific metadata</td>
+</tr>
+</tbody>
+</table>
+<h2 id="important-constraint">Important Constraint</h2>
+<p>Producer-declared confidence is Source data.</p>
+<p>It should not automatically become:</p>
+<pre><code>Truth Service confidence
+</code></pre>
+<h2 id="temporal-example">Temporal Example</h2>
+<pre><code>observation_id: obs-ntp-a
+claim_id: claim-temporal-001
+source_id: source-ntp-a
+anchor_id: anchor-utc
+
+value:
+  timestamp: "2026-11-17T09:00:00.014Z"
+  offset_ms: 14.0
+  delay_ms: 21.7
+  jitter_ms: 1.8
+  dispersion_ms: 3.1
+
+observed_at: "2026-11-17T09:00:00.014Z"
+</code></pre>
+<hr>
+<h1 id="8-source">8. Source</h1>
+<h2 id="purpose_4">Purpose</h2>
+<p>A Source represents an entity capable of producing Observations.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Who or what supplied this evidence?</strong></p>
+</blockquote>
+<h2 id="fields_2">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable Source identifier</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Human-readable Source name</td>
+</tr>
+<tr>
+<td><code>source_type</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Domain-specific Source classification</td>
+</tr>
+<tr>
+<td><code>anchor_id</code></td>
+<td style="text-align: right;">No</td>
+<td>Associated Anchor</td>
+</tr>
+<tr>
+<td><code>lineage_distance</code></td>
+<td style="text-align: right;">No</td>
+<td>Structural distance from relevant Anchor</td>
+</tr>
+<tr>
+<td><code>independence</code></td>
+<td style="text-align: right;">No</td>
+<td>Relationship to other Sources</td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td style="text-align: right;">No</td>
+<td>Source domain</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Current Source state</td>
+</tr>
+<tr>
+<td><code>valid_from</code></td>
+<td style="text-align: right;">No</td>
+<td>Beginning of validity</td>
+</tr>
+<tr>
+<td><code>valid_until</code></td>
+<td style="text-align: right;">No</td>
+<td>End of validity</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Registration time</td>
+</tr>
+<tr>
+<td><code>updated_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Latest update time</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td style="text-align: right;">No</td>
+<td>Domain-specific information</td>
+</tr>
+</tbody>
+</table>
+<h2 id="source-status">Source Status</h2>
+<p>Initial states:</p>
+<pre><code>active
+degraded
+unavailable
+rejected
+unknown
+</code></pre>
+<h2 id="independence">Independence</h2>
+<p>Initial classifications:</p>
+<pre><code>independent
+partially_dependent
+dependent
+unknown
+</code></pre>
+<h2 id="design-constraint">Design Constraint</h2>
+<p>A Source's existence does not imply its qualification.</p>
+<p>Qualification is contextual to an Evaluation.</p>
+<hr>
+<h1 id="9-anchor">9. Anchor</h1>
+<h2 id="purpose_5">Purpose</h2>
+<p>An Anchor represents a bounded reference authority.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Against which recognized reference may an Observation or Claim be evaluated?</strong></p>
+</blockquote>
+<h2 id="fields_3">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>anchor_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable Anchor identifier</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Human-readable name</td>
+</tr>
+<tr>
+<td><code>anchor_type</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Domain-specific Anchor category</td>
+</tr>
+<tr>
+<td><code>authority</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Authority responsible for the Anchor</td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Applicable operational domain</td>
+</tr>
+<tr>
+<td><code>regime_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Regimes recognizing the Anchor</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Current Anchor state</td>
+</tr>
+<tr>
+<td><code>valid_from</code></td>
+<td style="text-align: right;">No</td>
+<td>Validity start</td>
+</tr>
+<tr>
+<td><code>valid_until</code></td>
+<td style="text-align: right;">No</td>
+<td>Validity end</td>
+</tr>
+<tr>
+<td><code>revocation_reference</code></td>
+<td style="text-align: right;">No</td>
+<td>Revocation or replacement information</td>
+</tr>
+<tr>
+<td><code>limitations</code></td>
+<td style="text-align: right;">No</td>
+<td>Explicit bounded limitations</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Registration time</td>
+</tr>
+<tr>
+<td><code>updated_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Latest update time</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td style="text-align: right;">No</td>
+<td>Domain-specific information</td>
+</tr>
+</tbody>
+</table>
+<h2 id="anchor-status">Anchor Status</h2>
+<p>Initial states:</p>
+<pre><code>active
+degraded
+withdrawn
+revoked
+unknown
+</code></pre>
+<h2 id="architectural-constraint">Architectural Constraint</h2>
+<pre><code>Authority ≠ Universal Correctness
+</code></pre>
+<p>Anchor authority always remains bounded by domain and Regime.</p>
+<hr>
+<h1 id="10-lineage">10. Lineage</h1>
+<h2 id="purpose_6">Purpose</h2>
+<p>Lineage represents the provenance path through which evidence arrived at its current state.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Where did this come from, and what happened to it along the way?</strong></p>
+</blockquote>
+<p>Lineage is logically a graph.</p>
+<h2 id="lineage-node">Lineage Node</h2>
+<p>A node may represent:</p>
+<ul>
+<li>Anchor</li>
+<li>Source</li>
+<li>Observation</li>
+<li>transformation</li>
+<li>Claim</li>
+<li>Evaluation</li>
+<li>Truth State</li>
+<li>external entity</li>
+</ul>
+<h3 id="fields_4">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>node_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Graph node identifier</td>
+</tr>
+<tr>
+<td><code>entity_type</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Logical entity type</td>
+</tr>
+<tr>
+<td><code>entity_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Referenced entity</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td style="text-align: right;">No</td>
+<td>Human-readable label</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td style="text-align: right;">No</td>
+<td>Additional provenance metadata</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lineage-edge">Lineage Edge</h2>
+<p>An edge represents a relationship between nodes.</p>
+<h3 id="fields_5">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>edge_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Graph edge identifier</td>
+</tr>
+<tr>
+<td><code>from_node_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Origin node</td>
+</tr>
+<tr>
+<td><code>to_node_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Destination node</td>
+</tr>
+<tr>
+<td><code>relation</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Relationship type</td>
+</tr>
+<tr>
+<td><code>transformation</code></td>
+<td style="text-align: right;">No</td>
+<td>Transformation applied during the relationship</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example_1">Example</h2>
+<pre><code>Anchor UTC
+    │
+    ▼
+NTP Source A
+    │
+    ▼
+Observation A
+    │
+    ▼
+Evaluation 1
+    │
+    ▼
+Truth State 1
+</code></pre>
+<h2 id="incomplete-lineage">Incomplete Lineage</h2>
+<p>The model must permit:</p>
+<pre><code>complete: false
+</code></pre>
+<p>with:</p>
+<pre><code>gaps:
+  - missing upstream dependency
+</code></pre>
+<p>The model must not invent missing Lineage.</p>
+<hr>
+<h1 id="11-lineage-distance">11. Lineage Distance</h1>
+<h2 id="purpose_7">Purpose</h2>
+<p>Lineage Distance generalizes the NTP concept of distance from a reference hierarchy.</p>
+<p>It does not imply that every truth system has literal strata.</p>
+<h2 id="representation">Representation</h2>
+<p>A Source may carry:</p>
+<pre><code>lineage_distance: integer | null
+</code></pre>
+<p>A Truth State may also retain derived Lineage references containing:</p>
+<ul>
+<li>Source</li>
+<li>Anchor</li>
+<li>hop count</li>
+<li>transformation count</li>
+<li>completeness</li>
+</ul>
+<h2 id="principle">Principle</h2>
+<blockquote>
+<p><strong>Distance from reference is itself truth metadata.</strong></p>
+</blockquote>
+<p>Increasing distance does not automatically imply falsehood.</p>
+<p>It indicates additional structure through which evidence has passed.</p>
+<hr>
+<h1 id="12-regime">12. Regime</h1>
+<h2 id="purpose_8">Purpose</h2>
+<p>A Regime defines the operational conditions under which an Evaluation occurs.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Under which constraints is this Truth State intended to be usable?</strong></p>
+</blockquote>
+<h2 id="fields_6">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>regime_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable Regime identifier</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Human-readable name</td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Operational domain</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td style="text-align: right;">No</td>
+<td>Regime description</td>
+</tr>
+<tr>
+<td><code>jurisdiction</code></td>
+<td style="text-align: right;">No</td>
+<td>Applicable jurisdiction</td>
+</tr>
+<tr>
+<td><code>policy_version</code></td>
+<td style="text-align: right;">No</td>
+<td>Policy revision</td>
+</tr>
+<tr>
+<td><code>observer_context</code></td>
+<td style="text-align: right;">No</td>
+<td>Observer position/context</td>
+</tr>
+<tr>
+<td><code>applicable_scope</code></td>
+<td style="text-align: right;">No</td>
+<td>Explicit scope boundaries</td>
+</tr>
+<tr>
+<td><code>precision_requirement</code></td>
+<td style="text-align: right;">No</td>
+<td>Domain precision requirement</td>
+</tr>
+<tr>
+<td><code>maximum_age_seconds</code></td>
+<td style="text-align: right;">No</td>
+<td>Maximum Observation age</td>
+</tr>
+<tr>
+<td><code>minimum_independent_sources</code></td>
+<td style="text-align: right;">No</td>
+<td>Required Source diversity</td>
+</tr>
+<tr>
+<td><code>consequence</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Consequence classification</td>
+</tr>
+<tr>
+<td><code>permitted_truth_statuses</code></td>
+<td style="text-align: right;">No</td>
+<td>Truth States permitted for use</td>
+</tr>
+<tr>
+<td><code>correction_modes</code></td>
+<td style="text-align: right;">No</td>
+<td>Allowed Correction modes</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Creation time</td>
+</tr>
+<tr>
+<td><code>updated_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Latest update</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td style="text-align: right;">No</td>
+<td>Domain-specific information</td>
+</tr>
+</tbody>
+</table>
+<h2 id="consequence">Consequence</h2>
+<p>Initial levels:</p>
+<pre><code>informational
+low
+moderate
+high
+critical
+</code></pre>
+<h2 id="example_2">Example</h2>
+<pre><code>regime_id: regime-display-clock
+name: Low-consequence display clock
+domain: temporal
+maximum_age_seconds: 300
+consequence: low
+</code></pre>
+<p>The same Observations may produce a different operational result under a stricter Regime.</p>
+<hr>
+<h1 id="13-evaluation">13. Evaluation</h1>
+<h2 id="purpose_9">Purpose</h2>
+<p>An Evaluation records one attempt to determine a qualified Truth State for one Claim under one Regime.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>What happened when this Claim was evaluated under these conditions?</strong></p>
+</blockquote>
+<h2 id="fields_7">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>evaluation_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable Evaluation identifier</td>
+</tr>
+<tr>
+<td><code>claim_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evaluated Claim</td>
+</tr>
+<tr>
+<td><code>regime_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Governing Regime</td>
+</tr>
+<tr>
+<td><code>prior_truth_state_id</code></td>
+<td style="text-align: right;">No</td>
+<td>Previous state used as historical context</td>
+</tr>
+<tr>
+<td><code>input_observation_ids</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Candidate Observations</td>
+</tr>
+<tr>
+<td><code>qualification_results</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Observation Qualification results</td>
+</tr>
+<tr>
+<td><code>selected_observation_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Observations used in synthesis</td>
+</tr>
+<tr>
+<td><code>excluded_observation_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Observations not used</td>
+</tr>
+<tr>
+<td><code>coherence_state_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Coherence result</td>
+</tr>
+<tr>
+<td><code>drift_state_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Drift result</td>
+</tr>
+<tr>
+<td><code>paradox_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Registered Paradoxes</td>
+</tr>
+<tr>
+<td><code>synthesis_rationale</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Why the result was produced</td>
+</tr>
+<tr>
+<td><code>truth_state_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Resulting Truth State</td>
+</tr>
+<tr>
+<td><code>evaluated_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evaluation time</td>
+</tr>
+<tr>
+<td><code>evaluator_version</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evaluation implementation/version</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td style="text-align: right;">No</td>
+<td>Additional metadata</td>
+</tr>
+</tbody>
+</table>
+<h2 id="immutability">Immutability</h2>
+<p>Once completed:</p>
+<pre><code>Evaluation N
+</code></pre>
+<p>should not be rewritten into:</p>
+<pre><code>Evaluation N'
+</code></pre>
+<p>because new evidence appeared.</p>
+<p>Instead:</p>
+<pre><code>Evaluation N
+    ↓
+Truth State N
+    ↓
+New Evidence
+    ↓
+Evaluation N+1
+    ↓
+Truth State N+1
+</code></pre>
+<p>This preserves decision history.</p>
+<hr>
+<h1 id="14-qualification">14. Qualification</h1>
+<h2 id="purpose_10">Purpose</h2>
+<p>Qualification records whether an Observation was suitable for one Evaluation.</p>
+<p>Qualification is contextual.</p>
+<p>It should not be modeled solely as an intrinsic permanent property of the Observation.</p>
+<h2 id="fields_8">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>evaluation_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evaluation context</td>
+</tr>
+<tr>
+<td><code>observation_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evaluated Observation</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Qualification outcome</td>
+</tr>
+<tr>
+<td><code>reasons</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Structured rationale</td>
+</tr>
+<tr>
+<td><code>freshness_seconds</code></td>
+<td style="text-align: right;">No</td>
+<td>Observation age</td>
+</tr>
+<tr>
+<td><code>source_independence</code></td>
+<td style="text-align: right;">No</td>
+<td>Independence classification</td>
+</tr>
+<tr>
+<td><code>regime_compatible</code></td>
+<td style="text-align: right;">No</td>
+<td>Regime compatibility</td>
+</tr>
+<tr>
+<td><code>precision_compatible</code></td>
+<td style="text-align: right;">No</td>
+<td>Precision compatibility</td>
+</tr>
+<tr>
+<td><code>integrity_valid</code></td>
+<td style="text-align: right;">No</td>
+<td>Integrity status</td>
+</tr>
+<tr>
+<td><code>evaluated_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Qualification time</td>
+</tr>
+</tbody>
+</table>
+<h2 id="qualification-status">Qualification Status</h2>
+<p>Initial values:</p>
+<pre><code>qualified
+degraded
+rejected
+expired
+indeterminate
+</code></pre>
+<h2 id="recommended-logical-key">Recommended Logical Key</h2>
+<p>Conceptually:</p>
+<pre><code>evaluation_id + observation_id
+</code></pre>
+<p>uniquely identifies the Qualification decision for an Observation within an Evaluation.</p>
+<hr>
+<h1 id="15-decisionreason">15. DecisionReason</h1>
+<h2 id="purpose_11">Purpose</h2>
+<p>DecisionReason provides structured explanation for architectural decisions.</p>
+<p>It is used by:</p>
+<ul>
+<li>Qualification</li>
+<li>Coherence</li>
+<li>Drift</li>
+<li>synthesis</li>
+<li>Correction</li>
+<li>potentially Regime resolution</li>
+</ul>
+<h2 id="fields_9">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>code</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable reason identifier</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Human-readable explanation</td>
+</tr>
+<tr>
+<td><code>evidence_references</code></td>
+<td style="text-align: right;">No</td>
+<td>Supporting entities/evidence</td>
+</tr>
+<tr>
+<td><code>regime_rule</code></td>
+<td style="text-align: right;">No</td>
+<td>Applicable Regime rule</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example_3">Example</h2>
+<pre><code>code: OBSERVATION_STALE
+message: Observation exceeds the maximum age permitted by the Regime.
+evidence_references:
+  - obs-ntp-a
+  - regime-display-clock
+regime_rule: maximum_age_seconds
+</code></pre>
+<h2 id="principle_1">Principle</h2>
+<p>Important decisions should not be represented as unexplained booleans.</p>
+<hr>
+<h1 id="16-coherencestate">16. CoherenceState</h1>
+<h2 id="purpose_12">Purpose</h2>
+<p>CoherenceState records the structural agreement condition among qualified Observations.</p>
+<h2 id="fields_10">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>coherence_state_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable identifier</td>
+</tr>
+<tr>
+<td><code>evaluation_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evaluation context</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Coherence classification</td>
+</tr>
+<tr>
+<td><code>cluster_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Related Coherence clusters</td>
+</tr>
+<tr>
+<td><code>supporting_observation_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Supporting Observations</td>
+</tr>
+<tr>
+<td><code>dissenting_observation_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Dissenting Observations</td>
+</tr>
+<tr>
+<td><code>rationale</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Structured explanation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="coherence-status">Coherence Status</h2>
+<p>Initial values:</p>
+<pre><code>coherent
+weakly_coherent
+fragmented
+contested
+inverted
+indeterminate
+</code></pre>
+<h2 id="principle_2">Principle</h2>
+<p>Coherence is not a simple count of matching Observations.</p>
+<p>Lineage and Source independence may influence interpretation.</p>
+<hr>
+<h1 id="17-coherencecluster">17. CoherenceCluster</h1>
+<h2 id="purpose_13">Purpose</h2>
+<p>A CoherenceCluster groups qualified Observations that form a mutually compatible field.</p>
+<h2 id="fields_11">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cluster_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable cluster identifier</td>
+</tr>
+<tr>
+<td><code>evaluation_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evaluation context</td>
+</tr>
+<tr>
+<td><code>observation_ids</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Member Observations</td>
+</tr>
+<tr>
+<td><code>source_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Participating Sources</td>
+</tr>
+<tr>
+<td><code>classification</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Cluster role</td>
+</tr>
+<tr>
+<td><code>representative_value</code></td>
+<td style="text-align: right;">No</td>
+<td>Optional domain-native representative value</td>
+</tr>
+<tr>
+<td><code>independence</code></td>
+<td style="text-align: right;">No</td>
+<td>Structural independence estimate</td>
+</tr>
+<tr>
+<td><code>rationale</code></td>
+<td style="text-align: right;">No</td>
+<td>Cluster rationale</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cluster-classification">Cluster Classification</h2>
+<p>Initial values:</p>
+<pre><code>supporting
+dissenting
+outlier
+unresolved
+</code></pre>
+<h2 id="example_4">Example</h2>
+<pre><code>cluster_id: cluster-a
+
+observation_ids:
+  - obs-a
+  - obs-b
+
+classification:
+  supporting
+</code></pre>
+<p>A separate cluster may remain visible:</p>
+<pre><code>cluster_id: cluster-b
+
+observation_ids:
+  - obs-c
+
+classification:
+  dissenting
+</code></pre>
+<p>The second cluster does not disappear merely because the first was selected.</p>
+<hr>
+<h1 id="18-driftstate">18. DriftState</h1>
+<h2 id="purpose_14">Purpose</h2>
+<p>DriftState records displacement identified during an Evaluation.</p>
+<h2 id="fields_12">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>drift_state_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable Drift identifier</td>
+</tr>
+<tr>
+<td><code>evaluation_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evaluation context</td>
+</tr>
+<tr>
+<td><code>magnitude</code></td>
+<td style="text-align: right;">No</td>
+<td>Numeric magnitude when meaningful</td>
+</tr>
+<tr>
+<td><code>unit</code></td>
+<td style="text-align: right;">No</td>
+<td>Measurement unit</td>
+</tr>
+<tr>
+<td><code>direction</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Direction classification</td>
+</tr>
+<tr>
+<td><code>dimensions</code></td>
+<td style="text-align: right;">Yes</td>
+<td>One or more Drift dimensions</td>
+</tr>
+<tr>
+<td><code>bounded</code></td>
+<td style="text-align: right;">No</td>
+<td>Whether Drift remains within Regime constraints</td>
+</tr>
+<tr>
+<td><code>baseline_reference</code></td>
+<td style="text-align: right;">No</td>
+<td>State used as baseline</td>
+</tr>
+<tr>
+<td><code>local_value</code></td>
+<td style="text-align: right;">No</td>
+<td>Local/prior state</td>
+</tr>
+<tr>
+<td><code>observed_value</code></td>
+<td style="text-align: right;">No</td>
+<td>Qualified observed state</td>
+</tr>
+<tr>
+<td><code>rationale</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Structured explanation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="drift-dimensions">Drift Dimensions</h2>
+<p>Initial values:</p>
+<pre><code>value
+semantic
+source
+lineage
+temporal
+regime
+confidence
+policy
+</code></pre>
+<h2 id="direction">Direction</h2>
+<p>Initial values:</p>
+<pre><code>increasing
+decreasing
+stable
+oscillating
+unknown
+</code></pre>
+<h2 id="numeric-example">Numeric Example</h2>
+<pre><code>magnitude: 14
+unit: milliseconds
+dimensions:
+  - temporal
+bounded: true
+</code></pre>
+<h2 id="structural-example">Structural Example</h2>
+<pre><code>magnitude: null
+unit: null
+dimensions:
+  - semantic
+  - regime
+direction: unknown
+bounded: null
+</code></pre>
+<p>The latter is intentionally valid.</p>
+<hr>
+<h1 id="19-paradox">19. Paradox</h1>
+<h2 id="purpose_15">Purpose</h2>
+<p>Paradox preserves qualified contradiction that cannot yet be safely collapsed.</p>
+<h2 id="fields_13">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>paradox_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable Paradox identifier</td>
+</tr>
+<tr>
+<td><code>evaluation_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evaluation context</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Paradox type</td>
+</tr>
+<tr>
+<td><code>competing_observation_ids</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Conflicting Observations</td>
+</tr>
+<tr>
+<td><code>competing_cluster_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Conflicting Coherence clusters</td>
+</tr>
+<tr>
+<td><code>regime_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Related Regimes</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Human-readable description</td>
+</tr>
+<tr>
+<td><code>resolution_condition</code></td>
+<td style="text-align: right;">No</td>
+<td>Condition required for resolution</td>
+</tr>
+<tr>
+<td><code>containment</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Current containment strategy</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Paradox lifecycle state</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<pre><code>structural
+semantic
+regime
+</code></pre>
+<h2 id="containment">Containment</h2>
+<pre><code>preserve
+isolate
+separate_by_regime
+escalate
+resolved
+</code></pre>
+<h2 id="status">Status</h2>
+<pre><code>active
+contained
+escalated
+resolved
+</code></pre>
+<h2 id="principle_3">Principle</h2>
+<pre><code>CONTRADICTION
+     ↓
+PRESERVE
+     ↓
+CHARACTERIZE
+     ↓
+CONTAIN
+     ↓
+RESOLVE IF JUSTIFIED
+</code></pre>
+<p>not:</p>
+<pre><code>CONTRADICTION
+     ↓
+DELETE LOSING VALUE
+</code></pre>
+<hr>
+<h1 id="20-truthstate">20. TruthState</h1>
+<h2 id="purpose_16">Purpose</h2>
+<p>TruthState is the primary synthesized output of an Evaluation.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>What operational state can presently be supported?</strong></p>
+</blockquote>
+<h2 id="fields_14">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>truth_state_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable Truth-State identifier</td>
+</tr>
+<tr>
+<td><code>claim_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Associated Claim</td>
+</tr>
+<tr>
+<td><code>evaluation_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Producing Evaluation</td>
+</tr>
+<tr>
+<td><code>supersedes_truth_state_id</code></td>
+<td style="text-align: right;">No</td>
+<td>Prior Truth State</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Current Truth-State status</td>
+</tr>
+<tr>
+<td><code>accepted_value</code></td>
+<td style="text-align: right;">No</td>
+<td>Domain-native accepted value</td>
+</tr>
+<tr>
+<td><code>regime_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Governing Regime</td>
+</tr>
+<tr>
+<td><code>truth_classes</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Applicable Truth Classes</td>
+</tr>
+<tr>
+<td><code>anchor_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Participating Anchors</td>
+</tr>
+<tr>
+<td><code>source_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Participating Sources</td>
+</tr>
+<tr>
+<td><code>observation_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Participating Observations</td>
+</tr>
+<tr>
+<td><code>lineage_references</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Provenance summary</td>
+</tr>
+<tr>
+<td><code>coherence_state_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Coherence result</td>
+</tr>
+<tr>
+<td><code>drift_state_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Drift result</td>
+</tr>
+<tr>
+<td><code>paradox_ids</code></td>
+<td style="text-align: right;">No</td>
+<td>Unresolved Paradoxes</td>
+</tr>
+<tr>
+<td><code>uncertainty</code></td>
+<td style="text-align: right;">No</td>
+<td>Explicit uncertainty information</td>
+</tr>
+<tr>
+<td><code>permitted_uses</code></td>
+<td style="text-align: right;">No</td>
+<td>Allowed operational uses</td>
+</tr>
+<tr>
+<td><code>prohibited_uses</code></td>
+<td style="text-align: right;">No</td>
+<td>Disallowed operational uses</td>
+</tr>
+<tr>
+<td><code>correction_policy_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Associated Correction Policy</td>
+</tr>
+<tr>
+<td><code>evaluated_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evaluation time</td>
+</tr>
+<tr>
+<td><code>expires_at</code></td>
+<td style="text-align: right;">No</td>
+<td>Expiration time</td>
+</tr>
+<tr>
+<td><code>next_revalidation_at</code></td>
+<td style="text-align: right;">No</td>
+<td>Scheduled reevaluation</td>
+</tr>
+<tr>
+<td><code>revalidation_triggers</code></td>
+<td style="text-align: right;">No</td>
+<td>Event-based reevaluation conditions</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td style="text-align: right;">No</td>
+<td>Additional metadata</td>
+</tr>
+</tbody>
+</table>
+<h2 id="truth-status">Truth Status</h2>
+<p>Initial states:</p>
+<pre><code>declared
+observed
+corroborated
+operationally_accepted
+contested
+degraded
+held_over
+expired
+rejected
+indeterminate
+</code></pre>
+<h2 id="null-accepted-value">Null Accepted Value</h2>
+<p>The following states may legitimately carry:</p>
+<pre><code>accepted_value: null
+</code></pre>
+<p>Examples include:</p>
+<pre><code>contested
+rejected
+expired
+indeterminate
+</code></pre>
+<p>No boolean substitute is required.</p>
+<hr>
+<h1 id="21-truth-state-history">21. Truth-State History</h1>
+<p>Truth States form an append-oriented history.</p>
+<p>Example:</p>
+<pre><code>Truth State 1
+  status: operationally_accepted
+      │
+      ▼
+Truth State 2
+  status: degraded
+      │
+      ▼
+Truth State 3
+  status: held_over
+      │
+      ▼
+Truth State 4
+  status: operationally_accepted
+</code></pre>
+<p>Each later state may contain:</p>
+<pre><code>supersedes_truth_state_id
+</code></pre>
+<p>The chain enables reconstruction of:</p>
+<ul>
+<li>changes in evidence</li>
+<li>Drift</li>
+<li>Source availability</li>
+<li>Regime changes</li>
+<li>Correction decisions</li>
+<li>Revalidation outcomes</li>
+</ul>
+<hr>
+<h1 id="22-uncertaintydescriptor">22. UncertaintyDescriptor</h1>
+<h2 id="purpose_17">Purpose</h2>
+<p>UncertaintyDescriptor represents known limits on Truth-State acceptance without requiring false numeric precision.</p>
+<h2 id="fields_15">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>classification</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Qualitative classification</td>
+</tr>
+<tr>
+<td><code>numeric_value</code></td>
+<td style="text-align: right;">No</td>
+<td>Numeric value where meaningful</td>
+</tr>
+<tr>
+<td><code>unit</code></td>
+<td style="text-align: right;">No</td>
+<td>Unit for numeric uncertainty</td>
+</tr>
+<tr>
+<td><code>rationale</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Explanation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="classification">Classification</h2>
+<p>Initial values:</p>
+<pre><code>low
+moderate
+high
+unknown
+not_applicable
+</code></pre>
+<h2 id="principle_4">Principle</h2>
+<p>A numeric uncertainty field should be populated only where the domain provides a defensible measurement.</p>
+<hr>
+<h1 id="23-correctionpolicy">23. CorrectionPolicy</h1>
+<h2 id="purpose_18">Purpose</h2>
+<p>CorrectionPolicy defines the permitted downstream response to a Truth State.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>How may local operational state respond to this evaluation?</strong></p>
+</blockquote>
+<h2 id="fields_16">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>correction_policy_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable Policy identifier</td>
+</tr>
+<tr>
+<td><code>truth_state_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Associated Truth State</td>
+</tr>
+<tr>
+<td><code>mode</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Correction mode</td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Rationale</td>
+</tr>
+<tr>
+<td><code>maximum_adjustment</code></td>
+<td style="text-align: right;">No</td>
+<td>Maximum permitted adjustment</td>
+</tr>
+<tr>
+<td><code>adjustment_unit</code></td>
+<td style="text-align: right;">No</td>
+<td>Adjustment unit</td>
+</tr>
+<tr>
+<td><code>requires_approval</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Whether external approval is required</td>
+</tr>
+<tr>
+<td><code>approval_authority</code></td>
+<td style="text-align: right;">No</td>
+<td>Required authority</td>
+</tr>
+<tr>
+<td><code>downstream_constraints</code></td>
+<td style="text-align: right;">No</td>
+<td>Additional constraints</td>
+</tr>
+</tbody>
+</table>
+<h2 id="correction-modes">Correction Modes</h2>
+<p>Initial values:</p>
+<pre><code>none
+step
+gradual
+quarantine
+dual_state
+human_escalation
+holdover
+fail_closed
+fail_bounded
+</code></pre>
+<h2 id="principle_5">Principle</h2>
+<p>Correction remains downstream of Evaluation.</p>
+<pre><code>Truth State
+    ↓
+Correction Policy
+</code></pre>
+<p>not:</p>
+<pre><code>Correction Preference
+    ↓
+Desired Truth State
+</code></pre>
+<hr>
+<h1 id="24-revalidationevent">24. RevalidationEvent</h1>
+<h2 id="purpose_19">Purpose</h2>
+<p>RevalidationEvent records why and when a previously evaluated Truth State is challenged again.</p>
+<h2 id="fields_17">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>revalidation_event_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable identifier</td>
+</tr>
+<tr>
+<td><code>truth_state_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Truth State being challenged</td>
+</tr>
+<tr>
+<td><code>trigger</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Revalidation trigger</td>
+</tr>
+<tr>
+<td><code>triggered_at</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Trigger time</td>
+</tr>
+<tr>
+<td><code>requested_by</code></td>
+<td style="text-align: right;">No</td>
+<td>Actor/system requesting reevaluation</td>
+</tr>
+<tr>
+<td><code>new_evaluation_id</code></td>
+<td style="text-align: right;">No</td>
+<td>Resulting Evaluation</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td style="text-align: right;">No</td>
+<td>Additional information</td>
+</tr>
+</tbody>
+</table>
+<h2 id="triggers">Triggers</h2>
+<p>Initial values:</p>
+<pre><code>elapsed_time
+expiration
+source_change
+anchor_change
+regime_change
+contradictory_observation
+excessive_drift
+reduced_source_diversity
+policy_change
+manual_challenge
+</code></pre>
+<h2 id="relationship">Relationship</h2>
+<pre><code>Truth State N
+    ↓
+Revalidation Event
+    ↓
+Evaluation N+1
+    ↓
+Truth State N+1
+</code></pre>
+<hr>
+<h1 id="25-holdover">25. Holdover</h1>
+<p>Holdover does not require a separate core entity in the initial model.</p>
+<p>It is represented through:</p>
+<pre><code>TruthState.status:
+  held_over
+</code></pre>
+<p>combined with:</p>
+<ul>
+<li>prior Truth State</li>
+<li>Source status</li>
+<li>Drift</li>
+<li>uncertainty</li>
+<li>Regime</li>
+<li>expiration</li>
+<li>permitted uses</li>
+<li>Correction Policy</li>
+</ul>
+<p>If later crosswalks demonstrate that Holdover requires additional independent lifecycle behavior, it may become a dedicated object.</p>
+<p>The initial model should avoid creating entities before structural need is demonstrated.</p>
+<hr>
+<h1 id="26-integritydescriptor">26. IntegrityDescriptor</h1>
+<h2 id="purpose_20">Purpose</h2>
+<p>IntegrityDescriptor preserves optional evidence about Observation integrity.</p>
+<p>Potential fields include:</p>
+<ul>
+<li>algorithm</li>
+<li>digest</li>
+<li>signature reference</li>
+<li>verification result</li>
+<li>verification time</li>
+</ul>
+<h2 id="example_5">Example</h2>
+<pre><code>integrity:
+  algorithm: SHA-256
+  digest: "..."
+  verified: true
+  verified_at: "..."
+</code></pre>
+<p>Integrity information is evidence.</p>
+<p>It does not automatically establish the Truth State of the associated Claim.</p>
+<hr>
+<h1 id="27-metadata">27. Metadata</h1>
+<p>Most major entities permit optional metadata.</p>
+<p>Metadata exists for:</p>
+<ul>
+<li>domain-specific extensions</li>
+<li>implementation annotations</li>
+<li>fixture information</li>
+<li>diagnostic context</li>
+</ul>
+<h2 id="critical-rule">Critical Rule</h2>
+<p>Metadata must not silently override canonical fields.</p>
+<p>For example:</p>
+<pre><code>metadata:
+  truth_status: operationally_accepted
+</code></pre>
+<p>must not override:</p>
+<pre><code>truth_state.status
+</code></pre>
+<p>Likewise:</p>
+<pre><code>metadata:
+  regime: trusted
+</code></pre>
+<p>must not replace the canonical:</p>
+<pre><code>regime_id
+</code></pre>
+<p>Metadata is extension data, not an alternate control plane.</p>
+<hr>
+<h1 id="28-runtime-referential-relationships">28. Runtime Referential Relationships</h1>
+<p>The minimum logical references are:</p>
+<pre><code>Claim
+  1 ───── * Observation
+
+Claim
+  1 ───── * Evaluation
+
+Claim
+  * ───── * TruthClass
+
+Observation
+  * ───── 1 Source
+
+Observation
+  * ───── 0..1 Anchor
+
+Source
+  * ───── 0..1 Anchor
+
+Evaluation
+  * ───── 1 Regime
+
+Evaluation
+  1 ───── * Qualification
+
+Evaluation
+  1 ───── 1 CoherenceState
+
+CoherenceState
+  1 ───── * CoherenceCluster
+
+Evaluation
+  1 ───── 1 DriftState
+
+Evaluation
+  1 ───── * Paradox
+
+Evaluation
+  1 ───── 1 TruthState
+
+TruthState
+  1 ───── 1 CorrectionPolicy
+
+TruthState
+  1 ───── * RevalidationEvent
+
+TruthState
+  0..1 ─── 0..1 prior TruthState
+</code></pre>
+<p>These cardinalities are initial design assumptions.</p>
+<p>Later crosswalks may reveal cases requiring refinement.</p>
+<hr>
+<h1 id="29-evaluation-snapshot-principle">29. Evaluation Snapshot Principle</h1>
+<p>An Evaluation should preserve the structural state used at evaluation time.</p>
+<p>Suppose a Source later changes from:</p>
+<pre><code>active
+</code></pre>
+<p>to:</p>
+<pre><code>revoked
+</code></pre>
+<p>Historical Evaluation 1 should still be able to show:</p>
+<blockquote>
+<p>At the time of Evaluation 1, Source A was treated as active under the then-current Regime and Source record.</p>
+</blockquote>
+<p>The current state may then trigger:</p>
+<pre><code>source_change
+    ↓
+Revalidation Event
+    ↓
+Evaluation 2
+</code></pre>
+<p>The model should therefore distinguish:</p>
+<ul>
+<li>present Source state</li>
+<li>Source state relevant to historical Evaluation</li>
+</ul>
+<p>Implementation options may include:</p>
+<ul>
+<li>snapshots</li>
+<li>entity version references</li>
+<li>append-only change records</li>
+<li>event history</li>
+</ul>
+<p>The logical requirement is preservation of historical interpretability.</p>
+<hr>
+<h1 id="30-versioning">30. Versioning</h1>
+<p>At minimum, implementations should preserve versions for:</p>
+<ul>
+<li>evaluator logic</li>
+<li>Regime policies</li>
+<li>schemas</li>
+<li>externally governed Anchors where relevant</li>
+</ul>
+<h2 id="evaluation-version">Evaluation Version</h2>
+<p>Each Evaluation should preserve:</p>
+<pre><code>evaluator_version
+</code></pre>
+<p>This allows two Evaluations to be distinguished when evaluation logic changes.</p>
+<h2 id="regime-version">Regime Version</h2>
+<p>Where policy matters:</p>
+<pre><code>regime.policy_version
+</code></pre>
+<p>should identify which policy revision governed the Evaluation.</p>
+<h2 id="schema-version">Schema Version</h2>
+<p>Serialized artifacts should eventually identify the schema revision against which they were validated.</p>
+<p>This may be carried externally or in a canonical envelope.</p>
+<p>The specific implementation mechanism remains open.</p>
+<hr>
+<h1 id="31-temporal-modeling">31. Temporal Modeling</h1>
+<p>Time appears in several structurally different roles.</p>
+<p>The model should not collapse them.</p>
+<h2 id="observation-time">Observation Time</h2>
+<pre><code>observed_at
+</code></pre>
+<p>When the Source observed the state.</p>
+<h2 id="receipt-time">Receipt Time</h2>
+<pre><code>received_at
+</code></pre>
+<p>When the Truth Service received the Observation.</p>
+<h2 id="evaluation-time">Evaluation Time</h2>
+<pre><code>evaluated_at
+</code></pre>
+<p>When the Evaluation occurred.</p>
+<h2 id="expiration-time">Expiration Time</h2>
+<pre><code>expires_at
+</code></pre>
+<p>When the Observation or Truth State ceases to satisfy a declared freshness condition.</p>
+<h2 id="revalidation-time">Revalidation Time</h2>
+<pre><code>next_revalidation_at
+</code></pre>
+<p>When the Truth State should be challenged again.</p>
+<p>These fields may differ significantly.</p>
+<p>That difference is itself potentially meaningful.</p>
+<hr>
+<h1 id="32-research-plane-data-model">32. Research Plane Data Model</h1>
+<p>The research scoring model remains separate from runtime truth evaluation.</p>
+<p>Primary research entities include:</p>
+<pre><code>ReferenceSystem
+Crosswalk
+Criterion
+Score
+ScoreEvidence
+ComparativeProfile
+</code></pre>
+<p>The research plane asks:</p>
+<blockquote>
+<p><strong>How well does an operational system expose and govern its relationship to truth?</strong></p>
+</blockquote>
+<p>It does not ask:</p>
+<blockquote>
+<p><strong>Is this runtime Claim true?</strong></p>
+</blockquote>
+<hr>
+<h1 id="33-referencesystem">33. ReferenceSystem</h1>
+<h2 id="purpose_21">Purpose</h2>
+<p>Represents a system studied as an operational truth reference architecture.</p>
+<p>Initial examples:</p>
+<pre><code>NTP
+DNS
+IAM
+PKI
+Policy / IAM
+Distributed Systems
+Ledgers
+Desired-State Systems
+Telemetry
+Supply-Chain Provenance
+</code></pre>
+<h2 id="suggested-fields">Suggested Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>system_id</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Stable research identifier</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Reference-system name</td>
+</tr>
+<tr>
+<td><code>primary_truth_class</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Primary Truth Class</td>
+</tr>
+<tr>
+<td><code>crosswalk_reference</code></td>
+<td style="text-align: right;">No</td>
+<td>Crosswalk document</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td style="text-align: right;">No</td>
+<td>Research lifecycle state</td>
+</tr>
+<tr>
+<td><code>metadata</code></td>
+<td style="text-align: right;">No</td>
+<td>Additional research metadata</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="34-score">34. Score</h1>
+<h2 id="purpose_22">Purpose</h2>
+<p>A Score evaluates one criterion for one Reference System.</p>
+<h2 id="fields_18">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>criterion</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Scoring criterion</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Score from 0–5</td>
+</tr>
+<tr>
+<td><code>rationale</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Explanation</td>
+</tr>
+<tr>
+<td><code>evidence</code></td>
+<td style="text-align: right;">Yes</td>
+<td>One or more supporting evidence records</td>
+</tr>
+</tbody>
+</table>
+<h2 id="criteria">Criteria</h2>
+<p>Initial dimensions:</p>
+<pre><code>anchor_quality
+lineage_visibility
+observation_quality
+coherence_detection
+drift_detection
+paradox_handling
+regime_awareness
+freshness_revalidation
+correction_discipline
+failure_transparency
+</code></pre>
+<h2 id="principle_6">Principle</h2>
+<pre><code>SCORE WITHOUT RATIONALE
+    =
+STRUCTURALLY INCOMPLETE SCORE
+</code></pre>
+<p>No naked numbers.</p>
+<hr>
+<h1 id="35-scoreevidence">35. ScoreEvidence</h1>
+<h2 id="purpose_23">Purpose</h2>
+<p>ScoreEvidence records the basis supporting a research score.</p>
+<h2 id="suggested-fields_1">Suggested Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>description</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evidence description</td>
+</tr>
+<tr>
+<td><code>reference</code></td>
+<td style="text-align: right;">No</td>
+<td>Source/reference identifier</td>
+</tr>
+<tr>
+<td><code>evidence_type</code></td>
+<td style="text-align: right;">Yes</td>
+<td>Evidence classification</td>
+</tr>
+</tbody>
+</table>
+<h2 id="evidence-types">Evidence Types</h2>
+<p>Initial values:</p>
+<pre><code>specification
+implementation
+documentation
+test
+observation
+analysis
+</code></pre>
+<p>Research evidence remains conceptually distinct from runtime Observation evidence.</p>
+<hr>
+<h1 id="36-research-score-profile">36. Research Score Profile</h1>
+<p>The ten scoring dimensions produce a structural profile.</p>
+<p>Example:</p>
+<pre><code>NTP
+
+Anchor Quality             5
+Lineage Visibility        4
+Observation Quality       5
+Coherence Detection       5
+Drift Detection           5
+Paradox Handling          4
+Regime Awareness          3
+Freshness/Revalidation    5
+Correction Discipline     5
+Failure Transparency      5
+</code></pre>
+<p>The above values are illustrative only.</p>
+<p>Actual scores should be assigned after evidence review.</p>
+<p>The important data-model requirement is preservation of the complete profile rather than only a total score.</p>
+<hr>
+<h1 id="37-rtt-meta-score-representation">37. RTT Meta-Score Representation</h1>
+<p>The research profile may be aggregated into five RTT meta-dimensions:</p>
+<pre><code>Reference
+Observation
+Coherence
+Drift
+Regime
+</code></pre>
+<p>Each dimension ranges:</p>
+<pre><code>0–10
+</code></pre>
+<p>Mappings are:</p>
+<table>
+<thead>
+<tr>
+<th>Meta-Dimension</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference</td>
+<td>Anchor Quality + Lineage Visibility</td>
+</tr>
+<tr>
+<td>Observation</td>
+<td>Observation Quality + Freshness/Revalidation</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>Coherence Detection + Paradox Handling</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>Drift Detection + Correction Discipline</td>
+</tr>
+<tr>
+<td>Regime</td>
+<td>Regime Awareness + Failure Transparency</td>
+</tr>
+</tbody>
+</table>
+<p>The meta-score is a research representation.</p>
+<p>It must not enter runtime Truth-State synthesis.</p>
+<hr>
+<h1 id="38-runtime-plane-vs-research-plane">38. Runtime Plane vs Research Plane</h1>
+<p>The separation is:</p>
+<pre><code>RUNTIME PLANE                  RESEARCH PLANE
+─────────────                  ──────────────
+
+Claim                          ReferenceSystem
+Observation                    Crosswalk
+Source                         Criterion
+Anchor                         Score
+Lineage                        ScoreEvidence
+Regime                         ComparativeProfile
+Evaluation
+Qualification
+CoherenceState
+DriftState
+Paradox
+TruthState
+CorrectionPolicy
+RevalidationEvent
+</code></pre>
+<p>There should be no runtime dependency such as:</p>
+<pre><code>TruthState
+    ↓
+ReferenceSystemScore
+</code></pre>
+<p>The planes may share vocabulary.</p>
+<p>They should not share decision authority.</p>
+<hr>
+<h1 id="39-minimal-ntp-fixture-model">39. Minimal NTP Fixture Model</h1>
+<p>The first implementation may use a compact object graph:</p>
+<pre><code>Claim
+  │
+  ├── Observation A ── Source A ──┐
+  ├── Observation B ── Source B ──┼── Anchor UTC
+  └── Observation C ── Source C ──┘
+  │
+  ▼
+Evaluation
+  │
+  ├── Qualification A
+  ├── Qualification B
+  ├── Qualification C
+  ├── CoherenceState
+  ├── DriftState
+  └── Paradox[]
+  │
+  ▼
+TruthState
+  │
+  ├── CorrectionPolicy
+  └── RevalidationEvent[]
+</code></pre>
+<p>This is sufficient for the initial deterministic NTP fixture set:</p>
+<ul>
+<li>coherent</li>
+<li>minor drift</li>
+<li>outlier</li>
+<li>fragmented</li>
+<li>stale</li>
+<li>indeterminate</li>
+</ul>
+<hr>
+<h1 id="40-coherent-fixture-shape">40. Coherent Fixture Shape</h1>
+<p>A coherent NTP-like fixture may contain:</p>
+<pre><code>Claim:
+  temporal
+
+Regime:
+  low-consequence display
+
+Anchor:
+  UTC reference
+
+Sources:
+  A
+  B
+  C
+
+Observations:
+  A → offset 12 ms
+  B → offset 15 ms
+  C → offset 14 ms
+
+Qualifications:
+  A → qualified
+  B → qualified
+  C → qualified
+
+Coherence:
+  coherent
+
+Drift:
+  bounded
+
+Paradox:
+  none material
+
+TruthState:
+  operationally_accepted
+
+Correction:
+  gradual
+
+Revalidation:
+  scheduled
+</code></pre>
+<p>The fixture should preserve the full object relationships rather than only the expected result.</p>
+<hr>
+<h1 id="41-fragmented-fixture-shape">41. Fragmented Fixture Shape</h1>
+<p>A fragmented fixture may produce:</p>
+<pre><code>Sources:
+  A
+  B
+  C
+  D
+
+Observations:
+  A → X
+  B → X
+  C → Y
+  D → Y
+
+Coherence:
+  fragmented
+
+Clusters:
+  cluster-X:
+    A
+    B
+
+  cluster-Y:
+    C
+    D
+
+Paradox:
+  active
+
+TruthState:
+  contested
+
+accepted_value:
+  null
+</code></pre>
+<p>The model preserves both clusters.</p>
+<p>Nothing requires the service to select one merely to populate <code>accepted_value</code>.</p>
+<hr>
+<h1 id="42-indeterminate-fixture-shape">42. Indeterminate Fixture Shape</h1>
+<p>An indeterminate fixture may contain:</p>
+<pre><code>Observations:
+  A → expired
+  B → rejected
+  C → indeterminate
+
+selected_observations:
+  []
+
+Coherence:
+  indeterminate
+
+Drift:
+  unknown
+
+TruthState:
+  indeterminate
+
+accepted_value:
+  null
+</code></pre>
+<p>Again:</p>
+<pre><code>INDETERMINATE
+</code></pre>
+<p>is a valid successful model state.</p>
+<hr>
+<h1 id="43-data-integrity-rules">43. Data Integrity Rules</h1>
+<p>The initial model should enforce or validate the following constraints.</p>
+<h2 id="rule-1">Rule 1</h2>
+<p>Every Observation belongs to exactly one Claim.</p>
+<h2 id="rule-2">Rule 2</h2>
+<p>Every Observation identifies a Source.</p>
+<h2 id="rule-3">Rule 3</h2>
+<p>Every Evaluation identifies one Claim and one Regime.</p>
+<h2 id="rule-4">Rule 4</h2>
+<p>Every completed Evaluation produces one Truth State.</p>
+<h2 id="rule-5">Rule 5</h2>
+<p>Every Qualification belongs to one Evaluation and one Observation.</p>
+<h2 id="rule-6">Rule 6</h2>
+<p>Every Truth State identifies its producing Evaluation.</p>
+<h2 id="rule-7">Rule 7</h2>
+<p>Every Correction Policy belongs to one Truth State.</p>
+<h2 id="rule-8">Rule 8</h2>
+<p>Every Revalidation Event identifies the Truth State being challenged.</p>
+<h2 id="rule-9">Rule 9</h2>
+<p>Paradoxes must reference competing evidence or clusters.</p>
+<h2 id="rule-10">Rule 10</h2>
+<p>A Truth State may have a null <code>accepted_value</code>.</p>
+<h2 id="rule-11">Rule 11</h2>
+<p>Research scores must contain rationale and evidence.</p>
+<h2 id="rule-12">Rule 12</h2>
+<p>Research scores must not influence runtime Evaluation.</p>
+<hr>
+<h1 id="44-deletion-and-retention">44. Deletion and Retention</h1>
+<p>The initial architecture favors preservation over destructive deletion for Evaluation artifacts.</p>
+<p>Particularly sensitive historical entities include:</p>
+<ul>
+<li>Evaluations</li>
+<li>Qualifications</li>
+<li>Coherence States</li>
+<li>Drift States</li>
+<li>Paradoxes</li>
+<li>Truth States</li>
+<li>Revalidation Events</li>
+</ul>
+<p>If implementation requirements demand logical deletion, retention policy, or privacy-driven erasure, those mechanisms should preserve as much structural audit integrity as legally and operationally permitted.</p>
+<p>Retention policy itself is outside the current canonical model and should be introduced explicitly rather than assumed.</p>
+<hr>
+<h1 id="45-storage-neutral-implementation-guidance">45. Storage-Neutral Implementation Guidance</h1>
+<p>The logical model intentionally avoids requiring one storage technology.</p>
+<h2 id="relational-representation">Relational Representation</h2>
+<p>Suitable for:</p>
+<ul>
+<li>strong entity relationships</li>
+<li>Evaluation history</li>
+<li>constraints</li>
+<li>structured querying</li>
+</ul>
+<h2 id="document-representation">Document Representation</h2>
+<p>Suitable for:</p>
+<ul>
+<li>Evaluation snapshots</li>
+<li>Truth-State serialization</li>
+<li>fixture storage</li>
+<li>domain-native Observation values</li>
+</ul>
+<h2 id="graph-representation">Graph Representation</h2>
+<p>Suitable for:</p>
+<ul>
+<li>Lineage</li>
+<li>dependency analysis</li>
+<li>Source relationships</li>
+<li>Anchor paths</li>
+</ul>
+<h2 id="event-representation">Event Representation</h2>
+<p>Suitable for:</p>
+<ul>
+<li>Source changes</li>
+<li>Anchor revocation</li>
+<li>Revalidation triggers</li>
+<li>Truth-State lifecycle reconstruction</li>
+</ul>
+<p>A production implementation may combine these.</p>
+<p>The architecture should choose storage technology after access patterns become measurable.</p>
+<hr>
+<h1 id="46-schema-boundary">46. Schema Boundary</h1>
+<p>The logical model defines meaning.</p>
+<p>Machine-readable schemas define serialization and validation.</p>
+<p>Therefore:</p>
+<pre><code>Logical Data Model
+        ↓
+Canonical Meaning
+        ↓
+JSON Schemas
+        ↓
+API Serialization
+        ↓
+Implementation Storage
+</code></pre>
+<p>The direction should not be reversed.</p>
+<p>Database convenience should not silently redefine canonical meaning.</p>
+<hr>
+<h1 id="47-future-model-challenges">47. Future Model Challenges</h1>
+<p>Later crosswalks are expected to challenge the current model.</p>
+<h2 id="dns-may-challenge">DNS May Challenge</h2>
+<ul>
+<li>delegated authority</li>
+<li>caching</li>
+<li>observer-dependent answers</li>
+<li>negative answers</li>
+<li>namespace hierarchy</li>
+</ul>
+<h2 id="iam-may-challenge">IAM May Challenge</h2>
+<ul>
+<li>subject identity</li>
+<li>credential state</li>
+<li>authentication context</li>
+<li>revocation</li>
+</ul>
+<h2 id="pki-may-challenge">PKI May Challenge</h2>
+<ul>
+<li>trust chains</li>
+<li>validity intervals</li>
+<li>signature state</li>
+<li>multiple trust stores</li>
+</ul>
+<h2 id="distributed-systems-may-challenge">Distributed Systems May Challenge</h2>
+<ul>
+<li>epochs</li>
+<li>quorum</li>
+<li>leadership</li>
+<li>competing state histories</li>
+</ul>
+<h2 id="ledgers-may-challenge">Ledgers May Challenge</h2>
+<ul>
+<li>ordering</li>
+<li>settlement</li>
+<li>reversibility</li>
+<li>finality</li>
+</ul>
+<h2 id="desired-state-systems-may-challenge">Desired-State Systems May Challenge</h2>
+<ul>
+<li>intent vs actual state</li>
+<li>reconciliation loops</li>
+</ul>
+<h2 id="telemetry-may-challenge">Telemetry May Challenge</h2>
+<ul>
+<li>partial observability</li>
+<li>sampling</li>
+<li>delayed evidence</li>
+</ul>
+<h2 id="supply-chain-provenance-may-challenge">Supply-Chain Provenance May Challenge</h2>
+<ul>
+<li>transformations</li>
+<li>artifact identity</li>
+<li>attestations</li>
+<li>dependency graphs</li>
+</ul>
+<p>These challenges should refine the model only where crosswalk evidence demonstrates the need.</p>
+<hr>
+<h1 id="48-promotion-rule">48. Promotion Rule</h1>
+<p>A newly discovered concept should become a core entity only when at least one of the following is true:</p>
+<ol>
+<li>it has its own lifecycle</li>
+<li>multiple existing entities depend upon it</li>
+<li>it has independent identity</li>
+<li>it must be referenced historically</li>
+<li>collapsing it into another entity loses structurally important information</li>
+<li>multiple Truth Classes demonstrate the same abstraction</li>
+</ol>
+<p>Otherwise, the concept should begin as:</p>
+<ul>
+<li>an attribute</li>
+<li>a relationship</li>
+<li>an extension</li>
+<li>domain metadata</li>
+<li>a crosswalk-specific construct</li>
+</ul>
+<p>This prevents entity proliferation.</p>
+<hr>
+<h1 id="49-model-evolution-loop">49. Model Evolution Loop</h1>
+<p>The data model evolves through:</p>
+<pre><code>REFERENCE SYSTEM
+      ↓
+CROSSWALK
+      ↓
+NEW STRUCTURAL NEED
+      ↓
+REPRESENT WITH CURRENT MODEL?
+      │
+   ┌──┴──┐
+  YES    NO
+   │      │
+   │      ▼
+   │   CLASSIFY GAP
+   │      │
+   │      ├── Domain-Specific
+   │      ├── Missing Attribute
+   │      ├── Missing Relationship
+   │      ├── Missing Entity
+   │      └── Model Defect
+   │
+   ▼
+TEST AGAINST PRIOR CROSSWALKS
+      ↓
+MODIFY IF JUSTIFIED
+      ↓
+VERSION MODEL
+      ↓
+REVALIDATE FIXTURES
+</code></pre>
+<p>The model should evolve through evidence rather than accumulation.</p>
+<hr>
+<h1 id="50-initial-definition-of-done">50. Initial Definition of Done</h1>
+<p>The initial logical data model is sufficient when it can represent all six NTP reference fixtures without special-case structural exceptions.</p>
+<p>Those fixtures are:</p>
+<ol>
+<li>coherent</li>
+<li>minor drift</li>
+<li>outlier</li>
+<li>fragmented</li>
+<li>stale</li>
+<li>indeterminate</li>
+</ol>
+<p>For every fixture, the model must preserve:</p>
+<ul>
+<li>Claim</li>
+<li>Truth Class</li>
+<li>Regime</li>
+<li>Anchor</li>
+<li>Sources</li>
+<li>Observations</li>
+<li>Lineage</li>
+<li>Qualification</li>
+<li>Coherence</li>
+<li>Drift</li>
+<li>Paradox where applicable</li>
+<li>Truth State</li>
+<li>Correction Policy</li>
+<li>Revalidation condition</li>
+<li>Evaluation history</li>
+</ul>
+<p>The model must also be able to answer:</p>
+<blockquote>
+<p><strong>Why was this Truth State produced?</strong></p>
+</blockquote>
+<p>using persisted relationships rather than reconstructed guesswork.</p>
+<hr>
+<h1 id="51-canonical-data-flow">51. Canonical Data Flow</h1>
+<p>The complete logical data flow is:</p>
+<pre><code>CLAIM
+  │
+  ├── TruthClass[]
+  │
+  ▼
+OBSERVATION[]
+  │
+  ├── Source
+  │     │
+  │     └── Anchor
+  │
+  └── Lineage
+         │
+         ▼
+      EVALUATION
+         │
+         ├── Regime
+         ├── Qualification[]
+         ├── CoherenceState
+         │     └── CoherenceCluster[]
+         ├── DriftState
+         └── Paradox[]
+         │
+         ▼
+     TRUTH_STATE
+         │
+         ├── CorrectionPolicy
+         └── RevalidationEvent[]
+                    │
+                    ▼
+               EVALUATION N+1
+</code></pre>
+<p>The cycle is append-oriented.</p>
+<p>New evidence creates new evaluation context.</p>
+<p>It does not erase the conditions under which earlier truth was accepted.</p>
+<hr>
+<h1 id="52-governing-data-principle">52. Governing Data Principle</h1>
+<blockquote>
+<p><strong>Preserve enough structure that no Truth State becomes an unexplained answer.</strong></p>
+</blockquote>
+<p>The data model must make it possible to move backward from:</p>
+<pre><code>Truth State
+</code></pre>
+<p>to:</p>
+<pre><code>Evaluation
+</code></pre>
+<p>to:</p>
+<pre><code>Coherence
+Drift
+Paradox
+Qualification
+</code></pre>
+<p>to:</p>
+<pre><code>Observations
+</code></pre>
+<p>to:</p>
+<pre><code>Sources
+</code></pre>
+<p>to:</p>
+<pre><code>Anchors
+</code></pre>
+<p>through:</p>
+<pre><code>Lineage
+</code></pre>
+<p>within:</p>
+<pre><code>Regime
+</code></pre>
+<p>The model therefore preserves not merely the result of truth evaluation, but the structural path by which that result became operationally usable.</p>
+<hr>
+<h1 id="53-canonical-summary">53. Canonical Summary</h1>
+<p>The RTT Resonance Truth Service data model separates five fundamental things:</p>
+<pre><code>ASSERTION
+   ↓
+Claim
+
+EVIDENCE
+   ↓
+Observation + Source + Anchor + Lineage
+
+CONTEXT
+   ↓
+Regime
+
+EVALUATION
+   ↓
+Qualification + Coherence + Drift + Paradox
+
+OPERATIONAL RESULT
+   ↓
+Truth State + Correction + Revalidation
+</code></pre>
+<p>These distinctions are intentional.</p>
+<p>The data model does not ask every object to carry truth.</p>
+<p>It preserves the relationships necessary to explain how a Truth State emerged from evidence under bounded operational conditions.</p>
+<p><strong>Claims are asserted.</strong></p>
+<p><strong>Observations are gathered.</strong></p>
+<p><strong>Sources are identified.</strong></p>
+<p><strong>Anchors are bounded.</strong></p>
+<p><strong>Lineage is preserved.</strong></p>
+<p><strong>Regimes are declared.</strong></p>
+<p><strong>Evidence is qualified.</strong></p>
+<p><strong>Coherence is evaluated.</strong></p>
+<p><strong>Drift is measured.</strong></p>
+<p><strong>Paradox is retained.</strong></p>
+<p><strong>Truth States are synthesized.</strong></p>
+<p><strong>Correction is governed.</strong></p>
+<p><strong>Revalidation continues the cycle.</strong></p>
   </main>
 </body>
 </html>

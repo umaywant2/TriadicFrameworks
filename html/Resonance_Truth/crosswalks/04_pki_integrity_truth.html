@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/04_pki_integrity_truth.md">
-  <title>04_pki_integrity_truth</title>
+  <title>Crosswalk #4 — PKI and Integrity Truth</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2611 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_crosswalks_04_pki_integrity_truth_" src="https://github.com/user-attachments/assets/45f42fed-db51-49fe-bb8b-d0b9ee61c26d" /></p>
+<h1 id="crosswalk-4-pki-and-integrity-truth">Crosswalk #4 — PKI and Integrity Truth</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Crosswalk #4<br>
+<strong>Truth Class:</strong> Integrity Truth<br>
+<strong>Reference System:</strong> Public Key Infrastructure (PKI) / X.509 Certificate Validation<br>
+<strong>Primary RTT Dimensions:</strong> Lineage · Coherence · Authority · Regime<br>
+<strong>Supporting RTT Dimensions:</strong> Identity · Temp · Drift · Paradox · Elec<br>
+<strong>Status:</strong> Research Crosswalk / Architecture Challenge<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This crosswalk examines Public Key Infrastructure and X.509 certificate validation as the fourth operational reference system for the RTT Resonance Truth Service.</p>
+<p>The governing question is:</p>
+<blockquote>
+<p><strong>Is this still what it claims to be?</strong></p>
+</blockquote>
+<p>That description begins with Integrity Truth but quickly exposes a more complex structure.</p>
+<p>Certificate validation may involve relationships among:</p>
+<ul>
+<li>subject</li>
+<li>public key</li>
+<li>certificate</li>
+<li>issuer</li>
+<li>signature</li>
+<li>trust anchor</li>
+<li>certification path</li>
+<li>policy</li>
+<li>validity period</li>
+<li>revocation state</li>
+<li>relying party</li>
+<li>application context</li>
+</ul>
+<p>Crosswalk #4 therefore provides an important test of whether the Truth Service can keep several Truth Classes distinct while evaluating one operational result.</p>
+<p>A single certificate-validation question may simultaneously involve:</p>
+<pre><code>Identity Truth
+Integrity Truth
+Authority Truth
+Temporal Truth
+Lineage Truth
+State Truth
+</code></pre>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Can the Truth Service preserve these dimensions separately while still producing a usable Regime-qualified result?</strong></p>
+</blockquote>
+<hr>
+<h1 id="1-evidence-boundary">1. Evidence Boundary</h1>
+<p>The primary technical reference for this crosswalk is:</p>
+<pre><code>RFC 5280
+Internet X.509 Public Key Infrastructure
+Certificate and Certificate Revocation List (CRL) Profile
+</code></pre>
+<p>RFC 5280 profiles:</p>
+<ul>
+<li>X.509 version 3 certificates</li>
+<li>X.509 version 2 certificate revocation lists</li>
+<li>certificate extensions</li>
+<li>CRL extensions</li>
+<li>certification paths</li>
+<li>trust relationships</li>
+<li>revocation</li>
+<li>certification path validation</li>
+</ul>
+<p>The RFC also defines a certification path validation algorithm.</p>
+<p>Supporting NIST material may be used where useful to clarify path-validation and certification concepts.</p>
+<p>This crosswalk focuses on:</p>
+<pre><code>certificates
+trust anchors
+certification paths
+signatures
+validity
+constraints
+policy
+revocation
+relying-party validation
+</code></pre>
+<p>It does not attempt to model every PKI deployment architecture.</p>
+<hr>
+<h1 id="2-evidence-discipline">2. Evidence Discipline</h1>
+<p>This crosswalk distinguishes:</p>
+<h2 id="pki-fact">PKI Fact</h2>
+<p>A mechanism explicitly represented in RFC 5280 or supporting bounded reference material.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>A structural interpretation introduced through Resonance Truth.</p>
+<h2 id="candidate-generalization">Candidate Generalization</h2>
+<p>A mechanism potentially reusable across multiple Truth Classes.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A proposed abstraction requiring further crosswalk evidence.</p>
+<p>Example:</p>
+<pre><code>PKI Fact:
+  A certification path links certificates toward
+  a trust anchor used during path validation.
+
+RTT Interpretation:
+  Operational trust depends on validated Authority Lineage.
+
+Candidate Generalization:
+  Lineage can participate directly in qualification.
+
+Hypothesis:
+  Authority relationships should become first-class
+  generalized Truth-Service objects.
+</code></pre>
+<p>The hypothesis remains provisional.</p>
+<hr>
+<h1 id="3-why-pki-comes-fourth">3. Why PKI Comes Fourth</h1>
+<p>The previous crosswalks progressively exposed:</p>
+<pre><code>NTP
+  ↓
+reference + Observation + Drift + Revalidation
+
+DNS
+  ↓
+scope + delegation + Lineage + freshness
+
+IAM
+  ↓
+Subject + evidence + authority + consumer context
+</code></pre>
+<p>PKI brings these structures together.</p>
+<p>A certificate may:</p>
+<ul>
+<li>identify a Subject</li>
+<li>bind information to a public key</li>
+<li>be issued by an authority</li>
+<li>carry a signature</li>
+<li>exist inside a certification path</li>
+<li>operate under policy constraints</li>
+<li>have a validity interval</li>
+<li>later become revoked</li>
+<li>be evaluated by a relying party</li>
+</ul>
+<p>This makes PKI an unusually useful architectural stress test.</p>
+<p>It forces the Truth Service to distinguish:</p>
+<pre><code>cryptographic integrity
+</code></pre>
+<p>from:</p>
+<pre><code>identity binding
+</code></pre>
+<p>from:</p>
+<pre><code>issuer authority
+</code></pre>
+<p>from:</p>
+<pre><code>path validity
+</code></pre>
+<p>from:</p>
+<pre><code>temporal validity
+</code></pre>
+<p>from:</p>
+<pre><code>application suitability
+</code></pre>
+<p>These are related.</p>
+<p>They are not interchangeable.</p>
+<hr>
+<h1 id="4-integrity-truth">4. Integrity Truth</h1>
+<p>The primary Truth Class is:</p>
+<pre><code>Integrity Truth
+</code></pre>
+<p>Its operational question is:</p>
+<blockquote>
+<p><strong>Is this still what it claims to be?</strong></p>
+</blockquote>
+<p>For PKI, however, Integrity Truth cannot safely be reduced to:</p>
+<pre><code>signature valid
+  =
+certificate operationally trusted
+</code></pre>
+<p>Certificate validation may involve multiple additional conditions.</p>
+<p>Therefore a more precise generalized question is:</p>
+<blockquote>
+<p><strong>Within this Regime, does the presented object preserve the integrity, Lineage, authority, validity, and policy relationships required for the declared operational use?</strong></p>
+</blockquote>
+<p>This formulation keeps Integrity Truth central without pretending it acts alone.</p>
+<hr>
+<h1 id="5-pki-on-its-own-terms">5. PKI on Its Own Terms</h1>
+<p>At a high level, PKI uses public-key certificates and certification relationships to associate public keys with subjects and authorities.</p>
+<p>A simplified conceptual relationship is:</p>
+<pre><code>Trust Anchor
+    ↓
+CA Certificate
+    ↓
+Intermediate CA
+    ↓
+End-Entity Certificate
+    ↓
+Relying Party Validation
+</code></pre>
+<p>The relying party evaluates a certification path.</p>
+<p>Relevant validation concerns may include:</p>
+<ul>
+<li>signatures</li>
+<li>validity periods</li>
+<li>name relationships</li>
+<li>certificate constraints</li>
+<li>certificate policy</li>
+<li>key usage</li>
+<li>revocation information</li>
+</ul>
+<p>The final result is not merely:</p>
+<pre><code>signature mathematically correct
+</code></pre>
+<p>It is an operational decision about whether the certificate/path is acceptable under the validation context.</p>
+<hr>
+<h1 id="6-initial-structural-crosswalk">6. Initial Structural Crosswalk</h1>
+<table>
+<thead>
+<tr>
+<th>PKI Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trust anchor</td>
+<td>Bounded Truth Anchor</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Certificate authority</td>
+<td>Authority Source / Role</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Subject</td>
+<td>Truth Subject</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Certificate</td>
+<td>Signed Assertion / Evidence object</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Public key binding</td>
+<td>Identity / integrity relationship</td>
+<td>Domain-Specific with general relevance</td>
+</tr>
+<tr>
+<td>Digital signature</td>
+<td>Integrity evidence</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Certificate chain / path</td>
+<td>Authority Lineage</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Intermediate CA</td>
+<td>Delegated Authority</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Path validation</td>
+<td>Lineage + Authority qualification</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Validity period</td>
+<td>Temporal qualification boundary</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Certificate policy</td>
+<td>Regime / qualification rule</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Name constraints</td>
+<td>Scope constraint</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Basic constraints</td>
+<td>Authority-role constraint</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Key usage</td>
+<td>Permitted-use constraint</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Revocation</td>
+<td>State / qualification transition</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>CRL</td>
+<td>Revocation-state evidence</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Relying party</td>
+<td>Observer / Consumer</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Trust store</td>
+<td>Consumer-local Anchor set</td>
+<td>Strong Candidate General</td>
+</tr>
+</tbody>
+</table>
+<p>PKI strongly reinforces several candidates from DNS and IAM while introducing an especially clear:</p>
+<pre><code>signed Assertion
+  +
+Authority Lineage
+  +
+relying-party Anchor set
+  +
+Temporal validity
+  +
+policy constraints
+</code></pre>
+<p>relationship.</p>
+<hr>
+<h1 id="7-trust-anchor-bounded-truth-anchor">7. Trust Anchor → Bounded Truth Anchor</h1>
+<h2 id="pki-reference-system-view">PKI Reference-System View</h2>
+<p>Certification path validation begins relative to a trust anchor selected or recognized by the validating environment.</p>
+<h2 id="rtt-interpretation_1">RTT Interpretation</h2>
+<p>This strongly validates:</p>
+<pre><code>Truth Anchor
+</code></pre>
+<p>but with an important constraint:</p>
+<blockquote>
+<p><strong>The Anchor is meaningful relative to the relying party and Regime.</strong></p>
+</blockquote>
+<p>A trust anchor is not:</p>
+<pre><code>universally trusted by definition
+</code></pre>
+<p>Instead:</p>
+<pre><code>Relying Party
+    ↓
+Trust Configuration
+    ↓
+Trust Anchor
+    ↓
+Certification Path
+</code></pre>
+<h2 id="architectural-contribution">Architectural Contribution</h2>
+<p>After NTP, DNS, IAM, and PKI:</p>
+<pre><code>Anchor
+</code></pre>
+<p>continues to survive,</p>
+<p>but:</p>
+<pre><code>one universal Anchor
+</code></pre>
+<p>does not.</p>
+<p>The emerging generalized concept is:</p>
+<blockquote>
+<p><strong>A bounded reference recognized within an operational Regime.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="8-trust-store-consumer-local-anchor-set">8. Trust Store → Consumer-Local Anchor Set</h1>
+<p>PKI contributes a significant refinement.</p>
+<p>A relying party may operate with a configured set of trusted Anchors.</p>
+<p>RTT interpretation:</p>
+<pre><code>Consumer-Local Anchor Set
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Consumer
+   ↓
+Regime
+   ↓
+Anchor Set
+   ↓
+Validation
+</code></pre>
+<p>This strengthens the IAM finding:</p>
+<pre><code>Consumer Context matters.
+</code></pre>
+<p>It also reinforces DNS:</p>
+<pre><code>Authority is scoped.
+</code></pre>
+<h2 id="candidate-generalization_1">Candidate Generalization</h2>
+<p>The Truth Service may eventually require:</p>
+<pre><code>Regime.allowed_anchor_ids
+</code></pre>
+<p>or a more general:</p>
+<pre><code>AuthoritySet
+</code></pre>
+<p>rather than assuming every Evaluation can consult every known Anchor.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="9-certificate-authority-authority-role">9. Certificate Authority → Authority Role</h1>
+<p>A certification authority issues certificates.</p>
+<p>RTT interpretation:</p>
+<pre><code>Authority Role
+</code></pre>
+<p>This reinforces the IAM finding that:</p>
+<pre><code>Source
+  ≠
+Authority
+</code></pre>
+<p>and:</p>
+<pre><code>Actor
+  ≠
+one permanent role
+</code></pre>
+<p>A CA participates as an authority because of:</p>
+<ul>
+<li>certificate relationships</li>
+<li>constraints</li>
+<li>trust configuration</li>
+<li>scope</li>
+<li>Lineage</li>
+<li>Regime</li>
+</ul>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Authority is a relationship involving actor, role, scope, Lineage, consumer, and Regime.</strong></p>
+</blockquote>
+<p>After DNS + IAM + PKI, this candidate has survived three strong challenges.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="10-subject-truth-subject">10. Subject → Truth Subject</h1>
+<p>PKI certificates contain subject-related information and bind public keys within the certificate structure.</p>
+<p>RTT interpretation:</p>
+<pre><code>Truth Subject
+</code></pre>
+<p>PKI therefore strengthens the candidate introduced by DNS and IAM.</p>
+<p>Conceptual pattern:</p>
+<pre><code>Subject
+   ↓
+Claim / Assertion
+   ↓
+Evidence
+   ↓
+Evaluation
+</code></pre>
+<p>The Subject may be:</p>
+<ul>
+<li>person</li>
+<li>organization</li>
+<li>service</li>
+<li>device</li>
+<li>another named entity</li>
+</ul>
+<h2 id="architectural-finding">Architectural Finding</h2>
+<p>After IAM and PKI, a first-class Subject abstraction is becoming increasingly difficult to avoid.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<p>Still defer core-model promotion until additional crosswalks are considered.</p>
+<hr>
+<h1 id="11-certificate-signed-assertion">11. Certificate → Signed Assertion</h1>
+<p>This is one of the most important results from Crosswalk #4.</p>
+<p>IAM introduced the possibility that:</p>
+<pre><code>Assertion
+  ≠
+Observation
+</code></pre>
+<p>PKI provides a strong second example.</p>
+<p>A certificate is not merely an Observation.</p>
+<p>It is a signed data structure containing claims/bindings issued within a certification system.</p>
+<p>RTT interpretation:</p>
+<pre><code>Signed Assertion
+</code></pre>
+<p>This strongly reinforces a broader evidence hierarchy.</p>
+<p>Candidate architecture:</p>
+<pre><code>EvidenceItem
+   │
+   ├── Observation
+   └── Assertion
+          │
+          └── Signed Assertion
+</code></pre>
+<p>Potential future extension:</p>
+<pre><code>EvidenceItem
+   ├── Observation
+   ├── Assertion
+   ├── Attestation
+   └── Record
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — significantly strengthened
+</code></pre>
+<p>This is now one of the strongest pending data-model changes.</p>
+<hr>
+<h1 id="12-assertion-truth-state">12. Assertion ≠ Truth State</h1>
+<p>A certificate can be structurally valid as a data object yet fail operational validation for a relying party.</p>
+<p>Therefore:</p>
+<pre><code>signed Assertion
+      ≠
+accepted Truth State
+</code></pre>
+<p>This parallels:</p>
+<pre><code>Observation
+  ≠
+Truth State
+</code></pre>
+<p>The generalized architecture now appears to require:</p>
+<pre><code>Evidence
+   ↓
+Qualification
+   ↓
+Truth State
+</code></pre>
+<p>where Evidence may contain multiple subtypes.</p>
+<hr>
+<h1 id="13-digital-signature-integrity-evidence">13. Digital Signature → Integrity Evidence</h1>
+<p>A digital signature provides evidence regarding the integrity/authenticity relationship of signed data under the applicable cryptographic mechanism.</p>
+<p>RTT interpretation:</p>
+<pre><code>Integrity Evidence
+</code></pre>
+<p>However:</p>
+<pre><code>signature valid
+  ≠
+certificate acceptable for every purpose
+</code></pre>
+<p>This distinction is central.</p>
+<p>A valid signature may coexist with:</p>
+<ul>
+<li>expiration</li>
+<li>revocation</li>
+<li>inappropriate use</li>
+<li>unacceptable policy</li>
+<li>unacceptable path</li>
+<li>unrecognized Anchor</li>
+</ul>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Integrity evidence participates in qualification without becoming the whole Truth State.</strong></p>
+</blockquote>
+<p>This strongly supports the multi-dimensional evaluation architecture.</p>
+<hr>
+<h1 id="14-cryptographic-integrity-operational-trust">14. Cryptographic Integrity ≠ Operational Trust</h1>
+<p>This is the canonical PKI distinction.</p>
+<p>Consider:</p>
+<pre><code>Signature:
+  valid
+</code></pre>
+<p>but:</p>
+<pre><code>Certificate:
+  expired
+</code></pre>
+<p>or:</p>
+<pre><code>Certificate:
+  revoked
+</code></pre>
+<p>or:</p>
+<pre><code>Path:
+  does not terminate at an accepted trust anchor
+</code></pre>
+<p>The cryptographic integrity result remains meaningful.</p>
+<p>The operational acceptance result differs.</p>
+<p>Therefore:</p>
+<pre><code>Integrity Truth
+  ≠
+Authority Truth
+  ≠
+Temporal Truth
+  ≠
+Regime Acceptance
+</code></pre>
+<p>The Truth Service must preserve these dimensions separately.</p>
+<hr>
+<h1 id="15-certification-path-authority-lineage">15. Certification Path → Authority Lineage</h1>
+<p>RFC 5280 makes certification paths central to validation.</p>
+<p>RTT interpretation:</p>
+<pre><code>Authority Lineage
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Trust Anchor
+    ↓
+CA
+    ↓
+Intermediate CA
+    ↓
+End-Entity Certificate
+</code></pre>
+<p>The Lineage is not merely a historical path.</p>
+<p>It participates directly in establishing whether the certificate may be accepted.</p>
+<p>This strongly validates the DNS finding:</p>
+<blockquote>
+<p><strong>Lineage can establish authority.</strong></p>
+</blockquote>
+<p>and strengthens it significantly.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="16-lineage-is-operational">16. Lineage Is Operational</h1>
+<p>After NTP, Lineage could still have been interpreted as useful provenance metadata.</p>
+<p>DNS made Lineage relevant to delegation.</p>
+<p>IAM made Lineage relevant to federation.</p>
+<p>PKI makes the case stronger:</p>
+<blockquote>
+<p><strong>Lineage may directly participate in qualification.</strong></p>
+</blockquote>
+<p>This suggests:</p>
+<pre><code>Lineage
+</code></pre>
+<p>belongs in the evaluation path rather than merely the audit path.</p>
+<p>Current architecture already does this.</p>
+<p>Crosswalk #4 strongly validates that design.</p>
+<hr>
+<h1 id="17-intermediate-ca-delegated-authority">17. Intermediate CA → Delegated Authority</h1>
+<p>An intermediate CA provides another strong example of:</p>
+<pre><code>delegated authority
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Upstream Authority
+      ↓
+  delegation
+      ↓
+Downstream Authority
+      ↓
+  assertion
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Authority Relationship
+</code></pre>
+<p>This again suggests that simple:</p>
+<pre><code>Source.anchor_id
+</code></pre>
+<p>may eventually be too weak as the sole authority relationship.</p>
+<p>A richer graph may need to preserve:</p>
+<ul>
+<li>delegator</li>
+<li>delegate</li>
+<li>scope</li>
+<li>constraints</li>
+<li>validity</li>
+<li>Lineage</li>
+<li>policy</li>
+</ul>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE — strengthened
+</code></pre>
+<hr>
+<h1 id="18-path-validation-lineage-qualification">18. Path Validation → Lineage Qualification</h1>
+<p>PKI path validation provides perhaps the strongest real-system example yet of:</p>
+<pre><code>Lineage Qualification
+</code></pre>
+<p>The question is not simply:</p>
+<blockquote>
+<p>Does a path exist?</p>
+</blockquote>
+<p>It is:</p>
+<blockquote>
+<p><strong>Does the path satisfy the validation rules required by this application and trust context?</strong></p>
+</blockquote>
+<p>RTT interpretation:</p>
+<pre><code>Lineage
+  +
+Authority
+  +
+Time
+  +
+Constraints
+  +
+Regime
+  ↓
+Qualification
+</code></pre>
+<p>This strongly supports the idea that Qualification may operate on:</p>
+<ul>
+<li>individual Evidence items</li>
+<li>Sources</li>
+<li>Lineage paths</li>
+<li>whole evidence structures</li>
+</ul>
+<p>not merely one Observation at a time.</p>
+<hr>
+<h1 id="19-qualification-scope-must-expand">19. Qualification Scope Must Expand</h1>
+<p>The current architecture initially emphasizes:</p>
+<pre><code>Observation Qualification
+</code></pre>
+<p>PKI demonstrates that qualification may also apply to:</p>
+<pre><code>Evidence Item
+Source
+Authority Relationship
+Certification Path
+Anchor
+Policy Relationship
+</code></pre>
+<p>Therefore the generalized component may need to evolve conceptually from:</p>
+<pre><code>Observation Qualification Engine
+</code></pre>
+<p>toward:</p>
+<pre><code>Evidence / Relationship Qualification Engine
+</code></pre>
+<p>The external component name need not change yet.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<p>Crosswalk #5 should test this further.</p>
+<hr>
+<h1 id="20-validity-period-temporal-qualification">20. Validity Period → Temporal Qualification</h1>
+<p>Certificates have temporal validity conditions.</p>
+<p>RTT interpretation:</p>
+<pre><code>Temporal Qualification Boundary
+</code></pre>
+<p>This reinforces the principle:</p>
+<blockquote>
+<p><strong>A structurally intact object may cease to be operationally acceptable because the current time crosses a validity boundary.</strong></p>
+</blockquote>
+<p>Conceptually:</p>
+<pre><code>Integrity:
+  valid
+
+Temporal qualification:
+  expired
+
+Operational result:
+  unacceptable under Regime
+</code></pre>
+<p>This strongly demonstrates interaction among Truth Classes.</p>
+<hr>
+<h1 id="21-temporal-truth-embedded-inside-integrity-evaluation">21. Temporal Truth Embedded Inside Integrity Evaluation</h1>
+<p>PKI provides a clear example of:</p>
+<pre><code>Primary Truth Class:
+  Integrity
+</code></pre>
+<p>while still requiring:</p>
+<pre><code>Temporal Truth
+</code></pre>
+<p>for operational acceptance.</p>
+<p>Therefore the Truth-Class model must support:</p>
+<pre><code>one primary class
+  +
+multiple secondary classes
+</code></pre>
+<p>without forcing the entire Evaluation into one category.</p>
+<p>Candidate structure:</p>
+<pre><code>truth_classes:
+  - integrity
+  - authority
+  - identity
+  - temporal
+  - lineage
+</code></pre>
+<p>This validates the existing array-based model.</p>
+<hr>
+<h1 id="22-certificate-policy-regime-rule">22. Certificate Policy → Regime Rule</h1>
+<p>Certificate policies and validation policy provide another strong mapping.</p>
+<p>RTT interpretation:</p>
+<pre><code>Regime Rule
+</code></pre>
+<p>A path or certificate may be structurally meaningful while failing the consumer's policy requirements.</p>
+<p>Conceptually:</p>
+<pre><code>Evidence
+  ↓
+Valid Path
+  ↓
+Policy Evaluation
+  ↓
+Operational Acceptance
+</code></pre>
+<p>This reinforces:</p>
+<blockquote>
+<p><strong>Regime is not metadata around Truth. It participates in qualification.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="23-key-usage-permitted-use">23. Key Usage → Permitted Use</h1>
+<p>PKI exposes allowed-use constraints explicitly.</p>
+<p>RTT interpretation:</p>
+<pre><code>Permitted Use
+</code></pre>
+<p>This is significant because the Truth Service already models:</p>
+<pre><code>permitted_uses
+prohibited_uses
+</code></pre>
+<p>PKI provides concrete support for that architectural distinction.</p>
+<p>A Truth State may be sufficiently qualified for:</p>
+<pre><code>use A
+</code></pre>
+<p>but not:</p>
+<pre><code>use B
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Truth-State usability is action-specific.</strong></p>
+</blockquote>
+<p>This does not make the underlying evidence arbitrary.</p>
+<p>It makes the operational Regime explicit.</p>
+<hr>
+<h1 id="24-name-constraints-scope-constraint">24. Name Constraints → Scope Constraint</h1>
+<p>PKI can constrain the name space for which subordinate certification relationships are permitted.</p>
+<p>RTT interpretation:</p>
+<pre><code>Scope Constraint
+</code></pre>
+<p>This strengthens DNS:</p>
+<pre><code>Authority is scoped.
+</code></pre>
+<p>It strengthens IAM:</p>
+<pre><code>Authority is audience / relationship scoped.
+</code></pre>
+<p>And now PKI adds:</p>
+<pre><code>Authority can be constrained through Lineage.
+</code></pre>
+<p>Generalized candidate:</p>
+<pre><code>Authority Scope
+  =
+Actor
+  +
+Role
+  +
+Subject / namespace
+  +
+Regime
+  +
+Lineage constraints
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="25-basic-constraints-authority-role-constraint">25. Basic Constraints → Authority-Role Constraint</h1>
+<p>PKI distinguishes certificates permitted to act as certification authorities from ordinary end-entity certificates.</p>
+<p>RTT interpretation:</p>
+<pre><code>Role Constraint
+</code></pre>
+<p>This reinforces:</p>
+<blockquote>
+<p><strong>Capabilities should derive from qualified roles, not merely entity identity.</strong></p>
+</blockquote>
+<p>A certificate's existence does not automatically confer:</p>
+<pre><code>authority to issue subordinate assertions
+</code></pre>
+<p>This will matter strongly in Crosswalk #5:</p>
+<pre><code>Authority Truth
+</code></pre>
+<hr>
+<h1 id="26-revocation-qualification-state-transition">26. Revocation → Qualification-State Transition</h1>
+<p>Revocation provides another lifecycle transition.</p>
+<p>Conceptually:</p>
+<pre><code>Certificate
+  previously acceptable
+      ↓
+  revocation
+      ↓
+  no longer acceptable
+  under applicable validation
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Qualification-State Transition
+</code></pre>
+<p>This strongly reinforces IAM:</p>
+<pre><code>previously accepted evidence
+  ≠
+permanently acceptable evidence
+</code></pre>
+<p>Revocation provides event-driven:</p>
+<pre><code>Revalidation pressure
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="27-revocation-state-integrity-destruction">27. Revocation State ≠ Integrity Destruction</h1>
+<p>A crucial distinction:</p>
+<p>A revoked certificate does not necessarily become cryptographically malformed.</p>
+<p>Its signature may still verify.</p>
+<p>Its encoded information may remain intact.</p>
+<p>Yet its operational qualification changes.</p>
+<p>Therefore:</p>
+<pre><code>Object Integrity
+  may remain
+</code></pre>
+<p>while:</p>
+<pre><code>Operational Acceptance
+  changes
+</code></pre>
+<p>This is an exceptionally clean example of why:</p>
+<pre><code>Integrity Truth
+  ≠
+current authorization / trust state
+</code></pre>
+<p>The Truth Service must preserve both.</p>
+<hr>
+<h1 id="28-crl-revocation-state-evidence">28. CRL → Revocation-State Evidence</h1>
+<p>Certificate Revocation Lists provide information about certificate status changes.</p>
+<p>RTT interpretation:</p>
+<pre><code>Revocation-State Evidence
+</code></pre>
+<p>This gives another example of an Evidence Item that is not directly:</p>
+<pre><code>an Observation about the Subject
+</code></pre>
+<p>Instead, it supplies evidence about:</p>
+<pre><code>qualification state of another evidence object
+</code></pre>
+<p>The architecture therefore needs to tolerate:</p>
+<pre><code>Evidence about Evidence
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Certificate
+    ↑
+Revocation Evidence
+</code></pre>
+<p>This may later generalize into:</p>
+<pre><code>Meta-Evidence
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>Do not promote yet.</p>
+<hr>
+<h1 id="29-evidence-can-refer-to-evidence">29. Evidence Can Refer to Evidence</h1>
+<p>This is an important architecture challenge.</p>
+<p>Initial model:</p>
+<pre><code>Claim
+  ↓
+Observation
+</code></pre>
+<p>PKI suggests:</p>
+<pre><code>Claim
+  ↓
+Certificate Assertion
+  ↑
+Revocation Evidence
+  ↑
+Authority / Lineage
+</code></pre>
+<p>Therefore evidence relationships may form graphs.</p>
+<p>They need not remain:</p>
+<pre><code>Claim → flat list of Observations
+</code></pre>
+<p>This strongly reinforces the move toward an:</p>
+<pre><code>Evidence Graph
+</code></pre>
+<p>as a future candidate architecture.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="30-relying-party-observer-consumer">30. Relying Party → Observer / Consumer</h1>
+<p>PKI again supplies:</p>
+<pre><code>relying party
+</code></pre>
+<p>as the entity making the operational trust decision.</p>
+<p>This strengthens IAM's consumer-context finding.</p>
+<p>The same certificate/path may not produce identical acceptance under every relying-party configuration because:</p>
+<ul>
+<li>trust Anchors may differ</li>
+<li>policy may differ</li>
+<li>intended use may differ</li>
+<li>constraints may differ</li>
+</ul>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Observer / Consumer context is becoming a repeated generalized mechanism.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="31-consumer-relative-trust-arbitrary-truth">31. Consumer-Relative Trust ≠ Arbitrary Truth</h1>
+<p>This distinction must remain explicit.</p>
+<p>If:</p>
+<pre><code>Consumer A
+  accepts Anchor A
+</code></pre>
+<p>while:</p>
+<pre><code>Consumer B
+  does not
+</code></pre>
+<p>the evidence itself has not become subjective in the loose sense.</p>
+<p>The operational Regimes differ.</p>
+<p>Therefore:</p>
+<pre><code>same Evidence
+  +
+different valid Regimes
+  ↓
+different operational acceptance
+</code></pre>
+<p>is possible without claiming:</p>
+<pre><code>anything can be true
+</code></pre>
+<p>The architecture records the conditions.</p>
+<p>That is the point of Regime qualification.</p>
+<hr>
+<h1 id="32-pki-coherence">32. PKI Coherence</h1>
+<p>What does Coherence mean in PKI?</p>
+<p>Again, simple equality is insufficient.</p>
+<p>Coherence may involve compatibility among:</p>
+<ul>
+<li>certificate subject relationships</li>
+<li>issuer relationships</li>
+<li>signatures</li>
+<li>certification path</li>
+<li>constraints</li>
+<li>policies</li>
+<li>validity</li>
+<li>revocation state</li>
+<li>relying-party Anchor set</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>Coherence
+  =
+structural compatibility under validation semantics
+</code></pre>
+<p>This strongly validates the DNS/IAM conclusion:</p>
+<blockquote>
+<p><strong>Coherence is domain-semantic.</strong></p>
+</blockquote>
+<p>At this point, generic equality-based Coherence should be considered rejected as a generalized model.</p>
+<hr>
+<h1 id="33-pki-drift">33. PKI Drift</h1>
+<p>Potential PKI-related Drift dimensions include:</p>
+<h2 id="trust-anchor-drift">Trust-Anchor Drift</h2>
+<p>The relying party's accepted Anchor set changes.</p>
+<h2 id="authority-drift">Authority Drift</h2>
+<p>Issuing authority relationships change.</p>
+<h2 id="path-drift">Path Drift</h2>
+<p>A different certification path is used.</p>
+<h2 id="policy-drift">Policy Drift</h2>
+<p>Acceptance policy changes.</p>
+<h2 id="temporal-drift">Temporal Drift</h2>
+<p>Validity state moves toward or beyond expiration.</p>
+<h2 id="revocation-drift">Revocation Drift</h2>
+<p>Certificate status changes.</p>
+<h2 id="subject-binding-drift">Subject-Binding Drift</h2>
+<p>Identity / name relationships change across replacement certificates.</p>
+<h2 id="cryptographic-parameter-drift">Cryptographic-Parameter Drift</h2>
+<p>Accepted cryptographic requirements change over time.</p>
+<p>Not all of these are certificate changes.</p>
+<p>Some are Regime changes.</p>
+<p>This reinforces multi-dimensional Drift strongly.</p>
+<hr>
+<h1 id="34-stable-certificate-changed-regime">34. Stable Certificate, Changed Regime</h1>
+<p>Consider a certificate whose bytes remain unchanged.</p>
+<p>Meanwhile:</p>
+<pre><code>trust store changed
+policy changed
+certificate revoked
+current time crossed validity boundary
+</code></pre>
+<p>The object is identical.</p>
+<p>The operational result changes.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Truth-State Drift may occur without object mutation.</strong></p>
+</blockquote>
+<p>This is one of the clearest generalizations emerging from Crosswalk #4.</p>
+<p>Integrity of the object is only one dimension.</p>
+<hr>
+<h1 id="35-integrity-drift-vs-regime-drift">35. Integrity Drift vs Regime Drift</h1>
+<p>Suppose:</p>
+<pre><code>certificate data changes
+</code></pre>
+<p>That may be:</p>
+<pre><code>Integrity Drift
+</code></pre>
+<p>Suppose instead:</p>
+<pre><code>trust Anchor removed
+</code></pre>
+<p>That may be:</p>
+<pre><code>Regime / Authority Drift
+</code></pre>
+<p>Suppose:</p>
+<pre><code>certificate expires
+</code></pre>
+<p>That may be:</p>
+<pre><code>Temporal Drift
+</code></pre>
+<p>Suppose:</p>
+<pre><code>certificate revoked
+</code></pre>
+<p>That may be:</p>
+<pre><code>State / Qualification Drift
+</code></pre>
+<p>The accepted result may be similar:</p>
+<pre><code>no longer operationally acceptable
+</code></pre>
+<p>but the cause differs.</p>
+<p>The model must preserve the causal dimension.</p>
+<hr>
+<h1 id="36-pki-paradox">36. PKI Paradox</h1>
+<p>Potential PKI paradox-like conditions may include:</p>
+<ul>
+<li>distinct valid paths producing different policy outcomes</li>
+<li>different relying-party trust stores producing different acceptance</li>
+<li>identity and authority relationships conflicting across Regimes</li>
+<li>a certificate remaining cryptographically intact while becoming operationally unusable</li>
+</ul>
+<p>However:</p>
+<blockquote>
+<p><strong>Different relying-party outcomes are not automatically Paradox.</strong></p>
+</blockquote>
+<p>They may simply reflect:</p>
+<pre><code>different Regimes
+</code></pre>
+<p>Likewise:</p>
+<pre><code>signature valid
+certificate revoked
+</code></pre>
+<p>is not necessarily paradoxical.</p>
+<p>Those are different Truth dimensions.</p>
+<p>The architecture should preserve both without forcing contradiction.</p>
+<hr>
+<h1 id="37-multi-dimensional-truth-prevents-false-paradox">37. Multi-Dimensional Truth Prevents False Paradox</h1>
+<p>This is a major contribution from PKI.</p>
+<p>Consider:</p>
+<pre><code>Integrity:
+  valid
+
+Temporal:
+  valid
+
+Authority:
+  invalid
+
+Operational Acceptance:
+  rejected
+</code></pre>
+<p>A simplistic model might interpret this as:</p>
+<pre><code>contradictory evidence
+</code></pre>
+<p>A multi-dimensional model instead recognizes:</p>
+<pre><code>different dimensions
+  →
+one synthesis result
+</code></pre>
+<p>No Paradox is required.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Truth-Class separation prevents false contradiction.</strong></p>
+</blockquote>
+<p>This strongly validates the two-axis Truth-Class × RTT-State model.</p>
+<hr>
+<h1 id="38-pki-and-explicit-absence">38. PKI and Explicit Absence</h1>
+<p>DNS introduced explicit absence.</p>
+<p>Identity systems reinforced it.</p>
+<p>PKI adds related structures.</p>
+<p>Examples may include:</p>
+<pre><code>required path cannot be established
+
+accepted trust Anchor unavailable
+
+required revocation information unavailable
+</code></pre>
+<p>These conditions should remain distinct from:</p>
+<pre><code>certificate explicitly revoked
+</code></pre>
+<p>and:</p>
+<pre><code>certificate expired
+</code></pre>
+<p>The architecture must keep:</p>
+<pre><code>absence
+negative state
+unknown state
+unusable state
+</code></pre>
+<p>structurally distinguishable.</p>
+<hr>
+<h1 id="39-path-failure-certificate-corruption">39. Path Failure ≠ Certificate Corruption</h1>
+<p>Suppose the relying party cannot establish an acceptable certification path.</p>
+<p>That does not necessarily imply:</p>
+<pre><code>certificate bytes corrupted
+</code></pre>
+<p>or:</p>
+<pre><code>signature malformed
+</code></pre>
+<p>The correct conclusion may instead be:</p>
+<blockquote>
+<p><strong>The presented evidence cannot be qualified through an acceptable authority Lineage under the current Regime.</strong></p>
+</blockquote>
+<p>This again demonstrates why failure causes need structured Decision Reasons.</p>
+<hr>
+<h1 id="40-pki-as-assertion-validation">40. PKI as Assertion Validation</h1>
+<p>PKI strongly supports the architecture shift from:</p>
+<pre><code>Observation-Centric Truth Service
+</code></pre>
+<p>toward:</p>
+<pre><code>Evidence-Centric Truth Service
+</code></pre>
+<p>Candidate generalized flow:</p>
+<pre><code>Claim
+  ↓
+Evidence Items
+  │
+  ├── Observations
+  ├── Assertions
+  ├── Signed Assertions
+  └── Status Evidence
+  ↓
+Evidence Relationships
+  ↓
+Lineage
+  ↓
+Qualification
+  ↓
+Domain-Semantic Coherence
+  ↓
+Truth State
+</code></pre>
+<p>This architecture is now supported conceptually by:</p>
+<pre><code>IAM
+PKI
+</code></pre>
+<p>and partially by:</p>
+<pre><code>DNS
+</code></pre>
+<p>It deserves serious consideration after Crosswalk #5.</p>
+<hr>
+<h1 id="41-evidence-graph-candidate">41. Evidence Graph Candidate</h1>
+<p>PKI also strengthens a candidate:</p>
+<pre><code>Evidence Graph
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Trust Anchor
+     ↓
+CA Certificate
+     ↓
+Intermediate Certificate
+     ↓
+End-Entity Certificate
+     ↑
+Revocation Evidence
+     │
+     └── Status Source
+</code></pre>
+<p>The evidence does not form a simple flat list.</p>
+<p>Relationships matter.</p>
+<p>A generalized Truth Service may eventually need:</p>
+<pre><code>EvidenceNode
+EvidenceEdge
+</code></pre>
+<p>analogous to the existing:</p>
+<pre><code>LineageNode
+LineageEdge
+</code></pre>
+<p>Before adding these objects, test against:</p>
+<pre><code>Authority Truth
+State Truth
+Transactional Truth
+Lineage Truth
+</code></pre>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE — strengthening
+</code></pre>
+<hr>
+<h1 id="42-worked-example-valid-path">42. Worked Example — Valid Path</h1>
+<h2 id="claim">Claim</h2>
+<pre><code>"Certificate C is acceptable for Use U."
+</code></pre>
+<h2 id="primary-truth-class">Primary Truth Class</h2>
+<pre><code>integrity
+</code></pre>
+<h2 id="secondary-truth-classes">Secondary Truth Classes</h2>
+<pre><code>identity
+authority
+temporal
+lineage
+</code></pre>
+<h2 id="consumer">Consumer</h2>
+<pre><code>Relying Party R
+</code></pre>
+<h2 id="trust-anchor">Trust Anchor</h2>
+<pre><code>Anchor A
+</code></pre>
+<h2 id="path">Path</h2>
+<pre><code>Anchor A
+  ↓
+Intermediate B
+  ↓
+Certificate C
+</code></pre>
+<h2 id="integrity">Integrity</h2>
+<pre><code>required signatures validate
+</code></pre>
+<h2 id="temporal-qualification">Temporal Qualification</h2>
+<pre><code>applicable validity conditions satisfied
+</code></pre>
+<h2 id="policy">Policy</h2>
+<pre><code>applicable requirements satisfied
+</code></pre>
+<h2 id="revocation-state">Revocation State</h2>
+<pre><code>no disqualifying revocation state identified under the evaluated conditions
+</code></pre>
+<h2 id="result">Result</h2>
+<pre><code>Truth State:
+  operationally_accepted
+</code></pre>
+<h2 id="accepted-value">Accepted Value</h2>
+<pre><code>certificate:
+  C
+
+use:
+  U
+</code></pre>
+<h2 id="architectural-finding_1">Architectural Finding</h2>
+<p>Acceptance emerges from multiple qualified dimensions.</p>
+<p>No single dimension alone establishes the result.</p>
+<hr>
+<h1 id="43-worked-example-valid-signature-expired-certificate">43. Worked Example — Valid Signature, Expired Certificate</h1>
+<h2 id="integrity_1">Integrity</h2>
+<pre><code>signature:
+  valid
+</code></pre>
+<h2 id="temporal-qualification_1">Temporal Qualification</h2>
+<pre><code>validity:
+  expired
+</code></pre>
+<h2 id="result_1">Result</h2>
+<pre><code>Truth State:
+  expired
+  or rejected
+</code></pre>
+<p>depending on the evaluation model and requested use.</p>
+<h2 id="architectural-finding_2">Architectural Finding</h2>
+<pre><code>valid signature
+  ≠
+currently acceptable certificate
+</code></pre>
+<p>Integrity Truth remains positive while Temporal Truth disqualifies present operational use.</p>
+<p>No Paradox is required.</p>
+<hr>
+<h1 id="44-worked-example-valid-signature-revoked-certificate">44. Worked Example — Valid Signature, Revoked Certificate</h1>
+<h2 id="integrity_2">Integrity</h2>
+<pre><code>signature:
+  valid
+</code></pre>
+<h2 id="revocation-state_1">Revocation State</h2>
+<pre><code>revoked
+</code></pre>
+<h2 id="result_2">Result</h2>
+<pre><code>Truth State:
+  rejected
+</code></pre>
+<p>for the relevant operational use.</p>
+<h2 id="architectural-finding_3">Architectural Finding</h2>
+<p>The evidence object remains cryptographically intact.</p>
+<p>Its qualification state has changed.</p>
+<p>This strongly demonstrates:</p>
+<pre><code>Object Integrity
+  ≠
+Operational Acceptance
+</code></pre>
+<hr>
+<h1 id="45-worked-example-unrecognized-trust-anchor">45. Worked Example — Unrecognized Trust Anchor</h1>
+<h2 id="certificate">Certificate</h2>
+<pre><code>structurally intact
+</code></pre>
+<h2 id="certification-path">Certification Path</h2>
+<pre><code>terminates at Anchor A
+</code></pre>
+<h2 id="relying-party">Relying Party</h2>
+<pre><code>does not recognize Anchor A
+</code></pre>
+<h2 id="result_3">Result</h2>
+<pre><code>Truth State:
+  rejected
+  or indeterminate
+</code></pre>
+<p>depending on the exact Evaluation semantics.</p>
+<h2 id="architectural-finding_4">Architectural Finding</h2>
+<p>The certificate's structure did not change.</p>
+<p>The Regime / consumer trust configuration determines qualification.</p>
+<hr>
+<h1 id="46-worked-example-different-relying-parties">46. Worked Example — Different Relying Parties</h1>
+<h2 id="certificate_1">Certificate</h2>
+<pre><code>C
+</code></pre>
+<h2 id="path_1">Path</h2>
+<pre><code>P
+</code></pre>
+<h2 id="relying-party-a">Relying Party A</h2>
+<pre><code>recognizes Anchor A
+policy permits Use U
+</code></pre>
+<p>Result:</p>
+<pre><code>operationally_accepted
+</code></pre>
+<h2 id="relying-party-b">Relying Party B</h2>
+<pre><code>does not recognize Anchor A
+</code></pre>
+<p>Result:</p>
+<pre><code>rejected
+</code></pre>
+<h2 id="architectural-finding_5">Architectural Finding</h2>
+<p>The difference is:</p>
+<pre><code>Regime / consumer context
+</code></pre>
+<p>not:</p>
+<pre><code>certificate mutation
+</code></pre>
+<p>This reinforces Crosswalk #3 strongly.</p>
+<hr>
+<h1 id="47-worked-example-policy-mismatch">47. Worked Example — Policy Mismatch</h1>
+<h2 id="certificate_2">Certificate</h2>
+<pre><code>cryptographically valid
+</code></pre>
+<h2 id="path_2">Path</h2>
+<pre><code>otherwise acceptable
+</code></pre>
+<h2 id="requested-use">Requested Use</h2>
+<pre><code>U
+</code></pre>
+<h2 id="policy_1">Policy</h2>
+<pre><code>certificate/path does not satisfy the required policy for U
+</code></pre>
+<h2 id="result_4">Result</h2>
+<pre><code>rejected for Use U
+</code></pre>
+<h2 id="architectural-finding_6">Architectural Finding</h2>
+<p>Truth-State usability can be purpose-specific.</p>
+<p>This strongly validates:</p>
+<pre><code>permitted_uses
+prohibited_uses
+</code></pre>
+<p>in the emerging data model.</p>
+<hr>
+<h1 id="48-worked-example-changed-trust-store">48. Worked Example — Changed Trust Store</h1>
+<h2 id="time-t1">Time T1</h2>
+<pre><code>Trust Store:
+  contains Anchor A
+
+Certificate C:
+  accepted
+</code></pre>
+<h2 id="time-t2">Time T2</h2>
+<pre><code>Trust Store:
+  Anchor A removed
+
+Certificate C:
+  unchanged
+</code></pre>
+<h2 id="result_5">Result</h2>
+<pre><code>prior Truth State may no longer remain operationally accepted
+</code></pre>
+<h2 id="drift">Drift</h2>
+<pre><code>dimension:
+  regime
+  authority
+</code></pre>
+<h2 id="architectural-finding_7">Architectural Finding</h2>
+<blockquote>
+<p><strong>Operational Truth can Drift because the observer's Regime changes even when the evaluated object remains bit-for-bit identical.</strong></p>
+</blockquote>
+<hr>
+<h1 id="49-rtt-dimension-mapping">49. RTT Dimension Mapping</h1>
+<table>
+<thead>
+<tr>
+<th>RTT Dimension</th>
+<th>PKI Crosswalk Interpretation</th>
+<th>General Truth-Service Candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Certificates and status assertions propagate through PKI relationships</td>
+<td>Evidence propagates through governed Source relationships</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Certificates, signatures, paths, constraints, policy, and status remain compatible</td>
+<td>Domain-semantic evidence compatibility</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Trust, policy, validity, status, path, or binding changes</td>
+<td>Multi-dimensional structural Drift</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Qualified states remain incompatible after Truth-Class and Regime separation</td>
+<td>Preserved structural contradiction</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Relying-party trust, policy, use, time, and scope govern acceptance</td>
+<td>Context governs operational qualification</td>
+</tr>
+<tr>
+<td><strong>Spin</strong></td>
+<td>Subject/key/authority relationships persist</td>
+<td>Identity and Lineage persistence</td>
+</tr>
+<tr>
+<td><strong>Elec</strong></td>
+<td>Subject, issuer, Anchor, role, scope, policy, and evidence remain distinct</td>
+<td>Structural differentiation</td>
+</tr>
+<tr>
+<td><strong>Temp</strong></td>
+<td>Validity, revocation, trust changes, and Revalidation alter qualification</td>
+<td>Lifecycle and temporal transition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="50-set-mapping">50. SET Mapping</h1>
+<h2 id="spin">Spin</h2>
+<p>PKI expresses Spin through persistence of:</p>
+<ul>
+<li>Subject relationships</li>
+<li>public-key bindings</li>
+<li>issuer relationships</li>
+<li>trust relationships</li>
+<li>certification paths</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>PKI strongly expresses Elec through distinction among:</p>
+<ul>
+<li>Subject</li>
+<li>issuer</li>
+<li>end entity</li>
+<li>certification authority</li>
+<li>trust Anchor</li>
+<li>certificate role</li>
+<li>policy</li>
+<li>usage constraints</li>
+<li>relying party</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>PKI expresses Temp through:</p>
+<ul>
+<li>validity periods</li>
+<li>renewal</li>
+<li>replacement</li>
+<li>revocation</li>
+<li>trust-store changes</li>
+<li>policy changes</li>
+<li>Revalidation</li>
+</ul>
+<p>Compactly:</p>
+<blockquote>
+<p><strong>Spin preserves certified relationships.</strong></p>
+<p><strong>Elec distinguishes roles, scopes, constraints, and authorities.</strong></p>
+<p><strong>Temp governs validity, revocation, replacement, and renewed qualification.</strong></p>
+</blockquote>
+<hr>
+<h1 id="51-ntp-derived-candidate-review">51. NTP-Derived Candidate Review</h1>
+<table>
+<thead>
+<tr>
+<th>Candidate from NTP</th>
+<th>PKI Result</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Truth Anchor</td>
+<td>Strongly survives</td>
+<td>Relying-party bounded</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Survives</td>
+<td>Roles increasingly necessary</td>
+</tr>
+<tr>
+<td>Observation</td>
+<td>Survives but insufficient alone</td>
+<td>Evidence abstraction pressure</td>
+</tr>
+<tr>
+<td>Lineage</td>
+<td>Strongly survives</td>
+<td>Operationally central</td>
+</tr>
+<tr>
+<td>Lineage distance</td>
+<td>Partially survives</td>
+<td>Relationship semantics matter more</td>
+</tr>
+<tr>
+<td>Qualification</td>
+<td>Strongly survives</td>
+<td>Must expand beyond Observation</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>Strongly survives</td>
+<td>Domain-semantic</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>Strongly survives</td>
+<td>Multidimensional / mostly qualitative</td>
+</tr>
+<tr>
+<td>Paradox</td>
+<td>Survives cautiously</td>
+<td>Class separation avoids false paradox</td>
+</tr>
+<tr>
+<td>Regime</td>
+<td>Strongly survives</td>
+<td>Central to validation</td>
+</tr>
+<tr>
+<td>Truth-State synthesis</td>
+<td>Strongly survives</td>
+<td>Multi-class synthesis</td>
+</tr>
+<tr>
+<td>Correction</td>
+<td>Survives differently</td>
+<td>Trust/configuration actions vary</td>
+</tr>
+<tr>
+<td>Holdover</td>
+<td>Highly constrained</td>
+<td>Not a generic PKI assumption</td>
+</tr>
+<tr>
+<td>Revalidation</td>
+<td>Strongly survives</td>
+<td>Validity/revocation/trust changes</td>
+</tr>
+<tr>
+<td>Failure transparency</td>
+<td>Strongly survives</td>
+<td>Failure reasons matter</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="52-dns-derived-candidate-review">52. DNS-Derived Candidate Review</h1>
+<table>
+<thead>
+<tr>
+<th>Candidate from DNS</th>
+<th>PKI Result</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authority Scope</td>
+<td>Strongly survives</td>
+<td>Major PKI mechanism</td>
+</tr>
+<tr>
+<td>Authority Lineage</td>
+<td>Strongly survives</td>
+<td>Certification path central</td>
+</tr>
+<tr>
+<td>Observer Context</td>
+<td>Strongly survives</td>
+<td>Relying party central</td>
+</tr>
+<tr>
+<td>Delegated Authority</td>
+<td>Strongly survives</td>
+<td>Intermediate CAs</td>
+</tr>
+<tr>
+<td>Materialized Truth State</td>
+<td>Partially survives</td>
+<td>Trust stores / cached state need careful modeling</td>
+</tr>
+<tr>
+<td>Multi-Valued Truth</td>
+<td>Possible</td>
+<td>Multiple paths may exist</td>
+</tr>
+<tr>
+<td>Explicit Absence</td>
+<td>Survives conceptually</td>
+<td>Missing path/status distinct from negative state</td>
+</tr>
+<tr>
+<td>Domain-Semantic Coherence</td>
+<td>Strongly survives</td>
+<td>Path validation demonstrates it</td>
+</tr>
+<tr>
+<td>Transformation Lineage</td>
+<td>Less central here</td>
+<td>Still relevant</td>
+</tr>
+<tr>
+<td>Freshness Revalidation</td>
+<td>Strongly survives</td>
+<td>Validity/status changes</td>
+</tr>
+<tr>
+<td>Stable-Value Structural Drift</td>
+<td>Strongly survives</td>
+<td>Trust/policy may change around stable object</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="53-iam-derived-candidate-review">53. IAM-Derived Candidate Review</h1>
+<table>
+<thead>
+<tr>
+<th>Candidate from IAM</th>
+<th>PKI Result</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Truth Subject</td>
+<td>Strongly survives</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Identity Relationship</td>
+<td>Survives</td>
+<td>Certificate binds identity-like information to keys</td>
+</tr>
+<tr>
+<td>Assertion</td>
+<td>Strongly survives</td>
+<td>Certificate is strong second example</td>
+</tr>
+<tr>
+<td>Evidence type distinction</td>
+<td>Strongly survives</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Source Role</td>
+<td>Strongly survives</td>
+<td>CA/end entity/relying party distinctions</td>
+</tr>
+<tr>
+<td>Audience / Consumer</td>
+<td>Strongly survives</td>
+<td>Relying party context</td>
+</tr>
+<tr>
+<td>Assurance Requirement</td>
+<td>Analog exists in validation requirements</td>
+<td>Broader Qualification Profile strengthened</td>
+</tr>
+<tr>
+<td>Cross-Regime Propagation</td>
+<td>Survives</td>
+<td>Trust path and consumer evaluation</td>
+</tr>
+<tr>
+<td>Revalidation Depth</td>
+<td>Survives conceptually</td>
+<td>Path/status/policy checks may differ</td>
+</tr>
+<tr>
+<td>Relationship Lifecycle</td>
+<td>Strongly survives</td>
+<td>Validity/revocation</td>
+</tr>
+<tr>
+<td>Revocation Revalidation</td>
+<td>Strongly survives</td>
+<td>Direct support</td>
+</tr>
+<tr>
+<td>Semantic preservation through Lineage</td>
+<td>Survives</td>
+<td>Constraints/policy influence meaning</td>
+</tr>
+</tbody>
+</table>
+<p>PKI strongly validates several IAM-derived challenges rather than rejecting them.</p>
+<hr>
+<h1 id="54-new-candidate-mechanisms-from-pki">54. New Candidate Mechanisms from PKI</h1>
+<p>Crosswalk #4 introduces or strongly strengthens:</p>
+<ol>
+<li>Signed Assertion</li>
+<li>Evidence about Evidence</li>
+<li>Evidence Graph</li>
+<li>Qualification of Lineage</li>
+<li>Consumer-Local Anchor Set</li>
+<li>permitted-use constraints</li>
+<li>policy-qualified Truth State</li>
+<li>role-constrained authority</li>
+<li>multi-class Truth-State synthesis</li>
+<li>causal Drift dimension</li>
+<li>object-integrity / operational-acceptance separation</li>
+<li>trust-configuration Drift</li>
+</ol>
+<p>Several of these now have evidence from multiple crosswalks.</p>
+<hr>
+<h1 id="55-architecture-refinement-1-evidence-should-become-the-general-abstraction">55. Architecture Refinement #1 — Evidence Should Become the General Abstraction</h1>
+<p>After IAM and PKI, this candidate has become substantially stronger:</p>
+<pre><code>EvidenceItem
+   │
+   ├── Observation
+   └── Assertion
+          │
+          └── Signed Assertion
+</code></pre>
+<p>Potential later extensions:</p>
+<pre><code>Attestation
+Record
+Status Evidence
+</code></pre>
+<p>The current architecture's:</p>
+<pre><code>Observation
+</code></pre>
+<p>can remain the implemented first subtype.</p>
+<p>But conceptually:</p>
+<blockquote>
+<p><strong>Evidence should become broader than Observation.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>validate once more in Crosswalk #5 before promoting.
+</code></pre>
+<hr>
+<h1 id="56-architecture-refinement-2-qualification-applies-to-relationships">56. Architecture Refinement #2 — Qualification Applies to Relationships</h1>
+<p>PKI demonstrates that qualification may apply to:</p>
+<ul>
+<li>certificate</li>
+<li>certification path</li>
+<li>Authority relationship</li>
+<li>policy relationship</li>
+<li>validity relationship</li>
+<li>status evidence</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>Qualification
+  ≠
+only Observation filtering
+</code></pre>
+<p>A generalized Qualification Engine should evaluate:</p>
+<pre><code>evidence
+relationships
+Lineage
+Regime
+</code></pre>
+<p>This is now strongly supported.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="57-architecture-refinement-3-authority-deserves-richer-representation">57. Architecture Refinement #3 — Authority Deserves Richer Representation</h1>
+<p>DNS:</p>
+<pre><code>scoped authority
+</code></pre>
+<p>IAM:</p>
+<pre><code>role + audience + federation authority
+</code></pre>
+<p>PKI:</p>
+<pre><code>delegated path-constrained authority
+</code></pre>
+<p>Together suggest:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>as a possible future first-class object.</p>
+<p>Candidate fields:</p>
+<pre><code>authority_id
+actor_id
+role
+subject_scope
+delegator_id
+regime_id
+valid_from
+valid_until
+lineage_reference
+constraints
+</code></pre>
+<p>Do not modify the core schema yet.</p>
+<p>Crosswalk #5 is specifically about Authority Truth and should decide whether this promotion is justified.</p>
+<hr>
+<h1 id="58-architecture-refinement-4-truth-evaluation-may-require-an-evidence-graph">58. Architecture Refinement #4 — Truth Evaluation May Require an Evidence Graph</h1>
+<p>The original architecture assumes roughly:</p>
+<pre><code>Claim
+  ↓
+Observation[]
+</code></pre>
+<p>PKI suggests:</p>
+<pre><code>Claim
+  ↓
+Evidence Graph
+   │
+   ├── Signed Assertion
+   │      ↓
+   │   Authority Lineage
+   │
+   ├── Status Evidence
+   │
+   └── Policy / Constraint Relationships
+          ↓
+     Evaluation
+</code></pre>
+<p>This is a major candidate architectural evolution.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<p>Do not implement before testing against:</p>
+<pre><code>Authority Truth
+State Truth
+Transactional Truth
+</code></pre>
+<hr>
+<h1 id="59-architecture-refinement-5-truth-state-usability-is-purpose-specific">59. Architecture Refinement #5 — Truth-State Usability Is Purpose-Specific</h1>
+<p>PKI explicitly pressures the assumption that a Truth State is either:</p>
+<pre><code>accepted
+</code></pre>
+<p>or:</p>
+<pre><code>not accepted
+</code></pre>
+<p>for every operation.</p>
+<p>A more useful result is:</p>
+<pre><code>accepted for:
+  Use A
+
+prohibited for:
+  Use B
+</code></pre>
+<p>The existing fields:</p>
+<pre><code>permitted_uses
+prohibited_uses
+</code></pre>
+<p>are strongly validated.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="60-architecture-refinement-6-truth-classes-must-remain-orthogonal">60. Architecture Refinement #6 — Truth Classes Must Remain Orthogonal</h1>
+<p>PKI demonstrates why the two-axis model is necessary.</p>
+<p>One Evaluation may produce:</p>
+<pre><code>Integrity:
+  coherent
+
+Identity:
+  coherent
+
+Temporal:
+  expired
+
+Authority:
+  coherent
+
+Lineage:
+  coherent
+</code></pre>
+<p>Overall operational state:</p>
+<pre><code>rejected / expired for requested use
+</code></pre>
+<p>No contradiction exists.</p>
+<p>Different dimensions produced different findings.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Truth Classes must remain independently inspectable during synthesis.</strong></p>
+</blockquote>
+<p>This may eventually imply:</p>
+<pre><code>per-class evaluation state
+</code></pre>
+<p>inside a Truth State.</p>
+<p>Current schema does not yet model that explicitly.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="61-per-class-truth-state-candidate">61. Per-Class Truth-State Candidate</h1>
+<p>Potential future representation:</p>
+<pre><code>class_states:
+
+  integrity:
+    status: coherent
+
+  identity:
+    status: coherent
+
+  authority:
+    status: coherent
+
+  temporal:
+    status: expired
+
+  lineage:
+    status: coherent
+
+overall:
+  status: rejected
+</code></pre>
+<p>This would preserve causal structure better than one flattened result.</p>
+<p>However, it introduces substantial complexity.</p>
+<p>Test against:</p>
+<pre><code>Authority Truth
+State Truth
+Transactional Truth
+</code></pre>
+<p>before promotion.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="62-architecture-refinement-7-cause-must-survive-final-status">62. Architecture Refinement #7 — Cause Must Survive Final Status</h1>
+<p>Two Truth States may both be:</p>
+<pre><code>rejected
+</code></pre>
+<p>for entirely different reasons.</p>
+<p>Example A:</p>
+<pre><code>expired
+</code></pre>
+<p>Example B:</p>
+<pre><code>untrusted Anchor
+</code></pre>
+<p>Example C:</p>
+<pre><code>invalid signature
+</code></pre>
+<p>Example D:</p>
+<pre><code>revoked certificate
+</code></pre>
+<p>A generic status alone is therefore insufficient.</p>
+<p>The architecture already preserves:</p>
+<pre><code>DecisionReason
+</code></pre>
+<p>PKI strongly validates that design.</p>
+<p>The final state should preserve causal structure.</p>
+<hr>
+<h1 id="63-architecture-refinement-8-anchor-sets-may-be-regime-bound">63. Architecture Refinement #8 — Anchor Sets May Be Regime-Bound</h1>
+<p>One Evaluation may recognize:</p>
+<pre><code>Anchor Set A
+</code></pre>
+<p>while another recognizes:</p>
+<pre><code>Anchor Set B
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Anchor eligibility
+</code></pre>
+<p>should potentially belong to:</p>
+<pre><code>Regime
+</code></pre>
+<p>or:</p>
+<pre><code>Consumer Context
+</code></pre>
+<p>rather than globally to the service.</p>
+<p>This strengthens:</p>
+<pre><code>Consumer-Local Anchor Set
+</code></pre>
+<p>as a generalized mechanism.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="64-scoring-boundary">64. Scoring Boundary</h1>
+<p>The scoring boundary for this crosswalk is:</p>
+<pre><code>System:
+  Internet X.509 Public Key Infrastructure
+
+Primary Truth Class:
+  Integrity Truth
+
+Evaluated Scope:
+  X.509 certificate and CRL structure
+  certification paths
+  path validation
+  trust anchors
+  validity
+  constraints
+  certificate policy
+  revocation relationships
+
+Primary Evidence:
+  RFC 5280
+
+Supporting Evidence:
+  bounded NIST PKI path-validation material
+
+Deferred Scope:
+  vendor-specific trust stores
+  TLS protocol behavior beyond certificate validation
+  private deployment policy
+  platform-specific UI / warning behavior
+  certificate issuance automation
+  proprietary certificate lifecycle systems
+</code></pre>
+<p>The crosswalk evaluates PKI validation structure rather than every system that happens to use certificates.</p>
+<hr>
+<h1 id="65-preliminary-scoring-status">65. Preliminary Scoring Status</h1>
+<p>Current status:</p>
+<pre><code>provisional
+</code></pre>
+<p>Likely scoring strengths include:</p>
+<ul>
+<li>Anchor Quality</li>
+<li>Lineage Visibility</li>
+<li>Observation / Evidence Quality</li>
+<li>Regime Awareness</li>
+<li>Freshness / Revalidation</li>
+<li>Failure Transparency</li>
+</ul>
+<p>Areas requiring careful interpretation include:</p>
+<ul>
+<li>Coherence Detection</li>
+<li>Drift Detection</li>
+<li>Paradox Handling</li>
+<li>Correction Discipline</li>
+</ul>
+<p>The rubric should not reward PKI merely because path validation is structurally rich.</p>
+<p>Each criterion still requires evidence.</p>
+<hr>
+<h1 id="66-provisional-scorecard-template">66. Provisional Scorecard Template</h1>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score</th>
+<th>Delegation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anchor Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Observation Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+<td>Deferred</td>
+</tr>
+</tbody>
+</table>
+<p>No numeric value should be entered without:</p>
+<pre><code>rationale
+evidence
+evaluation boundary
+</code></pre>
+<hr>
+<h1 id="67-scoring-rubric-challenge">67. Scoring-Rubric Challenge</h1>
+<p>PKI pressures several scoring criteria.</p>
+<h2 id="anchor-quality">Anchor Quality</h2>
+<p>A trust anchor is exceptionally explicit, but trust is still consumer/Regime bounded.</p>
+<p>The rubric must score structural quality without implying universal authority.</p>
+<h2 id="lineage-visibility">Lineage Visibility</h2>
+<p>PKI has strong certification paths.</p>
+<p>However:</p>
+<pre><code>path construction
+</code></pre>
+<p>and:</p>
+<pre><code>path validation
+</code></pre>
+<p>should not automatically be conflated.</p>
+<p>The score must respect the defined evaluation boundary.</p>
+<h2 id="observation-quality">Observation Quality</h2>
+<p>The current criterion name may become too narrow if PKI Evidence is better understood as Assertion rather than Observation.</p>
+<p>This supports potentially renaming later to:</p>
+<pre><code>Evidence Quality
+</code></pre>
+<p>after rubric review.</p>
+<h2 id="coherence-detection">Coherence Detection</h2>
+<p>PKI validation is not necessarily Coherence detection in the same sense as NTP comparison.</p>
+<p>The rubric must not reward any validation mechanism as though it were multi-Source Coherence.</p>
+<h2 id="correction-discipline">Correction Discipline</h2>
+<p>Certificate validation can reject or accept use, but broader correction/remediation may exist outside core PKI.</p>
+<p>Delegation must remain visible.</p>
+<p>This is exactly why:</p>
+<pre><code>delegated
+  ≠
+absent
+</code></pre>
+<p>was added to the scoring model.</p>
+<hr>
+<h1 id="68-scoring-criterion-rename-candidate">68. Scoring-Criterion Rename Candidate</h1>
+<p>After IAM and PKI, the criterion:</p>
+<pre><code>Observation Quality
+</code></pre>
+<p>may be too narrow.</p>
+<p>Potential replacement:</p>
+<pre><code>Evidence Quality
+</code></pre>
+<p>This would naturally include:</p>
+<pre><code>Observations
+Assertions
+Signed Assertions
+Status Evidence
+Attestations
+</code></pre>
+<p>Before changing the canonical rubric:</p>
+<ol>
+<li>record this as a candidate</li>
+<li>test Crosswalk #5</li>
+<li>re-evaluate NTP and DNS terminology</li>
+<li>rescore only if the criterion is formally revised</li>
+</ol>
+<p>Status:</p>
+<pre><code>RUBRIC_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="69-crosswalk-4-findings">69. Crosswalk #4 Findings</h1>
+<h2 id="finding-1-integrity-is-not-operational-acceptance">Finding 1 — Integrity Is Not Operational Acceptance</h2>
+<p>Cryptographic integrity may remain positive while other Truth dimensions disqualify use.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-2-certificates-are-assertions-not-observations">Finding 2 — Certificates Are Assertions, Not Observations</h2>
+<p>Truth-bearing input requires a broader abstraction than Observation alone.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-3-authority-lineage-is-operational">Finding 3 — Authority Lineage Is Operational</h2>
+<p>Certification paths demonstrate that Lineage can directly influence qualification.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<h2 id="finding-4-anchors-are-consumer-regime-bounded">Finding 4 — Anchors Are Consumer / Regime Bounded</h2>
+<p>Trust Anchor recognition belongs to an operational context.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-5-authority-is-role-and-scope-constrained">Finding 5 — Authority Is Role- and Scope-Constrained</h2>
+<p>Authority cannot safely be represented as a simple Source property.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<h2 id="finding-6-evidence-may-qualify-other-evidence">Finding 6 — Evidence May Qualify Other Evidence</h2>
+<p>Revocation/status information introduces evidence relationships.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-7-truth-state-usability-is-purpose-specific">Finding 7 — Truth-State Usability Is Purpose-Specific</h2>
+<p>A qualified object may be permitted for one use and prohibited for another.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-8-stable-objects-can-experience-operational-drift">Finding 8 — Stable Objects Can Experience Operational Drift</h2>
+<p>Trust, policy, time, or status may change around an unchanged object.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<h2 id="finding-9-multi-class-evaluation-prevents-false-paradox">Finding 9 — Multi-Class Evaluation Prevents False Paradox</h2>
+<p>Integrity, Identity, Authority, Temporal, and Lineage findings can legitimately differ.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-10-final-status-must-preserve-cause">Finding 10 — Final Status Must Preserve Cause</h2>
+<p>Rejected or expired states need structured rationale.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<h2 id="finding-11-qualification-applies-beyond-observations">Finding 11 — Qualification Applies Beyond Observations</h2>
+<p>Evidence, Lineage, roles, authority relationships, and policy may all participate in qualification.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-12-evidence-graphs-may-be-required">Finding 12 — Evidence Graphs May Be Required</h2>
+<p>Flat Observation lists may be insufficient for complex Truth relationships.</p>
+<pre><code>Status:
+  ARCHITECTURE_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="70-four-crosswalk-comparison">70. Four-Crosswalk Comparison</h1>
+<p>After:</p>
+<pre><code>NTP
+DNS
+IAM
+PKI
+</code></pre>
+<p>the architecture is beginning to separate into increasingly stable and increasingly challenged abstractions.</p>
+<h2 id="strongly-surviving">Strongly Surviving</h2>
+<pre><code>Claim
+
+Regime
+
+Evidence
+
+Source
+
+Lineage
+
+Qualification
+
+Coherence
+
+Drift
+
+Truth State
+
+Revalidation
+
+Failure Transparency
+</code></pre>
+<h2 id="increasingly-strong">Increasingly Strong</h2>
+<pre><code>Subject
+
+Authority Scope
+
+Consumer / Observer Context
+
+Source Role
+
+domain-semantic Coherence
+
+multi-dimensional Drift
+
+lifecycle
+
+purpose-specific usability
+</code></pre>
+<h2 id="newly-strong">Newly Strong</h2>
+<pre><code>Assertion
+
+Evidence typing
+
+Authority Relationship
+
+Lineage qualification
+
+Evidence relationships
+</code></pre>
+<h2 id="under-significant-pressure">Under Significant Pressure</h2>
+<pre><code>Observation as universal Evidence type
+
+flat Evidence lists
+
+global Anchor assumptions
+
+one overall unstructured Truth status
+
+generic equality-based Coherence
+
+numeric confidence as universal qualification
+</code></pre>
+<h2 id="narrowed">Narrowed</h2>
+<pre><code>Holdover
+
+simple Lineage distance
+
+Correction as direct local value adjustment
+</code></pre>
+<p>This is evidence that the crosswalk sequence is progressively refining rather than merely confirming the original model.</p>
+<hr>
+<h1 id="71-emerging-general-pattern-after-pki">71. Emerging General Pattern After PKI</h1>
+<p>The model is evolving toward:</p>
+<pre><code>SUBJECT
+   ↓
+CLAIM
+   ↓
+INTENDED USE
+   ↓
+CONSUMER / OBSERVER
+   ↓
+REGIME
+   ↓
+BOUNDED ANCHOR SET
+   ↓
+AUTHORITY RELATIONSHIPS
+   ↓
+EVIDENCE GRAPH
+   │
+   ├── Observations
+   ├── Assertions
+   ├── Signed Assertions
+   └── Status Evidence
+   ↓
+LINEAGE
+   ↓
+QUALIFICATION
+   ↓
+PER-CLASS / DOMAIN-SEMANTIC EVALUATION
+   ↓
+COHERENCE
+   ↓
+MULTIDIMENSIONAL DRIFT
+   ↓
+PARADOX
+   ↓
+TRUTH-STATE SYNTHESIS
+   ↓
+PERMITTED / PROHIBITED USE
+   ↓
+CORRECTION / RESPONSE
+   ↓
+REVALIDATION
+   ↓
+IMMUTABLE HISTORY
+</code></pre>
+<p>This model is still provisional.</p>
+<p>Crosswalk #5 will specifically pressure the Authority layer.</p>
+<hr>
+<h1 id="72-next-crosswalk-challenge">72. Next Crosswalk Challenge</h1>
+<p>Crosswalk #5 examines:</p>
+<pre><code>Policy / IAM
+  ↓
+Authority Truth
+</code></pre>
+<p>The governing question becomes:</p>
+<blockquote>
+<p><strong>Who may declare, validate, or act?</strong></p>
+</blockquote>
+<p>This is the right next test because three prior systems now point toward:</p>
+<pre><code>Authority Relationship
+</code></pre>
+<p>as a candidate core abstraction.</p>
+<p>DNS contributed:</p>
+<pre><code>delegated namespace authority
+</code></pre>
+<p>IAM contributed:</p>
+<pre><code>identity / federation authority
+</code></pre>
+<p>PKI contributed:</p>
+<pre><code>path-constrained certification authority
+</code></pre>
+<p>Crosswalk #5 should determine whether these can be represented by one generalized structure or whether:</p>
+<pre><code>authority
+</code></pre>
+<p>is too domain-specific to promote cleanly.</p>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Can authority be modeled as a Regime-qualified relationship among actor, role, scope, delegation, Lineage, policy, and time without conflating permission with truth?</strong></p>
+</blockquote>
+<hr>
+<h1 id="73-canonical-integrity-truth-statement">73. Canonical Integrity Truth Statement</h1>
+<blockquote>
+<p><strong>Integrity Truth is not merely evidence that an object's bits or signature remain intact. It is a Regime-qualified relationship among the evaluated object, its signed assertions, Subject bindings, Authority Lineage, temporal validity, status evidence, policy constraints, consumer trust configuration, and intended use.</strong></p>
+</blockquote>
+<p>Operational integrity therefore requires the architecture to preserve:</p>
+<pre><code>what remained intact
+
+who asserted it
+
+through which authority path
+
+for which Subject
+
+during which validity conditions
+
+under which policy
+
+for which consumer
+
+for which use
+</code></pre>
+<p>without collapsing those dimensions into one generic:</p>
+<pre><code>valid = true
+</code></pre>
+<hr>
+<h1 id="74-canonical-crosswalk-finding">74. Canonical Crosswalk Finding</h1>
+<p>Crosswalk #4 demonstrates that:</p>
+<blockquote>
+<p><strong>A truth-bearing object can remain internally intact while becoming operationally unusable because authority, time, policy, status, Lineage, or consumer Regime changed around it.</strong></p>
+</blockquote>
+<p>That finding significantly strengthens the Resonance Truth architecture.</p>
+<p>The first four systems now show:</p>
+<pre><code>NTP
+  → accepted local state can Drift from reference
+
+DNS
+  → authority and location are scope-bound
+
+IAM
+  → identity is relationship-bound
+
+PKI
+  → integrity is not sufficient for operational trust
+</code></pre>
+<p>The Truth Service is therefore moving further from:</p>
+<pre><code>Is this value true?
+</code></pre>
+<p>toward:</p>
+<pre><code>What relationship is being asserted?
+
+What evidence supports it?
+
+Who had authority to assert it?
+
+Through what Lineage?
+
+Under which policy?
+
+At what time?
+
+For which observer?
+
+For which use?
+
+What has changed since qualification?
+</code></pre>
+<p>That is a substantially more mature architecture than the original NTP-derived model.</p>
+<hr>
+<h1 id="75-references">75. References</h1>
+<p>Primary technical reference:</p>
+<pre><code>RFC 5280
+Internet X.509 Public Key Infrastructure
+Certificate and Certificate Revocation List (CRL) Profile
+</code></pre>
+<p>RFC Editor / Internet Engineering Task Force.</p>
+<p>Supporting bounded reference material:</p>
+<pre><code>NIST PKI path-validation material
+</code></pre>
+<p>The technical references establish the PKI mechanisms used in this crosswalk.</p>
+<p>RTT terminology, Truth Classes, Drift categories, Regime interpretation, Evidence abstraction, and proposed architectural generalizations remain the analytical contribution of Resonance Truth.</p>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>Crosswalk #1 asked:</p>
+<pre><code>When?
+</code></pre>
+<p>Crosswalk #2 asked:</p>
+<pre><code>Where?
+</code></pre>
+<p>Crosswalk #3 asked:</p>
+<pre><code>Who?
+</code></pre>
+<p>Crosswalk #4 asks:</p>
+<pre><code>Is it still intact and operationally valid?
+</code></pre>
+<p>PKI answers that last question with something much richer than:</p>
+<pre><code>signature valid
+</code></pre>
+<p>It exposes:</p>
+<pre><code>Subject
+
+Assertion
+
+Signature
+
+Authority
+
+Delegation
+
+Path
+
+Anchor
+
+Constraint
+
+Policy
+
+Time
+
+Status
+
+Consumer
+
+Use
+</code></pre>
+<p>The emerging structure now looks less like a truth lookup service and increasingly like a:</p>
+<blockquote>
+<p><strong>qualified evidence-and-relationship evaluation system.</strong></p>
+</blockquote>
+<p>That may be the largest architectural shift since the crosswalk series began.</p>
+<p><strong>NTP gave truth a reference.</strong></p>
+<p><strong>DNS gave it scope.</strong></p>
+<p><strong>IAM gave it a Subject.</strong></p>
+<p><strong>PKI gives it an evidence chain and asks whether every link still qualifies.</strong></p>
+<p><strong>Crosswalk #5 now gets to ask who had the authority to make those links matter.</strong></p>
   </main>
 </body>
 </html>

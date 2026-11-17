@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/operational_truth_systems.md">
-  <title>operational_truth_systems</title>
+  <title>Operational Truth Systems — RTT Crosswalk</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2136 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_crosswalks_operational_truth_systems_" src="https://github.com/user-attachments/assets/7a7264a8-9bd1-4e4e-ad7d-c9a50fdbceed" /></p>
+<h1 id="operational-truth-systems-rtt-crosswalk">Operational Truth Systems — RTT Crosswalk</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Systems Crosswalk<br>
+<strong>Framework:</strong> Resonance-Time Theory (RTT)<br>
+<strong>Status:</strong> Research / Comparative Reference Systems<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>Modern systems depend on multiple forms of operational truth.</p>
+<p>They must determine things such as:</p>
+<ul>
+<li>what time it is</li>
+<li>where a named resource resolves</li>
+<li>who or what an actor is</li>
+<li>whether an artifact remains intact</li>
+<li>who is authorized to act</li>
+<li>what state is currently accepted</li>
+<li>what transaction became committed</li>
+<li>what state is intended</li>
+<li>what was actually observed</li>
+<li>where an artifact or claim came from</li>
+</ul>
+<p>These are not necessarily the same kind of truth problem.</p>
+<p>This crosswalk identifies ten operational Truth Classes and pairs each with a representative modern system whose architecture provides useful mechanisms for understanding that class.</p>
+<p>The purpose is not to claim:</p>
+<pre><code>Reference System
+      =
+Truth
+</code></pre>
+<p>or:</p>
+<pre><code>Reference System
+      =
+RTT
+</code></pre>
+<p>Instead, the research asks:</p>
+<blockquote>
+<p><strong>How does each system maintain an operationally usable relationship to its particular form of truth?</strong></p>
+</blockquote>
+<p>The resulting mechanisms are then evaluated for possible generalization into the RTT Resonance Truth Service.</p>
+<hr>
+<h1 id="1-operational-truth-system-map">1. Operational Truth-System Map</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Truth Class</th>
+<th>Operational Question</th>
+<th>Reference System</th>
+<th>Primary Structural Concern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td><strong>Temporal Truth</strong></td>
+<td>When is it true?</td>
+<td>NTP</td>
+<td>Synchronization, freshness, Drift, correction</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td><strong>Locational Truth</strong></td>
+<td>Where is it true or where does it resolve?</td>
+<td>DNS</td>
+<td>Naming, delegation, scope, caching</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td><strong>Identity Truth</strong></td>
+<td>Who or what is this?</td>
+<td>IAM</td>
+<td>Identity, credentials, authentication</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td><strong>Integrity Truth</strong></td>
+<td>Is it still what it claims to be?</td>
+<td>PKI / cryptographic verification</td>
+<td>Integrity, signatures, trust paths</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td><strong>Authority Truth</strong></td>
+<td>Who may declare, validate, or act?</td>
+<td>Policy / IAM</td>
+<td>Authorization, delegation, scope</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>6</strong></td>
+<td><strong>State Truth</strong></td>
+<td>What is presently the case?</td>
+<td>Distributed systems</td>
+<td>Replication, Coherence, accepted state</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>7</strong></td>
+<td><strong>Transactional Truth</strong></td>
+<td>What became committed?</td>
+<td>Ledgers</td>
+<td>Ordering, commitment, settlement, finality</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>8</strong></td>
+<td><strong>Intent Truth</strong></td>
+<td>What should the state be?</td>
+<td>Desired-state systems</td>
+<td>Declaration, reconciliation, configuration Drift</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>9</strong></td>
+<td><strong>Observational Truth</strong></td>
+<td>What was actually observed?</td>
+<td>Telemetry</td>
+<td>Evidence, measurement, correlation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>10</strong></td>
+<td><strong>Lineage Truth</strong></td>
+<td>Where did this claim or artifact come from?</td>
+<td>Supply-chain provenance</td>
+<td>Origin, transformation, dependency</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="2-core-distinction">2. Core Distinction</h1>
+<p>The ten Truth Classes should not be interpreted as ten mutually exclusive forms of truth.</p>
+<p>They are better understood as:</p>
+<blockquote>
+<p><strong>Dimensions of inspection.</strong></p>
+</blockquote>
+<p>A single Claim may participate in several Truth Classes simultaneously.</p>
+<p>For example:</p>
+<blockquote>
+<p><strong>This TLS certificate is valid.</strong></p>
+</blockquote>
+<p>may require inspection of:</p>
+<pre><code>Identity
+  ↓
+Who or what does it identify?
+
+Integrity
+  ↓
+Is the signed structure intact?
+
+Authority
+  ↓
+Is the issuer recognized?
+
+Temporal
+  ↓
+Is the certificate within its applicable validity interval?
+
+State
+  ↓
+What is its present operational status?
+
+Lineage
+  ↓
+What trust path connects it to a recognized Anchor?
+</code></pre>
+<p>The operational result therefore depends on more than one truth relationship.</p>
+<hr>
+<h1 id="3-two-axis-truth-model">3. Two-Axis Truth Model</h1>
+<p>The crosswalk uses two independent axes.</p>
+<h2 id="axis-a-truth-class">Axis A — Truth Class</h2>
+<p>Truth Class asks:</p>
+<blockquote>
+<p><strong>What kind of truth is being evaluated?</strong></p>
+</blockquote>
+<pre><code>Temporal
+Locational
+Identity
+Integrity
+Authority
+State
+Transactional
+Intent
+Observational
+Lineage
+</code></pre>
+<h2 id="axis-b-rtt-state">Axis B — RTT State</h2>
+<p>RTT asks:</p>
+<blockquote>
+<p><strong>What is happening to that truth?</strong></p>
+</blockquote>
+<pre><code>Resonance
+Coherence
+Drift
+Paradox
+Regime
+SET
+</code></pre>
+<p>This produces:</p>
+<blockquote>
+<p><strong>Truth Class × RTT State</strong></p>
+</blockquote>
+<p>For example:</p>
+<pre><code>Temporal Truth
+      ×
+Drift
+</code></pre>
+<p>asks a different question from:</p>
+<pre><code>Identity Truth
+      ×
+Drift
+</code></pre>
+<p>and:</p>
+<pre><code>Lineage Truth
+      ×
+Drift
+</code></pre>
+<p>The RTT dimension may generalize.</p>
+<p>Its operational expression may differ by Truth Class.</p>
+<hr>
+<h1 id="4-crosswalk-1-ntp-temporal-truth">4. Crosswalk #1 — NTP / Temporal Truth</h1>
+<h2 id="operational-question">Operational Question</h2>
+<blockquote>
+<p><strong>When is it true?</strong></p>
+</blockquote>
+<p>The Network Time Protocol provides the first operational reference system because time synchronization exposes several structural mechanisms clearly.</p>
+<p>Relevant concerns include:</p>
+<ul>
+<li>reference time</li>
+<li>Source relationships</li>
+<li>multiple observations</li>
+<li>Source qualification</li>
+<li>propagation delay</li>
+<li>offset</li>
+<li>instability</li>
+<li>uncertainty</li>
+<li>Drift</li>
+<li>Source disagreement</li>
+<li>local state correction</li>
+<li>repeated Revalidation</li>
+<li>degraded synchronization</li>
+</ul>
+<h2 id="structural-mapping">Structural Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>NTP Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference clock</td>
+<td>Truth Anchor</td>
+</tr>
+<tr>
+<td>Time Source</td>
+<td>Source</td>
+</tr>
+<tr>
+<td>Stratum</td>
+<td>Lineage distance</td>
+</tr>
+<tr>
+<td>Time sample</td>
+<td>Observation</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Drift</td>
+</tr>
+<tr>
+<td>Delay</td>
+<td>Observation distance</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>Instability</td>
+</tr>
+<tr>
+<td>Dispersion</td>
+<td>Uncertainty growth</td>
+</tr>
+<tr>
+<td>Clock filtering</td>
+<td>Evidence qualification</td>
+</tr>
+<tr>
+<td>Source selection</td>
+<td>Source qualification</td>
+</tr>
+<tr>
+<td>Clustering</td>
+<td>Coherence / Paradox containment</td>
+</tr>
+<tr>
+<td>Combination</td>
+<td>Truth-State synthesis</td>
+</tr>
+<tr>
+<td>Clock discipline</td>
+<td>Bounded Correction</td>
+</tr>
+<tr>
+<td>Polling</td>
+<td>Revalidation</td>
+</tr>
+<tr>
+<td>Loss of synchronization</td>
+<td>Degraded / Held Over / Indeterminate</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primary-architectural-contribution">Primary Architectural Contribution</h2>
+<p>NTP demonstrates that an operationally useful state does not require a simplistic claim of perfect certainty.</p>
+<p>Instead:</p>
+<pre><code>Reference
+   ↓
+Observation
+   ↓
+Qualification
+   ↓
+Comparison
+   ↓
+Drift Measurement
+   ↓
+Local Correction
+   ↓
+Revalidation
+</code></pre>
+<p>The resulting generalized principle is:</p>
+<blockquote>
+<p><strong>A local Truth State may remain operationally useful when its relationship to reference, Drift, uncertainty, and freshness remain visible and bounded.</strong></p>
+</blockquote>
+<h2 id="detailed-crosswalk">Detailed Crosswalk</h2>
+<pre><code>01_ntp_temporal_truth.md
+</code></pre>
+<hr>
+<h1 id="5-crosswalk-2-dns-locational-truth">5. Crosswalk #2 — DNS / Locational Truth</h1>
+<h2 id="operational-question_1">Operational Question</h2>
+<blockquote>
+<p><strong>Where is it true?</strong></p>
+</blockquote>
+<p>or:</p>
+<blockquote>
+<p><strong>Where does this named thing resolve?</strong></p>
+</blockquote>
+<p>DNS introduces a different truth relationship.</p>
+<p>Its concern is not primarily synchronization with a temporal reference.</p>
+<p>It concerns the relationship among:</p>
+<ul>
+<li>names</li>
+<li>namespaces</li>
+<li>delegation</li>
+<li>authority</li>
+<li>resolution</li>
+<li>caching</li>
+<li>observation position</li>
+<li>record lifetime</li>
+</ul>
+<h2 id="candidate-structural-mapping">Candidate Structural Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>DNS Concept</th>
+<th>Candidate RTT Truth-Service Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Namespace</td>
+<td>Regime / scope</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Claim subject</td>
+</tr>
+<tr>
+<td>Authoritative zone</td>
+<td>Bounded authority</td>
+</tr>
+<tr>
+<td>Delegation</td>
+<td>Authority Lineage</td>
+</tr>
+<tr>
+<td>Resource record</td>
+<td>Observation / declared state</td>
+</tr>
+<tr>
+<td>Resolver</td>
+<td>Observer</td>
+</tr>
+<tr>
+<td>Cache</td>
+<td>Local Truth State</td>
+</tr>
+<tr>
+<td>TTL</td>
+<td>Freshness boundary</td>
+</tr>
+<tr>
+<td>Recursive resolution path</td>
+<td>Lineage</td>
+</tr>
+<tr>
+<td>Different valid answers</td>
+<td>Regime / observer-relative state</td>
+</tr>
+<tr>
+<td>Negative response</td>
+<td>Explicit absence state</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primary-architectural-challenge">Primary Architectural Challenge</h2>
+<p>DNS tests whether the Truth Service can represent:</p>
+<blockquote>
+<p><strong>multiple legitimate answers produced by namespace, locality, delegation, or observer position</strong></p>
+</blockquote>
+<p>without treating difference automatically as error.</p>
+<p>It is the first major test against the risk of modeling every truth system like NTP.</p>
+<h2 id="detailed-crosswalk_1">Detailed Crosswalk</h2>
+<pre><code>02_dns_locational_truth.md
+</code></pre>
+<hr>
+<h1 id="6-crosswalk-3-iam-identity-truth">6. Crosswalk #3 — IAM / Identity Truth</h1>
+<h2 id="operational-question_2">Operational Question</h2>
+<blockquote>
+<p><strong>Who or what is this?</strong></p>
+</blockquote>
+<p>Identity and Access Management systems establish operational relationships among:</p>
+<ul>
+<li>subjects</li>
+<li>identifiers</li>
+<li>credentials</li>
+<li>authentication evidence</li>
+<li>identity authorities</li>
+<li>trust domains</li>
+<li>contextual state</li>
+</ul>
+<h2 id="candidate-structural-mapping_1">Candidate Structural Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>IAM Concept</th>
+<th>Candidate RTT Truth-Service Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subject</td>
+<td>Claimed entity</td>
+</tr>
+<tr>
+<td>Identity record</td>
+<td>Identity Claim</td>
+</tr>
+<tr>
+<td>Credential</td>
+<td>Supporting evidence</td>
+</tr>
+<tr>
+<td>Identity provider</td>
+<td>Source / authority</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>Observation qualification</td>
+</tr>
+<tr>
+<td>Directory</td>
+<td>Identity state reference</td>
+</tr>
+<tr>
+<td>Credential expiration</td>
+<td>Freshness</td>
+</tr>
+<tr>
+<td>Credential revocation</td>
+<td>State transition</td>
+</tr>
+<tr>
+<td>Trust domain</td>
+<td>Regime</td>
+</tr>
+<tr>
+<td>Federation</td>
+<td>Authority / Lineage relationship</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primary-architectural-challenge_1">Primary Architectural Challenge</h2>
+<p>IAM tests the assumption that:</p>
+<pre><code>identity
+</code></pre>
+<p>is an intrinsic property carried entirely by an object.</p>
+<p>Instead, operational identity may depend on:</p>
+<pre><code>Claim
+  +
+Evidence
+  +
+Authority
+  +
+Observer
+  +
+Regime
+</code></pre>
+<h2 id="detailed-crosswalk_2">Detailed Crosswalk</h2>
+<pre><code>03_iam_identity_truth.md
+</code></pre>
+<hr>
+<h1 id="7-crosswalk-4-pki-integrity-truth">7. Crosswalk #4 — PKI / Integrity Truth</h1>
+<h2 id="operational-question_3">Operational Question</h2>
+<blockquote>
+<p><strong>Is this still what it claims to be?</strong></p>
+</blockquote>
+<p>Public-key infrastructure and cryptographic verification provide useful mechanisms involving:</p>
+<ul>
+<li>signatures</li>
+<li>keys</li>
+<li>certificate chains</li>
+<li>certificate authorities</li>
+<li>validity periods</li>
+<li>trust stores</li>
+<li>revocation</li>
+<li>artifact integrity</li>
+</ul>
+<h2 id="candidate-structural-mapping_2">Candidate Structural Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>PKI Concept</th>
+<th>Candidate RTT Truth-Service Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Root of trust</td>
+<td>Anchor</td>
+</tr>
+<tr>
+<td>Certificate authority</td>
+<td>Authority Source</td>
+</tr>
+<tr>
+<td>Certificate</td>
+<td>Signed Claim</td>
+</tr>
+<tr>
+<td>Certificate chain</td>
+<td>Lineage</td>
+</tr>
+<tr>
+<td>Signature</td>
+<td>Integrity evidence</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Qualification</td>
+</tr>
+<tr>
+<td>Validity interval</td>
+<td>Temporal Regime</td>
+</tr>
+<tr>
+<td>Revocation</td>
+<td>Truth-State transition</td>
+</tr>
+<tr>
+<td>Trust store</td>
+<td>Observer-specific Anchor set</td>
+</tr>
+<tr>
+<td>Chain failure</td>
+<td>Broken Lineage / qualification</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primary-architectural-challenge_2">Primary Architectural Challenge</h2>
+<p>PKI exposes an important distinction:</p>
+<pre><code>cryptographically intact
+</code></pre>
+<p>does not automatically mean:</p>
+<pre><code>operationally trusted
+</code></pre>
+<p>and:</p>
+<pre><code>operationally trusted
+</code></pre>
+<p>does not automatically mean:</p>
+<pre><code>safe for every purpose
+</code></pre>
+<p>Integrity, Authority, Identity, Temporal Truth, and Regime may all intersect.</p>
+<h2 id="detailed-crosswalk_3">Detailed Crosswalk</h2>
+<pre><code>04_pki_integrity_truth.md
+</code></pre>
+<hr>
+<h1 id="8-crosswalk-5-policy-iam-authority-truth">8. Crosswalk #5 — Policy / IAM / Authority Truth</h1>
+<h2 id="operational-question_4">Operational Question</h2>
+<blockquote>
+<p><strong>Who may declare, validate, or act?</strong></p>
+</blockquote>
+<p>Authority Truth concerns the conditions under which an actor, Source, or institution is permitted to:</p>
+<ul>
+<li>assert</li>
+<li>approve</li>
+<li>modify</li>
+<li>delegate</li>
+<li>execute</li>
+<li>govern</li>
+</ul>
+<h2 id="candidate-structural-mapping_3">Candidate Structural Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>Policy Concept</th>
+<th>Candidate RTT Truth-Service Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Principal</td>
+<td>Actor</td>
+</tr>
+<tr>
+<td>Permission</td>
+<td>Allowed operation</td>
+</tr>
+<tr>
+<td>Role</td>
+<td>Authority grouping</td>
+</tr>
+<tr>
+<td>Policy</td>
+<td>Regime rule</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Regime boundary</td>
+</tr>
+<tr>
+<td>Delegation</td>
+<td>Authority Lineage</td>
+</tr>
+<tr>
+<td>Deny rule</td>
+<td>Explicit boundary</td>
+</tr>
+<tr>
+<td>Contextual condition</td>
+<td>Regime qualification</td>
+</tr>
+<tr>
+<td>Policy version</td>
+<td>Regime version</td>
+</tr>
+<tr>
+<td>Revocation</td>
+<td>Authority transition</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primary-architectural-challenge_3">Primary Architectural Challenge</h2>
+<p>Authority Truth tests whether the architecture can maintain:</p>
+<blockquote>
+<p><strong>bounded authority</strong></p>
+</blockquote>
+<p>without confusing authority with correctness.</p>
+<p>An actor may be fully authorized to issue a Claim that later proves incorrect.</p>
+<p>Therefore:</p>
+<pre><code>Authority ≠ Correctness
+</code></pre>
+<p>remains a core architectural distinction.</p>
+<h2 id="detailed-crosswalk_4">Detailed Crosswalk</h2>
+<pre><code>05_policy_authority_truth.md
+</code></pre>
+<hr>
+<h1 id="9-crosswalk-6-distributed-systems-state-truth">9. Crosswalk #6 — Distributed Systems / State Truth</h1>
+<h2 id="operational-question_5">Operational Question</h2>
+<blockquote>
+<p><strong>What is presently the case?</strong></p>
+</blockquote>
+<p>Distributed systems expose the problem of maintaining state across multiple observers or replicas.</p>
+<p>Relevant mechanisms may include:</p>
+<ul>
+<li>replication</li>
+<li>versioning</li>
+<li>quorum</li>
+<li>leadership</li>
+<li>epochs</li>
+<li>conflict resolution</li>
+<li>convergence</li>
+<li>consistency models</li>
+</ul>
+<h2 id="candidate-structural-mapping_4">Candidate Structural Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>Distributed-System Concept</th>
+<th>Candidate RTT Truth-Service Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Replica</td>
+<td>Observer / Source</td>
+</tr>
+<tr>
+<td>Replicated state</td>
+<td>Local Truth State</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>State Lineage</td>
+</tr>
+<tr>
+<td>Consensus</td>
+<td>Operational Coherence</td>
+</tr>
+<tr>
+<td>Quorum</td>
+<td>Acceptance rule</td>
+</tr>
+<tr>
+<td>Leader</td>
+<td>Temporary authority</td>
+</tr>
+<tr>
+<td>Partition</td>
+<td>Regime / observation boundary</td>
+</tr>
+<tr>
+<td>Split brain</td>
+<td>Structural Paradox</td>
+</tr>
+<tr>
+<td>Convergence</td>
+<td>Correction</td>
+</tr>
+<tr>
+<td>Epoch / term</td>
+<td>Regime transition</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primary-architectural-challenge_4">Primary Architectural Challenge</h2>
+<p>Distributed systems test whether:</p>
+<pre><code>Coherence
+</code></pre>
+<p>must always mean:</p>
+<pre><code>identical state everywhere
+</code></pre>
+<p>The answer may depend on the system's consistency model and Regime.</p>
+<p>This crosswalk should therefore challenge simplistic interpretations of consensus and Coherence.</p>
+<h2 id="detailed-crosswalk_5">Detailed Crosswalk</h2>
+<pre><code>06_distributed_state_truth.md
+</code></pre>
+<hr>
+<h1 id="10-crosswalk-7-ledgers-transactional-truth">10. Crosswalk #7 — Ledgers / Transactional Truth</h1>
+<h2 id="operational-question_6">Operational Question</h2>
+<blockquote>
+<p><strong>What became committed?</strong></p>
+</blockquote>
+<p>Transactional Truth concerns state changes that cross an operational commitment boundary.</p>
+<p>Relevant concerns may include:</p>
+<ul>
+<li>ordering</li>
+<li>validation</li>
+<li>commit</li>
+<li>settlement</li>
+<li>reconciliation</li>
+<li>reversal</li>
+<li>durability</li>
+<li>finality</li>
+</ul>
+<h2 id="candidate-structural-mapping_5">Candidate Structural Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>Ledger Concept</th>
+<th>Candidate RTT Truth-Service Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transaction</td>
+<td>Proposed state transition</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Qualification</td>
+</tr>
+<tr>
+<td>Entry</td>
+<td>Recorded event</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>Regime transition</td>
+</tr>
+<tr>
+<td>Ledger</td>
+<td>Historical state</td>
+</tr>
+<tr>
+<td>Reconciliation</td>
+<td>Coherence evaluation</td>
+</tr>
+<tr>
+<td>Settlement</td>
+<td>Operational acceptance</td>
+</tr>
+<tr>
+<td>Finality</td>
+<td>Commitment boundary</td>
+</tr>
+<tr>
+<td>Reversal</td>
+<td>Subsequent corrective transition</td>
+</tr>
+<tr>
+<td>Audit trail</td>
+<td>Lineage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primary-architectural-challenge_5">Primary Architectural Challenge</h2>
+<p>Transactional Truth tests whether the architecture can distinguish:</p>
+<pre><code>proposed
+</code></pre>
+<p>from:</p>
+<pre><code>observed
+</code></pre>
+<p>from:</p>
+<pre><code>accepted
+</code></pre>
+<p>from:</p>
+<pre><code>committed
+</code></pre>
+<p>from:</p>
+<pre><code>final
+</code></pre>
+<p>Those states should not automatically collapse into one generic:</p>
+<pre><code>true
+</code></pre>
+<h2 id="detailed-crosswalk_6">Detailed Crosswalk</h2>
+<pre><code>07_ledger_transactional_truth.md
+</code></pre>
+<hr>
+<h1 id="11-crosswalk-8-desired-state-systems-intent-truth">11. Crosswalk #8 — Desired-State Systems / Intent Truth</h1>
+<h2 id="operational-question_7">Operational Question</h2>
+<blockquote>
+<p><strong>What should the state be?</strong></p>
+</blockquote>
+<p>Desired-state systems maintain a declared target against which observed state may be evaluated.</p>
+<p>Examples of relevant concerns include:</p>
+<ul>
+<li>configuration</li>
+<li>policy</li>
+<li>desired state</li>
+<li>actual state</li>
+<li>reconciliation</li>
+<li>configuration Drift</li>
+<li>convergence</li>
+</ul>
+<h2 id="candidate-structural-mapping_6">Candidate Structural Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>Desired-State Concept</th>
+<th>Candidate RTT Truth-Service Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desired state</td>
+<td>Intent Truth</td>
+</tr>
+<tr>
+<td>Actual state</td>
+<td>Observational / State Truth</td>
+</tr>
+<tr>
+<td>Configuration</td>
+<td>Declared Claim</td>
+</tr>
+<tr>
+<td>Controller</td>
+<td>Correction mechanism</td>
+</tr>
+<tr>
+<td>Reconciliation loop</td>
+<td>Revalidation</td>
+</tr>
+<tr>
+<td>Configuration Drift</td>
+<td>Drift</td>
+</tr>
+<tr>
+<td>Convergence</td>
+<td>Correction</td>
+</tr>
+<tr>
+<td>Policy violation</td>
+<td>Regime mismatch</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primary-architectural-contribution_1">Primary Architectural Contribution</h2>
+<p>This system class makes one distinction exceptionally visible:</p>
+<blockquote>
+<p><strong>Declared Truth and Observed Truth are separate objects.</strong></p>
+</blockquote>
+<p>The difference between them may itself be the primary operational signal.</p>
+<h2 id="detailed-crosswalk_7">Detailed Crosswalk</h2>
+<pre><code>08_desired_state_intent_truth.md
+</code></pre>
+<hr>
+<h1 id="12-crosswalk-9-telemetry-observational-truth">12. Crosswalk #9 — Telemetry / Observational Truth</h1>
+<h2 id="operational-question_8">Operational Question</h2>
+<blockquote>
+<p><strong>What was actually observed?</strong></p>
+</blockquote>
+<p>Telemetry systems produce evidence about operating systems and environments.</p>
+<p>Relevant evidence may include:</p>
+<ul>
+<li>logs</li>
+<li>metrics</li>
+<li>traces</li>
+<li>events</li>
+<li>measurements</li>
+<li>samples</li>
+<li>health signals</li>
+</ul>
+<h2 id="candidate-structural-mapping_7">Candidate Structural Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>Telemetry Concept</th>
+<th>Candidate RTT Truth-Service Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sensor / instrument</td>
+<td>Source</td>
+</tr>
+<tr>
+<td>Log event</td>
+<td>Observation</td>
+</tr>
+<tr>
+<td>Metric sample</td>
+<td>Observation</td>
+</tr>
+<tr>
+<td>Trace</td>
+<td>Lineage / event relationship</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>Temporal metadata</td>
+</tr>
+<tr>
+<td>Correlation</td>
+<td>Coherence reconstruction</td>
+</tr>
+<tr>
+<td>Sampling</td>
+<td>Observation limitation</td>
+</tr>
+<tr>
+<td>Missing telemetry</td>
+<td>Evidence gap</td>
+</tr>
+<tr>
+<td>Aggregation</td>
+<td>Transformation</td>
+</tr>
+<tr>
+<td>Retention</td>
+<td>Historical evidence boundary</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primary-architectural-challenge_6">Primary Architectural Challenge</h2>
+<p>Telemetry exposes the difference between:</p>
+<pre><code>what happened
+</code></pre>
+<p>and:</p>
+<pre><code>what was observed
+</code></pre>
+<p>An event may occur without being captured.</p>
+<p>A captured Observation may represent only part of the event.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Evidence participates in truth reconstruction without automatically becoming the complete Truth State.</strong></p>
+</blockquote>
+<h2 id="detailed-crosswalk_8">Detailed Crosswalk</h2>
+<pre><code>09_telemetry_observational_truth.md
+</code></pre>
+<hr>
+<h1 id="13-crosswalk-10-supply-chain-provenance-lineage-truth">13. Crosswalk #10 — Supply-Chain Provenance / Lineage Truth</h1>
+<h2 id="operational-question_9">Operational Question</h2>
+<blockquote>
+<p><strong>Where did this claim or artifact come from?</strong></p>
+</blockquote>
+<p>Lineage Truth concerns origin, transformation, dependency, and provenance.</p>
+<p>Relevant concerns may include:</p>
+<ul>
+<li>source artifacts</li>
+<li>dependency relationships</li>
+<li>build steps</li>
+<li>signatures</li>
+<li>attestations</li>
+<li>transformations</li>
+<li>distribution</li>
+<li>artifact identity</li>
+</ul>
+<h2 id="candidate-structural-mapping_8">Candidate Structural Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>Provenance Concept</th>
+<th>Candidate RTT Truth-Service Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source artifact</td>
+<td>Origin</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Source</td>
+</tr>
+<tr>
+<td>Dependency</td>
+<td>Lineage relationship</td>
+</tr>
+<tr>
+<td>Build step</td>
+<td>Transformation</td>
+</tr>
+<tr>
+<td>Build system</td>
+<td>Transformation Source</td>
+</tr>
+<tr>
+<td>Artifact digest</td>
+<td>Integrity evidence</td>
+</tr>
+<tr>
+<td>Signature</td>
+<td>Authority / Integrity evidence</td>
+</tr>
+<tr>
+<td>Attestation</td>
+<td>Lineage Claim</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>State transition</td>
+</tr>
+<tr>
+<td>Provenance graph</td>
+<td>Explicit Lineage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primary-architectural-contribution_2">Primary Architectural Contribution</h2>
+<p>This crosswalk directly tests the principle:</p>
+<blockquote>
+<p><strong>Lineage is a first-class dimension of operational truth.</strong></p>
+</blockquote>
+<p>The service should be able to ask not only:</p>
+<blockquote>
+<p>Is this the artifact?</p>
+</blockquote>
+<p>but:</p>
+<blockquote>
+<p>How did this artifact arrive here?</p>
+</blockquote>
+<h2 id="detailed-crosswalk_9">Detailed Crosswalk</h2>
+<pre><code>10_provenance_lineage_truth.md
+</code></pre>
+<hr>
+<h1 id="14-common-structural-dimensions">14. Common Structural Dimensions</h1>
+<p>Although the ten systems solve different problems, each can be inspected using the same structural questions.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Anchor</strong></td>
+<td>What provides the bounded reference?</td>
+</tr>
+<tr>
+<td><strong>Source</strong></td>
+<td>Who or what produces the Observation?</td>
+</tr>
+<tr>
+<td><strong>Observation</strong></td>
+<td>What evidence enters the system?</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>How did the evidence arrive here?</td>
+</tr>
+<tr>
+<td><strong>Qualification</strong></td>
+<td>Is this evidence eligible for use?</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Do qualified observations form a mutually usable state?</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>How has accepted, observed, or expected state changed?</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>What qualified contradictions remain?</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Under which boundary does the state remain valid?</td>
+</tr>
+<tr>
+<td><strong>Freshness</strong></td>
+<td>How long does the state remain usable?</td>
+</tr>
+<tr>
+<td><strong>Correction</strong></td>
+<td>How does local state react to better-supported evidence?</td>
+</tr>
+<tr>
+<td><strong>Failure</strong></td>
+<td>Can the system visibly admit loss of qualification?</td>
+</tr>
+</tbody>
+</table>
+<p>These dimensions form the comparative backbone of the crosswalk series.</p>
+<hr>
+<h1 id="15-cross-system-truth-pattern">15. Cross-System Truth Pattern</h1>
+<p>A generalized pattern begins to appear:</p>
+<pre><code>REFERENCE
+    ↓
+SOURCE
+    ↓
+OBSERVATION
+    ↓
+LINEAGE
+    ↓
+QUALIFICATION
+    ↓
+COHERENCE
+    ↓
+DRIFT
+    ↓
+PARADOX
+    ↓
+REGIME
+    ↓
+QUALIFIED STATE
+    ↓
+CORRECTION
+    ↓
+REVALIDATION
+</code></pre>
+<p>This pattern remains a hypothesis until tested across the full crosswalk series.</p>
+<p>The purpose of later crosswalks is partly to determine where this sequence fails.</p>
+<hr>
+<h1 id="16-truth-relationship-families">16. Truth Relationship Families</h1>
+<p>The ten systems can also be viewed through broader relationship families.</p>
+<h2 id="reference-oriented">Reference-Oriented</h2>
+<p>These systems rely strongly on recognized references or delegated authorities.</p>
+<p>Examples:</p>
+<pre><code>NTP
+DNS
+PKI
+</code></pre>
+<p>Primary question:</p>
+<blockquote>
+<p><strong>Against which reference should local state be evaluated?</strong></p>
+</blockquote>
+<hr>
+<h2 id="validation-oriented">Validation-Oriented</h2>
+<p>These systems determine whether a Claim or actor satisfies governing constraints.</p>
+<p>Examples:</p>
+<pre><code>IAM
+PKI
+Policy
+</code></pre>
+<p>Primary question:</p>
+<blockquote>
+<p><strong>Does this Claim satisfy the required conditions under this Regime?</strong></p>
+</blockquote>
+<hr>
+<h2 id="agreement-oriented">Agreement-Oriented</h2>
+<p>These systems establish usable state among multiple participants.</p>
+<p>Examples:</p>
+<pre><code>Distributed Systems
+Ledgers
+</code></pre>
+<p>Primary question:</p>
+<blockquote>
+<p><strong>What state will participating systems treat as operationally accepted?</strong></p>
+</blockquote>
+<hr>
+<h2 id="intent-oriented">Intent-Oriented</h2>
+<p>These systems compare declared target state against actual state.</p>
+<p>Example:</p>
+<pre><code>Desired-State Systems
+</code></pre>
+<p>Primary question:</p>
+<blockquote>
+<p><strong>What state should exist, and how far does observed state differ from it?</strong></p>
+</blockquote>
+<hr>
+<h2 id="evidence-oriented">Evidence-Oriented</h2>
+<p>These systems collect or reconstruct what has been observed.</p>
+<p>Example:</p>
+<pre><code>Telemetry
+</code></pre>
+<p>Primary question:</p>
+<blockquote>
+<p><strong>What evidence exists about what occurred?</strong></p>
+</blockquote>
+<hr>
+<h2 id="lineage-oriented">Lineage-Oriented</h2>
+<p>These systems emphasize origin and transformation.</p>
+<p>Example:</p>
+<pre><code>Supply-Chain Provenance
+</code></pre>
+<p>Primary question:</p>
+<blockquote>
+<p><strong>How did the present object or Claim arrive here?</strong></p>
+</blockquote>
+<p>These families overlap.</p>
+<p>They are comparative aids, not additional Truth Classes.</p>
+<hr>
+<h1 id="17-preliminary-mechanism-matrix">17. Preliminary Mechanism Matrix</h1>
+<p>The following matrix should initially be treated as a research hypothesis rather than a completed score.</p>
+<p>Legend:</p>
+<pre><code>●  Strongly characteristic
+○  Relevant
+–  Not primary / requires further evaluation
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th style="text-align: right;">Anchor</th>
+<th style="text-align: right;">Lineage</th>
+<th style="text-align: right;">Observation</th>
+<th style="text-align: right;">Coherence</th>
+<th style="text-align: right;">Drift</th>
+<th style="text-align: right;">Paradox</th>
+<th style="text-align: right;">Regime</th>
+<th style="text-align: right;">Freshness</th>
+<th style="text-align: right;">Correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NTP</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+</tr>
+<tr>
+<td>IAM</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+</tr>
+<tr>
+<td>PKI</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+</tr>
+<tr>
+<td>Policy / IAM</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+</tr>
+<tr>
+<td>Distributed Systems</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+</tr>
+<tr>
+<td>Ledgers</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+</tr>
+<tr>
+<td>Desired State</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+</tr>
+<tr>
+<td>Telemetry</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+</tr>
+<tr>
+<td>Supply-Chain Provenance</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">●</td>
+<td style="text-align: right;">○</td>
+<td style="text-align: right;">○</td>
+</tr>
+</tbody>
+</table>
+<p>The detailed crosswalks and scoring process should confirm, modify, or reject these preliminary classifications.</p>
+<hr>
+<h1 id="18-operational-truth-scoring">18. Operational Truth Scoring</h1>
+<p>Each reference system is eventually evaluated using the common ten-dimensional rubric.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Anchor Quality</strong></td>
+<td>How clearly is the reference identified and bounded?</td>
+</tr>
+<tr>
+<td><strong>Lineage Visibility</strong></td>
+<td>Can accepted state be traced toward its Sources and references?</td>
+</tr>
+<tr>
+<td><strong>Observation Quality</strong></td>
+<td>How explicitly is evidence qualified?</td>
+</tr>
+<tr>
+<td><strong>Coherence Detection</strong></td>
+<td>Can meaningful agreement be identified?</td>
+</tr>
+<tr>
+<td><strong>Drift Detection</strong></td>
+<td>Can displacement be detected?</td>
+</tr>
+<tr>
+<td><strong>Paradox Handling</strong></td>
+<td>What happens when qualified states conflict?</td>
+</tr>
+<tr>
+<td><strong>Regime Awareness</strong></td>
+<td>Does the system represent where the result remains valid?</td>
+</tr>
+<tr>
+<td><strong>Freshness / Revalidation</strong></td>
+<td>How is prior state challenged over time?</td>
+</tr>
+<tr>
+<td><strong>Correction Discipline</strong></td>
+<td>How is local state changed when better-supported state appears?</td>
+</tr>
+<tr>
+<td><strong>Failure Transparency</strong></td>
+<td>Can the system visibly admit loss of qualification?</td>
+</tr>
+</tbody>
+</table>
+<p>Each criterion receives:</p>
+<pre><code>0–5
+</code></pre>
+<p>with:</p>
+<pre><code>rationale
+</code></pre>
+<p>and:</p>
+<pre><code>evidence
+</code></pre>
+<p>required beside the score.</p>
+<hr>
+<h1 id="19-scoring-profiles">19. Scoring Profiles</h1>
+<p>A system's structural profile is preserved in the order:</p>
+<pre><code>A-L-O-C-D-P-R-F-X-T
+</code></pre>
+<p>where:</p>
+<pre><code>A = Anchor Quality
+L = Lineage Visibility
+O = Observation Quality
+C = Coherence Detection
+D = Drift Detection
+P = Paradox Handling
+R = Regime Awareness
+F = Freshness / Revalidation
+X = Correction Discipline
+T = Failure Transparency
+</code></pre>
+<p>The profile is more important than the total.</p>
+<p>Two systems may score:</p>
+<pre><code>38 / 50
+</code></pre>
+<p>while possessing radically different structural strengths.</p>
+<p>The crosswalk should preserve that difference.</p>
+<hr>
+<h1 id="20-rtt-meta-dimensions">20. RTT Meta-Dimensions</h1>
+<p>The scoring criteria can be grouped into:</p>
+<pre><code>REFERENCE
+  Anchor Quality
+  Lineage Visibility
+
+OBSERVATION
+  Observation Quality
+  Freshness / Revalidation
+
+COHERENCE
+  Coherence Detection
+  Paradox Handling
+
+DRIFT
+  Drift Detection
+  Correction Discipline
+
+REGIME
+  Regime Awareness
+  Failure Transparency
+</code></pre>
+<p>Each group produces:</p>
+<pre><code>0–10
+</code></pre>
+<p>The result is a structural shape rather than merely a grade.</p>
+<hr>
+<h1 id="21-crosswalk-comparison-table">21. Crosswalk Comparison Table</h1>
+<p>Scores remain blank until the detailed crosswalks provide sufficient evidence.</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Primary Truth Class</th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">L</th>
+<th style="text-align: right;">O</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: right;">D</th>
+<th style="text-align: right;">P</th>
+<th style="text-align: right;">R</th>
+<th style="text-align: right;">F</th>
+<th style="text-align: right;">X</th>
+<th style="text-align: right;">T</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NTP</td>
+<td>Temporal</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>Locational</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>IAM</td>
+<td>Identity</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>PKI</td>
+<td>Integrity</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Policy / IAM</td>
+<td>Authority</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Distributed Systems</td>
+<td>State</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Ledgers</td>
+<td>Transactional</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Desired-State Systems</td>
+<td>Intent</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Telemetry</td>
+<td>Observational</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Supply-Chain Provenance</td>
+<td>Lineage</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+</tbody>
+</table>
+<p>The blank table is intentional.</p>
+<p>Scores should follow evidence rather than precede it.</p>
+<hr>
+<h1 id="22-generalization-tests">22. Generalization Tests</h1>
+<p>A mechanism discovered in one reference system should not automatically become part of the generalized Truth Service.</p>
+<p>Each candidate mechanism should be tested.</p>
+<h2 id="test-1-cross-class-survival">Test 1 — Cross-Class Survival</h2>
+<p>Does the mechanism remain useful outside its original Truth Class?</p>
+<h2 id="test-2-independent-identity">Test 2 — Independent Identity</h2>
+<p>Does the mechanism represent a structurally distinct concept?</p>
+<h2 id="test-3-lifecycle">Test 3 — Lifecycle</h2>
+<p>Does it have a meaningful lifecycle of its own?</p>
+<h2 id="test-4-decision-impact">Test 4 — Decision Impact</h2>
+<p>Does it affect qualification, synthesis, Correction, or Revalidation?</p>
+<h2 id="test-5-information-loss">Test 5 — Information Loss</h2>
+<p>Would removing it lose structurally important information?</p>
+<h2 id="test-6-regime-dependence">Test 6 — Regime Dependence</h2>
+<p>Is it truly general, or only meaningful within one operational Regime?</p>
+<p>Only mechanisms that survive appropriate tests should be promoted into the core architecture.</p>
+<hr>
+<h1 id="23-candidate-general-mechanisms">23. Candidate General Mechanisms</h1>
+<p>The following mechanisms emerged strongly from the initial NTP study and should be challenged by later crosswalks:</p>
+<pre><code>Truth Anchor
+
+Source
+
+Observation
+
+Lineage
+
+Lineage Distance
+
+Qualification
+
+Coherence
+
+Coherence Clustering
+
+Drift
+
+Instability
+
+Uncertainty Growth
+
+Paradox Containment
+
+Regime
+
+Truth-State Synthesis
+
+Correction
+
+Holdover
+
+Revalidation
+
+Failure Transparency
+</code></pre>
+<p>Their presence in the initial architecture should be treated as:</p>
+<blockquote>
+<p><strong>candidate generalized mechanisms</strong></p>
+</blockquote>
+<p>until the broader series provides sufficient evidence.</p>
+<hr>
+<h1 id="24-expected-crosswalk-challenges">24. Expected Crosswalk Challenges</h1>
+<p>Different reference systems should stress different parts of the architecture.</p>
+<table>
+<thead>
+<tr>
+<th>Reference System</th>
+<th>Primary Challenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NTP</strong></td>
+<td>Can the model represent bounded temporal alignment?</td>
+</tr>
+<tr>
+<td><strong>DNS</strong></td>
+<td>Can it represent delegated and observer-dependent location?</td>
+</tr>
+<tr>
+<td><strong>IAM</strong></td>
+<td>Can identity remain relational and contextual?</td>
+</tr>
+<tr>
+<td><strong>PKI</strong></td>
+<td>Can integrity, authority, time, and Lineage remain separate?</td>
+</tr>
+<tr>
+<td><strong>Policy / IAM</strong></td>
+<td>Can authority remain bounded without becoming correctness?</td>
+</tr>
+<tr>
+<td><strong>Distributed Systems</strong></td>
+<td>Can Coherence exist without universal identical state?</td>
+</tr>
+<tr>
+<td><strong>Ledgers</strong></td>
+<td>Can commitment and finality remain distinct from observation?</td>
+</tr>
+<tr>
+<td><strong>Desired State</strong></td>
+<td>Can intended and observed truth remain separate?</td>
+</tr>
+<tr>
+<td><strong>Telemetry</strong></td>
+<td>Can evidence remain partial without becoming false?</td>
+</tr>
+<tr>
+<td><strong>Provenance</strong></td>
+<td>Can transformation history remain first-class?</td>
+</tr>
+</tbody>
+</table>
+<p>A crosswalk that fails to challenge anything is probably not being examined deeply enough.</p>
+<hr>
+<h1 id="25-architectural-feedback-loop">25. Architectural Feedback Loop</h1>
+<p>The comparison process feeds the architecture through:</p>
+<pre><code>REFERENCE SYSTEM
+      ↓
+CROSSWALK
+      ↓
+FINDINGS
+      ↓
+ARCHITECTURAL COMPARISON
+      ↓
+GAP?
+   │
+┌──┴──┐
+│     │
+NO   YES
+│     │
+│     ▼
+│   CLASSIFY
+│     │
+│     ├── Domain-Specific
+│     ├── Missing Attribute
+│     ├── Missing Relationship
+│     ├── Missing Component
+│     ├── Regime Difference
+│     ├── Structural Paradox
+│     └── Model Defect
+│
+▼
+PRESERVE FINDING
+      ↓
+MODIFY CORE ONLY IF JUSTIFIED
+      ↓
+REVALIDATE EARLIER CROSSWALKS
+</code></pre>
+<p>This prevents architecture growth by accumulation alone.</p>
+<hr>
+<h1 id="26-reference-system-facts-vs-rtt-interpretation">26. Reference-System Facts vs RTT Interpretation</h1>
+<p>Each crosswalk should preserve a visible distinction among four forms of statement.</p>
+<h2 id="reference-system-fact">Reference-System Fact</h2>
+<p>What the studied system demonstrably does.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>How an existing mechanism can be described through the RTT lens.</p>
+<h2 id="architectural-generalization">Architectural Generalization</h2>
+<p>A proposed reusable mechanism for the Truth Service.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A structure that requires additional evidence before promotion.</p>
+<p>Example:</p>
+<pre><code>Reference-System Fact:
+  A time synchronization system compares observations
+  from multiple Sources.
+
+RTT Interpretation:
+  The Source set forms a candidate Coherence field.
+
+Architectural Generalization:
+  Truth evaluation may need multi-Source comparison.
+
+Hypothesis:
+  All operational Truth Classes benefit from
+  Coherence clustering.
+</code></pre>
+<p>The final statement should remain provisional until other crosswalks test it.</p>
+<hr>
+<h1 id="27-truth-as-operational-relationship">27. Truth as Operational Relationship</h1>
+<p>Across the ten systems, a broader working thesis emerges:</p>
+<blockquote>
+<p><strong>Modern systems generally do not operate on unqualified absolute truth. They operate on bounded states whose usefulness depends on reference, Source, Lineage, freshness, Coherence, Drift, and Regime.</strong></p>
+</blockquote>
+<p>This remains a research hypothesis.</p>
+<p>The crosswalk series exists to test it.</p>
+<p>If a later reference system demonstrates that one or more of these dimensions are unnecessary, insufficient, or incorrectly generalized, the architecture should change.</p>
+<hr>
+<h1 id="28-qualified-truth-pattern">28. Qualified Truth Pattern</h1>
+<p>The candidate generalized model is:</p>
+<pre><code>CLAIM
+  ↓
+WHAT KIND OF TRUTH?
+  ↓
+TRUTH CLASS
+  ↓
+UNDER WHICH CONDITIONS?
+  ↓
+REGIME
+  ↓
+WHAT WAS OBSERVED?
+  ↓
+OBSERVATIONS
+  ↓
+WHERE DID THEY COME FROM?
+  ↓
+SOURCES + ANCHORS + LINEAGE
+  ↓
+MAY THEY PARTICIPATE?
+  ↓
+QUALIFICATION
+  ↓
+DO THEY AGREE?
+  ↓
+COHERENCE
+  ↓
+HOW HAVE THEY MOVED?
+  ↓
+DRIFT
+  ↓
+WHAT STILL CONFLICTS?
+  ↓
+PARADOX
+  ↓
+WHAT CAN PRESENTLY BE SUPPORTED?
+  ↓
+TRUTH STATE
+  ↓
+WHAT MAY CHANGE?
+  ↓
+CORRECTION
+  ↓
+WHEN MUST WE ASK AGAIN?
+  ↓
+REVALIDATION
+</code></pre>
+<p>The purpose of Crosswalks #2 through #10 is to attack this model constructively.</p>
+<hr>
+<h1 id="29-rtt-set-overlay">29. RTT / SET Overlay</h1>
+<p>SET applies across all Truth Classes.</p>
+<h2 id="spin">Spin</h2>
+<p>Represents persistence and alignment.</p>
+<p>Potential cross-system expressions include:</p>
+<ul>
+<li>identity persistence</li>
+<li>Source continuity</li>
+<li>Anchor relationship</li>
+<li>state retention</li>
+<li>Lineage continuity</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>Represents distinction and separation.</p>
+<p>Potential expressions include:</p>
+<ul>
+<li>Source differentiation</li>
+<li>namespace boundaries</li>
+<li>authority boundaries</li>
+<li>Observation filtering</li>
+<li>policy separation</li>
+<li>Paradox containment</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>Represents activation and transition.</p>
+<p>Potential expressions include:</p>
+<ul>
+<li>freshness</li>
+<li>state transition</li>
+<li>expiration</li>
+<li>Drift accumulation</li>
+<li>revocation</li>
+<li>commitment</li>
+<li>Revalidation</li>
+</ul>
+<p>Compactly:</p>
+<blockquote>
+<p><strong>Spin preserves the relationship.</strong></p>
+<p><strong>Elec distinguishes the participants and boundaries.</strong></p>
+<p><strong>Temp governs transition and renewal.</strong></p>
+</blockquote>
+<p>SET is an analytical overlay.</p>
+<p>It is not an eleventh Truth Class.</p>
+<hr>
+<h1 id="30-research-discipline">30. Research Discipline</h1>
+<p>The crosswalk series should maintain several constraints.</p>
+<h2 id="do-not-force-alignment">Do Not Force Alignment</h2>
+<p>A mechanism does not need an RTT equivalent merely because it exists.</p>
+<h2 id="do-not-hide-mismatch">Do Not Hide Mismatch</h2>
+<p>Non-alignment may be more informative than alignment.</p>
+<h2 id="do-not-pre-score">Do Not Pre-Score</h2>
+<p>Scores follow evidence.</p>
+<h2 id="do-not-collapse-truth-classes">Do Not Collapse Truth Classes</h2>
+<p>A system may participate in several classes.</p>
+<h2 id="do-not-confuse-authority-with-correctness">Do Not Confuse Authority with Correctness</h2>
+<p>Authority is one structural dimension.</p>
+<h2 id="do-not-confuse-observation-with-truth">Do Not Confuse Observation with Truth</h2>
+<p>Evidence participates in synthesis.</p>
+<h2 id="do-not-confuse-agreement-with-independence">Do Not Confuse Agreement with Independence</h2>
+<p>Shared Lineage matters.</p>
+<h2 id="do-not-manufacture-precision">Do Not Manufacture Precision</h2>
+<p>Qualitative structure remains valid.</p>
+<h2 id="do-not-remove-paradox-for-convenience">Do Not Remove Paradox for Convenience</h2>
+<p>Qualified contradiction is preserved.</p>
+<h2 id="do-not-change-the-core-architecture-from-one-example-alone">Do Not Change the Core Architecture from One Example Alone</h2>
+<p>Generalization requires evidence.</p>
+<hr>
+<h1 id="31-current-research-state">31. Current Research State</h1>
+<p>The operational crosswalk series currently begins with:</p>
+<pre><code>Crosswalk #1
+  NTP
+    ↓
+  Temporal Truth
+</code></pre>
+<p>This establishes the initial reference pattern.</p>
+<p>Next:</p>
+<pre><code>Crosswalk #2
+  DNS
+    ↓
+  Locational Truth
+</code></pre>
+<p>has the explicit purpose of challenging the first pattern.</p>
+<p>The remaining systems progressively introduce different structural pressures until the generalized architecture can be reevaluated against all ten.</p>
+<hr>
+<h1 id="32-completion-condition">32. Completion Condition</h1>
+<p>This comparative artifact is considered mature when:</p>
+<ul>
+<li>all ten detailed crosswalks have been completed</li>
+<li>each system has evidence-backed scoring</li>
+<li>cross-system structural mechanisms have been compared</li>
+<li>candidate-general mechanisms have been challenged</li>
+<li>domain-specific mechanisms remain separated</li>
+<li>architecture gaps are recorded</li>
+<li>rejected generalizations remain documented</li>
+<li>changes to the generalized architecture can be traced to crosswalk evidence</li>
+</ul>
+<p>At that point, this file becomes the high-level map of the completed operational truth study.</p>
+<hr>
+<h1 id="33-canonical-cross-system-summary">33. Canonical Cross-System Summary</h1>
+<p>The ten systems ask ten different primary questions:</p>
+<pre><code>NTP
+  → When?
+
+DNS
+  → Where?
+
+IAM
+  → Who?
+
+PKI
+  → Is it intact and verifiable?
+
+Policy
+  → Who may?
+
+Distributed Systems
+  → What is current?
+
+Ledgers
+  → What became committed?
+
+Desired-State Systems
+  → What should be?
+
+Telemetry
+  → What was observed?
+
+Supply-Chain Provenance
+  → Where did it come from?
+</code></pre>
+<p>RTT asks a second set of questions across all ten:</p>
+<pre><code>What is the reference?
+
+What was observed?
+
+Where did it come from?
+
+What coheres?
+
+What drifts?
+
+What remains paradoxical?
+
+Where is the Regime boundary?
+
+How long does the state remain usable?
+
+What happens when better evidence appears?
+
+When must the state be challenged again?
+</code></pre>
+<p>The operational crosswalk series exists at the intersection of those two question sets.</p>
+<hr>
+<h1 id="34-governing-principle">34. Governing Principle</h1>
+<blockquote>
+<p><strong>Different systems may require different kinds of truth while sharing structural mechanisms for maintaining a usable relationship to it.</strong></p>
+</blockquote>
+<p>The purpose of this research is not to make the systems identical.</p>
+<p>It is to identify:</p>
+<pre><code>what generalizes
+
+what remains domain-specific
+
+what changes by Regime
+
+what resists translation
+
+what exposes architectural Drift
+
+what must remain paradoxical
+
+what survives repeated challenge
+</code></pre>
+<p>Only the structures that survive that process should become part of the generalized RTT Resonance Truth Service.</p>
+<hr>
+<h1 id="35-navigation">35. Navigation</h1>
+<p>Detailed crosswalks:</p>
+<pre><code>./01_ntp_temporal_truth.md
+./02_dns_locational_truth.md
+./03_iam_identity_truth.md
+./04_pki_integrity_truth.md
+./05_policy_authority_truth.md
+./06_distributed_state_truth.md
+./07_ledger_transactional_truth.md
+./08_desired_state_intent_truth.md
+./09_telemetry_observational_truth.md
+./10_provenance_lineage_truth.md
+</code></pre>
+<p>Supporting material:</p>
+<pre><code>./README.md
+./scoring_criteria.md
+</code></pre>
+<p>Architecture:</p>
+<pre><code>../architecture/README.md
+../architecture/truth_service_architecture.md
+../architecture/truth_service_components.md
+../architecture/truth_service_data_model.md
+../architecture/implementation_roadmap.md
+</code></pre>
+<p>Reference implementation artifacts:</p>
+<pre><code>../schemas/
+../fixtures/
+../tests/
+</code></pre>
+<hr>
+<h2 id="canonical-statement">Canonical Statement</h2>
+<blockquote>
+<p><strong>Operational truth is not treated here as a single universal value. It is studied as a family of bounded relationships among Claims, Observations, Sources, Anchors, Lineage, Coherence, Drift, Paradox, Regime, Correction, and Revalidation.</strong></p>
+</blockquote>
+<p>The reference systems provide existing operational examples.</p>
+<p>The crosswalks identify their structures.</p>
+<p>RTT supplies the comparative lens.</p>
+<p>The scoring model preserves structural differences.</p>
+<p>The architecture receives only those abstractions that survive repeated cross-system challenge.</p>
   </main>
 </body>
 </html>

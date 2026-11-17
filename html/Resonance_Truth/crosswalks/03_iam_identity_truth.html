@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/03_iam_identity_truth.md">
-  <title>03_iam_identity_truth</title>
+  <title>Crosswalk #3 — IAM and Identity Truth</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2543 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_crosswalks_03_iam_identity_truth_" src="https://github.com/user-attachments/assets/cc164b1b-e13c-4b6c-a8a2-7747d3a5c8f9" /></p>
+<h1 id="crosswalk-3-iam-and-identity-truth">Crosswalk #3 — IAM and Identity Truth</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Crosswalk #3<br>
+<strong>Truth Class:</strong> Identity Truth<br>
+<strong>Reference System:</strong> Identity and Access Management (IAM) / Digital Identity Systems<br>
+<strong>Primary RTT Dimensions:</strong> Spin · Coherence · Regime · Lineage<br>
+<strong>Supporting RTT Dimensions:</strong> Elec · Temp · Drift · Authority · Paradox<br>
+<strong>Status:</strong> Research Crosswalk / Architecture Challenge<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This crosswalk examines Identity and Access Management and digital identity systems as the third operational reference system for the RTT Resonance Truth Service.</p>
+<p>The governing question is:</p>
+<blockquote>
+<p><strong>Who or what is this?</strong></p>
+</blockquote>
+<p>Crosswalk #1 examined:</p>
+<pre><code>NTP
+  ↓
+Temporal Truth
+  ↓
+When?
+</code></pre>
+<p>Crosswalk #2 examined:</p>
+<pre><code>DNS
+  ↓
+Locational Truth
+  ↓
+Where?
+</code></pre>
+<p>Crosswalk #3 moves into:</p>
+<pre><code>IAM
+  ↓
+Identity Truth
+  ↓
+Who?
+</code></pre>
+<p>This transition significantly changes the problem.</p>
+<p>Time and naming systems can often expose reference relationships directly.</p>
+<p>Identity introduces relationships among:</p>
+<ul>
+<li>subject</li>
+<li>identity</li>
+<li>evidence</li>
+<li>credentials</li>
+<li>authentication</li>
+<li>identity proofing</li>
+<li>identity provider</li>
+<li>credential service provider</li>
+<li>relying party</li>
+<li>federation</li>
+<li>assertions</li>
+<li>assurance</li>
+<li>lifecycle</li>
+<li>revocation</li>
+<li>context</li>
+</ul>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Is identity an intrinsic property of an entity, or is operational Identity Truth established through a qualified relationship among subject, evidence, authority, observer, and Regime?</strong></p>
+</blockquote>
+<hr>
+<h1 id="1-evidence-boundary">1. Evidence Boundary</h1>
+<p>Primary grounding for this crosswalk is the NIST Digital Identity Guidelines, Revision 4 family.</p>
+<p>Relevant reference areas include:</p>
+<pre><code>NIST SP 800-63-4
+Digital Identity Guidelines
+
+NIST SP 800-63A-4
+Identity Proofing and Enrollment
+
+NIST SP 800-63B-4
+Authentication and Authenticator Management
+
+NIST SP 800-63C-4
+Federation and Assertions
+</code></pre>
+<p>The NIST model explicitly distinguishes major digital identity functions including:</p>
+<pre><code>identity proofing
+authentication
+federation
+</code></pre>
+<p>This distinction is useful because the RTT crosswalk should not collapse them into one generic:</p>
+<pre><code>identity check
+</code></pre>
+<p>The crosswalk should preserve their separate operational roles.</p>
+<hr>
+<h1 id="2-evidence-discipline">2. Evidence Discipline</h1>
+<p>This document distinguishes four statement types.</p>
+<h2 id="iam-digital-identity-fact">IAM / Digital Identity Fact</h2>
+<p>A mechanism explicitly represented in the bounded reference material.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>A structural interpretation introduced by Resonance Truth.</p>
+<h2 id="candidate-generalization">Candidate Generalization</h2>
+<p>A mechanism potentially reusable beyond Identity Truth.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A proposed abstraction requiring evidence from later crosswalks.</p>
+<p>Example:</p>
+<pre><code>Digital Identity Fact:
+  Federation allows identity-related assertions to cross
+  separately administered system boundaries.
+
+RTT Interpretation:
+  Identity Truth may propagate through Authority and Lineage.
+
+Candidate Generalization:
+  Assertions should preserve Source, audience, scope,
+  and transformation relationships.
+
+Hypothesis:
+  Assertion should become a first-class generalized
+  Truth-Service entity.
+</code></pre>
+<p>The final claim remains provisional.</p>
+<hr>
+<h1 id="3-why-iam-comes-third">3. Why IAM Comes Third</h1>
+<p>DNS introduced several architectural candidates that identity systems can directly challenge.</p>
+<p>Crosswalk #2 suggested:</p>
+<pre><code>Authority Scope
+Authority Lineage
+Observer Context
+delegated authority
+explicit absence
+Source roles
+materialized local state
+domain-semantic Coherence
+</code></pre>
+<p>IAM provides a strong next test because Identity Truth depends heavily on relationships among multiple operational actors.</p>
+<p>A typical identity relationship may involve:</p>
+<pre><code>Subject
+   ↓
+Evidence
+   ↓
+Proofing
+   ↓
+Identity Record
+   ↓
+Credential / Authenticator
+   ↓
+Authentication
+   ↓
+Assertion
+   ↓
+Relying Party
+</code></pre>
+<p>The entity answering:</p>
+<blockquote>
+<p><strong>Who is this?</strong></p>
+</blockquote>
+<p>may therefore not be the subject itself.</p>
+<p>Nor is the answer necessarily permanent, universal, or valid for every relying party.</p>
+<hr>
+<h1 id="4-identity-truth">4. Identity Truth</h1>
+<p>The primary Truth Class is:</p>
+<pre><code>Identity Truth
+</code></pre>
+<p>Its operational question is:</p>
+<blockquote>
+<p><strong>Who or what is this?</strong></p>
+</blockquote>
+<p>This question must be scoped carefully.</p>
+<p>Operational digital identity does not necessarily answer:</p>
+<blockquote>
+<p><strong>What is the complete real-world identity of this entity?</strong></p>
+</blockquote>
+<p>A digital identity may instead establish a usable identity relationship within a particular service context.</p>
+<p>Therefore the generalized Identity Truth question becomes:</p>
+<blockquote>
+<p><strong>Within this Regime and for this intended use, what identity relationship is sufficiently supported for this subject?</strong></p>
+</blockquote>
+<p>That formulation preserves:</p>
+<ul>
+<li>context</li>
+<li>evidence</li>
+<li>authority</li>
+<li>assurance</li>
+<li>audience</li>
+<li>lifecycle</li>
+</ul>
+<p>without requiring identity to become a universal intrinsic label.</p>
+<hr>
+<h1 id="5-identity-is-contextual">5. Identity Is Contextual</h1>
+<p>A major contribution from the digital identity reference model is the distinction between:</p>
+<pre><code>person / entity
+</code></pre>
+<p>and:</p>
+<pre><code>digital identity in an operational context
+</code></pre>
+<p>A person may possess more than one digital identity.</p>
+<p>Therefore:</p>
+<pre><code>Entity
+  ≠
+one universal digital identity
+</code></pre>
+<p>The same subject may legitimately participate in different identity relationships across:</p>
+<ul>
+<li>systems</li>
+<li>organizations</li>
+<li>trust domains</li>
+<li>pseudonymous contexts</li>
+<li>roles</li>
+<li>federation boundaries</li>
+</ul>
+<p>This immediately reinforces:</p>
+<pre><code>Regime
+</code></pre>
+<p>as a major Identity Truth dimension.</p>
+<hr>
+<h1 id="6-initial-structural-crosswalk">6. Initial Structural Crosswalk</h1>
+<table>
+<thead>
+<tr>
+<th>IAM / Digital Identity Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subject</td>
+<td>Truth subject</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Digital identity</td>
+<td>Regime-qualified identity state</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Identity evidence</td>
+<td>Observation / supporting evidence</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Identity proofing</td>
+<td>Evidence qualification</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Enrollment</td>
+<td>Identity-state establishment</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Credential</td>
+<td>Evidence-bearing relationship</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Authenticator</td>
+<td>Authentication mechanism / evidence Source</td>
+<td>Domain-Specific / Candidate</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>Current identity-relationship qualification</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Credential Service Provider</td>
+<td>Authority / identity Source</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Identity Provider</td>
+<td>Assertion Source / Authority</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Assertion</td>
+<td>Signed or governed identity Claim</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Relying Party</td>
+<td>Observer / consumer</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Federation</td>
+<td>Cross-Regime identity propagation</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Assurance level</td>
+<td>Qualification requirement / Regime parameter</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Credential lifecycle</td>
+<td>Freshness / state lifecycle</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Revocation</td>
+<td>Qualification-state transition</td>
+<td>Strong Candidate General</td>
+</tr>
+</tbody>
+</table>
+<p>IAM introduces a particularly important new distinction:</p>
+<pre><code>SUBJECT
+   ≠
+IDENTITY CLAIM
+   ≠
+CREDENTIAL
+   ≠
+AUTHENTICATION EVENT
+   ≠
+ASSERTION
+   ≠
+RELYING-PARTY ACCEPTANCE
+</code></pre>
+<p>That separation will be central to this crosswalk.</p>
+<hr>
+<h1 id="7-subject-truth-subject">7. Subject → Truth Subject</h1>
+<h2 id="digital-identity-view">Digital Identity View</h2>
+<p>Identity systems operate on a subject whose identity relationship is being established or evaluated.</p>
+<h2 id="rtt-interpretation_1">RTT Interpretation</h2>
+<p>Crosswalk #2 suggested that Claim subjects may deserve stronger structural representation.</p>
+<p>IAM strengthens that conclusion.</p>
+<p>The generalized entity becomes:</p>
+<pre><code>Truth Subject
+</code></pre>
+<p>A Truth Subject is:</p>
+<blockquote>
+<p><strong>The entity about which the Claim is being made.</strong></p>
+</blockquote>
+<p>Examples may later include:</p>
+<pre><code>person
+service
+device
+artifact
+account
+organization
+process
+</code></pre>
+<h2 id="architectural-contribution">Architectural Contribution</h2>
+<p>The current model primarily embeds the subject within:</p>
+<pre><code>Claim.statement
+</code></pre>
+<p>IAM suggests this may eventually become insufficient.</p>
+<p>Potential future field:</p>
+<pre><code>Claim.subject_id
+</code></pre>
+<p>or:</p>
+<pre><code>Claim.subject
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<p>No core schema change should occur until additional crosswalk evidence supports promotion.</p>
+<hr>
+<h1 id="8-subject-identity">8. Subject ≠ Identity</h1>
+<p>This distinction is foundational.</p>
+<p>The subject is:</p>
+<pre><code>what the Claim is about
+</code></pre>
+<p>An identity is:</p>
+<pre><code>an operational representation associated with that subject
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Subject
+  ↓
+Identity Relationship
+</code></pre>
+<p>not:</p>
+<pre><code>Subject
+  =
+Identity Record
+</code></pre>
+<p>This protects the architecture from treating database representations as the entities themselves.</p>
+<p>It also allows:</p>
+<pre><code>one Subject
+  ↓
+multiple legitimate digital identities
+</code></pre>
+<p>under different Regimes.</p>
+<hr>
+<h1 id="9-digital-identity-regime-qualified-identity-state">9. Digital Identity → Regime-Qualified Identity State</h1>
+<p>The NIST digital identity model explicitly places identity in service context.</p>
+<p>RTT interpretation:</p>
+<pre><code>Digital Identity
+     ↓
+Regime-Qualified Identity State
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Subject
+  +
+Identity Evidence
+  +
+Authority
+  +
+Context
+  +
+Assurance Requirement
+    ↓
+Operational Identity State
+</code></pre>
+<p>This suggests:</p>
+<blockquote>
+<p><strong>Identity Truth is relational rather than purely intrinsic.</strong></p>
+</blockquote>
+<p>The identity relationship is established strongly enough for a particular operational purpose.</p>
+<hr>
+<h1 id="10-identity-evidence-observation">10. Identity Evidence → Observation</h1>
+<p>Identity proofing introduces evidence used to support an identity relationship.</p>
+<p>RTT interpretation:</p>
+<pre><code>Identity Evidence
+     ↓
+Observation / Supporting Evidence
+</code></pre>
+<p>This reinforces the NTP- and DNS-derived distinction:</p>
+<pre><code>evidence
+  ≠
+Truth State
+</code></pre>
+<p>Multiple pieces of identity evidence may participate in a proofing process.</p>
+<p>The Truth Service should preserve:</p>
+<ul>
+<li>evidence Source</li>
+<li>collection context</li>
+<li>freshness</li>
+<li>integrity</li>
+<li>relationship to subject</li>
+<li>transformation</li>
+<li>qualification result</li>
+</ul>
+<h2 id="candidate-generalization_1">Candidate Generalization</h2>
+<p>The Observation abstraction survives Identity Truth strongly.</p>
+<p>However, IAM suggests that an Observation may need a relationship to:</p>
+<pre><code>subject
+</code></pre>
+<p>in addition to:</p>
+<pre><code>Claim
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="11-identity-proofing-evidence-qualification">11. Identity Proofing → Evidence Qualification</h1>
+<p>Identity proofing establishes another strong example of qualification.</p>
+<p>Conceptually:</p>
+<pre><code>Applicant / Subject
+      ↓
+Evidence
+      ↓
+Verification / Validation
+      ↓
+Qualified Identity Relationship
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Qualification Engine
+</code></pre>
+<p>The key architectural rule remains:</p>
+<pre><code>evidence presented
+      ≠
+evidence qualified
+</code></pre>
+<p>This is structurally parallel to:</p>
+<pre><code>NTP sample received
+      ≠
+sample selected
+</code></pre>
+<p>and:</p>
+<pre><code>DNS answer available
+      ≠
+answer qualified for current use
+</code></pre>
+<p>Identity Truth therefore strongly supports:</p>
+<blockquote>
+<p><strong>Qualification as a generalized operational truth mechanism.</strong></p>
+</blockquote>
+<hr>
+<h1 id="12-proofing-and-authentication-are-different">12. Proofing and Authentication Are Different</h1>
+<p>Identity systems introduce a major architectural separation:</p>
+<pre><code>identity proofing
+    ≠
+authentication
+</code></pre>
+<p>Proofing asks roughly:</p>
+<blockquote>
+<p><strong>What identity relationship can be established for this subject?</strong></p>
+</blockquote>
+<p>Authentication asks roughly:</p>
+<blockquote>
+<p><strong>Is this current claimant sufficiently associated with the previously established digital identity?</strong></p>
+</blockquote>
+<p>These should remain separate in the RTT architecture.</p>
+<p>Conceptually:</p>
+<pre><code>Establish Identity State
+         ↓
+Later Authentication Event
+         ↓
+Revalidate Current Identity Relationship
+</code></pre>
+<p>This resembles:</p>
+<pre><code>initial qualification
+         ↓
+subsequent Revalidation
+</code></pre>
+<p>but the semantics are domain-specific.</p>
+<hr>
+<h1 id="13-enrollment-identity-state-establishment">13. Enrollment → Identity-State Establishment</h1>
+<p>Enrollment follows successful establishment of an operational identity relationship.</p>
+<p>RTT interpretation:</p>
+<pre><code>Identity Truth-State Establishment
+</code></pre>
+<p>The architecture can interpret enrollment as movement from:</p>
+<pre><code>candidate identity Claim
+</code></pre>
+<p>toward:</p>
+<pre><code>established identity state
+</code></pre>
+<p>within a specific Regime.</p>
+<p>This resembles a Truth-State transition.</p>
+<p>However:</p>
+<pre><code>enrollment status
+  ≠
+generic TruthStatus
+</code></pre>
+<p>Enrollment remains an identity-domain lifecycle mechanism.</p>
+<p>Status:</p>
+<pre><code>DOMAIN_SPECIFIC with generalized lifecycle relevance
+</code></pre>
+<hr>
+<h1 id="14-credentials-evidence-bearing-relationships">14. Credentials → Evidence-Bearing Relationships</h1>
+<p>Credentials create a difficult modeling question.</p>
+<p>A credential is not necessarily:</p>
+<pre><code>the Subject
+</code></pre>
+<p>nor:</p>
+<pre><code>the identity itself
+</code></pre>
+<p>nor:</p>
+<pre><code>the current authentication result
+</code></pre>
+<p>Instead, it participates in the relationship among:</p>
+<pre><code>Subject
+Digital Identity
+Authentication
+Authority
+Relying Party
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Evidence-Bearing Relationship
+</code></pre>
+<p>Potential generalized lesson:</p>
+<blockquote>
+<p><strong>Truth systems may contain durable evidence objects that can be presented repeatedly without themselves being Truth States.</strong></p>
+</blockquote>
+<p>This may later matter to:</p>
+<ul>
+<li>PKI certificates</li>
+<li>signed attestations</li>
+<li>supply-chain provenance</li>
+</ul>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="15-authentication-current-identity-qualification">15. Authentication → Current Identity Qualification</h1>
+<p>Authentication is an especially important operational process.</p>
+<p>RTT interpretation:</p>
+<pre><code>current identity qualification
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Established Identity
+     +
+Current Authentication Evidence
+     +
+Regime Requirements
+       ↓
+Presently Qualified Identity Relationship
+</code></pre>
+<p>This reinforces:</p>
+<blockquote>
+<p><strong>Previously established truth does not automatically remain sufficient for every future use.</strong></p>
+</blockquote>
+<p>The relationship requires current qualification under applicable conditions.</p>
+<p>That is a strong analogue to Revalidation.</p>
+<hr>
+<h1 id="16-authentication-is-not-identity-proofing">16. Authentication Is Not Identity Proofing</h1>
+<p>The distinction matters because the architecture must not infer:</p>
+<pre><code>successful authentication
+    =
+complete proof of real-world identity
+</code></pre>
+<p>The authenticated entity may be associated with:</p>
+<ul>
+<li>a verified identity</li>
+<li>a pseudonymous identity</li>
+<li>an account</li>
+<li>another service-context identity</li>
+</ul>
+<p>depending on the governing Regime.</p>
+<p>Therefore:</p>
+<pre><code>authentication strength
+</code></pre>
+<p>and:</p>
+<pre><code>identity proofing strength
+</code></pre>
+<p>must remain separable.</p>
+<p>This reinforces multidimensional qualification.</p>
+<hr>
+<h1 id="17-identity-provider-assertion-source">17. Identity Provider → Assertion Source</h1>
+<p>Federated systems introduce an identity provider as a Source of assertions used by relying parties.</p>
+<p>RTT interpretation:</p>
+<pre><code>Assertion Source
+</code></pre>
+<p>This strengthens the Source-role problem introduced by DNS.</p>
+<p>Potential roles now include:</p>
+<pre><code>evidence Source
+proofing authority
+credential Source
+authentication Source
+assertion Source
+relying consumer
+</code></pre>
+<p>The same actor may hold more than one role.</p>
+<p>Different actors may hold each role independently.</p>
+<h2 id="architectural-challenge">Architectural Challenge</h2>
+<p>The generic:</p>
+<pre><code>Source
+</code></pre>
+<p>entity survives,</p>
+<p>but IAM makes Source role increasingly difficult to leave implicit.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<p>Potential future structure:</p>
+<pre><code>SourceRole
+</code></pre>
+<p>should remain deferred until PKI and Authority Truth provide additional evidence.</p>
+<hr>
+<h1 id="18-credential-service-provider-authority-source">18. Credential Service Provider → Authority / Source</h1>
+<p>Digital identity systems may include credential service providers responsible for lifecycle processes related to digital identity and authentication.</p>
+<p>RTT interpretation:</p>
+<pre><code>Authority / Source
+</code></pre>
+<p>But DNS has already taught us:</p>
+<pre><code>Source
+  ≠
+Authority
+</code></pre>
+<p>Therefore the correct model may be:</p>
+<pre><code>Entity
+  +
+Role
+  +
+Scope
+  +
+Regime
+  =
+Authority Relationship
+</code></pre>
+<p>IAM strongly reinforces the DNS-derived principle:</p>
+<blockquote>
+<p><strong>Authority should be modeled relationally rather than as an intrinsic permanent Source property.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="19-assertion-identity-claim">19. Assertion → Identity Claim</h1>
+<p>Federation introduces assertions.</p>
+<p>An assertion is especially interesting because it resembles a portable Truth Claim.</p>
+<p>Conceptually:</p>
+<pre><code>Identity Provider
+      ↓
+Assertion
+      ↓
+Relying Party
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Identity Claim
+  +
+Source
+  +
+Audience
+  +
+Regime
+  +
+Lifecycle
+</code></pre>
+<p>This introduces an important candidate concept:</p>
+<pre><code>Assertion
+</code></pre>
+<p>as a truth-bearing message distinct from:</p>
+<pre><code>Observation
+</code></pre>
+<p>An Observation says:</p>
+<blockquote>
+<p><strong>This was observed.</strong></p>
+</blockquote>
+<p>An assertion says:</p>
+<blockquote>
+<p><strong>This Source declares this state under these conditions.</strong></p>
+</blockquote>
+<p>Those are not necessarily identical.</p>
+<hr>
+<h1 id="20-assertion-vs-observation">20. Assertion vs Observation</h1>
+<p>This may be one of Crosswalk #3's most important challenges.</p>
+<p>The initial Truth Service heavily centers:</p>
+<pre><code>Observation
+</code></pre>
+<p>IAM demonstrates a second evidence form:</p>
+<pre><code>Assertion
+</code></pre>
+<p>Potential distinction:</p>
+<h2 id="observation">Observation</h2>
+<p>Evidence about a state obtained through observation or measurement.</p>
+<h2 id="assertion">Assertion</h2>
+<p>A governed Claim made by a recognized Source or Authority.</p>
+<p>Examples beyond IAM may include:</p>
+<ul>
+<li>certificates</li>
+<li>attestations</li>
+<li>policy decisions</li>
+<li>signed provenance</li>
+<li>transaction commitments</li>
+</ul>
+<h2 id="architectural-question">Architectural Question</h2>
+<p>Should <code>Assertion</code> become a first-class generalized object?</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>Do not promote yet.</p>
+<p>PKI and supply-chain provenance should test this directly.</p>
+<hr>
+<h1 id="21-federation-cross-regime-truth-propagation">21. Federation → Cross-Regime Truth Propagation</h1>
+<p>Federation allows identity information to cross separately administered system boundaries.</p>
+<p>This is a major architectural challenge.</p>
+<p>Conceptually:</p>
+<pre><code>Regime A
+  Identity Provider
+      ↓
+   Assertion
+      ↓
+  Trust Relationship
+      ↓
+Regime B
+  Relying Party
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Cross-Regime Truth Propagation
+</code></pre>
+<p>The identity relationship is not simply copied.</p>
+<p>It is consumed under another operational context.</p>
+<p>The receiving system may have its own:</p>
+<ul>
+<li>assurance requirements</li>
+<li>audience requirements</li>
+<li>policy</li>
+<li>trust relationship</li>
+<li>intended use</li>
+</ul>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Truth propagation across Regime boundaries requires re-qualification.</strong></p>
+</blockquote>
+<p>This is a strong candidate generalization.</p>
+<hr>
+<h1 id="22-federation-is-not-universal-trust">22. Federation Is Not Universal Trust</h1>
+<p>A federation relationship should not be interpreted as:</p>
+<pre><code>Source trusted everywhere
+</code></pre>
+<p>Instead:</p>
+<pre><code>Assertion Source
+  +
+Trust Relationship
+  +
+Audience
+  +
+Regime
+    ↓
+Potential Acceptance
+</code></pre>
+<p>This strongly reinforces:</p>
+<pre><code>Authority Scope
+</code></pre>
+<p>from DNS.</p>
+<p>Identity federation demonstrates that authority is not only:</p>
+<pre><code>namespace-scoped
+</code></pre>
+<p>but may also be:</p>
+<pre><code>audience-scoped
+relationship-scoped
+purpose-scoped
+</code></pre>
+<p>The generalized Regime concept grows stronger again.</p>
+<hr>
+<h1 id="23-relying-party-observer-consumer">23. Relying Party → Observer / Consumer</h1>
+<p>The relying party consumes identity assertions.</p>
+<p>RTT interpretation:</p>
+<pre><code>Observer / Consumer
+</code></pre>
+<p>This strongly reinforces the Observer candidate introduced by DNS.</p>
+<p>The result of identity processing is meaningful relative to:</p>
+<pre><code>who is relying on it
+for what purpose
+under what requirements
+</code></pre>
+<p>Therefore:</p>
+<pre><code>observer_context
+</code></pre>
+<p>may no longer be merely optional environmental metadata.</p>
+<p>Identity Truth suggests that observer/consumer context can directly affect qualification.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="24-observer-context-and-identity">24. Observer Context and Identity</h1>
+<p>Consider one identity assertion.</p>
+<p>Relying Party A may consider it sufficient for:</p>
+<pre><code>low-consequence personalization
+</code></pre>
+<p>Relying Party B may consider it insufficient for:</p>
+<pre><code>high-consequence administrative access
+</code></pre>
+<p>The assertion did not necessarily change.</p>
+<p>The Regime did.</p>
+<p>Conceptually:</p>
+<pre><code>Same Assertion
+   │
+   ├── Regime A
+   │     ↓
+   │   ACCEPTABLE
+   │
+   └── Regime B
+         ↓
+      INSUFFICIENT
+</code></pre>
+<p>This is one of the clearest examples yet that:</p>
+<blockquote>
+<p><strong>Truth qualification can depend on Regime without the underlying evidence becoming arbitrary.</strong></p>
+</blockquote>
+<hr>
+<h1 id="25-assurance-regime-requirement">25. Assurance → Regime Requirement</h1>
+<p>Digital identity systems use assurance concepts to establish requirements around proofing, authentication, and federation.</p>
+<p>RTT interpretation:</p>
+<pre><code>Assurance Requirement
+      ↓
+Regime Qualification Threshold
+</code></pre>
+<p>The architecture should be careful here.</p>
+<p>It should not flatten all assurance into one universal:</p>
+<pre><code>confidence = 0.92
+</code></pre>
+<p>Different assurance dimensions may represent different operational properties.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Qualification should remain multidimensional where the domain requires it.</strong></p>
+</blockquote>
+<p>This supports the existing architecture's resistance to one generic confidence scalar.</p>
+<hr>
+<h1 id="26-assurance-confidence">26. Assurance ≠ Confidence</h1>
+<p>This distinction is important.</p>
+<p>An assurance level is not necessarily:</p>
+<pre><code>mathematical probability that identity is true
+</code></pre>
+<p>RTT should therefore avoid translating:</p>
+<pre><code>assurance
+  →
+confidence score
+</code></pre>
+<p>without explicit justification.</p>
+<p>Instead:</p>
+<pre><code>assurance
+  →
+set of operational requirements
+</code></pre>
+<p>is the safer architectural mapping.</p>
+<p>The generalized Truth Service may later benefit from:</p>
+<pre><code>RequirementSet
+</code></pre>
+<p>or:</p>
+<pre><code>QualificationProfile
+</code></pre>
+<p>rather than a single numeric confidence.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="27-identity-coherence">27. Identity Coherence</h1>
+<p>What does Coherence mean for Identity Truth?</p>
+<p>It cannot simply mean:</p>
+<pre><code>all evidence values are identical
+</code></pre>
+<p>Identity Coherence may concern compatibility among:</p>
+<ul>
+<li>claimed identity</li>
+<li>identity evidence</li>
+<li>proofing result</li>
+<li>credential relationship</li>
+<li>authenticator</li>
+<li>assertion</li>
+<li>subject attributes</li>
+<li>relying-party requirements</li>
+</ul>
+<p>Therefore Crosswalk #3 strongly reinforces the DNS finding:</p>
+<blockquote>
+<p><strong>Coherence is domain-semantic.</strong></p>
+</blockquote>
+<p>Conceptually:</p>
+<pre><code>Coherence
+  =
+structural compatibility among qualified identity relationships
+under the governing Regime
+</code></pre>
+<p>This is not generic equality.</p>
+<hr>
+<h1 id="28-multiple-identities-are-not-automatically-paradox">28. Multiple Identities Are Not Automatically Paradox</h1>
+<p>A person may legitimately possess multiple digital identities.</p>
+<p>Therefore:</p>
+<pre><code>Identity A
+Identity B
+</code></pre>
+<p>does not automatically imply:</p>
+<pre><code>contradiction
+</code></pre>
+<p>The correct interpretation depends on:</p>
+<ul>
+<li>service context</li>
+<li>pseudonymity</li>
+<li>account relationship</li>
+<li>role</li>
+<li>federation</li>
+<li>intended use</li>
+</ul>
+<p>This parallels DNS:</p>
+<pre><code>multiple valid addresses
+  ≠
+Paradox
+</code></pre>
+<p>IAM reinforces:</p>
+<blockquote>
+<p><strong>Multiplicity must be interpreted through domain semantics before contradiction is declared.</strong></p>
+</blockquote>
+<hr>
+<h1 id="29-identity-paradox">29. Identity Paradox</h1>
+<p>A genuine Identity Truth Paradox may instead arise when:</p>
+<ul>
+<li>qualified evidence supports incompatible identity relationships within the same Regime</li>
+<li>incompatible assertions claim the same subject relationship</li>
+<li>two authoritative Sources conflict materially within overlapping scope</li>
+<li>federation boundaries produce irreconcilable identity states</li>
+</ul>
+<p>Even then, the system should first ask:</p>
+<pre><code>separate Regimes?
+
+separate roles?
+
+separate pseudonyms?
+
+stale credential?
+
+changed lifecycle state?
+</code></pre>
+<p>before concluding:</p>
+<pre><code>Paradox
+</code></pre>
+<p>Again:</p>
+<blockquote>
+<p><strong>Classification precedes contradiction.</strong></p>
+</blockquote>
+<hr>
+<h1 id="30-identity-drift">30. Identity Drift</h1>
+<p>Identity Truth introduces several forms of Drift.</p>
+<p>Potential dimensions include:</p>
+<h2 id="attribute-drift">Attribute Drift</h2>
+<p>Identity-related attributes change.</p>
+<h2 id="credential-drift">Credential Drift</h2>
+<p>The set or status of credentials changes.</p>
+<h2 id="authority-drift">Authority Drift</h2>
+<p>The recognized identity authority changes.</p>
+<h2 id="federation-drift">Federation Drift</h2>
+<p>Trust relationships change.</p>
+<h2 id="role-drift">Role Drift</h2>
+<p>Operational role changes.</p>
+<h2 id="regime-drift">Regime Drift</h2>
+<p>The context in which identity is interpreted changes.</p>
+<h2 id="subject-relationship-drift">Subject-Relationship Drift</h2>
+<p>The relationship between a digital identity and its underlying subject changes or becomes uncertain.</p>
+<p>Most forms are not naturally numeric.</p>
+<p>This further validates qualitative Drift.</p>
+<hr>
+<h1 id="31-stable-identifier-changed-identity-structure">31. Stable Identifier, Changed Identity Structure</h1>
+<p>Consider:</p>
+<pre><code>account_id:
+  12345
+</code></pre>
+<p>remaining unchanged.</p>
+<p>Meanwhile:</p>
+<pre><code>credential changed
+identity provider changed
+federation relationship changed
+attributes changed
+</code></pre>
+<p>The visible identifier is stable.</p>
+<p>The identity structure has Drifted.</p>
+<p>This parallels the DNS finding:</p>
+<blockquote>
+<p><strong>Stable accepted value does not imply stable truth structure.</strong></p>
+</blockquote>
+<p>That pattern has now survived two non-identical Truth Classes.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="32-identity-lifecycle">32. Identity Lifecycle</h1>
+<p>Identity systems strongly introduce lifecycle.</p>
+<p>A conceptual identity lifecycle may include:</p>
+<pre><code>Applicant
+   ↓
+Proofing
+   ↓
+Enrollment
+   ↓
+Credential Establishment
+   ↓
+Authentication
+   ↓
+Ongoing Use
+   ↓
+Credential Change / Renewal
+   ↓
+Revocation / Termination
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Truth relationship lifecycle
+</code></pre>
+<p>This supports the broader principle:</p>
+<blockquote>
+<p><strong>Operational truth relationships may change state without the underlying subject ceasing to exist.</strong></p>
+</blockquote>
+<p>The Truth Service should therefore distinguish:</p>
+<pre><code>subject lifecycle
+</code></pre>
+<p>from:</p>
+<pre><code>identity relationship lifecycle
+</code></pre>
+<hr>
+<h1 id="33-revocation-qualification-state-transition">33. Revocation → Qualification-State Transition</h1>
+<p>Revocation provides another important operational mechanism.</p>
+<p>Previously usable evidence may become unusable.</p>
+<p>Conceptually:</p>
+<pre><code>previously qualified credential
+      ↓
+  revocation
+      ↓
+no longer qualified
+</code></pre>
+<p>This strongly supports event-triggered:</p>
+<pre><code>Revalidation
+</code></pre>
+<p>and potentially:</p>
+<pre><code>Truth-State transition
+</code></pre>
+<p>The service must not assume:</p>
+<pre><code>previously accepted
+  =
+presently accepted
+</code></pre>
+<p>Crosswalk #3 therefore strengthens:</p>
+<pre><code>Revalidation Required
+</code></pre>
+<hr>
+<h1 id="34-identity-freshness">34. Identity Freshness</h1>
+<p>Identity Truth introduces several freshness concepts.</p>
+<p>Potential freshness dimensions include:</p>
+<ul>
+<li>age of identity proofing</li>
+<li>credential validity</li>
+<li>authenticator state</li>
+<li>assertion lifetime</li>
+<li>session state</li>
+<li>relying-party policy</li>
+</ul>
+<p>This differs from:</p>
+<pre><code>DNS TTL
+</code></pre>
+<p>and:</p>
+<pre><code>NTP repeated synchronization
+</code></pre>
+<p>Yet all three support:</p>
+<pre><code>time-conditioned qualification
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Freshness appears increasingly generalized, while its operational mechanism remains domain-specific.</strong></p>
+</blockquote>
+<hr>
+<h1 id="35-authentication-as-revalidation">35. Authentication as Revalidation</h1>
+<p>Authentication provides a useful identity-specific Revalidation pattern.</p>
+<p>Conceptually:</p>
+<pre><code>Established Identity Relationship
+         ↓
+Current Authentication Event
+         ↓
+Present Operational Qualification
+</code></pre>
+<p>This is not identical to:</p>
+<pre><code>rebuilding identity proofing from scratch
+</code></pre>
+<p>Therefore Revalidation may operate at different layers.</p>
+<p>Potential generalized lesson:</p>
+<pre><code>Revalidation Depth
+</code></pre>
+<p>A Truth State may be revalidated by:</p>
+<ul>
+<li>refreshing one Observation</li>
+<li>rechecking a credential</li>
+<li>repeating authentication</li>
+<li>repeating full proofing</li>
+<li>changing authority relationship</li>
+</ul>
+<p>The architecture does not yet represent Revalidation depth explicitly.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="36-federation-lineage">36. Federation Lineage</h1>
+<p>Federation makes Lineage especially important.</p>
+<p>Conceptually:</p>
+<pre><code>Subject
+  ↓
+Identity Proofing
+  ↓
+Credential Service Provider
+  ↓
+Authentication
+  ↓
+Identity Provider
+  ↓
+Assertion
+  ↓
+Relying Party
+</code></pre>
+<p>The relying party may not directly observe the original proofing event.</p>
+<p>It receives a downstream assertion.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Lineage may determine what the receiving system can legitimately infer from a Truth Claim.</strong></p>
+</blockquote>
+<p>This strongly validates:</p>
+<pre><code>Lineage
+</code></pre>
+<p>as a first-class generalized mechanism.</p>
+<hr>
+<h1 id="37-lineage-and-meaning-preservation">37. Lineage and Meaning Preservation</h1>
+<p>Crosswalk #3 introduces another subtle problem.</p>
+<p>A claim propagated through federation may preserve:</p>
+<pre><code>payload
+</code></pre>
+<p>while changing:</p>
+<pre><code>operational meaning
+</code></pre>
+<p>if:</p>
+<ul>
+<li>audience changes</li>
+<li>Regime changes</li>
+<li>relying-party requirements differ</li>
+<li>attributes are transformed</li>
+<li>assertion context changes</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>payload preservation
+  ≠
+semantic preservation
+</code></pre>
+<p>This introduces a stronger candidate for:</p>
+<pre><code>semantic Drift
+</code></pre>
+<p>across Lineage.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="38-identity-absence">38. Identity Absence</h1>
+<p>DNS introduced:</p>
+<pre><code>qualified absence
+  ≠
+unknown
+</code></pre>
+<p>Identity Truth tests this further.</p>
+<p>Potential states include:</p>
+<pre><code>no identity record exists
+
+identity record exists but cannot be qualified
+
+identity exists but current authentication fails
+
+identity relationship is revoked
+
+identity state cannot presently be determined
+</code></pre>
+<p>These are structurally different.</p>
+<p>Therefore the architecture should not compress them into:</p>
+<pre><code>false
+</code></pre>
+<p>or:</p>
+<pre><code>indeterminate
+</code></pre>
+<p>without preserving domain-native meaning.</p>
+<p>This strengthens:</p>
+<blockquote>
+<p><strong>Truth-State lifecycle status and domain-native accepted value must remain separate.</strong></p>
+</blockquote>
+<hr>
+<h1 id="39-authentication-failure-identity-nonexistence">39. Authentication Failure ≠ Identity Nonexistence</h1>
+<p>A particularly important example:</p>
+<pre><code>authentication failed
+</code></pre>
+<p>does not necessarily imply:</p>
+<pre><code>subject does not exist
+</code></pre>
+<p>or:</p>
+<pre><code>identity record does not exist
+</code></pre>
+<p>or:</p>
+<pre><code>identity Claim is false
+</code></pre>
+<p>It means:</p>
+<blockquote>
+<p><strong>The current authentication attempt did not establish the required operational relationship.</strong></p>
+</blockquote>
+<p>This mirrors earlier distinctions:</p>
+<pre><code>expired DNS cache
+  ≠
+record proven false
+</code></pre>
+<p>and:</p>
+<pre><code>rejected Observation
+  ≠
+false Observation
+</code></pre>
+<p>The pattern is generalizing.</p>
+<hr>
+<h1 id="40-identity-materialization">40. Identity Materialization</h1>
+<p>DNS introduced:</p>
+<pre><code>materialized local Truth State
+</code></pre>
+<p>Identity systems introduce related local state such as:</p>
+<ul>
+<li>identity records</li>
+<li>credentials</li>
+<li>sessions</li>
+<li>assertions</li>
+<li>cached attributes</li>
+</ul>
+<p>However, these objects are not equivalent.</p>
+<p>The architectural lesson is broader:</p>
+<blockquote>
+<p><strong>Operational Truth may be materialized into reusable artifacts whose qualification lifetime differs from the underlying subject relationship.</strong></p>
+</blockquote>
+<p>This strengthens the Materialized Truth candidate while also demonstrating that it may need subtype/domain semantics.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="41-iam-and-holdover">41. IAM and Holdover</h1>
+<p>Identity Truth narrows Holdover further.</p>
+<p>Continuing to use a prior identity relationship after fresh qualification disappears may have very different consequences from:</p>
+<pre><code>NTP Holdover
+</code></pre>
+<p>or:</p>
+<pre><code>DNS cache reuse
+</code></pre>
+<p>Whether prior state remains usable depends heavily on:</p>
+<ul>
+<li>policy</li>
+<li>authentication lifecycle</li>
+<li>credential status</li>
+<li>consequence</li>
+<li>session constraints</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>Holdover
+</code></pre>
+<p>should remain a policy-governed Truth-State lifecycle condition rather than a generic automatic fallback.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — constrained
+</code></pre>
+<hr>
+<h1 id="42-iam-and-authority-scope">42. IAM and Authority Scope</h1>
+<p>DNS established:</p>
+<pre><code>Authority
+  =
+Source
+  +
+Scope
+  +
+Regime
+  +
+Lineage
+</code></pre>
+<p>IAM strengthens this further.</p>
+<p>Identity authority may be scoped by:</p>
+<ul>
+<li>subject population</li>
+<li>attribute</li>
+<li>authentication process</li>
+<li>relying party</li>
+<li>federation arrangement</li>
+<li>assurance requirement</li>
+<li>intended use</li>
+</ul>
+<p>Therefore Authority Scope increasingly appears to deserve explicit architectural representation.</p>
+<p>Still:</p>
+<pre><code>one DNS crosswalk
+  +
+one IAM crosswalk
+</code></pre>
+<p>is not sufficient to promote a new core entity automatically.</p>
+<p>PKI is the next major test.</p>
+<hr>
+<h1 id="43-source-roles-revisited">43. Source Roles Revisited</h1>
+<p>DNS suggested possible Source roles.</p>
+<p>IAM makes the need clearer.</p>
+<p>One identity flow may involve distinct entities acting as:</p>
+<pre><code>evidence Source
+proofing authority
+credential provider
+authenticator
+identity provider
+assertion Source
+relying consumer
+</code></pre>
+<p>Representing all of these simply as:</p>
+<pre><code>Source
+</code></pre>
+<p>may lose important relationship semantics.</p>
+<p>Candidate model:</p>
+<pre><code>Entity
+  ↓
+Role
+  ↓
+Relationship
+  ↓
+Scope
+  ↓
+Regime
+</code></pre>
+<p>This may be more general than adding many specialized Source types.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>PKI and Policy / IAM should test this model.</p>
+<hr>
+<h1 id="44-assertion-as-candidate-core-object">44. Assertion as Candidate Core Object</h1>
+<p>After NTP and DNS, the architecture centered strongly on:</p>
+<pre><code>Observation
+</code></pre>
+<p>IAM exposes:</p>
+<pre><code>Assertion
+</code></pre>
+<p>as something structurally different enough to watch carefully.</p>
+<p>Potential generalized model:</p>
+<pre><code>EvidenceItem
+   │
+   ├── Observation
+   └── Assertion
+</code></pre>
+<p>Where:</p>
+<pre><code>Observation
+  = evidence resulting from observation or measurement
+</code></pre>
+<p>and:</p>
+<pre><code>Assertion
+  = governed statement made by a Source
+</code></pre>
+<p>This would be a major data-model change.</p>
+<p>It should not be made yet.</p>
+<p>Crosswalks likely to provide evidence:</p>
+<pre><code>PKI
+Policy
+Ledgers
+Provenance
+</code></pre>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="45-worked-example-established-identity">45. Worked Example — Established Identity</h1>
+<h2 id="claim">Claim</h2>
+<pre><code>"Subject S is associated with Identity I."
+</code></pre>
+<h2 id="truth-class">Truth Class</h2>
+<pre><code>identity
+</code></pre>
+<h2 id="regime">Regime</h2>
+<pre><code>service-specific account relationship
+</code></pre>
+<h2 id="evidence">Evidence</h2>
+<pre><code>qualified identity evidence
+</code></pre>
+<h2 id="proofing">Proofing</h2>
+<pre><code>completed under applicable requirements
+</code></pre>
+<h2 id="authority">Authority</h2>
+<pre><code>recognized identity authority
+</code></pre>
+<h2 id="result">Result</h2>
+<pre><code>Truth State:
+  operationally_accepted
+
+accepted_value:
+  identity: I
+</code></pre>
+<h2 id="architectural-finding">Architectural Finding</h2>
+<p>The accepted Identity Truth State represents a qualified relationship.</p>
+<p>It does not claim to encode every possible identity associated with Subject S.</p>
+<hr>
+<h1 id="46-worked-example-successful-authentication">46. Worked Example — Successful Authentication</h1>
+<h2 id="existing-state">Existing State</h2>
+<pre><code>Subject S
+  associated with
+Identity I
+</code></pre>
+<h2 id="current-evidence">Current Evidence</h2>
+<pre><code>valid authentication event
+</code></pre>
+<h2 id="regime_1">Regime</h2>
+<pre><code>relying-party authentication requirements satisfied
+</code></pre>
+<h2 id="result_1">Result</h2>
+<pre><code>Truth State:
+  operationally_accepted
+</code></pre>
+<h2 id="architectural-finding_1">Architectural Finding</h2>
+<p>Authentication re-establishes present operational usefulness of an existing identity relationship.</p>
+<p>It does not necessarily recreate the original proofing process.</p>
+<hr>
+<h1 id="47-worked-example-different-relying-parties">47. Worked Example — Different Relying Parties</h1>
+<h2 id="assertion_1">Assertion</h2>
+<pre><code>Identity Provider asserts Identity I.
+</code></pre>
+<h2 id="relying-party-a">Relying Party A</h2>
+<p>Requirements:</p>
+<pre><code>moderate assurance
+</code></pre>
+<p>Result:</p>
+<pre><code>operationally_accepted
+</code></pre>
+<h2 id="relying-party-b">Relying Party B</h2>
+<p>Requirements:</p>
+<pre><code>stronger qualification
+</code></pre>
+<p>Result:</p>
+<pre><code>rejected
+or
+indeterminate
+</code></pre>
+<p>depending on evidence and policy.</p>
+<h2 id="architectural-finding_2">Architectural Finding</h2>
+<p>The Assertion remained unchanged.</p>
+<p>The Regime changed.</p>
+<p>This strongly validates:</p>
+<pre><code>Regime-qualified truth
+</code></pre>
+<hr>
+<h1 id="48-worked-example-multiple-digital-identities">48. Worked Example — Multiple Digital Identities</h1>
+<h2 id="subject">Subject</h2>
+<pre><code>Subject S
+</code></pre>
+<h2 id="legitimate-relationships">Legitimate Relationships</h2>
+<pre><code>Identity A
+  service context A
+
+Identity B
+  service context B
+</code></pre>
+<h2 id="result_2">Result</h2>
+<p>Both may be:</p>
+<pre><code>operationally_accepted
+</code></pre>
+<p>within their respective Regimes.</p>
+<h2 id="architectural-finding_3">Architectural Finding</h2>
+<pre><code>multiple identities
+  ≠
+contradiction
+</code></pre>
+<p>Multiplicity remains domain-semantic.</p>
+<hr>
+<h1 id="49-worked-example-revoked-credential">49. Worked Example — Revoked Credential</h1>
+<h2 id="prior-state">Prior State</h2>
+<pre><code>Credential C
+  qualified
+</code></pre>
+<h2 id="event">Event</h2>
+<pre><code>Credential C revoked
+</code></pre>
+<h2 id="new-evaluation">New Evaluation</h2>
+<p>The prior credential can no longer satisfy the applicable qualification requirement.</p>
+<h2 id="possible-result">Possible Result</h2>
+<pre><code>Truth State:
+  degraded
+  rejected
+  or indeterminate
+</code></pre>
+<p>depending on remaining evidence and Regime.</p>
+<h2 id="architectural-finding_4">Architectural Finding</h2>
+<p>Previously accepted evidence can lose qualification through lifecycle transition.</p>
+<p>Revalidation must be event-capable.</p>
+<hr>
+<h1 id="50-worked-example-authentication-failure">50. Worked Example — Authentication Failure</h1>
+<h2 id="claim_1">Claim</h2>
+<pre><code>"Current claimant is sufficiently associated with Identity I."
+</code></pre>
+<h2 id="authentication-event">Authentication Event</h2>
+<pre><code>failed
+</code></pre>
+<h2 id="correct-interpretation">Correct Interpretation</h2>
+<p>The system may conclude:</p>
+<pre><code>current identity relationship not sufficiently authenticated
+</code></pre>
+<p>It should not automatically conclude:</p>
+<pre><code>Subject S does not exist
+</code></pre>
+<p>or:</p>
+<pre><code>Identity I never existed
+</code></pre>
+<h2 id="architectural-finding_5">Architectural Finding</h2>
+<p>Failure must remain specific to the evaluated relationship.</p>
+<hr>
+<h1 id="51-worked-example-federated-assertion">51. Worked Example — Federated Assertion</h1>
+<h2 id="upstream">Upstream</h2>
+<pre><code>Subject
+  ↓
+Identity Provider
+</code></pre>
+<h2 id="assertion_2">Assertion</h2>
+<pre><code>Identity I
+  +
+relevant attributes
+  +
+federation context
+</code></pre>
+<h2 id="downstream">Downstream</h2>
+<pre><code>Relying Party
+</code></pre>
+<h2 id="evaluation">Evaluation</h2>
+<p>The Relying Party evaluates the assertion under its own Regime.</p>
+<h2 id="result_3">Result</h2>
+<pre><code>accepted
+rejected
+degraded
+or indeterminate
+</code></pre>
+<h2 id="architectural-finding_6">Architectural Finding</h2>
+<blockquote>
+<p><strong>Truth crossing a Regime boundary requires downstream qualification rather than blind inheritance.</strong></p>
+</blockquote>
+<p>This is one of the strongest contributions from IAM.</p>
+<hr>
+<h1 id="52-rtt-dimension-mapping">52. RTT Dimension Mapping</h1>
+<table>
+<thead>
+<tr>
+<th>RTT Dimension</th>
+<th>IAM Crosswalk Interpretation</th>
+<th>General Truth-Service Candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Identity Claims and assertions propagate through trust relationships</td>
+<td>Claims propagate among Sources and consumers</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Evidence, credentials, assertions, and Subject relationships remain compatible</td>
+<td>Domain-semantic structural compatibility</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Identity attributes, credentials, authorities, roles, or federation relationships change</td>
+<td>Multi-dimensional truth Drift</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Qualified incompatible identity relationships remain in one Regime</td>
+<td>Contradiction after domain and Regime qualification</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Service, relying party, assurance, audience, and policy bound the identity result</td>
+<td>Operational context governs acceptance</td>
+</tr>
+<tr>
+<td><strong>Spin</strong></td>
+<td>Subject and identity relationships persist across interactions</td>
+<td>Identity / relationship persistence</td>
+</tr>
+<tr>
+<td><strong>Elec</strong></td>
+<td>Subjects, credentials, roles, authorities, assertions, and consumers remain distinct</td>
+<td>Structural distinction</td>
+</tr>
+<tr>
+<td><strong>Temp</strong></td>
+<td>Credentials, authentication, assertions, and identity relationships have lifecycle</td>
+<td>Freshness, transition, revocation, Revalidation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="53-set-mapping">53. SET Mapping</h1>
+<h2 id="spin">Spin</h2>
+<p>Identity Truth strongly expresses Spin through:</p>
+<ul>
+<li>subject persistence</li>
+<li>identity continuity</li>
+<li>identifier continuity</li>
+<li>established identity relationships</li>
+<li>federation relationships</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>Identity systems strongly express Elec through distinction among:</p>
+<ul>
+<li>Subject</li>
+<li>identity</li>
+<li>credential</li>
+<li>authenticator</li>
+<li>identity provider</li>
+<li>relying party</li>
+<li>role</li>
+<li>scope</li>
+<li>assertion</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>Identity systems express Temp through:</p>
+<ul>
+<li>enrollment</li>
+<li>authentication</li>
+<li>credential lifecycle</li>
+<li>assertion lifetime</li>
+<li>revocation</li>
+<li>federation change</li>
+<li>Revalidation</li>
+</ul>
+<p>Compactly:</p>
+<blockquote>
+<p><strong>Spin preserves identity relationships.</strong></p>
+<p><strong>Elec distinguishes subject, evidence, authority, and consumer.</strong></p>
+<p><strong>Temp governs proofing, authentication, lifecycle, and revocation.</strong></p>
+</blockquote>
+<hr>
+<h1 id="54-ntp-derived-candidate-review">54. NTP-Derived Candidate Review</h1>
+<table>
+<thead>
+<tr>
+<th>Candidate from NTP</th>
+<th>IAM Result</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Truth Anchor</td>
+<td>Survives but becomes relational</td>
+<td>Strengthened / refined</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Strongly survives</td>
+<td>Requires richer roles</td>
+</tr>
+<tr>
+<td>Observation</td>
+<td>Strongly survives</td>
+<td>Assertions expose another evidence type</td>
+</tr>
+<tr>
+<td>Lineage</td>
+<td>Strongly survives</td>
+<td>Federation makes it operationally important</td>
+</tr>
+<tr>
+<td>Lineage distance</td>
+<td>Less obviously numeric</td>
+<td>Graph semantics stronger</td>
+</tr>
+<tr>
+<td>Qualification</td>
+<td>Strongly survives</td>
+<td>Identity proofing/authentication reinforce it</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>Survives</td>
+<td>Strongly domain-semantic</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>Survives</td>
+<td>Mostly qualitative / structural</td>
+</tr>
+<tr>
+<td>Paradox</td>
+<td>Survives cautiously</td>
+<td>Multiplicity must be separated first</td>
+</tr>
+<tr>
+<td>Regime</td>
+<td>Strongly survives</td>
+<td>Major identity dimension</td>
+</tr>
+<tr>
+<td>Truth-State synthesis</td>
+<td>Survives</td>
+<td>Relationship-oriented</td>
+</tr>
+<tr>
+<td>Correction</td>
+<td>Survives differently</td>
+<td>Lifecycle / access consequences differ</td>
+</tr>
+<tr>
+<td>Holdover</td>
+<td>Narrower</td>
+<td>Strongly policy-dependent</td>
+</tr>
+<tr>
+<td>Revalidation</td>
+<td>Strongly survives</td>
+<td>Authentication and lifecycle reinforce it</td>
+</tr>
+<tr>
+<td>Failure transparency</td>
+<td>Strongly survives</td>
+<td>Authentication failure must remain specific</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="55-dns-derived-candidate-review">55. DNS-Derived Candidate Review</h1>
+<table>
+<thead>
+<tr>
+<th>Candidate from DNS</th>
+<th>IAM Result</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authority Scope</td>
+<td>Strongly survives</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Authority Lineage</td>
+<td>Strongly survives</td>
+<td>Federation reinforces it</td>
+</tr>
+<tr>
+<td>Observer Context</td>
+<td>Strongly survives</td>
+<td>Relying party makes it explicit</td>
+</tr>
+<tr>
+<td>delegated authority</td>
+<td>Strongly survives</td>
+<td>Federation / CSP relationships reinforce it</td>
+</tr>
+<tr>
+<td>Materialized Truth State</td>
+<td>Survives</td>
+<td>Credentials / assertions complicate it</td>
+</tr>
+<tr>
+<td>Multi-valued Truth</td>
+<td>Survives conceptually</td>
+<td>Multiple identities can be legitimate</td>
+</tr>
+<tr>
+<td>Explicit Absence</td>
+<td>Survives</td>
+<td>Must distinguish nonexistent vs unauthenticated</td>
+</tr>
+<tr>
+<td>Domain-semantic Coherence</td>
+<td>Strongly survives</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Transformation Lineage</td>
+<td>Survives</td>
+<td>Federation / attribute handling may transform meaning</td>
+</tr>
+<tr>
+<td>Freshness-triggered Revalidation</td>
+<td>Strongly survives</td>
+<td>Lifecycle and authentication reinforce it</td>
+</tr>
+<tr>
+<td>Stable-value structural Drift</td>
+<td>Strongly survives</td>
+<td>Identity structure may change under stable identifier</td>
+</tr>
+</tbody>
+</table>
+<p>IAM therefore strengthens many of the DNS refinements rather than reversing them.</p>
+<hr>
+<h1 id="56-new-candidate-mechanisms-from-iam">56. New Candidate Mechanisms from IAM</h1>
+<p>Crosswalk #3 introduces or strengthens:</p>
+<ol>
+<li>Truth Subject</li>
+<li>Identity Relationship</li>
+<li>Assertion</li>
+<li>Evidence type distinction</li>
+<li>Source Role</li>
+<li>Audience</li>
+<li>Relying Party / Consumer Context</li>
+<li>Assurance Requirement</li>
+<li>Qualification Profile</li>
+<li>Cross-Regime Truth Propagation</li>
+<li>Revalidation Depth</li>
+<li>Relationship Lifecycle</li>
+<li>Revocation-triggered Revalidation</li>
+<li>Semantic preservation across federation</li>
+</ol>
+<p>These should not all become core entities yet.</p>
+<p>PKI and Authority Truth will provide the next major tests.</p>
+<hr>
+<h1 id="57-architecture-refinement-1-subject-may-need-first-class-representation">57. Architecture Refinement #1 — Subject May Need First-Class Representation</h1>
+<p>NTP could operate without an explicit generalized Subject object.</p>
+<p>DNS made the queried name more visible.</p>
+<p>IAM makes Subject difficult to ignore.</p>
+<p>Candidate architecture:</p>
+<pre><code>Subject
+  ↓
+Claim
+  ↓
+Evidence
+  ↓
+Evaluation
+  ↓
+Truth State
+</code></pre>
+<p>Before promotion, test against:</p>
+<pre><code>PKI
+Ledgers
+Telemetry
+Provenance
+</code></pre>
+<p>If the concept survives broadly, Subject should become first-class.</p>
+<hr>
+<h1 id="58-architecture-refinement-2-evidence-may-need-types">58. Architecture Refinement #2 — Evidence May Need Types</h1>
+<p>Current architecture centers Observation.</p>
+<p>IAM suggests:</p>
+<pre><code>Evidence
+   │
+   ├── Observation
+   └── Assertion
+</code></pre>
+<p>Potential future types may include:</p>
+<pre><code>Measurement
+Assertion
+Attestation
+Credential
+Record
+</code></pre>
+<p>The generalized abstraction may ultimately be:</p>
+<pre><code>EvidenceItem
+</code></pre>
+<p>with domain-specific subclasses.</p>
+<p>This remains speculative.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="59-architecture-refinement-3-authority-is-a-relationship">59. Architecture Refinement #3 — Authority Is a Relationship</h1>
+<p>After DNS and IAM:</p>
+<pre><code>Authority
+</code></pre>
+<p>increasingly appears to require:</p>
+<pre><code>Actor / Source
+  +
+Role
+  +
+Subject / Scope
+  +
+Regime
+  +
+Lineage
+  +
+Time
+</code></pre>
+<p>This is substantially richer than:</p>
+<pre><code>Source.authoritative = true
+</code></pre>
+<p>The architecture should avoid introducing a simplistic authority Boolean.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="60-architecture-refinement-4-consumer-context-matters">60. Architecture Refinement #4 — Consumer Context Matters</h1>
+<p>DNS elevated Observer Context.</p>
+<p>IAM makes it explicit through the relying party.</p>
+<p>Potential generalized pattern:</p>
+<pre><code>Evidence
+  ↓
+Consumer
+  ↓
+Consumer Regime
+  ↓
+Qualification
+  ↓
+Truth State
+</code></pre>
+<p>This suggests:</p>
+<blockquote>
+<p><strong>Truth-State usability may be consumer-relative without truth becoming arbitrary.</strong></p>
+</blockquote>
+<p>The consumer provides operational constraints.</p>
+<p>It does not invent the evidence.</p>
+<hr>
+<h1 id="61-architecture-refinement-5-cross-regime-claims-require-requalification">61. Architecture Refinement #5 — Cross-Regime Claims Require Requalification</h1>
+<p>Federation demonstrates:</p>
+<pre><code>Qualified Upstream Claim
+       ↓
+Regime Boundary
+       ↓
+Downstream Consumer
+       ↓
+Requalification
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Qualification should not automatically propagate across Regime boundaries.</strong></p>
+</blockquote>
+<p>This likely generalizes strongly.</p>
+<p>Potential later applications:</p>
+<ul>
+<li>PKI</li>
+<li>supply chains</li>
+<li>organizational policy</li>
+<li>distributed systems</li>
+<li>inter-service assertions</li>
+</ul>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="62-architecture-refinement-6-lifecycle-is-relationship-specific">62. Architecture Refinement #6 — Lifecycle Is Relationship-Specific</h1>
+<p>Identity changes show that lifecycle may attach to:</p>
+<pre><code>credential
+assertion
+session
+authority relationship
+identity relationship
+</code></pre>
+<p>rather than only:</p>
+<pre><code>Truth State
+</code></pre>
+<p>The generalized model currently keeps lifecycle mostly around:</p>
+<pre><code>TruthState
+RevalidationEvent
+</code></pre>
+<p>Later models may need richer entity lifecycle representation.</p>
+<p>Do not expand yet.</p>
+<p>Status:</p>
+<pre><code>DEFERRED
+</code></pre>
+<hr>
+<h1 id="63-architecture-refinement-7-failure-must-be-typed">63. Architecture Refinement #7 — Failure Must Be Typed</h1>
+<p>Identity systems demonstrate several semantically distinct failures:</p>
+<pre><code>identity not established
+
+identity evidence insufficient
+
+authentication failed
+
+credential expired
+
+credential revoked
+
+assertion unacceptable
+
+federation trust unavailable
+
+identity state unknown
+</code></pre>
+<p>Collapsing these into:</p>
+<pre><code>REJECTED
+</code></pre>
+<p>may lose important domain meaning.</p>
+<p>The generic Truth Status may remain:</p>
+<pre><code>rejected
+indeterminate
+expired
+</code></pre>
+<p>while:</p>
+<pre><code>accepted_value
+DecisionReason
+domain metadata
+</code></pre>
+<p>preserve the specific failure semantics.</p>
+<p>This validates the current separation between generic lifecycle state and domain-native meaning.</p>
+<hr>
+<h1 id="64-architecture-refinement-8-assurance-should-not-become-fake-probability">64. Architecture Refinement #8 — Assurance Should Not Become Fake Probability</h1>
+<p>IAM strongly reinforces the existing architecture's resistance to:</p>
+<pre><code>confidence = arbitrary decimal
+</code></pre>
+<p>Operational requirements may be multidimensional.</p>
+<p>Therefore:</p>
+<pre><code>Assurance
+  →
+Qualification Profile
+</code></pre>
+<p>is a better candidate than:</p>
+<pre><code>Assurance
+  →
+Probability
+</code></pre>
+<p>This may become important when AI-assisted evidence eventually enters the system.</p>
+<hr>
+<h1 id="65-scoring-boundary">65. Scoring Boundary</h1>
+<p>The scoring boundary for this crosswalk is:</p>
+<pre><code>System:
+  Digital Identity / IAM reference architecture
+
+Primary Truth Class:
+  Identity Truth
+
+Evaluated Scope:
+  Identity proofing
+  authentication
+  authenticator / credential lifecycle
+  federation
+  assertions
+  relying-party relationships
+
+Primary Evidence:
+  NIST SP 800-63-4 family
+
+Deferred Scope:
+  vendor-specific IAM platforms
+  organization-specific access policy
+  proprietary risk engines
+  implementation-specific directories
+  authorization scoring beyond identity scope
+</code></pre>
+<p>The distinction between:</p>
+<pre><code>Identity Truth
+</code></pre>
+<p>and:</p>
+<pre><code>Authority Truth
+</code></pre>
+<p>should be preserved.</p>
+<p>Authorization receives its own primary crosswalk later.</p>
+<hr>
+<h1 id="66-preliminary-scoring-status">66. Preliminary Scoring Status</h1>
+<p>Current score status:</p>
+<pre><code>provisional
+</code></pre>
+<p>Likely areas of substantial structural representation include:</p>
+<ul>
+<li>Anchor / Authority Quality</li>
+<li>Observation / Evidence Quality</li>
+<li>Regime Awareness</li>
+<li>Lineage Visibility</li>
+<li>Freshness / Revalidation</li>
+<li>Failure Transparency</li>
+</ul>
+<p>Areas requiring careful scoring include:</p>
+<ul>
+<li>Coherence Detection</li>
+<li>Drift Detection</li>
+<li>Paradox Handling</li>
+<li>Correction Discipline</li>
+</ul>
+<p>The crosswalk should not assign numbers until evidence is explicitly tied to each criterion.</p>
+<hr>
+<h1 id="67-provisional-scorecard-template">67. Provisional Scorecard Template</h1>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score</th>
+<th>Delegation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anchor Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Observation Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+<td>Deferred</td>
+</tr>
+</tbody>
+</table>
+<p>No numeric value should be populated without:</p>
+<pre><code>rationale
+evidence
+evaluation boundary
+</code></pre>
+<hr>
+<h1 id="68-scoring-rubric-challenge">68. Scoring-Rubric Challenge</h1>
+<p>IAM pressures several scoring dimensions.</p>
+<h2 id="anchor-quality">Anchor Quality</h2>
+<p>Identity often involves multiple authorities and roles rather than one simple Anchor.</p>
+<p>The rubric must not reward only single-root structures.</p>
+<h2 id="lineage-visibility">Lineage Visibility</h2>
+<p>Federation Lineage may be operationally important without exposing every upstream proofing detail to the relying party.</p>
+<p>Delegation and privacy may limit visibility.</p>
+<p>The rubric must distinguish:</p>
+<pre><code>unavailable because structurally absent
+</code></pre>
+<p>from:</p>
+<pre><code>intentionally bounded disclosure
+</code></pre>
+<h2 id="coherence-detection">Coherence Detection</h2>
+<p>Identity Coherence is semantic and relational.</p>
+<p>Simple matching is insufficient.</p>
+<h2 id="drift-detection">Drift Detection</h2>
+<p>Identity Drift may be event-based and qualitative rather than continuously measured.</p>
+<h2 id="correction-discipline">Correction Discipline</h2>
+<p>Correction may involve:</p>
+<ul>
+<li>credential replacement</li>
+<li>session termination</li>
+<li>attribute change</li>
+<li>re-proofing</li>
+<li>access restriction</li>
+</ul>
+<p>The rubric must remain broad enough to capture these without assuming clock discipline.</p>
+<hr>
+<h1 id="69-crosswalk-3-findings">69. Crosswalk #3 Findings</h1>
+<h2 id="finding-1-identity-is-relational">Finding 1 — Identity Is Relational</h2>
+<p>Operational identity emerges from relationships among Subject, evidence, authority, context, and Regime.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-2-subject-and-identity-must-remain-distinct">Finding 2 — Subject and Identity Must Remain Distinct</h2>
+<p>The entity being represented is not identical to its digital identity representation.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-3-proofing-and-authentication-are-different-qualification-operations">Finding 3 — Proofing and Authentication Are Different Qualification Operations</h2>
+<p>Initial identity establishment and later authentication should not be collapsed.</p>
+<pre><code>Status:
+  DOMAIN_SPECIFIC with generalized qualification relevance
+</code></pre>
+<h2 id="finding-4-authority-remains-scoped">Finding 4 — Authority Remains Scoped</h2>
+<p>Identity authority depends on role, scope, audience, Regime, and Lineage.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-5-assertions-differ-from-observations">Finding 5 — Assertions Differ from Observations</h2>
+<p>Operational truth systems may carry authoritative Claims in addition to observational evidence.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-6-federation-is-cross-regime-truth-propagation">Finding 6 — Federation Is Cross-Regime Truth Propagation</h2>
+<p>Upstream qualification does not automatically transfer unchanged into downstream acceptance.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-7-consumer-context-matters">Finding 7 — Consumer Context Matters</h2>
+<p>Relying-party requirements may change operational acceptance without changing the evidence itself.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-8-multiplicity-is-not-contradiction">Finding 8 — Multiplicity Is Not Contradiction</h2>
+<p>One Subject may legitimately have multiple digital identities.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-9-authentication-failure-is-not-identity-nonexistence">Finding 9 — Authentication Failure Is Not Identity Nonexistence</h2>
+<p>Failure must remain specific to the relationship being evaluated.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-10-revalidation-may-occur-at-different-depths">Finding 10 — Revalidation May Occur at Different Depths</h2>
+<p>Authentication, credential checks, and full proofing represent different levels of renewed qualification.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-11-stable-identifiers-can-hide-structural-drift">Finding 11 — Stable Identifiers Can Hide Structural Drift</h2>
+<p>Identity structure may change without changing the visible identifier.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-12-assurance-should-remain-structural">Finding 12 — Assurance Should Remain Structural</h2>
+<p>Assurance requirements should not be reduced automatically to generic numeric confidence.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="70-three-crosswalk-comparison">70. Three-Crosswalk Comparison</h1>
+<p>After:</p>
+<pre><code>NTP
+DNS
+IAM
+</code></pre>
+<p>several mechanisms have survived three substantially different domains.</p>
+<h2 id="strongly-surviving">Strongly Surviving</h2>
+<pre><code>Claim
+
+Source
+
+Evidence / Observation
+
+Lineage
+
+Qualification
+
+Coherence
+
+Drift
+
+Regime
+
+Truth State
+
+Freshness
+
+Revalidation
+
+Failure Transparency
+</code></pre>
+<h2 id="increasingly-important">Increasingly Important</h2>
+<pre><code>Subject
+
+Authority Scope
+
+Observer / Consumer Context
+
+Source Role
+
+domain semantics
+
+multi-valued state
+
+structural Drift
+</code></pre>
+<h2 id="under-pressure">Under Pressure</h2>
+<pre><code>single Anchor assumption
+
+generic equality-based Coherence
+
+purely numeric Drift
+
+one universal confidence score
+
+automatic cross-Regime inheritance
+
+Observation as the only evidence type
+</code></pre>
+<h2 id="narrowed">Narrowed</h2>
+<pre><code>Holdover
+
+polling as generic Revalidation
+
+Lineage distance as a simple scalar
+</code></pre>
+<p>This is exactly the kind of architecture pressure the crosswalk sequence was intended to create.</p>
+<hr>
+<h1 id="71-emerging-general-pattern">71. Emerging General Pattern</h1>
+<p>After three crosswalks, the original NTP pattern is evolving.</p>
+<p>Initial:</p>
+<pre><code>Anchor
+  ↓
+Source
+  ↓
+Observation
+  ↓
+Qualification
+  ↓
+Coherence
+  ↓
+Drift
+  ↓
+Truth State
+  ↓
+Correction
+  ↓
+Revalidation
+</code></pre>
+<p>Emerging:</p>
+<pre><code>SUBJECT
+   ↓
+CLAIM
+   ↓
+REGIME / CONSUMER CONTEXT
+   ↓
+BOUNDED AUTHORITY
+   ↓
+SOURCE ROLE
+   ↓
+EVIDENCE
+   ├── Observation
+   └── Assertion?
+   ↓
+LINEAGE
+   ↓
+QUALIFICATION
+   ↓
+DOMAIN-SEMANTIC COHERENCE
+   ↓
+MULTIDIMENSIONAL DRIFT
+   ↓
+PARADOX
+   ↓
+REGIME-QUALIFIED TRUTH STATE
+   ↓
+POLICY-GOVERNED CORRECTION
+   ↓
+REVALIDATION
+   ↓
+LIFECYCLE HISTORY
+</code></pre>
+<p>Several items remain provisional.</p>
+<p>That uncertainty should remain visible.</p>
+<hr>
+<h1 id="72-next-crosswalk-challenge">72. Next Crosswalk Challenge</h1>
+<p>Crosswalk #4 examines:</p>
+<pre><code>PKI
+  ↓
+Integrity Truth
+</code></pre>
+<p>The governing question becomes:</p>
+<blockquote>
+<p><strong>Is this still what it claims to be?</strong></p>
+</blockquote>
+<p>PKI should directly challenge:</p>
+<pre><code>Anchor
+Authority Scope
+Authority Lineage
+Source Role
+Assertion
+Evidence type
+validity interval
+revocation
+relying-party trust
+multi-Anchor behavior
+</code></pre>
+<p>The major architectural question becomes:</p>
+<blockquote>
+<p><strong>Can the Truth Service keep identity, integrity, authority, Lineage, and temporal validity separate while still synthesizing a usable result?</strong></p>
+</blockquote>
+<p>PKI should be especially useful for deciding whether:</p>
+<pre><code>Assertion
+</code></pre>
+<p>and:</p>
+<pre><code>Authority Relationship
+</code></pre>
+<p>deserve stronger first-class representation.</p>
+<hr>
+<h1 id="73-canonical-identity-truth-statement">73. Canonical Identity Truth Statement</h1>
+<blockquote>
+<p><strong>Identity Truth is not merely an identifier. It is a Regime-qualified relationship among a Subject, identity evidence, proofing history, credentials, current authentication state, authority, Lineage, consumer context, and lifecycle conditions sufficient for a declared operational use.</strong></p>
+</blockquote>
+<p>Identity remains operationally useful because the relationship can be:</p>
+<pre><code>established
+qualified
+authenticated
+propagated
+challenged
+revoked
+Revalidated
+</code></pre>
+<p>without claiming that one digital representation exhaustively defines the Subject.</p>
+<hr>
+<h1 id="74-canonical-crosswalk-finding">74. Canonical Crosswalk Finding</h1>
+<p>Crosswalk #3 demonstrates that:</p>
+<blockquote>
+<p><strong>Operational Identity Truth belongs to relationships, not labels alone.</strong></p>
+</blockquote>
+<p>IAM adds several major constraints to the emerging Truth-Service architecture:</p>
+<pre><code>Subject is not Identity.
+
+Identity is context-qualified.
+
+Evidence must be qualified.
+
+Proofing is not Authentication.
+
+Authentication is not universal Identity Proof.
+
+Authority is scoped.
+
+Consumer context matters.
+
+Assertions can cross Regime boundaries.
+
+Cross-Regime Claims require requalification.
+
+Multiple identities need not conflict.
+
+Authentication failure does not imply nonexistence.
+
+Stable identifiers can conceal structural Drift.
+
+Assurance must not become fake probability.
+</code></pre>
+<p>After NTP and DNS, the architecture knew how to ask:</p>
+<pre><code>When?
+
+Where?
+</code></pre>
+<p>IAM forces it to ask:</p>
+<pre><code>Who?
+</code></pre>
+<p>But the answer is no longer:</p>
+<pre><code>"This label."
+</code></pre>
+<p>It becomes:</p>
+<pre><code>"This identity relationship,
+ supported by this evidence,
+ issued or qualified through this authority,
+ preserved through this Lineage,
+ for this consumer,
+ under this Regime,
+ at this point in its lifecycle."
+</code></pre>
+<p>That is a substantially richer form of operational truth.</p>
+<hr>
+<h1 id="75-references">75. References</h1>
+<p>Primary reference family:</p>
+<pre><code>NIST SP 800-63-4
+Digital Identity Guidelines
+
+NIST SP 800-63A-4
+Identity Proofing and Enrollment
+
+NIST SP 800-63B-4
+Authentication and Authenticator Management
+
+NIST SP 800-63C-4
+Federation and Assertions
+</code></pre>
+<p>National Institute of Standards and Technology.</p>
+<p>The NIST reference family is used to ground the digital-identity mechanisms in this crosswalk.</p>
+<p>RTT terminology and generalized Truth-Service interpretations remain the analytical contribution of Resonance Truth.</p>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>Crosswalk #1 asked:</p>
+<pre><code>When?
+</code></pre>
+<p>Crosswalk #2 asked:</p>
+<pre><code>Where?
+</code></pre>
+<p>Crosswalk #3 asks:</p>
+<pre><code>Who?
+</code></pre>
+<p>The progression now reveals:</p>
+<pre><code>TIME
+  requires
+reference + Observation + Drift + Revalidation
+
+LOCATION
+  requires
+namespace + authority + Lineage + freshness
+
+IDENTITY
+  requires
+Subject + evidence + qualification + authority
++ consumer context + lifecycle
+</code></pre>
+<p>The generalized Truth Service is therefore moving away from:</p>
+<pre><code>value lookup
+</code></pre>
+<p>toward:</p>
+<pre><code>relationship evaluation
+</code></pre>
+<p>That may be the most important result yet.</p>
+<p><strong>NTP taught the system to synchronize.</strong></p>
+<p><strong>DNS taught it to resolve.</strong></p>
+<p>**IAM teaches it that the thing being resolved is not the same as the identity</p>
   </main>
 </body>
 </html>

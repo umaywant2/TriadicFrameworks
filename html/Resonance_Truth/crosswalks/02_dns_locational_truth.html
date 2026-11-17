@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/02_dns_locational_truth.md">
-  <title>02_dns_locational_truth</title>
+  <title>Crosswalk #2 — DNS and Locational Truth</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2222 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_crosswalks_02_dns_locational_truth_" src="https://github.com/user-attachments/assets/f29d701a-96a5-4cef-a0e8-91c643d3b671" /></p>
+<h1 id="crosswalk-2-dns-and-locational-truth">Crosswalk #2 — DNS and Locational Truth</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Crosswalk #2<br>
+<strong>Truth Class:</strong> Locational Truth<br>
+<strong>Reference System:</strong> Domain Name System (DNS)<br>
+<strong>Primary RTT Dimensions:</strong> Regime · Lineage · Coherence · Temp<br>
+<strong>Supporting RTT Dimensions:</strong> Resonance · Drift · Paradox · Authority<br>
+<strong>Status:</strong> Research Crosswalk / Architecture Challenge<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This crosswalk examines the Domain Name System as the second operational reference system for the RTT Resonance Truth Service.</p>
+<p>The governing question is:</p>
+<blockquote>
+<p><strong>Where does this named thing resolve?</strong></p>
+</blockquote>
+<p>DNS introduces a substantially different truth relationship from NTP.</p>
+<p>NTP primarily challenges a system to maintain temporal alignment with qualified timing Sources.</p>
+<p>DNS instead introduces relationships among:</p>
+<ul>
+<li>names</li>
+<li>namespaces</li>
+<li>delegation</li>
+<li>authoritative data</li>
+<li>recursive resolution</li>
+<li>caching</li>
+<li>record lifetime</li>
+<li>aliases</li>
+<li>multiple answers</li>
+<li>negative answers</li>
+<li>resolver context</li>
+</ul>
+<p>The objective of Crosswalk #2 is therefore twofold:</p>
+<ol>
+<li>examine DNS as an operational system for Locational Truth</li>
+<li>challenge assumptions inherited from Crosswalk #1</li>
+</ol>
+<p>The central research question is:</p>
+<blockquote>
+<p><strong>Can the current Truth-Service architecture represent DNS without treating DNS as another clock?</strong></p>
+</blockquote>
+<hr>
+<h1 id="1-evidence-boundary">1. Evidence Boundary</h1>
+<p>Primary technical references for this crosswalk should include the foundational DNS specifications:</p>
+<pre><code>RFC 1034
+Domain Names — Concepts and Facilities
+
+RFC 1035
+Domain Names — Implementation and Specification
+</code></pre>
+<p>Additional DNS specifications may be introduced when required for mechanisms not fully defined by the foundational documents.</p>
+<p>The crosswalk should distinguish:</p>
+<pre><code>DNS Fact
+</code></pre>
+<p>from:</p>
+<pre><code>RTT Interpretation
+</code></pre>
+<p>and:</p>
+<pre><code>Candidate Generalization
+</code></pre>
+<p>The purpose is not to retrofit RTT terminology into DNS.</p>
+<p>The purpose is to examine whether structural mechanisms from DNS expose reusable Truth-Service concepts.</p>
+<hr>
+<h1 id="2-evidence-discipline">2. Evidence Discipline</h1>
+<p>The following distinctions apply throughout this document.</p>
+<h2 id="dns-fact">DNS Fact</h2>
+<p>A mechanism established by the DNS specifications or explicitly bounded reference material.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>A structural interpretation proposed through the Resonance Truth lens.</p>
+<h2 id="candidate-generalization">Candidate Generalization</h2>
+<p>A mechanism that may apply beyond DNS and Locational Truth.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A proposed generalization requiring evidence from additional crosswalks.</p>
+<p>Example:</p>
+<pre><code>DNS Fact:
+  DNS uses hierarchical delegation.
+
+RTT Interpretation:
+  Authority may propagate through bounded namespace relationships.
+
+Candidate Generalization:
+  Authority Lineage may require explicit representation.
+
+Hypothesis:
+  Truth Authority should be modeled as a graph rather than
+  solely as a direct Source-to-Anchor relationship.
+</code></pre>
+<p>Later crosswalks determine whether that hypothesis survives.</p>
+<hr>
+<h1 id="3-why-dns-comes-second">3. Why DNS Comes Second</h1>
+<p>DNS is deliberately positioned immediately after NTP.</p>
+<p>Crosswalk #1 produced an initial candidate pattern:</p>
+<pre><code>Anchor
+  ↓
+Source
+  ↓
+Observation
+  ↓
+Lineage
+  ↓
+Qualification
+  ↓
+Coherence
+  ↓
+Drift
+  ↓
+Truth State
+  ↓
+Correction
+  ↓
+Revalidation
+</code></pre>
+<p>That pattern emerged from Temporal Truth.</p>
+<p>DNS introduces immediate pressure against several assumptions.</p>
+<p>For example:</p>
+<ul>
+<li>authority may be delegated</li>
+<li>local answers may come from cache</li>
+<li>cached answers may remain usable for bounded periods</li>
+<li>a name may legitimately map to multiple records</li>
+<li>a name may point through another name</li>
+<li>the observer may not interact directly with authoritative infrastructure</li>
+<li>absence may itself be explicitly represented</li>
+<li>location may describe logical resolution rather than physical location</li>
+</ul>
+<p>DNS therefore provides a strong first challenge to NTP-derived generalization.</p>
+<hr>
+<h1 id="4-locational-truth">4. Locational Truth</h1>
+<p>The primary Truth Class is:</p>
+<pre><code>Locational Truth
+</code></pre>
+<p>Its operational question is:</p>
+<blockquote>
+<p><strong>Where does this named thing resolve?</strong></p>
+</blockquote>
+<p>This question should be interpreted carefully.</p>
+<p>DNS does not necessarily answer:</p>
+<blockquote>
+<p>Where is the physical machine?</p>
+</blockquote>
+<p>It participates in resolving names to DNS data.</p>
+<p>Therefore, RTT Locational Truth should not be restricted to physical coordinates.</p>
+<p>Locational Truth may include:</p>
+<ul>
+<li>namespace position</li>
+<li>logical destination</li>
+<li>service endpoint</li>
+<li>delegated authority location</li>
+<li>record target</li>
+<li>contextual resolution</li>
+</ul>
+<p>A safer generalized question is:</p>
+<blockquote>
+<p><strong>Within this namespace and resolution Regime, what destination or record state is associated with this name?</strong></p>
+</blockquote>
+<hr>
+<h1 id="5-dns-on-its-own-terms">5. DNS on Its Own Terms</h1>
+<p>At a high level, DNS organizes domain names in a hierarchical namespace and distributes responsibility through authoritative data and delegation.</p>
+<p>Resolution may involve interactions among:</p>
+<ul>
+<li>clients</li>
+<li>resolvers</li>
+<li>caches</li>
+<li>authoritative servers</li>
+<li>parent and child zones</li>
+<li>DNS resource records</li>
+</ul>
+<p>A conceptual resolution path may resemble:</p>
+<pre><code>Client
+  ↓
+Resolver
+  ↓
+Cache?
+  │
+  ├── Fresh answer available
+  │       ↓
+  │     Return
+  │
+  └── No usable answer
+          ↓
+     Resolution Process
+          ↓
+     Delegation Path
+          ↓
+     Authoritative Data
+          ↓
+     Response
+          ↓
+     Cache
+          ↓
+     Client
+</code></pre>
+<p>The architectural significance is immediate:</p>
+<blockquote>
+<p><strong>The entity delivering an answer is not necessarily the authority that originated the answer.</strong></p>
+</blockquote>
+<p>That pressures the original Truth-Service distinction among:</p>
+<pre><code>Anchor
+Source
+Lineage
+Observer
+</code></pre>
+<hr>
+<h1 id="6-initial-structural-crosswalk">6. Initial Structural Crosswalk</h1>
+<table>
+<thead>
+<tr>
+<th>DNS Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain namespace</td>
+<td>Regime / scope</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Domain name</td>
+<td>Claim subject / named object</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Zone</td>
+<td>Authority scope</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Delegation</td>
+<td>Authority Lineage</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Authoritative server</td>
+<td>Authoritative Source</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Resource record</td>
+<td>Declared Observation / state</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Resolver</td>
+<td>Observer / intermediary</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Recursive resolution</td>
+<td>Lineage traversal</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Cache</td>
+<td>Local retained Truth State</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>TTL</td>
+<td>Freshness boundary</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Alias</td>
+<td>Resolution transformation</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Multiple records</td>
+<td>Multi-valued accepted state</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Negative answer</td>
+<td>Explicit absence state</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Cached answer expiry</td>
+<td>Revalidation trigger</td>
+<td>Strong Candidate General</td>
+</tr>
+</tbody>
+</table>
+<p>Crosswalk #2 immediately introduces mechanisms that were less visible in NTP:</p>
+<pre><code>delegated authority
+cached Truth State
+multi-valued state
+explicit absence
+observer / intermediary role
+namespace-scoped Regime
+</code></pre>
+<hr>
+<h1 id="7-namespace-regime">7. Namespace → Regime</h1>
+<h2 id="dns-reference-system-view">DNS Reference-System View</h2>
+<p>DNS names exist within a hierarchical namespace.</p>
+<p>Interpretation depends on that namespace and its delegated administrative structure.</p>
+<h2 id="rtt-interpretation_1">RTT Interpretation</h2>
+<p>This strongly reinforces:</p>
+<pre><code>Regime
+</code></pre>
+<p>but expands the concept.</p>
+<p>A Regime may include:</p>
+<ul>
+<li>namespace</li>
+<li>scope</li>
+<li>authority chain</li>
+<li>observer context</li>
+<li>record type</li>
+<li>time boundary</li>
+</ul>
+<p>For Locational Truth, the question is not merely:</p>
+<blockquote>
+<p>What is the answer?</p>
+</blockquote>
+<p>It is:</p>
+<blockquote>
+<p><strong>Within which namespace and resolution context is this answer meaningful?</strong></p>
+</blockquote>
+<h2 id="architectural-contribution">Architectural Contribution</h2>
+<p>NTP introduced Regime primarily through operational precision and freshness requirements.</p>
+<p>DNS introduces a different form:</p>
+<pre><code>namespace-bounded Regime
+</code></pre>
+<p>This supports Regime as a genuinely cross-class mechanism.</p>
+<hr>
+<h1 id="8-domain-name-claim-subject">8. Domain Name → Claim Subject</h1>
+<p>The named object becomes the subject of the Locational Truth request.</p>
+<p>Conceptually:</p>
+<pre><code>Claim:
+  "Where does example name resolve?"
+</code></pre>
+<p>The Domain Name is not itself the answer.</p>
+<p>It identifies the object of inquiry.</p>
+<p>This reinforces separation among:</p>
+<pre><code>Claim Subject
+Observation
+Resolution Result
+Truth State
+</code></pre>
+<p>The Truth-Service data model may eventually need a more explicit:</p>
+<pre><code>subject
+</code></pre>
+<p>field if later crosswalks demonstrate that embedding the subject inside the Claim statement is insufficient.</p>
+<p>Current status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="9-zone-authority-scope">9. Zone → Authority Scope</h1>
+<p>DNS introduces an especially important concept:</p>
+<blockquote>
+<p><strong>Authority is bounded by scope.</strong></p>
+</blockquote>
+<p>An authoritative Source is not simply:</p>
+<pre><code>authoritative = true
+</code></pre>
+<p>Instead, authority exists relative to a portion of the namespace.</p>
+<p>RTT can interpret this as:</p>
+<pre><code>Authority
+  +
+Scope
+  =
+Bounded Authority
+</code></pre>
+<h2 id="candidate-generalization_1">Candidate Generalization</h2>
+<p>The Truth Service may eventually need to distinguish:</p>
+<pre><code>Source identity
+</code></pre>
+<p>from:</p>
+<pre><code>Source authority over subject S within Regime R
+</code></pre>
+<p>This becomes relevant far beyond DNS.</p>
+<p>Potential later examples include:</p>
+<ul>
+<li>identity providers</li>
+<li>certificate authorities</li>
+<li>policy systems</li>
+<li>jurisdiction</li>
+<li>organizational ownership</li>
+<li>artifact provenance</li>
+</ul>
+<p>Crosswalk #2 therefore strengthens:</p>
+<blockquote>
+<p><strong>Authority should be relational and scoped rather than intrinsic to Source identity.</strong></p>
+</blockquote>
+<hr>
+<h1 id="10-delegation-authority-lineage">10. Delegation → Authority Lineage</h1>
+<p>NTP introduced Lineage Distance.</p>
+<p>DNS introduces something richer:</p>
+<pre><code>Authority Lineage
+</code></pre>
+<p>A conceptual path may resemble:</p>
+<pre><code>Parent Authority
+     ↓
+Delegation
+     ↓
+Child Authority
+     ↓
+Authoritative Data
+</code></pre>
+<p>This is different from merely counting hops.</p>
+<p>Each transition carries meaning:</p>
+<pre><code>who delegated?
+what scope was delegated?
+to whom?
+under which namespace boundary?
+</code></pre>
+<h2 id="rtt-interpretation_2">RTT Interpretation</h2>
+<p>Lineage should potentially preserve not just:</p>
+<pre><code>entity path
+</code></pre>
+<p>but:</p>
+<pre><code>authority path
+</code></pre>
+<h2 id="architectural-challenge">Architectural Challenge</h2>
+<p>The current model represents:</p>
+<pre><code>Source
+  ↓
+Anchor
+</code></pre>
+<p>plus:</p>
+<pre><code>Lineage graph
+</code></pre>
+<p>DNS suggests that authority itself may require explicit relationships.</p>
+<p>Candidate new relationship:</p>
+<pre><code>Authority Edge
+</code></pre>
+<p>with properties such as:</p>
+<pre><code>delegator
+delegate
+scope
+relation
+validity
+</code></pre>
+<p>This should not yet become a new core entity.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>PKI and IAM should test it further.</p>
+<hr>
+<h1 id="11-authoritative-source">11. Authoritative Source</h1>
+<p>DNS strongly challenges the generic notion of:</p>
+<pre><code>Source
+</code></pre>
+<p>A resolver may supply the client with an answer.</p>
+<p>But the resolver may not be the authoritative origin of that answer.</p>
+<p>Therefore the architecture should distinguish potentially:</p>
+<pre><code>Observation Carrier
+</code></pre>
+<p>from:</p>
+<pre><code>Observation Authority
+</code></pre>
+<p>and:</p>
+<pre><code>Observation Origin
+</code></pre>
+<p>These may be the same entity.</p>
+<p>They may also differ.</p>
+<h2 id="example-structure">Example Structure</h2>
+<pre><code>Authority
+   ↓
+Authoritative Data
+   ↓
+Resolver
+   ↓
+Cache
+   ↓
+Client Observation
+</code></pre>
+<h2 id="candidate-generalization_2">Candidate Generalization</h2>
+<p>The current Source abstraction may eventually require roles.</p>
+<p>Possible Source roles:</p>
+<pre><code>origin
+authority
+intermediary
+cache
+observer
+transformer
+</code></pre>
+<p>This remains a hypothesis for later crosswalk validation.</p>
+<hr>
+<h1 id="12-resource-record-declared-state">12. Resource Record → Declared State</h1>
+<p>DNS resource records represent data associated with names.</p>
+<p>Through the RTT lens, a resource record can participate as evidence about:</p>
+<pre><code>what destination
+what alias
+what authority
+what service information
+what other data
+</code></pre>
+<p>is currently declared within the applicable DNS scope.</p>
+<h2 id="candidate-mapping">Candidate Mapping</h2>
+<pre><code>Resource Record
+      ↓
+Declared Observation / State
+</code></pre>
+<p>However, this raises an architectural question:</p>
+<blockquote>
+<p>Is authoritative DNS data itself an Observation, or is the resolver's receipt of that data the Observation?</p>
+</blockquote>
+<p>These are not necessarily identical.</p>
+<p>A cleaner generalized chain may be:</p>
+<pre><code>Authoritative State
+      ↓
+Resolution Event
+      ↓
+Observation
+      ↓
+Local Truth State
+</code></pre>
+<p>This distinction should remain unresolved until additional crosswalks clarify the difference between:</p>
+<pre><code>declared state
+</code></pre>
+<p>and:</p>
+<pre><code>observed state
+</code></pre>
+<p>Desired-State Systems will likely provide useful evidence later.</p>
+<hr>
+<h1 id="13-resolver-observer">13. Resolver → Observer</h1>
+<p>Crosswalk #1 contained an observer implicitly through the local clock.</p>
+<p>DNS makes the observer/intermediary role more visible.</p>
+<p>The resolver operates between:</p>
+<pre><code>requesting client
+</code></pre>
+<p>and:</p>
+<pre><code>DNS authority / cached data
+</code></pre>
+<p>RTT therefore gains a stronger candidate abstraction:</p>
+<pre><code>Observer
+</code></pre>
+<p>The observer may influence:</p>
+<ul>
+<li>which Sources are consulted</li>
+<li>which cache is available</li>
+<li>what state is locally retained</li>
+<li>when Revalidation occurs</li>
+<li>which Regime applies</li>
+</ul>
+<h2 id="architectural-challenge_1">Architectural Challenge</h2>
+<p>The current core data model does not promote Observer as a standalone entity.</p>
+<p>It appears primarily through:</p>
+<pre><code>Regime.observer_context
+</code></pre>
+<p>DNS suggests this may eventually be insufficient.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>Telemetry and distributed systems should challenge this further.</p>
+<hr>
+<h1 id="14-recursive-resolution-lineage-traversal">14. Recursive Resolution → Lineage Traversal</h1>
+<p>Resolution may require traversing multiple relationships before obtaining authoritative data.</p>
+<p>Conceptually:</p>
+<pre><code>Query
+  ↓
+Known Reference
+  ↓
+Delegation
+  ↓
+Next Authority
+  ↓
+Delegation
+  ↓
+Authoritative Data
+  ↓
+Result
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Lineage Traversal
+</code></pre>
+<p>This reinforces that Lineage is not merely historical decoration.</p>
+<p>It may participate directly in determining:</p>
+<ul>
+<li>authority</li>
+<li>scope</li>
+<li>confidence in provenance</li>
+<li>qualification</li>
+</ul>
+<h2 id="candidate-generalization_3">Candidate Generalization</h2>
+<p>Lineage may be both:</p>
+<pre><code>retrospective
+  "Where did this come from?"
+</code></pre>
+<p>and:</p>
+<pre><code>operational
+  "Which path establishes that this Source is authoritative?"
+</code></pre>
+<p>This is a significant addition to the NTP-derived model.</p>
+<hr>
+<h1 id="15-cache-local-truth-state">15. Cache → Local Truth State</h1>
+<p>DNS caching provides one of the strongest structural challenges to Crosswalk #1.</p>
+<p>The local resolver may continue serving information without contacting the original authority for every query.</p>
+<p>This resembles:</p>
+<pre><code>retained local operational truth
+</code></pre>
+<p>but differs from NTP-style Holdover.</p>
+<p>A cached DNS result is not necessarily:</p>
+<pre><code>qualification degraded because Source disappeared
+</code></pre>
+<p>Instead, reuse may be normal operation within the record's permitted freshness boundary.</p>
+<h2 id="rtt-interpretation_3">RTT Interpretation</h2>
+<pre><code>Cache
+  ↓
+Local retained Truth State
+</code></pre>
+<p>subject to:</p>
+<pre><code>freshness constraints
+</code></pre>
+<h2 id="important-distinction">Important Distinction</h2>
+<pre><code>CACHE
+  ≠
+HOLDOVER
+</code></pre>
+<p>A cached result may be fully operationally acceptable.</p>
+<p>Holdover describes continued use after fresh qualification becomes unavailable under conditions permitting provisional persistence.</p>
+<p>DNS therefore forces us to separate:</p>
+<pre><code>retained valid state
+</code></pre>
+<p>from:</p>
+<pre><code>degraded retained state
+</code></pre>
+<p>This is an important architecture refinement.</p>
+<hr>
+<h1 id="16-ttl-freshness-boundary">16. TTL → Freshness Boundary</h1>
+<p>DNS makes freshness explicit through time-limited caching behavior.</p>
+<p>RTT interpretation:</p>
+<pre><code>TTL
+  ↓
+Freshness Boundary
+</code></pre>
+<p>The useful general principle is:</p>
+<blockquote>
+<p><strong>Operational truth can be reusable without being permanently valid.</strong></p>
+</blockquote>
+<p>A local answer may remain usable while its freshness boundary holds.</p>
+<p>After that boundary:</p>
+<pre><code>reuse
+</code></pre>
+<p>may require:</p>
+<pre><code>Revalidation
+</code></pre>
+<h2 id="ntp-comparison">NTP Comparison</h2>
+<p>NTP emphasized:</p>
+<pre><code>repeated synchronization
+</code></pre>
+<p>DNS emphasizes:</p>
+<pre><code>bounded reuse
+</code></pre>
+<p>Both support:</p>
+<pre><code>freshness
+Revalidation
+</code></pre>
+<p>but through different mechanisms.</p>
+<p>This strongly supports Freshness / Revalidation as a generalized architecture dimension.</p>
+<hr>
+<h1 id="17-freshness-is-not-truth">17. Freshness Is Not Truth</h1>
+<p>DNS also sharpens a distinction:</p>
+<pre><code>fresh
+  ≠
+correct
+</code></pre>
+<p>and:</p>
+<pre><code>expired
+  ≠
+false
+</code></pre>
+<p>Freshness describes whether the available local state remains eligible for use under caching rules.</p>
+<p>It does not establish universal correctness.</p>
+<p>This parallels the Truth-Service rule:</p>
+<pre><code>rejected from synthesis
+  ≠
+false
+</code></pre>
+<p>and extends it:</p>
+<pre><code>expired
+  ≠
+disproven
+</code></pre>
+<p>This supports a broader qualified-state model.</p>
+<hr>
+<h1 id="18-alias-resolution-transformation">18. Alias → Resolution Transformation</h1>
+<p>DNS aliases introduce another mechanism less visible in NTP:</p>
+<pre><code>transformation during resolution
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Name A
+  ↓
+Alias relationship
+  ↓
+Name B
+  ↓
+Resolution
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Lineage Transformation
+</code></pre>
+<p>The local result may not derive directly from the initially queried name.</p>
+<p>Instead, the path contains semantic transformation.</p>
+<h2 id="architectural-contribution_1">Architectural Contribution</h2>
+<p>This strengthens the requirement that Lineage preserve:</p>
+<pre><code>transformation
+</code></pre>
+<p>not merely:</p>
+<pre><code>Source hop
+</code></pre>
+<p>That is particularly relevant for later:</p>
+<ul>
+<li>identity federation</li>
+<li>certificate chains</li>
+<li>supply-chain provenance</li>
+<li>telemetry aggregation</li>
+</ul>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="19-multiple-records-multi-valued-truth-state">19. Multiple Records → Multi-Valued Truth State</h1>
+<p>NTP encourages synthesis toward one useful local temporal state.</p>
+<p>DNS immediately challenges that expectation.</p>
+<p>A valid DNS response may contain multiple relevant records.</p>
+<p>Therefore:</p>
+<pre><code>one Claim
+  ≠
+exactly one accepted scalar value
+</code></pre>
+<p>The Truth Service must support:</p>
+<pre><code>accepted_value:
+  [value A, value B, value C]
+</code></pre>
+<p>or another domain-native structured representation.</p>
+<h2 id="architectural-finding">Architectural Finding</h2>
+<p>Truth-State synthesis must not implicitly mean:</p>
+<pre><code>collapse to one scalar
+</code></pre>
+<p>Instead:</p>
+<blockquote>
+<p><strong>The accepted value should remain domain-native.</strong></p>
+</blockquote>
+<p>This validates the existing data-model decision to leave:</p>
+<pre><code>accepted_value
+</code></pre>
+<p>structurally open.</p>
+<hr>
+<h1 id="20-multiple-answers-are-not-automatically-paradox">20. Multiple Answers Are Not Automatically Paradox</h1>
+<p>This becomes crucial.</p>
+<p>Suppose a DNS result contains:</p>
+<pre><code>Address A
+Address B
+</code></pre>
+<p>That does not necessarily mean:</p>
+<pre><code>A contradicts B
+</code></pre>
+<p>The state may legitimately be multi-valued.</p>
+<p>Therefore:</p>
+<pre><code>multiplicity
+  ≠
+contradiction
+</code></pre>
+<p>and:</p>
+<pre><code>disagreement
+  ≠
+Paradox
+</code></pre>
+<p>The Coherence Engine must understand the domain's valid cardinality before classifying multiple Observations as incompatible.</p>
+<h2 id="candidate-general-principle">Candidate General Principle</h2>
+<blockquote>
+<p><strong>Coherence is domain-semantic, not merely value equality.</strong></p>
+</blockquote>
+<p>This is a major challenge to the initial NTP-shaped model.</p>
+<hr>
+<h1 id="21-negative-answers-explicit-absence">21. Negative Answers → Explicit Absence</h1>
+<p>DNS introduces another important truth condition:</p>
+<pre><code>no matching result
+</code></pre>
+<p>This should not automatically be modeled as:</p>
+<pre><code>evaluation failure
+</code></pre>
+<p>or:</p>
+<pre><code>unknown
+</code></pre>
+<p>There is a structural difference between:</p>
+<pre><code>no evidence available
+</code></pre>
+<p>and:</p>
+<pre><code>qualified evidence of absence
+</code></pre>
+<p>The RTT architecture may need to preserve states like:</p>
+<pre><code>PRESENT
+
+ABSENT
+
+UNKNOWN
+</code></pre>
+<p>without reducing them to Boolean Truth Status.</p>
+<h2 id="architectural-challenge_2">Architectural Challenge</h2>
+<p>Current Truth-State status includes:</p>
+<pre><code>rejected
+indeterminate
+</code></pre>
+<p>but neither necessarily means:</p>
+<pre><code>the evaluated domain state is explicitly absent
+</code></pre>
+<p>The domain-native:</p>
+<pre><code>accepted_value
+</code></pre>
+<p>may need to represent absence explicitly.</p>
+<p>This should be tested further before adding another canonical Truth Status.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="22-absence-indeterminate">22. Absence ≠ Indeterminate</h1>
+<p>The distinction is:</p>
+<pre><code>ABSENCE
+  =
+qualified result that the requested state does not exist
+within the evaluated scope
+</code></pre>
+<p>while:</p>
+<pre><code>INDETERMINATE
+  =
+insufficient qualified evidence to establish a usable result
+</code></pre>
+<p>These are fundamentally different.</p>
+<p>Conceptually:</p>
+<pre><code>Query:
+  "Where does X resolve?"
+
+Result A:
+  "X does not resolve within this evaluated namespace state."
+</code></pre>
+<p>versus:</p>
+<pre><code>Result B:
+  "The service cannot presently determine whether X resolves."
+</code></pre>
+<p>This distinction should survive into future crosswalks.</p>
+<p>IAM, PKI, and telemetry are likely to test it again.</p>
+<hr>
+<h1 id="23-observer-context">23. Observer Context</h1>
+<p>DNS introduces the possibility that different observers may possess different locally retained resolution states because of:</p>
+<ul>
+<li>cache contents</li>
+<li>timing</li>
+<li>resolution path</li>
+<li>applicable namespace context</li>
+</ul>
+<p>The crosswalk therefore strengthens:</p>
+<pre><code>observer_context
+</code></pre>
+<p>as part of Regime.</p>
+<p>A Truth State should be able to express:</p>
+<blockquote>
+<p><strong>This result was operationally valid for this observer context under these freshness conditions.</strong></p>
+</blockquote>
+<p>That does not necessarily imply that every observer possesses the same local state at the same moment.</p>
+<hr>
+<h1 id="24-locational-drift">24. Locational Drift</h1>
+<p>What does Drift mean for DNS?</p>
+<p>It is not equivalent to NTP offset.</p>
+<p>Potential Locational Drift includes:</p>
+<ul>
+<li>record target changes</li>
+<li>delegation changes</li>
+<li>authority changes</li>
+<li>cache state aging</li>
+<li>alias-chain changes</li>
+<li>namespace changes</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>Drift
+</code></pre>
+<p>survives Crosswalk #2,</p>
+<p>but:</p>
+<pre><code>numeric magnitude
+</code></pre>
+<p>does not necessarily survive.</p>
+<p>Example:</p>
+<pre><code>prior:
+  Name → Target A
+
+current:
+  Name → Target B
+
+Drift:
+  dimension: value
+  magnitude: null
+</code></pre>
+<p>The change is structurally important without requiring a numeric distance.</p>
+<p>This strongly validates qualitative Drift.</p>
+<hr>
+<h1 id="25-source-drift">25. Source Drift</h1>
+<p>DNS also exposes:</p>
+<pre><code>Source Drift
+</code></pre>
+<p>Suppose:</p>
+<pre><code>authoritative Source A
+</code></pre>
+<p>becomes:</p>
+<pre><code>authoritative Source B
+</code></pre>
+<p>while the queried name remains the same.</p>
+<p>The value may even remain unchanged.</p>
+<p>Yet the Source relationship has changed.</p>
+<p>Therefore the architecture must be capable of detecting:</p>
+<pre><code>value stable
+</code></pre>
+<p>while:</p>
+<pre><code>Source Drift != zero
+</code></pre>
+<p>or structurally:</p>
+<pre><code>source_changed: true
+</code></pre>
+<p>This reinforces the need for multidimensional Drift.</p>
+<hr>
+<h1 id="26-lineage-drift">26. Lineage Drift</h1>
+<p>Delegation or alias chains may change even when the final response appears unchanged.</p>
+<p>Conceptually:</p>
+<pre><code>Before:
+
+  Name
+    ↓
+  Authority A
+    ↓
+  Target X
+
+After:
+
+  Name
+    ↓
+  Authority B
+    ↓
+  Target X
+</code></pre>
+<p>Output:</p>
+<pre><code>X
+</code></pre>
+<p>may remain identical.</p>
+<p>Lineage has changed.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Stable accepted value does not imply stable Truth structure.</strong></p>
+</blockquote>
+<p>This is a significant architectural contribution from DNS.</p>
+<hr>
+<h1 id="27-coherence-in-dns">27. Coherence in DNS</h1>
+<p>NTP tempted the architecture toward:</p>
+<pre><code>similar values
+  =
+coherent
+</code></pre>
+<p>DNS makes that insufficient.</p>
+<p>Coherence may instead require compatibility among:</p>
+<ul>
+<li>namespace</li>
+<li>record type</li>
+<li>authority</li>
+<li>freshness</li>
+<li>valid multiplicity</li>
+<li>alias relationships</li>
+<li>observer context</li>
+</ul>
+<p>Therefore DNS suggests:</p>
+<blockquote>
+<p><strong>Coherence must be evaluated using domain semantics rather than generic value equality alone.</strong></p>
+</blockquote>
+<p>This means the Coherence Engine likely requires domain-specific evaluators.</p>
+<p>Conceptually:</p>
+<pre><code>Coherence Engine
+    │
+    ├── Temporal evaluator
+    ├── Locational evaluator
+    ├── Identity evaluator
+    └── ...
+</code></pre>
+<p>The shared component remains.</p>
+<p>Comparison semantics become pluggable.</p>
+<hr>
+<h1 id="28-dns-and-paradox">28. DNS and Paradox</h1>
+<p>Potential paradox-like situations may include:</p>
+<ul>
+<li>qualified Sources presenting incompatible authority relationships</li>
+<li>incompatible namespace interpretations</li>
+<li>cached and newly authoritative state diverging during transition</li>
+<li>competing resolution contexts</li>
+</ul>
+<p>However:</p>
+<blockquote>
+<p><strong>Not every differing DNS answer is an RTT Paradox.</strong></p>
+</blockquote>
+<p>Differences may be legitimate results of:</p>
+<ul>
+<li>multi-valued records</li>
+<li>caching</li>
+<li>scope</li>
+<li>time</li>
+<li>observer context</li>
+</ul>
+<p>The system must first determine:</p>
+<pre><code>legitimate multiplicity?
+
+temporal difference?
+
+Regime difference?
+
+stale local state?
+
+authority conflict?
+</code></pre>
+<p>before registering:</p>
+<pre><code>Paradox
+</code></pre>
+<p>This strengthens the rule:</p>
+<blockquote>
+<p><strong>Classification precedes contradiction.</strong></p>
+</blockquote>
+<hr>
+<h1 id="29-dns-regime-structure">29. DNS Regime Structure</h1>
+<p>Locational Truth introduces a rich Regime.</p>
+<p>A DNS-related Regime may include:</p>
+<pre><code>namespace
+queried name
+record type
+observer context
+freshness requirement
+applicable authority scope
+evaluation time
+</code></pre>
+<p>This is substantially different from the NTP regime of:</p>
+<pre><code>precision
+consequence
+maximum age
+</code></pre>
+<p>The generalized:</p>
+<pre><code>Regime
+</code></pre>
+<p>therefore survives,</p>
+<p>but its fields may vary strongly by Truth Class.</p>
+<p>This supports keeping domain-specific Regime extensions possible.</p>
+<hr>
+<h1 id="30-authority-is-relational">30. Authority Is Relational</h1>
+<p>Crosswalk #2 strengthens an important architectural principle:</p>
+<pre><code>Source
+  ≠
+Authority
+</code></pre>
+<p>A Source may deliver data without originating authority.</p>
+<p>Likewise:</p>
+<pre><code>Authority
+  ≠
+globally authoritative
+</code></pre>
+<p>Authority depends on:</p>
+<pre><code>subject
+scope
+namespace
+delegation
+Regime
+</code></pre>
+<p>Candidate generalized relationship:</p>
+<pre><code>AUTHORITY(
+  source,
+  subject,
+  scope,
+  regime
+)
+</code></pre>
+<p>This remains conceptual.</p>
+<p>The current architecture may represent it through:</p>
+<pre><code>Anchor
+Source
+Lineage
+Regime
+</code></pre>
+<p>before introducing a dedicated Authority object.</p>
+<hr>
+<h1 id="31-cache-as-truth-state-materialization">31. Cache as Truth-State Materialization</h1>
+<p>DNS caching suggests a broader architectural concept:</p>
+<pre><code>Truth-State Materialization
+</code></pre>
+<p>A Truth State may be retained locally for reuse rather than reconstructed from primary Sources for every request.</p>
+<p>Conceptually:</p>
+<pre><code>Evaluation
+    ↓
+Truth State
+    ↓
+Materialized Local State
+    ↓
+Reuse while qualified
+    ↓
+Freshness boundary
+    ↓
+Revalidation
+</code></pre>
+<p>This differs from Holdover.</p>
+<h2 id="candidate-generalization_4">Candidate Generalization</h2>
+<p>A future implementation may distinguish:</p>
+<pre><code>synthesized Truth State
+</code></pre>
+<p>from:</p>
+<pre><code>materialized operational copy
+</code></pre>
+<p>This is potentially useful in:</p>
+<ul>
+<li>DNS</li>
+<li>IAM token validation</li>
+<li>configuration systems</li>
+<li>telemetry</li>
+<li>distributed state</li>
+</ul>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="32-revalidation-in-dns">32. Revalidation in DNS</h1>
+<p>Crosswalk #1 introduced Revalidation through repeated timing synchronization.</p>
+<p>DNS strengthens Revalidation through a different pattern:</p>
+<pre><code>Reuse
+  ↓
+Freshness Boundary
+  ↓
+Resolve Again
+</code></pre>
+<p>Therefore Revalidation does not require:</p>
+<pre><code>continuous polling
+</code></pre>
+<p>A generalized Truth Service should support:</p>
+<ul>
+<li>scheduled Revalidation</li>
+<li>expiration-triggered Revalidation</li>
+<li>event-driven Revalidation</li>
+<li>demand-triggered Revalidation</li>
+</ul>
+<p>This is an important refinement.</p>
+<p>Revalidation is general.</p>
+<p>Polling is not.</p>
+<hr>
+<h1 id="33-ntp-assumption-review">33. NTP Assumption Review</h1>
+<p>Crosswalk #2 can now challenge the mechanisms inherited from Crosswalk #1.</p>
+<table>
+<thead>
+<tr>
+<th>NTP-Derived Candidate</th>
+<th>DNS Result</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Truth Anchor</td>
+<td>Survives with stronger scope requirements</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Survives but requires role distinctions</td>
+<td>Strengthened / challenged</td>
+</tr>
+<tr>
+<td>Source relationship</td>
+<td>Survives</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Observation</td>
+<td>Survives</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Lineage</td>
+<td>Strongly survives</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Lineage distance</td>
+<td>Partially survives</td>
+<td>Needs richer graph semantics</td>
+</tr>
+<tr>
+<td>Observation distance</td>
+<td>Overlaps strongly with Lineage</td>
+<td>Still unresolved</td>
+</tr>
+<tr>
+<td>Qualification</td>
+<td>Survives</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>Survives</td>
+<td>Must become domain-semantic</td>
+</tr>
+<tr>
+<td>Coherence clustering</td>
+<td>Possibly useful</td>
+<td>Not always central</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>Survives</td>
+<td>Must support qualitative dimensions</td>
+</tr>
+<tr>
+<td>Instability</td>
+<td>Relevant but not clearly independent</td>
+<td>Still unresolved</td>
+</tr>
+<tr>
+<td>Uncertainty growth</td>
+<td>Freshness supports concept</td>
+<td>Refined</td>
+</tr>
+<tr>
+<td>Paradox containment</td>
+<td>Survives cautiously</td>
+<td>Must distinguish multiplicity</td>
+</tr>
+<tr>
+<td>Regime</td>
+<td>Strongly survives</td>
+<td>Strengthened</td>
+</tr>
+<tr>
+<td>Truth-State synthesis</td>
+<td>Survives</td>
+<td>Must support multi-valued state</td>
+</tr>
+<tr>
+<td>Correction</td>
+<td>Present differently</td>
+<td>Requires broader semantics</td>
+</tr>
+<tr>
+<td>Holdover</td>
+<td>Does not equal caching</td>
+<td>Narrowed</td>
+</tr>
+<tr>
+<td>Revalidation</td>
+<td>Strongly survives</td>
+<td>Generalized beyond polling</td>
+</tr>
+<tr>
+<td>Failure transparency</td>
+<td>Survives</td>
+<td>Strengthened through explicit absence</td>
+</tr>
+</tbody>
+</table>
+<p>DNS does not break the entire NTP-derived architecture.</p>
+<p>It changes several abstractions substantially.</p>
+<p>That is exactly what Crosswalk #2 was intended to do.</p>
+<hr>
+<h1 id="34-architectural-refinement-1-scope-belongs-to-authority">34. Architectural Refinement #1 — Scope Belongs to Authority</h1>
+<p>Crosswalk #1 could imply:</p>
+<pre><code>Anchor
+  → authority
+</code></pre>
+<p>DNS demonstrates that this is incomplete.</p>
+<p>A better generalized form is:</p>
+<pre><code>Authority
+  =
+Source / Anchor
+  +
+Scope
+  +
+Regime
+  +
+Lineage
+</code></pre>
+<p>This should remain a candidate refinement until IAM and PKI test it.</p>
+<hr>
+<h1 id="35-architectural-refinement-2-coherence-is-domain-semantic">35. Architectural Refinement #2 — Coherence Is Domain-Semantic</h1>
+<p>NTP encourages comparison of timing states.</p>
+<p>DNS permits valid multiplicity.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Coherence cannot mean simple value equality.</strong></p>
+</blockquote>
+<p>Instead:</p>
+<pre><code>Coherence
+  =
+compatibility under domain semantics and Regime
+</code></pre>
+<p>This is a strong candidate generalization.</p>
+<hr>
+<h1 id="36-architectural-refinement-3-revalidation-polling">36. Architectural Refinement #3 — Revalidation ≠ Polling</h1>
+<p>NTP supplied polling as the initial example.</p>
+<p>DNS demonstrates:</p>
+<pre><code>Revalidation
+</code></pre>
+<p>may instead occur because:</p>
+<pre><code>freshness boundary reached
+</code></pre>
+<p>or:</p>
+<pre><code>another resolution is demanded
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Polling
+  ⊂
+Revalidation
+</code></pre>
+<p>Polling is one Revalidation strategy.</p>
+<p>It is not the generalized mechanism.</p>
+<hr>
+<h1 id="37-architectural-refinement-4-cache-holdover">37. Architectural Refinement #4 — Cache ≠ Holdover</h1>
+<p>NTP inspired Holdover.</p>
+<p>DNS introduces valid caching.</p>
+<p>Therefore:</p>
+<pre><code>retained local state
+</code></pre>
+<p>splits into at least:</p>
+<pre><code>Fresh Materialized State
+</code></pre>
+<p>and:</p>
+<pre><code>Held-Over State
+</code></pre>
+<p>The difference is qualification.</p>
+<h3 id="fresh-materialized-state">Fresh Materialized State</h3>
+<p>Still within its declared validity/freshness boundary.</p>
+<h3 id="held-over-state">Held-Over State</h3>
+<p>Fresh qualification is unavailable, but policy temporarily permits continued use.</p>
+<p>This distinction should remain in the architecture.</p>
+<hr>
+<h1 id="38-architectural-refinement-5-multiplicity-paradox">38. Architectural Refinement #5 — Multiplicity ≠ Paradox</h1>
+<p>NTP tends toward one local temporal estimate.</p>
+<p>DNS demonstrates valid multi-valued answers.</p>
+<p>Therefore:</p>
+<pre><code>more than one accepted value
+  ≠
+contested
+</code></pre>
+<p>The Truth State must permit structured multi-valued results.</p>
+<p>Paradox requires actual incompatibility within the governing Regime.</p>
+<hr>
+<h1 id="39-architectural-refinement-6-absence-unknown">39. Architectural Refinement #6 — Absence ≠ Unknown</h1>
+<p>DNS exposes a powerful three-way distinction:</p>
+<pre><code>PRESENT
+ABSENT
+UNKNOWN
+</code></pre>
+<p>The current Truth-State model primarily describes evaluation state:</p>
+<pre><code>operationally_accepted
+contested
+rejected
+indeterminate
+...
+</code></pre>
+<p>The domain-native accepted value may therefore need to preserve:</p>
+<pre><code>presence_state:
+  present | absent
+</code></pre>
+<p>while:</p>
+<pre><code>Truth State:
+  operationally_accepted
+</code></pre>
+<p>describes qualification.</p>
+<p>Example:</p>
+<pre><code>status:
+  operationally_accepted
+
+accepted_value:
+  presence: absent
+</code></pre>
+<p>This avoids adding domain semantics to the generic Truth-State lifecycle prematurely.</p>
+<hr>
+<h1 id="40-architectural-refinement-7-observer-may-become-first-class">40. Architectural Refinement #7 — Observer May Become First-Class</h1>
+<p>NTP made local observation context visible implicitly.</p>
+<p>DNS makes it much harder to ignore.</p>
+<p>Observer context affects:</p>
+<ul>
+<li>local cache</li>
+<li>available resolution path</li>
+<li>evaluation time</li>
+<li>applicable namespace behavior</li>
+<li>returned operational state</li>
+</ul>
+<p>The current architecture stores:</p>
+<pre><code>Regime.observer_context
+</code></pre>
+<p>This may remain sufficient.</p>
+<p>If later crosswalks require independent:</p>
+<ul>
+<li>Observer identity</li>
+<li>Observer lifecycle</li>
+<li>Observer Lineage</li>
+<li>Observer relationships</li>
+</ul>
+<p>then:</p>
+<pre><code>Observer
+</code></pre>
+<p>may deserve promotion to a first-class entity.</p>
+<p>Status:</p>
+<pre><code>DEFERRED
+</code></pre>
+<hr>
+<h1 id="41-worked-example-fresh-cached-resolution">41. Worked Example — Fresh Cached Resolution</h1>
+<h2 id="claim">Claim</h2>
+<pre><code>"Where does Name X resolve?"
+</code></pre>
+<h2 id="truth-class">Truth Class</h2>
+<pre><code>locational
+</code></pre>
+<h2 id="regime">Regime</h2>
+<pre><code>namespace:
+  applicable DNS context
+
+freshness:
+  cached result remains valid
+</code></pre>
+<h2 id="local-state">Local State</h2>
+<pre><code>cached record:
+  Name X → Target A
+</code></pre>
+<h2 id="freshness">Freshness</h2>
+<pre><code>within permitted lifetime
+</code></pre>
+<h2 id="result">Result</h2>
+<pre><code>Truth State:
+  operationally_accepted
+
+accepted_value:
+  Target A
+</code></pre>
+<h2 id="architectural-finding_1">Architectural Finding</h2>
+<p>No authoritative lookup is required for every use of an already-qualified materialized local state.</p>
+<p>This challenges an architecture that assumes each evaluation must return directly to an Anchor.</p>
+<hr>
+<h1 id="42-worked-example-expired-cached-resolution">42. Worked Example — Expired Cached Resolution</h1>
+<h2 id="prior-state">Prior State</h2>
+<pre><code>Name X → Target A
+</code></pre>
+<h2 id="cache-state">Cache State</h2>
+<pre><code>freshness boundary exceeded
+</code></pre>
+<h2 id="result_1">Result</h2>
+<p>The local retained state no longer qualifies automatically for ordinary reuse.</p>
+<p>Possible next action:</p>
+<pre><code>Revalidation
+</code></pre>
+<h2 id="important-distinction_1">Important Distinction</h2>
+<p>The architecture should not conclude:</p>
+<pre><code>Target A is false
+</code></pre>
+<p>It should conclude:</p>
+<blockquote>
+<p><strong>The retained state no longer satisfies the freshness requirement for this Regime.</strong></p>
+</blockquote>
+<p>This distinction maps naturally to:</p>
+<pre><code>expired
+</code></pre>
+<p>rather than:</p>
+<pre><code>rejected as false
+</code></pre>
+<hr>
+<h1 id="43-worked-example-multiple-valid-results">43. Worked Example — Multiple Valid Results</h1>
+<h2 id="claim_1">Claim</h2>
+<pre><code>"Where does Name X resolve?"
+</code></pre>
+<h2 id="qualified-state">Qualified State</h2>
+<pre><code>Target A
+Target B
+Target C
+</code></pre>
+<h2 id="coherence">Coherence</h2>
+<pre><code>coherent
+</code></pre>
+<p>provided that the domain semantics permit multiple simultaneous results.</p>
+<h2 id="truth-state">Truth State</h2>
+<pre><code>operationally_accepted
+</code></pre>
+<h2 id="accepted-value">Accepted Value</h2>
+<pre><code>[Target A, Target B, Target C]
+</code></pre>
+<h2 id="architectural-finding_2">Architectural Finding</h2>
+<pre><code>cardinality &gt; 1
+</code></pre>
+<p>does not imply:</p>
+<pre><code>fragmented
+contested
+paradoxical
+</code></pre>
+<p>Domain semantics govern Coherence.</p>
+<hr>
+<h1 id="44-worked-example-explicit-absence">44. Worked Example — Explicit Absence</h1>
+<h2 id="claim_2">Claim</h2>
+<pre><code>"Where does Name X resolve?"
+</code></pre>
+<h2 id="qualified-resolution">Qualified Resolution</h2>
+<p>The applicable DNS evaluation provides a qualified negative result.</p>
+<h2 id="truth-state_1">Truth State</h2>
+<pre><code>operationally_accepted
+</code></pre>
+<h2 id="accepted-value_1">Accepted Value</h2>
+<pre><code>presence:
+  absent
+</code></pre>
+<h2 id="architectural-finding_3">Architectural Finding</h2>
+<pre><code>accepted absence
+  ≠
+indeterminate
+</code></pre>
+<p>This pattern may later generalize to:</p>
+<ul>
+<li>identity lookup</li>
+<li>configuration state</li>
+<li>telemetry</li>
+<li>provenance</li>
+</ul>
+<hr>
+<h1 id="45-worked-example-delegation-change">45. Worked Example — Delegation Change</h1>
+<h2 id="prior-structure">Prior Structure</h2>
+<pre><code>Parent
+  ↓
+Authority A
+  ↓
+Name X → Target Z
+</code></pre>
+<h2 id="new-structure">New Structure</h2>
+<pre><code>Parent
+  ↓
+Authority B
+  ↓
+Name X → Target Z
+</code></pre>
+<p>The final value remains:</p>
+<pre><code>Target Z
+</code></pre>
+<p>Yet:</p>
+<pre><code>Authority changed
+Lineage changed
+</code></pre>
+<p>Possible Drift:</p>
+<pre><code>source
+lineage
+regime
+</code></pre>
+<h2 id="architectural-finding_4">Architectural Finding</h2>
+<blockquote>
+<p><strong>Truth structure can Drift even when accepted value remains stable.</strong></p>
+</blockquote>
+<p>This is one of the strongest contributions from Crosswalk #2.</p>
+<hr>
+<h1 id="46-worked-example-changed-resolution">46. Worked Example — Changed Resolution</h1>
+<h2 id="prior-state_1">Prior State</h2>
+<pre><code>Name X → Target A
+</code></pre>
+<h2 id="new-qualified-state">New Qualified State</h2>
+<pre><code>Name X → Target B
+</code></pre>
+<h2 id="drift">Drift</h2>
+<pre><code>dimension:
+  value
+
+magnitude:
+  null
+</code></pre>
+<h2 id="result_2">Result</h2>
+<p>Depending on freshness and Regime:</p>
+<pre><code>prior Truth State superseded
+</code></pre>
+<p>by:</p>
+<pre><code>new Truth State
+</code></pre>
+<p>This demonstrates qualitative Drift.</p>
+<p>No artificial numeric "distance" between Target A and Target B is required.</p>
+<hr>
+<h1 id="47-rtt-dimension-mapping">47. RTT Dimension Mapping</h1>
+<table>
+<thead>
+<tr>
+<th>RTT Dimension</th>
+<th>DNS Crosswalk Interpretation</th>
+<th>General Truth-Service Candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Resolution information propagates through delegation and caching</td>
+<td>Evidence/state propagates through relationships</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Records and Source relationships are compatible within DNS semantics</td>
+<td>Evidence compatibility is domain-semantic</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Records, Sources, delegation, or Lineage change</td>
+<td>Truth structure can change across multiple dimensions</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Qualified states remain incompatible after scope and multiplicity are considered</td>
+<td>Contradiction survives domain qualification</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Namespace, scope, observer, freshness, and record context bound the answer</td>
+<td>Truth remains operationally bounded</td>
+</tr>
+<tr>
+<td><strong>Spin</strong></td>
+<td>Names and authority relationships persist</td>
+<td>Identity / relationship persistence</td>
+</tr>
+<tr>
+<td><strong>Elec</strong></td>
+<td>Zones, Sources, records, scopes, and delegations remain differentiated</td>
+<td>Boundaries and distinctions remain explicit</td>
+</tr>
+<tr>
+<td><strong>Temp</strong></td>
+<td>Cached state ages and must eventually be refreshed</td>
+<td>Truth State freshness and Revalidation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="48-set-mapping">48. SET Mapping</h1>
+<h2 id="spin">Spin</h2>
+<p>DNS expresses persistence through:</p>
+<ul>
+<li>domain names</li>
+<li>zone identity</li>
+<li>delegation relationships</li>
+<li>cached local state</li>
+<li>authority continuity</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>DNS strongly expresses distinction through:</p>
+<ul>
+<li>namespace boundaries</li>
+<li>zones</li>
+<li>record types</li>
+<li>authoritative scope</li>
+<li>delegation</li>
+<li>Source separation</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>DNS expresses temporal transition through:</p>
+<ul>
+<li>record lifetime</li>
+<li>cache aging</li>
+<li>expiry</li>
+<li>Revalidation</li>
+<li>authority changes</li>
+<li>record changes</li>
+</ul>
+<p>The generalized interpretation becomes:</p>
+<blockquote>
+<p><strong>Spin preserves named relationships.</strong></p>
+<p><strong>Elec distinguishes authority, scope, and record structure.</strong></p>
+<p><strong>Temp governs freshness, replacement, and Revalidation.</strong></p>
+</blockquote>
+<hr>
+<h1 id="49-candidate-general-mechanisms-strengthened-by-dns">49. Candidate General Mechanisms Strengthened by DNS</h1>
+<p>Crosswalk #2 strengthens the following NTP-derived candidates:</p>
+<pre><code>Source
+
+Observation
+
+Lineage
+
+Qualification
+
+Coherence
+
+Drift
+
+Regime
+
+Truth-State synthesis
+
+Revalidation
+
+failure transparency
+</code></pre>
+<p>However, several require refinement.</p>
+<hr>
+<h1 id="50-new-candidate-mechanisms-from-dns">50. New Candidate Mechanisms from DNS</h1>
+<p>DNS introduces or strengthens:</p>
+<ol>
+<li>Authority Scope</li>
+<li>Authority Lineage</li>
+<li>delegated authority</li>
+<li>Observer Context</li>
+<li>local Truth-State materialization</li>
+<li>multi-valued Truth State</li>
+<li>explicit qualified absence</li>
+<li>domain-semantic Coherence</li>
+<li>transformation Lineage</li>
+<li>freshness-triggered Revalidation</li>
+<li>stable-value / changed-Lineage Drift</li>
+</ol>
+<p>These candidates should now be challenged by:</p>
+<pre><code>IAM
+PKI
+Policy / IAM
+</code></pre>
+<p>in particular.</p>
+<hr>
+<h1 id="51-candidate-generalization-status">51. Candidate Generalization Status</h1>
+<h2 id="truth-anchor">Truth Anchor</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="source">Source</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="observation">Observation</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="lineage">Lineage</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<h2 id="regime_1">Regime</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strongly strengthened
+</code></pre>
+<h2 id="drift_1">Drift</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened and broadened
+</code></pre>
+<h2 id="revalidation">Revalidation</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened
+</code></pre>
+<h2 id="coherence_1">Coherence</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strengthened but redefined
+</code></pre>
+<h2 id="holdover">Holdover</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — narrowed
+</code></pre>
+<h2 id="observer">Observer</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — newly elevated
+</code></pre>
+<h2 id="authority-scope">Authority Scope</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — new
+</code></pre>
+<h2 id="materialized-truth-state">Materialized Truth State</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — new
+</code></pre>
+<h2 id="explicit-absence">Explicit Absence</h2>
+<pre><code>Status:
+  CANDIDATE_GENERAL — new
+</code></pre>
+<hr>
+<h1 id="52-mechanisms-not-yet-promoted">52. Mechanisms Not Yet Promoted</h1>
+<p>The following should remain outside the canonical generalized core until further evidence exists:</p>
+<pre><code>SourceRole entity
+
+AuthorityEdge entity
+
+Observer entity
+
+MaterializedTruthState entity
+
+PresenceState enum
+
+dedicated Alias / Transformation entity
+</code></pre>
+<p>DNS makes each plausible.</p>
+<p>One crosswalk is not enough to justify promotion.</p>
+<p>The current architecture can represent most of these through:</p>
+<pre><code>Source
+Anchor
+Lineage
+Regime
+accepted_value
+metadata
+</code></pre>
+<p>Further crosswalks should reveal whether that representation becomes structurally inadequate.</p>
+<hr>
+<h1 id="53-scoring-boundary">53. Scoring Boundary</h1>
+<p>The scoring boundary for this crosswalk should be explicit.</p>
+<pre><code>System:
+  Domain Name System
+
+Primary Truth Class:
+  Locational Truth
+
+Evaluated Scope:
+  Foundational DNS naming, delegation,
+  authoritative data, resolution, and caching behavior
+
+Primary Evidence:
+  RFC 1034
+  RFC 1035
+
+Deferred Scope:
+  DNSSEC-specific trust mechanisms
+  specialized resolver behavior
+  vendor-specific implementation details
+  deployment-specific policy
+  extended operational tooling
+</code></pre>
+<p>DNSSEC should not be silently folded into foundational DNS scoring unless the evaluated boundary is expanded explicitly.</p>
+<hr>
+<h1 id="54-preliminary-scoring-status">54. Preliminary Scoring Status</h1>
+<p>Current score status:</p>
+<pre><code>provisional
+</code></pre>
+<p>The crosswalk should not assign numeric scores merely from architectural familiarity.</p>
+<p>Likely areas for detailed scoring include:</p>
+<ul>
+<li>Anchor Quality</li>
+<li>Lineage Visibility</li>
+<li>Regime Awareness</li>
+<li>Freshness / Revalidation</li>
+</ul>
+<p>Areas requiring careful interpretation include:</p>
+<ul>
+<li>Coherence Detection</li>
+<li>Drift Detection</li>
+<li>Paradox Handling</li>
+<li>Correction Discipline</li>
+<li>Failure Transparency</li>
+</ul>
+<p>The scoring rubric itself is being tested by DNS.</p>
+<hr>
+<h1 id="55-provisional-scorecard-template">55. Provisional Scorecard Template</h1>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score</th>
+<th>Delegation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anchor Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Observation Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+<td>Deferred</td>
+</tr>
+</tbody>
+</table>
+<p>Again:</p>
+<blockquote>
+<p><strong>No naked scores.</strong></p>
+</blockquote>
+<p>Each eventual numeric value requires evidence and rationale.</p>
+<hr>
+<h1 id="56-scoring-rubric-challenge">56. Scoring-Rubric Challenge</h1>
+<p>DNS already pressures the rubric in several ways.</p>
+<h2 id="coherence-detection">Coherence Detection</h2>
+<p>Does DNS actively detect Coherence, or does DNS primarily provide deterministic resolution structures from which Coherence is inferred by RTT?</p>
+<p>This distinction matters.</p>
+<h2 id="drift-detection">Drift Detection</h2>
+<p>DNS supports state change, but does the protocol itself explicitly characterize that change as Drift?</p>
+<p>The score must distinguish:</p>
+<pre><code>mechanism exists
+</code></pre>
+<p>from:</p>
+<pre><code>RTT can observe mechanism externally
+</code></pre>
+<h2 id="paradox-handling">Paradox Handling</h2>
+<p>Different legitimate answers are not necessarily contradiction.</p>
+<p>The scoring criterion must not penalize valid multiplicity.</p>
+<h2 id="correction-discipline">Correction Discipline</h2>
+<p>Cache replacement and resolution refresh may not correspond cleanly to NTP-style Correction.</p>
+<p>The criterion may require broader wording.</p>
+<p>DNS is therefore already Revalidating the scoring rubric.</p>
+<hr>
+<h1 id="57-architecture-changes-suggested-by-crosswalk-2">57. Architecture Changes Suggested by Crosswalk #2</h1>
+<p>Crosswalk #2 suggests the following architecture refinements for review.</p>
+<h2 id="refinement-a">Refinement A</h2>
+<p>Authority should be evaluated relative to:</p>
+<pre><code>Source
+Scope
+Subject
+Regime
+Lineage
+</code></pre>
+<h2 id="refinement-b">Refinement B</h2>
+<p>Coherence must support:</p>
+<pre><code>domain-specific compatibility
+</code></pre>
+<p>rather than:</p>
+<pre><code>generic equality
+</code></pre>
+<h2 id="refinement-c">Refinement C</h2>
+<p>Truth-State synthesis must support:</p>
+<pre><code>structured
+multi-valued
+domain-native
+</code></pre>
+<p>accepted values.</p>
+<h2 id="refinement-d">Refinement D</h2>
+<p>Revalidation must support:</p>
+<pre><code>periodic
+expiration-triggered
+event-triggered
+demand-triggered
+</code></pre>
+<p>strategies.</p>
+<h2 id="refinement-e">Refinement E</h2>
+<p>Cached valid state and Holdover state must remain distinct.</p>
+<h2 id="refinement-f">Refinement F</h2>
+<p>Qualified absence and insufficient knowledge must remain distinct.</p>
+<h2 id="refinement-g">Refinement G</h2>
+<p>Stable accepted value does not guarantee stable:</p>
+<pre><code>Source
+Authority
+Lineage
+Regime
+</code></pre>
+<h2 id="refinement-h">Refinement H</h2>
+<p>Observer Context deserves continued evaluation as a candidate first-class concept.</p>
+<hr>
+<h1 id="58-ntp-model-survived-vs-changed">58. NTP Model: Survived vs Changed</h1>
+<p>Crosswalk #2 produces the first real architecture comparison.</p>
+<h2 id="survives-strongly">Survives Strongly</h2>
+<pre><code>Claim
+
+Source
+
+Observation
+
+Lineage
+
+Qualification
+
+Drift
+
+Regime
+
+Truth State
+
+Revalidation
+</code></pre>
+<h2 id="survives-but-changes">Survives but Changes</h2>
+<pre><code>Anchor
+  → must become more scope-aware
+
+Coherence
+  → must become domain-semantic
+
+Correction
+  → broader than clock discipline
+
+freshness
+  → reusable-state lifetime, not only repeated polling
+
+Source relationship
+  → delegation and authority roles matter
+</code></pre>
+<h2 id="narrowed">Narrowed</h2>
+<pre><code>Holdover
+  → not equivalent to cached state
+
+Lineage distance
+  → insufficient without relationship semantics
+</code></pre>
+<h2 id="newly-introduced">Newly Introduced</h2>
+<pre><code>Authority Scope
+
+Authority Lineage
+
+Observer Context
+
+Materialized Truth State
+
+Explicit Absence
+
+Multi-Valued Truth State
+</code></pre>
+<p>This is the first evidence that the crosswalk method is doing its job.</p>
+<hr>
+<h1 id="59-findings">59. Findings</h1>
+<h2 id="finding-1-locational-truth-is-namespace-bounded">Finding 1 — Locational Truth Is Namespace-Bounded</h2>
+<p>A location-like resolution Claim is meaningful only within an applicable namespace and resolution context.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-2-authority-is-scoped">Finding 2 — Authority Is Scoped</h2>
+<p>Authority belongs to a relationship among Source, subject, scope, Lineage, and Regime.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-3-lineage-can-establish-authority">Finding 3 — Lineage Can Establish Authority</h2>
+<p>Lineage is not merely historical provenance.</p>
+<p>It may participate operationally in determining authority.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-4-cached-truth-can-remain-fully-qualified">Finding 4 — Cached Truth Can Remain Fully Qualified</h2>
+<p>A retained local Truth State may remain operationally valid without immediate Source contact.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-5-cache-is-not-holdover">Finding 5 — Cache Is Not Holdover</h2>
+<p>Fresh retained state and degraded provisional state must remain distinct.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-6-multi-valued-truth-need-not-be-contradictory">Finding 6 — Multi-Valued Truth Need Not Be Contradictory</h2>
+<p>Truth-State cardinality is domain-dependent.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-7-absence-is-not-indeterminate">Finding 7 — Absence Is Not Indeterminate</h2>
+<p>Qualified absence and insufficient evidence are different Truth conditions.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-8-coherence-is-domain-semantic">Finding 8 — Coherence Is Domain-Semantic</h2>
+<p>Agreement cannot be reduced to generic value equality.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-9-stable-value-can-hide-structural-drift">Finding 9 — Stable Value Can Hide Structural Drift</h2>
+<p>Source, authority, or Lineage may change while the accepted value remains constant.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-10-revalidation-generalizes-beyond-polling">Finding 10 — Revalidation Generalizes Beyond Polling</h2>
+<p>Revalidation may be triggered by expiration, demand, events, or schedule.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="60-architecture-challenge-result">60. Architecture Challenge Result</h1>
+<p>The NTP-derived pattern was:</p>
+<pre><code>Anchor
+  ↓
+Source
+  ↓
+Observation
+  ↓
+Lineage
+  ↓
+Qualification
+  ↓
+Coherence
+  ↓
+Drift
+  ↓
+Truth State
+  ↓
+Correction
+  ↓
+Revalidation
+</code></pre>
+<p>DNS does not destroy this pattern.</p>
+<p>It makes it richer:</p>
+<pre><code>SCOPE / NAMESPACE
+      ↓
+BOUNDED AUTHORITY
+      ↓
+AUTHORITY LINEAGE
+      ↓
+SOURCE / INTERMEDIARY
+      ↓
+OBSERVATION
+      ↓
+LOCAL MATERIALIZATION
+      ↓
+FRESHNESS
+      ↓
+QUALIFICATION
+      ↓
+DOMAIN-SEMANTIC COHERENCE
+      ↓
+MULTIDIMENSIONAL DRIFT
+      ↓
+REGIME-QUALIFIED TRUTH STATE
+      │
+      ├── single value
+      ├── multiple values
+      └── explicit absence
+      ↓
+CORRECTION / REPLACEMENT
+      ↓
+REVALIDATION
+</code></pre>
+<p>Several NTP-derived abstractions survive.</p>
+<p>Several become more general.</p>
+<p>Several become narrower.</p>
+<p>New candidate structures appear.</p>
+<p>That is a successful falsification pass.</p>
+<hr>
+<h1 id="61-next-crosswalk-challenge">61. Next Crosswalk Challenge</h1>
+<p>Crosswalk #3 examines:</p>
+<pre><code>IAM
+  ↓
+Identity Truth
+</code></pre>
+<p>The governing question becomes:</p>
+<blockquote>
+<p><strong>Who or what is this?</strong></p>
+</blockquote>
+<p>IAM should directly challenge several DNS-derived candidates:</p>
+<pre><code>Authority Scope
+
+Observer Context
+
+delegated authority
+
+Lineage
+
+freshness
+
+explicit absence
+
+Source roles
+</code></pre>
+<p>It should also pressure the architecture with concepts such as:</p>
+<ul>
+<li>subject</li>
+<li>credential</li>
+<li>authentication context</li>
+<li>identity lifecycle</li>
+<li>federation</li>
+<li>revocation</li>
+</ul>
+<p>The central question becomes:</p>
+<blockquote>
+<p><strong>Does identity belong to an entity, or does operational identity emerge from a qualified relationship among subject, evidence, authority, observer, and Regime?</strong></p>
+</blockquote>
+<hr>
+<h1 id="62-canonical-locational-truth-statement">62. Canonical Locational Truth Statement</h1>
+<blockquote>
+<p><strong>Locational Truth is not merely an address. It is a Regime-qualified relationship among a named subject, namespace, bounded authority, resolution Lineage, available Observations, observer context, freshness, and the domain semantics governing valid results.</strong></p>
+</blockquote>
+<p>A Locational Truth State may legitimately be:</p>
+<ul>
+<li>single-valued</li>
+<li>multi-valued</li>
+<li>explicitly absent</li>
+</ul>
+<p>without becoming:</p>
+<ul>
+<li>contested</li>
+<li>paradoxical</li>
+<li>indeterminate</li>
+</ul>
+<p>unless the governing domain semantics require that interpretation.</p>
+<hr>
+<h1 id="63-canonical-crosswalk-finding">63. Canonical Crosswalk Finding</h1>
+<p>Crosswalk #2 demonstrates that:</p>
+<blockquote>
+<p>**A Truth</p>
+</blockquote>
   </main>
 </body>
 </html>

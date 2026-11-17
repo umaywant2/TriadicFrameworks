@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/architecture/truth_service_components.md">
-  <title>truth_service_components</title>
+  <title>RTT Resonance Truth Service — Components</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2091 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_architecture_truth_service_components_" src="https://github.com/user-attachments/assets/2b614d15-8803-42c7-ac22-926576c18d25" /></p>
+<h1 id="rtt-resonance-truth-service-components">RTT Resonance Truth Service — Components</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Component Model<br>
+<strong>Framework:</strong> Resonance-Time Theory (RTT)<br>
+<strong>Status:</strong> Research Architecture / Reference Model<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This document defines the functional components of the RTT Resonance Truth Service.</p>
+<p>The conceptual architecture is defined in:</p>
+<pre><code>truth_service_architecture.md
+</code></pre>
+<p>The machine-facing API contract is defined in:</p>
+<pre><code>truth_service_api.yaml
+</code></pre>
+<p>The logical entity model is defined in:</p>
+<pre><code>truth_service_data_model.md
+</code></pre>
+<p>This document focuses on a different question:</p>
+<blockquote>
+<p><strong>Which component owns each stage of the operational truth lifecycle?</strong></p>
+</blockquote>
+<p>The component model begins with a Claim and a declared Regime, gathers and qualifies Observations, evaluates their structural relationships, synthesizes a Truth State, governs possible Correction, and schedules future Revalidation.</p>
+<p>The primary processing sequence is:</p>
+<pre><code>Claim Intake
+    ↓
+Truth-Class Resolver
+    ↓
+Regime Resolver
+    ↓
+Anchor / Source Registry
+    ↓
+Observation Intake
+    ↓
+Lineage Resolver
+    ↓
+Qualification Engine
+    ↓
+Coherence Engine
+    ↓
+Drift Engine
+    ↓
+Paradox Register
+    ↓
+Truth-State Synthesizer
+    ↓
+Correction Policy Engine
+    ↓
+Revalidation Scheduler
+    ↓
+Audit + Lineage Store
+</code></pre>
+<hr>
+<h1 id="1-component-design-principles">1. Component Design Principles</h1>
+<p>The component architecture follows several rules.</p>
+<h2 id="11-components-own-decisions">1.1 Components Own Decisions</h2>
+<p>Each major structural decision should have an identifiable owner.</p>
+<p>Examples:</p>
+<ul>
+<li>Observation eligibility → Qualification Engine</li>
+<li>Observation agreement → Coherence Engine</li>
+<li>displacement → Drift Engine</li>
+<li>unresolved contradiction → Paradox Register</li>
+<li>operational boundary → Regime Resolver</li>
+<li>resulting state → Truth-State Synthesizer</li>
+<li>downstream adjustment → Correction Policy Engine</li>
+<li>future reevaluation → Revalidation Scheduler</li>
+</ul>
+<p>This avoids hiding unrelated decisions inside one generalized evaluator.</p>
+<hr>
+<h2 id="12-components-preserve-evidence">1.2 Components Preserve Evidence</h2>
+<p>A component should not silently discard information simply because that information does not contribute to the current Truth State.</p>
+<p>For example:</p>
+<pre><code>Observation
+    ↓
+Qualification Engine
+    ↓
+REJECTED FROM SYNTHESIS
+</code></pre>
+<p>does not imply:</p>
+<pre><code>DELETE OBSERVATION
+</code></pre>
+<p>The rejected Observation remains part of the Evaluation record.</p>
+<hr>
+<h2 id="13-components-may-return-indeterminate-results">1.3 Components May Return Indeterminate Results</h2>
+<p>An internal component should be able to report that it cannot establish a sufficiently qualified result.</p>
+<p>Examples include:</p>
+<pre><code>lineage: incomplete
+
+coherence: indeterminate
+
+drift: unknown
+
+regime: unresolved
+</code></pre>
+<p>Such states should propagate visibly rather than automatically being replaced with defaults.</p>
+<hr>
+<h2 id="14-components-do-not-manufacture-precision">1.4 Components Do Not Manufacture Precision</h2>
+<p>If a domain provides measurable quantities, components may preserve them.</p>
+<p>Example:</p>
+<pre><code>drift:
+  magnitude: 14
+  unit: milliseconds
+</code></pre>
+<p>If the domain does not provide meaningful numeric precision:</p>
+<pre><code>drift:
+  magnitude: null
+  dimension: semantic
+</code></pre>
+<p>remains valid.</p>
+<hr>
+<h2 id="15-runtime-and-research-components-remain-separate">1.5 Runtime and Research Components Remain Separate</h2>
+<p>The runtime component plane evaluates Claims.</p>
+<p>The research component plane evaluates operational reference systems.</p>
+<p>Research-system scores should never influence runtime Truth-State synthesis.</p>
+<hr>
+<h1 id="2-component-topology">2. Component Topology</h1>
+<p>The primary component topology is:</p>
+<pre><code>┌──────────────────────────┐
+│       Claim Intake       │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│ Truth-Class Resolver     │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│     Regime Resolver      │
+└────────────┬─────────────┘
+             │
+      ┌──────┴──────┐
+      │             │
+      ▼             ▼
+┌──────────────┐  ┌──────────────────┐
+│ Anchor       │  │ Source           │
+│ Registry     │  │ Registry         │
+└──────┬───────┘  └────────┬─────────┘
+       │                   │
+       └─────────┬─────────┘
+                 ▼
+┌──────────────────────────┐
+│    Observation Intake    │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│    Lineage Resolver      │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│  Qualification Engine    │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│    Coherence Engine      │
+└────────────┬─────────────┘
+             │
+      ┌──────┴──────┐
+      │             │
+      ▼             ▼
+┌──────────────┐  ┌──────────────────┐
+│ Drift Engine │  │ Paradox Register │
+└──────┬───────┘  └────────┬─────────┘
+       │                   │
+       └─────────┬─────────┘
+                 ▼
+┌──────────────────────────┐
+│ Truth-State Synthesizer  │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│ Correction Policy Engine │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│ Revalidation Scheduler   │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│  Audit + Lineage Store   │
+└──────────────────────────┘
+</code></pre>
+<p>The topology represents logical responsibility.</p>
+<p>It does not require every logical component to become a separately deployed service.</p>
+<hr>
+<h1 id="3-claim-intake">3. Claim Intake</h1>
+<h2 id="responsibility">Responsibility</h2>
+<p>Claim Intake owns registration and structural validation of Claims.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>What is being asserted?</strong></p>
+</blockquote>
+<h2 id="inputs">Inputs</h2>
+<ul>
+<li>statement</li>
+<li>declared Truth Classes</li>
+<li>intended use</li>
+<li>external reference</li>
+<li>request metadata</li>
+</ul>
+<h2 id="outputs">Outputs</h2>
+<ul>
+<li>Claim</li>
+<li>Claim identifier</li>
+<li>registration status</li>
+</ul>
+<h2 id="responsibilities">Responsibilities</h2>
+<p>Claim Intake should:</p>
+<ul>
+<li>preserve the original statement</li>
+<li>assign a stable Claim identifier</li>
+<li>validate required fields</li>
+<li>preserve intended use</li>
+<li>preserve externally supplied references</li>
+<li>record registration time</li>
+</ul>
+<h2 id="non-responsibilities">Non-Responsibilities</h2>
+<p>Claim Intake should not:</p>
+<ul>
+<li>determine whether the Claim is true</li>
+<li>select Sources</li>
+<li>resolve a Regime</li>
+<li>assign confidence</li>
+<li>synthesize a Truth State</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Input:</p>
+<pre><code>statement:
+  "The current reference time is 09:00:00 UTC."
+
+truth_classes:
+  - temporal
+</code></pre>
+<p>Output:</p>
+<pre><code>claim_id:
+  claim-temporal-001
+
+status:
+  registered
+</code></pre>
+<p>No truth determination has occurred.</p>
+<hr>
+<h1 id="4-truth-class-resolver">4. Truth-Class Resolver</h1>
+<h2 id="responsibility_1">Responsibility</h2>
+<p>The Truth-Class Resolver determines which operational Truth Classes participate in evaluation.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>What kinds of truth are present in this Claim?</strong></p>
+</blockquote>
+<h2 id="truth-classes">Truth Classes</h2>
+<p>The current classes are:</p>
+<ul>
+<li>Temporal</li>
+<li>Locational</li>
+<li>Identity</li>
+<li>Integrity</li>
+<li>Authority</li>
+<li>State</li>
+<li>Transactional</li>
+<li>Intent</li>
+<li>Observational</li>
+<li>Lineage</li>
+</ul>
+<h2 id="inputs_1">Inputs</h2>
+<ul>
+<li>Claim</li>
+<li>declared Truth Classes</li>
+<li>optional classification evidence</li>
+</ul>
+<h2 id="outputs_1">Outputs</h2>
+<ul>
+<li>confirmed Truth Classes</li>
+<li>suggested Truth Classes</li>
+<li>unresolved classifications</li>
+<li>rationale</li>
+</ul>
+<h2 id="design-rule">Design Rule</h2>
+<p>Explicitly declared Truth Classes should remain distinguishable from inferred or suggested classes.</p>
+<p>For example:</p>
+<pre><code>declared:
+  - integrity
+
+suggested:
+  - temporal
+  - authority
+  - lineage
+</code></pre>
+<p>The architecture should not silently expand a Claim's declared meaning.</p>
+<h2 id="example_1">Example</h2>
+<p>Claim:</p>
+<blockquote>
+<p>This TLS certificate is valid.</p>
+</blockquote>
+<p>Potential dimensions:</p>
+<pre><code>Identity
+Integrity
+Authority
+Temporal
+Lineage
+</code></pre>
+<p>The resolver identifies inspection dimensions.</p>
+<p>It does not determine certificate validity.</p>
+<hr>
+<h1 id="5-regime-resolver">5. Regime Resolver</h1>
+<h2 id="responsibility_2">Responsibility</h2>
+<p>The Regime Resolver determines the operational boundary under which the Claim should be evaluated.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Under what conditions must this result remain valid?</strong></p>
+</blockquote>
+<h2 id="inputs_2">Inputs</h2>
+<ul>
+<li>Claim</li>
+<li>Truth Classes</li>
+<li>requested Regime</li>
+<li>policy constraints</li>
+<li>observer context</li>
+<li>intended use</li>
+</ul>
+<h2 id="outputs_2">Outputs</h2>
+<ul>
+<li>resolved Regime</li>
+<li>Regime identifier</li>
+<li>compatibility requirements</li>
+<li>unresolved Regime conflicts</li>
+</ul>
+<h2 id="regime-properties">Regime Properties</h2>
+<p>A Regime may define:</p>
+<ul>
+<li>domain</li>
+<li>observer context</li>
+<li>jurisdiction</li>
+<li>applicable scope</li>
+<li>policy version</li>
+<li>precision requirement</li>
+<li>maximum Observation age</li>
+<li>minimum independent Sources</li>
+<li>consequence level</li>
+<li>permitted Truth States</li>
+<li>permitted Correction modes</li>
+</ul>
+<h2 id="example_2">Example</h2>
+<p>For the same temporal Claim:</p>
+<pre><code>Regime A:
+  display clock
+  maximum error: moderate
+  consequence: low
+
+Regime B:
+  transaction ordering
+  maximum error: strict
+  consequence: high
+</code></pre>
+<p>The observations may be identical.</p>
+<p>The operational result may differ.</p>
+<h2 id="failure-behavior">Failure Behavior</h2>
+<p>If no suitable Regime is available:</p>
+<pre><code>regime:
+  unresolved
+</code></pre>
+<p>The service should not silently apply an arbitrary default Regime.</p>
+<hr>
+<h1 id="6-anchor-registry">6. Anchor Registry</h1>
+<h2 id="responsibility_3">Responsibility</h2>
+<p>The Anchor Registry maintains recognized bounded reference authorities.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Which references may legitimately anchor this evaluation?</strong></p>
+</blockquote>
+<h2 id="inputs_3">Inputs</h2>
+<ul>
+<li>Anchor registrations</li>
+<li>Anchor status changes</li>
+<li>Regime</li>
+<li>domain</li>
+<li>validity information</li>
+<li>revocation information</li>
+</ul>
+<h2 id="outputs_3">Outputs</h2>
+<ul>
+<li>eligible Anchors</li>
+<li>Anchor status</li>
+<li>Anchor scope</li>
+<li>validity boundaries</li>
+<li>limitations</li>
+</ul>
+<h2 id="anchor-states">Anchor States</h2>
+<p>An Anchor may be:</p>
+<ul>
+<li>active</li>
+<li>degraded</li>
+<li>withdrawn</li>
+<li>revoked</li>
+<li>unknown</li>
+</ul>
+<h2 id="design-rule_1">Design Rule</h2>
+<p>Anchor authority is bounded.</p>
+<p>An Anchor recognized in one Regime should not automatically be considered authoritative in another.</p>
+<h2 id="example_3">Example</h2>
+<p>For Temporal Truth:</p>
+<pre><code>Anchor:
+  UTC reference
+</code></pre>
+<p>For Identity Truth:</p>
+<pre><code>Anchor:
+  recognized identity authority
+</code></pre>
+<p>For Intent Truth:</p>
+<pre><code>Anchor:
+  declared configuration or policy
+</code></pre>
+<p>The abstraction is structural, not domain-specific.</p>
+<hr>
+<h1 id="7-source-registry">7. Source Registry</h1>
+<h2 id="responsibility_4">Responsibility</h2>
+<p>The Source Registry maintains entities capable of supplying Observations.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Who or what produced this Observation?</strong></p>
+</blockquote>
+<h2 id="inputs_4">Inputs</h2>
+<ul>
+<li>Source registration</li>
+<li>Source status</li>
+<li>associated Anchor</li>
+<li>domain</li>
+<li>Lineage distance</li>
+<li>independence classification</li>
+<li>validity information</li>
+</ul>
+<h2 id="outputs_4">Outputs</h2>
+<ul>
+<li>Source records</li>
+<li>Source status</li>
+<li>Anchor relationship</li>
+<li>Lineage distance</li>
+<li>independence metadata</li>
+</ul>
+<h2 id="source-states">Source States</h2>
+<p>Initial Source states include:</p>
+<ul>
+<li>active</li>
+<li>degraded</li>
+<li>unavailable</li>
+<li>rejected</li>
+<li>unknown</li>
+</ul>
+<h2 id="design-rule_2">Design Rule</h2>
+<p>The Source Registry describes Sources.</p>
+<p>It does not by itself decide whether a Source is qualified for a particular Evaluation.</p>
+<p>That decision belongs to the Qualification Engine.</p>
+<hr>
+<h1 id="8-observation-intake">8. Observation Intake</h1>
+<h2 id="responsibility_5">Responsibility</h2>
+<p>Observation Intake registers evidence associated with Claims.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>What was actually observed?</strong></p>
+</blockquote>
+<h2 id="inputs_5">Inputs</h2>
+<ul>
+<li>Claim identifier</li>
+<li>Source identifier</li>
+<li>optional Anchor identifier</li>
+<li>observed value</li>
+<li>observation time</li>
+<li>receipt time</li>
+<li>expiration time</li>
+<li>Lineage</li>
+<li>integrity information</li>
+<li>Source-declared confidence</li>
+<li>domain metadata</li>
+</ul>
+<h2 id="outputs_5">Outputs</h2>
+<ul>
+<li>Observation</li>
+<li>Observation identifier</li>
+<li>registration time</li>
+</ul>
+<h2 id="design-rule_3">Design Rule</h2>
+<p>Observation Intake should preserve domain-native values.</p>
+<p>It should not force all Observations into one scalar type.</p>
+<h3 id="temporal-example">Temporal Example</h3>
+<pre><code>value:
+  timestamp: ...
+  offset_ms: ...
+  delay_ms: ...
+  jitter_ms: ...
+</code></pre>
+<h3 id="integrity-example">Integrity Example</h3>
+<pre><code>value:
+  digest: ...
+  signature_status: ...
+</code></pre>
+<h3 id="state-example">State Example</h3>
+<pre><code>value:
+  declared_state: ...
+  observed_state: ...
+</code></pre>
+<h2 id="non-responsibilities_1">Non-Responsibilities</h2>
+<p>Observation Intake does not determine:</p>
+<ul>
+<li>qualification</li>
+<li>Coherence</li>
+<li>Drift</li>
+<li>Truth State</li>
+</ul>
+<p>It preserves evidence for later evaluation.</p>
+<hr>
+<h1 id="9-lineage-resolver">9. Lineage Resolver</h1>
+<h2 id="responsibility_6">Responsibility</h2>
+<p>The Lineage Resolver reconstructs the path connecting an Observation to Sources, Anchors, dependencies, and transformations.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>How did this Observation arrive here?</strong></p>
+</blockquote>
+<h2 id="inputs_6">Inputs</h2>
+<ul>
+<li>Observation</li>
+<li>Source</li>
+<li>Anchor</li>
+<li>supplied Lineage hops</li>
+<li>known dependencies</li>
+<li>transformation records</li>
+</ul>
+<h2 id="outputs_6">Outputs</h2>
+<ul>
+<li>Lineage graph</li>
+<li>Lineage distance</li>
+<li>transformation count</li>
+<li>known gaps</li>
+<li>completeness state</li>
+</ul>
+<h2 id="example_4">Example</h2>
+<pre><code>Anchor UTC
+    ↓
+Source A
+    ↓
+Observation 1
+</code></pre>
+<p>A more complex path might be:</p>
+<pre><code>Anchor
+  ↓
+Authority
+  ↓
+Upstream Source
+  ↓
+Aggregator
+  ↓
+Transformation
+  ↓
+Local Source
+  ↓
+Observation
+</code></pre>
+<h2 id="lineage-result">Lineage Result</h2>
+<p>A result may indicate:</p>
+<pre><code>complete: true
+</code></pre>
+<p>or:</p>
+<pre><code>complete: false
+gaps:
+  - upstream dependency unavailable
+</code></pre>
+<h2 id="design-rule_4">Design Rule</h2>
+<p>The Lineage Resolver should expose missing Lineage.</p>
+<p>It should not invent provenance to produce a complete graph.</p>
+<hr>
+<h1 id="10-qualification-engine">10. Qualification Engine</h1>
+<h2 id="responsibility_7">Responsibility</h2>
+<p>The Qualification Engine determines whether Observations may participate in the current Evaluation.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Is this Observation suitable for this evaluation under this Regime?</strong></p>
+</blockquote>
+<h2 id="inputs_7">Inputs</h2>
+<ul>
+<li>Observation</li>
+<li>Source</li>
+<li>Anchor</li>
+<li>Lineage</li>
+<li>Regime</li>
+<li>current evaluation time</li>
+</ul>
+<h2 id="qualification-dimensions">Qualification Dimensions</h2>
+<p>Evaluation may consider:</p>
+<ul>
+<li>freshness</li>
+<li>Source status</li>
+<li>Anchor status</li>
+<li>Lineage completeness</li>
+<li>Regime compatibility</li>
+<li>precision compatibility</li>
+<li>integrity</li>
+<li>Source independence</li>
+<li>duplication</li>
+<li>structural validity</li>
+</ul>
+<h2 id="outputs_7">Outputs</h2>
+<p>Each Observation receives a Qualification result:</p>
+<ul>
+<li>qualified</li>
+<li>degraded</li>
+<li>rejected</li>
+<li>expired</li>
+<li>indeterminate</li>
+</ul>
+<p>Each result should include rationale.</p>
+<h2 id="example_5">Example</h2>
+<pre><code>observation_id:
+  obs-003
+
+qualification:
+  status: rejected
+
+  reason:
+    observation exceeds regime maximum age
+</code></pre>
+<p>This means:</p>
+<blockquote>
+<p>Observation 003 cannot participate in the current synthesis.</p>
+</blockquote>
+<p>It does not mean:</p>
+<blockquote>
+<p>Observation 003 was never true.</p>
+</blockquote>
+<h2 id="critical-constraint">Critical Constraint</h2>
+<pre><code>REJECTED FROM SYNTHESIS
+        ≠
+FACTUALLY FALSE
+</code></pre>
+<hr>
+<h1 id="11-coherence-engine">11. Coherence Engine</h1>
+<h2 id="responsibility_8">Responsibility</h2>
+<p>The Coherence Engine evaluates relationships among qualified Observations.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Do these Observations form a mutually usable state?</strong></p>
+</blockquote>
+<h2 id="inputs_8">Inputs</h2>
+<ul>
+<li>qualified Observations</li>
+<li>Source identities</li>
+<li>Source independence</li>
+<li>Lineage relationships</li>
+<li>Regime</li>
+<li>domain-specific comparison rules</li>
+</ul>
+<h2 id="outputs_8">Outputs</h2>
+<ul>
+<li>Coherence State</li>
+<li>clusters</li>
+<li>supporting Observations</li>
+<li>dissenting Observations</li>
+<li>outliers</li>
+<li>rationale</li>
+</ul>
+<h2 id="coherence-states">Coherence States</h2>
+<ul>
+<li>coherent</li>
+<li>weakly_coherent</li>
+<li>fragmented</li>
+<li>contested</li>
+<li>inverted</li>
+<li>indeterminate</li>
+</ul>
+<h2 id="example_6">Example</h2>
+<pre><code>Observation A → X
+Observation B → X
+Observation C → Y
+</code></pre>
+<p>Potential output:</p>
+<pre><code>coherence:
+  coherent
+
+supporting:
+  A
+  B
+
+dissenting:
+  C
+</code></pre>
+<p>That result is only justified if Source independence and other structural conditions support it.</p>
+<h2 id="shared-lineage">Shared Lineage</h2>
+<p>Suppose:</p>
+<pre><code>Upstream U
+  ├── A → X
+  ├── B → X
+  └── C → X
+</code></pre>
+<p>The engine should avoid treating A, B, and C automatically as three independent confirmations.</p>
+<p>Lineage informs Coherence.</p>
+<hr>
+<h1 id="12-coherence-cluster-manager">12. Coherence Cluster Manager</h1>
+<h2 id="responsibility_9">Responsibility</h2>
+<p>The Coherence Cluster Manager groups mutually compatible qualified Observations without forcing incompatible observations into a common result.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Which Observations belong to the same coherent field?</strong></p>
+</blockquote>
+<h2 id="inputs_9">Inputs</h2>
+<ul>
+<li>qualified Observations</li>
+<li>comparison relationships</li>
+<li>Source independence</li>
+<li>Lineage</li>
+<li>Regime</li>
+</ul>
+<h2 id="outputs_9">Outputs</h2>
+<p>One or more Coherence clusters.</p>
+<p>Example:</p>
+<pre><code>Cluster A
+  obs-001
+  obs-002
+  obs-003
+
+Cluster B
+  obs-004
+  obs-005
+</code></pre>
+<h2 id="cluster-classification">Cluster Classification</h2>
+<p>A cluster may be classified as:</p>
+<ul>
+<li>supporting</li>
+<li>dissenting</li>
+<li>outlier</li>
+<li>unresolved</li>
+</ul>
+<h2 id="design-rule_5">Design Rule</h2>
+<p>Cluster formation precedes final selection.</p>
+<p>The system should not begin with a desired answer and then assign Observations around it.</p>
+<hr>
+<h1 id="13-drift-engine">13. Drift Engine</h1>
+<h2 id="responsibility_10">Responsibility</h2>
+<p>The Drift Engine evaluates displacement among relevant states.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>How far has the state moved from its reference, prior state, or expectation?</strong></p>
+</blockquote>
+<h2 id="inputs_10">Inputs</h2>
+<p>Possible comparisons include:</p>
+<ul>
+<li>local state vs qualified Observation</li>
+<li>prior Truth State vs current evidence</li>
+<li>declared state vs observed state</li>
+<li>Source vs Source</li>
+<li>expected state vs actual state</li>
+<li>Regime requirements vs current condition</li>
+</ul>
+<h2 id="drift-dimensions">Drift Dimensions</h2>
+<p>Initial dimensions include:</p>
+<ul>
+<li>value</li>
+<li>semantic</li>
+<li>Source</li>
+<li>Lineage</li>
+<li>temporal</li>
+<li>Regime</li>
+<li>confidence</li>
+<li>policy</li>
+</ul>
+<h2 id="outputs_10">Outputs</h2>
+<p>A Drift State may contain:</p>
+<ul>
+<li>magnitude</li>
+<li>unit</li>
+<li>direction</li>
+<li>dimensions</li>
+<li>bounded status</li>
+<li>baseline reference</li>
+<li>local value</li>
+<li>observed value</li>
+<li>rationale</li>
+</ul>
+<h2 id="numeric-example">Numeric Example</h2>
+<pre><code>magnitude:
+  14
+
+unit:
+  milliseconds
+
+dimension:
+  temporal
+
+bounded:
+  true
+</code></pre>
+<h2 id="non-numeric-example">Non-Numeric Example</h2>
+<pre><code>magnitude:
+  null
+
+dimension:
+  semantic
+
+direction:
+  unknown
+
+bounded:
+  null
+</code></pre>
+<h2 id="design-rule_6">Design Rule</h2>
+<p>The Drift Engine may report that Drift exists without declaring whether the Drift is acceptable.</p>
+<p>Acceptance is Regime-dependent.</p>
+<hr>
+<h1 id="14-paradox-register">14. Paradox Register</h1>
+<h2 id="responsibility_11">Responsibility</h2>
+<p>The Paradox Register preserves unresolved qualified contradictions.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Which contradictions remain after qualification and Coherence analysis?</strong></p>
+</blockquote>
+<h2 id="inputs_11">Inputs</h2>
+<ul>
+<li>qualified Observations</li>
+<li>Coherence clusters</li>
+<li>Drift findings</li>
+<li>applicable Regimes</li>
+</ul>
+<h2 id="outputs_11">Outputs</h2>
+<p>Paradox objects containing:</p>
+<ul>
+<li>Paradox identifier</li>
+<li>type</li>
+<li>competing Observations</li>
+<li>competing clusters</li>
+<li>applicable Regimes</li>
+<li>description</li>
+<li>containment mode</li>
+<li>resolution condition</li>
+<li>status</li>
+</ul>
+<h2 id="paradox-types">Paradox Types</h2>
+<h3 id="structural">Structural</h3>
+<p>Valid structures imply incompatible states.</p>
+<h3 id="semantic">Semantic</h3>
+<p>The same language carries incompatible meanings.</p>
+<h3 id="regime">Regime</h3>
+<p>Different states are valid under different operational boundaries.</p>
+<h2 id="containment-modes">Containment Modes</h2>
+<ul>
+<li>preserve</li>
+<li>isolate</li>
+<li>separate_by_regime</li>
+<li>escalate</li>
+<li>resolved</li>
+</ul>
+<h2 id="design-rule_7">Design Rule</h2>
+<p>The register does not exist solely to remove contradictions.</p>
+<p>Its first function is to preserve and characterize them.</p>
+<hr>
+<h1 id="15-truth-state-synthesizer">15. Truth-State Synthesizer</h1>
+<h2 id="responsibility_12">Responsibility</h2>
+<p>The Truth-State Synthesizer integrates evaluation outputs into a qualified operational state.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Given everything presently known, what state can this service support?</strong></p>
+</blockquote>
+<h2 id="inputs_12">Inputs</h2>
+<ul>
+<li>Claim</li>
+<li>Truth Classes</li>
+<li>Regime</li>
+<li>qualified Observations</li>
+<li>selected Sources</li>
+<li>Anchors</li>
+<li>Lineage</li>
+<li>Coherence State</li>
+<li>Drift State</li>
+<li>Paradoxes</li>
+</ul>
+<h2 id="outputs_12">Outputs</h2>
+<p>A Truth State containing:</p>
+<ul>
+<li>status</li>
+<li>accepted value</li>
+<li>Regime</li>
+<li>Truth Classes</li>
+<li>Anchor references</li>
+<li>Source references</li>
+<li>Observation references</li>
+<li>Lineage references</li>
+<li>Coherence</li>
+<li>Drift</li>
+<li>Paradoxes</li>
+<li>uncertainty</li>
+<li>permitted uses</li>
+<li>prohibited uses</li>
+<li>Correction Policy</li>
+<li>evaluation time</li>
+<li>expiration time</li>
+<li>Revalidation conditions</li>
+</ul>
+<h2 id="supported-truth-states">Supported Truth States</h2>
+<ul>
+<li>declared</li>
+<li>observed</li>
+<li>corroborated</li>
+<li>operationally_accepted</li>
+<li>contested</li>
+<li>degraded</li>
+<li>held_over</li>
+<li>expired</li>
+<li>rejected</li>
+<li>indeterminate</li>
+</ul>
+<h2 id="null-result">Null Result</h2>
+<p>The synthesizer must be able to produce:</p>
+<pre><code>status:
+  indeterminate
+
+accepted_value:
+  null
+</code></pre>
+<p>This is a successful Evaluation.</p>
+<h2 id="design-rule_8">Design Rule</h2>
+<p>The synthesizer integrates component results.</p>
+<p>It should not silently redo their work using hidden rules.</p>
+<hr>
+<h1 id="16-correction-policy-engine">16. Correction Policy Engine</h1>
+<h2 id="responsibility_13">Responsibility</h2>
+<p>The Correction Policy Engine determines what downstream response is permitted when a Truth State differs from current operational state.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>What may change because of this Truth State?</strong></p>
+</blockquote>
+<h2 id="inputs_13">Inputs</h2>
+<ul>
+<li>Truth State</li>
+<li>prior Truth State</li>
+<li>Drift</li>
+<li>Regime</li>
+<li>consequence level</li>
+<li>configured policy</li>
+</ul>
+<h2 id="outputs_13">Outputs</h2>
+<p>A Correction Policy.</p>
+<h2 id="supported-modes">Supported Modes</h2>
+<ul>
+<li>none</li>
+<li>step</li>
+<li>gradual</li>
+<li>quarantine</li>
+<li>dual_state</li>
+<li>human_escalation</li>
+<li>holdover</li>
+<li>fail_closed</li>
+<li>fail_bounded</li>
+</ul>
+<h2 id="example_7">Example</h2>
+<pre><code>drift:
+  magnitude: 14
+  unit: milliseconds
+  bounded: true
+
+correction:
+  mode: gradual
+</code></pre>
+<p>A different Regime may produce:</p>
+<pre><code>correction:
+  mode: quarantine
+</code></pre>
+<p>from the same Drift.</p>
+<h2 id="critical-constraint_1">Critical Constraint</h2>
+<p>The Correction Policy Engine does not determine what is true.</p>
+<p>It determines what action is permitted in response to a Truth State.</p>
+<hr>
+<h1 id="17-revalidation-scheduler">17. Revalidation Scheduler</h1>
+<h2 id="responsibility_14">Responsibility</h2>
+<p>The Revalidation Scheduler determines when a Truth State must be evaluated again.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>When does this state need to be challenged?</strong></p>
+</blockquote>
+<h2 id="inputs_14">Inputs</h2>
+<ul>
+<li>Truth State</li>
+<li>Regime</li>
+<li>expiration</li>
+<li>Source status</li>
+<li>Anchor status</li>
+<li>Drift</li>
+<li>paradox status</li>
+<li>configured lifecycle rules</li>
+</ul>
+<h2 id="triggers">Triggers</h2>
+<p>Initial Revalidation triggers include:</p>
+<ul>
+<li>elapsed time</li>
+<li>expiration</li>
+<li>Source change</li>
+<li>Anchor change</li>
+<li>Regime change</li>
+<li>contradictory Observation</li>
+<li>excessive Drift</li>
+<li>reduced Source diversity</li>
+<li>policy change</li>
+<li>manual challenge</li>
+</ul>
+<h2 id="outputs_14">Outputs</h2>
+<ul>
+<li>next Revalidation time</li>
+<li>active Revalidation triggers</li>
+<li>Revalidation request</li>
+</ul>
+<h2 id="lifecycle">Lifecycle</h2>
+<pre><code>ACCEPT
+  ↓
+USE
+  ↓
+AGE
+  ↓
+REVALIDATE
+  │
+  ├── RENEW
+  ├── DEGRADE
+  ├── CONTEST
+  ├── HOLD OVER
+  ├── REJECT
+  └── EXPIRE
+</code></pre>
+<h2 id="design-rule_9">Design Rule</h2>
+<p>Revalidation creates a new Evaluation.</p>
+<p>It does not rewrite the old Evaluation.</p>
+<hr>
+<h1 id="18-holdover-manager">18. Holdover Manager</h1>
+<h2 id="responsibility_15">Responsibility</h2>
+<p>The Holdover Manager governs provisional continuity when fresh qualified evidence temporarily becomes unavailable.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>May the previous Truth State remain provisionally usable?</strong></p>
+</blockquote>
+<h2 id="inputs_15">Inputs</h2>
+<ul>
+<li>previous Truth State</li>
+<li>time since last qualified Evaluation</li>
+<li>historical stability</li>
+<li>expected Drift</li>
+<li>Regime</li>
+<li>consequence level</li>
+<li>Source availability</li>
+</ul>
+<h2 id="outputs_15">Outputs</h2>
+<ul>
+<li>holdover permitted</li>
+<li>holdover denied</li>
+<li>holdover expiration</li>
+<li>degraded uncertainty</li>
+<li>permitted uses</li>
+</ul>
+<h2 id="example_8">Example</h2>
+<pre><code>previous_state:
+  operationally_accepted
+
+source_status:
+  temporarily_unavailable
+
+regime:
+  permits_holdover
+
+result:
+  held_over
+</code></pre>
+<p>Holdover is not equivalent to fresh acceptance.</p>
+<p>The state should visibly indicate that fresh qualification is unavailable.</p>
+<hr>
+<h1 id="19-audit-lineage-store">19. Audit + Lineage Store</h1>
+<h2 id="responsibility_16">Responsibility</h2>
+<p>The Audit + Lineage Store preserves the evaluation history required to reconstruct Truth States.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Why did the system reach this state?</strong></p>
+</blockquote>
+<p>and:</p>
+<blockquote>
+<p><strong>How did the evidence arrive here?</strong></p>
+</blockquote>
+<h2 id="stores">Stores</h2>
+<p>The store should preserve:</p>
+<ul>
+<li>Claims</li>
+<li>Truth Classes</li>
+<li>Regimes</li>
+<li>Anchors</li>
+<li>Sources</li>
+<li>Observations</li>
+<li>Lineage</li>
+<li>Qualification results</li>
+<li>Coherence States</li>
+<li>Drift States</li>
+<li>Paradoxes</li>
+<li>Evaluations</li>
+<li>Truth States</li>
+<li>Correction Policies</li>
+<li>Revalidation events</li>
+</ul>
+<h2 id="design-rule_10">Design Rule</h2>
+<p>Evaluation history should be append-oriented.</p>
+<p>Existing Evaluations and Truth States should not normally be rewritten when new evidence arrives.</p>
+<h2 id="historical-chain">Historical Chain</h2>
+<pre><code>Evaluation 1
+    ↓
+Truth State 1
+    ↓
+Revalidation
+    ↓
+Evaluation 2
+    ↓
+Truth State 2
+    ↓
+Revalidation
+    ↓
+Evaluation 3
+    ↓
+Truth State 3
+</code></pre>
+<p>This allows the system to reconstruct not only:</p>
+<blockquote>
+<p>What does the service currently support?</p>
+</blockquote>
+<p>but also:</p>
+<blockquote>
+<p>How did the supported state change?</p>
+</blockquote>
+<hr>
+<h1 id="20-explainability-service">20. Explainability Service</h1>
+<h2 id="responsibility_17">Responsibility</h2>
+<p>The Explainability Service translates stored evaluation structure into an inspectable explanation.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Why does this Truth State exist?</strong></p>
+</blockquote>
+<h2 id="inputs_16">Inputs</h2>
+<ul>
+<li>Evaluation</li>
+<li>Qualification results</li>
+<li>Source and Anchor records</li>
+<li>Lineage</li>
+<li>Coherence findings</li>
+<li>Drift findings</li>
+<li>Paradox findings</li>
+<li>Regime findings</li>
+<li>synthesis rationale</li>
+</ul>
+<h2 id="outputs_16">Outputs</h2>
+<p>An Evaluation Explanation containing:</p>
+<ul>
+<li>participating Observations</li>
+<li>excluded Observations</li>
+<li>exclusion reasons</li>
+<li>selected Sources</li>
+<li>relevant Anchors</li>
+<li>Lineage relationships</li>
+<li>Coherence rationale</li>
+<li>Drift rationale</li>
+<li>Paradox rationale</li>
+<li>Regime rationale</li>
+<li>synthesis rationale</li>
+</ul>
+<h2 id="critical-constraint_2">Critical Constraint</h2>
+<p>Explainability should arise from stored evaluation evidence.</p>
+<p>It should not require an unrelated model to invent a plausible explanation after the decision.</p>
+<hr>
+<h1 id="21-api-gateway">21. API Gateway</h1>
+<h2 id="responsibility_18">Responsibility</h2>
+<p>The API Gateway exposes the supported external service contract.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>How do external consumers interact with the Truth Service?</strong></p>
+</blockquote>
+<h2 id="principal-operations">Principal Operations</h2>
+<p>The external flow is:</p>
+<pre><code>Register Claim
+     ↓
+Register Observations
+     ↓
+Evaluate Claim
+     ↓
+Retrieve Truth State
+     ↓
+Inspect Evaluation
+     ↓
+Inspect Lineage
+     ↓
+Inspect Paradox
+     ↓
+Request Revalidation
+</code></pre>
+<h2 id="design-rule_11">Design Rule</h2>
+<p>The API Gateway exposes service capabilities.</p>
+<p>It should not require the internal architecture to map one-to-one onto HTTP endpoints.</p>
+<p>For example:</p>
+<pre><code>Coherence Engine
+</code></pre>
+<p>does not require:</p>
+<pre><code>POST /coherence-engine
+</code></pre>
+<p>The Coherence Engine may remain an internal component invoked during Evaluation.</p>
+<hr>
+<h1 id="22-evaluation-coordinator">22. Evaluation Coordinator</h1>
+<h2 id="responsibility_19">Responsibility</h2>
+<p>The Evaluation Coordinator orchestrates one complete Evaluation without owning the specialized decision logic of subordinate components.</p>
+<p>It answers:</p>
+<blockquote>
+<p><strong>Which components must participate, and in what order, to evaluate this Claim?</strong></p>
+</blockquote>
+<h2 id="flow">Flow</h2>
+<pre><code>Claim
+  ↓
+Resolve Truth Classes
+  ↓
+Resolve Regime
+  ↓
+Resolve Sources / Anchors
+  ↓
+Resolve Lineage
+  ↓
+Qualify Observations
+  ↓
+Evaluate Coherence
+  ↓
+Evaluate Drift
+  ↓
+Register Paradox
+  ↓
+Synthesize Truth State
+  ↓
+Determine Correction Policy
+  ↓
+Schedule Revalidation
+  ↓
+Persist Evaluation
+</code></pre>
+<h2 id="design-rule_12">Design Rule</h2>
+<p>The coordinator should orchestrate.</p>
+<p>It should not contain hidden alternative implementations of:</p>
+<ul>
+<li>Qualification</li>
+<li>Coherence</li>
+<li>Drift</li>
+<li>Paradox</li>
+<li>synthesis</li>
+</ul>
+<p>This keeps component responsibility inspectable.</p>
+<hr>
+<h1 id="23-component-input-output-matrix">23. Component Input / Output Matrix</h1>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Primary Input</th>
+<th>Primary Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claim Intake</td>
+<td>Claim request</td>
+<td>Claim</td>
+</tr>
+<tr>
+<td>Truth-Class Resolver</td>
+<td>Claim</td>
+<td>Truth Classes</td>
+</tr>
+<tr>
+<td>Regime Resolver</td>
+<td>Claim + intended use</td>
+<td>Regime</td>
+</tr>
+<tr>
+<td>Anchor Registry</td>
+<td>Domain + Regime</td>
+<td>Anchors</td>
+</tr>
+<tr>
+<td>Source Registry</td>
+<td>Source identity</td>
+<td>Source records</td>
+</tr>
+<tr>
+<td>Observation Intake</td>
+<td>Raw evidence</td>
+<td>Observation</td>
+</tr>
+<tr>
+<td>Lineage Resolver</td>
+<td>Observation + Source</td>
+<td>Lineage graph</td>
+</tr>
+<tr>
+<td>Qualification Engine</td>
+<td>Observation + Regime</td>
+<td>Qualification</td>
+</tr>
+<tr>
+<td>Coherence Engine</td>
+<td>Qualified Observations</td>
+<td>Coherence State</td>
+</tr>
+<tr>
+<td>Cluster Manager</td>
+<td>Qualified Observations</td>
+<td>Coherence clusters</td>
+</tr>
+<tr>
+<td>Drift Engine</td>
+<td>Current + reference states</td>
+<td>Drift State</td>
+</tr>
+<tr>
+<td>Paradox Register</td>
+<td>Conflicting qualified evidence</td>
+<td>Paradoxes</td>
+</tr>
+<tr>
+<td>Truth-State Synthesizer</td>
+<td>Evaluation results</td>
+<td>Truth State</td>
+</tr>
+<tr>
+<td>Correction Policy Engine</td>
+<td>Truth State + Regime</td>
+<td>Correction Policy</td>
+</tr>
+<tr>
+<td>Revalidation Scheduler</td>
+<td>Truth State + lifecycle conditions</td>
+<td>Revalidation trigger</td>
+</tr>
+<tr>
+<td>Holdover Manager</td>
+<td>Prior state + Source loss</td>
+<td>Holdover decision</td>
+</tr>
+<tr>
+<td>Audit + Lineage Store</td>
+<td>Evaluation artifacts</td>
+<td>Immutable history</td>
+</tr>
+<tr>
+<td>Explainability Service</td>
+<td>Stored Evaluation</td>
+<td>Explanation</td>
+</tr>
+<tr>
+<td>API Gateway</td>
+<td>External request</td>
+<td>Service response</td>
+</tr>
+<tr>
+<td>Evaluation Coordinator</td>
+<td>Evaluation request</td>
+<td>Complete Evaluation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="24-decision-ownership-matrix">24. Decision Ownership Matrix</h1>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is being asserted?</td>
+<td>Claim Intake</td>
+</tr>
+<tr>
+<td>Which Truth Classes are involved?</td>
+<td>Truth-Class Resolver</td>
+</tr>
+<tr>
+<td>Which operational boundary applies?</td>
+<td>Regime Resolver</td>
+</tr>
+<tr>
+<td>Which reference Anchors exist?</td>
+<td>Anchor Registry</td>
+</tr>
+<tr>
+<td>Which Sources exist?</td>
+<td>Source Registry</td>
+</tr>
+<tr>
+<td>What evidence was received?</td>
+<td>Observation Intake</td>
+</tr>
+<tr>
+<td>Where did evidence come from?</td>
+<td>Lineage Resolver</td>
+</tr>
+<tr>
+<td>May an Observation participate?</td>
+<td>Qualification Engine</td>
+</tr>
+<tr>
+<td>Do qualified Observations agree?</td>
+<td>Coherence Engine</td>
+</tr>
+<tr>
+<td>Which Observations form clusters?</td>
+<td>Coherence Cluster Manager</td>
+</tr>
+<tr>
+<td>How far has state moved?</td>
+<td>Drift Engine</td>
+</tr>
+<tr>
+<td>Which contradictions remain?</td>
+<td>Paradox Register</td>
+</tr>
+<tr>
+<td>What Truth State is supported?</td>
+<td>Truth-State Synthesizer</td>
+</tr>
+<tr>
+<td>What downstream correction is permitted?</td>
+<td>Correction Policy Engine</td>
+</tr>
+<tr>
+<td>When must the state be challenged again?</td>
+<td>Revalidation Scheduler</td>
+</tr>
+<tr>
+<td>May prior state persist without fresh evidence?</td>
+<td>Holdover Manager</td>
+</tr>
+<tr>
+<td>Why did the service decide this?</td>
+<td>Explainability Service</td>
+</tr>
+<tr>
+<td>What history is preserved?</td>
+<td>Audit + Lineage Store</td>
+</tr>
+<tr>
+<td>Which components execute an Evaluation?</td>
+<td>Evaluation Coordinator</td>
+</tr>
+</tbody>
+</table>
+<p>A decision should have one primary owner even when several components provide evidence.</p>
+<hr>
+<h1 id="25-ntp-reference-flow">25. NTP Reference Flow</h1>
+<p>The initial deterministic reference implementation maps NTP-like structures through the components as follows:</p>
+<pre><code>NTP-like temporal Claim
+        ↓
+Claim Intake
+        ↓
+Temporal Truth
+        ↓
+Regime Resolver
+        ↓
+Time Reference Anchor
+        ↓
+NTP-like Sources
+        ↓
+Temporal Observations
+        ↓
+Lineage Resolver
+        ↓
+Observation Qualification
+        ↓
+Coherence Clustering
+        ↓
+Temporal Drift
+        ↓
+Outlier / Paradox Preservation
+        ↓
+Temporal Truth State
+        ↓
+Bounded Correction Policy
+        ↓
+Revalidation Schedule
+</code></pre>
+<p>The mapping includes:</p>
+<table>
+<thead>
+<tr>
+<th>NTP Mechanism</th>
+<th>Component Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference clock</td>
+<td>Anchor Registry</td>
+</tr>
+<tr>
+<td>Time Source</td>
+<td>Source Registry</td>
+</tr>
+<tr>
+<td>association</td>
+<td>Source / Lineage relationship</td>
+</tr>
+<tr>
+<td>stratum</td>
+<td>Lineage Resolver</td>
+</tr>
+<tr>
+<td>time sample</td>
+<td>Observation Intake</td>
+</tr>
+<tr>
+<td>filtering</td>
+<td>Qualification Engine</td>
+</tr>
+<tr>
+<td>Source selection</td>
+<td>Qualification / Coherence</td>
+</tr>
+<tr>
+<td>clustering</td>
+<td>Coherence Cluster Manager</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>Drift Engine</td>
+</tr>
+<tr>
+<td>jitter</td>
+<td>Drift / Observation stability analysis</td>
+</tr>
+<tr>
+<td>dispersion</td>
+<td>uncertainty / freshness evaluation</td>
+</tr>
+<tr>
+<td>combination</td>
+<td>Truth-State Synthesizer</td>
+</tr>
+<tr>
+<td>clock discipline</td>
+<td>Correction Policy Engine</td>
+</tr>
+<tr>
+<td>polling</td>
+<td>Revalidation Scheduler</td>
+</tr>
+<tr>
+<td>loss of synchronization</td>
+<td>Holdover / lifecycle handling</td>
+</tr>
+</tbody>
+</table>
+<p>This is a structural crosswalk.</p>
+<p>The Truth Service does not attempt to reproduce NTP internally.</p>
+<hr>
+<h1 id="26-runtime-processing-sequence">26. Runtime Processing Sequence</h1>
+<p>A complete runtime Evaluation proceeds as follows.</p>
+<h2 id="step-1-receive-claim">Step 1 — Receive Claim</h2>
+<p>Claim Intake validates and registers the assertion.</p>
+<h2 id="step-2-resolve-truth-classes">Step 2 — Resolve Truth Classes</h2>
+<p>The Truth-Class Resolver establishes applicable inspection dimensions.</p>
+<h2 id="step-3-resolve-regime">Step 3 — Resolve Regime</h2>
+<p>The Regime Resolver establishes operational acceptance conditions.</p>
+<h2 id="step-4-resolve-references">Step 4 — Resolve References</h2>
+<p>Anchor and Source Registries establish known references and Source relationships.</p>
+<h2 id="step-5-register-observations">Step 5 — Register Observations</h2>
+<p>Observation Intake records evidence without prematurely evaluating it.</p>
+<h2 id="step-6-resolve-lineage">Step 6 — Resolve Lineage</h2>
+<p>The Lineage Resolver reconstructs known provenance and dependencies.</p>
+<h2 id="step-7-qualify-observations">Step 7 — Qualify Observations</h2>
+<p>The Qualification Engine determines which Observations may participate.</p>
+<h2 id="step-8-analyze-coherence">Step 8 — Analyze Coherence</h2>
+<p>The Coherence Engine and Cluster Manager determine the structure of agreement.</p>
+<h2 id="step-9-measure-drift">Step 9 — Measure Drift</h2>
+<p>The Drift Engine compares relevant states.</p>
+<h2 id="step-10-register-paradox">Step 10 — Register Paradox</h2>
+<p>Unresolved qualified contradictions are preserved.</p>
+<h2 id="step-11-synthesize-truth-state">Step 11 — Synthesize Truth State</h2>
+<p>The Truth-State Synthesizer produces the current operational state.</p>
+<h2 id="step-12-determine-correction">Step 12 — Determine Correction</h2>
+<p>The Correction Policy Engine specifies permitted downstream response.</p>
+<h2 id="step-13-schedule-revalidation">Step 13 — Schedule Revalidation</h2>
+<p>The Revalidation Scheduler establishes future challenge conditions.</p>
+<h2 id="step-14-persist">Step 14 — Persist</h2>
+<p>The Audit + Lineage Store records the complete Evaluation.</p>
+<h2 id="step-15-explain">Step 15 — Explain</h2>
+<p>The Explainability Service exposes the decision structure when requested.</p>
+<hr>
+<h1 id="27-failure-propagation">27. Failure Propagation</h1>
+<p>Component failure should remain visible.</p>
+<p>Examples:</p>
+<pre><code>Lineage Resolver
+  → incomplete
+</code></pre>
+<p>does not automatically become:</p>
+<pre><code>Evaluation
+  → failed
+</code></pre>
+<p>The Regime may permit partial Lineage.</p>
+<p>Likewise:</p>
+<pre><code>Drift Engine
+  → magnitude unknown
+</code></pre>
+<p>may still permit an Evaluation if the domain does not support numeric Drift measurement.</p>
+<p>The architecture should distinguish:</p>
+<h2 id="component-uncertainty">Component Uncertainty</h2>
+<p>A component cannot fully characterize its dimension.</p>
+<h2 id="evaluation-indeterminacy">Evaluation Indeterminacy</h2>
+<p>The Evaluation cannot support a qualified Truth State.</p>
+<h2 id="infrastructure-failure">Infrastructure Failure</h2>
+<p>The implementation could not execute the component.</p>
+<p>These are structurally different conditions.</p>
+<hr>
+<h1 id="28-component-status">28. Component Status</h1>
+<p>Operational implementations may expose component status such as:</p>
+<ul>
+<li>available</li>
+<li>degraded</li>
+<li>unavailable</li>
+<li>unknown</li>
+</ul>
+<p>This status describes the implementation component.</p>
+<p>It must remain distinct from Truth-State status.</p>
+<p>For example:</p>
+<pre><code>Coherence Engine:
+  available
+</code></pre>
+<p>does not imply:</p>
+<pre><code>coherence:
+  coherent
+</code></pre>
+<p>Similarly:</p>
+<pre><code>Truth Service:
+  available
+</code></pre>
+<p>does not imply:</p>
+<pre><code>Claim:
+  operationally_accepted
+</code></pre>
+<hr>
+<h1 id="29-security-boundaries">29. Security Boundaries</h1>
+<p>Each component should operate under least-privilege assumptions.</p>
+<h2 id="claim-intake">Claim Intake</h2>
+<p>Treat Claim content as untrusted input.</p>
+<h2 id="observation-intake">Observation Intake</h2>
+<p>Treat Observation content and metadata as untrusted input.</p>
+<h2 id="source-registry">Source Registry</h2>
+<p>Do not infer trust from Source existence alone.</p>
+<h2 id="anchor-registry">Anchor Registry</h2>
+<p>Protect Anchor lifecycle and revocation operations.</p>
+<h2 id="lineage-resolver">Lineage Resolver</h2>
+<p>Do not invent missing provenance.</p>
+<h2 id="qualification-engine">Qualification Engine</h2>
+<p>Make qualification policy inspectable.</p>
+<h2 id="regime-resolver">Regime Resolver</h2>
+<p>Protect Regime selection from silent manipulation.</p>
+<h2 id="truth-state-synthesizer">Truth-State Synthesizer</h2>
+<p>Do not allow metadata fields to override canonical evaluation fields.</p>
+<h2 id="correction-policy-engine">Correction Policy Engine</h2>
+<p>Separate evaluation permission from mutation authority.</p>
+<h2 id="audit-store">Audit Store</h2>
+<p>Preserve Evaluation history against unauthorized rewriting.</p>
+<h2 id="explainability-service">Explainability Service</h2>
+<p>Avoid exposing protected Source information beyond permitted access boundaries.</p>
+<hr>
+<h1 id="30-deployment-model">30. Deployment Model</h1>
+<p>The component model is logical.</p>
+<p>A reference implementation may begin as a single application:</p>
+<pre><code>┌──────────────────────────────────────┐
+│ Resonance Truth Service             │
+│                                     │
+│ Claim Intake                        │
+│ Truth-Class Resolver                │
+│ Regime Resolver                     │
+│ Anchor / Source Registry            │
+│ Observation Intake                  │
+│ Lineage Resolver                    │
+│ Qualification Engine                │
+│ Coherence Engine                    │
+│ Drift Engine                        │
+│ Paradox Register                    │
+│ Truth-State Synthesizer             │
+│ Correction Policy Engine            │
+│ Revalidation Scheduler              │
+│ Explainability Service              │
+│ Evaluation Coordinator              │
+└──────────────────┬───────────────────┘
+                   │
+                   ▼
+          ┌─────────────────┐
+          │ Persistent Store│
+          └─────────────────┘
+</code></pre>
+<p>There is no architectural requirement to begin with microservices.</p>
+<p>Components should be separated by responsibility before they are separated by deployment.</p>
+<hr>
+<h1 id="31-extension-points">31. Extension Points</h1>
+<p>Later Truth Classes may require domain-specific evaluators.</p>
+<p>Potential extension points include:</p>
+<ul>
+<li>temporal comparison</li>
+<li>namespace resolution</li>
+<li>identity verification</li>
+<li>integrity verification</li>
+<li>authorization policy evaluation</li>
+<li>state comparison</li>
+<li>transaction finality</li>
+<li>desired-state comparison</li>
+<li>telemetry correlation</li>
+<li>provenance analysis</li>
+</ul>
+<p>These should plug into shared architectural components rather than replacing them.</p>
+<p>For example:</p>
+<pre><code>Qualification Engine
+    │
+    ├── Temporal Qualification
+    ├── Identity Qualification
+    ├── Integrity Qualification
+    └── Lineage Qualification
+</code></pre>
+<p>Likewise:</p>
+<pre><code>Drift Engine
+    │
+    ├── Temporal Drift
+    ├── State Drift
+    ├── Semantic Drift
+    └── Policy Drift
+</code></pre>
+<p>Domain specialization should occur below stable component responsibilities.</p>
+<hr>
+<h1 id="32-research-scoring-components">32. Research Scoring Components</h1>
+<p>Research scoring belongs outside the runtime Evaluation path.</p>
+<p>A minimal Research Plane may contain:</p>
+<pre><code>Reference-System Registry
+        ↓
+Crosswalk Evidence Store
+        ↓
+Scoring Engine
+        ↓
+Comparative Profile
+</code></pre>
+<h2 id="reference-system-registry">Reference-System Registry</h2>
+<p>Records:</p>
+<ul>
+<li>NTP</li>
+<li>DNS</li>
+<li>IAM</li>
+<li>PKI</li>
+<li>Policy / IAM</li>
+<li>Distributed Systems</li>
+<li>Ledgers</li>
+<li>Desired-State Systems</li>
+<li>Telemetry</li>
+<li>Supply-Chain Provenance</li>
+</ul>
+<h2 id="crosswalk-evidence-store">Crosswalk Evidence Store</h2>
+<p>Preserves the evidence supporting each architectural mapping.</p>
+<h2 id="scoring-engine">Scoring Engine</h2>
+<p>Evaluates:</p>
+<ul>
+<li>Anchor Quality</li>
+<li>Lineage Visibility</li>
+<li>Observation Quality</li>
+<li>Coherence Detection</li>
+<li>Drift Detection</li>
+<li>Paradox Handling</li>
+<li>Regime Awareness</li>
+<li>Freshness / Revalidation</li>
+<li>Correction Discipline</li>
+<li>Failure Transparency</li>
+</ul>
+<h2 id="comparative-profile">Comparative Profile</h2>
+<p>Produces the ten-dimensional structural profile and RTT meta-score.</p>
+<h2 id="critical-separation">Critical Separation</h2>
+<pre><code>Research Score
+      │
+      X
+      │
+Runtime Truth State
+</code></pre>
+<p>No direct dependency should exist.</p>
+<hr>
+<h1 id="33-component-evolution-rule">33. Component Evolution Rule</h1>
+<p>A new Reference System may expose behavior that the current component model cannot represent.</p>
+<p>When this occurs:</p>
+<pre><code>New Mechanism
+     ↓
+Identify Missing Capability
+     ↓
+Ask:
+  Is it domain-specific?
+     │
+   ┌─┴─┐
+  Yes  No
+   │    │
+   ▼    ▼
+Extension   Candidate Core Change
+                ↓
+          Test Other Crosswalks
+                ↓
+          Promote if justified
+</code></pre>
+<p>The architecture should resist adding new core components from a single example unless the mechanism is sufficiently fundamental.</p>
+<p>This keeps the component model bounded.</p>
+<hr>
+<h1 id="34-component-level-tests">34. Component-Level Tests</h1>
+<p>Each component should eventually support deterministic tests.</p>
+<h2 id="claim-intake_1">Claim Intake</h2>
+<ul>
+<li>accepts valid Claim</li>
+<li>rejects structurally invalid Claim</li>
+<li>preserves original statement</li>
+</ul>
+<h2 id="truth-class-resolver">Truth-Class Resolver</h2>
+<ul>
+<li>preserves explicit class</li>
+<li>distinguishes suggested class</li>
+<li>supports multiple classes</li>
+</ul>
+<h2 id="regime-resolver_1">Regime Resolver</h2>
+<ul>
+<li>resolves compatible Regime</li>
+<li>detects missing Regime</li>
+<li>preserves Regime conflict</li>
+</ul>
+<h2 id="lineage-resolver_1">Lineage Resolver</h2>
+<ul>
+<li>reconstructs complete Lineage</li>
+<li>exposes missing hop</li>
+<li>detects shared dependency</li>
+</ul>
+<h2 id="qualification-engine_1">Qualification Engine</h2>
+<ul>
+<li>qualifies eligible Observation</li>
+<li>rejects stale Observation</li>
+<li>rejects incompatible Regime</li>
+<li>preserves rejection rationale</li>
+</ul>
+<h2 id="coherence-engine">Coherence Engine</h2>
+<ul>
+<li>identifies coherent group</li>
+<li>identifies dissent</li>
+<li>identifies fragmentation</li>
+<li>avoids simple vote-count behavior</li>
+</ul>
+<h2 id="drift-engine">Drift Engine</h2>
+<ul>
+<li>measures numeric Drift</li>
+<li>represents qualitative Drift</li>
+<li>permits unknown magnitude</li>
+</ul>
+<h2 id="paradox-register">Paradox Register</h2>
+<ul>
+<li>preserves structural contradiction</li>
+<li>separates Regime contradiction</li>
+<li>records resolution condition</li>
+</ul>
+<h2 id="truth-state-synthesizer_1">Truth-State Synthesizer</h2>
+<ul>
+<li>produces accepted state</li>
+<li>produces contested state</li>
+<li>produces null accepted value</li>
+<li>produces Indeterminate state</li>
+</ul>
+<h2 id="correction-policy-engine_1">Correction Policy Engine</h2>
+<ul>
+<li>separates correction from evaluation</li>
+<li>obeys Regime constraints</li>
+</ul>
+<h2 id="revalidation-scheduler">Revalidation Scheduler</h2>
+<ul>
+<li>schedules expiration</li>
+<li>responds to Source change</li>
+<li>responds to contradictory Observation</li>
+</ul>
+<h2 id="holdover-manager">Holdover Manager</h2>
+<ul>
+<li>permits bounded holdover</li>
+<li>rejects disallowed holdover</li>
+<li>expires holdover</li>
+</ul>
+<h2 id="explainability-service_1">Explainability Service</h2>
+<ul>
+<li>reconstructs rationale from stored Evaluation</li>
+</ul>
+<hr>
+<h1 id="35-initial-component-milestone">35. Initial Component Milestone</h1>
+<p>The first working component chain does not require every component at full generality.</p>
+<p>The minimum NTP reference chain is:</p>
+<pre><code>Claim Intake
+    ↓
+Regime Resolver
+    ↓
+Anchor Registry
+    ↓
+Source Registry
+    ↓
+Observation Intake
+    ↓
+Lineage Resolver
+    ↓
+Qualification Engine
+    ↓
+Coherence Engine
+    ↓
+Drift Engine
+    ↓
+Truth-State Synthesizer
+    ↓
+Correction Policy Engine
+    ↓
+Revalidation Scheduler
+    ↓
+Audit Store
+</code></pre>
+<p>The Paradox Register becomes mandatory when testing:</p>
+<ul>
+<li>outlier</li>
+<li>fragmented</li>
+<li>incompatible-Regime</li>
+</ul>
+<p>fixtures.</p>
+<hr>
+<h1 id="36-initial-success-condition">36. Initial Success Condition</h1>
+<p>The component architecture succeeds at its first milestone when the following scenario is reproducible.</p>
+<p>Given:</p>
+<pre><code>Claim:
+  Current reference time is T.
+
+Truth Class:
+  Temporal
+
+Regime:
+  Low-consequence display clock
+
+Sources:
+  A
+  B
+  C
+
+Observations:
+  A → T + 12 ms
+  B → T + 15 ms
+  C → T + 14 ms
+</code></pre>
+<p>the components can:</p>
+<ol>
+<li>register the Claim</li>
+<li>identify the Temporal Truth Class</li>
+<li>resolve the Regime</li>
+<li>identify Sources and Anchor</li>
+<li>preserve Lineage</li>
+<li>qualify the Observations</li>
+<li>identify Coherence</li>
+<li>measure bounded Drift</li>
+<li>synthesize a Truth State</li>
+<li>determine permitted Correction</li>
+<li>schedule Revalidation</li>
+<li>persist the Evaluation</li>
+<li>explain every major decision</li>
+</ol>
+<p>A second fixture should then alter Source C materially enough to test whether disagreement remains visible.</p>
+<hr>
+<h1 id="37-governing-component-principle">37. Governing Component Principle</h1>
+<blockquote>
+<p><strong>One structural question, one primary decision owner.</strong></p>
+</blockquote>
+<p>The component architecture should make it possible to ask:</p>
+<pre><code>Who qualified this Observation?
+
+Who determined Coherence?
+
+Who measured Drift?
+
+Who preserved the contradiction?
+
+Who resolved the Regime?
+
+Who synthesized the Truth State?
+
+Who permitted Correction?
+
+Who scheduled Revalidation?
+</code></pre>
+<p>and receive a clear answer.</p>
+<p>This prevents the service from becoming an opaque generalized evaluator in which evidence, policy, inference, and action disappear into one undifferentiated decision.</p>
+<hr>
+<h1 id="38-canonical-component-summary">38. Canonical Component Summary</h1>
+<p>The component model can be reduced to the following operational sequence:</p>
+<pre><code>INTAKE
+  │
+  ▼
+Claim
+  │
+  ▼
+CLASSIFY
+  │
+  ▼
+Truth Class
+  │
+  ▼
+BOUND
+  │
+  ▼
+Regime
+  │
+  ▼
+REFERENCE
+  │
+  ▼
+Anchor + Source
+  │
+  ▼
+OBSERVE
+  │
+  ▼
+Observation
+  │
+  ▼
+TRACE
+  │
+  ▼
+Lineage
+  │
+  ▼
+QUALIFY
+  │
+  ▼
+Eligible Evidence
+  │
+  ▼
+COMPARE
+  │
+  ▼
+Coherence
+  │
+  ├──────────────┐
+  ▼              ▼
+MEASURE        CONTAIN
+  │              │
+  ▼              ▼
+Drift          Paradox
+  │              │
+  └──────┬───────┘
+         ▼
+SYNTHESIZE
+         │
+         ▼
+    Truth State
+         │
+         ▼
+GOVERN RESPONSE
+         │
+         ▼
+    Correction
+         │
+         ▼
+CHALLENGE AGAIN
+         │
+         ▼
+   Revalidation
+         │
+         ▼
+PRESERVE HISTORY
+         │
+         ▼
+ Audit + Lineage
+</code></pre>
+<p>The components exist to make the truth relationship inspectable.</p>
+<p>They should not hide uncertainty, collapse contradiction prematurely, or obscure the boundary between observation and action.</p>
+<p><strong>Observe.</strong></p>
+<p><strong>Trace.</strong></p>
+<p><strong>Qualify.</strong></p>
+<p><strong>Compare.</strong></p>
+<p><strong>Measure.</strong></p>
+<p><strong>Contain.</strong></p>
+<p><strong>Synthesize.</strong></p>
+<p><strong>Govern.</strong></p>
+<p><strong>Revalidate.</strong></p>
+<p><strong>Preserve.</strong></p>
   </main>
 </body>
 </html>
