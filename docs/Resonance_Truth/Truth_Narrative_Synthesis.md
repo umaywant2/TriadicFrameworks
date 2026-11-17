@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_Truth_Narrative_Synthesis_" src="https://github.com/user-attachments/assets/a9c7cf8d-cb0c-4ea9-a2fd-0323eaa1cf57" />
 
 <!DOCTYPE html>
 <html lang="en">
