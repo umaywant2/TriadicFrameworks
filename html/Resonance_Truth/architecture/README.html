@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Resonance_Truth/architecture/README.md">
+  <title>Resonance Truth — Architecture</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Resonance_Truth/architecture/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Resonance_Truth/architecture/README.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="resonance-truth-architecture">Resonance Truth — Architecture</h1>
+<blockquote>
+<p><strong>Architecture layer for the RTT Resonance Truth Service</strong></p>
+</blockquote>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Framework:</strong> Resonance-Time Theory (RTT)<br>
+<strong>Status:</strong> Research architecture / reference implementation design<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This directory contains the architecture artifacts for the <strong>RTT Resonance Truth Service</strong>.</p>
+<p>The architecture explores how truth-bearing systems can represent and maintain qualified operational truth without reducing truth to a binary <code>true | false</code> result.</p>
+<p>The working model separates:</p>
+<ol>
+<li><strong>Claims</strong> — what is being asserted</li>
+<li><strong>Truth Classes</strong> — what kind of truth is involved</li>
+<li><strong>Observations</strong> — what has actually been observed</li>
+<li><strong>Sources and Anchors</strong> — where observations derive authority or reference</li>
+<li><strong>Lineage</strong> — how claims and observations arrived at their present state</li>
+<li><strong>Coherence</strong> — whether qualified observations remain mutually usable</li>
+<li><strong>Drift</strong> — how accepted state differs from observed, expected, or prior state</li>
+<li><strong>Paradox</strong> — qualified contradictions that should remain visible</li>
+<li><strong>Regime</strong> — the operational boundary within which a truth state is valid</li>
+<li><strong>Correction and Revalidation</strong> — how accepted state changes as new observations arrive</li>
+</ol>
+<p>The architecture does not attempt to define universal truth.</p>
+<p>It asks a narrower operational question:</p>
+<blockquote>
+<p><strong>Under what declared conditions can a truth claim presently be considered sufficiently qualified for a specified use?</strong></p>
+</blockquote>
+<hr>
+<h1 id="architectural-principle">Architectural Principle</h1>
+<p>The foundational flow is:</p>
+<pre><code>Claim
+  ↓
+Truth Class
+  ↓
+Regime
+  ↓
+Observations
+  ↓
+Sources + Anchors + Lineage
+  ↓
+Qualification
+  ↓
+Coherence
+  ↓
+Drift
+  ↓
+Paradox
+  ↓
+Truth-State Synthesis
+  ↓
+Correction Policy
+  ↓
+Revalidation
+</code></pre>
+<p>The service should preserve enough information at every stage to explain how the resulting Truth State was produced.</p>
+<hr>
+<h1 id="core-constraint">Core Constraint</h1>
+<p>The architecture deliberately separates:</p>
+<pre><code>Observation ≠ Truth State
+
+Truth Evaluation ≠ Correction
+
+Authority ≠ Correctness
+
+Coherence ≠ Consensus
+
+Rejection ≠ Falsehood
+
+Uncertainty ≠ Failure
+
+Paradox ≠ Error
+
+Accepted ≠ Permanent
+</code></pre>
+<p>These distinctions prevent the service from silently collapsing structurally different conditions into one generic confidence value.</p>
+<hr>
+<h1 id="truth-state-vocabulary">Truth-State Vocabulary</h1>
+<p>A claim may move through several operational states:</p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Declared</strong></td>
+<td>A claim exists but has not yet been independently evaluated</td>
+</tr>
+<tr>
+<td><strong>Observed</strong></td>
+<td>Relevant observations have been collected</td>
+</tr>
+<tr>
+<td><strong>Corroborated</strong></td>
+<td>Multiple qualified observations support a common state</td>
+</tr>
+<tr>
+<td><strong>Operationally Accepted</strong></td>
+<td>The result satisfies the requirements of the declared regime and intended use</td>
+</tr>
+<tr>
+<td><strong>Contested</strong></td>
+<td>Qualified observations materially conflict</td>
+</tr>
+<tr>
+<td><strong>Degraded</strong></td>
+<td>The state remains usable, but support, freshness, stability, or diversity has weakened</td>
+</tr>
+<tr>
+<td><strong>Held Over</strong></td>
+<td>Fresh observations are unavailable, but previous state remains provisionally usable</td>
+</tr>
+<tr>
+<td><strong>Expired</strong></td>
+<td>The state no longer satisfies freshness or regime requirements</td>
+</tr>
+<tr>
+<td><strong>Rejected</strong></td>
+<td>Available qualified evidence does not support the claim in the current regime</td>
+</tr>
+<tr>
+<td><strong>Indeterminate</strong></td>
+<td>The service cannot establish a sufficiently qualified result</td>
+</tr>
+</tbody>
+</table>
+<p><code>Indeterminate</code> is a successful truth-service response.</p>
+<p>The architecture MUST be capable of saying:</p>
+<blockquote>
+<p><strong>The available observations do not presently support a qualified answer.</strong></p>
+</blockquote>
+<hr>
+<h1 id="truth-classes">Truth Classes</h1>
+<p>The service currently recognizes ten operational Truth Classes:</p>
+<table>
+<thead>
+<tr>
+<th>Truth Class</th>
+<th>Primary Question</th>
+<th>Reference System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Temporal</strong></td>
+<td>When is it true?</td>
+<td>NTP</td>
+</tr>
+<tr>
+<td><strong>Locational</strong></td>
+<td>Where is it true?</td>
+<td>DNS</td>
+</tr>
+<tr>
+<td><strong>Identity</strong></td>
+<td>Who or what is this?</td>
+<td>IAM</td>
+</tr>
+<tr>
+<td><strong>Integrity</strong></td>
+<td>Is it still what it claims to be?</td>
+<td>PKI / cryptographic verification</td>
+</tr>
+<tr>
+<td><strong>Authority</strong></td>
+<td>Who may declare, validate, or act?</td>
+<td>Policy / IAM</td>
+</tr>
+<tr>
+<td><strong>State</strong></td>
+<td>What is presently the case?</td>
+<td>Distributed systems</td>
+</tr>
+<tr>
+<td><strong>Transactional</strong></td>
+<td>What became committed?</td>
+<td>Ledgers</td>
+</tr>
+<tr>
+<td><strong>Intent</strong></td>
+<td>What should the state be?</td>
+<td>Desired-state systems</td>
+</tr>
+<tr>
+<td><strong>Observational</strong></td>
+<td>What was actually observed?</td>
+<td>Telemetry</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>Where did this claim come from?</td>
+<td>Supply-chain provenance</td>
+</tr>
+</tbody>
+</table>
+<p>Truth Classes are <strong>dimensions of inspection</strong>, not mutually exclusive containers.</p>
+<p>A single claim may participate in several Truth Classes simultaneously.</p>
+<hr>
+<h1 id="rtt-analytical-layer">RTT Analytical Layer</h1>
+<p>Truth Classes identify <strong>what kind of truth is being examined</strong>.</p>
+<p>RTT describes <strong>what is happening to that truth</strong>.</p>
+<p>The principal analytical dimensions are:</p>
+<pre><code>Resonance
+Coherence
+Drift
+Paradox
+Regime
+SET
+</code></pre>
+<p>This produces the working two-axis model:</p>
+<blockquote>
+<p><strong>Truth Class × RTT State</strong></p>
+</blockquote>
+<p>The architecture should maintain this separation rather than embedding RTT state directly into Truth Class definitions.</p>
+<hr>
+<h1 id="architecture-documents">Architecture Documents</h1>
+<h2 id="truth_service_architecturemd"><code>truth_service_architecture.md</code></h2>
+<p>Defines the conceptual architecture of the RTT Resonance Truth Service.</p>
+<p>Primary concerns include:</p>
+<ul>
+<li>service boundaries</li>
+<li>truth anchors</li>
+<li>source associations</li>
+<li>observations</li>
+<li>evidence filtering</li>
+<li>source selection</li>
+<li>coherence analysis</li>
+<li>drift</li>
+<li>paradox</li>
+<li>regime resolution</li>
+<li>Truth-State synthesis</li>
+<li>correction</li>
+<li>revalidation</li>
+<li>audit and lineage</li>
+</ul>
+<p>This is the primary architectural reference.</p>
+<hr>
+<h2 id="truth_service_componentsmd"><code>truth_service_components.md</code></h2>
+<p>Defines the major functional components and their relationships.</p>
+<p>This document should answer:</p>
+<blockquote>
+<p><strong>Which component is responsible for each stage of the truth lifecycle?</strong></p>
+</blockquote>
+<p>The component model provides the bridge between the conceptual architecture and an eventual implementation.</p>
+<hr>
+<h2 id="truth_service_data_modelmd"><code>truth_service_data_model.md</code></h2>
+<p>Defines the logical entities required to represent operational truth.</p>
+<p>Primary entities include:</p>
+<ul>
+<li>Claim</li>
+<li>TruthClass</li>
+<li>Observation</li>
+<li>Source</li>
+<li>Anchor</li>
+<li>Lineage</li>
+<li>Regime</li>
+<li>Evaluation</li>
+<li>TruthState</li>
+<li>CoherenceState</li>
+<li>DriftState</li>
+<li>Paradox</li>
+<li>CorrectionPolicy</li>
+</ul>
+<p>The data model should preserve lineage between observations and resulting Truth States.</p>
+<hr>
+<h2 id="truth_service_apiyaml"><code>truth_service_api.yaml</code></h2>
+<p>Defines the machine-facing service contract.</p>
+<p>The API is intended to support operations such as:</p>
+<pre><code>register claim
+     ↓
+submit observations
+     ↓
+evaluate claim
+     ↓
+retrieve Truth State
+     ↓
+inspect lineage / paradox
+     ↓
+revalidate
+</code></pre>
+<p>The API contract should remain narrower than the research model.</p>
+<p>Not every conceptual RTT operator requires its own endpoint.</p>
+<hr>
+<h2 id="implementation_roadmapmd"><code>implementation_roadmap.md</code></h2>
+<p>Defines the staged path from research architecture to reference implementation.</p>
+<p>The roadmap begins with:</p>
+<ol>
+<li>canon stabilization</li>
+<li>static data model</li>
+<li>deterministic NTP fixtures</li>
+<li>qualification</li>
+<li>coherence</li>
+<li>drift</li>
+<li>paradox</li>
+<li>regime resolution</li>
+<li>Truth-State synthesis</li>
+<li>correction</li>
+<li>revalidation</li>
+<li>API exposure</li>
+<li>audit and explainability</li>
+</ol>
+<p>Only after the NTP reference case becomes deterministic and inspectable should the architecture be challenged by additional operational truth systems.</p>
+<hr>
+<h1 id="reference-system-strategy">Reference-System Strategy</h1>
+<p>The architecture is being developed through a sequence of operational crosswalks.</p>
+<pre><code>#1  NTP                     → Temporal Truth
+#2  DNS                     → Locational Truth
+#3  IAM                     → Identity Truth
+#4  PKI                     → Integrity Truth
+#5  Policy / IAM            → Authority Truth
+#6  Distributed Systems     → State Truth
+#7  Ledgers                 → Transactional Truth
+#8  Desired-State Systems   → Intent Truth
+#9  Telemetry               → Observational Truth
+#10 Supply-Chain Provenance → Lineage Truth
+</code></pre>
+<p>These systems are not implementations of RTT.</p>
+<p>They are operational reference systems used to identify mechanisms that may generalize into a broader truth-service architecture.</p>
+<hr>
+<h1 id="crosswalk-method">Crosswalk Method</h1>
+<p>Each reference system should be evaluated in the same order.</p>
+<h2 id="1-describe">1. Describe</h2>
+<p>Document the reference system on its own terms.</p>
+<h2 id="2-observe">2. Observe</h2>
+<p>Identify how the system represents:</p>
+<ul>
+<li>references</li>
+<li>observations</li>
+<li>lineage</li>
+<li>freshness</li>
+<li>disagreement</li>
+<li>correction</li>
+<li>failure</li>
+</ul>
+<h2 id="3-crosswalk">3. Crosswalk</h2>
+<p>Map relevant mechanisms into RTT without claiming equivalence.</p>
+<h2 id="4-score">4. Score</h2>
+<p>Evaluate the reference system using the common Operational Truth-System scoring criteria.</p>
+<h2 id="5-challenge">5. Challenge</h2>
+<p>Determine whether the reference system exposes weaknesses or missing abstractions in the emerging architecture.</p>
+<h2 id="6-consolidate">6. Consolidate</h2>
+<p>Promote mechanisms into the generalized Truth Service only when evidence across reference systems supports the abstraction.</p>
+<hr>
+<h1 id="reference-implementation-strategy">Reference Implementation Strategy</h1>
+<p>NTP is the first reference implementation.</p>
+<p>Its value is not simply that NTP manages time.</p>
+<p>Its architecture provides operational examples of:</p>
+<ul>
+<li>reference hierarchy</li>
+<li>source relationships</li>
+<li>lineage distance</li>
+<li>multiple observations</li>
+<li>source qualification</li>
+<li>coherence evaluation</li>
+<li>drift measurement</li>
+<li>instability</li>
+<li>accumulating uncertainty</li>
+<li>bounded correction</li>
+<li>revalidation</li>
+<li>degraded operation</li>
+</ul>
+<p>The first implementation should use deterministic NTP-like fixtures rather than immediately connecting to live external infrastructure.</p>
+<p>This allows the model itself to be tested before network behavior, security, and environmental variability are introduced.</p>
+<hr>
+<h1 id="runtime-plane-vs-research-plane">Runtime Plane vs. Research Plane</h1>
+<p>The architecture preserves two distinct operational planes.</p>
+<table>
+<thead>
+<tr>
+<th>Runtime Plane</th>
+<th>Research Plane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claim</td>
+<td>Reference System</td>
+</tr>
+<tr>
+<td>Observation</td>
+<td>Crosswalk</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Criterion</td>
+</tr>
+<tr>
+<td>Anchor</td>
+<td>Evidence</td>
+</tr>
+<tr>
+<td>Lineage</td>
+<td>Score</td>
+</tr>
+<tr>
+<td>Regime</td>
+<td>Rationale</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>Comparative Analysis</td>
+</tr>
+<tr>
+<td>Truth State</td>
+<td>Architectural Finding</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td></td>
+</tr>
+<tr>
+<td>Paradox</td>
+<td></td>
+</tr>
+<tr>
+<td>Correction</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Runtime Plane</strong> asks:</p>
+<blockquote>
+<p>What qualified state can presently be supported for this claim?</p>
+</blockquote>
+<p>The <strong>Research Plane</strong> asks:</p>
+<blockquote>
+<p>How does this existing system operationalize its particular relationship to truth?</p>
+</blockquote>
+<p>Research scores MUST NOT become runtime confidence values.</p>
+<hr>
+<h1 id="architecture-invariants">Architecture Invariants</h1>
+<p>The following invariants should remain stable unless later crosswalk evidence demonstrates that they are structurally insufficient.</p>
+<h2 id="invariant-1-regime-required">Invariant 1 — Regime Required</h2>
+<p>No operational Truth State exists outside a declared or identifiable regime.</p>
+<h2 id="invariant-2-lineage-preserved">Invariant 2 — Lineage Preserved</h2>
+<p>A Truth State should retain sufficient lineage to reconstruct its supporting observations.</p>
+<h2 id="invariant-3-contradiction-preserved">Invariant 3 — Contradiction Preserved</h2>
+<p>Qualified contradictory evidence must not disappear merely because synthesis requires a result.</p>
+<h2 id="invariant-4-indeterminate-allowed">Invariant 4 — Indeterminate Allowed</h2>
+<p>The absence of a qualified answer is a valid result.</p>
+<h2 id="invariant-5-correction-separated">Invariant 5 — Correction Separated</h2>
+<p>Evaluating truth does not authorize mutation of downstream state.</p>
+<h2 id="invariant-6-revalidation-required">Invariant 6 — Revalidation Required</h2>
+<p>Operational truth ages.</p>
+<p>Acceptance at one point in time does not guarantee continued acceptability.</p>
+<h2 id="invariant-7-explainability-required">Invariant 7 — Explainability Required</h2>
+<p>The architecture should be able to explain:</p>
+<blockquote>
+<p><strong>Why does this Truth State exist?</strong></p>
+</blockquote>
+<p>without relying solely on opaque inference.</p>
+<hr>
+<h1 id="implementation-boundary">Implementation Boundary</h1>
+<p>The initial architecture is deliberately <strong>not</strong> intended to become:</p>
+<ul>
+<li>a universal fact checker</li>
+<li>a centralized truth authority</li>
+<li>a reputation engine</li>
+<li>a misinformation classifier</li>
+<li>an AI confidence oracle</li>
+<li>a replacement for domain expertise</li>
+<li>a universal consensus mechanism</li>
+</ul>
+<p>The narrower implementation goal is:</p>
+<blockquote>
+<p><strong>Represent and expose the structural conditions under which a claim becomes operationally usable within a declared regime.</strong></p>
+</blockquote>
+<hr>
+<h1 id="architectural-success-condition">Architectural Success Condition</h1>
+<p>The initial architecture succeeds when a deterministic reference implementation can receive:</p>
+<ul>
+<li>one claim</li>
+<li>one or more Truth Classes</li>
+<li>one declared Regime</li>
+<li>several observations</li>
+<li>known source relationships</li>
+<li>explicit lineage</li>
+</ul>
+<p>and produce a Truth State such as:</p>
+<pre><code>OPERATIONALLY_ACCEPTED
+DEGRADED
+HELD_OVER
+CONTESTED
+EXPIRED
+REJECTED
+INDETERMINATE
+</code></pre>
+<p>while answering:</p>
+<blockquote>
+<p><strong>Why?</strong></p>
+</blockquote>
+<p>through inspectable:</p>
+<ul>
+<li>source qualification</li>
+<li>lineage</li>
+<li>coherence</li>
+<li>drift</li>
+<li>paradox</li>
+<li>regime</li>
+<li>freshness</li>
+</ul>
+<hr>
+<h1 id="governing-principle">Governing Principle</h1>
+<blockquote>
+<p><strong>Build the observer before building the oracle.</strong></p>
+</blockquote>
+<p>The RTT Resonance Truth Service should first become capable of observing, preserving, and exposing the structural conditions surrounding truth claims.</p>
+<p>Only after those conditions can be represented, challenged, traced, and revalidated should broader automation be introduced.</p>
+<hr>
+<h1 id="navigation">Navigation</h1>
+<ul>
+<li>./truth_service_architecture.md — conceptual architecture</li>
+<li>./truth_service_components.md — functional components</li>
+<li>./truth_service_data_model.md — logical data model</li>
+<li>./truth_service_api.yaml — API contract</li>
+<li>./implementation_roadmap.md — staged implementation plan</li>
+<li>../crosswalks/ — operational truth-system crosswalks</li>
+<li>../schemas/ — machine-readable schemas</li>
+<li>../fixtures/ — deterministic reference fixtures</li>
+<li>../tests/ — behavioral and lifecycle tests</li>
+</ul>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p><strong>Truth Class identifies what kind of truth is being evaluated.</strong></p>
+<p><strong>RTT describes the structural condition of that truth.</strong></p>
+<p><strong>The Truth Service evaluates the relationship among claim, observations, sources, lineage, regime, coherence, drift, and paradox.</strong></p>
+<p><strong>Correction determines what may happen next.</strong></p>
+<p><strong>Revalidation determines whether the resulting Truth State remains operationally usable.</strong></p>
+<p>The service does not need to claim possession of absolute truth.</p>
+<p>It needs to make the structure surrounding operational truth visible.</p>
+  </main>
+</body>
+</html>
