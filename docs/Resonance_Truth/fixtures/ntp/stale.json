@@ -1,1 +1,428 @@
-. 
+{
+  "fixture_id": "ntp-stale-001",
+  "title": "Stale NTP Temporal Truth",
+  "description": "Deterministic temporal-truth fixture containing three independent, mutually coherent, well-lineaged NTP-like observations that were previously usable but have exceeded the freshness boundary of the declared regime at evaluation time.",
+  "fixture_version": "1.0",
+  "schema_version": "0.1",
+  "reference_system": "NTP",
+  "primary_truth_class": "temporal",
+
+  "claim": {
+    "claim_id": "claim-temporal-stale-001",
+    "statement": "The local clock is sufficiently synchronized with the current reference time for the declared display-clock regime.",
+    "truth_classes": [
+      "temporal"
+    ],
+    "intended_use": "Low-consequence display clock.",
+    "status": "active",
+    "created_at": "2026-01-01T12:00:00Z",
+    "updated_at": "2026-01-01T12:00:00Z"
+  },
+
+  "regime": {
+    "regime_id": "regime-display-clock",
+    "name": "Low-consequence display clock",
+    "domain": "temporal",
+    "description": "Temporal regime requiring current source evidence to remain within the declared freshness boundary before it may support present synchronization.",
+    "observer_context": "local-display-clock",
+    "precision_requirement": {
+      "value": 100,
+      "unit": "milliseconds"
+    },
+    "maximum_age_seconds": 300,
+    "minimum_independent_sources": 2,
+    "consequence": "low",
+    "permitted_truth_statuses": [
+      "corroborated",
+      "operationally_accepted",
+      "degraded",
+      "held_over",
+      "expired",
+      "indeterminate"
+    ],
+    "correction_modes": [
+      "none",
+      "holdover",
+      "fail_bounded"
+    ],
+    "created_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z",
+    "metadata": {
+      "fixture_scope": "deterministic-reference",
+      "freshness_policy": "observations-expire-after-300-seconds",
+      "holdover_policy": "not-enabled-for-this-fixture"
+    }
+  },
+
+  "anchors": [
+    {
+      "anchor_id": "anchor-utc",
+      "name": "UTC Reference",
+      "anchor_type": "temporal_reference",
+      "authority": "Fixture temporal reference",
+      "domain": "temporal",
+      "regime_ids": [
+        "regime-display-clock"
+      ],
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "revocation_reference": null,
+      "limitations": [
+        "Synthetic deterministic fixture reference."
+      ],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "synthetic": true
+      }
+    }
+  ],
+
+  "sources": [
+    {
+      "source_id": "source-ntp-a",
+      "name": "NTP Source A",
+      "source_type": "ntp_peer",
+      "anchor_id": "anchor-utc",
+      "lineage_distance": 1,
+      "independence": "independent",
+      "domain": "temporal",
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "synthetic": true,
+        "fixture_role": "stale-but-otherwise-qualified-source"
+      }
+    },
+    {
+      "source_id": "source-ntp-b",
+      "name": "NTP Source B",
+      "source_type": "ntp_peer",
+      "anchor_id": "anchor-utc",
+      "lineage_distance": 1,
+      "independence": "independent",
+      "domain": "temporal",
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "synthetic": true,
+        "fixture_role": "stale-but-otherwise-qualified-source"
+      }
+    },
+    {
+      "source_id": "source-ntp-c",
+      "name": "NTP Source C",
+      "source_type": "ntp_peer",
+      "anchor_id": "anchor-utc",
+      "lineage_distance": 1,
+      "independence": "independent",
+      "domain": "temporal",
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "synthetic": true,
+        "fixture_role": "stale-but-otherwise-qualified-source"
+      }
+    }
+  ],
+
+  "local_state": {
+    "observer_id": "local-display-clock",
+    "timestamp": "2026-01-01T12:10:00.000Z",
+    "observed_at": "2026-01-01T12:10:00Z",
+    "metadata": {
+      "synthetic": true,
+      "role": "current-local-state"
+    }
+  },
+
+  "observations": [
+    {
+      "observation_id": "obs-ntp-a-001",
+      "claim_id": "claim-temporal-stale-001",
+      "source_id": "source-ntp-a",
+      "anchor_id": "anchor-utc",
+      "value": {
+        "timestamp": "2026-01-01T12:00:00.012Z",
+        "offset_ms": 12.0,
+        "delay_ms": 20.0,
+        "jitter_ms": 1.2,
+        "dispersion_ms": 2.0
+      },
+      "observed_at": "2026-01-01T12:00:00.012Z",
+      "received_at": "2026-01-01T12:00:00.020Z",
+      "expires_at": "2026-01-01T12:05:00Z",
+      "declared_confidence": null,
+      "lineage": [
+        {
+          "sequence": 1,
+          "entity_type": "anchor",
+          "entity_id": "anchor-utc",
+          "relation": "referenced_by",
+          "transformation": null,
+          "observed_at": null,
+          "metadata": {}
+        },
+        {
+          "sequence": 2,
+          "entity_type": "source",
+          "entity_id": "source-ntp-a",
+          "relation": "observed_through",
+          "transformation": null,
+          "observed_at": "2026-01-01T12:00:00.012Z",
+          "metadata": {}
+        }
+      ],
+      "integrity": null,
+      "registered_at": "2026-01-01T12:00:00.020Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+    {
+      "observation_id": "obs-ntp-b-001",
+      "claim_id": "claim-temporal-stale-001",
+      "source_id": "source-ntp-b",
+      "anchor_id": "anchor-utc",
+      "value": {
+        "timestamp": "2026-01-01T12:00:00.015Z",
+        "offset_ms": 15.0,
+        "delay_ms": 22.0,
+        "jitter_ms": 1.5,
+        "dispersion_ms": 2.4
+      },
+      "observed_at": "2026-01-01T12:00:00.015Z",
+      "received_at": "2026-01-01T12:00:00.023Z",
+      "expires_at": "2026-01-01T12:05:00Z",
+      "declared_confidence": null,
+      "lineage": [
+        {
+          "sequence": 1,
+          "entity_type": "anchor",
+          "entity_id": "anchor-utc",
+          "relation": "referenced_by",
+          "transformation": null,
+          "observed_at": null,
+          "metadata": {}
+        },
+        {
+          "sequence": 2,
+          "entity_type": "source",
+          "entity_id": "source-ntp-b",
+          "relation": "observed_through",
+          "transformation": null,
+          "observed_at": "2026-01-01T12:00:00.015Z",
+          "metadata": {}
+        }
+      ],
+      "integrity": null,
+      "registered_at": "2026-01-01T12:00:00.023Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+    {
+      "observation_id": "obs-ntp-c-001",
+      "claim_id": "claim-temporal-stale-001",
+      "source_id": "source-ntp-c",
+      "anchor_id": "anchor-utc",
+      "value": {
+        "timestamp": "2026-01-01T12:00:00.014Z",
+        "offset_ms": 14.0,
+        "delay_ms": 21.0,
+        "jitter_ms": 1.3,
+        "dispersion_ms": 2.2
+      },
+      "observed_at": "2026-01-01T12:00:00.014Z",
+      "received_at": "2026-01-01T12:00:00.022Z",
+      "expires_at": "2026-01-01T12:05:00Z",
+      "declared_confidence": null,
+      "lineage": [
+        {
+          "sequence": 1,
+          "entity_type": "anchor",
+          "entity_id": "anchor-utc",
+          "relation": "referenced_by",
+          "transformation": null,
+          "observed_at": null,
+          "metadata": {}
+        },
+        {
+          "sequence": 2,
+          "entity_type": "source",
+          "entity_id": "source-ntp-c",
+          "relation": "observed_through",
+          "transformation": null,
+          "observed_at": "2026-01-01T12:00:00.014Z",
+          "metadata": {}
+        }
+      ],
+      "integrity": null,
+      "registered_at": "2026-01-01T12:00:00.022Z",
+      "metadata": {
+        "synthetic": true
+      }
+    }
+  ],
+
+  "prior_truth_state": {
+    "truth_state_id": "truth-state-ntp-stale-prior-001",
+    "claim_id": "claim-temporal-stale-001",
+    "status": "operationally_accepted",
+    "accepted_value": {
+      "timestamp": "2026-01-01T12:00:00.014Z",
+      "offset_ms": 14.0
+    },
+    "regime_id": "regime-display-clock",
+    "truth_classes": [
+      "temporal"
+    ],
+    "source_ids": [
+      "source-ntp-a",
+      "source-ntp-b",
+      "source-ntp-c"
+    ],
+    "observation_ids": [
+      "obs-ntp-a-001",
+      "obs-ntp-b-001",
+      "obs-ntp-c-001"
+    ],
+    "evaluated_at": "2026-01-01T12:00:01Z",
+    "expires_at": "2026-01-01T12:05:00Z",
+    "metadata": {
+      "synthetic": true,
+      "fixture_role": "previously-qualified-state"
+    }
+  },
+
+  "evaluation_context": {
+    "evaluation_id": "evaluation-ntp-stale-001",
+    "regime_id": "regime-display-clock",
+    "evaluated_at": "2026-01-01T12:10:00Z",
+    "requested_by": "fixture-test-suite",
+    "evaluator_version": "0.1.0",
+    "prior_truth_state_id": "truth-state-ntp-stale-prior-001"
+  },
+
+  "expected": {
+    "qualification": {
+      "obs-ntp-a-001": {
+        "status": "expired",
+        "reasons": [
+          {
+            "code": "OBSERVATION_EXPIRED",
+            "message": "Observation expired before the deterministic evaluation time."
+          }
+        ]
+      },
+      "obs-ntp-b-001": {
+        "status": "expired",
+        "reasons": [
+          {
+            "code": "OBSERVATION_EXPIRED",
+            "message": "Observation expired before the deterministic evaluation time."
+          }
+        ]
+      },
+      "obs-ntp-c-001": {
+        "status": "expired",
+        "reasons": [
+          {
+            "code": "OBSERVATION_EXPIRED",
+            "message": "Observation expired before the deterministic evaluation time."
+          }
+        ]
+      }
+    },
+
+    "historical_evidence_assessment": {
+      "coherence_when_fresh": "coherent",
+      "source_independence_when_fresh": "sufficient",
+      "lineage_when_fresh": "complete",
+      "historical_representative_offset_ms": 14.0,
+      "reason": "The evidence field was previously structurally coherent and usable; current disqualification is caused by freshness expiration rather than contradiction, source failure, or missing lineage."
+    },
+
+    "selected_observation_ids": [],
+
+    "excluded_observation_ids": [
+      "obs-ntp-a-001",
+      "obs-ntp-b-001",
+      "obs-ntp-c-001"
+    ],
+
+    "coherence": {
+      "status": "indeterminate",
+      "cluster_count": 0,
+      "supporting_observation_ids": [],
+      "dissenting_observation_ids": [],
+      "reason": "All currently available observations are expired and therefore cannot form a current qualified coherence field. Historical coherence remains preserved separately."
+    },
+
+    "drift": {
+      "dimension": "temporal",
+      "direction": "unknown",
+      "bounded": null,
+      "magnitude": null,
+      "unit": "milliseconds",
+      "reason": "The fixture provides no fresh qualified temporal observation from which present drift can be defensibly calculated. Historical 14 ms offset must not be treated as current drift."
+    },
+
+    "paradox": {
+      "expected": false,
+      "reason": "The evidence field is stale rather than structurally contradictory."
+    },
+
+    "domain_result": {
+      "current_reference_time_supported": false,
+      "historical_reference_time_supported": true,
+      "historical_representative_offset_ms": 14.0,
+      "freshness_satisfied": false
+    },
+
+    "truth_state": {
+      "status": "expired",
+      "accepted_value": null,
+      "supersedes_truth_state_id": "truth-state-ntp-stale-prior-001",
+      "permitted_uses": [
+        "historical audit of the prior temporal evaluation"
+      ],
+      "prohibited_uses": [
+        "current temporal synchronization",
+        "current clock correction"
+      ]
+    },
+
+    "correction": {
+      "mode": "fail_bounded",
+      "reason": "Previously coherent temporal evidence is now expired. The historical offset must not be reused as a current correction value, and holdover is disabled for this fixture."
+    },
+
+    "revalidation": {
+      "required": true,
+      "next_revalidation_at": null,
+      "triggers": [
+        "new_observation",
+        "fresh_source_evidence",
+        "manual_challenge"
+      ]
+    },
+
+    "lifecycle": {
+      "prior_status": "operationally_accepted",
+      "current_status": "expired",
+      "transition": "freshness_expiration",
+      "historical_state_preserved": true
+    }
+  }
+}
