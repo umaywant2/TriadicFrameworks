@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_scoring_criteria_" src="https://github.com/user-attachments/assets/83d741f8-379b-46f3-ad69-c83ab35bd0ea" />
+
 # Operational Truth Systems — Scoring Criteria
 
 **Module:** Resonance Truth  
