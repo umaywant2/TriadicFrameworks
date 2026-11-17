@@ -6214,6 +6214,929 @@ Correction
 <p>The main design change is that I've kept <strong>epistemic state, operational action, and research scoring</strong> separate. That's important structurally: the truth service can say <em>“this claim is contested,”</em> correction policy decides what to do about it, while the crosswalk scoring system independently asks how well the underlying reference architecture exposes that condition.</p>
 <p>That separation feels very RTT to me: <strong>observe first, qualify the regime, preserve the paradox, then permit action.</strong></p>
 <hr>
+<p>Noted. Markdown-first from here forward, especially for the Resonance Truth capture workflow. I’ll treat this roadmap as the bridge from the conceptual crosswalk into something that could actually be prototyped, without prematurely turning the research module into a production service.</p>
+<h1 id="rtt-resonance-truth-service-implementation-roadmap">RTT Resonance Truth Service — Implementation Roadmap</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Status:</strong> Proposed Implementation Roadmap<br>
+<strong>Framework:</strong> RTT<br>
+<strong>Target:</strong> Research Model → Reference Implementation → Operational Prototype<br>
+<strong>Session Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This roadmap defines a staged path for implementing the RTT Resonance Truth Service.</p>
+<p>The implementation should preserve a critical separation between:</p>
+<ol>
+<li><strong>Truth Classes</strong> — what kind of truth is being evaluated</li>
+<li><strong>RTT Analysis</strong> — what is happening to that truth</li>
+<li><strong>Truth Service</strong> — how claims and observations are evaluated</li>
+<li><strong>Reference Systems</strong> — existing systems that demonstrate operational truth mechanisms</li>
+<li><strong>Research Scoring</strong> — how those reference systems are compared</li>
+</ol>
+<p>The service should not begin as a universal truth engine.</p>
+<p>It should begin as a small, inspectable reference implementation capable of answering:</p>
+<blockquote>
+<p>Given a claim, a declared regime, and a set of observations with lineage, what qualified truth state can presently be supported?</p>
+</blockquote>
+<hr>
+<h1 id="2-implementation-principles">2. Implementation Principles</h1>
+<p>The implementation MUST preserve the following architectural constraints.</p>
+<h2 id="21-no-binary-truth-requirement">2.1 No Binary Truth Requirement</h2>
+<p>The service MUST NOT require every evaluation to collapse into:</p>
+<p><code>TRUE | FALSE</code></p>
+<p>Supported states should include:</p>
+<ul>
+<li>Declared</li>
+<li>Observed</li>
+<li>Corroborated</li>
+<li>Operationally Accepted</li>
+<li>Contested</li>
+<li>Degraded</li>
+<li>Held Over</li>
+<li>Expired</li>
+<li>Rejected</li>
+<li>Indeterminate</li>
+</ul>
+<hr>
+<h2 id="22-no-truth-without-regime">2.2 No Truth Without Regime</h2>
+<p>Every evaluation MUST identify the regime under which the result is valid.</p>
+<p>A truth state without a regime is structurally incomplete.</p>
+<hr>
+<h2 id="23-observation-is-not-truth">2.3 Observation Is Not Truth</h2>
+<p>An observation is evidence supplied to the service.</p>
+<p>A Truth State is the result of evaluating one or more observations.</p>
+<p>These MUST remain separate entities.</p>
+<hr>
+<h2 id="24-evaluation-is-not-correction">2.4 Evaluation Is Not Correction</h2>
+<p>The service MUST distinguish:</p>
+<p><strong>What appears sufficiently supported?</strong></p>
+<p>from:</p>
+<p><strong>What should the consuming system do about it?</strong></p>
+<p>Truth evaluation and state correction are separate operations.</p>
+<hr>
+<h2 id="25-paradox-is-data">2.5 Paradox Is Data</h2>
+<p>Qualified contradictions MUST be representable without forcing immediate resolution.</p>
+<p>The service SHOULD preserve:</p>
+<ul>
+<li>competing observations</li>
+<li>competing coherence clusters</li>
+<li>regime differences</li>
+<li>resolution conditions</li>
+</ul>
+<hr>
+<h2 id="26-lineage-is-first-class">2.6 Lineage Is First-Class</h2>
+<p>The service MUST preserve enough provenance to explain:</p>
+<ul>
+<li>where an observation originated</li>
+<li>which sources participated</li>
+<li>which transformations occurred</li>
+<li>how far the observation is from an anchor</li>
+<li>which Truth State used it</li>
+</ul>
+<hr>
+<h2 id="27-unknown-is-valid">2.7 Unknown Is Valid</h2>
+<p>The service MUST be capable of returning:</p>
+<p><code>INDETERMINATE</code></p>
+<p>A missing answer is preferable to fabricated coherence.</p>
+<hr>
+<h1 id="3-target-architecture">3. Target Architecture</h1>
+<p>The implementation should retain four conceptual layers.</p>
+<p>```text
+┌───────────────────────────────────────────────┐
+│ TRUTH CLASSES                                 │
+│ Temporal · Locational · Identity · Integrity │
+│ Authority · State · Transactional · Intent   │
+│ Observational · Lineage                       │
+├───────────────────────────────────────────────┤
+│ RTT ANALYSIS                                  │
+│ Resonance · Coherence · Drift · Paradox      │
+│ Regime · SET                                  │
+├───────────────────────────────────────────────┤
+│ TRUTH SERVICE                                 │
+│ Claim → Observe → Qualify → Evaluate         │
+│ → Correct → Revalidate                        │
+├───────────────────────────────────────────────┤
+│ REFERENCE SYSTEMS                             │
+│ NTP · DNS · IAM · PKI · Consensus · Ledgers │
+│ Desired State · Telemetry · Provenance       │
+└───────────────────────────────────────────────┘</p>
+<ol start="4">
+<li>Phase 0 — Canon Stabilization
+Objective</li>
+</ol>
+<p>Freeze enough terminology to prevent implementation from redefining the research model accidentally.</p>
+<p>Deliverables
+Truth Class definitions
+Truth State lifecycle
+RTT crosswalk
+NTP Crosswalk #1
+Operational Truth-System scoring rubric
+component architecture
+API schema
+logical data model
+canonical vocabulary
+Decisions to Freeze
+Truth Classes
+Temporal
+Locational
+Identity
+Integrity
+Authority
+State
+Transactional
+Intent
+Observational
+Lineage
+Truth Status
+declared
+observed
+corroborated
+operationally_accepted
+contested
+degraded
+held_over
+expired
+rejected
+indeterminate
+Coherence State
+coherent
+weakly_coherent
+fragmented
+contested
+inverted
+indeterminate
+Paradox Type
+structural
+semantic
+regime
+Correction Mode
+none
+step
+gradual
+quarantine
+dual_state
+human_escalation
+holdover
+fail_closed
+fail_bounded
+Exit Criterion</p>
+<p>The model can describe NTP Crosswalk #1 without introducing undefined core concepts during implementation.</p>
+<ol start="5">
+<li>Phase 1 — Static Data Model
+Objective</li>
+</ol>
+<p>Implement the canonical data structures without evaluation logic.</p>
+<p>Begin with data representation rather than intelligence.</p>
+<p>Core Objects</p>
+<p>Implement:</p>
+<p>Claim
+TruthClass
+Observation
+Source
+Anchor
+Lineage
+Regime
+Evaluation
+TruthState
+CoherenceState
+DriftState
+Paradox
+CorrectionPolicy
+Initial Relationships
+REGIME
+   │
+   ├──────────────┐
+   │              │
+   ▼              ▼
+ CLAIM ────────► EVALUATION
+   │              │
+   │              ▼
+   │          TRUTH_STATE
+   │              │
+   │        ┌─────┼─────┐
+   │        ▼     ▼     ▼
+   │      DRIFT PARADOX CORRECTION
+   │
+   ▼
+OBSERVATION
+   │
+   ├──────► SOURCE
+   │          │
+   │          ▼
+   │        ANCHOR
+   │
+   ▼
+LINEAGE</p>
+<p>Validation Requirements</p>
+<p>The model should reject structurally incomplete objects.</p>
+<p>Examples:</p>
+<p>observation without source
+evaluation without regime
+Truth State without evaluation
+lineage hop without entity
+score without rationale
+Exit Criterion</p>
+<p>A complete truth evaluation can be represented manually in structured data without executing any inference.</p>
+<ol start="6">
+<li>Phase 2 — NTP Reference Dataset
+Objective</li>
+</ol>
+<p>Use Temporal Truth as the first controlled reference implementation.</p>
+<p>Do NOT begin by connecting to live NTP infrastructure.</p>
+<p>Start with deterministic fixtures representing NTP-like states.</p>
+<p>Fixture A — Coherent</p>
+<p>Several independent sources produce mutually consistent temporal observations.</p>
+<p>Expected state:</p>
+<p>OPERATIONALLY_ACCEPTED</p>
+<p>Expected coherence:</p>
+<p>COHERENT</p>
+<p>Fixture B — Minor Drift</p>
+<p>Qualified observations agree, while local state differs within a bounded correction threshold.</p>
+<p>Expected:</p>
+<p>drift identified
+source set remains coherent
+correction policy generated
+Fixture C — Outlier</p>
+<p>One otherwise valid source materially disagrees with the remaining qualified sources.</p>
+<p>Expected:</p>
+<p>outlier remains recorded
+coherent cluster survives
+Truth State identifies dissenting observation
+Fixture D — Fragmented Sources</p>
+<p>Qualified observations form multiple meaningful clusters.</p>
+<p>Expected:</p>
+<p>CONTESTED or INDETERMINATE</p>
+<p>The engine MUST NOT average incompatible clusters merely to produce an answer.</p>
+<p>Fixture E — Stale Sources</p>
+<p>Previously coherent observations exceed their freshness boundary.</p>
+<p>Expected transition:</p>
+<p>OPERATIONALLY_ACCEPTED</p>
+<p>→ DEGRADED</p>
+<p>→ HELD_OVER</p>
+<p>→ EXPIRED</p>
+<p>according to the declared test regime.</p>
+<p>Fixture F — No Qualified Sources</p>
+<p>All observations fail qualification.</p>
+<p>Expected:</p>
+<p>INDETERMINATE</p>
+<p>Exit Criterion</p>
+<p>The service can reproduce the major structural behaviors identified by NTP Crosswalk #1 using deterministic input.</p>
+<ol start="7">
+<li>Phase 3 — Qualification Engine
+Objective</li>
+</ol>
+<p>Determine whether observations are eligible to participate in an evaluation.</p>
+<p>Initial Rules</p>
+<p>Evaluate:</p>
+<p>source presence
+source status
+anchor relationship
+freshness
+timestamp validity
+lineage availability
+regime compatibility
+duplication
+required precision
+Qualification Output</p>
+<p>Each observation should emerge as:</p>
+<p>qualified
+degraded
+rejected
+expired
+indeterminate</p>
+<p>with:</p>
+<p>rationale
+evidence
+relevant regime rule
+Important Constraint</p>
+<p>rejected != false</p>
+<p>Rejection means:</p>
+<p>This observation is unsuitable for the current synthesis.</p>
+<p>It does not necessarily mean the observation itself is factually false.</p>
+<p>Exit Criterion</p>
+<p>Every included or excluded observation has an inspectable reason.</p>
+<ol start="8">
+<li>Phase 4 — Coherence Engine
+Objective</li>
+</ol>
+<p>Determine whether qualified observations form a mutually usable truth field.</p>
+<p>Initial Capabilities</p>
+<p>Implement:</p>
+<p>observation comparison
+compatible cluster formation
+outlier identification
+dissent preservation
+indeterminate-state detection
+Output
+coherent
+weakly_coherent
+fragmented
+contested
+inverted
+indeterminate</p>
+<p>Critical Test</p>
+<p>Given:</p>
+<p>Source A supports X
+Source B supports X
+Source C supports Y</p>
+<p>the engine must preserve:</p>
+<p>the X cluster
+the Y observation
+source identities
+relationship among sources</p>
+<p>It MUST NOT reduce disagreement to a count alone.</p>
+<p>Exit Criterion</p>
+<p>The system can distinguish:</p>
+<p>majority agreement</p>
+<p>from:</p>
+<p>qualified coherence</p>
+<ol start="9">
+<li>Phase 5 — Drift Engine
+Objective</li>
+</ol>
+<p>Represent displacement between local, declared, historical, and observed states.</p>
+<p>Initial Drift Dimensions
+value
+semantic
+source
+lineage
+temporal
+regime
+confidence
+policy
+NTP Initial Implementation</p>
+<p>Begin with measurable Temporal Truth fields:</p>
+<p>local value
+observed value
+magnitude
+unit
+direction
+bounded status
+Later Generalization</p>
+<p>Do not require numeric magnitude for every truth class.</p>
+<p>For semantic or structural drift:</p>
+<p>magnitude = null</p>
+<p>MUST remain valid.</p>
+<p>Exit Criterion</p>
+<p>Drift can be recorded without forcing every domain into artificial quantitative precision.</p>
+<ol start="10">
+<li>Phase 6 — Paradox Register
+Objective</li>
+</ol>
+<p>Treat unresolved qualified contradiction as a first-class object.</p>
+<p>Paradox Types
+Structural</p>
+<p>Two valid structures imply incompatible states.</p>
+<p>Semantic</p>
+<p>The same language carries incompatible interpretations.</p>
+<p>Regime</p>
+<p>Claims differ because they belong to different valid regimes.</p>
+<p>Functions</p>
+<p>The register should support:</p>
+<p>competing observation IDs
+competing cluster IDs
+description
+paradox type
+containment strategy
+resolution condition
+current status
+Containment Modes
+preserve
+isolate
+separate_by_regime
+escalate
+resolved
+Exit Criterion</p>
+<p>The system can preserve incompatible qualified states without manufacturing resolution.</p>
+<ol start="11">
+<li>Phase 7 — Regime Resolver
+Objective</li>
+</ol>
+<p>Make regime qualification operational.</p>
+<p>Initial Regime Fields
+domain
+observer context
+precision requirement
+maximum observation age
+policy version
+consequence level
+Test Scenario</p>
+<p>Use the same observations against two regimes.</p>
+<p>Example:</p>
+<p>Regime A</p>
+<p>Low-consequence display clock.</p>
+<p>Regime B</p>
+<p>High-precision distributed transaction processing.</p>
+<p>The same temporal observations MAY produce different operational acceptance states.</p>
+<p>This is expected behavior.</p>
+<p>Exit Criterion</p>
+<p>The system demonstrates that:</p>
+<p>Truth qualification depends on operational regime without implying that truth is arbitrary.</p>
+<ol start="12">
+<li>Phase 8 — Truth-State Synthesizer
+Objective</li>
+</ol>
+<p>Combine qualified evidence, coherence, drift, paradox, and regime into a Truth State.</p>
+<p>Inputs
+Claim
+Truth Classes
+Regime
+qualified Observations
+Source relationships
+Lineage
+Coherence State
+Drift State
+Paradoxes
+Output</p>
+<p>A Truth State containing:</p>
+<p>status
+accepted value
+regime
+truth classes
+anchors
+sources
+observations
+coherence
+drift
+paradoxes
+permitted uses
+evaluated timestamp
+expiration
+revalidation condition
+Critical Constraint</p>
+<p>The synthesizer MUST be capable of returning no accepted value.</p>
+<p>Example:</p>
+<p>status: indeterminate
+accepted_value: null</p>
+<p>This is a successful evaluation.</p>
+<p>It is not an engine failure.</p>
+<p>Exit Criterion</p>
+<p>Every Truth State can explain structurally why it exists.</p>
+<ol start="13">
+<li>Phase 9 — Correction Engine
+Objective</li>
+</ol>
+<p>Separate truth recognition from downstream state modification.</p>
+<p>Supported Modes
+none
+step
+gradual
+quarantine
+dual_state
+human_escalation
+holdover
+fail_closed
+fail_bounded
+First Implementation</p>
+<p>For the NTP reference case, test:</p>
+<p>small drift → gradual
+large validated drift → policy-dependent correction
+fragmented coherence → quarantine
+source loss → holdover
+indeterminate → fail according to regime policy</p>
+<p>These mappings are prototype policy choices and SHOULD remain configurable rather than canonical.</p>
+<p>Exit Criterion</p>
+<p>A new Truth State does not automatically mutate downstream state.</p>
+<ol start="14">
+<li>Phase 10 — Revalidation Engine
+Objective</li>
+</ol>
+<p>Give operational truth a lifecycle.</p>
+<p>Revalidation Triggers</p>
+<p>Support:</p>
+<p>elapsed time
+expiration
+source change
+anchor change
+regime change
+new contradictory observation
+excessive drift
+manual challenge
+Lifecycle
+OBSERVE
+   ↓
+QUALIFY
+   ↓
+EVALUATE
+   ↓
+ACCEPT
+   ↓
+USE
+   ↓
+AGE
+   ↓
+REVALIDATE
+   │
+   ├──► RENEW
+   │
+   ├──► DEGRADE
+   │
+   ├──► CONTEST
+   │
+   ├──► HOLD OVER
+   │
+   └──► EXPIRE</p>
+<p>Exit Criterion</p>
+<p>No Truth State remains operationally accepted indefinitely merely because it was accepted once.</p>
+<ol start="15">
+<li>Phase 11 — API Layer
+Objective</li>
+</ol>
+<p>Expose the reference implementation through a minimal service boundary.</p>
+<p>Initial Endpoints
+POST /v1/claims
+GET  /v1/claims/{claim_id}</p>
+<p>POST /v1/claims/{claim_id}/observations
+GET  /v1/claims/{claim_id}/observations</p>
+<p>POST /v1/claims/{claim_id}/evaluate
+GET  /v1/claims/{claim_id}/truth-state</p>
+<p>GET  /v1/truth-states/{truth_state_id}
+GET  /v1/truth-states/{truth_state_id}/lineage
+GET  /v1/truth-states/{truth_state_id}/paradoxes</p>
+<p>POST /v1/truth-states/{truth_state_id}/revalidate</p>
+<p>GET  /v1/sources/{source_id}
+GET  /v1/anchors/{anchor_id}
+GET  /v1/regimes/{regime_id}</p>
+<p>API Principle</p>
+<p>The first API SHOULD prioritize:</p>
+<p>inspectability
+deterministic behavior
+explicit state
+complete lineage</p>
+<p>over:</p>
+<p>throughput
+autonomous inference
+generalized natural-language interpretation
+Exit Criterion</p>
+<p>A client can submit a claim, observations, and regime and retrieve an inspectable qualified Truth State.</p>
+<ol start="16">
+<li>Phase 12 — Audit and Explainability
+Objective</li>
+</ol>
+<p>Make every significant evaluation reconstructable.</p>
+<p>Each evaluation should preserve:</p>
+<p>input Claim
+Regime
+candidate observations
+qualification decisions
+excluded observations and reasons
+selected sources
+coherence result
+drift result
+registered paradoxes
+Truth State
+correction decision
+revalidation event
+Core Question</p>
+<p>The system should be able to answer:</p>
+<p>Why did you return this Truth State?</p>
+<p>without rerunning the evaluation or reconstructing it from application logs.</p>
+<p>Exit Criterion</p>
+<p>A Truth State can be traced backward from result to observations and anchors.</p>
+<ol start="17">
+<li>Phase 13 — Crosswalk Scoring Harness
+Objective</li>
+</ol>
+<p>Implement the Operational Truth-System scoring model independently from runtime Truth State evaluation.</p>
+<p>Critical Separation
+RUNTIME PLANE            RESEARCH PLANE</p>
+<p>Claim                    Reference System
+Observation              Crosswalk
+Source                   Criterion
+Anchor                   Evidence
+Regime                   Score
+Evaluation               Rationale
+Truth State</p>
+<p>A reference-system score MUST NOT affect the truth qualification of an individual runtime claim.</p>
+<p>Scoring Dimensions
+Anchor Quality
+Lineage Visibility
+Observation Quality
+Coherence Detection
+Drift Detection
+Paradox Handling
+Regime Awareness
+Freshness / Revalidation
+Correction Discipline
+Failure Transparency</p>
+<p>Each score MUST include:</p>
+<p>value
+rationale
+evidence
+Exit Criterion</p>
+<p>NTP Crosswalk #1 can be scored with explicit evidence for every assigned number.</p>
+<ol start="18">
+<li>Phase 14 — Crosswalk #2: DNS
+Objective</li>
+</ol>
+<p>Test whether the architecture survives contact with a different truth class.</p>
+<p>NTP primarily exercises:</p>
+<p>Temporal Truth</p>
+<p>DNS introduces:</p>
+<p>Locational Truth</p>
+<p>and should stress different properties:</p>
+<p>delegation
+authority
+namespace
+caching
+propagation
+expiration
+multiple valid answers
+observer location
+regime boundaries
+Key Research Question</p>
+<p>Which mechanisms discovered in NTP generalize, and which were specific to Temporal Truth?</p>
+<p>Do not alter the core model immediately when DNS differs.</p>
+<p>First classify differences as:</p>
+<p>domain-specific behavior
+missing general abstraction
+legitimate paradox
+regime difference
+model defect
+Exit Criterion</p>
+<p>The model supports DNS without pretending DNS is another clock.</p>
+<ol start="19">
+<li>Phase 15 — Remaining Reference Crosswalks</li>
+</ol>
+<p>Proceed sequentially.</p>
+<h1 id="1-ntp-temporal-truth">1  NTP                     → Temporal Truth</h1>
+<h1 id="2-dns-locational-truth">2  DNS                     → Locational Truth</h1>
+<h1 id="3-iam-identity-truth">3  IAM                     → Identity Truth</h1>
+<h1 id="4-pki-integrity-truth">4  PKI                     → Integrity Truth</h1>
+<h1 id="5-policy-iam-authority-truth">5  Policy / IAM            → Authority Truth</h1>
+<h1 id="6-distributed-systems-state-truth">6  Distributed Systems     → State Truth</h1>
+<h1 id="7-ledgers-transactional-truth">7  Ledgers                 → Transactional Truth</h1>
+<h1 id="8-desired-state-systems-intent-truth">8  Desired-State Systems   → Intent Truth</h1>
+<h1 id="9-telemetry-observational-truth">9  Telemetry               → Observational Truth</h1>
+<h1 id="10-supply-chain-provenance-lineage-truth">10 Supply-Chain Provenance → Lineage Truth</h1>
+<p>Each crosswalk should perform four operations:</p>
+<p>Describe the reference system on its own terms.
+Map mechanisms into RTT.
+Identify mechanisms not yet represented by the Truth Service.
+Score the system using the common scoring rubric.
+20. Phase 16 — Model Consolidation
+Objective</p>
+<p>After all ten crosswalks, determine what actually generalized.</p>
+<p>Classify discovered mechanisms into:</p>
+<p>Universal</p>
+<p>Required across nearly all truth classes.</p>
+<p>Common</p>
+<p>Useful across several truth classes.</p>
+<p>Domain-Specific</p>
+<p>Valid only for particular classes or regimes.</p>
+<p>Experimental</p>
+<p>Potentially useful but insufficiently supported by the crosswalks.</p>
+<p>Rejected</p>
+<p>Introduced during research but no longer structurally justified.</p>
+<p>This phase prevents the final architecture from becoming the accumulated union of every mechanism encountered.</p>
+<p>Exit Criterion</p>
+<p>The generalized Truth Service is smaller and clearer after the ten crosswalks than a naïve combination of all reference-system features.</p>
+<ol start="21">
+<li>Phase 17 — Minimal Operational Prototype</li>
+</ol>
+<p>Only after consolidation should the project move toward a generalized prototype.</p>
+<p>The prototype should support:</p>
+<p>CLAIM
+  ↓
+TRUTH CLASS
+  ↓
+REGIME
+  ↓
+OBSERVATIONS
+  ↓
+SOURCE + LINEAGE
+  ↓
+QUALIFICATION
+  ↓
+COHERENCE
+  ↓
+DRIFT
+  ↓
+PARADOX
+  ↓
+TRUTH STATE
+  ↓
+CORRECTION POLICY
+  ↓
+REVALIDATION</p>
+<p>The prototype SHOULD remain deterministic where possible.</p>
+<p>AI-assisted interpretation may eventually participate in:</p>
+<p>claim classification
+semantic comparison
+source interpretation
+paradox characterization
+regime suggestions</p>
+<p>but SHOULD NOT initially become the hidden authority determining truth state.</p>
+<ol start="22">
+<li>Implementation Order</li>
+</ol>
+<p>The recommended build order is:</p>
+<ol start="01">
+<li>Canon Stabilization
+        ↓</li>
+<li>Static Data Model
+        ↓</li>
+<li>NTP Fixtures
+        ↓</li>
+<li>Qualification Engine
+        ↓</li>
+<li>Coherence Engine
+        ↓</li>
+<li>Drift Engine
+        ↓</li>
+<li>Paradox Register
+        ↓</li>
+<li>Regime Resolver
+        ↓</li>
+<li>Truth-State Synthesizer
+        ↓</li>
+<li>Correction Engine
+        ↓</li>
+<li>Revalidation Engine
+        ↓</li>
+<li>API Layer
+        ↓</li>
+<li>Audit / Explainability
+        ↓</li>
+<li>Scoring Harness
+        ↓</li>
+<li>DNS Crosswalk
+        ↓</li>
+<li>Remaining Crosswalks
+        ↓</li>
+<li>Model Consolidation
+        ↓</li>
+<li>
+<p>Generalized Prototype</p>
+</li>
+<li>
+<p>Suggested Repository Artifacts</p>
+</li>
+</ol>
+<p>A minimal implementation branch could eventually contain:</p>
+<p>Resonance_Truth/
+│
+├── architecture/
+│   ├── truth_service_architecture.md
+│   ├── truth_service_api.yaml
+│   ├── truth_service_data_model.md
+│   └── implementation_roadmap.md
+│
+├── crosswalks/
+│   ├── 01_ntp_temporal_truth.md
+│   ├── 02_dns_locational_truth.md
+│   ├── 03_iam_identity_truth.md
+│   ├── 04_pki_integrity_truth.md
+│   ├── 05_policy_authority_truth.md
+│   ├── 06_distributed_state_truth.md
+│   ├── 07_ledger_transactional_truth.md
+│   ├── 08_desired_state_intent_truth.md
+│   ├── 09_telemetry_observational_truth.md
+│   └── 10_provenance_lineage_truth.md
+│
+├── schemas/
+│   ├── claim.schema.json
+│   ├── observation.schema.json
+│   ├── regime.schema.json
+│   ├── truth_state.schema.json
+│   └── evaluation.schema.json
+│
+├── fixtures/
+│   └── ntp/
+│       ├── coherent.json
+│       ├── minor_drift.json
+│       ├── outlier.json
+│       ├── fragmented.json
+│       ├── stale.json
+│       └── indeterminate.json
+│
+└── tests/
+    ├── qualification/
+    ├── coherence/
+    ├── drift/
+    ├── paradox/
+    ├── regime/
+    └── lifecycle/</p>
+<p>This layout is provisional.</p>
+<p>Repository structure should follow implementation experience rather than become canon prematurely.</p>
+<ol start="24">
+<li>Milestone Gates
+Milestone A — Representable</li>
+</ol>
+<p>Can the model represent NTP-style Temporal Truth without losing lineage, regime, drift, or uncertainty?</p>
+<p>Milestone B — Evaluatable</p>
+<p>Can deterministic observations produce reproducible Truth States?</p>
+<p>Milestone C — Explainable</p>
+<p>Can every Truth State explain why it exists?</p>
+<p>Milestone D — Contestable</p>
+<p>Can contradictory qualified evidence survive evaluation without being erased?</p>
+<p>Milestone E — Temporal</p>
+<p>Can accepted Truth States age, degrade, expire, and revalidate?</p>
+<p>Milestone F — Transferable</p>
+<p>Does the architecture survive DNS without forcing DNS into an NTP-shaped model?</p>
+<p>Milestone G — Generalizable</p>
+<p>After all ten crosswalks, do common mechanisms remain?</p>
+<p>Milestone H — Operational</p>
+<p>Can an external client safely obtain and inspect a qualified Truth State?</p>
+<ol start="25">
+<li>What Not to Build Yet</li>
+</ol>
+<p>The initial implementation SHOULD NOT attempt to become:</p>
+<p>a universal fact checker
+a general-purpose knowledge graph
+an autonomous arbiter of truth
+a reputation system
+a social-media misinformation detector
+a centralized truth authority
+an AI confidence oracle
+a replacement for domain-specific validation
+a production-scale distributed consensus system</p>
+<p>Those applications may eventually interact with the architecture.</p>
+<p>They should not define the architecture prematurely.</p>
+<ol start="26">
+<li>Initial Success Condition</li>
+</ol>
+<p>The first real success is deliberately modest.</p>
+<p>Given:</p>
+<p>one Temporal Truth claim
+one declared Regime
+several NTP-like observations
+known source relationships
+explicit lineage</p>
+<p>the implementation can produce one of:</p>
+<p>OPERATIONALLY_ACCEPTED
+DEGRADED
+HELD_OVER
+CONTESTED
+EXPIRED
+REJECTED
+INDETERMINATE</p>
+<p>and answer:</p>
+<p>Why?</p>
+<p>with explicit references to:</p>
+<p>source qualification
+lineage
+coherence
+drift
+paradox
+regime
+freshness</p>
+<p>If the prototype can do that deterministically and inspectably, the foundational architecture is working.</p>
+<ol start="27">
+<li>Governing Implementation Principle</li>
+</ol>
+<p>Build the observer before building the oracle.</p>
+<p>The goal of the initial Resonance Truth implementation is not to create a machine that declares what is true.</p>
+<p>The goal is to create a system capable of observing and exposing the structural conditions under which a truth claim becomes operationally usable.</p>
+<p>Only after those conditions can be represented, measured, challenged, and revalidated should additional automation be introduced.</p>
+<ol start="28">
+<li>Roadmap Summary
+CANON
+  ↓
+MODEL
+  ↓
+NTP REFERENCE CASE
+  ↓
+QUALIFICATION
+  ↓
+COHERENCE
+  ↓
+DRIFT
+  ↓
+PARADOX
+  ↓
+REGIME
+  ↓
+TRUTH STATE
+  ↓
+CORRECTION
+  ↓
+REVALIDATION
+  ↓
+API
+  ↓
+AUDIT
+  ↓
+SCORING
+  ↓
+DNS
+  ↓
+REMAINING CROSSWALKS
+  ↓
+CONSOLIDATION
+  ↓
+GENERALIZED TRUTH SERVICE</li>
+</ol>
+<p>The implementation should advance one regime at a time.</p>
+<p>Each new reference system should be allowed to challenge the architecture.</p>
+<p>The architecture should change only when the evidence from those crosswalks demonstrates that the existing model is structurally insufficient.</p>
+<p>Observe first.
+ Preserve lineage.
+ Measure drift.
+ Contain paradox.
+ Declare regime.
+ Qualify truth.
+ Revalidate continuously.</p>
+<p>The main roadmap choice is deliberate: <strong>we do not jump from NTP analogy straight into a generalized AI-powered Truth Service.</strong> We make NTP work deterministically, then deliberately let DNS try to break the abstraction. That gives each subsequent crosswalk the role of a <em>test against the emerging architecture</em>, rather than merely another example to bolt onto it.</p>
   </main>
 </body>
 </html>
