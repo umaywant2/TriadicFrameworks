@@ -1,0 +1,30 @@
+{
+  "manifest_version": "1.0",
+  "module_id": "resonance_truth",
+
+  "entrypoints": {
+    "human": "README.md",
+    "web": "index.html",
+    "machine": "module.json",
+    "registry": "registry.json"
+  },
+
+  "directories": {
+    "architecture": "architecture/",
+    "crosswalks": "crosswalks/",
+    "fixtures": "fixtures/",
+    "schemas": "schemas/",
+    "tests": "tests/"
+  },
+
+  "contracts": {
+    "schema_version": "0.1",
+    "consolidation_target": "0.2"
+  },
+
+  "reference_implementation": {
+    "system": "NTP",
+    "truth_class": "temporal",
+    "fixtures": "fixtures/ntp/"
+  }
+}
