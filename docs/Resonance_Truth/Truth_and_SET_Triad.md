@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_Truth_and_SET_Triad_" src="https://github.com/user-attachments/assets/ea918060-9995-4e02-8062-de3480003faf" />
 
 # 🜁 Truth and the SET Triad  
 **RTT/1 · Resonance Domain · Spin · Elec · Temp Analysis of Truth**
