@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_03_iam_identity_truth_" src="https://github.com/user-attachments/assets/cc164b1b-e13c-4b6c-a8a2-7747d3a5c8f9" />
+
 # Crosswalk #3 — IAM and Identity Truth
 
 **Module:** Resonance Truth  
