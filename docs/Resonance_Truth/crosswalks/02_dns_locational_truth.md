@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_02_dns_locational_truth_" src="https://github.com/user-attachments/assets/f29d701a-96a5-4cef-a0e8-91c643d3b671" />
+
 # Crosswalk #2 — DNS and Locational Truth
 
 **Module:** Resonance Truth  
