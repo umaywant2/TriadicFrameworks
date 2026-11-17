@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/schemas/README.md">
-  <title>README</title>
+  <title>Resonance Truth — Schemas</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2218 @@
   </aside>
 
   <main>
-<p>. </p>
+<h1 id="resonance-truth-schemas">Resonance Truth — Schemas</h1>
+<blockquote>
+<p><strong>Machine-readable contracts for the RTT Resonance Truth Service</strong></p>
+</blockquote>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Schema Index and Contract<br>
+<strong>Framework:</strong> Resonance-Time Theory (RTT)<br>
+<strong>Status:</strong> Reference Implementation / Schema Boundary<br>
+<strong>Current Fixture Contract:</strong> v0.1<br>
+<strong>Consolidation Target:</strong> v0.2<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This directory contains the machine-readable schemas used by the RTT Resonance Truth Service.</p>
+<p>The schemas define serialization and validation contracts for the logical objects described in:</p>
+<pre><code>../architecture/truth_service_architecture.md
+../architecture/truth_service_components.md
+../architecture/truth_service_data_model.md
+</code></pre>
+<p>They support deterministic fixtures under:</p>
+<pre><code>../fixtures/
+</code></pre>
+<p>and behavioral validation under:</p>
+<pre><code>../tests/
+</code></pre>
+<p>The governing principle is:</p>
+<blockquote>
+<p><strong>The schemas represent the architecture. They do not define the architecture accidentally.</strong></p>
+</blockquote>
+<p>The direction is:</p>
+<pre><code>Crosswalk Evidence
+      ↓
+Architecture
+      ↓
+Logical Data Model
+      ↓
+Schema
+      ↓
+Fixture
+      ↓
+Test
+      ↓
+Implementation
+</code></pre>
+<p>not:</p>
+<pre><code>convenient JSON shape
+      ↓
+architecture by accident
+</code></pre>
+<hr>
+<h1 id="1-current-schema-set">1. Current Schema Set</h1>
+<p>The initial schema scaffold contains:</p>
+<pre><code>claim.schema.json
+
+observation.schema.json
+
+source.schema.json
+
+anchor.schema.json
+
+lineage.schema.json
+
+regime.schema.json
+
+evaluation.schema.json
+
+truth_state.schema.json
+
+coherence_state.schema.json
+
+drift_state.schema.json
+
+paradox.schema.json
+
+correction_policy.schema.json
+</code></pre>
+<p>These schemas represent the original v0.1 Truth-Service model.</p>
+<p>They remain useful for the initial deterministic NTP implementation.</p>
+<hr>
+<h1 id="2-v01-compatibility-boundary">2. v0.1 Compatibility Boundary</h1>
+<p>The first NTP fixtures intentionally use the v0.1 vocabulary.</p>
+<p>Examples include:</p>
+<pre><code>observations
+
+anchors
+
+sources
+
+lineage
+
+regime
+
+expected truth state
+</code></pre>
+<p>This is deliberate.</p>
+<p>The first fixture family should remain small enough to validate:</p>
+<pre><code>Qualification
+
+Coherence
+
+Drift
+
+Paradox
+
+Truth-State synthesis
+
+Correction
+
+Revalidation
+</code></pre>
+<p>without requiring the entire ten-crosswalk architecture to be implemented simultaneously.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>v0.1 remains the compatibility boundary for the initial NTP fixture family.</strong></p>
+</blockquote>
+<hr>
+<h1 id="3-why-v02-is-needed">3. Why v0.2 Is Needed</h1>
+<p>The ten operational crosswalks challenged several assumptions in the original model.</p>
+<p>The crosswalk sequence examined:</p>
+<pre><code>NTP
+  → Temporal Truth
+
+DNS
+  → Locational Truth
+
+IAM
+  → Identity Truth
+
+PKI
+  → Integrity Truth
+
+Policy / Authorization
+  → Authority Truth
+
+Distributed Systems
+  → State Truth
+
+Transactional Systems
+  → Transactional Truth
+
+Desired-State Systems
+  → Intent Truth
+
+Telemetry
+  → Observational Truth
+
+Supply-Chain Provenance
+  → Lineage Truth
+</code></pre>
+<p>Repeated cross-system findings indicate that several original concepts need generalization.</p>
+<p>The v0.2 consolidation should therefore evolve the schema model cautiously rather than simply adding fields to v0.1 objects.</p>
+<hr>
+<h1 id="4-schema-design-principles">4. Schema Design Principles</h1>
+<p>The schema layer follows several rules.</p>
+<h2 id="41-meaning-before-shape">4.1 Meaning Before Shape</h2>
+<p>A field should exist because it represents a stable architectural concept.</p>
+<p>It should not exist merely because it is convenient for one fixture.</p>
+<hr>
+<h2 id="42-domain-native-values">4.2 Domain-Native Values</h2>
+<p>Schemas should permit Truth Classes to retain domain-native values.</p>
+<p>Examples:</p>
+<pre><code>Temporal:
+  offset_ms
+
+Authority:
+  permit / deny
+
+Transaction:
+  committed / rolled_back
+
+Intent:
+  converged / not_converged
+</code></pre>
+<p>The schema should not force these into one universal scalar.</p>
+<hr>
+<h2 id="43-null-is-meaningful">4.3 Null Is Meaningful</h2>
+<p>The schemas must distinguish:</p>
+<pre><code>unknown
+</code></pre>
+<p>from:</p>
+<pre><code>false
+</code></pre>
+<p>and:</p>
+<pre><code>zero
+</code></pre>
+<p>and:</p>
+<pre><code>absent
+</code></pre>
+<p>Example:</p>
+<pre><code>accepted_value:
+  null
+</code></pre>
+<p>may be correct for:</p>
+<pre><code>indeterminate
+contested
+expired
+</code></pre>
+<p>No fabricated value is required.</p>
+<hr>
+<h2 id="44-evidence-is-preserved">4.4 Evidence Is Preserved</h2>
+<p>Evidence rejected from one Evaluation should not need to be deleted.</p>
+<p>Schemas should support:</p>
+<pre><code>Evidence exists
+  +
+Evidence excluded from synthesis
+</code></pre>
+<p>without conflating exclusion with falsehood.</p>
+<hr>
+<h2 id="45-history-is-append-oriented">4.5 History Is Append-Oriented</h2>
+<p>New Evidence or Revalidation should normally produce:</p>
+<pre><code>new Evaluation
+  ↓
+new Truth State
+</code></pre>
+<p>rather than rewriting prior Evaluations.</p>
+<p>Schemas should preserve historical references.</p>
+<hr>
+<h2 id="46-relationships-matter">4.6 Relationships Matter</h2>
+<p>The crosswalk series repeatedly demonstrated that operational Truth belongs to relationships.</p>
+<p>Therefore schema design should preserve:</p>
+<ul>
+<li>provenance</li>
+<li>derivation</li>
+<li>delegation</li>
+<li>transformation</li>
+<li>comparison</li>
+<li>commitment</li>
+<li>materialization</li>
+<li>correction</li>
+<li>Revalidation</li>
+</ul>
+<p>rather than storing only final values.</p>
+<hr>
+<h1 id="5-core-v01-objects">5. Core v0.1 Objects</h1>
+<p>The current v0.1 model centers on:</p>
+<pre><code>Claim
+Observation
+Source
+Anchor
+Lineage
+Regime
+Evaluation
+CoherenceState
+DriftState
+Paradox
+TruthState
+CorrectionPolicy
+</code></pre>
+<p>This model is sufficient for the initial temporal fixture family.</p>
+<p>It should not be mistaken for the final generalized object model.</p>
+<hr>
+<h1 id="6-claim-schema">6. Claim Schema</h1>
+<h2 id="file">File</h2>
+<pre><code>claim.schema.json
+</code></pre>
+<h2 id="purpose_1">Purpose</h2>
+<p>Represents the assertion being evaluated.</p>
+<p>Core concerns include:</p>
+<pre><code>claim_id
+statement
+truth_classes
+intended_use
+lifecycle metadata
+</code></pre>
+<p>A Claim is not itself a Truth State.</p>
+<p>Canonical distinction:</p>
+<pre><code>Claim
+  ≠
+Truth State
+</code></pre>
+<hr>
+<h1 id="7-observation-schema">7. Observation Schema</h1>
+<h2 id="file_1">File</h2>
+<pre><code>observation.schema.json
+</code></pre>
+<h2 id="purpose_2">Purpose</h2>
+<p>Represents observational Evidence in the v0.1 model.</p>
+<p>Typical fields include:</p>
+<pre><code>observation_id
+claim_id
+source_id
+anchor_id
+value
+observed_at
+received_at
+expires_at
+integrity
+lineage
+metadata
+</code></pre>
+<p>Observation remains important.</p>
+<p>However:</p>
+<blockquote>
+<p><strong>Crosswalks #3–#10 demonstrate that Observation is too narrow to remain the universal generalized Evidence object.</strong></p>
+</blockquote>
+<p>Therefore observation.schema.json should remain valid as a v0.1 object and likely become one specialization of a future Evidence model. 【1-721f7b】</p>
+<hr>
+<h1 id="8-source-schema">8. Source Schema</h1>
+<h2 id="file_2">File</h2>
+<pre><code>source.schema.json
+</code></pre>
+<h2 id="purpose_3">Purpose</h2>
+<p>Represents an entity capable of producing Evidence.</p>
+<p>Relevant concerns include:</p>
+<pre><code>identity
+type
+reference relationship
+Lineage
+independence
+domain
+status
+validity
+</code></pre>
+<p>The crosswalks demonstrated that Source and Authority must remain separate.</p>
+<p>Therefore:</p>
+<pre><code>Source exists
+  ≠
+Source authoritative
+</code></pre>
+<p>and:</p>
+<pre><code>Source authoritative in one scope
+  ≠
+Source authoritative everywhere
+</code></pre>
+<hr>
+<h1 id="9-anchor-schema">9. Anchor Schema</h1>
+<h2 id="file_3">File</h2>
+<pre><code>anchor.schema.json
+</code></pre>
+<h2 id="purpose_4">Purpose</h2>
+<p>Represents the v0.1 bounded reference abstraction.</p>
+<p>NTP, DNS, and PKI strongly support Anchors.</p>
+<p>However, later crosswalks demonstrated that operational reference may also arise from:</p>
+<pre><code>policy
+protocol
+accepted history
+authorized declaration
+observation contract
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Anchor should remain a valid specialized reference concept while v0.2 considers the broader ReferenceBasis abstraction.</strong></p>
+</blockquote>
+<hr>
+<h1 id="10-lineage-schema">10. Lineage Schema</h1>
+<h2 id="file_4">File</h2>
+<pre><code>lineage.schema.json
+</code></pre>
+<h2 id="purpose_5">Purpose</h2>
+<p>Represents provenance and relationship paths.</p>
+<p>The ten crosswalks demonstrate that Lineage must support more than simple Source ancestry.</p>
+<p>Lineage now needs to describe relationships such as:</p>
+<pre><code>derives_from
+delegated_by
+transformed_from
+depends_on
+observed_by
+produced_by
+aggregated_from
+precedes
+committed_as
+materialized_as
+supersedes
+compensates
+reconstructs_from
+drifted_from
+reconciles_toward
+</code></pre>
+<p>Therefore the Lineage schema should remain:</p>
+<pre><code>graph-compatible
+</code></pre>
+<p>and:</p>
+<pre><code>relationship-extensible
+</code></pre>
+<hr>
+<h1 id="11-regime-schema">11. Regime Schema</h1>
+<h2 id="file_5">File</h2>
+<pre><code>regime.schema.json
+</code></pre>
+<h2 id="purpose_6">Purpose</h2>
+<p>Represents the bounded operational conditions governing Evaluation.</p>
+<p>Potential concerns include:</p>
+<pre><code>domain
+policy
+observer context
+precision
+freshness
+Source requirements
+consequence
+permitted Truth States
+Correction modes
+</code></pre>
+<p>The crosswalks strongly confirm:</p>
+<blockquote>
+<p><strong>Regime participates directly in Truth qualification.</strong></p>
+</blockquote>
+<p>However, dynamic Evidence should not automatically be stuffed into Regime.</p>
+<p>The v0.2 model should preserve a distinction between:</p>
+<pre><code>stable governing boundary
+</code></pre>
+<p>and:</p>
+<pre><code>current Context Evidence
+</code></pre>
+<hr>
+<h1 id="12-evaluation-schema">12. Evaluation Schema</h1>
+<h2 id="file_6">File</h2>
+<pre><code>evaluation.schema.json
+</code></pre>
+<h2 id="purpose_7">Purpose</h2>
+<p>Represents one qualified attempt to evaluate one Claim under one Regime.</p>
+<p>Evaluation should preserve:</p>
+<pre><code>inputs
+qualification results
+selected Evidence
+excluded Evidence
+Coherence
+Drift
+Paradox
+synthesis rationale
+resulting Truth State
+evaluator version
+evaluation time
+</code></pre>
+<p>Completed Evaluations should be historically stable.</p>
+<p>Revalidation should create another Evaluation.</p>
+<hr>
+<h1 id="13-truth-state-schema">13. Truth-State Schema</h1>
+<h2 id="file_7">File</h2>
+<pre><code>truth_state.schema.json
+</code></pre>
+<h2 id="purpose_8">Purpose</h2>
+<p>Represents the synthesized operational result of an Evaluation.</p>
+<p>The v0.1 model includes statuses such as:</p>
+<pre><code>declared
+observed
+corroborated
+operationally_accepted
+contested
+degraded
+held_over
+expired
+rejected
+indeterminate
+</code></pre>
+<p>The crosswalk series adds an important refinement:</p>
+<blockquote>
+<p><strong>Truth-State qualification and domain-native result are different dimensions.</strong></p>
+</blockquote>
+<p>Examples:</p>
+<pre><code>qualification:
+  operationally_accepted
+
+domain result:
+  authorization = deny
+</code></pre>
+<p>or:</p>
+<pre><code>qualification:
+  operationally_accepted
+
+domain result:
+  converged = false
+</code></pre>
+<p>The v0.2 schema should make this distinction explicit.</p>
+<hr>
+<h1 id="14-coherence-state-schema">14. Coherence-State Schema</h1>
+<h2 id="file_8">File</h2>
+<pre><code>coherence_state.schema.json
+</code></pre>
+<h2 id="purpose_9">Purpose</h2>
+<p>Represents structural compatibility among qualified Evidence and relationships.</p>
+<p>Initial states include:</p>
+<pre><code>coherent
+weakly_coherent
+fragmented
+contested
+inverted
+indeterminate
+</code></pre>
+<p>The crosswalk series refined the meaning of Coherence substantially.</p>
+<p>Coherence is not:</p>
+<pre><code>simple equality
+</code></pre>
+<p>and it is not:</p>
+<pre><code>majority vote
+</code></pre>
+<p>The generalized meaning is:</p>
+<blockquote>
+<p><strong>Domain-semantic structural compatibility among qualified Evidence and relationships under a declared Regime.</strong></p>
+</blockquote>
+<hr>
+<h1 id="15-drift-state-schema">15. Drift-State Schema</h1>
+<h2 id="file_9">File</h2>
+<pre><code>drift_state.schema.json
+</code></pre>
+<h2 id="purpose_10">Purpose</h2>
+<p>Represents displacement between relevant Truth-bearing states or structures.</p>
+<p>Potential Drift dimensions include:</p>
+<pre><code>value
+temporal
+state
+source
+lineage
+semantic
+authority
+policy
+regime
+instrumentation
+coverage
+context
+transformation
+</code></pre>
+<p>Numeric magnitude should remain optional.</p>
+<p>Example:</p>
+<pre><code>magnitude:
+  56
+
+unit:
+  milliseconds
+</code></pre>
+<p>is valid.</p>
+<p>So is:</p>
+<pre><code>magnitude:
+  null
+
+dimensions:
+  - semantic
+  - lineage
+</code></pre>
+<p>The schema must not manufacture numerical precision.</p>
+<hr>
+<h1 id="16-paradox-schema">16. Paradox Schema</h1>
+<h2 id="file_10">File</h2>
+<pre><code>paradox.schema.json
+</code></pre>
+<h2 id="purpose_11">Purpose</h2>
+<p>Represents qualified structural incompatibility that remains unresolved after:</p>
+<pre><code>Truth Class
+Regime
+scope
+freshness
+Lineage
+domain semantics
+</code></pre>
+<p>have been considered.</p>
+<p>The crosswalks strongly establish:</p>
+<pre><code>difference
+  ≠
+Paradox
+
+multiplicity
+  ≠
+Paradox
+
+stale state
+  ≠
+Paradox
+
+different Regimes
+  ≠
+Paradox
+</code></pre>
+<p>Paradox should remain a deliberately narrow structure.</p>
+<hr>
+<h1 id="17-correction-policy-schema">17. Correction-Policy Schema</h1>
+<h2 id="file_11">File</h2>
+<pre><code>correction_policy.schema.json
+</code></pre>
+<h2 id="purpose_12">Purpose</h2>
+<p>Represents permitted downstream response to a Truth State or Drift relationship.</p>
+<p>Initial modes include:</p>
+<pre><code>none
+step
+gradual
+quarantine
+dual_state
+human_escalation
+holdover
+fail_closed
+fail_bounded
+</code></pre>
+<p>Later crosswalks demonstrated additional correction families such as:</p>
+<pre><code>reconciliation
+
+compensation
+
+replacement
+
+restriction
+</code></pre>
+<p>The v0.2 model should keep Correction extensible rather than continually expanding one flat enum.</p>
+<hr>
+<h1 id="18-v02-consolidation-evidenceitem">18. v0.2 Consolidation — EvidenceItem</h1>
+<p>The strongest schema change emerging from the crosswalk series is:</p>
+<pre><code>Observation
+  ↓
+EvidenceItem
+</code></pre>
+<p>The generalized concept is:</p>
+<blockquote>
+<p><strong>A typed item participating as Evidence in one or more Evaluations.</strong></p>
+</blockquote>
+<p>Potential Evidence types include:</p>
+<pre><code>observation
+assertion
+declaration
+attribute
+attestation
+status_evidence
+transition_evidence
+derived_evidence
+</code></pre>
+<p>Observation should remain one specialization.</p>
+<hr>
+<h1 id="19-evidenceitem-requirements">19. EvidenceItem Requirements</h1>
+<p>A generalized Evidence item may need:</p>
+<pre><code>evidence_id
+
+evidence_type
+
+subject_id
+
+source_id
+
+value
+
+produced_at
+
+observed_at
+
+received_at
+
+expires_at
+
+integrity
+
+context
+
+lineage references
+
+metadata
+</code></pre>
+<p>Not every Evidence type requires every field.</p>
+<p>The schema should therefore support type-specific requirements without turning every property optional and semantically meaningless.</p>
+<hr>
+<h1 id="20-evidence-graph">20. Evidence Graph</h1>
+<p>Crosswalks #9 and #10 provide strong evidence that Evidence is graph-structured.</p>
+<p>Potential relationships include:</p>
+<pre><code>derives_from
+produced_by
+observed_by
+transformed_from
+depends_on
+aggregated_from
+correlates_with
+supports
+contradicts
+parent_of
+copied_from
+</code></pre>
+<p>The v0.2 schema model should support:</p>
+<pre><code>fan-in
+fan-out
+branching
+merging
+derivation
+transformation
+</code></pre>
+<p>A flat array of Evidence IDs is insufficient for all generalized cases.</p>
+<hr>
+<h1 id="21-evidence-independence">21. Evidence Independence</h1>
+<p>Independence should not rely only on:</p>
+<pre><code>source.independence
+</code></pre>
+<p>Crosswalks demonstrate that two Evidence items may:</p>
+<pre><code>appear separate
+</code></pre>
+<p>while sharing:</p>
+<pre><code>one upstream Source
+one raw event
+one dependency
+one copied assertion
+</code></pre>
+<p>Therefore v0.2 should permit independence analysis through:</p>
+<pre><code>Evidence Graph
+Lineage Graph
+</code></pre>
+<p>Potential classifications remain:</p>
+<pre><code>independent
+partially_dependent
+dependent
+unknown
+</code></pre>
+<hr>
+<h1 id="22-v02-consolidation-referencebasis">22. v0.2 Consolidation — ReferenceBasis</h1>
+<p>The second major schema evolution is:</p>
+<pre><code>Anchor
+  ↓
+ReferenceBasis
+</code></pre>
+<p>Potential ReferenceBasis types include:</p>
+<pre><code>external_anchor
+governing_policy
+governing_protocol
+accepted_history
+authorized_declaration
+measurement_standard
+trust_configuration
+</code></pre>
+<p>Anchor remains useful.</p>
+<p>It becomes one specialization of the broader concept.</p>
+<hr>
+<h1 id="23-referencebasis-principle">23. ReferenceBasis Principle</h1>
+<p>A ReferenceBasis answers:</p>
+<blockquote>
+<p><strong>What recognized structure makes this Evaluation meaningful?</strong></p>
+</blockquote>
+<p>Different Truth Classes may answer differently.</p>
+<p>Examples:</p>
+<pre><code>Temporal:
+  timing reference
+
+Authority:
+  policy
+
+State:
+  protocol + accepted history
+
+Intent:
+  authorized declaration
+
+Lineage:
+  provenance requirements
+</code></pre>
+<p>The schema should preserve this variety.</p>
+<hr>
+<h1 id="24-v02-consolidation-authorityrelationship">24. v0.2 Consolidation — AuthorityRelationship</h1>
+<p>The crosswalks strongly establish that Authority is relational.</p>
+<p>It should not remain represented as:</p>
+<pre><code>source.authoritative = true
+</code></pre>
+<p>A candidate AuthorityRelationship may include:</p>
+<pre><code>authority_relationship_id
+
+actor_id
+
+role
+
+operation
+
+subject_scope
+
+target_scope
+
+delegator_id
+
+reference_basis_id
+
+regime_id
+
+constraints
+
+valid_from
+
+valid_until
+
+lineage_reference
+
+status
+</code></pre>
+<p>The precise schema should be created during the v0.2 consolidation pass.</p>
+<hr>
+<h1 id="25-v02-consolidation-domain-result">25. v0.2 Consolidation — Domain Result</h1>
+<p>The crosswalks repeatedly produced valid negative domain results.</p>
+<p>Examples:</p>
+<pre><code>DNS:
+  absent
+
+IAM:
+  authentication failed
+
+PKI:
+  certificate not acceptable for use
+
+Authorization:
+  deny
+
+Distributed State:
+  uncommitted
+
+Transaction:
+  rolled_back
+
+Desired State:
+  converged = false
+</code></pre>
+<p>These results may still arise from:</p>
+<pre><code>fully successful Evaluation
+</code></pre>
+<p>Therefore v0.2 should separate:</p>
+<pre><code>Truth-State qualification
+</code></pre>
+<p>from:</p>
+<pre><code>domain_result
+</code></pre>
+<hr>
+<h1 id="26-qualification-vs-domain-result">26. Qualification vs Domain Result</h1>
+<p>Conceptually:</p>
+<pre><code>truth_state:
+  qualification_status:
+    operationally_accepted
+
+  domain_result:
+    authorization:
+      deny
+</code></pre>
+<p>This means:</p>
+<blockquote>
+<p><strong>The system successfully established that the requested action is not authorized.</strong></p>
+</blockquote>
+<p>The negative result is itself qualified Truth.</p>
+<p>This distinction should become explicit in v0.2.</p>
+<hr>
+<h1 id="27-v02-consolidation-truthcomparison">27. v0.2 Consolidation — TruthComparison</h1>
+<p>Desired-State and Telemetry crosswalks strongly support:</p>
+<pre><code>TruthComparison
+</code></pre>
+<p>A TruthComparison evaluates relationships between existing Truth States.</p>
+<p>Examples:</p>
+<pre><code>Intent vs State
+
+Expected vs Observed
+
+Prior vs Current
+
+Committed vs Materialized
+
+Claimed vs Observed Provenance
+</code></pre>
+<p>Potential output includes:</p>
+<pre><code>Coherence
+Drift
+Gap
+domain result
+</code></pre>
+<p>This enables recursive Truth evaluation while preserving parent Lineage.</p>
+<hr>
+<h1 id="28-v02-consolidation-materializedtruthstate">28. v0.2 Consolidation — MaterializedTruthState</h1>
+<p>Several systems distinguish:</p>
+<pre><code>accepted Truth
+</code></pre>
+<p>from:</p>
+<pre><code>operational materialization
+</code></pre>
+<p>Examples:</p>
+<pre><code>DNS:
+  cached result
+
+Distributed State:
+  applied replica state
+
+Transactions:
+  materialized database state
+
+Desired State:
+  current realization of Intent
+</code></pre>
+<p>Potential future schema:</p>
+<pre><code>materialized_truth_state.schema.json
+</code></pre>
+<p>The exact form should remain composable.</p>
+<p>Not every Truth Class requires materialization.</p>
+<hr>
+<h1 id="29-v02-consolidation-coverage">29. v0.2 Consolidation — Coverage</h1>
+<p>Telemetry and Provenance establish a broader:</p>
+<pre><code>Coverage
+</code></pre>
+<p>concept.</p>
+<p>Coverage answers:</p>
+<blockquote>
+<p><strong>Across what bounded extent can the available Evidence support conclusions?</strong></p>
+</blockquote>
+<p>Potential specializations:</p>
+<pre><code>observation coverage
+provenance coverage
+evaluation coverage
+</code></pre>
+<p>Potential fields include:</p>
+<pre><code>subject_scope
+evidence_types
+time_scope
+expected_sources
+known_gaps
+completeness_classification
+regime_id
+</code></pre>
+<p>Coverage becomes especially important when asserting:</p>
+<pre><code>absence
+</code></pre>
+<p>or:</p>
+<pre><code>completeness
+</code></pre>
+<hr>
+<h1 id="30-v02-consolidation-gap">30. v0.2 Consolidation — Gap</h1>
+<p>Missing structure should remain explicit.</p>
+<p>Potential gap types include:</p>
+<pre><code>evidence
+lineage
+transformation
+coverage
+authority
+context
+</code></pre>
+<p>A Gap may represent:</p>
+<blockquote>
+<p><strong>Something relevant that the current Evaluation cannot establish or reconstruct.</strong></p>
+</blockquote>
+<p>Gap must remain distinct from:</p>
+<pre><code>qualified absence
+</code></pre>
+<p>This is a key v0.2 requirement.</p>
+<hr>
+<h1 id="31-v02-consolidation-acceptancerule">31. v0.2 Consolidation — AcceptanceRule</h1>
+<p>The crosswalks demonstrate that different domains establish operational acceptance differently.</p>
+<p>Examples:</p>
+<pre><code>NTP:
+  Source selection and synthesis
+
+DNS:
+  authority + freshness
+
+IAM:
+  proofing / authentication requirements
+
+PKI:
+  path validation
+
+Authority:
+  policy evaluation
+
+Distributed State:
+  quorum / commitment rule
+
+Transactions:
+  commit rule
+
+Intent:
+  declaration / convergence rules
+</code></pre>
+<p>Therefore v0.2 should consider:</p>
+<pre><code>AcceptanceRule
+</code></pre>
+<p>as a first-class reusable concept.</p>
+<hr>
+<h1 id="32-v02-consolidation-contextevidence">32. v0.2 Consolidation — ContextEvidence</h1>
+<p>Dynamic current conditions should remain distinct from the stable Regime.</p>
+<p>Examples:</p>
+<pre><code>current environment
+runtime attributes
+request context
+telemetry context
+</code></pre>
+<p>Potential relationship:</p>
+<pre><code>Regime
+  +
+ContextEvidence
+  ↓
+Evaluation
+</code></pre>
+<p>This prevents:</p>
+<pre><code>Regime
+</code></pre>
+<p>from becoming an unstructured container for every runtime value.</p>
+<hr>
+<h1 id="33-v02-consolidation-role">33. v0.2 Consolidation — Role</h1>
+<p>Actors have repeatedly appeared in different roles.</p>
+<p>Examples:</p>
+<pre><code>Source
+Observer
+Consumer
+Authority
+Transformer
+Attester
+Leader
+Participant
+</code></pre>
+<p>The same Entity may occupy different roles in different Evaluations.</p>
+<p>Therefore v0.2 should consider role assignment as relational.</p>
+<p>Potential pattern:</p>
+<pre><code>Entity
+  ↓
+Role
+  ↓
+Regime / Scope
+</code></pre>
+<p>This may be encoded inside existing relationship objects rather than requiring a new top-level schema.</p>
+<hr>
+<h1 id="34-v02-consolidation-derived-evidence">34. v0.2 Consolidation — Derived Evidence</h1>
+<p>Derived Evidence should preserve:</p>
+<pre><code>upstream Evidence
+
+transformation
+
+derivation method
+
+context
+
+producer
+</code></pre>
+<p>where relevant.</p>
+<p>The key invariant is:</p>
+<blockquote>
+<p><strong>Derived Evidence must not be mistaken for independent corroboration of its own ancestors.</strong></p>
+</blockquote>
+<p>A future Evidence schema should make derivation visible.</p>
+<hr>
+<h1 id="35-v02-consolidation-grounding-analysis">35. v0.2 Consolidation — Grounding Analysis</h1>
+<p>Recursive Evidence and Truth-State composition creates the possibility of:</p>
+<pre><code>circular support
+</code></pre>
+<p>The schema layer should therefore permit reconstruction of:</p>
+<pre><code>ultimate Evidence dependencies
+</code></pre>
+<p>and:</p>
+<pre><code>Reference Bases
+</code></pre>
+<p>Potential computed concept:</p>
+<pre><code>GroundingSet
+</code></pre>
+<p>This may not require persistent serialization.</p>
+<p>The underlying graph must preserve enough information to calculate it.</p>
+<hr>
+<h1 id="36-cycle-safety">36. Cycle Safety</h1>
+<p>The generalized model must tolerate legitimate graph cycles while preventing false Evidence amplification.</p>
+<p>Therefore:</p>
+<pre><code>cycle exists
+  ≠
+automatically invalid
+</code></pre>
+<p>but:</p>
+<pre><code>cycle
+  ≠
+independent corroboration
+</code></pre>
+<p>Schemas should preserve references clearly enough for evaluation logic to detect cycles and shared ancestry.</p>
+<hr>
+<h1 id="37-v01-to-v02-mapping">37. v0.1 to v0.2 Mapping</h1>
+<p>The expected conceptual migration is:</p>
+<table>
+<thead>
+<tr>
+<th>v0.1</th>
+<th>v0.2 Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Observation</code></td>
+<td><code>EvidenceItem</code> with Observation subtype</td>
+</tr>
+<tr>
+<td><code>Anchor</code></td>
+<td><code>ReferenceBasis</code> with Anchor specialization</td>
+</tr>
+<tr>
+<td><code>Source</code></td>
+<td>Entity / Source role preserved</td>
+</tr>
+<tr>
+<td><code>Lineage</code></td>
+<td>Expanded graph semantics</td>
+</tr>
+<tr>
+<td><code>Regime</code></td>
+<td>Retained; dynamic context separated</td>
+</tr>
+<tr>
+<td><code>Evaluation</code></td>
+<td>Retained; graph-aware</td>
+</tr>
+<tr>
+<td><code>CoherenceState</code></td>
+<td>Retained; domain-semantic</td>
+</tr>
+<tr>
+<td><code>DriftState</code></td>
+<td>Retained; relational / cross-class references</td>
+</tr>
+<tr>
+<td><code>Paradox</code></td>
+<td>Retained; narrowed definition</td>
+</tr>
+<tr>
+<td><code>TruthState.status</code></td>
+<td>Qualification/lifecycle semantics</td>
+</tr>
+<tr>
+<td><code>accepted_value</code></td>
+<td>Domain-native result, potentially formalized as <code>domain_result</code></td>
+</tr>
+<tr>
+<td><code>CorrectionPolicy</code></td>
+<td>Retained; action families made extensible</td>
+</tr>
+</tbody>
+</table>
+<p>This table describes architectural direction.</p>
+<p>It is not yet a migration guarantee.</p>
+<hr>
+<h1 id="38-backward-compatibility">38. Backward Compatibility</h1>
+<p>The v0.2 design should attempt to preserve reasonable compatibility with v0.1 fixtures.</p>
+<p>For example:</p>
+<pre><code>v0.1 Observation
+</code></pre>
+<p>may be interpretable as:</p>
+<pre><code>v0.2 EvidenceItem
+  type:
+    observation
+</code></pre>
+<p>Likewise:</p>
+<pre><code>v0.1 Anchor
+</code></pre>
+<p>may become:</p>
+<pre><code>v0.2 ReferenceBasis
+  type:
+    external_anchor
+</code></pre>
+<p>This enables the initial NTP fixtures to remain useful after consolidation.</p>
+<p>Backward compatibility should not be preserved at the cost of structural corruption.</p>
+<p>Where migration is necessary, it should be explicit and versioned.</p>
+<hr>
+<h1 id="39-schema-versioning">39. Schema Versioning</h1>
+<p>Serialized artifacts should identify the schema revision where practical.</p>
+<p>Current fixtures use:</p>
+<pre><code>schema_version:
+  "0.1"
+</code></pre>
+<p>Future consolidated fixtures may use:</p>
+<pre><code>schema_version:
+  "0.2"
+</code></pre>
+<p>Schema versions should indicate meaningful contract changes.</p>
+<p>Avoid incrementing versions for documentation-only edits.</p>
+<hr>
+<h1 id="40-schema-evolution">40. Schema Evolution</h1>
+<p>A schema change should be classified.</p>
+<h2 id="patch-compatible">Patch-Compatible</h2>
+<p>Examples:</p>
+<pre><code>clearer description
+additional optional metadata
+corrected documentation
+</code></pre>
+<h2 id="additive">Additive</h2>
+<p>Examples:</p>
+<pre><code>optional new field
+optional relationship type
+</code></pre>
+<h2 id="structural">Structural</h2>
+<p>Examples:</p>
+<pre><code>Observation → EvidenceItem
+
+Anchor → ReferenceBasis
+
+status split into qualification + domain result
+</code></pre>
+<p>Structural changes require explicit version review.</p>
+<hr>
+<h1 id="41-required-vs-optional-fields">41. Required vs Optional Fields</h1>
+<p>The schemas should be strict about structurally necessary fields and tolerant about domain-specific extension.</p>
+<p>Bad pattern:</p>
+<pre><code>every field optional
+</code></pre>
+<p>because then schema validation provides little architectural protection.</p>
+<p>Also bad:</p>
+<pre><code>every possible domain field mandatory
+</code></pre>
+<p>because then schemas become unusably broad.</p>
+<p>The desired pattern is:</p>
+<pre><code>small required kernel
+  +
+typed extensions
+  +
+optional domain metadata
+</code></pre>
+<hr>
+<h1 id="42-metadata-rule">42. Metadata Rule</h1>
+<p>Metadata remains useful for:</p>
+<pre><code>diagnostics
+domain-specific extension
+fixture notes
+implementation annotations
+</code></pre>
+<p>But metadata must not override canonical fields.</p>
+<p>Example:</p>
+<pre><code>metadata:
+  truth_status:
+    operationally_accepted
+</code></pre>
+<p>must not override:</p>
+<pre><code>truth_state.status
+</code></pre>
+<p>Likewise:</p>
+<pre><code>metadata:
+  regime:
+    trusted
+</code></pre>
+<p>must not replace:</p>
+<pre><code>regime_id
+</code></pre>
+<p>Canonical control data must remain canonical.</p>
+<hr>
+<h1 id="43-extension-rule">43. Extension Rule</h1>
+<p>When a new domain needs information not represented by the common schema:</p>
+<ol>
+<li>determine whether it is domain-specific</li>
+<li>determine whether existing relationship semantics can represent it</li>
+<li>determine whether metadata is sufficient</li>
+<li>promote only if repeated cross-system evidence supports the abstraction</li>
+</ol>
+<p>This follows the same promotion discipline used throughout the crosswalk series.</p>
+<hr>
+<h1 id="44-id-and-schema-identity">44. <code>$id</code> and Schema Identity</h1>
+<p>Each JSON Schema should have a stable schema identity.</p>
+<p>Conceptually:</p>
+<pre><code>$id:
+  stable schema identifier
+</code></pre>
+<p>The exact URI strategy should be standardized across the module.</p>
+<p>Schema identity should not depend on:</p>
+<pre><code>local filesystem path alone
+</code></pre>
+<p>if schemas will eventually be published or consumed externally.</p>
+<hr>
+<h1 id="45-schema">45. <code>$schema</code></h1>
+<p>Each JSON Schema should declare the JSON Schema dialect used by the implementation.</p>
+<p>The project should use one dialect consistently across the schema set.</p>
+<p>The specific dialect should be selected once and applied uniformly rather than mixed between files.</p>
+<hr>
+<h1 id="46-schema-references">46. Schema References</h1>
+<p>Shared types should eventually be referenced rather than copied repeatedly.</p>
+<p>Examples may include:</p>
+<pre><code>identifiers
+timestamps
+DecisionReason
+lifecycle status
+Lineage reference
+domain-native value
+metadata
+relationship reference
+</code></pre>
+<p>However, schema modularization should not begin prematurely.</p>
+<p>A dozen tiny shared schemas can become harder to maintain than one clear object contract.</p>
+<p>Extract shared types when repetition becomes structurally meaningful.</p>
+<hr>
+<h1 id="47-identifier-validation">47. Identifier Validation</h1>
+<p>Schemas should validate identifiers sufficiently to prevent empty or structurally unusable references.</p>
+<p>They should not encode excessive semantic meaning into identifier syntax.</p>
+<p>Preferred:</p>
+<pre><code>stable non-empty identifier
+</code></pre>
+<p>over:</p>
+<pre><code>identifier whose string format encodes business logic
+</code></pre>
+<p>The application should not need to parse:</p>
+<pre><code>claim-temporal-001
+</code></pre>
+<p>to learn that the Claim is temporal.</p>
+<p>That information belongs in explicit fields.</p>
+<hr>
+<h1 id="48-timestamp-validation">48. Timestamp Validation</h1>
+<p>Temporal fields should use explicit machine-readable timestamps.</p>
+<p>Examples include:</p>
+<pre><code>created_at
+updated_at
+observed_at
+received_at
+evaluated_at
+expires_at
+valid_from
+valid_until
+</code></pre>
+<p>The schema should distinguish:</p>
+<pre><code>missing
+</code></pre>
+<p>from:</p>
+<pre><code>null where semantically permitted
+</code></pre>
+<p>Temporal meaning remains field-specific.</p>
+<hr>
+<h1 id="49-typed-enumerations">49. Typed Enumerations</h1>
+<p>Enums are valuable where the vocabulary is canonically bounded.</p>
+<p>Examples:</p>
+<pre><code>Truth Class
+Truth-State qualification
+Coherence status
+Source status
+Paradox type
+</code></pre>
+<p>Enums should be used cautiously for concepts expected to evolve rapidly.</p>
+<p>Overly strict enums can cause domain-specific concepts to leak into:</p>
+<pre><code>metadata
+</code></pre>
+<p>simply because the canonical schema cannot evolve.</p>
+<hr>
+<h1 id="50-domain-native-value-contract">50. Domain-Native Value Contract</h1>
+<p>Fields such as:</p>
+<pre><code>Observation.value
+</code></pre>
+<p>and:</p>
+<pre><code>TruthState.accepted_value
+</code></pre>
+<p>must support structured domain-native values.</p>
+<p>Examples:</p>
+<pre><code>temporal:
+  timestamp
+  offset_ms
+
+authority:
+  authorization
+
+transaction:
+  commitment
+
+intent:
+  converged
+</code></pre>
+<p>The schema should not require:</p>
+<pre><code>string only
+</code></pre>
+<p>or:</p>
+<pre><code>number only
+</code></pre>
+<p>for these values.</p>
+<hr>
+<h1 id="51-decision-reasons">51. Decision Reasons</h1>
+<p>Important architectural decisions should remain explainable.</p>
+<p>Where practical, schemas should support structured reasons:</p>
+<pre><code>code
+message
+evidence_references
+regime_rule
+</code></pre>
+<p>Potential uses include:</p>
+<pre><code>Qualification
+Coherence
+Drift
+Truth-State synthesis
+Correction
+</code></pre>
+<p>No naked status should be required where the architecture expects rationale.</p>
+<hr>
+<h1 id="52-qualification-schema-strategy">52. Qualification Schema Strategy</h1>
+<p>The current scaffold does not include a standalone:</p>
+<pre><code>qualification.schema.json
+</code></pre>
+<p>Qualification may initially remain embedded inside:</p>
+<pre><code>evaluation.schema.json
+</code></pre>
+<p>or associated result structures.</p>
+<p>During v0.2 consolidation, consider whether Qualification requires independent schema identity because it may apply to:</p>
+<pre><code>EvidenceItem
+AuthorityRelationship
+Lineage edge
+subgraph
+Truth State
+</code></pre>
+<p>Do not create a separate schema until that requirement is confirmed.</p>
+<hr>
+<h1 id="53-revalidation-schema-strategy">53. Revalidation Schema Strategy</h1>
+<p>Likewise, the current scaffold does not include:</p>
+<pre><code>revalidation_event.schema.json
+</code></pre>
+<p>Revalidation may initially remain embedded in:</p>
+<pre><code>TruthState
+Evaluation
+fixture expectations
+</code></pre>
+<p>The logical data model identifies RevalidationEvent conceptually.</p>
+<p>A standalone schema should be added only when implementation needs an independently serialized Revalidation object.</p>
+<hr>
+<h1 id="54-evidence-graph-schema-strategy">54. Evidence Graph Schema Strategy</h1>
+<p>The v0.2 model may require:</p>
+<pre><code>evidence_item.schema.json
+</code></pre>
+<p>and potentially:</p>
+<pre><code>evidence_relationship.schema.json
+</code></pre>
+<p>or a graph envelope.</p>
+<p>Before adding those files, the consolidation pass should determine whether:</p>
+<pre><code>Lineage Graph
+</code></pre>
+<p>can represent Evidence relationships cleanly.</p>
+<p>Avoid creating two nearly identical graph systems.</p>
+<hr>
+<h1 id="55-relationship-reuse">55. Relationship Reuse</h1>
+<p>A strong candidate is a reusable relationship structure containing:</p>
+<pre><code>relationship_id
+from_id
+to_id
+relationship_type
+regime_id
+valid_from
+valid_until
+transformation
+constraints
+metadata
+</code></pre>
+<p>This could represent selected:</p>
+<pre><code>Lineage
+Evidence dependency
+Authority
+transformation
+</code></pre>
+<p>relationships.</p>
+<p>However, different relationship types may require different semantics.</p>
+<p>Use one generalized relationship schema only if doing so keeps validation meaningful.</p>
+<hr>
+<h1 id="56-truth-state-recursion">56. Truth-State Recursion</h1>
+<p>The v0.2 model may permit:</p>
+<pre><code>Truth State
+  ↓
+later Evaluation input
+</code></pre>
+<p>Schemas should preserve this without embedding entire recursive objects indefinitely.</p>
+<p>Prefer references:</p>
+<pre><code>truth_state_id
+</code></pre>
+<p>over repeatedly nesting full Truth States.</p>
+<p>This avoids:</p>
+<pre><code>unbounded serialization depth
+</code></pre>
+<p>and supports graph reconstruction.</p>
+<hr>
+<h1 id="57-graph-serialization-principle">57. Graph Serialization Principle</h1>
+<p>Graph-shaped architecture does not require every object to serialize the complete graph.</p>
+<p>Preferred:</p>
+<pre><code>stable IDs
+typed relationships
+explicit references
+</code></pre>
+<p>This allows the graph to be reconstructed from bounded objects.</p>
+<p>Avoid fixtures containing enormous recursively nested structures.</p>
+<hr>
+<h1 id="58-schema-and-fixture-boundary">58. Schema and Fixture Boundary</h1>
+<p>Schemas define:</p>
+<blockquote>
+<p><strong>What constitutes a structurally valid serialized object?</strong></p>
+</blockquote>
+<p>Fixtures define:</p>
+<blockquote>
+<p><strong>Which valid objects comprise this deterministic scenario?</strong></p>
+</blockquote>
+<p>Tests define:</p>
+<blockquote>
+<p><strong>What behavior should result?</strong></p>
+</blockquote>
+<p>These layers should remain separate.</p>
+<p>A schema should not encode:</p>
+<pre><code>expected Coherence for fragmented fixture
+</code></pre>
+<p>That belongs in fixture expectations / tests.</p>
+<hr>
+<h1 id="59-schema-and-evaluation-boundary">59. Schema and Evaluation Boundary</h1>
+<p>Structural validation must happen before Truth evaluation.</p>
+<p>Conceptually:</p>
+<pre><code>JSON
+  ↓
+Schema Validation
+  │
+  ├── invalid
+  │     ↓
+  │   stop
+  │
+  └── valid
+        ↓
+    Truth Evaluation
+</code></pre>
+<p>Malformed JSON or broken object structure should not produce:</p>
+<pre><code>Truth State:
+  indeterminate
+</code></pre>
+<p>It should produce:</p>
+<pre><code>validation failure
+</code></pre>
+<p>The Truth Service evaluates valid Claims and Evidence.</p>
+<hr>
+<h1 id="60-schema-and-domain-validation">60. Schema and Domain Validation</h1>
+<p>JSON Schema can establish:</p>
+<pre><code>structural validity
+</code></pre>
+<p>It cannot necessarily establish:</p>
+<pre><code>domain truth
+</code></pre>
+<p>Example:</p>
+<pre><code>offset_ms:
+  14
+</code></pre>
+<p>may be structurally valid.</p>
+<p>Whether that offset is acceptable belongs to:</p>
+<pre><code>Regime
+Evaluation
+</code></pre>
+<p>Likewise:</p>
+<pre><code>authority_relationship_id
+</code></pre>
+<p>may be structurally valid while the authority relationship itself later fails qualification.</p>
+<p>The schema validates shape.</p>
+<p>The evaluator validates meaning.</p>
+<hr>
+<h1 id="61-schema-and-integrity">61. Schema and Integrity</h1>
+<p>Schema validation should not be confused with:</p>
+<pre><code>cryptographic integrity
+</code></pre>
+<p>A structurally valid JSON document may still:</p>
+<pre><code>be altered
+come from an untrusted Source
+contain false Claims
+</code></pre>
+<p>Integrity remains a separate Truth dimension.</p>
+<hr>
+<h1 id="62-fixture-compatibility">62. Fixture Compatibility</h1>
+<p>The initial NTP fixture files are:</p>
+<pre><code>../fixtures/ntp/coherent.json
+
+../fixtures/ntp/minor_drift.json
+
+../fixtures/ntp/outlier.json
+
+../fixtures/ntp/fragmented.json
+
+../fixtures/ntp/stale.json
+
+../fixtures/ntp/indeterminate.json
+</code></pre>
+<p>The v0.1 schemas should support the core runtime objects used by these fixtures.</p>
+<p>Fixture envelope fields such as:</p>
+<pre><code>fixture_id
+expected
+evaluation_context
+</code></pre>
+<p>do not necessarily belong inside every runtime entity schema.</p>
+<p>A fixture may compose multiple valid schema objects in one scenario document.</p>
+<hr>
+<h1 id="63-fixture-envelope-strategy">63. Fixture Envelope Strategy</h1>
+<p>A future:</p>
+<pre><code>fixture.schema.json
+</code></pre>
+<p>may validate the complete scenario envelope.</p>
+<p>Potential structure:</p>
+<pre><code>fixture metadata
+Claim
+Regime
+Anchors / Reference Bases
+Sources / Entities
+Observations / Evidence
+prior Truth State
+evaluation context
+expected behavior
+</code></pre>
+<p>This is separate from runtime entity schemas.</p>
+<p>Do not force:</p>
+<pre><code>claim.schema.json
+</code></pre>
+<p>to know about fixture expectations.</p>
+<hr>
+<h1 id="64-test-result-strategy">64. Test Result Strategy</h1>
+<p>Likewise:</p>
+<pre><code>expected
+</code></pre>
+<p>blocks belong to deterministic testing.</p>
+<p>They are not canonical runtime Truth-Service objects.</p>
+<p>A future test schema could validate:</p>
+<pre><code>expected fixture result
+</code></pre>
+<p>but this should remain separate from:</p>
+<pre><code>truth_state.schema.json
+</code></pre>
+<p>The implementation must never consume:</p>
+<pre><code>expected
+</code></pre>
+<p>as Evidence.</p>
+<hr>
+<h1 id="65-immediate-v01-schema-goal">65. Immediate v0.1 Schema Goal</h1>
+<p>Before full v0.2 consolidation, the initial schema set should support:</p>
+<pre><code>coherent.json
+
+minor_drift.json
+
+outlier.json
+
+fragmented.json
+
+stale.json
+
+indeterminate.json
+</code></pre>
+<p>for the objects they contain.</p>
+<p>The immediate success condition is not:</p>
+<pre><code>model all ten Truth Classes perfectly
+</code></pre>
+<p>It is:</p>
+<blockquote>
+<p><strong>Structurally validate the first deterministic temporal reference implementation without blocking the later generalized model.</strong></p>
+</blockquote>
+<hr>
+<h1 id="66-v02-consolidation-goal">66. v0.2 Consolidation Goal</h1>
+<p>The v0.2 schema pass succeeds when it can represent the generalized findings of all ten crosswalks without:</p>
+<ul>
+<li>forcing every domain into NTP semantics</li>
+<li>making every property optional</li>
+<li>creating one schema per discovered noun</li>
+<li>collapsing domain result into Truth qualification</li>
+<li>losing Evidence derivation</li>
+<li>losing Lineage</li>
+<li>losing Authority scope</li>
+<li>hiding Coverage gaps</li>
+<li>creating circular corroboration</li>
+<li>requiring one external Anchor</li>
+<li>requiring one linear Evaluation pipeline</li>
+</ul>
+<p>The objective is:</p>
+<blockquote>
+<p><strong>small generalized kernel + explicit typed extensions</strong></p>
+</blockquote>
+<hr>
+<h1 id="67-proposed-v02-core-schema-set">67. Proposed v0.2 Core Schema Set</h1>
+<p>A future consolidation may produce something similar to:</p>
+<pre><code>claim.schema.json
+
+evidence_item.schema.json
+
+entity.schema.json
+
+reference_basis.schema.json
+
+authority_relationship.schema.json
+
+lineage.schema.json
+
+regime.schema.json
+
+evaluation.schema.json
+
+truth_state.schema.json
+
+truth_comparison.schema.json
+
+coherence_state.schema.json
+
+drift_state.schema.json
+
+paradox.schema.json
+
+coverage.schema.json
+
+gap.schema.json
+
+materialized_truth_state.schema.json
+
+correction_policy.schema.json
+</code></pre>
+<p>This is a proposal.</p>
+<p>It is not yet the committed file set.</p>
+<p>Some candidates may collapse into shared relationship structures.</p>
+<hr>
+<h1 id="68-proposed-compatibility-schemas">68. Proposed Compatibility Schemas</h1>
+<p>If v0.2 is adopted, compatibility schemas may retain familiar v0.1 concepts:</p>
+<pre><code>observation.schema.json
+
+source.schema.json
+
+anchor.schema.json
+</code></pre>
+<p>These may become:</p>
+<pre><code>specialized schemas
+</code></pre>
+<p>or:</p>
+<pre><code>aliases / composed schemas
+</code></pre>
+<p>for:</p>
+<pre><code>EvidenceItem
+
+Entity
+
+ReferenceBasis
+</code></pre>
+<p>This lets older fixtures and educational examples remain readable.</p>
+<hr>
+<h1 id="69-schema-promotion-rule">69. Schema Promotion Rule</h1>
+<p>A new standalone schema should be created only when the concept:</p>
+<ol>
+<li>has independent identity</li>
+<li>has meaningful lifecycle</li>
+<li>is referenced by multiple objects</li>
+<li>requires independent validation</li>
+<li>appears across multiple Truth Classes</li>
+<li>cannot be represented cleanly as a relationship or attribute</li>
+</ol>
+<p>Otherwise prefer:</p>
+<pre><code>field
+relation
+enum
+metadata
+typed extension
+</code></pre>
+<p>This prevents schema proliferation.</p>
+<hr>
+<h1 id="70-schema-consolidation-workflow">70. Schema Consolidation Workflow</h1>
+<p>Recommended sequence:</p>
+<pre><code>[1] Preserve v0.1 NTP fixture compatibility
+          ↓
+[2] Validate current twelve schemas
+          ↓
+[3] Compare schemas against ten crosswalk findings
+          ↓
+[4] Identify structural gaps
+          ↓
+[5] Classify:
+      rename
+      generalize
+      split
+      merge
+      retain
+      retire
+          ↓
+[6] Draft v0.2 contracts
+          ↓
+[7] Map v0.1 → v0.2
+          ↓
+[8] Migrate one fixture
+          ↓
+[9] Validate behavior
+          ↓
+[10] Migrate remaining fixtures
+          ↓
+[11] Version canon
+          ↓
+[12] Begin generalized fixture families
+</code></pre>
+<p>This keeps the migration bounded.</p>
+<hr>
+<h1 id="71-recommended-first-migration">71. Recommended First Migration</h1>
+<p>The safest v0.2 migration candidate is:</p>
+<pre><code>coherent.json
+</code></pre>
+<p>because it contains:</p>
+<ul>
+<li>simple Claim</li>
+<li>one Regime</li>
+<li>one Anchor</li>
+<li>three Sources</li>
+<li>three Observations</li>
+<li>straightforward Lineage</li>
+<li>coherent result</li>
+<li>bounded Drift</li>
+<li>no Paradox</li>
+</ul>
+<p>The migration can test:</p>
+<pre><code>Observation → EvidenceItem
+</code></pre>
+<p>and:</p>
+<pre><code>Anchor → ReferenceBasis
+</code></pre>
+<p>without simultaneously testing:</p>
+<pre><code>Gap
+Paradox
+derived Evidence
+TruthComparison
+AuthorityRelationship
+</code></pre>
+<p>Once coherent migration works, more complex fixtures can follow.</p>
+<hr>
+<h1 id="72-outlier-migration-test">72. Outlier Migration Test</h1>
+<p>The second useful migration fixture is:</p>
+<pre><code>outlier.json
+</code></pre>
+<p>It adds:</p>
+<pre><code>dissenting qualified Evidence
+</code></pre>
+<p>and tests:</p>
+<pre><code>Evidence preserved
+  ≠
+Evidence selected
+</code></pre>
+<p>This is useful for validating Evidence Graph and Coherence semantics.</p>
+<hr>
+<h1 id="73-fragmented-migration-test">73. Fragmented Migration Test</h1>
+<p>Next:</p>
+<pre><code>fragmented.json
+</code></pre>
+<p>tests:</p>
+<pre><code>multiple coherent clusters
+
+unresolved structural incompatibility
+
+null accepted value
+
+Paradox preservation
+</code></pre>
+<p>This is a strong test of v0.2 Coherence and Paradox boundaries.</p>
+<hr>
+<h1 id="74-stale-migration-test">74. Stale Migration Test</h1>
+<p>Then:</p>
+<pre><code>stale.json
+</code></pre>
+<p>tests:</p>
+<pre><code>historical Truth State
+expired Evidence
+temporal lifecycle
+current-vs-historical distinction
+Revalidation
+</code></pre>
+<p>This is useful for validating append-oriented history.</p>
+<hr>
+<h1 id="75-indeterminate-migration-test">75. Indeterminate Migration Test</h1>
+<p>Finally:</p>
+<pre><code>indeterminate.json
+</code></pre>
+<p>tests:</p>
+<pre><code>Evidence Gap
+incomplete Lineage
+failed qualification
+no selected Evidence
+null domain value
+indeterminate Truth State
+</code></pre>
+<p>This is likely where v0.2 gains the most over v0.1.</p>
+<hr>
+<h1 id="76-schema-tests">76. Schema Tests</h1>
+<p>Schema tests should eventually cover:</p>
+<pre><code>valid object accepted
+
+required field missing
+
+invalid enum rejected
+
+broken reference detected where testable
+
+invalid timestamp rejected
+
+domain-native value accepted
+
+null accepted value permitted where structurally valid
+
+unknown extension safely handled according to policy
+</code></pre>
+<p>JSON Schema validation and behavioral evaluation tests should remain separate.</p>
+<hr>
+<h1 id="77-canonical-schema-invariants">77. Canonical Schema Invariants</h1>
+<p>Unless later evidence contradicts them, the following should guide schema design.</p>
+<h2 id="invariant-1">Invariant 1</h2>
+<p>Claims do not contain their own accepted truth.</p>
+<h2 id="invariant-2">Invariant 2</h2>
+<p>Evidence remains distinct from Truth States.</p>
+<h2 id="invariant-3">Invariant 3</h2>
+<p>Truth States identify their producing Evaluation.</p>
+<h2 id="invariant-4">Invariant 4</h2>
+<p>Evaluations identify their Regime.</p>
+<h2 id="invariant-5">Invariant 5</h2>
+<p>Lineage remains reconstructable.</p>
+<h2 id="invariant-6">Invariant 6</h2>
+<p>Evidence exclusion does not require deletion.</p>
+<h2 id="invariant-7">Invariant 7</h2>
+<p>Null domain results are permitted.</p>
+<h2 id="invariant-8">Invariant 8</h2>
+<p>Negative domain results are permitted.</p>
+<h2 id="invariant-9">Invariant 9</h2>
+<p>Historical Truth States remain referenceable.</p>
+<h2 id="invariant-10">Invariant 10</h2>
+<p>Correction remains separate from Evaluation.</p>
+<h2 id="invariant-11">Invariant 11</h2>
+<p>Revalidation produces new Evaluation context.</p>
+<h2 id="invariant-12">Invariant 12</h2>
+<p>Metadata cannot override canonical fields.</p>
+<h2 id="invariant-13">Invariant 13</h2>
+<p>Derived Evidence must preserve ancestry.</p>
+<h2 id="invariant-14">Invariant 14</h2>
+<p>Shared ancestry must remain detectable.</p>
+<h2 id="invariant-15">Invariant 15</h2>
+<p>Evidence gaps must not masquerade as qualified absence.</p>
+<hr>
+<h1 id="78-relationship-invariants">78. Relationship Invariants</h1>
+<p>The graph-oriented v0.2 model should also preserve:</p>
+<pre><code>node identity
+
+edge identity where needed
+
+relationship type
+
+direction
+
+source and target
+
+Regime where relevant
+
+transformation where relevant
+
+lifecycle where relevant
+</code></pre>
+<p>A relationship should not exist merely as:</p>
+<pre><code>string note
+</code></pre>
+<p>when Evaluation logic depends on it.</p>
+<hr>
+<h1 id="79-explainability-requirement">79. Explainability Requirement</h1>
+<p>A serialized Evaluation should eventually contain or reference enough structure to answer:</p>
+<blockquote>
+<p><strong>Why did this Truth State exist?</strong></p>
+</blockquote>
+<p>That explanation should be reconstructable from:</p>
+<pre><code>Claim
+Regime
+ReferenceBasis
+Evidence
+Authority
+Lineage
+Qualification
+Coherence
+Drift
+Paradox
+AcceptanceRule
+domain result
+</code></pre>
+<p>The schema exists partly to make this reconstruction possible.</p>
+<hr>
+<h1 id="80-round-trip-requirement">80. Round-Trip Requirement</h1>
+<p>Canonical runtime objects should eventually survive:</p>
+<pre><code>serialize
+  ↓
+validate
+  ↓
+deserialize
+</code></pre>
+<p>without losing information required for:</p>
+<pre><code>evaluation
+Lineage
+explanation
+Revalidation
+</code></pre>
+<p>Implementation-specific caches or derived indexes need not round-trip.</p>
+<p>Canonical meaning must.</p>
+<hr>
+<h1 id="81-canonical-serialization-principle">81. Canonical Serialization Principle</h1>
+<p>Prefer explicit structure over encoded prose when the information participates in evaluation.</p>
+<p>For example:</p>
+<p>Bad:</p>
+<pre><code>reason:
+  "Source A was stale because it was 600 seconds old."
+</code></pre>
+<p>Better:</p>
+<pre><code>status:
+  expired
+
+freshness_seconds:
+  600
+
+reason:
+  code: OBSERVATION_EXPIRED
+</code></pre>
+<p>Human-readable explanation may still accompany the structured fields.</p>
+<p>Both are useful.</p>
+<hr>
+<h1 id="82-thin-schema-rule">82. Thin-Schema Rule</h1>
+<p>The schema layer should remain as thin as possible while preserving structural integrity.</p>
+<p>Do not encode:</p>
+<ul>
+<li>speculative business rules</li>
+<li>implementation algorithms</li>
+<li>crosswalk prose</li>
+<li>scoring rationale</li>
+<li>documentation narrative</li>
+</ul>
+<p>Schemas should define:</p>
+<pre><code>valid shape
+canonical identifiers
+relationships
+bounded vocabularies
+</code></pre>
+<p>Evaluation logic belongs elsewhere.</p>
+<hr>
+<h1 id="83-research-plane-separation">83. Research Plane Separation</h1>
+<p>The runtime schema set should remain distinct from research scoring schemas.</p>
+<p>Runtime objects include:</p>
+<pre><code>Claim
+Evidence
+Regime
+Evaluation
+Truth State
+</code></pre>
+<p>Research objects include:</p>
+<pre><code>Reference System
+Crosswalk
+Criterion
+Score
+Evidence Citation
+Comparative Profile
+</code></pre>
+<p>Do not place:</p>
+<pre><code>NTP score
+</code></pre>
+<p>inside:</p>
+<pre><code>runtime TruthState
+</code></pre>
+<p>The two planes serve different purposes.</p>
+<hr>
+<h1 id="84-fixture-expectations-are-also-research-adjacent">84. Fixture Expectations Are Also Research-Adjacent</h1>
+<p>Fixture expectations exist to test implementation behavior.</p>
+<p>They are not runtime Claims about the external world.</p>
+<p>Therefore:</p>
+<pre><code>expected.coherence
+</code></pre>
+<p>should not be serialized into production TruthState simply because the fixture contains it.</p>
+<p>The evaluator produces actual runtime results.</p>
+<p>The test harness compares those results against expectations.</p>
+<hr>
+<h1 id="85-failure-transparency">85. Failure Transparency</h1>
+<p>Schemas should support explicit degraded or indeterminate conditions.</p>
+<p>They should not require values that force the implementation to invent certainty.</p>
+<p>Examples:</p>
+<pre><code>accepted_value:
+  null
+
+drift.magnitude:
+  null
+
+independence:
+  unknown
+
+valid_until:
+  null
+</code></pre>
+<p>These nulls must have defined structural meaning.</p>
+<hr>
+<h1 id="86-unknown-vs-missing">86. Unknown vs Missing</h1>
+<p>Where relevant, the schemas should distinguish:</p>
+<pre><code>field missing
+  =
+not supplied / not applicable according to schema
+</code></pre>
+<p>from:</p>
+<pre><code>field = null
+  =
+explicitly unknown / absent value where permitted
+</code></pre>
+<p>and:</p>
+<pre><code>explicit domain result:
+  absent / deny / false
+</code></pre>
+<p>These distinctions are essential.</p>
+<hr>
+<h1 id="87-json-schema-does-not-replace-decisionreason">87. JSON Schema Does Not Replace DecisionReason</h1>
+<p>A schema can say:</p>
+<pre><code>status is valid enum
+</code></pre>
+<p>It cannot explain:</p>
+<pre><code>why that status was selected
+</code></pre>
+<p>Therefore decision rationale remains runtime data.</p>
+<p>Validation and explainability should not be conflated.</p>
+<hr>
+<h1 id="88-initial-schema-definition-of-done">88. Initial Schema Definition of Done</h1>
+<p>The current schema phase reaches its first milestone when:</p>
+<ol>
+<li>all six NTP fixtures can be structurally represented</li>
+<li>core runtime objects validate consistently</li>
+<li>domain-native temporal values survive validation</li>
+<li>null indeterminate values are supported</li>
+<li>Lineage references remain intact</li>
+<li>historical Truth States can be referenced</li>
+<li>fixture expectations remain outside runtime contracts</li>
+<li>Evaluation and Correction remain distinct</li>
+<li>schema failure remains distinct from Truth indeterminacy</li>
+</ol>
+<p>At that point the v0.1 temporal implementation boundary is stable.</p>
+<hr>
+<h1 id="89-v02-definition-of-done">89. v0.2 Definition of Done</h1>
+<p>The consolidation phase reaches completion when the schemas can additionally represent:</p>
+<ol>
+<li>Evidence types beyond Observation</li>
+<li>Reference Bases beyond Anchors</li>
+<li>scoped Authority relationships</li>
+<li>graph-shaped Evidence</li>
+<li>graph-shaped Lineage</li>
+<li>Coverage</li>
+<li>Gaps</li>
+<li>Truth-State comparison</li>
+<li>domain result separate from qualification</li>
+<li>materialization relationships</li>
+<li>derived Evidence</li>
+<li>shared ancestry</li>
+<li>circularity detection inputs</li>
+<li>cross-class Drift</li>
+<li>inherited limitations</li>
+</ol>
+<p>without making every schema depend on every concept.</p>
+<hr>
+<h1 id="90-governing-schema-principle">90. Governing Schema Principle</h1>
+<blockquote>
+<p><strong>Make valid states representable and invalid structural states rejectable without forcing the schemas to decide Truth.</strong></p>
+</blockquote>
+<p>The schema layer should know:</p>
+<pre><code>this Claim has a valid shape
+
+this Evidence item identifies its Source
+
+this Evaluation identifies its Regime
+
+this Truth State references its Evaluation
+</code></pre>
+<p>It should not decide:</p>
+<pre><code>this Claim is true
+
+this Source should be trusted
+
+this Evidence should be accepted
+
+this Drift is safe
+</code></pre>
+<p>Those decisions belong to Evaluation.</p>
+<hr>
+<h1 id="91-navigation">91. Navigation</h1>
+<p>Current schemas:</p>
+<pre><code>./claim.schema.json
+./observation.schema.json
+./source.schema.json
+./anchor.schema.json
+./lineage.schema.json
+./regime.schema.json
+./evaluation.schema.json
+./truth_state.schema.json
+./coherence_state.schema.json
+./drift_state.schema.json
+./paradox.schema.json
+./correction_policy.schema.json
+</code></pre>
+<p>Architecture:</p>
+<pre><code>../architecture/truth_service_architecture.md
+../architecture/truth_service_components.md
+../architecture/truth_service_data_model.md
+</code></pre>
+<p>Crosswalk research:</p>
+<pre><code>../crosswalks/
+</code></pre>
+<p>Fixtures:</p>
+<pre><code>../fixtures/
+../fixtures/ntp/
+</code></pre>
+<p>Behavioral tests:</p>
+<pre><code>../tests/
+</code></pre>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>The schema layer gives the Resonance Truth architecture a machine-readable boundary.</p>
+<p>The original v0.1 model begins with:</p>
+<pre><code>Claim
+Observation
+Source
+Anchor
+Lineage
+Regime
+Evaluation
+Coherence
+Drift
+Paradox
+Truth State
+Correction
+</code></pre>
+<p>The ten-system crosswalk series then challenges that model and points toward v0.2:</p>
+<pre><code>Observation
+  becomes
+EvidenceItem
+
+Anchor
+  becomes a specialization of
+ReferenceBasis
+
+Authority
+  becomes
+AuthorityRelationship
+
+flat Evidence
+  becomes
+Evidence Graph
+
+Lineage
+  becomes
+foundational graph structure
+
+unknown structure
+  becomes visible through
+Coverage + Gap
+
+isolated Truth States
+  become composable through
+TruthComparison
+
+accepted result
+  separates into
+domain result + qualification
+
+current state
+  may relate to
+MaterializedTruthState
+</code></pre>
+<p>The schema layer should encode those lessons carefully.</p>
+<p>Not everything discovered in the crosswalks deserves a schema.</p>
+<p>Not every relationship deserves a new file.</p>
+<p>Not every domain state deserves a global enum.</p>
+<p>The goal is a thin generalized kernel capable of preserving the structures that repeatedly survived challenge.</p>
+<p><strong>Crosswalks discovered the structure.</strong></p>
+<p><strong>Architecture gave it meaning.</strong></p>
+<p><strong>Fixtures created controlled worlds.</strong></p>
+<p><strong>Schemas now decide which of those worlds can be represented without losing the relationships that made their Truth explainable.</strong></p>
   </main>
 </body>
 </html>

@@ -1,1 +1,370 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/Resonance_Truth/schemas/correction_policy.schema.json",
+  "title": "RTT Resonance Truth Correction Policy",
+  "description": "Schema for a Correction Policy associated with an RTT Resonance Truth Service v0.1 Truth State. A Correction Policy governs permitted downstream response after evaluation. It does not determine the Truth State itself.",
+  "type": "object",
+
+  "required": [
+    "correction_policy_id",
+    "truth_state_id",
+    "mode",
+    "reason",
+    "requires_approval"
+  ],
+
+  "properties": {
+    "correction_policy_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for the Correction Policy."
+    },
+
+    "truth_state_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the Truth State to which this Correction Policy applies."
+    },
+
+    "mode": {
+      "type": "string",
+      "enum": [
+        "none",
+        "step",
+        "gradual",
+        "quarantine",
+        "dual_state",
+        "human_escalation",
+        "holdover",
+        "fail_closed",
+        "fail_bounded"
+      ],
+      "description": "Canonical v0.1 mode governing the permitted downstream response."
+    },
+
+    "reason": {
+      "$ref": "#/$defs/decision_reason",
+      "description": "Structured rationale explaining why this Correction mode applies."
+    },
+
+    "maximum_adjustment": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Optional maximum permitted adjustment where Correction has a meaningful numeric magnitude. Null is valid when Correction is nonnumeric or no maximum is defined."
+    },
+
+    "adjustment_unit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Unit associated with maximum_adjustment when a numeric Correction boundary is defined."
+    },
+
+    "requires_approval": {
+      "type": "boolean",
+      "description": "Indicates whether downstream Correction requires approval from an external actor or authority."
+    },
+
+    "approval_authority": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Identifier or bounded description of the authority required to approve Correction, when applicable."
+    },
+
+    "downstream_constraints": {
+      "type": "array",
+      "description": "Additional constraints governing execution of the Correction. These constraints restrict downstream action and must not override the producing Truth State.",
+      "items": {
+        "$ref": "#/$defs/downstream_constraint"
+      },
+      "default": []
+    },
+
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Timestamp at which the Correction Policy was created, when serialized independently."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional domain-specific or implementation metadata. Metadata must not override canonical Correction Policy fields.",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+
+  "$defs": {
+    "decision_reason": {
+      "type": "object",
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable machine-readable reason code."
+        },
+
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable explanation of the Correction decision."
+        },
+
+        "evidence_references": {
+          "type": "array",
+          "description": "Identifiers of Truth States, Drift States, Evaluations, Regimes, Evidence, or related objects supporting this Correction decision.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "regime_rule": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional governing Regime rule associated with the Correction decision."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "downstream_constraint": {
+      "type": "object",
+      "required": [
+        "constraint_type",
+        "description"
+      ],
+      "properties": {
+        "constraint_type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Domain-specific type of downstream Correction constraint."
+        },
+
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable description of the constraint."
+        },
+
+        "value": {
+          "description": "Optional domain-native value associated with the constraint. The meaning of this value is defined by constraint_type."
+        },
+
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional unit associated with the constraint value."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "human_escalation"
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "then": {
+        "properties": {
+          "requires_approval": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "requires_approval": {
+            "const": true
+          }
+        },
+        "required": [
+          "requires_approval"
+        ]
+      },
+      "then": {
+        "required": [
+          "approval_authority"
+        ],
+        "properties": {
+          "approval_authority": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "maximum_adjustment"
+        ],
+        "properties": {
+          "maximum_adjustment": {
+            "type": "number"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "adjustment_unit"
+        ],
+        "properties": {
+          "adjustment_unit": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ],
+
+  "examples": [
+    {
+      "correction_policy_id": "correction-ntp-coherent-001",
+      "truth_state_id": "truth-state-ntp-coherent-001",
+      "mode": "none",
+      "reason": {
+        "code": "CORRECTION_NOT_REQUIRED",
+        "message": "Qualified temporal drift remains within the declared operating boundary and does not require local adjustment.",
+        "evidence_references": [
+          "truth-state-ntp-coherent-001"
+        ],
+        "regime_rule": "precision_requirement"
+      },
+      "maximum_adjustment": null,
+      "adjustment_unit": null,
+      "requires_approval": false,
+      "approval_authority": null,
+      "downstream_constraints": [],
+      "created_at": "2026-01-01T12:00:01Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+    {
+      "correction_policy_id": "correction-ntp-minor-drift-001",
+      "truth_state_id": "truth-state-ntp-minor-drift-001",
+      "mode": "gradual",
+      "reason": {
+        "code": "BOUNDED_TEMPORAL_DRIFT",
+        "message": "The temporal evidence is coherent and local drift remains inside the declared Regime boundary, permitting gradual correction.",
+        "evidence_references": [
+          "truth-state-ntp-minor-drift-001",
+          "drift-ntp-minor-drift-001"
+        ],
+        "regime_rule": "precision_requirement"
+      },
+      "maximum_adjustment": 100.0,
+      "adjustment_unit": "milliseconds",
+      "requires_approval": false,
+      "approval_authority": null,
+      "downstream_constraints": [
+        {
+          "constraint_type": "correction_strategy",
+          "description": "Correction must remain gradual while the temporal state remains operationally accepted.",
+          "value": "gradual",
+          "unit": null
+        }
+      ],
+      "created_at": "2026-01-01T12:00:01Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+    {
+      "correction_policy_id": "correction-ntp-fragmented-001",
+      "truth_state_id": "truth-state-ntp-fragmented-001",
+      "mode": "dual_state",
+      "reason": {
+        "code": "UNRESOLVED_TEMPORAL_FRAGMENTATION",
+        "message": "Two independently supported temporal clusters remain unresolved. No single temporal correction may be applied from the fragmented evidence field.",
+        "evidence_references": [
+          "truth-state-ntp-fragmented-001",
+          "cluster-temporal-a",
+          "cluster-temporal-b"
+        ],
+        "regime_rule": null
+      },
+      "maximum_adjustment": null,
+      "adjustment_unit": null,
+      "requires_approval": false,
+      "approval_authority": null,
+      "downstream_constraints": [
+        {
+          "constraint_type": "single_state_mutation",
+          "description": "Do not mutate the local clock toward either unresolved temporal cluster solely to manufacture one accepted state.",
+          "value": false,
+          "unit": null
+        }
+      ],
+      "created_at": "2026-01-01T12:00:01Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+    {
+      "correction_policy_id": "correction-ntp-indeterminate-001",
+      "truth_state_id": "truth-state-ntp-indeterminate-001",
+      "mode": "fail_bounded",
+      "reason": {
+        "code": "NO_QUALIFIED_TEMPORAL_STATE",
+        "message": "No sufficiently qualified temporal state exists from which local clock correction can be justified.",
+        "evidence_references": [
+          "truth-state-ntp-indeterminate-001"
+        ],
+        "regime_rule": "minimum_independent_sources"
+      },
+      "maximum_adjustment": null,
+      "adjustment_unit": null,
+      "requires_approval": false,
+      "approval_authority": null,
+      "downstream_constraints": [
+        {
+          "constraint_type": "clock_mutation",
+          "description": "No temporal correction may be derived from the current Evaluation.",
+          "value": false,
+          "unit": null
+        }
+      ],
+      "created_at": "2026-01-01T12:01:00Z",
+      "metadata": {
+        "synthetic": true
+      }
+    }
+  ]
+}

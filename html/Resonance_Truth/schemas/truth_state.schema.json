@@ -1,1 +1,809 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/Resonance_Truth/schemas/truth_state.schema.json",
+  "title": "RTT Resonance Truth State",
+  "description": "Schema for an operational Truth State produced by an RTT Resonance Truth Service v0.1 Evaluation. A Truth State represents the Regime-qualified result that the service can presently support. It is not a declaration of universal, context-free, or permanent truth.",
+  "type": "object",
+
+  "required": [
+    "truth_state_id",
+    "claim_id",
+    "evaluation_id",
+    "regime_id",
+    "truth_classes",
+    "status",
+    "accepted_value",
+    "evaluated_at",
+    "permitted_uses",
+    "prohibited_uses"
+  ],
+
+  "properties": {
+    "truth_state_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for this Truth State."
+    },
+
+    "claim_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the Claim evaluated to produce this Truth State."
+    },
+
+    "evaluation_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the Evaluation that produced this Truth State."
+    },
+
+    "regime_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the operational Regime governing the Evaluation that produced this Truth State."
+    },
+
+    "truth_classes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "Truth Classes participating in this Truth State.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "temporal",
+          "locational",
+          "identity",
+          "integrity",
+          "authority",
+          "state",
+          "transactional",
+          "intent",
+          "observational",
+          "lineage"
+        ]
+      }
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "declared",
+        "observed",
+        "corroborated",
+        "operationally_accepted",
+        "contested",
+        "degraded",
+        "held_over",
+        "expired",
+        "rejected",
+        "indeterminate"
+      ],
+      "description": "Qualification and lifecycle state of this Truth State. This field describes operational usability and must not be confused with the polarity or domain-native value of the result."
+    },
+
+    "accepted_value": {
+      "description": "Domain-native result supported by this Truth State. May contain a scalar, object, array, boolean, or null. Null is required where the Evaluation does not support one accepted domain value."
+    },
+
+    "coherence_state_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of the Coherence State contributing to this Truth State."
+    },
+
+    "drift_state_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of the Drift State contributing to this Truth State."
+    },
+
+    "paradox_ids": {
+      "type": "array",
+      "description": "Identifiers of unresolved or historically relevant Paradox records associated with this Truth State.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "source_ids": {
+      "type": "array",
+      "description": "Identifiers of Sources represented in the Evidence contributing to this Truth State.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "observation_ids": {
+      "type": "array",
+      "description": "Identifiers of v0.1 Observations that participated in or materially informed this Truth State.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "anchor_ids": {
+      "type": "array",
+      "description": "Identifiers of v0.1 Anchors relevant to this Truth State.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "lineage_ids": {
+      "type": "array",
+      "description": "Identifiers of Lineage graphs relevant to this Truth State.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "correction_policy_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of the downstream Correction Policy associated with this Truth State."
+    },
+
+    "prior_truth_state_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of the immediately relevant prior Truth State in this Claim's lifecycle."
+    },
+
+    "supersedes_truth_state_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of an earlier Truth State explicitly superseded by this state. Supersession does not erase the earlier record."
+    },
+
+    "permitted_uses": {
+      "type": "array",
+      "description": "Operational uses for which this Truth State is presently permitted under the governing Regime.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+
+    "prohibited_uses": {
+      "type": "array",
+      "description": "Operational uses explicitly prohibited for this Truth State under the governing Regime.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+
+    "limitations": {
+      "type": "array",
+      "description": "Known limitations, gaps, or qualification constraints that should propagate with this Truth State into downstream use.",
+      "items": {
+        "$ref": "#/$defs/limitation"
+      },
+      "default": []
+    },
+
+    "decision_reasons": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Structured reasons explaining why this Truth State and qualification status were produced.",
+      "items": {
+        "$ref": "#/$defs/decision_reason"
+      }
+    },
+
+    "evaluated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp associated with the Evaluation that produced this Truth State."
+    },
+
+    "valid_from": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Optional beginning of this Truth State's operational validity interval."
+    },
+
+    "expires_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Optional expiration or mandatory Revalidation boundary. Expiration does not retroactively make the historical Truth State false."
+    },
+
+    "revalidation": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/revalidation_requirement"
+        }
+      ],
+      "description": "Optional requirements governing Revalidation of this Truth State."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional domain-specific or implementation metadata. Metadata must not override canonical Truth-State fields.",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+
+  "$defs": {
+    "decision_reason": {
+      "type": "object",
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable machine-readable reason code."
+        },
+
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable explanation of the Truth-State decision."
+        },
+
+        "evidence_references": {
+          "type": "array",
+          "description": "Identifiers of Evaluations, Observations, Sources, Anchors, Lineage objects, analytical states, or related structures supporting this reason.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "regime_rule": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional governing Regime rule relevant to this decision."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "limitation": {
+      "type": "object",
+      "required": [
+        "limitation_type",
+        "description",
+        "impact"
+      ],
+      "properties": {
+        "limitation_type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Domain-specific classification of the limitation."
+        },
+
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable description of the limitation."
+        },
+
+        "impact": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "limited",
+            "material",
+            "blocking",
+            "unknown"
+          ],
+          "description": "Known impact of the limitation on downstream use."
+        },
+
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": [],
+          "description": "Identifiers of gaps, Evidence, Lineage objects, or other structures giving rise to this limitation."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "revalidation_requirement": {
+      "type": "object",
+      "required": [
+        "required",
+        "triggers"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "description": "Whether this Truth State requires subsequent Revalidation."
+        },
+
+        "next_revalidation_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Optional scheduled Revalidation time."
+        },
+
+        "triggers": {
+          "type": "array",
+          "description": "Events or conditions that require or permit Revalidation.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional explanation of the Revalidation requirement."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "contested",
+              "expired",
+              "rejected",
+              "indeterminate"
+            ]
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "accepted_value": {
+            "type": "null"
+          }
+        }
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "operationally_accepted"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "accepted_value": {
+            "not": {
+              "type": "null"
+            }
+          }
+        }
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "expired"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "permitted_uses": {
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "revalidation": {
+            "type": "object",
+            "properties": {
+              "required": {
+                "const": false
+              }
+            },
+            "required": [
+              "required"
+            ]
+          }
+        },
+        "required": [
+          "revalidation"
+        ]
+      },
+      "then": {
+        "properties": {
+          "revalidation": {
+            "properties": {
+              "next_revalidation_at": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+
+  "examples": [
+    {
+      "truth_state_id": "truth-state-ntp-coherent-001",
+      "claim_id": "claim-temporal-coherent-001",
+      "evaluation_id": "evaluation-ntp-coherent-001",
+      "regime_id": "regime-display-clock",
+      "truth_classes": [
+        "temporal"
+      ],
+      "status": "operationally_accepted",
+      "accepted_value": {
+        "timestamp": "2026-01-01T12:00:00.014Z",
+        "offset_ms": 14.0
+      },
+      "coherence_state_id": "coherence-ntp-coherent-001",
+      "drift_state_id": "drift-ntp-coherent-001",
+      "paradox_ids": [],
+      "source_ids": [
+        "source-ntp-a",
+        "source-ntp-b",
+        "source-ntp-c"
+      ],
+      "observation_ids": [
+        "obs-ntp-a-001",
+        "obs-ntp-b-001",
+        "obs-ntp-c-001"
+      ],
+      "anchor_ids": [
+        "anchor-utc"
+      ],
+      "lineage_ids": [],
+      "correction_policy_id": "correction-ntp-coherent-001",
+      "prior_truth_state_id": null,
+      "supersedes_truth_state_id": null,
+      "permitted_uses": [
+        "low-consequence display clock"
+      ],
+      "prohibited_uses": [],
+      "limitations": [],
+      "decision_reasons": [
+        {
+          "code": "TEMPORAL_STATE_OPERATIONALLY_ACCEPTED",
+          "message": "Three independent qualified observations form a coherent temporal field with bounded Drift under the declared Regime.",
+          "evidence_references": [
+            "coherence-ntp-coherent-001",
+            "drift-ntp-coherent-001"
+          ],
+          "regime_rule": "precision_requirement"
+        }
+      ],
+      "evaluated_at": "2026-01-01T12:00:01Z",
+      "valid_from": "2026-01-01T12:00:01Z",
+      "expires_at": "2026-01-01T12:05:00Z",
+      "revalidation": {
+        "required": true,
+        "next_revalidation_at": "2026-01-01T12:05:00Z",
+        "triggers": [
+          "elapsed_time",
+          "expiration",
+          "source_change",
+          "contradictory_observation",
+          "excessive_drift"
+        ],
+        "reason": "Temporal Evidence must remain fresh and sufficiently coherent."
+      },
+      "metadata": {
+        "synthetic": true
+      }
+    },
+
+    {
+      "truth_state_id": "truth-state-ntp-fragmented-001",
+      "claim_id": "claim-temporal-fragmented-001",
+      "evaluation_id": "evaluation-ntp-fragmented-001",
+      "regime_id": "regime-display-clock",
+      "truth_classes": [
+        "temporal"
+      ],
+      "status": "contested",
+      "accepted_value": null,
+      "coherence_state_id": "coherence-ntp-fragmented-001",
+      "drift_state_id": "drift-ntp-fragmented-001",
+      "paradox_ids": [
+        "paradox-ntp-fragmented-001"
+      ],
+      "source_ids": [
+        "source-ntp-a",
+        "source-ntp-b",
+        "source-ntp-c",
+        "source-ntp-d"
+      ],
+      "observation_ids": [
+        "obs-ntp-a-001",
+        "obs-ntp-b-001",
+        "obs-ntp-c-001",
+        "obs-ntp-d-001"
+      ],
+      "anchor_ids": [
+        "anchor-utc"
+      ],
+      "lineage_ids": [],
+      "correction_policy_id": "correction-ntp-fragmented-001",
+      "prior_truth_state_id": null,
+      "supersedes_truth_state_id": null,
+      "permitted_uses": [
+        "audit",
+        "manual investigation"
+      ],
+      "prohibited_uses": [
+        "single-state temporal correction"
+      ],
+      "limitations": [
+        {
+          "limitation_type": "unresolved_fragmentation",
+          "description": "Two independently supported temporal clusters remain mutually incompatible.",
+          "impact": "blocking",
+          "references": [
+            "cluster-temporal-a",
+            "cluster-temporal-b",
+            "paradox-ntp-fragmented-001"
+          ]
+        }
+      ],
+      "decision_reasons": [
+        {
+          "code": "TEMPORAL_STATE_CONTESTED",
+          "message": "No single temporal value can be operationally accepted because two comparably supported incompatible clusters remain unresolved.",
+          "evidence_references": [
+            "coherence-ntp-fragmented-001",
+            "paradox-ntp-fragmented-001"
+          ],
+          "regime_rule": "no-preference-without-structural-basis"
+        }
+      ],
+      "evaluated_at": "2026-01-01T12:00:01Z",
+      "valid_from": "2026-01-01T12:00:01Z",
+      "expires_at": null,
+      "revalidation": {
+        "required": true,
+        "next_revalidation_at": null,
+        "triggers": [
+          "source_change",
+          "anchor_change",
+          "regime_change",
+          "contradictory_observation",
+          "manual_challenge"
+        ],
+        "reason": "The unresolved fragmented temporal field requires renewed Evaluation when relevant Evidence or governing conditions change."
+      },
+      "metadata": {
+        "synthetic": true
+      }
+    },
+
+    {
+      "truth_state_id": "truth-state-ntp-indeterminate-001",
+      "claim_id": "claim-temporal-indeterminate-001",
+      "evaluation_id": "evaluation-ntp-indeterminate-001",
+      "regime_id": "regime-display-clock",
+      "truth_classes": [
+        "temporal"
+      ],
+      "status": "indeterminate",
+      "accepted_value": null,
+      "coherence_state_id": "coherence-ntp-indeterminate-001",
+      "drift_state_id": "drift-ntp-indeterminate-001",
+      "paradox_ids": [],
+      "source_ids": [
+        "source-ntp-a",
+        "source-ntp-b",
+        "source-ntp-c"
+      ],
+      "observation_ids": [],
+      "anchor_ids": [
+        "anchor-utc"
+      ],
+      "lineage_ids": [
+        "lineage-ntp-indeterminate-c-001"
+      ],
+      "correction_policy_id": "correction-ntp-indeterminate-001",
+      "prior_truth_state_id": null,
+      "supersedes_truth_state_id": null,
+      "permitted_uses": [
+        "audit"
+      ],
+      "prohibited_uses": [
+        "current temporal synchronization",
+        "current clock correction"
+      ],
+      "limitations": [
+        {
+          "limitation_type": "insufficient_qualified_evidence",
+          "description": "No observations remain sufficiently qualified to support a current temporal value.",
+          "impact": "blocking",
+          "references": [
+            "evaluation-ntp-indeterminate-001"
+          ]
+        }
+      ],
+      "decision_reasons": [
+        {
+          "code": "TEMPORAL_STATE_INDETERMINATE",
+          "message": "The available Evidence does not support a sufficiently qualified current temporal state.",
+          "evidence_references": [
+            "evaluation-ntp-indeterminate-001"
+          ],
+          "regime_rule": "minimum_independent_sources"
+        }
+      ],
+      "evaluated_at": "2026-01-01T12:01:00Z",
+      "valid_from": "2026-01-01T12:01:00Z",
+      "expires_at": null,
+      "revalidation": {
+        "required": true,
+        "next_revalidation_at": null,
+        "triggers": [
+          "new_observation",
+          "source_change",
+          "lineage_completed",
+          "manual_challenge"
+        ],
+        "reason": "New qualified Evidence is required before a current temporal value can be established."
+      },
+      "metadata": {
+        "synthetic": true
+      }
+    },
+
+    {
+      "truth_state_id": "truth-state-ntp-stale-001",
+      "claim_id": "claim-temporal-stale-001",
+      "evaluation_id": "evaluation-ntp-stale-001",
+      "regime_id": "regime-display-clock",
+      "truth_classes": [
+        "temporal"
+      ],
+      "status": "expired",
+      "accepted_value": null,
+      "coherence_state_id": "coherence-ntp-stale-001",
+      "drift_state_id": "drift-ntp-stale-001",
+      "paradox_ids": [],
+      "source_ids": [
+        "source-ntp-a",
+        "source-ntp-b",
+        "source-ntp-c"
+      ],
+      "observation_ids": [],
+      "anchor_ids": [
+        "anchor-utc"
+      ],
+      "lineage_ids": [],
+      "correction_policy_id": "correction-ntp-stale-001",
+      "prior_truth_state_id": "truth-state-ntp-stale-prior-001",
+      "supersedes_truth_state_id": "truth-state-ntp-stale-prior-001",
+      "permitted_uses": [
+        "historical audit of the prior temporal evaluation"
+      ],
+      "prohibited_uses": [
+        "current temporal synchronization",
+        "current clock correction"
+      ],
+      "limitations": [
+        {
+          "limitation_type": "freshness_expired",
+          "description": "Previously coherent temporal Evidence exceeded the current Regime freshness boundary.",
+          "impact": "blocking",
+          "references": [
+            "truth-state-ntp-stale-prior-001"
+          ]
+        }
+      ],
+      "decision_reasons": [
+        {
+          "code": "TEMPORAL_STATE_EXPIRED",
+          "message": "The prior temporal state remains historically valid but no longer satisfies current Evidence freshness requirements.",
+          "evidence_references": [
+            "truth-state-ntp-stale-prior-001",
+            "evaluation-ntp-stale-001"
+          ],
+          "regime_rule": "maximum_age_seconds"
+        }
+      ],
+      "evaluated_at": "2026-01-01T12:10:00Z",
+      "valid_from": "2026-01-01T12:10:00Z",
+      "expires_at": null,
+      "revalidation": {
+        "required": true,
+        "next_revalidation_at": null,
+        "triggers": [
+          "new_observation",
+          "fresh_source_evidence",
+          "manual_challenge"
+        ],
+        "reason": "Fresh temporal Evidence is required for renewed current acceptance."
+      },
+      "metadata": {
+        "synthetic": true
+      }
+    }
+  ]
+}

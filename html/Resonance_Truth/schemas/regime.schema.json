@@ -1,1 +1,523 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/Resonance_Truth/schemas/regime.schema.json",
+  "title": "RTT Resonance Truth Regime",
+  "description": "Schema for an operational Regime used by the RTT Resonance Truth Service v0.1 model. A Regime defines the bounded conditions, requirements, policies, and permitted responses under which a Claim is evaluated. Regime participates directly in qualification but must remain distinct from dynamic Evidence and the resulting Truth State.",
+  "type": "object",
+
+  "required": [
+    "regime_id",
+    "name",
+    "domain",
+    "status",
+    "created_at",
+    "updated_at"
+  ],
+
+  "properties": {
+    "regime_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for the Regime."
+    },
+
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable name of the Regime."
+    },
+
+    "domain": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Operational domain in which this Regime applies. This remains extensible and is not restricted to the ten canonical Truth Classes."
+    },
+
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional human-readable description of the operating conditions represented by this Regime."
+    },
+
+    "truth_classes": {
+      "type": "array",
+      "description": "Truth Classes explicitly governed or constrained by this Regime.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "temporal",
+          "locational",
+          "identity",
+          "integrity",
+          "authority",
+          "state",
+          "transactional",
+          "intent",
+          "observational",
+          "lineage"
+        ]
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "observer_context": {
+      "description": "Optional bounded description of the observer, consumer, relying party, or local evaluation perspective for which this Regime applies. Dynamic observational Evidence should remain outside this field.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/observer_context"
+        }
+      ]
+    },
+
+    "precision_requirement": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/numeric_requirement"
+        }
+      ],
+      "description": "Optional precision or tolerance requirement for domains where a meaningful quantitative boundary exists."
+    },
+
+    "maximum_age_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Optional maximum Evidence age permitted by this Regime, in seconds. Null is appropriate when freshness is not expressed as wall-clock age."
+    },
+
+    "minimum_independent_sources": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Optional minimum number of structurally independent Sources required by this Regime. Independence must not be inferred from Source count alone."
+    },
+
+    "consequence": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "critical",
+        null
+      ],
+      "description": "Optional consequence classification used by the Regime to constrain acceptance or downstream action."
+    },
+
+    "permitted_truth_statuses": {
+      "type": "array",
+      "description": "Truth-State qualification statuses permitted for operational use within this Regime. Presence in this list does not cause an Evaluation to receive that status.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "declared",
+          "observed",
+          "corroborated",
+          "operationally_accepted",
+          "contested",
+          "degraded",
+          "held_over",
+          "expired",
+          "rejected",
+          "indeterminate"
+        ]
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "correction_modes": {
+      "type": "array",
+      "description": "Correction modes permitted by this Regime. Actual Correction remains downstream of Evaluation and Truth-State synthesis.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "none",
+          "step",
+          "gradual",
+          "quarantine",
+          "dual_state",
+          "human_escalation",
+          "holdover",
+          "fail_closed",
+          "fail_bounded"
+        ]
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "policies": {
+      "type": "array",
+      "description": "Structured governing rules or constraints that participate in Evaluation under this Regime.",
+      "items": {
+        "$ref": "#/$defs/regime_policy"
+      },
+      "default": []
+    },
+
+    "required_anchor_ids": {
+      "type": "array",
+      "description": "Optional v0.1 Anchor identifiers explicitly required or recognized by this Regime.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "valid_from": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Optional beginning of the Regime's validity interval."
+    },
+
+    "valid_until": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Optional end of the Regime's validity interval."
+    },
+
+    "policy_version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional version or generation of the governing policy or Regime definition."
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "deprecated",
+        "superseded",
+        "retired"
+      ],
+      "description": "Lifecycle state of the Regime definition."
+    },
+
+    "supersedes_regime_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of an earlier Regime superseded by this Regime."
+    },
+
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp at which the Regime record was created."
+    },
+
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the most recent Regime-record update."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional domain-specific or implementation metadata. Metadata must not override canonical Regime fields or be used to smuggle dynamic Evidence into the governing boundary.",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+
+  "$defs": {
+    "numeric_requirement": {
+      "type": "object",
+      "required": [
+        "value",
+        "unit"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Numeric boundary or requirement."
+        },
+
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Unit associated with the numeric boundary."
+        },
+
+        "comparison": {
+          "type": "string",
+          "enum": [
+            "maximum",
+            "minimum",
+            "exact",
+            "range",
+            "domain_defined"
+          ],
+          "default": "maximum",
+          "description": "Semantic interpretation of the numeric requirement."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "observer_context": {
+      "type": "object",
+      "properties": {
+        "observer_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional identifier of the observer, consumer, relying party, or evaluation perspective."
+        },
+
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional role performed by the observer within this Regime."
+        },
+
+        "scope": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional bounded scope in which the observer context applies."
+        },
+
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "default": {}
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "regime_policy": {
+      "type": "object",
+      "required": [
+        "policy_id",
+        "rule_type",
+        "description"
+      ],
+      "properties": {
+        "policy_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable identifier for this governing rule within the Regime."
+        },
+
+        "rule_type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Domain-specific classification of the rule."
+        },
+
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable description of the governing rule."
+        },
+
+        "value": {
+          "description": "Optional domain-native value associated with the rule."
+        },
+
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional unit associated with a numeric rule value."
+        },
+
+        "enforcement": {
+          "type": "string",
+          "enum": [
+            "required",
+            "advisory",
+            "domain_defined"
+          ],
+          "default": "required",
+          "description": "Whether the rule is mandatory, advisory, or interpreted according to domain semantics."
+        },
+
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "default": {}
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "superseded"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "supersedes_regime_id"
+        ],
+        "properties": {
+          "supersedes_regime_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ],
+
+  "examples": [
+    {
+      "regime_id": "regime-display-clock",
+      "name": "Low-consequence display clock",
+      "domain": "temporal",
+      "description": "Temporal Regime permitting bounded Drift for a human-readable display clock while requiring sufficiently coherent independent temporal Evidence.",
+      "truth_classes": [
+        "temporal"
+      ],
+      "observer_context": "local-display-clock",
+      "precision_requirement": {
+        "value": 100,
+        "unit": "milliseconds",
+        "comparison": "maximum"
+      },
+      "maximum_age_seconds": 300,
+      "minimum_independent_sources": 2,
+      "consequence": "low",
+      "permitted_truth_statuses": [
+        "corroborated",
+        "operationally_accepted",
+        "degraded",
+        "held_over"
+      ],
+      "correction_modes": [
+        "none",
+        "gradual"
+      ],
+      "policies": [
+        {
+          "policy_id": "policy-temporal-drift-bound",
+          "rule_type": "drift_boundary",
+          "description": "Synthesized temporal Drift must remain within the declared display-clock precision requirement for ordinary operational acceptance.",
+          "value": 100,
+          "unit": "milliseconds",
+          "enforcement": "required",
+          "metadata": {}
+        }
+      ],
+      "required_anchor_ids": [
+        "anchor-utc"
+      ],
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "policy_version": "0.1",
+      "status": "active",
+      "supersedes_regime_id": null,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "fixture_scope": "deterministic-reference"
+      }
+    },
+
+    {
+      "regime_id": "regime-high-consequence-temporal",
+      "name": "High-consequence temporal evaluation",
+      "domain": "temporal",
+      "description": "Example Regime demonstrating a stricter temporal boundary without changing the underlying Evidence.",
+      "truth_classes": [
+        "temporal"
+      ],
+      "observer_context": {
+        "observer_id": "critical-system-a",
+        "role": "consumer",
+        "scope": "high-consequence-operation",
+        "metadata": {}
+      },
+      "precision_requirement": {
+        "value": 10,
+        "unit": "milliseconds",
+        "comparison": "maximum"
+      },
+      "maximum_age_seconds": 60,
+      "minimum_independent_sources": 3,
+      "consequence": "high",
+      "permitted_truth_statuses": [
+        "corroborated",
+        "operationally_accepted"
+      ],
+      "correction_modes": [
+        "none",
+        "gradual",
+        "fail_closed"
+      ],
+      "policies": [],
+      "required_anchor_ids": [
+        "anchor-utc"
+      ],
+      "valid_from": null,
+      "valid_until": null,
+      "policy_version": "example-1",
+      "status": "active",
+      "supersedes_regime_id": null,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "example_only": true
+      }
+    }
+  ]
+}

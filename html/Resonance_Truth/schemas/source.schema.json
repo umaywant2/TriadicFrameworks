@@ -1,1 +1,320 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/Resonance_Truth/schemas/source.schema.json",
+  "title": "RTT Resonance Truth Source",
+  "description": "Schema for a Source used by the RTT Resonance Truth Service v0.1 model. A Source identifies an entity capable of producing or supplying observations relevant to one or more Claims. Source identity, Source independence, and Source authority are distinct concepts; existence as a Source does not itself establish authority or qualification.",
+  "type": "object",
+
+  "required": [
+    "source_id",
+    "name",
+    "source_type",
+    "domain",
+    "status",
+    "created_at",
+    "updated_at"
+  ],
+
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for the Source."
+    },
+
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable name of the Source."
+    },
+
+    "source_type": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Domain-specific classification of the Source, such as ntp_peer, resolver, identity_provider, telemetry_producer, attester, or another Source type."
+    },
+
+    "domain": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Operational domain in which this Source participates."
+    },
+
+    "anchor_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of the v0.1 Anchor directly associated with this Source. Null is valid when no Anchor relationship is known, qualified, or applicable."
+    },
+
+    "lineage_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of a canonical Lineage graph describing the Source's provenance, reference, dependency, delegation, or derivation relationships."
+    },
+
+    "lineage_distance": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Optional derived scalar distance from a relevant reference relationship. Null is valid when Lineage is unknown or cannot honestly be represented by one scalar."
+    },
+
+    "independence": {
+      "type": "string",
+      "enum": [
+        "independent",
+        "partially_dependent",
+        "dependent",
+        "unknown",
+        "not_applicable"
+      ],
+      "description": "Summary classification of Source independence. This field is descriptive and must not replace explicit Lineage analysis.",
+      "default": "unknown"
+    },
+
+    "roles": {
+      "type": "array",
+      "description": "Optional logical roles performed by this Source in the current architectural context. Roles remain extensible because one entity may act as producer, intermediary, authority, transformer, observer, attester, or consumer in different Regimes.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "scope": {
+      "type": "array",
+      "description": "Optional bounded descriptions of the domain, subject, namespace, artifact, Claim, or operational scope associated with this Source. Scope alone does not establish authority.",
+      "items": {
+        "$ref": "#/$defs/source_scope"
+      },
+      "default": []
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "degraded",
+        "unavailable",
+        "withdrawn",
+        "revoked",
+        "unknown"
+      ],
+      "description": "Current lifecycle or availability state of the Source."
+    },
+
+    "valid_from": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Optional beginning of the Source's known relevant validity interval."
+    },
+
+    "valid_until": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Optional end of the Source's known relevant validity interval."
+    },
+
+    "limitations": {
+      "type": "array",
+      "description": "Known limitations affecting the interpretation or permissible use of Evidence from this Source.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp at which the Source record was created."
+    },
+
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the most recent Source-record update."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional domain-specific or implementation metadata. Metadata must not override canonical Source fields and must not be used as a substitute for Authority or Lineage relationships.",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+
+  "$defs": {
+    "source_scope": {
+      "type": "object",
+      "required": [
+        "scope_type",
+        "value"
+      ],
+      "properties": {
+        "scope_type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Domain-specific classification of the bounded Source scope."
+        },
+
+        "value": {
+          "description": "Domain-native value identifying the bounded scope."
+        },
+
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional human-readable explanation of the Source scope."
+        },
+
+        "regime_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional Regime under which the scope relationship applies."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "examples": [
+    {
+      "source_id": "source-ntp-a",
+      "name": "NTP Source A",
+      "source_type": "ntp_peer",
+      "domain": "temporal",
+      "anchor_id": "anchor-utc",
+      "lineage_id": null,
+      "lineage_distance": 1,
+      "independence": "independent",
+      "roles": [
+        "temporal-source"
+      ],
+      "scope": [],
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "limitations": [],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "synthetic": true,
+        "fixture_role": "independent-temporal-source"
+      }
+    },
+
+    {
+      "source_id": "source-ntp-b",
+      "name": "NTP Source B",
+      "source_type": "ntp_peer",
+      "domain": "temporal",
+      "anchor_id": "anchor-utc",
+      "lineage_id": "lineage-ntp-shared-upstream-001",
+      "lineage_distance": 2,
+      "independence": "partially_dependent",
+      "roles": [
+        "temporal-source"
+      ],
+      "scope": [],
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "limitations": [
+        "Shares an upstream temporal dependency represented in Lineage."
+      ],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "example_only": true
+      }
+    },
+
+    {
+      "source_id": "source-ntp-c",
+      "name": "NTP Source C",
+      "source_type": "ntp_peer",
+      "domain": "temporal",
+      "anchor_id": null,
+      "lineage_id": "lineage-ntp-indeterminate-c-001",
+      "lineage_distance": null,
+      "independence": "unknown",
+      "roles": [
+        "temporal-source"
+      ],
+      "scope": [],
+      "status": "unknown",
+      "valid_from": null,
+      "valid_until": null,
+      "limitations": [
+        "No qualified temporal reference relationship is currently established."
+      ],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T12:00:00Z",
+      "metadata": {
+        "synthetic": true,
+        "fixture_role": "incomplete-lineage-source"
+      }
+    },
+
+    {
+      "source_id": "source-attester-example-001",
+      "name": "Example Provenance Attester",
+      "source_type": "attester",
+      "domain": "lineage",
+      "anchor_id": null,
+      "lineage_id": "lineage-attester-example-001",
+      "lineage_distance": null,
+      "independence": "unknown",
+      "roles": [
+        "assertion-source",
+        "attester"
+      ],
+      "scope": [
+        {
+          "scope_type": "artifact",
+          "value": "artifact-example-001",
+          "description": "Source participates in provenance assertions concerning the example artifact.",
+          "regime_id": "regime-provenance-example"
+        }
+      ],
+      "status": "active",
+      "valid_from": null,
+      "valid_until": null,
+      "limitations": [
+        "Presence as an attestation Source does not by itself establish authority over the asserted provenance."
+      ],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "example_only": true
+      }
+    }
+  ]
+}
