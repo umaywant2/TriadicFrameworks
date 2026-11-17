@@ -1,1 +1,132 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/Resonance_Truth/schemas/claim.schema.json",
+  "title": "RTT Resonance Truth Claim",
+  "description": "Schema for a Claim registered with the RTT Resonance Truth Service v0.1 model. A Claim represents an assertion to be evaluated. It does not contain or imply its own Truth State.",
+  "type": "object",
+
+  "required": [
+    "claim_id",
+    "statement",
+    "truth_classes",
+    "status",
+    "created_at",
+    "updated_at"
+  ],
+
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for the Claim."
+    },
+
+    "statement": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The assertion being registered for evaluation."
+    },
+
+    "truth_classes": {
+      "type": "array",
+      "description": "One or more operational Truth Classes participating in evaluation of this Claim.",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "temporal",
+          "locational",
+          "identity",
+          "integrity",
+          "authority",
+          "state",
+          "transactional",
+          "intent",
+          "observational",
+          "lineage"
+        ]
+      }
+    },
+
+    "intended_use": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional human-readable description of the operational purpose for which this Claim is being evaluated."
+    },
+
+    "external_reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier or reference linking the Claim to an external record or system."
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "registered",
+        "active",
+        "archived"
+      ],
+      "description": "Lifecycle state of the Claim record. This is not a Truth-State status."
+    },
+
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp at which the Claim was registered."
+    },
+
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the most recent Claim-record update."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional domain-specific or implementation metadata. Metadata must not override canonical Claim fields.",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+
+  "additionalProperties": false,
+
+  "examples": [
+    {
+      "claim_id": "claim-temporal-coherent-001",
+      "statement": "The current reference time is sufficiently synchronized for the declared display-clock regime.",
+      "truth_classes": [
+        "temporal"
+      ],
+      "intended_use": "Low-consequence display clock.",
+      "status": "active",
+      "created_at": "2026-01-01T12:00:00Z",
+      "updated_at": "2026-01-01T12:00:00Z"
+    },
+    {
+      "claim_id": "claim-certificate-001",
+      "statement": "Certificate C is acceptable for the declared operational use.",
+      "truth_classes": [
+        "identity",
+        "integrity",
+        "authority",
+        "temporal",
+        "lineage"
+      ],
+      "intended_use": "Evaluate a multi-class operational Claim.",
+      "external_reference": null,
+      "status": "registered",
+      "created_at": "2026-01-01T12:00:00Z",
+      "updated_at": "2026-01-01T12:00:00Z",
+      "metadata": {}
+    }
+  ]
+}
