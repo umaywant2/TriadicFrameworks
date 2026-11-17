@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_04_pki_integrity_truth_" src="https://github.com/user-attachments/assets/45f42fed-db51-49fe-bb8b-d0b9ee61c26d" />
+
 # Crosswalk #4 — PKI and Integrity Truth
 
 **Module:** Resonance Truth  
