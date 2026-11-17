@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/tests/README.md">
-  <title>README</title>
+  <title>Resonance Truth — Tests</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1671 @@
   </aside>
 
   <main>
-<p>. </p>
+<h1 id="resonance-truth-tests">Resonance Truth — Tests</h1>
+<blockquote>
+<p><strong>Deterministic behavioral validation for the RTT Resonance Truth Service</strong></p>
+</blockquote>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Test Index and Behavioral Contract<br>
+<strong>Framework:</strong> Resonance-Time Theory (RTT)<br>
+<strong>Status:</strong> Reference Implementation / Behavioral Validation<br>
+<strong>Initial Reference System:</strong> NTP / Temporal Truth<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This directory contains deterministic behavioral tests for the RTT Resonance Truth Service.</p>
+<p>The tests answer one governing question:</p>
+<blockquote>
+<p><strong>Given a structurally valid scenario, does the Truth Service interpret its Evidence and relationships correctly?</strong></p>
+</blockquote>
+<p>The relationship among implementation artifacts is:</p>
+<pre><code>SCHEMA
+  ↓
+validates structure
+
+FIXTURE
+  ↓
+declares controlled scenario
+
+EVALUATOR
+  ↓
+interprets scenario
+
+TEST
+  ↓
+verifies behavior
+</code></pre>
+<p>The tests should therefore validate:</p>
+<ul>
+<li>Qualification</li>
+<li>Coherence</li>
+<li>Drift</li>
+<li>Paradox handling</li>
+<li>Regime behavior</li>
+<li>Truth-State lifecycle behavior</li>
+</ul>
+<p>without embedding the evaluator's logic into the tests themselves.</p>
+<hr>
+<h1 id="1-test-philosophy">1. Test Philosophy</h1>
+<p>A useful test asks:</p>
+<blockquote>
+<p><strong>Did the implementation preserve the structural meaning of the scenario?</strong></p>
+</blockquote>
+<p>It should not merely ask:</p>
+<pre><code>did one final value equal one expected number?
+</code></pre>
+<p>The architecture requires richer assertions.</p>
+<p>Examples include:</p>
+<pre><code>Was stale Evidence excluded?
+
+Was qualified dissent preserved?
+
+Were dependent Sources recognized?
+
+Was Drift classified correctly?
+
+Was fragmentation preserved?
+
+Was Paradox registered only when justified?
+
+Did Regime change operational usability?
+
+Was accepted_value null when no defensible value existed?
+</code></pre>
+<p>Tests therefore validate relationships as well as outputs.</p>
+<hr>
+<h1 id="2-test-vs-fixture">2. Test vs Fixture</h1>
+<p>Fixtures and tests must remain separate.</p>
+<h2 id="fixture">Fixture</h2>
+<p>A fixture declares:</p>
+<blockquote>
+<p><strong>This is the controlled world.</strong></p>
+</blockquote>
+<p>It contains:</p>
+<pre><code>Claim
+Regime
+Sources
+Anchors
+Observations
+Lineage
+evaluation context
+expected behavior
+</code></pre>
+<h2 id="test">Test</h2>
+<p>A test asks:</p>
+<blockquote>
+<p><strong>Did the evaluator behave correctly inside that world?</strong></p>
+</blockquote>
+<p>A fixture may support several tests.</p>
+<p>A test should reuse canonical fixture data rather than creating another hidden version of the same scenario.</p>
+<hr>
+<h1 id="3-test-vs-schema">3. Test vs Schema</h1>
+<p>JSON Schema establishes:</p>
+<blockquote>
+<p><strong>Is this object structurally valid?</strong></p>
+</blockquote>
+<p>Behavioral testing establishes:</p>
+<blockquote>
+<p><strong>Does the implementation interpret that valid object correctly?</strong></p>
+</blockquote>
+<p>These are different failure boundaries.</p>
+<p>Conceptually:</p>
+<pre><code>malformed fixture
+      ↓
+SCHEMA FAILURE
+</code></pre>
+<p>versus:</p>
+<pre><code>valid fixture
+      ↓
+wrong interpretation
+      ↓
+BEHAVIORAL TEST FAILURE
+</code></pre>
+<p>Schema failure should occur before Truth evaluation.</p>
+<hr>
+<h1 id="4-test-vs-truth-failure">4. Test vs Truth Failure</h1>
+<p>A test succeeds when the implementation returns the expected behavior.</p>
+<p>That behavior may itself be:</p>
+<pre><code>indeterminate
+
+contested
+
+expired
+
+rejected
+</code></pre>
+<p>For example:</p>
+<pre><code>fixture:
+  indeterminate.json
+</code></pre>
+<p>Expected:</p>
+<pre><code>Truth State:
+  indeterminate
+</code></pre>
+<p>If the evaluator returns:</p>
+<pre><code>indeterminate
+</code></pre>
+<p>the test passes.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Negative or uncertain Truth results are not test failures when they are the correct bounded result.</strong></p>
+</blockquote>
+<hr>
+<h1 id="5-evaluation-failure-is-different">5. Evaluation Failure Is Different</h1>
+<p>The system must also distinguish:</p>
+<pre><code>successful Evaluation
+  producing
+indeterminate Truth State
+</code></pre>
+<p>from:</p>
+<pre><code>failed Evaluation
+  producing
+no valid Truth State
+</code></pre>
+<p>Example:</p>
+<pre><code>insufficient qualified Evidence
+  ↓
+Evaluation succeeds
+  ↓
+Truth State = indeterminate
+</code></pre>
+<p>This is valid behavior.</p>
+<p>Conversely:</p>
+<pre><code>evaluator exception
+  ↓
+Evaluation fails
+</code></pre>
+<p>is an implementation failure.</p>
+<p>Tests must preserve this distinction.</p>
+<hr>
+<h1 id="6-current-test-families">6. Current Test Families</h1>
+<p>The behavioral test tree is organized around five initial analytical families:</p>
+<pre><code>tests/
+  qualification/
+  coherence/
+  drift/
+  paradox/
+  regime/
+</code></pre>
+<p>These categories correspond to major mechanisms in the v0.1 reference implementation.</p>
+<p>They should remain behavior-oriented rather than fixture-oriented.</p>
+<p>For example:</p>
+<pre><code>qualification/
+</code></pre>
+<p>should contain tests about qualification behavior across several fixtures.</p>
+<p>It should not simply duplicate:</p>
+<pre><code>fixtures/ntp/
+</code></pre>
+<hr>
+<h1 id="7-qualification-tests">7. Qualification Tests</h1>
+<p>Directory:</p>
+<pre><code>qualification/
+</code></pre>
+<p>Qualification tests verify whether Evidence is permitted to participate in a particular Evaluation.</p>
+<p>Potential assertions include:</p>
+<pre><code>fresh Observation
+  → qualified
+
+expired Observation
+  → expired
+
+unavailable Source
+  → rejected or degraded according to Regime
+
+incomplete Lineage
+  → indeterminate
+
+qualified Observation
+  → may participate in later Coherence analysis
+</code></pre>
+<p>Qualification tests should verify:</p>
+<ul>
+<li>status</li>
+<li>reason code</li>
+<li>relevant references</li>
+<li>Regime rule</li>
+<li>inclusion / exclusion behavior</li>
+</ul>
+<hr>
+<h1 id="8-qualification-does-not-decide-truth-alone">8. Qualification Does Not Decide Truth Alone</h1>
+<p>A qualified Observation does not automatically become:</p>
+<pre><code>accepted Truth
+</code></pre>
+<p>Examples:</p>
+<pre><code>outlier.json
+</code></pre>
+<p>all Observations may be qualified while one remains dissenting.</p>
+<p>Likewise:</p>
+<pre><code>fragmented.json
+</code></pre>
+<p>all Observations may qualify while no single accepted temporal value can be synthesized.</p>
+<p>Therefore:</p>
+<pre><code>QUALIFIED
+  ≠
+SELECTED
+</code></pre>
+<p>and:</p>
+<pre><code>QUALIFIED
+  ≠
+TRUE
+</code></pre>
+<p>Tests should enforce this distinction.</p>
+<hr>
+<h1 id="9-coherence-tests">9. Coherence Tests</h1>
+<p>Directory:</p>
+<pre><code>coherence/
+</code></pre>
+<p>Coherence tests verify structural compatibility among qualified Evidence.</p>
+<p>Potential outcomes include:</p>
+<pre><code>coherent
+
+weakly_coherent
+
+fragmented
+
+contested
+
+inverted
+
+indeterminate
+</code></pre>
+<p>Tests should verify:</p>
+<ul>
+<li>cluster behavior</li>
+<li>supporting Evidence</li>
+<li>dissent preservation</li>
+<li>Source independence</li>
+<li>fragmentation</li>
+<li>absence of fabricated consensus</li>
+</ul>
+<hr>
+<h1 id="10-coherence-is-not-majority-vote">10. Coherence Is Not Majority Vote</h1>
+<p>Tests must explicitly resist implementations that reduce Coherence to:</p>
+<pre><code>most Sources agree
+  therefore
+accept majority value
+</code></pre>
+<p>Source count alone does not establish:</p>
+<pre><code>independence
+authority
+valid Lineage
+sufficient scope
+</code></pre>
+<p>Future fixtures should include cases where several apparent Sources share one upstream dependency.</p>
+<p>Expected behavior:</p>
+<pre><code>shared ancestry detected
+</code></pre>
+<p>rather than:</p>
+<pre><code>artificial corroboration
+</code></pre>
+<hr>
+<h1 id="11-coherent-test-behavior">11. Coherent Test Behavior</h1>
+<p>For:</p>
+<pre><code>../fixtures/ntp/coherent.json
+</code></pre>
+<p>expected behavior includes:</p>
+<pre><code>all three Observations qualify
+
+all three participate
+
+one coherent cluster exists
+
+no dissent exists
+
+no Paradox exists
+
+accepted temporal value exists
+</code></pre>
+<p>This is the baseline positive path.</p>
+<hr>
+<h1 id="12-outlier-test-behavior">12. Outlier Test Behavior</h1>
+<p>For:</p>
+<pre><code>../fixtures/ntp/outlier.json
+</code></pre>
+<p>expected behavior includes:</p>
+<pre><code>all three Observations qualify
+
+two Observations form supporting cluster
+
+one qualified Observation remains dissenting
+
+dissenting Evidence is preserved
+
+one accepted temporal value remains supportable
+
+no structural Paradox is required
+</code></pre>
+<p>This is one of the most important early behavioral distinctions.</p>
+<hr>
+<h1 id="13-fragmented-test-behavior">13. Fragmented Test Behavior</h1>
+<p>For:</p>
+<pre><code>../fixtures/ntp/fragmented.json
+</code></pre>
+<p>expected behavior includes:</p>
+<pre><code>all four Observations qualify
+
+two meaningful coherent clusters emerge
+
+neither cluster has sufficient structural basis to dominate
+
+Coherence becomes fragmented
+
+accepted_value remains null
+
+structural Paradox is preserved
+
+single-state Correction is prohibited
+</code></pre>
+<p>This tests whether the implementation can refuse false certainty.</p>
+<hr>
+<h1 id="14-indeterminate-coherence">14. Indeterminate Coherence</h1>
+<p>For:</p>
+<pre><code>../fixtures/ntp/indeterminate.json
+</code></pre>
+<p>expected behavior includes:</p>
+<pre><code>no Observation remains sufficiently qualified
+
+no current Coherence field is synthesized
+
+Coherence becomes indeterminate
+
+accepted_value remains null
+</code></pre>
+<p>This is structurally different from:</p>
+<pre><code>fragmented
+</code></pre>
+<p>Fragmented means:</p>
+<pre><code>multiple meaningful incompatible qualified structures
+</code></pre>
+<p>Indeterminate means:</p>
+<pre><code>insufficient qualified structure
+</code></pre>
+<p>The tests must keep these apart.</p>
+<hr>
+<h1 id="15-drift-tests">15. Drift Tests</h1>
+<p>Directory:</p>
+<pre><code>drift/
+</code></pre>
+<p>Drift tests verify displacement between relevant truth-bearing states or structures.</p>
+<p>Potential Drift dimensions include:</p>
+<pre><code>temporal
+value
+state
+source
+lineage
+semantic
+authority
+policy
+regime
+instrumentation
+coverage
+context
+transformation
+</code></pre>
+<p>The initial NTP tests primarily exercise:</p>
+<pre><code>temporal Drift
+</code></pre>
+<hr>
+<h1 id="16-numeric-drift">16. Numeric Drift</h1>
+<p>For numeric domains, tests may assert exact deterministic calculations.</p>
+<p>Example:</p>
+<pre><code>local offset:
+  0 ms
+
+synthesized offset:
+  56 ms
+</code></pre>
+<p>Expected Drift:</p>
+<pre><code>magnitude:
+  56
+
+unit:
+  milliseconds
+
+bounded:
+  true
+</code></pre>
+<p>The test should verify the calculation from fixture inputs.</p>
+<p>It should not merely compare against an unexplained constant.</p>
+<hr>
+<h1 id="17-qualitative-drift">17. Qualitative Drift</h1>
+<p>Future tests must also support:</p>
+<pre><code>magnitude:
+  null
+</code></pre>
+<p>Example:</p>
+<pre><code>prior authority:
+  Source A
+
+current authority:
+  Source B
+</code></pre>
+<p>Expected:</p>
+<pre><code>dimensions:
+  - source
+  - authority
+
+direction:
+  changed
+
+magnitude:
+  null
+</code></pre>
+<p>The implementation must not manufacture a numeric distance.</p>
+<hr>
+<h1 id="18-minor-drift-behavior">18. Minor-Drift Behavior</h1>
+<p>For:</p>
+<pre><code>../fixtures/ntp/minor_drift.json
+</code></pre>
+<p>expected behavior includes:</p>
+<pre><code>qualified Sources form one coherent cluster
+
+representative temporal offset = 56 ms
+
+Regime boundary = 100 ms
+
+Drift remains bounded
+
+Truth State remains operationally accepted
+
+gradual Correction is permitted
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Drift present
+  ≠
+Truth failure
+</code></pre>
+<hr>
+<h1 id="19-stale-drift-behavior">19. Stale Drift Behavior</h1>
+<p>For:</p>
+<pre><code>../fixtures/ntp/stale.json
+</code></pre>
+<p>the system should not calculate:</p>
+<pre><code>current Drift = historical offset
+</code></pre>
+<p>because all observations are expired.</p>
+<p>Expected:</p>
+<pre><code>historical coherence preserved
+
+current Drift magnitude unknown
+
+current boundedness unknown
+
+current accepted_value null
+</code></pre>
+<p>This protects the distinction between:</p>
+<pre><code>historical Truth
+</code></pre>
+<p>and:</p>
+<pre><code>present Truth.
+</code></pre>
+<hr>
+<h1 id="20-paradox-tests">20. Paradox Tests</h1>
+<p>Directory:</p>
+<pre><code>paradox/
+</code></pre>
+<p>Paradox tests verify that the service distinguishes genuine unresolved incompatibility from ordinary difference.</p>
+<p>The governing rule is:</p>
+<blockquote>
+<p><strong>Classification precedes contradiction.</strong></p>
+</blockquote>
+<p>Before Paradox, the implementation should consider whether apparent disagreement is explained by:</p>
+<ul>
+<li>different Truth Class</li>
+<li>different Regime</li>
+<li>different scope</li>
+<li>valid multiplicity</li>
+<li>stale Evidence</li>
+<li>expired Evidence</li>
+<li>local-state lag</li>
+<li>materialization lag</li>
+<li>sampling</li>
+<li>Observer position</li>
+<li>Lineage dependency</li>
+<li>Evidence gaps</li>
+<li>different epoch</li>
+<li>different version</li>
+<li>domain semantics</li>
+</ul>
+<hr>
+<h1 id="21-outlier-is-not-paradox">21. Outlier Is Not Paradox</h1>
+<p>The outlier fixture provides the first important anti-Paradox test.</p>
+<p>Expected:</p>
+<pre><code>dissent:
+  yes
+
+Paradox:
+  no
+</code></pre>
+<p>One qualified divergent Source does not necessarily create an unresolved structural contradiction.</p>
+<p>Tests should ensure the evaluator does not escalate every disagreement into Paradox.</p>
+<hr>
+<h1 id="22-fragmentation-can-produce-paradox">22. Fragmentation Can Produce Paradox</h1>
+<p>The fragmented fixture represents:</p>
+<pre><code>Cluster A
+  independently supported
+
+Cluster B
+  independently supported
+</code></pre>
+<p>with:</p>
+<pre><code>same Claim
+same Regime
+mutually incompatible temporal states
+no justified selection basis
+</code></pre>
+<p>Expected:</p>
+<pre><code>Paradox:
+  active
+</code></pre>
+<p>Tests should verify:</p>
+<pre><code>containment
+</code></pre>
+<p>rather than:</p>
+<pre><code>fabricated resolution
+</code></pre>
+<hr>
+<h1 id="23-paradox-resolution-tests">23. Paradox Resolution Tests</h1>
+<p>Future tests should verify that a Paradox may later be resolved through:</p>
+<pre><code>new Evidence
+Regime separation
+scope separation
+Lineage resolution
+authority resolution
+staleness resolution
+policy resolution
+domain semantics
+</code></pre>
+<p>Resolution should not delete the historical Paradox.</p>
+<p>Instead:</p>
+<pre><code>new Evaluation
+  ↓
+resolution relationship
+</code></pre>
+<p>Historical structure remains inspectable.</p>
+<hr>
+<h1 id="24-regime-tests">24. Regime Tests</h1>
+<p>Directory:</p>
+<pre><code>regime/
+</code></pre>
+<p>Regime tests verify that identical Evidence can yield different operational usability under different governing conditions.</p>
+<p>Potential tests include:</p>
+<pre><code>lower precision requirement
+
+higher minimum independent Source count
+
+shorter freshness window
+
+different consequence level
+
+different permitted Correction modes
+</code></pre>
+<p>The Evidence should remain unchanged unless the test explicitly changes it.</p>
+<hr>
+<h1 id="25-same-evidence-different-regime">25. Same Evidence, Different Regime</h1>
+<p>A canonical future test should evaluate the same temporal Evidence under two Regimes.</p>
+<p>Example:</p>
+<pre><code>Evidence:
+  offset = 56 ms
+</code></pre>
+<p>Regime A:</p>
+<pre><code>maximum allowed:
+  100 ms
+</code></pre>
+<p>Result:</p>
+<pre><code>bounded
+</code></pre>
+<p>Regime B:</p>
+<pre><code>maximum allowed:
+  10 ms
+</code></pre>
+<p>Result:</p>
+<pre><code>unbounded
+</code></pre>
+<p>The Evidence did not change.</p>
+<p>The governing boundary did.</p>
+<p>This validates:</p>
+<blockquote>
+<p><strong>Truth qualification can change with Regime without Evidence becoming arbitrary.</strong></p>
+</blockquote>
+<hr>
+<h1 id="26-regime-must-be-explicit">26. Regime Must Be Explicit</h1>
+<p>Tests should avoid hidden global defaults.</p>
+<p>Bad:</p>
+<pre><code>evaluator assumes display-clock regime
+</code></pre>
+<p>Good:</p>
+<pre><code>evaluation.regime_id:
+  regime-display-clock
+</code></pre>
+<p>If a test depends on a default Regime, the default itself must be the behavior under test.</p>
+<hr>
+<h1 id="27-lifecycle-tests">27. Lifecycle Tests</h1>
+<p>The repository may eventually add a dedicated:</p>
+<pre><code>lifecycle/
+</code></pre>
+<p>test family.</p>
+<p>Until then, lifecycle assertions can be tested through the existing families.</p>
+<p>Initial lifecycle behaviors include:</p>
+<pre><code>operationally_accepted
+  ↓
+expired
+</code></pre>
+<p>and:</p>
+<pre><code>new Evidence
+  ↓
+Revalidation
+  ↓
+new Truth State
+</code></pre>
+<p>The stale NTP fixture is the first lifecycle scenario.</p>
+<hr>
+<h1 id="28-historical-state-preservation">28. Historical-State Preservation</h1>
+<p>Tests involving Revalidation should verify:</p>
+<pre><code>prior Truth State remains referenceable
+
+new Evaluation is created
+
+new Truth State is created
+
+prior Evidence is not rewritten
+
+supersession is explicit
+</code></pre>
+<p>Expected pattern:</p>
+<pre><code>Truth State A
+     ↓
+Revalidation
+     ↓
+Evaluation B
+     ↓
+Truth State B
+</code></pre>
+<p>not:</p>
+<pre><code>mutate Truth State A in place
+</code></pre>
+<hr>
+<h1 id="29-correction-tests">29. Correction Tests</h1>
+<p>Correction behavior currently appears through other test families rather than a dedicated:</p>
+<pre><code>correction/
+</code></pre>
+<p>directory.</p>
+<p>Tests should verify:</p>
+<pre><code>Correction follows Truth-State synthesis
+</code></pre>
+<p>and never:</p>
+<pre><code>Correction determines the Truth State
+</code></pre>
+<p>Examples:</p>
+<pre><code>coherent
+  → none
+
+minor drift
+  → gradual
+
+fragmented
+  → dual_state
+
+stale
+  → fail_bounded
+
+indeterminate
+  → fail_bounded
+</code></pre>
+<hr>
+<h1 id="30-correction-attempt-vs-success">30. Correction Attempt vs Success</h1>
+<p>Future tests should distinguish:</p>
+<pre><code>Correction allowed
+
+Correction attempted
+
+Correction committed
+
+Correction observed
+
+state converged
+</code></pre>
+<p>These are separate lifecycle stages.</p>
+<p>The desired-state and transactional crosswalks make this especially important.</p>
+<hr>
+<h1 id="31-assertion-depth">31. Assertion Depth</h1>
+<p>Tests should assert the minimum structure necessary to validate behavior.</p>
+<p>Avoid brittle assertions against incidental serialization details.</p>
+<p>Good:</p>
+<pre><code>truth_state.status == operationally_accepted
+
+drift.magnitude == 56
+
+coherence.status == coherent
+</code></pre>
+<p>Bad:</p>
+<pre><code>entire generated JSON text exactly equals one monolithic string
+</code></pre>
+<p>unless exact serialization is specifically under test.</p>
+<p>Behavioral tests should survive irrelevant field ordering.</p>
+<hr>
+<h1 id="32-reason-code-assertions">32. Reason-Code Assertions</h1>
+<p>Where Evaluation behavior depends on explicit classification, tests should verify stable reason codes.</p>
+<p>Examples:</p>
+<pre><code>OBSERVATION_EXPIRED
+
+SOURCE_UNAVAILABLE
+
+LINEAGE_INCOMPLETE
+
+NO_QUALIFIED_SYNTHESIS_SET
+
+UNRESOLVED_COMPETING_TEMPORAL_CLUSTERS
+</code></pre>
+<p>Human-readable messages may evolve.</p>
+<p>Machine-readable reason codes should remain comparatively stable.</p>
+<hr>
+<h1 id="33-explanation-assertions">33. Explanation Assertions</h1>
+<p>Tests should not require only:</p>
+<pre><code>status
+</code></pre>
+<p>They should verify that the service can explain important bounded decisions.</p>
+<p>Example:</p>
+<pre><code>status:
+  indeterminate
+</code></pre>
+<p>Expected reason:</p>
+<pre><code>no qualified synthesis set
+</code></pre>
+<p>This prevents implementations from returning the right enum for the wrong reason.</p>
+<hr>
+<h1 id="34-test-determinism">34. Test Determinism</h1>
+<p>Behavioral tests must remain deterministic.</p>
+<p>Do not depend on:</p>
+<ul>
+<li>current wall-clock time</li>
+<li>external NTP</li>
+<li>external DNS</li>
+<li>live APIs</li>
+<li>network availability</li>
+<li>random values</li>
+<li>mutable third-party services</li>
+</ul>
+<p>Use fixed fixture timestamps and injected Evaluation time.</p>
+<p>If randomized testing is added later:</p>
+<pre><code>random seed
+</code></pre>
+<p>must be controlled and failures reproducible.</p>
+<hr>
+<h1 id="35-time-injection">35. Time Injection</h1>
+<p>Tests involving freshness must inject Evaluation time explicitly.</p>
+<p>Example:</p>
+<pre><code>evaluated_at:
+  fixed fixture timestamp
+</code></pre>
+<p>Do not call:</p>
+<pre><code>current system time
+</code></pre>
+<p>inside deterministic fixture tests.</p>
+<p>Otherwise:</p>
+<pre><code>stale
+</code></pre>
+<p>may become:</p>
+<pre><code>fresh
+</code></pre>
+<p>or:</p>
+<pre><code>expired
+</code></pre>
+<p>depending on when the test happens to run.</p>
+<hr>
+<h1 id="36-input-immutability">36. Input Immutability</h1>
+<p>Tests should verify that Evaluations do not mutate fixture inputs.</p>
+<p>After Evaluation:</p>
+<pre><code>Claim
+Regime
+Source
+Anchor
+Observation
+Lineage
+</code></pre>
+<p>should remain unchanged unless the action under test explicitly produces a separate mutation artifact.</p>
+<p>Evaluation outputs belong in new objects.</p>
+<hr>
+<h1 id="37-no-hidden-evidence">37. No Hidden Evidence</h1>
+<p>The evaluator should not consult information outside the controlled fixture unless the test explicitly introduces an external adapter.</p>
+<p>For deterministic unit/reference tests:</p>
+<pre><code>fixture Evidence
+</code></pre>
+<p>is the complete allowed input set.</p>
+<p>This prevents tests from passing because the developer's machine happens to have:</p>
+<pre><code>network time
+cached DNS
+environment variables
+local configuration
+</code></pre>
+<p>available.</p>
+<hr>
+<h1 id="38-no-expected-result-leakage">38. No Expected-Result Leakage</h1>
+<p>The evaluator must never receive:</p>
+<pre><code>fixture.expected
+</code></pre>
+<p>as Evaluation input.</p>
+<p>Correct test flow:</p>
+<pre><code>fixture.input
+   ↓
+evaluator
+   ↓
+actual
+</code></pre>
+<p>separately:</p>
+<pre><code>fixture.expected
+   ↓
+comparator
+</code></pre>
+<p>then:</p>
+<pre><code>actual
+  ↔
+expected
+</code></pre>
+<p>Any architecture that passes expected results into the evaluator invalidates the fixture model.</p>
+<hr>
+<h1 id="39-unit-vs-integration-tests">39. Unit vs Integration Tests</h1>
+<p>The initial reference suite should prioritize small deterministic tests.</p>
+<h2 id="unit-tests">Unit Tests</h2>
+<p>Exercise one component or decision rule.</p>
+<p>Examples:</p>
+<pre><code>freshness qualification
+
+temporal Drift calculation
+
+Coherence clustering
+</code></pre>
+<h2 id="integration-tests">Integration Tests</h2>
+<p>Exercise the v0.1 evaluation path across multiple components.</p>
+<p>Example:</p>
+<pre><code>fixture
+  ↓
+Qualification
+  ↓
+Coherence
+  ↓
+Drift
+  ↓
+Paradox
+  ↓
+Truth State
+  ↓
+Correction
+</code></pre>
+<p>Both forms are useful.</p>
+<hr>
+<h1 id="40-cross-component-tests">40. Cross-Component Tests</h1>
+<p>Some architectural bugs occur only between components.</p>
+<p>Examples:</p>
+<pre><code>qualified dissent incorrectly discarded before Coherence
+
+fragmented Coherence still produces accepted value
+
+expired Evidence reused by Drift Engine
+
+indeterminate Truth State triggers Correction mutation
+
+Paradox removed because one cluster appears first
+</code></pre>
+<p>Integration tests should specifically target these boundaries.</p>
+<hr>
+<h1 id="41-independent-source-tests">41. Independent-Source Tests</h1>
+<p>Future tests should challenge:</p>
+<pre><code>source.independence
+</code></pre>
+<p>with actual Lineage.</p>
+<p>Example:</p>
+<pre><code>Source A
+  ↓
+upstream U
+
+Source B
+  ↓
+upstream U
+</code></pre>
+<p>Even if both Source objects claim:</p>
+<pre><code>independent
+</code></pre>
+<p>Lineage analysis should reveal:</p>
+<pre><code>dependent
+</code></pre>
+<p>or:</p>
+<pre><code>partially_dependent
+</code></pre>
+<p>This tests the rule:</p>
+<blockquote>
+<p><strong>Independence is structural, not declarative.</strong></p>
+</blockquote>
+<hr>
+<h1 id="42-derived-evidence-tests">42. Derived-Evidence Tests</h1>
+<p>Future generalized tests should include:</p>
+<pre><code>Evidence A
+Evidence B
+   ↓
+Derived Evidence C
+</code></pre>
+<p>Expected:</p>
+<pre><code>C is not counted as an independent third Source supporting A and B.
+</code></pre>
+<p>This is a direct consequence of the Telemetry and Provenance crosswalks.</p>
+<hr>
+<h1 id="43-circularity-tests">43. Circularity Tests</h1>
+<p>Future tests should include Evidence cycles.</p>
+<p>Example:</p>
+<pre><code>A → B → C → A
+</code></pre>
+<p>Expected:</p>
+<pre><code>cycle visible
+
+independent grounding not increased
+</code></pre>
+<p>A graph cycle should not automatically mean:</p>
+<pre><code>invalid
+</code></pre>
+<p>but should prevent:</p>
+<pre><code>synthetic corroboration
+</code></pre>
+<p>where appropriate.</p>
+<hr>
+<h1 id="44-coverage-tests">44. Coverage Tests</h1>
+<p>Future generalized tests should distinguish:</p>
+<pre><code>complete enough observation boundary
+</code></pre>
+<p>from:</p>
+<pre><code>partial Evidence set
+</code></pre>
+<p>Example:</p>
+<pre><code>no event observed
+  +
+insufficient coverage
+  ↓
+Evidence Gap / unknown
+</code></pre>
+<p>versus:</p>
+<pre><code>no event observed
+  +
+qualified complete observation boundary
+  ↓
+possible qualified absence
+</code></pre>
+<p>This should become a core generalized behavior.</p>
+<hr>
+<h1 id="45-negative-domain-result-tests">45. Negative Domain-Result Tests</h1>
+<p>Later test families must include successful Evaluations whose domain result is negative.</p>
+<p>Examples:</p>
+<pre><code>authorization:
+  deny
+
+converged:
+  false
+
+committed:
+  false
+
+presence:
+  absent
+</code></pre>
+<p>Expected:</p>
+<pre><code>Evaluation:
+  completed
+</code></pre>
+<p>The domain result may be negative while the Truth State remains:</p>
+<pre><code>operationally_accepted
+</code></pre>
+<p>This is central to v0.2.</p>
+<hr>
+<h1 id="46-domain-result-vs-truth-qualification">46. Domain Result vs Truth Qualification</h1>
+<p>Tests should eventually enforce:</p>
+<pre><code>domain_result
+  ≠
+qualification_status
+</code></pre>
+<p>Example:</p>
+<pre><code>domain_result:
+  authorization = deny
+
+qualification:
+  operationally_accepted
+</code></pre>
+<p>This means:</p>
+<blockquote>
+<p>The service successfully established that authorization is denied.</p>
+</blockquote>
+<p>Tests must not encode:</p>
+<pre><code>false domain value
+  → rejected Truth
+</code></pre>
+<p>as a universal rule.</p>
+<hr>
+<h1 id="47-multi-class-tests">47. Multi-Class Tests</h1>
+<p>Future tests should evaluate Claims involving several Truth Classes.</p>
+<p>Example:</p>
+<pre><code>certificate operational acceptability
+</code></pre>
+<p>may depend on:</p>
+<pre><code>integrity
+identity
+authority
+temporal
+lineage
+</code></pre>
+<p>The test should verify that:</p>
+<pre><code>one class can fail
+</code></pre>
+<p>without artificially declaring:</p>
+<pre><code>every class failed.
+</code></pre>
+<p>This will become important after v0.2 consolidation.</p>
+<hr>
+<h1 id="48-cross-class-truth-tests">48. Cross-Class Truth Tests</h1>
+<p>Desired-state behavior also requires:</p>
+<pre><code>Intent Truth
+  vs
+State Truth
+</code></pre>
+<p>Expected:</p>
+<pre><code>different values
+  → Drift
+</code></pre>
+<p>not automatically:</p>
+<pre><code>Paradox
+</code></pre>
+<p>Cross-class comparison tests should become part of the generalized suite.</p>
+<hr>
+<h1 id="49-stable-value-structural-drift-tests">49. Stable-Value Structural-Drift Tests</h1>
+<p>The crosswalks repeatedly discovered:</p>
+<blockquote>
+<p><strong>Stable value does not imply stable structure.</strong></p>
+</blockquote>
+<p>Future tests should include:</p>
+<pre><code>domain value:
+  unchanged
+</code></pre>
+<p>while:</p>
+<pre><code>Source changes
+</code></pre>
+<p>or:</p>
+<pre><code>Authority changes
+</code></pre>
+<p>or:</p>
+<pre><code>Lineage changes
+</code></pre>
+<p>or:</p>
+<pre><code>Regime changes
+</code></pre>
+<p>Expected:</p>
+<pre><code>structural Drift detected.
+</code></pre>
+<hr>
+<h1 id="50-paradox-anti-tests">50. Paradox Anti-Tests</h1>
+<p>It is useful to explicitly test conditions that must <strong>not</strong> produce Paradox.</p>
+<p>Examples:</p>
+<pre><code>one qualified outlier
+
+multiple valid DNS records
+
+one Subject with multiple legitimate identities
+
+certificate integrity valid but certificate expired
+
+desired state differs from current state
+
+local replica lags committed state
+
+sampled telemetry differs from aggregate metric
+</code></pre>
+<p>These tests protect the narrow meaning of Paradox.</p>
+<hr>
+<h1 id="51-failure-transparency-tests">51. Failure Transparency Tests</h1>
+<p>Tests should verify that failure conditions remain distinguishable.</p>
+<p>Examples:</p>
+<pre><code>unsupported Claim
+
+no qualified Evidence
+
+Source unavailable
+
+Evidence expired
+
+Lineage incomplete
+
+Regime missing
+
+schema invalid
+
+evaluator failure
+</code></pre>
+<p>These should not all collapse into:</p>
+<pre><code>false
+</code></pre>
+<p>or:</p>
+<pre><code>error
+</code></pre>
+<p>The result should preserve what actually failed.</p>
+<hr>
+<h1 id="52-no-answer-tests">52. No-Answer Tests</h1>
+<p>The suite must explicitly reward:</p>
+<pre><code>accepted_value:
+  null
+</code></pre>
+<p>when that is the correct result.</p>
+<p>Core examples:</p>
+<pre><code>fragmented.json
+
+indeterminate.json
+
+stale.json
+</code></pre>
+<p>These protect the service from pressure to always produce an answer.</p>
+<p>The property being tested is restraint.</p>
+<hr>
+<h1 id="53-regression-tests">53. Regression Tests</h1>
+<p>Once fixture behavior stabilizes, each fixture becomes a regression surface.</p>
+<p>A future evaluator change should immediately reveal changes in:</p>
+<pre><code>Qualification
+
+Coherence
+
+Drift
+
+Paradox
+
+Truth-State status
+
+Correction
+</code></pre>
+<p>When behavior changes intentionally, expectations should be updated with an architectural reason.</p>
+<hr>
+<h1 id="54-regression-discipline">54. Regression Discipline</h1>
+<p>Do not respond to a failing regression by immediately changing expected results.</p>
+<p>First ask:</p>
+<pre><code>Did the evaluator regress?
+
+Did the architecture intentionally change?
+
+Did the fixture contain an error?
+
+Did the schema change?
+
+Did the governing Regime change?
+</code></pre>
+<p>Only then update the appropriate layer.</p>
+<hr>
+<h1 id="55-test-naming">55. Test Naming</h1>
+<p>Test names should identify behavior.</p>
+<p>Preferred:</p>
+<pre><code>test_expired_observation_is_not_selected
+
+test_outlier_remains_qualified_dissent
+
+test_fragmented_clusters_do_not_synthesize_value
+
+test_indeterminate_state_has_null_value
+
+test_minor_drift_allows_gradual_correction
+</code></pre>
+<p>Avoid:</p>
+<pre><code>test_01
+
+test_case_a
+
+test_fixture_3
+</code></pre>
+<p>A failing test name should already tell the developer what invariant broke.</p>
+<hr>
+<h1 id="56-test-granularity">56. Test Granularity</h1>
+<p>One test should ideally assert one primary behavioral invariant.</p>
+<p>A test may make several supporting assertions required to prove that invariant.</p>
+<p>Example:</p>
+<pre><code>test_fragmented_clusters_do_not_synthesize_value
+</code></pre>
+<p>may reasonably assert:</p>
+<pre><code>coherence.status == fragmented
+
+paradox exists
+
+truth_state.status == contested
+
+accepted_value == null
+</code></pre>
+<p>because these jointly establish the invariant.</p>
+<p>Avoid testing every field in the fixture in every test.</p>
+<hr>
+<h1 id="57-recommended-initial-qualification-tests">57. Recommended Initial Qualification Tests</h1>
+<p>Suggested initial behavioral tests:</p>
+<pre><code>test_coherent_observations_qualify
+
+test_expired_observations_expire
+
+test_unavailable_source_rejects_observation
+
+test_incomplete_lineage_is_indeterminate
+
+test_no_qualified_observations_produces_empty_selection
+</code></pre>
+<p>These can reuse the NTP fixtures.</p>
+<hr>
+<h1 id="58-recommended-initial-coherence-tests">58. Recommended Initial Coherence Tests</h1>
+<p>Suggested:</p>
+<pre><code>test_coherent_fixture_forms_one_cluster
+
+test_outlier_preserves_dissent
+
+test_outlier_retains_supporting_cluster
+
+test_fragmented_fixture_forms_two_clusters
+
+test_indeterminate_fixture_forms_no_cluster
+
+test_fragmented_clusters_do_not_select_winner
+</code></pre>
+<hr>
+<h1 id="59-recommended-initial-drift-tests">59. Recommended Initial Drift Tests</h1>
+<p>Suggested:</p>
+<pre><code>test_coherent_fixture_has_bounded_drift
+
+test_minor_drift_is_56_ms
+
+test_minor_drift_remains_within_regime
+
+test_fragmented_drift_is_unbounded
+
+test_indeterminate_drift_has_null_magnitude
+
+test_stale_evidence_does_not_reuse_historical_offset_as_current_drift
+</code></pre>
+<hr>
+<h1 id="60-recommended-initial-paradox-tests">60. Recommended Initial Paradox Tests</h1>
+<p>Suggested:</p>
+<pre><code>test_coherent_fixture_has_no_paradox
+
+test_outlier_does_not_create_paradox
+
+test_fragmented_fixture_creates_structural_paradox
+
+test_indeterminate_fixture_has_no_paradox
+
+test_stale_fixture_has_no_paradox
+</code></pre>
+<p>These establish the difference between:</p>
+<pre><code>disagreement
+insufficiency
+expiration
+structural contradiction
+</code></pre>
+<hr>
+<h1 id="61-recommended-initial-regime-tests">61. Recommended Initial Regime Tests</h1>
+<p>Suggested:</p>
+<pre><code>test_minor_drift_allowed_by_display_clock_regime
+
+test_same_drift_rejected_by_stricter_regime
+
+test_minimum_independent_source_requirement
+
+test_expired_evidence_fails_freshness_requirement
+
+test_correction_mode_must_be_permitted_by_regime
+</code></pre>
+<p>This is where the service starts proving that Regime is operational rather than decorative metadata.</p>
+<hr>
+<h1 id="62-initial-ntp-behavior-matrix">62. Initial NTP Behavior Matrix</h1>
+<table>
+<thead>
+<tr>
+<th>Fixture</th>
+<th>Qualification</th>
+<th>Coherence</th>
+<th>Drift</th>
+<th>Paradox</th>
+<th>Truth State</th>
+<th>Correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>coherent.json</code></td>
+<td>qualified</td>
+<td>coherent</td>
+<td>bounded</td>
+<td>none</td>
+<td>operationally accepted</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>minor_drift.json</code></td>
+<td>qualified</td>
+<td>coherent</td>
+<td>bounded / present</td>
+<td>none</td>
+<td>operationally accepted</td>
+<td>gradual</td>
+</tr>
+<tr>
+<td><code>outlier.json</code></td>
+<td>qualified</td>
+<td>weakly coherent</td>
+<td>bounded selected field</td>
+<td>none</td>
+<td>operationally accepted</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>fragmented.json</code></td>
+<td>qualified</td>
+<td>fragmented</td>
+<td>unbounded / unresolved</td>
+<td>structural</td>
+<td>contested</td>
+<td>dual state</td>
+</tr>
+<tr>
+<td><code>stale.json</code></td>
+<td>expired</td>
+<td>indeterminate current field</td>
+<td>unknown current</td>
+<td>none</td>
+<td>expired</td>
+<td>fail bounded</td>
+</tr>
+<tr>
+<td><code>indeterminate.json</code></td>
+<td>none sufficient</td>
+<td>indeterminate</td>
+<td>unknown</td>
+<td>none</td>
+<td>indeterminate</td>
+<td>fail bounded</td>
+</tr>
+</tbody>
+</table>
+<p>This matrix is descriptive.</p>
+<p>The fixtures remain the authoritative deterministic scenario definitions.</p>
+<hr>
+<h1 id="63-crosswalk-traceability">63. Crosswalk Traceability</h1>
+<p>Every future behavioral family should retain traceability to the research crosswalk that motivated it.</p>
+<p>Conceptually:</p>
+<pre><code>Crosswalk
+   ↓
+Architecture Finding
+   ↓
+Schema Contract
+   ↓
+Fixture
+   ↓
+Behavioral Test
+</code></pre>
+<p>This gives a failing or changing test a research Lineage.</p>
+<hr>
+<h1 id="64-schema-traceability">64. Schema Traceability</h1>
+<p>When a test fails because an object no longer validates:</p>
+<pre><code>that is a Schema issue first
+</code></pre>
+<p>When the object validates but the evaluator produces the wrong result:</p>
+<pre><code>that is a Behavioral issue
+</code></pre>
+<p>Keeping this boundary obvious will make debugging much faster.</p>
+<hr>
+<h1 id="65-v01-test-boundary">65. v0.1 Test Boundary</h1>
+<p>The initial v0.1 behavioral suite should focus on:</p>
+<pre><code>temporal Claims
+
+NTP-like Sources
+
+Anchors
+
+Observations
+
+Qualification
+
+Coherence
+
+Drift
+
+Paradox
+
+Regime
+
+Truth State
+
+Correction
+
+Revalidation
+</code></pre>
+<p>This is enough to establish the reference evaluator.</p>
+<p>Do not require v0.1 tests to implement every abstraction discovered by all ten crosswalks.</p>
+<hr>
+<h1 id="66-v02-test-expansion">66. v0.2 Test Expansion</h1>
+<p>After architecture consolidation, the test suite should expand toward:</p>
+<pre><code>EvidenceItem
+
+ReferenceBasis
+
+AuthorityRelationship
+
+Evidence Graph
+
+Coverage
+
+Gap
+
+TruthComparison
+
+MaterializedTruthState
+
+domain result / qualification separation
+
+graph-derived independence
+
+circularity protection
+</code></pre>
+<p>The NTP tests should remain as regression tests during this migration.</p>
+<hr>
+<h1 id="67-migration-testing">67. Migration Testing</h1>
+<p>v0.2 migration should evaluate the same logical scenario through:</p>
+<pre><code>v0.1 representation
+</code></pre>
+<p>and:</p>
+<pre><code>v0.2 representation
+</code></pre>
+<p>where compatibility is intended.</p>
+<p>Example:</p>
+<pre><code>v0.1 Observation
+  ↔
+v0.2 EvidenceItem(type=observation)
+</code></pre>
+<p>Expected:</p>
+<pre><code>same relevant temporal behavior
+</code></pre>
+<p>This provides strong regression coverage during consolidation.</p>
+<hr>
+<h1 id="68-no-architecture-by-test">68. No Architecture-by-Test</h1>
+<p>Tests must not become the place where undocumented architecture rules first appear.</p>
+<p>If a test requires a new invariant:</p>
+<pre><code>document architecture
+  ↓
+update schema if necessary
+  ↓
+update fixture
+  ↓
+add test
+</code></pre>
+<p>not:</p>
+<pre><code>add mysterious assertion
+  ↓
+infer architecture later
+</code></pre>
+<p>Tests enforce the contract.</p>
+<p>They should not secretly invent it.</p>
+<hr>
+<h1 id="69-no-fixture-by-test">69. No Fixture-by-Test</h1>
+<p>Likewise, tests should not modify fixture objects to force a scenario.</p>
+<p>Bad:</p>
+<pre><code>load coherent.json
+mutate Source C to stale
+call it stale scenario
+</code></pre>
+<p>Preferred:</p>
+<pre><code>load stale.json
+</code></pre>
+<p>unless mutation itself is the behavior under test.</p>
+<p>Canonical fixtures should represent canonical scenarios.</p>
+<hr>
+<h1 id="70-test-output">70. Test Output</h1>
+<p>A failed behavioral test should ideally report:</p>
+<pre><code>fixture
+
+Claim
+
+Regime
+
+expected result
+
+actual result
+
+relevant reason codes
+
+relevant Evidence references
+</code></pre>
+<p>This keeps failures explainable and reduces debugging time.</p>
+<hr>
+<h1 id="71-tests-as-educational-artifacts">71. Tests as Educational Artifacts</h1>
+<p>The test suite should remain understandable enough that a student can follow:</p>
+<pre><code>Fixture
+  ↓
+Evaluation
+  ↓
+Expected relationship
+</code></pre>
+<p>Tests are not merely implementation guards.</p>
+<p>They demonstrate:</p>
+<pre><code>what Qualification means
+
+what Coherence means
+
+what Drift means
+
+when Paradox applies
+
+why Regime matters
+</code></pre>
+<p>This supports the educational mission of TriadicFrameworks.</p>
+<hr>
+<h1 id="72-definition-of-done-initial-test-layer">72. Definition of Done — Initial Test Layer</h1>
+<p>The initial behavioral test layer is successful when it can demonstrate deterministically that:</p>
+<ol>
+<li>coherent Evidence is accepted</li>
+<li>bounded Drift is measurable</li>
+<li>minor Drift does not automatically invalidate Truth</li>
+<li>qualified dissent is preserved</li>
+<li>one outlier does not automatically create Paradox</li>
+<li>fragmented Evidence does not fabricate one answer</li>
+<li>stale Evidence is not reused as fresh Evidence</li>
+<li>insufficient Evidence produces Indeterminate</li>
+<li>null accepted values are handled intentionally</li>
+<li>Regime changes operational interpretation</li>
+<li>Correction remains downstream of Truth</li>
+<li>Revalidation preserves historical state</li>
+</ol>
+<p>At that point the v0.1 NTP reference evaluator has a meaningful regression boundary.</p>
+<hr>
+<h1 id="73-governing-test-principle">73. Governing Test Principle</h1>
+<blockquote>
+<p><strong>A behavioral test should prove that the Truth Service preserves structure when pressure exists to collapse it.</strong></p>
+</blockquote>
+<p>Pressure may come from:</p>
+<pre><code>disagreement
+
+missing Evidence
+
+stale Evidence
+
+Drift
+
+conflicting clusters
+
+changing Regime
+
+downstream demand for one answer
+</code></pre>
+<p>The evaluator succeeds when it produces the most qualified result the Evidence supports.</p>
+<p>No more.</p>
+<p>No less.</p>
+<hr>
+<h1 id="74-navigation">74. Navigation</h1>
+<p>Fixtures:</p>
+<pre><code>../fixtures/
+../fixtures/ntp/coherent.json
+../fixtures/ntp/minor_drift.json
+../fixtures/ntp/outlier.json
+../fixtures/ntp/fragmented.json
+../fixtures/ntp/stale.json
+../fixtures/ntp/indeterminate.json
+</code></pre>
+<p>Schemas:</p>
+<pre><code>../schemas/
+../schemas/claim.schema.json
+../schemas/anchor.schema.json
+../schemas/source.schema.json
+../schemas/observation.schema.json
+../schemas/lineage.schema.json
+../schemas/regime.schema.json
+../schemas/evaluation.schema.json
+../schemas/coherence_state.schema.json
+../schemas/drift_state.schema.json
+../schemas/paradox.schema.json
+../schemas/truth_state.schema.json
+../schemas/correction_policy.schema.json
+</code></pre>
+<p>Research crosswalks:</p>
+<pre><code>../crosswalks/
+</code></pre>
+<p>Test families:</p>
+<pre><code>./qualification/
+./coherence/
+./drift/
+./paradox/
+./regime/
+</code></pre>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>The test layer exists to challenge the implementation.</p>
+<p>Fixtures declare controlled worlds.</p>
+<p>Schemas ensure those worlds are structurally representable.</p>
+<p>Evaluators interpret the Evidence.</p>
+<p>Tests ask whether the interpretation preserved the architecture.</p>
+<p>The first six NTP fixtures deliberately pressure different boundaries:</p>
+<pre><code>coherent
+  asks:
+Can the system recognize agreement?
+
+minor drift
+  asks:
+Can the system tolerate bounded displacement?
+
+outlier
+  asks:
+Can the system preserve dissent without surrendering a justified answer?
+
+fragmented
+  asks:
+Can the system refuse to manufacture consensus?
+
+stale
+  asks:
+Can the system remember that an old answer was once good without pretending it is still current?
+
+indeterminate
+  asks:
+Can the system say "I don't presently know" without treating that as failure?
+</code></pre>
+<p>A useful Truth Service must pass all six.</p>
+<p>Not because each scenario has an answer.</p>
+<p>But because each scenario has a structure.</p>
+<p>The tests exist to make sure the implementation does not destroy that structure merely to produce one.</p>
+<p><strong>Fixtures create the world.</strong></p>
+<p><strong>Schemas constrain its shape.</strong></p>
+<p><strong>Evaluators interpret it.</strong></p>
+<p><strong>Tests keep the evaluator honest.</strong></p>
   </main>
 </body>
 </html>
