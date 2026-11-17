@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_teaser_" src="https://github.com/user-attachments/assets/fc800166-b5d7-4b4c-bf35-d37fc1e2296f" />
+
 # Teaser — What If Online Services Could Explain Their Truth?
 
 **A small thought experiment for the Resonance Truth Service**
