@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_Truth_Regime_Transitions_" src="https://github.com/user-attachments/assets/835936a5-e8d8-4e82-a0ce-68a6533b42c7" />
 
 # 🜁 Truth Regime Transitions  
 **RTT/1 · Resonance Domain · Semantic/Interpretive Regime Mechanics**
