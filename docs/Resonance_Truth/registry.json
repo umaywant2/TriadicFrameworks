@@ -1,0 +1,44 @@
+{
+  "registry_version": "1.0",
+  "module_id": "resonance_truth",
+
+  "artifacts": [
+    {
+      "id": "truth-readme",
+      "type": "module_readme",
+      "path": "README.md",
+      "purpose": "Module front door",
+      "truth_classes": [],
+      "depends_on": []
+    },
+    {
+      "id": "crosswalk-ntp-temporal",
+      "type": "crosswalk",
+      "path": "crosswalks/01_ntp_temporal_truth.md",
+      "truth_classes": [
+        "temporal"
+      ],
+      "reference_system": "NTP",
+      "depends_on": [
+        "truth-readme"
+      ]
+    },
+    {
+      "id": "fixture-ntp-coherent",
+      "type": "fixture",
+      "path": "fixtures/ntp/coherent.json",
+      "truth_classes": [
+        "temporal"
+      ],
+      "derived_from": [
+        "crosswalk-ntp-temporal"
+      ]
+    },
+    {
+      "id": "schema-truth-state",
+      "type": "schema",
+      "path": "schemas/truth_state.schema.json",
+      "purpose": "Operational Truth-State contract"
+    }
+  ]
+}
