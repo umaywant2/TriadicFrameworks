@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_06_distributed_state_truth_" src="https://github.com/user-attachments/assets/e7aec50f-3932-41c4-8585-7707b667e04f" />
+
 # Crosswalk #6 — Distributed Systems and State Truth
 
 **Module:** Resonance Truth  
