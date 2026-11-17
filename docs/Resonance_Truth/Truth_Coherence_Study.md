@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_Truth_Coherence_Study_" src="https://github.com/user-attachments/assets/94043991-eabf-40ec-a85e-868e76a35a95" />
 
 # 🜁 Truth Coherence Study  
 **RTT/1 · Resonance Domain · Coherence Mechanics of Truth Claims**
