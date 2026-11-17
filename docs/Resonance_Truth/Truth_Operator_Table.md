@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_Truth_Operator_Table_" src="https://github.com/user-attachments/assets/c8a96a8a-df88-4a4c-8d93-2da1d6ee85cf" />
 
 # 🜁 **Truth Operator Table**  
 **RTT/1 · Resonance Domain · Semantic/Resonant Coherence Operators**
