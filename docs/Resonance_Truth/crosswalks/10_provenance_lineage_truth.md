@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_10_provenance_lineage_truth_" src="https://github.com/user-attachments/assets/86952af0-b08e-457a-b186-95b0cac2bff6" />
 
 # Crosswalk #10 — Supply-Chain Provenance and Lineage Truth
 
