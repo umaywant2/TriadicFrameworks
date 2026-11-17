@@ -1,1 +1,408 @@
-. 
+{
+  "fixture_id": "ntp-outlier-001",
+  "title": "NTP Temporal Truth with Qualified Outlier",
+  "description": "Deterministic temporal-truth fixture containing three independent and fresh NTP-like observations. Two sources form a coherent temporal cluster while a third qualified observation is materially displaced. The outlier remains preserved as dissenting evidence but does not prevent synthesis of the dominant coherent state.",
+  "fixture_version": "1.0",
+  "schema_version": "0.1",
+  "reference_system": "NTP",
+  "primary_truth_class": "temporal",
+
+  "claim": {
+    "claim_id": "claim-temporal-outlier-001",
+    "statement": "The local clock is sufficiently synchronized with the current reference time for the declared display-clock regime.",
+    "truth_classes": [
+      "temporal"
+    ],
+    "intended_use": "Low-consequence display clock.",
+    "status": "active",
+    "created_at": "2026-01-01T12:00:00Z",
+    "updated_at": "2026-01-01T12:00:00Z"
+  },
+
+  "regime": {
+    "regime_id": "regime-display-clock",
+    "name": "Low-consequence display clock",
+    "domain": "temporal",
+    "description": "Temporal regime permitting synthesis from a sufficiently coherent set of independent qualified sources while preserving materially divergent qualified evidence as dissent.",
+    "observer_context": "local-display-clock",
+    "precision_requirement": {
+      "value": 100,
+      "unit": "milliseconds"
+    },
+    "maximum_age_seconds": 300,
+    "minimum_independent_sources": 2,
+    "consequence": "low",
+    "permitted_truth_statuses": [
+      "corroborated",
+      "operationally_accepted",
+      "degraded",
+      "contested",
+      "indeterminate"
+    ],
+    "correction_modes": [
+      "none",
+      "gradual",
+      "human_escalation"
+    ],
+    "created_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z",
+    "metadata": {
+      "fixture_scope": "deterministic-reference",
+      "cluster_selection_policy": "dominant-qualified-coherent-cluster"
+    }
+  },
+
+  "anchors": [
+    {
+      "anchor_id": "anchor-utc",
+      "name": "UTC Reference",
+      "anchor_type": "temporal_reference",
+      "authority": "Fixture temporal reference",
+      "domain": "temporal",
+      "regime_ids": [
+        "regime-display-clock"
+      ],
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "revocation_reference": null,
+      "limitations": [
+        "Synthetic deterministic fixture reference."
+      ],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "synthetic": true
+      }
+    }
+  ],
+
+  "sources": [
+    {
+      "source_id": "source-ntp-a",
+      "name": "NTP Source A",
+      "source_type": "ntp_peer",
+      "anchor_id": "anchor-utc",
+      "lineage_distance": 1,
+      "independence": "independent",
+      "domain": "temporal",
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "synthetic": true,
+        "fixture_role": "supporting-cluster-source"
+      }
+    },
+    {
+      "source_id": "source-ntp-b",
+      "name": "NTP Source B",
+      "source_type": "ntp_peer",
+      "anchor_id": "anchor-utc",
+      "lineage_distance": 1,
+      "independence": "independent",
+      "domain": "temporal",
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "synthetic": true,
+        "fixture_role": "supporting-cluster-source"
+      }
+    },
+    {
+      "source_id": "source-ntp-c",
+      "name": "NTP Source C",
+      "source_type": "ntp_peer",
+      "anchor_id": "anchor-utc",
+      "lineage_distance": 1,
+      "independence": "independent",
+      "domain": "temporal",
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "synthetic": true,
+        "fixture_role": "qualified-dissenting-source"
+      }
+    }
+  ],
+
+  "local_state": {
+    "observer_id": "local-display-clock",
+    "timestamp": "2026-01-01T12:00:00.000Z",
+    "observed_at": "2026-01-01T12:00:00Z",
+    "metadata": {
+      "synthetic": true,
+      "role": "drift-baseline"
+    }
+  },
+
+  "observations": [
+    {
+      "observation_id": "obs-ntp-a-001",
+      "claim_id": "claim-temporal-outlier-001",
+      "source_id": "source-ntp-a",
+      "anchor_id": "anchor-utc",
+      "value": {
+        "timestamp": "2026-01-01T12:00:00.014Z",
+        "offset_ms": 14.0,
+        "delay_ms": 20.0,
+        "jitter_ms": 1.2,
+        "dispersion_ms": 2.0
+      },
+      "observed_at": "2026-01-01T12:00:00.014Z",
+      "received_at": "2026-01-01T12:00:00.022Z",
+      "expires_at": "2026-01-01T12:05:00Z",
+      "declared_confidence": null,
+      "lineage": [
+        {
+          "sequence": 1,
+          "entity_type": "anchor",
+          "entity_id": "anchor-utc",
+          "relation": "referenced_by",
+          "transformation": null,
+          "observed_at": null,
+          "metadata": {}
+        },
+        {
+          "sequence": 2,
+          "entity_type": "source",
+          "entity_id": "source-ntp-a",
+          "relation": "observed_through",
+          "transformation": null,
+          "observed_at": "2026-01-01T12:00:00.014Z",
+          "metadata": {}
+        }
+      ],
+      "integrity": null,
+      "registered_at": "2026-01-01T12:00:00.022Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+    {
+      "observation_id": "obs-ntp-b-001",
+      "claim_id": "claim-temporal-outlier-001",
+      "source_id": "source-ntp-b",
+      "anchor_id": "anchor-utc",
+      "value": {
+        "timestamp": "2026-01-01T12:00:00.016Z",
+        "offset_ms": 16.0,
+        "delay_ms": 22.0,
+        "jitter_ms": 1.4,
+        "dispersion_ms": 2.3
+      },
+      "observed_at": "2026-01-01T12:00:00.016Z",
+      "received_at": "2026-01-01T12:00:00.024Z",
+      "expires_at": "2026-01-01T12:05:00Z",
+      "declared_confidence": null,
+      "lineage": [
+        {
+          "sequence": 1,
+          "entity_type": "anchor",
+          "entity_id": "anchor-utc",
+          "relation": "referenced_by",
+          "transformation": null,
+          "observed_at": null,
+          "metadata": {}
+        },
+        {
+          "sequence": 2,
+          "entity_type": "source",
+          "entity_id": "source-ntp-b",
+          "relation": "observed_through",
+          "transformation": null,
+          "observed_at": "2026-01-01T12:00:00.016Z",
+          "metadata": {}
+        }
+      ],
+      "integrity": null,
+      "registered_at": "2026-01-01T12:00:00.024Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+    {
+      "observation_id": "obs-ntp-c-001",
+      "claim_id": "claim-temporal-outlier-001",
+      "source_id": "source-ntp-c",
+      "anchor_id": "anchor-utc",
+      "value": {
+        "timestamp": "2026-01-01T12:00:00.914Z",
+        "offset_ms": 914.0,
+        "delay_ms": 21.0,
+        "jitter_ms": 1.3,
+        "dispersion_ms": 2.2
+      },
+      "observed_at": "2026-01-01T12:00:00.914Z",
+      "received_at": "2026-01-01T12:00:00.922Z",
+      "expires_at": "2026-01-01T12:05:00Z",
+      "declared_confidence": null,
+      "lineage": [
+        {
+          "sequence": 1,
+          "entity_type": "anchor",
+          "entity_id": "anchor-utc",
+          "relation": "referenced_by",
+          "transformation": null,
+          "observed_at": null,
+          "metadata": {}
+        },
+        {
+          "sequence": 2,
+          "entity_type": "source",
+          "entity_id": "source-ntp-c",
+          "relation": "observed_through",
+          "transformation": null,
+          "observed_at": "2026-01-01T12:00:00.914Z",
+          "metadata": {}
+        }
+      ],
+      "integrity": null,
+      "registered_at": "2026-01-01T12:00:00.922Z",
+      "metadata": {
+        "synthetic": true
+      }
+    }
+  ],
+
+  "evaluation_context": {
+    "evaluation_id": "evaluation-ntp-outlier-001",
+    "regime_id": "regime-display-clock",
+    "evaluated_at": "2026-01-01T12:00:01Z",
+    "requested_by": "fixture-test-suite",
+    "evaluator_version": "0.1.0"
+  },
+
+  "expected": {
+    "qualification": {
+      "obs-ntp-a-001": {
+        "status": "qualified"
+      },
+      "obs-ntp-b-001": {
+        "status": "qualified"
+      },
+      "obs-ntp-c-001": {
+        "status": "qualified"
+      }
+    },
+
+    "selected_observation_ids": [
+      "obs-ntp-a-001",
+      "obs-ntp-b-001"
+    ],
+
+    "excluded_observation_ids": [],
+
+    "coherence": {
+      "status": "weakly_coherent",
+      "cluster_count": 2,
+      "supporting_observation_ids": [
+        "obs-ntp-a-001",
+        "obs-ntp-b-001"
+      ],
+      "dissenting_observation_ids": [
+        "obs-ntp-c-001"
+      ],
+      "clusters": [
+        {
+          "cluster_id": "cluster-temporal-supporting",
+          "classification": "supporting",
+          "observation_ids": [
+            "obs-ntp-a-001",
+            "obs-ntp-b-001"
+          ],
+          "source_ids": [
+            "source-ntp-a",
+            "source-ntp-b"
+          ],
+          "representative_offset_ms": 15.0,
+          "internal_spread_ms": 2.0,
+          "independence": "independent"
+        },
+        {
+          "cluster_id": "cluster-temporal-outlier",
+          "classification": "outlier",
+          "observation_ids": [
+            "obs-ntp-c-001"
+          ],
+          "source_ids": [
+            "source-ntp-c"
+          ],
+          "representative_offset_ms": 914.0,
+          "internal_spread_ms": 0.0,
+          "independence": "independent"
+        }
+      ],
+      "reason": "Two independent qualified observations form a tight temporal cluster while one qualified independent observation is materially displaced."
+    },
+
+    "drift": {
+      "dimension": "temporal",
+      "baseline": {
+        "type": "local_state",
+        "timestamp": "2026-01-01T12:00:00.000Z"
+      },
+      "accepted_cluster": {
+        "representative_offset_ms": 15.0
+      },
+      "dissenting_cluster": {
+        "representative_offset_ms": 914.0
+      },
+      "magnitude": 15.0,
+      "unit": "milliseconds",
+      "direction": "increasing",
+      "bounded": true,
+      "regime_limit_ms": 100.0,
+      "outlier_separation_ms": 899.0
+    },
+
+    "paradox": {
+      "expected": false,
+      "reason": "The divergent qualified observation is preserved as an outlier, but it does not form a comparably supported competing cluster. The fixture therefore models dissent without unresolved structural paradox."
+    },
+
+    "domain_result": {
+      "reference_time_supported": true,
+      "representative_offset_ms": 15.0,
+      "outlier_present": true
+    },
+
+    "truth_state": {
+      "status": "operationally_accepted",
+      "accepted_value": {
+        "timestamp": "2026-01-01T12:00:00.015Z",
+        "offset_ms": 15.0
+      },
+      "permitted_uses": [
+        "low-consequence display clock"
+      ],
+      "prohibited_uses": []
+    },
+
+    "correction": {
+      "mode": "none",
+      "reason": "The selected coherent cluster supports a 15 ms local offset, which remains inside the 100 ms display-clock regime boundary. The dissenting source is preserved for subsequent revalidation rather than used to drive correction."
+    },
+
+    "revalidation": {
+      "required": true,
+      "next_revalidation_at": "2026-01-01T12:05:00Z",
+      "triggers": [
+        "elapsed_time",
+        "expiration",
+        "source_change",
+        "additional_dissenting_observation",
+        "supporting_cluster_loss",
+        "excessive_drift"
+      ]
+    }
+  }
+}

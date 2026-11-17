@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/08_desired_state_intent_truth.md">
-  <title>08_desired_state_intent_truth</title>
+  <title>Crosswalk #8 — Desired-State Systems and Intent Truth</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,3253 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_crosswalks_08_desired_state_intent_truth_" src="https://github.com/user-attachments/assets/25b57285-cb62-4238-9eaf-1d324b837bbb" /></p>
+<h1 id="crosswalk-8-desired-state-systems-and-intent-truth">Crosswalk #8 — Desired-State Systems and Intent Truth</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Crosswalk #8<br>
+<strong>Truth Class:</strong> Intent Truth<br>
+<strong>Reference System:</strong> Declarative Desired-State / Reconciliation Systems<br>
+<strong>Primary Reference Case:</strong> Kubernetes Controllers<br>
+<strong>Primary RTT Dimensions:</strong> Drift · Coherence · Temp · Regime<br>
+<strong>Supporting RTT Dimensions:</strong> Intent · State · Observational · Authority · Lineage<br>
+<strong>Status:</strong> Research Crosswalk / Architecture Challenge<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This crosswalk examines desired-state and reconciliation systems as the eighth operational reference system for the RTT Resonance Truth Service.</p>
+<p>The governing question is:</p>
+<blockquote>
+<p><strong>What should the state be?</strong></p>
+</blockquote>
+<p>The first seven crosswalks examined:</p>
+<pre><code>NTP
+  ↓
+When?
+
+DNS
+  ↓
+Where?
+
+IAM
+  ↓
+Who?
+
+PKI
+  ↓
+Is it intact and qualified?
+
+Policy / Authorization
+  ↓
+May it act?
+
+Distributed Systems
+  ↓
+What state did the system accept?
+
+Transactional Systems
+  ↓
+What transition became committed?
+</code></pre>
+<p>Crosswalk #8 asks a structurally different question:</p>
+<pre><code>Desired-State Systems
+      ↓
+  Intent Truth
+      ↓
+What should exist?
+</code></pre>
+<p>This is significant because desired state is not primarily discovered from the environment.</p>
+<p>It is declared.</p>
+<p>The system then compares that declared state with observed or current state and attempts to reduce the difference.</p>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Can the Truth Service represent declared Intent as a legitimate truth-bearing reference without confusing "what should be" with "what currently is"?</strong></p>
+</blockquote>
+<hr>
+<h1 id="1-evidence-boundary">1. Evidence Boundary</h1>
+<p>The primary reference case for this crosswalk is:</p>
+<pre><code>Kubernetes Controllers
+</code></pre>
+<p>The official Kubernetes controller model describes controllers as control loops that watch cluster state and make or request changes where needed.</p>
+<p>For Kubernetes resources:</p>
+<pre><code>spec
+</code></pre>
+<p>represents desired state.</p>
+<p>Controllers are responsible for moving current state closer to desired state.</p>
+<p>This provides a particularly clear operational example of:</p>
+<pre><code>declared Intent
+    ↓
+observed current state
+    ↓
+comparison
+    ↓
+corrective action
+    ↓
+repeated observation
+</code></pre>
+<p>This crosswalk focuses on that general desired-state / reconciliation pattern.</p>
+<p>It does not attempt to model all Kubernetes behavior.</p>
+<hr>
+<h1 id="2-evidence-discipline">2. Evidence Discipline</h1>
+<p>This crosswalk distinguishes:</p>
+<h2 id="desired-state-system-fact">Desired-State-System Fact</h2>
+<p>A mechanism explicitly represented in the bounded reference material.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>A structural interpretation introduced through Resonance Truth.</p>
+<h2 id="candidate-generalization">Candidate Generalization</h2>
+<p>A mechanism potentially reusable outside Intent Truth.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A proposed abstraction requiring further crosswalk evidence.</p>
+<p>Example:</p>
+<pre><code>Desired-State-System Fact:
+  A controller works to bring current state closer
+  to desired state.
+
+RTT Interpretation:
+  The controller observes Drift between Intent Truth
+  and State Truth and performs bounded Correction.
+
+Candidate Generalization:
+  Truth classes may be compared directly without
+  collapsing one into the other.
+
+Hypothesis:
+  Cross-Class Drift should become a first-class
+  generalized Truth-Service relationship.
+</code></pre>
+<p>The final hypothesis remains provisional.</p>
+<hr>
+<h1 id="3-why-intent-truth-comes-eighth">3. Why Intent Truth Comes Eighth</h1>
+<p>Crosswalk #7 produced a particularly useful chain:</p>
+<pre><code>Intent
+  ↓
+Transaction
+  ↓
+State
+</code></pre>
+<p>A proposed transition expresses:</p>
+<pre><code>what someone wants to change
+</code></pre>
+<p>Transactional Truth records:</p>
+<pre><code>what became committed
+</code></pre>
+<p>State Truth records:</p>
+<pre><code>what is presently accepted
+</code></pre>
+<p>Desired-State systems now expose the first element directly.</p>
+<p>They maintain a declared target and continuously compare it against current state.</p>
+<p>This gives the Truth Service a strong operational example of:</p>
+<blockquote>
+<p><strong>Two different Truth Classes remaining simultaneously valid while disagreeing.</strong></p>
+</blockquote>
+<p>Example:</p>
+<pre><code>Desired replicas:
+  3
+
+Current replicas:
+  2
+</code></pre>
+<p>Both statements may be accurate.</p>
+<p>The disagreement is not Paradox.</p>
+<p>It is Drift.</p>
+<hr>
+<h1 id="4-intent-truth">4. Intent Truth</h1>
+<p>The primary Truth Class is:</p>
+<pre><code>Intent Truth
+</code></pre>
+<p>Its operational question is:</p>
+<blockquote>
+<p><strong>What should the state be?</strong></p>
+</blockquote>
+<p>A more precise formulation is:</p>
+<blockquote>
+<p><strong>Within this Regime, what state has been declared as the target or expected operational condition?</strong></p>
+</blockquote>
+<p>Intent Truth may include:</p>
+<ul>
+<li>desired configuration</li>
+<li>required state</li>
+<li>policy target</li>
+<li>declared topology</li>
+<li>expected resource count</li>
+<li>requested version</li>
+<li>target relationship</li>
+<li>operational objective</li>
+</ul>
+<p>The essential distinction is:</p>
+<pre><code>Intent Truth
+  ≠
+State Truth
+</code></pre>
+<p>Intent describes:</p>
+<pre><code>what should be
+</code></pre>
+<p>State describes:</p>
+<pre><code>what presently is
+</code></pre>
+<hr>
+<h1 id="5-desired-state-on-its-own-terms">5. Desired State on Its Own Terms</h1>
+<p>In the Kubernetes controller model, resource specifications represent desired state.</p>
+<p>Controllers watch current state and make or request changes that move current state closer to desired state. 【1-99d4a5】</p>
+<p>A simplified control loop is:</p>
+<pre><code>Desired State
+     ↓
+Observe Current State
+     ↓
+   Compare
+     ↓
+  Difference?
+   │     │
+  No    Yes
+   │     │
+   │     ▼
+   │   Corrective Action
+   │     │
+   └─────┘
+     ↓
+Observe Again
+</code></pre>
+<p>The desired declaration persists as a reference while current state may change repeatedly.</p>
+<p>This provides one of the clearest real-system models for:</p>
+<pre><code>Drift
+Correction
+Revalidation
+</code></pre>
+<hr>
+<h1 id="6-initial-structural-crosswalk">6. Initial Structural Crosswalk</h1>
+<table>
+<thead>
+<tr>
+<th>Desired-State Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desired state</td>
+<td>Intent Truth</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Resource specification</td>
+<td>Declared Intent Evidence</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Current state</td>
+<td>State Truth</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Status / observed condition</td>
+<td>Observational Evidence / State View</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Controller</td>
+<td>Observer + Correction actor</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Control loop</td>
+<td>Revalidation / reconciliation cycle</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Desired/current difference</td>
+<td>Cross-Class Drift</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Reconciliation</td>
+<td>Bounded Correction</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Resource generation / version</td>
+<td>Intent Epoch / Regime version</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Controller policy</td>
+<td>Acceptance / Correction rule</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Converged state</td>
+<td>Intent-State Coherence</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Persistent mismatch</td>
+<td>Unresolved Drift</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>External disturbance</td>
+<td>New Drift source</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Declarative update</td>
+<td>Intent transition</td>
+<td>Strong Candidate General</td>
+</tr>
+</tbody>
+</table>
+<p>Desired-state systems immediately expose:</p>
+<blockquote>
+<p><strong>Drift can exist between two independently valid Truth Classes.</strong></p>
+</blockquote>
+<p>This is one of the strongest architectural findings in the series.</p>
+<hr>
+<h1 id="7-desired-state-intent-truth">7. Desired State → Intent Truth</h1>
+<p>Desired state represents the declared target.</p>
+<p>RTT interpretation:</p>
+<pre><code>Intent Truth
+</code></pre>
+<p>Example:</p>
+<pre><code>replicas:
+  3
+</code></pre>
+<p>The statement:</p>
+<blockquote>
+<p>The desired replica count is 3.</p>
+</blockquote>
+<p>may be completely true even when:</p>
+<pre><code>current replicas:
+  2
+</code></pre>
+<p>Therefore:</p>
+<pre><code>desired state
+  ≠
+observed state
+</code></pre>
+<p>and:</p>
+<pre><code>disagreement
+  ≠
+contradiction
+</code></pre>
+<p>This distinction must remain canonical.</p>
+<hr>
+<h1 id="8-intent-truth-is-declared-not-discovered">8. Intent Truth Is Declared, Not Discovered</h1>
+<p>NTP primarily measures.</p>
+<p>DNS resolves.</p>
+<p>IAM establishes relationships.</p>
+<p>PKI validates.</p>
+<p>Distributed consensus establishes accepted state.</p>
+<p>Desired-state systems add:</p>
+<pre><code>declared truth
+</code></pre>
+<p>The desired state exists because an authorized configuration or specification declares it.</p>
+<p>Therefore Intent Truth provides another example of:</p>
+<pre><code>Constituted Operational Truth
+</code></pre>
+<p>The declaration establishes:</p>
+<pre><code>what should be
+</code></pre>
+<p>under the relevant Regime.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strengthened
+</code></pre>
+<hr>
+<h1 id="9-declared-truth-current-truth">9. Declared Truth ≠ Current Truth</h1>
+<p>This is the core Intent Truth distinction.</p>
+<p>Suppose:</p>
+<pre><code>desired:
+  replicas = 3
+
+current:
+  replicas = 2
+</code></pre>
+<p>Both statements can be operationally coherent.</p>
+<p>Therefore:</p>
+<pre><code>Intent Truth:
+  3
+
+State Truth:
+  2
+</code></pre>
+<p>The difference becomes:</p>
+<pre><code>Drift:
+  -1 relative to desired
+</code></pre>
+<p>No Paradox exists.</p>
+<p>This strongly validates:</p>
+<blockquote>
+<p><strong>Truth-Class separation prevents false contradiction.</strong></p>
+</blockquote>
+<hr>
+<h1 id="10-specification-declared-intent-evidence">10. Specification → Declared Intent Evidence</h1>
+<p>A desired-state specification expresses what the system should maintain.</p>
+<p>RTT interpretation:</p>
+<pre><code>Declared Intent Evidence
+</code></pre>
+<p>This challenges the word:</p>
+<pre><code>Evidence
+</code></pre>
+<p>slightly.</p>
+<p>A declaration is not evidence in the observational sense.</p>
+<p>It is a governed expression of intended state.</p>
+<p>This supports the increasingly broad:</p>
+<pre><code>EvidenceItem
+</code></pre>
+<p>candidate while reinforcing the need for typed Evidence.</p>
+<p>Potential subtype:</p>
+<pre><code>Declaration
+</code></pre>
+<p>Candidate hierarchy:</p>
+<pre><code>EvidenceItem
+   ├── Observation
+   ├── Assertion
+   ├── Attribute
+   ├── Status Evidence
+   ├── Transition Evidence
+   └── Declaration
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strengthened
+</code></pre>
+<hr>
+<h1 id="11-declaration-as-evidence-type">11. Declaration as Evidence Type</h1>
+<p>A declaration says:</p>
+<blockquote>
+<p><strong>This is the target state.</strong></p>
+</blockquote>
+<p>An Observation says:</p>
+<blockquote>
+<p><strong>This is what I observed.</strong></p>
+</blockquote>
+<p>An Assertion says:</p>
+<blockquote>
+<p><strong>This Source declares this relationship or condition.</strong></p>
+</blockquote>
+<p>These objects may be used together.</p>
+<p>Example:</p>
+<pre><code>Declaration:
+  desired = 3
+
+Observation:
+  current = 2
+
+Evaluation:
+  Drift = 1
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>The Truth Service increasingly needs evidence roles or types rather than one universal Observation abstraction.</strong></p>
+</blockquote>
+<p>Crosswalk #8 strongly reinforces this direction.</p>
+<hr>
+<h1 id="12-current-state-state-truth">12. Current State → State Truth</h1>
+<p>Desired-state systems must obtain some representation of current state.</p>
+<p>RTT interpretation:</p>
+<pre><code>State Truth
+</code></pre>
+<p>The current state may itself have:</p>
+<ul>
+<li>freshness</li>
+<li>Observer context</li>
+<li>Evidence</li>
+<li>Lineage</li>
+<li>uncertainty</li>
+</ul>
+<p>Therefore the reconciliation system effectively compares:</p>
+<pre><code>Truth State A:
+  Intent
+</code></pre>
+<p>against:</p>
+<pre><code>Truth State B:
+  State
+</code></pre>
+<p>This suggests an important generalized capability:</p>
+<pre><code>Truth-State Comparison
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="13-truth-state-comparison">13. Truth-State Comparison</h1>
+<p>The original architecture mostly evaluated Evidence to produce one Truth State.</p>
+<p>Desired-state systems introduce a broader pattern:</p>
+<pre><code>Truth State A
+    ↓
+  compare
+    ↑
+Truth State B
+</code></pre>
+<p>Example:</p>
+<pre><code>Intent Truth
+    vs
+State Truth
+</code></pre>
+<p>Potential output:</p>
+<pre><code>Drift Relationship
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Truth States may themselves become inputs to later Evaluations.</strong></p>
+</blockquote>
+<p>This is a significant architectural evolution.</p>
+<p>It creates recursive composition without requiring earlier Truth States to be rewritten.</p>
+<hr>
+<h1 id="14-cross-class-comparison">14. Cross-Class Comparison</h1>
+<p>Potential generalized relation:</p>
+<pre><code>TruthComparison
+  ├── left_truth_state_id
+  ├── right_truth_state_id
+  ├── comparison_type
+  ├── drift
+  ├── regime
+  └── rationale
+</code></pre>
+<p>For desired-state systems:</p>
+<pre><code>comparison_type:
+  intent_vs_state
+</code></pre>
+<p>Other future examples may include:</p>
+<pre><code>expected_vs_observed
+prior_vs_current
+source_vs_source
+committed_vs_materialized
+declared_vs_measured
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Do not modify the schema until consolidation.</p>
+<hr>
+<h1 id="15-desired-state-drift">15. Desired-State Drift</h1>
+<p>Desired-state systems give Drift one of its clearest generalized forms.</p>
+<p>Conceptually:</p>
+<pre><code>Drift
+  =
+Desired State
+  ↔
+Current State
+</code></pre>
+<p>For a numeric example:</p>
+<pre><code>desired:
+  3
+
+current:
+  2
+
+Drift:
+  -1
+</code></pre>
+<p>For a structural example:</p>
+<pre><code>desired image:
+  version A
+
+current image:
+  version B
+
+Drift:
+  dimension: value
+  magnitude: null
+</code></pre>
+<p>The same Drift abstraction supports both.</p>
+<hr>
+<h1 id="16-cross-class-drift">16. Cross-Class Drift</h1>
+<p>Earlier Drift comparisons often occurred within one Truth Class:</p>
+<pre><code>temporal state vs temporal reference
+
+prior Source vs current Source
+
+prior Lineage vs current Lineage
+</code></pre>
+<p>Desired-state systems introduce:</p>
+<pre><code>Intent Truth
+   ↔
+State Truth
+</code></pre>
+<p>Therefore Drift may compare different Truth Classes.</p>
+<p>Candidate generalized concept:</p>
+<pre><code>CrossClassDrift
+</code></pre>
+<p>However, a separate object may not be necessary.</p>
+<p>Current DriftState could carry:</p>
+<pre><code>baseline_truth_class
+observed_truth_class
+</code></pre>
+<p>or equivalent relationship metadata.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE conceptually
+schema form deferred
+</code></pre>
+<hr>
+<h1 id="17-drift-is-the-signal">17. Drift Is the Signal</h1>
+<p>In desired-state control systems, disagreement is not necessarily an exceptional condition.</p>
+<p>It may be precisely what activates reconciliation.</p>
+<p>Conceptually:</p>
+<pre><code>Desired
+  =
+Current
+  ↓
+no corrective action required
+</code></pre>
+<p>versus:</p>
+<pre><code>Desired
+  ≠
+Current
+  ↓
+corrective action required
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Drift can be operational input rather than merely a diagnostic after failure.</strong></p>
+</blockquote>
+<p>This substantially strengthens Drift as a first-class generalized mechanism.</p>
+<hr>
+<h1 id="18-controller-observer-correction-actor">18. Controller → Observer + Correction Actor</h1>
+<p>A controller watches state and acts to move current state toward desired state. 【1-99d4a5】</p>
+<p>RTT interpretation:</p>
+<pre><code>Observer
+  +
+Evaluator
+  +
+Correction Actor
+</code></pre>
+<p>This is interesting because previous architecture often separated those roles conceptually.</p>
+<p>A single implementation component may occupy several roles.</p>
+<p>The model should distinguish:</p>
+<pre><code>logical role
+</code></pre>
+<p>from:</p>
+<pre><code>physical process
+</code></pre>
+<p>One controller process may perform multiple logical responsibilities.</p>
+<hr>
+<h1 id="19-observer-role-vs-correction-role">19. Observer Role vs Correction Role</h1>
+<p>Even when one component performs both, the operations remain structurally distinct:</p>
+<pre><code>Observe
+  ↓
+Compare
+  ↓
+Decide
+  ↓
+Correct
+</code></pre>
+<p>This reinforces:</p>
+<pre><code>Evaluation
+  ≠
+Correction
+</code></pre>
+<p>The same process may implement both.</p>
+<p>The architecture still benefits from separating the decisions.</p>
+<hr>
+<h1 id="20-control-loop-revalidation-cycle">20. Control Loop → Revalidation Cycle</h1>
+<p>Kubernetes controllers are control loops that repeatedly watch system state and make changes where needed. 【1-99d4a5】</p>
+<p>RTT interpretation:</p>
+<pre><code>Revalidation Cycle
+</code></pre>
+<p>Generalized pattern:</p>
+<pre><code>Observe
+  ↓
+Evaluate
+  ↓
+Compare
+  ↓
+Correct
+  ↓
+Observe Again
+</code></pre>
+<p>This strongly validates Revalidation as:</p>
+<pre><code>continuous / recurring
+</code></pre>
+<p>rather than:</p>
+<pre><code>one-time verification
+</code></pre>
+<hr>
+<h1 id="21-reconciliation-bounded-correction">21. Reconciliation → Bounded Correction</h1>
+<p>A controller attempts to move current state closer to desired state. 【1-99d4a5】</p>
+<p>RTT interpretation:</p>
+<pre><code>Bounded Correction
+</code></pre>
+<p>The controller should not need to declare:</p>
+<pre><code>current state false
+</code></pre>
+<p>It can instead determine:</p>
+<pre><code>current state differs from intended state
+</code></pre>
+<p>and perform:</p>
+<pre><code>corrective action
+</code></pre>
+<p>This generalizes nicely across prior systems.</p>
+<hr>
+<h1 id="22-correction-does-not-change-intent-automatically">22. Correction Does Not Change Intent Automatically</h1>
+<p>Suppose:</p>
+<pre><code>desired:
+  3
+
+current:
+  2
+</code></pre>
+<p>The controller may attempt to change:</p>
+<pre><code>current state
+</code></pre>
+<p>toward:</p>
+<pre><code>desired state
+</code></pre>
+<p>It should not silently solve the disagreement by rewriting:</p>
+<pre><code>desired = 2
+</code></pre>
+<p>unless some separate authorized process changes Intent.</p>
+<p>This distinction protects:</p>
+<pre><code>Intent Truth
+</code></pre>
+<p>from being overwritten by:</p>
+<pre><code>State Truth
+</code></pre>
+<p>merely to create superficial Coherence.</p>
+<hr>
+<h1 id="23-false-coherence-by-intent-mutation">23. False Coherence by Intent Mutation</h1>
+<p>This is a useful RTT anti-pattern.</p>
+<p>Given:</p>
+<pre><code>desired:
+  secure = true
+
+observed:
+  secure = false
+</code></pre>
+<p>one way to eliminate Drift would be:</p>
+<pre><code>desired:
+  secure = false
+</code></pre>
+<p>The states now "agree."</p>
+<p>But reconciliation has failed semantically.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Coherence cannot be achieved merely by mutating the reference state to match observed failure.</strong></p>
+</blockquote>
+<p>The authority to change Intent must remain separately governed.</p>
+<p>This is a powerful general principle.</p>
+<hr>
+<h1 id="24-intent-authority">24. Intent Authority</h1>
+<p>Who may change desired state?</p>
+<p>That is:</p>
+<pre><code>Authority Truth
+</code></pre>
+<p>Therefore Intent Truth composes directly with:</p>
+<pre><code>Authority Truth
+</code></pre>
+<p>A desired-state declaration should identify or derive from:</p>
+<pre><code>authorized Source
+policy
+configuration authority
+governing Reference Basis
+</code></pre>
+<p>This prevents arbitrary observed state from becoming declared Intent.</p>
+<hr>
+<h1 id="25-intent-reference-basis">25. Intent Reference Basis</h1>
+<p>Crosswalk #6 and #7 challenged:</p>
+<pre><code>Anchor
+</code></pre>
+<p>and introduced:</p>
+<pre><code>ReferenceBasis
+</code></pre>
+<p>Desired-state systems strongly reinforce the broader abstraction.</p>
+<p>For Intent Truth, the Reference Basis may be:</p>
+<pre><code>authorized specification
+configuration
+policy
+declarative resource
+desired-state repository
+</code></pre>
+<p>There may be no external "truth source" corresponding to:</p>
+<pre><code>what the machine should become
+</code></pre>
+<p>The declaration itself, under valid authority, establishes the target.</p>
+<p>Therefore:</p>
+<pre><code>ReferenceBasis
+</code></pre>
+<p>is strongly supported.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strengthened
+</code></pre>
+<hr>
+<h1 id="26-governing-declaration">26. Governing Declaration</h1>
+<p>Potential generalized concept:</p>
+<pre><code>GoverningDeclaration
+</code></pre>
+<p>Definition:</p>
+<blockquote>
+<p><strong>An authorized declaration that establishes target state within a bounded Regime.</strong></p>
+</blockquote>
+<p>Potential uses:</p>
+<pre><code>configuration
+policy
+infrastructure desired state
+service objectives
+</code></pre>
+<p>However, this may be adequately represented as:</p>
+<pre><code>EvidenceItem.type = declaration
+</code></pre>
+<p>with:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>and:</p>
+<pre><code>ReferenceBasis
+</code></pre>
+<p>No new core entity is required yet.</p>
+<hr>
+<h1 id="27-desired-state-coherence">27. Desired-State Coherence</h1>
+<p>What does Coherence mean for Intent Truth?</p>
+<p>It may involve:</p>
+<ul>
+<li>declaration internally valid</li>
+<li>desired resources mutually compatible</li>
+<li>desired state compatible with policy</li>
+<li>authority valid</li>
+<li>target state sufficiently specified</li>
+</ul>
+<p>Intent Coherence is distinct from:</p>
+<pre><code>Intent-State convergence
+</code></pre>
+<p>A desired configuration could itself be:</p>
+<pre><code>internally incoherent
+</code></pre>
+<p>before the current system state is considered.</p>
+<p>Therefore there may be:</p>
+<pre><code>Intent Coherence
+</code></pre>
+<p>and:</p>
+<pre><code>Intent-State Coherence
+</code></pre>
+<p>These are different.</p>
+<hr>
+<h1 id="28-intent-coherence-vs-convergence">28. Intent Coherence vs Convergence</h1>
+<h2 id="intent-coherence">Intent Coherence</h2>
+<p>Does the desired state make structural sense under its own rules?</p>
+<h2 id="convergence">Convergence</h2>
+<p>Does current state sufficiently match the desired state?</p>
+<p>Example:</p>
+<pre><code>Desired State:
+  internally coherent
+
+Current State:
+  different
+</code></pre>
+<p>Result:</p>
+<pre><code>Intent Coherence:
+  strong
+
+State Drift:
+  present
+</code></pre>
+<p>No contradiction exists.</p>
+<p>This suggests Coherence may need:</p>
+<pre><code>evaluation target / layer
+</code></pre>
+<p>metadata.</p>
+<hr>
+<h1 id="29-converged-state">29. Converged State</h1>
+<p>When current state sufficiently matches desired state:</p>
+<pre><code>Intent Truth
+  ≈
+State Truth
+</code></pre>
+<p>under the Regime.</p>
+<p>RTT interpretation:</p>
+<pre><code>Intent-State Coherence
+</code></pre>
+<p>The system may classify:</p>
+<pre><code>Drift:
+  bounded / zero / acceptable
+</code></pre>
+<p>The important word is:</p>
+<pre><code>sufficiently
+</code></pre>
+<p>Exact equality may not be required in every domain.</p>
+<p>Regime determines acceptable convergence.</p>
+<hr>
+<h1 id="30-convergence-is-regime-qualified">30. Convergence Is Regime-Qualified</h1>
+<p>Suppose:</p>
+<pre><code>desired replicas:
+  3
+
+current ready replicas:
+  3
+</code></pre>
+<p>Another condition may still differ:</p>
+<pre><code>software version:
+  old
+</code></pre>
+<p>Therefore convergence depends on:</p>
+<pre><code>which dimensions matter
+</code></pre>
+<p>under:</p>
+<pre><code>the current Regime.
+</code></pre>
+<p>This prevents:</p>
+<pre><code>one matching field
+  =
+total system Coherence
+</code></pre>
+<p>The architecture must preserve multidimensional comparison.</p>
+<hr>
+<h1 id="31-partial-convergence">31. Partial Convergence</h1>
+<p>Desired-state systems may be moving toward the target without having reached it.</p>
+<p>Potential model:</p>
+<pre><code>Drift:
+  decreasing
+</code></pre>
+<p>while:</p>
+<pre><code>Truth State:
+  current state validly observed
+</code></pre>
+<p>and:</p>
+<pre><code>reconciliation:
+  in progress
+</code></pre>
+<p>This introduces:</p>
+<pre><code>Direction of Drift
+</code></pre>
+<p>as a useful operational signal.</p>
+<p>Current DriftState already supports:</p>
+<pre><code>increasing
+decreasing
+stable
+oscillating
+unknown
+</code></pre>
+<p>Crosswalk #8 directly validates that field.</p>
+<hr>
+<h1 id="32-oscillation">32. Oscillation</h1>
+<p>A controller may repeatedly move state without reaching stable convergence.</p>
+<p>RTT interpretation:</p>
+<pre><code>Oscillating Drift
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Desired:
+  D
+
+Current:
+  A
+  ↓
+  B
+  ↓
+  A
+  ↓
+  B
+</code></pre>
+<p>The system remains bounded around a mismatch without convergence.</p>
+<p>This is different from:</p>
+<pre><code>steadily improving Drift
+</code></pre>
+<p>and:</p>
+<pre><code>stable unresolved Drift
+</code></pre>
+<p>Therefore Drift direction/state is operationally meaningful.</p>
+<hr>
+<h1 id="33-persistent-drift">33. Persistent Drift</h1>
+<p>A system may repeatedly fail to reach desired state.</p>
+<p>Potential causes include:</p>
+<ul>
+<li>unavailable resources</li>
+<li>conflicting controllers</li>
+<li>impossible declaration</li>
+<li>external disturbance</li>
+<li>authority constraints</li>
+<li>dependency failure</li>
+</ul>
+<p>The Intent Truth may remain coherent.</p>
+<p>The State Truth may remain accurate.</p>
+<p>The Drift remains unresolved.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Persistent Drift is not evidence that either Truth Class is inherently false.</strong></p>
+</blockquote>
+<p>It is evidence that the declared relationship has not converged.</p>
+<hr>
+<h1 id="34-external-disturbance">34. External Disturbance</h1>
+<p>Desired-state systems typically operate in environments where state may change independently of the controller.</p>
+<p>Conceptually:</p>
+<pre><code>Desired State:
+  D
+
+Current State:
+  D
+</code></pre>
+<p>then:</p>
+<pre><code>External Event
+  ↓
+
+Current State:
+  X
+</code></pre>
+<p>The controller detects new Drift and attempts correction.</p>
+<p>RTT interpretation:</p>
+<pre><code>externally induced Drift
+</code></pre>
+<p>This strongly demonstrates why Revalidation must continue even after convergence.</p>
+<hr>
+<h1 id="35-convergence-is-not-permanent">35. Convergence Is Not Permanent</h1>
+<p>A system may reach:</p>
+<pre><code>Desired ≈ Current
+</code></pre>
+<p>at:</p>
+<pre><code>T1
+</code></pre>
+<p>and later Drift again at:</p>
+<pre><code>T2
+</code></pre>
+<p>Therefore:</p>
+<pre><code>converged once
+  ≠
+converged forever
+</code></pre>
+<p>This maps directly onto the Truth-Service principle:</p>
+<pre><code>accepted once
+  ≠
+permanently accepted
+</code></pre>
+<p>Revalidation remains essential.</p>
+<hr>
+<h1 id="36-intent-epoch">36. Intent Epoch</h1>
+<p>A change in desired specification creates a new target state.</p>
+<p>Conceptually:</p>
+<pre><code>Intent v1
+  ↓
+Desired State A
+</code></pre>
+<p>then:</p>
+<pre><code>Intent v2
+  ↓
+Desired State B
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Intent Epoch
+</code></pre>
+<p>This strongly supports:</p>
+<pre><code>RegimeEpoch
+</code></pre>
+<p>or a more general:</p>
+<pre><code>DeclarationVersion
+</code></pre>
+<p>The current state may be coherent relative to:</p>
+<pre><code>Intent v1
+</code></pre>
+<p>while drifting relative to:</p>
+<pre><code>Intent v2
+</code></pre>
+<p>Therefore version identity matters.</p>
+<hr>
+<h1 id="37-stale-intent">37. Stale Intent</h1>
+<p>A controller evaluating current state against:</p>
+<pre><code>old desired specification
+</code></pre>
+<p>may produce a locally coherent evaluation using:</p>
+<pre><code>stale Intent
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Regime-Stale Reference Basis
+</code></pre>
+<p>This parallels distributed systems:</p>
+<pre><code>stale term
+</code></pre>
+<p>and extends Freshness beyond Observation age.</p>
+<p>Potential freshness categories now include:</p>
+<pre><code>Observation freshness
+Evidence freshness
+Regime freshness
+Intent freshness
+ReferenceBasis freshness
+</code></pre>
+<p>Freshness is increasingly multidimensional.</p>
+<hr>
+<h1 id="38-intended-state-drift">38. Intended State Drift</h1>
+<p>Intent itself may change.</p>
+<p>This is different from:</p>
+<pre><code>current State Drift
+</code></pre>
+<p>Example:</p>
+<pre><code>Desired v1:
+  version A
+
+Desired v2:
+  version B
+</code></pre>
+<p>The current system may not have changed yet.</p>
+<p>The reference target has.</p>
+<p>Therefore:</p>
+<pre><code>Intent Drift
+</code></pre>
+<p>can create:</p>
+<pre><code>apparent new State Drift
+</code></pre>
+<p>without any immediate observed system mutation.</p>
+<p>This is useful for understanding causal Drift.</p>
+<hr>
+<h1 id="39-causal-drift">39. Causal Drift</h1>
+<p>Crosswalk #4 suggested preserving the cause of Drift.</p>
+<p>Desired-state systems make that especially clear.</p>
+<p>Observed mismatch may be caused by:</p>
+<pre><code>current state changed
+</code></pre>
+<p>or:</p>
+<pre><code>desired state changed
+</code></pre>
+<p>or:</p>
+<pre><code>both changed
+</code></pre>
+<p>Same apparent difference.</p>
+<p>Different cause.</p>
+<p>Therefore Drift should preserve:</p>
+<pre><code>baseline
+comparison
+causal evidence
+</code></pre>
+<p>where available.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strengthened
+</code></pre>
+<hr>
+<h1 id="40-desired-state-and-transactional-truth">40. Desired State and Transactional Truth</h1>
+<p>A controller may issue state-changing operations to reduce Drift.</p>
+<p>Conceptually:</p>
+<pre><code>Intent Truth
+    ↓
+Detect Drift
+    ↓
+Proposed Transition
+    ↓
+Transactional Truth
+    ↓
+Committed Change
+    ↓
+State Truth
+    ↓
+Observe Again
+</code></pre>
+<p>This creates a powerful four-stage chain:</p>
+<pre><code>INTENT
+  ↓
+PROPOSED TRANSITION
+  ↓
+TRANSACTION
+  ↓
+STATE
+  ↓
+OBSERVATION
+  ↓
+INTENT COMPARISON
+</code></pre>
+<p>The Truth-Service classes form a cycle rather than a simple hierarchy.</p>
+<hr>
+<h1 id="41-truth-classes-form-a-control-loop">41. Truth Classes Form a Control Loop</h1>
+<p>This may be one of Crosswalk #8's most important findings.</p>
+<p>The classes can compose dynamically:</p>
+<pre><code>Intent Truth
+     ↓
+Transactional Truth
+     ↓
+State Truth
+     ↓
+Observational Truth
+     ↓
+Drift Evaluation
+     ↓
+Correction
+     ↓
+Transactional Truth
+     ↓
+State Truth
+     ↓
+   ...
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Truth Classes are not merely analytical labels. They can participate in operational feedback loops.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE concept
+</code></pre>
+<p>No new entity necessarily required.</p>
+<hr>
+<h1 id="42-reconciliation-is-not-truth-synthesis">42. Reconciliation Is Not Truth Synthesis</h1>
+<p>This distinction matters.</p>
+<p>The Truth Service may determine:</p>
+<pre><code>Desired:
+  D
+
+Current:
+  C
+
+Drift:
+  present
+</code></pre>
+<p>A controller may then attempt:</p>
+<pre><code>reconciliation
+</code></pre>
+<p>But the Truth Service should not treat:</p>
+<pre><code>intended future state
+</code></pre>
+<p>as though:</p>
+<pre><code>already current
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Correction plan
+  ≠
+State Truth
+</code></pre>
+<p>This prevents future intent from leaking into current observation.</p>
+<hr>
+<h1 id="43-desired-state-is-not-prediction">43. Desired State Is Not Prediction</h1>
+<p>Intent Truth says:</p>
+<blockquote>
+<p><strong>This is the declared target.</strong></p>
+</blockquote>
+<p>It does not say:</p>
+<blockquote>
+<p><strong>This state will definitely occur.</strong></p>
+</blockquote>
+<p>Therefore:</p>
+<pre><code>Intent
+  ≠
+Prediction
+</code></pre>
+<p>This is an important boundary if the Truth Service later interacts with:</p>
+<ul>
+<li>planning</li>
+<li>forecasting</li>
+<li>AI suggestions</li>
+<li>automation</li>
+</ul>
+<p>Declared target and predicted outcome must remain separate.</p>
+<hr>
+<h1 id="44-desired-state-is-not-current-state">44. Desired State Is Not Current State</h1>
+<p>This sounds obvious, but desired-state systems make the distinction operationally fundamental.</p>
+<p>The architecture must never perform:</p>
+<pre><code>desired_value
+  →
+accepted current Truth State
+</code></pre>
+<p>without observation/evaluation.</p>
+<p>Otherwise a declarative system could mistake:</p>
+<pre><code>configuration
+</code></pre>
+<p>for:</p>
+<pre><code>reality
+</code></pre>
+<p>The Truth Service must preserve the boundary.</p>
+<hr>
+<h1 id="45-configuration-drift">45. Configuration Drift</h1>
+<p>Configuration systems provide one of the canonical operational examples of Drift.</p>
+<p>Conceptually:</p>
+<pre><code>Declared Configuration
+      ↕
+Observed Configuration
+</code></pre>
+<p>Difference:</p>
+<pre><code>Configuration Drift
+</code></pre>
+<p>Potential dimensions include:</p>
+<ul>
+<li>missing object</li>
+<li>unexpected object</li>
+<li>wrong version</li>
+<li>wrong value</li>
+<li>wrong relationship</li>
+<li>wrong dependency</li>
+<li>stale materialization</li>
+</ul>
+<p>The Drift Engine must support structured differences rather than only scalar magnitude.</p>
+<hr>
+<h1 id="46-drift-as-structured-difference">46. Drift as Structured Difference</h1>
+<p>Potential representation:</p>
+<pre><code>drift:
+  dimensions:
+    - value
+    - state
+
+  baseline_reference:
+    desired-v7
+
+  local_value:
+    version-A
+
+  observed_value:
+    version-B
+
+  magnitude:
+    null
+
+  direction:
+    unknown
+
+  bounded:
+    false
+</code></pre>
+<p>This validates the current nonnumeric Drift model.</p>
+<hr>
+<h1 id="47-missing-resource-qualified-absence">47. Missing Resource → Qualified Absence</h1>
+<p>Desired-state systems revisit explicit absence.</p>
+<p>Suppose:</p>
+<pre><code>desired:
+  resource R exists
+
+observed:
+  R absent
+</code></pre>
+<p>The Observation may coherently establish:</p>
+<pre><code>presence:
+  absent
+</code></pre>
+<p>The Intent may coherently establish:</p>
+<pre><code>presence:
+  required
+</code></pre>
+<p>Difference:</p>
+<pre><code>Drift
+</code></pre>
+<p>Again:</p>
+<pre><code>absence
+  ≠
+indeterminate
+</code></pre>
+<p>This reinforces a recurring cross-system pattern.</p>
+<hr>
+<h1 id="48-extra-resource">48. Extra Resource</h1>
+<p>The inverse case:</p>
+<pre><code>desired:
+  R absent
+
+observed:
+  R present
+</code></pre>
+<p>Both statements may be well qualified in their own classes.</p>
+<p>Difference:</p>
+<pre><code>Drift
+</code></pre>
+<p>Potential correction:</p>
+<pre><code>remove R
+</code></pre>
+<p>subject to:</p>
+<pre><code>Authority
+policy
+safety
+Regime
+</code></pre>
+<p>The controller's action requires more than simply detecting mismatch.</p>
+<hr>
+<h1 id="49-correction-requires-authority">49. Correction Requires Authority</h1>
+<p>A controller may detect Drift accurately while lacking authority to perform a particular correction.</p>
+<p>Therefore:</p>
+<pre><code>Drift detected
+  ≠
+Correction authorized
+</code></pre>
+<p>This composes:</p>
+<pre><code>Intent Truth
+</code></pre>
+<p>with:</p>
+<pre><code>Authority Truth
+</code></pre>
+<p>Potential result:</p>
+<pre><code>observation:
+  coherent
+
+Drift:
+  unbounded
+
+correction:
+  human_escalation
+</code></pre>
+<p>This validates the separation between:</p>
+<pre><code>Evaluation
+</code></pre>
+<p>and:</p>
+<pre><code>Action Policy
+</code></pre>
+<p>again.</p>
+<hr>
+<h1 id="50-correction-requires-transactional-success">50. Correction Requires Transactional Success</h1>
+<p>Even when authorized, a corrective operation may fail.</p>
+<p>Therefore:</p>
+<pre><code>Correction requested
+  ≠
+Correction committed
+  ≠
+State converged
+</code></pre>
+<p>This composes:</p>
+<pre><code>Authority Truth
+  ↓
+Transactional Truth
+  ↓
+State Truth
+</code></pre>
+<p>Again, the classes form a feedback system.</p>
+<hr>
+<h1 id="51-failed-reconciliation">51. Failed Reconciliation</h1>
+<p>Suppose:</p>
+<pre><code>Drift detected
+
+Correction authorized
+
+Corrective transaction attempted
+
+Transaction fails
+</code></pre>
+<p>The resulting state may be:</p>
+<pre><code>Intent:
+  unchanged
+
+Current State:
+  unchanged
+
+Drift:
+  persists
+
+Correction:
+  failed
+</code></pre>
+<p>No need to alter Truth to manufacture success.</p>
+<p>The system should preserve:</p>
+<pre><code>unresolved Drift
+</code></pre>
+<hr>
+<h1 id="52-reconciliation-history">52. Reconciliation History</h1>
+<p>Repeated correction attempts produce useful Transition Lineage.</p>
+<p>Conceptually:</p>
+<pre><code>Intent v1
+   ↓
+Observe State A
+   ↓
+Correction C1
+   ↓
+State B
+   ↓
+Correction C2
+   ↓
+State C
+   ↓
+Converged
+</code></pre>
+<p>This history explains:</p>
+<pre><code>how convergence occurred
+</code></pre>
+<p>and can expose:</p>
+<ul>
+<li>oscillation</li>
+<li>repeated failure</li>
+<li>dependency problems</li>
+<li>unexpected transitions</li>
+</ul>
+<p>Therefore desired-state systems strongly support Transition Lineage.</p>
+<hr>
+<h1 id="53-reconciliation-lineage">53. Reconciliation Lineage</h1>
+<p>Candidate Lineage relationships include:</p>
+<pre><code>evaluated_against
+drifted_from
+correction_requested
+correction_committed
+materialized_as
+converged_with
+superseded_by
+</code></pre>
+<p>The existing Lineage graph can represent these relationships.</p>
+<p>No dedicated ReconciliationHistory entity is required yet.</p>
+<hr>
+<h1 id="54-controller-authority">54. Controller Authority</h1>
+<p>A controller may be authorized to create or modify certain resource types or downstream state.</p>
+<p>RTT interpretation:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>This provides another independent example of:</p>
+<pre><code>actor
+  +
+role
+  +
+operation
+  +
+target scope
+  +
+Regime
+</code></pre>
+<p>The AuthorityRelationship candidate continues to survive strongly.</p>
+<hr>
+<h1 id="55-multiple-controllers">55. Multiple Controllers</h1>
+<p>Desired-state systems may contain multiple controllers, each responsible for different resources or relationships.</p>
+<p>This introduces possible overlapping operational responsibility.</p>
+<p>RTT interpretation:</p>
+<pre><code>distributed correction roles
+</code></pre>
+<p>Potential conflict may arise if multiple control loops attempt incompatible state changes.</p>
+<p>Before declaring Paradox:</p>
+<pre><code>compare Intent
+compare authority scope
+compare resource ownership
+compare Regime
+compare lifecycle
+</code></pre>
+<p>This again reinforces Authority Scope and role separation.</p>
+<hr>
+<h1 id="56-conflicting-intent">56. Conflicting Intent</h1>
+<p>A genuine Intent Paradox may arise when:</p>
+<pre><code>Intent Source A:
+  state = X
+
+Intent Source B:
+  state = Y
+</code></pre>
+<p>and both are:</p>
+<ul>
+<li>qualified</li>
+<li>authoritative</li>
+<li>applicable to the same subject/scope</li>
+<li>active in the same Regime</li>
+<li>mutually incompatible</li>
+</ul>
+<p>Then:</p>
+<pre><code>Paradox:
+  structural or regime
+</code></pre>
+<p>may be appropriate.</p>
+<p>But first determine:</p>
+<pre><code>different scopes?
+
+different policy precedence?
+
+different generations?
+
+stale Intent?
+
+different Targets?
+</code></pre>
+<p>Classification precedes Paradox.</p>
+<hr>
+<h1 id="57-conflicting-intent-intent-state-drift">57. Conflicting Intent ≠ Intent-State Drift</h1>
+<p>These are different.</p>
+<h2 id="intent-state-drift">Intent-State Drift</h2>
+<p>One coherent Intent differs from current state.</p>
+<h2 id="conflicting-intent">Conflicting Intent</h2>
+<p>Multiple applicable desired states differ from one another.</p>
+<p>The first is a control-loop condition.</p>
+<p>The second is potentially a governance / Paradox condition.</p>
+<p>The architecture must distinguish them.</p>
+<hr>
+<h1 id="58-intent-authority-drift">58. Intent Authority Drift</h1>
+<p>Suppose desired state remains:</p>
+<pre><code>D
+</code></pre>
+<p>but its governing authority changes.</p>
+<p>Example:</p>
+<pre><code>Declaration v1:
+  issued by Authority A
+
+Declaration v2:
+  same desired value D
+  issued by Authority B
+</code></pre>
+<p>Visible Intent:</p>
+<pre><code>unchanged
+</code></pre>
+<p>Authority Lineage:</p>
+<pre><code>changed
+</code></pre>
+<p>Again:</p>
+<blockquote>
+<p><strong>Stable value can conceal structural Drift.</strong></p>
+</blockquote>
+<p>This result continues to survive every major crosswalk.</p>
+<hr>
+<h1 id="59-intent-integrity">59. Intent Integrity</h1>
+<p>A desired-state declaration itself may require:</p>
+<pre><code>integrity
+</code></pre>
+<p>This composes with:</p>
+<pre><code>Integrity Truth
+</code></pre>
+<p>For example, the system may need confidence that the declaration evaluated is:</p>
+<pre><code>the intended declaration
+unchanged
+validly sourced
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Intent Truth
+  depends on
+Authority + Integrity + Lineage
+</code></pre>
+<p>without collapsing into them.</p>
+<p>Truth-Class composition remains fundamental.</p>
+<hr>
+<h1 id="60-intent-freshness">60. Intent Freshness</h1>
+<p>A previously valid desired-state declaration may become stale because:</p>
+<ul>
+<li>new version exists</li>
+<li>policy changed</li>
+<li>generation changed</li>
+<li>scope changed</li>
+<li>deployment was superseded</li>
+</ul>
+<p>Therefore Intent itself requires:</p>
+<pre><code>freshness / version awareness
+</code></pre>
+<p>This strongly validates Freshness as:</p>
+<pre><code>not merely Observation age
+</code></pre>
+<p>but:</p>
+<pre><code>relationship to current Regime / version
+</code></pre>
+<hr>
+<h1 id="61-desired-state-materialization">61. Desired-State Materialization</h1>
+<p>Crosswalk #7 strengthened:</p>
+<pre><code>MaterializedTruthState
+</code></pre>
+<p>Desired-state systems provide another example.</p>
+<p>The current operational system can be interpreted as a:</p>
+<pre><code>Materialization
+</code></pre>
+<p>of:</p>
+<pre><code>declared Intent
+</code></pre>
+<p>but only when convergence is sufficiently established.</p>
+<p>Conceptually:</p>
+<pre><code>Intent Truth
+    ↓
+Corrective Transitions
+    ↓
+Current State
+    ↓
+Materialized Intent
+</code></pre>
+<p>The relation should be:</p>
+<pre><code>current state materializes intent
+</code></pre>
+<p>not:</p>
+<pre><code>current state equals intent by declaration.
+</code></pre>
+<hr>
+<h1 id="62-materialization-quality">62. Materialization Quality</h1>
+<p>The system may materialize:</p>
+<pre><code>fully
+
+partially
+
+incorrectly
+
+stale version
+
+not at all
+</code></pre>
+<p>Therefore MaterializedTruthState may need to preserve:</p>
+<pre><code>relation to Reference Truth State
+</code></pre>
+<p>rather than merely local state.</p>
+<p>Potential fields:</p>
+<pre><code>source_truth_state_id
+materialization_subject
+observed_state
+drift
+last_reconciled_at
+status
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strengthened
+</code></pre>
+<hr>
+<h1 id="63-reconciliation-vs-recovery">63. Reconciliation vs Recovery</h1>
+<p>Crosswalk #7 distinguished:</p>
+<pre><code>Recovery
+  ≠
+Revalidation
+</code></pre>
+<p>Crosswalk #8 adds:</p>
+<pre><code>Reconciliation
+</code></pre>
+<p>These three operations are different.</p>
+<h2 id="recovery">Recovery</h2>
+<p>Reconstruct materialization from already accepted history.</p>
+<h2 id="revalidation">Revalidation</h2>
+<p>Challenge whether a previously accepted Truth State still qualifies.</p>
+<h2 id="reconciliation">Reconciliation</h2>
+<p>Change observed/current state toward declared desired state.</p>
+<p>This is an important generalized distinction.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE concept
+</code></pre>
+<hr>
+<h1 id="64-recovery-revalidation-reconciliation-matrix">64. Recovery / Revalidation / Reconciliation Matrix</h1>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Primary Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Recovery</strong></td>
+<td>Can accepted state be reconstructed?</td>
+</tr>
+<tr>
+<td><strong>Revalidation</strong></td>
+<td>Does previously accepted truth still qualify?</td>
+</tr>
+<tr>
+<td><strong>Reconciliation</strong></td>
+<td>Can current state be moved toward desired state?</td>
+</tr>
+</tbody>
+</table>
+<p>These may interact.</p>
+<p>They should not be collapsed.</p>
+<hr>
+<h1 id="65-acceptancerule-in-intent-truth">65. AcceptanceRule in Intent Truth</h1>
+<p>Crosswalk #6 and #7 strengthened:</p>
+<pre><code>AcceptanceRule
+</code></pre>
+<p>What is the equivalent in desired-state systems?</p>
+<p>Potential questions include:</p>
+<ul>
+<li>Is the declaration structurally valid?</li>
+<li>Is the declarer authorized?</li>
+<li>Is this the current applicable generation?</li>
+<li>Is it compatible with governing policy?</li>
+</ul>
+<p>AcceptanceRule therefore determines whether a declaration becomes:</p>
+<pre><code>active Intent Truth
+</code></pre>
+<p>This differs from:</p>
+<pre><code>convergence rules
+</code></pre>
+<p>which determine whether current state sufficiently matches Intent.</p>
+<p>Therefore one system may contain:</p>
+<pre><code>Intent Acceptance Rule
+</code></pre>
+<p>and:</p>
+<pre><code>Convergence Rule
+</code></pre>
+<p>This introduces another multi-stage structure.</p>
+<hr>
+<h1 id="66-convergencerule-candidate">66. ConvergenceRule Candidate</h1>
+<p>Potential abstraction:</p>
+<pre><code>ConvergenceRule
+</code></pre>
+<p>Definition:</p>
+<blockquote>
+<p><strong>The Regime-specific condition under which observed/current state is considered sufficiently aligned with desired state.</strong></p>
+</blockquote>
+<p>This may consider:</p>
+<ul>
+<li>exact equality</li>
+<li>bounded tolerance</li>
+<li>required subset</li>
+<li>minimum count</li>
+<li>version</li>
+<li>health conditions</li>
+</ul>
+<p>However, this may simply be:</p>
+<pre><code>AcceptanceRule
+</code></pre>
+<p>applied to:</p>
+<pre><code>TruthComparison
+</code></pre>
+<p>rather than requiring another core object.</p>
+<p>Recommendation:</p>
+<pre><code>model conceptually as AcceptanceRule subtype/use
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_RELATION
+</code></pre>
+<hr>
+<h1 id="67-truthcomparison-acceptancerule">67. TruthComparison + AcceptanceRule</h1>
+<p>A cleaner generalized model may be:</p>
+<pre><code>Truth State A
+    ↓
+TruthComparison
+    ↑
+Truth State B
+    ↓
+AcceptanceRule
+    ↓
+Comparison Result
+</code></pre>
+<p>For Intent Truth:</p>
+<pre><code>Intent State
+    ↓
+compare
+    ↑
+Current State
+    ↓
+Converged?
+  yes / no / partial / indeterminate
+</code></pre>
+<p>This is elegant and likely reusable.</p>
+<p>Potential other uses:</p>
+<pre><code>prior vs current
+expected vs observed
+committed vs materialized
+Source A vs Source B
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="68-comparison-result-vs-truth-state">68. Comparison Result vs Truth State</h1>
+<p>A TruthComparison may itself produce a derived Truth State.</p>
+<p>Example:</p>
+<pre><code>Claim:
+  "Current state sufficiently matches desired state."
+</code></pre>
+<p>Evidence:</p>
+<pre><code>Intent Truth State
+Current State Truth State
+</code></pre>
+<p>Evaluation:</p>
+<pre><code>TruthComparison
+</code></pre>
+<p>Result:</p>
+<pre><code>operationally_accepted
+</code></pre>
+<p>accepted_value:</p>
+<pre><code>converged: false
+</code></pre>
+<p>Again:</p>
+<pre><code>false domain result
+  ≠
+failed Evaluation
+</code></pre>
+<p>This pattern continues to strengthen.</p>
+<hr>
+<h1 id="69-worked-example-converged-desired-state">69. Worked Example — Converged Desired State</h1>
+<h2 id="intent">Intent</h2>
+<pre><code>replicas:
+  3
+</code></pre>
+<h2 id="current-state">Current State</h2>
+<pre><code>replicas:
+  3
+</code></pre>
+<h2 id="comparison">Comparison</h2>
+<pre><code>Drift:
+  0
+</code></pre>
+<h2 id="result">Result</h2>
+<pre><code>Truth State:
+  operationally_accepted
+
+domain_result:
+  converged: true
+</code></pre>
+<h2 id="correction">Correction</h2>
+<pre><code>none required
+</code></pre>
+<h2 id="revalidation_1">Revalidation</h2>
+<pre><code>continue observing
+</code></pre>
+<h2 id="architectural-finding">Architectural Finding</h2>
+<p>Convergence does not terminate truth lifecycle.</p>
+<p>Future Drift remains possible.</p>
+<hr>
+<h1 id="70-worked-example-under-provisioned">70. Worked Example — Under-Provisioned</h1>
+<h2 id="intent_1">Intent</h2>
+<pre><code>replicas:
+  3
+</code></pre>
+<h2 id="current-state_1">Current State</h2>
+<pre><code>replicas:
+  2
+</code></pre>
+<h2 id="comparison_1">Comparison</h2>
+<pre><code>Drift:
+  magnitude: -1
+  dimension: state
+</code></pre>
+<h2 id="result_1">Result</h2>
+<pre><code>Truth State:
+  operationally_accepted
+
+domain_result:
+  converged: false
+</code></pre>
+<h2 id="correction_1">Correction</h2>
+<pre><code>create / request additional materialization
+</code></pre>
+<p>subject to Authority and transaction success.</p>
+<h2 id="architectural-finding_1">Architectural Finding</h2>
+<p>Both Intent and State may be accurate while the relationship is non-converged.</p>
+<hr>
+<h1 id="71-worked-example-missing-resource">71. Worked Example — Missing Resource</h1>
+<h2 id="intent_2">Intent</h2>
+<pre><code>Resource R:
+  required
+</code></pre>
+<h2 id="observation">Observation</h2>
+<pre><code>Resource R:
+  absent
+</code></pre>
+<h2 id="intent-truth">Intent Truth</h2>
+<pre><code>coherent
+</code></pre>
+<h2 id="observational-truth">Observational Truth</h2>
+<pre><code>coherent
+</code></pre>
+<h2 id="drift">Drift</h2>
+<pre><code>presence mismatch
+</code></pre>
+<h2 id="domain-result">Domain Result</h2>
+<pre><code>converged:
+  false
+</code></pre>
+<h2 id="architectural-finding_2">Architectural Finding</h2>
+<p>Qualified absence is Evidence of Drift.</p>
+<p>It is not Indeterminate.</p>
+<hr>
+<h1 id="72-worked-example-stale-desired-state">72. Worked Example — Stale Desired State</h1>
+<h2 id="current-declaration">Current Declaration</h2>
+<pre><code>generation:
+  12
+</code></pre>
+<h2 id="controller-view">Controller View</h2>
+<pre><code>generation:
+  11
+</code></pre>
+<h2 id="current-observed-system-state">Current Observed System State</h2>
+<p>Aligned with generation 11.</p>
+<h2 id="local-controller-interpretation">Local Controller Interpretation</h2>
+<p>May appear converged relative to stale Intent.</p>
+<h2 id="global-current-intent-relationship">Global / Current Intent Relationship</h2>
+<p>Drift exists relative to generation 12.</p>
+<h2 id="architectural-finding_3">Architectural Finding</h2>
+<p>ReferenceBasis freshness matters.</p>
+<p>A coherent comparison against stale Intent can still yield an operationally obsolete result.</p>
+<hr>
+<h1 id="73-worked-example-intent-changed-system-did-not">73. Worked Example — Intent Changed, System Did Not</h1>
+<h2 id="time-t1">Time T1</h2>
+<pre><code>Desired:
+  version A
+
+Current:
+  version A
+
+Converged:
+  true
+</code></pre>
+<h2 id="time-t2">Time T2</h2>
+<pre><code>Desired:
+  version B
+
+Current:
+  version A
+</code></pre>
+<h2 id="observed-system-mutation">Observed System Mutation</h2>
+<pre><code>none yet
+</code></pre>
+<h2 id="new-drift">New Drift</h2>
+<pre><code>introduced by Intent change
+</code></pre>
+<h2 id="architectural-finding_4">Architectural Finding</h2>
+<p>Drift may originate from the reference side, not the observed side.</p>
+<hr>
+<h1 id="74-worked-example-failed-correction">74. Worked Example — Failed Correction</h1>
+<h2 id="intent_3">Intent</h2>
+<pre><code>version B
+</code></pre>
+<h2 id="current">Current</h2>
+<pre><code>version A
+</code></pre>
+<h2 id="drift_1">Drift</h2>
+<pre><code>present
+</code></pre>
+<h2 id="correction_2">Correction</h2>
+<pre><code>update requested
+</code></pre>
+<h2 id="transaction">Transaction</h2>
+<pre><code>fails
+</code></pre>
+<h2 id="result_2">Result</h2>
+<pre><code>Intent:
+  remains B
+
+Current:
+  remains A
+
+Drift:
+  persists
+</code></pre>
+<h2 id="architectural-finding_5">Architectural Finding</h2>
+<p>Correction attempts do not alter Truth automatically.</p>
+<p>The system must observe the result.</p>
+<hr>
+<h1 id="75-worked-example-oscillation">75. Worked Example — Oscillation</h1>
+<h2 id="intent_4">Intent</h2>
+<pre><code>state D
+</code></pre>
+<h2 id="current-sequence">Current Sequence</h2>
+<pre><code>A
+  ↓
+B
+  ↓
+A
+  ↓
+B
+</code></pre>
+<h2 id="drift_2">Drift</h2>
+<pre><code>direction:
+  oscillating
+</code></pre>
+<h2 id="convergence_1">Convergence</h2>
+<pre><code>false
+</code></pre>
+<h2 id="architectural-finding_6">Architectural Finding</h2>
+<p>Repeated activity is not equivalent to progress.</p>
+<p>Drift direction is useful operational information.</p>
+<hr>
+<h1 id="76-worked-example-conflicting-intent">76. Worked Example — Conflicting Intent</h1>
+<h2 id="declaration-a">Declaration A</h2>
+<pre><code>Target X:
+  state A
+</code></pre>
+<h2 id="declaration-b">Declaration B</h2>
+<pre><code>Target X:
+  state B
+</code></pre>
+<p>Both:</p>
+<pre><code>current
+authoritative
+same scope
+same Regime
+</code></pre>
+<p>A and B are incompatible.</p>
+<h2 id="result_3">Result</h2>
+<p>Potential:</p>
+<pre><code>Paradox:
+  structural
+</code></pre>
+<p>or:</p>
+<pre><code>contested Intent Truth
+</code></pre>
+<h2 id="architectural-finding_7">Architectural Finding</h2>
+<p>Intent conflict differs from Intent-State Drift.</p>
+<hr>
+<h1 id="77-worked-example-unauthorized-intent-change">77. Worked Example — Unauthorized Intent Change</h1>
+<h2 id="current-intent">Current Intent</h2>
+<pre><code>D1
+</code></pre>
+<h2 id="proposed-declaration">Proposed Declaration</h2>
+<pre><code>D2
+</code></pre>
+<h2 id="authority-evaluation">Authority Evaluation</h2>
+<pre><code>declarer unauthorized
+</code></pre>
+<h2 id="result_4">Result</h2>
+<pre><code>D2 does not become active Intent Truth
+</code></pre>
+<h2 id="current-state_2">Current State</h2>
+<p>May remain aligned with D1.</p>
+<h2 id="architectural-finding_8">Architectural Finding</h2>
+<p>A proposed desired-state declaration is not automatically governing Intent.</p>
+<p>AcceptanceRule and AuthorityRelationship still apply.</p>
+<hr>
+<h1 id="78-worked-example-materialized-intent-drifts-externally">78. Worked Example — Materialized Intent Drifts Externally</h1>
+<h2 id="intent_5">Intent</h2>
+<pre><code>D
+</code></pre>
+<h2 id="current-state_3">Current State</h2>
+<pre><code>D
+</code></pre>
+<h2 id="external-event">External Event</h2>
+<p>Changes current state to:</p>
+<pre><code>X
+</code></pre>
+<h2 id="intent_6">Intent</h2>
+<p>Still:</p>
+<pre><code>D
+</code></pre>
+<h2 id="observation_1">Observation</h2>
+<p>Detects:</p>
+<pre><code>X
+</code></pre>
+<h2 id="drift_3">Drift</h2>
+<pre><code>present
+</code></pre>
+<h2 id="reconciliation_1">Reconciliation</h2>
+<p>Attempts return toward D.</p>
+<h2 id="architectural-finding_9">Architectural Finding</h2>
+<p>Convergence is maintained through repeated observation and Correction, not one-time success.</p>
+<hr>
+<h1 id="79-rtt-dimension-mapping">79. RTT Dimension Mapping</h1>
+<table>
+<thead>
+<tr>
+<th>RTT Dimension</th>
+<th>Desired-State Interpretation</th>
+<th>General Truth-Service Candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Intent declarations propagate into controllers and corrective actions</td>
+<td>Governed declarations influence downstream state</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Desired state is internally compatible and current state sufficiently aligns</td>
+<td>Domain-semantic state compatibility</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Desired and current state diverge</td>
+<td>Cross-class and multidimensional Drift</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Multiple applicable incompatible intents remain unresolved</td>
+<td>Preserved Intent contradiction</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Policy, scope, generation, authority, and convergence requirements govern interpretation</td>
+<td>Governing boundary for Intent and comparison</td>
+</tr>
+<tr>
+<td><strong>Spin</strong></td>
+<td>Desired state persists as reference across observations</td>
+<td>Intent continuity</td>
+</tr>
+<tr>
+<td><strong>Elec</strong></td>
+<td>Intent, current state, Observation, Correction, and authority remain distinct</td>
+<td>Structural role distinction</td>
+</tr>
+<tr>
+<td><strong>Temp</strong></td>
+<td>Intent changes, state changes, reconciliation repeats, convergence may be lost</td>
+<td>Continuous lifecycle and feedback</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="80-set-mapping">80. SET Mapping</h1>
+<h2 id="spin">Spin</h2>
+<p>Intent Truth expresses Spin through:</p>
+<ul>
+<li>desired-state persistence</li>
+<li>declaration identity</li>
+<li>configuration continuity</li>
+<li>target relationship</li>
+<li>specification lineage</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>It strongly expresses Elec through distinction among:</p>
+<ul>
+<li>desired</li>
+<li>observed</li>
+<li>current</li>
+<li>proposed</li>
+<li>authorized</li>
+<li>corrected</li>
+<li>converged</li>
+<li>non-converged</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>It expresses Temp through:</p>
+<ul>
+<li>declaration revision</li>
+<li>observation</li>
+<li>Drift</li>
+<li>corrective action</li>
+<li>transaction</li>
+<li>convergence</li>
+<li>renewed Drift</li>
+<li>Revalidation</li>
+</ul>
+<p>Compactly:</p>
+<blockquote>
+<p><strong>Spin preserves declared intent.</strong></p>
+<p><strong>Elec distinguishes what should be from what currently is.</strong></p>
+<p><strong>Temp governs revision, Drift, reconciliation, and renewed observation.</strong></p>
+</blockquote>
+<hr>
+<h1 id="81-prior-candidate-review-evidenceitem">81. Prior Candidate Review — EvidenceItem</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Intent result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Desired-state declarations provide another Evidence subtype distinct from Observation.</p>
+<p>Potential subtype:</p>
+<pre><code>Declaration
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>formal consolidation should adopt EvidenceItem.
+</code></pre>
+<hr>
+<h1 id="82-prior-candidate-review-referencebasis">82. Prior Candidate Review — ReferenceBasis</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Intent result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Desired state derives from an authorized governing declaration rather than an external physical reference.</p>
+<p>ReferenceBasis is now supported strongly across very different classes.</p>
+<p>Recommendation:</p>
+<pre><code>promote during formal architecture consolidation.
+</code></pre>
+<hr>
+<h1 id="83-prior-candidate-review-acceptancerule">83. Prior Candidate Review — AcceptanceRule</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Intent result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Acceptance rules apply to:</p>
+<pre><code>activating declarations
+</code></pre>
+<p>and:</p>
+<pre><code>evaluating convergence
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>promote during consolidation.
+</code></pre>
+<hr>
+<h1 id="84-prior-candidate-review-materializedtruthstate">84. Prior Candidate Review — MaterializedTruthState</h1>
+<p>Prior status:</p>
+<pre><code>Strong Candidate Core
+</code></pre>
+<p>Intent result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Current state may be a materialization of governing Intent.</p>
+<p>Materialization can:</p>
+<pre><code>converge
+Drift
+lag
+fail
+recover
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>promote during consolidation.
+</code></pre>
+<hr>
+<h1 id="85-prior-candidate-review-authorityrelationship">85. Prior Candidate Review — AuthorityRelationship</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Intent result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Authority determines:</p>
+<pre><code>who may declare desired state
+</code></pre>
+<p>and potentially:</p>
+<pre><code>who may perform Correction
+</code></pre>
+<p>These may be distinct relationships.</p>
+<p>Recommendation:</p>
+<pre><code>promote during consolidation.
+</code></pre>
+<hr>
+<h1 id="86-prior-candidate-review-regimeepoch">86. Prior Candidate Review — RegimeEpoch</h1>
+<p>Prior status:</p>
+<pre><code>strong candidate
+</code></pre>
+<p>Intent result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Desired-state generation/version behaves similarly to an Intent Epoch.</p>
+<p>Recommendation:</p>
+<pre><code>retain candidate.
+</code></pre>
+<p>Crosswalk #9 may test observational epochs/versioning differently.</p>
+<hr>
+<h1 id="87-prior-candidate-review-domain-result-vs-qualification">87. Prior Candidate Review — Domain Result vs Qualification</h1>
+<p>Prior status:</p>
+<pre><code>strongly supported
+</code></pre>
+<p>Intent result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Example:</p>
+<pre><code>qualification:
+  operationally_accepted
+
+domain_result:
+  converged: false
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>promote during consolidation.
+</code></pre>
+<hr>
+<h1 id="88-new-candidate-truthcomparison">88. New Candidate — TruthComparison</h1>
+<p>Desired-state systems introduce the strongest evidence yet for:</p>
+<pre><code>TruthComparison
+</code></pre>
+<p>Definition:</p>
+<blockquote>
+<p><strong>An evaluated relationship between two or more existing Truth States.</strong></p>
+</blockquote>
+<p>Potential uses:</p>
+<pre><code>Intent vs State
+
+Expected vs Observed
+
+Prior vs Current
+
+Committed vs Materialized
+
+Source A vs Source B
+</code></pre>
+<p>Potential fields:</p>
+<pre><code>comparison_id
+
+left_truth_state_id
+
+right_truth_state_id
+
+comparison_type
+
+regime_id
+
+drift_state_id
+
+coherence_state_id
+
+acceptance_rule_id
+
+domain_result
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="89-new-candidate-crossclassdrift">89. New Candidate — CrossClassDrift</h1>
+<p>TruthComparison enables:</p>
+<pre><code>Drift
+</code></pre>
+<p>across:</p>
+<pre><code>different Truth Classes
+</code></pre>
+<p>rather than only within one class.</p>
+<p>Example:</p>
+<pre><code>Intent
+  vs
+State
+</code></pre>
+<p>This suggests DriftState may need references to:</p>
+<pre><code>baseline_truth_state_id
+
+compared_truth_state_id
+</code></pre>
+<p>rather than merely embedding:</p>
+<pre><code>local_value
+observed_value
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="90-new-candidate-reconciliation-relationship">90. New Candidate — Reconciliation Relationship</h1>
+<p>A Correction action attempts to reduce Drift between:</p>
+<pre><code>desired
+</code></pre>
+<p>and:</p>
+<pre><code>current
+</code></pre>
+<p>Potential relation:</p>
+<pre><code>ReconciliationRelationship
+</code></pre>
+<p>However, this may be representable using:</p>
+<pre><code>CorrectionPolicy
+Transactional Truth
+Lineage edges
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>do not create new core entity
+</code></pre>
+<p>Use relationship semantics:</p>
+<pre><code>correction_requested
+correction_committed
+reconciles_toward
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_RELATION
+</code></pre>
+<hr>
+<h1 id="91-new-candidate-intentepoch">91. New Candidate — IntentEpoch</h1>
+<p>Intent version/generation is useful enough to preserve.</p>
+<p>However, the broader:</p>
+<pre><code>RegimeEpoch
+</code></pre>
+<p>candidate may already cover it.</p>
+<p>Recommendation:</p>
+<pre><code>use RegimeEpoch or ReferenceBasis version
+</code></pre>
+<p>rather than creating IntentEpoch as a separate core entity.</p>
+<p>Status:</p>
+<pre><code>DOMAIN-SPECIFIC SPECIALIZATION
+</code></pre>
+<hr>
+<h1 id="92-architecture-refinement-1-truth-states-can-become-evidence">92. Architecture Refinement #1 — Truth States Can Become Evidence</h1>
+<p>Desired-state comparison demonstrates:</p>
+<pre><code>Truth State
+  ↓
+later Evaluation
+</code></pre>
+<p>An earlier Truth State may become a referenced input into a derived evaluation.</p>
+<p>This does not mean:</p>
+<pre><code>Truth State
+  =
+raw Evidence
+</code></pre>
+<p>But it means:</p>
+<blockquote>
+<p><strong>Evaluated truth can become qualified upstream evidence for another Claim.</strong></p>
+</blockquote>
+<p>Potential generalized model:</p>
+<pre><code>EvidenceReference
+  may reference
+prior TruthState
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>This is a significant recursive capability.</p>
+<hr>
+<h1 id="93-architecture-refinement-2-provenance-must-survive-composition">93. Architecture Refinement #2 — Provenance Must Survive Composition</h1>
+<p>If:</p>
+<pre><code>Intent Truth State
+</code></pre>
+<p>and:</p>
+<pre><code>State Truth State
+</code></pre>
+<p>feed:</p>
+<pre><code>TruthComparison
+</code></pre>
+<p>then the resulting comparison must retain lineage back through both.</p>
+<p>Conceptually:</p>
+<pre><code>Intent Evidence
+     ↓
+Intent Truth State
+         \
+          \
+           → Comparison Truth State
+          /
+         /
+State Evidence
+     ↓
+State Truth State
+</code></pre>
+<p>The derived state's Lineage is therefore multi-parent.</p>
+<p>The existing Lineage graph supports this structurally.</p>
+<p>This validates graph-based provenance strongly.</p>
+<hr>
+<h1 id="94-architecture-refinement-3-drift-should-reference-truth-states">94. Architecture Refinement #3 — Drift Should Reference Truth States</h1>
+<p>Current Drift model includes:</p>
+<pre><code>baseline_reference
+local_value
+observed_value
+</code></pre>
+<p>Crosswalk #8 suggests stronger references:</p>
+<pre><code>baseline_truth_state_id
+compared_truth_state_id
+</code></pre>
+<p>Potentially:</p>
+<pre><code>drift_relationship_id
+</code></pre>
+<p>This would allow Drift to remain connected to the evaluations that produced each side.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="95-architecture-refinement-4-correction-must-reference-desired-relationship">95. Architecture Refinement #4 — Correction Must Reference Desired Relationship</h1>
+<p>Correction currently attaches to TruthState.</p>
+<p>Desired-state systems suggest Correction may more precisely target:</p>
+<pre><code>a Drift relationship
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>TruthComparison
+    ↓
+Drift
+    ↓
+CorrectionPolicy
+    ↓
+Transaction
+    ↓
+New State
+</code></pre>
+<p>This is more precise than:</p>
+<pre><code>TruthState → Correction
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>review during consolidation.
+</code></pre>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_CHALLENGE
+</code></pre>
+<hr>
+<h1 id="96-architecture-refinement-5-intent-is-not-automatically-authoritative">96. Architecture Refinement #5 — Intent Is Not Automatically Authoritative</h1>
+<p>A declaration becomes governing Intent only if:</p>
+<pre><code>Source
+AuthorityRelationship
+ReferenceBasis
+Regime
+AcceptanceRule
+</code></pre>
+<p>support it.</p>
+<p>This prevents the Truth Service from treating:</p>
+<pre><code>any proposed desired state
+</code></pre>
+<p>as:</p>
+<pre><code>canonical Intent
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE principle
+</code></pre>
+<hr>
+<h1 id="97-architecture-refinement-6-convergence-is-a-derived-truth-claim">97. Architecture Refinement #6 — Convergence Is a Derived Truth Claim</h1>
+<p>Instead of treating convergence as hidden controller state, the Truth Service may represent:</p>
+<pre><code>Claim:
+  "Current State sufficiently matches Intent."
+</code></pre>
+<p>Inputs:</p>
+<pre><code>Intent Truth State
+Current State Truth State
+</code></pre>
+<p>Evaluation:</p>
+<pre><code>TruthComparison
+Drift
+AcceptanceRule
+</code></pre>
+<p>Result:</p>
+<pre><code>converged:
+  true / false / partial / indeterminate
+</code></pre>
+<p>This is a powerful generalized pattern.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="98-architecture-refinement-7-the-truth-service-is-becoming-recursive">98. Architecture Refinement #7 — The Truth Service Is Becoming Recursive</h1>
+<p>The original model was roughly:</p>
+<pre><code>Evidence
+  ↓
+Truth State
+</code></pre>
+<p>Crosswalk #8 introduces:</p>
+<pre><code>Evidence
+  ↓
+Truth State A
+      \
+       \
+        → Comparison
+       /
+      /
+Evidence
+  ↓
+Truth State B
+      ↓
+Derived Truth State C
+</code></pre>
+<p>Therefore the system may form:</p>
+<pre><code>DAG-like Truth Lineage
+</code></pre>
+<p>rather than:</p>
+<pre><code>one-shot evaluations
+</code></pre>
+<p>This is a major architectural finding.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="99-architecture-refinement-8-feedback-must-not-become-circular-justification">99. Architecture Refinement #8 — Feedback Must Not Become Circular Justification</h1>
+<p>A recursive Truth Service carries risk.</p>
+<p>Suppose:</p>
+<pre><code>Truth State A
+  derived from B
+</code></pre>
+<p>while:</p>
+<pre><code>Truth State B
+  derived from A
+</code></pre>
+<p>without independent grounding.</p>
+<p>The system could create:</p>
+<pre><code>self-supporting Coherence
+</code></pre>
+<p>with no external or procedural basis.</p>
+<p>Therefore recursive composition requires:</p>
+<ul>
+<li>Lineage cycle detection</li>
+<li>ReferenceBasis preservation</li>
+<li>independent Evidence visibility</li>
+<li>derived-state labeling</li>
+</ul>
+<p>This is an important new constraint.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE_GAP
+</code></pre>
+<hr>
+<h1 id="100-circular-truth-risk">100. Circular Truth Risk</h1>
+<p>Potential anti-pattern:</p>
+<pre><code>Claim A supported by Claim B
+
+Claim B supported by Claim A
+</code></pre>
+<p>Result:</p>
+<pre><code>apparent corroboration
+</code></pre>
+<p>Actual structure:</p>
+<pre><code>closed Evidence loop
+</code></pre>
+<p>No independent grounding exists.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Lineage cycles must not automatically increase Coherence.</strong></p>
+</blockquote>
+<p>This is likely important far beyond Intent Truth.</p>
+<p>Potential later relevance:</p>
+<pre><code>misinformation loops
+circular citations
+model-generated evidence
+mirrored documentation
+duplicated telemetry
+</code></pre>
+<p>This deserves eventual explicit testing.</p>
+<hr>
+<h1 id="101-independent-grounding">101. Independent Grounding</h1>
+<p>Recursive derived Truth States should preserve:</p>
+<pre><code>ultimate ReferenceBasis
+</code></pre>
+<p>and:</p>
+<pre><code>independent raw / governed Evidence
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Derived Truth
+     ↓
+Parent Truth States
+     ↓
+Evidence Graph
+     ↓
+Reference Basis
+</code></pre>
+<p>The Truth Service should be able to determine whether two derived states ultimately depend on:</p>
+<pre><code>one shared Source
+</code></pre>
+<p>or:</p>
+<pre><code>independent Sources
+</code></pre>
+<p>This extends the original Coherence concerns significantly.</p>
+<hr>
+<h1 id="102-scoring-boundary">102. Scoring Boundary</h1>
+<p>The scoring boundary for this crosswalk is:</p>
+<pre><code>System:
+  Declarative Desired-State / Reconciliation Systems
+
+Primary Reference Case:
+  Kubernetes Controllers
+
+Primary Truth Class:
+  Intent Truth
+
+Evaluated Scope:
+  desired-state declaration
+  current-state observation
+  controller comparison
+  corrective action
+  repeated control-loop evaluation
+
+Primary Evidence:
+  Official Kubernetes controller documentation
+
+Deferred Scope:
+  vendor-specific operators
+  GitOps products
+  configuration-management products
+  admission-control details
+  scheduler internals
+  storage implementation
+  individual controller-specific algorithms
+</code></pre>
+<p>The crosswalk evaluates the desired-state control pattern rather than every Kubernetes subsystem.</p>
+<hr>
+<h1 id="103-preliminary-scoring-status">103. Preliminary Scoring Status</h1>
+<p>Current score status:</p>
+<pre><code>provisional
+</code></pre>
+<p>Likely structural strengths include:</p>
+<ul>
+<li>Drift Detection</li>
+<li>Freshness / Revalidation</li>
+<li>Correction Discipline</li>
+<li>Regime Awareness</li>
+<li>Coherence Detection</li>
+</ul>
+<p>Areas requiring careful interpretation include:</p>
+<ul>
+<li>Reference Basis Quality</li>
+<li>Lineage Visibility</li>
+<li>Evidence Quality</li>
+<li>Paradox Handling</li>
+<li>Failure Transparency</li>
+</ul>
+<p>The score should follow explicit evidence.</p>
+<hr>
+<h1 id="104-provisional-scorecard-template">104. Provisional Scorecard Template</h1>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score</th>
+<th>Delegation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference Basis Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Evidence Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+<td>Deferred</td>
+</tr>
+</tbody>
+</table>
+<p>This crosswalk adopts the currently recommended rubric terminology:</p>
+<pre><code>Reference Basis Quality
+</code></pre>
+<p>and:</p>
+<pre><code>Evidence Quality
+</code></pre>
+<p>while recognizing that formal rubric versioning should occur during consolidation.</p>
+<hr>
+<h1 id="105-rubric-validation-reference-basis-quality">105. Rubric Validation — Reference Basis Quality</h1>
+<p>Desired-State systems strongly support the proposed rename:</p>
+<pre><code>Anchor Quality
+  ↓
+Reference Basis Quality
+</code></pre>
+<p>The desired-state declaration functions as a governing reference without resembling:</p>
+<pre><code>external physical truth Anchor
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Reference Basis
+</code></pre>
+<p>is the more general concept.</p>
+<p>Status:</p>
+<pre><code>RUBRIC REVISION STRONGLY SUPPORTED
+</code></pre>
+<hr>
+<h1 id="106-rubric-validation-evidence-quality">106. Rubric Validation — Evidence Quality</h1>
+<p>Desired-State systems also support:</p>
+<pre><code>Evidence Quality
+</code></pre>
+<p>rather than:</p>
+<pre><code>Observation Quality
+</code></pre>
+<p>because the relevant inputs include:</p>
+<pre><code>Declaration
+Observation
+State representation
+status
+</code></pre>
+<p>Status:</p>
+<pre><code>RUBRIC REVISION STRONGLY SUPPORTED
+</code></pre>
+<p>The rubric should likely be formally versioned after Crosswalk #10.</p>
+<hr>
+<h1 id="107-crosswalk-8-findings">107. Crosswalk #8 Findings</h1>
+<h2 id="finding-1-intent-truth-is-distinct-from-state-truth">Finding 1 — Intent Truth Is Distinct from State Truth</h2>
+<p>What should exist and what currently exists can both be coherent while differing.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-2-drift-can-exist-between-truth-classes">Finding 2 — Drift Can Exist Between Truth Classes</h2>
+<p>Intent Truth and State Truth can be compared directly.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-3-drift-is-an-operational-signal">Finding 3 — Drift Is an Operational Signal</h2>
+<p>Mismatch can activate Correction without implying that either input Truth State is malformed.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-4-desired-state-is-constituted-by-authorized-declaration">Finding 4 — Desired State Is Constituted by Authorized Declaration</h2>
+<p>Intent may be established through valid declaration rather than discovered externally.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-5-declaration-is-a-distinct-evidence-type">Finding 5 — Declaration Is a Distinct Evidence Type</h2>
+<p>Evidence is broader than Observation.</p>
+<pre><code>Status:
+  CANDIDATE_CORE — strengthened
+</code></pre>
+<h2 id="finding-6-correction-does-not-establish-success">Finding 6 — Correction Does Not Establish Success</h2>
+<p>The result of Correction must be observed and re-evaluated.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-7-convergence-is-not-permanent">Finding 7 — Convergence Is Not Permanent</h2>
+<p>Continued Revalidation remains necessary after alignment.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-8-drift-can-originate-from-the-reference-side">Finding 8 — Drift Can Originate from the Reference Side</h2>
+<p>Intent changes may create new Drift without current-state mutation.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<h2 id="finding-9-truth-states-can-become-inputs-to-derived-evaluations">Finding 9 — Truth States Can Become Inputs to Derived Evaluations</h2>
+<p>Intent and State Truth States can feed a comparison Claim.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-10-truth-comparison-requires-multi-parent-lineage">Finding 10 — Truth Comparison Requires Multi-Parent Lineage</h2>
+<p>Derived states must retain provenance through all parent Truth States.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-11-recursive-truth-requires-cycle-protection">Finding 11 — Recursive Truth Requires Cycle Protection</h2>
+<p>Self-supporting derived Truth loops must not masquerade as independent Coherence.</p>
+<pre><code>Status:
+  ARCHITECTURE_GAP
+</code></pre>
+<h2 id="finding-12-recovery-revalidation-and-reconciliation-are-distinct">Finding 12 — Recovery, Revalidation, and Reconciliation Are Distinct</h2>
+<p>Each answers a different operational question.</p>
+<pre><code>Status:
+  CANDIDATE_CORE concept
+</code></pre>
+<h2 id="finding-13-convergence-is-a-derived-truth-relationship">Finding 13 — Convergence Is a Derived Truth Relationship</h2>
+<p>It can be represented explicitly rather than remaining hidden controller state.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-14-stable-intent-can-drift-from-state-and-stable-state-can-drift-from-new-intent">Finding 14 — Stable Intent Can Drift from State and Stable State Can Drift from New Intent</h2>
+<p>Drift requires explicit comparison direction and causal context.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="108-eight-crosswalk-architecture-check">108. Eight-Crosswalk Architecture Check</h1>
+<p>After:</p>
+<pre><code>NTP
+DNS
+IAM
+PKI
+Policy / Authorization
+Distributed State
+Transactional Systems
+Desired-State Systems
+</code></pre>
+<p>a generalized kernel is becoming increasingly stable.</p>
+<h2 id="strong-core-candidates">Strong Core Candidates</h2>
+<pre><code>Claim
+
+Truth Class
+
+Subject / Target
+
+Regime
+
+ReferenceBasis
+
+EvidenceItem
+
+Entity / Participant
+
+Role
+
+AuthorityRelationship
+
+Lineage Graph
+
+Qualification
+
+AcceptanceRule
+
+TruthComparison
+
+domain-semantic Coherence
+
+multi-dimensional Drift
+
+Paradox
+
+domain result
+
+Truth-State qualification
+
+MaterializedTruthState
+
+Correction / Action Policy
+
+Revalidation
+
+immutable history
+</code></pre>
+<h2 id="strong-relationship-semantics">Strong Relationship Semantics</h2>
+<pre><code>derives_from
+
+delegated_by
+
+evaluated_against
+
+precedes
+
+committed_as
+
+materialized_as
+
+supersedes
+
+compensates
+
+reconstructs_from
+
+drifted_from
+
+reconciles_toward
+</code></pre>
+<h2 id="strongly-stable-distinctions">Strongly Stable Distinctions</h2>
+<pre><code>Evidence ≠ Truth State
+
+Intent ≠ State
+
+Identity ≠ Authority
+
+Authority ≠ Correctness
+
+Proposal ≠ Commitment
+
+Commitment ≠ Materialization
+
+Commitment ≠ Finality
+
+Evaluation ≠ Action
+
+Correction Attempt ≠ Correction Success
+
+Recovery ≠ Revalidation
+
+Revalidation ≠ Reconciliation
+
+Negative Domain Result ≠ Evaluation Failure
+
+State Equality ≠ Lineage Equality
+
+Stable Value ≠ Stable Structure
+</code></pre>
+<p>The original NTP analogy has now evolved into a genuinely multi-domain architecture.</p>
+<hr>
+<h1 id="109-emerging-architecture-after-intent-truth">109. Emerging Architecture After Intent Truth</h1>
+<p>A provisional architecture now resembles:</p>
+<pre><code>SUBJECT / TARGET
+      ↓
+CLAIM / DECLARATION / PROPOSAL
+      ↓
+   TRUTH CLASS
+      ↓
+ INTENDED USE
+      ↓
+    REGIME
+      ↓
+REFERENCE BASIS
+      ↓
+AUTHORITY RELATIONSHIP
+      ↓
+  EVIDENCE GRAPH
+      ↓
+    LINEAGE
+      ↓
+ QUALIFICATION
+      ↓
+ACCEPTANCE RULE
+      ↓
+  TRUTH STATE
+      │
+      ├───────────────┐
+      │               │
+      ▼               ▼
+TRUTH STATE       TRUTH STATE
+   A                  B
+      \               /
+       \             /
+        ▼           ▼
+        TRUTH COMPARISON
+               ↓
+         COHERENCE
+               ↓
+            DRIFT
+               ↓
+           PARADOX
+               ↓
+         DOMAIN RESULT
+               ↓
+          CORRECTION
+               ↓
+      TRANSACTION / ACTION
+               ↓
+        MATERIALIZATION
+               ↓
+          OBSERVATION
+               ↓
+         REVALIDATION
+               │
+               └──────────► LOOP
+</code></pre>
+<p>The system is no longer fundamentally linear.</p>
+<p>It is:</p>
+<pre><code>graph-structured
+recursive
+feedback-capable
+</code></pre>
+<p>That change should be confronted explicitly during consolidation.</p>
+<hr>
+<h1 id="110-next-crosswalk-challenge">110. Next Crosswalk Challenge</h1>
+<p>Crosswalk #9 examines:</p>
+<pre><code>Telemetry
+  ↓
+Observational Truth
+</code></pre>
+<p>The governing question becomes:</p>
+<blockquote>
+<p><strong>What was actually observed?</strong></p>
+</blockquote>
+<p>This is the correct next challenge because Crosswalk #8 relies on current-state Observation to determine Drift.</p>
+<p>Telemetry will pressure:</p>
+<pre><code>EvidenceItem
+
+Observer
+
+StateView
+
+sampling
+
+missing Evidence
+
+delayed Evidence
+
+correlation
+
+aggregation
+
+transformation Lineage
+
+TruthComparison
+
+recursive derived Truth
+</code></pre>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Can the Truth Service preserve the difference between reality, observation, sampled evidence, derived telemetry, and reconstructed operational narrative without treating missing observation as evidence of absence?</strong></p>
+</blockquote>
+<p>That should be another substantial test of the model.</p>
+<hr>
+<h1 id="111-canonical-intent-truth-statement">111. Canonical Intent Truth Statement</h1>
+<blockquote>
+<p><strong>Intent Truth is not a description of what currently exists. It is a Regime-qualified declaration of the target state that an authorized system intends to establish or maintain.</strong></p>
+</blockquote>
+<p>Intent Truth becomes operational through relationships among:</p>
+<pre><code>Declaration
+
+Authority
+
+Reference Basis
+
+Current State
+
+Observation
+
+Drift
+
+Correction
+
+Transaction
+
+Materialization
+
+Revalidation
+</code></pre>
+<p>The declared target may remain true as Intent even while current State differs.</p>
+<p>The difference is information.</p>
+<hr>
+<h1 id="112-canonical-crosswalk-finding">112. Canonical Crosswalk Finding</h1>
+<p>Crosswalk #8 demonstrates that:</p>
+<blockquote>
+<p><strong>Truth can disagree with Truth without contradiction when the Truth Classes describe different structural relationships.</strong></p>
+</blockquote>
+<p>The statements:</p>
+<pre><code>"The desired replica count is 3."
+</code></pre>
+<p>and:</p>
+<pre><code>"The current replica count is 2."
+</code></pre>
+<p>can both be completely valid.</p>
+<p>Their difference is:</p>
+<pre><code>Drift
+</code></pre>
+<p>not:</p>
+<pre><code>Paradox
+</code></pre>
+<p>That finding clarifies one of the deepest architectural ideas in Resonance Truth:</p>
+<pre><code>Paradox
+</code></pre>
+<p>should be reserved for unresolved incompatibility within the relevant structural relationship.</p>
+<p>Difference alone is insufficient.</p>
+<p>Desired-state systems also transform the Truth Service architecture from:</p>
+<pre><code>evaluate Evidence
+  ↓
+produce Truth State
+</code></pre>
+<p>into:</p>
+<pre><code>produce Truth States
+  ↓
+compare Truth States
+  ↓
+derive Drift
+  ↓
+act
+  ↓
+observe again
+  ↓
+produce new Truth States
+</code></pre>
+<p>The architecture is becoming recursive and cyclical.</p>
+<p>That creates new power.</p>
+<p>It also creates a new requirement:</p>
+<blockquote>
+<p><strong>Derived Truth must never be allowed to manufacture independent support by recursively citing itself.</strong></p>
+</blockquote>
+<p>Lineage must remain visible all the way back to grounding Evidence and governing Reference Bases.</p>
+<hr>
+<h1 id="113-references">113. References</h1>
+<p>Primary technical reference:</p>
+<pre><code>Kubernetes Documentation
+Controllers
+</code></pre>
+<p>The official Kubernetes documentation describes controllers as control loops that watch cluster state and make or request changes where needed. Resource specifications represent desired state, and controllers work to move current state closer to that desired state. 【1-99d4a5】</p>
+<p>This reference is used to ground the desired-state / controller / reconciliation mechanisms in this crosswalk.</p>
+<p>RTT terminology, Intent Truth, Cross-Class Drift, TruthComparison, ReferenceBasis, MaterializedTruthState, recursive Truth-State composition, Lineage-cycle risk, and proposed architectural generalizations remain the analytical contribution of Resonance Truth.</p>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>Crosswalk #1 asked:</p>
+<pre><code>When?
+</code></pre>
+<p>Crosswalk #2 asked:</p>
+<pre><code>Where?
+</code></pre>
+<p>Crosswalk #3 asked:</p>
+<pre><code>Who?
+</code></pre>
+<p>Crosswalk #4 asked:</p>
+<pre><code>Is it intact?
+</code></pre>
+<p>Crosswalk #5 asked:</p>
+<pre><code>May it act?
+</code></pre>
+<p>Crosswalk #6 asked:</p>
+<pre><code>What state did the system accept?
+</code></pre>
+<p>Crosswalk #7 asked:</p>
+<pre><code>What became committed?
+</code></pre>
+<p>Crosswalk #8 asks:</p>
+<pre><code>What should the system look like?
+</code></pre>
+<p>And desired-state systems answer by keeping two things separate:</p>
+<pre><code>WHAT SHOULD BE
+</code></pre>
+<p>and:</p>
+<pre><code>WHAT IS
+</code></pre>
+<p>Then they preserve the difference long enough to do something useful with it.</p>
+<p>That gives Resonance Truth a powerful operational pattern:</p>
+<pre><code>INTENT
+  ↓
+OBSERVATION
+  ↓
+COMPARISON
+  ↓
+DRIFT
+  ↓
+CORRECTION
+  ↓
+TRANSACTION
+  ↓
+STATE
+  ↓
+OBSERVATION
+  ↓
+REVALIDATION
+</code></pre>
+<p>The cycle does not end when the states agree.</p>
+<p>Agreement is only the current condition.</p>
+<p>The world can change again.</p>
+<p><strong>NTP taught truth to synchronize.</strong></p>
+<p><strong>DNS taught it to resolve.</strong></p>
+<p><strong>IAM taught it to identify.</strong></p>
+<p><strong>PKI taught it to validate Lineage.</strong></p>
+<p><strong>Policy taught it to ask permission.</strong></p>
+<p><strong>Distributed systems taught it to establish accepted state.</strong></p>
+<p><strong>Transactions taught it to preserve committed history.</strong></p>
+<p><strong>Desired-state systems teach it something every sysadmin already knows: the configuration says what should be happening, and the machine gets a vote about what actually is.</strong></p>
+<p><strong>Crosswalk #9 now listens to the machine.</strong></p>
   </main>
 </body>
 </html>

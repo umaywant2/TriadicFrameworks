@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/fixtures/README.md">
-  <title>README</title>
+  <title>Resonance Truth — Fixtures</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1610 @@
   </aside>
 
   <main>
-<p>. </p>
+<h1 id="resonance-truth-fixtures">Resonance Truth — Fixtures</h1>
+<blockquote>
+<p><strong>Deterministic reference scenarios for the RTT Resonance Truth Service</strong></p>
+</blockquote>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Fixture Index and Contract<br>
+<strong>Framework:</strong> Resonance-Time Theory (RTT)<br>
+<strong>Status:</strong> Reference Implementation / Deterministic Test Data<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This directory contains deterministic fixtures used to exercise the RTT Resonance Truth Service.</p>
+<p>Fixtures provide controlled operational scenarios containing known:</p>
+<ul>
+<li>Claims</li>
+<li>Truth Classes</li>
+<li>Regimes</li>
+<li>Reference relationships</li>
+<li>Sources</li>
+<li>Evidence</li>
+<li>Lineage</li>
+<li>expected qualification behavior</li>
+<li>expected Coherence conditions</li>
+<li>expected Drift</li>
+<li>expected Paradox behavior</li>
+<li>expected Truth-State outcomes</li>
+<li>expected Correction behavior</li>
+<li>expected Revalidation behavior</li>
+</ul>
+<p>The governing principle is:</p>
+<blockquote>
+<p><strong>A fixture describes a truth environment. A test asks whether the implementation interprets that environment correctly.</strong></p>
+</blockquote>
+<p>Fixtures should therefore remain declarative.</p>
+<p>They define:</p>
+<pre><code>what exists
+
+what was observed
+
+where Evidence came from
+
+what Regime applies
+
+what relationships are known
+</code></pre>
+<p>Tests determine whether the Truth Service produces the expected operational interpretation.</p>
+<hr>
+<h1 id="1-why-fixtures-exist">1. Why Fixtures Exist</h1>
+<p>The first implementation should not begin by depending on live external infrastructure.</p>
+<p>Live systems introduce variables such as:</p>
+<ul>
+<li>network availability</li>
+<li>changing remote state</li>
+<li>timing variability</li>
+<li>Source availability</li>
+<li>authentication</li>
+<li>environmental conditions</li>
+<li>implementation differences</li>
+<li>nondeterministic failure</li>
+</ul>
+<p>Those conditions are important later.</p>
+<p>They are undesirable when initially testing the Truth-Service model itself.</p>
+<p>Deterministic fixtures allow the architecture to be tested independently from environmental noise.</p>
+<p>The initial progression is:</p>
+<pre><code>STATIC FIXTURE
+     ↓
+VALIDATE STRUCTURE
+     ↓
+RUN EVALUATION
+     ↓
+INSPECT RESULT
+     ↓
+COMPARE EXPECTATION
+     ↓
+REFINE MODEL
+     ↓
+LATER TEST LIVE SYSTEMS
+</code></pre>
+<hr>
+<h1 id="2-fixture-philosophy">2. Fixture Philosophy</h1>
+<p>A useful fixture should answer:</p>
+<blockquote>
+<p><strong>What exactly is the Truth Service being asked to evaluate?</strong></p>
+</blockquote>
+<p>Each fixture should preserve enough structure to reconstruct the scenario without relying on hidden assumptions.</p>
+<p>A fixture should make visible:</p>
+<pre><code>Claim
+  ↓
+Truth Class
+  ↓
+Regime
+  ↓
+Reference Basis
+  ↓
+Evidence
+  ↓
+Source / Actor
+  ↓
+Lineage
+  ↓
+Expected Structural Condition
+</code></pre>
+<p>It should not simply contain:</p>
+<pre><code>expected_answer: true
+</code></pre>
+<p>That would erase the architecture we are trying to test.</p>
+<hr>
+<h1 id="3-fixture-vs-test">3. Fixture vs Test</h1>
+<p>Fixtures and tests serve different purposes.</p>
+<h2 id="fixture">Fixture</h2>
+<p>A fixture declares:</p>
+<blockquote>
+<p><strong>This is the scenario.</strong></p>
+</blockquote>
+<p>Example:</p>
+<pre><code>three qualified temporal Sources
+provide mutually compatible Observations
+</code></pre>
+<h2 id="test">Test</h2>
+<p>A test asks:</p>
+<blockquote>
+<p><strong>Does the implementation classify that scenario correctly?</strong></p>
+</blockquote>
+<p>Example:</p>
+<pre><code>expected Coherence:
+  coherent
+
+expected Truth State:
+  operationally_accepted
+</code></pre>
+<p>The distinction is:</p>
+<pre><code>FIXTURE
+  =
+controlled evidence environment
+
+TEST
+  =
+behavioral assertion about that environment
+</code></pre>
+<hr>
+<h1 id="4-fixture-vs-example">4. Fixture vs Example</h1>
+<p>Fixtures should also remain distinct from explanatory examples.</p>
+<h2 id="example">Example</h2>
+<p>Optimized for:</p>
+<pre><code>human understanding
+</code></pre>
+<p>May simplify or omit implementation detail.</p>
+<h2 id="fixture_1">Fixture</h2>
+<p>Optimized for:</p>
+<pre><code>deterministic evaluation
+</code></pre>
+<p>Should contain enough structure for machine execution and repeatable testing.</p>
+<p>A documentation example may inspire a fixture.</p>
+<p>The fixture becomes the executable representation.</p>
+<hr>
+<h1 id="5-fixture-requirements">5. Fixture Requirements</h1>
+<p>Every fixture should identify, either directly or through clearly referenced common objects:</p>
+<ol>
+<li>fixture identifier</li>
+<li>fixture description</li>
+<li>primary Truth Class</li>
+<li>Claim</li>
+<li>Regime</li>
+<li>applicable reference relationships</li>
+<li>Sources / participants</li>
+<li>Evidence</li>
+<li>Lineage</li>
+<li>Evaluation time or evaluation context</li>
+<li>expected structural properties</li>
+<li>expected outcome</li>
+</ol>
+<p>Fixtures should avoid unnecessary fields.</p>
+<p>The goal is:</p>
+<blockquote>
+<p><strong>minimum complete structure</strong></p>
+</blockquote>
+<p>not:</p>
+<blockquote>
+<p><strong>maximum possible serialization</strong></p>
+</blockquote>
+<hr>
+<h1 id="6-determinism">6. Determinism</h1>
+<p>A deterministic fixture should produce the same logical evaluation result when processed by the same evaluator version and configuration.</p>
+<p>Fixture behavior should not depend upon:</p>
+<ul>
+<li>current wall-clock time unless explicitly injected</li>
+<li>random values</li>
+<li>live network responses</li>
+<li>external DNS</li>
+<li>external NTP servers</li>
+<li>remote APIs</li>
+<li>mutable third-party services</li>
+</ul>
+<p>Time-dependent fixtures should use explicit timestamps.</p>
+<p>Example:</p>
+<pre><code>evaluation_time:
+  fixed timestamp
+</code></pre>
+<p>rather than:</p>
+<pre><code>evaluation_time:
+  now
+</code></pre>
+<p>This makes:</p>
+<pre><code>freshness
+expiration
+holdover
+Revalidation
+</code></pre>
+<p>reproducible.</p>
+<hr>
+<h1 id="7-expected-results">7. Expected Results</h1>
+<p>Expected behavior should remain separate from raw input Evidence where possible.</p>
+<p>Conceptually:</p>
+<pre><code>fixture:
+  input:
+    ...
+
+  expected:
+    ...
+</code></pre>
+<p>This prevents the evaluator from accidentally consuming:</p>
+<pre><code>expected result
+</code></pre>
+<p>as if it were:</p>
+<pre><code>Evidence.
+</code></pre>
+<p>Expected results may include:</p>
+<ul>
+<li>qualification status</li>
+<li>selected Evidence</li>
+<li>excluded Evidence</li>
+<li>Coherence</li>
+<li>Drift</li>
+<li>Paradox</li>
+<li>domain result</li>
+<li>Truth-State qualification</li>
+<li>Correction</li>
+<li>lifecycle transition</li>
+</ul>
+<p>Not every fixture needs every expectation.</p>
+<hr>
+<h1 id="8-explanation-requirement">8. Explanation Requirement</h1>
+<p>A fixture should not pass merely because:</p>
+<pre><code>actual.status == expected.status
+</code></pre>
+<p>The implementation should eventually be capable of explaining:</p>
+<blockquote>
+<p><strong>Why did this fixture produce this result?</strong></p>
+</blockquote>
+<p>Tests should therefore be able to inspect:</p>
+<ul>
+<li>qualification reasons</li>
+<li>participating Evidence</li>
+<li>excluded Evidence</li>
+<li>Coherence rationale</li>
+<li>Drift rationale</li>
+<li>Paradox rationale</li>
+<li>Regime rules</li>
+<li>synthesis rationale</li>
+</ul>
+<p>A deterministic answer without deterministic explanation is incomplete.</p>
+<hr>
+<h1 id="9-lineage-requirement">9. Lineage Requirement</h1>
+<p>Fixtures must preserve relevant Lineage.</p>
+<p>This is especially important when testing:</p>
+<ul>
+<li>Source independence</li>
+<li>shared upstream dependencies</li>
+<li>derivation</li>
+<li>transformations</li>
+<li>delegation</li>
+<li>committed history</li>
+<li>derived Evidence</li>
+</ul>
+<p>Two Evidence items that share one upstream origin should not automatically be treated as independent merely because they have different identifiers.</p>
+<p>Fixture design must make those relationships visible.</p>
+<hr>
+<h1 id="10-negative-results">10. Negative Results</h1>
+<p>A fixture may successfully produce a negative domain result.</p>
+<p>Examples include:</p>
+<pre><code>present:
+  false
+
+authorization:
+  deny
+
+committed:
+  false
+
+converged:
+  false
+</code></pre>
+<p>These do not automatically imply:</p>
+<pre><code>test failure
+</code></pre>
+<p>or:</p>
+<pre><code>Truth-State rejection
+</code></pre>
+<p>A Truth Service may coherently determine a negative result.</p>
+<p>The fixture contract therefore distinguishes:</p>
+<pre><code>DOMAIN RESULT
+</code></pre>
+<p>from:</p>
+<pre><code>TRUTH-STATE QUALIFICATION
+</code></pre>
+<hr>
+<h1 id="11-indeterminate-results">11. Indeterminate Results</h1>
+<p>A fixture may intentionally produce:</p>
+<pre><code>indeterminate
+</code></pre>
+<p>This should be treated as a successful expected result when the available Evidence does not support a stronger conclusion.</p>
+<p>Example:</p>
+<pre><code>no qualified Sources
+      ↓
+insufficient Evidence
+      ↓
+INDETERMINATE
+</code></pre>
+<p>A test must not require the evaluator to manufacture an accepted value.</p>
+<hr>
+<h1 id="12-evidence-gaps">12. Evidence Gaps</h1>
+<p>A fixture may intentionally contain missing Evidence.</p>
+<p>The fixture should distinguish:</p>
+<pre><code>qualified absence
+</code></pre>
+<p>from:</p>
+<pre><code>Evidence Gap
+</code></pre>
+<p>Example:</p>
+<pre><code>expected Evidence:
+  unavailable
+</code></pre>
+<p>does not automatically mean:</p>
+<pre><code>expected condition:
+  absent
+</code></pre>
+<p>When gaps are part of the scenario, the fixture should make them explicit.</p>
+<hr>
+<h1 id="13-crosswalk-derived-fixture-model">13. Crosswalk-Derived Fixture Model</h1>
+<p>The ten operational crosswalks introduced a generalized conceptual model containing:</p>
+<pre><code>Claim
+
+Truth Class
+
+Subject / Target
+
+Regime
+
+ReferenceBasis
+
+EvidenceItem
+
+Evidence Graph
+
+Entity / Role
+
+AuthorityRelationship
+
+Lineage
+
+Coverage
+
+Gap
+
+Qualification
+
+AcceptanceRule
+
+Coherence
+
+Drift
+
+Paradox
+
+Domain Result
+
+Truth-State Qualification
+
+TruthComparison
+
+Materialization
+
+Correction
+
+Revalidation
+</code></pre>
+<p>Not every fixture requires every concept.</p>
+<p>The fixture should include only the structures necessary to exercise the behavior being tested.</p>
+<hr>
+<h1 id="14-fixture-minimalism">14. Fixture Minimalism</h1>
+<p>Avoid fixtures that become miniature production databases.</p>
+<p>For example, a temporal Coherence fixture may require:</p>
+<pre><code>Claim
+Regime
+Reference
+three Sources
+three Observations
+Lineage
+expected Coherence
+</code></pre>
+<p>It may not require:</p>
+<pre><code>AuthorityRelationship
+TruthComparison
+Coverage
+Gap
+MaterializedTruthState
+</code></pre>
+<p>unless those concepts are part of the test.</p>
+<p>The rule is:</p>
+<blockquote>
+<p><strong>Include enough structure to make the result explainable, and no more than the scenario requires.</strong></p>
+</blockquote>
+<hr>
+<h1 id="15-initial-fixture-family-ntp">15. Initial Fixture Family — NTP</h1>
+<p>The first fixture family is:</p>
+<pre><code>fixtures/ntp/
+</code></pre>
+<p>NTP provides the initial deterministic reference implementation for:</p>
+<pre><code>Temporal Truth
+</code></pre>
+<p>The initial scenarios are:</p>
+<pre><code>coherent.json
+
+minor_drift.json
+
+outlier.json
+
+fragmented.json
+
+stale.json
+
+indeterminate.json
+</code></pre>
+<p>These fixtures exercise the foundational Truth-Service behaviors before additional reference systems are introduced into executable tests.</p>
+<hr>
+<h1 id="16-ntp-fixture-coherent">16. NTP Fixture — Coherent</h1>
+<h2 id="file">File</h2>
+<pre><code>ntp/coherent.json
+</code></pre>
+<h2 id="purpose_1">Purpose</h2>
+<p>Represents several qualified temporal Sources whose Observations form a coherent temporal field.</p>
+<p>Expected characteristics:</p>
+<pre><code>Sources:
+  multiple
+
+Evidence:
+  qualified
+
+Coherence:
+  coherent
+
+Drift:
+  bounded
+
+Paradox:
+  none material
+</code></pre>
+<p>Expected Truth-State qualification:</p>
+<pre><code>operationally_accepted
+</code></pre>
+<p>This is the baseline positive fixture.</p>
+<hr>
+<h1 id="17-ntp-fixture-minor-drift">17. NTP Fixture — Minor Drift</h1>
+<h2 id="file_1">File</h2>
+<pre><code>ntp/minor_drift.json
+</code></pre>
+<h2 id="purpose_2">Purpose</h2>
+<p>Represents coherent temporal Evidence while local temporal state differs modestly from the qualified observed state.</p>
+<p>Expected characteristics:</p>
+<pre><code>Evidence:
+  qualified
+
+Coherence:
+  coherent
+
+Drift:
+  present
+  bounded
+</code></pre>
+<p>Potential Correction:</p>
+<pre><code>gradual
+</code></pre>
+<p>or another Regime-defined bounded correction mode.</p>
+<p>The fixture tests:</p>
+<blockquote>
+<p><strong>Drift does not automatically imply loss of operational acceptance.</strong></p>
+</blockquote>
+<hr>
+<h1 id="18-ntp-fixture-outlier">18. NTP Fixture — Outlier</h1>
+<h2 id="file_2">File</h2>
+<pre><code>ntp/outlier.json
+</code></pre>
+<h2 id="purpose_3">Purpose</h2>
+<p>Represents an otherwise coherent Evidence field containing one materially divergent Source or Observation.</p>
+<p>Expected behavior:</p>
+<pre><code>preserve divergent Evidence
+
+identify primary coherent cluster
+
+evaluate Source independence
+
+avoid deleting dissent
+
+avoid treating simple majority as Truth automatically
+</code></pre>
+<p>Potential expected structure:</p>
+<pre><code>Coherence:
+  coherent or weakly_coherent
+
+dissent:
+  present
+</code></pre>
+<p>The final Truth-State qualification depends on the fixture's declared Regime.</p>
+<hr>
+<h1 id="19-ntp-fixture-fragmented">19. NTP Fixture — Fragmented</h1>
+<h2 id="file_3">File</h2>
+<pre><code>ntp/fragmented.json
+</code></pre>
+<h2 id="purpose_4">Purpose</h2>
+<p>Represents multiple meaningful Evidence clusters that cannot be safely collapsed into one temporal state.</p>
+<p>Potential structure:</p>
+<pre><code>Cluster A:
+  Source 1
+  Source 2
+
+Cluster B:
+  Source 3
+  Source 4
+</code></pre>
+<p>Expected Coherence:</p>
+<pre><code>fragmented
+</code></pre>
+<p>Potential Truth-State qualification:</p>
+<pre><code>contested
+</code></pre>
+<p>or:</p>
+<pre><code>indeterminate
+</code></pre>
+<p>depending on Regime.</p>
+<p>The fixture tests whether the implementation resists manufacturing certainty.</p>
+<hr>
+<h1 id="20-ntp-fixture-stale">20. NTP Fixture — Stale</h1>
+<h2 id="file_4">File</h2>
+<pre><code>ntp/stale.json
+</code></pre>
+<h2 id="purpose_5">Purpose</h2>
+<p>Represents previously usable temporal Evidence that no longer satisfies the applicable freshness requirement.</p>
+<p>Potential lifecycle:</p>
+<pre><code>operationally_accepted
+      ↓
+degraded
+      ↓
+held_over
+      ↓
+expired
+</code></pre>
+<p>The exact expected state belongs to the fixture's declared evaluation time and Regime.</p>
+<p>The fixture tests:</p>
+<pre><code>freshness
+aging
+uncertainty
+holdover
+expiration
+Revalidation
+</code></pre>
+<hr>
+<h1 id="21-ntp-fixture-indeterminate">21. NTP Fixture — Indeterminate</h1>
+<h2 id="file_5">File</h2>
+<pre><code>ntp/indeterminate.json
+</code></pre>
+<h2 id="purpose_6">Purpose</h2>
+<p>Represents a scenario in which no available Evidence can support a sufficiently qualified temporal state.</p>
+<p>Possible structure:</p>
+<pre><code>Evidence A:
+  expired
+
+Evidence B:
+  rejected
+
+Evidence C:
+  indeterminate
+</code></pre>
+<p>Expected:</p>
+<pre><code>selected Evidence:
+  none
+
+Coherence:
+  indeterminate
+
+Drift:
+  unknown
+
+Truth-State qualification:
+  indeterminate
+
+accepted value:
+  null
+</code></pre>
+<p>This fixture establishes one of the most important service invariants:</p>
+<blockquote>
+<p><strong>No qualified answer is a valid answer.</strong></p>
+</blockquote>
+<hr>
+<h1 id="22-expected-fixture-progression">22. Expected Fixture Progression</h1>
+<p>The initial NTP fixture family tests increasing structural difficulty:</p>
+<pre><code>COHERENT
+   ↓
+MINOR DRIFT
+   ↓
+OUTLIER
+   ↓
+FRAGMENTED
+   ↓
+STALE
+   ↓
+INDETERMINATE
+</code></pre>
+<p>This progression should not be interpreted as one mandatory runtime lifecycle.</p>
+<p>It is a test sequence covering different operational conditions.</p>
+<hr>
+<h1 id="23-fixture-naming">23. Fixture Naming</h1>
+<p>Fixture filenames should describe the structural condition being exercised.</p>
+<p>Preferred:</p>
+<pre><code>coherent.json
+
+fragmented.json
+
+stale.json
+</code></pre>
+<p>Avoid names such as:</p>
+<pre><code>test1.json
+
+sample2.json
+
+scenario_final_v3.json
+</code></pre>
+<p>The filename should tell a reader:</p>
+<blockquote>
+<p><strong>What condition is this fixture intended to demonstrate?</strong></p>
+</blockquote>
+<hr>
+<h1 id="24-fixture-identity">24. Fixture Identity</h1>
+<p>Each fixture should also contain a stable internal identifier.</p>
+<p>Example:</p>
+<pre><code>fixture_id:
+  ntp-coherent-001
+</code></pre>
+<p>The identifier should remain stable even if the filename later changes.</p>
+<p>Fixture identity may be referenced by:</p>
+<ul>
+<li>tests</li>
+<li>documentation</li>
+<li>expected-result files</li>
+<li>regression reports</li>
+</ul>
+<hr>
+<h1 id="25-fixture-metadata">25. Fixture Metadata</h1>
+<p>Useful fixture metadata may include:</p>
+<pre><code>fixture_id
+
+title
+
+description
+
+reference_system
+
+primary_truth_class
+
+fixture_version
+
+schema_version
+
+evaluator_version
+</code></pre>
+<p>Not every value must be present immediately.</p>
+<p>Avoid metadata that merely duplicates the whole fixture.</p>
+<hr>
+<h1 id="26-schema-version">26. Schema Version</h1>
+<p>Fixtures should eventually identify the schema revision against which they were authored.</p>
+<p>Example:</p>
+<pre><code>schema_version:
+  "0.2"
+</code></pre>
+<p>This will become particularly important because the ten-system crosswalk series changed the architecture beyond its original v0.1 assumptions.</p>
+<p>Schema versioning allows:</p>
+<pre><code>old fixture
+   ↓
+old model
+</code></pre>
+<p>and:</p>
+<pre><code>revised fixture
+   ↓
+revised model
+</code></pre>
+<p>to remain distinguishable.</p>
+<hr>
+<h1 id="27-fixture-version">27. Fixture Version</h1>
+<p>Fixture content may evolve independently of schema version.</p>
+<p>Therefore:</p>
+<pre><code>fixture_version
+</code></pre>
+<p>and:</p>
+<pre><code>schema_version
+</code></pre>
+<p>should remain distinct.</p>
+<p>Example:</p>
+<pre><code>fixture_version:
+  "1.1"
+
+schema_version:
+  "0.2"
+</code></pre>
+<p>A fixture may change because:</p>
+<ul>
+<li>Evidence was corrected</li>
+<li>expected behavior changed</li>
+<li>additional Lineage was added</li>
+<li>rationale improved</li>
+</ul>
+<p>without requiring a new global schema version.</p>
+<hr>
+<h1 id="28-regression-role">28. Regression Role</h1>
+<p>Once a fixture produces a stable expected result, it becomes a regression artifact.</p>
+<p>Future architecture or evaluator changes should ask:</p>
+<blockquote>
+<p><strong>Did this fixture's result change?</strong></p>
+</blockquote>
+<p>If yes:</p>
+<pre><code>expected architecture change?
+</code></pre>
+<p>or:</p>
+<pre><code>unintended regression?
+</code></pre>
+<p>The fixture therefore becomes part of model lineage.</p>
+<hr>
+<h1 id="29-fixture-change-discipline">29. Fixture Change Discipline</h1>
+<p>When a fixture changes materially, preserve:</p>
+<ul>
+<li>what changed</li>
+<li>why</li>
+<li>which expected outcomes changed</li>
+<li>which architecture revision motivated the change</li>
+</ul>
+<p>Do not quietly edit Evidence until a failing test disappears.</p>
+<p>The fixture exists to challenge the implementation.</p>
+<p>The implementation should not define the fixture retroactively.</p>
+<hr>
+<h1 id="30-crosswalk-lineage">30. Crosswalk Lineage</h1>
+<p>Fixtures should preserve connection to the research crosswalk that motivated them.</p>
+<p>For the NTP family:</p>
+<pre><code>../../crosswalks/01_ntp_temporal_truth.md
+</code></pre>
+<p>Conceptual progression:</p>
+<pre><code>Reference System
+      ↓
+Crosswalk
+      ↓
+Architectural Finding
+      ↓
+Fixture
+      ↓
+Test
+</code></pre>
+<p>This gives each executable scenario research Lineage.</p>
+<hr>
+<h1 id="31-fixture-independence">31. Fixture Independence</h1>
+<p>Some fixtures intentionally test Source independence.</p>
+<p>When two Sources share an upstream dependency, the fixture must preserve that relationship.</p>
+<p>Example:</p>
+<pre><code>Reference A
+    ↓
+Upstream Source U
+   ├── Source 1
+   └── Source 2
+</code></pre>
+<p>The evaluator should not treat:</p>
+<pre><code>Source 1
+Source 2
+</code></pre>
+<p>as:</p>
+<pre><code>two fully independent references
+</code></pre>
+<p>if their Evidence derives from the same upstream Source.</p>
+<p>This becomes especially important after the Observational and Provenance crosswalks.</p>
+<hr>
+<h1 id="32-derived-evidence">32. Derived Evidence</h1>
+<p>A fixture may include Evidence derived from other Evidence.</p>
+<p>Example:</p>
+<pre><code>Raw Observation A
+Raw Observation B
+      ↓
+  Aggregation
+      ↓
+Derived Evidence C
+</code></pre>
+<p>The fixture must preserve:</p>
+<pre><code>C derives_from A + B
+</code></pre>
+<p>A test should not count:</p>
+<pre><code>A
+B
+C
+</code></pre>
+<p>as:</p>
+<pre><code>three independent corroborating Sources.
+</code></pre>
+<hr>
+<h1 id="33-circular-evidence">33. Circular Evidence</h1>
+<p>Fixtures used to test recursive Truth or derived Evidence should eventually include circularity scenarios.</p>
+<p>Example:</p>
+<pre><code>Evidence A
+  ↓
+Derived B
+  ↓
+Derived C
+  ↓
+cited as support for A
+</code></pre>
+<p>Expected behavior:</p>
+<pre><code>cycle detected
+
+no artificial independence gain
+</code></pre>
+<p>These fixtures are not required for the initial NTP implementation.</p>
+<p>They belong to later generalized testing.</p>
+<hr>
+<h1 id="34-fixture-coverage">34. Fixture Coverage</h1>
+<p>A fixture should declare enough coverage context to explain claims of:</p>
+<pre><code>absence
+</code></pre>
+<p>or:</p>
+<pre><code>completeness
+</code></pre>
+<p>For example:</p>
+<pre><code>no Observation found
+</code></pre>
+<p>is not sufficient to conclude:</p>
+<pre><code>event absent
+</code></pre>
+<p>unless the fixture establishes that the observation boundary was sufficient to support that inference.</p>
+<p>Coverage becomes increasingly important for:</p>
+<pre><code>telemetry
+provenance
+identity
+distributed state
+</code></pre>
+<hr>
+<h1 id="35-fixture-gaps">35. Fixture Gaps</h1>
+<p>A fixture may intentionally model:</p>
+<pre><code>Evidence Gap
+
+Lineage Gap
+
+Coverage Gap
+
+Authority Gap
+
+Context Gap
+</code></pre>
+<p>A gap should remain explicit.</p>
+<p>Do not fill the missing field with synthetic data simply to satisfy schema validation.</p>
+<p>If the schema cannot represent a structurally valid gap, the schema needs review.</p>
+<hr>
+<h1 id="36-truth-state-expectations">36. Truth-State Expectations</h1>
+<p>Fixture expectations should eventually distinguish:</p>
+<pre><code>domain_result
+</code></pre>
+<p>from:</p>
+<pre><code>Truth-State qualification
+</code></pre>
+<p>Example:</p>
+<pre><code>domain_result:
+  authorization: deny
+
+truth_status:
+  operationally_accepted
+</code></pre>
+<p>or:</p>
+<pre><code>domain_result:
+  converged: false
+
+truth_status:
+  operationally_accepted
+</code></pre>
+<p>This prevents tests from assuming:</p>
+<pre><code>positive domain result
+  =
+success
+</code></pre>
+<p>and:</p>
+<pre><code>negative domain result
+  =
+failure
+</code></pre>
+<hr>
+<h1 id="37-correction-expectations">37. Correction Expectations</h1>
+<p>A fixture may declare expected Correction behavior.</p>
+<p>Possible examples:</p>
+<pre><code>none
+
+gradual
+
+quarantine
+
+human_escalation
+
+reconciliation
+
+append_corrective_transition
+</code></pre>
+<p>Correction expectations should remain separate from:</p>
+<pre><code>Truth-State expectation
+</code></pre>
+<p>because:</p>
+<pre><code>Evaluation
+  ≠
+Action
+</code></pre>
+<hr>
+<h1 id="38-revalidation-expectations">38. Revalidation Expectations</h1>
+<p>Fixtures involving lifecycle should define deterministic Revalidation conditions.</p>
+<p>Examples:</p>
+<pre><code>revalidate_at:
+  fixed timestamp
+</code></pre>
+<p>or:</p>
+<pre><code>trigger:
+  source_change
+</code></pre>
+<p>or:</p>
+<pre><code>trigger:
+  contradictory_evidence
+</code></pre>
+<p>or:</p>
+<pre><code>trigger:
+  regime_change
+</code></pre>
+<p>Avoid dependence on:</p>
+<pre><code>now
+</code></pre>
+<p>unless the test harness injects a fixed clock.</p>
+<hr>
+<h1 id="39-materialization-expectations">39. Materialization Expectations</h1>
+<p>Later fixture families may need to distinguish:</p>
+<pre><code>accepted Truth State
+</code></pre>
+<p>from:</p>
+<pre><code>local materialization.
+</code></pre>
+<p>Example:</p>
+<pre><code>transaction:
+  committed
+
+materialization:
+  incomplete
+</code></pre>
+<p>This is valid.</p>
+<p>Tests should not require:</p>
+<pre><code>committed
+  =
+fully materialized
+</code></pre>
+<p>unless the domain Regime requires that relationship.</p>
+<hr>
+<h1 id="40-future-fixture-families">40. Future Fixture Families</h1>
+<p>After NTP stabilizes, future fixture families may include:</p>
+<pre><code>fixtures/dns/
+
+fixtures/iam/
+
+fixtures/pki/
+
+fixtures/authority/
+
+fixtures/distributed_state/
+
+fixtures/transactions/
+
+fixtures/desired_state/
+
+fixtures/telemetry/
+
+fixtures/provenance/
+</code></pre>
+<p>These directories should be created only when the corresponding reference case has enough deterministic scenarios to justify executable fixtures.</p>
+<p>Do not create empty forests merely because the crosswalk names are known.</p>
+<hr>
+<h1 id="41-candidate-dns-fixtures">41. Candidate DNS Fixtures</h1>
+<p>Future DNS fixtures might exercise:</p>
+<pre><code>fresh cached result
+
+expired cached result
+
+multiple valid records
+
+qualified negative result
+
+delegation change
+
+stable value with changed Lineage
+</code></pre>
+<p>These remain future candidates.</p>
+<hr>
+<h1 id="42-candidate-identity-fixtures">42. Candidate Identity Fixtures</h1>
+<p>Future IAM fixtures might exercise:</p>
+<pre><code>successful proofing
+
+successful authentication
+
+failed authentication
+
+revoked credential
+
+federated assertion
+
+same assertion under different relying-party Regimes
+</code></pre>
+<p>These remain future candidates.</p>
+<hr>
+<h1 id="43-candidate-pki-fixtures">43. Candidate PKI Fixtures</h1>
+<p>Future PKI fixtures might exercise:</p>
+<pre><code>valid certification path
+
+valid signature + expired certificate
+
+valid signature + revoked certificate
+
+unrecognized trust Anchor
+
+policy mismatch
+
+trust-store change
+</code></pre>
+<p>These remain future candidates.</p>
+<hr>
+<h1 id="44-candidate-authority-fixtures">44. Candidate Authority Fixtures</h1>
+<p>Future policy fixtures might exercise:</p>
+<pre><code>coherent permit
+
+coherent deny
+
+same Subject / different Operation
+
+same Subject / different Target
+
+changed Environment
+
+policy revision
+
+delegated authority
+
+revoked delegation
+</code></pre>
+<p>These remain future candidates.</p>
+<hr>
+<h1 id="45-candidate-distributed-state-fixtures">45. Candidate Distributed-State Fixtures</h1>
+<p>Future distributed-state fixtures might exercise:</p>
+<pre><code>committed state
+
+uncommitted local entry
+
+stale replica
+
+leader / epoch change
+
+no quorum
+
+divergent uncommitted histories
+
+committed but not applied state
+</code></pre>
+<p>These remain future candidates.</p>
+<hr>
+<h1 id="46-candidate-transactional-fixtures">46. Candidate Transactional Fixtures</h1>
+<p>Future transactional fixtures might exercise:</p>
+<pre><code>committed transaction
+
+rollback
+
+crash after commit
+
+recovery
+
+compensating transaction
+
+pending transaction
+
+same state / different history
+
+commitment vs finality
+</code></pre>
+<p>These remain future candidates.</p>
+<hr>
+<h1 id="47-candidate-desired-state-fixtures">47. Candidate Desired-State Fixtures</h1>
+<p>Future Intent fixtures might exercise:</p>
+<pre><code>converged state
+
+bounded Drift
+
+missing desired resource
+
+stale desired generation
+
+failed Correction
+
+oscillation
+
+conflicting Intent
+
+unauthorized Intent update
+</code></pre>
+<p>These remain future candidates.</p>
+<hr>
+<h1 id="48-candidate-telemetry-fixtures">48. Candidate Telemetry Fixtures</h1>
+<p>Future Observational fixtures might exercise:</p>
+<pre><code>correlated signals
+
+missing trace
+
+Evidence Gap
+
+qualified absence
+
+sampled traces
+
+delayed telemetry
+
+instrumentation Drift
+
+shared Evidence dependency
+
+different Observer views
+</code></pre>
+<p>These remain future candidates.</p>
+<hr>
+<h1 id="49-candidate-provenance-fixtures">49. Candidate Provenance Fixtures</h1>
+<p>Future Lineage fixtures might exercise:</p>
+<pre><code>complete provenance
+
+missing transformation
+
+conflicting attestations
+
+shared dependency
+
+copied Evidence
+
+transformed artifact
+
+reproducible artifact
+
+circular derived Claim
+
+upstream revocation
+
+corrected provenance
+</code></pre>
+<p>These remain future candidates.</p>
+<hr>
+<h1 id="50-fixture-validation">50. Fixture Validation</h1>
+<p>Fixture files should themselves be validated before their expected behavior is tested.</p>
+<p>Validation layers may include:</p>
+<pre><code>JSON syntax
+
+schema validation
+
+reference integrity
+
+identifier uniqueness
+
+required relationships
+
+Lineage consistency
+</code></pre>
+<p>A fixture that cannot be parsed or whose internal references are broken should fail before Truth evaluation begins.</p>
+<hr>
+<h1 id="51-structural-validation-vs-truth-evaluation">51. Structural Validation vs Truth Evaluation</h1>
+<p>These stages must remain separate.</p>
+<h2 id="structural-validation">Structural Validation</h2>
+<p>Asks:</p>
+<blockquote>
+<p><strong>Is this fixture well formed?</strong></p>
+</blockquote>
+<h2 id="truth-evaluation">Truth Evaluation</h2>
+<p>Asks:</p>
+<blockquote>
+<p><strong>What qualified Truth State does this well-formed scenario produce?</strong></p>
+</blockquote>
+<p>A malformed fixture should not produce:</p>
+<pre><code>indeterminate Truth
+</code></pre>
+<p>It should produce:</p>
+<pre><code>fixture / schema validation failure
+</code></pre>
+<p>This preserves architectural boundaries.</p>
+<hr>
+<h1 id="52-fixture-integrity">52. Fixture Integrity</h1>
+<p>A fixture should be immutable during one test execution.</p>
+<p>The evaluator must not alter the source fixture to record:</p>
+<ul>
+<li>qualification</li>
+<li>Truth State</li>
+<li>Correction</li>
+<li>test status</li>
+</ul>
+<p>Evaluation outputs should be written to separate runtime objects.</p>
+<p>This protects repeatability.</p>
+<hr>
+<h1 id="53-expected-output-separation">53. Expected Output Separation</h1>
+<p>Recommended logical pattern:</p>
+<pre><code>fixture input
+  ↓
+evaluator
+  ↓
+actual result
+  ↓
+compare
+  ↕
+expected result
+</code></pre>
+<p>Never:</p>
+<pre><code>fixture input
+  ↓
+evaluator mutates fixture
+  ↓
+expected result overwritten
+</code></pre>
+<p>The fixture remains the controlled environment.</p>
+<hr>
+<h1 id="54-human-readability">54. Human Readability</h1>
+<p>Fixtures are machine-consumable, but they should remain inspectable by humans.</p>
+<p>Prefer:</p>
+<pre><code>explicit Source IDs
+
+readable descriptions
+
+stable names
+
+clear timestamps
+
+bounded numeric values
+</code></pre>
+<p>over:</p>
+<pre><code>opaque random data
+</code></pre>
+<p>unless opacity itself is required by the test.</p>
+<p>A developer should be able to inspect a fixture and understand why the expected result is plausible.</p>
+<hr>
+<h1 id="55-synthetic-fixture-disclosure">55. Synthetic Fixture Disclosure</h1>
+<p>The initial NTP fixtures are deterministic synthetic scenarios.</p>
+<p>They are not captures of live NTP infrastructure.</p>
+<p>This should remain explicit.</p>
+<p>Their purpose is:</p>
+<pre><code>architecture testing
+</code></pre>
+<p>not:</p>
+<pre><code>measurement of external systems
+</code></pre>
+<p>Later captured real-world data, if introduced, should be labeled separately.</p>
+<hr>
+<h1 id="56-fixture-provenance">56. Fixture Provenance</h1>
+<p>Even synthetic fixtures have provenance.</p>
+<p>Useful metadata may preserve:</p>
+<pre><code>source_crosswalk
+
+scenario_origin
+
+fixture_version
+
+schema_version
+
+authoring note
+</code></pre>
+<p>This helps identify:</p>
+<blockquote>
+<p><strong>Why does this fixture exist?</strong></p>
+</blockquote>
+<p>The answer should point back to an architectural behavior being tested.</p>
+<hr>
+<h1 id="57-fixture-to-test-mapping">57. Fixture-to-Test Mapping</h1>
+<p>Each fixture should eventually map to one or more behavioral test categories.</p>
+<p>Example:</p>
+<pre><code>coherent.json
+  ↓
+qualification/
+coherence/
+drift/
+
+fragmented.json
+  ↓
+coherence/
+paradox/
+regime/
+
+stale.json
+  ↓
+qualification/
+lifecycle/
+regime/
+
+indeterminate.json
+  ↓
+qualification/
+coherence/
+lifecycle/
+</code></pre>
+<p>A fixture may legitimately support multiple tests.</p>
+<hr>
+<h1 id="58-tests-should-reuse-fixtures">58. Tests Should Reuse Fixtures</h1>
+<p>Avoid duplicating nearly identical scenario data independently across test directories.</p>
+<p>Preferred:</p>
+<pre><code>fixture
+  ↓
+multiple tests
+</code></pre>
+<p>rather than:</p>
+<pre><code>qualification test copy
+coherence test copy
+lifecycle test copy
+</code></pre>
+<p>Duplicated fixtures create hidden Lineage and maintenance Drift.</p>
+<p>A single canonical fixture should be referenced where practical.</p>
+<hr>
+<h1 id="59-fixture-evolution">59. Fixture Evolution</h1>
+<p>When architecture consolidation produces the v0.2 model, fixtures may need to evolve.</p>
+<p>Likely changes include:</p>
+<pre><code>Observation
+  ↓
+EvidenceItem
+
+Anchor
+  ↓
+ReferenceBasis
+</code></pre>
+<p>and possible addition of:</p>
+<pre><code>AuthorityRelationship
+Coverage
+Gap
+domain_result
+</code></pre>
+<p>The initial NTP fixtures should remain intentionally small.</p>
+<p>Do not retrofit every generalized concept into them merely because those concepts exist.</p>
+<hr>
+<h1 id="60-thin-layer-rule">60. Thin-Layer Rule</h1>
+<p>The fixtures layer should remain thin.</p>
+<p>Its purpose is not to duplicate:</p>
+<pre><code>architecture/
+crosswalks/
+schemas/
+</code></pre>
+<p>It should provide:</p>
+<blockquote>
+<p><strong>specific deterministic scenarios capable of exercising those layers.</strong></p>
+</blockquote>
+<p>When a fixture requires a long theoretical explanation, that explanation probably belongs in:</p>
+<pre><code>crosswalks/
+</code></pre>
+<p>or:</p>
+<pre><code>architecture/
+</code></pre>
+<p>The fixture should reference the concept and remain executable.</p>
+<hr>
+<h1 id="61-qualification-requirement">61. Qualification Requirement</h1>
+<p>Fixture Evidence should not arrive pre-labeled as:</p>
+<pre><code>qualified
+</code></pre>
+<p>unless the scenario explicitly tests externally supplied qualification.</p>
+<p>Preferred:</p>
+<pre><code>input Evidence:
+  facts / metadata
+
+expected qualification:
+  qualified
+</code></pre>
+<p>The evaluator should perform qualification.</p>
+<p>This prevents the fixture from giving the engine its answer.</p>
+<hr>
+<h1 id="62-coherence-requirement">62. Coherence Requirement</h1>
+<p>Likewise, Sources should not usually be labeled:</p>
+<pre><code>coherent_source: true
+</code></pre>
+<p>Instead the fixture should contain enough structure for the Coherence Engine to determine whether:</p>
+<pre><code>Evidence is compatible
+
+Sources are independent
+
+clusters exist
+
+dissent exists
+</code></pre>
+<p>Expected Coherence belongs in the expected-result section or test assertion.</p>
+<hr>
+<h1 id="63-drift-requirement">63. Drift Requirement</h1>
+<p>For measurable Drift, provide:</p>
+<pre><code>baseline state
+</code></pre>
+<p>and:</p>
+<pre><code>observed state
+</code></pre>
+<p>rather than only:</p>
+<pre><code>expected_drift: 14
+</code></pre>
+<p>The Drift Engine should derive:</p>
+<pre><code>magnitude
+</code></pre>
+<p>where possible.</p>
+<p>For structural Drift, provide:</p>
+<pre><code>before / baseline relationship
+</code></pre>
+<p>and:</p>
+<pre><code>current relationship
+</code></pre>
+<p>so the evaluator can classify the difference.</p>
+<hr>
+<h1 id="64-paradox-requirement">64. Paradox Requirement</h1>
+<p>Do not create a Paradox fixture by simply setting:</p>
+<pre><code>paradox: true
+</code></pre>
+<p>Instead provide:</p>
+<pre><code>qualified incompatible structure
+</code></pre>
+<p>and allow the evaluator to determine whether:</p>
+<pre><code>Paradox
+</code></pre>
+<p>remains after:</p>
+<pre><code>Truth Class
+Regime
+freshness
+Lineage
+scope
+domain semantics
+</code></pre>
+<p>are considered.</p>
+<hr>
+<h1 id="65-regime-requirement">65. Regime Requirement</h1>
+<p>Every Evaluation fixture must identify the governing Regime or provide enough information to resolve it deterministically.</p>
+<p>Avoid:</p>
+<pre><code>default regime
+</code></pre>
+<p>unless the default itself is explicitly part of the test.</p>
+<p>Regime is part of Truth qualification.</p>
+<p>It cannot remain hidden test harness state.</p>
+<hr>
+<h1 id="66-evaluation-time-requirement">66. Evaluation Time Requirement</h1>
+<p>Any fixture testing:</p>
+<pre><code>freshness
+
+expiration
+
+holdover
+
+validity interval
+
+revalidation timing
+</code></pre>
+<p>must provide a deterministic Evaluation time.</p>
+<p>Example:</p>
+<pre><code>evaluation_context:
+  evaluated_at:
+    "2026-01-01T00:05:00Z"
+</code></pre>
+<p>The exact timestamp is fixture data.</p>
+<p>The important rule is that it is fixed.</p>
+<hr>
+<h1 id="67-fixture-success-condition">67. Fixture Success Condition</h1>
+<p>The initial fixture layer succeeds when the six NTP scenarios can be processed deterministically and the evaluator can explain each result.</p>
+<p>The implementation should be able to answer, for each fixture:</p>
+<pre><code>What was the Claim?
+
+Which Regime applied?
+
+Which Evidence was considered?
+
+Which Evidence qualified?
+
+Which Evidence was excluded?
+
+Why?
+
+What Coherence state existed?
+
+What Drift was detected?
+
+What Paradox remained?
+
+What domain result emerged?
+
+What Truth-State qualification resulted?
+
+What Correction was permitted?
+
+When should Revalidation occur?
+</code></pre>
+<p>If those answers are reproducible, the fixture layer is doing its job.</p>
+<hr>
+<h1 id="68-governing-fixture-principle">68. Governing Fixture Principle</h1>
+<blockquote>
+<p><strong>Fixtures should encode the conditions of Truth evaluation, not the conclusion of Truth evaluation.</strong></p>
+</blockquote>
+<p>A good fixture provides:</p>
+<pre><code>structure
+
+Evidence
+
+Lineage
+
+Regime
+</code></pre>
+<p>A good test then asks the evaluator to discover:</p>
+<pre><code>qualification
+
+Coherence
+
+Drift
+
+Paradox
+
+domain result
+
+Truth State
+</code></pre>
+<p>That preserves the distinction between:</p>
+<pre><code>scenario
+</code></pre>
+<p>and:</p>
+<pre><code>answer
+</code></pre>
+<hr>
+<h1 id="69-navigation">69. Navigation</h1>
+<p>Initial fixture family:</p>
+<pre><code>./ntp/coherent.json
+./ntp/minor_drift.json
+./ntp/outlier.json
+./ntp/fragmented.json
+./ntp/stale.json
+./ntp/indeterminate.json
+</code></pre>
+<p>Related architecture:</p>
+<pre><code>../architecture/README.md
+../architecture/truth_service_architecture.md
+../architecture/truth_service_components.md
+../architecture/truth_service_data_model.md
+../architecture/implementation_roadmap.md
+</code></pre>
+<p>Related crosswalk:</p>
+<pre><code>../crosswalks/01_ntp_temporal_truth.md
+</code></pre>
+<p>Related schemas:</p>
+<pre><code>../schemas/
+</code></pre>
+<p>Related behavioral tests:</p>
+<pre><code>../tests/
+</code></pre>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>The fixture layer turns the Resonance Truth architecture into deterministic operational scenarios.</p>
+<p>A fixture says:</p>
+<pre><code>Here is the Claim.
+
+Here is the Regime.
+
+Here is the Evidence.
+
+Here are the Sources.
+
+Here is the Lineage.
+
+Here is the evaluation boundary.
+</code></pre>
+<p>The evaluator must determine:</p>
+<pre><code>What qualifies?
+
+What coheres?
+
+What Drifts?
+
+What conflicts?
+
+What domain result can be supported?
+
+How qualified is that result?
+
+What may happen next?
+</code></pre>
+<p>The test then asks:</p>
+<blockquote>
+<p><strong>Did the evaluator get the structure right?</strong></p>
+</blockquote>
+<p>The first implementation begins with six NTP scenarios:</p>
+<pre><code>coherent
+minor drift
+outlier
+fragmented
+stale
+indeterminate
+</code></pre>
+<p>They are deliberately synthetic.</p>
+<p>They are deliberately bounded.</p>
+<p>They are deliberately boring enough to reproduce.</p>
+<p>That is exactly what we want.</p>
+<p><strong>Crosswalks challenge the architecture.</strong></p>
+<p><strong>Schemas declare the contract.</strong></p>
+<p><strong>Fixtures create the controlled world.</strong></p>
+<p><strong>Tests ask whether the Truth Service can observe that world without inventing another one.</strong></p>
   </main>
 </body>
 </html>

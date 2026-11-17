@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/07_ledger_transactional_truth.md">
-  <title>07_ledger_transactional_truth</title>
+  <title>Crosswalk #7 — Ledgers and Transactional Truth</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2991 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_crosswalks_07_ledger_transactional_truth_" src="https://github.com/user-attachments/assets/912d2333-1025-4813-a388-a5b291a30696" /></p>
+<h1 id="crosswalk-7-ledgers-and-transactional-truth">Crosswalk #7 — Ledgers and Transactional Truth</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Crosswalk #7<br>
+<strong>Truth Class:</strong> Transactional Truth<br>
+<strong>Reference System:</strong> Transactional Ledgers / ACID Transaction Systems<br>
+<strong>Primary Reference Case:</strong> PostgreSQL Transaction + Write-Ahead Log Model<br>
+<strong>Supporting Reference Family:</strong> Distributed Ledgers / Settlement Systems<br>
+<strong>Primary RTT Dimensions:</strong> Lineage · Temp · Coherence · Regime<br>
+<strong>Supporting RTT Dimensions:</strong> Drift · State · Integrity · Authority · Paradox<br>
+<strong>Status:</strong> Research Crosswalk / Architecture Challenge<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This crosswalk examines transactional systems and ledgers as the seventh operational reference system for the RTT Resonance Truth Service.</p>
+<p>The governing question is:</p>
+<blockquote>
+<p><strong>What became committed?</strong></p>
+</blockquote>
+<p>Crosswalk #6 established an important State Truth distinction:</p>
+<pre><code>Proposed
+  ≠
+Replicated
+  ≠
+Committed
+  ≠
+Applied
+</code></pre>
+<p>Crosswalk #7 examines the commitment boundary directly.</p>
+<p>Transactional systems must distinguish among states such as:</p>
+<ul>
+<li>proposed</li>
+<li>in progress</li>
+<li>recorded</li>
+<li>committed</li>
+<li>rolled back</li>
+<li>recovered</li>
+<li>reconciled</li>
+<li>applied</li>
+<li>settled</li>
+<li>final</li>
+</ul>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>When does a proposed state transition become part of the operational record, and what structural conditions make that commitment durable, ordered, auditable, reversible, or final?</strong></p>
+</blockquote>
+<hr>
+<h1 id="1-evidence-boundary">1. Evidence Boundary</h1>
+<p>The primary reference case for this crosswalk is:</p>
+<pre><code>PostgreSQL
+Transaction Processing
+Write-Ahead Logging
+</code></pre>
+<p>The reference case is useful because it exposes several mechanisms relevant to Transactional Truth:</p>
+<ul>
+<li>transaction boundaries</li>
+<li>commit</li>
+<li>rollback</li>
+<li>write-ahead logging</li>
+<li>ordered log records</li>
+<li>durable commit state</li>
+<li>recovery</li>
+<li>materialization of committed changes</li>
+<li>separation between log durability and physical data-page update</li>
+</ul>
+<p>The PostgreSQL WAL model establishes a particularly useful distinction:</p>
+<pre><code>transaction committed
+  ≠
+every changed data page already written to its final location
+</code></pre>
+<p>The log can preserve enough information for recovery.</p>
+<p>This makes the system highly relevant to:</p>
+<pre><code>commitment
+Lineage
+durability
+materialization
+recovery
+</code></pre>
+<p>The supporting reference family includes distributed ledgers and settlement systems where:</p>
+<pre><code>confirmation
+commitment
+settlement
+finality
+</code></pre>
+<p>may be separately represented.</p>
+<p>This document does not treat all ledgers as equivalent.</p>
+<hr>
+<h1 id="2-evidence-discipline">2. Evidence Discipline</h1>
+<p>This crosswalk distinguishes:</p>
+<h2 id="transaction-system-fact">Transaction-System Fact</h2>
+<p>A mechanism explicitly represented in the bounded reference material.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>A structural interpretation introduced through Resonance Truth.</p>
+<h2 id="candidate-generalization">Candidate Generalization</h2>
+<p>A mechanism potentially reusable across Truth Classes.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A proposed abstraction requiring further crosswalk evidence.</p>
+<p>Example:</p>
+<pre><code>Transaction-System Fact:
+  Write-ahead logging records changes before affected
+  data pages must be written to durable storage.
+
+RTT Interpretation:
+  Commitment evidence can exist before final
+  state materialization completes.
+
+Candidate Generalization:
+  Truth-State acceptance and Truth-State
+  materialization should remain separate.
+
+Hypothesis:
+  Commitment should become a distinct generalized
+  relationship in the Truth-Service data model.
+</code></pre>
+<p>Crosswalk #7 tests that hypothesis directly.</p>
+<hr>
+<h1 id="3-why-ledgers-come-seventh">3. Why Ledgers Come Seventh</h1>
+<p>Crosswalk #6 produced several new architectural candidates:</p>
+<pre><code>AcceptanceRule
+
+CommitmentState
+
+TransitionLineage
+
+MaterializedTruthState
+
+RegimeEpoch
+
+ReferenceBasis
+
+ConstitutedOperationalTruth
+</code></pre>
+<p>Transactional systems provide the natural next challenge.</p>
+<p>A transaction has a recognizable lifecycle:</p>
+<pre><code>BEGIN
+  ↓
+operations
+  ↓
+COMMIT
+</code></pre>
+<p>or:</p>
+<pre><code>BEGIN
+  ↓
+operations
+  ↓
+ROLLBACK
+</code></pre>
+<p>Those paths produce different operational histories.</p>
+<p>The state:</p>
+<pre><code>transaction existed
+</code></pre>
+<p>is insufficient.</p>
+<p>The important question is:</p>
+<blockquote>
+<p><strong>Which transitions crossed the commitment boundary?</strong></p>
+</blockquote>
+<hr>
+<h1 id="4-transactional-truth">4. Transactional Truth</h1>
+<p>The primary Truth Class is:</p>
+<pre><code>Transactional Truth
+</code></pre>
+<p>Its operational question is:</p>
+<blockquote>
+<p><strong>What became committed?</strong></p>
+</blockquote>
+<p>A more complete formulation is:</p>
+<blockquote>
+<p><strong>Which proposed state transition crossed the governing commitment boundary and became part of the accepted operational history?</strong></p>
+</blockquote>
+<p>Transactional Truth therefore concerns:</p>
+<ul>
+<li>transition identity</li>
+<li>transaction scope</li>
+<li>ordering</li>
+<li>validation</li>
+<li>commitment</li>
+<li>durability</li>
+<li>rollback</li>
+<li>recovery</li>
+<li>reconciliation</li>
+<li>settlement</li>
+<li>finality</li>
+</ul>
+<p>It is fundamentally historical.</p>
+<p>Transactional Truth asks not only:</p>
+<pre><code>what is the state now?
+</code></pre>
+<p>but:</p>
+<pre><code>which transitions legitimately produced it?
+</code></pre>
+<hr>
+<h1 id="5-transactional-truth-vs-state-truth">5. Transactional Truth vs State Truth</h1>
+<p>The distinction between Crosswalk #6 and Crosswalk #7 is important.</p>
+<h2 id="state-truth">State Truth</h2>
+<p>Asks:</p>
+<blockquote>
+<p><strong>What is presently accepted as current?</strong></p>
+</blockquote>
+<h2 id="transactional-truth">Transactional Truth</h2>
+<p>Asks:</p>
+<blockquote>
+<p><strong>Which transition became part of the accepted history?</strong></p>
+</blockquote>
+<p>Conceptually:</p>
+<pre><code>Transactional Truth
+      ↓
+Accepted Transitions
+      ↓
+State Truth
+      ↓
+Current State
+</code></pre>
+<p>The relationship is strong.</p>
+<p>The Truth Classes should remain separate.</p>
+<hr>
+<h1 id="6-transaction-system-on-its-own-terms">6. Transaction System on Its Own Terms</h1>
+<p>A simplified transactional lifecycle is:</p>
+<pre><code>BEGIN
+  ↓
+Read / Write Operations
+  ↓
+Validation / Constraints
+  ↓
+COMMIT
+  │
+  ├── success
+  │     ↓
+  │   durable transaction state
+  │
+  └── failure / rollback
+        ↓
+      changes not committed
+</code></pre>
+<p>With write-ahead logging:</p>
+<pre><code>Proposed Change
+      ↓
+WAL Record
+      ↓
+Durable Log
+      ↓
+Commit
+      ↓
+Data-Page Materialization
+      ↓
+Recovery if Required
+</code></pre>
+<p>The important architectural distinction is:</p>
+<blockquote>
+<p><strong>Durable commitment can be represented through the log before every final data-page representation has been updated.</strong></p>
+</blockquote>
+<p>This directly extends the Crosswalk #6 distinction between:</p>
+<pre><code>committed
+</code></pre>
+<p>and:</p>
+<pre><code>applied
+</code></pre>
+<hr>
+<h1 id="7-initial-structural-crosswalk">7. Initial Structural Crosswalk</h1>
+<table>
+<thead>
+<tr>
+<th>Transaction / Ledger Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transaction</td>
+<td>Proposed bounded state transition</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>BEGIN</td>
+<td>Transition-scope declaration</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Operation</td>
+<td>Proposed state mutation</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Transaction identifier</td>
+<td>Transition identity</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Constraint / validation</td>
+<td>Qualification rule</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Write-ahead log</td>
+<td>Ordered transition Lineage</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Log record</td>
+<td>Transition Evidence</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>Commitment boundary</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Rollback</td>
+<td>Rejected / abandoned transition</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Durable commit</td>
+<td>Accepted durable Transactional Truth</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Data-page update</td>
+<td>Materialization</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Recovery / REDO</td>
+<td>Materialization reconstruction</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Transaction history</td>
+<td>Accepted transition Lineage</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Reconciliation</td>
+<td>Coherence restoration</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Settlement</td>
+<td>Higher-level acceptance boundary</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Finality</td>
+<td>Reversal boundary / commitment strength</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Compensating transaction</td>
+<td>New corrective transition</td>
+<td>Candidate General</td>
+</tr>
+</tbody>
+</table>
+<p>Transactional systems immediately reinforce:</p>
+<pre><code>commitment
+  ≠
+materialization
+</code></pre>
+<p>and add:</p>
+<pre><code>rollback
+  ≠
+deletion of history
+</code></pre>
+<p>as an important Truth-Service concept.</p>
+<hr>
+<h1 id="8-transaction-proposed-bounded-transition">8. Transaction → Proposed Bounded Transition</h1>
+<p>A transaction provides a boundary around one or more operations intended to modify system state.</p>
+<p>RTT interpretation:</p>
+<pre><code>Proposed Bounded Transition
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Prior State
+    ↓
+Transaction
+    ↓
+Candidate State
+    ↓
+Commit or Rollback
+</code></pre>
+<p>The transaction groups operations into one governed relationship.</p>
+<p>This is stronger than:</p>
+<pre><code>list of unrelated changes
+</code></pre>
+<p>The boundary itself matters.</p>
+<hr>
+<h1 id="9-transaction-scope">9. Transaction Scope</h1>
+<p>Crosswalk #5 introduced Authority Scope.</p>
+<p>Crosswalk #7 introduces:</p>
+<pre><code>Transition Scope
+</code></pre>
+<p>A transaction defines which operations participate in the same commitment decision.</p>
+<p>Conceptually:</p>
+<pre><code>Transaction T
+  ├── Operation A
+  ├── Operation B
+  └── Operation C
+</code></pre>
+<p>The resulting question is not necessarily:</p>
+<pre><code>Did A succeed?
+Did B succeed?
+Did C succeed?
+</code></pre>
+<p>but:</p>
+<blockquote>
+<p><strong>Did Transaction T cross the commitment boundary as governed?</strong></p>
+</blockquote>
+<p>This supports a generalized:</p>
+<pre><code>grouped Evidence / grouped Transition
+</code></pre>
+<p>concept.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="10-operation-proposed-state-mutation">10. Operation → Proposed State Mutation</h1>
+<p>An operation inside a transaction may modify candidate state.</p>
+<p>RTT interpretation:</p>
+<pre><code>Proposed State Mutation
+</code></pre>
+<p>This is not yet:</p>
+<pre><code>Transactional Truth
+</code></pre>
+<p>The operation becomes part of the accepted history only if the transaction's governing rules allow the transaction to cross commitment.</p>
+<p>Thus:</p>
+<pre><code>operation executed
+  ≠
+operation committed
+</code></pre>
+<p>This distinction is essential.</p>
+<hr>
+<h1 id="11-executed-committed">11. Executed ≠ Committed</h1>
+<p>A system may execute intermediate operations before a transaction commits.</p>
+<p>If rollback occurs, those candidate changes do not become committed transactional history in the same sense as a successful commit.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Observation that an operation occurred during processing does not establish that its state transition became committed.</strong></p>
+</blockquote>
+<p>This strongly reinforces:</p>
+<pre><code>Observation
+  ≠
+accepted Truth State
+</code></pre>
+<p>and:</p>
+<pre><code>local / intermediate state
+  ≠
+operationally committed state
+</code></pre>
+<hr>
+<h1 id="12-transaction-identity-transition-identity">12. Transaction Identity → Transition Identity</h1>
+<p>Transactional systems assign identity to bounded transitions.</p>
+<p>RTT interpretation:</p>
+<pre><code>Transition Identity
+</code></pre>
+<p>This is useful because State Truth may otherwise preserve only:</p>
+<pre><code>before
+after
+</code></pre>
+<p>Transaction identity preserves:</p>
+<pre><code>which transition
+produced
+which accepted change
+</code></pre>
+<p>Potential generalized fields:</p>
+<pre><code>transition_id
+predecessor_state
+successor_state
+transaction_scope
+commitment_state
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="13-constraint-validation-qualification">13. Constraint Validation → Qualification</h1>
+<p>Transactions may be subject to rules and constraints.</p>
+<p>RTT interpretation:</p>
+<pre><code>Qualification
+</code></pre>
+<p>The candidate transition must satisfy applicable rules before acceptance.</p>
+<p>Conceptually:</p>
+<pre><code>Proposal
+  +
+Current State
+  +
+Constraints
+  ↓
+Qualified / Rejected Transition
+</code></pre>
+<p>This reinforces the generalized Qualification Engine.</p>
+<p>Qualification now applies to:</p>
+<pre><code>Evidence
+Authority Relationship
+State Transition
+</code></pre>
+<p>not merely:</p>
+<pre><code>Observation
+</code></pre>
+<p>Status:</p>
+<pre><code>CONFIRMED_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="14-transaction-qualification-vs-commit">14. Transaction Qualification vs Commit</h1>
+<p>Qualification and commitment remain separate.</p>
+<p>A transaction may satisfy some validation steps while not yet being committed.</p>
+<p>Therefore:</p>
+<pre><code>qualified candidate
+  ≠
+committed transition
+</code></pre>
+<p>Potential generalized sequence:</p>
+<pre><code>Proposed
+  ↓
+Qualified
+  ↓
+Accepted
+  ↓
+Committed
+</code></pre>
+<p>Whether every domain requires each stage remains open.</p>
+<p>Transactional Truth shows that these distinctions can matter.</p>
+<hr>
+<h1 id="15-write-ahead-log-ordered-transition-lineage">15. Write-Ahead Log → Ordered Transition Lineage</h1>
+<p>PostgreSQL's WAL records changes before data pages need to be written to their final storage locations.</p>
+<p>RTT interpretation:</p>
+<pre><code>Ordered Transition Lineage
+</code></pre>
+<p>The WAL provides structured evidence describing state changes.</p>
+<p>Conceptually:</p>
+<pre><code>Transaction T
+   ↓
+WAL Records
+   ↓
+Commit Record
+   ↓
+Recovery / Materialization
+</code></pre>
+<p>This strongly supports the Crosswalk #6 finding:</p>
+<blockquote>
+<p><strong>Lineage includes transition history, not merely provenance ancestry.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strengthened
+</code></pre>
+<hr>
+<h1 id="16-transition-lineage">16. Transition Lineage</h1>
+<p>The generalized concept now has multiple independent reference systems.</p>
+<h2 id="provenance-lineage">Provenance Lineage</h2>
+<pre><code>Where did this artifact / Claim originate?
+</code></pre>
+<h2 id="authority-lineage">Authority Lineage</h2>
+<pre><code>Through which delegation path did authority emerge?
+</code></pre>
+<h2 id="transition-lineage">Transition Lineage</h2>
+<pre><code>Through which ordered changes did this state emerge?
+</code></pre>
+<p>Crosswalk #7 makes Transition Lineage especially explicit.</p>
+<p>Potential generalized Lineage edge semantics include:</p>
+<pre><code>derives_from
+delegated_by
+transforms
+precedes
+committed_as
+applied_as
+supersedes
+compensates
+</code></pre>
+<p>This strengthens graph-based Lineage.</p>
+<hr>
+<h1 id="17-log-record-transition-evidence">17. Log Record → Transition Evidence</h1>
+<p>A WAL record is evidence about a state transition.</p>
+<p>RTT interpretation:</p>
+<pre><code>Transition Evidence
+</code></pre>
+<p>This further strengthens the generalized:</p>
+<pre><code>EvidenceItem
+</code></pre>
+<p>model.</p>
+<p>Potential evidence roles now include:</p>
+<pre><code>Observation
+Assertion
+Attribute
+Status Evidence
+Proposal Evidence
+Replication Evidence
+Transition Evidence
+</code></pre>
+<p>The EvidenceItem abstraction appears increasingly justified.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="18-evidence-can-describe-change">18. Evidence Can Describe Change</h1>
+<p>Early crosswalks often treated Evidence as describing:</p>
+<pre><code>state
+</code></pre>
+<p>Transactional systems show Evidence may instead describe:</p>
+<pre><code>transition
+</code></pre>
+<p>This is important.</p>
+<p>The Truth Service should support evidence about:</p>
+<pre><code>what is
+</code></pre>
+<p>and:</p>
+<pre><code>what changed
+</code></pre>
+<p>and:</p>
+<pre><code>what was proposed to change
+</code></pre>
+<p>and:</p>
+<pre><code>what became committed
+</code></pre>
+<p>Therefore the Evidence Graph must support both:</p>
+<pre><code>state nodes
+</code></pre>
+<p>and:</p>
+<pre><code>transition nodes / relationships
+</code></pre>
+<hr>
+<h1 id="19-commit-commitment-boundary">19. Commit → Commitment Boundary</h1>
+<p>Crosswalk #6 introduced Commitment as a candidate generalized boundary.</p>
+<p>Transactional systems make the concept direct.</p>
+<p>RTT interpretation:</p>
+<pre><code>Commitment Boundary
+</code></pre>
+<p>Definition:</p>
+<blockquote>
+<p><strong>The structural point at which a proposed transition becomes part of the system's accepted operational history under the governing rules.</strong></p>
+</blockquote>
+<p>This does not necessarily mean:</p>
+<pre><code>irreversible forever
+</code></pre>
+<p>It means:</p>
+<pre><code>committed under this transaction Regime
+</code></pre>
+<p>That distinction becomes important when discussing:</p>
+<pre><code>rollback
+compensation
+settlement
+finality
+</code></pre>
+<hr>
+<h1 id="20-commitment-is-not-finality">20. Commitment Is Not Finality</h1>
+<p>This distinction is critical.</p>
+<p>A committed transaction may become part of accepted history.</p>
+<p>A later operation may:</p>
+<ul>
+<li>compensate for it</li>
+<li>reverse its effects through a new transaction</li>
+<li>reconcile it</li>
+<li>supersede related state</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>committed
+  ≠
+metaphysically irreversible
+</code></pre>
+<p>The correct generalized meaning is:</p>
+<blockquote>
+<p><strong>The transition crossed the governing commitment boundary.</strong></p>
+</blockquote>
+<p>Finality is a separate property.</p>
+<hr>
+<h1 id="21-commit-as-constituted-operational-truth">21. Commit as Constituted Operational Truth</h1>
+<p>Crosswalk #6 introduced:</p>
+<pre><code>Constituted Operational Truth
+</code></pre>
+<p>Transactional systems strongly reinforce it.</p>
+<p>Before commit:</p>
+<pre><code>transition is proposed
+</code></pre>
+<p>After valid commit:</p>
+<pre><code>transition is part of accepted transactional history
+</code></pre>
+<p>The commit process itself establishes that operational fact.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Transactional Truth may be constituted by successful execution of accepted system rules.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strengthened
+</code></pre>
+<hr>
+<h1 id="22-durable-commit">22. Durable Commit</h1>
+<p>PostgreSQL WAL provides a useful distinction between:</p>
+<pre><code>commit
+</code></pre>
+<p>and:</p>
+<pre><code>final data-page materialization
+</code></pre>
+<p>The WAL may preserve sufficient durable information to recover committed changes.</p>
+<p>RTT interpretation:</p>
+<pre><code>Durable Commitment
+</code></pre>
+<p>This suggests commitment may possess attributes such as:</p>
+<pre><code>accepted
+durable
+materialized
+settled
+final
+</code></pre>
+<p>These should not automatically become separate generic TruthStatus values.</p>
+<p>They may instead belong to:</p>
+<pre><code>domain_result
+</code></pre>
+<p>or:</p>
+<pre><code>commitment descriptor
+</code></pre>
+<hr>
+<h1 id="23-commitmentdescriptor-candidate">23. CommitmentDescriptor Candidate</h1>
+<p>Potential generalized object:</p>
+<pre><code>CommitmentDescriptor
+</code></pre>
+<p>Possible fields:</p>
+<pre><code>state:
+  uncommitted | committed
+
+durable:
+  true | false | unknown
+
+materialized:
+  true | false | partial | unknown
+
+settled:
+  true | false | not_applicable | unknown
+
+finality:
+  reversible | bounded | final | unknown
+
+committed_at:
+  ...
+
+reference_basis:
+  ...
+
+evidence:
+  [...]
+</code></pre>
+<p>This is intentionally provisional.</p>
+<p>Crosswalk #7 provides strong evidence for commitment semantics, but not yet for one universal descriptor across every Truth Class.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="24-commit-materialization">24. Commit ≠ Materialization</h1>
+<p>This finding now has independent support from:</p>
+<pre><code>Distributed State
+Transaction Systems
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>accepted transition
+    ↓
+committed
+    ↓
+durable transition evidence
+    ↓
+local state materialization
+</code></pre>
+<p>A crash may interrupt materialization.</p>
+<p>Recovery can reconstruct state from durable transition information.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Accepted history can remain valid even when its current physical representation requires reconstruction.</strong></p>
+</blockquote>
+<p>This is a major generalized Truth-Service principle.</p>
+<hr>
+<h1 id="25-materializedtruthstate-strengthened">25. MaterializedTruthState Strengthened</h1>
+<p>DNS introduced local cached state.</p>
+<p>Distributed consensus introduced applied replica state.</p>
+<p>Transactional systems introduce database-page materialization.</p>
+<p>Three different domains now support:</p>
+<pre><code>accepted Truth State
+      ↓
+operational materialization
+</code></pre>
+<p>Potential materializations can:</p>
+<ul>
+<li>lag</li>
+<li>expire</li>
+<li>become stale</li>
+<li>require recovery</li>
+<li>be reconstructed</li>
+<li>differ temporarily from accepted history</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>MaterializedTruthState
+</code></pre>
+<p>moves from:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>toward:</p>
+<pre><code>STRONG CANDIDATE_CORE
+</code></pre>
+<p>Formal promotion should wait for architecture consolidation.</p>
+<hr>
+<h1 id="26-rollback-abandoned-transition">26. Rollback → Abandoned Transition</h1>
+<p>If a transaction does not commit and is rolled back, candidate changes do not become part of committed Transactional Truth.</p>
+<p>RTT interpretation:</p>
+<pre><code>Abandoned Transition
+</code></pre>
+<p>Important distinction:</p>
+<pre><code>rollback
+  ≠
+transition never existed as an attempted operation
+</code></pre>
+<p>The attempted transaction may remain visible in:</p>
+<ul>
+<li>logs</li>
+<li>audit</li>
+<li>diagnostics</li>
+<li>transaction metadata</li>
+</ul>
+<p>But:</p>
+<pre><code>committed history
+</code></pre>
+<p>does not include its intended state mutation as a successful committed transition.</p>
+<p>This supports immutable audit history.</p>
+<hr>
+<h1 id="27-rollback-history-erasure">27. Rollback ≠ History Erasure</h1>
+<p>This is an important Truth-Service principle.</p>
+<p>A failed or rolled-back Evaluation / transition should not necessarily disappear.</p>
+<p>Conceptually:</p>
+<pre><code>Transaction attempted
+    ↓
+Qualification / execution
+    ↓
+Rollback
+    ↓
+State effect removed / not committed
+</code></pre>
+<p>while:</p>
+<pre><code>historical evidence of attempt
+    remains
+</code></pre>
+<p>This is analogous to:</p>
+<pre><code>rejected Observation retained
+</code></pre>
+<p>and:</p>
+<pre><code>dissent preserved
+</code></pre>
+<p>The system should distinguish:</p>
+<pre><code>operational state history
+</code></pre>
+<p>from:</p>
+<pre><code>audit history
+</code></pre>
+<hr>
+<h1 id="28-accepted-history-vs-audit-history">28. Accepted History vs Audit History</h1>
+<p>Transactional systems expose two related but different histories.</p>
+<h2 id="accepted-state-history">Accepted State History</h2>
+<p>Transitions that became committed.</p>
+<h2 id="audit-history">Audit History</h2>
+<p>May additionally include:</p>
+<ul>
+<li>attempted transitions</li>
+<li>rejected transitions</li>
+<li>rollback</li>
+<li>failures</li>
+<li>compensating actions</li>
+</ul>
+<p>Potential architecture:</p>
+<pre><code>TransitionLineage
+</code></pre>
+<p>with edge/state metadata describing:</p>
+<pre><code>proposed
+rejected
+committed
+rolled_back
+compensated
+</code></pre>
+<p>This may be sufficient without introducing separate history stores conceptually.</p>
+<hr>
+<h1 id="29-recovery-materialization-reconstruction">29. Recovery → Materialization Reconstruction</h1>
+<p>PostgreSQL uses WAL during crash recovery to redo changes that have not yet been applied to data pages.</p>
+<p>RTT interpretation:</p>
+<pre><code>Truth-State Materialization Reconstruction
+</code></pre>
+<p>The accepted transactional history provides enough evidence to reconstruct operational materialization.</p>
+<p>This yields a powerful general principle:</p>
+<blockquote>
+<p><strong>Truth State and its materialization can be separated strongly enough that a damaged or incomplete materialization can be reconstructed from accepted Lineage.</strong></p>
+</blockquote>
+<p>Potential applications later may include:</p>
+<ul>
+<li>desired-state controllers</li>
+<li>replicated state</li>
+<li>caches</li>
+<li>derived views</li>
+<li>indexes</li>
+</ul>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="30-recovery-does-not-re-decide-commitment">30. Recovery Does Not Re-Decide Commitment</h1>
+<p>Conceptually, recovery should not arbitrarily reconsider every committed transition from scratch.</p>
+<p>It uses preserved transaction history to restore materialization.</p>
+<p>RTT interpretation:</p>
+<pre><code>Accepted History
+      ↓
+Reconstruction
+</code></pre>
+<p>rather than:</p>
+<pre><code>Re-evaluate original Claim from zero
+</code></pre>
+<p>This is important.</p>
+<p>Revalidation and recovery are not the same operation.</p>
+<hr>
+<h1 id="31-recovery-revalidation">31. Recovery ≠ Revalidation</h1>
+<h2 id="recovery">Recovery</h2>
+<p>Restores operational materialization from already accepted history.</p>
+<h2 id="revalidation">Revalidation</h2>
+<p>Challenges whether a previously accepted Truth State remains qualified under changed evidence or Regime.</p>
+<p>These must remain separate.</p>
+<p>Potential example:</p>
+<pre><code>crash
+  ↓
+recovery
+  ↓
+same accepted transaction history
+</code></pre>
+<p>versus:</p>
+<pre><code>policy change
+  ↓
+Revalidation
+  ↓
+changed qualification
+</code></pre>
+<p>Crosswalk #7 therefore introduces a new important distinction.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="32-reconciliation-coherence-restoration">32. Reconciliation → Coherence Restoration</h1>
+<p>Ledgers often require reconciliation between records or states.</p>
+<p>RTT interpretation:</p>
+<pre><code>Coherence Restoration
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Record A
+   ↕
+Record B
+   ↓
+compare
+   ↓
+difference
+   ↓
+explanation / correction / adjustment
+</code></pre>
+<p>The system attempts to identify whether differing records represent:</p>
+<ul>
+<li>timing difference</li>
+<li>missing transition</li>
+<li>duplicate transition</li>
+<li>conflicting state</li>
+<li>error</li>
+<li>legitimate separate Regime</li>
+</ul>
+<p>Reconciliation therefore combines:</p>
+<pre><code>Coherence
+Drift
+Lineage
+Correction
+</code></pre>
+<hr>
+<h1 id="33-reconciliation-is-not-averaging">33. Reconciliation Is Not Averaging</h1>
+<p>If two ledgers disagree:</p>
+<pre><code>Ledger A:
+  transaction exists
+
+Ledger B:
+  transaction missing
+</code></pre>
+<p>The correct response is not:</p>
+<pre><code>transaction half-exists
+</code></pre>
+<p>The system must determine:</p>
+<ul>
+<li>Source</li>
+<li>authority</li>
+<li>commitment state</li>
+<li>Lineage</li>
+<li>ordering</li>
+<li>Regime</li>
+<li>timing</li>
+</ul>
+<p>This provides another strong example that:</p>
+<blockquote>
+<p><strong>Coherence analysis must remain semantic and structural.</strong></p>
+</blockquote>
+<hr>
+<h1 id="34-duplicate-transaction-evidence-vs-domain-state">34. Duplicate Transaction → Evidence vs Domain State</h1>
+<p>Transactional systems may encounter duplicate requests or duplicate records.</p>
+<p>This creates another useful distinction.</p>
+<p>Two Evidence Items may refer to:</p>
+<pre><code>the same intended transition
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Evidence count
+  ≠
+transition count
+</code></pre>
+<p>This parallels:</p>
+<pre><code>three DNS caches
+  ≠
+three independent authorities
+</code></pre>
+<p>and:</p>
+<pre><code>three Sources sharing Lineage
+  ≠
+three independent confirmations
+</code></pre>
+<p>Identity and deduplication matter.</p>
+<hr>
+<h1 id="35-transaction-identity-and-idempotence">35. Transaction Identity and Idempotence</h1>
+<p>A system may need to determine whether two requests represent:</p>
+<pre><code>same transition
+</code></pre>
+<p>or:</p>
+<pre><code>separate transitions
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Transition Identity / Equivalence
+</code></pre>
+<p>This may become important to:</p>
+<pre><code>Coherence
+</code></pre>
+<p>and:</p>
+<pre><code>Transactional Drift
+</code></pre>
+<p>Potential generalized question:</p>
+<blockquote>
+<p><strong>Are these two Evidence Items about the same operational event?</strong></p>
+</blockquote>
+<p>This is another reason Truth Subjects and transition identifiers matter.</p>
+<hr>
+<h1 id="36-ordering-transactional-lineage">36. Ordering → Transactional Lineage</h1>
+<p>Transactions may need ordering.</p>
+<p>RTT interpretation:</p>
+<pre><code>Ordered Transition Lineage
+</code></pre>
+<p>State may depend not only on:</p>
+<pre><code>which transitions
+</code></pre>
+<p>but also:</p>
+<pre><code>in which order
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>T1
+  ↓
+T2
+  ↓
+T3
+</code></pre>
+<p>may produce a different state from:</p>
+<pre><code>T2
+  ↓
+T1
+  ↓
+T3
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Lineage ordering can itself be part of Truth.</strong></p>
+</blockquote>
+<p>This becomes central to Transactional Truth.</p>
+<hr>
+<h1 id="37-order-truth">37. Order Truth</h1>
+<p>Crosswalk #7 reveals a possible subdimension:</p>
+<pre><code>Ordering Truth
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p><strong>In what accepted order did these transitions occur?</strong></p>
+</blockquote>
+<p>This may belong inside:</p>
+<pre><code>Transactional Truth
+</code></pre>
+<p>rather than becoming an eleventh top-level Truth Class.</p>
+<p>Status:</p>
+<pre><code>DOMAIN_SPECIFIC / CANDIDATE SUBDIMENSION
+</code></pre>
+<p>No new canonical Truth Class is recommended.</p>
+<hr>
+<h1 id="38-settlement">38. Settlement</h1>
+<p>Some transactional systems distinguish:</p>
+<pre><code>transaction committed
+</code></pre>
+<p>from:</p>
+<pre><code>transaction settled
+</code></pre>
+<p>Settlement may represent a later operational boundary at which obligations or transfers are treated as completed under another Regime.</p>
+<p>RTT interpretation:</p>
+<pre><code>Secondary Acceptance Boundary
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Proposed
+  ↓
+Accepted
+  ↓
+Committed
+  ↓
+Settled
+</code></pre>
+<p>Not every transaction system uses this lifecycle.</p>
+<p>Therefore settlement remains domain-specific.</p>
+<p>The broader generalized lesson is:</p>
+<blockquote>
+<p><strong>One process may contain multiple meaningful acceptance boundaries.</strong></p>
+</blockquote>
+<hr>
+<h1 id="39-finality">39. Finality</h1>
+<p>Distributed ledger systems often distinguish confirmation/commitment from finality.</p>
+<p>For this crosswalk, finality is treated generically as:</p>
+<blockquote>
+<p><strong>The degree or boundary beyond which an accepted transition is no longer expected or permitted to be reversed under the governing system.</strong></p>
+</blockquote>
+<p>This should not be assumed identical across all systems.</p>
+<p>Possible forms include:</p>
+<ul>
+<li>deterministic finality</li>
+<li>probabilistic finality</li>
+<li>policy finality</li>
+<li>settlement finality</li>
+<li>practical irreversibility</li>
+</ul>
+<p>The generalized architecture should preserve:</p>
+<pre><code>commitment
+  ≠
+finality
+</code></pre>
+<hr>
+<h1 id="40-finality-is-regime-specific">40. Finality Is Regime-Specific</h1>
+<p>A transaction may be considered sufficiently final for:</p>
+<pre><code>low-consequence display
+</code></pre>
+<p>before it is sufficiently final for:</p>
+<pre><code>high-consequence settlement
+</code></pre>
+<p>Therefore:</p>
+<pre><code>finality requirement
+</code></pre>
+<p>may belong partly to:</p>
+<pre><code>Regime
+</code></pre>
+<p>while:</p>
+<pre><code>finality state
+</code></pre>
+<p>belongs to:</p>
+<pre><code>domain result / Commitment Descriptor
+</code></pre>
+<p>This parallels earlier:</p>
+<pre><code>freshness
+assurance
+trust
+</code></pre>
+<p>relationships.</p>
+<hr>
+<h1 id="41-commitment-strength">41. Commitment Strength</h1>
+<p>Rather than forcing all systems into:</p>
+<pre><code>committed = true/false
+</code></pre>
+<p>the architecture may eventually support:</p>
+<pre><code>commitment state
+  +
+finality characteristics
+</code></pre>
+<p>Potential representation:</p>
+<pre><code>commitment:
+  state: committed
+  durability: durable
+  finality: bounded
+  reversal_model: compensating_transition
+</code></pre>
+<p>This remains provisional.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="42-reversal-vs-rollback">42. Reversal vs Rollback</h1>
+<p>These should remain distinct.</p>
+<h2 id="rollback">Rollback</h2>
+<p>The candidate transaction does not become committed.</p>
+<h2 id="reversal">Reversal</h2>
+<p>A previously committed effect is later altered by another accepted transition.</p>
+<p>Conceptually:</p>
+<pre><code>T1:
+  committed
+</code></pre>
+<p>then:</p>
+<pre><code>T2:
+  reverses / compensates T1
+</code></pre>
+<p>The historical fact remains:</p>
+<pre><code>T1 committed
+</code></pre>
+<p>The later state is:</p>
+<pre><code>effects changed by T2
+</code></pre>
+<p>This is crucial for immutable history.</p>
+<hr>
+<h1 id="43-reversal-does-not-make-prior-commitment-false">43. Reversal Does Not Make Prior Commitment False</h1>
+<p>Suppose:</p>
+<pre><code>Transaction A:
+  committed
+</code></pre>
+<p>Later:</p>
+<pre><code>Transaction B:
+  reverses effect of A
+</code></pre>
+<p>It would be incorrect to rewrite history as:</p>
+<pre><code>Transaction A never committed
+</code></pre>
+<p>The correct Lineage is:</p>
+<pre><code>A
+  committed
+    ↓
+B
+  corrective transition
+</code></pre>
+<p>This strongly supports append-oriented Truth-State history.</p>
+<hr>
+<h1 id="44-compensating-transaction-corrective-transition">44. Compensating Transaction → Corrective Transition</h1>
+<p>Some systems correct prior effects through a new transaction rather than rewriting prior committed history.</p>
+<p>RTT interpretation:</p>
+<pre><code>Corrective Transition
+</code></pre>
+<p>This is a powerful generalized Correction pattern.</p>
+<p>Earlier Correction examples included:</p>
+<pre><code>NTP:
+  clock discipline
+
+DNS:
+  cache replacement
+
+Distributed State:
+  replica reconciliation
+</code></pre>
+<p>Transactional systems add:</p>
+<pre><code>append new corrective event
+</code></pre>
+<p>Therefore Correction itself has multiple forms.</p>
+<hr>
+<h1 id="45-correction-taxonomy-candidate">45. Correction Taxonomy Candidate</h1>
+<p>Potential generalized Correction families:</p>
+<pre><code>MUTATE LOCAL STATE
+  e.g. adjust clock
+
+REPLACE MATERIALIZATION
+  e.g. refresh cache
+
+RECONCILE WITH ACCEPTED HISTORY
+  e.g. replica recovery
+
+APPEND CORRECTIVE TRANSITION
+  e.g. compensating transaction
+
+RESTRICT ACTION
+  e.g. authorization deny
+
+ESCALATE
+  e.g. human review
+</code></pre>
+<p>This taxonomy may be more useful than a flat correction-mode enum eventually.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>Do not revise the schema yet.</p>
+<hr>
+<h1 id="46-transactional-drift">46. Transactional Drift</h1>
+<p>Potential Drift dimensions include:</p>
+<h2 id="state-drift">State Drift</h2>
+<p>Materialized state differs from committed state.</p>
+<h2 id="lineage-drift">Lineage Drift</h2>
+<p>Expected transition history differs.</p>
+<h2 id="ordering-drift">Ordering Drift</h2>
+<p>Recorded ordering differs.</p>
+<h2 id="reconciliation-drift">Reconciliation Drift</h2>
+<p>Independent ledgers disagree.</p>
+<h2 id="policy-drift">Policy Drift</h2>
+<p>Transaction validity rules change.</p>
+<h2 id="settlement-drift">Settlement Drift</h2>
+<p>Upstream commit and downstream settlement differ.</p>
+<h2 id="materialization-drift">Materialization Drift</h2>
+<p>Data pages / derived views lag accepted history.</p>
+<p>Once again:</p>
+<pre><code>Drift
+</code></pre>
+<p>survives strongly,</p>
+<p>while its domain expression changes.</p>
+<hr>
+<h1 id="47-stable-balance-changed-history">47. Stable Balance, Changed History</h1>
+<p>Consider two states displaying:</p>
+<pre><code>balance = 100
+</code></pre>
+<p>State A arose through:</p>
+<pre><code>+50
++50
+</code></pre>
+<p>State B arose through:</p>
+<pre><code>+100
+</code></pre>
+<p>The final value is identical.</p>
+<p>The Transactional Lineage differs.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Identical present state does not imply identical Transactional Truth.</strong></p>
+</blockquote>
+<p>This is another powerful example of:</p>
+<pre><code>stable value
+  ≠
+stable structure
+</code></pre>
+<p>That finding is now deeply generalized.</p>
+<hr>
+<h1 id="48-transactional-coherence">48. Transactional Coherence</h1>
+<p>Coherence may involve:</p>
+<ul>
+<li>consistent transaction boundaries</li>
+<li>accepted ordering</li>
+<li>valid constraints</li>
+<li>durable commitment</li>
+<li>compatible history</li>
+<li>reconciliation across records</li>
+<li>no conflicting accepted transitions under the same rules</li>
+</ul>
+<p>Again:</p>
+<pre><code>Coherence
+  ≠
+equality alone
+</code></pre>
+<p>It concerns structural compatibility.</p>
+<p>This continues to reinforce domain-semantic Coherence as a core principle.</p>
+<hr>
+<h1 id="49-transactional-paradox">49. Transactional Paradox</h1>
+<p>Potential Transactional Paradox arises when:</p>
+<ul>
+<li>two equally qualified histories claim incompatible commitments</li>
+<li>ordering cannot be reconciled</li>
+<li>two authoritative ledgers claim mutually incompatible settlement</li>
+<li>commitment state differs without a valid Regime distinction</li>
+</ul>
+<p>Before registering Paradox, classify:</p>
+<pre><code>pending?
+
+committed?
+
+rolled back?
+
+compensated?
+
+different Regime?
+
+stale materialization?
+
+reconciliation delay?
+
+different finality threshold?
+</code></pre>
+<p>Only unresolved structural incompatibility should become Paradox.</p>
+<hr>
+<h1 id="50-pending-contested">50. Pending ≠ Contested</h1>
+<p>A transaction may simply be:</p>
+<pre><code>pending
+</code></pre>
+<p>This does not necessarily mean:</p>
+<pre><code>contested
+</code></pre>
+<p>Likewise:</p>
+<pre><code>uncommitted
+</code></pre>
+<p>does not mean:</p>
+<pre><code>false
+</code></pre>
+<p>The domain lifecycle must remain visible.</p>
+<p>This strongly supports keeping:</p>
+<pre><code>domain result
+</code></pre>
+<p>separate from:</p>
+<pre><code>Truth-State qualification
+</code></pre>
+<hr>
+<h1 id="51-rolled-back-rejected-evidence">51. Rolled Back ≠ Rejected Evidence</h1>
+<p>A transaction may be rolled back because the transition was not committed.</p>
+<p>The Evidence describing:</p>
+<pre><code>attempted transaction
+</code></pre>
+<p>may remain completely valid.</p>
+<p>Therefore:</p>
+<pre><code>transaction effect rejected
+  ≠
+Evidence rejected
+</code></pre>
+<p>This is an important layer distinction.</p>
+<p>The Truth Service may coherently accept:</p>
+<blockquote>
+<p>Transaction T was attempted and rolled back.</p>
+</blockquote>
+<p>That itself is Transactional Truth.</p>
+<hr>
+<h1 id="52-truth-about-failure">52. Truth About Failure</h1>
+<p>Transactional systems make a subtle but valuable point:</p>
+<pre><code>failed transaction
+</code></pre>
+<p>can still generate:</p>
+<pre><code>true transactional history about the failure
+</code></pre>
+<p>Example:</p>
+<pre><code>Transaction T
+  status: rolled_back
+</code></pre>
+<p>The statement:</p>
+<blockquote>
+<p>Transaction T did not commit.</p>
+</blockquote>
+<p>may be:</p>
+<pre><code>operationally_accepted
+</code></pre>
+<p>Therefore negative lifecycle states are themselves truth-bearing.</p>
+<p>This strongly reinforces the Crosswalk #5 result:</p>
+<blockquote>
+<p><strong>Truth qualification is independent of domain-result polarity.</strong></p>
+</blockquote>
+<hr>
+<h1 id="53-durability">53. Durability</h1>
+<p>Durability concerns preservation of committed state across failure.</p>
+<p>RTT interpretation:</p>
+<pre><code>Persistence of Committed Truth
+</code></pre>
+<p>This maps strongly to:</p>
+<pre><code>Spin
+</code></pre>
+<p>The accepted transition must survive disturbance sufficiently for the system's guarantees.</p>
+<p>This gives Spin one of its clearest operational manifestations:</p>
+<blockquote>
+<p><strong>The committed relationship persists across failure and recovery.</strong></p>
+</blockquote>
+<hr>
+<h1 id="54-durability-is-not-freshness">54. Durability Is Not Freshness</h1>
+<p>A durable transaction may be old.</p>
+<p>A fresh transaction may not yet be committed.</p>
+<p>Therefore:</p>
+<pre><code>durability
+  ≠
+freshness
+</code></pre>
+<p>These should remain separate dimensions.</p>
+<p>Potential Truth-Service descriptors:</p>
+<pre><code>freshness
+
+durability
+
+finality
+</code></pre>
+<p>all answer different questions.</p>
+<p>This argues against overloading one generic:</p>
+<pre><code>confidence
+</code></pre>
+<p>or:</p>
+<pre><code>validity
+</code></pre>
+<p>field.</p>
+<hr>
+<h1 id="55-durability-is-not-finality">55. Durability Is Not Finality</h1>
+<p>Likewise:</p>
+<pre><code>durable
+  ≠
+irreversible under every future operation
+</code></pre>
+<p>A durable transaction may later be counteracted through another transaction.</p>
+<p>Therefore:</p>
+<pre><code>persistence of recorded commitment
+</code></pre>
+<p>and:</p>
+<pre><code>impossibility of future reversal
+</code></pre>
+<p>must remain distinct.</p>
+<hr>
+<h1 id="56-reference-basis-in-transactional-truth">56. Reference Basis in Transactional Truth</h1>
+<p>Crosswalk #6 challenged:</p>
+<pre><code>Anchor
+</code></pre>
+<p>and proposed:</p>
+<pre><code>ReferenceBasis
+</code></pre>
+<p>Transactional systems strengthen that challenge.</p>
+<p>What forms the reference basis for Transactional Truth?</p>
+<p>Potential components include:</p>
+<pre><code>transaction protocol
+constraint rules
+write-ahead log
+accepted history
+recovery semantics
+</code></pre>
+<p>No single external Source necessarily declares:</p>
+<pre><code>this transaction committed
+</code></pre>
+<p>Instead, commitment is established through:</p>
+<pre><code>governed transaction procedure
+</code></pre>
+<p>This strongly supports:</p>
+<pre><code>ReferenceBasis
+</code></pre>
+<p>as broader than:</p>
+<pre><code>Truth Anchor
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="57-reference-basis-candidate-structure">57. Reference Basis Candidate Structure</h1>
+<p>Potential conceptual model:</p>
+<pre><code>ReferenceBasis
+  ├── type
+  ├── authority / governing system
+  ├── policy / protocol reference
+  ├── accepted-history reference
+  ├── Regime
+  ├── version
+  └── constraints
+</code></pre>
+<p>Potential types:</p>
+<pre><code>external_anchor
+governing_policy
+governing_protocol
+accepted_history
+measurement_standard
+</code></pre>
+<p>This model now has support from:</p>
+<pre><code>NTP
+DNS
+PKI
+Authority
+Distributed State
+Transactions
+</code></pre>
+<p>through different expressions.</p>
+<hr>
+<h1 id="58-acceptancerule-strengthened">58. AcceptanceRule Strengthened</h1>
+<p>Distributed systems introduced:</p>
+<pre><code>AcceptanceRule
+</code></pre>
+<p>Transactional systems make it concrete again.</p>
+<p>A transaction becomes committed only when the governing transaction mechanism reaches the required commitment condition.</p>
+<p>General form:</p>
+<blockquote>
+<p><strong>AcceptanceRule defines the structural conditions required for a domain result to cross into operational acceptance.</strong></p>
+</blockquote>
+<p>Examples:</p>
+<pre><code>Temporal:
+  Source-selection / qualification rules
+
+DNS:
+  authority + freshness rules
+
+IAM:
+  proofing/authentication rules
+
+PKI:
+  path-validation rules
+
+Authority:
+  policy evaluation
+
+Distributed State:
+  quorum / commit rule
+
+Transaction:
+  transaction commit rule
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="59-commitmentstate-strengthened">59. CommitmentState Strengthened</h1>
+<p>Crosswalk #6 introduced:</p>
+<pre><code>CommitmentState
+</code></pre>
+<p>Crosswalk #7 directly validates the need to distinguish:</p>
+<pre><code>uncommitted
+committed
+</code></pre>
+<p>and potentially:</p>
+<pre><code>rolled_back
+compensated
+settled
+final
+</code></pre>
+<p>However, these values mix lifecycle concepts.</p>
+<p>Recommendation:</p>
+<p>Do not create one oversized generic enum.</p>
+<p>Instead consider:</p>
+<pre><code>TransitionState
+</code></pre>
+<p>plus:</p>
+<pre><code>CommitmentDescriptor
+</code></pre>
+<p>during consolidation.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="60-transactional-regime">60. Transactional Regime</h1>
+<p>A Transactional Truth Regime may include:</p>
+<ul>
+<li>transaction semantics</li>
+<li>isolation requirements</li>
+<li>constraint rules</li>
+<li>durability requirements</li>
+<li>recovery behavior</li>
+<li>settlement requirements</li>
+<li>finality threshold</li>
+<li>application policy</li>
+</ul>
+<p>The same transition may have different operational interpretations under different transaction systems.</p>
+<p>Therefore:</p>
+<pre><code>committed under Regime A
+</code></pre>
+<p>must not be silently translated into:</p>
+<pre><code>final under Regime B
+</code></pre>
+<p>Regime qualification remains essential.</p>
+<hr>
+<h1 id="61-isolation-as-observer-context">61. Isolation as Observer Context</h1>
+<p>Transactions also raise an observer-related issue.</p>
+<p>Concurrent transactions may have different permitted views of state depending on isolation semantics.</p>
+<p>RTT interpretation:</p>
+<pre><code>Observer-Scoped State View
+</code></pre>
+<p>This connects strongly to:</p>
+<pre><code>Observer Context
+</code></pre>
+<p>introduced by DNS and strengthened by IAM / PKI.</p>
+<p>Potential architecture candidate:</p>
+<pre><code>StateView
+</code></pre>
+<p>with:</p>
+<pre><code>observer
+evaluation point
+regime
+visible state
+lineage
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strengthened
+</code></pre>
+<hr>
+<h1 id="62-state-view-global-state">62. State View ≠ Global State</h1>
+<p>A transaction's visible state may be a valid operational view without representing:</p>
+<pre><code>every concurrent change everywhere
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>A coherent observer-scoped state can remain valid inside its Regime without being identical to all other simultaneous views.</strong></p>
+</blockquote>
+<p>This will matter later in:</p>
+<pre><code>Telemetry
+Observational Truth
+</code></pre>
+<p>and potentially:</p>
+<pre><code>Desired-State Systems
+</code></pre>
+<hr>
+<h1 id="63-transactional-truth-and-authority">63. Transactional Truth and Authority</h1>
+<p>Who may commit?</p>
+<p>Who may initiate?</p>
+<p>Who may reconcile?</p>
+<p>Who may reverse?</p>
+<p>These are Authority Truth questions.</p>
+<p>Transactional Truth therefore composes with:</p>
+<pre><code>Authority Truth
+</code></pre>
+<p>but does not collapse into it.</p>
+<p>A transition may be:</p>
+<pre><code>correctly committed
+</code></pre>
+<p>only if relevant authority conditions are satisfied under the transaction system.</p>
+<p>Again, Truth Classes compose.</p>
+<hr>
+<h1 id="64-transactional-truth-and-integrity">64. Transactional Truth and Integrity</h1>
+<p>The transaction record may require integrity mechanisms.</p>
+<p>But:</p>
+<pre><code>intact log record
+  ≠
+transaction valid
+</code></pre>
+<p>An invalid transaction could be perfectly preserved.</p>
+<p>Therefore:</p>
+<pre><code>Integrity Truth
+  ≠
+Transactional Truth
+</code></pre>
+<p>This repeats the pattern established by PKI.</p>
+<p>Integrity describes preservation.</p>
+<p>Transactional Truth describes accepted transition status.</p>
+<hr>
+<h1 id="65-transactional-truth-and-intent">65. Transactional Truth and Intent</h1>
+<p>A transaction expresses:</p>
+<pre><code>intended state change
+</code></pre>
+<p>Commit determines whether it became:</p>
+<pre><code>accepted transition
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Intent Truth
+  ↓
+proposed transition
+
+Transactional Truth
+  ↓
+committed transition
+
+State Truth
+  ↓
+resulting current state
+</code></pre>
+<p>This gives us perhaps the cleanest three-class chain yet:</p>
+<pre><code>INTENT
+  ↓
+TRANSACTION
+  ↓
+STATE
+</code></pre>
+<p>Crosswalk #8 will examine the first element directly.</p>
+<hr>
+<h1 id="66-worked-example-successful-commit">66. Worked Example — Successful Commit</h1>
+<h2 id="prior-state">Prior State</h2>
+<pre><code>State S0
+</code></pre>
+<h2 id="transaction">Transaction</h2>
+<pre><code>T1
+</code></pre>
+<h2 id="proposed-operations">Proposed Operations</h2>
+<pre><code>O1
+O2
+</code></pre>
+<h2 id="qualification">Qualification</h2>
+<pre><code>transaction constraints satisfied
+</code></pre>
+<h2 id="commit">Commit</h2>
+<pre><code>successful
+</code></pre>
+<h2 id="durable-evidence">Durable Evidence</h2>
+<pre><code>applicable WAL records persisted according to the transaction mechanism
+</code></pre>
+<h2 id="resulting-transactional-truth">Resulting Transactional Truth</h2>
+<pre><code>Truth State:
+  operationally_accepted
+
+domain_result:
+  transaction: T1
+  commitment: committed
+</code></pre>
+<h2 id="materialization">Materialization</h2>
+<pre><code>may occur or complete separately
+</code></pre>
+<h2 id="architectural-finding">Architectural Finding</h2>
+<p>Commit establishes Transactional Truth before every final physical materialization must necessarily be complete.</p>
+<hr>
+<h1 id="67-worked-example-rollback">67. Worked Example — Rollback</h1>
+<h2 id="prior-state_1">Prior State</h2>
+<pre><code>State S0
+</code></pre>
+<h2 id="transaction_1">Transaction</h2>
+<pre><code>T2
+</code></pre>
+<h2 id="candidate-operations">Candidate Operations</h2>
+<pre><code>O1
+O2
+</code></pre>
+<h2 id="outcome">Outcome</h2>
+<pre><code>rollback
+</code></pre>
+<h2 id="transactional-truth_1">Transactional Truth</h2>
+<pre><code>Truth State:
+  operationally_accepted
+
+domain_result:
+  transaction: T2
+  commitment: rolled_back
+</code></pre>
+<h2 id="current-state">Current State</h2>
+<pre><code>committed effects of T2 are absent
+</code></pre>
+<h2 id="audit-history_1">Audit History</h2>
+<pre><code>T2 was attempted
+</code></pre>
+<h2 id="architectural-finding_1">Architectural Finding</h2>
+<p>The Truth Service can coherently accept the fact that:</p>
+<blockquote>
+<p>T2 did not commit.</p>
+</blockquote>
+<p>A negative transaction outcome remains Truth.</p>
+<hr>
+<h1 id="68-worked-example-crash-after-commit">68. Worked Example — Crash After Commit</h1>
+<h2 id="transaction_2">Transaction</h2>
+<pre><code>T3
+</code></pre>
+<h2 id="commit_1">Commit</h2>
+<pre><code>successfully established under the transaction system
+</code></pre>
+<h2 id="failure">Failure</h2>
+<pre><code>system crash occurs before all affected data pages are fully materialized
+</code></pre>
+<h2 id="recovery_1">Recovery</h2>
+<pre><code>accepted WAL history is used to restore the committed state
+</code></pre>
+<h2 id="transactional-truth_2">Transactional Truth</h2>
+<pre><code>T3 remains committed
+</code></pre>
+<h2 id="materialization-state">Materialization State</h2>
+<pre><code>reconstructed during recovery
+</code></pre>
+<h2 id="architectural-finding_2">Architectural Finding</h2>
+<p>Commitment and materialization are separate.</p>
+<p>Durable accepted Lineage can reconstruct materialization.</p>
+<hr>
+<h1 id="69-worked-example-compensating-transaction">69. Worked Example — Compensating Transaction</h1>
+<h2 id="transaction-t4">Transaction T4</h2>
+<pre><code>committed
+</code></pre>
+<h2 id="later-discovery">Later Discovery</h2>
+<p>The operational effect must be corrected.</p>
+<h2 id="transaction-t5">Transaction T5</h2>
+<pre><code>committed
+compensates T4
+</code></pre>
+<h2 id="correct-history">Correct History</h2>
+<pre><code>T4:
+  committed
+
+T5:
+  committed
+  corrective_relation: compensates T4
+</code></pre>
+<h2 id="incorrect-history">Incorrect History</h2>
+<pre><code>T4:
+  never happened
+</code></pre>
+<h2 id="architectural-finding_3">Architectural Finding</h2>
+<p>Correction should append history rather than rewrite accepted Truth where the domain uses compensating transitions.</p>
+<hr>
+<h1 id="70-worked-example-same-state-different-history">70. Worked Example — Same State, Different History</h1>
+<h2 id="ledger-a">Ledger A</h2>
+<pre><code>State:
+  balance = 100
+
+History:
+  +50
+  +50
+</code></pre>
+<h2 id="ledger-b">Ledger B</h2>
+<pre><code>State:
+  balance = 100
+
+History:
+  +100
+</code></pre>
+<h2 id="state-truth_1">State Truth</h2>
+<p>The visible state may match.</p>
+<h2 id="transactional-truth_3">Transactional Truth</h2>
+<p>The accepted histories differ.</p>
+<h2 id="architectural-finding_4">Architectural Finding</h2>
+<p>State equality does not imply Transactional Lineage equality.</p>
+<hr>
+<h1 id="71-worked-example-pending-transaction">71. Worked Example — Pending Transaction</h1>
+<h2 id="transaction_3">Transaction</h2>
+<pre><code>T6
+</code></pre>
+<h2 id="status">Status</h2>
+<pre><code>proposed / processing
+</code></pre>
+<h2 id="commitment">Commitment</h2>
+<pre><code>not established
+</code></pre>
+<h2 id="truth-service-result">Truth Service Result</h2>
+<pre><code>qualification:
+  operationally_accepted
+
+domain_result:
+  transaction: T6
+  commitment: pending
+</code></pre>
+<h2 id="architectural-finding_5">Architectural Finding</h2>
+<p>The Truth Service can coherently establish that the transaction is pending.</p>
+<p>Pending is not Contested.</p>
+<hr>
+<h1 id="72-worked-example-reconciliation-difference">72. Worked Example — Reconciliation Difference</h1>
+<h2 id="ledger-a_1">Ledger A</h2>
+<pre><code>Transaction T7:
+  committed
+</code></pre>
+<h2 id="ledger-b_1">Ledger B</h2>
+<pre><code>Transaction T7:
+  absent
+</code></pre>
+<p>Before Paradox:</p>
+<pre><code>compare Source
+compare Lineage
+compare evaluation time
+compare settlement boundary
+compare Regime
+compare replication / synchronization state
+</code></pre>
+<p>Potential outcomes:</p>
+<pre><code>stale Materialization
+missing transition
+different Regime
+genuine contradiction
+</code></pre>
+<h2 id="architectural-finding_6">Architectural Finding</h2>
+<p>Cross-ledger disagreement requires qualification before Paradox.</p>
+<hr>
+<h1 id="73-worked-example-commitment-vs-finality">73. Worked Example — Commitment vs Finality</h1>
+<h2 id="transaction_4">Transaction</h2>
+<pre><code>T8
+</code></pre>
+<h2 id="state">State</h2>
+<pre><code>committed
+</code></pre>
+<h2 id="finality">Finality</h2>
+<pre><code>not yet sufficient for high-consequence Regime
+</code></pre>
+<h2 id="low-consequence-consumer">Low-Consequence Consumer</h2>
+<pre><code>may accept
+</code></pre>
+<h2 id="high-consequence-consumer">High-Consequence Consumer</h2>
+<pre><code>may wait
+</code></pre>
+<h2 id="architectural-finding_7">Architectural Finding</h2>
+<p>Commitment and finality are distinct dimensions, and Regime may determine sufficient finality.</p>
+<hr>
+<h1 id="74-worked-example-authority-failure">74. Worked Example — Authority Failure</h1>
+<h2 id="transaction-request">Transaction Request</h2>
+<pre><code>T9
+</code></pre>
+<h2 id="intended-transition">Intended Transition</h2>
+<pre><code>otherwise valid
+</code></pre>
+<h2 id="authority-evaluation">Authority Evaluation</h2>
+<pre><code>requester unauthorized
+</code></pre>
+<h2 id="result">Result</h2>
+<pre><code>transaction not permitted to commit
+</code></pre>
+<h2 id="truth-classes">Truth Classes</h2>
+<pre><code>Integrity:
+  may be coherent
+
+Transactional:
+  uncommitted
+
+Authority:
+  denied
+</code></pre>
+<h2 id="architectural-finding_8">Architectural Finding</h2>
+<p>Transactional Truth depends upon but remains separate from Authority Truth.</p>
+<hr>
+<h1 id="75-rtt-dimension-mapping">75. RTT Dimension Mapping</h1>
+<table>
+<thead>
+<tr>
+<th>RTT Dimension</th>
+<th>Transactional Interpretation</th>
+<th>General Truth-Service Candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Transaction evidence and state transitions propagate through logs/records</td>
+<td>Transitions propagate through governed Evidence relationships</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Transaction boundaries, ordering, constraints, commitment, and histories remain compatible</td>
+<td>Domain-semantic transactional compatibility</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>State, history, ordering, settlement, or materialization diverge</td>
+<td>Multi-dimensional transition Drift</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Equally qualified accepted histories remain incompatible</td>
+<td>Preserved transactional contradiction</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Transaction, durability, isolation, settlement, and finality rules govern meaning</td>
+<td>Operational boundary governs acceptance</td>
+</tr>
+<tr>
+<td><strong>Spin</strong></td>
+<td>Committed transactions persist across failure</td>
+<td>Durable accepted-history persistence</td>
+</tr>
+<tr>
+<td><strong>Elec</strong></td>
+<td>Proposed, committed, rolled back, materialized, settled, and final remain distinct</td>
+<td>Lifecycle-stage separation</td>
+</tr>
+<tr>
+<td><strong>Temp</strong></td>
+<td>Transactions begin, commit, rollback, recover, settle, and compensate</td>
+<td>Transition lifecycle and ordering</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="76-set-mapping">76. SET Mapping</h1>
+<h2 id="spin">Spin</h2>
+<p>Transactional Truth expresses Spin through:</p>
+<ul>
+<li>durability</li>
+<li>committed-history persistence</li>
+<li>transaction identity</li>
+<li>accepted ordering</li>
+<li>recovery lineage</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>Transactional Truth strongly expresses Elec through distinctions among:</p>
+<ul>
+<li>proposed</li>
+<li>executing</li>
+<li>committed</li>
+<li>rolled back</li>
+<li>materialized</li>
+<li>reconciled</li>
+<li>settled</li>
+<li>final</li>
+<li>compensated</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>Transactional Truth expresses Temp through:</p>
+<ul>
+<li>transaction begin</li>
+<li>operation sequence</li>
+<li>commit</li>
+<li>rollback</li>
+<li>recovery</li>
+<li>settlement</li>
+<li>compensation</li>
+<li>finality progression</li>
+</ul>
+<p>Compactly:</p>
+<blockquote>
+<p><strong>Spin preserves committed history.</strong></p>
+<p><strong>Elec distinguishes transaction states and boundaries.</strong></p>
+<p><strong>Temp governs ordering, commitment, recovery, and corrective transition.</strong></p>
+</blockquote>
+<hr>
+<h1 id="77-prior-candidate-review-evidenceitem">77. Prior Candidate Review — EvidenceItem</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Transactional result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Transition Evidence and WAL records do not fit naturally into Observation-only semantics.</p>
+<p>Recommendation:</p>
+<pre><code>retain Candidate Core
+pending formal consolidation
+</code></pre>
+<hr>
+<h1 id="78-prior-candidate-review-authorityrelationship">78. Prior Candidate Review — AuthorityRelationship</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Transactional result:</p>
+<pre><code>SURVIVES
+</code></pre>
+<p>Transactional systems still need to determine:</p>
+<pre><code>who may initiate
+who may commit
+who may reverse
+who may reconcile
+</code></pre>
+<p>However, Authority is not the primary truth mechanism here.</p>
+<p>This supports keeping it composable rather than universal.</p>
+<hr>
+<h1 id="79-prior-candidate-review-acceptancerule">79. Prior Candidate Review — AcceptanceRule</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Transactional result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>The transaction mechanism defines the conditions under which a proposed transition becomes committed.</p>
+<p>Recommendation:</p>
+<pre><code>Promote during consolidation unless later crosswalk evidence contradicts.
+</code></pre>
+<hr>
+<h1 id="80-prior-candidate-review-referencebasis">80. Prior Candidate Review — ReferenceBasis</h1>
+<p>Prior status:</p>
+<pre><code>architecture challenge
+</code></pre>
+<p>Transactional result:</p>
+<pre><code>STRONGLY STRENGTHENED
+</code></pre>
+<p>Transactional Truth may derive from:</p>
+<pre><code>protocol
+constraints
+accepted history
+durable log
+</code></pre>
+<p>rather than one external Anchor.</p>
+<p>Recommendation:</p>
+<pre><code>ReferenceBasis becomes CANDIDATE_CORE.
+</code></pre>
+<p>Anchor should remain as a subtype / specialized reference concept.</p>
+<hr>
+<h1 id="81-prior-candidate-review-materializedtruthstate">81. Prior Candidate Review — MaterializedTruthState</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Transactional result:</p>
+<pre><code>STRONGLY STRENGTHENED
+</code></pre>
+<p>WAL / recovery semantics make the accepted-state vs materialized-state distinction unusually clear.</p>
+<p>Recommendation:</p>
+<pre><code>Strong Candidate Core.
+</code></pre>
+<hr>
+<h1 id="82-prior-candidate-review-commitmentstate">82. Prior Candidate Review — CommitmentState</h1>
+<p>Prior status:</p>
+<pre><code>candidate
+</code></pre>
+<p>Transactional result:</p>
+<pre><code>DIRECTLY VALIDATED
+</code></pre>
+<p>Commitment is central to Transactional Truth.</p>
+<p>Recommendation:</p>
+<pre><code>Promote conceptually to CANDIDATE_CORE.
+</code></pre>
+<p>Exact schema should wait until consolidation.</p>
+<hr>
+<h1 id="83-prior-candidate-review-constituted-operational-truth">83. Prior Candidate Review — Constituted Operational Truth</h1>
+<p>Prior status:</p>
+<pre><code>strong candidate
+</code></pre>
+<p>Transactional result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>A transaction becomes committed because the governing system successfully performs the required commitment process.</p>
+<p>Recommendation:</p>
+<pre><code>CANDIDATE_CORE as classification concept
+</code></pre>
+<p>not necessarily as a persistent entity.</p>
+<hr>
+<h1 id="84-new-candidate-recoveryrelationship">84. New Candidate — RecoveryRelationship</h1>
+<p>Crosswalk #7 introduces a useful relation:</p>
+<pre><code>materialization
+  reconstructed_from
+accepted history
+</code></pre>
+<p>Potential model:</p>
+<pre><code>RecoveryRelationship
+  source_history
+  recovered_materialization
+  recovery_event
+  completion_state
+</code></pre>
+<p>However this may be representable using:</p>
+<pre><code>Lineage Edge
+</code></pre>
+<p>with:</p>
+<pre><code>relation: reconstructed_from
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>keep as relationship semantic
+not a new core entity
+</code></pre>
+<p>This follows the promotion rule.</p>
+<hr>
+<h1 id="85-new-candidate-correctivetransition">85. New Candidate — CorrectiveTransition</h1>
+<p>Compensating transactions suggest:</p>
+<pre><code>CorrectiveTransition
+</code></pre>
+<p>Again, this may not require a new entity.</p>
+<p>Potential Lineage relationship:</p>
+<pre><code>T5
+  compensates
+T4
+</code></pre>
+<p>or:</p>
+<pre><code>T5
+  reverses_effect_of
+T4
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>model as Transition relationship
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_RELATION
+</code></pre>
+<hr>
+<h1 id="86-new-candidate-finalityrequirement">86. New Candidate — FinalityRequirement</h1>
+<p>Finality requirements appear Regime-dependent.</p>
+<p>Potential model:</p>
+<pre><code>Regime:
+  finality_requirement
+</code></pre>
+<p>while:</p>
+<pre><code>domain_result:
+  finality_state
+</code></pre>
+<p>This keeps:</p>
+<pre><code>requirement
+</code></pre>
+<p>separate from:</p>
+<pre><code>observed / established state
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>Later systems may not require it.</p>
+<hr>
+<h1 id="87-architecture-refinement-1-referencebasis-has-survived">87. Architecture Refinement #1 — ReferenceBasis Has Survived</h1>
+<p>Distributed State challenged Anchor.</p>
+<p>Transactional Truth independently supports a broader abstraction.</p>
+<p>Proposed:</p>
+<pre><code>ReferenceBasis
+   │
+   ├── ExternalAnchor
+   ├── GoverningPolicy
+   ├── GoverningProtocol
+   ├── AcceptedHistory
+   └── MeasurementStandard
+</code></pre>
+<p>This does not remove:</p>
+<pre><code>Anchor
+</code></pre>
+<p>It places Anchor inside a broader structure.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="88-architecture-refinement-2-lineage-must-support-evolution">88. Architecture Refinement #2 — Lineage Must Support Evolution</h1>
+<p>Lineage now needs to represent:</p>
+<pre><code>origin
+</code></pre>
+<p>and:</p>
+<pre><code>transition history
+</code></pre>
+<p>Potential edges include:</p>
+<pre><code>derives_from
+transforms
+precedes
+commits
+supersedes
+compensates
+reconstructs
+</code></pre>
+<p>The existing Lineage graph is structurally capable of this.</p>
+<p>The semantics should eventually be expanded.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="89-architecture-refinement-3-truth-state-status-must-not-carry-domain-lifecycle-alone">89. Architecture Refinement #3 — Truth-State Status Must Not Carry Domain Lifecycle Alone</h1>
+<p>Transactional systems expose many states:</p>
+<pre><code>pending
+rolled_back
+committed
+settled
+final
+</code></pre>
+<p>These should not all become generic TruthStatus values.</p>
+<p>Instead:</p>
+<pre><code>TruthStatus
+  =
+qualification / lifecycle of the evaluation result
+</code></pre>
+<p>while:</p>
+<pre><code>domain_result
+  =
+transaction-specific state
+</code></pre>
+<p>This candidate has now been validated strongly across:</p>
+<pre><code>DNS
+IAM
+PKI
+Authority
+Distributed State
+Transactional Truth
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>PROMOTE DURING CONSOLIDATION
+</code></pre>
+<hr>
+<h1 id="90-architecture-refinement-4-commitment-is-a-relationship">90. Architecture Refinement #4 — Commitment Is a Relationship</h1>
+<p>Commitment may be better modeled as:</p>
+<pre><code>transition
+  committed_under
+AcceptanceRule / ReferenceBasis
+</code></pre>
+<p>rather than:</p>
+<pre><code>boolean on arbitrary object
+</code></pre>
+<p>This preserves:</p>
+<ul>
+<li>what committed</li>
+<li>under which rules</li>
+<li>using which Evidence</li>
+<li>against which history</li>
+<li>at which point</li>
+</ul>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="91-architecture-refinement-5-recovery-and-revalidation-are-distinct">91. Architecture Refinement #5 — Recovery and Revalidation Are Distinct</h1>
+<p>This is a new architectural invariant candidate.</p>
+<pre><code>Recovery
+  =
+restore Materialization from accepted history
+
+Revalidation
+  =
+challenge whether accepted state still qualifies
+</code></pre>
+<p>The operations may interact.</p>
+<p>They are not equivalent.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="92-architecture-refinement-6-state-can-be-reconstructed-from-truth-lineage">92. Architecture Refinement #6 — State Can Be Reconstructed from Truth Lineage</h1>
+<p>When accepted history contains enough information, operational state can be reconstructed.</p>
+<p>This suggests:</p>
+<blockquote>
+<p><strong>Lineage is not merely explanatory. It can be generative.</strong></p>
+</blockquote>
+<p>That is a significant conceptual milestone.</p>
+<p>Previous Lineage roles:</p>
+<pre><code>provenance
+authority
+transition history
+</code></pre>
+<p>New role:</p>
+<pre><code>reconstruction basis
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="93-architecture-refinement-7-one-process-can-have-multiple-acceptance-boundaries">93. Architecture Refinement #7 — One Process Can Have Multiple Acceptance Boundaries</h1>
+<p>Transactional systems may distinguish:</p>
+<pre><code>validate
+commit
+durable
+settled
+final
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Operational truth lifecycle may contain several domain-specific acceptance boundaries.</strong></p>
+</blockquote>
+<p>The generic architecture should not require one universal:</p>
+<pre><code>ACCEPTED
+</code></pre>
+<p>moment.</p>
+<p>Instead:</p>
+<pre><code>domain lifecycle
+</code></pre>
+<p>should remain explicit.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL — strong
+</code></pre>
+<hr>
+<h1 id="94-scoring-boundary">94. Scoring Boundary</h1>
+<p>The scoring boundary for this crosswalk is:</p>
+<pre><code>System:
+  Transactional Ledgers / ACID Transaction Systems
+
+Primary Reference Case:
+  PostgreSQL transaction + WAL model
+
+Primary Truth Class:
+  Transactional Truth
+
+Evaluated Scope:
+  transaction boundaries
+  commit / rollback
+  write-ahead logging
+  durable transaction state
+  recovery / REDO relationship
+  committed history vs materialization
+
+Supporting Reference Family:
+  distributed ledgers / settlement systems
+
+Deferred Scope:
+  specific cryptocurrency protocol scoring
+  financial-market legal settlement rules
+  proprietary database internals
+  cross-database distributed transaction protocols
+  application-specific accounting rules
+  jurisdiction-specific finality
+</code></pre>
+<p>The primary reference should remain narrow enough that scoring evidence stays defensible.</p>
+<hr>
+<h1 id="95-preliminary-scoring-status">95. Preliminary Scoring Status</h1>
+<p>Current score status:</p>
+<pre><code>provisional
+</code></pre>
+<p>Likely structural strengths include:</p>
+<ul>
+<li>Lineage Visibility</li>
+<li>Drift Detection</li>
+<li>Correction Discipline</li>
+<li>Regime Awareness</li>
+<li>Failure Transparency</li>
+<li>Evidence Quality</li>
+</ul>
+<p>Areas requiring careful interpretation include:</p>
+<ul>
+<li>Anchor / Reference Basis Quality</li>
+<li>Coherence Detection</li>
+<li>Paradox Handling</li>
+<li>Freshness / Revalidation</li>
+</ul>
+<p>The existing scoring rubric continues to show pressure around:</p>
+<pre><code>Anchor Quality
+</code></pre>
+<p>and:</p>
+<pre><code>Observation Quality
+</code></pre>
+<hr>
+<h1 id="96-provisional-scorecard-template">96. Provisional Scorecard Template</h1>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score</th>
+<th>Delegation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anchor / Reference Basis Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Rubric challenged</td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Observation / Evidence Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+<td>Deferred</td>
+</tr>
+</tbody>
+</table>
+<p>No numeric values should be assigned without:</p>
+<pre><code>evidence
+rationale
+evaluation boundary
+</code></pre>
+<hr>
+<h1 id="97-rubric-recommendation-reference-basis-quality">97. Rubric Recommendation — Reference Basis Quality</h1>
+<p>Crosswalk #6 challenged:</p>
+<pre><code>Anchor Quality
+</code></pre>
+<p>Crosswalk #7 strengthens the challenge.</p>
+<p>Recommended future rubric revision:</p>
+<pre><code>Anchor Quality
+  ↓
+Reference Basis Quality
+</code></pre>
+<p>Possible interpretations include:</p>
+<pre><code>external reference
+authority set
+policy
+protocol
+accepted history
+standard
+</code></pre>
+<p>This preserves NTP:</p>
+<pre><code>reference clock / timing hierarchy
+</code></pre>
+<p>while supporting:</p>
+<pre><code>Distributed State:
+  governing protocol + accepted history
+</code></pre>
+<p>and:</p>
+<pre><code>Transactional Truth:
+  transaction protocol + durable history
+</code></pre>
+<p>Status:</p>
+<pre><code>RECOMMENDED_RUBRIC_REVISION
+</code></pre>
+<p>Do not silently alter prior scores.</p>
+<p>Version the rubric.</p>
+<hr>
+<h1 id="98-rubric-recommendation-evidence-quality">98. Rubric Recommendation — Evidence Quality</h1>
+<p>The prior recommendation remains strongly supported:</p>
+<pre><code>Observation Quality
+  ↓
+Evidence Quality
+</code></pre>
+<p>Transactional Evidence adds:</p>
+<pre><code>WAL records
+transaction records
+commit evidence
+recovery history
+</code></pre>
+<p>These are not naturally modeled solely as Observations.</p>
+<p>Status:</p>
+<pre><code>RECOMMENDED_RUBRIC_REVISION — strengthened
+</code></pre>
+<hr>
+<h1 id="99-crosswalk-7-findings">99. Crosswalk #7 Findings</h1>
+<h2 id="finding-1-transactional-truth-is-about-accepted-transition-history">Finding 1 — Transactional Truth Is About Accepted Transition History</h2>
+<p>Current state alone is insufficient to represent what became committed.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-2-executed-does-not-mean-committed">Finding 2 — Executed Does Not Mean Committed</h2>
+<p>Intermediate operation execution must remain distinct from commitment.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-3-commitment-is-a-structural-boundary">Finding 3 — Commitment Is a Structural Boundary</h2>
+<p>A transition changes domain meaning when it crosses the governing commitment rule.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-4-commitment-is-not-finality">Finding 4 — Commitment Is Not Finality</h2>
+<p>A committed transition may still have additional settlement or finality semantics.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<h2 id="finding-5-commitment-is-not-materialization">Finding 5 — Commitment Is Not Materialization</h2>
+<p>Accepted history may precede or outlive physical state materialization.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-6-rollback-is-not-history-erasure">Finding 6 — Rollback Is Not History Erasure</h2>
+<p>Attempted but uncommitted transitions may remain visible in audit history.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<h2 id="finding-7-reversal-is-not-retroactive-nonexistence">Finding 7 — Reversal Is Not Retroactive Nonexistence</h2>
+<p>A committed transition may later be counteracted without rewriting its historical commitment.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<h2 id="finding-8-transition-lineage-is-first-class">Finding 8 — Transition Lineage Is First-Class</h2>
+<p>Current state may depend on the ordered sequence of accepted transitions.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-9-recovery-is-not-revalidation">Finding 9 — Recovery Is Not Revalidation</h2>
+<p>Recovery reconstructs materialization from accepted history; Revalidation challenges qualification.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<h2 id="finding-10-accepted-lineage-can-be-generative">Finding 10 — Accepted Lineage Can Be Generative</h2>
+<p>Preserved transactional history may reconstruct operational state.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL — strong
+</code></pre>
+<h2 id="finding-11-domain-lifecycle-must-remain-separate-from-truth-qualification">Finding 11 — Domain Lifecycle Must Remain Separate from Truth Qualification</h2>
+<p>Pending, committed, rolled back, settled, and final are domain states.</p>
+<pre><code>Status:
+  CANDIDATE_CORE — strongly strengthened
+</code></pre>
+<h2 id="finding-12-one-process-may-have-multiple-acceptance-boundaries">Finding 12 — One Process May Have Multiple Acceptance Boundaries</h2>
+<p>Commit, durability, settlement, and finality should not be collapsed.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<h2 id="finding-13-negative-transaction-outcomes-remain-truth-bearing">Finding 13 — Negative Transaction Outcomes Remain Truth-Bearing</h2>
+<p>A coherent result may establish that a transaction did not commit.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL — strengthened
+</code></pre>
+<h2 id="finding-14-referencebasis-is-broader-than-anchor">Finding 14 — ReferenceBasis Is Broader Than Anchor</h2>
+<p>Transactional systems depend on protocol and accepted history more naturally than one external authority.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-15-state-equality-does-not-imply-transactional-equality">Finding 15 — State Equality Does Not Imply Transactional Equality</h2>
+<p>Identical present values may have different committed histories.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="100-seven-crosswalk-architecture-check">100. Seven-Crosswalk Architecture Check</h1>
+<p>After:</p>
+<pre><code>NTP
+DNS
+IAM
+PKI
+Policy / Authorization
+Distributed State
+Transactional Ledgers
+</code></pre>
+<p>the architecture has accumulated enough independent evidence to separate a likely generalized kernel from domain-specific mechanisms.</p>
+<h2 id="strong-general-kernel">Strong General Kernel</h2>
+<pre><code>Claim
+
+Truth Class
+
+Subject / Target
+
+Regime
+
+EvidenceItem
+
+Entity / Participant
+
+Role
+
+ReferenceBasis
+
+Lineage
+
+Qualification
+
+AcceptanceRule
+
+domain-semantic Coherence
+
+multi-dimensional Drift
+
+Paradox
+
+domain result
+
+Truth-State qualification
+
+Action / Correction Policy
+
+Revalidation
+
+immutable history
+</code></pre>
+<h2 id="candidate-core-extensions">Candidate Core Extensions</h2>
+<pre><code>AuthorityRelationship
+
+MaterializedTruthState
+
+CommitmentDescriptor
+
+RegimeEpoch
+
+TransitionLineage semantics
+
+ContextEvidence
+</code></pre>
+<h2 id="increasingly-stable-architectural-distinctions">Increasingly Stable Architectural Distinctions</h2>
+<pre><code>Evidence ≠ Truth State
+
+Identity ≠ Authority
+
+Authority ≠ Correctness
+
+Proposal ≠ Commitment
+
+Commitment ≠ Materialization
+
+Commitment ≠ Finality
+
+Decision ≠ Enforcement
+
+Recovery ≠ Revalidation
+
+Negative Result ≠ Evaluation Failure
+
+Current Value ≠ Historical Lineage
+
+Stable Value ≠ Stable Structure
+</code></pre>
+<h2 id="domain-specific-or-narrow">Domain-Specific or Narrow</h2>
+<pre><code>NTP Holdover mechanisms
+
+DNS TTL semantics
+
+IAM assurance levels
+
+PKI path details
+
+ABAC attribute semantics
+
+Raft term / majority rules
+
+database-specific WAL details
+</code></pre>
+<p>The generalized architecture is becoming visible underneath the examples.</p>
+<hr>
+<h1 id="101-emerging-kernel-after-transactional-truth">101. Emerging Kernel After Transactional Truth</h1>
+<p>A provisional generalized kernel now appears as:</p>
+<pre><code>SUBJECT / TARGET
+      ↓
+  CLAIM / PROPOSAL
+      ↓
+   TRUTH CLASS
+      ↓
+ INTENDED USE
+      ↓
+    REGIME
+      ↓
+REFERENCE BASIS
+      ↓
+AUTHORITY / ROLE
+      ↓
+ EVIDENCE GRAPH
+      ↓
+    LINEAGE
+      ↓
+ QUALIFICATION
+      ↓
+ACCEPTANCE RULE
+      ↓
+   COHERENCE
+      ↓
+     DRIFT
+      ↓
+    PARADOX
+      ↓
+  DOMAIN RESULT
+      ↓
+ TRUTH-STATE
+ QUALIFICATION
+      ↓
+  COMMITMENT
+  if applicable
+      ↓
+MATERIALIZATION
+  if applicable
+      ↓
+ACTION / CORRECTION
+      ↓
+  REVALIDATION
+      ↓
+IMMUTABLE HISTORY
+</code></pre>
+<p>Not every domain requires every stage.</p>
+<p>That is now one of the strongest architectural lessons.</p>
+<p>The generalized service should become:</p>
+<pre><code>composable
+</code></pre>
+<p>rather than:</p>
+<pre><code>one mandatory universal pipeline
+</code></pre>
+<hr>
+<h1 id="102-next-crosswalk-challenge">102. Next Crosswalk Challenge</h1>
+<p>Crosswalk #8 examines:</p>
+<pre><code>Desired-State Systems
+  ↓
+Intent Truth
+</code></pre>
+<p>The governing question becomes:</p>
+<blockquote>
+<p><strong>What should the state be?</strong></p>
+</blockquote>
+<p>This is the natural next step because Transactional Truth has clarified:</p>
+<pre><code>what became committed
+</code></pre>
+<p>while Desired-State systems ask:</p>
+<pre><code>what is declared as correct
+</code></pre>
+<p>and:</p>
+<pre><code>how observed state should be reconciled toward that intent
+</code></pre>
+<p>Crosswalk #8 should directly test:</p>
+<pre><code>ReferenceBasis
+AcceptanceRule
+MaterializedTruthState
+Correction taxonomy
+Recovery vs Revalidation
+ContextEvidence
+Transition Lineage
+Intent → Transaction → State relationship
+</code></pre>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Can the Truth Service represent declared intent as a truth-bearing reference without confusing "what should be" with "what currently is"?</strong></p>
+</blockquote>
+<hr>
+<h1 id="103-canonical-transactional-truth-statement">103. Canonical Transactional Truth Statement</h1>
+<blockquote>
+<p><strong>Transactional Truth is not merely the current state of a ledger. It is the Regime-qualified record of which proposed transitions crossed the governing commitment boundary, in what order, under which rules, with which Evidence and Lineage, and with what durability, materialization, settlement, or finality characteristics.</strong></p>
+</blockquote>
+<p>Transactional Truth therefore preserves:</p>
+<pre><code>proposed
+attempted
+committed
+rolled back
+compensated
+reconstructed
+settled
+final
+</code></pre>
+<p>as structurally different domain states.</p>
+<p>The architecture should not collapse them into:</p>
+<pre><code>happened = true/false
+</code></pre>
+<hr>
+<h1 id="104-canonical-crosswalk-finding">104. Canonical Crosswalk Finding</h1>
+<p>Crosswalk #7 shows that operational truth may attach not only to:</p>
+<pre><code>values
+</code></pre>
+<p>but to:</p>
+<pre><code>transitions
+</code></pre>
+<p>A system may need to know:</p>
+<pre><code>What was proposed?
+
+What executed?
+
+What qualified?
+
+What committed?
+
+What persisted?
+
+What materialized?
+
+What rolled back?
+
+What was later compensated?
+
+What became final enough for this Regime?
+</code></pre>
+<p>And those answers may all differ without contradiction.</p>
+<p>The strongest structural result is therefore:</p>
+<blockquote>
+<p><strong>Commitment changes the status of a transition, but it does not erase Lineage, collapse materialization, guarantee universal finality, or make future corrective transitions impossible.</strong></p>
+</blockquote>
+<p>This gives the emerging Truth Service a much richer model of history.</p>
+<hr>
+<h1 id="105-references">105. References</h1>
+<p>Primary technical reference:</p>
+<pre><code>PostgreSQL Documentation
+Write-Ahead Logging (WAL)
+</code></pre>
+<p>The PostgreSQL reference establishes the core WAL relationship used here:</p>
+<pre><code>changes are logged before data-file changes must be written
+to their final storage locations,
+</code></pre>
+<p>and:</p>
+<pre><code>WAL can be used during crash recovery to redo committed
+changes not yet applied to data pages.
+</code></pre>
+<p>Supporting transactional concepts include:</p>
+<pre><code>transaction commit
+rollback
+durability
+recovery
+</code></pre>
+<p>Supporting reference family:</p>
+<pre><code>distributed ledgers / settlement systems
+</code></pre>
+<p>These are used only to motivate broader scrutiny of:</p>
+<pre><code>commitment
+settlement
+finality
+</code></pre>
+<p>without assuming all ledger systems implement identical lifecycle semantics.</p>
+<p>RTT terminology, Transactional Truth, Commitment Boundary, Transition Lineage, ReferenceBasis, MaterializedTruthState, CommitmentDescriptor, Drift categories, Correction taxonomy, and proposed architectural generalizations remain the analytical contribution of Resonance Truth.</p>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>Crosswalk #1 asked:</p>
+<pre><code>When?
+</code></pre>
+<p>Crosswalk #2 asked:</p>
+<pre><code>Where?
+</code></pre>
+<p>Crosswalk #3 asked:</p>
+<pre><code>Who?
+</code></pre>
+<p>Crosswalk #4 asked:</p>
+<pre><code>Is it intact?
+</code></pre>
+<p>Crosswalk #5 asked:</p>
+<pre><code>May it act?
+</code></pre>
+<p>Crosswalk #6 asked:</p>
+<pre><code>What state did the system accept?
+</code></pre>
+<p>Crosswalk #7 asks:</p>
+<pre><code>What transition became part of the record?
+</code></pre>
+<p>That question forces another set of distinctions:</p>
+<pre><code>proposed
+  ≠
+executed
+
+executed
+  ≠
+committed
+
+committed
+  ≠
+materialized
+
+materialized
+  ≠
+settled
+
+settled
+  ≠
+universally final
+
+reversed later
+  ≠
+never committed
+
+rolled back
+  ≠
+never attempted
+</code></pre>
+<p>The ledger remembers more than the final number.</p>
+<p>It remembers the path.</p>
+<p>And that may be the strongest lesson of Transactional Truth:</p>
+<blockquote>
+<p><strong>The current state tells us where the system is. The transaction history tells us how the system legitimately arrived there.</strong></p>
+</blockquote>
+<p><strong>NTP gave truth a reference.</strong></p>
+<p><strong>DNS gave it scope.</strong></p>
+<p><strong>IAM gave it relationship.</strong></p>
+<p><strong>PKI gave it an evidence chain.</strong></p>
+<p><strong>Policy gave it permission.</strong></p>
+<p><strong>Distributed consensus gave it accepted state.</strong></p>
+<p><strong>Transactional systems give it committed history.</strong></p>
+<p><strong>Crosswalk #8 now gets to ask the uncomfortable sysadmin question that always comes next: What was the machine supposed to look like in the first place?</strong></p>
   </main>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/10_provenance_lineage_truth.md">
-  <title>10_provenance_lineage_truth</title>
+  <title>Crosswalk #10 — Supply-Chain Provenance and Lineage Truth</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,4192 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_crosswalks_10_provenance_lineage_truth_" src="https://github.com/user-attachments/assets/86952af0-b08e-457a-b186-95b0cac2bff6" /></p>
+<h1 id="crosswalk-10-supply-chain-provenance-and-lineage-truth">Crosswalk #10 — Supply-Chain Provenance and Lineage Truth</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Crosswalk #10<br>
+<strong>Truth Class:</strong> Lineage Truth<br>
+<strong>Reference System:</strong> Software Supply-Chain Provenance / Artifact Attestation<br>
+<strong>Primary RTT Dimensions:</strong> Lineage · Spin · Elec · Regime<br>
+<strong>Supporting RTT Dimensions:</strong> Integrity · Authority · Coherence · Drift · Temp · Paradox<br>
+<strong>Status:</strong> Research Crosswalk / Architecture Challenge<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This crosswalk examines software supply-chain provenance and artifact attestation as the tenth operational reference system for the RTT Resonance Truth Service.</p>
+<p>The governing question is:</p>
+<blockquote>
+<p><strong>Where did this Claim, artifact, or Evidence come from?</strong></p>
+</blockquote>
+<p>The first nine crosswalks examined:</p>
+<pre><code>NTP
+  ↓
+When?
+
+DNS
+  ↓
+Where?
+
+IAM
+  ↓
+Who?
+
+PKI
+  ↓
+Is it intact and qualified?
+
+Policy / Authorization
+  ↓
+May it act?
+
+Distributed Systems
+  ↓
+What state did the system accept?
+
+Transactional Systems
+  ↓
+What transition became committed?
+
+Desired-State Systems
+  ↓
+What should the state be?
+
+Telemetry
+  ↓
+What was actually observed?
+</code></pre>
+<p>Crosswalk #10 asks the question underneath all nine:</p>
+<pre><code>Provenance
+  ↓
+Lineage Truth
+  ↓
+Where did this come from?
+</code></pre>
+<p>This final crosswalk directly tests concepts that now sit near the center of the emerging Truth-Service architecture:</p>
+<pre><code>EvidenceItem
+Evidence Graph
+Lineage Graph
+ReferenceBasis
+AuthorityRelationship
+transformation
+dependency
+Integrity
+ContextEvidence
+EvidenceGap
+derived Evidence
+recursive Truth
+cycle detection
+</code></pre>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Can the Truth Service preserve origin and transformation strongly enough to distinguish known Lineage from incomplete, transformed, copied, derived, conflicting, or circular Lineage?</strong></p>
+</blockquote>
+<hr>
+<h1 id="1-evidence-boundary">1. Evidence Boundary</h1>
+<p>The primary reference family for this crosswalk is:</p>
+<pre><code>software supply-chain provenance
+artifact attestation
+build provenance
+dependency relationships
+integrity verification
+</code></pre>
+<p>The bounded reference model focuses on a common provenance structure:</p>
+<pre><code>Source
+  ↓
+Build / Transformation
+  ↓
+Artifact
+  ↓
+Attestation
+  ↓
+Distribution / Consumption
+</code></pre>
+<p>Relevant operational concepts include:</p>
+<ul>
+<li>source material</li>
+<li>build inputs</li>
+<li>build process</li>
+<li>transformation</li>
+<li>artifact identity</li>
+<li>artifact digest</li>
+<li>dependency</li>
+<li>attestation</li>
+<li>signer / attester</li>
+<li>build system</li>
+<li>provenance statement</li>
+<li>verification</li>
+<li>distribution</li>
+<li>downstream consumption</li>
+</ul>
+<p>The purpose is not to model one software-package ecosystem completely.</p>
+<p>The objective is to examine provenance as an operational Truth system.</p>
+<hr>
+<h1 id="2-evidence-discipline">2. Evidence Discipline</h1>
+<p>This crosswalk distinguishes four statement types.</p>
+<h2 id="provenance-fact">Provenance Fact</h2>
+<p>A mechanism explicitly represented by the bounded supply-chain provenance model.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>A structural interpretation introduced through Resonance Truth.</p>
+<h2 id="candidate-generalization">Candidate Generalization</h2>
+<p>A mechanism potentially reusable outside Lineage Truth.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A proposed abstraction requiring architectural consolidation or implementation testing.</p>
+<p>Example:</p>
+<pre><code>Provenance Fact:
+  An artifact may be associated with provenance information
+  describing source material and transformation.
+
+RTT Interpretation:
+  Artifact identity is connected to origin through structured
+  Lineage and Evidence relationships.
+
+Candidate Generalization:
+  Lineage must preserve transformation rather than only ancestry.
+
+Hypothesis:
+  Lineage Graph should become one of the foundational
+  structural objects in the generalized Truth Service.
+</code></pre>
+<p>The final architectural decision belongs to the consolidation pass.</p>
+<hr>
+<h1 id="3-why-provenance-comes-last">3. Why Provenance Comes Last</h1>
+<p>Lineage appeared in every previous crosswalk.</p>
+<h2 id="ntp">NTP</h2>
+<pre><code>reference hierarchy
+Source relationship
+Lineage distance
+</code></pre>
+<h2 id="dns">DNS</h2>
+<pre><code>delegation
+authority path
+alias / resolution path
+</code></pre>
+<h2 id="iam">IAM</h2>
+<pre><code>proofing
+federation
+assertion path
+</code></pre>
+<h2 id="pki">PKI</h2>
+<pre><code>certification path
+trust-chain relationships
+</code></pre>
+<h2 id="authority">Authority</h2>
+<pre><code>delegation
+Authority Lineage
+</code></pre>
+<h2 id="distributed-state">Distributed State</h2>
+<pre><code>replicated log
+accepted-history Lineage
+</code></pre>
+<h2 id="transactional-truth">Transactional Truth</h2>
+<pre><code>committed transition history
+</code></pre>
+<h2 id="intent-truth">Intent Truth</h2>
+<pre><code>declaration history
+reconciliation Lineage
+</code></pre>
+<h2 id="observational-truth">Observational Truth</h2>
+<pre><code>trace relationships
+Evidence derivation
+correlation
+transformation
+</code></pre>
+<p>Lineage has therefore already survived nine distinct operational systems.</p>
+<p>Crosswalk #10 does not introduce Lineage.</p>
+<p>It tests whether Lineage has become sufficiently fundamental to promote into the generalized kernel.</p>
+<hr>
+<h1 id="4-lineage-truth">4. Lineage Truth</h1>
+<p>The primary Truth Class is:</p>
+<pre><code>Lineage Truth
+</code></pre>
+<p>Its operational question is:</p>
+<blockquote>
+<p><strong>Where did this come from?</strong></p>
+</blockquote>
+<p>A more complete formulation is:</p>
+<blockquote>
+<p><strong>Through which identifiable Sources, dependencies, transformations, authorities, and Evidence relationships did this Claim, artifact, or Truth State arrive at its present form?</strong></p>
+</blockquote>
+<p>Lineage Truth therefore concerns:</p>
+<ul>
+<li>origin</li>
+<li>ancestry</li>
+<li>dependency</li>
+<li>transformation</li>
+<li>derivation</li>
+<li>authorship / production</li>
+<li>attestation</li>
+<li>authority</li>
+<li>integrity</li>
+<li>identity</li>
+<li>ordering</li>
+<li>gaps</li>
+<li>branch points</li>
+<li>merge points</li>
+<li>version</li>
+<li>current artifact relationship</li>
+</ul>
+<p>Lineage is not merely:</p>
+<pre><code>who created this?
+</code></pre>
+<p>It may require a graph.</p>
+<hr>
+<h1 id="5-provenance-on-its-own-terms">5. Provenance on Its Own Terms</h1>
+<p>A simplified software provenance structure is:</p>
+<pre><code>Source Material
+      ↓
+  Build Inputs
+      ↓
+Build / Transformation
+      ↓
+    Artifact
+      ↓
+  Attestation
+      ↓
+  Distribution
+      ↓
+   Consumer
+</code></pre>
+<p>A more realistic structure may involve:</p>
+<pre><code>Source A ────┐
+             │
+Source B ────┼──► Build Process ───► Artifact X
+             │                          │
+Dependency C ┘                          │
+                                        ▼
+                                  Attestation
+                                        │
+                                        ▼
+                                   Consumer
+</code></pre>
+<p>This is immediately graph-shaped.</p>
+<p>It contains:</p>
+<pre><code>fan-in
+</code></pre>
+<p>and potentially:</p>
+<pre><code>fan-out
+</code></pre>
+<p>The final artifact may derive from multiple upstream entities.</p>
+<p>One Source may also contribute to multiple artifacts.</p>
+<hr>
+<h1 id="6-initial-structural-crosswalk">6. Initial Structural Crosswalk</h1>
+<table>
+<thead>
+<tr>
+<th>Provenance Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source material</td>
+<td>Origin Evidence / Source</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Build input</td>
+<td>Dependency Evidence</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Dependency</td>
+<td>Lineage relationship</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Build process</td>
+<td>Transformation</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Build system</td>
+<td>Transformer / Evidence producer</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Artifact</td>
+<td>Truth Subject / Materialized object</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Artifact digest</td>
+<td>Integrity Evidence / identity reference</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Provenance statement</td>
+<td>Lineage Assertion</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Attestation</td>
+<td>Governed Assertion / EvidenceItem</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Attester</td>
+<td>Assertion Source / Authority Role</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Signature</td>
+<td>Integrity Evidence</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Distribution step</td>
+<td>Transition / Lineage edge</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Consumer</td>
+<td>Observer / relying party</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Verification</td>
+<td>Qualification</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Missing provenance</td>
+<td>Evidence / Lineage Gap</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Derived artifact</td>
+<td>Materialized Transformation Result</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Build graph</td>
+<td>Evidence / Lineage Graph</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Version / generation</td>
+<td>Lineage Epoch</td>
+<td>Candidate General</td>
+</tr>
+</tbody>
+</table>
+<p>Crosswalk #10 immediately reinforces the architecture's shift from:</p>
+<pre><code>flat Evidence list
+</code></pre>
+<p>toward:</p>
+<pre><code>graph-structured Evidence + Lineage
+</code></pre>
+<hr>
+<h1 id="7-source-material-origin-evidence">7. Source Material → Origin Evidence</h1>
+<p>Supply-chain provenance begins with upstream material.</p>
+<p>RTT interpretation:</p>
+<pre><code>Origin Evidence
+</code></pre>
+<p>The Source may include:</p>
+<ul>
+<li>source artifact</li>
+<li>dependency</li>
+<li>configuration</li>
+<li>build input</li>
+<li>another generated artifact</li>
+</ul>
+<p>The important question is:</p>
+<blockquote>
+<p><strong>What existed before the current artifact, upon which the current artifact depends?</strong></p>
+</blockquote>
+<p>This is Lineage in its most direct form.</p>
+<hr>
+<h1 id="8-origin-authority">8. Origin ≠ Authority</h1>
+<p>A Source artifact may genuinely be the origin of some content while carrying no authority to make unrelated Claims.</p>
+<p>Therefore:</p>
+<pre><code>origin
+  ≠
+Authority
+</code></pre>
+<p>This continues the architecture's repeated separation of roles.</p>
+<p>A Source may be:</p>
+<pre><code>origin
+</code></pre>
+<p>without being:</p>
+<pre><code>verifier
+</code></pre>
+<p>or:</p>
+<pre><code>authority
+</code></pre>
+<p>or:</p>
+<pre><code>attester
+</code></pre>
+<p>or:</p>
+<pre><code>consumer
+</code></pre>
+<p>The Role abstraction remains strongly justified.</p>
+<hr>
+<h1 id="9-build-input-dependency-evidence">9. Build Input → Dependency Evidence</h1>
+<p>An artifact may depend on multiple upstream materials.</p>
+<p>RTT interpretation:</p>
+<pre><code>Dependency Evidence
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Artifact X
+  depends_on
+    Source A
+    Source B
+    Dependency C
+</code></pre>
+<p>Dependency is not merely metadata.</p>
+<p>It participates in explaining:</p>
+<pre><code>how X came to exist
+</code></pre>
+<p>and potentially:</p>
+<pre><code>why X has particular properties
+</code></pre>
+<p>This strongly validates:</p>
+<pre><code>EvidenceDependency
+</code></pre>
+<p>as a relationship semantic.</p>
+<hr>
+<h1 id="10-dependency-provenance-completion">10. Dependency ≠ Provenance Completion</h1>
+<p>Knowing:</p>
+<pre><code>X depends on Y
+</code></pre>
+<p>does not necessarily establish:</p>
+<ul>
+<li>which version of Y</li>
+<li>how Y was transformed</li>
+<li>whether additional inputs existed</li>
+<li>whether Y itself has known provenance</li>
+<li>when the relationship existed</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>dependency list
+  ≠
+complete Lineage
+</code></pre>
+<p>Lineage completeness must remain separately represented.</p>
+<hr>
+<h1 id="11-build-process-transformation">11. Build Process → Transformation</h1>
+<p>A build process transforms inputs into outputs.</p>
+<p>RTT interpretation:</p>
+<pre><code>Transformation
+</code></pre>
+<p>This is a major Lineage relationship.</p>
+<p>Conceptually:</p>
+<pre><code>Inputs
+  ↓
+Transformation T
+  ↓
+Output Artifact
+</code></pre>
+<p>The Truth Service should preserve:</p>
+<ul>
+<li>what entered</li>
+<li>what transformation occurred</li>
+<li>what emerged</li>
+<li>what system performed the transformation</li>
+<li>when</li>
+<li>under which Regime / configuration where relevant</li>
+</ul>
+<p>This strongly validates:</p>
+<pre><code>LineageEdge.transformation
+</code></pre>
+<p>as a generalized capability.</p>
+<hr>
+<h1 id="12-transformation-is-first-class-lineage">12. Transformation Is First-Class Lineage</h1>
+<p>Earlier systems already suggested transformation:</p>
+<pre><code>DNS:
+  alias / resolution transformation
+
+IAM:
+  federated assertion / attribute transformation
+
+Telemetry:
+  aggregation / processing
+</code></pre>
+<p>Provenance makes the need explicit.</p>
+<p>A path that records only:</p>
+<pre><code>A
+  ↓
+B
+</code></pre>
+<p>without:</p>
+<pre><code>transformation:
+  T
+</code></pre>
+<p>may lose critical Truth structure.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Lineage should preserve meaningful transformation semantics.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE PRINCIPLE
+</code></pre>
+<hr>
+<h1 id="13-transformation-corruption">13. Transformation ≠ Corruption</h1>
+<p>Crosswalk #9 introduced this distinction.</p>
+<p>Supply-chain provenance makes it central.</p>
+<p>An artifact may differ from its Sources because:</p>
+<pre><code>transformation was intended
+</code></pre>
+<p>Therefore:</p>
+<pre><code>output differs from input
+  ≠
+integrity failure
+</code></pre>
+<p>The question becomes:</p>
+<blockquote>
+<p><strong>Does the output correspond to the declared / qualified transformation of the declared / qualified inputs?</strong></p>
+</blockquote>
+<p>This is substantially richer than:</p>
+<pre><code>bits are different
+</code></pre>
+<hr>
+<h1 id="14-transformation-truth">14. Transformation Truth</h1>
+<p>Lineage Truth may therefore contain a sub-question:</p>
+<blockquote>
+<p><strong>What transformation produced this object?</strong></p>
+</blockquote>
+<p>Potential domain result:</p>
+<pre><code>transformation:
+  identified
+  qualified
+  unknown
+  contested
+</code></pre>
+<p>No new top-level Truth Class is required.</p>
+<p>This remains a Lineage Truth subdimension.</p>
+<hr>
+<h1 id="15-build-system-transformer-role">15. Build System → Transformer Role</h1>
+<p>The system performing a build acts as:</p>
+<pre><code>Transformer
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Entity Role
+</code></pre>
+<p>This further validates:</p>
+<pre><code>Entity
+  +
+Role
+  +
+Regime
+</code></pre>
+<p>rather than creating a special core entity for every operational actor.</p>
+<p>Possible provenance roles include:</p>
+<pre><code>origin
+dependency
+transformer
+attester
+signer
+distributor
+consumer
+</code></pre>
+<p>Role belongs to a relationship.</p>
+<hr>
+<h1 id="16-artifact-truth-subject-materialized-object">16. Artifact → Truth Subject / Materialized Object</h1>
+<p>The resulting artifact becomes the object about which a provenance Claim is made.</p>
+<p>RTT interpretation:</p>
+<pre><code>Truth Subject
+</code></pre>
+<p>and:</p>
+<pre><code>Materialized Object
+</code></pre>
+<p>This creates an interesting dual role.</p>
+<p>The artifact is:</p>
+<pre><code>output materialization
+</code></pre>
+<p>of:</p>
+<pre><code>upstream Source + transformation
+</code></pre>
+<p>and later:</p>
+<pre><code>input / Evidence / dependency
+</code></pre>
+<p>for another downstream artifact.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Materializations can become Sources in later Lineage.</strong></p>
+</blockquote>
+<p>This strongly supports recursive graph structure.</p>
+<hr>
+<h1 id="17-materialization-can-become-evidence">17. Materialization Can Become Evidence</h1>
+<p>Earlier architecture:</p>
+<pre><code>Truth State
+  ↓
+Materialization
+</code></pre>
+<p>Provenance adds:</p>
+<pre><code>Materialization
+  ↓
+later Evidence / Source
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Source A
+   ↓
+Build 1
+   ↓
+Artifact B
+   ↓
+Build 2
+   ↓
+Artifact C
+</code></pre>
+<p>Artifact B is:</p>
+<pre><code>output
+</code></pre>
+<p>and later:</p>
+<pre><code>input
+</code></pre>
+<p>This is another reason the generalized architecture should be composable rather than rigidly layered.</p>
+<hr>
+<h1 id="18-artifact-digest-integrity-evidence">18. Artifact Digest → Integrity Evidence</h1>
+<p>A digest can participate in identifying and verifying artifact content.</p>
+<p>RTT interpretation:</p>
+<pre><code>Integrity Evidence
+</code></pre>
+<p>However:</p>
+<pre><code>matching digest
+  ≠
+complete provenance
+</code></pre>
+<p>It may support:</p>
+<pre><code>artifact identity / integrity relationship
+</code></pre>
+<p>while leaving unanswered:</p>
+<pre><code>who produced it?
+from what?
+under what process?
+using which dependencies?
+</code></pre>
+<p>Again:</p>
+<pre><code>Integrity Truth
+  ≠
+Lineage Truth
+</code></pre>
+<p>Truth Classes compose.</p>
+<hr>
+<h1 id="19-digest-equality-lineage-equality">19. Digest Equality ≠ Lineage Equality</h1>
+<p>Two artifacts may possess identical content while arriving through different operational paths.</p>
+<p>Conceptually:</p>
+<pre><code>Artifact A
+  digest: D
+  Lineage: L1
+
+Artifact B
+  digest: D
+  Lineage: L2
+</code></pre>
+<p>Content:</p>
+<pre><code>identical
+</code></pre>
+<p>Lineage:</p>
+<pre><code>different
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Object equality does not imply provenance equality.</strong></p>
+</blockquote>
+<p>This extends the recurring:</p>
+<pre><code>stable value
+  ≠
+stable structure
+</code></pre>
+<p>finding into explicit provenance.</p>
+<hr>
+<h1 id="20-provenance-statement-lineage-assertion">20. Provenance Statement → Lineage Assertion</h1>
+<p>A provenance statement describes origin or transformation relationships.</p>
+<p>RTT interpretation:</p>
+<pre><code>Lineage Assertion
+</code></pre>
+<p>This strongly validates:</p>
+<pre><code>Assertion
+</code></pre>
+<p>as an Evidence subtype.</p>
+<p>The statement itself is not:</p>
+<pre><code>Lineage automatically accepted
+</code></pre>
+<p>It must still be evaluated.</p>
+<p>Conceptually:</p>
+<pre><code>Provenance Assertion
+      ↓
+Source / Attester
+      ↓
+Integrity
+      ↓
+Authority
+      ↓
+Evidence
+      ↓
+Qualification
+      ↓
+Lineage Truth State
+</code></pre>
+<hr>
+<h1 id="21-attestation-governed-assertion">21. Attestation → Governed Assertion</h1>
+<p>An attestation is a particularly clear Evidence type.</p>
+<p>RTT interpretation:</p>
+<pre><code>Governed Assertion
+</code></pre>
+<p>It says, in effect:</p>
+<blockquote>
+<p><strong>An identified party asserts something about an artifact or process.</strong></p>
+</blockquote>
+<p>This is structurally similar to:</p>
+<pre><code>IAM assertion
+</code></pre>
+<p>and:</p>
+<pre><code>PKI signed assertion
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Assertion
+</code></pre>
+<p>has now survived multiple independent crosswalks.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE — strongly validated
+</code></pre>
+<hr>
+<h1 id="22-assertion-fact">22. Assertion ≠ Fact</h1>
+<p>This distinction must remain explicit.</p>
+<p>An attestation may be:</p>
+<pre><code>intact
+
+correctly signed
+</code></pre>
+<p>and still:</p>
+<pre><code>inaccurate
+incomplete
+out of scope
+stale
+based on incomplete inputs
+</code></pre>
+<p>Therefore:</p>
+<pre><code>valid assertion structure
+  ≠
+factual certainty
+</code></pre>
+<p>The Truth Service evaluates:</p>
+<pre><code>assertion
+Source
+authority
+scope
+Lineage
+corroboration
+Regime
+</code></pre>
+<p>before synthesis.</p>
+<hr>
+<h1 id="23-attester-source-authority-role">23. Attester → Source + Authority Role</h1>
+<p>The attester provides the assertion.</p>
+<p>RTT interpretation:</p>
+<pre><code>Source
+  +
+Role
+</code></pre>
+<p>Authority depends on:</p>
+<ul>
+<li>what is being asserted</li>
+<li>what the attester is authorized / qualified to attest</li>
+<li>scope</li>
+<li>Regime</li>
+<li>relationship to the transformation</li>
+<li>identity</li>
+<li>integrity</li>
+</ul>
+<p>This further validates:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>as a generalized core structure.</p>
+<hr>
+<h1 id="24-provenance-authority-is-scoped">24. Provenance Authority Is Scoped</h1>
+<p>An attester may be authoritative regarding:</p>
+<pre><code>build performed by system X
+</code></pre>
+<p>without being authoritative regarding:</p>
+<pre><code>upstream source authorship
+</code></pre>
+<p>or:</p>
+<pre><code>security of dependency Y
+</code></pre>
+<p>or:</p>
+<pre><code>correctness of artifact behavior
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Authority must remain Claim-scoped.</strong></p>
+</blockquote>
+<p>This is now one of the strongest generalized findings in the entire series.</p>
+<hr>
+<h1 id="25-signature-integrity-evidence">25. Signature → Integrity Evidence</h1>
+<p>A signed attestation may include Integrity Evidence.</p>
+<p>But:</p>
+<pre><code>signature valid
+  ≠
+provenance Claim true
+</code></pre>
+<p>The signature may establish:</p>
+<pre><code>this Source signed this assertion
+</code></pre>
+<p>It does not independently establish:</p>
+<pre><code>the assertion accurately describes reality
+</code></pre>
+<p>This repeats PKI's core lesson.</p>
+<hr>
+<h1 id="26-identity-integrity-authority-lineage">26. Identity + Integrity + Authority + Lineage</h1>
+<p>A provenance assertion may require simultaneous evaluation of:</p>
+<pre><code>Identity Truth
+  Who signed?
+
+Integrity Truth
+  Is the assertion intact?
+
+Authority Truth
+  May this Source attest this Claim?
+
+Lineage Truth
+  What origin / transformation does it assert?
+
+Temporal Truth
+  When was it valid / produced?
+</code></pre>
+<p>These dimensions compose.</p>
+<p>They must not collapse.</p>
+<hr>
+<h1 id="27-verification-qualification">27. Verification → Qualification</h1>
+<p>Provenance information must be verified / evaluated before operational use.</p>
+<p>RTT interpretation:</p>
+<pre><code>Qualification
+</code></pre>
+<p>Potential factors include:</p>
+<ul>
+<li>assertion integrity</li>
+<li>attester identity</li>
+<li>attester authority</li>
+<li>artifact identity</li>
+<li>dependency identity</li>
+<li>transformation relationship</li>
+<li>time</li>
+<li>scope</li>
+<li>missing links</li>
+<li>conflicts</li>
+</ul>
+<p>Qualification now clearly applies to:</p>
+<pre><code>Evidence Graph
+</code></pre>
+<p>not merely individual Evidence items.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE — strongly validated
+</code></pre>
+<hr>
+<h1 id="28-graph-qualification">28. Graph Qualification</h1>
+<p>This introduces:</p>
+<pre><code>Graph Qualification
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p><strong>Does this set of Evidence and relationships form a sufficiently qualified Lineage structure for the intended Claim?</strong></p>
+</blockquote>
+<p>Potential outcomes:</p>
+<pre><code>complete enough
+partial
+gap present
+contested
+cyclic
+structurally inconsistent
+indeterminate
+</code></pre>
+<p>This may be an application of the existing generalized Qualification Engine.</p>
+<p>No separate engine is required yet.</p>
+<hr>
+<h1 id="29-provenance-graph-evidence-lineage-graph">29. Provenance Graph → Evidence + Lineage Graph</h1>
+<p>Software provenance is naturally graph-shaped.</p>
+<p>Potential structure:</p>
+<pre><code>Source A ──────┐
+               │
+Source B ──────┼──► Transformation T1
+               │          │
+Dependency C ──┘          ▼
+                       Artifact D
+                          │
+                          ▼
+                   Transformation T2
+                          │
+                          ▼
+                       Artifact E
+</code></pre>
+<p>This directly validates:</p>
+<pre><code>Evidence Graph
+</code></pre>
+<p>and:</p>
+<pre><code>Lineage Graph
+</code></pre>
+<p>as core architecture.</p>
+<p>Status:</p>
+<pre><code>PROMOTION RECOMMENDED
+</code></pre>
+<hr>
+<h1 id="30-evidence-graph-vs-lineage-graph">30. Evidence Graph vs Lineage Graph</h1>
+<p>After Crosswalk #9 and #10, it is worth asking:</p>
+<blockquote>
+<p>Are these actually two separate graphs?</p>
+</blockquote>
+<p>Potential answer:</p>
+<pre><code>Evidence Graph
+  =
+nodes and relationships among evidentiary objects
+
+Lineage Graph
+  =
+provenance / derivation relationships relevant to those objects
+</code></pre>
+<p>In implementation they may share:</p>
+<pre><code>one graph representation
+</code></pre>
+<p>with typed:</p>
+<pre><code>nodes
+edges
+relationships
+</code></pre>
+<p>Potential generalized name:</p>
+<pre><code>Truth Evidence Graph
+</code></pre>
+<p>However, one supergraph could become too broad.</p>
+<p>Recommendation:</p>
+<pre><code>retain conceptual distinction
+allow shared graph infrastructure
+</code></pre>
+<p>Status:</p>
+<pre><code>CONSOLIDATION DECISION REQUIRED
+</code></pre>
+<hr>
+<h1 id="31-fan-in">31. Fan-In</h1>
+<p>Provenance strongly demonstrates Evidence fan-in.</p>
+<pre><code>Source A
+   \
+Source B ──► Build ──► Artifact X
+   /
+Source C
+</code></pre>
+<p>The output depends upon multiple inputs.</p>
+<p>Therefore:</p>
+<pre><code>one artifact
+  ≠
+one parent
+</code></pre>
+<p>Lineage must support:</p>
+<pre><code>many-to-one
+</code></pre>
+<p>relationships.</p>
+<p>This is already compatible with graph semantics.</p>
+<hr>
+<h1 id="32-fan-out">32. Fan-Out</h1>
+<p>A Source may also contribute to multiple artifacts.</p>
+<pre><code>Source A
+  ├──► Artifact X
+  ├──► Artifact Y
+  └──► Artifact Z
+</code></pre>
+<p>Therefore Lineage must also support:</p>
+<pre><code>one-to-many
+</code></pre>
+<p>relationships.</p>
+<p>Combined:</p>
+<pre><code>fan-in
+fan-out
+</code></pre>
+<p>make a simple chain insufficient.</p>
+<hr>
+<h1 id="33-shared-dependency">33. Shared Dependency</h1>
+<p>Two artifacts may share the same upstream dependency.</p>
+<p>Conceptually:</p>
+<pre><code>Dependency D
+  ├──► Artifact A
+  └──► Artifact B
+</code></pre>
+<p>If A and B later make similar downstream Claims:</p>
+<pre><code>they are not fully independent
+</code></pre>
+<p>with respect to:</p>
+<pre><code>D-derived properties
+</code></pre>
+<p>This mirrors Telemetry's shared Evidence dependency.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Lineage determines independence.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE — strongly confirmed
+</code></pre>
+<hr>
+<h1 id="34-provenance-and-corroboration">34. Provenance and Corroboration</h1>
+<p>Suppose:</p>
+<pre><code>Artifact A attests Claim X
+
+Artifact B attests Claim X
+</code></pre>
+<p>If both derive from:</p>
+<pre><code>Source S
+</code></pre>
+<p>their apparent corroboration may be weaker than two independent Lineages.</p>
+<p>Therefore Coherence must evaluate:</p>
+<pre><code>common ancestry
+</code></pre>
+<p>not merely:</p>
+<pre><code>number of agreeing downstream artifacts
+</code></pre>
+<p>This reinforces the generalized independence rule.</p>
+<hr>
+<h1 id="35-copied-evidence">35. Copied Evidence</h1>
+<p>Evidence may be copied across systems.</p>
+<p>Conceptually:</p>
+<pre><code>Evidence E
+  ↓ copy
+E1
+E2
+E3
+</code></pre>
+<p>Count:</p>
+<pre><code>three records
+</code></pre>
+<p>Independent Evidence:</p>
+<pre><code>one origin
+</code></pre>
+<p>Therefore:</p>
+<pre><code>duplication
+  ≠
+corroboration
+</code></pre>
+<p>The Truth Service must preserve origin identity where possible.</p>
+<hr>
+<h1 id="36-mirrored-evidence">36. Mirrored Evidence</h1>
+<p>Mirrored content creates the same risk.</p>
+<p>A Claim may appear in:</p>
+<pre><code>Site A
+Site B
+Site C
+</code></pre>
+<p>while all three derive from:</p>
+<pre><code>Source S
+</code></pre>
+<p>Without Lineage:</p>
+<pre><code>apparent Source diversity:
+  3
+</code></pre>
+<p>With Lineage:</p>
+<pre><code>independent origins:
+  1
+</code></pre>
+<p>This provides a powerful generalized motivation for provenance-aware Coherence.</p>
+<hr>
+<h1 id="37-ai-derived-evidence">37. AI-Derived Evidence</h1>
+<p>The same structural rule applies to AI-generated or AI-transformed Evidence.</p>
+<p>Conceptually:</p>
+<pre><code>Source S
+  ↓
+Model Transformation M
+  ↓
+Derived Statement D
+</code></pre>
+<p>If D later appears as support for S:</p>
+<pre><code>circular Lineage
+</code></pre>
+<p>may emerge.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>AI transformation does not create an independent Source merely by rephrasing upstream Evidence.</strong></p>
+</blockquote>
+<p>This follows directly from the generalized Lineage principle.</p>
+<p>No special AI exemption is required.</p>
+<hr>
+<h1 id="38-derived-evidence-provenance-requirement">38. Derived Evidence → Provenance Requirement</h1>
+<p>Crosswalk #9 established:</p>
+<pre><code>Derived Evidence
+  ≠
+Independent Evidence
+</code></pre>
+<p>Crosswalk #10 provides the corresponding requirement:</p>
+<blockquote>
+<p><strong>Derived Evidence should preserve provenance to its upstream Evidence and transformation where structurally possible.</strong></p>
+</blockquote>
+<p>Potential metadata:</p>
+<pre><code>derived_from
+transformed_by
+transformation_version
+produced_at
+authority
+context
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE
+</code></pre>
+<hr>
+<h1 id="39-circular-lineage">39. Circular Lineage</h1>
+<p>Crosswalk #8 introduced circular Truth risk.</p>
+<p>Crosswalk #9 introduced circular Evidence corroboration.</p>
+<p>Provenance now allows us to state the general problem precisely.</p>
+<p>Example:</p>
+<pre><code>Claim A
+  supports
+Claim B
+
+Claim B
+  transformed into
+Claim C
+
+Claim C
+  cited as support for
+Claim A
+</code></pre>
+<p>This creates:</p>
+<pre><code>A → B → C → A
+</code></pre>
+<p>The cycle may inflate apparent support without introducing independent grounding.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Lineage cycles must be detected and must not automatically increase Evidence independence or Coherence.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE REQUIREMENT
+</code></pre>
+<hr>
+<h1 id="40-cycle-automatically-invalid">40. Cycle ≠ Automatically Invalid</h1>
+<p>Important nuance:</p>
+<p>A graph cycle does not automatically mean:</p>
+<pre><code>Evidence false
+</code></pre>
+<p>Some legitimate systems may contain:</p>
+<pre><code>recursive dependencies
+feedback
+reconciliation loops
+repeated evaluations
+</code></pre>
+<p>The problem is not:</p>
+<pre><code>cycle exists
+</code></pre>
+<p>The problem is:</p>
+<pre><code>cycle misrepresented as independent corroboration
+</code></pre>
+<p>Therefore cycle analysis must preserve semantics.</p>
+<hr>
+<h1 id="41-grounding-depth">41. Grounding Depth</h1>
+<p>A derived Claim may be traced backward through Evidence.</p>
+<p>Conceptually:</p>
+<pre><code>Derived Truth State
+      ↓
+Parent Truth State
+      ↓
+Derived Evidence
+      ↓
+Primary Evidence
+      ↓
+Reference Basis
+</code></pre>
+<p>Candidate generalized property:</p>
+<pre><code>Grounding Depth
+</code></pre>
+<p>This resembles NTP's:</p>
+<pre><code>Lineage Distance
+</code></pre>
+<p>but is now more general.</p>
+<p>Potential measures include:</p>
+<pre><code>hop count
+transformation count
+derived-state depth
+</code></pre>
+<p>However:</p>
+<pre><code>deeper
+  ≠
+false
+</code></pre>
+<p>It provides qualification metadata.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE GENERAL
+</code></pre>
+<hr>
+<h1 id="42-lineage-distance-revisited">42. Lineage Distance Revisited</h1>
+<p>Crosswalk #1 introduced:</p>
+<pre><code>Lineage Distance
+</code></pre>
+<p>Crosswalks #2 through #10 progressively showed that one scalar is insufficient.</p>
+<p>The final interpretation is:</p>
+<blockquote>
+<p><strong>Lineage distance is a derived property of a graph, not necessarily a primitive universal field.</strong></p>
+</blockquote>
+<p>Potential dimensions:</p>
+<pre><code>hop count
+transformation count
+authority transitions
+derivation depth
+dependency depth
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>retain lineage_distance only as optional derived metadata
+</code></pre>
+<p>not:</p>
+<pre><code>foundational Lineage representation
+</code></pre>
+<p>This is a major consolidation finding.</p>
+<hr>
+<h1 id="43-missing-provenance-lineage-gap">43. Missing Provenance → Lineage Gap</h1>
+<p>Crosswalk #9 established:</p>
+<pre><code>Evidence Gap
+</code></pre>
+<p>Provenance introduces:</p>
+<pre><code>Lineage Gap
+</code></pre>
+<p>Definition:</p>
+<blockquote>
+<p><strong>A missing or unavailable relationship required to reconstruct the expected provenance path.</strong></p>
+</blockquote>
+<p>Examples:</p>
+<pre><code>unknown Source
+undocumented transformation
+missing dependency version
+unknown attester
+missing build step
+unavailable upstream provenance
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE
+</code></pre>
+<hr>
+<h1 id="44-lineage-gap-evidence-of-no-transformation">44. Lineage Gap ≠ Evidence of No Transformation</h1>
+<p>The absence of a recorded transformation does not prove:</p>
+<pre><code>no transformation occurred
+</code></pre>
+<p>Likewise:</p>
+<pre><code>missing provenance
+  ≠
+clean provenance
+</code></pre>
+<p>The correct interpretation may be:</p>
+<pre><code>unknown
+</code></pre>
+<p>or:</p>
+<pre><code>incomplete Lineage
+</code></pre>
+<p>This directly parallels Crosswalk #9:</p>
+<pre><code>missing Evidence
+  ≠
+Evidence of absence
+</code></pre>
+<p>The principle now generalizes beyond observation.</p>
+<hr>
+<h1 id="45-known-absence-vs-unknown-lineage">45. Known Absence vs Unknown Lineage</h1>
+<p>There is a difference between:</p>
+<pre><code>qualified claim:
+  "No intermediate transformation occurred."
+</code></pre>
+<p>and:</p>
+<pre><code>no recorded intermediate transformation
+</code></pre>
+<p>The first requires sufficient provenance coverage.</p>
+<p>The second may simply be:</p>
+<pre><code>Lineage Gap
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Absence claims require qualified coverage of the relevant structural domain.</strong></p>
+</blockquote>
+<p>This appears increasingly universal.</p>
+<hr>
+<h1 id="46-provenance-coverage">46. Provenance Coverage</h1>
+<p>Crosswalk #9 introduced:</p>
+<pre><code>ObservationCoverage
+</code></pre>
+<p>Provenance introduces:</p>
+<pre><code>ProvenanceCoverage
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p><strong>Which parts of the expected origin / transformation graph are actually represented?</strong></p>
+</blockquote>
+<p>Possible domains:</p>
+<pre><code>source coverage
+dependency coverage
+transformation coverage
+attestation coverage
+distribution coverage
+</code></pre>
+<p>Potential generalization:</p>
+<pre><code>Coverage
+</code></pre>
+<p>as a broader Truth-Service concept.</p>
+<p>Subtypes:</p>
+<pre><code>ObservationCoverage
+ProvenanceCoverage
+EvaluationCoverage
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE concept
+</code></pre>
+<hr>
+<h1 id="47-coverage-as-generalized-truth-metadata">47. Coverage as Generalized Truth Metadata</h1>
+<p>Across systems, the Truth Service increasingly needs to know:</p>
+<pre><code>what was inside the evaluation boundary
+</code></pre>
+<p>and:</p>
+<pre><code>what was not
+</code></pre>
+<p>Coverage may therefore describe:</p>
+<blockquote>
+<p><strong>The declared or measured extent over which available Evidence can support conclusions.</strong></p>
+</blockquote>
+<p>This is broader than telemetry.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE
+</code></pre>
+<hr>
+<h1 id="48-versioned-provenance">48. Versioned Provenance</h1>
+<p>Sources, transformations, dependencies, and build systems may have versions.</p>
+<p>Therefore:</p>
+<pre><code>"built from Source S"
+</code></pre>
+<p>may be insufficient without:</p>
+<pre><code>which S?
+
+which revision?
+
+which dependency version?
+
+which process version?
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Regime / Lineage Epoch
+</code></pre>
+<p>This strongly supports versioned ReferenceBasis and Lineage relationships.</p>
+<hr>
+<h1 id="49-provenance-drift">49. Provenance Drift</h1>
+<p>Potential Lineage Truth Drift dimensions include:</p>
+<h2 id="source-drift">Source Drift</h2>
+<p>Origin Source changes.</p>
+<h2 id="dependency-drift">Dependency Drift</h2>
+<p>Dependencies change.</p>
+<h2 id="transformation-drift">Transformation Drift</h2>
+<p>Build/transformation process changes.</p>
+<h2 id="authority-drift">Authority Drift</h2>
+<p>Attester or build authority changes.</p>
+<h2 id="integrity-drift">Integrity Drift</h2>
+<p>Artifact identity changes.</p>
+<h2 id="provenance-coverage-drift">Provenance Coverage Drift</h2>
+<p>More or less Lineage becomes available.</p>
+<h2 id="semantic-drift">Semantic Drift</h2>
+<p>Same labels refer to materially different transformations.</p>
+<p>The final artifact may appear similar while provenance Drifts substantially.</p>
+<hr>
+<h1 id="50-stable-artifact-changed-provenance">50. Stable Artifact, Changed Provenance</h1>
+<p>Suppose:</p>
+<pre><code>Artifact digest:
+  unchanged
+</code></pre>
+<p>but:</p>
+<pre><code>attestation Source changes
+</code></pre>
+<p>or:</p>
+<pre><code>provenance metadata changes
+</code></pre>
+<p>or:</p>
+<pre><code>transformation claim changes
+</code></pre>
+<p>The artifact content remains identical.</p>
+<p>Its asserted Lineage changes.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Stable object identity does not imply stable Lineage Truth.</strong></p>
+</blockquote>
+<p>This is a direct extension of the recurring:</p>
+<pre><code>stable value
+  ≠
+stable structure
+</code></pre>
+<p>principle.</p>
+<hr>
+<h1 id="51-changed-artifact-preserved-lineage">51. Changed Artifact, Preserved Lineage</h1>
+<p>The inverse may also occur.</p>
+<p>A new artifact version may preserve:</p>
+<pre><code>Source family
+build process
+authority
+dependency structure
+</code></pre>
+<p>while:</p>
+<pre><code>artifact identity changes
+</code></pre>
+<p>Therefore Lineage should not assume:</p>
+<pre><code>same provenance
+  =
+same artifact
+</code></pre>
+<p>Identity and Lineage remain separate Truth dimensions.</p>
+<hr>
+<h1 id="52-reproducibility">52. Reproducibility</h1>
+<p>Provenance raises a powerful question:</p>
+<blockquote>
+<p><strong>Can the declared inputs and transformation reproduce the declared output?</strong></p>
+</blockquote>
+<p>If so, reproducibility may provide additional Evidence supporting the Lineage Claim.</p>
+<p>RTT interpretation:</p>
+<pre><code>Independent Transformation Validation
+</code></pre>
+<p>However:</p>
+<pre><code>successful reproduction
+  ≠
+proof of every historical detail
+</code></pre>
+<p>It supports:</p>
+<pre><code>relationship compatibility
+</code></pre>
+<p>not necessarily:</p>
+<pre><code>complete original event reconstruction
+</code></pre>
+<p>This distinction matters.</p>
+<hr>
+<h1 id="53-reproduction-vs-provenance">53. Reproduction vs Provenance</h1>
+<p>A reproduced artifact may show:</p>
+<pre><code>these inputs + this process can produce this output
+</code></pre>
+<p>It does not necessarily prove:</p>
+<pre><code>this exact historical artifact was produced in precisely this historical execution
+</code></pre>
+<p>Therefore:</p>
+<pre><code>reproducibility
+  ≠
+historical provenance identity
+</code></pre>
+<p>Both can strengthen Coherence while remaining separate.</p>
+<hr>
+<h1 id="54-provenance-coherence">54. Provenance Coherence</h1>
+<p>Lineage Truth Coherence may involve compatibility among:</p>
+<ul>
+<li>artifact identity</li>
+<li>claimed Source materials</li>
+<li>dependency relationships</li>
+<li>transformation description</li>
+<li>build system</li>
+<li>attestation</li>
+<li>signatures</li>
+<li>version</li>
+<li>time</li>
+<li>distribution relationships</li>
+</ul>
+<p>Coherence means:</p>
+<blockquote>
+<p><strong>The provenance graph forms a structurally compatible account under the evaluated Regime.</strong></p>
+</blockquote>
+<p>Again:</p>
+<pre><code>Coherence
+  ≠
+value equality
+</code></pre>
+<p>The generalized definition is now firmly structural.</p>
+<hr>
+<h1 id="55-provenance-paradox">55. Provenance Paradox</h1>
+<p>A Lineage Truth Paradox may arise when:</p>
+<ul>
+<li>two qualified provenance graphs claim mutually incompatible origins</li>
+<li>equally authoritative attestations conflict</li>
+<li>one artifact is claimed to derive from incompatible build histories</li>
+<li>transformations cannot be reconciled under the same Regime</li>
+</ul>
+<p>Before Paradox:</p>
+<pre><code>different version?
+
+different build?
+
+different artifact?
+
+different Regime?
+
+incomplete provenance?
+
+alternate valid path?
+
+copied attestation?
+
+stale claim?
+</code></pre>
+<p>Only unresolved structural incompatibility should become:</p>
+<pre><code>Paradox
+</code></pre>
+<hr>
+<h1 id="56-multiple-provenance-paths">56. Multiple Provenance Paths</h1>
+<p>An artifact may legitimately have multiple upstream dependency paths.</p>
+<p>Therefore:</p>
+<pre><code>multiple paths
+  ≠
+contradiction
+</code></pre>
+<p>The architecture must distinguish:</p>
+<pre><code>multi-parent provenance
+</code></pre>
+<p>from:</p>
+<pre><code>incompatible provenance
+</code></pre>
+<p>This repeats a major cross-system lesson:</p>
+<blockquote>
+<p><strong>Multiplicity is domain-semantic.</strong></p>
+</blockquote>
+<hr>
+<h1 id="57-alternate-valid-build-paths">57. Alternate Valid Build Paths</h1>
+<p>If two different qualified transformations can produce the same artifact:</p>
+<pre><code>Path A
+  Source X
+  Build A
+  ↓
+  Artifact D
+
+Path B
+  Source Y
+  Build B
+  ↓
+  Artifact D
+</code></pre>
+<p>the existence of both paths is not automatically Paradox.</p>
+<p>Question:</p>
+<blockquote>
+<p>Is the Claim asserting one exclusive historical origin or merely possible derivation?</p>
+</blockquote>
+<p>Claim semantics matter.</p>
+<p>This is an important Lineage Truth distinction.</p>
+<hr>
+<h1 id="58-historical-provenance-vs-possible-provenance">58. Historical Provenance vs Possible Provenance</h1>
+<h2 id="historical-provenance">Historical Provenance</h2>
+<p>Claims:</p>
+<blockquote>
+<p><strong>This artifact was actually produced through this path.</strong></p>
+</blockquote>
+<h2 id="possible-provenance">Possible Provenance</h2>
+<p>Claims:</p>
+<blockquote>
+<p><strong>This artifact can be produced through this path.</strong></p>
+</blockquote>
+<p>These are different Truth Claims.</p>
+<p>Reproducibility typically supports:</p>
+<pre><code>possible provenance
+</code></pre>
+<p>more directly than:</p>
+<pre><code>historical provenance
+</code></pre>
+<p>The Truth Service should preserve Claim semantics.</p>
+<hr>
+<h1 id="59-attested-provenance-vs-observed-provenance">59. Attested Provenance vs Observed Provenance</h1>
+<p>Another important distinction:</p>
+<h2 id="attested-provenance">Attested Provenance</h2>
+<p>A Source asserts a Lineage relationship.</p>
+<h2 id="observed-provenance">Observed Provenance</h2>
+<p>Instrumentation directly observed a transformation/event.</p>
+<p>These Evidence types can support each other.</p>
+<p>They are not identical.</p>
+<p>This strongly validates Evidence typing.</p>
+<hr>
+<h1 id="60-provenance-and-observational-truth">60. Provenance and Observational Truth</h1>
+<p>Telemetry may observe:</p>
+<pre><code>build event
+</code></pre>
+<p>while an attestation asserts:</p>
+<pre><code>build event occurred with inputs X
+</code></pre>
+<p>The two may be correlated.</p>
+<p>Conceptually:</p>
+<pre><code>Observational Evidence
+      +
+Assertion Evidence
+      ↓
+Provenance Coherence
+</code></pre>
+<p>This is a concrete example of heterogeneous Evidence synthesis.</p>
+<hr>
+<h1 id="61-provenance-and-integrity-truth">61. Provenance and Integrity Truth</h1>
+<p>An artifact digest or signature may establish:</p>
+<pre><code>integrity relationship
+</code></pre>
+<p>An attestation may establish:</p>
+<pre><code>claimed provenance relationship
+</code></pre>
+<p>Together:</p>
+<pre><code>Integrity
+  +
+Lineage
+</code></pre>
+<p>can strengthen qualification.</p>
+<p>Neither replaces the other.</p>
+<p>Again:</p>
+<pre><code>Truth Classes compose.
+</code></pre>
+<hr>
+<h1 id="62-provenance-and-authority-truth">62. Provenance and Authority Truth</h1>
+<p>Who may issue provenance Claims?</p>
+<p>That is:</p>
+<pre><code>Authority Truth
+</code></pre>
+<p>An attestation Source should be evaluated regarding:</p>
+<pre><code>identity
+role
+scope
+authority
+Regime
+</code></pre>
+<p>Therefore:</p>
+<pre><code>provenance assertion signed
+  ≠
+provenance assertion authoritative
+</code></pre>
+<p>This repeats PKI's strongest lesson.</p>
+<hr>
+<h1 id="63-provenance-and-temporal-truth">63. Provenance and Temporal Truth</h1>
+<p>Lineage relationships may have temporal structure:</p>
+<pre><code>Source revision existed before build
+
+build produced artifact
+
+attestation followed build
+
+release followed artifact creation
+</code></pre>
+<p>The ordering itself may participate in qualification.</p>
+<p>Therefore:</p>
+<pre><code>Temporal Truth
+</code></pre>
+<p>and:</p>
+<pre><code>Transactional / Transition Lineage
+</code></pre>
+<p>may reinforce provenance.</p>
+<hr>
+<h1 id="64-impossible-temporal-lineage">64. Impossible Temporal Lineage</h1>
+<p>Suppose a provenance graph claims:</p>
+<pre><code>Artifact built at T1
+</code></pre>
+<p>from:</p>
+<pre><code>dependency version created at T2
+</code></pre>
+<p>where:</p>
+<pre><code>T2 &gt; T1
+</code></pre>
+<p>under a Regime where that ordering is impossible.</p>
+<p>This introduces:</p>
+<pre><code>temporal Lineage incoherence
+</code></pre>
+<p>The graph may therefore fail qualification even when individual nodes appear valid.</p>
+<p>This is a powerful example of graph-level Coherence.</p>
+<hr>
+<h1 id="65-graph-level-qualification">65. Graph-Level Qualification</h1>
+<p>Earlier Qualification began with individual Observations.</p>
+<p>After ten crosswalks, the generalized model clearly needs:</p>
+<pre><code>node qualification
+</code></pre>
+<p>and:</p>
+<pre><code>relationship qualification
+</code></pre>
+<p>and:</p>
+<pre><code>graph qualification
+</code></pre>
+<p>Potential evaluation:</p>
+<pre><code>EvidenceItem A:
+  qualified
+
+EvidenceItem B:
+  qualified
+
+Edge A→B:
+  incompatible
+</code></pre>
+<p>Overall:</p>
+<pre><code>Lineage graph:
+  not coherent
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Qualified nodes do not guarantee a qualified relationship.</strong></p>
+</blockquote>
+<p>This should become canonical.</p>
+<hr>
+<h1 id="66-relationship-truth">66. Relationship Truth</h1>
+<p>This leads to a deeper architectural finding.</p>
+<p>Many of the Truth Classes are fundamentally about relationships:</p>
+<pre><code>Temporal:
+  local state ↔ reference
+
+Locational:
+  name ↔ target
+
+Identity:
+  subject ↔ identity
+
+Integrity:
+  artifact ↔ asserted preserved form
+
+Authority:
+  actor ↔ operation ↔ target
+
+State:
+  participant ↔ accepted state
+
+Transactional:
+  transition ↔ commitment
+
+Intent:
+  desired ↔ current
+
+Observational:
+  observer ↔ evidence ↔ subject
+
+Lineage:
+  source ↔ transformation ↔ artifact
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Operational Truth appears increasingly relational rather than purely propositional.</strong></p>
+</blockquote>
+<p>This may be the deepest result of the crosswalk series.</p>
+<hr>
+<h1 id="67-truth-graph-candidate">67. Truth Graph Candidate</h1>
+<p>The architecture has evolved toward:</p>
+<pre><code>nodes:
+  Subjects
+  Claims
+  Evidence
+  Truth States
+  Reference Bases
+  Actors
+  Artifacts
+  Transitions
+
+edges:
+  supports
+  derives_from
+  observed_by
+  delegated_by
+  transformed_from
+  depends_on
+  committed_as
+  materialized_as
+  supersedes
+  compensates
+  reconstructs_from
+  drifted_from
+  evaluated_against
+  correlates_with
+</code></pre>
+<p>Potential name:</p>
+<pre><code>Truth Graph
+</code></pre>
+<p>However:</p>
+<pre><code>graph storage
+  ≠
+Truth architecture automatically
+</code></pre>
+<p>The graph is a representation of relationships.</p>
+<p>Qualification semantics remain essential.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE ARCHITECTURAL FORM
+</code></pre>
+<hr>
+<h1 id="68-graph-knowledge-graph-requirement">68. Graph ≠ Knowledge Graph Requirement</h1>
+<p>The Truth Service should not automatically become:</p>
+<pre><code>general-purpose knowledge graph
+</code></pre>
+<p>The graph exists to preserve:</p>
+<pre><code>operational Evidence
+Lineage
+qualification relationships
+derived Truth
+evaluation history
+</code></pre>
+<p>Its scope remains bounded.</p>
+<p>This protects the initial architectural non-goal:</p>
+<pre><code>not a universal knowledge graph
+</code></pre>
+<hr>
+<h1 id="69-provenance-reconstruction">69. Provenance Reconstruction</h1>
+<p>Given sufficient Lineage Evidence, the Truth Service may reconstruct:</p>
+<pre><code>how an artifact arrived here
+</code></pre>
+<p>This resembles:</p>
+<pre><code>Transaction recovery
+</code></pre>
+<p>and:</p>
+<pre><code>Telemetry reconstruction
+</code></pre>
+<p>but the purposes differ.</p>
+<h2 id="transaction-recovery">Transaction Recovery</h2>
+<p>Reconstruct operational state.</p>
+<h2 id="telemetry-reconstruction">Telemetry Reconstruction</h2>
+<p>Reconstruct bounded activity narrative.</p>
+<h2 id="provenance-reconstruction">Provenance Reconstruction</h2>
+<p>Reconstruct origin and transformation path.</p>
+<p>These are distinct uses of:</p>
+<pre><code>Lineage
+</code></pre>
+<p>The core graph can support all three.</p>
+<hr>
+<h1 id="70-lineage-is-generative-and-explanatory">70. Lineage Is Generative and Explanatory</h1>
+<p>After Crosswalk #7:</p>
+<pre><code>Lineage can reconstruct materialization.
+</code></pre>
+<p>After Crosswalk #9:</p>
+<pre><code>Lineage can reconstruct observational narrative.
+</code></pre>
+<p>After Crosswalk #10:</p>
+<pre><code>Lineage can reconstruct provenance path.
+</code></pre>
+<p>Therefore Lineage serves at least:</p>
+<pre><code>explanatory
+
+qualifying
+
+generative
+</code></pre>
+<p>functions.</p>
+<p>This strongly establishes it as a core architectural object.</p>
+<hr>
+<h1 id="71-lineage-completeness">71. Lineage Completeness</h1>
+<p>A provenance graph may be:</p>
+<pre><code>complete enough for Use A
+</code></pre>
+<p>but:</p>
+<pre><code>insufficient for Use B
+</code></pre>
+<p>Therefore:</p>
+<pre><code>completeness
+  ≠
+universal binary
+</code></pre>
+<p>It is Regime-qualified.</p>
+<p>Example:</p>
+<pre><code>basic provenance:
+  sufficient for traceability
+
+high-assurance provenance:
+  insufficient for release policy
+</code></pre>
+<p>The architecture should avoid one universal:</p>
+<pre><code>complete = true/false
+</code></pre>
+<p>without scope.</p>
+<hr>
+<h1 id="72-coverage-regime-usability">72. Coverage + Regime → Usability</h1>
+<p>A generalized relationship now appears:</p>
+<pre><code>Evidence Coverage
+      +
+Regime Requirements
+      ↓
+Sufficient Evaluation Boundary?
+</code></pre>
+<p>This applies to:</p>
+<pre><code>telemetry
+provenance
+identity proofing
+path validation
+distributed state
+transactions
+</code></pre>
+<p>Potential generalized construct:</p>
+<pre><code>CoverageAssessment
+</code></pre>
+<p>However, this may simply be part of:</p>
+<pre><code>Qualification
+</code></pre>
+<p>rather than a dedicated entity.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE RELATION
+</code></pre>
+<hr>
+<h1 id="73-provenance-freshness">73. Provenance Freshness</h1>
+<p>Lineage information may also become outdated.</p>
+<p>Examples include:</p>
+<pre><code>new artifact revision
+new dependency
+new attestation
+revoked signer
+corrected provenance
+superseding build
+</code></pre>
+<p>Therefore:</p>
+<pre><code>provenance accepted once
+  ≠
+provenance permanently current
+</code></pre>
+<p>Revalidation remains necessary.</p>
+<p>This gives Revalidation its tenth crosswalk.</p>
+<p>At this point Revalidation is no longer merely candidate-general.</p>
+<p>It is effectively a core invariant.</p>
+<hr>
+<h1 id="74-provenance-revalidation">74. Provenance Revalidation</h1>
+<p>Potential triggers include:</p>
+<pre><code>artifact changed
+new attestation
+signer status changed
+authority changed
+dependency information changed
+provenance gap filled
+provenance contradiction discovered
+Regime changed
+</code></pre>
+<p>The old Truth State should remain historically available.</p>
+<p>The new Evaluation should produce a new state.</p>
+<p>Append-oriented Evaluation history remains strongly supported.</p>
+<hr>
+<h1 id="75-provenance-correction">75. Provenance Correction</h1>
+<p>Suppose provenance information is discovered to be incomplete or incorrect.</p>
+<p>Correction should not necessarily rewrite historical Evidence silently.</p>
+<p>A better pattern:</p>
+<pre><code>Prior Provenance Assertion
+      ↓
+New Corrective Assertion
+      ↓
+New Evaluation
+      ↓
+Superseding Lineage Truth State
+</code></pre>
+<p>This parallels:</p>
+<pre><code>compensating transaction
+</code></pre>
+<p>and:</p>
+<pre><code>revised Intent
+</code></pre>
+<p>The historical claim remains visible.</p>
+<hr>
+<h1 id="76-correction-as-new-evidence">76. Correction as New Evidence</h1>
+<p>This suggests another generalized principle:</p>
+<blockquote>
+<p><strong>Correction often arrives as new Evidence rather than mutation of old Evidence.</strong></p>
+</blockquote>
+<p>Examples:</p>
+<pre><code>revised attestation
+compensating transaction
+new telemetry
+updated policy
+new certificate status
+corrected declaration
+</code></pre>
+<p>This strongly supports append-oriented Evidence history.</p>
+<hr>
+<h1 id="77-provenance-audit">77. Provenance Audit</h1>
+<p>Lineage Truth naturally supports audit.</p>
+<p>The system should be able to move backward from:</p>
+<pre><code>current artifact
+</code></pre>
+<p>to:</p>
+<pre><code>transformations
+</code></pre>
+<p>to:</p>
+<pre><code>dependencies
+</code></pre>
+<p>to:</p>
+<pre><code>Sources
+</code></pre>
+<p>to:</p>
+<pre><code>attestations
+</code></pre>
+<p>to:</p>
+<pre><code>authority
+</code></pre>
+<p>to:</p>
+<pre><code>Reference Bases
+</code></pre>
+<p>and identify:</p>
+<pre><code>gaps
+cycles
+conflicts
+transformations
+</code></pre>
+<p>This is essentially the reverse traversal of Truth Lineage.</p>
+<hr>
+<h1 id="78-forward-lineage">78. Forward Lineage</h1>
+<p>Lineage is also useful forward.</p>
+<p>From:</p>
+<pre><code>Source S
+</code></pre>
+<p>the system may ask:</p>
+<blockquote>
+<p><strong>What downstream artifacts or Truth States depend on this Source?</strong></p>
+</blockquote>
+<p>Conceptually:</p>
+<pre><code>Source S
+  ├── Artifact A
+  ├── Artifact B
+  │      └── Artifact C
+  └── Derived Truth State D
+</code></pre>
+<p>This supports:</p>
+<pre><code>impact analysis
+</code></pre>
+<p>after:</p>
+<pre><code>Source compromise
+revocation
+correction
+dependency change
+</code></pre>
+<hr>
+<h1 id="79-impact-propagation">79. Impact Propagation</h1>
+<p>Suppose:</p>
+<pre><code>Dependency D
+</code></pre>
+<p>becomes:</p>
+<pre><code>revoked / compromised / invalidated
+</code></pre>
+<p>Forward Lineage may identify:</p>
+<pre><code>Artifact A
+Artifact B
+Truth State C
+</code></pre>
+<p>as potentially requiring:</p>
+<pre><code>Revalidation
+</code></pre>
+<p>This yields an important generalized mechanism:</p>
+<blockquote>
+<p><strong>Lineage events can trigger downstream Revalidation.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE
+</code></pre>
+<hr>
+<h1 id="80-revalidation-propagation">80. Revalidation Propagation</h1>
+<p>Potential generalized flow:</p>
+<pre><code>Upstream Evidence Change
+        ↓
+Lineage Traversal
+        ↓
+Dependent Truth States
+        ↓
+Mark for Revalidation
+        ↓
+New Evaluations
+</code></pre>
+<p>This makes Lineage operational rather than archival.</p>
+<p>The crosswalk series has now demonstrated both:</p>
+<pre><code>backward explanation
+</code></pre>
+<p>and:</p>
+<pre><code>forward Revalidation
+</code></pre>
+<p>functions.</p>
+<hr>
+<h1 id="81-drift-propagation">81. Drift Propagation</h1>
+<p>Upstream Drift may propagate downstream.</p>
+<p>Example:</p>
+<pre><code>dependency version changes
+  ↓
+artifact provenance changes
+  ↓
+downstream artifact relationships change
+  ↓
+derived Truth States may require review
+</code></pre>
+<p>This does not mean:</p>
+<pre><code>every downstream Claim becomes false
+</code></pre>
+<p>It means:</p>
+<pre><code>qualification may have changed
+</code></pre>
+<p>Therefore propagation should trigger:</p>
+<pre><code>evaluation
+</code></pre>
+<p>not:</p>
+<pre><code>automatic invalidation
+</code></pre>
+<p>This distinction is critical.</p>
+<hr>
+<h1 id="82-dependency-change-automatic-falsehood">82. Dependency Change ≠ Automatic Falsehood</h1>
+<p>The correct generalized behavior is:</p>
+<pre><code>upstream change
+  ↓
+affected Lineage identified
+  ↓
+Revalidation required
+  ↓
+downstream state reevaluated
+</code></pre>
+<p>not:</p>
+<pre><code>upstream change
+  ↓
+all descendants = false
+</code></pre>
+<p>This maintains bounded reasoning.</p>
+<hr>
+<h1 id="83-worked-example-complete-provenance">83. Worked Example — Complete Provenance</h1>
+<h2 id="artifact">Artifact</h2>
+<pre><code>A
+</code></pre>
+<h2 id="sources">Sources</h2>
+<pre><code>S1
+S2
+</code></pre>
+<h2 id="dependency">Dependency</h2>
+<pre><code>D1
+</code></pre>
+<h2 id="transformation">Transformation</h2>
+<pre><code>Build B1
+</code></pre>
+<h2 id="attestation">Attestation</h2>
+<pre><code>Attester T1
+</code></pre>
+<h2 id="integrity">Integrity</h2>
+<pre><code>artifact identity matches expected digest
+</code></pre>
+<h2 id="authority_1">Authority</h2>
+<pre><code>T1 qualified for the asserted provenance scope
+</code></pre>
+<h2 id="lineage">Lineage</h2>
+<pre><code>S1 ──┐
+     │
+S2 ──┼──► B1 ──► A
+     │
+D1 ──┘
+</code></pre>
+<h2 id="result">Result</h2>
+<pre><code>Truth State:
+  operationally_accepted
+
+domain_result:
+  provenance:
+    sufficiently_supported
+</code></pre>
+<h2 id="architectural-finding">Architectural Finding</h2>
+<p>Lineage Truth emerges from qualified relationships, not merely a metadata field containing a Source URL.</p>
+<hr>
+<h1 id="84-worked-example-missing-build-step">84. Worked Example — Missing Build Step</h1>
+<h2 id="artifact_1">Artifact</h2>
+<pre><code>A
+</code></pre>
+<h2 id="known-lineage">Known Lineage</h2>
+<pre><code>Source S
+  ↓
+[UNKNOWN]
+  ↓
+Artifact A
+</code></pre>
+<h2 id="result_1">Result</h2>
+<pre><code>Lineage Gap:
+  transformation unknown
+</code></pre>
+<h2 id="possible-truth-state">Possible Truth State</h2>
+<pre><code>degraded
+or
+indeterminate
+</code></pre>
+<p>depending on Regime.</p>
+<h2 id="incorrect-conclusion">Incorrect Conclusion</h2>
+<pre><code>no transformation occurred
+</code></pre>
+<h2 id="architectural-finding_1">Architectural Finding</h2>
+<p>Missing Lineage is not qualified absence.</p>
+<hr>
+<h1 id="85-worked-example-conflicting-attestations">85. Worked Example — Conflicting Attestations</h1>
+<h2 id="attestation-a">Attestation A</h2>
+<pre><code>Artifact X derived from Source S1
+</code></pre>
+<h2 id="attestation-b">Attestation B</h2>
+<pre><code>Artifact X derived from Source S2
+</code></pre>
+<p>Both appear:</p>
+<pre><code>intact
+authoritative
+same artifact
+same Regime
+</code></pre>
+<p>If the Claims are mutually exclusive:</p>
+<pre><code>potential Lineage Paradox
+</code></pre>
+<p>Before Paradox:</p>
+<pre><code>check version
+check build
+check time
+check artifact identity
+check alternate-path semantics
+</code></pre>
+<h2 id="architectural-finding_2">Architectural Finding</h2>
+<p>Qualified nodes can still form an incoherent graph.</p>
+<hr>
+<h1 id="86-worked-example-shared-dependency">86. Worked Example — Shared Dependency</h1>
+<h2 id="artifact-a">Artifact A</h2>
+<pre><code>depends on D
+</code></pre>
+<h2 id="artifact-b">Artifact B</h2>
+<pre><code>depends on D
+</code></pre>
+<p>Both later display:</p>
+<pre><code>property P
+</code></pre>
+<p>If P plausibly derives from D:</p>
+<pre><code>A
+B
+</code></pre>
+<p>should not automatically count as:</p>
+<pre><code>independent corroboration
+</code></pre>
+<h2 id="architectural-finding_3">Architectural Finding</h2>
+<p>Common ancestry reduces Evidence independence.</p>
+<hr>
+<h1 id="87-worked-example-copied-attestation">87. Worked Example — Copied Attestation</h1>
+<h2 id="original-attestation">Original Attestation</h2>
+<pre><code>T1
+</code></pre>
+<p>Copies:</p>
+<pre><code>T1a
+T1b
+T1c
+</code></pre>
+<p>Apparent:</p>
+<pre><code>four supporting records
+</code></pre>
+<p>Actual independent origin:</p>
+<pre><code>one attestation
+</code></pre>
+<h2 id="architectural-finding_4">Architectural Finding</h2>
+<p>Evidence duplication must be collapsed through Lineage where possible.</p>
+<hr>
+<h1 id="88-worked-example-transformation">88. Worked Example — Transformation</h1>
+<h2 id="source">Source</h2>
+<pre><code>S
+</code></pre>
+<h2 id="transformation_1">Transformation</h2>
+<pre><code>T
+</code></pre>
+<h2 id="output">Output</h2>
+<pre><code>Artifact A
+</code></pre>
+<p>A differs from S.</p>
+<h2 id="correct-interpretation">Correct Interpretation</h2>
+<p>Difference may be expected because:</p>
+<pre><code>T transforms S
+</code></pre>
+<h2 id="incorrect-interpretation">Incorrect Interpretation</h2>
+<pre><code>A differs from S
+  therefore
+integrity failure
+</code></pre>
+<h2 id="architectural-finding_5">Architectural Finding</h2>
+<p>Lineage semantics explain legitimate change.</p>
+<hr>
+<h1 id="89-worked-example-same-artifact-different-provenance">89. Worked Example — Same Artifact, Different Provenance</h1>
+<h2 id="artifact-a_1">Artifact A</h2>
+<pre><code>digest:
+  D
+</code></pre>
+<h2 id="provenance-claim-1">Provenance Claim 1</h2>
+<pre><code>Source:
+  S1
+</code></pre>
+<h2 id="provenance-claim-2">Provenance Claim 2</h2>
+<pre><code>Source:
+  S2
+</code></pre>
+<p>Content:</p>
+<pre><code>identical
+</code></pre>
+<p>Lineage:</p>
+<pre><code>different
+</code></pre>
+<h2 id="architectural-finding_6">Architectural Finding</h2>
+<p>Integrity equality does not resolve Lineage Truth.</p>
+<hr>
+<h1 id="90-worked-example-reproducible-artifact">90. Worked Example — Reproducible Artifact</h1>
+<h2 id="historical-claim">Historical Claim</h2>
+<pre><code>Build B produced Artifact A from Source S.
+</code></pre>
+<h2 id="independent-reproduction">Independent Reproduction</h2>
+<pre><code>Source S
+  +
+transformation equivalent to B
+  ↓
+Artifact with matching identity
+</code></pre>
+<h2 id="result_2">Result</h2>
+<p>This strengthens:</p>
+<pre><code>compatibility of Source + transformation + artifact
+</code></pre>
+<p>It does not independently prove:</p>
+<pre><code>every historical detail of B's original execution
+</code></pre>
+<h2 id="architectural-finding_7">Architectural Finding</h2>
+<p>Possible provenance and historical provenance remain distinct.</p>
+<hr>
+<h1 id="91-worked-example-circular-derived-claim">91. Worked Example — Circular Derived Claim</h1>
+<h2 id="source-claim">Source Claim</h2>
+<pre><code>A
+</code></pre>
+<h2 id="ai-summary">AI Summary</h2>
+<pre><code>B derived from A
+</code></pre>
+<h2 id="report">Report</h2>
+<pre><code>C cites B
+</code></pre>
+<h2 id="later-analysis">Later Analysis</h2>
+<pre><code>C cited as independent support for A
+</code></pre>
+<p>Lineage:</p>
+<pre><code>A → B → C → A
+</code></pre>
+<h2 id="result_3">Result</h2>
+<pre><code>cycle detected
+</code></pre>
+<h2 id="independence">Independence</h2>
+<pre><code>no new independent grounding introduced
+</code></pre>
+<h2 id="architectural-finding_8">Architectural Finding</h2>
+<p>Transformation and republication must not create synthetic corroboration.</p>
+<hr>
+<h1 id="92-worked-example-upstream-revocation">92. Worked Example — Upstream Revocation</h1>
+<h2 id="prior-state">Prior State</h2>
+<pre><code>Artifact A provenance:
+  accepted
+</code></pre>
+<h2 id="event">Event</h2>
+<pre><code>Attester authority revoked
+or relevant upstream Evidence invalidated
+</code></pre>
+<h2 id="correct-response">Correct Response</h2>
+<pre><code>identify dependent Lineage
+  ↓
+trigger Revalidation
+</code></pre>
+<h2 id="incorrect-response">Incorrect Response</h2>
+<pre><code>artifact A automatically false
+</code></pre>
+<h2 id="architectural-finding_9">Architectural Finding</h2>
+<p>Upstream change triggers reevaluation, not automatic conclusion.</p>
+<hr>
+<h1 id="93-worked-example-corrected-provenance">93. Worked Example — Corrected Provenance</h1>
+<h2 id="original-assertion">Original Assertion</h2>
+<pre><code>A derived from S1
+</code></pre>
+<h2 id="new-evidence">New Evidence</h2>
+<pre><code>corrected assertion:
+  A derived from S2
+</code></pre>
+<h2 id="evaluation">Evaluation</h2>
+<pre><code>new Evidence
+  ↓
+new Lineage Evaluation
+  ↓
+new Truth State
+</code></pre>
+<h2 id="history">History</h2>
+<p>Original assertion remains visible as historical Evidence.</p>
+<h2 id="architectural-finding_10">Architectural Finding</h2>
+<p>Correction should preserve Lineage rather than rewrite history invisibly.</p>
+<hr>
+<h1 id="94-rtt-dimension-mapping">94. RTT Dimension Mapping</h1>
+<table>
+<thead>
+<tr>
+<th>RTT Dimension</th>
+<th>Provenance Interpretation</th>
+<th>General Truth-Service Candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Sources, artifacts, attestations, and transformations propagate through supply-chain relationships</td>
+<td>Evidence and Truth propagate through governed Lineage</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Source, artifact, transformation, integrity, and attestation relationships form a compatible provenance graph</td>
+<td>Graph-level structural compatibility</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Source, dependency, transformation, authority, artifact, or coverage changes</td>
+<td>Multi-dimensional Lineage Drift</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Qualified provenance graphs remain mutually incompatible</td>
+<td>Preserved graph-level contradiction</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Required provenance depth, authority, coverage, integrity, and intended use govern acceptance</td>
+<td>Evaluation boundary determines sufficient Lineage</td>
+</tr>
+<tr>
+<td><strong>Spin</strong></td>
+<td>Artifact identity and provenance relationships persist through transformations</td>
+<td>Lineage continuity</td>
+</tr>
+<tr>
+<td><strong>Elec</strong></td>
+<td>Source, dependency, transform, artifact, attester, and consumer remain distinct</td>
+<td>Role and relationship separation</td>
+</tr>
+<tr>
+<td><strong>Temp</strong></td>
+<td>Builds, attestations, revisions, revocations, releases, and corrections change Lineage over time</td>
+<td>Provenance lifecycle and Revalidation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="95-set-mapping">95. SET Mapping</h1>
+<h2 id="spin">Spin</h2>
+<p>Lineage Truth expresses Spin through:</p>
+<ul>
+<li>artifact identity</li>
+<li>Source identity</li>
+<li>dependency identity</li>
+<li>transformation relationships</li>
+<li>attestation identity</li>
+<li>persistent provenance</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>Lineage Truth strongly expresses Elec through distinction among:</p>
+<ul>
+<li>Source</li>
+<li>dependency</li>
+<li>transformer</li>
+<li>artifact</li>
+<li>attester</li>
+<li>signature</li>
+<li>distribution step</li>
+<li>consumer</li>
+<li>copied Evidence</li>
+<li>derived Evidence</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>Lineage Truth expresses Temp through:</p>
+<ul>
+<li>Source revision</li>
+<li>build</li>
+<li>transformation</li>
+<li>release</li>
+<li>attestation</li>
+<li>correction</li>
+<li>revocation</li>
+<li>Revalidation</li>
+</ul>
+<p>Compactly:</p>
+<blockquote>
+<p><strong>Spin preserves the continuity of origin and relationship.</strong></p>
+<p><strong>Elec distinguishes who produced, transformed, attested, copied, and consumed.</strong></p>
+<p><strong>Temp governs revision, transformation, correction, and renewed qualification.</strong></p>
+</blockquote>
+<hr>
+<h1 id="96-prior-candidate-review-evidenceitem">96. Prior Candidate Review — EvidenceItem</h1>
+<p>Prior status:</p>
+<pre><code>Promotion recommended
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>STRONGLY VALIDATED
+</code></pre>
+<p>Attestations, artifact identities, dependency records, integrity Evidence, and provenance statements all require broader Evidence semantics than Observation alone.</p>
+<p>Decision recommendation:</p>
+<pre><code>PROMOTE TO CORE DURING CONSOLIDATION
+</code></pre>
+<hr>
+<h1 id="97-prior-candidate-review-evidence-graph">97. Prior Candidate Review — Evidence Graph</h1>
+<p>Prior status:</p>
+<pre><code>Promotion recommended
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>DIRECTLY VALIDATED
+</code></pre>
+<p>Supply-chain provenance is graph-shaped by nature.</p>
+<p>Decision recommendation:</p>
+<pre><code>PROMOTE TO CORE
+</code></pre>
+<p>Potential implementation may share infrastructure with Lineage Graph.</p>
+<hr>
+<h1 id="98-prior-candidate-review-lineage-graph">98. Prior Candidate Review — Lineage Graph</h1>
+<p>Prior status:</p>
+<pre><code>Core mechanism
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>DIRECTLY VALIDATED
+</code></pre>
+<p>Lineage has now survived all ten crosswalks in different forms.</p>
+<p>Decision recommendation:</p>
+<pre><code>CONFIRM CORE
+</code></pre>
+<p>Lineage is no longer a candidate peripheral property.</p>
+<p>It is foundational.</p>
+<hr>
+<h1 id="99-prior-candidate-review-referencebasis">99. Prior Candidate Review — ReferenceBasis</h1>
+<p>Prior status:</p>
+<pre><code>Candidate Core
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Lineage qualification may depend upon:</p>
+<pre><code>authority
+attestation policy
+integrity requirements
+Source identity
+provenance requirements
+</code></pre>
+<p>No single external Anchor is universally sufficient.</p>
+<p>Decision recommendation:</p>
+<pre><code>PROMOTE ReferenceBasis
+</code></pre>
+<p>while retaining:</p>
+<pre><code>Anchor
+</code></pre>
+<p>as one specialized ReferenceBasis form.</p>
+<hr>
+<h1 id="100-prior-candidate-review-authorityrelationship">100. Prior Candidate Review — AuthorityRelationship</h1>
+<p>Prior status:</p>
+<pre><code>Candidate Core
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Attesters and transformers operate within bounded roles and scopes.</p>
+<p>Decision recommendation:</p>
+<pre><code>PROMOTE TO CORE
+</code></pre>
+<hr>
+<h1 id="101-prior-candidate-review-contextevidence">101. Prior Candidate Review — ContextEvidence</h1>
+<p>Prior status:</p>
+<pre><code>strongly validated
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>SURVIVES
+</code></pre>
+<p>Build configuration, transformation environment, and artifact context can affect interpretation.</p>
+<p>Decision recommendation:</p>
+<pre><code>PROMOTE CONCEPTUALLY
+</code></pre>
+<p>Keep schema lightweight until implementation requires richer context objects.</p>
+<hr>
+<h1 id="102-prior-candidate-review-evidencegap">102. Prior Candidate Review — EvidenceGap</h1>
+<p>Prior status:</p>
+<pre><code>Candidate Core
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Missing provenance is a Lineage-specific form of Evidence Gap.</p>
+<p>Decision recommendation:</p>
+<pre><code>PROMOTE TO CORE
+</code></pre>
+<p>with gap types such as:</p>
+<pre><code>evidence
+lineage
+coverage
+transformation
+</code></pre>
+<hr>
+<h1 id="103-prior-candidate-review-observationcoverage">103. Prior Candidate Review — ObservationCoverage</h1>
+<p>Prior status:</p>
+<pre><code>Candidate Core concept
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>GENERALIZES TO COVERAGE
+</code></pre>
+<p>Rather than promoting:</p>
+<pre><code>ObservationCoverage
+</code></pre>
+<p>as the universal object, the broader generalized abstraction may be:</p>
+<pre><code>Coverage
+</code></pre>
+<p>Possible forms:</p>
+<pre><code>ObservationCoverage
+ProvenanceCoverage
+EvaluationCoverage
+</code></pre>
+<p>Decision recommendation:</p>
+<pre><code>PROMOTE COVERAGE concept
+keep domain-specific types extensible
+</code></pre>
+<hr>
+<h1 id="104-prior-candidate-review-stateview">104. Prior Candidate Review — StateView</h1>
+<p>Prior status:</p>
+<pre><code>Candidate Core
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>PARTIALLY SURVIVES
+</code></pre>
+<p>A consumer may have a bounded view of available provenance.</p>
+<p>However, Lineage Truth does not require StateView universally.</p>
+<p>Decision recommendation:</p>
+<pre><code>retain as composable core extension
+not mandatory for every Evaluation
+</code></pre>
+<hr>
+<h1 id="105-prior-candidate-review-truthcomparison">105. Prior Candidate Review — TruthComparison</h1>
+<p>Prior status:</p>
+<pre><code>Candidate Core
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Provenance Claims may compare:</p>
+<pre><code>claimed vs observed Lineage
+
+expected vs supplied provenance
+
+artifact A vs artifact B
+
+prior vs current provenance
+</code></pre>
+<p>Decision recommendation:</p>
+<pre><code>PROMOTE TO CORE COMPARISON CAPABILITY
+</code></pre>
+<hr>
+<h1 id="106-prior-candidate-review-materializedtruthstate">106. Prior Candidate Review — MaterializedTruthState</h1>
+<p>Prior status:</p>
+<pre><code>Strong Candidate Core
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>SURVIVES
+</code></pre>
+<p>Artifacts themselves are materialized transformation results.</p>
+<p>However:</p>
+<pre><code>MaterializedTruthState
+</code></pre>
+<p>should remain a relationship / structured object rather than becoming mandatory in every class.</p>
+<p>Decision recommendation:</p>
+<pre><code>PROMOTE AS COMPOSABLE CORE CONCEPT
+</code></pre>
+<hr>
+<h1 id="107-prior-candidate-review-acceptancerule">107. Prior Candidate Review — AcceptanceRule</h1>
+<p>Prior status:</p>
+<pre><code>Candidate Core
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>A provenance graph may need to satisfy:</p>
+<pre><code>authority
+integrity
+depth
+coverage
+transformation
+policy
+</code></pre>
+<p>requirements before being accepted.</p>
+<p>Decision recommendation:</p>
+<pre><code>PROMOTE TO CORE
+</code></pre>
+<hr>
+<h1 id="108-prior-candidate-review-regimeepoch">108. Prior Candidate Review — RegimeEpoch</h1>
+<p>Prior status:</p>
+<pre><code>strong candidate
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>SURVIVES THROUGH VERSIONING
+</code></pre>
+<p>Provenance versions, artifact generations, policy versions, and build generations support a broader epoch/version concept.</p>
+<p>Decision recommendation:</p>
+<pre><code>retain candidate
+avoid mandatory standalone entity until implementation demonstrates need
+</code></pre>
+<hr>
+<h1 id="109-prior-candidate-review-constituted-operational-truth">109. Prior Candidate Review — Constituted Operational Truth</h1>
+<p>Prior status:</p>
+<pre><code>strong candidate
+</code></pre>
+<p>Provenance result:</p>
+<pre><code>SURVIVES BUT IS NOT UNIVERSAL
+</code></pre>
+<p>Some provenance Truth is:</p>
+<pre><code>discovered / reconstructed
+</code></pre>
+<p>Some is:</p>
+<pre><code>asserted
+</code></pre>
+<p>Some is:</p>
+<pre><code>constituted through build / release process
+</code></pre>
+<p>Decision recommendation:</p>
+<pre><code>retain as classification
+not core persistent entity
+</code></pre>
+<hr>
+<h1 id="110-new-candidate-coverage">110. New Candidate — Coverage</h1>
+<p>Across Telemetry and Provenance, Coverage has become sufficiently general to deserve promotion consideration.</p>
+<p>Definition:</p>
+<blockquote>
+<p><strong>The bounded extent over which Evidence or Lineage is expected to support a Claim.</strong></p>
+</blockquote>
+<p>Possible properties:</p>
+<pre><code>coverage_id
+subject_scope
+evidence_types
+lineage_scope
+time_scope
+expected_sources
+known_gaps
+completeness_classification
+regime_id
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE
+</code></pre>
+<hr>
+<h1 id="111-new-candidate-gap">111. New Candidate — Gap</h1>
+<p>EvidenceGap and LineageGap may be generalized.</p>
+<p>Potential object:</p>
+<pre><code>Gap
+  ├── gap_type
+  ├── expected_relation
+  ├── subject_scope
+  ├── time_scope
+  ├── reason
+  ├── impact
+  └── status
+</code></pre>
+<p>Gap types:</p>
+<pre><code>evidence
+lineage
+transformation
+coverage
+authority
+context
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE
+</code></pre>
+<p>This may be cleaner than separate gap objects.</p>
+<hr>
+<h1 id="112-new-candidate-relationship-qualification">112. New Candidate — Relationship Qualification</h1>
+<p>Crosswalk #10 confirms that qualified nodes do not guarantee qualified edges.</p>
+<p>Therefore Qualification should apply to:</p>
+<pre><code>EvidenceItem
+</code></pre>
+<p>and:</p>
+<pre><code>Relationship
+</code></pre>
+<p>and:</p>
+<pre><code>Graph / Subgraph
+</code></pre>
+<p>Potential conceptual model:</p>
+<pre><code>QualificationTarget
+  ├── node
+  ├── edge
+  └── graph
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE PRINCIPLE
+</code></pre>
+<p>Implementation form can remain flexible.</p>
+<hr>
+<h1 id="113-new-candidate-groundingset">113. New Candidate — GroundingSet</h1>
+<p>Recursive Truth requires identifying the independent basis beneath derived Claims.</p>
+<p>Potential abstraction:</p>
+<pre><code>GroundingSet
+</code></pre>
+<p>Definition:</p>
+<blockquote>
+<p><strong>The set of independent foundational Evidence and Reference Bases upon which a derived Truth State ultimately depends.</strong></p>
+</blockquote>
+<p>Potential uses:</p>
+<pre><code>independence analysis
+circularity detection
+evidence deduplication
+Coherence assessment
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE CORE
+</code></pre>
+<p>This may be computed rather than persisted.</p>
+<hr>
+<h1 id="114-groundingset-and-independence">114. GroundingSet and Independence</h1>
+<p>Example:</p>
+<pre><code>Derived Claim A
+  depends on
+E1, E2
+
+Derived Claim B
+  depends on
+E2, E3
+</code></pre>
+<p>Their Grounding Sets overlap:</p>
+<pre><code>E2
+</code></pre>
+<p>Therefore A and B are:</p>
+<pre><code>partially dependent
+</code></pre>
+<p>This generalizes existing:</p>
+<pre><code>source_independence
+</code></pre>
+<p>far more accurately.</p>
+<p>Potential independence classification:</p>
+<pre><code>independent
+partially_dependent
+dependent
+unknown
+</code></pre>
+<p>The current model already contains these values.</p>
+<p>The calculation mechanism can now become graph-based.</p>
+<hr>
+<h1 id="115-architecture-refinement-1-lineage-becomes-foundational">115. Architecture Refinement #1 — Lineage Becomes Foundational</h1>
+<p>After ten crosswalks, Lineage has appeared as:</p>
+<pre><code>reference hierarchy
+delegation
+resolution path
+federation
+certification path
+authority chain
+replicated history
+transaction history
+reconciliation history
+trace causality
+supply-chain provenance
+</code></pre>
+<p>This is sufficient evidence to state:</p>
+<blockquote>
+<p><strong>Lineage is foundational to the generalized RTT Resonance Truth Service.</strong></p>
+</blockquote>
+<p>It should remain:</p>
+<pre><code>first-class
+graph-structured
+queryable
+qualification-aware
+historically preserved
+</code></pre>
+<p>This is no longer provisional.</p>
+<hr>
+<h1 id="116-architecture-refinement-2-evidenceitem-becomes-foundational">116. Architecture Refinement #2 — EvidenceItem Becomes Foundational</h1>
+<p>The original:</p>
+<pre><code>Observation
+</code></pre>
+<p>abstraction has been outgrown.</p>
+<p>The crosswalk series now requires:</p>
+<pre><code>EvidenceItem
+   ├── Observation
+   ├── Assertion
+   ├── Declaration
+   ├── Attribute
+   ├── Status Evidence
+   ├── Transition Evidence
+   ├── Derived Evidence
+   └── Attestation
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>EvidenceItem should become the generalized input object.</strong></p>
+</blockquote>
+<p>Observation remains one important subtype.</p>
+<p>This is a formal consolidation recommendation.</p>
+<hr>
+<h1 id="117-architecture-refinement-3-referencebasis-replaces-universal-anchor-assumption">117. Architecture Refinement #3 — ReferenceBasis Replaces Universal Anchor Assumption</h1>
+<p>Anchor remains useful for:</p>
+<pre><code>NTP
+DNS
+PKI
+</code></pre>
+<p>But later systems show that reference may instead arise from:</p>
+<pre><code>policy
+protocol
+accepted history
+authorized declaration
+observation contract
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Anchor
+</code></pre>
+<p>should become one specialization of:</p>
+<pre><code>ReferenceBasis
+</code></pre>
+<p>Potential types:</p>
+<pre><code>external_anchor
+governing_policy
+governing_protocol
+accepted_history
+authorized_declaration
+measurement_standard
+trust_configuration
+</code></pre>
+<p>This is a formal consolidation recommendation.</p>
+<hr>
+<h1 id="118-architecture-refinement-4-authorityrelationship-becomes-core">118. Architecture Refinement #4 — AuthorityRelationship Becomes Core</h1>
+<p>Authority has appeared repeatedly as:</p>
+<pre><code>scoped
+role-based
+operation-specific
+delegated
+consumer-relative
+time-bounded
+Regime-qualified
+</code></pre>
+<p>Therefore:</p>
+<pre><code>AuthorityRelationship
+</code></pre>
+<p>should become a core object or first-class relationship.</p>
+<p>It must not collapse into:</p>
+<pre><code>source.authoritative = true
+</code></pre>
+<p>This is a formal consolidation recommendation.</p>
+<hr>
+<h1 id="119-architecture-refinement-5-qualification-applies-to-nodes-edges-and-graphs">119. Architecture Refinement #5 — Qualification Applies to Nodes, Edges, and Graphs</h1>
+<p>The generalized Qualification Engine should be able to evaluate:</p>
+<pre><code>EvidenceItem
+
+Source / Entity Role
+
+AuthorityRelationship
+
+Lineage Relationship
+
+Evidence Graph
+
+Derived Truth State
+</code></pre>
+<p>This is substantially broader than:</p>
+<pre><code>Observation filtering
+</code></pre>
+<p>This is a formal consolidation recommendation.</p>
+<hr>
+<h1 id="120-architecture-refinement-6-coverage-and-gaps-become-core-evaluation-metadata">120. Architecture Refinement #6 — Coverage and Gaps Become Core Evaluation Metadata</h1>
+<p>Crosswalk #9 and #10 independently demonstrate:</p>
+<pre><code>missing Evidence
+</code></pre>
+<p>and:</p>
+<pre><code>missing Lineage
+</code></pre>
+<p>must remain visible.</p>
+<p>Therefore:</p>
+<pre><code>Coverage
+Gap
+</code></pre>
+<p>should become explicit architecture concepts.</p>
+<p>They need not dominate every Evaluation.</p>
+<p>They must be available where completeness matters.</p>
+<hr>
+<h1 id="121-architecture-refinement-7-truthcomparison-becomes-core-capability">121. Architecture Refinement #7 — TruthComparison Becomes Core Capability</h1>
+<p>The system increasingly needs comparisons such as:</p>
+<pre><code>Intent vs State
+
+Expected vs Observed
+
+Prior vs Current
+
+Claimed vs Observed Provenance
+
+Committed vs Materialized
+
+Source A vs Source B
+</code></pre>
+<p>Therefore:</p>
+<pre><code>TruthComparison
+</code></pre>
+<p>should become a core evaluation capability.</p>
+<p>It may produce:</p>
+<pre><code>Drift
+Coherence
+Gap
+domain result
+</code></pre>
+<p>This is a formal consolidation recommendation.</p>
+<hr>
+<h1 id="122-architecture-refinement-8-domain-result-must-separate-from-qualification">122. Architecture Refinement #8 — Domain Result Must Separate from Qualification</h1>
+<p>Ten crosswalks have now repeatedly produced:</p>
+<pre><code>qualified negative results
+</code></pre>
+<p>Examples:</p>
+<pre><code>DNS:
+  absent
+
+IAM:
+  authentication failed
+
+PKI:
+  validation rejected
+
+Authority:
+  deny
+
+State:
+  entry uncommitted
+
+Transaction:
+  rolled back
+
+Intent:
+  not converged
+
+Observation:
+  event not established
+
+Provenance:
+  Lineage incomplete
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Truth-State qualification and domain result must be represented separately.</strong></p>
+</blockquote>
+<p>This is a formal consolidation recommendation.</p>
+<hr>
+<h1 id="123-architecture-refinement-9-derived-truth-requires-grounding-analysis">123. Architecture Refinement #9 — Derived Truth Requires Grounding Analysis</h1>
+<p>Truth States may become inputs to later Truth States.</p>
+<p>Derived Evidence may become Evidence for later Claims.</p>
+<p>Therefore the architecture must support:</p>
+<pre><code>derivation Lineage
+cycle detection
+GroundingSet analysis
+dependency-aware independence
+inherited limitations
+</code></pre>
+<p>This is now a formal architectural requirement candidate.</p>
+<hr>
+<h1 id="124-architecture-refinement-10-the-architecture-is-a-graph-not-a-pipeline">124. Architecture Refinement #10 — The Architecture Is a Graph, Not a Pipeline</h1>
+<p>The first architecture was largely:</p>
+<pre><code>Claim
+  ↓
+Observation
+  ↓
+Qualification
+  ↓
+Coherence
+  ↓
+Truth State
+</code></pre>
+<p>After ten crosswalks, the generalized model is closer to:</p>
+<pre><code>SUBJECTS
+   │
+   ▼
+CLAIMS
+   │
+   ├───────────────┐
+   │               │
+   ▼               ▼
+EVIDENCE ◄────► REFERENCE BASES
+   │               │
+   ├──────┬────────┤
+   │      │        │
+   ▼      ▼        ▼
+SOURCE   ROLE   AUTHORITY
+   │      │        │
+   └──────┼────────┘
+          ▼
+     LINEAGE GRAPH
+          │
+   ┌──────┼──────────┐
+   │      │          │
+   ▼      ▼          ▼
+  Q       C          D
+   │      │          │
+   └──────┼──────────┘
+          ▼
+       PARADOX
+          │
+          ▼
+     DOMAIN RESULT
+          │
+          ▼
+      TRUTH STATE
+          │
+   ┌──────┼───────────┐
+   │      │           │
+   ▼      ▼           ▼
+COMPARE  MATERIALIZE  ACT
+   │      │           │
+   └──────┼───────────┘
+          ▼
+      NEW EVIDENCE
+          │
+          └──────────────► LOOP
+</code></pre>
+<p>where:</p>
+<pre><code>Q = Qualification
+C = Coherence
+D = Drift
+</code></pre>
+<p>The architecture is:</p>
+<pre><code>graph-structured
+recursive
+lifecycle-aware
+feedback-capable
+</code></pre>
+<p>not merely:</p>
+<pre><code>linear
+</code></pre>
+<p>This is perhaps the largest structural conclusion of the crosswalk series.</p>
+<hr>
+<h1 id="125-architecture-refinement-11-not-every-evaluation-uses-every-component">125. Architecture Refinement #11 — Not Every Evaluation Uses Every Component</h1>
+<p>The first architecture suggested one canonical flow.</p>
+<p>The completed crosswalk series demonstrates that different Truth Classes emphasize different mechanisms.</p>
+<p>Examples:</p>
+<pre><code>NTP:
+  Drift + Revalidation
+
+DNS:
+  scope + delegation + freshness
+
+IAM:
+  Subject + evidence + consumer context
+
+PKI:
+  path + Integrity + policy
+
+Authority:
+  relationship + policy decision
+
+State:
+  protocol + agreement + commitment
+
+Transaction:
+  ordered transition + durability
+
+Intent:
+  comparison + reconciliation
+
+Observation:
+  coverage + Evidence gaps + correlation
+
+Lineage:
+  transformation + graph qualification
+</code></pre>
+<p>Therefore the generalized Truth Service should be:</p>
+<pre><code>composable
+</code></pre>
+<p>rather than:</p>
+<pre><code>one mandatory fixed Evaluation pipeline
+</code></pre>
+<p>This is a formal consolidation recommendation.</p>
+<hr>
+<h1 id="126-architecture-refinement-12-relationship-truth-is-central">126. Architecture Refinement #12 — Relationship Truth Is Central</h1>
+<p>Across all ten Truth Classes, the apparent "truth value" often belongs to a relationship.</p>
+<p>Examples:</p>
+<pre><code>Temporal:
+  local ↔ reference
+
+Locational:
+  name ↔ target
+
+Identity:
+  Subject ↔ identity
+
+Integrity:
+  artifact ↔ asserted preserved form
+
+Authority:
+  actor ↔ operation ↔ Target
+
+State:
+  participant ↔ accepted history
+
+Transactional:
+  transition ↔ commitment
+
+Intent:
+  desired ↔ current
+
+Observational:
+  observer ↔ Evidence ↔ Subject
+
+Lineage:
+  Source ↔ transformation ↔ artifact
+</code></pre>
+<p>Therefore the architecture should treat:</p>
+<blockquote>
+<p><strong>relationships as evaluable truth-bearing structures</strong></p>
+</blockquote>
+<p>rather than attaching every Truth condition to one isolated object.</p>
+<p>This may be the canonical result of the ten-system study.</p>
+<hr>
+<h1 id="127-scoring-boundary">127. Scoring Boundary</h1>
+<p>The scoring boundary for this crosswalk is:</p>
+<pre><code>System:
+  Software Supply-Chain Provenance / Artifact Attestation
+
+Primary Truth Class:
+  Lineage Truth
+
+Evaluated Scope:
+  source material
+  dependency relationships
+  build / transformation
+  artifact identity
+  provenance statements
+  attestations
+  authority
+  integrity
+  verification
+  downstream consumption
+
+Deferred Scope:
+  specific package managers
+  specific signing products
+  vendor-specific CI/CD systems
+  proprietary build platforms
+  regulatory policy
+  organization-specific release governance
+</code></pre>
+<p>The crosswalk evaluates provenance structure rather than one product ecosystem.</p>
+<hr>
+<h1 id="128-preliminary-scoring-status">128. Preliminary Scoring Status</h1>
+<p>Current status:</p>
+<pre><code>provisional
+</code></pre>
+<p>Likely structural strengths include:</p>
+<ul>
+<li>Reference Basis Quality</li>
+<li>Lineage Visibility</li>
+<li>Evidence Quality</li>
+<li>Regime Awareness</li>
+<li>Drift Detection</li>
+<li>Failure Transparency</li>
+</ul>
+<p>Areas requiring careful interpretation include:</p>
+<ul>
+<li>Coherence Detection</li>
+<li>Paradox Handling</li>
+<li>Correction Discipline</li>
+<li>Freshness / Revalidation</li>
+</ul>
+<p>Scores should follow explicit evidence.</p>
+<hr>
+<h1 id="129-provisional-scorecard-template">129. Provisional Scorecard Template</h1>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score</th>
+<th>Delegation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference Basis Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Evidence Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+<td>Deferred</td>
+</tr>
+</tbody>
+</table>
+<p>No numeric values should be assigned without:</p>
+<pre><code>evidence
+rationale
+evaluation boundary
+</code></pre>
+<hr>
+<h1 id="130-rubric-consolidation-result">130. Rubric Consolidation Result</h1>
+<p>After ten crosswalks, two rubric changes have accumulated strong evidence.</p>
+<h2 id="change-1">Change 1</h2>
+<pre><code>Anchor Quality
+  ↓
+Reference Basis Quality
+</code></pre>
+<p>Rationale:</p>
+<p>Not all Truth systems derive operational state from an external Anchor.</p>
+<p>Some use:</p>
+<pre><code>policy
+protocol
+accepted history
+declaration
+observation contract
+</code></pre>
+<h2 id="change-2">Change 2</h2>
+<pre><code>Observation Quality
+  ↓
+Evidence Quality
+</code></pre>
+<p>Rationale:</p>
+<p>Operational Truth systems use:</p>
+<pre><code>observations
+assertions
+declarations
+attributes
+attestations
+status records
+transition records
+derived Evidence
+</code></pre>
+<p>The revised rubric should be versioned.</p>
+<p>Earlier crosswalks should then be reviewed under the updated terminology.</p>
+<hr>
+<h1 id="131-proposed-scoring-rubric-v02">131. Proposed Scoring Rubric v0.2</h1>
+<p>Recommended dimensions:</p>
+<ol>
+<li>Reference Basis Quality</li>
+<li>Lineage Visibility</li>
+<li>Evidence Quality</li>
+<li>Coherence Detection</li>
+<li>Drift Detection</li>
+<li>Paradox Handling</li>
+<li>Regime Awareness</li>
+<li>Freshness / Revalidation</li>
+<li>Correction Discipline</li>
+<li>Failure Transparency</li>
+</ol>
+<p>The structural profile remains:</p>
+<pre><code>R-L-E-C-D-P-G-F-X-T
+</code></pre>
+<p>where:</p>
+<pre><code>R = Reference Basis Quality
+L = Lineage Visibility
+E = Evidence Quality
+C = Coherence Detection
+D = Drift Detection
+P = Paradox Handling
+G = Regime Awareness
+F = Freshness / Revalidation
+X = Correction Discipline
+T = Failure Transparency
+</code></pre>
+<p>The rubric should not be formally replaced until the consolidation artifact is created.</p>
+<hr>
+<h1 id="132-ten-crosswalk-architecture-check">132. Ten-Crosswalk Architecture Check</h1>
+<p>The initial operational crosswalk series is now complete:</p>
+<pre><code>#1  NTP
+    Temporal Truth
+
+#2  DNS
+    Locational Truth
+
+#3  IAM
+    Identity Truth
+
+#4  PKI
+    Integrity Truth
+
+#5  Policy / Authorization
+    Authority Truth
+
+#6  Distributed Systems
+    State Truth
+
+#7  Transactional Systems
+    Transactional Truth
+
+#8  Desired-State Systems
+    Intent Truth
+
+#9  Telemetry
+    Observational Truth
+
+#10 Supply-Chain Provenance
+    Lineage Truth
+</code></pre>
+<p>Across the series, the following generalized structures have survived repeated challenge.</p>
+<hr>
+<h1 id="133-generalized-kernel-strong-evidence">133. Generalized Kernel — Strong Evidence</h1>
+<h2 id="claim">Claim</h2>
+<p>What is being asserted, requested, or evaluated.</p>
+<h2 id="truth-class">Truth Class</h2>
+<p>Which operational relationship is being examined.</p>
+<h2 id="subject-target">Subject / Target</h2>
+<p>What the Claim concerns and, where applicable, what is acted upon.</p>
+<h2 id="regime">Regime</h2>
+<p>The bounded operational context governing interpretation.</p>
+<h2 id="referencebasis">ReferenceBasis</h2>
+<p>The recognized basis against which qualification is evaluated.</p>
+<h2 id="evidenceitem">EvidenceItem</h2>
+<p>Typed input relevant to the Claim.</p>
+<h2 id="evidence-graph">Evidence Graph</h2>
+<p>Relationships among Evidence items.</p>
+<h2 id="entity-participant">Entity / Participant</h2>
+<p>Actors, Sources, Observers, Consumers, and systems participating in the relationship.</p>
+<h2 id="role">Role</h2>
+<p>Contextual function performed by an Entity.</p>
+<h2 id="authorityrelationship">AuthorityRelationship</h2>
+<p>Scoped, role-specific, Regime-qualified authority.</p>
+<h2 id="lineage-graph">Lineage Graph</h2>
+<p>Origin, delegation, derivation, transition, transformation, and dependency relationships.</p>
+<h2 id="qualification">Qualification</h2>
+<p>Determination of suitability for Evaluation.</p>
+<h2 id="acceptancerule">AcceptanceRule</h2>
+<p>The governing condition for operational acceptance.</p>
+<h2 id="coherence">Coherence</h2>
+<p>Domain-semantic structural compatibility.</p>
+<h2 id="drift">Drift</h2>
+<p>Displacement between relevant Truth-bearing states or structures.</p>
+<h2 id="paradox">Paradox</h2>
+<p>Qualified incompatibility that remains after scope, class, and Regime resolution.</p>
+<h2 id="domain-result">Domain Result</h2>
+<p>The domain-native outcome of Evaluation.</p>
+<h2 id="truth-state-qualification">Truth-State Qualification</h2>
+<p>The operational usability state of that result.</p>
+<h2 id="truthcomparison">TruthComparison</h2>
+<p>Evaluation of relationships among Truth States.</p>
+<h2 id="coverage">Coverage</h2>
+<p>The bounded extent over which Evidence supports conclusions.</p>
+<h2 id="gap">Gap</h2>
+<p>Missing expected Evidence, Lineage, transformation, context, or coverage.</p>
+<h2 id="materializedtruthstate">MaterializedTruthState</h2>
+<p>Operational materialization of accepted Truth.</p>
+<h2 id="correction-action-policy">Correction / Action Policy</h2>
+<p>Governed downstream response.</p>
+<h2 id="revalidation">Revalidation</h2>
+<p>Renewed challenge of prior accepted Truth.</p>
+<h2 id="immutable-history">Immutable History</h2>
+<p>Preservation of previous Evidence, Evaluations, Truth States, and corrections.</p>
+<hr>
+<h1 id="134-generalized-kernel-strong-principles">134. Generalized Kernel — Strong Principles</h1>
+<p>The ten crosswalks support the following principles strongly.</p>
+<pre><code>Evidence ≠ Truth State
+
+Observation ≠ Reality
+
+Identity ≠ Authority
+
+Authority ≠ Correctness
+
+Authority ≠ Capability
+
+Intent ≠ State
+
+Proposal ≠ Commitment
+
+Commitment ≠ Materialization
+
+Commitment ≠ Finality
+
+Decision ≠ Enforcement
+
+Recovery ≠ Revalidation
+
+Revalidation ≠ Reconciliation
+
+Negative Domain Result ≠ Evaluation Failure
+
+Evidence Absence ≠ Qualified Absence
+
+Derived Evidence ≠ Independent Evidence
+
+Integrity ≠ Operational Acceptance
+
+State Equality ≠ Lineage Equality
+
+Stable Value ≠ Stable Structure
+
+Multiple Values ≠ Paradox
+
+Difference ≠ Contradiction
+
+Correction ≠ Historical Erasure
+</code></pre>
+<p>These distinctions now have support across multiple operational systems.</p>
+<hr>
+<h1 id="135-generalized-kernel-graph-principles">135. Generalized Kernel — Graph Principles</h1>
+<p>The completed series also supports several graph-specific principles.</p>
+<h2 id="principle-1">Principle 1</h2>
+<p>Evidence relationships matter.</p>
+<h2 id="principle-2">Principle 2</h2>
+<p>Lineage can contain:</p>
+<pre><code>fan-in
+fan-out
+branching
+merging
+transformation
+dependency
+</code></pre>
+<h2 id="principle-3">Principle 3</h2>
+<p>Derived Evidence inherits upstream limitations.</p>
+<h2 id="principle-4">Principle 4</h2>
+<p>Common ancestry reduces independence.</p>
+<h2 id="principle-5">Principle 5</h2>
+<p>Graph cycles must not automatically create corroboration.</p>
+<h2 id="principle-6">Principle 6</h2>
+<p>Qualified nodes do not imply qualified relationships.</p>
+<h2 id="principle-7">Principle 7</h2>
+<p>Lineage changes may matter even when value does not.</p>
+<h2 id="principle-8">Principle 8</h2>
+<p>Forward Lineage can identify downstream Revalidation impact.</p>
+<h2 id="principle-9">Principle 9</h2>
+<p>Backward Lineage can explain current Truth.</p>
+<h2 id="principle-10">Principle 10</h2>
+<p>Lineage may be explanatory, qualifying, and generative.</p>
+<p>These principles should shape the architecture consolidation.</p>
+<hr>
+<h1 id="136-candidate-core-model-after-ten-crosswalks">136. Candidate Core Model After Ten Crosswalks</h1>
+<p>The consolidated conceptual model now appears closer to:</p>
+<pre><code>ENTITY / SUBJECT / TARGET
+          │
+          ▼
+        CLAIM
+          │
+          ▼
+     TRUTH CLASS
+          │
+          ▼
+    INTENDED USE
+          │
+          ▼
+        REGIME
+          │
+          ▼
+   REFERENCE BASIS
+          │
+          ▼
+AUTHORITY RELATIONSHIPS
+          │
+          ▼
+    EVIDENCE GRAPH
+          │
+          ▼
+     LINEAGE GRAPH
+          │
+   ┌──────┼─────────┐
+   │      │         │
+   ▼      ▼         ▼
+COVERAGE  GAPS   CONTEXT
+   │      │         │
+   └──────┼─────────┘
+          ▼
+    QUALIFICATION
+          │
+          ▼
+   ACCEPTANCE RULE
+          │
+   ┌──────┼────────┐
+   │      │        │
+   ▼      ▼        ▼
+COHERENCE DRIFT  PARADOX
+   │      │        │
+   └──────┼────────┘
+          ▼
+     DOMAIN RESULT
+          │
+          ▼
+     TRUTH STATE
+          │
+   ┌──────┼────────────┐
+   │      │            │
+   ▼      ▼            ▼
+COMPARE MATERIALIZE   ACT
+   │      │            │
+   └──────┼────────────┘
+          ▼
+    NEW EVIDENCE
+          │
+          ▼
+     REVALIDATION
+          │
+          └──────────────► LOOP
+</code></pre>
+<p>This is no longer best understood as a simple pipeline.</p>
+<p>It is a:</p>
+<pre><code>bounded operational Truth Graph
+</code></pre>
+<p>with composable Evaluation mechanisms.</p>
+<hr>
+<h1 id="137-the-observer-has-survived">137. The Observer Has Survived</h1>
+<p>One significant result deserves explicit recognition.</p>
+<p>The Observer first appeared subtly in:</p>
+<pre><code>NTP
+</code></pre>
+<p>became clearer in:</p>
+<pre><code>DNS
+</code></pre>
+<p>became operationally central in:</p>
+<pre><code>IAM / PKI
+</code></pre>
+<p>became participatory in:</p>
+<pre><code>Distributed State
+</code></pre>
+<p>became comparative in:</p>
+<pre><code>Intent Truth
+</code></pre>
+<p>and became unavoidable in:</p>
+<pre><code>Telemetry
+</code></pre>
+<p>Provenance adds the consumer / verifier perspective.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Observer position belongs in the generalized architecture.</strong></p>
+</blockquote>
+<p>It may be represented through:</p>
+<pre><code>Entity
+Role
+StateView
+Regime
+ContextEvidence
+</code></pre>
+<p>rather than one mandatory standalone Observer entity.</p>
+<p>That keeps the model thin while preserving the concept.</p>
+<hr>
+<h1 id="138-the-anchor-has-changed">138. The Anchor Has Changed</h1>
+<p>Crosswalk #1 began with:</p>
+<pre><code>Truth Anchor
+</code></pre>
+<p>After ten systems, the more general concept is:</p>
+<pre><code>ReferenceBasis
+</code></pre>
+<p>An external Anchor remains useful.</p>
+<p>But operational Truth may also rely on:</p>
+<pre><code>policy
+protocol
+accepted history
+authority relationship
+authorized declaration
+observation contract
+provenance requirement
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Anchor survives as a specialized ReferenceBasis, not as the universal shape of reference.</strong></p>
+</blockquote>
+<p>This is a successful example of the crosswalk series changing its own initial architecture.</p>
+<hr>
+<h1 id="139-observation-has-changed">139. Observation Has Changed</h1>
+<p>Crosswalk #1 began with:</p>
+<pre><code>Observation
+</code></pre>
+<p>After ten systems, the generalized concept is:</p>
+<pre><code>EvidenceItem
+</code></pre>
+<p>Observation survives as one subtype.</p>
+<p>Other Evidence forms include:</p>
+<pre><code>Assertion
+Declaration
+Attribute
+Attestation
+Transition Evidence
+Status Evidence
+Derived Evidence
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Observation survives, but Evidence becomes the generalized architecture boundary.</strong></p>
+</blockquote>
+<hr>
+<h1 id="140-coherence-has-changed">140. Coherence Has Changed</h1>
+<p>Crosswalk #1 could tempt a simple interpretation:</p>
+<pre><code>Sources agree
+  ↓
+Coherence
+</code></pre>
+<p>After ten systems:</p>
+<pre><code>Coherence
+  =
+domain-semantic structural compatibility
+among qualified Evidence and relationships
+under a declared Regime
+</code></pre>
+<p>Coherence may involve:</p>
+<pre><code>agreement
+compatibility
+correlation
+historical consistency
+relationship validity
+graph consistency
+reconstruction
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Coherence is structural, not merely numerical agreement.</strong></p>
+</blockquote>
+<hr>
+<h1 id="141-drift-has-changed">141. Drift Has Changed</h1>
+<p>Crosswalk #1 began with:</p>
+<pre><code>numeric temporal offset
+</code></pre>
+<p>After ten systems Drift includes:</p>
+<pre><code>value
+state
+source
+lineage
+semantic
+authority
+policy
+regime
+instrumentation
+coverage
+context
+transformation
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Drift is generalized displacement between truth-bearing relationships, not merely numeric error.</strong></p>
+</blockquote>
+<p>Numeric Drift remains useful where meaningful.</p>
+<p>It is not mandatory.</p>
+<hr>
+<h1 id="142-paradox-has-changed">142. Paradox Has Changed</h1>
+<p>Crosswalk #1 introduced unresolved Source disagreement.</p>
+<p>After ten systems, the architecture has learned:</p>
+<pre><code>multiplicity
+  ≠
+Paradox
+
+different Truth Classes
+  ≠
+Paradox
+
+different Regimes
+  ≠
+Paradox
+
+stale state
+  ≠
+Paradox
+
+local vs committed state
+  ≠
+Paradox
+
+missing Evidence
+  ≠
+Paradox
+</code></pre>
+<p>Paradox should be reserved for:</p>
+<blockquote>
+<p><strong>qualified structural incompatibility that remains after domain, Truth-Class, Lineage, temporal, and Regime distinctions have been applied.</strong></p>
+</blockquote>
+<p>This is a substantially stronger definition.</p>
+<hr>
+<h1 id="143-revalidation-has-survived-everything">143. Revalidation Has Survived Everything</h1>
+<p>NTP:</p>
+<pre><code>polling
+</code></pre>
+<p>DNS:</p>
+<pre><code>TTL / expiry
+</code></pre>
+<p>IAM:</p>
+<pre><code>authentication / credential lifecycle
+</code></pre>
+<p>PKI:</p>
+<pre><code>validity / revocation
+</code></pre>
+<p>Authority:</p>
+<pre><code>policy / attribute change
+</code></pre>
+<p>Distributed State:</p>
+<pre><code>epoch / leadership / membership change
+</code></pre>
+<p>Transactions:</p>
+<pre><code>settlement / recovery context
+</code></pre>
+<p>Intent:</p>
+<pre><code>recurring reconciliation
+</code></pre>
+<p>Telemetry:</p>
+<pre><code>new / delayed Evidence
+</code></pre>
+<p>Provenance:</p>
+<pre><code>new attestations / upstream changes
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Revalidation is a generalized core Truth-Service invariant.</strong></p>
+</blockquote>
+<p>Operational Truth ages, changes, or gains new Evidence.</p>
+<p>Acceptance is not permanent by default.</p>
+<hr>
+<h1 id="144-correction-has-changed">144. Correction Has Changed</h1>
+<p>Crosswalk #1 introduced:</p>
+<pre><code>clock adjustment
+</code></pre>
+<p>After ten systems Correction includes:</p>
+<pre><code>local adjustment
+
+cache replacement
+
+access restriction
+
+replica reconciliation
+
+compensating transaction
+
+state reconciliation
+
+new Evidence
+
+corrected attestation
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Correction is a governed response to changed Truth relationships, not one universal mutation operation.</strong></p>
+</blockquote>
+<p>The action taxonomy should remain extensible.</p>
+<hr>
+<h1 id="145-lineage-has-become-the-spine">145. Lineage Has Become the Spine</h1>
+<p>The crosswalk began with:</p>
+<pre><code>Lineage
+</code></pre>
+<p>as one dimension among several.</p>
+<p>After ten operational systems, Lineage connects:</p>
+<pre><code>ReferenceBasis
+Evidence
+Authority
+transformations
+Claims
+Truth States
+comparisons
+corrections
+materializations
+Revalidations
+</code></pre>
+<p>It can answer:</p>
+<pre><code>Where did this come from?
+
+What depends on it?
+
+What changed?
+
+Who transformed it?
+
+Which Truth States used it?
+
+Which later Claims derive from it?
+
+Which downstream states require Revalidation?
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Lineage is not merely one Truth Class. Lineage Truth is also the structural spine through which the other Truth Classes remain explainable.</strong></p>
+</blockquote>
+<p>This does not eliminate Lineage Truth as a Truth Class.</p>
+<p>It explains why it appears everywhere.</p>
+<hr>
+<h1 id="146-final-crosswalk-evaluation">146. Final Crosswalk Evaluation</h1>
+<p>Crosswalk #10 does not break the emerging architecture.</p>
+<p>Instead, it reveals which pieces were actually structural.</p>
+<p>The strongest result is:</p>
+<blockquote>
+<p><strong>Operational Truth is best represented not as a value with confidence, but as a qualified relationship embedded in Evidence, Regime, Lineage, and lifecycle.</strong></p>
+</blockquote>
+<p>A practical Truth Service therefore needs to preserve enough structure to answer:</p>
+<pre><code>What is the Claim?
+
+What kind of Truth is involved?
+
+What Evidence exists?
+
+What is missing?
+
+Where did the Evidence come from?
+
+What was transformed?
+
+Which Sources are actually independent?
+
+What Reference Basis governs qualification?
+
+Who had authority?
+
+Which Regime applies?
+
+What coheres?
+
+What Drifted?
+
+What remains incompatible?
+
+What domain result was established?
+
+How qualified is that result?
+
+What became materialized?
+
+What downstream action occurred?
+
+What must now be Revalidated?
+</code></pre>
+<p>Those questions form the generalized kernel.</p>
+<hr>
+<h1 id="147-formal-consolidation-trigger">147. Formal Consolidation Trigger</h1>
+<p>The ten operational crosswalks are now complete.</p>
+<p>The next architecture phase should be:</p>
+<pre><code>MODEL CONSOLIDATION
+</code></pre>
+<p>The consolidation pass should review:</p>
+<pre><code>architecture/
+  truth_service_architecture.md
+  truth_service_components.md
+  truth_service_data_model.md
+  truth_service_api.yaml
+  implementation_roadmap.md
+</code></pre>
+<p>and:</p>
+<pre><code>schemas/
+</code></pre>
+<p>against the completed crosswalk evidence.</p>
+<p>Recommended consolidation targets include:</p>
+<pre><code>Observation
+  → EvidenceItem generalization
+
+Anchor
+  → ReferenceBasis generalization
+
+AuthorityRelationship
+  → promotion
+
+Evidence Graph
+  → promotion
+
+Lineage Graph
+  → confirmation as foundational
+
+Coverage
+  → promotion
+
+Gap
+  → promotion
+
+TruthComparison
+  → promotion
+
+Domain Result
+  → separation from Truth-State qualification
+
+MaterializedTruthState
+  → composable core concept
+
+AcceptanceRule
+  → promotion
+
+observer / role semantics
+  → explicit review
+
+derived-Truth cycle detection
+  → architecture requirement
+
+inherited limitation propagation
+  → architecture requirement
+</code></pre>
+<p>The consolidation pass should simplify where possible.</p>
+<p>It should not merely add every new noun discovered during the crosswalk series.</p>
+<hr>
+<h1 id="148-promotion-test">148. Promotion Test</h1>
+<p>Every consolidation candidate should still pass the existing promotion rule.</p>
+<p>Promote when the mechanism:</p>
+<ol>
+<li>appears across multiple Truth Classes</li>
+<li>has independent structural meaning</li>
+<li>affects qualification or interpretation</li>
+<li>has lifecycle implications</li>
+<li>prevents information loss</li>
+<li>improves explanation or Revalidation</li>
+<li>cannot be represented cleanly by an existing generalized object</li>
+</ol>
+<p>Otherwise:</p>
+<pre><code>keep as relationship
+keep as attribute
+keep as domain extension
+keep as derived value
+</code></pre>
+<p>This should keep the generalized kernel thin.</p>
+<hr>
+<h1 id="149-canonical-lineage-truth-statement">149. Canonical Lineage Truth Statement</h1>
+<blockquote>
+<p><strong>Lineage Truth is the Regime-qualified account of origin, dependency, transformation, authority, derivation, and transition through which a Claim, Evidence item, artifact, or Truth State arrived at its present form.</strong></p>
+</blockquote>
+<p>Lineage Truth does not require every path to be complete.</p>
+<p>It requires the system to preserve:</p>
+<pre><code>what is known
+
+what is asserted
+
+what is observed
+
+what was transformed
+
+what depends on what
+
+what is missing
+
+what conflicts
+
+what was copied
+
+what was derived
+
+what remains independently grounded
+</code></pre>
+<p>without inventing missing relationships to make the graph appear complete.</p>
+<hr>
+<h1 id="150-canonical-crosswalk-finding">150. Canonical Crosswalk Finding</h1>
+<p>Crosswalk #10 produces the closing finding of the first operational truth study:</p>
+<blockquote>
+<p><strong>Truth without Lineage may still be usable, but the conditions under which it became usable become progressively harder to inspect, challenge, compare, reproduce, correct, or Revalidate.</strong></p>
+</blockquote>
+<p>The ten-system sequence began with:</p>
+<pre><code>What time is it?
+</code></pre>
+<p>and ended with:</p>
+<pre><code>How do you know where that answer came from?
+</code></pre>
+<p>That progression matters.</p>
+<p>NTP taught us that operational state can Drift.</p>
+<p>DNS taught us that authority has scope.</p>
+<p>IAM taught us that identity is relational.</p>
+<p>PKI taught us that integrity is not sufficient for operational trust.</p>
+<p>Policy taught us that authority belongs to a relationship.</p>
+<p>Distributed systems taught us that accepted state can be constituted through agreement.</p>
+<p>Transactional systems taught us that commitment and history matter.</p>
+<p>Desired-state systems taught us that Truth can differ from Truth without contradiction.</p>
+<p>Telemetry taught us that Observation is bounded and missing Evidence is not absence.</p>
+<p>Provenance teaches us that none of those answers should become detached from their origin, transformation, dependencies, or Evidence path.</p>
+<p>That gives Resonance Truth its first generalized operational model.</p>
+<hr>
+<h1 id="151-references">151. References</h1>
+<p>Primary reference family:</p>
+<pre><code>software supply-chain provenance
+artifact attestation
+build provenance
+dependency Lineage
+integrity verification
+</code></pre>
+<p>The bounded provenance model used by this crosswalk examines relationships among:</p>
+<pre><code>Source material
+dependencies
+build / transformation
+artifact
+attestation
+authority
+integrity
+distribution
+consumer
+</code></pre>
+<p>The exact implementation mechanisms vary among supply-chain systems.</p>
+<p>This crosswalk therefore focuses on structural provenance relationships rather than assuming one universal software-supply-chain protocol.</p>
+<p>RTT terminology, Lineage Truth, Evidence Graph, ReferenceBasis, AuthorityRelationship, Coverage, Gap, GroundingSet, Drift categories, cycle analysis, Revalidation propagation, and the proposed generalized Truth-Service kernel remain the analytical contribution of Resonance Truth.</p>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>Crosswalk #1 asked:</p>
+<pre><code>When?
+</code></pre>
+<p>Crosswalk #2 asked:</p>
+<pre><code>Where?
+</code></pre>
+<p>Crosswalk #3 asked:</p>
+<pre><code>Who?
+</code></pre>
+<p>Crosswalk #4 asked:</p>
+<pre><code>Is it intact?
+</code></pre>
+<p>Crosswalk #5 asked:</p>
+<pre><code>May it act?
+</code></pre>
+<p>Crosswalk #6 asked:</p>
+<pre><code>What state did the system accept?
+</code></pre>
+<p>Crosswalk #7 asked:</p>
+<pre><code>What became committed?
+</code></pre>
+<p>Crosswalk #8 asked:</p>
+<pre><code>What should the state be?
+</code></pre>
+<p>Crosswalk #9 asked:</p>
+<pre><code>What did we actually observe?
+</code></pre>
+<p>Crosswalk #10 asks:</p>
+<pre><code>Where did all of that come from?
+</code></pre>
+<p>And that final question folds backward through the entire series.</p>
+<pre><code>Which reference?
+
+Which Source?
+
+Which Observer?
+
+Which Evidence?
+
+Which authority?
+
+Which transformation?
+
+Which dependency?
+
+Which transition?
+
+Which Regime?
+
+Which history?
+
+Which gaps?
+
+Which derived Claims?
+
+Which apparently independent Sources
+actually share an ancestor?
+</code></pre>
+<p>The resulting architecture no longer looks like:</p>
+<pre><code>Claim
+  ↓
+true / false
+</code></pre>
+<p>It looks like:</p>
+<pre><code>Claim
+  ↓
+qualified relationships
+  ↓
+Evidence Graph
+  ↓
+Lineage
+  ↓
+Regime
+  ↓
+Coherence + Drift + Paradox
+  ↓
+Domain Result
+  ↓
+Truth-State Qualification
+  ↓
+Action / Materialization
+  ↓
+New Evidence
+  ↓
+Revalidation
+</code></pre>
+<p>And Lineage runs through the entire cycle.</p>
+<p><strong>NTP gave Truth a reference.</strong></p>
+<p><strong>DNS gave it scope.</strong></p>
+<p><strong>IAM gave it identity relationships.</strong></p>
+<p><strong>PKI gave it an evidence chain.</strong></p>
+<p><strong>Policy gave it bounded authority.</strong></p>
+<p><strong>Distributed systems gave it agreed state.</strong></p>
+<p><strong>Transactions gave it committed history.</strong></p>
+<p><strong>Desired-state systems gave it intention and feedback.</strong></p>
+<p><strong>Telemetry gave it an observer and an evidence boundary.</strong></p>
+<p><strong>Provenance gives the whole structure memory.</strong></p>
+<p>The first crosswalk cycle is complete.</p>
+<p><strong>Up next: consolidate what survived.</strong></p>
   </main>
 </body>
 </html>

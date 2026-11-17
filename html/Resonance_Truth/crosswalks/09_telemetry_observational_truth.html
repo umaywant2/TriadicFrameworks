@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Resonance_Truth/crosswalks/09_telemetry_observational_truth.md">
-  <title>09_telemetry_observational_truth</title>
+  <title>Crosswalk #9 — Telemetry and Observational Truth</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,3150 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="Resonance_Truth_crosswalks_09_telemetry_observational_truth_" src="https://github.com/user-attachments/assets/5e7f6185-f7a9-4996-807c-94558686aa0a" /></p>
+<h1 id="crosswalk-9-telemetry-and-observational-truth">Crosswalk #9 — Telemetry and Observational Truth</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Artifact:</strong> Operational Truth Crosswalk #9<br>
+<strong>Truth Class:</strong> Observational Truth<br>
+<strong>Reference System:</strong> Telemetry / Observability Systems<br>
+<strong>Primary Reference Case:</strong> OpenTelemetry<br>
+<strong>Primary RTT Dimensions:</strong> Resonance · Coherence · Lineage · Temp<br>
+<strong>Supporting RTT Dimensions:</strong> Drift · State · Regime · Paradox · Elec<br>
+<strong>Status:</strong> Research Crosswalk / Architecture Challenge<br>
+<strong>Context:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>This crosswalk examines telemetry and observability systems as the ninth operational reference system for the RTT Resonance Truth Service.</p>
+<p>The governing question is:</p>
+<blockquote>
+<p><strong>What was actually observed?</strong></p>
+</blockquote>
+<p>The first eight crosswalks examined:</p>
+<pre><code>NTP
+  ↓
+When?
+
+DNS
+  ↓
+Where?
+
+IAM
+  ↓
+Who?
+
+PKI
+  ↓
+Is it intact and qualified?
+
+Policy / Authorization
+  ↓
+May it act?
+
+Distributed Systems
+  ↓
+What state did the system accept?
+
+Transactional Systems
+  ↓
+What transition became committed?
+
+Desired-State Systems
+  ↓
+What should the state be?
+</code></pre>
+<p>Crosswalk #9 asks:</p>
+<pre><code>Telemetry
+  ↓
+Observational Truth
+  ↓
+What evidence did the system actually expose?
+</code></pre>
+<p>This question is deceptively difficult.</p>
+<p>An operating system or application may produce:</p>
+<ul>
+<li>logs</li>
+<li>metrics</li>
+<li>traces</li>
+<li>events</li>
+<li>measurements</li>
+<li>contextual information</li>
+</ul>
+<p>But none of those automatically represents:</p>
+<pre><code>complete reality
+</code></pre>
+<p>Telemetry instead provides bounded observations of system activity.</p>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Can the Truth Service preserve the difference among underlying state, observation, sampled evidence, transformed telemetry, correlated signals, and reconstructed interpretation without treating missing observation as evidence of absence?</strong></p>
+</blockquote>
+<hr>
+<h1 id="1-evidence-boundary">1. Evidence Boundary</h1>
+<p>The primary reference architecture for this crosswalk is:</p>
+<pre><code>OpenTelemetry
+</code></pre>
+<p>The OpenTelemetry signal model provides a useful bounded reference because it distinguishes several forms of telemetry.</p>
+<p>The primary signal categories relevant here are:</p>
+<pre><code>Traces
+Metrics
+Logs
+Baggage
+</code></pre>
+<p>The reference model also provides explicit context relationships.</p>
+<p>A trace represents the path of a request through an application.</p>
+<p>Spans represent units of work within that trace.</p>
+<p>Metrics represent runtime measurements.</p>
+<p>Logs represent recorded events.</p>
+<p>Baggage carries contextual information associated with signal processing.</p>
+<p>This crosswalk uses those mechanisms as the primary operational reference for Observational Truth.</p>
+<p>It does not attempt to model every observability platform or monitoring system.</p>
+<hr>
+<h1 id="2-evidence-discipline">2. Evidence Discipline</h1>
+<p>This crosswalk distinguishes:</p>
+<h2 id="telemetry-fact">Telemetry Fact</h2>
+<p>A mechanism explicitly represented by the bounded OpenTelemetry reference material.</p>
+<h2 id="rtt-interpretation">RTT Interpretation</h2>
+<p>A structural interpretation introduced through Resonance Truth.</p>
+<h2 id="candidate-generalization">Candidate Generalization</h2>
+<p>A mechanism potentially reusable outside Observational Truth.</p>
+<h2 id="hypothesis">Hypothesis</h2>
+<p>A proposed abstraction requiring additional crosswalk evidence.</p>
+<p>Example:</p>
+<pre><code>Telemetry Fact:
+  Traces preserve relationships among spans through
+  identifiers and parent relationships.
+
+RTT Interpretation:
+  Telemetry can preserve causal / operational Lineage.
+
+Candidate Generalization:
+  Evidence relationships may reconstruct activity across
+  multiple observations.
+
+Hypothesis:
+  Evidence Graph should become a first-class generalized
+  Truth-Service object.
+</code></pre>
+<p>The hypothesis remains provisional until the final crosswalk and formal consolidation pass.</p>
+<hr>
+<h1 id="3-why-telemetry-comes-ninth">3. Why Telemetry Comes Ninth</h1>
+<p>Crosswalk #8 produced an operational loop:</p>
+<pre><code>Intent
+  ↓
+State
+  ↓
+Observation
+  ↓
+Comparison
+  ↓
+Drift
+  ↓
+Correction
+  ↓
+State
+  ↓
+Observation
+</code></pre>
+<p>That loop depends heavily on one assumption:</p>
+<blockquote>
+<p><strong>The system can observe enough current state to evaluate what is happening.</strong></p>
+</blockquote>
+<p>Crosswalk #9 challenges that assumption.</p>
+<p>Telemetry may be:</p>
+<ul>
+<li>partial</li>
+<li>delayed</li>
+<li>sampled</li>
+<li>aggregated</li>
+<li>transformed</li>
+<li>missing</li>
+<li>duplicated</li>
+<li>context-dependent</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>observed state
+  ≠
+complete state
+</code></pre>
+<p>and:</p>
+<pre><code>no observation
+  ≠
+evidence of absence
+</code></pre>
+<p>This is the core challenge of Observational Truth.</p>
+<hr>
+<h1 id="4-observational-truth">4. Observational Truth</h1>
+<p>The primary Truth Class is:</p>
+<pre><code>Observational Truth
+</code></pre>
+<p>Its operational question is:</p>
+<blockquote>
+<p><strong>What was actually observed?</strong></p>
+</blockquote>
+<p>A more precise formulation is:</p>
+<blockquote>
+<p><strong>Within this observation Regime, which signals were produced, collected, preserved, and correlated strongly enough to support a bounded account of system activity?</strong></p>
+</blockquote>
+<p>Observational Truth therefore concerns:</p>
+<ul>
+<li>observer</li>
+<li>observed subject</li>
+<li>signal</li>
+<li>measurement</li>
+<li>event</li>
+<li>timestamp</li>
+<li>context</li>
+<li>collection path</li>
+<li>correlation</li>
+<li>aggregation</li>
+<li>transformation</li>
+<li>completeness</li>
+<li>sampling</li>
+<li>delay</li>
+<li>retention</li>
+</ul>
+<p>The central architectural distinction is:</p>
+<pre><code>Observation
+  ≠
+Complete Reality
+</code></pre>
+<hr>
+<h1 id="5-telemetry-on-its-own-terms">5. Telemetry on Its Own Terms</h1>
+<p>OpenTelemetry describes telemetry signals as outputs that describe underlying activity in operating systems and applications.</p>
+<p>Its supported signal model includes:</p>
+<pre><code>Traces
+
+Metrics
+
+Logs
+
+Baggage
+</code></pre>
+<p>A simplified telemetry path is:</p>
+<pre><code>System Activity
+      ↓
+Instrumentation
+      ↓
+   Signal
+      ↓
+Collection / Processing
+      ↓
+Export
+      ↓
+Storage / Backend
+      ↓
+Correlation
+      ↓
+Human / Machine Interpretation
+</code></pre>
+<p>Every stage may affect what evidence remains available.</p>
+<p>This immediately reinforces:</p>
+<pre><code>Evidence
+  +
+Lineage
+  +
+Context
+</code></pre>
+<p>as core Truth-Service concepts.</p>
+<hr>
+<h1 id="6-initial-structural-crosswalk">6. Initial Structural Crosswalk</h1>
+<table>
+<thead>
+<tr>
+<th>Telemetry Concept</th>
+<th>RTT Truth-Service Interpretation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instrumented system</td>
+<td>Truth Subject / observed system</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Instrumentation</td>
+<td>Observer / Evidence producer</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Telemetry signal</td>
+<td>EvidenceItem</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Log</td>
+<td>Event Evidence</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Metric</td>
+<td>Measurement / Aggregated Evidence</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Trace</td>
+<td>Correlated Transition / Causal Evidence</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Span</td>
+<td>Bounded activity Evidence</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Trace ID</td>
+<td>Correlation identity</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Parent span relationship</td>
+<td>Evidence Lineage</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>Temporal Evidence metadata</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>Context Evidence</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Baggage</td>
+<td>Propagated Context Evidence</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Collector / processor</td>
+<td>Evidence intermediary / transformer</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Aggregation</td>
+<td>Evidence transformation</td>
+<td>Strong Candidate General</td>
+</tr>
+<tr>
+<td>Missing signal</td>
+<td>Evidence gap</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Correlation</td>
+<td>Coherence reconstruction</td>
+<td>Candidate Core</td>
+</tr>
+<tr>
+<td>Sampling</td>
+<td>Observation-boundary mechanism</td>
+<td>Candidate General</td>
+</tr>
+<tr>
+<td>Export / transport</td>
+<td>Evidence propagation</td>
+<td>Candidate General</td>
+</tr>
+</tbody>
+</table>
+<p>Telemetry provides perhaps the clearest evidence yet that:</p>
+<pre><code>EvidenceItem
+</code></pre>
+<p>must be broader than:</p>
+<pre><code>Observation
+</code></pre>
+<p>while still preserving Observation as a fundamental subtype.</p>
+<hr>
+<h1 id="7-instrumented-system-observed-subject">7. Instrumented System → Observed Subject</h1>
+<p>Telemetry describes activity produced by an underlying system.</p>
+<p>RTT interpretation:</p>
+<pre><code>Observed Subject
+</code></pre>
+<p>The subject may be:</p>
+<ul>
+<li>process</li>
+<li>service</li>
+<li>host</li>
+<li>application</li>
+<li>transaction</li>
+<li>request</li>
+<li>device</li>
+<li>distributed operation</li>
+</ul>
+<p>This strongly supports the generalized:</p>
+<pre><code>Subject
+</code></pre>
+<p>abstraction.</p>
+<p>However, unlike IAM:</p>
+<pre><code>Subject
+</code></pre>
+<p>here is not necessarily an identity-bearing person or account.</p>
+<p>It is simply:</p>
+<blockquote>
+<p><strong>the entity about which evidence is being gathered.</strong></p>
+</blockquote>
+<p>This confirms that Subject must remain broad.</p>
+<hr>
+<h1 id="8-instrumentation-observer-evidence-producer">8. Instrumentation → Observer / Evidence Producer</h1>
+<p>Instrumentation produces telemetry from system activity.</p>
+<p>RTT interpretation:</p>
+<pre><code>Observer
+  +
+Evidence Producer
+</code></pre>
+<p>This strengthens the Observer candidate.</p>
+<p>But telemetry makes one fact particularly important:</p>
+<blockquote>
+<p><strong>The observer is part of the evidence-generation path.</strong></p>
+</blockquote>
+<p>The Truth Service therefore may need to know:</p>
+<ul>
+<li>who or what observed</li>
+<li>how observation occurred</li>
+<li>where observation occurred</li>
+<li>what was instrumented</li>
+<li>which transformations occurred afterward</li>
+</ul>
+<p>Observer is not merely a consumer-context field.</p>
+<p>It can materially affect evidence.</p>
+<hr>
+<h1 id="9-observer-influence">9. Observer Influence</h1>
+<p>Telemetry exists because something was instrumented to produce it.</p>
+<p>Therefore:</p>
+<pre><code>Evidence
+  =
+underlying activity
+  mediated through
+instrumentation
+</code></pre>
+<p>This does not mean telemetry is unreliable by definition.</p>
+<p>It means:</p>
+<blockquote>
+<p><strong>Observation has a method and a boundary.</strong></p>
+</blockquote>
+<p>The Truth Service should preserve enough information to distinguish:</p>
+<pre><code>system activity
+</code></pre>
+<p>from:</p>
+<pre><code>evidence-generation mechanism
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE principle
+</code></pre>
+<hr>
+<h1 id="10-telemetry-signal-evidenceitem">10. Telemetry Signal → EvidenceItem</h1>
+<p>Crosswalks #3 through #8 progressively broadened:</p>
+<pre><code>Observation
+  ↓
+EvidenceItem
+</code></pre>
+<p>Telemetry now strongly validates that generalization.</p>
+<p>Possible EvidenceItem types include:</p>
+<pre><code>Observation
+Log
+Metric
+Trace
+Span
+Assertion
+Attribute
+Status Evidence
+Declaration
+Transition Evidence
+</code></pre>
+<p>Not every Evidence type should become a separate core entity.</p>
+<p>The important abstraction is:</p>
+<blockquote>
+<p><strong>Evidence has type, Source, Subject, context, Lineage, time, and transformation history.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — effectively confirmed for consolidation
+</code></pre>
+<hr>
+<h1 id="11-log-event-evidence">11. Log → Event Evidence</h1>
+<p>A log records an event.</p>
+<p>RTT interpretation:</p>
+<pre><code>Event Evidence
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Event
+  ↓
+Log Record
+  ↓
+Collection
+  ↓
+Evidence
+</code></pre>
+<p>The log is not necessarily:</p>
+<pre><code>the event itself
+</code></pre>
+<p>It is:</p>
+<pre><code>a recorded representation of the event
+</code></pre>
+<p>This distinction mirrors:</p>
+<pre><code>certificate
+  ≠
+identity itself
+</code></pre>
+<p>and:</p>
+<pre><code>desired declaration
+  ≠
+current state
+</code></pre>
+<hr>
+<h1 id="12-event-log">12. Event ≠ Log</h1>
+<p>A system event may occur without producing a usable log.</p>
+<p>A log entry may also contain:</p>
+<ul>
+<li>derived information</li>
+<li>formatted information</li>
+<li>partial information</li>
+<li>contextual attributes</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>event occurred
+  ≠
+log exists
+</code></pre>
+<p>and:</p>
+<pre><code>log absent
+  ≠
+event did not occur
+</code></pre>
+<p>This distinction is foundational to Observational Truth.</p>
+<hr>
+<h1 id="13-metric-measurement-evidence">13. Metric → Measurement Evidence</h1>
+<p>OpenTelemetry describes metrics as measurements captured at runtime.</p>
+<p>RTT interpretation:</p>
+<pre><code>Measurement Evidence
+</code></pre>
+<p>Metrics may represent:</p>
+<ul>
+<li>counts</li>
+<li>durations</li>
+<li>utilization</li>
+<li>rates</li>
+<li>distributions</li>
+<li>other numeric measurements</li>
+</ul>
+<p>These provide operational evidence about system behavior.</p>
+<p>However:</p>
+<pre><code>metric value
+  ≠
+complete system state
+</code></pre>
+<p>A metric summarizes one dimension.</p>
+<p>This strongly reinforces Truth-Class and Evidence dimensionality.</p>
+<hr>
+<h1 id="14-measurement-complete-state">14. Measurement ≠ Complete State</h1>
+<p>Suppose:</p>
+<pre><code>CPU usage:
+  normal
+</code></pre>
+<p>That does not establish:</p>
+<pre><code>service healthy
+</code></pre>
+<p>Likewise:</p>
+<pre><code>request rate:
+  normal
+</code></pre>
+<p>does not establish:</p>
+<pre><code>requests successful
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>A valid measurement can be insufficient for a broader Claim without being incorrect.</strong></p>
+</blockquote>
+<p>This is another case of:</p>
+<pre><code>qualified Evidence
+  ≠
+sufficient Evidence
+</code></pre>
+<p>The Qualification model should preserve both.</p>
+<hr>
+<h1 id="15-trace-correlated-activity-evidence">15. Trace → Correlated Activity Evidence</h1>
+<p>OpenTelemetry describes traces as representing the path a request takes through an application.</p>
+<p>A trace contains spans representing units of work.</p>
+<p>RTT interpretation:</p>
+<pre><code>Correlated Activity Evidence
+</code></pre>
+<p>A trace therefore provides more than individual observations.</p>
+<p>It provides:</p>
+<pre><code>relationship
+ordering
+parentage
+context
+</code></pre>
+<p>This strongly supports:</p>
+<pre><code>Evidence Graph
+</code></pre>
+<p>and:</p>
+<pre><code>Transition Lineage
+</code></pre>
+<hr>
+<h1 id="16-span-bounded-activity-evidence">16. Span → Bounded Activity Evidence</h1>
+<p>A span represents a unit of work.</p>
+<p>RTT interpretation:</p>
+<pre><code>Bounded Activity Evidence
+</code></pre>
+<p>A span may preserve:</p>
+<ul>
+<li>identity</li>
+<li>start time</li>
+<li>end time</li>
+<li>attributes</li>
+<li>events</li>
+<li>parent relationship</li>
+</ul>
+<p>The important generalized lesson is:</p>
+<blockquote>
+<p><strong>Evidence may describe bounded activity rather than static state.</strong></p>
+</blockquote>
+<p>This strengthens the Transactional Truth finding that Evidence can describe:</p>
+<pre><code>change
+transition
+activity
+</code></pre>
+<p>not merely:</p>
+<pre><code>value
+</code></pre>
+<hr>
+<h1 id="17-trace-id-correlation-identity">17. Trace ID → Correlation Identity</h1>
+<p>A trace ID relates spans belonging to a common trace.</p>
+<p>RTT interpretation:</p>
+<pre><code>Correlation Identity
+</code></pre>
+<p>This introduces an extremely useful generalized candidate.</p>
+<p>Two Evidence Items may be considered related because they share:</p>
+<pre><code>correlation identity
+</code></pre>
+<p>Potential generalized uses include:</p>
+<ul>
+<li>transaction ID</li>
+<li>request ID</li>
+<li>trace ID</li>
+<li>evaluation ID</li>
+<li>workflow ID</li>
+<li>incident ID</li>
+</ul>
+<p>Candidate abstraction:</p>
+<pre><code>CorrelationReference
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<p>This may be more useful as metadata / relationship than a new core entity.</p>
+<hr>
+<h1 id="18-parent-span-evidence-lineage">18. Parent Span → Evidence Lineage</h1>
+<p>Trace parent/child relationships preserve operational hierarchy.</p>
+<p>RTT interpretation:</p>
+<pre><code>Evidence Lineage
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Request
+  ↓
+Span A
+  ├── Span B
+  └── Span C
+</code></pre>
+<p>This is direct evidence that:</p>
+<pre><code>Evidence Graph
+</code></pre>
+<p>is not merely an RTT theoretical convenience.</p>
+<p>Operational telemetry already preserves graph-like evidence relationships.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strongly strengthened
+</code></pre>
+<hr>
+<h1 id="19-lineage-as-causal-structure">19. Lineage as Causal Structure</h1>
+<p>Previous crosswalks established:</p>
+<pre><code>Provenance Lineage
+Authority Lineage
+Transition Lineage
+</code></pre>
+<p>Telemetry adds:</p>
+<pre><code>Causal / Activity Lineage
+</code></pre>
+<p>The generalized Lineage model therefore includes at least:</p>
+<pre><code>origin
+delegation
+transformation
+transition
+causation / parentage
+</code></pre>
+<p>This strongly validates graph-based Lineage.</p>
+<p>A linear chain is insufficient as a universal model.</p>
+<hr>
+<h1 id="20-timestamp-temporal-evidence-metadata">20. Timestamp → Temporal Evidence Metadata</h1>
+<p>Telemetry signals commonly contain timestamps or temporal boundaries.</p>
+<p>RTT interpretation:</p>
+<pre><code>Temporal Evidence Metadata
+</code></pre>
+<p>This allows the Truth Service to ask:</p>
+<pre><code>When was the event observed?
+
+When did the activity begin?
+
+When did it end?
+
+When was the Evidence collected?
+
+When was it processed?
+</code></pre>
+<p>These moments may differ.</p>
+<p>This reinforces the data-model requirement to separate temporal roles.</p>
+<hr>
+<h1 id="21-event-time-vs-collection-time">21. Event Time vs Collection Time</h1>
+<p>Telemetry particularly exposes:</p>
+<pre><code>event time
+  ≠
+collection time
+  ≠
+processing time
+  ≠
+evaluation time
+</code></pre>
+<p>Delayed telemetry may describe:</p>
+<pre><code>a real event
+</code></pre>
+<p>accurately,</p>
+<p>while arriving too late for:</p>
+<pre><code>immediate operational decision
+</code></pre>
+<p>Therefore:</p>
+<pre><code>Evidence accuracy
+  ≠
+Evidence freshness
+</code></pre>
+<p>Again, dimensions remain separate.</p>
+<hr>
+<h1 id="22-delayed-evidence">22. Delayed Evidence</h1>
+<p>Suppose:</p>
+<pre><code>Event E occurs at T1
+</code></pre>
+<p>Telemetry arrives at:</p>
+<pre><code>T2
+</code></pre>
+<p>Evaluation occurs at:</p>
+<pre><code>T3
+</code></pre>
+<p>The evidence may be:</p>
+<pre><code>valid
+</code></pre>
+<p>but:</p>
+<pre><code>stale for real-time use
+</code></pre>
+<p>The system therefore needs to preserve:</p>
+<pre><code>event time
+receipt time
+evaluation time
+</code></pre>
+<p>This strongly validates existing Observation timing fields.</p>
+<hr>
+<h1 id="23-attributes-context-evidence">23. Attributes → Context Evidence</h1>
+<p>Telemetry attributes provide context associated with signals.</p>
+<p>RTT interpretation:</p>
+<pre><code>Context Evidence
+</code></pre>
+<p>This directly reinforces Crosswalk #5's distinction:</p>
+<pre><code>Regime
+  ≠
+Dynamic Context
+</code></pre>
+<p>The signal belongs to:</p>
+<pre><code>an operational context
+</code></pre>
+<p>but the context itself may be Evidence rather than part of static governing rules.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE — strengthened
+</code></pre>
+<hr>
+<h1 id="24-context-can-change-interpretation">24. Context Can Change Interpretation</h1>
+<p>A log message:</p>
+<pre><code>"timeout"
+</code></pre>
+<p>without context may be ambiguous.</p>
+<p>With context:</p>
+<pre><code>service:
+  payments
+
+operation:
+  charge
+
+environment:
+  production
+</code></pre>
+<p>the operational interpretation changes.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Evidence meaning depends partly on context while remaining distinct from Regime.</strong></p>
+</blockquote>
+<p>This supports:</p>
+<pre><code>ContextEvidence
+</code></pre>
+<p>as a generalized model.</p>
+<hr>
+<h1 id="25-baggage-propagated-context">25. Baggage → Propagated Context</h1>
+<p>OpenTelemetry baggage carries contextual information between signals.</p>
+<p>RTT interpretation:</p>
+<pre><code>Propagated Context Evidence
+</code></pre>
+<p>This is structurally interesting because context can travel across system boundaries.</p>
+<p>Potential generalized lesson:</p>
+<blockquote>
+<p><strong>Context itself has Lineage.</strong></p>
+</blockquote>
+<p>If context is propagated, changed, or lost, downstream Evidence may become harder to interpret.</p>
+<p>Potential Drift:</p>
+<pre><code>Context Drift
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="26-context-lineage">26. Context Lineage</h1>
+<p>Suppose:</p>
+<pre><code>Request
+  ↓
+Service A
+  ↓
+Service B
+  ↓
+Service C
+</code></pre>
+<p>Context propagated through the path may participate in interpreting Evidence at each stage.</p>
+<p>Therefore Lineage may need to preserve:</p>
+<pre><code>Evidence Lineage
+</code></pre>
+<p>and:</p>
+<pre><code>Context Lineage
+</code></pre>
+<p>These may share graph infrastructure.</p>
+<p>No new core graph type is required yet.</p>
+<hr>
+<h1 id="27-collector-evidence-intermediary">27. Collector → Evidence Intermediary</h1>
+<p>Telemetry may pass through collection and processing infrastructure.</p>
+<p>RTT interpretation:</p>
+<pre><code>Evidence Intermediary
+</code></pre>
+<p>This reinforces the Source-role challenge from DNS, IAM, PKI, and distributed systems.</p>
+<p>The entity:</p>
+<pre><code>delivering Evidence
+</code></pre>
+<p>may not be:</p>
+<pre><code>the entity that originally produced Evidence
+</code></pre>
+<p>Potential roles:</p>
+<pre><code>producer
+collector
+processor
+exporter
+storage system
+consumer
+</code></pre>
+<p>The generalized Role abstraction continues to strengthen.</p>
+<hr>
+<h1 id="28-evidence-producer-evidence-carrier">28. Evidence Producer ≠ Evidence Carrier</h1>
+<p>Crosswalk #2 exposed:</p>
+<pre><code>authoritative Source
+  ≠
+resolver
+</code></pre>
+<p>Telemetry contributes:</p>
+<pre><code>Evidence producer
+  ≠
+collector
+  ≠
+backend
+  ≠
+consumer
+</code></pre>
+<p>Therefore one generic:</p>
+<pre><code>source_id
+</code></pre>
+<p>may eventually be insufficient without Lineage and Role relationships.</p>
+<p>The current Lineage model already helps.</p>
+<p>Role semantics should be strengthened during consolidation.</p>
+<hr>
+<h1 id="29-processing-evidence-transformation">29. Processing → Evidence Transformation</h1>
+<p>Telemetry processors may transform evidence before export or storage.</p>
+<p>RTT interpretation:</p>
+<pre><code>Evidence Transformation
+</code></pre>
+<p>Potential transformations may include:</p>
+<ul>
+<li>aggregation</li>
+<li>enrichment</li>
+<li>filtering</li>
+<li>redaction</li>
+<li>conversion</li>
+<li>batching</li>
+</ul>
+<p>The important generalized principle is:</p>
+<blockquote>
+<p><strong>Evidence may remain valid while changing representation.</strong></p>
+</blockquote>
+<p>Therefore Lineage should preserve:</p>
+<pre><code>transformation
+</code></pre>
+<p>where meaningful.</p>
+<p>This strongly validates existing:</p>
+<pre><code>LineageEdge.transformation
+</code></pre>
+<p>semantics.</p>
+<hr>
+<h1 id="30-transformation-corruption">30. Transformation ≠ Corruption</h1>
+<p>A transformed telemetry signal is not automatically:</p>
+<pre><code>corrupted Evidence
+</code></pre>
+<p>Transformation may be intentional and governed.</p>
+<p>The Truth Service needs to distinguish:</p>
+<pre><code>legitimate transformation
+</code></pre>
+<p>from:</p>
+<pre><code>integrity failure
+</code></pre>
+<p>and:</p>
+<pre><code>semantic Drift
+</code></pre>
+<p>This will become especially important in Crosswalk #10.</p>
+<hr>
+<h1 id="31-aggregation-derived-evidence">31. Aggregation → Derived Evidence</h1>
+<p>Metrics and processed telemetry may represent aggregates rather than individual events.</p>
+<p>RTT interpretation:</p>
+<pre><code>Derived Evidence
+</code></pre>
+<p>Conceptually:</p>
+<pre><code>Raw Evidence[]
+     ↓
+Aggregation
+     ↓
+Derived Evidence
+</code></pre>
+<p>This creates another recursive pattern:</p>
+<pre><code>Evidence
+  derived from
+Evidence
+</code></pre>
+<p>The architecture must preserve the derivation path.</p>
+<hr>
+<h1 id="32-derived-evidence-is-not-independent-evidence">32. Derived Evidence Is Not Independent Evidence</h1>
+<p>This may be one of the most important Observational Truth findings.</p>
+<p>Suppose:</p>
+<pre><code>Raw Events:
+  E1
+  E2
+  E3
+</code></pre>
+<p>Metric:</p>
+<pre><code>M = aggregate(E1, E2, E3)
+</code></pre>
+<p>Then:</p>
+<pre><code>E1
+E2
+E3
+M
+</code></pre>
+<p>do not represent:</p>
+<pre><code>four independent Sources of corroboration
+</code></pre>
+<p>Metric M depends on:</p>
+<pre><code>E1
+E2
+E3
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Derived Evidence must not be counted as independent corroboration of its own inputs.</strong></p>
+</blockquote>
+<p>This directly connects to the Crosswalk #8 circular-support risk.</p>
+<hr>
+<h1 id="33-evidence-dependency">33. Evidence Dependency</h1>
+<p>Candidate generalized relationship:</p>
+<pre><code>depends_on
+</code></pre>
+<p>Example:</p>
+<pre><code>Metric M
+  depends_on
+  E1
+  E2
+  E3
+</code></pre>
+<p>A Coherence Engine must understand these dependencies before treating Evidence as independent.</p>
+<p>This strongly validates:</p>
+<pre><code>Evidence Graph
+</code></pre>
+<p>and:</p>
+<pre><code>independence metadata.
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="34-sampling-observation-boundary">34. Sampling → Observation Boundary</h1>
+<p>Telemetry systems may observe only a subset of possible activity.</p>
+<p>RTT interpretation:</p>
+<pre><code>Observation Boundary
+</code></pre>
+<p>Sampling means:</p>
+<blockquote>
+<p><strong>The evidence set is intentionally incomplete by design.</strong></p>
+</blockquote>
+<p>This does not automatically make the Evidence invalid.</p>
+<p>It changes:</p>
+<pre><code>what conclusions are justified
+</code></pre>
+<p>This is extremely important for the Truth Service.</p>
+<hr>
+<h1 id="35-sampled-evidence-complete-evidence">35. Sampled Evidence ≠ Complete Evidence</h1>
+<p>A sampled trace set may accurately represent:</p>
+<pre><code>traces that were collected
+</code></pre>
+<p>while not representing:</p>
+<pre><code>every trace that occurred
+</code></pre>
+<p>Therefore:</p>
+<pre><code>observed X
+  =
+evidence X occurred
+</code></pre>
+<p>but:</p>
+<pre><code>did not observe Y
+  ≠
+evidence Y did not occur
+</code></pre>
+<p>unless the observation Regime supports that inference.</p>
+<p>This distinction should become canonical.</p>
+<hr>
+<h1 id="36-observation-completeness">36. Observation Completeness</h1>
+<p>Telemetry introduces the candidate property:</p>
+<pre><code>Observation Completeness
+</code></pre>
+<p>Potential classifications:</p>
+<pre><code>complete
+partial
+sampled
+unknown
+</code></pre>
+<p>However, true completeness may often be difficult to establish.</p>
+<p>A safer abstraction may be:</p>
+<pre><code>ObservationCoverage
+</code></pre>
+<p>which describes known evidence-collection boundaries.</p>
+<p>Potential fields:</p>
+<pre><code>coverage_type
+sampling_policy
+known_gaps
+expected_sources
+observed_sources
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE concept
+</code></pre>
+<p>Exact schema deferred.</p>
+<hr>
+<h1 id="37-missing-evidence-evidence-gap">37. Missing Evidence → Evidence Gap</h1>
+<p>This may be Crosswalk #9's strongest contribution.</p>
+<p>A telemetry system may lack Evidence because:</p>
+<ul>
+<li>event did not occur</li>
+<li>instrumentation absent</li>
+<li>signal sampled out</li>
+<li>collector failed</li>
+<li>transport failed</li>
+<li>retention expired</li>
+<li>context was lost</li>
+<li>query scope excluded the signal</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>missing Evidence
+  ≠
+evidence of absence
+</code></pre>
+<p>RTT interpretation:</p>
+<pre><code>Evidence Gap
+</code></pre>
+<p>This deserves first-class representation.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="38-evidence-gap-vs-qualified-absence">38. Evidence Gap vs Qualified Absence</h1>
+<p>Earlier crosswalks established:</p>
+<pre><code>qualified absence
+  ≠
+indeterminate
+</code></pre>
+<p>Telemetry adds:</p>
+<pre><code>Evidence Gap
+  ≠
+qualified absence
+</code></pre>
+<p>Therefore we now have at least:</p>
+<h2 id="present">Present</h2>
+<p>Qualified Evidence supports presence.</p>
+<h2 id="absent">Absent</h2>
+<p>Qualified Evidence supports absence.</p>
+<h2 id="unknown">Unknown</h2>
+<p>Available Evidence is insufficient.</p>
+<h2 id="gap">Gap</h2>
+<p>Expected or potentially relevant Evidence is missing.</p>
+<p>These are distinct operational conditions.</p>
+<hr>
+<h1 id="39-absence-requires-an-observation-regime">39. Absence Requires an Observation Regime</h1>
+<p>To infer:</p>
+<pre><code>Event E did not occur
+</code></pre>
+<p>from:</p>
+<pre><code>no Evidence for E
+</code></pre>
+<p>the system must know that the observation mechanism would reliably have produced Evidence had E occurred.</p>
+<p>Conceptually:</p>
+<pre><code>Expected Observation Contract
+      +
+No Evidence
+      ↓
+Potential Qualified Absence
+</code></pre>
+<p>Without that contract:</p>
+<pre><code>No Evidence
+  ↓
+Unknown / Gap
+</code></pre>
+<p>This is a major Truth-Service principle.</p>
+<hr>
+<h1 id="40-observation-contract-candidate">40. Observation Contract Candidate</h1>
+<p>Potential generalized concept:</p>
+<pre><code>ObservationContract
+</code></pre>
+<p>Definition:</p>
+<blockquote>
+<p><strong>A declared relationship describing what Evidence should be produced, under which conditions, if a particular observable event or state occurs.</strong></p>
+</blockquote>
+<p>Possible fields:</p>
+<pre><code>observed_subject
+signal_type
+instrumentation
+coverage
+expected_conditions
+sampling_policy
+retention
+freshness
+failure_behavior
+</code></pre>
+<p>This may be too domain-specific for a core entity.</p>
+<p>It may be represented through:</p>
+<pre><code>Regime
+Evidence Source
+ReferenceBasis
+Context
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="41-telemetry-coherence">41. Telemetry Coherence</h1>
+<p>What does Coherence mean for Observational Truth?</p>
+<p>It may involve compatibility among:</p>
+<ul>
+<li>logs</li>
+<li>metrics</li>
+<li>traces</li>
+<li>timestamps</li>
+<li>context</li>
+<li>resource identity</li>
+<li>transaction identity</li>
+<li>State Truth</li>
+<li>expected behavior</li>
+</ul>
+<p>For example:</p>
+<pre><code>Metric:
+  error rate elevated
+
+Trace:
+  failed operation
+
+Logs:
+  corresponding error events
+</code></pre>
+<p>These signals may form a coherent observational field.</p>
+<p>But they may also derive from shared instrumentation.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Cross-signal agreement is not automatically independent corroboration.</strong></p>
+</blockquote>
+<p>Lineage remains critical.</p>
+<hr>
+<h1 id="42-cross-signal-coherence">42. Cross-Signal Coherence</h1>
+<p>A useful generalized structure is:</p>
+<pre><code>Metric
+   \
+    \
+     → Correlation
+    /
+   /
+Trace
+   \
+    \
+     → Observational Truth
+    /
+   /
+Logs
+</code></pre>
+<p>The system may reconstruct a bounded operational account from multiple signals.</p>
+<p>This strongly supports:</p>
+<pre><code>TruthComparison
+</code></pre>
+<p>and:</p>
+<pre><code>Evidence Graph
+</code></pre>
+<hr>
+<h1 id="43-correlation-coherence-reconstruction">43. Correlation → Coherence Reconstruction</h1>
+<p>Telemetry correlation connects evidence representing different views of underlying activity.</p>
+<p>RTT interpretation:</p>
+<pre><code>Coherence Reconstruction
+</code></pre>
+<p>This differs from:</p>
+<pre><code>direct equality
+</code></pre>
+<p>The pieces may have different representations.</p>
+<p>Example:</p>
+<pre><code>metric:
+  latency spike
+
+trace:
+  long request path
+
+log:
+  downstream timeout
+</code></pre>
+<p>Coherence emerges through contextual and causal relationships.</p>
+<p>This is one of the clearest examples yet of:</p>
+<blockquote>
+<p><strong>Coherence as reconstruction rather than agreement.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="44-reconstruction-vs-synthesis">44. Reconstruction vs Synthesis</h1>
+<p>Potential distinction:</p>
+<h2 id="synthesis">Synthesis</h2>
+<p>Produce a qualified Truth State from Evidence.</p>
+<h2 id="reconstruction">Reconstruction</h2>
+<p>Build a candidate operational narrative or state relationship from partial Evidence.</p>
+<p>Telemetry often requires reconstruction before final synthesis.</p>
+<p>Conceptual flow:</p>
+<pre><code>Evidence
+  ↓
+Correlation
+  ↓
+Reconstruction
+  ↓
+Qualification
+  ↓
+Truth-State Synthesis
+</code></pre>
+<p>This may become a domain-specific analytical stage rather than a universal component.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="45-narrative-is-not-evidence">45. Narrative Is Not Evidence</h1>
+<p>A reconstructed incident narrative may explain:</p>
+<pre><code>what likely happened
+</code></pre>
+<p>But the narrative is derived.</p>
+<p>Therefore:</p>
+<pre><code>Narrative
+  ≠
+raw Evidence
+</code></pre>
+<p>It should preserve Lineage to:</p>
+<pre><code>logs
+metrics
+traces
+context
+transformations
+</code></pre>
+<p>The Truth Service should label:</p>
+<pre><code>derived interpretation
+</code></pre>
+<p>as distinct from:</p>
+<pre><code>source Evidence
+</code></pre>
+<p>This is particularly important if AI later assists with reconstruction.</p>
+<hr>
+<h1 id="46-derived-truth">46. Derived Truth</h1>
+<p>Crosswalk #8 established that:</p>
+<pre><code>Truth States can become inputs to later Evaluations.
+</code></pre>
+<p>Telemetry adds:</p>
+<pre><code>interpretations can become derived Truth Claims
+</code></pre>
+<p>Potential sequence:</p>
+<pre><code>Logs + Metrics + Traces
+      ↓
+Correlated Evidence
+      ↓
+Derived Claim:
+  "Service degradation originated downstream."
+      ↓
+Evaluation
+      ↓
+Derived Truth State
+</code></pre>
+<p>This further strengthens recursive Truth Lineage.</p>
+<hr>
+<h1 id="47-derived-truth-requires-grounding">47. Derived Truth Requires Grounding</h1>
+<p>A derived Truth State should preserve:</p>
+<pre><code>parent Evidence
+Evidence transformations
+correlation relationships
+Context
+Regime
+Reference Basis
+</code></pre>
+<p>Otherwise reconstructed statements can become detached from their observational basis.</p>
+<p>This directly reinforces the Crosswalk #8 anti-cycle principle.</p>
+<hr>
+<h1 id="48-evidence-loop-risk">48. Evidence Loop Risk</h1>
+<p>Telemetry can be duplicated or transformed through multiple systems.</p>
+<p>Potential anti-pattern:</p>
+<pre><code>Raw Signal
+   ↓
+Dashboard A
+   ↓
+Alert B
+   ↓
+Incident Event C
+   ↓
+Metric D
+</code></pre>
+<p>If all are later treated as independent Evidence:</p>
+<pre><code>apparent corroboration increases
+</code></pre>
+<p>while all ultimately derive from:</p>
+<pre><code>one original signal
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Evidence independence must be computed through Lineage, not inferred from item count.</strong></p>
+</blockquote>
+<p>This is now a strongly generalized principle.</p>
+<hr>
+<h1 id="49-evidence-fan-out">49. Evidence Fan-Out</h1>
+<p>One source Evidence item may produce many downstream Evidence items.</p>
+<p>Conceptually:</p>
+<pre><code>Raw Evidence E
+   ├── Metric M
+   ├── Alert A
+   ├── Dashboard D
+   └── Derived Event X
+</code></pre>
+<p>Count:</p>
+<pre><code>4 items
+</code></pre>
+<p>Independent Sources:</p>
+<pre><code>1
+</code></pre>
+<p>The Coherence Engine must understand this distinction.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="50-evidence-fan-in">50. Evidence Fan-In</h1>
+<p>Multiple Evidence items may also combine into one derived item.</p>
+<p>Conceptually:</p>
+<pre><code>E1
+  \
+E2 → Aggregate M
+  /
+E3
+</code></pre>
+<p>The Evidence Graph must therefore support:</p>
+<pre><code>fan-out
+</code></pre>
+<p>and:</p>
+<pre><code>fan-in
+</code></pre>
+<p>This strongly confirms that a simple linear Lineage chain is insufficient.</p>
+<hr>
+<h1 id="51-observational-drift">51. Observational Drift</h1>
+<p>Potential Observational Drift dimensions include:</p>
+<h2 id="measurement-drift">Measurement Drift</h2>
+<p>The measured value changes.</p>
+<h2 id="instrumentation-drift">Instrumentation Drift</h2>
+<p>The observation mechanism changes.</p>
+<h2 id="schema-drift">Schema Drift</h2>
+<p>Telemetry structure changes.</p>
+<h2 id="context-drift">Context Drift</h2>
+<p>Context propagated with Evidence changes.</p>
+<h2 id="coverage-drift">Coverage Drift</h2>
+<p>Sampling or instrumentation coverage changes.</p>
+<h2 id="source-drift">Source Drift</h2>
+<p>Evidence producer changes.</p>
+<h2 id="transformation-drift">Transformation Drift</h2>
+<p>Processing or aggregation changes.</p>
+<p>These may occur while the underlying system behaves identically.</p>
+<p>This is an important distinction.</p>
+<hr>
+<h1 id="52-instrumentation-drift">52. Instrumentation Drift</h1>
+<p>Suppose:</p>
+<pre><code>System behavior:
+  unchanged
+</code></pre>
+<p>but:</p>
+<pre><code>instrumentation configuration:
+  changed
+</code></pre>
+<p>Observed metrics may change.</p>
+<p>Therefore:</p>
+<pre><code>observational change
+  ≠
+system-state change
+</code></pre>
+<p>The Truth Service needs Lineage and observation-method context to distinguish:</p>
+<pre><code>real State Drift
+</code></pre>
+<p>from:</p>
+<pre><code>instrumentation Drift
+</code></pre>
+<p>This is a major Observational Truth contribution.</p>
+<hr>
+<h1 id="53-schema-drift">53. Schema Drift</h1>
+<p>Telemetry schemas or attribute conventions may change over time.</p>
+<p>The same conceptual event may be represented differently.</p>
+<p>RTT interpretation:</p>
+<pre><code>Semantic / Structural Drift
+</code></pre>
+<p>This can break:</p>
+<ul>
+<li>comparison</li>
+<li>correlation</li>
+<li>dashboards</li>
+<li>derived Evaluations</li>
+</ul>
+<p>Therefore Lineage should preserve:</p>
+<pre><code>representation version
+</code></pre>
+<p>where operationally important.</p>
+<hr>
+<h1 id="54-coverage-drift">54. Coverage Drift</h1>
+<p>Suppose:</p>
+<pre><code>sampling:
+  100%
+</code></pre>
+<p>changes to:</p>
+<pre><code>sampling:
+  partial
+</code></pre>
+<p>The underlying event rate remains unchanged.</p>
+<p>The observed event count changes.</p>
+<p>Without coverage metadata, this could be misinterpreted as:</p>
+<pre><code>State Drift
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Observation coverage belongs to the interpretation of observational Evidence.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE concept
+</code></pre>
+<hr>
+<h1 id="55-retention-boundary">55. Retention Boundary</h1>
+<p>Telemetry may cease to be available after retention limits.</p>
+<p>RTT interpretation:</p>
+<pre><code>Evidence Availability Boundary
+</code></pre>
+<p>This differs from:</p>
+<pre><code>Evidence false
+</code></pre>
+<p>or:</p>
+<pre><code>event absent
+</code></pre>
+<p>The Evidence historically existed.</p>
+<p>It is simply no longer available in the current observation store.</p>
+<p>Therefore:</p>
+<pre><code>retention expiration
+  ≠
+Truth expiration
+</code></pre>
+<p>This distinction matters for audit and historical reconstruction.</p>
+<hr>
+<h1 id="56-data-retention-vs-truth-freshness">56. Data Retention vs Truth Freshness</h1>
+<p>A log may be old but still crucial for:</p>
+<pre><code>historical investigation
+</code></pre>
+<p>A fresh metric may be essential for:</p>
+<pre><code>present operational control
+</code></pre>
+<p>Therefore:</p>
+<pre><code>retention
+</code></pre>
+<p>and:</p>
+<pre><code>freshness
+</code></pre>
+<p>answer different questions.</p>
+<h2 id="freshness">Freshness</h2>
+<p>Is this Evidence current enough for the intended Evaluation?</p>
+<h2 id="retention">Retention</h2>
+<p>Is this Evidence still available for retrieval?</p>
+<p>They must not be conflated.</p>
+<hr>
+<h1 id="57-historical-observational-truth">57. Historical Observational Truth</h1>
+<p>Telemetry provides strong support for:</p>
+<pre><code>historical Truth State
+</code></pre>
+<p>An Observation may no longer be fresh for current operation but remain perfectly relevant to a Claim about:</p>
+<pre><code>past activity
+</code></pre>
+<p>Therefore Regime must include:</p>
+<pre><code>temporal intent
+</code></pre>
+<p>when necessary.</p>
+<p>Example:</p>
+<pre><code>Claim:
+  "What happened during incident I?"
+</code></pre>
+<p>Old Evidence may be highly relevant.</p>
+<p>The same Evidence may be stale for:</p>
+<pre><code>current health
+</code></pre>
+<hr>
+<h1 id="58-observational-truth-and-state-truth">58. Observational Truth and State Truth</h1>
+<p>Telemetry often supplies Evidence used to infer State Truth.</p>
+<p>Conceptually:</p>
+<pre><code>Telemetry
+  ↓
+Observational Truth
+  ↓
+Derived State Claim
+  ↓
+State Truth Evaluation
+</code></pre>
+<p>But:</p>
+<pre><code>observational signal
+  ≠
+state itself
+</code></pre>
+<p>That distinction must remain explicit.</p>
+<p>Example:</p>
+<pre><code>health-check success
+</code></pre>
+<p>is Evidence about:</p>
+<pre><code>service state
+</code></pre>
+<p>not identical to:</p>
+<pre><code>complete service state
+</code></pre>
+<hr>
+<h1 id="59-observational-truth-and-intent-truth">59. Observational Truth and Intent Truth</h1>
+<p>Desired-state systems depend on observations to determine Drift.</p>
+<p>Conceptually:</p>
+<pre><code>Intent Truth
+   ↕
+State Truth
+   ↑
+Observational Truth
+</code></pre>
+<p>If Observation coverage is incomplete:</p>
+<pre><code>apparent convergence
+</code></pre>
+<p>may be unreliable.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>TruthComparison quality depends on the quality and coverage of its parent Truth States.</strong></p>
+</blockquote>
+<p>This creates inherited qualification.</p>
+<hr>
+<h1 id="60-inherited-uncertainty">60. Inherited Uncertainty</h1>
+<p>A derived Truth State should not become more certain than its Evidence Lineage just because synthesis occurred.</p>
+<p>Conceptually:</p>
+<pre><code>Parent Evidence:
+  partial
+
+Derived Observation State:
+  partial
+
+Derived Comparison:
+  must preserve limitation
+</code></pre>
+<p>This suggests:</p>
+<pre><code>uncertainty / limitation propagation
+</code></pre>
+<p>through Truth Lineage.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE principle
+</code></pre>
+<hr>
+<h1 id="61-qualification-inheritance">61. Qualification Inheritance</h1>
+<p>When:</p>
+<pre><code>Truth State A
+</code></pre>
+<p>becomes Evidence for:</p>
+<pre><code>Truth State B
+</code></pre>
+<p>the child should preserve relevant limitations from A.</p>
+<p>This does not mean:</p>
+<pre><code>child status must equal parent status
+</code></pre>
+<p>but:</p>
+<blockquote>
+<p><strong>Parent limitations cannot disappear silently.</strong></p>
+</blockquote>
+<p>Potential Lineage metadata:</p>
+<pre><code>inherited_constraints
+
+inherited_gaps
+
+inherited_uncertainty
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="62-telemetry-and-paradox">62. Telemetry and Paradox</h1>
+<p>Potential Observational Paradox may arise when:</p>
+<ul>
+<li>qualified metrics indicate one state</li>
+<li>qualified traces indicate another</li>
+<li>qualified logs contradict both</li>
+<li>timestamps cannot reconcile</li>
+<li>observer contexts overlap</li>
+<li>Lineage does not explain divergence</li>
+</ul>
+<p>However, before declaring Paradox:</p>
+<pre><code>sampling?
+
+delayed Evidence?
+
+aggregation?
+
+observer difference?
+
+stale telemetry?
+
+coverage gap?
+
+instrumentation Drift?
+
+different time window?
+</code></pre>
+<p>Only unresolved incompatibility after these checks should become Paradox.</p>
+<hr>
+<h1 id="63-different-signals-contradiction">63. Different Signals ≠ Contradiction</h1>
+<p>A metric may show:</p>
+<pre><code>aggregate error rate low
+</code></pre>
+<p>while a trace shows:</p>
+<pre><code>one failed request
+</code></pre>
+<p>These can both be valid.</p>
+<p>Their scope differs.</p>
+<p>Therefore:</p>
+<pre><code>different signal
+  ≠
+contradictory Truth
+</code></pre>
+<p>Regime / aggregation semantics matter.</p>
+<p>This further reinforces domain-semantic Coherence.</p>
+<hr>
+<h1 id="64-aggregation-regime">64. Aggregation Regime</h1>
+<p>A metric aggregate is meaningful only relative to:</p>
+<ul>
+<li>aggregation function</li>
+<li>time window</li>
+<li>labels / dimensions</li>
+<li>source set</li>
+<li>coverage</li>
+<li>processing rules</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>Metric Value
+  +
+Aggregation Regime
+  =
+Interpretable Evidence
+</code></pre>
+<p>Without that context, the value may be structurally incomplete.</p>
+<p>This is another clean example of Regime participating directly in Evidence interpretation.</p>
+<hr>
+<h1 id="65-observer-perspective">65. Observer Perspective</h1>
+<p>Different instrumentation points may legitimately observe different parts of the same activity.</p>
+<p>Example:</p>
+<pre><code>frontend:
+  request received
+
+backend:
+  request never arrived
+</code></pre>
+<p>Both observations may be correct.</p>
+<p>The difference itself helps localize:</p>
+<pre><code>where activity stopped
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Observer-relative Evidence can be jointly coherent even when observations differ.</strong></p>
+</blockquote>
+<p>This significantly strengthens the Observer / StateView candidates.</p>
+<hr>
+<h1 id="66-stateview-candidate">66. StateView Candidate</h1>
+<p>Distributed State Truth introduced:</p>
+<pre><code>StateView
+</code></pre>
+<p>Telemetry strongly reinforces it.</p>
+<p>Potential conceptual structure:</p>
+<pre><code>StateView
+  ├── observer_id
+  ├── subject_id
+  ├── time_window
+  ├── regime_id
+  ├── Evidence references
+  ├── derived state
+  └── coverage
+</code></pre>
+<p>This could represent:</p>
+<pre><code>what this observer can support about this subject in this window
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>The final crosswalk should test whether provenance needs a similar view concept.</p>
+<hr>
+<h1 id="67-worked-example-correlated-failure">67. Worked Example — Correlated Failure</h1>
+<h2 id="metric">Metric</h2>
+<pre><code>latency increased
+</code></pre>
+<h2 id="trace">Trace</h2>
+<pre><code>request contains unusually long downstream span
+</code></pre>
+<h2 id="log">Log</h2>
+<pre><code>downstream operation records timeout event
+</code></pre>
+<h2 id="correlation">Correlation</h2>
+<pre><code>signals share relevant request / resource context
+</code></pre>
+<h2 id="result">Result</h2>
+<pre><code>Observational Truth:
+  correlated degradation Evidence
+</code></pre>
+<h2 id="derived-claim">Derived Claim</h2>
+<pre><code>downstream operation contributed to request latency
+</code></pre>
+<h2 id="architectural-finding">Architectural Finding</h2>
+<p>No single signal needed to contain the whole operational account.</p>
+<p>Coherence emerged through correlation.</p>
+<hr>
+<h1 id="68-worked-example-metric-without-trace">68. Worked Example — Metric Without Trace</h1>
+<h2 id="metric_1">Metric</h2>
+<pre><code>error rate increased
+</code></pre>
+<h2 id="trace-evidence">Trace Evidence</h2>
+<pre><code>unavailable or unsampled
+</code></pre>
+<h2 id="log-evidence">Log Evidence</h2>
+<pre><code>partial
+</code></pre>
+<h2 id="correct-interpretation">Correct Interpretation</h2>
+<pre><code>elevated error metric:
+  qualified Evidence
+
+exact causal path:
+  indeterminate
+</code></pre>
+<h2 id="architectural-finding_1">Architectural Finding</h2>
+<p>A valid Evidence item can support one Claim while remaining insufficient for another.</p>
+<hr>
+<h1 id="69-worked-example-missing-log">69. Worked Example — Missing Log</h1>
+<h2 id="expected-event">Expected Event</h2>
+<pre><code>E
+</code></pre>
+<h2 id="log-query">Log Query</h2>
+<pre><code>no matching record
+</code></pre>
+<p>Without knowledge of:</p>
+<pre><code>instrumentation
+sampling
+collection
+retention
+query scope
+</code></pre>
+<p>the correct conclusion is:</p>
+<pre><code>Evidence Gap / Unknown
+</code></pre>
+<p>not:</p>
+<pre><code>E did not occur
+</code></pre>
+<h2 id="architectural-finding_2">Architectural Finding</h2>
+<p>Absence of Evidence is not automatically Evidence of absence.</p>
+<hr>
+<h1 id="70-worked-example-qualified-absence">70. Worked Example — Qualified Absence</h1>
+<h2 id="observation-contract">Observation Contract</h2>
+<p>A specific monitored condition is known to produce a deterministic Evidence record under the evaluated Regime.</p>
+<h2 id="evidence-search">Evidence Search</h2>
+<p>No corresponding record exists within the complete qualified observation boundary.</p>
+<h2 id="result_1">Result</h2>
+<p>Potentially:</p>
+<pre><code>qualified absence
+</code></pre>
+<p>provided the Observation Contract and coverage assumptions themselves remain qualified.</p>
+<h2 id="architectural-finding_3">Architectural Finding</h2>
+<p>Evidence of absence requires a qualified observation boundary.</p>
+<hr>
+<h1 id="71-worked-example-sampled-traces">71. Worked Example — Sampled Traces</h1>
+<h2 id="total-activity">Total Activity</h2>
+<pre><code>unknown from trace set alone
+</code></pre>
+<h2 id="sampling">Sampling</h2>
+<pre><code>partial
+</code></pre>
+<h2 id="collected-traces">Collected Traces</h2>
+<pre><code>contain Event Pattern X
+</code></pre>
+<h2 id="valid-claim">Valid Claim</h2>
+<pre><code>"Pattern X occurred in collected trace Evidence."
+</code></pre>
+<h2 id="invalid-unsupported-claim">Invalid Unsupported Claim</h2>
+<pre><code>"Pattern X occurred in exactly this proportion of all activity."
+</code></pre>
+<p>unless the sampling / analysis Regime supports that inference.</p>
+<h2 id="architectural-finding_4">Architectural Finding</h2>
+<p>Evidence scope constrains claim scope.</p>
+<hr>
+<h1 id="72-worked-example-delayed-telemetry">72. Worked Example — Delayed Telemetry</h1>
+<h2 id="event">Event</h2>
+<pre><code>occurs at T1
+</code></pre>
+<h2 id="collection">Collection</h2>
+<pre><code>arrives at T2
+</code></pre>
+<h2 id="evaluation">Evaluation</h2>
+<pre><code>at T3
+</code></pre>
+<h2 id="claim-a">Claim A</h2>
+<pre><code>"Event occurred at T1."
+</code></pre>
+<p>Potentially supported.</p>
+<h2 id="claim-b">Claim B</h2>
+<pre><code>"At T1, the monitoring system knew that Event occurred."
+</code></pre>
+<p>Not supported merely by the late Evidence.</p>
+<h2 id="architectural-finding_5">Architectural Finding</h2>
+<p>Event time and knowledge time differ.</p>
+<p>This is a powerful Temporal Truth interaction.</p>
+<hr>
+<h1 id="73-worked-example-instrumentation-change">73. Worked Example — Instrumentation Change</h1>
+<h2 id="system-state">System State</h2>
+<pre><code>stable
+</code></pre>
+<h2 id="instrumentation-v1">Instrumentation v1</h2>
+<p>Produces:</p>
+<pre><code>Metric M1
+</code></pre>
+<h2 id="instrumentation-v2">Instrumentation v2</h2>
+<p>Produces:</p>
+<pre><code>Metric M2
+</code></pre>
+<p>Observed values differ.</p>
+<h2 id="drift-analysis">Drift Analysis</h2>
+<p>Potential:</p>
+<pre><code>instrumentation Drift
+</code></pre>
+<p>before:</p>
+<pre><code>State Drift
+</code></pre>
+<h2 id="architectural-finding_6">Architectural Finding</h2>
+<p>Changes in Observation mechanism must remain visible in Evidence Lineage.</p>
+<hr>
+<h1 id="74-worked-example-shared-evidence-dependency">74. Worked Example — Shared Evidence Dependency</h1>
+<h2 id="raw-event">Raw Event</h2>
+<pre><code>E1
+</code></pre>
+<p>Derived:</p>
+<pre><code>Log L1
+
+Metric M1
+
+Alert A1
+</code></pre>
+<h2 id="apparent-evidence-count">Apparent Evidence Count</h2>
+<pre><code>3
+</code></pre>
+<h2 id="independent-underlying-event">Independent Underlying Event</h2>
+<pre><code>1
+</code></pre>
+<h2 id="coherence-analysis">Coherence Analysis</h2>
+<p>M1 and A1 must not be treated as independent corroboration if both derive from E1 / L1.</p>
+<h2 id="architectural-finding_7">Architectural Finding</h2>
+<p>Independence is Lineage-dependent.</p>
+<hr>
+<h1 id="75-worked-example-different-observer-views">75. Worked Example — Different Observer Views</h1>
+<h2 id="frontend-observer">Frontend Observer</h2>
+<pre><code>request received
+</code></pre>
+<h2 id="service-observer">Service Observer</h2>
+<pre><code>request received
+</code></pre>
+<h2 id="database-observer">Database Observer</h2>
+<pre><code>no query received
+</code></pre>
+<p>All three may be coherent.</p>
+<p>Derived interpretation:</p>
+<pre><code>activity ceased before database interaction
+</code></pre>
+<h2 id="architectural-finding_8">Architectural Finding</h2>
+<p>Different values across observers can improve reconstruction rather than create Paradox.</p>
+<hr>
+<h1 id="76-worked-example-current-state-from-partial-telemetry">76. Worked Example — Current State from Partial Telemetry</h1>
+<h2 id="signals">Signals</h2>
+<pre><code>CPU:
+  normal
+
+memory:
+  normal
+
+request telemetry:
+  missing
+</code></pre>
+<h2 id="claim">Claim</h2>
+<pre><code>"Service is healthy."
+</code></pre>
+<h2 id="result_2">Result</h2>
+<p>Insufficient Evidence for broad health Claim.</p>
+<p>Potential:</p>
+<pre><code>Truth State:
+  indeterminate
+</code></pre>
+<p>or:</p>
+<pre><code>degraded
+</code></pre>
+<p>depending on Regime.</p>
+<h2 id="architectural-finding_9">Architectural Finding</h2>
+<p>Partial Evidence must constrain synthesis scope.</p>
+<hr>
+<h1 id="77-rtt-dimension-mapping">77. RTT Dimension Mapping</h1>
+<table>
+<thead>
+<tr>
+<th>RTT Dimension</th>
+<th>Telemetry Interpretation</th>
+<th>General Truth-Service Candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>Signals propagate from instrumented systems through collection paths</td>
+<td>Evidence propagates through Source / transformation relationships</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Logs, metrics, traces, context, and State Views correlate into bounded accounts</td>
+<td>Coherence can be reconstructed across heterogeneous Evidence</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Measurements, instrumentation, context, coverage, or schemas change</td>
+<td>Drift may occur in reality or the observation mechanism</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Qualified Evidence remains incompatible after scope, sampling, time, and observer differences are resolved</td>
+<td>Preserved observational contradiction</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Sampling, aggregation, observer, time window, context, and intended Claim bound interpretation</td>
+<td>Observation boundaries govern Evidence meaning</td>
+</tr>
+<tr>
+<td><strong>Spin</strong></td>
+<td>Trace/context identity and Evidence relationships persist</td>
+<td>Correlation / Lineage continuity</td>
+</tr>
+<tr>
+<td><strong>Elec</strong></td>
+<td>Event, log, metric, trace, observer, derived Evidence, and reality remain distinct</td>
+<td>Evidence-type and role distinction</td>
+</tr>
+<tr>
+<td><strong>Temp</strong></td>
+<td>Events occur, signals arrive, Evidence ages, and observation paths change</td>
+<td>Multi-time evidence lifecycle</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="78-set-mapping">78. SET Mapping</h1>
+<h2 id="spin">Spin</h2>
+<p>Observational Truth expresses Spin through:</p>
+<ul>
+<li>trace identity</li>
+<li>resource identity</li>
+<li>Evidence identity</li>
+<li>correlation</li>
+<li>Lineage</li>
+<li>context propagation</li>
+</ul>
+<h2 id="elec">Elec</h2>
+<p>Telemetry strongly expresses Elec through distinctions among:</p>
+<ul>
+<li>event</li>
+<li>log</li>
+<li>metric</li>
+<li>trace</li>
+<li>span</li>
+<li>observer</li>
+<li>processor</li>
+<li>Evidence gap</li>
+<li>qualified absence</li>
+<li>derived Evidence</li>
+</ul>
+<h2 id="temp">Temp</h2>
+<p>Telemetry expresses Temp through:</p>
+<ul>
+<li>event time</li>
+<li>collection time</li>
+<li>processing time</li>
+<li>delayed arrival</li>
+<li>sampling</li>
+<li>retention</li>
+<li>Drift</li>
+<li>Revalidation</li>
+</ul>
+<p>Compactly:</p>
+<blockquote>
+<p><strong>Spin preserves observational relationships.</strong></p>
+<p><strong>Elec distinguishes reality, signals, observers, and derived Evidence.</strong></p>
+<p><strong>Temp governs occurrence, arrival, aging, transformation, and renewed interpretation.</strong></p>
+</blockquote>
+<hr>
+<h1 id="79-prior-candidate-review-evidenceitem">79. Prior Candidate Review — EvidenceItem</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Telemetry result:</p>
+<pre><code>STRONGLY VALIDATED
+</code></pre>
+<p>OpenTelemetry directly exposes multiple signal forms with different Evidence semantics.</p>
+<p>Recommendation:</p>
+<pre><code>PROMOTE during consolidation
+</code></pre>
+<p>with:</p>
+<pre><code>Observation
+</code></pre>
+<p>remaining a subtype / role of Evidence rather than the universal Evidence object.</p>
+<hr>
+<h1 id="80-prior-candidate-review-evidence-graph">80. Prior Candidate Review — Evidence Graph</h1>
+<p>Prior status:</p>
+<pre><code>strong candidate
+</code></pre>
+<p>Telemetry result:</p>
+<pre><code>STRONGLY VALIDATED
+</code></pre>
+<p>Trace/span relationships, transformations, aggregations, and derived signals require graph-like Evidence relationships.</p>
+<p>Recommendation:</p>
+<pre><code>PROMOTE during consolidation.
+</code></pre>
+<hr>
+<h1 id="81-prior-candidate-review-lineage-graph">81. Prior Candidate Review — Lineage Graph</h1>
+<p>Prior status:</p>
+<pre><code>core structural mechanism
+</code></pre>
+<p>Telemetry result:</p>
+<pre><code>STRONGLY VALIDATED
+</code></pre>
+<p>Lineage now demonstrably needs to support:</p>
+<pre><code>provenance
+delegation
+transitions
+causation
+transformations
+derivation
+correlation
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>keep graph-based generalized Lineage.
+</code></pre>
+<hr>
+<h1 id="82-prior-candidate-review-contextevidence">82. Prior Candidate Review — ContextEvidence</h1>
+<p>Prior status:</p>
+<pre><code>candidate core
+</code></pre>
+<p>Telemetry result:</p>
+<pre><code>STRONGLY VALIDATED
+</code></pre>
+<p>Telemetry attributes and propagated contextual information affect interpretation.</p>
+<p>Recommendation:</p>
+<pre><code>PROMOTE conceptually during consolidation.
+</code></pre>
+<p>Exact schema may remain lightweight.</p>
+<hr>
+<h1 id="83-prior-candidate-review-truthcomparison">83. Prior Candidate Review — TruthComparison</h1>
+<p>Prior status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>Telemetry result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Cross-signal correlation and observed-vs-expected analysis naturally require comparisons among Evidence and derived Truth States.</p>
+<p>Recommendation:</p>
+<pre><code>retain Candidate Core.
+</code></pre>
+<hr>
+<h1 id="84-prior-candidate-review-recursive-truth">84. Prior Candidate Review — Recursive Truth</h1>
+<p>Prior status:</p>
+<pre><code>Candidate Core with cycle risk
+</code></pre>
+<p>Telemetry result:</p>
+<pre><code>STRONGLY SURVIVES
+</code></pre>
+<p>Derived telemetry and correlated interpretations can become input to later Evaluations.</p>
+<p>However:</p>
+<pre><code>derivation Lineage
+</code></pre>
+<p>must remain explicit.</p>
+<p>Recommendation:</p>
+<pre><code>recursive Truth supported only with provenance preservation and cycle detection.
+</code></pre>
+<hr>
+<h1 id="85-prior-candidate-review-observer-stateview">85. Prior Candidate Review — Observer / StateView</h1>
+<p>Prior status:</p>
+<pre><code>strong candidate
+</code></pre>
+<p>Telemetry result:</p>
+<pre><code>STRONGLY VALIDATED
+</code></pre>
+<p>Observer location and observation coverage materially affect what can be claimed.</p>
+<p>Recommendation:</p>
+<pre><code>StateView / ObserverView deserves consolidation review.
+</code></pre>
+<hr>
+<h1 id="86-new-candidate-evidencegap">86. New Candidate — EvidenceGap</h1>
+<p>Telemetry introduces strong evidence for:</p>
+<pre><code>EvidenceGap
+</code></pre>
+<p>Definition:</p>
+<blockquote>
+<p><strong>An expected, potentially relevant, or structurally identifiable absence in the available Evidence set.</strong></p>
+</blockquote>
+<p>Potential fields:</p>
+<pre><code>gap_id
+subject_id
+evidence_type
+expected_source
+time_window
+reason
+coverage_context
+impact
+status
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<p>The distinction from:</p>
+<pre><code>qualified absence
+</code></pre>
+<p>is critical.</p>
+<hr>
+<h1 id="87-new-candidate-observationcoverage">87. New Candidate — ObservationCoverage</h1>
+<p>Telemetry also strongly supports:</p>
+<pre><code>ObservationCoverage
+</code></pre>
+<p>Definition:</p>
+<blockquote>
+<p><strong>The bounded description of what an observation mechanism is expected or configured to observe.</strong></p>
+</blockquote>
+<p>Potential fields:</p>
+<pre><code>subject_scope
+signal_types
+time_window
+sampling_policy
+observers
+known_gaps
+retention
+completeness_classification
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE concept
+</code></pre>
+<p>Schema form deferred.</p>
+<hr>
+<h1 id="88-new-candidate-evidencedependency">88. New Candidate — EvidenceDependency</h1>
+<p>Derived Evidence must preserve dependency on parent Evidence.</p>
+<p>Potential relation:</p>
+<pre><code>depends_on
+</code></pre>
+<p>This may not require a dedicated entity because:</p>
+<pre><code>EvidenceGraph Edge
+</code></pre>
+<p>can represent it.</p>
+<p>Recommendation:</p>
+<pre><code>add relation semantics
+</code></pre>
+<p>rather than:</p>
+<pre><code>new core object
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_RELATION
+</code></pre>
+<hr>
+<h1 id="89-new-candidate-derivedevidence">89. New Candidate — DerivedEvidence</h1>
+<p>The EvidenceItem model may need a derived flag or subtype.</p>
+<p>Potential:</p>
+<pre><code>evidence_origin:
+  primary
+  derived
+</code></pre>
+<p>Derived Evidence should identify:</p>
+<pre><code>parent Evidence
+transformation
+aggregation
+algorithm / process
+time
+</code></pre>
+<p>This would prevent derived signals from being mistaken for independent Evidence.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE attribute
+</code></pre>
+<hr>
+<h1 id="90-architecture-refinement-1-promote-evidenceitem">90. Architecture Refinement #1 — Promote EvidenceItem</h1>
+<p>Nine crosswalks now provide enough independent evidence to say:</p>
+<blockquote>
+<p><strong>Observation is too narrow as the generalized input abstraction.</strong></p>
+</blockquote>
+<p>Recommended consolidation:</p>
+<pre><code>EvidenceItem
+   │
+   ├── Observation
+   ├── Assertion
+   ├── Declaration
+   ├── Attribute
+   ├── Transition Evidence
+   ├── Status Evidence
+   └── Derived Evidence
+</code></pre>
+<p>The subtype set should remain extensible.</p>
+<p>Status:</p>
+<pre><code>PROMOTION RECOMMENDED
+</code></pre>
+<hr>
+<h1 id="91-architecture-refinement-2-promote-evidence-graph">91. Architecture Refinement #2 — Promote Evidence Graph</h1>
+<p>The architecture should represent:</p>
+<pre><code>EvidenceItem
+    ↓
+relationship
+    ↓
+EvidenceItem
+</code></pre>
+<p>Potential relationships include:</p>
+<pre><code>derives_from
+observed_by
+produced_by
+transformed_from
+aggregated_from
+correlates_with
+depends_on
+precedes
+parent_of
+supports
+contradicts
+</code></pre>
+<p>This can potentially share infrastructure with:</p>
+<pre><code>Lineage Graph
+</code></pre>
+<p>rather than becoming a completely separate graph system.</p>
+<p>Status:</p>
+<pre><code>PROMOTION RECOMMENDED
+</code></pre>
+<hr>
+<h1 id="92-architecture-refinement-3-evidence-independence-must-be-derived-from-lineage">92. Architecture Refinement #3 — Evidence Independence Must Be Derived from Lineage</h1>
+<p>Current architecture allows:</p>
+<pre><code>source_independence
+</code></pre>
+<p>Telemetry demonstrates that static Source labels alone are insufficient.</p>
+<p>Independence may depend on:</p>
+<pre><code>shared upstream Evidence
+shared instrumentation
+shared collector
+shared transformation
+shared Source
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Independence should be evaluated from Evidence Lineage where possible.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE principle
+</code></pre>
+<hr>
+<h1 id="93-architecture-refinement-4-evidence-gap-must-remain-visible">93. Architecture Refinement #4 — Evidence Gap Must Remain Visible</h1>
+<p>The Truth Service should not silently omit missing Evidence.</p>
+<p>Potential Evaluation result:</p>
+<pre><code>evidence_gaps:
+  - expected trace unavailable
+  - request logging incomplete
+</code></pre>
+<p>These gaps may affect:</p>
+<pre><code>Qualification
+uncertainty
+permitted uses
+Truth-State status
+</code></pre>
+<p>Status:</p>
+<pre><code>PROMOTION RECOMMENDED
+</code></pre>
+<hr>
+<h1 id="94-architecture-refinement-5-qualified-absence-requires-coverage">94. Architecture Refinement #5 — Qualified Absence Requires Coverage</h1>
+<p>To claim:</p>
+<pre><code>absent
+</code></pre>
+<p>from:</p>
+<pre><code>no Evidence
+</code></pre>
+<p>the Evaluation should require a sufficiently qualified observation boundary.</p>
+<p>Potential general rule:</p>
+<pre><code>No Evidence
+  +
+Qualified Coverage
+  +
+Expected Signal Contract
+    ↓
+Possible Qualified Absence
+</code></pre>
+<p>Otherwise:</p>
+<pre><code>No Evidence
+  ↓
+Unknown / Evidence Gap
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE principle
+</code></pre>
+<hr>
+<h1 id="95-architecture-refinement-6-state-view-should-include-observer-and-coverage">95. Architecture Refinement #6 — State View Should Include Observer and Coverage</h1>
+<p>Current:</p>
+<pre><code>observer_context
+</code></pre>
+<p>may be insufficient.</p>
+<p>Candidate:</p>
+<pre><code>StateView
+  ├── subject
+  ├── observer
+  ├── time_window
+  ├── regime
+  ├── coverage
+  ├── Evidence
+  └── derived state
+</code></pre>
+<p>This provides a natural home for observer-relative Truth without making Truth arbitrary.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="96-architecture-refinement-7-derived-truth-must-carry-inherited-limitations">96. Architecture Refinement #7 — Derived Truth Must Carry Inherited Limitations</h1>
+<p>If a State Truth derives from:</p>
+<pre><code>sampled telemetry
+</code></pre>
+<p>then the resulting state should preserve:</p>
+<pre><code>sampling limitation
+</code></pre>
+<p>If a comparison derives from:</p>
+<pre><code>incomplete State Truth
+</code></pre>
+<p>then the comparison should preserve:</p>
+<pre><code>inherited Evidence gap
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Truth derivation must propagate relevant limitations.</strong></p>
+</blockquote>
+<p>Status:</p>
+<pre><code>PROMOTION RECOMMENDED
+</code></pre>
+<hr>
+<h1 id="97-architecture-refinement-8-coherence-may-be-reconstruction">97. Architecture Refinement #8 — Coherence May Be Reconstruction</h1>
+<p>Earlier systems often framed Coherence as:</p>
+<pre><code>compatible states
+</code></pre>
+<p>Telemetry adds:</p>
+<pre><code>reconstructed compatibility across heterogeneous signals
+</code></pre>
+<p>Therefore generalized Coherence should include:</p>
+<pre><code>direct agreement
+
+structural compatibility
+
+correlated reconstruction
+</code></pre>
+<p>This widens the Coherence model substantially.</p>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE
+</code></pre>
+<hr>
+<h1 id="98-architecture-refinement-9-observation-method-is-truth-metadata">98. Architecture Refinement #9 — Observation Method Is Truth Metadata</h1>
+<p>The Evidence model should preserve:</p>
+<pre><code>method
+</code></pre>
+<p>or sufficient Lineage to reconstruct method.</p>
+<p>Why?</p>
+<p>Because:</p>
+<pre><code>change in method
+</code></pre>
+<p>can produce:</p>
+<pre><code>change in Evidence
+</code></pre>
+<p>without:</p>
+<pre><code>change in subject state
+</code></pre>
+<p>Status:</p>
+<pre><code>CANDIDATE_CORE principle
+</code></pre>
+<hr>
+<h1 id="99-architecture-refinement-10-event-time-and-knowledge-time-are-distinct">99. Architecture Refinement #10 — Event Time and Knowledge Time Are Distinct</h1>
+<p>Telemetry strongly demonstrates:</p>
+<pre><code>when something happened
+</code></pre>
+<p>and:</p>
+<pre><code>when the evaluator learned about it
+</code></pre>
+<p>are different.</p>
+<p>Potential fields already exist:</p>
+<pre><code>observed_at
+received_at
+evaluated_at
+</code></pre>
+<p>Recommendation:</p>
+<pre><code>preserve all
+</code></pre>
+<p>and avoid deriving one from another.</p>
+<p>Status:</p>
+<pre><code>CONFIRMED_GENERAL
+</code></pre>
+<hr>
+<h1 id="100-circular-evidence-safeguard">100. Circular Evidence Safeguard</h1>
+<p>Crosswalk #8 identified circular Truth risk.</p>
+<p>Telemetry makes the mechanism concrete.</p>
+<p>Suppose:</p>
+<pre><code>raw metric
+  ↓
+alert
+  ↓
+incident record
+  ↓
+generated metric
+  ↓
+later correlation
+</code></pre>
+<p>If the cycle returns to the original claim and every derivative is counted independently:</p>
+<pre><code>apparent evidence strength inflates
+</code></pre>
+<p>Therefore the Truth Service should eventually implement:</p>
+<pre><code>Evidence Graph cycle detection
+</code></pre>
+<p>and:</p>
+<pre><code>dependency collapsing
+</code></pre>
+<p>for independence analysis.</p>
+<p>Status:</p>
+<pre><code>ARCHITECTURE REQUIREMENT CANDIDATE
+</code></pre>
+<hr>
+<h1 id="101-scoring-boundary">101. Scoring Boundary</h1>
+<p>The scoring boundary for this crosswalk is:</p>
+<pre><code>System:
+  Telemetry / Observability Systems
+
+Primary Reference Case:
+  OpenTelemetry
+
+Primary Truth Class:
+  Observational Truth
+
+Evaluated Scope:
+  telemetry signals
+  traces
+  spans
+  metrics
+  logs
+  contextual propagation
+  collection relationships
+  signal correlation
+  Evidence Lineage
+
+Primary Evidence:
+  OpenTelemetry official documentation
+
+Deferred Scope:
+  vendor-specific observability backends
+  product-specific dashboards
+  proprietary anomaly detection
+  alerting policy
+  incident-management systems
+  AI-generated incident summaries
+  backend-specific storage behavior
+</code></pre>
+<p>The crosswalk examines telemetry structure rather than every observability practice.</p>
+<hr>
+<h1 id="102-preliminary-scoring-status">102. Preliminary Scoring Status</h1>
+<p>Current status:</p>
+<pre><code>provisional
+</code></pre>
+<p>Likely structural strengths include:</p>
+<ul>
+<li>Evidence Quality</li>
+<li>Lineage Visibility</li>
+<li>Coherence / Correlation</li>
+<li>Drift Detection</li>
+<li>Regime Awareness</li>
+<li>Failure Transparency</li>
+</ul>
+<p>Areas requiring careful interpretation include:</p>
+<ul>
+<li>Reference Basis Quality</li>
+<li>Correction Discipline</li>
+<li>Freshness / Revalidation</li>
+<li>Paradox Handling</li>
+</ul>
+<p>Telemetry primarily observes.</p>
+<p>Correction may be delegated to other systems.</p>
+<p>That delegation must not be scored as simple absence.</p>
+<hr>
+<h1 id="103-provisional-scorecard-template">103. Provisional Scorecard Template</h1>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score</th>
+<th>Delegation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference Basis Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Evidence Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Likely delegated</td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+<td>Not yet scored</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+<td>Deferred</td>
+</tr>
+</tbody>
+</table>
+<p>No numeric values should be assigned without:</p>
+<pre><code>rationale
+evidence
+evaluation boundary
+</code></pre>
+<hr>
+<h1 id="104-rubric-validation-evidence-quality">104. Rubric Validation — Evidence Quality</h1>
+<p>Telemetry strongly validates the rubric revision:</p>
+<pre><code>Observation Quality
+  ↓
+Evidence Quality
+</code></pre>
+<p>The evaluated system contains multiple signal forms:</p>
+<pre><code>logs
+metrics
+traces
+spans
+context
+</code></pre>
+<p>Observation remains an important concept.</p>
+<p>It is no longer sufficient as the rubric's umbrella term.</p>
+<p>Status:</p>
+<pre><code>RUBRIC REVISION SHOULD PROCEED DURING CONSOLIDATION
+</code></pre>
+<hr>
+<h1 id="105-rubric-validation-reference-basis-quality">105. Rubric Validation — Reference Basis Quality</h1>
+<p>Telemetry also supports the broader:</p>
+<pre><code>Reference Basis Quality
+</code></pre>
+<p>because observational systems may not use:</p>
+<pre><code>one external Anchor
+</code></pre>
+<p>The reference basis for evaluating telemetry may include:</p>
+<ul>
+<li>instrumentation contract</li>
+<li>system model</li>
+<li>expected behavior</li>
+<li>schema</li>
+<li>correlation context</li>
+<li>intended Claim</li>
+</ul>
+<p>The rubric should therefore remain broader than Anchor.</p>
+<p>Status:</p>
+<pre><code>RUBRIC REVISION SUPPORTED
+</code></pre>
+<hr>
+<h1 id="106-scoring-rubric-challenge-failure-transparency">106. Scoring-Rubric Challenge — Failure Transparency</h1>
+<p>Telemetry highlights a scoring distinction:</p>
+<pre><code>missing Evidence exposed
+</code></pre>
+<p>vs:</p>
+<pre><code>missing Evidence silently treated as zero / normal
+</code></pre>
+<p>A strong Observational Truth system should expose gaps where possible.</p>
+<p>Therefore Failure Transparency should consider:</p>
+<ul>
+<li>signal absence</li>
+<li>collection failure</li>
+<li>coverage loss</li>
+<li>stale telemetry</li>
+<li>processing failure</li>
+</ul>
+<p>without automatically treating all missing signals as system failure.</p>
+<p>This may refine the scoring criterion.</p>
+<hr>
+<h1 id="107-crosswalk-9-findings">107. Crosswalk #9 Findings</h1>
+<h2 id="finding-1-observation-is-not-reality">Finding 1 — Observation Is Not Reality</h2>
+<p>Telemetry is a bounded representation of system activity.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-2-missing-evidence-is-not-evidence-of-absence">Finding 2 — Missing Evidence Is Not Evidence of Absence</h2>
+<p>A qualified absence requires an adequate observation boundary.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-3-evidenceitem-is-the-correct-generalized-input-abstraction">Finding 3 — EvidenceItem Is the Correct Generalized Input Abstraction</h2>
+<p>Logs, metrics, traces, assertions, declarations, and transition records exceed Observation-only semantics.</p>
+<pre><code>Status:
+  PROMOTION RECOMMENDED
+</code></pre>
+<h2 id="finding-4-evidence-is-graph-structured">Finding 4 — Evidence Is Graph-Structured</h2>
+<p>Trace relationships, derivation, aggregation, and correlation require graph semantics.</p>
+<pre><code>Status:
+  PROMOTION RECOMMENDED
+</code></pre>
+<h2 id="finding-5-evidence-independence-depends-on-lineage">Finding 5 — Evidence Independence Depends on Lineage</h2>
+<p>Derived signals must not count as independent corroboration of their own parents.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-6-observer-and-observation-method-matter">Finding 6 — Observer and Observation Method Matter</h2>
+<p>The Evidence-generation mechanism participates in interpretation.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-7-observation-coverage-constrains-claim-scope">Finding 7 — Observation Coverage Constrains Claim Scope</h2>
+<p>Sampled or partial Evidence must limit what the Truth Service claims.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-8-evidence-gaps-must-be-explicit">Finding 8 — Evidence Gaps Must Be Explicit</h2>
+<p>Missing expected or relevant Evidence should remain visible in Evaluation.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-9-coherence-can-be-reconstructed-across-heterogeneous-signals">Finding 9 — Coherence Can Be Reconstructed Across Heterogeneous Signals</h2>
+<p>Agreement does not require identical Evidence forms.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-10-event-time-and-knowledge-time-differ">Finding 10 — Event Time and Knowledge Time Differ</h2>
+<p>Late Evidence may describe a past event accurately without implying the evaluator knew it contemporaneously.</p>
+<pre><code>Status:
+  CONFIRMED_GENERAL
+</code></pre>
+<h2 id="finding-11-observation-mechanisms-can-drift">Finding 11 — Observation Mechanisms Can Drift</h2>
+<p>Changes in instrumentation, schema, coverage, or processing can alter Evidence without changing underlying state.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-12-derived-truth-must-preserve-parent-limitations">Finding 12 — Derived Truth Must Preserve Parent Limitations</h2>
+<p>Sampling, gaps, transformations, and uncertainty should propagate through derived Truth Lineage.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-13-truth-state-composition-requires-cycle-protection">Finding 13 — Truth-State Composition Requires Cycle Protection</h2>
+<p>Derived Evidence and derived Truth must not create circular corroboration.</p>
+<pre><code>Status:
+  ARCHITECTURE REQUIREMENT CANDIDATE
+</code></pre>
+<h2 id="finding-14-stateview-should-preserve-observer-and-coverage">Finding 14 — StateView Should Preserve Observer and Coverage</h2>
+<p>One observer's bounded view may be coherent without representing complete global state.</p>
+<pre><code>Status:
+  CANDIDATE_CORE
+</code></pre>
+<h2 id="finding-15-retention-and-freshness-are-different">Finding 15 — Retention and Freshness Are Different</h2>
+<p>Evidence availability and present operational relevance must remain separate.</p>
+<pre><code>Status:
+  CANDIDATE_GENERAL
+</code></pre>
+<hr>
+<h1 id="108-nine-crosswalk-architecture-check">108. Nine-Crosswalk Architecture Check</h1>
+<p>After:</p>
+<pre><code>NTP
+DNS
+IAM
+PKI
+Policy / Authorization
+Distributed State
+Transactional Systems
+Desired-State Systems
+Telemetry
+</code></pre>
+<p>the generalized kernel is becoming difficult to dismiss as an NTP-specific analogy.</p>
+<h2 id="strong-core-candidates">Strong Core Candidates</h2>
+<pre><code>Claim
+
+Truth Class
+
+Subject / Target
+
+Regime
+
+ReferenceBasis
+
+EvidenceItem
+
+Evidence Graph
+
+Entity / Observer / Participant
+
+Role
+
+ContextEvidence
+
+AuthorityRelationship
+
+Lineage Graph
+
+Qualification
+
+AcceptanceRule
+
+TruthComparison
+
+StateView
+
+ObservationCoverage
+
+EvidenceGap
+
+domain-semantic Coherence
+
+multi-dimensional Drift
+
+Paradox
+
+domain result
+
+Truth-State qualification
+
+MaterializedTruthState
+
+Action / Correction Policy
+
+Revalidation
+
+immutable history
+</code></pre>
+<h2 id="strong-relationship-semantics">Strong Relationship Semantics</h2>
+<pre><code>derives_from
+
+observed_by
+
+produced_by
+
+transformed_from
+
+aggregated_from
+
+correlates_with
+
+depends_on
+
+delegated_by
+
+evaluated_against
+
+precedes
+
+committed_as
+
+materialized_as
+
+supersedes
+
+compensates
+
+reconstructs_from
+
+drifted_from
+
+reconciles_toward
+</code></pre>
+<h2 id="strongly-stable-distinctions">Strongly Stable Distinctions</h2>
+<pre><code>Reality ≠ Observation
+
+Evidence ≠ Truth State
+
+Evidence Absence ≠ Qualified Absence
+
+Derived Evidence ≠ Independent Evidence
+
+Event Time ≠ Knowledge Time
+
+Intent ≠ State
+
+Identity ≠ Authority
+
+Authority ≠ Correctness
+
+Proposal ≠ Commitment
+
+Commitment ≠ Materialization
+
+Evaluation ≠ Action
+
+Recovery ≠ Revalidation
+
+Revalidation ≠ Reconciliation
+
+Negative Domain Result ≠ Evaluation Failure
+
+State Equality ≠ Lineage Equality
+
+Stable Value ≠ Stable Structure
+</code></pre>
+<p>The architecture is now unmistakably relational, graph-structured, and lifecycle-aware.</p>
+<hr>
+<h1 id="109-emerging-architecture-after-observational-truth">109. Emerging Architecture After Observational Truth</h1>
+<p>A provisional architecture now resembles:</p>
+<pre><code>REALITY / OPERATIONAL SUBJECT
+            ↓
+    OBSERVATION BOUNDARY
+            ↓
+       OBSERVER / METHOD
+            ↓
+      EVIDENCE ITEMS
+            │
+   ┌────────┼─────────┐
+   │        │         │
+   ▼        ▼         ▼
+  Logs    Metrics    Traces
+   │        │         │
+   └────────┼─────────┘
+            ↓
+      EVIDENCE GRAPH
+            ↓
+         LINEAGE
+            │
+            ├── provenance
+            ├── derivation
+            ├── transformation
+            ├── correlation
+            └── dependency
+            ↓
+    COVERAGE + GAPS
+            ↓
+      QUALIFICATION
+            ↓
+  DOMAIN-SEMANTIC
+      COHERENCE
+            ↓
+      RECONSTRUCTION
+            ↓
+         DRIFT
+            ↓
+        PARADOX
+            ↓
+     DOMAIN RESULT
+            ↓
+  TRUTH-STATE
+   QUALIFICATION
+            ↓
+      STATE VIEW
+            ↓
+   DERIVED TRUTH
+            ↓
+ TRUTH COMPARISON
+            ↓
+ ACTION / CORRECTION
+            ↓
+     REVALIDATION
+            │
+            └──────► NEW EVIDENCE
+</code></pre>
+<p>The architecture now clearly needs to manage:</p>
+<pre><code>Evidence about reality
+</code></pre>
+<p>rather than pretending:</p>
+<pre><code>Evidence is reality
+</code></pre>
+<p>That distinction may be foundational.</p>
+<hr>
+<h1 id="110-final-crosswalk-challenge">110. Final Crosswalk Challenge</h1>
+<p>Crosswalk #10 examines:</p>
+<pre><code>Supply-Chain Provenance
+  ↓
+Lineage Truth
+</code></pre>
+<p>The governing question becomes:</p>
+<blockquote>
+<p><strong>Where did this artifact, Claim, or Evidence come from?</strong></p>
+</blockquote>
+<p>That final crosswalk should directly pressure the concepts now sitting at the center of the architecture:</p>
+<pre><code>EvidenceItem
+
+Evidence Graph
+
+Lineage Graph
+
+ReferenceBasis
+
+AuthorityRelationship
+
+transformation
+
+derived Evidence
+
+integrity
+
+ContextEvidence
+
+EvidenceDependency
+
+recursive Truth
+
+cycle detection
+</code></pre>
+<p>The central architectural question becomes:</p>
+<blockquote>
+<p><strong>Can the Truth Service reconstruct origin and transformation strongly enough to distinguish authentic lineage from copied, transformed, incomplete, or circular lineage?</strong></p>
+</blockquote>
+<p>That should be the final major test before formal consolidation.</p>
+<hr>
+<h1 id="111-canonical-observational-truth-statement">111. Canonical Observational Truth Statement</h1>
+<blockquote>
+<p><strong>Observational Truth is not the totality of what happened. It is the Regime-qualified account of what a bounded observation system actually produced, preserved, and related as Evidence about underlying activity.</strong></p>
+</blockquote>
+<p>Observational Truth therefore requires the architecture to preserve:</p>
+<pre><code>Subject
+
+Observer
+
+Observation method
+
+Evidence type
+
+Event time
+
+Receipt time
+
+Context
+
+Coverage
+
+Sampling
+
+Transformation
+
+Correlation
+
+Evidence gaps
+
+Lineage
+
+Derived Evidence
+</code></pre>
+<p>without silently converting:</p>
+<pre><code>missing signal
+</code></pre>
+<p>into:</p>
+<pre><code>absent event
+</code></pre>
+<p>or:</p>
+<pre><code>multiple derivatives
+</code></pre>
+<p>into:</p>
+<pre><code>independent corroboration.
+</code></pre>
+<hr>
+<h1 id="112-canonical-crosswalk-finding">112. Canonical Crosswalk Finding</h1>
+<p>Crosswalk #9 demonstrates that:</p>
+<blockquote>
+<p><strong>Evidence is always evidence of something, produced somewhere, through some observation boundary, under some context, and carried through some Lineage.</strong></p>
+</blockquote>
+<p>That sounds simple.</p>
+<p>Architecturally, it changes almost everything.</p>
+<p>A telemetry system may tell us:</p>
+<pre><code>what it observed
+
+when it observed it
+
+where it observed it
+
+how signals relate
+
+which context traveled with them
+</code></pre>
+<p>But the Truth Service must still ask:</p>
+<pre><code>What could this observer actually see?
+
+Was the Evidence sampled?
+
+Was anything expected but missing?
+
+Was the Evidence transformed?
+
+Was it derived from other Evidence?
+
+Are apparently independent signals actually siblings?
+
+Did the observation method change?
+
+Is the Evidence fresh enough for this Claim?
+
+Does absence of Evidence mean absence of event?
+
+What limitations must propagate into derived Truth?
+</code></pre>
+<p>The resulting operational principle is:</p>
+<blockquote>
+<p><strong>Do not ask only whether Evidence supports a Claim. Ask what observational boundary produced the Evidence and what that boundary permits the Claim to mean.</strong></p>
+</blockquote>
+<p>That is Observational Truth.</p>
+<hr>
+<h1 id="113-references">113. References</h1>
+<p>Primary technical references:</p>
+<pre><code>OpenTelemetry Documentation
+Signals
+</code></pre>
+<p>The OpenTelemetry signal documentation describes telemetry signals as system outputs that describe underlying operating-system and application activity and identifies supported signals including traces, metrics, logs, and baggage. 【1-2f5614】</p>
+<pre><code>OpenTelemetry Documentation
+Traces
+</code></pre>
+<p>The OpenTelemetry trace documentation describes traces as representing the path of a request through an application and shows spans related through trace IDs and parent relationships. 【2-52c21f】</p>
+<p>These references establish the telemetry mechanisms used as the bounded operational reference for this crosswalk.</p>
+<p>RTT terminology, Observational Truth, EvidenceGap, ObservationCoverage, StateView, Evidence dependency, derived-Truth limitation propagation, cycle-risk analysis, Coherence reconstruction, Drift dimensions, and proposed architectural generalizations remain the analytical contribution of Resonance Truth.</p>
+<hr>
+<h2 id="canonical-summary">Canonical Summary</h2>
+<p>Crosswalk #1 asked:</p>
+<pre><code>When?
+</code></pre>
+<p>Crosswalk #2 asked:</p>
+<pre><code>Where?
+</code></pre>
+<p>Crosswalk #3 asked:</p>
+<pre><code>Who?
+</code></pre>
+<p>Crosswalk #4 asked:</p>
+<pre><code>Is it intact?
+</code></pre>
+<p>Crosswalk #5 asked:</p>
+<pre><code>May it act?
+</code></pre>
+<p>Crosswalk #6 asked:</p>
+<pre><code>What state did the system accept?
+</code></pre>
+<p>Crosswalk #7 asked:</p>
+<pre><code>What became committed?
+</code></pre>
+<p>Crosswalk #8 asked:</p>
+<pre><code>What should the state be?
+</code></pre>
+<p>Crosswalk #9 asks:</p>
+<pre><code>What did we actually see?
+</code></pre>
+<p>And telemetry answers with an important warning:</p>
+<pre><code>seeing something
+  proves something was observed
+</code></pre>
+<p>but:</p>
+<pre><code>not seeing something
+  does not automatically prove it was absent
+</code></pre>
+<p>because between:</p>
+<pre><code>REALITY
+</code></pre>
+<p>and:</p>
+<pre><code>EVIDENCE
+</code></pre>
+<p>there is always an observational path:</p>
+<pre><code>instrumentation
+sampling
+context
+collection
+propagation
+transformation
+correlation
+retention
+</code></pre>
+<p>That path is part of the truth structure.</p>
+<p><strong>NTP gave truth a reference.</strong></p>
+<p><strong>DNS gave it scope.</strong></p>
+<p><strong>IAM gave it identity relationships.</strong></p>
+<p><strong>PKI gave it an evidence chain.</strong></p>
+<p><strong>Policy gave it permission.</strong></p>
+<p><strong>Distributed systems gave it accepted state.</strong></p>
+<p><strong>Transactions gave it committed history.</strong></p>
+<p><strong>Desired-state systems gave it intention and Drift.</strong></p>
+<p><strong>Telemetry finally forces the observer into the model and asks the question every investigator eventually has to ask:</strong></p>
+<blockquote>
+<p><strong>What could we actually see?</strong></p>
+</blockquote>
+<p><strong>Crosswalk #10 now follows those observations backward and asks where every piece came from.</strong></p>
   </main>
 </body>
 </html>
