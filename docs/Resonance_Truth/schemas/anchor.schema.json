@@ -1,1 +1,175 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/Resonance_Truth/schemas/anchor.schema.json",
+  "title": "RTT Resonance Truth Anchor",
+  "description": "Schema for a bounded reference Anchor used by the RTT Resonance Truth Service v0.1 model. An Anchor identifies a recognized reference within a declared domain and operational regime. Anchor authority is bounded and does not imply universal correctness.",
+  "type": "object",
+
+  "required": [
+    "anchor_id",
+    "name",
+    "anchor_type",
+    "authority",
+    "domain",
+    "status",
+    "created_at",
+    "updated_at"
+  ],
+
+  "properties": {
+    "anchor_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for the Anchor."
+    },
+
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable Anchor name."
+    },
+
+    "anchor_type": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Domain-specific classification of the Anchor, such as temporal_reference, trust_anchor, namespace_authority, or another bounded reference type."
+    },
+
+    "authority": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable description of the authority or reference relationship represented by this Anchor. This field does not imply universal or context-free authority."
+    },
+
+    "domain": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Operational domain within which the Anchor is meaningful."
+    },
+
+    "regime_ids": {
+      "type": "array",
+      "description": "Identifiers of operational Regimes that explicitly recognize or use this Anchor.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "degraded",
+        "withdrawn",
+        "revoked",
+        "unknown"
+      ],
+      "description": "Current lifecycle state of the Anchor."
+    },
+
+    "valid_from": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Beginning of the Anchor's known validity interval, when applicable."
+    },
+
+    "valid_until": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "End of the Anchor's known validity interval, when applicable. Null indicates no known explicit end."
+    },
+
+    "revocation_reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional reference identifying revocation, withdrawal, replacement, or related lifecycle information."
+    },
+
+    "limitations": {
+      "type": "array",
+      "description": "Explicit limitations on the scope or interpretation of this Anchor.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp at which the Anchor record was created."
+    },
+
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the most recent Anchor-record update."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional domain-specific or implementation metadata. Metadata must not override canonical Anchor fields.",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+
+  "additionalProperties": false,
+
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "revoked"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "description": "A revoked Anchor may remain historically referenceable. Revocation changes current qualification and does not erase prior evaluations."
+      }
+    }
+  ],
+
+  "examples": [
+    {
+      "anchor_id": "anchor-utc",
+      "name": "UTC Reference",
+      "anchor_type": "temporal_reference",
+      "authority": "Fixture temporal reference",
+      "domain": "temporal",
+      "regime_ids": [
+        "regime-display-clock"
+      ],
+      "status": "active",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": null,
+      "revocation_reference": null,
+      "limitations": [
+        "Synthetic deterministic fixture reference."
+      ],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "synthetic": true
+      }
+    }
+  ]
+}
