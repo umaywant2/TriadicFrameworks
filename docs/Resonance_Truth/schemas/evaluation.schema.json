@@ -1,1 +1,630 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/Resonance_Truth/schemas/evaluation.schema.json",
+  "title": "RTT Resonance Truth Evaluation",
+  "description": "Schema for one bounded Evaluation performed by the RTT Resonance Truth Service v0.1. An Evaluation records the Claim, Regime, input observations, qualification decisions, analytical result references, synthesis outcome, and evaluator context used to produce a Truth State. Completed Evaluations are historical records; Revalidation creates a new Evaluation rather than rewriting the prior one.",
+  "type": "object",
+
+  "required": [
+    "evaluation_id",
+    "claim_id",
+    "regime_id",
+    "observation_ids",
+    "qualification_results",
+    "selected_observation_ids",
+    "excluded_observation_ids",
+    "evaluated_at",
+    "evaluator_version",
+    "status"
+  ],
+
+  "properties": {
+    "evaluation_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for this Evaluation."
+    },
+
+    "claim_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the Claim being evaluated."
+    },
+
+    "regime_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the operational Regime governing this Evaluation."
+    },
+
+    "observation_ids": {
+      "type": "array",
+      "description": "Identifiers of all observations supplied as input to this v0.1 Evaluation.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+
+    "qualification_results": {
+      "type": "array",
+      "description": "Qualification result for each observation considered during this Evaluation.",
+      "items": {
+        "$ref": "#/$defs/qualification_result"
+      }
+    },
+
+    "selected_observation_ids": {
+      "type": "array",
+      "description": "Qualified observations selected to participate in Truth-State synthesis.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+
+    "excluded_observation_ids": {
+      "type": "array",
+      "description": "Observations excluded from Truth-State synthesis. Exclusion does not imply that the observation is false or that its historical record should be deleted.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+
+    "dissenting_observation_ids": {
+      "type": "array",
+      "description": "Qualified observations preserved as materially divergent Evidence without necessarily participating in the synthesized accepted value.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "anchor_ids": {
+      "type": "array",
+      "description": "Identifiers of v0.1 Anchors participating in this Evaluation.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "source_ids": {
+      "type": "array",
+      "description": "Identifiers of Sources represented in the Evaluation input.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "prior_truth_state_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of a prior Truth State relevant to lifecycle evaluation, freshness, Drift, or Revalidation."
+    },
+
+    "coherence_state_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Identifier of the Coherence State produced during this Evaluation, when applicable."
+    },
+
+    "drift_state_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Identifier of the Drift State produced during this Evaluation, when applicable."
+    },
+
+    "paradox_ids": {
+      "type": "array",
+      "description": "Identifiers of unresolved Paradox records produced or preserved by this Evaluation.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "truth_state_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Identifier of the Truth State produced by this Evaluation. May be null while Evaluation is incomplete or when serialization occurs before Truth-State synthesis."
+    },
+
+    "correction_policy_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Identifier of the downstream Correction Policy associated with the resulting Truth State, when one has been produced."
+    },
+
+    "requested_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier or description of the actor, process, fixture suite, or service requesting this Evaluation."
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "running",
+        "completed",
+        "failed"
+      ],
+      "description": "Lifecycle state of the Evaluation process. This is not the Truth-State qualification or domain result."
+    },
+
+    "evaluated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Deterministic or runtime timestamp associated with this Evaluation."
+    },
+
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Timestamp at which the Evaluation completed, when applicable."
+    },
+
+    "evaluator_version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Version identifier of the evaluator that performed this Evaluation."
+    },
+
+    "decision_reasons": {
+      "type": "array",
+      "description": "Structured reasons describing Evaluation-level decisions or limitations that are not more appropriately attached to Qualification, Coherence, Drift, Paradox, or Truth-State records.",
+      "items": {
+        "$ref": "#/$defs/decision_reason"
+      },
+      "default": []
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional domain-specific or implementation metadata. Metadata must not override canonical Evaluation fields.",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+
+  "$defs": {
+    "qualification_result": {
+      "type": "object",
+      "required": [
+        "observation_id",
+        "status",
+        "reasons"
+      ],
+      "properties": {
+        "observation_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Identifier of the observation being qualified."
+        },
+
+        "status": {
+          "type": "string",
+          "enum": [
+            "qualified",
+            "degraded",
+            "rejected",
+            "expired",
+            "indeterminate"
+          ],
+          "description": "Result of qualification for this observation."
+        },
+
+        "reasons": {
+          "type": "array",
+          "description": "Structured reasons supporting the qualification result. Qualified observations may legitimately have an empty reasons array when no exceptional condition requires explanation.",
+          "items": {
+            "$ref": "#/$defs/decision_reason"
+          }
+        },
+
+        "evaluated_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Optional timestamp associated with this individual qualification result."
+        },
+
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "default": {}
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "decision_reason": {
+      "type": "object",
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable machine-readable reason code."
+        },
+
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable explanation of the decision."
+        },
+
+        "evidence_references": {
+          "type": "array",
+          "description": "Identifiers of observations, sources, anchors, lineage objects, regimes, prior Truth States, or other relevant Evaluation inputs.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "regime_rule": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional governing Regime rule associated with the decision."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "completed"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "completed_at",
+          "truth_state_id"
+        ],
+        "properties": {
+          "completed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "truth_state_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "failed"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "truth_state_id": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ],
+
+  "examples": [
+    {
+      "evaluation_id": "evaluation-ntp-coherent-001",
+      "claim_id": "claim-temporal-coherent-001",
+      "regime_id": "regime-display-clock",
+      "observation_ids": [
+        "obs-ntp-a-001",
+        "obs-ntp-b-001",
+        "obs-ntp-c-001"
+      ],
+      "qualification_results": [
+        {
+          "observation_id": "obs-ntp-a-001",
+          "status": "qualified",
+          "reasons": [],
+          "evaluated_at": "2026-01-01T12:00:01Z",
+          "metadata": {}
+        },
+        {
+          "observation_id": "obs-ntp-b-001",
+          "status": "qualified",
+          "reasons": [],
+          "evaluated_at": "2026-01-01T12:00:01Z",
+          "metadata": {}
+        },
+        {
+          "observation_id": "obs-ntp-c-001",
+          "status": "qualified",
+          "reasons": [],
+          "evaluated_at": "2026-01-01T12:00:01Z",
+          "metadata": {}
+        }
+      ],
+      "selected_observation_ids": [
+        "obs-ntp-a-001",
+        "obs-ntp-b-001",
+        "obs-ntp-c-001"
+      ],
+      "excluded_observation_ids": [],
+      "dissenting_observation_ids": [],
+      "anchor_ids": [
+        "anchor-utc"
+      ],
+      "source_ids": [
+        "source-ntp-a",
+        "source-ntp-b",
+        "source-ntp-c"
+      ],
+      "prior_truth_state_id": null,
+      "coherence_state_id": "coherence-ntp-coherent-001",
+      "drift_state_id": "drift-ntp-coherent-001",
+      "paradox_ids": [],
+      "truth_state_id": "truth-state-ntp-coherent-001",
+      "correction_policy_id": "correction-ntp-coherent-001",
+      "requested_by": "fixture-test-suite",
+      "status": "completed",
+      "evaluated_at": "2026-01-01T12:00:01Z",
+      "completed_at": "2026-01-01T12:00:01Z",
+      "evaluator_version": "0.1.0",
+      "decision_reasons": [
+        {
+          "code": "EVALUATION_COMPLETED",
+          "message": "Three independent observations qualified and participated in the synthesized temporal Truth State.",
+          "evidence_references": [
+            "obs-ntp-a-001",
+            "obs-ntp-b-001",
+            "obs-ntp-c-001"
+          ],
+          "regime_rule": "minimum_independent_sources"
+        }
+      ],
+      "metadata": {
+        "synthetic": true
+      }
+    },
+
+    {
+      "evaluation_id": "evaluation-ntp-outlier-001",
+      "claim_id": "claim-temporal-outlier-001",
+      "regime_id": "regime-display-clock",
+      "observation_ids": [
+        "obs-ntp-a-001",
+        "obs-ntp-b-001",
+        "obs-ntp-c-001"
+      ],
+      "qualification_results": [
+        {
+          "observation_id": "obs-ntp-a-001",
+          "status": "qualified",
+          "reasons": [],
+          "evaluated_at": "2026-01-01T12:00:01Z",
+          "metadata": {}
+        },
+        {
+          "observation_id": "obs-ntp-b-001",
+          "status": "qualified",
+          "reasons": [],
+          "evaluated_at": "2026-01-01T12:00:01Z",
+          "metadata": {}
+        },
+        {
+          "observation_id": "obs-ntp-c-001",
+          "status": "qualified",
+          "reasons": [],
+          "evaluated_at": "2026-01-01T12:00:01Z",
+          "metadata": {}
+        }
+      ],
+      "selected_observation_ids": [
+        "obs-ntp-a-001",
+        "obs-ntp-b-001"
+      ],
+      "excluded_observation_ids": [],
+      "dissenting_observation_ids": [
+        "obs-ntp-c-001"
+      ],
+      "anchor_ids": [
+        "anchor-utc"
+      ],
+      "source_ids": [
+        "source-ntp-a",
+        "source-ntp-b",
+        "source-ntp-c"
+      ],
+      "prior_truth_state_id": null,
+      "coherence_state_id": "coherence-ntp-outlier-001",
+      "drift_state_id": "drift-ntp-outlier-001",
+      "paradox_ids": [],
+      "truth_state_id": "truth-state-ntp-outlier-001",
+      "correction_policy_id": "correction-ntp-outlier-001",
+      "requested_by": "fixture-test-suite",
+      "status": "completed",
+      "evaluated_at": "2026-01-01T12:00:01Z",
+      "completed_at": "2026-01-01T12:00:01Z",
+      "evaluator_version": "0.1.0",
+      "decision_reasons": [
+        {
+          "code": "QUALIFIED_DISSENT_PRESERVED",
+          "message": "One qualified observation remains materially divergent and is preserved as dissent while two independent observations form the selected coherent temporal cluster.",
+          "evidence_references": [
+            "obs-ntp-a-001",
+            "obs-ntp-b-001",
+            "obs-ntp-c-001"
+          ],
+          "regime_rule": "minimum_independent_sources"
+        }
+      ],
+      "metadata": {
+        "synthetic": true
+      }
+    },
+
+    {
+      "evaluation_id": "evaluation-ntp-indeterminate-001",
+      "claim_id": "claim-temporal-indeterminate-001",
+      "regime_id": "regime-display-clock",
+      "observation_ids": [
+        "obs-ntp-a-001",
+        "obs-ntp-b-001",
+        "obs-ntp-c-001"
+      ],
+      "qualification_results": [
+        {
+          "observation_id": "obs-ntp-a-001",
+          "status": "expired",
+          "reasons": [
+            {
+              "code": "OBSERVATION_EXPIRED",
+              "message": "Observation expired before the deterministic evaluation time.",
+              "evidence_references": [
+                "obs-ntp-a-001"
+              ],
+              "regime_rule": "maximum_age_seconds"
+            }
+          ],
+          "evaluated_at": "2026-01-01T12:01:00Z",
+          "metadata": {}
+        },
+        {
+          "observation_id": "obs-ntp-b-001",
+          "status": "rejected",
+          "reasons": [
+            {
+              "code": "SOURCE_UNAVAILABLE",
+              "message": "The producing Source is unavailable and the fixture provides no rule permitting the observation to participate in current synthesis.",
+              "evidence_references": [
+                "obs-ntp-b-001",
+                "source-ntp-b"
+              ],
+              "regime_rule": null
+            }
+          ],
+          "evaluated_at": "2026-01-01T12:01:00Z",
+          "metadata": {}
+        },
+        {
+          "observation_id": "obs-ntp-c-001",
+          "status": "indeterminate",
+          "reasons": [
+            {
+              "code": "LINEAGE_INCOMPLETE",
+              "message": "The observation cannot be traced to a qualified temporal reference under the declared Regime.",
+              "evidence_references": [
+                "obs-ntp-c-001",
+                "source-ntp-c"
+              ],
+              "regime_rule": null
+            }
+          ],
+          "evaluated_at": "2026-01-01T12:01:00Z",
+          "metadata": {}
+        }
+      ],
+      "selected_observation_ids": [],
+      "excluded_observation_ids": [
+        "obs-ntp-a-001",
+        "obs-ntp-b-001",
+        "obs-ntp-c-001"
+      ],
+      "dissenting_observation_ids": [],
+      "anchor_ids": [
+        "anchor-utc"
+      ],
+      "source_ids": [
+        "source-ntp-a",
+        "source-ntp-b",
+        "source-ntp-c"
+      ],
+      "prior_truth_state_id": null,
+      "coherence_state_id": "coherence-ntp-indeterminate-001",
+      "drift_state_id": "drift-ntp-indeterminate-001",
+      "paradox_ids": [],
+      "truth_state_id": "truth-state-ntp-indeterminate-001",
+      "correction_policy_id": "correction-ntp-indeterminate-001",
+      "requested_by": "fixture-test-suite",
+      "status": "completed",
+      "evaluated_at": "2026-01-01T12:01:00Z",
+      "completed_at": "2026-01-01T12:01:00Z",
+      "evaluator_version": "0.1.0",
+      "decision_reasons": [
+        {
+          "code": "NO_QUALIFIED_SYNTHESIS_SET",
+          "message": "No observations remain sufficiently qualified to participate in current Truth-State synthesis.",
+          "evidence_references": [
+            "obs-ntp-a-001",
+            "obs-ntp-b-001",
+            "obs-ntp-c-001"
+          ],
+          "regime_rule": "minimum_independent_sources"
+        }
+      ],
+      "metadata": {
+        "synthetic": true
+      }
+    }
+  ]
+}
