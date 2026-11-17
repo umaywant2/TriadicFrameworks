@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_09_telemetry_observational_truth_" src="https://github.com/user-attachments/assets/5e7f6185-f7a9-4996-807c-94558686aa0a" />
+
 # Crosswalk #9 — Telemetry and Observational Truth
 
 **Module:** Resonance Truth  
