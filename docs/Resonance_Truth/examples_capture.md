@@ -17,6 +17,7 @@ The current Resonance_Truth module treats truth primarily as a semantic field mo
 This is a structural shortlist, not a popularity ranking.
 
 | # | System | Operational truth required | Truth mechanism | Failure when truth drifts |
+|--|--|--|--|--|
 | 1 |	Time synchronization | What time is it? | NTP/PTP, reference clocks, strata, peer comparison | Logs misalign, certificates fail, transactions reorder, distributed coordination breaks |
 | 2 | Naming and resolution |	Where is the named thing? |	DNS, authoritative zones, delegation, caching, TTLs	| Services become unreachable or traffic is misdirected |
 | 3 |	Identity and authentication |	Who or what is making the request? | Identity providers, directories, credentials, MFA, certificates | Impersonation, denial of access, privilege misuse |
@@ -71,6 +72,7 @@ That makes NTP an excellent bridge between classical infrastructure and RTT.
 ## NTP translated into RTT language
 
 | **NTP concept** | **RTT interpretation** |
+|--|--|
 | Reference clock | truth anchor |
 | Stratum |	lineage distance from anchor |
 | Time | sample	observation |
@@ -168,6 +170,7 @@ Yes. With the live Resonance_Truth module in view, I’d make the crosswalk expl
 ## RTT Crosswalk: Top 10 Operational Truth Systems
 
 | # |	Modern system |	Operational truth question | Truth anchor | Resonance / observation |	Coherence mechanism |	Drift signal | Paradox condition |	Regime boundary |	RTT lesson |
+|--|--|--|--|--|--|--|--|--|--|
 | 1 |	Time synchronization | What time is it? | Reference clock / authoritative time source | Multiple clock observations propagate through a timing network | Sources are compared and a usable local time is maintained	| Offset, delay, jitter, clock divergence |	Valid sources disagree about current time	Loss/change of reference, synchronization state, or trust |	Truth can be approximate yet operationally coherent. |
 | 2 |	DNS / naming | Where is this named thing?	| Authoritative namespace |	Resolvers observe authoritative and cached records | Delegation and authority establish which answer governs a name |	Stale caches, inconsistent records, propagation differences |	Different observers legitimately see different answers during change | Authority/delegation or record changes | Truth can be scoped by authority, namespace, and lifetime. |
 | 3 |	Identity / authentication | Who are you? | Identity authority plus credential |	A presented identity claim is evaluated against trusted evidence | Credential validation binds actor to asserted identity	Expired, revoked, compromised, or stale identity information	| An actor can be authentic in one context and untrusted in another	| Authentication context or trust domain changes | Identity truth is relational, not intrinsic. |
@@ -184,6 +187,7 @@ Yes. With the live Resonance_Truth module in view, I’d make the crosswalk expl
 The interesting bit appears when we stop looking horizontally and read down the columns.
 
 | **RTT dimension** |	**Operational interpretation** |
+|--|--|
 | **Truth Anchor** | Where a claim ultimately derives authority |
 | **Resonance** |	How observations of the claim propagate through the system |
 | **Coherence** |	Whether observations remain mutually usable inside the current regime |
@@ -202,6 +206,7 @@ That sits naturally beside the existing Truth_Operator_Table.md, Truth_Coherence
 There are actually four different relationships to truth hiding in the ten examples:
 
 | **Truth relationship** | **Representative systems**	| **Structural question** |
+|--|--|--|
 | **Reference** |	NTP, DNS, PKI	| What trusted reference should I consult? |
 | **Validation** | Identity, authorization, supply chain | Does this claim satisfy the governing constraints? |
 | **Agreement** |	Consensus, financial ledgers | What state will participants accept as authoritative? |
@@ -1104,17 +1109,20 @@ Absolutely. The live Resonance_Truth module already gives us a clean spine rathe
 
 I’d map the truth classes into that existing structure first, then add one dedicated operational crosswalk page.
 
-Truth Classes → Existing Module Sections
-Truth class	Operational question	Primary module section	Secondary section	RTT emphasisTemporal Truth	When is it true?	Truth_Regime_Transitions.md	Truth_Drift_Walkthrough.md	Temp · freshness · transition · expiration
-Locational Truth	Where is it true / where is the named thing?	Truth_Coherence_Study.md	Truth_Regime_Transitions.md	scope · namespace · observer position
-Identity Truth	Who or what is this?	Truth_Operator_Table.md	Truth_Coherence_Study.md	identity persistence · recognition · qualification
-Integrity Truth	Is it still what it claims to be?	Truth_Coherence_Study.md	Truth_Drift_Walkthrough.md	coherence · mutation · verification
-Authority Truth	Who may declare or act?	Truth_Regime_Transitions.md	Truth_Paradox_Analysis.md	authority scope · regime boundaries
-State Truth	What is presently the case?	Truth_Coherence_Study.md	Truth_Drift_Walkthrough.md	observed state · declared state · deviation
-Transactional Truth	What became committed?	Truth_Regime_Transitions.md	Truth_Operator_Table.md	transition · commitment · accepted history
-Intent Truth	What should the state be?	Truth_vs_Belief_vs_Evidence_RTT_comparison.md	Truth_Coherence_Study.md	declaration versus observation
-Observational Truth	What was actually observed?	Truth_vs_Belief_vs_Evidence_RTT_comparison.md	Truth_Coherence_Study.md	evidence · observer · reconstruction
-Lineage Truth	Where did this claim come from?	Truth_Drift_Walkthrough.md	Truth_Operator_Table.md	provenance · transformation · inherited drift
+## Truth Classes → Existing Module Sections
+
+| Truth class | Operational question | Primary module section | Secondary section | RTT emphasis |
+|--|--|--|--|--|
+| Temporal Truth | When is it true? | Truth_Regime_Transitions.md	Truth_Drift_Walkthrough.md	| Temp · freshness · transition · expiration |
+| Locational Truth |	Where is it true / where is the named thing? | Truth_Coherence_Study.md	| Truth_Regime_Transitions.md	scope · namespace · observer position |
+| Identity Truth | Who or what is this? | Truth_Operator_Table.md	Truth_Coherence_Study.md | identity persistence · recognition · qualification |
+| Integrity Truth	| Is it still what it claims to be? | Truth_Coherence_Study.md | Truth_Drift_Walkthrough.md	| coherence · mutation · verification |
+| Authority Truth	| Who may declare or act? | Truth_Regime_Transitions.md | Truth_Paradox_Analysis.md | authority scope · regime boundaries |
+| State Truth | What is presently the case? | Truth_Coherence_Study.md | Truth_Drift_Walkthrough.md	| observed state · declared state · deviation |
+| Transactional Truth |	What became committed? | Truth_Regime_Transitions.md | Truth_Operator_Table.md | transition · commitment · accepted history |
+| Intent Truth	| What should the state be? | Truth_vs_Belief_vs_Evidence_RTT_comparison.md | Truth_Coherence_Study.md | declaration versus observation |
+| Observational Truth |	What was actually observed? | Truth_vs_Belief_vs_Evidence_RTT_comparison.md | Truth_Coherence_Study.md |	evidence · observer · reconstruction |
+| Lineage Truth |	Where did this claim come from? | Truth_Drift_Walkthrough.md |	Truth_Operator_Table.md | provenance · transformation · inherited drift |
 
 All of those target files already exist in the live module.
 
