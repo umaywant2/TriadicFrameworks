@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_08_desired_state_intent_truth_" src="https://github.com/user-attachments/assets/25b57285-cb62-4238-9eaf-1d324b837bbb" />
+
 # Crosswalk #8 — Desired-State Systems and Intent Truth
 
 **Module:** Resonance Truth  
