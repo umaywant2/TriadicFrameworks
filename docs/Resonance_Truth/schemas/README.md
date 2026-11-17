@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_schemas_" src="https://github.com/user-attachments/assets/87314069-7ceb-4ff0-9aed-e144e00a5f5d" />
+
 # Resonance Truth — Schemas
 
 > **Machine-readable contracts for the RTT Resonance Truth Service**
