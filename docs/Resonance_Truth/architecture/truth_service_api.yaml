@@ -1,1 +1,3042 @@
-. 
+openapi: 3.1.0
+
+info:
+  title: RTT Resonance Truth Service API
+  version: 0.1.0
+  summary: Regime-aware operational truth-state evaluation
+  description: |
+    The RTT Resonance Truth Service evaluates claims against qualified
+    observations, source lineage, coherence, drift, paradox, freshness,
+    and declared operational regimes.
+
+    The service does not return universal or context-free truth.
+
+    It returns qualified Truth States that expose:
+
+    - what was claimed
+    - what was observed
+    - where observations originated
+    - which anchors and sources participated
+    - whether observations cohere
+    - how accepted state has drifted
+    - which contradictions remain unresolved
+    - which regime governs interpretation
+    - how long the result remains usable
+    - when revalidation is required
+
+    Core architectural distinctions:
+
+    - Observation is not Truth State.
+    - Evaluation is not Correction.
+    - Authority is not Correctness.
+    - Coherence is not Consensus.
+    - Rejection is not Falsehood.
+    - Uncertainty is not Failure.
+    - Paradox is not Error.
+    - Acceptance is not Permanent.
+
+    The initial reference implementation is based on NTP-like Temporal Truth
+    fixtures. The API is designed to support additional Truth Classes without
+    assuming that every domain behaves like time synchronization.
+
+  contact:
+    name: TriadicFrameworks
+    url: https://www.triadicframeworks.org/Resonance_Truth/
+
+  license:
+    name: Project License
+    identifier: LicenseRef-TriadicFrameworks
+
+servers:
+  - url: http://localhost:8080
+    description: Local reference implementation
+
+  - url: https://api.example.org
+    description: Example deployment only
+
+tags:
+  - name: Service
+    description: Service metadata and health
+
+  - name: Claims
+    description: Truth claims submitted for evaluation
+
+  - name: Observations
+    description: Evidence associated with claims
+
+  - name: Evaluations
+    description: Regime-qualified claim evaluations
+
+  - name: Truth States
+    description: Synthesized operational Truth States
+
+  - name: Sources
+    description: Observation-producing sources
+
+  - name: Anchors
+    description: Bounded reference authorities
+
+  - name: Regimes
+    description: Operational evaluation boundaries
+
+  - name: Lineage
+    description: Provenance and transformation paths
+
+  - name: Revalidation
+    description: Truth-State freshness and lifecycle reevaluation
+
+  - name: Research Scoring
+    description: |
+      Research-plane scoring for operational truth reference systems.
+
+      Research scores are separate from runtime claim evaluation and MUST NOT
+      be interpreted as runtime confidence values.
+
+paths:
+  /v1:
+    get:
+      tags:
+        - Service
+      operationId: getServiceDocument
+      summary: Retrieve the service document
+      description: |
+        Returns the service version, supported Truth Classes, lifecycle states,
+        coherence states, paradox types, and correction modes.
+      responses:
+        "200":
+          description: Service document
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ServiceDocument"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /health:
+    get:
+      tags:
+        - Service
+      operationId: getHealth
+      summary: Retrieve service health
+      description: |
+        Returns implementation health only.
+
+        This endpoint does not evaluate the truth of submitted claims.
+      responses:
+        "200":
+          description: Service is available
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+        "503":
+          description: Service is unavailable
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/Problem"
+
+  /v1/claims:
+    post:
+      tags:
+        - Claims
+      operationId: createClaim
+      summary: Register a truth claim
+      description: |
+        Registers a claim and its initial Truth Classes.
+
+        Registration does not evaluate the claim and does not imply that the
+        claim is true, false, supported, or rejected.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClaimCreateRequest"
+            examples:
+              temporalClaim:
+                summary: Temporal Truth claim
+                value:
+                  statement: The current reference time is 2026-11-17T09:00:00Z.
+                  truth_classes:
+                    - temporal
+                  intended_use: Synchronize a low-consequence display clock.
+                  external_reference: ntp-example-001
+                  metadata:
+                    reference_system: NTP
+      responses:
+        "201":
+          description: Claim registered
+          headers:
+            Location:
+              description: URI of the registered Claim
+              schema:
+                type: string
+                format: uri-reference
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Claim"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    get:
+      tags:
+        - Claims
+      operationId: listClaims
+      summary: List registered claims
+      parameters:
+        - $ref: "#/components/parameters/TruthClassQuery"
+        - $ref: "#/components/parameters/ClaimStatusQuery"
+        - $ref: "#/components/parameters/LimitQuery"
+        - $ref: "#/components/parameters/CursorQuery"
+      responses:
+        "200":
+          description: Claims page
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ClaimCollection"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/claims/{claim_id}:
+    parameters:
+      - $ref: "#/components/parameters/ClaimIdPath"
+
+    get:
+      tags:
+        - Claims
+      operationId: getClaim
+      summary: Retrieve a claim
+      responses:
+        "200":
+          description: Registered Claim
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Claim"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/claims/{claim_id}/observations:
+    parameters:
+      - $ref: "#/components/parameters/ClaimIdPath"
+
+    post:
+      tags:
+        - Observations
+      operationId: createObservation
+      summary: Add an observation to a claim
+      description: |
+        Registers evidence associated with a Claim.
+
+        Adding an Observation does not automatically qualify it for synthesis.
+        Qualification occurs during Evaluation.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ObservationCreateRequest"
+            examples:
+              ntpObservation:
+                summary: NTP-like temporal observation
+                value:
+                  source_id: src-ntp-a
+                  anchor_id: anchor-utc
+                  value:
+                    timestamp: 2026-11-17T09:00:00.014Z
+                    offset_ms: 14.0
+                    delay_ms: 21.7
+                    jitter_ms: 1.8
+                    dispersion_ms: 3.1
+                  observed_at: 2026-11-17T09:00:00.014Z
+                  received_at: 2026-11-17T09:00:00.025Z
+                  expires_at: 2026-11-17T09:05:00Z
+                  lineage:
+                    - sequence: 1
+                      entity_type: anchor
+                      entity_id: anchor-utc
+                      relation: referenced_by
+                    - sequence: 2
+                      entity_type: source
+                      entity_id: src-ntp-a
+                      relation: observed_through
+                  metadata:
+                    protocol: NTP
+                    stratum: 2
+      responses:
+        "201":
+          description: Observation registered
+          headers:
+            Location:
+              description: URI of the registered Observation
+              schema:
+                type: string
+                format: uri-reference
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Observation"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    get:
+      tags:
+        - Observations
+      operationId: listClaimObservations
+      summary: List observations associated with a claim
+      parameters:
+        - $ref: "#/components/parameters/QualificationStatusQuery"
+        - $ref: "#/components/parameters/SourceIdQuery"
+        - $ref: "#/components/parameters/LimitQuery"
+        - $ref: "#/components/parameters/CursorQuery"
+      responses:
+        "200":
+          description: Observations page
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ObservationCollection"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/claims/{claim_id}/evaluate:
+    parameters:
+      - $ref: "#/components/parameters/ClaimIdPath"
+
+    post:
+      tags:
+        - Evaluations
+      operationId: evaluateClaim
+      summary: Evaluate a claim within a declared regime
+      description: |
+        Creates an immutable Evaluation and synthesizes a Truth State from:
+
+        - the Claim
+        - selected Observations
+        - Source and Anchor relationships
+        - Lineage
+        - the declared Regime
+        - qualification results
+        - coherence analysis
+        - drift analysis
+        - registered Paradoxes
+
+        A successful Evaluation may return an Indeterminate, Contested,
+        Rejected, or Expired Truth State.
+
+        Such states are successful service results, not API errors.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EvaluationCreateRequest"
+            examples:
+              evaluateTemporalClaim:
+                summary: Evaluate under a low-consequence temporal regime
+                value:
+                  regime_id: regime-display-clock
+                  observation_ids:
+                    - obs-ntp-a
+                    - obs-ntp-b
+                    - obs-ntp-c
+                  correction_policy:
+                    mode: gradual
+                    reason: Apply bounded temporal correction without discontinuity.
+                    maximum_adjustment: 100
+                    adjustment_unit: milliseconds
+                  requested_by: reference-test-suite
+      responses:
+        "201":
+          description: Evaluation completed and Truth State synthesized
+          headers:
+            Location:
+              description: URI of the immutable Evaluation
+              schema:
+                type: string
+                format: uri-reference
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EvaluationResult"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/claims/{claim_id}/truth-state:
+    parameters:
+      - $ref: "#/components/parameters/ClaimIdPath"
+
+    get:
+      tags:
+        - Truth States
+      operationId: getCurrentClaimTruthState
+      summary: Retrieve the current Truth State for a claim
+      description: |
+        Returns the most recent non-superseded Truth State for the Claim.
+
+        Historical Truth States remain accessible through the Evaluation and
+        Truth-State endpoints.
+      responses:
+        "200":
+          description: Current Truth State
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TruthState"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/observations/{observation_id}:
+    parameters:
+      - $ref: "#/components/parameters/ObservationIdPath"
+
+    get:
+      tags:
+        - Observations
+      operationId: getObservation
+      summary: Retrieve an observation
+      responses:
+        "200":
+          description: Observation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Observation"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/evaluations:
+    get:
+      tags:
+        - Evaluations
+      operationId: listEvaluations
+      summary: List evaluations
+      parameters:
+        - $ref: "#/components/parameters/ClaimIdQuery"
+        - $ref: "#/components/parameters/RegimeIdQuery"
+        - $ref: "#/components/parameters/TruthStatusQuery"
+        - $ref: "#/components/parameters/LimitQuery"
+        - $ref: "#/components/parameters/CursorQuery"
+      responses:
+        "200":
+          description: Evaluations page
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EvaluationCollection"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/evaluations/{evaluation_id}:
+    parameters:
+      - $ref: "#/components/parameters/EvaluationIdPath"
+
+    get:
+      tags:
+        - Evaluations
+      operationId: getEvaluation
+      summary: Retrieve an immutable evaluation
+      responses:
+        "200":
+          description: Evaluation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Evaluation"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/evaluations/{evaluation_id}/explanation:
+    parameters:
+      - $ref: "#/components/parameters/EvaluationIdPath"
+
+    get:
+      tags:
+        - Evaluations
+      operationId: explainEvaluation
+      summary: Explain why an evaluation produced its Truth State
+      description: |
+        Returns qualification decisions, source selection, coherence findings,
+        drift findings, paradox findings, regime rules, and synthesis rationale.
+
+        Explanation data is preserved with the Evaluation and does not require
+        the service to rerun the evaluation.
+      responses:
+        "200":
+          description: Evaluation explanation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EvaluationExplanation"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/truth-states:
+    get:
+      tags:
+        - Truth States
+      operationId: listTruthStates
+      summary: List Truth States
+      parameters:
+        - $ref: "#/components/parameters/ClaimIdQuery"
+        - $ref: "#/components/parameters/RegimeIdQuery"
+        - $ref: "#/components/parameters/TruthStatusQuery"
+        - $ref: "#/components/parameters/TruthClassQuery"
+        - $ref: "#/components/parameters/LimitQuery"
+        - $ref: "#/components/parameters/CursorQuery"
+      responses:
+        "200":
+          description: Truth States page
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TruthStateCollection"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/truth-states/{truth_state_id}:
+    parameters:
+      - $ref: "#/components/parameters/TruthStateIdPath"
+
+    get:
+      tags:
+        - Truth States
+      operationId: getTruthState
+      summary: Retrieve a Truth State
+      responses:
+        "200":
+          description: Truth State
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TruthState"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/truth-states/{truth_state_id}/lineage:
+    parameters:
+      - $ref: "#/components/parameters/TruthStateIdPath"
+
+    get:
+      tags:
+        - Truth States
+        - Lineage
+      operationId: getTruthStateLineage
+      summary: Retrieve the lineage of a Truth State
+      responses:
+        "200":
+          description: Truth-State lineage graph
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LineageGraph"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/truth-states/{truth_state_id}/paradoxes:
+    parameters:
+      - $ref: "#/components/parameters/TruthStateIdPath"
+
+    get:
+      tags:
+        - Truth States
+      operationId: listTruthStateParadoxes
+      summary: List paradoxes associated with a Truth State
+      responses:
+        "200":
+          description: Paradoxes associated with the Truth State
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ParadoxCollection"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/truth-states/{truth_state_id}/revalidate:
+    parameters:
+      - $ref: "#/components/parameters/TruthStateIdPath"
+
+    post:
+      tags:
+        - Revalidation
+      operationId: revalidateTruthState
+      summary: Revalidate an existing Truth State
+      description: |
+        Creates a new Evaluation using the prior Truth State as historic context.
+
+        The original Truth State remains immutable.
+
+        Revalidation may renew, degrade, contest, expire, reject, or replace the
+        current operational state.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RevalidationRequest"
+            examples:
+              timerTriggered:
+                summary: Time-based revalidation
+                value:
+                  trigger: elapsed_time
+                  requested_by: revalidation-scheduler
+      responses:
+        "201":
+          description: Revalidation completed
+          headers:
+            Location:
+              description: URI of the new Evaluation
+              schema:
+                type: string
+                format: uri-reference
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EvaluationResult"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/sources:
+    post:
+      tags:
+        - Sources
+      operationId: createSource
+      summary: Register an observation source
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SourceCreateRequest"
+      responses:
+        "201":
+          description: Source registered
+          headers:
+            Location:
+              description: URI of the registered Source
+              schema:
+                type: string
+                format: uri-reference
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Source"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    get:
+      tags:
+        - Sources
+      operationId: listSources
+      summary: List registered sources
+      parameters:
+        - $ref: "#/components/parameters/SourceStatusQuery"
+        - $ref: "#/components/parameters/AnchorIdQuery"
+        - $ref: "#/components/parameters/LimitQuery"
+        - $ref: "#/components/parameters/CursorQuery"
+      responses:
+        "200":
+          description: Sources page
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SourceCollection"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/sources/{source_id}:
+    parameters:
+      - $ref: "#/components/parameters/SourceIdPath"
+
+    get:
+      tags:
+        - Sources
+      operationId: getSource
+      summary: Retrieve a source
+      responses:
+        "200":
+          description: Source
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Source"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/anchors:
+    post:
+      tags:
+        - Anchors
+      operationId: createAnchor
+      summary: Register a truth anchor
+      description: |
+        Registers a bounded reference authority.
+
+        Registration does not imply universal authority outside the Anchor's
+        declared domain and Regime scope.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AnchorCreateRequest"
+      responses:
+        "201":
+          description: Anchor registered
+          headers:
+            Location:
+              description: URI of the registered Anchor
+              schema:
+                type: string
+                format: uri-reference
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Anchor"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    get:
+      tags:
+        - Anchors
+      operationId: listAnchors
+      summary: List registered anchors
+      parameters:
+        - $ref: "#/components/parameters/AnchorStatusQuery"
+        - $ref: "#/components/parameters/LimitQuery"
+        - $ref: "#/components/parameters/CursorQuery"
+      responses:
+        "200":
+          description: Anchors page
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnchorCollection"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/anchors/{anchor_id}:
+    parameters:
+      - $ref: "#/components/parameters/AnchorIdPath"
+
+    get:
+      tags:
+        - Anchors
+      operationId: getAnchor
+      summary: Retrieve an anchor
+      responses:
+        "200":
+          description: Anchor
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Anchor"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/regimes:
+    post:
+      tags:
+        - Regimes
+      operationId: createRegime
+      summary: Register an operational regime
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegimeCreateRequest"
+            examples:
+              displayClockRegime:
+                summary: Low-consequence display clock
+                value:
+                  name: Low-consequence display clock
+                  domain: temporal
+                  description: Temporal display with moderate precision requirements.
+                  observer_context: local-display
+                  precision_requirement:
+                    value: 1000
+                    unit: milliseconds
+                  maximum_age_seconds: 300
+                  consequence: low
+                  permitted_truth_statuses:
+                    - corroborated
+                    - operationally_accepted
+                    - degraded
+                    - held_over
+                  metadata:
+                    reference_system: NTP
+      responses:
+        "201":
+          description: Regime registered
+          headers:
+            Location:
+              description: URI of the registered Regime
+              schema:
+                type: string
+                format: uri-reference
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Regime"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    get:
+      tags:
+        - Regimes
+      operationId: listRegimes
+      summary: List operational regimes
+      parameters:
+        - $ref: "#/components/parameters/RegimeDomainQuery"
+        - $ref: "#/components/parameters/LimitQuery"
+        - $ref: "#/components/parameters/CursorQuery"
+      responses:
+        "200":
+          description: Regimes page
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RegimeCollection"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/regimes/{regime_id}:
+    parameters:
+      - $ref: "#/components/parameters/RegimeIdPath"
+
+    get:
+      tags:
+        - Regimes
+      operationId: getRegime
+      summary: Retrieve an operational regime
+      responses:
+        "200":
+          description: Regime
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Regime"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/reference-systems/{system_id}/score:
+    parameters:
+      - $ref: "#/components/parameters/SystemIdPath"
+
+    put:
+      tags:
+        - Research Scoring
+      operationId: putReferenceSystemScore
+      summary: Create or replace a reference-system score
+      description: |
+        Stores research-plane scoring for an operational truth reference system.
+
+        These scores evaluate how visibly and structurally the system governs
+        operational truth relationships.
+
+        They MUST NOT affect runtime Truth-State synthesis.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TruthSystemScoreRequest"
+      responses:
+        "200":
+          description: Score replaced
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TruthSystemScore"
+        "201":
+          description: Score created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TruthSystemScore"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    get:
+      tags:
+        - Research Scoring
+      operationId: getReferenceSystemScore
+      summary: Retrieve a reference-system score
+      responses:
+        "200":
+          description: Reference-system score
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TruthSystemScore"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+components:
+  parameters:
+    ClaimIdPath:
+      name: claim_id
+      in: path
+      required: true
+      description: Stable identifier of the Claim
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    ObservationIdPath:
+      name: observation_id
+      in: path
+      required: true
+      description: Stable identifier of the Observation
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    EvaluationIdPath:
+      name: evaluation_id
+      in: path
+      required: true
+      description: Stable identifier of the Evaluation
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    TruthStateIdPath:
+      name: truth_state_id
+      in: path
+      required: true
+      description: Stable identifier of the Truth State
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    SourceIdPath:
+      name: source_id
+      in: path
+      required: true
+      description: Stable identifier of the Source
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    AnchorIdPath:
+      name: anchor_id
+      in: path
+      required: true
+      description: Stable identifier of the Anchor
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    RegimeIdPath:
+      name: regime_id
+      in: path
+      required: true
+      description: Stable identifier of the Regime
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    SystemIdPath:
+      name: system_id
+      in: path
+      required: true
+      description: Stable identifier of the operational reference system
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    ClaimIdQuery:
+      name: claim_id
+      in: query
+      required: false
+      description: Filter by Claim identifier
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    SourceIdQuery:
+      name: source_id
+      in: query
+      required: false
+      description: Filter by Source identifier
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    AnchorIdQuery:
+      name: anchor_id
+      in: query
+      required: false
+      description: Filter by Anchor identifier
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    RegimeIdQuery:
+      name: regime_id
+      in: query
+      required: false
+      description: Filter by Regime identifier
+      schema:
+        $ref: "#/components/schemas/Identifier"
+
+    TruthClassQuery:
+      name: truth_class
+      in: query
+      required: false
+      description: Filter by Truth Class
+      schema:
+        $ref: "#/components/schemas/TruthClass"
+
+    ClaimStatusQuery:
+      name: status
+      in: query
+      required: false
+      description: Filter by Claim registration status
+      schema:
+        $ref: "#/components/schemas/ClaimStatus"
+
+    TruthStatusQuery:
+      name: truth_status
+      in: query
+      required: false
+      description: Filter by Truth-State status
+      schema:
+        $ref: "#/components/schemas/TruthStatus"
+
+    QualificationStatusQuery:
+      name: qualification_status
+      in: query
+      required: false
+      description: Filter by observation qualification status
+      schema:
+        $ref: "#/components/schemas/QualificationStatus"
+
+    SourceStatusQuery:
+      name: status
+      in: query
+      required: false
+      description: Filter by Source status
+      schema:
+        $ref: "#/components/schemas/SourceStatus"
+
+    AnchorStatusQuery:
+      name: status
+      in: query
+      required: false
+      description: Filter by Anchor status
+      schema:
+        $ref: "#/components/schemas/AnchorStatus"
+
+    RegimeDomainQuery:
+      name: domain
+      in: query
+      required: false
+      description: Filter by Regime domain
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 200
+
+    LimitQuery:
+      name: limit
+      in: query
+      required: false
+      description: Maximum number of items to return
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 200
+        default: 50
+
+    CursorQuery:
+      name: cursor
+      in: query
+      required: false
+      description: Opaque pagination cursor
+      schema:
+        type: string
+        minLength: 1
+
+  responses:
+    BadRequest:
+      description: Request syntax or parameters are invalid
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+
+    NotFound:
+      description: The requested resource was not found
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+
+    Conflict:
+      description: The request conflicts with existing state
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+
+    UnprocessableEntity:
+      description: |
+        The request is syntactically valid but structurally incomplete or
+        incompatible with the declared evaluation regime.
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+
+    InternalServerError:
+      description: The service could not complete the operation
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+
+  schemas:
+    Identifier:
+      type: string
+      minLength: 1
+      maxLength: 200
+      pattern: "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+      examples:
+        - claim-temporal-001
+
+    Timestamp:
+      type: string
+      format: date-time
+      examples:
+        - 2026-11-17T09:00:00Z
+
+    Metadata:
+      type: object
+      description: |
+        Non-canonical implementation metadata.
+
+        Metadata MUST NOT silently override canonical fields used by the
+        evaluation engine.
+      additionalProperties: true
+
+    TruthClass:
+      type: string
+      enum:
+        - temporal
+        - locational
+        - identity
+        - integrity
+        - authority
+        - state
+        - transactional
+        - intent
+        - observational
+        - lineage
+
+    ClaimStatus:
+      type: string
+      enum:
+        - registered
+        - active
+        - archived
+
+    TruthStatus:
+      type: string
+      enum:
+        - declared
+        - observed
+        - corroborated
+        - operationally_accepted
+        - contested
+        - degraded
+        - held_over
+        - expired
+        - rejected
+        - indeterminate
+
+    CoherenceStatus:
+      type: string
+      enum:
+        - coherent
+        - weakly_coherent
+        - fragmented
+        - contested
+        - inverted
+        - indeterminate
+
+    QualificationStatus:
+      type: string
+      enum:
+        - qualified
+        - degraded
+        - rejected
+        - expired
+        - indeterminate
+
+    ParadoxType:
+      type: string
+      enum:
+        - structural
+        - semantic
+        - regime
+
+    ParadoxContainment:
+      type: string
+      enum:
+        - preserve
+        - isolate
+        - separate_by_regime
+        - escalate
+        - resolved
+
+    CorrectionMode:
+      type: string
+      enum:
+        - none
+        - step
+        - gradual
+        - quarantine
+        - dual_state
+        - human_escalation
+        - holdover
+        - fail_closed
+        - fail_bounded
+
+    SourceStatus:
+      type: string
+      enum:
+        - active
+        - degraded
+        - unavailable
+        - rejected
+        - unknown
+
+    AnchorStatus:
+      type: string
+      enum:
+        - active
+        - degraded
+        - withdrawn
+        - revoked
+        - unknown
+
+    IndependenceStatus:
+      type: string
+      enum:
+        - independent
+        - partially_dependent
+        - dependent
+        - unknown
+
+    DriftDirection:
+      type: string
+      enum:
+        - increasing
+        - decreasing
+        - stable
+        - oscillating
+        - unknown
+
+    DriftDimension:
+      type: string
+      enum:
+        - value
+        - semantic
+        - source
+        - lineage
+        - temporal
+        - regime
+        - confidence
+        - policy
+
+    ConsequenceLevel:
+      type: string
+      enum:
+        - informational
+        - low
+        - moderate
+        - high
+        - critical
+
+    RevalidationTrigger:
+      type: string
+      enum:
+        - elapsed_time
+        - expiration
+        - source_change
+        - anchor_change
+        - regime_change
+        - contradictory_observation
+        - excessive_drift
+        - reduced_source_diversity
+        - policy_change
+        - manual_challenge
+
+    ClaimCreateRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - statement
+        - truth_classes
+      properties:
+        statement:
+          type: string
+          minLength: 1
+          maxLength: 10000
+
+        truth_classes:
+          type: array
+          minItems: 1
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/TruthClass"
+
+        intended_use:
+          type: [string, "null"]
+          maxLength: 2000
+
+        external_reference:
+          type: [string, "null"]
+          maxLength: 500
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    Claim:
+      allOf:
+        - $ref: "#/components/schemas/ClaimCreateRequest"
+        - type: object
+          additionalProperties: false
+          required:
+            - claim_id
+            - status
+            - created_at
+            - updated_at
+          properties:
+            claim_id:
+              $ref: "#/components/schemas/Identifier"
+
+            status:
+              $ref: "#/components/schemas/ClaimStatus"
+
+            created_at:
+              $ref: "#/components/schemas/Timestamp"
+
+            updated_at:
+              $ref: "#/components/schemas/Timestamp"
+
+    ObservationCreateRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - source_id
+        - value
+        - observed_at
+      properties:
+        source_id:
+          $ref: "#/components/schemas/Identifier"
+
+        anchor_id:
+          anyOf:
+            - $ref: "#/components/schemas/Identifier"
+            - type: "null"
+
+        value:
+          description: |
+            Domain-specific observed value.
+
+            Implementations should preserve the value without forcing all
+            Truth Classes into one scalar representation.
+
+        observed_at:
+          $ref: "#/components/schemas/Timestamp"
+
+        received_at:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+        expires_at:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+        declared_confidence:
+          type: [number, "null"]
+          minimum: 0
+          maximum: 1
+          description: |
+            Optional confidence declared by the Observation producer.
+
+            This value is not automatically treated as service confidence.
+
+        lineage:
+          type: array
+          items:
+            $ref: "#/components/schemas/LineageHop"
+
+        integrity:
+          anyOf:
+            - $ref: "#/components/schemas/IntegrityDescriptor"
+            - type: "null"
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    Observation:
+      allOf:
+        - $ref: "#/components/schemas/ObservationCreateRequest"
+        - type: object
+          additionalProperties: false
+          required:
+            - observation_id
+            - claim_id
+            - registered_at
+          properties:
+            observation_id:
+              $ref: "#/components/schemas/Identifier"
+
+            claim_id:
+              $ref: "#/components/schemas/Identifier"
+
+            qualification:
+              anyOf:
+                - $ref: "#/components/schemas/Qualification"
+                - type: "null"
+
+            registered_at:
+              $ref: "#/components/schemas/Timestamp"
+
+    Qualification:
+      type: object
+      additionalProperties: false
+      required:
+        - status
+        - reasons
+      properties:
+        status:
+          $ref: "#/components/schemas/QualificationStatus"
+
+        reasons:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+        freshness_seconds:
+          type: [integer, "null"]
+          minimum: 0
+
+        source_independence:
+          $ref: "#/components/schemas/IndependenceStatus"
+
+        regime_compatible:
+          type: [boolean, "null"]
+
+        precision_compatible:
+          type: [boolean, "null"]
+
+        integrity_valid:
+          type: [boolean, "null"]
+
+        evaluated_at:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+    DecisionReason:
+      type: object
+      additionalProperties: false
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+          minLength: 1
+          maxLength: 100
+
+        message:
+          type: string
+          minLength: 1
+          maxLength: 2000
+
+        evidence_references:
+          type: array
+          items:
+            type: string
+            minLength: 1
+
+        regime_rule:
+          type: [string, "null"]
+          maxLength: 1000
+
+    EvaluationCreateRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - regime_id
+      properties:
+        regime_id:
+          $ref: "#/components/schemas/Identifier"
+
+        observation_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+          description: |
+            Observations to consider.
+
+            If omitted, the implementation may consider all Observations
+            associated with the Claim that are available at evaluation time.
+
+        correction_policy:
+          anyOf:
+            - $ref: "#/components/schemas/CorrectionPolicy"
+            - type: "null"
+
+        requested_at:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+        requested_by:
+          type: [string, "null"]
+          maxLength: 500
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    Evaluation:
+      type: object
+      additionalProperties: false
+      required:
+        - evaluation_id
+        - claim_id
+        - regime_id
+        - input_observation_ids
+        - qualification_results
+        - coherence
+        - drift
+        - paradoxes
+        - truth_state_id
+        - evaluated_at
+      properties:
+        evaluation_id:
+          $ref: "#/components/schemas/Identifier"
+
+        claim_id:
+          $ref: "#/components/schemas/Identifier"
+
+        regime_id:
+          $ref: "#/components/schemas/Identifier"
+
+        prior_truth_state_id:
+          anyOf:
+            - $ref: "#/components/schemas/Identifier"
+            - type: "null"
+
+        input_observation_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        qualification_results:
+          type: array
+          items:
+            $ref: "#/components/schemas/ObservationQualificationResult"
+
+        selected_observation_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        excluded_observation_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        coherence:
+          $ref: "#/components/schemas/CoherenceState"
+
+        drift:
+          $ref: "#/components/schemas/DriftState"
+
+        paradoxes:
+          type: array
+          items:
+            $ref: "#/components/schemas/Paradox"
+
+        synthesis_rationale:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+        truth_state_id:
+          $ref: "#/components/schemas/Identifier"
+
+        evaluated_at:
+          $ref: "#/components/schemas/Timestamp"
+
+        evaluator_version:
+          type: string
+          minLength: 1
+          maxLength: 200
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    ObservationQualificationResult:
+      type: object
+      additionalProperties: false
+      required:
+        - observation_id
+        - qualification
+      properties:
+        observation_id:
+          $ref: "#/components/schemas/Identifier"
+
+        qualification:
+          $ref: "#/components/schemas/Qualification"
+
+    EvaluationResult:
+      type: object
+      additionalProperties: false
+      required:
+        - evaluation
+        - truth_state
+      properties:
+        evaluation:
+          $ref: "#/components/schemas/Evaluation"
+
+        truth_state:
+          $ref: "#/components/schemas/TruthState"
+
+    EvaluationExplanation:
+      type: object
+      additionalProperties: false
+      required:
+        - evaluation_id
+        - summary
+        - qualification_decisions
+        - coherence_findings
+        - drift_findings
+        - paradox_findings
+        - regime_findings
+        - synthesis_rationale
+      properties:
+        evaluation_id:
+          $ref: "#/components/schemas/Identifier"
+
+        summary:
+          type: string
+          minLength: 1
+
+        qualification_decisions:
+          type: array
+          items:
+            $ref: "#/components/schemas/ObservationQualificationResult"
+
+        coherence_findings:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+        drift_findings:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+        paradox_findings:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+        regime_findings:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+        synthesis_rationale:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+    TruthState:
+      type: object
+      additionalProperties: false
+      required:
+        - truth_state_id
+        - claim_id
+        - evaluation_id
+        - status
+        - regime_id
+        - truth_classes
+        - anchor_ids
+        - source_ids
+        - observation_ids
+        - lineage_references
+        - coherence
+        - drift
+        - paradoxes
+        - correction
+        - evaluated_at
+      properties:
+        truth_state_id:
+          $ref: "#/components/schemas/Identifier"
+
+        claim_id:
+          $ref: "#/components/schemas/Identifier"
+
+        evaluation_id:
+          $ref: "#/components/schemas/Identifier"
+
+        supersedes_truth_state_id:
+          anyOf:
+            - $ref: "#/components/schemas/Identifier"
+            - type: "null"
+
+        status:
+          $ref: "#/components/schemas/TruthStatus"
+
+        accepted_value:
+          description: |
+            Domain-specific accepted value.
+
+            This field may be null when the Truth State is Contested,
+            Rejected, Expired, or Indeterminate.
+
+        regime_id:
+          $ref: "#/components/schemas/Identifier"
+
+        truth_classes:
+          type: array
+          minItems: 1
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/TruthClass"
+
+        anchor_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        source_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        observation_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        lineage_references:
+          type: array
+          items:
+            $ref: "#/components/schemas/LineageReference"
+
+        coherence:
+          $ref: "#/components/schemas/CoherenceState"
+
+        drift:
+          $ref: "#/components/schemas/DriftState"
+
+        paradoxes:
+          type: array
+          items:
+            $ref: "#/components/schemas/Paradox"
+
+        uncertainty:
+          anyOf:
+            - $ref: "#/components/schemas/UncertaintyDescriptor"
+            - type: "null"
+
+        permitted_uses:
+          type: array
+          items:
+            type: string
+            minLength: 1
+            maxLength: 1000
+
+        prohibited_uses:
+          type: array
+          items:
+            type: string
+            minLength: 1
+            maxLength: 1000
+
+        correction:
+          $ref: "#/components/schemas/CorrectionPolicy"
+
+        evaluated_at:
+          $ref: "#/components/schemas/Timestamp"
+
+        expires_at:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+        next_revalidation_at:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+        revalidation_triggers:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/RevalidationTrigger"
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    CoherenceState:
+      type: object
+      additionalProperties: false
+      required:
+        - status
+        - clusters
+        - supporting_observation_ids
+        - dissenting_observation_ids
+        - rationale
+      properties:
+        status:
+          $ref: "#/components/schemas/CoherenceStatus"
+
+        clusters:
+          type: array
+          items:
+            $ref: "#/components/schemas/CoherenceCluster"
+
+        supporting_observation_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        dissenting_observation_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        rationale:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+    CoherenceCluster:
+      type: object
+      additionalProperties: false
+      required:
+        - cluster_id
+        - observation_ids
+        - classification
+      properties:
+        cluster_id:
+          $ref: "#/components/schemas/Identifier"
+
+        observation_ids:
+          type: array
+          minItems: 1
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        source_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        classification:
+          type: string
+          enum:
+            - supporting
+            - dissenting
+            - outlier
+            - unresolved
+
+        representative_value:
+          description: Optional representative value for the cluster.
+
+        independence:
+          $ref: "#/components/schemas/IndependenceStatus"
+
+        rationale:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+    DriftState:
+      type: object
+      additionalProperties: false
+      required:
+        - dimensions
+        - direction
+        - bounded
+        - rationale
+      properties:
+        magnitude:
+          type: [number, "null"]
+
+        unit:
+          type: [string, "null"]
+          maxLength: 100
+
+        direction:
+          $ref: "#/components/schemas/DriftDirection"
+
+        dimensions:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/DriftDimension"
+
+        bounded:
+          type: [boolean, "null"]
+
+        baseline_reference:
+          type: [string, "null"]
+          maxLength: 500
+
+        local_value:
+          description: Optional local or previously accepted value.
+
+        observed_value:
+          description: Optional qualified observed value.
+
+        rationale:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+    Paradox:
+      type: object
+      additionalProperties: false
+      required:
+        - paradox_id
+        - type
+        - competing_observation_ids
+        - description
+        - containment
+        - status
+      properties:
+        paradox_id:
+          $ref: "#/components/schemas/Identifier"
+
+        type:
+          $ref: "#/components/schemas/ParadoxType"
+
+        competing_observation_ids:
+          type: array
+          minItems: 2
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        competing_cluster_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        regime_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        description:
+          type: string
+          minLength: 1
+          maxLength: 5000
+
+        resolution_condition:
+          type: [string, "null"]
+          maxLength: 5000
+
+        containment:
+          $ref: "#/components/schemas/ParadoxContainment"
+
+        status:
+          type: string
+          enum:
+            - active
+            - contained
+            - escalated
+            - resolved
+
+    CorrectionPolicy:
+      type: object
+      additionalProperties: false
+      required:
+        - mode
+        - reason
+      properties:
+        mode:
+          $ref: "#/components/schemas/CorrectionMode"
+
+        reason:
+          type: string
+          minLength: 1
+          maxLength: 5000
+
+        maximum_adjustment:
+          type: [number, "null"]
+
+        adjustment_unit:
+          type: [string, "null"]
+          maxLength: 100
+
+        requires_approval:
+          type: boolean
+          default: false
+
+        approval_authority:
+          type: [string, "null"]
+          maxLength: 500
+
+        downstream_constraints:
+          type: array
+          items:
+            type: string
+            minLength: 1
+            maxLength: 1000
+
+    RevalidationRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        trigger:
+          $ref: "#/components/schemas/RevalidationTrigger"
+
+        regime_id:
+          anyOf:
+            - $ref: "#/components/schemas/Identifier"
+            - type: "null"
+
+        observation_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        requested_by:
+          type: [string, "null"]
+          maxLength: 500
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    SourceCreateRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+        - source_type
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 500
+
+        source_type:
+          type: string
+          minLength: 1
+          maxLength: 200
+
+        anchor_id:
+          anyOf:
+            - $ref: "#/components/schemas/Identifier"
+            - type: "null"
+
+        lineage_distance:
+          type: [integer, "null"]
+          minimum: 0
+
+        independence:
+          $ref: "#/components/schemas/IndependenceStatus"
+
+        domain:
+          type: [string, "null"]
+          maxLength: 200
+
+        valid_from:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+        valid_until:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    Source:
+      allOf:
+        - $ref: "#/components/schemas/SourceCreateRequest"
+        - type: object
+          additionalProperties: false
+          required:
+            - source_id
+            - status
+            - created_at
+            - updated_at
+          properties:
+            source_id:
+              $ref: "#/components/schemas/Identifier"
+
+            status:
+              $ref: "#/components/schemas/SourceStatus"
+
+            created_at:
+              $ref: "#/components/schemas/Timestamp"
+
+            updated_at:
+              $ref: "#/components/schemas/Timestamp"
+
+    AnchorCreateRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+        - anchor_type
+        - authority
+        - domain
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 500
+
+        anchor_type:
+          type: string
+          minLength: 1
+          maxLength: 200
+
+        authority:
+          type: string
+          minLength: 1
+          maxLength: 1000
+
+        domain:
+          type: string
+          minLength: 1
+          maxLength: 200
+
+        regime_ids:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/Identifier"
+
+        valid_from:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+        valid_until:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+        revocation_reference:
+          type: [string, "null"]
+          maxLength: 1000
+
+        limitations:
+          type: array
+          items:
+            type: string
+            minLength: 1
+            maxLength: 1000
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    Anchor:
+      allOf:
+        - $ref: "#/components/schemas/AnchorCreateRequest"
+        - type: object
+          additionalProperties: false
+          required:
+            - anchor_id
+            - status
+            - created_at
+            - updated_at
+          properties:
+            anchor_id:
+              $ref: "#/components/schemas/Identifier"
+
+            status:
+              $ref: "#/components/schemas/AnchorStatus"
+
+            created_at:
+              $ref: "#/components/schemas/Timestamp"
+
+            updated_at:
+              $ref: "#/components/schemas/Timestamp"
+
+    RegimeCreateRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+        - domain
+        - consequence
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 500
+
+        domain:
+          type: string
+          minLength: 1
+          maxLength: 200
+
+        description:
+          type: [string, "null"]
+          maxLength: 5000
+
+        jurisdiction:
+          type: [string, "null"]
+          maxLength: 500
+
+        policy_version:
+          type: [string, "null"]
+          maxLength: 200
+
+        observer_context:
+          type: [string, "null"]
+          maxLength: 1000
+
+        applicable_scope:
+          type: array
+          items:
+            type: string
+            minLength: 1
+            maxLength: 1000
+
+        precision_requirement:
+          anyOf:
+            - $ref: "#/components/schemas/Quantity"
+            - type: "null"
+
+        maximum_age_seconds:
+          type: [integer, "null"]
+          minimum: 0
+
+        minimum_independent_sources:
+          type: [integer, "null"]
+          minimum: 0
+
+        consequence:
+          $ref: "#/components/schemas/ConsequenceLevel"
+
+        permitted_truth_statuses:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/TruthStatus"
+
+        correction_modes:
+          type: array
+          uniqueItems: true
+          items:
+            $ref: "#/components/schemas/CorrectionMode"
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    Regime:
+      allOf:
+        - $ref: "#/components/schemas/RegimeCreateRequest"
+        - type: object
+          additionalProperties: false
+          required:
+            - regime_id
+            - created_at
+            - updated_at
+          properties:
+            regime_id:
+              $ref: "#/components/schemas/Identifier"
+
+            created_at:
+              $ref: "#/components/schemas/Timestamp"
+
+            updated_at:
+              $ref: "#/components/schemas/Timestamp"
+
+    LineageHop:
+      type: object
+      additionalProperties: false
+      required:
+        - sequence
+        - entity_type
+        - entity_id
+        - relation
+      properties:
+        sequence:
+          type: integer
+          minimum: 0
+
+        entity_type:
+          type: string
+          enum:
+            - anchor
+            - source
+            - observation
+            - transformation
+            - claim
+            - evaluation
+            - truth_state
+            - external
+
+        entity_id:
+          type: string
+          minLength: 1
+          maxLength: 500
+
+        relation:
+          type: string
+          minLength: 1
+          maxLength: 200
+
+        transformation:
+          type: [string, "null"]
+          maxLength: 2000
+
+        observed_at:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    LineageReference:
+      type: object
+      additionalProperties: false
+      required:
+        - observation_id
+        - hop_count
+      properties:
+        observation_id:
+          $ref: "#/components/schemas/Identifier"
+
+        anchor_id:
+          anyOf:
+            - $ref: "#/components/schemas/Identifier"
+            - type: "null"
+
+        source_id:
+          anyOf:
+            - $ref: "#/components/schemas/Identifier"
+            - type: "null"
+
+        hop_count:
+          type: integer
+          minimum: 0
+
+        transformation_count:
+          type: integer
+          minimum: 0
+
+        complete:
+          type: boolean
+
+    LineageNode:
+      type: object
+      additionalProperties: false
+      required:
+        - node_id
+        - entity_type
+        - entity_id
+      properties:
+        node_id:
+          $ref: "#/components/schemas/Identifier"
+
+        entity_type:
+          type: string
+          enum:
+            - anchor
+            - source
+            - observation
+            - transformation
+            - claim
+            - evaluation
+            - truth_state
+            - external
+
+        entity_id:
+          type: string
+          minLength: 1
+          maxLength: 500
+
+        label:
+          type: [string, "null"]
+          maxLength: 500
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    LineageEdge:
+      type: object
+      additionalProperties: false
+      required:
+        - edge_id
+        - from_node_id
+        - to_node_id
+        - relation
+      properties:
+        edge_id:
+          $ref: "#/components/schemas/Identifier"
+
+        from_node_id:
+          $ref: "#/components/schemas/Identifier"
+
+        to_node_id:
+          $ref: "#/components/schemas/Identifier"
+
+        relation:
+          type: string
+          minLength: 1
+          maxLength: 200
+
+        transformation:
+          type: [string, "null"]
+          maxLength: 2000
+
+    LineageGraph:
+      type: object
+      additionalProperties: false
+      required:
+        - truth_state_id
+        - nodes
+        - edges
+        - complete
+      properties:
+        truth_state_id:
+          $ref: "#/components/schemas/Identifier"
+
+        nodes:
+          type: array
+          items:
+            $ref: "#/components/schemas/LineageNode"
+
+        edges:
+          type: array
+          items:
+            $ref: "#/components/schemas/LineageEdge"
+
+        complete:
+          type: boolean
+
+        gaps:
+          type: array
+          items:
+            type: string
+            minLength: 1
+            maxLength: 2000
+
+    IntegrityDescriptor:
+      type: object
+      additionalProperties: false
+      properties:
+        algorithm:
+          type: [string, "null"]
+          maxLength: 100
+
+        digest:
+          type: [string, "null"]
+          maxLength: 2000
+
+        signature_reference:
+          type: [string, "null"]
+          maxLength: 2000
+
+        verified:
+          type: [boolean, "null"]
+
+        verified_at:
+          anyOf:
+            - $ref: "#/components/schemas/Timestamp"
+            - type: "null"
+
+    UncertaintyDescriptor:
+      type: object
+      additionalProperties: false
+      required:
+        - classification
+        - rationale
+      properties:
+        classification:
+          type: string
+          enum:
+            - low
+            - moderate
+            - high
+            - unknown
+            - not_applicable
+
+        numeric_value:
+          type: [number, "null"]
+
+        unit:
+          type: [string, "null"]
+          maxLength: 100
+
+        rationale:
+          type: array
+          items:
+            $ref: "#/components/schemas/DecisionReason"
+
+    Quantity:
+      type: object
+      additionalProperties: false
+      required:
+        - value
+        - unit
+      properties:
+        value:
+          type: number
+
+        unit:
+          type: string
+          minLength: 1
+          maxLength: 100
+
+    TruthSystemScoreRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - system_name
+        - truth_class
+        - criteria
+      properties:
+        system_name:
+          type: string
+          minLength: 1
+          maxLength: 500
+
+        truth_class:
+          $ref: "#/components/schemas/TruthClass"
+
+        crosswalk_reference:
+          type: [string, "null"]
+          maxLength: 1000
+
+        criteria:
+          $ref: "#/components/schemas/TruthSystemScoreCriteria"
+
+        metadata:
+          $ref: "#/components/schemas/Metadata"
+
+    TruthSystemScore:
+      allOf:
+        - $ref: "#/components/schemas/TruthSystemScoreRequest"
+        - type: object
+          additionalProperties: false
+          required:
+            - system_id
+            - raw_total
+            - normalized_total
+            - profile
+            - meta_scores
+            - scored_at
+          properties:
+            system_id:
+              $ref: "#/components/schemas/Identifier"
+
+            raw_total:
+              type: integer
+              minimum: 0
+              maximum: 50
+
+            normalized_total:
+              type: integer
+              minimum: 0
+              maximum: 100
+
+            profile:
+              type: string
+              pattern: "^-[0-5]{9}$"
+              examples:
+                - 5-4-5-5-5-4-3-5-5-5
+
+            meta_scores:
+              $ref: "#/components/schemas/TruthSystemMetaScores"
+
+            scored_at:
+              $ref: "#/components/schemas/Timestamp"
+
+    TruthSystemScoreCriteria:
+      type: object
+      additionalProperties: false
+      required:
+        - anchor_quality
+        - lineage_visibility
+        - observation_quality
+        - coherence_detection
+        - drift_detection
+        - paradox_handling
+        - regime_awareness
+        - freshness_revalidation
+        - correction_discipline
+        - failure_transparency
+      properties:
+        anchor_quality:
+          $ref: "#/components/schemas/Score"
+
+        lineage_visibility:
+          $ref: "#/components/schemas/Score"
+
+        observation_quality:
+          $ref: "#/components/schemas/Score"
+
+        coherence_detection:
+          $ref: "#/components/schemas/Score"
+
+        drift_detection:
+          $ref: "#/components/schemas/Score"
+
+        paradox_handling:
+          $ref: "#/components/schemas/Score"
+
+        regime_awareness:
+          $ref: "#/components/schemas/Score"
+
+        freshness_revalidation:
+          $ref: "#/components/schemas/Score"
+
+        correction_discipline:
+          $ref: "#/components/schemas/Score"
+
+        failure_transparency:
+          $ref: "#/components/schemas/Score"
+
+    Score:
+      type: object
+      additionalProperties: false
+      required:
+        - value
+        - rationale
+        - evidence
+      properties:
+        value:
+          type: integer
+          minimum: 0
+          maximum: 5
+
+        rationale:
+          type: string
+          minLength: 1
+          maxLength: 5000
+
+        evidence:
+          type: array
+          minItems: 1
+          items:
+            $ref: "#/components/schemas/ScoreEvidence"
+
+    ScoreEvidence:
+      type: object
+      additionalProperties: false
+      required:
+        - description
+      properties:
+        description:
+          type: string
+          minLength: 1
+          maxLength: 5000
+
+        reference:
+          type: [string, "null"]
+          maxLength: 2000
+
+        evidence_type:
+          type: string
+          enum:
+            - specification
+            - implementation
+            - documentation
+            - test
+            - observation
+            - analysis
+
+    TruthSystemMetaScores:
+      type: object
+      additionalProperties: false
+      required:
+        - reference
+        - observation
+        - coherence
+        - drift
+        - regime
+      properties:
+        reference:
+          type: integer
+          minimum: 0
+          maximum: 10
+          description: Anchor Quality plus Lineage Visibility
+
+        observation:
+          type: integer
+          minimum: 0
+          maximum: 10
+          description: Observation Quality plus Freshness and Revalidation
+
+        coherence:
+          type: integer
+          minimum: 0
+          maximum: 10
+          description: Coherence Detection plus Paradox Handling
+
+        drift:
+          type: integer
+          minimum: 0
+          maximum: 10
+          description: Drift Detection plus Correction Discipline
+
+        regime:
+          type: integer
+          minimum: 0
+          maximum: 10
+          description: Regime Awareness plus Failure Transparency
+
+    ServiceDocument:
+      type: object
+      additionalProperties: false
+      required:
+        - service
+        - api_version
+        - truth_classes
+        - truth_statuses
+        - coherence_statuses
+        - paradox_types
+        - correction_modes
+      properties:
+        service:
+          type: string
+          const: RTT Resonance Truth Service
+
+        api_version:
+          type: string
+          examples:
+            - 0.1.0
+
+        truth_classes:
+          type: array
+          items:
+            $ref: "#/components/schemas/TruthClass"
+
+        truth_statuses:
+          type: array
+          items:
+            $ref: "#/components/schemas/TruthStatus"
+
+        coherence_statuses:
+          type: array
+          items:
+            $ref: "#/components/schemas/CoherenceStatus"
+
+        paradox_types:
+          type: array
+          items:
+            $ref: "#/components/schemas/ParadoxType"
+
+        correction_modes:
+          type: array
+          items:
+            $ref: "#/components/schemas/CorrectionMode"
+
+    HealthStatus:
+      type: object
+      additionalProperties: false
+      required:
+        - status
+        - checked_at
+      properties:
+        status:
+          type: string
+          enum:
+            - available
+            - degraded
+            - unavailable
+
+        checked_at:
+          $ref: "#/components/schemas/Timestamp"
+
+        components:
+          type: object
+          additionalProperties:
+            type: string
+            enum:
+              - available
+              - degraded
+              - unavailable
+              - unknown
+
+    ClaimCollection:
+      type: object
+      additionalProperties: false
+      required:
+        - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/Claim"
+
+        next_cursor:
+          type: [string, "null"]
+
+    ObservationCollection:
+      type: object
+      additionalProperties: false
+      required:
+        - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/Observation"
+
+        next_cursor:
+          type: [string, "null"]
+
+    EvaluationCollection:
+      type: object
+      additionalProperties: false
+      required:
+        - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/Evaluation"
+
+        next_cursor:
+          type: [string, "null"]
+
+    TruthStateCollection:
+      type: object
+      additionalProperties: false
+      required:
+        - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/TruthState"
+
+        next_cursor:
+          type: [string, "null"]
+
+    SourceCollection:
+      type: object
+      additionalProperties: false
+      required:
+        - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/Source"
+
+        next_cursor:
+          type: [string, "null"]
+
+    AnchorCollection:
+      type: object
+      additionalProperties: false
+      required:
+        - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/Anchor"
+
+        next_cursor:
+          type: [string, "null"]
+
+    RegimeCollection:
+      type: object
+      additionalProperties: false
+      required:
+        - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/Regime"
+
+        next_cursor:
+          type: [string, "null"]
+
+    ParadoxCollection:
+      type: object
+      additionalProperties: false
+      required:
+        - items
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/Paradox"
+
+    Problem:
+      type: object
+      additionalProperties: true
+      required:
+        - type
+        - title
+        - status
+      properties:
+        type:
+          type: string
+          format: uri-reference
+          description: Machine-readable problem type
+          default: about:blank
+
+        title:
+          type: string
+          minLength: 1
+
+        status:
+          type: integer
+          minimum: 400
+          maximum: 599
+
+        detail:
+          type: [string, "null"]
+
+        instance:
+          type: [string, "null"]
+          format: uri-reference
+
+        error_code:
+          type: [string, "null"]
+
+        violations:
+          type: array
+          items:
+            $ref: "#/components/schemas/Violation"
+
+        trace_id:
+          type: [string, "null"]
+
+    Violation:
+      type: object
+      additionalProperties: false
+      required:
+        - message
+      properties:
+        field:
+          type: [string, "null"]
+
+        code:
+          type: [string, "null"]
+
+        message:
+          type: string
+          minLength: 1
