@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_07_ledger_transactional_truth_" src="https://github.com/user-attachments/assets/912d2333-1025-4813-a388-a5b291a30696" />
 
 # Crosswalk #7 — Ledgers and Transactional Truth
 
