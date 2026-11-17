@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_Truth_Drift_Walkthrough_" src="https://github.com/user-attachments/assets/af876a1f-85b5-4c72-9381-ed3542f6ce5b" />
 
 # 🜁 Truth Drift Walkthrough  
 **RTT/1 · Resonance Domain · Semantic Drift Mechanics**
