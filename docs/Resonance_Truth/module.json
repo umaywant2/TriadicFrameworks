@@ -1,97 +1,367 @@
 {
   "module": {
-    "name": "Resonance_Truth",
-    "category": "Resonance",
-    "summary": "RTT/1 analysis of Truth as a resonance-field construct, including coherence operators, drift behavior, paradox signatures, and regime transitions.",
-    "version": "1.0.0",
-    "purpose": "Model Truth as a resonance phenomenon using RTT operators, coherence states, drift profiles, paradox structures, and regime transitions."
+    "id": "resonance_truth",
+    "name": "Resonance Truth",
+    "title": "Resonance Truth",
+    "version": "1.1.0",
+    "status": "active",
+    "framework": "RTT",
+    "rtt_version": "1",
+    "category": "truth_and_reasoning",
+    "description": "RTT module for semantic and operational Truth analysis across Resonance, Coherence, Drift, Paradox, Regime, Evidence, Lineage, qualification, lifecycle, and Revalidation.",
+    "summary": "Resonance Truth treats operational Truth as a Regime-qualified relationship among Claims, Evidence, Sources, reference structures, Lineage, Coherence, Drift, Paradox, domain results, lifecycle, and intended use.",
+    "path": "/docs/Resonance_Truth",
+    "entrypoint": "README.md"
   },
 
-  "analyzer_layer": {
-    "operator": [
-      "Ω1", "Ω2", "Ω3", "Ω4",
-      "C1", "C2", "C3", "C4",
-      "D1", "D2", "D3", "D4",
-      "P1", "P2", "P3"
-    ],
-    "dimensional": [
-      "SemanticTriad",
-      "ResonanceTriad",
-      "InterpretationTriad"
-    ],
-    "regime": [
-      "R12", "R23", "R34",
-      "R21", "R32", "R43"
-    ],
-    "drift": [
-      "bounded",
-      "unbounded",
-      "semantic",
-      "interpretive"
-    ],
-    "coherence": [
-      "declared",
-      "collapsed",
-      "contested",
-      "inverted"
-    ],
-    "cross-cutting": [
-      "paradox_structural",
-      "paradox_semantic",
-      "paradox_regime"
-    ]
-  },
-
-  "files": [
-    {
-      "path": "README.md",
-      "role": "index",
-      "purpose": "Front-door overview of Truth as a resonance construct in RTT."
-    },
-    {
-      "path": "Truth_Operator_Table.md",
-      "role": "reference",
-      "purpose": "Defines Ω, C, D, and P operators as they apply to Truth."
-    },
-    {
-      "path": "Truth_Regime_Transitions.md",
-      "role": "map",
-      "purpose": "Maps transitions between declared truth, contested truth, collapsed truth, and inverted truth."
-    },
-    {
-      "path": "Truth_Paradox_Analysis.md",
-      "role": "diagnostic",
-      "purpose": "Analyzes paradox structures such as semantic drift, coherence inversion, and resonance collapse."
-    },
-    {
-      "path": "Truth_Coherence_Study.md",
-      "role": "procedure",
-      "purpose": "Provides methods for studying coherence states of truth claims using RTT operators."
-    },
-    {
-      "path": "Truth_Drift_Walkthrough.md",
-      "role": "example",
-      "purpose": "Walkthrough of how truth claims drift across semantic, interpretive, and resonance domains."
-    },
-    {
-      "path": "Truth_and_SET_Triad.md",
-      "role": "analysis",
-      "purpose": "Applies Spin, Elec, Temp triad to truth alignment, charge separation, and activation thresholds."
-    },
-    {
-      "path": "Truth_Narrative_Synthesis.md",
-      "role": "signature",
-      "purpose": "Narrative synthesis explaining Truth as a resonance-field phenomenon."
-    }
-  ],
-
-  "signature": {
-    "engine": "RTT/1",
-    "profile": "resonance-field",
+  "context": {
+    "rtt": 1,
     "coherence": "declared",
     "drift": "bounded",
     "paradox": "structural",
-    "triad_spacing": "semantic",
-    "regime_transitions": "interpretive"
-  }
+    "set": [
+      "Spin",
+      "Elec",
+      "Temp"
+    ]
+  },
+
+  "truth_model": {
+    "semantic_dimensions": [
+      "Resonance",
+      "Coherence",
+      "Drift",
+      "Paradox",
+      "Regime",
+      "SET"
+    ],
+
+    "operational_principle": "Operational Truth is a Regime-qualified relationship embedded in Evidence, Lineage, lifecycle, and intended use.",
+
+    "truth_classes": [
+      {
+        "id": "temporal",
+        "name": "Temporal Truth",
+        "question": "When?",
+        "reference_system": "NTP"
+      },
+      {
+        "id": "locational",
+        "name": "Locational Truth",
+        "question": "Where?",
+        "reference_system": "DNS"
+      },
+      {
+        "id": "identity",
+        "name": "Identity Truth",
+        "question": "Who or what is this?",
+        "reference_system": "IAM"
+      },
+      {
+        "id": "integrity",
+        "name": "Integrity Truth",
+        "question": "Is this still what it claims to be?",
+        "reference_system": "PKI"
+      },
+      {
+        "id": "authority",
+        "name": "Authority Truth",
+        "question": "Who may declare, validate, access, modify, or act?",
+        "reference_system": "Policy / Authorization"
+      },
+      {
+        "id": "state",
+        "name": "State Truth",
+        "question": "What is presently accepted as current?",
+        "reference_system": "Distributed Systems"
+      },
+      {
+        "id": "transactional",
+        "name": "Transactional Truth",
+        "question": "What became committed?",
+        "reference_system": "Transactional Systems"
+      },
+      {
+        "id": "intent",
+        "name": "Intent Truth",
+        "question": "What should the state be?",
+        "reference_system": "Desired-State Systems"
+      },
+      {
+        "id": "observational",
+        "name": "Observational Truth",
+        "question": "What was actually observed?",
+        "reference_system": "Telemetry"
+      },
+      {
+        "id": "lineage",
+        "name": "Lineage Truth",
+        "question": "Where did this come from?",
+        "reference_system": "Supply-Chain Provenance"
+      }
+    ]
+  },
+
+  "semantic_canon": {
+    "operator_table": "Truth_Operator_Table.md",
+    "regime_transitions": "Truth_Regime_Transitions.md",
+    "coherence_study": "Truth_Coherence_Study.md",
+    "drift_walkthrough": "Truth_Drift_Walkthrough.md",
+    "paradox_analysis": "Truth_Paradox_Analysis.md",
+    "set_triad": "Truth_and_SET_Triad.md",
+    "narrative_synthesis": "Truth_Narrative_Synthesis.md",
+    "comparison": "Truth_vs_Belief_vs_Evidence_RTT_comparison.md"
+  },
+
+  "operational_layers": {
+    "architecture": {
+      "path": "architecture/",
+      "description": "Operational Truth-Service architecture, components, data model, API, and implementation roadmap."
+    },
+
+    "crosswalks": {
+      "path": "crosswalks/",
+      "description": "Reference-system studies used to pressure-test and generalize the operational Truth model.",
+      "documents": [
+        "01_ntp_temporal_truth.md",
+        "02_dns_locational_truth.md",
+        "03_iam_identity_truth.md",
+        "04_pki_integrity_truth.md",
+        "05_policy_authority_truth.md",
+        "06_distributed_state_truth.md",
+        "07_ledger_transactional_truth.md",
+        "08_desired_state_intent_truth.md",
+        "09_telemetry_observational_truth.md",
+        "10_provenance_lineage_truth.md"
+      ]
+    },
+
+    "schemas": {
+      "path": "schemas/",
+      "contract_version": "0.1",
+      "consolidation_target": "0.2",
+      "description": "Machine-readable contracts for the current Truth-Service reference implementation.",
+      "documents": [
+        "anchor.schema.json",
+        "claim.schema.json",
+        "coherence_state.schema.json",
+        "correction_policy.schema.json",
+        "drift_state.schema.json",
+        "evaluation.schema.json",
+        "lineage.schema.json",
+        "observation.schema.json",
+        "paradox.schema.json",
+        "regime.schema.json",
+        "source.schema.json",
+        "truth_state.schema.json"
+      ]
+    },
+
+    "fixtures": {
+      "path": "fixtures/",
+      "description": "Deterministic controlled scenarios for reference evaluation.",
+      "reference_family": "NTP",
+      "documents": [
+        "ntp/coherent.json",
+        "ntp/minor_drift.json",
+        "ntp/outlier.json",
+        "ntp/fragmented.json",
+        "ntp/stale.json",
+        "ntp/indeterminate.json"
+      ]
+    },
+
+    "tests": {
+      "path": "tests/",
+      "description": "Behavioral validation of qualification, Coherence, Drift, Paradox, Regime, lifecycle, and related Truth-Service invariants.",
+      "families": [
+        "qualification",
+        "coherence",
+        "drift",
+        "paradox",
+        "regime",
+        "lifecycle"
+      ]
+    }
+  },
+
+  "runtime_model": {
+    "schema_boundary": "0.1",
+
+    "core_objects": [
+      "Claim",
+      "Observation",
+      "Source",
+      "Anchor",
+      "Lineage",
+      "Regime",
+      "Evaluation",
+      "CoherenceState",
+      "DriftState",
+      "Paradox",
+      "TruthState",
+      "CorrectionPolicy"
+    ],
+
+    "evaluation_flow": [
+      "Claim",
+      "Regime",
+      "Observation",
+      "Qualification",
+      "Coherence",
+      "Drift",
+      "Paradox",
+      "TruthState",
+      "Correction",
+      "Revalidation"
+    ],
+
+    "history_model": "append_oriented",
+    "revalidation_model": "new_evaluation",
+    "null_result_policy": "permitted_when_no_single_domain_value_is_sufficiently_supported"
+  },
+
+  "consolidation": {
+    "target": "0.2",
+    "status": "planned",
+
+    "candidate_promotions": [
+      "EvidenceItem",
+      "ReferenceBasis",
+      "AuthorityRelationship",
+      "EvidenceGraph",
+      "AcceptanceRule",
+      "TruthComparison",
+      "Coverage",
+      "Gap",
+      "MaterializedTruthState"
+    ],
+
+    "candidate_generalizations": [
+      {
+        "from": "Observation",
+        "to": "EvidenceItem"
+      },
+      {
+        "from": "Anchor",
+        "to": "ReferenceBasis"
+      }
+    ],
+
+    "requirements": [
+      "Preserve Evidence ancestry and derivation.",
+      "Preserve domain result separately from Truth-State qualification.",
+      "Support graph-shaped Lineage.",
+      "Support Coverage and explicit gaps.",
+      "Preserve qualified dissent.",
+      "Prevent derived Evidence from manufacturing independence.",
+      "Support recursive Truth-State composition with Lineage-cycle analysis.",
+      "Preserve historical Evaluations and Truth States.",
+      "Keep the architecture composable rather than forcing one universal pipeline."
+    ]
+  },
+
+  "invariants": [
+    "Evidence is not a Truth State.",
+    "Observation is not Reality.",
+    "Identity is not Authority.",
+    "Authority is not Correctness.",
+    "Authority is not Capability.",
+    "Intent is not State.",
+    "Proposal is not Commitment.",
+    "Commitment is not Materialization.",
+    "Commitment is not Finality.",
+    "Decision is not Enforcement.",
+    "Recovery is not Revalidation.",
+    "Revalidation is not Reconciliation.",
+    "Negative domain result is not Evaluation failure.",
+    "Missing Evidence is not qualified absence.",
+    "Derived Evidence is not automatically independent Evidence.",
+    "State equality is not Lineage equality.",
+    "Stable value is not stable structure.",
+    "Difference is not Paradox.",
+    "Correction does not erase historical Truth."
+  ],
+
+  "reference_implementation": {
+    "system": "NTP",
+    "truth_class": "temporal",
+    "fixture_path": "fixtures/ntp/",
+    "test_path": "tests/",
+    "deterministic": true,
+
+    "fixture_progression": [
+      "coherent",
+      "minor_drift",
+      "outlier",
+      "fragmented",
+      "stale",
+      "indeterminate"
+    ],
+
+    "goals": [
+      "Qualify Evidence without deleting dissent.",
+      "Detect domain-semantic Coherence.",
+      "Measure bounded temporal Drift.",
+      "Preserve structural fragmentation.",
+      "Recognize stale Evidence without rewriting historical Truth.",
+      "Return indeterminate when no sufficiently qualified answer exists.",
+      "Keep Correction downstream of Evaluation.",
+      "Preserve Revalidation and lifecycle history."
+    ]
+  },
+
+  "research_plane": {
+    "separate_from_runtime": true,
+    "scoring_profile": "R-L-E-C-D-P-G-F-X-T",
+
+    "criteria": [
+      "Reference Basis Quality",
+      "Lineage Visibility",
+      "Evidence Quality",
+      "Coherence Detection",
+      "Drift Detection",
+      "Paradox Handling",
+      "Regime Awareness",
+      "Freshness / Revalidation",
+      "Correction Discipline",
+      "Failure Transparency"
+    ]
+  },
+
+  "navigation": {
+    "readme": "README.md",
+    "architecture": "architecture/",
+    "crosswalks": "crosswalks/",
+    "schemas": "schemas/",
+    "fixtures": "fixtures/",
+    "tests": "tests/"
+  },
+
+  "audience": [
+    "students",
+    "researchers",
+    "AI systems",
+    "systems architects",
+    "infrastructure engineers",
+    "security practitioners",
+    "governance designers",
+    "RTT operators"
+  ],
+
+  "tags": [
+    "RTT",
+    "Resonance Truth",
+    "truth",
+    "evidence",
+    "coherence",
+    "drift",
+    "paradox",
+    "regime",
+    "lineage",
+    "qualification",
+    "revalidation",
+    "operational truth",
+    "truth service"
+  ]
 }
