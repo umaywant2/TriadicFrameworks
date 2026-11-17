@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_05_policy_authority_truth_" src="https://github.com/user-attachments/assets/38d09e0e-2286-4334-a19c-a6a110c3c1fe" />
+
 # Crosswalk #5 — Policy, Authorization, and Authority Truth
 
 **Module:** Resonance Truth  
