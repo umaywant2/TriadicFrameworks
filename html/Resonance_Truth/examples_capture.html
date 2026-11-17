@@ -1,0 +1,6219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Resonance_Truth/examples_capture.md">
+  <title>examplescapture</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Resonance_Truth/examples_capture.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Resonance_Truth/examples_capture.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="examples_capture">examples_capture</h1>
+<blockquote>
+<p>Shifting gears...Ref: TriadicFrameworks/docs/Resonance_Truth at main · umaywant2/TriadicFrameworks I'm thinking about this module again...  Specifically, like we'd think of using NTP for the time service... Prior to that, perhaps we identify the top 10 examples of modern systems that need/use truth.</p>
+</blockquote>
+<hr>
+<p>Yes. Before selecting a “truth service,” we should identify what modern systems already treat as <strong>operational truth</strong>, then study how each truth is sourced, distributed, validated, cached, contested, and corrected.</p>
+<p>The current Resonance_Truth module treats truth primarily as a semantic field moving through resonance, coherence, drift, paradox, and regime transitions. The next layer could ask:</p>
+<blockquote>
+<p>What does truth look like when a system must act on it?</p>
+</blockquote>
+<p><img width="474" height="449" alt="th" src="https://github.com/user-attachments/assets/960a8fbf-d2b0-48ba-9112-477d59a15785" /><img width="474" height="315" alt="th" src="https://github.com/user-attachments/assets/bb6d957b-0810-4b0a-84fb-3933f0f5ff23" /><img width="474" height="391" alt="th" src="https://github.com/user-attachments/assets/60f30acb-944f-47e1-bf0d-b5959125be64" /></p>
+<h2 id="top-10-modern-systems-that-need-or-use-truth">Top 10 modern systems that need or use truth</h2>
+<p>This is a structural shortlist, not a popularity ranking.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>System</th>
+<th>Operational truth required</th>
+<th>Truth mechanism</th>
+<th>Failure when truth drifts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Time synchronization</td>
+<td>What time is it?</td>
+<td>NTP/PTP, reference clocks, strata, peer comparison</td>
+<td>Logs misalign, certificates fail, transactions reorder, distributed coordination breaks</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Naming and resolution</td>
+<td>Where is the named thing?</td>
+<td>DNS, authoritative zones, delegation, caching, TTLs</td>
+<td>Services become unreachable or traffic is misdirected</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Identity and authentication</td>
+<td>Who or what is making the request?</td>
+<td>Identity providers, directories, credentials, MFA, certificates</td>
+<td>Impersonation, denial of access, privilege misuse</td>
+</tr>
+<tr>
+<td>4</td>
+<td>PKI and certificate trust</td>
+<td>Is this identity-key binding authentic and currently valid?</td>
+<td>Certificate authorities, trust chains, signatures, expiry, revocation</td>
+<td>Secure communication loses authentication or integrity</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Authorization and policy</td>
+<td>Is this actor permitted to perform this action here and now?</td>
+<td>IAM roles, ACLs, policy engines, contextual evaluation</td>
+<td>Unauthorized execution or improper denial</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Distributed data and consensus</td>
+<td>Which state or event ordering should participants accept?</td>
+<td>Consensus protocols, quorum, replication, logs, conflict resolution</td>
+<td>Split brain, divergent state, double execution</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Financial ledgers</td>
+<td>Who owns what, and which transactions are settled?</td>
+<td>Ledgers, reconciliation, signatures, clearing and settlement systems</td>
+<td>Duplicate payment, incorrect balances, disputed ownership</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Configuration and desired state</td>
+<td>What state should the system currently be in?</td>
+<td>Source control, configuration management, policy-as-code, deployment controllers</td>
+<td>Configuration drift, inconsistent hosts, unsafe deployments</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Observability and incident response</td>
+<td>What happened, where, and in what sequence?</td>
+<td>Logs, metrics, traces, timestamps, provenance, correlation</td>
+<td>Incorrect diagnosis, broken timelines, false attribution</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Software and supply-chain integrity</td>
+<td>Is this artifact the intended one, from the claimed source, and unchanged?</td>
+<td>Hashes, signatures, provenance attestations, dependency metadata</td>
+<td>Tampered builds, dependency substitution, untraceable releases</td>
+</tr>
+</tbody>
+</table>
+<p>PKI is a particularly clear example: it combines cryptography, trusted roles, certificates, systems, and operating rules to bind a public key to an identity, while signatures allow recipients to detect altered data or software.</p>
+<h2 id="the-useful-realization">The useful realization</h2>
+<p>These systems do not serve one generic kind of truth.</p>
+<p>They serve different truth classes:</p>
+<ol>
+<li>Temporal truth: when</li>
+<li>Locational truth: where</li>
+<li>Identity truth: who</li>
+<li>Integrity truth: whether unchanged</li>
+<li>Authority truth: who may</li>
+<li>State truth: what currently is</li>
+<li>Transactional truth: what was committed</li>
+<li>Intent truth: what should be</li>
+<li>Observational truth: what occurred</li>
+<li>Lineage truth: where something came from</li>
+</ol>
+<p>That feels like the stronger foundation for the module.</p>
+<h2 id="why-ntp-is-an-excellent-first-example">Why NTP is an excellent first example</h2>
+<p>NTP does not distribute an absolute, context-free truth. It distributes a <strong>bounded, qualified estimate of time</strong> through a hierarchy of reference sources, servers, peers, and local clocks.</p>
+<p>Structurally, it gives us:</p>
+<ul>
+<li>an external reference</li>
+<li>source hierarchy</li>
+<li>multiple candidate observations</li>
+<li>distance from the reference</li>
+<li>uncertainty and delay</li>
+<li>source-selection logic</li>
+<li>local correction</li>
+<li>continuous resynchronization</li>
+<li>graceful degradation</li>
+<li>rejection of outliers</li>
+</ul>
+<p>That makes NTP an excellent bridge between classical infrastructure and RTT.</p>
+<h2 id="ntp-translated-into-rtt-language">NTP translated into RTT language</h2>
+<table>
+<thead>
+<tr>
+<th><strong>NTP concept</strong></th>
+<th><strong>RTT interpretation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference clock</td>
+<td>truth anchor</td>
+</tr>
+<tr>
+<td>Stratum</td>
+<td>lineage distance from anchor</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>sample observation</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>measured drift</td>
+</tr>
+<tr>
+<td>Delay</td>
+<td>propagation distortion</td>
+</tr>
+<tr>
+<td>Jitter</td>
+<td>instability across observations</td>
+</tr>
+<tr>
+<td>Peer</td>
+<td>selection  coherence evaluation</td>
+</tr>
+<tr>
+<td>Outlier</td>
+<td>rejection   contradiction containment</td>
+</tr>
+<tr>
+<td>Clock</td>
+<td>discipline    bounded correction</td>
+</tr>
+<tr>
+<td>Holdover</td>
+<td>provisional continuity without fresh confirmation</td>
+</tr>
+<tr>
+<td>Resynchronization</td>
+<td>truth-state renewal</td>
+</tr>
+</tbody>
+</table>
+<p>The key idea is:</p>
+<blockquote>
+<p>NTP does not ask one source for “the truth” and blindly overwrite local state. It evaluates observations, estimates drift, selects credible sources, and disciplines the local clock gradually.</p>
+</blockquote>
+<p>That is much closer to the operational behavior Resonance_Truth needs than a simple database of facts.</p>
+<h2 id="a-first-abstraction-truth-service-pattern">A first abstraction: Truth Service Pattern</h2>
+<p>Across the ten systems, a reusable structure appears:</p>
+<p><strong>Anchor → Observation → Qualification → Comparison → Selection → Distribution → Local acceptance → Revalidation</strong></p>
+<p>Or in RTT terms:</p>
+<p><strong>Truth source → resonance field → coherence test → drift measurement → paradox containment → regime-qualified claim</strong></p>
+<p>A truth service would therefore not merely return:</p>
+<p>true</p>
+<p>It would return something conceptually like:</p>
+<ul>
+<li>claim</li>
+<li>domain</li>
+<li>source</li>
+<li>lineage</li>
+<li>observation time</li>
+<li>confidence or uncertainty</li>
+<li>coherence state</li>
+<li>measured drift</li>
+<li>contesting claims</li>
+<li>validity regime</li>
+<li>expiration/recheck condition</li>
+<li>correction policy</li>
+</ul>
+<h2 id="one-level-above-the-ten-examples">One level above the ten examples</h2>
+<p>We can group them into three broad truth-service families:</p>
+<h3 id="reference-services">Reference services</h3>
+<p>They answer against an external or delegated anchor:</p>
+<ul>
+<li>NTP</li>
+<li>DNS</li>
+<li>identity</li>
+<li>PKI</li>
+</ul>
+<h2 id="agreement-services">Agreement services</h2>
+<p>They establish usable truth among distributed participants:</p>
+<ul>
+<li>distributed consensus</li>
+<li>financial ledgers</li>
+<li>policy systems</li>
+</ul>
+<h3 id="evidence-services">Evidence services</h3>
+<p>They reconstruct or verify truth from records and lineage:</p>
+<ul>
+<li>observability</li>
+<li>configuration state</li>
+<li>software supply-chain provenance</li>
+</ul>
+<p>&lt; File &gt;Resonance_Truth&lt; /File &gt; could sit above all three by describing how a claim moves between:</p>
+<p><strong>declared → observed → corroborated → contested → degraded → expired → corrected</strong></p>
+<p>That would turn the module from an analysis of the word truth into a reusable architecture for truth-bearing systems.</p>
+<h2 id="working-thesis">Working thesis</h2>
+<blockquote>
+<p>Modern systems do not operate on absolute truth. They operate on bounded truth claims whose usefulness depends on source authority, lineage, freshness, agreement, uncertainty, and regime.</p>
+</blockquote>
+<p>NTP gives us the first strong case study because it makes nearly all of those properties visible in one familiar infrastructure service.</p>
+<p>The natural next artifact is <strong>“Top 10 Operational Truth Systems: An RTT Crosswalk,”</strong> followed by <strong>“NTP as a Truth Service Reference Architecture.”</strong></p>
+<hr>
+<p>Yes. With the live Resonance_Truth module in view, I’d make the crosswalk explicitly bridge its existing <strong>Resonance / Coherence / Drift / Paradox / Regime</strong> grammar into operational infrastructure. The module currently models truth as a dynamic semantic object moving through Ω, C, D, P, and R states, so this extends that model rather than replacing it.</p>
+<h2 id="rtt-crosswalk-top-10-operational-truth-systems">RTT Crosswalk: Top 10 Operational Truth Systems</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Modern system</th>
+<th>Operational truth question</th>
+<th>Truth anchor</th>
+<th>Resonance / observation</th>
+<th>Coherence mechanism</th>
+<th>Drift signal</th>
+<th>Paradox condition</th>
+<th>Regime boundary</th>
+<th>RTT lesson</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Time synchronization</td>
+<td>What time is it?</td>
+<td>Reference clock / authoritative time source</td>
+<td>Multiple clock observations propagate through a timing network</td>
+<td>Sources are compared and a usable local time is maintained</td>
+<td>Offset, delay, jitter, clock divergence</td>
+<td>Valid sources disagree about current time   Loss/change of reference, synchronization state, or trust</td>
+<td>Truth can be approximate yet operationally coherent.</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>DNS / naming</td>
+<td>Where is this named thing?</td>
+<td>Authoritative namespace</td>
+<td>Resolvers observe authoritative and cached records</td>
+<td>Delegation and authority establish which answer governs a name</td>
+<td>Stale caches, inconsistent records, propagation differences</td>
+<td>Different observers legitimately see different answers during change</td>
+<td>Authority/delegation or record changes</td>
+<td>Truth can be scoped by authority, namespace, and lifetime.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Identity / authentication</td>
+<td>Who are you?</td>
+<td>Identity authority plus credential</td>
+<td>A presented identity claim is evaluated against trusted evidence</td>
+<td>Credential validation binds actor to asserted identity   Expired, revoked, compromised, or stale identity information</td>
+<td>An actor can be authentic in one context and untrusted in another</td>
+<td>Authentication context or trust domain changes</td>
+<td>Identity truth is relational, not intrinsic.</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>PKI / certificates</td>
+<td>Can this identity-key relationship be trusted?</td>
+<td>Trust anchor</td>
+<td>Certificates carry assertions along a trust chain</td>
+<td>Chain validation, signatures, validity constraints Expiration, revocation, changed trust relationships</td>
+<td>Cryptographically valid does not necessarily mean operationally trusted</td>
+<td>Trust store, certificate, policy, or validity regime changes</td>
+<td>Integrity and trust are related but distinct truths.</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Authorization / policy</td>
+<td>May this actor do this?</td>
+<td>Governing policy</td>
+<td>Actor, resource, request, environment and policy meet</td>
+<td>Policy evaluation produces an authorization result</td>
+<td>Role, context, policy, or resource state changes</td>
+<td>Same actor may be permitted and denied under different contexts   Policy or security context changes</td>
+<td>Truth can be action-qualified and regime-dependent.</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Distributed consensus   What state do we collectively accept?</td>
+<td>Protocol-defined agreement</td>
+<td>Nodes exchange observations/proposals</td>
+<td>Consensus establishes an accepted system state</td>
+<td>Replica divergence, delayed observations, partitions</td>
+<td>Individually valid observations can conflict</td>
+<td>Leadership, quorum, partition, membership or epoch changes</td>
+<td>Operational truth may emerge from agreement rather than a single oracle.</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Financial ledger</td>
+<td>What has been committed, and who owns what?</td>
+<td>Authoritative ledger</td>
+<td>Transactions alter recorded state</td>
+<td>Validation and reconciliation preserve accepted history/state</td>
+<td>Unreconciled records, conflicting transactions, stale balances</td>
+<td>Parties may hold locally valid but incompatible views</td>
+<td>Settlement/finality or ledger-authority boundary</td>
+<td>Truth acquires consequences when observation becomes commitment.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Configuration / desired state</td>
+<td>What should the system be?</td>
+<td>Declared configuration/policy</td>
+<td>Actual state is observed against intended state</td>
+<td>Reconciliation seeks agreement between declaration and observation</td>
+<td>Configuration drift</td>
+<td>Desired state and operational necessity can legitimately diverge</td>
+<td>Deployment, policy, environment or emergency-state change</td>
+<td>Declared truth and observed truth are separate objects.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Observability   What happened?</td>
+<td>Evidence generated by the system</td>
+<td>Logs, metrics, traces and events provide partial observations</td>
+<td>Correlation reconstructs a coherent account</td>
+<td>Missing telemetry, timing mismatch, contradictory signals</td>
+<td>Multiple accurate observations may imply different narratives</td>
+<td>Incident/context/time boundary changes interpretation</td>
+<td>Evidence is not truth; truth is reconstructed from bounded evidence.</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Software supply chain</td>
+<td>Is this the intended artifact, and where did it come from?</td>
+<td>Trusted source/provenance declaration</td>
+<td>Hashes, signatures and metadata accompany artifacts</td>
+<td>Verification connects artifact to expected identity and lineage</td>
+<td>Artifact, dependency, source or provenance changes</td>
+<td>Authentic software can still be unsafe; safe software can lack trusted provenance</td>
+<td>Build, signing, dependency or distribution boundary changes</td>
+<td>Lineage is a first-class dimension of operational truth.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cross-system-rtt-extraction">Cross-system RTT extraction</h2>
+<p>The interesting bit appears when we stop looking horizontally and read down the columns.</p>
+<table>
+<thead>
+<tr>
+<th><strong>RTT dimension</strong></th>
+<th><strong>Operational interpretation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Truth Anchor</strong></td>
+<td>Where a claim ultimately derives authority</td>
+</tr>
+<tr>
+<td><strong>Resonance</strong></td>
+<td>How observations of the claim propagate through the system</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Whether observations remain mutually usable inside the current regime</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Measurable displacement between expected, declared, observed, or previously accepted truth</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>Multiple apparently valid truths that cannot be collapsed without additional context</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>The boundary inside which a particular truth interpretation remains valid</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>The chain connecting the present claim to sources and transformations</td>
+</tr>
+<tr>
+<td><strong>Freshness</strong></td>
+<td>How long the observation remains usable without renewal</td>
+</tr>
+<tr>
+<td><strong>Confidence</strong></td>
+<td>How strongly the available observations support acceptance</td>
+</tr>
+<tr>
+<td><strong>Correction</strong></td>
+<td>How accepted local truth changes when better observations arrive</td>
+</tr>
+</tbody>
+</table>
+<p>That sits naturally beside the existing Truth_Operator_Table.md, Truth_Coherence_Study.md, Truth_Drift_Walkthrough.md, and Truth_Regime_Transitions.md already present in the module.</p>
+<h2 id="the-deeper-crosswalk">The deeper crosswalk</h2>
+<p>There are actually four different relationships to truth hiding in the ten examples:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Truth relationship</strong></th>
+<th><strong>Representative systems</strong></th>
+<th><strong>Structural question</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reference</strong></td>
+<td>NTP, DNS, PKI</td>
+<td>What trusted reference should I consult?</td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>Identity, authorization, supply chain</td>
+<td>Does this claim satisfy the governing constraints?</td>
+</tr>
+<tr>
+<td><strong>Agreement</strong></td>
+<td>Consensus, financial ledgers</td>
+<td>What state will participants accept as authoritative?</td>
+</tr>
+<tr>
+<td><strong>Reconstruction</strong></td>
+<td>Observability, configuration comparison</td>
+<td>Given partial observations, what appears to be true?</td>
+</tr>
+</tbody>
+</table>
+<p>And that gives us something I think is important for Resonance Truth:</p>
+<blockquote>
+<p><strong>A Truth Service should not necessarily determine truth. It should expose the structural condition of a truth claim.</strong></p>
+</blockquote>
+<p>So instead of:</p>
+<p><strong>QUERY → TRUTH → TRUE/FALSE</strong></p>
+<p>the RTT pattern becomes:</p>
+<p><strong>CLAIM → OBSERVATIONS → LINEAGE → COHERENCE → DRIFT → PARADOX → REGIME → QUALIFIED TRUTH STATE</strong></p>
+<p>That preserves the existing module's central premise that truth is not treated merely as a static semantic fact.</p>
+<p>And I think <strong>NTP should be Crosswalk #1</strong>, not only because we're both old enough to have yelled at clocks on servers 😄, but because it provides an unusually clean example of a system that can say, effectively:</p>
+<blockquote>
+<p><em>I have a value.</em>
+<em>I know where it came from.</em>
+<em>I know how far I am from the reference.</em>
+<em>I can compare competing observations.</em>
+<em>I can detect drift.</em>
+<em>I don't need perfect certainty to remain useful.</em>
+<em>And I'll keep checking.</em></p>
+</blockquote>
+<p><strong>That is starting to sound suspiciously like the infrastructure version of Resonance Truth.</strong></p>
+<hr>
+<p>This draft treats NTP as the reference architecture, not as a claim that semantic truth is reducible to clock synchronization. The useful transfer is structural: NTP gathers observations, qualifies sources, rejects divergence, estimates error, disciplines local state, and keeps rechecking rather than declaring permanent certainty. NTPv4 formally separates peer processing, clock filtering, source selection, clustering, combination, clock discipline, clock adjustment, and polling; current best practices also emphasize source diversity, monitoring, security, and stable operation.</p>
+<p>The draft extends the existing Resonance_Truth module, which already organizes truth through resonance, coherence, drift, paradox, regimes, and the SET triad.</p>
+<pre><code># NTP as an RTT Truth-Service Reference Architecture
+
+**Module:** Resonance Truth  
+**Status:** Draft architecture  
+**Canon frame:** RTT/1  
+**Coherence:** declared  
+**Drift:** bounded  
+**Paradox:** structural  
+**Reference pattern:** Network Time Protocol
+
+---
+
+## 1. Purpose
+
+This architecture uses the Network Time Protocol as a structural reference for an RTT-aligned truth service.
+
+NTP does not distribute perfect or context-free time. It receives observations from qualified sources, evaluates their stability and distance, rejects unsuitable observations, derives a usable estimate, disciplines local state, and continually revalidates that state.
+
+An RTT truth service should operate similarly.
+
+It should not function as an unquestionable oracle that returns a bare `true` or `false`. It should provide a **qualified truth state** that explains:
+
+- what claim is being evaluated
+- which regime governs the claim
+- where the observations came from
+- how fresh those observations are
+- whether independent observations cohere
+- how far local belief has drifted from the accepted reference
+- which contradictions remain unresolved
+- how the accepted state may be corrected
+- when the result must be checked again
+
+The purpose of the service is therefore not to manufacture absolute truth.
+
+Its purpose is to maintain a **bounded, traceable, regime-aware relationship between claims, observations, and accepted local state**.
+
+---
+
+## 2. Governing Principle
+
+&gt; A truth service does not merely return an answer. It exposes the structural condition under which an answer can presently be accepted.
+
+The service follows this operational sequence:
+
+**Claim → Sources → Observations → Qualification → Comparison → Coherence → Drift → Paradox → Regime → Local Truth State → Revalidation**
+
+The result is provisional where evidence is incomplete, contested where qualified observations conflict, and expired when freshness or regime conditions no longer hold.
+
+---
+
+## 3. NTP-to-RTT Structural Crosswalk
+
+| NTP structure | RTT truth-service structure | Function |
+|---|---|---|
+| Reference clock | Truth anchor | Provides a recognized reference for a bounded domain |
+| Time source | Claim source | Provides an observation or assertion |
+| Stratum | Lineage distance | Indicates distance from the originating anchor |
+| Time sample | Evidence observation | Carries a source-specific measurement |
+| Timestamp | Observation time | Establishes when the evidence was produced or observed |
+| Round-trip delay | Propagation cost | Estimates distortion introduced during transmission |
+| Clock offset | Truth drift | Measures displacement between local and reference states |
+| Jitter | Observation instability | Measures variation among observations over time |
+| Dispersion | Accumulated uncertainty | Represents increasing uncertainty across distance and time |
+| Clock filter | Evidence filter | Removes weak, stale, unstable, or redundant observations |
+| Selection algorithm | Source qualification | Identifies sources eligible to influence the accepted state |
+| Cluster algorithm | Outlier containment | Removes sources that diverge materially from coherent peers |
+| Combine algorithm | Truth-state synthesis | Produces a bounded result from remaining qualified observations |
+| Clock discipline | Bounded belief correction | Adjusts local state without unnecessary discontinuity |
+| Poll process | Revalidation scheduler | Determines when another observation is required |
+| Holdover | Provisional continuity | Maintains a usable local state when fresh observations are unavailable |
+| Unsynchronized state | Indeterminate truth state | Declares that no sufficiently qualified result is available |
+
+---
+
+## 4. Architectural Boundary
+
+The RTT truth service sits between raw assertions and systems that need to act on them.
+
+It does not replace:
+
+- domain experts
+- evidence repositories
+- policy authorities
+- identity systems
+- consensus protocols
+- scientific methods
+- legal or institutional judgment
+- human interpretation
+
+Instead, it provides a common structural layer for evaluating the condition of truth claims across those domains.
+
+### Upstream
+
+Upstream components provide:
+
+- claims
+- observations
+- evidence
+- source identities
+- timestamps
+- provenance
+- governing policies
+- regime declarations
+
+### Truth-service boundary
+
+The service performs:
+
+- source qualification
+- lineage evaluation
+- freshness evaluation
+- coherence analysis
+- drift measurement
+- paradox registration
+- regime validation
+- bounded synthesis
+- local-state correction
+- revalidation scheduling
+
+### Downstream
+
+Downstream consumers receive:
+
+- a qualified truth state
+- supporting observations
+- uncertainty and drift measures
+- unresolved contradictions
+- lineage and freshness information
+- permitted uses
+- expiration conditions
+- correction guidance
+
+---
+
+## 5. Core Components
+
+### 5.1 Claim Intake
+
+Claim Intake receives the statement to be evaluated and converts it into a bounded truth request.
+
+A valid request identifies:
+
+- the claim
+- the subject or object
+- the truth domain
+- the intended use
+- the governing regime
+- the required precision
+- the maximum acceptable age
+- the consequence of error
+- the requested evaluation time
+
+The same sentence may produce different truth requests under different regimes.
+
+For example, “the service is available” may mean:
+
+- responding to a local health check
+- reachable from the public Internet
+- capable of completing a transaction
+- meeting a contractual availability threshold
+- operating safely under degraded conditions
+
+The claim must therefore be scoped before it can be evaluated.
+
+---
+
+### 5.2 Truth Anchors
+
+A Truth Anchor is a recognized reference within a declared domain.
+
+Possible anchors include:
+
+- an authoritative record
+- a signed artifact
+- a calibrated instrument
+- an accepted standard
+- a policy declaration
+- a verified identity authority
+- a consensus state
+- a reproducible observation
+- a curated body of evidence
+
+An anchor is not globally authoritative merely because one regime recognizes it.
+
+Every anchor must declare:
+
+- domain
+- authority
+- provenance
+- applicable regime
+- validity interval
+- known limitations
+- replacement or revocation conditions
+
+The service must distinguish between **anchor authority** and **claim correctness**. An authoritative source can still be stale, misconfigured, compromised, incomplete, or outside its valid regime.
+
+---
+
+### 5.3 Source Associations
+
+Each source is maintained as a distinct association.
+
+The service records:
+
+- source identity
+- source type
+- relationship to an anchor
+- lineage distance
+- observation history
+- freshness
+- stability
+- prior contradictions
+- known dependencies
+- trust constraints
+- current eligibility
+
+Sources are evaluated independently before their observations are combined.
+
+A large number of observations does not automatically create stronger truth if those observations share the same hidden origin. Source diversity must be evaluated structurally, not counted superficially.
+
+---
+
+### 5.4 Observation Collection
+
+Observation Collection gathers evidence relevant to the claim.
+
+Each observation should contain:
+
+- observed value or assertion
+- source
+- observation time
+- receipt time
+- provenance
+- collection method
+- declared confidence
+- transformation history
+- applicable domain
+- applicable regime
+- expiration condition
+
+The service preserves observations even when they are rejected from the current synthesis. Rejected evidence may become relevant after a regime transition or when another source is withdrawn.
+
+---
+
+### 5.5 Evidence Filter
+
+The Evidence Filter removes observations that should not influence the current truth state.
+
+An observation may be filtered because it is:
+
+- stale
+- malformed
+- unverifiable
+- duplicated
+- outside the declared regime
+- dependent on a rejected source
+- insufficiently precise
+- unstable
+- revoked
+- unsupported by required lineage
+- incompatible with the intended use
+
+Filtering does not establish that an observation is false.
+
+It establishes only that the observation is not presently qualified to participate in this evaluation.
+
+---
+
+### 5.6 Source Selection
+
+Source Selection determines which qualified sources are eligible to influence the result.
+
+Selection considers:
+
+- authority
+- lineage distance
+- freshness
+- independence
+- stability
+- regime compatibility
+- historical reliability
+- measurement quality
+- security condition
+- consequence of error
+
+The nearest authority is not always the best source. A more distant source may be preferable if it provides stronger independence, clearer lineage, or better regime compatibility.
+
+The selection process must be inspectable. A downstream consumer must be able to determine why one source was accepted and another was excluded.
+
+---
+
+### 5.7 Coherence Cluster
+
+The Coherence Cluster compares the remaining observations.
+
+Its purpose is to determine whether a set of independently qualified observations forms a mutually usable field.
+
+Possible results include:
+
+- **Coherent:** observations support a common truth state.
+- **Weakly coherent:** observations generally align but uncertainty remains elevated.
+- **Fragmented:** observations form multiple internally coherent clusters.
+- **Contested:** qualified sources make materially incompatible claims.
+- **Inverted:** the accepted interpretation conflicts with the evidence pattern.
+- **Indeterminate:** insufficient qualified observations remain.
+
+Coherence is not majority voting.
+
+Ten derivative observations from one upstream source do not automatically outweigh two independent observations with stronger lineage.
+
+---
+
+### 5.8 Drift Engine
+
+The Drift Engine measures displacement among:
+
+- the local accepted state
+- current observations
+- prior accepted states
+- declared truth
+- expected truth
+- anchor-derived truth
+
+Drift should be represented along more than one axis:
+
+- **value drift:** the claim’s value has changed
+- **semantic drift:** the meaning of the claim has changed
+- **source drift:** authority or provenance has changed
+- **lineage drift:** the transformation chain has changed
+- **temporal drift:** the accepted state has aged
+- **regime drift:** the governing context has changed
+- **confidence drift:** support for the accepted state has weakened
+- **policy drift:** acceptance requirements have changed
+
+The service should not treat all drift as failure.
+
+Some drift represents legitimate transition. The service must distinguish uncontrolled displacement from declared regime change.
+
+---
+
+### 5.9 Paradox Register
+
+The Paradox Register preserves qualified contradictions that cannot be safely collapsed.
+
+A paradox record contains:
+
+- the conflicting claims
+- their supporting observations
+- the sources involved
+- the regimes under which each may be valid
+- the dimensions of disagreement
+- the consequences of choosing either interpretation
+- the condition required for resolution
+- the current containment policy
+
+A paradox may indicate:
+
+- incomplete observation
+- incompatible regimes
+- different time boundaries
+- different semantic definitions
+- hidden source dependence
+- genuine structural contradiction
+
+The service must not manufacture false coherence by averaging claims whose meanings or regimes are incompatible.
+
+---
+
+### 5.10 Regime Resolver
+
+The Regime Resolver determines the operational boundary within which the claim can be interpreted.
+
+A regime may include:
+
+- domain
+- jurisdiction
+- time interval
+- observer position
+- system state
+- policy version
+- security context
+- measurement scale
+- semantic definition
+- intended action
+
+The resolver asks:
+
+&gt; Under which declared conditions can these observations be combined without changing their meaning?
+
+When no common regime exists, the service must return separate qualified truth states rather than forcing a single answer.
+
+---
+
+### 5.11 Truth-State Synthesizer
+
+The Truth-State Synthesizer produces the best bounded result supported by the remaining observations.
+
+It does not erase disagreement. It carries forward:
+
+- the accepted claim
+- the governing regime
+- the source set
+- lineage
+- freshness
+- coherence state
+- measured drift
+- uncertainty
+- unresolved paradoxes
+- validity limits
+- revalidation requirements
+
+The synthesized state may be:
+
+1. **Declared**  
+   A claim exists but has not yet been independently evaluated.
+
+2. **Observed**  
+   Relevant evidence has been collected.
+
+3. **Corroborated**  
+   Multiple qualified observations support a common state.
+
+4. **Operationally accepted**  
+   The result satisfies the requirements of a specified use.
+
+5. **Contested**  
+   Qualified observations materially conflict.
+
+6. **Degraded**  
+   The result remains usable, but freshness, diversity, stability, or confidence has weakened.
+
+7. **Held over**  
+   No fresh qualified observation is available, but prior state remains provisionally usable.
+
+8. **Expired**  
+   The state no longer satisfies freshness or regime requirements.
+
+9. **Rejected**  
+   Available evidence does not support the claim within the governing regime.
+
+10. **Indeterminate**  
+    The service cannot produce a sufficiently qualified state.
+
+---
+
+### 5.12 Local Truth Discipline
+
+Local Truth Discipline controls how a consumer updates its accepted state.
+
+A newly synthesized truth state should not always overwrite local state immediately.
+
+Correction policy depends on:
+
+- magnitude of drift
+- consequence of discontinuity
+- confidence in the new state
+- source diversity
+- regime continuity
+- reversibility
+- urgency
+- safety requirements
+
+Correction modes include:
+
+- **Immediate step:** replace the local state at once.
+- **Gradual discipline:** converge toward the new state over time.
+- **Quarantine:** preserve the new state without applying it.
+- **Dual-state operation:** retain competing states for separate regimes.
+- **Human escalation:** require explicit review.
+- **Holdover:** preserve the previous state temporarily.
+- **Fail closed:** prohibit action until truth can be re-established.
+- **Fail bounded:** permit only low-consequence actions.
+
+This component separates **discovering a better-supported truth state** from **deciding how a system should react to it**.
+
+---
+
+### 5.13 Revalidation Scheduler
+
+Every accepted truth state must have a revalidation condition.
+
+Revalidation may be triggered by:
+
+- elapsed time
+- source update
+- anchor change
+- new contradictory evidence
+- regime transition
+- policy change
+- security event
+- excessive drift
+- reduced source diversity
+- downstream consequence
+- manual challenge
+
+Stable claims may require less frequent revalidation. Volatile or high-consequence claims require more frequent checks.
+
+No accepted truth state should be treated as permanently fresh merely because it was once coherent.
+
+---
+
+### 5.14 Audit and Lineage Store
+
+The Audit and Lineage Store preserves the full truth-state lifecycle:
+
+- original claim
+- source observations
+- filtering decisions
+- selection decisions
+- coherence results
+- drift measurements
+- paradox records
+- regime declarations
+- synthesized states
+- corrections
+- downstream uses
+- revalidation events
+
+The store must support reconstruction of not only **what the service concluded**, but also:
+
+- why it concluded it
+- which evidence was available
+- which evidence was rejected
+- which regime governed the result
+- what changed afterward
+
+This makes truth lineage a first-class operational artifact.
+
+---
+
+## 6. Logical Flow
+
+The truth-service cycle follows thirteen stages:
+
+1. **Receive the claim.**
+2. **Declare the intended use and governing regime.**
+3. **Identify eligible anchors and sources.**
+4. **Collect observations.**
+5. **Validate provenance and freshness.**
+6. **Filter unusable evidence.**
+7. **Select qualified sources.**
+8. **Form coherence clusters.**
+9. **Measure drift.**
+10. **Register unresolved paradoxes.**
+11. **Synthesize a qualified truth state.**
+12. **Discipline local accepted state according to policy.**
+13. **Schedule revalidation and preserve lineage.**
+
+The cycle repeats whenever freshness, coherence, source authority, or regime conditions change.
+
+---
+
+## 7. Truth-Service Response Contract
+
+A truth-service response should contain the following conceptual fields:
+
+| Field | Purpose |
+|---|---|
+| Claim | The statement being evaluated |
+| Domain | The truth domain |
+| Regime | The conditions under which the result is valid |
+| Status | Declared, observed, corroborated, accepted, contested, degraded, held over, expired, rejected, or indeterminate |
+| Accepted state | The presently synthesized result |
+| Anchors | Recognized reference points |
+| Sources | Qualified sources contributing to the result |
+| Lineage | Path from anchors and sources to the accepted state |
+| Observation window | Time range represented by the evidence |
+| Freshness | Age and revalidation condition |
+| Coherence | Degree and pattern of agreement |
+| Drift | Displacement from prior, declared, expected, or anchored state |
+| Uncertainty | Known limits on acceptance |
+| Paradoxes | Unresolved qualified contradictions |
+| Permitted use | Actions for which the result is sufficiently qualified |
+| Correction mode | How local state should respond |
+| Expiration | Condition under which the result must no longer be used |
+| Next check | Revalidation trigger |
+| Audit reference | Link to the decision and evidence history |
+
+The response must remain meaningful without reducing the entire evaluation to a single confidence score.
+
+---
+
+## 8. Trust and Security Model
+
+A truth service is itself a high-value target because influencing its inputs can influence downstream action.
+
+The architecture should therefore assume:
+
+- sources may be compromised
+- observations may be replayed
+- timestamps may be unreliable
+- lineage may be forged
+- authorities may be revoked
+- multiple sources may share one hidden dependency
+- high-volume repetition may imitate consensus
+- an attacker may attempt to shift the governing regime
+- a previously trusted anchor may become invalid
+
+Required protections include:
+
+- authenticated sources where appropriate
+- integrity validation
+- replay resistance
+- source diversity
+- dependency disclosure
+- revocation handling
+- least-privilege administration
+- auditable selection decisions
+- bounded correction rates
+- anomaly and drift monitoring
+- explicit unsynchronized or indeterminate states
+
+The service must prefer a visible loss of certainty over fabricated coherence.
+
+---
+
+## 9. Failure and Degradation States
+
+The architecture must expose failure rather than conceal it.
+
+### No qualified sources
+
+Return **indeterminate**.
+
+Do not reuse an expired state unless holdover is explicitly permitted.
+
+### Sources disagree within one regime
+
+Return **contested** and preserve the competing clusters.
+
+### Sources belong to incompatible regimes
+
+Return multiple regime-qualified states.
+
+Do not combine them.
+
+### Anchor becomes unavailable
+
+Enter **holdover** if policy permits and gradually increase uncertainty.
+
+### Anchor is revoked or compromised
+
+Invalidate dependent truth states and initiate re-evaluation.
+
+### Local state differs sharply from synthesized state
+
+Apply the configured correction policy. Do not silently overwrite high-consequence state.
+
+### Evidence is coherent but stale
+
+Return **degraded** or **expired**, depending on freshness requirements.
+
+### Evidence is authentic but semantically ambiguous
+
+Return **indeterminate** or **contested** until the claim is more precisely scoped.
+
+---
+
+## 10. RTT Operator Mapping
+
+| RTT operator family | Truth-service role |
+|---|---|
+| **Ω₁ Literal resonance** | Preserve the claim and direct observations |
+| **Ω₂ Interpretive resonance** | Identify contextual meaning and observer frame |
+| **Ω₃ Generalized resonance** | Compare the claim across sources and domains |
+| **Ω₄ Radiative resonance** | Distribute the qualified truth state to consumers |
+| **C₁ Local coherence** | One observation is internally consistent |
+| **C₂ Relational coherence** | Multiple observations are mutually consistent |
+| **C₃ Contested coherence** | Qualified observations form incompatible clusters |
+| **C₄ Inverted coherence** | Accepted interpretation conflicts with the evidence structure |
+| **D₁ Semantic drift** | Claim meaning changes |
+| **D₂ Contextual drift** | Context or use changes |
+| **D₃ Structural drift** | Sources, lineage, or dependencies change |
+| **D₄ Regime drift** | Governing conditions change |
+| **P₁ Structural paradox** | Valid structures produce incompatible results |
+| **P₂ Semantic paradox** | Identical language carries incompatible meanings |
+| **P₃ Regime paradox** | Claims are valid in different operational regimes |
+| **R₁ Declared** | Claim enters the service |
+| **R₂ Contested** | Qualified disagreement becomes visible |
+| **R₃ Collapsed** | The state can no longer be safely maintained |
+| **R₄ Inverted** | The operating interpretation reverses relative to prior acceptance |
+
+---
+
+## 11. SET Triad Mapping
+
+### Spin
+
+Spin represents alignment and persistence.
+
+In the truth service, Spin governs:
+
+- claim identity
+- continuity of meaning
+- anchor relationship
+- lineage retention
+- local-state stability
+
+### Elec
+
+Elec represents distinction and separation.
+
+In the truth service, Elec governs:
+
+- source differentiation
+- evidence filtering
+- outlier containment
+- paradox separation
+- regime boundaries
+- accepted versus rejected observations
+
+### Temp
+
+Temp represents activation and transition.
+
+In the truth service, Temp governs:
+
+- observation timing
+- freshness
+- drift accumulation
+- expiration
+- revalidation
+- correction
+- regime transition
+
+Together:
+
+&gt; **Spin preserves the claim, Elec distinguishes its evidence, and Temp determines when its accepted state must change.**
+
+---
+
+## 12. Example: “The Service Is Available”
+
+### Claim
+
+“The service is available.”
+
+### Regime declaration
+
+Availability is defined as:
+
+- reachable from an external observation point
+- authenticated requests succeed
+- a representative transaction completes
+- the result is fresh enough for incident response
+
+### Candidate observations
+
+- local process status
+- host health check
+- internal load balancer probe
+- external synthetic probe
+- authentication result
+- representative transaction result
+- user-reported failures
+
+### Possible evaluation
+
+The process and host may report healthy while external transactions fail.
+
+The truth service should not average these observations into “mostly available.”
+
+It should identify separate coherence clusters:
+
+- **local infrastructure regime:** available
+- **external user regime:** unavailable
+- **authentication regime:** potentially degraded
+
+The resulting truth state becomes:
+
+&gt; The service is locally operational but not externally available for the declared user transaction regime.
+
+This is more useful than either “up” or “down” because it preserves the regime boundary that explains the apparent contradiction.
+
+---
+
+## 13. Design Principles
+
+1. **No truth without scope.**  
+   Every claim belongs to a domain and regime.
+
+2. **No acceptance without lineage.**  
+   A result must expose where it came from.
+
+3. **No coherence by counting alone.**  
+   Source independence matters more than repetition.
+
+4. **No contradiction erasure.**  
+   Qualified paradoxes remain visible until resolved.
+
+5. **No permanent freshness.**  
+   Every accepted truth state requires revalidation.
+
+6. **No forced synthesis across incompatible regimes.**  
+   Separate truths may coexist when their boundaries are explicit.
+
+7. **No silent correction.**  
+   Changes to accepted local state must be governed and auditable.
+
+8. **No false certainty during source failure.**  
+   Holdover, degraded, expired, and indeterminate states are legitimate outputs.
+
+9. **No conflation of observation and truth.**  
+   Evidence participates in truth evaluation but is not itself the completed truth state.
+
+10. **No conflation of truth and action.**  
+    A claim may be well-supported while a proposed action remains unauthorized, unsafe, or inappropriate.
+
+---
+
+## 14. Minimal Reference Architecture
+
+A minimal implementation requires seven functional layers:
+
+1. **Claim and Regime Intake**
+2. **Source and Anchor Registry**
+3. **Observation and Lineage Collection**
+4. **Filtering and Source Qualification**
+5. **Coherence, Drift, and Paradox Analysis**
+6. **Truth-State Synthesis and Local Discipline**
+7. **Audit, Revalidation, and Distribution**
+
+These layers may begin as analytical operators inside the Resonance Truth module before becoming a software service.
+
+The first implementation should prioritize explainability over automation.
+
+---
+
+## 15. Canonical Summary
+
+An NTP-inspired RTT truth service does not claim to possess absolute truth.
+
+It maintains a disciplined local truth state by:
+
+- consulting qualified references
+- preserving source lineage
+- comparing independent observations
+- rejecting unsuitable evidence
+- measuring drift
+- containing paradox
+- respecting regime boundaries
+- correcting local state cautiously
+- declaring uncertainty openly
+- revalidating continuously
+
+Its canonical output is not:
+
+**TRUE**
+
+Its canonical output is:
+
+&gt; **Within this declared regime, using these qualified sources and observations, this claim is presently coherent enough for these specified uses, with this measured drift, these unresolved contradictions, and this revalidation condition.**
+
+That is truth treated not as a static object, but as a continuously governed relationship among claim, evidence, observer, lineage, time, and regime.
+</code></pre>
+<p>The main writing change was to move the idea from a loose NTP analogy into an actual reusable architecture: boundary, components, state model, response contract, failure modes, RTT operators, SET mapping, and an operational example. I also kept “truth” distinct from authority, evidence, confidence, and action so the module does not accidentally turn a qualified truth service into a universal oracle.</p>
+<hr>
+<p>Absolutely. The live Resonance_Truth module already gives us a clean spine rather than requiring ten new sections: operators → coherence → drift → paradox → regimes → SET → narrative/comparison.</p>
+<p>I’d map the truth classes into that existing structure first, then add one dedicated operational crosswalk page.</p>
+<h2 id="truth-classes-existing-module-sections">Truth Classes → Existing Module Sections</h2>
+<table>
+<thead>
+<tr>
+<th>Truth class</th>
+<th>Operational question</th>
+<th>Primary module section</th>
+<th>Secondary section</th>
+<th>RTT emphasis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temporal Truth</td>
+<td>When is it true?</td>
+<td>Truth_Regime_Transitions.md   Truth_Drift_Walkthrough.md</td>
+<td>Temp · freshness · transition · expiration</td>
+<td></td>
+</tr>
+<tr>
+<td>Locational Truth</td>
+<td>Where is it true / where is the named thing?</td>
+<td>Truth_Coherence_Study.md</td>
+<td>Truth_Regime_Transitions.md   scope · namespace · observer position</td>
+<td></td>
+</tr>
+<tr>
+<td>Identity Truth</td>
+<td>Who or what is this?</td>
+<td>Truth_Operator_Table.md   Truth_Coherence_Study.md</td>
+<td>identity persistence · recognition · qualification</td>
+<td></td>
+</tr>
+<tr>
+<td>Integrity Truth</td>
+<td>Is it still what it claims to be?</td>
+<td>Truth_Coherence_Study.md</td>
+<td>Truth_Drift_Walkthrough.md</td>
+<td>coherence · mutation · verification</td>
+</tr>
+<tr>
+<td>Authority Truth</td>
+<td>Who may declare or act?</td>
+<td>Truth_Regime_Transitions.md</td>
+<td>Truth_Paradox_Analysis.md</td>
+<td>authority scope · regime boundaries</td>
+</tr>
+<tr>
+<td>State Truth</td>
+<td>What is presently the case?</td>
+<td>Truth_Coherence_Study.md</td>
+<td>Truth_Drift_Walkthrough.md</td>
+<td>observed state · declared state · deviation</td>
+</tr>
+<tr>
+<td>Transactional Truth</td>
+<td>What became committed?</td>
+<td>Truth_Regime_Transitions.md</td>
+<td>Truth_Operator_Table.md</td>
+<td>transition · commitment · accepted history</td>
+</tr>
+<tr>
+<td>Intent Truth</td>
+<td>What should the state be?</td>
+<td>Truth_vs_Belief_vs_Evidence_RTT_comparison.md</td>
+<td>Truth_Coherence_Study.md</td>
+<td>declaration versus observation</td>
+</tr>
+<tr>
+<td>Observational Truth</td>
+<td>What was actually observed?</td>
+<td>Truth_vs_Belief_vs_Evidence_RTT_comparison.md</td>
+<td>Truth_Coherence_Study.md</td>
+<td>evidence · observer · reconstruction</td>
+</tr>
+<tr>
+<td>Lineage Truth</td>
+<td>Where did this claim come from?</td>
+<td>Truth_Drift_Walkthrough.md</td>
+<td>Truth_Operator_Table.md</td>
+<td>provenance · transformation · inherited drift</td>
+</tr>
+</tbody>
+</table>
+<p>All of those target files already exist in the live module.</p>
+<p>And SET overlays all ten</p>
+<p>Truth_and_SET_Triad.md shouldn't own a particular truth class. It provides the cross-cutting triadic interpretation for all of them. The existing module defines SET as Spin · Elec · Temp, with truth aligning, separating, and activating under semantic pressure.</p>
+<p>So I'd apply:</p>
+<p>SET Truth-service interpretationSpin    persistence, identity, alignment, continuity
+Elec    distinction, source separation, qualification, boundary
+Temp    freshness, transition, expiration, revalidation</p>
+<p>That is cleaner than making SET another truth class.</p>
+<p>More importantly: don't make the classes mutually exclusive</p>
+<p>I think this is where the module gets powerful.</p>
+<p>A real operational claim can occupy several truth classes simultaneously.</p>
+<p>Take:</p>
+<p>“This TLS certificate is valid.”</p>
+<p>That seemingly simple truth involves:</p>
+<p>Identity
+ Who does the certificate identify?</p>
+<p>Integrity
+ Is the signed structure intact?</p>
+<p>Authority
+ Do we recognize the issuer?</p>
+<p>Temporal
+ Is it currently within its validity interval?</p>
+<p>State
+ Has its status changed?</p>
+<p>Lineage
+ What trust chain led us here?</p>
+<p>Regime
+ Under which trust policy is “valid” being asserted?</p>
+<p>So the truth classes aren't folders.</p>
+<p>They're dimensions of inspection.</p>
+<p>That fits Resonance_Truth much better because the README explicitly describes truth as moving across resonance, coherence, drift, paradox, and regime states rather than treating it as a static fact.</p>
+<p>I would add one new module artifact</p>
+<p>Truth_Classes_Operational_Crosswalk.md</p>
+<p>Its role would be the bridge:</p>
+<p>Truth class → operational question → example systems → RTT operators → module analysis</p>
+<p>Conceptually:</p>
+<p>Class   Anchor example  Key RTT questionTemporal    NTP When does this claim hold?
+Locational  DNS Where does this claim resolve?
+Identity    IAM Who/what does this claim identify?
+Integrity   PKI/hash    Has the truth-bearing object changed?
+Authority   Policy/IAM  Who is empowered to establish this claim?
+State   Distributed systems What is accepted as current?
+Transactional   Ledger  What transition became committed?
+Intent  Desired-state systems   What state is declared as correct?
+Observational   Telemetry   What evidence was actually observed?
+Lineage Supply chain    How did this claim arrive here?</p>
+<p>Then the existing documents answer specialized questions about each class rather than getting rearranged around them.</p>
+<p>Which gives the module a nice two-axis structure</p>
+<p>Horizontal axis: What kind of truth is this?</p>
+<p>Temporal · Locational · Identity · Integrity · Authority · State · Transactional · Intent · Observational · Lineage</p>
+<p>Vertical axis: What is happening to that truth?</p>
+<p>Resonance · Coherence · Drift · Paradox · Regime · SET</p>
+<p>That produces a genuinely useful Truth Matrix:</p>
+<p>Truth Class × RTT State</p>
+<p>And that, I think, is the structure we were looking for.</p>
+<p>NTP stops being merely “the time example.” It becomes our Temporal Truth reference implementation, while DNS, PKI, IAM, consensus, telemetry, and provenance give us reference implementations for the other truth classes.</p>
+<p>The writing/design change here is deliberate: rather than adding ten isolated chapters, this preserves the existing Resonance_Truth canon and introduces the classes as an orthogonal inspection axis. That should keep the module thin while giving us a surprisingly large analytical surface.</p>
+<hr>
+<p>Absolutely. Here’s the paste-ready Markdown version, keeping the two-axis structure intact.</p>
+<pre><code class="language-markdown"># Truth Classes — Operational Crosswalk
+
+**Module:** Resonance Truth  
+**Framework:** RTT  
+**Purpose:** Map operational truth classes to the existing Resonance Truth analysis structure.
+
+---
+
+## Overview
+
+Modern systems do not depend on a single generic form of truth.
+
+They operate across multiple truth classes, including:
+
+- Temporal Truth
+- Locational Truth
+- Identity Truth
+- Integrity Truth
+- Authority Truth
+- State Truth
+- Transactional Truth
+- Intent Truth
+- Observational Truth
+- Lineage Truth
+
+These classes should not be treated as isolated folders or mutually exclusive categories.
+
+Instead, they form an **orthogonal inspection axis** across the existing RTT truth model.
+
+A single operational claim may participate in several truth classes simultaneously.
+
+---
+
+## Truth Classes → Module Sections
+
+| Truth Class | Operational Question | Primary Module Section | Secondary Module Section | RTT Emphasis |
+|---|---|---|---|---|
+| **Temporal Truth** | When is it true? | `Truth_Regime_Transitions.md` | `Truth_Drift_Walkthrough.md` | Temp · freshness · transition · expiration |
+| **Locational Truth** | Where is it true, or where is the named thing? | `Truth_Coherence_Study.md` | `Truth_Regime_Transitions.md` | Scope · namespace · observer position |
+| **Identity Truth** | Who or what is this? | `Truth_Operator_Table.md` | `Truth_Coherence_Study.md` | Identity persistence · recognition · qualification |
+| **Integrity Truth** | Is it still what it claims to be? | `Truth_Coherence_Study.md` | `Truth_Drift_Walkthrough.md` | Coherence · mutation · verification |
+| **Authority Truth** | Who may declare or act? | `Truth_Regime_Transitions.md` | `Truth_Paradox_Analysis.md` | Authority scope · regime boundaries |
+| **State Truth** | What is presently the case? | `Truth_Coherence_Study.md` | `Truth_Drift_Walkthrough.md` | Observed state · declared state · deviation |
+| **Transactional Truth** | What became committed? | `Truth_Regime_Transitions.md` | `Truth_Operator_Table.md` | Transition · commitment · accepted history |
+| **Intent Truth** | What should the state be? | `Truth_vs_Belief_vs_Evidence_RTT_comparison.md` | `Truth_Coherence_Study.md` | Declaration · expectation · observation |
+| **Observational Truth** | What was actually observed? | `Truth_vs_Belief_vs_Evidence_RTT_comparison.md` | `Truth_Coherence_Study.md` | Evidence · observer · reconstruction |
+| **Lineage Truth** | Where did this claim come from? | `Truth_Drift_Walkthrough.md` | `Truth_Operator_Table.md` | Provenance · transformation · inherited drift |
+
+---
+
+# Truth Classes
+
+## 1. Temporal Truth
+
+**Operational question:**
+
+&gt; When is this true?
+
+Temporal truth concerns the relationship between a claim and time.
+
+It includes:
+
+- observation time
+- freshness
+- validity intervals
+- expiration
+- synchronization
+- temporal drift
+- revalidation
+
+### Reference system
+
+**NTP / time synchronization**
+
+### RTT emphasis
+
+`Temp → Drift → Regime`
+
+A claim may have been coherent when observed but no longer be sufficiently fresh for the current regime.
+
+Temporal truth therefore introduces an important operational rule:
+
+&gt; A previously valid truth state is not necessarily a presently valid truth state.
+
+---
+
+## 2. Locational Truth
+
+**Operational question:**
+
+&gt; Where is this true?
+
+or:
+
+&gt; Where is the named thing?
+
+Locational truth concerns the relationship between identity, position, namespace, observer, and resolution.
+
+It includes:
+
+- namespace
+- address
+- scope
+- locality
+- observer position
+- delegation
+- resolution context
+
+### Reference system
+
+**DNS / naming and resolution**
+
+### RTT emphasis
+
+`Coherence → Regime`
+
+The same identifier may resolve differently under different legitimate operational boundaries.
+
+Locational truth therefore requires the observer to know:
+
+&gt; From where, and within which namespace or regime, is this claim being evaluated?
+
+---
+
+## 3. Identity Truth
+
+**Operational question:**
+
+&gt; Who or what is this?
+
+Identity truth concerns persistence and recognition of an entity.
+
+It includes:
+
+- entity identity
+- credential association
+- recognition
+- continuity
+- authentication context
+- identity transformation
+
+### Reference system
+
+**IAM / authentication systems**
+
+### RTT emphasis
+
+`Spin → Coherence`
+
+Identity is not merely a label.
+
+Operational identity emerges from a relationship among the claimed entity, its identifying evidence, the observer, and the governing trust regime.
+
+---
+
+## 4. Integrity Truth
+
+**Operational question:**
+
+&gt; Is this still what it claims to be?
+
+Integrity truth concerns whether a truth-bearing object has changed.
+
+It includes:
+
+- mutation
+- signatures
+- hashes
+- modification
+- corruption
+- authenticity
+- consistency
+
+### Reference systems
+
+**PKI, cryptographic signatures, hashes**
+
+### RTT emphasis
+
+`Coherence → Drift`
+
+Integrity truth distinguishes:
+
+&gt; This object is recognizable.
+
+from:
+
+&gt; This object remains structurally consistent with the expected object.
+
+Those are related but different claims.
+
+---
+
+## 5. Authority Truth
+
+**Operational question:**
+
+&gt; Who may declare, validate, or act?
+
+Authority truth concerns the scope within which an actor or source is empowered to establish an operational claim.
+
+It includes:
+
+- delegation
+- policy
+- authorization
+- trust anchors
+- jurisdiction
+- permissions
+- authority boundaries
+
+### Reference system
+
+**IAM / policy systems**
+
+### RTT emphasis
+
+`Elec → Regime`
+
+Authority is bounded.
+
+A source authoritative in one regime may possess no authority in another.
+
+Therefore:
+
+&gt; Authority does not automatically transfer across regime boundaries.
+
+---
+
+## 6. State Truth
+
+**Operational question:**
+
+&gt; What is presently the case?
+
+State truth describes the accepted current condition of a system.
+
+It includes:
+
+- actual state
+- observed state
+- declared state
+- replicated state
+- desired state
+- state divergence
+
+### Reference systems
+
+**Distributed systems / configuration systems**
+
+### RTT emphasis
+
+`Coherence → Drift`
+
+State truth becomes particularly important when several observers hold different versions of the system state.
+
+The central RTT question becomes:
+
+&gt; Which observations currently form a sufficiently coherent state for the intended operation?
+
+---
+
+## 7. Transactional Truth
+
+**Operational question:**
+
+&gt; What became committed?
+
+Transactional truth concerns state transitions that have crossed an operational commitment boundary.
+
+It includes:
+
+- transactions
+- commits
+- settlement
+- acceptance
+- finality
+- event ordering
+- durable history
+
+### Reference systems
+
+**Financial ledgers / distributed transaction systems**
+
+### RTT emphasis
+
+`Regime → Transition`
+
+Transactional truth distinguishes between:
+
+- proposed state
+- observed state
+- accepted state
+- committed state
+
+Once a transition becomes committed, it participates in the system's operational history.
+
+---
+
+## 8. Intent Truth
+
+**Operational question:**
+
+&gt; What should the state be?
+
+Intent truth represents declared or expected state rather than observed state.
+
+It includes:
+
+- desired configuration
+- policy
+- specification
+- expectation
+- objective
+- declared target state
+
+### Reference systems
+
+**Configuration management / desired-state systems**
+
+### RTT emphasis
+
+`Declaration → Coherence → Drift`
+
+Intent truth provides a reference against which observed state may be compared.
+
+This distinction is fundamental:
+
+&gt; Declared truth and observed truth are separate truth objects.
+
+Their difference is often where drift becomes visible.
+
+---
+
+## 9. Observational Truth
+
+**Operational question:**
+
+&gt; What was actually observed?
+
+Observational truth concerns evidence gathered from a system or environment.
+
+It includes:
+
+- measurements
+- telemetry
+- logs
+- traces
+- metrics
+- events
+- observer context
+
+### Reference systems
+
+**Observability / monitoring systems**
+
+### RTT emphasis
+
+`Observation → Coherence → Reconstruction`
+
+An observation is evidence.
+
+It is not necessarily the complete truth state.
+
+Multiple observations may need to be correlated before a coherent operational account can be constructed.
+
+Therefore:
+
+&gt; Evidence participates in truth reconstruction without automatically becoming truth itself.
+
+---
+
+## 10. Lineage Truth
+
+**Operational question:**
+
+&gt; Where did this claim come from?
+
+Lineage truth concerns the history through which a claim, artifact, observation, or state arrived at its present form.
+
+It includes:
+
+- provenance
+- ancestry
+- transformations
+- dependencies
+- original sources
+- intermediaries
+- inherited uncertainty
+
+### Reference systems
+
+**Software supply-chain provenance / artifact verification**
+
+### RTT emphasis
+
+`Spin → Drift → Coherence`
+
+Lineage allows the observer to reconstruct:
+
+- where something originated
+- which transformations occurred
+- which dependencies influenced it
+- where drift may have entered
+- how far the present state lies from its originating anchor
+
+Lineage is therefore a first-class component of operational truth.
+
+---
+
+# SET Overlay
+
+The SET triad should not be treated as another truth class.
+
+Instead, SET operates across all truth classes.
+
+| SET Component | Truth-Service Interpretation |
+|---|---|
+| **Spin** | Persistence · identity · alignment · continuity · lineage |
+| **Elec** | Distinction · source separation · qualification · boundaries · authority |
+| **Temp** | Freshness · transition · expiration · drift · revalidation |
+
+A compact interpretation is:
+
+&gt; **Spin preserves the claim.**  
+&gt; **Elec distinguishes its evidence.**  
+&gt; **Temp determines when its accepted state must change.**
+
+---
+
+# Truth Classes Are Not Mutually Exclusive
+
+A real operational claim may occupy several truth classes simultaneously.
+
+Consider:
+
+&gt; **&quot;This TLS certificate is valid.&quot;**
+
+This statement contains several separate truth questions.
+
+| Truth Class | Question |
+|---|---|
+| **Identity** | Who or what does the certificate identify? |
+| **Integrity** | Is the signed structure intact? |
+| **Authority** | Is the issuer recognized by the governing trust regime? |
+| **Temporal** | Is the certificate presently within its applicable validity interval? |
+| **State** | What is its present operational status? |
+| **Lineage** | What trust path connects the certificate to its anchors? |
+| **Regime** | Under which trust policy is &quot;valid&quot; being asserted? |
+
+Therefore, truth classes should be understood as:
+
+&gt; **Dimensions of inspection rather than containers of truth.**
+
+---
+
+# Reference Systems Crosswalk
+
+| Truth Class | Reference System | Structural Question |
+|---|---|---|
+| **Temporal** | NTP | When does this claim hold? |
+| **Locational** | DNS | Where does this claim resolve? |
+| **Identity** | IAM | Who or what does this claim identify? |
+| **Integrity** | PKI / hashes | Has the truth-bearing object changed? |
+| **Authority** | Policy / IAM | Who is empowered to establish or act on this claim? |
+| **State** | Distributed systems | What is presently accepted as current? |
+| **Transactional** | Ledgers | What transition became committed? |
+| **Intent** | Desired-state systems | What state is declared as correct? |
+| **Observational** | Telemetry | What evidence was actually observed? |
+| **Lineage** | Supply-chain provenance | How did this claim arrive here? |
+
+---
+
+# Two-Axis Truth Model
+
+The operational truth model can now be expressed across two independent axes.
+
+## Horizontal Axis — Truth Class
+
+This axis asks:
+
+&gt; **What kind of truth are we evaluating?**
+
+Temporal
+Locational
+Identity
+Integrity
+Authority
+State
+Transactional
+Intent
+Observational
+Lineage
+</code></pre>
+<h2 id="vertical-axis-rtt-state">Vertical Axis — RTT State</h2>
+<p>This axis asks:</p>
+<blockquote>
+<p><strong>What is happening to that truth?</strong></p>
+</blockquote>
+<pre><code class="language-text">Resonance
+Coherence
+Drift
+Paradox
+Regime
+SET
+</code></pre>
+<p>Together these produce the:</p>
+<h2 id="truth-class-rtt-state-matrix">Truth Class × RTT State Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Truth Class</th>
+<th>Resonance</th>
+<th>Coherence</th>
+<th>Drift</th>
+<th>Paradox</th>
+<th>Regime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temporal</td>
+<td>Time observations propagate</td>
+<td>Sources align</td>
+<td>Clocks/freshness diverge</td>
+<td>Valid times disagree</td>
+<td>Time validity boundary</td>
+</tr>
+<tr>
+<td>Locational</td>
+<td>Names resolve</td>
+<td>Location observations agree</td>
+<td>Resolution changes</td>
+<td>Multiple valid locations</td>
+<td>Namespace boundary</td>
+</tr>
+<tr>
+<td>Identity</td>
+<td>Identity is recognized</td>
+<td>Evidence supports identity</td>
+<td>Identity relationship changes</td>
+<td>Multiple identities conflict</td>
+<td>Trust-domain boundary</td>
+</tr>
+<tr>
+<td>Integrity</td>
+<td>Artifact recognized</td>
+<td>Artifact remains consistent</td>
+<td>Artifact changes</td>
+<td>Validity and safety conflict</td>
+<td>Verification boundary</td>
+</tr>
+<tr>
+<td>Authority</td>
+<td>Authority recognized</td>
+<td>Delegation remains valid</td>
+<td>Authority changes</td>
+<td>Authorities conflict</td>
+<td>Jurisdiction/policy boundary</td>
+</tr>
+<tr>
+<td>State</td>
+<td>State is observed</td>
+<td>Observers agree</td>
+<td>Replicas/state diverge</td>
+<td>Multiple states coexist</td>
+<td>System-state boundary</td>
+</tr>
+<tr>
+<td>Transactional</td>
+<td>Transition propagates</td>
+<td>Commitment is recognized</td>
+<td>Histories diverge</td>
+<td>Competing commitments</td>
+<td>Finality boundary</td>
+</tr>
+<tr>
+<td>Intent</td>
+<td>Desired state is declared</td>
+<td>Intent remains consistent</td>
+<td>Implementation diverges</td>
+<td>Conflicting objectives</td>
+<td>Policy boundary</td>
+</tr>
+<tr>
+<td>Observational</td>
+<td>Evidence propagates</td>
+<td>Observations correlate</td>
+<td>Evidence diverges</td>
+<td>Valid observations conflict</td>
+<td>Observer/context boundary</td>
+</tr>
+<tr>
+<td>Lineage</td>
+<td>Provenance propagates</td>
+<td>Chain remains consistent</td>
+<td>Ancestry changes</td>
+<td>Valid lineages conflict</td>
+<td>Provenance boundary</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="structural-model">Structural Model</h2>
+<p>The resulting architecture can be summarized as:</p>
+<p><strong>Truth Class → Observations → RTT Evaluation → Qualified Truth State</strong></p>
+<p>or more explicitly:</p>
+<p><strong>Claim</strong>
+ ↓
+ <strong>Truth Class Identification</strong>
+ ↓
+ <strong>Observations + Sources + Lineage</strong>
+ ↓
+ <strong>Resonance</strong>
+ ↓
+ <strong>Coherence</strong>
+ ↓
+ <strong>Drift</strong>
+ ↓
+ <strong>Paradox</strong>
+ ↓
+ <strong>Regime Qualification</strong>
+ ↓
+ <strong>Qualified Truth State</strong>
+ ↓
+ <strong>Revalidation</strong></p>
+<hr>
+<h2 id="canonical-principle">Canonical Principle</h2>
+<blockquote>
+<p><strong>Truth Class identifies what kind of truth is being evaluated. RTT describes the structural condition of that truth.</strong></p>
+</blockquote>
+<p>The two dimensions should not be collapsed.</p>
+<p>A claim may simultaneously carry temporal, identity, integrity, state, and lineage truth while occupying different coherence, drift, paradox, and regime states along each dimension.</p>
+<p>This allows Resonance Truth to move beyond:</p>
+<p><strong>Is this true?</strong></p>
+<p>toward:</p>
+<blockquote>
+<p><strong>What kind of truth is being asserted, under which regime, supported by which observations and lineage, exhibiting what degree of coherence and drift, and for what operational purpose can it presently be accepted?</strong></p>
+</blockquote>
+<h2 id="reference-architecture-direction">Reference Architecture Direction</h2>
+<p>The initial operational reference mappings are:</p>
+<p>NTP → Temporal Truth
+DNS → Locational Truth
+IAM → Identity Truth
+PKI → Integrity Truth
+Policy / IAM → Authority Truth
+Distributed Systems → State Truth
+Ledgers → Transactional Truth
+Desired-State Systems → Intent Truth
+Telemetry → Observational Truth
+Supply-Chain Provenance → Lineage Truth</p>
+<p>NTP serves as the first detailed reference architecture.</p>
+<p>The remaining systems can be evaluated using the same pattern, allowing each truth class to contribute its own operational mechanisms to a generalized RTT Truth Service.</p>
+<p>The main structural change is that this now works as a standalone <strong><code>Truth_Classes_Operational_Crosswalk.md</code></strong> leaf rather than just a table. It preserves the important distinction we found: <strong>Truth Class = what kind of truth; RTT State = what is happening to that truth.</strong></p>
+<hr>
+<p>Yes. Crosswalk #1 should do more than say “NTP = Temporal Truth.” It should show why NTP is our first operational proof that a truth-bearing system can remain useful without pretending to possess perfect truth.</p>
+<p>I’d make this a substantial section of Truth_Classes_Operational_Crosswalk.md, or eventually promote it to Temporal_Truth_NTP_Crosswalk.md. The NTP mechanics below are grounded in RFC 5905, which explicitly defines peer processing, clock filtering, selection, clustering, combination, clock discipline, clock adjustment, and polling.</p>
+<pre><code># Crosswalk #1 — NTP and Temporal Truth
+
+**Truth Class:** Temporal Truth  
+**Reference System:** Network Time Protocol (NTP)  
+**Primary RTT Dimensions:** Temp · Coherence · Drift · Regime  
+**Supporting Dimensions:** Resonance · Paradox · Lineage  
+**Operational Question:** *When is it true?*
+
+---
+
+## 1. Why NTP Comes First
+
+The Network Time Protocol provides a strong first reference system for operational truth because it addresses a deceptively difficult question:
+
+&gt; **What time is it?**
+
+A naïve system might expect this question to have one authoritative answer.
+
+A distributed system cannot safely make that assumption.
+
+Its local clock exists at a particular observer position. Information from external clocks requires propagation. Sources may disagree. Measurements vary. Local oscillators drift. Network conditions change. Sources may disappear. Previously good observations age.
+
+NTP therefore does not behave like a simple lookup service.
+
+Conceptually, it operates more like:
+
+**Reference → Observation → Comparison → Filtering → Selection → Correction → Reobservation**
+
+That makes NTP important to Resonance Truth.
+
+The lesson is not that truth behaves exactly like time.
+
+The lesson is:
+
+&gt; **A system can maintain an operationally useful truth state without requiring access to an absolute, instantaneous, context-free answer.**
+
+---
+
+# 2. The Temporal Truth Question
+
+For RTT, Temporal Truth asks:
+
+&gt; **When does this claim hold?**
+
+That question can be decomposed further:
+
+- When was the claim observed?
+- When did the underlying state exist?
+- How old is the observation?
+- How quickly can the underlying state change?
+- How far has the local state drifted?
+- How far is the source from its reference?
+- Are independent observations mutually coherent?
+- When must the claim be checked again?
+- Under what conditions should an old truth state expire?
+- Can a previous truth state remain provisionally usable when fresh observations disappear?
+
+Temporal Truth therefore contains more than a timestamp.
+
+It contains a relationship among:
+
+**observation + source + lineage + freshness + uncertainty + drift + regime**
+
+---
+
+# 3. NTP Reference Structure
+
+At a high level, an NTP-like system has several structural roles.
+
+| NTP concept | Temporal Truth concept | RTT interpretation |
+|---|---|---|
+| Reference source | Truth anchor | Recognized reference inside a declared regime |
+| Server / peer | Truth source | Source capable of supplying observations |
+| Association | Source relationship | Persistent relationship between observer and source |
+| Stratum | Reference distance | Structural distance from the reference hierarchy |
+| Time sample | Observation | Source-specific evidence |
+| Offset | Drift | Difference between local and observed reference state |
+| Delay | Propagation condition | Cost/distortion associated with observation transfer |
+| Jitter | Instability | Variation among observations |
+| Dispersion | Uncertainty growth | Increasing uncertainty through time/distance |
+| Clock filter | Observation filter | Removes less useful observations |
+| Selection | Source qualification | Determines which sources may influence local state |
+| Clustering | Outlier containment | Separates materially divergent candidates |
+| Combination | State synthesis | Derives a usable result from qualified candidates |
+| Clock discipline | Bounded correction | Adjusts local state toward the qualified result |
+| Polling | Revalidation | Requests new observations as required |
+
+The essential structural point is that **reference, observation, qualification, and local state are different things**.
+
+They should remain different in the RTT Truth Service as well.
+
+---
+
+# 4. Truth Anchor ≠ Local Truth State
+
+NTP provides a useful distinction between a reference and the clock actually being operated.
+
+RTT can generalize this distinction.
+
+A **Truth Anchor** supplies a recognized reference.
+
+A **Local Truth State** is the observer's currently accepted operational state.
+
+They are not identical objects.
+
+Conceptually:
+
+**Truth Anchor**  
+↓  
+**Source Lineage**  
+↓  
+**Observation**  
+↓  
+**Qualification**  
+↓  
+**Local Truth State**
+
+This matters because the observer usually does not interact directly with an ultimate reference.
+
+The observer interacts with observations that have:
+
+- sources
+- histories
+- propagation conditions
+- measurement limitations
+- freshness limits
+
+Therefore:
+
+&gt; **Distance from an anchor is itself truth metadata.**
+
+---
+
+# 5. Stratum → Lineage Distance
+
+NTP's hierarchy gives us an especially useful Resonance Truth concept:
+
+## Lineage Distance
+
+Instead of asking only:
+
+&gt; Is this source trusted?
+
+the Truth Service should also ask:
+
+&gt; **How did this source arrive at its current claim?**
+
+An RTT truth object should therefore be capable of carrying lineage such as:
+
+**Anchor A**  
+↓  
+**Source B**  
+↓  
+**Source C**  
+↓  
+**Observation D**  
+↓  
+**Local Truth State**
+
+Increasing lineage distance does not automatically make a claim false.
+
+It changes the conditions under which the claim should be evaluated.
+
+Each transition may introduce:
+
+- delay
+- transformation
+- interpretation
+- uncertainty
+- dependency
+- drift
+
+This produces an RTT principle:
+
+&gt; **Truth lineage should preserve distance from reference, not merely reference identity.**
+
+---
+
+# 6. Offset → Truth Drift
+
+One of NTP's most useful conceptual transfers is offset.
+
+Temporal systems need to know not merely that two clocks disagree, but the magnitude and direction of disagreement.
+
+RTT generalizes this as:
+
+## Truth Drift
+
+Conceptually:
+
+**Drift = Local Accepted State ↔ Qualified Observed State**
+
+Drift can occur between:
+
+- local and external state
+- declared and observed state
+- previous and current state
+- expected and measured state
+- one qualified source and another
+- one regime and another
+
+For temporal truth:
+
+&gt; **How far has the local clock moved away from the qualified reference state?**
+
+For a generalized truth service:
+
+&gt; **How far has the currently accepted truth state moved away from the presently qualified evidence?**
+
+This turns drift from a metaphor into a potentially measurable property.
+
+---
+
+# 7. Delay → Observation Distance
+
+An observation does not necessarily arrive under ideal conditions.
+
+In the generalized architecture, NTP's concern with propagation suggests:
+
+## Observation Distance
+
+A claim may be structurally farther from its source because of:
+
+- transmission
+- caching
+- aggregation
+- translation
+- transformation
+- replication
+- summarization
+- human interpretation
+- model inference
+
+The Truth Service should therefore preserve the path between:
+
+**what was originally observed**
+
+and:
+
+**what the current consumer received**
+
+This produces another RTT rule:
+
+&gt; **An observation without propagation context is structurally incomplete evidence.**
+
+---
+
+# 8. Jitter → Truth Instability
+
+Repeated observations may not produce identical results.
+
+That variation itself carries information.
+
+RTT can generalize this as:
+
+## Truth Instability
+
+A source that alternates rapidly among incompatible states may deserve different treatment from a source that remains stable.
+
+Instability may appear as:
+
+- fluctuating measurements
+- changing interpretations
+- inconsistent classifications
+- rapidly changing system states
+- inconsistent source behavior
+- unstable confidence
+
+The important point is:
+
+&gt; **Variation across observations is itself an observation.**
+
+The Truth Service should therefore preserve not merely the latest value but the behavior of the observation stream.
+
+---
+
+# 9. Dispersion → Accumulating Uncertainty
+
+Temporal observations become less useful as their relationship with current state weakens.
+
+RTT can generalize this as:
+
+## Truth Dispersion
+
+Uncertainty may increase because:
+
+- observations age
+- lineage length increases
+- transformations accumulate
+- sources disappear
+- contradictions emerge
+- the regime changes
+- independent corroboration decreases
+
+Thus:
+
+&gt; **A truth state can degrade without becoming false.**
+
+This distinction is critical.
+
+A claim may move through:
+
+**Accepted → Degraded → Held Over → Expired**
+
+without ever being explicitly disproven.
+
+---
+
+# 10. Clock Filtering → Evidence Filtering
+
+Not every received observation deserves equal influence.
+
+The NTP pattern suggests an RTT filtering stage:
+
+**Raw Observations**  
+↓  
+**Qualification**  
+↓  
+**Eligible Evidence**
+
+Possible filtering criteria include:
+
+- freshness
+- provenance
+- completeness
+- regime compatibility
+- duplication
+- source stability
+- lineage quality
+- required precision
+- integrity
+
+Rejected evidence should not necessarily be labeled false.
+
+Instead:
+
+&gt; **Rejected from synthesis ≠ disproven.**
+
+An observation may simply be unsuitable for the current operational question.
+
+---
+
+# 11. Selection → Source Qualification
+
+After filtering, the service still needs to determine which sources are suitable for the current evaluation.
+
+RTT therefore distinguishes:
+
+**available source**
+
+from:
+
+**qualified source**
+
+Source qualification may consider:
+
+- authority
+- lineage
+- independence
+- relevance
+- freshness
+- stability
+- applicable regime
+- consequence of error
+
+The result is a bounded source set:
+
+**Candidate Sources → Qualified Sources**
+
+Only then should synthesis begin.
+
+---
+
+# 12. Clustering → Paradox Containment
+
+This is where NTP becomes particularly interesting for Resonance Truth.
+
+Suppose several individually plausible sources disagree.
+
+A naïve truth engine might:
+
+- choose the majority
+- average the results
+- choose the most authoritative source
+- assign confidence scores and collapse the disagreement
+
+RTT should preserve another possibility:
+
+&gt; **The disagreement may itself contain structural information.**
+
+Thus:
+
+**Qualified Observations**  
+↓  
+**Coherence Analysis**  
+↓  
+**Coherent Cluster(s) + Outliers + Paradox**
+
+Possible results:
+
+### Single coherent cluster
+
+Observations support a common truth state.
+
+### Weak cluster
+
+Observations broadly agree but uncertainty remains elevated.
+
+### Multiple coherent clusters
+
+The disagreement may reveal:
+
+- separate regimes
+- different observer positions
+- hidden dependencies
+- semantic differences
+- transition boundaries
+
+### No coherent cluster
+
+The system should be capable of returning:
+
+**INDETERMINATE**
+
+rather than manufacturing certainty.
+
+This leads to a central RTT principle:
+
+&gt; **Contradiction should first be contained and characterized before it is resolved.**
+
+---
+
+# 13. Combination → Qualified Truth-State Synthesis
+
+Once unsuitable observations have been removed and qualified observations form a usable coherence field, the system may synthesize a local state.
+
+The important RTT distinction is:
+
+&gt; **Synthesis produces an operational truth state, not absolute truth.**
+
+The resulting state should preserve:
+
+- claim
+- source set
+- lineage
+- regime
+- observation window
+- coherence state
+- drift
+- instability
+- uncertainty
+- unresolved paradoxes
+- expiration condition
+
+Thus the useful output is not simply:
+
+**TRUE**
+
+but something closer to:
+
+&gt; **Presently accepted within this regime using these qualified observations.**
+
+---
+
+# 14. Clock Discipline → Bounded Truth Correction
+
+Perhaps the deepest NTP analogy is not synchronization.
+
+It is **discipline**.
+
+Discovering that local state differs from a better-supported state does not tell the system how to respond.
+
+RTT therefore separates:
+
+**Truth Evaluation**
+
+from:
+
+**Truth Correction**
+
+Possible correction strategies include:
+
+### Step
+
+Immediately replace local state.
+
+### Slew
+
+Gradually move local state toward the better-supported state.
+
+### Hold
+
+Retain current state while gathering additional evidence.
+
+### Quarantine
+
+Preserve the new observation but do not permit it to alter operational state.
+
+### Dual-state
+
+Maintain competing truth states under separate regimes.
+
+### Escalate
+
+Require another observer or human decision.
+
+This distinction becomes important anywhere a large correction could itself destabilize the system.
+
+Therefore:
+
+&gt; **Better evidence does not automatically imply immediate state replacement.**
+
+---
+
+# 15. Polling → Truth Revalidation
+
+NTP repeatedly seeks updated observations.
+
+RTT should inherit that principle directly.
+
+A truth state needs a:
+
+**Revalidation Condition**
+
+This may depend on:
+
+- elapsed time
+- expected volatility
+- consequence of error
+- source stability
+- emergence of contradictory evidence
+- regime transition
+- change in authority
+- observed drift
+
+This means truth has an operational lifecycle:
+
+**Observe**  
+↓  
+**Qualify**  
+↓  
+**Accept**  
+↓  
+**Use**  
+↓  
+**Age**  
+↓  
+**Revalidate**
+
+and then either:
+
+**Renew**
+
+or:
+
+**Degrade / Contest / Expire**
+
+---
+
+# 16. Holdover → Provisional Truth
+
+Suppose qualified sources temporarily disappear.
+
+A simplistic system has two choices:
+
+**TRUE**
+
+or:
+
+**UNKNOWN**
+
+But operational systems often require a middle state.
+
+RTT can call this:
+
+## Provisional Truth
+
+The local state remains usable because:
+
+- it was previously coherent
+- no contradicting evidence has appeared
+- expected drift remains bounded
+- the declared regime permits temporary persistence
+
+However, its qualification changes.
+
+Conceptually:
+
+**Accepted**
+
+becomes:
+
+**Held Over**
+
+and uncertainty increases until:
+
+- a source returns
+- the state is corroborated
+- the maximum holdover boundary is reached
+- conflicting evidence arrives
+
+This is tremendously useful beyond time synchronization.
+
+A lack of new observations does not instantly invalidate prior knowledge.
+
+But it should gradually alter the status of that knowledge.
+
+---
+
+# 17. Unsynchronized → Truth Indeterminate
+
+NTP also teaches an important negative lesson:
+
+A system must be capable of admitting that it cannot presently establish a usable state.
+
+For Resonance Truth:
+
+&gt; **Indeterminate is a valid truth-service response.**
+
+The truth service should never manufacture coherence merely because a downstream consumer expects an answer.
+
+Possible output states therefore include:
+
+- Declared
+- Observed
+- Corroborated
+- Operationally Accepted
+- Degraded
+- Held Over
+- Contested
+- Rejected
+- Expired
+- Indeterminate
+
+The presence of **Indeterminate** protects the integrity of the entire service.
+
+---
+
+# 18. NTP Through the RTT Dimensions
+
+| RTT Dimension | NTP interpretation | General Truth-Service interpretation |
+|---|---|---|
+| **Resonance** | Timing observations propagate through network relationships | Claims and evidence propagate through source relationships |
+| **Coherence** | Qualified observations sufficiently agree | Evidence forms a mutually usable interpretation |
+| **Drift** | Local clock diverges from qualified observations | Accepted state diverges from qualified evidence |
+| **Paradox** | Plausible sources disagree | Qualified claims form incompatible truth states |
+| **Regime** | Synchronization operates within defined timing conditions | Claim validity is bounded by context, policy, domain and use |
+| **Spin** | Timing state persists | Claim identity and lineage persist |
+| **Elec** | Sources and samples are distinguished | Evidence, authority and boundaries remain separable |
+| **Temp** | Time state evolves and requires correction | Truth states age, transition and require revalidation |
+
+---
+
+# 19. NTP Through the Truth-State Lifecycle
+
+The full crosswalk can now be expressed as:
+
+**Reference**  
+↓  
+`Truth Anchor`
+
+**Association**  
+↓  
+`Source Relationship`
+
+**Sample**  
+↓  
+`Observation`
+
+**Filter**  
+↓  
+`Evidence Qualification`
+
+**Selection**  
+↓  
+`Source Qualification`
+
+**Cluster**  
+↓  
+`Coherence / Paradox Analysis`
+
+**Combine**  
+↓  
+`Qualified Truth-State Synthesis`
+
+**Offset / Jitter / Dispersion**  
+↓  
+`Drift / Instability / Uncertainty`
+
+**Clock Discipline**  
+↓  
+`Bounded Truth Correction`
+
+**Poll**  
+↓  
+`Revalidation`
+
+**Loss of Reference**  
+↓  
+`Holdover / Degradation / Expiration / Indeterminate`
+
+This gives Resonance Truth its first complete operational crosswalk.
+
+---
+
+# 20. Worked RTT Example
+
+Consider the claim:
+
+&gt; **The current time is 14:32:10.**
+
+The truth service should not evaluate only the literal value.
+
+It should ask:
+
+### Truth Class
+
+Temporal.
+
+### Observer
+
+Which local system is asking?
+
+### Regime
+
+What precision and freshness does the intended operation require?
+
+### Sources
+
+Which timing sources supplied observations?
+
+### Lineage
+
+How are those sources related to reference time?
+
+### Coherence
+
+Do the qualified observations sufficiently agree?
+
+### Drift
+
+How far is the local clock from the synthesized state?
+
+### Instability
+
+How stable have the observations been?
+
+### Paradox
+
+Are qualified sources forming conflicting clusters?
+
+### State
+
+Is the result:
+
+- accepted
+- degraded
+- held over
+- contested
+- expired
+- indeterminate?
+
+Only after those questions can:
+
+&gt; **14:32:10**
+
+become an operationally qualified truth claim.
+
+---
+
+# 21. Generalization Beyond Time
+
+The purpose of this crosswalk is not to turn all truth into clock synchronization.
+
+Instead, NTP supplies a reusable structural pattern:
+
+**Anchor**  
+↓  
+**Lineage**  
+↓  
+**Multiple Observations**  
+↓  
+**Qualification**  
+↓  
+**Coherence Analysis**  
+↓  
+**Drift Measurement**  
+↓  
+**Paradox Containment**  
+↓  
+**Qualified Local State**  
+↓  
+**Bounded Correction**  
+↓  
+**Continuous Revalidation**
+
+That pattern can now be tested against the remaining truth classes:
+
+1. **NTP → Temporal Truth**
+2. **DNS → Locational Truth**
+3. **IAM → Identity Truth**
+4. **PKI → Integrity Truth**
+5. **Policy / IAM → Authority Truth**
+6. **Distributed Systems → State Truth**
+7. **Ledgers → Transactional Truth**
+8. **Desired-State Systems → Intent Truth**
+9. **Telemetry → Observational Truth**
+10. **Supply-Chain Provenance → Lineage Truth**
+
+Each reference system may contribute different mechanisms.
+
+NTP contributes particularly strong mechanisms for:
+
+- lineage distance
+- observation comparison
+- drift measurement
+- instability
+- uncertainty growth
+- source qualification
+- outlier containment
+- bounded correction
+- revalidation
+- graceful degradation
+
+---
+
+# 22. Crosswalk #1 Finding
+
+NTP suggests that operational truth need not be represented as a binary fact.
+
+Instead, a system can maintain a locally usable truth state by continuously evaluating its relationship to qualified external observations.
+
+The transferable principle is:
+
+&gt; **Do not ask only whether the local state is true. Ask how the local state relates to its references, how coherent the available observations are, how much drift has accumulated, which regime governs acceptance, and when the state must be checked again.**
+
+This converts truth from a static declaration into an observable operational relationship.
+
+---
+
+## Canonical Statement
+
+&gt; **Temporal Truth is not merely a timestamp. It is a regime-qualified relationship between an observer's local temporal state and a lineage of external observations, maintained through coherence evaluation, drift measurement, bounded correction, and continuous revalidation.**
+
+NTP provides the first operational reference architecture for this pattern.
+
+**The remaining truth classes can now be examined for the mechanisms they contribute to the larger Resonance Truth service.**
+</code></pre>
+<p>The key expansion is mechanism-by-mechanism rather than analogy-by-analogy. That keeps us honest: RFC 5905 really does specify distinct filter, selection, cluster, combine, discipline, adjustment, and poll processes. The RTT contribution is our proposed generalization of those mechanisms into truth-state governance, not a claim that NTP itself implements RTT.</p>
+<p>And something interesting surfaced: Crosswalk #1 has already given us four reusable concepts we didn't start with as strongly: lineage distance, truth instability, truth dispersion, and bounded correction. Those are worth carrying forward when we hit Crosswalk #2, DNS.</p>
+<hr>
+<p>Yes. I’d add a common scoring layer across all ten crosswalks, rather than inventing different success criteria for NTP, DNS, IAM, PKI, and so on. That gives Resonance Truth something much more useful: a way to compare how well each system operationalizes its particular truth class.</p>
+<h1 id="operational-truth-system-scoring-criteria">Operational Truth-System Scoring Criteria</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Purpose:</strong> Provide a common scoring model for evaluating each operational truth reference system.<br>
+<strong>Applies to:</strong> NTP · DNS · IAM · PKI · Policy · Distributed Systems · Ledgers · Desired-State Systems · Telemetry · Supply-Chain Provenance</p>
+<hr>
+<h2 id="1-scoring-principle">1. Scoring Principle</h2>
+<p>The score does <strong>not</strong> measure whether a system possesses absolute truth.</p>
+<p>It measures how well the system maintains a <strong>qualified operational relationship to truth</strong>.</p>
+<p>Each reference system is evaluated against ten structural criteria:</p>
+<ol>
+<li>Anchor Quality</li>
+<li>Lineage Visibility</li>
+<li>Observation Quality</li>
+<li>Coherence Detection</li>
+<li>Drift Detection</li>
+<li>Paradox Handling</li>
+<li>Regime Awareness</li>
+<li>Freshness / Revalidation</li>
+<li>Correction Discipline</li>
+<li>Failure Transparency</li>
+</ol>
+<p>Each criterion receives a score from <strong>0 to 5</strong>.</p>
+<p>Maximum raw score:</p>
+<p><strong>50</strong></p>
+<p>Normalized score:</p>
+<p><strong>Raw Score × 2 = Operational Truth Score / 100</strong></p>
+<hr>
+<h1 id="2-common-scoring-scale">2. Common Scoring Scale</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Classification</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Absent</td>
+<td>The mechanism is not meaningfully represented</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Implicit</td>
+<td>The system depends on the property but provides little explicit structure for it</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Partial</td>
+<td>Some mechanisms exist, but coverage or visibility is limited</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Operational</td>
+<td>The property is explicitly supported and usable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Strong</td>
+<td>The property is systematic, observable, and integrated into normal operation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Structural</td>
+<td>The property is fundamental to the architecture and directly governs accepted state</td>
+</tr>
+</tbody>
+</table>
+<p>The scale intentionally distinguishes:</p>
+<p><strong>having information</strong></p>
+<p>from:</p>
+<p><strong>using that information to govern truth state</strong>.</p>
+<hr>
+<h1 id="3-criterion-1-anchor-quality">3. Criterion 1 — Anchor Quality</h1>
+<h3 id="question">Question</h3>
+<blockquote>
+<p><strong>How clearly can the system identify the reference against which a truth claim is evaluated?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>identifiable authoritative reference</li>
+<li>source qualification</li>
+<li>anchor scope</li>
+<li>authority boundaries</li>
+<li>revocation or replacement</li>
+<li>dependency on external anchors</li>
+</ul>
+<h3 id="scoring">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>No identifiable anchor</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Anchor is assumed or informal</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Anchor exists but authority or scope is weakly expressed</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Anchor is explicitly identifiable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Anchor authority and scope are structurally represented</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Anchor identity, scope, authority, lifecycle, and replacement/revocation are governed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship">RTT relationship</h3>
+<p><strong>Spin · Regime · Authority</strong></p>
+<hr>
+<h1 id="4-criterion-2-lineage-visibility">4. Criterion 2 — Lineage Visibility</h1>
+<h3 id="question_1">Question</h3>
+<blockquote>
+<p><strong>Can the system explain how the accepted truth state arrived from its reference sources?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>provenance</li>
+<li>source relationships</li>
+<li>dependency path</li>
+<li>transformations</li>
+<li>delegation</li>
+<li>distance from anchor</li>
+<li>intermediate authorities</li>
+</ul>
+<h3 id="scoring_1">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Origin cannot be reconstructed</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Immediate source is known</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Partial provenance is available</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Meaningful lineage can be reconstructed</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Lineage is explicit and operationally inspectable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Lineage directly participates in qualification and acceptance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_1">RTT relationship</h3>
+<p><strong>Spin · Lineage · Drift</strong></p>
+<hr>
+<h1 id="5-criterion-3-observation-quality">5. Criterion 3 — Observation Quality</h1>
+<h3 id="question_2">Question</h3>
+<blockquote>
+<p><strong>How well does the system qualify the evidence used to establish local truth?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>observation integrity</li>
+<li>precision</li>
+<li>source identity</li>
+<li>collection conditions</li>
+<li>freshness</li>
+<li>duplicates</li>
+<li>instability</li>
+<li>unsuitable observations</li>
+</ul>
+<h3 id="scoring_2">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Observations are accepted without qualification</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Minimal validation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Limited filtering or validation exists</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Observations are explicitly qualified</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Multiple quality dimensions influence qualification</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Observation qualification is fundamental to state synthesis</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_2">RTT relationship</h3>
+<p><strong>Resonance · Elec</strong></p>
+<hr>
+<h1 id="6-criterion-4-coherence-detection">6. Criterion 4 — Coherence Detection</h1>
+<h3 id="question_3">Question</h3>
+<blockquote>
+<p><strong>Can the system determine whether independent observations support a mutually usable state?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>observation comparison</li>
+<li>agreement detection</li>
+<li>independent corroboration</li>
+<li>clustering</li>
+<li>consistency checking</li>
+<li>source diversity</li>
+</ul>
+<h3 id="scoring_3">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>No agreement evaluation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Consistency is assumed</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Basic agreement checking</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Explicit coherence evaluation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Multiple sources and dependencies are considered</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Coherence directly governs accepted local state</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_3">RTT relationship</h3>
+<p><strong>C₁ · C₂ · C₃ · C₄</strong></p>
+<hr>
+<h1 id="7-criterion-5-drift-detection">7. Criterion 5 — Drift Detection</h1>
+<h3 id="question_4">Question</h3>
+<blockquote>
+<p><strong>Can the system detect displacement between expected, observed, previously accepted, and current state?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>magnitude of divergence</li>
+<li>direction of change</li>
+<li>historical comparison</li>
+<li>expected versus observed state</li>
+<li>source drift</li>
+<li>structural drift</li>
+<li>accumulated deviation</li>
+</ul>
+<h3 id="scoring_4">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Drift is invisible</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Drift becomes visible only through failure</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Some differences can be detected</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Drift is explicitly observable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Drift can be measured and classified</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Drift directly influences qualification, correction, or regime transition</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_4">RTT relationship</h3>
+<p><strong>D₁ · D₂ · D₃ · D₄</strong></p>
+<hr>
+<h1 id="8-criterion-6-paradox-handling">8. Criterion 6 — Paradox Handling</h1>
+<h3 id="question_5">Question</h3>
+<blockquote>
+<p><strong>What happens when individually qualified observations disagree?</strong></p>
+</blockquote>
+<p>Evaluate whether the system can:</p>
+<ul>
+<li>preserve competing observations</li>
+<li>reject outliers</li>
+<li>identify separate clusters</li>
+<li>expose disagreement</li>
+<li>avoid forced averaging</li>
+<li>declare an indeterminate state</li>
+</ul>
+<h3 id="scoring_5">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Contradiction is ignored</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>One result simply overwrites another</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Conflict can be detected</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Conflict is explicitly represented</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Competing states can be contained without premature collapse</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Paradox is structurally preserved until evidence or regime resolves it</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_5">RTT relationship</h3>
+<p><strong>P₁ · P₂ · P₃</strong></p>
+<hr>
+<h1 id="9-criterion-7-regime-awareness">9. Criterion 7 — Regime Awareness</h1>
+<h3 id="question_6">Question</h3>
+<blockquote>
+<p><strong>Does the system know the conditions under which its accepted truth remains valid?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>scope</li>
+<li>context</li>
+<li>namespace</li>
+<li>policy</li>
+<li>observer position</li>
+<li>trust domain</li>
+<li>jurisdiction</li>
+<li>state boundaries</li>
+<li>transition boundaries</li>
+</ul>
+<h3 id="scoring_6">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Truth is treated as context-free</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Context exists but is largely implicit</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Some boundaries are represented</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Operational regime is identifiable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Regime directly qualifies interpretation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Regime boundaries and transitions directly govern truth state</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_6">RTT relationship</h3>
+<p><strong>Regime · Elec · Temp</strong></p>
+<hr>
+<h1 id="10-criterion-8-freshness-revalidation">10. Criterion 8 — Freshness / Revalidation</h1>
+<h3 id="question_7">Question</h3>
+<blockquote>
+<p><strong>How does the system know whether previously accepted truth is still usable?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>timestamps</li>
+<li>validity duration</li>
+<li>polling</li>
+<li>expiration</li>
+<li>refresh</li>
+<li>revalidation triggers</li>
+<li>stale-state recognition</li>
+<li>changing uncertainty</li>
+</ul>
+<h3 id="scoring_7">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Accepted truth never expires</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Freshness depends on external/manual intervention</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Some expiration or refresh behavior exists</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Truth state is explicitly revalidated</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Revalidation responds to operational conditions</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Freshness is continuously governed as part of truth-state lifecycle</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_7">RTT relationship</h3>
+<p><strong>Temp · Drift</strong></p>
+<hr>
+<h1 id="11-criterion-9-correction-discipline">11. Criterion 9 — Correction Discipline</h1>
+<h3 id="question_8">Question</h3>
+<blockquote>
+<p><strong>How does the system respond when better-supported truth differs from local accepted state?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>immediate correction</li>
+<li>gradual correction</li>
+<li>reconciliation</li>
+<li>rollback</li>
+<li>quarantine</li>
+<li>holdover</li>
+<li>escalation</li>
+<li>bounded adjustment</li>
+</ul>
+<h3 id="scoring_8">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>No defined correction behavior</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Replacement is unmanaged</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Basic correction mechanism exists</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Correction follows defined operational rules</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Correction behavior considers magnitude, confidence, or consequence</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Truth evaluation and state correction are explicitly separated and governed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_8">RTT relationship</h3>
+<p><strong>Temp · Drift · Regime</strong></p>
+<hr>
+<h1 id="12-criterion-10-failure-transparency">12. Criterion 10 — Failure Transparency</h1>
+<h3 id="question_9">Question</h3>
+<blockquote>
+<p><strong>Can the system admit that it does not presently know?</strong></p>
+</blockquote>
+<p>Evaluate whether it can expose states such as:</p>
+<ul>
+<li>unsynchronized</li>
+<li>stale</li>
+<li>degraded</li>
+<li>contested</li>
+<li>unavailable</li>
+<li>expired</li>
+<li>indeterminate</li>
+<li>unverified</li>
+</ul>
+<h3 id="scoring_9">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>System always produces an apparently valid answer</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Failure appears only as an exception or outage</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Some degraded conditions are observable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Failure/degradation states are explicit</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Different forms of uncertainty or failure are distinguished</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Loss of qualification is a first-class truth state that constrains downstream use</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_9">RTT relationship</h3>
+<p><strong>Coherence · Paradox · Regime</strong></p>
+<hr>
+<h1 id="13-system-scorecard">13. System Scorecard</h1>
+<p>Each truth reference system receives the same scorecard.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score 0–5</th>
+<th>Evidence / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anchor Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Observation Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Operational Truth Score</strong></td>
+<td style="text-align: right;"><strong>/100</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="14-truth-system-profiles">14. Truth-System Profiles</h1>
+<p>The total score alone should <strong>not</strong> become the primary comparison.</p>
+<p>Two systems can receive identical scores while implementing fundamentally different truth behaviors.</p>
+<p>Therefore each system should retain its ten-dimensional profile.</p>
+<p>Example notation:</p>
+<p><code>A-L-O-C-D-P-R-F-X-T</code></p>
+<p>Where:</p>
+<ul>
+<li><strong>A</strong> = Anchor Quality</li>
+<li><strong>L</strong> = Lineage Visibility</li>
+<li><strong>O</strong> = Observation Quality</li>
+<li><strong>C</strong> = Coherence Detection</li>
+<li><strong>D</strong> = Drift Detection</li>
+<li><strong>P</strong> = Paradox Handling</li>
+<li><strong>R</strong> = Regime Awareness</li>
+<li><strong>F</strong> = Freshness / Revalidation</li>
+<li><strong>X</strong> = Correction Discipline</li>
+<li><strong>T</strong> = Failure Transparency</li>
+</ul>
+<p>An example profile might appear as:</p>
+<p><code>5-3-5-5-5-4-3-5-5-5</code></p>
+<p>This is more informative than reducing the system immediately to:</p>
+<p><strong>90/100</strong></p>
+<p>The profile preserves structural shape.</p>
+<hr>
+<h1 id="15-truth-class-weighting">15. Truth-Class Weighting</h1>
+<p>The common ten-dimension score enables comparison, but different truth classes emphasize different dimensions.</p>
+<p>Suggested emphasis:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Truth Class</th>
+<th>Highest-Value Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NTP</strong></td>
+<td>Temporal</td>
+<td>Drift · Freshness · Coherence · Correction</td>
+</tr>
+<tr>
+<td><strong>DNS</strong></td>
+<td>Locational</td>
+<td>Anchor · Lineage · Regime · Freshness</td>
+</tr>
+<tr>
+<td><strong>IAM</strong></td>
+<td>Identity</td>
+<td>Anchor · Observation · Regime · Failure Transparency</td>
+</tr>
+<tr>
+<td><strong>PKI</strong></td>
+<td>Integrity</td>
+<td>Anchor · Lineage · Freshness · Failure Transparency</td>
+</tr>
+<tr>
+<td><strong>Policy / IAM</strong></td>
+<td>Authority</td>
+<td>Anchor · Regime · Coherence · Failure Transparency</td>
+</tr>
+<tr>
+<td><strong>Distributed Systems</strong></td>
+<td>State</td>
+<td>Coherence · Drift · Paradox · Correction</td>
+</tr>
+<tr>
+<td><strong>Ledgers</strong></td>
+<td>Transactional</td>
+<td>Lineage · Coherence · Regime · Correction</td>
+</tr>
+<tr>
+<td><strong>Desired-State Systems</strong></td>
+<td>Intent</td>
+<td>Drift · Coherence · Correction · Revalidation</td>
+</tr>
+<tr>
+<td><strong>Telemetry</strong></td>
+<td>Observational</td>
+<td>Observation · Coherence · Lineage · Freshness</td>
+</tr>
+<tr>
+<td><strong>Supply-Chain Provenance</strong></td>
+<td>Lineage</td>
+<td>Lineage · Anchor · Observation · Regime</td>
+</tr>
+</tbody>
+</table>
+<p>These are <strong>analytical emphases</strong>, not numerical weights yet.</p>
+<p>A weighting model should be introduced only if there is a demonstrated reason to compare systems numerically across different truth classes.</p>
+<hr>
+<h1 id="16-cross-system-comparison-matrix">16. Cross-System Comparison Matrix</h1>
+<p>Once each crosswalk has been examined, the results can populate:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Truth Class</th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">L</th>
+<th style="text-align: right;">O</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: right;">D</th>
+<th style="text-align: right;">P</th>
+<th style="text-align: right;">R</th>
+<th style="text-align: right;">F</th>
+<th style="text-align: right;">X</th>
+<th style="text-align: right;">T</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NTP</td>
+<td>Temporal</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>Locational</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>IAM</td>
+<td>Identity</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>PKI</td>
+<td>Integrity</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Policy/IAM</td>
+<td>Authority</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Distributed Systems</td>
+<td>State</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Ledgers</td>
+<td>Transactional</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Desired-State</td>
+<td>Intent</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Telemetry</td>
+<td>Observational</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Supply Chain</td>
+<td>Lineage</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important:</strong> Scores should be assigned only after the corresponding crosswalk has been completed and evidence for each criterion has been identified.</p>
+<hr>
+<h1 id="17-rtt-meta-score">17. RTT Meta-Score</h1>
+<p>The ten criteria can also be grouped into five larger RTT dimensions.</p>
+<table>
+<thead>
+<tr>
+<th>RTT Meta-Dimension</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reference</strong></td>
+<td>Anchor Quality + Lineage Visibility</td>
+</tr>
+<tr>
+<td><strong>Observation</strong></td>
+<td>Observation Quality + Freshness</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Coherence Detection + Paradox Handling</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Drift Detection + Correction Discipline</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Regime Awareness + Failure Transparency</td>
+</tr>
+</tbody>
+</table>
+<p>Each meta-dimension therefore receives a score from:</p>
+<p><strong>0–10</strong></p>
+<p>Giving a second representation:</p>
+<pre><code class="language-text">Reference   [..........] /10
+Observation [..........] /10
+Coherence   [..........] /10
+Drift       [..........] /10
+Regime      [..........] /10
+</code></pre>
+<p>Total:</p>
+<p><strong>RTT Operational Truth Score: /50</strong></p>
+<p>The value of this representation is not the final number.</p>
+<p>It exposes the <strong>shape of the truth system</strong>.</p>
+<p>A system might have:</p>
+<ul>
+<li>excellent reference structure</li>
+<li>excellent freshness</li>
+<li>excellent drift correction</li>
+<li>weak paradox preservation</li>
+<li>limited regime awareness</li>
+</ul>
+<p>That structural profile tells us more than a single grade.</p>
+<hr>
+<h1 id="18-crosswalk-evaluation-rule">18. Crosswalk Evaluation Rule</h1>
+<p>Every system should be evaluated in the following order:</p>
+<p><strong>1. Describe the mechanism.</strong></p>
+<p>Do not score it yet.</p>
+<p><strong>2. Identify evidence for each criterion.</strong></p>
+<p>Record what the system actually does.</p>
+<p><strong>3. Identify missing or implicit mechanisms.</strong></p>
+<p>Absence should remain visible.</p>
+<p><strong>4. Assign criterion scores.</strong></p>
+<p>Use the shared 0–5 rubric.</p>
+<p><strong>5. Record the rationale beside every score.</strong></p>
+<p>No unexplained numbers.</p>
+<p><strong>6. Generate the ten-dimensional profile.</strong></p>
+<p>Preserve structural shape.</p>
+<p><strong>7. Generate the RTT meta-score.</strong></p>
+<p>Reference · Observation · Coherence · Drift · Regime</p>
+<p><strong>8. Only then compare systems.</strong></p>
+<p>Do not compare systems before their individual regimes and purposes are understood.</p>
+<hr>
+<h1 id="19-critical-constraint">19. Critical Constraint</h1>
+<p>A higher score does <strong>not</strong> mean:</p>
+<blockquote>
+<p>This system contains more truth.</p>
+</blockquote>
+<p>It means:</p>
+<blockquote>
+<p><strong>This system exposes and governs more of the structural conditions surrounding its operational truth state.</strong></p>
+</blockquote>
+<p>Likewise, a lower score does not necessarily indicate poor engineering.</p>
+<p>A narrowly scoped system may deliberately externalize:</p>
+<ul>
+<li>authority</li>
+<li>lineage</li>
+<li>conflict resolution</li>
+<li>correction</li>
+<li>regime definition</li>
+</ul>
+<p>to another layer.</p>
+<p>Therefore low scores may reveal either:</p>
+<p><strong>structural weakness</strong></p>
+<p>or:</p>
+<p><strong>structural delegation</strong>.</p>
+<p>The crosswalk must distinguish between them.</p>
+<hr>
+<h1 id="20-canonical-scoring-principle">20. Canonical Scoring Principle</h1>
+<blockquote>
+<p><strong>Score the visibility and governance of the truth relationship, not the apparent correctness of the answer.</strong></p>
+</blockquote>
+<p>The RTT Operational Truth Score therefore asks:</p>
+<ul>
+<li>Where did the claim come from?</li>
+<li>How was it observed?</li>
+<li>What supports it?</li>
+<li>What contradicts it?</li>
+<li>How far has it drifted?</li>
+<li>Under which regime does it hold?</li>
+<li>How long does it remain usable?</li>
+<li>What happens when better evidence arrives?</li>
+<li>What happens when evidence disappears?</li>
+<li>Can the system truthfully say that it does not know?</li>
+</ul>
+<p>A mature operational truth system should make those relationships increasingly observable rather than hiding them behind a binary answer.</p>
+<hr>
+<h1 id="operational-truth-system-scoring-criteria_1">Operational Truth-System Scoring Criteria</h1>
+<p><strong>Module:</strong> Resonance Truth<br>
+<strong>Purpose:</strong> Provide a common scoring model for evaluating each operational truth reference system.<br>
+<strong>Applies to:</strong> NTP · DNS · IAM · PKI · Policy · Distributed Systems · Ledgers · Desired-State Systems · Telemetry · Supply-Chain Provenance</p>
+<hr>
+<h2 id="1-scoring-principle_1">1. Scoring Principle</h2>
+<p>The score does <strong>not</strong> measure whether a system possesses absolute truth.</p>
+<p>It measures how well the system maintains a <strong>qualified operational relationship to truth</strong>.</p>
+<p>Each reference system is evaluated against ten structural criteria:</p>
+<ol>
+<li>Anchor Quality</li>
+<li>Lineage Visibility</li>
+<li>Observation Quality</li>
+<li>Coherence Detection</li>
+<li>Drift Detection</li>
+<li>Paradox Handling</li>
+<li>Regime Awareness</li>
+<li>Freshness / Revalidation</li>
+<li>Correction Discipline</li>
+<li>Failure Transparency</li>
+</ol>
+<p>Each criterion receives a score from <strong>0 to 5</strong>.</p>
+<p>Maximum raw score:</p>
+<p><strong>50</strong></p>
+<p>Normalized score:</p>
+<p><strong>Raw Score × 2 = Operational Truth Score / 100</strong></p>
+<hr>
+<h1 id="2-common-scoring-scale_1">2. Common Scoring Scale</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Classification</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Absent</td>
+<td>The mechanism is not meaningfully represented</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Implicit</td>
+<td>The system depends on the property but provides little explicit structure for it</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Partial</td>
+<td>Some mechanisms exist, but coverage or visibility is limited</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Operational</td>
+<td>The property is explicitly supported and usable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Strong</td>
+<td>The property is systematic, observable, and integrated into normal operation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Structural</td>
+<td>The property is fundamental to the architecture and directly governs accepted state</td>
+</tr>
+</tbody>
+</table>
+<p>The scale intentionally distinguishes:</p>
+<p><strong>having information</strong></p>
+<p>from:</p>
+<p><strong>using that information to govern truth state</strong>.</p>
+<hr>
+<h1 id="3-criterion-1-anchor-quality_1">3. Criterion 1 — Anchor Quality</h1>
+<h3 id="question_10">Question</h3>
+<blockquote>
+<p><strong>How clearly can the system identify the reference against which a truth claim is evaluated?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>identifiable authoritative reference</li>
+<li>source qualification</li>
+<li>anchor scope</li>
+<li>authority boundaries</li>
+<li>revocation or replacement</li>
+<li>dependency on external anchors</li>
+</ul>
+<h3 id="scoring_10">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>No identifiable anchor</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Anchor is assumed or informal</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Anchor exists but authority or scope is weakly expressed</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Anchor is explicitly identifiable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Anchor authority and scope are structurally represented</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Anchor identity, scope, authority, lifecycle, and replacement/revocation are governed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_10">RTT relationship</h3>
+<p><strong>Spin · Regime · Authority</strong></p>
+<hr>
+<h1 id="4-criterion-2-lineage-visibility_1">4. Criterion 2 — Lineage Visibility</h1>
+<h3 id="question_11">Question</h3>
+<blockquote>
+<p><strong>Can the system explain how the accepted truth state arrived from its reference sources?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>provenance</li>
+<li>source relationships</li>
+<li>dependency path</li>
+<li>transformations</li>
+<li>delegation</li>
+<li>distance from anchor</li>
+<li>intermediate authorities</li>
+</ul>
+<h3 id="scoring_11">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Origin cannot be reconstructed</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Immediate source is known</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Partial provenance is available</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Meaningful lineage can be reconstructed</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Lineage is explicit and operationally inspectable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Lineage directly participates in qualification and acceptance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_11">RTT relationship</h3>
+<p><strong>Spin · Lineage · Drift</strong></p>
+<hr>
+<h1 id="5-criterion-3-observation-quality_1">5. Criterion 3 — Observation Quality</h1>
+<h3 id="question_12">Question</h3>
+<blockquote>
+<p><strong>How well does the system qualify the evidence used to establish local truth?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>observation integrity</li>
+<li>precision</li>
+<li>source identity</li>
+<li>collection conditions</li>
+<li>freshness</li>
+<li>duplicates</li>
+<li>instability</li>
+<li>unsuitable observations</li>
+</ul>
+<h3 id="scoring_12">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Observations are accepted without qualification</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Minimal validation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Limited filtering or validation exists</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Observations are explicitly qualified</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Multiple quality dimensions influence qualification</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Observation qualification is fundamental to state synthesis</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_12">RTT relationship</h3>
+<p><strong>Resonance · Elec</strong></p>
+<hr>
+<h1 id="6-criterion-4-coherence-detection_1">6. Criterion 4 — Coherence Detection</h1>
+<h3 id="question_13">Question</h3>
+<blockquote>
+<p><strong>Can the system determine whether independent observations support a mutually usable state?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>observation comparison</li>
+<li>agreement detection</li>
+<li>independent corroboration</li>
+<li>clustering</li>
+<li>consistency checking</li>
+<li>source diversity</li>
+</ul>
+<h3 id="scoring_13">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>No agreement evaluation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Consistency is assumed</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Basic agreement checking</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Explicit coherence evaluation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Multiple sources and dependencies are considered</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Coherence directly governs accepted local state</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_13">RTT relationship</h3>
+<p><strong>C₁ · C₂ · C₃ · C₄</strong></p>
+<hr>
+<h1 id="7-criterion-5-drift-detection_1">7. Criterion 5 — Drift Detection</h1>
+<h3 id="question_14">Question</h3>
+<blockquote>
+<p><strong>Can the system detect displacement between expected, observed, previously accepted, and current state?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>magnitude of divergence</li>
+<li>direction of change</li>
+<li>historical comparison</li>
+<li>expected versus observed state</li>
+<li>source drift</li>
+<li>structural drift</li>
+<li>accumulated deviation</li>
+</ul>
+<h3 id="scoring_14">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Drift is invisible</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Drift becomes visible only through failure</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Some differences can be detected</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Drift is explicitly observable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Drift can be measured and classified</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Drift directly influences qualification, correction, or regime transition</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_14">RTT relationship</h3>
+<p><strong>D₁ · D₂ · D₃ · D₄</strong></p>
+<hr>
+<h1 id="8-criterion-6-paradox-handling_1">8. Criterion 6 — Paradox Handling</h1>
+<h3 id="question_15">Question</h3>
+<blockquote>
+<p><strong>What happens when individually qualified observations disagree?</strong></p>
+</blockquote>
+<p>Evaluate whether the system can:</p>
+<ul>
+<li>preserve competing observations</li>
+<li>reject outliers</li>
+<li>identify separate clusters</li>
+<li>expose disagreement</li>
+<li>avoid forced averaging</li>
+<li>declare an indeterminate state</li>
+</ul>
+<h3 id="scoring_15">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Contradiction is ignored</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>One result simply overwrites another</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Conflict can be detected</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Conflict is explicitly represented</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Competing states can be contained without premature collapse</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Paradox is structurally preserved until evidence or regime resolves it</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_15">RTT relationship</h3>
+<p><strong>P₁ · P₂ · P₃</strong></p>
+<hr>
+<h1 id="9-criterion-7-regime-awareness_1">9. Criterion 7 — Regime Awareness</h1>
+<h3 id="question_16">Question</h3>
+<blockquote>
+<p><strong>Does the system know the conditions under which its accepted truth remains valid?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>scope</li>
+<li>context</li>
+<li>namespace</li>
+<li>policy</li>
+<li>observer position</li>
+<li>trust domain</li>
+<li>jurisdiction</li>
+<li>state boundaries</li>
+<li>transition boundaries</li>
+</ul>
+<h3 id="scoring_16">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Truth is treated as context-free</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Context exists but is largely implicit</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Some boundaries are represented</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Operational regime is identifiable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Regime directly qualifies interpretation</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Regime boundaries and transitions directly govern truth state</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_16">RTT relationship</h3>
+<p><strong>Regime · Elec · Temp</strong></p>
+<hr>
+<h1 id="10-criterion-8-freshness-revalidation_1">10. Criterion 8 — Freshness / Revalidation</h1>
+<h3 id="question_17">Question</h3>
+<blockquote>
+<p><strong>How does the system know whether previously accepted truth is still usable?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>timestamps</li>
+<li>validity duration</li>
+<li>polling</li>
+<li>expiration</li>
+<li>refresh</li>
+<li>revalidation triggers</li>
+<li>stale-state recognition</li>
+<li>changing uncertainty</li>
+</ul>
+<h3 id="scoring_17">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Accepted truth never expires</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Freshness depends on external/manual intervention</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Some expiration or refresh behavior exists</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Truth state is explicitly revalidated</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Revalidation responds to operational conditions</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Freshness is continuously governed as part of truth-state lifecycle</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_17">RTT relationship</h3>
+<p><strong>Temp · Drift</strong></p>
+<hr>
+<h1 id="11-criterion-9-correction-discipline_1">11. Criterion 9 — Correction Discipline</h1>
+<h3 id="question_18">Question</h3>
+<blockquote>
+<p><strong>How does the system respond when better-supported truth differs from local accepted state?</strong></p>
+</blockquote>
+<p>Evaluate:</p>
+<ul>
+<li>immediate correction</li>
+<li>gradual correction</li>
+<li>reconciliation</li>
+<li>rollback</li>
+<li>quarantine</li>
+<li>holdover</li>
+<li>escalation</li>
+<li>bounded adjustment</li>
+</ul>
+<h3 id="scoring_18">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>No defined correction behavior</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Replacement is unmanaged</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Basic correction mechanism exists</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Correction follows defined operational rules</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Correction behavior considers magnitude, confidence, or consequence</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Truth evaluation and state correction are explicitly separated and governed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_18">RTT relationship</h3>
+<p><strong>Temp · Drift · Regime</strong></p>
+<hr>
+<h1 id="12-criterion-10-failure-transparency_1">12. Criterion 10 — Failure Transparency</h1>
+<h3 id="question_19">Question</h3>
+<blockquote>
+<p><strong>Can the system admit that it does not presently know?</strong></p>
+</blockquote>
+<p>Evaluate whether it can expose states such as:</p>
+<ul>
+<li>unsynchronized</li>
+<li>stale</li>
+<li>degraded</li>
+<li>contested</li>
+<li>unavailable</li>
+<li>expired</li>
+<li>indeterminate</li>
+<li>unverified</li>
+</ul>
+<h3 id="scoring_19">Scoring</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>System always produces an apparently valid answer</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Failure appears only as an exception or outage</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>Some degraded conditions are observable</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Failure/degradation states are explicit</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Different forms of uncertainty or failure are distinguished</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Loss of qualification is a first-class truth state that constrains downstream use</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtt-relationship_19">RTT relationship</h3>
+<p><strong>Coherence · Paradox · Regime</strong></p>
+<hr>
+<h1 id="13-system-scorecard_1">13. System Scorecard</h1>
+<p>Each truth reference system receives the same scorecard.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Score 0–5</th>
+<th>Evidence / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anchor Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Lineage Visibility</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Observation Quality</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Coherence Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Drift Detection</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Paradox Handling</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Regime Awareness</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Freshness / Revalidation</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Correction Discipline</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>Failure Transparency</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>/50</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Operational Truth Score</strong></td>
+<td style="text-align: right;"><strong>/100</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="14-truth-system-profiles_1">14. Truth-System Profiles</h1>
+<p>The total score alone should <strong>not</strong> become the primary comparison.</p>
+<p>Two systems can receive identical scores while implementing fundamentally different truth behaviors.</p>
+<p>Therefore each system should retain its ten-dimensional profile.</p>
+<p>Example notation:</p>
+<p><code>A-L-O-C-D-P-R-F-X-T</code></p>
+<p>Where:</p>
+<ul>
+<li><strong>A</strong> = Anchor Quality</li>
+<li><strong>L</strong> = Lineage Visibility</li>
+<li><strong>O</strong> = Observation Quality</li>
+<li><strong>C</strong> = Coherence Detection</li>
+<li><strong>D</strong> = Drift Detection</li>
+<li><strong>P</strong> = Paradox Handling</li>
+<li><strong>R</strong> = Regime Awareness</li>
+<li><strong>F</strong> = Freshness / Revalidation</li>
+<li><strong>X</strong> = Correction Discipline</li>
+<li><strong>T</strong> = Failure Transparency</li>
+</ul>
+<p>An example profile might appear as:</p>
+<p><code>5-3-5-5-5-4-3-5-5-5</code></p>
+<p>This is more informative than reducing the system immediately to:</p>
+<p><strong>90/100</strong></p>
+<p>The profile preserves structural shape.</p>
+<hr>
+<h1 id="15-truth-class-weighting_1">15. Truth-Class Weighting</h1>
+<p>The common ten-dimension score enables comparison, but different truth classes emphasize different dimensions.</p>
+<p>Suggested emphasis:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Truth Class</th>
+<th>Highest-Value Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NTP</strong></td>
+<td>Temporal</td>
+<td>Drift · Freshness · Coherence · Correction</td>
+</tr>
+<tr>
+<td><strong>DNS</strong></td>
+<td>Locational</td>
+<td>Anchor · Lineage · Regime · Freshness</td>
+</tr>
+<tr>
+<td><strong>IAM</strong></td>
+<td>Identity</td>
+<td>Anchor · Observation · Regime · Failure Transparency</td>
+</tr>
+<tr>
+<td><strong>PKI</strong></td>
+<td>Integrity</td>
+<td>Anchor · Lineage · Freshness · Failure Transparency</td>
+</tr>
+<tr>
+<td><strong>Policy / IAM</strong></td>
+<td>Authority</td>
+<td>Anchor · Regime · Coherence · Failure Transparency</td>
+</tr>
+<tr>
+<td><strong>Distributed Systems</strong></td>
+<td>State</td>
+<td>Coherence · Drift · Paradox · Correction</td>
+</tr>
+<tr>
+<td><strong>Ledgers</strong></td>
+<td>Transactional</td>
+<td>Lineage · Coherence · Regime · Correction</td>
+</tr>
+<tr>
+<td><strong>Desired-State Systems</strong></td>
+<td>Intent</td>
+<td>Drift · Coherence · Correction · Revalidation</td>
+</tr>
+<tr>
+<td><strong>Telemetry</strong></td>
+<td>Observational</td>
+<td>Observation · Coherence · Lineage · Freshness</td>
+</tr>
+<tr>
+<td><strong>Supply-Chain Provenance</strong></td>
+<td>Lineage</td>
+<td>Lineage · Anchor · Observation · Regime</td>
+</tr>
+</tbody>
+</table>
+<p>These are <strong>analytical emphases</strong>, not numerical weights yet.</p>
+<p>A weighting model should be introduced only if there is a demonstrated reason to compare systems numerically across different truth classes.</p>
+<hr>
+<h1 id="16-cross-system-comparison-matrix_1">16. Cross-System Comparison Matrix</h1>
+<p>Once each crosswalk has been examined, the results can populate:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Truth Class</th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">L</th>
+<th style="text-align: right;">O</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: right;">D</th>
+<th style="text-align: right;">P</th>
+<th style="text-align: right;">R</th>
+<th style="text-align: right;">F</th>
+<th style="text-align: right;">X</th>
+<th style="text-align: right;">T</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NTP</td>
+<td>Temporal</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>Locational</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>IAM</td>
+<td>Identity</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>PKI</td>
+<td>Integrity</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Policy/IAM</td>
+<td>Authority</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Distributed Systems</td>
+<td>State</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Ledgers</td>
+<td>Transactional</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Desired-State</td>
+<td>Intent</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Telemetry</td>
+<td>Observational</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+<tr>
+<td>Supply Chain</td>
+<td>Lineage</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">/50</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important:</strong> Scores should be assigned only after the corresponding crosswalk has been completed and evidence for each criterion has been identified.</p>
+<hr>
+<h1 id="17-rtt-meta-score_1">17. RTT Meta-Score</h1>
+<p>The ten criteria can also be grouped into five larger RTT dimensions.</p>
+<table>
+<thead>
+<tr>
+<th>RTT Meta-Dimension</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reference</strong></td>
+<td>Anchor Quality + Lineage Visibility</td>
+</tr>
+<tr>
+<td><strong>Observation</strong></td>
+<td>Observation Quality + Freshness</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Coherence Detection + Paradox Handling</td>
+</tr>
+<tr>
+<td><strong>Drift</strong></td>
+<td>Drift Detection + Correction Discipline</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Regime Awareness + Failure Transparency</td>
+</tr>
+</tbody>
+</table>
+<p>Each meta-dimension therefore receives a score from:</p>
+<p><strong>0–10</strong></p>
+<p>Giving a second representation:</p>
+<pre><code class="language-text">Reference   [..........] /10
+Observation [..........] /10
+Coherence   [..........] /10
+Drift       [..........] /10
+Regime      [..........] /10
+</code></pre>
+<p>Total:</p>
+<p><strong>RTT Operational Truth Score: /50</strong></p>
+<p>The value of this representation is not the final number.</p>
+<p>It exposes the <strong>shape of the truth system</strong>.</p>
+<p>A system might have:</p>
+<ul>
+<li>excellent reference structure</li>
+<li>excellent freshness</li>
+<li>excellent drift correction</li>
+<li>weak paradox preservation</li>
+<li>limited regime awareness</li>
+</ul>
+<p>That structural profile tells us more than a single grade.</p>
+<hr>
+<h1 id="18-crosswalk-evaluation-rule_1">18. Crosswalk Evaluation Rule</h1>
+<p>Every system should be evaluated in the following order:</p>
+<p><strong>1. Describe the mechanism.</strong></p>
+<p>Do not score it yet.</p>
+<p><strong>2. Identify evidence for each criterion.</strong></p>
+<p>Record what the system actually does.</p>
+<p><strong>3. Identify missing or implicit mechanisms.</strong></p>
+<p>Absence should remain visible.</p>
+<p><strong>4. Assign criterion scores.</strong></p>
+<p>Use the shared 0–5 rubric.</p>
+<p><strong>5. Record the rationale beside every score.</strong></p>
+<p>No unexplained numbers.</p>
+<p><strong>6. Generate the ten-dimensional profile.</strong></p>
+<p>Preserve structural shape.</p>
+<p><strong>7. Generate the RTT meta-score.</strong></p>
+<p>Reference · Observation · Coherence · Drift · Regime</p>
+<p><strong>8. Only then compare systems.</strong></p>
+<p>Do not compare systems before their individual regimes and purposes are understood.</p>
+<hr>
+<h1 id="19-critical-constraint_1">19. Critical Constraint</h1>
+<p>A higher score does <strong>not</strong> mean:</p>
+<blockquote>
+<p>This system contains more truth.</p>
+</blockquote>
+<p>It means:</p>
+<blockquote>
+<p><strong>This system exposes and governs more of the structural conditions surrounding its operational truth state.</strong></p>
+</blockquote>
+<p>Likewise, a lower score does not necessarily indicate poor engineering.</p>
+<p>A narrowly scoped system may deliberately externalize:</p>
+<ul>
+<li>authority</li>
+<li>lineage</li>
+<li>conflict resolution</li>
+<li>correction</li>
+<li>regime definition</li>
+</ul>
+<p>to another layer.</p>
+<p>Therefore low scores may reveal either:</p>
+<p><strong>structural weakness</strong></p>
+<p>or:</p>
+<p><strong>structural delegation</strong>.</p>
+<p>The crosswalk must distinguish between them.</p>
+<hr>
+<h1 id="20-canonical-scoring-principle_1">20. Canonical Scoring Principle</h1>
+<blockquote>
+<p><strong>Score the visibility and governance of the truth relationship, not the apparent correctness of the answer.</strong></p>
+</blockquote>
+<p>The RTT Operational Truth Score therefore asks:</p>
+<ul>
+<li>Where did the claim come from?</li>
+<li>How was it observed?</li>
+<li>What supports it?</li>
+<li>What contradicts it?</li>
+<li>How far has it drifted?</li>
+<li>Under which regime does it hold?</li>
+<li>How long does it remain usable?</li>
+<li>What happens when better evidence arrives?</li>
+<li>What happens when evidence disappears?</li>
+<li>Can the system truthfully say that it does not know?</li>
+</ul>
+<p>A mature operational truth system should make those relationships increasingly observable rather than hiding them behind a binary answer.</p>
+<p>The important writing/design change is that I didn't pre-score NTP or the other nine yet. The rubric comes first, then each crosswalk earns its numbers from documented mechanisms. That keeps us from quietly building the conclusion into the scoring model.</p>
+<p>And I particularly like the five meta-dimensions that fell out of it:</p>
+<p>Reference · Observation · Coherence · Drift · Regime</p>
+<p>That may eventually be cleaner and more fundamental than the /100 number itself.</p>
+<hr>
+<p><img width="1194" height="672" alt="RTT_Operational_Truth_Service_Component_Diagram_" src="https://github.com/user-attachments/assets/9f7cb493-614f-4150-acec-08c2cc936a09" /></p>
+<hr>
+<p>Yes. I’d add the API/data layer directly beneath the component architecture, while keeping the service honest to the model we just built. The key design choice is that a Truth State is an evaluated, regime-qualified object, not a Boolean and not the same thing as an observation.</p>
+<h2 id="api-surface">API surface</h2>
+<pre><code class="language-text">POST   /v1/claims
+GET    /v1/claims/{claim_id}
+
+POST   /v1/claims/{claim_id}/observations
+GET    /v1/claims/{claim_id}/observations
+
+POST   /v1/claims/{claim_id}/evaluate
+GET    /v1/claims/{claim_id}/truth-state
+
+GET    /v1/truth-states/{truth_state_id}
+GET    /v1/truth-states/{truth_state_id}/lineage
+GET    /v1/truth-states/{truth_state_id}/paradoxes
+
+POST   /v1/truth-states/{truth_state_id}/revalidate
+
+GET    /v1/sources/{source_id}
+GET    /v1/anchors/{anchor_id}
+GET    /v1/regimes/{regime_id}
+
+GET    /v1/evaluations/{evaluation_id}
+GET    /v1/evaluations/{evaluation_id}/scores
+</code></pre>
+<p>The separation matters:</p>
+<p><strong>submit claim ≠ submit evidence ≠ evaluate ≠ accept state ≠ revalidate</strong></p>
+<hr>
+<h2 id="core-api-schema">Core API schema</h2>
+<p>I'd keep the first version deliberately small.</p>
+<pre><code class="language-yaml">openapi: 3.1.0
+
+info:
+  title: RTT Resonance Truth Service
+  version: 0.1.0
+  description: &gt;
+    Regime-aware truth-state evaluation service based on
+    observation, lineage, coherence, drift, paradox, and revalidation.
+
+paths:
+
+  /v1/claims:
+    post:
+      summary: Register a truth claim
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: &quot;#/components/schemas/ClaimRequest&quot;
+      responses:
+        &quot;201&quot;:
+          description: Claim registered
+          content:
+            application/json:
+              schema:
+                $ref: &quot;#/components/schemas/Claim&quot;
+
+  /v1/claims/{claim_id}/observations:
+    post:
+      summary: Add an observation to a claim
+      parameters:
+        - name: claim_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: &quot;#/components/schemas/ObservationRequest&quot;
+      responses:
+        &quot;201&quot;:
+          description: Observation accepted for qualification
+          content:
+            application/json:
+              schema:
+                $ref: &quot;#/components/schemas/Observation&quot;
+
+  /v1/claims/{claim_id}/evaluate:
+    post:
+      summary: Evaluate a claim within a declared regime
+      parameters:
+        - name: claim_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: &quot;#/components/schemas/EvaluationRequest&quot;
+      responses:
+        &quot;200&quot;:
+          description: Qualified truth state
+          content:
+            application/json:
+              schema:
+                $ref: &quot;#/components/schemas/TruthState&quot;
+
+  /v1/truth-states/{truth_state_id}:
+    get:
+      summary: Retrieve a qualified truth state
+      parameters:
+        - name: truth_state_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        &quot;200&quot;:
+          description: Current truth state
+          content:
+            application/json:
+              schema:
+                $ref: &quot;#/components/schemas/TruthState&quot;
+
+  /v1/truth-states/{truth_state_id}/revalidate:
+    post:
+      summary: Revalidate an existing truth state
+      parameters:
+        - name: truth_state_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        &quot;200&quot;:
+          description: Revalidated truth state
+          content:
+            application/json:
+              schema:
+                $ref: &quot;#/components/schemas/TruthState&quot;
+</code></pre>
+<h2 id="core-objects">Core objects</h2>
+<pre><code class="language-yaml">components:
+  schemas:
+
+    ClaimRequest:
+      type: object
+      required:
+        - claim
+        - truth_classes
+        - regime_id
+      properties:
+        claim:
+          type: string
+
+        truth_classes:
+          type: array
+          items:
+            $ref: &quot;#/components/schemas/TruthClass&quot;
+
+        regime_id:
+          type: string
+
+        intended_use:
+          type: string
+
+        maximum_age_seconds:
+          type: integer
+          minimum: 0
+
+    Claim:
+      allOf:
+        - $ref: &quot;#/components/schemas/ClaimRequest&quot;
+        - type: object
+          required:
+            - claim_id
+            - created_at
+          properties:
+            claim_id:
+              type: string
+            created_at:
+              type: string
+              format: date-time
+
+    TruthClass:
+      type: string
+      enum:
+        - temporal
+        - locational
+        - identity
+        - integrity
+        - authority
+        - state
+        - transactional
+        - intent
+        - observational
+        - lineage
+</code></pre>
+<p>Notice that truth_classes is an array.</p>
+<p>That's intentional.</p>
+<p>The TLS example demonstrated why:</p>
+<pre><code class="language-json">{
+  &quot;claim&quot;: &quot;This TLS certificate is valid&quot;,
+  &quot;truth_classes&quot;: [
+    &quot;identity&quot;,
+    &quot;integrity&quot;,
+    &quot;authority&quot;,
+    &quot;temporal&quot;,
+    &quot;lineage&quot;
+  ],
+  &quot;regime_id&quot;: &quot;public-web-pki&quot;
+}
+</code></pre>
+<p>A claim doesn't have to be smashed into one truth-class bucket.</p>
+<hr>
+<h2 id="observation-object">Observation object</h2>
+<pre><code class="language-yaml">ObservationRequest:
+  type: object
+  required:
+    - source_id
+    - value
+    - observed_at
+  properties:
+
+    source_id:
+      type: string
+
+    anchor_id:
+      type:
+        - string
+        - &quot;null&quot;
+
+    value: {}
+
+    observed_at:
+      type: string
+      format: date-time
+
+    received_at:
+      type: string
+      format: date-time
+
+    lineage:
+      type: array
+      items:
+        $ref: &quot;#/components/schemas/LineageHop&quot;
+
+    confidence:
+      type:
+        - number
+        - &quot;null&quot;
+      minimum: 0
+      maximum: 1
+
+    expires_at:
+      type:
+        - string
+        - &quot;null&quot;
+      format: date-time
+
+Observation:
+  allOf:
+    - $ref: &quot;#/components/schemas/ObservationRequest&quot;
+    - type: object
+      properties:
+        observation_id:
+          type: string
+
+        qualification:
+          $ref: &quot;#/components/schemas/Qualification&quot;
+</code></pre>
+<p>And importantly, confidence is optional.</p>
+<p><strong>No confidence score is required for something to count as evidence.</strong></p>
+<p>That prevents the architecture from quietly turning every epistemic problem into fake floating-point precision.</p>
+<hr>
+<h2 id="qualification">Qualification</h2>
+<pre><code class="language-yaml">Qualification:
+  type: object
+  required:
+    - status
+    - reasons
+  properties:
+
+    status:
+      type: string
+      enum:
+        - qualified
+        - degraded
+        - rejected
+        - expired
+        - indeterminate
+
+    reasons:
+      type: array
+      items:
+        type: string
+
+    freshness_seconds:
+      type:
+        - integer
+        - &quot;null&quot;
+
+    source_independence:
+      type: string
+      enum:
+        - independent
+        - partially_dependent
+        - dependent
+        - unknown
+
+    regime_compatible:
+      type:
+        - boolean
+        - &quot;null&quot;
+</code></pre>
+<p>This handles one of our earlier rules:</p>
+<blockquote>
+<p>Rejected from synthesis ≠ false.</p>
+</blockquote>
+<p>An observation can be perfectly genuine and still be rejected because it belongs to the wrong regime or is too stale for the requested use.</p>
+<hr>
+<h2 id="truth-state">Truth State</h2>
+<p>This becomes the central object of the service.</p>
+<pre><code class="language-yaml">TruthState:
+  type: object
+  required:
+    - truth_state_id
+    - claim_id
+    - status
+    - regime_id
+    - coherence
+    - evaluated_at
+  properties:
+
+    truth_state_id:
+      type: string
+
+    claim_id:
+      type: string
+
+    status:
+      $ref: &quot;#/components/schemas/TruthStatus&quot;
+
+    accepted_value: {}
+
+    regime_id:
+      type: string
+
+    truth_classes:
+      type: array
+      items:
+        $ref: &quot;#/components/schemas/TruthClass&quot;
+
+    anchor_ids:
+      type: array
+      items:
+        type: string
+
+    source_ids:
+      type: array
+      items:
+        type: string
+
+    observation_ids:
+      type: array
+      items:
+        type: string
+
+    coherence:
+      $ref: &quot;#/components/schemas/CoherenceState&quot;
+
+    drift:
+      $ref: &quot;#/components/schemas/DriftState&quot;
+
+    paradoxes:
+      type: array
+      items:
+        $ref: &quot;#/components/schemas/Paradox&quot;
+
+    uncertainty:
+      type:
+        - number
+        - &quot;null&quot;
+
+    permitted_uses:
+      type: array
+      items:
+        type: string
+
+    correction:
+      $ref: &quot;#/components/schemas/CorrectionPolicy&quot;
+
+    evaluated_at:
+      type: string
+      format: date-time
+
+    expires_at:
+      type:
+        - string
+        - &quot;null&quot;
+      format: date-time
+
+    next_revalidation_at:
+      type:
+        - string
+        - &quot;null&quot;
+      format: date-time
+</code></pre>
+<h2 id="truth-state-lifecycle">Truth-state lifecycle</h2>
+<pre><code class="language-yaml">TruthStatus:
+  type: string
+  enum:
+    - declared
+    - observed
+    - corroborated
+    - operationally_accepted
+    - contested
+    - degraded
+    - held_over
+    - expired
+    - rejected
+    - indeterminate
+</code></pre>
+<p>That enum may actually become one of the most important pieces of the API.</p>
+<p>It explicitly prevents:</p>
+<pre><code>true | false
+</code></pre>
+<p>from becoming our entire truth vocabulary.</p>
+<hr>
+<h2 id="coherence-model">Coherence model</h2>
+<pre><code class="language-yaml">CoherenceState:
+  type: object
+  required:
+    - state
+  properties:
+
+    state:
+      type: string
+      enum:
+        - coherent
+        - weakly_coherent
+        - fragmented
+        - contested
+        - inverted
+        - indeterminate
+
+    cluster_count:
+      type: integer
+      minimum: 0
+
+    supporting_observation_ids:
+      type: array
+      items:
+        type: string
+
+    dissenting_observation_ids:
+      type: array
+      items:
+        type: string
+</code></pre>
+<p>This lets the service say something much more useful than:</p>
+<pre><code>confidence = 0.71
+</code></pre>
+<p>It can say:</p>
+<pre><code>coherence = fragmented
+clusters = 2
+</code></pre>
+<p>Those are structurally different situations.</p>
+<hr>
+<h2 id="drift-model">Drift model</h2>
+<pre><code class="language-yaml">DriftState:
+  type: object
+  properties:
+
+    magnitude:
+      type:
+        - number
+        - &quot;null&quot;
+
+    unit:
+      type:
+        - string
+        - &quot;null&quot;
+
+    direction:
+      type: string
+      enum:
+        - increasing
+        - decreasing
+        - stable
+        - oscillating
+        - unknown
+
+    dimensions:
+      type: array
+      items:
+        type: string
+        enum:
+          - value
+          - semantic
+          - source
+          - lineage
+          - temporal
+          - regime
+          - confidence
+          - policy
+
+    bounded:
+      type:
+        - boolean
+        - &quot;null&quot;
+</code></pre>
+<p>For NTP this might genuinely be measurable in milliseconds.</p>
+<p>For something semantic, magnitude may legitimately be null.</p>
+<p>Again, we don't manufacture numbers merely because the schema provides somewhere to put one.</p>
+<hr>
+<h2 id="paradox-model">Paradox model</h2>
+<pre><code class="language-yaml">Paradox:
+  type: object
+  required:
+    - paradox_id
+    - state
+  properties:
+
+    paradox_id:
+      type: string
+
+    state:
+      type: string
+      enum:
+        - structural
+        - semantic
+        - regime
+
+    competing_observation_ids:
+      type: array
+      items:
+        type: string
+
+    description:
+      type: string
+
+    resolution_condition:
+      type:
+        - string
+        - &quot;null&quot;
+
+    containment:
+      type: string
+      enum:
+        - preserve
+        - isolate
+        - separate_by_regime
+        - escalate
+        - resolved
+</code></pre>
+<p>This is important because paradox becomes data, not an exception.</p>
+<p>That matches our session setting nicely:</p>
+<p>paradox=structural</p>
+<hr>
+<h2 id="correction-policy">Correction policy</h2>
+<pre><code class="language-yaml">CorrectionPolicy:
+  type: object
+  required:
+    - mode
+  properties:
+
+    mode:
+      type: string
+      enum:
+        - none
+        - step
+        - gradual
+        - quarantine
+        - dual_state
+        - human_escalation
+        - holdover
+        - fail_closed
+        - fail_bounded
+
+    reason:
+      type: string
+
+    maximum_adjustment:
+      type:
+        - number
+        - &quot;null&quot;
+
+    adjustment_unit:
+      type:
+        - string
+        - &quot;null&quot;
+</code></pre>
+<p>This preserves the NTP lesson:</p>
+<blockquote>
+<p>Determining a better-supported state and deciding how rapidly to adopt it are different operations.</p>
+</blockquote>
+<hr>
+<h2 id="regime-model">Regime model</h2>
+<pre><code class="language-yaml">Regime:
+  type: object
+  required:
+    - regime_id
+    - name
+  properties:
+
+    regime_id:
+      type: string
+
+    name:
+      type: string
+
+    domain:
+      type: string
+
+    jurisdiction:
+      type:
+        - string
+        - &quot;null&quot;
+
+    policy_version:
+      type:
+        - string
+        - &quot;null&quot;
+
+    observer_context:
+      type:
+        - string
+        - &quot;null&quot;
+
+    precision_requirement:
+      type:
+        - number
+        - &quot;null&quot;
+
+    maximum_age_seconds:
+      type:
+        - integer
+        - &quot;null&quot;
+
+    consequence:
+      type: string
+      enum:
+        - informational
+        - low
+        - moderate
+        - high
+        - critical
+</code></pre>
+<p>Same claim, different regime, potentially different acceptable result.</p>
+<p>That's deliberate.</p>
+<hr>
+<h2 id="anchor-source-model">Anchor + Source model</h2>
+<pre><code class="language-yaml">Anchor:
+  type: object
+  required:
+    - anchor_id
+    - type
+    - authority
+  properties:
+
+    anchor_id:
+      type: string
+
+    type:
+      type: string
+
+    authority:
+      type: string
+
+    domain:
+      type: string
+
+    valid_from:
+      type:
+        - string
+        - &quot;null&quot;
+      format: date-time
+
+    valid_until:
+      type:
+        - string
+        - &quot;null&quot;
+      format: date-time
+
+    status:
+      type: string
+      enum:
+        - active
+        - degraded
+        - withdrawn
+        - revoked
+        - unknown
+
+Source:
+  type: object
+  required:
+    - source_id
+    - type
+  properties:
+
+    source_id:
+      type: string
+
+    type:
+      type: string
+
+    anchor_id:
+      type:
+        - string
+        - &quot;null&quot;
+
+    lineage_distance:
+      type:
+        - integer
+        - &quot;null&quot;
+
+    status:
+      type: string
+      enum:
+        - active
+        - degraded
+        - unavailable
+        - rejected
+        - unknown
+</code></pre>
+<p>And the NTP idea of stratum becomes our generalized:</p>
+<p>lineage_distance</p>
+<p>without claiming that every truth domain has literal strata.</p>
+<hr>
+<h2 id="lineage-model">Lineage model</h2>
+<pre><code class="language-yaml">LineageHop:
+  type: object
+  required:
+    - entity_id
+    - relation
+  properties:
+
+    entity_id:
+      type: string
+
+    relation:
+      type: string
+
+    transformation:
+      type:
+        - string
+        - &quot;null&quot;
+
+    observed_at:
+      type:
+        - string
+        - &quot;null&quot;
+      format: date-time
+</code></pre>
+<p>So lineage can describe:</p>
+<pre><code class="language-text">Anchor
+  ↓
+Authority
+  ↓
+Source
+  ↓
+Transformer
+  ↓
+Observation
+  ↓
+Truth State
+</code></pre>
+<p>without hardcoding one infrastructure model.</p>
+<hr>
+<h2 id="scoring-object">Scoring object</h2>
+<p>Then I'd make the rubric we just developed machine-readable too.</p>
+<pre><code class="language-yaml">TruthSystemScore:
+  type: object
+  required:
+    - system
+    - truth_class
+    - scores
+  properties:
+
+    system:
+      type: string
+
+    truth_class:
+      $ref: &quot;#/components/schemas/TruthClass&quot;
+
+    scores:
+      type: object
+      properties:
+
+        anchor_quality:
+          $ref: &quot;#/components/schemas/Score&quot;
+
+        lineage_visibility:
+          $ref: &quot;#/components/schemas/Score&quot;
+
+        observation_quality:
+          $ref: &quot;#/components/schemas/Score&quot;
+
+        coherence_detection:
+          $ref: &quot;#/components/schemas/Score&quot;
+
+        drift_detection:
+          $ref: &quot;#/components/schemas/Score&quot;
+
+        paradox_handling:
+          $ref: &quot;#/components/schemas/Score&quot;
+
+        regime_awareness:
+          $ref: &quot;#/components/schemas/Score&quot;
+
+        freshness_revalidation:
+          $ref: &quot;#/components/schemas/Score&quot;
+
+        correction_discipline:
+          $ref: &quot;#/components/schemas/Score&quot;
+
+        failure_transparency:
+          $ref: &quot;#/components/schemas/Score&quot;
+
+Score:
+  type: object
+  required:
+    - value
+    - rationale
+  properties:
+
+    value:
+      type: integer
+      minimum: 0
+      maximum: 5
+
+    rationale:
+      type: string
+
+    evidence:
+      type: array
+      items:
+        type: string
+</code></pre>
+<p>I particularly want:</p>
+<pre><code>rationale:
+evidence:
+</code></pre>
+<p>beside every score.</p>
+<p>No naked numbers.</p>
+<hr>
+<h2 id="logical-data-model">Logical data model</h2>
+<p>At this point the entity model becomes surprisingly clean:</p>
+<pre><code class="language-text">REGIME
+   │
+   ├──────────────┐
+   │              │
+   ▼              ▼
+ CLAIM ────────► EVALUATION
+   │              │
+   │              ▼
+   │          TRUTH_STATE
+   │              │
+   │        ┌─────┼─────┐
+   │        ▼     ▼     ▼
+   │      DRIFT PARADOX CORRECTION
+   │
+   ▼
+OBSERVATION
+   │
+   ├──────► SOURCE
+   │          │
+   │          ▼
+   │        ANCHOR
+   │
+   ▼
+LINEAGE
+</code></pre>
+<p>And in relational terms:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Entity</strong></th>
+<th><strong>Key relationships</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim</strong></td>
+<td>belongs to one evaluation regime; may carry many Truth Classes</td>
+</tr>
+<tr>
+<td><strong>Observation</strong></td>
+<td>belongs to a Claim; produced by a Source</td>
+</tr>
+<tr>
+<td><strong>Source</strong></td>
+<td>may derive from an Anchor; participates in Lineage</td>
+</tr>
+<tr>
+<td><strong>Anchor</strong></td>
+<td>establishes a bounded reference</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>connects Anchor/Source/Observation transformations</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>defines conditions governing evaluation</td>
+</tr>
+<tr>
+<td><strong>Evaluation</strong></td>
+<td>consumes qualified Observations</td>
+</tr>
+<tr>
+<td><strong>TruthState</strong></td>
+<td>result of an Evaluation</td>
+</tr>
+<tr>
+<td><strong>DriftState</strong></td>
+<td>describes displacement associated with TruthState</td>
+</tr>
+<tr>
+<td><strong>Paradox</strong></td>
+<td>preserves unresolved qualified contradictions</td>
+</tr>
+<tr>
+<td><strong>CorrectionPolicy</strong></td>
+<td>governs adoption of TruthState</td>
+</tr>
+<tr>
+<td><strong>TruthSystemScore</strong></td>
+<td>evaluates the reference system itself, not individual claims</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="one-important-separation">One important separation</h2>
+<p>I'd keep these databases conceptually separate:</p>
+<pre><code>                 RESONANCE TRUTH
+
+Runtime Plane                  Research Plane
+─────────────                  ──────────────
+
+Claim                          Reference System
+Observation                    Crosswalk
+Source                         Criterion
+Anchor                         Score
+Regime                         Evidence
+Evaluation                     Rationale
+Truth State
+Paradox
+Drift
+Correction
+</code></pre>
+<p>The runtime plane asks:</p>
+<blockquote>
+<p>What is the qualified state of this claim?</p>
+</blockquote>
+<p>The research plane asks:</p>
+<blockquote>
+<p>How well does NTP/DNS/PKI/etc. operationalize truth?</p>
+</blockquote>
+<p>That prevents our /100 crosswalk score from accidentally contaminating the confidence or qualification of individual truth claims.</p>
+<hr>
+<h2 id="the-architecture-is-starting-to-settle">The architecture is starting to settle</h2>
+<p>We now have four layers:</p>
+<pre><code>┌───────────────────────────────────────────────┐
+│  TRUTH CLASSES                                │
+│  Temporal · Identity · State · Lineage ...    │
+├───────────────────────────────────────────────┤
+│  RTT ANALYSIS                                 │
+│  Resonance · Coherence · Drift · Paradox      │
+│  Regime · SET                                 │
+├───────────────────────────────────────────────┤
+│  TRUTH SERVICE                                │
+│  Claim · Observe · Qualify · Evaluate         │
+│  Correct · Revalidate                         │
+├───────────────────────────────────────────────┤
+│  REFERENCE SYSTEMS                            │
+│  NTP · DNS · IAM · PKI · Consensus ...        │
+└───────────────────────────────────────────────┘
+</code></pre>
+<p>The main design change is that I've kept <strong>epistemic state, operational action, and research scoring</strong> separate. That's important structurally: the truth service can say <em>“this claim is contested,”</em> correction policy decides what to do about it, while the crosswalk scoring system independently asks how well the underlying reference architecture exposes that condition.</p>
+<p>That separation feels very RTT to me: <strong>observe first, qualify the regime, preserve the paradox, then permit action.</strong></p>
+<hr>
+  </main>
+</body>
+</html>
