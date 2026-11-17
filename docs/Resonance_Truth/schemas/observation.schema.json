@@ -1,1 +1,353 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/Resonance_Truth/schemas/observation.schema.json",
+  "title": "RTT Resonance Truth Observation",
+  "description": "Schema for an Observation used by the RTT Resonance Truth Service v0.1 model. An Observation represents bounded observational evidence supplied by a Source for evaluation of a Claim. An Observation is not itself a Truth State and does not determine its own qualification.",
+  "type": "object",
+
+  "required": [
+    "observation_id",
+    "claim_id",
+    "source_id",
+    "value",
+    "observed_at",
+    "received_at",
+    "registered_at"
+  ],
+
+  "properties": {
+    "observation_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for the Observation."
+    },
+
+    "claim_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the Claim for which this Observation is being supplied as Evidence."
+    },
+
+    "source_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the Source that produced or supplied this Observation."
+    },
+
+    "anchor_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of the v0.1 Anchor associated directly with this Observation. Null is valid when no qualified Anchor relationship is available or applicable."
+    },
+
+    "value": {
+      "description": "Domain-native value represented by this Observation. The value may be scalar, structured, boolean, string, array, object, or null according to the governing domain."
+    },
+
+    "observed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp associated with the underlying observation or measurement."
+    },
+
+    "received_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp at which the Observation was received by the evaluating or registering system."
+    },
+
+    "expires_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Optional explicit expiration boundary for use of this Observation. Expiration changes current qualification and does not imply that the historical Observation became false."
+    },
+
+    "declared_confidence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Optional confidence value declared by the producing Source or upstream system. This value is Source-provided metadata and must not be treated automatically as Truth-Service qualification."
+    },
+
+    "lineage_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional reference to a canonical Lineage graph describing origin, reference, dependency, or transformation relationships associated with this Observation."
+    },
+
+    "lineage": {
+      "type": "array",
+      "description": "Optional compact inline v0.1 Lineage path retained for deterministic fixture compatibility. More complex graph-shaped Lineage should use lineage_id and the canonical Lineage schema.",
+      "items": {
+        "$ref": "#/$defs/inline_lineage_step"
+      },
+      "default": []
+    },
+
+    "integrity": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/integrity_evidence"
+        }
+      ],
+      "description": "Optional integrity information associated with this Observation. Integrity evidence does not determine the Observation's Truth qualification by itself."
+    },
+
+    "registered_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp at which the Observation was registered with the Truth Service or fixture environment."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional domain-specific or implementation metadata. Metadata must not override canonical Observation fields.",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+
+  "$defs": {
+    "inline_lineage_step": {
+      "type": "object",
+      "required": [
+        "sequence",
+        "entity_type",
+        "entity_id",
+        "relation"
+      ],
+      "properties": {
+        "sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "One-based position of this step in the compact v0.1 Lineage path."
+        },
+
+        "entity_type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Type of entity represented by this inline Lineage step. This remains intentionally extensible for compatibility with domain-specific fixture data."
+        },
+
+        "entity_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Identifier of the entity represented by this Lineage step."
+        },
+
+        "relation": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Relationship associated with this Lineage step, such as referenced_by, observed_through, produced_by, or another domain-defined relationship."
+        },
+
+        "transformation": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional transformation associated with this Lineage step."
+        },
+
+        "observed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Optional timestamp associated with this Lineage step."
+        },
+
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "default": {}
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "integrity_evidence": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "unverified",
+            "failed",
+            "unknown"
+          ],
+          "description": "Integrity status associated with the Observation."
+        },
+
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional method used to evaluate or declare Observation integrity."
+        },
+
+        "reference": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional reference to a signature, digest, attestation, or other integrity artifact."
+        },
+
+        "checked_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Optional timestamp at which integrity was checked."
+        },
+
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "default": {}
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "examples": [
+    {
+      "observation_id": "obs-ntp-a-001",
+      "claim_id": "claim-temporal-coherent-001",
+      "source_id": "source-ntp-a",
+      "anchor_id": "anchor-utc",
+      "value": {
+        "timestamp": "2026-01-01T12:00:00.012Z",
+        "offset_ms": 12.0,
+        "delay_ms": 20.0,
+        "jitter_ms": 1.2,
+        "dispersion_ms": 2.0
+      },
+      "observed_at": "2026-01-01T12:00:00.012Z",
+      "received_at": "2026-01-01T12:00:00.020Z",
+      "expires_at": "2026-01-01T12:05:00Z",
+      "declared_confidence": null,
+      "lineage_id": null,
+      "lineage": [
+        {
+          "sequence": 1,
+          "entity_type": "anchor",
+          "entity_id": "anchor-utc",
+          "relation": "referenced_by",
+          "transformation": null,
+          "observed_at": null,
+          "metadata": {}
+        },
+        {
+          "sequence": 2,
+          "entity_type": "source",
+          "entity_id": "source-ntp-a",
+          "relation": "observed_through",
+          "transformation": null,
+          "observed_at": "2026-01-01T12:00:00.012Z",
+          "metadata": {}
+        }
+      ],
+      "integrity": null,
+      "registered_at": "2026-01-01T12:00:00.020Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+
+    {
+      "observation_id": "obs-ntp-c-001",
+      "claim_id": "claim-temporal-indeterminate-001",
+      "source_id": "source-ntp-c",
+      "anchor_id": null,
+      "value": {
+        "timestamp": "2026-01-01T12:00:00.014Z",
+        "offset_ms": 14.0,
+        "delay_ms": 21.0,
+        "jitter_ms": 1.4,
+        "dispersion_ms": 2.3
+      },
+      "observed_at": "2026-01-01T12:00:00.014Z",
+      "received_at": "2026-01-01T12:00:00.022Z",
+      "expires_at": "2026-01-01T12:05:00Z",
+      "declared_confidence": null,
+      "lineage_id": null,
+      "lineage": [
+        {
+          "sequence": 1,
+          "entity_type": "source",
+          "entity_id": "source-ntp-c",
+          "relation": "observed_through",
+          "transformation": null,
+          "observed_at": "2026-01-01T12:00:00.014Z",
+          "metadata": {
+            "lineage_complete": false
+          }
+        }
+      ],
+      "integrity": null,
+      "registered_at": "2026-01-01T12:00:00.022Z",
+      "metadata": {
+        "synthetic": true,
+        "lineage_gap": "No qualified reference-anchor relationship is available for this Source."
+      }
+    },
+
+    {
+      "observation_id": "obs-integrity-example-001",
+      "claim_id": "claim-integrity-example-001",
+      "source_id": "source-example-001",
+      "anchor_id": null,
+      "value": {
+        "artifact_id": "artifact-example-001",
+        "state": "present"
+      },
+      "observed_at": "2026-01-01T12:00:00Z",
+      "received_at": "2026-01-01T12:00:01Z",
+      "expires_at": null,
+      "declared_confidence": null,
+      "lineage_id": "lineage-integrity-example-001",
+      "lineage": [],
+      "integrity": {
+        "status": "verified",
+        "method": "domain-specific-integrity-check",
+        "reference": "integrity-reference-001",
+        "checked_at": "2026-01-01T12:00:01Z",
+        "metadata": {}
+      },
+      "registered_at": "2026-01-01T12:00:01Z",
+      "metadata": {
+        "example_only": true
+      }
+    }
+  ]
+}
