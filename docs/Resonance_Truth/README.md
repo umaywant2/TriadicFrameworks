@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_" src="https://github.com/user-attachments/assets/4700a9a6-1036-442d-875b-1c4770f89347" />
 
 - [`module.json`](module.json) — Agentic module schema role assignments
 
