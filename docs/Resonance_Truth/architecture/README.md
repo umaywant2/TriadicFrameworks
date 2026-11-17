@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_architecture_" src="https://github.com/user-attachments/assets/48118ccc-02a0-4ded-9e4e-b14af86edb2d" />
 
 # Resonance Truth — Architecture
 
