@@ -1,1 +1,498 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/Resonance_Truth/schemas/drift_state.schema.json",
+  "title": "RTT Resonance Truth Drift State",
+  "description": "Schema for a Drift State produced by an RTT Resonance Truth Service v0.1 Evaluation. Drift represents displacement between relevant truth-bearing states, values, sources, relationships, or structures. Drift may be quantitative or qualitative; numerical magnitude must not be fabricated when the domain does not support meaningful measurement.",
+  "type": "object",
+
+  "required": [
+    "drift_state_id",
+    "evaluation_id",
+    "dimensions",
+    "direction",
+    "bounded",
+    "rationale"
+  ],
+
+  "properties": {
+    "drift_state_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for this Drift State."
+    },
+
+    "evaluation_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the Evaluation that produced this Drift State."
+    },
+
+    "dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "One or more dimensions along which displacement was evaluated.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "value",
+          "temporal",
+          "state",
+          "source",
+          "lineage",
+          "semantic",
+          "authority",
+          "policy",
+          "regime",
+          "confidence",
+          "instrumentation",
+          "coverage",
+          "context",
+          "transformation"
+        ]
+      }
+    },
+
+    "baseline": {
+      "$ref": "#/$defs/drift_endpoint",
+      "description": "Optional structured reference to the baseline state, value, object, or relationship against which Drift is measured."
+    },
+
+    "observed": {
+      "$ref": "#/$defs/drift_endpoint",
+      "description": "Optional structured reference to the state, value, object, or relationship being compared against the baseline."
+    },
+
+    "magnitude": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Optional quantitative magnitude of Drift. Null is correct when no domain-meaningful numeric magnitude exists or when available Evidence cannot support one."
+    },
+
+    "unit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Unit associated with magnitude when Drift is quantitatively represented."
+    },
+
+    "direction": {
+      "type": "string",
+      "enum": [
+        "increasing",
+        "decreasing",
+        "stable",
+        "oscillating",
+        "changed",
+        "unknown",
+        "not_applicable"
+      ],
+      "description": "Observed or derived direction of Drift. 'changed' supports structural changes for which increasing/decreasing semantics are inappropriate."
+    },
+
+    "bounded": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether Drift remains inside the applicable Regime boundary. Null indicates that boundedness cannot presently be determined."
+    },
+
+    "boundary": {
+      "$ref": "#/$defs/drift_boundary",
+      "description": "Optional Regime-specific boundary against which Drift is evaluated."
+    },
+
+    "source_state_references": {
+      "type": "array",
+      "description": "Identifiers of Truth States, Observations, Sources, Lineage objects, Regimes, or other structures participating in the Drift comparison.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "rationale": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Structured reasons explaining the Drift classification.",
+      "items": {
+        "$ref": "#/$defs/decision_reason"
+      }
+    },
+
+    "detected_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Timestamp at which this Drift State was detected or produced, when serialized independently from its parent Evaluation."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional domain-specific or implementation metadata. Metadata must not override canonical Drift fields.",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+
+  "$defs": {
+    "drift_endpoint": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "One endpoint of a Drift comparison.",
+      "properties": {
+        "reference_type": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "observation",
+            "source",
+            "anchor",
+            "regime",
+            "evaluation",
+            "truth_state",
+            "lineage",
+            "local_state",
+            "domain_value",
+            "other"
+          ],
+          "description": "Type of object or state represented by this endpoint."
+        },
+
+        "reference_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Identifier of the referenced object when one exists."
+        },
+
+        "value": {
+          "description": "Optional domain-native value associated with this Drift endpoint."
+        },
+
+        "observed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Optional time associated with this endpoint."
+        },
+
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "default": {}
+        }
+      },
+      "required": [
+        "reference_type"
+      ],
+      "additionalProperties": false
+    },
+
+    "drift_boundary": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Regime-specific boundary used to determine whether Drift remains bounded.",
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Optional numeric boundary. Null is permitted for qualitative boundaries."
+        },
+
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Unit associated with a numeric boundary."
+        },
+
+        "rule": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional Regime rule defining the Drift boundary."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "decision_reason": {
+      "type": "object",
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable machine-readable reason code."
+        },
+
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable explanation of the Drift result."
+        },
+
+        "evidence_references": {
+          "type": "array",
+          "description": "Identifiers of objects relevant to this Drift determination.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "regime_rule": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional governing Regime rule relevant to the Drift classification."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "magnitude"
+        ],
+        "properties": {
+          "magnitude": {
+            "type": "number"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "unit"
+        ],
+        "properties": {
+          "unit": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "boundary"
+        ],
+        "properties": {
+          "boundary": {
+            "type": "object",
+            "required": [
+              "value"
+            ],
+            "properties": {
+              "value": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "boundary": {
+            "required": [
+              "unit"
+            ],
+            "properties": {
+              "unit": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+
+  "examples": [
+    {
+      "drift_state_id": "drift-ntp-minor-drift-001",
+      "evaluation_id": "evaluation-ntp-minor-drift-001",
+      "dimensions": [
+        "temporal"
+      ],
+      "baseline": {
+        "reference_type": "local_state",
+        "reference_id": null,
+        "value": {
+          "timestamp": "2026-01-01T12:00:00.000Z"
+        },
+        "observed_at": "2026-01-01T12:00:00Z",
+        "metadata": {}
+      },
+      "observed": {
+        "reference_type": "domain_value",
+        "reference_id": null,
+        "value": {
+          "timestamp": "2026-01-01T12:00:00.056Z",
+          "representative_offset_ms": 56.0
+        },
+        "observed_at": "2026-01-01T12:00:00.056Z",
+        "metadata": {}
+      },
+      "magnitude": 56.0,
+      "unit": "milliseconds",
+      "direction": "increasing",
+      "bounded": true,
+      "boundary": {
+        "value": 100.0,
+        "unit": "milliseconds",
+        "rule": "precision_requirement"
+      },
+      "source_state_references": [
+        "obs-ntp-a-001",
+        "obs-ntp-b-001",
+        "obs-ntp-c-001"
+      ],
+      "rationale": [
+        {
+          "code": "BOUNDED_TEMPORAL_DRIFT",
+          "message": "The synthesized temporal state is displaced by 56 milliseconds from local state and remains inside the declared 100 millisecond Regime boundary.",
+          "evidence_references": [
+            "obs-ntp-a-001",
+            "obs-ntp-b-001",
+            "obs-ntp-c-001"
+          ],
+          "regime_rule": "precision_requirement"
+        }
+      ],
+      "detected_at": "2026-01-01T12:00:01Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+
+    {
+      "drift_state_id": "drift-lineage-example-001",
+      "evaluation_id": "evaluation-lineage-example-001",
+      "dimensions": [
+        "lineage",
+        "source"
+      ],
+      "baseline": {
+        "reference_type": "lineage",
+        "reference_id": "lineage-prior-001",
+        "value": {
+          "authority_source": "source-a"
+        },
+        "observed_at": null,
+        "metadata": {}
+      },
+      "observed": {
+        "reference_type": "lineage",
+        "reference_id": "lineage-current-001",
+        "value": {
+          "authority_source": "source-b"
+        },
+        "observed_at": null,
+        "metadata": {}
+      },
+      "magnitude": null,
+      "unit": null,
+      "direction": "changed",
+      "bounded": null,
+      "boundary": null,
+      "source_state_references": [
+        "lineage-prior-001",
+        "lineage-current-001"
+      ],
+      "rationale": [
+        {
+          "code": "LINEAGE_SOURCE_CHANGED",
+          "message": "The accepted domain value remains stable while the authority Source represented by the Lineage has changed.",
+          "evidence_references": [
+            "lineage-prior-001",
+            "lineage-current-001"
+          ],
+          "regime_rule": null
+        }
+      ],
+      "detected_at": null,
+      "metadata": {
+        "example_only": true
+      }
+    },
+
+    {
+      "drift_state_id": "drift-ntp-indeterminate-001",
+      "evaluation_id": "evaluation-ntp-indeterminate-001",
+      "dimensions": [
+        "temporal"
+      ],
+      "baseline": {
+        "reference_type": "local_state",
+        "reference_id": null,
+        "value": {
+          "timestamp": "2026-01-01T12:01:00.000Z"
+        },
+        "observed_at": "2026-01-01T12:01:00Z",
+        "metadata": {}
+      },
+      "observed": null,
+      "magnitude": null,
+      "unit": null,
+      "direction": "unknown",
+      "bounded": null,
+      "boundary": {
+        "value": 100.0,
+        "unit": "milliseconds",
+        "rule": "precision_requirement"
+      },
+      "source_state_references": [],
+      "rationale": [
+        {
+          "code": "DRIFT_INDETERMINATE",
+          "message": "No qualified temporal state exists from which a defensible current Drift magnitude or boundedness result can be derived.",
+          "evidence_references": [],
+          "regime_rule": "minimum_independent_sources"
+        }
+      ],
+      "detected_at": "2026-01-01T12:01:00Z",
+      "metadata": {
+        "synthetic": true
+      }
+    }
+  ]
+}
