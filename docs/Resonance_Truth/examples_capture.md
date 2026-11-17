@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_examples_capture_" src="https://github.com/user-attachments/assets/1a131914-ae90-4696-9a94-996e4fe97a4f" />
+
 # examples_capture
 
 > Shifting gears...Ref: TriadicFrameworks/docs/Resonance_Truth at main · umaywant2/TriadicFrameworks I'm thinking about this module again...  Specifically, like we'd think of using NTP for the time service... Prior to that, perhaps we identify the top 10 examples of modern systems that need/use truth.
