@@ -1,1 +1,854 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/Resonance_Truth/schemas/lineage.schema.json",
+  "title": "RTT Resonance Truth Lineage",
+  "description": "Schema for Lineage relationships used by the RTT Resonance Truth Service v0.1 model. Lineage preserves origin, dependency, delegation, derivation, transformation, transition, and related structural paths through which Claims, observations, Sources, and Truth States acquire operational context. Lineage is graph-capable and must not be interpreted as proof of correctness by itself.",
+  "type": "object",
+
+  "required": [
+    "lineage_id",
+    "nodes",
+    "edges",
+    "status"
+  ],
+
+  "properties": {
+    "lineage_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for this Lineage graph or bounded Lineage subgraph."
+    },
+
+    "subject_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of the primary object, Claim, Evidence item, artifact, Truth State, or other subject whose Lineage is represented."
+    },
+
+    "claim_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of the Claim for which this Lineage structure is relevant."
+    },
+
+    "regime_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Optional identifier of the Regime under which this Lineage is being interpreted."
+    },
+
+    "nodes": {
+      "type": "array",
+      "description": "Objects participating in the Lineage graph.",
+      "items": {
+        "$ref": "#/$defs/lineage_node"
+      }
+    },
+
+    "edges": {
+      "type": "array",
+      "description": "Directed relationships among Lineage nodes.",
+      "items": {
+        "$ref": "#/$defs/lineage_edge"
+      }
+    },
+
+    "root_node_ids": {
+      "type": "array",
+      "description": "Identifiers of nodes treated as origins or roots within this bounded Lineage graph. Multiple roots are permitted.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "terminal_node_ids": {
+      "type": "array",
+      "description": "Identifiers of nodes treated as terminal or downstream objects within this bounded Lineage graph. Multiple terminal nodes are permitted.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "partial",
+        "gapped",
+        "contested",
+        "cyclic",
+        "indeterminate"
+      ],
+      "description": "Structural status of the bounded Lineage representation. This status describes Lineage structure and is not a Truth-State qualification."
+    },
+
+    "independence": {
+      "type": "string",
+      "enum": [
+        "independent",
+        "partially_dependent",
+        "dependent",
+        "unknown",
+        "not_applicable"
+      ],
+      "description": "Optional summary classification of structural independence within the Lineage graph. Independence should be derived from relationships where possible rather than inferred from identifier count alone.",
+      "default": "unknown"
+    },
+
+    "distance": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Optional derived Lineage distance for domains where a meaningful scalar distance exists. Null is valid when graph structure cannot honestly be represented by one scalar."
+    },
+
+    "gaps": {
+      "type": "array",
+      "description": "Known gaps in the Lineage representation. A gap represents missing or unavailable structure and must not be interpreted automatically as qualified absence.",
+      "items": {
+        "$ref": "#/$defs/lineage_gap"
+      },
+      "default": []
+    },
+
+    "rationale": {
+      "type": "array",
+      "description": "Structured reasons explaining notable Lineage classifications, limitations, gaps, or independence findings.",
+      "items": {
+        "$ref": "#/$defs/decision_reason"
+      },
+      "default": []
+    },
+
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Timestamp at which this Lineage record was created, when serialized independently."
+    },
+
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Timestamp of the most recent Lineage-record update, when applicable."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional domain-specific or implementation metadata. Metadata must not override canonical Lineage fields.",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+
+  "$defs": {
+    "lineage_node": {
+      "type": "object",
+
+      "required": [
+        "node_id",
+        "entity_type"
+      ],
+
+      "properties": {
+        "node_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable identifier for this node inside the Lineage graph."
+        },
+
+        "entity_type": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "observation",
+            "source",
+            "anchor",
+            "regime",
+            "evaluation",
+            "truth_state",
+            "coherence_state",
+            "drift_state",
+            "paradox",
+            "correction_policy",
+            "artifact",
+            "transaction",
+            "transition",
+            "materialization",
+            "other"
+          ],
+          "description": "Canonical or domain-relevant type of entity represented by the node."
+        },
+
+        "entity_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Identifier of the external or canonical object represented by this node. Null is permitted when the graph contains an otherwise meaningful unresolved or synthetic node."
+        },
+
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional human-readable node label."
+        },
+
+        "status": {
+          "type": "string",
+          "enum": [
+            "known",
+            "derived",
+            "unknown",
+            "missing",
+            "contested"
+          ],
+          "default": "known",
+          "description": "Structural knowledge status of this Lineage node."
+        },
+
+        "observed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Optional time associated with observation or availability of this node."
+        },
+
+        "valid_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Optional beginning of the node's relevant validity interval."
+        },
+
+        "valid_until": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Optional end of the node's relevant validity interval."
+        },
+
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "default": {}
+        }
+      },
+
+      "additionalProperties": false
+    },
+
+    "lineage_edge": {
+      "type": "object",
+
+      "required": [
+        "edge_id",
+        "from_node_id",
+        "to_node_id",
+        "relation"
+      ],
+
+      "properties": {
+        "edge_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable identifier for this Lineage relationship."
+        },
+
+        "from_node_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Identifier of the upstream or relationship-source node."
+        },
+
+        "to_node_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Identifier of the downstream or relationship-target node."
+        },
+
+        "relation": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Directional Lineage relationship. Examples include derives_from, delegated_by, transformed_from, depends_on, observed_by, produced_by, precedes, committed_as, materialized_as, supersedes, compensates, reconstructs_from, drifted_from, reconciles_toward, or another domain-defined relation."
+        },
+
+        "transformation": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional transformation applied across this relationship."
+        },
+
+        "regime_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional Regime under which this relationship is meaningful."
+        },
+
+        "status": {
+          "type": "string",
+          "enum": [
+            "known",
+            "qualified",
+            "degraded",
+            "contested",
+            "unknown"
+          ],
+          "default": "known",
+          "description": "Structural status of the relationship. Edge qualification does not automatically follow from node qualification."
+        },
+
+        "valid_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Optional beginning of the relationship's validity interval."
+        },
+
+        "valid_until": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Optional end of the relationship's validity interval."
+        },
+
+        "constraints": {
+          "type": "array",
+          "description": "Optional constraints limiting the meaning, scope, authority, or use of this Lineage relationship.",
+          "items": {
+            "$ref": "#/$defs/lineage_constraint"
+          },
+          "default": []
+        },
+
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "default": {}
+        }
+      },
+
+      "additionalProperties": false
+    },
+
+    "lineage_constraint": {
+      "type": "object",
+
+      "required": [
+        "constraint_type",
+        "description"
+      ],
+
+      "properties": {
+        "constraint_type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Domain-specific classification of the relationship constraint."
+        },
+
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable description of the constraint."
+        },
+
+        "value": {
+          "description": "Optional domain-native value associated with this relationship constraint."
+        }
+      },
+
+      "additionalProperties": false
+    },
+
+    "lineage_gap": {
+      "type": "object",
+
+      "required": [
+        "gap_id",
+        "gap_type",
+        "description"
+      ],
+
+      "properties": {
+        "gap_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable identifier for the known Lineage gap."
+        },
+
+        "gap_type": {
+          "type": "string",
+          "enum": [
+            "origin",
+            "dependency",
+            "transformation",
+            "authority",
+            "relationship",
+            "temporal",
+            "coverage",
+            "unknown"
+          ],
+          "description": "Classification of the missing or unavailable Lineage structure."
+        },
+
+        "from_node_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional known node preceding the gap."
+        },
+
+        "to_node_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional known node following the gap."
+        },
+
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable description of what Lineage information is missing."
+        },
+
+        "impact": {
+          "type": "string",
+          "enum": [
+            "none",
+            "limited",
+            "material",
+            "blocking",
+            "unknown"
+          ],
+          "default": "unknown",
+          "description": "Known impact of this Lineage gap on qualification."
+        },
+
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "default": {}
+        }
+      },
+
+      "additionalProperties": false
+    },
+
+    "decision_reason": {
+      "type": "object",
+
+      "required": [
+        "code",
+        "message"
+      ],
+
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable machine-readable reason code."
+        },
+
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable explanation of the Lineage decision or limitation."
+        },
+
+        "evidence_references": {
+          "type": "array",
+          "description": "Identifiers of Lineage nodes, edges, Sources, Evidence, Claims, Truth States, or related structures supporting this reason.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "regime_rule": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "Optional governing Regime rule relevant to the Lineage assessment."
+        }
+      },
+
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "gapped"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "gaps": {
+            "minItems": 1
+          }
+        },
+        "required": [
+          "gaps"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "complete"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "gaps": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+
+  "examples": [
+    {
+      "lineage_id": "lineage-ntp-source-a-001",
+      "subject_id": "obs-ntp-a-001",
+      "claim_id": "claim-temporal-coherent-001",
+      "regime_id": "regime-display-clock",
+      "nodes": [
+        {
+          "node_id": "node-anchor-utc",
+          "entity_type": "anchor",
+          "entity_id": "anchor-utc",
+          "label": "UTC Reference",
+          "status": "known",
+          "observed_at": null,
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_until": null,
+          "metadata": {}
+        },
+        {
+          "node_id": "node-source-ntp-a",
+          "entity_type": "source",
+          "entity_id": "source-ntp-a",
+          "label": "NTP Source A",
+          "status": "known",
+          "observed_at": "2026-01-01T12:00:00.012Z",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_until": null,
+          "metadata": {}
+        },
+        {
+          "node_id": "node-observation-ntp-a-001",
+          "entity_type": "observation",
+          "entity_id": "obs-ntp-a-001",
+          "label": "Temporal Observation A",
+          "status": "known",
+          "observed_at": "2026-01-01T12:00:00.012Z",
+          "valid_from": null,
+          "valid_until": "2026-01-01T12:05:00Z",
+          "metadata": {}
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "edge-anchor-to-source-a",
+          "from_node_id": "node-anchor-utc",
+          "to_node_id": "node-source-ntp-a",
+          "relation": "referenced_by",
+          "transformation": null,
+          "regime_id": "regime-display-clock",
+          "status": "qualified",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_until": null,
+          "constraints": [],
+          "metadata": {}
+        },
+        {
+          "edge_id": "edge-source-a-to-observation",
+          "from_node_id": "node-source-ntp-a",
+          "to_node_id": "node-observation-ntp-a-001",
+          "relation": "produced",
+          "transformation": null,
+          "regime_id": "regime-display-clock",
+          "status": "qualified",
+          "valid_from": null,
+          "valid_until": null,
+          "constraints": [],
+          "metadata": {}
+        }
+      ],
+      "root_node_ids": [
+        "node-anchor-utc"
+      ],
+      "terminal_node_ids": [
+        "node-observation-ntp-a-001"
+      ],
+      "status": "complete",
+      "independence": "not_applicable",
+      "distance": 1,
+      "gaps": [],
+      "rationale": [
+        {
+          "code": "REFERENCE_LINEAGE_COMPLETE",
+          "message": "The temporal Observation can be traced through its Source to the fixture UTC reference without a known Lineage gap.",
+          "evidence_references": [
+            "node-anchor-utc",
+            "node-source-ntp-a",
+            "node-observation-ntp-a-001"
+          ],
+          "regime_rule": null
+        }
+      ],
+      "created_at": "2026-01-01T12:00:00Z",
+      "updated_at": "2026-01-01T12:00:00Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+
+    {
+      "lineage_id": "lineage-ntp-indeterminate-c-001",
+      "subject_id": "obs-ntp-c-001",
+      "claim_id": "claim-temporal-indeterminate-001",
+      "regime_id": "regime-display-clock",
+      "nodes": [
+        {
+          "node_id": "node-source-ntp-c",
+          "entity_type": "source",
+          "entity_id": "source-ntp-c",
+          "label": "NTP Source C",
+          "status": "known",
+          "observed_at": "2026-01-01T12:00:00.014Z",
+          "valid_from": null,
+          "valid_until": null,
+          "metadata": {}
+        },
+        {
+          "node_id": "node-observation-ntp-c-001",
+          "entity_type": "observation",
+          "entity_id": "obs-ntp-c-001",
+          "label": "Temporal Observation C",
+          "status": "known",
+          "observed_at": "2026-01-01T12:00:00.014Z",
+          "valid_from": null,
+          "valid_until": "2026-01-01T12:05:00Z",
+          "metadata": {}
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "edge-source-c-to-observation",
+          "from_node_id": "node-source-ntp-c",
+          "to_node_id": "node-observation-ntp-c-001",
+          "relation": "produced",
+          "transformation": null,
+          "regime_id": "regime-display-clock",
+          "status": "known",
+          "valid_from": null,
+          "valid_until": null,
+          "constraints": [],
+          "metadata": {}
+        }
+      ],
+      "root_node_ids": [
+        "node-source-ntp-c"
+      ],
+      "terminal_node_ids": [
+        "node-observation-ntp-c-001"
+      ],
+      "status": "gapped",
+      "independence": "unknown",
+      "distance": null,
+      "gaps": [
+        {
+          "gap_id": "gap-source-c-reference",
+          "gap_type": "origin",
+          "from_node_id": null,
+          "to_node_id": "node-source-ntp-c",
+          "description": "No qualified temporal reference relationship is available upstream of Source C.",
+          "impact": "blocking",
+          "metadata": {}
+        }
+      ],
+      "rationale": [
+        {
+          "code": "REFERENCE_LINEAGE_INCOMPLETE",
+          "message": "The Observation can be traced to Source C but Source C cannot be traced to a qualified temporal reference under the declared Regime.",
+          "evidence_references": [
+            "node-source-ntp-c",
+            "node-observation-ntp-c-001",
+            "gap-source-c-reference"
+          ],
+          "regime_rule": null
+        }
+      ],
+      "created_at": "2026-01-01T12:00:00Z",
+      "updated_at": "2026-01-01T12:00:00Z",
+      "metadata": {
+        "synthetic": true
+      }
+    },
+
+    {
+      "lineage_id": "lineage-derived-evidence-example-001",
+      "subject_id": "derived-evidence-c",
+      "claim_id": null,
+      "regime_id": null,
+      "nodes": [
+        {
+          "node_id": "node-evidence-a",
+          "entity_type": "other",
+          "entity_id": "evidence-a",
+          "label": "Upstream Evidence A",
+          "status": "known",
+          "observed_at": null,
+          "valid_from": null,
+          "valid_until": null,
+          "metadata": {}
+        },
+        {
+          "node_id": "node-evidence-b",
+          "entity_type": "other",
+          "entity_id": "evidence-b",
+          "label": "Upstream Evidence B",
+          "status": "known",
+          "observed_at": null,
+          "valid_from": null,
+          "valid_until": null,
+          "metadata": {}
+        },
+        {
+          "node_id": "node-derived-c",
+          "entity_type": "other",
+          "entity_id": "derived-evidence-c",
+          "label": "Derived Evidence C",
+          "status": "derived",
+          "observed_at": null,
+          "valid_from": null,
+          "valid_until": null,
+          "metadata": {}
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "edge-a-to-c",
+          "from_node_id": "node-evidence-a",
+          "to_node_id": "node-derived-c",
+          "relation": "aggregated_into",
+          "transformation": "example aggregation",
+          "regime_id": null,
+          "status": "known",
+          "valid_from": null,
+          "valid_until": null,
+          "constraints": [],
+          "metadata": {}
+        },
+        {
+          "edge_id": "edge-b-to-c",
+          "from_node_id": "node-evidence-b",
+          "to_node_id": "node-derived-c",
+          "relation": "aggregated_into",
+          "transformation": "example aggregation",
+          "regime_id": null,
+          "status": "known",
+          "valid_from": null,
+          "valid_until": null,
+          "constraints": [],
+          "metadata": {}
+        }
+      ],
+      "root_node_ids": [
+        "node-evidence-a",
+        "node-evidence-b"
+      ],
+      "terminal_node_ids": [
+        "node-derived-c"
+      ],
+      "status": "complete",
+      "independence": "partially_dependent",
+      "distance": null,
+      "gaps": [],
+      "rationale": [
+        {
+          "code": "DERIVED_EVIDENCE_DEPENDENCY",
+          "message": "Derived Evidence C depends on upstream Evidence A and B and must not be counted as independent corroboration of those same inputs.",
+          "evidence_references": [
+            "node-evidence-a",
+            "node-evidence-b",
+            "node-derived-c"
+          ],
+          "regime_rule": null
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "metadata": {
+        "example_only": true
+      }
+    }
+  ]
+}
