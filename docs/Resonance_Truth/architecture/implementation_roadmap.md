@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_architecture_implementation_roadmap_" src="https://github.com/user-attachments/assets/0a6cc759-a1ac-410d-9de2-d1a7b40170b5" />
+
 # RTT Resonance Truth Service — Implementation Roadmap
 
 **Module:** Resonance Truth  
