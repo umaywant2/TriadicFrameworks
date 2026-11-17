@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_crosswalks_01_ntp_temporal_truth_" src="https://github.com/user-attachments/assets/648933da-ab12-452f-9381-8ac0d75816b6" />
+
 # Crosswalk #1 — NTP and Temporal Truth
 
 **Module:** Resonance Truth  
