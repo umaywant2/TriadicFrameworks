@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Resonance_Truth_architecture_truth_service_components_" src="https://github.com/user-attachments/assets/2b614d15-8803-42c7-ac22-926576c18d25" />
+
 # RTT Resonance Truth Service — Components
 
 **Module:** Resonance Truth  
