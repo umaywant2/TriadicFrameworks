@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resonance_Truth_Truth_Paradox_Analysis_" src="https://github.com/user-attachments/assets/49683f4f-4fd4-413e-90b3-e83396eb43b1" />
 
 # 🜁 Truth Paradox Analysis  
 **RTT/1 · Resonance Domain · Structural, Semantic, and Regime Paradoxes**
