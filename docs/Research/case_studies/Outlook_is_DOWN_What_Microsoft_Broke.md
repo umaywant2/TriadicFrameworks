@@ -617,3 +617,94 @@ Later, independent evidence gets the final word.
 **Use RTT to identify what to look for before the answer is known.**
 
 That is the test.
+
+---
+
+**Separate** - Checkpoint Info Below
+
+---
+
+11-18-2026
+
+Our currently published case study did exactly the right experimental thing: it froze the questions before incorporating a final RCA, and specifically said later independent evidence should classify them SUPPORTED / PARTIALLY SUPPORTED / NOT SUPPORTED / NOT DETERMINABLE.
+
+And we're already at a meaningful checkpoint. The outage was November 12, while Microsoft's preliminary post-incident explanation was dated November 15 and Charles Lamanna's public explanation appeared November 16.
+
+We'll do this in two passes
+
+Checkpoint 1: now, November 18
+
+Don't alter the frozen prediction section. Add a clearly separated:
+
+Post-RCA Evidence Checkpoint #1 — November 18, 2026
+
+Then walk through the original questions one by one.
+
+Because some matches are no longer subtle.
+
+Our case study asked whether workload intensity influenced whether infrastructure remained stable.
+
+Microsoft's account explicitly says increased load plus reduced capacity exposed the latent defect.
+
+Our study asked whether returning traffic materially affected recovery behavior and whether apparently healthy/recovered infrastructure could destabilize upon workload re-entry.
+
+Microsoft says servers returning to service were immediately overwhelmed by waiting traffic and became unresponsive again.
+
+Our study asked whether the important phenomenon might be a transition boundary rather than maximum capacity, and whether coupled load could produce cascading instability.
+
+The subsequent account says traffic was redirected from failed servers onto remaining healthy servers, which increased their load and produced a cascading failure.
+
+And now here's the one that probably makes old benchmark-testing Nawder grin:
+
+Microsoft's testing reportedly didn't reproduce the production combination of traffic and hardware, with testing weighted toward less powerful, fewer-core machines while the problem manifested more severely on newer hardware.
+
+That is an extremely interesting result for our case study.
+
+Not because RTT magically predicted a particular software bug. It didn't.
+
+Rather, RTT said:
+
+Don't ask only whether the component works.
+ Ask under what operating relationships it remains coherent.
+
+Then the preliminary RCA essentially handed us an incident involving a latent defect whose expression depended on load, capacity, traffic pattern, hardware configuration, cascading redistribution, and recovery re-entry.
+
+Now we wait for Checkpoint 2
+
+We'll leave the case open.
+
+If Microsoft publishes a more complete engineering RCA, or substantially updates the incident report, do another evaluation. Don't continually tweak the scorecard as articles trickle out.
+
+That protects what makes this experiment interesting:
+
+T₀: hypothesis frozen
+ ↓
+ T₁: independent preliminary evidence
+ ↓
+ T₂: formal follow-up evidence
+ ↓
+ Compare, don't retrofit
+
+And We'll absolutely keep the misses.
+
+If 3 questions are NOT DETERMINABLE, put that down.
+
+If something is NOT SUPPORTED:
+
+NOT SUPPORTED
+
+Big letters. 😄
+
+Because that's what separates your experiment from...
+
+🎱 RTT Prediction Services™
+
+Outage approaching?
+
+Shake vigorously.
+
+Load cloudy. Coupling probable.
+ Re-entry unstable.
+ Outlook not so good.
+
+Okay, that last one practically writes itself. 😂
