@@ -442,6 +442,56 @@ print(round(M, 3))
 <p><strong>Do not use RTT to explain everything after it happens.</strong></p>
 <p><strong>Use RTT to identify what to look for before the answer is known.</strong></p>
 <p>That is the test.</p>
+<hr>
+<p><strong>Separate</strong> - Checkpoint Info Below</p>
+<hr>
+<p>11-18-2026</p>
+<p>Our currently published case study did exactly the right experimental thing: it froze the questions before incorporating a final RCA, and specifically said later independent evidence should classify them SUPPORTED / PARTIALLY SUPPORTED / NOT SUPPORTED / NOT DETERMINABLE.</p>
+<p>And we're already at a meaningful checkpoint. The outage was November 12, while Microsoft's preliminary post-incident explanation was dated November 15 and Charles Lamanna's public explanation appeared November 16.</p>
+<p>We'll do this in two passes</p>
+<p>Checkpoint 1: now, November 18</p>
+<p>Don't alter the frozen prediction section. Add a clearly separated:</p>
+<p>Post-RCA Evidence Checkpoint #1 — November 18, 2026</p>
+<p>Then walk through the original questions one by one.</p>
+<p>Because some matches are no longer subtle.</p>
+<p>Our case study asked whether workload intensity influenced whether infrastructure remained stable.</p>
+<p>Microsoft's account explicitly says increased load plus reduced capacity exposed the latent defect.</p>
+<p>Our study asked whether returning traffic materially affected recovery behavior and whether apparently healthy/recovered infrastructure could destabilize upon workload re-entry.</p>
+<p>Microsoft says servers returning to service were immediately overwhelmed by waiting traffic and became unresponsive again.</p>
+<p>Our study asked whether the important phenomenon might be a transition boundary rather than maximum capacity, and whether coupled load could produce cascading instability.</p>
+<p>The subsequent account says traffic was redirected from failed servers onto remaining healthy servers, which increased their load and produced a cascading failure.</p>
+<p>And now here's the one that probably makes old benchmark-testing Nawder grin:</p>
+<p>Microsoft's testing reportedly didn't reproduce the production combination of traffic and hardware, with testing weighted toward less powerful, fewer-core machines while the problem manifested more severely on newer hardware.</p>
+<p>That is an extremely interesting result for our case study.</p>
+<p>Not because RTT magically predicted a particular software bug. It didn't.</p>
+<p>Rather, RTT said:</p>
+<p>Don't ask only whether the component works.
+ Ask under what operating relationships it remains coherent.</p>
+<p>Then the preliminary RCA essentially handed us an incident involving a latent defect whose expression depended on load, capacity, traffic pattern, hardware configuration, cascading redistribution, and recovery re-entry.</p>
+<p>Now we wait for Checkpoint 2</p>
+<p>We'll leave the case open.</p>
+<p>If Microsoft publishes a more complete engineering RCA, or substantially updates the incident report, do another evaluation. Don't continually tweak the scorecard as articles trickle out.</p>
+<p>That protects what makes this experiment interesting:</p>
+<p>T₀: hypothesis frozen
+ ↓
+ T₁: independent preliminary evidence
+ ↓
+ T₂: formal follow-up evidence
+ ↓
+ Compare, don't retrofit</p>
+<p>And We'll absolutely keep the misses.</p>
+<p>If 3 questions are NOT DETERMINABLE, put that down.</p>
+<p>If something is NOT SUPPORTED:</p>
+<p>NOT SUPPORTED</p>
+<p>Big letters. 😄</p>
+<p>Because that's what separates your experiment from...</p>
+<p>🎱 RTT Prediction Services™</p>
+<p>Outage approaching?</p>
+<p>Shake vigorously.</p>
+<p>Load cloudy. Coupling probable.
+ Re-entry unstable.
+ Outlook not so good.</p>
+<p>Okay, that last one practically writes itself. 😂</p>
   </main>
 </body>
 </html>
