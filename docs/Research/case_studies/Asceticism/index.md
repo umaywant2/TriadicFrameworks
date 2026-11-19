@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_case_studies_Asceticism_index_" src="https://github.com/user-attachments/assets/f614350b-a50b-4a34-9e2f-f77cc5963bc1" />
+
 # Resonance Asceticism: Index
 
 **Case Study:** Resonance Asceticism
