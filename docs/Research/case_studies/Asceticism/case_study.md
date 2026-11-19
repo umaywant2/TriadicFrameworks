@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_case_studies_Asceticism_case_study_" src="https://github.com/user-attachments/assets/aa022a31-d356-4f5c-8e0a-697072e8c3af" />
+
 # Case Study: Resonance Asceticism
 
 **Domain:** Resonance-Time Theory (RTT) / Human Systems / Behavioral Coherence
