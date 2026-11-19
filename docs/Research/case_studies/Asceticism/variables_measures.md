@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_case_studies_Asceticism_variables_measures_" src="https://github.com/user-attachments/assets/79609d71-c611-4b1f-b9a3-b3d793ed7ad8" />
+
 # Resonance Asceticism: Variables and Measures
 
 **Case Study:** Resonance Asceticism
