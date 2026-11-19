@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_case_studies_Asceticism_ra_capture_" src="https://github.com/user-attachments/assets/902f4bf6-1ce1-418d-abab-fdafdccfbb3e" />
+
 # Resonance Asceticism capture
 
 > Good morning Copilot. Asceticism....Session Context Settings:
