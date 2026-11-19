@@ -1,0 +1,48 @@
+{
+  "$schema": "https://docs.triadicframeworks.org/schemas/module_graph.schema.json",
+  "$generated": "2026-11-19T19:44:00Z",
+  "$version": "6.2",
+  "$round": "R5.2",
+  "$classification": "A3-Functional-Canon",
+  "_merge_note": "Approved by owner. Adds one spine-examples viewing node, bringing the declared A3 total to 198. This node exposes the semantic module register: limbs and examples stay viewable with the Spine but do not become canon or Spine nodes. Append the hierarchy edge, tree child and node addition. File totals must be updated by the repository owner after installation.",
+  "meta": {
+    "title": "TriadicFrameworks - Functional Canon Spine (Round 5.2 - Examples Region)",
+    "root_module": "webroot",
+    "total_a3_modules": 198,
+    "total_hierarchy_edges": 197,
+    "total_directed_edges": 72,
+    "r52_new_a3_modules": 1,
+    "r52_new_hierarchy_edges": 1,
+    "r52_new_directed_edges": 0
+  },
+  "new_hierarchy_edges": [
+    {
+      "parent": "webroot",
+      "child": "spine-examples",
+      "relationship": "contains"
+    }
+  ],
+  "new_directed_edges": [],
+  "depth_map_additions": {
+    "1": [
+      "spine-examples"
+    ]
+  },
+  "new_tree_children": {
+    "webroot": [
+      "spine-examples"
+    ]
+  },
+  "nodes_additions": {
+    "spine-examples": {
+      "canon_tag": "spine-examples",
+      "name": "Examples Region",
+      "path": "docs/spine/module_register.json",
+      "version": "2.0",
+      "layer": "Spine - Examples",
+      "status": "Active \u2014 Navigation Only",
+      "purpose": "Viewing region for all non-Spine material. The module register separates organs (canon), limbs (non-canon structural descendants), examples and unreadable records. The examples region grants discovery, never canon authority.",
+      "parent": "webroot"
+    }
+  }
+}
