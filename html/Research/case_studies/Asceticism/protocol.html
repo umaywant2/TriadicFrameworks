@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/case_studies/Asceticism/protocol.md">
+  <title>Resonance Asceticism: Measurement and Data-Collection Protocol</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/case_studies/Asceticism/protocol.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/case_studies/Asceticism/protocol.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Research_case_studies_Asceticism_protocol_" src="https://github.com/user-attachments/assets/efda21b0-ce67-4fea-8170-47400a891f92" /></p>
+<h1 id="resonance-asceticism-measurement-and-data-collection-protocol">Resonance Asceticism: Measurement and Data-Collection Protocol</h1>
+<p><strong>Case Study:</strong> Resonance Asceticism
+<strong>Domain:</strong> RTT / Human Systems / Behavioral Coherence
+<strong>Status:</strong> Exploratory protocol framework (E0; see §12)
+<strong>Context:</strong> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+<strong>Primary source:</strong> <code>ra_capture.md</code>. This file organizes the capture's protocol material. It adds no RTT canon.</p>
+<p><strong>Important scope note.</strong> This is a protocol <em>framework</em>. It shows how decisions, thresholds, and records could be structured. Every numerical value in it is <strong>illustrative protocol scaffolding</strong>, as the capture states, and not a validated Resonance Asceticism or RTT threshold. Safety criteria, stopping rules, and participant protections must be specified separately for the actual population, intervention, and research setting, and any study with human participants requires appropriate ethics review.</p>
+<p><strong>Provenance labels</strong></p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>[RTT]</strong></td>
+<td>Existing RTT concept or notation</td>
+</tr>
+<tr>
+<td><strong>[RTT-D]</strong></td>
+<td>RTT-derived application to this case</td>
+</tr>
+<tr>
+<td><strong>[RA]</strong></td>
+<td>Resonance Asceticism–specific proposition or operator</td>
+</tr>
+<tr>
+<td><strong>[EMP]</strong></td>
+<td>Empirical hypothesis or operational choice, to be declared prospectively</td>
+</tr>
+<tr>
+<td><strong>[EXT]</strong></td>
+<td>External scholarly or instrument context</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="1-objective-and-position">1. Objective and Position</h2>
+<p>The protocol characterizes changes in system behavior across a Resonance-Time trajectory rather than relying exclusively on cross-sectional or pre/post observation. Raw time-indexed observations are retained through all phases, and trajectory characteristics are derived afterward from the ordered series.</p>
+<p><strong>Trajectory-first.</strong> Static observations are temporal slices; the trajectory is the primary phenomenon under investigation. The primary unit of interpretation is the ordered trajectory $X(t_0)\rightarrow X(t_1)\rightarrow\cdots\rightarrow X(t_n)$, not any isolated observation within it.</p>
+<p><strong>Protocol principle:</strong> collect the trajectory; derive the snapshots.</p>
+<p><strong>Measurement architecture versus validation.</strong> Timestamps, event occurrence, experimental conditions, and task responses can be recorded directly once specified. Constructs including Silence, Resonance, Resonance Quality, substrate integrity, and coherent capacity require explicit operationalization and appropriate validation before they are interpreted as established quantitative measures.</p>
+<hr>
+<h2 id="2-phases">2. Phases</h2>
+<p>$$
+B\rightarrow A\rightarrow D\rightarrow R
+$$</p>
+<p>$B$ baseline, $A$ attenuation, $D$ adaptation, $R$ restoration (written $R_s$ in other files in this folder to avoid confusion with Resonance $R$).</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Baseline</strong></td>
+<td>Establish the initial distribution and temporal variability of selected measures</td>
+</tr>
+<tr>
+<td><strong>Attenuation</strong></td>
+<td>Record onset, magnitude, and duration of the intervention with immediate responses</td>
+</tr>
+<tr>
+<td><strong>Adaptation</strong></td>
+<td>Continue repeated measurement to see whether responses persist, decay, recur, stabilize, or reorganize</td>
+</tr>
+<tr>
+<td><strong>Restoration</strong></td>
+<td>Reduce or remove attenuation ($\lambda(t)\rightarrow 0$) and observe reversibility, persistence, delayed recovery, or a new operating regime</td>
+</tr>
+</tbody>
+</table>
+<p>Phase boundaries are analytical markers within a continuous trajectory and do not imply the system changes instantaneously at a phase label:</p>
+<p>$$
+\text{Continuous trajectory}\supset\text{protocol phases}\supset\text{individual observations}
+$$</p>
+<hr>
+<h2 id="3-data-sources">3. Data Sources</h2>
+<p>The protocol prioritizes <strong>time-indexed behavioral and event data</strong>. Self-report and psychometric instruments supplement specific constructs where they correspond to explicitly defined constructs. No instrument is described as directly measuring RTT constructs unless construct validity for that interpretation is independently established.</p>
+<table>
+<thead>
+<tr>
+<th>Source class</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Device and event data</td>
+<td>Notifications, exposure events, attenuation changes, timestamps, interaction events</td>
+</tr>
+<tr>
+<td>Behavioral performance data</td>
+<td>Task responses, response times, errors, omissions, task switching, continuity</td>
+</tr>
+<tr>
+<td>Participant-reported data</td>
+<td>Perceived distraction, functional state, other predefined subjective measures</td>
+</tr>
+<tr>
+<td>Optional physiological data</td>
+<td>Electrophysiological or other measures, only where the question requires them</td>
+</tr>
+</tbody>
+</table>
+<p>Details and the variable-by-variable map are in <code>variables_measures.md</code> §5. Raw event timestamps are preserved before any temporal aggregation.</p>
+<p><strong>Source-to-construct mapping</strong> (directional, not reversed):</p>
+<p>$$
+\text{Raw data}\rightarrow\text{Operational measure}\rightarrow\text{Trajectory variable}\rightarrow\text{RTT interpretation}
+$$</p>
+<p>Example: notification timestamp → interruption event → $N(t)$ → Noise interpretation. RTT classifications derive from declared observations and do not determine in advance what the observations must show.</p>
+<hr>
+<h2 id="4-measurement-schedule-and-sampling">4. Measurement Schedule and Sampling</h2>
+<p><strong>Sampling rule.</strong> $\Delta t_{\text{sample}}&lt;\tau_{\text{target}}$, where $\tau_{\text{target}}$ is the shortest temporal feature of substantive interest. This is a protocol principle, not a universal frequency.</p>
+<p><strong>Multi-rate design.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Collected</th>
+<th>Variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event-level</td>
+<td>Continuously or per event</td>
+<td>Excitation events, interruptions, notifications, task responses</td>
+</tr>
+<tr>
+<td>Repeated state</td>
+<td>Predefined intervals through the trajectory</td>
+<td>$N(t)$, $R(t)$, operational proxies for $S(t)$, performance state, selected substrate indicators</td>
+</tr>
+<tr>
+<td>Phase-level</td>
+<td>Planned transition points or lower frequency</td>
+<td>$\Sigma(t)$, subjective distraction, broader functional measures, intervention acceptability</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td>Calculated after collection</td>
+<td>$f_R,\ \tau_R,\ Q_R,\ t_E,\ t_D,\ T_R,\ \alpha,\ t_S,\ D_{\text{restore}},\ V_R$</td>
+</tr>
+</tbody>
+</table>
+<p>Lower-frequency assessment of substrate measures reduces the risk that measurement burden itself becomes a significant perturbation. Original sampling intervals are preserved before resampling or aggregation. Derived variables do not replace their underlying observations.</p>
+<p><strong>Generic timeline:</strong> $B_0\rightarrow B_1\ldots B_n\rightarrow A_0\rightarrow A_1\ldots A_n\rightarrow D_1\ldots D_n\rightarrow R_0\rightarrow R_1\ldots R_n$. Observation counts and spacing are set prospectively by the phenomenon, not fixed by the framework.</p>
+<p><strong>Minimum observation record:</strong></p>
+<p>$$
+O_i={t_i,\ p_i,\ e_i,\ \lambda_i,\ N_i,\ R_i,\ \Sigma_i,\ C_{E,i}}
+$$</p>
+<p>with $p_i$ the trajectory phase. Streams sampled at different frequencies are synchronized without forcing identical cadence.</p>
+<p><strong>Schedule deviations</strong> are retained: missed or delayed observations, unscheduled intervention changes, equipment or logging failures, premature phase transitions, participant-requested interruptions. Missing observations remain distinguishable from zero excitation, zero Noise, or absence of a qualifying event.</p>
+<hr>
+<h2 id="5-predefinition-requirements">5. Predefinition Requirements</h2>
+<p>Before data collection, for every included variable the protocol specifies: (1) operational definition; (2) instrument or data source; (3) unit of analysis; (4) sampling frequency; (5) event or threshold criterion; (6) calculation procedure; (7) admissible range; (8) missing-data treatment; (9) relevant trajectory phase; (10) stopping or safety boundary where applicable; (11) classification as manipulated, observed, inferred, or derived. Thresholds for emergence, persistence, decay, stabilization, and substrate admissibility are specified prospectively.</p>
+<p><strong>Instrument selection criteria:</strong> construct relevance; reliability and validity for the population; temporal resolution; sensitivity to change; participant burden; compatibility with repeated measurement and with the phases; reactivity to repeated administration; and correspondence between the instrument's validated construct and the framework variable. Where no validated instrument corresponds to an RTT-derived construct, the construct stays explicitly exploratory.</p>
+<hr>
+<h2 id="6-substrate-and-safety-boundary">6. Substrate and Safety Boundary</h2>
+<p>Substrate integrity is evaluated throughout the trajectory:</p>
+<p>$$
+\Sigma(t_i)\ge\Sigma_{\min}\quad\text{for all applicable observation periods}
+$$</p>
+<p>An intervention is not classified as successful solely because Noise decreases or a Resonance measure increases if a prospectively defined substrate boundary is violated. A substrate or safety violation overrides the normal phase sequence:</p>
+<p>$$
+\Sigma(t)&lt;\Sigma_{\min}\ \Rightarrow\ \text{safety / stopping procedure}
+$$</p>
+<p>A <strong>protective termination or restoration</strong> is kept distinct from a <strong>methodological transition</strong> and is not analyzed as equivalent to a protocol-completed transition. Study-specific safety criteria, stopping rules, and participant protections are specified independently for the population, intervention, and setting.</p>
+<hr>
+<h2 id="7-phase-transition-criteria">7. Phase-Transition Criteria</h2>
+<h3 id="71-general-rule">7.1 General rule</h3>
+<p>A transition $P_i\rightarrow P_{i+1}$ occurs only when predefined criteria are satisfied:</p>
+<p>$$
+T_{i\rightarrow i+1}=C_{\text{data}}\land C_{\text{intervention}}\land C_{\Sigma}
+$$</p>
+<p>where $C_{\text{data}}$ = required observations obtained, $C_{\text{intervention}}$ = phase-specific intervention condition established or completed, and $C_\Sigma$ = substrate and safety criteria remain satisfied. A failure of the safety or substrate requirement supersedes ordinary transition criteria.</p>
+<h3 id="72-phase-specific-criteria">7.2 Phase-specific criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Transition</th>
+<th>Required conditions (summary)</th>
+<th>Formal form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B → A</strong></td>
+<td>Minimum baseline window complete; required baseline variables collected; excitation exposure $e(t)$ verified; reference ranges for primary outcomes established; baseline substrate assessed; no safety or exclusion condition</td>
+<td>$B_{\text{complete}}\land X_B\text{ observed}\land\Sigma_B\ge\Sigma_{\min}$</td>
+</tr>
+<tr>
+<td><strong>A → D</strong></td>
+<td>Attenuation onset confirmed; level $\lambda(t)$ verified; immediate response recorded; no delivery failure; substrate maintained; predefined acute window complete</td>
+<td>$\lambda(t)\text{ verified}\land X_A\text{ observed}\land\Sigma_A\ge\Sigma_{\min}$</td>
+</tr>
+<tr>
+<td><strong>D → R</strong></td>
+<td>Predefined adaptation interval complete, or stabilization criterion met, or enough observations to estimate persistence/recurrence/adaptation, or a prospectively defined regime transition, or no further informative change, or a safety stop</td>
+<td>$C_D\land\Sigma_D\ge\Sigma_{\min}$</td>
+</tr>
+<tr>
+<td><strong>R → Endpoint</strong></td>
+<td>Variables return to declared baseline range; or restoration interval complete; or trajectory stabilizes in a non-baseline state; or enough observations for $D_{\text{restore}}$ and reversibility; or question no longer addressed; or stopping criterion</td>
+<td>$C_R\lor C_{\text{stop}}$</td>
+</tr>
+</tbody>
+</table>
+<p>Baseline stability need not mean a constant state; natural variability is retained as part of the reference trajectory. The endpoint may represent either restoration or persistent change.</p>
+<h3 id="73-stability-criterion">7.3 Stability criterion</h3>
+<p>Where stability determines a transition it is defined before data collection:</p>
+<p>$$
+|Y(t)-\bar Y_{\text{stable}}|\le\epsilon_Y\quad\forall\,t\in[t_a,t_b]
+$$</p>
+<p>with $Y$ the selected outcome, $\bar Y_{\text{stable}}$ the estimated stable level, $\epsilon_Y$ the declared tolerance, and $[t_a,t_b]$ the required interval. Stability is not inferred from a single observation.</p>
+<h3 id="74-decision-logic">7.4 Decision logic</h3>
+<p><strong>Observe → Test transition criteria → Check substrate → Transition or continue.</strong> If $C_i$ is true, transition; if false, continue; if $\Sigma&lt;\Sigma_{\min}$, take safety action. Exact thresholds, minimum observation periods, tolerance bands, and stopping rules must be specified in the final protocol before data collection.</p>
+<h3 id="75-transitions-as-data">7.5 Transitions as data</h3>
+<p>$$
+T_j={t_j,\ P_{\text{from}},\ P_{\text{to}},\ C_j}
+$$</p>
+<p>The dataset preserves what changed, when, and why. Each transition is classified:</p>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scheduled</td>
+<td>Predefined duration or observation requirement completed</td>
+</tr>
+<tr>
+<td>Criterion-Based</td>
+<td>A predefined empirical threshold or stability condition satisfied</td>
+</tr>
+<tr>
+<td>Safety-Triggered</td>
+<td>A substrate, safety, or stopping boundary reached</td>
+</tr>
+<tr>
+<td>Participant-Initiated</td>
+<td>The participant requested cessation or modification</td>
+</tr>
+<tr>
+<td>Protocol Deviation</td>
+<td>Transition occurred outside the predefined criteria</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Principle:</strong> transition by declared evidence, preserve the boundary event, and continue treating the underlying process as continuous.</p>
+<hr>
+<h2 id="8-illustrative-thresholds-not-validated">8. Illustrative Thresholds (Not Validated)</h2>
+<p>The capture presents the following as examples of <strong>how</strong> thresholds may be expressed in a notification-attention study. They are not validated Resonance Asceticism or RTT thresholds. A study must justify and preregister its own values based on its instruments, expected variability, sampling rate, population, and question.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Illustrative value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Baseline observations</td>
+<td>$\ge 3$ sessions</td>
+<td>Minimum baseline characterization</td>
+</tr>
+<tr>
+<td>Required observations available</td>
+<td>$\ge 90\%$</td>
+<td>Phase data sufficiently complete</td>
+</tr>
+<tr>
+<td>Optional baseline stability</td>
+<td>$\pm 10\%$ across the final three baseline observations</td>
+<td>Omit when natural variability is itself a study variable</td>
+</tr>
+<tr>
+<td>Attenuation adherence</td>
+<td>$\lambda_{\text{observed}}\in[\lambda_{\text{target}}\pm0.05]$ (e.g., $\lambda_{\text{target}}=0.50$)</td>
+<td>Intervention delivered as assigned; not a theoretically preferred range</td>
+</tr>
+<tr>
+<td>Stability band and duration</td>
+<td>$\pm10\%$ of rolling mean, 3 consecutive observations</td>
+<td>Sustained, not single-point, stability</td>
+</tr>
+<tr>
+<td>Maximum adaptation window</td>
+<td>Declared in advance</td>
+<td>Triggers restoration as a <em>scheduled</em> transition, not evidence of stabilization</td>
+</tr>
+<tr>
+<td>Return-to-baseline band and duration</td>
+<td>$\pm10\%$ of baseline mean, 3 consecutive observations</td>
+<td>Candidate restoration criterion</td>
+</tr>
+<tr>
+<td>Restoration window ends without return</td>
+<td>Record as <strong>persistent deviation</strong></td>
+<td>Not automatically intervention failure</td>
+</tr>
+<tr>
+<td>Missing observations</td>
+<td>$&gt;10\%$</td>
+<td>Flag for protocol review, not automatic exclusion</td>
+</tr>
+<tr>
+<td>Substrate review rule</td>
+<td>$\dfrac{\Sigma(t)-\Sigma_B}{\Sigma_B}\le-0.20$</td>
+<td>Triggers review (not automatic continuation); a more severe predefined condition could trigger restoration or termination. Not a clinically validated cutoff</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Illustrative noise-and-resonance criterion.</strong> If $N(t)$ is task-interruption rate and $R(t)$ is task accuracy, an exploratory improvement criterion requires both $N_A&lt;N_B$ and $R_A\ge R_B$. This is preferable to defining success solely through reduced interruption. A stronger illustration: $N_A\le0.80\,N_B$ while $R_A\ge0.95\,R_B$, meaning at least a 20% reduction in the interference measure while preserving at least 95% of baseline task performance. These are illustrative research thresholds, not established effect-size standards.</p>
+<hr>
+<h2 id="9-threshold-hierarchy-and-reporting">9. Threshold Hierarchy and Reporting</h2>
+<p><strong>Transition decision priority</strong> (denotes priority, not magnitude):</p>
+<p>$$
+C_\Sigma&gt;C_{\text{data}}&gt;C_\lambda&gt;C_{\text{phase}}&gt;C_{\text{time}}
+$$</p>
+<p>Safety takes precedence over methodological completion, and methodological evidence takes precedence over transition based only on elapsed time.</p>
+<p><strong>Extended priority for threshold acceptance</strong> (capture's later protocol table):</p>
+<p>$$
+C_{\text{safety}}&gt;C_\Sigma&gt;C_{\text{measurement}}&gt;C_{\text{data}}&gt;C_{\text{temporal}}&gt;C_{\text{phase}}&gt;C_{\text{time}}
+$$</p>
+<p><strong>Every threshold is reported with:</strong> variable; threshold value or category; justification (empirical, instrument-based, methodological, or exploratory); observation window; required persistence; action (continue, transition, review, restore, or stop); priority; and status (validated, literature-derived, pilot-derived, or exploratory).</p>
+<blockquote>
+<p>A threshold is not merely a number. It is a declared decision boundary with provenance, persistence requirements, and a predefined consequence.</p>
+</blockquote>
+<hr>
+<h2 id="10-threshold-validation-and-acceptance">10. Threshold Validation and Acceptance</h2>
+<p><strong>Validation stages:</strong></p>
+<p>$$
+\text{Conceptual}\rightarrow\text{Technical}\rightarrow\text{Empirical}\rightarrow\text{External}\rightarrow\text{Ongoing}
+$$</p>
+<p>Ongoing validation monitors changes in instruments or software, sampling frequency, population drift, intervention drift, altered event definitions, emerging safety evidence, missing-data patterns, intervention fidelity, and differences between expected and observed decision consequences. A validated threshold carries a review date, a version, and declared conditions that trigger reevaluation. A recalibrated threshold is documented as a modified threshold, not as confirmation of the original.</p>
+<p><strong>Acceptance gate.</strong> A threshold is <em>Accepted for Declared Use</em> only when every mandatory domain is evaluated and passes, safety and substrate criteria pass, no mandatory domain is indeterminate, the complete temporal rule passes, decision-error consequences are acceptable, and external validation is complete when confirmatory use is proposed:</p>
+<p>$$
+A_\Theta=1\iff\bigwedge_{j=1}^{k}C_j=\text{Pass}
+$$</p>
+<p><strong>Acceptance outcomes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Outcome</th>
+<th>Meaning</th>
+<th>Permitted use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accepted for declared use</td>
+<td>All mandatory domains pass</td>
+<td>Within the documented context</td>
+</tr>
+<tr>
+<td>Conditionally accepted</td>
+<td>No mandatory failure; limitations have explicit controls</td>
+<td>Restricted use with monitoring</td>
+</tr>
+<tr>
+<td>Provisionally accepted</td>
+<td>Core conceptual, technical, temporal, and safety domains pass; external validation incomplete</td>
+<td>Pilot or exploratory use</td>
+</tr>
+<tr>
+<td>Indeterminate</td>
+<td>Evidence insufficient, conflicting, or dominated by uncertainty</td>
+<td>No confirmatory decision</td>
+</tr>
+<tr>
+<td>Not accepted</td>
+<td>A mandatory domain fails</td>
+<td>Do not use for the proposed decision</td>
+</tr>
+<tr>
+<td>Retired</td>
+<td>No longer meets current requirements</td>
+<td>Historical reference; replace or revalidate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Illustrative domain criteria</strong> (capture's Pass / Indeterminate / Fail table; also illustrative): data completeness $\ge90\%$ pass, 80–89.9% review, $&lt;80\%$ fail; intervention fidelity and event-detection agreement with the same bands; temporal resolution requires $\Delta t_{\text{sample}}&lt;\tau_{\text{target}}$ with at least three observations spanning the minimum persistence interval; persistence (e.g., three consecutive observations); robustness index $C_S\ge0.80$ pass, $0.60\le C_S&lt;0.80$ review, $C_S&lt;0.60$ fail; corrective-exposure fraction $P_{CE}\ge0.90$ pass, 0.80–0.899 review, $&lt;0.80$ fail. Reliability, measurement error, responsiveness, stability, restoration, external validation, substrate integrity, decision utility, and context specification are also evaluated, with substrate and safety as overriding.</p>
+<blockquote>
+<p><strong>Protocol principle:</strong> every decision resolves to a measured result, a prospectively declared boundary, and a reproducible action.</p>
+</blockquote>
+<p><strong>Records.</strong> Each threshold retains a per-threshold protocol record: identifier and version; variable; intended use; value or range and direction; sampling frequency; observation window; persistence requirement; pass, indeterminate, and fail boundaries; measurement uncertainty; evidence source; observed result; domain decision; triggered action; context of use; validation status; and revalidation trigger.</p>
+<hr>
+<h2 id="11-corrective-exposure-and-observer-safeguards-in-the-protocol">11. Corrective Exposure and Observer Safeguards in the Protocol</h2>
+<p>Corrective exposure $C_E(t)$ is recorded, not assumed: availability and occurrence of potentially corrective information (feedback, contradictory evidence, relevant signals, review opportunities), distinguishing actual from perceived availability. A result that appears only when corrective information is excluded counts as evidence against the central prediction (see <code>hypotheses.md</code>, H11 and §6). Substrate trajectory and constraint drift are monitored through repeated assessments, not at endpoint alone.</p>
+<hr>
+<h2 id="12-evidence-status">12. Evidence Status</h2>
+<p>The E0–E5 scale in <code>ra_capture.md</code> applies: E0 Unsubstantiated, E1 Exploratory, E2 Provisional, E3 Supported, E4 Strong, E5 Established for Declared Use. Evidence strength is rated independently of Pass/Fail ($\text{Evidence Strength}\neq\text{Acceptance Result}$); an E0 result that passes a rule supports no empirical claim by itself. Minimum proposed levels by use: hypothesis generation E0; exploratory analysis E1; pilot protocol decision E2; confirmatory research decision E3; high-consequence intervention rule E4; established protocol operation E5. Safety and ethics requirements supersede the scale.</p>
+<p>No study data are reported in the capture. Every Resonance Asceticism–specific variable, threshold, and decision rule in this protocol is therefore at <strong>E0</strong> and is not promoted by recurrence in the documentation.</p>
+<hr>
+<h2 id="13-interpretive-and-lineage-boundary">13. Interpretive and Lineage Boundary</h2>
+<ul>
+<li>External research may support measurement choices or empirical context without thereby validating RTT or Resonance Asceticism. Evidence that an instrument measures distraction does not establish that it measures $N(t)$.</li>
+<li>Raw observations, operational measures, and RTT interpretation are stored in separate layers so the same dataset can be reanalyzed under alternative definitions or models.</li>
+<li>All numerical examples above are scaffolding and not proposed standards.</li>
+</ul>
+<blockquote>
+<p><strong>The trajectory, rather than the isolated state, is the primary phenomenon under investigation.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

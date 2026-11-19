@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Research/case_studies/Asceticism/variables_measures.md">
-  <title>variables_measures</title>
+  <title>Resonance Asceticism: Variables and Measures</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,548 @@
   </aside>
 
   <main>
-
+<p><img width="1194" height="672" alt="Research_case_studies_Asceticism_variables_measures_" src="https://github.com/user-attachments/assets/79609d71-c611-4b1f-b9a3-b3d793ed7ad8" /></p>
+<h1 id="resonance-asceticism-variables-and-measures">Resonance Asceticism: Variables and Measures</h1>
+<p><strong>Case Study:</strong> Resonance Asceticism
+<strong>Domain:</strong> RTT / Human Systems / Behavioral Coherence
+<strong>Status:</strong> Exploratory measurement architecture (evidence level E0 unless stated; see §9)
+<strong>Context:</strong> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+<strong>Primary source:</strong> <code>ra_capture.md</code>. This file organizes the capture's variable, measure, and data-source material. It adds no RTT canon and no new instruments.</p>
+<p><strong>Provenance labels</strong></p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>[RTT]</strong></td>
+<td>Existing RTT concept or notation</td>
+</tr>
+<tr>
+<td><strong>[RTT-D]</strong></td>
+<td>RTT-derived application to this case</td>
+</tr>
+<tr>
+<td><strong>[RA]</strong></td>
+<td>Resonance Asceticism–specific variable or operator</td>
+</tr>
+<tr>
+<td><strong>[EMP]</strong></td>
+<td>Empirical operational choice (study-dependent, to be declared prospectively)</td>
+</tr>
+<tr>
+<td><strong>[EXT]</strong></td>
+<td>External scholarly or instrument context cited in the capture</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="1-purpose-and-position">1. Purpose and Position</h2>
+<p>This file translates the conceptual vocabulary of the case study into variables that could be recorded, derived, and analyzed. It separates <strong>measurement architecture</strong> (what is to be recorded, when, and how it is derived) from <strong>validated measurement instruments</strong> (which, for most RTT-derived constructs, do not yet exist).</p>
+<p><strong>Trajectory-first position.</strong> Static observations are temporal slices; the trajectory is the primary phenomenon under investigation. The central measurement object is therefore</p>
+<p>$$
+\mathcal{X}={X(t_0),X(t_1),\ldots,X(t_n)}\quad\text{rather than}\quad X_{\text{before}}\rightarrow X_{\text{after}}.
+$$</p>
+<p><strong>Protocol principle (from the capture):</strong> collect the trajectory; derive the snapshots.</p>
+<hr>
+<h2 id="2-notation-and-provenance">2. Notation and Provenance</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$e(t)$</td>
+<td>Excitation</td>
+<td>[RTT-D]</td>
+</tr>
+<tr>
+<td>$\lambda(t)$, $0\le\lambda\le1$</td>
+<td>Attenuation; $e'(t)=[1-\lambda(t)]\,e(t)$</td>
+<td>[RA]</td>
+</tr>
+<tr>
+<td>$S(t),\ N(t),\ R(t)$</td>
+<td>Silence, Noise, Resonance; $X(t)={S(t),N(t),R(t)}$ (static form $X=S+N+R$ is a conceptual decomposition, not a claim of shared units)</td>
+<td>[RTT] grammar; time-indexing [RTT-D]</td>
+</tr>
+<tr>
+<td>$\Sigma(t)$, $\Sigma_{\min}$</td>
+<td>Substrate integrity and its minimum viable boundary</td>
+<td>[RA]</td>
+</tr>
+<tr>
+<td>$\mathcal{T}_R=(f_R,\tau_R,Q_R)$</td>
+<td>Resonant-Time triad: recurrence/frequency, persistence/relaxation, coherence quality</td>
+<td>[RTT]</td>
+</tr>
+<tr>
+<td>$\rho_{RN}(t)=R(t)/[N(t)+\varepsilon]$</td>
+<td>Resonance-to-noise relationship; $\varepsilon&gt;0$ prevents division by zero</td>
+<td>[RA]; directional criterion, not a validated metric</td>
+</tr>
+<tr>
+<td>$C_E(t)$</td>
+<td>Corrective exposure</td>
+<td>[RA]</td>
+</tr>
+<tr>
+<td>$C_C(t)$</td>
+<td>Coherent capacity (composite outcome)</td>
+<td>[RA]</td>
+</tr>
+</tbody>
+</table>
+<p>Existing RTT notation is used without alteration. Case-specific variables are marked [RA] and are not to be read as pre-existing canon.</p>
+<hr>
+<h2 id="3-variable-catalogue">3. Variable Catalogue</h2>
+<p><strong>Roles.</strong> <em>Manipulated</em> = assigned or controlled by the study. <em>Observed</em> = measured directly. <em>Inferred</em> = estimated through a declared proxy. <em>Derived</em> = computed afterward from preserved observations.</p>
+<h3 id="31-state-and-exposure-variables">3.1 State and exposure variables</h3>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Symbol</th>
+<th>Role</th>
+<th>Operational definition</th>
+<th>Candidate measure</th>
+<th>Measurement status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Observation time</td>
+<td>$t_i$</td>
+<td>Temporal index</td>
+<td>Elapsed time from a declared baseline</td>
+<td>Automated timestamps</td>
+<td>Directly observable; preserve actual intervals if irregular</td>
+</tr>
+<tr>
+<td>Excitation</td>
+<td>$e(t)$</td>
+<td>Exposure (observed)</td>
+<td>A predefined stimulus, demand, or input capable of altering the system or competing for attention</td>
+<td>Occurrence, frequency, duration, intensity, or exposure condition</td>
+<td>Directly observable when defined prospectively</td>
+</tr>
+<tr>
+<td>Attenuation</td>
+<td>$\lambda(t)$</td>
+<td>Independent variable (manipulated)</td>
+<td>Time-dependent reduction in exposure or coupling to the target excitation</td>
+<td>Attenuation level by interval, or condition (baseline / partial / full)</td>
+<td>Experimentally manipulated; record onset, offset, level</td>
+</tr>
+<tr>
+<td>Silence</td>
+<td>$S(t)$</td>
+<td>Latent state (inferred)</td>
+<td>Available capacity not presently captured by the excitation under investigation</td>
+<td>Declared proxy only (e.g., uninterrupted intervals, performance reserve)</td>
+<td>Conceptual unless operationalized through a declared proxy</td>
+</tr>
+<tr>
+<td>Noise</td>
+<td>$N(t)$</td>
+<td>Repeated outcome (observed)</td>
+<td>Measurable interference not contributing to the declared task or target pattern</td>
+<td>Interruptions, task switching, latency, errors, omissions, or a declared distraction measure</td>
+<td>Requires operationalization; measure declared before testing</td>
+</tr>
+<tr>
+<td>Resonance</td>
+<td>$R(t)$</td>
+<td>Repeated outcome (observed)</td>
+<td>Sustained goal-congruent or coherent activity under declared conditions</td>
+<td>Accuracy, sustained attention, continuity, stability, or task performance</td>
+<td>Requires operationalization; no single measure assumed universal</td>
+</tr>
+<tr>
+<td>Substrate integrity</td>
+<td>$\Sigma(t)$</td>
+<td>Boundary outcome (observed)</td>
+<td>Functional capacity required for continued participation</td>
+<td>Predefined cognitive, physical, psychological, relational, or functional indicators</td>
+<td>Multidimensional; not collapsed to one value without justification</td>
+</tr>
+<tr>
+<td>Corrective exposure</td>
+<td>$C_E(t)$</td>
+<td>Control / safeguard (observed)</td>
+<td>Continued availability of information capable of challenging signal classification</td>
+<td>Feedback, contradictory evidence, relevant signals, or review opportunities</td>
+<td>Study-design dependent; distinguish actual from perceived availability</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-resonant-time-and-trajectory-variables-derived">3.2 Resonant-Time and trajectory variables (derived)</h3>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Symbol</th>
+<th>Operational definition</th>
+<th>Calculation / measure</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resonant frequency</td>
+<td>$f_R$</td>
+<td>Rate at which a resonant pattern occurs or recurs</td>
+<td>$f_R=n_R/\Delta t$; with $T_R$, $f_R=1/T_R$; requires a predefined qualifying-event and separation rule</td>
+<td>[RTT]-derived; requires operationalization</td>
+</tr>
+<tr>
+<td>Resonant persistence</td>
+<td>$\tau_R$</td>
+<td>Duration for which operational Resonance persists above a declared threshold</td>
+<td>Time from qualifying onset to termination; threshold declared prospectively</td>
+<td>[RTT]-derived; requires operationalization</td>
+</tr>
+<tr>
+<td>Resonance quality</td>
+<td>$Q_R$</td>
+<td>Stability or reproducibility of a resonant pattern across its trajectory</td>
+<td>Declared stability, variability, or agreement index across qualifying episodes</td>
+<td>[RTT]-derived; requires explicit construction and validation</td>
+</tr>
+<tr>
+<td>Emergence time</td>
+<td>$t_E$</td>
+<td>Latency from attenuation onset to sustained Resonance detection</td>
+<td>Difference of synchronized timestamps; detection threshold and duration defined</td>
+<td>[RA]; proposed</td>
+</tr>
+<tr>
+<td>Decay time</td>
+<td>$t_D$</td>
+<td>Time from driver change until the response falls below threshold</td>
+<td>Difference of synchronized timestamps; $N$ and $R$ decay analyzed separately</td>
+<td>[RA]; proposed</td>
+</tr>
+<tr>
+<td>Recurrence interval</td>
+<td>$T_R$</td>
+<td>Time between successive qualifying Resonance events</td>
+<td>$T_R=t_{k+1}-t_k$</td>
+<td>Directly measurable once events are defined</td>
+</tr>
+<tr>
+<td>Adaptation rate</td>
+<td>$\alpha_Y$ (also $\alpha$)</td>
+<td>Change in a declared response $Y$ per unit time during sustained attenuation</td>
+<td>$\alpha_Y=\Delta Y/\Delta t$ (e.g., $\alpha=\Delta R/\Delta t$)</td>
+<td>[RA]; $Y$ and direction defined prospectively</td>
+</tr>
+<tr>
+<td>Stabilization time</td>
+<td>$t_S$</td>
+<td>Time until an outcome enters and remains within a predefined stable range</td>
+<td>First sustained interval with $</td>
+<td>R(t)-\bar R_{\text{stable}}</td>
+</tr>
+<tr>
+<td>Rate of change</td>
+<td>$v_Y(t)$</td>
+<td>Temporal slope of a repeatedly measured variable $Y$</td>
+<td>$\Delta Y/\Delta t$</td>
+<td>Derived; resolution-dependent</td>
+</tr>
+<tr>
+<td>Resonance-to-noise relationship</td>
+<td>$\rho_{RN}(t)$</td>
+<td>Relative relationship between operational $R(t)$ and $N(t)$</td>
+<td>$R(t)/[N(t)+\varepsilon]$ on commensurable or standardized scales, matched sampling</td>
+<td>[RA]; proposed index</td>
+</tr>
+<tr>
+<td>Restoration distance</td>
+<td>$D_{\text{restore}}$</td>
+<td>Distance between restoration and baseline states</td>
+<td>$d(X_{\text{restore}},X_{\text{baseline}})$ with $d$ predefined</td>
+<td>[RA]; derived</td>
+</tr>
+<tr>
+<td>Reversibility</td>
+<td>$V_R$</td>
+<td>Degree and timing of return toward baseline after attenuation ends</td>
+<td>Recovery time, restoration distance, persistence, or hysteresis</td>
+<td>[RA]; secondary outcome</td>
+</tr>
+<tr>
+<td>Coherent capacity</td>
+<td>$C_C(t)$</td>
+<td>Goal-congruent performance maintained within substrate and corrective-exposure boundaries</td>
+<td>Declared composite or decision rule; aggregation must not erase temporal structure</td>
+<td>[RA]; exploratory composite</td>
+</tr>
+</tbody>
+</table>
+<p>A nonzero $D_{\text{restore}}$ is not automatically a failure; it may reflect persistence, adaptation, drift, measurement variability, or a different operating regime.</p>
+<hr>
+<h2 id="4-observation-record">4. Observation Record</h2>
+<p>Each time-indexed observation carries, where applicable:</p>
+<p>$$
+O_i={t_i,\ p_i,\ e_i,\ \lambda_i,\ N_i,\ R_i,\ \Sigma_i,\ C_{E,i}},\qquad
+\mathcal{O}={O_0,O_1,\ldots,O_n}
+$$</p>
+<p>where $p_i$ identifies the trajectory phase. Trajectory parameters are derived from $\mathcal{O}$ and do not substitute for the underlying observations.</p>
+<p>For multi-source studies the capture also writes the record as $O_i={t_i,e_i,\lambda_i,B_i,P_i,\Sigma_i,C_{E,i}}$, where $B_i$ is behavioral observation and $P_i$ is participant-reported or optional physiological observation. Operational $N(t)$ and $R(t)$ are derived afterward through predefined mappings from these raw measurements.</p>
+<hr>
+<h2 id="5-data-sources-and-candidate-instruments">5. Data Sources and Candidate Instruments</h2>
+<p>The capture prioritizes <strong>time-indexed behavioral and event data</strong> to characterize trajectories, with self-report and psychometric instruments supplementing specific constructs. No instrument is described as directly measuring RTT constructs unless construct validity for that interpretation is independently established.</p>
+<h3 id="51-data-source-classes">5.1 Data-source classes</h3>
+<ol>
+<li><strong>Device and event data:</strong> notifications, exposure events, attenuation changes, timestamps, interaction events.</li>
+<li><strong>Behavioral performance data:</strong> task responses, response times, errors, omissions, task switching, continuity.</li>
+<li><strong>Participant-reported data:</strong> perceived distraction, functional state, other predefined subjective measures.</li>
+<li><strong>Optional physiological data:</strong> electrophysiological or other physiological measures, only where the research design justifies them.</li>
+</ol>
+<h3 id="52-variable-to-source-map">5.2 Variable-to-source map</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Primary data source</th>
+<th>Candidate method</th>
+<th>Sampling</th>
+<th>Protocol status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$t_i$</td>
+<td>System clock / study platform</td>
+<td>Automated timestamping</td>
+<td>Every observation/event</td>
+<td>Primary</td>
+</tr>
+<tr>
+<td>$e(t)$</td>
+<td>Device or experimental event log</td>
+<td>Notification log or controlled stimulus delivery</td>
+<td>Event-level</td>
+<td>Primary</td>
+</tr>
+<tr>
+<td>$\lambda(t)$</td>
+<td>Intervention log</td>
+<td>Condition assignment or device-setting record</td>
+<td>Every intervention change</td>
+<td>Primary</td>
+</tr>
+<tr>
+<td>$S(t)$</td>
+<td>Behavioral/task record</td>
+<td>Study-specific proxy</td>
+<td>Repeated</td>
+<td>Exploratory; latent</td>
+</tr>
+<tr>
+<td>$N(t)$</td>
+<td>Behavioral and event records</td>
+<td>Response-time task, interruption count, error/omission measure; Smartphone Distraction Scale where appropriate</td>
+<td>Event-level plus scheduled instrument administration</td>
+<td>Primary outcome; operational measure declared</td>
+</tr>
+<tr>
+<td>$R(t)$</td>
+<td>Behavioral performance data</td>
+<td>Sustained-attention or other goal-congruent task selected for the study</td>
+<td>Repeated throughout trajectory</td>
+<td>Primary outcome; RTT interpretation provisional</td>
+</tr>
+<tr>
+<td>$\Sigma(t)$</td>
+<td>Participant assessment and functional data</td>
+<td>Study-selected validated health, well-being, fatigue, or functional instruments</td>
+<td>Baseline and scheduled reassessment</td>
+<td>Boundary variable</td>
+</tr>
+<tr>
+<td>$C_E(t)$</td>
+<td>Exposure / feedback records</td>
+<td>Feedback log or information-exposure record</td>
+<td>Event-level where applicable</td>
+<td>Safeguard / control</td>
+</tr>
+<tr>
+<td>$f_R,\tau_R,Q_R$</td>
+<td>Derived from $R(t)$</td>
+<td>Event detection, threshold-duration analysis, prespecified stability index</td>
+<td>From event-level or repeated source data</td>
+<td>Derived; $Q_R$ exploratory</td>
+</tr>
+<tr>
+<td>$t_E,t_D,T_R,\alpha_Y,t_S$</td>
+<td>Intervention, performance, and event logs</td>
+<td>Synchronized threshold, inter-event, time-series, and tolerance-band analyses</td>
+<td>Resolves the target feature</td>
+<td>Derived</td>
+</tr>
+<tr>
+<td>$D_{\text{restore}},V_R$</td>
+<td>Baseline and restoration data</td>
+<td>Prespecified distance, recovery-time, and hysteresis analyses</td>
+<td>Repeated through restoration</td>
+<td>Derived</td>
+</tr>
+<tr>
+<td>$C_C(t)$</td>
+<td>Integrated study dataset</td>
+<td>Prespecified composite or decision criterion</td>
+<td>Per constituent measures</td>
+<td>Exploratory composite</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-instrument-notes">5.3 Instrument notes</h3>
+<ul>
+<li><strong>Behavioral measures</strong> (principal performance record): response time, response-time variability, accuracy, error rate, omission rate, task-switching frequency, sustained-attention performance, task-continuity measures. They are selected according to the form of coherence or interference defined by the study, not treated as universal measures of Resonance.</li>
+<li><strong>Smartphone Distraction Scale (SDS)</strong> <strong>[EXT]:</strong> described in the capture as a 16-item, four-factor instrument (attention impulsiveness, online vigilance, multitasking, emotion regulation). Its role is supplementary: $\text{SDS}\rightarrow\text{subjective distraction construct}$, <strong>not</strong> $\text{SDS}=N(t)$. Instrument burden and recall period must suit the intended temporal resolution.</li>
+<li><strong>Event and device logs:</strong> retained at event level wherever technically and ethically feasible (timestamp, event type, notification category, intervention state, attenuation level, participant interaction, task state, response timestamp), each linked to its trajectory phase. Raw timestamps are preserved before aggregation.</li>
+<li><strong>Physiological measures:</strong> optional. Prior notification research that combined behavioral and electrophysiological measures (cited in the capture) offers precedent, but physiological observables remain independently described. Interpretation requires a declared mapping, $\text{physiological observable}\rightarrow\text{operational construct}$, not the assumption $\text{physiological observable}=\text{RTT construct}$.</li>
+<li><strong>Instrument selection criteria:</strong> construct relevance; reliability and validity for the population; temporal resolution; sensitivity to change; participant burden; compatibility with repeated measurement and with the trajectory phases; potential reactivity to repeated administration; and correspondence between the instrument's validated construct and the framework variable. Where no validated instrument corresponds to an RTT-derived construct, the construct stays explicitly exploratory rather than being assigned an unrelated instrument.</li>
+</ul>
+<hr>
+<h2 id="6-sampling-and-temporal-resolution">6. Sampling and Temporal Resolution</h2>
+<p><strong>Sampling rule.</strong> Sampling should be shorter than the fastest phenomenon the study intends to resolve:</p>
+<p>$$
+\Delta t_{\text{sample}}&lt;\tau_{\text{target}}
+$$</p>
+<p>where $\Delta t_{\text{sample}}$ is the interval between observations and $\tau_{\text{target}}$ is the shortest temporal feature of substantive interest. This is a methodological principle, not a fixed RTT rule; no universal frequency is specified.</p>
+<p>If $\Delta t_{\text{sample}}\gg\tau_R$, a short-lived resonance may occur entirely between observations. Coarse sampling can also obscure rapid emergence, transient Noise, short persistence, oscillation, recurrence, overshoot, delayed response, and brief regime transitions. A trajectory cannot reveal temporal structure that the sampling design never captured.</p>
+<p><strong>Multi-rate design.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Typical variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event-level (high frequency)</td>
+<td>Excitation events, interruptions, notifications, task responses</td>
+</tr>
+<tr>
+<td>Intermediate frequency</td>
+<td>$N(t)$, $R(t)$, performance state, adaptation indicators, operational proxies for $S(t)$</td>
+</tr>
+<tr>
+<td>Phase-level (lower frequency)</td>
+<td>$\Sigma(t)$, subjective distraction, broader functional measures, intervention acceptability</td>
+</tr>
+</tbody>
+</table>
+<p>Lower-frequency assessment of substrate measures reduces the risk that measurement burden itself becomes a significant perturbation. Original sampling intervals are preserved before any resampling, synchronization, or aggregation.</p>
+<hr>
+<h2 id="7-trajectory-phases-and-timeline">7. Trajectory Phases and Timeline</h2>
+<p>$$
+B\rightarrow A\rightarrow D\rightarrow R_s
+$$</p>
+<p>$B$ = baseline, $A$ = attenuation, $D$ = adaptation, $R_s$ = restoration. Generic collection sequence: $B_0\rightarrow B_1\ldots B_n\rightarrow A_0\rightarrow A_1\ldots A_n\rightarrow D_1\ldots D_n\rightarrow R_0\rightarrow R_1\ldots R_n$. Number and spacing of observations per phase are set prospectively by the phenomenon, not fixed by the framework.</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Collect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Baseline</td>
+<td>Initial distribution and temporal variability of selected measures</td>
+</tr>
+<tr>
+<td>Attenuation</td>
+<td>Onset, magnitude, and duration of the intervention with immediate responses</td>
+</tr>
+<tr>
+<td>Adaptation</td>
+<td>Repeated measurement long enough to see whether responses persist, decay, recur, stabilize, or reorganize</td>
+</tr>
+<tr>
+<td>Restoration</td>
+<td>Reduced or removed attenuation; continued observation for reversibility, persistence, delayed recovery, or a new regime</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Phase transitions</strong> use declared criteria and are recorded as timestamped events: Baseline → Attenuation when the predefined observation requirement is met; Attenuation → Adaptation when the intervention is introduced and verified; Adaptation → Restoration on the predefined duration, stabilization criterion, or other prospective condition; Restoration → endpoint on the predefined period, recovery criterion, or stopping condition. Observation does not end merely because attenuation ends.</p>
+<p><strong>Substrate constraint across the trajectory:</strong> $\Sigma(t_i)\ge\Sigma_{\min}\ \forall\,t_i$, not only at the endpoint.</p>
+<hr>
+<h2 id="8-predefinition-requirements-and-data-handling">8. Predefinition Requirements and Data Handling</h2>
+<p><strong>Before data collection</strong>, for every included variable the protocol specifies: (1) operational definition; (2) instrument or data source; (3) unit of analysis; (4) sampling frequency; (5) event or threshold criterion; (6) calculation procedure; (7) admissible range; (8) missing-data treatment; (9) relevant trajectory phase; (10) stopping or safety boundary where applicable; (11) classification as manipulated, observed, inferred, or derived. Thresholds for emergence, persistence, decay, stabilization, and substrate admissibility are specified prospectively.</p>
+<p><strong>Schedule deviations</strong> are retained: missed or delayed observations, unscheduled intervention changes, equipment or logging failures, premature phase transitions, participant-requested interruptions. Missing observations remain distinguishable from observations representing zero excitation, zero Noise, or absence of a qualifying event.</p>
+<p><strong>Temporal preservation:</strong></p>
+<p>$$
+\text{Trajectory}\rightarrow\text{Phase Summary}\rightarrow\text{Snapshot}\quad\text{not}\quad\text{Snapshot}\rightarrow\text{assumed trajectory}
+$$</p>
+<hr>
+<h2 id="9-evidence-status">9. Evidence Status</h2>
+<p>The capture's Evidence Strength Scale (E0 Unsubstantiated; E1 Exploratory; E2 Provisional; E3 Supported; E4 Strong; E5 Established for Declared Use) is applied. Evidence strength is rated independently of Pass/Fail results, and no construct is promoted merely because it recurs in the documentation. The capture gives a typical ceiling of E0–E1 for a conceptual or RTT-derived proposal without corroboration.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Provenance</th>
+<th>Evidence level</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathcal{T}_R$, S-N-R grammar</td>
+<td>[RTT]</td>
+<td>Not rated here</td>
+<td>Existing RTT material</td>
+</tr>
+<tr>
+<td>$\lambda$, $\rho_{RN}$, $\Sigma_{\min}$, $C_E$, $t_E$, $t_D$, $t_S$, $\alpha_Y$, $D_{\text{restore}}$, $V_R$, $C_C$</td>
+<td>[RA]</td>
+<td>E0</td>
+<td>Proposed measures; no study data reported in the capture</td>
+</tr>
+<tr>
+<td>$S(t)$, $R(t)$, $Q_R$, $\Sigma(t)$ as quantitative measures</td>
+<td>[RTT-D]/[RA]</td>
+<td>E0</td>
+<td>Require explicit operational definition and validation before being treated as established quantities</td>
+</tr>
+<tr>
+<td>$e(t)$, $t_i$, event occurrence, interruption frequency, assigned $\lambda$</td>
+<td>[EMP]</td>
+<td>Definable within a study</td>
+<td>Directly definable; not themselves RTT validation</td>
+</tr>
+<tr>
+<td>SDS, behavioral and physiological precedents</td>
+<td>[EXT]</td>
+<td>Context only</td>
+<td>Supports a measurement choice, not RTT or RA</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="10-interpretive-and-lineage-boundary">10. Interpretive and Lineage Boundary</h2>
+<p>$$
+\text{Raw observation}\rightarrow\text{Operational measure}\rightarrow\text{Trajectory variable}\rightarrow\text{RTT interpretation}
+$$</p>
+<p>Example from the capture: notification timestamp → interruption event → $N(t)$ → Noise interpretation. The interpretive direction is not reversed; RTT classifications derive from declared observations rather than dictating what the observations must show. The three layers (raw observations, operational measures, RTT interpretation) are stored independently so the same dataset can be reanalyzed under other operational definitions or theoretical models.</p>
+<p>External research may support measurement choices or empirical context without thereby validating RTT or Resonance Asceticism. Evidence that an instrument measures distraction does not establish that it measures $N(t)$; that mapping remains a separately declared operational choice.</p>
+<blockquote>
+<p><strong>The trajectory, rather than the isolated state, is the primary phenomenon under investigation.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>
