@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_case_studies_Asceticism_lineage_" src="https://github.com/user-attachments/assets/7a7f55c9-ae5f-4eae-b1f6-0d720800d1b3" />
+
 # Resonance Asceticism: Lineage
 
 **Case Study:** Resonance Asceticism
