@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_case_studies_Asceticism_trajectory_" src="https://github.com/user-attachments/assets/65fbeb77-f695-4f30-b8d2-759498854fee" />
+
 # Resonance Asceticism: Resonance-Time Trajectories
 
 **Case Study:** Resonance Asceticism
