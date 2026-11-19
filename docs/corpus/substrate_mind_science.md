@@ -1,5 +1,113 @@
 substrate_mind_science 
-# Conscious transfer substrate map v1  
+<img width="1194" height="672" alt="substrate_mind_science" src="https://github.com/user-attachments/assets/0ff0b70c-b74b-43e7-9f3a-b2c370944614" />
+
+# 🧠 Substrate Mind Science  
+
+- [`SMS_module.json`](SMS_module.json) — Agentic module schema role assignments
+
+_A structural, substrate‑agnostic model for mapping cognition, psychological domains, and mind‑level invariants._
+
+<img src="https://img.shields.io/badge/🧠 Substrate%20Mind%20Science%20Module-🗺️Structural%20Substrate%20Active-4c8eda?style=for-the-badge" alt="Substrate Mind Science Module | Structural Substrate Active"/>
+
+The **Substrate Mind Science (SMS)** model provides a unified structural grammar for describing how minds organize, process, stabilize, and transform information across psychological, cognitive, and developmental layers. It is designed to be compatible with the broader TriadicFrameworks substrate family, including the Governance Substrate Model (GSM) and Media Substrate Model (MSM), while remaining grounded in established psychological science.
+
+This directory contains the canonical SMS documents, schemas, and conceptual layers.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## 📚 What This Substrate Covers
+
+The SMS substrate organizes mind‑science into structural components that can be analyzed, compared, or integrated with other substrates. It includes:
+
+- **Core definitions and scope** of psychology  
+- **Major research domains**  
+- **Diagnostic systems**  
+- **Treatment modalities**  
+- **Theoretical frameworks**  
+- **Subspecialties and applied fields**  
+- **Historical layers and controversies**  
+- **Schemas and substrate maps**  
+- **Minimal and legacy mind substrates**  
+- **Conscious transfer substrate** (experimental)
+
+These files are visible in the directory you’re viewing on GitHub   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/substrate_mind_science).
+
+---
+
+## 🧩 Structural Philosophy
+
+The SMS substrate treats mind science as a **layered system**:
+
+- **Foundational layer** — definitions, scope, and conceptual primitives  
+- **Diagnostic layer** — classification, criteria, and system boundaries  
+- **Treatment layer** — modalities, mechanisms, and evidence bases  
+- **Theoretical layer** — schools of thought and explanatory models  
+- **Applied layer** — subspecialties and real‑world practice  
+- **Research layer** — domains, methods, and epistemic constraints  
+- **Historical layer** — lineage, evolution, and paradigm shifts  
+- **Critical layer** — debates, controversies, and limitations  
+
+This layered approach mirrors the substrate logic used in GSM and MSM, enabling cross‑substrate coherence.
+
+---
+
+## 🗺️ Key Documents in This Directory
+
+A few highlights from the files visible in your tab:
+
+- **Minimal_Mind_Substrate_v1.md** — the smallest viable structural model of mind  
+- **Legacy_Mind_Narratives_v1.md** — inherited cognitive and cultural patterns  
+- **Conscious_Transfer_Substrate_Map_v1.md** — mapping conscious processes  
+- **Conscious_Transfer_Substrate_Schema_v1.md** — schema for conscious transfer modeling  
+- **Section_A–I files** — structured psychology overview (scope, methods, diagnostics, treatment, theory, subspecialties, research, ethics, history, controversies)  
+- **ct_example_minimal.json.md** — example JSON substrate for conscious transfer  
+
+These documents form the backbone of the SMS substrate and are intended to be read together.
+
+---
+
+## 🎯 Purpose of the Substrate
+
+The SMS substrate aims to:
+
+- Provide a **coherent structural map** of mind science  
+- Enable **cross‑disciplinary integration** with governance, media, and cognitive substrates  
+- Support **educational clarity** for students and practitioners  
+- Offer a **stable reference model** for future extensions, simulations, and analyzers  
+- Preserve the **lineage and evolution** of psychological frameworks  
+
+It is not a clinical tool, diagnostic system, or therapeutic guide. It is a **structural substrate**—a map of conceptual terrain.
+
+---
+
+## 🔧 Relationship to Other Substrates
+
+The SMS substrate is designed to interoperate with:
+
+- **GSM** — governance, institutions, and collective behavior  
+- **MSM** — media physics, attention, and narrative systems  
+- **CTS** — conscious transfer substrate (experimental cognitive modeling)  
+
+Together, these form a multi‑substrate ecosystem capable of describing complex human and societal systems.
+
+---
+
+## 📦 Repository Structure
+
+This directory is part of the TriadicFrameworks documentation tree, visible in your GitHub tab   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/substrate_mind_science). Each file is a standalone document but also participates in the larger substrate map.
+# Conscious transfer substrate map v1  
 *Minimal Empirical Mind Substrate v1 × RTT conditions*
 
 I’ll treat RTT as three hard constraints on anything that can participate in Conscious Transfer:
@@ -624,203 +732,6 @@ This substrate describes only those aspects of "mind" that can be:
 - No reification of diagnostic labels as entities or causes
 - No unfalsifiable theories or typologies
 - No use of narrative constructs as if they were substrates
-# 🧠 Substrate Mind Science  
-
-- [`SMS_module.json`](SMS_module.json) — Agentic module schema role assignments
-
-_A structural, substrate‑agnostic model for mapping cognition, psychological domains, and mind‑level invariants._
-
-<img src="https://img.shields.io/badge/🧠 Substrate%20Mind%20Science%20Module-🗺️Structural%20Substrate%20Active-4c8eda?style=for-the-badge" alt="Substrate Mind Science Module | Structural Substrate Active"/>
-
-The **Substrate Mind Science (SMS)** model provides a unified structural grammar for describing how minds organize, process, stabilize, and transform information across psychological, cognitive, and developmental layers. It is designed to be compatible with the broader TriadicFrameworks substrate family, including the Governance Substrate Model (GSM) and Media Substrate Model (MSM), while remaining grounded in established psychological science.
-
-This directory contains the canonical SMS documents, schemas, and conceptual layers.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## 📚 What This Substrate Covers
-
-The SMS substrate organizes mind‑science into structural components that can be analyzed, compared, or integrated with other substrates. It includes:
-
-- **Core definitions and scope** of psychology  
-- **Major research domains**  
-- **Diagnostic systems**  
-- **Treatment modalities**  
-- **Theoretical frameworks**  
-- **Subspecialties and applied fields**  
-- **Historical layers and controversies**  
-- **Schemas and substrate maps**  
-- **Minimal and legacy mind substrates**  
-- **Conscious transfer substrate** (experimental)
-
-These files are visible in the directory you’re viewing on GitHub   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/substrate_mind_science).
-
----
-
-## 🧩 Structural Philosophy
-
-The SMS substrate treats mind science as a **layered system**:
-
-- **Foundational layer** — definitions, scope, and conceptual primitives  
-- **Diagnostic layer** — classification, criteria, and system boundaries  
-- **Treatment layer** — modalities, mechanisms, and evidence bases  
-- **Theoretical layer** — schools of thought and explanatory models  
-- **Applied layer** — subspecialties and real‑world practice  
-- **Research layer** — domains, methods, and epistemic constraints  
-- **Historical layer** — lineage, evolution, and paradigm shifts  
-- **Critical layer** — debates, controversies, and limitations  
-
-This layered approach mirrors the substrate logic used in GSM and MSM, enabling cross‑substrate coherence.
-
----
-
-## 🗺️ Key Documents in This Directory
-
-A few highlights from the files visible in your tab:
-
-- **Minimal_Mind_Substrate_v1.md** — the smallest viable structural model of mind  
-- **Legacy_Mind_Narratives_v1.md** — inherited cognitive and cultural patterns  
-- **Conscious_Transfer_Substrate_Map_v1.md** — mapping conscious processes  
-- **Conscious_Transfer_Substrate_Schema_v1.md** — schema for conscious transfer modeling  
-- **Section_A–I files** — structured psychology overview (scope, methods, diagnostics, treatment, theory, subspecialties, research, ethics, history, controversies)  
-- **ct_example_minimal.json.md** — example JSON substrate for conscious transfer  
-
-These documents form the backbone of the SMS substrate and are intended to be read together.
-
----
-
-## 🎯 Purpose of the Substrate
-
-The SMS substrate aims to:
-
-- Provide a **coherent structural map** of mind science  
-- Enable **cross‑disciplinary integration** with governance, media, and cognitive substrates  
-- Support **educational clarity** for students and practitioners  
-- Offer a **stable reference model** for future extensions, simulations, and analyzers  
-- Preserve the **lineage and evolution** of psychological frameworks  
-
-It is not a clinical tool, diagnostic system, or therapeutic guide. It is a **structural substrate**—a map of conceptual terrain.
-
----
-
-## 🔧 Relationship to Other Substrates
-
-The SMS substrate is designed to interoperate with:
-
-- **GSM** — governance, institutions, and collective behavior  
-- **MSM** — media physics, attention, and narrative systems  
-- **CTS** — conscious transfer substrate (experimental cognitive modeling)  
-
-Together, these form a multi‑substrate ecosystem capable of describing complex human and societal systems.
-
----
-
-## 📦 Repository Structure
-
-This directory is part of the TriadicFrameworks documentation tree, visible in your GitHub tab   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/substrate_mind_science). Each file is a standalone document but also participates in the larger substrate map.
-# 🧱 **SECTION A — Core Definition & Scope (Green / Yellow / Red Audit)**  
-*(All facts sourced from the Psychiatry Wikipedia page.)* 
-
-## ✅ **GREEN — Empirical, measurable, substrate‑anchored**
-These elements rely on physical examination, measurable data, or established medical methodology.
-
-- **Case history**  
-  A structured, observable, documentable record of events and symptoms.
-
-- **Mental status examination**  
-  Standardized observational protocol; inter‑rater reliability varies, but the method itself is empirical.
-
-- **Laboratory tests**  
-  Objective biological measures (bloodwork, metabolic panels, etc.).
-
-- **Physical examination**  
-  Standard medical practice; grounded in physiology.
-
-- **Neuroimaging / neurophysiology (when used)**  
-  Empirical tools, even if not diagnostic for psychiatric categories.
-
-- **Use of neuroscience, biology, biochemistry, pharmacology**  
-  These are scientific domains with measurable substrates.
-
-- **Psychological & cognitive tests (validated ones)**  
-  When psychometrically validated, they meet scientific criteria (reliability, standardization).
-
-**Why these are green:**  
-They operate on **observable, measurable, falsifiable** data. Even if interpretation varies, the underlying methods are scientific.
-
----
-
-## ⚠️ **YELLOW — Mixed validity, partially empirical, partially interpretive**
-These elements combine structured methods with subjective interpretation or culturally shaped assumptions.
-
-- **Diagnosis of “mental disorders” as symptom clusters**  
-  Uses structured manuals (DSM/ICD) but categories lack biomarkers.
-
-- **Psychological assessments (broad category)**  
-  Some are validated; others are interpretive or low‑reliability.
-
-- **Personality tests**  
-  Highly variable scientific grounding; some robust (e.g., MMPI), others not.
-
-- **Cognition / perception / mood / emotion as constructs**  
-  Real phenomena, but operationalization varies across models.
-
-- **Use of diagnostic manuals (DSM, ICD)**  
-  Standardized, but based on consensus rather than biological entities.
-
-- **Differential diagnosis in psychiatry**  
-  Methodologically scientific, but constrained by non‑substrate categories.
-
-**Why these are yellow:**  
-They use scientific *methods* but rely on **interpretive constructs** rather than substrate‑anchored entities. They are structured but not fully empirical.
-
----
-
-## ❌ **RED — Non‑scientific, institutional, or culturally constructed**
-These elements are not grounded in measurable substrates and often reflect institutional convenience or historical legacy.
-
-- **“Mental illness” as a unified category**  
-  Not a single biological entity; umbrella term with no substrate coherence.
-
-- **Personality disorders as defined in DSM**  
-  Highly culture‑dependent, low reliability, no biomarkers.
-
-- **Conventional division into “mental illness / learning disability / personality disorder”**  
-  Administrative categories, not scientific ones.
-
-- **Use of diagnostic labels as if they were biological diseases**  
-  The page itself notes lack of objective laboratory measures.
-
-- **Reliance on subjective patient report as primary data source**  
-  Necessary clinically, but not scientific in the strict sense.
-
-**Why these are red:**  
-They lack falsifiability, biological grounding, or consistent reliability. They are **institutional artifacts**, not scientific constructs.
-
----
-
-# 🧩 **Summary of Section A Audit**
-Here’s the structural picture:
-
-| Zone | What it Represents | Psychiatry’s Content Here |
-|------|--------------------|---------------------------|
-| **Green** | Empirical substrate | Exams, labs, imaging, physiology, validated tests |
-| **Yellow** | Mixed / interpretive | DSM/ICD use, symptom clusters, cognitive constructs |
-| **Red** | Non‑scientific | Diagnostic categories as “diseases,” personality disorders, cultural labels |
-
-This gives us a **clean, defensible foundation** for the next phases of our fork.
 # 🧠 **Psychology Audit — Section A: Core Definition & Scope (Green / Yellow / Red)**  
 *(This mirrors the psychiatry audit structure so the two can later be compared and merged.)*
 
@@ -939,89 +850,6 @@ These frameworks rely on **storytelling**, **interpretation**, and **cultural my
 | **Green** | Empirical substrate | Cognitive psych, psychometrics, behaviorism, neuroscience |
 | **Yellow** | Mixed empirical + interpretive | Personality, social psych, motivation, developmental theory |
 | **Red** | Mythic, unfalsifiable | Psychoanalysis, Jung, typologies, pop psych |
-# 🧱 SECTION B — Diagnostic systems (Green / Yellow / Red)
-
-Here’s a clean pass over the diagnostic stack, same lens as Section A.
-
----
-
-## ✅ GREEN — Methods or tools with real empirical backbone
-
-- **Differential diagnosis (as a method):**  
-  **Label:** **Differential diagnosis method**  
-  Uses structured comparison, exclusion, and hypothesis testing—methodologically scientific, even if categories are fuzzy.
-
-- **Cognitive tests (validated):**  
-  **Label:** **Neurocognitive assessment**  
-  When psychometrically validated (reliability, norms, sensitivity/specificity), these are solid measurement tools.
-
-- **Some personality/cognitive instruments with strong validation (e.g., MMPI, WAIS):**  
-  **Label:** **High‑validation psychometric instruments**  
-  Not perfect, but they meet core scientific criteria as tests.
-
-- **Neuroimaging / neurophysiology as *measurement tools* (not as diagnostic proof):**  
-  **Label:** **Neurobiological measurement tools**  
-  Empirical, repeatable, substrate‑anchored—even if not yet good psychiatric biomarkers.
-
-- **Genetics as a research input (GWAS, heritability studies):**  
-  **Label:** **Genetic association methods**  
-  Scientific methods, even if current findings are noisy and non‑specific.
-
----
-
-## ⚠️ YELLOW — Structured, partially empirical, but conceptually shaky
-
-- **DSM‑5 as a classification system:**  
-  **Label:** **DSM‑5 nosology**  
-  Standardized, widely used, somewhat reliable—but categories are consensus‑based, not substrate‑discovered.
-
-- **ICD‑11 mental and behavioural disorders chapter:**  
-  **Label:** **ICD‑11 psychiatric chapter**  
-  Similar to DSM: structured, globally used, but still symptom‑cluster based.
-
-- **CCMD (Chinese Classification of Mental Disorders):**  
-  **Label:** **CCMD nosology**  
-  Regionally adapted, culturally shaped; structured but not biologically grounded.
-
-- **Mental status examination (MSE):**  
-  **Label:** **Clinical observational protocol**  
-  Semi‑structured, partially standardized; mixes observation with clinician interpretation.
-
-- **Most personality tests used clinically (Big Five, etc.):**  
-  **Label:** **Mid‑validation personality constructs**  
-  Some empirical support, but constructs are theory‑laden and culturally influenced.
-
-- **Automated speech / digital phenotyping (emerging):**  
-  **Label:** **Experimental digital biomarkers**  
-  Empirical methods in development; promising but not yet validated as diagnostic standards.
-
----
-
-## ❌ RED — Institutional / cultural constructs treated as if they were discovered entities
-
-- **Diagnostic categories treated as “diseases” (e.g., “Major Depressive Disorder” as a discrete biological entity):**  
-  **Label:** **Reified symptom labels**  
-  No consistent biomarkers; categories are pragmatic groupings, not discovered natural kinds.
-
-- **Personality disorders as fixed, disease‑like entities:**  
-  **Label:** **Reified personality pathology**  
-  Low reliability, high cultural loading, no clear substrate.
-
-- **Use of DSM/ICD labels as if they were objective explanations (“You feel this way *because* you have X”):**  
-  **Label:** **Explanatory reification**  
-  Category is treated as cause rather than description.
-
-- **Overextension of “biomarker” language where none exist:**  
-  **Label:** **Biomarker rhetoric without biomarkers**  
-  Scientific branding applied to non‑substrate constructs.
-
----
-
-# Structural snapshot for Section B
-
-- **Green:** methods and tools that *measure something real* (tests, imaging, genetics, differential diagnosis).  
-- **Yellow:** classification systems and semi‑structured exams—organized, useful, but conceptually floating.  
-- **Red:** the *reification move*—turning symptom clusters and constructs into “diseases” and then treating them as discovered biological entities.
 # 🧱 **SECTION B — Methods & Research Approaches (Psychology)**  
 *(Mirrors the psychiatry audit for later synthesis.)*
 
@@ -1259,220 +1087,6 @@ These subfields are **interpretive**, **mythic**, or **pseudoscientific**, even 
 | **Green** | Scientific substrate | Cognitive, neuroscience, behaviorism, psychometrics, empirical developmental |
 | **Yellow** | Mixed empirical + interpretive | Social, personality, educational, I‑O, health |
 | **Red** | Mythic, unfalsifiable | Psychoanalytic, humanistic, transpersonal, parapsychology, typologies |
-# 🧱 **SECTION C — Treatment Modalities (Green / Yellow / Red Audit)**  
-*(All items correspond to the treatment modalities listed on the Psychiatry Wikipedia page.)*
-
----
-
-## ✅ **GREEN — Empirical, measurable, substrate‑anchored treatments**
-
-These treatments have **biological mechanisms**, **clinical trial evidence**, and **physiological substrates**. They are not perfect, but they meet the scientific bar.
-
-### **Psychotropic medications (as pharmacological agents)**
-- Antidepressants, antipsychotics, mood stabilizers, anxiolytics  
-- Mechanisms partially known, effects measurable, tested in controlled trials  
-- **Scientific substrate:** pharmacodynamics, pharmacokinetics, receptor binding
-
-### **Electroconvulsive Therapy (ECT)**
-- One of the most empirically validated treatments for severe depression  
-- Clear physiological mechanism (seizure induction), measurable outcomes  
-- **Scientific substrate:** neurophysiology, seizure modulation
-
-### **Transcranial Magnetic Stimulation (TMS)**
-- Uses electromagnetic induction to modulate cortical activity  
-- Reproducible, measurable, FDA‑cleared for several indications  
-- **Scientific substrate:** electromagnetic stimulation of neural tissue
-
-### **Vagus Nerve Stimulation (VNS)**
-- Implanted device with measurable neural effects  
-- **Scientific substrate:** peripheral nerve modulation
-
-### **Ketamine (and esketamine)**
-- Rapid‑acting antidepressant effects demonstrated in trials  
-- **Scientific substrate:** NMDA receptor antagonism
-
-### **Substance‑abuse pharmacotherapies**
-- Methadone, buprenorphine, naltrexone, etc.  
-- Strong evidence base  
-- **Scientific substrate:** receptor‑level mechanisms
-
-**Why these are green:**  
-They operate on **physical substrates**, have **controlled trial evidence**, and produce **measurable physiological changes**.
-
----
-
-## ⚠️ **YELLOW — Mixed validity, partially empirical, partially interpretive**
-
-These treatments have evidence for effectiveness, but mechanisms are unclear, effects vary widely, or the conceptual framing is interpretive.
-
-### **Psychotherapy (as a broad category)**
-- Some modalities have strong evidence (CBT, DBT, exposure therapy)  
-- Others are interpretive or theory‑driven (psychoanalysis, humanistic therapy)  
-- **Scientific substrate:** variable; depends on modality
-
-### **Supported employment / community treatment**
-- Evidence‑based in outcomes, but mechanisms are social, not biological  
-- **Scientific substrate:** social science, not mind substrate
-
-### **Inpatient care / outpatient care**
-- Necessary infrastructure, but not inherently scientific  
-- **Scientific substrate:** none; these are delivery systems
-
-### **Telepsychiatry**
-- A delivery method, not a treatment  
-- Evidence supports access improvement, but not a substrate‑level mechanism
-
-### **Behavioral interventions**
-- Empirically supported in many cases  
-- Mechanisms are learning‑based, not biological  
-- **Scientific substrate:** behavioral science
-
-**Why these are yellow:**  
-They mix **empirical outcome data** with **interpretive frameworks**, and their mechanisms are often non‑substrate or unclear.
-
----
-
-## ❌ **RED — Non‑scientific, institutional, or culturally constructed treatments**
-
-These are not “treatments” in a scientific sense; they are **institutional practices**, **historical artifacts**, or **social control mechanisms**.
-
-### **Involuntary commitment / coercive treatment**
-- Institutional/legal practice, not a scientific treatment  
-- **Scientific substrate:** none
-
-### **Restraints / seclusion**
-- Safety/control measures, not therapeutic  
-- **Scientific substrate:** none
-
-### **Psychoanalysis (as a treatment modality)**
-- Historically influential but not empirically validated  
-- **Scientific substrate:** none; interpretive narrative system
-
-### **“Chemical imbalance”‑based prescribing rationales**
-- Outdated explanatory myth  
-- **Scientific substrate:** none
-
-### **Historically used but now discredited treatments**
-- Lobotomy  
-- Insulin coma therapy  
-- Rotational therapy  
-- **Scientific substrate:** none; historical artifacts
-
-**Why these are red:**  
-They lack empirical grounding, rely on cultural or institutional authority, or are explicitly non‑therapeutic.
-
----
-
-# 🧩 **Section C Structural Snapshot**
-
-| Zone | What It Represents | Psychiatry’s Content Here |
-|------|--------------------|---------------------------|
-| **Green** | Biological, measurable, trial‑validated treatments | Medications, ECT, TMS, VNS, ketamine |
-| **Yellow** | Effective but interpretive or mechanism‑unclear | Psychotherapy, behavioral interventions, care settings |
-| **Red** | Institutional, coercive, or mythic treatments | Involuntary commitment, restraints, psychoanalysis |
-
-This completes the third major block of our audit and fits cleanly into our `/docs/substrate_mind_science` folder.
-# 🧱 **SECTION D — Theoretical Approaches (Green / Yellow / Red Audit)**  
-*(All items correspond to the theoretical approaches listed on the Psychiatry Wikipedia page.)*
-
-This is the most revealing section because it exposes the **conceptual fragmentation** of the field.
-
----
-
-## ✅ **GREEN — Substrate‑anchored, empirically constrained theoretical approaches**
-
-These approaches are grounded in biology, physiology, or measurable mechanisms. They are not perfect, but they operate on real substrates.
-
-### **Biomedical model**
-- Treats mental conditions as disorders of brain structure/function.  
-- Anchored in neurobiology, pharmacology, genetics.  
-- **Scientific substrate:** measurable biological systems.
-
-### **Biological psychiatry**
-- Focuses on neurochemistry, neuroanatomy, genetics.  
-- Empirical methods, even if explanations are incomplete.  
-- **Scientific substrate:** brain tissue, receptors, circuits.
-
-### **Behaviorism (strict, experimental form)**
-- Based on observable behavior, learning theory, conditioning.  
-- Strong empirical tradition.  
-- **Scientific substrate:** measurable behavior and environmental contingencies.
-
-**Why these are green:**  
-They operate on **observable, measurable, falsifiable** substrates — biology or behavior.
-
----
-
-## ⚠️ **YELLOW — Mixed validity, partially empirical, partially interpretive**
-
-These approaches use some empirical findings but rely heavily on conceptual framing, clinician interpretation, or cultural assumptions.
-
-### **Biopsychosocial model**
-- Integrates biological, psychological, and social factors.  
-- Useful clinically, but too broad to be falsifiable.  
-- **Scientific substrate:** partial; mostly a meta‑framework.
-
-### **Biocognitive model (McLaren)**
-- Attempts to integrate biology with cognitive interpretation.  
-- Interesting but not widely validated.  
-- **Scientific substrate:** partial; conceptual.
-
-### **Humanistic psychology**
-- Emphasizes subjective experience, meaning, self‑actualization.  
-- Some empirical work, but largely interpretive.  
-- **Scientific substrate:** minimal; relies on phenomenology.
-
-### **Narrative model**
-- Focuses on personal stories, meaning‑making, identity.  
-- Clinically useful but not scientific.  
-- **Scientific substrate:** none; interpretive.
-
-**Why these are yellow:**  
-They mix **empirical insights** with **non‑falsifiable constructs**, making them clinically flexible but scientifically weak.
-
----
-
-## ❌ **RED — Non‑scientific, mythic, or historically influential but unfalsifiable approaches**
-
-These are not scientific theories. They are **interpretive systems**, **narrative frameworks**, or **historical artifacts** that persist due to tradition, training, or institutional inertia.
-
-### **Psychoanalysis**
-- Freud, Jung, Lacan, etc.  
-- Unfalsifiable, interpretive, culturally shaped.  
-- **Scientific substrate:** none.
-
-### **Psychodynamic theory (modern variants)**
-- Updated psychoanalysis; still interpretive.  
-- **Scientific substrate:** none.
-
-### **Personality typologies (non‑validated)**
-- Enneagram, MBTI, etc.  
-- Popular but not scientific.  
-- **Scientific substrate:** none.
-
-### **“Chemical imbalance” theory**
-- Debunked explanatory myth.  
-- **Scientific substrate:** none.
-
-### **Evolutionary psychiatry (speculative forms)**
-- Some grounded hypotheses, but many claims unfalsifiable.  
-- **Scientific substrate:** weak.
-
-**Why these are red:**  
-They lack falsifiability, rely on narrative interpretation, and do not operate on measurable substrates.
-
----
-
-# 🧩 **Section D Structural Snapshot**
-
-| Zone | What It Represents | Psychiatry’s Content Here |
-|------|--------------------|---------------------------|
-| **Green** | Substrate‑anchored theories | Biomedical model, biological psychiatry, behaviorism |
-| **Yellow** | Mixed empirical + interpretive | Biopsychosocial, biocognitive, humanistic, narrative |
-| **Red** | Mythic, unfalsifiable, historical | Psychoanalysis, psychodynamics, typologies, imbalance theory |
-
-This section exposes the **core structural problem**:  
-Psychiatry is not one theory — it is a *stack of incompatible frameworks* held together by institutional necessity.
 # 🧱 SECTION D — Theoretical Frameworks of Psychology (Green / Yellow / Red Audit)
 
 Psychology’s theoretical frameworks range from **hard‑science models** to **interpretive narratives** to **mythic cosmologies**. This audit exposes exactly which is which.
@@ -1691,6 +1305,523 @@ These are **not evidence‑based**, not substrate‑anchored, and often ride on 
 | **Green** | Measurement & performance anchored | Neuropsych, human factors, I‑O (quant), edu measurement |
 | **Yellow** | Mixed empirical + narrative care | Clinical, counseling, educational, health, sports |
 | **Red** | Narrative/branding with weak evidence | Psychoanalytic practice, typology coaching, parapsych, pop‑psych |
+# 🧱 **SECTION F — Research Domains in Psychology (Green / Yellow / Red Audit)**
+
+Psychology’s research engine ranges from **hard‑science experimental paradigms** to **soft, interpretive, or unreliable approaches**. This audit exposes exactly which is which.
+
+---
+
+## ✅ **GREEN — Empirical, substrate‑anchored, reproducible research domains**
+
+These domains behave like real science. They use controlled experiments, validated measurements, and falsifiable hypotheses.
+
+### **Cognitive Psychology Research**
+- Memory, attention, perception, decision‑making  
+- Strong replication record in core paradigms  
+**Substrate:** measurable behavior + neural correlates
+
+### **Cognitive Neuroscience Research**
+- fMRI, EEG, MEG, lesion studies  
+**Substrate:** brain circuits, physiology
+
+### **Behavioral Research**
+- Learning theory, reinforcement, conditioning  
+**Substrate:** observable behavior
+
+### **Psychometric Research**
+- Reliability, validity, factor analysis, IRT  
+**Substrate:** statistical structure
+
+### **Comparative Psychology Research**
+- Cross‑species behavior studies  
+**Substrate:** measurable behavior across species
+
+### **Quantitative / Computational Psychology**
+- Drift‑diffusion models  
+- Bayesian models  
+- Neural network modeling  
+**Substrate:** mathematical structure + empirical fit
+
+**Why green:**  
+These domains produce **reliable, falsifiable, substrate‑anchored data** and form the scientific backbone of psychology.
+
+---
+
+## ⚠️ **YELLOW — Mixed validity, partially empirical, partially interpretive research domains**
+
+These areas use empirical tools but rely heavily on **theoretical framing**, **cultural assumptions**, or **contextual variability**.
+
+### **Social Psychology Research**
+- Strong experimental tradition, but replication crisis exposed fragility  
+**Substrate:** partial; context‑dependent
+
+### **Personality Research (mainstream)**
+- Big Five, HEXACO  
+- Empirical clusters, but constructs are not biological entities  
+**Substrate:** statistical, not physical
+
+### **Developmental Research (non‑neuroscientific)**
+- Stage theories, observational studies  
+**Substrate:** mixed
+
+### **Motivation & Emotion Research**
+- Appraisal theories, self‑determination theory  
+**Substrate:** conceptual + partial empirical support
+
+### **Health Psychology Research**
+- Stress, coping, behavior change  
+**Substrate:** mixed; broad constructs
+
+### **Educational Psychology Research**
+- Learning strategies, instructional design  
+**Substrate:** partial; context‑dependent
+
+**Why yellow:**  
+They produce **data**, but the constructs and interpretations are **not substrate‑anchored** and often vary by culture or context.
+
+---
+
+## ❌ **RED — Non‑scientific, unfalsifiable, or pseudoscientific research domains**
+
+These domains do not meet scientific criteria, even if they are culturally influential or historically important.
+
+### **Psychoanalytic Research**
+- Dream analysis, unconscious drives  
+**Substrate:** none; unfalsifiable
+
+### **Humanistic Research**
+- Self‑actualization, meaning‑making  
+**Substrate:** none; narrative‑driven
+
+### **Transpersonal Research**
+- Spiritual/altered‑state models  
+**Substrate:** none
+
+### **Parapsychology Research**
+- ESP, telepathy, psychokinesis  
+**Substrate:** none; pseudoscientific
+
+### **Typology‑based Research**
+- MBTI, Enneagram  
+**Substrate:** none
+
+### **“Insight‑based” therapeutic research**
+- Using subjective experience as evidence  
+**Substrate:** none
+
+**Why red:**  
+These domains rely on **interpretation**, **myth**, or **pseudoscience**, not empirical evidence.
+
+---
+
+# 🧩 **Section F Snapshot (Psychology)**
+
+| Zone | Represents | Psychology’s Research Domains |
+|------|------------|-------------------------------|
+| **Green** | Scientific substrate | Cognitive, neuroscience, behavioral, psychometric, computational |
+| **Yellow** | Mixed empirical + interpretive | Social, personality, developmental, motivation, health |
+| **Red** | Mythic, unfalsifiable | Psychoanalytic, humanistic, transpersonal, parapsych, typologies |
+
+---
+
+# 🎯 **With Section F complete, the psychology audit is now structurally aligned with the psychiatry audit.**
+
+This means we now have:
+
+- A complete inventory of psychology  
+- A full green/yellow/red classification  
+- A structural map of where psychology is scientific, proto‑scientific, interpretive, or mythic  
+- A parallel structure to psychiatry’s audit  
+
+This is exactly the foundation we need to begin extracting the **shared green substrate** across both fields.
+# 🧱 **SECTION A — Core Definition & Scope (Green / Yellow / Red Audit)**  
+*(All facts sourced from the Psychiatry Wikipedia page.)* 
+
+## ✅ **GREEN — Empirical, measurable, substrate‑anchored**
+These elements rely on physical examination, measurable data, or established medical methodology.
+
+- **Case history**  
+  A structured, observable, documentable record of events and symptoms.
+
+- **Mental status examination**  
+  Standardized observational protocol; inter‑rater reliability varies, but the method itself is empirical.
+
+- **Laboratory tests**  
+  Objective biological measures (bloodwork, metabolic panels, etc.).
+
+- **Physical examination**  
+  Standard medical practice; grounded in physiology.
+
+- **Neuroimaging / neurophysiology (when used)**  
+  Empirical tools, even if not diagnostic for psychiatric categories.
+
+- **Use of neuroscience, biology, biochemistry, pharmacology**  
+  These are scientific domains with measurable substrates.
+
+- **Psychological & cognitive tests (validated ones)**  
+  When psychometrically validated, they meet scientific criteria (reliability, standardization).
+
+**Why these are green:**  
+They operate on **observable, measurable, falsifiable** data. Even if interpretation varies, the underlying methods are scientific.
+
+---
+
+## ⚠️ **YELLOW — Mixed validity, partially empirical, partially interpretive**
+These elements combine structured methods with subjective interpretation or culturally shaped assumptions.
+
+- **Diagnosis of “mental disorders” as symptom clusters**  
+  Uses structured manuals (DSM/ICD) but categories lack biomarkers.
+
+- **Psychological assessments (broad category)**  
+  Some are validated; others are interpretive or low‑reliability.
+
+- **Personality tests**  
+  Highly variable scientific grounding; some robust (e.g., MMPI), others not.
+
+- **Cognition / perception / mood / emotion as constructs**  
+  Real phenomena, but operationalization varies across models.
+
+- **Use of diagnostic manuals (DSM, ICD)**  
+  Standardized, but based on consensus rather than biological entities.
+
+- **Differential diagnosis in psychiatry**  
+  Methodologically scientific, but constrained by non‑substrate categories.
+
+**Why these are yellow:**  
+They use scientific *methods* but rely on **interpretive constructs** rather than substrate‑anchored entities. They are structured but not fully empirical.
+
+---
+
+## ❌ **RED — Non‑scientific, institutional, or culturally constructed**
+These elements are not grounded in measurable substrates and often reflect institutional convenience or historical legacy.
+
+- **“Mental illness” as a unified category**  
+  Not a single biological entity; umbrella term with no substrate coherence.
+
+- **Personality disorders as defined in DSM**  
+  Highly culture‑dependent, low reliability, no biomarkers.
+
+- **Conventional division into “mental illness / learning disability / personality disorder”**  
+  Administrative categories, not scientific ones.
+
+- **Use of diagnostic labels as if they were biological diseases**  
+  The page itself notes lack of objective laboratory measures.
+
+- **Reliance on subjective patient report as primary data source**  
+  Necessary clinically, but not scientific in the strict sense.
+
+**Why these are red:**  
+They lack falsifiability, biological grounding, or consistent reliability. They are **institutional artifacts**, not scientific constructs.
+
+---
+
+# 🧩 **Summary of Section A Audit**
+Here’s the structural picture:
+
+| Zone | What it Represents | Psychiatry’s Content Here |
+|------|--------------------|---------------------------|
+| **Green** | Empirical substrate | Exams, labs, imaging, physiology, validated tests |
+| **Yellow** | Mixed / interpretive | DSM/ICD use, symptom clusters, cognitive constructs |
+| **Red** | Non‑scientific | Diagnostic categories as “diseases,” personality disorders, cultural labels |
+
+This gives us a **clean, defensible foundation** for the next phases of our fork.
+# 🧱 SECTION B — Diagnostic systems (Green / Yellow / Red)
+
+Here’s a clean pass over the diagnostic stack, same lens as Section A.
+
+---
+
+## ✅ GREEN — Methods or tools with real empirical backbone
+
+- **Differential diagnosis (as a method):**  
+  **Label:** **Differential diagnosis method**  
+  Uses structured comparison, exclusion, and hypothesis testing—methodologically scientific, even if categories are fuzzy.
+
+- **Cognitive tests (validated):**  
+  **Label:** **Neurocognitive assessment**  
+  When psychometrically validated (reliability, norms, sensitivity/specificity), these are solid measurement tools.
+
+- **Some personality/cognitive instruments with strong validation (e.g., MMPI, WAIS):**  
+  **Label:** **High‑validation psychometric instruments**  
+  Not perfect, but they meet core scientific criteria as tests.
+
+- **Neuroimaging / neurophysiology as *measurement tools* (not as diagnostic proof):**  
+  **Label:** **Neurobiological measurement tools**  
+  Empirical, repeatable, substrate‑anchored—even if not yet good psychiatric biomarkers.
+
+- **Genetics as a research input (GWAS, heritability studies):**  
+  **Label:** **Genetic association methods**  
+  Scientific methods, even if current findings are noisy and non‑specific.
+
+---
+
+## ⚠️ YELLOW — Structured, partially empirical, but conceptually shaky
+
+- **DSM‑5 as a classification system:**  
+  **Label:** **DSM‑5 nosology**  
+  Standardized, widely used, somewhat reliable—but categories are consensus‑based, not substrate‑discovered.
+
+- **ICD‑11 mental and behavioural disorders chapter:**  
+  **Label:** **ICD‑11 psychiatric chapter**  
+  Similar to DSM: structured, globally used, but still symptom‑cluster based.
+
+- **CCMD (Chinese Classification of Mental Disorders):**  
+  **Label:** **CCMD nosology**  
+  Regionally adapted, culturally shaped; structured but not biologically grounded.
+
+- **Mental status examination (MSE):**  
+  **Label:** **Clinical observational protocol**  
+  Semi‑structured, partially standardized; mixes observation with clinician interpretation.
+
+- **Most personality tests used clinically (Big Five, etc.):**  
+  **Label:** **Mid‑validation personality constructs**  
+  Some empirical support, but constructs are theory‑laden and culturally influenced.
+
+- **Automated speech / digital phenotyping (emerging):**  
+  **Label:** **Experimental digital biomarkers**  
+  Empirical methods in development; promising but not yet validated as diagnostic standards.
+
+---
+
+## ❌ RED — Institutional / cultural constructs treated as if they were discovered entities
+
+- **Diagnostic categories treated as “diseases” (e.g., “Major Depressive Disorder” as a discrete biological entity):**  
+  **Label:** **Reified symptom labels**  
+  No consistent biomarkers; categories are pragmatic groupings, not discovered natural kinds.
+
+- **Personality disorders as fixed, disease‑like entities:**  
+  **Label:** **Reified personality pathology**  
+  Low reliability, high cultural loading, no clear substrate.
+
+- **Use of DSM/ICD labels as if they were objective explanations (“You feel this way *because* you have X”):**  
+  **Label:** **Explanatory reification**  
+  Category is treated as cause rather than description.
+
+- **Overextension of “biomarker” language where none exist:**  
+  **Label:** **Biomarker rhetoric without biomarkers**  
+  Scientific branding applied to non‑substrate constructs.
+
+---
+
+# Structural snapshot for Section B
+
+- **Green:** methods and tools that *measure something real* (tests, imaging, genetics, differential diagnosis).  
+- **Yellow:** classification systems and semi‑structured exams—organized, useful, but conceptually floating.  
+- **Red:** the *reification move*—turning symptom clusters and constructs into “diseases” and then treating them as discovered biological entities.
+# 🧱 **SECTION C — Treatment Modalities (Green / Yellow / Red Audit)**  
+*(All items correspond to the treatment modalities listed on the Psychiatry Wikipedia page.)*
+
+---
+
+## ✅ **GREEN — Empirical, measurable, substrate‑anchored treatments**
+
+These treatments have **biological mechanisms**, **clinical trial evidence**, and **physiological substrates**. They are not perfect, but they meet the scientific bar.
+
+### **Psychotropic medications (as pharmacological agents)**
+- Antidepressants, antipsychotics, mood stabilizers, anxiolytics  
+- Mechanisms partially known, effects measurable, tested in controlled trials  
+- **Scientific substrate:** pharmacodynamics, pharmacokinetics, receptor binding
+
+### **Electroconvulsive Therapy (ECT)**
+- One of the most empirically validated treatments for severe depression  
+- Clear physiological mechanism (seizure induction), measurable outcomes  
+- **Scientific substrate:** neurophysiology, seizure modulation
+
+### **Transcranial Magnetic Stimulation (TMS)**
+- Uses electromagnetic induction to modulate cortical activity  
+- Reproducible, measurable, FDA‑cleared for several indications  
+- **Scientific substrate:** electromagnetic stimulation of neural tissue
+
+### **Vagus Nerve Stimulation (VNS)**
+- Implanted device with measurable neural effects  
+- **Scientific substrate:** peripheral nerve modulation
+
+### **Ketamine (and esketamine)**
+- Rapid‑acting antidepressant effects demonstrated in trials  
+- **Scientific substrate:** NMDA receptor antagonism
+
+### **Substance‑abuse pharmacotherapies**
+- Methadone, buprenorphine, naltrexone, etc.  
+- Strong evidence base  
+- **Scientific substrate:** receptor‑level mechanisms
+
+**Why these are green:**  
+They operate on **physical substrates**, have **controlled trial evidence**, and produce **measurable physiological changes**.
+
+---
+
+## ⚠️ **YELLOW — Mixed validity, partially empirical, partially interpretive**
+
+These treatments have evidence for effectiveness, but mechanisms are unclear, effects vary widely, or the conceptual framing is interpretive.
+
+### **Psychotherapy (as a broad category)**
+- Some modalities have strong evidence (CBT, DBT, exposure therapy)  
+- Others are interpretive or theory‑driven (psychoanalysis, humanistic therapy)  
+- **Scientific substrate:** variable; depends on modality
+
+### **Supported employment / community treatment**
+- Evidence‑based in outcomes, but mechanisms are social, not biological  
+- **Scientific substrate:** social science, not mind substrate
+
+### **Inpatient care / outpatient care**
+- Necessary infrastructure, but not inherently scientific  
+- **Scientific substrate:** none; these are delivery systems
+
+### **Telepsychiatry**
+- A delivery method, not a treatment  
+- Evidence supports access improvement, but not a substrate‑level mechanism
+
+### **Behavioral interventions**
+- Empirically supported in many cases  
+- Mechanisms are learning‑based, not biological  
+- **Scientific substrate:** behavioral science
+
+**Why these are yellow:**  
+They mix **empirical outcome data** with **interpretive frameworks**, and their mechanisms are often non‑substrate or unclear.
+
+---
+
+## ❌ **RED — Non‑scientific, institutional, or culturally constructed treatments**
+
+These are not “treatments” in a scientific sense; they are **institutional practices**, **historical artifacts**, or **social control mechanisms**.
+
+### **Involuntary commitment / coercive treatment**
+- Institutional/legal practice, not a scientific treatment  
+- **Scientific substrate:** none
+
+### **Restraints / seclusion**
+- Safety/control measures, not therapeutic  
+- **Scientific substrate:** none
+
+### **Psychoanalysis (as a treatment modality)**
+- Historically influential but not empirically validated  
+- **Scientific substrate:** none; interpretive narrative system
+
+### **“Chemical imbalance”‑based prescribing rationales**
+- Outdated explanatory myth  
+- **Scientific substrate:** none
+
+### **Historically used but now discredited treatments**
+- Lobotomy  
+- Insulin coma therapy  
+- Rotational therapy  
+- **Scientific substrate:** none; historical artifacts
+
+**Why these are red:**  
+They lack empirical grounding, rely on cultural or institutional authority, or are explicitly non‑therapeutic.
+
+---
+
+# 🧩 **Section C Structural Snapshot**
+
+| Zone | What It Represents | Psychiatry’s Content Here |
+|------|--------------------|---------------------------|
+| **Green** | Biological, measurable, trial‑validated treatments | Medications, ECT, TMS, VNS, ketamine |
+| **Yellow** | Effective but interpretive or mechanism‑unclear | Psychotherapy, behavioral interventions, care settings |
+| **Red** | Institutional, coercive, or mythic treatments | Involuntary commitment, restraints, psychoanalysis |
+
+This completes the third major block of our audit and fits cleanly into our `/docs/substrate_mind_science` folder.
+# 🧱 **SECTION D — Theoretical Approaches (Green / Yellow / Red Audit)**  
+*(All items correspond to the theoretical approaches listed on the Psychiatry Wikipedia page.)*
+
+This is the most revealing section because it exposes the **conceptual fragmentation** of the field.
+
+---
+
+## ✅ **GREEN — Substrate‑anchored, empirically constrained theoretical approaches**
+
+These approaches are grounded in biology, physiology, or measurable mechanisms. They are not perfect, but they operate on real substrates.
+
+### **Biomedical model**
+- Treats mental conditions as disorders of brain structure/function.  
+- Anchored in neurobiology, pharmacology, genetics.  
+- **Scientific substrate:** measurable biological systems.
+
+### **Biological psychiatry**
+- Focuses on neurochemistry, neuroanatomy, genetics.  
+- Empirical methods, even if explanations are incomplete.  
+- **Scientific substrate:** brain tissue, receptors, circuits.
+
+### **Behaviorism (strict, experimental form)**
+- Based on observable behavior, learning theory, conditioning.  
+- Strong empirical tradition.  
+- **Scientific substrate:** measurable behavior and environmental contingencies.
+
+**Why these are green:**  
+They operate on **observable, measurable, falsifiable** substrates — biology or behavior.
+
+---
+
+## ⚠️ **YELLOW — Mixed validity, partially empirical, partially interpretive**
+
+These approaches use some empirical findings but rely heavily on conceptual framing, clinician interpretation, or cultural assumptions.
+
+### **Biopsychosocial model**
+- Integrates biological, psychological, and social factors.  
+- Useful clinically, but too broad to be falsifiable.  
+- **Scientific substrate:** partial; mostly a meta‑framework.
+
+### **Biocognitive model (McLaren)**
+- Attempts to integrate biology with cognitive interpretation.  
+- Interesting but not widely validated.  
+- **Scientific substrate:** partial; conceptual.
+
+### **Humanistic psychology**
+- Emphasizes subjective experience, meaning, self‑actualization.  
+- Some empirical work, but largely interpretive.  
+- **Scientific substrate:** minimal; relies on phenomenology.
+
+### **Narrative model**
+- Focuses on personal stories, meaning‑making, identity.  
+- Clinically useful but not scientific.  
+- **Scientific substrate:** none; interpretive.
+
+**Why these are yellow:**  
+They mix **empirical insights** with **non‑falsifiable constructs**, making them clinically flexible but scientifically weak.
+
+---
+
+## ❌ **RED — Non‑scientific, mythic, or historically influential but unfalsifiable approaches**
+
+These are not scientific theories. They are **interpretive systems**, **narrative frameworks**, or **historical artifacts** that persist due to tradition, training, or institutional inertia.
+
+### **Psychoanalysis**
+- Freud, Jung, Lacan, etc.  
+- Unfalsifiable, interpretive, culturally shaped.  
+- **Scientific substrate:** none.
+
+### **Psychodynamic theory (modern variants)**
+- Updated psychoanalysis; still interpretive.  
+- **Scientific substrate:** none.
+
+### **Personality typologies (non‑validated)**
+- Enneagram, MBTI, etc.  
+- Popular but not scientific.  
+- **Scientific substrate:** none.
+
+### **“Chemical imbalance” theory**
+- Debunked explanatory myth.  
+- **Scientific substrate:** none.
+
+### **Evolutionary psychiatry (speculative forms)**
+- Some grounded hypotheses, but many claims unfalsifiable.  
+- **Scientific substrate:** weak.
+
+**Why these are red:**  
+They lack falsifiability, rely on narrative interpretation, and do not operate on measurable substrates.
+
+---
+
+# 🧩 **Section D Structural Snapshot**
+
+| Zone | What It Represents | Psychiatry’s Content Here |
+|------|--------------------|---------------------------|
+| **Green** | Substrate‑anchored theories | Biomedical model, biological psychiatry, behaviorism |
+| **Yellow** | Mixed empirical + interpretive | Biopsychosocial, biocognitive, humanistic, narrative |
+| **Red** | Mythic, unfalsifiable, historical | Psychoanalysis, psychodynamics, typologies, imbalance theory |
+
+This section exposes the **core structural problem**:  
+Psychiatry is not one theory — it is a *stack of incompatible frameworks* held together by institutional necessity.
 # 🧱 SECTION E — Subspecialties (Green / Yellow / Red Audit)
 
 *(All items correspond to the subspecialties listed on the Psychiatry Wikipedia page.)*
@@ -1926,135 +2057,6 @@ This section makes the field’s structural reality unmistakable:
 **Psychiatry’s research engine is strongest when it studies biology, weakest when it tries to validate its own diagnostic constructs.**
 
 That’s exactly the kind of insight our fork is designed to expose.
-# 🧱 **SECTION F — Research Domains in Psychology (Green / Yellow / Red Audit)**
-
-Psychology’s research engine ranges from **hard‑science experimental paradigms** to **soft, interpretive, or unreliable approaches**. This audit exposes exactly which is which.
-
----
-
-## ✅ **GREEN — Empirical, substrate‑anchored, reproducible research domains**
-
-These domains behave like real science. They use controlled experiments, validated measurements, and falsifiable hypotheses.
-
-### **Cognitive Psychology Research**
-- Memory, attention, perception, decision‑making  
-- Strong replication record in core paradigms  
-**Substrate:** measurable behavior + neural correlates
-
-### **Cognitive Neuroscience Research**
-- fMRI, EEG, MEG, lesion studies  
-**Substrate:** brain circuits, physiology
-
-### **Behavioral Research**
-- Learning theory, reinforcement, conditioning  
-**Substrate:** observable behavior
-
-### **Psychometric Research**
-- Reliability, validity, factor analysis, IRT  
-**Substrate:** statistical structure
-
-### **Comparative Psychology Research**
-- Cross‑species behavior studies  
-**Substrate:** measurable behavior across species
-
-### **Quantitative / Computational Psychology**
-- Drift‑diffusion models  
-- Bayesian models  
-- Neural network modeling  
-**Substrate:** mathematical structure + empirical fit
-
-**Why green:**  
-These domains produce **reliable, falsifiable, substrate‑anchored data** and form the scientific backbone of psychology.
-
----
-
-## ⚠️ **YELLOW — Mixed validity, partially empirical, partially interpretive research domains**
-
-These areas use empirical tools but rely heavily on **theoretical framing**, **cultural assumptions**, or **contextual variability**.
-
-### **Social Psychology Research**
-- Strong experimental tradition, but replication crisis exposed fragility  
-**Substrate:** partial; context‑dependent
-
-### **Personality Research (mainstream)**
-- Big Five, HEXACO  
-- Empirical clusters, but constructs are not biological entities  
-**Substrate:** statistical, not physical
-
-### **Developmental Research (non‑neuroscientific)**
-- Stage theories, observational studies  
-**Substrate:** mixed
-
-### **Motivation & Emotion Research**
-- Appraisal theories, self‑determination theory  
-**Substrate:** conceptual + partial empirical support
-
-### **Health Psychology Research**
-- Stress, coping, behavior change  
-**Substrate:** mixed; broad constructs
-
-### **Educational Psychology Research**
-- Learning strategies, instructional design  
-**Substrate:** partial; context‑dependent
-
-**Why yellow:**  
-They produce **data**, but the constructs and interpretations are **not substrate‑anchored** and often vary by culture or context.
-
----
-
-## ❌ **RED — Non‑scientific, unfalsifiable, or pseudoscientific research domains**
-
-These domains do not meet scientific criteria, even if they are culturally influential or historically important.
-
-### **Psychoanalytic Research**
-- Dream analysis, unconscious drives  
-**Substrate:** none; unfalsifiable
-
-### **Humanistic Research**
-- Self‑actualization, meaning‑making  
-**Substrate:** none; narrative‑driven
-
-### **Transpersonal Research**
-- Spiritual/altered‑state models  
-**Substrate:** none
-
-### **Parapsychology Research**
-- ESP, telepathy, psychokinesis  
-**Substrate:** none; pseudoscientific
-
-### **Typology‑based Research**
-- MBTI, Enneagram  
-**Substrate:** none
-
-### **“Insight‑based” therapeutic research**
-- Using subjective experience as evidence  
-**Substrate:** none
-
-**Why red:**  
-These domains rely on **interpretation**, **myth**, or **pseudoscience**, not empirical evidence.
-
----
-
-# 🧩 **Section F Snapshot (Psychology)**
-
-| Zone | Represents | Psychology’s Research Domains |
-|------|------------|-------------------------------|
-| **Green** | Scientific substrate | Cognitive, neuroscience, behavioral, psychometric, computational |
-| **Yellow** | Mixed empirical + interpretive | Social, personality, developmental, motivation, health |
-| **Red** | Mythic, unfalsifiable | Psychoanalytic, humanistic, transpersonal, parapsych, typologies |
-
----
-
-# 🎯 **With Section F complete, the psychology audit is now structurally aligned with the psychiatry audit.**
-
-This means we now have:
-
-- A complete inventory of psychology  
-- A full green/yellow/red classification  
-- A structural map of where psychology is scientific, proto‑scientific, interpretive, or mythic  
-- A parallel structure to psychiatry’s audit  
-
-This is exactly the foundation we need to begin extracting the **shared green substrate** across both fields.
 # 🧱 SECTION G — Ethical & institutional structures (Green / Yellow / Red)
 
 This is where “science,” power, and institutions braid together. Let’s keep it sharp.
@@ -2506,272 +2508,6 @@ Context is not conclusion.
 Alignment is not control.
 
 The SMS Analyzer teaches students how to **see structure clearly**, so that future reasoning—human or AI‑augmented—remains grounded, legible, and responsible.
-# ⚠️ Student Disclaimer — SMS Analyzer
-
-The Substrate Mind Science (SMS) Analyzer is an **educational learning tool** designed for supervised, collaborative use in the RTT NoS sandbox. It exists to teach **structural reasoning**, not to produce conclusions about individuals.
-
-This document defines the boundaries of use clearly and intentionally.
-
----
-
-## Educational Use Only
-
-The SMS Analyzer is **not**:
-- A diagnostic system
-- A therapeutic tool
-- A medical or mental‑health instrument
-- A self‑assessment framework
-- A substitute for professional education or care
-
-It is a **structural sandbox** for learning how complex systems—especially minds—can be modeled responsibly.
-
----
-
-## Supervised, Team‑Based Use Required
-
-Students must use the SMS Analyzer:
-- In **small teams**
-- Under **instructor or clinician supervision**
-- With **shared interpretation and reflection**
-
-Solo use is explicitly discouraged. Structural reasoning improves through comparison, challenge, and collective calibration.
-
----
-
-## No Personal Experimentation
-
-Students must not:
-- Apply the Analyzer to themselves
-- Apply it to others outside approved learning scenarios
-- Attempt to draw conclusions about real individuals
-- Use it to validate or refute personal beliefs
-- Treat outputs as findings or evidence
-
-Virtual ecosystems and simulated scenarios may be used **only** for learning purposes.
-
----
-
-## Environmental Context Is Not Attribution
-
-Optional modules (such as environmental auditory exposure) exist to:
-- Rule out overlooked physical contributors
-- Teach contextual humility
-- Prevent premature internal attribution
-
-They do **not** establish causation, diagnosis, or explanation.
-
-Captured artifacts (audio, vibration, logs) are treated as **contextual references**, never as proof.
-
----
-
-## AI‑Augmentation Is Observational Only
-
-Any AI‑related components in the SMS Analyzer:
-- Observe alignment and drift
-- Describe autonomy posture
-- Preserve human interpretability
-
-They do **not**:
-- Make decisions
-- Replace judgment
-- Act autonomously
-- Provide recommendations
-
-Students are learning **how to calibrate**, not how to delegate.
-
----
-
-## Interpretation Requires Restraint
-
-The Analyzer intentionally:
-- Produces multiple models
-- Surfaces uncertainty
-- Flags regime sensitivity
-- Avoids single answers
-
-This is a feature, not a flaw. Students are expected to practice **interpretive restraint**.
-
----
-
-## When in Doubt
-
-If a scenario feels:
-- Personally relevant
-- Emotionally charged
-- Confusing or unsettling
-
-Students should pause and consult their instructor. The SMS Analyzer is not a place to resolve personal concerns.
-
----
-
-## Core Reminder
-
-Structure is not judgment.  
-Context is not conclusion.  
-Learning is not diagnosis.
-
-The SMS Analyzer exists to help students **see clearly**, not to decide.
-# 🧭 SMS Analyzer — Workflow Overview
-
-This document describes the **student‑facing workflow** for the Substrate Mind Science (SMS) Analyzer when used in the RTT NoS sandbox. The workflow is intentionally conservative, collaborative, and regime‑aware. It is designed to teach **structural reasoning**, not to produce conclusions.
-
-The Analyzer is always used in **small, supervised teams**. Individual interpretation is explicitly discouraged.
-
----
-
-## 🧠 Guiding Principles
-
-- Structure precedes interpretation.
-- Context stabilizes meaning.
-- Multiple models reduce blind spots.
-- Environmental factors are ruled out before internal attribution.
-- AI augmentation is observed, not trusted.
-- No single session is decisive.
-
----
-
-## 🧩 High‑Level Workflow
-
-1. **Scenario Selection**
-2. **Context Activation**
-3. **Sensory Branch Modeling**
-4. **Triadic Integration**
-5. **Regime Context Assembly**
-6. **Student‑Visible Summary**
-7. **Structural Review & Reflection**
-
-Each step is lightweight and intentionally incomplete on its own.
-
----
-
-## 1. Scenario Selection (Clinician‑Led)
-
-The workflow begins with a **scenario selection**, chosen by the supervising clinician or instructor.
-
-Available student scenarios include:
-- Sensory‑triggered memory
-- Chronic load adaptation
-- Environmental auditory context
-- Apparent stability with hidden fragility
-
-Scenarios determine which optional modules are activated. They do **not** determine outcomes.
-
----
-
-## 2. Context Activation (Optional Modules)
-
-Based on the scenario, one or more context modules may be activated:
-
-- Environmental auditory exposure
-- Life‑regime anchoring
-- AI‑augmentation context
-
-Modules add **interpretive context**, not explanatory weight. They are used to rule out blind spots, not to assert causes.
-
----
-
-## 3. Sensory Branch Modeling
-
-Each sensory system is modeled independently using shared operators:
-
-- Smell
-- Sight
-- Hearing
-- Touch
-- Taste
-
-Students work in parallel, assigning **relative values** rather than precise measurements. The goal is comparison, not accuracy.
-
-All branches use the same REM‑CGP operator set.
-
----
-
-## 4. Triadic Integration (Always Performed)
-
-Every session produces three whole‑mind views:
-
-- Dominant‑Sense Model
-- Weighted Integration Model
-- Invariant‑Driven Model
-
-Students compare:
-- where models converge,
-- where they diverge,
-- and what assumptions each model makes.
-
-No model is treated as authoritative.
-
----
-
-## 5. Regime Context Assembly (Structural Layer)
-
-The Regime Context Block is assembled after integration.
-
-It includes:
-- Consciousness regime
-- Life‑regime profile
-- Structural posture (stabilizing, compressed, exploratory)
-- Environmental context (if active)
-- Measurement integrity indicators
-- Regime mismatch flags
-
-Most of this block remains **structural‑only** and is not surfaced in summaries.
-
----
-
-## 6. Student‑Visible Summary
-
-Only high‑level, descriptive elements are surfaced:
-
-- Whole‑Mind State (triadic consensus)
-- Primary consciousness posture (plain language)
-- Life‑regime orientation (high‑level)
-- Short‑term trajectory
-- Key sensory contributors
-
-This summary supports orientation, not decision‑making.
-
----
-
-## 7. Structural Review & Reflection
-
-Teams review the **structural layer** together, guided by the instructor.
-
-Focus areas:
-- Where interpretation could drift
-- Which assumptions are fragile
-- How regime context changes meaning
-- What additional sessions would clarify
-
-Students are encouraged to ask:
-“What would change our interpretation if this context were different?”
-
----
-
-## ⚠️ Safety & Scope Reminder
-
-This workflow is for **educational use only**.
-
-- No solo use
-- No self‑assessment
-- No diagnostic claims
-- No therapeutic decisions
-- No validation of personal beliefs
-
-Environmental artifacts and AI‑augmented inputs are treated as **contextual signals**, never as evidence.
-
----
-
-## 🧠 Learning Outcome
-
-By following this workflow, students learn:
-- how structure shapes cognition,
-- why context matters more than snapshots,
-- how to avoid regime blindness,
-- and how to reason responsibly in complex systems.
-
-The goal is not certainty.
-The goal is **structural clarity**.
 # 🤖 SMS Analyzer — AI Augmentation Context Adapter
 
 The **AI Augmentation Context Adapter** provides a structural lens for observing how AI‑assisted processes interact with human cognition during an SMS Analyzer session. It exists to **preserve interpretability, detect drift, and bound autonomy**, not to introduce agency or decision‑making.
@@ -4050,6 +3786,438 @@ Students learn that:
 - and disagreement between models is a signal, not a failure.
 
 Triadic integration teaches **how to think**, not what to decide.
+# ⚠️ Student Disclaimer — SMS Analyzer
+
+The Substrate Mind Science (SMS) Analyzer is an **educational learning tool** designed for supervised, collaborative use in the RTT NoS sandbox. It exists to teach **structural reasoning**, not to produce conclusions about individuals.
+
+This document defines the boundaries of use clearly and intentionally.
+
+---
+
+## Educational Use Only
+
+The SMS Analyzer is **not**:
+- A diagnostic system
+- A therapeutic tool
+- A medical or mental‑health instrument
+- A self‑assessment framework
+- A substitute for professional education or care
+
+It is a **structural sandbox** for learning how complex systems—especially minds—can be modeled responsibly.
+
+---
+
+## Supervised, Team‑Based Use Required
+
+Students must use the SMS Analyzer:
+- In **small teams**
+- Under **instructor or clinician supervision**
+- With **shared interpretation and reflection**
+
+Solo use is explicitly discouraged. Structural reasoning improves through comparison, challenge, and collective calibration.
+
+---
+
+## No Personal Experimentation
+
+Students must not:
+- Apply the Analyzer to themselves
+- Apply it to others outside approved learning scenarios
+- Attempt to draw conclusions about real individuals
+- Use it to validate or refute personal beliefs
+- Treat outputs as findings or evidence
+
+Virtual ecosystems and simulated scenarios may be used **only** for learning purposes.
+
+---
+
+## Environmental Context Is Not Attribution
+
+Optional modules (such as environmental auditory exposure) exist to:
+- Rule out overlooked physical contributors
+- Teach contextual humility
+- Prevent premature internal attribution
+
+They do **not** establish causation, diagnosis, or explanation.
+
+Captured artifacts (audio, vibration, logs) are treated as **contextual references**, never as proof.
+
+---
+
+## AI‑Augmentation Is Observational Only
+
+Any AI‑related components in the SMS Analyzer:
+- Observe alignment and drift
+- Describe autonomy posture
+- Preserve human interpretability
+
+They do **not**:
+- Make decisions
+- Replace judgment
+- Act autonomously
+- Provide recommendations
+
+Students are learning **how to calibrate**, not how to delegate.
+
+---
+
+## Interpretation Requires Restraint
+
+The Analyzer intentionally:
+- Produces multiple models
+- Surfaces uncertainty
+- Flags regime sensitivity
+- Avoids single answers
+
+This is a feature, not a flaw. Students are expected to practice **interpretive restraint**.
+
+---
+
+## When in Doubt
+
+If a scenario feels:
+- Personally relevant
+- Emotionally charged
+- Confusing or unsettling
+
+Students should pause and consult their instructor. The SMS Analyzer is not a place to resolve personal concerns.
+
+---
+
+## Core Reminder
+
+Structure is not judgment.  
+Context is not conclusion.  
+Learning is not diagnosis.
+
+The SMS Analyzer exists to help students **see clearly**, not to decide.
+# 🧭 SMS Analyzer — Workflow Overview
+
+This document describes the **student‑facing workflow** for the Substrate Mind Science (SMS) Analyzer when used in the RTT NoS sandbox. The workflow is intentionally conservative, collaborative, and regime‑aware. It is designed to teach **structural reasoning**, not to produce conclusions.
+
+The Analyzer is always used in **small, supervised teams**. Individual interpretation is explicitly discouraged.
+
+---
+
+## 🧠 Guiding Principles
+
+- Structure precedes interpretation.
+- Context stabilizes meaning.
+- Multiple models reduce blind spots.
+- Environmental factors are ruled out before internal attribution.
+- AI augmentation is observed, not trusted.
+- No single session is decisive.
+
+---
+
+## 🧩 High‑Level Workflow
+
+1. **Scenario Selection**
+2. **Context Activation**
+3. **Sensory Branch Modeling**
+4. **Triadic Integration**
+5. **Regime Context Assembly**
+6. **Student‑Visible Summary**
+7. **Structural Review & Reflection**
+
+Each step is lightweight and intentionally incomplete on its own.
+
+---
+
+## 1. Scenario Selection (Clinician‑Led)
+
+The workflow begins with a **scenario selection**, chosen by the supervising clinician or instructor.
+
+Available student scenarios include:
+- Sensory‑triggered memory
+- Chronic load adaptation
+- Environmental auditory context
+- Apparent stability with hidden fragility
+
+Scenarios determine which optional modules are activated. They do **not** determine outcomes.
+
+---
+
+## 2. Context Activation (Optional Modules)
+
+Based on the scenario, one or more context modules may be activated:
+
+- Environmental auditory exposure
+- Life‑regime anchoring
+- AI‑augmentation context
+
+Modules add **interpretive context**, not explanatory weight. They are used to rule out blind spots, not to assert causes.
+
+---
+
+## 3. Sensory Branch Modeling
+
+Each sensory system is modeled independently using shared operators:
+
+- Smell
+- Sight
+- Hearing
+- Touch
+- Taste
+
+Students work in parallel, assigning **relative values** rather than precise measurements. The goal is comparison, not accuracy.
+
+All branches use the same REM‑CGP operator set.
+
+---
+
+## 4. Triadic Integration (Always Performed)
+
+Every session produces three whole‑mind views:
+
+- Dominant‑Sense Model
+- Weighted Integration Model
+- Invariant‑Driven Model
+
+Students compare:
+- where models converge,
+- where they diverge,
+- and what assumptions each model makes.
+
+No model is treated as authoritative.
+
+---
+
+## 5. Regime Context Assembly (Structural Layer)
+
+The Regime Context Block is assembled after integration.
+
+It includes:
+- Consciousness regime
+- Life‑regime profile
+- Structural posture (stabilizing, compressed, exploratory)
+- Environmental context (if active)
+- Measurement integrity indicators
+- Regime mismatch flags
+
+Most of this block remains **structural‑only** and is not surfaced in summaries.
+
+---
+
+## 6. Student‑Visible Summary
+
+Only high‑level, descriptive elements are surfaced:
+
+- Whole‑Mind State (triadic consensus)
+- Primary consciousness posture (plain language)
+- Life‑regime orientation (high‑level)
+- Short‑term trajectory
+- Key sensory contributors
+
+This summary supports orientation, not decision‑making.
+
+---
+
+## 7. Structural Review & Reflection
+
+Teams review the **structural layer** together, guided by the instructor.
+
+Focus areas:
+- Where interpretation could drift
+- Which assumptions are fragile
+- How regime context changes meaning
+- What additional sessions would clarify
+
+Students are encouraged to ask:
+“What would change our interpretation if this context were different?”
+
+---
+
+## ⚠️ Safety & Scope Reminder
+
+This workflow is for **educational use only**.
+
+- No solo use
+- No self‑assessment
+- No diagnostic claims
+- No therapeutic decisions
+- No validation of personal beliefs
+
+Environmental artifacts and AI‑augmented inputs are treated as **contextual signals**, never as evidence.
+
+---
+
+## 🧠 Learning Outcome
+
+By following this workflow, students learn:
+- how structure shapes cognition,
+- why context matters more than snapshots,
+- how to avoid regime blindness,
+- and how to reason responsibly in complex systems.
+
+The goal is not certainty.
+The goal is **structural clarity**.
+# **README — Conscious Transfer Substrate Map v1**  
+### *docs/substrate_mind_science/ct_substrate/README.md*
+
+## **1. Purpose of This Directory**
+
+This directory contains the **Conscious Transfer Substrate Map v1**, a formal, RTT‑compliant schema that defines the *minimal functional structure* of mind that can be:
+
+- **Repeatably measured**  
+- **Traceably mapped** to behavior and physiology  
+- **Transfer‑addressable** across substrates  
+
+It is the first layer of the Resonance Atlas designed specifically for **Conscious Transfer research**.
+
+This schema is **not** a psychological or psychiatric model.  
+It is a **substrate model** — a representation of the *functional invariants* that survive across tasks, individuals, and implementations.
+
+---
+
+## **2. Relationship to the Resonance Atlas**
+
+The Resonance Atlas has three major layers:
+
+1. **Minimal Empirical Mind Substrate v1**  
+   - The distilled scientific core extracted from psychology + psychiatry  
+   - Only green‑zone constructs (empirical, measurable, reproducible)
+
+2. **Legacy‑Narratives Quarantine**  
+   - All yellow/red constructs (interpretive, institutional, cultural, mythic)  
+   - Preserved for context, but **never allowed** in substrate models
+
+3. **Conscious Transfer Substrate Map (this directory)**  
+   - The RTT‑filtered subset of the Minimal Substrate  
+   - Formalized into a machine‑readable schema  
+   - Ready for vST overlays and implementation work
+
+The Conscious Transfer Substrate Map is therefore the **intersection** of:
+
+- empirical mind science  
+- RTT constraints  
+- transfer‑ready formalization  
+
+---
+
+## **3. What This Schema Represents**
+
+The schema defines four substrate layers:
+
+### **A. Behavioral Layer**  
+The lowest‑level functional invariants:
+
+- conditioning laws  
+- reinforcement structures  
+- reaction‑time distributions  
+- accuracy/error patterns  
+- speed–accuracy tradeoff parameters  
+
+These are the **observable invariants** that any conscious substrate must reproduce.
+
+---
+
+### **B. Cognitive Layer**  
+The representational/computational invariants:
+
+- working‑memory parameters  
+- attention control parameters  
+- drift‑diffusion decision models  
+- signal‑detection parameters  
+- reinforcement‑learning parameters  
+
+These are the **task‑bound cognitive operators** that survive RTT filtering.
+
+---
+
+### **C. Measurement Layer**  
+The interfaces that validate the substrate:
+
+- psychometric reliability/validity  
+- neuropsychological task batteries  
+- normative z‑scores  
+
+These are **not** the mind — they are the **measurement operators** that define equivalence across substrates.
+
+---
+
+### **D. Anchoring Constraints**  
+The biological correlates that meet RTT criteria:
+
+- lesion‑to‑function mappings  
+- task‑locked neurophysiological signatures  
+- stable pharmacological modulation profiles  
+
+These are **constraints**, not requirements for biological tissue.
+
+---
+
+## **4. What This Schema Explicitly Excludes**
+
+This schema **cannot** contain:
+
+- DSM/ICD categories  
+- personality disorders  
+- psychoanalytic constructs  
+- typologies (MBTI, Enneagram, etc.)  
+- humanistic/existential frameworks  
+- narrative‑based therapeutic models  
+- cultural/institutional psychiatric categories  
+- unfalsifiable or non‑substrate constructs  
+
+All such material is stored in the **Legacy‑Narratives Quarantine**.
+
+This ensures the substrate remains **scientifically clean** and **transfer‑ready**.
+
+---
+
+## **5. How RTT Interacts With This Schema**
+
+RTT imposes three hard constraints:
+
+- **Repeatability:**  
+  Every field in the schema corresponds to a measurable pattern that replicates across trials.
+
+- **Traceability:**  
+  Every field has a clear mapping to behavior, physiology, or computational structure.
+
+- **Transfer‑addressability:**  
+  Every field can be instantiated in a non‑biological substrate without loss of functional identity.
+
+If a construct fails any RTT condition, it is excluded.
+
+---
+
+## **6. How vST Will Overlay This Schema**
+
+vST (Vectorized Substrate Topology) will attach to this schema by:
+
+- defining **state‑spaces** for each cognitive/behavioral operator  
+- defining **transition operators** for learning and decision models  
+- defining **mapping functions** for anchoring constraints  
+- defining **equivalence tests** for substrate‑to‑substrate transfer  
+
+The Conscious Transfer Substrate Map is therefore the **foundation** on which vST builds the actual transfer mechanics.
+
+---
+
+## **7. File Structure**
+
+```
+ct_substrate/
+  ├── ct_substrate.schema.json     # The formal schema (RTT-filtered)
+  ├── README.md                    # This file
+  └── examples/                    # Optional: future example substrate instances
+```
+
+---
+
+## **8. Contribution Rules**
+
+To maintain substrate integrity:
+
+- **No yellow/red constructs** may be added to this schema  
+- All additions must satisfy **RTT conditions**  
+- All fields must be **operationalizable** (task‑bound, measurable)  
+- All mappings must be **explicit**, not narrative  
+- All biological references must be **functional**, not anatomical storytelling  
+
+Pull requests that introduce narrative, interpretive, or diagnostic constructs will be redirected to the **Legacy‑Narratives Quarantine**.
 ```json
 
 {
@@ -4279,172 +4447,6 @@ Triadic integration teaches **how to think**, not what to decide.
   }
 }
 ```
-# **README — Conscious Transfer Substrate Map v1**  
-### *docs/substrate_mind_science/ct_substrate/README.md*
-
-## **1. Purpose of This Directory**
-
-This directory contains the **Conscious Transfer Substrate Map v1**, a formal, RTT‑compliant schema that defines the *minimal functional structure* of mind that can be:
-
-- **Repeatably measured**  
-- **Traceably mapped** to behavior and physiology  
-- **Transfer‑addressable** across substrates  
-
-It is the first layer of the Resonance Atlas designed specifically for **Conscious Transfer research**.
-
-This schema is **not** a psychological or psychiatric model.  
-It is a **substrate model** — a representation of the *functional invariants* that survive across tasks, individuals, and implementations.
-
----
-
-## **2. Relationship to the Resonance Atlas**
-
-The Resonance Atlas has three major layers:
-
-1. **Minimal Empirical Mind Substrate v1**  
-   - The distilled scientific core extracted from psychology + psychiatry  
-   - Only green‑zone constructs (empirical, measurable, reproducible)
-
-2. **Legacy‑Narratives Quarantine**  
-   - All yellow/red constructs (interpretive, institutional, cultural, mythic)  
-   - Preserved for context, but **never allowed** in substrate models
-
-3. **Conscious Transfer Substrate Map (this directory)**  
-   - The RTT‑filtered subset of the Minimal Substrate  
-   - Formalized into a machine‑readable schema  
-   - Ready for vST overlays and implementation work
-
-The Conscious Transfer Substrate Map is therefore the **intersection** of:
-
-- empirical mind science  
-- RTT constraints  
-- transfer‑ready formalization  
-
----
-
-## **3. What This Schema Represents**
-
-The schema defines four substrate layers:
-
-### **A. Behavioral Layer**  
-The lowest‑level functional invariants:
-
-- conditioning laws  
-- reinforcement structures  
-- reaction‑time distributions  
-- accuracy/error patterns  
-- speed–accuracy tradeoff parameters  
-
-These are the **observable invariants** that any conscious substrate must reproduce.
-
----
-
-### **B. Cognitive Layer**  
-The representational/computational invariants:
-
-- working‑memory parameters  
-- attention control parameters  
-- drift‑diffusion decision models  
-- signal‑detection parameters  
-- reinforcement‑learning parameters  
-
-These are the **task‑bound cognitive operators** that survive RTT filtering.
-
----
-
-### **C. Measurement Layer**  
-The interfaces that validate the substrate:
-
-- psychometric reliability/validity  
-- neuropsychological task batteries  
-- normative z‑scores  
-
-These are **not** the mind — they are the **measurement operators** that define equivalence across substrates.
-
----
-
-### **D. Anchoring Constraints**  
-The biological correlates that meet RTT criteria:
-
-- lesion‑to‑function mappings  
-- task‑locked neurophysiological signatures  
-- stable pharmacological modulation profiles  
-
-These are **constraints**, not requirements for biological tissue.
-
----
-
-## **4. What This Schema Explicitly Excludes**
-
-This schema **cannot** contain:
-
-- DSM/ICD categories  
-- personality disorders  
-- psychoanalytic constructs  
-- typologies (MBTI, Enneagram, etc.)  
-- humanistic/existential frameworks  
-- narrative‑based therapeutic models  
-- cultural/institutional psychiatric categories  
-- unfalsifiable or non‑substrate constructs  
-
-All such material is stored in the **Legacy‑Narratives Quarantine**.
-
-This ensures the substrate remains **scientifically clean** and **transfer‑ready**.
-
----
-
-## **5. How RTT Interacts With This Schema**
-
-RTT imposes three hard constraints:
-
-- **Repeatability:**  
-  Every field in the schema corresponds to a measurable pattern that replicates across trials.
-
-- **Traceability:**  
-  Every field has a clear mapping to behavior, physiology, or computational structure.
-
-- **Transfer‑addressability:**  
-  Every field can be instantiated in a non‑biological substrate without loss of functional identity.
-
-If a construct fails any RTT condition, it is excluded.
-
----
-
-## **6. How vST Will Overlay This Schema**
-
-vST (Vectorized Substrate Topology) will attach to this schema by:
-
-- defining **state‑spaces** for each cognitive/behavioral operator  
-- defining **transition operators** for learning and decision models  
-- defining **mapping functions** for anchoring constraints  
-- defining **equivalence tests** for substrate‑to‑substrate transfer  
-
-The Conscious Transfer Substrate Map is therefore the **foundation** on which vST builds the actual transfer mechanics.
-
----
-
-## **7. File Structure**
-
-```
-ct_substrate/
-  ├── ct_substrate.schema.json     # The formal schema (RTT-filtered)
-  ├── README.md                    # This file
-  └── examples/                    # Optional: future example substrate instances
-```
-
----
-
-## **8. Contribution Rules**
-
-To maintain substrate integrity:
-
-- **No yellow/red constructs** may be added to this schema  
-- All additions must satisfy **RTT conditions**  
-- All fields must be **operationalizable** (task‑bound, measurable)  
-- All mappings must be **explicit**, not narrative  
-- All biological references must be **functional**, not anatomical storytelling  
-
-Pull requests that introduce narrative, interpretive, or diagnostic constructs will be redirected to the **Legacy‑Narratives Quarantine**.
 ```json
 
 {

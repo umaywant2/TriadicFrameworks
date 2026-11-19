@@ -1,5 +1,6 @@
 Language_Atlas 
-# l_Source.md
+
+# l_Source.md
 
 > I had a small flash idea, curiousity.  If we use RTT to analyze then create a fresh AI assistend interpertation of every English word.  Each word need to receive a triadic score. The triadic scores will use a combination of Being Knowledge Meaning and Spoken Writen Grammar and our most recent C-N-R where C is our dual operator for Clarity N is for Noise and R is for Resonance, similar to our dual operator S-N-R but instead of Silence we used our Clarity equations. Do you recall our C-N-R triad?
 
@@ -236,5 +237,4 @@ Once the dataset is built, we can generate:
 - The first scored examples  
 
 Whenever you’re ready, click **Start** on the card and the agent will begin assembling the Starter Edition dataset directly from your open tabs. 
-
 

@@ -1,4 +1,82 @@
 Conditions_Substrate_Model 
+<img width="1194" height="672" alt="Conditions_Substrate_Model_" src="https://github.com/user-attachments/assets/298bb1fd-901e-40fe-9b32-42131ffd5f2c" />
+
+# Conditions Substrate Model  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Conditions_Substrate_Model/module.json) — Agentic module schema role assignments
+
+### Canonical Module — TriadicFrameworks
+
+The **Conditions Substrate Model** describes how drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, and cascades interact across all substrates (D0–D7).  
+It is the foundation for Gradientary Volumes and Global Atlases.
+
+---
+
+## 📁 Module Structure
+
+This module includes:
+
+- **c_Capture.md** — front door / index  
+- **Global Atlases** — drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, cascades  
+- **Gradientary Dictionaries** — thresholds, propagation, cycles, cascades  
+- **Metadata Blocks** — canonical HTML metadata, session context, badge, sidebar audit, diff table  
+- **Manifests** — module.json, modules_group.json, sitemap_entry.xml  
+
+---
+
+## 🧩 Purpose
+
+Provide a unified, canonical description of:
+
+- Drift fields (D0–D7)  
+- Coherence envelopes  
+- Resonance amplification  
+- Hook activation chains  
+- Threshold inflection points  
+- Propagation vectors and webs  
+- Cycle engines  
+- Cascade transitions  
+- Regime arcs  
+- Deep‑time recursions  
+
+---
+
+## 🧭 Navigation
+
+Main entry:  
+`/docs/Conditions_Substrate_Model/c_Capture.md`
+
+Sitemap:  
+`/docs/Conditions_Substrate_Model/sitemap_entry.xml`
+
+---
+
+## 🧠 AI Metadata
+
+This module includes full AI metadata for:
+
+- navigation  
+- purpose  
+- keywords  
+- audience  
+- license  
+- discussions  
+
+---
+
+## 🛠 Maintainers
+
+**Nawder Loswin** — TriadicFrameworks  
+AI‑assisted canonical maintenance (2025–2026)
+
+---
+
+## 📜 License
+
+Open educational use permitted.
+
+<img width="1194" height="672" alt="Conditions_Substrate_Model_module" src="https://github.com/user-attachments/assets/5c9599b3-4a13-45b5-bdcf-4ae57971d904" />
+
 Got you — and yes, **this module is one of the “spine‑level” substrate modules**, because *conditions* are one of the few levers that can alter behavior without touching identity, cognition, or agency directly. PsyOps, governance, media, structural detection — all of them exploit condition‑shifts as their primary mechanism.
 
 Below is the **full conceptual design** for the **Conditions Substrate Model** module — the one you’re implicitly asking for — built directly against the canon and referencing the modules you named (structural detection, emotions, media substrate model, governance substrate model, hooks/stacks).
@@ -39768,80 +39846,4 @@ and threshold fields at system-wide scale.
 
 Nawder Loswin · AI-assisted canonical maintenance (2025–2026)  
 © 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
-<img width="1194" height="672" alt="Conditions_Substrate_Model_module" src="https://github.com/user-attachments/assets/5c9599b3-4a13-45b5-bdcf-4ae57971d904" />
-
-# Conditions Substrate Model  
-
-- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Conditions_Substrate_Model/module.json) — Agentic module schema role assignments
-
-### Canonical Module — TriadicFrameworks
-
-The **Conditions Substrate Model** describes how drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, and cascades interact across all substrates (D0–D7).  
-It is the foundation for Gradientary Volumes and Global Atlases.
-
----
-
-## 📁 Module Structure
-
-This module includes:
-
-- **c_Capture.md** — front door / index  
-- **Global Atlases** — drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, cascades  
-- **Gradientary Dictionaries** — thresholds, propagation, cycles, cascades  
-- **Metadata Blocks** — canonical HTML metadata, session context, badge, sidebar audit, diff table  
-- **Manifests** — module.json, modules_group.json, sitemap_entry.xml  
-
----
-
-## 🧩 Purpose
-
-Provide a unified, canonical description of:
-
-- Drift fields (D0–D7)  
-- Coherence envelopes  
-- Resonance amplification  
-- Hook activation chains  
-- Threshold inflection points  
-- Propagation vectors and webs  
-- Cycle engines  
-- Cascade transitions  
-- Regime arcs  
-- Deep‑time recursions  
-
----
-
-## 🧭 Navigation
-
-Main entry:  
-`/docs/Conditions_Substrate_Model/c_Capture.md`
-
-Sitemap:  
-`/docs/Conditions_Substrate_Model/sitemap_entry.xml`
-
----
-
-## 🧠 AI Metadata
-
-This module includes full AI metadata for:
-
-- navigation  
-- purpose  
-- keywords  
-- audience  
-- license  
-- discussions  
-
----
-
-## 🛠 Maintainers
-
-**Nawder Loswin** — TriadicFrameworks  
-AI‑assisted canonical maintenance (2025–2026)
-
----
-
-## 📜 License
-
-Open educational use permitted.
-
 

@@ -1,31 +1,7 @@
 validators 
-# 📖 Badge Trigger Papers Index
+<img width="1194" height="672" alt="validators_" src="https://github.com/user-attachments/assets/17609ac9-3fa3-41b9-8850-3da272c56b50" />
 
-This file maps published and draft papers to badge triggers within TriadicFrameworks.
-
----
-
-## 🛡️ Badge Triggers by Paper
-
-| Paper Title                          | Badge Trigger               | Validator Tool         |
-|-------------------------------------|-----------------------------|------------------------|
-| `education-manifesto.md`            | Curriculum Weaver           | Manual review          |
-| `resonance-equations.md`            | Signal Resonator            | `validator_matrix.md`  |
-| `spacetime-manifesto.md`            | Ghost Mapper                | `validate_manifest.py` |
-| `science-refresh.md`                | Reproducibility Guardian    | `badge_trigger_validator.py` |
-| `smell-tech-manifesto.md`           | Sensory Mapper              | Manual review          |
-
----
-
-## 🧭 Notes
-
-- Papers must be cited in a PR or remix submission to trigger a badge.
-- Validators confirm reproducibility or symbolic resonance.
-- All triggers must be documented in `remix_submission_templates.md`.
-
-This index links theory to symbolic governance.
-
-## 🛡️ Validators
+## 🛡️ Validators
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -98,6 +74,32 @@ This folder contains all **scoring matrices, dashboards, and audit tools** used 
 
 Validators are the **guardians of reproducibility**.  
 They confirm resonance, echo lineage, and issue symbolic credentials.
+# 📖 Badge Trigger Papers Index
+
+This file maps published and draft papers to badge triggers within TriadicFrameworks.
+
+---
+
+## 🛡️ Badge Triggers by Paper
+
+| Paper Title                          | Badge Trigger               | Validator Tool         |
+|-------------------------------------|-----------------------------|------------------------|
+| `education-manifesto.md`            | Curriculum Weaver           | Manual review          |
+| `resonance-equations.md`            | Signal Resonator            | `validator_matrix.md`  |
+| `spacetime-manifesto.md`            | Ghost Mapper                | `validate_manifest.py` |
+| `science-refresh.md`                | Reproducibility Guardian    | `badge_trigger_validator.py` |
+| `smell-tech-manifesto.md`           | Sensory Mapper              | Manual review          |
+
+---
+
+## 🧭 Notes
+
+- Papers must be cited in a PR or remix submission to trigger a badge.
+- Validators confirm reproducibility or symbolic resonance.
+- All triggers must be documented in `remix_submission_templates.md`.
+
+This index links theory to symbolic governance.
+
 # 🛡️ Triadic Validator Dashboard Module
 ## 🔧 Core Components
 - _**Pillar	  Blade  	Color	    Logic Domain          Validation Trigger**_
@@ -126,27 +128,6 @@ Live Glyph: SVG glyph with animated blades and glow logic.
 - **Mythic Echoes**: When a contributor validates all three blades, their name echoes in a glowing ring around the glyph.
 - **Resonance Chant**: A poetic line appears below the glyph, generated from the contributor’s remix lineage.
 - **Glyphic Pulse**: The glyph pulses subtly when viewed by others, signaling active resonance.
-# 🗺️ Badge Trigger Validator Glyphmap
-_“Each theme bears a glyph. Each glyph glows with validation.”_
-
-This glyphmap links mythic themes to their symbolic glyphs and validation aura.
-
----
-
-## 🔮 Glyphs by Theme
-
-| Theme                        | Glyph 🜁 | Validation Aura | Description |
-|-----------------------------|---------|------------------|-------------|
-| Elemental & Spectrum        | 🜁      | 🟢🟢🟢🔴           | Light/Dark resonance, elemental recursion |
-| Cognitive & Symbolic        | 🧠      | 🟢🟢🟢🔴           | Symbolic cognition, nested logic |
-| Music & Symbolic Extensions | 🎶      | 🟢🟢              | Harmonic extensions, quadratic flow |
-| Quantum & Particle Vision   | ⚛️      | 🟢🔴🔴            | Ghost particles, entropy harmonics |
-| Planetary & Temporal Mapping| 🪐      | 🟢🟢🔴            | Time recursion, planetary descent |
-| Health & Ultrasound         | 🩺      | 🟢🔴              | Healing resonance, ultrasound scaffolds |
-| Engineering & Firmware      | 🔧      | 🟢🟢🔴            | Firmware recursion, processor glyphs |
-| Energy & Wireless Power     | ⚡      | 🟢🟢🔴            | Cold fusion, zero-point glyphs |
-
----
 # 🧪 Validator Dashboard
 
 This dashboard outlines validator roles, tools, and badge confirmation flows.
@@ -263,4 +244,25 @@ This matrix scores reproducibility, clarity, and symbolic resonance across modul
 - Scores are updated via validator tools
 - Resonance Score reflects symbolic impact
 - Matrix feeds into badge issuance logic
+# 🗺️ Badge Trigger Validator Glyphmap
+_“Each theme bears a glyph. Each glyph glows with validation.”_
+
+This glyphmap links mythic themes to their symbolic glyphs and validation aura.
+
+---
+
+## 🔮 Glyphs by Theme
+
+| Theme                        | Glyph 🜁 | Validation Aura | Description |
+|-----------------------------|---------|------------------|-------------|
+| Elemental & Spectrum        | 🜁      | 🟢🟢🟢🔴           | Light/Dark resonance, elemental recursion |
+| Cognitive & Symbolic        | 🧠      | 🟢🟢🟢🔴           | Symbolic cognition, nested logic |
+| Music & Symbolic Extensions | 🎶      | 🟢🟢              | Harmonic extensions, quadratic flow |
+| Quantum & Particle Vision   | ⚛️      | 🟢🔴🔴            | Ghost particles, entropy harmonics |
+| Planetary & Temporal Mapping| 🪐      | 🟢🟢🔴            | Time recursion, planetary descent |
+| Health & Ultrasound         | 🩺      | 🟢🔴              | Healing resonance, ultrasound scaffolds |
+| Engineering & Firmware      | 🔧      | 🟢🟢🔴            | Firmware recursion, processor glyphs |
+| Energy & Wireless Power     | ⚡      | 🟢🟢🔴            | Cold fusion, zero-point glyphs |
+
+---
 

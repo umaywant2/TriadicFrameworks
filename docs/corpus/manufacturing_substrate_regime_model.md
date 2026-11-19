@@ -1,45 +1,9 @@
 manufacturing_substrate_regime_model 
-# Changelog
-
-All notable changes to this project will be documented in this file.
-
-The format follows a minimal, archival‑oriented convention aligned with Zenodo versioning.
-
-## [1.0.0] — 2026-01-16
-
-### Added
-- Initial release of the Manufacturing Substrate Regime Model (MSRM)
-- Complete structural framework covering:
-  - Substrate definition and regime declaration
-  - Boundary semantics and operating envelopes
-  - Calibration as a structural layer
-  - Drift detection and non‑catastrophic regime exit
-  - Operator mediation patterns
-  - Manufacturing context and implications
-- Canonical figures specifying structural relationships
-- Related works positioning relative to BSM, QSM, and RSM
-
-This release establishes MSRM as a stable, descriptive reference framework.
-## Manufacturing Substrate Regime Model (MSRM) 
+<img width="1194" height="672" alt="msrm_" src="https://github.com/user-attachments/assets/0d3e5d0a-1649-4a5c-86d1-880c07a77ef7" />
 
 - [`msrm_module.json`](msrm_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# Manufacturing Substrate Regime Model (MSRM) 
 The Manufacturing Substrate Regime Model (MSRM) is a structural framework for describing, calibrating, and managing extreme manufacturing systems through explicitly declared operating regimes, boundary semantics, and operator‑mediated interactions.
 
 MSRM does not propose new fabrication techniques, physical models, or process optimizations. Instead, it provides a substrate‑level organizational layer that formalizes how manufacturing systems operate across multiple regimes, how calibration is treated as a structural concern, and how regime transitions may occur without catastrophic failure.
@@ -82,6 +46,43 @@ MSRM extends substrate‑based modeling principles developed in related works, i
 MSRM is descriptive and structural in nature. It makes no empirical claims and does not prescribe implementation details.
 
 - [repo folder](../)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format follows a minimal, archival‑oriented convention aligned with Zenodo versioning.
+
+## [1.0.0] — 2026-01-16
+
+### Added
+- Initial release of the Manufacturing Substrate Regime Model (MSRM)
+- Complete structural framework covering:
+  - Substrate definition and regime declaration
+  - Boundary semantics and operating envelopes
+  - Calibration as a structural layer
+  - Drift detection and non‑catastrophic regime exit
+  - Operator mediation patterns
+  - Manufacturing context and implications
+- Canonical figures specifying structural relationships
+- Related works positioning relative to BSM, QSM, and RSM
+
+This release establishes MSRM as a stable, descriptive reference framework.
 ## Calibration as Structure
 
 Within the Manufacturing Substrate Regime Model (MSRM), calibration is treated as a structural concern rather than a procedural or corrective action.

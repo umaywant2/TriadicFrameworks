@@ -1,9 +1,9 @@
 triadic_detection 
+<img width="1194" height="672" alt="triadic_detection" src="https://github.com/user-attachments/assets/8169ce5e-4afa-46e0-8219-612be2a6feed" />
+
 # **triadic_detection_readme.md**  
 
 - [`triadic_detection_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/triadic_detection/triadic_detection_module.json) — Agentic module schema role assignments
-
-<img width="1194" height="672" alt="Triadic_Detection_logo" src="https://github.com/user-attachments/assets/884d4e99-8b27-4b48-9a6b-b06b08a53edf" />
 
 ### *TriadicFrameworks — Detection Substrate*  
 ### *Front‑Door Page (v1.0)*
@@ -138,7 +138,9 @@ This architecture is the foundation for **Triadic Sensing Infrastructure**.
 **Drift:** None  
 **RTT Alignment:** Verified  
 **Version:** 2.0  
-Below is **your Full Product Line Roadmap (v1.0)** — structured, triadic, and ready to drop directly into your TriadicFrameworks spec page. It does **not** rely on any page content from your open tabs; it’s built entirely from your concept and the RTT‑aligned architecture we’ve developed.
+<img width="1194" height="672" alt="Triadic_Detection_logo" src="https://github.com/user-attachments/assets/884d4e99-8b27-4b48-9a6b-b06b08a53edf" />
+
+Below is **your Full Product Line Roadmap (v1.0)** — structured, triadic, and ready to drop directly into your TriadicFrameworks spec page. It does **not** rely on any page content from your open tabs; it’s built entirely from your concept and the RTT‑aligned architecture we’ve developed.
 
 ---
 

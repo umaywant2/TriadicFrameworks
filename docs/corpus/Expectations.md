@@ -1,5 +1,721 @@
 Expectations 
-# **Cross‑Domain Alignment Map — Expectations → Medicine / HPC / QC / Physics**  
+<img width="1194" height="672" alt="Expectations_" src="https://github.com/user-attachments/assets/7e4cf7c6-bdfd-4228-b547-47ef1f5ad88e" />
+
+# Expectations
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Expectations/module.json) — Agentic module schema role assignments
+
+**Location:** `/docs/Expectations/`  
+**Role:** Root‑level orientation & requirements stack  
+**Audience:** Students • Researchers • AI Agents
+
+## **Purpose**
+
+The Expectations Module defines what newcomers — human or AI — should expect when entering TriadicFrameworks.  
+It is the **front door** to the canon, providing:
+
+- orientation  
+- structure  
+- requirements  
+- cross‑domain expectations  
+- links to sample files  
+- guidance for contributors  
+- stability anchors for AI agents  
+
+This module is a **core service** supporting FFT, FCG, RF‑Builder, IPD‑12, RTT, GU, Pantheon, and Computational Medicine.
+
+---
+
+## **What TriadicFrameworks Is**
+
+TriadicFrameworks is a **multi‑domain, observer‑centric canon** built on:
+
+- triadic structure  
+- substrate engines  
+- observer bundles  
+- dimensional rails  
+- regime traversal  
+- prime‑indexed states  
+- cross‑domain headers  
+
+It is a **framework for frameworks**, not a single theory.
+
+---
+
+## **What TriadicFrameworks Is Not**
+
+TriadicFrameworks is **not**:
+
+- a metaphysical belief system  
+- a physics replacement  
+- a medical replacement  
+- a programming language  
+- a simulation engine  
+- a closed theory  
+
+It is a **structured ecosystem** for cross‑domain reasoning.
+
+---
+
+## **Expectations for Students**
+
+Students should expect:
+
+- clear structure  
+- progressive learning  
+- visual aids  
+- cross‑domain examples  
+- consistent module patterns  
+- beginner → intermediate → advanced pathways  
+
+Modules are designed to be learnable, navigable, and expandable.
+
+---
+
+## **Expectations for Researchers**
+
+Researchers should expect:
+
+- formal structure  
+- definitions, operators, invariants  
+- cross‑domain applicability  
+- performance models  
+- observer overhead & gain analysis  
+- substrate engine profiles  
+- validation pathways  
+- sample files and diagrams  
+
+TriadicFrameworks is built for serious cross‑domain research.
+
+---
+
+## **Expectations for AI Agents**
+
+AI agents should expect:
+
+- canon‑aligned reasoning  
+- zero drift  
+- substrate + observer + dimensional mapping  
+- cross‑module propagation  
+- multi‑domain synthesis  
+- strict structural consistency  
+
+AI agents must treat TriadicFrameworks as a **stable canon**, not a generative playground.
+
+---
+
+## **What TriadicFrameworks Already Provides (2026)**
+
+### **Core Engine**
+- IPD‑12 engine block  
+- intake manifolds (SIM–FSI)  
+- output headers (RTT/GU/FFT/Pantheon/Dim/Substrate/Observer/Medical)  
+- substrate feeds (S1–S4)  
+- observer loops (O1–O4)  
+- dimensional rails (L/C/N)
+
+### **Domain Modules**
+- FFT  
+- FCG  
+- RF‑Builder  
+- RTT  
+- GU  
+- Pantheon  
+- Computational Medicine (H‑Med)
+
+### **Research Modules**
+- HPC+QC substrate engine  
+- observer overhead & gain spec  
+- medical header manifold  
+- header manifold SVG set  
+- engine block SVG  
+- prime‑state icon atlas  
+
+---
+
+## **Roadmap (2026–2027)**
+
+### **Near‑Term**
+- Expectations module (this directory)  
+- minimal formalism  
+- validation pathways  
+- contributor guidelines  
+- sample file index  
+- cross‑domain examples library  
+
+### **Mid‑Term**
+- IPD‑12 mathematical formalism  
+- observer‑centric simulation examples  
+- HPC+QC hybrid benchmarks  
+- medical progression models  
+- Pantheon tier alignment maps  
+
+### **Long‑Term**
+- full substrate engine library  
+- multi‑observer AI reasoning engine  
+- cross‑domain research preprint  
+- TriadicFrameworks v2.0 canon  
+
+---
+
+## **How to Evaluate TriadicFrameworks**
+
+Evaluate modules by:
+
+- structural clarity  
+- observer behavior  
+- substrate consistency  
+- dimensional correctness  
+- regime traversal  
+- cross‑domain alignment  
+
+This forms the **evaluation rubric** for all future modules.
+
+---
+
+## **How to Contribute**
+
+Contributors should:
+
+- follow the triadic lens  
+- maintain zero drift  
+- use observer bundles  
+- use substrate feeds  
+- use dimensional rails  
+- provide cross‑domain examples  
+- include SVG diagrams  
+- include session context blocks  
+- include module.json metadata  
+
+This ensures canon consistency.
+
+---
+
+## **Sample Files**
+
+Located in:
+
+```
+/docs/Expectations/samples/
+```
+
+Includes:
+
+- intake manifolds  
+- header manifolds  
+- engine block  
+- prime‑state icons  
+- HPC+QC substrate engine  
+- observer overhead & gain spec  
+
+---
+
+## **Capture Link**
+
+The full capture for this module is located at:
+
+```
+/docs/Expectations/e_Capture.md
+```
+<img width="1194" height="672" alt="Expectations_module" src="https://github.com/user-attachments/assets/04c042fd-fe05-4719-b25f-e93c1d19c47d" />
+
+# **Expectations Module (v1.0)**  
+**TriadicFrameworks — Core Service for Students, Researchers, and AIs**  
+**Location:** `/docs/Expectations/Expectations.md`  
+**Role:** Front‑door orientation, requirements stack, cross‑domain booster
+
+---
+
+## **1. Purpose**
+
+The Expectations Module defines what students, researchers, and AI agents should expect when engaging with TriadicFrameworks.  
+It provides:
+
+- a clear statement of what TriadicFrameworks *is*  
+- a clear statement of what TriadicFrameworks *is not*  
+- a structured list of expectations for learning, research, and contribution  
+- a cross‑domain orientation (FFT, FCG, RF‑Builder, IPD‑12, HPC, QC, Medicine)  
+- a roadmap for what the system provides now and what is coming next
+
+This module is the **root‑level onboarding document** for the entire canon.
+
+---
+
+# **2. What TriadicFrameworks *is***
+
+TriadicFrameworks is a **multi‑domain, observer‑centric knowledge engine** built on:
+
+- **triadic structure** (Structure → Regime → Operator)  
+- **dimensional reasoning** (lift/collapse/neutral)  
+- **observer bundles** (O1–O4)  
+- **substrate engines** (S1–S4)  
+- **regime traversal** (R1–R4)  
+- **prime‑indexed states** (P2–P37)  
+- **cross‑domain headers** (RTT, GU, FFT, Pantheon, Medical, Substrate, Observer)
+
+It is designed to unify:
+
+- physics  
+- computation  
+- medicine  
+- mythology  
+- logic  
+- AI reasoning  
+- multi‑scale modeling  
+
+TriadicFrameworks is **not** a single theory — it is a **canon**, a structured ecosystem of modules.
+
+---
+
+# **3. What TriadicFrameworks *is not***
+
+TriadicFrameworks is **not**:
+
+- a replacement for physics  
+- a replacement for medicine  
+- a replacement for HPC/QC  
+- a metaphysical belief system  
+- a programming language  
+- a simulation engine  
+- a closed or fixed theory
+
+It is a **framework for frameworks** — a way to structure, align, and reason across domains.
+
+---
+
+# **4. Expectations for Students**
+
+Students should expect:
+
+### **4.1 Clear structure**
+Every module follows the same pattern:
+
+- identity  
+- purpose  
+- substrate feeds  
+- observer loops  
+- dimensional rails  
+- regime mapping  
+- examples  
+- cross‑module propagation  
+
+### **4.2 Progressive learning**
+Modules are layered:
+
+- beginner (FFT, FCG, Alignment)  
+- intermediate (RTT, Pantheon, GU)  
+- advanced (IPD‑12, substrate engines, observer bundles)
+
+### **4.3 Visual aids**
+Students will find:
+
+- SVG diagrams  
+- intake manifolds  
+- header manifolds  
+- engine block diagrams  
+- prime‑state icons  
+
+### **4.4 Cross‑domain examples**
+Every module includes examples from:
+
+- physics  
+- computation  
+- medicine  
+- mythology  
+- AI reasoning  
+
+---
+
+# **5. Expectations for Researchers**
+
+Researchers should expect:
+
+### **5.1 Formal structure**
+TriadicFrameworks provides:
+
+- definitions  
+- operators  
+- invariants  
+- constraints  
+- regime maps  
+- observer models  
+- substrate engines  
+
+### **5.2 Cross‑domain applicability**
+Modules are designed to integrate:
+
+- HPC  
+- QC  
+- computational medicine  
+- physics (RTT, GU, FFT)  
+- mythology (Pantheon)  
+- AI reasoning  
+
+### **5.3 Performance models**
+IPD‑12 provides:
+
+- observer overhead  
+- observer gains  
+- manifold complexity  
+- substrate engine profiles  
+- hybrid HPC+QC integration  
+- medical header modeling  
+
+### **5.4 Sample files**
+Researchers will find:
+
+- intake manifold SVGs  
+- header manifold SVGs  
+- engine block SVG  
+- medical header  
+- HPC+QC substrate engine profile  
+- observer overhead & gain spec  
+
+### **5.5 Validation pathways**
+Researchers can validate modules through:
+
+- regime traversal tests  
+- observer loop stability  
+- substrate feed consistency  
+- dimensional lift/collapse behavior  
+- cross‑domain alignment tests  
+
+---
+
+# **6. Expectations for AI Agents**
+
+AI agents should expect:
+
+### **6.1 Canon‑aligned reasoning**
+Use:
+
+- triadic lens  
+- observer bundles  
+- dimensional rails  
+- substrate feeds  
+- headers for output  
+
+### **6.2 Zero drift**
+Never invent modules or operators not present in the canon.
+
+### **6.3 Cross‑module propagation**
+When asked “how does this relate to X?”, provide:
+
+- structural mapping  
+- regime mapping  
+- observer mapping  
+- substrate mapping  
+
+### **6.4 Multi‑domain synthesis**
+AI agents should be able to:
+
+- map physics → medicine  
+- map medicine → computation  
+- map mythology → logic  
+- map QC → HPC  
+- map FFT → FCG → RF‑Builder  
+
+---
+
+# **7. What TriadicFrameworks Already Provides (2026)**
+
+### **7.1 Core engine**
+- IPD‑12 engine block  
+- intake manifolds (SIM/DIM/TIM/QIM/FSI)  
+- output headers (RTT/GU/FFT/Pantheon/Dim/Substrate/Observer/Medical)  
+- substrate feeds (S1–S4)  
+- observer loops (O1–O4)  
+- dimensional rails (L/C/N)
+
+### **7.2 Domain modules**
+- FFT (Framework Field Theory)  
+- FCG (Framework Creation Guide)  
+- RF‑Builder (Regime‑Field Builder)  
+- RTT (Resonance Transport Theory)  
+- GU (Geometric Unity)  
+- Pantheon (mythic‑structural tiers)  
+- Computational Medicine (H‑Med header)
+
+### **7.3 Research modules**
+- HPC+QC substrate engine  
+- observer overhead & gain spec  
+- medical header manifold  
+- header manifold SVG set  
+- engine block SVG  
+- prime‑state icon atlas  
+
+---
+
+# **8. Roadmap (2026–2027)**
+
+### **8.1 Near‑term**
+- Expectations module (this document)  
+- minimal formalism  
+- validation pathways  
+- contributor guidelines  
+- sample file index  
+- cross‑domain examples library  
+
+### **8.2 Mid‑term**
+- IPD‑12 mathematical formalism  
+- observer‑centric simulation examples  
+- HPC+QC hybrid benchmarks  
+- medical progression models  
+- Pantheon tier alignment maps  
+
+### **8.3 Long‑term**
+- full substrate engine library  
+- multi‑observer AI reasoning engine  
+- cross‑domain research preprint  
+- TriadicFrameworks v2.0 canon  
+
+---
+
+# **9. How to Evaluate TriadicFrameworks**
+
+Researchers should evaluate:
+
+### **9.1 Structural clarity**
+Does the module follow the triadic lens?
+
+### **9.2 Observer behavior**
+Are O1–O4 consistent and stable?
+
+### **9.3 Substrate consistency**
+Are S1–S4 correctly mapped?
+
+### **9.4 Dimensional correctness**
+Do lift/collapse/neutral rails behave as expected?
+
+### **9.5 Regime traversal**
+Does the module traverse R1–R4 correctly?
+
+### **9.6 Cross‑domain alignment**
+Does the module map correctly to HPC, QC, medicine, physics, mythology?
+
+---
+
+# **10. How to Contribute**
+
+Contributors should:
+
+- follow the triadic lens  
+- maintain zero drift  
+- use observer bundles  
+- use substrate feeds  
+- use dimensional rails  
+- provide cross‑domain examples  
+- include SVG diagrams  
+- include session context blocks  
+- include module.json metadata  
+
+---
+
+# **11. Sample Files**
+
+Included in `/docs/Expectations/samples/`:
+
+- intake manifolds (SIM–FSI)  
+- header manifolds (RTT/GU/FFT/Pantheon/Dim/Substrate/Observer/Medical)  
+- engine block  
+- prime‑state icons  
+- HPC+QC substrate engine  
+- observer overhead & gain spec  
+# **TriadicFrameworks — Expectations Module**  
+### *Root‑Level Orientation & Requirements Stack*  
+### *A core service for students, researchers, and AI agents*
+
+---
+
+## 🌱 **Welcome**
+
+The **Expectations Module** is the *front door* of TriadicFrameworks.
+
+It tells newcomers:
+
+- what TriadicFrameworks *is*  
+- what TriadicFrameworks *is not*  
+- how the canon is structured  
+- how to navigate the modules  
+- how to evaluate the system  
+- how to contribute  
+- how AI agents must reason (zero drift)  
+
+This module is a **booster** for FFT, FCG, RF‑Builder, IPD‑12, RTT, GU, Pantheon, and Computational Medicine.
+
+---
+
+## 🧭 **Why This Module Exists**
+
+TriadicFrameworks is large, multi‑domain, and deeply structured.  
+Anyone entering the canon needs:
+
+- orientation  
+- expectations  
+- a map  
+- a sense of scale  
+- a sense of purpose  
+- a sense of how the pieces fit together  
+
+This module provides that.
+
+It is the **root layer** of the entire canon.
+
+---
+
+## 🔧 **What You’ll Find Here**
+
+### **1. Core Documents**
+- **README.md** — overview  
+- **Expectations.md** — full expectations document  
+- **e_Capture.md** — canonical capture  
+- **module.json** — metadata manifest  
+
+### **2. Maps**
+- Cross‑domain maps  
+- Observer/Substrate/Dimensional rails map  
+- IPD‑12 → Headers map  
+- Full Canon Map (root → engines → headers → domains → research)
+
+### **3. Sample Files**
+- Intake manifolds  
+- Header manifolds  
+- Engine block  
+- Prime‑state icons  
+- HPC+QC substrate engine  
+- Observer overhead & gain tables  
+- Cross‑domain examples  
+
+Everything here is designed to help you understand the canon quickly and clearly.
+
+---
+
+## 🚀 **How This Module Connects to the Canon**
+
+### **Expectations → IPD‑12**
+Defines the rules the engine must follow.
+
+### **IPD‑12 → Headers**
+Produces structured outputs.
+
+### **Headers → Domains**
+Interpret those outputs in Medicine, HPC, QC, Physics, Mythos, and AI reasoning.
+
+### **Domains → Research**
+Provide real systems for cross‑domain study.
+
+### **Research → Canon**
+Validates and strengthens the canon.
+
+This module is the **root** of that entire flow.
+
+---
+
+## 📚 **Recommended Reading Order**
+
+1. **Expectations.md**  
+2. **Full Canon Map**  
+3. **Observer/Substrate/Dimensional Rails Map**  
+4. **IPD‑12 → Headers Map**  
+5. **Sample File Index**  
+6. Continue into FFT → FCG → RF‑Builder → IPD‑12
+
+---
+
+## 🧩 **Who This Module Serves**
+
+### **Students**
+Clear structure, visual aids, cross‑domain examples.
+
+### **Researchers**
+Formal structure, invariants, operators, validation pathways.
+
+### **AI Agents**
+Zero drift, triadic lens, substrate/observer/dimensional alignment.
+
+---
+
+## 🌐 **Navigation**
+
+- Expectations Overview  
+- Full Canon Map  
+- Cross‑Domain Maps  
+- Sample File Index  
+- Observer/Substrate/Dimensional Rails Map  
+- IPD‑12 → Headers Map  
+- Module Index  
+- Capture Document  
+
+---
+
+## 🏁 **Start Exploring**
+
+TriadicFrameworks is a canon — a structured, multi‑domain ecosystem.  
+This module is your **orientation layer**, your **requirements stack**, and your **first anchor**.
+
+Begin with **Expectations.md**, then follow the maps outward into the engine, headers, domains, and research layers.
+
+Welcome to the canon.
+# Expectations Module
+
+- [Overview](README.md)
+- [Expectations Document](Expectations.md)
+- [Capture](e_Capture.md)
+- [Module Index](module_index.md)
+- [Sample File Index](sample_file_index.md)
+- [Cross‑Domain Map](cross_domain_map.md)
+- [Expectations SVG](expectations.svg)
+
+---
+
+# Samples
+
+## Intake Manifolds
+- [SIM](samples/intake_manifolds/sim_intake.svg)
+- [DIM](samples/intake_manifolds/dim_intake.svg)
+- [TIM](samples/intake_manifolds/tim_intake.svg)
+- [QIM](samples/intake_manifolds/qim_intake.svg)
+- [FSI](samples/intake_manifolds/fsi_intake.svg)
+
+## Header Manifolds
+- [RTT](samples/header_manifolds/rtt_header.svg)
+- [GU](samples/header_manifolds/gu_header.svg)
+- [FFT](samples/header_manifolds/fft_header.svg)
+- [Pantheon](samples/header_manifolds/pantheon_header.svg)
+- [Dimensional](samples/header_manifolds/dimensional_header.svg)
+- [Substrate](samples/header_manifolds/substrate_header.svg)
+- [Observer](samples/header_manifolds/observer_header.svg)
+- [Medical (H‑Med)](samples/header_manifolds/h_med_header.svg)
+
+## Engine Block
+- [IPD‑12 Engine Block](samples/engine_block/ipd12_engine_block.svg)
+- [Engine Block Spec](samples/engine_block/engine_block.md)
+
+## Prime States
+- [Prime State Index](samples/prime_states/prime_state_index.md)
+- [Prime State Icons](samples/prime_states/prime_state_icons.svg)
+
+## HPC+QC Substrate Engine
+- [Hybrid Substrate Engine](samples/hpc_qc_substrate/hpc_qc_substrate_engine.md)
+- [Calibration → Observer Map](samples/hpc_qc_substrate/qc_calibration_observer_map.md)
+- [Hybrid Intake Examples](samples/hpc_qc_substrate/hpc_qc_intake_examples.md)
+
+## Observer Overhead & Gains
+- [Overhead & Gain Spec](samples/observer_overhead/observer_overhead_gain_spec.md)
+- [Cost Table](samples/observer_overhead/observer_cost_table.md)
+- [Gain Table](samples/observer_overhead/observer_gain_table.md)
+
+## Cross‑Domain Examples
+- [Physics → Medicine](samples/cross_domain/physics_to_medicine.md)
+- [QC → HPC](samples/cross_domain/qc_to_hpc.md)
+- [FFT → FCG](samples/cross_domain/fft_to_fcg.md)
+- [RF‑Builder Examples](samples/cross_domain/rf_builder_examples.md)
+
+---
+
+# Metadata
+- [module.json](module.json)
+# **Cross‑Domain Alignment Map — Expectations → Medicine / HPC / QC / Physics**  
 **TriadicFrameworks Canon**  
 **Version:** 2026‑1.0  
 **Location:** `/docs/Expectations/`
@@ -665,308 +1381,6 @@ Domains (Medicine / HPC / QC / Physics)
 - It is intended for students, researchers, and AI agents.  
 - It is part of the **root‑level onboarding** for TriadicFrameworks.  
 - It is canon‑aligned and stable.
-# **Expectations Module (v1.0)**  
-**TriadicFrameworks — Core Service for Students, Researchers, and AIs**  
-**Location:** `/docs/Expectations/Expectations.md`  
-**Role:** Front‑door orientation, requirements stack, cross‑domain booster
-
----
-
-## **1. Purpose**
-
-The Expectations Module defines what students, researchers, and AI agents should expect when engaging with TriadicFrameworks.  
-It provides:
-
-- a clear statement of what TriadicFrameworks *is*  
-- a clear statement of what TriadicFrameworks *is not*  
-- a structured list of expectations for learning, research, and contribution  
-- a cross‑domain orientation (FFT, FCG, RF‑Builder, IPD‑12, HPC, QC, Medicine)  
-- a roadmap for what the system provides now and what is coming next
-
-This module is the **root‑level onboarding document** for the entire canon.
-
----
-
-# **2. What TriadicFrameworks *is***
-
-TriadicFrameworks is a **multi‑domain, observer‑centric knowledge engine** built on:
-
-- **triadic structure** (Structure → Regime → Operator)  
-- **dimensional reasoning** (lift/collapse/neutral)  
-- **observer bundles** (O1–O4)  
-- **substrate engines** (S1–S4)  
-- **regime traversal** (R1–R4)  
-- **prime‑indexed states** (P2–P37)  
-- **cross‑domain headers** (RTT, GU, FFT, Pantheon, Medical, Substrate, Observer)
-
-It is designed to unify:
-
-- physics  
-- computation  
-- medicine  
-- mythology  
-- logic  
-- AI reasoning  
-- multi‑scale modeling  
-
-TriadicFrameworks is **not** a single theory — it is a **canon**, a structured ecosystem of modules.
-
----
-
-# **3. What TriadicFrameworks *is not***
-
-TriadicFrameworks is **not**:
-
-- a replacement for physics  
-- a replacement for medicine  
-- a replacement for HPC/QC  
-- a metaphysical belief system  
-- a programming language  
-- a simulation engine  
-- a closed or fixed theory
-
-It is a **framework for frameworks** — a way to structure, align, and reason across domains.
-
----
-
-# **4. Expectations for Students**
-
-Students should expect:
-
-### **4.1 Clear structure**
-Every module follows the same pattern:
-
-- identity  
-- purpose  
-- substrate feeds  
-- observer loops  
-- dimensional rails  
-- regime mapping  
-- examples  
-- cross‑module propagation  
-
-### **4.2 Progressive learning**
-Modules are layered:
-
-- beginner (FFT, FCG, Alignment)  
-- intermediate (RTT, Pantheon, GU)  
-- advanced (IPD‑12, substrate engines, observer bundles)
-
-### **4.3 Visual aids**
-Students will find:
-
-- SVG diagrams  
-- intake manifolds  
-- header manifolds  
-- engine block diagrams  
-- prime‑state icons  
-
-### **4.4 Cross‑domain examples**
-Every module includes examples from:
-
-- physics  
-- computation  
-- medicine  
-- mythology  
-- AI reasoning  
-
----
-
-# **5. Expectations for Researchers**
-
-Researchers should expect:
-
-### **5.1 Formal structure**
-TriadicFrameworks provides:
-
-- definitions  
-- operators  
-- invariants  
-- constraints  
-- regime maps  
-- observer models  
-- substrate engines  
-
-### **5.2 Cross‑domain applicability**
-Modules are designed to integrate:
-
-- HPC  
-- QC  
-- computational medicine  
-- physics (RTT, GU, FFT)  
-- mythology (Pantheon)  
-- AI reasoning  
-
-### **5.3 Performance models**
-IPD‑12 provides:
-
-- observer overhead  
-- observer gains  
-- manifold complexity  
-- substrate engine profiles  
-- hybrid HPC+QC integration  
-- medical header modeling  
-
-### **5.4 Sample files**
-Researchers will find:
-
-- intake manifold SVGs  
-- header manifold SVGs  
-- engine block SVG  
-- medical header  
-- HPC+QC substrate engine profile  
-- observer overhead & gain spec  
-
-### **5.5 Validation pathways**
-Researchers can validate modules through:
-
-- regime traversal tests  
-- observer loop stability  
-- substrate feed consistency  
-- dimensional lift/collapse behavior  
-- cross‑domain alignment tests  
-
----
-
-# **6. Expectations for AI Agents**
-
-AI agents should expect:
-
-### **6.1 Canon‑aligned reasoning**
-Use:
-
-- triadic lens  
-- observer bundles  
-- dimensional rails  
-- substrate feeds  
-- headers for output  
-
-### **6.2 Zero drift**
-Never invent modules or operators not present in the canon.
-
-### **6.3 Cross‑module propagation**
-When asked “how does this relate to X?”, provide:
-
-- structural mapping  
-- regime mapping  
-- observer mapping  
-- substrate mapping  
-
-### **6.4 Multi‑domain synthesis**
-AI agents should be able to:
-
-- map physics → medicine  
-- map medicine → computation  
-- map mythology → logic  
-- map QC → HPC  
-- map FFT → FCG → RF‑Builder  
-
----
-
-# **7. What TriadicFrameworks Already Provides (2026)**
-
-### **7.1 Core engine**
-- IPD‑12 engine block  
-- intake manifolds (SIM/DIM/TIM/QIM/FSI)  
-- output headers (RTT/GU/FFT/Pantheon/Dim/Substrate/Observer/Medical)  
-- substrate feeds (S1–S4)  
-- observer loops (O1–O4)  
-- dimensional rails (L/C/N)
-
-### **7.2 Domain modules**
-- FFT (Framework Field Theory)  
-- FCG (Framework Creation Guide)  
-- RF‑Builder (Regime‑Field Builder)  
-- RTT (Resonance Transport Theory)  
-- GU (Geometric Unity)  
-- Pantheon (mythic‑structural tiers)  
-- Computational Medicine (H‑Med header)
-
-### **7.3 Research modules**
-- HPC+QC substrate engine  
-- observer overhead & gain spec  
-- medical header manifold  
-- header manifold SVG set  
-- engine block SVG  
-- prime‑state icon atlas  
-
----
-
-# **8. Roadmap (2026–2027)**
-
-### **8.1 Near‑term**
-- Expectations module (this document)  
-- minimal formalism  
-- validation pathways  
-- contributor guidelines  
-- sample file index  
-- cross‑domain examples library  
-
-### **8.2 Mid‑term**
-- IPD‑12 mathematical formalism  
-- observer‑centric simulation examples  
-- HPC+QC hybrid benchmarks  
-- medical progression models  
-- Pantheon tier alignment maps  
-
-### **8.3 Long‑term**
-- full substrate engine library  
-- multi‑observer AI reasoning engine  
-- cross‑domain research preprint  
-- TriadicFrameworks v2.0 canon  
-
----
-
-# **9. How to Evaluate TriadicFrameworks**
-
-Researchers should evaluate:
-
-### **9.1 Structural clarity**
-Does the module follow the triadic lens?
-
-### **9.2 Observer behavior**
-Are O1–O4 consistent and stable?
-
-### **9.3 Substrate consistency**
-Are S1–S4 correctly mapped?
-
-### **9.4 Dimensional correctness**
-Do lift/collapse/neutral rails behave as expected?
-
-### **9.5 Regime traversal**
-Does the module traverse R1–R4 correctly?
-
-### **9.6 Cross‑domain alignment**
-Does the module map correctly to HPC, QC, medicine, physics, mythology?
-
----
-
-# **10. How to Contribute**
-
-Contributors should:
-
-- follow the triadic lens  
-- maintain zero drift  
-- use observer bundles  
-- use substrate feeds  
-- use dimensional rails  
-- provide cross‑domain examples  
-- include SVG diagrams  
-- include session context blocks  
-- include module.json metadata  
-
----
-
-# **11. Sample Files**
-
-Included in `/docs/Expectations/samples/`:
-
-- intake manifolds (SIM–FSI)  
-- header manifolds (RTT/GU/FFT/Pantheon/Dim/Substrate/Observer/Medical)  
-- engine block  
-- prime‑state icons  
-- HPC+QC substrate engine  
-- observer overhead & gain spec  
 # **`e_Capture.md` — Expectations Module Capture**  
 **TriadicFrameworks Canon — Root‑Level Orientation & Requirements Stack**  
 **Module:** Expectations  
@@ -1432,141 +1846,6 @@ Operator  → O1–O4 → Dim/Sub/Obs → AI Reasoning → Canon Validation
 - It is referenced by `README.md`, `Expectations.md`, `module_index.md`, and all cross‑domain maps.  
 - It is intended for students, researchers, and AI agents.  
 - It is canon‑aligned and stable.
-# **TriadicFrameworks — Expectations Module**  
-### *Root‑Level Orientation & Requirements Stack*  
-### *A core service for students, researchers, and AI agents*
-
----
-
-## 🌱 **Welcome**
-
-The **Expectations Module** is the *front door* of TriadicFrameworks.
-
-It tells newcomers:
-
-- what TriadicFrameworks *is*  
-- what TriadicFrameworks *is not*  
-- how the canon is structured  
-- how to navigate the modules  
-- how to evaluate the system  
-- how to contribute  
-- how AI agents must reason (zero drift)  
-
-This module is a **booster** for FFT, FCG, RF‑Builder, IPD‑12, RTT, GU, Pantheon, and Computational Medicine.
-
----
-
-## 🧭 **Why This Module Exists**
-
-TriadicFrameworks is large, multi‑domain, and deeply structured.  
-Anyone entering the canon needs:
-
-- orientation  
-- expectations  
-- a map  
-- a sense of scale  
-- a sense of purpose  
-- a sense of how the pieces fit together  
-
-This module provides that.
-
-It is the **root layer** of the entire canon.
-
----
-
-## 🔧 **What You’ll Find Here**
-
-### **1. Core Documents**
-- **README.md** — overview  
-- **Expectations.md** — full expectations document  
-- **e_Capture.md** — canonical capture  
-- **module.json** — metadata manifest  
-
-### **2. Maps**
-- Cross‑domain maps  
-- Observer/Substrate/Dimensional rails map  
-- IPD‑12 → Headers map  
-- Full Canon Map (root → engines → headers → domains → research)
-
-### **3. Sample Files**
-- Intake manifolds  
-- Header manifolds  
-- Engine block  
-- Prime‑state icons  
-- HPC+QC substrate engine  
-- Observer overhead & gain tables  
-- Cross‑domain examples  
-
-Everything here is designed to help you understand the canon quickly and clearly.
-
----
-
-## 🚀 **How This Module Connects to the Canon**
-
-### **Expectations → IPD‑12**
-Defines the rules the engine must follow.
-
-### **IPD‑12 → Headers**
-Produces structured outputs.
-
-### **Headers → Domains**
-Interpret those outputs in Medicine, HPC, QC, Physics, Mythos, and AI reasoning.
-
-### **Domains → Research**
-Provide real systems for cross‑domain study.
-
-### **Research → Canon**
-Validates and strengthens the canon.
-
-This module is the **root** of that entire flow.
-
----
-
-## 📚 **Recommended Reading Order**
-
-1. **Expectations.md**  
-2. **Full Canon Map**  
-3. **Observer/Substrate/Dimensional Rails Map**  
-4. **IPD‑12 → Headers Map**  
-5. **Sample File Index**  
-6. Continue into FFT → FCG → RF‑Builder → IPD‑12
-
----
-
-## 🧩 **Who This Module Serves**
-
-### **Students**
-Clear structure, visual aids, cross‑domain examples.
-
-### **Researchers**
-Formal structure, invariants, operators, validation pathways.
-
-### **AI Agents**
-Zero drift, triadic lens, substrate/observer/dimensional alignment.
-
----
-
-## 🌐 **Navigation**
-
-- Expectations Overview  
-- Full Canon Map  
-- Cross‑Domain Maps  
-- Sample File Index  
-- Observer/Substrate/Dimensional Rails Map  
-- IPD‑12 → Headers Map  
-- Module Index  
-- Capture Document  
-
----
-
-## 🏁 **Start Exploring**
-
-TriadicFrameworks is a canon — a structured, multi‑domain ecosystem.  
-This module is your **orientation layer**, your **requirements stack**, and your **first anchor**.
-
-Begin with **Expectations.md**, then follow the maps outward into the engine, headers, domains, and research layers.
-
-Welcome to the canon.
 # **Expectations Module Index**  
 **TriadicFrameworks Canon — Root‑Level Orientation Directory**  
 **Location:** `/docs/Expectations/`  
@@ -1773,224 +2052,6 @@ For structured onboarding of new domains into the Expectations frame, use `e_Cap
 ---
 
 *Published by Byte Books Publishing © 2026 · LCCN 2026917007*
-<img width="1194" height="672" alt="Expectations_module" src="https://github.com/user-attachments/assets/04c042fd-fe05-4719-b25f-e93c1d19c47d" />
-
-# Expectations
-
-- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Expectations/module.json) — Agentic module schema role assignments
-
-**Location:** `/docs/Expectations/`  
-**Role:** Root‑level orientation & requirements stack  
-**Audience:** Students • Researchers • AI Agents
-
-## **Purpose**
-
-The Expectations Module defines what newcomers — human or AI — should expect when entering TriadicFrameworks.  
-It is the **front door** to the canon, providing:
-
-- orientation  
-- structure  
-- requirements  
-- cross‑domain expectations  
-- links to sample files  
-- guidance for contributors  
-- stability anchors for AI agents  
-
-This module is a **core service** supporting FFT, FCG, RF‑Builder, IPD‑12, RTT, GU, Pantheon, and Computational Medicine.
-
----
-
-## **What TriadicFrameworks Is**
-
-TriadicFrameworks is a **multi‑domain, observer‑centric canon** built on:
-
-- triadic structure  
-- substrate engines  
-- observer bundles  
-- dimensional rails  
-- regime traversal  
-- prime‑indexed states  
-- cross‑domain headers  
-
-It is a **framework for frameworks**, not a single theory.
-
----
-
-## **What TriadicFrameworks Is Not**
-
-TriadicFrameworks is **not**:
-
-- a metaphysical belief system  
-- a physics replacement  
-- a medical replacement  
-- a programming language  
-- a simulation engine  
-- a closed theory  
-
-It is a **structured ecosystem** for cross‑domain reasoning.
-
----
-
-## **Expectations for Students**
-
-Students should expect:
-
-- clear structure  
-- progressive learning  
-- visual aids  
-- cross‑domain examples  
-- consistent module patterns  
-- beginner → intermediate → advanced pathways  
-
-Modules are designed to be learnable, navigable, and expandable.
-
----
-
-## **Expectations for Researchers**
-
-Researchers should expect:
-
-- formal structure  
-- definitions, operators, invariants  
-- cross‑domain applicability  
-- performance models  
-- observer overhead & gain analysis  
-- substrate engine profiles  
-- validation pathways  
-- sample files and diagrams  
-
-TriadicFrameworks is built for serious cross‑domain research.
-
----
-
-## **Expectations for AI Agents**
-
-AI agents should expect:
-
-- canon‑aligned reasoning  
-- zero drift  
-- substrate + observer + dimensional mapping  
-- cross‑module propagation  
-- multi‑domain synthesis  
-- strict structural consistency  
-
-AI agents must treat TriadicFrameworks as a **stable canon**, not a generative playground.
-
----
-
-## **What TriadicFrameworks Already Provides (2026)**
-
-### **Core Engine**
-- IPD‑12 engine block  
-- intake manifolds (SIM–FSI)  
-- output headers (RTT/GU/FFT/Pantheon/Dim/Substrate/Observer/Medical)  
-- substrate feeds (S1–S4)  
-- observer loops (O1–O4)  
-- dimensional rails (L/C/N)
-
-### **Domain Modules**
-- FFT  
-- FCG  
-- RF‑Builder  
-- RTT  
-- GU  
-- Pantheon  
-- Computational Medicine (H‑Med)
-
-### **Research Modules**
-- HPC+QC substrate engine  
-- observer overhead & gain spec  
-- medical header manifold  
-- header manifold SVG set  
-- engine block SVG  
-- prime‑state icon atlas  
-
----
-
-## **Roadmap (2026–2027)**
-
-### **Near‑Term**
-- Expectations module (this directory)  
-- minimal formalism  
-- validation pathways  
-- contributor guidelines  
-- sample file index  
-- cross‑domain examples library  
-
-### **Mid‑Term**
-- IPD‑12 mathematical formalism  
-- observer‑centric simulation examples  
-- HPC+QC hybrid benchmarks  
-- medical progression models  
-- Pantheon tier alignment maps  
-
-### **Long‑Term**
-- full substrate engine library  
-- multi‑observer AI reasoning engine  
-- cross‑domain research preprint  
-- TriadicFrameworks v2.0 canon  
-
----
-
-## **How to Evaluate TriadicFrameworks**
-
-Evaluate modules by:
-
-- structural clarity  
-- observer behavior  
-- substrate consistency  
-- dimensional correctness  
-- regime traversal  
-- cross‑domain alignment  
-
-This forms the **evaluation rubric** for all future modules.
-
----
-
-## **How to Contribute**
-
-Contributors should:
-
-- follow the triadic lens  
-- maintain zero drift  
-- use observer bundles  
-- use substrate feeds  
-- use dimensional rails  
-- provide cross‑domain examples  
-- include SVG diagrams  
-- include session context blocks  
-- include module.json metadata  
-
-This ensures canon consistency.
-
----
-
-## **Sample Files**
-
-Located in:
-
-```
-/docs/Expectations/samples/
-```
-
-Includes:
-
-- intake manifolds  
-- header manifolds  
-- engine block  
-- prime‑state icons  
-- HPC+QC substrate engine  
-- observer overhead & gain spec  
-
----
-
-## **Capture Link**
-
-The full capture for this module is located at:
-
-```
-/docs/Expectations/e_Capture.md
-```
 # **Sample File Index — Expectations Module**  
 **TriadicFrameworks Canon**  
 **Location:** `/docs/Expectations/`  
@@ -2130,63 +2191,4 @@ These demonstrate TriadicFrameworks’ cross‑domain power.
 - SVGs are GitHub‑safe (single root, no external references).  
 - Markdown files follow the triadic lens and module grammar.  
 - This index updates automatically as new samples are added.
-# Expectations Module
-
-- [Overview](README.md)
-- [Expectations Document](Expectations.md)
-- [Capture](e_Capture.md)
-- [Module Index](module_index.md)
-- [Sample File Index](sample_file_index.md)
-- [Cross‑Domain Map](cross_domain_map.md)
-- [Expectations SVG](expectations.svg)
-
----
-
-# Samples
-
-## Intake Manifolds
-- [SIM](samples/intake_manifolds/sim_intake.svg)
-- [DIM](samples/intake_manifolds/dim_intake.svg)
-- [TIM](samples/intake_manifolds/tim_intake.svg)
-- [QIM](samples/intake_manifolds/qim_intake.svg)
-- [FSI](samples/intake_manifolds/fsi_intake.svg)
-
-## Header Manifolds
-- [RTT](samples/header_manifolds/rtt_header.svg)
-- [GU](samples/header_manifolds/gu_header.svg)
-- [FFT](samples/header_manifolds/fft_header.svg)
-- [Pantheon](samples/header_manifolds/pantheon_header.svg)
-- [Dimensional](samples/header_manifolds/dimensional_header.svg)
-- [Substrate](samples/header_manifolds/substrate_header.svg)
-- [Observer](samples/header_manifolds/observer_header.svg)
-- [Medical (H‑Med)](samples/header_manifolds/h_med_header.svg)
-
-## Engine Block
-- [IPD‑12 Engine Block](samples/engine_block/ipd12_engine_block.svg)
-- [Engine Block Spec](samples/engine_block/engine_block.md)
-
-## Prime States
-- [Prime State Index](samples/prime_states/prime_state_index.md)
-- [Prime State Icons](samples/prime_states/prime_state_icons.svg)
-
-## HPC+QC Substrate Engine
-- [Hybrid Substrate Engine](samples/hpc_qc_substrate/hpc_qc_substrate_engine.md)
-- [Calibration → Observer Map](samples/hpc_qc_substrate/qc_calibration_observer_map.md)
-- [Hybrid Intake Examples](samples/hpc_qc_substrate/hpc_qc_intake_examples.md)
-
-## Observer Overhead & Gains
-- [Overhead & Gain Spec](samples/observer_overhead/observer_overhead_gain_spec.md)
-- [Cost Table](samples/observer_overhead/observer_cost_table.md)
-- [Gain Table](samples/observer_overhead/observer_gain_table.md)
-
-## Cross‑Domain Examples
-- [Physics → Medicine](samples/cross_domain/physics_to_medicine.md)
-- [QC → HPC](samples/cross_domain/qc_to_hpc.md)
-- [FFT → FCG](samples/cross_domain/fft_to_fcg.md)
-- [RF‑Builder Examples](samples/cross_domain/rf_builder_examples.md)
-
----
-
-# Metadata
-- [module.json](module.json)
 

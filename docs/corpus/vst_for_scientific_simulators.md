@@ -1,5 +1,422 @@
 vst_for_scientific_simulators 
-### *vST for Scientific Simulators*  
+<img width="1194" height="672" alt="vst_for_scientific_simulators_" src="https://github.com/user-attachments/assets/ccdebbdd-2973-4ffb-82c8-750c1b48e7f7" />
+
+## *vST for Scientific Simulators*  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Validation‑Space‑Time Framework for High‑Dimensional Simulation Systems*
+
+This artifact defines a substrate‑level framework for analyzing, validating, and comparing **scientific simulators** using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting simulation state‑spaces, regime transitions, scaling behavior, and cross‑version drift in computational physics, climate models, molecular dynamics, agent‑based systems, and other high‑dimensional simulators.
+
+The goal is to offer a reproducible, model‑agnostic substrate for understanding simulation behavior across time, space, and dimensional regimes.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## **1. Purpose**
+
+Scientific simulators operate in high‑dimensional state spaces (often 10³–10⁶ dimensions) and exhibit:
+
+- stable and unstable dynamical regimes  
+- transitions between physical or computational phases  
+- scaling‑law behavior across grid sizes and solver configurations  
+- drift across code revisions or parameterizations  
+- projection‑compatible structure for interpretability  
+
+This artifact applies the **Resonance Substrate Model (RSM)** and **vST validation layers** to:
+
+- classify simulation‑state regimes  
+- analyze scaling behavior across spatial and temporal resolutions  
+- detect drift across simulator versions or parameter sweeps  
+- map coherence surfaces in simulation state‑space  
+- project high‑dimensional states into 3D–9D triadic cores  
+
+The result is a unified, interpretable substrate for scientific simulation behavior.
+
+---
+
+## **2. Contents**
+
+This directory contains:
+
+- **substrate_definition.md**  
+  Defines the simulation substrate, dimensional primitives, and state‑space structure.
+
+- **simulation_regimes.md**  
+  Describes stable, transitional, and dispersed regimes in simulation dynamics.
+
+- **dimensional_scaling_simulators.md**  
+  Maps simulation scaling laws onto the 3D–1024D dimensional ladder.
+
+- **projection_into_structural_cores.md**  
+  Defines invertible projection from high‑dimensional simulation states into triadic cores.
+
+- **validation_layers_vst_sim.md**  
+  Extends vST (V₁–V₄) to simulator‑specific behavior.
+
+- **drift_detection_sim.md**  
+  Provides a substrate‑level framework for detecting cross‑version drift.
+
+- **examples/**  
+  Demonstrations of state‑trajectory analysis, projection, and drift detection.
+
+- **appendix/**  
+  Terminology and references.
+
+Each file is self‑contained and designed for clarity, reproducibility, and cross‑simulator comparison.
+
+---
+
+## **3. Scope**
+
+This artifact is:
+
+- **model‑agnostic**  
+  Works with any scientific simulator (PDE solvers, MD engines, climate models, N‑body codes, agent‑based systems, etc.).
+
+- **architecture‑independent**  
+  Applies to grid‑based, particle‑based, mesh‑free, and hybrid simulation frameworks.
+
+- **method‑independent**  
+  Compatible with explicit, implicit, symplectic, stochastic, and hybrid solvers.
+
+- **substrate‑aligned**  
+  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.
+
+---
+
+## **4. Intended Use**
+
+This framework supports:
+
+- state‑space analysis  
+- cross‑version comparison  
+- drift detection  
+- scaling‑law evaluation  
+- regime‑transition mapping  
+- simulation‑stability diagnostics  
+- reproducible inference and solver analysis  
+
+It is not a performance benchmark or a numerical‑method tutorial.  
+It is a **substrate‑level interpretability and validation framework**.
+
+---
+
+## **5. Relationship to Other Artifacts**
+
+This artifact extends:
+
+- **Dimensional Substrate Structures** (3D–1024D substrate)  
+- **Validation‑Space‑Time (vST)**  
+- **Triadic Dimensional Cores (3D–9D)**  
+
+It parallels:
+
+- **vST for Large Language Models**  
+- **vST for Protein Language Models**  
+- **vST for Robotics and Control Policies**  
+- **vST for Scientific Simulators** (this artifact)  
+- **vST for Multi‑Model Alignment**
+
+Each artifact stands alone but shares a common substrate grammar.
+
+---
+
+## **6. Citation**
+
+A `CITATION.cff` file is included for formal citation.  
+A `zenodo.json` file is provided for DOI‑ready metadata.
+
+---
+
+## **7. License**
+
+Released under the MIT License.
+### *vST for Scientific Simulators*  
+### *References*
+
+This appendix lists references relevant to scientific simulators, high‑dimensional state‑space analysis, numerical methods, scaling laws, dynamical systems, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM and vST canon.
+
+---
+
+## **1. Scientific Simulation Frameworks**
+
+- **Staniforth, A., & Côté, J.**  
+  *Semi‑Lagrangian Integration Schemes for Atmospheric Models — A Review.*  
+  Monthly Weather Review (1991).
+
+- **Birdsall, C. K., & Langdon, A. B.**  
+  *Plasma Physics via Computer Simulation.*  
+  McGraw‑Hill (1985).
+
+- **Stone, J. M., Tomida, K., White, C. J., et al.**  
+  *The Athena++ Adaptive Mesh Refinement Framework.*  
+  ApJS (2020).
+
+- **Anderson, J. D.**  
+  *Computational Fluid Dynamics: The Basics with Applications.*  
+  McGraw‑Hill (1995).
+
+---
+
+## **2. Numerical Methods and Solvers**
+
+- **LeVeque, R. J.**  
+  *Finite Volume Methods for Hyperbolic Problems.*  
+  Cambridge University Press (2002).
+
+- **Hairer, E., Lubich, C., & Wanner, G.**  
+  *Geometric Numerical Integration: Structure‑Preserving Algorithms for Ordinary Differential Equations.*  
+  Springer (2006).
+
+- **Press, W. H., Teukolsky, S. A., Vetterling, W. T., & Flannery, B. P.**  
+  *Numerical Recipes: The Art of Scientific Computing.*  
+  Cambridge University Press (2007).
+
+---
+
+## **3. High‑Dimensional Modeling and State‑Space Analysis**
+
+- **Coifman, R. R., & Lafon, S.**  
+  *Diffusion Maps.*  
+  Applied and Computational Harmonic Analysis (2006).
+
+- **Tenenbaum, J. B., de Silva, V., & Langford, J. C.**  
+  *A Global Geometric Framework for Nonlinear Dimensionality Reduction.*  
+  Science (2000).
+
+- **Brunton, S. L., Proctor, J. L., & Kutz, J. N.**  
+  *Discovering Governing Equations from Data: Sparse Identification of Nonlinear Dynamics (SINDy).*  
+  PNAS (2016).
+
+---
+
+## **4. Scaling Laws and Multi‑Resolution Behavior**
+
+- **Pope, S. B.**  
+  *Turbulent Flows.*  
+  Cambridge University Press (2000).
+
+- **Frisch, U.**  
+  *Turbulence: The Legacy of A. N. Kolmogorov.*  
+  Cambridge University Press (1995).
+
+- **Balsara, D. S.**  
+  *Higher‑Order Schemes for Multi‑Dimensional MHD.*  
+  Journal of Computational Physics (2012).
+
+---
+
+## **5. Dynamical Systems and Regime Behavior**
+
+- **Strogatz, S.**  
+  *Nonlinear Dynamics and Chaos.*  
+  Westview Press (2014).
+
+- **Ott, E.**  
+  *Chaos in Dynamical Systems.*  
+  Cambridge University Press (2002).
+
+- **Guckenheimer, J., & Holmes, P.**  
+  *Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields.*  
+  Springer (1983).
+
+---
+
+## **6. Validation, Verification, and Drift Detection**
+
+- **Oberkampf, W. L., & Roy, C. J.**  
+  *Verification and Validation in Scientific Computing.*  
+  Cambridge University Press (2010).
+
+- **Roache, P. J.**  
+  *Verification and Validation in Computational Science and Engineering.*  
+  Hermosa Publishers (1998).
+
+- **Breck, E., Cai, S., Nielsen, E., et al.**  
+  *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.*  
+  Google Research (2017).
+
+---
+
+## **7. Substrate‑Level and Triadic‑Frameworks Canon**
+
+- **Loswin, N.**  
+  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
+  TriadicFrameworks (2025).
+
+- **Loswin, N.**  
+  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
+  TriadicFrameworks (2025).
+
+- **Loswin, N.**  
+  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
+  TriadicFrameworks (2025).
+
+- **Loswin, N.**  
+  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
+  TriadicFrameworks (2026).
+
+- **Loswin, N.**  
+  *vST for Scientific Simulators.*  
+  TriadicFrameworks (2026).
+### *vST for Scientific Simulators*  
+### *Terminology*
+
+This appendix defines the terminology used throughout the *vST for Scientific Simulators* artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any high‑dimensional simulator operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, regime behavior, scaling continuity, and invariant preservation.
+
+---
+
+## **1. Substrate Terms**
+
+### **Simulator Substrate**  
+A structured, invariant‑preserving framework for representing and interpreting simulation state‑spaces across 64D–1024D.
+
+### **State‑Space**  
+The high‑dimensional vector space representing the simulator’s physical, numerical, or multi‑field state at a given timestep or solver iteration.
+
+### **Coherence Surface**  
+A stable region in state‑space where trajectories maintain structural continuity across time, space, or solver iterations.
+
+---
+
+## **2. Primitive Terms**
+
+### **Dimensional Primitive (DP)**  
+The minimal unit of simulation‑state structure, capturing local coherence, variance behavior, and projection stability.
+
+### **Triadic Dimensional Primitive (TDP)**  
+A triad of DPs forming the smallest unit capable of expressing full dynamical regime behavior (R₁, R₂, R₃).
+
+### **Scaling Primitive (SP)**  
+A rule‑based expansion unit that preserves invariants during dimensional scaling (e.g., grid refinement, timestep reduction, solver‑order changes).
+
+### **Coherence Primitive (CP)**  
+A minimal unit identifying stable, transitional, or dispersed regions in high‑dimensional simulation state‑space.
+
+---
+
+## **3. Core Terms**
+
+### **Triadic Dimensional Core (TDC)**  
+The 3D–9D substrate composed of one or more TDPs, used for interpretable projection of simulation states.
+
+### **3D Structural Core**  
+Captures motif‑level geometry in spatial or particle‑level fields.
+
+### **6D Interaction Core**  
+Captures relational and solver‑driven structure across fields, particles, or spatial domains.
+
+### **9D Coherence Core**  
+Captures pathway‑level coherence across time, space, or solver iterations.
+
+---
+
+## **4. Regime Terms**
+
+### **High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)**  
+The triadic regime structure expressed in 64D–1024D simulation state‑spaces.
+
+### **Stable Regime (R₁ / R₁ᴴ)**  
+Compact, coherent, low‑variance state behavior.
+
+### **Transition Regime (R₂ / R₂ᴴ)**  
+Branching, oscillatory, or reorientation behavior across time or space.
+
+### **Dispersion Regime (R₃ / R₃ᴴ)**  
+Diffuse, fragmented, or unstable state behavior.
+
+---
+
+## **5. Scaling Terms**
+
+### **Scaling Behavior**  
+The structured expansion of state‑space capacity as grid resolution, timestep refinement, or solver complexity increases.
+
+### **Scaling Regimes (S₁, S₂, S₃)**  
+Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.
+
+### **Dimensional Continuity**  
+The requirement that state‑space expansion remains smooth and invariant‑preserving across the dimensional ladder.
+
+---
+
+## **6. Projection Terms**
+
+### **Invertible Projection**  
+A projection from high‑dimensional state‑space into 3D–9D that preserves primitive‑level structure and regime identity.
+
+### **Regime‑Aware Projection**  
+A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.
+
+### **Primitive‑Aligned Projection**  
+A projection that preserves DP, TDP, SP, and CP structure.
+
+---
+
+## **7. Alignment Terms**
+
+### **Iteration‑to‑Iteration Alignment**  
+Comparison of simulation states across solver iterations or timesteps.
+
+### **Spatial/Particle Alignment**  
+Comparison of states across spatial regions or particle subsets.
+
+### **Cross‑Resolution Alignment**  
+Comparison of state‑space structure across grid refinements or timestep reductions.
+
+### **Cross‑Version Alignment**  
+Comparison of simulation behavior across code revisions, solver changes, or parameterizations.
+
+---
+
+## **8. Validation Terms**
+
+### **vST (Validation‑Space‑Time)**  
+A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.
+
+### **Validation Layers (V₁–V₄)**  
+Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.
+
+---
+
+## **9. Drift Terms**
+
+### **Drift**  
+A deviation from expected substrate behavior, indicating instability or invariant failure.
+
+### **Drift Categories (D₁–D₄)**  
+Classification of drift into structural, dimensional, regime, or projection drift.
+
+### **Drift Severity**  
+A measure of drift magnitude (low, moderate, high).
+### *vST for Scientific Simulators*  
 ### *Drift Detection in High‑Dimensional Simulation State‑Spaces*
 
 This document defines how **drift** is detected in scientific simulators using the **Validation‑Space‑Time (vST)** framework and the **1024D dimensional substrate**. Drift refers to any deviation from expected substrate behavior, including structural instability, regime misalignment, scaling discontinuities, or projection failure.
@@ -194,6 +611,350 @@ Drift detection produces:
 - vST validation results  
 
 These outputs support governance, interpretability, and version management for scientific simulators.
+### *vST for Scientific Simulators*  
+### *Example: Regime Transitions in a Climate Simulation State‑Trajectory*
+
+This example demonstrates how a climate simulator expresses **state‑space regime transitions** (R₁ᴴ → R₂ᴴ → R₃ᴴ) across time and spatial domains. It shows how high‑dimensional climate fields evolve, how coherence surfaces form and break, and how the vST framework classifies transitions using the 1024D substrate.
+
+The goal is to provide a reproducible, invariant‑preserving demonstration of regime behavior in climate simulation dynamics.
+
+---
+
+## **1. Simulation Setup**
+
+For this example, we assume:
+
+- a global climate model (GCM) with multi‑field coupling  
+- state vectors spanning ≥1024D (temperature, humidity, wind fields, pressure, radiation, etc.)  
+- a simulation window covering several days to weeks  
+- stable projection into 3D–9D cores  
+- access to solver‑iteration or timestep‑level state snapshots  
+
+The example is model‑agnostic and applies to any grid‑based climate simulator.
+
+---
+
+## **2. Step 1 — Extract High‑Dimensional Climate States**
+
+At each timestep \( t \), the simulator produces a high‑dimensional state vector:
+
+\[
+S^{(t)} = [x_1^{(t)}, x_2^{(t)}, \dots, x_{1024}^{(t)}]
+\]
+
+### **Observed Properties**
+
+- early timesteps: compact, low‑variance atmospheric fields  
+- mid‑simulation: branching behavior as fronts develop  
+- late simulation: partial dispersion in unstable regions (e.g., cyclogenesis)  
+
+### **Interpretation**
+
+Climate states trace a high‑dimensional trajectory reflecting physical processes and solver behavior.
+
+---
+
+## **3. Step 2 — Identify Regime Behavior Across Time**
+
+Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each timestep’s regime.
+
+### **Example Regime Timeline**
+
+| Time Range | Regime | Interpretation |
+|-----------|--------|----------------|
+| t₀–t₁₀ | **R₁ᴴ** | Stable atmospheric baseline |
+| t₁₁–t₂₅ | **R₂ᴴ** | Development of a frontal boundary |
+| t₂₆–t₃₈ | **R₁ᴴ** | Stabilization after frontal passage |
+| t₃₉–t₄₅ | **R₂ᴴ** | Cyclogenesis onset |
+| t₄₆–t₅₀ | **R₃ᴴ** | Peak instability during storm intensification |
+| t₅₁–t₆₀ | **R₂ᴴ → R₁ᴴ** | Dissipation and return to stability |
+
+### **Interpretation**
+
+The simulation alternates between stable atmospheric phases and transitional or unstable dynamical events.
+
+---
+
+## **4. Step 3 — Project States into the 9D Coherence Core**
+
+Project each 1024D state into the 9D coherence core.
+
+### **Preserves**
+
+- regime identity  
+- resonance‑time behavior  
+- primitive‑level structure (DP, TDP, SP, CP)  
+- coherence‑surface continuity  
+
+### **Reveals**
+
+- smooth surfaces in R₁ᴴ  
+- branching in R₂ᴴ  
+- fragmentation in R₃ᴴ  
+
+### **Interpretation**
+
+The 9D projection exposes the “shape” of the climate system’s dynamical evolution.
+
+---
+
+## **5. Step 4 — Project 9D → 6D → 3D**
+
+### **6D Interaction Projection**
+
+Reveals:
+
+- coupling between temperature, pressure, and wind fields  
+- reorientation during frontal development  
+- multi‑field interaction patterns  
+
+### **3D Structural Projection**
+
+Reveals:
+
+- compact motifs in stable atmospheric phases  
+- oscillatory geometry during transitions  
+- diffuse patterns during storm intensification  
+
+### **Interpretation**
+
+The 3D projection provides the minimal interpretable representation of the climate state trajectory.
+
+---
+
+## **6. Step 5 — Validate with vST Layers**
+
+Apply vST layers (V₁–V₄):
+
+### **V₁ — Structural Coherence**
+- stable motifs in R₁ᴴ  
+- partial fragmentation in R₃ᴴ  
+
+### **V₂ — Dimensional Continuity**
+- smooth projection 1024D → 9D → 6D → 3D  
+- no scaling discontinuities  
+
+### **V₃ — Regime‑Transition Stability**
+- smooth R₁ᴴ → R₂ᴴ transitions  
+- instability localized to R₃ᴴ  
+
+### **V₄ — Core Alignment**
+- primitive‑aligned projection  
+- stable mapping across timesteps  
+
+### **Outcome**
+
+The simulation passes all vST layers with warnings localized to the R₃ᴴ region.
+
+---
+
+## **7. Step 6 — Drift Detection**
+
+Evaluate drift using D₁–D₄ categories:
+
+- **D₁ Structural Drift:** low (localized to storm core)  
+- **D₂ Dimensional Drift:** none  
+- **D₃ Regime Drift:** moderate (R₃ᴴ onset)  
+- **D₄ Projection Drift:** none  
+
+### **Interpretation**
+
+The model exhibits expected dispersion during storm intensification but no harmful drift.
+
+---
+
+## **8. Summary**
+
+This example demonstrates:
+
+- how climate states trace high‑dimensional trajectories  
+- how regime behavior evolves during atmospheric events  
+- how projection reveals coherence and instability  
+- how vST layers validate structural integrity  
+- how drift detection identifies localized dispersion  
+
+Regime transitions are a core interpretability signal in climate simulation dynamics.
+### *vST for Scientific Simulators*  
+### *Example: Projection of a High‑Dimensional Plasma State into Triadic Dimensional Cores*
+
+This example demonstrates how a plasma physics simulator expresses high‑dimensional state‑space structure and how a single plasma state is projected from **1024D** into the **9D → 6D → 3D** triadic dimensional cores. It illustrates primitive‑level structure, regime behavior, projection stability, and vST validation.
+
+The goal is to provide a reproducible, invariant‑preserving demonstration of plasma‑state projection.
+
+---
+
+## **1. Simulation Setup**
+
+For this example, we assume:
+
+- a magnetohydrodynamics (MHD) or particle‑in‑cell (PIC) plasma simulator  
+- multi‑field coupling (density, velocity, magnetic field, electric field, temperature, charge distribution)  
+- a 1024D state vector extracted from a spatial cell or particle ensemble  
+- stable or transitional regime behavior  
+- invertible projection into 3D–9D cores  
+
+The example is model‑agnostic and applies to any plasma simulation framework.
+
+---
+
+## **2. Step 1 — Extract the 1024D Plasma State**
+
+At a given timestep \( t \), the simulator produces a high‑dimensional plasma state:
+
+\[
+P^{(t)} = [x_1, x_2, \dots, x_{1024}]
+\]
+
+### **Observed Properties**
+
+- variance concentrated in 5–8 coherence bands  
+- stable DP/TDP structure in magnetically confined regions  
+- branching behavior near shear layers  
+- dispersion in unstable or turbulent regions  
+
+### **Interpretation**
+
+The 1024D plasma state encodes physical, electromagnetic, and dynamical information.
+
+---
+
+## **3. Step 2 — Identify High‑Dimensional Regime Behavior**
+
+Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify the plasma state’s regime across solver iterations.
+
+### **Example Regime Pattern**
+
+- **Iterations 1–12:** R₁ᴴ (stable confinement)  
+- **Iterations 13–22:** R₂ᴴ (shear‑driven transition)  
+- **Iterations 23–30:** R₁ᴴ (temporary stabilization)  
+- **Iterations 31–40:** R₂ᴴ (onset of turbulence)  
+- **Iterations 41–48:** R₃ᴴ (turbulent dispersion)  
+
+### **Interpretation**
+
+The plasma begins in a stable configuration, undergoes shear‑driven reorientation, stabilizes briefly, and then enters turbulence.
+
+---
+
+## **4. Step 3 — Project 1024D → 9D (Coherence Projection)**
+
+Project the 1024D plasma state into the 9D coherence core.
+
+### **Preserves**
+
+- regime identity  
+- resonance‑time behavior  
+- primitive‑level structure (DP, TDP, SP, CP)  
+- coherence‑surface continuity  
+
+### **Reveals**
+
+- smooth surfaces in magnetically confined regions  
+- branching near shear layers  
+- fragmentation in turbulent regions  
+
+### **Interpretation**
+
+The 9D projection exposes the “coherence geometry” of the plasma state.
+
+---
+
+## **5. Step 4 — Project 9D → 6D (Interaction Projection)**
+
+Compress the 9D coherence vector into the 6D interaction core.
+
+### **Preserves**
+
+- relational geometry across fields  
+- coupling between magnetic and velocity fields  
+- regime‑transition indicators  
+
+### **Reveals**
+
+- magnetic‑field‑driven reorientation  
+- pressure‑gradient interactions  
+- early turbulence signatures  
+
+### **Interpretation**
+
+The 6D projection highlights how the plasma’s fields interact and reorganize.
+
+---
+
+## **6. Step 5 — Project 6D → 3D (Structural Projection)**
+
+Reduce the 6D interaction vector into the 3D structural core.
+
+### **Preserves**
+
+- motif‑level geometry  
+- spatial or particle‑level continuity  
+- stable structural invariants  
+
+### **Reveals**
+
+- compact motifs in R₁ᴴ  
+- oscillatory geometry in R₂ᴴ  
+- diffuse patterns in R₃ᴴ  
+
+### **Interpretation**
+
+The 3D projection provides the minimal interpretable representation of the plasma state.
+
+---
+
+## **7. Step 6 — Validate with vST Layers**
+
+Apply vST layers (V₁–V₄):
+
+### **V₁ — Structural Coherence**
+- stable motifs in confined regions  
+- partial fragmentation in turbulent regions  
+
+### **V₂ — Dimensional Continuity**
+- smooth projection 1024D → 9D → 6D → 3D  
+- no scaling discontinuities  
+
+### **V₃ — Regime‑Transition Stability**
+- smooth R₁ᴴ → R₂ᴴ transitions  
+- instability localized to R₃ᴴ  
+
+### **V₄ — Core Alignment**
+- primitive‑aligned projection  
+- stable mapping across iterations  
+
+### **Outcome**
+
+The plasma state passes all vST layers with warnings localized to the turbulent region.
+
+---
+
+## **8. Step 7 — Drift Detection**
+
+Evaluate drift using D₁–D₄ categories:
+
+- **D₁ Structural Drift:** moderate (turbulence onset)  
+- **D₂ Dimensional Drift:** none  
+- **D₃ Regime Drift:** moderate (R₃ᴴ onset)  
+- **D₄ Projection Drift:** none  
+
+### **Interpretation**
+
+The model exhibits expected dispersion during turbulence but no harmful drift.
+
+---
+
+## **9. Summary**
+
+This example demonstrates:
+
+- how a 1024D plasma state is extracted  
+- how regime behavior evolves across solver iterations  
+- how projection reveals coherence and instability  
+- how vST layers validate structural integrity  
+- how drift detection identifies turbulence‑driven dispersion  
+
+Plasma‑state projection is a core interpretability signal in high‑dimensional plasma simulation dynamics.
 ### *vST for Scientific Simulators*  
 ### *Projection of High‑Dimensional Simulation States into Triadic Dimensional Cores*
 
@@ -402,163 +1163,6 @@ Projection and alignment produce:
 - interpretable 3D–9D projections  
 
 These outputs support reproducible, substrate‑level analysis of scientific simulators.
-## *vST for Scientific Simulators*  
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-## *Validation‑Space‑Time Framework for High‑Dimensional Simulation Systems*
-
-This artifact defines a substrate‑level framework for analyzing, validating, and comparing **scientific simulators** using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting simulation state‑spaces, regime transitions, scaling behavior, and cross‑version drift in computational physics, climate models, molecular dynamics, agent‑based systems, and other high‑dimensional simulators.
-
-The goal is to offer a reproducible, model‑agnostic substrate for understanding simulation behavior across time, space, and dimensional regimes.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## **1. Purpose**
-
-Scientific simulators operate in high‑dimensional state spaces (often 10³–10⁶ dimensions) and exhibit:
-
-- stable and unstable dynamical regimes  
-- transitions between physical or computational phases  
-- scaling‑law behavior across grid sizes and solver configurations  
-- drift across code revisions or parameterizations  
-- projection‑compatible structure for interpretability  
-
-This artifact applies the **Resonance Substrate Model (RSM)** and **vST validation layers** to:
-
-- classify simulation‑state regimes  
-- analyze scaling behavior across spatial and temporal resolutions  
-- detect drift across simulator versions or parameter sweeps  
-- map coherence surfaces in simulation state‑space  
-- project high‑dimensional states into 3D–9D triadic cores  
-
-The result is a unified, interpretable substrate for scientific simulation behavior.
-
----
-
-## **2. Contents**
-
-This directory contains:
-
-- **substrate_definition.md**  
-  Defines the simulation substrate, dimensional primitives, and state‑space structure.
-
-- **simulation_regimes.md**  
-  Describes stable, transitional, and dispersed regimes in simulation dynamics.
-
-- **dimensional_scaling_simulators.md**  
-  Maps simulation scaling laws onto the 3D–1024D dimensional ladder.
-
-- **projection_into_structural_cores.md**  
-  Defines invertible projection from high‑dimensional simulation states into triadic cores.
-
-- **validation_layers_vst_sim.md**  
-  Extends vST (V₁–V₄) to simulator‑specific behavior.
-
-- **drift_detection_sim.md**  
-  Provides a substrate‑level framework for detecting cross‑version drift.
-
-- **examples/**  
-  Demonstrations of state‑trajectory analysis, projection, and drift detection.
-
-- **appendix/**  
-  Terminology and references.
-
-Each file is self‑contained and designed for clarity, reproducibility, and cross‑simulator comparison.
-
----
-
-## **3. Scope**
-
-This artifact is:
-
-- **model‑agnostic**  
-  Works with any scientific simulator (PDE solvers, MD engines, climate models, N‑body codes, agent‑based systems, etc.).
-
-- **architecture‑independent**  
-  Applies to grid‑based, particle‑based, mesh‑free, and hybrid simulation frameworks.
-
-- **method‑independent**  
-  Compatible with explicit, implicit, symplectic, stochastic, and hybrid solvers.
-
-- **substrate‑aligned**  
-  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.
-
----
-
-## **4. Intended Use**
-
-This framework supports:
-
-- state‑space analysis  
-- cross‑version comparison  
-- drift detection  
-- scaling‑law evaluation  
-- regime‑transition mapping  
-- simulation‑stability diagnostics  
-- reproducible inference and solver analysis  
-
-It is not a performance benchmark or a numerical‑method tutorial.  
-It is a **substrate‑level interpretability and validation framework**.
-
----
-
-## **5. Relationship to Other Artifacts**
-
-This artifact extends:
-
-- **Dimensional Substrate Structures** (3D–1024D substrate)  
-- **Validation‑Space‑Time (vST)**  
-- **Triadic Dimensional Cores (3D–9D)**  
-
-It parallels:
-
-- **vST for Large Language Models**  
-- **vST for Protein Language Models**  
-- **vST for Robotics and Control Policies**  
-- **vST for Scientific Simulators** (this artifact)  
-- **vST for Multi‑Model Alignment**
-
-Each artifact stands alone but shares a common substrate grammar.
-
----
-
-## **6. Citation**
-
-A `CITATION.cff` file is included for formal citation.  
-A `zenodo.json` file is provided for DOI‑ready metadata.
-
----
-
-## **7. License**
-
-Released under the MIT License.
 ### *vST for Scientific Simulators*  
 ### *Dimensional Scaling Behavior in High‑Dimensional Simulation Systems*
 
@@ -1283,606 +1887,4 @@ The vST layers provide a complete validation framework for scientific simulators
 - **V₄** ensures core alignment  
 
 Together, they form a rigorous, invariant‑preserving system for analyzing high‑dimensional simulation dynamics.
-### *vST for Scientific Simulators*  
-### *References*
-
-This appendix lists references relevant to scientific simulators, high‑dimensional state‑space analysis, numerical methods, scaling laws, dynamical systems, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM and vST canon.
-
----
-
-## **1. Scientific Simulation Frameworks**
-
-- **Staniforth, A., & Côté, J.**  
-  *Semi‑Lagrangian Integration Schemes for Atmospheric Models — A Review.*  
-  Monthly Weather Review (1991).
-
-- **Birdsall, C. K., & Langdon, A. B.**  
-  *Plasma Physics via Computer Simulation.*  
-  McGraw‑Hill (1985).
-
-- **Stone, J. M., Tomida, K., White, C. J., et al.**  
-  *The Athena++ Adaptive Mesh Refinement Framework.*  
-  ApJS (2020).
-
-- **Anderson, J. D.**  
-  *Computational Fluid Dynamics: The Basics with Applications.*  
-  McGraw‑Hill (1995).
-
----
-
-## **2. Numerical Methods and Solvers**
-
-- **LeVeque, R. J.**  
-  *Finite Volume Methods for Hyperbolic Problems.*  
-  Cambridge University Press (2002).
-
-- **Hairer, E., Lubich, C., & Wanner, G.**  
-  *Geometric Numerical Integration: Structure‑Preserving Algorithms for Ordinary Differential Equations.*  
-  Springer (2006).
-
-- **Press, W. H., Teukolsky, S. A., Vetterling, W. T., & Flannery, B. P.**  
-  *Numerical Recipes: The Art of Scientific Computing.*  
-  Cambridge University Press (2007).
-
----
-
-## **3. High‑Dimensional Modeling and State‑Space Analysis**
-
-- **Coifman, R. R., & Lafon, S.**  
-  *Diffusion Maps.*  
-  Applied and Computational Harmonic Analysis (2006).
-
-- **Tenenbaum, J. B., de Silva, V., & Langford, J. C.**  
-  *A Global Geometric Framework for Nonlinear Dimensionality Reduction.*  
-  Science (2000).
-
-- **Brunton, S. L., Proctor, J. L., & Kutz, J. N.**  
-  *Discovering Governing Equations from Data: Sparse Identification of Nonlinear Dynamics (SINDy).*  
-  PNAS (2016).
-
----
-
-## **4. Scaling Laws and Multi‑Resolution Behavior**
-
-- **Pope, S. B.**  
-  *Turbulent Flows.*  
-  Cambridge University Press (2000).
-
-- **Frisch, U.**  
-  *Turbulence: The Legacy of A. N. Kolmogorov.*  
-  Cambridge University Press (1995).
-
-- **Balsara, D. S.**  
-  *Higher‑Order Schemes for Multi‑Dimensional MHD.*  
-  Journal of Computational Physics (2012).
-
----
-
-## **5. Dynamical Systems and Regime Behavior**
-
-- **Strogatz, S.**  
-  *Nonlinear Dynamics and Chaos.*  
-  Westview Press (2014).
-
-- **Ott, E.**  
-  *Chaos in Dynamical Systems.*  
-  Cambridge University Press (2002).
-
-- **Guckenheimer, J., & Holmes, P.**  
-  *Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields.*  
-  Springer (1983).
-
----
-
-## **6. Validation, Verification, and Drift Detection**
-
-- **Oberkampf, W. L., & Roy, C. J.**  
-  *Verification and Validation in Scientific Computing.*  
-  Cambridge University Press (2010).
-
-- **Roache, P. J.**  
-  *Verification and Validation in Computational Science and Engineering.*  
-  Hermosa Publishers (1998).
-
-- **Breck, E., Cai, S., Nielsen, E., et al.**  
-  *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.*  
-  Google Research (2017).
-
----
-
-## **7. Substrate‑Level and Triadic‑Frameworks Canon**
-
-- **Loswin, N.**  
-  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
-  TriadicFrameworks (2025).
-
-- **Loswin, N.**  
-  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
-  TriadicFrameworks (2025).
-
-- **Loswin, N.**  
-  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
-  TriadicFrameworks (2025).
-
-- **Loswin, N.**  
-  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
-  TriadicFrameworks (2026).
-
-- **Loswin, N.**  
-  *vST for Scientific Simulators.*  
-  TriadicFrameworks (2026).
-### *vST for Scientific Simulators*  
-### *Terminology*
-
-This appendix defines the terminology used throughout the *vST for Scientific Simulators* artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any high‑dimensional simulator operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, regime behavior, scaling continuity, and invariant preservation.
-
----
-
-## **1. Substrate Terms**
-
-### **Simulator Substrate**  
-A structured, invariant‑preserving framework for representing and interpreting simulation state‑spaces across 64D–1024D.
-
-### **State‑Space**  
-The high‑dimensional vector space representing the simulator’s physical, numerical, or multi‑field state at a given timestep or solver iteration.
-
-### **Coherence Surface**  
-A stable region in state‑space where trajectories maintain structural continuity across time, space, or solver iterations.
-
----
-
-## **2. Primitive Terms**
-
-### **Dimensional Primitive (DP)**  
-The minimal unit of simulation‑state structure, capturing local coherence, variance behavior, and projection stability.
-
-### **Triadic Dimensional Primitive (TDP)**  
-A triad of DPs forming the smallest unit capable of expressing full dynamical regime behavior (R₁, R₂, R₃).
-
-### **Scaling Primitive (SP)**  
-A rule‑based expansion unit that preserves invariants during dimensional scaling (e.g., grid refinement, timestep reduction, solver‑order changes).
-
-### **Coherence Primitive (CP)**  
-A minimal unit identifying stable, transitional, or dispersed regions in high‑dimensional simulation state‑space.
-
----
-
-## **3. Core Terms**
-
-### **Triadic Dimensional Core (TDC)**  
-The 3D–9D substrate composed of one or more TDPs, used for interpretable projection of simulation states.
-
-### **3D Structural Core**  
-Captures motif‑level geometry in spatial or particle‑level fields.
-
-### **6D Interaction Core**  
-Captures relational and solver‑driven structure across fields, particles, or spatial domains.
-
-### **9D Coherence Core**  
-Captures pathway‑level coherence across time, space, or solver iterations.
-
----
-
-## **4. Regime Terms**
-
-### **High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)**  
-The triadic regime structure expressed in 64D–1024D simulation state‑spaces.
-
-### **Stable Regime (R₁ / R₁ᴴ)**  
-Compact, coherent, low‑variance state behavior.
-
-### **Transition Regime (R₂ / R₂ᴴ)**  
-Branching, oscillatory, or reorientation behavior across time or space.
-
-### **Dispersion Regime (R₃ / R₃ᴴ)**  
-Diffuse, fragmented, or unstable state behavior.
-
----
-
-## **5. Scaling Terms**
-
-### **Scaling Behavior**  
-The structured expansion of state‑space capacity as grid resolution, timestep refinement, or solver complexity increases.
-
-### **Scaling Regimes (S₁, S₂, S₃)**  
-Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.
-
-### **Dimensional Continuity**  
-The requirement that state‑space expansion remains smooth and invariant‑preserving across the dimensional ladder.
-
----
-
-## **6. Projection Terms**
-
-### **Invertible Projection**  
-A projection from high‑dimensional state‑space into 3D–9D that preserves primitive‑level structure and regime identity.
-
-### **Regime‑Aware Projection**  
-A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.
-
-### **Primitive‑Aligned Projection**  
-A projection that preserves DP, TDP, SP, and CP structure.
-
----
-
-## **7. Alignment Terms**
-
-### **Iteration‑to‑Iteration Alignment**  
-Comparison of simulation states across solver iterations or timesteps.
-
-### **Spatial/Particle Alignment**  
-Comparison of states across spatial regions or particle subsets.
-
-### **Cross‑Resolution Alignment**  
-Comparison of state‑space structure across grid refinements or timestep reductions.
-
-### **Cross‑Version Alignment**  
-Comparison of simulation behavior across code revisions, solver changes, or parameterizations.
-
----
-
-## **8. Validation Terms**
-
-### **vST (Validation‑Space‑Time)**  
-A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.
-
-### **Validation Layers (V₁–V₄)**  
-Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.
-
----
-
-## **9. Drift Terms**
-
-### **Drift**  
-A deviation from expected substrate behavior, indicating instability or invariant failure.
-
-### **Drift Categories (D₁–D₄)**  
-Classification of drift into structural, dimensional, regime, or projection drift.
-
-### **Drift Severity**  
-A measure of drift magnitude (low, moderate, high).
-### *vST for Scientific Simulators*  
-### *Example: Regime Transitions in a Climate Simulation State‑Trajectory*
-
-This example demonstrates how a climate simulator expresses **state‑space regime transitions** (R₁ᴴ → R₂ᴴ → R₃ᴴ) across time and spatial domains. It shows how high‑dimensional climate fields evolve, how coherence surfaces form and break, and how the vST framework classifies transitions using the 1024D substrate.
-
-The goal is to provide a reproducible, invariant‑preserving demonstration of regime behavior in climate simulation dynamics.
-
----
-
-## **1. Simulation Setup**
-
-For this example, we assume:
-
-- a global climate model (GCM) with multi‑field coupling  
-- state vectors spanning ≥1024D (temperature, humidity, wind fields, pressure, radiation, etc.)  
-- a simulation window covering several days to weeks  
-- stable projection into 3D–9D cores  
-- access to solver‑iteration or timestep‑level state snapshots  
-
-The example is model‑agnostic and applies to any grid‑based climate simulator.
-
----
-
-## **2. Step 1 — Extract High‑Dimensional Climate States**
-
-At each timestep \( t \), the simulator produces a high‑dimensional state vector:
-
-\[
-S^{(t)} = [x_1^{(t)}, x_2^{(t)}, \dots, x_{1024}^{(t)}]
-\]
-
-### **Observed Properties**
-
-- early timesteps: compact, low‑variance atmospheric fields  
-- mid‑simulation: branching behavior as fronts develop  
-- late simulation: partial dispersion in unstable regions (e.g., cyclogenesis)  
-
-### **Interpretation**
-
-Climate states trace a high‑dimensional trajectory reflecting physical processes and solver behavior.
-
----
-
-## **3. Step 2 — Identify Regime Behavior Across Time**
-
-Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each timestep’s regime.
-
-### **Example Regime Timeline**
-
-| Time Range | Regime | Interpretation |
-|-----------|--------|----------------|
-| t₀–t₁₀ | **R₁ᴴ** | Stable atmospheric baseline |
-| t₁₁–t₂₅ | **R₂ᴴ** | Development of a frontal boundary |
-| t₂₆–t₃₈ | **R₁ᴴ** | Stabilization after frontal passage |
-| t₃₉–t₄₅ | **R₂ᴴ** | Cyclogenesis onset |
-| t₄₆–t₅₀ | **R₃ᴴ** | Peak instability during storm intensification |
-| t₅₁–t₆₀ | **R₂ᴴ → R₁ᴴ** | Dissipation and return to stability |
-
-### **Interpretation**
-
-The simulation alternates between stable atmospheric phases and transitional or unstable dynamical events.
-
----
-
-## **4. Step 3 — Project States into the 9D Coherence Core**
-
-Project each 1024D state into the 9D coherence core.
-
-### **Preserves**
-
-- regime identity  
-- resonance‑time behavior  
-- primitive‑level structure (DP, TDP, SP, CP)  
-- coherence‑surface continuity  
-
-### **Reveals**
-
-- smooth surfaces in R₁ᴴ  
-- branching in R₂ᴴ  
-- fragmentation in R₃ᴴ  
-
-### **Interpretation**
-
-The 9D projection exposes the “shape” of the climate system’s dynamical evolution.
-
----
-
-## **5. Step 4 — Project 9D → 6D → 3D**
-
-### **6D Interaction Projection**
-
-Reveals:
-
-- coupling between temperature, pressure, and wind fields  
-- reorientation during frontal development  
-- multi‑field interaction patterns  
-
-### **3D Structural Projection**
-
-Reveals:
-
-- compact motifs in stable atmospheric phases  
-- oscillatory geometry during transitions  
-- diffuse patterns during storm intensification  
-
-### **Interpretation**
-
-The 3D projection provides the minimal interpretable representation of the climate state trajectory.
-
----
-
-## **6. Step 5 — Validate with vST Layers**
-
-Apply vST layers (V₁–V₄):
-
-### **V₁ — Structural Coherence**
-- stable motifs in R₁ᴴ  
-- partial fragmentation in R₃ᴴ  
-
-### **V₂ — Dimensional Continuity**
-- smooth projection 1024D → 9D → 6D → 3D  
-- no scaling discontinuities  
-
-### **V₃ — Regime‑Transition Stability**
-- smooth R₁ᴴ → R₂ᴴ transitions  
-- instability localized to R₃ᴴ  
-
-### **V₄ — Core Alignment**
-- primitive‑aligned projection  
-- stable mapping across timesteps  
-
-### **Outcome**
-
-The simulation passes all vST layers with warnings localized to the R₃ᴴ region.
-
----
-
-## **7. Step 6 — Drift Detection**
-
-Evaluate drift using D₁–D₄ categories:
-
-- **D₁ Structural Drift:** low (localized to storm core)  
-- **D₂ Dimensional Drift:** none  
-- **D₃ Regime Drift:** moderate (R₃ᴴ onset)  
-- **D₄ Projection Drift:** none  
-
-### **Interpretation**
-
-The model exhibits expected dispersion during storm intensification but no harmful drift.
-
----
-
-## **8. Summary**
-
-This example demonstrates:
-
-- how climate states trace high‑dimensional trajectories  
-- how regime behavior evolves during atmospheric events  
-- how projection reveals coherence and instability  
-- how vST layers validate structural integrity  
-- how drift detection identifies localized dispersion  
-
-Regime transitions are a core interpretability signal in climate simulation dynamics.
-### *vST for Scientific Simulators*  
-### *Example: Projection of a High‑Dimensional Plasma State into Triadic Dimensional Cores*
-
-This example demonstrates how a plasma physics simulator expresses high‑dimensional state‑space structure and how a single plasma state is projected from **1024D** into the **9D → 6D → 3D** triadic dimensional cores. It illustrates primitive‑level structure, regime behavior, projection stability, and vST validation.
-
-The goal is to provide a reproducible, invariant‑preserving demonstration of plasma‑state projection.
-
----
-
-## **1. Simulation Setup**
-
-For this example, we assume:
-
-- a magnetohydrodynamics (MHD) or particle‑in‑cell (PIC) plasma simulator  
-- multi‑field coupling (density, velocity, magnetic field, electric field, temperature, charge distribution)  
-- a 1024D state vector extracted from a spatial cell or particle ensemble  
-- stable or transitional regime behavior  
-- invertible projection into 3D–9D cores  
-
-The example is model‑agnostic and applies to any plasma simulation framework.
-
----
-
-## **2. Step 1 — Extract the 1024D Plasma State**
-
-At a given timestep \( t \), the simulator produces a high‑dimensional plasma state:
-
-\[
-P^{(t)} = [x_1, x_2, \dots, x_{1024}]
-\]
-
-### **Observed Properties**
-
-- variance concentrated in 5–8 coherence bands  
-- stable DP/TDP structure in magnetically confined regions  
-- branching behavior near shear layers  
-- dispersion in unstable or turbulent regions  
-
-### **Interpretation**
-
-The 1024D plasma state encodes physical, electromagnetic, and dynamical information.
-
----
-
-## **3. Step 2 — Identify High‑Dimensional Regime Behavior**
-
-Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify the plasma state’s regime across solver iterations.
-
-### **Example Regime Pattern**
-
-- **Iterations 1–12:** R₁ᴴ (stable confinement)  
-- **Iterations 13–22:** R₂ᴴ (shear‑driven transition)  
-- **Iterations 23–30:** R₁ᴴ (temporary stabilization)  
-- **Iterations 31–40:** R₂ᴴ (onset of turbulence)  
-- **Iterations 41–48:** R₃ᴴ (turbulent dispersion)  
-
-### **Interpretation**
-
-The plasma begins in a stable configuration, undergoes shear‑driven reorientation, stabilizes briefly, and then enters turbulence.
-
----
-
-## **4. Step 3 — Project 1024D → 9D (Coherence Projection)**
-
-Project the 1024D plasma state into the 9D coherence core.
-
-### **Preserves**
-
-- regime identity  
-- resonance‑time behavior  
-- primitive‑level structure (DP, TDP, SP, CP)  
-- coherence‑surface continuity  
-
-### **Reveals**
-
-- smooth surfaces in magnetically confined regions  
-- branching near shear layers  
-- fragmentation in turbulent regions  
-
-### **Interpretation**
-
-The 9D projection exposes the “coherence geometry” of the plasma state.
-
----
-
-## **5. Step 4 — Project 9D → 6D (Interaction Projection)**
-
-Compress the 9D coherence vector into the 6D interaction core.
-
-### **Preserves**
-
-- relational geometry across fields  
-- coupling between magnetic and velocity fields  
-- regime‑transition indicators  
-
-### **Reveals**
-
-- magnetic‑field‑driven reorientation  
-- pressure‑gradient interactions  
-- early turbulence signatures  
-
-### **Interpretation**
-
-The 6D projection highlights how the plasma’s fields interact and reorganize.
-
----
-
-## **6. Step 5 — Project 6D → 3D (Structural Projection)**
-
-Reduce the 6D interaction vector into the 3D structural core.
-
-### **Preserves**
-
-- motif‑level geometry  
-- spatial or particle‑level continuity  
-- stable structural invariants  
-
-### **Reveals**
-
-- compact motifs in R₁ᴴ  
-- oscillatory geometry in R₂ᴴ  
-- diffuse patterns in R₃ᴴ  
-
-### **Interpretation**
-
-The 3D projection provides the minimal interpretable representation of the plasma state.
-
----
-
-## **7. Step 6 — Validate with vST Layers**
-
-Apply vST layers (V₁–V₄):
-
-### **V₁ — Structural Coherence**
-- stable motifs in confined regions  
-- partial fragmentation in turbulent regions  
-
-### **V₂ — Dimensional Continuity**
-- smooth projection 1024D → 9D → 6D → 3D  
-- no scaling discontinuities  
-
-### **V₃ — Regime‑Transition Stability**
-- smooth R₁ᴴ → R₂ᴴ transitions  
-- instability localized to R₃ᴴ  
-
-### **V₄ — Core Alignment**
-- primitive‑aligned projection  
-- stable mapping across iterations  
-
-### **Outcome**
-
-The plasma state passes all vST layers with warnings localized to the turbulent region.
-
----
-
-## **8. Step 7 — Drift Detection**
-
-Evaluate drift using D₁–D₄ categories:
-
-- **D₁ Structural Drift:** moderate (turbulence onset)  
-- **D₂ Dimensional Drift:** none  
-- **D₃ Regime Drift:** moderate (R₃ᴴ onset)  
-- **D₄ Projection Drift:** none  
-
-### **Interpretation**
-
-The model exhibits expected dispersion during turbulence but no harmful drift.
-
----
-
-## **9. Summary**
-
-This example demonstrates:
-
-- how a 1024D plasma state is extracted  
-- how regime behavior evolves across solver iterations  
-- how projection reveals coherence and instability  
-- how vST layers validate structural integrity  
-- how drift detection identifies turbulence‑driven dispersion  
-
-Plasma‑state projection is a core interpretability signal in high‑dimensional plasma simulation dynamics.
 

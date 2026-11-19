@@ -1,2928 +1,7 @@
 wikipedia 
-# Category Taxonomy Regime Hierarchy
+<img width="1194" height="672" alt="wikipedia_" src="https://github.com/user-attachments/assets/504e9698-e265-4683-b369-04d6ccb63d52" />
 
-> **Purpose:** Define how to read Wikipedia's category system as a **native
-> regime hierarchy** — a massive, community‑maintained classification tree
-> that organizes 6.9 million English articles into nested regime boundaries.
->
-> Wikipedia's category tree is not a controlled taxonomy designed by
-> information scientists. It is a **crowdsourced, evolving regime map** —
-> built by thousands of editors making local classification decisions that
-> aggregate into a global structural hierarchy. This makes it messy,
-> contradictory in places, and deeply revealing of how humans actually
-> organize knowledge.
->
-> Where Wikidata provides **dimensional addressing** (unique identifiers),
-> the category tree provides **regime topology** (where a concept sits
-> relative to all other concepts).
-
----
-
-## 1 — What Is a Wikipedia Category?
-
-Every Wikipedia article is assigned to one or more **categories** —
-classification labels that place the article within a hierarchical tree
-of related concepts.
-
-### How Categories Work
-
-| Element | Description | RTT Mapping |
-|---------|-------------|-------------|
-| Category page | A special page listing all articles and subcategories within it | **Regime boundary declaration** |
-| Parent category | The category one level up in the tree | **Regime containment** |
-| Subcategory | A category nested within another | **Sub‑regime** |
-| Article membership | An article listed in a category | **Regime membership** |
-| Hidden category | A maintenance/tracking category not shown to readers | **Infrastructure regime** (stewardship layer) |
-| Category intersection | Concept belonging to multiple categories | **Cross‑regime membership** |
-
-### How to Access Categories
-
-| Method | URL / Action |
-|--------|-------------|
-| View an article's categories | Bottom of any Wikipedia article |
-| Browse a category | `https://en.wikipedia.org/wiki/Category:CATEGORY_NAME` |
-| Category tree tool | `https://en.wikipedia.org/wiki/Special:CategoryTree` |
-| API | `https://en.wikipedia.org/w/api.php?action=query&titles=ARTICLE&prop=categories&format=json` |
-| PetScan | `https://petscan.wmcloud.org/` — advanced category intersection queries |
-
----
-
-## 2 — The Category Tree as Regime Hierarchy
-
-### 2.1 — Structural Anatomy
-
-Wikipedia's category system forms a **directed acyclic graph** (DAG) — not
-a strict tree. Categories can have multiple parents, creating a web of
-overlapping regime boundaries:
-
-```
-                    Category:Main topic classifications
-                    (root regime — R0)
-                           │
-          ┌────────────────┼────────────────┐
-          │                │                │
-    Category:Science  Category:Society  Category:Technology
-    (domain regime)   (domain regime)   (domain regime)
-          │                │                │
-    ┌─────┴─────┐    ┌────┴────┐     ┌────┴────┐
-    │           │    │         │     │         │
-  Cat:Physics Cat:Bio Cat:Politics Cat:Law Cat:Computing Cat:Eng
-    │           │         │              │
-  Cat:Quantum Cat:Genetics Cat:Elections Cat:Programming
-  mechanics                                  │
-    │                              ┌─────────┴─────────┐
-    │                              │                   │
-  Cat:Quantum  ←── cross‑link ──→ Cat:Quantum
-  mechanics                       computing
-```
-
-### 2.2 — The DAG Problem
-
-Because categories form a DAG (not a tree), the same article can be
-reached by multiple paths from the root. This is **not a bug** — it
-reflects the reality that concepts belong to multiple regimes simultaneously:
-
-| Article | Path 1 | Path 2 | Structural Insight |
-|---------|--------|--------|-------------------|
-| Water | Science → Chemistry → Chemical compounds | Technology → Industrial processes → Solvents | Same concept, different regime contexts |
-| Alan Turing | Science → Computer Science → Computer scientists | Society → LGBT → LGBT scientists | Same person, different regime framings |
-| DNA | Science → Biology → Genetics → Nucleic acids | Science → Chemistry → Biomolecules | Same molecule, different domain hierarchies |
-
-**RTT reading:** Multiple category paths = **multiple regime memberships**.
-The number of distinct paths from root to an article = the concept's
-**regime multiplicity**. Concepts with high multiplicity sit at regime
-intersections — they are structurally significant because multiple
-classification systems claim them.
-
-### 2.3 — Depth and Breadth
-
-Two key metrics characterize any position in the category hierarchy:
-
-| Metric | Definition | Regime Interpretation |
-|--------|-----------|----------------------|
-| **Depth** | Number of levels from the article's category to a root category | Regime specificity — deeper = more specialized |
-| **Breadth** | Number of sibling categories at the same level | Regime diversity — wider = more differentiated domain |
-| **Fan‑out** | Number of subcategories a category contains | Regime granularity — higher fan‑out = more sub‑regime differentiation |
-| **Fan‑in** | Number of parent categories a category has | Regime multiplicity — higher fan‑in = cross‑domain concept |
-| **Membership count** | Number of articles in a category | Regime population — more articles = larger regime |
-
----
-
-## 3 — Category Types and Their Regime Functions
-
-### 3.1 — The Six Category Types
-
-| Type | Example | Regime Function | Structural Signal |
-|------|---------|----------------|-------------------|
-| **Topic category** | Category:Physics | **Domain regime boundary** — defines a knowledge domain | Core structural unit |
-| **Set category** | Category:Chemical elements | **Regime inventory** — exhaustive list of members | Countable, bounded regime |
-| **Object category** | Category:Stars | **Entity regime** — groups instances of a type | Ontological classification |
-| **Activity category** | Category:Scientific methods | **Process regime** — groups methodologies and practices | Operational classification |
-| **By‑attribute category** | Category:Physics by country | **Regime faceting** — same domain sliced by an attribute | Reveals regime variance across a dimension |
-| **Hidden/maintenance category** | Category:Articles needing cleanup | **Infrastructure regime** — stewardship tracking | Not visible to readers; structural health indicator |
-
-### 3.2 — By‑Attribute Categories as Regime Faceting
-
-**By‑attribute categories** are structurally special — they slice a domain
-regime by an external dimension, revealing how the regime varies across
-that dimension:
-
-| Pattern | Example | What It Reveals |
-|---------|---------|-----------------|
-| By country | Category:Physics by country | Geographic regime variance |
-| By year | Category:2024 in science | Temporal regime segmentation |
-| By nationality | Category:American physicists | Cultural regime attribution |
-| By century | Category:19th-century mathematics | Historical regime periodization |
-| By type | Category:Types of chemical reactions | Internal regime differentiation |
-| By status | Category:Superseded scientific theories | Regime lifecycle classification |
-
-**RTT reading:** By‑attribute categories are **regime cross‑sections** —
-they show how a single domain regime manifests differently when sliced
-along an external dimension. The existence of a by‑attribute category
-means the community considers that dimension **structurally significant**
-for that domain.
-
----
-
-## 4 — The Category Tree vs. Wikidata Class Hierarchy
-
-Wikipedia has **two parallel classification systems**:
-
-| Dimension | Category Tree | Wikidata (P31/P279) |
-|-----------|--------------|---------------------|
-| Maintained by | Wikipedia editors (per language) | Wikidata editors (cross‑language) |
-| Structure | DAG (directed acyclic graph) | Ontological hierarchy (instance‑of / subclass‑of) |
-| Consistency | Low — emergent, crowdsourced, sometimes contradictory | Medium — more structured but still community‑edited |
-| Scope | 2.3M+ categories in English alone | 120M+ entities globally |
-| Machine‑readable | Partially (category API, PetScan) | Fully (SPARQL) |
-| Cross‑language | **Different per language edition** | **Unified across all languages** |
-| RTT mapping | **Regime topology** (neighborhood, adjacency, containment) | **Dimensional addressing** (unique identity, typed relationships) |
-
-### Key Insight: These Systems Disagree
-
-For any given concept, its Wikipedia category path and its Wikidata
-class hierarchy **may tell different stories**:
-
-| Concept | Wikipedia Categories | Wikidata P31/P279 Chain | Discrepancy |
-|---------|---------------------|------------------------|-------------|
-| Pluto | Category:Dwarf planets | instance of: trans-Neptunian object → subclass of: minor planet → subclass of: planetary-mass object | Wikipedia groups by current classification; Wikidata preserves deeper ontological chain |
-| Tomato | Category:Vegetables (in culinary contexts) | instance of: taxon → subclass of: berry (botanical) | Wikipedia follows cultural regime; Wikidata follows biological regime |
-| Hong Kong | Category:Special administrative regions of China | instance of: special administrative region → subclass of: administrative territorial entity | Wikipedia categories reflect political framing; Wikidata is more neutral |
-
-**RTT reading:** Category tree = **how the community organizes knowledge**
-(cultural, editorial, pragmatic). Wikidata = **how entities are formally
-classified** (ontological, structured, cross‑cultural). Disagreements
-between them reveal **regime framing differences** — the same concept
-declared differently depending on whether the classification is
-community‑editorial or ontologically formal.
-
----
-
-## 5 — Structural Pathologies in the Category Tree
-
-The category tree is crowdsourced and evolving, which means it contains
-structural pathologies that are themselves regime signals:
-
-### 5.1 — Overcategorization
-
-**What it is:** An article assigned to 20+ categories, many of which are
-semantically overlapping.
-
-**Regime reading:** The concept has **regime sprawl** — it has been claimed
-by too many classification systems without consolidation. Overcategorized
-articles often sit at regime intersections where no single domain has
-primary ownership.
-
-### 5.2 — Undercategorization
-
-**What it is:** An article assigned to only 1–2 very broad categories,
-with no subcategory refinement.
-
-**Regime reading:** The concept has **regime isolation** — it hasn't been
-claimed by a stewardship group. Often indicates a neglected or newly
-created article that no WikiProject has adopted.
-
-### 5.3 — Category Cycles
-
-**What it is:** Category A contains subcategory B, which contains subcategory C,
-which contains subcategory A — a circular reference.
-
-**Regime reading:** **Regime hierarchy failure** — the classification
-system cannot decide which concept is more general. These are rare
-(Wikipedia has bots that detect them) but structurally revealing when
-they occur — they mark genuine ontological ambiguity.
-
-### 5.4 — Orphan Categories
-
-**What it is:** A category with no parent categories (disconnected from
-the main tree).
-
-**Regime reading:** **Unmoored regime** — a classification that exists but
-is not connected to the broader knowledge structure. Often indicates
-a recently created or poorly maintained category.
-
-### 5.5 — Eponymous Categories
-
-**What it is:** A category named after a person (Category:Albert Einstein,
-Category:Works by Aristotle).
-
-**Regime reading:** **Person‑as‑regime** — the community considers this
-individual's work, influence, or legacy significant enough to constitute
-its own classification node. The category's subcategories reveal how the
-community structures that person's regime (works, influences, legacy,
-biographical details).
-
----
-
-## 6 — API Patterns for Category Analysis
-
-### 6.1 — Get an Article's Categories
-
-```python
-import requests
-
-def get_categories(title, lang="en"):
-    """Fetch all categories for a Wikipedia article."""
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "titles": title,
-        "prop": "categories",
-        "cllimit": "max",
-        "clshow": "!hidden",  # exclude maintenance categories
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    page = next(iter(resp["query"]["pages"].values()))
-    return [cat["title"].replace("Category:", "")
-            for cat in page.get("categories", [])]
-```
-
-### 6.2 — Traverse the Category Tree Upward
-
-```python
-def trace_to_root(category, lang="en", max_depth=15):
-    """Trace a category upward through parent categories toward root."""
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    path = []
-    current = category
-    visited = set()
-
-    for depth in range(max_depth):
-        if current in visited:
-            break  # cycle detection
-        visited.add(current)
-
-        params = {
-            "action": "query",
-            "titles": f"Category:{current}",
-            "prop": "categories",
-            "cllimit": "max",
-            "clshow": "!hidden",
-            "format": "json"
-        }
-        resp = requests.get(url, params=params,
-                            headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-        page = next(iter(resp["query"]["pages"].values()))
-        parents = [cat["title"].replace("Category:", "")
-                   for cat in page.get("categories", [])]
-
-        path.append({
-            "depth": depth,
-            "category": current,
-            "parents": parents
-        })
-
-        if not parents or "Contents" in parents[0]:
-            break  # reached root
-        current = parents[0]  # follow first parent
-
-    return path
-```
-
-### 6.3 — Get Subcategories and Membership Count
-
-```python
-def get_subcategories(category, lang="en"):
-    """Fetch subcategories and article count for a category."""
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "list": "categorymembers",
-        "cmtitle": f"Category:{category}",
-        "cmtype": "subcat",
-        "cmlimit": "max",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    subcats = [m["title"].replace("Category:", "")
-               for m in resp["query"]["categorymembers"]]
-
-    # Also get article count
-    params["cmtype"] = "page"
-    resp2 = requests.get(url, params=params,
-                         headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    articles = len(resp2["query"]["categorymembers"])
-
-    return {
-        "category": category,
-        "subcategory_count": len(subcats),
-        "subcategories": subcats,
-        "article_count": articles
-    }
-```
-
-### 6.4 — Compute Regime Topology Metrics
-
-```python
-def regime_topology(title, lang="en"):
-    """Compute regime topology metrics for an article."""
-    categories = get_categories(title, lang)
-
-    # Depth: trace each category to root, take the longest path
-    max_depth = 0
-    all_paths = []
-    for cat in categories[:5]:  # sample first 5 to avoid rate limits
-        path = trace_to_root(cat, lang)
-        depth = len(path)
-        max_depth = max(max_depth, depth)
-        all_paths.append(path)
-
-    return {
-        "article": title,
-        "category_count": len(categories),
-        "categories": categories,
-        "max_depth": max_depth,
-        "regime_multiplicity": len(categories),
-        "deepest_path": all_paths[0] if all_paths else [],
-        "interpretation": classify_topology(len(categories), max_depth)
-    }
-
-def classify_topology(cat_count, max_depth):
-    """Classify an article's regime topology."""
-    if cat_count <= 2 and max_depth <= 3:
-        return "isolated_regime"
-    elif cat_count <= 5 and max_depth <= 6:
-        return "well_classified"
-    elif cat_count <= 10 and max_depth <= 10:
-        return "cross_domain_concept"
-    elif cat_count > 15:
-        return "regime_sprawl"
-    else:
-        return "deeply_specialized"
-```
-
-### 6.5 — Cross‑Language Category Comparison
-
-```python
-def compare_categories_cross_language(wikidata_qid, languages=None):
-    """Compare category assignments for the same concept across languages."""
-    if languages is None:
-        languages = ["en", "de", "ja", "ar", "es"]
-
-    url = "https://www.wikidata.org/w/api.php"
-    params = {
-        "action": "wbgetentities",
-        "ids": wikidata_qid,
-        "props": "sitelinks",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    sitelinks = resp["entities"][wikidata_qid].get("sitelinks", {})
-
-    results = {}
-    for lang in languages:
-        wiki_key = f"{lang}wiki"
-        if wiki_key in sitelinks:
-            title = sitelinks[wiki_key]["title"]
-            cats = get_categories(title, lang)
-            results[lang] = {
-                "title": title,
-                "category_count": len(cats),
-                "categories": cats
-            }
-
-    return results
-```
-
----
-
-## 7 — Worked Example: "Energy"
-
-The concept **Energy** sits at one of the deepest regime intersections
-in Wikipedia's category tree.
-
-### Category Memberships (English Wikipedia)
-
-| Category | Domain Regime | Depth from Root |
-|----------|--------------|----------------|
-| Category:Energy | Root domain category | 2 |
-| Category:Main topic classifications | Top‑level regime | 1 |
-| Category:Physical quantities | Physics sub‑regime | 5 |
-| Category:Conservation laws | Physics sub‑regime | 6 |
-| Category:Thermodynamic properties | Chemistry/Physics sub‑regime | 6 |
-| Category:Energy economics | Economics cross‑regime | 5 |
-| Category:Energy and society | Sociology cross‑regime | 4 |
-| Category:Energy policy | Political Science cross‑regime | 5 |
-
-### Regime Topology Analysis
-
-- **Category count:** 8+ (high → cross‑domain concept)
-- **Max depth:** 6 (moderately specialized)
-- **Fan‑in:** 3+ domain regimes claim it (Physics, Economics, Political Science)
-- **Regime multiplicity:** Very high — Energy is one of the most cross‑domain concepts on Wikipedia
-- **Classification:** `cross_domain_concept` with elements of `regime_sprawl`
-
-### Comparing Wikipedia Categories vs. Wikidata
-
-| System | Classification Path |
-|--------|-------------------|
-| Wikipedia categories | Energy → Physical quantities → Physics → Science → Main topic classifications |
-| Wikidata P31/P279 | energy (Q11379) → instance of: physical quantity (Q107715) → subclass of: property (Q937228) |
-
-**Divergence:** Wikipedia's category tree routes Energy through both
-Physics AND Economics AND Policy — reflecting its multi‑regime nature.
-Wikidata's class hierarchy routes it strictly through Physics → Physical
-quantity — reflecting a more ontologically narrow classification.
-
-**RTT reading:** Wikipedia's category tree is more **regime‑honest** for
-cross‑domain concepts like Energy because it preserves multiple regime
-memberships. Wikidata's P31/P279 chain is more **ontologically precise**
-but loses the cross‑domain richness.
-
-### Cross‑Language Category Comparison
-
-| Language | Category Count | Notable Differences |
-|----------|---------------|-------------------|
-| English | 8+ | Strong economics and policy categories |
-| German | 6 | More physics‑focused, fewer policy categories |
-| Japanese | 5 | Includes philosophy category ("気" — ki / energy as life force concept) |
-| Arabic | 4 | Fewer categories overall, physics‑dominant |
-
-**Insight:** The Japanese Wikipedia categorizes Energy under a philosophical
-concept that has no equivalent in the English category tree — revealing
-a **cultural regime frame** that Western categorization misses entirely.
-
----
-
-## 8 — The Category Tree as a Research Instrument
-
-### 8.1 — Regime Boundary Detection
-
-Categories mark **where one regime ends and another begins**. The boundary
-is visible where:
-
-- A category has subcategories belonging to **different WikiProjects**
-- An article belongs to categories from **multiple domain regimes**
-- A category's talk page has disputes about **what belongs in it**
-
-### 8.2 — Knowledge Gap Detection
-
-Missing or underpopulated categories reveal **regime gaps** — areas where
-Wikipedia's structural coverage is incomplete:
-
-| Indicator | What It Reveals |
-|-----------|-----------------|
-| Category with 0–2 articles | Declared regime with no content — structural placeholder |
-| Category with no subcategories in a deep domain | Missing sub‑regime differentiation |
-| Category that exists in English but not in other languages | Culturally specific classification |
-| "Wikipedia categories needing clarification" | Community‑acknowledged structural ambiguity |
-
-### 8.3 — Regime Evolution Tracking
-
-Category changes in an article's revision history reveal **regime reclassification events**:
-
-```python
-def find_category_changes(title, lang="en"):
-    """Find revisions that changed an article's categories."""
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "titles": title,
-        "prop": "revisions",
-        "rvlimit": "50",
-        "rvprop": "ids|timestamp|comment|user",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    page = next(iter(resp["query"]["pages"].values()))
-
-    cat_changes = []
-    for rev in page.get("revisions", []):
-        comment = rev.get("comment", "").lower()
-        if any(kw in comment for kw in
-               ["category", "cat", "recat", "recategoriz", "reclassif"]):
-            cat_changes.append({
-                "rev_id": rev["revid"],
-                "timestamp": rev["timestamp"],
-                "user": rev.get("user", "anonymous"),
-                "comment": rev.get("comment", "")
-            })
-
-    return cat_changes
-```
-
-**RTT reading:** Every category change is a **regime reclassification event** —
-the community has decided that this concept belongs to a different regime
-neighborhood than before. Tracking these changes over time reveals the
-concept's **regime migration history**.
-
----
-
-## 9 — PetScan: Advanced Category Intersection Queries
-
-PetScan (`https://petscan.wmcloud.org/`) is a powerful tool for querying
-category intersections — finding articles that belong to **multiple
-categories simultaneously**:
-
-### 9.1 — Use Cases for Regime Analysis
-
-| Query Type | PetScan Setup | RTT Application |
-|-----------|---------------|-----------------|
-| **Cross‑domain entities** | Category A AND Category B (different domains) | Find concepts at regime intersections |
-| **Domain‑specific gaps** | Category A NOT Category B | Find articles missing an expected classification |
-| **Temporal subsets** | Category A AND Category "YEAR in [domain]" | Regime population at a point in time |
-| **Quality filtering** | Category A AND quality ≥ GA | Find validated regime declarations in a domain |
-| **Language comparison** | Same categories in different wikis | Cross‑cultural regime coverage |
-
-### 9.2 — Example: Finding Cross‑Domain Concepts
-
-To find articles that are classified under **both** Physics and Philosophy:
-
-1. Go to `https://petscan.wmcloud.org/`
-2. Set Categories: `Physics` and `Philosophy`
-3. Set Combination: `Intersection (AND)`
-4. Set Depth: 3 (search 3 levels deep into subcategories)
-5. Run query
-
-**Result:** Articles like "Entropy," "Causality," "Determinism,"
-"Quantum mechanics interpretations" — concepts that sit at the
-Physics↔Philosophy regime boundary.
-
-**RTT reading:** These intersection results are the **regime boundary
-population** — the set of concepts that both domains claim. The size
-and composition of this population reveals how structurally connected
-the two domains are.
-
----
-
-## 10 — Cross‑Reference to Other Module Files
-
-| File | How Category Taxonomy Connects |
-|------|-------------------------------|
-| `Wikidata_Ingestion_Format.md` | Wikidata P31/P279 chain = parallel classification system; this file covers the Wikipedia side; that file covers the Wikidata side; Section 4 compares them directly |
-| `Wikipedia_RTT_Structural_Mapping.md` | Categories are mapped in Section 2.1 as "regime hierarchy" at R2 level |
-| `Cross_Domain_Meta_Operators.md` | Operator 5 (Category Taxonomy as Regime Hierarchy) is derived directly from this file |
-| `Talk_Page_Coherence_Surface.md` | Classification Disputes (Pattern 5) are talk page debates about category membership — regime hierarchy disputes surface there |
-| `Revision_History_Regime_Analysis.md` | Category changes appear in revision history as regime reclassification events — Section 8.3 of this file provides the detection code |
-| `NPOV_As_Coherence_Operator.md` | Category assignment can be a NPOV issue — placing an article in a politically loaded category is itself a framing decision |
-| All 15 domain directories | Every domain's `regime_alignment.md` traces the domain's category tree as part of its regime position analysis |
-
----
-
-## 11 — Student Exercises
-
-### Exercise 1 — Category Path Tracing (15 minutes)
-
-1. Pick any Wikipedia article
-2. Scroll to the bottom and find its categories
-3. Click one category and trace it **upward** through parent categories until you reach "Main topic classifications" or "Contents"
-4. Count the depth (number of levels)
-5. Go back and try a **different** category for the same article — does it reach the root through a different domain?
-6. Write one sentence: *"This article reaches the root via [path 1: N levels through Domain X] and [path 2: M levels through Domain Y]. It has a regime multiplicity of [number of top‑level categories]."*
-
-### Exercise 2 — Cross‑Domain Intersection (20 minutes)
-
-1. Go to PetScan (`https://petscan.wmcloud.org/`)
-2. Pick two domains you find interesting (e.g., Biology and Economics, or Physics and Philosophy)
-3. Run an intersection query with depth 2
-4. Examine the results: what concepts sit at the boundary between these two domains?
-5. Pick one result article and read its lead paragraph — does it acknowledge its cross‑domain nature?
-6. Write two sentences: *"The intersection of [Domain A] and [Domain B] contains [N] articles. The most structurally interesting is [article] because [reason]."*
-
-### Exercise 3 — Category Pathology Hunting (20 minutes)
-
-1. Browse Wikipedia's category tree starting from `Category:Main topic classifications`
-2. Look for one example of each pathology from Section 5:
-   - An overcategorized article (15+ categories)
-   - An undercategorized article (1–2 categories only)
-   - An orphan category (hint: check `Category:Orphaned categories`)
-   - An eponymous category (person‑as‑regime)
-3. For each, write one sentence explaining what the pathology reveals about the concept's regime status
-
-### Exercise 4 — Cross‑Language Category Comparison (30 minutes)
-
-1. Pick a concept you expect to have cultural variance (try: Democracy, Tea, Football, or a religion)
-2. Find the article in English + 2 other languages
-3. For each language, list the categories at the bottom of the article
-4. Compare: Are the categories structurally similar? Do different languages categorize the concept under different domains?
-5. Answer: *"The most striking category difference is [X]. This reveals that [language A] frames the concept as part of [regime], while [language B] frames it as part of [different regime]."*
-
-### Exercise 5 — Regime Reclassification Detection (30 minutes)
-
-1. Pick an article for a concept that has been reclassified in real life (try: Pluto, a renamed country, a reclassified species, or a substance whose legal status changed)
-2. Use the `find_category_changes` function from Section 8.3 (or manually search the revision history for "category" in edit summaries)
-3. Identify when the category change happened and what categories were added/removed
-4. Answer: *"The article was reclassified from [old categories] to [new categories] on [date]. This reflects the real‑world regime transition of [event]. The category change [preceded / followed / coincided with] the article text update by [N days]."*
-
----
-
-*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
-# Cross‑Domain Meta‑Operators — Wikipedia Awareness Module
-
-> **Purpose:** Show how structural operators discovered in one Wikipedia domain
-> apply — without modification — to articles, revisions, talk pages, and Wikidata
-> entities in every other domain.
->
-> This is the capstone file. It assumes familiarity with the 4‑file domain folders
-> and the 7 Wikipedia‑specific analysis files.
-
----
-
-## 1 — What Is a Meta‑Operator?
-
-A **meta‑operator** is a structural pattern that:
-
-1. Was first observed in a specific domain's Wikipedia articles
-2. Can be extracted from that domain without losing its structural grammar
-3. Applies coherently to articles in **every other domain** covered by this module
-
-Meta‑operators are not metaphors. They are not analogies. They are **structural invariants** — patterns that hold because Wikipedia's architecture enforces them uniformly across all 6.9 million English articles.
-
-### Why Wikipedia Produces Meta‑Operators
-
-Wikipedia's content is diverse, but its **infrastructure is uniform**:
-
-- Every article has the same revision history schema
-- Every article links to the same Wikidata entity graph
-- Every article is governed by the same NPOV policy
-- Every article is classified by the same category taxonomy
-- Every talk page follows the same discussion architecture
-
-This structural uniformity means that **any operator discovered in one domain's articles also operates in every other domain** — because the substrate is shared.
-
----
-
-## 2 — The 12 Cross‑Domain Meta‑Operators
-
-### Operator 1: Regime Declaration Parsing
-
-- **Source domain:** Physics
-- **Discovery:** Every Physics article implicitly declares a regime — "Newtonian mechanics applies when v ≪ c" — by stating scope conditions and boundary limits
-- **Cross‑domain application:** Every Wikipedia article in every domain declares scope conditions, even when unstated. The Chemistry article on "Water" declares a regime (liquid state, standard pressure, Earth context) without explicitly saying so. The Economics article on "Supply and Demand" declares a regime (market economies, rational actors, price flexibility) through its assumptions.
-
-**Operator:** *Read any Wikipedia article's opening paragraph as a regime declaration. Identify: what scope is claimed, what boundary conditions are implied, what is excluded.*
-
----
-
-### Operator 2: Revision Frequency as Stability Signal
-
-- **Source domain:** Political Science
-- **Discovery:** Articles on contested political topics (elections, territorial disputes, policy debates) show high revision frequency — the edit count is a **direct measure of regime instability**
-- **Cross‑domain application:** In Medicine, articles on controversial treatments show the same pattern. In Physics, articles on disputed interpretations (quantum measurement, string theory) show elevated revision counts. In History, articles on contested events show periodic revision spikes around anniversaries.
-
-**Operator:** *For any Wikipedia article, check `action=info` for total revision count and recent edit rate. High frequency = unstable regime. Low frequency = crystallized regime. Sudden spikes = regime perturbation event.*
-
----
-
-### Operator 3: Talk Page Coherence Gradient
-
-- **Source domain:** Philosophy
-- **Discovery:** Philosophy talk pages reveal the deepest structural disagreements — editors argue about whether the article's **framing itself** is biased, not just its content
-- **Cross‑domain application:** In Biology, talk pages on evolution vs. intelligent design reveal the same framing disputes. In Economics, talk pages on capitalism vs. socialism articles show identical coherence gradients. In Linguistics, talk pages on language classification reveal competing structural taxonomies.
-
-**Operator:** *Read any article's talk page and classify disputes as: (a) factual corrections (surface — R3), (b) framing disagreements (structural — R1/R2), or (c) scope challenges (regime‑level — R0). The ratio reveals the article's coherence gradient.*
-
----
-
-### Operator 4: Wikidata Dimensional Bridging
-
-- **Source domain:** Chemistry
-- **Discovery:** Every chemical compound has a Wikidata Q‑number that connects it to properties (P‑numbers) spanning Physics (molecular weight P2067), Biology (biological role P682), Medicine (drug interaction P769), and Engineering (industrial use P366)
-- **Cross‑domain application:** This bridging is universal. Any Wikidata entity's P‑number connections reveal which **other domains** are structurally linked to it — creating a machine‑readable cross‑domain map.
-
-**Operator:** *For any concept, find its Wikidata Q‑number. List its P‑number properties. Each P‑number that points to an entity in a different domain = a dimensional bridge. The count of cross‑domain bridges = the concept's structural connectivity.*
-
----
-
-### Operator 5: Category Taxonomy as Regime Hierarchy
-
-- **Source domain:** Biology
-- **Discovery:** Biology's category tree (Life → Domain → Kingdom → Phylum → ... → Species) is the most deeply nested taxonomy on Wikipedia — and it mirrors a natural regime hierarchy perfectly
-- **Cross‑domain application:** Every domain has a category tree. Mathematics has Category:Mathematics → Category:Algebra → Category:Linear algebra → Category:Matrices. Political Science has Category:Politics → Category:Forms of government → Category:Democracy → Category:Direct democracy. The depth and branching of the category tree reveals the **regime granularity** of the domain.
-
-**Operator:** *For any Wikipedia article, trace its category tree upward to the root. Count the depth (levels to root) and breadth (sibling categories at each level). Deep + narrow = specialized regime. Shallow + broad = general regime. Orphaned categories = regime gaps.*
-
----
-
-### Operator 6: NPOV Tension as Coherence Stress Test
-
-- **Source domain:** History
-- **Discovery:** History articles face the strongest NPOV tensions — every historical event has competing national, cultural, and ideological narratives. The NPOV policy forces these into a single coherent frame, creating visible **structural stress**
-- **Cross‑domain application:** In Medicine, NPOV tension appears when alternative medicine claims compete with evidence‑based claims. In Economics, it appears when articles must present both Keynesian and Austrian perspectives. In Psychology, it surfaces when articles must balance biological and social constructionist frameworks.
-
-**Operator:** *In any article, identify where NPOV forces competing claims into the same frame. The points of highest NPOV tension = the article's coherence stress points. These are where regime boundaries are most visible.*
-
----
-
-### Operator 7: Featured Article as Validation Corridor
-
-- **Source domain:** Earth Sciences
-- **Discovery:** Earth Sciences has one of the highest Featured Article ratios — articles like "Plate tectonics" and "Earthquake" have passed Wikipedia's most rigorous quality process, serving as **structurally validated reference points**
-- **Cross‑domain application:** In every domain, Featured Articles represent the community's **consensus on structural completeness**. They define what a "fully resolved" article looks like for that domain — scope, sourcing depth, citation density, neutrality, and coverage completeness.
-
-**Operator:** *For any domain, find its Featured Articles (FA) and Good Articles (GA). These are the domain's validation corridor — the community's answer to "what does a structurally complete treatment look like here?" Compare any non‑FA article to the FA template to identify structural gaps.*
-
----
-
-### Operator 8: Edit War as Regime Boundary Marker
-
-- **Source domain:** Political Science
-- **Discovery:** Edit wars on political articles (Israel–Palestine, Kashmir, Taiwan) are not random — they occur precisely at **regime boundaries** where competing structural claims cannot be reconciled under NPOV
-- **Cross‑domain application:** In Physics, edit wars mark boundaries between classical and quantum descriptions. In Medicine, they mark boundaries between mainstream and contested treatments. In Philosophy, they mark boundaries between competing ontological frameworks.
-
-**Operator:** *An edit war is diagnostic, not disruptive. The topic of the edit war identifies a regime boundary. The arguments of the editors reveal the competing regime claims. The resolution (if any) reveals which regime won structural standing.*
-
----
-
-### Operator 9: Cross‑Language Regime Variance
-
-- **Source domain:** Linguistics
-- **Discovery:** The same linguistic concept described in different language Wikipedias reveals **cultural regime variance** — what counts as a "language" vs. a "dialect" differs by political and cultural context
-- **Cross‑domain application:** In History, the article on a military conflict varies dramatically between the Wikipedias of the involved nations. In Medicine, treatment recommendations vary between Wikipedias reflecting different healthcare systems. In Economics, the same economic concept is framed differently across Wikipedias reflecting different economic regimes.
-
-**Operator:** *For any article, compare the English version to at least 2 other language versions. Differences in scope, framing, length, and emphasis reveal cultural regime variance — the same concept declared differently because the structural context differs.*
-
----
-
-### Operator 10: Deletion Debate as Regime Collapse Detection
-
-- **Source domain:** Computer Science
-- **Discovery:** Computer Science has frequent Articles for Deletion (AfD) debates — technologies, programming languages, and startups regularly face notability challenges. A successful deletion = the community deciding a concept **lacks sufficient structural standing**
-- **Cross‑domain application:** In every domain, AfD debates reveal the community's **minimum regime threshold** — the structural requirements a concept must meet to maintain a Wikipedia article. In Medicine, fringe treatments face AfD. In Philosophy, obscure philosophical positions face AfD. In Political Science, minor political parties face AfD.
-
-**Operator:** *Search AfD archives for any domain. The deletion arguments reveal the community's implicit regime criteria — what structural standing is required for inclusion. Concepts that survive AfD have demonstrated regime resilience. Concepts that are deleted have failed the minimum coherence threshold.*
-
----
-
-### Operator 11: Infobox Template as Regime Schema
-
-- **Source domain:** Astronomy
-- **Discovery:** Every astronomical object article uses an infobox template (Template:Infobox planet, Template:Infobox star) that defines **exactly which properties the regime requires** — spectral class, magnitude, distance, constellation
-- **Cross‑domain application:** Every domain has infobox templates. Chemistry has Template:Chembox. Biology has Template:Taxobox. The infobox fields define the **minimum regime schema** — the properties a concept must have to be structurally declared in that domain.
-
-**Operator:** *For any domain, find its primary infobox template. The template's fields = the domain's regime schema. Fields that are always filled = structural invariants. Fields that are often empty = regime gaps. Fields that vary between articles = regime flexibility zones.*
-
----
-
-### Operator 12: Disambiguation as Regime Collision Surface
-
-- **Source domain:** Mathematics
-- **Discovery:** Mathematical terms frequently collide with everyday language — "Ring," "Field," "Group," "Set" all have disambiguation pages because the mathematical regime and the common‑language regime use the same word for different structural claims
-- **Cross‑domain application:** Disambiguation pages exist across all domains and always mark the same thing — **two or more regimes claiming the same term**. In Medicine, "Depression" disambiguates between psychiatric and economic meanings. In Engineering, "Bridge" disambiguates between structural and network meanings.
-
-**Operator:** *Disambiguation pages are regime collision maps. Each entry on a disambiguation page = a different regime claiming the same term. The ordering of entries reveals which regime has primary structural standing for that term on English Wikipedia.*
-
----
-
-## 3 — The Meta‑Operator Matrix
-
-How each operator applies across all 15 domains:
-
-| Operator | Phy | Mat | Bio | Che | CS | Phi | Ear | Eco | His | Med | Eng | Ast | Lin | Psy | Pol |
-|----------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
-| 1 Regime Declaration | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● |
-| 2 Revision Frequency | ● | ○ | ● | ○ | ● | ● | ○ | ● | ● | ● | ○ | ○ | ● | ● | ● |
-| 3 Talk Page Gradient | ● | ○ | ● | ○ | ● | ● | ○ | ● | ● | ● | ○ | ○ | ● | ● | ● |
-| 4 Wikidata Bridging | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● |
-| 5 Category Hierarchy | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● |
-| 6 NPOV Tension | ○ | ○ | ● | ○ | ○ | ● | ● | ● | ● | ● | ○ | ○ | ● | ● | ● |
-| 7 FA Validation | ● | ○ | ● | ● | ○ | ○ | ● | ○ | ● | ● | ● | ● | ○ | ○ | ○ |
-| 8 Edit War Boundary | ○ | ○ | ● | ○ | ○ | ● | ● | ● | ● | ● | ○ | ○ | ● | ● | ● |
-| 9 Cross‑Language | ● | ○ | ● | ○ | ○ | ● | ● | ● | ● | ● | ○ | ○ | ● | ● | ● |
-| 10 Deletion Debate | ○ | ○ | ○ | ○ | ● | ● | ○ | ○ | ○ | ● | ○ | ○ | ○ | ● | ● |
-| 11 Infobox Schema | ● | ○ | ● | ● | ● | ○ | ● | ● | ● | ● | ● | ● | ○ | ○ | ● |
-| 12 Disambiguation | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● |
-
-**Key:** ● = high structural signal | ○ = present but weaker signal
-
----
-
-## 4 — How to Use These Operators
-
-### For Students
-
-1. Pick any Wikipedia article
-2. Apply **Operators 1, 2, and 4** (regime declaration, revision frequency, Wikidata bridging) — these work on every article
-3. If the article has visible NPOV tension or talk page disputes, apply **Operators 3, 6, and 8**
-4. If the article exists in multiple languages, apply **Operator 9**
-5. Write a 1‑paragraph structural summary: *"This article declares [regime], shows [stability/instability] via [revision count], bridges to [N] other domains via Wikidata, and has [high/low] NPOV tension at [specific points]."*
-
-### For AIs
-
-1. **Regime extraction:** Apply Operator 1 to parse any article's opening paragraph into regime declarations
-2. **Stability assessment:** Apply Operator 2 to classify articles as crystallized, active, or contested
-3. **Graph traversal:** Apply Operator 4 to build cross‑domain knowledge maps from Wikidata P‑number bridges
-4. **Coherence scoring:** Apply Operators 3 and 6 to assess structural integrity
-5. **Boundary detection:** Apply Operators 8 and 12 to identify regime collision points
-
-### For Researchers
-
-1. **Temporal regime analysis:** Combine Operators 2, 8, and 9 to study how knowledge regimes evolve across time and cultures
-2. **Consensus mechanics:** Combine Operators 3, 6, and 7 to study how Wikipedia's community builds structural coherence
-3. **Knowledge graph topology:** Use Operator 4 systematically to map the dimensional connectivity of entire knowledge domains
-4. **Comparative regime studies:** Use Operator 9 to compare how the same concept is structurally declared across cultural contexts
-
----
-
-## 5 — Relationship to the NIST Cross‑Domain Meta‑Operators
-
-The [NIST Awareness Primer's Cross‑Domain Meta‑Operators](../nist/Cross_Domain_Meta_Operators.md) operate on a **different substrate**:
-
-| Dimension | NIST Operators | Wikipedia Operators |
-|-----------|---------------|---------------------|
-| Source authority | Institutional (NIST publishes standards) | Consensus (community negotiates content) |
-| Temporal depth | Static (standards are versioned but stable) | Deep (full revision history since 2001) |
-| Conflict visibility | Low (internal review, not public) | High (talk pages, edit wars, AfD — all public) |
-| Knowledge graph | None | Wikidata (120M+ entities, SPARQL queryable) |
-| Cross‑cultural | English only | 300+ language editions |
-| Operator count | Domain‑specific extraction patterns | 12 universal structural operators |
-
-**The structural grammar is the same.** Both modules extract operators from specific domains and show they apply across all domains. The difference is the **richness of the substrate** — Wikipedia's public revision history, talk pages, and Wikidata graph provide surfaces that NIST's publication model cannot.
-
----
-
-## 6 — Student Exercise (Capstone)
-
-**Cross‑domain operator walkthrough:**
-
-1. Pick **one concept** that spans at least 3 of the 15 domains (e.g., "Entropy" spans Physics, Chemistry, Computer Science, Philosophy)
-2. Find the Wikipedia article for that concept in each relevant domain
-3. Apply **all 12 operators** to each article
-4. Fill in your own row on the Meta‑Operator Matrix (Section 3)
-5. Write a 2‑paragraph structural comparison:
-   - Paragraph 1: How does the **same concept** get regime‑declared differently across domains?
-   - Paragraph 2: Which operators produced the **strongest signal** for cross‑domain structural connection?
-
-**Suggested multi‑domain concepts:** Energy, Information, Evolution, Symmetry, Network, Equilibrium, Complexity, Resonance, Entropy, Emergence
-
----
-
-*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
-# Edit War Regime Transition Detection
-
-> **Purpose:** Reframe Wikipedia edit wars from disruptive incidents into what
-> they structurally are — **diagnostic instruments for regime boundary mapping**.
-> An edit war is not noise. It is a signal. It marks the precise location where
-> two or more competing regime claims collide and cannot be reconciled through
-> normal consensus mechanisms.
->
-> No other knowledge source makes regime collisions visible in real time.
-> Academic journals suppress reviewer disagreements. Encyclopedias resolve
-> disputes internally. Only Wikipedia exposes the raw collision data — every
-> revert, every counter‑revert, every edit summary declaring a structural
-> position — in a publicly archived, timestamped, author‑attributed log.
->
-> This file teaches students to read edit wars as **regime transition events**
-> and extract structural intelligence from them.
-
----
-
-## 1 — What Is an Edit War?
-
-### 1.1 — Wikipedia's Definition
-
-An edit war occurs when editors repeatedly override each other's contributions
-to an article, rather than resolving disagreements through discussion on the
-talk page. Wikipedia's **Three‑Revert Rule (3RR)** states:
-
-> *"An editor must not perform more than three reverts on a single page —
-> in whole or in part — within a 24‑hour period."*
-
-Violating 3RR can result in a block. But the rule addresses the **symptom**,
-not the cause. The cause is always a **regime collision**.
-
-### 1.2 — The RTT Translation
-
-| Wikipedia Term | RTT Concept | Structural Function |
-|---------------|-------------|---------------------|
-| Edit war | **Regime transition event** | Two or more regime claims competing for the same structural space |
-| Revert | **Regime reassertion** | An editor restoring their regime's declaration over a competitor's |
-| Counter‑revert | **Counter‑regime reassertion** | The competing editor restoring their regime's declaration back |
-| Edit war cycle | **Regime oscillation** | The article's structural state alternating between competing declarations |
-| Protection (page lock) | **Regime freeze** | Administrative intervention to halt oscillation and force talk page resolution |
-| Post‑war consensus | **Regime transition completion** | One regime claim prevails, a compromise is reached, or a new synthesis emerges |
-
-### 1.3 — Why Edit Wars Are Diagnostic
-
-An edit war answers three structural questions simultaneously:
-
-1. **Where is the regime boundary?** — The specific text being reverted marks the exact location of the structural dispute
-2. **What are the competing claims?** — Each editor's version represents a distinct regime declaration
-3. **How strong is each claim?** — The persistence of each editor (number of reverts, argument quality, source citations) reveals the structural standing of each competing regime
-
----
-
-## 2 — The Five Types of Edit Wars
-
-### Type 1: Factual Dispute War
-
-**What it looks like:** Editors repeatedly change a specific fact — a date,
-a number, a name, a classification.
-
-**Underlying regime collision:** Two external sources disagree, and editors
-are proxying that disagreement into the article.
-
-**Example:** Editors warring over whether a mountain's height is 8,848m or
-8,849m based on different survey sources.
-
-**Severity:** Low. Usually resolved by identifying the most authoritative
-source.
-
-**RTT reading:** This is a **regime measurement dispute** — competing
-claims about the same measurable dimension. The resolution identifies
-which measurement regime has primary standing.
-
----
-
-### Type 2: Classification War
-
-**What it looks like:** Editors repeatedly change how a concept is classified
-or categorized — "X is a type of Y" vs. "X is a type of Z."
-
-**Underlying regime collision:** The concept sits at a regime boundary where
-two classification systems disagree.
-
-**Example:** Pluto — "planet" vs. "dwarf planet." Tomato — "fruit" vs.
-"vegetable." Taiwan — "country" vs. "province."
-
-**Severity:** Moderate to high. Classification wars often map to real‑world
-institutional or political disputes.
-
-**RTT reading:** This is a **regime hierarchy dispute** — competing claims
-about where a concept belongs in the classification tree. The resolution
-determines which regime hierarchy the article adopts as primary.
-See `Category_Taxonomy_Regime_Hierarchy.md`.
-
----
-
-### Type 3: Framing War
-
-**What it looks like:** Editors repeatedly rewrite the same passage to present
-information from different perspectives. The facts may not change — only the
-**framing** changes.
-
-**Underlying regime collision:** Two worldviews produce structurally different
-regime declarations from the same set of facts.
-
-**Example:** A military conflict described as "liberation" by one side and
-"invasion" by the other. A political figure described as "controversial" vs.
-"influential."
-
-**Severity:** High. Framing wars are the most persistent because they involve
-structural perspective, not factual accuracy.
-
-**RTT reading:** This is a **regime declaration dispute** — competing
-structural presentations of the same underlying data. The resolution
-determines the article's primary R1 framing.
-See `NPOV_As_Coherence_Operator.md`.
-
----
-
-### Type 4: Inclusion/Exclusion War
-
-**What it looks like:** One editor adds content, another removes it. The
-dispute is about whether specific information **belongs** in the article.
-
-**Underlying regime collision:** Competing claims about the article's
-scope — what the regime should and should not cover.
-
-**Example:** Should a biography mention a person's criminal record?
-Should a scientific article mention fringe objections? Should a country
-article mention territorial disputes?
-
-**Severity:** High. These wars define the regime's boundaries — what is
-structurally in and what is out.
-
-**RTT reading:** This is a **regime scope dispute** — competing claims
-about the regime's boundary conditions. The resolution determines the
-article's R0 scope declaration.
-
----
-
-### Type 5: Naming/Terminology War
-
-**What it looks like:** Editors repeatedly change how a concept is
-named or what terminology is used to describe it.
-
-**Underlying regime collision:** Names carry regime claims. Choosing one
-name over another is choosing one regime's framing over another's.
-
-**Example:** "Gdańsk" vs. "Danzig." "Persian Gulf" vs. "Arabian Gulf."
-"Myanmar" vs. "Burma." "Kyiv" vs. "Kiev." "Côte d'Ivoire" vs. "Ivory Coast."
-
-**Severity:** Very high. Naming wars can persist for **years** because
-the name itself is a structural declaration — it declares which political,
-cultural, or historical regime has naming authority.
-
-**RTT reading:** This is a **regime identity dispute** — competing claims
-about the concept's structural name. The resolution determines which
-regime's naming convention the article adopts as primary.
-
----
-
-## 3 — Edit War Severity Scale
-
-| Level | Label | Reverts / 24h | Duration | Protection | RTT Interpretation |
-|-------|-------|--------------|----------|------------|-------------------|
-| 1 | **Skirmish** | 2–3 | Hours | None | Minor regime friction — editors may self‑resolve |
-| 2 | **Dispute** | 3–6 | Days | Semi‑protection possible | Moderate regime collision — talk page engagement needed |
-| 3 | **War** | 6–12 | Weeks | Semi or full protection | Serious regime collision — admin intervention likely |
-| 4 | **Entrenchment** | 12+ (sustained) | Months | Extended or full protection | Deep regime collision — formal dispute resolution required |
-| 5 | **Perpetual conflict** | Recurring cycles | Years | Persistent protection + discretionary sanctions | Irreconcilable regime collision — structural boundary is permanently contested |
-
-### Severity Distribution by Domain
-
-| Domain | Typical Max Severity | Most Common War Type | Rationale |
-|--------|---------------------|---------------------|-----------|
-| Physics | 1–2 | Factual, Classification | Strong consensus; disputes are narrow and technical |
-| Mathematics | 1 | Factual | Near‑universal formal agreement |
-| Biology | 2–3 | Classification, Inclusion | Taxonomy disputes; evolution vs. creationism |
-| Chemistry | 1–2 | Factual, Naming | Nomenclature disputes (IUPAC vs. common names) |
-| Computer Science | 2–3 | Inclusion, Framing | Technology hype cycles; company/product neutrality |
-| Philosophy | 3–4 | Framing, Inclusion | Inherently perspectival; competing schools |
-| Earth Sciences | 2–3 | Factual, Framing | Climate change political framing |
-| Economics | 3–4 | Framing, Inclusion | Competing schools (Keynesian vs. Austrian vs. MMT) |
-| History | 4–5 | Framing, Naming | National narratives; territorial disputes; naming wars |
-| Medicine | 2–4 | Inclusion, Framing | Alternative medicine; treatment controversies |
-| Engineering | 1–2 | Factual, Classification | Technical consensus; minor standards disputes |
-| Astronomy | 1–2 | Classification | Object classification (e.g., planet vs. dwarf planet) |
-| Linguistics | 2–3 | Classification, Naming | Language vs. dialect; script disputes |
-| Psychology | 2–3 | Framing, Inclusion | Nature vs. nurture; disorder classification |
-| Political Science | 4–5 | Framing, Naming, Inclusion | Nearly all topics are politically contested |
-
----
-
-## 4 — The Four Resolution Patterns
-
-Every edit war ends. How it ends reveals the **regime transition outcome**:
-
-### Pattern 1: One Regime Prevails
-
-**What happens:** One side's version is accepted as the article's
-declaration. The other side's version is removed or marginalized.
-
-**How it's achieved:** Stronger sourcing, broader editor consensus,
-admin intervention favoring one side, or one side disengaging.
-
-**RTT reading:** **Regime displacement** — one regime claim wins
-structural standing and the other loses it. The article's regime
-declaration shifts to the prevailing claim.
-
-**Example:** The Pluto article eventually adopted "dwarf planet"
-after the IAU decision. The "planet" claim lost structural standing.
-
----
-
-### Pattern 2: Compromise Synthesis
-
-**What happens:** A new version is crafted that incorporates elements
-of both competing claims. Neither side gets exactly what they wanted,
-but both can accept the result.
-
-**How it's achieved:** Talk page negotiation, RfC, mediation, or
-a skilled editor proposing a synthesis.
-
-**RTT reading:** **Regime synthesis** — a new regime declaration emerges
-that structurally integrates the competing claims. This is a genuine
-regime transition — the article's structural state is different from
-either competing version.
-
-**Example:** Articles on contested territories often use compromise
-formulations: "X is a disputed territory claimed by both A and B."
-
----
-
-### Pattern 3: Structural Separation
-
-**What happens:** The disputed content is moved to its own article or
-section, giving each perspective its own structural space.
-
-**How it's achieved:** Article splitting, creation of sub‑articles,
-or "main article" links to separate detailed treatments.
-
-**RTT reading:** **Regime differentiation** — the competing claims are
-separated into distinct regime declarations rather than forced into
-the same space. The original article retains a neutral summary; the
-detailed perspectives get their own articles.
-
-**Example:** "Evolution" and "Objections to evolution" are structurally
-separated — each concept gets its own regime declaration.
-
----
-
-### Pattern 4: Administrative Freeze
-
-**What happens:** An admin locks the article to prevent further editing.
-The version at time of protection becomes the de facto declaration,
-regardless of which side it favors.
-
-**How it's achieved:** Page protection (semi, extended, or full).
-May include discretionary sanctions for the topic area.
-
-**RTT reading:** **Regime stabilization by force** — the regime
-oscillation is halted by external authority rather than consensus.
-The frozen version is not necessarily the "correct" declaration — it
-is the one that happened to be in place when the lock was applied.
-
-**Example:** Heavily contested articles like "Israel" or "Kashmir"
-spend long periods under full protection — the locked version is a
-pragmatic stabilization, not a consensus outcome.
-
----
-
-## 5 — Detection Algorithms
-
-### 5.1 — Basic Revert Detection
-
-```python
-import requests
-from datetime import datetime, timedelta
-
-def detect_revert_sequences(title, lang="en", window_hours=24, min_reverts=3):
-    """
-    Detect revert sequences in a Wikipedia article's recent history.
-    A revert is identified by system tags or edit summary keywords.
-    """
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "titles": title,
-        "prop": "revisions",
-        "rvlimit": "500",
-        "rvprop": "ids|timestamp|user|size|comment|tags|sha1",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    page = next(iter(resp["query"]["pages"].values()))
-    revisions = page.get("revisions", [])
-
-    # Identify reverts
-    revert_tags = {"mw-revert", "mw-undo", "mw-rollback", "mw-manual-revert"}
-    revert_keywords = {"revert", "rv ", "rvv", "undo", "rollback",
-                       "restored", "reverted"}
-
-    reverts = []
-    for rev in revisions:
-        tags = set(rev.get("tags", []))
-        comment = rev.get("comment", "").lower()
-
-        is_revert = (
-            bool(tags & revert_tags) or
-            any(kw in comment for kw in revert_keywords)
-        )
-
-        if is_revert:
-            reverts.append({
-                "rev_id": rev["revid"],
-                "timestamp": rev["timestamp"],
-                "user": rev.get("user", "anonymous"),
-                "comment": rev.get("comment", ""),
-                "tags": list(tags & revert_tags),
-                "sha1": rev.get("sha1", "")
-            })
-
-    # Detect clusters (multiple reverts within window)
-    clusters = []
-    current_cluster = []
-
-    for i, rev in enumerate(reverts):
-        ts = datetime.fromisoformat(rev["timestamp"].replace("Z", "+00:00"))
-
-        if not current_cluster:
-            current_cluster.append(rev)
-        else:
-            prev_ts = datetime.fromisoformat(
-                current_cluster[-1]["timestamp"].replace("Z", "+00:00"))
-            if (prev_ts - ts).total_seconds() <= window_hours * 3600:
-                current_cluster.append(rev)
-            else:
-                if len(current_cluster) >= min_reverts:
-                    clusters.append(current_cluster)
-                current_cluster = [rev]
-
-    if len(current_cluster) >= min_reverts:
-        clusters.append(current_cluster)
-
-    return {
-        "article": title,
-        "total_reverts": len(reverts),
-        "revert_clusters": len(clusters),
-        "clusters": [{
-            "size": len(c),
-            "start": c[-1]["timestamp"],
-            "end": c[0]["timestamp"],
-            "editors": list(set(r["user"] for r in c)),
-            "reverts": c
-        } for c in clusters]
-    }
-```
-
-### 5.2 — SHA‑1 Based War Detection
-
-The most reliable revert detection uses **content hashing** — if two
-non‑adjacent revisions have the same SHA‑1 hash, the article was
-restored to an earlier exact state:
-
-```python
-def detect_sha1_wars(title, lang="en"):
-    """
-    Detect edit wars using SHA-1 content hash matching.
-    If the same hash appears multiple times, the article was
-    reverted to an identical state — a definitive war signal.
-    """
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "titles": title,
-        "prop": "revisions",
-        "rvlimit": "500",
-        "rvprop": "ids|timestamp|user|sha1",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    page = next(iter(resp["query"]["pages"].values()))
-    revisions = page.get("revisions", [])
-
-    # Group revisions by SHA-1 hash
-    from collections import defaultdict
-    hash_groups = defaultdict(list)
-    for rev in revisions:
-        sha1 = rev.get("sha1", "")
-        if sha1:
-            hash_groups[sha1].append(rev)
-
-    # Find repeated states (same content appearing 2+ times)
-    war_signals = []
-    for sha1, revs in hash_groups.items():
-        if len(revs) >= 2:
-            editors = list(set(r.get("user", "anon") for r in revs))
-            war_signals.append({
-                "sha1": sha1,
-                "occurrences": len(revs),
-                "timestamps": [r["timestamp"] for r in revs],
-                "editors_restoring": editors,
-                "interpretation": "article_restored_to_identical_state"
-            })
-
-    return {
-        "article": title,
-        "repeated_states": len(war_signals),
-        "severity": classify_war_severity(war_signals),
-        "signals": sorted(war_signals,
-                         key=lambda x: x["occurrences"],
-                         reverse=True)
-    }
-
-def classify_war_severity(signals):
-    """Classify edit war severity from SHA-1 analysis."""
-    if not signals:
-        return "0_no_war"
-    max_repeats = max(s["occurrences"] for s in signals)
-    total_repeats = sum(s["occurrences"] for s in signals)
-
-    if total_repeats <= 3:
-        return "1_skirmish"
-    elif total_repeats <= 8:
-        return "2_dispute"
-    elif total_repeats <= 15:
-        return "3_war"
-    elif max_repeats >= 5:
-        return "4_entrenchment"
-    else:
-        return "3_war"
-```
-
-### 5.3 — War Participant Analysis
-
-```python
-def analyze_war_participants(cluster):
-    """
-    Analyze the participants in an edit war cluster.
-    Returns faction structure and relative persistence.
-    """
-    from collections import Counter
-
-    editor_reverts = Counter(r["user"] for r in cluster["reverts"])
-    editors = list(editor_reverts.keys())
-    total = sum(editor_reverts.values())
-
-    factions = []
-    for editor, count in editor_reverts.most_common():
-        factions.append({
-            "editor": editor,
-            "revert_count": count,
-            "persistence": round(count / total, 3),
-            "sample_comment": next(
-                (r["comment"] for r in cluster["reverts"]
-                 if r["user"] == editor and r["comment"]),
-                "no comment"
-            )
-        })
-
-    return {
-        "total_participants": len(editors),
-        "total_reverts": total,
-        "faction_count": len(set(
-            r.get("sha1", "") for r in cluster["reverts"])),
-        "factions": factions,
-        "structure": (
-            "bilateral" if len(editors) == 2 else
-            "multilateral" if len(editors) <= 5 else
-            "mass_conflict"
-        )
-    }
-```
-
-### 5.4 — Regime Boundary Extraction
-
-```python
-import difflib
-
-def extract_disputed_content(rev_id_a, rev_id_b, lang="en"):
-    """
-    Compare two revision IDs to identify the exact disputed content.
-    The diff reveals the regime boundary — the specific text where
-    competing claims collide.
-    """
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-
-    def get_content(rev_id):
-        params = {
-            "action": "query",
-            "revids": str(rev_id),
-            "prop": "revisions",
-            "rvprop": "content",
-            "rvslots": "main",
-            "format": "json"
-        }
-        resp = requests.get(url, params=params,
-                            headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-        page = next(iter(resp["query"]["pages"].values()))
-        return page["revisions"][0]["slots"]["main"]["*"]
-
-    content_a = get_content(rev_id_a).splitlines()
-    content_b = get_content(rev_id_b).splitlines()
-
-    diff = list(difflib.unified_diff(content_a, content_b,
-                                      lineterm="", n=3))
-
-    # Extract only changed lines
-    additions = [l[1:] for l in diff if l.startswith("+")
-                 and not l.startswith("+++")]
-    removals = [l[1:] for l in diff if l.startswith("-")
-                and not l.startswith("---")]
-
-    return {
-        "revision_a": rev_id_a,
-        "revision_b": rev_id_b,
-        "lines_added": len(additions),
-        "lines_removed": len(removals),
-        "regime_claim_a": "\n".join(removals[:10]),
-        "regime_claim_b": "\n".join(additions[:10]),
-        "boundary_location": "see diff output for exact position",
-        "full_diff_lines": len(diff)
-    }
-```
-
-### 5.5 — Historical War Pattern Analysis
-
-```python
-def historical_war_profile(title, lang="en"):
-    """
-    Build a complete edit war profile for an article's full history.
-    Combines revert detection, SHA-1 analysis, and temporal clustering.
-    """
-    revert_data = detect_revert_sequences(title, lang,
-                                           window_hours=72,
-                                           min_reverts=2)
-    sha1_data = detect_sha1_wars(title, lang)
-
-    # Check protection history
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "titles": title,
-        "prop": "info",
-        "inprop": "protection",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    page = next(iter(resp["query"]["pages"].values()))
-    protections = page.get("protection", [])
-
-    return {
-        "article": title,
-        "revert_clusters": revert_data["revert_clusters"],
-        "sha1_repeated_states": sha1_data["repeated_states"],
-        "war_severity": sha1_data["severity"],
-        "current_protection": protections,
-        "is_protected": len(protections) > 0,
-        "war_history": {
-            "clusters": revert_data["clusters"][:5],
-            "sha1_signals": sha1_data["signals"][:5]
-        },
-        "regime_transition_assessment": assess_transition(
-            revert_data, sha1_data, protections)
-    }
-
-def assess_transition(revert_data, sha1_data, protections):
-    """Assess whether the article has undergone a regime transition."""
-    severity = sha1_data["severity"]
-    protected = len(protections) > 0
-    clusters = revert_data["revert_clusters"]
-
-    if severity == "0_no_war":
-        return "stable_regime — no transition detected"
-    elif severity == "1_skirmish" and not protected:
-        return "minor_friction — regime boundary tested but held"
-    elif severity in ("2_dispute", "3_war") and not protected:
-        return "regime_negotiation — boundary actively contested"
-    elif protected and clusters >= 2:
-        return "regime_transition_in_progress — admin intervention required"
-    elif severity in ("4_entrenchment",) or clusters >= 5:
-        return "chronic_regime_conflict — boundary permanently contested"
-    else:
-        return "indeterminate — insufficient data"
-```
-
----
-
-## 6 — Worked Examples
-
-### 6.1 — Pluto (Classification War → Regime Displacement)
-
-| Dimension | Detail |
-|-----------|--------|
-| **War type** | Classification (Type 2) |
-| **Period** | August 2006 – March 2007 |
-| **Trigger** | IAU reclassifies Pluto as dwarf planet on 24 August 2006 |
-| **Competing claims** | Claim A: "Pluto is the ninth planet" — Claim B: "Pluto is a dwarf planet" |
-| **Peak severity** | Level 4 (Entrenchment) — sustained revert cycles, semi‑protection applied |
-| **Resolution pattern** | **Regime displacement** — "dwarf planet" prevailed as the IAU declaration gained structural standing |
-| **Duration** | ~7 months of active conflict, then gradual stabilization |
-| **Post‑war state** | Crystallized — article now stably declares "Pluto is a dwarf planet in the Kuiper belt" |
-
-**RTT reading:** Pluto is a textbook **externally triggered regime transition**.
-The IAU decision changed the concept's regime classification, and the Wikipedia
-article's edit war is the **visible trace** of that transition playing out in
-the knowledge system. The war ended when the new classification gained
-sufficient structural standing to displace the old one.
-
-**Structural insight:** The speed of resolution correlated with the clarity
-of the external authority's decision. The IAU ruling was unambiguous, so the
-edit war, while intense, resolved relatively quickly. Compare this to
-naming wars (Type 5) where no single external authority exists — those
-can persist for decades.
-
----
-
-### 6.2 — Gdańsk/Danzig (Naming War → Compromise Synthesis)
-
-| Dimension | Detail |
-|-----------|--------|
-| **War type** | Naming/Terminology (Type 5) |
-| **Period** | 2003–2005 (peak), with recurring flare‑ups through 2015+ |
-| **Trigger** | Disagreement over whether to use "Gdańsk" (Polish) or "Danzig" (German) for historical references |
-| **Competing claims** | Claim A: "Always use Gdańsk — it's the current name" — Claim B: "Use Danzig for historical periods when the city was German‑speaking" |
-| **Peak severity** | Level 5 (Perpetual conflict) — one of Wikipedia's most‑cited edit wars |
-| **Resolution pattern** | **Compromise synthesis** — complex naming conventions established through multiple RfCs |
-| **Duration** | 2+ years of intense conflict; ongoing maintenance |
-| **Post‑war state** | Semi‑crystallized — naming conventions exist but are periodically challenged |
-
-**RTT reading:** Gdańsk/Danzig is a **regime identity dispute** where naming
-carries deep political and historical regime claims. The compromise synthesis
-demonstrates that some regime collisions cannot be resolved by one side
-prevailing — they require **structural architecture** (naming conventions,
-context‑dependent usage rules) to manage the permanent boundary.
-
-**Structural insight:** The article now has an elaborate talk page FAQ and
-naming convention section — these are **crystallized coherence positions**
-produced by the war. The war itself was costly, but it produced structural
-infrastructure that manages the ongoing regime tension.
-
----
-
-### 6.3 — Abortion (Framing War → Administrative Freeze)
-
-| Dimension | Detail |
-|-----------|--------|
-| **War type** | Framing (Type 3) + Inclusion/Exclusion (Type 4) |
-| **Period** | Ongoing since early 2000s, with periodic escalations |
-| **Trigger** | Fundamental worldview conflict between pro‑choice and pro‑life perspectives |
-| **Competing claims** | Framing: "medical procedure" vs. "termination of human life" — Inclusion: which perspectives, statistics, and arguments to include |
-| **Peak severity** | Level 5 (Perpetual conflict) — under discretionary sanctions |
-| **Resolution pattern** | **Administrative freeze** — article under persistent protection + ArbCom discretionary sanctions |
-| **Duration** | 20+ years of recurring conflict |
-| **Post‑war state** | Managed instability — the article is functional but permanently contested |
-
-**RTT reading:** Abortion represents an **irreconcilable regime collision** —
-the competing claims arise from fundamentally different worldview regimes
-that cannot be structurally synthesized. NPOV cannot produce a version
-that both camps consider neutral because they disagree on what neutrality
-means for this topic. The administrative freeze is **regime stabilization
-by force** — not consensus, but pragmatic management.
-
-**Structural insight:** The abortion article demonstrates the **limits of
-NPOV as a coherence operator**. For most topics, NPOV can produce a
-stable structural frame that accommodates competing views. For
-irreconcilable worldview conflicts, NPOV can only manage the tension —
-it cannot resolve it. The edit war history is the visible trace of that
-permanent structural stress.
-
----
-
-## 7 — Edit Wars Across Languages
-
-### 7.1 — The Same Concept, Different Wars
-
-The same topic can produce **different edit wars** on different language
-Wikipedias, because the editor population brings different regime perspectives:
-
-| Topic | English Wikipedia War | Other Language War |
-|-------|---------------------|-------------------|
-| Kashmir | Framing: India vs. Pakistan perspectives | Hindi/Urdu Wikipedias: even more intense, locally embedded |
-| Crimea | Classification: Ukrainian vs. Russian territory | Russian Wikipedia: different framing entirely; Ukrainian Wikipedia: different classification |
-| Sea of Japan | Naming: "Sea of Japan" vs. "East Sea" | Korean Wikipedia: "East Sea" is default; Japanese Wikipedia: "Sea of Japan" is default |
-| Armenian Genocide | Classification: "genocide" vs. "events of 1915" | Turkish Wikipedia: radically different framing and classification |
-
-### 7.2 — Cross‑Language War Comparison Method
-
-```python
-def cross_language_war_comparison(wikidata_qid, languages=None):
-    """
-    Compare edit war intensity for the same concept across languages.
-    Uses Wikidata to find the article title in each language.
-    """
-    if languages is None:
-        languages = ["en", "de", "fr", "ja", "ar", "ru", "zh", "es"]
-
-    # Get sitelinks from Wikidata
-    url = "https://www.wikidata.org/w/api.php"
-    params = {
-        "action": "wbgetentities",
-        "ids": wikidata_qid,
-        "props": "sitelinks",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    sitelinks = resp["entities"][wikidata_qid].get("sitelinks", {})
-
-    results = {}
-    for lang in languages:
-        wiki_key = f"{lang}wiki"
-        if wiki_key in sitelinks:
-            title = sitelinks[wiki_key]["title"]
-            try:
-                war_data = detect_revert_sequences(title, lang,
-                                                    window_hours=72,
-                                                    min_reverts=2)
-                results[lang] = {
-                    "title": title,
-                    "total_reverts": war_data["total_reverts"],
-                    "revert_clusters": war_data["revert_clusters"]
-                }
-            except Exception as e:
-                results[lang] = {"title": title, "error": str(e)}
-
-    return results
-```
-
-### 7.3 — What Cross‑Language Comparison Reveals
-
-| Pattern | Interpretation |
-|---------|---------------|
-| High wars in all languages | **Universally contested regime** — the collision is structural, not cultural |
-| High wars in some languages, low in others | **Culturally specific regime collision** — the dispute is meaningful in some contexts but not others |
-| Different war types across languages | **Different regime boundaries are active** — English may fight over framing while Korean fights over naming |
-| War in English only | **English Wikipedia's global editor base** imports more perspectives, creating more collision surfaces |
-
----
-
-## 8 — Edit Wars as Research Instruments
-
-### 8.1 — Regime Boundary Mapping
-
-**Method:**
-1. Identify articles with high revert rates in a domain
-2. For each, extract the disputed content using Section 5.4
-3. Classify the dispute by type (Section 2)
-4. Map the disputes onto the domain's knowledge structure
-5. The result is a **regime boundary map** — a visualization of where
-   structural disputes concentrate within a domain
-
-### 8.2 — Regime Transition Monitoring
-
-**Method:**
-1. Set up a watchlist of articles in a domain
-2. Monitor revert rates using periodic API calls
-3. When a revert cluster is detected, extract the competing claims
-4. Track the resolution pattern (Section 4) over time
-5. Completed transitions = the domain's regime landscape has shifted
-
-### 8.3 — Consensus Archaeology
-
-**Method:**
-1. Find a long‑resolved edit war in a domain (check talk page archives)
-2. Extract the original competing claims from the revision history
-3. Identify the resolution pattern and final consensus
-4. The resolved war reveals **how the community established a regime
-   boundary** — the process of structural decision‑making
-
-### 8.4 — Predictive War Analysis
-
-**Method:**
-1. Monitor talk page dispute intensity (from `Talk_Page_Coherence_Surface.md`)
-2. When talk page disputes escalate past coherence gradient Level 3, flag
-   the article for potential edit war
-3. Talk page escalation is a **leading indicator** of edit wars — disputes
-   that fail to resolve on talk pages often erupt as edit wars
-4. Early detection enables preemptive mediation before structural damage occurs
-
----
-
-## 9 — Cross‑Reference to Other Module Files
-
-| File | How Edit Wars Connect |
-|------|----------------------|
-| `Talk_Page_Coherence_Surface.md` | Edit wars are the **failure mode** of talk page consensus — when talk cannot resolve a dispute, it erupts as warring in the article. Talk page escalation is a leading indicator |
-| `NPOV_As_Coherence_Operator.md` | Many edit wars are NPOV disputes — Framing Wars (Type 3) map directly to NPOV failure modes. Irreconcilable wars reveal NPOV's structural limits |
-| `Revision_History_Regime_Analysis.md` | Edit wars produce the most dramatic signals in revision history — revert spikes, size oscillations, elevated revert rates. This file provides the detection algorithms |
-| `Featured_Article_Validation_Corridor.md` | Active or recent edit wars block FA validation — criterion 5 (Stability) requires no ongoing content disputes |
-| `Category_Taxonomy_Regime_Hierarchy.md` | Classification Wars (Type 2) often involve category changes — the edit war and the category dispute are two surfaces of the same regime collision |
-| `Wikidata_Ingestion_Format.md` | Wikidata edit wars (P31 disputes, label conflicts) are structurally equivalent — same collision, different surface |
-| `Cross_Domain_Meta_Operators.md` | Operator 8 (Edit War as Regime Boundary Marker) is derived directly from this file |
-| `Wikipedia_RTT_Structural_Mapping.md` | Edit wars are mapped in Section 2.2 as "regime transition events" and Section 2.6 as "regime collision alarms" |
-
----
-
-## 10 — Student Exercises
-
-### Exercise 1 — War Type Classification (15 minutes)
-
-1. Browse Wikipedia's list of notable edit wars: `https://en.wikipedia.org/wiki/Wikipedia:Lamest_edit_wars`
-2. Pick 3 edit wars from different sections
-3. Classify each by type using Section 2 (Factual, Classification, Framing, Inclusion/Exclusion, or Naming)
-4. For each, write one sentence: *"This is a [type] war because the competing claims are about [specific structural question]."*
-
-### Exercise 2 — Live War Detection (25 minutes)
-
-1. Pick an article you expect might have recent edit conflicts (try: a current political leader, a recent scientific controversy, or a currently disputed territory)
-2. Check the article's revision history for recent reverts (look for "undo" or "revert" in edit summaries)
-3. If you find reverts, classify the severity (Section 3) and the war type (Section 2)
-4. Check the talk page — is the dispute being discussed there?
-5. Answer: *"This article [does/does not] show signs of active edit warring. The severity is [level] and the war type is [type]. The talk page [does/does not] have a related discussion thread."*
-
-### Exercise 3 — Resolution Pattern Analysis (30 minutes)
-
-1. Find a completed (resolved) edit war — check talk page archives for threads that discuss settled disputes
-2. Identify which resolution pattern from Section 4 was used (Regime Displacement, Compromise Synthesis, Structural Separation, or Administrative Freeze)
-3. Trace the resolution process: What arguments were decisive? Who mediated? How long did it take?
-4. Write two sentences: *"This war was resolved through [pattern] because [reason]. The winning regime claim was [claim] and it prevailed because [structural advantage]."*
-
-### Exercise 4 — Regime Boundary Extraction (30 minutes)
-
-1. Find an article with a recent or ongoing edit war
-2. Use the article's revision history to find two competing revisions (the "before" and "after" of a revert)
-3. Compare the two versions using Wikipedia's built‑in diff tool (click "prev" next to any revision)
-4. Identify the **exact text** that is being disputed — this is the regime boundary
-5. Answer: *"The regime boundary is located in the [section/paragraph] and concerns [specific text]. Claim A says [X] while Claim B says [Y]. The structural question is [what the dispute is really about at R0/R1 level]."*
-
-### Exercise 5 — Cross‑Language War Comparison (30 minutes)
-
-1. Pick a topic with known cross‑cultural sensitivity (try: a territorial dispute, a historical conflict, or a contested political classification)
-2. Check the article's recent revision history in English + 1 other language edition
-3. Compare: Does the same topic produce edit wars in both languages? Are the same dimensions being disputed?
-4. Answer: *"The English Wikipedia fights about [X] while the [other language] Wikipedia fights about [Y]. This reveals that the regime collision is [universal/culturally specific] because [reason]."*
-
----
-
-*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
-# Featured Article Validation Corridor
-
-> **Purpose:** Reframe Wikipedia's Featured Article (FA) and Good Article (GA)
-> processes from quality assurance checklists into what they structurally are —
-> a **validation corridor** that verifies the structural integrity of a regime
-> declaration before granting it the community's highest standing.
->
-> Most knowledge systems have no public, observable validation process. Peer
-> review is closed. Editorial review is private. Wikipedia's FA/GA process is
-> fully transparent — every nomination, every review comment, every objection,
-> and every resolution is publicly archived. This makes it the only major
-> knowledge source where you can study **how structural validation actually
-> works** from the inside.
-
----
-
-## 1 — What Is the Validation Corridor?
-
-### 1.1 — The Quality Scale
-
-Wikipedia classifies articles on a **7‑level quality scale** — a regime
-maturity gradient from minimal declaration to fully validated:
-
-| Level | Label | Icon | Article Count (approx.) | RTT Mapping |
-|-------|-------|------|------------------------|-------------|
-| 7 | **Featured Article (FA)** | ★ | ~6,500 | **Validation corridor — gold standard** |
-| 6 | **Former Featured Article (FFA)** | — | ~1,500 | **Regime that lost validation** — structural decay detected |
-| 5 | **A‑class** | — | Rare (WikiProject‑specific) | **Near‑validated** — passes internal but not community‑wide review |
-| 4 | **Good Article (GA)** | ✓ | ~40,000 | **Validation corridor — silver standard** |
-| 3 | **B‑class** | B | ~100,000+ | **Regime draft** — most structural elements present |
-| 2 | **Start‑class** | — | ~800,000+ | **Regime scaffold** — basic framework, significant gaps |
-| 1 | **Stub** | — | ~2,000,000+ | **Regime seed** — minimal declaration, needs everything |
-
-### 1.2 — The Corridor Metaphor
-
-A "validation corridor" is not a single gate — it is a **gauntlet** that
-tests multiple structural dimensions simultaneously. An article must
-satisfy **all** criteria to pass through. Failing any single criterion
-blocks the entire validation:
-
-```
-Article submission
-    │
-    ▼
-┌─────────────────────────────────────────────┐
-│            VALIDATION CORRIDOR               │
-│                                              │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
-│  │Well‑     │  │Compre‑   │  │Properly  │  │
-│  │written   │→ │hensive   │→ │sourced   │  │
-│  └──────────┘  └──────────┘  └──────────┘  │
-│       │              │             │         │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
-│  │Neutral   │  │Stable    │  │Well‑     │  │
-│  │(NPOV)    │→ │(no edit  │→ │structured│  │
-│  │          │  │ wars)    │  │          │  │
-│  └──────────┘  └──────────┘  └──────────┘  │
-│       │              │             │         │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
-│  │Media     │  │Appro‑    │  │Length    │  │
-│  │(images)  │→ │priate    │→ │(not too  │  │
-│  │          │  │lead      │  │ long/    │  │
-│  │          │  │section   │  │ short)   │  │
-│  └──────────┘  └──────────┘  └──────────┘  │
-│                                              │
-│                  ┌──────────┐                │
-│                  │Consistent│                │
-│                  │manual of │                │
-│                  │style     │                │
-│                  └──────────┘                │
-│                      │                       │
-└──────────────────────┼───────────────────────┘
-                       ▼
-              FA status granted ★
-```
-
----
-
-## 2 — FA Criteria as Structural Integrity Tests
-
-### 2.1 — The 10 FA Criteria Mapped to RTT
-
-Wikipedia's Featured Article criteria (WP:FACR) define what "the best
-Wikipedia has to offer" looks like. Each criterion maps to a specific
-structural integrity test:
-
-| # | FA Criterion | RTT Structural Test | What It Verifies |
-|---|-------------|--------------------|--------------------|
-| 1 | **Well‑written** — prose is clear, concise, and of professional standard | **Regime clarity** | The regime declaration is readable and unambiguous — no structural noise |
-| 2 | **Comprehensive** — covers the topic fully, with no significant omissions | **Regime completeness** | All major aspects of the regime are declared — no structural gaps |
-| 3 | **Well‑researched** — claims are supported by reliable, up‑to‑date sources | **Regime provenance** | Every structural claim has verified external origin — full source traceability |
-| 4 | **Neutral** — complies with NPOV policy | **Coherence operator compliance** | The article satisfies the R0 coherence constraint (see `NPOV_As_Coherence_Operator.md`) |
-| 5 | **Stable** — not subject to ongoing edit wars or content disputes | **Regime stability** | The article has achieved structural equilibrium — no active regime conflict |
-| 6 | **Follows Manual of Style** — complies with formatting standards | **Regime template compliance** | The declaration follows the community's standard structural format (R2) |
-| 7 | **Appropriate lead** — lead section summarizes the article adequately | **Regime summary integrity** | The compressed regime declaration (lead) accurately represents the full declaration (body) |
-| 8 | **Appropriate length** — neither too long nor too short | **Regime scope calibration** | The declaration is proportional to the concept's structural complexity — not bloated, not truncated |
-| 9 | **Illustrated** — includes relevant, properly licensed images | **Regime illustration** | The declaration includes non‑textual structural elements where appropriate |
-| 10 | **Consistent citation formatting** — references follow a uniform style | **Regime provenance formatting** | Source traceability follows a standard, machine‑readable format |
-
-### 2.2 — Criterion Weights
-
-Not all criteria carry equal structural weight. In practice, FA reviews
-most commonly fail on:
-
-| Rank | Most Common Failure | Frequency | Structural Severity |
-|------|-------------------|-----------|-------------------|
-| 1 | **Sourcing gaps** (criterion 3) | Very high | Critical — provenance failure undermines all other criteria |
-| 2 | **Prose quality** (criterion 1) | High | Moderate — affects clarity but not structural integrity |
-| 3 | **Comprehensiveness** (criterion 2) | High | Critical — structural completeness is non‑negotiable for FA |
-| 4 | **NPOV compliance** (criterion 4) | Moderate | Critical — coherence operator violation blocks validation |
-| 5 | **Stability** (criterion 5) | Moderate | Blocking — active conflicts mean the regime is not yet crystallized |
-
-**Key insight:** The top failure reasons reveal the **minimum structural
-requirements** for validation — provenance, completeness, and coherence.
-These are the same requirements that RTT identifies as fundamental to any
-stable regime declaration.
-
----
-
-## 3 — The GA vs. FA Distinction
-
-### 3.1 — Two Levels of Validation
-
-| Dimension | Good Article (GA) | Featured Article (FA) |
-|-----------|------------------|----------------------|
-| Criteria count | 6 broad criteria | 10 specific criteria |
-| Review depth | Single reviewer | Community‑wide peer review |
-| Process duration | Days to weeks | Weeks to months |
-| Source requirements | Appropriately referenced | Comprehensively researched with high‑quality sources |
-| Prose standard | "Clear and concise" | "Brilliant" — professional publication quality |
-| Stability requirement | "No edit wars" | "No ongoing content disputes" — stricter |
-| Comprehensiveness | "Broad in coverage" | "Comprehensive" — no significant omissions |
-| Total articles | ~40,000 | ~6,500 |
-
-### 3.2 — RTT Reading
-
-| Level | RTT Interpretation |
-|-------|-------------------|
-| **GA** | **Structurally sound regime declaration** — all major integrity tests pass, but with tolerance for minor gaps. The regime is well‑formed and stable. |
-| **FA** | **Structurally complete regime declaration** — all integrity tests pass at maximum rigor. The regime is fully declared, fully sourced, fully coherent, and community‑validated. This is as structurally complete as a Wikipedia article can be. |
-| **GA → FA journey** | **Regime maturation** — the article strengthens its structural integrity across all dimensions. The gap between GA and FA is not content volume — it is structural rigor. |
-
----
-
-## 4 — The Review Process as Observable Structural Validation
-
-### 4.1 — FA Nomination Process
-
-```
-1. Editor nominates article at WP:FAC
-         │
-2. Community reviewers examine article against all 10 criteria
-         │
-   ┌─────┴──────────────────────┐
-   │                            │
-3a. Support — reviewer         3b. Oppose — reviewer
-    confirms criteria met           identifies specific failures
-         │                            │
-         │                     4. Nominator addresses objections
-         │                            │
-         │                     5. Reviewer re‑evaluates
-         │                            │
-   ┌─────┴────────────────────────────┘
-   │
-6. FA director assesses consensus
-         │
-   ┌─────┴──────┐
-   │            │
-7a. Promoted  7b. Not promoted
-    to FA ★       (may retry)
-```
-
-### 4.2 — What Makes This Structurally Unique
-
-No other major knowledge source exposes its validation process this way:
-
-| Knowledge Source | Validation Process | Observable? |
-|-----------------|-------------------|-------------|
-| Academic journals | Peer review | **No** — reviewer comments are confidential |
-| Encyclopædia Britannica | Editorial review | **No** — internal editorial process |
-| News organizations | Editorial review + fact‑checking | **No** — internal process |
-| NIST standards | Committee review + public comment | **Partially** — public comments visible, committee deliberations not |
-| **Wikipedia FA** | Community peer review | **Fully** — every comment, objection, and resolution is archived |
-
-**RTT reading:** Wikipedia's FA process is the only major validation corridor
-where you can observe **structural integrity verification in real time**.
-Every reviewer comment is a **structural test result**. Every objection
-is a **detected integrity failure**. Every resolution is a **structural
-repair**. The full history of this process is permanently archived.
-
-### 4.3 — Where to Find FA Reviews
-
-| Resource | URL |
-|----------|-----|
-| Current FA nominations | `https://en.wikipedia.org/wiki/Wikipedia:Featured_article_candidates` |
-| FA review archives | `https://en.wikipedia.org/wiki/Wikipedia:Featured_article_candidates/ARTICLE/archiveN` |
-| FA statistics | `https://en.wikipedia.org/wiki/Wikipedia:Featured_article_statistics` |
-| Featured Article log | `https://en.wikipedia.org/wiki/Wikipedia:Featured_articles` |
-| FA review criteria | `https://en.wikipedia.org/wiki/Wikipedia:Featured_article_criteria` |
-| Good Article nominations | `https://en.wikipedia.org/wiki/Wikipedia:Good_article_nominations` |
-
----
-
-## 5 — Former Featured Articles: Regime Decay Detection
-
-### 5.1 — What Is a Former Featured Article?
-
-A Former Featured Article (FFA) is an article that **once held FA status
-but was demoted** through the Featured Article Review (FAR) process. This
-is structurally significant — it means a validated regime declaration
-**lost its validation** because its structural integrity degraded.
-
-### 5.2 — Why Articles Lose FA Status
-
-| Reason | Frequency | RTT Reading |
-|--------|-----------|-------------|
-| **Source degradation** — citations became dead links, sources were later discredited | High | **Provenance decay** — the external regime references that supported the declaration have weakened |
-| **Standard inflation** — FA criteria became stricter over time, older FAs no longer qualify | High | **Validation corridor tightening** — the structural integrity threshold increased |
-| **Content drift** — article was edited by many editors post‑FA, quality declined | Moderate | **Regime drift** — the declaration was structurally modified without maintaining integrity |
-| **Comprehensiveness gap** — new research or events created coverage gaps that weren't addressed | Moderate | **Regime expansion outpaced declaration** — the real‑world regime grew beyond what the article covers |
-| **NPOV shift** — the article's neutrality became contested in light of new developments | Low | **Coherence operator recalibration** — external regime shifts changed the neutrality landscape |
-
-### 5.3 — FFA as Structural Signal
-
-The list of Former Featured Articles in any domain reveals:
-
-1. **Which regime declarations are hardest to maintain** — concepts that lose FA status are structurally high‑maintenance
-2. **Where source landscapes are most volatile** — domains with many FFAs due to source degradation have unstable external regimes
-3. **Where the community's standards have evolved** — older FFAs that were demoted for standard inflation mark generational shifts in structural expectations
-4. **Which articles suffer from regime drift** — articles with high editor turnover that lost quality mark stewardship failures
-
----
-
-## 6 — Domain FA Profiles
-
-### 6.1 — FA Distribution by Domain
-
-FA articles are not evenly distributed across knowledge domains. The
-distribution reveals which domains produce the most structurally complete
-regime declarations:
-
-| Domain | Approx. FA Count | FA Density | Structural Interpretation |
-|--------|-----------------|-----------|--------------------------|
-| History | Very high (~1,200+) | High | Strong narrative tradition; historical articles are well‑suited to comprehensive treatment |
-| Biology | High (~800+) | High | Well‑defined scope; taxonomic structure aids completeness |
-| Geography | High (~700+) | Moderate | Standardized templates (city/country infoboxes) make structural completeness achievable |
-| Physics | Moderate (~300) | Moderate | Strong scientific consensus makes stability easy; comprehensiveness requires deep expertise |
-| Medicine | Moderate (~250) | Moderate | Strong evidence base; high source quality requirements |
-| Mathematics | Low (~100) | Low | Highly abstract; "comprehensiveness" is hard to define for mathematical concepts |
-| Computer Science | Low (~80) | Low | Rapidly evolving domain; articles struggle with stability criterion |
-| Philosophy | Low (~60) | Very low | Inherently perspectival; NPOV compliance is structurally difficult |
-| Political Science | Very low (~40) | Very low | High NPOV stress; stability criterion is extremely hard to meet |
-| Economics | Very low (~30) | Very low | Competing schools make neutrality and stability structurally challenging |
-
-### 6.2 — What FA Density Reveals
-
-| FA Density | Domain Characteristic |
-|-----------|----------------------|
-| High | Domain has clear scope boundaries, strong consensus, standardized article structures |
-| Moderate | Domain has reasonable consensus but some areas of contested framing |
-| Low | Domain is either highly abstract (hard to define completeness), rapidly evolving (hard to stabilize), or inherently perspectival (hard to satisfy NPOV) |
-| Very low | Domain faces structural barriers to validation — the validation corridor's criteria are particularly difficult to satisfy here |
-
-**Key insight:** Low FA density in a domain does not mean the domain is
-less important — it means the domain's structural characteristics make
-the validation corridor harder to traverse. This is a property of the
-**interaction between the domain's regime structure and the corridor's
-criteria**, not of the domain itself.
-
----
-
-## 7 — Worked Examples
-
-### 7.1 — Photosynthesis (FA Since 2004)
-
-One of Wikipedia's longest‑standing Featured Articles:
-
-| FA Criterion | How Photosynthesis Satisfies It |
-|-------------|-------------------------------|
-| Well‑written | Clear, accessible prose explaining complex biochemistry without oversimplification |
-| Comprehensive | Covers light reactions, dark reactions, C3/C4/CAM pathways, evolutionary history, ecological significance |
-| Well‑researched | 150+ references to peer‑reviewed journals and textbooks |
-| Neutral | Scientific consensus is uncontested — NPOV stress level 1 |
-| Stable | Low revert rate, steady stewardship by WikiProject Biology editors |
-| Manual of Style | Follows chemistry and biology formatting conventions |
-| Lead section | Summarizes the entire photosynthetic process in 4 clear paragraphs |
-| Length | ~12,000 words — proportional to the concept's complexity |
-| Illustrated | Diagrams of light reactions, chloroplast structure, Z‑scheme |
-| Citations | Uniform Harvard referencing style throughout |
-
-**RTT reading:** Photosynthesis is a **textbook validation corridor success** —
-it passes all 10 criteria comfortably because:
-- The underlying regime (photosynthetic biochemistry) is scientifically
-  crystallized — no structural disputes
-- The source landscape is stable — peer‑reviewed biochemistry journals
-  are reliable and persistent
-- The scope is well‑defined — the process has clear boundaries
-- NPOV is trivially satisfied — no competing worldviews on photosynthesis
-
-**Why it has lasted 20+ years as FA:** The concept's regime is so
-stable and well‑defined that no criterion is under structural pressure.
-This is what validation looks like for a crystallized, consensus‑level
-regime.
-
----
-
-### 7.2 — Penicillin (FA, Then Demoted, Then Restored)
-
-A case study in **validation corridor cycling**:
-
-| Phase | Year | Status | What Happened |
-|-------|------|--------|---------------|
-| 1 | 2006 | Promoted to FA | Strong article on discovery and pharmacology |
-| 2 | 2012 | Demoted to FFA | Source degradation (dead links), standard inflation (stricter citation requirements), coverage gaps (resistance mechanisms not adequately covered) |
-| 3 | 2018 | Major rewrite | New editors rebuilt sourcing, expanded coverage, updated to current pharmacological standards |
-| 4 | 2019 | Re‑promoted to FA | Passed all 10 criteria under stricter modern standards |
-
-**RTT reading:** Penicillin demonstrates the **validation corridor lifecycle**:
-- Initial validation confirmed structural integrity at 2006 standards
-- Regime decay (source degradation, coverage gaps) + corridor tightening
-  (stricter standards) caused integrity failure
-- Structural repair (rewrite, re‑sourcing) restored integrity
-- Re‑validation confirmed the repaired declaration meets current standards
-
-**Key insight:** FA status is not permanent. It is a **snapshot of
-structural integrity at validation time**. The underlying regime and the
-corridor's criteria both evolve — the article must keep up with both.
-
----
-
-## 8 — API Patterns for Validation Corridor Analysis
-
-### 8.1 — Check an Article's Quality Rating
-
-```python
-import requests
-
-def get_quality_rating(title, lang="en"):
-    """Get an article's quality rating from talk page assessments."""
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "titles": f"Talk:{title}",
-        "prop": "categories",
-        "cllimit": "max",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    page = next(iter(resp["query"]["pages"].values()))
-    categories = [c["title"] for c in page.get("categories", [])]
-
-    quality_levels = {
-        "FA-Class": "featured_article",
-        "GA-Class": "good_article",
-        "A-Class": "a_class",
-        "B-Class": "b_class",
-        "C-Class": "c_class",
-        "Start-Class": "start_class",
-        "Stub-Class": "stub"
-    }
-
-    for cat in categories:
-        for level_key, level_val in quality_levels.items():
-            if level_key in cat:
-                return {
-                    "article": title,
-                    "quality": level_val,
-                    "category": cat
-                }
-
-    return {"article": title, "quality": "unassessed"}
-```
-
-### 8.2 — Check for Featured Article Badge via Wikidata
-
-```python
-def is_featured_article(title, lang="en"):
-    """Check if an article has a Featured Article badge via Wikidata sitelinks."""
-    url = "https://www.wikidata.org/w/api.php"
-    params = {
-        "action": "wbgetentities",
-        "sites": f"{lang}wiki",
-        "titles": title,
-        "props": "sitelinks",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-
-    for entity in resp.get("entities", {}).values():
-        sitelinks = entity.get("sitelinks", {})
-        wiki_key = f"{lang}wiki"
-        if wiki_key in sitelinks:
-            badges = sitelinks[wiki_key].get("badges", [])
-            return {
-                "article": title,
-                "is_fa": "Q17437796" in badges,   # Featured Article badge
-                "is_ga": "Q17437798" in badges,   # Good Article badge
-                "badges": badges
-            }
-
-    return {"article": title, "is_fa": False, "is_ga": False, "badges": []}
-```
-
-### 8.3 — List Featured Articles in a Domain
-
-```python
-def list_featured_articles(category, lang="en", limit=50):
-    """List Featured Articles within a category (domain)."""
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "list": "categorymembers",
-        "cmtitle": f"Category:Featured articles about {category}",
-        "cmtype": "page",
-        "cmlimit": str(limit),
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    return [m["title"] for m in resp.get("query", {}).get("categorymembers", [])]
-```
-
-### 8.4 — Compute Domain Validation Profile
-
-```python
-def domain_validation_profile(domain_articles):
-    """
-    Compute the validation corridor profile for a set of
-    articles representing a knowledge domain.
-    """
-    profile = {
-        "total": len(domain_articles),
-        "featured": 0,
-        "good": 0,
-        "b_class": 0,
-        "start": 0,
-        "stub": 0,
-        "unassessed": 0
-    }
-
-    quality_map = {
-        "featured_article": "featured",
-        "good_article": "good",
-        "a_class": "b_class",  # A-class is rare, group with B
-        "b_class": "b_class",
-        "c_class": "start",    # C-class grouped with Start
-        "start_class": "start",
-        "stub": "stub",
-        "unassessed": "unassessed"
-    }
-
-    for title in domain_articles:
-        try:
-            rating = get_quality_rating(title)
-            quality = rating.get("quality", "unassessed")
-            bucket = quality_map.get(quality, "unassessed")
-            profile[bucket] += 1
-        except Exception:
-            profile["unassessed"] += 1
-
-    # Compute validation ratio
-    total = profile["total"]
-    if total > 0:
-        profile["fa_ratio"] = round(profile["featured"] / total, 4)
-        profile["validated_ratio"] = round(
-            (profile["featured"] + profile["good"]) / total, 4)
-        profile["maturity_score"] = round(
-            (profile["featured"] * 6 +
-             profile["good"] * 4 +
-             profile["b_class"] * 3 +
-             profile["start"] * 1 +
-             profile["stub"] * 0) / max(total, 1), 2)
-
-    return profile
-```
-
----
-
-## 9 — The Validation Corridor as Research Instrument
-
-### 9.1 — Structural Completeness Benchmarking
-
-FA articles serve as **structural benchmarks** for their domains:
-
-**Method:**
-1. Identify the FA articles in a domain (use Section 8.3)
-2. Analyze their common structural features — section structure, source
-   count, word count, image count, citation density
-3. Use these features as the domain's **structural completeness template**
-4. Compare any non‑FA article to this template to identify specific
-   structural gaps
-
-### 9.2 — Validation Corridor Difficulty Analysis
-
-**Method:**
-1. Collect FA nomination archives for a domain
-2. Classify reviewer objections by criterion (sourcing, prose, comprehensiveness, NPOV, stability)
-3. The most common objection type = the domain's **structural bottleneck** —
-   the criterion that is hardest to satisfy for articles in this domain
-
-### 9.3 — Temporal Validation Standards
-
-**Method:**
-1. Compare FA articles promoted in 2005 vs. 2015 vs. 2025
-2. What changed in the criteria's interpretation over time?
-3. Which dimensions became stricter? Which became more flexible?
-4. This reveals the **evolution of the community's structural integrity
-   expectations** — how the validation corridor itself changes over time
-
-### 9.4 — Cross‑Language Validation Comparison
-
-**Method:**
-1. Find the same concept's article in multiple language Wikipedias
-2. Check its quality rating in each (FA, GA, B, Start, Stub)
-3. An article that is FA in English but Stub in another language reveals
-   a **structural investment gap** — the community's structural attention
-   is concentrated in English
-
----
-
-## 10 — Cross‑Reference to Other Module Files
-
-| File | How the Validation Corridor Connects |
-|------|-------------------------------------|
-| `NPOV_As_Coherence_Operator.md` | FA criterion 4 (Neutral) requires NPOV compliance — articles with high NPOV stress (Level 4–5) struggle to pass validation |
-| `Revision_History_Regime_Analysis.md` | FA criterion 5 (Stable) maps directly to regime phase classification — articles in Negotiation or Perturbation phase cannot pass |
-| `Talk_Page_Coherence_Surface.md` | FA reviewers examine talk page health — articles with chronic unresolved disputes rarely pass |
-| `Edit_War_Regime_Transition_Detection.md` | Active or recent edit wars are blocking for FA — they signal regime instability |
-| `Category_Taxonomy_Regime_Hierarchy.md` | FA articles establish the structural completeness template for their category neighborhood |
-| `Wikidata_Ingestion_Format.md` | FA badge (Q17437796) is a Wikidata property — queryable via SPARQL for programmatic FA identification |
-| `Cross_Domain_Meta_Operators.md` | Operator 7 (Featured Article as Validation Corridor) is derived directly from this file |
-| `Wikipedia_RTT_Structural_Mapping.md` | FA/GA process is mapped in Section 2.5 as "validation corridor" at R2–R3 level |
-
----
-
-## 11 — Student Exercises
-
-### Exercise 1 — Quality Scale Assessment (15 minutes)
-
-1. Pick 5 Wikipedia articles on related topics within a single domain
-2. Check each article's quality rating (look at the talk page for WikiProject assessment banners)
-3. Arrange them on the quality scale: Stub → Start → C → B → GA → FA
-4. For the lowest‑rated article, identify which FA criterion it most clearly fails
-5. Write one sentence: *"[Article] is rated [level] because it fails criterion [N] — specifically, [evidence]."*
-
-### Exercise 2 — FA Review Archaeology (25 minutes)
-
-1. Go to `Wikipedia:Featured article candidates` and find a **recently completed** review (either promoted or not promoted)
-2. Read the review comments from at least 3 reviewers
-3. For each reviewer, identify which FA criteria they tested and what structural issues they found
-4. Answer: *"The most common objection was about criterion [N]. The article [was/was not] promoted because [reason]. The structural bottleneck was [specific issue]."*
-
-### Exercise 3 — FA vs. Non‑FA Structural Comparison (30 minutes)
-
-1. Pick a domain (e.g., Biology, History, Physics)
-2. Find one FA article and one Start/Stub article in the same domain
-3. Compare: word count, reference count, section count, image count, talk page size
-4. Compute the structural gap: how many more sources, sections, and words does the FA have?
-5. Write two sentences: *"The FA has [N]× more sources and [M]× more sections than the Stub. The primary structural gap is [specific dimension — sourcing, comprehensiveness, or prose quality]."*
-
-### Exercise 4 — Former Featured Article Analysis (20 minutes)
-
-1. Browse `Category:Former featured articles` and pick one that interests you
-2. Find the FA Review (FAR) discussion that led to its demotion
-3. Identify: Why was it demoted? Which criteria did it fail? What changed?
-4. Classify the demotion reason as: source degradation, standard inflation, content drift, comprehensiveness gap, or NPOV shift
-5. Write one sentence: *"[Article] was demoted from FA because [reason], which maps to [RTT regime concept]."*
-
-### Exercise 5 — Domain Validation Profile (30 minutes)
-
-1. Pick a knowledge domain
-2. Find 10 articles in that domain across different quality levels
-3. Count: how many are FA? GA? B? Start? Stub?
-4. Compute the domain's validation ratio: (FA + GA) / total
-5. Compare to another domain: which has a higher validation ratio? Why?
-6. Answer: *"[Domain A] has a validation ratio of [X], while [Domain B] has [Y]. Domain A produces more validated articles because [structural reason]."*
-
----
-
-*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
-# NPOV As Coherence Operator
-
-> **Purpose:** Reframe Wikipedia's Neutral Point of View (NPOV) policy from
-> an editorial guideline into what it structurally is — an **R0 coherence
-> operator** that constrains every regime declaration on Wikipedia. NPOV is
-> not a suggestion. It is the foundational structural invariant that makes
-> Wikipedia possible as a multi‑regime knowledge system.
->
-> Without NPOV, Wikipedia would fragment into competing regime declarations
-> with no mechanism for coexistence. NPOV is the operator that forces
-> 6.9 million articles — written by millions of editors with radically
-> different worldviews — into a single coherent knowledge substrate.
->
-> This file shows students how to recognize NPOV as structural physics,
-> not editorial policy.
-
----
-
-## 1 — What Is NPOV?
-
-### 1.1 — The Policy Statement
-
-Wikipedia's NPOV policy (WP:NPOV) states:
-
-> *"All encyclopedic content on Wikipedia must be written from a neutral
-> point of view, representing fairly, proportionately, and, as far as
-> possible, without editorial bias, all the significant views that have
-> been published by reliable sources on a topic."*
-
-### 1.2 — The RTT Translation
-
-In RTT terms, NPOV is a **coherence operator at R0** — the deepest
-regime level. It constrains what structural claims can be made and how
-competing claims must coexist:
-
-| NPOV Principle | RTT Translation |
-|---------------|-----------------|
-| "Neutral point of view" | **No article may declare one regime as structurally superior to another** — all must coexist within the same frame |
-| "Representing fairly" | **Competing regime declarations must be given structural presence** proportional to their standing in reliable sources |
-| "Proportionately" | **Regime weight must reflect external consensus** — not editor preference, not popularity, not truth claims |
-| "Without editorial bias" | **The article itself is not a regime agent** — it declares regimes, it does not advocate for them |
-| "All significant views" | **All regimes with sufficient structural standing** (as verified by reliable sources) must be represented |
-
-### 1.3 — Why NPOV Is an Operator, Not a Rule
-
-A **rule** tells you what to do. An **operator** transforms inputs into
-outputs according to a structural constraint.
-
-NPOV is an operator because it:
-
-1. **Receives** competing regime claims from editors with different worldviews
-2. **Constrains** how those claims can be expressed (proportionality, neutrality, source verification)
-3. **Produces** a single article that represents multiple regimes simultaneously
-4. **Applies uniformly** to every article on Wikipedia, regardless of topic or domain
-
-This is not editorial judgment — it is **structural transformation**. NPOV
-takes N conflicting regime declarations and produces 1 coherent article.
-That is an operator.
-
----
-
-## 2 — The Five Sub‑Operators of NPOV
-
-NPOV is not a single monolithic rule. It decomposes into **five sub‑operators**,
-each enforcing a different coherence constraint:
-
-### Sub‑Operator 1: Proportionality (WP:WEIGHT)
-
-**What it does:** Determines how much space each viewpoint receives in an
-article, based on its prominence in reliable sources.
-
-**Coherence function:** Prevents **regime amplification** — no viewpoint
-gets more structural presence than its external standing warrants.
-
-| Scenario | WEIGHT Application | RTT Reading |
-|----------|-------------------|-------------|
-| 99% of scientists agree on X, 1% disagree | X gets dominant treatment; dissent gets brief mention | Majority regime → primary declaration; minority regime → acknowledged but bounded |
-| Two competing schools of thought, roughly equal in scholarship | Both get substantial, balanced treatment | Two regimes with equal structural standing → parallel declarations |
-| Fringe theory with minimal academic support | Brief mention in appropriate context, or not included at all | Insufficient structural standing → regime excluded or minimally declared |
-
-**Key insight:** WEIGHT is the most contested sub‑operator. Disputes about
-proportionality are disputes about **regime standing** — how much structural
-space each competing claim deserves.
-
----
-
-### Sub‑Operator 2: No Original Research (WP:NOR)
-
-**What it does:** Prohibits editors from introducing claims not supported by
-published reliable sources.
-
-**Coherence function:** Prevents **regime fabrication** — Wikipedia declares
-existing regimes, it does not create new ones.
-
-| NOR Principle | RTT Reading |
-|--------------|-------------|
-| "Wikipedia does not publish original thought" | Wikipedia is a **regime mirror**, not a regime generator |
-| "All material must be attributable to a reliable source" | Every structural claim must have **external regime provenance** |
-| "Synthesis of published material to reach a novel conclusion is original research" | Combining existing regime claims to create a **new regime claim** is prohibited |
-
-**Key insight:** NOR ensures Wikipedia remains a **second‑order regime system** —
-it declares and organizes regimes that originate elsewhere. Without NOR,
-Wikipedia would become a first‑order regime generator, and its coherence
-would collapse because there would be no external validation constraint.
-
----
-
-### Sub‑Operator 3: Verifiability (WP:V)
-
-**What it does:** Requires that all claims in Wikipedia articles can be
-verified against published reliable sources.
-
-**Coherence function:** Provides the **validation mechanism** for regime
-claims — the structural test that separates includable claims from
-excludable ones.
-
-| Verifiability Principle | RTT Reading |
-|------------------------|-------------|
-| "Verifiability, not truth" | Wikipedia doesn't evaluate whether a regime claim is **true** — only whether it has **structural standing** (published in reliable sources) |
-| "The threshold for inclusion is verifiability" | **Regime standing** is determined by publishability, not by correctness |
-| "Exceptional claims require exceptional sources" | Claims that challenge established regimes face a **higher structural standing threshold** |
-
-**Key insight:** "Verifiability, not truth" is perhaps the most
-structurally profound principle on Wikipedia. It means NPOV operates
-on **regime standing**, not on **regime validity**. A claim can be
-included if it has sufficient standing — even if it is contested.
-A claim can be excluded if it lacks standing — even if it might be true.
-This is what makes NPOV a **structural operator** rather than an
-epistemic one.
-
----
-
-### Sub‑Operator 4: Reliable Sources (WP:RS)
-
-**What it does:** Defines which external sources count as structurally
-valid for citation.
-
-**Coherence function:** Establishes the **source regime boundary** —
-the line between accepted and rejected external authority.
-
-| Source Type | Structural Standing | Regime Reading |
-|------------|-------------------|----------------|
-| Peer‑reviewed academic journals | Highest | Gold‑standard external regime authority |
-| Major news outlets (Reuters, AP, BBC) | High | Established journalistic regime |
-| Government reports and official publications | High | Institutional regime authority |
-| Books by reputable publishers | Moderate–High | Editorial‑gate regime |
-| Self‑published sources | Low | Unvetted regime — generally excluded |
-| Social media, blogs, forums | Very low | Ungoverned regime — almost always excluded |
-| Primary sources | Contextual | Direct regime evidence — usable for facts, not for interpretation |
-
-**Key insight:** RS is NPOV's **external calibration mechanism**. It
-answers the question: "Which regimes outside Wikipedia do we recognize
-as structurally valid?" Without RS, NPOV would have no way to determine
-proportionality — there would be no external reference for regime standing.
-
----
-
-### Sub‑Operator 5: Fringe Theories (WP:FRINGE)
-
-**What it does:** Defines how to handle claims that fall outside
-mainstream academic or scientific consensus.
-
-**Coherence function:** Prevents **regime contamination** — fringe
-claims cannot structurally invade mainstream regime declarations.
-
-| FRINGE Principle | RTT Reading |
-|-----------------|-------------|
-| "Fringe theories should be described in proportion to their prominence" | **Sub‑regime containment** — fringe claims get their own bounded context, not equal footing |
-| "Wikipedia should not present fringe theories as though they are equally valid" | **Regime standing hierarchy** — mainstream consensus has primary structural position |
-| "Fringe theories that are supported by clear evidence may eventually be accepted" | **Regime mobility** — a claim can move from fringe to mainstream if its structural standing increases |
-| "Parity of sources is not required" | **Asymmetric regime standing** — not all regime claims are structurally equal |
-
-**Key insight:** FRINGE is where NPOV's structural nature is most visible.
-The question is never "is this claim true?" — it is "does this claim have
-sufficient structural standing to be included, and if so, how much space
-does it get?" This is pure regime topology.
-
----
-
-## 3 — NPOV Stress Spectrum
-
-Not all articles experience the same NPOV pressure. The **NPOV stress
-spectrum** classifies articles by the intensity of coherence challenge
-they face:
-
-### 3.1 — The Five Stress Levels
-
-| Level | Label | NPOV Challenge | Typical Articles | Coherence Difficulty |
-|-------|-------|---------------|------------------|---------------------|
-| **1** | **Consensus** | No competing viewpoints — single regime | Mathematical theorems, chemical elements, astronomical objects | Very low — NPOV is trivially satisfied |
-| **2** | **Nuanced** | Minor competing perspectives within a broad consensus | Most science articles, established historical events | Low — NPOV requires fair representation of nuances |
-| **3** | **Contested** | Significant competing viewpoints with asymmetric standing | Alternative medicine, economic policy, psychological theories | Moderate — NPOV requires careful proportionality |
-| **4** | **Polarized** | Two or more major camps with roughly equal standing | Political topics, religious controversies, territorial disputes | High — NPOV must maintain balance between hostile camps |
-| **5** | **Irreconcilable** | Fundamental worldview conflicts where framing itself is disputed | Israel–Palestine, Abortion, Consciousness, Kashmir | Maximum — NPOV is under continuous structural assault |
-
-### 3.2 — Stress Level Distribution by Domain
-
-| Domain | Dominant Stress Level | Rationale |
-|--------|----------------------|-----------|
-| Physics | 1–2 | Strong consensus; few worldview conflicts |
-| Mathematics | 1 | Near‑universal agreement on formal results |
-| Biology | 2–3 | Consensus on evolution; contested areas in ecology, taxonomy |
-| Chemistry | 1–2 | Strong consensus; minor disputes on nomenclature |
-| Computer Science | 2–3 | Technical consensus; contested on AI ethics, software patents |
-| Philosophy | 3–4 | Multiple schools with competing foundational claims |
-| Earth Sciences | 2–3 | Consensus on plate tectonics; climate change contested politically (not scientifically) |
-| Economics | 3–4 | Multiple competing schools (Keynesian, Austrian, MMT, etc.) |
-| History | 3–5 | Consensus on facts; deeply contested on framing, significance, causation |
-| Medicine | 2–4 | Strong evidence base; contested on alternative medicine, public health policy |
-| Engineering | 1–2 | Technical consensus; minor disputes on standards and best practices |
-| Astronomy | 1–2 | Strong consensus; minor classification disputes |
-| Linguistics | 2–3 | Descriptive consensus; contested on language vs. dialect, linguistic relativity |
-| Psychology | 2–4 | Evidence‑based core; contested on nature vs. nurture, classification of disorders |
-| Political Science | 4–5 | Inherently perspectival; nearly all major topics are politically contested |
-
----
-
-## 4 — NPOV Failure Modes
-
-When NPOV fails — when the coherence operator breaks down — the result
-is one of four structural failure modes:
-
-### Failure Mode 1: Regime Capture
-
-**What happens:** One editorial faction gains control of an article and
-suppresses competing viewpoints. The article stops being a neutral regime
-declaration and becomes an **advocacy document** for one regime.
-
-**How to detect:**
-- Talk page dominated by a small group reverting alternative perspectives
-- Edit summaries repeatedly citing WP:WEIGHT to exclude minority views
-- Article framing consistently favors one perspective
-- WikiProject banner from only one domain, despite cross‑domain topic
-
-**RTT reading:** The coherence operator has been **overridden by a single
-regime agent**. The article no longer represents the regime landscape — it
-represents one regime's claim to dominance.
-
----
-
-### Failure Mode 2: False Balance
-
-**What happens:** An article gives equal structural weight to viewpoints
-with radically unequal standing. A fringe theory gets the same space as
-mainstream consensus.
-
-**How to detect:**
-- "On the other hand…" constructions giving equal weight to
-  mainstream and fringe positions
-- Equal word counts for consensus and dissent sections
-- Absence of WP:WEIGHT-aware framing ("the scientific consensus is…"
-  vs. "some scientists believe…")
-
-**RTT reading:** The coherence operator has been **miscalibrated** — it
-is treating unequal regime standings as equal. This distorts the structural
-landscape by inflating fringe regime presence.
-
----
-
-### Failure Mode 3: Neutrality Paralysis
-
-**What happens:** Editors become so cautious about NPOV violations that
-the article fails to make clear, direct statements. Every claim is
-hedged with "some argue," "it has been suggested," "according to some."
-
-**How to detect:**
-- Excessive use of weasel words and attribution phrases
-- Cleanup tags like `{{weasel}}` or `{{who}}`
-- Article reads as equivocal even on well‑established facts
-
-**RTT reading:** The coherence operator has become **over‑constrained** —
-its structural requirements are being applied so conservatively that the
-article loses its capacity to declare anything clearly. The regime
-declaration dissolves into noise.
-
----
-
-### Failure Mode 4: Structural Fragmentation
-
-**What happens:** An article on a contested topic fragments into
-disconnected sections, each written by a different editorial faction.
-There is no coherent narrative — just juxtaposed regime declarations
-that don't interact.
-
-**How to detect:**
-- Abrupt tonal shifts between sections
-- Sections that seem to exist in different articles
-- No connective tissue between competing perspective sections
-- Article feels like a collection of essays rather than an encyclopedia entry
-
-**RTT reading:** The coherence operator has **partially failed** — it
-succeeded in preventing any single regime from capturing the article,
-but it failed to produce a unified structural frame. The result is
-**incoherent coexistence** rather than coherent integration.
-
----
-
-## 5 — NPOV as Structural Physics
-
-### 5.1 — The Conservation Analogy
-
-In physics, conservation laws are structural invariants — energy,
-momentum, charge are conserved regardless of what happens in a system.
-NPOV functions as a **conservation law for structural representation**:
-
-| Physics | Wikipedia |
-|---------|-----------|
-| Energy is conserved | **Representational balance is conserved** — you cannot add weight to one viewpoint without proportionally adjusting others |
-| Momentum is conserved | **Regime standing is conserved** — you cannot inflate a claim's standing beyond what reliable sources support |
-| Charge is conserved | **Source validity is conserved** — you cannot create citation authority from nothing (NOR) |
-
-### 5.2 — The Constraint Equation
-
-NPOV can be expressed as a structural constraint on any article A:
-
-```
-For article A covering topic T:
-
-  ∑(weight_i × viewpoint_i) = representation(T)
-
-  Subject to:
-    weight_i ∝ standing_i (proportionality — WP:WEIGHT)
-    standing_i ∈ reliable_sources (verifiability — WP:V)
-    viewpoint_i ≠ novel_synthesis (originality constraint — WP:NOR)
-    ∑(weight_i) = 1 (total representation is normalized)
-    weight_fringe ≤ ε (fringe containment — WP:FRINGE)
-```
-
-**RTT reading:** NPOV is a **normalized, source‑calibrated, novelty‑bounded
-representation constraint**. It operates on the space of all possible
-regime declarations and produces the unique declaration that satisfies
-all five sub‑operators simultaneously.
-
-### 5.3 — Why NPOV Works (Structurally)
-
-NPOV works because it solves a **coordination problem** that no other
-knowledge system has solved at Wikipedia's scale:
-
-| Problem | NPOV Solution |
-|---------|--------------|
-| Millions of editors with different worldviews | NPOV forces all editors into the same structural constraint — personal views are irrelevant |
-| Competing claims about what is true | NPOV substitutes **standing** for **truth** — verifiability replaces correctness |
-| Risk of mob rule (majority suppresses minority) | WEIGHT requires proportional representation — minorities with standing are protected |
-| Risk of fringe capture (minority hijacks article) | FRINGE bounds fringe representation — standing requirements prevent capture |
-| No central editorial authority | NPOV IS the authority — it is a structural constraint, not a person |
-
----
-
-## 6 — Detecting NPOV Stress in Articles
-
-### 6.1 — Textual Indicators
-
-| Indicator | What to Search For | Stress Signal |
-|-----------|-------------------|---------------|
-| Attribution phrases | "according to," "some argue," "critics say," "proponents claim" | Moderate — article is managing competing viewpoints |
-| Hedging language | "may," "might," "could be," "it has been suggested" | Moderate to high — article is avoiding strong claims |
-| Cleanup templates | `{{POV}}`, `{{NPOV}}`, `{{unbalanced}}`, `{{disputed}}` | High — community has flagged a coherence failure |
-| Framing asymmetry | One perspective uses confident language, another uses hedged language | High — implicit regime weighting through tone |
-| Section imbalance | One perspective gets 5 paragraphs, another gets 1 | Moderate — possible WEIGHT miscalibration |
-
-### 6.2 — API‑Based NPOV Stress Detection
-
-```python
-import requests
-import re
-
-def detect_npov_stress(title, lang="en"):
-    """Detect NPOV stress indicators in a Wikipedia article."""
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "parse",
-        "page": title,
-        "prop": "wikitext|templates",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-
-    wikitext = resp.get("parse", {}).get("wikitext", {}).get("*", "")
-    templates = [t["*"] for t in resp.get("parse", {}).get("templates", [])]
-
-    # Textual stress indicators
-    attribution = len(re.findall(
-        r'according to|some argue|critics say|proponents claim|'
-        r'supporters argue|opponents argue|it is argued',
-        wikitext, re.IGNORECASE))
-
-    hedging = len(re.findall(
-        r'\bmay\b|\bmight\b|could be|has been suggested|'
-        r'it is possible|some believe|allegedly',
-        wikitext, re.IGNORECASE))
-
-    # Template stress indicators
-    npov_templates = [t for t in templates if any(kw in t.lower()
-        for kw in ["pov", "npov", "unbalanced", "disputed",
-                    "contradict", "bias", "one-sided"])]
-
-    # Compute stress score
-    word_count = len(wikitext.split())
-    attribution_density = attribution / max(word_count / 1000, 1)
-    hedging_density = hedging / max(word_count / 1000, 1)
-
-    stress_score = (
-        attribution_density * 3 +
-        hedging_density * 2 +
-        len(npov_templates) * 10
-    )
-
-    # Classify stress level
-    if stress_score < 2:
-        level = "1_consensus"
-    elif stress_score < 5:
-        level = "2_nuanced"
-    elif stress_score < 10:
-        level = "3_contested"
-    elif stress_score < 20:
-        level = "4_polarized"
-    else:
-        level = "5_irreconcilable"
-
-    return {
-        "article": title,
-        "word_count": word_count,
-        "attribution_count": attribution,
-        "hedging_count": hedging,
-        "npov_templates": npov_templates,
-        "attribution_density": round(attribution_density, 2),
-        "hedging_density": round(hedging_density, 2),
-        "stress_score": round(stress_score, 2),
-        "stress_level": level
-    }
-```
-
-### 6.3 — Batch Domain Stress Profiling
-
-```python
-def domain_stress_profile(articles):
-    """
-    Compute NPOV stress profiles for a list of articles
-    representing a knowledge domain.
-    """
-    results = []
-    for title in articles:
-        try:
-            stress = detect_npov_stress(title)
-            results.append(stress)
-        except Exception as e:
-            results.append({"article": title, "error": str(e)})
-
-    # Aggregate domain statistics
-    scores = [r["stress_score"] for r in results if "stress_score" in r]
-    if scores:
-        import statistics
-        return {
-            "articles_analyzed": len(scores),
-            "mean_stress": round(statistics.mean(scores), 2),
-            "median_stress": round(statistics.median(scores), 2),
-            "max_stress": round(max(scores), 2),
-            "min_stress": round(min(scores), 2),
-            "dominant_level": max(
-                set(r["stress_level"] for r in results if "stress_level" in r),
-                key=lambda x: sum(1 for r in results
-                                  if r.get("stress_level") == x)
-            ),
-            "detail": results
-        }
-    return {"error": "No articles analyzed successfully"}
-```
-
----
-
-## 7 — Worked Examples
-
-### 7.1 — Homeopathy (Stress Level 4: Polarized)
-
-The Homeopathy article is a textbook case of NPOV under sustained stress:
-
-| NPOV Sub‑Operator | How It Manifests |
-|-------------------|-----------------|
-| **WEIGHT** | Scientific consensus (homeopathy is not effective beyond placebo) gets dominant treatment; proponent claims get bounded secondary treatment |
-| **NOR** | Editors cannot introduce novel arguments for or against — only claims from published sources |
-| **V** | Every claim about effectiveness must cite peer‑reviewed sources; proponent claims must cite published proponent literature |
-| **RS** | Systematic reviews and meta‑analyses outweigh individual studies; proponent websites are not reliable sources |
-| **FRINGE** | Homeopathy is treated as a fringe medical theory — its claims get proportional (limited) treatment |
-
-**Talk page signal:** 30+ archives. Recurring disputes about whether the
-article is "too negative" toward homeopathy. FAQ section with crystallized
-positions on common complaints.
-
-**RTT reading:** NPOV succeeds here by maintaining a **two‑tier regime
-structure** — mainstream medical consensus as the primary regime declaration,
-with homeopathic claims as a bounded secondary regime. The article does not
-say homeopathy is wrong — it says the scientific consensus considers it
-ineffective. That distinction is pure NPOV as coherence operator.
-
----
-
-### 7.2 — Climate Change (Stress Level 3–4: Contested to Polarized)
-
-| NPOV Dimension | Current State |
-|---------------|--------------|
-| **Scientific content** | Stress Level 2 (Nuanced) — strong scientific consensus, minor technical nuances |
-| **Political content** | Stress Level 4 (Polarized) — political responses to climate change are deeply contested |
-| **Historical content** | Stress Level 2 (Nuanced) — timeline of research is well‑established |
-
-**Key structural insight:** The same article contains **sections at different
-NPOV stress levels**. The scientific sections are near‑consensus; the
-policy and politics sections are polarized. NPOV must operate at different
-intensities within the same article.
-
-**Talk page signal:** 50+ archives. Most disputes are about the political
-framing, not the scientific content. FAQ addresses "why doesn't the article
-present climate skepticism equally?"
-
-**RTT reading:** Climate change demonstrates that **NPOV stress is not
-uniform within an article**. The coherence operator must adapt its
-constraint intensity section by section, applying strict proportionality
-to the political content while allowing more direct statement in the
-scientific content.
-
----
-
-### 7.3 — Oxygen (Stress Level 1: Consensus)
-
-| NPOV Dimension | State |
-|---------------|-------|
-| Chemical properties | Consensus — undisputed |
-| Discovery history | Consensus — minor attribution nuances |
-| Biological role | Consensus — well‑established |
-| Industrial uses | Consensus — factual enumeration |
-
-**Talk page signal:** 5 archives over 20 years. Mostly formatting and
-factual corrections. No framing disputes. No NPOV challenges.
-
-**RTT reading:** NPOV at Stress Level 1 is **invisible** — it operates
-effortlessly because there are no competing regime claims. The article
-declares a single, uncontested regime. This is NPOV's ground state —
-minimum coherence effort required.
-
----
-
-## 8 — NPOV Across Cultures
-
-### 8.1 — Cross‑Language NPOV Variance
-
-Every language Wikipedia adopts NPOV, but its **application varies by
-cultural context**:
-
-| Dimension | How It Varies |
-|-----------|--------------|
-| What counts as "neutral" | Culturally influenced — neutrality in English Wikipedia is not identical to neutrality in Arabic or Chinese Wikipedia |
-| What counts as "reliable sources" | Some sources are reliable in one culture and not in another (e.g., state media) |
-| What counts as "fringe" | Mainstream in one culture may be fringe in another (e.g., traditional medicine) |
-| What counts as "proportional" | National perspectives may get more weight on the national‑language Wikipedia |
-
-### 8.2 — Structural Implications
-
-| Scenario | NPOV Consequence | RTT Reading |
-|----------|-----------------|-------------|
-| Same article, different cultural NPOV calibration | Different language editions produce **different regime declarations** for the same concept | NPOV is a **culturally parameterized** coherence operator — same structural function, different calibration |
-| State influence on "reliable sources" | Some language editions may have constrained source landscapes | NPOV's external calibration (RS) is only as independent as its source environment |
-| National perspective amplification | Articles on national topics may give disproportionate weight to the national viewpoint | NPOV's proportionality sub‑operator is influenced by the editor population's composition |
-
-**Key insight:** NPOV is a **universal structural operator with cultural
-parameters**. The operator itself is invariant — every Wikipedia applies
-it. But the inputs (what sources are reliable, what views are mainstream,
-what framing is neutral) are culturally conditioned. This makes cross‑language
-comparison a powerful tool for **revealing the cultural parameters of
-coherence**.
-
----
-
-## 9 — Cross‑Reference to Other Module Files
-
-| File | How NPOV Connects |
-|------|------------------|
-| `Talk_Page_Coherence_Surface.md` | NPOV disputes are the most structurally significant talk page pattern — Pattern 4 (Neutrality Challenge) maps directly to this file |
-| `Edit_War_Regime_Transition_Detection.md` | Many edit wars are NPOV disputes that failed to resolve on the talk page — edit wars are NPOV's enforcement failure mode |
-| `Featured_Article_Validation_Corridor.md` | FA review criteria include NPOV compliance — articles must demonstrate coherence operator satisfaction to pass |
-| `Revision_History_Regime_Analysis.md` | NPOV disputes are visible in edit summaries containing "POV," "bias," "neutral" — searchable in revision data |
-| `Category_Taxonomy_Regime_Hierarchy.md` | Category assignment can be an NPOV issue — placing an article in a politically loaded category is itself a framing decision |
-| `Cross_Domain_Meta_Operators.md` | Operator 6 (NPOV Tension as Coherence Stress Test) is derived from the stress spectrum in Section 3 of this file |
-| `Wikipedia_RTT_Structural_Mapping.md` | NPOV is mapped as the foundational R0 coherence operator in Section 2.3 |
-| All 15 domain directories | Every domain's `regime_alignment.md` references the domain's typical NPOV stress level from Section 3.2 |
-
----
-
-## 10 — Student Exercises
-
-### Exercise 1 — Stress Level Classification (15 minutes)
-
-1. Pick 3 Wikipedia articles — one you expect to be uncontested, one moderately contested, and one highly contested
-2. For each, check: does it have any NPOV‑related cleanup templates? How many attribution phrases ("according to," "some argue") appear in the lead? How large is the talk page?
-3. Classify each article's stress level (1–5) using the spectrum from Section 3
-4. Write one sentence per article: *"[Article] is at NPOV Stress Level [N] because [evidence]."*
-
-### Exercise 2 — Sub‑Operator Identification (20 minutes)
-
-1. Pick a contested article (Stress Level 3+)
-2. Find one passage in the article that demonstrates each of the 5 sub‑operators:
-   - A sentence showing WEIGHT (proportional representation)
-   - A sentence that avoids NOR (cites external source rather than making original claim)
-   - A citation demonstrating V (verifiable claim)
-   - A source that qualifies as RS (reliable source)
-   - A passage applying FRINGE (bounded treatment of minority view)
-3. For each, write one sentence explaining how the sub‑operator is visible
-
-### Exercise 3 — Failure Mode Detection (25 minutes)
-
-1. Find an article with an active `{{POV}}` or `{{NPOV}}` cleanup template (search Category:NPOV disputes)
-2. Read the article and the associated talk page discussion
-3. Classify the failure mode (Regime Capture, False Balance, Neutrality Paralysis, or Structural Fragmentation) using Section 4
-4. Write two sentences: *"This article exhibits [failure mode] because [evidence]. The coherence operator has failed at the [sub‑operator] level because [reason]."*
-
-### Exercise 4 — Cross‑Language NPOV Comparison (30 minutes)
-
-1. Pick a topic you expect to have cultural NPOV variance (try: a territorial dispute, a religious figure, a historical conflict, or a politically loaded term)
-2. Read the article in English + 2 other languages (use translation tools if needed)
-3. Compare: Does the framing differ? Do different language editions emphasize different viewpoints? Is the proportionality calibrated differently?
-4. Answer: *"NPOV is calibrated differently across these editions because [reason]. The English edition frames the topic as [X], while the [other language] edition frames it as [Y]. This reveals that NPOV's 'neutrality' is structurally influenced by [cultural factor]."*
-
----
-
-*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
-## 📘 **Wikipedia Awareness Module**
+## 📘 **Wikipedia Awareness Module**
 
 - [`wikipedia_module.json`](wikipedia_module.json) — Agentic module schema role assignments
 
@@ -3149,1905 +228,6 @@ Pick any Wikipedia article you've read recently and answer:
 *This module is part of the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
 *License: Open educational use permitted.*
 
-# Revision History Regime Analysis
-
-> **Purpose:** Define how to read Wikipedia's revision history as **temporal
-> regime data** — the structural evolution of knowledge over time. No other
-> major knowledge source exposes this surface publicly. Every Wikipedia article
-> carries a complete, timestamped, author‑attributed record of every structural
-> change since its creation — often spanning 20+ years.
->
-> This file teaches students, researchers, and AIs to extract regime stability
-> signals, identify regime transitions, and build temporal regime profiles
-> from raw revision data.
-
----
-
-## 1 — What Is a Revision History?
-
-Every Wikipedia article stores a **complete, immutable log** of every edit
-ever made to it. Each revision record contains:
-
-| Field | Content | RTT Mapping |
-|-------|---------|-------------|
-| Revision ID | Unique integer | Regime event identifier |
-| Timestamp | UTC datetime | Regime event time coordinate |
-| User | Editor username or IP | Regime agent |
-| Size (bytes) | Article size after this edit | Regime mass at time t |
-| Size delta (bytes) | Change from previous revision | Regime growth/contraction signal |
-| Edit summary | Editor's description of the change | Micro‑regime annotation |
-| Tags | System‑applied labels (reverted, mobile edit, visual edit, etc.) | Regime event classification |
-| Parent revision | Previous revision ID | Temporal chain link |
-
-### How to Access Revision History
-
-| Method | URL Pattern | Best For |
-|--------|------------|----------|
-| Web UI | `https://en.wikipedia.org/w/index.php?title=ARTICLE&action=history` | Manual inspection |
-| API (recent) | `https://en.wikipedia.org/w/api.php?action=query&titles=ARTICLE&prop=revisions&rvlimit=500&rvprop=ids|timestamp|user|size|comment|tags&format=json` | Programmatic access (up to 500 revisions per call) |
-| API (full) | Same as above with `rvcontinue` pagination | Complete history extraction |
-| XTools | `https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/ARTICLE` | Pre‑computed statistics and visualizations |
-| Quarry SQL | `https://quarry.wmcloud.org/` with `revision` table queries | Bulk analysis across many articles |
-
----
-
-## 2 — The Five Regime Signals in Revision History
-
-### Signal 1: Revision Count — Regime Activity Index
-
-The **total number of revisions** is the simplest and most powerful regime signal.
-
-| Revision Count | Regime Interpretation | Examples |
-|---------------|----------------------|----------|
-| < 100 | **Quiet regime** — low structural attention, possibly stable or neglected | Obscure mathematical theorems, minor geographic features |
-| 100–1,000 | **Active regime** — regular maintenance, moderate community attention | Most science articles, mid‑sized cities |
-| 1,000–10,000 | **Contested or high‑interest regime** — significant editorial attention | Major historical events, prominent public figures, scientific controversies |
-| > 10,000 | **Perpetually contested regime** — the article is a structural battleground | United States, Jesus, Muhammad, Israel, Climate change, Donald Trump |
-
-**Key insight:** Revision count does not measure **quality** — it measures
-**structural attention**. A 50,000‑revision article is not 500× better than
-a 100‑revision article. It is 500× more **structurally contested**.
-
----
-
-### Signal 2: Revision Rate — Current Regime Stability
-
-The **number of revisions per unit time** (day/week/month) reveals whether
-the regime is currently stable, active, or in crisis.
-
-| Rate Pattern | Regime Interpretation |
-|-------------|---------------------|
-| Flat near zero | **Crystallized regime** — consensus achieved, minimal maintenance |
-| Low and steady | **Stable regime** — ongoing minor updates, no structural disputes |
-| Periodic spikes | **Cyclically contested** — regime destabilizes around recurring events (elections, anniversaries, seasons) |
-| Sudden spike from baseline | **Regime perturbation** — external event triggered structural attention (news event, scientific discovery, controversy) |
-| Sustained high rate | **Regime in active negotiation** — no consensus, continuous structural competition |
-
-#### How to Compute Revision Rate
-
-```python
-# Using the MediaWiki API
-# Fetch revisions with timestamps, then compute rate
-
-import requests
-from collections import Counter
-from datetime import datetime
-
-url = "https://en.wikipedia.org/w/api.php"
-params = {
-    "action": "query",
-    "titles": "Climate_change",
-    "prop": "revisions",
-    "rvlimit": "500",
-    "rvprop": "timestamp",
-    "format": "json"
-}
-
-response = requests.get(url, params=params).json()
-pages = response["query"]["pages"]
-page = next(iter(pages.values()))
-
-# Count revisions per month
-months = Counter()
-for rev in page["revisions"]:
-    ts = datetime.fromisoformat(rev["timestamp"].replace("Z", "+00:00"))
-    months[f"{ts.year}-{ts.month:02d}"] += 1
-
-# Print monthly revision rate
-for month in sorted(months):
-    print(f"{month}: {months[month]} revisions")
-```
-
----
-
-### Signal 3: Size Delta Patterns — Regime Growth and Contraction
-
-Each revision records the article's size in bytes. The **delta** (change)
-between consecutive revisions reveals structural dynamics:
-
-| Delta Pattern | Regime Interpretation |
-|--------------|---------------------|
-| Consistent positive deltas | **Regime expansion** — community adding knowledge, building scope |
-| Large positive spike | **Major regime event** — significant new content added (new section, new data, major update) |
-| Consistent negative deltas | **Regime pruning** — community removing content, tightening scope |
-| Large negative spike | **Regime contraction event** — major content removal (vandalism revert, consensus deletion, split to sub‑article) |
-| Oscillating deltas | **Regime instability** — content being added and removed repeatedly (possible edit war) |
-| Flat (near‑zero deltas) | **Crystallized regime** — only minor formatting or typo fixes |
-
-#### Size Delta as Regime Evolution Curve
-
-When plotted over time, cumulative article size creates a **regime evolution
-curve**:
-
-```
-Size (bytes)
-    │
-    │                          ╭───── Regime maturity plateau
-    │                    ╭────╯
-    │               ╭───╯
-    │          ╭───╯        ← Rapid regime expansion
-    │     ╭───╯
-    │╭───╯
-    │╯  ← Regime birth
-    └────────────────────────────────→ Time
-
-Typical "healthy" article: sigmoid growth curve
-  - Regime birth → rapid expansion → gradual stabilization → plateau
-```
-
-**Deviations from this curve are structurally significant:**
-
-- **Sudden drops** = content removal events (investigate: vandalism? consensus? article split?)
-- **Late‑stage spikes** = regime perturbation (investigate: external event? new discovery?)
-- **Sawtooth pattern** = edit war (investigate: talk page for competing claims)
-- **No plateau** = regime never crystallized (investigate: ongoing structural disputes)
-
----
-
-### Signal 4: Revert Rate — Regime Resistance
-
-A **revert** is an edit that undoes a previous edit, restoring the article
-to an earlier state. The revert rate measures how strongly the existing regime
-**resists change**.
-
-| Revert Rate | Regime Interpretation |
-|------------|---------------------|
-| < 5% | **Open regime** — community welcomes new contributions |
-| 5–15% | **Guarded regime** — moderate quality control, some gatekeeping |
-| 15–30% | **Defended regime** — strong editorial consensus, new contributions frequently challenged |
-| > 30% | **Fortress regime** — heavily protected, approaching or under active edit restriction |
-
-#### Revert Detection
-
-Reverts can be identified by:
-
-1. **Exact size match** — revision returns article to exact byte count of a prior revision
-2. **Edit summary markers** — summaries containing "revert," "rv," "undo," "rollback"
-3. **System tags** — `mw-revert`, `mw-undo`, `mw-rollback`, `mw-manual-revert`
-4. **SHA‑1 match** — revision content hash matches a prior revision's hash (definitive)
-
-```sparql
-# Quarry SQL: Count reverts for an article
-SELECT
-  COUNT(*) AS total_revisions,
-  SUM(CASE WHEN ct_tag_id IN (
-    SELECT ctd_id FROM change_tag_def
-    WHERE ctd_name IN ('mw-revert', 'mw-undo', 'mw-rollback')
-  ) THEN 1 ELSE 0 END) AS reverts
-FROM revision
-JOIN change_tag ON ct_rev_id = rev_id
-WHERE rev_page = (
-  SELECT page_id FROM page
-  WHERE page_title = 'ARTICLE_TITLE'
-  AND page_namespace = 0
-)
-```
-
----
-
-### Signal 5: Editor Distribution — Regime Stewardship Structure
-
-Who edits an article reveals its **regime stewardship model**:
-
-| Pattern | Regime Interpretation |
-|---------|---------------------|
-| Few editors, many edits each | **Stewardship regime** — small group maintains structural integrity (common for technical articles) |
-| Many editors, few edits each | **Open regime** — broad community participation, low individual ownership |
-| One dominant editor + many minor | **Gatekeeper regime** — single editor controls structural direction |
-| Bot‑heavy edit history | **Automated maintenance regime** — structural upkeep is programmatic |
-| IP‑heavy edit history | **Anonymous contribution regime** — lower accountability, higher vandalism risk |
-
-#### Editor Distribution via XTools
-
-The fastest way to see editor distribution is XTools:
-
-```
-https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/ARTICLE_TITLE
-```
-
-XTools provides:
-- Top editors by edit count
-- Editor count over time
-- Bot vs. human edit ratio
-- IP vs. registered editor ratio
-- Minor edit percentage
-
----
-
-## 3 — Regime Phase Classification
-
-Combining all 5 signals, any article can be classified into one of 6 **regime phases**:
-
-| Phase | Rev Count | Rev Rate | Size Trend | Revert Rate | Editor Pattern | Description |
-|-------|-----------|----------|------------|-------------|---------------|-------------|
-| **Birth** | < 10 | N/A | Rapid growth | Low | 1–2 editors | Just created, initial regime declaration |
-| **Expansion** | 10–500 | Rising | Steady growth | Low–moderate | Growing editor pool | Community building out the regime |
-| **Negotiation** | 100–5,000 | Variable | Oscillating | Moderate–high | Diverse, competing editors | Structural disputes being resolved |
-| **Crystallization** | 500+ | Declining | Plateau approaching | Declining | Core stewards emerging | Consensus forming, regime stabilizing |
-| **Maturity** | 1,000+ | Low, stable | Plateau | Low | Stable stewardship | Regime crystallized, minor maintenance only |
-| **Perturbation** | Any | Sudden spike | Sudden change | Spike | Influx of new editors | External event disrupted the stable regime |
-
-### Phase Transitions
-
-Articles move between phases. The most common transitions:
-
-```
-Birth → Expansion → Negotiation → Crystallization → Maturity
-                         ↑                               │
-                         └───── Perturbation ─────────────┘
-                         (external event resets the cycle)
-```
-
-**Key insight:** Most Wikipedia articles that reach Maturity will experience
-**periodic perturbation** — external events (news, discoveries, controversies)
-that temporarily reset them to the Negotiation phase. The perturbation‑recovery
-cycle is the **heartbeat of a living regime**.
-
----
-
-## 4 — Worked Example: "Pluto"
-
-The Wikipedia article on **Pluto** is a textbook case of regime perturbation:
-
-### Pre‑2006: Stable Maturity
-
-- Classified as the 9th planet since 1930
-- Article in Maturity phase — low revision rate, stable stewardship
-- Regime declaration: "Pluto is a planet"
-
-### August 2006: Perturbation Event
-
-- IAU reclassifies Pluto as a dwarf planet
-- Revision rate spikes from ~5/month to ~500/month
-- Article size oscillates wildly (competing edits)
-- Revert rate exceeds 40%
-- Dozens of new editors arrive
-
-### 2006–2008: Negotiation Phase
-
-- Talk page debates intensify on classification language
-- Multiple RfCs on how to describe Pluto's status
-- Gradual consensus: "Pluto is a dwarf planet in the Kuiper belt"
-- Revert rate declines as competing editors exhaust or accept consensus
-
-### 2008–2015: Re‑Crystallization
-
-- Revision rate returns to baseline
-- Core stewardship group re‑establishes
-- New regime declaration stabilizes
-
-### July 2015: Second Perturbation
-
-- New Horizons flyby generates massive public interest
-- Revision rate spikes again — but this time the perturbation is **additive** (new data), not **structural** (no reclassification dispute)
-- Article expands significantly with new scientific data
-- Returns to Maturity quickly — no regime conflict, just regime enrichment
-
-### RTT Reading
-
-Pluto's revision history demonstrates:
-
-1. **Regime crystallization** can be disrupted by external authority (IAU decision)
-2. **Perturbation type matters** — structural reclassification (2006) causes prolonged Negotiation; data addition (2015) causes brief Expansion
-3. **Revert rate is the best regime stress indicator** — it spiked to 40%+ only during the classification dispute
-4. **Editor distribution shifts during perturbation** — the stable stewardship group was temporarily overwhelmed by newcomers
-
----
-
-## 5 — API Patterns for Regime Analysis
-
-### 5.1 — Fetch Full Revision History
-
-```python
-import requests
-
-def get_full_history(title, lang="en"):
-    """Fetch complete revision history for a Wikipedia article."""
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "titles": title,
-        "prop": "revisions",
-        "rvlimit": "max",
-        "rvprop": "ids|timestamp|user|size|comment|tags",
-        "format": "json"
-    }
-
-    revisions = []
-    while True:
-        resp = requests.get(url, params=params,
-                            headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-        page = next(iter(resp["query"]["pages"].values()))
-        revisions.extend(page.get("revisions", []))
-
-        if "continue" in resp:
-            params["rvcontinue"] = resp["continue"]["rvcontinue"]
-        else:
-            break
-
-    return revisions
-```
-
-### 5.2 — Compute Regime Signals
-
-```python
-from datetime import datetime
-from collections import Counter
-
-def compute_regime_signals(revisions):
-    """Extract the 5 regime signals from a revision list."""
-
-    total = len(revisions)
-
-    # Signal 1: Revision count
-    print(f"Total revisions: {total}")
-
-    # Signal 2: Monthly revision rate
-    months = Counter()
-    for rev in revisions:
-        ts = datetime.fromisoformat(rev["timestamp"].replace("Z", "+00:00"))
-        months[f"{ts.year}-{ts.month:02d}"] += 1
-
-    # Signal 3: Size deltas
-    sizes = [rev["size"] for rev in revisions]
-    deltas = [sizes[i] - sizes[i+1] for i in range(len(sizes)-1)]
-
-    # Signal 4: Revert rate
-    revert_tags = {"mw-revert", "mw-undo", "mw-rollback", "mw-manual-revert"}
-    reverts = sum(1 for rev in revisions
-                  if any(tag in revert_tags for tag in rev.get("tags", [])))
-    revert_rate = reverts / total if total > 0 else 0
-
-    # Signal 5: Editor distribution
-    editors = Counter(rev.get("user", "anonymous") for rev in revisions)
-    unique_editors = len(editors)
-    top_editor_pct = editors.most_common(1)[0][1] / total if total > 0 else 0
-
-    return {
-        "revision_count": total,
-        "monthly_rates": dict(sorted(months.items())),
-        "avg_delta": sum(deltas) / len(deltas) if deltas else 0,
-        "max_positive_delta": max(deltas) if deltas else 0,
-        "max_negative_delta": min(deltas) if deltas else 0,
-        "revert_rate": round(revert_rate, 3),
-        "unique_editors": unique_editors,
-        "top_editor_share": round(top_editor_pct, 3)
-    }
-```
-
-### 5.3 — Classify Regime Phase
-
-```python
-def classify_regime_phase(signals):
-    """Classify an article into one of 6 regime phases."""
-
-    rc = signals["revision_count"]
-    rr = signals["revert_rate"]
-    ed = signals["unique_editors"]
-    delta = signals["avg_delta"]
-
-    if rc < 10:
-        return "Birth"
-    elif rc < 500 and delta > 50:
-        return "Expansion"
-    elif rr > 0.15 or (rc > 100 and ed > 50 and delta < 0):
-        return "Negotiation"
-    elif rr < 0.05 and delta < 10 and rc > 1000:
-        return "Maturity"
-    elif rr < 0.10 and rc > 500:
-        return "Crystallization"
-    else:
-        return "Perturbation"
-```
-
----
-
-## 6 — Cross‑Referencing With Other Module Files
-
-| File | How Revision History Connects |
-|------|------------------------------|
-| `Talk_Page_Coherence_Surface.md` | Talk page activity often **precedes** revision spikes — disputes surface on talk before erupting in edit wars |
-| `Edit_War_Regime_Transition_Detection.md` | Edit wars are a **subset** of revision history — this file provides the broader context; that file zooms into the conflict mechanics |
-| `NPOV_As_Coherence_Operator.md` | NPOV disputes are visible in edit summaries containing "POV," "bias," "neutral" — searchable in revision data |
-| `Featured_Article_Validation_Corridor.md` | FA reviews examine revision history as part of quality assessment — articles with unstable histories rarely pass |
-| `Wikidata_Ingestion_Format.md` | Wikidata items have their own revision history — combine both for complete temporal coverage of a concept |
-| `Category_Taxonomy_Regime_Hierarchy.md` | Category changes appear in revision history — articles moving between categories = regime reclassification events |
-| `Cross_Domain_Meta_Operators.md` | Operator 2 (Revision Frequency as Stability Signal) is derived directly from this file's Signal 2 |
-| `Wikipedia_RTT_Structural_Mapping.md` | This file implements the temporal structures mapped in Section 2.6 of the master mapping |
-
----
-
-## 7 — Advanced Patterns
-
-### 7.1 — Revision History Comparison Across Languages
-
-The **same concept** may have radically different revision histories in
-different language Wikipedias:
-
-| Concept | English Rev Count | Japanese Rev Count | Arabic Rev Count | Structural Insight |
-|---------|------------------|--------------------|-----------------|-------------------|
-| World War II | 40,000+ | 8,000+ | 3,000+ | Universal high attention; English most contested |
-| Cricket | 15,000+ | 200 | 500 | Culturally specific regime — high attention only in English/Commonwealth |
-| Ramadan | 4,000 | 300 | 12,000+ | Cultural regime variance — Arabic Wikipedia treats it as highest importance |
-
-**Method:** Fetch revision counts for the same Wikidata Q‑number across
-multiple language editions. Divergences reveal **cultural regime weighting** —
-which cultures invest the most structural attention in which concepts.
-
-### 7.2 — Bot vs. Human Revision Ratio
-
-Many Wikipedia articles have 30–60% bot edits (link fixes, formatting,
-category maintenance). The **human‑only revision rate** is a more accurate
-regime signal than the raw rate:
-
-```python
-def human_revision_rate(revisions):
-    """Filter out bot edits for cleaner regime signal."""
-    human_revs = [r for r in revisions
-                  if not r.get("user", "").endswith("Bot")
-                  and "bot" not in r.get("tags", [])]
-    return len(human_revs), len(human_revs) / len(revisions)
-```
-
-### 7.3 — Regime Perturbation Detection Algorithm
-
-```python
-def detect_perturbations(monthly_rates, threshold=3.0):
-    """Detect months where revision rate exceeds N standard deviations
-    above the mean — these are regime perturbation events."""
-    import statistics
-
-    values = list(monthly_rates.values())
-    if len(values) < 6:
-        return []
-
-    mean = statistics.mean(values)
-    stdev = statistics.stdev(values)
-
-    if stdev == 0:
-        return []
-
-    perturbations = []
-    for month, count in monthly_rates.items():
-        z_score = (count - mean) / stdev
-        if z_score > threshold:
-            perturbations.append({
-                "month": month,
-                "revisions": count,
-                "z_score": round(z_score, 2),
-                "interpretation": "regime_perturbation"
-            })
-
-    return perturbations
-```
-
----
-
-## 8 — Student Exercises
-
-### Exercise 1 — Regime Phase Classification (20 minutes)
-
-1. Pick any Wikipedia article
-2. Open its XTools page: `https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/ARTICLE`
-3. Record: total revisions, monthly average, revert rate, unique editors, current size
-4. Classify it into one of the 6 regime phases from Section 3
-5. Does the classification feel right? If not, what additional signal would help?
-
-### Exercise 2 — Perturbation Hunting (30 minutes)
-
-1. Pick an article you expect to have perturbation events (try: a country that had a recent revolution, a scientific theory that was recently challenged, a public figure involved in a recent controversy)
-2. Open the revision history and look for **spike months**
-3. For each spike, identify: what external event caused it? How long did the perturbation last? Did the article return to its previous regime, or did it crystallize into a new one?
-4. Write a 3‑sentence summary: *"The article entered perturbation in [month] due to [event]. The perturbation lasted [duration]. The article [returned to previous regime / crystallized into new regime] because [reason]."*
-
-### Exercise 3 — Cross‑Language Comparison (30 minutes)
-
-1. Pick a concept with strong cultural variance (try: Democracy, Marriage, Colonialism, or a historical conflict)
-2. Find the article in English + 2 other language editions
-3. For each, record: revision count, article size, revert rate (use XTools with the appropriate language prefix)
-4. Answer: *"Which language edition has the most structural attention? Which has the highest revert rate? What does this tell us about how different cultures negotiate this concept's regime?"*
-
-### Exercise 4 — Build a Regime Evolution Curve (45 minutes)
-
-1. Pick an article with 1,000+ revisions
-2. Use the API pattern from Section 5.1 to fetch the full revision history
-3. Plot article size over time (x = date, y = bytes)
-4. Annotate: mark Birth, Expansion, Negotiation, Crystallization, and any Perturbation events
-5. Compare your curve to the idealized sigmoid from Section 2 — where does it match? Where does it deviate?
-
----
-
-*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
-# Talk Page Coherence Surface
-
-> **Purpose:** Define how to read Wikipedia talk pages as **coherence and drift
-> surfaces** — the pre‑regime discourse layer where structural consensus is
-> negotiated, challenged, and sometimes destroyed before it ever reaches
-> the article itself.
->
-> Talk pages are Wikipedia's **most underread structural asset**. Most readers
-> never visit them. Most students don't know they exist. Yet talk pages are
-> where the real regime work happens — where editors argue about what a concept
-> IS, what scope the article should have, what sources count, and whose framing
-> should prevail.
->
-> No other major knowledge source exposes this layer publicly.
-
----
-
-## 1 — What Is a Talk Page?
-
-Every Wikipedia article has a paired **talk page** (also called a discussion page)
-where editors discuss the article's content, structure, and quality.
-
-### How to Access Talk Pages
-
-| Method | URL Pattern |
-|--------|------------|
-| Web UI | `https://en.wikipedia.org/wiki/Talk:ARTICLE_TITLE` |
-| From any article | Click the "Talk" tab at the top of any article |
-| API | `https://en.wikipedia.org/w/api.php?action=parse&page=Talk:ARTICLE_TITLE&format=json` |
-| Archives | `https://en.wikipedia.org/wiki/Talk:ARTICLE_TITLE/Archive_1` (and /Archive_2, /Archive_3, etc.) |
-
-### Talk Page Anatomy
-
-A typical talk page contains:
-
-| Element | Purpose | RTT Mapping |
-|---------|---------|-------------|
-| Banner templates (WikiProject, quality ratings) | Article classification by stewardship groups | **Regime stewardship declaration** |
-| Active discussion threads | Current structural debates | **Live coherence surface** |
-| Resolved/archived threads | Historical structural debates | **Regime archaeology** |
-| RfC (Request for Comment) notices | Formal dispute resolution | **Coherence arbitration** |
-| Edit war notices / protection logs | Conflict markers | **Drift alerts** |
-| To‑do lists | Structural gaps acknowledged by stewards | **Regime development roadmap** |
-| FAQ sections | Pre‑answered recurring disputes | **Crystallized coherence positions** |
-
----
-
-## 2 — Talk Pages as Coherence Surfaces
-
-### 2.1 — The Coherence Model
-
-In RTT, **coherence** is the degree to which a regime's internal claims
-are structurally consistent. A Wikipedia article's coherence is not determined
-by its text alone — it is determined by the **consensus process** visible
-on its talk page.
-
-```
-Article text (R3) ← produced by → Talk page consensus (R0–R1)
-                                         │
-                     ┌───────────────────┼───────────────────┐
-                     │                   │                   │
-              Factual disputes     Framing disputes     Scope disputes
-              (surface — R3)       (structural — R1)    (regime — R0)
-                     │                   │                   │
-              "This date is        "This article         "Should this
-               wrong"              frames X as Y          concept even
-                                   — it should            have an article?"
-                                   frame it as Z"
-```
-
-### 2.2 — The Three Dispute Layers
-
-Not all talk page disputes are equal. They operate at different regime levels:
-
-| Dispute Layer | Regime Level | What's Contested | Coherence Impact | Example |
-|--------------|-------------|------------------|-----------------|---------|
-| **Factual** | R3 | Specific claims, dates, numbers, citations | Low — easily resolved with better sources | "The population figure is outdated — here's the 2024 census" |
-| **Framing** | R1–R2 | How the article presents information, section structure, emphasis, tone | Medium — requires negotiation about perspective | "This article presents X primarily from a Western perspective — it needs global balance" |
-| **Scope** | R0 | What the article should cover, whether it should exist, how it relates to other articles | High — fundamental regime negotiation | "This article should be merged with [other article]" or "This topic doesn't meet notability guidelines" |
-
-**Key insight:** Most talk page threads are **factual disputes** (R3). These
-are structurally shallow — they don't challenge the regime, just correct
-its outputs. The rare **scope disputes** (R0) are where regimes are born,
-merged, split, or killed. Learning to distinguish these layers is the core
-skill this file teaches.
-
----
-
-## 3 — Reading Talk Pages Structurally
-
-### 3.1 — The Coherence Gradient
-
-Every talk page can be scored on a **coherence gradient** based on the
-nature and volume of its active disputes:
-
-| Gradient Level | Indicator | What It Means |
-|---------------|-----------|---------------|
-| **High coherence** | Few active threads, mostly factual corrections, FAQ section exists | Regime is crystallized — community agrees on what the article IS |
-| **Moderate coherence** | Active threads on framing or emphasis, periodic RfCs, steady but managed activity | Regime is stable but actively maintained — consensus requires ongoing negotiation |
-| **Low coherence** | Multiple competing framing proposals, edit war notices, protection banners, unresolved RfCs | Regime is contested — no stable consensus on what the article should be |
-| **Incoherent** | Talk page dominated by scope disputes, AfD notices, merge proposals, fundamental disagreements about the article's right to exist | Regime is in crisis — structural identity under challenge |
-
-### 3.2 — Signal Extraction Checklist
-
-When reading any talk page, extract these signals:
-
-| # | Signal | Where to Find It | What It Reveals |
-|---|--------|-------------------|-----------------|
-| 1 | **WikiProject banners** | Top of talk page | Which stewardship groups claim this article — multiple WikiProjects = cross‑domain concept |
-| 2 | **Quality rating** | WikiProject banner | Current regime maturity assessment (Stub/Start/C/B/GA/FA) |
-| 3 | **Importance rating** | WikiProject banner | How central this concept is to its domain's regime |
-| 4 | **Active thread count** | Scan the page | Current coherence workload — more threads = more active negotiation |
-| 5 | **Thread age** | Check dates on threads | Old unresolved threads = chronic coherence failures |
-| 6 | **Archive count** | Check for /Archive links | Total historical coherence volume — many archives = much past negotiation |
-| 7 | **RfC notices** | Tagged threads | Formal coherence arbitration in progress |
-| 8 | **Edit war banners** | Top of talk page | Active or recent regime conflicts |
-| 9 | **Protection notices** | Top of talk page | Regime has been locked due to instability |
-| 10 | **FAQ section** | Top of talk page or separate subpage | Recurring disputes that have been formally resolved — crystallized coherence positions |
-| 11 | **To‑do list** | Talk page body | Acknowledged structural gaps — the regime's own development roadmap |
-| 12 | **Mediation/ArbCom links** | Talk page threads | Disputes that escalated beyond community consensus — regime authority invoked |
-
----
-
-## 4 — Discourse Patterns
-
-### 4.1 — The Seven Canonical Talk Page Patterns
-
-Through structural analysis of thousands of Wikipedia talk pages, seven
-recurring discourse patterns emerge:
-
-#### Pattern 1: Source War
-
-**What it looks like:** Editors repeatedly add and remove citations,
-arguing about which sources are "reliable" for a given claim.
-
-**RTT reading:** This is a **regime provenance dispute** — editors disagree
-about which external regimes are structurally valid for citation. The
-dispute reveals the article's **source regime boundary** — the line between
-accepted and rejected external authority.
-
-**Coherence impact:** Medium. Usually resolved by appeal to Wikipedia's
-Reliable Sources guidelines (WP:RS).
-
----
-
-#### Pattern 2: Framing Contest
-
-**What it looks like:** Editors argue about the article's lead paragraph,
-section ordering, or emphasis. "This article gives undue weight to X" or
-"The introduction frames this topic incorrectly."
-
-**RTT reading:** This is a **regime declaration dispute** — editors agree
-on the facts but disagree on how to **structurally present** them. The
-lead paragraph is the article's regime summary, and competing framings
-represent competing regime declarations.
-
-**Coherence impact:** High. Framing contests can persist for years because
-they involve structural perspective, not factual accuracy.
-
----
-
-#### Pattern 3: Scope Creep Debate
-
-**What it looks like:** Some editors want to expand the article's coverage;
-others want to narrow it. "This article is trying to cover too much" vs.
-"This important aspect is missing."
-
-**RTT reading:** This is a **regime boundary negotiation** — the community
-is actively deciding where this concept's regime ends and adjacent regimes
-begin. Proposals to split an article into sub‑articles = regime differentiation.
-Proposals to merge articles = regime consolidation.
-
-**Coherence impact:** High. Scope decisions define the regime itself.
-
----
-
-#### Pattern 4: Neutrality Challenge
-
-**What it looks like:** An editor or group argues that the article violates
-NPOV — it presents one viewpoint too favorably or suppresses legitimate
-alternative viewpoints.
-
-**RTT reading:** This is a **coherence operator violation** — the article's
-structural invariant (NPOV) is being challenged. See `NPOV_As_Coherence_Operator.md`
-for the full framework.
-
-**Coherence impact:** Very high. NPOV challenges question the article's
-fundamental structural integrity.
-
----
-
-#### Pattern 5: Classification Dispute
-
-**What it looks like:** Editors argue about how to categorize the article's
-subject. "Is X a type of Y or a type of Z?" or "Should this be classified
-as A or B?"
-
-**RTT reading:** This is a **regime hierarchy dispute** — the concept's
-position in the classification tree is contested. These disputes often
-map directly to real‑world taxonomic or definitional controversies.
-See `Category_Taxonomy_Regime_Hierarchy.md`.
-
-**Coherence impact:** Medium to high. Classification determines which
-regime neighborhood the article belongs to.
-
----
-
-#### Pattern 6: Notability Challenge
-
-**What it looks like:** An editor questions whether the article's subject
-meets Wikipedia's notability requirements. May include AfD nominations.
-
-**RTT reading:** This is a **regime existence challenge** — the most
-fundamental coherence dispute possible. The community is deciding whether
-this concept has sufficient structural standing to maintain a regime
-declaration on Wikipedia.
-
-**Coherence impact:** Maximum. This challenges the regime's right to exist.
-
----
-
-#### Pattern 7: Consensus Crystallization
-
-**What it looks like:** A long‑running dispute reaches resolution. Editors
-agree on a final version. The resolved thread may be moved to an FAQ or
-archive. The article stabilizes.
-
-**RTT reading:** This is **coherence achieved** — the structural negotiation
-has produced a stable consensus. The crystallized position becomes part of
-the article's structural foundation. Future editors who raise the same
-dispute are pointed to the archived resolution.
-
-**Coherence impact:** Positive — coherence increases. The resolved dispute
-becomes a structural precedent.
-
----
-
-### 4.2 — Pattern Distribution by Domain
-
-| Pattern | Sciences | Humanities | Applied | Most Common In |
-|---------|----------|------------|---------|---------------|
-| Source War | ●●● | ●● | ●● | Medicine, Psychology |
-| Framing Contest | ●● | ●●● | ●● | History, Political Science, Philosophy |
-| Scope Creep | ●● | ●● | ●●● | Computer Science, Engineering |
-| Neutrality Challenge | ● | ●●● | ●● | Political Science, History, Economics |
-| Classification Dispute | ●●● | ●● | ●● | Biology, Linguistics, Chemistry |
-| Notability Challenge | ● | ●● | ●●● | Computer Science (tech companies, software) |
-| Consensus Crystallization | ●●● | ●● | ●●● | Physics, Mathematics, Astronomy |
-
-**Key:** ●●● = very common | ●● = common | ● = occasional
-
----
-
-## 5 — Temporal Dynamics of Talk Pages
-
-### 5.1 — Talk Page Lifecycle
-
-Talk pages follow a lifecycle that mirrors the article's regime phases
-(from `Revision_History_Regime_Analysis.md`):
-
-| Article Phase | Talk Page Activity | Coherence State |
-|--------------|-------------------|-----------------|
-| **Birth** | Empty or single welcome message | No coherence surface yet |
-| **Expansion** | First substantive threads appear — usually factual corrections | Coherence emerging |
-| **Negotiation** | Multiple active threads, framing contests, possible RfCs | Coherence contested |
-| **Crystallization** | Disputes resolving, FAQ forming, archives growing | Coherence stabilizing |
-| **Maturity** | Low activity, mostly factual updates, FAQ handles recurring questions | Coherence crystallized |
-| **Perturbation** | Sudden thread explosion, new editors arriving, old disputes reopened | Coherence disrupted |
-
-### 5.2 — The Talk‑Article Lag
-
-Talk page activity often **leads** article changes:
-
-```
-Talk page dispute begins → Discussion escalates → Consensus forms → Article updated
-       t=0                     t+days/weeks         t+weeks/months     t+final
-```
-
-This lag means that **talk pages are a leading indicator** of regime change.
-An article that looks stable today may have active talk page disputes that
-will produce structural changes next month.
-
-**Research application:** Monitor talk pages to **predict** article regime
-transitions before they happen.
-
-### 5.3 — Archive Depth as Coherence History
-
-The number of talk page archives reveals the **total coherence workload**
-the article has required:
-
-| Archive Count | Interpretation |
-|--------------|---------------|
-| 0 | Low‑attention article — minimal coherence negotiation |
-| 1–5 | Normal article lifecycle — moderate historical negotiation |
-| 5–20 | High‑attention article — significant past disputes |
-| 20–50 | Perpetually contested — the article is a coherence battleground |
-| 50+ | Among the most contested articles on Wikipedia (e.g., Israel, United States, Jesus) |
-
----
-
-## 6 — API Patterns for Talk Page Analysis
-
-### 6.1 — Fetch Talk Page Content
-
-```python
-import requests
-
-def get_talk_page(title, lang="en"):
-    """Fetch the current talk page content for an article."""
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "parse",
-        "page": f"Talk:{title}",
-        "prop": "wikitext|sections",
-        "format": "json"
-    }
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    return resp.get("parse", {})
-```
-
-### 6.2 — Count Archives
-
-```python
-def count_archives(title, lang="en"):
-    """Count the number of talk page archives for an article."""
-    url = f"https://{lang}.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "list": "allpages",
-        "apprefix": f"Talk:{title}/Archive",
-        "apnamespace": 0,
-        "aplimit": "max",
-        "format": "json"
-    }
-    # Note: archives are in Talk namespace (1), adjust query
-    params["apnamespace"] = 1
-    params["apprefix"] = f"{title}/Archive"
-
-    resp = requests.get(url, params=params,
-                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
-    pages = resp.get("query", {}).get("allpages", [])
-    return len(pages)
-```
-
-### 6.3 — Extract Thread Structure
-
-```python
-import re
-
-def extract_threads(wikitext):
-    """Extract discussion thread headers and nesting depth from talk page wikitext."""
-    threads = []
-    for line in wikitext.split("\n"):
-        # Thread headers use == Level 2 == format
-        match = re.match(r'^(={2,})\s*(.+?)\s*\1\s*$', line)
-        if match:
-            level = len(match.group(1))
-            title = match.group(2)
-            threads.append({
-                "level": level,
-                "title": title,
-                "depth": level - 2  # == is depth 0, === is depth 1
-            })
-    return threads
-```
-
-### 6.4 — Coherence Signal Extraction
-
-```python
-def extract_coherence_signals(wikitext):
-    """Scan talk page wikitext for key coherence signal markers."""
-    signals = {
-        "rfc_notices": len(re.findall(r'\{\{rfc', wikitext, re.IGNORECASE)),
-        "npov_mentions": len(re.findall(r'NPOV|neutral|bias|POV', wikitext, re.IGNORECASE)),
-        "merge_proposals": len(re.findall(r'merge|split|consolidat', wikitext, re.IGNORECASE)),
-        "notability_challenges": len(re.findall(r'notab|AfD|delet', wikitext, re.IGNORECASE)),
-        "source_disputes": len(re.findall(r'reliable source|WP:RS|citation|source', wikitext, re.IGNORECASE)),
-        "edit_war_mentions": len(re.findall(r'edit war|3RR|revert war|warring', wikitext, re.IGNORECASE)),
-        "consensus_declarations": len(re.findall(r'consensus|agreed|resolved|closed', wikitext, re.IGNORECASE)),
-        "wikiproject_banners": len(re.findall(r'\{\{WikiProject', wikitext, re.IGNORECASE)),
-        "faq_present": bool(re.search(r'\{\{FAQ', wikitext, re.IGNORECASE)),
-        "todo_present": bool(re.search(r'\{\{To do', wikitext, re.IGNORECASE))
-    }
-    return signals
-```
-
-### 6.5 — Classify Coherence Gradient
-
-```python
-def classify_coherence(signals, archive_count):
-    """Classify talk page coherence level based on extracted signals."""
-    stress_score = (
-        signals["rfc_notices"] * 5 +
-        signals["npov_mentions"] * 3 +
-        signals["merge_proposals"] * 4 +
-        signals["notability_challenges"] * 5 +
-        signals["edit_war_mentions"] * 4 -
-        signals["consensus_declarations"] * 2 -
-        (5 if signals["faq_present"] else 0)
-    )
-
-    if stress_score < 5:
-        return "high_coherence"
-    elif stress_score < 15:
-        return "moderate_coherence"
-    elif stress_score < 30:
-        return "low_coherence"
-    else:
-        return "incoherent"
-```
-
----
-
-## 7 — Worked Example: "Evolution"
-
-The Wikipedia article on **Evolution** has one of the richest talk pages
-in the encyclopedia — 60+ archives spanning 20+ years of coherence negotiation.
-
-### The Core Dispute Layers
-
-| Layer | What's Contested | Duration | Resolution |
-|-------|-----------------|----------|------------|
-| **Factual (R3)** | Specific evolutionary mechanisms, dates, examples | Ongoing, low intensity | Resolved through citation updates |
-| **Framing (R1)** | How much weight to give "controversy" with creationism | Intense 2004–2012 | Consensus: evolution is the scientific consensus; creationism belongs in separate article |
-| **Scope (R0)** | Whether the article should address the "evolution vs. creationism debate" at all | Periodic, high intensity | Crystallized position: the article covers the scientific theory; the sociopolitical debate has its own article |
-
-### The FAQ as Crystallized Coherence
-
-The Evolution talk page has a prominent **FAQ section** — a set of pre‑answered
-questions that address the most common recurring disputes. This FAQ is
-**crystallized coherence** — it represents formal consensus positions that
-the community has explicitly decided:
-
-- *"Why doesn't this article present creationism as an alternative?"* →
-  Crystallized answer referencing NPOV, scientific consensus, and WP:UNDUE
-- *"Why does the lead say evolution is a 'fact'?"* →
-  Crystallized answer distinguishing between evolution as observed
-  phenomenon and evolutionary theory as explanatory framework
-- *"Why are specific criticisms of evolution not included?"* →
-  Crystallized answer referencing WP:FRINGE and WP:WEIGHT
-
-### RTT Reading
-
-The Evolution talk page demonstrates:
-
-1. **Coherence surfaces are layered** — factual, framing, and scope disputes
-   coexist but operate at different regime levels
-2. **FAQ sections are regime precedent** — crystallized coherence positions
-   that reduce future dispute cost
-3. **Archive depth correlates with regime significance** — 60+ archives
-   means this concept sits at a major regime intersection (science vs. religion)
-4. **Scope crystallization is the highest‑value coherence event** — once
-   the community decided that the evolution article covers science and
-   the creationism article covers the debate, the regime boundary was set
-
----
-
-## 8 — Cross‑Reference to Other Module Files
-
-| File | How Talk Pages Connect |
-|------|----------------------|
-| `Revision_History_Regime_Analysis.md` | Talk page disputes are a **leading indicator** of revision spikes — disputes surface on Talk before erupting in article edits |
-| `Edit_War_Regime_Transition_Detection.md` | Edit wars are the **failure mode** of talk page consensus — when Talk cannot resolve a dispute, it manifests as edit warring in the article |
-| `NPOV_As_Coherence_Operator.md` | NPOV disputes are the most structurally significant talk page pattern — Pattern 4 in this file maps directly to the NPOV file |
-| `Featured_Article_Validation_Corridor.md` | FA reviewers examine talk page health as part of quality assessment — articles with chronic unresolved disputes rarely pass FA review |
-| `Category_Taxonomy_Regime_Hierarchy.md` | Classification Disputes (Pattern 5) often play out on talk pages before manifesting as category changes |
-| `Cross_Domain_Meta_Operators.md` | Operator 3 (Talk Page Coherence Gradient) is derived directly from Section 3 of this file |
-| `Wikipedia_RTT_Structural_Mapping.md` | This file implements the editorial structures mapped in Section 2.2 of the master mapping |
-
----
-
-## 9 — Advanced Patterns
-
-### 9.1 — Cross‑Language Talk Page Comparison
-
-The **same article's talk page** in different languages reveals cultural
-coherence dynamics:
-
-- **English Talk:Evolution** — 60+ archives dominated by science/religion framing disputes
-- **German Diskussion:Evolution** — far fewer archives, minimal religion‑related disputes
-- **Arabic نقاش:تطور** — different dispute landscape, different framing tensions
-
-**Method:** Compare archive counts, FAQ content, and dominant discourse
-patterns across 3+ language editions. Divergences reveal which **coherence
-disputes are culturally universal** vs. **culturally specific**.
-
-### 9.2 — WikiProject Banner Analysis
-
-The WikiProject banners at the top of a talk page reveal which **stewardship
-groups** claim the article:
-
-| Banner Count | Interpretation |
-|-------------|---------------|
-| 1 | Single‑domain concept — clear regime ownership |
-| 2–3 | Cross‑domain concept — shared stewardship |
-| 4–6 | Highly cross‑domain — may create jurisdictional disputes |
-| 7+ | Structural crossroads — the concept sits at the intersection of many regimes |
-
-**Example:** The article "Water" has WikiProject banners for Chemistry,
-Physics, Environment, Geology, and more — reflecting its position as a
-cross‑domain structural node.
-
-### 9.3 — Consensus Detection Heuristics
-
-How to identify when a talk page thread has reached consensus:
-
-| Indicator | Confidence |
-|-----------|-----------|
-| Thread marked `{{resolved}}` or `{{closed}}` | **High** — explicit community marker |
-| No new replies for 30+ days after substantive discussion | **Moderate** — implied consensus through silence |
-| Admin or experienced editor posts summary conclusion | **Moderate** — community authority signal |
-| Thread moved to FAQ | **High** — promoted to crystallized position |
-| Thread archived with no resolution marker | **Low** — may be abandoned rather than resolved |
-| Thread has `{{stale}}` tag | **Low** — community acknowledged discussion died without resolution |
-
-### 9.4 — Talk Page Health Score
-
-A composite metric combining multiple signals:
-
-```python
-def talk_page_health(signals, archive_count, article_age_years):
-    """
-    Compute a talk page health score (0-100).
-    Higher = more coherent, better maintained.
-    """
-    # Positive indicators
-    faq_bonus = 15 if signals["faq_present"] else 0
-    todo_bonus = 5 if signals["todo_present"] else 0
-    consensus_score = min(signals["consensus_declarations"] * 3, 20)
-    wikiproject_score = min(signals["wikiproject_banners"] * 5, 15)
-
-    # Negative indicators
-    conflict_penalty = min((
-        signals["rfc_notices"] * 5 +
-        signals["npov_mentions"] * 2 +
-        signals["edit_war_mentions"] * 4 +
-        signals["notability_challenges"] * 5
-    ), 40)
-
-    # Archive ratio (archives per year — moderate is healthy)
-    archive_ratio = archive_count / max(article_age_years, 1)
-    archive_score = 10 if 0.5 < archive_ratio < 3 else 5
-
-    health = 50 + faq_bonus + todo_bonus + consensus_score + wikiproject_score + archive_score - conflict_penalty
-    return max(0, min(100, health))
-```
-
----
-
-## 10 — Student Exercises
-
-### Exercise 1 — Coherence Gradient Assessment (20 minutes)
-
-1. Pick any Wikipedia article you've read before
-2. Navigate to its talk page (click the "Talk" tab)
-3. Apply the Signal Extraction Checklist from Section 3.2
-4. Classify the talk page's coherence gradient (High / Moderate / Low / Incoherent)
-5. Write one sentence: *"This article's coherence is [level] because [evidence]."*
-
-### Exercise 2 — Discourse Pattern Identification (30 minutes)
-
-1. Pick an article you expect to have an active talk page (try: a controversial topic, a current event, or a broad scientific concept)
-2. Read the 3 most recent talk page threads
-3. Classify each thread as one of the 7 Canonical Patterns from Section 4.1
-4. For each, identify: What regime level is contested? (R0/R1/R2/R3)
-5. Which pattern is most common on this talk page? What does that tell you about the article's regime?
-
-### Exercise 3 — FAQ as Crystallized Coherence (20 minutes)
-
-1. Find an article with a talk page FAQ (try: Evolution, Climate change, Homeopathy, or any article with `{{FAQ}}` on its talk page)
-2. Read 3 FAQ entries
-3. For each, identify: What was the original dispute? What regime level was it? How was it resolved?
-4. Write one sentence: *"This FAQ entry crystallized the position that [X], resolving a [factual/framing/scope] dispute about [Y]."*
-
-### Exercise 4 — Talk‑Article Lag Detection (45 minutes)
-
-1. Pick an article that was recently updated (check the revision history for recent substantial edits)
-2. Check the talk page for related discussion threads
-3. Find the thread that preceded the article change
-4. Measure the lag: how many days/weeks between the talk page discussion and the article update?
-5. Answer: *"The talk page discussion began on [date]. The article was updated on [date]. The lag was [N days]. The discussion [did/did not] directly cause the change."*
-
-### Exercise 5 — Cross‑Language Coherence Comparison (30 minutes)
-
-1. Pick a concept with cultural sensitivity (try: Democracy, Colonialism, Marriage, or a historical conflict)
-2. Check the talk page archive count in English + 2 other languages
-3. Compare: Which language has the most archives? Which has active disputes? Are the disputes about the same issues?
-4. Write two sentences: *"The [language] talk page focuses on [dispute type], while the [other language] talk page focuses on [different dispute type]. This reveals that [insight about cultural regime variance]."*
-
----
-
-*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
-# Wikidata Ingestion Format
-
-> **Purpose:** Define how TriadicFrameworks ingests, queries, and structurally
-> interprets Wikidata — the world's largest open knowledge graph (120M+ entities,
-> CC0 license). Wikidata is Wikipedia's **dimensional addressing layer** — the
-> machine‑readable substrate beneath every human‑readable article.
->
-> This file provides SPARQL templates, ingestion patterns, and RTT mappings
-> so that students, researchers, and AIs can query Wikidata with structural
-> awareness.
-
----
-
-## 1 — What Is Wikidata?
-
-Wikidata is a **free, collaborative, multilingual knowledge graph** maintained
-by the Wikimedia Foundation. It stores structured data as entity–property–value
-triplets that can be queried via SPARQL.
-
-### Key Facts
-
-| Dimension | Value |
-|-----------|-------|
-| Entities | 120M+ items (Q‑numbers) |
-| Properties | 12,000+ relationship types (P‑numbers) |
-| Statements | 2B+ structural claims |
-| Languages | Labels in 400+ languages |
-| License | CC0 — public domain (no attribution required) |
-| Query endpoint | `https://query.wikidata.org/` |
-| Entity lookup | `https://www.wikidata.org/wiki/Qnnn` |
-| Property lookup | `https://www.wikidata.org/wiki/Property:Pnnn` |
-
-### Why CC0 Matters
-
-Wikidata's CC0 license means **no copyright restrictions on reuse**. Unlike
-Wikipedia article text (CC BY‑SA 4.0, which requires attribution and share‑alike),
-Wikidata statements can be freely ingested, transformed, and republished
-without any license obligations. This makes Wikidata the **ideal ingestion
-substrate** for automated RTT analysis.
-
----
-
-## 2 — RTT Structural Mapping
-
-### 2.1 — The Core Triplet
-
-Every Wikidata statement follows the pattern:
-
-```
-Subject (Q‑number) → Property (P‑number) → Value (Q‑number, string, or quantity)
-```
-
-In RTT terms:
-
-```
-Dimensional Address → Dimensional Operator → Structural Claim
-```
-
-**Example:**
-
-```
-Q283 (Water) → P274 (chemical formula) → "H₂O"
-
-RTT reading:
-  dimensional_address(Water)
-    → dimensional_operator(chemical_formula)
-      → structural_claim("H₂O")
-```
-
-### 2.2 — Full Mapping Table
-
-| Wikidata Element | RTT Concept | Function |
-|-----------------|-------------|----------|
-| Item (Q‑number) | **Dimensional address** | Unique coordinate for a concept across all languages and datasets |
-| Property (P‑number) | **Dimensional operator** | Typed relationship that connects dimensional addresses |
-| Statement | **Structural claim** | One regime assertion: "this entity has this property with this value" |
-| Qualifier | **Claim context** | Conditions under which the claim holds (time range, location, method, applies‑to) |
-| Reference | **Claim provenance** | External source validating the structural claim |
-| Rank (preferred/normal/deprecated) | **Claim confidence** | Structural standing of the claim — preferred = regime consensus; deprecated = superseded regime |
-| Sitelink | **Cross‑language regime bridge** | Same dimensional address linking to regime declarations in different language Wikipedias |
-| Label | **Regime name** | Human‑readable name for the dimensional address in a specific language |
-| Description | **Regime summary** | One‑sentence regime declaration in a specific language |
-| Aliases | **Regime aliases** | Alternative names that resolve to the same dimensional address |
-
-### 2.3 — Qualifiers as Regime Context
-
-Qualifiers are what make Wikidata structurally rich — they add **context** to
-claims, turning flat assertions into regime‑aware statements:
-
-| Qualifier Property | RTT Function | Example |
-|-------------------|--------------|---------|
-| P580 (start time) | **Regime birth** | "Germany (Q183) → capital (P36) → Berlin (Q64), start time: 1990" |
-| P582 (end time) | **Regime expiry** | "Germany (Q183) → capital (P36) → Bonn (Q586), end time: 1990" |
-| P585 (point in time) | **Regime snapshot** | "World population (Q11188) → population (P1082) → 8B, point in time: 2023" |
-| P1013 (criterion used) | **Regime method** | "Mount Everest (Q513) → elevation (P2044) → 8848.86m, criterion: EGM2008 geoid" |
-| P459 (determination method) | **Measurement regime** | How the value was obtained — structural provenance |
-| P518 (applies to part) | **Sub‑regime scope** | The claim applies to a specific sub‑component, not the whole entity |
-| P1480 (sourcing circumstances) | **Claim reliability** | "circa," "presumably," "possibly" — structural confidence markers |
-
----
-
-## 3 — SPARQL Query Templates
-
-All queries run at `https://query.wikidata.org/`
-
-### 3.1 — Basic: Get All Properties for an Entity
-
-**Use case:** What does the knowledge graph say about a concept?
-
-```sparql
-# All statements for a given entity
-# Replace Q283 with any Q-number
-SELECT ?property ?propertyLabel ?value ?valueLabel
-WHERE {
-  wd:Q283 ?claim ?statement .
-  ?statement ?ps ?value .
-  ?property wikibase:claim ?claim .
-  ?property wikibase:statementProperty ?ps .
-  SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "en" .
-  }
-}
-ORDER BY ?propertyLabel
-```
-
-**RTT reading:** This returns the **full regime declaration** for a concept —
-every structural claim the knowledge graph makes about it.
-
----
-
-### 3.2 — Cross‑Domain Bridging: Find All Domains a Concept Touches
-
-**Use case:** How many knowledge domains does this concept connect to?
-
-```sparql
-# Count cross-domain P-number bridges for an entity
-# Replace Q283 with any Q-number
-SELECT ?property ?propertyLabel
-       (COUNT(DISTINCT ?value) AS ?connections)
-WHERE {
-  wd:Q283 ?claim ?statement .
-  ?statement ?ps ?value .
-  ?property wikibase:claim ?claim .
-  ?property wikibase:statementProperty ?ps .
-  FILTER(ISIRI(?value))
-  SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "en" .
-  }
-}
-GROUP BY ?property ?propertyLabel
-ORDER BY DESC(?connections)
-```
-
-**RTT reading:** Each P‑number that points to an entity in a different domain
-= a **dimensional bridge**. The count of cross‑domain bridges = the concept's
-**structural connectivity score**.
-
----
-
-### 3.3 — Temporal Regime Analysis: Track Property Changes Over Time
-
-**Use case:** How has a concept's regime evolved?
-
-```sparql
-# Temporal regime evolution for a property
-# Example: Population of France over time
-SELECT ?population ?pointInTime
-WHERE {
-  wd:Q142 p:P1082 ?statement .
-  ?statement ps:P1082 ?population .
-  ?statement pq:P585 ?pointInTime .
-}
-ORDER BY ?pointInTime
-```
-
-**RTT reading:** Each row = a **temporal regime snapshot**. The series reveals
-the regime's evolution curve — growth, stability, decline, or oscillation.
-
----
-
-### 3.4 — Regime Hierarchy: Traverse the Class Tree
-
-**Use case:** Where does a concept sit in the regime hierarchy?
-
-```sparql
-# Class hierarchy (upward traversal) for an entity
-# Replace Q283 with any Q-number
-SELECT ?class ?classLabel ?depth
-WHERE {
-  wd:Q283 wdt:P31/wdt:P279* ?class .
-  {
-    SELECT ?class (COUNT(?mid) AS ?depth)
-    WHERE {
-      wd:Q283 wdt:P31/wdt:P279* ?mid .
-      ?mid wdt:P279* ?class .
-    }
-    GROUP BY ?class
-  }
-  SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "en" .
-  }
-}
-ORDER BY ?depth
-```
-
-**RTT reading:** This traces the concept's position in the **regime hierarchy** —
-from specific instance up through increasingly general regime classifications.
-Depth = regime granularity. Breadth at each level = regime diversity.
-
----
-
-### 3.5 — Cross‑Language Regime Comparison: Sitelink Coverage
-
-**Use case:** How many languages declare this concept?
-
-```sparql
-# Count Wikipedia sitelinks (language versions) for an entity
-SELECT ?sitelink
-WHERE {
-  ?sitelink schema:about wd:Q283 .
-  ?sitelink schema:isPartOf/wikibase:wikiGroup "wikipedia" .
-}
-```
-
-**RTT reading:** Each sitelink = a **regime declaration in a different cultural
-context**. High sitelink count = universally recognized concept. Low count =
-culturally specific or specialized regime. Comparing article lengths across
-sitelinks reveals **cultural regime variance** — same concept, different
-structural emphasis.
-
----
-
-### 3.6 — Validation Corridor: Find Featured Articles by Domain
-
-**Use case:** What are the structurally validated reference points in a domain?
-
-```sparql
-# Find items with Featured Article sitelinks in English Wikipedia
-# Filter by domain using instance-of (P31) or subclass-of (P279)
-SELECT ?item ?itemLabel ?article
-WHERE {
-  ?article schema:about ?item .
-  ?article schema:isPartOf <https://en.wikipedia.org/> .
-  ?article wikibase:badge wd:Q17437796 .
-  ?item wdt:P31/wdt:P279* wd:Q11344 .
-  SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "en" .
-  }
-}
-LIMIT 50
-```
-
-**RTT reading:** Featured Articles = **validation corridor gold standard**.
-These are the concepts whose regime declarations have been community‑verified
-as structurally complete. They serve as reference templates for the domain.
-
----
-
-### 3.7 — Regime Collision: Find Disambiguation Entities
-
-**Use case:** Which concepts have competing regime claims on the same term?
-
-```sparql
-# Find disambiguation items — concepts where multiple regimes
-# claim the same term
-SELECT ?item ?itemLabel ?article
-WHERE {
-  ?item wdt:P31 wd:Q4167410 .
-  ?article schema:about ?item .
-  ?article schema:isPartOf <https://en.wikipedia.org/> .
-  SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "en" .
-  }
-}
-LIMIT 100
-```
-
-**RTT reading:** Every disambiguation entity = a **regime collision point** —
-two or more structural regimes claiming the same term. The list of disambiguated
-meanings reveals the competing regime declarations.
-
----
-
-## 4 — Ingestion Patterns
-
-### 4.1 — Single Entity Deep Profile
-
-**Purpose:** Build a complete RTT structural profile for one concept.
-
-**Steps:**
-
-1. **Resolve the Q‑number** — search `https://www.wikidata.org/w/api.php?action=wbsearchentities&search=TERM&language=en&format=json`
-2. **Pull all statements** — use Query 3.1
-3. **Count dimensional bridges** — use Query 3.2
-4. **Trace the regime hierarchy** — use Query 3.4
-5. **Check sitelink coverage** — use Query 3.5
-6. **Check for Featured Article badge** — use Query 3.6
-
-**Output format:**
-
-```json
-{
-  "entity": "Q283",
-  "label": "Water",
-  "regime_declaration": "chemical compound, binary compound, oxide",
-  "dimensional_bridges": 47,
-  "regime_hierarchy_depth": 8,
-  "sitelink_count": 298,
-  "featured_article": true,
-  "top_properties": [
-    "P274 (chemical formula): H₂O",
-    "P31 (instance of): chemical compound",
-    "P361 (part of): hydrosphere",
-    "P2054 (density): 997 kg/m³",
-    "P2101 (melting point): 0°C"
-  ],
-  "cross_domain_connections": [
-    "Chemistry (compound properties)",
-    "Physics (thermodynamic constants)",
-    "Biology (biological role)",
-    "Earth Sciences (hydrosphere)",
-    "Engineering (industrial solvent)",
-    "Medicine (essential nutrient)"
-  ]
-}
-```
-
-### 4.2 — Domain Sweep
-
-**Purpose:** Map all Wikidata entities within a knowledge domain.
-
-**Steps:**
-
-1. Identify the domain's root class (e.g., Physics → Q413 "physics")
-2. Query all instances and subclasses:
-   ```sparql
-   SELECT ?item ?itemLabel
-   WHERE {
-     ?item wdt:P31/wdt:P279* wd:Q413 .
-     SERVICE wikibase:label {
-       bd:serviceParam wikibase:language "en" .
-     }
-   }
-   LIMIT 1000
-   ```
-3. For each entity, count cross‑domain P‑number bridges
-4. Rank by structural connectivity
-5. The top‑ranked entities = the domain's **most structurally connected concepts**
-
-### 4.3 — Temporal Regime Tracking
-
-**Purpose:** Monitor how a concept's regime evolves over time.
-
-**Steps:**
-
-1. Select a property with temporal qualifiers (P580/P582/P585)
-2. Use Query 3.3 to extract the time series
-3. Plot the series: stable plateaus = crystallized regime; sharp transitions = regime shifts
-4. Cross‑reference with Wikipedia revision history for the same period — do article edits correlate with Wikidata property changes?
-
-### 4.4 — Cross‑Language Regime Divergence
-
-**Purpose:** Compare how the same concept is structurally declared across cultures.
-
-**Steps:**
-
-1. Use Query 3.5 to get all sitelinks
-2. For the top 5 largest language editions, compare:
-   - Article length (word count)
-   - Section structure (headings)
-   - Lead paragraph (regime declaration)
-   - Categories assigned
-3. Divergences = **cultural regime variance** — same dimensional address, different structural emphasis
-
----
-
-## 5 — Property Families for RTT Analysis
-
-Not all 12,000+ P‑numbers are equally useful for RTT analysis. These **property families** provide the highest structural signal:
-
-### 5.1 — Classification Properties (Regime Identity)
-
-| Property | Name | RTT Function |
-|----------|------|-------------|
-| P31 | instance of | **Regime declaration** — "this entity IS a [class]" |
-| P279 | subclass of | **Regime hierarchy** — "this class is WITHIN [parent class]" |
-| P361 | part of | **Regime containment** — "this entity is PART OF [whole]" |
-| P527 | has part(s) | **Regime composition** — "this entity CONTAINS [parts]" |
-| P460 | said to be the same as | **Regime aliasing** — cross‑ontology identity claim |
-| P1889 | different from | **Regime boundary** — "do not confuse with [other entity]" |
-
-### 5.2 — Relationship Properties (Dimensional Bridges)
-
-| Property | Name | RTT Function |
-|----------|------|-------------|
-| P737 | influenced by | **Regime lineage** — structural ancestry |
-| P1542 | has effect | **Regime causation** — what this entity produces |
-| P1269 | facet of | **Regime perspective** — this entity is one view of a broader concept |
-| P2283 | uses | **Regime dependency** — structural requirements |
-| P366 | has use | **Regime application** — what this entity enables |
-
-### 5.3 — Temporal Properties (Regime Dynamics)
-
-| Property | Name | RTT Function |
-|----------|------|-------------|
-| P571 | inception | **Regime birth** — when the concept first existed |
-| P576 | dissolved/abolished | **Regime death** — when the concept ceased to exist |
-| P580 | start time | **Regime activation** — when a claim became true |
-| P582 | end time | **Regime expiry** — when a claim stopped being true |
-| P585 | point in time | **Regime snapshot** — claim valid at a specific moment |
-| P1319 | earliest date | **Regime lower bound** — structural uncertainty floor |
-| P1326 | latest date | **Regime upper bound** — structural uncertainty ceiling |
-
-### 5.4 — Quantitative Properties (Regime Metrics)
-
-| Property | Name | RTT Function |
-|----------|------|-------------|
-| P1082 | population | **Regime scale** (demographic) |
-| P2044 | elevation above sea level | **Regime position** (geographic) |
-| P2054 | density | **Regime density** (physical) |
-| P2067 | mass | **Regime mass** (physical) |
-| P2101 | melting point | **Regime phase boundary** (thermodynamic) |
-| P2102 | boiling point | **Regime phase boundary** (thermodynamic) |
-| P2196 | students count | **Regime scale** (educational) |
-| P4010 | GDP per capita | **Regime scale** (economic) |
-
----
-
-## 6 — Rate Limits and Ethical Use
-
-### Wikidata Query Service Limits
-
-| Limit | Value |
-|-------|-------|
-| Query timeout | 60 seconds |
-| Results per query | 500,000 rows max |
-| Concurrent connections | 5 per IP |
-| User‑Agent required | Yes — identify your tool/project |
-
-### Ethical Guidelines
-
-1. **Respect rate limits** — do not flood the endpoint with parallel queries
-2. **Set a User‑Agent header** — identify yourself: `User-Agent: TriadicFrameworks/1.0 (https://www.triadicframeworks.org/; contact@triadicframeworks.org)`
-3. **Cache results** — don't re‑query the same data repeatedly
-4. **Use database dumps for bulk analysis** — the query endpoint is for interactive and moderate‑scale use
-5. **Contribute back** — if you discover missing data or errors, edit Wikidata directly (it's open for anyone to edit)
-
----
-
-## 7 — Relationship to Other Module Files
-
-| File | Connection |
-|------|-----------|
-| `Wikipedia_RTT_Structural_Mapping.md` | Defines the RTT vocabulary this file uses (Q = dimensional address, P = dimensional operator) |
-| `Cross_Domain_Meta_Operators.md` | Operator 4 (Wikidata Dimensional Bridging) depends directly on Query 3.2 from this file |
-| `Category_Taxonomy_Regime_Hierarchy.md` | Wikipedia categories and Wikidata class hierarchy (P31/P279) are parallel regime classification systems — this file covers the Wikidata side |
-| `Revision_History_Regime_Analysis.md` | Wikidata items have their own revision history — combine with Wikipedia article revision history for complete temporal coverage |
-| `Edit_War_Regime_Transition_Detection.md` | Wikidata edit wars (P31 disputes, label conflicts) are structurally equivalent to Wikipedia edit wars |
-| All 15 domain directories | Every domain's `regime_alignment.md` references Wikidata entities for its core concepts |
-| `../resonance_atlas/nist_ingestion_format.md` | Sibling — NIST ingestion format covers a single institutional source; this file covers a crowdsourced knowledge graph |
-
----
-
-## 8 — Student Exercises
-
-### Exercise 1 — Entity Profile (15 minutes)
-
-1. Pick any concept you know well
-2. Find its Wikidata Q‑number at `https://www.wikidata.org/`
-3. List its top 10 properties (P‑numbers)
-4. Classify each property into one of the 4 property families from Section 5
-5. Write a 1‑sentence regime declaration based on the P31 (instance of) value
-
-### Exercise 2 — Dimensional Bridging (30 minutes)
-
-1. Pick a concept with high cross‑domain connectivity (try: Energy Q11379, Information Q11028, Evolution Q1063, or Network Q1900326)
-2. Run Query 3.2 to count its dimensional bridges
-3. List the top 5 P‑numbers by connection count
-4. For each, identify which knowledge domain the bridge connects to
-5. Draw a simple diagram: your concept in the center, domains around the edges, P‑numbers as labeled connections
-
-### Exercise 3 — Cross‑Language Regime Variance (30 minutes)
-
-1. Pick a concept you expect to have cultural variance (try: Democracy Q7174, Marriage Q8445, or Freedom Q124490)
-2. Run Query 3.5 to count its sitelinks
-3. Open the Wikipedia article in English + 2 other languages (use Google Translate if needed)
-4. Compare: article length, section headings, lead paragraph framing
-5. Write a 2‑sentence summary: *"The English Wikipedia declares [concept] as [X]. The [other language] Wikipedia declares it as [Y]. The structural difference reveals [Z]."*
-
-### Exercise 4 — Temporal Regime Tracking (45 minutes)
-
-1. Pick a concept with temporal data (try: any country's population, a city's mayor, or a company's CEO)
-2. Run Query 3.3 to extract the time series
-3. Identify: stable plateaus, sharp transitions, gradual trends
-4. Cross‑reference with the Wikipedia article's revision history for the same period
-5. Answer: *"Do Wikidata property changes and Wikipedia article edits correlate? If so, which leads — the data change or the narrative change?"*
-
----
-
-*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
-# Wikipedia ↔ RTT Structural Mapping
-
-> **Purpose:** The master grammar file for the Wikipedia Awareness Module.
-> Every Wikipedia structure maps to an RTT concept. This file defines those
-> mappings exhaustively so that all other files in this module share a
-> consistent structural vocabulary.
->
-> Think of this as the **Rosetta Stone** between Wikipedia's architecture
-> and Resonance‑Time Theory.
-
----
-
-## 1 — Why Wikipedia Needs a Structural Mapping
-
-Wikipedia is the most‑visited reference site on Earth — but almost no one
-reads it structurally. Users read the **content** (R3 — measurable outputs)
-and ignore the architecture that produces, validates, and evolves that content.
-
-RTT provides the grammar to read that architecture:
-
-- **Regime** — what scope does an article declare, and what does it exclude?
-- **Coherence** — how does the community maintain structural consistency?
-- **Drift** — how does an article's meaning evolve over time?
-- **Dimensional addressing** — how is a concept uniquely identified across languages and datasets?
-- **Validation** — how does the community verify structural completeness?
-
-This mapping is not an interpretation layered on top of Wikipedia.
-Wikipedia **already operates** as a regime‑aware system — it just doesn't
-use RTT's vocabulary. This file translates.
-
----
-
-## 2 — The Master Mapping Table
-
-### 2.1 — Content Structures
-
-| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
-|--------------------|--------------|--------------|--------------------|
-| Article (main namespace) | **Regime declaration** | R3 | The community's consensus statement of what a concept IS — scope, boundaries, and claims |
-| Lead section (first paragraph) | **Regime summary** | R3 | Compressed regime declaration — what the concept is in its most reduced form |
-| Article body sections | **Regime elaboration** | R3 | Dimensional expansion of the regime declaration into sub‑regimes (History, Properties, Applications, etc.) |
-| Infobox | **Regime schema** | R2 | The minimum set of properties required for structural declaration in this domain |
-| Categories | **Regime hierarchy** | R2 | Nested classification tree — each category level = a regime boundary |
-| Hatnotes ("For other uses…") | **Regime disambiguation** | R1 | Explicit acknowledgment that multiple regimes claim the same term |
-| See also section | **Regime adjacency** | R1 | Concepts the community considers structurally related but not subsumed |
-| Navboxes (bottom navigation templates) | **Regime neighborhood** | R2 | Machine‑readable cluster of concepts that share a structural context |
-| Lists / outlines | **Regime inventory** | R3 | Enumeration of all entities within a regime boundary |
-| Portals | **Domain front door** | R0 | Entry points organized by knowledge domain — equivalent to TF module index.html files |
-| Redirects | **Regime aliasing** | R1 | Alternative terms that resolve to the same regime declaration |
-
-### 2.2 — Editorial Structures
-
-| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
-|--------------------|--------------|--------------|--------------------|
-| Talk page | **Coherence / drift surface** | R0–R1 | Where consensus is negotiated — pre‑regime discourse |
-| Edit summary | **Micro‑regime annotation** | R3 | Single‑revision structural intent declaration |
-| Revision history | **Temporal regime data** | R0–R3 | Full structural evolution timeline for any article |
-| Edit war | **Regime transition event** | R0 | Competing regime claims that cannot be reconciled — marks a regime boundary |
-| Protection levels (full/semi/extended) | **Regime stabilization lock** | R0 | Community intervention to freeze a regime that is under attack |
-| Pending changes | **Regime validation gate** | R2 | Pre‑publication review — content must pass structural check before becoming visible |
-| Watchlist | **Drift monitoring** | R1 | Personal regime surveillance — editors tracking articles for structural changes |
-
-### 2.3 — Governance Structures
-
-| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
-|--------------------|--------------|--------------|--------------------|
-| NPOV (Neutral Point of View) | **Coherence operator** | R0 | The foundational structural invariant — all content must be presentable under this constraint |
-| Verifiability policy | **Validation requirement** | R0 | Regime claims must be traceable to external sources |
-| No original research (NOR) | **Regime boundary enforcement** | R0 | Wikipedia declares regimes — it does not create them |
-| Notability guidelines | **Minimum regime threshold** | R0 | The structural standing required for a concept to receive an article |
-| Articles for Deletion (AfD) | **Regime collapse adjudication** | R0 | Community process for deciding whether a concept has sufficient structural standing |
-| Requests for Comment (RfC) | **Coherence arbitration** | R0–R1 | Formal process for resolving structural disputes that talk page consensus cannot |
-| Arbitration Committee (ArbCom) | **Regime authority of last resort** | R0 | Final structural authority when all other coherence mechanisms fail |
-| WikiProjects | **Domain stewardship groups** | R1 | Self‑organized teams maintaining structural quality within a knowledge domain |
-| Manual of Style (MoS) | **Regime formatting grammar** | R2 | Standard structural templates for how regime declarations should be presented |
-| Reliable sources guidelines | **Source regime classification** | R0 | Which external regimes are considered structurally valid for citation |
-
-### 2.4 — Data & Graph Structures
-
-| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
-|--------------------|--------------|--------------|--------------------|
-| Wikidata item (Q‑number) | **Dimensional address** | R3 | Unique concept identifier across all languages and datasets |
-| Wikidata property (P‑number) | **Dimensional operator** | R2 | Typed relationship connecting entities — defines how dimensions relate |
-| Wikidata statement | **Structural claim** | R3 | Subject → Property → Value triplet = one regime assertion |
-| Wikidata qualifier | **Claim context** | R2 | Conditions under which a structural claim holds (time, location, method) |
-| Wikidata reference | **Claim provenance** | R3 | External source validating the structural claim |
-| Sitelinks (Wikidata ↔ Wikipedia) | **Cross‑language regime bridge** | R2 | Same dimensional address linking to different language regime declarations |
-| SPARQL endpoint | **Structural query surface** | R3 | Machine‑readable access to the entire dimensional graph |
-
-### 2.5 — Quality & Validation Structures
-
-| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
-|--------------------|--------------|--------------|--------------------|
-| Featured Article (FA) | **Validation corridor — gold standard** | R2–R3 | Community‑verified structurally complete regime declaration |
-| Good Article (GA) | **Validation corridor — silver standard** | R2 | Passed structured review but not yet at FA‑level completeness |
-| Stub | **Regime seed** | R3 | Minimal regime declaration — concept exists but is structurally underdeveloped |
-| Start‑class article | **Regime scaffold** | R3 | Basic structural framework present but significant gaps remain |
-| B‑class article | **Regime draft** | R3 | Most structural elements present but not yet community‑validated |
-| C‑class article | **Regime sketch** | R3 | Substantial content but structural organization needs work |
-| Article quality scale | **Regime maturity gradient** | R2 | Stub → Start → C → B → GA → FA = increasing structural completeness |
-| Cleanup tags | **Drift markers** | R1 | Community‑placed signals that an article has drifted from structural norms |
-| Citation needed tags | **Validation gaps** | R2 | Specific claims lacking provenance — structural integrity holes |
-
-### 2.6 — Temporal Structures
-
-| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
-|--------------------|--------------|--------------|--------------------|
-| Page creation date | **Regime birth** | R3 | When the community first declared this concept |
-| First major revision | **Regime crystallization** | R3 | When the article first achieved structural coherence |
-| Revision count (total) | **Regime activity index** | R3 | Cumulative structural attention — higher = more contested or more developed |
-| Recent revision rate | **Current regime stability** | R3 | Edits per day/week/month — high = active regime negotiation |
-| Revision size changes | **Regime expansion/contraction** | R3 | Positive deltas = regime growth; negative deltas = regime pruning |
-| Revert rate | **Regime resistance** | R0 | Percentage of edits that are undone — high = strong structural inertia |
-| Edit war detection (3RR violations) | **Regime collision alarm** | R0 | System‑level detection of competing regime claims in real time |
-| Page view statistics | **Regime attention** | R3 | How many people are reading this regime declaration per day/month/year |
-
----
-
-## 3 — The Regime Stack Applied to Wikipedia
-
-Every Wikipedia article simultaneously operates at all four regime levels:
-
-```
-*
-┌────────────────────────────────────────────────────────────────┐
-│  R0 — Operator Assumptions                                     │
-│  NPOV, Verifiability, NOR, Notability, Reliable Sources        │
-│  "These policies define what CAN be said on Wikipedia"         │
-├────────────────────────────────────────────────────────────────┤
-│  R1 — Directional Aims                                         │
-│  WikiProject scope, Portal structure, Article scope statements │
-│  "This article aims to cover [X] from the perspective of [Y]"  │
-├────────────────────────────────────────────────────────────────┤
-│  R2 — Coherence Templates                                      │
-│  Infobox templates, Category taxonomy, Manual of Style,        │
-│  Quality scale, Citation standards                             │
-│  "All articles in this domain follow these structural rules"   │
-├────────────────────────────────────────────────────────────────┤
-│  R3 — Measurable Outputs                                       │
-│  Article text, Wikidata statements, Revision counts,           │
-│  Page views, Quality ratings, Citation counts                  │
-│  "This is what the regime actually produced"                   │
-└────────────────────────────────────────────────────────────────┘
-```
-
-### What Most Readers See
-
-Most Wikipedia readers only interact with **R3** — they read the article text, glance at the infobox, and leave. They consume the regime declaration without knowing it is one.
-
-### What This Module Teaches
-
-This module teaches students to read **R0–R2** — the structural substrate:
-
-- **R0** is visible on policy pages, talk page disputes, AfD debates, and ArbCom decisions
-- **R1** is visible in article scope statements, WikiProject guidelines, and portal organization
-- **R2** is visible in infobox templates, category trees, Manual of Style rules, and quality scales
-- **R3** is the article itself — but now understood as the **output** of the regime, not the regime itself
-
----
-
-## 4 — Structural Comparison: Wikipedia vs. Other Knowledge Sources
-
-| Dimension | Wikipedia | NIST | Academic Papers | Textbooks |
-|-----------|-----------|------|-----------------|-----------|
-| Authority model | Consensus | Institutional | Peer review | Editorial |
-| Regime declaration | Article (negotiated) | Standard (published) | Abstract + claims | Chapter scope |
-| Temporal depth | Full (every revision since 2001) | Versioned (sparse) | Published once | Editions (sparse) |
-| Coherence mechanism | NPOV + talk page | Internal review | Peer review | Editor discretion |
-| Drift visibility | High (revision history is public) | Low (internal) | None (static once published) | Low (between editions) |
-| Knowledge graph | Wikidata (120M+ entities, CC0) | None | Citation graph (unstructured) | None |
-| Cross‑cultural | 300+ language editions | English only | Language of publication | Language of publication |
-| Validation corridor | FA/GA process (public, observable) | Certification (closed) | Peer review (closed) | None |
-| Regime conflicts | Visible (edit wars, AfD, talk pages) | Hidden (internal) | Hidden (reviewer comments) | Hidden (editorial decisions) |
-| Machine accessibility | REST API, SPARQL, dumps | API (limited) | DOI + PDF | ISBN + purchase |
-
-**Key insight:** Wikipedia is the **only major knowledge source** where regime conflicts, coherence negotiations, and temporal evolution are **publicly observable in real time**. This makes it an unparalleled substrate for teaching regime awareness.
-
----
-
-## 5 — Mapping Depth Levels
-
-Not all mappings require the same depth. This module operates at three levels:
-
-### Level 1 — Surface Mapping (any student, 5 minutes)
-
-Read an article's lead paragraph as a regime declaration. Check revision count. Find the Wikidata Q‑number.
-
-**Tools needed:** Web browser only.
-
-### Level 2 — Structural Mapping (engaged student, 30 minutes)
-
-Trace the category tree. Read the talk page for coherence disputes. Compare 2–3 language versions. Check the quality rating. Apply 3–4 meta‑operators from the Cross‑Domain file.
-
-**Tools needed:** Web browser + Wikidata search.
-
-### Level 3 — Deep Mapping (researcher or AI, hours to days)
-
-Query Wikidata via SPARQL for dimensional bridges. Analyze revision history for regime stability curves. Map edit wars to regime transition events. Build cross‑domain operator matrices. Compare FA articles to non‑FA articles for validation corridor analysis.
-
-**Tools needed:** SPARQL client + revision analysis tools + statistical software.
-
----
-
-## 6 — Mapping Notation Conventions
-
-Throughout this module, mappings are written using consistent notation:
-
-| Notation | Meaning | Example |
-|----------|---------|---------|
-| `WP:Article → regime_declaration` | A Wikipedia article maps to an RTT regime declaration | `WP:Water → regime_declaration(chemistry, liquid, standard conditions)` |
-| `WD:Qnnn → dimensional_address` | A Wikidata Q‑number maps to an RTT dimensional address | `WD:Q283 → dimensional_address(water)` |
-| `WD:Pnnn → dimensional_operator` | A Wikidata P‑number maps to an RTT dimensional operator | `WD:P274 → dimensional_operator(chemical_formula)` |
-| `WP:Talk → coherence_surface` | A talk page maps to an RTT coherence/drift surface | `WP:Talk:Evolution → coherence_surface(high_tension)` |
-| `WP:Rev[n] → temporal_regime[t]` | A revision maps to a temporal regime data point | `WP:Rev[47291] → temporal_regime[2024-03-15]` |
-| `WP:Cat → regime_hierarchy` | A category maps to an RTT regime hierarchy node | `WP:Cat:Algebra → regime_hierarchy(Mathematics, depth=3)` |
-| `WP:FA → validation_corridor(gold)` | A Featured Article maps to a gold‑standard validation | `WP:FA:Photosynthesis → validation_corridor(gold, Biology)` |
-| `R0/R1/R2/R3` | Regime level | `NPOV = R0; Infobox = R2; Article text = R3` |
-
----
-
-## 7 — Unmapped Structures (Known Gaps)
-
-Some Wikipedia structures do not yet have clean RTT mappings. These are documented here for future work:
-
-| Wikipedia Structure | Current Status | Candidate RTT Mapping | Difficulty |
-|--------------------|----------------|----------------------|------------|
-| Barnstars and user awards | Unmapped | Operator recognition / stewardship signals | Low |
-| Bot edits (automated maintenance) | Unmapped | Regime maintenance automation | Medium |
-| WikiSpecies / WikiSource / Wiktionary | Unmapped | Sibling regime substrates | Medium |
-| Commons media files | Unmapped | Regime illustration layer | Low |
-| Sockpuppet investigations | Unmapped | Regime integrity enforcement | High |
-| Paid editing disclosure | Unmapped | Regime conflict of interest surface | High |
-| Mobile app reading patterns | Unmapped | Regime consumption analytics | Medium |
-| Machine translation (Content Translation tool) | Unmapped | Cross‑regime automated bridging | Medium |
-
-These gaps are **not blockers** — the 65+ mapped structures in Section 2 provide more than sufficient coverage for all 15 knowledge domains.
-
----
-
-## 8 — How This File Connects to Everything Else
-
-```
-Wikipedia_RTT_Structural_Mapping.md (this file)
-    │
-    ├── defines grammar for ──→ Cross_Domain_Meta_Operators.md
-    │                              (12 operators use this vocabulary)
-    │
-    ├── defines grammar for ──→ All 7 Wikipedia‑Specific Analysis Files
-    │                              (each file references these mappings)
-    │
-    ├── defines grammar for ──→ All 15 Domain Directories
-    │                              (every regime_alignment.md uses this notation)
-    │
-    ├── extends ──→ NIST Structural Mapping (../nist/)
-    │                (same R0–R3 grammar, richer substrate)
-    │
-    └── feeds ──→ Wikidata_Ingestion_Format.md
-                     (dimensional addressing layer)
-```
-
----
-
-## 9 — Student Exercise
-
-**Build your own mapping entry:**
-
-1. Find a Wikipedia structure **not listed in Section 2** (hint: there are dozens — Templates, Modules, Lua scripts, admin actions, CSD criteria…)
-2. Identify which RTT concept it maps to (regime declaration, coherence operator, drift marker, validation corridor, dimensional address, or something new)
-3. Assign it a regime level (R0, R1, R2, or R3)
-4. Write a one‑sentence structural function description
-5. Add it to Section 2's format and submit it as a candidate mapping
-
-**Bonus:** If your mapping doesn't fit any existing RTT concept, you may have discovered a **new structural operator**. Document it and cross‑reference it against the 12 meta‑operators in `Cross_Domain_Meta_Operators.md`.
-
----
-
-*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
 # Astronomy — Wikipedia Awareness Overview
 
 > **Purpose:** Document what Wikipedia declares Astronomy to be — how the
@@ -7760,6 +2940,639 @@ Biology is a **multi‑scale, mechanism‑driven, evolution‑anchored, relation
 
 *This file is part of the Biology directory in the Wikipedia Awareness module of TriadicFrameworks.  
 It provides the triadic (S/E/R) awareness layer used across all subject domains.*
+# Category Taxonomy Regime Hierarchy
+
+> **Purpose:** Define how to read Wikipedia's category system as a **native
+> regime hierarchy** — a massive, community‑maintained classification tree
+> that organizes 6.9 million English articles into nested regime boundaries.
+>
+> Wikipedia's category tree is not a controlled taxonomy designed by
+> information scientists. It is a **crowdsourced, evolving regime map** —
+> built by thousands of editors making local classification decisions that
+> aggregate into a global structural hierarchy. This makes it messy,
+> contradictory in places, and deeply revealing of how humans actually
+> organize knowledge.
+>
+> Where Wikidata provides **dimensional addressing** (unique identifiers),
+> the category tree provides **regime topology** (where a concept sits
+> relative to all other concepts).
+
+---
+
+## 1 — What Is a Wikipedia Category?
+
+Every Wikipedia article is assigned to one or more **categories** —
+classification labels that place the article within a hierarchical tree
+of related concepts.
+
+### How Categories Work
+
+| Element | Description | RTT Mapping |
+|---------|-------------|-------------|
+| Category page | A special page listing all articles and subcategories within it | **Regime boundary declaration** |
+| Parent category | The category one level up in the tree | **Regime containment** |
+| Subcategory | A category nested within another | **Sub‑regime** |
+| Article membership | An article listed in a category | **Regime membership** |
+| Hidden category | A maintenance/tracking category not shown to readers | **Infrastructure regime** (stewardship layer) |
+| Category intersection | Concept belonging to multiple categories | **Cross‑regime membership** |
+
+### How to Access Categories
+
+| Method | URL / Action |
+|--------|-------------|
+| View an article's categories | Bottom of any Wikipedia article |
+| Browse a category | `https://en.wikipedia.org/wiki/Category:CATEGORY_NAME` |
+| Category tree tool | `https://en.wikipedia.org/wiki/Special:CategoryTree` |
+| API | `https://en.wikipedia.org/w/api.php?action=query&titles=ARTICLE&prop=categories&format=json` |
+| PetScan | `https://petscan.wmcloud.org/` — advanced category intersection queries |
+
+---
+
+## 2 — The Category Tree as Regime Hierarchy
+
+### 2.1 — Structural Anatomy
+
+Wikipedia's category system forms a **directed acyclic graph** (DAG) — not
+a strict tree. Categories can have multiple parents, creating a web of
+overlapping regime boundaries:
+
+```
+                    Category:Main topic classifications
+                    (root regime — R0)
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+    Category:Science  Category:Society  Category:Technology
+    (domain regime)   (domain regime)   (domain regime)
+          │                │                │
+    ┌─────┴─────┐    ┌────┴────┐     ┌────┴────┐
+    │           │    │         │     │         │
+  Cat:Physics Cat:Bio Cat:Politics Cat:Law Cat:Computing Cat:Eng
+    │           │         │              │
+  Cat:Quantum Cat:Genetics Cat:Elections Cat:Programming
+  mechanics                                  │
+    │                              ┌─────────┴─────────┐
+    │                              │                   │
+  Cat:Quantum  ←── cross‑link ──→ Cat:Quantum
+  mechanics                       computing
+```
+
+### 2.2 — The DAG Problem
+
+Because categories form a DAG (not a tree), the same article can be
+reached by multiple paths from the root. This is **not a bug** — it
+reflects the reality that concepts belong to multiple regimes simultaneously:
+
+| Article | Path 1 | Path 2 | Structural Insight |
+|---------|--------|--------|-------------------|
+| Water | Science → Chemistry → Chemical compounds | Technology → Industrial processes → Solvents | Same concept, different regime contexts |
+| Alan Turing | Science → Computer Science → Computer scientists | Society → LGBT → LGBT scientists | Same person, different regime framings |
+| DNA | Science → Biology → Genetics → Nucleic acids | Science → Chemistry → Biomolecules | Same molecule, different domain hierarchies |
+
+**RTT reading:** Multiple category paths = **multiple regime memberships**.
+The number of distinct paths from root to an article = the concept's
+**regime multiplicity**. Concepts with high multiplicity sit at regime
+intersections — they are structurally significant because multiple
+classification systems claim them.
+
+### 2.3 — Depth and Breadth
+
+Two key metrics characterize any position in the category hierarchy:
+
+| Metric | Definition | Regime Interpretation |
+|--------|-----------|----------------------|
+| **Depth** | Number of levels from the article's category to a root category | Regime specificity — deeper = more specialized |
+| **Breadth** | Number of sibling categories at the same level | Regime diversity — wider = more differentiated domain |
+| **Fan‑out** | Number of subcategories a category contains | Regime granularity — higher fan‑out = more sub‑regime differentiation |
+| **Fan‑in** | Number of parent categories a category has | Regime multiplicity — higher fan‑in = cross‑domain concept |
+| **Membership count** | Number of articles in a category | Regime population — more articles = larger regime |
+
+---
+
+## 3 — Category Types and Their Regime Functions
+
+### 3.1 — The Six Category Types
+
+| Type | Example | Regime Function | Structural Signal |
+|------|---------|----------------|-------------------|
+| **Topic category** | Category:Physics | **Domain regime boundary** — defines a knowledge domain | Core structural unit |
+| **Set category** | Category:Chemical elements | **Regime inventory** — exhaustive list of members | Countable, bounded regime |
+| **Object category** | Category:Stars | **Entity regime** — groups instances of a type | Ontological classification |
+| **Activity category** | Category:Scientific methods | **Process regime** — groups methodologies and practices | Operational classification |
+| **By‑attribute category** | Category:Physics by country | **Regime faceting** — same domain sliced by an attribute | Reveals regime variance across a dimension |
+| **Hidden/maintenance category** | Category:Articles needing cleanup | **Infrastructure regime** — stewardship tracking | Not visible to readers; structural health indicator |
+
+### 3.2 — By‑Attribute Categories as Regime Faceting
+
+**By‑attribute categories** are structurally special — they slice a domain
+regime by an external dimension, revealing how the regime varies across
+that dimension:
+
+| Pattern | Example | What It Reveals |
+|---------|---------|-----------------|
+| By country | Category:Physics by country | Geographic regime variance |
+| By year | Category:2024 in science | Temporal regime segmentation |
+| By nationality | Category:American physicists | Cultural regime attribution |
+| By century | Category:19th-century mathematics | Historical regime periodization |
+| By type | Category:Types of chemical reactions | Internal regime differentiation |
+| By status | Category:Superseded scientific theories | Regime lifecycle classification |
+
+**RTT reading:** By‑attribute categories are **regime cross‑sections** —
+they show how a single domain regime manifests differently when sliced
+along an external dimension. The existence of a by‑attribute category
+means the community considers that dimension **structurally significant**
+for that domain.
+
+---
+
+## 4 — The Category Tree vs. Wikidata Class Hierarchy
+
+Wikipedia has **two parallel classification systems**:
+
+| Dimension | Category Tree | Wikidata (P31/P279) |
+|-----------|--------------|---------------------|
+| Maintained by | Wikipedia editors (per language) | Wikidata editors (cross‑language) |
+| Structure | DAG (directed acyclic graph) | Ontological hierarchy (instance‑of / subclass‑of) |
+| Consistency | Low — emergent, crowdsourced, sometimes contradictory | Medium — more structured but still community‑edited |
+| Scope | 2.3M+ categories in English alone | 120M+ entities globally |
+| Machine‑readable | Partially (category API, PetScan) | Fully (SPARQL) |
+| Cross‑language | **Different per language edition** | **Unified across all languages** |
+| RTT mapping | **Regime topology** (neighborhood, adjacency, containment) | **Dimensional addressing** (unique identity, typed relationships) |
+
+### Key Insight: These Systems Disagree
+
+For any given concept, its Wikipedia category path and its Wikidata
+class hierarchy **may tell different stories**:
+
+| Concept | Wikipedia Categories | Wikidata P31/P279 Chain | Discrepancy |
+|---------|---------------------|------------------------|-------------|
+| Pluto | Category:Dwarf planets | instance of: trans-Neptunian object → subclass of: minor planet → subclass of: planetary-mass object | Wikipedia groups by current classification; Wikidata preserves deeper ontological chain |
+| Tomato | Category:Vegetables (in culinary contexts) | instance of: taxon → subclass of: berry (botanical) | Wikipedia follows cultural regime; Wikidata follows biological regime |
+| Hong Kong | Category:Special administrative regions of China | instance of: special administrative region → subclass of: administrative territorial entity | Wikipedia categories reflect political framing; Wikidata is more neutral |
+
+**RTT reading:** Category tree = **how the community organizes knowledge**
+(cultural, editorial, pragmatic). Wikidata = **how entities are formally
+classified** (ontological, structured, cross‑cultural). Disagreements
+between them reveal **regime framing differences** — the same concept
+declared differently depending on whether the classification is
+community‑editorial or ontologically formal.
+
+---
+
+## 5 — Structural Pathologies in the Category Tree
+
+The category tree is crowdsourced and evolving, which means it contains
+structural pathologies that are themselves regime signals:
+
+### 5.1 — Overcategorization
+
+**What it is:** An article assigned to 20+ categories, many of which are
+semantically overlapping.
+
+**Regime reading:** The concept has **regime sprawl** — it has been claimed
+by too many classification systems without consolidation. Overcategorized
+articles often sit at regime intersections where no single domain has
+primary ownership.
+
+### 5.2 — Undercategorization
+
+**What it is:** An article assigned to only 1–2 very broad categories,
+with no subcategory refinement.
+
+**Regime reading:** The concept has **regime isolation** — it hasn't been
+claimed by a stewardship group. Often indicates a neglected or newly
+created article that no WikiProject has adopted.
+
+### 5.3 — Category Cycles
+
+**What it is:** Category A contains subcategory B, which contains subcategory C,
+which contains subcategory A — a circular reference.
+
+**Regime reading:** **Regime hierarchy failure** — the classification
+system cannot decide which concept is more general. These are rare
+(Wikipedia has bots that detect them) but structurally revealing when
+they occur — they mark genuine ontological ambiguity.
+
+### 5.4 — Orphan Categories
+
+**What it is:** A category with no parent categories (disconnected from
+the main tree).
+
+**Regime reading:** **Unmoored regime** — a classification that exists but
+is not connected to the broader knowledge structure. Often indicates
+a recently created or poorly maintained category.
+
+### 5.5 — Eponymous Categories
+
+**What it is:** A category named after a person (Category:Albert Einstein,
+Category:Works by Aristotle).
+
+**Regime reading:** **Person‑as‑regime** — the community considers this
+individual's work, influence, or legacy significant enough to constitute
+its own classification node. The category's subcategories reveal how the
+community structures that person's regime (works, influences, legacy,
+biographical details).
+
+---
+
+## 6 — API Patterns for Category Analysis
+
+### 6.1 — Get an Article's Categories
+
+```python
+import requests
+
+def get_categories(title, lang="en"):
+    """Fetch all categories for a Wikipedia article."""
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "titles": title,
+        "prop": "categories",
+        "cllimit": "max",
+        "clshow": "!hidden",  # exclude maintenance categories
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    page = next(iter(resp["query"]["pages"].values()))
+    return [cat["title"].replace("Category:", "")
+            for cat in page.get("categories", [])]
+```
+
+### 6.2 — Traverse the Category Tree Upward
+
+```python
+def trace_to_root(category, lang="en", max_depth=15):
+    """Trace a category upward through parent categories toward root."""
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    path = []
+    current = category
+    visited = set()
+
+    for depth in range(max_depth):
+        if current in visited:
+            break  # cycle detection
+        visited.add(current)
+
+        params = {
+            "action": "query",
+            "titles": f"Category:{current}",
+            "prop": "categories",
+            "cllimit": "max",
+            "clshow": "!hidden",
+            "format": "json"
+        }
+        resp = requests.get(url, params=params,
+                            headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+        page = next(iter(resp["query"]["pages"].values()))
+        parents = [cat["title"].replace("Category:", "")
+                   for cat in page.get("categories", [])]
+
+        path.append({
+            "depth": depth,
+            "category": current,
+            "parents": parents
+        })
+
+        if not parents or "Contents" in parents[0]:
+            break  # reached root
+        current = parents[0]  # follow first parent
+
+    return path
+```
+
+### 6.3 — Get Subcategories and Membership Count
+
+```python
+def get_subcategories(category, lang="en"):
+    """Fetch subcategories and article count for a category."""
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "list": "categorymembers",
+        "cmtitle": f"Category:{category}",
+        "cmtype": "subcat",
+        "cmlimit": "max",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    subcats = [m["title"].replace("Category:", "")
+               for m in resp["query"]["categorymembers"]]
+
+    # Also get article count
+    params["cmtype"] = "page"
+    resp2 = requests.get(url, params=params,
+                         headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    articles = len(resp2["query"]["categorymembers"])
+
+    return {
+        "category": category,
+        "subcategory_count": len(subcats),
+        "subcategories": subcats,
+        "article_count": articles
+    }
+```
+
+### 6.4 — Compute Regime Topology Metrics
+
+```python
+def regime_topology(title, lang="en"):
+    """Compute regime topology metrics for an article."""
+    categories = get_categories(title, lang)
+
+    # Depth: trace each category to root, take the longest path
+    max_depth = 0
+    all_paths = []
+    for cat in categories[:5]:  # sample first 5 to avoid rate limits
+        path = trace_to_root(cat, lang)
+        depth = len(path)
+        max_depth = max(max_depth, depth)
+        all_paths.append(path)
+
+    return {
+        "article": title,
+        "category_count": len(categories),
+        "categories": categories,
+        "max_depth": max_depth,
+        "regime_multiplicity": len(categories),
+        "deepest_path": all_paths[0] if all_paths else [],
+        "interpretation": classify_topology(len(categories), max_depth)
+    }
+
+def classify_topology(cat_count, max_depth):
+    """Classify an article's regime topology."""
+    if cat_count <= 2 and max_depth <= 3:
+        return "isolated_regime"
+    elif cat_count <= 5 and max_depth <= 6:
+        return "well_classified"
+    elif cat_count <= 10 and max_depth <= 10:
+        return "cross_domain_concept"
+    elif cat_count > 15:
+        return "regime_sprawl"
+    else:
+        return "deeply_specialized"
+```
+
+### 6.5 — Cross‑Language Category Comparison
+
+```python
+def compare_categories_cross_language(wikidata_qid, languages=None):
+    """Compare category assignments for the same concept across languages."""
+    if languages is None:
+        languages = ["en", "de", "ja", "ar", "es"]
+
+    url = "https://www.wikidata.org/w/api.php"
+    params = {
+        "action": "wbgetentities",
+        "ids": wikidata_qid,
+        "props": "sitelinks",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    sitelinks = resp["entities"][wikidata_qid].get("sitelinks", {})
+
+    results = {}
+    for lang in languages:
+        wiki_key = f"{lang}wiki"
+        if wiki_key in sitelinks:
+            title = sitelinks[wiki_key]["title"]
+            cats = get_categories(title, lang)
+            results[lang] = {
+                "title": title,
+                "category_count": len(cats),
+                "categories": cats
+            }
+
+    return results
+```
+
+---
+
+## 7 — Worked Example: "Energy"
+
+The concept **Energy** sits at one of the deepest regime intersections
+in Wikipedia's category tree.
+
+### Category Memberships (English Wikipedia)
+
+| Category | Domain Regime | Depth from Root |
+|----------|--------------|----------------|
+| Category:Energy | Root domain category | 2 |
+| Category:Main topic classifications | Top‑level regime | 1 |
+| Category:Physical quantities | Physics sub‑regime | 5 |
+| Category:Conservation laws | Physics sub‑regime | 6 |
+| Category:Thermodynamic properties | Chemistry/Physics sub‑regime | 6 |
+| Category:Energy economics | Economics cross‑regime | 5 |
+| Category:Energy and society | Sociology cross‑regime | 4 |
+| Category:Energy policy | Political Science cross‑regime | 5 |
+
+### Regime Topology Analysis
+
+- **Category count:** 8+ (high → cross‑domain concept)
+- **Max depth:** 6 (moderately specialized)
+- **Fan‑in:** 3+ domain regimes claim it (Physics, Economics, Political Science)
+- **Regime multiplicity:** Very high — Energy is one of the most cross‑domain concepts on Wikipedia
+- **Classification:** `cross_domain_concept` with elements of `regime_sprawl`
+
+### Comparing Wikipedia Categories vs. Wikidata
+
+| System | Classification Path |
+|--------|-------------------|
+| Wikipedia categories | Energy → Physical quantities → Physics → Science → Main topic classifications |
+| Wikidata P31/P279 | energy (Q11379) → instance of: physical quantity (Q107715) → subclass of: property (Q937228) |
+
+**Divergence:** Wikipedia's category tree routes Energy through both
+Physics AND Economics AND Policy — reflecting its multi‑regime nature.
+Wikidata's class hierarchy routes it strictly through Physics → Physical
+quantity — reflecting a more ontologically narrow classification.
+
+**RTT reading:** Wikipedia's category tree is more **regime‑honest** for
+cross‑domain concepts like Energy because it preserves multiple regime
+memberships. Wikidata's P31/P279 chain is more **ontologically precise**
+but loses the cross‑domain richness.
+
+### Cross‑Language Category Comparison
+
+| Language | Category Count | Notable Differences |
+|----------|---------------|-------------------|
+| English | 8+ | Strong economics and policy categories |
+| German | 6 | More physics‑focused, fewer policy categories |
+| Japanese | 5 | Includes philosophy category ("気" — ki / energy as life force concept) |
+| Arabic | 4 | Fewer categories overall, physics‑dominant |
+
+**Insight:** The Japanese Wikipedia categorizes Energy under a philosophical
+concept that has no equivalent in the English category tree — revealing
+a **cultural regime frame** that Western categorization misses entirely.
+
+---
+
+## 8 — The Category Tree as a Research Instrument
+
+### 8.1 — Regime Boundary Detection
+
+Categories mark **where one regime ends and another begins**. The boundary
+is visible where:
+
+- A category has subcategories belonging to **different WikiProjects**
+- An article belongs to categories from **multiple domain regimes**
+- A category's talk page has disputes about **what belongs in it**
+
+### 8.2 — Knowledge Gap Detection
+
+Missing or underpopulated categories reveal **regime gaps** — areas where
+Wikipedia's structural coverage is incomplete:
+
+| Indicator | What It Reveals |
+|-----------|-----------------|
+| Category with 0–2 articles | Declared regime with no content — structural placeholder |
+| Category with no subcategories in a deep domain | Missing sub‑regime differentiation |
+| Category that exists in English but not in other languages | Culturally specific classification |
+| "Wikipedia categories needing clarification" | Community‑acknowledged structural ambiguity |
+
+### 8.3 — Regime Evolution Tracking
+
+Category changes in an article's revision history reveal **regime reclassification events**:
+
+```python
+def find_category_changes(title, lang="en"):
+    """Find revisions that changed an article's categories."""
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "titles": title,
+        "prop": "revisions",
+        "rvlimit": "50",
+        "rvprop": "ids|timestamp|comment|user",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    page = next(iter(resp["query"]["pages"].values()))
+
+    cat_changes = []
+    for rev in page.get("revisions", []):
+        comment = rev.get("comment", "").lower()
+        if any(kw in comment for kw in
+               ["category", "cat", "recat", "recategoriz", "reclassif"]):
+            cat_changes.append({
+                "rev_id": rev["revid"],
+                "timestamp": rev["timestamp"],
+                "user": rev.get("user", "anonymous"),
+                "comment": rev.get("comment", "")
+            })
+
+    return cat_changes
+```
+
+**RTT reading:** Every category change is a **regime reclassification event** —
+the community has decided that this concept belongs to a different regime
+neighborhood than before. Tracking these changes over time reveals the
+concept's **regime migration history**.
+
+---
+
+## 9 — PetScan: Advanced Category Intersection Queries
+
+PetScan (`https://petscan.wmcloud.org/`) is a powerful tool for querying
+category intersections — finding articles that belong to **multiple
+categories simultaneously**:
+
+### 9.1 — Use Cases for Regime Analysis
+
+| Query Type | PetScan Setup | RTT Application |
+|-----------|---------------|-----------------|
+| **Cross‑domain entities** | Category A AND Category B (different domains) | Find concepts at regime intersections |
+| **Domain‑specific gaps** | Category A NOT Category B | Find articles missing an expected classification |
+| **Temporal subsets** | Category A AND Category "YEAR in [domain]" | Regime population at a point in time |
+| **Quality filtering** | Category A AND quality ≥ GA | Find validated regime declarations in a domain |
+| **Language comparison** | Same categories in different wikis | Cross‑cultural regime coverage |
+
+### 9.2 — Example: Finding Cross‑Domain Concepts
+
+To find articles that are classified under **both** Physics and Philosophy:
+
+1. Go to `https://petscan.wmcloud.org/`
+2. Set Categories: `Physics` and `Philosophy`
+3. Set Combination: `Intersection (AND)`
+4. Set Depth: 3 (search 3 levels deep into subcategories)
+5. Run query
+
+**Result:** Articles like "Entropy," "Causality," "Determinism,"
+"Quantum mechanics interpretations" — concepts that sit at the
+Physics↔Philosophy regime boundary.
+
+**RTT reading:** These intersection results are the **regime boundary
+population** — the set of concepts that both domains claim. The size
+and composition of this population reveals how structurally connected
+the two domains are.
+
+---
+
+## 10 — Cross‑Reference to Other Module Files
+
+| File | How Category Taxonomy Connects |
+|------|-------------------------------|
+| `Wikidata_Ingestion_Format.md` | Wikidata P31/P279 chain = parallel classification system; this file covers the Wikipedia side; that file covers the Wikidata side; Section 4 compares them directly |
+| `Wikipedia_RTT_Structural_Mapping.md` | Categories are mapped in Section 2.1 as "regime hierarchy" at R2 level |
+| `Cross_Domain_Meta_Operators.md` | Operator 5 (Category Taxonomy as Regime Hierarchy) is derived directly from this file |
+| `Talk_Page_Coherence_Surface.md` | Classification Disputes (Pattern 5) are talk page debates about category membership — regime hierarchy disputes surface there |
+| `Revision_History_Regime_Analysis.md` | Category changes appear in revision history as regime reclassification events — Section 8.3 of this file provides the detection code |
+| `NPOV_As_Coherence_Operator.md` | Category assignment can be a NPOV issue — placing an article in a politically loaded category is itself a framing decision |
+| All 15 domain directories | Every domain's `regime_alignment.md` traces the domain's category tree as part of its regime position analysis |
+
+---
+
+## 11 — Student Exercises
+
+### Exercise 1 — Category Path Tracing (15 minutes)
+
+1. Pick any Wikipedia article
+2. Scroll to the bottom and find its categories
+3. Click one category and trace it **upward** through parent categories until you reach "Main topic classifications" or "Contents"
+4. Count the depth (number of levels)
+5. Go back and try a **different** category for the same article — does it reach the root through a different domain?
+6. Write one sentence: *"This article reaches the root via [path 1: N levels through Domain X] and [path 2: M levels through Domain Y]. It has a regime multiplicity of [number of top‑level categories]."*
+
+### Exercise 2 — Cross‑Domain Intersection (20 minutes)
+
+1. Go to PetScan (`https://petscan.wmcloud.org/`)
+2. Pick two domains you find interesting (e.g., Biology and Economics, or Physics and Philosophy)
+3. Run an intersection query with depth 2
+4. Examine the results: what concepts sit at the boundary between these two domains?
+5. Pick one result article and read its lead paragraph — does it acknowledge its cross‑domain nature?
+6. Write two sentences: *"The intersection of [Domain A] and [Domain B] contains [N] articles. The most structurally interesting is [article] because [reason]."*
+
+### Exercise 3 — Category Pathology Hunting (20 minutes)
+
+1. Browse Wikipedia's category tree starting from `Category:Main topic classifications`
+2. Look for one example of each pathology from Section 5:
+   - An overcategorized article (15+ categories)
+   - An undercategorized article (1–2 categories only)
+   - An orphan category (hint: check `Category:Orphaned categories`)
+   - An eponymous category (person‑as‑regime)
+3. For each, write one sentence explaining what the pathology reveals about the concept's regime status
+
+### Exercise 4 — Cross‑Language Category Comparison (30 minutes)
+
+1. Pick a concept you expect to have cultural variance (try: Democracy, Tea, Football, or a religion)
+2. Find the article in English + 2 other languages
+3. For each language, list the categories at the bottom of the article
+4. Compare: Are the categories structurally similar? Do different languages categorize the concept under different domains?
+5. Answer: *"The most striking category difference is [X]. This reveals that [language A] frames the concept as part of [regime], while [language B] frames it as part of [different regime]."*
+
+### Exercise 5 — Regime Reclassification Detection (30 minutes)
+
+1. Pick an article for a concept that has been reclassified in real life (try: Pluto, a renamed country, a reclassified species, or a substance whose legal status changed)
+2. Use the `find_category_changes` function from Section 8.3 (or manually search the revision history for "category" in edit summaries)
+3. Identify when the category change happened and what categories were added/removed
+4. Answer: *"The article was reclassified from [old categories] to [new categories] on [date]. This reflects the real‑world regime transition of [event]. The category change [preceded / followed / coincided with] the article text update by [N days]."*
+
+---
+
+*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
 # Chemistry — Wikipedia Overview
 
 Chemistry on Wikipedia is a **high‑structure, experimentally grounded, cross‑domain** regime.  
@@ -8899,6 +4712,247 @@ Computer Science is a **model‑driven, high‑velocity, cross‑domain regime**
 
 *This file is part of the Computer_Science directory in the Wikipedia Awareness module of TriadicFrameworks.  
 It provides the triadic (S/E/R) awareness layer used across all subject domains.*
+# Cross‑Domain Meta‑Operators — Wikipedia Awareness Module
+
+> **Purpose:** Show how structural operators discovered in one Wikipedia domain
+> apply — without modification — to articles, revisions, talk pages, and Wikidata
+> entities in every other domain.
+>
+> This is the capstone file. It assumes familiarity with the 4‑file domain folders
+> and the 7 Wikipedia‑specific analysis files.
+
+---
+
+## 1 — What Is a Meta‑Operator?
+
+A **meta‑operator** is a structural pattern that:
+
+1. Was first observed in a specific domain's Wikipedia articles
+2. Can be extracted from that domain without losing its structural grammar
+3. Applies coherently to articles in **every other domain** covered by this module
+
+Meta‑operators are not metaphors. They are not analogies. They are **structural invariants** — patterns that hold because Wikipedia's architecture enforces them uniformly across all 6.9 million English articles.
+
+### Why Wikipedia Produces Meta‑Operators
+
+Wikipedia's content is diverse, but its **infrastructure is uniform**:
+
+- Every article has the same revision history schema
+- Every article links to the same Wikidata entity graph
+- Every article is governed by the same NPOV policy
+- Every article is classified by the same category taxonomy
+- Every talk page follows the same discussion architecture
+
+This structural uniformity means that **any operator discovered in one domain's articles also operates in every other domain** — because the substrate is shared.
+
+---
+
+## 2 — The 12 Cross‑Domain Meta‑Operators
+
+### Operator 1: Regime Declaration Parsing
+
+- **Source domain:** Physics
+- **Discovery:** Every Physics article implicitly declares a regime — "Newtonian mechanics applies when v ≪ c" — by stating scope conditions and boundary limits
+- **Cross‑domain application:** Every Wikipedia article in every domain declares scope conditions, even when unstated. The Chemistry article on "Water" declares a regime (liquid state, standard pressure, Earth context) without explicitly saying so. The Economics article on "Supply and Demand" declares a regime (market economies, rational actors, price flexibility) through its assumptions.
+
+**Operator:** *Read any Wikipedia article's opening paragraph as a regime declaration. Identify: what scope is claimed, what boundary conditions are implied, what is excluded.*
+
+---
+
+### Operator 2: Revision Frequency as Stability Signal
+
+- **Source domain:** Political Science
+- **Discovery:** Articles on contested political topics (elections, territorial disputes, policy debates) show high revision frequency — the edit count is a **direct measure of regime instability**
+- **Cross‑domain application:** In Medicine, articles on controversial treatments show the same pattern. In Physics, articles on disputed interpretations (quantum measurement, string theory) show elevated revision counts. In History, articles on contested events show periodic revision spikes around anniversaries.
+
+**Operator:** *For any Wikipedia article, check `action=info` for total revision count and recent edit rate. High frequency = unstable regime. Low frequency = crystallized regime. Sudden spikes = regime perturbation event.*
+
+---
+
+### Operator 3: Talk Page Coherence Gradient
+
+- **Source domain:** Philosophy
+- **Discovery:** Philosophy talk pages reveal the deepest structural disagreements — editors argue about whether the article's **framing itself** is biased, not just its content
+- **Cross‑domain application:** In Biology, talk pages on evolution vs. intelligent design reveal the same framing disputes. In Economics, talk pages on capitalism vs. socialism articles show identical coherence gradients. In Linguistics, talk pages on language classification reveal competing structural taxonomies.
+
+**Operator:** *Read any article's talk page and classify disputes as: (a) factual corrections (surface — R3), (b) framing disagreements (structural — R1/R2), or (c) scope challenges (regime‑level — R0). The ratio reveals the article's coherence gradient.*
+
+---
+
+### Operator 4: Wikidata Dimensional Bridging
+
+- **Source domain:** Chemistry
+- **Discovery:** Every chemical compound has a Wikidata Q‑number that connects it to properties (P‑numbers) spanning Physics (molecular weight P2067), Biology (biological role P682), Medicine (drug interaction P769), and Engineering (industrial use P366)
+- **Cross‑domain application:** This bridging is universal. Any Wikidata entity's P‑number connections reveal which **other domains** are structurally linked to it — creating a machine‑readable cross‑domain map.
+
+**Operator:** *For any concept, find its Wikidata Q‑number. List its P‑number properties. Each P‑number that points to an entity in a different domain = a dimensional bridge. The count of cross‑domain bridges = the concept's structural connectivity.*
+
+---
+
+### Operator 5: Category Taxonomy as Regime Hierarchy
+
+- **Source domain:** Biology
+- **Discovery:** Biology's category tree (Life → Domain → Kingdom → Phylum → ... → Species) is the most deeply nested taxonomy on Wikipedia — and it mirrors a natural regime hierarchy perfectly
+- **Cross‑domain application:** Every domain has a category tree. Mathematics has Category:Mathematics → Category:Algebra → Category:Linear algebra → Category:Matrices. Political Science has Category:Politics → Category:Forms of government → Category:Democracy → Category:Direct democracy. The depth and branching of the category tree reveals the **regime granularity** of the domain.
+
+**Operator:** *For any Wikipedia article, trace its category tree upward to the root. Count the depth (levels to root) and breadth (sibling categories at each level). Deep + narrow = specialized regime. Shallow + broad = general regime. Orphaned categories = regime gaps.*
+
+---
+
+### Operator 6: NPOV Tension as Coherence Stress Test
+
+- **Source domain:** History
+- **Discovery:** History articles face the strongest NPOV tensions — every historical event has competing national, cultural, and ideological narratives. The NPOV policy forces these into a single coherent frame, creating visible **structural stress**
+- **Cross‑domain application:** In Medicine, NPOV tension appears when alternative medicine claims compete with evidence‑based claims. In Economics, it appears when articles must present both Keynesian and Austrian perspectives. In Psychology, it surfaces when articles must balance biological and social constructionist frameworks.
+
+**Operator:** *In any article, identify where NPOV forces competing claims into the same frame. The points of highest NPOV tension = the article's coherence stress points. These are where regime boundaries are most visible.*
+
+---
+
+### Operator 7: Featured Article as Validation Corridor
+
+- **Source domain:** Earth Sciences
+- **Discovery:** Earth Sciences has one of the highest Featured Article ratios — articles like "Plate tectonics" and "Earthquake" have passed Wikipedia's most rigorous quality process, serving as **structurally validated reference points**
+- **Cross‑domain application:** In every domain, Featured Articles represent the community's **consensus on structural completeness**. They define what a "fully resolved" article looks like for that domain — scope, sourcing depth, citation density, neutrality, and coverage completeness.
+
+**Operator:** *For any domain, find its Featured Articles (FA) and Good Articles (GA). These are the domain's validation corridor — the community's answer to "what does a structurally complete treatment look like here?" Compare any non‑FA article to the FA template to identify structural gaps.*
+
+---
+
+### Operator 8: Edit War as Regime Boundary Marker
+
+- **Source domain:** Political Science
+- **Discovery:** Edit wars on political articles (Israel–Palestine, Kashmir, Taiwan) are not random — they occur precisely at **regime boundaries** where competing structural claims cannot be reconciled under NPOV
+- **Cross‑domain application:** In Physics, edit wars mark boundaries between classical and quantum descriptions. In Medicine, they mark boundaries between mainstream and contested treatments. In Philosophy, they mark boundaries between competing ontological frameworks.
+
+**Operator:** *An edit war is diagnostic, not disruptive. The topic of the edit war identifies a regime boundary. The arguments of the editors reveal the competing regime claims. The resolution (if any) reveals which regime won structural standing.*
+
+---
+
+### Operator 9: Cross‑Language Regime Variance
+
+- **Source domain:** Linguistics
+- **Discovery:** The same linguistic concept described in different language Wikipedias reveals **cultural regime variance** — what counts as a "language" vs. a "dialect" differs by political and cultural context
+- **Cross‑domain application:** In History, the article on a military conflict varies dramatically between the Wikipedias of the involved nations. In Medicine, treatment recommendations vary between Wikipedias reflecting different healthcare systems. In Economics, the same economic concept is framed differently across Wikipedias reflecting different economic regimes.
+
+**Operator:** *For any article, compare the English version to at least 2 other language versions. Differences in scope, framing, length, and emphasis reveal cultural regime variance — the same concept declared differently because the structural context differs.*
+
+---
+
+### Operator 10: Deletion Debate as Regime Collapse Detection
+
+- **Source domain:** Computer Science
+- **Discovery:** Computer Science has frequent Articles for Deletion (AfD) debates — technologies, programming languages, and startups regularly face notability challenges. A successful deletion = the community deciding a concept **lacks sufficient structural standing**
+- **Cross‑domain application:** In every domain, AfD debates reveal the community's **minimum regime threshold** — the structural requirements a concept must meet to maintain a Wikipedia article. In Medicine, fringe treatments face AfD. In Philosophy, obscure philosophical positions face AfD. In Political Science, minor political parties face AfD.
+
+**Operator:** *Search AfD archives for any domain. The deletion arguments reveal the community's implicit regime criteria — what structural standing is required for inclusion. Concepts that survive AfD have demonstrated regime resilience. Concepts that are deleted have failed the minimum coherence threshold.*
+
+---
+
+### Operator 11: Infobox Template as Regime Schema
+
+- **Source domain:** Astronomy
+- **Discovery:** Every astronomical object article uses an infobox template (Template:Infobox planet, Template:Infobox star) that defines **exactly which properties the regime requires** — spectral class, magnitude, distance, constellation
+- **Cross‑domain application:** Every domain has infobox templates. Chemistry has Template:Chembox. Biology has Template:Taxobox. The infobox fields define the **minimum regime schema** — the properties a concept must have to be structurally declared in that domain.
+
+**Operator:** *For any domain, find its primary infobox template. The template's fields = the domain's regime schema. Fields that are always filled = structural invariants. Fields that are often empty = regime gaps. Fields that vary between articles = regime flexibility zones.*
+
+---
+
+### Operator 12: Disambiguation as Regime Collision Surface
+
+- **Source domain:** Mathematics
+- **Discovery:** Mathematical terms frequently collide with everyday language — "Ring," "Field," "Group," "Set" all have disambiguation pages because the mathematical regime and the common‑language regime use the same word for different structural claims
+- **Cross‑domain application:** Disambiguation pages exist across all domains and always mark the same thing — **two or more regimes claiming the same term**. In Medicine, "Depression" disambiguates between psychiatric and economic meanings. In Engineering, "Bridge" disambiguates between structural and network meanings.
+
+**Operator:** *Disambiguation pages are regime collision maps. Each entry on a disambiguation page = a different regime claiming the same term. The ordering of entries reveals which regime has primary structural standing for that term on English Wikipedia.*
+
+---
+
+## 3 — The Meta‑Operator Matrix
+
+How each operator applies across all 15 domains:
+
+| Operator | Phy | Mat | Bio | Che | CS | Phi | Ear | Eco | His | Med | Eng | Ast | Lin | Psy | Pol |
+|----------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+| 1 Regime Declaration | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● |
+| 2 Revision Frequency | ● | ○ | ● | ○ | ● | ● | ○ | ● | ● | ● | ○ | ○ | ● | ● | ● |
+| 3 Talk Page Gradient | ● | ○ | ● | ○ | ● | ● | ○ | ● | ● | ● | ○ | ○ | ● | ● | ● |
+| 4 Wikidata Bridging | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● |
+| 5 Category Hierarchy | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● |
+| 6 NPOV Tension | ○ | ○ | ● | ○ | ○ | ● | ● | ● | ● | ● | ○ | ○ | ● | ● | ● |
+| 7 FA Validation | ● | ○ | ● | ● | ○ | ○ | ● | ○ | ● | ● | ● | ● | ○ | ○ | ○ |
+| 8 Edit War Boundary | ○ | ○ | ● | ○ | ○ | ● | ● | ● | ● | ● | ○ | ○ | ● | ● | ● |
+| 9 Cross‑Language | ● | ○ | ● | ○ | ○ | ● | ● | ● | ● | ● | ○ | ○ | ● | ● | ● |
+| 10 Deletion Debate | ○ | ○ | ○ | ○ | ● | ● | ○ | ○ | ○ | ● | ○ | ○ | ○ | ● | ● |
+| 11 Infobox Schema | ● | ○ | ● | ● | ● | ○ | ● | ● | ● | ● | ● | ● | ○ | ○ | ● |
+| 12 Disambiguation | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● |
+
+**Key:** ● = high structural signal | ○ = present but weaker signal
+
+---
+
+## 4 — How to Use These Operators
+
+### For Students
+
+1. Pick any Wikipedia article
+2. Apply **Operators 1, 2, and 4** (regime declaration, revision frequency, Wikidata bridging) — these work on every article
+3. If the article has visible NPOV tension or talk page disputes, apply **Operators 3, 6, and 8**
+4. If the article exists in multiple languages, apply **Operator 9**
+5. Write a 1‑paragraph structural summary: *"This article declares [regime], shows [stability/instability] via [revision count], bridges to [N] other domains via Wikidata, and has [high/low] NPOV tension at [specific points]."*
+
+### For AIs
+
+1. **Regime extraction:** Apply Operator 1 to parse any article's opening paragraph into regime declarations
+2. **Stability assessment:** Apply Operator 2 to classify articles as crystallized, active, or contested
+3. **Graph traversal:** Apply Operator 4 to build cross‑domain knowledge maps from Wikidata P‑number bridges
+4. **Coherence scoring:** Apply Operators 3 and 6 to assess structural integrity
+5. **Boundary detection:** Apply Operators 8 and 12 to identify regime collision points
+
+### For Researchers
+
+1. **Temporal regime analysis:** Combine Operators 2, 8, and 9 to study how knowledge regimes evolve across time and cultures
+2. **Consensus mechanics:** Combine Operators 3, 6, and 7 to study how Wikipedia's community builds structural coherence
+3. **Knowledge graph topology:** Use Operator 4 systematically to map the dimensional connectivity of entire knowledge domains
+4. **Comparative regime studies:** Use Operator 9 to compare how the same concept is structurally declared across cultural contexts
+
+---
+
+## 5 — Relationship to the NIST Cross‑Domain Meta‑Operators
+
+The [NIST Awareness Primer's Cross‑Domain Meta‑Operators](../nist/Cross_Domain_Meta_Operators.md) operate on a **different substrate**:
+
+| Dimension | NIST Operators | Wikipedia Operators |
+|-----------|---------------|---------------------|
+| Source authority | Institutional (NIST publishes standards) | Consensus (community negotiates content) |
+| Temporal depth | Static (standards are versioned but stable) | Deep (full revision history since 2001) |
+| Conflict visibility | Low (internal review, not public) | High (talk pages, edit wars, AfD — all public) |
+| Knowledge graph | None | Wikidata (120M+ entities, SPARQL queryable) |
+| Cross‑cultural | English only | 300+ language editions |
+| Operator count | Domain‑specific extraction patterns | 12 universal structural operators |
+
+**The structural grammar is the same.** Both modules extract operators from specific domains and show they apply across all domains. The difference is the **richness of the substrate** — Wikipedia's public revision history, talk pages, and Wikidata graph provide surfaces that NIST's publication model cannot.
+
+---
+
+## 6 — Student Exercise (Capstone)
+
+**Cross‑domain operator walkthrough:**
+
+1. Pick **one concept** that spans at least 3 of the 15 domains (e.g., "Entropy" spans Physics, Chemistry, Computer Science, Philosophy)
+2. Find the Wikipedia article for that concept in each relevant domain
+3. Apply **all 12 operators** to each article
+4. Fill in your own row on the Meta‑Operator Matrix (Section 3)
+5. Write a 2‑paragraph structural comparison:
+   - Paragraph 1: How does the **same concept** get regime‑declared differently across domains?
+   - Paragraph 2: Which operators produced the **strongest signal** for cross‑domain structural connection?
+
+**Suggested multi‑domain concepts:** Energy, Information, Evolution, Symmetry, Network, Equilibrium, Complexity, Resonance, Entropy, Emergence
+
+---
+
+*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
 # Earth Sciences — Wikipedia Overview
 
 Earth Sciences on Wikipedia form a **multi‑scale, data‑driven, observational** regime.  
@@ -10033,6 +6087,849 @@ Economics is a **multi‑school, event‑responsive, cross‑domain regime** whe
 
 *This file is part of the Economics directory in the Wikipedia Awareness module of TriadicFrameworks.  
 It provides the triadic (S/E/R) awareness layer used across all subject domains.*
+# Edit War Regime Transition Detection
+
+> **Purpose:** Reframe Wikipedia edit wars from disruptive incidents into what
+> they structurally are — **diagnostic instruments for regime boundary mapping**.
+> An edit war is not noise. It is a signal. It marks the precise location where
+> two or more competing regime claims collide and cannot be reconciled through
+> normal consensus mechanisms.
+>
+> No other knowledge source makes regime collisions visible in real time.
+> Academic journals suppress reviewer disagreements. Encyclopedias resolve
+> disputes internally. Only Wikipedia exposes the raw collision data — every
+> revert, every counter‑revert, every edit summary declaring a structural
+> position — in a publicly archived, timestamped, author‑attributed log.
+>
+> This file teaches students to read edit wars as **regime transition events**
+> and extract structural intelligence from them.
+
+---
+
+## 1 — What Is an Edit War?
+
+### 1.1 — Wikipedia's Definition
+
+An edit war occurs when editors repeatedly override each other's contributions
+to an article, rather than resolving disagreements through discussion on the
+talk page. Wikipedia's **Three‑Revert Rule (3RR)** states:
+
+> *"An editor must not perform more than three reverts on a single page —
+> in whole or in part — within a 24‑hour period."*
+
+Violating 3RR can result in a block. But the rule addresses the **symptom**,
+not the cause. The cause is always a **regime collision**.
+
+### 1.2 — The RTT Translation
+
+| Wikipedia Term | RTT Concept | Structural Function |
+|---------------|-------------|---------------------|
+| Edit war | **Regime transition event** | Two or more regime claims competing for the same structural space |
+| Revert | **Regime reassertion** | An editor restoring their regime's declaration over a competitor's |
+| Counter‑revert | **Counter‑regime reassertion** | The competing editor restoring their regime's declaration back |
+| Edit war cycle | **Regime oscillation** | The article's structural state alternating between competing declarations |
+| Protection (page lock) | **Regime freeze** | Administrative intervention to halt oscillation and force talk page resolution |
+| Post‑war consensus | **Regime transition completion** | One regime claim prevails, a compromise is reached, or a new synthesis emerges |
+
+### 1.3 — Why Edit Wars Are Diagnostic
+
+An edit war answers three structural questions simultaneously:
+
+1. **Where is the regime boundary?** — The specific text being reverted marks the exact location of the structural dispute
+2. **What are the competing claims?** — Each editor's version represents a distinct regime declaration
+3. **How strong is each claim?** — The persistence of each editor (number of reverts, argument quality, source citations) reveals the structural standing of each competing regime
+
+---
+
+## 2 — The Five Types of Edit Wars
+
+### Type 1: Factual Dispute War
+
+**What it looks like:** Editors repeatedly change a specific fact — a date,
+a number, a name, a classification.
+
+**Underlying regime collision:** Two external sources disagree, and editors
+are proxying that disagreement into the article.
+
+**Example:** Editors warring over whether a mountain's height is 8,848m or
+8,849m based on different survey sources.
+
+**Severity:** Low. Usually resolved by identifying the most authoritative
+source.
+
+**RTT reading:** This is a **regime measurement dispute** — competing
+claims about the same measurable dimension. The resolution identifies
+which measurement regime has primary standing.
+
+---
+
+### Type 2: Classification War
+
+**What it looks like:** Editors repeatedly change how a concept is classified
+or categorized — "X is a type of Y" vs. "X is a type of Z."
+
+**Underlying regime collision:** The concept sits at a regime boundary where
+two classification systems disagree.
+
+**Example:** Pluto — "planet" vs. "dwarf planet." Tomato — "fruit" vs.
+"vegetable." Taiwan — "country" vs. "province."
+
+**Severity:** Moderate to high. Classification wars often map to real‑world
+institutional or political disputes.
+
+**RTT reading:** This is a **regime hierarchy dispute** — competing claims
+about where a concept belongs in the classification tree. The resolution
+determines which regime hierarchy the article adopts as primary.
+See `Category_Taxonomy_Regime_Hierarchy.md`.
+
+---
+
+### Type 3: Framing War
+
+**What it looks like:** Editors repeatedly rewrite the same passage to present
+information from different perspectives. The facts may not change — only the
+**framing** changes.
+
+**Underlying regime collision:** Two worldviews produce structurally different
+regime declarations from the same set of facts.
+
+**Example:** A military conflict described as "liberation" by one side and
+"invasion" by the other. A political figure described as "controversial" vs.
+"influential."
+
+**Severity:** High. Framing wars are the most persistent because they involve
+structural perspective, not factual accuracy.
+
+**RTT reading:** This is a **regime declaration dispute** — competing
+structural presentations of the same underlying data. The resolution
+determines the article's primary R1 framing.
+See `NPOV_As_Coherence_Operator.md`.
+
+---
+
+### Type 4: Inclusion/Exclusion War
+
+**What it looks like:** One editor adds content, another removes it. The
+dispute is about whether specific information **belongs** in the article.
+
+**Underlying regime collision:** Competing claims about the article's
+scope — what the regime should and should not cover.
+
+**Example:** Should a biography mention a person's criminal record?
+Should a scientific article mention fringe objections? Should a country
+article mention territorial disputes?
+
+**Severity:** High. These wars define the regime's boundaries — what is
+structurally in and what is out.
+
+**RTT reading:** This is a **regime scope dispute** — competing claims
+about the regime's boundary conditions. The resolution determines the
+article's R0 scope declaration.
+
+---
+
+### Type 5: Naming/Terminology War
+
+**What it looks like:** Editors repeatedly change how a concept is
+named or what terminology is used to describe it.
+
+**Underlying regime collision:** Names carry regime claims. Choosing one
+name over another is choosing one regime's framing over another's.
+
+**Example:** "Gdańsk" vs. "Danzig." "Persian Gulf" vs. "Arabian Gulf."
+"Myanmar" vs. "Burma." "Kyiv" vs. "Kiev." "Côte d'Ivoire" vs. "Ivory Coast."
+
+**Severity:** Very high. Naming wars can persist for **years** because
+the name itself is a structural declaration — it declares which political,
+cultural, or historical regime has naming authority.
+
+**RTT reading:** This is a **regime identity dispute** — competing claims
+about the concept's structural name. The resolution determines which
+regime's naming convention the article adopts as primary.
+
+---
+
+## 3 — Edit War Severity Scale
+
+| Level | Label | Reverts / 24h | Duration | Protection | RTT Interpretation |
+|-------|-------|--------------|----------|------------|-------------------|
+| 1 | **Skirmish** | 2–3 | Hours | None | Minor regime friction — editors may self‑resolve |
+| 2 | **Dispute** | 3–6 | Days | Semi‑protection possible | Moderate regime collision — talk page engagement needed |
+| 3 | **War** | 6–12 | Weeks | Semi or full protection | Serious regime collision — admin intervention likely |
+| 4 | **Entrenchment** | 12+ (sustained) | Months | Extended or full protection | Deep regime collision — formal dispute resolution required |
+| 5 | **Perpetual conflict** | Recurring cycles | Years | Persistent protection + discretionary sanctions | Irreconcilable regime collision — structural boundary is permanently contested |
+
+### Severity Distribution by Domain
+
+| Domain | Typical Max Severity | Most Common War Type | Rationale |
+|--------|---------------------|---------------------|-----------|
+| Physics | 1–2 | Factual, Classification | Strong consensus; disputes are narrow and technical |
+| Mathematics | 1 | Factual | Near‑universal formal agreement |
+| Biology | 2–3 | Classification, Inclusion | Taxonomy disputes; evolution vs. creationism |
+| Chemistry | 1–2 | Factual, Naming | Nomenclature disputes (IUPAC vs. common names) |
+| Computer Science | 2–3 | Inclusion, Framing | Technology hype cycles; company/product neutrality |
+| Philosophy | 3–4 | Framing, Inclusion | Inherently perspectival; competing schools |
+| Earth Sciences | 2–3 | Factual, Framing | Climate change political framing |
+| Economics | 3–4 | Framing, Inclusion | Competing schools (Keynesian vs. Austrian vs. MMT) |
+| History | 4–5 | Framing, Naming | National narratives; territorial disputes; naming wars |
+| Medicine | 2–4 | Inclusion, Framing | Alternative medicine; treatment controversies |
+| Engineering | 1–2 | Factual, Classification | Technical consensus; minor standards disputes |
+| Astronomy | 1–2 | Classification | Object classification (e.g., planet vs. dwarf planet) |
+| Linguistics | 2–3 | Classification, Naming | Language vs. dialect; script disputes |
+| Psychology | 2–3 | Framing, Inclusion | Nature vs. nurture; disorder classification |
+| Political Science | 4–5 | Framing, Naming, Inclusion | Nearly all topics are politically contested |
+
+---
+
+## 4 — The Four Resolution Patterns
+
+Every edit war ends. How it ends reveals the **regime transition outcome**:
+
+### Pattern 1: One Regime Prevails
+
+**What happens:** One side's version is accepted as the article's
+declaration. The other side's version is removed or marginalized.
+
+**How it's achieved:** Stronger sourcing, broader editor consensus,
+admin intervention favoring one side, or one side disengaging.
+
+**RTT reading:** **Regime displacement** — one regime claim wins
+structural standing and the other loses it. The article's regime
+declaration shifts to the prevailing claim.
+
+**Example:** The Pluto article eventually adopted "dwarf planet"
+after the IAU decision. The "planet" claim lost structural standing.
+
+---
+
+### Pattern 2: Compromise Synthesis
+
+**What happens:** A new version is crafted that incorporates elements
+of both competing claims. Neither side gets exactly what they wanted,
+but both can accept the result.
+
+**How it's achieved:** Talk page negotiation, RfC, mediation, or
+a skilled editor proposing a synthesis.
+
+**RTT reading:** **Regime synthesis** — a new regime declaration emerges
+that structurally integrates the competing claims. This is a genuine
+regime transition — the article's structural state is different from
+either competing version.
+
+**Example:** Articles on contested territories often use compromise
+formulations: "X is a disputed territory claimed by both A and B."
+
+---
+
+### Pattern 3: Structural Separation
+
+**What happens:** The disputed content is moved to its own article or
+section, giving each perspective its own structural space.
+
+**How it's achieved:** Article splitting, creation of sub‑articles,
+or "main article" links to separate detailed treatments.
+
+**RTT reading:** **Regime differentiation** — the competing claims are
+separated into distinct regime declarations rather than forced into
+the same space. The original article retains a neutral summary; the
+detailed perspectives get their own articles.
+
+**Example:** "Evolution" and "Objections to evolution" are structurally
+separated — each concept gets its own regime declaration.
+
+---
+
+### Pattern 4: Administrative Freeze
+
+**What happens:** An admin locks the article to prevent further editing.
+The version at time of protection becomes the de facto declaration,
+regardless of which side it favors.
+
+**How it's achieved:** Page protection (semi, extended, or full).
+May include discretionary sanctions for the topic area.
+
+**RTT reading:** **Regime stabilization by force** — the regime
+oscillation is halted by external authority rather than consensus.
+The frozen version is not necessarily the "correct" declaration — it
+is the one that happened to be in place when the lock was applied.
+
+**Example:** Heavily contested articles like "Israel" or "Kashmir"
+spend long periods under full protection — the locked version is a
+pragmatic stabilization, not a consensus outcome.
+
+---
+
+## 5 — Detection Algorithms
+
+### 5.1 — Basic Revert Detection
+
+```python
+import requests
+from datetime import datetime, timedelta
+
+def detect_revert_sequences(title, lang="en", window_hours=24, min_reverts=3):
+    """
+    Detect revert sequences in a Wikipedia article's recent history.
+    A revert is identified by system tags or edit summary keywords.
+    """
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "titles": title,
+        "prop": "revisions",
+        "rvlimit": "500",
+        "rvprop": "ids|timestamp|user|size|comment|tags|sha1",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    page = next(iter(resp["query"]["pages"].values()))
+    revisions = page.get("revisions", [])
+
+    # Identify reverts
+    revert_tags = {"mw-revert", "mw-undo", "mw-rollback", "mw-manual-revert"}
+    revert_keywords = {"revert", "rv ", "rvv", "undo", "rollback",
+                       "restored", "reverted"}
+
+    reverts = []
+    for rev in revisions:
+        tags = set(rev.get("tags", []))
+        comment = rev.get("comment", "").lower()
+
+        is_revert = (
+            bool(tags & revert_tags) or
+            any(kw in comment for kw in revert_keywords)
+        )
+
+        if is_revert:
+            reverts.append({
+                "rev_id": rev["revid"],
+                "timestamp": rev["timestamp"],
+                "user": rev.get("user", "anonymous"),
+                "comment": rev.get("comment", ""),
+                "tags": list(tags & revert_tags),
+                "sha1": rev.get("sha1", "")
+            })
+
+    # Detect clusters (multiple reverts within window)
+    clusters = []
+    current_cluster = []
+
+    for i, rev in enumerate(reverts):
+        ts = datetime.fromisoformat(rev["timestamp"].replace("Z", "+00:00"))
+
+        if not current_cluster:
+            current_cluster.append(rev)
+        else:
+            prev_ts = datetime.fromisoformat(
+                current_cluster[-1]["timestamp"].replace("Z", "+00:00"))
+            if (prev_ts - ts).total_seconds() <= window_hours * 3600:
+                current_cluster.append(rev)
+            else:
+                if len(current_cluster) >= min_reverts:
+                    clusters.append(current_cluster)
+                current_cluster = [rev]
+
+    if len(current_cluster) >= min_reverts:
+        clusters.append(current_cluster)
+
+    return {
+        "article": title,
+        "total_reverts": len(reverts),
+        "revert_clusters": len(clusters),
+        "clusters": [{
+            "size": len(c),
+            "start": c[-1]["timestamp"],
+            "end": c[0]["timestamp"],
+            "editors": list(set(r["user"] for r in c)),
+            "reverts": c
+        } for c in clusters]
+    }
+```
+
+### 5.2 — SHA‑1 Based War Detection
+
+The most reliable revert detection uses **content hashing** — if two
+non‑adjacent revisions have the same SHA‑1 hash, the article was
+restored to an earlier exact state:
+
+```python
+def detect_sha1_wars(title, lang="en"):
+    """
+    Detect edit wars using SHA-1 content hash matching.
+    If the same hash appears multiple times, the article was
+    reverted to an identical state — a definitive war signal.
+    """
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "titles": title,
+        "prop": "revisions",
+        "rvlimit": "500",
+        "rvprop": "ids|timestamp|user|sha1",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    page = next(iter(resp["query"]["pages"].values()))
+    revisions = page.get("revisions", [])
+
+    # Group revisions by SHA-1 hash
+    from collections import defaultdict
+    hash_groups = defaultdict(list)
+    for rev in revisions:
+        sha1 = rev.get("sha1", "")
+        if sha1:
+            hash_groups[sha1].append(rev)
+
+    # Find repeated states (same content appearing 2+ times)
+    war_signals = []
+    for sha1, revs in hash_groups.items():
+        if len(revs) >= 2:
+            editors = list(set(r.get("user", "anon") for r in revs))
+            war_signals.append({
+                "sha1": sha1,
+                "occurrences": len(revs),
+                "timestamps": [r["timestamp"] for r in revs],
+                "editors_restoring": editors,
+                "interpretation": "article_restored_to_identical_state"
+            })
+
+    return {
+        "article": title,
+        "repeated_states": len(war_signals),
+        "severity": classify_war_severity(war_signals),
+        "signals": sorted(war_signals,
+                         key=lambda x: x["occurrences"],
+                         reverse=True)
+    }
+
+def classify_war_severity(signals):
+    """Classify edit war severity from SHA-1 analysis."""
+    if not signals:
+        return "0_no_war"
+    max_repeats = max(s["occurrences"] for s in signals)
+    total_repeats = sum(s["occurrences"] for s in signals)
+
+    if total_repeats <= 3:
+        return "1_skirmish"
+    elif total_repeats <= 8:
+        return "2_dispute"
+    elif total_repeats <= 15:
+        return "3_war"
+    elif max_repeats >= 5:
+        return "4_entrenchment"
+    else:
+        return "3_war"
+```
+
+### 5.3 — War Participant Analysis
+
+```python
+def analyze_war_participants(cluster):
+    """
+    Analyze the participants in an edit war cluster.
+    Returns faction structure and relative persistence.
+    """
+    from collections import Counter
+
+    editor_reverts = Counter(r["user"] for r in cluster["reverts"])
+    editors = list(editor_reverts.keys())
+    total = sum(editor_reverts.values())
+
+    factions = []
+    for editor, count in editor_reverts.most_common():
+        factions.append({
+            "editor": editor,
+            "revert_count": count,
+            "persistence": round(count / total, 3),
+            "sample_comment": next(
+                (r["comment"] for r in cluster["reverts"]
+                 if r["user"] == editor and r["comment"]),
+                "no comment"
+            )
+        })
+
+    return {
+        "total_participants": len(editors),
+        "total_reverts": total,
+        "faction_count": len(set(
+            r.get("sha1", "") for r in cluster["reverts"])),
+        "factions": factions,
+        "structure": (
+            "bilateral" if len(editors) == 2 else
+            "multilateral" if len(editors) <= 5 else
+            "mass_conflict"
+        )
+    }
+```
+
+### 5.4 — Regime Boundary Extraction
+
+```python
+import difflib
+
+def extract_disputed_content(rev_id_a, rev_id_b, lang="en"):
+    """
+    Compare two revision IDs to identify the exact disputed content.
+    The diff reveals the regime boundary — the specific text where
+    competing claims collide.
+    """
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+
+    def get_content(rev_id):
+        params = {
+            "action": "query",
+            "revids": str(rev_id),
+            "prop": "revisions",
+            "rvprop": "content",
+            "rvslots": "main",
+            "format": "json"
+        }
+        resp = requests.get(url, params=params,
+                            headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+        page = next(iter(resp["query"]["pages"].values()))
+        return page["revisions"][0]["slots"]["main"]["*"]
+
+    content_a = get_content(rev_id_a).splitlines()
+    content_b = get_content(rev_id_b).splitlines()
+
+    diff = list(difflib.unified_diff(content_a, content_b,
+                                      lineterm="", n=3))
+
+    # Extract only changed lines
+    additions = [l[1:] for l in diff if l.startswith("+")
+                 and not l.startswith("+++")]
+    removals = [l[1:] for l in diff if l.startswith("-")
+                and not l.startswith("---")]
+
+    return {
+        "revision_a": rev_id_a,
+        "revision_b": rev_id_b,
+        "lines_added": len(additions),
+        "lines_removed": len(removals),
+        "regime_claim_a": "\n".join(removals[:10]),
+        "regime_claim_b": "\n".join(additions[:10]),
+        "boundary_location": "see diff output for exact position",
+        "full_diff_lines": len(diff)
+    }
+```
+
+### 5.5 — Historical War Pattern Analysis
+
+```python
+def historical_war_profile(title, lang="en"):
+    """
+    Build a complete edit war profile for an article's full history.
+    Combines revert detection, SHA-1 analysis, and temporal clustering.
+    """
+    revert_data = detect_revert_sequences(title, lang,
+                                           window_hours=72,
+                                           min_reverts=2)
+    sha1_data = detect_sha1_wars(title, lang)
+
+    # Check protection history
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "titles": title,
+        "prop": "info",
+        "inprop": "protection",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    page = next(iter(resp["query"]["pages"].values()))
+    protections = page.get("protection", [])
+
+    return {
+        "article": title,
+        "revert_clusters": revert_data["revert_clusters"],
+        "sha1_repeated_states": sha1_data["repeated_states"],
+        "war_severity": sha1_data["severity"],
+        "current_protection": protections,
+        "is_protected": len(protections) > 0,
+        "war_history": {
+            "clusters": revert_data["clusters"][:5],
+            "sha1_signals": sha1_data["signals"][:5]
+        },
+        "regime_transition_assessment": assess_transition(
+            revert_data, sha1_data, protections)
+    }
+
+def assess_transition(revert_data, sha1_data, protections):
+    """Assess whether the article has undergone a regime transition."""
+    severity = sha1_data["severity"]
+    protected = len(protections) > 0
+    clusters = revert_data["revert_clusters"]
+
+    if severity == "0_no_war":
+        return "stable_regime — no transition detected"
+    elif severity == "1_skirmish" and not protected:
+        return "minor_friction — regime boundary tested but held"
+    elif severity in ("2_dispute", "3_war") and not protected:
+        return "regime_negotiation — boundary actively contested"
+    elif protected and clusters >= 2:
+        return "regime_transition_in_progress — admin intervention required"
+    elif severity in ("4_entrenchment",) or clusters >= 5:
+        return "chronic_regime_conflict — boundary permanently contested"
+    else:
+        return "indeterminate — insufficient data"
+```
+
+---
+
+## 6 — Worked Examples
+
+### 6.1 — Pluto (Classification War → Regime Displacement)
+
+| Dimension | Detail |
+|-----------|--------|
+| **War type** | Classification (Type 2) |
+| **Period** | August 2006 – March 2007 |
+| **Trigger** | IAU reclassifies Pluto as dwarf planet on 24 August 2006 |
+| **Competing claims** | Claim A: "Pluto is the ninth planet" — Claim B: "Pluto is a dwarf planet" |
+| **Peak severity** | Level 4 (Entrenchment) — sustained revert cycles, semi‑protection applied |
+| **Resolution pattern** | **Regime displacement** — "dwarf planet" prevailed as the IAU declaration gained structural standing |
+| **Duration** | ~7 months of active conflict, then gradual stabilization |
+| **Post‑war state** | Crystallized — article now stably declares "Pluto is a dwarf planet in the Kuiper belt" |
+
+**RTT reading:** Pluto is a textbook **externally triggered regime transition**.
+The IAU decision changed the concept's regime classification, and the Wikipedia
+article's edit war is the **visible trace** of that transition playing out in
+the knowledge system. The war ended when the new classification gained
+sufficient structural standing to displace the old one.
+
+**Structural insight:** The speed of resolution correlated with the clarity
+of the external authority's decision. The IAU ruling was unambiguous, so the
+edit war, while intense, resolved relatively quickly. Compare this to
+naming wars (Type 5) where no single external authority exists — those
+can persist for decades.
+
+---
+
+### 6.2 — Gdańsk/Danzig (Naming War → Compromise Synthesis)
+
+| Dimension | Detail |
+|-----------|--------|
+| **War type** | Naming/Terminology (Type 5) |
+| **Period** | 2003–2005 (peak), with recurring flare‑ups through 2015+ |
+| **Trigger** | Disagreement over whether to use "Gdańsk" (Polish) or "Danzig" (German) for historical references |
+| **Competing claims** | Claim A: "Always use Gdańsk — it's the current name" — Claim B: "Use Danzig for historical periods when the city was German‑speaking" |
+| **Peak severity** | Level 5 (Perpetual conflict) — one of Wikipedia's most‑cited edit wars |
+| **Resolution pattern** | **Compromise synthesis** — complex naming conventions established through multiple RfCs |
+| **Duration** | 2+ years of intense conflict; ongoing maintenance |
+| **Post‑war state** | Semi‑crystallized — naming conventions exist but are periodically challenged |
+
+**RTT reading:** Gdańsk/Danzig is a **regime identity dispute** where naming
+carries deep political and historical regime claims. The compromise synthesis
+demonstrates that some regime collisions cannot be resolved by one side
+prevailing — they require **structural architecture** (naming conventions,
+context‑dependent usage rules) to manage the permanent boundary.
+
+**Structural insight:** The article now has an elaborate talk page FAQ and
+naming convention section — these are **crystallized coherence positions**
+produced by the war. The war itself was costly, but it produced structural
+infrastructure that manages the ongoing regime tension.
+
+---
+
+### 6.3 — Abortion (Framing War → Administrative Freeze)
+
+| Dimension | Detail |
+|-----------|--------|
+| **War type** | Framing (Type 3) + Inclusion/Exclusion (Type 4) |
+| **Period** | Ongoing since early 2000s, with periodic escalations |
+| **Trigger** | Fundamental worldview conflict between pro‑choice and pro‑life perspectives |
+| **Competing claims** | Framing: "medical procedure" vs. "termination of human life" — Inclusion: which perspectives, statistics, and arguments to include |
+| **Peak severity** | Level 5 (Perpetual conflict) — under discretionary sanctions |
+| **Resolution pattern** | **Administrative freeze** — article under persistent protection + ArbCom discretionary sanctions |
+| **Duration** | 20+ years of recurring conflict |
+| **Post‑war state** | Managed instability — the article is functional but permanently contested |
+
+**RTT reading:** Abortion represents an **irreconcilable regime collision** —
+the competing claims arise from fundamentally different worldview regimes
+that cannot be structurally synthesized. NPOV cannot produce a version
+that both camps consider neutral because they disagree on what neutrality
+means for this topic. The administrative freeze is **regime stabilization
+by force** — not consensus, but pragmatic management.
+
+**Structural insight:** The abortion article demonstrates the **limits of
+NPOV as a coherence operator**. For most topics, NPOV can produce a
+stable structural frame that accommodates competing views. For
+irreconcilable worldview conflicts, NPOV can only manage the tension —
+it cannot resolve it. The edit war history is the visible trace of that
+permanent structural stress.
+
+---
+
+## 7 — Edit Wars Across Languages
+
+### 7.1 — The Same Concept, Different Wars
+
+The same topic can produce **different edit wars** on different language
+Wikipedias, because the editor population brings different regime perspectives:
+
+| Topic | English Wikipedia War | Other Language War |
+|-------|---------------------|-------------------|
+| Kashmir | Framing: India vs. Pakistan perspectives | Hindi/Urdu Wikipedias: even more intense, locally embedded |
+| Crimea | Classification: Ukrainian vs. Russian territory | Russian Wikipedia: different framing entirely; Ukrainian Wikipedia: different classification |
+| Sea of Japan | Naming: "Sea of Japan" vs. "East Sea" | Korean Wikipedia: "East Sea" is default; Japanese Wikipedia: "Sea of Japan" is default |
+| Armenian Genocide | Classification: "genocide" vs. "events of 1915" | Turkish Wikipedia: radically different framing and classification |
+
+### 7.2 — Cross‑Language War Comparison Method
+
+```python
+def cross_language_war_comparison(wikidata_qid, languages=None):
+    """
+    Compare edit war intensity for the same concept across languages.
+    Uses Wikidata to find the article title in each language.
+    """
+    if languages is None:
+        languages = ["en", "de", "fr", "ja", "ar", "ru", "zh", "es"]
+
+    # Get sitelinks from Wikidata
+    url = "https://www.wikidata.org/w/api.php"
+    params = {
+        "action": "wbgetentities",
+        "ids": wikidata_qid,
+        "props": "sitelinks",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    sitelinks = resp["entities"][wikidata_qid].get("sitelinks", {})
+
+    results = {}
+    for lang in languages:
+        wiki_key = f"{lang}wiki"
+        if wiki_key in sitelinks:
+            title = sitelinks[wiki_key]["title"]
+            try:
+                war_data = detect_revert_sequences(title, lang,
+                                                    window_hours=72,
+                                                    min_reverts=2)
+                results[lang] = {
+                    "title": title,
+                    "total_reverts": war_data["total_reverts"],
+                    "revert_clusters": war_data["revert_clusters"]
+                }
+            except Exception as e:
+                results[lang] = {"title": title, "error": str(e)}
+
+    return results
+```
+
+### 7.3 — What Cross‑Language Comparison Reveals
+
+| Pattern | Interpretation |
+|---------|---------------|
+| High wars in all languages | **Universally contested regime** — the collision is structural, not cultural |
+| High wars in some languages, low in others | **Culturally specific regime collision** — the dispute is meaningful in some contexts but not others |
+| Different war types across languages | **Different regime boundaries are active** — English may fight over framing while Korean fights over naming |
+| War in English only | **English Wikipedia's global editor base** imports more perspectives, creating more collision surfaces |
+
+---
+
+## 8 — Edit Wars as Research Instruments
+
+### 8.1 — Regime Boundary Mapping
+
+**Method:**
+1. Identify articles with high revert rates in a domain
+2. For each, extract the disputed content using Section 5.4
+3. Classify the dispute by type (Section 2)
+4. Map the disputes onto the domain's knowledge structure
+5. The result is a **regime boundary map** — a visualization of where
+   structural disputes concentrate within a domain
+
+### 8.2 — Regime Transition Monitoring
+
+**Method:**
+1. Set up a watchlist of articles in a domain
+2. Monitor revert rates using periodic API calls
+3. When a revert cluster is detected, extract the competing claims
+4. Track the resolution pattern (Section 4) over time
+5. Completed transitions = the domain's regime landscape has shifted
+
+### 8.3 — Consensus Archaeology
+
+**Method:**
+1. Find a long‑resolved edit war in a domain (check talk page archives)
+2. Extract the original competing claims from the revision history
+3. Identify the resolution pattern and final consensus
+4. The resolved war reveals **how the community established a regime
+   boundary** — the process of structural decision‑making
+
+### 8.4 — Predictive War Analysis
+
+**Method:**
+1. Monitor talk page dispute intensity (from `Talk_Page_Coherence_Surface.md`)
+2. When talk page disputes escalate past coherence gradient Level 3, flag
+   the article for potential edit war
+3. Talk page escalation is a **leading indicator** of edit wars — disputes
+   that fail to resolve on talk pages often erupt as edit wars
+4. Early detection enables preemptive mediation before structural damage occurs
+
+---
+
+## 9 — Cross‑Reference to Other Module Files
+
+| File | How Edit Wars Connect |
+|------|----------------------|
+| `Talk_Page_Coherence_Surface.md` | Edit wars are the **failure mode** of talk page consensus — when talk cannot resolve a dispute, it erupts as warring in the article. Talk page escalation is a leading indicator |
+| `NPOV_As_Coherence_Operator.md` | Many edit wars are NPOV disputes — Framing Wars (Type 3) map directly to NPOV failure modes. Irreconcilable wars reveal NPOV's structural limits |
+| `Revision_History_Regime_Analysis.md` | Edit wars produce the most dramatic signals in revision history — revert spikes, size oscillations, elevated revert rates. This file provides the detection algorithms |
+| `Featured_Article_Validation_Corridor.md` | Active or recent edit wars block FA validation — criterion 5 (Stability) requires no ongoing content disputes |
+| `Category_Taxonomy_Regime_Hierarchy.md` | Classification Wars (Type 2) often involve category changes — the edit war and the category dispute are two surfaces of the same regime collision |
+| `Wikidata_Ingestion_Format.md` | Wikidata edit wars (P31 disputes, label conflicts) are structurally equivalent — same collision, different surface |
+| `Cross_Domain_Meta_Operators.md` | Operator 8 (Edit War as Regime Boundary Marker) is derived directly from this file |
+| `Wikipedia_RTT_Structural_Mapping.md` | Edit wars are mapped in Section 2.2 as "regime transition events" and Section 2.6 as "regime collision alarms" |
+
+---
+
+## 10 — Student Exercises
+
+### Exercise 1 — War Type Classification (15 minutes)
+
+1. Browse Wikipedia's list of notable edit wars: `https://en.wikipedia.org/wiki/Wikipedia:Lamest_edit_wars`
+2. Pick 3 edit wars from different sections
+3. Classify each by type using Section 2 (Factual, Classification, Framing, Inclusion/Exclusion, or Naming)
+4. For each, write one sentence: *"This is a [type] war because the competing claims are about [specific structural question]."*
+
+### Exercise 2 — Live War Detection (25 minutes)
+
+1. Pick an article you expect might have recent edit conflicts (try: a current political leader, a recent scientific controversy, or a currently disputed territory)
+2. Check the article's revision history for recent reverts (look for "undo" or "revert" in edit summaries)
+3. If you find reverts, classify the severity (Section 3) and the war type (Section 2)
+4. Check the talk page — is the dispute being discussed there?
+5. Answer: *"This article [does/does not] show signs of active edit warring. The severity is [level] and the war type is [type]. The talk page [does/does not] have a related discussion thread."*
+
+### Exercise 3 — Resolution Pattern Analysis (30 minutes)
+
+1. Find a completed (resolved) edit war — check talk page archives for threads that discuss settled disputes
+2. Identify which resolution pattern from Section 4 was used (Regime Displacement, Compromise Synthesis, Structural Separation, or Administrative Freeze)
+3. Trace the resolution process: What arguments were decisive? Who mediated? How long did it take?
+4. Write two sentences: *"This war was resolved through [pattern] because [reason]. The winning regime claim was [claim] and it prevailed because [structural advantage]."*
+
+### Exercise 4 — Regime Boundary Extraction (30 minutes)
+
+1. Find an article with a recent or ongoing edit war
+2. Use the article's revision history to find two competing revisions (the "before" and "after" of a revert)
+3. Compare the two versions using Wikipedia's built‑in diff tool (click "prev" next to any revision)
+4. Identify the **exact text** that is being disputed — this is the regime boundary
+5. Answer: *"The regime boundary is located in the [section/paragraph] and concerns [specific text]. Claim A says [X] while Claim B says [Y]. The structural question is [what the dispute is really about at R0/R1 level]."*
+
+### Exercise 5 — Cross‑Language War Comparison (30 minutes)
+
+1. Pick a topic with known cross‑cultural sensitivity (try: a territorial dispute, a historical conflict, or a contested political classification)
+2. Check the article's recent revision history in English + 1 other language edition
+3. Compare: Does the same topic produce edit wars in both languages? Are the same dimensions being disputed?
+4. Answer: *"The English Wikipedia fights about [X] while the [other language] Wikipedia fights about [Y]. This reveals that the regime collision is [universal/culturally specific] because [reason]."*
+
+---
+
+*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
 # Engineering — Wikipedia Overview
 
 Engineering on Wikipedia is a **design‑driven, systems‑structured, constraint‑bounded** regime.  
@@ -10611,6 +7508,588 @@ Engineering is a **design‑driven, systems‑structured, constraint‑bounded r
 
 *This file is part of the Engineering directory in the Wikipedia Awareness module of TriadicFrameworks.  
 It provides the triadic (S/E/R) awareness layer used across all subject domains.*
+# Featured Article Validation Corridor
+
+> **Purpose:** Reframe Wikipedia's Featured Article (FA) and Good Article (GA)
+> processes from quality assurance checklists into what they structurally are —
+> a **validation corridor** that verifies the structural integrity of a regime
+> declaration before granting it the community's highest standing.
+>
+> Most knowledge systems have no public, observable validation process. Peer
+> review is closed. Editorial review is private. Wikipedia's FA/GA process is
+> fully transparent — every nomination, every review comment, every objection,
+> and every resolution is publicly archived. This makes it the only major
+> knowledge source where you can study **how structural validation actually
+> works** from the inside.
+
+---
+
+## 1 — What Is the Validation Corridor?
+
+### 1.1 — The Quality Scale
+
+Wikipedia classifies articles on a **7‑level quality scale** — a regime
+maturity gradient from minimal declaration to fully validated:
+
+| Level | Label | Icon | Article Count (approx.) | RTT Mapping |
+|-------|-------|------|------------------------|-------------|
+| 7 | **Featured Article (FA)** | ★ | ~6,500 | **Validation corridor — gold standard** |
+| 6 | **Former Featured Article (FFA)** | — | ~1,500 | **Regime that lost validation** — structural decay detected |
+| 5 | **A‑class** | — | Rare (WikiProject‑specific) | **Near‑validated** — passes internal but not community‑wide review |
+| 4 | **Good Article (GA)** | ✓ | ~40,000 | **Validation corridor — silver standard** |
+| 3 | **B‑class** | B | ~100,000+ | **Regime draft** — most structural elements present |
+| 2 | **Start‑class** | — | ~800,000+ | **Regime scaffold** — basic framework, significant gaps |
+| 1 | **Stub** | — | ~2,000,000+ | **Regime seed** — minimal declaration, needs everything |
+
+### 1.2 — The Corridor Metaphor
+
+A "validation corridor" is not a single gate — it is a **gauntlet** that
+tests multiple structural dimensions simultaneously. An article must
+satisfy **all** criteria to pass through. Failing any single criterion
+blocks the entire validation:
+
+```
+Article submission
+    │
+    ▼
+┌─────────────────────────────────────────────┐
+│            VALIDATION CORRIDOR               │
+│                                              │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
+│  │Well‑     │  │Compre‑   │  │Properly  │  │
+│  │written   │→ │hensive   │→ │sourced   │  │
+│  └──────────┘  └──────────┘  └──────────┘  │
+│       │              │             │         │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
+│  │Neutral   │  │Stable    │  │Well‑     │  │
+│  │(NPOV)    │→ │(no edit  │→ │structured│  │
+│  │          │  │ wars)    │  │          │  │
+│  └──────────┘  └──────────┘  └──────────┘  │
+│       │              │             │         │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
+│  │Media     │  │Appro‑    │  │Length    │  │
+│  │(images)  │→ │priate    │→ │(not too  │  │
+│  │          │  │lead      │  │ long/    │  │
+│  │          │  │section   │  │ short)   │  │
+│  └──────────┘  └──────────┘  └──────────┘  │
+│                                              │
+│                  ┌──────────┐                │
+│                  │Consistent│                │
+│                  │manual of │                │
+│                  │style     │                │
+│                  └──────────┘                │
+│                      │                       │
+└──────────────────────┼───────────────────────┘
+                       ▼
+              FA status granted ★
+```
+
+---
+
+## 2 — FA Criteria as Structural Integrity Tests
+
+### 2.1 — The 10 FA Criteria Mapped to RTT
+
+Wikipedia's Featured Article criteria (WP:FACR) define what "the best
+Wikipedia has to offer" looks like. Each criterion maps to a specific
+structural integrity test:
+
+| # | FA Criterion | RTT Structural Test | What It Verifies |
+|---|-------------|--------------------|--------------------|
+| 1 | **Well‑written** — prose is clear, concise, and of professional standard | **Regime clarity** | The regime declaration is readable and unambiguous — no structural noise |
+| 2 | **Comprehensive** — covers the topic fully, with no significant omissions | **Regime completeness** | All major aspects of the regime are declared — no structural gaps |
+| 3 | **Well‑researched** — claims are supported by reliable, up‑to‑date sources | **Regime provenance** | Every structural claim has verified external origin — full source traceability |
+| 4 | **Neutral** — complies with NPOV policy | **Coherence operator compliance** | The article satisfies the R0 coherence constraint (see `NPOV_As_Coherence_Operator.md`) |
+| 5 | **Stable** — not subject to ongoing edit wars or content disputes | **Regime stability** | The article has achieved structural equilibrium — no active regime conflict |
+| 6 | **Follows Manual of Style** — complies with formatting standards | **Regime template compliance** | The declaration follows the community's standard structural format (R2) |
+| 7 | **Appropriate lead** — lead section summarizes the article adequately | **Regime summary integrity** | The compressed regime declaration (lead) accurately represents the full declaration (body) |
+| 8 | **Appropriate length** — neither too long nor too short | **Regime scope calibration** | The declaration is proportional to the concept's structural complexity — not bloated, not truncated |
+| 9 | **Illustrated** — includes relevant, properly licensed images | **Regime illustration** | The declaration includes non‑textual structural elements where appropriate |
+| 10 | **Consistent citation formatting** — references follow a uniform style | **Regime provenance formatting** | Source traceability follows a standard, machine‑readable format |
+
+### 2.2 — Criterion Weights
+
+Not all criteria carry equal structural weight. In practice, FA reviews
+most commonly fail on:
+
+| Rank | Most Common Failure | Frequency | Structural Severity |
+|------|-------------------|-----------|-------------------|
+| 1 | **Sourcing gaps** (criterion 3) | Very high | Critical — provenance failure undermines all other criteria |
+| 2 | **Prose quality** (criterion 1) | High | Moderate — affects clarity but not structural integrity |
+| 3 | **Comprehensiveness** (criterion 2) | High | Critical — structural completeness is non‑negotiable for FA |
+| 4 | **NPOV compliance** (criterion 4) | Moderate | Critical — coherence operator violation blocks validation |
+| 5 | **Stability** (criterion 5) | Moderate | Blocking — active conflicts mean the regime is not yet crystallized |
+
+**Key insight:** The top failure reasons reveal the **minimum structural
+requirements** for validation — provenance, completeness, and coherence.
+These are the same requirements that RTT identifies as fundamental to any
+stable regime declaration.
+
+---
+
+## 3 — The GA vs. FA Distinction
+
+### 3.1 — Two Levels of Validation
+
+| Dimension | Good Article (GA) | Featured Article (FA) |
+|-----------|------------------|----------------------|
+| Criteria count | 6 broad criteria | 10 specific criteria |
+| Review depth | Single reviewer | Community‑wide peer review |
+| Process duration | Days to weeks | Weeks to months |
+| Source requirements | Appropriately referenced | Comprehensively researched with high‑quality sources |
+| Prose standard | "Clear and concise" | "Brilliant" — professional publication quality |
+| Stability requirement | "No edit wars" | "No ongoing content disputes" — stricter |
+| Comprehensiveness | "Broad in coverage" | "Comprehensive" — no significant omissions |
+| Total articles | ~40,000 | ~6,500 |
+
+### 3.2 — RTT Reading
+
+| Level | RTT Interpretation |
+|-------|-------------------|
+| **GA** | **Structurally sound regime declaration** — all major integrity tests pass, but with tolerance for minor gaps. The regime is well‑formed and stable. |
+| **FA** | **Structurally complete regime declaration** — all integrity tests pass at maximum rigor. The regime is fully declared, fully sourced, fully coherent, and community‑validated. This is as structurally complete as a Wikipedia article can be. |
+| **GA → FA journey** | **Regime maturation** — the article strengthens its structural integrity across all dimensions. The gap between GA and FA is not content volume — it is structural rigor. |
+
+---
+
+## 4 — The Review Process as Observable Structural Validation
+
+### 4.1 — FA Nomination Process
+
+```
+1. Editor nominates article at WP:FAC
+         │
+2. Community reviewers examine article against all 10 criteria
+         │
+   ┌─────┴──────────────────────┐
+   │                            │
+3a. Support — reviewer         3b. Oppose — reviewer
+    confirms criteria met           identifies specific failures
+         │                            │
+         │                     4. Nominator addresses objections
+         │                            │
+         │                     5. Reviewer re‑evaluates
+         │                            │
+   ┌─────┴────────────────────────────┘
+   │
+6. FA director assesses consensus
+         │
+   ┌─────┴──────┐
+   │            │
+7a. Promoted  7b. Not promoted
+    to FA ★       (may retry)
+```
+
+### 4.2 — What Makes This Structurally Unique
+
+No other major knowledge source exposes its validation process this way:
+
+| Knowledge Source | Validation Process | Observable? |
+|-----------------|-------------------|-------------|
+| Academic journals | Peer review | **No** — reviewer comments are confidential |
+| Encyclopædia Britannica | Editorial review | **No** — internal editorial process |
+| News organizations | Editorial review + fact‑checking | **No** — internal process |
+| NIST standards | Committee review + public comment | **Partially** — public comments visible, committee deliberations not |
+| **Wikipedia FA** | Community peer review | **Fully** — every comment, objection, and resolution is archived |
+
+**RTT reading:** Wikipedia's FA process is the only major validation corridor
+where you can observe **structural integrity verification in real time**.
+Every reviewer comment is a **structural test result**. Every objection
+is a **detected integrity failure**. Every resolution is a **structural
+repair**. The full history of this process is permanently archived.
+
+### 4.3 — Where to Find FA Reviews
+
+| Resource | URL |
+|----------|-----|
+| Current FA nominations | `https://en.wikipedia.org/wiki/Wikipedia:Featured_article_candidates` |
+| FA review archives | `https://en.wikipedia.org/wiki/Wikipedia:Featured_article_candidates/ARTICLE/archiveN` |
+| FA statistics | `https://en.wikipedia.org/wiki/Wikipedia:Featured_article_statistics` |
+| Featured Article log | `https://en.wikipedia.org/wiki/Wikipedia:Featured_articles` |
+| FA review criteria | `https://en.wikipedia.org/wiki/Wikipedia:Featured_article_criteria` |
+| Good Article nominations | `https://en.wikipedia.org/wiki/Wikipedia:Good_article_nominations` |
+
+---
+
+## 5 — Former Featured Articles: Regime Decay Detection
+
+### 5.1 — What Is a Former Featured Article?
+
+A Former Featured Article (FFA) is an article that **once held FA status
+but was demoted** through the Featured Article Review (FAR) process. This
+is structurally significant — it means a validated regime declaration
+**lost its validation** because its structural integrity degraded.
+
+### 5.2 — Why Articles Lose FA Status
+
+| Reason | Frequency | RTT Reading |
+|--------|-----------|-------------|
+| **Source degradation** — citations became dead links, sources were later discredited | High | **Provenance decay** — the external regime references that supported the declaration have weakened |
+| **Standard inflation** — FA criteria became stricter over time, older FAs no longer qualify | High | **Validation corridor tightening** — the structural integrity threshold increased |
+| **Content drift** — article was edited by many editors post‑FA, quality declined | Moderate | **Regime drift** — the declaration was structurally modified without maintaining integrity |
+| **Comprehensiveness gap** — new research or events created coverage gaps that weren't addressed | Moderate | **Regime expansion outpaced declaration** — the real‑world regime grew beyond what the article covers |
+| **NPOV shift** — the article's neutrality became contested in light of new developments | Low | **Coherence operator recalibration** — external regime shifts changed the neutrality landscape |
+
+### 5.3 — FFA as Structural Signal
+
+The list of Former Featured Articles in any domain reveals:
+
+1. **Which regime declarations are hardest to maintain** — concepts that lose FA status are structurally high‑maintenance
+2. **Where source landscapes are most volatile** — domains with many FFAs due to source degradation have unstable external regimes
+3. **Where the community's standards have evolved** — older FFAs that were demoted for standard inflation mark generational shifts in structural expectations
+4. **Which articles suffer from regime drift** — articles with high editor turnover that lost quality mark stewardship failures
+
+---
+
+## 6 — Domain FA Profiles
+
+### 6.1 — FA Distribution by Domain
+
+FA articles are not evenly distributed across knowledge domains. The
+distribution reveals which domains produce the most structurally complete
+regime declarations:
+
+| Domain | Approx. FA Count | FA Density | Structural Interpretation |
+|--------|-----------------|-----------|--------------------------|
+| History | Very high (~1,200+) | High | Strong narrative tradition; historical articles are well‑suited to comprehensive treatment |
+| Biology | High (~800+) | High | Well‑defined scope; taxonomic structure aids completeness |
+| Geography | High (~700+) | Moderate | Standardized templates (city/country infoboxes) make structural completeness achievable |
+| Physics | Moderate (~300) | Moderate | Strong scientific consensus makes stability easy; comprehensiveness requires deep expertise |
+| Medicine | Moderate (~250) | Moderate | Strong evidence base; high source quality requirements |
+| Mathematics | Low (~100) | Low | Highly abstract; "comprehensiveness" is hard to define for mathematical concepts |
+| Computer Science | Low (~80) | Low | Rapidly evolving domain; articles struggle with stability criterion |
+| Philosophy | Low (~60) | Very low | Inherently perspectival; NPOV compliance is structurally difficult |
+| Political Science | Very low (~40) | Very low | High NPOV stress; stability criterion is extremely hard to meet |
+| Economics | Very low (~30) | Very low | Competing schools make neutrality and stability structurally challenging |
+
+### 6.2 — What FA Density Reveals
+
+| FA Density | Domain Characteristic |
+|-----------|----------------------|
+| High | Domain has clear scope boundaries, strong consensus, standardized article structures |
+| Moderate | Domain has reasonable consensus but some areas of contested framing |
+| Low | Domain is either highly abstract (hard to define completeness), rapidly evolving (hard to stabilize), or inherently perspectival (hard to satisfy NPOV) |
+| Very low | Domain faces structural barriers to validation — the validation corridor's criteria are particularly difficult to satisfy here |
+
+**Key insight:** Low FA density in a domain does not mean the domain is
+less important — it means the domain's structural characteristics make
+the validation corridor harder to traverse. This is a property of the
+**interaction between the domain's regime structure and the corridor's
+criteria**, not of the domain itself.
+
+---
+
+## 7 — Worked Examples
+
+### 7.1 — Photosynthesis (FA Since 2004)
+
+One of Wikipedia's longest‑standing Featured Articles:
+
+| FA Criterion | How Photosynthesis Satisfies It |
+|-------------|-------------------------------|
+| Well‑written | Clear, accessible prose explaining complex biochemistry without oversimplification |
+| Comprehensive | Covers light reactions, dark reactions, C3/C4/CAM pathways, evolutionary history, ecological significance |
+| Well‑researched | 150+ references to peer‑reviewed journals and textbooks |
+| Neutral | Scientific consensus is uncontested — NPOV stress level 1 |
+| Stable | Low revert rate, steady stewardship by WikiProject Biology editors |
+| Manual of Style | Follows chemistry and biology formatting conventions |
+| Lead section | Summarizes the entire photosynthetic process in 4 clear paragraphs |
+| Length | ~12,000 words — proportional to the concept's complexity |
+| Illustrated | Diagrams of light reactions, chloroplast structure, Z‑scheme |
+| Citations | Uniform Harvard referencing style throughout |
+
+**RTT reading:** Photosynthesis is a **textbook validation corridor success** —
+it passes all 10 criteria comfortably because:
+- The underlying regime (photosynthetic biochemistry) is scientifically
+  crystallized — no structural disputes
+- The source landscape is stable — peer‑reviewed biochemistry journals
+  are reliable and persistent
+- The scope is well‑defined — the process has clear boundaries
+- NPOV is trivially satisfied — no competing worldviews on photosynthesis
+
+**Why it has lasted 20+ years as FA:** The concept's regime is so
+stable and well‑defined that no criterion is under structural pressure.
+This is what validation looks like for a crystallized, consensus‑level
+regime.
+
+---
+
+### 7.2 — Penicillin (FA, Then Demoted, Then Restored)
+
+A case study in **validation corridor cycling**:
+
+| Phase | Year | Status | What Happened |
+|-------|------|--------|---------------|
+| 1 | 2006 | Promoted to FA | Strong article on discovery and pharmacology |
+| 2 | 2012 | Demoted to FFA | Source degradation (dead links), standard inflation (stricter citation requirements), coverage gaps (resistance mechanisms not adequately covered) |
+| 3 | 2018 | Major rewrite | New editors rebuilt sourcing, expanded coverage, updated to current pharmacological standards |
+| 4 | 2019 | Re‑promoted to FA | Passed all 10 criteria under stricter modern standards |
+
+**RTT reading:** Penicillin demonstrates the **validation corridor lifecycle**:
+- Initial validation confirmed structural integrity at 2006 standards
+- Regime decay (source degradation, coverage gaps) + corridor tightening
+  (stricter standards) caused integrity failure
+- Structural repair (rewrite, re‑sourcing) restored integrity
+- Re‑validation confirmed the repaired declaration meets current standards
+
+**Key insight:** FA status is not permanent. It is a **snapshot of
+structural integrity at validation time**. The underlying regime and the
+corridor's criteria both evolve — the article must keep up with both.
+
+---
+
+## 8 — API Patterns for Validation Corridor Analysis
+
+### 8.1 — Check an Article's Quality Rating
+
+```python
+import requests
+
+def get_quality_rating(title, lang="en"):
+    """Get an article's quality rating from talk page assessments."""
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "titles": f"Talk:{title}",
+        "prop": "categories",
+        "cllimit": "max",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    page = next(iter(resp["query"]["pages"].values()))
+    categories = [c["title"] for c in page.get("categories", [])]
+
+    quality_levels = {
+        "FA-Class": "featured_article",
+        "GA-Class": "good_article",
+        "A-Class": "a_class",
+        "B-Class": "b_class",
+        "C-Class": "c_class",
+        "Start-Class": "start_class",
+        "Stub-Class": "stub"
+    }
+
+    for cat in categories:
+        for level_key, level_val in quality_levels.items():
+            if level_key in cat:
+                return {
+                    "article": title,
+                    "quality": level_val,
+                    "category": cat
+                }
+
+    return {"article": title, "quality": "unassessed"}
+```
+
+### 8.2 — Check for Featured Article Badge via Wikidata
+
+```python
+def is_featured_article(title, lang="en"):
+    """Check if an article has a Featured Article badge via Wikidata sitelinks."""
+    url = "https://www.wikidata.org/w/api.php"
+    params = {
+        "action": "wbgetentities",
+        "sites": f"{lang}wiki",
+        "titles": title,
+        "props": "sitelinks",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+
+    for entity in resp.get("entities", {}).values():
+        sitelinks = entity.get("sitelinks", {})
+        wiki_key = f"{lang}wiki"
+        if wiki_key in sitelinks:
+            badges = sitelinks[wiki_key].get("badges", [])
+            return {
+                "article": title,
+                "is_fa": "Q17437796" in badges,   # Featured Article badge
+                "is_ga": "Q17437798" in badges,   # Good Article badge
+                "badges": badges
+            }
+
+    return {"article": title, "is_fa": False, "is_ga": False, "badges": []}
+```
+
+### 8.3 — List Featured Articles in a Domain
+
+```python
+def list_featured_articles(category, lang="en", limit=50):
+    """List Featured Articles within a category (domain)."""
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "list": "categorymembers",
+        "cmtitle": f"Category:Featured articles about {category}",
+        "cmtype": "page",
+        "cmlimit": str(limit),
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    return [m["title"] for m in resp.get("query", {}).get("categorymembers", [])]
+```
+
+### 8.4 — Compute Domain Validation Profile
+
+```python
+def domain_validation_profile(domain_articles):
+    """
+    Compute the validation corridor profile for a set of
+    articles representing a knowledge domain.
+    """
+    profile = {
+        "total": len(domain_articles),
+        "featured": 0,
+        "good": 0,
+        "b_class": 0,
+        "start": 0,
+        "stub": 0,
+        "unassessed": 0
+    }
+
+    quality_map = {
+        "featured_article": "featured",
+        "good_article": "good",
+        "a_class": "b_class",  # A-class is rare, group with B
+        "b_class": "b_class",
+        "c_class": "start",    # C-class grouped with Start
+        "start_class": "start",
+        "stub": "stub",
+        "unassessed": "unassessed"
+    }
+
+    for title in domain_articles:
+        try:
+            rating = get_quality_rating(title)
+            quality = rating.get("quality", "unassessed")
+            bucket = quality_map.get(quality, "unassessed")
+            profile[bucket] += 1
+        except Exception:
+            profile["unassessed"] += 1
+
+    # Compute validation ratio
+    total = profile["total"]
+    if total > 0:
+        profile["fa_ratio"] = round(profile["featured"] / total, 4)
+        profile["validated_ratio"] = round(
+            (profile["featured"] + profile["good"]) / total, 4)
+        profile["maturity_score"] = round(
+            (profile["featured"] * 6 +
+             profile["good"] * 4 +
+             profile["b_class"] * 3 +
+             profile["start"] * 1 +
+             profile["stub"] * 0) / max(total, 1), 2)
+
+    return profile
+```
+
+---
+
+## 9 — The Validation Corridor as Research Instrument
+
+### 9.1 — Structural Completeness Benchmarking
+
+FA articles serve as **structural benchmarks** for their domains:
+
+**Method:**
+1. Identify the FA articles in a domain (use Section 8.3)
+2. Analyze their common structural features — section structure, source
+   count, word count, image count, citation density
+3. Use these features as the domain's **structural completeness template**
+4. Compare any non‑FA article to this template to identify specific
+   structural gaps
+
+### 9.2 — Validation Corridor Difficulty Analysis
+
+**Method:**
+1. Collect FA nomination archives for a domain
+2. Classify reviewer objections by criterion (sourcing, prose, comprehensiveness, NPOV, stability)
+3. The most common objection type = the domain's **structural bottleneck** —
+   the criterion that is hardest to satisfy for articles in this domain
+
+### 9.3 — Temporal Validation Standards
+
+**Method:**
+1. Compare FA articles promoted in 2005 vs. 2015 vs. 2025
+2. What changed in the criteria's interpretation over time?
+3. Which dimensions became stricter? Which became more flexible?
+4. This reveals the **evolution of the community's structural integrity
+   expectations** — how the validation corridor itself changes over time
+
+### 9.4 — Cross‑Language Validation Comparison
+
+**Method:**
+1. Find the same concept's article in multiple language Wikipedias
+2. Check its quality rating in each (FA, GA, B, Start, Stub)
+3. An article that is FA in English but Stub in another language reveals
+   a **structural investment gap** — the community's structural attention
+   is concentrated in English
+
+---
+
+## 10 — Cross‑Reference to Other Module Files
+
+| File | How the Validation Corridor Connects |
+|------|-------------------------------------|
+| `NPOV_As_Coherence_Operator.md` | FA criterion 4 (Neutral) requires NPOV compliance — articles with high NPOV stress (Level 4–5) struggle to pass validation |
+| `Revision_History_Regime_Analysis.md` | FA criterion 5 (Stable) maps directly to regime phase classification — articles in Negotiation or Perturbation phase cannot pass |
+| `Talk_Page_Coherence_Surface.md` | FA reviewers examine talk page health — articles with chronic unresolved disputes rarely pass |
+| `Edit_War_Regime_Transition_Detection.md` | Active or recent edit wars are blocking for FA — they signal regime instability |
+| `Category_Taxonomy_Regime_Hierarchy.md` | FA articles establish the structural completeness template for their category neighborhood |
+| `Wikidata_Ingestion_Format.md` | FA badge (Q17437796) is a Wikidata property — queryable via SPARQL for programmatic FA identification |
+| `Cross_Domain_Meta_Operators.md` | Operator 7 (Featured Article as Validation Corridor) is derived directly from this file |
+| `Wikipedia_RTT_Structural_Mapping.md` | FA/GA process is mapped in Section 2.5 as "validation corridor" at R2–R3 level |
+
+---
+
+## 11 — Student Exercises
+
+### Exercise 1 — Quality Scale Assessment (15 minutes)
+
+1. Pick 5 Wikipedia articles on related topics within a single domain
+2. Check each article's quality rating (look at the talk page for WikiProject assessment banners)
+3. Arrange them on the quality scale: Stub → Start → C → B → GA → FA
+4. For the lowest‑rated article, identify which FA criterion it most clearly fails
+5. Write one sentence: *"[Article] is rated [level] because it fails criterion [N] — specifically, [evidence]."*
+
+### Exercise 2 — FA Review Archaeology (25 minutes)
+
+1. Go to `Wikipedia:Featured article candidates` and find a **recently completed** review (either promoted or not promoted)
+2. Read the review comments from at least 3 reviewers
+3. For each reviewer, identify which FA criteria they tested and what structural issues they found
+4. Answer: *"The most common objection was about criterion [N]. The article [was/was not] promoted because [reason]. The structural bottleneck was [specific issue]."*
+
+### Exercise 3 — FA vs. Non‑FA Structural Comparison (30 minutes)
+
+1. Pick a domain (e.g., Biology, History, Physics)
+2. Find one FA article and one Start/Stub article in the same domain
+3. Compare: word count, reference count, section count, image count, talk page size
+4. Compute the structural gap: how many more sources, sections, and words does the FA have?
+5. Write two sentences: *"The FA has [N]× more sources and [M]× more sections than the Stub. The primary structural gap is [specific dimension — sourcing, comprehensiveness, or prose quality]."*
+
+### Exercise 4 — Former Featured Article Analysis (20 minutes)
+
+1. Browse `Category:Former featured articles` and pick one that interests you
+2. Find the FA Review (FAR) discussion that led to its demotion
+3. Identify: Why was it demoted? Which criteria did it fail? What changed?
+4. Classify the demotion reason as: source degradation, standard inflation, content drift, comprehensiveness gap, or NPOV shift
+5. Write one sentence: *"[Article] was demoted from FA because [reason], which maps to [RTT regime concept]."*
+
+### Exercise 5 — Domain Validation Profile (30 minutes)
+
+1. Pick a knowledge domain
+2. Find 10 articles in that domain across different quality levels
+3. Count: how many are FA? GA? B? Start? Stub?
+4. Compute the domain's validation ratio: (FA + GA) / total
+5. Compare to another domain: which has a higher validation ratio? Why?
+6. Answer: *"[Domain A] has a validation ratio of [X], while [Domain B] has [Y]. Domain A produces more validated articles because [structural reason]."*
+
+---
+
+*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
 # History — Wikipedia Overview
 
 History on Wikipedia is a **narrative‑driven, evidence‑anchored, interpretation‑sensitive** regime.  
@@ -12926,6 +10405,630 @@ This is the capstone exercise for triadic medical‑regime awareness.
 
 *These exercises belong to the Medicine directory of the Wikipedia Awareness module.  
 They follow the RTT/1 student‑training format used across all subject domains.*
+# NPOV As Coherence Operator
+
+> **Purpose:** Reframe Wikipedia's Neutral Point of View (NPOV) policy from
+> an editorial guideline into what it structurally is — an **R0 coherence
+> operator** that constrains every regime declaration on Wikipedia. NPOV is
+> not a suggestion. It is the foundational structural invariant that makes
+> Wikipedia possible as a multi‑regime knowledge system.
+>
+> Without NPOV, Wikipedia would fragment into competing regime declarations
+> with no mechanism for coexistence. NPOV is the operator that forces
+> 6.9 million articles — written by millions of editors with radically
+> different worldviews — into a single coherent knowledge substrate.
+>
+> This file shows students how to recognize NPOV as structural physics,
+> not editorial policy.
+
+---
+
+## 1 — What Is NPOV?
+
+### 1.1 — The Policy Statement
+
+Wikipedia's NPOV policy (WP:NPOV) states:
+
+> *"All encyclopedic content on Wikipedia must be written from a neutral
+> point of view, representing fairly, proportionately, and, as far as
+> possible, without editorial bias, all the significant views that have
+> been published by reliable sources on a topic."*
+
+### 1.2 — The RTT Translation
+
+In RTT terms, NPOV is a **coherence operator at R0** — the deepest
+regime level. It constrains what structural claims can be made and how
+competing claims must coexist:
+
+| NPOV Principle | RTT Translation |
+|---------------|-----------------|
+| "Neutral point of view" | **No article may declare one regime as structurally superior to another** — all must coexist within the same frame |
+| "Representing fairly" | **Competing regime declarations must be given structural presence** proportional to their standing in reliable sources |
+| "Proportionately" | **Regime weight must reflect external consensus** — not editor preference, not popularity, not truth claims |
+| "Without editorial bias" | **The article itself is not a regime agent** — it declares regimes, it does not advocate for them |
+| "All significant views" | **All regimes with sufficient structural standing** (as verified by reliable sources) must be represented |
+
+### 1.3 — Why NPOV Is an Operator, Not a Rule
+
+A **rule** tells you what to do. An **operator** transforms inputs into
+outputs according to a structural constraint.
+
+NPOV is an operator because it:
+
+1. **Receives** competing regime claims from editors with different worldviews
+2. **Constrains** how those claims can be expressed (proportionality, neutrality, source verification)
+3. **Produces** a single article that represents multiple regimes simultaneously
+4. **Applies uniformly** to every article on Wikipedia, regardless of topic or domain
+
+This is not editorial judgment — it is **structural transformation**. NPOV
+takes N conflicting regime declarations and produces 1 coherent article.
+That is an operator.
+
+---
+
+## 2 — The Five Sub‑Operators of NPOV
+
+NPOV is not a single monolithic rule. It decomposes into **five sub‑operators**,
+each enforcing a different coherence constraint:
+
+### Sub‑Operator 1: Proportionality (WP:WEIGHT)
+
+**What it does:** Determines how much space each viewpoint receives in an
+article, based on its prominence in reliable sources.
+
+**Coherence function:** Prevents **regime amplification** — no viewpoint
+gets more structural presence than its external standing warrants.
+
+| Scenario | WEIGHT Application | RTT Reading |
+|----------|-------------------|-------------|
+| 99% of scientists agree on X, 1% disagree | X gets dominant treatment; dissent gets brief mention | Majority regime → primary declaration; minority regime → acknowledged but bounded |
+| Two competing schools of thought, roughly equal in scholarship | Both get substantial, balanced treatment | Two regimes with equal structural standing → parallel declarations |
+| Fringe theory with minimal academic support | Brief mention in appropriate context, or not included at all | Insufficient structural standing → regime excluded or minimally declared |
+
+**Key insight:** WEIGHT is the most contested sub‑operator. Disputes about
+proportionality are disputes about **regime standing** — how much structural
+space each competing claim deserves.
+
+---
+
+### Sub‑Operator 2: No Original Research (WP:NOR)
+
+**What it does:** Prohibits editors from introducing claims not supported by
+published reliable sources.
+
+**Coherence function:** Prevents **regime fabrication** — Wikipedia declares
+existing regimes, it does not create new ones.
+
+| NOR Principle | RTT Reading |
+|--------------|-------------|
+| "Wikipedia does not publish original thought" | Wikipedia is a **regime mirror**, not a regime generator |
+| "All material must be attributable to a reliable source" | Every structural claim must have **external regime provenance** |
+| "Synthesis of published material to reach a novel conclusion is original research" | Combining existing regime claims to create a **new regime claim** is prohibited |
+
+**Key insight:** NOR ensures Wikipedia remains a **second‑order regime system** —
+it declares and organizes regimes that originate elsewhere. Without NOR,
+Wikipedia would become a first‑order regime generator, and its coherence
+would collapse because there would be no external validation constraint.
+
+---
+
+### Sub‑Operator 3: Verifiability (WP:V)
+
+**What it does:** Requires that all claims in Wikipedia articles can be
+verified against published reliable sources.
+
+**Coherence function:** Provides the **validation mechanism** for regime
+claims — the structural test that separates includable claims from
+excludable ones.
+
+| Verifiability Principle | RTT Reading |
+|------------------------|-------------|
+| "Verifiability, not truth" | Wikipedia doesn't evaluate whether a regime claim is **true** — only whether it has **structural standing** (published in reliable sources) |
+| "The threshold for inclusion is verifiability" | **Regime standing** is determined by publishability, not by correctness |
+| "Exceptional claims require exceptional sources" | Claims that challenge established regimes face a **higher structural standing threshold** |
+
+**Key insight:** "Verifiability, not truth" is perhaps the most
+structurally profound principle on Wikipedia. It means NPOV operates
+on **regime standing**, not on **regime validity**. A claim can be
+included if it has sufficient standing — even if it is contested.
+A claim can be excluded if it lacks standing — even if it might be true.
+This is what makes NPOV a **structural operator** rather than an
+epistemic one.
+
+---
+
+### Sub‑Operator 4: Reliable Sources (WP:RS)
+
+**What it does:** Defines which external sources count as structurally
+valid for citation.
+
+**Coherence function:** Establishes the **source regime boundary** —
+the line between accepted and rejected external authority.
+
+| Source Type | Structural Standing | Regime Reading |
+|------------|-------------------|----------------|
+| Peer‑reviewed academic journals | Highest | Gold‑standard external regime authority |
+| Major news outlets (Reuters, AP, BBC) | High | Established journalistic regime |
+| Government reports and official publications | High | Institutional regime authority |
+| Books by reputable publishers | Moderate–High | Editorial‑gate regime |
+| Self‑published sources | Low | Unvetted regime — generally excluded |
+| Social media, blogs, forums | Very low | Ungoverned regime — almost always excluded |
+| Primary sources | Contextual | Direct regime evidence — usable for facts, not for interpretation |
+
+**Key insight:** RS is NPOV's **external calibration mechanism**. It
+answers the question: "Which regimes outside Wikipedia do we recognize
+as structurally valid?" Without RS, NPOV would have no way to determine
+proportionality — there would be no external reference for regime standing.
+
+---
+
+### Sub‑Operator 5: Fringe Theories (WP:FRINGE)
+
+**What it does:** Defines how to handle claims that fall outside
+mainstream academic or scientific consensus.
+
+**Coherence function:** Prevents **regime contamination** — fringe
+claims cannot structurally invade mainstream regime declarations.
+
+| FRINGE Principle | RTT Reading |
+|-----------------|-------------|
+| "Fringe theories should be described in proportion to their prominence" | **Sub‑regime containment** — fringe claims get their own bounded context, not equal footing |
+| "Wikipedia should not present fringe theories as though they are equally valid" | **Regime standing hierarchy** — mainstream consensus has primary structural position |
+| "Fringe theories that are supported by clear evidence may eventually be accepted" | **Regime mobility** — a claim can move from fringe to mainstream if its structural standing increases |
+| "Parity of sources is not required" | **Asymmetric regime standing** — not all regime claims are structurally equal |
+
+**Key insight:** FRINGE is where NPOV's structural nature is most visible.
+The question is never "is this claim true?" — it is "does this claim have
+sufficient structural standing to be included, and if so, how much space
+does it get?" This is pure regime topology.
+
+---
+
+## 3 — NPOV Stress Spectrum
+
+Not all articles experience the same NPOV pressure. The **NPOV stress
+spectrum** classifies articles by the intensity of coherence challenge
+they face:
+
+### 3.1 — The Five Stress Levels
+
+| Level | Label | NPOV Challenge | Typical Articles | Coherence Difficulty |
+|-------|-------|---------------|------------------|---------------------|
+| **1** | **Consensus** | No competing viewpoints — single regime | Mathematical theorems, chemical elements, astronomical objects | Very low — NPOV is trivially satisfied |
+| **2** | **Nuanced** | Minor competing perspectives within a broad consensus | Most science articles, established historical events | Low — NPOV requires fair representation of nuances |
+| **3** | **Contested** | Significant competing viewpoints with asymmetric standing | Alternative medicine, economic policy, psychological theories | Moderate — NPOV requires careful proportionality |
+| **4** | **Polarized** | Two or more major camps with roughly equal standing | Political topics, religious controversies, territorial disputes | High — NPOV must maintain balance between hostile camps |
+| **5** | **Irreconcilable** | Fundamental worldview conflicts where framing itself is disputed | Israel–Palestine, Abortion, Consciousness, Kashmir | Maximum — NPOV is under continuous structural assault |
+
+### 3.2 — Stress Level Distribution by Domain
+
+| Domain | Dominant Stress Level | Rationale |
+|--------|----------------------|-----------|
+| Physics | 1–2 | Strong consensus; few worldview conflicts |
+| Mathematics | 1 | Near‑universal agreement on formal results |
+| Biology | 2–3 | Consensus on evolution; contested areas in ecology, taxonomy |
+| Chemistry | 1–2 | Strong consensus; minor disputes on nomenclature |
+| Computer Science | 2–3 | Technical consensus; contested on AI ethics, software patents |
+| Philosophy | 3–4 | Multiple schools with competing foundational claims |
+| Earth Sciences | 2–3 | Consensus on plate tectonics; climate change contested politically (not scientifically) |
+| Economics | 3–4 | Multiple competing schools (Keynesian, Austrian, MMT, etc.) |
+| History | 3–5 | Consensus on facts; deeply contested on framing, significance, causation |
+| Medicine | 2–4 | Strong evidence base; contested on alternative medicine, public health policy |
+| Engineering | 1–2 | Technical consensus; minor disputes on standards and best practices |
+| Astronomy | 1–2 | Strong consensus; minor classification disputes |
+| Linguistics | 2–3 | Descriptive consensus; contested on language vs. dialect, linguistic relativity |
+| Psychology | 2–4 | Evidence‑based core; contested on nature vs. nurture, classification of disorders |
+| Political Science | 4–5 | Inherently perspectival; nearly all major topics are politically contested |
+
+---
+
+## 4 — NPOV Failure Modes
+
+When NPOV fails — when the coherence operator breaks down — the result
+is one of four structural failure modes:
+
+### Failure Mode 1: Regime Capture
+
+**What happens:** One editorial faction gains control of an article and
+suppresses competing viewpoints. The article stops being a neutral regime
+declaration and becomes an **advocacy document** for one regime.
+
+**How to detect:**
+- Talk page dominated by a small group reverting alternative perspectives
+- Edit summaries repeatedly citing WP:WEIGHT to exclude minority views
+- Article framing consistently favors one perspective
+- WikiProject banner from only one domain, despite cross‑domain topic
+
+**RTT reading:** The coherence operator has been **overridden by a single
+regime agent**. The article no longer represents the regime landscape — it
+represents one regime's claim to dominance.
+
+---
+
+### Failure Mode 2: False Balance
+
+**What happens:** An article gives equal structural weight to viewpoints
+with radically unequal standing. A fringe theory gets the same space as
+mainstream consensus.
+
+**How to detect:**
+- "On the other hand…" constructions giving equal weight to
+  mainstream and fringe positions
+- Equal word counts for consensus and dissent sections
+- Absence of WP:WEIGHT-aware framing ("the scientific consensus is…"
+  vs. "some scientists believe…")
+
+**RTT reading:** The coherence operator has been **miscalibrated** — it
+is treating unequal regime standings as equal. This distorts the structural
+landscape by inflating fringe regime presence.
+
+---
+
+### Failure Mode 3: Neutrality Paralysis
+
+**What happens:** Editors become so cautious about NPOV violations that
+the article fails to make clear, direct statements. Every claim is
+hedged with "some argue," "it has been suggested," "according to some."
+
+**How to detect:**
+- Excessive use of weasel words and attribution phrases
+- Cleanup tags like `{{weasel}}` or `{{who}}`
+- Article reads as equivocal even on well‑established facts
+
+**RTT reading:** The coherence operator has become **over‑constrained** —
+its structural requirements are being applied so conservatively that the
+article loses its capacity to declare anything clearly. The regime
+declaration dissolves into noise.
+
+---
+
+### Failure Mode 4: Structural Fragmentation
+
+**What happens:** An article on a contested topic fragments into
+disconnected sections, each written by a different editorial faction.
+There is no coherent narrative — just juxtaposed regime declarations
+that don't interact.
+
+**How to detect:**
+- Abrupt tonal shifts between sections
+- Sections that seem to exist in different articles
+- No connective tissue between competing perspective sections
+- Article feels like a collection of essays rather than an encyclopedia entry
+
+**RTT reading:** The coherence operator has **partially failed** — it
+succeeded in preventing any single regime from capturing the article,
+but it failed to produce a unified structural frame. The result is
+**incoherent coexistence** rather than coherent integration.
+
+---
+
+## 5 — NPOV as Structural Physics
+
+### 5.1 — The Conservation Analogy
+
+In physics, conservation laws are structural invariants — energy,
+momentum, charge are conserved regardless of what happens in a system.
+NPOV functions as a **conservation law for structural representation**:
+
+| Physics | Wikipedia |
+|---------|-----------|
+| Energy is conserved | **Representational balance is conserved** — you cannot add weight to one viewpoint without proportionally adjusting others |
+| Momentum is conserved | **Regime standing is conserved** — you cannot inflate a claim's standing beyond what reliable sources support |
+| Charge is conserved | **Source validity is conserved** — you cannot create citation authority from nothing (NOR) |
+
+### 5.2 — The Constraint Equation
+
+NPOV can be expressed as a structural constraint on any article A:
+
+```
+For article A covering topic T:
+
+  ∑(weight_i × viewpoint_i) = representation(T)
+
+  Subject to:
+    weight_i ∝ standing_i (proportionality — WP:WEIGHT)
+    standing_i ∈ reliable_sources (verifiability — WP:V)
+    viewpoint_i ≠ novel_synthesis (originality constraint — WP:NOR)
+    ∑(weight_i) = 1 (total representation is normalized)
+    weight_fringe ≤ ε (fringe containment — WP:FRINGE)
+```
+
+**RTT reading:** NPOV is a **normalized, source‑calibrated, novelty‑bounded
+representation constraint**. It operates on the space of all possible
+regime declarations and produces the unique declaration that satisfies
+all five sub‑operators simultaneously.
+
+### 5.3 — Why NPOV Works (Structurally)
+
+NPOV works because it solves a **coordination problem** that no other
+knowledge system has solved at Wikipedia's scale:
+
+| Problem | NPOV Solution |
+|---------|--------------|
+| Millions of editors with different worldviews | NPOV forces all editors into the same structural constraint — personal views are irrelevant |
+| Competing claims about what is true | NPOV substitutes **standing** for **truth** — verifiability replaces correctness |
+| Risk of mob rule (majority suppresses minority) | WEIGHT requires proportional representation — minorities with standing are protected |
+| Risk of fringe capture (minority hijacks article) | FRINGE bounds fringe representation — standing requirements prevent capture |
+| No central editorial authority | NPOV IS the authority — it is a structural constraint, not a person |
+
+---
+
+## 6 — Detecting NPOV Stress in Articles
+
+### 6.1 — Textual Indicators
+
+| Indicator | What to Search For | Stress Signal |
+|-----------|-------------------|---------------|
+| Attribution phrases | "according to," "some argue," "critics say," "proponents claim" | Moderate — article is managing competing viewpoints |
+| Hedging language | "may," "might," "could be," "it has been suggested" | Moderate to high — article is avoiding strong claims |
+| Cleanup templates | `{{POV}}`, `{{NPOV}}`, `{{unbalanced}}`, `{{disputed}}` | High — community has flagged a coherence failure |
+| Framing asymmetry | One perspective uses confident language, another uses hedged language | High — implicit regime weighting through tone |
+| Section imbalance | One perspective gets 5 paragraphs, another gets 1 | Moderate — possible WEIGHT miscalibration |
+
+### 6.2 — API‑Based NPOV Stress Detection
+
+```python
+import requests
+import re
+
+def detect_npov_stress(title, lang="en"):
+    """Detect NPOV stress indicators in a Wikipedia article."""
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "parse",
+        "page": title,
+        "prop": "wikitext|templates",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+
+    wikitext = resp.get("parse", {}).get("wikitext", {}).get("*", "")
+    templates = [t["*"] for t in resp.get("parse", {}).get("templates", [])]
+
+    # Textual stress indicators
+    attribution = len(re.findall(
+        r'according to|some argue|critics say|proponents claim|'
+        r'supporters argue|opponents argue|it is argued',
+        wikitext, re.IGNORECASE))
+
+    hedging = len(re.findall(
+        r'\bmay\b|\bmight\b|could be|has been suggested|'
+        r'it is possible|some believe|allegedly',
+        wikitext, re.IGNORECASE))
+
+    # Template stress indicators
+    npov_templates = [t for t in templates if any(kw in t.lower()
+        for kw in ["pov", "npov", "unbalanced", "disputed",
+                    "contradict", "bias", "one-sided"])]
+
+    # Compute stress score
+    word_count = len(wikitext.split())
+    attribution_density = attribution / max(word_count / 1000, 1)
+    hedging_density = hedging / max(word_count / 1000, 1)
+
+    stress_score = (
+        attribution_density * 3 +
+        hedging_density * 2 +
+        len(npov_templates) * 10
+    )
+
+    # Classify stress level
+    if stress_score < 2:
+        level = "1_consensus"
+    elif stress_score < 5:
+        level = "2_nuanced"
+    elif stress_score < 10:
+        level = "3_contested"
+    elif stress_score < 20:
+        level = "4_polarized"
+    else:
+        level = "5_irreconcilable"
+
+    return {
+        "article": title,
+        "word_count": word_count,
+        "attribution_count": attribution,
+        "hedging_count": hedging,
+        "npov_templates": npov_templates,
+        "attribution_density": round(attribution_density, 2),
+        "hedging_density": round(hedging_density, 2),
+        "stress_score": round(stress_score, 2),
+        "stress_level": level
+    }
+```
+
+### 6.3 — Batch Domain Stress Profiling
+
+```python
+def domain_stress_profile(articles):
+    """
+    Compute NPOV stress profiles for a list of articles
+    representing a knowledge domain.
+    """
+    results = []
+    for title in articles:
+        try:
+            stress = detect_npov_stress(title)
+            results.append(stress)
+        except Exception as e:
+            results.append({"article": title, "error": str(e)})
+
+    # Aggregate domain statistics
+    scores = [r["stress_score"] for r in results if "stress_score" in r]
+    if scores:
+        import statistics
+        return {
+            "articles_analyzed": len(scores),
+            "mean_stress": round(statistics.mean(scores), 2),
+            "median_stress": round(statistics.median(scores), 2),
+            "max_stress": round(max(scores), 2),
+            "min_stress": round(min(scores), 2),
+            "dominant_level": max(
+                set(r["stress_level"] for r in results if "stress_level" in r),
+                key=lambda x: sum(1 for r in results
+                                  if r.get("stress_level") == x)
+            ),
+            "detail": results
+        }
+    return {"error": "No articles analyzed successfully"}
+```
+
+---
+
+## 7 — Worked Examples
+
+### 7.1 — Homeopathy (Stress Level 4: Polarized)
+
+The Homeopathy article is a textbook case of NPOV under sustained stress:
+
+| NPOV Sub‑Operator | How It Manifests |
+|-------------------|-----------------|
+| **WEIGHT** | Scientific consensus (homeopathy is not effective beyond placebo) gets dominant treatment; proponent claims get bounded secondary treatment |
+| **NOR** | Editors cannot introduce novel arguments for or against — only claims from published sources |
+| **V** | Every claim about effectiveness must cite peer‑reviewed sources; proponent claims must cite published proponent literature |
+| **RS** | Systematic reviews and meta‑analyses outweigh individual studies; proponent websites are not reliable sources |
+| **FRINGE** | Homeopathy is treated as a fringe medical theory — its claims get proportional (limited) treatment |
+
+**Talk page signal:** 30+ archives. Recurring disputes about whether the
+article is "too negative" toward homeopathy. FAQ section with crystallized
+positions on common complaints.
+
+**RTT reading:** NPOV succeeds here by maintaining a **two‑tier regime
+structure** — mainstream medical consensus as the primary regime declaration,
+with homeopathic claims as a bounded secondary regime. The article does not
+say homeopathy is wrong — it says the scientific consensus considers it
+ineffective. That distinction is pure NPOV as coherence operator.
+
+---
+
+### 7.2 — Climate Change (Stress Level 3–4: Contested to Polarized)
+
+| NPOV Dimension | Current State |
+|---------------|--------------|
+| **Scientific content** | Stress Level 2 (Nuanced) — strong scientific consensus, minor technical nuances |
+| **Political content** | Stress Level 4 (Polarized) — political responses to climate change are deeply contested |
+| **Historical content** | Stress Level 2 (Nuanced) — timeline of research is well‑established |
+
+**Key structural insight:** The same article contains **sections at different
+NPOV stress levels**. The scientific sections are near‑consensus; the
+policy and politics sections are polarized. NPOV must operate at different
+intensities within the same article.
+
+**Talk page signal:** 50+ archives. Most disputes are about the political
+framing, not the scientific content. FAQ addresses "why doesn't the article
+present climate skepticism equally?"
+
+**RTT reading:** Climate change demonstrates that **NPOV stress is not
+uniform within an article**. The coherence operator must adapt its
+constraint intensity section by section, applying strict proportionality
+to the political content while allowing more direct statement in the
+scientific content.
+
+---
+
+### 7.3 — Oxygen (Stress Level 1: Consensus)
+
+| NPOV Dimension | State |
+|---------------|-------|
+| Chemical properties | Consensus — undisputed |
+| Discovery history | Consensus — minor attribution nuances |
+| Biological role | Consensus — well‑established |
+| Industrial uses | Consensus — factual enumeration |
+
+**Talk page signal:** 5 archives over 20 years. Mostly formatting and
+factual corrections. No framing disputes. No NPOV challenges.
+
+**RTT reading:** NPOV at Stress Level 1 is **invisible** — it operates
+effortlessly because there are no competing regime claims. The article
+declares a single, uncontested regime. This is NPOV's ground state —
+minimum coherence effort required.
+
+---
+
+## 8 — NPOV Across Cultures
+
+### 8.1 — Cross‑Language NPOV Variance
+
+Every language Wikipedia adopts NPOV, but its **application varies by
+cultural context**:
+
+| Dimension | How It Varies |
+|-----------|--------------|
+| What counts as "neutral" | Culturally influenced — neutrality in English Wikipedia is not identical to neutrality in Arabic or Chinese Wikipedia |
+| What counts as "reliable sources" | Some sources are reliable in one culture and not in another (e.g., state media) |
+| What counts as "fringe" | Mainstream in one culture may be fringe in another (e.g., traditional medicine) |
+| What counts as "proportional" | National perspectives may get more weight on the national‑language Wikipedia |
+
+### 8.2 — Structural Implications
+
+| Scenario | NPOV Consequence | RTT Reading |
+|----------|-----------------|-------------|
+| Same article, different cultural NPOV calibration | Different language editions produce **different regime declarations** for the same concept | NPOV is a **culturally parameterized** coherence operator — same structural function, different calibration |
+| State influence on "reliable sources" | Some language editions may have constrained source landscapes | NPOV's external calibration (RS) is only as independent as its source environment |
+| National perspective amplification | Articles on national topics may give disproportionate weight to the national viewpoint | NPOV's proportionality sub‑operator is influenced by the editor population's composition |
+
+**Key insight:** NPOV is a **universal structural operator with cultural
+parameters**. The operator itself is invariant — every Wikipedia applies
+it. But the inputs (what sources are reliable, what views are mainstream,
+what framing is neutral) are culturally conditioned. This makes cross‑language
+comparison a powerful tool for **revealing the cultural parameters of
+coherence**.
+
+---
+
+## 9 — Cross‑Reference to Other Module Files
+
+| File | How NPOV Connects |
+|------|------------------|
+| `Talk_Page_Coherence_Surface.md` | NPOV disputes are the most structurally significant talk page pattern — Pattern 4 (Neutrality Challenge) maps directly to this file |
+| `Edit_War_Regime_Transition_Detection.md` | Many edit wars are NPOV disputes that failed to resolve on the talk page — edit wars are NPOV's enforcement failure mode |
+| `Featured_Article_Validation_Corridor.md` | FA review criteria include NPOV compliance — articles must demonstrate coherence operator satisfaction to pass |
+| `Revision_History_Regime_Analysis.md` | NPOV disputes are visible in edit summaries containing "POV," "bias," "neutral" — searchable in revision data |
+| `Category_Taxonomy_Regime_Hierarchy.md` | Category assignment can be an NPOV issue — placing an article in a politically loaded category is itself a framing decision |
+| `Cross_Domain_Meta_Operators.md` | Operator 6 (NPOV Tension as Coherence Stress Test) is derived from the stress spectrum in Section 3 of this file |
+| `Wikipedia_RTT_Structural_Mapping.md` | NPOV is mapped as the foundational R0 coherence operator in Section 2.3 |
+| All 15 domain directories | Every domain's `regime_alignment.md` references the domain's typical NPOV stress level from Section 3.2 |
+
+---
+
+## 10 — Student Exercises
+
+### Exercise 1 — Stress Level Classification (15 minutes)
+
+1. Pick 3 Wikipedia articles — one you expect to be uncontested, one moderately contested, and one highly contested
+2. For each, check: does it have any NPOV‑related cleanup templates? How many attribution phrases ("according to," "some argue") appear in the lead? How large is the talk page?
+3. Classify each article's stress level (1–5) using the spectrum from Section 3
+4. Write one sentence per article: *"[Article] is at NPOV Stress Level [N] because [evidence]."*
+
+### Exercise 2 — Sub‑Operator Identification (20 minutes)
+
+1. Pick a contested article (Stress Level 3+)
+2. Find one passage in the article that demonstrates each of the 5 sub‑operators:
+   - A sentence showing WEIGHT (proportional representation)
+   - A sentence that avoids NOR (cites external source rather than making original claim)
+   - A citation demonstrating V (verifiable claim)
+   - A source that qualifies as RS (reliable source)
+   - A passage applying FRINGE (bounded treatment of minority view)
+3. For each, write one sentence explaining how the sub‑operator is visible
+
+### Exercise 3 — Failure Mode Detection (25 minutes)
+
+1. Find an article with an active `{{POV}}` or `{{NPOV}}` cleanup template (search Category:NPOV disputes)
+2. Read the article and the associated talk page discussion
+3. Classify the failure mode (Regime Capture, False Balance, Neutrality Paralysis, or Structural Fragmentation) using Section 4
+4. Write two sentences: *"This article exhibits [failure mode] because [evidence]. The coherence operator has failed at the [sub‑operator] level because [reason]."*
+
+### Exercise 4 — Cross‑Language NPOV Comparison (30 minutes)
+
+1. Pick a topic you expect to have cultural NPOV variance (try: a territorial dispute, a religious figure, a historical conflict, or a politically loaded term)
+2. Read the article in English + 2 other languages (use translation tools if needed)
+3. Compare: Does the framing differ? Do different language editions emphasize different viewpoints? Is the proportionality calibrated differently?
+4. Answer: *"NPOV is calibrated differently across these editions because [reason]. The English edition frames the topic as [X], while the [other language] edition frames it as [Y]. This reveals that NPOV's 'neutrality' is structurally influenced by [cultural factor]."*
+
+---
+
+*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
 # Philosophy — Wikipedia Overview
 
 Philosophy on Wikipedia is a **concept‑driven, argument‑anchored, interpretation‑layered** regime.  
@@ -15909,4 +14012,1903 @@ Misalignment in one dimension often propagates into the others — e.g., unclear
 ## 📘 Summary
 
 Psychology articles require heightened triadic awareness because they blend empirical evidence, clinical practice, theoretical models, and cultural framing. RTT/1 provides a stable framework for detecting drift, maintaining coherence, and ensuring that Wikipedia’s psychological content remains clear, neutral, and structurally sound.
+# Revision History Regime Analysis
+
+> **Purpose:** Define how to read Wikipedia's revision history as **temporal
+> regime data** — the structural evolution of knowledge over time. No other
+> major knowledge source exposes this surface publicly. Every Wikipedia article
+> carries a complete, timestamped, author‑attributed record of every structural
+> change since its creation — often spanning 20+ years.
+>
+> This file teaches students, researchers, and AIs to extract regime stability
+> signals, identify regime transitions, and build temporal regime profiles
+> from raw revision data.
+
+---
+
+## 1 — What Is a Revision History?
+
+Every Wikipedia article stores a **complete, immutable log** of every edit
+ever made to it. Each revision record contains:
+
+| Field | Content | RTT Mapping |
+|-------|---------|-------------|
+| Revision ID | Unique integer | Regime event identifier |
+| Timestamp | UTC datetime | Regime event time coordinate |
+| User | Editor username or IP | Regime agent |
+| Size (bytes) | Article size after this edit | Regime mass at time t |
+| Size delta (bytes) | Change from previous revision | Regime growth/contraction signal |
+| Edit summary | Editor's description of the change | Micro‑regime annotation |
+| Tags | System‑applied labels (reverted, mobile edit, visual edit, etc.) | Regime event classification |
+| Parent revision | Previous revision ID | Temporal chain link |
+
+### How to Access Revision History
+
+| Method | URL Pattern | Best For |
+|--------|------------|----------|
+| Web UI | `https://en.wikipedia.org/w/index.php?title=ARTICLE&action=history` | Manual inspection |
+| API (recent) | `https://en.wikipedia.org/w/api.php?action=query&titles=ARTICLE&prop=revisions&rvlimit=500&rvprop=ids|timestamp|user|size|comment|tags&format=json` | Programmatic access (up to 500 revisions per call) |
+| API (full) | Same as above with `rvcontinue` pagination | Complete history extraction |
+| XTools | `https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/ARTICLE` | Pre‑computed statistics and visualizations |
+| Quarry SQL | `https://quarry.wmcloud.org/` with `revision` table queries | Bulk analysis across many articles |
+
+---
+
+## 2 — The Five Regime Signals in Revision History
+
+### Signal 1: Revision Count — Regime Activity Index
+
+The **total number of revisions** is the simplest and most powerful regime signal.
+
+| Revision Count | Regime Interpretation | Examples |
+|---------------|----------------------|----------|
+| < 100 | **Quiet regime** — low structural attention, possibly stable or neglected | Obscure mathematical theorems, minor geographic features |
+| 100–1,000 | **Active regime** — regular maintenance, moderate community attention | Most science articles, mid‑sized cities |
+| 1,000–10,000 | **Contested or high‑interest regime** — significant editorial attention | Major historical events, prominent public figures, scientific controversies |
+| > 10,000 | **Perpetually contested regime** — the article is a structural battleground | United States, Jesus, Muhammad, Israel, Climate change, Donald Trump |
+
+**Key insight:** Revision count does not measure **quality** — it measures
+**structural attention**. A 50,000‑revision article is not 500× better than
+a 100‑revision article. It is 500× more **structurally contested**.
+
+---
+
+### Signal 2: Revision Rate — Current Regime Stability
+
+The **number of revisions per unit time** (day/week/month) reveals whether
+the regime is currently stable, active, or in crisis.
+
+| Rate Pattern | Regime Interpretation |
+|-------------|---------------------|
+| Flat near zero | **Crystallized regime** — consensus achieved, minimal maintenance |
+| Low and steady | **Stable regime** — ongoing minor updates, no structural disputes |
+| Periodic spikes | **Cyclically contested** — regime destabilizes around recurring events (elections, anniversaries, seasons) |
+| Sudden spike from baseline | **Regime perturbation** — external event triggered structural attention (news event, scientific discovery, controversy) |
+| Sustained high rate | **Regime in active negotiation** — no consensus, continuous structural competition |
+
+#### How to Compute Revision Rate
+
+```python
+# Using the MediaWiki API
+# Fetch revisions with timestamps, then compute rate
+
+import requests
+from collections import Counter
+from datetime import datetime
+
+url = "https://en.wikipedia.org/w/api.php"
+params = {
+    "action": "query",
+    "titles": "Climate_change",
+    "prop": "revisions",
+    "rvlimit": "500",
+    "rvprop": "timestamp",
+    "format": "json"
+}
+
+response = requests.get(url, params=params).json()
+pages = response["query"]["pages"]
+page = next(iter(pages.values()))
+
+# Count revisions per month
+months = Counter()
+for rev in page["revisions"]:
+    ts = datetime.fromisoformat(rev["timestamp"].replace("Z", "+00:00"))
+    months[f"{ts.year}-{ts.month:02d}"] += 1
+
+# Print monthly revision rate
+for month in sorted(months):
+    print(f"{month}: {months[month]} revisions")
+```
+
+---
+
+### Signal 3: Size Delta Patterns — Regime Growth and Contraction
+
+Each revision records the article's size in bytes. The **delta** (change)
+between consecutive revisions reveals structural dynamics:
+
+| Delta Pattern | Regime Interpretation |
+|--------------|---------------------|
+| Consistent positive deltas | **Regime expansion** — community adding knowledge, building scope |
+| Large positive spike | **Major regime event** — significant new content added (new section, new data, major update) |
+| Consistent negative deltas | **Regime pruning** — community removing content, tightening scope |
+| Large negative spike | **Regime contraction event** — major content removal (vandalism revert, consensus deletion, split to sub‑article) |
+| Oscillating deltas | **Regime instability** — content being added and removed repeatedly (possible edit war) |
+| Flat (near‑zero deltas) | **Crystallized regime** — only minor formatting or typo fixes |
+
+#### Size Delta as Regime Evolution Curve
+
+When plotted over time, cumulative article size creates a **regime evolution
+curve**:
+
+```
+Size (bytes)
+    │
+    │                          ╭───── Regime maturity plateau
+    │                    ╭────╯
+    │               ╭───╯
+    │          ╭───╯        ← Rapid regime expansion
+    │     ╭───╯
+    │╭───╯
+    │╯  ← Regime birth
+    └────────────────────────────────→ Time
+
+Typical "healthy" article: sigmoid growth curve
+  - Regime birth → rapid expansion → gradual stabilization → plateau
+```
+
+**Deviations from this curve are structurally significant:**
+
+- **Sudden drops** = content removal events (investigate: vandalism? consensus? article split?)
+- **Late‑stage spikes** = regime perturbation (investigate: external event? new discovery?)
+- **Sawtooth pattern** = edit war (investigate: talk page for competing claims)
+- **No plateau** = regime never crystallized (investigate: ongoing structural disputes)
+
+---
+
+### Signal 4: Revert Rate — Regime Resistance
+
+A **revert** is an edit that undoes a previous edit, restoring the article
+to an earlier state. The revert rate measures how strongly the existing regime
+**resists change**.
+
+| Revert Rate | Regime Interpretation |
+|------------|---------------------|
+| < 5% | **Open regime** — community welcomes new contributions |
+| 5–15% | **Guarded regime** — moderate quality control, some gatekeeping |
+| 15–30% | **Defended regime** — strong editorial consensus, new contributions frequently challenged |
+| > 30% | **Fortress regime** — heavily protected, approaching or under active edit restriction |
+
+#### Revert Detection
+
+Reverts can be identified by:
+
+1. **Exact size match** — revision returns article to exact byte count of a prior revision
+2. **Edit summary markers** — summaries containing "revert," "rv," "undo," "rollback"
+3. **System tags** — `mw-revert`, `mw-undo`, `mw-rollback`, `mw-manual-revert`
+4. **SHA‑1 match** — revision content hash matches a prior revision's hash (definitive)
+
+```sparql
+# Quarry SQL: Count reverts for an article
+SELECT
+  COUNT(*) AS total_revisions,
+  SUM(CASE WHEN ct_tag_id IN (
+    SELECT ctd_id FROM change_tag_def
+    WHERE ctd_name IN ('mw-revert', 'mw-undo', 'mw-rollback')
+  ) THEN 1 ELSE 0 END) AS reverts
+FROM revision
+JOIN change_tag ON ct_rev_id = rev_id
+WHERE rev_page = (
+  SELECT page_id FROM page
+  WHERE page_title = 'ARTICLE_TITLE'
+  AND page_namespace = 0
+)
+```
+
+---
+
+### Signal 5: Editor Distribution — Regime Stewardship Structure
+
+Who edits an article reveals its **regime stewardship model**:
+
+| Pattern | Regime Interpretation |
+|---------|---------------------|
+| Few editors, many edits each | **Stewardship regime** — small group maintains structural integrity (common for technical articles) |
+| Many editors, few edits each | **Open regime** — broad community participation, low individual ownership |
+| One dominant editor + many minor | **Gatekeeper regime** — single editor controls structural direction |
+| Bot‑heavy edit history | **Automated maintenance regime** — structural upkeep is programmatic |
+| IP‑heavy edit history | **Anonymous contribution regime** — lower accountability, higher vandalism risk |
+
+#### Editor Distribution via XTools
+
+The fastest way to see editor distribution is XTools:
+
+```
+https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/ARTICLE_TITLE
+```
+
+XTools provides:
+- Top editors by edit count
+- Editor count over time
+- Bot vs. human edit ratio
+- IP vs. registered editor ratio
+- Minor edit percentage
+
+---
+
+## 3 — Regime Phase Classification
+
+Combining all 5 signals, any article can be classified into one of 6 **regime phases**:
+
+| Phase | Rev Count | Rev Rate | Size Trend | Revert Rate | Editor Pattern | Description |
+|-------|-----------|----------|------------|-------------|---------------|-------------|
+| **Birth** | < 10 | N/A | Rapid growth | Low | 1–2 editors | Just created, initial regime declaration |
+| **Expansion** | 10–500 | Rising | Steady growth | Low–moderate | Growing editor pool | Community building out the regime |
+| **Negotiation** | 100–5,000 | Variable | Oscillating | Moderate–high | Diverse, competing editors | Structural disputes being resolved |
+| **Crystallization** | 500+ | Declining | Plateau approaching | Declining | Core stewards emerging | Consensus forming, regime stabilizing |
+| **Maturity** | 1,000+ | Low, stable | Plateau | Low | Stable stewardship | Regime crystallized, minor maintenance only |
+| **Perturbation** | Any | Sudden spike | Sudden change | Spike | Influx of new editors | External event disrupted the stable regime |
+
+### Phase Transitions
+
+Articles move between phases. The most common transitions:
+
+```
+Birth → Expansion → Negotiation → Crystallization → Maturity
+                         ↑                               │
+                         └───── Perturbation ─────────────┘
+                         (external event resets the cycle)
+```
+
+**Key insight:** Most Wikipedia articles that reach Maturity will experience
+**periodic perturbation** — external events (news, discoveries, controversies)
+that temporarily reset them to the Negotiation phase. The perturbation‑recovery
+cycle is the **heartbeat of a living regime**.
+
+---
+
+## 4 — Worked Example: "Pluto"
+
+The Wikipedia article on **Pluto** is a textbook case of regime perturbation:
+
+### Pre‑2006: Stable Maturity
+
+- Classified as the 9th planet since 1930
+- Article in Maturity phase — low revision rate, stable stewardship
+- Regime declaration: "Pluto is a planet"
+
+### August 2006: Perturbation Event
+
+- IAU reclassifies Pluto as a dwarf planet
+- Revision rate spikes from ~5/month to ~500/month
+- Article size oscillates wildly (competing edits)
+- Revert rate exceeds 40%
+- Dozens of new editors arrive
+
+### 2006–2008: Negotiation Phase
+
+- Talk page debates intensify on classification language
+- Multiple RfCs on how to describe Pluto's status
+- Gradual consensus: "Pluto is a dwarf planet in the Kuiper belt"
+- Revert rate declines as competing editors exhaust or accept consensus
+
+### 2008–2015: Re‑Crystallization
+
+- Revision rate returns to baseline
+- Core stewardship group re‑establishes
+- New regime declaration stabilizes
+
+### July 2015: Second Perturbation
+
+- New Horizons flyby generates massive public interest
+- Revision rate spikes again — but this time the perturbation is **additive** (new data), not **structural** (no reclassification dispute)
+- Article expands significantly with new scientific data
+- Returns to Maturity quickly — no regime conflict, just regime enrichment
+
+### RTT Reading
+
+Pluto's revision history demonstrates:
+
+1. **Regime crystallization** can be disrupted by external authority (IAU decision)
+2. **Perturbation type matters** — structural reclassification (2006) causes prolonged Negotiation; data addition (2015) causes brief Expansion
+3. **Revert rate is the best regime stress indicator** — it spiked to 40%+ only during the classification dispute
+4. **Editor distribution shifts during perturbation** — the stable stewardship group was temporarily overwhelmed by newcomers
+
+---
+
+## 5 — API Patterns for Regime Analysis
+
+### 5.1 — Fetch Full Revision History
+
+```python
+import requests
+
+def get_full_history(title, lang="en"):
+    """Fetch complete revision history for a Wikipedia article."""
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "titles": title,
+        "prop": "revisions",
+        "rvlimit": "max",
+        "rvprop": "ids|timestamp|user|size|comment|tags",
+        "format": "json"
+    }
+
+    revisions = []
+    while True:
+        resp = requests.get(url, params=params,
+                            headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+        page = next(iter(resp["query"]["pages"].values()))
+        revisions.extend(page.get("revisions", []))
+
+        if "continue" in resp:
+            params["rvcontinue"] = resp["continue"]["rvcontinue"]
+        else:
+            break
+
+    return revisions
+```
+
+### 5.2 — Compute Regime Signals
+
+```python
+from datetime import datetime
+from collections import Counter
+
+def compute_regime_signals(revisions):
+    """Extract the 5 regime signals from a revision list."""
+
+    total = len(revisions)
+
+    # Signal 1: Revision count
+    print(f"Total revisions: {total}")
+
+    # Signal 2: Monthly revision rate
+    months = Counter()
+    for rev in revisions:
+        ts = datetime.fromisoformat(rev["timestamp"].replace("Z", "+00:00"))
+        months[f"{ts.year}-{ts.month:02d}"] += 1
+
+    # Signal 3: Size deltas
+    sizes = [rev["size"] for rev in revisions]
+    deltas = [sizes[i] - sizes[i+1] for i in range(len(sizes)-1)]
+
+    # Signal 4: Revert rate
+    revert_tags = {"mw-revert", "mw-undo", "mw-rollback", "mw-manual-revert"}
+    reverts = sum(1 for rev in revisions
+                  if any(tag in revert_tags for tag in rev.get("tags", [])))
+    revert_rate = reverts / total if total > 0 else 0
+
+    # Signal 5: Editor distribution
+    editors = Counter(rev.get("user", "anonymous") for rev in revisions)
+    unique_editors = len(editors)
+    top_editor_pct = editors.most_common(1)[0][1] / total if total > 0 else 0
+
+    return {
+        "revision_count": total,
+        "monthly_rates": dict(sorted(months.items())),
+        "avg_delta": sum(deltas) / len(deltas) if deltas else 0,
+        "max_positive_delta": max(deltas) if deltas else 0,
+        "max_negative_delta": min(deltas) if deltas else 0,
+        "revert_rate": round(revert_rate, 3),
+        "unique_editors": unique_editors,
+        "top_editor_share": round(top_editor_pct, 3)
+    }
+```
+
+### 5.3 — Classify Regime Phase
+
+```python
+def classify_regime_phase(signals):
+    """Classify an article into one of 6 regime phases."""
+
+    rc = signals["revision_count"]
+    rr = signals["revert_rate"]
+    ed = signals["unique_editors"]
+    delta = signals["avg_delta"]
+
+    if rc < 10:
+        return "Birth"
+    elif rc < 500 and delta > 50:
+        return "Expansion"
+    elif rr > 0.15 or (rc > 100 and ed > 50 and delta < 0):
+        return "Negotiation"
+    elif rr < 0.05 and delta < 10 and rc > 1000:
+        return "Maturity"
+    elif rr < 0.10 and rc > 500:
+        return "Crystallization"
+    else:
+        return "Perturbation"
+```
+
+---
+
+## 6 — Cross‑Referencing With Other Module Files
+
+| File | How Revision History Connects |
+|------|------------------------------|
+| `Talk_Page_Coherence_Surface.md` | Talk page activity often **precedes** revision spikes — disputes surface on talk before erupting in edit wars |
+| `Edit_War_Regime_Transition_Detection.md` | Edit wars are a **subset** of revision history — this file provides the broader context; that file zooms into the conflict mechanics |
+| `NPOV_As_Coherence_Operator.md` | NPOV disputes are visible in edit summaries containing "POV," "bias," "neutral" — searchable in revision data |
+| `Featured_Article_Validation_Corridor.md` | FA reviews examine revision history as part of quality assessment — articles with unstable histories rarely pass |
+| `Wikidata_Ingestion_Format.md` | Wikidata items have their own revision history — combine both for complete temporal coverage of a concept |
+| `Category_Taxonomy_Regime_Hierarchy.md` | Category changes appear in revision history — articles moving between categories = regime reclassification events |
+| `Cross_Domain_Meta_Operators.md` | Operator 2 (Revision Frequency as Stability Signal) is derived directly from this file's Signal 2 |
+| `Wikipedia_RTT_Structural_Mapping.md` | This file implements the temporal structures mapped in Section 2.6 of the master mapping |
+
+---
+
+## 7 — Advanced Patterns
+
+### 7.1 — Revision History Comparison Across Languages
+
+The **same concept** may have radically different revision histories in
+different language Wikipedias:
+
+| Concept | English Rev Count | Japanese Rev Count | Arabic Rev Count | Structural Insight |
+|---------|------------------|--------------------|-----------------|-------------------|
+| World War II | 40,000+ | 8,000+ | 3,000+ | Universal high attention; English most contested |
+| Cricket | 15,000+ | 200 | 500 | Culturally specific regime — high attention only in English/Commonwealth |
+| Ramadan | 4,000 | 300 | 12,000+ | Cultural regime variance — Arabic Wikipedia treats it as highest importance |
+
+**Method:** Fetch revision counts for the same Wikidata Q‑number across
+multiple language editions. Divergences reveal **cultural regime weighting** —
+which cultures invest the most structural attention in which concepts.
+
+### 7.2 — Bot vs. Human Revision Ratio
+
+Many Wikipedia articles have 30–60% bot edits (link fixes, formatting,
+category maintenance). The **human‑only revision rate** is a more accurate
+regime signal than the raw rate:
+
+```python
+def human_revision_rate(revisions):
+    """Filter out bot edits for cleaner regime signal."""
+    human_revs = [r for r in revisions
+                  if not r.get("user", "").endswith("Bot")
+                  and "bot" not in r.get("tags", [])]
+    return len(human_revs), len(human_revs) / len(revisions)
+```
+
+### 7.3 — Regime Perturbation Detection Algorithm
+
+```python
+def detect_perturbations(monthly_rates, threshold=3.0):
+    """Detect months where revision rate exceeds N standard deviations
+    above the mean — these are regime perturbation events."""
+    import statistics
+
+    values = list(monthly_rates.values())
+    if len(values) < 6:
+        return []
+
+    mean = statistics.mean(values)
+    stdev = statistics.stdev(values)
+
+    if stdev == 0:
+        return []
+
+    perturbations = []
+    for month, count in monthly_rates.items():
+        z_score = (count - mean) / stdev
+        if z_score > threshold:
+            perturbations.append({
+                "month": month,
+                "revisions": count,
+                "z_score": round(z_score, 2),
+                "interpretation": "regime_perturbation"
+            })
+
+    return perturbations
+```
+
+---
+
+## 8 — Student Exercises
+
+### Exercise 1 — Regime Phase Classification (20 minutes)
+
+1. Pick any Wikipedia article
+2. Open its XTools page: `https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/ARTICLE`
+3. Record: total revisions, monthly average, revert rate, unique editors, current size
+4. Classify it into one of the 6 regime phases from Section 3
+5. Does the classification feel right? If not, what additional signal would help?
+
+### Exercise 2 — Perturbation Hunting (30 minutes)
+
+1. Pick an article you expect to have perturbation events (try: a country that had a recent revolution, a scientific theory that was recently challenged, a public figure involved in a recent controversy)
+2. Open the revision history and look for **spike months**
+3. For each spike, identify: what external event caused it? How long did the perturbation last? Did the article return to its previous regime, or did it crystallize into a new one?
+4. Write a 3‑sentence summary: *"The article entered perturbation in [month] due to [event]. The perturbation lasted [duration]. The article [returned to previous regime / crystallized into new regime] because [reason]."*
+
+### Exercise 3 — Cross‑Language Comparison (30 minutes)
+
+1. Pick a concept with strong cultural variance (try: Democracy, Marriage, Colonialism, or a historical conflict)
+2. Find the article in English + 2 other language editions
+3. For each, record: revision count, article size, revert rate (use XTools with the appropriate language prefix)
+4. Answer: *"Which language edition has the most structural attention? Which has the highest revert rate? What does this tell us about how different cultures negotiate this concept's regime?"*
+
+### Exercise 4 — Build a Regime Evolution Curve (45 minutes)
+
+1. Pick an article with 1,000+ revisions
+2. Use the API pattern from Section 5.1 to fetch the full revision history
+3. Plot article size over time (x = date, y = bytes)
+4. Annotate: mark Birth, Expansion, Negotiation, Crystallization, and any Perturbation events
+5. Compare your curve to the idealized sigmoid from Section 2 — where does it match? Where does it deviate?
+
+---
+
+*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
+# Talk Page Coherence Surface
+
+> **Purpose:** Define how to read Wikipedia talk pages as **coherence and drift
+> surfaces** — the pre‑regime discourse layer where structural consensus is
+> negotiated, challenged, and sometimes destroyed before it ever reaches
+> the article itself.
+>
+> Talk pages are Wikipedia's **most underread structural asset**. Most readers
+> never visit them. Most students don't know they exist. Yet talk pages are
+> where the real regime work happens — where editors argue about what a concept
+> IS, what scope the article should have, what sources count, and whose framing
+> should prevail.
+>
+> No other major knowledge source exposes this layer publicly.
+
+---
+
+## 1 — What Is a Talk Page?
+
+Every Wikipedia article has a paired **talk page** (also called a discussion page)
+where editors discuss the article's content, structure, and quality.
+
+### How to Access Talk Pages
+
+| Method | URL Pattern |
+|--------|------------|
+| Web UI | `https://en.wikipedia.org/wiki/Talk:ARTICLE_TITLE` |
+| From any article | Click the "Talk" tab at the top of any article |
+| API | `https://en.wikipedia.org/w/api.php?action=parse&page=Talk:ARTICLE_TITLE&format=json` |
+| Archives | `https://en.wikipedia.org/wiki/Talk:ARTICLE_TITLE/Archive_1` (and /Archive_2, /Archive_3, etc.) |
+
+### Talk Page Anatomy
+
+A typical talk page contains:
+
+| Element | Purpose | RTT Mapping |
+|---------|---------|-------------|
+| Banner templates (WikiProject, quality ratings) | Article classification by stewardship groups | **Regime stewardship declaration** |
+| Active discussion threads | Current structural debates | **Live coherence surface** |
+| Resolved/archived threads | Historical structural debates | **Regime archaeology** |
+| RfC (Request for Comment) notices | Formal dispute resolution | **Coherence arbitration** |
+| Edit war notices / protection logs | Conflict markers | **Drift alerts** |
+| To‑do lists | Structural gaps acknowledged by stewards | **Regime development roadmap** |
+| FAQ sections | Pre‑answered recurring disputes | **Crystallized coherence positions** |
+
+---
+
+## 2 — Talk Pages as Coherence Surfaces
+
+### 2.1 — The Coherence Model
+
+In RTT, **coherence** is the degree to which a regime's internal claims
+are structurally consistent. A Wikipedia article's coherence is not determined
+by its text alone — it is determined by the **consensus process** visible
+on its talk page.
+
+```
+Article text (R3) ← produced by → Talk page consensus (R0–R1)
+                                         │
+                     ┌───────────────────┼───────────────────┐
+                     │                   │                   │
+              Factual disputes     Framing disputes     Scope disputes
+              (surface — R3)       (structural — R1)    (regime — R0)
+                     │                   │                   │
+              "This date is        "This article         "Should this
+               wrong"              frames X as Y          concept even
+                                   — it should            have an article?"
+                                   frame it as Z"
+```
+
+### 2.2 — The Three Dispute Layers
+
+Not all talk page disputes are equal. They operate at different regime levels:
+
+| Dispute Layer | Regime Level | What's Contested | Coherence Impact | Example |
+|--------------|-------------|------------------|-----------------|---------|
+| **Factual** | R3 | Specific claims, dates, numbers, citations | Low — easily resolved with better sources | "The population figure is outdated — here's the 2024 census" |
+| **Framing** | R1–R2 | How the article presents information, section structure, emphasis, tone | Medium — requires negotiation about perspective | "This article presents X primarily from a Western perspective — it needs global balance" |
+| **Scope** | R0 | What the article should cover, whether it should exist, how it relates to other articles | High — fundamental regime negotiation | "This article should be merged with [other article]" or "This topic doesn't meet notability guidelines" |
+
+**Key insight:** Most talk page threads are **factual disputes** (R3). These
+are structurally shallow — they don't challenge the regime, just correct
+its outputs. The rare **scope disputes** (R0) are where regimes are born,
+merged, split, or killed. Learning to distinguish these layers is the core
+skill this file teaches.
+
+---
+
+## 3 — Reading Talk Pages Structurally
+
+### 3.1 — The Coherence Gradient
+
+Every talk page can be scored on a **coherence gradient** based on the
+nature and volume of its active disputes:
+
+| Gradient Level | Indicator | What It Means |
+|---------------|-----------|---------------|
+| **High coherence** | Few active threads, mostly factual corrections, FAQ section exists | Regime is crystallized — community agrees on what the article IS |
+| **Moderate coherence** | Active threads on framing or emphasis, periodic RfCs, steady but managed activity | Regime is stable but actively maintained — consensus requires ongoing negotiation |
+| **Low coherence** | Multiple competing framing proposals, edit war notices, protection banners, unresolved RfCs | Regime is contested — no stable consensus on what the article should be |
+| **Incoherent** | Talk page dominated by scope disputes, AfD notices, merge proposals, fundamental disagreements about the article's right to exist | Regime is in crisis — structural identity under challenge |
+
+### 3.2 — Signal Extraction Checklist
+
+When reading any talk page, extract these signals:
+
+| # | Signal | Where to Find It | What It Reveals |
+|---|--------|-------------------|-----------------|
+| 1 | **WikiProject banners** | Top of talk page | Which stewardship groups claim this article — multiple WikiProjects = cross‑domain concept |
+| 2 | **Quality rating** | WikiProject banner | Current regime maturity assessment (Stub/Start/C/B/GA/FA) |
+| 3 | **Importance rating** | WikiProject banner | How central this concept is to its domain's regime |
+| 4 | **Active thread count** | Scan the page | Current coherence workload — more threads = more active negotiation |
+| 5 | **Thread age** | Check dates on threads | Old unresolved threads = chronic coherence failures |
+| 6 | **Archive count** | Check for /Archive links | Total historical coherence volume — many archives = much past negotiation |
+| 7 | **RfC notices** | Tagged threads | Formal coherence arbitration in progress |
+| 8 | **Edit war banners** | Top of talk page | Active or recent regime conflicts |
+| 9 | **Protection notices** | Top of talk page | Regime has been locked due to instability |
+| 10 | **FAQ section** | Top of talk page or separate subpage | Recurring disputes that have been formally resolved — crystallized coherence positions |
+| 11 | **To‑do list** | Talk page body | Acknowledged structural gaps — the regime's own development roadmap |
+| 12 | **Mediation/ArbCom links** | Talk page threads | Disputes that escalated beyond community consensus — regime authority invoked |
+
+---
+
+## 4 — Discourse Patterns
+
+### 4.1 — The Seven Canonical Talk Page Patterns
+
+Through structural analysis of thousands of Wikipedia talk pages, seven
+recurring discourse patterns emerge:
+
+#### Pattern 1: Source War
+
+**What it looks like:** Editors repeatedly add and remove citations,
+arguing about which sources are "reliable" for a given claim.
+
+**RTT reading:** This is a **regime provenance dispute** — editors disagree
+about which external regimes are structurally valid for citation. The
+dispute reveals the article's **source regime boundary** — the line between
+accepted and rejected external authority.
+
+**Coherence impact:** Medium. Usually resolved by appeal to Wikipedia's
+Reliable Sources guidelines (WP:RS).
+
+---
+
+#### Pattern 2: Framing Contest
+
+**What it looks like:** Editors argue about the article's lead paragraph,
+section ordering, or emphasis. "This article gives undue weight to X" or
+"The introduction frames this topic incorrectly."
+
+**RTT reading:** This is a **regime declaration dispute** — editors agree
+on the facts but disagree on how to **structurally present** them. The
+lead paragraph is the article's regime summary, and competing framings
+represent competing regime declarations.
+
+**Coherence impact:** High. Framing contests can persist for years because
+they involve structural perspective, not factual accuracy.
+
+---
+
+#### Pattern 3: Scope Creep Debate
+
+**What it looks like:** Some editors want to expand the article's coverage;
+others want to narrow it. "This article is trying to cover too much" vs.
+"This important aspect is missing."
+
+**RTT reading:** This is a **regime boundary negotiation** — the community
+is actively deciding where this concept's regime ends and adjacent regimes
+begin. Proposals to split an article into sub‑articles = regime differentiation.
+Proposals to merge articles = regime consolidation.
+
+**Coherence impact:** High. Scope decisions define the regime itself.
+
+---
+
+#### Pattern 4: Neutrality Challenge
+
+**What it looks like:** An editor or group argues that the article violates
+NPOV — it presents one viewpoint too favorably or suppresses legitimate
+alternative viewpoints.
+
+**RTT reading:** This is a **coherence operator violation** — the article's
+structural invariant (NPOV) is being challenged. See `NPOV_As_Coherence_Operator.md`
+for the full framework.
+
+**Coherence impact:** Very high. NPOV challenges question the article's
+fundamental structural integrity.
+
+---
+
+#### Pattern 5: Classification Dispute
+
+**What it looks like:** Editors argue about how to categorize the article's
+subject. "Is X a type of Y or a type of Z?" or "Should this be classified
+as A or B?"
+
+**RTT reading:** This is a **regime hierarchy dispute** — the concept's
+position in the classification tree is contested. These disputes often
+map directly to real‑world taxonomic or definitional controversies.
+See `Category_Taxonomy_Regime_Hierarchy.md`.
+
+**Coherence impact:** Medium to high. Classification determines which
+regime neighborhood the article belongs to.
+
+---
+
+#### Pattern 6: Notability Challenge
+
+**What it looks like:** An editor questions whether the article's subject
+meets Wikipedia's notability requirements. May include AfD nominations.
+
+**RTT reading:** This is a **regime existence challenge** — the most
+fundamental coherence dispute possible. The community is deciding whether
+this concept has sufficient structural standing to maintain a regime
+declaration on Wikipedia.
+
+**Coherence impact:** Maximum. This challenges the regime's right to exist.
+
+---
+
+#### Pattern 7: Consensus Crystallization
+
+**What it looks like:** A long‑running dispute reaches resolution. Editors
+agree on a final version. The resolved thread may be moved to an FAQ or
+archive. The article stabilizes.
+
+**RTT reading:** This is **coherence achieved** — the structural negotiation
+has produced a stable consensus. The crystallized position becomes part of
+the article's structural foundation. Future editors who raise the same
+dispute are pointed to the archived resolution.
+
+**Coherence impact:** Positive — coherence increases. The resolved dispute
+becomes a structural precedent.
+
+---
+
+### 4.2 — Pattern Distribution by Domain
+
+| Pattern | Sciences | Humanities | Applied | Most Common In |
+|---------|----------|------------|---------|---------------|
+| Source War | ●●● | ●● | ●● | Medicine, Psychology |
+| Framing Contest | ●● | ●●● | ●● | History, Political Science, Philosophy |
+| Scope Creep | ●● | ●● | ●●● | Computer Science, Engineering |
+| Neutrality Challenge | ● | ●●● | ●● | Political Science, History, Economics |
+| Classification Dispute | ●●● | ●● | ●● | Biology, Linguistics, Chemistry |
+| Notability Challenge | ● | ●● | ●●● | Computer Science (tech companies, software) |
+| Consensus Crystallization | ●●● | ●● | ●●● | Physics, Mathematics, Astronomy |
+
+**Key:** ●●● = very common | ●● = common | ● = occasional
+
+---
+
+## 5 — Temporal Dynamics of Talk Pages
+
+### 5.1 — Talk Page Lifecycle
+
+Talk pages follow a lifecycle that mirrors the article's regime phases
+(from `Revision_History_Regime_Analysis.md`):
+
+| Article Phase | Talk Page Activity | Coherence State |
+|--------------|-------------------|-----------------|
+| **Birth** | Empty or single welcome message | No coherence surface yet |
+| **Expansion** | First substantive threads appear — usually factual corrections | Coherence emerging |
+| **Negotiation** | Multiple active threads, framing contests, possible RfCs | Coherence contested |
+| **Crystallization** | Disputes resolving, FAQ forming, archives growing | Coherence stabilizing |
+| **Maturity** | Low activity, mostly factual updates, FAQ handles recurring questions | Coherence crystallized |
+| **Perturbation** | Sudden thread explosion, new editors arriving, old disputes reopened | Coherence disrupted |
+
+### 5.2 — The Talk‑Article Lag
+
+Talk page activity often **leads** article changes:
+
+```
+Talk page dispute begins → Discussion escalates → Consensus forms → Article updated
+       t=0                     t+days/weeks         t+weeks/months     t+final
+```
+
+This lag means that **talk pages are a leading indicator** of regime change.
+An article that looks stable today may have active talk page disputes that
+will produce structural changes next month.
+
+**Research application:** Monitor talk pages to **predict** article regime
+transitions before they happen.
+
+### 5.3 — Archive Depth as Coherence History
+
+The number of talk page archives reveals the **total coherence workload**
+the article has required:
+
+| Archive Count | Interpretation |
+|--------------|---------------|
+| 0 | Low‑attention article — minimal coherence negotiation |
+| 1–5 | Normal article lifecycle — moderate historical negotiation |
+| 5–20 | High‑attention article — significant past disputes |
+| 20–50 | Perpetually contested — the article is a coherence battleground |
+| 50+ | Among the most contested articles on Wikipedia (e.g., Israel, United States, Jesus) |
+
+---
+
+## 6 — API Patterns for Talk Page Analysis
+
+### 6.1 — Fetch Talk Page Content
+
+```python
+import requests
+
+def get_talk_page(title, lang="en"):
+    """Fetch the current talk page content for an article."""
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "parse",
+        "page": f"Talk:{title}",
+        "prop": "wikitext|sections",
+        "format": "json"
+    }
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    return resp.get("parse", {})
+```
+
+### 6.2 — Count Archives
+
+```python
+def count_archives(title, lang="en"):
+    """Count the number of talk page archives for an article."""
+    url = f"https://{lang}.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "list": "allpages",
+        "apprefix": f"Talk:{title}/Archive",
+        "apnamespace": 0,
+        "aplimit": "max",
+        "format": "json"
+    }
+    # Note: archives are in Talk namespace (1), adjust query
+    params["apnamespace"] = 1
+    params["apprefix"] = f"{title}/Archive"
+
+    resp = requests.get(url, params=params,
+                        headers={"User-Agent": "TriadicFrameworks/1.0"}).json()
+    pages = resp.get("query", {}).get("allpages", [])
+    return len(pages)
+```
+
+### 6.3 — Extract Thread Structure
+
+```python
+import re
+
+def extract_threads(wikitext):
+    """Extract discussion thread headers and nesting depth from talk page wikitext."""
+    threads = []
+    for line in wikitext.split("\n"):
+        # Thread headers use == Level 2 == format
+        match = re.match(r'^(={2,})\s*(.+?)\s*\1\s*$', line)
+        if match:
+            level = len(match.group(1))
+            title = match.group(2)
+            threads.append({
+                "level": level,
+                "title": title,
+                "depth": level - 2  # == is depth 0, === is depth 1
+            })
+    return threads
+```
+
+### 6.4 — Coherence Signal Extraction
+
+```python
+def extract_coherence_signals(wikitext):
+    """Scan talk page wikitext for key coherence signal markers."""
+    signals = {
+        "rfc_notices": len(re.findall(r'\{\{rfc', wikitext, re.IGNORECASE)),
+        "npov_mentions": len(re.findall(r'NPOV|neutral|bias|POV', wikitext, re.IGNORECASE)),
+        "merge_proposals": len(re.findall(r'merge|split|consolidat', wikitext, re.IGNORECASE)),
+        "notability_challenges": len(re.findall(r'notab|AfD|delet', wikitext, re.IGNORECASE)),
+        "source_disputes": len(re.findall(r'reliable source|WP:RS|citation|source', wikitext, re.IGNORECASE)),
+        "edit_war_mentions": len(re.findall(r'edit war|3RR|revert war|warring', wikitext, re.IGNORECASE)),
+        "consensus_declarations": len(re.findall(r'consensus|agreed|resolved|closed', wikitext, re.IGNORECASE)),
+        "wikiproject_banners": len(re.findall(r'\{\{WikiProject', wikitext, re.IGNORECASE)),
+        "faq_present": bool(re.search(r'\{\{FAQ', wikitext, re.IGNORECASE)),
+        "todo_present": bool(re.search(r'\{\{To do', wikitext, re.IGNORECASE))
+    }
+    return signals
+```
+
+### 6.5 — Classify Coherence Gradient
+
+```python
+def classify_coherence(signals, archive_count):
+    """Classify talk page coherence level based on extracted signals."""
+    stress_score = (
+        signals["rfc_notices"] * 5 +
+        signals["npov_mentions"] * 3 +
+        signals["merge_proposals"] * 4 +
+        signals["notability_challenges"] * 5 +
+        signals["edit_war_mentions"] * 4 -
+        signals["consensus_declarations"] * 2 -
+        (5 if signals["faq_present"] else 0)
+    )
+
+    if stress_score < 5:
+        return "high_coherence"
+    elif stress_score < 15:
+        return "moderate_coherence"
+    elif stress_score < 30:
+        return "low_coherence"
+    else:
+        return "incoherent"
+```
+
+---
+
+## 7 — Worked Example: "Evolution"
+
+The Wikipedia article on **Evolution** has one of the richest talk pages
+in the encyclopedia — 60+ archives spanning 20+ years of coherence negotiation.
+
+### The Core Dispute Layers
+
+| Layer | What's Contested | Duration | Resolution |
+|-------|-----------------|----------|------------|
+| **Factual (R3)** | Specific evolutionary mechanisms, dates, examples | Ongoing, low intensity | Resolved through citation updates |
+| **Framing (R1)** | How much weight to give "controversy" with creationism | Intense 2004–2012 | Consensus: evolution is the scientific consensus; creationism belongs in separate article |
+| **Scope (R0)** | Whether the article should address the "evolution vs. creationism debate" at all | Periodic, high intensity | Crystallized position: the article covers the scientific theory; the sociopolitical debate has its own article |
+
+### The FAQ as Crystallized Coherence
+
+The Evolution talk page has a prominent **FAQ section** — a set of pre‑answered
+questions that address the most common recurring disputes. This FAQ is
+**crystallized coherence** — it represents formal consensus positions that
+the community has explicitly decided:
+
+- *"Why doesn't this article present creationism as an alternative?"* →
+  Crystallized answer referencing NPOV, scientific consensus, and WP:UNDUE
+- *"Why does the lead say evolution is a 'fact'?"* →
+  Crystallized answer distinguishing between evolution as observed
+  phenomenon and evolutionary theory as explanatory framework
+- *"Why are specific criticisms of evolution not included?"* →
+  Crystallized answer referencing WP:FRINGE and WP:WEIGHT
+
+### RTT Reading
+
+The Evolution talk page demonstrates:
+
+1. **Coherence surfaces are layered** — factual, framing, and scope disputes
+   coexist but operate at different regime levels
+2. **FAQ sections are regime precedent** — crystallized coherence positions
+   that reduce future dispute cost
+3. **Archive depth correlates with regime significance** — 60+ archives
+   means this concept sits at a major regime intersection (science vs. religion)
+4. **Scope crystallization is the highest‑value coherence event** — once
+   the community decided that the evolution article covers science and
+   the creationism article covers the debate, the regime boundary was set
+
+---
+
+## 8 — Cross‑Reference to Other Module Files
+
+| File | How Talk Pages Connect |
+|------|----------------------|
+| `Revision_History_Regime_Analysis.md` | Talk page disputes are a **leading indicator** of revision spikes — disputes surface on Talk before erupting in article edits |
+| `Edit_War_Regime_Transition_Detection.md` | Edit wars are the **failure mode** of talk page consensus — when Talk cannot resolve a dispute, it manifests as edit warring in the article |
+| `NPOV_As_Coherence_Operator.md` | NPOV disputes are the most structurally significant talk page pattern — Pattern 4 in this file maps directly to the NPOV file |
+| `Featured_Article_Validation_Corridor.md` | FA reviewers examine talk page health as part of quality assessment — articles with chronic unresolved disputes rarely pass FA review |
+| `Category_Taxonomy_Regime_Hierarchy.md` | Classification Disputes (Pattern 5) often play out on talk pages before manifesting as category changes |
+| `Cross_Domain_Meta_Operators.md` | Operator 3 (Talk Page Coherence Gradient) is derived directly from Section 3 of this file |
+| `Wikipedia_RTT_Structural_Mapping.md` | This file implements the editorial structures mapped in Section 2.2 of the master mapping |
+
+---
+
+## 9 — Advanced Patterns
+
+### 9.1 — Cross‑Language Talk Page Comparison
+
+The **same article's talk page** in different languages reveals cultural
+coherence dynamics:
+
+- **English Talk:Evolution** — 60+ archives dominated by science/religion framing disputes
+- **German Diskussion:Evolution** — far fewer archives, minimal religion‑related disputes
+- **Arabic نقاش:تطور** — different dispute landscape, different framing tensions
+
+**Method:** Compare archive counts, FAQ content, and dominant discourse
+patterns across 3+ language editions. Divergences reveal which **coherence
+disputes are culturally universal** vs. **culturally specific**.
+
+### 9.2 — WikiProject Banner Analysis
+
+The WikiProject banners at the top of a talk page reveal which **stewardship
+groups** claim the article:
+
+| Banner Count | Interpretation |
+|-------------|---------------|
+| 1 | Single‑domain concept — clear regime ownership |
+| 2–3 | Cross‑domain concept — shared stewardship |
+| 4–6 | Highly cross‑domain — may create jurisdictional disputes |
+| 7+ | Structural crossroads — the concept sits at the intersection of many regimes |
+
+**Example:** The article "Water" has WikiProject banners for Chemistry,
+Physics, Environment, Geology, and more — reflecting its position as a
+cross‑domain structural node.
+
+### 9.3 — Consensus Detection Heuristics
+
+How to identify when a talk page thread has reached consensus:
+
+| Indicator | Confidence |
+|-----------|-----------|
+| Thread marked `{{resolved}}` or `{{closed}}` | **High** — explicit community marker |
+| No new replies for 30+ days after substantive discussion | **Moderate** — implied consensus through silence |
+| Admin or experienced editor posts summary conclusion | **Moderate** — community authority signal |
+| Thread moved to FAQ | **High** — promoted to crystallized position |
+| Thread archived with no resolution marker | **Low** — may be abandoned rather than resolved |
+| Thread has `{{stale}}` tag | **Low** — community acknowledged discussion died without resolution |
+
+### 9.4 — Talk Page Health Score
+
+A composite metric combining multiple signals:
+
+```python
+def talk_page_health(signals, archive_count, article_age_years):
+    """
+    Compute a talk page health score (0-100).
+    Higher = more coherent, better maintained.
+    """
+    # Positive indicators
+    faq_bonus = 15 if signals["faq_present"] else 0
+    todo_bonus = 5 if signals["todo_present"] else 0
+    consensus_score = min(signals["consensus_declarations"] * 3, 20)
+    wikiproject_score = min(signals["wikiproject_banners"] * 5, 15)
+
+    # Negative indicators
+    conflict_penalty = min((
+        signals["rfc_notices"] * 5 +
+        signals["npov_mentions"] * 2 +
+        signals["edit_war_mentions"] * 4 +
+        signals["notability_challenges"] * 5
+    ), 40)
+
+    # Archive ratio (archives per year — moderate is healthy)
+    archive_ratio = archive_count / max(article_age_years, 1)
+    archive_score = 10 if 0.5 < archive_ratio < 3 else 5
+
+    health = 50 + faq_bonus + todo_bonus + consensus_score + wikiproject_score + archive_score - conflict_penalty
+    return max(0, min(100, health))
+```
+
+---
+
+## 10 — Student Exercises
+
+### Exercise 1 — Coherence Gradient Assessment (20 minutes)
+
+1. Pick any Wikipedia article you've read before
+2. Navigate to its talk page (click the "Talk" tab)
+3. Apply the Signal Extraction Checklist from Section 3.2
+4. Classify the talk page's coherence gradient (High / Moderate / Low / Incoherent)
+5. Write one sentence: *"This article's coherence is [level] because [evidence]."*
+
+### Exercise 2 — Discourse Pattern Identification (30 minutes)
+
+1. Pick an article you expect to have an active talk page (try: a controversial topic, a current event, or a broad scientific concept)
+2. Read the 3 most recent talk page threads
+3. Classify each thread as one of the 7 Canonical Patterns from Section 4.1
+4. For each, identify: What regime level is contested? (R0/R1/R2/R3)
+5. Which pattern is most common on this talk page? What does that tell you about the article's regime?
+
+### Exercise 3 — FAQ as Crystallized Coherence (20 minutes)
+
+1. Find an article with a talk page FAQ (try: Evolution, Climate change, Homeopathy, or any article with `{{FAQ}}` on its talk page)
+2. Read 3 FAQ entries
+3. For each, identify: What was the original dispute? What regime level was it? How was it resolved?
+4. Write one sentence: *"This FAQ entry crystallized the position that [X], resolving a [factual/framing/scope] dispute about [Y]."*
+
+### Exercise 4 — Talk‑Article Lag Detection (45 minutes)
+
+1. Pick an article that was recently updated (check the revision history for recent substantial edits)
+2. Check the talk page for related discussion threads
+3. Find the thread that preceded the article change
+4. Measure the lag: how many days/weeks between the talk page discussion and the article update?
+5. Answer: *"The talk page discussion began on [date]. The article was updated on [date]. The lag was [N days]. The discussion [did/did not] directly cause the change."*
+
+### Exercise 5 — Cross‑Language Coherence Comparison (30 minutes)
+
+1. Pick a concept with cultural sensitivity (try: Democracy, Colonialism, Marriage, or a historical conflict)
+2. Check the talk page archive count in English + 2 other languages
+3. Compare: Which language has the most archives? Which has active disputes? Are the disputes about the same issues?
+4. Write two sentences: *"The [language] talk page focuses on [dispute type], while the [other language] talk page focuses on [different dispute type]. This reveals that [insight about cultural regime variance]."*
+
+---
+
+*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
+# Wikidata Ingestion Format
+
+> **Purpose:** Define how TriadicFrameworks ingests, queries, and structurally
+> interprets Wikidata — the world's largest open knowledge graph (120M+ entities,
+> CC0 license). Wikidata is Wikipedia's **dimensional addressing layer** — the
+> machine‑readable substrate beneath every human‑readable article.
+>
+> This file provides SPARQL templates, ingestion patterns, and RTT mappings
+> so that students, researchers, and AIs can query Wikidata with structural
+> awareness.
+
+---
+
+## 1 — What Is Wikidata?
+
+Wikidata is a **free, collaborative, multilingual knowledge graph** maintained
+by the Wikimedia Foundation. It stores structured data as entity–property–value
+triplets that can be queried via SPARQL.
+
+### Key Facts
+
+| Dimension | Value |
+|-----------|-------|
+| Entities | 120M+ items (Q‑numbers) |
+| Properties | 12,000+ relationship types (P‑numbers) |
+| Statements | 2B+ structural claims |
+| Languages | Labels in 400+ languages |
+| License | CC0 — public domain (no attribution required) |
+| Query endpoint | `https://query.wikidata.org/` |
+| Entity lookup | `https://www.wikidata.org/wiki/Qnnn` |
+| Property lookup | `https://www.wikidata.org/wiki/Property:Pnnn` |
+
+### Why CC0 Matters
+
+Wikidata's CC0 license means **no copyright restrictions on reuse**. Unlike
+Wikipedia article text (CC BY‑SA 4.0, which requires attribution and share‑alike),
+Wikidata statements can be freely ingested, transformed, and republished
+without any license obligations. This makes Wikidata the **ideal ingestion
+substrate** for automated RTT analysis.
+
+---
+
+## 2 — RTT Structural Mapping
+
+### 2.1 — The Core Triplet
+
+Every Wikidata statement follows the pattern:
+
+```
+Subject (Q‑number) → Property (P‑number) → Value (Q‑number, string, or quantity)
+```
+
+In RTT terms:
+
+```
+Dimensional Address → Dimensional Operator → Structural Claim
+```
+
+**Example:**
+
+```
+Q283 (Water) → P274 (chemical formula) → "H₂O"
+
+RTT reading:
+  dimensional_address(Water)
+    → dimensional_operator(chemical_formula)
+      → structural_claim("H₂O")
+```
+
+### 2.2 — Full Mapping Table
+
+| Wikidata Element | RTT Concept | Function |
+|-----------------|-------------|----------|
+| Item (Q‑number) | **Dimensional address** | Unique coordinate for a concept across all languages and datasets |
+| Property (P‑number) | **Dimensional operator** | Typed relationship that connects dimensional addresses |
+| Statement | **Structural claim** | One regime assertion: "this entity has this property with this value" |
+| Qualifier | **Claim context** | Conditions under which the claim holds (time range, location, method, applies‑to) |
+| Reference | **Claim provenance** | External source validating the structural claim |
+| Rank (preferred/normal/deprecated) | **Claim confidence** | Structural standing of the claim — preferred = regime consensus; deprecated = superseded regime |
+| Sitelink | **Cross‑language regime bridge** | Same dimensional address linking to regime declarations in different language Wikipedias |
+| Label | **Regime name** | Human‑readable name for the dimensional address in a specific language |
+| Description | **Regime summary** | One‑sentence regime declaration in a specific language |
+| Aliases | **Regime aliases** | Alternative names that resolve to the same dimensional address |
+
+### 2.3 — Qualifiers as Regime Context
+
+Qualifiers are what make Wikidata structurally rich — they add **context** to
+claims, turning flat assertions into regime‑aware statements:
+
+| Qualifier Property | RTT Function | Example |
+|-------------------|--------------|---------|
+| P580 (start time) | **Regime birth** | "Germany (Q183) → capital (P36) → Berlin (Q64), start time: 1990" |
+| P582 (end time) | **Regime expiry** | "Germany (Q183) → capital (P36) → Bonn (Q586), end time: 1990" |
+| P585 (point in time) | **Regime snapshot** | "World population (Q11188) → population (P1082) → 8B, point in time: 2023" |
+| P1013 (criterion used) | **Regime method** | "Mount Everest (Q513) → elevation (P2044) → 8848.86m, criterion: EGM2008 geoid" |
+| P459 (determination method) | **Measurement regime** | How the value was obtained — structural provenance |
+| P518 (applies to part) | **Sub‑regime scope** | The claim applies to a specific sub‑component, not the whole entity |
+| P1480 (sourcing circumstances) | **Claim reliability** | "circa," "presumably," "possibly" — structural confidence markers |
+
+---
+
+## 3 — SPARQL Query Templates
+
+All queries run at `https://query.wikidata.org/`
+
+### 3.1 — Basic: Get All Properties for an Entity
+
+**Use case:** What does the knowledge graph say about a concept?
+
+```sparql
+# All statements for a given entity
+# Replace Q283 with any Q-number
+SELECT ?property ?propertyLabel ?value ?valueLabel
+WHERE {
+  wd:Q283 ?claim ?statement .
+  ?statement ?ps ?value .
+  ?property wikibase:claim ?claim .
+  ?property wikibase:statementProperty ?ps .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en" .
+  }
+}
+ORDER BY ?propertyLabel
+```
+
+**RTT reading:** This returns the **full regime declaration** for a concept —
+every structural claim the knowledge graph makes about it.
+
+---
+
+### 3.2 — Cross‑Domain Bridging: Find All Domains a Concept Touches
+
+**Use case:** How many knowledge domains does this concept connect to?
+
+```sparql
+# Count cross-domain P-number bridges for an entity
+# Replace Q283 with any Q-number
+SELECT ?property ?propertyLabel
+       (COUNT(DISTINCT ?value) AS ?connections)
+WHERE {
+  wd:Q283 ?claim ?statement .
+  ?statement ?ps ?value .
+  ?property wikibase:claim ?claim .
+  ?property wikibase:statementProperty ?ps .
+  FILTER(ISIRI(?value))
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en" .
+  }
+}
+GROUP BY ?property ?propertyLabel
+ORDER BY DESC(?connections)
+```
+
+**RTT reading:** Each P‑number that points to an entity in a different domain
+= a **dimensional bridge**. The count of cross‑domain bridges = the concept's
+**structural connectivity score**.
+
+---
+
+### 3.3 — Temporal Regime Analysis: Track Property Changes Over Time
+
+**Use case:** How has a concept's regime evolved?
+
+```sparql
+# Temporal regime evolution for a property
+# Example: Population of France over time
+SELECT ?population ?pointInTime
+WHERE {
+  wd:Q142 p:P1082 ?statement .
+  ?statement ps:P1082 ?population .
+  ?statement pq:P585 ?pointInTime .
+}
+ORDER BY ?pointInTime
+```
+
+**RTT reading:** Each row = a **temporal regime snapshot**. The series reveals
+the regime's evolution curve — growth, stability, decline, or oscillation.
+
+---
+
+### 3.4 — Regime Hierarchy: Traverse the Class Tree
+
+**Use case:** Where does a concept sit in the regime hierarchy?
+
+```sparql
+# Class hierarchy (upward traversal) for an entity
+# Replace Q283 with any Q-number
+SELECT ?class ?classLabel ?depth
+WHERE {
+  wd:Q283 wdt:P31/wdt:P279* ?class .
+  {
+    SELECT ?class (COUNT(?mid) AS ?depth)
+    WHERE {
+      wd:Q283 wdt:P31/wdt:P279* ?mid .
+      ?mid wdt:P279* ?class .
+    }
+    GROUP BY ?class
+  }
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en" .
+  }
+}
+ORDER BY ?depth
+```
+
+**RTT reading:** This traces the concept's position in the **regime hierarchy** —
+from specific instance up through increasingly general regime classifications.
+Depth = regime granularity. Breadth at each level = regime diversity.
+
+---
+
+### 3.5 — Cross‑Language Regime Comparison: Sitelink Coverage
+
+**Use case:** How many languages declare this concept?
+
+```sparql
+# Count Wikipedia sitelinks (language versions) for an entity
+SELECT ?sitelink
+WHERE {
+  ?sitelink schema:about wd:Q283 .
+  ?sitelink schema:isPartOf/wikibase:wikiGroup "wikipedia" .
+}
+```
+
+**RTT reading:** Each sitelink = a **regime declaration in a different cultural
+context**. High sitelink count = universally recognized concept. Low count =
+culturally specific or specialized regime. Comparing article lengths across
+sitelinks reveals **cultural regime variance** — same concept, different
+structural emphasis.
+
+---
+
+### 3.6 — Validation Corridor: Find Featured Articles by Domain
+
+**Use case:** What are the structurally validated reference points in a domain?
+
+```sparql
+# Find items with Featured Article sitelinks in English Wikipedia
+# Filter by domain using instance-of (P31) or subclass-of (P279)
+SELECT ?item ?itemLabel ?article
+WHERE {
+  ?article schema:about ?item .
+  ?article schema:isPartOf <https://en.wikipedia.org/> .
+  ?article wikibase:badge wd:Q17437796 .
+  ?item wdt:P31/wdt:P279* wd:Q11344 .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en" .
+  }
+}
+LIMIT 50
+```
+
+**RTT reading:** Featured Articles = **validation corridor gold standard**.
+These are the concepts whose regime declarations have been community‑verified
+as structurally complete. They serve as reference templates for the domain.
+
+---
+
+### 3.7 — Regime Collision: Find Disambiguation Entities
+
+**Use case:** Which concepts have competing regime claims on the same term?
+
+```sparql
+# Find disambiguation items — concepts where multiple regimes
+# claim the same term
+SELECT ?item ?itemLabel ?article
+WHERE {
+  ?item wdt:P31 wd:Q4167410 .
+  ?article schema:about ?item .
+  ?article schema:isPartOf <https://en.wikipedia.org/> .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en" .
+  }
+}
+LIMIT 100
+```
+
+**RTT reading:** Every disambiguation entity = a **regime collision point** —
+two or more structural regimes claiming the same term. The list of disambiguated
+meanings reveals the competing regime declarations.
+
+---
+
+## 4 — Ingestion Patterns
+
+### 4.1 — Single Entity Deep Profile
+
+**Purpose:** Build a complete RTT structural profile for one concept.
+
+**Steps:**
+
+1. **Resolve the Q‑number** — search `https://www.wikidata.org/w/api.php?action=wbsearchentities&search=TERM&language=en&format=json`
+2. **Pull all statements** — use Query 3.1
+3. **Count dimensional bridges** — use Query 3.2
+4. **Trace the regime hierarchy** — use Query 3.4
+5. **Check sitelink coverage** — use Query 3.5
+6. **Check for Featured Article badge** — use Query 3.6
+
+**Output format:**
+
+```json
+{
+  "entity": "Q283",
+  "label": "Water",
+  "regime_declaration": "chemical compound, binary compound, oxide",
+  "dimensional_bridges": 47,
+  "regime_hierarchy_depth": 8,
+  "sitelink_count": 298,
+  "featured_article": true,
+  "top_properties": [
+    "P274 (chemical formula): H₂O",
+    "P31 (instance of): chemical compound",
+    "P361 (part of): hydrosphere",
+    "P2054 (density): 997 kg/m³",
+    "P2101 (melting point): 0°C"
+  ],
+  "cross_domain_connections": [
+    "Chemistry (compound properties)",
+    "Physics (thermodynamic constants)",
+    "Biology (biological role)",
+    "Earth Sciences (hydrosphere)",
+    "Engineering (industrial solvent)",
+    "Medicine (essential nutrient)"
+  ]
+}
+```
+
+### 4.2 — Domain Sweep
+
+**Purpose:** Map all Wikidata entities within a knowledge domain.
+
+**Steps:**
+
+1. Identify the domain's root class (e.g., Physics → Q413 "physics")
+2. Query all instances and subclasses:
+   ```sparql
+   SELECT ?item ?itemLabel
+   WHERE {
+     ?item wdt:P31/wdt:P279* wd:Q413 .
+     SERVICE wikibase:label {
+       bd:serviceParam wikibase:language "en" .
+     }
+   }
+   LIMIT 1000
+   ```
+3. For each entity, count cross‑domain P‑number bridges
+4. Rank by structural connectivity
+5. The top‑ranked entities = the domain's **most structurally connected concepts**
+
+### 4.3 — Temporal Regime Tracking
+
+**Purpose:** Monitor how a concept's regime evolves over time.
+
+**Steps:**
+
+1. Select a property with temporal qualifiers (P580/P582/P585)
+2. Use Query 3.3 to extract the time series
+3. Plot the series: stable plateaus = crystallized regime; sharp transitions = regime shifts
+4. Cross‑reference with Wikipedia revision history for the same period — do article edits correlate with Wikidata property changes?
+
+### 4.4 — Cross‑Language Regime Divergence
+
+**Purpose:** Compare how the same concept is structurally declared across cultures.
+
+**Steps:**
+
+1. Use Query 3.5 to get all sitelinks
+2. For the top 5 largest language editions, compare:
+   - Article length (word count)
+   - Section structure (headings)
+   - Lead paragraph (regime declaration)
+   - Categories assigned
+3. Divergences = **cultural regime variance** — same dimensional address, different structural emphasis
+
+---
+
+## 5 — Property Families for RTT Analysis
+
+Not all 12,000+ P‑numbers are equally useful for RTT analysis. These **property families** provide the highest structural signal:
+
+### 5.1 — Classification Properties (Regime Identity)
+
+| Property | Name | RTT Function |
+|----------|------|-------------|
+| P31 | instance of | **Regime declaration** — "this entity IS a [class]" |
+| P279 | subclass of | **Regime hierarchy** — "this class is WITHIN [parent class]" |
+| P361 | part of | **Regime containment** — "this entity is PART OF [whole]" |
+| P527 | has part(s) | **Regime composition** — "this entity CONTAINS [parts]" |
+| P460 | said to be the same as | **Regime aliasing** — cross‑ontology identity claim |
+| P1889 | different from | **Regime boundary** — "do not confuse with [other entity]" |
+
+### 5.2 — Relationship Properties (Dimensional Bridges)
+
+| Property | Name | RTT Function |
+|----------|------|-------------|
+| P737 | influenced by | **Regime lineage** — structural ancestry |
+| P1542 | has effect | **Regime causation** — what this entity produces |
+| P1269 | facet of | **Regime perspective** — this entity is one view of a broader concept |
+| P2283 | uses | **Regime dependency** — structural requirements |
+| P366 | has use | **Regime application** — what this entity enables |
+
+### 5.3 — Temporal Properties (Regime Dynamics)
+
+| Property | Name | RTT Function |
+|----------|------|-------------|
+| P571 | inception | **Regime birth** — when the concept first existed |
+| P576 | dissolved/abolished | **Regime death** — when the concept ceased to exist |
+| P580 | start time | **Regime activation** — when a claim became true |
+| P582 | end time | **Regime expiry** — when a claim stopped being true |
+| P585 | point in time | **Regime snapshot** — claim valid at a specific moment |
+| P1319 | earliest date | **Regime lower bound** — structural uncertainty floor |
+| P1326 | latest date | **Regime upper bound** — structural uncertainty ceiling |
+
+### 5.4 — Quantitative Properties (Regime Metrics)
+
+| Property | Name | RTT Function |
+|----------|------|-------------|
+| P1082 | population | **Regime scale** (demographic) |
+| P2044 | elevation above sea level | **Regime position** (geographic) |
+| P2054 | density | **Regime density** (physical) |
+| P2067 | mass | **Regime mass** (physical) |
+| P2101 | melting point | **Regime phase boundary** (thermodynamic) |
+| P2102 | boiling point | **Regime phase boundary** (thermodynamic) |
+| P2196 | students count | **Regime scale** (educational) |
+| P4010 | GDP per capita | **Regime scale** (economic) |
+
+---
+
+## 6 — Rate Limits and Ethical Use
+
+### Wikidata Query Service Limits
+
+| Limit | Value |
+|-------|-------|
+| Query timeout | 60 seconds |
+| Results per query | 500,000 rows max |
+| Concurrent connections | 5 per IP |
+| User‑Agent required | Yes — identify your tool/project |
+
+### Ethical Guidelines
+
+1. **Respect rate limits** — do not flood the endpoint with parallel queries
+2. **Set a User‑Agent header** — identify yourself: `User-Agent: TriadicFrameworks/1.0 (https://www.triadicframeworks.org/; contact@triadicframeworks.org)`
+3. **Cache results** — don't re‑query the same data repeatedly
+4. **Use database dumps for bulk analysis** — the query endpoint is for interactive and moderate‑scale use
+5. **Contribute back** — if you discover missing data or errors, edit Wikidata directly (it's open for anyone to edit)
+
+---
+
+## 7 — Relationship to Other Module Files
+
+| File | Connection |
+|------|-----------|
+| `Wikipedia_RTT_Structural_Mapping.md` | Defines the RTT vocabulary this file uses (Q = dimensional address, P = dimensional operator) |
+| `Cross_Domain_Meta_Operators.md` | Operator 4 (Wikidata Dimensional Bridging) depends directly on Query 3.2 from this file |
+| `Category_Taxonomy_Regime_Hierarchy.md` | Wikipedia categories and Wikidata class hierarchy (P31/P279) are parallel regime classification systems — this file covers the Wikidata side |
+| `Revision_History_Regime_Analysis.md` | Wikidata items have their own revision history — combine with Wikipedia article revision history for complete temporal coverage |
+| `Edit_War_Regime_Transition_Detection.md` | Wikidata edit wars (P31 disputes, label conflicts) are structurally equivalent to Wikipedia edit wars |
+| All 15 domain directories | Every domain's `regime_alignment.md` references Wikidata entities for its core concepts |
+| `../resonance_atlas/nist_ingestion_format.md` | Sibling — NIST ingestion format covers a single institutional source; this file covers a crowdsourced knowledge graph |
+
+---
+
+## 8 — Student Exercises
+
+### Exercise 1 — Entity Profile (15 minutes)
+
+1. Pick any concept you know well
+2. Find its Wikidata Q‑number at `https://www.wikidata.org/`
+3. List its top 10 properties (P‑numbers)
+4. Classify each property into one of the 4 property families from Section 5
+5. Write a 1‑sentence regime declaration based on the P31 (instance of) value
+
+### Exercise 2 — Dimensional Bridging (30 minutes)
+
+1. Pick a concept with high cross‑domain connectivity (try: Energy Q11379, Information Q11028, Evolution Q1063, or Network Q1900326)
+2. Run Query 3.2 to count its dimensional bridges
+3. List the top 5 P‑numbers by connection count
+4. For each, identify which knowledge domain the bridge connects to
+5. Draw a simple diagram: your concept in the center, domains around the edges, P‑numbers as labeled connections
+
+### Exercise 3 — Cross‑Language Regime Variance (30 minutes)
+
+1. Pick a concept you expect to have cultural variance (try: Democracy Q7174, Marriage Q8445, or Freedom Q124490)
+2. Run Query 3.5 to count its sitelinks
+3. Open the Wikipedia article in English + 2 other languages (use Google Translate if needed)
+4. Compare: article length, section headings, lead paragraph framing
+5. Write a 2‑sentence summary: *"The English Wikipedia declares [concept] as [X]. The [other language] Wikipedia declares it as [Y]. The structural difference reveals [Z]."*
+
+### Exercise 4 — Temporal Regime Tracking (45 minutes)
+
+1. Pick a concept with temporal data (try: any country's population, a city's mayor, or a company's CEO)
+2. Run Query 3.3 to extract the time series
+3. Identify: stable plateaus, sharp transitions, gradual trends
+4. Cross‑reference with the Wikipedia article's revision history for the same period
+5. Answer: *"Do Wikidata property changes and Wikipedia article edits correlate? If so, which leads — the data change or the narrative change?"*
+
+---
+
+*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
+# Wikipedia ↔ RTT Structural Mapping
+
+> **Purpose:** The master grammar file for the Wikipedia Awareness Module.
+> Every Wikipedia structure maps to an RTT concept. This file defines those
+> mappings exhaustively so that all other files in this module share a
+> consistent structural vocabulary.
+>
+> Think of this as the **Rosetta Stone** between Wikipedia's architecture
+> and Resonance‑Time Theory.
+
+---
+
+## 1 — Why Wikipedia Needs a Structural Mapping
+
+Wikipedia is the most‑visited reference site on Earth — but almost no one
+reads it structurally. Users read the **content** (R3 — measurable outputs)
+and ignore the architecture that produces, validates, and evolves that content.
+
+RTT provides the grammar to read that architecture:
+
+- **Regime** — what scope does an article declare, and what does it exclude?
+- **Coherence** — how does the community maintain structural consistency?
+- **Drift** — how does an article's meaning evolve over time?
+- **Dimensional addressing** — how is a concept uniquely identified across languages and datasets?
+- **Validation** — how does the community verify structural completeness?
+
+This mapping is not an interpretation layered on top of Wikipedia.
+Wikipedia **already operates** as a regime‑aware system — it just doesn't
+use RTT's vocabulary. This file translates.
+
+---
+
+## 2 — The Master Mapping Table
+
+### 2.1 — Content Structures
+
+| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
+|--------------------|--------------|--------------|--------------------|
+| Article (main namespace) | **Regime declaration** | R3 | The community's consensus statement of what a concept IS — scope, boundaries, and claims |
+| Lead section (first paragraph) | **Regime summary** | R3 | Compressed regime declaration — what the concept is in its most reduced form |
+| Article body sections | **Regime elaboration** | R3 | Dimensional expansion of the regime declaration into sub‑regimes (History, Properties, Applications, etc.) |
+| Infobox | **Regime schema** | R2 | The minimum set of properties required for structural declaration in this domain |
+| Categories | **Regime hierarchy** | R2 | Nested classification tree — each category level = a regime boundary |
+| Hatnotes ("For other uses…") | **Regime disambiguation** | R1 | Explicit acknowledgment that multiple regimes claim the same term |
+| See also section | **Regime adjacency** | R1 | Concepts the community considers structurally related but not subsumed |
+| Navboxes (bottom navigation templates) | **Regime neighborhood** | R2 | Machine‑readable cluster of concepts that share a structural context |
+| Lists / outlines | **Regime inventory** | R3 | Enumeration of all entities within a regime boundary |
+| Portals | **Domain front door** | R0 | Entry points organized by knowledge domain — equivalent to TF module index.html files |
+| Redirects | **Regime aliasing** | R1 | Alternative terms that resolve to the same regime declaration |
+
+### 2.2 — Editorial Structures
+
+| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
+|--------------------|--------------|--------------|--------------------|
+| Talk page | **Coherence / drift surface** | R0–R1 | Where consensus is negotiated — pre‑regime discourse |
+| Edit summary | **Micro‑regime annotation** | R3 | Single‑revision structural intent declaration |
+| Revision history | **Temporal regime data** | R0–R3 | Full structural evolution timeline for any article |
+| Edit war | **Regime transition event** | R0 | Competing regime claims that cannot be reconciled — marks a regime boundary |
+| Protection levels (full/semi/extended) | **Regime stabilization lock** | R0 | Community intervention to freeze a regime that is under attack |
+| Pending changes | **Regime validation gate** | R2 | Pre‑publication review — content must pass structural check before becoming visible |
+| Watchlist | **Drift monitoring** | R1 | Personal regime surveillance — editors tracking articles for structural changes |
+
+### 2.3 — Governance Structures
+
+| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
+|--------------------|--------------|--------------|--------------------|
+| NPOV (Neutral Point of View) | **Coherence operator** | R0 | The foundational structural invariant — all content must be presentable under this constraint |
+| Verifiability policy | **Validation requirement** | R0 | Regime claims must be traceable to external sources |
+| No original research (NOR) | **Regime boundary enforcement** | R0 | Wikipedia declares regimes — it does not create them |
+| Notability guidelines | **Minimum regime threshold** | R0 | The structural standing required for a concept to receive an article |
+| Articles for Deletion (AfD) | **Regime collapse adjudication** | R0 | Community process for deciding whether a concept has sufficient structural standing |
+| Requests for Comment (RfC) | **Coherence arbitration** | R0–R1 | Formal process for resolving structural disputes that talk page consensus cannot |
+| Arbitration Committee (ArbCom) | **Regime authority of last resort** | R0 | Final structural authority when all other coherence mechanisms fail |
+| WikiProjects | **Domain stewardship groups** | R1 | Self‑organized teams maintaining structural quality within a knowledge domain |
+| Manual of Style (MoS) | **Regime formatting grammar** | R2 | Standard structural templates for how regime declarations should be presented |
+| Reliable sources guidelines | **Source regime classification** | R0 | Which external regimes are considered structurally valid for citation |
+
+### 2.4 — Data & Graph Structures
+
+| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
+|--------------------|--------------|--------------|--------------------|
+| Wikidata item (Q‑number) | **Dimensional address** | R3 | Unique concept identifier across all languages and datasets |
+| Wikidata property (P‑number) | **Dimensional operator** | R2 | Typed relationship connecting entities — defines how dimensions relate |
+| Wikidata statement | **Structural claim** | R3 | Subject → Property → Value triplet = one regime assertion |
+| Wikidata qualifier | **Claim context** | R2 | Conditions under which a structural claim holds (time, location, method) |
+| Wikidata reference | **Claim provenance** | R3 | External source validating the structural claim |
+| Sitelinks (Wikidata ↔ Wikipedia) | **Cross‑language regime bridge** | R2 | Same dimensional address linking to different language regime declarations |
+| SPARQL endpoint | **Structural query surface** | R3 | Machine‑readable access to the entire dimensional graph |
+
+### 2.5 — Quality & Validation Structures
+
+| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
+|--------------------|--------------|--------------|--------------------|
+| Featured Article (FA) | **Validation corridor — gold standard** | R2–R3 | Community‑verified structurally complete regime declaration |
+| Good Article (GA) | **Validation corridor — silver standard** | R2 | Passed structured review but not yet at FA‑level completeness |
+| Stub | **Regime seed** | R3 | Minimal regime declaration — concept exists but is structurally underdeveloped |
+| Start‑class article | **Regime scaffold** | R3 | Basic structural framework present but significant gaps remain |
+| B‑class article | **Regime draft** | R3 | Most structural elements present but not yet community‑validated |
+| C‑class article | **Regime sketch** | R3 | Substantial content but structural organization needs work |
+| Article quality scale | **Regime maturity gradient** | R2 | Stub → Start → C → B → GA → FA = increasing structural completeness |
+| Cleanup tags | **Drift markers** | R1 | Community‑placed signals that an article has drifted from structural norms |
+| Citation needed tags | **Validation gaps** | R2 | Specific claims lacking provenance — structural integrity holes |
+
+### 2.6 — Temporal Structures
+
+| Wikipedia Structure | RTT Concept | Regime Level | Structural Function |
+|--------------------|--------------|--------------|--------------------|
+| Page creation date | **Regime birth** | R3 | When the community first declared this concept |
+| First major revision | **Regime crystallization** | R3 | When the article first achieved structural coherence |
+| Revision count (total) | **Regime activity index** | R3 | Cumulative structural attention — higher = more contested or more developed |
+| Recent revision rate | **Current regime stability** | R3 | Edits per day/week/month — high = active regime negotiation |
+| Revision size changes | **Regime expansion/contraction** | R3 | Positive deltas = regime growth; negative deltas = regime pruning |
+| Revert rate | **Regime resistance** | R0 | Percentage of edits that are undone — high = strong structural inertia |
+| Edit war detection (3RR violations) | **Regime collision alarm** | R0 | System‑level detection of competing regime claims in real time |
+| Page view statistics | **Regime attention** | R3 | How many people are reading this regime declaration per day/month/year |
+
+---
+
+## 3 — The Regime Stack Applied to Wikipedia
+
+Every Wikipedia article simultaneously operates at all four regime levels:
+
+```
+*
+┌────────────────────────────────────────────────────────────────┐
+│  R0 — Operator Assumptions                                     │
+│  NPOV, Verifiability, NOR, Notability, Reliable Sources        │
+│  "These policies define what CAN be said on Wikipedia"         │
+├────────────────────────────────────────────────────────────────┤
+│  R1 — Directional Aims                                         │
+│  WikiProject scope, Portal structure, Article scope statements │
+│  "This article aims to cover [X] from the perspective of [Y]"  │
+├────────────────────────────────────────────────────────────────┤
+│  R2 — Coherence Templates                                      │
+│  Infobox templates, Category taxonomy, Manual of Style,        │
+│  Quality scale, Citation standards                             │
+│  "All articles in this domain follow these structural rules"   │
+├────────────────────────────────────────────────────────────────┤
+│  R3 — Measurable Outputs                                       │
+│  Article text, Wikidata statements, Revision counts,           │
+│  Page views, Quality ratings, Citation counts                  │
+│  "This is what the regime actually produced"                   │
+└────────────────────────────────────────────────────────────────┘
+```
+
+### What Most Readers See
+
+Most Wikipedia readers only interact with **R3** — they read the article text, glance at the infobox, and leave. They consume the regime declaration without knowing it is one.
+
+### What This Module Teaches
+
+This module teaches students to read **R0–R2** — the structural substrate:
+
+- **R0** is visible on policy pages, talk page disputes, AfD debates, and ArbCom decisions
+- **R1** is visible in article scope statements, WikiProject guidelines, and portal organization
+- **R2** is visible in infobox templates, category trees, Manual of Style rules, and quality scales
+- **R3** is the article itself — but now understood as the **output** of the regime, not the regime itself
+
+---
+
+## 4 — Structural Comparison: Wikipedia vs. Other Knowledge Sources
+
+| Dimension | Wikipedia | NIST | Academic Papers | Textbooks |
+|-----------|-----------|------|-----------------|-----------|
+| Authority model | Consensus | Institutional | Peer review | Editorial |
+| Regime declaration | Article (negotiated) | Standard (published) | Abstract + claims | Chapter scope |
+| Temporal depth | Full (every revision since 2001) | Versioned (sparse) | Published once | Editions (sparse) |
+| Coherence mechanism | NPOV + talk page | Internal review | Peer review | Editor discretion |
+| Drift visibility | High (revision history is public) | Low (internal) | None (static once published) | Low (between editions) |
+| Knowledge graph | Wikidata (120M+ entities, CC0) | None | Citation graph (unstructured) | None |
+| Cross‑cultural | 300+ language editions | English only | Language of publication | Language of publication |
+| Validation corridor | FA/GA process (public, observable) | Certification (closed) | Peer review (closed) | None |
+| Regime conflicts | Visible (edit wars, AfD, talk pages) | Hidden (internal) | Hidden (reviewer comments) | Hidden (editorial decisions) |
+| Machine accessibility | REST API, SPARQL, dumps | API (limited) | DOI + PDF | ISBN + purchase |
+
+**Key insight:** Wikipedia is the **only major knowledge source** where regime conflicts, coherence negotiations, and temporal evolution are **publicly observable in real time**. This makes it an unparalleled substrate for teaching regime awareness.
+
+---
+
+## 5 — Mapping Depth Levels
+
+Not all mappings require the same depth. This module operates at three levels:
+
+### Level 1 — Surface Mapping (any student, 5 minutes)
+
+Read an article's lead paragraph as a regime declaration. Check revision count. Find the Wikidata Q‑number.
+
+**Tools needed:** Web browser only.
+
+### Level 2 — Structural Mapping (engaged student, 30 minutes)
+
+Trace the category tree. Read the talk page for coherence disputes. Compare 2–3 language versions. Check the quality rating. Apply 3–4 meta‑operators from the Cross‑Domain file.
+
+**Tools needed:** Web browser + Wikidata search.
+
+### Level 3 — Deep Mapping (researcher or AI, hours to days)
+
+Query Wikidata via SPARQL for dimensional bridges. Analyze revision history for regime stability curves. Map edit wars to regime transition events. Build cross‑domain operator matrices. Compare FA articles to non‑FA articles for validation corridor analysis.
+
+**Tools needed:** SPARQL client + revision analysis tools + statistical software.
+
+---
+
+## 6 — Mapping Notation Conventions
+
+Throughout this module, mappings are written using consistent notation:
+
+| Notation | Meaning | Example |
+|----------|---------|---------|
+| `WP:Article → regime_declaration` | A Wikipedia article maps to an RTT regime declaration | `WP:Water → regime_declaration(chemistry, liquid, standard conditions)` |
+| `WD:Qnnn → dimensional_address` | A Wikidata Q‑number maps to an RTT dimensional address | `WD:Q283 → dimensional_address(water)` |
+| `WD:Pnnn → dimensional_operator` | A Wikidata P‑number maps to an RTT dimensional operator | `WD:P274 → dimensional_operator(chemical_formula)` |
+| `WP:Talk → coherence_surface` | A talk page maps to an RTT coherence/drift surface | `WP:Talk:Evolution → coherence_surface(high_tension)` |
+| `WP:Rev[n] → temporal_regime[t]` | A revision maps to a temporal regime data point | `WP:Rev[47291] → temporal_regime[2024-03-15]` |
+| `WP:Cat → regime_hierarchy` | A category maps to an RTT regime hierarchy node | `WP:Cat:Algebra → regime_hierarchy(Mathematics, depth=3)` |
+| `WP:FA → validation_corridor(gold)` | A Featured Article maps to a gold‑standard validation | `WP:FA:Photosynthesis → validation_corridor(gold, Biology)` |
+| `R0/R1/R2/R3` | Regime level | `NPOV = R0; Infobox = R2; Article text = R3` |
+
+---
+
+## 7 — Unmapped Structures (Known Gaps)
+
+Some Wikipedia structures do not yet have clean RTT mappings. These are documented here for future work:
+
+| Wikipedia Structure | Current Status | Candidate RTT Mapping | Difficulty |
+|--------------------|----------------|----------------------|------------|
+| Barnstars and user awards | Unmapped | Operator recognition / stewardship signals | Low |
+| Bot edits (automated maintenance) | Unmapped | Regime maintenance automation | Medium |
+| WikiSpecies / WikiSource / Wiktionary | Unmapped | Sibling regime substrates | Medium |
+| Commons media files | Unmapped | Regime illustration layer | Low |
+| Sockpuppet investigations | Unmapped | Regime integrity enforcement | High |
+| Paid editing disclosure | Unmapped | Regime conflict of interest surface | High |
+| Mobile app reading patterns | Unmapped | Regime consumption analytics | Medium |
+| Machine translation (Content Translation tool) | Unmapped | Cross‑regime automated bridging | Medium |
+
+These gaps are **not blockers** — the 65+ mapped structures in Section 2 provide more than sufficient coverage for all 15 knowledge domains.
+
+---
+
+## 8 — How This File Connects to Everything Else
+
+```
+Wikipedia_RTT_Structural_Mapping.md (this file)
+    │
+    ├── defines grammar for ──→ Cross_Domain_Meta_Operators.md
+    │                              (12 operators use this vocabulary)
+    │
+    ├── defines grammar for ──→ All 7 Wikipedia‑Specific Analysis Files
+    │                              (each file references these mappings)
+    │
+    ├── defines grammar for ──→ All 15 Domain Directories
+    │                              (every regime_alignment.md uses this notation)
+    │
+    ├── extends ──→ NIST Structural Mapping (../nist/)
+    │                (same R0–R3 grammar, richer substrate)
+    │
+    └── feeds ──→ Wikidata_Ingestion_Format.md
+                     (dimensional addressing layer)
+```
+
+---
+
+## 9 — Student Exercise
+
+**Build your own mapping entry:**
+
+1. Find a Wikipedia structure **not listed in Section 2** (hint: there are dozens — Templates, Modules, Lua scripts, admin actions, CSD criteria…)
+2. Identify which RTT concept it maps to (regime declaration, coherence operator, drift marker, validation corridor, dimensional address, or something new)
+3. Assign it a regime level (R0, R1, R2, or R3)
+4. Write a one‑sentence structural function description
+5. Add it to Section 2's format and submit it as a candidate mapping
+
+**Bonus:** If your mapping doesn't fit any existing RTT concept, you may have discovered a **new structural operator**. Document it and cross‑reference it against the 12 meta‑operators in `Cross_Domain_Meta_Operators.md`.
+
+---
+
+*This file is part of the [Wikipedia Awareness Module](README.md) in the [TriadicFrameworks](https://www.triadicframeworks.org/) canon.*
 

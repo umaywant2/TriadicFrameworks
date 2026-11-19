@@ -1,4 +1,6 @@
 scripts 
+<img width="1194" height="672" alt="scripts_" src="https://github.com/user-attachments/assets/24fe6838-956d-431f-bbe4-002ffa7e8bed" />
+
 ## ⚙️ Scripts — Resonance Utilities & Dashboards  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">

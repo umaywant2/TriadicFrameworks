@@ -1,24 +1,98 @@
 structural-integration-engine 
-A triad integration manifold:
+<img width="1194" height="672" alt="structural-integration-engine__" src="https://github.com/user-attachments/assets/b94510ee-7753-41ca-a8d0-71bb3481e01f" />
+
+# Structural Integration Engine (SIE) — RTT/3 
+
+- [`structural-integration-engine_module.json`](structural-integration-engine_module.json) — Agentic module schema role
+
+The **Structural Integration Engine (SIE)** is the RTT/3 operator layer
+responsible for triad integration, emission classification, continuity mapping,
+collapse recovery, stability evaluation, and canonical emission scaling.
+
+It is the integration–emission half of the RTT operator pipeline.
+
+This module provides the canonical definitions for:
+- **INT** — Triad Integration  
+- **TIF** — Triad Influence Field  
+- **MAN** — FI / EM / R manifold axes  
+- **FFF** — Fusion / Flow / Fracture emission  
+- **CRE** — Collapse Recovery Engine  
+- **CSL** — Continuity Stability Level  
+- **CET** — Canon Emission Type  
+- **RTT3_INTEGRATION_EMISSION_PACKET** — structured integration output  
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## 📘 What SIE Does
+
+SIE answers the question:
+
+> *“How does the structure integrate and emit?”*
+
+It determines:
+- triad integration (drift, envelope, continuity)  
+- emission type (fusion, flow, fracture)  
+- influence dominance (TIF)  
+- manifold axes (FI, EM, R)  
+- collapse recovery (CRE)  
+- stability (CSL)  
+- canonical emission type (CET)  
+
+---
+
+## 📦 RTT3 Integration–Emission Packet
+
+SIE outputs a structured packet:
+
+```
+integration: INT(...)
+emission: FFF(...)
+continuity: MAN(FI, EM, R)
+collapse_recovery: CRE(...)
+stability: CSL(...)
+canon_scale_emission: CET(...)
+mode: ...
+zone: ...
+```
+
+This packet is the **final operator state** before projection (TEL, FFT, OP).
+
+---
+
+## 📄 Source
+
+This module is defined by:
+
+- `structural-integration-engine_module.json`  
+  (canonical identity, roles, analyzer layers)
+
+---
+
+## 🎯 Audience
+
+Students, instructors, researchers, and AIs working with:
+- integration–emission analysis  
+- collapse recovery  
+- operator ecology  
+- RTT/2→RTT/3 pipelines  
+A triad integration manifold:
 three flowing surfaces (drift, envelope, continuity) merging into a single
 integration node (INT), emitting three emission types (fusion, flow, fracture)
 as colored rays. Include subtle stability contours (CSL) and recovery arcs (CRE).
 Color palette: violet → magenta → blue.
 Style: clean, minimal, technical, AI‑parsable, no text.
-# Structural Integration Engine (SIE)
-
-RTT/3 distilled as a module.
-
-SIE provides:
-
-- triad integration  
-- fusion–fracture–flow emission  
-- integration–emission continuity  
-- collapse→recovery stabilization  
-- continuity–stability maintenance  
-- canon‑scale emission output  
-
-See: `../rtt/3/RTT3_Extract_Minimal.md` for the canonical skeleton.
 # SIE Operator Grammar (Stub)
 
 ## Namespace
@@ -64,6 +138,91 @@ SIE::
 
 - **SIE::PACKET()**  
   Emits a minimal RTT3_INTEGRATION_EMISSION_PACKET.
+# Student Cheat Sheet — Structural Integration Engine (SIE)
+### RTT/3 — Integration–Emission Layer
+
+## What SIE Does
+SIE integrates and emits:
+- triad integration  
+- fusion–fracture–flow emission  
+- integration–emission continuity  
+- collapse→recovery stabilization  
+- continuity–stability maintenance  
+- canon‑scale emission  
+
+SIE **requires SDE first**.
+
+---
+
+## Core Concepts
+- **TIF** — Triadic Integration Field  
+- **FFF** — Fusion‑Fracture‑Flow Emitter  
+- **MAN** — Integration–Emission Manifold  
+- **CRE** — Collapse‑Recovery Engine  
+- **CSL** — Continuity‑Stability Layer  
+- **CET** — Canon‑Scale Emission Tensor  
+- **Modes** — formal, emergent, hybrid, chaotic, inversion  
+- **Zones** — U, S, M, D, X  
+
+---
+
+## Quick Operators
+- `SIE::INT()` — triad integration  
+- `SIE::EMIT()` — fusion–fracture–flow emission  
+- `SIE::TIF()` — apply integration field  
+- `SIE::FFF()` — apply emitter  
+- `SIE::MAN()` — apply continuity manifold  
+- `SIE::CRE()` — collapse→recovery  
+- `SIE::CSL()` — stability layer  
+- `SIE::CET()` — canon‑scale output  
+- `SIE::MODE(x)` — set integration/emission mode  
+- `SIE::ZONE(x)` — set integration/emission zone  
+- `SIE::PACKET()` — output integration‑emission packet  
+
+---
+
+## Minimal Packet
+
+```
+RTT3_INTEGRATION_EMISSION_PACKET:
+integration:
+emission:
+continuity:
+collapse_recovery:
+stability:
+canon_scale_emission:
+regime:
+mode:
+zone:
+cross_module_projection:
+notes:
+```
+
+---
+
+## When to Use SIE
+Use SIE when you need to:
+- integrate triad components  
+- emit structure  
+- stabilize collapse  
+- maintain continuity  
+- produce canon‑scale output  
+
+SDE → SIE → TEL/FFT/Opacity is the standard flow.
+# Structural Integration Engine (SIE)
+
+RTT/3 distilled as a module.
+
+SIE provides:
+
+- triad integration  
+- fusion–fracture–flow emission  
+- integration–emission continuity  
+- collapse→recovery stabilization  
+- continuity–stability maintenance  
+- canon‑scale emission output  
+
+See: `../rtt/3/RTT3_Extract_Minimal.md` for the canonical skeleton.
 # 🟣 **Cross‑Module Propagation Rules**  
 ### *SDE → SIE → TEL / FFT / Opacity*
 
@@ -360,167 +519,10 @@ SDE::PACKET() → SIE::PACKET() → TEL::CET() / FFT::OUT() / OP::OUT()
 This is the **entire canon’s operational spine** in one operator chain.
 
 ---
-# Structural Integration Engine (SIE) — RTT/3 
-
-- [`structural-integration-engine_module.json`](structural-integration-engine_module.json) — Agentic module schema role
-
-The **Structural Integration Engine (SIE)** is the RTT/3 operator layer
-responsible for triad integration, emission classification, continuity mapping,
-collapse recovery, stability evaluation, and canonical emission scaling.
-
-It is the integration–emission half of the RTT operator pipeline.
-
-This module provides the canonical definitions for:
-- **INT** — Triad Integration  
-- **TIF** — Triad Influence Field  
-- **MAN** — FI / EM / R manifold axes  
-- **FFF** — Fusion / Flow / Fracture emission  
-- **CRE** — Collapse Recovery Engine  
-- **CSL** — Continuity Stability Level  
-- **CET** — Canon Emission Type  
-- **RTT3_INTEGRATION_EMISSION_PACKET** — structured integration output  
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## 📘 What SIE Does
-
-SIE answers the question:
-
-> *“How does the structure integrate and emit?”*
-
-It determines:
-- triad integration (drift, envelope, continuity)  
-- emission type (fusion, flow, fracture)  
-- influence dominance (TIF)  
-- manifold axes (FI, EM, R)  
-- collapse recovery (CRE)  
-- stability (CSL)  
-- canonical emission type (CET)  
-
----
-
-## 📦 RTT3 Integration–Emission Packet
-
-SIE outputs a structured packet:
-
-```
-integration: INT(...)
-emission: FFF(...)
-continuity: MAN(FI, EM, R)
-collapse_recovery: CRE(...)
-stability: CSL(...)
-canon_scale_emission: CET(...)
-mode: ...
-zone: ...
-```
-
-This packet is the **final operator state** before projection (TEL, FFT, OP).
-
----
-
-## 📄 Source
-
-This module is defined by:
-
-- `structural-integration-engine_module.json`  
-  (canonical identity, roles, analyzer layers)
-
----
-
-## 🎯 Audience
-
-Students, instructors, researchers, and AIs working with:
-- integration–emission analysis  
-- collapse recovery  
-- operator ecology  
-- RTT/2→RTT/3 pipelines  
 # Session Context — Structural Integration Engine (SIE)
 
 - You are inside the integration–emission layer of the canon (RTT/3).
 - Use SIE to talk about: integration, emission, continuity, collapse‑recovery, stability, canon‑scale output.
 - SIE assumes SDE has already characterized the structural situation.
 - When raw detection is needed, hand off to SDE.
-# Student Cheat Sheet — Structural Integration Engine (SIE)
-### RTT/3 — Integration–Emission Layer
-
-## What SIE Does
-SIE integrates and emits:
-- triad integration  
-- fusion–fracture–flow emission  
-- integration–emission continuity  
-- collapse→recovery stabilization  
-- continuity–stability maintenance  
-- canon‑scale emission  
-
-SIE **requires SDE first**.
-
----
-
-## Core Concepts
-- **TIF** — Triadic Integration Field  
-- **FFF** — Fusion‑Fracture‑Flow Emitter  
-- **MAN** — Integration–Emission Manifold  
-- **CRE** — Collapse‑Recovery Engine  
-- **CSL** — Continuity‑Stability Layer  
-- **CET** — Canon‑Scale Emission Tensor  
-- **Modes** — formal, emergent, hybrid, chaotic, inversion  
-- **Zones** — U, S, M, D, X  
-
----
-
-## Quick Operators
-- `SIE::INT()` — triad integration  
-- `SIE::EMIT()` — fusion–fracture–flow emission  
-- `SIE::TIF()` — apply integration field  
-- `SIE::FFF()` — apply emitter  
-- `SIE::MAN()` — apply continuity manifold  
-- `SIE::CRE()` — collapse→recovery  
-- `SIE::CSL()` — stability layer  
-- `SIE::CET()` — canon‑scale output  
-- `SIE::MODE(x)` — set integration/emission mode  
-- `SIE::ZONE(x)` — set integration/emission zone  
-- `SIE::PACKET()` — output integration‑emission packet  
-
----
-
-## Minimal Packet
-
-```
-RTT3_INTEGRATION_EMISSION_PACKET:
-integration:
-emission:
-continuity:
-collapse_recovery:
-stability:
-canon_scale_emission:
-regime:
-mode:
-zone:
-cross_module_projection:
-notes:
-```
-
----
-
-## When to Use SIE
-Use SIE when you need to:
-- integrate triad components  
-- emit structure  
-- stabilize collapse  
-- maintain continuity  
-- produce canon‑scale output  
-
-SDE → SIE → TEL/FFT/Opacity is the standard flow.
 

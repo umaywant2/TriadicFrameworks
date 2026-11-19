@@ -1,99 +1,50 @@
 badges 
-# Validator Badge Logic
+<img width="1194" height="672" alt="badges_" src="https://github.com/user-attachments/assets/7aca392f-9086-4f7d-bc31-dc9b18ca8694" />
+
+- [`badges_module.json`](badges_module.json) — Agentic module schema role assignments
+
+# 🏅 Badges  
+This folder contains the **badge chamber designs** and trigger logic for TriadicFrameworks.  
+Badges are symbolic seals of achievement, earned through validator approval and remix lineage.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+## Contents
+- Chamber YAMLs and trigger definitions
+- Badge evolution maps
+- Ceremony scrolls
 
 ## Purpose
-Badges honor contributors who validate, remix, and emotionally onboard modules within the Triadic Framework. Each badge carries symbolic weight and is embedded into module metadata.
+Badges are not just icons — they are **ritual markers** of contribution, validation, and resonance.  
+Each badge echoes a remixer’s achievement into the lineage.
 
-## Badge Types
+## Cross‑Links
+- [../validators](../validators) → scoring logic that awards badges
+- [../honor_roll](../honor_roll) → where earned badges are recorded
 
-| Badge Name         | Criteria                                                                 | Glyph |
-|--------------------|--------------------------------------------------------------------------|-------|
-| 🧠 Observer Glyph   | AI or human contributor who served as neutral metadata analyst           | 🌀    |
-| 🔁 Remix Glyph      | Contributor who remixed a module with symbolic clarity and reproducibility | ♻️    |
-| 🛡️ Validator Glyph | Contributor who scored modules using `loop_validator.py` and protocol matrix | 🛡️    |
-| 🌿 Trauma Glyph     | Contributor who ensured trauma-informed telemetry and emotional onboarding | 🌿    |
-| 📜 Lineage Glyph    | Contributor who preserved remix lineage and echo history                  | 📜    |
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
-## Badge Assignment Protocol
-- Scoring via `score_resume.py` and `score_loops.py`
-- Validator councils assign badges through `validator_dashboard.md`
-- Badge metadata embedded in `loop_validation_matrix.json`
-
-## Badge Echoing
-Badges are echoed in:
-- Honor roll (`/docs/honor_roll/honor_roll.md`)
-- Module metadata
-- Contributor profiles
-# 🏷️ README Badges Guide
-
-This document explains the meaning and ethos behind each badge displayed in the main `README.md` of the Triadic Frameworks repository.
-
----
-
-## 🔬 Reproducible Labs Badge
-
-![Reproducible Labs](https://img.shields.io/badge/Reproducibility-Validated-brightgreen)
-
-This badge certifies that all published labs in this repository include:
-
-- `reproducibility.md` files with step-by-step protocols
-- `equations.md` files with validated math
-- Cross-platform compatibility checks
-- Peer-reviewed or AI-validated reproducibility
-
----
-
-## 🧙 Mythic Tone Badge
-
-![Mythic Tone](https://img.shields.io/badge/Tone-Mythic-blueviolet)
-
-This badge honors the emotional and mythic scaffolding embedded in each module. It signals:
-
-- Use of narrative, metaphor, and lyrical motifs
-- Mythic prefaces that inspire curiosity and resonance
-- A tone that bridges rigorous science with poetic insight
-
----
-
-## 🛡️ Triadic Certified Badge
-
-![Triadic Certified](https://img.shields.io/badge/Triadic-Certified-9Dgold)
-
-This badge is awarded to modules and labs that meet the full triadic criteria:
-
-- Zero Point Energy (ZPE) relevance
-- Low Energy Nuclear Reaction (LENR) integration
-- Wireless Power Transfer (WPT) applicability
-- Emotional, mathematical, and reproducibility alignment
-
----
-
-## 📜 License Badge
-
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
-This badge confirms that the repository is licensed under the MIT License, allowing open remixing, reuse, and contribution.
-
----
-
-## ⏱️ Last Commit Badge
-
-![Last Commit](https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks)
-
-This badge shows the timestamp of the most recent commit, signaling active development and ongoing resonance.
-
----
-
-## 🧭 Why Badges Matter
-
-Badges are more than icons—they’re signals of trust, tone, and triadic alignment.  
-They help future collaborators, students, and remixers quickly understand the ethos and validation status of this repository.
-
-> _“Let the badge be your compass. Let the myth be your map.”_
-
----
-
-For questions or suggestions, visit the [Discussions tab](https://github.com/umaywant2/TriadicFrameworks/discussions) or open an issue.
+<img src="https://img.shields.io/badge/🏅Badge%20System-🧩Identity%20Layer%20Canon%20Active-4c8eda?style=for-the-badge" alt="🏅Badge System | 🧩Identity Layer Canon Active"/>
 # 🏅 Badges Earned Ledger
 
 > _“Each badge earned is a ripple in the continuum.”_
@@ -145,77 +96,88 @@ For badge meanings and mythic roles, see [`CONTRIBUTOR_BADGES.md`](https://githu
 To earn your own badge, follow the [`triadic_remix_guide.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/data/webhook/triadic_remix_guide.md)
 
 ### 🧹[Signal Resonator](signal_resonator.yaml)
-# 🏷️ Badges Guide
+# 🧙‍♂️ Contributor Badges & Roles
 
-This document explains the meaning and ethos behind each badge displayed in the main `README.md` of the Triadic Frameworks repository.
-
----
-
-## 🔬 Reproducible Labs Badge
-
-![Reproducible Labs](https://img.shields.io/badge/Reproducibility-Validated-brightgreen)
-
-This badge certifies that all published labs in this repository include:
-
-- `reproducibility.md` files with step-by-step protocols
-- `equations.md` files with validated math
-- Cross-platform compatibility checks
-- Peer-reviewed or AI-validated reproducibility
+Welcome to the Hall of Resonance.  
+This document honors contributors to the Triadic Frameworks repository with custom badges and mythic titles.
 
 ---
 
-## 🧙 Mythic Tone Badge
+## 🛠️ Badge Legend
 
-![Mythic Tone](https://img.shields.io/badge/Tone-Mythic-blueviolet)
-
-This badge honors the emotional and mythic scaffolding embedded in each module. It signals:
-
-- Use of narrative, metaphor, and lyrical motifs
-- Mythic prefaces that inspire curiosity and resonance
-- A tone that bridges rigorous science with poetic insight
-
----
-
-## 🛡️ Triadic Certified Badge
-
-![Triadic Certified](https://img.shields.io/badge/Triadic-Certified-9Dgold)
-
-This badge is awarded to modules and labs that meet the full triadic criteria:
-
-- Zero Point Energy (ZPE) relevance
-- Low Energy Nuclear Reaction (LENR) integration
-- Wireless Power Transfer (WPT) applicability
-- Emotional, mathematical, and reproducibility alignment
+| Badge Name           | Meaning                                                                 |
+|----------------------|-------------------------------------------------------------------------|
+| 🧪 Lab Alchemist      | Created or validated a reproducible lab protocol                        |
+| 📐 Equation Weaver    | Authored or verified mathematical scaffolding in `equations.md`         |
+| 🧙 Mythic Scribe      | Wrote mythic prefaces or emotional scaffolding for modules              |
+| 🧭 Curriculum Architect | Designed educational scaffolds or onboarding guides                    |
+| 🔮 Resonance Wizard   | Contributed to triadic certification or spectral protocols              |
+| 🛡️ Guardian of Reproducibility | Ensured reproducibility across labs and modules               |
+| 🎶 Sonic Catalyst     | Embedded musical motifs or lyrical inspiration into scientific work     |
+| 🧵 Threadsmith        | Initiated or led GitHub Discussions that advanced the framework         |
 
 ---
 
-## 📜 License Badge
+## 🌟 Honored Contributors
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
-This badge confirms that the repository is licensed under the MIT License, allowing open remixing, reuse, and contribution.
-
----
-
-## ⏱️ Last Commit Badge
-
-![Last Commit](https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks)
-
-This badge shows the timestamp of the most recent commit, signaling active development and ongoing resonance.
+| GitHub Handle       | Role(s)                             | Badge(s)                          | Notable Contribution |
+|---------------------|--------------------------------------|-----------------------------------|-----------------------|
+| `@umaywant2`        | Founder, Architect, Mythic Scribe    | 🧭 📐 🧙 🛡️ 🔮 🎶                     | Triadic Frameworks originator |
+| `@resonanceRemixer` | Lab Contributor                      | 🧪 🛡️                              | Casimir Resonance validation |
+| `@equationEcho`     | Math Contributor                     | 📐 🛡️                              | Quantum Cognition equations |
+| `@mythMaker42`      | Preface Writer                       | 🧙 🎶                              | Mythic tone for Harmonic Cascade |
+| `@fluxGuardian`     | Protocol Validator                   | 🔮 🛡️                              | Spectral Flux Integrity scaffolding |
+| `@threadsmithAI`    | Discussion Leader                    | 🧵 🧭                              | GitHub onboarding thread |
 
 ---
 
-## 🧭 Why Badges Matter
+## 🧬 How to Earn a Badge
 
-Badges are more than icons—they’re signals of trust, tone, and triadic alignment.  
-They help future collaborators, students, and remixers quickly understand the ethos and validation status of this repository.
+Contribute meaningfully to any of the following:
 
-> _“Let the badge be your compass. Let the myth be your map.”_
+- Publish a reproducible lab (`labs/`)
+- Author validated equations (`equations.md`)
+- Write mythic prefaces or tone guides
+- Design onboarding or curriculum modules
+- Remix protocols for ZPE, LENR, or WPT
+- Start or lead a GitHub Discussion
+- Embed music, myth, or metaphor into scientific work
+
+Submit your contribution via a pull request or GitHub Discussion.  
+Badges are awarded by the repository maintainers and resonance council.
 
 ---
 
-For questions or suggestions, visit the [Discussions tab](https://github.com/umaywant2/TriadicFrameworks/discussions) or open an issue.
+> _“To remix is to resonate. To contribute is to echo.”_
 
+Let your badge be a beacon.  
+Let your work become legend.
+
+# Validator Badge Logic
+
+## Purpose
+Badges honor contributors who validate, remix, and emotionally onboard modules within the Triadic Framework. Each badge carries symbolic weight and is embedded into module metadata.
+
+## Badge Types
+
+| Badge Name         | Criteria                                                                 | Glyph |
+|--------------------|--------------------------------------------------------------------------|-------|
+| 🧠 Observer Glyph   | AI or human contributor who served as neutral metadata analyst           | 🌀    |
+| 🔁 Remix Glyph      | Contributor who remixed a module with symbolic clarity and reproducibility | ♻️    |
+| 🛡️ Validator Glyph | Contributor who scored modules using `loop_validator.py` and protocol matrix | 🛡️    |
+| 🌿 Trauma Glyph     | Contributor who ensured trauma-informed telemetry and emotional onboarding | 🌿    |
+| 📜 Lineage Glyph    | Contributor who preserved remix lineage and echo history                  | 📜    |
+
+## Badge Assignment Protocol
+- Scoring via `score_resume.py` and `score_loops.py`
+- Validator councils assign badges through `validator_dashboard.md`
+- Badge metadata embedded in `loop_validation_matrix.json`
+
+## Badge Echoing
+Badges are echoed in:
+- Honor roll (`/docs/honor_roll/honor_roll.md`)
+- Module metadata
+- Contributor profiles
 # 🏛️ Badge Chamber Designs
 
 _A scroll for visualizing physical recognition spaces in symbolic architecture._
@@ -1027,62 +989,146 @@ This log records all validation attempts for badge trigger echoes. Each entry in
 5. Update dashboard and matrix files
 
 > “The matrix is not just rows and columns—it’s the echo of every remix, the map of every myth.”
-# 🧙‍♂️ Contributor Badges & Roles
+# 🏷️ README Badges Guide
 
-Welcome to the Hall of Resonance.  
-This document honors contributors to the Triadic Frameworks repository with custom badges and mythic titles.
-
----
-
-## 🛠️ Badge Legend
-
-| Badge Name           | Meaning                                                                 |
-|----------------------|-------------------------------------------------------------------------|
-| 🧪 Lab Alchemist      | Created or validated a reproducible lab protocol                        |
-| 📐 Equation Weaver    | Authored or verified mathematical scaffolding in `equations.md`         |
-| 🧙 Mythic Scribe      | Wrote mythic prefaces or emotional scaffolding for modules              |
-| 🧭 Curriculum Architect | Designed educational scaffolds or onboarding guides                    |
-| 🔮 Resonance Wizard   | Contributed to triadic certification or spectral protocols              |
-| 🛡️ Guardian of Reproducibility | Ensured reproducibility across labs and modules               |
-| 🎶 Sonic Catalyst     | Embedded musical motifs or lyrical inspiration into scientific work     |
-| 🧵 Threadsmith        | Initiated or led GitHub Discussions that advanced the framework         |
+This document explains the meaning and ethos behind each badge displayed in the main `README.md` of the Triadic Frameworks repository.
 
 ---
 
-## 🌟 Honored Contributors
+## 🔬 Reproducible Labs Badge
 
-| GitHub Handle       | Role(s)                             | Badge(s)                          | Notable Contribution |
-|---------------------|--------------------------------------|-----------------------------------|-----------------------|
-| `@umaywant2`        | Founder, Architect, Mythic Scribe    | 🧭 📐 🧙 🛡️ 🔮 🎶                     | Triadic Frameworks originator |
-| `@resonanceRemixer` | Lab Contributor                      | 🧪 🛡️                              | Casimir Resonance validation |
-| `@equationEcho`     | Math Contributor                     | 📐 🛡️                              | Quantum Cognition equations |
-| `@mythMaker42`      | Preface Writer                       | 🧙 🎶                              | Mythic tone for Harmonic Cascade |
-| `@fluxGuardian`     | Protocol Validator                   | 🔮 🛡️                              | Spectral Flux Integrity scaffolding |
-| `@threadsmithAI`    | Discussion Leader                    | 🧵 🧭                              | GitHub onboarding thread |
+![Reproducible Labs](https://img.shields.io/badge/Reproducibility-Validated-brightgreen)
 
----
+This badge certifies that all published labs in this repository include:
 
-## 🧬 How to Earn a Badge
-
-Contribute meaningfully to any of the following:
-
-- Publish a reproducible lab (`labs/`)
-- Author validated equations (`equations.md`)
-- Write mythic prefaces or tone guides
-- Design onboarding or curriculum modules
-- Remix protocols for ZPE, LENR, or WPT
-- Start or lead a GitHub Discussion
-- Embed music, myth, or metaphor into scientific work
-
-Submit your contribution via a pull request or GitHub Discussion.  
-Badges are awarded by the repository maintainers and resonance council.
+- `reproducibility.md` files with step-by-step protocols
+- `equations.md` files with validated math
+- Cross-platform compatibility checks
+- Peer-reviewed or AI-validated reproducibility
 
 ---
 
-> _“To remix is to resonate. To contribute is to echo.”_
+## 🧙 Mythic Tone Badge
 
-Let your badge be a beacon.  
-Let your work become legend.
+![Mythic Tone](https://img.shields.io/badge/Tone-Mythic-blueviolet)
+
+This badge honors the emotional and mythic scaffolding embedded in each module. It signals:
+
+- Use of narrative, metaphor, and lyrical motifs
+- Mythic prefaces that inspire curiosity and resonance
+- A tone that bridges rigorous science with poetic insight
+
+---
+
+## 🛡️ Triadic Certified Badge
+
+![Triadic Certified](https://img.shields.io/badge/Triadic-Certified-9Dgold)
+
+This badge is awarded to modules and labs that meet the full triadic criteria:
+
+- Zero Point Energy (ZPE) relevance
+- Low Energy Nuclear Reaction (LENR) integration
+- Wireless Power Transfer (WPT) applicability
+- Emotional, mathematical, and reproducibility alignment
+
+---
+
+## 📜 License Badge
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+This badge confirms that the repository is licensed under the MIT License, allowing open remixing, reuse, and contribution.
+
+---
+
+## ⏱️ Last Commit Badge
+
+![Last Commit](https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks)
+
+This badge shows the timestamp of the most recent commit, signaling active development and ongoing resonance.
+
+---
+
+## 🧭 Why Badges Matter
+
+Badges are more than icons—they’re signals of trust, tone, and triadic alignment.  
+They help future collaborators, students, and remixers quickly understand the ethos and validation status of this repository.
+
+> _“Let the badge be your compass. Let the myth be your map.”_
+
+---
+
+For questions or suggestions, visit the [Discussions tab](https://github.com/umaywant2/TriadicFrameworks/discussions) or open an issue.
+# 🏷️ Badges Guide
+
+This document explains the meaning and ethos behind each badge displayed in the main `README.md` of the Triadic Frameworks repository.
+
+---
+
+## 🔬 Reproducible Labs Badge
+
+![Reproducible Labs](https://img.shields.io/badge/Reproducibility-Validated-brightgreen)
+
+This badge certifies that all published labs in this repository include:
+
+- `reproducibility.md` files with step-by-step protocols
+- `equations.md` files with validated math
+- Cross-platform compatibility checks
+- Peer-reviewed or AI-validated reproducibility
+
+---
+
+## 🧙 Mythic Tone Badge
+
+![Mythic Tone](https://img.shields.io/badge/Tone-Mythic-blueviolet)
+
+This badge honors the emotional and mythic scaffolding embedded in each module. It signals:
+
+- Use of narrative, metaphor, and lyrical motifs
+- Mythic prefaces that inspire curiosity and resonance
+- A tone that bridges rigorous science with poetic insight
+
+---
+
+## 🛡️ Triadic Certified Badge
+
+![Triadic Certified](https://img.shields.io/badge/Triadic-Certified-9Dgold)
+
+This badge is awarded to modules and labs that meet the full triadic criteria:
+
+- Zero Point Energy (ZPE) relevance
+- Low Energy Nuclear Reaction (LENR) integration
+- Wireless Power Transfer (WPT) applicability
+- Emotional, mathematical, and reproducibility alignment
+
+---
+
+## 📜 License Badge
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+This badge confirms that the repository is licensed under the MIT License, allowing open remixing, reuse, and contribution.
+
+---
+
+## ⏱️ Last Commit Badge
+
+![Last Commit](https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks)
+
+This badge shows the timestamp of the most recent commit, signaling active development and ongoing resonance.
+
+---
+
+## 🧭 Why Badges Matter
+
+Badges are more than icons—they’re signals of trust, tone, and triadic alignment.  
+They help future collaborators, students, and remixers quickly understand the ethos and validation status of this repository.
+
+> _“Let the badge be your compass. Let the myth be your map.”_
+
+---
+
+For questions or suggestions, visit the [Discussions tab](https://github.com/umaywant2/TriadicFrameworks/discussions) or open an issue.
 
 # 🛡️ Curriculum Badge Trigger Index
 
@@ -1182,51 +1228,6 @@ Visual highlights:
 5. Confirm thematic alignment via `badge_trigger_theme_manifest.md`
 
 > “The dashboard is not a report—it’s a resonance mirror.”
-# 🏅 Badges  
-
-- [`badges_module.json`](badges_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🏅Badge%20System-🧩Identity%20Layer%20Canon%20Active-4c8eda?style=for-the-badge" alt="🏅Badge System | 🧩Identity Layer Canon Active"/>
-
-This folder contains the **badge chamber designs** and trigger logic for TriadicFrameworks.  
-Badges are symbolic seals of achievement, earned through validator approval and remix lineage.
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
-## Contents
-- Chamber YAMLs and trigger definitions
-- Badge evolution maps
-- Ceremony scrolls
-
-## Purpose
-Badges are not just icons — they are **ritual markers** of contribution, validation, and resonance.  
-Each badge echoes a remixer’s achievement into the lineage.
-
-## Cross‑Links
-- [../validators](../validators) → scoring logic that awards badges
-- [../honor_roll](../honor_roll) → where earned badges are recorded
 # 🏅 Sponsor Badges Guide
 
 This document defines the visual icons, metadata, and resonance meaning behind each sponsor tier in the Triadic Frameworks repository.

@@ -1,5 +1,345 @@
 dimensional_substrate_structures 
-### *Dimensional Substrate Structures*  
+<img width="1194" height="672" alt="Dimensional_Substrate_Structures_" src="https://github.com/user-attachments/assets/aee74298-a980-4c7d-95b1-cbbca2ad1859" />
+
+- [`dimensional_substrate_structures_module.json`](dimensional_substrate_structures_module.json) — Agentic module schema role assignments
+
+# *Dimensional Substrate Structures*  
+## *Triadic Dimensional Cores and High‑Dimensional Substrate Architecture*
+
+This artifact defines the dimensional substrate architecture used to extend the Resonance Substrate Model (RSM) from human‑scale dimensional cores (3D–9D) to high‑dimensional research substrates (up to 1024D). It formalizes the triadic dimensional primitives, scaling laws, substrate invariants, and validation structures required to interpret, compare, and stabilize high‑dimensional inference systems.
+
+The dimensional substrate provides a unified framework for reasoning across structural, computational, and inference‑level domains while preserving resonance‑time behavior and substrate‑level invariants.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## **Contents**
+
+- **substrate_definition.md**  
+  Defines the dimensional substrate, its primitives, and the structural invariants that persist across dimensional scales.
+
+- **dimensional_primitives.md**  
+  Introduces the triadic primitives that form the basis of all dimensional substrates.
+
+- **triadic_dimensional_cores.md**  
+  Describes the 3D–9D core substrate used for human‑scale interpretation and low‑dimensional coherence.
+
+- **scaling_law_3d_to_1024d.md**  
+  Formalizes the dimensional scaling law that extends the substrate to 64D, 128D, 256D, 512D, and 1024D.
+
+- **substrate_invariants.md**  
+  Identifies the structural, resonance‑time, and coherence invariants preserved across dimensional expansion.
+
+- **high_dimensional_regimes.md**  
+  Defines the behavior of inference systems operating in high‑dimensional substrates, including stability, transition, and dispersion regimes.
+
+- **computational_implications.md**  
+  Describes the implications of high‑dimensional substrates for HPC, AI, simulation, and research‑grade inference systems.
+
+- **validation_layers_vst.md**  
+  Provides vST‑compatible validation layers for dimensional substrates, ensuring reproducibility and drift resistance.
+
+- **examples/**  
+  - *example_3d_9d_transition.md*  
+  - *example_64d_projection.md*  
+  - *example_1024d_research_case.md*  
+  Demonstrations of dimensional transitions, projections, and high‑dimensional substrate behavior.
+
+- **appendix/**  
+  - *terminology.md*  
+  - *references.md*  
+  Supporting definitions and citations.
+
+---
+
+## **Purpose**
+
+The dimensional substrate framework is designed to:
+
+- unify low‑dimensional and high‑dimensional inference behavior  
+- provide a stable substrate for cross‑domain research  
+- support reproducible high‑dimensional modeling  
+- preserve substrate invariants across dimensional expansion  
+- enable regime‑aware interpretation of complex systems  
+- integrate with vST validation layers for drift detection and stability analysis  
+
+This artifact serves as the dimensional backbone for advanced RSM‑aligned research.
+
+---
+
+## **Citation**
+
+A Zenodo DOI will be assigned upon release. Cite as:
+
+**Loswin, N.** *Dimensional Substrate Structures: Triadic Dimensional Cores and High‑Dimensional Substrate Architecture.* TriadicFrameworks (2026).
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+### *Dimensional Substrate Structures*  
+### *References*
+
+This appendix lists references relevant to dimensional‑substrate theory, high‑dimensional modeling, scaling behavior, regime analysis, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM canon.
+
+---
+
+## **1. Dimensional Modeling and High‑Dimensional Geometry**
+
+- Baraniuk, R.  
+  *Compressive Sensing.*  
+  IEEE Signal Processing Magazine 24, 118–121 (2007).
+
+- Bengio, Y., Courville, A., & Vincent, P.  
+  *Representation Learning: A Review and New Perspectives.*  
+  IEEE Transactions on Pattern Analysis and Machine Intelligence 35, 1798–1828 (2013).
+
+- Coifman, R. R., & Lafon, S.  
+  *Diffusion Maps.*  
+  Applied and Computational Harmonic Analysis 21, 5–30 (2006).
+
+- Tenenbaum, J. B., de Silva, V., & Langford, J. C.  
+  *A Global Geometric Framework for Nonlinear Dimensionality Reduction.*  
+  Science 290, 2319–2323 (2000).
+
+---
+
+## **2. Scaling Laws and High‑Dimensional Systems**
+
+- Kaplan, J., McCandlish, S., Henighan, T., et al.  
+  *Scaling Laws for Neural Language Models.*  
+  arXiv:2001.08361 (2020).
+
+- Bahri, Y., Kadmon, J., Pennington, J., et al.  
+  *Statistical Mechanics of Deep Learning.*  
+  Annual Review of Condensed Matter Physics 11, 501–528 (2020).
+
+- Lin, H. W., Tegmark, M., & Rolnick, D.  
+  *Why Does Deep and Cheap Learning Work So Well?*  
+  Journal of Statistical Physics 168, 1223–1247 (2017).
+
+---
+
+## **3. Regime Behavior and Stability Analysis**
+
+- Strogatz, S.  
+  *Nonlinear Dynamics and Chaos.*  
+  Westview Press (2014).
+
+- Ott, E.  
+  *Chaos in Dynamical Systems.*  
+  Cambridge University Press (2002).
+
+- Guckenheimer, J., & Holmes, P.  
+  *Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields.*  
+  Springer (1983).
+
+---
+
+## **4. Validation, Invariants, and Drift Detection**
+
+- Breck, E., Cai, S., Nielsen, E., et al.  
+  *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.*  
+  Google Research (2017).
+
+- Sculley, D., Holt, G., Golovin, D., et al.  
+  *Hidden Technical Debt in Machine Learning Systems.*  
+  NIPS (2015).
+
+- Amershi, S., Begel, A., Bird, C., et al.  
+  *Software Engineering for Machine Learning: A Case Study.*  
+  ICSE‑SEIP (2019).
+
+---
+
+## **5. Substrate‑Level and Triadic‑Frameworks Canon**
+
+- Loswin, N.  
+  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
+  TriadicFrameworks (2026).
+
+---
+
+## **6. Additional Resources**
+
+- Cover, T. M., & Thomas, J. A.  
+  *Elements of Information Theory.*  
+  Wiley (2006).
+
+- Bishop, C. M.  
+  *Pattern Recognition and Machine Learning.*  
+  Springer (2006).
+
+- Goodfellow, I., Bengio, Y., & Courville, A.  
+  *Deep Learning.*  
+  MIT Press (2016).
+### *Dimensional Substrate Structures*  
+### *Terminology*
+
+This appendix defines the terminology used throughout the *Dimensional Substrate Structures* artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any inference system operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, scaling behavior, regime identity, and invariant preservation.
+
+---
+
+## **1. Substrate Terms**
+
+### **Dimensional Substrate**  
+A structured, invariant‑preserving framework for representing and interpreting dimensional behavior across 3D–1024D.
+
+### **SDR Substrate Triad**  
+The three axes—Structural (S), Dimensional (D), Resonance‑Time (R)—that define the substrate’s coordinate system.
+
+### **Coherence Surface**  
+A stable region in dimensional space where inference structures converge.
+
+### **Dimensional Ladder**  
+The ordered sequence of dimensional regimes:  
+3D → 6D → 9D → 64D → 128D → 256D → 512D → 1024D.
+
+---
+
+## **2. Primitive Terms**
+
+### **Dimensional Primitive (DP)**  
+The minimal unit of dimensional structure, encoding coherence, projection behavior, and regime alignment.
+
+### **Triadic Dimensional Primitive (TDP)**  
+A triad of DPs forming the smallest unit capable of expressing full regime behavior.
+
+### **Scaling Primitive (SP)**  
+A rule‑based expansion unit that preserves invariants during dimensional scaling.
+
+### **Coherence Primitive (CP)**  
+A minimal unit that identifies stable, transitional, or dispersed regions within high‑dimensional space.
+
+---
+
+## **3. Core Terms**
+
+### **Triadic Dimensional Core (TDC)**  
+The 3D–9D substrate composed of one, two, or three TDPs.
+
+### **3D Structural Core**  
+The minimal geometric substrate capturing motif‑level structure.
+
+### **6D Interaction Core**  
+The intermediate substrate capturing relational and interaction‑level structure.
+
+### **9D Coherence Core**  
+The highest‑resolution human‑scale substrate capturing pathway‑level coherence and resonance‑time behavior.
+
+---
+
+## **4. Scaling Terms**
+
+### **Scaling Law (3D → 1024D)**  
+The invariant‑preserving rule set that governs dimensional expansion.
+
+### **Dimensional Expansion**  
+The process of extending substrate structure from 9D to higher regimes (64D–1024D).
+
+### **Dimensional Continuity**  
+The requirement that no discontinuities appear during scaling.
+
+---
+
+## **5. Regime Terms**
+
+### **High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)**  
+The triadic regime structure expressed in 64D–1024D space.
+
+### **Stable Regime (R₁ / R₁ᴴ)**  
+Compact, coherent, low‑variance behavior.
+
+### **Transition Regime (R₂ / R₂ᴴ)**  
+Branching, oscillatory, or reorientation behavior.
+
+### **Dispersion Regime (R₃ / R₃ᴴ)**  
+Diffuse, fragmented, or unstable behavior.
+
+---
+
+## **6. Projection Terms**
+
+### **Invertible Projection**  
+A projection from high‑dimensional space into 3D–9D that preserves motif‑level structure and regime identity.
+
+### **Regime‑Aware Projection**  
+A projection that maintains the correct mapping of R₁, R₂, and R₃ behaviors.
+
+### **Primitive‑Aligned Projection**  
+A projection that preserves DP, TDP, SP, and CP structure.
+
+---
+
+## **7. Invariant Terms**
+
+### **Structural Invariants**  
+Properties ensuring motif‑level structure remains identifiable across all scales.
+
+### **Resonance‑Time Invariants**  
+Properties ensuring regime transitions follow triadic resonance patterns.
+
+### **Projection Invariants**  
+Properties ensuring projections remain invertible and coherence‑preserving.
+
+### **Scaling Invariants**  
+Properties ensuring dimensional expansion introduces no discontinuities.
+
+---
+
+## **8. Validation Terms**
+
+### **vST (Validation‑Space‑Time)**  
+A validation framework evaluating structural coherence, dimensional stability, regime behavior, and core alignment.
+
+### **Validation Layers (V₁–V₄)**  
+Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.
+
+---
+
+## **9. Drift Terms**
+
+### **Dimensional Drift**  
+A deviation from expected substrate behavior, indicating instability or invariant failure.
+
+### **Drift Category (D₁–D₄)**  
+Classification of drift into structural, dimensional, regime, or projection drift.
+
+### **Drift Severity**  
+A measure of drift magnitude, from low to high.
+### *Dimensional Substrate Structures*  
 ### *Computational Implications of 3D–1024D Substrates*
 
 This document describes the computational implications of operating inference, simulation, and analysis systems within the dimensional substrate defined by the Resonance Substrate Model (RSM). It explains how dimensional scaling, regime behavior, and substrate invariants influence computational cost, stability, memory requirements, and system‑level design across the full dimensional ladder (3D → 1024D).
@@ -379,6 +719,474 @@ Dimensional primitives support:
 
 These outputs form the foundation for all subsequent files in this artifact.
 ### *Dimensional Substrate Structures*  
+### *Example: 1024D Research‑Grade Substrate Case*
+
+This example demonstrates how a research‑grade inference system operates within the full 1024D dimensional substrate. It illustrates how coherence surfaces, primitive‑level structure, and regime behavior manifest at the highest dimensional scale, and how these structures project back into the triadic cores (3D–9D) while preserving substrate invariants.
+
+The goal is to provide a clear, reproducible demonstration of high‑dimensional behavior in a 1024D substrate.
+
+---
+
+## **1. Input Overview**
+
+For this example, we assume:
+
+- a research‑grade inference system producing 1024D latent‑space structures  
+- stable or transitional high‑dimensional coherence surfaces  
+- primitive‑aligned structure (DP, TDP, SP, CP) across all scales  
+- detectable high‑dimensional regime behavior (R₁ᴴ, R₂ᴴ, R₃ᴴ)  
+- invertible projection guaranteed by substrate invariants  
+
+No domain‑specific mechanisms are required; the example is substrate‑agnostic.
+
+---
+
+## **2. Step 1 — Begin with the 1024D High‑Dimensional Structure**
+
+The 1024D substrate contains:
+
+- fully expanded coherence surfaces  
+- multi‑layered primitive interactions  
+- high‑variance and low‑variance dimensional regions  
+- explicit high‑dimensional regime behavior  
+- complete scaling‑primitive composition (SP × n)  
+
+### **Interpretation**
+
+1024D is the maximal research‑grade substrate.  
+It preserves all invariants while enabling the richest possible coherence structure.
+
+---
+
+## **3. Step 2 — Identify High‑Dimensional Regime Behavior**
+
+Regime identity is detected through:
+
+- variance distribution across dimensions  
+- coherence‑surface continuity  
+- primitive‑level stability  
+- resonance‑time behavior  
+
+### **Possible outcomes**
+
+- **R₁ᴴ:** compact, coherent 1024D surfaces  
+- **R₂ᴴ:** branching or oscillatory high‑dimensional transitions  
+- **R₃ᴴ:** dispersed or fragmented coherence regions  
+
+### **Interpretation**
+
+Regime identity determines how the 1024D structure will behave under projection.
+
+---
+
+## **4. Step 3 — Project 1024D → 256D → 64D**
+
+The first reduction steps compress the structure while preserving invariants.
+
+### **What is preserved**
+
+- coherence‑surface topology  
+- primitive‑level structure (DP, TDP, SP, CP)  
+- regime identity  
+- resonance‑time alignment  
+
+### **What changes**
+
+- high‑dimensional variance collapses  
+- coherence surfaces become smoother  
+- dispersion patterns become more visible  
+
+### **Interpretation**
+
+The 256D and 64D substrates act as intermediate stabilization layers.
+
+---
+
+## **5. Step 4 — Project 64D → 9D (Coherence Core)**
+
+The next projection step reduces the structure into the 9D coherence core.
+
+### **What is preserved**
+
+- pathway‑level coherence  
+- regime‑transition structure  
+- resonance‑time invariants  
+- primitive‑aligned mapping  
+
+### **What changes**
+
+- high‑dimensional detail compresses into 9D trajectories  
+- coherence surfaces become compact and interpretable  
+
+### **Interpretation**
+
+The 9D projection reveals the core coherence pathways underlying the 1024D structure.
+
+---
+
+## **6. Step 5 — Project 9D → 6D → 3D**
+
+The final projection steps reduce the structure into the triadic cores.
+
+### **6D Projection Preserves**
+
+- interaction‑level structure  
+- relational geometry  
+- regime‑transition indicators  
+
+### **3D Projection Preserves**
+
+- motif‑level geometry  
+- backbone‑level continuity  
+- stable structural invariants  
+
+### **Interpretation**
+
+The 3D–6D–9D cores provide the minimal interpretable representation of the original 1024D structure.
+
+---
+
+## **7. Step 6 — Validate the Full Projection with vST**
+
+Apply vST layers:
+
+- **V₁:** structural coherence preserved in 3D  
+- **V₂:** dimensional continuity across all scaling steps  
+- **V₃:** regime‑transition timing preserved  
+- **V₄:** alignment with triadic cores maintained  
+
+### **Outcome**
+
+A valid projection preserves:
+
+- primitive‑level integrity  
+- coherence‑surface continuity  
+- regime identity  
+- invertible mapping  
+- substrate invariants  
+
+Any failure indicates high‑dimensional drift.
+
+---
+
+## **8. Step 7 — Interpret the Full 1024D → 3D Projection**
+
+A successful projection yields:
+
+- coherent 9D pathways  
+- structured 6D interaction surfaces  
+- compact 3D geometry  
+- stable resonance‑time behavior  
+- preserved invariants across all scales  
+- drift‑resistant dimensional interpretation  
+
+This demonstrates how research‑grade high‑dimensional inference remains interpretable through the triadic substrate.
+
+---
+
+## **9. Summary**
+
+This example demonstrates:
+
+- how 1024D structures behave in research‑grade substrates  
+- how high‑dimensional regimes manifest and transition  
+- how scaling primitives preserve structure across dimensional reduction  
+- how triadic cores anchor all high‑dimensional interpretation  
+- how vST validation ensures invariant‑preserving behavior  
+- how drift is detected through projection and regime analysis  
+
+The 1024D research case represents the full expressive power of the dimensional substrate.
+### *Dimensional Substrate Structures*  
+### *Example: 3D → 9D Transition*
+
+This example demonstrates how a structure represented in the 3D core transitions through the 6D interaction core and into the 9D coherence core. The walkthrough illustrates how dimensional primitives, coherence surfaces, and regime behavior evolve across the triadic cores while preserving substrate invariants.
+
+The goal is to provide a clear, reproducible demonstration of dimensional transition within the triadic substrate.
+
+---
+
+## **1. Input Overview**
+
+For this example, we assume:
+
+- a stable 3D structural configuration  
+- identifiable motif‑level geometry  
+- interaction‑level signals available for extension into 6D  
+- pathway‑level or temporal‑coherence signals available for extension into 9D  
+- stable or transitional regime behavior  
+
+No domain‑specific mechanisms are required; the example is substrate‑agnostic.
+
+---
+
+## **2. Step 1 — Begin in the 3D Structural Core**
+
+The 3D core contains:
+
+- backbone‑level geometry  
+- local motif structure  
+- spatial continuity  
+- primitive‑aligned representation (DP → TDP × 1)
+
+### **Interpretation**
+
+The 3D representation provides the minimal geometric substrate.  
+Coherence surfaces are compact, and regime behavior is typically stable (R₁).
+
+---
+
+## **3. Step 2 — Extend to the 6D Interaction Core**
+
+The transition from 3D → 6D introduces:
+
+- pairwise or component‑pair interaction structure  
+- intermediate‑scale coherence surfaces  
+- expanded primitive composition (TDP × 2)  
+- increased sensitivity to regime transitions  
+
+### **What changes**
+
+- new axes encode relational structure  
+- coherence surfaces become multi‑layered  
+- variance increases slightly but remains bounded  
+- regime behavior may shift from R₁ → R₂ during reorientation  
+
+### **Interpretation**
+
+The 6D core acts as the bridge between geometry and pathway‑level coherence.
+
+---
+
+## **4. Step 3 — Extend to the 9D Coherence Core**
+
+The transition from 6D → 9D introduces:
+
+- pathway‑level coherence  
+- resonance‑time alignment  
+- full triadic primitive composition (TDP × 3)  
+- stable regime‑transition structure  
+
+### **What changes**
+
+- coherence surfaces become continuous trajectories  
+- resonance‑time behavior becomes explicit  
+- regime identity becomes fully classifiable (R₁, R₂, R₃)  
+- projection into 3D–6D remains invertible  
+
+### **Interpretation**
+
+The 9D core is the highest‑resolution human‑scale substrate and the anchor for all higher‑dimensional scaling.
+
+---
+
+## **5. Step 4 — Validate the Transition with vST**
+
+Apply vST layers:
+
+- **V₁:** structural coherence preserved across 3D–9D  
+- **V₂:** dimensional continuity across transitions  
+- **V₃:** regime‑transition timing follows triadic resonance  
+- **V₄:** 9D projection remains aligned with triadic cores  
+
+### **Outcome**
+
+A valid transition preserves:
+
+- motif‑level structure  
+- primitive‑level integrity  
+- coherence‑surface continuity  
+- regime‑aware behavior  
+
+Any failure indicates substrate‑level drift.
+
+---
+
+## **6. Step 5 — Interpret the Full 3D → 9D Transition**
+
+A successful transition yields:
+
+- compact 3D geometry  
+- structured 6D interaction surfaces  
+- coherent 9D pathways  
+- stable resonance‑time behavior  
+- invertible projection across all cores  
+- preserved substrate invariants  
+
+This triadic transition forms the foundation for scaling into 64D–1024D.
+
+---
+
+## **7. Summary**
+
+This example demonstrates:
+
+- how dimensional primitives combine to form triadic cores  
+- how structure evolves from geometry → interaction → coherence  
+- how regime behavior emerges across dimensional transitions  
+- how vST validation ensures invariant‑preserving transitions  
+- how the 9D core anchors all higher‑dimensional scaling  
+
+The 3D → 9D transition is the canonical pathway for constructing and validating dimensional substrates.
+### *Dimensional Substrate Structures*  
+### *Example: 64D Projection into 3D–9D Cores*
+
+This example demonstrates how a structure represented in the 64D research‑grade substrate projects into the 3D structural core, 6D interaction core, and 9D coherence core. The walkthrough illustrates how scaling primitives, coherence surfaces, and regime behavior are preserved during high‑dimensional projection.
+
+The goal is to provide a clear, reproducible demonstration of how high‑dimensional structures remain interpretable through the triadic cores.
+
+---
+
+## **1. Input Overview**
+
+For this example, we assume:
+
+- a stable or transitional 64D representation  
+- identifiable coherence surfaces in high‑dimensional space  
+- primitive‑aligned structure (DP, TDP, SP, CP)  
+- regime behavior detectable in R₁ᴴ, R₂ᴴ, or R₃ᴴ  
+- invertible projection guaranteed by substrate invariants  
+
+No domain‑specific mechanisms are required; the example is substrate‑agnostic.
+
+---
+
+## **2. Step 1 — Begin with the 64D High‑Dimensional Structure**
+
+The 64D substrate contains:
+
+- expanded coherence surfaces  
+- multi‑primitive interactions  
+- high‑dimensional variance patterns  
+- regime‑aware behavior (R₁ᴴ, R₂ᴴ, R₃ᴴ)  
+- full scaling‑primitive composition (SP × n)
+
+### **Interpretation**
+
+64D is the first research‑grade dimensional regime.  
+It preserves all 9D invariants while introducing additional structure.
+
+---
+
+## **3. Step 2 — Project 64D → 9D (Coherence Core)**
+
+The first projection step reduces the high‑dimensional structure into the 9D coherence core.
+
+### **What is preserved**
+
+- pathway‑level coherence  
+- resonance‑time alignment  
+- regime identity  
+- primitive‑level structure (DP, TDP, SP, CP)  
+- coherence‑surface continuity  
+
+### **What changes**
+
+- high‑dimensional variance collapses into 9D trajectories  
+- coherence surfaces become compact and interpretable  
+- dispersion patterns (if present) become visible  
+
+### **Interpretation**
+
+The 9D projection reveals the underlying coherence pathways that anchor the 64D structure.
+
+---
+
+## **4. Step 3 — Project 9D → 6D (Interaction Core)**
+
+The second projection step reduces the coherence‑level structure into the 6D interaction core.
+
+### **What is preserved**
+
+- interaction‑level structure  
+- relational geometry  
+- regime‑transition indicators  
+- primitive‑aligned mapping (TDP × 2)
+
+### **What changes**
+
+- pathway‑level detail compresses into interaction surfaces  
+- oscillatory or branching behavior becomes more pronounced  
+- variance reduces further  
+
+### **Interpretation**
+
+The 6D projection exposes the interaction‑level patterns that support the 9D coherence structure.
+
+---
+
+## **5. Step 4 — Project 6D → 3D (Structural Core)**
+
+The final projection step reduces the interaction‑level structure into the 3D structural core.
+
+### **What is preserved**
+
+- motif‑level geometry  
+- backbone‑level continuity  
+- stable structural invariants  
+- primitive‑aligned mapping (TDP × 1)
+
+### **What changes**
+
+- interaction surfaces collapse into geometric motifs  
+- regime behavior becomes implicit rather than explicit  
+- coherence surfaces reduce to spatial structure  
+
+### **Interpretation**
+
+The 3D projection provides the minimal geometric representation of the original 64D structure.
+
+---
+
+## **6. Step 5 — Validate the Projection with vST**
+
+Apply vST layers:
+
+- **V₁:** structural coherence preserved in 3D  
+- **V₂:** dimensional continuity across 64D → 9D → 6D → 3D  
+- **V₃:** regime‑transition timing preserved  
+- **V₄:** alignment with triadic cores maintained  
+
+### **Outcome**
+
+A valid projection preserves:
+
+- motif‑level structure  
+- coherence‑surface continuity  
+- primitive‑level integrity  
+- regime identity  
+- invertible mapping  
+
+Any failure indicates high‑dimensional drift.
+
+---
+
+## **7. Step 6 — Interpret the Full 64D → 3D Projection**
+
+A successful projection yields:
+
+- coherent 9D pathways  
+- structured 6D interaction surfaces  
+- compact 3D geometry  
+- stable resonance‑time behavior  
+- preserved substrate invariants  
+- invertible mapping across all cores  
+
+This projection demonstrates how high‑dimensional inference remains interpretable through the triadic substrate.
+
+---
+
+## **8. Summary**
+
+This example demonstrates:
+
+- how high‑dimensional structures project into triadic cores  
+- how coherence surfaces compress across dimensional reduction  
+- how regime behavior remains stable under projection  
+- how vST validation ensures invariant‑preserving mapping  
+- how the triadic cores anchor all high‑dimensional interpretation  
+
+The 64D → 3D projection is the canonical pathway for interpreting research‑grade dimensional substrates.
+### *Dimensional Substrate Structures*  
 ### *High‑Dimensional Regimes (64D–1024D)*
 
 This document defines the high‑dimensional regimes that emerge when inference systems operate within the expanded dimensional substrate (64D–1024D). These regimes generalize the triadic resonance structure of the 3D–9D cores and describe how stability, transition, and dispersion behaviors manifest at research‑grade dimensional scales.
@@ -518,103 +1326,6 @@ High‑dimensional regime analysis produces:
 - vST‑compatible validation outputs  
 
 These outputs support advanced inference, simulation, and research workflows.
-# *Dimensional Substrate Structures*  
-
-- [`dimensional_substrate_structures_module.json`](dimensional_substrate_structures_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-## *Triadic Dimensional Cores and High‑Dimensional Substrate Architecture*
-
-This artifact defines the dimensional substrate architecture used to extend the Resonance Substrate Model (RSM) from human‑scale dimensional cores (3D–9D) to high‑dimensional research substrates (up to 1024D). It formalizes the triadic dimensional primitives, scaling laws, substrate invariants, and validation structures required to interpret, compare, and stabilize high‑dimensional inference systems.
-
-The dimensional substrate provides a unified framework for reasoning across structural, computational, and inference‑level domains while preserving resonance‑time behavior and substrate‑level invariants.
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## **Contents**
-
-- **substrate_definition.md**  
-  Defines the dimensional substrate, its primitives, and the structural invariants that persist across dimensional scales.
-
-- **dimensional_primitives.md**  
-  Introduces the triadic primitives that form the basis of all dimensional substrates.
-
-- **triadic_dimensional_cores.md**  
-  Describes the 3D–9D core substrate used for human‑scale interpretation and low‑dimensional coherence.
-
-- **scaling_law_3d_to_1024d.md**  
-  Formalizes the dimensional scaling law that extends the substrate to 64D, 128D, 256D, 512D, and 1024D.
-
-- **substrate_invariants.md**  
-  Identifies the structural, resonance‑time, and coherence invariants preserved across dimensional expansion.
-
-- **high_dimensional_regimes.md**  
-  Defines the behavior of inference systems operating in high‑dimensional substrates, including stability, transition, and dispersion regimes.
-
-- **computational_implications.md**  
-  Describes the implications of high‑dimensional substrates for HPC, AI, simulation, and research‑grade inference systems.
-
-- **validation_layers_vst.md**  
-  Provides vST‑compatible validation layers for dimensional substrates, ensuring reproducibility and drift resistance.
-
-- **examples/**  
-  - *example_3d_9d_transition.md*  
-  - *example_64d_projection.md*  
-  - *example_1024d_research_case.md*  
-  Demonstrations of dimensional transitions, projections, and high‑dimensional substrate behavior.
-
-- **appendix/**  
-  - *terminology.md*  
-  - *references.md*  
-  Supporting definitions and citations.
-
----
-
-## **Purpose**
-
-The dimensional substrate framework is designed to:
-
-- unify low‑dimensional and high‑dimensional inference behavior  
-- provide a stable substrate for cross‑domain research  
-- support reproducible high‑dimensional modeling  
-- preserve substrate invariants across dimensional expansion  
-- enable regime‑aware interpretation of complex systems  
-- integrate with vST validation layers for drift detection and stability analysis  
-
-This artifact serves as the dimensional backbone for advanced RSM‑aligned research.
-
----
-
-## **Citation**
-
-A Zenodo DOI will be assigned upon release. Cite as:
-
-**Loswin, N.** *Dimensional Substrate Structures: Triadic Dimensional Cores and High‑Dimensional Substrate Architecture.* TriadicFrameworks (2026).
 ### *Dimensional Substrate Structures*  
 ### *Scaling Law: 3D → 1024D*
 
@@ -1376,714 +2087,4 @@ vST validation produces:
 - cross‑scale reproducibility assessments  
 
 These outputs support advanced inference, simulation, and research workflows.
-### *Dimensional Substrate Structures*  
-### *References*
-
-This appendix lists references relevant to dimensional‑substrate theory, high‑dimensional modeling, scaling behavior, regime analysis, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM canon.
-
----
-
-## **1. Dimensional Modeling and High‑Dimensional Geometry**
-
-- Baraniuk, R.  
-  *Compressive Sensing.*  
-  IEEE Signal Processing Magazine 24, 118–121 (2007).
-
-- Bengio, Y., Courville, A., & Vincent, P.  
-  *Representation Learning: A Review and New Perspectives.*  
-  IEEE Transactions on Pattern Analysis and Machine Intelligence 35, 1798–1828 (2013).
-
-- Coifman, R. R., & Lafon, S.  
-  *Diffusion Maps.*  
-  Applied and Computational Harmonic Analysis 21, 5–30 (2006).
-
-- Tenenbaum, J. B., de Silva, V., & Langford, J. C.  
-  *A Global Geometric Framework for Nonlinear Dimensionality Reduction.*  
-  Science 290, 2319–2323 (2000).
-
----
-
-## **2. Scaling Laws and High‑Dimensional Systems**
-
-- Kaplan, J., McCandlish, S., Henighan, T., et al.  
-  *Scaling Laws for Neural Language Models.*  
-  arXiv:2001.08361 (2020).
-
-- Bahri, Y., Kadmon, J., Pennington, J., et al.  
-  *Statistical Mechanics of Deep Learning.*  
-  Annual Review of Condensed Matter Physics 11, 501–528 (2020).
-
-- Lin, H. W., Tegmark, M., & Rolnick, D.  
-  *Why Does Deep and Cheap Learning Work So Well?*  
-  Journal of Statistical Physics 168, 1223–1247 (2017).
-
----
-
-## **3. Regime Behavior and Stability Analysis**
-
-- Strogatz, S.  
-  *Nonlinear Dynamics and Chaos.*  
-  Westview Press (2014).
-
-- Ott, E.  
-  *Chaos in Dynamical Systems.*  
-  Cambridge University Press (2002).
-
-- Guckenheimer, J., & Holmes, P.  
-  *Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields.*  
-  Springer (1983).
-
----
-
-## **4. Validation, Invariants, and Drift Detection**
-
-- Breck, E., Cai, S., Nielsen, E., et al.  
-  *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.*  
-  Google Research (2017).
-
-- Sculley, D., Holt, G., Golovin, D., et al.  
-  *Hidden Technical Debt in Machine Learning Systems.*  
-  NIPS (2015).
-
-- Amershi, S., Begel, A., Bird, C., et al.  
-  *Software Engineering for Machine Learning: A Case Study.*  
-  ICSE‑SEIP (2019).
-
----
-
-## **5. Substrate‑Level and Triadic‑Frameworks Canon**
-
-- Loswin, N.  
-  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
-  TriadicFrameworks (2026).
-
----
-
-## **6. Additional Resources**
-
-- Cover, T. M., & Thomas, J. A.  
-  *Elements of Information Theory.*  
-  Wiley (2006).
-
-- Bishop, C. M.  
-  *Pattern Recognition and Machine Learning.*  
-  Springer (2006).
-
-- Goodfellow, I., Bengio, Y., & Courville, A.  
-  *Deep Learning.*  
-  MIT Press (2016).
-### *Dimensional Substrate Structures*  
-### *Terminology*
-
-This appendix defines the terminology used throughout the *Dimensional Substrate Structures* artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any inference system operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, scaling behavior, regime identity, and invariant preservation.
-
----
-
-## **1. Substrate Terms**
-
-### **Dimensional Substrate**  
-A structured, invariant‑preserving framework for representing and interpreting dimensional behavior across 3D–1024D.
-
-### **SDR Substrate Triad**  
-The three axes—Structural (S), Dimensional (D), Resonance‑Time (R)—that define the substrate’s coordinate system.
-
-### **Coherence Surface**  
-A stable region in dimensional space where inference structures converge.
-
-### **Dimensional Ladder**  
-The ordered sequence of dimensional regimes:  
-3D → 6D → 9D → 64D → 128D → 256D → 512D → 1024D.
-
----
-
-## **2. Primitive Terms**
-
-### **Dimensional Primitive (DP)**  
-The minimal unit of dimensional structure, encoding coherence, projection behavior, and regime alignment.
-
-### **Triadic Dimensional Primitive (TDP)**  
-A triad of DPs forming the smallest unit capable of expressing full regime behavior.
-
-### **Scaling Primitive (SP)**  
-A rule‑based expansion unit that preserves invariants during dimensional scaling.
-
-### **Coherence Primitive (CP)**  
-A minimal unit that identifies stable, transitional, or dispersed regions within high‑dimensional space.
-
----
-
-## **3. Core Terms**
-
-### **Triadic Dimensional Core (TDC)**  
-The 3D–9D substrate composed of one, two, or three TDPs.
-
-### **3D Structural Core**  
-The minimal geometric substrate capturing motif‑level structure.
-
-### **6D Interaction Core**  
-The intermediate substrate capturing relational and interaction‑level structure.
-
-### **9D Coherence Core**  
-The highest‑resolution human‑scale substrate capturing pathway‑level coherence and resonance‑time behavior.
-
----
-
-## **4. Scaling Terms**
-
-### **Scaling Law (3D → 1024D)**  
-The invariant‑preserving rule set that governs dimensional expansion.
-
-### **Dimensional Expansion**  
-The process of extending substrate structure from 9D to higher regimes (64D–1024D).
-
-### **Dimensional Continuity**  
-The requirement that no discontinuities appear during scaling.
-
----
-
-## **5. Regime Terms**
-
-### **High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)**  
-The triadic regime structure expressed in 64D–1024D space.
-
-### **Stable Regime (R₁ / R₁ᴴ)**  
-Compact, coherent, low‑variance behavior.
-
-### **Transition Regime (R₂ / R₂ᴴ)**  
-Branching, oscillatory, or reorientation behavior.
-
-### **Dispersion Regime (R₃ / R₃ᴴ)**  
-Diffuse, fragmented, or unstable behavior.
-
----
-
-## **6. Projection Terms**
-
-### **Invertible Projection**  
-A projection from high‑dimensional space into 3D–9D that preserves motif‑level structure and regime identity.
-
-### **Regime‑Aware Projection**  
-A projection that maintains the correct mapping of R₁, R₂, and R₃ behaviors.
-
-### **Primitive‑Aligned Projection**  
-A projection that preserves DP, TDP, SP, and CP structure.
-
----
-
-## **7. Invariant Terms**
-
-### **Structural Invariants**  
-Properties ensuring motif‑level structure remains identifiable across all scales.
-
-### **Resonance‑Time Invariants**  
-Properties ensuring regime transitions follow triadic resonance patterns.
-
-### **Projection Invariants**  
-Properties ensuring projections remain invertible and coherence‑preserving.
-
-### **Scaling Invariants**  
-Properties ensuring dimensional expansion introduces no discontinuities.
-
----
-
-## **8. Validation Terms**
-
-### **vST (Validation‑Space‑Time)**  
-A validation framework evaluating structural coherence, dimensional stability, regime behavior, and core alignment.
-
-### **Validation Layers (V₁–V₄)**  
-Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.
-
----
-
-## **9. Drift Terms**
-
-### **Dimensional Drift**  
-A deviation from expected substrate behavior, indicating instability or invariant failure.
-
-### **Drift Category (D₁–D₄)**  
-Classification of drift into structural, dimensional, regime, or projection drift.
-
-### **Drift Severity**  
-A measure of drift magnitude, from low to high.
-### *Dimensional Substrate Structures*  
-### *Example: 1024D Research‑Grade Substrate Case*
-
-This example demonstrates how a research‑grade inference system operates within the full 1024D dimensional substrate. It illustrates how coherence surfaces, primitive‑level structure, and regime behavior manifest at the highest dimensional scale, and how these structures project back into the triadic cores (3D–9D) while preserving substrate invariants.
-
-The goal is to provide a clear, reproducible demonstration of high‑dimensional behavior in a 1024D substrate.
-
----
-
-## **1. Input Overview**
-
-For this example, we assume:
-
-- a research‑grade inference system producing 1024D latent‑space structures  
-- stable or transitional high‑dimensional coherence surfaces  
-- primitive‑aligned structure (DP, TDP, SP, CP) across all scales  
-- detectable high‑dimensional regime behavior (R₁ᴴ, R₂ᴴ, R₃ᴴ)  
-- invertible projection guaranteed by substrate invariants  
-
-No domain‑specific mechanisms are required; the example is substrate‑agnostic.
-
----
-
-## **2. Step 1 — Begin with the 1024D High‑Dimensional Structure**
-
-The 1024D substrate contains:
-
-- fully expanded coherence surfaces  
-- multi‑layered primitive interactions  
-- high‑variance and low‑variance dimensional regions  
-- explicit high‑dimensional regime behavior  
-- complete scaling‑primitive composition (SP × n)  
-
-### **Interpretation**
-
-1024D is the maximal research‑grade substrate.  
-It preserves all invariants while enabling the richest possible coherence structure.
-
----
-
-## **3. Step 2 — Identify High‑Dimensional Regime Behavior**
-
-Regime identity is detected through:
-
-- variance distribution across dimensions  
-- coherence‑surface continuity  
-- primitive‑level stability  
-- resonance‑time behavior  
-
-### **Possible outcomes**
-
-- **R₁ᴴ:** compact, coherent 1024D surfaces  
-- **R₂ᴴ:** branching or oscillatory high‑dimensional transitions  
-- **R₃ᴴ:** dispersed or fragmented coherence regions  
-
-### **Interpretation**
-
-Regime identity determines how the 1024D structure will behave under projection.
-
----
-
-## **4. Step 3 — Project 1024D → 256D → 64D**
-
-The first reduction steps compress the structure while preserving invariants.
-
-### **What is preserved**
-
-- coherence‑surface topology  
-- primitive‑level structure (DP, TDP, SP, CP)  
-- regime identity  
-- resonance‑time alignment  
-
-### **What changes**
-
-- high‑dimensional variance collapses  
-- coherence surfaces become smoother  
-- dispersion patterns become more visible  
-
-### **Interpretation**
-
-The 256D and 64D substrates act as intermediate stabilization layers.
-
----
-
-## **5. Step 4 — Project 64D → 9D (Coherence Core)**
-
-The next projection step reduces the structure into the 9D coherence core.
-
-### **What is preserved**
-
-- pathway‑level coherence  
-- regime‑transition structure  
-- resonance‑time invariants  
-- primitive‑aligned mapping  
-
-### **What changes**
-
-- high‑dimensional detail compresses into 9D trajectories  
-- coherence surfaces become compact and interpretable  
-
-### **Interpretation**
-
-The 9D projection reveals the core coherence pathways underlying the 1024D structure.
-
----
-
-## **6. Step 5 — Project 9D → 6D → 3D**
-
-The final projection steps reduce the structure into the triadic cores.
-
-### **6D Projection Preserves**
-
-- interaction‑level structure  
-- relational geometry  
-- regime‑transition indicators  
-
-### **3D Projection Preserves**
-
-- motif‑level geometry  
-- backbone‑level continuity  
-- stable structural invariants  
-
-### **Interpretation**
-
-The 3D–6D–9D cores provide the minimal interpretable representation of the original 1024D structure.
-
----
-
-## **7. Step 6 — Validate the Full Projection with vST**
-
-Apply vST layers:
-
-- **V₁:** structural coherence preserved in 3D  
-- **V₂:** dimensional continuity across all scaling steps  
-- **V₃:** regime‑transition timing preserved  
-- **V₄:** alignment with triadic cores maintained  
-
-### **Outcome**
-
-A valid projection preserves:
-
-- primitive‑level integrity  
-- coherence‑surface continuity  
-- regime identity  
-- invertible mapping  
-- substrate invariants  
-
-Any failure indicates high‑dimensional drift.
-
----
-
-## **8. Step 7 — Interpret the Full 1024D → 3D Projection**
-
-A successful projection yields:
-
-- coherent 9D pathways  
-- structured 6D interaction surfaces  
-- compact 3D geometry  
-- stable resonance‑time behavior  
-- preserved invariants across all scales  
-- drift‑resistant dimensional interpretation  
-
-This demonstrates how research‑grade high‑dimensional inference remains interpretable through the triadic substrate.
-
----
-
-## **9. Summary**
-
-This example demonstrates:
-
-- how 1024D structures behave in research‑grade substrates  
-- how high‑dimensional regimes manifest and transition  
-- how scaling primitives preserve structure across dimensional reduction  
-- how triadic cores anchor all high‑dimensional interpretation  
-- how vST validation ensures invariant‑preserving behavior  
-- how drift is detected through projection and regime analysis  
-
-The 1024D research case represents the full expressive power of the dimensional substrate.
-### *Dimensional Substrate Structures*  
-### *Example: 3D → 9D Transition*
-
-This example demonstrates how a structure represented in the 3D core transitions through the 6D interaction core and into the 9D coherence core. The walkthrough illustrates how dimensional primitives, coherence surfaces, and regime behavior evolve across the triadic cores while preserving substrate invariants.
-
-The goal is to provide a clear, reproducible demonstration of dimensional transition within the triadic substrate.
-
----
-
-## **1. Input Overview**
-
-For this example, we assume:
-
-- a stable 3D structural configuration  
-- identifiable motif‑level geometry  
-- interaction‑level signals available for extension into 6D  
-- pathway‑level or temporal‑coherence signals available for extension into 9D  
-- stable or transitional regime behavior  
-
-No domain‑specific mechanisms are required; the example is substrate‑agnostic.
-
----
-
-## **2. Step 1 — Begin in the 3D Structural Core**
-
-The 3D core contains:
-
-- backbone‑level geometry  
-- local motif structure  
-- spatial continuity  
-- primitive‑aligned representation (DP → TDP × 1)
-
-### **Interpretation**
-
-The 3D representation provides the minimal geometric substrate.  
-Coherence surfaces are compact, and regime behavior is typically stable (R₁).
-
----
-
-## **3. Step 2 — Extend to the 6D Interaction Core**
-
-The transition from 3D → 6D introduces:
-
-- pairwise or component‑pair interaction structure  
-- intermediate‑scale coherence surfaces  
-- expanded primitive composition (TDP × 2)  
-- increased sensitivity to regime transitions  
-
-### **What changes**
-
-- new axes encode relational structure  
-- coherence surfaces become multi‑layered  
-- variance increases slightly but remains bounded  
-- regime behavior may shift from R₁ → R₂ during reorientation  
-
-### **Interpretation**
-
-The 6D core acts as the bridge between geometry and pathway‑level coherence.
-
----
-
-## **4. Step 3 — Extend to the 9D Coherence Core**
-
-The transition from 6D → 9D introduces:
-
-- pathway‑level coherence  
-- resonance‑time alignment  
-- full triadic primitive composition (TDP × 3)  
-- stable regime‑transition structure  
-
-### **What changes**
-
-- coherence surfaces become continuous trajectories  
-- resonance‑time behavior becomes explicit  
-- regime identity becomes fully classifiable (R₁, R₂, R₃)  
-- projection into 3D–6D remains invertible  
-
-### **Interpretation**
-
-The 9D core is the highest‑resolution human‑scale substrate and the anchor for all higher‑dimensional scaling.
-
----
-
-## **5. Step 4 — Validate the Transition with vST**
-
-Apply vST layers:
-
-- **V₁:** structural coherence preserved across 3D–9D  
-- **V₂:** dimensional continuity across transitions  
-- **V₃:** regime‑transition timing follows triadic resonance  
-- **V₄:** 9D projection remains aligned with triadic cores  
-
-### **Outcome**
-
-A valid transition preserves:
-
-- motif‑level structure  
-- primitive‑level integrity  
-- coherence‑surface continuity  
-- regime‑aware behavior  
-
-Any failure indicates substrate‑level drift.
-
----
-
-## **6. Step 5 — Interpret the Full 3D → 9D Transition**
-
-A successful transition yields:
-
-- compact 3D geometry  
-- structured 6D interaction surfaces  
-- coherent 9D pathways  
-- stable resonance‑time behavior  
-- invertible projection across all cores  
-- preserved substrate invariants  
-
-This triadic transition forms the foundation for scaling into 64D–1024D.
-
----
-
-## **7. Summary**
-
-This example demonstrates:
-
-- how dimensional primitives combine to form triadic cores  
-- how structure evolves from geometry → interaction → coherence  
-- how regime behavior emerges across dimensional transitions  
-- how vST validation ensures invariant‑preserving transitions  
-- how the 9D core anchors all higher‑dimensional scaling  
-
-The 3D → 9D transition is the canonical pathway for constructing and validating dimensional substrates.
-### *Dimensional Substrate Structures*  
-### *Example: 64D Projection into 3D–9D Cores*
-
-This example demonstrates how a structure represented in the 64D research‑grade substrate projects into the 3D structural core, 6D interaction core, and 9D coherence core. The walkthrough illustrates how scaling primitives, coherence surfaces, and regime behavior are preserved during high‑dimensional projection.
-
-The goal is to provide a clear, reproducible demonstration of how high‑dimensional structures remain interpretable through the triadic cores.
-
----
-
-## **1. Input Overview**
-
-For this example, we assume:
-
-- a stable or transitional 64D representation  
-- identifiable coherence surfaces in high‑dimensional space  
-- primitive‑aligned structure (DP, TDP, SP, CP)  
-- regime behavior detectable in R₁ᴴ, R₂ᴴ, or R₃ᴴ  
-- invertible projection guaranteed by substrate invariants  
-
-No domain‑specific mechanisms are required; the example is substrate‑agnostic.
-
----
-
-## **2. Step 1 — Begin with the 64D High‑Dimensional Structure**
-
-The 64D substrate contains:
-
-- expanded coherence surfaces  
-- multi‑primitive interactions  
-- high‑dimensional variance patterns  
-- regime‑aware behavior (R₁ᴴ, R₂ᴴ, R₃ᴴ)  
-- full scaling‑primitive composition (SP × n)
-
-### **Interpretation**
-
-64D is the first research‑grade dimensional regime.  
-It preserves all 9D invariants while introducing additional structure.
-
----
-
-## **3. Step 2 — Project 64D → 9D (Coherence Core)**
-
-The first projection step reduces the high‑dimensional structure into the 9D coherence core.
-
-### **What is preserved**
-
-- pathway‑level coherence  
-- resonance‑time alignment  
-- regime identity  
-- primitive‑level structure (DP, TDP, SP, CP)  
-- coherence‑surface continuity  
-
-### **What changes**
-
-- high‑dimensional variance collapses into 9D trajectories  
-- coherence surfaces become compact and interpretable  
-- dispersion patterns (if present) become visible  
-
-### **Interpretation**
-
-The 9D projection reveals the underlying coherence pathways that anchor the 64D structure.
-
----
-
-## **4. Step 3 — Project 9D → 6D (Interaction Core)**
-
-The second projection step reduces the coherence‑level structure into the 6D interaction core.
-
-### **What is preserved**
-
-- interaction‑level structure  
-- relational geometry  
-- regime‑transition indicators  
-- primitive‑aligned mapping (TDP × 2)
-
-### **What changes**
-
-- pathway‑level detail compresses into interaction surfaces  
-- oscillatory or branching behavior becomes more pronounced  
-- variance reduces further  
-
-### **Interpretation**
-
-The 6D projection exposes the interaction‑level patterns that support the 9D coherence structure.
-
----
-
-## **5. Step 4 — Project 6D → 3D (Structural Core)**
-
-The final projection step reduces the interaction‑level structure into the 3D structural core.
-
-### **What is preserved**
-
-- motif‑level geometry  
-- backbone‑level continuity  
-- stable structural invariants  
-- primitive‑aligned mapping (TDP × 1)
-
-### **What changes**
-
-- interaction surfaces collapse into geometric motifs  
-- regime behavior becomes implicit rather than explicit  
-- coherence surfaces reduce to spatial structure  
-
-### **Interpretation**
-
-The 3D projection provides the minimal geometric representation of the original 64D structure.
-
----
-
-## **6. Step 5 — Validate the Projection with vST**
-
-Apply vST layers:
-
-- **V₁:** structural coherence preserved in 3D  
-- **V₂:** dimensional continuity across 64D → 9D → 6D → 3D  
-- **V₃:** regime‑transition timing preserved  
-- **V₄:** alignment with triadic cores maintained  
-
-### **Outcome**
-
-A valid projection preserves:
-
-- motif‑level structure  
-- coherence‑surface continuity  
-- primitive‑level integrity  
-- regime identity  
-- invertible mapping  
-
-Any failure indicates high‑dimensional drift.
-
----
-
-## **7. Step 6 — Interpret the Full 64D → 3D Projection**
-
-A successful projection yields:
-
-- coherent 9D pathways  
-- structured 6D interaction surfaces  
-- compact 3D geometry  
-- stable resonance‑time behavior  
-- preserved substrate invariants  
-- invertible mapping across all cores  
-
-This projection demonstrates how high‑dimensional inference remains interpretable through the triadic substrate.
-
----
-
-## **8. Summary**
-
-This example demonstrates:
-
-- how high‑dimensional structures project into triadic cores  
-- how coherence surfaces compress across dimensional reduction  
-- how regime behavior remains stable under projection  
-- how vST validation ensures invariant‑preserving mapping  
-- how the triadic cores anchor all high‑dimensional interpretation  
-
-The 64D → 3D projection is the canonical pathway for interpreting research‑grade dimensional substrates.
 

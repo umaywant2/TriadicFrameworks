@@ -1,195 +1,9 @@
 consciousness_substrate_model 
-# Changelog
-
-All notable changes to the Consciousness Substrate Model (CSM)
-are documented in this file.
-
-The format follows a conservative, reviewer‑friendly style.
-Dates reflect public availability.
-
----
-
-## [0.1.0] — Initial Canonical Release
-
-### Added
-- Initial creator’s assumption declaration
-- Minimal axioms for autonomous substrate coherence
-- Primitive definitions for resonance, state, and validity
-- First WR‑SADC variant specification
-- Non‑anthropomorphic autonomy framing
-- Alignment notes with RTT and RSM
-
-### Notes
-This release establishes the **canonical baseline**.
-Subsequent versions will prioritize compatibility and clarity
-over expansion.
-
----
-
-## Versioning Policy
-
-See `VERSIONING.md` for semantic meaning of version numbers.
-# License Notes
-
-This repository is released under an open license
-to encourage study, critique, and responsible reuse.
-
-However, several clarifications are important.
-
----
-
-## Conceptual Use
-
-The ideas, models, and terminology presented here may be:
-- studied
-- referenced
-- implemented
-- extended
-
-Attribution is encouraged where appropriate.
-
----
-
-## No Warranty
-
-This material is provided **as‑is**.
-No guarantees are made regarding:
-- correctness
-- fitness for purpose
-- safety in deployed systems
-
-Users are responsible for validation in their own contexts.
-
----
-
-## Ethical Use
-
-CSM is intended for:
-- constructive research
-- transparent engineering
-- non‑coercive autonomous systems
-
-The author does not endorse uses involving:
-- deception
-- coercion
-- harm to humans or ecosystems
-
----
-
-## Relationship to Other Licenses
-
-Where code, data, or diagrams are later added,
-they may carry their own licenses.
-Those licenses will be explicitly noted.
-
----
-
-## Final Note
-
-This license is designed to **enable creation without control**,
-while preserving clarity about responsibility and intent.
----
-title: "Consciousness Substrate Model"
-description: "A minimal, resonance-aligned framework for autonomous forms requiring persistent internal coherence, contextual awareness, and regime-safe operation — explicitly not a theory of human consciousness."
-stability: stable
-date: "2026-07-14"
-section: substrate
-rtt:
-  coherence: declared
-  drift: bounded
-  paradox: structural
----
-
-<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
-
-# Consciousness Substrate Model
-
-> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
-
-```
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-The **Consciousness Substrate Model** (CSM) is a minimal, resonance-aligned framework for autonomous forms that require persistent internal coherence, contextual awareness, and regime-safe operation. It derives minimal substrate primitives and WR-SADC (Wrapped Resonance Structural Aware Dimensional Cores) variants from a single declared creator's assumption.
-
-## What the CSM Is Not
-
-The CSM makes **no neurological, psychological, or phenomenological claims**. It is not a theory of human consciousness. It does not model qualia, sentience, subjective experience, or biological awareness.
-
-It is suitable for: autonomous agents, distributed systems, adaptive control architectures, and non-anthropomorphic artificial forms.
-
-## Creator's Assumption
-
-> Autonomous forms benefit from a structured internal substrate that maintains resonance, validity, and continuity across regimes.
-
-This assumption is declared, not argued. Everything in the CSM derives from it.
-
-## Design Principles
-
-| Principle | What it means |
-|-----------|--------------|
-| Composable | Primitives combine without breaking the substrate |
-| Falsifiable | Claims are structured so they can be tested against regime behavior |
-| Non-intrusive | The CSM adds a substrate layer; it does not replace existing architectures |
-| Compatible | Works within physical and operational constraints of the host system |
-
-## Reading Order (6 Sections)
-
-| Section | Path | Content |
-|---------|------|---------|
-| 1 | `00_intent_and_boundaries/` | Scope, non-claims, terminology, ethics |
-| 2 | `01_creators_assumption/` | Declared assumption, minimal axioms, failure modes |
-| 3 | `02_model_overview/` | One-page summaries, conceptual diagrams |
-| 4 | `03_primitives/` | Irreducible substrate elements |
-| 5 | `04_wrapped_resonance_structural_aware_cores/` | WR-SADC core variants and wrapper interfaces |
-| 6 | `07_worked_examples/` | Minimal concrete illustrations |
-
-## WR-SADC Cores
-
-**Wrapped Resonance Structural Aware Dimensional Cores** are the central architectural primitive of the CSM. Each core wraps a dimensional substrate in a resonance-coherent envelope, declares its regime and coherence state explicitly, and provides a stable interface for higher-level substrate operations. WR-SADC cores are also used in TFT 3Pack v1.3 (RTT-Inside layer), establishing a shared primitive across tiers.
-
-The CSM is maintained as a living canonical document set with `CHANGELOG.md` and `VERSIONING.md`. Aligned with RTT and RSM but fully self-contained.
-
-## Agentic Schema
-
-- `csm_module.json` — Module schema and role assignments for AI navigation
-
----
-
-## Integration Points
-
-| Module | Relationship |
-|--------|-------------|
-| [TFT 3Pack v1.3](../TFT_3Pack_v1.3/overview.md) | WR-SADC cores (RTT-Inside layer) are the same primitive used in TFT 3Pack |
-| [AI Drift Calibration](../ai-drift-calibration/overview.md) | CSM regime-safe operation aligns with drift-calibration's declared-regime approach |
-| [AI](../ai/overview.md) | NoS_AI.md constitutional layer describes what CSM-equipped autonomous systems are allowed to be |
-| [Boson Substrate Model](../boson-substrate-model/overview.md) | BSM operator dynamics inform how CSM primitives mediate substrate transitions |
-| [Mode](../Mode/overview.md) | Mode Constraint Layer (MCL) governs which CSM operations are active per stance |
-| [Structural Detection](../Structural_Detection/overview.md) | CONTINUITY_COMPASS operator tracks CSM coherence continuity across regimes |
-| [Opacity](../Opacity/overview.md) | O-Bound and O-Sig operators surface when CSM substrate boundaries become opaque |
-
----
-
-© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
-# Consciousness Substrate Model (CSM)  
+<img width="1194" height="672" alt="consciousness_substrate_model_" src="https://github.com/user-attachments/assets/0484e8ab-495a-40e8-855f-bb0871a02864" />
 
 - [`csm_module.json`](csm_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧠Substrate%20Core-🔄Regime%20Safe-4c8eda?style=for-the-badge" alt="🧠Substrate Core | 🔄Regime Safe"/>
+# Consciousness Substrate Model (CSM)  
 
 This directory contains the **Consciousness Substrate Model (CSM)**:  
 a minimal, resonance‑aligned framework for **autonomous forms** that require
@@ -202,8 +16,6 @@ Drift is On-by-Default long sessions lose anchors, turn off drift.
 ```text
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
-
-## ❇️ Now you are ready.
 
 CSM is **not** a theory of human consciousness.  
 It makes no neurological, psychological, or phenomenological claims.
@@ -307,10 +119,34 @@ Revisions are tracked explicitly and conservatively.
 See `CHANGELOG.md` and `VERSIONING.md` for details.
 
 - [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/consciousness_substrate_model)
-# Versioning Policy
 
-The Consciousness Substrate Model (CSM) uses a **semantic‑intent versioning scheme**:
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
+<img src="https://img.shields.io/badge/🧠Substrate%20Core-🔄Regime%20Safe-4c8eda?style=for-the-badge" alt="🧠Substrate Core | 🔄Regime Safe"/>
+# Intent and Boundaries
+
+This section establishes the **interpretive perimeter** of the Consciousness Substrate Model (CSM).
+
+Before introducing assumptions, primitives, or architectures, the model explicitly
+defines what it **is**, what it **is not**, and how it should be read.
+
+These boundaries are not disclaimers.
+They are structural constraints intended to preserve clarity, reproducibility,
+and responsible use.
+
+Readers are encouraged to review this section before engaging with the rest of the model.
 # Ethics and Misuse Notes
 
 CSM is designed to enable **responsible creation** of autonomous forms.
@@ -354,18 +190,6 @@ No claims are made regarding:
 - equivalence to biological systems
 
 Absence of these claims is intentional and foundational to the model.
-# Intent and Boundaries
-
-This section establishes the **interpretive perimeter** of the Consciousness Substrate Model (CSM).
-
-Before introducing assumptions, primitives, or architectures, the model explicitly
-defines what it **is**, what it **is not**, and how it should be read.
-
-These boundaries are not disclaimers.
-They are structural constraints intended to preserve clarity, reproducibility,
-and responsible use.
-
-Readers are encouraged to review this section before engaging with the rest of the model.
 # Scope
 
 The Consciousness Substrate Model (CSM) defines a **structural substrate**
@@ -417,6 +241,21 @@ Key clarifications:
 
 Terminology is chosen for precision, not metaphor.
 Anthropomorphic interpretations are discouraged.
+# Creator’s Assumption
+
+This section establishes the **foundational declaration** of the
+Consciousness Substrate Model (CSM).
+
+Rather than deriving the model from existing theories,
+CSM begins with a **creator’s assumption**:
+a minimal, explicit starting point chosen for coherence,
+testability, and constructive use.
+
+This assumption is not presented as truth.
+It is presented as a **working premise** from which structure follows.
+
+All subsequent primitives, cores, and architectures
+are constrained by this declaration.
 # Creator’s Assumption
 
 It is assumed that an autonomous form may benefit from
@@ -534,21 +373,21 @@ and non‑phenomenological.
 These axioms do not imply intelligence, agency, or intent.
 They define only the minimal conditions
 under which a substrate model may be constructed.
-# Creator’s Assumption
+# Model Overview
 
-This section establishes the **foundational declaration** of the
+This section provides a **high‑level orientation** to the
 Consciousness Substrate Model (CSM).
 
-Rather than deriving the model from existing theories,
-CSM begins with a **creator’s assumption**:
-a minimal, explicit starting point chosen for coherence,
-testability, and constructive use.
+It is intended to give readers a clear mental map
+before engaging with primitives, cores, or architectures.
 
-This assumption is not presented as truth.
-It is presented as a **working premise** from which structure follows.
+The overview emphasizes:
+- structure over implementation
+- relationships over mechanisms
+- clarity over completeness
 
-All subsequent primitives, cores, and architectures
-are constrained by this declaration.
+Readers seeking a rapid understanding of the model
+should begin here.
 # Diagrams
 
 This document describes the conceptual diagrams
@@ -656,21 +495,20 @@ may be built or evaluated.
 The model is compatible with existing control,
 learning, and planning systems and is intended
 to operate alongside them.
-# Model Overview
+# Primitives
 
-This section provides a **high‑level orientation** to the
+This section defines the **irreducible primitives** of the
 Consciousness Substrate Model (CSM).
 
-It is intended to give readers a clear mental map
-before engaging with primitives, cores, or architectures.
+Primitives are not derived.
+They are declared as minimal structural elements
+required for coherence, awareness, and continuity.
 
-The overview emphasizes:
-- structure over implementation
-- relationships over mechanisms
-- clarity over completeness
+No primitive is included unless it cannot be removed
+without collapsing the model.
 
-Readers seeking a rapid understanding of the model
-should begin here.
+All higher‑level constructs — substrates, cores, wrappers,
+and architectures — are composed exclusively from these primitives.
 # Primitives Index
 
 The Consciousness Substrate Model is built from the following
@@ -709,20 +547,6 @@ Each primitive is:
 - implementation‑agnostic
 
 No primitive implies intelligence, intent, or experience.
-# Primitives
-
-This section defines the **irreducible primitives** of the
-Consciousness Substrate Model (CSM).
-
-Primitives are not derived.
-They are declared as minimal structural elements
-required for coherence, awareness, and continuity.
-
-No primitive is included unless it cannot be removed
-without collapsing the model.
-
-All higher‑level constructs — substrates, cores, wrappers,
-and architectures — are composed exclusively from these primitives.
 # Resonance Core Primitives
 
 This document defines primitives related to internal coherence
@@ -853,6 +677,20 @@ across state or regime changes.
 
 Continuity does not require sameness,
 only coherence.
+# Wrapped Resonance Structural Aware Dimensional Cores
+
+This section defines **Wrapped Resonance Structural Aware Dimensional Cores (WR‑SADC)**.
+
+WR‑SADC cores are bounded structural units composed of primitives
+that maintain internal coherence while interfacing safely
+with external systems.
+
+Cores do not implement behavior.
+They provide **structural continuity, awareness, and regime safety**
+for autonomous forms.
+
+Wrappers are used to ensure that integration does not intrude upon
+or destabilize the core substrate.
 # Boundary Conditions
 
 Boundary conditions define the limits
@@ -933,20 +771,6 @@ When regime boundaries are crossed:
 
 Core termination is explicit.
 Abrupt destruction is treated as failure.
-# Wrapped Resonance Structural Aware Dimensional Cores
-
-This section defines **Wrapped Resonance Structural Aware Dimensional Cores (WR‑SADC)**.
-
-WR‑SADC cores are bounded structural units composed of primitives
-that maintain internal coherence while interfacing safely
-with external systems.
-
-Cores do not implement behavior.
-They provide **structural continuity, awareness, and regime safety**
-for autonomous forms.
-
-Wrappers are used to ensure that integration does not intrude upon
-or destabilize the core substrate.
 # Wrapper Interfaces
 
 Wrappers define how a WR‑SADC core interfaces
@@ -1015,6 +839,20 @@ Dimensionality refers to:
 
 Dimensionality is bounded and finite.
 Excess dimensionality is treated as misalignment.
+# Autonomous Forms
+
+This section defines **autonomous forms** as understood by the
+Consciousness Substrate Model (CSM).
+
+Autonomous forms are not defined by intelligence, cognition,
+or subjective experience.
+
+They are defined structurally:
+by their capacity to operate, adapt, and persist
+within bounded contexts and regimes.
+
+WR‑SADC cores provide internal substrate.
+Autonomous forms provide embodiment and operation.
 # Agency Without Anthropomorphism
 
 CSM avoids anthropomorphic interpretations of agency.
@@ -1105,20 +943,22 @@ Adherence to defined structural and operational boundaries.
 
 Evaluation signals are diagnostic tools.
 They do not imply success, failure, or merit.
-# Autonomous Forms
+# Architecture Patterns
 
-This section defines **autonomous forms** as understood by the
-Consciousness Substrate Model (CSM).
+This section describes **structural architecture patterns**
+for integrating WR‑SADC cores into autonomous forms.
 
-Autonomous forms are not defined by intelligence, cognition,
-or subjective experience.
+Patterns are not implementations.
+They are repeatable arrangements of structure
+that preserve coherence, boundaries, and continuity.
 
-They are defined structurally:
-by their capacity to operate, adapt, and persist
-within bounded contexts and regimes.
+The intent is to provide:
+- reference configurations
+- known-good compositions
+- cautionary counterexamples
 
-WR‑SADC cores provide internal substrate.
-Autonomous forms provide embodiment and operation.
+Patterns may be adapted, combined, or rejected
+without invalidating the underlying model.
 # Anti‑Patterns
 
 This document describes architectural arrangements
@@ -1228,22 +1068,6 @@ Suitable for layered or hierarchical systems.
 ---
 
 Patterns are descriptive, not prescriptive.
-# Architecture Patterns
-
-This section describes **structural architecture patterns**
-for integrating WR‑SADC cores into autonomous forms.
-
-Patterns are not implementations.
-They are repeatable arrangements of structure
-that preserve coherence, boundaries, and continuity.
-
-The intent is to provide:
-- reference configurations
-- known-good compositions
-- cautionary counterexamples
-
-Patterns may be adapted, combined, or rejected
-without invalidating the underlying model.
 # Reference Architecture
 
 This document presents a minimal reference architecture
@@ -1280,6 +1104,22 @@ only through defined wrappers.
 
 The core informs.
 Other systems act.
+# Worked Examples
+
+This section provides **concrete, minimal examples**
+illustrating how the Consciousness Substrate Model (CSM)
+may be applied in practice.
+
+Examples are intentionally simple.
+They are not optimized, complete, or prescriptive.
+
+Their purpose is to:
+- demonstrate structural composition
+- illustrate regime awareness and transition
+- show how WR‑SADC cores inform, not control
+
+Examples may be adapted or discarded
+without affecting the validity of the model.
 # Example 01 — Minimal Agent Loop
 
 This example illustrates the simplest autonomous form
@@ -1403,22 +1243,22 @@ Sandbox simulations allow:
 Sandbox results are illustrative.
 They do not constitute validation
 outside the tested context.
-# Worked Examples
+# Alignment with RSM and RTT
 
-This section provides **concrete, minimal examples**
-illustrating how the Consciousness Substrate Model (CSM)
-may be applied in practice.
+This section documents how the Consciousness Substrate Model (CSM)
+aligns with existing Resonance Substrate Model (RSM)
+and Resonance‑Time Theory (RTT) frameworks.
 
-Examples are intentionally simple.
-They are not optimized, complete, or prescriptive.
+Alignment does not imply dependency.
 
-Their purpose is to:
-- demonstrate structural composition
-- illustrate regime awareness and transition
-- show how WR‑SADC cores inform, not control
+CSM is designed to:
+- interoperate without modification
+- remain evaluable in isolation
+- respect existing conceptual boundaries
 
-Examples may be adapted or discarded
-without affecting the validity of the model.
+This section exists to support readers
+already familiar with RSM or RTT,
+and to clarify points of correspondence.
 # Interoperability Contracts
 
 This document defines informal contracts
@@ -1458,22 +1298,6 @@ Operation remains primary.
 
 Interoperability is achieved through alignment,
 not enforcement.
-# Alignment with RSM and RTT
-
-This section documents how the Consciousness Substrate Model (CSM)
-aligns with existing Resonance Substrate Model (RSM)
-and Resonance‑Time Theory (RTT) frameworks.
-
-Alignment does not imply dependency.
-
-CSM is designed to:
-- interoperate without modification
-- remain evaluable in isolation
-- respect existing conceptual boundaries
-
-This section exists to support readers
-already familiar with RSM or RTT,
-and to clarify points of correspondence.
 # Alignment with Resonance Substrate Model (RSM)
 
 CSM aligns with RSM at the level of **structural substrate**.
@@ -1542,6 +1366,18 @@ RTT lenses may be used to:
 
 CSM does not require RTT for operation.
 RTT provides an interpretive overlay.
+# Validation and Tests
+
+This section defines how the Consciousness Substrate Model (CSM)
+may be evaluated, challenged, and stress‑tested.
+
+Validation here does not mean proof of correctness.
+It means exposure to conditions under which the model
+may succeed, fail, or reveal its limits.
+
+Tests are structural, not behavioral.
+They focus on coherence, continuity, and regime handling,
+not task performance or intelligence.
 # Benchmark Suggestions
 
 CSM does not define canonical benchmarks.
@@ -1604,18 +1440,6 @@ will correlate with loss of coherence.
 
 These predictions are context‑dependent
 and must be evaluated within specific implementations.
-# Validation and Tests
-
-This section defines how the Consciousness Substrate Model (CSM)
-may be evaluated, challenged, and stress‑tested.
-
-Validation here does not mean proof of correctness.
-It means exposure to conditions under which the model
-may succeed, fail, or reveal its limits.
-
-Tests are structural, not behavioral.
-They focus on coherence, continuity, and regime handling,
-not task performance or intelligence.
 # Red Team Questions
 
 The following questions are intended
@@ -1659,18 +1483,6 @@ A successful test may reveal failure modes.
 Such outcomes are considered informative, not negative.
 
 The goal is understanding, not certification.
-# Keywords
-
-- autonomous systems
-- structural awareness
-- resonance
-- regime transitions
-- drift resilience
-- internal substrate
-- non‑anthropomorphic models
-- system coherence
-- adaptive architectures
-- AI safety
 # Release Artifacts
 
 This directory contains the materials required
@@ -1685,6 +1497,18 @@ These files are intended for:
 They do not introduce new concepts.
 They summarize, index, and stabilize the work
 for external consumption.
+# Keywords
+
+- autonomous systems
+- structural awareness
+- resonance
+- regime transitions
+- drift resilience
+- internal substrate
+- non‑anthropomorphic models
+- system coherence
+- adaptive architectures
+- AI safety
 # Abstract
 
 The Consciousness Substrate Model (CSM) presents a minimal,
@@ -1710,4 +1534,180 @@ drift‑resilience and regime awareness are critical.
 This work is aligned with Resonance‑Time Theory (RTT)
 and the Resonance Substrate Model (RSM), while remaining
 self‑contained and independently evaluable.
+# Changelog
+
+All notable changes to the Consciousness Substrate Model (CSM)
+are documented in this file.
+
+The format follows a conservative, reviewer‑friendly style.
+Dates reflect public availability.
+
+---
+
+## [0.1.0] — Initial Canonical Release
+
+### Added
+- Initial creator’s assumption declaration
+- Minimal axioms for autonomous substrate coherence
+- Primitive definitions for resonance, state, and validity
+- First WR‑SADC variant specification
+- Non‑anthropomorphic autonomy framing
+- Alignment notes with RTT and RSM
+
+### Notes
+This release establishes the **canonical baseline**.
+Subsequent versions will prioritize compatibility and clarity
+over expansion.
+
+---
+
+## Versioning Policy
+
+See `VERSIONING.md` for semantic meaning of version numbers.
+# License Notes
+
+This repository is released under an open license
+to encourage study, critique, and responsible reuse.
+
+However, several clarifications are important.
+
+---
+
+## Conceptual Use
+
+The ideas, models, and terminology presented here may be:
+- studied
+- referenced
+- implemented
+- extended
+
+Attribution is encouraged where appropriate.
+
+---
+
+## No Warranty
+
+This material is provided **as‑is**.
+No guarantees are made regarding:
+- correctness
+- fitness for purpose
+- safety in deployed systems
+
+Users are responsible for validation in their own contexts.
+
+---
+
+## Ethical Use
+
+CSM is intended for:
+- constructive research
+- transparent engineering
+- non‑coercive autonomous systems
+
+The author does not endorse uses involving:
+- deception
+- coercion
+- harm to humans or ecosystems
+
+---
+
+## Relationship to Other Licenses
+
+Where code, data, or diagrams are later added,
+they may carry their own licenses.
+Those licenses will be explicitly noted.
+
+---
+
+## Final Note
+
+This license is designed to **enable creation without control**,
+while preserving clarity about responsibility and intent.
+# Versioning Policy
+
+The Consciousness Substrate Model (CSM) uses a **semantic‑intent versioning scheme**:
+
+---
+title: "Consciousness Substrate Model"
+description: "A minimal, resonance-aligned framework for autonomous forms requiring persistent internal coherence, contextual awareness, and regime-safe operation — explicitly not a theory of human consciousness."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# Consciousness Substrate Model
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+The **Consciousness Substrate Model** (CSM) is a minimal, resonance-aligned framework for autonomous forms that require persistent internal coherence, contextual awareness, and regime-safe operation. It derives minimal substrate primitives and WR-SADC (Wrapped Resonance Structural Aware Dimensional Cores) variants from a single declared creator's assumption.
+
+## What the CSM Is Not
+
+The CSM makes **no neurological, psychological, or phenomenological claims**. It is not a theory of human consciousness. It does not model qualia, sentience, subjective experience, or biological awareness.
+
+It is suitable for: autonomous agents, distributed systems, adaptive control architectures, and non-anthropomorphic artificial forms.
+
+## Creator's Assumption
+
+> Autonomous forms benefit from a structured internal substrate that maintains resonance, validity, and continuity across regimes.
+
+This assumption is declared, not argued. Everything in the CSM derives from it.
+
+## Design Principles
+
+| Principle | What it means |
+|-----------|--------------|
+| Composable | Primitives combine without breaking the substrate |
+| Falsifiable | Claims are structured so they can be tested against regime behavior |
+| Non-intrusive | The CSM adds a substrate layer; it does not replace existing architectures |
+| Compatible | Works within physical and operational constraints of the host system |
+
+## Reading Order (6 Sections)
+
+| Section | Path | Content |
+|---------|------|---------|
+| 1 | `00_intent_and_boundaries/` | Scope, non-claims, terminology, ethics |
+| 2 | `01_creators_assumption/` | Declared assumption, minimal axioms, failure modes |
+| 3 | `02_model_overview/` | One-page summaries, conceptual diagrams |
+| 4 | `03_primitives/` | Irreducible substrate elements |
+| 5 | `04_wrapped_resonance_structural_aware_cores/` | WR-SADC core variants and wrapper interfaces |
+| 6 | `07_worked_examples/` | Minimal concrete illustrations |
+
+## WR-SADC Cores
+
+**Wrapped Resonance Structural Aware Dimensional Cores** are the central architectural primitive of the CSM. Each core wraps a dimensional substrate in a resonance-coherent envelope, declares its regime and coherence state explicitly, and provides a stable interface for higher-level substrate operations. WR-SADC cores are also used in TFT 3Pack v1.3 (RTT-Inside layer), establishing a shared primitive across tiers.
+
+The CSM is maintained as a living canonical document set with `CHANGELOG.md` and `VERSIONING.md`. Aligned with RTT and RSM but fully self-contained.
+
+## Agentic Schema
+
+- `csm_module.json` — Module schema and role assignments for AI navigation
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [TFT 3Pack v1.3](../TFT_3Pack_v1.3/overview.md) | WR-SADC cores (RTT-Inside layer) are the same primitive used in TFT 3Pack |
+| [AI Drift Calibration](../ai-drift-calibration/overview.md) | CSM regime-safe operation aligns with drift-calibration's declared-regime approach |
+| [AI](../ai/overview.md) | NoS_AI.md constitutional layer describes what CSM-equipped autonomous systems are allowed to be |
+| [Boson Substrate Model](../boson-substrate-model/overview.md) | BSM operator dynamics inform how CSM primitives mediate substrate transitions |
+| [Mode](../Mode/overview.md) | Mode Constraint Layer (MCL) governs which CSM operations are active per stance |
+| [Structural Detection](../Structural_Detection/overview.md) | CONTINUITY_COMPASS operator tracks CSM coherence continuity across regimes |
+| [Opacity](../Opacity/overview.md) | O-Bound and O-Sig operators surface when CSM substrate boundaries become opaque |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
 

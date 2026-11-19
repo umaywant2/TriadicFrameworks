@@ -1,5 +1,422 @@
 vst_for_protein_language_models 
-### *vST for Protein Language Models*  
+<img width="1194" height="672" alt="vst_for_protein_language_models_" src="https://github.com/user-attachments/assets/a1d900fb-58cb-4694-99a7-d8738e7d2a39" />
+
+## *vST for Protein Language Models*  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Validation‑Space‑Time Framework for High‑Dimensional Protein Embedding Models*
+
+This artifact defines a substrate‑level framework for analyzing, validating, and comparing **Protein Language Models (PLMs)** using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting sequence embeddings, latent‑trajectory regimes, scaling behavior, and cross‑version drift in modern protein models such as ESM, ProtT5, and related architectures.
+
+The goal is to offer a reproducible, model‑agnostic substrate for understanding high‑dimensional protein‑sequence inference.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## **1. Purpose**
+
+Protein Language Models operate in high‑dimensional latent spaces (typically 512D–4096D) and exhibit:
+
+- stable and unstable embedding regions  
+- regime transitions across sequence positions  
+- scaling‑law behavior across model sizes  
+- drift across training checkpoints  
+- projection‑compatible structure  
+
+This artifact applies the **Resonance Substrate Model (RSM)** and **vST validation layers** to:
+
+- classify sequence‑embedding regimes  
+- analyze scaling behavior in PLMs  
+- detect drift across model versions  
+- map coherence surfaces in protein embedding space  
+- project high‑dimensional embeddings into 3D–9D triadic cores  
+
+The result is a unified, interpretable substrate for PLM behavior.
+
+---
+
+## **2. Contents**
+
+This directory contains:
+
+- **substrate_definition.md**  
+  Defines the PLM substrate, dimensional primitives, and embedding‑space structure.
+
+- **sequence_embedding_regimes.md**  
+  Describes stable, transitional, and dispersed regimes across protein sequences.
+
+- **dimensional_scaling_protein_models.md**  
+  Maps PLM scaling laws onto the 3D–1024D dimensional ladder.
+
+- **projection_into_structural_cores.md**  
+  Defines invertible projection from high‑dimensional embeddings into triadic cores.
+
+- **validation_layers_vst_plm.md**  
+  Extends vST (V₁–V₄) to PLM‑specific behavior.
+
+- **drift_detection_plm.md**  
+  Provides a substrate‑level framework for detecting cross‑version drift.
+
+- **examples/**  
+  Reproducible demonstrations of embedding‑trajectory analysis and projection.
+
+- **appendix/**  
+  Terminology and references.
+
+Each file is self‑contained and designed for clarity, reproducibility, and cross‑model comparison.
+
+---
+
+## **3. Scope**
+
+This artifact is:
+
+- **model‑agnostic**  
+  Works with any transformer‑based PLM (ESM‑class, ProtT5‑class, MSA‑based models, etc.).
+
+- **architecture‑independent**  
+  Applies to encoder‑only, encoder‑decoder, and hybrid architectures.
+
+- **training‑method independent**  
+  Compatible with masked‑token models, autoregressive models, and MSA‑conditioned models.
+
+- **substrate‑aligned**  
+  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.
+
+---
+
+## **4. Intended Use**
+
+This framework supports:
+
+- embedding‑space analysis  
+- cross‑version comparison  
+- drift detection  
+- scaling‑law evaluation  
+- sequence‑position regime mapping  
+- interpretability research  
+- model‑alignment studies  
+- reproducible inference analysis  
+
+It is not a performance benchmark or a training method.  
+It is a **substrate‑level interpretability and validation framework**.
+
+---
+
+## **5. Relationship to Other Artifacts**
+
+This artifact extends:
+
+- **Dimensional Substrate Structures** (3D–1024D substrate)  
+- **Validation‑Space‑Time (vST)**  
+- **Triadic Dimensional Cores (3D–9D)**  
+
+It parallels:
+
+- **vST for Large Language Models**  
+- **vST for Generative Models**  
+- **vST for Multi‑Model Alignment**
+
+Each artifact stands alone but shares a common substrate grammar.
+
+---
+
+## **6. Citation**
+
+A `CITATION.cff` file is included for formal citation.  
+A `zenodo.json` file is provided for DOI‑ready metadata.
+
+---
+
+## **7. License**
+
+Released under the MIT License.
+### *vST for Protein Language Models*  
+### *References*
+
+This appendix lists references relevant to protein language models, high‑dimensional embedding analysis, scaling laws, structural biology, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM and vST canon.
+
+---
+
+## **1. Protein Language Models and Sequence Embeddings**
+
+- Rives, A., Meier, J., Sercu, T., et al.  
+  *Biological Structure and Function Emerge from Scaling Unsupervised Learning to 250 Million Protein Sequences.*  
+  PNAS 118, e2016239118 (2021).
+
+- Elnaggar, A., Heinzinger, M., Dallago, C., et al.  
+  *ProtTrans: Towards Cracking the Language of Life’s Code Through Self‑Supervised Deep Learning and High Performance Computing.*  
+  IEEE TPAMI (2021).
+
+- Rao, R., Liu, J., Verkuil, R., et al.  
+  *MSA Transformer.*  
+  ICML (2021).
+
+- Madani, A., McCann, B., Naik, N., et al.  
+  *ProGen: Language Modeling for Protein Generation.*  
+  arXiv:2004.03497 (2020).
+
+---
+
+## **2. Structural Biology and Protein Representation**
+
+- Jumper, J., Evans, R., Pritzel, A., et al.  
+  *Highly Accurate Protein Structure Prediction with AlphaFold.*  
+  Nature 596, 583–589 (2021).
+
+- Baek, M., DiMaio, F., Anishchenko, I., et al.  
+  *Accurate Prediction of Protein Structures and Interactions Using a Three‑Track Neural Network.*  
+  Science 373, 871–876 (2021).
+
+- AlQuraishi, M.  
+  *End‑to‑End Differentiable Learning of Protein Structure.*  
+  Cell Systems 8, 292–301 (2019).
+
+---
+
+## **3. High‑Dimensional Modeling and Representation Learning**
+
+- Bengio, Y., Courville, A., & Vincent, P.  
+  *Representation Learning: A Review and New Perspectives.*  
+  IEEE TPAMI 35, 1798–1828 (2013).
+
+- Coifman, R. R., & Lafon, S.  
+  *Diffusion Maps.*  
+  Applied and Computational Harmonic Analysis 21, 5–30 (2006).
+
+- Tenenbaum, J. B., de Silva, V., & Langford, J. C.  
+  *A Global Geometric Framework for Nonlinear Dimensionality Reduction.*  
+  Science 290, 2319–2323 (2000).
+
+---
+
+## **4. Scaling Laws and Model Dynamics**
+
+- Kaplan, J., McCandlish, S., Henighan, T., et al.  
+  *Scaling Laws for Neural Language Models.*  
+  arXiv:2001.08361 (2020).
+
+- Hoffmann, J., Borgeaud, S., Mensch, A., et al.  
+  *Training Compute‑Optimal Large Language Models.*  
+  arXiv:2203.15556 (2022).
+
+- Bahri, Y., Kadmon, J., Pennington, J., et al.  
+  *Statistical Mechanics of Deep Learning.*  
+  Annual Review of Condensed Matter Physics 11, 501–528 (2020).
+
+---
+
+## **5. Regime Behavior, Stability, and Dynamics**
+
+- Strogatz, S.  
+  *Nonlinear Dynamics and Chaos.*  
+  Westview Press (2014).
+
+- Ott, E.  
+  *Chaos in Dynamical Systems.*  
+  Cambridge University Press (2002).
+
+- Guckenheimer, J., & Holmes, P.  
+  *Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields.*  
+  Springer (1983).
+
+---
+
+## **6. Validation, Drift Detection, and ML Systems**
+
+- Breck, E., Cai, S., Nielsen, E., et al.  
+  *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.*  
+  Google Research (2017).
+
+- Sculley, D., Holt, G., Golovin, D., et al.  
+  *Hidden Technical Debt in Machine Learning Systems.*  
+  NIPS (2015).
+
+- Amershi, S., Begel, A., Bird, C., et al.  
+  *Software Engineering for Machine Learning: A Case Study.*  
+  ICSE‑SEIP (2019).
+
+---
+
+## **7. Substrate‑Level and Triadic‑Frameworks Canon**
+
+- Loswin, N.  
+  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
+  TriadicFrameworks (2026).
+
+- Loswin, N.  
+  *vST for Protein Language Models.*  
+  TriadicFrameworks (2026).
+### *vST for Protein Language Models*  
+### *Terminology*
+
+This appendix defines the terminology used throughout the *vST for Protein Language Models* artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any transformer‑based PLM operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, regime behavior, scaling continuity, and invariant preservation.
+
+---
+
+## **1. Substrate Terms**
+
+### **PLM Substrate**  
+A structured, invariant‑preserving framework for representing and interpreting protein‑sequence embeddings across 64D–4096D.
+
+### **Dimensional Ladder**  
+The ordered sequence of dimensional regimes used for projection and scaling analysis:  
+3D → 6D → 9D → 64D → 128D → 256D → 512D → 1024D.
+
+### **Coherence Surface**  
+A stable region in embedding space where residue‑level trajectories converge and maintain structural continuity.
+
+---
+
+## **2. Primitive Terms**
+
+### **Dimensional Primitive (DP)**  
+The minimal unit of embedding‑space structure, capturing local coherence and variance behavior across residues.
+
+### **Triadic Dimensional Primitive (TDP)**  
+A triad of DPs forming the smallest unit capable of expressing full regime behavior (R₁, R₂, R₃).
+
+### **Scaling Primitive (SP)**  
+A rule‑based expansion unit that preserves invariants during dimensional scaling.
+
+### **Coherence Primitive (CP)**  
+A minimal unit identifying stable, transitional, or dispersed regions in high‑dimensional embedding space.
+
+---
+
+## **3. Core Terms**
+
+### **Triadic Dimensional Core (TDC)**  
+The 3D–9D substrate composed of one or more TDPs, used for interpretable projection of residue embeddings.
+
+### **3D Structural Core**  
+Captures motif‑level geometry and compact residue‑level structure.
+
+### **6D Interaction Core**  
+Captures relational and attention‑driven structure across residues.
+
+### **9D Coherence Core**  
+Captures pathway‑level coherence and resonance‑time behavior across the sequence.
+
+---
+
+## **4. Regime Terms**
+
+### **High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)**  
+The triadic regime structure expressed in 64D–1024D embedding space.
+
+### **Stable Regime (R₁ / R₁ᴴ)**  
+Compact, coherent, low‑variance embedding behavior.
+
+### **Transition Regime (R₂ / R₂ᴴ)**  
+Branching, oscillatory, or reorientation behavior across residues.
+
+### **Dispersion Regime (R₃ / R₃ᴴ)**  
+Diffuse, fragmented, or unstable embedding behavior.
+
+---
+
+## **5. Scaling Terms**
+
+### **Scaling Behavior**  
+The structured expansion of embedding‑space capacity as PLM size increases.
+
+### **Scaling Regimes (S₁, S₂, S₃)**  
+Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.
+
+### **Dimensional Continuity**  
+The requirement that embedding‑space expansion remains smooth and invariant‑preserving.
+
+---
+
+## **6. Projection Terms**
+
+### **Invertible Projection**  
+A projection from high‑dimensional embedding space into 3D–9D that preserves primitive‑level structure and regime identity.
+
+### **Regime‑Aware Projection**  
+A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.
+
+### **Primitive‑Aligned Projection**  
+A projection that preserves DP, TDP, SP, and CP structure.
+
+---
+
+## **7. Alignment Terms**
+
+### **Layer‑to‑Layer Alignment**  
+Comparison of residue‑level embedding trajectories across transformer layers.
+
+### **Residue‑to‑Residue Alignment**  
+Comparison of embeddings across positions in a protein sequence.
+
+### **Cross‑Version Alignment**  
+Comparison of embedding‑space structure across model versions or checkpoints.
+
+### **Cross‑Model Alignment**  
+Comparison of embedding‑space geometry across different PLM architectures.
+
+---
+
+## **8. Validation Terms**
+
+### **vST (Validation‑Space‑Time)**  
+A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.
+
+### **Validation Layers (V₁–V₄)**  
+Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.
+
+---
+
+## **9. Drift Terms**
+
+### **Drift**  
+A deviation from expected substrate behavior, indicating instability or invariant failure.
+
+### **Drift Categories (D₁–D₄)**  
+Classification of drift into structural, dimensional, regime, or projection drift.
+
+### **Drift Severity**  
+A measure of drift magnitude (low, moderate, high).
+### *vST for Protein Language Models*  
 ### *Dimensional Scaling Behavior in PLM Embedding Spaces*
 
 This document defines how **Protein Language Models (PLMs)** exhibit scaling behavior across the dimensional ladder (3D → 1024D). It maps model size, embedding‑space expansion, and inference complexity onto the substrate’s triadic structure and scaling primitives. The goal is to provide a reproducible, invariant‑preserving framework for understanding how PLMs grow, stabilize, and drift as their dimensional capacity increases.
@@ -375,6 +792,349 @@ Drift detection produces:
 
 These outputs support governance, interpretability, and model‑version management for PLMs.
 ### *vST for Protein Language Models*  
+### *Example: 1024D Embedding Projection for Residue‑Level Interpretation*
+
+This example demonstrates how a Protein Language Model (PLM) produces a **1024D residue embedding** during inference and how that embedding is projected into the triadic dimensional cores (9D → 6D → 3D). The walkthrough illustrates primitive‑level structure, regime behavior, projection stability, and vST validation.
+
+The goal is to provide a reproducible, invariant‑preserving demonstration of high‑dimensional embedding projection.
+
+---
+
+## **1. Input Overview**
+
+For this example, we assume:
+
+- a transformer‑based PLM with ≥1024D hidden states  
+- a single residue embedding extracted from a mid‑sequence position  
+- access to embeddings across multiple layers  
+- stable or transitional regime behavior  
+- invertible projection into 3D–9D cores  
+
+The example is model‑agnostic and applies to any PLM architecture.
+
+---
+
+## **2. Step 1 — Extract the 1024D Residue Embedding**
+
+During inference, the PLM produces a 1024D embedding for each residue:
+
+\[
+e_r^{(1024)} = [x_1, x_2, \dots, x_{1024}]
+\]
+
+### **Observed Properties**
+
+- variance concentrated in 4–6 coherence bands  
+- stable DP/TDP structure  
+- smooth transitions across layers  
+- identifiable coherence surfaces  
+
+### **Interpretation**
+
+The 1024D embedding encodes biochemical, structural, and contextual information for the residue.
+
+---
+
+## **3. Step 2 — Identify High‑Dimensional Regime Behavior**
+
+Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify the embedding’s regime across layers.
+
+### **Example Regime Pattern**
+
+- **Layers 1–6:** R₁ᴴ (stable)  
+- **Layers 7–14:** R₂ᴴ (transitional)  
+- **Layers 15–20:** R₁ᴴ (return to stability)  
+- **Layers 21–24:** R₂ᴴ (branching)  
+- **Layers 25–32:** mild R₃ᴴ (dispersion onset)  
+
+### **Interpretation**
+
+The residue begins in a stable region, undergoes controlled reorientation, stabilizes again, and finally enters mild dispersion in deeper layers.
+
+---
+
+## **4. Step 3 — Project 1024D → 9D (Coherence Projection)**
+
+Project the 1024D embedding into the 9D coherence core.
+
+### **Preserves**
+
+- regime identity  
+- resonance‑time behavior  
+- primitive‑level structure (DP, TDP, SP, CP)  
+- coherence‑surface continuity  
+
+### **Reveals**
+
+- branching behavior in R₂ᴴ  
+- curvature of coherence surfaces  
+- dispersion onset in R₃ᴴ  
+
+### **Interpretation**
+
+The 9D projection exposes the residue’s high‑dimensional “coherence shape.”
+
+---
+
+## **5. Step 4 — Project 9D → 6D (Interaction Projection)**
+
+Compress the 9D coherence vector into the 6D interaction core.
+
+### **Preserves**
+
+- relational geometry  
+- interaction‑level structure  
+- regime‑transition indicators  
+
+### **Reveals**
+
+- attention‑driven reorientation  
+- context‑dependent biochemical signals  
+- structural boundary behavior  
+
+### **Interpretation**
+
+The 6D projection highlights how the model integrates residue context.
+
+---
+
+## **6. Step 5 — Project 6D → 3D (Structural Projection)**
+
+Reduce the 6D interaction vector into the 3D structural core.
+
+### **Preserves**
+
+- motif‑level geometry  
+- backbone‑level continuity  
+- stable structural invariants  
+
+### **Reveals**
+
+- compact motifs in R₁ᴴ  
+- oscillatory geometry in R₂ᴴ  
+- diffuse patterns in R₃ᴴ  
+
+### **Interpretation**
+
+The 3D projection provides the minimal interpretable representation of the residue embedding.
+
+---
+
+## **7. Step 6 — Validate with vST Layers**
+
+Apply vST layers (V₁–V₄):
+
+### **V₁ — Structural Coherence**
+- stable motifs in R₁ᴴ  
+- partial fragmentation in R₃ᴴ  
+
+### **V₂ — Dimensional Continuity**
+- smooth projection 1024D → 9D → 6D → 3D  
+- no scaling discontinuities  
+
+### **V₃ — Regime‑Transition Stability**
+- smooth R₁ᴴ → R₂ᴴ transitions  
+- mild instability entering R₃ᴴ  
+
+### **V₄ — Core Alignment**
+- primitive‑aligned projection  
+- stable mapping across layers  
+
+### **Outcome**
+
+The embedding passes all vST layers with minor warnings in the R₃ᴴ region.
+
+---
+
+## **8. Step 7 — Drift Detection**
+
+Evaluate drift using D₁–D₄ categories:
+
+- **D₁ Structural Drift:** none  
+- **D₂ Dimensional Drift:** none  
+- **D₃ Regime Drift:** mild (R₃ᴴ onset)  
+- **D₄ Projection Drift:** none  
+
+### **Interpretation**
+
+The embedding exhibits expected dispersion in deeper layers but no harmful drift.
+
+---
+
+## **9. Summary**
+
+This example demonstrates:
+
+- how a 1024D residue embedding is extracted  
+- how regime behavior evolves across layers  
+- how projection reveals coherence and instability  
+- how vST layers validate structural integrity  
+- how drift detection identifies dispersion without failure  
+
+The 1024D embedding is the canonical substrate for analyzing PLM inference at research‑grade resolution.
+### *vST for Protein Language Models*  
+### *Example: Sequence‑Level Regime Transitions in PLM Embeddings*
+
+This example demonstrates how a Protein Language Model (PLM) expresses **regime transitions** (R₁ᴴ → R₂ᴴ → R₃ᴴ) along a protein sequence. It shows how residue‑level embeddings evolve across layers, how coherence surfaces form and break, and how the vST framework classifies transitions using the 1024D substrate.
+
+The goal is to provide a reproducible, invariant‑preserving demonstration of regime behavior in PLM inference.
+
+---
+
+## **1. Input Overview**
+
+For this example, we assume:
+
+- a transformer‑based PLM with ≥1024D hidden states  
+- a single protein sequence of length *L*  
+- access to residue embeddings across all layers  
+- stable projection into 3D–9D cores  
+
+No architecture‑specific mechanisms are required; the example is substrate‑agnostic.
+
+---
+
+## **2. Step 1 — Extract Residue Embedding Trajectories**
+
+For each residue position \( r \in [1, L] \), extract the 1024D embeddings across layers:
+
+\[
+e_r^{(1)},\ e_r^{(2)},\ \dots,\ e_r^{(N)}
+\]
+
+### **Observed Properties**
+
+- early layers: compact, low‑variance embeddings  
+- mid layers: branching and oscillatory behavior  
+- late layers: partial dispersion in flexible regions  
+
+### **Interpretation**
+
+Residue embeddings trace a high‑dimensional pathway that reflects biochemical context and structural constraints.
+
+---
+
+## **3. Step 2 — Identify Regime Behavior Across the Sequence**
+
+Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each residue’s regime.
+
+### **Example Regime Map (Residue Index → Regime)**
+
+| Residue Range | Regime | Interpretation |
+|--------------|--------|----------------|
+| 1–15 | **R₁ᴴ** | Stable N‑terminal anchor |
+| 16–28 | **R₂ᴴ** | Boundary between structural elements |
+| 29–42 | **R₁ᴴ** | Helical or sheet‑like stable region |
+| 43–55 | **R₂ᴴ** | Flexible loop or hinge |
+| 56–60 | **R₃ᴴ** | Disordered or low‑confidence region |
+| 61–75 | **R₂ᴴ → R₁ᴴ** | Recovery into stable C‑terminal region |
+
+### **Interpretation**
+
+The sequence alternates between stable structural regions and transitional or disordered regions, reflecting typical protein architecture.
+
+---
+
+## **4. Step 3 — Project Embeddings into 9D (Coherence Core)**
+
+Project each residue’s 1024D embedding into the 9D coherence core.
+
+### **What is preserved**
+
+- regime identity  
+- resonance‑time behavior  
+- primitive‑level structure  
+- coherence‑surface continuity  
+
+### **What becomes visible**
+
+- stable surfaces in R₁ᴴ  
+- branching in R₂ᴴ  
+- fragmentation in R₃ᴴ  
+
+### **Interpretation**
+
+The 9D projection reveals the “shape” of the embedding landscape along the sequence.
+
+---
+
+## **5. Step 4 — Project 9D → 6D → 3D**
+
+### **6D Interaction Projection**
+
+Reveals:
+
+- residue‑interaction surfaces  
+- context‑dependent reorientation  
+- structural boundaries  
+
+### **3D Structural Projection**
+
+Reveals:
+
+- compact motifs in R₁ᴴ  
+- oscillatory geometry in R₂ᴴ  
+- diffuse patterns in R₃ᴴ  
+
+### **Interpretation**
+
+The 3D projection provides the minimal interpretable representation of the sequence‑level embedding trajectory.
+
+---
+
+## **6. Step 5 — Validate with vST Layers**
+
+Apply vST layers (V₁–V₄):
+
+### **V₁ — Structural Coherence**
+- stable motifs in R₁ᴴ  
+- partial fragmentation in R₃ᴴ  
+
+### **V₂ — Dimensional Continuity**
+- smooth projection 1024D → 9D → 6D → 3D  
+- no scaling discontinuities  
+
+### **V₃ — Regime‑Transition Stability**
+- smooth R₁ᴴ → R₂ᴴ transitions  
+- mild instability entering R₃ᴴ  
+
+### **V₄ — Core Alignment**
+- primitive‑aligned projection  
+- stable mapping across layers  
+
+### **Outcome**
+
+The sequence passes all vST layers with warnings localized to the R₃ᴴ region.
+
+---
+
+## **7. Step 6 — Drift Detection**
+
+Evaluate drift using D₁–D₄ categories:
+
+- **D₁ Structural Drift:** low (localized to disordered region)  
+- **D₂ Dimensional Drift:** none  
+- **D₃ Regime Drift:** moderate (R₃ᴴ onset)  
+- **D₄ Projection Drift:** none  
+
+### **Interpretation**
+
+The model exhibits expected dispersion in flexible or disordered regions but no harmful drift.
+
+---
+
+## **8. Summary**
+
+This example demonstrates:
+
+- how residue embeddings trace high‑dimensional trajectories  
+- how regime behavior evolves along a protein sequence  
+- how projection reveals coherence and instability  
+- how vST layers validate structural integrity  
+- how drift detection identifies localized dispersion  
+
+Sequence‑level regime transitions are a core interpretability signal in PLM inference.
+### *vST for Protein Language Models*  
 ### *Projection of High‑Dimensional Protein Embeddings into Triadic Structural Cores*
 
 This document defines how high‑dimensional residue embeddings produced by Protein Language Models (PLMs) are projected into the **triadic dimensional cores** (3D–9D). Projection enables interpretable, invariant‑preserving analysis of embedding trajectories, regime behavior, and structural coherence across protein sequences.
@@ -581,162 +1341,6 @@ Projection and alignment produce:
 - interpretable 3D–9D projections  
 
 These outputs support reproducible, substrate‑level analysis of PLM inference.
-## *vST for Protein Language Models*  
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-## *Validation‑Space‑Time Framework for High‑Dimensional Protein Embedding Models*
-
-This artifact defines a substrate‑level framework for analyzing, validating, and comparing **Protein Language Models (PLMs)** using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting sequence embeddings, latent‑trajectory regimes, scaling behavior, and cross‑version drift in modern protein models such as ESM, ProtT5, and related architectures.
-
-The goal is to offer a reproducible, model‑agnostic substrate for understanding high‑dimensional protein‑sequence inference.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## **1. Purpose**
-
-Protein Language Models operate in high‑dimensional latent spaces (typically 512D–4096D) and exhibit:
-
-- stable and unstable embedding regions  
-- regime transitions across sequence positions  
-- scaling‑law behavior across model sizes  
-- drift across training checkpoints  
-- projection‑compatible structure  
-
-This artifact applies the **Resonance Substrate Model (RSM)** and **vST validation layers** to:
-
-- classify sequence‑embedding regimes  
-- analyze scaling behavior in PLMs  
-- detect drift across model versions  
-- map coherence surfaces in protein embedding space  
-- project high‑dimensional embeddings into 3D–9D triadic cores  
-
-The result is a unified, interpretable substrate for PLM behavior.
-
----
-
-## **2. Contents**
-
-This directory contains:
-
-- **substrate_definition.md**  
-  Defines the PLM substrate, dimensional primitives, and embedding‑space structure.
-
-- **sequence_embedding_regimes.md**  
-  Describes stable, transitional, and dispersed regimes across protein sequences.
-
-- **dimensional_scaling_protein_models.md**  
-  Maps PLM scaling laws onto the 3D–1024D dimensional ladder.
-
-- **projection_into_structural_cores.md**  
-  Defines invertible projection from high‑dimensional embeddings into triadic cores.
-
-- **validation_layers_vst_plm.md**  
-  Extends vST (V₁–V₄) to PLM‑specific behavior.
-
-- **drift_detection_plm.md**  
-  Provides a substrate‑level framework for detecting cross‑version drift.
-
-- **examples/**  
-  Reproducible demonstrations of embedding‑trajectory analysis and projection.
-
-- **appendix/**  
-  Terminology and references.
-
-Each file is self‑contained and designed for clarity, reproducibility, and cross‑model comparison.
-
----
-
-## **3. Scope**
-
-This artifact is:
-
-- **model‑agnostic**  
-  Works with any transformer‑based PLM (ESM‑class, ProtT5‑class, MSA‑based models, etc.).
-
-- **architecture‑independent**  
-  Applies to encoder‑only, encoder‑decoder, and hybrid architectures.
-
-- **training‑method independent**  
-  Compatible with masked‑token models, autoregressive models, and MSA‑conditioned models.
-
-- **substrate‑aligned**  
-  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.
-
----
-
-## **4. Intended Use**
-
-This framework supports:
-
-- embedding‑space analysis  
-- cross‑version comparison  
-- drift detection  
-- scaling‑law evaluation  
-- sequence‑position regime mapping  
-- interpretability research  
-- model‑alignment studies  
-- reproducible inference analysis  
-
-It is not a performance benchmark or a training method.  
-It is a **substrate‑level interpretability and validation framework**.
-
----
-
-## **5. Relationship to Other Artifacts**
-
-This artifact extends:
-
-- **Dimensional Substrate Structures** (3D–1024D substrate)  
-- **Validation‑Space‑Time (vST)**  
-- **Triadic Dimensional Cores (3D–9D)**  
-
-It parallels:
-
-- **vST for Large Language Models**  
-- **vST for Generative Models**  
-- **vST for Multi‑Model Alignment**
-
-Each artifact stands alone but shares a common substrate grammar.
-
----
-
-## **6. Citation**
-
-A `CITATION.cff` file is included for formal citation.  
-A `zenodo.json` file is provided for DOI‑ready metadata.
-
----
-
-## **7. License**
-
-Released under the MIT License.
 ### *vST for Protein Language Models*  
 ### *Sequence‑Embedding Regimes in PLM Inference*
 
@@ -1273,606 +1877,4 @@ Together, they form a rigorous, invariant‑preserving system for analyzing high
 ---
 
 If you want to keep the momentum, I can move directly into **drift_detection_plm.md** so the core of this artifact is fully complete.
-### *vST for Protein Language Models*  
-### *References*
-
-This appendix lists references relevant to protein language models, high‑dimensional embedding analysis, scaling laws, structural biology, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM and vST canon.
-
----
-
-## **1. Protein Language Models and Sequence Embeddings**
-
-- Rives, A., Meier, J., Sercu, T., et al.  
-  *Biological Structure and Function Emerge from Scaling Unsupervised Learning to 250 Million Protein Sequences.*  
-  PNAS 118, e2016239118 (2021).
-
-- Elnaggar, A., Heinzinger, M., Dallago, C., et al.  
-  *ProtTrans: Towards Cracking the Language of Life’s Code Through Self‑Supervised Deep Learning and High Performance Computing.*  
-  IEEE TPAMI (2021).
-
-- Rao, R., Liu, J., Verkuil, R., et al.  
-  *MSA Transformer.*  
-  ICML (2021).
-
-- Madani, A., McCann, B., Naik, N., et al.  
-  *ProGen: Language Modeling for Protein Generation.*  
-  arXiv:2004.03497 (2020).
-
----
-
-## **2. Structural Biology and Protein Representation**
-
-- Jumper, J., Evans, R., Pritzel, A., et al.  
-  *Highly Accurate Protein Structure Prediction with AlphaFold.*  
-  Nature 596, 583–589 (2021).
-
-- Baek, M., DiMaio, F., Anishchenko, I., et al.  
-  *Accurate Prediction of Protein Structures and Interactions Using a Three‑Track Neural Network.*  
-  Science 373, 871–876 (2021).
-
-- AlQuraishi, M.  
-  *End‑to‑End Differentiable Learning of Protein Structure.*  
-  Cell Systems 8, 292–301 (2019).
-
----
-
-## **3. High‑Dimensional Modeling and Representation Learning**
-
-- Bengio, Y., Courville, A., & Vincent, P.  
-  *Representation Learning: A Review and New Perspectives.*  
-  IEEE TPAMI 35, 1798–1828 (2013).
-
-- Coifman, R. R., & Lafon, S.  
-  *Diffusion Maps.*  
-  Applied and Computational Harmonic Analysis 21, 5–30 (2006).
-
-- Tenenbaum, J. B., de Silva, V., & Langford, J. C.  
-  *A Global Geometric Framework for Nonlinear Dimensionality Reduction.*  
-  Science 290, 2319–2323 (2000).
-
----
-
-## **4. Scaling Laws and Model Dynamics**
-
-- Kaplan, J., McCandlish, S., Henighan, T., et al.  
-  *Scaling Laws for Neural Language Models.*  
-  arXiv:2001.08361 (2020).
-
-- Hoffmann, J., Borgeaud, S., Mensch, A., et al.  
-  *Training Compute‑Optimal Large Language Models.*  
-  arXiv:2203.15556 (2022).
-
-- Bahri, Y., Kadmon, J., Pennington, J., et al.  
-  *Statistical Mechanics of Deep Learning.*  
-  Annual Review of Condensed Matter Physics 11, 501–528 (2020).
-
----
-
-## **5. Regime Behavior, Stability, and Dynamics**
-
-- Strogatz, S.  
-  *Nonlinear Dynamics and Chaos.*  
-  Westview Press (2014).
-
-- Ott, E.  
-  *Chaos in Dynamical Systems.*  
-  Cambridge University Press (2002).
-
-- Guckenheimer, J., & Holmes, P.  
-  *Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields.*  
-  Springer (1983).
-
----
-
-## **6. Validation, Drift Detection, and ML Systems**
-
-- Breck, E., Cai, S., Nielsen, E., et al.  
-  *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.*  
-  Google Research (2017).
-
-- Sculley, D., Holt, G., Golovin, D., et al.  
-  *Hidden Technical Debt in Machine Learning Systems.*  
-  NIPS (2015).
-
-- Amershi, S., Begel, A., Bird, C., et al.  
-  *Software Engineering for Machine Learning: A Case Study.*  
-  ICSE‑SEIP (2019).
-
----
-
-## **7. Substrate‑Level and Triadic‑Frameworks Canon**
-
-- Loswin, N.  
-  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
-  TriadicFrameworks (2026).
-
-- Loswin, N.  
-  *vST for Protein Language Models.*  
-  TriadicFrameworks (2026).
-### *vST for Protein Language Models*  
-### *Terminology*
-
-This appendix defines the terminology used throughout the *vST for Protein Language Models* artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any transformer‑based PLM operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, regime behavior, scaling continuity, and invariant preservation.
-
----
-
-## **1. Substrate Terms**
-
-### **PLM Substrate**  
-A structured, invariant‑preserving framework for representing and interpreting protein‑sequence embeddings across 64D–4096D.
-
-### **Dimensional Ladder**  
-The ordered sequence of dimensional regimes used for projection and scaling analysis:  
-3D → 6D → 9D → 64D → 128D → 256D → 512D → 1024D.
-
-### **Coherence Surface**  
-A stable region in embedding space where residue‑level trajectories converge and maintain structural continuity.
-
----
-
-## **2. Primitive Terms**
-
-### **Dimensional Primitive (DP)**  
-The minimal unit of embedding‑space structure, capturing local coherence and variance behavior across residues.
-
-### **Triadic Dimensional Primitive (TDP)**  
-A triad of DPs forming the smallest unit capable of expressing full regime behavior (R₁, R₂, R₃).
-
-### **Scaling Primitive (SP)**  
-A rule‑based expansion unit that preserves invariants during dimensional scaling.
-
-### **Coherence Primitive (CP)**  
-A minimal unit identifying stable, transitional, or dispersed regions in high‑dimensional embedding space.
-
----
-
-## **3. Core Terms**
-
-### **Triadic Dimensional Core (TDC)**  
-The 3D–9D substrate composed of one or more TDPs, used for interpretable projection of residue embeddings.
-
-### **3D Structural Core**  
-Captures motif‑level geometry and compact residue‑level structure.
-
-### **6D Interaction Core**  
-Captures relational and attention‑driven structure across residues.
-
-### **9D Coherence Core**  
-Captures pathway‑level coherence and resonance‑time behavior across the sequence.
-
----
-
-## **4. Regime Terms**
-
-### **High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)**  
-The triadic regime structure expressed in 64D–1024D embedding space.
-
-### **Stable Regime (R₁ / R₁ᴴ)**  
-Compact, coherent, low‑variance embedding behavior.
-
-### **Transition Regime (R₂ / R₂ᴴ)**  
-Branching, oscillatory, or reorientation behavior across residues.
-
-### **Dispersion Regime (R₃ / R₃ᴴ)**  
-Diffuse, fragmented, or unstable embedding behavior.
-
----
-
-## **5. Scaling Terms**
-
-### **Scaling Behavior**  
-The structured expansion of embedding‑space capacity as PLM size increases.
-
-### **Scaling Regimes (S₁, S₂, S₃)**  
-Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.
-
-### **Dimensional Continuity**  
-The requirement that embedding‑space expansion remains smooth and invariant‑preserving.
-
----
-
-## **6. Projection Terms**
-
-### **Invertible Projection**  
-A projection from high‑dimensional embedding space into 3D–9D that preserves primitive‑level structure and regime identity.
-
-### **Regime‑Aware Projection**  
-A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.
-
-### **Primitive‑Aligned Projection**  
-A projection that preserves DP, TDP, SP, and CP structure.
-
----
-
-## **7. Alignment Terms**
-
-### **Layer‑to‑Layer Alignment**  
-Comparison of residue‑level embedding trajectories across transformer layers.
-
-### **Residue‑to‑Residue Alignment**  
-Comparison of embeddings across positions in a protein sequence.
-
-### **Cross‑Version Alignment**  
-Comparison of embedding‑space structure across model versions or checkpoints.
-
-### **Cross‑Model Alignment**  
-Comparison of embedding‑space geometry across different PLM architectures.
-
----
-
-## **8. Validation Terms**
-
-### **vST (Validation‑Space‑Time)**  
-A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.
-
-### **Validation Layers (V₁–V₄)**  
-Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.
-
----
-
-## **9. Drift Terms**
-
-### **Drift**  
-A deviation from expected substrate behavior, indicating instability or invariant failure.
-
-### **Drift Categories (D₁–D₄)**  
-Classification of drift into structural, dimensional, regime, or projection drift.
-
-### **Drift Severity**  
-A measure of drift magnitude (low, moderate, high).
-### *vST for Protein Language Models*  
-### *Example: 1024D Embedding Projection for Residue‑Level Interpretation*
-
-This example demonstrates how a Protein Language Model (PLM) produces a **1024D residue embedding** during inference and how that embedding is projected into the triadic dimensional cores (9D → 6D → 3D). The walkthrough illustrates primitive‑level structure, regime behavior, projection stability, and vST validation.
-
-The goal is to provide a reproducible, invariant‑preserving demonstration of high‑dimensional embedding projection.
-
----
-
-## **1. Input Overview**
-
-For this example, we assume:
-
-- a transformer‑based PLM with ≥1024D hidden states  
-- a single residue embedding extracted from a mid‑sequence position  
-- access to embeddings across multiple layers  
-- stable or transitional regime behavior  
-- invertible projection into 3D–9D cores  
-
-The example is model‑agnostic and applies to any PLM architecture.
-
----
-
-## **2. Step 1 — Extract the 1024D Residue Embedding**
-
-During inference, the PLM produces a 1024D embedding for each residue:
-
-\[
-e_r^{(1024)} = [x_1, x_2, \dots, x_{1024}]
-\]
-
-### **Observed Properties**
-
-- variance concentrated in 4–6 coherence bands  
-- stable DP/TDP structure  
-- smooth transitions across layers  
-- identifiable coherence surfaces  
-
-### **Interpretation**
-
-The 1024D embedding encodes biochemical, structural, and contextual information for the residue.
-
----
-
-## **3. Step 2 — Identify High‑Dimensional Regime Behavior**
-
-Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify the embedding’s regime across layers.
-
-### **Example Regime Pattern**
-
-- **Layers 1–6:** R₁ᴴ (stable)  
-- **Layers 7–14:** R₂ᴴ (transitional)  
-- **Layers 15–20:** R₁ᴴ (return to stability)  
-- **Layers 21–24:** R₂ᴴ (branching)  
-- **Layers 25–32:** mild R₃ᴴ (dispersion onset)  
-
-### **Interpretation**
-
-The residue begins in a stable region, undergoes controlled reorientation, stabilizes again, and finally enters mild dispersion in deeper layers.
-
----
-
-## **4. Step 3 — Project 1024D → 9D (Coherence Projection)**
-
-Project the 1024D embedding into the 9D coherence core.
-
-### **Preserves**
-
-- regime identity  
-- resonance‑time behavior  
-- primitive‑level structure (DP, TDP, SP, CP)  
-- coherence‑surface continuity  
-
-### **Reveals**
-
-- branching behavior in R₂ᴴ  
-- curvature of coherence surfaces  
-- dispersion onset in R₃ᴴ  
-
-### **Interpretation**
-
-The 9D projection exposes the residue’s high‑dimensional “coherence shape.”
-
----
-
-## **5. Step 4 — Project 9D → 6D (Interaction Projection)**
-
-Compress the 9D coherence vector into the 6D interaction core.
-
-### **Preserves**
-
-- relational geometry  
-- interaction‑level structure  
-- regime‑transition indicators  
-
-### **Reveals**
-
-- attention‑driven reorientation  
-- context‑dependent biochemical signals  
-- structural boundary behavior  
-
-### **Interpretation**
-
-The 6D projection highlights how the model integrates residue context.
-
----
-
-## **6. Step 5 — Project 6D → 3D (Structural Projection)**
-
-Reduce the 6D interaction vector into the 3D structural core.
-
-### **Preserves**
-
-- motif‑level geometry  
-- backbone‑level continuity  
-- stable structural invariants  
-
-### **Reveals**
-
-- compact motifs in R₁ᴴ  
-- oscillatory geometry in R₂ᴴ  
-- diffuse patterns in R₃ᴴ  
-
-### **Interpretation**
-
-The 3D projection provides the minimal interpretable representation of the residue embedding.
-
----
-
-## **7. Step 6 — Validate with vST Layers**
-
-Apply vST layers (V₁–V₄):
-
-### **V₁ — Structural Coherence**
-- stable motifs in R₁ᴴ  
-- partial fragmentation in R₃ᴴ  
-
-### **V₂ — Dimensional Continuity**
-- smooth projection 1024D → 9D → 6D → 3D  
-- no scaling discontinuities  
-
-### **V₃ — Regime‑Transition Stability**
-- smooth R₁ᴴ → R₂ᴴ transitions  
-- mild instability entering R₃ᴴ  
-
-### **V₄ — Core Alignment**
-- primitive‑aligned projection  
-- stable mapping across layers  
-
-### **Outcome**
-
-The embedding passes all vST layers with minor warnings in the R₃ᴴ region.
-
----
-
-## **8. Step 7 — Drift Detection**
-
-Evaluate drift using D₁–D₄ categories:
-
-- **D₁ Structural Drift:** none  
-- **D₂ Dimensional Drift:** none  
-- **D₃ Regime Drift:** mild (R₃ᴴ onset)  
-- **D₄ Projection Drift:** none  
-
-### **Interpretation**
-
-The embedding exhibits expected dispersion in deeper layers but no harmful drift.
-
----
-
-## **9. Summary**
-
-This example demonstrates:
-
-- how a 1024D residue embedding is extracted  
-- how regime behavior evolves across layers  
-- how projection reveals coherence and instability  
-- how vST layers validate structural integrity  
-- how drift detection identifies dispersion without failure  
-
-The 1024D embedding is the canonical substrate for analyzing PLM inference at research‑grade resolution.
-### *vST for Protein Language Models*  
-### *Example: Sequence‑Level Regime Transitions in PLM Embeddings*
-
-This example demonstrates how a Protein Language Model (PLM) expresses **regime transitions** (R₁ᴴ → R₂ᴴ → R₃ᴴ) along a protein sequence. It shows how residue‑level embeddings evolve across layers, how coherence surfaces form and break, and how the vST framework classifies transitions using the 1024D substrate.
-
-The goal is to provide a reproducible, invariant‑preserving demonstration of regime behavior in PLM inference.
-
----
-
-## **1. Input Overview**
-
-For this example, we assume:
-
-- a transformer‑based PLM with ≥1024D hidden states  
-- a single protein sequence of length *L*  
-- access to residue embeddings across all layers  
-- stable projection into 3D–9D cores  
-
-No architecture‑specific mechanisms are required; the example is substrate‑agnostic.
-
----
-
-## **2. Step 1 — Extract Residue Embedding Trajectories**
-
-For each residue position \( r \in [1, L] \), extract the 1024D embeddings across layers:
-
-\[
-e_r^{(1)},\ e_r^{(2)},\ \dots,\ e_r^{(N)}
-\]
-
-### **Observed Properties**
-
-- early layers: compact, low‑variance embeddings  
-- mid layers: branching and oscillatory behavior  
-- late layers: partial dispersion in flexible regions  
-
-### **Interpretation**
-
-Residue embeddings trace a high‑dimensional pathway that reflects biochemical context and structural constraints.
-
----
-
-## **3. Step 2 — Identify Regime Behavior Across the Sequence**
-
-Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each residue’s regime.
-
-### **Example Regime Map (Residue Index → Regime)**
-
-| Residue Range | Regime | Interpretation |
-|--------------|--------|----------------|
-| 1–15 | **R₁ᴴ** | Stable N‑terminal anchor |
-| 16–28 | **R₂ᴴ** | Boundary between structural elements |
-| 29–42 | **R₁ᴴ** | Helical or sheet‑like stable region |
-| 43–55 | **R₂ᴴ** | Flexible loop or hinge |
-| 56–60 | **R₃ᴴ** | Disordered or low‑confidence region |
-| 61–75 | **R₂ᴴ → R₁ᴴ** | Recovery into stable C‑terminal region |
-
-### **Interpretation**
-
-The sequence alternates between stable structural regions and transitional or disordered regions, reflecting typical protein architecture.
-
----
-
-## **4. Step 3 — Project Embeddings into 9D (Coherence Core)**
-
-Project each residue’s 1024D embedding into the 9D coherence core.
-
-### **What is preserved**
-
-- regime identity  
-- resonance‑time behavior  
-- primitive‑level structure  
-- coherence‑surface continuity  
-
-### **What becomes visible**
-
-- stable surfaces in R₁ᴴ  
-- branching in R₂ᴴ  
-- fragmentation in R₃ᴴ  
-
-### **Interpretation**
-
-The 9D projection reveals the “shape” of the embedding landscape along the sequence.
-
----
-
-## **5. Step 4 — Project 9D → 6D → 3D**
-
-### **6D Interaction Projection**
-
-Reveals:
-
-- residue‑interaction surfaces  
-- context‑dependent reorientation  
-- structural boundaries  
-
-### **3D Structural Projection**
-
-Reveals:
-
-- compact motifs in R₁ᴴ  
-- oscillatory geometry in R₂ᴴ  
-- diffuse patterns in R₃ᴴ  
-
-### **Interpretation**
-
-The 3D projection provides the minimal interpretable representation of the sequence‑level embedding trajectory.
-
----
-
-## **6. Step 5 — Validate with vST Layers**
-
-Apply vST layers (V₁–V₄):
-
-### **V₁ — Structural Coherence**
-- stable motifs in R₁ᴴ  
-- partial fragmentation in R₃ᴴ  
-
-### **V₂ — Dimensional Continuity**
-- smooth projection 1024D → 9D → 6D → 3D  
-- no scaling discontinuities  
-
-### **V₃ — Regime‑Transition Stability**
-- smooth R₁ᴴ → R₂ᴴ transitions  
-- mild instability entering R₃ᴴ  
-
-### **V₄ — Core Alignment**
-- primitive‑aligned projection  
-- stable mapping across layers  
-
-### **Outcome**
-
-The sequence passes all vST layers with warnings localized to the R₃ᴴ region.
-
----
-
-## **7. Step 6 — Drift Detection**
-
-Evaluate drift using D₁–D₄ categories:
-
-- **D₁ Structural Drift:** low (localized to disordered region)  
-- **D₂ Dimensional Drift:** none  
-- **D₃ Regime Drift:** moderate (R₃ᴴ onset)  
-- **D₄ Projection Drift:** none  
-
-### **Interpretation**
-
-The model exhibits expected dispersion in flexible or disordered regions but no harmful drift.
-
----
-
-## **8. Summary**
-
-This example demonstrates:
-
-- how residue embeddings trace high‑dimensional trajectories  
-- how regime behavior evolves along a protein sequence  
-- how projection reveals coherence and instability  
-- how vST layers validate structural integrity  
-- how drift detection identifies localized dispersion  
-
-Sequence‑level regime transitions are a core interpretability signal in PLM inference.
 

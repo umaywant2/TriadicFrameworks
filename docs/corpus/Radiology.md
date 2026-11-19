@@ -1,5 +1,5 @@
 Radiology 
-<img width="938" height="938" alt="RTT_Radiology_logo" src="https://github.com/user-attachments/assets/524fdb09-1ae6-4386-866d-ca9e9e3ba399" />
+<img width="1194" height="672" alt="Radiology_" src="https://github.com/user-attachments/assets/33843ace-091b-415b-a624-7696a97c8f85" />
 
 # 📡 Radiology 
 
@@ -323,7 +323,9 @@ Radiology is the **visibility engine** of TriadicFrameworks.
 
 # **7. Atlas Ready**
 This file is complete and ready for GitHub.
-# **📡 r_Capture.md**  
+<img width="938" height="938" alt="RTT_Radiology_logo" src="https://github.com/user-attachments/assets/524fdb09-1ae6-4386-866d-ca9e9e3ba399" />
+
+# **📡 r_Capture.md**  
 ### *Radiology Capture Layer — TriadicFrameworks Canon*
 
 The Capture layer defines the foundational grammar and operators used to interpret any radiological imaging modality (CT, MRI, X‑ray, PET, Ultrasound).  

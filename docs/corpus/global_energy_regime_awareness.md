@@ -1,33 +1,9 @@
 global_energy_regime_awareness 
-## Relationship to the Resonance Substrate Model (RSM)
-
-Global Energy Regime Awareness is complementary to the Resonance Substrate Model (RSM) in its emphasis on coherence across interacting systems and scales.
-
-RSM introduces resonance as a structural concept for understanding alignment across regimes. GERA does not model resonance dynamics directly, but applies similar principles of explicit context declaration and boundary recognition within energy systems.
-
-By making regime assumptions visible, GERA supports clearer interpretation of system behavior during transitions, variability, and stress without introducing new control layers.
-
-The relationship to RSM is conceptual and interpretive rather than functional.
-# Global Energy Regime Awareness (GERA) 
+<img width="1194" height="672" alt="global_energy_regime_awareness_" src="https://github.com/user-attachments/assets/d0ad9e37-4c3a-4ca9-a27d-a8bd42b2d822" />
 
 - [`gera_module.json`](gera_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# Global Energy Regime Awareness (GERA) 
 Global energy systems operate across multiple regimes defined by generation capacity, transmission constraints, demand variability, and environmental conditions. These regimes are often implicit, evolving over time without explicit declaration.
 
 Global Energy Regime Awareness (GERA) provides a descriptive framework for expressing operating context, validity assumptions, and boundary semantics within energy systems using existing standards and operational surfaces.
@@ -51,33 +27,23 @@ This work is intended for:
 - Policy and regulatory stakeholders
 
 GERA is implementation‑agnostic and non‑prescriptive. Its purpose is to make structural context visible without altering how energy systems are operated or governed.
-## Relationship to the Resonance Substrate Model (RSM)
 
-Global Energy Regime Awareness is complementary to the Resonance Substrate Model (RSM) in its emphasis on coherence across interacting systems and scales.
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
-RSM introduces resonance as a structural concept for understanding alignment across regimes. GERA does not model resonance dynamics directly, but applies similar principles of explicit context declaration and boundary recognition within energy systems.
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
-By making regime assumptions visible, GERA supports clearer interpretation of system behavior during transitions, variability, and stress without introducing new control layers.
-
-The relationship to RSM is conceptual and interpretive rather than functional.
-## Relationship to the Manufacturing Substrate Regime Model (MSRM)
-
-Global Energy Regime Awareness aligns conceptually with the Manufacturing Substrate Regime Model (MSRM) in its treatment of regimes, operating envelopes, and validity as structural concerns.
-
-MSRM applies regime reasoning to manufacturing environments characterized by extreme physical constraints and calibration dependencies. GERA adapts similar principles to energy systems, where operating assumptions shift due to load variability, resource availability, and environmental conditions.
-
-GERA does not extend or modify MSRM. It demonstrates how substrate‑level regime reasoning can be applied to large‑scale energy infrastructure using existing operational constructs.
-
-The relationship is methodological rather than dependent.
-## Relationship to the Resonance Substrate Model (RSM)
-
-Global Energy Regime Awareness is complementary to the Resonance Substrate Model (RSM) in its emphasis on coherence across interacting systems and scales.
-
-RSM introduces resonance as a structural concept for understanding alignment across regimes. GERA does not model resonance dynamics directly, but applies similar principles of explicit context declaration and boundary recognition within energy systems.
-
-By making regime assumptions visible, GERA supports clearer interpretation of system behavior during transitions, variability, and stress without introducing new control layers.
-
-The relationship to RSM is conceptual and interpretive rather than functional.
 ## Renewable Variability
 
 Renewable variability describes an operating regime influenced by fluctuating energy input from renewable sources such as wind and solar.
@@ -127,6 +93,15 @@ In this regime:
 Assumptions within the steady‑state regime include reliable asset availability, routine maintenance schedules, and normal environmental conditions.
 
 Structural awareness in this regime supports early recognition of drift, such as gradual load growth or asset degradation, before boundaries are approached. Exiting steady‑state generation does not imply failure, but indicates a transition to a different operating context requiring updated assumptions.
+## Relationship to the Resonance Substrate Model (RSM)
+
+Global Energy Regime Awareness is complementary to the Resonance Substrate Model (RSM) in its emphasis on coherence across interacting systems and scales.
+
+RSM introduces resonance as a structural concept for understanding alignment across regimes. GERA does not model resonance dynamics directly, but applies similar principles of explicit context declaration and boundary recognition within energy systems.
+
+By making regime assumptions visible, GERA supports clearer interpretation of system behavior during transitions, variability, and stress without introducing new control layers.
+
+The relationship to RSM is conceptual and interpretive rather than functional.
 ## Distribution Systems
 
 Distribution systems interface directly with end users and experience high variability in demand, topology, and operational conditions.
@@ -349,4 +324,31 @@ Key terms are used consistently and intentionally:
   A transition out of a regime that preserves system operation while acknowledging loss of validity.
 
 These terms are descriptive and non‑prescriptive. They are intended to support shared understanding across technical, operational, and policy domains without introducing new control requirements.
+## Relationship to the Resonance Substrate Model (RSM)
+
+Global Energy Regime Awareness is complementary to the Resonance Substrate Model (RSM) in its emphasis on coherence across interacting systems and scales.
+
+RSM introduces resonance as a structural concept for understanding alignment across regimes. GERA does not model resonance dynamics directly, but applies similar principles of explicit context declaration and boundary recognition within energy systems.
+
+By making regime assumptions visible, GERA supports clearer interpretation of system behavior during transitions, variability, and stress without introducing new control layers.
+
+The relationship to RSM is conceptual and interpretive rather than functional.
+## Relationship to the Manufacturing Substrate Regime Model (MSRM)
+
+Global Energy Regime Awareness aligns conceptually with the Manufacturing Substrate Regime Model (MSRM) in its treatment of regimes, operating envelopes, and validity as structural concerns.
+
+MSRM applies regime reasoning to manufacturing environments characterized by extreme physical constraints and calibration dependencies. GERA adapts similar principles to energy systems, where operating assumptions shift due to load variability, resource availability, and environmental conditions.
+
+GERA does not extend or modify MSRM. It demonstrates how substrate‑level regime reasoning can be applied to large‑scale energy infrastructure using existing operational constructs.
+
+The relationship is methodological rather than dependent.
+## Relationship to the Resonance Substrate Model (RSM)
+
+Global Energy Regime Awareness is complementary to the Resonance Substrate Model (RSM) in its emphasis on coherence across interacting systems and scales.
+
+RSM introduces resonance as a structural concept for understanding alignment across regimes. GERA does not model resonance dynamics directly, but applies similar principles of explicit context declaration and boundary recognition within energy systems.
+
+By making regime assumptions visible, GERA supports clearer interpretation of system behavior during transitions, variability, and stress without introducing new control layers.
+
+The relationship to RSM is conceptual and interpretive rather than functional.
 

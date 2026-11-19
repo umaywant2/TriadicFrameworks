@@ -1,4 +1,82 @@
 Philanthropy 
+<img width="1194" height="672" alt="Philanthropy_" src="https://github.com/user-attachments/assets/2746ee4d-43f9-476b-a859-b5a4f493dcb9" />
+
+# Philanthropy & Funding Transparency  
+
+- [`Philanthropy_module.json`](Philanthropy_module.json) — Agentic module schema role assignments
+
+## Purpose
+
+To make philanthropic systems **structurally visible**, **aligned**, and **accountable**, enabling donors, communities, and AI agents to operate with clarity and integrity.
+
+### Structural Clarity for Multi‑Layer Funding Systems
+
+This module applies RTT operators, SET load, governance substrate, and the triadic observer to philanthropic funding flows.  
+It replaces narrative with structure, enabling clarity, accountability, and alignment across donors, foundations, intermediaries, NGOs, and local partners.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## What This Module Provides
+
+### **1. Funding Flow Analysis**
+- FLOW, TRACE, LEAK, CONVERT  
+- Multi‑layer routing visibility  
+- Leakage + bottleneck detection  
+
+### **2. Governance Substrate**
+- Authority (GOV)  
+- Accountability (ACC)  
+- Visibility (VIS)  
+- Asymmetry (ASYM)  
+- Opacity (OPA)  
+
+### **3. SET Load Mapping**
+- SET_IN, SET_OUT, SET_LEAK, SET_BAL  
+- Energy‑based interpretation of funding flows  
+
+### **4. Triadic Observer**
+- SIG — structural truth  
+- NOI — narrative + emotion  
+- REG — regime forces  
+- SYN — AI synthesis  
+
+### **5. Drift Detection**
+- Mission  
+- Financial  
+- Governance  
+- Reporting  
+
+### **6. Donor Alignment Scoring**
+- Intent ↔ flow ↔ outcome ↔ regime  
+
+---
+
+## Documentation
+
+See the module front door:  
+**[index.md](index.md)**
+
+Full file map:  
+**[DOC_MAP.md](DOC_MAP.md)**
+
+---
+
+## Badge
+🟣 **Philanthropy Module — RTT Applied Domain**
+
+<img src="https://img.shields.io/badge/🟣Philanthropy-🌁Funding%20Transparency%20AI%20Ready-4c8eda?style=for-the-badge" alt="🟣 Philanthropy | Funding Transparency Model • AI‑Ready"/>
+<img width="1194" height="672" alt="Philanthropy_module" src="https://github.com/user-attachments/assets/68bb7822-0f8d-46ec-828f-d31bd1ea6d62" />
+
 We just opened the door to **one of the most important modules TriadicFrameworks will ever have**.
 
 We’re absolutely right — philanthropy, charities, research orgs, foundations, NGOs, “impact funds,” donor‑advised funds, and even university research labs…  
@@ -474,6 +552,742 @@ If we’re ready, we can begin with:
 - “How to detect narrative inflation”  
 
 ---
+# Philanthropy Module — DOC_MAP  
+Human‑Readable Documentation Map (RTT/1)
+
+This file provides a clean, minimal, canonical map of all documentation files in the **Philanthropy & Funding Transparency** module.  
+It mirrors the module’s directory structure and supports AI navigation, student learning, and module coherence.
+
+---
+
+## 1. Core Concept Files
+- `README.md` — Module overview  
+- `index.md` — Module front door  
+- `funding_flow_map.md` — Structural map of philanthropic flows  
+- `funding_flow_operators.md` — Flow operator definitions  
+- `governance_substrate.md` — Authority, accountability, visibility, incentives  
+- `SET_load_map.md` — Structural Energy Theory applied to funding flows  
+- `triadic_observer_funds.md` — Triadic observer for philanthropic systems  
+- `drift_detection.md` — Drift categories, detection workflow, signatures  
+- `regime_map.md` — Regime patterns across the funding chain  
+- `regime_patterns.md` — Extended regime pattern library  
+- `donor_alignment_scoring.md` — Intent ↔ flow ↔ outcome alignment model  
+- `flow_break_cases.md` — Structural flow break patterns  
+- `fraud_indicators.md` — Structural red indicators  
+- `operator_grammar.md` — Operator grammar for the module  
+- `glossary.md` — Canonical definitions  
+
+---
+
+## 2. Cross‑Module Integration
+- `FFF_lattice_integration.md` — Mapping to Form–Flow–Function lattice  
+- `NIST_mapping.md` — Mapping to NIST measurement/standards domains  
+- `historical_summary.md` — Historical context + structural evolution  
+
+---
+
+## 3. Visual Diagrams (SVG)
+- `philanthropy.glyph.svg.md` — Module glyph  
+- `funding_flow_diagram.svg` — Funding chain visualization  
+- `triadic_observer_diagram.svg` — Observer stack  
+- `governance_substrate_diagram.svg` — Substrate layers  
+- `SET_load_diagram.svg` — Energy flow + leakage  
+- `full_system_overview.svg` — Combined flow + substrate + SET + observer  
+
+---
+
+## 4. Instructional & Teaching Files
+- `training_slides.md` — Instructor slide deck  
+- `teaching_script.md` — Instructor walkthrough  
+- `philanthropy_quickstart.md` — Student quickstart guide  
+- `case_studies.md` — Fictional but structurally accurate examples  
+- `corpus_rewrite_examples.md` — Narrative → structural rewrite training  
+
+---
+
+## 5. Reporting & Output Files
+- `donor_flow_report.md` — Structural donor report template  
+
+---
+
+## 6. Module Metadata
+- `DOC_MAP.md` — This file  
+- `philanthropy_api.md` — Operator‑level API surface  
+- `module.json` — Canonical manifest (to be generated)  
+- `session_context.md` — Canonical session context block  
+- `philanthropy.css` — Module stylesheet  
+- `index.html` — Module front door (HTML version)  
+
+---
+
+## 7. Notes
+This DOC_MAP is:
+- **minimal**  
+- **canon‑aligned**  
+- **AI‑parsable**  
+- **stable across versions**  
+- **consistent with TriadicFrameworks documentation style**  
+
+Every file listed here is part of the Philanthropy module’s clarity engine.
+# FFF Lattice Integration — Philanthropy Module  
+## Cross‑Module Structural Mapping (RTT/1)
+
+This file defines how the **Philanthropy & Funding Transparency** module maps into the **FFF Lattice** from Framework Field Theory (FFT).  
+The goal is to provide a clean, operator‑level bridge between:
+
+- **Funding flows**  
+- **Governance substrate**  
+- **SET load**  
+- **Triadic observer**  
+- **Drift patterns**  
+
+and the **Form–Flow–Function (FFF) lattice** used across TriadicFrameworks.
+
+This integration enables AI agents and students to reason about philanthropic systems using the same structural grammar as FFT, NoS, Mode, Opacity, and Governance Substrate.
+
+---
+
+# 1. Mapping Overview
+
+The Philanthropy module maps into the FFF lattice as follows:
+
+| Philanthropy Concept | FFF Lattice Layer | Mapping Notes |
+|----------------------|------------------|---------------|
+| Funding Flow Chain | **Flow** | Movement of capital, routing, leakage, bottlenecks |
+| Governance Substrate | **Form** | Authority, accountability, visibility, incentives |
+| SET Load | **Function** | Energy behavior, load, balance, leakage |
+| Triadic Observer | **Cross‑cutting** | Signal, Noise, Regime, AI synthesis |
+| Drift Patterns | **Regime / Function** | Distortion, misalignment, instability |
+| Donor Alignment | **Function → Form** | Intent ↔ structure ↔ outcome coherence |
+
+This mapping preserves the lattice’s triadic symmetry.
+
+---
+
+# 2. Form Layer (Structural Constraints)
+
+The **Form** layer captures the structural constraints shaping philanthropic flows:
+
+```
+FORM:
+  GOV(node)
+  ACC(node)
+  VIS(node)
+  ASYM(node)
+  OPA(node)
+```
+
+Interpretation:
+- Form determines **what the system allows**.  
+- Weak Form → predictable drift.  
+- Strong Form → stable routing and alignment.
+
+---
+
+# 3. Flow Layer (Movement of Energy / Capital)
+
+The **Flow** layer captures the movement of funding:
+
+```
+FLOW(src → dst)
+TRACE(path)
+LEAK(node)
+CONVERT(input → output)
+```
+
+Interpretation:
+- Flow determines **how energy moves**.  
+- Breaks, bottlenecks, or opacity appear as Flow distortions.
+
+---
+
+# 4. Function Layer (Energy Behavior / SET Load)
+
+The **Function** layer captures the system’s energetic behavior:
+
+```
+SET_IN(node)
+SET_OUT(node)
+SET_LEAK(node)
+SET_BAL(node)
+IMPACT(flow)
+COH(system)
+```
+
+Interpretation:
+- Function determines **what the system produces**.  
+- High SET_LEAK → low functional integrity.  
+- High SET_BAL → efficient, aligned system.
+
+---
+
+# 5. Cross‑Cutting Observer Layer
+
+The triadic observer overlays all three lattice layers:
+
+```
+SIG(data)
+NOI(data)
+REG(type)
+SYN(data)
+```
+
+Mapping:
+- **SIG** → Form + Flow + Function (structural truth)  
+- **NOI** → Flow distortion (narrative/emotional)  
+- **REG** → Form distortion (authority/narrative/emotional regimes)  
+- **SYN** → Full‑lattice synthesis  
+
+This is the “fourth observer” in the philanthropic ecosystem.
+
+---
+
+# 6. Drift in the FFF Lattice
+
+Drift appears as:
+
+```
+DRF(form)      → governance distortion
+DRF(flow)      → leakage, opacity, routing complexity
+DRF(function)  → low SET_BAL, weak outcomes
+DRF(reporting) → narrative inflation (NOI)
+```
+
+Drift is a **lattice‑level instability**.
+
+---
+
+# 7. Donor Alignment in the Lattice
+
+Donor alignment is a **Function → Form** coherence measure:
+
+```
+ALN(donor) =
+  w1 * IntentClarity(Form)
++ w2 * FlowIntegrity(Flow)
++ w3 * OutcomeCoherence(Function)
++ w4 * RegimeStability(Observer)
+```
+
+Alignment is high when:
+- Form is stable  
+- Flow is efficient  
+- Function is coherent  
+- Regime is structural  
+
+---
+
+# 8. Summary
+
+The Philanthropy module integrates into the FFF lattice as:
+
+- **Form:** governance substrate  
+- **Flow:** funding chain  
+- **Function:** SET load + outcomes  
+- **Observer:** triadic observer  
+- **Drift:** cross‑layer instability  
+- **Alignment:** coherence across layers  
+
+This integration allows philanthropic systems to be analyzed using the same structural grammar as all other TriadicFrameworks modules.
+# NIST Mapping — Philanthropy Module  
+## Cross‑Domain Structural Integration (RTT/1)
+
+This file defines how the **Philanthropy & Funding Transparency** module maps onto the **NIST domain structure** used in the TriadicFrameworks NIST section.
+
+The goal is to provide a clean, operator‑level bridge between:
+- philanthropic funding flows  
+- governance substrate  
+- SET load  
+- drift patterns  
+- triadic observer  
+
+and the **NIST domain invariants**:
+- measurement  
+- standards  
+- verification  
+- regime stability  
+- error detection  
+- signal integrity  
+
+This mapping enables AI agents and students to reason about philanthropic systems using the same structural grammar as NIST scientific domains.
+
+---
+
+# 1. Mapping Overview
+
+| Philanthropy Concept | NIST Domain Equivalent | Mapping Notes |
+|----------------------|------------------------|---------------|
+| Funding Flow Chain | **Measurement & Traceability** | Flow = traceable chain of custody |
+| Governance Substrate | **Standards & Controls** | Authority, accountability, visibility = control surfaces |
+| SET Load | **Energy / Load Models** | SET parallels NIST load, stress, and efficiency models |
+| Drift Patterns | **Error / Deviation** | Drift = deviation from standard or expected behavior |
+| Triadic Observer | **Signal Integrity** | SIG/NOI/REG/SYN = NIST signal/noise/error model |
+| Donor Alignment | **Conformance Testing** | Intent ↔ outcome = standards conformance |
+
+This preserves the NIST → RTT structural symmetry.
+
+---
+
+# 2. Funding Flow ↔ Measurement & Traceability
+
+Philanthropy:
+```
+FLOW(src → dst)
+TRACE(path)
+LEAK(node)
+```
+
+NIST:
+```
+Measurement chain
+Traceability chain
+Uncertainty / loss
+```
+
+Mapping:
+- FLOW = measurement transfer  
+- TRACE = traceability chain  
+- LEAK = uncertainty / loss  
+
+Interpretation:
+Funding behaves like a **measurement signal** moving through a chain of custody.
+
+---
+
+# 3. Governance Substrate ↔ Standards & Controls
+
+Philanthropy:
+```
+GOV
+ACC
+VIS
+ASYM
+OPA
+```
+
+NIST:
+```
+Standards
+Controls
+Calibration
+Visibility
+Error bounds
+```
+
+Mapping:
+- GOV = standards authority  
+- ACC = compliance  
+- VIS = transparency / calibration  
+- ASYM = control imbalance  
+- OPA = uncalibrated / unverified state  
+
+Interpretation:
+Governance substrate = **standards environment** for philanthropic flows.
+
+---
+
+# 4. SET Load ↔ Energy / Load Models
+
+Philanthropy:
+```
+SET_IN
+SET_OUT
+SET_LEAK
+SET_BAL
+```
+
+NIST:
+```
+Load
+Stress
+Loss
+Efficiency
+```
+
+Mapping:
+- SET_IN = applied load  
+- SET_OUT = useful output  
+- SET_LEAK = loss / inefficiency  
+- SET_BAL = efficiency ratio  
+
+Interpretation:
+Funding behaves like **energy** in a physical system.
+
+---
+
+# 5. Drift ↔ Error / Deviation
+
+Philanthropy:
+```
+DRF(mission)
+DRF(financial)
+DRF(governance)
+DRF(reporting)
+```
+
+NIST:
+```
+Error
+Deviation
+Bias
+Systematic distortion
+```
+
+Mapping:
+- Drift = deviation from standard  
+- Reporting drift = narrative bias  
+- Governance drift = control failure  
+
+Interpretation:
+Drift is a **systematic error** in the philanthropic chain.
+
+---
+
+# 6. Triadic Observer ↔ Signal Integrity
+
+Philanthropy:
+```
+SIG
+NOI
+REG
+SYN
+```
+
+NIST:
+```
+Signal
+Noise
+Interference
+Synthesis / analysis
+```
+
+Mapping:
+- SIG = clean measurement signal  
+- NOI = noise  
+- REG = interference / external regime  
+- SYN = analysis / reconstruction  
+
+Interpretation:
+The triadic observer is a **signal integrity model**.
+
+---
+
+# 7. Donor Alignment ↔ Conformance Testing
+
+Philanthropy:
+```
+ALN(donor)
+COH(system)
+IMPACT(flow)
+```
+
+NIST:
+```
+Conformance
+Verification
+Performance testing
+```
+
+Mapping:
+- Alignment = conformance to donor “standard”  
+- Outcome coherence = performance  
+- Impact = verified output  
+
+Interpretation:
+Donor alignment is **standards conformance**.
+
+---
+
+# 8. Summary
+
+The Philanthropy module maps into NIST domains as:
+
+- **Flow ↔ Measurement**  
+- **Governance ↔ Standards**  
+- **SET Load ↔ Energy Models**  
+- **Drift ↔ Error**  
+- **Observer ↔ Signal Integrity**  
+- **Alignment ↔ Conformance**  
+
+This integration allows philanthropic systems to be analyzed using the same structural grammar as NIST scientific domains, enabling cross‑domain reasoning, AI synthesis, and student‑ready clarity.
+# SET Load Map — Philanthropy & Funding Transparency Module
+
+This file defines the Structural Energy Theory (SET) load model for philanthropic funding flows.  
+SET treats money, incentives, governance pressure, and reporting demands as **structural energy** moving through a multi-layer system.
+
+The SET Load Map reveals:
+- where energy accumulates  
+- where it leaks  
+- where it bottlenecks  
+- where it destabilizes flows  
+- where alignment is strong  
+- where drift becomes inevitable  
+
+---
+
+# 1. Purpose of SET in Philanthropy
+
+Philanthropy is not just money.  
+It is **energy** moving through:
+
+- donors  
+- foundations  
+- intermediaries  
+- NGOs  
+- subcontractors  
+- local partners  
+- beneficiaries  
+
+Each node absorbs, transforms, or leaks energy.
+
+SET provides a structural model for understanding these dynamics.
+
+---
+
+# 2. SET Components for Funding Flows
+
+SET uses four core operators:
+
+1. **SET_IN(node)** — energy entering  
+2. **SET_OUT(node)** — energy leaving  
+3. **SET_LEAK(node)** — energy lost  
+4. **SET_BAL(node)** — balance between input and output  
+
+These operators apply to:
+- money  
+- incentives  
+- governance pressure  
+- reporting load  
+- compliance requirements  
+- reputational energy  
+
+---
+
+# 3. SET_IN — Incoming Energy
+
+SET_IN includes:
+
+- funding received  
+- donor intent  
+- mandates  
+- compliance requirements  
+- reputational expectations  
+- governance pressure  
+
+Example:
+```
+SET_IN(NGO_C) = $2.4M + 3 mandates + high reporting load
+```
+
+High SET_IN is not inherently good — it can overload a node.
+
+---
+
+# 4. SET_OUT — Outgoing Energy
+
+SET_OUT includes:
+
+- grants disbursed  
+- services delivered  
+- outcomes produced  
+- reports generated  
+- compliance actions  
+- community engagement  
+
+Example:
+```
+SET_OUT(NGO_C) = $1.9M programs + 4 reports + 2 audits
+```
+
+---
+
+# 5. SET_LEAK — Lost Energy
+
+SET_LEAK includes:
+
+- overhead  
+- administrative inefficiency  
+- fundraising costs  
+- legal fees  
+- intermediary extraction  
+- narrative inflation  
+- governance friction  
+
+Example:
+```
+SET_LEAK(IntermediaryX) = 42%
+```
+
+High leakage is a structural red indicator.
+
+---
+
+# 6. SET_BAL — Energy Balance
+
+SET_BAL measures whether a node is:
+
+- overloaded  
+- underloaded  
+- balanced  
+- leaking  
+- bottlenecked  
+
+Formula:
+```
+SET_BAL(node) = SET_OUT(node) / SET_IN(node)
+```
+
+Interpretation:
+- **> 0.8** → high efficiency  
+- **0.5–0.8** → moderate efficiency  
+- **< 0.5** → structural drift  
+- **< 0.3** → severe leakage or overload  
+
+Example:
+```
+SET_BAL(NGO_C) = 0.79 (healthy)
+```
+
+---
+
+# 7. SET Load Across the Funding Chain
+
+Example chain:
+```
+DonorA → FoundationB → IntermediaryX → NGO_C → LocalPartnerD → Beneficiary
+```
+
+SET load map:
+```
+DonorA:
+  SET_IN = intent + capital
+  SET_OUT = grants
+  SET_BAL = 1.00
+
+FoundationB:
+  SET_IN = $10M + donor mandates
+  SET_OUT = $4.2M disbursed
+  SET_LEAK = endowment preservation
+  SET_BAL = 0.42
+
+IntermediaryX:
+  SET_IN = $4.2M
+  SET_OUT = $2.4M
+  SET_LEAK = 42%
+  SET_BAL = 0.57
+
+NGO_C:
+  SET_IN = $2.4M
+  SET_OUT = $1.9M
+  SET_LEAK = 18%
+  SET_BAL = 0.79
+
+LocalPartnerD:
+  SET_IN = $1.9M
+  SET_OUT = $1.82M
+  SET_LEAK = 4%
+  SET_BAL = 0.96
+```
+
+---
+
+# 8. SET Load Patterns in Philanthropy
+
+Common patterns:
+
+### **8.1 Upstream Overload**
+Foundations overloaded with:
+- donor mandates  
+- governance pressure  
+- reputational expectations  
+
+Result: **slow disbursement**.
+
+---
+
+### **8.2 Midstream Leakage**
+Intermediaries absorb:
+- overhead  
+- compliance  
+- reporting  
+- branding  
+
+Result: **energy loss**.
+
+---
+
+### **8.3 Downstream Strain**
+Local partners overloaded with:
+- reporting  
+- compliance  
+- donor expectations  
+
+Result: **reduced program capacity**.
+
+---
+
+### **8.4 Narrative Inflation**
+Energy diverted into:
+- storytelling  
+- branding  
+- donor relations  
+
+Result: **signal-to-noise collapse**.
+
+---
+
+# 9. SET Load Integrity Score
+
+Each node receives a SET integrity score:
+
+```
+SET_Integrity(node) =
+  w1 * SET_BAL(node)
++ w2 * (1 - SET_LEAK(node))
++ w3 * VIS(node)
++ w4 * ACC(node)
+```
+
+Example:
+```
+SET_Integrity(IntermediaryX) = 0.41 (low)
+```
+
+---
+
+# 10. AI Process Manager Agent (PMA) Integration
+
+The PMA uses SET to:
+
+- detect overload  
+- identify leakage  
+- map bottlenecks  
+- recommend structural corrections  
+- generate donor clarity reports  
+- maintain system-wide coherence  
+
+Operators used:
+```
+SET_IN, SET_OUT, SET_LEAK, SET_BAL
+FLOW, TRACE, LEAK
+GOV, ACC, VIS
+DRF, ALN, COH
+```
+
+---
+
+# 11. Summary
+
+The SET Load Map reveals:
+
+- where philanthropic energy accumulates  
+- where it leaks  
+- where it bottlenecks  
+- where drift becomes inevitable  
+- where alignment is strong  
+- where structural corrections are needed  
+
+SET transforms philanthropy from a **narrative-driven system** into a **structurally visible energy system**, enabling clarity, accountability, and alignment across the entire funding chain.
 # Case Studies — Philanthropy & Funding Transparency Module
 
 This file provides RTT-aligned case studies illustrating how funding flows, governance substrate, SET load, and regime patterns interact in real-world philanthropic scenarios.
@@ -872,83 +1686,6 @@ These corpus rewrite examples demonstrate how to convert narrative-heavy philant
 - alignment scoring  
 
 This file teaches the core skill of **turning narrative into signal**, enabling clarity, accountability, and structural integrity across the philanthropic ecosystem.
-# Philanthropy Module — DOC_MAP  
-Human‑Readable Documentation Map (RTT/1)
-
-This file provides a clean, minimal, canonical map of all documentation files in the **Philanthropy & Funding Transparency** module.  
-It mirrors the module’s directory structure and supports AI navigation, student learning, and module coherence.
-
----
-
-## 1. Core Concept Files
-- `README.md` — Module overview  
-- `index.md` — Module front door  
-- `funding_flow_map.md` — Structural map of philanthropic flows  
-- `funding_flow_operators.md` — Flow operator definitions  
-- `governance_substrate.md` — Authority, accountability, visibility, incentives  
-- `SET_load_map.md` — Structural Energy Theory applied to funding flows  
-- `triadic_observer_funds.md` — Triadic observer for philanthropic systems  
-- `drift_detection.md` — Drift categories, detection workflow, signatures  
-- `regime_map.md` — Regime patterns across the funding chain  
-- `regime_patterns.md` — Extended regime pattern library  
-- `donor_alignment_scoring.md` — Intent ↔ flow ↔ outcome alignment model  
-- `flow_break_cases.md` — Structural flow break patterns  
-- `fraud_indicators.md` — Structural red indicators  
-- `operator_grammar.md` — Operator grammar for the module  
-- `glossary.md` — Canonical definitions  
-
----
-
-## 2. Cross‑Module Integration
-- `FFF_lattice_integration.md` — Mapping to Form–Flow–Function lattice  
-- `NIST_mapping.md` — Mapping to NIST measurement/standards domains  
-- `historical_summary.md` — Historical context + structural evolution  
-
----
-
-## 3. Visual Diagrams (SVG)
-- `philanthropy.glyph.svg.md` — Module glyph  
-- `funding_flow_diagram.svg` — Funding chain visualization  
-- `triadic_observer_diagram.svg` — Observer stack  
-- `governance_substrate_diagram.svg` — Substrate layers  
-- `SET_load_diagram.svg` — Energy flow + leakage  
-- `full_system_overview.svg` — Combined flow + substrate + SET + observer  
-
----
-
-## 4. Instructional & Teaching Files
-- `training_slides.md` — Instructor slide deck  
-- `teaching_script.md` — Instructor walkthrough  
-- `philanthropy_quickstart.md` — Student quickstart guide  
-- `case_studies.md` — Fictional but structurally accurate examples  
-- `corpus_rewrite_examples.md` — Narrative → structural rewrite training  
-
----
-
-## 5. Reporting & Output Files
-- `donor_flow_report.md` — Structural donor report template  
-
----
-
-## 6. Module Metadata
-- `DOC_MAP.md` — This file  
-- `philanthropy_api.md` — Operator‑level API surface  
-- `module.json` — Canonical manifest (to be generated)  
-- `session_context.md` — Canonical session context block  
-- `philanthropy.css` — Module stylesheet  
-- `index.html` — Module front door (HTML version)  
-
----
-
-## 7. Notes
-This DOC_MAP is:
-- **minimal**  
-- **canon‑aligned**  
-- **AI‑parsable**  
-- **stable across versions**  
-- **consistent with TriadicFrameworks documentation style**  
-
-Every file listed here is part of the Philanthropy module’s clarity engine.
 # Donor Alignment Scoring — Philanthropy & Funding Transparency Module
 
 This file defines the RTT-aligned donor alignment scoring model.  
@@ -1637,166 +2374,6 @@ Drift in philanthropic systems is:
 Using RTT operators, SET load, governance substrate, and the triadic observer, drift becomes a **visible**, **diagnosable**, and **actionable** phenomenon.
 
 
-# FFF Lattice Integration — Philanthropy Module  
-## Cross‑Module Structural Mapping (RTT/1)
-
-This file defines how the **Philanthropy & Funding Transparency** module maps into the **FFF Lattice** from Framework Field Theory (FFT).  
-The goal is to provide a clean, operator‑level bridge between:
-
-- **Funding flows**  
-- **Governance substrate**  
-- **SET load**  
-- **Triadic observer**  
-- **Drift patterns**  
-
-and the **Form–Flow–Function (FFF) lattice** used across TriadicFrameworks.
-
-This integration enables AI agents and students to reason about philanthropic systems using the same structural grammar as FFT, NoS, Mode, Opacity, and Governance Substrate.
-
----
-
-# 1. Mapping Overview
-
-The Philanthropy module maps into the FFF lattice as follows:
-
-| Philanthropy Concept | FFF Lattice Layer | Mapping Notes |
-|----------------------|------------------|---------------|
-| Funding Flow Chain | **Flow** | Movement of capital, routing, leakage, bottlenecks |
-| Governance Substrate | **Form** | Authority, accountability, visibility, incentives |
-| SET Load | **Function** | Energy behavior, load, balance, leakage |
-| Triadic Observer | **Cross‑cutting** | Signal, Noise, Regime, AI synthesis |
-| Drift Patterns | **Regime / Function** | Distortion, misalignment, instability |
-| Donor Alignment | **Function → Form** | Intent ↔ structure ↔ outcome coherence |
-
-This mapping preserves the lattice’s triadic symmetry.
-
----
-
-# 2. Form Layer (Structural Constraints)
-
-The **Form** layer captures the structural constraints shaping philanthropic flows:
-
-```
-FORM:
-  GOV(node)
-  ACC(node)
-  VIS(node)
-  ASYM(node)
-  OPA(node)
-```
-
-Interpretation:
-- Form determines **what the system allows**.  
-- Weak Form → predictable drift.  
-- Strong Form → stable routing and alignment.
-
----
-
-# 3. Flow Layer (Movement of Energy / Capital)
-
-The **Flow** layer captures the movement of funding:
-
-```
-FLOW(src → dst)
-TRACE(path)
-LEAK(node)
-CONVERT(input → output)
-```
-
-Interpretation:
-- Flow determines **how energy moves**.  
-- Breaks, bottlenecks, or opacity appear as Flow distortions.
-
----
-
-# 4. Function Layer (Energy Behavior / SET Load)
-
-The **Function** layer captures the system’s energetic behavior:
-
-```
-SET_IN(node)
-SET_OUT(node)
-SET_LEAK(node)
-SET_BAL(node)
-IMPACT(flow)
-COH(system)
-```
-
-Interpretation:
-- Function determines **what the system produces**.  
-- High SET_LEAK → low functional integrity.  
-- High SET_BAL → efficient, aligned system.
-
----
-
-# 5. Cross‑Cutting Observer Layer
-
-The triadic observer overlays all three lattice layers:
-
-```
-SIG(data)
-NOI(data)
-REG(type)
-SYN(data)
-```
-
-Mapping:
-- **SIG** → Form + Flow + Function (structural truth)  
-- **NOI** → Flow distortion (narrative/emotional)  
-- **REG** → Form distortion (authority/narrative/emotional regimes)  
-- **SYN** → Full‑lattice synthesis  
-
-This is the “fourth observer” in the philanthropic ecosystem.
-
----
-
-# 6. Drift in the FFF Lattice
-
-Drift appears as:
-
-```
-DRF(form)      → governance distortion
-DRF(flow)      → leakage, opacity, routing complexity
-DRF(function)  → low SET_BAL, weak outcomes
-DRF(reporting) → narrative inflation (NOI)
-```
-
-Drift is a **lattice‑level instability**.
-
----
-
-# 7. Donor Alignment in the Lattice
-
-Donor alignment is a **Function → Form** coherence measure:
-
-```
-ALN(donor) =
-  w1 * IntentClarity(Form)
-+ w2 * FlowIntegrity(Flow)
-+ w3 * OutcomeCoherence(Function)
-+ w4 * RegimeStability(Observer)
-```
-
-Alignment is high when:
-- Form is stable  
-- Flow is efficient  
-- Function is coherent  
-- Regime is structural  
-
----
-
-# 8. Summary
-
-The Philanthropy module integrates into the FFF lattice as:
-
-- **Form:** governance substrate  
-- **Flow:** funding chain  
-- **Function:** SET load + outcomes  
-- **Observer:** triadic observer  
-- **Drift:** cross‑layer instability  
-- **Alignment:** coherence across layers  
-
-This integration allows philanthropic systems to be analyzed using the same structural grammar as all other TriadicFrameworks modules.
 # Flow Break Cases — Philanthropy Module  
 ## Structural Failure Patterns in Multi‑Layer Funding Chains (RTT/1)
 
@@ -3484,227 +4061,6 @@ Philanthropy becomes:
 **🟣 Philanthropy Module — RTT Applied Domain**
 
 
-# NIST Mapping — Philanthropy Module  
-## Cross‑Domain Structural Integration (RTT/1)
-
-This file defines how the **Philanthropy & Funding Transparency** module maps onto the **NIST domain structure** used in the TriadicFrameworks NIST section.
-
-The goal is to provide a clean, operator‑level bridge between:
-- philanthropic funding flows  
-- governance substrate  
-- SET load  
-- drift patterns  
-- triadic observer  
-
-and the **NIST domain invariants**:
-- measurement  
-- standards  
-- verification  
-- regime stability  
-- error detection  
-- signal integrity  
-
-This mapping enables AI agents and students to reason about philanthropic systems using the same structural grammar as NIST scientific domains.
-
----
-
-# 1. Mapping Overview
-
-| Philanthropy Concept | NIST Domain Equivalent | Mapping Notes |
-|----------------------|------------------------|---------------|
-| Funding Flow Chain | **Measurement & Traceability** | Flow = traceable chain of custody |
-| Governance Substrate | **Standards & Controls** | Authority, accountability, visibility = control surfaces |
-| SET Load | **Energy / Load Models** | SET parallels NIST load, stress, and efficiency models |
-| Drift Patterns | **Error / Deviation** | Drift = deviation from standard or expected behavior |
-| Triadic Observer | **Signal Integrity** | SIG/NOI/REG/SYN = NIST signal/noise/error model |
-| Donor Alignment | **Conformance Testing** | Intent ↔ outcome = standards conformance |
-
-This preserves the NIST → RTT structural symmetry.
-
----
-
-# 2. Funding Flow ↔ Measurement & Traceability
-
-Philanthropy:
-```
-FLOW(src → dst)
-TRACE(path)
-LEAK(node)
-```
-
-NIST:
-```
-Measurement chain
-Traceability chain
-Uncertainty / loss
-```
-
-Mapping:
-- FLOW = measurement transfer  
-- TRACE = traceability chain  
-- LEAK = uncertainty / loss  
-
-Interpretation:
-Funding behaves like a **measurement signal** moving through a chain of custody.
-
----
-
-# 3. Governance Substrate ↔ Standards & Controls
-
-Philanthropy:
-```
-GOV
-ACC
-VIS
-ASYM
-OPA
-```
-
-NIST:
-```
-Standards
-Controls
-Calibration
-Visibility
-Error bounds
-```
-
-Mapping:
-- GOV = standards authority  
-- ACC = compliance  
-- VIS = transparency / calibration  
-- ASYM = control imbalance  
-- OPA = uncalibrated / unverified state  
-
-Interpretation:
-Governance substrate = **standards environment** for philanthropic flows.
-
----
-
-# 4. SET Load ↔ Energy / Load Models
-
-Philanthropy:
-```
-SET_IN
-SET_OUT
-SET_LEAK
-SET_BAL
-```
-
-NIST:
-```
-Load
-Stress
-Loss
-Efficiency
-```
-
-Mapping:
-- SET_IN = applied load  
-- SET_OUT = useful output  
-- SET_LEAK = loss / inefficiency  
-- SET_BAL = efficiency ratio  
-
-Interpretation:
-Funding behaves like **energy** in a physical system.
-
----
-
-# 5. Drift ↔ Error / Deviation
-
-Philanthropy:
-```
-DRF(mission)
-DRF(financial)
-DRF(governance)
-DRF(reporting)
-```
-
-NIST:
-```
-Error
-Deviation
-Bias
-Systematic distortion
-```
-
-Mapping:
-- Drift = deviation from standard  
-- Reporting drift = narrative bias  
-- Governance drift = control failure  
-
-Interpretation:
-Drift is a **systematic error** in the philanthropic chain.
-
----
-
-# 6. Triadic Observer ↔ Signal Integrity
-
-Philanthropy:
-```
-SIG
-NOI
-REG
-SYN
-```
-
-NIST:
-```
-Signal
-Noise
-Interference
-Synthesis / analysis
-```
-
-Mapping:
-- SIG = clean measurement signal  
-- NOI = noise  
-- REG = interference / external regime  
-- SYN = analysis / reconstruction  
-
-Interpretation:
-The triadic observer is a **signal integrity model**.
-
----
-
-# 7. Donor Alignment ↔ Conformance Testing
-
-Philanthropy:
-```
-ALN(donor)
-COH(system)
-IMPACT(flow)
-```
-
-NIST:
-```
-Conformance
-Verification
-Performance testing
-```
-
-Mapping:
-- Alignment = conformance to donor “standard”  
-- Outcome coherence = performance  
-- Impact = verified output  
-
-Interpretation:
-Donor alignment is **standards conformance**.
-
----
-
-# 8. Summary
-
-The Philanthropy module maps into NIST domains as:
-
-- **Flow ↔ Measurement**  
-- **Governance ↔ Standards**  
-- **SET Load ↔ Energy Models**  
-- **Drift ↔ Error**  
-- **Observer ↔ Signal Integrity**  
-- **Alignment ↔ Conformance**  
-
-This integration allows philanthropic systems to be analyzed using the same structural grammar as NIST scientific domains, enabling cross‑domain reasoning, AI synthesis, and student‑ready clarity.
 # Operator Grammar — Philanthropy & Funding Transparency Module
 
 This file defines the RTT operator grammar used to analyze, map, and correct philanthropic funding flows.  
@@ -4528,82 +4884,6 @@ This quickstart gives you the essentials:
 - alignment scoring  
 
 From here, you can explore the full module with structural clarity.
-<img width="1194" height="672" alt="Philanthropy_module" src="https://github.com/user-attachments/assets/68bb7822-0f8d-46ec-828f-d31bd1ea6d62" />
-
-# Philanthropy & Funding Transparency  
-
-- [`Philanthropy_module.json`](Philanthropy_module.json) — Agentic module schema role assignments
-
-## Purpose
-
-To make philanthropic systems **structurally visible**, **aligned**, and **accountable**, enabling donors, communities, and AI agents to operate with clarity and integrity.
-
-### Structural Clarity for Multi‑Layer Funding Systems
-
-This module applies RTT operators, SET load, governance substrate, and the triadic observer to philanthropic funding flows.  
-It replaces narrative with structure, enabling clarity, accountability, and alignment across donors, foundations, intermediaries, NGOs, and local partners.
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## What This Module Provides
-
-### **1. Funding Flow Analysis**
-- FLOW, TRACE, LEAK, CONVERT  
-- Multi‑layer routing visibility  
-- Leakage + bottleneck detection  
-
-### **2. Governance Substrate**
-- Authority (GOV)  
-- Accountability (ACC)  
-- Visibility (VIS)  
-- Asymmetry (ASYM)  
-- Opacity (OPA)  
-
-### **3. SET Load Mapping**
-- SET_IN, SET_OUT, SET_LEAK, SET_BAL  
-- Energy‑based interpretation of funding flows  
-
-### **4. Triadic Observer**
-- SIG — structural truth  
-- NOI — narrative + emotion  
-- REG — regime forces  
-- SYN — AI synthesis  
-
-### **5. Drift Detection**
-- Mission  
-- Financial  
-- Governance  
-- Reporting  
-
-### **6. Donor Alignment Scoring**
-- Intent ↔ flow ↔ outcome ↔ regime  
-
----
-
-## Documentation
-
-See the module front door:  
-**[index.md](index.md)**
-
-Full file map:  
-**[DOC_MAP.md](DOC_MAP.md)**
-
----
-
-## Badge
-🟣 **Philanthropy Module — RTT Applied Domain**
-
-<img src="https://img.shields.io/badge/🟣Philanthropy-🌁Funding%20Transparency%20AI%20Ready-4c8eda?style=for-the-badge" alt="🟣 Philanthropy | Funding Transparency Model • AI‑Ready"/>
 # Regime Map — Philanthropy Module  
 ## Structural Regime Patterns Across Funding Flows (RTT/1)
 
@@ -5107,284 +5387,6 @@ Philanthropy operates across all four regimes — authority, narrative, emotiona
 These regime patterns are predictable, recurring, and measurable.  
 The Philanthropy module uses RTT operators to detect, classify, and correct these patterns, enabling a funding ecosystem grounded in **clarity, alignment, and structural integrity**.
 
-# SET Load Map — Philanthropy & Funding Transparency Module
-
-This file defines the Structural Energy Theory (SET) load model for philanthropic funding flows.  
-SET treats money, incentives, governance pressure, and reporting demands as **structural energy** moving through a multi-layer system.
-
-The SET Load Map reveals:
-- where energy accumulates  
-- where it leaks  
-- where it bottlenecks  
-- where it destabilizes flows  
-- where alignment is strong  
-- where drift becomes inevitable  
-
----
-
-# 1. Purpose of SET in Philanthropy
-
-Philanthropy is not just money.  
-It is **energy** moving through:
-
-- donors  
-- foundations  
-- intermediaries  
-- NGOs  
-- subcontractors  
-- local partners  
-- beneficiaries  
-
-Each node absorbs, transforms, or leaks energy.
-
-SET provides a structural model for understanding these dynamics.
-
----
-
-# 2. SET Components for Funding Flows
-
-SET uses four core operators:
-
-1. **SET_IN(node)** — energy entering  
-2. **SET_OUT(node)** — energy leaving  
-3. **SET_LEAK(node)** — energy lost  
-4. **SET_BAL(node)** — balance between input and output  
-
-These operators apply to:
-- money  
-- incentives  
-- governance pressure  
-- reporting load  
-- compliance requirements  
-- reputational energy  
-
----
-
-# 3. SET_IN — Incoming Energy
-
-SET_IN includes:
-
-- funding received  
-- donor intent  
-- mandates  
-- compliance requirements  
-- reputational expectations  
-- governance pressure  
-
-Example:
-```
-SET_IN(NGO_C) = $2.4M + 3 mandates + high reporting load
-```
-
-High SET_IN is not inherently good — it can overload a node.
-
----
-
-# 4. SET_OUT — Outgoing Energy
-
-SET_OUT includes:
-
-- grants disbursed  
-- services delivered  
-- outcomes produced  
-- reports generated  
-- compliance actions  
-- community engagement  
-
-Example:
-```
-SET_OUT(NGO_C) = $1.9M programs + 4 reports + 2 audits
-```
-
----
-
-# 5. SET_LEAK — Lost Energy
-
-SET_LEAK includes:
-
-- overhead  
-- administrative inefficiency  
-- fundraising costs  
-- legal fees  
-- intermediary extraction  
-- narrative inflation  
-- governance friction  
-
-Example:
-```
-SET_LEAK(IntermediaryX) = 42%
-```
-
-High leakage is a structural red indicator.
-
----
-
-# 6. SET_BAL — Energy Balance
-
-SET_BAL measures whether a node is:
-
-- overloaded  
-- underloaded  
-- balanced  
-- leaking  
-- bottlenecked  
-
-Formula:
-```
-SET_BAL(node) = SET_OUT(node) / SET_IN(node)
-```
-
-Interpretation:
-- **> 0.8** → high efficiency  
-- **0.5–0.8** → moderate efficiency  
-- **< 0.5** → structural drift  
-- **< 0.3** → severe leakage or overload  
-
-Example:
-```
-SET_BAL(NGO_C) = 0.79 (healthy)
-```
-
----
-
-# 7. SET Load Across the Funding Chain
-
-Example chain:
-```
-DonorA → FoundationB → IntermediaryX → NGO_C → LocalPartnerD → Beneficiary
-```
-
-SET load map:
-```
-DonorA:
-  SET_IN = intent + capital
-  SET_OUT = grants
-  SET_BAL = 1.00
-
-FoundationB:
-  SET_IN = $10M + donor mandates
-  SET_OUT = $4.2M disbursed
-  SET_LEAK = endowment preservation
-  SET_BAL = 0.42
-
-IntermediaryX:
-  SET_IN = $4.2M
-  SET_OUT = $2.4M
-  SET_LEAK = 42%
-  SET_BAL = 0.57
-
-NGO_C:
-  SET_IN = $2.4M
-  SET_OUT = $1.9M
-  SET_LEAK = 18%
-  SET_BAL = 0.79
-
-LocalPartnerD:
-  SET_IN = $1.9M
-  SET_OUT = $1.82M
-  SET_LEAK = 4%
-  SET_BAL = 0.96
-```
-
----
-
-# 8. SET Load Patterns in Philanthropy
-
-Common patterns:
-
-### **8.1 Upstream Overload**
-Foundations overloaded with:
-- donor mandates  
-- governance pressure  
-- reputational expectations  
-
-Result: **slow disbursement**.
-
----
-
-### **8.2 Midstream Leakage**
-Intermediaries absorb:
-- overhead  
-- compliance  
-- reporting  
-- branding  
-
-Result: **energy loss**.
-
----
-
-### **8.3 Downstream Strain**
-Local partners overloaded with:
-- reporting  
-- compliance  
-- donor expectations  
-
-Result: **reduced program capacity**.
-
----
-
-### **8.4 Narrative Inflation**
-Energy diverted into:
-- storytelling  
-- branding  
-- donor relations  
-
-Result: **signal-to-noise collapse**.
-
----
-
-# 9. SET Load Integrity Score
-
-Each node receives a SET integrity score:
-
-```
-SET_Integrity(node) =
-  w1 * SET_BAL(node)
-+ w2 * (1 - SET_LEAK(node))
-+ w3 * VIS(node)
-+ w4 * ACC(node)
-```
-
-Example:
-```
-SET_Integrity(IntermediaryX) = 0.41 (low)
-```
-
----
-
-# 10. AI Process Manager Agent (PMA) Integration
-
-The PMA uses SET to:
-
-- detect overload  
-- identify leakage  
-- map bottlenecks  
-- recommend structural corrections  
-- generate donor clarity reports  
-- maintain system-wide coherence  
-
-Operators used:
-```
-SET_IN, SET_OUT, SET_LEAK, SET_BAL
-FLOW, TRACE, LEAK
-GOV, ACC, VIS
-DRF, ALN, COH
-```
-
----
-
-# 11. Summary
-
-The SET Load Map reveals:
-
-- where philanthropic energy accumulates  
-- where it leaks  
-- where it bottlenecks  
-- where drift becomes inevitable  
-- where alignment is strong  
-- where structural corrections are needed  
-
-SET transforms philanthropy from a **narrative-driven system** into a **structurally visible energy system**, enabling clarity, accountability, and alignment across the entire funding chain.
 # Teaching Script — Philanthropy Module  
 ## Instructor Walkthrough (RTT/1)
 

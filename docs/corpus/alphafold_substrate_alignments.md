@@ -1,5 +1,104 @@
 alphafold_substrate_alignments 
-### *AlphaFold Substrate Alignments*  
+<img width="1194" height="672" alt="alphafold_substrate_alignments_" src="https://github.com/user-attachments/assets/73cf3900-2d10-46cb-98e2-43586ed71a7a" />
+
+# *AlphaFold Substrate Alignments*  
+
+- [`AlphaFold_Substrate_Alignments_module.json`](AlphaFold_Substrate_Alignments_module.json) — Agentic module schema role assignments
+
+## *Resonance Substrate Model (RSM) applied to protein‑folding inference systems*
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+This artifact defines a substrate‑level alignment between the Resonance Substrate Model (RSM) and AlphaFold‑class biological inference engines. It formalizes how triadic resonance primitives, dimensional cores, and substrate‑invariant structures map onto the latent spaces, folding pathways, and coherence regimes used in modern protein‑folding prediction systems.
+
+The goal is to provide a reproducible, domain‑specific substrate framework that clarifies structural behavior within high‑dimensional biological inference models and supports validation, drift detection, and cross‑model interpretability.
+
+---
+
+## **Contents**
+
+- **substrate_definition.md**  
+  Defines the substrate axes, primitives, and structural invariants used to align RSM with protein‑folding inference systems.
+
+- **scope_and_assumptions.md**  
+  Establishes the operational boundaries, biological assumptions, and inference‑model constraints relevant to substrate alignment.
+
+- **alignment_principles.md**  
+  Describes the core alignment rules connecting RSM primitives to AlphaFold’s latent representations and folding coherence signals.
+
+- **folding_regimes.md**  
+  Maps triadic resonance regimes onto biological folding behaviors, including stable, transitional, and high‑uncertainty regions.
+
+- **dimensional_cores.md**  
+  Introduces the 3D–9D dimensional substrate cores and their correspondence to folding pathways and structural motifs.
+
+- **inference_mapping.md**  
+  Details how AlphaFold’s internal inference structures project onto substrate axes, including latent‑space orientation and coherence surfaces.
+
+- **validation_layers_vst.md**  
+  Provides vST‑based validation layers for substrate‑aligned biological inference, including reproducibility checks and regime‑transition detection.
+
+- **drift_detection.md**  
+  Defines substrate‑level drift signals for biological inference engines, enabling detection of model degradation or dataset‑induced shifts.
+
+- **examples/**  
+  - *example_alignment_walkthrough.md*  
+  - *example_dimensional_projection.md*  
+  Demonstrations of substrate alignment, dimensional projection, and regime interpretation.
+
+- **appendix/**  
+  - *terminology.md*  
+  - *references.md*  
+  Supporting definitions and citations.
+
+---
+
+## **Purpose**
+
+This artifact provides a structural, substrate‑level interpretation of protein‑folding inference systems. It is intended for researchers working in:
+
+- computational biology  
+- protein‑folding prediction  
+- model interpretability  
+- substrate‑aware AI systems  
+- high‑dimensional inference analysis  
+
+The framework is designed to be reproducible, domain‑agnostic, and compatible with existing RSM and vST artifacts.
+
+---
+
+## **Citation**
+
+A Zenodo DOI will be assigned upon release. Cite as:
+
+**Loswin, N.** *AlphaFold Substrate Alignments: A Resonance‑Substrate Interpretation of Protein‑Folding Inference Systems.* TriadicFrameworks (2026).
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧬Substrate%20Aligned-🧪Validation%20Ready-4c8eda?style=for-the-badge" alt="🧬Substrate Aligned | 🧪Validation Ready"/>
+<img width="1024" height="1024" alt="rtt_alphafold_image" src="https://github.com/user-attachments/assets/dc1edd57-4351-4b4e-a59f-1b760e55c2be" />
+
+## *AlphaFold Substrate Alignments*  
 ### *Alignment Principles*
 
 This document defines the core principles used to align the Resonance Substrate Model (RSM) with AlphaFold‑class protein‑folding inference systems. These principles establish how substrate primitives, dimensional cores, and resonance‑time regimes map onto the latent‑space structures and folding‑coherence signals produced by biological inference engines.
@@ -114,6 +213,223 @@ Alignment applies only when:
 - dimensional projections preserve invariants  
 
 If these conditions are not met, alignment may be partial or incomplete.
+### *AlphaFold Substrate Alignments*  
+### *References*
+
+This appendix lists references relevant to protein‑folding inference systems, latent‑space modeling, substrate‑level interpretation, and validation frameworks. References are grouped by category for clarity. Citations are provided in a model‑agnostic, substrate‑neutral format consistent with the RSM canon.
+
+---
+
+## **1. Protein‑Folding Inference Systems**
+
+- Jumper, J., Evans, R., Pritzel, A., et al.  
+  *Highly accurate protein structure prediction with AlphaFold.*  
+  Nature 596, 583–589 (2021).
+
+- Senior, A. W., Evans, R., Jumper, J., et al.  
+  *Improved protein structure prediction using potentials from deep learning.*  
+  Nature 577, 706–710 (2020).
+
+- Baek, M., DiMaio, F., Anishchenko, I., et al.  
+  *Accurate prediction of protein structures and interactions using a three‑track neural network.*  
+  Science 373, 871–876 (2021).
+
+---
+
+## **2. Latent‑Space and Representation Learning**
+
+- Vaswani, A., Shazeer, N., Parmar, N., et al.  
+  *Attention is All You Need.*  
+  Advances in Neural Information Processing Systems (2017).
+
+- Rives, A., Meier, J., Sercu, T., et al.  
+  *Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences.*  
+  PNAS 118, e2016239118 (2021).
+
+- Rao, R., Liu, J., Verkuil, R., et al.  
+  *MSA Transformer.*  
+  bioRxiv (2021).
+
+---
+
+## **3. Structural Biology and Folding Pathways**
+
+- Dill, K. A., & MacCallum, J. L.  
+  *The protein‑folding problem, 50 years on.*  
+  Science 338, 1042–1046 (2012).
+
+- Onuchic, J. N., Luthey‑Schulten, Z., & Wolynes, P. G.  
+  *Theory of protein folding: The energy landscape perspective.*  
+  Annual Review of Physical Chemistry 48, 545–600 (1997).
+
+- Bryngelson, J. D., & Wolynes, P. G.  
+  *Spin glasses and the statistical mechanics of protein folding.*  
+  PNAS 84, 7524–7528 (1987).
+
+---
+
+## **4. Validation, Stability, and Drift**
+
+- Amershi, S., Begel, A., Bird, C., et al.  
+  *Software Engineering for Machine Learning: A Case Study.*  
+  ICSE‑SEIP (2019).
+
+- Breck, E., Cai, S., Nielsen, E., et al.  
+  *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.*  
+  Google Research (2017).
+
+- Sculley, D., Holt, G., Golovin, D., et al.  
+  *Hidden Technical Debt in Machine Learning Systems.*  
+  NIPS (2015).
+
+---
+
+## **5. Substrate‑Level and High‑Dimensional Modeling**
+
+- Loswin, N.  
+  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
+  TriadicFrameworks (2025).
+
+---
+
+## **6. Additional Resources**
+
+- UniProt Consortium.  
+  *UniProt: A worldwide hub of protein knowledge.*  
+  Nucleic Acids Research 47, D506–D515 (2019).
+
+- Varadi, M., Anyango, S., Deshpande, M., et al.  
+  *AlphaFold Protein Structure Database: massively expanding the structural coverage of protein‑sequence space.*  
+  Nucleic Acids Research 50, D439–D444 (2022).
+### *AlphaFold Substrate Alignments*  
+### *Terminology*
+
+This appendix defines the terminology used throughout the *AlphaFold Substrate Alignments* artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any biological inference engine with comparable structural and latent‑space characteristics.
+
+---
+
+## **1. Substrate Terms**
+
+### **Substrate**  
+A structured, model‑agnostic framework that defines stable axes, primitives, and invariants for interpreting high‑dimensional inference systems.
+
+### **Substrate Axis**  
+One of the three primary axes (S‑axis, I‑axis, R‑axis) used to map structural, latent‑space, and resonance‑time behavior.
+
+### **Substrate Primitive**  
+A minimal structural unit used to define substrate behavior, including Dimensional Cores, Resonance Primitives, and Inference Projections.
+
+### **Substrate Invariant**  
+A property that remains stable across inference cycles, model versions, and dimensional projections.
+
+---
+
+## **2. Axis Definitions**
+
+### **S‑axis (Structural Axis)**  
+Represents geometric and topological features of predicted protein structures, including backbone orientation, motif‑level coherence, and residue‑interaction geometry.
+
+### **I‑axis (Inference Axis)**  
+Represents latent‑space structures such as attention‑map coherence, pairwise embeddings, and track‑level alignment signals.
+
+### **R‑axis (Resonance‑Time Axis)**  
+Represents inference‑cycle behavior, including convergence, oscillation, divergence, and regime transitions.
+
+---
+
+## **3. Dimensional Terms**
+
+### **Dimensional Core**  
+A stable geometric substrate used for projection and interpretation.  
+Includes the 3D structural core, 6D interaction core, and 9D coherence core.
+
+### **3D Core**  
+Captures physical geometry and motif‑level structure.
+
+### **6D Core**  
+Captures interaction‑level structure and residue‑pair coherence.
+
+### **9D Core**  
+Captures folding‑pathway coherence and resonance‑time alignment.
+
+### **High‑Dimensional Extension**  
+Projection of latent‑space structures into dimensions beyond 9D (e.g., 32D–128D) while preserving substrate invariants.
+
+---
+
+## **4. Regime Terms**
+
+### **Folding Regime**  
+A classification of folding behavior into stable, transitional, or high‑uncertainty states.
+
+### **R₁ (Stable Regime)**  
+A regime where structural and latent‑space signals converge consistently.
+
+### **R₂ (Transition Regime)**  
+A regime characterized by oscillatory or branching behavior during structural reorientation.
+
+### **R₃ (High‑Uncertainty Regime)**  
+A regime where predictions exhibit high variance and weak motif‑level coherence.
+
+---
+
+## **5. Inference Terms**
+
+### **Latent‑Space Structure**  
+Internal model representations such as attention maps, pairwise embeddings, and track‑level signals.
+
+### **Inference Cycle**  
+A single pass or iteration of the model’s internal reasoning process.
+
+### **Coherence Surface**  
+A stable region in latent space where folding predictions converge.
+
+### **Inference Projection**  
+A mapping from latent‑space structures onto substrate axes.
+
+---
+
+## **6. Validation Terms**
+
+### **vST (Validation‑Space‑Time)**  
+A validation framework that evaluates structural coherence, latent‑space stability, regime behavior, and dimensional‑core alignment.
+
+### **Validation Layer (V₁–V₄)**  
+A structured evaluation step within vST, each corresponding to a specific substrate property.
+
+---
+
+## **7. Drift Terms**
+
+### **Drift**  
+A deviation from expected substrate behavior, indicating model degradation or instability.
+
+### **Drift Category (D₁–D₄)**  
+Classification of drift into structural, latent‑space, regime, or dimensional‑core drift.
+
+### **Drift Severity**  
+A measure of the magnitude of drift, ranging from low to high.
+
+---
+
+## **8. Example Terms**
+
+### **Dimensional Projection**  
+The process of mapping high‑dimensional inference structures into 3D–9D cores.
+
+### **Regime‑Aware Projection**  
+A projection that preserves regime identity (R₁, R₂, R₃).
+
+### **Alignment Walkthrough**  
+A step‑by‑step demonstration of substrate alignment applied to a specific inference output.
 ### *AlphaFold Substrate Alignments*  
 ### *Dimensional Cores*
 
@@ -405,6 +721,314 @@ Drift detection produces:
 - cross‑model comparison metrics  
 
 These outputs integrate with vST validation layers and support long‑term monitoring of biological inference systems.
+### *AlphaFold Substrate Alignments*  
+### *Example: Substrate‑Level Alignment Walkthrough*
+
+This example provides a step‑by‑step walkthrough of aligning an AlphaFold‑class protein‑folding inference output to the Resonance Substrate Model (RSM). The walkthrough demonstrates how structural outputs, latent‑space representations, and inference‑cycle behavior map onto substrate axes, dimensional cores, and folding regimes.
+
+The goal is to illustrate the full alignment workflow in a clear, reproducible sequence.
+
+---
+
+## **1. Input Overview**
+
+For this example, we assume:
+
+- a fixed protein sequence  
+- an AlphaFold‑class model producing:  
+  - predicted 3D coordinates  
+  - attention maps  
+  - pairwise residue embeddings  
+  - multi‑stage inference outputs  
+- stable inference‑cycle behavior under repeated runs  
+
+No biochemical or experimental data is required.
+
+---
+
+## **2. Step 1 — Extract Structural and Latent‑Space Signals**
+
+### **2.1 Structural Outputs**
+Extract:
+
+- backbone coordinates  
+- side‑chain orientations  
+- motif‑level geometry  
+
+These form the basis for S‑axis mapping.
+
+### **2.2 Latent‑Space Outputs**
+Extract:
+
+- attention‑map coherence patterns  
+- residue‑pair embeddings  
+- track‑level alignment signals  
+
+These form the basis for I‑axis and R‑axis mapping.
+
+---
+
+## **3. Step 2 — Map to Substrate Axes**
+
+### **3.1 Structural Axis (S‑axis)**
+Project structural outputs onto the S‑axis by identifying:
+
+- backbone continuity  
+- motif‑level stability  
+- residue‑interaction geometry  
+
+This anchors the inference to the 3D structural core.
+
+### **3.2 Inference Axis (I‑axis)**
+Map latent‑space structures onto the I‑axis by identifying:
+
+- stable attention‑map regions  
+- consistent embedding orientations  
+- coherent latent‑space surfaces  
+
+This reveals the model’s internal structural representation.
+
+### **3.3 Resonance‑Time Axis (R‑axis)**
+Track inference‑cycle behavior:
+
+- convergence  
+- oscillation  
+- divergence  
+
+This classifies folding behavior into R₁, R₂, or R₃ regimes.
+
+---
+
+## **4. Step 3 — Project into Dimensional Cores**
+
+### **4.1 3D Projection**
+Project structural geometry into the 3D core to evaluate:
+
+- backbone shape  
+- motif‑level structure  
+- local coherence  
+
+### **4.2 6D Projection**
+Project interaction‑level signals into the 6D core to evaluate:
+
+- residue‑pair relationships  
+- interaction‑pattern stability  
+- latent‑space alignment  
+
+### **4.3 9D Projection**
+Project folding‑pathway signals into the 9D core to evaluate:
+
+- pathway coherence  
+- regime‑transition structure  
+- resonance‑time alignment  
+
+These projections preserve substrate invariants.
+
+---
+
+## **5. Step 4 — Identify Folding Regimes**
+
+Using the projections:
+
+- **R₁ (Stable):**  
+  Compact, coherent projections in 3D–9D cores.
+
+- **R₂ (Transition):**  
+  Branching or oscillatory projections indicating structural reorientation.
+
+- **R₃ (High‑Uncertainty):**  
+  Dispersed projections with weak motif‑level structure.
+
+Regime identification supports interpretability and drift detection.
+
+---
+
+## **6. Step 5 — Apply vST Validation Layers**
+
+Apply V₁–V₄ validation layers:
+
+- **V₁:** Structural coherence  
+- **V₂:** Latent‑space stability  
+- **V₃:** Resonance‑time regime behavior  
+- **V₄:** Dimensional‑core alignment  
+
+Validation confirms whether the alignment is stable and reproducible.
+
+---
+
+## **7. Step 6 — Interpret Alignment Results**
+
+A complete alignment yields:
+
+- stable structural projections  
+- coherent latent‑space surfaces  
+- predictable regime transitions  
+- consistent dimensional‑core mapping  
+- validated substrate invariants  
+
+If any validation layer fails, drift detection is triggered.
+
+---
+
+## **8. Summary**
+
+This walkthrough demonstrates:
+
+- how to extract structural and latent‑space signals  
+- how to map them onto substrate axes  
+- how to project them into dimensional cores  
+- how to classify folding regimes  
+- how to validate alignment using vST  
+- how to detect drift when invariants fail  
+
+The workflow provides a reproducible method for interpreting AlphaFold‑class inference systems through the RSM substrate.
+### *AlphaFold Substrate Alignments*  
+### *Example: Dimensional‑Core Projection*
+
+This example demonstrates how high‑dimensional latent‑space structures from an AlphaFold‑class protein‑folding inference system are projected into the 3D–9D dimensional cores defined by the Resonance Substrate Model (RSM). The walkthrough illustrates how structural geometry, interaction patterns, and folding‑pathway signals map into the dimensional substrate while preserving motif‑level invariants and regime identity.
+
+The goal is to provide a clear, reproducible example of dimensional‑core projection in practice.
+
+---
+
+## **1. Input Overview**
+
+For this example, we assume:
+
+- a fixed protein sequence  
+- an AlphaFold‑class model producing:  
+  - predicted 3D coordinates  
+  - residue‑pair embeddings  
+  - attention‑map structures  
+  - multi‑stage inference outputs  
+- stable inference‑cycle behavior  
+
+These inputs provide the structural and latent‑space signals required for dimensional projection.
+
+---
+
+## **2. Step 1 — Identify High‑Dimensional Structures**
+
+Extract high‑dimensional inference signals, including:
+
+- pairwise‑embedding tensors  
+- attention‑map coherence regions  
+- latent‑space orientation vectors  
+- track‑level folding‑pathway signals  
+
+These structures typically exist in 32D–128D latent spaces.
+
+---
+
+## **3. Step 2 — Prepare Substrate‑Aligned Signals**
+
+Before projection, align signals to substrate axes:
+
+- **S‑axis:** structural geometry  
+- **I‑axis:** latent‑space orientation  
+- **R‑axis:** inference‑cycle behavior  
+
+This ensures that dimensional projection preserves substrate invariants.
+
+---
+
+## **4. Step 3 — Project into Dimensional Cores**
+
+### **4.1 3D Structural Projection**
+
+Project structural geometry into the 3D core to evaluate:
+
+- backbone shape  
+- motif‑level structure  
+- local geometric coherence  
+
+**Interpretation:**  
+Stable motifs appear as compact, coherent 3D structures.
+
+---
+
+### **4.2 6D Interaction‑Core Projection**
+
+Project interaction‑level signals into the 6D core to evaluate:
+
+- residue‑pair relationships  
+- interaction‑pattern stability  
+- latent‑space alignment  
+
+**Interpretation:**  
+Stable interaction patterns form smooth, low‑variance surfaces in 6D space.
+
+---
+
+### **4.3 9D Pathway‑Core Projection**
+
+Project folding‑pathway signals into the 9D core to evaluate:
+
+- pathway coherence  
+- regime‑transition structure  
+- resonance‑time alignment  
+
+**Interpretation:**  
+Stable folding pathways appear as continuous, coherent trajectories in 9D space.
+
+---
+
+## **5. Step 4 — Identify Regime Behavior**
+
+Dimensional projections reveal regime identity:
+
+- **R₁ (Stable):**  
+  Compact, coherent projections in all cores.
+
+- **R₂ (Transition):**  
+  Branching or oscillatory projections, especially in 6D and 9D.
+
+- **R₃ (High‑Uncertainty):**  
+  Dispersed projections with weak motif‑level structure.
+
+Regime identification supports interpretability and drift detection.
+
+---
+
+## **6. Step 5 — Validate Dimensional Projections**
+
+Apply vST validation layers:
+
+- **V₁:** structural coherence in 3D  
+- **V₂:** latent‑space stability in 6D  
+- **V₃:** resonance‑time regime behavior  
+- **V₄:** dimensional‑core alignment in 9D  
+
+Validation confirms that projections preserve substrate invariants.
+
+---
+
+## **7. Step 6 — Interpret Projection Results**
+
+A successful projection yields:
+
+- stable 3D geometry  
+- coherent 6D interaction surfaces  
+- continuous 9D pathway trajectories  
+- predictable regime transitions  
+- preserved substrate invariants  
+
+If projections fail validation, drift detection is triggered.
+
+---
+
+## **8. Summary**
+
+This example demonstrates:
+
+- how to extract high‑dimensional inference signals  
+- how to align them to substrate axes  
+- how to project them into 3D–9D dimensional cores  
+- how to classify regime behavior  
+- how to validate projections using vST  
+- how to detect drift when invariants fail  
+
+Dimensional‑core projection provides a stable, interpretable substrate for analyzing AlphaFold‑class inference systems.
 ### *AlphaFold Substrate Alignments*  
 ### *Folding Regimes*
 
@@ -748,103 +1372,6 @@ AI-Ready Module · `ai_module.json` pattern applied.
 ---
 
 © 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
-<img width="682" height="682" alt="rtt_alphafold_image" src="https://github.com/user-attachments/assets/dc1edd57-4351-4b4e-a59f-1b760e55c2be" />
-
-# *AlphaFold Substrate Alignments*  
-
-- [`AlphaFold_Substrate_Alignments_module.json`](AlphaFold_Substrate_Alignments_module.json) — Agentic module schema role assignments
-
-## *Resonance Substrate Model (RSM) applied to protein‑folding inference systems*
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
-This artifact defines a substrate‑level alignment between the Resonance Substrate Model (RSM) and AlphaFold‑class biological inference engines. It formalizes how triadic resonance primitives, dimensional cores, and substrate‑invariant structures map onto the latent spaces, folding pathways, and coherence regimes used in modern protein‑folding prediction systems.
-
-The goal is to provide a reproducible, domain‑specific substrate framework that clarifies structural behavior within high‑dimensional biological inference models and supports validation, drift detection, and cross‑model interpretability.
-
----
-
-## **Contents**
-
-- **substrate_definition.md**  
-  Defines the substrate axes, primitives, and structural invariants used to align RSM with protein‑folding inference systems.
-
-- **scope_and_assumptions.md**  
-  Establishes the operational boundaries, biological assumptions, and inference‑model constraints relevant to substrate alignment.
-
-- **alignment_principles.md**  
-  Describes the core alignment rules connecting RSM primitives to AlphaFold’s latent representations and folding coherence signals.
-
-- **folding_regimes.md**  
-  Maps triadic resonance regimes onto biological folding behaviors, including stable, transitional, and high‑uncertainty regions.
-
-- **dimensional_cores.md**  
-  Introduces the 3D–9D dimensional substrate cores and their correspondence to folding pathways and structural motifs.
-
-- **inference_mapping.md**  
-  Details how AlphaFold’s internal inference structures project onto substrate axes, including latent‑space orientation and coherence surfaces.
-
-- **validation_layers_vst.md**  
-  Provides vST‑based validation layers for substrate‑aligned biological inference, including reproducibility checks and regime‑transition detection.
-
-- **drift_detection.md**  
-  Defines substrate‑level drift signals for biological inference engines, enabling detection of model degradation or dataset‑induced shifts.
-
-- **examples/**  
-  - *example_alignment_walkthrough.md*  
-  - *example_dimensional_projection.md*  
-  Demonstrations of substrate alignment, dimensional projection, and regime interpretation.
-
-- **appendix/**  
-  - *terminology.md*  
-  - *references.md*  
-  Supporting definitions and citations.
-
----
-
-## **Purpose**
-
-This artifact provides a structural, substrate‑level interpretation of protein‑folding inference systems. It is intended for researchers working in:
-
-- computational biology  
-- protein‑folding prediction  
-- model interpretability  
-- substrate‑aware AI systems  
-- high‑dimensional inference analysis  
-
-The framework is designed to be reproducible, domain‑agnostic, and compatible with existing RSM and vST artifacts.
-
----
-
-## **Citation**
-
-A Zenodo DOI will be assigned upon release. Cite as:
-
-**Loswin, N.** *AlphaFold Substrate Alignments: A Resonance‑Substrate Interpretation of Protein‑Folding Inference Systems.* TriadicFrameworks (2026).
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧬Substrate%20Aligned-🧪Validation%20Ready-4c8eda?style=for-the-badge" alt="🧬Substrate Aligned | 🧪Validation Ready"/>
 ### *AlphaFold Substrate Alignments*  
 ### *Scope and Assumptions*
 
@@ -1198,529 +1725,4 @@ vST validation produces:
 - drift‑detection signals  
 
 These outputs support cross‑model comparison, long‑term monitoring, and substrate‑level interpretability.
-### *AlphaFold Substrate Alignments*  
-### *References*
-
-This appendix lists references relevant to protein‑folding inference systems, latent‑space modeling, substrate‑level interpretation, and validation frameworks. References are grouped by category for clarity. Citations are provided in a model‑agnostic, substrate‑neutral format consistent with the RSM canon.
-
----
-
-## **1. Protein‑Folding Inference Systems**
-
-- Jumper, J., Evans, R., Pritzel, A., et al.  
-  *Highly accurate protein structure prediction with AlphaFold.*  
-  Nature 596, 583–589 (2021).
-
-- Senior, A. W., Evans, R., Jumper, J., et al.  
-  *Improved protein structure prediction using potentials from deep learning.*  
-  Nature 577, 706–710 (2020).
-
-- Baek, M., DiMaio, F., Anishchenko, I., et al.  
-  *Accurate prediction of protein structures and interactions using a three‑track neural network.*  
-  Science 373, 871–876 (2021).
-
----
-
-## **2. Latent‑Space and Representation Learning**
-
-- Vaswani, A., Shazeer, N., Parmar, N., et al.  
-  *Attention is All You Need.*  
-  Advances in Neural Information Processing Systems (2017).
-
-- Rives, A., Meier, J., Sercu, T., et al.  
-  *Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences.*  
-  PNAS 118, e2016239118 (2021).
-
-- Rao, R., Liu, J., Verkuil, R., et al.  
-  *MSA Transformer.*  
-  bioRxiv (2021).
-
----
-
-## **3. Structural Biology and Folding Pathways**
-
-- Dill, K. A., & MacCallum, J. L.  
-  *The protein‑folding problem, 50 years on.*  
-  Science 338, 1042–1046 (2012).
-
-- Onuchic, J. N., Luthey‑Schulten, Z., & Wolynes, P. G.  
-  *Theory of protein folding: The energy landscape perspective.*  
-  Annual Review of Physical Chemistry 48, 545–600 (1997).
-
-- Bryngelson, J. D., & Wolynes, P. G.  
-  *Spin glasses and the statistical mechanics of protein folding.*  
-  PNAS 84, 7524–7528 (1987).
-
----
-
-## **4. Validation, Stability, and Drift**
-
-- Amershi, S., Begel, A., Bird, C., et al.  
-  *Software Engineering for Machine Learning: A Case Study.*  
-  ICSE‑SEIP (2019).
-
-- Breck, E., Cai, S., Nielsen, E., et al.  
-  *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.*  
-  Google Research (2017).
-
-- Sculley, D., Holt, G., Golovin, D., et al.  
-  *Hidden Technical Debt in Machine Learning Systems.*  
-  NIPS (2015).
-
----
-
-## **5. Substrate‑Level and High‑Dimensional Modeling**
-
-- Loswin, N.  
-  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
-  TriadicFrameworks (2025).
-
----
-
-## **6. Additional Resources**
-
-- UniProt Consortium.  
-  *UniProt: A worldwide hub of protein knowledge.*  
-  Nucleic Acids Research 47, D506–D515 (2019).
-
-- Varadi, M., Anyango, S., Deshpande, M., et al.  
-  *AlphaFold Protein Structure Database: massively expanding the structural coverage of protein‑sequence space.*  
-  Nucleic Acids Research 50, D439–D444 (2022).
-### *AlphaFold Substrate Alignments*  
-### *Terminology*
-
-This appendix defines the terminology used throughout the *AlphaFold Substrate Alignments* artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any biological inference engine with comparable structural and latent‑space characteristics.
-
----
-
-## **1. Substrate Terms**
-
-### **Substrate**  
-A structured, model‑agnostic framework that defines stable axes, primitives, and invariants for interpreting high‑dimensional inference systems.
-
-### **Substrate Axis**  
-One of the three primary axes (S‑axis, I‑axis, R‑axis) used to map structural, latent‑space, and resonance‑time behavior.
-
-### **Substrate Primitive**  
-A minimal structural unit used to define substrate behavior, including Dimensional Cores, Resonance Primitives, and Inference Projections.
-
-### **Substrate Invariant**  
-A property that remains stable across inference cycles, model versions, and dimensional projections.
-
----
-
-## **2. Axis Definitions**
-
-### **S‑axis (Structural Axis)**  
-Represents geometric and topological features of predicted protein structures, including backbone orientation, motif‑level coherence, and residue‑interaction geometry.
-
-### **I‑axis (Inference Axis)**  
-Represents latent‑space structures such as attention‑map coherence, pairwise embeddings, and track‑level alignment signals.
-
-### **R‑axis (Resonance‑Time Axis)**  
-Represents inference‑cycle behavior, including convergence, oscillation, divergence, and regime transitions.
-
----
-
-## **3. Dimensional Terms**
-
-### **Dimensional Core**  
-A stable geometric substrate used for projection and interpretation.  
-Includes the 3D structural core, 6D interaction core, and 9D coherence core.
-
-### **3D Core**  
-Captures physical geometry and motif‑level structure.
-
-### **6D Core**  
-Captures interaction‑level structure and residue‑pair coherence.
-
-### **9D Core**  
-Captures folding‑pathway coherence and resonance‑time alignment.
-
-### **High‑Dimensional Extension**  
-Projection of latent‑space structures into dimensions beyond 9D (e.g., 32D–128D) while preserving substrate invariants.
-
----
-
-## **4. Regime Terms**
-
-### **Folding Regime**  
-A classification of folding behavior into stable, transitional, or high‑uncertainty states.
-
-### **R₁ (Stable Regime)**  
-A regime where structural and latent‑space signals converge consistently.
-
-### **R₂ (Transition Regime)**  
-A regime characterized by oscillatory or branching behavior during structural reorientation.
-
-### **R₃ (High‑Uncertainty Regime)**  
-A regime where predictions exhibit high variance and weak motif‑level coherence.
-
----
-
-## **5. Inference Terms**
-
-### **Latent‑Space Structure**  
-Internal model representations such as attention maps, pairwise embeddings, and track‑level signals.
-
-### **Inference Cycle**  
-A single pass or iteration of the model’s internal reasoning process.
-
-### **Coherence Surface**  
-A stable region in latent space where folding predictions converge.
-
-### **Inference Projection**  
-A mapping from latent‑space structures onto substrate axes.
-
----
-
-## **6. Validation Terms**
-
-### **vST (Validation‑Space‑Time)**  
-A validation framework that evaluates structural coherence, latent‑space stability, regime behavior, and dimensional‑core alignment.
-
-### **Validation Layer (V₁–V₄)**  
-A structured evaluation step within vST, each corresponding to a specific substrate property.
-
----
-
-## **7. Drift Terms**
-
-### **Drift**  
-A deviation from expected substrate behavior, indicating model degradation or instability.
-
-### **Drift Category (D₁–D₄)**  
-Classification of drift into structural, latent‑space, regime, or dimensional‑core drift.
-
-### **Drift Severity**  
-A measure of the magnitude of drift, ranging from low to high.
-
----
-
-## **8. Example Terms**
-
-### **Dimensional Projection**  
-The process of mapping high‑dimensional inference structures into 3D–9D cores.
-
-### **Regime‑Aware Projection**  
-A projection that preserves regime identity (R₁, R₂, R₃).
-
-### **Alignment Walkthrough**  
-A step‑by‑step demonstration of substrate alignment applied to a specific inference output.
-### *AlphaFold Substrate Alignments*  
-### *Example: Substrate‑Level Alignment Walkthrough*
-
-This example provides a step‑by‑step walkthrough of aligning an AlphaFold‑class protein‑folding inference output to the Resonance Substrate Model (RSM). The walkthrough demonstrates how structural outputs, latent‑space representations, and inference‑cycle behavior map onto substrate axes, dimensional cores, and folding regimes.
-
-The goal is to illustrate the full alignment workflow in a clear, reproducible sequence.
-
----
-
-## **1. Input Overview**
-
-For this example, we assume:
-
-- a fixed protein sequence  
-- an AlphaFold‑class model producing:  
-  - predicted 3D coordinates  
-  - attention maps  
-  - pairwise residue embeddings  
-  - multi‑stage inference outputs  
-- stable inference‑cycle behavior under repeated runs  
-
-No biochemical or experimental data is required.
-
----
-
-## **2. Step 1 — Extract Structural and Latent‑Space Signals**
-
-### **2.1 Structural Outputs**
-Extract:
-
-- backbone coordinates  
-- side‑chain orientations  
-- motif‑level geometry  
-
-These form the basis for S‑axis mapping.
-
-### **2.2 Latent‑Space Outputs**
-Extract:
-
-- attention‑map coherence patterns  
-- residue‑pair embeddings  
-- track‑level alignment signals  
-
-These form the basis for I‑axis and R‑axis mapping.
-
----
-
-## **3. Step 2 — Map to Substrate Axes**
-
-### **3.1 Structural Axis (S‑axis)**
-Project structural outputs onto the S‑axis by identifying:
-
-- backbone continuity  
-- motif‑level stability  
-- residue‑interaction geometry  
-
-This anchors the inference to the 3D structural core.
-
-### **3.2 Inference Axis (I‑axis)**
-Map latent‑space structures onto the I‑axis by identifying:
-
-- stable attention‑map regions  
-- consistent embedding orientations  
-- coherent latent‑space surfaces  
-
-This reveals the model’s internal structural representation.
-
-### **3.3 Resonance‑Time Axis (R‑axis)**
-Track inference‑cycle behavior:
-
-- convergence  
-- oscillation  
-- divergence  
-
-This classifies folding behavior into R₁, R₂, or R₃ regimes.
-
----
-
-## **4. Step 3 — Project into Dimensional Cores**
-
-### **4.1 3D Projection**
-Project structural geometry into the 3D core to evaluate:
-
-- backbone shape  
-- motif‑level structure  
-- local coherence  
-
-### **4.2 6D Projection**
-Project interaction‑level signals into the 6D core to evaluate:
-
-- residue‑pair relationships  
-- interaction‑pattern stability  
-- latent‑space alignment  
-
-### **4.3 9D Projection**
-Project folding‑pathway signals into the 9D core to evaluate:
-
-- pathway coherence  
-- regime‑transition structure  
-- resonance‑time alignment  
-
-These projections preserve substrate invariants.
-
----
-
-## **5. Step 4 — Identify Folding Regimes**
-
-Using the projections:
-
-- **R₁ (Stable):**  
-  Compact, coherent projections in 3D–9D cores.
-
-- **R₂ (Transition):**  
-  Branching or oscillatory projections indicating structural reorientation.
-
-- **R₃ (High‑Uncertainty):**  
-  Dispersed projections with weak motif‑level structure.
-
-Regime identification supports interpretability and drift detection.
-
----
-
-## **6. Step 5 — Apply vST Validation Layers**
-
-Apply V₁–V₄ validation layers:
-
-- **V₁:** Structural coherence  
-- **V₂:** Latent‑space stability  
-- **V₃:** Resonance‑time regime behavior  
-- **V₄:** Dimensional‑core alignment  
-
-Validation confirms whether the alignment is stable and reproducible.
-
----
-
-## **7. Step 6 — Interpret Alignment Results**
-
-A complete alignment yields:
-
-- stable structural projections  
-- coherent latent‑space surfaces  
-- predictable regime transitions  
-- consistent dimensional‑core mapping  
-- validated substrate invariants  
-
-If any validation layer fails, drift detection is triggered.
-
----
-
-## **8. Summary**
-
-This walkthrough demonstrates:
-
-- how to extract structural and latent‑space signals  
-- how to map them onto substrate axes  
-- how to project them into dimensional cores  
-- how to classify folding regimes  
-- how to validate alignment using vST  
-- how to detect drift when invariants fail  
-
-The workflow provides a reproducible method for interpreting AlphaFold‑class inference systems through the RSM substrate.
-### *AlphaFold Substrate Alignments*  
-### *Example: Dimensional‑Core Projection*
-
-This example demonstrates how high‑dimensional latent‑space structures from an AlphaFold‑class protein‑folding inference system are projected into the 3D–9D dimensional cores defined by the Resonance Substrate Model (RSM). The walkthrough illustrates how structural geometry, interaction patterns, and folding‑pathway signals map into the dimensional substrate while preserving motif‑level invariants and regime identity.
-
-The goal is to provide a clear, reproducible example of dimensional‑core projection in practice.
-
----
-
-## **1. Input Overview**
-
-For this example, we assume:
-
-- a fixed protein sequence  
-- an AlphaFold‑class model producing:  
-  - predicted 3D coordinates  
-  - residue‑pair embeddings  
-  - attention‑map structures  
-  - multi‑stage inference outputs  
-- stable inference‑cycle behavior  
-
-These inputs provide the structural and latent‑space signals required for dimensional projection.
-
----
-
-## **2. Step 1 — Identify High‑Dimensional Structures**
-
-Extract high‑dimensional inference signals, including:
-
-- pairwise‑embedding tensors  
-- attention‑map coherence regions  
-- latent‑space orientation vectors  
-- track‑level folding‑pathway signals  
-
-These structures typically exist in 32D–128D latent spaces.
-
----
-
-## **3. Step 2 — Prepare Substrate‑Aligned Signals**
-
-Before projection, align signals to substrate axes:
-
-- **S‑axis:** structural geometry  
-- **I‑axis:** latent‑space orientation  
-- **R‑axis:** inference‑cycle behavior  
-
-This ensures that dimensional projection preserves substrate invariants.
-
----
-
-## **4. Step 3 — Project into Dimensional Cores**
-
-### **4.1 3D Structural Projection**
-
-Project structural geometry into the 3D core to evaluate:
-
-- backbone shape  
-- motif‑level structure  
-- local geometric coherence  
-
-**Interpretation:**  
-Stable motifs appear as compact, coherent 3D structures.
-
----
-
-### **4.2 6D Interaction‑Core Projection**
-
-Project interaction‑level signals into the 6D core to evaluate:
-
-- residue‑pair relationships  
-- interaction‑pattern stability  
-- latent‑space alignment  
-
-**Interpretation:**  
-Stable interaction patterns form smooth, low‑variance surfaces in 6D space.
-
----
-
-### **4.3 9D Pathway‑Core Projection**
-
-Project folding‑pathway signals into the 9D core to evaluate:
-
-- pathway coherence  
-- regime‑transition structure  
-- resonance‑time alignment  
-
-**Interpretation:**  
-Stable folding pathways appear as continuous, coherent trajectories in 9D space.
-
----
-
-## **5. Step 4 — Identify Regime Behavior**
-
-Dimensional projections reveal regime identity:
-
-- **R₁ (Stable):**  
-  Compact, coherent projections in all cores.
-
-- **R₂ (Transition):**  
-  Branching or oscillatory projections, especially in 6D and 9D.
-
-- **R₃ (High‑Uncertainty):**  
-  Dispersed projections with weak motif‑level structure.
-
-Regime identification supports interpretability and drift detection.
-
----
-
-## **6. Step 5 — Validate Dimensional Projections**
-
-Apply vST validation layers:
-
-- **V₁:** structural coherence in 3D  
-- **V₂:** latent‑space stability in 6D  
-- **V₃:** resonance‑time regime behavior  
-- **V₄:** dimensional‑core alignment in 9D  
-
-Validation confirms that projections preserve substrate invariants.
-
----
-
-## **7. Step 6 — Interpret Projection Results**
-
-A successful projection yields:
-
-- stable 3D geometry  
-- coherent 6D interaction surfaces  
-- continuous 9D pathway trajectories  
-- predictable regime transitions  
-- preserved substrate invariants  
-
-If projections fail validation, drift detection is triggered.
-
----
-
-## **8. Summary**
-
-This example demonstrates:
-
-- how to extract high‑dimensional inference signals  
-- how to align them to substrate axes  
-- how to project them into 3D–9D dimensional cores  
-- how to classify regime behavior  
-- how to validate projections using vST  
-- how to detect drift when invariants fail  
-
-Dimensional‑core projection provides a stable, interpretable substrate for analyzing AlphaFold‑class inference systems.
 

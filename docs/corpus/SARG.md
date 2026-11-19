@@ -1,97 +1,9 @@
 SARG 
----
-title: "SARG"
-description: "Substrate-Agnostic Resonance Grammar — a universal 4-layer mapping system for any substrate across any scale."
-stability: stable
-date: 2026-07-14
-section: applied
-rtt:
-  coherence: declared
-  drift: bounded
-  paradox: structural
----
-
-> ```
-> rtt=1 | coherence=declared | drift=bounded | paradox=structural
-> ```
-
-# SARG — Substrate-Agnostic Resonance Grammar
-
-**SARG** is the universal grammar layer of TriadicFrameworks. Where SET decomposes any system into Substrate · Envelope · Transition, SARG provides the *mapping machinery* — a 4-layer architecture that can describe resonance relationships across any substrate, at any scale, using a consistent and minimal data model.
-
-## The 4 Universal Layers
-
-| Layer | Role |
-|---|---|
-| **Substrate** | What the thing is — material, informational, biological, computational |
-| **Lens** | How it is being observed — VREL or VREL-A lens type |
-| **Invariants** | What does not change across transformations — the structural constants |
-| **Resonance Mapping** | How the substrate's dynamics align with, amplify, or dampen other substrates |
-
-## Universal Anchors
-
-SARG uses four universal anchor symbols across all substrate types:
-
-| Symbol | Meaning |
-|---|---|
-| `●` | Full resonance — complete structural alignment |
-| `○` | Partial resonance — partial alignment, boundary active |
-| `×` | Anti-resonance — structural opposition or dampening |
-| `\|` | Boundary — transition surface between resonance states |
-
-## Lens Types
-
-- **VREL** — Vector-relational lens; maps directional resonance flows
-- **VREL-A** — Augmented VREL; extends to asymmetric and multi-scale relationships
-
-## Atlas
-
-The SARG Atlas maps resonance structures from **0D** (point-like, atomic-scale) through **cosmic scale** — providing a multi-scale reference for invariant identification across all substrate types.
-
-## Minimal Data Model
-
-Every SARG mapping requires exactly four fields:
-
-```json
-{
-  "substrate": "...",
-  "lens":      "VREL | VREL-A",
-  "invariants": [...],
-  "resonance":  {...}
-}
-```
-
-## Folder Structure
-
-```
-schema/       invariants/   inversion/
-substrates/   resonance/    error/
-lenses/       atlas/
-              examples/
-```
-
-- `Capture.md` — Conceptual seed document
-- `SARG_module.json` — Agentic role assignments for AI consumers
-- `error/` — Error taxonomy and rectification flow
-
-## Error Taxonomy
-SARG includes a structured error taxonomy covering misidentified substrates, lens misapplication, invariant collapse, and resonance mapping failures — each with a defined rectification flow.
-
-## Integration Points
-- `AI_Resonance_Seed` — Lens and invariant definitions are seeded from the Resonance Seed
-- `Framework_Field_Theory` — FFF lattice geometry is the highest-scale SARG mapping surface
-- `Low_Dimensional_Structures` — LDS projections are SARG-compatible scale-relative maps
-- `Research` — SARG grammar developed in parallel with foundational pre-kernel research
-
----
-
-*Published by Byte Books Publishing © 2026 · LCCN 2026917007*
-<img width="1194" height="672" alt="SARG_module" src="https://github.com/user-attachments/assets/81810090-e8ee-4298-b7da-47865735765a" />
-
-## ✅ SARG  
+<img width="1194" height="672" alt="SARG_" src="https://github.com/user-attachments/assets/061218b7-355d-4afb-87f1-2deb3e626eb4" />
 
 - [`SARG_module.json`](SARG_module.json) — Agentic module schema role assignments
 
+# ✅ SARG  
 *A minimal grammar for describing structure, resonance, and invariants across any substrate.*
 
 Substrate‑Agnostic Resonance Grammar (SARG) provides a unified way to describe **how structure behaves**, regardless of the domain it appears in.  
@@ -4597,108 +4509,6 @@ All done! Here's what the file covers at a glance:
 | **§10 Cross‑links** | Ties to `inversion_placeholders.md`, both lens files, `invariants/`, `resonance/`, `error/`, and `Capture.md` Step 5 |
 
 This slots in as the **conceptual spine** of your `inversion/` directory — `inversion_placeholders.md` can now reference it as its parent doc.
-# **Lens Overview**  
-*A SARG reference document*
-
-A **lens** is the operator used to read, interpret, or transform a substrate.  
-Where the substrate provides *structure*, the lens provides *perspective* — it determines **what becomes visible**, **what becomes invariant**, and **how resonance is revealed**.
-
-Lenses are substrate‑agnostic: the same lens can be applied to linguistic, acoustic, geometric, symbolic, biological, cosmological, or lostational substrates.
-
----
-
-## **1. What a Lens Does**
-
-A lens performs three core functions:
-
-### **1. Reveals Structure**  
-It highlights specific features of the substrate — strokes, harmonics, axes, cycles, intersections, attractors, etc.
-
-### **2. Produces Invariants**  
-Each lens stabilizes certain features across transformations.  
-These become the **vertical**, **horizontal**, and **dual** invariants in SARG.
-
-### **3. Aligns with Resonance**  
-A lens determines how the substrate maps to the universal anchors:
-
-- **●** point  
-- **○** loop  
-- **×** intersection  
-- **|** axis  
-
-Different lenses reveal different resonance families.
-
----
-
-## **2. Lens Types in SARG**
-
-SARG currently recognizes two primary lens families, with room for expansion:
-
-### **VREL — Vertical Resonance Extraction Lens**  
-Focuses on:
-
-- vertical invariants  
-- structural axes  
-- stroke families  
-- directional coherence  
-
-Common in linguistic, geometric, and symbolic substrates.
-
----
-
-### **VREL‑A — Acoustic Variant**  
-Focuses on:
-
-- harmonic families  
-- overtone structure  
-- rhythmic invariants  
-- phase coherence  
-
-Common in acoustic, biological, and cosmological substrates.
-
----
-
-## **3. Lens Behavior Across Substrates**
-
-A lens is not tied to a domain.  
-Instead, it adapts to the substrate:
-
-- On **linguistic** substrates, VREL extracts stroke families.  
-- On **acoustic** substrates, VREL‑A extracts harmonic invariants.  
-- On **geometric** substrates, VREL extracts axes and symmetries.  
-- On **symbolic** substrates, VREL reveals relational structure.  
-- On **biological** substrates, VREL‑A reveals oscillatory coherence.  
-- On **lostational** substrates, both lenses reveal dimensional drift and resonance shells.
-
-The lens determines *what counts* as structure.
-
----
-
-## **4. Lens Block in SARG**
-
-Every SARG object includes a lens block:
-
-```
-"lens": {
-  "type": "VREL",
-  "variant": "standard",
-  "notes": "extracts vertical and dual invariants"
-}
-```
-
-- **type** — the lens family (e.g., VREL, VREL‑A)  
-- **variant** — optional subtype  
-- **notes** — any special considerations  
-
----
-
-## **5. Relationship to Other Files**
-
-- `VREL.md` — details of the vertical resonance lens  
-- `VREL-A.md` — acoustic variant  
-- `invariant_types.md` — invariants produced by lenses  
-- `resonance_mapping.md` — how lenses reveal anchors  
-- `examples/` — SARG objects using different lenses  
 # **VREL‑A — Vertical Resonance Extraction Lens (Acoustic Variant)**
 
 *A SARG lens for extracting harmonic invariants from any substrate.*
@@ -4991,6 +4801,197 @@ Every VREL extraction produces a structured invariant set:
   "horizontal": ["B", "C", "D", "E", "H", "I", "K", "O", "X"],
   "dual": ["H", "I", "O", "X"]
 }
+# **Lens Overview**  
+*A SARG reference document*
+
+A **lens** is the operator used to read, interpret, or transform a substrate.  
+Where the substrate provides *structure*, the lens provides *perspective* — it determines **what becomes visible**, **what becomes invariant**, and **how resonance is revealed**.
+
+Lenses are substrate‑agnostic: the same lens can be applied to linguistic, acoustic, geometric, symbolic, biological, cosmological, or lostational substrates.
+
+---
+
+## **1. What a Lens Does**
+
+A lens performs three core functions:
+
+### **1. Reveals Structure**  
+It highlights specific features of the substrate — strokes, harmonics, axes, cycles, intersections, attractors, etc.
+
+### **2. Produces Invariants**  
+Each lens stabilizes certain features across transformations.  
+These become the **vertical**, **horizontal**, and **dual** invariants in SARG.
+
+### **3. Aligns with Resonance**  
+A lens determines how the substrate maps to the universal anchors:
+
+- **●** point  
+- **○** loop  
+- **×** intersection  
+- **|** axis  
+
+Different lenses reveal different resonance families.
+
+---
+
+## **2. Lens Types in SARG**
+
+SARG currently recognizes two primary lens families, with room for expansion:
+
+### **VREL — Vertical Resonance Extraction Lens**  
+Focuses on:
+
+- vertical invariants  
+- structural axes  
+- stroke families  
+- directional coherence  
+
+Common in linguistic, geometric, and symbolic substrates.
+
+---
+
+### **VREL‑A — Acoustic Variant**  
+Focuses on:
+
+- harmonic families  
+- overtone structure  
+- rhythmic invariants  
+- phase coherence  
+
+Common in acoustic, biological, and cosmological substrates.
+
+---
+
+## **3. Lens Behavior Across Substrates**
+
+A lens is not tied to a domain.  
+Instead, it adapts to the substrate:
+
+- On **linguistic** substrates, VREL extracts stroke families.  
+- On **acoustic** substrates, VREL‑A extracts harmonic invariants.  
+- On **geometric** substrates, VREL extracts axes and symmetries.  
+- On **symbolic** substrates, VREL reveals relational structure.  
+- On **biological** substrates, VREL‑A reveals oscillatory coherence.  
+- On **lostational** substrates, both lenses reveal dimensional drift and resonance shells.
+
+The lens determines *what counts* as structure.
+
+---
+
+## **4. Lens Block in SARG**
+
+Every SARG object includes a lens block:
+
+```
+"lens": {
+  "type": "VREL",
+  "variant": "standard",
+  "notes": "extracts vertical and dual invariants"
+}
+```
+
+- **type** — the lens family (e.g., VREL, VREL‑A)  
+- **variant** — optional subtype  
+- **notes** — any special considerations  
+
+---
+
+## **5. Relationship to Other Files**
+
+- `VREL.md` — details of the vertical resonance lens  
+- `VREL-A.md` — acoustic variant  
+- `invariant_types.md` — invariants produced by lenses  
+- `resonance_mapping.md` — how lenses reveal anchors  
+- `examples/` — SARG objects using different lenses  
+<img width="1194" height="672" alt="SARG_module" src="https://github.com/user-attachments/assets/81810090-e8ee-4298-b7da-47865735765a" />
+
+<!-- ---
+title: "SARG"
+description: "Substrate-Agnostic Resonance Grammar — a universal 4-layer mapping system for any substrate across any scale."
+stability: stable
+date: 2026-07-14
+section: applied
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+--- -->
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+# SARG — Substrate-Agnostic Resonance Grammar
+
+**SARG** is the universal grammar layer of TriadicFrameworks. Where SET decomposes any system into Substrate · Envelope · Transition, SARG provides the *mapping machinery* — a 4-layer architecture that can describe resonance relationships across any substrate, at any scale, using a consistent and minimal data model.
+
+## The 4 Universal Layers
+
+| Layer | Role |
+|---|---|
+| **Substrate** | What the thing is — material, informational, biological, computational |
+| **Lens** | How it is being observed — VREL or VREL-A lens type |
+| **Invariants** | What does not change across transformations — the structural constants |
+| **Resonance Mapping** | How the substrate's dynamics align with, amplify, or dampen other substrates |
+
+## Universal Anchors
+
+SARG uses four universal anchor symbols across all substrate types:
+
+| Symbol | Meaning |
+|---|---|
+| `●` | Full resonance — complete structural alignment |
+| `○` | Partial resonance — partial alignment, boundary active |
+| `×` | Anti-resonance — structural opposition or dampening |
+| `\|` | Boundary — transition surface between resonance states |
+
+## Lens Types
+
+- **VREL** — Vector-relational lens; maps directional resonance flows
+- **VREL-A** — Augmented VREL; extends to asymmetric and multi-scale relationships
+
+## Atlas
+
+The SARG Atlas maps resonance structures from **0D** (point-like, atomic-scale) through **cosmic scale** — providing a multi-scale reference for invariant identification across all substrate types.
+
+## Minimal Data Model
+
+Every SARG mapping requires exactly four fields:
+
+```json
+{
+  "substrate": "...",
+  "lens":      "VREL | VREL-A",
+  "invariants": [...],
+  "resonance":  {...}
+}
+```
+
+## Folder Structure
+
+```
+schema/       invariants/   inversion/
+substrates/   resonance/    error/
+lenses/       atlas/
+              examples/
+```
+
+- `Capture.md` — Conceptual seed document
+- `SARG_module.json` — Agentic role assignments for AI consumers
+- `error/` — Error taxonomy and rectification flow
+
+## Error Taxonomy
+SARG includes a structured error taxonomy covering misidentified substrates, lens misapplication, invariant collapse, and resonance mapping failures — each with a defined rectification flow.
+
+## Integration Points
+- `AI_Resonance_Seed` — Lens and invariant definitions are seeded from the Resonance Seed
+- `Framework_Field_Theory` — FFF lattice geometry is the highest-scale SARG mapping surface
+- `Low_Dimensional_Structures` — LDS projections are SARG-compatible scale-relative maps
+- `Research` — SARG grammar developed in parallel with foundational pre-kernel research
+
+---
+
+*Published by Byte Books Publishing © 2026 · LCCN 2026917007*
 # **Resonance Families**  
 *A SARG resonance reference document*
 

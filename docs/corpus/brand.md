@@ -1,47 +1,5 @@
 brand 
-# TriadicFrameworks — Brand System
-
-A minimal, cinematic, AI‑first brand surface linking all identity components.
-
----
-
-## Logo
-[View Logo](logo/)
-
-## Brand Kit
-[Brand Kit](kit/)
-
-## Voice
-[Brand Voice](voice/)
-
-## Governance
-[Brand Governance](governance/)
-
-## Assets
-[Assets](assets/)
-
----
-
-### Identity Notes
-
-- black → indigo → violet gradient  
-- subtle glyphs  
-- time‑crystal accent  
-- mobile‑optimized hero images (1080×600)  
-- operator‑first visual grammar  
-- zero drift across modules  
-
----
-
-### For Contributors
-
-All brand changes require:
-
-- lineage mapping  
-- drift check  
-- governance approval  
-- version bump  
-Below is our **TriadicFrameworks Canon Operations Calendar (.ics)** — focused purely on the *canon*, *modules*, *metadata*, *RTT*, and *substrate grammar* operational cycles.
+Below is our **TriadicFrameworks Canon Operations Calendar (.ics)** — focused purely on the *canon*, *modules*, *metadata*, *RTT*, and *substrate grammar* operational cycles.
 
 Saved this as:
 
@@ -420,7 +378,7 @@ Every event will appear at **9:00 AM Eastern Time**, repeating annually or quart
 
 - **EIN Confirmation (IRS)**  
   EIN: 42-3542585  
-  Responsible Party: Andrew C. Wilson  
+  Responsible Party: Nawder Loswin  
   Business Activity: SERVICE — Substrate Grammar
 
 - **DBA Registration**  
@@ -537,4 +495,48 @@ Governance must ensure:
 ---
 
 # End of Handbook
+<img width="1194" height="672" alt="brand_" src="https://github.com/user-attachments/assets/cf04193c-f046-4278-a493-cc7a06cc6bb7" />
+
+# TriadicFrameworks — Brand System
+
+A minimal, cinematic, AI‑first brand surface linking all identity components.
+
+---
+
+## Logo
+[View Logo](logo/)
+
+## Brand Kit
+[Brand Kit](kit/)
+
+## Voice
+[Brand Voice](voice/)
+
+## Governance
+[Brand Governance](governance/)
+
+## Assets
+[Assets](assets/)
+
+---
+
+### Identity Notes
+
+- black → indigo → violet gradient  
+- subtle glyphs  
+- time‑crystal accent  
+- mobile‑optimized hero images (1080×600)  
+- operator‑first visual grammar  
+- zero drift across modules  
+
+---
+
+### For Contributors
+
+All brand changes require:
+
+- lineage mapping  
+- drift check  
+- governance approval  
+- version bump  
 

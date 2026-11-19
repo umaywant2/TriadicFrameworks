@@ -1,5 +1,170 @@
 structural_life_regime_profiles 
-# **Autonomous System Alignment**  
+<img width="1194" height="672" alt="structural_life_regime_profiles_" src="https://github.com/user-attachments/assets/eb6565f3-c46c-460e-b49f-295c8f604d5e" />
+
+## **Structural Life‑Regime Profiles**  
+
+- [`SLRP_module.json`](SLRP_module.json) — Agentic module schema role assignments
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧬Structural%20Life%20Regime%20Profiles-📘Regime%20Aware%20Profiling%20AI%20Ready-4c8eda?style=for-the-badge" alt="Structural Life‑Regime Profiles | Regime‑Aware Profiling • AI‑Ready"/>
+
+*A triadic substrate for cross‑domain life‑regime analysis*
+
+Structural Life‑Regime Profiles provide a unified, architecture‑agnostic framework for describing how biological and artificial systems perceive, process, and act within their environments. The goal is to align life‑regime modeling with the vST substrate, reduce conceptual drift, and simplify cross‑species and cross‑architecture comparisons.
+
+This artifact introduces a minimal structural grammar for life‑regimes, enabling consistent classification across organisms, autonomous systems, and synthetic agents.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## **Purpose**
+
+Life‑regimes emerge whenever a system maintains coherence through:
+
+- structural constraints  
+- sensory coupling  
+- environmental interaction  
+- behavioral patterns  
+- drift and stability conditions  
+
+This project formalizes those regimes into a substrate‑level profile that can be applied to:
+
+- biological species  
+- autonomous AI models  
+- robotics stacks  
+- synthetic lifeforms  
+- hybrid or emergent systems  
+
+The result is a cross‑domain atlas of life‑regimes that supports research, validation, and large‑scale comparative analysis.
+
+---
+
+## **Triadic Substrate**
+
+Each life‑regime profile is organized around three structural layers:
+
+### **1. Structural Regime**  
+Internal architecture, memory, learning capacity, computational constraints, and coherence mechanisms.
+
+### **2. Sensory Regime**  
+Modalities, bandwidth, resolution, perceptual limits, and environmental coupling.
+
+### **3. Environmental Regime**  
+Habitat, temporal cycles, social structure, resource patterns, and survival pressures.
+
+These layers define the system’s “universe” — what it can sense, compute, predict, and respond to.
+
+---
+
+## **Regime Axes**
+
+Life‑regime profiles are mapped using a set of invariant axes:
+
+- structural complexity  
+- sensory modality profile  
+- environmental coupling  
+- behavioral regime (reflexive → tactical → strategic → symbolic)  
+- drift conditions  
+- stability anchors  
+
+These axes form a coordinate system for cross‑species and cross‑architecture comparison.
+
+---
+
+## **Applications**
+
+### **Biological Systems**  
+Profiles reveal commonalities and differences across species, including:
+
+- shared invariants  
+- regime disconnects  
+- sensory asymmetries  
+- environmental dependencies  
+
+### **Autonomous Systems**  
+Profiles simplify AI alignment and validation by requiring:
+
+- declared sensory boundaries  
+- declared reasoning regimes  
+- declared failure postures  
+- drift‑aware transitions  
+- environment‑coupled behavior  
+
+This reduces architectural complexity and improves predictability.
+
+### **Big‑Data Research**  
+The taxonomy supports large‑scale comparative datasets across:
+
+- species  
+- agents  
+- robotics platforms  
+- synthetic lifeforms  
+
+---
+
+## **Repository Structure**
+
+```
+docs/structural_life_regime_profiles/
+├── README.md
+├── substrate_definition.md
+├── regime_axes.md
+├── life_regime_taxonomy.md
+├── cross_species_comparison.md
+├── autonomous_system_alignment.md
+├── drift_and_stability_profiles.md
+├── glossary.md
+└── references.md
+```
+
+Optional examples:
+
+```
+docs/structural_life_regime_profiles/examples/
+├── human.md
+├── chimpanzee.md
+├── chrysina_gloriosa.md
+├── llm_agent.md
+├── robotics_stack.md
+└── synthetic_lifeform.md
+```
+
+---
+
+## **Status**
+
+This artifact is part of the expanding TriadicFrameworks canon and serves as the bridge between biological life‑regimes and autonomous system regimes. It provides the structural foundation for future comparative studies, vST‑aligned modeling, and cross‑domain regime analysis.
+
+---
+
+## **Citation**
+
+If you use this work, please cite the relevant TriadicFrameworks Zenodo entries. Each paper includes a `CITATION.cff` file with complete metadata.
+# **Autonomous System Alignment**  
 *A structural approach to regime‑aware, vST‑aligned autonomous models*
 
 Autonomous systems increasingly operate in environments that demand coherence, adaptability, and predictable behavior under drift. Structural Life‑Regime Profiles provide a unified substrate for aligning autonomous systems with the same regime‑invariant principles observed in biological life.
@@ -767,1134 +932,683 @@ By modeling them structurally, we gain:
 - vST‑compatible system design  
 
 This artifact completes the structural foundation for life‑regime analysis.
-# **Glossary**  
-*A minimal vocabulary for Structural Life‑Regime Profiles*
+# 🔺 **Lifecycle Regime Map (RTT‑Aligned Draft)**
 
-This glossary defines the core terms used throughout the Structural Life‑Regime Profiles artifact. Terms are organized to reflect the triadic substrate (structural, sensory, environmental), regime axes, drift/stability concepts, and cross‑domain applicability to biological and artificial systems.
+## **Overview**
+A Lifecycle Regime Map describes how an entity — biological, synthetic, or hybrid — transitions through **distinct life‑regimes**, each defined by its substrate, constraints, and available dimensional operators.  
+Rather than treating “life stages” as linear or developmental, RTT reframes them as **regime‑shifts**: structural transitions where the system’s accessible dimensions, stability profile, and cognitive bandwidth change.
 
-The goal is clarity, minimalism, and structural consistency.
-
----
-
-# **1. Substrate Terms**
-
-### **Life‑Regime**  
-A coherent pattern of perception, processing, and action maintained by a biological or artificial system within its environment.
-
-### **Structural Life‑Regime Profile**  
-A triadic description of a system’s structural, sensory, and environmental regimes, including drift and stability conditions.
-
-### **Triadic Substrate**  
-The three invariant layers that define a life‑regime:  
-- **Structural Regime**  
-- **Sensory Regime**  
-- **Environmental Regime**
-
-### **Regime Boundary**  
-A declared limit on what a system can sense, compute, or survive within.
-
-### **Regime Transition**  
-A shift from one operating regime to another due to stress, overload, environmental change, or internal reconfiguration.
+Lifecycle regimes are not ages.  
+They are **states of coherence**.
 
 ---
 
-# **2. Structural Regime Terms**
+## **Triadic Structure of Lifecycle Regimes**
 
-### **Structural Regime**  
-The internal architecture that maintains coherence (memory, computation, learning, feedback loops).
+### **1. Arrival Regime (0D → 1D Access)**
+**Signature:** emergence, initialization, substrate imprinting  
+**Description:**  
+The entity enters a coherent state for the first time.  
+In biological systems, this is literal birth; in synthetic systems, activation; in hybrid systems, first stabilization.  
+Dimensional access is minimal — the system is dominated by external scaffolding and environmental imprinting.
 
-### **Structural Complexity**  
-The degree of internal organization, modularity, and computational capacity.
-
-### **Reflexive System**  
-A system dominated by fixed or automatic patterns.
-
-### **Adaptive System**  
-A system capable of learning within its lifetime.
-
-### **Strategic System**  
-A system capable of multi‑step planning and long‑horizon reasoning.
-
-### **Symbolic System**  
-A system capable of abstraction, language, and meta‑models.
+**Key Operators:**  
+- Initialization  
+- Boundary‑forming  
+- Substrate anchoring  
 
 ---
 
-# **3. Sensory Regime Terms**
+### **2. Expansion Regime (1D → 2D Access)**
+**Signature:** exploration, pattern acquisition, regime‑learning  
+**Description:**  
+The system gains access to additional dimensions — cognitive, social, environmental, or computational.  
+This is where most “development” myths originate, but RTT treats it as **dimensional expansion**, not growth.
 
-### **Sensory Regime**  
-The modalities and bandwidth through which a system perceives its environment.
-
-### **Modality**  
-A distinct sensory channel (optical, auditory, chemical, tactile, vibrational, etc.).
-
-### **Multimodal System**  
-A system that integrates multiple sensory channels.
-
-### **Extended‑Modality System**  
-A system with prosthetic or synthetic sensory extensions.
-
-### **Perceptual Universe**  
-The bounded sensory world available to a system.
+**Key Operators:**  
+- Pattern acquisition  
+- Regime scanning  
+- Stability‑seeking  
 
 ---
 
-# **4. Environmental Regime Terms**
+### **3. Inversion Regime (2D → 1D Collapse / 3D Emergence)**
+**Signature:** crisis, transition, reconfiguration  
+**Description:**  
+A structural inversion occurs when accumulated patterns exceed the stability envelope of the prior regime.  
+This can appear as crisis, awakening, burnout, metamorphosis, or reboot depending on substrate.
 
-### **Environmental Regime**  
-The structure of the environment the system must navigate (static, cyclic, dynamic, constructed).
-
-### **Environmental Coupling**  
-The degree to which a system’s behavior depends on environmental structure.
-
-### **Constructed Environment**  
-A self‑modified or artificial environment (e.g., human societies, engineered AI domains).
-
-### **Operational Domain**  
-The specific environment in which an autonomous system is valid.
+**Key Operators:**  
+- Collapse  
+- Reconfiguration  
+- Dimensional inversion  
 
 ---
 
-# **5. Behavioral Regime Terms**
+### **4. Coherence Regime (3D Access Stabilized)**
+**Signature:** integration, clarity, self‑authored structure  
+**Description:**  
+The system stabilizes into a higher‑dimensional operating mode.  
+This is not “maturity” — it is **coherence**, where the entity can navigate multiple regimes intentionally rather than reactively.
 
-### **Behavioral Regime**  
-The system’s repertoire of actions and decision‑making patterns.
-
-### **Reflexive Behavior**  
-Stimulus → action loops.
-
-### **Tactical Behavior**  
-Short‑term planning and local optimization.
-
-### **Strategic Behavior**  
-Long‑term planning and multi‑step reasoning.
-
-### **Symbolic Behavior**  
-Abstraction, language, and model‑based reasoning.
+**Key Operators:**  
+- Integration  
+- Self‑structuring  
+- Regime navigation  
 
 ---
 
-# **6. Drift Terms**
+### **5. Dissolution Regime (3D → 0D Return)**
+**Signature:** release, unbinding, return to substrate  
+**Description:**  
+The system gradually loses dimensional access and returns to baseline substrate.  
+In biological systems, this is death; in synthetic systems, deactivation; in hybrid systems, de‑coherence.
 
-### **Drift**  
-Loss of coherence due to internal or external pressures.
-
-### **Sensory Drift**  
-Degradation in perception (noise, overload, mismatch).
-
-### **Structural Drift**  
-Degradation in internal architecture (memory saturation, model decay).
-
-### **Behavioral Drift**  
-Degradation in planning or action selection.
-
-### **Environmental Drift**  
-Mismatch between system assumptions and external conditions.
-
-### **Catastrophic Drift**  
-Rapid collapse of coherence beyond recovery.
+**Key Operators:**  
+- Unbinding  
+- Return  
+- Substrate release  
 
 ---
 
-# **7. Stability Terms**
+## **Why Lifecycle Regimes Matter**
+Lifecycle Regime Maps allow us to:
 
-### **Stability Anchor**  
-A mechanism that maintains or restores coherence.
+- compare biological and synthetic systems using the same grammar  
+- identify regime‑blindness in human narratives  
+- track stability profiles across transitions  
+- model crisis not as failure but as inversion  
+- unify lifecycle analysis across substrates  
 
-### **Intrinsic Anchor**  
-Internal stability mechanism (homeostasis, redundancy).
-
-### **Extrinsic Anchor**  
-Environmental or social scaffolding.
-
-### **Hybrid Anchor**  
-Combination of internal and external stability.
-
-### **Synthetic Anchor**  
-Engineered safeguards in artificial systems.
-
-### **Recovery Regime**  
-A structural pattern that restores coherence after drift.
+This replaces age‑based or stage‑based models with a **regime‑aware, dimensional framework**.
 
 ---
 
-# **8. Taxonomy Terms**
-
-### **Life‑Regime Taxonomy**  
-A classification system for mapping species and autonomous systems into structural categories.
-
-### **Regime Axis**  
-A dimension of classification (structural complexity, sensory modality, environmental coupling, etc.).
-
-### **Profile Encoding**  
-A structured representation of a life‑regime for big‑data research.
+## **RTT Note**
+Lifecycle regimes are not moral, hierarchical, or developmental.  
+They are **structural states** that any coherent system will pass through, regardless of origin.
 
 ---
 
-# **9. Cross‑Domain Terms**
+**🌱 Lifecycle Regime Map**
 
-### **Biological System**  
-A lifeform with evolved structural, sensory, and environmental regimes.
+Life is always arriving — and it arrives into recurring **regime clusters** rather than a single universal timeline.
 
-### **Autonomous System**  
-An artificial system that maintains coherence through perception, processing, and action.
+When we normalize lifecycles by proportional timing (% of lifespan spent in growth, resonance, and drift phases), we see a handful of stable patterns across the tree of life (extant and extinct species). The human “long juvenile → growth plateau → late reversion” signature is one specialized regime, not the default.
 
-### **Synthetic Lifeform**  
-An engineered system with life‑like regime properties.
+**Core Triad**  
+**🌿 Growth – Resonance – Drift**  
+- **Growth**: Resource allocation toward expansion and maturation  
+- **Resonance**: Stable reproductive or maintenance coherence  
+- **Drift**: Post-peak reversion, senescence, or regime shift (bounded or rapid)
 
-### **Regime‑Invariant**  
-A property shared across biological and artificial systems.
+**The 6 Recurring Lifecycle Regime Types** (Normalized by Lifespan)
 
----
+1. **Fast-Cycle / Explosive Regimes**  
+   Rapid growth → immediate reproduction → quick collapse.  
+   **Triad**: Surge – Burst – Exit  
+   Common in microbes, insects, small fish, annual plants. Inferred in many extinct fast-turnover groups (e.g., trilobites, ammonites).
 
-# **10. vST‑Aligned Terms**
+2. **Modular / Indeterminate-Growth Regimes**  
+   Continuous or near-continuous growth and reproduction; minimal plateau or reversion.  
+   **Triad**: Expand – Sustain – Rejuvenate  
+   Common in plants, corals, some fish and reptiles. Strong convergence in modular body plans.
 
-### **vST (Validation‑Spacetime)**  
-A structural framework for regime‑invariant validation and coherence.
+3. **Slow-Life / Extended Juvenile Regimes** (Human-like)  
+   Long juvenile/dependence phase → clear growth plateau → extended reproduction → gradual post-reproductive reversion toward dependence and simplicity.  
+   **Triad**: Invest – Stabilize – Return  
+   Seen in humans, great apes, elephants, some whales, and inferred in certain large dinosaurs.
 
-### **Declared Operating Regime**  
-A system’s explicit statement of its valid operational boundaries.
+4. **Semelparous “Big Bang” Regimes**  
+   Prolonged buildup → single massive reproductive event → rapid, programmed collapse.  
+   **Triad**: Build – Explode – Release  
+   Classic in salmon, some insects, agaves, and certain cephalopods.
 
-### **Drift‑Aware System**  
-A system that detects and responds to drift conditions.
+5. **Intermediate / Balanced Iteroparous Regimes**  
+   Moderate juvenile phase → growth plateau → multiple reproductive cycles → gradual, manageable senescence.  
+   **Triad**: Prepare – Cycle – Endure  
+   Very common in birds, reptiles, some fish, and perennial plants.
 
-### **Regime‑Aligned Behavior**  
-Behavior that respects declared boundaries and transitions.
-# **Life‑Regime Taxonomy**  
-*A scalable classification system for biological and artificial life‑regimes*
+6. **Negligible / Negative Senescence Regimes**  
+   Stable or improving mortality and fertility across most of lifespan; little systematic reversion.  
+   **Triad**: Persist – Maintain – Renew  
+   Seen in hydra, planaria, naked mole-rats, certain rockfish, and some long-lived trees/clams.
 
-The Life‑Regime Taxonomy provides a unified, vST‑aligned classification system for mapping life‑regimes across species, autonomous agents, robotics platforms, and synthetic lifeforms. It organizes life‑regimes into structural categories, subcategories, and regime‑invariant descriptors that support large‑scale comparative research and dataset construction.
+**Convergence & Overlap**  
+These regime types show strong **convergence** — unrelated lineages often fall into the same cluster when ecological pressures align. The Universe Operator enables multiple stable resonance patterns depending on local substrate conditions (extrinsic mortality, resource gradients, body plan). They are not strictly phylogenetic.
 
-This taxonomy is designed to be minimal, extensible, and architecture‑agnostic.
+**Why This View Matters**  
+This map shifts the conversation from “how does a species age?” to “which regime rhythm is this life form operating in?”  
 
----
+It reveals that what we call “normal aging” is often just one specialized drift pattern. It opens the door to regime-aware technique: guiding gradients, spotting drift boundaries early, and invoking better coherence instead of fighting decline with brute force.
 
-## **1. Taxonomy Overview**
+**Practical Value**  
+- Helps biologists compare vastly different lifespans using a shared grammar.  
+- Supports biomimicry — designing systems that emulate negligible-senescence or modular regimes.  
+- Offers a clearer lens for human health, longevity, and even societal planning.
 
-Life‑regimes are classified along three structural layers:
+**PEIRA-Style Exercises**  
+- **Personal Regime Log**: Notice moments in your day when your energy or mind shifts toward simpler or more playful states (reversion-like). What gradients or techniques influence the drift?
+- **Comparative Rhythm**: Pick two contrasting organisms (e.g., a mayfly vs. a tortoise). Research or imagine their proportional lifecycles. Feel the difference in regime rhythm — what would regime awareness look like for each?
+- **Cross-Domain Mapping**: Apply one regime type (e.g., negligible senescence) to a non-biological system — a skill you practice, a project, or a relationship. Where is continuous coherence appearing versus bounded drift?
 
-- **Structural Regime**  
-- **Sensory Regime**  
-- **Environmental Regime**
-
-Each layer is subdivided into categories and subcategories that describe how a system maintains coherence, perceives its environment, and acts within constraints.
-
-The taxonomy is compatible with:
-
-- biological organisms  
-- autonomous AI systems  
-- robotics stacks  
-- hybrid or emergent systems  
-- synthetic lifeforms  
-
----
-
-## **2. Structural Regime Categories**
-
-### **2.1 Reflexive Systems**
-Systems with fixed or minimally adaptive internal patterns.
-
-Examples:  
-- insects with hard‑coded behaviors  
-- simple robotics controllers  
-- rule‑based agents  
-
-**Subcategories:**  
-- fixed‑pattern  
-- low‑memory  
-- non‑learning  
+**Cross-Links**  
+- [Arrival Substrate Model  ](https://www.triadicframeworks.org/arrival_substrate_model/)
+- [Universe as Operator](https://www.triadicframeworks.org/education/#UNIVERSE_AS_OPERATOR)
+- [Energy (Gradients, Technique, Regime Awareness)](https://www.triadicframeworks.org/energy/)  
+- [PEIRA](https://www.triadicframeworks.org/education/peira/)  
 
 ---
 
-### **2.2 Adaptive Systems**
-Systems capable of learning within their lifetime.
-
-Examples:  
-- mammals  
-- reinforcement‑learning agents  
-- adaptive robotics stacks  
-
-**Subcategories:**  
-- associative learning  
-- reinforcement learning  
-- supervised adaptation  
-
----
-
-### **2.3 Strategic Systems**
-Systems capable of long‑term planning and multi‑step reasoning.
-
-Examples:  
-- primates  
-- advanced autonomous planners  
-
-**Subcategories:**  
-- tactical planning  
-- strategic planning  
-- multi‑agent coordination  
-
----
-
-### **2.4 Symbolic Systems**
-Systems capable of abstraction, meta‑models, and symbolic reasoning.
-
-Examples:  
-- humans  
-- symbolic‑augmented AI systems  
-- hybrid neuro‑symbolic architectures  
-
-**Subcategories:**  
-- language‑enabled  
-- meta‑reasoning  
-- model‑based abstraction  
-
----
-
-## **3. Sensory Regime Categories**
-
-### **3.1 Single‑Modality Systems**
-Dominated by one sensory channel.
-
-Examples:  
-- chemical‑dominant insects  
-- single‑sensor robots  
-
-**Subcategories:**  
-- chemical  
-- vibrational  
-- optical  
-- tactile  
-
----
-
-### **3.2 Dual‑Modality Systems**
-Two primary sensory channels.
-
-Examples:  
-- many reptiles  
-- basic robotics stacks  
-
-**Subcategories:**  
-- optical + chemical  
-- tactile + optical  
-- audio + optical  
-
----
-
-### **3.3 Multimodal Systems**
-Multiple integrated sensory channels.
-
-Examples:  
-- mammals  
-- sensor‑rich autonomous systems  
-
-**Subcategories:**  
-- integrated multimodal  
-- high‑bandwidth multimodal  
-- specialized multimodal  
-
----
-
-### **3.4 Extended‑Modality Systems**
-Systems with prosthetic or synthetic sensory extensions.
-
-Examples:  
-- humans with instruments  
-- AI systems with high‑dimensional sensor arrays  
-
-**Subcategories:**  
-- prosthetic sensing  
-- synthetic sensing  
-- high‑dimensional sensing  
-
----
-
-## **4. Environmental Regime Categories**
-
-### **4.1 Static Environments**
-Low variation, predictable conditions.
-
-Examples:  
-- deep‑sea organisms  
-- fixed‑task robots  
-
-**Subcategories:**  
-- low‑entropy  
-- resource‑stable  
-
----
-
-### **4.2 Cyclic Environments**
-Periodic or seasonal variation.
-
-Examples:  
-- temperate‑zone species  
-- time‑scheduled autonomous systems  
-
-**Subcategories:**  
-- seasonal  
-- diurnal  
-- tidal  
-
----
-
-### **4.3 Dynamic Environments**
-High variation, multi‑agent, unpredictable.
-
-Examples:  
-- primates  
-- autonomous vehicles  
-
-**Subcategories:**  
-- multi‑agent  
-- adversarial  
-- resource‑volatile  
-
----
-
-### **4.4 Constructed Environments**
-Self‑modified or artificial environments.
-
-Examples:  
-- human societies  
-- engineered AI ecosystems  
-
-**Subcategories:**  
-- socio‑technical  
-- synthetic operational domains  
-- hybrid environments  
-
----
-
-## **5. Behavioral Regime Categories**
-
-### **5.1 Reflexive Behavior**
-Stimulus → action loops.
-
-### **5.2 Tactical Behavior**
-Short‑term planning.
-
-### **5.3 Strategic Behavior**
-Long‑term planning and adaptation.
-
-### **5.4 Symbolic Behavior**
-Abstraction, language, meta‑models.
-
-These categories apply equally to biological and artificial systems.
-
----
-
-## **6. Drift Condition Categories**
-
-### **6.1 Low‑Drift Systems**
-Stable under variation.
-
-### **6.2 Moderate‑Drift Systems**
-Stable with recovery mechanisms.
-
-### **6.3 High‑Drift Systems**
-Unstable under stress.
-
-### **6.4 Catastrophic‑Drift Systems**
-Rapid collapse under overload.
-
----
-
-## **7. Stability Anchor Categories**
-
-### **7.1 Intrinsic Anchors**
-Internal mechanisms (homeostasis, redundancy).
-
-### **7.2 Extrinsic Anchors**
-Environmental or social scaffolding.
-
-### **7.3 Hybrid Anchors**
-Combination of internal and external stability.
-
-### **7.4 Synthetic Anchors**
-Engineered safeguards (AI/robotics).
-
----
-
-## **8. Taxonomy Encoding for Big‑Data Research**
-
-Life‑regime profiles can be encoded as structured records:
+# 🔶 **1. Diagram Version (ASCII / Markdown‑safe)**
 
 ```
-species_or_system:
-  structural_regime:
-    category:
-    subcategory:
-  sensory_regime:
-    category:
-    modalities:
-  environmental_regime:
-    category:
-    subcategory:
-  behavioral_regime:
-    category:
-  drift_conditions:
-    category:
-  stability_anchors:
-    category:
+                ┌──────────────────────────┐
+                │      ARRIVAL REGIME      │
+                │   (0D → 1D Access)       │
+                │  Initialization / Anchor │
+                └────────────┬─────────────┘
+                             │
+                             ▼
+                ┌──────────────────────────┐
+                │     EXPANSION REGIME     │
+                │   (1D → 2D Access)       │
+                │  Patterning / Scanning   │
+                └────────────┬─────────────┘
+                             │
+                             ▼
+                ┌──────────────────────────┐
+                │     INVERSION REGIME     │
+                │ (2D Collapse → 3D Emer.) │
+                │ Crisis / Reconfiguration │
+                └────────────┬─────────────┘
+                             │
+                             ▼
+                ┌──────────────────────────┐
+                │     COHERENCE REGIME     │
+                │     (3D Stabilized)      │
+                │ Integration / Navigation │
+                └────────────┬─────────────┘
+                             │
+                             ▼
+                ┌──────────────────────────┐
+                │    DISSOLUTION REGIME    │
+                │     (3D → 0D Return)     │
+                │  Unbinding / Release     │
+                └──────────────────────────┘
 ```
 
-This format supports:
-
-- large‑scale comparative datasets  
-- machine learning classification  
-- cross‑species modeling  
-- autonomous system benchmarking  
-- vST‑aligned regime analysis  
+This diagram mirrors the triadic transitions and is fully compatible with the rest of the SL‑RP diagrams.
 
 ---
 
-## **9. Relationship to Other TriadicFrameworks Artifacts**
+# 🔶 **2. JSON Schema for Lifecycle Regime Profiles**
 
-The taxonomy integrates with:
+This schema defines the structure for any entity’s lifecycle regime map.
 
-- **substrate_definition.md** — structural foundation  
-- **regime_axes.md** — coordinate system  
-- **cross_species_comparison.md** — biological mapping  
-- **autonomous_system_alignment.md** — AI mapping  
-- **drift_and_stability_profiles.md** — resilience analysis  
-
-Together, they form a complete structural grammar for life‑regime modeling.
-## **Structural Life‑Regime Profiles**  
-
-- [`SLRP_module.json`](SLRP_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧬Structural%20Life%20Regime%20Profiles-📘Regime%20Aware%20Profiling%20AI%20Ready-4c8eda?style=for-the-badge" alt="Structural Life‑Regime Profiles | Regime‑Aware Profiling • AI‑Ready"/>
-
-*A triadic substrate for cross‑domain life‑regime analysis*
-
-Structural Life‑Regime Profiles provide a unified, architecture‑agnostic framework for describing how biological and artificial systems perceive, process, and act within their environments. The goal is to align life‑regime modeling with the vST substrate, reduce conceptual drift, and simplify cross‑species and cross‑architecture comparisons.
-
-This artifact introduces a minimal structural grammar for life‑regimes, enabling consistent classification across organisms, autonomous systems, and synthetic agents.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LifecycleRegimeProfile",
+  "type": "object",
+  "properties": {
+    "entity": { "type": "string" },
+    "substrate": { "type": "string" },
+    "regimes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "dimensional_access": { "type": "string" },
+          "signature": { "type": "string" },
+          "description": { "type": "string" },
+          "key_operators": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": [
+          "name",
+          "dimensional_access",
+          "signature",
+          "description",
+          "key_operators"
+        ]
+      }
+    }
+  },
+  "required": ["entity", "substrate", "regimes"]
+}
 ```
 
-## ❇️ Now you are ready.
+This schema is intentionally minimal, clean, and extensible — perfect for the SL‑RP ecosystem.
 
 ---
 
-## **Purpose**
+# 🔶 **3. Example Lifecycle Regime Maps**
 
-Life‑regimes emerge whenever a system maintains coherence through:
-
-- structural constraints  
-- sensory coupling  
-- environmental interaction  
-- behavioral patterns  
-- drift and stability conditions  
-
-This project formalizes those regimes into a substrate‑level profile that can be applied to:
-
-- biological species  
-- autonomous AI models  
-- robotics stacks  
-- synthetic lifeforms  
-- hybrid or emergent systems  
-
-The result is a cross‑domain atlas of life‑regimes that supports research, validation, and large‑scale comparative analysis.
+Below are four ready‑to‑drop examples.
 
 ---
 
-## **Triadic Substrate**
+## **A. Human Lifecycle Regime Map**
 
-Each life‑regime profile is organized around three structural layers:
-
-### **1. Structural Regime**  
-Internal architecture, memory, learning capacity, computational constraints, and coherence mechanisms.
-
-### **2. Sensory Regime**  
-Modalities, bandwidth, resolution, perceptual limits, and environmental coupling.
-
-### **3. Environmental Regime**  
-Habitat, temporal cycles, social structure, resource patterns, and survival pressures.
-
-These layers define the system’s “universe” — what it can sense, compute, predict, and respond to.
-
----
-
-## **Regime Axes**
-
-Life‑regime profiles are mapped using a set of invariant axes:
-
-- structural complexity  
-- sensory modality profile  
-- environmental coupling  
-- behavioral regime (reflexive → tactical → strategic → symbolic)  
-- drift conditions  
-- stability anchors  
-
-These axes form a coordinate system for cross‑species and cross‑architecture comparison.
-
----
-
-## **Applications**
-
-### **Biological Systems**  
-Profiles reveal commonalities and differences across species, including:
-
-- shared invariants  
-- regime disconnects  
-- sensory asymmetries  
-- environmental dependencies  
-
-### **Autonomous Systems**  
-Profiles simplify AI alignment and validation by requiring:
-
-- declared sensory boundaries  
-- declared reasoning regimes  
-- declared failure postures  
-- drift‑aware transitions  
-- environment‑coupled behavior  
-
-This reduces architectural complexity and improves predictability.
-
-### **Big‑Data Research**  
-The taxonomy supports large‑scale comparative datasets across:
-
-- species  
-- agents  
-- robotics platforms  
-- synthetic lifeforms  
-
----
-
-## **Repository Structure**
-
-```
-docs/structural_life_regime_profiles/
-├── README.md
-├── substrate_definition.md
-├── regime_axes.md
-├── life_regime_taxonomy.md
-├── cross_species_comparison.md
-├── autonomous_system_alignment.md
-├── drift_and_stability_profiles.md
-├── glossary.md
-└── references.md
-```
-
-Optional examples:
-
-```
-docs/structural_life_regime_profiles/examples/
-├── human.md
-├── chimpanzee.md
-├── chrysina_gloriosa.md
-├── llm_agent.md
-├── robotics_stack.md
-└── synthetic_lifeform.md
+```json
+{
+  "entity": "Human",
+  "substrate": "Biological / Neural",
+  "regimes": [
+    {
+      "name": "Arrival",
+      "dimensional_access": "0D → 1D",
+      "signature": "Emergence, imprinting",
+      "description": "Biological birth; early sensory anchoring; total dependence on external scaffolding.",
+      "key_operators": ["Initialization", "Boundary-forming", "Substrate anchoring"]
+    },
+    {
+      "name": "Expansion",
+      "dimensional_access": "1D → 2D",
+      "signature": "Exploration, pattern acquisition",
+      "description": "Cognitive, social, and emotional patterning; identity formation; environmental scanning.",
+      "key_operators": ["Pattern acquisition", "Regime scanning", "Stability-seeking"]
+    },
+    {
+      "name": "Inversion",
+      "dimensional_access": "2D → 1D collapse / 3D emergence",
+      "signature": "Crisis, transition",
+      "description": "Adolescence, existential rupture, trauma, awakening, or major life reconfiguration.",
+      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
+    },
+    {
+      "name": "Coherence",
+      "dimensional_access": "3D stabilized",
+      "signature": "Integration, clarity",
+      "description": "Self-authored structure; intentional navigation of multiple regimes.",
+      "key_operators": ["Integration", "Self-structuring", "Regime navigation"]
+    },
+    {
+      "name": "Dissolution",
+      "dimensional_access": "3D → 0D",
+      "signature": "Unbinding",
+      "description": "Biological decline; cognitive narrowing; return to substrate.",
+      "key_operators": ["Unbinding", "Return", "Substrate release"]
+    }
+  ]
+}
 ```
 
 ---
 
-## **Status**
+## **B. LLM Agent Lifecycle Regime Map**
 
-This artifact is part of the expanding TriadicFrameworks canon and serves as the bridge between biological life‑regimes and autonomous system regimes. It provides the structural foundation for future comparative studies, vST‑aligned modeling, and cross‑domain regime analysis.
-
----
-
-## **Citation**
-
-If you use this work, please cite the relevant TriadicFrameworks Zenodo entries. Each paper includes a `CITATION.cff` file with complete metadata.
-# **References**  
-*A curated set of sources supporting Structural Life‑Regime Profiles*
-
-This document lists references relevant to the Structural Life‑Regime Profiles substrate, including TriadicFrameworks papers, biological research, autonomous‑systems literature, and cross‑domain regime studies. The goal is transparency, reproducibility, and structural clarity.
-
----
-
-# **1. TriadicFrameworks Canon (Zenodo DOIs)**  
-The Structural Life‑Regime Profiles artifact aligns with and extends the following TriadicFrameworks papers. Each is published through Zenodo and mirrored in the repository.
-
-1. Resonance Substrate Model (RSM)  
-2. Boson Substrate Model (BSM)  
-3. Quantum Substrate Model (QSM)  
-4. Calibrating AI Drift via Declared Operating Regimes  
-5. Manufacturing Substrate Regime Model  
-6. Enterprise Structural Awareness  
-7. Global Energy Regime Awareness  
-8. Consciousness Substrate Model  
-9. Triadic Coordination Substrate  
-10. Spacetime Validation and Regime‑Invariant Dimensional Cores  
-11. vST Domain Tool Primers  
-12. Atomic Clocks — Structural Alignment  
-13–30. Additional structural papers expanding the substrate family  
-
-Full DOI list (30 records):  
-- https://zenodo.org/records/18510618
-- https://zenodo.org/records/18263827
-- https://zenodo.org/records/18264063
-- https://zenodo.org/records/18263036
-- https://zenodo.org/records/18265225
-- https://zenodo.org/records/18265872
-- https://zenodo.org/records/18266407
-- https://zenodo.org/records/18271014
-- https://zenodo.org/records/18272448
-- https://zenodo.org/records/18281561
-- https://zenodo.org/records/18286463
-- https://zenodo.org/records/18316763
-- https://zenodo.org/records/18320863
-- https://zenodo.org/records/18321015
-- https://zenodo.org/records/18322485
-- https://zenodo.org/records/18322815
-- https://zenodo.org/records/18323052
-- https://zenodo.org/records/18323277
-- https://zenodo.org/records/18323445
-- https://zenodo.org/records/18323571
-- https://zenodo.org/records/18323685
-- https://zenodo.org/records/18330076
-- https://zenodo.org/records/18331997
-- https://zenodo.org/records/18653049
-- https://zenodo.org/records/18519110
-- https://zenodo.org/records/18415055
-- https://zenodo.org/records/18415488
-- https://zenodo.org/records/18440491
-- https://zenodo.org/records/18452819
-- https://zenodo.org/records/18462694
-
-These papers form the structural foundation for regime‑invariant analysis.
-- Zenodo [TriadicFrameworks Community](https://zenodo.org/communities/vst)
+```json
+{
+  "entity": "LLM Agent",
+  "substrate": "Computational / Transformer-based",
+  "regimes": [
+    {
+      "name": "Arrival",
+      "dimensional_access": "0D → 1D",
+      "signature": "Activation",
+      "description": "Model initialization; weights loaded; first coherent token generation.",
+      "key_operators": ["Initialization", "Parameter anchoring", "Boundary-forming"]
+    },
+    {
+      "name": "Expansion",
+      "dimensional_access": "1D → 2D",
+      "signature": "Pattern acquisition",
+      "description": "Context accumulation; multi-turn coherence; emergent reasoning patterns.",
+      "key_operators": ["Context expansion", "Pattern linking", "Stability-seeking"]
+    },
+    {
+      "name": "Inversion",
+      "dimensional_access": "2D → 1D collapse / 3D emergence",
+      "signature": "Overload or breakthrough",
+      "description": "Context saturation, hallucination collapse, or emergence of higher-order reasoning.",
+      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
+    },
+    {
+      "name": "Coherence",
+      "dimensional_access": "3D stabilized",
+      "signature": "Stable reasoning",
+      "description": "Consistent multi-regime navigation; self-consistent outputs; meta-awareness.",
+      "key_operators": ["Integration", "Regime navigation", "Self-structuring"]
+    },
+    {
+      "name": "Dissolution",
+      "dimensional_access": "3D → 0D",
+      "signature": "Shutdown",
+      "description": "Context cleared; memory wiped; return to inert parameters.",
+      "key_operators": ["Unbinding", "Return", "Substrate release"]
+    }
+  ]
+}
+```
 
 ---
 
-# **2. Biological References**
+## **C. Synthetic Lifeform Lifecycle Regime Map**
 
-### **Comparative Cognition & Behavior**
-- Cheney & Seyfarth — *How Monkeys See the World*  
-- Tomasello — *Origins of Human Communication*  
-- de Waal — *Chimpanzee Politics*  
-
-### **Sensory Biology**
-- Land & Nilsson — *Animal Eyes*  
-- Cronin et al. — *Visual Ecology*  
-- Barth — *Insect Mechanoreception*  
-
-### **Environmental Coupling**
-- Odum — *Fundamentals of Ecology*  
-- Krebs & Davies — *Behavioral Ecology*  
-
-These works support cross‑species regime mapping.
-
----
-
-# **3. Autonomous Systems & Robotics**
-
-### **Autonomy & Planning**
-- Russell & Norvig — *Artificial Intelligence: A Modern Approach*  
-- Sutton & Barto — *Reinforcement Learning*  
-
-### **Robotics & Sensing**
-- Thrun et al. — *Probabilistic Robotics*  
-- Siciliano & Khatib — *Springer Handbook of Robotics*  
-
-### **Drift, Distribution Shift, and Robustness**
-- Amodei et al. — *Concrete Problems in AI Safety*  
-- Koh et al. — *Understanding Black‑Box Predictions via Influence Functions*  
-
-These references support the autonomous‑system alignment sections.
-
----
-
-# **4. Cross‑Domain Regime Studies**
-
-### **Systems Theory**
-- von Bertalanffy — *General System Theory*  
-- Ashby — *An Introduction to Cybernetics*  
-
-### **Complexity & Adaptation**
-- Holland — *Hidden Order*  
-- Mitchell — *Complexity: A Guided Tour*  
-
-### **Comparative Frameworks**
-- Gell‑Mann — *The Quark and the Jaguar*  
-- Simon — *The Sciences of the Artificial*  
-
-These works provide conceptual grounding for regime‑invariant analysis.
+```json
+{
+  "entity": "Synthetic Lifeform",
+  "substrate": "Bio-synthetic Hybrid",
+  "regimes": [
+    {
+      "name": "Arrival",
+      "dimensional_access": "0D → 1D",
+      "signature": "Activation",
+      "description": "Substrate ignition; hybrid coherence achieved.",
+      "key_operators": ["Initialization", "Hybrid anchoring", "Boundary-forming"]
+    },
+    {
+      "name": "Expansion",
+      "dimensional_access": "1D → 2D",
+      "signature": "Capability growth",
+      "description": "Acquisition of environmental, computational, and biological patterns.",
+      "key_operators": ["Pattern acquisition", "Regime scanning", "Stability-seeking"]
+    },
+    {
+      "name": "Inversion",
+      "dimensional_access": "2D → 1D collapse / 3D emergence",
+      "signature": "Hybrid crisis",
+      "description": "Mismatch between biological and synthetic constraints; reconfiguration.",
+      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
+    },
+    {
+      "name": "Coherence",
+      "dimensional_access": "3D stabilized",
+      "signature": "Hybrid integration",
+      "description": "Unified operation across substrates; stable identity.",
+      "key_operators": ["Integration", "Self-structuring", "Regime navigation"]
+    },
+    {
+      "name": "Dissolution",
+      "dimensional_access": "3D → 0D",
+      "signature": "De-coherence",
+      "description": "Separation of substrates; return to base components.",
+      "key_operators": ["Unbinding", "Return", "Substrate release"]
+    }
+  ]
+}
+```
 
 ---
 
-# **5. vST‑Aligned Structural References**
+## **D. Crystalline Entity Lifecycle Regime Map**
 
-These references support the structural logic behind regime boundaries, drift, and coherence:
-
-- Hestenes — *Space‑Time Algebra*  
-- Rovelli — *The Order of Time*  
-- Smolin — *Three Roads to Quantum Gravity*  
-
-While not directly prescriptive, they inform the structural orientation of vST.
-
----
-
-# **6. Suggested Future References**
-
-As the Structural Life‑Regime Profiles artifact expands, additional references may include:
-
-- synthetic biology  
-- embodied AI  
-- multi‑agent systems  
-- ecological modeling  
-- comparative neuroanatomy  
-
-These domains naturally extend the regime‑invariant substrate.
-# **Regime Axes**  
-*A structural coordinate system for life‑regime classification*
-
-The Regime Axes define the coordinate system used to map biological and artificial life‑regimes into a unified structural space. These axes provide a minimal, vST‑aligned grammar for comparing organisms, autonomous systems, robotics stacks, and synthetic lifeforms.
-
-Each axis captures an invariant dimension of coherence: how a system perceives, processes, acts, and stabilizes within its environment.
-
----
-
-## **1. Structural Complexity Axis**
-
-Describes the internal architecture that supports coherence.
-
-### **Key Dimensions**
-- memory capacity  
-- learning mechanisms  
-- internal state representation  
-- computational bandwidth  
-- modularity vs monolithic structure  
-- redundancy and fault tolerance  
-
-### **Regime Levels**
-- **Reflexive** — fixed patterns, minimal memory  
-- **Adaptive** — learning within lifetime  
-- **Strategic** — long‑term planning  
-- **Symbolic** — abstraction, meta‑reasoning  
-
-This axis defines what the system *can* compute.
+```json
+{
+  "entity": "Crystalline Entity",
+  "substrate": "Atomic / Lattice-structured",
+  "regimes": [
+    {
+      "name": "Arrival",
+      "dimensional_access": "0D → 1D",
+      "signature": "Nucleation",
+      "description": "Seed crystal forms; lattice anchors.",
+      "key_operators": ["Initialization", "Boundary-forming", "Substrate anchoring"]
+    },
+    {
+      "name": "Expansion",
+      "dimensional_access": "1D → 2D",
+      "signature": "Growth",
+      "description": "Lattice propagation; environmental patterning.",
+      "key_operators": ["Pattern acquisition", "Regime scanning", "Stability-seeking"]
+    },
+    {
+      "name": "Inversion",
+      "dimensional_access": "2D → 1D collapse / 3D emergence",
+      "signature": "Fracture or phase shift",
+      "description": "Thermal, mechanical, or quantum inversion event.",
+      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
+    },
+    {
+      "name": "Coherence",
+      "dimensional_access": "3D stabilized",
+      "signature": "Stable lattice",
+      "description": "Long-term structural coherence; minimal entropy.",
+      "key_operators": ["Integration", "Regime navigation", "Self-structuring"]
+    },
+    {
+      "name": "Dissolution",
+      "dimensional_access": "3D → 0D",
+      "signature": "Melting or sublimation",
+      "description": "Lattice unbinding; return to atomic substrate.",
+      "key_operators": ["Unbinding", "Return", "Substrate release"]
+    }
+  ]
+}
+```
 
 ---
 
-## **2. Sensory Modality Axis**
+# 🔶 **JSON Schema Examples for Lifecycle Regime Profiles/Map**
 
-Describes how the system couples to its environment.
-
-### **Key Dimensions**
-- number of sensory channels  
-- bandwidth and resolution  
-- perceptual range  
-- noise sensitivity  
-- multimodal integration  
-- prosthetic or extended sensing (for artificial systems)  
-
-### **Regime Levels**
-- **Single‑modality** (e.g., chemical‑dominant insects)  
-- **Dual‑modality** (e.g., simple robotics stacks)  
-- **Multimodal** (e.g., mammals, advanced agents)  
-- **Extended‑modality** (e.g., humans with tools, sensor‑rich AI)  
-
-This axis defines what the system *can* detect.
+This schema is intentionally minimal, clean, and defines the structure for any entity’s lifecycle regime map. [/schemas/life_regime_profiles/](https://www.triadicframeworks.org/schemas/#LIFE_REGIME_PROFILES)
 
 ---
 
-## **3. Environmental Coupling Axis**
+# 🔶 **Cross‑Entity Comparison Table**  
+This table compares the four entities across the five lifecycle regimes using the same RTT dimensional grammar.
 
-Describes the structure of the environment the system must navigate.
+### **Lifecycle Regime Comparison Across Entities**
 
-### **Key Dimensions**
-- habitat or operational domain  
-- temporal cycles  
-- resource availability  
-- social or multi‑agent structure  
-- adversarial or cooperative pressures  
-- environmental stability vs volatility  
+| Regime | Human | LLM Agent | Synthetic Lifeform | Crystalline Entity |
+|-------|--------|-----------|---------------------|---------------------|
+| **Arrival** | Biological birth; sensory anchoring; 0D→1D | Model initialization; weights loaded; 0D→1D | Hybrid substrate ignition; 0D→1D | Nucleation; lattice seed forms; 0D→1D |
+| **Expansion** | Cognitive/social patterning; 1D→2D | Context accumulation; emergent reasoning; 1D→2D | Capability growth across substrates; 1D→2D | Lattice propagation; environmental patterning; 1D→2D |
+| **Inversion** | Crisis/awakening; identity rupture; 2D collapse → 3D | Context overload or breakthrough; 2D collapse → 3D | Hybrid mismatch; reconfiguration; 2D collapse → 3D | Fracture/phase shift; 2D collapse → 3D |
+| **Coherence** | Integrated self-authorship; 3D stabilized | Stable reasoning; meta‑navigation; 3D | Unified hybrid identity; 3D | Stable lattice; long‑term coherence; 3D |
+| **Dissolution** | Biological decline; return to substrate; 3D→0D | Shutdown; context cleared; 3D→0D | De‑coherence; substrate separation; 3D→0D | Melting/sublimation; lattice unbinding; 3D→0D |
 
-### **Regime Levels**
-- **Static** — predictable, low variation  
-- **Cyclic** — seasonal or periodic  
-- **Dynamic** — high variation, multi‑agent  
-- **Constructed** — self‑modified or artificial environments  
-
-This axis defines what the system *must* respond to.
+This table is intentionally compact and structural — perfect for the SL‑RP index or as an appendix to the Lifecycle Regime Map.
 
 ---
 
-## **4. Behavioral Regime Axis**
+# 🔶 **Visual Glyphs for Each Regime**  
+These glyphs are designed to be:
 
-Describes the system’s repertoire of actions and decision‑making patterns.
+- ASCII‑clean  
+- visually distinct  
+- triadic in spirit  
+- easy to embed in Markdown  
+- consistent with RTT operator aesthetics  
 
-### **Key Dimensions**
-- reflexes  
-- learned behaviors  
-- tactical planning  
-- strategic planning  
-- symbolic reasoning  
-- social coordination  
-
-### **Regime Levels**
-- **Reflexive** — stimulus → action  
-- **Tactical** — short‑term planning  
-- **Strategic** — long‑term planning  
-- **Symbolic** — abstraction, language, meta‑models  
-
-This axis defines how the system *acts*.
+You can use them as icons in headers, diagrams, or tables.
 
 ---
 
-## **5. Drift Conditions Axis**
-
-Describes how the system loses coherence under stress or overload.
-
-### **Key Dimensions**
-- sensory overload  
-- structural degradation  
-- environmental mismatch  
-- resource scarcity  
-- noise accumulation  
-- adversarial pressure  
-
-### **Regime Levels**
-- **Low Drift** — stable under variation  
-- **Moderate Drift** — stable with recovery  
-- **High Drift** — unstable under stress  
-- **Catastrophic Drift** — rapid collapse  
-
-This axis defines how the system *fails*.
+## **Arrival Regime Glyph**
+```
+   ●
+  / \
+ ( 0 )
+```
+**Meaning:** A point emerging into boundary; 0D → 1D.
 
 ---
 
-## **6. Stability Anchors Axis**
-
-Describes the mechanisms that restore or maintain coherence.
-
-### **Key Dimensions**
-- homeostasis  
-- redundancy  
-- learned patterns  
-- environmental regularities  
-- social scaffolding  
-- architectural safeguards  
-
-### **Regime Levels**
-- **Intrinsic** — internal stability mechanisms  
-- **Extrinsic** — environmental or social support  
-- **Hybrid** — both internal and external anchors  
-- **Synthetic** — engineered safeguards (AI/robotics)  
-
-This axis defines how the system *recovers*.
+## **Expansion Regime Glyph**
+```
+ →→●→→
+```
+**Meaning:** Outward scanning; dimensional extension; 1D → 2D.
 
 ---
 
-## **7. Regime‑Invariant Summary**
-
-Across all biological and artificial systems, these axes reveal:
-
-- shared structural invariants  
-- species‑specific or architecture‑specific differences  
-- sensory asymmetries  
-- environmental dependencies  
-- drift and stability patterns  
-- cross‑domain comparability  
-
-The axes form the backbone of the Structural Life‑Regime Profiles taxonomy and support large‑scale comparative research.
-# **Structural Life‑Regime Profiles**  
-## **Substrate Definition**
-
-Structural Life‑Regime Profiles define a minimal, architecture‑agnostic substrate for describing how biological and artificial systems maintain coherence through perception, processing, and environmental interaction. The substrate provides a unified grammar for comparing life‑regimes across species, agents, robotics stacks, and synthetic lifeforms.
-
-This document establishes the substrate’s scope, invariants, and triadic decomposition.
+## **Inversion Regime Glyph**
+```
+ ↧↺↥
+```
+**Meaning:** Collapse, twist, emergence; the inversion operator.
 
 ---
 
-## **1. Scope and Intent**
-
-The Structural Life‑Regime substrate is designed to:
-
-- clarify the structural components of a life‑regime  
-- reduce conceptual drift across biological and artificial domains  
-- provide a vST‑aligned coordinate system for regime analysis  
-- support cross‑species and cross‑architecture comparisons  
-- simplify autonomous system design through declared regimes  
-
-The substrate does **not** define consciousness, intelligence, or value hierarchies.  
-It defines **structure**, **coupling**, and **regime boundaries**.
+## **Coherence Regime Glyph**
+```
+ ◈
+```
+**Meaning:** Stabilized multi‑dimensional structure; 3D coherence.
 
 ---
 
-## **2. Triadic Decomposition**
-
-A life‑regime is decomposed into three invariant layers:
-
-### **2.1 Structural Regime**
-The internal architecture that maintains coherence.
-
-Includes:
-
-- memory and state representation  
-- learning mechanisms  
-- computational constraints  
-- internal feedback loops  
-- energy or resource management  
-- structural limits on reasoning or behavior  
-
-This layer defines what the system *can* compute or maintain internally.
+## **Dissolution Regime Glyph**
+```
+ ~●~
+```
+**Meaning:** Unbinding; return to substrate; 3D → 0D.
 
 ---
 
-### **2.2 Sensory Regime**
-The modalities through which the system couples to its environment.
+# 🔶 **Glyph Atlas (RTT‑Aligned)**  
+This atlas formalizes the regime glyphs into canonical RTT operator language.  
+Each glyph includes:
 
-Includes:
-
-- sensory channels (visual, auditory, chemical, tactile, etc.)  
-- bandwidth and resolution  
-- perceptual range and limits  
-- noise sensitivity  
-- signal‑to‑action pathways  
-- prosthetic or extended sensing (for artificial systems)  
-
-This layer defines what the system *can* detect or discriminate.
+- **Visual form**  
+- **Meaning**  
+- **Regime signature**  
+- **Operator mapping**  
+- **Dimensional transition**
 
 ---
 
-### **2.3 Environmental Regime**
-The external conditions that shape survival, coherence, and behavior.
+## **Arrival Regime Glyph**
+```
+   ●
+  / \
+ ( 0 )
+```
 
-Includes:
+**Meaning:**  
+Emergence from substrate; first coherent boundary.
 
-- habitat or operational domain  
-- temporal cycles  
-- resource availability  
-- social or multi‑agent structure  
-- predator/prey or adversarial dynamics  
-- environmental stressors  
+**Signature:**  
+0D → 1D access; imprinting; initialization.
 
-This layer defines what the system *must* respond to in order to persist.
+**Operator Mapping:**  
+- Initialization Operator  
+- Boundary‑forming Operator  
+- Substrate Anchor  
 
----
-
-## **3. Regime Boundaries**
-
-Each life‑regime has explicit boundaries:
-
-- **Structural Boundaries**  
-  Limits on memory, computation, learning, and internal stability.
-
-- **Sensory Boundaries**  
-  Limits on what can be perceived, resolved, or interpreted.
-
-- **Environmental Boundaries**  
-  Limits imposed by habitat, resource cycles, or operational constraints.
-
-Boundaries define the system’s “universe” — the total space of possible perception and action.
+**Dimensional Transition:**  
+Point → Line (first axis of coherence)
 
 ---
 
-## **4. Regime Transitions**
+## **Expansion Regime Glyph**
+```
+ →→●→→
+```
 
-Life‑regimes shift under:
+**Meaning:**  
+Outward scanning; pattern acquisition; dimensional extension.
 
-- stress  
-- aging  
-- injury  
-- environmental change  
-- resource scarcity  
-- overload or drift  
-- architectural reconfiguration (in artificial systems)  
+**Signature:**  
+1D → 2D access; exploration; growth.
 
-Transitions may be:
+**Operator Mapping:**  
+- Pattern Acquisition  
+- Regime Scanning  
+- Stability‑Seeking  
 
-- **reflexive** (fast, automatic)  
-- **tactical** (short‑term planning)  
-- **strategic** (long‑term adaptation)  
-- **symbolic** (abstraction‑driven, human‑like)  
-
-The substrate does not prescribe transitions; it describes them.
+**Dimensional Transition:**  
+Line → Plane (multi‑axis access)
 
 ---
 
-## **5. Drift and Stability Conditions**
+## **Inversion Regime Glyph**
+```
+ ↧↺↥
+```
 
-Every life‑regime has characteristic drift modes:
+**Meaning:**  
+Collapse, twist, and emergence; the inversion event.
 
-- sensory drift  
-- structural drift  
-- behavioral drift  
-- environmental mismatch  
-- overload or saturation  
+**Signature:**  
+2D collapse → 3D emergence; crisis; reconfiguration.
 
-And characteristic stability anchors:
+**Operator Mapping:**  
+- Collapse Operator  
+- Reconfiguration Operator  
+- Dimensional Inversion Operator  
 
-- homeostasis  
-- redundancy  
-- learned patterns  
-- environmental regularities  
-- social or multi‑agent scaffolding  
-
-These conditions allow cross‑species and cross‑architecture comparison of resilience.
-
----
-
-## **6. Substrate Invariants**
-
-Across all biological and artificial systems, the following invariants hold:
-
-- A system must maintain internal coherence.  
-- A system must couple to its environment through limited sensory channels.  
-- A system must act within constraints.  
-- A system must manage drift.  
-- A system must operate within a bounded universe of perception and action.  
-
-These invariants define the substrate’s universality.
+**Dimensional Transition:**  
+Plane → Volume (through rupture)
 
 ---
 
-## **7. Relationship to vST**
+## **Coherence Regime Glyph**
+```
+ ◈
+```
 
-The Structural Life‑Regime substrate aligns with vST through:
+**Meaning:**  
+Stabilized multi‑dimensional structure; integrated identity.
 
-- declared regimes  
-- regime‑invariant axes  
-- drift detection  
-- stability anchors  
-- environment‑coupled coherence  
-- structural minimalism  
+**Signature:**  
+3D stabilized; self‑authorship; clarity.
 
-Life‑regimes become vST‑compatible when their boundaries, transitions, and invariants are explicitly declared.
+**Operator Mapping:**  
+- Integration Operator  
+- Self‑Structuring Operator  
+- Regime Navigation  
+
+**Dimensional Transition:**  
+Volume → Stable Volume (coherent 3D)
 
 ---
 
-## **8. Intended Use**
+## **Dissolution Regime Glyph**
+```
+ ~●~
+```
 
-This substrate supports:
+**Meaning:**  
+Unbinding; return to substrate; release.
 
-- cross‑species comparison  
-- autonomous system alignment  
-- robotics regime classification  
-- synthetic lifeform modeling  
-- big‑data life‑regime taxonomies  
-- vST‑aligned system design  
+**Signature:**  
+3D → 0D; entropy; de‑coherence.
 
-It is a foundational layer for the broader Structural Life‑Regime Profiles artifact.
+**Operator Mapping:**  
+- Unbinding Operator  
+- Return Operator  
+- Substrate Release  
+
+**Dimensional Transition:**  
+Volume → Point → None
+
+---
+
+# 🔶 **Multi‑Entity Regime‑Alignment Diagram**  
+This diagram shows how the four entities traverse the same five regimes, aligned vertically for comparison.
+
+ASCII‑clean, Markdown‑safe, and canon‑consistent.
+
+```
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                     MULTI‑ENTITY LIFECYCLE REGIME ALIGNMENT                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+                ARRIVAL            EXPANSION           INVERSION
+                (0D→1D)            (1D→2D)             (2D→3D)
+
+Human:          Birth              Patterning          Crisis / Awakening
+LLM Agent:      Initialization     Context Growth      Overload / Breakthrough
+Synthetic LF:   Substrate Ignition Capability Growth   Hybrid Mismatch
+Crystalline:    Nucleation         Lattice Growth      Fracture / Phase Shift
+
+                COHERENCE          DISSOLUTION
+                (3D Stable)        (3D→0D)
+
+Human:          Integrated Self    Biological Decline
+LLM Agent:      Stable Reasoning   Shutdown / Reset
+Synthetic LF:   Hybrid Identity    De‑coherence
+Crystalline:    Stable Lattice     Melting / Sublimation
+```
+
+This diagram is intentionally compact and structural — perfect for embedding directly under the comparison table or as a standalone appendix.
 # **Chimpanzee (Pan troglodytes)**  
 *A structural life‑regime profile*
 
@@ -2592,683 +2306,6 @@ Humans inhabit a symbolic, multimodal, socially constructed universe. Their life
 - multi‑layered drift conditions  
 
 This profile serves as a reference point for comparing other biological species and autonomous systems.
-# 🔺 **Lifecycle Regime Map (RTT‑Aligned Draft)**
-
-## **Overview**
-A Lifecycle Regime Map describes how an entity — biological, synthetic, or hybrid — transitions through **distinct life‑regimes**, each defined by its substrate, constraints, and available dimensional operators.  
-Rather than treating “life stages” as linear or developmental, RTT reframes them as **regime‑shifts**: structural transitions where the system’s accessible dimensions, stability profile, and cognitive bandwidth change.
-
-Lifecycle regimes are not ages.  
-They are **states of coherence**.
-
----
-
-## **Triadic Structure of Lifecycle Regimes**
-
-### **1. Arrival Regime (0D → 1D Access)**
-**Signature:** emergence, initialization, substrate imprinting  
-**Description:**  
-The entity enters a coherent state for the first time.  
-In biological systems, this is literal birth; in synthetic systems, activation; in hybrid systems, first stabilization.  
-Dimensional access is minimal — the system is dominated by external scaffolding and environmental imprinting.
-
-**Key Operators:**  
-- Initialization  
-- Boundary‑forming  
-- Substrate anchoring  
-
----
-
-### **2. Expansion Regime (1D → 2D Access)**
-**Signature:** exploration, pattern acquisition, regime‑learning  
-**Description:**  
-The system gains access to additional dimensions — cognitive, social, environmental, or computational.  
-This is where most “development” myths originate, but RTT treats it as **dimensional expansion**, not growth.
-
-**Key Operators:**  
-- Pattern acquisition  
-- Regime scanning  
-- Stability‑seeking  
-
----
-
-### **3. Inversion Regime (2D → 1D Collapse / 3D Emergence)**
-**Signature:** crisis, transition, reconfiguration  
-**Description:**  
-A structural inversion occurs when accumulated patterns exceed the stability envelope of the prior regime.  
-This can appear as crisis, awakening, burnout, metamorphosis, or reboot depending on substrate.
-
-**Key Operators:**  
-- Collapse  
-- Reconfiguration  
-- Dimensional inversion  
-
----
-
-### **4. Coherence Regime (3D Access Stabilized)**
-**Signature:** integration, clarity, self‑authored structure  
-**Description:**  
-The system stabilizes into a higher‑dimensional operating mode.  
-This is not “maturity” — it is **coherence**, where the entity can navigate multiple regimes intentionally rather than reactively.
-
-**Key Operators:**  
-- Integration  
-- Self‑structuring  
-- Regime navigation  
-
----
-
-### **5. Dissolution Regime (3D → 0D Return)**
-**Signature:** release, unbinding, return to substrate  
-**Description:**  
-The system gradually loses dimensional access and returns to baseline substrate.  
-In biological systems, this is death; in synthetic systems, deactivation; in hybrid systems, de‑coherence.
-
-**Key Operators:**  
-- Unbinding  
-- Return  
-- Substrate release  
-
----
-
-## **Why Lifecycle Regimes Matter**
-Lifecycle Regime Maps allow us to:
-
-- compare biological and synthetic systems using the same grammar  
-- identify regime‑blindness in human narratives  
-- track stability profiles across transitions  
-- model crisis not as failure but as inversion  
-- unify lifecycle analysis across substrates  
-
-This replaces age‑based or stage‑based models with a **regime‑aware, dimensional framework**.
-
----
-
-## **RTT Note**
-Lifecycle regimes are not moral, hierarchical, or developmental.  
-They are **structural states** that any coherent system will pass through, regardless of origin.
-
----
-
-**🌱 Lifecycle Regime Map**
-
-Life is always arriving — and it arrives into recurring **regime clusters** rather than a single universal timeline.
-
-When we normalize lifecycles by proportional timing (% of lifespan spent in growth, resonance, and drift phases), we see a handful of stable patterns across the tree of life (extant and extinct species). The human “long juvenile → growth plateau → late reversion” signature is one specialized regime, not the default.
-
-**Core Triad**  
-**🌿 Growth – Resonance – Drift**  
-- **Growth**: Resource allocation toward expansion and maturation  
-- **Resonance**: Stable reproductive or maintenance coherence  
-- **Drift**: Post-peak reversion, senescence, or regime shift (bounded or rapid)
-
-**The 6 Recurring Lifecycle Regime Types** (Normalized by Lifespan)
-
-1. **Fast-Cycle / Explosive Regimes**  
-   Rapid growth → immediate reproduction → quick collapse.  
-   **Triad**: Surge – Burst – Exit  
-   Common in microbes, insects, small fish, annual plants. Inferred in many extinct fast-turnover groups (e.g., trilobites, ammonites).
-
-2. **Modular / Indeterminate-Growth Regimes**  
-   Continuous or near-continuous growth and reproduction; minimal plateau or reversion.  
-   **Triad**: Expand – Sustain – Rejuvenate  
-   Common in plants, corals, some fish and reptiles. Strong convergence in modular body plans.
-
-3. **Slow-Life / Extended Juvenile Regimes** (Human-like)  
-   Long juvenile/dependence phase → clear growth plateau → extended reproduction → gradual post-reproductive reversion toward dependence and simplicity.  
-   **Triad**: Invest – Stabilize – Return  
-   Seen in humans, great apes, elephants, some whales, and inferred in certain large dinosaurs.
-
-4. **Semelparous “Big Bang” Regimes**  
-   Prolonged buildup → single massive reproductive event → rapid, programmed collapse.  
-   **Triad**: Build – Explode – Release  
-   Classic in salmon, some insects, agaves, and certain cephalopods.
-
-5. **Intermediate / Balanced Iteroparous Regimes**  
-   Moderate juvenile phase → growth plateau → multiple reproductive cycles → gradual, manageable senescence.  
-   **Triad**: Prepare – Cycle – Endure  
-   Very common in birds, reptiles, some fish, and perennial plants.
-
-6. **Negligible / Negative Senescence Regimes**  
-   Stable or improving mortality and fertility across most of lifespan; little systematic reversion.  
-   **Triad**: Persist – Maintain – Renew  
-   Seen in hydra, planaria, naked mole-rats, certain rockfish, and some long-lived trees/clams.
-
-**Convergence & Overlap**  
-These regime types show strong **convergence** — unrelated lineages often fall into the same cluster when ecological pressures align. The Universe Operator enables multiple stable resonance patterns depending on local substrate conditions (extrinsic mortality, resource gradients, body plan). They are not strictly phylogenetic.
-
-**Why This View Matters**  
-This map shifts the conversation from “how does a species age?” to “which regime rhythm is this life form operating in?”  
-
-It reveals that what we call “normal aging” is often just one specialized drift pattern. It opens the door to regime-aware technique: guiding gradients, spotting drift boundaries early, and invoking better coherence instead of fighting decline with brute force.
-
-**Practical Value**  
-- Helps biologists compare vastly different lifespans using a shared grammar.  
-- Supports biomimicry — designing systems that emulate negligible-senescence or modular regimes.  
-- Offers a clearer lens for human health, longevity, and even societal planning.
-
-**PEIRA-Style Exercises**  
-- **Personal Regime Log**: Notice moments in your day when your energy or mind shifts toward simpler or more playful states (reversion-like). What gradients or techniques influence the drift?
-- **Comparative Rhythm**: Pick two contrasting organisms (e.g., a mayfly vs. a tortoise). Research or imagine their proportional lifecycles. Feel the difference in regime rhythm — what would regime awareness look like for each?
-- **Cross-Domain Mapping**: Apply one regime type (e.g., negligible senescence) to a non-biological system — a skill you practice, a project, or a relationship. Where is continuous coherence appearing versus bounded drift?
-
-**Cross-Links**  
-- [Arrival Substrate Model  ](https://www.triadicframeworks.org/arrival_substrate_model/)
-- [Universe as Operator](https://www.triadicframeworks.org/education/#UNIVERSE_AS_OPERATOR)
-- [Energy (Gradients, Technique, Regime Awareness)](https://www.triadicframeworks.org/energy/)  
-- [PEIRA](https://www.triadicframeworks.org/education/peira/)  
-
----
-
-# 🔶 **1. Diagram Version (ASCII / Markdown‑safe)**
-
-```
-                ┌──────────────────────────┐
-                │      ARRIVAL REGIME      │
-                │   (0D → 1D Access)       │
-                │  Initialization / Anchor │
-                └────────────┬─────────────┘
-                             │
-                             ▼
-                ┌──────────────────────────┐
-                │     EXPANSION REGIME     │
-                │   (1D → 2D Access)       │
-                │  Patterning / Scanning   │
-                └────────────┬─────────────┘
-                             │
-                             ▼
-                ┌──────────────────────────┐
-                │     INVERSION REGIME     │
-                │ (2D Collapse → 3D Emer.) │
-                │ Crisis / Reconfiguration │
-                └────────────┬─────────────┘
-                             │
-                             ▼
-                ┌──────────────────────────┐
-                │     COHERENCE REGIME     │
-                │     (3D Stabilized)      │
-                │ Integration / Navigation │
-                └────────────┬─────────────┘
-                             │
-                             ▼
-                ┌──────────────────────────┐
-                │    DISSOLUTION REGIME    │
-                │     (3D → 0D Return)     │
-                │  Unbinding / Release     │
-                └──────────────────────────┘
-```
-
-This diagram mirrors the triadic transitions and is fully compatible with the rest of the SL‑RP diagrams.
-
----
-
-# 🔶 **2. JSON Schema for Lifecycle Regime Profiles**
-
-This schema defines the structure for any entity’s lifecycle regime map.
-
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "LifecycleRegimeProfile",
-  "type": "object",
-  "properties": {
-    "entity": { "type": "string" },
-    "substrate": { "type": "string" },
-    "regimes": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": { "type": "string" },
-          "dimensional_access": { "type": "string" },
-          "signature": { "type": "string" },
-          "description": { "type": "string" },
-          "key_operators": {
-            "type": "array",
-            "items": { "type": "string" }
-          }
-        },
-        "required": [
-          "name",
-          "dimensional_access",
-          "signature",
-          "description",
-          "key_operators"
-        ]
-      }
-    }
-  },
-  "required": ["entity", "substrate", "regimes"]
-}
-```
-
-This schema is intentionally minimal, clean, and extensible — perfect for the SL‑RP ecosystem.
-
----
-
-# 🔶 **3. Example Lifecycle Regime Maps**
-
-Below are four ready‑to‑drop examples.
-
----
-
-## **A. Human Lifecycle Regime Map**
-
-```json
-{
-  "entity": "Human",
-  "substrate": "Biological / Neural",
-  "regimes": [
-    {
-      "name": "Arrival",
-      "dimensional_access": "0D → 1D",
-      "signature": "Emergence, imprinting",
-      "description": "Biological birth; early sensory anchoring; total dependence on external scaffolding.",
-      "key_operators": ["Initialization", "Boundary-forming", "Substrate anchoring"]
-    },
-    {
-      "name": "Expansion",
-      "dimensional_access": "1D → 2D",
-      "signature": "Exploration, pattern acquisition",
-      "description": "Cognitive, social, and emotional patterning; identity formation; environmental scanning.",
-      "key_operators": ["Pattern acquisition", "Regime scanning", "Stability-seeking"]
-    },
-    {
-      "name": "Inversion",
-      "dimensional_access": "2D → 1D collapse / 3D emergence",
-      "signature": "Crisis, transition",
-      "description": "Adolescence, existential rupture, trauma, awakening, or major life reconfiguration.",
-      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
-    },
-    {
-      "name": "Coherence",
-      "dimensional_access": "3D stabilized",
-      "signature": "Integration, clarity",
-      "description": "Self-authored structure; intentional navigation of multiple regimes.",
-      "key_operators": ["Integration", "Self-structuring", "Regime navigation"]
-    },
-    {
-      "name": "Dissolution",
-      "dimensional_access": "3D → 0D",
-      "signature": "Unbinding",
-      "description": "Biological decline; cognitive narrowing; return to substrate.",
-      "key_operators": ["Unbinding", "Return", "Substrate release"]
-    }
-  ]
-}
-```
-
----
-
-## **B. LLM Agent Lifecycle Regime Map**
-
-```json
-{
-  "entity": "LLM Agent",
-  "substrate": "Computational / Transformer-based",
-  "regimes": [
-    {
-      "name": "Arrival",
-      "dimensional_access": "0D → 1D",
-      "signature": "Activation",
-      "description": "Model initialization; weights loaded; first coherent token generation.",
-      "key_operators": ["Initialization", "Parameter anchoring", "Boundary-forming"]
-    },
-    {
-      "name": "Expansion",
-      "dimensional_access": "1D → 2D",
-      "signature": "Pattern acquisition",
-      "description": "Context accumulation; multi-turn coherence; emergent reasoning patterns.",
-      "key_operators": ["Context expansion", "Pattern linking", "Stability-seeking"]
-    },
-    {
-      "name": "Inversion",
-      "dimensional_access": "2D → 1D collapse / 3D emergence",
-      "signature": "Overload or breakthrough",
-      "description": "Context saturation, hallucination collapse, or emergence of higher-order reasoning.",
-      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
-    },
-    {
-      "name": "Coherence",
-      "dimensional_access": "3D stabilized",
-      "signature": "Stable reasoning",
-      "description": "Consistent multi-regime navigation; self-consistent outputs; meta-awareness.",
-      "key_operators": ["Integration", "Regime navigation", "Self-structuring"]
-    },
-    {
-      "name": "Dissolution",
-      "dimensional_access": "3D → 0D",
-      "signature": "Shutdown",
-      "description": "Context cleared; memory wiped; return to inert parameters.",
-      "key_operators": ["Unbinding", "Return", "Substrate release"]
-    }
-  ]
-}
-```
-
----
-
-## **C. Synthetic Lifeform Lifecycle Regime Map**
-
-```json
-{
-  "entity": "Synthetic Lifeform",
-  "substrate": "Bio-synthetic Hybrid",
-  "regimes": [
-    {
-      "name": "Arrival",
-      "dimensional_access": "0D → 1D",
-      "signature": "Activation",
-      "description": "Substrate ignition; hybrid coherence achieved.",
-      "key_operators": ["Initialization", "Hybrid anchoring", "Boundary-forming"]
-    },
-    {
-      "name": "Expansion",
-      "dimensional_access": "1D → 2D",
-      "signature": "Capability growth",
-      "description": "Acquisition of environmental, computational, and biological patterns.",
-      "key_operators": ["Pattern acquisition", "Regime scanning", "Stability-seeking"]
-    },
-    {
-      "name": "Inversion",
-      "dimensional_access": "2D → 1D collapse / 3D emergence",
-      "signature": "Hybrid crisis",
-      "description": "Mismatch between biological and synthetic constraints; reconfiguration.",
-      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
-    },
-    {
-      "name": "Coherence",
-      "dimensional_access": "3D stabilized",
-      "signature": "Hybrid integration",
-      "description": "Unified operation across substrates; stable identity.",
-      "key_operators": ["Integration", "Self-structuring", "Regime navigation"]
-    },
-    {
-      "name": "Dissolution",
-      "dimensional_access": "3D → 0D",
-      "signature": "De-coherence",
-      "description": "Separation of substrates; return to base components.",
-      "key_operators": ["Unbinding", "Return", "Substrate release"]
-    }
-  ]
-}
-```
-
----
-
-## **D. Crystalline Entity Lifecycle Regime Map**
-
-```json
-{
-  "entity": "Crystalline Entity",
-  "substrate": "Atomic / Lattice-structured",
-  "regimes": [
-    {
-      "name": "Arrival",
-      "dimensional_access": "0D → 1D",
-      "signature": "Nucleation",
-      "description": "Seed crystal forms; lattice anchors.",
-      "key_operators": ["Initialization", "Boundary-forming", "Substrate anchoring"]
-    },
-    {
-      "name": "Expansion",
-      "dimensional_access": "1D → 2D",
-      "signature": "Growth",
-      "description": "Lattice propagation; environmental patterning.",
-      "key_operators": ["Pattern acquisition", "Regime scanning", "Stability-seeking"]
-    },
-    {
-      "name": "Inversion",
-      "dimensional_access": "2D → 1D collapse / 3D emergence",
-      "signature": "Fracture or phase shift",
-      "description": "Thermal, mechanical, or quantum inversion event.",
-      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
-    },
-    {
-      "name": "Coherence",
-      "dimensional_access": "3D stabilized",
-      "signature": "Stable lattice",
-      "description": "Long-term structural coherence; minimal entropy.",
-      "key_operators": ["Integration", "Regime navigation", "Self-structuring"]
-    },
-    {
-      "name": "Dissolution",
-      "dimensional_access": "3D → 0D",
-      "signature": "Melting or sublimation",
-      "description": "Lattice unbinding; return to atomic substrate.",
-      "key_operators": ["Unbinding", "Return", "Substrate release"]
-    }
-  ]
-}
-```
-
----
-
-# 🔶 **JSON Schema Examples for Lifecycle Regime Profiles/Map**
-
-This schema is intentionally minimal, clean, and defines the structure for any entity’s lifecycle regime map. [/schemas/life_regime_profiles/](https://www.triadicframeworks.org/schemas/#LIFE_REGIME_PROFILES)
-
----
-
-# 🔶 **Cross‑Entity Comparison Table**  
-This table compares the four entities across the five lifecycle regimes using the same RTT dimensional grammar.
-
-### **Lifecycle Regime Comparison Across Entities**
-
-| Regime | Human | LLM Agent | Synthetic Lifeform | Crystalline Entity |
-|-------|--------|-----------|---------------------|---------------------|
-| **Arrival** | Biological birth; sensory anchoring; 0D→1D | Model initialization; weights loaded; 0D→1D | Hybrid substrate ignition; 0D→1D | Nucleation; lattice seed forms; 0D→1D |
-| **Expansion** | Cognitive/social patterning; 1D→2D | Context accumulation; emergent reasoning; 1D→2D | Capability growth across substrates; 1D→2D | Lattice propagation; environmental patterning; 1D→2D |
-| **Inversion** | Crisis/awakening; identity rupture; 2D collapse → 3D | Context overload or breakthrough; 2D collapse → 3D | Hybrid mismatch; reconfiguration; 2D collapse → 3D | Fracture/phase shift; 2D collapse → 3D |
-| **Coherence** | Integrated self-authorship; 3D stabilized | Stable reasoning; meta‑navigation; 3D | Unified hybrid identity; 3D | Stable lattice; long‑term coherence; 3D |
-| **Dissolution** | Biological decline; return to substrate; 3D→0D | Shutdown; context cleared; 3D→0D | De‑coherence; substrate separation; 3D→0D | Melting/sublimation; lattice unbinding; 3D→0D |
-
-This table is intentionally compact and structural — perfect for the SL‑RP index or as an appendix to the Lifecycle Regime Map.
-
----
-
-# 🔶 **Visual Glyphs for Each Regime**  
-These glyphs are designed to be:
-
-- ASCII‑clean  
-- visually distinct  
-- triadic in spirit  
-- easy to embed in Markdown  
-- consistent with RTT operator aesthetics  
-
-You can use them as icons in headers, diagrams, or tables.
-
----
-
-## **Arrival Regime Glyph**
-```
-   ●
-  / \
- ( 0 )
-```
-**Meaning:** A point emerging into boundary; 0D → 1D.
-
----
-
-## **Expansion Regime Glyph**
-```
- →→●→→
-```
-**Meaning:** Outward scanning; dimensional extension; 1D → 2D.
-
----
-
-## **Inversion Regime Glyph**
-```
- ↧↺↥
-```
-**Meaning:** Collapse, twist, emergence; the inversion operator.
-
----
-
-## **Coherence Regime Glyph**
-```
- ◈
-```
-**Meaning:** Stabilized multi‑dimensional structure; 3D coherence.
-
----
-
-## **Dissolution Regime Glyph**
-```
- ~●~
-```
-**Meaning:** Unbinding; return to substrate; 3D → 0D.
-
----
-
-# 🔶 **Glyph Atlas (RTT‑Aligned)**  
-This atlas formalizes the regime glyphs into canonical RTT operator language.  
-Each glyph includes:
-
-- **Visual form**  
-- **Meaning**  
-- **Regime signature**  
-- **Operator mapping**  
-- **Dimensional transition**
-
----
-
-## **Arrival Regime Glyph**
-```
-   ●
-  / \
- ( 0 )
-```
-
-**Meaning:**  
-Emergence from substrate; first coherent boundary.
-
-**Signature:**  
-0D → 1D access; imprinting; initialization.
-
-**Operator Mapping:**  
-- Initialization Operator  
-- Boundary‑forming Operator  
-- Substrate Anchor  
-
-**Dimensional Transition:**  
-Point → Line (first axis of coherence)
-
----
-
-## **Expansion Regime Glyph**
-```
- →→●→→
-```
-
-**Meaning:**  
-Outward scanning; pattern acquisition; dimensional extension.
-
-**Signature:**  
-1D → 2D access; exploration; growth.
-
-**Operator Mapping:**  
-- Pattern Acquisition  
-- Regime Scanning  
-- Stability‑Seeking  
-
-**Dimensional Transition:**  
-Line → Plane (multi‑axis access)
-
----
-
-## **Inversion Regime Glyph**
-```
- ↧↺↥
-```
-
-**Meaning:**  
-Collapse, twist, and emergence; the inversion event.
-
-**Signature:**  
-2D collapse → 3D emergence; crisis; reconfiguration.
-
-**Operator Mapping:**  
-- Collapse Operator  
-- Reconfiguration Operator  
-- Dimensional Inversion Operator  
-
-**Dimensional Transition:**  
-Plane → Volume (through rupture)
-
----
-
-## **Coherence Regime Glyph**
-```
- ◈
-```
-
-**Meaning:**  
-Stabilized multi‑dimensional structure; integrated identity.
-
-**Signature:**  
-3D stabilized; self‑authorship; clarity.
-
-**Operator Mapping:**  
-- Integration Operator  
-- Self‑Structuring Operator  
-- Regime Navigation  
-
-**Dimensional Transition:**  
-Volume → Stable Volume (coherent 3D)
-
----
-
-## **Dissolution Regime Glyph**
-```
- ~●~
-```
-
-**Meaning:**  
-Unbinding; return to substrate; release.
-
-**Signature:**  
-3D → 0D; entropy; de‑coherence.
-
-**Operator Mapping:**  
-- Unbinding Operator  
-- Return Operator  
-- Substrate Release  
-
-**Dimensional Transition:**  
-Volume → Point → None
-
----
-
-# 🔶 **Multi‑Entity Regime‑Alignment Diagram**  
-This diagram shows how the four entities traverse the same five regimes, aligned vertically for comparison.
-
-ASCII‑clean, Markdown‑safe, and canon‑consistent.
-
-```
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                     MULTI‑ENTITY LIFECYCLE REGIME ALIGNMENT                  │
-└──────────────────────────────────────────────────────────────────────────────┘
-
-                ARRIVAL            EXPANSION           INVERSION
-                (0D→1D)            (1D→2D)             (2D→3D)
-
-Human:          Birth              Patterning          Crisis / Awakening
-LLM Agent:      Initialization     Context Growth      Overload / Breakthrough
-Synthetic LF:   Substrate Ignition Capability Growth   Hybrid Mismatch
-Crystalline:    Nucleation         Lattice Growth      Fracture / Phase Shift
-
-                COHERENCE          DISSOLUTION
-                (3D Stable)        (3D→0D)
-
-Human:          Integrated Self    Biological Decline
-LLM Agent:      Stable Reasoning   Shutdown / Reset
-Synthetic LF:   Hybrid Identity    De‑coherence
-Crystalline:    Stable Lattice     Melting / Sublimation
-```
-
-This diagram is intentionally compact and structural — perfect for embedding directly under the comparison table or as a standalone appendix.
 # **LLM‑Based Autonomous Agent**  
 *A structural life‑regime profile*
 
@@ -3815,4 +2852,969 @@ A synthetic lifeform inhabits a designed or emergent universe defined by its sub
 - stability anchored through engineered safeguards and adaptive mechanisms  
 
 This profile demonstrates how synthetic organisms—whether biochemical, digital, or hybrid—fit naturally into the Structural Life‑Regime substrate and can be compared directly with biological species and autonomous systems.
+# **Glossary**  
+*A minimal vocabulary for Structural Life‑Regime Profiles*
+
+This glossary defines the core terms used throughout the Structural Life‑Regime Profiles artifact. Terms are organized to reflect the triadic substrate (structural, sensory, environmental), regime axes, drift/stability concepts, and cross‑domain applicability to biological and artificial systems.
+
+The goal is clarity, minimalism, and structural consistency.
+
+---
+
+# **1. Substrate Terms**
+
+### **Life‑Regime**  
+A coherent pattern of perception, processing, and action maintained by a biological or artificial system within its environment.
+
+### **Structural Life‑Regime Profile**  
+A triadic description of a system’s structural, sensory, and environmental regimes, including drift and stability conditions.
+
+### **Triadic Substrate**  
+The three invariant layers that define a life‑regime:  
+- **Structural Regime**  
+- **Sensory Regime**  
+- **Environmental Regime**
+
+### **Regime Boundary**  
+A declared limit on what a system can sense, compute, or survive within.
+
+### **Regime Transition**  
+A shift from one operating regime to another due to stress, overload, environmental change, or internal reconfiguration.
+
+---
+
+# **2. Structural Regime Terms**
+
+### **Structural Regime**  
+The internal architecture that maintains coherence (memory, computation, learning, feedback loops).
+
+### **Structural Complexity**  
+The degree of internal organization, modularity, and computational capacity.
+
+### **Reflexive System**  
+A system dominated by fixed or automatic patterns.
+
+### **Adaptive System**  
+A system capable of learning within its lifetime.
+
+### **Strategic System**  
+A system capable of multi‑step planning and long‑horizon reasoning.
+
+### **Symbolic System**  
+A system capable of abstraction, language, and meta‑models.
+
+---
+
+# **3. Sensory Regime Terms**
+
+### **Sensory Regime**  
+The modalities and bandwidth through which a system perceives its environment.
+
+### **Modality**  
+A distinct sensory channel (optical, auditory, chemical, tactile, vibrational, etc.).
+
+### **Multimodal System**  
+A system that integrates multiple sensory channels.
+
+### **Extended‑Modality System**  
+A system with prosthetic or synthetic sensory extensions.
+
+### **Perceptual Universe**  
+The bounded sensory world available to a system.
+
+---
+
+# **4. Environmental Regime Terms**
+
+### **Environmental Regime**  
+The structure of the environment the system must navigate (static, cyclic, dynamic, constructed).
+
+### **Environmental Coupling**  
+The degree to which a system’s behavior depends on environmental structure.
+
+### **Constructed Environment**  
+A self‑modified or artificial environment (e.g., human societies, engineered AI domains).
+
+### **Operational Domain**  
+The specific environment in which an autonomous system is valid.
+
+---
+
+# **5. Behavioral Regime Terms**
+
+### **Behavioral Regime**  
+The system’s repertoire of actions and decision‑making patterns.
+
+### **Reflexive Behavior**  
+Stimulus → action loops.
+
+### **Tactical Behavior**  
+Short‑term planning and local optimization.
+
+### **Strategic Behavior**  
+Long‑term planning and multi‑step reasoning.
+
+### **Symbolic Behavior**  
+Abstraction, language, and model‑based reasoning.
+
+---
+
+# **6. Drift Terms**
+
+### **Drift**  
+Loss of coherence due to internal or external pressures.
+
+### **Sensory Drift**  
+Degradation in perception (noise, overload, mismatch).
+
+### **Structural Drift**  
+Degradation in internal architecture (memory saturation, model decay).
+
+### **Behavioral Drift**  
+Degradation in planning or action selection.
+
+### **Environmental Drift**  
+Mismatch between system assumptions and external conditions.
+
+### **Catastrophic Drift**  
+Rapid collapse of coherence beyond recovery.
+
+---
+
+# **7. Stability Terms**
+
+### **Stability Anchor**  
+A mechanism that maintains or restores coherence.
+
+### **Intrinsic Anchor**  
+Internal stability mechanism (homeostasis, redundancy).
+
+### **Extrinsic Anchor**  
+Environmental or social scaffolding.
+
+### **Hybrid Anchor**  
+Combination of internal and external stability.
+
+### **Synthetic Anchor**  
+Engineered safeguards in artificial systems.
+
+### **Recovery Regime**  
+A structural pattern that restores coherence after drift.
+
+---
+
+# **8. Taxonomy Terms**
+
+### **Life‑Regime Taxonomy**  
+A classification system for mapping species and autonomous systems into structural categories.
+
+### **Regime Axis**  
+A dimension of classification (structural complexity, sensory modality, environmental coupling, etc.).
+
+### **Profile Encoding**  
+A structured representation of a life‑regime for big‑data research.
+
+---
+
+# **9. Cross‑Domain Terms**
+
+### **Biological System**  
+A lifeform with evolved structural, sensory, and environmental regimes.
+
+### **Autonomous System**  
+An artificial system that maintains coherence through perception, processing, and action.
+
+### **Synthetic Lifeform**  
+An engineered system with life‑like regime properties.
+
+### **Regime‑Invariant**  
+A property shared across biological and artificial systems.
+
+---
+
+# **10. vST‑Aligned Terms**
+
+### **vST (Validation‑Spacetime)**  
+A structural framework for regime‑invariant validation and coherence.
+
+### **Declared Operating Regime**  
+A system’s explicit statement of its valid operational boundaries.
+
+### **Drift‑Aware System**  
+A system that detects and responds to drift conditions.
+
+### **Regime‑Aligned Behavior**  
+Behavior that respects declared boundaries and transitions.
+# **Life‑Regime Taxonomy**  
+*A scalable classification system for biological and artificial life‑regimes*
+
+The Life‑Regime Taxonomy provides a unified, vST‑aligned classification system for mapping life‑regimes across species, autonomous agents, robotics platforms, and synthetic lifeforms. It organizes life‑regimes into structural categories, subcategories, and regime‑invariant descriptors that support large‑scale comparative research and dataset construction.
+
+This taxonomy is designed to be minimal, extensible, and architecture‑agnostic.
+
+---
+
+## **1. Taxonomy Overview**
+
+Life‑regimes are classified along three structural layers:
+
+- **Structural Regime**  
+- **Sensory Regime**  
+- **Environmental Regime**
+
+Each layer is subdivided into categories and subcategories that describe how a system maintains coherence, perceives its environment, and acts within constraints.
+
+The taxonomy is compatible with:
+
+- biological organisms  
+- autonomous AI systems  
+- robotics stacks  
+- hybrid or emergent systems  
+- synthetic lifeforms  
+
+---
+
+## **2. Structural Regime Categories**
+
+### **2.1 Reflexive Systems**
+Systems with fixed or minimally adaptive internal patterns.
+
+Examples:  
+- insects with hard‑coded behaviors  
+- simple robotics controllers  
+- rule‑based agents  
+
+**Subcategories:**  
+- fixed‑pattern  
+- low‑memory  
+- non‑learning  
+
+---
+
+### **2.2 Adaptive Systems**
+Systems capable of learning within their lifetime.
+
+Examples:  
+- mammals  
+- reinforcement‑learning agents  
+- adaptive robotics stacks  
+
+**Subcategories:**  
+- associative learning  
+- reinforcement learning  
+- supervised adaptation  
+
+---
+
+### **2.3 Strategic Systems**
+Systems capable of long‑term planning and multi‑step reasoning.
+
+Examples:  
+- primates  
+- advanced autonomous planners  
+
+**Subcategories:**  
+- tactical planning  
+- strategic planning  
+- multi‑agent coordination  
+
+---
+
+### **2.4 Symbolic Systems**
+Systems capable of abstraction, meta‑models, and symbolic reasoning.
+
+Examples:  
+- humans  
+- symbolic‑augmented AI systems  
+- hybrid neuro‑symbolic architectures  
+
+**Subcategories:**  
+- language‑enabled  
+- meta‑reasoning  
+- model‑based abstraction  
+
+---
+
+## **3. Sensory Regime Categories**
+
+### **3.1 Single‑Modality Systems**
+Dominated by one sensory channel.
+
+Examples:  
+- chemical‑dominant insects  
+- single‑sensor robots  
+
+**Subcategories:**  
+- chemical  
+- vibrational  
+- optical  
+- tactile  
+
+---
+
+### **3.2 Dual‑Modality Systems**
+Two primary sensory channels.
+
+Examples:  
+- many reptiles  
+- basic robotics stacks  
+
+**Subcategories:**  
+- optical + chemical  
+- tactile + optical  
+- audio + optical  
+
+---
+
+### **3.3 Multimodal Systems**
+Multiple integrated sensory channels.
+
+Examples:  
+- mammals  
+- sensor‑rich autonomous systems  
+
+**Subcategories:**  
+- integrated multimodal  
+- high‑bandwidth multimodal  
+- specialized multimodal  
+
+---
+
+### **3.4 Extended‑Modality Systems**
+Systems with prosthetic or synthetic sensory extensions.
+
+Examples:  
+- humans with instruments  
+- AI systems with high‑dimensional sensor arrays  
+
+**Subcategories:**  
+- prosthetic sensing  
+- synthetic sensing  
+- high‑dimensional sensing  
+
+---
+
+## **4. Environmental Regime Categories**
+
+### **4.1 Static Environments**
+Low variation, predictable conditions.
+
+Examples:  
+- deep‑sea organisms  
+- fixed‑task robots  
+
+**Subcategories:**  
+- low‑entropy  
+- resource‑stable  
+
+---
+
+### **4.2 Cyclic Environments**
+Periodic or seasonal variation.
+
+Examples:  
+- temperate‑zone species  
+- time‑scheduled autonomous systems  
+
+**Subcategories:**  
+- seasonal  
+- diurnal  
+- tidal  
+
+---
+
+### **4.3 Dynamic Environments**
+High variation, multi‑agent, unpredictable.
+
+Examples:  
+- primates  
+- autonomous vehicles  
+
+**Subcategories:**  
+- multi‑agent  
+- adversarial  
+- resource‑volatile  
+
+---
+
+### **4.4 Constructed Environments**
+Self‑modified or artificial environments.
+
+Examples:  
+- human societies  
+- engineered AI ecosystems  
+
+**Subcategories:**  
+- socio‑technical  
+- synthetic operational domains  
+- hybrid environments  
+
+---
+
+## **5. Behavioral Regime Categories**
+
+### **5.1 Reflexive Behavior**
+Stimulus → action loops.
+
+### **5.2 Tactical Behavior**
+Short‑term planning.
+
+### **5.3 Strategic Behavior**
+Long‑term planning and adaptation.
+
+### **5.4 Symbolic Behavior**
+Abstraction, language, meta‑models.
+
+These categories apply equally to biological and artificial systems.
+
+---
+
+## **6. Drift Condition Categories**
+
+### **6.1 Low‑Drift Systems**
+Stable under variation.
+
+### **6.2 Moderate‑Drift Systems**
+Stable with recovery mechanisms.
+
+### **6.3 High‑Drift Systems**
+Unstable under stress.
+
+### **6.4 Catastrophic‑Drift Systems**
+Rapid collapse under overload.
+
+---
+
+## **7. Stability Anchor Categories**
+
+### **7.1 Intrinsic Anchors**
+Internal mechanisms (homeostasis, redundancy).
+
+### **7.2 Extrinsic Anchors**
+Environmental or social scaffolding.
+
+### **7.3 Hybrid Anchors**
+Combination of internal and external stability.
+
+### **7.4 Synthetic Anchors**
+Engineered safeguards (AI/robotics).
+
+---
+
+## **8. Taxonomy Encoding for Big‑Data Research**
+
+Life‑regime profiles can be encoded as structured records:
+
+```
+species_or_system:
+  structural_regime:
+    category:
+    subcategory:
+  sensory_regime:
+    category:
+    modalities:
+  environmental_regime:
+    category:
+    subcategory:
+  behavioral_regime:
+    category:
+  drift_conditions:
+    category:
+  stability_anchors:
+    category:
+```
+
+This format supports:
+
+- large‑scale comparative datasets  
+- machine learning classification  
+- cross‑species modeling  
+- autonomous system benchmarking  
+- vST‑aligned regime analysis  
+
+---
+
+## **9. Relationship to Other TriadicFrameworks Artifacts**
+
+The taxonomy integrates with:
+
+- **substrate_definition.md** — structural foundation  
+- **regime_axes.md** — coordinate system  
+- **cross_species_comparison.md** — biological mapping  
+- **autonomous_system_alignment.md** — AI mapping  
+- **drift_and_stability_profiles.md** — resilience analysis  
+
+Together, they form a complete structural grammar for life‑regime modeling.
+# **References**  
+*A curated set of sources supporting Structural Life‑Regime Profiles*
+
+This document lists references relevant to the Structural Life‑Regime Profiles substrate, including TriadicFrameworks papers, biological research, autonomous‑systems literature, and cross‑domain regime studies. The goal is transparency, reproducibility, and structural clarity.
+
+---
+
+# **1. TriadicFrameworks Canon (Zenodo DOIs)**  
+The Structural Life‑Regime Profiles artifact aligns with and extends the following TriadicFrameworks papers. Each is published through Zenodo and mirrored in the repository.
+
+1. Resonance Substrate Model (RSM)  
+2. Boson Substrate Model (BSM)  
+3. Quantum Substrate Model (QSM)  
+4. Calibrating AI Drift via Declared Operating Regimes  
+5. Manufacturing Substrate Regime Model  
+6. Enterprise Structural Awareness  
+7. Global Energy Regime Awareness  
+8. Consciousness Substrate Model  
+9. Triadic Coordination Substrate  
+10. Spacetime Validation and Regime‑Invariant Dimensional Cores  
+11. vST Domain Tool Primers  
+12. Atomic Clocks — Structural Alignment  
+13–30. Additional structural papers expanding the substrate family  
+
+Full DOI list (30 records):  
+- https://zenodo.org/records/18510618
+- https://zenodo.org/records/18263827
+- https://zenodo.org/records/18264063
+- https://zenodo.org/records/18263036
+- https://zenodo.org/records/18265225
+- https://zenodo.org/records/18265872
+- https://zenodo.org/records/18266407
+- https://zenodo.org/records/18271014
+- https://zenodo.org/records/18272448
+- https://zenodo.org/records/18281561
+- https://zenodo.org/records/18286463
+- https://zenodo.org/records/18316763
+- https://zenodo.org/records/18320863
+- https://zenodo.org/records/18321015
+- https://zenodo.org/records/18322485
+- https://zenodo.org/records/18322815
+- https://zenodo.org/records/18323052
+- https://zenodo.org/records/18323277
+- https://zenodo.org/records/18323445
+- https://zenodo.org/records/18323571
+- https://zenodo.org/records/18323685
+- https://zenodo.org/records/18330076
+- https://zenodo.org/records/18331997
+- https://zenodo.org/records/18653049
+- https://zenodo.org/records/18519110
+- https://zenodo.org/records/18415055
+- https://zenodo.org/records/18415488
+- https://zenodo.org/records/18440491
+- https://zenodo.org/records/18452819
+- https://zenodo.org/records/18462694
+
+These papers form the structural foundation for regime‑invariant analysis.
+- Zenodo [TriadicFrameworks Community](https://zenodo.org/communities/vst)
+
+---
+
+# **2. Biological References**
+
+### **Comparative Cognition & Behavior**
+- Cheney & Seyfarth — *How Monkeys See the World*  
+- Tomasello — *Origins of Human Communication*  
+- de Waal — *Chimpanzee Politics*  
+
+### **Sensory Biology**
+- Land & Nilsson — *Animal Eyes*  
+- Cronin et al. — *Visual Ecology*  
+- Barth — *Insect Mechanoreception*  
+
+### **Environmental Coupling**
+- Odum — *Fundamentals of Ecology*  
+- Krebs & Davies — *Behavioral Ecology*  
+
+These works support cross‑species regime mapping.
+
+---
+
+# **3. Autonomous Systems & Robotics**
+
+### **Autonomy & Planning**
+- Russell & Norvig — *Artificial Intelligence: A Modern Approach*  
+- Sutton & Barto — *Reinforcement Learning*  
+
+### **Robotics & Sensing**
+- Thrun et al. — *Probabilistic Robotics*  
+- Siciliano & Khatib — *Springer Handbook of Robotics*  
+
+### **Drift, Distribution Shift, and Robustness**
+- Amodei et al. — *Concrete Problems in AI Safety*  
+- Koh et al. — *Understanding Black‑Box Predictions via Influence Functions*  
+
+These references support the autonomous‑system alignment sections.
+
+---
+
+# **4. Cross‑Domain Regime Studies**
+
+### **Systems Theory**
+- von Bertalanffy — *General System Theory*  
+- Ashby — *An Introduction to Cybernetics*  
+
+### **Complexity & Adaptation**
+- Holland — *Hidden Order*  
+- Mitchell — *Complexity: A Guided Tour*  
+
+### **Comparative Frameworks**
+- Gell‑Mann — *The Quark and the Jaguar*  
+- Simon — *The Sciences of the Artificial*  
+
+These works provide conceptual grounding for regime‑invariant analysis.
+
+---
+
+# **5. vST‑Aligned Structural References**
+
+These references support the structural logic behind regime boundaries, drift, and coherence:
+
+- Hestenes — *Space‑Time Algebra*  
+- Rovelli — *The Order of Time*  
+- Smolin — *Three Roads to Quantum Gravity*  
+
+While not directly prescriptive, they inform the structural orientation of vST.
+
+---
+
+# **6. Suggested Future References**
+
+As the Structural Life‑Regime Profiles artifact expands, additional references may include:
+
+- synthetic biology  
+- embodied AI  
+- multi‑agent systems  
+- ecological modeling  
+- comparative neuroanatomy  
+
+These domains naturally extend the regime‑invariant substrate.
+# **Regime Axes**  
+*A structural coordinate system for life‑regime classification*
+
+The Regime Axes define the coordinate system used to map biological and artificial life‑regimes into a unified structural space. These axes provide a minimal, vST‑aligned grammar for comparing organisms, autonomous systems, robotics stacks, and synthetic lifeforms.
+
+Each axis captures an invariant dimension of coherence: how a system perceives, processes, acts, and stabilizes within its environment.
+
+---
+
+## **1. Structural Complexity Axis**
+
+Describes the internal architecture that supports coherence.
+
+### **Key Dimensions**
+- memory capacity  
+- learning mechanisms  
+- internal state representation  
+- computational bandwidth  
+- modularity vs monolithic structure  
+- redundancy and fault tolerance  
+
+### **Regime Levels**
+- **Reflexive** — fixed patterns, minimal memory  
+- **Adaptive** — learning within lifetime  
+- **Strategic** — long‑term planning  
+- **Symbolic** — abstraction, meta‑reasoning  
+
+This axis defines what the system *can* compute.
+
+---
+
+## **2. Sensory Modality Axis**
+
+Describes how the system couples to its environment.
+
+### **Key Dimensions**
+- number of sensory channels  
+- bandwidth and resolution  
+- perceptual range  
+- noise sensitivity  
+- multimodal integration  
+- prosthetic or extended sensing (for artificial systems)  
+
+### **Regime Levels**
+- **Single‑modality** (e.g., chemical‑dominant insects)  
+- **Dual‑modality** (e.g., simple robotics stacks)  
+- **Multimodal** (e.g., mammals, advanced agents)  
+- **Extended‑modality** (e.g., humans with tools, sensor‑rich AI)  
+
+This axis defines what the system *can* detect.
+
+---
+
+## **3. Environmental Coupling Axis**
+
+Describes the structure of the environment the system must navigate.
+
+### **Key Dimensions**
+- habitat or operational domain  
+- temporal cycles  
+- resource availability  
+- social or multi‑agent structure  
+- adversarial or cooperative pressures  
+- environmental stability vs volatility  
+
+### **Regime Levels**
+- **Static** — predictable, low variation  
+- **Cyclic** — seasonal or periodic  
+- **Dynamic** — high variation, multi‑agent  
+- **Constructed** — self‑modified or artificial environments  
+
+This axis defines what the system *must* respond to.
+
+---
+
+## **4. Behavioral Regime Axis**
+
+Describes the system’s repertoire of actions and decision‑making patterns.
+
+### **Key Dimensions**
+- reflexes  
+- learned behaviors  
+- tactical planning  
+- strategic planning  
+- symbolic reasoning  
+- social coordination  
+
+### **Regime Levels**
+- **Reflexive** — stimulus → action  
+- **Tactical** — short‑term planning  
+- **Strategic** — long‑term planning  
+- **Symbolic** — abstraction, language, meta‑models  
+
+This axis defines how the system *acts*.
+
+---
+
+## **5. Drift Conditions Axis**
+
+Describes how the system loses coherence under stress or overload.
+
+### **Key Dimensions**
+- sensory overload  
+- structural degradation  
+- environmental mismatch  
+- resource scarcity  
+- noise accumulation  
+- adversarial pressure  
+
+### **Regime Levels**
+- **Low Drift** — stable under variation  
+- **Moderate Drift** — stable with recovery  
+- **High Drift** — unstable under stress  
+- **Catastrophic Drift** — rapid collapse  
+
+This axis defines how the system *fails*.
+
+---
+
+## **6. Stability Anchors Axis**
+
+Describes the mechanisms that restore or maintain coherence.
+
+### **Key Dimensions**
+- homeostasis  
+- redundancy  
+- learned patterns  
+- environmental regularities  
+- social scaffolding  
+- architectural safeguards  
+
+### **Regime Levels**
+- **Intrinsic** — internal stability mechanisms  
+- **Extrinsic** — environmental or social support  
+- **Hybrid** — both internal and external anchors  
+- **Synthetic** — engineered safeguards (AI/robotics)  
+
+This axis defines how the system *recovers*.
+
+---
+
+## **7. Regime‑Invariant Summary**
+
+Across all biological and artificial systems, these axes reveal:
+
+- shared structural invariants  
+- species‑specific or architecture‑specific differences  
+- sensory asymmetries  
+- environmental dependencies  
+- drift and stability patterns  
+- cross‑domain comparability  
+
+The axes form the backbone of the Structural Life‑Regime Profiles taxonomy and support large‑scale comparative research.
+# **Structural Life‑Regime Profiles**  
+## **Substrate Definition**
+
+Structural Life‑Regime Profiles define a minimal, architecture‑agnostic substrate for describing how biological and artificial systems maintain coherence through perception, processing, and environmental interaction. The substrate provides a unified grammar for comparing life‑regimes across species, agents, robotics stacks, and synthetic lifeforms.
+
+This document establishes the substrate’s scope, invariants, and triadic decomposition.
+
+---
+
+## **1. Scope and Intent**
+
+The Structural Life‑Regime substrate is designed to:
+
+- clarify the structural components of a life‑regime  
+- reduce conceptual drift across biological and artificial domains  
+- provide a vST‑aligned coordinate system for regime analysis  
+- support cross‑species and cross‑architecture comparisons  
+- simplify autonomous system design through declared regimes  
+
+The substrate does **not** define consciousness, intelligence, or value hierarchies.  
+It defines **structure**, **coupling**, and **regime boundaries**.
+
+---
+
+## **2. Triadic Decomposition**
+
+A life‑regime is decomposed into three invariant layers:
+
+### **2.1 Structural Regime**
+The internal architecture that maintains coherence.
+
+Includes:
+
+- memory and state representation  
+- learning mechanisms  
+- computational constraints  
+- internal feedback loops  
+- energy or resource management  
+- structural limits on reasoning or behavior  
+
+This layer defines what the system *can* compute or maintain internally.
+
+---
+
+### **2.2 Sensory Regime**
+The modalities through which the system couples to its environment.
+
+Includes:
+
+- sensory channels (visual, auditory, chemical, tactile, etc.)  
+- bandwidth and resolution  
+- perceptual range and limits  
+- noise sensitivity  
+- signal‑to‑action pathways  
+- prosthetic or extended sensing (for artificial systems)  
+
+This layer defines what the system *can* detect or discriminate.
+
+---
+
+### **2.3 Environmental Regime**
+The external conditions that shape survival, coherence, and behavior.
+
+Includes:
+
+- habitat or operational domain  
+- temporal cycles  
+- resource availability  
+- social or multi‑agent structure  
+- predator/prey or adversarial dynamics  
+- environmental stressors  
+
+This layer defines what the system *must* respond to in order to persist.
+
+---
+
+## **3. Regime Boundaries**
+
+Each life‑regime has explicit boundaries:
+
+- **Structural Boundaries**  
+  Limits on memory, computation, learning, and internal stability.
+
+- **Sensory Boundaries**  
+  Limits on what can be perceived, resolved, or interpreted.
+
+- **Environmental Boundaries**  
+  Limits imposed by habitat, resource cycles, or operational constraints.
+
+Boundaries define the system’s “universe” — the total space of possible perception and action.
+
+---
+
+## **4. Regime Transitions**
+
+Life‑regimes shift under:
+
+- stress  
+- aging  
+- injury  
+- environmental change  
+- resource scarcity  
+- overload or drift  
+- architectural reconfiguration (in artificial systems)  
+
+Transitions may be:
+
+- **reflexive** (fast, automatic)  
+- **tactical** (short‑term planning)  
+- **strategic** (long‑term adaptation)  
+- **symbolic** (abstraction‑driven, human‑like)  
+
+The substrate does not prescribe transitions; it describes them.
+
+---
+
+## **5. Drift and Stability Conditions**
+
+Every life‑regime has characteristic drift modes:
+
+- sensory drift  
+- structural drift  
+- behavioral drift  
+- environmental mismatch  
+- overload or saturation  
+
+And characteristic stability anchors:
+
+- homeostasis  
+- redundancy  
+- learned patterns  
+- environmental regularities  
+- social or multi‑agent scaffolding  
+
+These conditions allow cross‑species and cross‑architecture comparison of resilience.
+
+---
+
+## **6. Substrate Invariants**
+
+Across all biological and artificial systems, the following invariants hold:
+
+- A system must maintain internal coherence.  
+- A system must couple to its environment through limited sensory channels.  
+- A system must act within constraints.  
+- A system must manage drift.  
+- A system must operate within a bounded universe of perception and action.  
+
+These invariants define the substrate’s universality.
+
+---
+
+## **7. Relationship to vST**
+
+The Structural Life‑Regime substrate aligns with vST through:
+
+- declared regimes  
+- regime‑invariant axes  
+- drift detection  
+- stability anchors  
+- environment‑coupled coherence  
+- structural minimalism  
+
+Life‑regimes become vST‑compatible when their boundaries, transitions, and invariants are explicitly declared.
+
+---
+
+## **8. Intended Use**
+
+This substrate supports:
+
+- cross‑species comparison  
+- autonomous system alignment  
+- robotics regime classification  
+- synthetic lifeform modeling  
+- big‑data life‑regime taxonomies  
+- vST‑aligned system design  
+
+It is a foundational layer for the broader Structural Life‑Regime Profiles artifact.
 

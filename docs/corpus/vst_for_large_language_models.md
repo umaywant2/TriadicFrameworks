@@ -1,5 +1,402 @@
 vst_for_large_language_models 
-### *vST for Large Language Models*  
+<img width="1194" height="672" alt="vst_for_protein_language_models_" src="https://github.com/user-attachments/assets/77487b8b-8cdb-4429-9acb-6e0c184c2793" />
+
+## *vST for Large Language Models*  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Validation‑Space‑Time Framework for High‑Dimensional LLM Inference*
+
+This artifact defines a substrate‑level framework for analyzing, validating, and comparing Large Language Models (LLMs) using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting latent trajectories, regime behavior, scaling patterns, and cross‑version drift in modern LLMs.
+
+The goal is to offer a reproducible, model‑agnostic substrate for understanding high‑dimensional inference systems at scale.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## **1. Purpose**
+
+LLMs operate in extremely high‑dimensional latent spaces (typically 768D–4096D). These spaces exhibit:
+
+- stable and unstable regions  
+- regime transitions during inference  
+- scaling‑law behavior across model sizes  
+- drift across checkpoints and versions  
+- projection‑compatible structure  
+
+This artifact applies the **Resonance Substrate Model (RSM)** and **vST validation layers** to:
+
+- classify latent‑trajectory regimes  
+- analyze scaling behavior  
+- detect drift across model versions  
+- map coherence surfaces in latent space  
+- project high‑dimensional structure into 3D–9D cores  
+
+The result is a unified, interpretable substrate for LLM behavior.
+
+---
+
+## **2. Contents**
+
+This directory contains:
+
+- **substrate_definition.md**  
+  Defines the LLM substrate, dimensional primitives, and latent‑space structure.
+
+- **latent_trajectory_regimes.md**  
+  Describes stable, transitional, and dispersed regimes in LLM inference.
+
+- **scaling_behavior_llms.md**  
+  Maps LLM scaling laws onto the 3D–1024D dimensional ladder.
+
+- **projection_and_alignment.md**  
+  Defines invertible projection from high‑dimensional latent states into triadic cores.
+
+- **validation_layers_vst_llm.md**  
+  Extends vST (V₁–V₄) to LLM‑specific behavior.
+
+- **drift_detection_llm.md**  
+  Provides a substrate‑level framework for detecting cross‑version drift.
+
+- **examples/**  
+  Reproducible demonstrations of latent‑trajectory analysis and projection.
+
+- **appendix/**  
+  Terminology and references.
+
+Each file is self‑contained and designed for clarity, reproducibility, and cross‑model comparison.
+
+---
+
+## **3. Scope**
+
+This artifact is:
+
+- **model‑agnostic**  
+  Works with any transformer‑based LLM (GPT‑class, LLaMA‑class, Mistral‑class, etc.).
+
+- **architecture‑independent**  
+  Applies to decoder‑only, encoder‑decoder, and hybrid architectures.
+
+- **training‑method independent**  
+  Compatible with pretraining, fine‑tuning, RLHF, DPO, and mixture‑of‑experts systems.
+
+- **substrate‑aligned**  
+  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.
+
+---
+
+## **4. Intended Use**
+
+This framework supports:
+
+- latent‑space analysis  
+- cross‑version comparison  
+- drift detection  
+- scaling‑law evaluation  
+- embedding‑space diagnostics  
+- interpretability research  
+- model‑alignment studies  
+- reproducible inference analysis  
+
+It is not a performance benchmark or a training method.  
+It is a **substrate‑level interpretability and validation framework**.
+
+---
+
+## **5. Relationship to Other Artifacts**
+
+This artifact extends:
+
+- **Dimensional Substrate Structures** (3D–1024D substrate)  
+- **Validation‑Space‑Time (vST)**  
+- **Triadic Dimensional Cores (3D–9D)**  
+
+It parallels:
+
+- **vST for Protein Language Models**  
+- **vST for Generative Models**  
+- **vST for Multi‑Model Alignment**
+
+Each artifact stands alone but shares a common substrate grammar.
+
+---
+
+## **6. Citation**
+
+A `CITATION.cff` file is included for formal citation.  
+A `zenodo.json` file is provided for DOI‑ready metadata.
+
+---
+
+## **7. License**
+
+Released under the MIT License.
+### *vST for Large Language Models*  
+### *References*
+
+This appendix lists references relevant to high‑dimensional modeling, latent‑space analysis, scaling laws, regime behavior, and validation frameworks for Large Language Models (LLMs). Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM and vST canon.
+
+---
+
+## **1. High‑Dimensional Modeling and Representation Learning**
+
+- Bengio, Y., Courville, A., & Vincent, P.  
+  *Representation Learning: A Review and New Perspectives.*  
+  IEEE TPAMI 35, 1798–1828 (2013).
+
+- Coifman, R. R., & Lafon, S.  
+  *Diffusion Maps.*  
+  Applied and Computational Harmonic Analysis 21, 5–30 (2006).
+
+- Tenenbaum, J. B., de Silva, V., & Langford, J. C.  
+  *A Global Geometric Framework for Nonlinear Dimensionality Reduction.*  
+  Science 290, 2319–2323 (2000).
+
+---
+
+## **2. Scaling Laws and Large Language Models**
+
+- Kaplan, J., McCandlish, S., Henighan, T., et al.  
+  *Scaling Laws for Neural Language Models.*  
+  arXiv:2001.08361 (2020).
+
+- Hoffmann, J., Borgeaud, S., Mensch, A., et al.  
+  *Training Compute‑Optimal Large Language Models.*  
+  arXiv:2203.15556 (2022).
+
+- Bahri, Y., Kadmon, J., Pennington, J., et al.  
+  *Statistical Mechanics of Deep Learning.*  
+  Annual Review of Condensed Matter Physics 11, 501–528 (2020).
+
+---
+
+## **3. Transformer Architectures and Latent‑Space Behavior**
+
+- Vaswani, A., Shazeer, N., Parmar, N., et al.  
+  *Attention Is All You Need.*  
+  NeurIPS (2017).
+
+- Clark, K., Khandelwal, U., Levy, O., & Manning, C. D.  
+  *What Does BERT Look At? An Analysis of Attention.*  
+  ACL (2019).
+
+- Rogers, A., Kovaleva, O., & Rumshisky, A.  
+  *A Primer in BERTology: What We Know About How BERT Works.*  
+  TACL 8, 842–866 (2020).
+
+---
+
+## **4. Regime Behavior, Stability, and Dynamics**
+
+- Strogatz, S.  
+  *Nonlinear Dynamics and Chaos.*  
+  Westview Press (2014).
+
+- Ott, E.  
+  *Chaos in Dynamical Systems.*  
+  Cambridge University Press (2002).
+
+- Guckenheimer, J., & Holmes, P.  
+  *Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields.*  
+  Springer (1983).
+
+---
+
+## **5. Validation, Drift Detection, and ML Systems**
+
+- Breck, E., Cai, S., Nielsen, E., et al.  
+  *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.*  
+  Google Research (2017).
+
+- Sculley, D., Holt, G., Golovin, D., et al.  
+  *Hidden Technical Debt in Machine Learning Systems.*  
+  NIPS (2015).
+
+- Amershi, S., Begel, A., Bird, C., et al.  
+  *Software Engineering for Machine Learning: A Case Study.*  
+  ICSE‑SEIP (2019).
+
+---
+
+## **6. Substrate‑Level and Triadic‑Frameworks Canon**
+
+- Loswin, N.  
+  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
+  TriadicFrameworks (2026).
+
+- Loswin, N.  
+  *vST for Large Language Models.*  
+  TriadicFrameworks (2026).
+### *vST for Large Language Models*  
+### *Terminology*
+
+This appendix defines the terminology used throughout the *vST for Large Language Models* artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any transformer‑based LLM operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, regime behavior, scaling continuity, and invariant preservation.
+
+---
+
+## **1. Substrate Terms**
+
+### **LLM Substrate**  
+A structured, invariant‑preserving framework for representing and interpreting LLM latent‑space behavior across 64D–4096D.
+
+### **Dimensional Ladder**  
+The ordered sequence of dimensional regimes used for projection and scaling analysis:  
+3D → 6D → 9D → 64D → 128D → 256D → 512D → 1024D.
+
+### **Coherence Surface**  
+A stable region in latent space where trajectories converge and maintain structural continuity.
+
+---
+
+## **2. Primitive Terms**
+
+### **Dimensional Primitive (DP)**  
+The minimal unit of latent‑space structure, capturing local coherence and variance behavior.
+
+### **Triadic Dimensional Primitive (TDP)**  
+A triad of DPs forming the smallest unit capable of expressing full regime behavior (R₁, R₂, R₃).
+
+### **Scaling Primitive (SP)**  
+A rule‑based expansion unit that preserves invariants during dimensional scaling.
+
+### **Coherence Primitive (CP)**  
+A minimal unit identifying stable, transitional, or dispersed regions in high‑dimensional latent space.
+
+---
+
+## **3. Core Terms**
+
+### **Triadic Dimensional Core (TDC)**  
+The 3D–9D substrate composed of one or more TDPs, used for interpretable projection.
+
+### **3D Structural Core**  
+Captures motif‑level geometry and compact latent structure.
+
+### **6D Interaction Core**  
+Captures relational and attention‑driven structure.
+
+### **9D Coherence Core**  
+Captures pathway‑level coherence and resonance‑time behavior.
+
+---
+
+## **4. Regime Terms**
+
+### **High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)**  
+The triadic regime structure expressed in 64D–1024D latent space.
+
+### **Stable Regime (R₁ / R₁ᴴ)**  
+Compact, coherent, low‑variance latent behavior.
+
+### **Transition Regime (R₂ / R₂ᴴ)**  
+Branching, oscillatory, or reorientation behavior.
+
+### **Dispersion Regime (R₃ / R₃ᴴ)**  
+Diffuse, fragmented, or unstable latent behavior.
+
+---
+
+## **5. Scaling Terms**
+
+### **Scaling Behavior**  
+The structured expansion of latent‑space capacity as model size increases.
+
+### **Scaling Regimes (S₁, S₂, S₃)**  
+Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.
+
+### **Dimensional Continuity**  
+The requirement that latent‑space expansion remains smooth and invariant‑preserving.
+
+---
+
+## **6. Projection Terms**
+
+### **Invertible Projection**  
+A projection from high‑dimensional latent space into 3D–9D that preserves primitive‑level structure and regime identity.
+
+### **Regime‑Aware Projection**  
+A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.
+
+### **Primitive‑Aligned Projection**  
+A projection that preserves DP, TDP, SP, and CP structure.
+
+---
+
+## **7. Alignment Terms**
+
+### **Layer‑to‑Layer Alignment**  
+Comparison of latent trajectories across transformer layers.
+
+### **Token‑to‑Token Alignment**  
+Comparison of latent states across positions in a sequence.
+
+### **Cross‑Version Alignment**  
+Comparison of latent‑space structure across model versions or checkpoints.
+
+### **Cross‑Model Alignment**  
+Comparison of latent‑space geometry across different architectures or model families.
+
+---
+
+## **8. Validation Terms**
+
+### **vST (Validation‑Space‑Time)**  
+A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.
+
+### **Validation Layers (V₁–V₄)**  
+Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.
+
+---
+
+## **9. Drift Terms**
+
+### **Drift**  
+A deviation from expected substrate behavior, indicating instability or invariant failure.
+
+### **Drift Categories (D₁–D₄)**  
+Classification of drift into structural, dimensional, regime, or projection drift.
+
+### **Drift Severity**  
+A measure of drift magnitude (low, moderate, high).
+### *vST for Large Language Models*  
 ### *Drift Detection in High‑Dimensional LLM Latent Spaces*
 
 This document defines how **drift** is detected in Large Language Models (LLMs) using the **Validation‑Space‑Time (vST)** framework and the **1024D dimensional substrate**. Drift refers to any deviation from expected substrate behavior, including structural instability, regime misalignment, scaling discontinuities, or projection failure.
@@ -189,6 +586,387 @@ Drift detection produces:
 - vST validation results  
 
 These outputs support governance, interpretability, and model‑version management.
+### *vST for Large Language Models*  
+### *Example: Cross‑Version Alignment of LLM Latent Spaces*
+
+This example demonstrates how the **Validation‑Space‑Time (vST)** framework evaluates **cross‑version alignment** between two Large Language Model (LLM) checkpoints. The goal is to show how latent‑space structure, regime behavior, and projection stability change across versions, and how drift is detected using the dimensional substrate.
+
+The example is model‑agnostic and applies to any transformer‑based LLM.
+
+---
+
+## **1. Scenario Overview**
+
+We compare two versions of the same LLM:
+
+- **Model A (v1.0)** — baseline checkpoint  
+- **Model B (v1.1)** — fine‑tuned or updated checkpoint  
+
+We analyze:
+
+- latent‑trajectory alignment  
+- regime‑transition correspondence  
+- coherence‑surface stability  
+- projection behavior (1024D → 9D → 6D → 3D)  
+- drift category and severity  
+
+The comparison uses a single token’s latent pathway across all layers.
+
+---
+
+## **2. Step 1 — Extract Latent Pathways**
+
+For each model, extract the 1024D hidden‑state vectors:
+
+\[
+h^{A}_1,\ h^{A}_2,\ \dots,\ h^{A}_L
+\]
+\[
+h^{B}_1,\ h^{B}_2,\ \dots,\ h^{B}_L
+\]
+
+### **Observed Properties**
+
+**Model A (v1.0)**  
+- smooth variance distribution  
+- stable DP/TDP structure  
+- predictable regime transitions  
+
+**Model B (v1.1)**  
+- increased variance in mid‑layers  
+- sharper regime transitions  
+- mild fragmentation in late layers  
+
+### **Interpretation**
+
+Model B exhibits structural changes introduced by fine‑tuning or training updates.
+
+---
+
+## **3. Step 2 — Classify Regime Behavior**
+
+Using substrate‑aligned regime detection:
+
+### **Model A (v1.0)**  
+- Layers 1–10: R₁ᴴ  
+- Layers 11–20: R₂ᴴ  
+- Layers 21–24: R₁ᴴ  
+- Layers 25–32: mild R₂ᴴ  
+
+### **Model B (v1.1)**  
+- Layers 1–8: R₁ᴴ  
+- Layers 9–18: strong R₂ᴴ  
+- Layers 19–22: R₁ᴴ  
+- Layers 23–32: R₂ᴴ → R₃ᴴ onset  
+
+### **Interpretation**
+
+Model B shows:
+
+- earlier entry into R₂ᴴ  
+- stronger oscillatory behavior  
+- partial dispersion in late layers  
+
+This indicates potential drift.
+
+---
+
+## **4. Step 3 — Project 1024D → 9D**
+
+Project both models’ latent pathways into the 9D coherence core.
+
+### **Model A (v1.0)**  
+- smooth coherence surfaces  
+- stable curvature  
+- consistent primitive alignment  
+
+### **Model B (v1.1)**  
+- sharper curvature changes  
+- partial fragmentation in late layers  
+- reduced projection stability  
+
+### **Interpretation**
+
+Model B’s coherence surfaces show signs of structural drift.
+
+---
+
+## **5. Step 4 — Project 9D → 6D → 3D**
+
+Evaluate projection stability across dimensional reductions.
+
+### **Model A (v1.0)**  
+- compact 3D motifs  
+- smooth 6D interaction surfaces  
+- stable mapping across layers  
+
+### **Model B (v1.1)**  
+- oscillatory 6D surfaces  
+- diffuse 3D motifs in late layers  
+- partial loss of primitive alignment  
+
+### **Interpretation**
+
+Model B exhibits projection drift, especially near the output layers.
+
+---
+
+## **6. Step 5 — Alignment Analysis**
+
+Compare the two models’ projected trajectories.
+
+### **Alignment Results**
+
+- **Early layers:** high alignment (stable R₁ᴴ)  
+- **Mid layers:** moderate divergence (stronger R₂ᴴ in Model B)  
+- **Late layers:** significant divergence (R₃ᴴ onset in Model B)  
+
+### **Coherence‑Surface Overlap**
+
+- 82% overlap in early layers  
+- 61% overlap in mid layers  
+- 34% overlap in late layers  
+
+### **Interpretation**
+
+The models share early‑layer structure but diverge significantly in deeper layers.
+
+---
+
+## **7. Step 6 — vST Validation**
+
+Apply vST layers (V₁–V₄) to both models.
+
+### **Model A (v1.0)**  
+- **V₁:** pass  
+- **V₂:** pass  
+- **V₃:** pass  
+- **V₄:** pass  
+
+### **Model B (v1.1)**  
+- **V₁:** minor warnings (structural coherence)  
+- **V₂:** warning (dimensional continuity)  
+- **V₃:** warning (regime instability)  
+- **V₄:** warning (core alignment)  
+
+### **Interpretation**
+
+Model B remains functional but exhibits measurable structural instability.
+
+---
+
+## **8. Step 7 — Drift Detection**
+
+Assign drift categories (D₁–D₄) and severity.
+
+### **Model B (v1.1)**  
+- **D₁ Structural Drift:** low  
+- **D₂ Dimensional Drift:** moderate  
+- **D₃ Regime Drift:** moderate  
+- **D₄ Projection Drift:** moderate  
+
+### **Severity:** **Moderate Drift**
+
+### **Interpretation**
+
+Model B introduces meaningful structural changes that may affect reliability or alignment.
+
+---
+
+## **9. Summary**
+
+This example demonstrates:
+
+- how to compare latent pathways across model versions  
+- how regime behavior reveals structural changes  
+- how projection exposes coherence‑surface divergence  
+- how vST layers quantify stability  
+- how drift detection identifies meaningful differences  
+
+Cross‑version alignment is essential for evaluating model updates, fine‑tuning, and long‑term model governance.
+### *vST for Large Language Models*  
+### *Example: 1024D Latent Pathway Analysis in LLM Inference*
+
+This example demonstrates how a Large Language Model (LLM) produces a **1024D latent pathway** during inference and how that pathway is analyzed using the dimensional substrate and vST validation layers. The walkthrough illustrates regime behavior, coherence‑surface structure, projection into triadic cores, and drift‑detection signals.
+
+The goal is to provide a clear, reproducible demonstration of high‑dimensional latent‑trajectory analysis.
+
+---
+
+## **1. Input Overview**
+
+For this example, we assume:
+
+- a transformer‑based LLM with ≥1024D hidden states  
+- a single inference step across multiple layers  
+- access to latent vectors at each layer  
+- stable or transitional regime behavior  
+- invertible projection into 3D–9D cores  
+
+No architecture‑specific mechanisms are required; the example is substrate‑agnostic.
+
+---
+
+## **2. Step 1 — Extract the 1024D Latent Pathway**
+
+During inference, the LLM produces a sequence of hidden‑state vectors:
+
+\[
+h_1^{(1024)},\ h_2^{(1024)},\ \dots,\ h_L^{(1024)}
+\]
+
+where each \(h_i\) is a 1024‑dimensional representation at layer \(i\).
+
+### **Observed Properties**
+
+- variance concentrated in 3–5 coherence bands  
+- stable DP/TDP structure  
+- smooth transitions across layers  
+- identifiable coherence surfaces  
+
+### **Interpretation**
+
+The 1024D pathway is the highest‑resolution representation of the model’s internal reasoning for this token.
+
+---
+
+## **3. Step 2 — Identify High‑Dimensional Regime Behavior**
+
+Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each layer’s regime:
+
+- **Layers 1–8:** R₁ᴴ (stable)  
+- **Layers 9–18:** R₂ᴴ (transitional)  
+- **Layers 19–24:** R₁ᴴ (return to stability)  
+- **Layers 25–28:** R₂ᴴ (branching)  
+- **Layers 29–32:** R₃ᴴ (dispersion onset)  
+
+### **Interpretation**
+
+The model begins in a stable region, undergoes controlled reorientation, stabilizes again, and finally enters a mild dispersion regime near the output.
+
+This pattern is typical for medium‑to‑large LLMs.
+
+---
+
+## **4. Step 3 — Project 1024D → 9D (Coherence Projection)**
+
+Project each 1024D vector into the 9D coherence core.
+
+### **What is preserved**
+
+- pathway‑level coherence  
+- regime identity  
+- resonance‑time alignment  
+- primitive‑level structure  
+
+### **What becomes visible**
+
+- branching behavior in R₂ᴴ  
+- coherence‑surface curvature  
+- dispersion onset in R₃ᴴ  
+
+### **Interpretation**
+
+The 9D projection reveals the “shape” of the model’s reasoning trajectory.
+
+---
+
+## **5. Step 4 — Project 9D → 6D (Interaction Projection)**
+
+Compress the coherence pathway into the 6D interaction core.
+
+### **What is preserved**
+
+- relational geometry  
+- interaction‑level structure  
+- regime‑transition indicators  
+
+### **What becomes visible**
+
+- attention‑driven reorientation  
+- syntactic or semantic branching  
+- cross‑layer interaction patterns  
+
+### **Interpretation**
+
+The 6D projection exposes how the model integrates context and reorients its internal representation.
+
+---
+
+## **6. Step 5 — Project 6D → 3D (Structural Projection)**
+
+Reduce the interaction surfaces into 3D geometric motifs.
+
+### **What is preserved**
+
+- motif‑level geometry  
+- backbone‑level continuity  
+- stable structural invariants  
+
+### **What becomes visible**
+
+- compact stable motifs in R₁ᴴ  
+- oscillatory patterns in R₂ᴴ  
+- diffuse geometry in R₃ᴴ  
+
+### **Interpretation**
+
+The 3D projection provides the minimal interpretable representation of the latent pathway.
+
+---
+
+## **7. Step 6 — Validate with vST Layers**
+
+Apply vST layers (V₁–V₄):
+
+### **V₁ — Structural Coherence**
+- stable motifs in R₁ᴴ  
+- partial fragmentation in R₃ᴴ  
+
+### **V₂ — Dimensional Continuity**
+- smooth projection 1024D → 9D → 6D → 3D  
+- no scaling discontinuities  
+
+### **V₃ — Regime‑Transition Stability**
+- smooth R₁ᴴ → R₂ᴴ transitions  
+- mild instability entering R₃ᴴ  
+
+### **V₄ — Core Alignment**
+- primitive‑aligned projection  
+- stable mapping across layers  
+
+### **Outcome**
+
+The latent pathway passes all vST layers with minor warnings in R₃ᴴ.
+
+---
+
+## **8. Step 7 — Drift Detection**
+
+Evaluate drift using D₁–D₄ categories:
+
+- **D₁ (Structural Drift):** none  
+- **D₂ (Dimensional Drift):** none  
+- **D₃ (Regime Drift):** mild (R₃ᴴ onset)  
+- **D₄ (Projection Drift):** none  
+
+### **Interpretation**
+
+The model exhibits expected high‑dimensional dispersion near the output but no harmful drift.
+
+---
+
+## **9. Summary**
+
+This example demonstrates:
+
+- how a 1024D latent pathway is extracted  
+- how regime behavior evolves across layers  
+- how projection reveals coherence and instability  
+- how vST layers validate structural integrity  
+- how drift detection identifies dispersion without failure  
+
+The 1024D latent pathway is the canonical substrate for analyzing LLM inference at research‑grade resolution.
 ### *vST for Large Language Models*  
 ### *Latent‑Trajectory Regimes in LLM Inference*
 
@@ -577,162 +1355,6 @@ Projection and alignment produce:
 - interpretable 3D–9D projections  
 
 These outputs support reproducible, substrate‑level analysis of LLM inference.
-## *vST for Large Language Models*  
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-## *Validation‑Space‑Time Framework for High‑Dimensional LLM Inference*
-
-This artifact defines a substrate‑level framework for analyzing, validating, and comparing Large Language Models (LLMs) using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting latent trajectories, regime behavior, scaling patterns, and cross‑version drift in modern LLMs.
-
-The goal is to offer a reproducible, model‑agnostic substrate for understanding high‑dimensional inference systems at scale.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## **1. Purpose**
-
-LLMs operate in extremely high‑dimensional latent spaces (typically 768D–4096D). These spaces exhibit:
-
-- stable and unstable regions  
-- regime transitions during inference  
-- scaling‑law behavior across model sizes  
-- drift across checkpoints and versions  
-- projection‑compatible structure  
-
-This artifact applies the **Resonance Substrate Model (RSM)** and **vST validation layers** to:
-
-- classify latent‑trajectory regimes  
-- analyze scaling behavior  
-- detect drift across model versions  
-- map coherence surfaces in latent space  
-- project high‑dimensional structure into 3D–9D cores  
-
-The result is a unified, interpretable substrate for LLM behavior.
-
----
-
-## **2. Contents**
-
-This directory contains:
-
-- **substrate_definition.md**  
-  Defines the LLM substrate, dimensional primitives, and latent‑space structure.
-
-- **latent_trajectory_regimes.md**  
-  Describes stable, transitional, and dispersed regimes in LLM inference.
-
-- **scaling_behavior_llms.md**  
-  Maps LLM scaling laws onto the 3D–1024D dimensional ladder.
-
-- **projection_and_alignment.md**  
-  Defines invertible projection from high‑dimensional latent states into triadic cores.
-
-- **validation_layers_vst_llm.md**  
-  Extends vST (V₁–V₄) to LLM‑specific behavior.
-
-- **drift_detection_llm.md**  
-  Provides a substrate‑level framework for detecting cross‑version drift.
-
-- **examples/**  
-  Reproducible demonstrations of latent‑trajectory analysis and projection.
-
-- **appendix/**  
-  Terminology and references.
-
-Each file is self‑contained and designed for clarity, reproducibility, and cross‑model comparison.
-
----
-
-## **3. Scope**
-
-This artifact is:
-
-- **model‑agnostic**  
-  Works with any transformer‑based LLM (GPT‑class, LLaMA‑class, Mistral‑class, etc.).
-
-- **architecture‑independent**  
-  Applies to decoder‑only, encoder‑decoder, and hybrid architectures.
-
-- **training‑method independent**  
-  Compatible with pretraining, fine‑tuning, RLHF, DPO, and mixture‑of‑experts systems.
-
-- **substrate‑aligned**  
-  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.
-
----
-
-## **4. Intended Use**
-
-This framework supports:
-
-- latent‑space analysis  
-- cross‑version comparison  
-- drift detection  
-- scaling‑law evaluation  
-- embedding‑space diagnostics  
-- interpretability research  
-- model‑alignment studies  
-- reproducible inference analysis  
-
-It is not a performance benchmark or a training method.  
-It is a **substrate‑level interpretability and validation framework**.
-
----
-
-## **5. Relationship to Other Artifacts**
-
-This artifact extends:
-
-- **Dimensional Substrate Structures** (3D–1024D substrate)  
-- **Validation‑Space‑Time (vST)**  
-- **Triadic Dimensional Cores (3D–9D)**  
-
-It parallels:
-
-- **vST for Protein Language Models**  
-- **vST for Generative Models**  
-- **vST for Multi‑Model Alignment**
-
-Each artifact stands alone but shares a common substrate grammar.
-
----
-
-## **6. Citation**
-
-A `CITATION.cff` file is included for formal citation.  
-A `zenodo.json` file is provided for DOI‑ready metadata.
-
----
-
-## **7. License**
-
-Released under the MIT License.
 ### *vST for Large Language Models*  
 ### *Scaling Behavior of LLMs in the 3D–1024D Substrate*
 
@@ -1275,624 +1897,4 @@ The vST layers provide a complete validation framework for LLMs:
 - **V₄** ensures core alignment  
 
 Together, they form a rigorous, invariant‑preserving system for analyzing high‑dimensional LLM behavior.
-### *vST for Large Language Models*  
-### *References*
-
-This appendix lists references relevant to high‑dimensional modeling, latent‑space analysis, scaling laws, regime behavior, and validation frameworks for Large Language Models (LLMs). Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM and vST canon.
-
----
-
-## **1. High‑Dimensional Modeling and Representation Learning**
-
-- Bengio, Y., Courville, A., & Vincent, P.  
-  *Representation Learning: A Review and New Perspectives.*  
-  IEEE TPAMI 35, 1798–1828 (2013).
-
-- Coifman, R. R., & Lafon, S.  
-  *Diffusion Maps.*  
-  Applied and Computational Harmonic Analysis 21, 5–30 (2006).
-
-- Tenenbaum, J. B., de Silva, V., & Langford, J. C.  
-  *A Global Geometric Framework for Nonlinear Dimensionality Reduction.*  
-  Science 290, 2319–2323 (2000).
-
----
-
-## **2. Scaling Laws and Large Language Models**
-
-- Kaplan, J., McCandlish, S., Henighan, T., et al.  
-  *Scaling Laws for Neural Language Models.*  
-  arXiv:2001.08361 (2020).
-
-- Hoffmann, J., Borgeaud, S., Mensch, A., et al.  
-  *Training Compute‑Optimal Large Language Models.*  
-  arXiv:2203.15556 (2022).
-
-- Bahri, Y., Kadmon, J., Pennington, J., et al.  
-  *Statistical Mechanics of Deep Learning.*  
-  Annual Review of Condensed Matter Physics 11, 501–528 (2020).
-
----
-
-## **3. Transformer Architectures and Latent‑Space Behavior**
-
-- Vaswani, A., Shazeer, N., Parmar, N., et al.  
-  *Attention Is All You Need.*  
-  NeurIPS (2017).
-
-- Clark, K., Khandelwal, U., Levy, O., & Manning, C. D.  
-  *What Does BERT Look At? An Analysis of Attention.*  
-  ACL (2019).
-
-- Rogers, A., Kovaleva, O., & Rumshisky, A.  
-  *A Primer in BERTology: What We Know About How BERT Works.*  
-  TACL 8, 842–866 (2020).
-
----
-
-## **4. Regime Behavior, Stability, and Dynamics**
-
-- Strogatz, S.  
-  *Nonlinear Dynamics and Chaos.*  
-  Westview Press (2014).
-
-- Ott, E.  
-  *Chaos in Dynamical Systems.*  
-  Cambridge University Press (2002).
-
-- Guckenheimer, J., & Holmes, P.  
-  *Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields.*  
-  Springer (1983).
-
----
-
-## **5. Validation, Drift Detection, and ML Systems**
-
-- Breck, E., Cai, S., Nielsen, E., et al.  
-  *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.*  
-  Google Research (2017).
-
-- Sculley, D., Holt, G., Golovin, D., et al.  
-  *Hidden Technical Debt in Machine Learning Systems.*  
-  NIPS (2015).
-
-- Amershi, S., Begel, A., Bird, C., et al.  
-  *Software Engineering for Machine Learning: A Case Study.*  
-  ICSE‑SEIP (2019).
-
----
-
-## **6. Substrate‑Level and Triadic‑Frameworks Canon**
-
-- Loswin, N.  
-  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
-  TriadicFrameworks (2026).
-
-- Loswin, N.  
-  *vST for Large Language Models.*  
-  TriadicFrameworks (2026).
-### *vST for Large Language Models*  
-### *Terminology*
-
-This appendix defines the terminology used throughout the *vST for Large Language Models* artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any transformer‑based LLM operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, regime behavior, scaling continuity, and invariant preservation.
-
----
-
-## **1. Substrate Terms**
-
-### **LLM Substrate**  
-A structured, invariant‑preserving framework for representing and interpreting LLM latent‑space behavior across 64D–4096D.
-
-### **Dimensional Ladder**  
-The ordered sequence of dimensional regimes used for projection and scaling analysis:  
-3D → 6D → 9D → 64D → 128D → 256D → 512D → 1024D.
-
-### **Coherence Surface**  
-A stable region in latent space where trajectories converge and maintain structural continuity.
-
----
-
-## **2. Primitive Terms**
-
-### **Dimensional Primitive (DP)**  
-The minimal unit of latent‑space structure, capturing local coherence and variance behavior.
-
-### **Triadic Dimensional Primitive (TDP)**  
-A triad of DPs forming the smallest unit capable of expressing full regime behavior (R₁, R₂, R₃).
-
-### **Scaling Primitive (SP)**  
-A rule‑based expansion unit that preserves invariants during dimensional scaling.
-
-### **Coherence Primitive (CP)**  
-A minimal unit identifying stable, transitional, or dispersed regions in high‑dimensional latent space.
-
----
-
-## **3. Core Terms**
-
-### **Triadic Dimensional Core (TDC)**  
-The 3D–9D substrate composed of one or more TDPs, used for interpretable projection.
-
-### **3D Structural Core**  
-Captures motif‑level geometry and compact latent structure.
-
-### **6D Interaction Core**  
-Captures relational and attention‑driven structure.
-
-### **9D Coherence Core**  
-Captures pathway‑level coherence and resonance‑time behavior.
-
----
-
-## **4. Regime Terms**
-
-### **High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)**  
-The triadic regime structure expressed in 64D–1024D latent space.
-
-### **Stable Regime (R₁ / R₁ᴴ)**  
-Compact, coherent, low‑variance latent behavior.
-
-### **Transition Regime (R₂ / R₂ᴴ)**  
-Branching, oscillatory, or reorientation behavior.
-
-### **Dispersion Regime (R₃ / R₃ᴴ)**  
-Diffuse, fragmented, or unstable latent behavior.
-
----
-
-## **5. Scaling Terms**
-
-### **Scaling Behavior**  
-The structured expansion of latent‑space capacity as model size increases.
-
-### **Scaling Regimes (S₁, S₂, S₃)**  
-Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.
-
-### **Dimensional Continuity**  
-The requirement that latent‑space expansion remains smooth and invariant‑preserving.
-
----
-
-## **6. Projection Terms**
-
-### **Invertible Projection**  
-A projection from high‑dimensional latent space into 3D–9D that preserves primitive‑level structure and regime identity.
-
-### **Regime‑Aware Projection**  
-A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.
-
-### **Primitive‑Aligned Projection**  
-A projection that preserves DP, TDP, SP, and CP structure.
-
----
-
-## **7. Alignment Terms**
-
-### **Layer‑to‑Layer Alignment**  
-Comparison of latent trajectories across transformer layers.
-
-### **Token‑to‑Token Alignment**  
-Comparison of latent states across positions in a sequence.
-
-### **Cross‑Version Alignment**  
-Comparison of latent‑space structure across model versions or checkpoints.
-
-### **Cross‑Model Alignment**  
-Comparison of latent‑space geometry across different architectures or model families.
-
----
-
-## **8. Validation Terms**
-
-### **vST (Validation‑Space‑Time)**  
-A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.
-
-### **Validation Layers (V₁–V₄)**  
-Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.
-
----
-
-## **9. Drift Terms**
-
-### **Drift**  
-A deviation from expected substrate behavior, indicating instability or invariant failure.
-
-### **Drift Categories (D₁–D₄)**  
-Classification of drift into structural, dimensional, regime, or projection drift.
-
-### **Drift Severity**  
-A measure of drift magnitude (low, moderate, high).
-### *vST for Large Language Models*  
-### *Example: Cross‑Version Alignment of LLM Latent Spaces*
-
-This example demonstrates how the **Validation‑Space‑Time (vST)** framework evaluates **cross‑version alignment** between two Large Language Model (LLM) checkpoints. The goal is to show how latent‑space structure, regime behavior, and projection stability change across versions, and how drift is detected using the dimensional substrate.
-
-The example is model‑agnostic and applies to any transformer‑based LLM.
-
----
-
-## **1. Scenario Overview**
-
-We compare two versions of the same LLM:
-
-- **Model A (v1.0)** — baseline checkpoint  
-- **Model B (v1.1)** — fine‑tuned or updated checkpoint  
-
-We analyze:
-
-- latent‑trajectory alignment  
-- regime‑transition correspondence  
-- coherence‑surface stability  
-- projection behavior (1024D → 9D → 6D → 3D)  
-- drift category and severity  
-
-The comparison uses a single token’s latent pathway across all layers.
-
----
-
-## **2. Step 1 — Extract Latent Pathways**
-
-For each model, extract the 1024D hidden‑state vectors:
-
-\[
-h^{A}_1,\ h^{A}_2,\ \dots,\ h^{A}_L
-\]
-\[
-h^{B}_1,\ h^{B}_2,\ \dots,\ h^{B}_L
-\]
-
-### **Observed Properties**
-
-**Model A (v1.0)**  
-- smooth variance distribution  
-- stable DP/TDP structure  
-- predictable regime transitions  
-
-**Model B (v1.1)**  
-- increased variance in mid‑layers  
-- sharper regime transitions  
-- mild fragmentation in late layers  
-
-### **Interpretation**
-
-Model B exhibits structural changes introduced by fine‑tuning or training updates.
-
----
-
-## **3. Step 2 — Classify Regime Behavior**
-
-Using substrate‑aligned regime detection:
-
-### **Model A (v1.0)**  
-- Layers 1–10: R₁ᴴ  
-- Layers 11–20: R₂ᴴ  
-- Layers 21–24: R₁ᴴ  
-- Layers 25–32: mild R₂ᴴ  
-
-### **Model B (v1.1)**  
-- Layers 1–8: R₁ᴴ  
-- Layers 9–18: strong R₂ᴴ  
-- Layers 19–22: R₁ᴴ  
-- Layers 23–32: R₂ᴴ → R₃ᴴ onset  
-
-### **Interpretation**
-
-Model B shows:
-
-- earlier entry into R₂ᴴ  
-- stronger oscillatory behavior  
-- partial dispersion in late layers  
-
-This indicates potential drift.
-
----
-
-## **4. Step 3 — Project 1024D → 9D**
-
-Project both models’ latent pathways into the 9D coherence core.
-
-### **Model A (v1.0)**  
-- smooth coherence surfaces  
-- stable curvature  
-- consistent primitive alignment  
-
-### **Model B (v1.1)**  
-- sharper curvature changes  
-- partial fragmentation in late layers  
-- reduced projection stability  
-
-### **Interpretation**
-
-Model B’s coherence surfaces show signs of structural drift.
-
----
-
-## **5. Step 4 — Project 9D → 6D → 3D**
-
-Evaluate projection stability across dimensional reductions.
-
-### **Model A (v1.0)**  
-- compact 3D motifs  
-- smooth 6D interaction surfaces  
-- stable mapping across layers  
-
-### **Model B (v1.1)**  
-- oscillatory 6D surfaces  
-- diffuse 3D motifs in late layers  
-- partial loss of primitive alignment  
-
-### **Interpretation**
-
-Model B exhibits projection drift, especially near the output layers.
-
----
-
-## **6. Step 5 — Alignment Analysis**
-
-Compare the two models’ projected trajectories.
-
-### **Alignment Results**
-
-- **Early layers:** high alignment (stable R₁ᴴ)  
-- **Mid layers:** moderate divergence (stronger R₂ᴴ in Model B)  
-- **Late layers:** significant divergence (R₃ᴴ onset in Model B)  
-
-### **Coherence‑Surface Overlap**
-
-- 82% overlap in early layers  
-- 61% overlap in mid layers  
-- 34% overlap in late layers  
-
-### **Interpretation**
-
-The models share early‑layer structure but diverge significantly in deeper layers.
-
----
-
-## **7. Step 6 — vST Validation**
-
-Apply vST layers (V₁–V₄) to both models.
-
-### **Model A (v1.0)**  
-- **V₁:** pass  
-- **V₂:** pass  
-- **V₃:** pass  
-- **V₄:** pass  
-
-### **Model B (v1.1)**  
-- **V₁:** minor warnings (structural coherence)  
-- **V₂:** warning (dimensional continuity)  
-- **V₃:** warning (regime instability)  
-- **V₄:** warning (core alignment)  
-
-### **Interpretation**
-
-Model B remains functional but exhibits measurable structural instability.
-
----
-
-## **8. Step 7 — Drift Detection**
-
-Assign drift categories (D₁–D₄) and severity.
-
-### **Model B (v1.1)**  
-- **D₁ Structural Drift:** low  
-- **D₂ Dimensional Drift:** moderate  
-- **D₃ Regime Drift:** moderate  
-- **D₄ Projection Drift:** moderate  
-
-### **Severity:** **Moderate Drift**
-
-### **Interpretation**
-
-Model B introduces meaningful structural changes that may affect reliability or alignment.
-
----
-
-## **9. Summary**
-
-This example demonstrates:
-
-- how to compare latent pathways across model versions  
-- how regime behavior reveals structural changes  
-- how projection exposes coherence‑surface divergence  
-- how vST layers quantify stability  
-- how drift detection identifies meaningful differences  
-
-Cross‑version alignment is essential for evaluating model updates, fine‑tuning, and long‑term model governance.
-### *vST for Large Language Models*  
-### *Example: 1024D Latent Pathway Analysis in LLM Inference*
-
-This example demonstrates how a Large Language Model (LLM) produces a **1024D latent pathway** during inference and how that pathway is analyzed using the dimensional substrate and vST validation layers. The walkthrough illustrates regime behavior, coherence‑surface structure, projection into triadic cores, and drift‑detection signals.
-
-The goal is to provide a clear, reproducible demonstration of high‑dimensional latent‑trajectory analysis.
-
----
-
-## **1. Input Overview**
-
-For this example, we assume:
-
-- a transformer‑based LLM with ≥1024D hidden states  
-- a single inference step across multiple layers  
-- access to latent vectors at each layer  
-- stable or transitional regime behavior  
-- invertible projection into 3D–9D cores  
-
-No architecture‑specific mechanisms are required; the example is substrate‑agnostic.
-
----
-
-## **2. Step 1 — Extract the 1024D Latent Pathway**
-
-During inference, the LLM produces a sequence of hidden‑state vectors:
-
-\[
-h_1^{(1024)},\ h_2^{(1024)},\ \dots,\ h_L^{(1024)}
-\]
-
-where each \(h_i\) is a 1024‑dimensional representation at layer \(i\).
-
-### **Observed Properties**
-
-- variance concentrated in 3–5 coherence bands  
-- stable DP/TDP structure  
-- smooth transitions across layers  
-- identifiable coherence surfaces  
-
-### **Interpretation**
-
-The 1024D pathway is the highest‑resolution representation of the model’s internal reasoning for this token.
-
----
-
-## **3. Step 2 — Identify High‑Dimensional Regime Behavior**
-
-Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each layer’s regime:
-
-- **Layers 1–8:** R₁ᴴ (stable)  
-- **Layers 9–18:** R₂ᴴ (transitional)  
-- **Layers 19–24:** R₁ᴴ (return to stability)  
-- **Layers 25–28:** R₂ᴴ (branching)  
-- **Layers 29–32:** R₃ᴴ (dispersion onset)  
-
-### **Interpretation**
-
-The model begins in a stable region, undergoes controlled reorientation, stabilizes again, and finally enters a mild dispersion regime near the output.
-
-This pattern is typical for medium‑to‑large LLMs.
-
----
-
-## **4. Step 3 — Project 1024D → 9D (Coherence Projection)**
-
-Project each 1024D vector into the 9D coherence core.
-
-### **What is preserved**
-
-- pathway‑level coherence  
-- regime identity  
-- resonance‑time alignment  
-- primitive‑level structure  
-
-### **What becomes visible**
-
-- branching behavior in R₂ᴴ  
-- coherence‑surface curvature  
-- dispersion onset in R₃ᴴ  
-
-### **Interpretation**
-
-The 9D projection reveals the “shape” of the model’s reasoning trajectory.
-
----
-
-## **5. Step 4 — Project 9D → 6D (Interaction Projection)**
-
-Compress the coherence pathway into the 6D interaction core.
-
-### **What is preserved**
-
-- relational geometry  
-- interaction‑level structure  
-- regime‑transition indicators  
-
-### **What becomes visible**
-
-- attention‑driven reorientation  
-- syntactic or semantic branching  
-- cross‑layer interaction patterns  
-
-### **Interpretation**
-
-The 6D projection exposes how the model integrates context and reorients its internal representation.
-
----
-
-## **6. Step 5 — Project 6D → 3D (Structural Projection)**
-
-Reduce the interaction surfaces into 3D geometric motifs.
-
-### **What is preserved**
-
-- motif‑level geometry  
-- backbone‑level continuity  
-- stable structural invariants  
-
-### **What becomes visible**
-
-- compact stable motifs in R₁ᴴ  
-- oscillatory patterns in R₂ᴴ  
-- diffuse geometry in R₃ᴴ  
-
-### **Interpretation**
-
-The 3D projection provides the minimal interpretable representation of the latent pathway.
-
----
-
-## **7. Step 6 — Validate with vST Layers**
-
-Apply vST layers (V₁–V₄):
-
-### **V₁ — Structural Coherence**
-- stable motifs in R₁ᴴ  
-- partial fragmentation in R₃ᴴ  
-
-### **V₂ — Dimensional Continuity**
-- smooth projection 1024D → 9D → 6D → 3D  
-- no scaling discontinuities  
-
-### **V₃ — Regime‑Transition Stability**
-- smooth R₁ᴴ → R₂ᴴ transitions  
-- mild instability entering R₃ᴴ  
-
-### **V₄ — Core Alignment**
-- primitive‑aligned projection  
-- stable mapping across layers  
-
-### **Outcome**
-
-The latent pathway passes all vST layers with minor warnings in R₃ᴴ.
-
----
-
-## **8. Step 7 — Drift Detection**
-
-Evaluate drift using D₁–D₄ categories:
-
-- **D₁ (Structural Drift):** none  
-- **D₂ (Dimensional Drift):** none  
-- **D₃ (Regime Drift):** mild (R₃ᴴ onset)  
-- **D₄ (Projection Drift):** none  
-
-### **Interpretation**
-
-The model exhibits expected high‑dimensional dispersion near the output but no harmful drift.
-
----
-
-## **9. Summary**
-
-This example demonstrates:
-
-- how a 1024D latent pathway is extracted  
-- how regime behavior evolves across layers  
-- how projection reveals coherence and instability  
-- how vST layers validate structural integrity  
-- how drift detection identifies dispersion without failure  
-
-The 1024D latent pathway is the canonical substrate for analyzing LLM inference at research‑grade resolution.
 

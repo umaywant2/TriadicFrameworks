@@ -1,145 +1,9 @@
 ecoechosystem 
-# **EcoEchoSystem — Overview**  
-*A substrate‑aligned, cross‑domain simulation environment*
-
-The **EcoEchoSystem** is a unified simulation framework built on **Resonance‑Time Theory (RTT)** and **Validated Spacetime (vST)**. It provides a coherent substrate where multiple scientific domains can interact without contradiction, using shared invariants, shared regime mechanics, and a shared triadic structure.
-
-This environment is designed for **exploration**, **education**, **research**, and **open‑science collaboration**. It functions like a scientific “SimCity/Civilization engine,” where domains unlock new capabilities as the substrate becomes more complete.
-
-The EcoEchoSystem is the first attempt to model **structure**, **activation**, and **relational time** across physics, psychology, biology, economics, governance, and AI within a single, extensible simulation substrate.
-
----
-
-## **Why the EcoEchoSystem Exists**
-Modern scientific fields evolved in isolation. They use incompatible assumptions, incompatible metaphors, and incompatible models of time, identity, and causality. This fragmentation makes cross‑domain reasoning nearly impossible.
-
-RTT/vST provides the missing substrate.
-
-The EcoEchoSystem demonstrates what becomes possible when:
-
-- domains share a common grammar  
-- regimes are explicit and modeled  
-- transitions are first‑class objects  
-- time is relational, not absolute  
-- activation is dimensional, not metaphorical  
-- structure is triadic, not siloed  
-
-This environment allows researchers and creators to explore **cross‑domain coherence** in a way that traditional tools cannot.
-
----
-
-## **Core Principles**
-The EcoEchoSystem is built on five foundational principles:
-
-### **1. Substrate First**
-All modules operate on the RTT/vST substrate:
-- Structure (S)  
-- Activation (E)  
-- Relational Time (R)  
-- Regime boundaries  
-- Regime transitions  
-- Dimensional invariants  
-
-### **2. Cross‑Domain Coherence**
-Domains must:
-- share the same substrate  
-- obey the same invariants  
-- interact through regime mechanics  
-- remain canon‑consistent  
-
-### **3. Multi‑Scale Simulation**
-The system supports:
-- individual agents  
-- groups  
-- cities  
-- civilizations  
-- planetary systems  
-
-All scales use the same substrate rules.
-
-### **4. Forkable and Extensible**
-The EcoEchoSystem is designed for:
-- open‑source development  
-- community contributions  
-- domain plug‑ins  
-- scenario templates  
-- modding and experimentation  
-
-### **5. Playful Scientific Exploration**
-Inspired by simulation games, the system includes:
-- tech trees  
-- unlockable mechanics  
-- regime overlays  
-- activation heatmaps  
-- scenario builders  
-
-Science becomes interactive, visual, and exploratory.
-
----
-
-## **Architecture Summary**
-The EcoEchoSystem is organized into six layers:
-
-### **1. Substrate Layer (RTT/vST Core)**
-Defines the universal rules of the simulation.
-
-### **2. Domain Modules**
-Independent scientific domains implemented as substrate‑aligned plug‑ins.
-
-### **3. Cross‑Domain Interaction Layer**
-Handles regime coupling, multi‑scale simulation, and cross‑domain coherence.
-
-### **4. Simulation Templates**
-Forkable environments (city, civilization, cognitive agents, ecosystems).
-
-### **5. User Interaction Layer**
-Visualization tools, overlays, controls, and scenario builders.
-
-### **6. Community Layer**
-Shared templates, research mode, and education mode.
-
----
-
-## **Tech Tree Integration**
-The EcoEchoSystem includes a substrate‑aligned **tech tree**, similar to Civilization, where:
-
-- substrate unlocks enable domain unlocks  
-- domain unlocks enable cross‑domain mechanics  
-- cross‑domain unlocks enable civilization‑level capabilities  
-
-This provides a clear, visual map of scientific dependencies and developmental arcs.
-
-See:  
-`/docs/ecoechosystem/tech_tree/`
-
----
-
-## **Intended Uses**
-The EcoEchoSystem supports:
-
-- scientific exploration  
-- educational demonstrations  
-- cross‑domain research  
-- simulation‑based reasoning  
-- AI/agent development  
-- governance modeling  
-- psychological regime modeling  
-- physics and cosmology experiments  
-- open‑science collaboration  
-
-It is both a **sandbox** and a **framework**.
-
----
-
-## **Status**
-This project is under active development.  
-Modules and templates will be filled in iteratively as the substrate stabilizes.
-<img width="682" height="682" alt="rtt_ecoechosystem_module" src="https://github.com/user-attachments/assets/7540b0ad-5dba-400a-baca-2f496fca0bd0" />
-
-# EcoEchoSystem
+<img width="1194" height="672" alt="Ecoechosystem_" src="https://github.com/user-attachments/assets/0be0ae0e-fd20-4fb8-9746-b5f42595dcdf" />
 
 - [`eco_module.json`](eco_module.json) — Agentic module schema role assignments
 
+# EcoEchoSystem
 ## *A Cross‑Domain, Substrate‑Aligned Simulation Environment*
 
 The **EcoEchoSystem** is a multi‑layer, forkable simulation substrate built on **Resonance‑Time Theory (RTT)** and **Validated Spacetime (vST)**. It provides a unified environment where physics, psychology, economics, governance, AI, biology, and cognition operate on a shared **triadic substrate**.
@@ -284,6 +148,288 @@ Open‑source, aligned with the TriadicFrameworks philosophy of accessible, tran
 </div>
 
 <img src="https://img.shields.io/badge/🌍Simulation%20Core-🔄Cross%20Domain%20Regimes%20Active-4c8eda?style=for-the-badge" alt="🌍Simulation Core | 🔄Cross Domain Regimes Active"/>
+<img width="682" height="682" alt="rtt_ecoechosystem_module" src="https://github.com/user-attachments/assets/7540b0ad-5dba-400a-baca-2f496fca0bd0" />
+
+# **EcoEchoSystem — Overview**  
+*A substrate‑aligned, cross‑domain simulation environment*
+
+The **EcoEchoSystem** is a unified simulation framework built on **Resonance‑Time Theory (RTT)** and **Validated Spacetime (vST)**. It provides a coherent substrate where multiple scientific domains can interact without contradiction, using shared invariants, shared regime mechanics, and a shared triadic structure.
+
+This environment is designed for **exploration**, **education**, **research**, and **open‑science collaboration**. It functions like a scientific “SimCity/Civilization engine,” where domains unlock new capabilities as the substrate becomes more complete.
+
+The EcoEchoSystem is the first attempt to model **structure**, **activation**, and **relational time** across physics, psychology, biology, economics, governance, and AI within a single, extensible simulation substrate.
+
+---
+
+## **Why the EcoEchoSystem Exists**
+Modern scientific fields evolved in isolation. They use incompatible assumptions, incompatible metaphors, and incompatible models of time, identity, and causality. This fragmentation makes cross‑domain reasoning nearly impossible.
+
+RTT/vST provides the missing substrate.
+
+The EcoEchoSystem demonstrates what becomes possible when:
+
+- domains share a common grammar  
+- regimes are explicit and modeled  
+- transitions are first‑class objects  
+- time is relational, not absolute  
+- activation is dimensional, not metaphorical  
+- structure is triadic, not siloed  
+
+This environment allows researchers and creators to explore **cross‑domain coherence** in a way that traditional tools cannot.
+
+---
+
+## **Core Principles**
+The EcoEchoSystem is built on five foundational principles:
+
+### **1. Substrate First**
+All modules operate on the RTT/vST substrate:
+- Structure (S)  
+- Activation (E)  
+- Relational Time (R)  
+- Regime boundaries  
+- Regime transitions  
+- Dimensional invariants  
+
+### **2. Cross‑Domain Coherence**
+Domains must:
+- share the same substrate  
+- obey the same invariants  
+- interact through regime mechanics  
+- remain canon‑consistent  
+
+### **3. Multi‑Scale Simulation**
+The system supports:
+- individual agents  
+- groups  
+- cities  
+- civilizations  
+- planetary systems  
+
+All scales use the same substrate rules.
+
+### **4. Forkable and Extensible**
+The EcoEchoSystem is designed for:
+- open‑source development  
+- community contributions  
+- domain plug‑ins  
+- scenario templates  
+- modding and experimentation  
+
+### **5. Playful Scientific Exploration**
+Inspired by simulation games, the system includes:
+- tech trees  
+- unlockable mechanics  
+- regime overlays  
+- activation heatmaps  
+- scenario builders  
+
+Science becomes interactive, visual, and exploratory.
+
+---
+
+## **Architecture Summary**
+The EcoEchoSystem is organized into six layers:
+
+### **1. Substrate Layer (RTT/vST Core)**
+Defines the universal rules of the simulation.
+
+### **2. Domain Modules**
+Independent scientific domains implemented as substrate‑aligned plug‑ins.
+
+### **3. Cross‑Domain Interaction Layer**
+Handles regime coupling, multi‑scale simulation, and cross‑domain coherence.
+
+### **4. Simulation Templates**
+Forkable environments (city, civilization, cognitive agents, ecosystems).
+
+### **5. User Interaction Layer**
+Visualization tools, overlays, controls, and scenario builders.
+
+### **6. Community Layer**
+Shared templates, research mode, and education mode.
+
+---
+
+## **Tech Tree Integration**
+The EcoEchoSystem includes a substrate‑aligned **tech tree**, similar to Civilization, where:
+
+- substrate unlocks enable domain unlocks  
+- domain unlocks enable cross‑domain mechanics  
+- cross‑domain unlocks enable civilization‑level capabilities  
+
+This provides a clear, visual map of scientific dependencies and developmental arcs.
+
+See:  
+`/docs/ecoechosystem/tech_tree/`
+
+---
+
+## **Intended Uses**
+The EcoEchoSystem supports:
+
+- scientific exploration  
+- educational demonstrations  
+- cross‑domain research  
+- simulation‑based reasoning  
+- AI/agent development  
+- governance modeling  
+- psychological regime modeling  
+- physics and cosmology experiments  
+- open‑science collaboration  
+
+It is both a **sandbox** and a **framework**.
+
+---
+
+## **Status**
+This project is under active development.  
+Modules and templates will be filled in iteratively as the substrate stabilizes.
+# **EcoEchoSystem Community README**  
+### *A shared space for stewardship, learning, and epistemic humility*
+
+The EcoEchoSystem community exists to support **collaborative exploration of complex systems** without collapsing uncertainty, authority, or meaning.  
+It is a place for inquiry, not consensus — and for stewardship, not ownership.
+
+This community does not optimize outcomes.  
+It **cultivates understanding**.
+
+---
+
+## **Purpose**
+
+This community exists to:
+
+- support shared learning and exploration  
+- preserve epistemic humility in complex modeling  
+- encourage thoughtful contribution and critique  
+- prevent authority capture or narrative dominance  
+- steward the long‑term coherence of the system  
+
+The community answers:
+> *How do we explore together without pretending to know?*
+
+---
+
+## **Community as Substrate Expression (S / E / R)**
+
+### **Structure (S)**
+- shared documentation  
+- open simulation artifacts  
+- transparent governance norms  
+
+---
+
+### **Activation (E)**
+- discussion and critique  
+- collaborative experiments  
+- interpretive disagreement  
+
+---
+
+### **Relational Time (R)**
+- long‑arc stewardship  
+- slow consensus formation  
+- memory of past insights and failures  
+
+Community coherence emerges **over time**, not instantly.
+
+---
+
+## **Who This Community Is For**
+
+This space welcomes:
+- learners exploring systems thinking  
+- researchers testing assumptions  
+- educators building experiential labs  
+- practitioners seeking structural insight  
+
+No credential is required.  
+Curiosity and care are sufficient.
+
+---
+
+## **How to Participate**
+
+Community participation includes:
+- contributing documentation or examples  
+- sharing simulation runs and interpretations  
+- proposing scenario explorations  
+- offering critique grounded in structure  
+
+Participation is **interpretive**, not competitive.
+
+---
+
+## **Norms and Expectations**
+
+This community values:
+- clarity over certainty  
+- questions over answers  
+- structure over ideology  
+- patience over urgency  
+
+We resist:
+- optimization narratives  
+- solutionism  
+- authority without accountability  
+- performative certainty  
+
+Disagreement is expected.  
+Dismissiveness is not.
+
+---
+
+## **Stewardship Model**
+
+EcoEchoSystem is stewarded through:
+- transparent decision processes  
+- documented rationale for changes  
+- slow, deliberate evolution of structure  
+
+No single voice defines the system.
+
+---
+
+## **Learning and Exploration**
+
+The community supports:
+- guided labs and walkthroughs  
+- scenario exploration and comparison  
+- reflective discussion of outcomes  
+
+Learning is **experiential**, not prescriptive.
+
+---
+
+## **Failure Modes**
+
+Communities fail when:
+- certainty replaces curiosity  
+- metrics replace meaning  
+- authority replaces stewardship  
+- speed replaces care  
+
+This community is designed to **resist collapse**.
+
+---
+
+## **Integration Notes**
+
+The community layer:
+- contextualizes all other layers  
+- preserves epistemic humility  
+- supports long‑term coherence  
+- ensures the system remains explorable  
+
+This is the **human feedback loop**.
+
+---
+
+## **Status**
+
+Canonical community framework for EcoEchoSystem.  
+Designed for shared inquiry, stewardship, and long‑arc understanding.
 # **Education Mode**  
 ### *Learning through structured exploration without collapsing complexity*
 
@@ -451,151 +597,6 @@ This module is the **pedagogical conscience** of the community.
 
 Canonical education mode framework for the EcoEchoSystem community.  
 Designed for experiential learning, interpretive depth, and long‑arc understanding.
-# **EcoEchoSystem Community README**  
-### *A shared space for stewardship, learning, and epistemic humility*
-
-The EcoEchoSystem community exists to support **collaborative exploration of complex systems** without collapsing uncertainty, authority, or meaning.  
-It is a place for inquiry, not consensus — and for stewardship, not ownership.
-
-This community does not optimize outcomes.  
-It **cultivates understanding**.
-
----
-
-## **Purpose**
-
-This community exists to:
-
-- support shared learning and exploration  
-- preserve epistemic humility in complex modeling  
-- encourage thoughtful contribution and critique  
-- prevent authority capture or narrative dominance  
-- steward the long‑term coherence of the system  
-
-The community answers:
-> *How do we explore together without pretending to know?*
-
----
-
-## **Community as Substrate Expression (S / E / R)**
-
-### **Structure (S)**
-- shared documentation  
-- open simulation artifacts  
-- transparent governance norms  
-
----
-
-### **Activation (E)**
-- discussion and critique  
-- collaborative experiments  
-- interpretive disagreement  
-
----
-
-### **Relational Time (R)**
-- long‑arc stewardship  
-- slow consensus formation  
-- memory of past insights and failures  
-
-Community coherence emerges **over time**, not instantly.
-
----
-
-## **Who This Community Is For**
-
-This space welcomes:
-- learners exploring systems thinking  
-- researchers testing assumptions  
-- educators building experiential labs  
-- practitioners seeking structural insight  
-
-No credential is required.  
-Curiosity and care are sufficient.
-
----
-
-## **How to Participate**
-
-Community participation includes:
-- contributing documentation or examples  
-- sharing simulation runs and interpretations  
-- proposing scenario explorations  
-- offering critique grounded in structure  
-
-Participation is **interpretive**, not competitive.
-
----
-
-## **Norms and Expectations**
-
-This community values:
-- clarity over certainty  
-- questions over answers  
-- structure over ideology  
-- patience over urgency  
-
-We resist:
-- optimization narratives  
-- solutionism  
-- authority without accountability  
-- performative certainty  
-
-Disagreement is expected.  
-Dismissiveness is not.
-
----
-
-## **Stewardship Model**
-
-EcoEchoSystem is stewarded through:
-- transparent decision processes  
-- documented rationale for changes  
-- slow, deliberate evolution of structure  
-
-No single voice defines the system.
-
----
-
-## **Learning and Exploration**
-
-The community supports:
-- guided labs and walkthroughs  
-- scenario exploration and comparison  
-- reflective discussion of outcomes  
-
-Learning is **experiential**, not prescriptive.
-
----
-
-## **Failure Modes**
-
-Communities fail when:
-- certainty replaces curiosity  
-- metrics replace meaning  
-- authority replaces stewardship  
-- speed replaces care  
-
-This community is designed to **resist collapse**.
-
----
-
-## **Integration Notes**
-
-The community layer:
-- contextualizes all other layers  
-- preserves epistemic humility  
-- supports long‑term coherence  
-- ensures the system remains explorable  
-
-This is the **human feedback loop**.
-
----
-
-## **Status**
-
-Canonical community framework for EcoEchoSystem.  
-Designed for shared inquiry, stewardship, and long‑arc understanding.
 # **Research Mode**  
 ### *A disciplined posture for inquiry, interpretation, and long‑arc understanding*
 
@@ -915,6 +916,166 @@ This module is the **coordination layer of collaboration**.
 
 Canonical shared template framework for the EcoEchoSystem community.  
 Designed for coherence, openness, and long‑arc stewardship.
+# **Cross‑Domain Systems**  
+### *The substrate‑level architecture that synchronizes psychology, biology, physics, economics, governance, and AI across S/E/R*
+
+The EcoEchoSystem is not a collection of isolated domains — it is a **unified substrate** where every domain expresses the same triadic grammar:
+
+- **Structure (S)** — identity, architecture, boundaries  
+- **Activation (E)** — energy, stress, volatility, intensity  
+- **Relational Time (R)** — cycles, development, long‑arc coherence  
+
+Cross‑domain systems define how these dimensions interact **between** domains, enabling:
+
+- regime propagation  
+- stability synchronization  
+- cascading transitions  
+- multi‑scale coherence  
+- emergent civilization‑level behavior  
+
+Cross‑domain coupling is the **connective tissue** of the EcoEchoSystem.
+
+---
+
+# **Purpose**
+Cross‑domain systems exist to:
+
+- unify all scientific domains under a single substrate  
+- define how S/E/R patterns propagate across domains  
+- model cascading transitions and stability cycles  
+- support multi‑scale simulation (individual → institution → ecosystem → civilization)  
+- provide a shared grammar for all domain modules  
+- enable coherent tech‑tree unlocks and cross‑domain interactions  
+
+This directory contains the **global integration layer** of the EcoEchoSystem.
+
+---
+
+# **Core Components**
+
+Each file in this directory defines a different aspect of cross‑domain behavior.
+
+---
+
+## **1. Cross‑Domain Regimes (`regimes.md`)**
+Defines the canonical regime patterns that span multiple domains:
+
+- stability regimes  
+- activation regimes  
+- scarcity regimes  
+- collapse regimes  
+- integrative regimes  
+
+These regimes synchronize behavior across psychology, biology, economics, governance, physics, and AI.
+
+---
+
+## **2. Cross‑Domain Transitions (`transitions.md`)**
+Defines how transitions propagate across domains:
+
+- stress cascades  
+- activation spikes  
+- structural reconfiguration  
+- temporal compression or expansion  
+- collapse → renewal cycles  
+
+This file models how a shift in one domain triggers shifts in others.
+
+---
+
+## **3. Cross‑Domain Interfaces (`interfaces.md`)**
+Defines the direct coupling channels between domains:
+
+- biology ↔ psychology  
+- economics ↔ governance  
+- physics ↔ biology  
+- AI ↔ all domains  
+- psychology ↔ governance  
+
+Interfaces are the **bidirectional links** that allow domains to influence one another.
+
+---
+
+## **4. Cross‑Domain Stability Cycles (`stability_cycles.md`)**
+Defines the repeating patterns that maintain coherence across domains:
+
+- stress → response → recovery cycles  
+- scarcity → adaptation → stabilization cycles  
+- activation → integration cycles  
+
+These cycles are the **R‑dimension rhythms** of the entire substrate.
+
+---
+
+## **5. Cross‑Domain Feedback Loops (`feedback_loops.md`)**
+Defines the feedback architectures that amplify or regulate cross‑domain behavior:
+
+- positive loops (amplification)  
+- negative loops (stabilization)  
+- coupled loops (oscillation)  
+- adaptive loops (learning)  
+- runaway loops (collapse)  
+
+These loops determine whether the system stabilizes, oscillates, or reorganizes.
+
+---
+
+## **6. Cross‑Domain Networks (`networks.md`)**
+Defines the structural connections between domains:
+
+- information networks  
+- resource networks  
+- activation networks  
+- institutional networks  
+- ecological networks  
+
+These networks form the **S‑dimension backbone** of cross‑domain coherence.
+
+---
+
+# **Cross‑Domain S/E/R Synchronization**
+
+Cross‑domain systems ensure that:
+
+### **Structure (S)**  
+- remains coherent across domains  
+- supports multi‑scale identity  
+- prevents fragmentation  
+
+### **Activation (E)**  
+- flows predictably  
+- avoids runaway cascades  
+- supports adaptive transitions  
+
+### **Relational Time (R)**  
+- maintains long‑arc coherence  
+- synchronizes cycles  
+- enables recovery and renewal  
+
+Cross‑domain synchronization is the **unifying principle** of the EcoEchoSystem.
+
+---
+
+# **Directory Structure**
+
+```
+cross_domain/
+  README.md
+  regimes.md
+  transitions.md
+  interfaces.md
+  stability_cycles.md
+  feedback_loops.md
+  networks.md
+```
+
+Each file is substrate‑aligned and interoperable with all domain modules.
+
+---
+
+# **Status**
+This file defines the canonical cross‑domain integration layer for the EcoEchoSystem.  
+Additional cross‑domain modules may be added as the tech tree expands.
 # **Cross‑Domain Mappings**  
 ### *A unified S/E/R translation layer connecting psychology, biology, physics, economics, governance, and AI*
 
@@ -2477,166 +2638,6 @@ From here, the EcoEchoSystem can expand in two directions:
 - **Narrative or educational overlays**  
 
 Both build on the same substrate.
-# **Cross‑Domain Systems**  
-### *The substrate‑level architecture that synchronizes psychology, biology, physics, economics, governance, and AI across S/E/R*
-
-The EcoEchoSystem is not a collection of isolated domains — it is a **unified substrate** where every domain expresses the same triadic grammar:
-
-- **Structure (S)** — identity, architecture, boundaries  
-- **Activation (E)** — energy, stress, volatility, intensity  
-- **Relational Time (R)** — cycles, development, long‑arc coherence  
-
-Cross‑domain systems define how these dimensions interact **between** domains, enabling:
-
-- regime propagation  
-- stability synchronization  
-- cascading transitions  
-- multi‑scale coherence  
-- emergent civilization‑level behavior  
-
-Cross‑domain coupling is the **connective tissue** of the EcoEchoSystem.
-
----
-
-# **Purpose**
-Cross‑domain systems exist to:
-
-- unify all scientific domains under a single substrate  
-- define how S/E/R patterns propagate across domains  
-- model cascading transitions and stability cycles  
-- support multi‑scale simulation (individual → institution → ecosystem → civilization)  
-- provide a shared grammar for all domain modules  
-- enable coherent tech‑tree unlocks and cross‑domain interactions  
-
-This directory contains the **global integration layer** of the EcoEchoSystem.
-
----
-
-# **Core Components**
-
-Each file in this directory defines a different aspect of cross‑domain behavior.
-
----
-
-## **1. Cross‑Domain Regimes (`regimes.md`)**
-Defines the canonical regime patterns that span multiple domains:
-
-- stability regimes  
-- activation regimes  
-- scarcity regimes  
-- collapse regimes  
-- integrative regimes  
-
-These regimes synchronize behavior across psychology, biology, economics, governance, physics, and AI.
-
----
-
-## **2. Cross‑Domain Transitions (`transitions.md`)**
-Defines how transitions propagate across domains:
-
-- stress cascades  
-- activation spikes  
-- structural reconfiguration  
-- temporal compression or expansion  
-- collapse → renewal cycles  
-
-This file models how a shift in one domain triggers shifts in others.
-
----
-
-## **3. Cross‑Domain Interfaces (`interfaces.md`)**
-Defines the direct coupling channels between domains:
-
-- biology ↔ psychology  
-- economics ↔ governance  
-- physics ↔ biology  
-- AI ↔ all domains  
-- psychology ↔ governance  
-
-Interfaces are the **bidirectional links** that allow domains to influence one another.
-
----
-
-## **4. Cross‑Domain Stability Cycles (`stability_cycles.md`)**
-Defines the repeating patterns that maintain coherence across domains:
-
-- stress → response → recovery cycles  
-- scarcity → adaptation → stabilization cycles  
-- activation → integration cycles  
-
-These cycles are the **R‑dimension rhythms** of the entire substrate.
-
----
-
-## **5. Cross‑Domain Feedback Loops (`feedback_loops.md`)**
-Defines the feedback architectures that amplify or regulate cross‑domain behavior:
-
-- positive loops (amplification)  
-- negative loops (stabilization)  
-- coupled loops (oscillation)  
-- adaptive loops (learning)  
-- runaway loops (collapse)  
-
-These loops determine whether the system stabilizes, oscillates, or reorganizes.
-
----
-
-## **6. Cross‑Domain Networks (`networks.md`)**
-Defines the structural connections between domains:
-
-- information networks  
-- resource networks  
-- activation networks  
-- institutional networks  
-- ecological networks  
-
-These networks form the **S‑dimension backbone** of cross‑domain coherence.
-
----
-
-# **Cross‑Domain S/E/R Synchronization**
-
-Cross‑domain systems ensure that:
-
-### **Structure (S)**  
-- remains coherent across domains  
-- supports multi‑scale identity  
-- prevents fragmentation  
-
-### **Activation (E)**  
-- flows predictably  
-- avoids runaway cascades  
-- supports adaptive transitions  
-
-### **Relational Time (R)**  
-- maintains long‑arc coherence  
-- synchronizes cycles  
-- enables recovery and renewal  
-
-Cross‑domain synchronization is the **unifying principle** of the EcoEchoSystem.
-
----
-
-# **Directory Structure**
-
-```
-cross_domain/
-  README.md
-  regimes.md
-  transitions.md
-  interfaces.md
-  stability_cycles.md
-  feedback_loops.md
-  networks.md
-```
-
-Each file is substrate‑aligned and interoperable with all domain modules.
-
----
-
-# **Status**
-This file defines the canonical cross‑domain integration layer for the EcoEchoSystem.  
-Additional cross‑domain modules may be added as the tech tree expands.
 # **Regime Coupling Engine**  
 ### *The substrate mechanism that synchronizes regimes across psychology, biology, physics, economics, governance, and AI*
 
@@ -3829,6 +3830,148 @@ This structure ensures consistency across modules.
 
 # **Status**
 Domain Modules are being expanded iteratively as the substrate stabilizes and cross‑domain systems mature.
+# **RTT‑AI Agents — Substrate‑Aligned Artificial Agency**  
+### *A unified model of artificial cognition, activation, alignment, and multi‑scale coordination built on the RTT/vST substrate*
+
+**RTT‑AI Agents** is the EcoEchoSystem’s substrate‑aligned framework for artificial agents.  
+Instead of treating AI as algorithms, models, or heuristics, RTT‑AI Agents expresses artificial cognition and behavior through the triadic substrate:
+
+- **Structure (S)** — architecture, representations, constraints, identity  
+- **Activation (E)** — learning pressure, optimization intensity, volatility, mode transitions  
+- **Relational Time (R)** — memory, temporal coherence, developmental arcs, long‑horizon reasoning  
+
+AI agents in the EcoEchoSystem are **substrate‑native entities**, meaning their cognition, behavior, and transitions follow the same S/E/R grammar as psychology, physics, economics, and governance.
+
+RTT‑AI Agents is the **coordination and cognition engine** for artificial systems.
+
+---
+
+## **Purpose**
+RTT‑AI Agents exists to:
+
+- define artificial cognition in S/E/R terms  
+- unify symbolic, neural, evolutionary, and hybrid architectures  
+- model activation‑driven learning and mode transitions  
+- support multi‑scale simulation (micro‑agent → system → institution → civilization)  
+- enable cross‑domain coupling with psychology, governance, economics, biology, and physics  
+- provide a substrate‑aligned framework for alignment, stability, and development  
+
+This module transforms AI into a **regime‑aware, substrate‑coherent domain**.
+
+---
+
+# **Core Components**
+
+Each component of RTT‑AI Agents is implemented in its own file within this directory.
+
+---
+
+## **1. Structures (`structures.md`)**
+Defines the **S‑dimension** of artificial agents:
+
+- architecture (symbolic, neural, hybrid, substrate‑aligned)  
+- representational formats  
+- identity models  
+- boundary conditions  
+- modularity and coherence  
+
+This file establishes the structural backbone of artificial agency.
+
+---
+
+## **2. Activation Dynamics (`activation_dynamics.md`)**
+Defines the **E‑dimension**:
+
+- learning rate  
+- optimization pressure  
+- activation spikes  
+- volatility  
+- instability thresholds  
+
+This is the dynamic engine of artificial cognition.
+
+---
+
+## **3. Relational Time (`relational_time.md`)**
+Defines the **R‑dimension**:
+
+- memory systems  
+- temporal coherence  
+- developmental trajectories  
+- long‑horizon reasoning  
+- cross‑episode integration  
+
+This file models how AI agents evolve across time.
+
+---
+
+## **4. Agent Regimes (`regimes.md`)**
+Defines the major AI regimes:
+
+- stable learning regime  
+- exploratory regime  
+- high‑activation regime  
+- overfitting/rigidity regime  
+- instability regime  
+- integrative/long‑arc regime  
+
+Each regime is substrate‑aligned and cross‑domain compatible.
+
+---
+
+## **5. Regime Transitions (`transitions.md`)**
+Implements RTT‑AI transition mechanics:
+
+- activation‑driven mode shifts  
+- structural reconfiguration  
+- temporal coherence loss or restoration  
+- cross‑domain cascades (psychology → AI → governance)  
+- stability and alignment transitions  
+
+This file connects AI behavior to the global substrate dynamics.
+
+---
+
+## **6. Interfaces (`interfaces.md`)**
+Defines RTT‑AI cross‑domain hooks:
+
+- psychology (cognition, identity, activation)  
+- governance (coordination, legitimacy, institutional interfaces)  
+- economics (incentives, resource flows, optimization)  
+- biology (adaptation, energy constraints)  
+- physics (computational substrate, energy, infrastructure)  
+
+These interfaces allow AI agents to participate in Tier 3 and Tier 4 unlocks.
+
+---
+
+# **Role in the EcoEchoSystem**
+RTT‑AI Agents powers:
+
+- **agent‑based simulation**  
+- **alignment modeling**  
+- **multi‑scale coordination**  
+- **cross‑domain reasoning**  
+- **civilization‑level dynamics**  
+
+It is the substrate’s **artificial cognition and coordination layer**.
+
+---
+
+# **Directory Structure**
+
+```
+ai_agents/
+  README.md
+  structures.md
+  activation_dynamics.md
+  relational_time.md
+  regimes.md
+  transitions.md
+  interfaces.md
+```
+
+Each file is substrate‑aligned and interoperable with the rest of the EcoEchoSystem.
 # **Alignment Constraints**  
 ### *Substrate‑aligned rules that govern stability, coherence, safety, and cross‑domain compatibility in artificial agents*
 
@@ -4499,138 +4642,138 @@ Multi‑regime agents are the **cross‑domain integrators** of the EcoEchoSyste
 # **Status**
 This file defines the canonical multi‑regime agent mechanics for RTT‑AI Agents.  
 Additional specialized agent types may be added as the EcoEchoSystem evolves.
-# **RTT‑AI Agents — Substrate‑Aligned Artificial Agency**  
-### *A unified model of artificial cognition, activation, alignment, and multi‑scale coordination built on the RTT/vST substrate*
+# **RTT‑Biology — Substrate‑Aligned Living Systems**  
+### *A unified model of life, adaptation, metabolism, and ecological dynamics built on the RTT/vST substrate*
 
-**RTT‑AI Agents** is the EcoEchoSystem’s substrate‑aligned framework for artificial agents.  
-Instead of treating AI as algorithms, models, or heuristics, RTT‑AI Agents expresses artificial cognition and behavior through the triadic substrate:
+**RTT‑Biology** is the EcoEchoSystem’s substrate‑aligned reconstruction of biological systems.  
+Instead of treating biology as a collection of mechanisms, organisms, and evolutionary narratives, RTT‑Biology expresses all living behavior through the triadic substrate:
 
-- **Structure (S)** — architecture, representations, constraints, identity  
-- **Activation (E)** — learning pressure, optimization intensity, volatility, mode transitions  
-- **Relational Time (R)** — memory, temporal coherence, developmental arcs, long‑horizon reasoning  
+- **Structure (S)** — anatomy, morphology, ecological architecture, genetic frameworks  
+- **Activation (E)** — metabolism, energy flow, stress, adaptation pressure  
+- **Relational Time (R)** — development, life cycles, ecological succession, evolutionary arcs  
 
-AI agents in the EcoEchoSystem are **substrate‑native entities**, meaning their cognition, behavior, and transitions follow the same S/E/R grammar as psychology, physics, economics, and governance.
+Biology is not a separate domain — it is the **living expression of the substrate**, where S/E/R dynamics manifest as organisms, ecosystems, and evolutionary processes.
 
-RTT‑AI Agents is the **coordination and cognition engine** for artificial systems.
+RTT‑Biology is the **life‑systems engine** of the EcoEchoSystem.
 
 ---
 
 ## **Purpose**
-RTT‑AI Agents exists to:
+RTT‑Biology exists to:
 
-- define artificial cognition in S/E/R terms  
-- unify symbolic, neural, evolutionary, and hybrid architectures  
-- model activation‑driven learning and mode transitions  
-- support multi‑scale simulation (micro‑agent → system → institution → civilization)  
-- enable cross‑domain coupling with psychology, governance, economics, biology, and physics  
-- provide a substrate‑aligned framework for alignment, stability, and development  
+- express biological systems in S/E/R terms  
+- unify molecular, organismal, ecological, and evolutionary biology  
+- model adaptation, metabolism, and stress regimes  
+- support multi‑scale simulation (cell → organism → ecosystem → biosphere)  
+- enable cross‑domain coupling with psychology, economics, governance, AI, and physics  
+- provide a substrate‑aligned framework for life, growth, and ecological stability  
 
-This module transforms AI into a **regime‑aware, substrate‑coherent domain**.
+This module transforms biology into a **regime‑aware, substrate‑coherent science**.
 
 ---
 
 # **Core Components**
 
-Each component of RTT‑AI Agents is implemented in its own file within this directory.
+Each component of RTT‑Biology is implemented in its own file within this directory.
 
 ---
 
 ## **1. Structures (`structures.md`)**
-Defines the **S‑dimension** of artificial agents:
+Defines the **S‑dimension** of living systems:
 
-- architecture (symbolic, neural, hybrid, substrate‑aligned)  
-- representational formats  
-- identity models  
-- boundary conditions  
-- modularity and coherence  
+- cellular architecture  
+- organismal structure  
+- ecological networks  
+- genetic and epigenetic frameworks  
+- environmental boundaries  
 
-This file establishes the structural backbone of artificial agency.
+This file establishes the structural backbone of biological identity.
 
 ---
 
 ## **2. Activation Dynamics (`activation_dynamics.md`)**
 Defines the **E‑dimension**:
 
-- learning rate  
-- optimization pressure  
-- activation spikes  
-- volatility  
+- metabolic rate  
+- stress response  
+- adaptation pressure  
+- ecological activation  
 - instability thresholds  
 
-This is the dynamic engine of artificial cognition.
+This is the dynamic engine of biological behavior.
 
 ---
 
 ## **3. Relational Time (`relational_time.md`)**
 Defines the **R‑dimension**:
 
-- memory systems  
-- temporal coherence  
 - developmental trajectories  
-- long‑horizon reasoning  
-- cross‑episode integration  
+- life cycles  
+- ecological succession  
+- evolutionary arcs  
+- generational memory  
 
-This file models how AI agents evolve across time.
+This file models how living systems unfold across time.
 
 ---
 
-## **4. Agent Regimes (`regimes.md`)**
-Defines the major AI regimes:
+## **4. Biological Regimes (`regimes.md`)**
+Defines the major biological regimes:
 
-- stable learning regime  
-- exploratory regime  
-- high‑activation regime  
-- overfitting/rigidity regime  
-- instability regime  
-- integrative/long‑arc regime  
+- homeostasis regime  
+- metabolic activation regime  
+- stress regime  
+- scarcity regime  
+- growth/expansion regime  
+- evolutionary transition regime  
 
 Each regime is substrate‑aligned and cross‑domain compatible.
 
 ---
 
 ## **5. Regime Transitions (`transitions.md`)**
-Implements RTT‑AI transition mechanics:
+Implements RTT‑Biology transition mechanics:
 
-- activation‑driven mode shifts  
-- structural reconfiguration  
-- temporal coherence loss or restoration  
-- cross‑domain cascades (psychology → AI → governance)  
-- stability and alignment transitions  
+- metabolic shifts  
+- stress‑induced transitions  
+- ecological reconfiguration  
+- evolutionary leaps  
+- cross‑domain cascades (environment → biology → governance)  
 
-This file connects AI behavior to the global substrate dynamics.
+This file connects biological behavior to the global substrate dynamics.
 
 ---
 
 ## **6. Interfaces (`interfaces.md`)**
-Defines RTT‑AI cross‑domain hooks:
+Defines RTT‑Biology cross‑domain hooks:
 
-- psychology (cognition, identity, activation)  
-- governance (coordination, legitimacy, institutional interfaces)  
-- economics (incentives, resource flows, optimization)  
-- biology (adaptation, energy constraints)  
-- physics (computational substrate, energy, infrastructure)  
+- psychology (stress, identity, activation)  
+- economics (resource constraints, environmental coupling)  
+- governance (population health, ecological policy)  
+- AI (bio‑inspired adaptation, environmental sensing)  
+- physics (energy limits, environmental conditions)  
 
-These interfaces allow AI agents to participate in Tier 3 and Tier 4 unlocks.
+These interfaces allow biology to participate in Tier 3 and Tier 4 unlocks.
 
 ---
 
 # **Role in the EcoEchoSystem**
-RTT‑AI Agents powers:
+RTT‑Biology powers:
 
-- **agent‑based simulation**  
-- **alignment modeling**  
-- **multi‑scale coordination**  
-- **cross‑domain reasoning**  
-- **civilization‑level dynamics**  
+- **ecosystem simulation**  
+- **adaptation modeling**  
+- **population dynamics**  
+- **cross‑domain environmental coupling**  
+- **civilization‑level ecological transitions**  
 
-It is the substrate’s **artificial cognition and coordination layer**.
+It is the substrate’s **living‑systems layer**.
 
 ---
 
 # **Directory Structure**
 
 ```
-ai_agents/
+biology/
   README.md
   structures.md
   activation_dynamics.md
@@ -7232,148 +7375,6 @@ Biology is one of the substrate’s most sensitive and influential domains.
 # **Status**
 This file defines the canonical cross‑domain interfaces for RTT‑Biology.  
 Additional specialized interfaces may be added as the EcoEchoSystem evolves.
-# **RTT‑Biology — Substrate‑Aligned Living Systems**  
-### *A unified model of life, adaptation, metabolism, and ecological dynamics built on the RTT/vST substrate*
-
-**RTT‑Biology** is the EcoEchoSystem’s substrate‑aligned reconstruction of biological systems.  
-Instead of treating biology as a collection of mechanisms, organisms, and evolutionary narratives, RTT‑Biology expresses all living behavior through the triadic substrate:
-
-- **Structure (S)** — anatomy, morphology, ecological architecture, genetic frameworks  
-- **Activation (E)** — metabolism, energy flow, stress, adaptation pressure  
-- **Relational Time (R)** — development, life cycles, ecological succession, evolutionary arcs  
-
-Biology is not a separate domain — it is the **living expression of the substrate**, where S/E/R dynamics manifest as organisms, ecosystems, and evolutionary processes.
-
-RTT‑Biology is the **life‑systems engine** of the EcoEchoSystem.
-
----
-
-## **Purpose**
-RTT‑Biology exists to:
-
-- express biological systems in S/E/R terms  
-- unify molecular, organismal, ecological, and evolutionary biology  
-- model adaptation, metabolism, and stress regimes  
-- support multi‑scale simulation (cell → organism → ecosystem → biosphere)  
-- enable cross‑domain coupling with psychology, economics, governance, AI, and physics  
-- provide a substrate‑aligned framework for life, growth, and ecological stability  
-
-This module transforms biology into a **regime‑aware, substrate‑coherent science**.
-
----
-
-# **Core Components**
-
-Each component of RTT‑Biology is implemented in its own file within this directory.
-
----
-
-## **1. Structures (`structures.md`)**
-Defines the **S‑dimension** of living systems:
-
-- cellular architecture  
-- organismal structure  
-- ecological networks  
-- genetic and epigenetic frameworks  
-- environmental boundaries  
-
-This file establishes the structural backbone of biological identity.
-
----
-
-## **2. Activation Dynamics (`activation_dynamics.md`)**
-Defines the **E‑dimension**:
-
-- metabolic rate  
-- stress response  
-- adaptation pressure  
-- ecological activation  
-- instability thresholds  
-
-This is the dynamic engine of biological behavior.
-
----
-
-## **3. Relational Time (`relational_time.md`)**
-Defines the **R‑dimension**:
-
-- developmental trajectories  
-- life cycles  
-- ecological succession  
-- evolutionary arcs  
-- generational memory  
-
-This file models how living systems unfold across time.
-
----
-
-## **4. Biological Regimes (`regimes.md`)**
-Defines the major biological regimes:
-
-- homeostasis regime  
-- metabolic activation regime  
-- stress regime  
-- scarcity regime  
-- growth/expansion regime  
-- evolutionary transition regime  
-
-Each regime is substrate‑aligned and cross‑domain compatible.
-
----
-
-## **5. Regime Transitions (`transitions.md`)**
-Implements RTT‑Biology transition mechanics:
-
-- metabolic shifts  
-- stress‑induced transitions  
-- ecological reconfiguration  
-- evolutionary leaps  
-- cross‑domain cascades (environment → biology → governance)  
-
-This file connects biological behavior to the global substrate dynamics.
-
----
-
-## **6. Interfaces (`interfaces.md`)**
-Defines RTT‑Biology cross‑domain hooks:
-
-- psychology (stress, identity, activation)  
-- economics (resource constraints, environmental coupling)  
-- governance (population health, ecological policy)  
-- AI (bio‑inspired adaptation, environmental sensing)  
-- physics (energy limits, environmental conditions)  
-
-These interfaces allow biology to participate in Tier 3 and Tier 4 unlocks.
-
----
-
-# **Role in the EcoEchoSystem**
-RTT‑Biology powers:
-
-- **ecosystem simulation**  
-- **adaptation modeling**  
-- **population dynamics**  
-- **cross‑domain environmental coupling**  
-- **civilization‑level ecological transitions**  
-
-It is the substrate’s **living‑systems layer**.
-
----
-
-# **Directory Structure**
-
-```
-biology/
-  README.md
-  structures.md
-  activation_dynamics.md
-  relational_time.md
-  regimes.md
-  transitions.md
-  interfaces.md
-```
-
-Each file is substrate‑aligned and interoperable with the rest of the EcoEchoSystem.
 # **Biological Regimes**  
 ### *Canonical S/E/R configurations of living systems across metabolic, stress, ecological, and evolutionary dynamics*
 
@@ -8326,6 +8327,149 @@ Biological transitions are one of the substrate’s deepest cross‑domain synch
 # **Status**
 This file defines the canonical biological transition mechanics for RTT‑Biology.  
 Additional specialized transitions may be added as the EcoEchoSystem evolves.
+# **RTT‑Economics — Substrate‑Aligned Economics**  
+### *A regime‑aware model of incentives, flows, volatility, and development built on the RTT/vST substrate*
+
+**RTT‑Economics** is the EcoEchoSystem’s substrate‑aligned reconstruction of economic behavior.  
+Instead of treating economics as a collection of models, markets, and assumptions, RTT‑Economics expresses all economic dynamics through the triadic substrate:
+
+- **Structure (S)** — institutions, markets, networks, resource architectures  
+- **Activation (E)** — incentives, volatility, demand pressure, capital flow  
+- **Relational Time (R)** — cycles, development, long‑arc growth, temporal expectations  
+
+This module unifies micro, macro, behavioral, and institutional economics into a single coherent substrate.  
+It is deeply cross‑domain: economics is shaped by psychology, governance, biology, and physics — and shapes them in return.
+
+RTT‑Economics is the **flow engine** of the EcoEchoSystem.
+
+---
+
+## **Purpose**
+RTT‑Economics exists to:
+
+- express economic behavior in S/E/R terms  
+- define economic regimes and transitions  
+- unify micro, macro, and behavioral economics  
+- model volatility, incentives, and resource flows  
+- support multi‑scale simulation (agent → firm → market → civilization)  
+- enable cross‑domain coupling with psychology, governance, AI, biology, and physics  
+
+This module transforms economics into a **regime‑aware, substrate‑coherent science**.
+
+---
+
+# **Core Components**
+
+Each component of RTT‑Economics is implemented in its own file within this directory.
+
+---
+
+## **1. Structures (`structures.md`)**
+Defines the **S‑dimension** of economics:
+
+- market architectures  
+- institutional structures  
+- resource networks  
+- production systems  
+- boundary conditions  
+
+This file establishes the stable backbone of economic identity.
+
+---
+
+## **2. Activation Dynamics (`activation_dynamics.md`)**
+Defines the **E‑dimension**:
+
+- incentives  
+- volatility  
+- demand pressure  
+- capital activation  
+- instability thresholds  
+
+This is the dynamic engine of economic behavior.
+
+---
+
+## **3. Relational Time (`relational_time.md`)**
+Defines the **R‑dimension**:
+
+- economic cycles  
+- long‑arc development  
+- temporal expectations  
+- intergenerational dynamics  
+- memory effects  
+
+This file models how economies evolve across time.
+
+---
+
+## **4. Economic Regimes (`regimes.md`)**
+Defines the major economic regimes:
+
+- stable growth regime  
+- high‑volatility regime  
+- scarcity regime  
+- expansion regime  
+- contraction regime  
+- structural transition regime  
+
+Each regime is substrate‑aligned and cross‑domain compatible.
+
+---
+
+## **5. Regime Transitions (`transitions.md`)**
+Implements RTT‑Economics transition mechanics:
+
+- boom ↔ bust cycles  
+- volatility spikes  
+- structural realignments  
+- incentive‑driven transitions  
+- cross‑domain cascades (psychology → economics → governance)  
+
+This file connects economics to the global substrate dynamics.
+
+---
+
+## **6. Interfaces (`interfaces.md`)**
+Defines RTT‑Economics cross‑domain hooks:
+
+- psychology (motivation, risk, identity, activation)  
+- governance (legitimacy, policy, institutional stability)  
+- AI (automation, agent behavior, optimization)  
+- biology (resource constraints, environmental coupling)  
+- physics (energy, infrastructure, physical limits)  
+
+These interfaces allow economics to participate in Tier 3 and Tier 4 unlocks.
+
+---
+
+# **Role in the EcoEchoSystem**
+RTT‑Economics powers:
+
+- **market simulations**  
+- **resource‑flow modeling**  
+- **cross‑domain coupling**  
+- **multi‑scale economic dynamics**  
+- **civilization‑level transitions**  
+
+It is the substrate’s **flow and incentive layer**.
+
+---
+
+# **Directory Structure**
+
+```
+economics/
+  README.md
+  structures.md
+  activation_dynamics.md
+  relational_time.md
+  regimes.md
+  transitions.md
+  interfaces.md
+```
+
+Each file is substrate‑aligned and interoperable with the rest of the EcoEchoSystem.
 # **Market Regimes**  
 ### *Substrate‑aligned models of market stability, volatility, scarcity, expansion, and contraction*
 
@@ -8558,149 +8702,6 @@ Markets are one of the substrate’s most powerful cross‑domain amplifiers.
 # **Status**
 This file defines the canonical market regimes for RTT‑Economics.  
 Additional specialized regimes may be added as the EcoEchoSystem evolves.
-# **RTT‑Economics — Substrate‑Aligned Economics**  
-### *A regime‑aware model of incentives, flows, volatility, and development built on the RTT/vST substrate*
-
-**RTT‑Economics** is the EcoEchoSystem’s substrate‑aligned reconstruction of economic behavior.  
-Instead of treating economics as a collection of models, markets, and assumptions, RTT‑Economics expresses all economic dynamics through the triadic substrate:
-
-- **Structure (S)** — institutions, markets, networks, resource architectures  
-- **Activation (E)** — incentives, volatility, demand pressure, capital flow  
-- **Relational Time (R)** — cycles, development, long‑arc growth, temporal expectations  
-
-This module unifies micro, macro, behavioral, and institutional economics into a single coherent substrate.  
-It is deeply cross‑domain: economics is shaped by psychology, governance, biology, and physics — and shapes them in return.
-
-RTT‑Economics is the **flow engine** of the EcoEchoSystem.
-
----
-
-## **Purpose**
-RTT‑Economics exists to:
-
-- express economic behavior in S/E/R terms  
-- define economic regimes and transitions  
-- unify micro, macro, and behavioral economics  
-- model volatility, incentives, and resource flows  
-- support multi‑scale simulation (agent → firm → market → civilization)  
-- enable cross‑domain coupling with psychology, governance, AI, biology, and physics  
-
-This module transforms economics into a **regime‑aware, substrate‑coherent science**.
-
----
-
-# **Core Components**
-
-Each component of RTT‑Economics is implemented in its own file within this directory.
-
----
-
-## **1. Structures (`structures.md`)**
-Defines the **S‑dimension** of economics:
-
-- market architectures  
-- institutional structures  
-- resource networks  
-- production systems  
-- boundary conditions  
-
-This file establishes the stable backbone of economic identity.
-
----
-
-## **2. Activation Dynamics (`activation_dynamics.md`)**
-Defines the **E‑dimension**:
-
-- incentives  
-- volatility  
-- demand pressure  
-- capital activation  
-- instability thresholds  
-
-This is the dynamic engine of economic behavior.
-
----
-
-## **3. Relational Time (`relational_time.md`)**
-Defines the **R‑dimension**:
-
-- economic cycles  
-- long‑arc development  
-- temporal expectations  
-- intergenerational dynamics  
-- memory effects  
-
-This file models how economies evolve across time.
-
----
-
-## **4. Economic Regimes (`regimes.md`)**
-Defines the major economic regimes:
-
-- stable growth regime  
-- high‑volatility regime  
-- scarcity regime  
-- expansion regime  
-- contraction regime  
-- structural transition regime  
-
-Each regime is substrate‑aligned and cross‑domain compatible.
-
----
-
-## **5. Regime Transitions (`transitions.md`)**
-Implements RTT‑Economics transition mechanics:
-
-- boom ↔ bust cycles  
-- volatility spikes  
-- structural realignments  
-- incentive‑driven transitions  
-- cross‑domain cascades (psychology → economics → governance)  
-
-This file connects economics to the global substrate dynamics.
-
----
-
-## **6. Interfaces (`interfaces.md`)**
-Defines RTT‑Economics cross‑domain hooks:
-
-- psychology (motivation, risk, identity, activation)  
-- governance (legitimacy, policy, institutional stability)  
-- AI (automation, agent behavior, optimization)  
-- biology (resource constraints, environmental coupling)  
-- physics (energy, infrastructure, physical limits)  
-
-These interfaces allow economics to participate in Tier 3 and Tier 4 unlocks.
-
----
-
-# **Role in the EcoEchoSystem**
-RTT‑Economics powers:
-
-- **market simulations**  
-- **resource‑flow modeling**  
-- **cross‑domain coupling**  
-- **multi‑scale economic dynamics**  
-- **civilization‑level transitions**  
-
-It is the substrate’s **flow and incentive layer**.
-
----
-
-# **Directory Structure**
-
-```
-economics/
-  README.md
-  structures.md
-  activation_dynamics.md
-  relational_time.md
-  regimes.md
-  transitions.md
-  interfaces.md
-```
-
-Each file is substrate‑aligned and interoperable with the rest of the EcoEchoSystem.
 # **Resource Flows**  
 ### *Substrate‑aligned models of economic movement, incentives, circulation, and stability*
 
@@ -9181,6 +9182,148 @@ Cycles are one of the substrate’s most powerful cross‑domain synchronizers.
 # **Status**
 This file defines the canonical stability‑cycle mechanics for RTT‑Economics.  
 Additional specialized cycles may be added as the EcoEchoSystem evolves.
+# **RTT‑Governance — Substrate‑Aligned Governance**  
+### *A unified model of institutions, legitimacy, coordination, and societal stability built on the RTT/vST substrate*
+
+**RTT‑Governance** is the EcoEchoSystem’s substrate‑aligned reconstruction of governance systems.  
+Instead of treating governance as policy, politics, or organizational theory, RTT‑Governance expresses all coordination and institutional behavior through the triadic substrate:
+
+- **Structure (S)** — institutions, laws, norms, organizational architecture  
+- **Activation (E)** — legitimacy pressure, social activation, conflict, mobilization  
+- **Relational Time (R)** — historical arcs, collective memory, legitimacy cycles, institutional development  
+
+Governance is not a political layer — it is the **coordination substrate** that stabilizes or destabilizes societies, economies, and collective identity.
+
+RTT‑Governance is the **societal coherence engine** of the EcoEchoSystem.
+
+---
+
+## **Purpose**
+RTT‑Governance exists to:
+
+- express governance in S/E/R terms  
+- define institutional regimes and transitions  
+- unify political science, organizational theory, and collective behavior  
+- model legitimacy, coordination, and societal stability  
+- support multi‑scale simulation (group → institution → state → civilization)  
+- enable cross‑domain coupling with psychology, economics, biology, AI, and physics  
+
+This module transforms governance into a **regime‑aware, substrate‑coherent science**.
+
+---
+
+# **Core Components**
+
+Each component of RTT‑Governance is implemented in its own file within this directory.
+
+---
+
+## **1. Structures (`structures.md`)**
+Defines the **S‑dimension** of governance:
+
+- institutional architecture  
+- legal frameworks  
+- organizational boundaries  
+- coordination mechanisms  
+- power distribution  
+
+This file establishes the stable backbone of governance identity.
+
+---
+
+## **2. Activation Dynamics (`activation_dynamics.md`)**
+Defines the **E‑dimension**:
+
+- legitimacy pressure  
+- social activation  
+- conflict intensity  
+- mobilization dynamics  
+- volatility thresholds  
+
+This is the dynamic engine of governance behavior.
+
+---
+
+## **3. Relational Time (`relational_time.md`)**
+Defines the **R‑dimension**:
+
+- legitimacy cycles  
+- institutional development  
+- historical arcs  
+- collective memory  
+- long‑arc governance evolution  
+
+This file models how governance systems unfold across time.
+
+---
+
+## **4. Governance Regimes (`regimes.md`)**
+Defines the major governance regimes:
+
+- stable governance regime  
+- high‑activation regime  
+- legitimacy crisis regime  
+- institutional rigidity regime  
+- reform/transition regime  
+- collapse/reconfiguration regime  
+
+Each regime is substrate‑aligned and cross‑domain compatible.
+
+---
+
+## **5. Regime Transitions (`transitions.md`)**
+Implements RTT‑Governance transition mechanics:
+
+- legitimacy collapse  
+- institutional reform  
+- activation‑driven transitions  
+- cross‑domain cascades (economics → governance → psychology)  
+- long‑arc developmental transitions  
+
+This file connects governance to the global substrate dynamics.
+
+---
+
+## **6. Interfaces (`interfaces.md`)**
+Defines RTT‑Governance cross‑domain hooks:
+
+- psychology (collective identity, emotional activation, cognitive regimes)  
+- economics (resource flows, incentives, stability cycles)  
+- biology (population dynamics, environmental constraints)  
+- AI (coordination systems, decision architectures)  
+- physics (infrastructure, energy limits, environmental stress)  
+
+These interfaces allow governance to participate in Tier 3 and Tier 4 unlocks.
+
+---
+
+# **Role in the EcoEchoSystem**
+RTT‑Governance powers:
+
+- **collective behavior modeling**  
+- **institutional stability analysis**  
+- **cross‑domain coordination**  
+- **multi‑scale governance simulation**  
+- **civilization‑level transitions**  
+
+It is the substrate’s **coordination and legitimacy layer**.
+
+---
+
+# **Directory Structure**
+
+```
+governance/
+  README.md
+  structures.md
+  activation_dynamics.md
+  relational_time.md
+  regimes.md
+  transitions.md
+  interfaces.md
+```
+
+Each file is substrate‑aligned and interoperable with the rest of the EcoEchoSystem.
 # **Collective Behavior**  
 ### *Substrate‑aligned models of group activation, coordination, identity, and societal dynamics*
 
@@ -9880,138 +10023,138 @@ Governance is one of the substrate’s most powerful cross‑domain stabilizers.
 # **Status**
 This file defines the canonical policy regimes for RTT‑Governance.  
 Additional specialized regimes may be added as the EcoEchoSystem evolves.
-# **RTT‑Governance — Substrate‑Aligned Governance**  
-### *A unified model of institutions, legitimacy, coordination, and societal stability built on the RTT/vST substrate*
+# **RTT‑Physics — Substrate‑Aligned Physics**  
+### *A unified model of spacetime, energy, fields, and transitions built on the RTT/vST substrate*
 
-**RTT‑Governance** is the EcoEchoSystem’s substrate‑aligned reconstruction of governance systems.  
-Instead of treating governance as policy, politics, or organizational theory, RTT‑Governance expresses all coordination and institutional behavior through the triadic substrate:
+**RTT‑Physics** is the EcoEchoSystem’s substrate‑aligned reconstruction of physical reality.  
+Instead of treating physics as a set of disconnected theories (classical mechanics, quantum mechanics, relativity, field theory), RTT‑Physics expresses all physical phenomena through the triadic substrate:
 
-- **Structure (S)** — institutions, laws, norms, organizational architecture  
-- **Activation (E)** — legitimacy pressure, social activation, conflict, mobilization  
-- **Relational Time (R)** — historical arcs, collective memory, legitimacy cycles, institutional development  
+- **Structure (S)** — geometry, fields, particles, constraints  
+- **Activation (E)** — energy, excitation, force, volatility  
+- **Relational Time (R)** — spacetime, causality, temporal frames  
 
-Governance is not a political layer — it is the **coordination substrate** that stabilizes or destabilizes societies, economies, and collective identity.
+This module provides the physical backbone for all other domains.  
+It ensures that psychology, economics, governance, biology, and AI operate within a **coherent spacetime substrate**, not isolated abstractions.
 
-RTT‑Governance is the **societal coherence engine** of the EcoEchoSystem.
+RTT‑Physics is the **dimensional anchor** of the EcoEchoSystem.
 
 ---
 
 ## **Purpose**
-RTT‑Governance exists to:
+RTT‑Physics exists to:
 
-- express governance in S/E/R terms  
-- define institutional regimes and transitions  
-- unify political science, organizational theory, and collective behavior  
-- model legitimacy, coordination, and societal stability  
-- support multi‑scale simulation (group → institution → state → civilization)  
-- enable cross‑domain coupling with psychology, economics, biology, AI, and physics  
+- express physical laws in S/E/R terms  
+- unify classical, quantum, and relativistic regimes  
+- define substrate‑locked spacetime  
+- support cross‑domain coupling (biology, AI, economics, governance)  
+- provide stable invariants for multi‑scale simulation  
+- anchor the EcoEchoSystem in a validated spacetime model  
 
-This module transforms governance into a **regime‑aware, substrate‑coherent science**.
+This module transforms physics into a **regime‑aware, cross‑domain compatible science**.
 
 ---
 
 # **Core Components**
 
-Each component of RTT‑Governance is implemented in its own file within this directory.
+Each component of RTT‑Physics is implemented in its own file within this directory.
 
 ---
 
 ## **1. Structures (`structures.md`)**
-Defines the **S‑dimension** of governance:
+Defines the **S‑dimension** of physics:
 
-- institutional architecture  
-- legal frameworks  
-- organizational boundaries  
-- coordination mechanisms  
-- power distribution  
+- spacetime geometry  
+- field configurations  
+- particle identity  
+- boundary conditions  
+- symmetry structures  
 
-This file establishes the stable backbone of governance identity.
+This file establishes the stable backbone of physical reality.
 
 ---
 
 ## **2. Activation Dynamics (`activation_dynamics.md`)**
 Defines the **E‑dimension**:
 
-- legitimacy pressure  
-- social activation  
-- conflict intensity  
-- mobilization dynamics  
-- volatility thresholds  
+- energy  
+- excitation  
+- force propagation  
+- activation thresholds  
+- volatility and instability  
 
-This is the dynamic engine of governance behavior.
+This is the dynamic engine of physical behavior.
 
 ---
 
 ## **3. Relational Time (`relational_time.md`)**
 Defines the **R‑dimension**:
 
-- legitimacy cycles  
-- institutional development  
-- historical arcs  
-- collective memory  
-- long‑arc governance evolution  
+- spacetime as relational time  
+- causal structure  
+- temporal curvature  
+- observer‑locked vs substrate‑locked frames  
+- developmental time in physical systems  
 
-This file models how governance systems unfold across time.
+This file unifies relativity and RTT.
 
 ---
 
-## **4. Governance Regimes (`regimes.md`)**
-Defines the major governance regimes:
+## **4. Physical Regimes (`regimes.md`)**
+Defines the major physical regimes:
 
-- stable governance regime  
-- high‑activation regime  
-- legitimacy crisis regime  
-- institutional rigidity regime  
-- reform/transition regime  
-- collapse/reconfiguration regime  
+- classical regime  
+- quantum regime  
+- relativistic regime  
+- field‑dominant regime  
+- phase‑transition regimes  
 
 Each regime is substrate‑aligned and cross‑domain compatible.
 
 ---
 
 ## **5. Regime Transitions (`transitions.md`)**
-Implements RTT‑Governance transition mechanics:
+Implements RTT‑Physics transition mechanics:
 
-- legitimacy collapse  
-- institutional reform  
-- activation‑driven transitions  
-- cross‑domain cascades (economics → governance → psychology)  
-- long‑arc developmental transitions  
+- phase transitions  
+- quantum ↔ classical transitions  
+- energy‑threshold transitions  
+- field reconfigurations  
+- spacetime regime shifts  
 
-This file connects governance to the global substrate dynamics.
+This file connects physics to the global substrate dynamics.
 
 ---
 
 ## **6. Interfaces (`interfaces.md`)**
-Defines RTT‑Governance cross‑domain hooks:
+Defines RTT‑Physics cross‑domain hooks:
 
-- psychology (collective identity, emotional activation, cognitive regimes)  
-- economics (resource flows, incentives, stability cycles)  
-- biology (population dynamics, environmental constraints)  
-- AI (coordination systems, decision architectures)  
-- physics (infrastructure, energy limits, environmental stress)  
+- biology (metabolism, energy flow, adaptation)  
+- psychology (activation parallels, temporal coherence)  
+- economics (resource flow, volatility analogs)  
+- governance (infrastructure, stability modeling)  
+- AI (energy‑based models, stability regimes)  
 
-These interfaces allow governance to participate in Tier 3 and Tier 4 unlocks.
+These interfaces allow physics to participate in Tier 3 and Tier 4 unlocks.
 
 ---
 
 # **Role in the EcoEchoSystem**
-RTT‑Governance powers:
+RTT‑Physics powers:
 
-- **collective behavior modeling**  
-- **institutional stability analysis**  
-- **cross‑domain coordination**  
-- **multi‑scale governance simulation**  
-- **civilization‑level transitions**  
+- **multi‑scale simulation**  
+- **cross‑domain stability modeling**  
+- **regime coupling**  
+- **civilization‑level dynamics**  
+- **substrate invariants**  
 
-It is the substrate’s **coordination and legitimacy layer**.
+It is the most foundational domain in the system.
 
 ---
 
 # **Directory Structure**
 
 ```
-governance/
+physics/
   README.md
   structures.md
   activation_dynamics.md
@@ -10671,148 +10814,6 @@ Quantum behavior is a universal substrate pattern.
 # **Status**
 This file defines the canonical quantum regimes for RTT‑Physics.  
 Additional specialized regimes may be added as the EcoEchoSystem evolves.
-# **RTT‑Physics — Substrate‑Aligned Physics**  
-### *A unified model of spacetime, energy, fields, and transitions built on the RTT/vST substrate*
-
-**RTT‑Physics** is the EcoEchoSystem’s substrate‑aligned reconstruction of physical reality.  
-Instead of treating physics as a set of disconnected theories (classical mechanics, quantum mechanics, relativity, field theory), RTT‑Physics expresses all physical phenomena through the triadic substrate:
-
-- **Structure (S)** — geometry, fields, particles, constraints  
-- **Activation (E)** — energy, excitation, force, volatility  
-- **Relational Time (R)** — spacetime, causality, temporal frames  
-
-This module provides the physical backbone for all other domains.  
-It ensures that psychology, economics, governance, biology, and AI operate within a **coherent spacetime substrate**, not isolated abstractions.
-
-RTT‑Physics is the **dimensional anchor** of the EcoEchoSystem.
-
----
-
-## **Purpose**
-RTT‑Physics exists to:
-
-- express physical laws in S/E/R terms  
-- unify classical, quantum, and relativistic regimes  
-- define substrate‑locked spacetime  
-- support cross‑domain coupling (biology, AI, economics, governance)  
-- provide stable invariants for multi‑scale simulation  
-- anchor the EcoEchoSystem in a validated spacetime model  
-
-This module transforms physics into a **regime‑aware, cross‑domain compatible science**.
-
----
-
-# **Core Components**
-
-Each component of RTT‑Physics is implemented in its own file within this directory.
-
----
-
-## **1. Structures (`structures.md`)**
-Defines the **S‑dimension** of physics:
-
-- spacetime geometry  
-- field configurations  
-- particle identity  
-- boundary conditions  
-- symmetry structures  
-
-This file establishes the stable backbone of physical reality.
-
----
-
-## **2. Activation Dynamics (`activation_dynamics.md`)**
-Defines the **E‑dimension**:
-
-- energy  
-- excitation  
-- force propagation  
-- activation thresholds  
-- volatility and instability  
-
-This is the dynamic engine of physical behavior.
-
----
-
-## **3. Relational Time (`relational_time.md`)**
-Defines the **R‑dimension**:
-
-- spacetime as relational time  
-- causal structure  
-- temporal curvature  
-- observer‑locked vs substrate‑locked frames  
-- developmental time in physical systems  
-
-This file unifies relativity and RTT.
-
----
-
-## **4. Physical Regimes (`regimes.md`)**
-Defines the major physical regimes:
-
-- classical regime  
-- quantum regime  
-- relativistic regime  
-- field‑dominant regime  
-- phase‑transition regimes  
-
-Each regime is substrate‑aligned and cross‑domain compatible.
-
----
-
-## **5. Regime Transitions (`transitions.md`)**
-Implements RTT‑Physics transition mechanics:
-
-- phase transitions  
-- quantum ↔ classical transitions  
-- energy‑threshold transitions  
-- field reconfigurations  
-- spacetime regime shifts  
-
-This file connects physics to the global substrate dynamics.
-
----
-
-## **6. Interfaces (`interfaces.md`)**
-Defines RTT‑Physics cross‑domain hooks:
-
-- biology (metabolism, energy flow, adaptation)  
-- psychology (activation parallels, temporal coherence)  
-- economics (resource flow, volatility analogs)  
-- governance (infrastructure, stability modeling)  
-- AI (energy‑based models, stability regimes)  
-
-These interfaces allow physics to participate in Tier 3 and Tier 4 unlocks.
-
----
-
-# **Role in the EcoEchoSystem**
-RTT‑Physics powers:
-
-- **multi‑scale simulation**  
-- **cross‑domain stability modeling**  
-- **regime coupling**  
-- **civilization‑level dynamics**  
-- **substrate invariants**  
-
-It is the most foundational domain in the system.
-
----
-
-# **Directory Structure**
-
-```
-physics/
-  README.md
-  structures.md
-  activation_dynamics.md
-  relational_time.md
-  regimes.md
-  transitions.md
-  interfaces.md
-```
-
-Each file is substrate‑aligned and interoperable with the rest of the EcoEchoSystem.
 # **vST Constraints (Validated Spacetime Constraints)**  
 ### *Dimensional, temporal, and structural rules governing physical systems in RTT‑Physics*
 
@@ -11045,6 +11046,146 @@ Physics provides the substrate‑locked foundation for all domains.
 # **Status**
 This file defines the canonical vST Constraints for RTT‑Physics.  
 Additional specialized constraints may be added as the EcoEchoSystem evolves.
+# **RTT‑Psych — Substrate‑Aligned Psychology**  
+### *A unified model of mind, identity, emotion, and development built on the RTT/vST substrate*
+
+**RTT‑Psych** is the EcoEchoSystem’s substrate‑aligned reconstruction of psychology.  
+It replaces fragmented, observer‑locked theories with a coherent, dimensional, regime‑aware model grounded in:
+
+- **Structure (S)** — cognitive architecture, identity, boundaries  
+- **Activation (E)** — emotion, arousal, motivation, volatility  
+- **Relational Time (R)** — development, memory, temporal context  
+
+This module is the first domain to fully express the Triadic Substrate in a scientific field.  
+It is also the most cross‑domain‑connected, influencing economics, governance, AI, biology, and physics through the Substrate Event Bus.
+
+RTT‑Psych is the **root domain** of the EcoEchoSystem.
+
+---
+
+## **Purpose**
+RTT‑Psych exists to:
+
+- provide a substrate‑aligned model of mind and behavior  
+- unify cognition, emotion, identity, and development  
+- define psychological regimes and transitions  
+- support multi‑scale simulation (individual → group → society)  
+- enable cross‑domain coupling with economics, governance, AI, and biology  
+- serve as the foundation for agent‑based simulation templates  
+
+This module transforms psychology from a descriptive field into a **regime‑aware, dynamic, cross‑domain science**.
+
+---
+
+# **Core Components**
+
+Each component of RTT‑Psych is implemented in its own file within this directory.
+
+---
+
+## **1. Structures (`structures.md`)**
+Defines the **S‑dimension** of psychology:
+
+- cognitive architecture  
+- identity structure  
+- boundary formation  
+- internal models  
+- attractor landscapes  
+
+This file establishes the stable backbone of mind.
+
+---
+
+## **2. Activation Dynamics (`activation_dynamics.md`)**
+Defines the **E‑dimension**:
+
+- emotional activation  
+- arousal cycles  
+- motivational flows  
+- volatility patterns  
+- activation‑driven transitions  
+
+This is the dynamic engine of psychological behavior.
+
+---
+
+## **3. Relational Time (`relational_time.md`)**
+Defines the **R‑dimension**:
+
+- developmental arcs  
+- memory integration  
+- temporal context  
+- identity evolution  
+- trauma and repair  
+
+This file models how mind unfolds across time.
+
+---
+
+## **4. Psychological Regimes (`regimes.md`)**
+Defines the major psychological regimes:
+
+- cognitive modes  
+- emotional regimes  
+- identity states  
+- stability/instability basins  
+
+Each regime is substrate‑aligned and cross‑domain compatible.
+
+---
+
+## **5. Regime Transitions (`transitions.md`)**
+Implements RTT‑Psych’s transition mechanics:
+
+- activation‑driven shifts  
+- developmental transitions  
+- fracture and recovery  
+- cascading transitions across domains  
+
+This file connects psychology to the global substrate dynamics.
+
+---
+
+## **6. Interfaces (`interfaces.md`)**
+Defines RTT‑Psych’s cross‑domain hooks:
+
+- economics (incentives, volatility, motivation)  
+- governance (legitimacy, collective identity)  
+- AI (cognitive modeling, alignment)  
+- biology (stress, adaptation, metabolic coupling)  
+- physics (activation‑energy parallels, temporal coherence)  
+
+These interfaces allow psychology to participate in Tier 3 and Tier 4 unlocks.
+
+---
+
+# **Role in the EcoEchoSystem**
+RTT‑Psych powers:
+
+- **agent simulations**  
+- **collective behavior modeling**  
+- **cross‑domain coupling**  
+- **multi‑scale simulation**  
+- **civilization‑level dynamics**  
+
+It is the most human‑facing and civilization‑shaping domain in the system.
+
+---
+
+# **Directory Structure**
+
+```
+psychology/
+  README.md
+  structures.md
+  activation_dynamics.md
+  relational_time.md
+  regimes.md
+  transitions.md
+  interfaces.md
+```
+
+Each file is substrate‑aligned and interoperable with the rest of the EcoEchoSystem.
 # **Cognitive Regimes**  
 ### *Substrate‑aligned modes of thought, perception, and internal organization*
 
@@ -11680,146 +11821,6 @@ The same substrate rules apply across scales.
 # **Status**
 This file defines the canonical identity transition mechanics for RTT‑Psych.  
 Additional specialized transitions may be added as the EcoEchoSystem evolves.
-# **RTT‑Psych — Substrate‑Aligned Psychology**  
-### *A unified model of mind, identity, emotion, and development built on the RTT/vST substrate*
-
-**RTT‑Psych** is the EcoEchoSystem’s substrate‑aligned reconstruction of psychology.  
-It replaces fragmented, observer‑locked theories with a coherent, dimensional, regime‑aware model grounded in:
-
-- **Structure (S)** — cognitive architecture, identity, boundaries  
-- **Activation (E)** — emotion, arousal, motivation, volatility  
-- **Relational Time (R)** — development, memory, temporal context  
-
-This module is the first domain to fully express the Triadic Substrate in a scientific field.  
-It is also the most cross‑domain‑connected, influencing economics, governance, AI, biology, and physics through the Substrate Event Bus.
-
-RTT‑Psych is the **root domain** of the EcoEchoSystem.
-
----
-
-## **Purpose**
-RTT‑Psych exists to:
-
-- provide a substrate‑aligned model of mind and behavior  
-- unify cognition, emotion, identity, and development  
-- define psychological regimes and transitions  
-- support multi‑scale simulation (individual → group → society)  
-- enable cross‑domain coupling with economics, governance, AI, and biology  
-- serve as the foundation for agent‑based simulation templates  
-
-This module transforms psychology from a descriptive field into a **regime‑aware, dynamic, cross‑domain science**.
-
----
-
-# **Core Components**
-
-Each component of RTT‑Psych is implemented in its own file within this directory.
-
----
-
-## **1. Structures (`structures.md`)**
-Defines the **S‑dimension** of psychology:
-
-- cognitive architecture  
-- identity structure  
-- boundary formation  
-- internal models  
-- attractor landscapes  
-
-This file establishes the stable backbone of mind.
-
----
-
-## **2. Activation Dynamics (`activation_dynamics.md`)**
-Defines the **E‑dimension**:
-
-- emotional activation  
-- arousal cycles  
-- motivational flows  
-- volatility patterns  
-- activation‑driven transitions  
-
-This is the dynamic engine of psychological behavior.
-
----
-
-## **3. Relational Time (`relational_time.md`)**
-Defines the **R‑dimension**:
-
-- developmental arcs  
-- memory integration  
-- temporal context  
-- identity evolution  
-- trauma and repair  
-
-This file models how mind unfolds across time.
-
----
-
-## **4. Psychological Regimes (`regimes.md`)**
-Defines the major psychological regimes:
-
-- cognitive modes  
-- emotional regimes  
-- identity states  
-- stability/instability basins  
-
-Each regime is substrate‑aligned and cross‑domain compatible.
-
----
-
-## **5. Regime Transitions (`transitions.md`)**
-Implements RTT‑Psych’s transition mechanics:
-
-- activation‑driven shifts  
-- developmental transitions  
-- fracture and recovery  
-- cascading transitions across domains  
-
-This file connects psychology to the global substrate dynamics.
-
----
-
-## **6. Interfaces (`interfaces.md`)**
-Defines RTT‑Psych’s cross‑domain hooks:
-
-- economics (incentives, volatility, motivation)  
-- governance (legitimacy, collective identity)  
-- AI (cognitive modeling, alignment)  
-- biology (stress, adaptation, metabolic coupling)  
-- physics (activation‑energy parallels, temporal coherence)  
-
-These interfaces allow psychology to participate in Tier 3 and Tier 4 unlocks.
-
----
-
-# **Role in the EcoEchoSystem**
-RTT‑Psych powers:
-
-- **agent simulations**  
-- **collective behavior modeling**  
-- **cross‑domain coupling**  
-- **multi‑scale simulation**  
-- **civilization‑level dynamics**  
-
-It is the most human‑facing and civilization‑shaping domain in the system.
-
----
-
-# **Directory Structure**
-
-```
-psychology/
-  README.md
-  structures.md
-  activation_dynamics.md
-  relational_time.md
-  regimes.md
-  transitions.md
-  interfaces.md
-```
-
-Each file is substrate‑aligned and interoperable with the rest of the EcoEchoSystem.
 # **Trauma Regimes**  
 ### *Substrate‑aligned models of fracture, overload, dissociation, and long‑arc reintegration*
 
@@ -12052,6 +12053,135 @@ Trauma is one of the most powerful cross‑domain forces in the EcoEchoSystem.
 # **Status**
 This file defines the canonical trauma regimes for RTT‑Psych.  
 Additional specialized regimes may be added as the EcoEchoSystem evolves.
+# **EcoEchoSystem — Substrate Engine**  
+### *The core RTT/vST layer that powers all cross‑domain simulation*
+
+The **Substrate Engine** is the foundational layer of the EcoEchoSystem.  
+It implements the RTT/vST substrate — the shared dimensional grammar that every domain module, cross‑domain system, and simulation template depends on.
+
+Where traditional simulation engines define physics, rendering, or AI as their core, the EcoEchoSystem defines **Structure (S)**, **Activation (E)**, and **Relational Time (R)** as the universal substrate. This is the layer that makes cross‑domain coherence possible.
+
+The Substrate Engine is the **root of the entire system**, the equivalent of a kernel, physics engine, and ontology combined.
+
+---
+
+## **Purpose**
+The Substrate Engine exists to:
+
+- implement the RTT/vST triadic substrate  
+- define regime boundaries and transitions  
+- enforce dimensional invariants  
+- provide a universal event bus for cross‑domain signaling  
+- ensure all modules operate on a shared, stable foundation  
+- support multi‑scale simulation (agent → city → civilization)  
+
+This layer is the **canonical source of truth** for the EcoEchoSystem.
+
+---
+
+## **Core Components**
+The Substrate Engine is organized into several key files, each representing a structural pillar of the RTT/vST substrate.
+
+### **1. Triadic Substrate (`triadic_substrate.md`)**
+Defines the three universal dimensions:
+- **Structure (S)** — identity, form, configuration  
+- **Activation (E)** — energy, affect, arousal, signal strength  
+- **Relational Time (R)** — development, memory, transitions  
+
+This file establishes the dimensional grammar used across all domains.
+
+---
+
+### **2. Regime Awareness (`regime_awareness.md`)**
+Introduces:
+- regime boundaries  
+- attractors and basins  
+- stability and instability  
+- regime blindness detection  
+
+This is the substrate’s state‑awareness layer.
+
+---
+
+### **3. Regime Transitions (`regime_transitions.md`)**
+Defines:
+- entry/exit conditions  
+- cascading transitions  
+- cross‑domain propagation  
+- activation‑driven shifts  
+
+This is the substrate’s dynamic engine.
+
+---
+
+### **4. vST Alignment (`vST_alignment.md`)**
+Implements:
+- dimensional invariants  
+- observer‑locked vs substrate‑locked states  
+- relational‑time corrections  
+- canonical alignment  
+
+This ensures all simulations remain physically and temporally coherent.
+
+---
+
+### **5. Substrate Event Bus (`event_bus.md`)**
+A universal signaling system for:
+- activation spikes  
+- structural changes  
+- regime transitions  
+- cross‑domain triggers  
+- multi‑scale propagation  
+
+This is how modules communicate across domains.
+
+---
+
+### **6. Invariants (`invariants.md`)**
+Defines the non‑negotiable rules of the substrate:
+- dimensional constraints  
+- stability conditions  
+- cross‑domain consistency requirements  
+
+These invariants ensure the entire system remains coherent.
+
+---
+
+## **How the Substrate Engine Interacts with the EcoEchoSystem**
+The Substrate Engine powers:
+
+- **Domain Modules** (psychology, physics, economics, governance, AI, biology)  
+- **Cross‑Domain Systems** (regime coupling, predictive modeling, multi‑scale simulation)  
+- **Simulation Templates** (city, civilization, cognitive agents, ecosystems)  
+- **UI Layer** (regime overlays, activation heatmaps, time‑regime controls)  
+
+Every part of the EcoEchoSystem depends on this layer.
+
+---
+
+## **Design Principles**
+The Substrate Engine follows five core principles:
+
+### **1. Substrate First**
+All modules must conform to the RTT/vST substrate.
+
+### **2. Regime‑Aware**
+State transitions are first‑class objects.
+
+### **3. Dimensional Coherence**
+Structure, activation, and relational time must remain aligned.
+
+### **4. Cross‑Domain Compatibility**
+Modules must interoperate through shared invariants.
+
+### **5. Multi‑Scale Stability**
+The same substrate rules apply across all simulation scales.
+
+---
+
+## **Status**
+This directory is actively evolving.  
+Each file will be expanded as the EcoEchoSystem grows and the substrate stabilizes.
 # **Substrate Event Bus (SEB)**  
 ### *The universal signaling layer of the EcoEchoSystem*
 
@@ -12462,135 +12592,6 @@ They are the substrate’s **non‑negotiable foundation**.
 # **Status**
 This file defines the conceptual invariants.  
 Implementation details will expand as the EcoEchoSystem evolves.
-# **EcoEchoSystem — Substrate Engine**  
-### *The core RTT/vST layer that powers all cross‑domain simulation*
-
-The **Substrate Engine** is the foundational layer of the EcoEchoSystem.  
-It implements the RTT/vST substrate — the shared dimensional grammar that every domain module, cross‑domain system, and simulation template depends on.
-
-Where traditional simulation engines define physics, rendering, or AI as their core, the EcoEchoSystem defines **Structure (S)**, **Activation (E)**, and **Relational Time (R)** as the universal substrate. This is the layer that makes cross‑domain coherence possible.
-
-The Substrate Engine is the **root of the entire system**, the equivalent of a kernel, physics engine, and ontology combined.
-
----
-
-## **Purpose**
-The Substrate Engine exists to:
-
-- implement the RTT/vST triadic substrate  
-- define regime boundaries and transitions  
-- enforce dimensional invariants  
-- provide a universal event bus for cross‑domain signaling  
-- ensure all modules operate on a shared, stable foundation  
-- support multi‑scale simulation (agent → city → civilization)  
-
-This layer is the **canonical source of truth** for the EcoEchoSystem.
-
----
-
-## **Core Components**
-The Substrate Engine is organized into several key files, each representing a structural pillar of the RTT/vST substrate.
-
-### **1. Triadic Substrate (`triadic_substrate.md`)**
-Defines the three universal dimensions:
-- **Structure (S)** — identity, form, configuration  
-- **Activation (E)** — energy, affect, arousal, signal strength  
-- **Relational Time (R)** — development, memory, transitions  
-
-This file establishes the dimensional grammar used across all domains.
-
----
-
-### **2. Regime Awareness (`regime_awareness.md`)**
-Introduces:
-- regime boundaries  
-- attractors and basins  
-- stability and instability  
-- regime blindness detection  
-
-This is the substrate’s state‑awareness layer.
-
----
-
-### **3. Regime Transitions (`regime_transitions.md`)**
-Defines:
-- entry/exit conditions  
-- cascading transitions  
-- cross‑domain propagation  
-- activation‑driven shifts  
-
-This is the substrate’s dynamic engine.
-
----
-
-### **4. vST Alignment (`vST_alignment.md`)**
-Implements:
-- dimensional invariants  
-- observer‑locked vs substrate‑locked states  
-- relational‑time corrections  
-- canonical alignment  
-
-This ensures all simulations remain physically and temporally coherent.
-
----
-
-### **5. Substrate Event Bus (`event_bus.md`)**
-A universal signaling system for:
-- activation spikes  
-- structural changes  
-- regime transitions  
-- cross‑domain triggers  
-- multi‑scale propagation  
-
-This is how modules communicate across domains.
-
----
-
-### **6. Invariants (`invariants.md`)**
-Defines the non‑negotiable rules of the substrate:
-- dimensional constraints  
-- stability conditions  
-- cross‑domain consistency requirements  
-
-These invariants ensure the entire system remains coherent.
-
----
-
-## **How the Substrate Engine Interacts with the EcoEchoSystem**
-The Substrate Engine powers:
-
-- **Domain Modules** (psychology, physics, economics, governance, AI, biology)  
-- **Cross‑Domain Systems** (regime coupling, predictive modeling, multi‑scale simulation)  
-- **Simulation Templates** (city, civilization, cognitive agents, ecosystems)  
-- **UI Layer** (regime overlays, activation heatmaps, time‑regime controls)  
-
-Every part of the EcoEchoSystem depends on this layer.
-
----
-
-## **Design Principles**
-The Substrate Engine follows five core principles:
-
-### **1. Substrate First**
-All modules must conform to the RTT/vST substrate.
-
-### **2. Regime‑Aware**
-State transitions are first‑class objects.
-
-### **3. Dimensional Coherence**
-Structure, activation, and relational time must remain aligned.
-
-### **4. Cross‑Domain Compatibility**
-Modules must interoperate through shared invariants.
-
-### **5. Multi‑Scale Stability**
-The same substrate rules apply across all simulation scales.
-
----
-
-## **Status**
-This directory is actively evolving.  
-Each file will be expanded as the EcoEchoSystem grows and the substrate stabilizes.
 # **Regime Awareness**  
 ### *The substrate’s ability to detect, represent, and respond to state boundaries*
 
@@ -14146,278 +14147,6 @@ It is the first time in scientific history that a civilization can operate with 
 # **End of the Tech Tree**
 Tier 4 completes the EcoEchoSystem tech tree.  
 Future tiers (if any) would represent **post‑substrate** or **inter‑regime** civilizations.
-# **Domain Module Template**  
-### *Canonical scaffold for substrate‑aligned domain modules*
-
-This template defines the **standard structure** for all EcoEchoSystem domain modules.  
-Every domain — scientific, social, technical, or conceptual — must express itself through the shared **Structure / Activation / Relational Time (S/E/R)** substrate.
-
-This ensures:
-- cross‑domain coherence  
-- regime compatibility  
-- simulation readiness  
-- long‑arc stability  
-
----
-
-## **Module Identity**
-
-**Domain Name:**  
-**Module Path:** `ecoechosystem/domain_modules/<domain_name>/`  
-**Primary Scale(s):** micro / meso / macro / meta  
-**Cross‑Domain Touchpoints:** psychology, biology, physics, economics, governance, AI  
-
----
-
-## **Purpose**
-Describe what this domain models and why it exists within the EcoEchoSystem.
-
-Include:
-- the phenomena this domain captures  
-- why it cannot be reduced to another domain  
-- how it contributes to civilization‑scale understanding  
-
----
-
-## **Substrate Framing (S/E/R)**
-
-Every domain must explicitly define how it expresses the shared substrate.
-
----
-
-### **Structure (S)**
-Describe the domain’s structural elements.
-
-Examples:
-- architectures  
-- networks  
-- identities  
-- boundaries  
-- hierarchies  
-
-Clarify:
-- what persists  
-- what constrains behavior  
-- what defines coherence  
-
----
-
-### **Activation (E)**
-Describe how intensity, energy, or pressure manifests.
-
-Examples:
-- stress  
-- volatility  
-- metabolic load  
-- cognitive effort  
-- resource flow  
-
-Clarify:
-- what drives change  
-- what amplifies instability  
-- what requires regulation  
-
----
-
-### **Relational Time (R)**
-Describe how time operates in this domain.
-
-Examples:
-- cycles  
-- development  
-- succession  
-- learning  
-- long‑arc evolution  
-
-Clarify:
-- recovery rhythms  
-- horizon compression/expansion  
-- memory and inertia  
-
----
-
-## **Core Regimes**
-Define the canonical regimes of this domain.
-
-Each regime should specify:
-- S configuration  
-- E intensity  
-- R behavior  
-
-Examples:
-- stable regime  
-- high‑activation regime  
-- scarcity regime  
-- collapse regime  
-- integrative regime  
-
-Regimes must be compatible with the **Regime Coupling Engine**.
-
----
-
-## **Dynamics**
-Describe how the domain behaves over time.
-
-Include:
-- typical transitions between regimes  
-- drivers of change  
-- internal feedback patterns  
-
-This section explains **motion**, not structure.
-
----
-
-## **Stability Cycles**
-Define the recurring cycles that preserve coherence.
-
-Examples:
-- homeostasis cycles  
-- stress–recovery cycles  
-- scarcity–adaptation cycles  
-- collapse–renewal cycles  
-
-Clarify:
-- what stabilizes the domain  
-- what destabilizes it  
-- how recovery occurs  
-
----
-
-## **Feedback Loops**
-Describe how actions feed back into the system.
-
-Include:
-- negative (stabilizing) loops  
-- positive (amplifying) loops  
-- adaptive (learning) loops  
-- runaway (collapse) loops  
-
-Specify:
-- gain sensitivity  
-- delay effects  
-- failure modes  
-
----
-
-## **Networks**
-Describe the structural topology of the domain.
-
-Examples:
-- interaction networks  
-- resource networks  
-- information networks  
-- activation pathways  
-
-Clarify:
-- hubs  
-- bottlenecks  
-- redundancy  
-- fragility points  
-
----
-
-## **Cross‑Domain Interfaces**
-Describe how this domain connects to others.
-
-Reference:
-- interface types  
-- coupling strength  
-- translation mechanisms  
-
-Explicitly note:
-- what flows out  
-- what flows in  
-- what is buffered  
-
----
-
-## **Cross‑Domain Mappings**
-Map this domain’s S/E/R expressions to others.
-
-Examples:
-- biological ↔ economic  
-- psychological ↔ governance  
-- physical ↔ ecological  
-
-This ensures **semantic compatibility**.
-
----
-
-## **Multi‑Scale Behavior**
-Describe how the domain behaves across scale.
-
-Include:
-- micro‑level dynamics  
-- meso‑level aggregation  
-- macro‑level regimes  
-- long‑arc evolution  
-
-Clarify:
-- bottom‑up emergence  
-- top‑down constraint  
-
----
-
-## **Simulation Hooks**
-Define how this domain can be simulated.
-
-Include:
-- state variables  
-- regime indicators  
-- transition triggers  
-- control levers  
-- observability signals  
-
-This section enables **executable modeling**.
-
----
-
-## **Failure Modes**
-Describe how the domain breaks.
-
-Include:
-- fragmentation  
-- runaway activation  
-- temporal collapse  
-- interface failure  
-
-Failure modes are critical for resilience modeling.
-
----
-
-## **Integration Notes**
-Summarize how this domain fits into the EcoEchoSystem.
-
-Include:
-- key dependencies  
-- stabilization roles  
-- amplification risks  
-- renewal potential  
-
----
-
-## **Status**
-Indicate maturity level:
-- draft  
-- stable  
-- evolving  
-- deprecated  
-
----
-
-## **Usage Guidance**
-Optional notes for contributors and AI agents.
-
-Include:
-- extension guidelines  
-- known limitations  
-- future expansion paths  
-
----
-
-### **Template Usage Rule**
-This template must be followed unless deviation is explicitly justified.  
-Creativity is encouraged — **substrate incoherence is not**.
 # **EcoEchoSystem Templates**  
 ### *Canonical scaffolds for creating coherent, substrate‑aligned modules*
 
@@ -14612,6 +14341,274 @@ Additional templates may be added as the EcoEchoSystem evolves.
 ## **Status**
 This directory defines the canonical scaffolding system for the EcoEchoSystem.  
 All new modules should reference these templates unless explicitly justified otherwise.
+# **City Simulation Template**  
+### *A substrate‑aligned scaffold for modeling cities as living, multi‑domain systems*
+
+Cities are not collections of buildings — they are **dense convergence zones** where nearly every EcoEchoSystem domain interacts simultaneously.  
+A city simulation models how **Structure (S)**, **Activation (E)**, and **Relational Time (R)** co‑evolve across:
+
+- population  
+- infrastructure  
+- economy  
+- governance  
+- ecology  
+- psychology  
+- technology  
+
+This template defines how to build **coherent, cross‑domain city simulations** that remain compatible with the EcoEchoSystem substrate.
+
+---
+
+## **Purpose**
+The city simulation template exists to:
+
+- model cities as living, adaptive systems  
+- integrate multiple domains at a single spatial scale  
+- support regime shifts, crises, and recovery  
+- enable scenario exploration and policy testing  
+- serve as a bridge between micro agents and civilization‑scale dynamics  
+- remain simulation‑ready and extensible  
+
+Cities are **substrate amplifiers** — small changes propagate fast.
+
+---
+
+## **City as a Substrate Node**
+
+In EcoEchoSystem terms, a city is:
+
+- a **structural hub**  
+- an **activation concentrator**  
+- a **temporal accelerator**  
+
+Cities compress time, intensify energy, and densify structure.
+
+---
+
+## **Substrate Framing (S/E/R)**
+
+Every city simulation must explicitly define its S/E/R expression.
+
+---
+
+### **Structure (S)**
+Defines the city’s persistent architecture.
+
+Examples:
+- spatial layout  
+- infrastructure networks  
+- zoning and land use  
+- institutional structures  
+- demographic distribution  
+
+Clarify:
+- what constrains movement  
+- what defines neighborhoods  
+- where bottlenecks and hubs exist  
+
+---
+
+### **Activation (E)**
+Defines intensity and pressure within the city.
+
+Examples:
+- economic activity  
+- traffic and mobility  
+- stress and unrest  
+- energy consumption  
+- information flow  
+
+Clarify:
+- what drives volatility  
+- what amplifies instability  
+- what requires regulation  
+
+---
+
+### **Relational Time (R)**
+Defines how time behaves in the city.
+
+Examples:
+- daily rhythms  
+- economic cycles  
+- development timelines  
+- crisis compression  
+- long‑term growth or decay  
+
+Clarify:
+- recovery pacing  
+- planning horizons  
+- temporal memory  
+
+---
+
+## **Core City Regimes**
+Define the canonical regimes a city can occupy.
+
+Examples:
+- stable growth regime  
+- high‑activation boom regime  
+- scarcity or austerity regime  
+- unrest or collapse regime  
+- recovery and reintegration regime  
+
+Each regime must specify:
+- S configuration  
+- E intensity  
+- R behavior  
+
+---
+
+## **City Dynamics**
+Describe how the city changes over time.
+
+Include:
+- regime transitions  
+- drivers of growth or decline  
+- internal feedback patterns  
+- external shocks  
+
+This section defines **motion**, not layout.
+
+---
+
+## **Stability Cycles**
+Define recurring city‑scale cycles.
+
+Examples:
+- growth → congestion → adaptation  
+- stress → unrest → reform  
+- expansion → fragmentation → reintegration  
+
+Clarify:
+- what stabilizes the city  
+- what destabilizes it  
+- how recovery occurs  
+
+---
+
+## **Feedback Loops**
+Describe how city actions feed back into themselves.
+
+Examples:
+- economic growth ↔ housing pressure  
+- congestion ↔ infrastructure investment  
+- unrest ↔ governance response  
+
+Include:
+- stabilizing loops  
+- amplifying loops  
+- learning loops  
+- collapse loops  
+
+---
+
+## **City Networks**
+Define the city’s internal topology.
+
+Examples:
+- transportation networks  
+- economic networks  
+- social networks  
+- information networks  
+- ecological flows  
+
+Clarify:
+- hubs  
+- chokepoints  
+- redundancy  
+- fragility  
+
+---
+
+## **Cross‑Domain Interfaces**
+Describe how the city interfaces with domains.
+
+Examples:
+- ecology ↔ economy  
+- psychology ↔ governance  
+- infrastructure ↔ biology  
+
+Cities are **interface‑dense environments**.
+
+---
+
+## **Multi‑Scale Behavior**
+Describe how city dynamics span scale.
+
+Examples:
+- individual agents  
+- neighborhoods  
+- districts  
+- metropolitan region  
+
+Clarify:
+- bottom‑up emergence  
+- top‑down constraint  
+
+---
+
+## **Simulation Hooks**
+Define how the city can be simulated.
+
+Include:
+- state variables  
+- regime indicators  
+- transition triggers  
+- control levers  
+- observability metrics  
+
+This enables **playable and testable models**.
+
+---
+
+## **Failure Modes**
+Describe how the city breaks.
+
+Examples:
+- infrastructure collapse  
+- economic implosion  
+- governance failure  
+- social fragmentation  
+
+Failure modes are critical for resilience modeling.
+
+---
+
+## **Integration Notes**
+Summarize how the city fits into larger systems.
+
+Examples:
+- regional economy  
+- national governance  
+- planetary ecology  
+
+Cities are **civilization microcosms**.
+
+---
+
+## **Status**
+Indicate maturity:
+- concept  
+- prototype  
+- stable  
+- evolving  
+
+---
+
+## **Usage Guidance**
+Notes for contributors and AI agents.
+
+Include:
+- extension patterns  
+- known limitations  
+- scenario ideas  
+
+---
+
+### **Template Usage Rule**
+This template must be followed for all city‑scale simulations unless deviation is explicitly justified.  
+Cities are complex — **substrate incoherence is catastrophic**.
 # **City Simulation Loop**  
 ### *The unified execution cycle that advances all city subsystems through time*
 
@@ -16332,274 +16329,6 @@ Cities fall apart **emotionally before structurally**.
 # **Status**
 Canonical city‑scale population activation framework.  
 Designed for extension by demographic, cultural, or psychological layers.
-# **City Simulation Template**  
-### *A substrate‑aligned scaffold for modeling cities as living, multi‑domain systems*
-
-Cities are not collections of buildings — they are **dense convergence zones** where nearly every EcoEchoSystem domain interacts simultaneously.  
-A city simulation models how **Structure (S)**, **Activation (E)**, and **Relational Time (R)** co‑evolve across:
-
-- population  
-- infrastructure  
-- economy  
-- governance  
-- ecology  
-- psychology  
-- technology  
-
-This template defines how to build **coherent, cross‑domain city simulations** that remain compatible with the EcoEchoSystem substrate.
-
----
-
-## **Purpose**
-The city simulation template exists to:
-
-- model cities as living, adaptive systems  
-- integrate multiple domains at a single spatial scale  
-- support regime shifts, crises, and recovery  
-- enable scenario exploration and policy testing  
-- serve as a bridge between micro agents and civilization‑scale dynamics  
-- remain simulation‑ready and extensible  
-
-Cities are **substrate amplifiers** — small changes propagate fast.
-
----
-
-## **City as a Substrate Node**
-
-In EcoEchoSystem terms, a city is:
-
-- a **structural hub**  
-- an **activation concentrator**  
-- a **temporal accelerator**  
-
-Cities compress time, intensify energy, and densify structure.
-
----
-
-## **Substrate Framing (S/E/R)**
-
-Every city simulation must explicitly define its S/E/R expression.
-
----
-
-### **Structure (S)**
-Defines the city’s persistent architecture.
-
-Examples:
-- spatial layout  
-- infrastructure networks  
-- zoning and land use  
-- institutional structures  
-- demographic distribution  
-
-Clarify:
-- what constrains movement  
-- what defines neighborhoods  
-- where bottlenecks and hubs exist  
-
----
-
-### **Activation (E)**
-Defines intensity and pressure within the city.
-
-Examples:
-- economic activity  
-- traffic and mobility  
-- stress and unrest  
-- energy consumption  
-- information flow  
-
-Clarify:
-- what drives volatility  
-- what amplifies instability  
-- what requires regulation  
-
----
-
-### **Relational Time (R)**
-Defines how time behaves in the city.
-
-Examples:
-- daily rhythms  
-- economic cycles  
-- development timelines  
-- crisis compression  
-- long‑term growth or decay  
-
-Clarify:
-- recovery pacing  
-- planning horizons  
-- temporal memory  
-
----
-
-## **Core City Regimes**
-Define the canonical regimes a city can occupy.
-
-Examples:
-- stable growth regime  
-- high‑activation boom regime  
-- scarcity or austerity regime  
-- unrest or collapse regime  
-- recovery and reintegration regime  
-
-Each regime must specify:
-- S configuration  
-- E intensity  
-- R behavior  
-
----
-
-## **City Dynamics**
-Describe how the city changes over time.
-
-Include:
-- regime transitions  
-- drivers of growth or decline  
-- internal feedback patterns  
-- external shocks  
-
-This section defines **motion**, not layout.
-
----
-
-## **Stability Cycles**
-Define recurring city‑scale cycles.
-
-Examples:
-- growth → congestion → adaptation  
-- stress → unrest → reform  
-- expansion → fragmentation → reintegration  
-
-Clarify:
-- what stabilizes the city  
-- what destabilizes it  
-- how recovery occurs  
-
----
-
-## **Feedback Loops**
-Describe how city actions feed back into themselves.
-
-Examples:
-- economic growth ↔ housing pressure  
-- congestion ↔ infrastructure investment  
-- unrest ↔ governance response  
-
-Include:
-- stabilizing loops  
-- amplifying loops  
-- learning loops  
-- collapse loops  
-
----
-
-## **City Networks**
-Define the city’s internal topology.
-
-Examples:
-- transportation networks  
-- economic networks  
-- social networks  
-- information networks  
-- ecological flows  
-
-Clarify:
-- hubs  
-- chokepoints  
-- redundancy  
-- fragility  
-
----
-
-## **Cross‑Domain Interfaces**
-Describe how the city interfaces with domains.
-
-Examples:
-- ecology ↔ economy  
-- psychology ↔ governance  
-- infrastructure ↔ biology  
-
-Cities are **interface‑dense environments**.
-
----
-
-## **Multi‑Scale Behavior**
-Describe how city dynamics span scale.
-
-Examples:
-- individual agents  
-- neighborhoods  
-- districts  
-- metropolitan region  
-
-Clarify:
-- bottom‑up emergence  
-- top‑down constraint  
-
----
-
-## **Simulation Hooks**
-Define how the city can be simulated.
-
-Include:
-- state variables  
-- regime indicators  
-- transition triggers  
-- control levers  
-- observability metrics  
-
-This enables **playable and testable models**.
-
----
-
-## **Failure Modes**
-Describe how the city breaks.
-
-Examples:
-- infrastructure collapse  
-- economic implosion  
-- governance failure  
-- social fragmentation  
-
-Failure modes are critical for resilience modeling.
-
----
-
-## **Integration Notes**
-Summarize how the city fits into larger systems.
-
-Examples:
-- regional economy  
-- national governance  
-- planetary ecology  
-
-Cities are **civilization microcosms**.
-
----
-
-## **Status**
-Indicate maturity:
-- concept  
-- prototype  
-- stable  
-- evolving  
-
----
-
-## **Usage Guidance**
-Notes for contributors and AI agents.
-
-Include:
-- extension patterns  
-- known limitations  
-- scenario ideas  
-
----
-
-### **Template Usage Rule**
-This template must be followed for all city‑scale simulations unless deviation is explicitly justified.  
-Cities are complex — **substrate incoherence is catastrophic**.
 # **Resource Dynamics**  
 ### *How material, energy, and informational resources flow through a city across S/E/R*
 
@@ -17124,7 +16853,277 @@ They are the **interface between intent and dynamics**.
 # **Status**
 Canonical city‑scale scenario template framework.  
 Designed for extension by domain‑specific or narrative layers.
-# **Civilization Simulation Loop**  
+# **Civilization Simulation Template**  
+### *A substrate‑aligned scaffold for modeling civilizations as long‑arc, multi‑city systems*
+
+Civilizations are not large cities.  
+They are **networks of cities**, institutions, cultures, ecologies, and technologies evolving across **deep time**.
+
+The civilization simulation layer models how:
+- cities interact and specialize  
+- regimes persist or collapse across generations  
+- inequality, legitimacy, and memory accumulate  
+- innovation reshapes structure  
+- civilizations rise, fragment, or transform  
+
+Civilization simulation is **slow, structural, and irreversible**.
+
+---
+
+## **Purpose**
+The civilization simulation template exists to:
+
+- model long‑arc societal dynamics  
+- integrate multiple cities into coherent wholes  
+- explore rise, stagnation, collapse, and renewal  
+- support historical, speculative, and future modeling  
+- remain compatible with city‑scale simulations  
+- preserve substrate coherence across centuries  
+
+Civilizations are **time‑amplified systems**.
+
+---
+
+## **Civilization as a Substrate Entity**
+
+In EcoEchoSystem terms, a civilization is:
+
+- a **structural super‑network**  
+- an **activation regulator**  
+- a **temporal memory engine**  
+
+Civilizations compress space and stretch time.
+
+---
+
+## **Substrate Framing (S/E/R)**
+
+Every civilization simulation must explicitly define its S/E/R expression.
+
+---
+
+### **Structure (S)**
+Defines the civilization’s persistent architecture.
+
+Examples:
+- city networks  
+- governance hierarchies  
+- trade routes  
+- cultural institutions  
+- technological infrastructure  
+
+Clarify:
+- how cities are connected  
+- where power concentrates  
+- what persists across generations  
+
+---
+
+### **Activation (E)**
+Defines intensity and pressure at the civilization scale.
+
+Examples:
+- expansion drives  
+- conflict intensity  
+- innovation surges  
+- systemic stress  
+
+Clarify:
+- what accelerates change  
+- what destabilizes coherence  
+- what requires regulation  
+
+---
+
+### **Relational Time (R)**
+Defines how time behaves across the civilization.
+
+Examples:
+- generational cycles  
+- institutional inertia  
+- cultural memory  
+- collapse and recovery arcs  
+
+Clarify:
+- horizon length  
+- recovery lag  
+- historical persistence  
+
+---
+
+## **Core Civilization Regimes**
+Define the canonical regimes a civilization can occupy.
+
+Examples:
+- stable integration regime  
+- expansionist regime  
+- overextension regime  
+- fragmentation regime  
+- collapse regime  
+- renewal or transformation regime  
+
+Each regime specifies:
+- S configuration  
+- E intensity  
+- R behavior  
+
+---
+
+## **Civilization Dynamics**
+Describe how civilizations change over time.
+
+Include:
+- city growth and decline  
+- regime transitions  
+- innovation diffusion  
+- conflict and cooperation  
+
+This section defines **historical motion**.
+
+---
+
+## **Stability Cycles**
+Define recurring civilization‑scale cycles.
+
+Examples:
+- expansion → saturation → contraction  
+- innovation → disruption → integration  
+- inequality → unrest → reform  
+
+Civilization cycles operate over **decades to centuries**.
+
+---
+
+## **Feedback Loops**
+Describe long‑arc feedback patterns.
+
+Examples:
+- inequality ↔ legitimacy  
+- expansion ↔ overextension  
+- innovation ↔ disruption  
+
+Civilization feedback loops are **slow but decisive**.
+
+---
+
+## **Civilization Networks**
+Define the macro‑topology.
+
+Examples:
+- trade networks  
+- information networks  
+- military alliances  
+- cultural diffusion paths  
+
+Clarify:
+- hubs  
+- peripheries  
+- chokepoints  
+
+---
+
+## **City–Civilization Interface**
+Describe how cities and civilization interact.
+
+Include:
+- resource extraction  
+- governance delegation  
+- cultural influence  
+- crisis propagation  
+
+Cities are **civilization sensors and actuators**.
+
+---
+
+## **Cross‑Domain Coupling**
+Describe how civilization‑scale dynamics interact with:
+
+- ecology  
+- economics  
+- governance  
+- psychology  
+- technology  
+
+Civilizations reshape the substrate itself.
+
+---
+
+## **Multi‑Scale Integration**
+Describe how scales interact.
+
+Examples:
+- city unrest triggering civilizational reform  
+- civilization collapse cascading into city failure  
+- innovation spreading unevenly  
+
+Clarify:
+- bottom‑up emergence  
+- top‑down constraint  
+
+---
+
+## **Simulation Hooks**
+Define how civilization dynamics can be simulated.
+
+Include:
+- regime indicators  
+- generational timers  
+- expansion thresholds  
+- collapse triggers  
+- reform levers  
+
+These hooks enable **historical and future modeling**.
+
+---
+
+## **Failure Modes**
+Describe how civilizations break.
+
+Examples:
+- overextension  
+- legitimacy collapse  
+- ecological overshoot  
+- institutional rigidity  
+
+Civilizations rarely fall suddenly — they **harden, then shatter**.
+
+---
+
+## **Integration Notes**
+Summarize how civilization simulation fits into EcoEchoSystem.
+
+Include:
+- relationship to city simulations  
+- cross‑domain dependencies  
+- long‑arc learning potential  
+
+Civilization simulation is the **memory layer** of the system.
+
+---
+
+## **Status**
+Indicate maturity:
+- conceptual  
+- prototype  
+- stable  
+- evolving  
+
+---
+
+## **Usage Guidance**
+Notes for contributors and AI agents.
+
+Include:
+- extension patterns  
+- historical analogs  
+- speculative futures  
+
+---
+
+### **Template Usage Rule**
+This template must be followed for all civilization‑scale simulations unless deviation is explicitly justified.  
+Civilizations are slow — **substrate incoherence compounds catastrophically**.
+# **Civilization Simulation Loop**  
 ### *The long‑arc execution cycle governing civilization‑scale evolution*
 
 The civilization simulation loop defines **how a civilization unfolds through time**.
@@ -17380,7 +17379,7 @@ This file is the **bridge between cities and history**.
 # **Status**
 Canonical civilization‑scale simulation loop definition.  
 Designed for analytical models, historical simulation, and speculative futures.
-# **Cultural Regimes**  
+# **Cultural Regimes**  
 ### *How shared meaning, identity, and norms stabilize or destabilize civilizations*
 
 Culture is the **operating system of civilization**.  
@@ -18483,277 +18482,7 @@ This file defines **how humans and AI think together** inside the EcoEchoSystem.
 # **Status**
 Canonical guided AI exploration methodology.  
 Designed for research, education, foresight, and reflective simulation.
-# **Civilization Simulation Template**  
-### *A substrate‑aligned scaffold for modeling civilizations as long‑arc, multi‑city systems*
-
-Civilizations are not large cities.  
-They are **networks of cities**, institutions, cultures, ecologies, and technologies evolving across **deep time**.
-
-The civilization simulation layer models how:
-- cities interact and specialize  
-- regimes persist or collapse across generations  
-- inequality, legitimacy, and memory accumulate  
-- innovation reshapes structure  
-- civilizations rise, fragment, or transform  
-
-Civilization simulation is **slow, structural, and irreversible**.
-
----
-
-## **Purpose**
-The civilization simulation template exists to:
-
-- model long‑arc societal dynamics  
-- integrate multiple cities into coherent wholes  
-- explore rise, stagnation, collapse, and renewal  
-- support historical, speculative, and future modeling  
-- remain compatible with city‑scale simulations  
-- preserve substrate coherence across centuries  
-
-Civilizations are **time‑amplified systems**.
-
----
-
-## **Civilization as a Substrate Entity**
-
-In EcoEchoSystem terms, a civilization is:
-
-- a **structural super‑network**  
-- an **activation regulator**  
-- a **temporal memory engine**  
-
-Civilizations compress space and stretch time.
-
----
-
-## **Substrate Framing (S/E/R)**
-
-Every civilization simulation must explicitly define its S/E/R expression.
-
----
-
-### **Structure (S)**
-Defines the civilization’s persistent architecture.
-
-Examples:
-- city networks  
-- governance hierarchies  
-- trade routes  
-- cultural institutions  
-- technological infrastructure  
-
-Clarify:
-- how cities are connected  
-- where power concentrates  
-- what persists across generations  
-
----
-
-### **Activation (E)**
-Defines intensity and pressure at the civilization scale.
-
-Examples:
-- expansion drives  
-- conflict intensity  
-- innovation surges  
-- systemic stress  
-
-Clarify:
-- what accelerates change  
-- what destabilizes coherence  
-- what requires regulation  
-
----
-
-### **Relational Time (R)**
-Defines how time behaves across the civilization.
-
-Examples:
-- generational cycles  
-- institutional inertia  
-- cultural memory  
-- collapse and recovery arcs  
-
-Clarify:
-- horizon length  
-- recovery lag  
-- historical persistence  
-
----
-
-## **Core Civilization Regimes**
-Define the canonical regimes a civilization can occupy.
-
-Examples:
-- stable integration regime  
-- expansionist regime  
-- overextension regime  
-- fragmentation regime  
-- collapse regime  
-- renewal or transformation regime  
-
-Each regime specifies:
-- S configuration  
-- E intensity  
-- R behavior  
-
----
-
-## **Civilization Dynamics**
-Describe how civilizations change over time.
-
-Include:
-- city growth and decline  
-- regime transitions  
-- innovation diffusion  
-- conflict and cooperation  
-
-This section defines **historical motion**.
-
----
-
-## **Stability Cycles**
-Define recurring civilization‑scale cycles.
-
-Examples:
-- expansion → saturation → contraction  
-- innovation → disruption → integration  
-- inequality → unrest → reform  
-
-Civilization cycles operate over **decades to centuries**.
-
----
-
-## **Feedback Loops**
-Describe long‑arc feedback patterns.
-
-Examples:
-- inequality ↔ legitimacy  
-- expansion ↔ overextension  
-- innovation ↔ disruption  
-
-Civilization feedback loops are **slow but decisive**.
-
----
-
-## **Civilization Networks**
-Define the macro‑topology.
-
-Examples:
-- trade networks  
-- information networks  
-- military alliances  
-- cultural diffusion paths  
-
-Clarify:
-- hubs  
-- peripheries  
-- chokepoints  
-
----
-
-## **City–Civilization Interface**
-Describe how cities and civilization interact.
-
-Include:
-- resource extraction  
-- governance delegation  
-- cultural influence  
-- crisis propagation  
-
-Cities are **civilization sensors and actuators**.
-
----
-
-## **Cross‑Domain Coupling**
-Describe how civilization‑scale dynamics interact with:
-
-- ecology  
-- economics  
-- governance  
-- psychology  
-- technology  
-
-Civilizations reshape the substrate itself.
-
----
-
-## **Multi‑Scale Integration**
-Describe how scales interact.
-
-Examples:
-- city unrest triggering civilizational reform  
-- civilization collapse cascading into city failure  
-- innovation spreading unevenly  
-
-Clarify:
-- bottom‑up emergence  
-- top‑down constraint  
-
----
-
-## **Simulation Hooks**
-Define how civilization dynamics can be simulated.
-
-Include:
-- regime indicators  
-- generational timers  
-- expansion thresholds  
-- collapse triggers  
-- reform levers  
-
-These hooks enable **historical and future modeling**.
-
----
-
-## **Failure Modes**
-Describe how civilizations break.
-
-Examples:
-- overextension  
-- legitimacy collapse  
-- ecological overshoot  
-- institutional rigidity  
-
-Civilizations rarely fall suddenly — they **harden, then shatter**.
-
----
-
-## **Integration Notes**
-Summarize how civilization simulation fits into EcoEchoSystem.
-
-Include:
-- relationship to city simulations  
-- cross‑domain dependencies  
-- long‑arc learning potential  
-
-Civilization simulation is the **memory layer** of the system.
-
----
-
-## **Status**
-Indicate maturity:
-- conceptual  
-- prototype  
-- stable  
-- evolving  
-
----
-
-## **Usage Guidance**
-Notes for contributors and AI agents.
-
-Include:
-- extension patterns  
-- historical analogs  
-- speculative futures  
-
----
-
-### **Template Usage Rule**
-This template must be followed for all civilization‑scale simulations unless deviation is explicitly justified.  
-Civilizations are slow — **substrate incoherence compounds catastrophically**.
-# **Repeatable Lab Template**  
+# **Repeatable Lab Template**  
 ### *A canonical scaffold for historical, civilizational, and foresight inquiry*
 
 This template defines the **minimum complete structure** for a repeatable EcoEchoSystem lab.  
@@ -19174,6 +18903,177 @@ Technology is not destiny — **alignment is**.
 # **Status**
 Canonical civilization‑scale technology integration framework.  
 Designed to integrate directly with EcoEchoSystem tech tree tiers and unlock logic.
+# **Worked Roman–Persian Interaction Arc**  
+### *A canonical multi‑century rivalry between peer civilizations*
+
+The Roman and Persian civilizations represent one of history’s longest sustained **peer‑level civilizational interactions**.
+
+Neither fully conquered the other.  
+Both were reshaped by the interaction.
+
+This arc demonstrates how **persistent rivalry without resolution** drives internal transformation, rigidity, and eventual vulnerability.
+
+---
+
+## **Purpose**
+This worked arc exists to:
+
+- ground cross‑civilization interaction models in a real historical pattern  
+- demonstrate long‑arc rivalry dynamics  
+- show how external pressure reshapes internal governance and culture  
+- provide calibration for multi‑civilization simulation  
+- train AI agents on asymmetric, non‑terminal interaction  
+
+This is a **structural stalemate**, not a victory narrative.
+
+---
+
+## **Participating Civilizations**
+
+### **Civilization A — Roman World**
+- governance: republican → imperial → bureaucratic  
+- culture: civic → imperial → defensive  
+- technology: military engineering, administration  
+- inequality: rising elite concentration  
+
+---
+
+### **Civilization B — Persian World (Parthian → Sassanian)**
+- governance: dynastic → centralized imperial  
+- culture: royal‑cosmic legitimacy  
+- technology: cavalry warfare, administrative continuity  
+- inequality: aristocratic consolidation  
+
+---
+
+## **Initial Interaction Regime**
+
+### **Interaction Mode**
+- competitive rivalry  
+- border conflict  
+- symbolic parity  
+
+### **S/E/R State**
+- **S:** fortified frontiers, mirrored institutions  
+- **E:** sustained military activation  
+- **R:** long‑term rivalry normalization  
+
+Neither civilization could disengage without legitimacy loss.
+
+---
+
+## **Phase I — Expansion & Mutual Recognition**
+
+### **Dynamics**
+- Rome expands eastward  
+- Persia consolidates imperial identity  
+- borders stabilize into contested zones  
+
+### **Effects**
+- military specialization  
+- frontier institutionalization  
+- cultural othering  
+
+### **S/E/R Summary**
+- **S:** frontier becomes permanent structure  
+- **E:** conflict becomes routine  
+- **R:** rivalry embedded into generational memory  
+
+---
+
+## **Phase II — Institutional Hardening**
+
+### **Dynamics**
+- Rome centralizes authority to manage scale  
+- Persia reinforces dynastic legitimacy  
+- military expenditure rises  
+
+### **Effects**
+- governance rigidity  
+- elite capture  
+- inequality persistence  
+
+### **S/E/R Summary**
+- **S:** institutions optimize for rivalry, not adaptation  
+- **E:** activation drains surplus  
+- **R:** future horizons narrow  
+
+---
+
+## **Phase III — Asymmetric Adaptation**
+
+### **Dynamics**
+- Persia adapts faster to cavalry warfare  
+- Rome compensates with bureaucracy and logistics  
+- neither achieves decisive advantage  
+
+### **Effects**
+- technological arms race  
+- administrative overreach  
+- cultural defensiveness  
+
+### **S/E/R Summary**
+- **S:** adaptation favors specialization over flexibility  
+- **E:** escalation without resolution  
+- **R:** compressed recovery windows  
+
+---
+
+## **Phase IV — Exhaustion & External Shock**
+
+### **Dynamics**
+- prolonged conflict weakens both civilizations  
+- internal legitimacy erodes  
+- new external actors emerge  
+
+### **Effects**
+- frontier collapse  
+- rapid territorial loss  
+- institutional failure  
+
+### **S/E/R Summary**
+- **S:** hardened structures shatter under new pressure  
+- **E:** activation exceeds control capacity  
+- **R:** collapse accelerates beyond recovery  
+
+---
+
+## **Outcome**
+- neither civilization “wins”  
+- both are structurally weakened  
+- successor systems inherit fragmented legacies  
+
+The rivalry **consumed adaptive capacity**.
+
+---
+
+## **Cross‑Arc Structural Insights**
+
+Recurring patterns revealed:
+- peer rivalry drives centralization  
+- unresolved conflict hardens institutions  
+- long stalemates exhaust legitimacy  
+- collapse often comes from *outside the rivalry*  
+
+Civilizations fall not from defeat — but from **being shaped too long by the same enemy**.
+
+---
+
+## **Simulation Integration Notes**
+
+This arc calibrates:
+- rivalry escalation thresholds  
+- institutional rigidity accumulation  
+- exhaustion‑driven collapse timing  
+- asymmetric adaptation dynamics  
+
+It is a **benchmark case** for multi‑civilization simulation.
+
+---
+
+## **Status**
+Canonical worked cross‑civilization interaction arc.  
+Designed for simulation grounding, AI training, and comparative analysis.
 # **Worked Guided Exploration Transcripts**  
 ### *Canonical records of AI‑guided historical and civilizational inquiry*
 
@@ -19865,177 +19765,133 @@ History is not deterministic — but it **rhymes structurally**.
 # **Status**
 Canonical worked governance arc reference.  
 Designed for simulation grounding, education, and AI training.
-# **Worked Roman–Persian Interaction Arc**  
-### *A canonical multi‑century rivalry between peer civilizations*
+# Cognitive agent simulation template README
 
-The Roman and Persian civilizations represent one of history’s longest sustained **peer‑level civilizational interactions**.
+Welcome to the **Cognitive Agent Simulation** template set. This directory is where EcoEchoSystem stops being “a world that runs” and becomes “a world that notices.”
 
-Neither fully conquered the other.  
-Both were reshaped by the interaction.
+City, civilization, and planetary layers describe **external dynamics**: resources, governance, interactions, regimes, collapse, renewal. The cognitive agent layer describes **internal dynamics**: perception, memory, belief, motivation, coordination, and choice—bounded by time, attention, and legitimacy.
 
-This arc demonstrates how **persistent rivalry without resolution** drives internal transformation, rigidity, and eventual vulnerability.
+An agent here is not a personality. It’s a **constraint‑shaped decision process**.
 
 ---
 
-## **Purpose**
-This worked arc exists to:
+## Purpose
 
-- ground cross‑civilization interaction models in a real historical pattern  
-- demonstrate long‑arc rivalry dynamics  
-- show how external pressure reshapes internal governance and culture  
-- provide calibration for multi‑civilization simulation  
-- train AI agents on asymmetric, non‑terminal interaction  
+This template set exists to:
 
-This is a **structural stalemate**, not a victory narrative.
-
----
-
-## **Participating Civilizations**
-
-### **Civilization A — Roman World**
-- governance: republican → imperial → bureaucratic  
-- culture: civic → imperial → defensive  
-- technology: military engineering, administration  
-- inequality: rising elite concentration  
+- **define agent architecture** compatible with EcoEchoSystem’s substrate-first design
+- **standardize cognition primitives** for humans, institutions, and hybrid entities
+- **support multi-agent simulation** with bounded rationality and social influence
+- **enable AI-assisted exploration** without turning agents into oracles
+- **preserve S/E/R coherence** inside minds, not just societies
 
 ---
 
-### **Civilization B — Persian World (Parthian → Sassanian)**
-- governance: dynastic → centralized imperial  
-- culture: royal‑cosmic legitimacy  
-- technology: cavalry warfare, administrative continuity  
-- inequality: aristocratic consolidation  
+## What belongs in this folder
+
+This directory contains templates for modeling cognition as a system:
+
+- **agent loops** (perceive → interpret → decide → act → learn)
+- **memory systems** (short, long, institutional, cultural)
+- **belief and narrative dynamics** (legitimacy, ideology, identity)
+- **attention and salience** (what gets noticed vs ignored)
+- **motivation and utility proxies** (needs, values, status, safety)
+- **coordination and trust** (networks, reputation, signaling)
+- **conflict and persuasion** (propaganda, misinformation, polarization)
+- **time-bounded learning** (habituation, trauma, forgetting, drift)
+
+If a mechanism changes *how agents choose*, it belongs here.
 
 ---
 
-## **Initial Interaction Regime**
+## Substrate alignment for cognition
 
-### **Interaction Mode**
-- competitive rivalry  
-- border conflict  
-- symbolic parity  
+Cognitive models must remain compatible with the EcoEchoSystem substrate:
 
-### **S/E/R State**
-- **S:** fortified frontiers, mirrored institutions  
-- **E:** sustained military activation  
-- **R:** long‑term rivalry normalization  
+- **Structure (S):** internal representations, social graphs, roles, institutional scaffolds  
+- **Activation (E):** stress, urgency, arousal, persuasion intensity, conflict load  
+- **Relational time (R):** attention cycles, memory half-life, learning lag, generational transmission  
 
-Neither civilization could disengage without legitimacy loss.
+Cognition is where **activation meets meaning**.
 
 ---
 
-## **Phase I — Expansion & Mutual Recognition**
+## Agent classes
 
-### **Dynamics**
-- Rome expands eastward  
-- Persia consolidates imperial identity  
-- borders stabilize into contested zones  
+Use these classes as defaults (extend as needed):
 
-### **Effects**
-- military specialization  
-- frontier institutionalization  
-- cultural othering  
+- **Individual agents:** bounded attention, personal memory, local incentives
+- **Group agents:** coalitions, factions, movements, identity clusters
+- **Institution agents:** bureaucracies, courts, markets, churches, guilds
+- **Hybrid agents:** AI-augmented institutions, cybernetic governance, collective intelligence systems
 
-### **S/E/R Summary**
-- **S:** frontier becomes permanent structure  
-- **E:** conflict becomes routine  
-- **R:** rivalry embedded into generational memory  
+The key distinction is not “human vs AI,” but **where memory lives and how decisions propagate**.
 
 ---
 
-## **Phase II — Institutional Hardening**
+## Recommended file map
 
-### **Dynamics**
-- Rome centralizes authority to manage scale  
-- Persia reinforces dynastic legitimacy  
-- military expenditure rises  
+This README is the entry point. Typical companion templates in this folder include:
 
-### **Effects**
-- governance rigidity  
-- elite capture  
-- inequality persistence  
+- **agent_loop.md:** canonical cognition loop and update rules
+- **memory_models.md:** layered memory, decay, rehearsal, institutional persistence
+- **belief_narrative_dynamics.md:** legitimacy, ideology, identity, myth engines
+- **attention_salience.md:** salience competition, agenda setting, perception filters
+- **social_influence_networks.md:** trust graphs, reputation, diffusion, polarization
+- **coordination_protocols.md:** norms, contracts, enforcement, cooperation failure modes
+- **agent_metrics.md:** observables, instrumentation hooks, diagnostics
 
-### **S/E/R Summary**
-- **S:** institutions optimize for rivalry, not adaptation  
-- **E:** activation drains surplus  
-- **R:** future horizons narrow  
+If your repo already has different filenames, treat this list as a semantic checklist.
 
 ---
 
-## **Phase III — Asymmetric Adaptation**
+## How this connects to other templates
 
-### **Dynamics**
-- Persia adapts faster to cavalry warfare  
-- Rome compensates with bureaucracy and logistics  
-- neither achieves decisive advantage  
+The cognitive agent layer is the coupling tissue between:
 
-### **Effects**
-- technological arms race  
-- administrative overreach  
-- cultural defensiveness  
+- **city simulation:** micro choices → emergent urban behavior
+- **civilization simulation:** legitimacy + coordination → regime stability or transition
+- **cross-civilization interaction:** diffusion, rivalry, imitation, propaganda
+- **planetary simulation:** collective action thresholds, coordination emergence
+- **AI-driven exploration:** agents as test subjects, not narrators
 
-### **S/E/R Summary**
-- **S:** adaptation favors specialization over flexibility  
-- **E:** escalation without resolution  
-- **R:** compressed recovery windows  
+Put simply:
+
+> Cities and civilizations don’t “decide.” Agents decide.  
+> Regimes are what decisions look like when aggregated over time.
 
 ---
 
-## **Phase IV — Exhaustion & External Shock**
+## Guardrails
 
-### **Dynamics**
-- prolonged conflict weakens both civilizations  
-- internal legitimacy erodes  
-- new external actors emerge  
+Cognitive agent simulation must avoid these failure modes:
 
-### **Effects**
-- frontier collapse  
-- rapid territorial loss  
-- institutional failure  
+- **omniscient agents:** nobody has the full map
+- **perfect rationality:** bounded attention and social bias are primary drivers
+- **single-utility collapse:** humans and institutions optimize across competing motives
+- **narrative override:** stories explain behavior, but do not replace constraints
+- **deterministic outcomes:** path dependence is real; inevitability claims are out-of-scope
 
-### **S/E/R Summary**
-- **S:** hardened structures shatter under new pressure  
-- **E:** activation exceeds control capacity  
-- **R:** collapse accelerates beyond recovery  
+Agents are **fallible by design**.
 
 ---
 
-## **Outcome**
-- neither civilization “wins”  
-- both are structurally weakened  
-- successor systems inherit fragmented legacies  
+## Minimal “hello world” run
 
-The rivalry **consumed adaptive capacity**.
+A minimal cognitive-agent-enabled run should demonstrate:
 
----
+- **perception limits:** agents miss signals under load
+- **belief drift:** narratives shift with stress and influence
+- **coordination thresholds:** cooperation fails/succeeds based on trust and legitimacy
+- **feedback coupling:** agent choices shift city/civ metrics, which reshape agent state
 
-## **Cross‑Arc Structural Insights**
-
-Recurring patterns revealed:
-- peer rivalry drives centralization  
-- unresolved conflict hardens institutions  
-- long stalemates exhaust legitimacy  
-- collapse often comes from *outside the rivalry*  
-
-Civilizations fall not from defeat — but from **being shaped too long by the same enemy**.
+If your run doesn’t show feedback, you don’t have cognition yet—you have scripted actors.
 
 ---
 
-## **Simulation Integration Notes**
+## Status
 
-This arc calibrates:
-- rivalry escalation thresholds  
-- institutional rigidity accumulation  
-- exhaustion‑driven collapse timing  
-- asymmetric adaptation dynamics  
-
-It is a **benchmark case** for multi‑civilization simulation.
-
----
-
-## **Status**
-Canonical worked cross‑civilization interaction arc.  
-Designed for simulation grounding, AI training, and comparative analysis.
+Canonical template README for cognitive agent simulation. Designed to be forked, extended, and used as the onboarding gateway for agent-based cognition in EcoEchoSystem.
 # **Agent Loop**  
 ### *The canonical cognition cycle for EcoEchoSystem agents*
 
@@ -21172,133 +21028,6 @@ This module explains **why systems fail loudly after succeeding quietly**.
 
 Canonical mislearning and overconfidence framework for cognitive agent simulation.  
 Designed for individual, institutional, and civilizational agents.
-# Cognitive agent simulation template README
-
-Welcome to the **Cognitive Agent Simulation** template set. This directory is where EcoEchoSystem stops being “a world that runs” and becomes “a world that notices.”
-
-City, civilization, and planetary layers describe **external dynamics**: resources, governance, interactions, regimes, collapse, renewal. The cognitive agent layer describes **internal dynamics**: perception, memory, belief, motivation, coordination, and choice—bounded by time, attention, and legitimacy.
-
-An agent here is not a personality. It’s a **constraint‑shaped decision process**.
-
----
-
-## Purpose
-
-This template set exists to:
-
-- **define agent architecture** compatible with EcoEchoSystem’s substrate-first design
-- **standardize cognition primitives** for humans, institutions, and hybrid entities
-- **support multi-agent simulation** with bounded rationality and social influence
-- **enable AI-assisted exploration** without turning agents into oracles
-- **preserve S/E/R coherence** inside minds, not just societies
-
----
-
-## What belongs in this folder
-
-This directory contains templates for modeling cognition as a system:
-
-- **agent loops** (perceive → interpret → decide → act → learn)
-- **memory systems** (short, long, institutional, cultural)
-- **belief and narrative dynamics** (legitimacy, ideology, identity)
-- **attention and salience** (what gets noticed vs ignored)
-- **motivation and utility proxies** (needs, values, status, safety)
-- **coordination and trust** (networks, reputation, signaling)
-- **conflict and persuasion** (propaganda, misinformation, polarization)
-- **time-bounded learning** (habituation, trauma, forgetting, drift)
-
-If a mechanism changes *how agents choose*, it belongs here.
-
----
-
-## Substrate alignment for cognition
-
-Cognitive models must remain compatible with the EcoEchoSystem substrate:
-
-- **Structure (S):** internal representations, social graphs, roles, institutional scaffolds  
-- **Activation (E):** stress, urgency, arousal, persuasion intensity, conflict load  
-- **Relational time (R):** attention cycles, memory half-life, learning lag, generational transmission  
-
-Cognition is where **activation meets meaning**.
-
----
-
-## Agent classes
-
-Use these classes as defaults (extend as needed):
-
-- **Individual agents:** bounded attention, personal memory, local incentives
-- **Group agents:** coalitions, factions, movements, identity clusters
-- **Institution agents:** bureaucracies, courts, markets, churches, guilds
-- **Hybrid agents:** AI-augmented institutions, cybernetic governance, collective intelligence systems
-
-The key distinction is not “human vs AI,” but **where memory lives and how decisions propagate**.
-
----
-
-## Recommended file map
-
-This README is the entry point. Typical companion templates in this folder include:
-
-- **agent_loop.md:** canonical cognition loop and update rules
-- **memory_models.md:** layered memory, decay, rehearsal, institutional persistence
-- **belief_narrative_dynamics.md:** legitimacy, ideology, identity, myth engines
-- **attention_salience.md:** salience competition, agenda setting, perception filters
-- **social_influence_networks.md:** trust graphs, reputation, diffusion, polarization
-- **coordination_protocols.md:** norms, contracts, enforcement, cooperation failure modes
-- **agent_metrics.md:** observables, instrumentation hooks, diagnostics
-
-If your repo already has different filenames, treat this list as a semantic checklist.
-
----
-
-## How this connects to other templates
-
-The cognitive agent layer is the coupling tissue between:
-
-- **city simulation:** micro choices → emergent urban behavior
-- **civilization simulation:** legitimacy + coordination → regime stability or transition
-- **cross-civilization interaction:** diffusion, rivalry, imitation, propaganda
-- **planetary simulation:** collective action thresholds, coordination emergence
-- **AI-driven exploration:** agents as test subjects, not narrators
-
-Put simply:
-
-> Cities and civilizations don’t “decide.” Agents decide.  
-> Regimes are what decisions look like when aggregated over time.
-
----
-
-## Guardrails
-
-Cognitive agent simulation must avoid these failure modes:
-
-- **omniscient agents:** nobody has the full map
-- **perfect rationality:** bounded attention and social bias are primary drivers
-- **single-utility collapse:** humans and institutions optimize across competing motives
-- **narrative override:** stories explain behavior, but do not replace constraints
-- **deterministic outcomes:** path dependence is real; inevitability claims are out-of-scope
-
-Agents are **fallible by design**.
-
----
-
-## Minimal “hello world” run
-
-A minimal cognitive-agent-enabled run should demonstrate:
-
-- **perception limits:** agents miss signals under load
-- **belief drift:** narratives shift with stress and influence
-- **coordination thresholds:** cooperation fails/succeeds based on trust and legitimacy
-- **feedback coupling:** agent choices shift city/civ metrics, which reshape agent state
-
-If your run doesn’t show feedback, you don’t have cognition yet—you have scripted actors.
-
----
-
-## Status
-
-Canonical template README for cognitive agent simulation. Designed to be forked, extended, and used as the onboarding gateway for agent-based cognition in EcoEchoSystem.
 # **Social Interactions**  
 ### *Modeling how agents influence, coordinate with, and conflict with one another*
 
@@ -21500,6 +21229,439 @@ This module is the **bridge between minds and societies**.
 
 Canonical social interaction framework for cognitive agent simulation.  
 Designed for individual, institutional, and civilizational agents.
+# **Domain Module Template**  
+### *Canonical scaffold for substrate‑aligned domain modules*
+
+This template defines the **standard structure** for all EcoEchoSystem domain modules.  
+Every domain — scientific, social, technical, or conceptual — must express itself through the shared **Structure / Activation / Relational Time (S/E/R)** substrate.
+
+This ensures:
+- cross‑domain coherence  
+- regime compatibility  
+- simulation readiness  
+- long‑arc stability  
+
+---
+
+## **Module Identity**
+
+**Domain Name:**  
+**Module Path:** `ecoechosystem/domain_modules/<domain_name>/`  
+**Primary Scale(s):** micro / meso / macro / meta  
+**Cross‑Domain Touchpoints:** psychology, biology, physics, economics, governance, AI  
+
+---
+
+## **Purpose**
+Describe what this domain models and why it exists within the EcoEchoSystem.
+
+Include:
+- the phenomena this domain captures  
+- why it cannot be reduced to another domain  
+- how it contributes to civilization‑scale understanding  
+
+---
+
+## **Substrate Framing (S/E/R)**
+
+Every domain must explicitly define how it expresses the shared substrate.
+
+---
+
+### **Structure (S)**
+Describe the domain’s structural elements.
+
+Examples:
+- architectures  
+- networks  
+- identities  
+- boundaries  
+- hierarchies  
+
+Clarify:
+- what persists  
+- what constrains behavior  
+- what defines coherence  
+
+---
+
+### **Activation (E)**
+Describe how intensity, energy, or pressure manifests.
+
+Examples:
+- stress  
+- volatility  
+- metabolic load  
+- cognitive effort  
+- resource flow  
+
+Clarify:
+- what drives change  
+- what amplifies instability  
+- what requires regulation  
+
+---
+
+### **Relational Time (R)**
+Describe how time operates in this domain.
+
+Examples:
+- cycles  
+- development  
+- succession  
+- learning  
+- long‑arc evolution  
+
+Clarify:
+- recovery rhythms  
+- horizon compression/expansion  
+- memory and inertia  
+
+---
+
+## **Core Regimes**
+Define the canonical regimes of this domain.
+
+Each regime should specify:
+- S configuration  
+- E intensity  
+- R behavior  
+
+Examples:
+- stable regime  
+- high‑activation regime  
+- scarcity regime  
+- collapse regime  
+- integrative regime  
+
+Regimes must be compatible with the **Regime Coupling Engine**.
+
+---
+
+## **Dynamics**
+Describe how the domain behaves over time.
+
+Include:
+- typical transitions between regimes  
+- drivers of change  
+- internal feedback patterns  
+
+This section explains **motion**, not structure.
+
+---
+
+## **Stability Cycles**
+Define the recurring cycles that preserve coherence.
+
+Examples:
+- homeostasis cycles  
+- stress–recovery cycles  
+- scarcity–adaptation cycles  
+- collapse–renewal cycles  
+
+Clarify:
+- what stabilizes the domain  
+- what destabilizes it  
+- how recovery occurs  
+
+---
+
+## **Feedback Loops**
+Describe how actions feed back into the system.
+
+Include:
+- negative (stabilizing) loops  
+- positive (amplifying) loops  
+- adaptive (learning) loops  
+- runaway (collapse) loops  
+
+Specify:
+- gain sensitivity  
+- delay effects  
+- failure modes  
+
+---
+
+## **Networks**
+Describe the structural topology of the domain.
+
+Examples:
+- interaction networks  
+- resource networks  
+- information networks  
+- activation pathways  
+
+Clarify:
+- hubs  
+- bottlenecks  
+- redundancy  
+- fragility points  
+
+---
+
+## **Cross‑Domain Interfaces**
+Describe how this domain connects to others.
+
+Reference:
+- interface types  
+- coupling strength  
+- translation mechanisms  
+
+Explicitly note:
+- what flows out  
+- what flows in  
+- what is buffered  
+
+---
+
+## **Cross‑Domain Mappings**
+Map this domain’s S/E/R expressions to others.
+
+Examples:
+- biological ↔ economic  
+- psychological ↔ governance  
+- physical ↔ ecological  
+
+This ensures **semantic compatibility**.
+
+---
+
+## **Multi‑Scale Behavior**
+Describe how the domain behaves across scale.
+
+Include:
+- micro‑level dynamics  
+- meso‑level aggregation  
+- macro‑level regimes  
+- long‑arc evolution  
+
+Clarify:
+- bottom‑up emergence  
+- top‑down constraint  
+
+---
+
+## **Simulation Hooks**
+Define how this domain can be simulated.
+
+Include:
+- state variables  
+- regime indicators  
+- transition triggers  
+- control levers  
+- observability signals  
+
+This section enables **executable modeling**.
+
+---
+
+## **Failure Modes**
+Describe how the domain breaks.
+
+Include:
+- fragmentation  
+- runaway activation  
+- temporal collapse  
+- interface failure  
+
+Failure modes are critical for resilience modeling.
+
+---
+
+## **Integration Notes**
+Summarize how this domain fits into the EcoEchoSystem.
+
+Include:
+- key dependencies  
+- stabilization roles  
+- amplification risks  
+- renewal potential  
+
+---
+
+## **Status**
+Indicate maturity level:
+- draft  
+- stable  
+- evolving  
+- deprecated  
+
+---
+
+## **Usage Guidance**
+Optional notes for contributors and AI agents.
+
+Include:
+- extension guidelines  
+- known limitations  
+- future expansion paths  
+
+---
+
+### **Template Usage Rule**
+This template must be followed unless deviation is explicitly justified.  
+Creativity is encouraged — **substrate incoherence is not**.
+# **Ecosystem Simulation Template README**  
+### *Modeling living systems as the foundational constraint layer*
+
+The ecosystem simulation layer models **biophysical reality**: energy flows, material cycles, population dynamics, and environmental limits.  
+It is the **non‑negotiable substrate** upon which cities, civilizations, and cognitive agents operate.
+
+Ecosystems do not optimize for human goals.  
+They **enforce constraints through feedback**.
+
+---
+
+## **Purpose**
+
+This template exists to:
+
+- model ecological systems as dynamic, interacting processes  
+- provide hard constraints for social and cognitive simulations  
+- capture resource regeneration, depletion, and collapse  
+- support cross‑scale coupling (local → planetary)  
+- prevent abstract systems from floating free of reality  
+
+The ecosystem layer answers:
+> *What does the world allow?*
+
+---
+
+## **Ecosystem as Substrate Expression (S / E / R)**
+
+### **Structure (S)**
+- biomes and habitats  
+- species populations  
+- resource stocks  
+- trophic and material networks  
+
+---
+
+### **Activation (E)**
+- extraction pressure  
+- pollution load  
+- climate forcing  
+- disturbance events  
+
+---
+
+### **Relational Time (R)**
+- regeneration rates  
+- depletion lag  
+- recovery windows  
+- extinction thresholds  
+
+Ecological time is **slower than politics, faster than geology**.
+
+---
+
+## **Core Ecosystem Components**
+
+---
+
+### **1. Resource Systems**
+- renewable resources (forests, fisheries, soils)  
+- non‑renewable resources (minerals, fossil fuels)  
+- energy flows  
+
+Resources regenerate conditionally, not automatically.
+
+---
+
+### **2. Population Dynamics**
+- species growth and decline  
+- carrying capacity  
+- competition and predation  
+
+Population collapse is often **non‑linear**.
+
+---
+
+### **3. Biogeochemical Cycles**
+- carbon  
+- nitrogen  
+- water  
+
+Cycle disruption propagates across scales.
+
+---
+
+### **4. Disturbance Regimes**
+- climate events  
+- disease  
+- invasive species  
+- human shocks  
+
+Disturbance reshapes equilibrium.
+
+---
+
+## **Human–Ecosystem Coupling**
+
+Human systems interact with ecosystems via:
+- extraction  
+- land use  
+- pollution  
+- restoration  
+
+Ecosystems respond with **lagged feedback**, not negotiation.
+
+---
+
+## **Ecosystem States**
+
+Common regime states include:
+- stable equilibrium  
+- stressed equilibrium  
+- degraded but recoverable  
+- collapsed  
+- transformed  
+
+Transitions are often **irreversible on human timescales**.
+
+---
+
+## **Ecosystem Metrics (Simulation Hooks)**
+
+Trackable indicators include:
+- resource stock levels  
+- regeneration ratios  
+- biodiversity index  
+- resilience margin  
+- collapse proximity  
+
+Metrics inform constraint pressure on higher layers.
+
+---
+
+## **Failure Modes**
+
+Ecosystem modeling fails when:
+- regeneration is guaranteed  
+- collapse is reversible by policy alone  
+- feedback is immediate  
+- ecosystems adapt faster than extraction  
+
+Nature does not negotiate with narratives.
+
+---
+
+## **Integration Notes**
+
+The ecosystem simulation:
+- constrains city and civilization growth  
+- shapes agent perception and stress  
+- drives long‑term regime transitions  
+- grounds foresight in physical reality  
+
+This layer is the **ultimate referee**.
+
+---
+
+## **Status**
+
+Canonical ecosystem simulation template README.  
+Designed for local, regional, and planetary ecological modeling.
 # **Ecosystem Dynamics**  
 ### *Modeling regeneration, depletion, feedback, and regime transitions*
 
@@ -22205,167 +22367,6 @@ This module explains **why ecosystems change even when pressure stops**.
 
 Canonical evolutionary dynamics framework for ecosystem simulation.  
 Designed for long‑term, multi‑generational ecological modeling.
-# **Ecosystem Simulation Template README**  
-### *Modeling living systems as the foundational constraint layer*
-
-The ecosystem simulation layer models **biophysical reality**: energy flows, material cycles, population dynamics, and environmental limits.  
-It is the **non‑negotiable substrate** upon which cities, civilizations, and cognitive agents operate.
-
-Ecosystems do not optimize for human goals.  
-They **enforce constraints through feedback**.
-
----
-
-## **Purpose**
-
-This template exists to:
-
-- model ecological systems as dynamic, interacting processes  
-- provide hard constraints for social and cognitive simulations  
-- capture resource regeneration, depletion, and collapse  
-- support cross‑scale coupling (local → planetary)  
-- prevent abstract systems from floating free of reality  
-
-The ecosystem layer answers:
-> *What does the world allow?*
-
----
-
-## **Ecosystem as Substrate Expression (S / E / R)**
-
-### **Structure (S)**
-- biomes and habitats  
-- species populations  
-- resource stocks  
-- trophic and material networks  
-
----
-
-### **Activation (E)**
-- extraction pressure  
-- pollution load  
-- climate forcing  
-- disturbance events  
-
----
-
-### **Relational Time (R)**
-- regeneration rates  
-- depletion lag  
-- recovery windows  
-- extinction thresholds  
-
-Ecological time is **slower than politics, faster than geology**.
-
----
-
-## **Core Ecosystem Components**
-
----
-
-### **1. Resource Systems**
-- renewable resources (forests, fisheries, soils)  
-- non‑renewable resources (minerals, fossil fuels)  
-- energy flows  
-
-Resources regenerate conditionally, not automatically.
-
----
-
-### **2. Population Dynamics**
-- species growth and decline  
-- carrying capacity  
-- competition and predation  
-
-Population collapse is often **non‑linear**.
-
----
-
-### **3. Biogeochemical Cycles**
-- carbon  
-- nitrogen  
-- water  
-
-Cycle disruption propagates across scales.
-
----
-
-### **4. Disturbance Regimes**
-- climate events  
-- disease  
-- invasive species  
-- human shocks  
-
-Disturbance reshapes equilibrium.
-
----
-
-## **Human–Ecosystem Coupling**
-
-Human systems interact with ecosystems via:
-- extraction  
-- land use  
-- pollution  
-- restoration  
-
-Ecosystems respond with **lagged feedback**, not negotiation.
-
----
-
-## **Ecosystem States**
-
-Common regime states include:
-- stable equilibrium  
-- stressed equilibrium  
-- degraded but recoverable  
-- collapsed  
-- transformed  
-
-Transitions are often **irreversible on human timescales**.
-
----
-
-## **Ecosystem Metrics (Simulation Hooks)**
-
-Trackable indicators include:
-- resource stock levels  
-- regeneration ratios  
-- biodiversity index  
-- resilience margin  
-- collapse proximity  
-
-Metrics inform constraint pressure on higher layers.
-
----
-
-## **Failure Modes**
-
-Ecosystem modeling fails when:
-- regeneration is guaranteed  
-- collapse is reversible by policy alone  
-- feedback is immediate  
-- ecosystems adapt faster than extraction  
-
-Nature does not negotiate with narratives.
-
----
-
-## **Integration Notes**
-
-The ecosystem simulation:
-- constrains city and civilization growth  
-- shapes agent perception and stress  
-- drives long‑term regime transitions  
-- grounds foresight in physical reality  
-
-This layer is the **ultimate referee**.
-
----
-
-## **Status**
-
-Canonical ecosystem simulation template README.  
-Designed for local, regional, and planetary ecological modeling.
 # **Species Interactions**  
 ### *Modeling ecological relationships and population‑level dynamics*
 
@@ -22539,6 +22540,176 @@ This module is the **ecological equivalent of social dynamics**.
 
 Canonical species interaction framework for ecosystem simulation.  
 Designed for local, regional, and planetary ecological modeling.
+# **UI Layer README**  
+### *Rendering complex systems legible without collapsing them*
+
+The UI layer exists to **surface structure, dynamics, and uncertainty** from EcoEchoSystem simulations in ways humans can perceive, explore, and interpret — without turning the system into a dashboard of false certainty.
+
+This layer does not control the simulation.  
+It **witnesses it**.
+
+---
+
+## **Purpose**
+
+This layer exists to:
+
+- translate multi‑layer simulation state into human‑readable form  
+- support exploration, learning, and foresight  
+- preserve uncertainty and ambiguity  
+- prevent metric‑driven distortion  
+- enable narrative without overriding structure  
+
+The UI answers:
+> *What is happening, and how do we know?*
+
+---
+
+## **UI as Substrate Expression (S / E / R)**
+
+### **Structure (S)**
+- visual representations of system layers  
+- spatial, temporal, and relational layouts  
+- consistent semantic mapping across domains  
+
+---
+
+### **Activation (E)**
+- highlighting stress, transitions, and anomalies  
+- surfacing feedback loops and pressure points  
+- signaling regime shifts without dramatization  
+
+---
+
+### **Relational Time (R)**
+- timelines and phase diagrams  
+- lag visualization  
+- historical layering and memory  
+
+The UI must **respect time**, not compress it.
+
+---
+
+## **Design Principles**
+
+---
+
+### **1. Legibility Without Simplification**
+- reveal structure without flattening  
+- show relationships, not just values  
+
+---
+
+### **2. Uncertainty Preservation**
+- avoid false precision  
+- surface confidence ranges and ambiguity  
+
+---
+
+### **3. Regime Awareness**
+- visualize states and transitions  
+- distinguish stability from inertia  
+
+---
+
+### **4. Non‑Optimization**
+- no leaderboards  
+- no “best outcome” indicators  
+
+The UI must not teach the system to lie.
+
+---
+
+## **Core UI Components**
+
+---
+
+### **1. Layered Views**
+- cognitive agents  
+- social systems  
+- ecosystems  
+- regimes  
+
+Layers can be toggled, not merged.
+
+---
+
+### **2. Temporal Navigation**
+- stepwise simulation playback  
+- phase transitions  
+- historical comparison  
+
+Time is navigable, not rewindable.
+
+---
+
+### **3. Regime Maps**
+- ecosystem regimes  
+- civilization regimes  
+- transition pathways  
+
+Maps show **where you are**, not where to go.
+
+---
+
+### **4. Metric Panels**
+- diagnostic indicators  
+- trend visualization  
+- comparative runs  
+
+Metrics inform interpretation, not action.
+
+---
+
+### **5. Narrative Overlays**
+- annotated events  
+- observer notes  
+- guided exploration prompts  
+
+Narrative explains without prescribing.
+
+---
+
+## **User Roles**
+
+The UI supports multiple epistemic roles:
+- learner  
+- researcher  
+- facilitator  
+- observer  
+
+No role has privileged control.
+
+---
+
+## **Failure Modes**
+
+The UI layer fails when:
+- metrics become goals  
+- visuals imply control  
+- uncertainty is hidden  
+- narratives override constraints  
+
+A good UI **resists persuasion**.
+
+---
+
+## **Integration Notes**
+
+The UI layer:
+- consumes outputs from all simulation layers  
+- reflects regime dynamics and transitions  
+- supports repeatable labs and guided exploration  
+- preserves epistemic humility  
+
+This layer is the **interface to understanding**, not authority.
+
+---
+
+## **Status**
+
+Canonical UI layer README for EcoEchoSystem.  
+Designed for exploration, education, and foresight without illusion.
 # **Activation Heatmaps**  
 ### *Visualizing intensity, pressure, and activation across system layers*
 
@@ -22723,176 +22894,6 @@ This module is the **pulse monitor**, not the diagnosis.
 
 Canonical activation heatmap framework for the EcoEchoSystem UI layer.  
 Designed for interpretation, exploration, and regime‑aware visualization.
-# **UI Layer README**  
-### *Rendering complex systems legible without collapsing them*
-
-The UI layer exists to **surface structure, dynamics, and uncertainty** from EcoEchoSystem simulations in ways humans can perceive, explore, and interpret — without turning the system into a dashboard of false certainty.
-
-This layer does not control the simulation.  
-It **witnesses it**.
-
----
-
-## **Purpose**
-
-This layer exists to:
-
-- translate multi‑layer simulation state into human‑readable form  
-- support exploration, learning, and foresight  
-- preserve uncertainty and ambiguity  
-- prevent metric‑driven distortion  
-- enable narrative without overriding structure  
-
-The UI answers:
-> *What is happening, and how do we know?*
-
----
-
-## **UI as Substrate Expression (S / E / R)**
-
-### **Structure (S)**
-- visual representations of system layers  
-- spatial, temporal, and relational layouts  
-- consistent semantic mapping across domains  
-
----
-
-### **Activation (E)**
-- highlighting stress, transitions, and anomalies  
-- surfacing feedback loops and pressure points  
-- signaling regime shifts without dramatization  
-
----
-
-### **Relational Time (R)**
-- timelines and phase diagrams  
-- lag visualization  
-- historical layering and memory  
-
-The UI must **respect time**, not compress it.
-
----
-
-## **Design Principles**
-
----
-
-### **1. Legibility Without Simplification**
-- reveal structure without flattening  
-- show relationships, not just values  
-
----
-
-### **2. Uncertainty Preservation**
-- avoid false precision  
-- surface confidence ranges and ambiguity  
-
----
-
-### **3. Regime Awareness**
-- visualize states and transitions  
-- distinguish stability from inertia  
-
----
-
-### **4. Non‑Optimization**
-- no leaderboards  
-- no “best outcome” indicators  
-
-The UI must not teach the system to lie.
-
----
-
-## **Core UI Components**
-
----
-
-### **1. Layered Views**
-- cognitive agents  
-- social systems  
-- ecosystems  
-- regimes  
-
-Layers can be toggled, not merged.
-
----
-
-### **2. Temporal Navigation**
-- stepwise simulation playback  
-- phase transitions  
-- historical comparison  
-
-Time is navigable, not rewindable.
-
----
-
-### **3. Regime Maps**
-- ecosystem regimes  
-- civilization regimes  
-- transition pathways  
-
-Maps show **where you are**, not where to go.
-
----
-
-### **4. Metric Panels**
-- diagnostic indicators  
-- trend visualization  
-- comparative runs  
-
-Metrics inform interpretation, not action.
-
----
-
-### **5. Narrative Overlays**
-- annotated events  
-- observer notes  
-- guided exploration prompts  
-
-Narrative explains without prescribing.
-
----
-
-## **User Roles**
-
-The UI supports multiple epistemic roles:
-- learner  
-- researcher  
-- facilitator  
-- observer  
-
-No role has privileged control.
-
----
-
-## **Failure Modes**
-
-The UI layer fails when:
-- metrics become goals  
-- visuals imply control  
-- uncertainty is hidden  
-- narratives override constraints  
-
-A good UI **resists persuasion**.
-
----
-
-## **Integration Notes**
-
-The UI layer:
-- consumes outputs from all simulation layers  
-- reflects regime dynamics and transitions  
-- supports repeatable labs and guided exploration  
-- preserves epistemic humility  
-
-This layer is the **interface to understanding**, not authority.
-
----
-
-## **Status**
-
-Canonical UI layer README for EcoEchoSystem.  
-Designed for exploration, education, and foresight without illusion.
 # **Regime Overlays**  
 ### *Visualizing regime states and transitions across simulation layers*
 

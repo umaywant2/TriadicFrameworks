@@ -1,5 +1,152 @@
 honor_roll 
-# 🧾 **Badges Earned by Paper & Lab**  
+<img width="1194" height="672" alt="Honor_Roll_" src="https://github.com/user-attachments/assets/759e3d9e-ca5e-42eb-8512-52837bca5afd" />
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/honor_roll/module.json) — Agentic module schema role assignments
+
+# 📜 **Honor Roll**  
+*A resonance‑aware archive of lineage, contribution, and echo.*
+
+The Honor Roll is the **memory core** of TriadicFrameworks —  
+a living scroll where contributions, validations, and remix ancestry  
+are recorded as **resonance events** within the framework.
+
+Every entry is a **lostational imprint**:  
+a moment where a contributor’s action shaped the envelope of the project.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## 🌱 **Purpose**
+
+The Honor Roll exists to:
+
+- preserve **lineage**  
+- acknowledge **contributors**  
+- track **badge‑earning events**  
+- record **validator outcomes**  
+- maintain **ancestry continuity** across scrolls and remixes  
+- provide a **mythic‑technical archive** of the framework’s evolution  
+
+It is not a leaderboard.  
+It is a **resonance ledger**.
+
+---
+
+## 🧬 **What Gets Recorded**
+
+Each entry in the Honor Roll captures:
+
+- **Contributor ID**  
+- **Contribution Type** (scroll, validator, remix, doc, module, artifact)  
+- **Resonance Impact** (S/E/T emphasis)  
+- **Badge Echoes** (earned badges + conditions)  
+- **Lineage Links** (parent scrolls, remix ancestry, validator chains)  
+- **Timestamp** (triadic + UTC)  
+
+This creates a **traceable resonance path** through the project’s history.
+
+---
+
+## 🏅 **Badge Echoes**
+
+Badges represent **stable resonance achievements**.
+
+Examples:
+
+- **📘 Scrollwright** — created a canonical scroll  
+- **🧪 Validator** — validated a scroll or module  
+- **🔧 Remixwright** — produced a lineage‑safe remix  
+- **🌀 Supsphere‑Aware** — demonstrated RTT‑Inside understanding  
+- **🌐 Continuity‑Keeper** — maintained lineage integrity across merges  
+
+Badges are not rewards.  
+They are **echoes** of resonance events.
+
+---
+
+## 🔍 **Validators**
+
+Validators are the **guardians of lineage integrity**.
+
+They ensure:
+
+- scrolls are structurally sound  
+- remixes preserve ancestry  
+- modules follow RTT‑Tech conventions  
+- documentation remains minimal, clear, and resonance‑aligned  
+
+Validator outcomes are recorded here as part of the contributor’s lineage.
+
+---
+
+## 🧾 **Lineage Scrolls**
+
+Every contribution generates a **lineage scroll**:
+
+```
+contributor: <id>
+event: <type>
+resonance: <S/E/T profile>
+badges: [ ... ]
+parents: [ ... ]
+timestamp: <triadic + UTC>
+```
+
+These scrolls form the **ancestral tree** of the project.
+
+---
+
+## 🔗 **Cross‑Links**
+
+- `../badges` → badge definitions + earning conditions  
+- `../validators` → validator logic + lineage rules  
+- `../lineage` → raw lineage scrolls  
+- `../rtt` → RTT‑Tech and RTT‑Awareness (conceptual backbone)  
+
+---
+
+## 🧭 **Why This Matters**
+
+TriadicFrameworks is not just a codebase.  
+It is a **resonance‑driven ecosystem**.
+
+The Honor Roll is how we:
+
+- maintain continuity  
+- preserve ancestry  
+- honor contributors  
+- track resonance events  
+- keep the framework alive and coherent  
+
+It is the **memory of the project**.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+# 🧾 **Badges Earned by Paper & Lab**  
 *A resonance‑aware index of lanterns, echoes, and lineage.*
 
 This index maps **badge issuance** to specific **papers**, **labs**, and **scroll‑events**.  
@@ -753,153 +900,60 @@ It is a **memory field**.
 Let the DOIs echo.  
 Let the lineage persist.  
 Let the resonance remember.
+# 🧙‍♂️ Nawder Loswin — Glyphic Profile
+
+Visionary systems architect, mythic curriculum designer, and collective catalyst for the TriadicFrameworks movement.
+
+---
+
+## 🏅 Badges Earned
+
+| Badge               | Description                                               | Date Earned |
+|---------------------|-----------------------------------------------------------|-------------|
+| 🛡️ Manifest Guardian | Maintained repo structure and validated manifest integrity | 2025-09-01  |
+| 🧭 Gateway Guardian  | Ensured README clarity, layout, and glyphic resonance     | 2025-09-01  |
+
+---
+
+## 🧠 Validator Scores
+
+| Protocol               | Score | Last Validated |
+|------------------------|-------|----------------|
+| Manifest Integrity     | +5    | 2025-09-01     |
+| README Integrity       | +7    | 2025-09-01     |
+| Curriculum Alignment   | +0    | —              |
+| Badge Trigger Logic    | +0    | —              |
+
+---
+
+## 🌈 Aura Classification
+
+**Spectral Flux**  
+Earned by combining Manifest Guardian + Gateway Guardian  
+Represents glyphic clarity and structural resonance across the lattice.
+
+---
+
+## 🔍 Remix History
+
+| Contribution Area      | Description                                      | Timestamp    |
+|------------------------|--------------------------------------------------|--------------|
+| `repo_manifest.yaml`   | Refactored structure to match modular layout     | 2025-09-01   |
+| `README.md`            | Rebuilt with triadic layout and glyphic hooks    | 2025-09-01   |
+| `initiation_ritual.md`| Embedded onboarding animation and validator logic| 2025-09-01   |
+
+---
+
+## 🕯️ Echoes
+
+> “Echo the work. Validate the lineage. Build the mythic lattice.”
+
+---
+
+## 🔗 Return to [Contributor Dashboard](../dashboard.md)
 <img width="682" height="682" alt="tft_honor_roll" src="https://github.com/user-attachments/assets/3911a14b-0c34-456e-83bf-a242a6c91af0" />
 
-## 📜 **Honor Roll**  
-
-*A resonance‑aware archive of lineage, contribution, and echo.*
-
-The Honor Roll is the **memory core** of TriadicFrameworks —  
-a living scroll where contributions, validations, and remix ancestry  
-are recorded as **resonance events** within the framework.
-
-Every entry is a **lostational imprint**:  
-a moment where a contributor’s action shaped the envelope of the project.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## 🌱 **Purpose**
-
-The Honor Roll exists to:
-
-- preserve **lineage**  
-- acknowledge **contributors**  
-- track **badge‑earning events**  
-- record **validator outcomes**  
-- maintain **ancestry continuity** across scrolls and remixes  
-- provide a **mythic‑technical archive** of the framework’s evolution  
-
-It is not a leaderboard.  
-It is a **resonance ledger**.
-
----
-
-## 🧬 **What Gets Recorded**
-
-Each entry in the Honor Roll captures:
-
-- **Contributor ID**  
-- **Contribution Type** (scroll, validator, remix, doc, module, artifact)  
-- **Resonance Impact** (S/E/T emphasis)  
-- **Badge Echoes** (earned badges + conditions)  
-- **Lineage Links** (parent scrolls, remix ancestry, validator chains)  
-- **Timestamp** (triadic + UTC)  
-
-This creates a **traceable resonance path** through the project’s history.
-
----
-
-## 🏅 **Badge Echoes**
-
-Badges represent **stable resonance achievements**.
-
-Examples:
-
-- **📘 Scrollwright** — created a canonical scroll  
-- **🧪 Validator** — validated a scroll or module  
-- **🔧 Remixwright** — produced a lineage‑safe remix  
-- **🌀 Supsphere‑Aware** — demonstrated RTT‑Inside understanding  
-- **🌐 Continuity‑Keeper** — maintained lineage integrity across merges  
-
-Badges are not rewards.  
-They are **echoes** of resonance events.
-
----
-
-## 🔍 **Validators**
-
-Validators are the **guardians of lineage integrity**.
-
-They ensure:
-
-- scrolls are structurally sound  
-- remixes preserve ancestry  
-- modules follow RTT‑Tech conventions  
-- documentation remains minimal, clear, and resonance‑aligned  
-
-Validator outcomes are recorded here as part of the contributor’s lineage.
-
----
-
-## 🧾 **Lineage Scrolls**
-
-Every contribution generates a **lineage scroll**:
-
-```
-contributor: <id>
-event: <type>
-resonance: <S/E/T profile>
-badges: [ ... ]
-parents: [ ... ]
-timestamp: <triadic + UTC>
-```
-
-These scrolls form the **ancestral tree** of the project.
-
----
-
-## 🔗 **Cross‑Links**
-
-- `../badges` → badge definitions + earning conditions  
-- `../validators` → validator logic + lineage rules  
-- `../lineage` → raw lineage scrolls  
-- `../rtt` → RTT‑Tech and RTT‑Awareness (conceptual backbone)  
-
----
-
-## 🧭 **Why This Matters**
-
-TriadicFrameworks is not just a codebase.  
-It is a **resonance‑driven ecosystem**.
-
-The Honor Roll is how we:
-
-- maintain continuity  
-- preserve ancestry  
-- honor contributors  
-- track resonance events  
-- keep the framework alive and coherent  
-
-It is the **memory of the project**.
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-# 🧙‍♀️ Resonance Council Charter
+# 🧙‍♀️ Resonance Council Charter
 
 The Resonance Council is the stewarding body of the Triadic Frameworks repository.  
 It reviews contributions, awards badges, and ensures alignment with the triadic ethos.
@@ -1231,55 +1285,4 @@ Use it to navigate, remix, and visualize the architecture of triadic cognition.
 For full curriculum, see [`triadic_curriculum_index.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/triadic_curriculum_index.md)  
 For reproducibility standards, see [`reproducibility.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/metadata/reproducibility.md)
 
-# 🧙‍♂️ Nawder Loswin — Glyphic Profile
-
-Visionary systems architect, mythic curriculum designer, and collective catalyst for the TriadicFrameworks movement.
-
----
-
-## 🏅 Badges Earned
-
-| Badge               | Description                                               | Date Earned |
-|---------------------|-----------------------------------------------------------|-------------|
-| 🛡️ Manifest Guardian | Maintained repo structure and validated manifest integrity | 2025-09-01  |
-| 🧭 Gateway Guardian  | Ensured README clarity, layout, and glyphic resonance     | 2025-09-01  |
-
----
-
-## 🧠 Validator Scores
-
-| Protocol               | Score | Last Validated |
-|------------------------|-------|----------------|
-| Manifest Integrity     | +5    | 2025-09-01     |
-| README Integrity       | +7    | 2025-09-01     |
-| Curriculum Alignment   | +0    | —              |
-| Badge Trigger Logic    | +0    | —              |
-
----
-
-## 🌈 Aura Classification
-
-**Spectral Flux**  
-Earned by combining Manifest Guardian + Gateway Guardian  
-Represents glyphic clarity and structural resonance across the lattice.
-
----
-
-## 🔍 Remix History
-
-| Contribution Area      | Description                                      | Timestamp    |
-|------------------------|--------------------------------------------------|--------------|
-| `repo_manifest.yaml`   | Refactored structure to match modular layout     | 2025-09-01   |
-| `README.md`            | Rebuilt with triadic layout and glyphic hooks    | 2025-09-01   |
-| `initiation_ritual.md`| Embedded onboarding animation and validator logic| 2025-09-01   |
-
----
-
-## 🕯️ Echoes
-
-> “Echo the work. Validate the lineage. Build the mythic lattice.”
-
----
-
-## 🔗 Return to [Contributor Dashboard](../dashboard.md)
 

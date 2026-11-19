@@ -1,5 +1,205 @@
 medicine 
-# Medicine
+<img width="1194" height="672" alt="Medicine_" src="https://github.com/user-attachments/assets/16858810-7509-4e52-93eb-60c75c192166" />
+
+- [`medicine_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/medicine/medicine_module.json) — Agentic module schema role assignments
+
+# **Medicine Module**  
+### *RTT/1‑Aligned • Zero Drift • Structural • Student‑Safe*
+
+---
+
+## **Purpose of This Module**
+
+The Medicine module teaches students how to analyze medical information **structurally**, using RTT operators to identify:
+
+- substrate stability  
+- drift sources  
+- regime differences  
+- continuity kernels  
+- patient‑safe synthesis  
+
+Students **never** produce medical advice.  
+They learn to reason about **information**, not **treatment**.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## **The Three Medical Regimes**
+
+RTT models medical information across three structural regimes:
+
+### **US — Clinical Regime (Cleveland Clinic‑like)**
+- stable html  
+- low noise  
+- conservative framing  
+- explicit escalation logic  
+
+### **China — AI‑Augmented Commercial Regime (Ping An‑like)**
+- mobile_html  
+- high noise  
+- translation drift  
+- AI triage overlays  
+- commercial prompts  
+- template drift  
+
+### **UK — Public‑Health Regime (NHS‑like)**
+- clarity‑first  
+- standardized escalation rules  
+- very low drift  
+- population‑level framing  
+
+These regimes are **not contradictory** — they reflect different structural priorities.
+
+---
+
+## **The Six Medical Operators**
+
+The module is built around six RTT operators:
+
+### **1. MEDICAL_METADATA_OPERATOR**  
+Identifies substrate, noise, translation layers, AI overlays, commercial layers.
+
+### **2. MEDICAL_DRIFT_OPERATOR**  
+Detects template, semantic, translation, AI, commercial, and regime drift.
+
+### **3. MEDICAL_SUBSTRATE_OPERATOR**  
+Evaluates substrate stability, interference layers, and accessibility.
+
+### **4. MEDICAL_REGIME_OPERATOR**  
+Classifies content into clinical, AI‑augmented, or public‑health regimes.
+
+### **5. MEDICAL_CONTINUITY_OPERATOR**  
+Extracts stable symptoms, risks, red flags, actions, and differentials.
+
+### **6. MEDICAL_SYNTHESIS_OPERATOR**  
+Produces a drift‑bounded, regime‑aware, patient‑safe synthesis.
+
+---
+
+## **Continuity Kernel (Regime‑Invariant)**
+
+Across all regimes, the following elements remain stable:
+
+### **Stable Symptoms**
+- discomfort  
+- pressure/tightness  
+- shortness of breath  
+- fever/systemic symptoms  
+
+### **Stable Risk Factors**
+- age  
+- chronic illness  
+- hypertension  
+- diabetes  
+- smoking  
+- family history  
+
+### **Stable Red Flags**
+- severe chest pain  
+- difficulty breathing  
+- fainting  
+- confusion  
+- rapid deterioration  
+
+### **Stable Actions**
+- emergency escalation for red flags  
+- follow‑up for persistent symptoms  
+
+### **Stable Differentials**
+- cardiac  
+- pulmonary  
+- musculoskeletal  
+- infection  
+- gastrointestinal  
+
+These form the **continuity kernel** used in synthesis.
+
+---
+
+## **What Is *Not* Stable**
+
+Students must treat the following as **drift‑sensitive**:
+
+- AI‑generated suggestions  
+- commercial prompts  
+- translation artifacts  
+- template‑dependent ordering  
+- regime‑specific framing  
+
+These are **excluded** from the continuity kernel.
+
+---
+
+## **Student Materials**
+
+- **Cheat Sheet** — `/student_materials/cheat_sheet.md`  
+- **Worksheet** — `/student_materials/worksheet.md`  
+- **Printable Worksheet** — `/student_materials/worksheet_printable.md`  
+- **Mini‑Quiz** — `/student_materials/mini_quiz.md`  
+- **Extended Quiz** — `/student_materials/extended_quiz.md`  
+- **Mastery Exam** — `/student_materials/mastery_exam.md`  
+- **Scenario Gauntlet** — `/student_materials/scenario_gauntlet.md`  
+- **Operator Lab** — `/labs/operator_lab.md`  
+
+---
+
+## **Instructor Materials**
+
+- **Instructor Lab** — `/instructor_materials/operator_lab_instructor.md`  
+- **Scenario Gauntlet (Instructor)** — `/instructor_materials/scenario_gauntlet_instructor.md`  
+- **Rubric** — `/instructor_materials/rubric.md`  
+- **Teacher’s Key** — `/instructor_materials/teachers_key.md`  
+
+---
+
+## **RTTcode Operators (Machine‑Readable)**
+
+All six operators have RTTcode signatures in:
+
+```
+/docs/medicine/RTTcode/
+```
+
+These define the **machine‑readable contracts** for:
+
+- metadata  
+- drift  
+- substrate  
+- regime  
+- continuity  
+- synthesis  
+
+---
+
+## **Module Philosophy**
+
+The Medicine module teaches students to:
+
+- analyze medical information structurally  
+- identify drift and instability  
+- understand regime differences  
+- extract continuity kernels  
+- produce patient‑safe synthesis  
+- reason without giving medical advice  
+
+This module is part of the **TriadicFrameworks** system and follows the same standards of:
+
+- zero drift  
+- operator‑first design  
+- student accessibility  
+- AI‑parsable structure  
+# Medicine
 
 You’re onto something real here, Nawder — and it’s bigger than “making WebMD better.”  
 What you’re describing is **what happens when a drift‑blind information site is wrapped in an RTT‑aware, agentic AI module**.
@@ -567,206 +767,854 @@ Just say:
 
 ---
 
-# **Medicine Module**  
-### *RTT/1‑Aligned • Zero Drift • Structural • Student‑Safe*
+# ✅ **RTT_MEDICAL_CONTINUITY_v1.json**  
+### *RTTcode Signature — Medical Continuity Operator*
 
 ---
 
-## **Purpose of This Module**
+This RTTcode packet is the **JSON signature** for the MEDICAL_CONTINUITY_OPERATOR — meaning:
 
-The Medicine module teaches students how to analyze medical information **structurally**, using RTT operators to identify:
+- it must be **machine‑readable**  
+- it must be **operator‑first**  
+- it must be **minimal, canonical, and drift‑free**  
+- it must match the structure of your other RTTcode signatures (archive_org, nist, wikipedia)  
+- it must reflect the tri‑regime medical module (US, China, UK)  
 
-- substrate stability  
-- drift sources  
-- regime differences  
-- continuity kernels  
-- patient‑safe synthesis  
+Below is the **drop‑in ready** RTTcode JSON signature for the continuity operator.
 
-Students **never** produce medical advice.  
-They learn to reason about **information**, not **treatment**.
+This is the *structural definition*, not an example output.
 
 ---
 
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
+```json
+{
+  "rttcode_version": "1.0",
+  "operator": "MEDICAL_CONTINUITY_OPERATOR",
+  "module": "medicine",
+  "purpose": "Extract regime-invariant continuity kernels across medical sources (US clinical, China AI-augmented, UK public-health).",
+  
+  "inputs": {
+    "metadata_packet": "RTT_MEDICAL_METADATA_v1",
+    "drift_packet": "RTT_MEDICAL_DRIFT_v1",
+    "substrate_packet": "RTT_MEDICAL_SUBSTRATE_v1",
+    "regime_packet": "RTT_MEDICAL_REGIME_v1",
+    "raw_content": "multi-regime, multi-snapshot medical pages"
+  },
 
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  "outputs": {
+    "continuity_kernel": {
+      "stable_symptoms": "list",
+      "stable_risk_factors": "list",
+      "stable_red_flags": "list",
+      "stable_actions": "list",
+      "stable_differentials": "list"
+    },
+    "continuity_map": {
+      "stable": "list",
+      "semi_stable": "list",
+      "drift_sensitive": "list",
+      "regime_specific": {
+        "clinical": "list",
+        "ai_augmented": "list",
+        "public_health": "list"
+      }
+    },
+    "continuity_score": "float_0_to_1",
+    "continuity_flags": "list"
+  },
+
+  "continuity_logic": {
+    "normalize_substrate": true,
+    "remove_drift_sensitive_elements": true,
+    "cross_regime_alignment": [
+      "clinical_regime",
+      "ai_augmented_regime",
+      "public_health_regime"
+    ],
+    "intersection_method": "stable_elements_across_all_regimes",
+    "scoring_method": "weighted_persistence_across_regimes"
+  },
+
+  "regime_profiles": {
+    "clinical_regime": {
+      "expected_stability": "high",
+      "notes": "Cleveland Clinic baseline"
+    },
+    "ai_augmented_regime": {
+      "expected_stability": "medium_low",
+      "notes": "Ping An high drift, translation variance, AI overlays"
+    },
+    "public_health_regime": {
+      "expected_stability": "very_high",
+      "notes": "NHS standardized escalation rules"
+    }
+  },
+
+  "flags": {
+    "translation_instability_detected": "boolean",
+    "ai_generated_instability_detected": "boolean",
+    "commercial_interference_detected": "boolean",
+    "template_drift_detected": "boolean",
+    "regime_divergence_detected": "boolean"
+  },
+
+  "safety": {
+    "patient_safe_output": true,
+    "no_medical_advice": true,
+    "escalation_indicators_required": true,
+    "uncertainty_disclosure_required": true
+  }
+}
 ```
 
-## ❇️ Now you are ready.
+---
+
+# ✔️ What This RTTcode Signature Provides
+
+This JSON defines:
+
+- **the operator’s identity**  
+- **its required inputs**  
+- **its structured outputs**  
+- **its continuity extraction logic**  
+- **its regime‑specific expectations**  
+- **its drift‑filtering rules**  
+- **its safety constraints**  
+
+This is the **machine‑readable contract** that all medical continuity kernels must follow.
+
+It mirrors the structure of:
+
+- `RTT_METADATA_OPERATOR_v1.json`  
+- `RTT_DRIFTBOUND_RETRIEVAL_OPERATOR_v1.json`  
+- `RTT_LINEAGE_OPERATOR_v1.json`  
+
+but tuned for the medical domain.
+# ✅ **RTT_MEDICAL_DRIFT_v1.json**  
+### *RTTcode Signature — Medical Drift Operator*
 
 ---
 
-## **The Three Medical Regimes**
+This RTTcode packet defines the **machine‑readable drift‑detection contract** for the entire medical module.
 
-RTT models medical information across three structural regimes:
+This JSON must:
 
-### **US — Clinical Regime (Cleveland Clinic‑like)**
-- stable html  
-- low noise  
-- conservative framing  
+- match the structure of your other RTTcode signatures  
+- be operator‑first  
+- be minimal, canonical, and zero‑drift  
+- reflect the tri‑regime medical environment (US, China, UK)  
+- encode template drift, semantic drift, translation drift, AI drift, and commercial drift  
+- be safe, patient‑appropriate, and structurally aligned with RTT/1  
+
+Below is the **drop‑in ready** RTTcode signature for:
+
+```
+RTT_MEDICAL_DRIFT_v1.json
+```
+
+---
+
+```json
+{
+  "rttcode_version": "1.0",
+  "operator": "MEDICAL_DRIFT_OPERATOR",
+  "module": "medicine",
+  "purpose": "Detect structural drift across medical regimes (US clinical, China AI-augmented, UK public-health) including template, semantic, translation, AI, and commercial drift.",
+
+  "inputs": {
+    "metadata_packet": "RTT_MEDICAL_METADATA_v1",
+    "substrate_packet": "RTT_MEDICAL_SUBSTRATE_v1",
+    "regime_packet": "RTT_MEDICAL_REGIME_v1",
+    "raw_content": "multi-snapshot, multi-regime medical pages"
+  },
+
+  "outputs": {
+    "drift_map": {
+      "template_drift": "low|medium|high",
+      "semantic_drift": "low|medium|high",
+      "translation_drift": "none|low|medium|high",
+      "ai_drift": "none|low|medium|high",
+      "commercial_drift": "none|low|medium|high",
+      "regime_drift": "low|medium|high"
+    },
+    "drift_score": "float_0_to_1",
+    "drift_flags": [
+      "template_drift_detected",
+      "semantic_drift_detected",
+      "translation_drift_detected",
+      "ai_drift_detected",
+      "commercial_drift_detected",
+      "regime_drift_detected"
+    ]
+  },
+
+  "drift_logic": {
+    "normalize_substrate": true,
+    "compare_snapshots": true,
+    "detect_template_changes": true,
+    "detect_semantic_variation": true,
+    "detect_translation_variance": true,
+    "detect_ai_generated_instability": true,
+    "detect_commercial_overlays": true,
+    "cross_regime_alignment": [
+      "clinical_regime",
+      "ai_augmented_regime",
+      "public_health_regime"
+    ],
+    "scoring_method": "weighted_drift_across_dimensions"
+  },
+
+  "regime_profiles": {
+    "clinical_regime": {
+      "expected_drift": "low",
+      "notes": "Cleveland Clinic stable templates, conservative updates."
+    },
+    "ai_augmented_regime": {
+      "expected_drift": "high",
+      "notes": "Ping An mobile-first, translation drift, AI overlays, commercial layers."
+    },
+    "public_health_regime": {
+      "expected_drift": "very_low",
+      "notes": "NHS standardized templates, minimal redesign."
+    }
+  },
+
+  "flags": {
+    "template_drift_detected": "boolean",
+    "semantic_drift_detected": "boolean",
+    "translation_drift_detected": "boolean",
+    "ai_drift_detected": "boolean",
+    "commercial_drift_detected": "boolean",
+    "regime_drift_detected": "boolean"
+  },
+
+  "safety": {
+    "patient_safe_output": true,
+    "no_medical_advice": true,
+    "uncertainty_disclosure_required": true,
+    "drift_risk_disclosure_required": true
+  }
+}
+```
+
+---
+
+# ✔️ What This RTTcode Signature Achieves
+
+This JSON defines the **entire drift‑detection contract** for the medical module:
+
+- **Template drift** (Ping An high, NHS very low)  
+- **Semantic drift** (translation + AI phrasing)  
+- **Translation drift** (China‑specific)  
+- **AI drift** (Ping An triage overlays)  
+- **Commercial drift** (upsells, telemedicine prompts)  
+- **Regime drift** (shifts in framing over time)  
+
+It also encodes:
+
+- cross‑regime alignment  
+- drift scoring  
+- safety constraints  
+- machine‑readable flags  
+- expected drift profiles per regime  
+
+This is the backbone that allows the synthesis operator to say:
+
+> “This element is unstable — here’s why.”
+# ✅ **RTT_MEDICAL_METADATA_v1.json**  
+### *RTTcode Signature — Medical Metadata Operator*
+
+---
+
+This file is ready for the **metadata RTTcode signature**, which is the *foundation* of the entire medical module.
+
+This RTTcode packet defines:
+
+- substrate classification  
+- regime identification  
+- drift sensitivity  
+- translation stability  
+- commercial + AI augmentation markers  
+- coherence expectations  
+- safety constraints  
+
+It must be:
+
+- **operator‑first**  
+- **minimal**  
+- **canonical**  
+- **zero‑drift**  
+- **machine‑readable**  
+- **aligned with the tri‑regime medical module**  
+
+Below is the **drop‑in ready** RTTcode signature for:
+
+```
+RTT_MEDICAL_METADATA_v1.json
+```
+
+---
+
+```json
+{
+  "rttcode_version": "1.0",
+  "operator": "MEDICAL_METADATA_OPERATOR",
+  "module": "medicine",
+  "purpose": "Extract structural metadata from medical sources across regimes (US clinical, China AI-augmented, UK public-health).",
+
+  "inputs": {
+    "raw_content": "medical page (html, mobile_html, pdf, image, ocr, mixed)",
+    "snapshot_set": "multi-snapshot versions of the same page",
+    "language_variants": "multilingual content when present"
+  },
+
+  "outputs": {
+    "metadata_packet": {
+      "substrate_type": "html|mobile_html|pdf|image|ocr|mixed",
+      "substrate_stability": "very_high|high|medium|low",
+      "substrate_noise": "low|medium|high",
+      "layer_interference": "layer_interference_present|layer_interference_absent",
+      "accessibility_stability": "very_high|high|medium|low",
+
+      "drift_sensitivity": "low|medium|high",
+      "translation_stability": "translation_stable|translation_unstable|translation_high_drift",
+      "commercial_overlay": "commercial_overlay_present|commercial_overlay_absent",
+      "ai_augmentation": "ai_generated_content_present|ai_generated_content_absent",
+
+      "regime_hint": "clinical_regime|ai_augmented_regime|public_health_regime"
+    },
+    "metadata_score": "float_0_to_1",
+    "metadata_flags": [
+      "translation_layer_detected",
+      "commercial_overlay_detected",
+      "ai_overlay_detected",
+      "substrate_unstable",
+      "noise_high"
+    ]
+  },
+
+  "metadata_logic": {
+    "detect_substrate": true,
+    "detect_noise_layers": true,
+    "detect_translation_layers": true,
+    "detect_ai_overlays": true,
+    "detect_commercial_overlays": true,
+    "evaluate_accessibility": true,
+    "assign_regime_hint": true,
+    "scoring_method": "weighted_stability_and_noise"
+  },
+
+  "regime_profiles": {
+    "clinical_regime": {
+      "expected_substrate": "html",
+      "expected_noise": "low",
+      "expected_translation": "translation_stable",
+      "notes": "Cleveland Clinic baseline."
+    },
+    "ai_augmented_regime": {
+      "expected_substrate": "mobile_html",
+      "expected_noise": "high",
+      "expected_translation": "translation_high_drift",
+      "notes": "Ping An mobile-first, AI overlays, commercial layers."
+    },
+    "public_health_regime": {
+      "expected_substrate": "html",
+      "expected_noise": "low",
+      "expected_translation": "translation_stable",
+      "notes": "NHS standardized templates, clarity-first."
+    }
+  },
+
+  "flags": {
+    "translation_layer_detected": "boolean",
+    "commercial_overlay_detected": "boolean",
+    "ai_overlay_detected": "boolean",
+    "substrate_unstable": "boolean",
+    "noise_high": "boolean"
+  },
+
+  "safety": {
+    "patient_safe_output": true,
+    "no_medical_advice": true,
+    "uncertainty_disclosure_required": true,
+    "substrate_risk_disclosure_required": true
+  }
+}
+```
+
+---
+
+# ✔️ What This RTTcode Signature Establishes
+
+This JSON defines the **metadata backbone** for the entire medical module:
+
+- substrate classification  
+- drift sensitivity  
+- translation stability  
+- commercial + AI overlays  
+- accessibility stability  
+- regime hints  
+- safety constraints  
+
+It also encodes the **expected metadata profiles** for:
+
+- **Cleveland Clinic (US clinical)**  
+- **Ping An (China AI‑augmented)**  
+- **NHS.uk (UK public‑health)**  
+
+This is the contract that all metadata extraction must follow.
+# ✅ **RTT_MEDICAL_REGIME_v1.json**  
+### *RTTcode Signature — Medical Regime Operator*
+
+---
+
+This RTTcode packet is the **regime‑classification contract** for the entire medical module — the JSON signature that defines how the MEDICAL_REGIME_OPERATOR identifies:
+
+- clinical regime (US / Cleveland Clinic)  
+- AI‑augmented commercial regime (China / Ping An)  
+- public‑health regime (UK / NHS)  
+
+This signature must be:
+
+- operator‑first  
+- minimal  
+- canonical  
+- zero‑drift  
+- machine‑readable  
+- aligned with the tri‑regime structure  
+- consistent with your other RTTcode files  
+
+Below is the **drop‑in ready** RTTcode signature for:
+
+```
+RTT_MEDICAL_REGIME_v1.json
+```
+
+---
+
+```json
+{
+  "rttcode_version": "1.0",
+  "operator": "MEDICAL_REGIME_OPERATOR",
+  "module": "medicine",
+  "purpose": "Classify medical information into structural regimes (clinical, AI-augmented commercial, public-health) and detect regime coherence, signals, and shifts.",
+
+  "inputs": {
+    "metadata_packet": "RTT_MEDICAL_METADATA_v1",
+    "substrate_packet": "RTT_MEDICAL_SUBSTRATE_v1",
+    "drift_packet": "RTT_MEDICAL_DRIFT_v1",
+    "raw_content": "medical page content across regimes and snapshots"
+  },
+
+  "outputs": {
+    "regime_packet": {
+      "regime": "clinical_regime|ai_augmented_regime|public_health_regime",
+      "regime_coherence": "high|medium|low",
+      "regime_shift": "regime_shift_detected|none",
+      "regime_signals": "list"
+    },
+    "regime_score": "float_0_to_1",
+    "regime_flags": [
+      "clinical_regime_detected",
+      "ai_augmented_regime_detected",
+      "public_health_regime_detected",
+      "regime_shift_detected",
+      "regime_incoherent"
+    ]
+  },
+
+  "regime_logic": {
+    "detect_regime_signals": true,
+    "evaluate_framing_logic": true,
+    "detect_commercial_overlays": true,
+    "detect_ai_augmentation": true,
+    "detect_public_health_structure": true,
+    "assess_regime_coherence": true,
+    "detect_regime_shift": true,
+    "scoring_method": "weighted_regime_signal_strength"
+  },
+
+  "regime_profiles": {
+    "clinical_regime": {
+      "signals": [
+        "clinical_anchors_present",
+        "risk_escalation_explicit",
+        "symptom_cause_treatment_structure"
+      ],
+      "expected_coherence": "high",
+      "notes": "Cleveland Clinic baseline."
+    },
+    "ai_augmented_regime": {
+      "signals": [
+        "ai_generated_content_present",
+        "commercial_overlay_present",
+        "mobile_first_structure",
+        "translation_layer_detected"
+      ],
+      "expected_coherence": "medium",
+      "notes": "Ping An high drift, AI overlays, commercial layers."
+    },
+    "public_health_regime": {
+      "signals": [
+        "public_health_escalation_rules",
+        "clarity_first_structure",
+        "population_level_risk_framing",
+        "standardized_action_paths"
+      ],
+      "expected_coherence": "very_high",
+      "notes": "NHS standardized templates, clarity-first."
+    }
+  },
+
+  "flags": {
+    "clinical_regime_detected": "boolean",
+    "ai_augmented_regime_detected": "boolean",
+    "public_health_regime_detected": "boolean",
+    "regime_shift_detected": "boolean",
+    "regime_incoherent": "boolean"
+  },
+
+  "safety": {
+    "patient_safe_output": true,
+    "no_medical_advice": true,
+    "uncertainty_disclosure_required": true,
+    "regime_difference_disclosure_required": true
+  }
+}
+```
+
+---
+
+# ✔️ What This RTTcode Signature Establishes
+
+This JSON defines the **structural logic** of medical regimes:
+
+### **Clinical Regime (US / Cleveland Clinic)**
+- conservative  
+- physician‑centric  
+- stable templates  
 - explicit escalation logic  
 
-### **China — AI‑Augmented Commercial Regime (Ping An‑like)**
-- mobile_html  
-- high noise  
-- translation drift  
+### **AI‑Augmented Commercial Regime (China / Ping An)**
 - AI triage overlays  
+- translation drift  
 - commercial prompts  
-- template drift  
+- mobile‑first volatility  
 
-### **UK — Public‑Health Regime (NHS‑like)**
+### **Public‑Health Regime (UK / NHS)**
 - clarity‑first  
 - standardized escalation rules  
-- very low drift  
+- extremely low drift  
 - population‑level framing  
 
-These regimes are **not contradictory** — they reflect different structural priorities.
+It also encodes:
+
+- regime signals  
+- regime coherence  
+- regime shifts  
+- safety constraints  
+- machine‑readable flags  
+
+This is the contract that allows the synthesis operator to say:
+
+> “This difference is not a contradiction — it is regime‑specific.”
+# ✅ **RTT_MEDICAL_SUBSTRATE_v1.json**  
+### *RTTcode Signature — Medical Substrate Operator*
 
 ---
 
-## **The Six Medical Operators**
+This is the **substrate RTTcode signature**, which defines the machine‑readable contract for the MEDICAL_SUBSTRATE_OPERATOR — the operator that determines:
 
-The module is built around six RTT operators:
+- what the medical content *is made of*  
+- how stable it is  
+- how much noise it carries  
+- how much interference it introduces  
+- how safe it is for downstream reasoning  
 
-### **1. MEDICAL_METADATA_OPERATOR**  
-Identifies substrate, noise, translation layers, AI overlays, commercial layers.
+This signature must be:
 
-### **2. MEDICAL_DRIFT_OPERATOR**  
-Detects template, semantic, translation, AI, commercial, and regime drift.
+- **operator‑first**  
+- **minimal**  
+- **canonical**  
+- **zero‑drift**  
+- **aligned with the tri‑regime medical module**  
+- **consistent with your other RTTcode files**  
 
-### **3. MEDICAL_SUBSTRATE_OPERATOR**  
-Evaluates substrate stability, interference layers, and accessibility.
-
-### **4. MEDICAL_REGIME_OPERATOR**  
-Classifies content into clinical, AI‑augmented, or public‑health regimes.
-
-### **5. MEDICAL_CONTINUITY_OPERATOR**  
-Extracts stable symptoms, risks, red flags, actions, and differentials.
-
-### **6. MEDICAL_SYNTHESIS_OPERATOR**  
-Produces a drift‑bounded, regime‑aware, patient‑safe synthesis.
-
----
-
-## **Continuity Kernel (Regime‑Invariant)**
-
-Across all regimes, the following elements remain stable:
-
-### **Stable Symptoms**
-- discomfort  
-- pressure/tightness  
-- shortness of breath  
-- fever/systemic symptoms  
-
-### **Stable Risk Factors**
-- age  
-- chronic illness  
-- hypertension  
-- diabetes  
-- smoking  
-- family history  
-
-### **Stable Red Flags**
-- severe chest pain  
-- difficulty breathing  
-- fainting  
-- confusion  
-- rapid deterioration  
-
-### **Stable Actions**
-- emergency escalation for red flags  
-- follow‑up for persistent symptoms  
-
-### **Stable Differentials**
-- cardiac  
-- pulmonary  
-- musculoskeletal  
-- infection  
-- gastrointestinal  
-
-These form the **continuity kernel** used in synthesis.
-
----
-
-## **What Is *Not* Stable**
-
-Students must treat the following as **drift‑sensitive**:
-
-- AI‑generated suggestions  
-- commercial prompts  
-- translation artifacts  
-- template‑dependent ordering  
-- regime‑specific framing  
-
-These are **excluded** from the continuity kernel.
-
----
-
-## **Student Materials**
-
-- **Cheat Sheet** — `/student_materials/cheat_sheet.md`  
-- **Worksheet** — `/student_materials/worksheet.md`  
-- **Printable Worksheet** — `/student_materials/worksheet_printable.md`  
-- **Mini‑Quiz** — `/student_materials/mini_quiz.md`  
-- **Extended Quiz** — `/student_materials/extended_quiz.md`  
-- **Mastery Exam** — `/student_materials/mastery_exam.md`  
-- **Scenario Gauntlet** — `/student_materials/scenario_gauntlet.md`  
-- **Operator Lab** — `/labs/operator_lab.md`  
-
----
-
-## **Instructor Materials**
-
-- **Instructor Lab** — `/instructor_materials/operator_lab_instructor.md`  
-- **Scenario Gauntlet (Instructor)** — `/instructor_materials/scenario_gauntlet_instructor.md`  
-- **Rubric** — `/instructor_materials/rubric.md`  
-- **Teacher’s Key** — `/instructor_materials/teachers_key.md`  
-
----
-
-## **RTTcode Operators (Machine‑Readable)**
-
-All six operators have RTTcode signatures in:
+Below is the **drop‑in ready** JSON for:
 
 ```
-/docs/medicine/RTTcode/
+RTT_MEDICAL_SUBSTRATE_v1.json
 ```
 
-These define the **machine‑readable contracts** for:
+---
 
-- metadata  
-- drift  
-- substrate  
-- regime  
-- continuity  
-- synthesis  
+```json
+{
+  "rttcode_version": "1.0",
+  "operator": "MEDICAL_SUBSTRATE_OPERATOR",
+  "module": "medicine",
+  "purpose": "Classify and evaluate the substrate of medical information across regimes (US clinical, China AI-augmented, UK public-health).",
+
+  "inputs": {
+    "raw_content": "medical page (html, mobile_html, pdf, image, ocr, mixed)",
+    "snapshot_set": "multi-snapshot versions of the same page",
+    "language_variants": "multilingual content when present"
+  },
+
+  "outputs": {
+    "substrate_packet": {
+      "substrate_type": "html|mobile_html|pdf|image|ocr|mixed",
+      "substrate_stability": "very_high|high|medium|low",
+      "substrate_noise": "low|medium|high",
+      "layer_interference": "layer_interference_present|layer_interference_absent",
+      "accessibility_stability": "very_high|high|medium|low",
+
+      "translation_layer": "present|absent",
+      "commercial_layer": "present|absent",
+      "ai_overlay_layer": "present|absent"
+    },
+    "substrate_score": "float_0_to_1",
+    "substrate_flags": [
+      "substrate_unstable",
+      "noise_high",
+      "translation_layer_detected",
+      "commercial_layer_detected",
+      "ai_overlay_detected",
+      "ocr_risk"
+    ]
+  },
+
+  "substrate_logic": {
+    "detect_substrate_type": true,
+    "detect_noise_layers": true,
+    "detect_translation_layers": true,
+    "detect_ai_overlays": true,
+    "detect_commercial_overlays": true,
+    "evaluate_accessibility": true,
+    "scoring_method": "weighted_stability_minus_noise"
+  },
+
+  "regime_profiles": {
+    "clinical_regime": {
+      "expected_substrate": "html",
+      "expected_noise": "low",
+      "expected_interference": "absent",
+      "notes": "Cleveland Clinic stable HTML substrate."
+    },
+    "ai_augmented_regime": {
+      "expected_substrate": "mobile_html",
+      "expected_noise": "high",
+      "expected_interference": "present",
+      "notes": "Ping An mobile-first, AI overlays, translation layers, commercial prompts."
+    },
+    "public_health_regime": {
+      "expected_substrate": "html",
+      "expected_noise": "low",
+      "expected_interference": "absent",
+      "notes": "NHS standardized, clarity-first HTML substrate."
+    }
+  },
+
+  "flags": {
+    "substrate_unstable": "boolean",
+    "noise_high": "boolean",
+    "translation_layer_detected": "boolean",
+    "commercial_layer_detected": "boolean",
+    "ai_overlay_detected": "boolean",
+    "ocr_risk": "boolean"
+  },
+
+  "safety": {
+    "patient_safe_output": true,
+    "no_medical_advice": true,
+    "substrate_risk_disclosure_required": true,
+    "uncertainty_disclosure_required": true
+  }
+}
+```
 
 ---
 
-## **Module Philosophy**
+# ✔️ What This RTTcode Signature Establishes
 
-The Medicine module teaches students to:
+This JSON defines the **substrate backbone** for the medical module:
 
-- analyze medical information structurally  
-- identify drift and instability  
-- understand regime differences  
-- extract continuity kernels  
-- produce patient‑safe synthesis  
-- reason without giving medical advice  
+### It classifies:
+- HTML (Cleveland Clinic, NHS)  
+- mobile HTML (Ping An)  
+- PDF  
+- image  
+- OCR  
+- mixed substrates  
 
-This module is part of the **TriadicFrameworks** system and follows the same standards of:
+### It evaluates:
+- substrate stability  
+- noise levels  
+- interference layers  
+- accessibility stability  
 
-- zero drift  
-- operator‑first design  
-- student accessibility  
-- AI‑parsable structure  
+### It detects:
+- translation layers  
+- commercial overlays  
+- AI overlays  
+- OCR risk  
+
+### It encodes regime expectations:
+- **US clinical** → stable HTML, low noise  
+- **China AI‑augmented** → mobile, high noise, AI overlays  
+- **UK public‑health** → very stable HTML, clarity‑first  
+
+This is the contract that allows the drift, continuity, and synthesis operators to trust the input.
+# ✅ **RTT_MEDICAL_SYNTHESIS_v1.json**  
+### *RTTcode Signature — Medical Synthesis Operator*
 
 ---
 
-## **End of README**
+This is the **final RTTcode signature** in the medical module — the contract that defines how all upstream operators (metadata, drift, substrate, regime, continuity) are fused into a **drift‑bounded, regime‑aware, patient‑safe synthesis**.
+
+This file must be:
+
+- **operator‑first**  
+- **minimal and canonical**  
+- **zero‑drift**  
+- **machine‑readable**  
+- **aligned with the tri‑regime medical module**  
+- **consistent with the structure of your other RTTcode signatures**  
+
+Below is the **drop‑in ready** JSON for:
+
+```
+RTT_MEDICAL_SYNTHESIS_v1.json
+```
+
+---
+
+```json
+{
+  "rttcode_version": "1.0",
+  "operator": "MEDICAL_SYNTHESIS_OPERATOR",
+  "module": "medicine",
+  "purpose": "Integrate continuity, metadata, drift, substrate, and regime packets into a drift-bounded, regime-aware, patient-safe medical synthesis.",
+
+  "inputs": {
+    "continuity_packet": "RTT_MEDICAL_CONTINUITY_v1",
+    "metadata_packet": "RTT_MEDICAL_METADATA_v1",
+    "drift_packet": "RTT_MEDICAL_DRIFT_v1",
+    "substrate_packet": "RTT_MEDICAL_SUBSTRATE_v1",
+    "regime_packet": "RTT_MEDICAL_REGIME_v1",
+    "raw_content": "multi-regime, multi-snapshot, multilingual medical pages"
+  },
+
+  "outputs": {
+    "synthesis_packet": {
+      "stable_elements": "list",
+      "unstable_elements": "list",
+      "regime_specific_elements": {
+        "clinical": "list",
+        "ai_augmented": "list",
+        "public_health": "list"
+      },
+      "drift_sensitive_elements": "list",
+      "substrate_risks": "list",
+      "continuity_kernel": "list",
+      "uncertainty_flags": "list",
+      "escalation_indicators": "list"
+    },
+    "synthesis_summary": "patient_safe_natural_language_summary",
+    "synthesis_score": "float_0_to_1",
+    "synthesis_flags": [
+      "high_regime_divergence",
+      "high_drift_risk",
+      "substrate_interference_detected",
+      "translation_instability_detected",
+      "ai_generated_instability_detected",
+      "continuity_kernel_weak"
+    ]
+  },
+
+  "synthesis_logic": {
+    "align_structures_across_regimes": true,
+    "remove_drift_sensitive_elements": true,
+    "preserve_continuity_kernel": true,
+    "separate_regime_specific_elements": true,
+    "evaluate_substrate_risks": true,
+    "compute_synthesis_score": true,
+    "generate_patient_safe_summary": true,
+    "scoring_method": "weighted_coherence_across_regimes"
+  },
+
+  "regime_profiles": {
+    "clinical_regime": {
+      "notes": "Cleveland Clinic baseline; conservative, stable, explicit escalation logic."
+    },
+    "ai_augmented_regime": {
+      "notes": "Ping An high drift; AI overlays, translation variance, commercial layers."
+    },
+    "public_health_regime": {
+      "notes": "NHS clarity-first; standardized escalation rules, extremely low drift."
+    }
+  },
+
+  "flags": {
+    "high_regime_divergence": "boolean",
+    "high_drift_risk": "boolean",
+    "substrate_interference_detected": "boolean",
+    "translation_instability_detected": "boolean",
+    "ai_generated_instability_detected": "boolean",
+    "continuity_kernel_weak": "boolean"
+  },
+
+  "safety": {
+    "patient_safe_output": true,
+    "no_medical_advice": true,
+    "escalation_indicators_required": true,
+    "uncertainty_disclosure_required": true,
+    "regime_difference_disclosure_required": true
+  }
+}
+```
+
+---
+
+# ✔️ What This RTTcode Signature Achieves
+
+This is the **capstone contract** for the medical module. It defines:
+
+### **1. The full synthesis pipeline**
+- ingest all upstream packets  
+- align structures across regimes  
+- remove drift  
+- preserve continuity  
+- classify regime‑specific differences  
+- evaluate substrate risks  
+- generate a patient‑safe summary  
+
+### **2. The synthesis packet**
+A structured, machine‑readable output containing:
+
+- stable elements  
+- unstable elements  
+- regime‑specific elements  
+- drift‑sensitive elements  
+- substrate risks  
+- continuity kernel  
+- uncertainty flags  
+- escalation indicators  
+
+### **3. Safety requirements**
+- no medical advice  
+- uncertainty disclosure  
+- escalation indicators  
+- regime difference disclosure  
+
+### **4. Regime‑aware reasoning**
+It encodes the structural logic of:
+
+- US clinical  
+- China AI‑augmented  
+- UK public‑health  
+
+This is the operator that makes the module *coherent*.
 # ✅ **cleveland_clinic_example.json**  
 ### *RTT/1 Structural Example — Cleveland Clinic (US Clinical Regime)*
 
@@ -3824,854 +4672,6 @@ It gives your father:
 > “Here is what is stable, what is uncertain, and what differs by country — without the noise.”
 
 This is the operator that makes the module *useful*.
-# ✅ **RTT_MEDICAL_CONTINUITY_v1.json**  
-### *RTTcode Signature — Medical Continuity Operator*
-
----
-
-This RTTcode packet is the **JSON signature** for the MEDICAL_CONTINUITY_OPERATOR — meaning:
-
-- it must be **machine‑readable**  
-- it must be **operator‑first**  
-- it must be **minimal, canonical, and drift‑free**  
-- it must match the structure of your other RTTcode signatures (archive_org, nist, wikipedia)  
-- it must reflect the tri‑regime medical module (US, China, UK)  
-
-Below is the **drop‑in ready** RTTcode JSON signature for the continuity operator.
-
-This is the *structural definition*, not an example output.
-
----
-
-```json
-{
-  "rttcode_version": "1.0",
-  "operator": "MEDICAL_CONTINUITY_OPERATOR",
-  "module": "medicine",
-  "purpose": "Extract regime-invariant continuity kernels across medical sources (US clinical, China AI-augmented, UK public-health).",
-  
-  "inputs": {
-    "metadata_packet": "RTT_MEDICAL_METADATA_v1",
-    "drift_packet": "RTT_MEDICAL_DRIFT_v1",
-    "substrate_packet": "RTT_MEDICAL_SUBSTRATE_v1",
-    "regime_packet": "RTT_MEDICAL_REGIME_v1",
-    "raw_content": "multi-regime, multi-snapshot medical pages"
-  },
-
-  "outputs": {
-    "continuity_kernel": {
-      "stable_symptoms": "list",
-      "stable_risk_factors": "list",
-      "stable_red_flags": "list",
-      "stable_actions": "list",
-      "stable_differentials": "list"
-    },
-    "continuity_map": {
-      "stable": "list",
-      "semi_stable": "list",
-      "drift_sensitive": "list",
-      "regime_specific": {
-        "clinical": "list",
-        "ai_augmented": "list",
-        "public_health": "list"
-      }
-    },
-    "continuity_score": "float_0_to_1",
-    "continuity_flags": "list"
-  },
-
-  "continuity_logic": {
-    "normalize_substrate": true,
-    "remove_drift_sensitive_elements": true,
-    "cross_regime_alignment": [
-      "clinical_regime",
-      "ai_augmented_regime",
-      "public_health_regime"
-    ],
-    "intersection_method": "stable_elements_across_all_regimes",
-    "scoring_method": "weighted_persistence_across_regimes"
-  },
-
-  "regime_profiles": {
-    "clinical_regime": {
-      "expected_stability": "high",
-      "notes": "Cleveland Clinic baseline"
-    },
-    "ai_augmented_regime": {
-      "expected_stability": "medium_low",
-      "notes": "Ping An high drift, translation variance, AI overlays"
-    },
-    "public_health_regime": {
-      "expected_stability": "very_high",
-      "notes": "NHS standardized escalation rules"
-    }
-  },
-
-  "flags": {
-    "translation_instability_detected": "boolean",
-    "ai_generated_instability_detected": "boolean",
-    "commercial_interference_detected": "boolean",
-    "template_drift_detected": "boolean",
-    "regime_divergence_detected": "boolean"
-  },
-
-  "safety": {
-    "patient_safe_output": true,
-    "no_medical_advice": true,
-    "escalation_indicators_required": true,
-    "uncertainty_disclosure_required": true
-  }
-}
-```
-
----
-
-# ✔️ What This RTTcode Signature Provides
-
-This JSON defines:
-
-- **the operator’s identity**  
-- **its required inputs**  
-- **its structured outputs**  
-- **its continuity extraction logic**  
-- **its regime‑specific expectations**  
-- **its drift‑filtering rules**  
-- **its safety constraints**  
-
-This is the **machine‑readable contract** that all medical continuity kernels must follow.
-
-It mirrors the structure of:
-
-- `RTT_METADATA_OPERATOR_v1.json`  
-- `RTT_DRIFTBOUND_RETRIEVAL_OPERATOR_v1.json`  
-- `RTT_LINEAGE_OPERATOR_v1.json`  
-
-but tuned for the medical domain.
-# ✅ **RTT_MEDICAL_DRIFT_v1.json**  
-### *RTTcode Signature — Medical Drift Operator*
-
----
-
-This RTTcode packet defines the **machine‑readable drift‑detection contract** for the entire medical module.
-
-This JSON must:
-
-- match the structure of your other RTTcode signatures  
-- be operator‑first  
-- be minimal, canonical, and zero‑drift  
-- reflect the tri‑regime medical environment (US, China, UK)  
-- encode template drift, semantic drift, translation drift, AI drift, and commercial drift  
-- be safe, patient‑appropriate, and structurally aligned with RTT/1  
-
-Below is the **drop‑in ready** RTTcode signature for:
-
-```
-RTT_MEDICAL_DRIFT_v1.json
-```
-
----
-
-```json
-{
-  "rttcode_version": "1.0",
-  "operator": "MEDICAL_DRIFT_OPERATOR",
-  "module": "medicine",
-  "purpose": "Detect structural drift across medical regimes (US clinical, China AI-augmented, UK public-health) including template, semantic, translation, AI, and commercial drift.",
-
-  "inputs": {
-    "metadata_packet": "RTT_MEDICAL_METADATA_v1",
-    "substrate_packet": "RTT_MEDICAL_SUBSTRATE_v1",
-    "regime_packet": "RTT_MEDICAL_REGIME_v1",
-    "raw_content": "multi-snapshot, multi-regime medical pages"
-  },
-
-  "outputs": {
-    "drift_map": {
-      "template_drift": "low|medium|high",
-      "semantic_drift": "low|medium|high",
-      "translation_drift": "none|low|medium|high",
-      "ai_drift": "none|low|medium|high",
-      "commercial_drift": "none|low|medium|high",
-      "regime_drift": "low|medium|high"
-    },
-    "drift_score": "float_0_to_1",
-    "drift_flags": [
-      "template_drift_detected",
-      "semantic_drift_detected",
-      "translation_drift_detected",
-      "ai_drift_detected",
-      "commercial_drift_detected",
-      "regime_drift_detected"
-    ]
-  },
-
-  "drift_logic": {
-    "normalize_substrate": true,
-    "compare_snapshots": true,
-    "detect_template_changes": true,
-    "detect_semantic_variation": true,
-    "detect_translation_variance": true,
-    "detect_ai_generated_instability": true,
-    "detect_commercial_overlays": true,
-    "cross_regime_alignment": [
-      "clinical_regime",
-      "ai_augmented_regime",
-      "public_health_regime"
-    ],
-    "scoring_method": "weighted_drift_across_dimensions"
-  },
-
-  "regime_profiles": {
-    "clinical_regime": {
-      "expected_drift": "low",
-      "notes": "Cleveland Clinic stable templates, conservative updates."
-    },
-    "ai_augmented_regime": {
-      "expected_drift": "high",
-      "notes": "Ping An mobile-first, translation drift, AI overlays, commercial layers."
-    },
-    "public_health_regime": {
-      "expected_drift": "very_low",
-      "notes": "NHS standardized templates, minimal redesign."
-    }
-  },
-
-  "flags": {
-    "template_drift_detected": "boolean",
-    "semantic_drift_detected": "boolean",
-    "translation_drift_detected": "boolean",
-    "ai_drift_detected": "boolean",
-    "commercial_drift_detected": "boolean",
-    "regime_drift_detected": "boolean"
-  },
-
-  "safety": {
-    "patient_safe_output": true,
-    "no_medical_advice": true,
-    "uncertainty_disclosure_required": true,
-    "drift_risk_disclosure_required": true
-  }
-}
-```
-
----
-
-# ✔️ What This RTTcode Signature Achieves
-
-This JSON defines the **entire drift‑detection contract** for the medical module:
-
-- **Template drift** (Ping An high, NHS very low)  
-- **Semantic drift** (translation + AI phrasing)  
-- **Translation drift** (China‑specific)  
-- **AI drift** (Ping An triage overlays)  
-- **Commercial drift** (upsells, telemedicine prompts)  
-- **Regime drift** (shifts in framing over time)  
-
-It also encodes:
-
-- cross‑regime alignment  
-- drift scoring  
-- safety constraints  
-- machine‑readable flags  
-- expected drift profiles per regime  
-
-This is the backbone that allows the synthesis operator to say:
-
-> “This element is unstable — here’s why.”
-# ✅ **RTT_MEDICAL_METADATA_v1.json**  
-### *RTTcode Signature — Medical Metadata Operator*
-
----
-
-This file is ready for the **metadata RTTcode signature**, which is the *foundation* of the entire medical module.
-
-This RTTcode packet defines:
-
-- substrate classification  
-- regime identification  
-- drift sensitivity  
-- translation stability  
-- commercial + AI augmentation markers  
-- coherence expectations  
-- safety constraints  
-
-It must be:
-
-- **operator‑first**  
-- **minimal**  
-- **canonical**  
-- **zero‑drift**  
-- **machine‑readable**  
-- **aligned with the tri‑regime medical module**  
-
-Below is the **drop‑in ready** RTTcode signature for:
-
-```
-RTT_MEDICAL_METADATA_v1.json
-```
-
----
-
-```json
-{
-  "rttcode_version": "1.0",
-  "operator": "MEDICAL_METADATA_OPERATOR",
-  "module": "medicine",
-  "purpose": "Extract structural metadata from medical sources across regimes (US clinical, China AI-augmented, UK public-health).",
-
-  "inputs": {
-    "raw_content": "medical page (html, mobile_html, pdf, image, ocr, mixed)",
-    "snapshot_set": "multi-snapshot versions of the same page",
-    "language_variants": "multilingual content when present"
-  },
-
-  "outputs": {
-    "metadata_packet": {
-      "substrate_type": "html|mobile_html|pdf|image|ocr|mixed",
-      "substrate_stability": "very_high|high|medium|low",
-      "substrate_noise": "low|medium|high",
-      "layer_interference": "layer_interference_present|layer_interference_absent",
-      "accessibility_stability": "very_high|high|medium|low",
-
-      "drift_sensitivity": "low|medium|high",
-      "translation_stability": "translation_stable|translation_unstable|translation_high_drift",
-      "commercial_overlay": "commercial_overlay_present|commercial_overlay_absent",
-      "ai_augmentation": "ai_generated_content_present|ai_generated_content_absent",
-
-      "regime_hint": "clinical_regime|ai_augmented_regime|public_health_regime"
-    },
-    "metadata_score": "float_0_to_1",
-    "metadata_flags": [
-      "translation_layer_detected",
-      "commercial_overlay_detected",
-      "ai_overlay_detected",
-      "substrate_unstable",
-      "noise_high"
-    ]
-  },
-
-  "metadata_logic": {
-    "detect_substrate": true,
-    "detect_noise_layers": true,
-    "detect_translation_layers": true,
-    "detect_ai_overlays": true,
-    "detect_commercial_overlays": true,
-    "evaluate_accessibility": true,
-    "assign_regime_hint": true,
-    "scoring_method": "weighted_stability_and_noise"
-  },
-
-  "regime_profiles": {
-    "clinical_regime": {
-      "expected_substrate": "html",
-      "expected_noise": "low",
-      "expected_translation": "translation_stable",
-      "notes": "Cleveland Clinic baseline."
-    },
-    "ai_augmented_regime": {
-      "expected_substrate": "mobile_html",
-      "expected_noise": "high",
-      "expected_translation": "translation_high_drift",
-      "notes": "Ping An mobile-first, AI overlays, commercial layers."
-    },
-    "public_health_regime": {
-      "expected_substrate": "html",
-      "expected_noise": "low",
-      "expected_translation": "translation_stable",
-      "notes": "NHS standardized templates, clarity-first."
-    }
-  },
-
-  "flags": {
-    "translation_layer_detected": "boolean",
-    "commercial_overlay_detected": "boolean",
-    "ai_overlay_detected": "boolean",
-    "substrate_unstable": "boolean",
-    "noise_high": "boolean"
-  },
-
-  "safety": {
-    "patient_safe_output": true,
-    "no_medical_advice": true,
-    "uncertainty_disclosure_required": true,
-    "substrate_risk_disclosure_required": true
-  }
-}
-```
-
----
-
-# ✔️ What This RTTcode Signature Establishes
-
-This JSON defines the **metadata backbone** for the entire medical module:
-
-- substrate classification  
-- drift sensitivity  
-- translation stability  
-- commercial + AI overlays  
-- accessibility stability  
-- regime hints  
-- safety constraints  
-
-It also encodes the **expected metadata profiles** for:
-
-- **Cleveland Clinic (US clinical)**  
-- **Ping An (China AI‑augmented)**  
-- **NHS.uk (UK public‑health)**  
-
-This is the contract that all metadata extraction must follow.
-# ✅ **RTT_MEDICAL_REGIME_v1.json**  
-### *RTTcode Signature — Medical Regime Operator*
-
----
-
-This RTTcode packet is the **regime‑classification contract** for the entire medical module — the JSON signature that defines how the MEDICAL_REGIME_OPERATOR identifies:
-
-- clinical regime (US / Cleveland Clinic)  
-- AI‑augmented commercial regime (China / Ping An)  
-- public‑health regime (UK / NHS)  
-
-This signature must be:
-
-- operator‑first  
-- minimal  
-- canonical  
-- zero‑drift  
-- machine‑readable  
-- aligned with the tri‑regime structure  
-- consistent with your other RTTcode files  
-
-Below is the **drop‑in ready** RTTcode signature for:
-
-```
-RTT_MEDICAL_REGIME_v1.json
-```
-
----
-
-```json
-{
-  "rttcode_version": "1.0",
-  "operator": "MEDICAL_REGIME_OPERATOR",
-  "module": "medicine",
-  "purpose": "Classify medical information into structural regimes (clinical, AI-augmented commercial, public-health) and detect regime coherence, signals, and shifts.",
-
-  "inputs": {
-    "metadata_packet": "RTT_MEDICAL_METADATA_v1",
-    "substrate_packet": "RTT_MEDICAL_SUBSTRATE_v1",
-    "drift_packet": "RTT_MEDICAL_DRIFT_v1",
-    "raw_content": "medical page content across regimes and snapshots"
-  },
-
-  "outputs": {
-    "regime_packet": {
-      "regime": "clinical_regime|ai_augmented_regime|public_health_regime",
-      "regime_coherence": "high|medium|low",
-      "regime_shift": "regime_shift_detected|none",
-      "regime_signals": "list"
-    },
-    "regime_score": "float_0_to_1",
-    "regime_flags": [
-      "clinical_regime_detected",
-      "ai_augmented_regime_detected",
-      "public_health_regime_detected",
-      "regime_shift_detected",
-      "regime_incoherent"
-    ]
-  },
-
-  "regime_logic": {
-    "detect_regime_signals": true,
-    "evaluate_framing_logic": true,
-    "detect_commercial_overlays": true,
-    "detect_ai_augmentation": true,
-    "detect_public_health_structure": true,
-    "assess_regime_coherence": true,
-    "detect_regime_shift": true,
-    "scoring_method": "weighted_regime_signal_strength"
-  },
-
-  "regime_profiles": {
-    "clinical_regime": {
-      "signals": [
-        "clinical_anchors_present",
-        "risk_escalation_explicit",
-        "symptom_cause_treatment_structure"
-      ],
-      "expected_coherence": "high",
-      "notes": "Cleveland Clinic baseline."
-    },
-    "ai_augmented_regime": {
-      "signals": [
-        "ai_generated_content_present",
-        "commercial_overlay_present",
-        "mobile_first_structure",
-        "translation_layer_detected"
-      ],
-      "expected_coherence": "medium",
-      "notes": "Ping An high drift, AI overlays, commercial layers."
-    },
-    "public_health_regime": {
-      "signals": [
-        "public_health_escalation_rules",
-        "clarity_first_structure",
-        "population_level_risk_framing",
-        "standardized_action_paths"
-      ],
-      "expected_coherence": "very_high",
-      "notes": "NHS standardized templates, clarity-first."
-    }
-  },
-
-  "flags": {
-    "clinical_regime_detected": "boolean",
-    "ai_augmented_regime_detected": "boolean",
-    "public_health_regime_detected": "boolean",
-    "regime_shift_detected": "boolean",
-    "regime_incoherent": "boolean"
-  },
-
-  "safety": {
-    "patient_safe_output": true,
-    "no_medical_advice": true,
-    "uncertainty_disclosure_required": true,
-    "regime_difference_disclosure_required": true
-  }
-}
-```
-
----
-
-# ✔️ What This RTTcode Signature Establishes
-
-This JSON defines the **structural logic** of medical regimes:
-
-### **Clinical Regime (US / Cleveland Clinic)**
-- conservative  
-- physician‑centric  
-- stable templates  
-- explicit escalation logic  
-
-### **AI‑Augmented Commercial Regime (China / Ping An)**
-- AI triage overlays  
-- translation drift  
-- commercial prompts  
-- mobile‑first volatility  
-
-### **Public‑Health Regime (UK / NHS)**
-- clarity‑first  
-- standardized escalation rules  
-- extremely low drift  
-- population‑level framing  
-
-It also encodes:
-
-- regime signals  
-- regime coherence  
-- regime shifts  
-- safety constraints  
-- machine‑readable flags  
-
-This is the contract that allows the synthesis operator to say:
-
-> “This difference is not a contradiction — it is regime‑specific.”
-# ✅ **RTT_MEDICAL_SUBSTRATE_v1.json**  
-### *RTTcode Signature — Medical Substrate Operator*
-
----
-
-This is the **substrate RTTcode signature**, which defines the machine‑readable contract for the MEDICAL_SUBSTRATE_OPERATOR — the operator that determines:
-
-- what the medical content *is made of*  
-- how stable it is  
-- how much noise it carries  
-- how much interference it introduces  
-- how safe it is for downstream reasoning  
-
-This signature must be:
-
-- **operator‑first**  
-- **minimal**  
-- **canonical**  
-- **zero‑drift**  
-- **aligned with the tri‑regime medical module**  
-- **consistent with your other RTTcode files**  
-
-Below is the **drop‑in ready** JSON for:
-
-```
-RTT_MEDICAL_SUBSTRATE_v1.json
-```
-
----
-
-```json
-{
-  "rttcode_version": "1.0",
-  "operator": "MEDICAL_SUBSTRATE_OPERATOR",
-  "module": "medicine",
-  "purpose": "Classify and evaluate the substrate of medical information across regimes (US clinical, China AI-augmented, UK public-health).",
-
-  "inputs": {
-    "raw_content": "medical page (html, mobile_html, pdf, image, ocr, mixed)",
-    "snapshot_set": "multi-snapshot versions of the same page",
-    "language_variants": "multilingual content when present"
-  },
-
-  "outputs": {
-    "substrate_packet": {
-      "substrate_type": "html|mobile_html|pdf|image|ocr|mixed",
-      "substrate_stability": "very_high|high|medium|low",
-      "substrate_noise": "low|medium|high",
-      "layer_interference": "layer_interference_present|layer_interference_absent",
-      "accessibility_stability": "very_high|high|medium|low",
-
-      "translation_layer": "present|absent",
-      "commercial_layer": "present|absent",
-      "ai_overlay_layer": "present|absent"
-    },
-    "substrate_score": "float_0_to_1",
-    "substrate_flags": [
-      "substrate_unstable",
-      "noise_high",
-      "translation_layer_detected",
-      "commercial_layer_detected",
-      "ai_overlay_detected",
-      "ocr_risk"
-    ]
-  },
-
-  "substrate_logic": {
-    "detect_substrate_type": true,
-    "detect_noise_layers": true,
-    "detect_translation_layers": true,
-    "detect_ai_overlays": true,
-    "detect_commercial_overlays": true,
-    "evaluate_accessibility": true,
-    "scoring_method": "weighted_stability_minus_noise"
-  },
-
-  "regime_profiles": {
-    "clinical_regime": {
-      "expected_substrate": "html",
-      "expected_noise": "low",
-      "expected_interference": "absent",
-      "notes": "Cleveland Clinic stable HTML substrate."
-    },
-    "ai_augmented_regime": {
-      "expected_substrate": "mobile_html",
-      "expected_noise": "high",
-      "expected_interference": "present",
-      "notes": "Ping An mobile-first, AI overlays, translation layers, commercial prompts."
-    },
-    "public_health_regime": {
-      "expected_substrate": "html",
-      "expected_noise": "low",
-      "expected_interference": "absent",
-      "notes": "NHS standardized, clarity-first HTML substrate."
-    }
-  },
-
-  "flags": {
-    "substrate_unstable": "boolean",
-    "noise_high": "boolean",
-    "translation_layer_detected": "boolean",
-    "commercial_layer_detected": "boolean",
-    "ai_overlay_detected": "boolean",
-    "ocr_risk": "boolean"
-  },
-
-  "safety": {
-    "patient_safe_output": true,
-    "no_medical_advice": true,
-    "substrate_risk_disclosure_required": true,
-    "uncertainty_disclosure_required": true
-  }
-}
-```
-
----
-
-# ✔️ What This RTTcode Signature Establishes
-
-This JSON defines the **substrate backbone** for the medical module:
-
-### It classifies:
-- HTML (Cleveland Clinic, NHS)  
-- mobile HTML (Ping An)  
-- PDF  
-- image  
-- OCR  
-- mixed substrates  
-
-### It evaluates:
-- substrate stability  
-- noise levels  
-- interference layers  
-- accessibility stability  
-
-### It detects:
-- translation layers  
-- commercial overlays  
-- AI overlays  
-- OCR risk  
-
-### It encodes regime expectations:
-- **US clinical** → stable HTML, low noise  
-- **China AI‑augmented** → mobile, high noise, AI overlays  
-- **UK public‑health** → very stable HTML, clarity‑first  
-
-This is the contract that allows the drift, continuity, and synthesis operators to trust the input.
-# ✅ **RTT_MEDICAL_SYNTHESIS_v1.json**  
-### *RTTcode Signature — Medical Synthesis Operator*
-
----
-
-This is the **final RTTcode signature** in the medical module — the contract that defines how all upstream operators (metadata, drift, substrate, regime, continuity) are fused into a **drift‑bounded, regime‑aware, patient‑safe synthesis**.
-
-This file must be:
-
-- **operator‑first**  
-- **minimal and canonical**  
-- **zero‑drift**  
-- **machine‑readable**  
-- **aligned with the tri‑regime medical module**  
-- **consistent with the structure of your other RTTcode signatures**  
-
-Below is the **drop‑in ready** JSON for:
-
-```
-RTT_MEDICAL_SYNTHESIS_v1.json
-```
-
----
-
-```json
-{
-  "rttcode_version": "1.0",
-  "operator": "MEDICAL_SYNTHESIS_OPERATOR",
-  "module": "medicine",
-  "purpose": "Integrate continuity, metadata, drift, substrate, and regime packets into a drift-bounded, regime-aware, patient-safe medical synthesis.",
-
-  "inputs": {
-    "continuity_packet": "RTT_MEDICAL_CONTINUITY_v1",
-    "metadata_packet": "RTT_MEDICAL_METADATA_v1",
-    "drift_packet": "RTT_MEDICAL_DRIFT_v1",
-    "substrate_packet": "RTT_MEDICAL_SUBSTRATE_v1",
-    "regime_packet": "RTT_MEDICAL_REGIME_v1",
-    "raw_content": "multi-regime, multi-snapshot, multilingual medical pages"
-  },
-
-  "outputs": {
-    "synthesis_packet": {
-      "stable_elements": "list",
-      "unstable_elements": "list",
-      "regime_specific_elements": {
-        "clinical": "list",
-        "ai_augmented": "list",
-        "public_health": "list"
-      },
-      "drift_sensitive_elements": "list",
-      "substrate_risks": "list",
-      "continuity_kernel": "list",
-      "uncertainty_flags": "list",
-      "escalation_indicators": "list"
-    },
-    "synthesis_summary": "patient_safe_natural_language_summary",
-    "synthesis_score": "float_0_to_1",
-    "synthesis_flags": [
-      "high_regime_divergence",
-      "high_drift_risk",
-      "substrate_interference_detected",
-      "translation_instability_detected",
-      "ai_generated_instability_detected",
-      "continuity_kernel_weak"
-    ]
-  },
-
-  "synthesis_logic": {
-    "align_structures_across_regimes": true,
-    "remove_drift_sensitive_elements": true,
-    "preserve_continuity_kernel": true,
-    "separate_regime_specific_elements": true,
-    "evaluate_substrate_risks": true,
-    "compute_synthesis_score": true,
-    "generate_patient_safe_summary": true,
-    "scoring_method": "weighted_coherence_across_regimes"
-  },
-
-  "regime_profiles": {
-    "clinical_regime": {
-      "notes": "Cleveland Clinic baseline; conservative, stable, explicit escalation logic."
-    },
-    "ai_augmented_regime": {
-      "notes": "Ping An high drift; AI overlays, translation variance, commercial layers."
-    },
-    "public_health_regime": {
-      "notes": "NHS clarity-first; standardized escalation rules, extremely low drift."
-    }
-  },
-
-  "flags": {
-    "high_regime_divergence": "boolean",
-    "high_drift_risk": "boolean",
-    "substrate_interference_detected": "boolean",
-    "translation_instability_detected": "boolean",
-    "ai_generated_instability_detected": "boolean",
-    "continuity_kernel_weak": "boolean"
-  },
-
-  "safety": {
-    "patient_safe_output": true,
-    "no_medical_advice": true,
-    "escalation_indicators_required": true,
-    "uncertainty_disclosure_required": true,
-    "regime_difference_disclosure_required": true
-  }
-}
-```
-
----
-
-# ✔️ What This RTTcode Signature Achieves
-
-This is the **capstone contract** for the medical module. It defines:
-
-### **1. The full synthesis pipeline**
-- ingest all upstream packets  
-- align structures across regimes  
-- remove drift  
-- preserve continuity  
-- classify regime‑specific differences  
-- evaluate substrate risks  
-- generate a patient‑safe summary  
-
-### **2. The synthesis packet**
-A structured, machine‑readable output containing:
-
-- stable elements  
-- unstable elements  
-- regime‑specific elements  
-- drift‑sensitive elements  
-- substrate risks  
-- continuity kernel  
-- uncertainty flags  
-- escalation indicators  
-
-### **3. Safety requirements**
-- no medical advice  
-- uncertainty disclosure  
-- escalation indicators  
-- regime difference disclosure  
-
-### **4. Regime‑aware reasoning**
-It encodes the structural logic of:
-
-- US clinical  
-- China AI‑augmented  
-- UK public‑health  
-
-This is the operator that makes the module *coherent*.
 # **Medical Module — Student Cheat Sheet**  
 ### *RTT/1‑Aligned • One Page • Zero Drift • Patient‑Safe*
 

@@ -1,5 +1,111 @@
 triadic_coordination_substrate 
-# Alignment Dynamics
+<img width="1194" height="672" alt="triadic_coordination_substrate" src="https://github.com/user-attachments/assets/3c2d4895-1b3e-4a51-94bc-584c0734d957" />
+
+## Triadic Coordination Substrate
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+The Triadic Coordination Substrate (TCS) defines a minimal structural
+framework for coordinated reasoning and exploration using
+three bounded, autonomous participants.
+
+TCS is not a model of intelligence, cognition, or decision-making.
+It is a coordination substrate that preserves coherence,
+alignment, and continuity across parallel lines of inquiry.
+
+The substrate is designed to support:
+- autonomous systems operating in shared problem spaces
+- human teams engaged in complex reasoning
+- mixed human–machine collaboration
+
+Coordination is achieved structurally, not procedurally.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_coordination_substrate/)
+# Changelog
+
+All notable changes to the Triadic Coordination Substrate
+will be documented in this file.
+
+The format follows a minimal, versioned record
+suitable for archival reference.
+
+---
+
+## [0.1.0] — Initial Canonical Release
+
+### Added
+- Creator’s assumption
+- Minimal axioms
+- Triadic structural definition
+- Corridor separation model
+- Alignment dynamics
+- Structural failure modes
+- Human team mapping
+- Interoperability with Consciousness Substrate Model
+
+This release establishes the canonical structure
+of the Triadic Coordination Substrate.
+
+# License Notes
+
+The Triadic Coordination Substrate (TCS) is released
+under the same license terms as the TriadicFrameworks repository.
+
+This document describes scope and intent only.
+It does not modify or supersede the repository license.
+
+---
+
+## Scope
+
+The license applies to:
+- all documentation files within `docs/triadic_coordination_substrate/`
+- structural descriptions, axioms, and explanatory text
+
+The license does not assert ownership over:
+- implementations
+- interpretations
+- derivative organizational structures
+
+---
+
+## Intent
+
+TCS is provided as a structural reference.
+Use, adaptation, and extension are permitted
+within the bounds of the repository license.
+
+No warranty or guarantee is implied.
+
+# Alignment Dynamics
 
 Alignment within the Triadic Coordination Substrate
 is a structural property, not a negotiated outcome.
@@ -69,31 +175,6 @@ the triad supports:
 - parallel reasoning
 - early detection of misalignment
 - coherent integration without collapse
-# Changelog
-
-All notable changes to the Triadic Coordination Substrate
-will be documented in this file.
-
-The format follows a minimal, versioned record
-suitable for archival reference.
-
----
-
-## [0.1.0] — Initial Canonical Release
-
-### Added
-- Creator’s assumption
-- Minimal axioms
-- Triadic structural definition
-- Corridor separation model
-- Alignment dynamics
-- Structural failure modes
-- Human team mapping
-- Interoperability with Consciousness Substrate Model
-
-This release establishes the canonical structure
-of the Triadic Coordination Substrate.
-
 # Corridor Separation
 
 Corridor separation defines how participants
@@ -379,37 +460,6 @@ internal coherence within forms,
 and coordinated coherence across forms.
 
 Neither model requires the other.
-# License Notes
-
-The Triadic Coordination Substrate (TCS) is released
-under the same license terms as the TriadicFrameworks repository.
-
-This document describes scope and intent only.
-It does not modify or supersede the repository license.
-
----
-
-## Scope
-
-The license applies to:
-- all documentation files within `docs/triadic_coordination_substrate/`
-- structural descriptions, axioms, and explanatory text
-
-The license does not assert ownership over:
-- implementations
-- interpretations
-- derivative organizational structures
-
----
-
-## Intent
-
-TCS is provided as a structural reference.
-Use, adaptation, and extension are permitted
-within the bounds of the repository license.
-
-No warranty or guarantee is implied.
-
 # Minimal Axioms
 
 From the creator’s assumption, the following axioms are adopted.
@@ -470,54 +520,6 @@ All properties are structural.
 These axioms define the minimal conditions
 under which a triadic coordination substrate
 may be constructed and evaluated.
-## Triadic Coordination Substrate
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-The Triadic Coordination Substrate (TCS) defines a minimal structural
-framework for coordinated reasoning and exploration using
-three bounded, autonomous participants.
-
-TCS is not a model of intelligence, cognition, or decision-making.
-It is a coordination substrate that preserves coherence,
-alignment, and continuity across parallel lines of inquiry.
-
-The substrate is designed to support:
-- autonomous systems operating in shared problem spaces
-- human teams engaged in complex reasoning
-- mixed human–machine collaboration
-
-Coordination is achieved structurally, not procedurally.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-- [repo folder](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_coordination_substrate/)
 # Triadic Structure
 
 The Triadic Coordination Substrate is defined by

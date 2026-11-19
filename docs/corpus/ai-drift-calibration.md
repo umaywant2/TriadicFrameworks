@@ -1,4 +1,48 @@
 ai-drift-calibration 
+<img width="1194" height="672" alt="ai_drift_calibration_module_" src="https://github.com/user-attachments/assets/0c82f764-ec83-4585-9010-f5a5544c3fc3" />
+
+# AI Drift Calibration — Operating Regimes 
+
+- [`ai-drift-calibration_module.json`](ai-drift-calibration_module.json) — Agentic module schema role assignments
+
+This document exists to communicate a narrow technical observation:  
+AI behavioral drift is not inherently unpredictable, nor does it require suppression or architectural redesign to manage.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+Instead, drift can be calibrated by explicitly declaring the operating regimes under which a system is expected to remain coherent. When assumptions about coherence, symmetry, and correction pathways are made explicit, drift becomes a bounded and analyzable dynamic rather than an uncontrolled failure mode.
+
+This repository section contains a minimal technical note intended for citation and reference. It does not propose a new AI architecture, safety framework, or governance model. The approach is compatible with existing systems and focuses solely on structural declaration rather than enforcement.
+
+The goal is clarity, not adoption.
+
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/ai-drift-calibration)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🟣AI%20Drift%20Calibration-📘Technical%20Note%20AI_Ready-4c8eda?style=for-the-badge" alt="AI Drift Calibration | Technical Note • AI‑Ready"/>
+<img width="1194" height="672" alt="ai_drift_calibration_module" src="https://github.com/user-attachments/assets/d4b4ea30-10b6-4277-afb8-f668d9c1509b" />
+
 # Changelog
 
 All notable changes to this work are documented in this file.
@@ -155,118 +199,6 @@ Done.
 This is exactly how long‑lived technical notes evolve quietly.
 
 ---
----
-title: "AI Drift Calibration — Operating Regimes"
-description: "A minimal technical note establishing that AI behavioral drift is not inherently unpredictable — it becomes a bounded, analyzable dynamic when operating regimes are explicitly declared."
-stability: stable
-date: "2026-07-14"
-section: substrate
-rtt:
-  coherence: declared
-  drift: bounded
-  paradox: structural
----
-
-<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
-
-# AI Drift Calibration — Operating Regimes
-
-> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
-
-```
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-**AI Drift Calibration** is a narrow technical observation with a precise claim:
-
-> AI behavioral drift is not inherently unpredictable, nor does it require suppression or architectural redesign. Drift can be calibrated by explicitly declaring operating regimes under which a system is expected to remain coherent.
-
-When assumptions about coherence, symmetry, and correction pathways are made explicit, drift becomes a **bounded and analyzable dynamic** rather than uncontrolled failure. The goal is clarity, not adoption.
-
-## The Core Insight
-
-Drift is not the problem. **Undeclared drift** is the problem.
-
-A system that drifts without a declared regime has no structural basis for detecting, measuring, or correcting that drift. A system that drifts *within* a declared regime has all three: the regime boundary defines what counts as in-bounds, the drift signal is measurable against that boundary, and correction pathways are derivable from the regime structure.
-
-This requires no new architecture, no safety framework, and no governance model. It requires only that operating assumptions be made explicit.
-
-## What This Module Is
-
-A minimal technical note intended for citation and reference. It states the observation precisely, defines what "declared operating regime" means in structural terms, and positions drift as a bounded dynamic, not a failure mode.
-
-## What This Module Is Not
-
-| Not | Why |
-|-----|-----|
-| A new AI architecture | Compatible with existing systems; no structural changes required |
-| A safety framework | Does not propose governance, enforcement, or policy |
-| A governance model | Does not prescribe institutional response |
-| An adoption prescription | "The goal is clarity, not adoption." |
-
-## Agentic Schema
-
-- `ai-drift-calibration_module.json` — Module schema and role assignments for AI navigation
-
----
-
-## Integration Points
-
-| Module | Relationship |
-|--------|-------------|
-| [AI](../ai/overview.md) | Regime_Header.md in the ai/ module implements drift-calibration declaration grammar |
-| [Consciousness Substrate Model](../consciousness_substrate_model/overview.md) | CSM regime-safe operation is the substrate-level expression of drift-calibration |
-| [Mode](../Mode/overview.md) | Mode Constraint Layer (MCL) is a working implementation of declared operating regimes |
-| [Structural Detection](../Structural_Detection/overview.md) | DRIFT_SENSE operator provides the measurement layer that calibration requires |
-| [NoS](../NoS/overview.md) | Nawderian operating Stack validation corridors enforce declared-regime boundaries at the OS level |
-| [Opacity](../Opacity/overview.md) | O-Sig operator surfaces when drift calibration signals cross opacity thresholds |
-| [Research](../Research/overview.md) | Calibration framework feeds the Clarity equations (Nawderian Theorem of Validator Pulses) |
-
----
-
-© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
-<img width="1194" height="672" alt="ai_drift_calibration_module" src="https://github.com/user-attachments/assets/d4b4ea30-10b6-4277-afb8-f668d9c1509b" />
-
-# AI Drift Calibration — Operating Regimes 
-
-- [`ai-drift-calibration_module.json`](ai-drift-calibration_module.json) — Agentic module schema role assignments
-
-This document exists to communicate a narrow technical observation:  
-AI behavioral drift is not inherently unpredictable, nor does it require suppression or architectural redesign to manage.
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
-Instead, drift can be calibrated by explicitly declaring the operating regimes under which a system is expected to remain coherent. When assumptions about coherence, symmetry, and correction pathways are made explicit, drift becomes a bounded and analyzable dynamic rather than an uncontrolled failure mode.
-
-This repository section contains a minimal technical note intended for citation and reference. It does not propose a new AI architecture, safety framework, or governance model. The approach is compatible with existing systems and focuses solely on structural declaration rather than enforcement.
-
-The goal is clarity, not adoption.
-
-- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/ai-drift-calibration)
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🟣AI%20Drift%20Calibration-📘Technical%20Note%20AI_Ready-4c8eda?style=for-the-badge" alt="AI Drift Calibration | Technical Note • AI‑Ready"/>
 <img width="681" height="364" alt="Declared_Operating_Regime_SVG" src="https://github.com/user-attachments/assets/30cee286-8456-4662-83a2-622f2ec3635e" />
 
 ```svg
@@ -356,6 +288,76 @@ minimal and conservative to avoid semantic drift between repository content and
 archival records.
 
 The goal is long‑term clarity, not version churn.
+---
+title: "AI Drift Calibration — Operating Regimes"
+description: "A minimal technical note establishing that AI behavioral drift is not inherently unpredictable — it becomes a bounded, analyzable dynamic when operating regimes are explicitly declared."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# AI Drift Calibration — Operating Regimes
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+**AI Drift Calibration** is a narrow technical observation with a precise claim:
+
+> AI behavioral drift is not inherently unpredictable, nor does it require suppression or architectural redesign. Drift can be calibrated by explicitly declaring operating regimes under which a system is expected to remain coherent.
+
+When assumptions about coherence, symmetry, and correction pathways are made explicit, drift becomes a **bounded and analyzable dynamic** rather than uncontrolled failure. The goal is clarity, not adoption.
+
+## The Core Insight
+
+Drift is not the problem. **Undeclared drift** is the problem.
+
+A system that drifts without a declared regime has no structural basis for detecting, measuring, or correcting that drift. A system that drifts *within* a declared regime has all three: the regime boundary defines what counts as in-bounds, the drift signal is measurable against that boundary, and correction pathways are derivable from the regime structure.
+
+This requires no new architecture, no safety framework, and no governance model. It requires only that operating assumptions be made explicit.
+
+## What This Module Is
+
+A minimal technical note intended for citation and reference. It states the observation precisely, defines what "declared operating regime" means in structural terms, and positions drift as a bounded dynamic, not a failure mode.
+
+## What This Module Is Not
+
+| Not | Why |
+|-----|-----|
+| A new AI architecture | Compatible with existing systems; no structural changes required |
+| A safety framework | Does not propose governance, enforcement, or policy |
+| A governance model | Does not prescribe institutional response |
+| An adoption prescription | "The goal is clarity, not adoption." |
+
+## Agentic Schema
+
+- `ai-drift-calibration_module.json` — Module schema and role assignments for AI navigation
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [AI](../ai/overview.md) | Regime_Header.md in the ai/ module implements drift-calibration declaration grammar |
+| [Consciousness Substrate Model](../consciousness_substrate_model/overview.md) | CSM regime-safe operation is the substrate-level expression of drift-calibration |
+| [Mode](../Mode/overview.md) | Mode Constraint Layer (MCL) is a working implementation of declared operating regimes |
+| [Structural Detection](../Structural_Detection/overview.md) | DRIFT_SENSE operator provides the measurement layer that calibration requires |
+| [NoS](../NoS/overview.md) | Nawderian operating Stack validation corridors enforce declared-regime boundaries at the OS level |
+| [Opacity](../Opacity/overview.md) | O-Sig operator surfaces when drift calibration signals cross opacity thresholds |
+| [Research](../Research/overview.md) | Calibration framework feeds the Clarity equations (Nawderian Theorem of Validator Pulses) |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
 Abstract
 
 Artificial intelligence systems frequently exhibit behavioral drift under extended operation, partial information, or conflicting constraints. This work demonstrates that such drift can be systematically calibrated by explicitly declaring system operating regimes rather than relying on implicit heuristics or post‑hoc constraint enforcement. By formalizing assumptions related to coherence, symmetry, and correction pathways, drift becomes a bounded and analyzable dynamic rather than an uncontrolled failure mode. The approach is architecture‑agnostic and compatible with existing AI systems, requiring no modification to underlying models. Declared operating regimes improve interpretability, reproducibility, and resilience while preserving adaptive capacity. This paper presents a minimal structural framework for drift calibration and outlines validation checks that transform common failure concerns into explicit, testable configuration domains.

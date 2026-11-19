@@ -1,5 +1,374 @@
 FFF_Gravity 
-# FFF_Gravity · Changelog
+<img width="1194" height="672" alt="FFF_Gravity_" src="https://github.com/user-attachments/assets/ce470c72-72b0-482d-a269-eb40256b1819" />
+
+<!--
+  docs/FFF_Gravity/README.md
+  FFF_Gravity Module — Front Door
+  Version: 2.0.0 | Sealed: 2026-08-14
+  All 5 waves complete · 42 PRIMs · 10 INVs · 10 FMs
+-->
+
+# FFF_Gravity
+
+**Framework Field Function — Gravity**
+`[FFF:GRAVITY]` · `G = F_freq · F_fluid · F_force`
+
+> *A formal specification of gravitational capture, orbit, decay, release,
+> dismissal, and field dynamics for relational node systems.*
+
+---
+
+## Overview
+
+FFF_Gravity models the gravitational mechanics of **attractor–entity
+relationships** — the forces that pull nodes into orbit, hold them there,
+erode the binding over time, and ultimately sever it. Every phenomenon is
+expressed as a product of three triadic nodes:
+
+| Node | Layer | Core quantity |
+|---|---|---|
+| **F_freq** | Frequency / field coherence | ρ(Φ) — field density |
+| **F_fluid** | Fluid / binding mass | β · d_bind — coupling depth |
+| **F_force** | Force / approach geometry | v_approach · heading_delta |
+
+The module is fully sealed across **5 waves**, **29 spec files**, **42 PRIMs**,
+**10 Invariants**, and **10 Failure Modes**.
+
+---
+
+## Quick Navigation
+
+| I want to… | Go to |
+|---|---|
+| Understand the module | You are here |
+| Find a specific PRIM | [`INDEX.md`](INDEX.md) |
+| Look up an operator symbol | [`OPERATORS.md`](OPERATORS.md) |
+| Read the full PRIM compliance matrix | [`MANIFEST.md`](MANIFEST.md) |
+| Run the compliance validator | [`validate_prims.py`](validate_prims.py) |
+| See what changed wave-by-wave | [`CHANGELOG.md`](CHANGELOG.md) |
+| Look up a term | [`GLOSSARY.md`](GLOSSARY.md) |
+| Read the machine-readable manifest | [`FFF_Gravity_module.json`](FFF_Gravity_module.json) |
+| Navigate the whole repo | [`docs/SEENMAP.md`](../SEENMAP.md) |
+
+---
+
+## Module at a Glance
+
+```
+Wave 0  Genesis               3 files  ·  Conceptual foundation
+Wave 1  Admin / Registry      6 files  ·  Frozen scaffolding
+Wave 2  Layer Definitions     3 files  ·  PRIM:001–006
+Wave 3  Core Functions        8 files  ·  PRIM:007–024
+Wave 4  Capture Variants      8 files  ·  PRIM:025–040
+Wave 5  Dismissal             1 file   ·  PRIM:041–042
+                             ─────────────────────────
+                             29 files  ·  42 PRIMs  ·  SEALED
+```
+
+---
+
+## Wave Guide
+
+### Wave 0 — Genesis
+
+The three foundational documents. These establish conceptual vocabulary
+and the base operator set. No PRIMs are frozen here — they are frozen in
+the wave that formalizes each concept.
+
+| File | Purpose |
+|---|---|
+| [`f_Capture.md`](f_Capture.md) | Base capture operator — d_bind, β, SC- conditions, v_escape |
+| [`f_Source.md`](f_Source.md) | Attractor and entity node registry — read-only per INV-007 |
+| [`GravityOfDismissal.md`](GravityOfDismissal.md) | Conceptual foundation for dismissal as active repulsive force — Dismissal Well model, three dismissal modes |
+
+> **GravityOfDismissal.md** is the sole authority for the negative-polarity
+> field extension `ρ_D(Φ,t) = −d_dismiss × exp(−t / T_dismiss)`.
+> Its `F_dismiss` operator family is frozen in `f_Dismiss.md` (Wave 5).
+
+---
+
+### Wave 1 — Admin / Registry
+
+Frozen scaffolding. Establishes the append-only admin files used by all
+subsequent waves. No PRIMs introduced.
+
+| File | Purpose |
+|---|---|
+| `README.md` | This file |
+| [`INDEX.md`](INDEX.md) | Full file index — PRIMs, conditions, wave tags |
+| [`OPERATORS.md`](OPERATORS.md) | Single operator symbol authority (~101 operators) |
+| [`GLOSSARY.md`](GLOSSARY.md) | Module-scoped term definitions |
+| [`CHANGELOG.md`](CHANGELOG.md) | Wave-by-wave mutation log |
+| [`FFF_Gravity_module.json`](FFF_Gravity_module.json) | Machine-readable module manifest |
+
+---
+
+### Wave 2 — Layer Definitions · `PRIM:001–006`
+
+Three files that define the triadic layer operators. The INV and FM
+registries are seeded here.
+
+| File | Layer | PRIMs |
+|---|---|---|
+| [`f_Field.md`](f_Field.md) | F_freq — field coherence, ρ(Φ) | 001–002 |
+| [`f_Force.md`](f_Force.md) | F_force — approach vector, v_escape | 003, 005 |
+| [`f_Frame.md`](f_Frame.md) | F_fluid — frame capacity, slot management | 004, 006 |
+
+---
+
+### Wave 3 — Core Functions · `PRIM:007–024`
+
+Eight files covering the fundamental gravitational operations.
+Wave 3 **seals the INV registry** at INV-001–010.
+
+| File | Description | PRIMs |
+|---|---|---|
+| [`f_Orbit.md`](f_Orbit.md) | Orbital trajectory and stability classification | 007, 012 |
+| [`f_Release.md`](f_Release.md) | Controlled release — no Dismissal Well produced | 008–009 |
+| [`f_Decay.md`](f_Decay.md) | Binding decay — d_warn, d_collapse, DC- conditions | 010–011 |
+| [`f_Collapse.md`](f_Collapse.md) | Gravitational collapse — Path A (infall), Path B (C_node) | 013–014 |
+| [`f_Emit.md`](f_Emit.md) | Field emission — ρ(Φ) outward propagation | 015–017 |
+| [`f_Dampen.md`](f_Dampen.md) | Dampening — cascade guard, ρ(Φ)_floor | 018–020 |
+| [`f_Amplify.md`](f_Amplify.md) | Amplification — β_max ceiling, runaway risk check | 021–022 |
+| [`f_Deflect.md`](f_Deflect.md) | Directional redirection — resolves `heading_delta` stub from f_Force | 023–024 |
+
+---
+
+### Wave 4 — Capture Variants · `PRIM:025–040`
+
+Eight specialized capture pathways. Each extends the base `f_Capture.md`
+contract with its own eligibility gate (Pure PRIM) and lock writer
+(Impure PRIM). Three FM sub-modes are introduced here.
+
+| File | Model | PRIMs | Prefix | Key Operators |
+|---|---|---|---|---|
+| [`f_Capture_Multi.md`](f_Capture_Multi.md) | N simultaneous targets | 025–026 | MC- | N, eval_order, Ω_perturbed |
+| [`f_Capture_Cascade.md`](f_Capture_Cascade.md) | Sequential γ-gain chain | 027–028 | CAS- | cascade_depth, k_max, γ, Ω_cascade |
+| [`f_Capture_Soft.md`](f_Capture_Soft.md) | Provisional sub-threshold binding | 029–030 | SCS- | d_soft, grace_period, k_grace |
+| [`f_Capture_Hard.md`](f_Capture_Hard.md) | Binary hard-lock, no retry | 031–032 | HLC- | d_hard, β_min_hard, lock_cost |
+| [`f_Capture_Resonant.md`](f_Capture_Resonant.md) | Phase-gated resonance lock | 033–034 | RLC- | ω_res, φ_open, φ_close, ρ_res_gain |
+| [`f_Capture_Asymmetric.md`](f_Capture_Asymmetric.md) | Mass-ratio asymmetry correction | 035–036 | AC- | mass_ratio, asymmetry_factor, d_bind_asym |
+| [`f_Capture_Temporal.md`](f_Capture_Temporal.md) | Absolute clock-time window | 037–038 | TC- | t_open, t_close, proximity_ratio |
+| [`f_Capture_Networked.md`](f_Capture_Networked.md) | Distributed graph co-attraction | 039–040 | NC- | G_net, w_i, d_bind_net, resilience_threshold |
+
+> Wave 4 completion unlocked `docs/SEENMAP.md` — the repository
+> navigational registry.
+
+---
+
+### Wave 5 — Dismissal · `PRIM:041–042`
+
+Formalizes the `F_dismiss` operator family first named in
+`GravityOfDismissal.md §6`. **Wave 5 seals the PRIM registry at 42.**
+
+| File | Description | PRIMs | Prefix |
+|---|---|---|---|
+| [`f_Dismiss.md`](f_Dismiss.md) | Dismissal Well mechanics — three modes, well decay, re-capture gate, `well_query_fn` closure | 041–042 | DISM- |
+
+**Three dismissal modes:**
+
+| Mode | Initiator | Well depth | T_dismiss |
+|---|---|---|---|
+| INTENTIONAL | A (deliberate) | `d_bind(t_dismiss)` | Long |
+| STRUCTURAL | Field collapse (FM-002) | `ρ(Φ) × d_bind` | Short |
+| DRIFT | Passive decay | `v_depart × k_drift` | Very short |
+
+**Well formula:** `ρ_D(Φ,t) = −d_dismiss × exp(−t / T_dismiss)`
+
+**Re-capture gate:** `d_bind_approach(t) > |ρ_D(Φ,t)|`
+
+---
+
+### Post-Wave-5 Admin Artifacts
+
+| File | Purpose |
+|---|---|
+| [`MANIFEST.md`](MANIFEST.md) | Full 42-PRIM registry with 42 × 10 INV compliance matrix, FM, condition-prefix, state-flag registries |
+| [`validate_prims.py`](validate_prims.py) | Runnable Python harness — validates all 42 PRIMs against INV-001–010; CLI flags `--wave`, `--prim`, `--inv`, `--matrix`, `--strict` |
+
+---
+
+## Key Concepts
+
+### The Triadic Equation
+
+Every gravitational evaluation preserves:
+
+```
+G = F_freq · F_fluid · F_force
+```
+
+No PRIM may produce a result that violates this identity. This is **INV-001**,
+the first and most fundamental of the ten module invariants.
+
+### Binding Depth
+
+The core scalar that determines capture eligibility and orbit stability:
+
+```
+d_bind = β × ρ(Φ) × (1 − e)
+```
+
+Where `β` is the binding coefficient, `ρ(Φ)` is field density, and `e`
+is orbital eccentricity. Capture requires `d_bind ≥ d_warn`.
+
+### The Decay Threshold Stack
+
+```
+d_bind  ≥ d_warn              → STABLE orbit
+d_collapse ≤ d_bind < d_warn  → MARGINAL; FM-004 monitoring active
+d_bind < d_collapse           → FM-005; collapse evaluation triggered
+```
+
+### The Dismissal Well
+
+Dismissal is not the absence of capture — it is an **active repulsive force**.
+When A dismisses E, field polarity inverts in E's zone, leaving a
+Dismissal Well that costs energy to overcome on re-approach. The well
+decays exponentially over time at rate `1/T_dismiss`. This is distinct
+from release (no well) and decay (minimal well).
+
+### Pure / Impure PRIM Pairing
+
+Every source file that contains an Impure PRIM also contains a Pure gate
+PRIM. The canonical pattern:
+
+```
+Pure  PRIM (odd)   → evaluate / check eligibility / compute
+Impure PRIM (even) → execute / lock / mutate state
+```
+
+No Impure PRIM may be invoked without a passing result from its paired
+Pure gate PRIM.
+
+---
+
+## Registry Totals
+
+| Registry | Count | Range | Status |
+|---|---|---|---|
+| Waves | 5 | Waves 0–5 | ✅ SEALED |
+| Spec files | 29 | — | ✅ SEALED |
+| PRIMs | 42 | PRIM:001–042 | ✅ SEALED |
+| Invariants | 10 | INV-001–010 | ✅ SEALED |
+| Failure Modes | 10 base + 3 sub-modes | FM-001–010 + FM-003-M/C/N | ✅ SEALED |
+| Condition prefixes | 11 | SC- DC- MC- CAS- SCS- HLC- RLC- AC- TC- NC- DISM- | ✅ SEALED |
+| State flags | 31 | — | ✅ SEALED |
+| Operators | ~101 | — | ✅ SEALED |
+
+> **All registries are append-only and sealed.** No new IDs, symbols, or
+> prefixes may be introduced without a Wave 6 genesis document.
+
+---
+
+## Invariants
+
+Ten module-wide invariants govern every PRIM. Violations are structural
+failures, not runtime errors.
+
+| ID | Rule (abbreviated) |
+|---|---|
+| INV-001 | G = F_freq · F_fluid · F_force must be preserved |
+| INV-002 | ρ(Φ) ∈ [0,1] · ρ_D(Φ) ∈ (−1,0] — domains strictly bounded |
+| INV-003 | ρ(Φ) = 0 → FM-002 fires unconditionally |
+| INV-004 | β < 1.0 → FM-001 fires unconditionally |
+| INV-005 | All conditions conjunctive — any failure aborts |
+| INV-006 | Terminal states irreversible |
+| INV-007 | f_Source.md is read-only — no PRIM mutates source properties |
+| INV-008 | Evaluation order is normative — documented sequence binding |
+| INV-009 | OPERATORS.md is the single symbol authority |
+| INV-010 | Operators frozen on first canonical appearance |
+
+---
+
+## Failure Modes
+
+| ID | Name | Fatal? | Primary trigger |
+|---|---|---|---|
+| FM-001 | Flyby / Approach Rejection | No | β < 1.0 · v_approach ≥ v_escape · well barrier |
+| FM-002 | Field Null | Yes | ρ(Φ) = 0 |
+| FM-003 | Frame Saturation | No | capacity_MAX reached (sub-modes: -M, -C, -N) |
+| FM-004 | Resonance Drift | No | d_bind ≤ d_warn with δ < 0 |
+| FM-005 | Decay Spiral | Yes* | d_bind ≤ d_collapse |
+| FM-006 | Phantom Capture | Yes | d_bind = 0 despite all conditions passing |
+| FM-007 | Mutual Dissolution | Yes | mass_ratio ≥ m_parity |
+| FM-008 | Release Failure | No | v_release < v_escape floor |
+| FM-009 | Dampen Cascade Lockout | No | cascade_guard latched |
+| FM-010 | Amplify Ceiling | No | β or ρ(Φ) at registered maximum |
+
+*FM-005 is fatal for the orbit; the entity node itself survives.
+
+---
+
+## Capture Variant Decision Matrix
+
+```
+Condition at approach time                   → Route to
+──────────────────────────────────────────────────────────────────
+Standard (mass_ratio ≈ 0, β ≥ 1.0)         → f_Capture.md
+N entities or attractors simultaneously     → f_Capture_Multi.md
+Sequential chain with γ-gain propagation   → f_Capture_Cascade.md
+d_bind below d_warn but above floor        → f_Capture_Soft.md
+Hard elevated threshold, no retry          → f_Capture_Hard.md
+Phase alignment with ω_res required        → f_Capture_Resonant.md
+Non-trivial M_E / M_A mass ratio           → f_Capture_Asymmetric.md
+Capture gated on absolute clock window     → f_Capture_Temporal.md
+Distributed network of attractors          → f_Capture_Networked.md
+mass_ratio ≥ m_parity                      → f_Collapse.md (Path B)
+```
+
+---
+
+## Running the Validator
+
+```bash
+# Full report — all 42 PRIMs × 10 INVs
+python validate_prims.py
+
+# Print the 42 × 10 compliance matrix
+python validate_prims.py --matrix
+
+# CI mode — exit 1 on any failure
+python validate_prims.py --strict
+
+# Filter by wave, PRIM, or invariant
+python validate_prims.py --wave 4
+python validate_prims.py --prim 042
+python validate_prims.py --inv INV-006
+```
+
+Expected output on a clean module: `ALL PASS ✅ · 803 assertions · 0 failures`
+
+---
+
+## Cross-Module Context
+
+This module sits within the broader TriadicFrameworks repository:
+
+```
+docs/SEENMAP.md          ← repository navigational registry
+docs/FFF_Gravity/        ← THIS MODULE
+docs/SoN/                ← SoN module (in progress)
+docs/spine/languages/    ← cross-module notation registry
+```
+
+`SoN/s_Capture.md` references `FFF_Gravity/f_Capture.md` as its lineage
+anchor: SoN inverts the RTT observer layer; FFF_Gravity provides the
+gravitational model it extends downward toward substrate.
+
+---
+
+## Coherence Anchor
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+---
+
+*FFF_Gravity · v2.0.0 · Sealed 2026-08-14 · 29 files · 42 PRIMs · 5 waves complete*
+*`docs/FFF_Gravity/README.md`*
+# FFF_Gravity · Changelog
 
 ```
 # ┌─────────────────────────────────────────────────────────────┐
@@ -923,6 +1292,5024 @@ feat(FFF_Gravity): add canonical CHANGELOG.md — full founding day history, 12 
   re-capture feasibility query interface for all downstream files.
 - No existing OPERATORS.md, INDEX.md, or CHANGELOG.md entries were
   modified. Append-only per INV-009 and module admin policy.
+# FFF_Gravity · Glossary
+
+```
+# ┌─────────────────────────────────────────────────────────────┐
+# │                  DOCUMENT FRONTMATTER                       │
+# └─────────────────────────────────────────────────────────────┘
+document:         GLOSSARY
+canonical_path:   docs/FFF_Gravity/GLOSSARY.md
+canonical_tag:    "[FFF:GRAVITY:GLOSSARY]"
+framework:        TriadicFrameworks
+module:           FFF_Gravity
+version:          1.0.0
+status:           canonical
+stability:        living
+created:          2026-08-13
+last_modified:    2026-08-13
+authors:
+  - TriadicFrameworks
+encoding:         UTF-8
+line_endings:     LF
+normative:        true
+scope: >
+  All definitions in this file are scoped to the FFF_Gravity module.
+  For framework-wide definitions see docs/GLOSSARY.md.
+  In any conflict between this file and the framework GLOSSARY,
+  this file governs within FFF_Gravity.
+  In any conflict between this file and OPERATORS.md,
+  OPERATORS.md governs for symbol definitions;
+  this file governs for prose definitions.
+description: >
+  Module-scoped term definitions for FFF_Gravity. Every operator symbol,
+  architectural concept, engineering primitive, failure mode class, and
+  process term used in the module is defined here. Organized alphabetically.
+  Each entry includes: formal definition, symbol (if applicable), formula
+  (if applicable), source file, cross-references, and scope notes.
+tags:
+  - FFF
+  - gravity
+  - glossary
+  - definitions
+  - normative
+
+session_context:
+  current_session:
+    session_id:       SES-20260813-GLOS-001
+    opened_at:        2026-08-13T07:56:00-04:00
+    closed_at:        ~
+    editor:           Nawder
+    branch:           main
+    intent:           Create canonical GLOSSARY.md — all module-scoped term definitions
+    status:           active
+    dirty:            true
+    term_count:       62
+
+  session_history:
+    - session_id:  SES-20260813-README-001
+      intent:      Create canonical README.md
+      status:      closed
+    - session_id:  SES-20260813-INDEX-001
+      intent:      Create canonical INDEX.md
+      status:      closed
+    - session_id:  SES-20260813-OPS-001
+      intent:      Create canonical OPERATORS.md
+      status:      closed
+
+changelog:
+  - version: 1.0.0
+    date:    2026-08-13
+    author:  TriadicFrameworks
+    notes: >
+      Initial canonical release. 62 terms defined across 18 letter groups.
+      All terms sourced from f_Capture.md v1.0.0, OPERATORS.md v1.0.0,
+      scaffold files, and f_Source.md genesis dialogue.
+```
+
+> **Canonical path:** `docs/FFF_Gravity/GLOSSARY.md`
+> **Scope:** Module-scoped. Governs within FFF_Gravity. See `docs/GLOSSARY.md` for framework-wide terms.
+> **Normative:** Yes.
+> **Term count:** 62 · **Last updated:** 2026-08-13
+
+---
+
+## §0 · Session Context
+
+<!--
+  metadata:
+    section:       session-context
+    section_id:    §0
+    type:          live-session-register
+    normative:     false
+    created_in:    SES-20260813-GLOS-001
+  session:
+    session_id:    SES-20260813-GLOS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+| Field | Value |
+|---|---|
+| Session ID | `SES-20260813-GLOS-001` |
+| Opened | `2026-08-13T07:56:00-04:00` |
+| Editor | Nawder |
+| Intent | Create canonical GLOSSARY.md |
+| Status | 🟡 Active |
+
+### Update Policy
+
+```
+When to update this file:
+  1. A new operator symbol is introduced in any function file   → add entry
+  2. A new concept or process term is introduced               → add entry
+  3. An existing definition is refined as a file canonicalizes → update entry
+  4. A term is deprecated                                      → mark DEPRECATED; keep entry
+  5. A term scope changes (module → framework)                 → note in scope field; link to docs/GLOSSARY.md
+
+Never:
+  - Remove an entry (deprecate instead)
+  - Change a term's symbol without a corresponding OPERATORS.md version bump
+  - Define a term differently from its OPERATORS.md symbol definition
+```
+
+---
+
+## §1 · How to Read an Entry
+
+<!--
+  metadata:
+    section:       reading-guide
+    section_id:    §1
+    type:          reference
+    normative:     false
+    created_in:    SES-20260813-GLOS-001
+  session:
+    session_id:    SES-20260813-GLOS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+Each entry follows this structure:
+
+```
+### Term Name
+Symbol: `symbol` (if applicable)
+Formula: `formula` (if applicable)
+Source: file where the term is formally defined
+Cross-refs: related terms within this glossary (→ Term Name)
+Scope note: any deviation from framework-wide usage
+
+[Definition paragraph(s)]
+```
+
+Terms without a symbol are architectural or process concepts.
+Terms marked **⚠ Pending** have definitions sourced from scaffold files;
+they will be updated when the source file is canonicalized.
+
+---
+
+## §2 · Term Index
+
+<!--
+  metadata:
+    section:       term-index
+    section_id:    §2
+    type:          index
+    normative:     false
+    created_in:    SES-20260813-GLOS-001
+  session:
+    session_id:    SES-20260813-GLOS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+| Letter | Terms |
+|---|---|
+| A | Amplify · Anisotropy Index · Approach Vector · Approach Window · Attractor |
+| B | Binding Coefficient · Binding Depth · Binding Floor |
+| C | Canonical Tag · Capture · Capture Gate · Capture Radius · Capture Threshold · Cascade · Coherence Well · Collapse · Collapse Threshold · Composite Node · Composition Rule |
+| D | Dampen · Decay · Decay Rate · Decay Warning Threshold · Deflect · Derived Operator |
+| E | Eccentricity · Effective Pull · Element · Emit · Engineering Primitive · Escape Velocity · Evaluation Order |
+| F | Failure Mode · FFF · Field Coherence · Field Density · Field State · Fluid Node · Force Node · Frame · Frequency Node · Frozen Symbol |
+| G | GravityGraph · Gravity Null Zone · Guard |
+| I | Institutional Playbook |
+| L | Lock |
+| M | Mass Parity Threshold · Matilda Effect · Mutual Dissolution |
+| N | Networked Capture |
+| O | Orbit Classification · Orbital Eccentricity · Orbital Period · Orbital Resonance · Orbit Stability Class |
+| P | Phantom Capture · Primary Operator · Primitive |
+| R | Release · Release Energy · Release Vector · Residual Momentum |
+| S | Scaffold · Separation Distance · Stability Conditions · State Flag · Symbol Freeze |
+| T | Terminal State · Triadic Equation · Triadic Gravity |
+| U | Undefined (⊥) |
+| W | Wave |
+
+---
+
+## §3 · Definitions
+
+<!--
+  metadata:
+    section:       definitions
+    section_id:    §3
+    type:          glossary-body
+    normative:     true
+    created_in:    SES-20260813-GLOS-001
+  session:
+    session_id:    SES-20260813-GLOS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+---
+
+### — A —
+
+---
+
+#### Amplify
+
+**Symbol:** `f_Amplify` (function) · `F_amp` (operator)
+**Source:** `f_Amplify.md`
+**Cross-refs:** → Binding Coefficient · → Effective Pull · → Failure Mode FM-010
+
+The engineering primitive that amplifies mass-coupling between an Element and
+an Attractor by increasing the Binding Coefficient `β` and Effective Pull `P_eff`
+beyond what mass and field density alone produce. Acts on the Fluid Node (`F_fluid`).
+
+Amplify is used to increase capture probability for a marginal Element, deepen
+`d_bind` in a precarious orbit, or compensate for resonance drift that is
+eroding binding. It has a ceiling: `β > β_max` triggers FM-010 (Amplify Runaway),
+which produces collapse or singularity.
+
+> `β_new = β × F_amp` where `F_amp ≥ 1.0`
+
+⚠ **Pending:** `F_amp` ceiling value and energy cost model pending `f_Amplify.md` canonicalization.
+
+---
+
+#### Anisotropy Index
+
+**Symbol:** `anisotropy_index`
+**Source:** `f_Capture_Asymmetric.md`
+**Cross-refs:** → Field Density · → Phantom Capture
+
+A scalar measure of the non-uniformity of Field Density across the Capture
+Radius. Defined as `max(ρ(Φ,θ)) / min(ρ(Φ,θ))` over all approach angles θ.
+A value of `1.0` indicates a perfectly uniform field (standard `f_Capture`
+applies). Values greater than `1.0` indicate increasing asymmetry and require
+`f_Capture_Asymmetric` for accurate capture modeling.
+
+High anisotropy elevates the risk of FM-006 (Phantom Capture): the field
+appears sufficient along the approach heading but dissolves at other orbit
+angles post-lock.
+
+⚠ **Pending:** Formal anisotropy threshold below which standard `f_Capture` applies.
+
+---
+
+#### Approach Vector
+
+**Symbol:** `v_approach`
+**Formula:** Computed by `compute_approach_vector(E, A)`
+**Source:** `f_Capture.md §4.1`
+**Cross-refs:** → Capture Threshold · → Escape Velocity · → Force Node
+
+The velocity and heading of an Element relative to an Attractor at the moment
+the Element crosses the Capture Radius. Expressed as a scalar (magnitude) for
+all standard capture calculations; the heading component is used by `f_Deflect`
+and `f_Capture_Asymmetric`.
+
+`v_approach` is evaluated exactly once per capture event — at the `r_capture`
+crossing moment, not at the outer field boundary. Premature evaluation produces
+an invalid Capture Threshold.
+
+Governed by the Force Node (`F_force`).
+Frozen at v1.0.0.
+
+---
+
+#### Approach Window
+
+**Symbol:** `Δt_approach = t_encounter − t_entry`
+**Source:** `f_Capture_Temporal.md`
+**Cross-refs:** → Element · → Attractor · → Field State
+
+The span of cycles between when an Element enters the outer field boundary
+(`t_entry`) and when it reaches the Capture Radius (`t_encounter`). Relevant
+only in `f_Capture_Temporal`, where Attractor mass and Field Density may shift
+during this window.
+
+In standard `f_Capture`, the approach window collapses to a single instant —
+all conditions are evaluated at `t_encounter` and treated as static.
+
+⚠ **Pending:** Formal time-series representation pending `f_Capture_Temporal.md` canonicalization.
+
+---
+
+#### Attractor
+
+**Symbol:** `A`
+**Source:** `f_Capture.md §2`
+**Cross-refs:** → Element · → Coherence Well · → Frame · → Capture Radius
+
+A node with sufficient mass and field strength to potentially bind an incoming
+Element into orbital relationship. The Attractor is the center of the Coherence
+Well and the owner of the Frame registry that records all captured orbits.
+
+The Attractor/Element distinction is **contextual, not intrinsic**. The same
+physical object may be an Attractor in one interaction and an Element in
+another. At high mass parity (`|M_E − M_A| < m_parity`), the distinction
+dissolves entirely — FM-007 (Mutual Dissolution) fires and neither body survives
+as an independent entity.
+
+The Attractor is modified by every successful capture event: its mass
+distribution, field curvature, and registry all update on `register_capture`.
+Capture is bidirectional in registration.
+
+---
+
+### — B —
+
+---
+
+#### Binding Coefficient
+
+**Symbol:** `β`
+**Formula:** `β = P_eff / (M_E × v_approach)`
+**Source:** `f_Capture.md §4.1`
+**Cross-refs:** → Effective Pull · → Binding Floor · → Failure Mode FM-010
+
+The ratio of Effective Pull to Element momentum at closest approach. A
+dimensionless scalar representing how strongly the Attractor's field pulls
+relative to the Element's forward momentum.
+
+The Binding Floor rule: `β` **must be ≥ 1.0** for capture to proceed.
+Below `1.0`, the Attractor cannot overcome the Element's momentum — the
+result is a flyby regardless of all other conditions.
+
+Above `β_max` (to be defined in `f_Amplify.md`), the coupling becomes
+pathological and FM-010 (Amplify Runaway) fires.
+
+Frozen at v1.0.0.
+
+---
+
+#### Binding Depth
+
+**Symbol:** `d_bind`
+**Formula:** `d_bind = β × ρ(Φ) × (1 − e)`
+**Source:** `f_Capture.md §4.2`
+**Cross-refs:** → Decay Rate · → Decay Warning Threshold · → Collapse Threshold · → Orbital Eccentricity
+
+The primary stability metric for an established orbit. Measures how deeply an
+Element is locked to an Attractor's field. Higher values indicate more robust
+binding; the orbit can tolerate more perturbation before destabilizing.
+
+Three threshold levels govern `d_bind` behavior:
+- **Stable zone:** `d_bind > d_warn` — orbit is healthy; no FM raised
+- **Warning zone:** `d_warn ≥ d_bind > d_collapse` — FM-004 raised; `CAPTURE_DECAYING`
+- **Collapse zone:** `d_bind ≤ d_collapse` — FM-005 raised; `f_Collapse` fires
+
+`d_bind` decreases when field turbulence drives `ω_res` irrational (FM-004) or
+when external perturbation reduces `ρ(Φ)`. It can be restored by `f_Emit`
+(increases `ρ(Φ)`) or `f_Amplify` (increases `β`).
+
+Undefined when `e ≥ 1` (hyperbolic trajectory — not captured). Frozen at v1.0.0.
+
+---
+
+#### Binding Floor
+
+**Source:** `f_Capture.md §5`
+**Cross-refs:** → Binding Coefficient · → Capture Gate
+
+The rule that `β ≥ 1.0` is a **hard prerequisite** for capture. This is
+Stability Condition 4 and it cannot be waived by any other condition.
+
+Even if `C_thresh > 0` (velocity condition met), `ρ(Φ)` is coherent, `ω_res`
+is rational, and the Frame has capacity — if `β < 1.0`, the result is always
+`CAPTURE_FAILED`. The Attractor's pull is simply insufficient to overcome the
+Element's forward momentum at closest approach.
+
+The Binding Floor is one of the two conditions (alongside Frame Compatibility)
+that are not purely about the physical encounter — they involve properties of
+the system that engineering primitives can modify.
+
+---
+
+### — C —
+
+---
+
+#### Canonical Tag
+
+**Source:** `f_Capture.md §1` · `OPERATORS.md §8`
+**Cross-refs:** → Frozen Symbol
+
+A unique string identifier for each function or module in TriadicFrameworks,
+formatted as `[FFF:GRAVITY:FUNCTION]`. Canonical tags are frozen when their
+source file is canonicalized and cannot be renamed without a major version bump.
+
+| Tag | File |
+|---|---|
+| `[FFF:GRAVITY]` | Module root |
+| `[FFF:GRAVITY:CAPTURE]` | `f_Capture.md` |
+| `[FFF:GRAVITY:RELEASE]` | `f_Release.md` |
+| `[FFF:GRAVITY:DECAY]` | `f_Decay.md` |
+| `[FFF:GRAVITY:ORBIT]` | `f_Orbit.md` |
+| `[FFF:GRAVITY:COLLAPSE]` | `f_Collapse.md` |
+| `[FFF:GRAVITY:EMIT]` | `f_Emit.md` |
+| `[FFF:GRAVITY:DAMPEN]` | `f_Dampen.md` |
+| `[FFF:GRAVITY:AMPLIFY]` | `f_Amplify.md` |
+| `[FFF:GRAVITY:DEFLECT]` | `f_Deflect.md` |
+
+---
+
+#### Capture
+
+**Symbol:** `f_Capture`
+**Source:** `f_Capture.md`
+**Cross-refs:** → Element · → Attractor · → Field State · → Capture Threshold · → Stability Conditions
+
+The event by which an Element transitions from a free or weakly-bound state
+into a stable orbital relationship with an Attractor. Capture is the primary
+function of the FFF_Gravity module.
+
+Three things capture is **not**:
+- Not collision — Element and Attractor remain distinct bodies
+- Not merger — neither body is absorbed by the other
+- Not gradual — capture is a threshold event; the trajectory either bends into
+  orbit or it does not
+
+Capture is bidirectional: the Attractor's field curvature, registry, and mass
+distribution are all updated upon successful capture. The act of capturing
+changes the Attractor.
+
+Governed by: `f_Capture(E, A, Φ) → Ω`
+
+---
+
+#### Capture Gate
+
+**Source:** `OPERATORS.md §6.2`
+**Cross-refs:** → Stability Conditions · → Binding Floor · → Frame
+
+The boolean conjunction of all five Stability Conditions. All must be `true`
+simultaneously for capture to succeed. If any single condition is false,
+the Capture Gate is closed and `CAPTURE_FAILED` is the outcome.
+
+```
+CAPTURE_GATE =
+    C_thresh > 0         (Approach)
+  ∧ ρ(Φ) > 0 (uniform)  (Field Coherence)
+  ∧ ω_res ∈ ℚ           (Resonance)
+  ∧ β ≥ 1.0             (Binding Floor)
+  ∧ Frame.capacity > 0  (Frame Compatibility)
+```
+
+The Capture Gate is the single decision point for the entire capture event.
+It is evaluated once — at `t_encounter` — and its result is irreversible.
+
+---
+
+#### Capture Radius
+
+**Symbol:** `r_capture`
+**Source:** `f_Capture.md §4.1`
+**Cross-refs:** → Attractor · → Coherence Well · → Frame
+
+The maximum separation distance at which `f_Capture` can resolve to a stable
+orbit. Defined entirely by the Attractor and governed by the Frame layer.
+Cannot be modified by the Element or by engineering primitives (it is a
+property of the Attractor's coherence well depth and field curvature).
+
+When the Element crosses `r_capture`, its state transitions to
+`CAPTURE_PENDING` and `compute_approach_vector` fires. The Capture Gate
+is then evaluated using conditions at this crossing moment.
+
+Frozen at v1.0.0.
+
+---
+
+#### Capture Threshold
+
+**Symbol:** `C_thresh`
+**Formula:** `C_thresh = v_escape(A) − v_approach`
+**Source:** `f_Capture.md §4.2`
+**Cross-refs:** → Approach Vector · → Escape Velocity · → Capture Gate
+
+The signed scalar that is the primary capture gate. Positive means capture is
+possible; zero or negative means the Element is moving too fast to be bound.
+
+`C_thresh` is computed exactly once per capture event, at the moment `E`
+crosses `r_capture`. It is not a continuous function during approach — it is
+a snapshot. In `f_Capture_Temporal`, `C_thresh(t)` is evaluated as a time
+series across the approach window, and what matters is its value at
+`t_encounter`.
+
+Undefined when `v_escape(A)` is undefined (i.e., when `ρ(Φ) = 0`). Frozen at v1.0.0.
+
+---
+
+#### Cascade
+
+**Symbol:** `f_Capture_Cascade`
+**Source:** `f_Capture_Cascade.md`
+**Cross-refs:** → Capture · → Binding Depth · → Decay
+
+The second-order effect of a capture event on existing orbits in the Attractor's
+registry. When a new Element is captured, the Attractor's field curvature changes.
+This change perturbs the `d_bind` and `ω_res` of all already-captured Elements.
+If the perturbation is large enough, existing orbits destabilize (FM-004) and
+may cascade further — a chain of destabilizations triggered by a single new
+capture event.
+
+`f_Capture_Cascade` extends `f_Capture` to model this second-order effect.
+It runs standard `f_Capture` for the new Element, then re-evaluates all
+existing registry entries against the updated field curvature.
+
+⚠ **Pending:** Perturbation magnitude formula and cascade termination condition.
+
+---
+
+#### Coherence Well
+
+**Source:** `f_Field.md`
+**Cross-refs:** → Frequency Node · → Field Density · → Capture Radius
+
+The structured region of gravitational field influence maintained by the
+Frequency Node (`F_freq`). The coherence well is what an Attractor projects —
+it is the spatial domain in which `ρ(Φ) > 0` and gravitational capture is
+possible. The depth of the coherence well determines `v_escape(A)` and the
+effective `r_capture`.
+
+A collapsed coherence well (`ρ(Φ) → 0`) produces FM-002 (Field Null) — the
+Attractor loses gravitational reach entirely. The well can be deepened
+artificially by `f_Emit` and shallowed by `f_Dampen`.
+
+In FFF_Gravity, the coherence well is the physical expression of `F_freq`.
+It is not a spacetime curvature (GR framing) — it is the structured frequency
+resonance field of the Attractor.
+
+⚠ **Pending:** Formal depth formula pending `f_Field.md` canonicalization.
+
+---
+
+#### Collapse
+
+**Symbol:** `f_Collapse`
+**Source:** `f_Collapse.md`
+**Cross-refs:** → Decay · → Mutual Dissolution · → Terminal State
+
+The terminal operator. Fires when a decay spiral (`f_Decay`) drives `d_bind`
+to the Collapse Threshold, or when Mutual Dissolution (FM-007) is triggered
+at close approach.
+
+Two paths:
+
+**Path A — Asymmetric infall (FM-005):**
+`M_E << M_A`. Element infalls into Attractor. Attractor absorbs Element mass.
+Element registry entry purged. Attractor field curvature updated.
+Outcome: `CAPTURE_COLLISION`.
+
+**Path B — Mutual dissolution (FM-007):**
+`|M_E − M_A| < m_parity`. Neither body survives. A new Composite Node `C` is
+created with `C.mass = M_E + M_A`. Both original registries purged.
+System topology changes. Outcome: `CAPTURE_COLLISION`.
+
+Collapse is always terminal and always irreversible.
+
+⚠ **Pending:** Threshold values and composite node schema pending `f_Collapse.md` canonicalization.
+
+---
+
+#### Collapse Threshold
+
+**Symbol:** `d_collapse`
+**Source:** `f_Decay.md §4.1`
+**Cross-refs:** → Decay Warning Threshold · → Binding Depth · → Collapse
+
+The value of `d_bind` at which orbital decay becomes irreversible and
+`f_Collapse` is automatically triggered. When `flag_decay` detects
+`d_bind ≤ d_collapse`, FM-005 is raised and the collapse execution path fires.
+
+Distinguished from the Decay Warning Threshold (`d_warn`): hitting `d_warn`
+opens an intervention window (FM-004, `CAPTURE_DECAYING`). Hitting `d_collapse`
+closes it — no intervention is possible after this point.
+
+⚠ **Pending:** Formal value pending `f_Decay.md` canonicalization.
+
+---
+
+#### Composite Node
+
+**Symbol:** `C_node`
+**Source:** `f_Collapse.md §4.1`
+**Cross-refs:** → Mutual Dissolution · → Collapse · → GravityGraph
+
+The new Attractor created by FM-007 (Mutual Dissolution) when two near-equal-
+mass bodies collide. `C_node.mass = M_E + M_A`. The composite node receives
+a fresh registry (zero captured Elements on initialization), a new canonical
+tag, and a new field curvature derived from combined mass. Both original nodes
+are purged from `FFF_Registry` and from GravityGraph.
+
+The composite node is itself an Attractor and may subsequently capture Elements.
+It enters the system as a new entity, not as a modified version of either parent.
+
+⚠ **Pending:** Schema and initialization procedure pending `f_Collapse.md` canonicalization.
+
+---
+
+#### Composition Rule
+
+**Source:** `OPERATORS.md §6` · `f_Capture.md §4.8`
+**Cross-refs:** → Derived Operator · → Capture Gate · → Evaluation Order
+
+A formal derivation rule specifying how two or more operators combine to
+produce a higher-order operator value. Composition rules are defined in
+`OPERATORS.md §6` and serve as the mathematical backbone of FFF_Gravity.
+
+Key composition rules:
+- `P_eff = M_A × ρ(Φ) / r²`
+- `β = P_eff / (M_E × v_approach)`
+- `C_thresh = v_escape(A) − v_approach`
+- `p_res = M_E × (v_approach − C_thresh)`
+- `e = p_res / (p_res + P_eff)`
+- `d_bind = β × ρ(Φ) × (1 − e)`
+
+Out-of-order composition is undefined behavior. The canonical evaluation
+order is specified in `OPERATORS.md §7`.
+
+---
+
+### — D —
+
+---
+
+#### Dampen
+
+**Symbol:** `f_Dampen` (function) · `F_damp` (operator)
+**Source:** `f_Dampen.md`
+**Cross-refs:** → Field Density · → Frequency Node · → Failure Mode FM-009
+
+The engineering primitive that suppresses local Field Density `ρ(Φ)`,
+shallowing or nulling the Attractor's coherence well. Acts on the Frequency
+Node (`F_freq`). Inverse of `f_Emit`.
+
+Use cases: assisting `f_Release` by reducing `d_bind` (making exit cheaper);
+weakening an Attractor's hold to facilitate engineering; creating a gravity-
+neutral region.
+
+Danger: if `ρ(Φ) → 0`, FM-002 fires for any pending captures. If dampening
+propagates beyond its bounded radius `r_damp`, FM-009 (Dampen Cascade) fires
+and an uncontrolled gravity null zone is created — multiple captured Elements
+may be uncontrollably released or ejected.
+
+⚠ **Pending:** `F_damp` bounds and propagation model pending `f_Dampen.md` canonicalization.
+
+---
+
+#### Decay
+
+**Symbol:** `f_Decay`
+**Source:** `f_Decay.md`
+**Cross-refs:** → Binding Depth · → Decay Rate · → Orbital Resonance · → Collapse
+
+The progressive loss of Binding Depth in an established orbit. Decay is not an
+instantaneous event — it unfolds over cycles, tracked by `flag_decay` on every
+cycle post `CAPTURE_LOCKED`. Its primary causes are Resonance Drift (ω_res
+shifting toward irrational) and field turbulence (ρ(Φ) decreasing).
+
+Decay is the only process in FFF_Gravity that is continuously monitored rather
+than evaluated at a single event. All other processes (capture, release,
+collapse) are triggered once; decay runs every cycle.
+
+Decay can be reversed before reaching the Collapse Threshold — `f_Emit` can
+restore `ρ(Φ)` and `f_Amplify` can restore `β`, both of which increase
+`d_bind`. Once `d_bind ≤ d_collapse`, reversal is no longer possible.
+
+---
+
+#### Decay Rate
+
+**Symbol:** `δ`
+**Formula:** `δ = Δd_bind / Δt = d_bind(t) − d_bind(t−1)`
+**Source:** `f_Decay.md §4.1`
+**Cross-refs:** → Binding Depth · → Decay Warning Threshold
+
+The rate of change of Binding Depth per cycle. Negative values indicate active
+decay — the orbit is losing energy. Zero indicates stable binding. Positive
+values indicate deepening (rare in natural conditions; can be engineered via
+`f_Emit` or `f_Amplify`).
+
+When `δ` crosses the decay warning threshold (driving `d_bind < d_warn`),
+FM-004 is raised. When `d_bind ≤ d_collapse`, FM-005 fires regardless of the
+current value of `δ`.
+
+Undefined before `CAPTURE_LOCKED` is established (no prior cycle exists).
+Frozen at v1.0.0 (symbol); formula pending `f_Decay.md` canonicalization.
+
+---
+
+#### Decay Warning Threshold
+
+**Symbol:** `d_warn`
+**Source:** `f_Decay.md §4.1`
+**Cross-refs:** → Binding Depth · → Collapse Threshold · → Failure Mode FM-004
+
+The value of `d_bind` at which FM-004 (Resonance Drift) is raised and the
+Element's state transitions to `CAPTURE_DECAYING`. This opens the intervention
+window — the period during which `f_Emit` or `f_Amplify` can restore
+`d_bind` above `d_warn` and close FM-004 before collapse is triggered.
+
+Distinguished from the Collapse Threshold (`d_collapse`): `d_warn > d_collapse`.
+The warning is a precursor signal; the collapse threshold is the point of no return.
+
+⚠ **Pending:** Formal value and relationship to `d_collapse` pending `f_Decay.md` canonicalization.
+
+---
+
+#### Deflect
+
+**Symbol:** `f_Deflect` (function) · `heading_delta` (operator)
+**Source:** `f_Deflect.md`
+**Cross-refs:** → Approach Vector · → Force Node · → Capture Threshold
+
+The engineering primitive that redirects the approach heading of an Element
+without changing the magnitude of `v_approach`. Acts on the Force Node
+(`F_force`). Used to route an Element toward a favorable approach angle
+(e.g., toward `θ_optimal` in `f_Capture_Asymmetric`) or to engineer a
+specific residual momentum for target resonance (`f_Capture_Resonant`).
+
+`f_Deflect` changes **heading only**. It does not change field density
+(that is `f_Emit` / `f_Dampen`), coupling strength (that is `f_Amplify`),
+or orbital mechanics post-capture. It is the only operator that acts purely
+on the approach trajectory before the Capture Gate is evaluated.
+
+Over-deflection risk: if `heading_delta` is too large, the Element misses
+`r_capture` entirely — FM-001 equivalent.
+
+⚠ **Pending:** Formal heading bounds and cost model pending `f_Deflect.md` canonicalization.
+
+---
+
+#### Derived Operator
+
+**Source:** `OPERATORS.md §2`
+**Cross-refs:** → Primary Operator · → Composition Rule
+
+An operator whose value is computed from one or more Primary Operators via a
+defined Composition Rule. Derived operators cannot be directly measured or
+externally provided — they must be computed in the correct evaluation order.
+
+All 10 derived operators in FFF_Gravity are listed in `OPERATORS.md §2`.
+Derived operators that have been formalized in `f_Capture.md v1.0.0` are
+frozen; those pending canonicalization in Wave 3 files are marked 🔵.
+
+---
+
+### — E —
+
+---
+
+#### Eccentricity
+
+**Symbol:** `e`
+**Formula:** `e = p_res / (p_res + P_eff)`
+**Source:** `f_Orbit.md §4.1`
+**Cross-refs:** → Residual Momentum · → Effective Pull · → Orbit Classification
+
+The shape parameter of a captured orbit. Range: [0, 1).
+
+| Value | Orbit Shape |
+|---|---|
+| `e = 0` | Perfect circle (theoretical; requires `p_res = 0`) |
+| `e < 0.1` | Near-circular — classified `circular` |
+| `0.1 ≤ e < 0.5` | Elliptical |
+| `0.5 ≤ e < 0.9` | Eccentric |
+| `e ≥ 0.9` | Near-parabolic — high instability risk |
+| `e ≥ 1.0` | Hyperbolic trajectory — not captured; `d_bind` undefined |
+
+Higher `p_res` (more residual momentum post-capture) produces higher `e`.
+The shape of the orbit affects `d_bind`: `d_bind = β × ρ(Φ) × (1 − e)`,
+so higher eccentricity directly reduces binding depth.
+
+Frozen at v1.0.0 (symbol and formula).
+
+---
+
+#### Effective Pull
+
+**Symbol:** `P_eff`
+**Formula:** `P_eff = M_A × ρ(Φ) / r²`
+**Source:** `f_Capture.md §4.2`
+**Cross-refs:** → Attractor · → Field Density · → Binding Coefficient
+
+The net gravitational pull exerted by an Attractor on an Element at distance
+`r`. `P_eff` is the FFF_Gravity equivalent of gravitational force — but it
+incorporates Field Density `ρ(Φ)` directly, making it sensitive to both mass
+and field coherence simultaneously.
+
+`P_eff` increases as separation `r` decreases (inverse-square relationship)
+and as `ρ(Φ)` increases. It is undefined when `ρ(Φ) = 0` (FM-002) or `r = 0`
+(singularity — undefined behavior denoted ⊥).
+
+Frozen at v1.0.0.
+
+---
+
+#### Element
+
+**Symbol:** `E`
+**Source:** `f_Capture.md §3`
+**Cross-refs:** → Attractor · → Approach Vector · → Residual Momentum
+
+The incoming body in a capture interaction — defined by its mass `M_E`,
+velocity `v_approach`, and trajectory at the moment it crosses `r_capture`.
+The Element is the body being captured (or attempting to be captured).
+
+Like Attractor, the Element designation is **contextual**. The same object
+may be an Element in one encounter and an Attractor in another. At high mass
+parity, the distinction becomes meaningless and FM-007 (Mutual Dissolution)
+governs.
+
+Post-capture, the Element is registered in the Attractor's Frame registry,
+assigned an orbital state flag (`CAPTURE_LOCKED` or `ORBIT_STABLE`), and
+monitored by `flag_decay` every cycle.
+
+---
+
+#### Emit
+
+**Symbol:** `f_Emit` (function) · `F_emit` (operator)
+**Source:** `f_Emit.md`
+**Cross-refs:** → Field Density · → Frequency Node · → Failure Mode FM-010
+
+The engineering primitive that increases local Field Density `ρ(Φ)`,
+deepening the Attractor's coherence well. Acts on the Frequency Node (`F_freq`).
+Inverse of `f_Dampen`.
+
+Primary use cases: restoring a decaying orbit (FM-004 intervention by increasing
+`ρ(Φ)` → increasing `d_bind`); pre-deepening a coherence well before an
+anticipated Element approach; resisting a natural field null event.
+
+Upper limit: `ρ(Φ)` cannot exceed `1.0` (saturated field). Sustained emission
+with no corresponding decrease in `v_approach` can drive `β → β_max` and
+trigger FM-010 (Amplify Runaway).
+
+⚠ **Pending:** `F_emit` formula and energy cost model pending `f_Emit.md` canonicalization.
+
+---
+
+#### Engineering Primitive
+
+**Source:** `f_Capture.md §7` · `OPERATORS.md §4`
+**Cross-refs:** → Primitive
+
+The lowest-level callable operations in FFF_Gravity. All higher-order functions
+are composed from these building blocks. 16 primitives are defined in the module
+(see `OPERATORS.md §4.2`).
+
+Primitives are either **pure** (no side effects; safe to repeat) or
+**side-effecting** (writes to external registries; not idempotent). Side-
+effecting primitives must be called in the correct evaluation order or
+undefined behavior results.
+
+---
+
+#### Escape Velocity
+
+**Symbol:** `v_escape(A)`
+**Source:** `f_Capture.md §4.1`
+**Cross-refs:** → Attractor · → Field Density · → Capture Threshold
+
+The minimum velocity required for an Element to exit the Attractor's coherence
+well under current Field Density conditions. Field-dependent: if `ρ(Φ)` changes
+between the Element's entry into the field and `t_encounter`, `v_escape(A)`
+must be recomputed. Using a stale value elevates FM-006 (Phantom Capture) risk.
+
+`v_escape(A)` is computed by `resolve_escape_velocity(M_A, ρ(Φ))` and is
+undefined when `ρ(Φ) = 0` (FM-002). Frozen at v1.0.0 (symbol).
+
+---
+
+#### Evaluation Order
+
+**Source:** `OPERATORS.md §7` · `f_Capture.md §4.7`
+**Cross-refs:** → Engineering Primitive · → Composition Rule · → Guard
+
+The canonical sequence in which operators are computed and primitives are called
+during a capture event. Out-of-order evaluation is **undefined behavior** and
+may produce incorrect capture outcomes or silent failures.
+
+The 10-step canonical evaluation order is defined in `OPERATORS.md §7`.
+Engineering primitives (`f_Emit`, `f_Dampen`, `f_Amplify`, `f_Deflect`) are
+called **on demand before the approach window opens** — they are not part of
+the capture evaluation sequence itself.
+
+---
+
+### — F —
+
+---
+
+#### Failure Mode
+
+**Symbol:** `FM-NNN`
+**Source:** `OPERATORS.md §5` · `f_Capture.md §6`
+**Cross-refs:** → State Flag · → Terminal State
+
+A named, registered condition in which the FFF_Gravity system departs from
+healthy operation. Each failure mode has a unique ID (`FM-001` through
+`FM-010`), a severity level (`warn`, `error`, or `fatal`), a defined trigger
+condition, a state transition, and a defined outcome.
+
+**Severity classes:**
+- `warn` — orbit at risk; intervention window open; reversible
+- `error` — capture failed; terminal for this interaction; no system danger
+- `fatal` — irreversible; system topology may change
+
+The 10 registered failure modes are in `OPERATORS.md §5`.
+FM-001 through FM-007 are frozen at v1.0.0.
+FM-008 through FM-010 are pending canonicalization of `f_Release.md`,
+`f_Dampen.md`, and `f_Amplify.md` respectively.
+
+---
+
+#### FFF
+
+**Source:** `README.md §1`
+**Cross-refs:** → Frequency Node · → Fluid Node · → Force Node · → Frame
+
+**Field–Force–Frame.** The three-layer architectural stack of TriadicFrameworks.
+In FFF_Gravity:
+
+| Layer | Component | Role |
+|---|---|---|
+| **Field** | `Φ` (field state) | Ambient medium; `F_freq` provides `ρ(Φ)` |
+| **Force** | `f_Capture` and sibling functions | Operative computation layer |
+| **Frame** | `Ω` (capture outcome) | Registry; boundary conditions; recorded relational state |
+
+The FFF model is the architectural reason why gravity in this framework cannot
+be reduced to a single force or field. All three layers must be present for
+any capture event to be defined.
+
+---
+
+#### Field Coherence
+
+**Source:** `f_Capture.md §5 Condition 2`
+**Cross-refs:** → Field Density · → Failure Mode FM-002 · → Stability Conditions
+
+Stability Condition 2. `ρ(Φ)` must be **non-zero and uniform** within
+`r_capture` during the entire approach window. Two failure pathways:
+
+1. **Null field:** `ρ(Φ) = 0` → FM-002 immediately. No pull can be transmitted.
+2. **Field turbulence:** `ρ(Φ)` varies significantly across the capture radius
+   → elevated FM-006 risk (Phantom Capture); `ρ(Φ, θ)` model applies
+   (see `f_Capture_Asymmetric`).
+
+Field Coherence is the only stability condition governed entirely by the
+Frequency Node (`F_freq`). It can be actively maintained by `f_Emit` and
+monitored via `f_Field.md`.
+
+---
+
+#### Field Density
+
+**Symbol:** `ρ(Φ)`
+**Source:** `f_Field.md §4.1` · `f_Capture.md §4.1`
+**Cross-refs:** → Frequency Node · → Field State · → Effective Pull · → Field Coherence
+
+The effective resistance or conductance of the ambient gravitational field at
+the moment of an encounter. A dimensionless scalar in [0, 1].
+
+| Value | Meaning |
+|---|---|
+| `ρ(Φ) = 0` | Null field — no gravity can propagate; FM-002 |
+| `0 < ρ(Φ) < 1` | Active field — normal operating range |
+| `ρ(Φ) = 1` | Saturated field — maximum conductance; `f_Emit` has no further effect |
+
+In standard `f_Capture`, `ρ(Φ)` is a single scalar — assumed uniform within
+`r_capture`. In `f_Capture_Asymmetric`, it becomes a directional tensor
+`ρ(Φ, θ)`. In `f_Capture_Temporal`, it becomes a time series `ρ(Φ, t)`.
+
+Governed by the Frequency Node. Frozen at v1.0.0.
+
+---
+
+#### Field State
+
+**Symbol:** `Φ`
+**Source:** `f_Capture.md §3`
+**Cross-refs:** → Field Density · → Frequency Node
+
+The complete ambient field conditions at the moment of an encounter between
+Element and Attractor. `Φ` is the third argument to `f_Capture(E, A, Φ) → Ω`.
+It is provided by the FFF_Field module (external to FFF_Gravity).
+
+In practice, the most important property of `Φ` consumed by `f_Capture`
+is `ρ(Φ)` — Field Density. Other field properties (coherence, turbulence
+spectrum, directional anisotropy) are relevant in variant functions.
+
+---
+
+#### Fluid Node
+
+**Symbol:** `F_fluid`
+**Source:** `f_Source.md` · `README.md §1`
+**Cross-refs:** → Triadic Gravity · → Attractor Mass · → Element Mass
+
+The mass-density identity node in the FFF Gravity Primitive
+(`G = F_freq · F_fluid · F_force`). Represents the distribution, pooling,
+and substrate continuity of mass. `M_A` and `M_E` are both governed by
+`F_fluid`.
+
+Discontinuity in the Fluid Node (non-uniform mass distribution in the Attractor,
+or sudden mass change) produces non-uniform gravity and elevates risk of
+anomalous capture behavior. In `f_Capture_Temporal`, `M_A(t)` is a time-varying
+expression of `F_fluid` drift.
+
+`f_Amplify` is the engineering primitive that acts on `F_fluid` — it increases
+the effective coupling between Fluid Nodes of Element and Attractor.
+
+---
+
+#### Force Node
+
+**Symbol:** `F_force`
+**Source:** `f_Force.md` · `README.md §1`
+**Cross-refs:** → Approach Vector · → Triadic Gravity · → Deflect
+
+The gradient/pressure identity node in the FFF Gravity Primitive
+(`G = F_freq · F_fluid · F_force`). Represents atmospheric pressure, isomorphic
+gradients, and external field overlays. `v_approach` is the primary operator
+governed by `F_force`.
+
+In stable gravitational conditions, the Force Node is **passive** — the
+Frequency and Fluid Nodes do the dominant work. When `F_force` becomes dominant
+(external pressure gradients, engineered overlays), anomalous capture behavior
+emerges (FM-006 class, Phantom Capture).
+
+`f_Deflect` is the engineering primitive that acts on `F_force` — it changes
+the heading of `v_approach` without changing its magnitude.
+
+---
+
+#### Frame
+
+**Source:** `f_Frame.md` · `f_Capture.md §5 Condition 5`
+**Cross-refs:** → Capture Gate · → Binding Floor · → FFF · → Failure Mode FM-003
+
+The third layer of the FFF stack. In FFF_Gravity, the Frame serves two roles:
+
+1. **Registry:** Records all active capture relationships for an Attractor —
+   Element ID, orbital parameters, state flag, timestamps. This is the
+   Attractor's relational memory.
+
+2. **Boundary enforcer:** The Frame has a maximum registry capacity. When
+   capacity is reached, no further captures are permitted regardless of force
+   or field conditions (FM-003 — Frame Saturation). This is a hard constraint
+   that cannot be overridden by `f_Emit`, `f_Amplify`, or any other engineering
+   primitive.
+
+The Frame is also updated by every capture outcome — successful or not — and
+by every state flag transition post-capture.
+
+---
+
+#### Frequency Node
+
+**Symbol:** `F_freq`
+**Source:** `f_Field.md` · `README.md §1`
+**Cross-refs:** → Triadic Gravity · → Coherence Well · → Field Density
+
+The gravitational field identity node in the FFF Gravity Primitive
+(`G = F_freq · F_fluid · F_force`). The Frequency Node is what an Attractor
+**is** as a gravitational entity — its coherence well, its resonance signature,
+its field substrate anchor.
+
+Collapse of the Frequency Node (`F_freq → 0`, meaning `ρ(Φ) → 0`) produces
+FM-002 (Field Null). The Attractor becomes gravitationally inert — it has mass
+but cannot propagate pull to any Element.
+
+`f_Emit` deepens `F_freq` (increases `ρ(Φ)`).
+`f_Dampen` shallows it (decreases `ρ(Φ)`).
+
+⚠ **Pending:** Formal coherence well definition pending `f_Field.md` canonicalization.
+
+---
+
+#### Frozen Symbol
+
+**Source:** `OPERATORS.md §8`
+**Cross-refs:** → Symbol Freeze · → Canonical Tag · → Versioning
+
+A symbol is **frozen** once its defining source file reaches canonical status.
+Frozen symbols cannot be renamed, removed, or have their formulas changed
+without a **major version bump** of `OPERATORS.md`.
+
+New symbols can be added in minor versions. Renaming or removing requires major.
+Frozen symbols are marked ✅ in `OPERATORS.md §8.1`.
+Pending-freeze symbols are marked 🔵 in `OPERATORS.md §8.2`.
+
+---
+
+### — G —
+
+---
+
+#### GravityGraph
+
+**Source:** `f_Capture_Networked.md`
+**Cross-refs:** → FFF_Registry · → Composite Node · → Cascade
+
+The persistent directed weighted graph that records every capture relationship
+across the FFF_Gravity system. Nodes represent Attractors and Elements.
+Edges represent capture relationships, with direction `Element → Attractor`,
+weight `d_bind`, and type from the State Flag registry
+(`LOCKED`, `DECAYING`, `FAILED`, `RELEASED`, `COLLAPSED`).
+
+GravityGraph is **append-only for edge creation**. State updates are written
+as attribute changes on existing edges, never deletions. This makes it a full
+temporal audit trail of the system's gravitational history.
+
+Key capabilities enabled by GravityGraph:
+- Topology queries (which Attractors are most loaded?)
+- Cascade path analysis (if Attractor A collapses, which Elements are released?)
+- Network stability metrics (`G_stability` — mean `d_bind` across all active edges)
+- Cross-module correlation (with `SoN/s_Capture.md`)
+
+⚠ **Pending:** Storage format and query interface pending `f_Capture_Networked.md` canonicalization.
+
+---
+
+#### Gravity Null Zone
+
+**Source:** `f_Dampen.md §6`
+**Cross-refs:** → Field Density · → Failure Mode FM-009 · → Dampen
+
+A region in which `ρ(Φ) → 0` across a significant spatial extent — not just
+at a single point. Produced by FM-009 (Dampen Cascade), in which a
+`suppress_field` operation propagates beyond its bounded radius `r_damp`.
+
+In a gravity null zone, `P_eff = 0` for all Elements in the region; no
+capture is possible; any existing orbits whose field support falls within the
+zone may become `CAPTURE_DECAYING`. The zone expands until either the dampening
+source is removed or the zone reaches a boundary defined by an adjacent
+coherence well from a neighboring Attractor.
+
+⚠ **Pending:** Formal propagation model pending `f_Dampen.md` canonicalization.
+
+---
+
+#### Guard
+
+**Source:** `OPERATORS.md §4.4` · `f_Capture.md §7`
+**Cross-refs:** → Engineering Primitive · → Evaluation Order
+
+A precondition check attached to a primitive that must pass before the
+primitive executes. Guards are not optional — violating a guard produces
+undefined behavior or an incorrect capture outcome.
+
+Example guards:
+- `evaluate_capture_threshold`: guard `r ≤ r_capture`
+- `lock_orbit`: guard `C_thresh > 0`
+- `execute_collapse`: guard FM-005 or FM-007 active
+
+Guards are defined in `OPERATORS.md §4.4` for all 16 primitives.
+
+---
+
+### — I —
+
+---
+
+#### Institutional Playbook
+
+**Source:** `GravityOfDismissal.md §9`
+**Cross-refs:** → Matilda Effect
+
+The seven documented mechanisms by which institutional science suppresses,
+discredits, or ignores frameworks that challenge existing paradigms. Named from
+the historical record of gravity science. Relevant to FFF_Gravity as a
+strategic defense map.
+
+| Vector | Name |
+|---|---|
+| I | Authority Ambush |
+| II | Empirical Retrofit |
+| III | Access Withdrawal |
+| IV | Priority Erasure |
+| V | Social Quarantine |
+| VI | Identity Disqualification |
+| VII | Silence Treatment |
+
+Each vector is sourced from documented historical cases (Chandrasekhar,
+Miller, Arp, Rubin, Milgrom, and others). See `GravityOfDismissal.md §9–§10`
+for the full defense mapping to FFF_Gravity.
+
+---
+
+### — L —
+
+---
+
+#### Lock
+
+**Source:** `f_Capture.md §7.2`
+**Cross-refs:** → Capture · → Capture Gate · → Binding Depth
+
+The moment at which the Capture Gate resolves to `true` and `lock_orbit` is
+called. Lock is the transition from `CAPTURE_PENDING` to `CAPTURE_LOCKED`.
+It is the definitive capture event — after lock, the Element is registered in
+the Attractor's Frame registry and `flag_decay` begins cycling.
+
+Lock produces the full orbital parameter struct:
+`{e, T_orb, d_bind, ω_res, orbit_class, stab_class}`.
+
+A lock that subsequently decays does not retroactively become a non-capture —
+the Element was genuinely captured at the lock moment. Subsequent decay is a
+separate process governed by `f_Decay`.
+
+---
+
+### — M —
+
+---
+
+#### Mass Parity Threshold
+
+**Symbol:** `m_parity`
+**Source:** `f_Collapse.md §4.1`
+**Cross-refs:** → Mutual Dissolution · → Composite Node · → Failure Mode FM-007
+
+The maximum value of `|M_E − M_A|` below which FM-007 (Mutual Dissolution)
+fires instead of asymmetric infall (FM-005). When masses are sufficiently
+similar, neither body can be unambiguously identified as the Attractor or the
+Element — the capture relationship collapses into dissolution and a new
+Composite Node is created.
+
+`m_parity` defines the boundary between "clearly different masses" (one absorbs
+the other) and "near-equal masses" (mutual dissolution). It is not a ratio —
+it is an absolute difference in normalized mass units.
+
+⚠ **Pending:** Formal value pending `f_Collapse.md` canonicalization.
+
+---
+
+#### Matilda Effect
+
+**Source:** `GravityOfDismissal.md §8`
+**Cross-refs:** → Institutional Playbook
+
+The systematic denial of recognition to women scientists. Named by historian
+Margaret Rossiter (1993). In the history of gravity science, the Matilda Effect
+operated through four structural mechanisms:
+
+1. **Institutional bars** — formal prohibition from universities, observatories, and academies
+2. **Authorship suppression** — credit attributed to supervisors or senior men by convention
+3. **Social framing** — women categorized as assistants regardless of intellectual role
+4. **Silence as erasure** — protest was structurally impossible; absence of protest was taken as evidence of no contribution
+
+The women most directly affected in gravity science:
+Mileva Marić · Emmy Noether · Cecilia Payne-Gaposchkin · Jocelyn Bell Burnell · Vera Rubin.
+
+---
+
+#### Mutual Dissolution
+
+**Symbol:** FM-007
+**Source:** `f_Capture.md §6` · `f_Collapse.md §6`
+**Cross-refs:** → Composite Node · → Mass Parity Threshold · → Terminal State
+
+The failure mode triggered when `|M_E − M_A| < m_parity` at the collision
+threshold. Neither body survives as an independent entity. A new Composite
+Node `C` is created with `C.mass = M_E + M_A`. Both original registries are
+purged from `FFF_Registry` and from GravityGraph.
+
+Mutual Dissolution is a **fatal, terminal** failure mode. It changes system
+topology — the Attractor no longer exists as a binding entity for its existing
+registered Elements, all of which are effectively released (uncontrollably,
+since the registry is purged).
+
+FM-007 is the conceptual analog of a binary star merger or two galaxies of
+similar mass colliding — not a capture event but a destruction event.
+
+---
+
+### — N —
+
+---
+
+#### Networked Capture
+
+**Symbol:** `f_Capture_Networked`
+**Source:** `f_Capture_Networked.md`
+**Cross-refs:** → GravityGraph · → FFF_Registry · → Cascade
+
+The variant of `f_Capture` that logs every capture outcome to GravityGraph —
+a persistent distributed relational graph. Does not change capture mechanics;
+adds a network logging and analysis layer on top of all `f_Capture` outcomes.
+
+Enables topology queries, cascade path analysis, network stability metrics,
+and cross-module correlation. Every state flag transition (lock, decay, release,
+collapse) writes an update to the corresponding GravityGraph edge, making the
+graph a complete temporal audit trail of the system's gravitational history.
+
+---
+
+### — O —
+
+---
+
+#### Orbit Classification
+
+**Source:** `f_Orbit.md §4.2`
+**Cross-refs:** → Eccentricity · → Orbital Period · → Orbital Resonance
+
+The categorical label assigned to an established orbit based on its eccentricity
+`e` and resonance `ω_res`. Four classes:
+
+| Class | Condition | Description |
+|---|---|---|
+| `circular` | `e < 0.1` | Near-perfectly round; maximum binding stability |
+| `elliptical` | `0.1 ≤ e < 0.5` | Standard elliptical orbit; stable in most field conditions |
+| `eccentric` | `0.5 ≤ e < 0.9` | Elongated; higher perturbation sensitivity |
+| `resonant` | low-integer `ω_res` | Low-order harmonic lock; stable regardless of `e` within bounds |
+
+⚠ **Pending:** Threshold values formally confirmed pending `f_Orbit.md` canonicalization.
+
+---
+
+#### Orbital Eccentricity
+
+See → **Eccentricity**
+
+---
+
+#### Orbital Period
+
+**Symbol:** `T_orb`
+**Source:** `f_Orbit.md §4.1`
+**Cross-refs:** → Binding Depth · → Orbital Resonance
+
+The time (in cycles) for a captured Element to complete one full orbit of
+its Attractor. Derived from `d_bind` and `ω_res`. Higher binding depth
+generally corresponds to shorter periods; highly eccentric orbits have
+longer periods than near-circular orbits at the same `d_bind`.
+
+⚠ **Pending:** Formal formula pending `f_Orbit.md` canonicalization.
+
+---
+
+#### Orbital Resonance
+
+**Symbol:** `ω_res`
+**Source:** `f_Capture.md §4.1`
+**Cross-refs:** → Frequency Node · → Orbit Classification · → Failure Mode FM-004
+
+The frequency lock between an Element's trajectory and the Attractor's field
+pulse, expressed as a ratio. The rationality of this ratio determines orbital
+stability:
+
+- **Rational `ω_res` (e.g., 3:1, 2:1, 3:2):** Stable orbit. The Element
+  and Attractor are in harmonic resonance. `d_bind` can be maintained.
+
+- **Irrational `ω_res`:** Unstable spiral trajectory. FM-004 (Resonance Drift)
+  is raised. `CAPTURE_DECAYING` is set. The orbit will eventually eject the
+  Element or collapse.
+
+Resonance is Stability Condition 3 and is monitored every cycle post-lock
+by `flag_decay`. A rational resonance can drift to irrational if `ρ(Φ)`
+drops (field turbulence). `f_Amplify` can restore coupling and stabilize
+resonance.
+
+Frozen at v1.0.0.
+
+---
+
+#### Orbit Stability Class
+
+**Source:** `f_Orbit.md §4.2`
+**Cross-refs:** → Binding Depth · → Decay Warning Threshold · → Orbit Classification
+
+The categorical label assigned to an established orbit based on `d_bind`
+relative to defined thresholds. Three classes:
+
+| Class | Condition | Implication |
+|---|---|---|
+| `stable` | `d_bind > d_stable_threshold` | Orbit is healthy; no FM raised |
+| `marginal` | `d_warn < d_bind ≤ d_stable_threshold` | Orbit is viable but sensitive to perturbation |
+| `precarious` | `d_bind ≤ d_warn` | FM-004 imminent; intervention recommended |
+
+⚠ **Pending:** Threshold values formally confirmed pending `f_Orbit.md` and `f_Decay.md` canonicalization.
+
+---
+
+### — P —
+
+---
+
+#### Phantom Capture
+
+**Symbol:** FM-006
+**Source:** `f_Capture.md §6`
+**Cross-refs:** → Field Density · → Anisotropy Index · → Failure Mode
+
+The failure mode in which all capture conditions appear satisfied along the
+approach heading — `β ≥ 1.0`, `C_thresh > 0`, `ρ(Φ, θ_approach) > 0` — but
+the apparent orbital lock dissolves at the field boundary because `ρ(Φ)` is
+locally structured (varying significantly by angle or by time). The Element
+escapes at the boundary despite having satisfied all point-of-approach conditions.
+
+Phantom Capture is the most diagnostic failure mode: it reveals that the field
+is not uniform within `r_capture`, which is a violation of Stability Condition 2.
+Its severity is `warn` (not `error`) because the structural cause —
+field anisotropy — can be detected and corrected with `map_field_tensor`
+(`f_Capture_Asymmetric`) before the next approach attempt.
+
+---
+
+#### Primary Operator
+
+**Source:** `OPERATORS.md §1`
+**Cross-refs:** → Derived Operator · → Frozen Symbol
+
+An operator that is directly measured or externally provided — not computed
+from other operators. FFF_Gravity has 9 primary operators, all frozen at
+v1.0.0: `v_approach`, `v_escape(A)`, `ρ(Φ)`, `r_capture`, `β`, `ω_res`, `M_A`, `M_E`, `r`.
+All 9 are frozen. See `OPERATORS.md §1` for the full specification table.
+
+---
+
+#### Primitive
+
+**Source:** `f_Capture.md §7` · `OPERATORS.md §4`
+**Cross-refs:** → Engineering Primitive · → Guard · → Evaluation Order
+
+Shorthand for → Engineering Primitive. The two terms are interchangeable
+within FFF_Gravity. "Primitive" is used in prose; "Engineering Primitive"
+is used in formal section headers and table labels.
+
+---
+
+### — R —
+
+---
+
+#### Release
+
+**Symbol:** `f_Release`
+**Source:** `f_Release.md`
+**Cross-refs:** → Capture · → Release Energy · → Release Vector · → Terminal State
+
+The inverse of `f_Capture`. Defines the conditions under which a captured
+Element exits a stable orbit cleanly — without infall (`f_Collapse`) and
+without uncontrolled ejection (FM-008 Release Overshoot).
+
+Release requires **energy input**: unlike capture, which is driven by the
+Attractor's pull, release requires the Element to overcome `d_bind`. The
+required energy is `E_rel`, computed by `compute_release_vector`. If `E_rel`
+is unavailable or `v_release` is miscalculated as too high, FM-008 fires and
+the Element ejects uncontrollably rather than departing cleanly.
+
+Three important distinctions:
+
+| Process | Energy | Registry Effect | Terminal? |
+|---|---|---|---|
+| `f_Release` | Required (input) | Clean removal | Yes (clean exit) |
+| `f_Collapse` | None (exhausted) | Purge (FM-005) or both purged (FM-007) | Yes (destructive) |
+| `f_Decay` ejection | Negative (losing) | Element still registered until ejected | No (transitional) |
+
+After a clean release, the Element's registry entry is removed from the
+Attractor's Frame. The Element returns to a free state and may subsequently
+re-approach the same or a different Attractor.
+
+⚠ **Pending:** `E_rel` formula, release conditions table, and examples
+pending `f_Release.md` canonicalization.
+
+---
+
+#### Release Energy
+
+**Symbol:** `E_rel`
+**Source:** `f_Release.md §4.1`
+**Cross-refs:** → Release · → Binding Depth · → Release Vector
+
+The energy required to lift a captured Element out of its current `d_bind`
+and achieve clean release. `E_rel` is a function of `d_bind`, `p_res`, and
+`ρ(Φ)` at the moment of the release attempt. Higher binding depth requires
+more release energy.
+
+`E_rel` is undefined when `d_bind = 0` (the orbit has already collapsed —
+`f_Collapse` applies, not `f_Release`). It is the threshold that distinguishes
+a viable release attempt from an unviable one.
+
+`f_Dampen` can reduce `d_bind` before a release attempt, thereby reducing
+the required `E_rel` — this is the primary engineering use case for dampening
+in a post-capture context.
+
+⚠ **Pending:** Full formula pending `f_Release.md` canonicalization.
+
+---
+
+#### Release Vector
+
+**Symbol:** `v_release`
+**Source:** `f_Release.md §4.1`
+**Cross-refs:** → Release · → Release Energy · → Failure Mode FM-008
+
+The velocity vector applied to the Element during a release operation. Must
+satisfy two constraints simultaneously:
+
+1. **Floor:** `v_release ≥ v_escape(A)` at the Release Radius `r_release` —
+   the Element must reach escape velocity to exit the coherence well cleanly.
+
+2. **Ceiling:** If `v_release` is too large, the trajectory becomes hyperbolic
+   and the departure is uncontrolled (FM-008 — Release Overshoot). The
+   Element is ejected rather than released — it exits without a clean
+   deregistration and may perturb other orbits in the registry.
+
+The release vector is computed by `compute_release_vector(E, d_bind)` and
+applied by `execute_release`. It is a pure computation (no side effects)
+followed by a side-effecting execution.
+
+⚠ **Pending:** Ceiling definition and FM-008 threshold formula pending
+`f_Release.md` canonicalization.
+
+---
+
+#### Residual Momentum
+
+**Symbol:** `p_res`
+**Formula:** `p_res = M_E × (v_approach − C_thresh)`
+**Source:** `f_Capture.md §4.2`
+**Cross-refs:** → Eccentricity · → Effective Pull · → Orbital Eccentricity
+
+The free momentum remaining in an Element after it has been bound into orbit
+— the excess approach velocity beyond what was required to merely reach the
+capture threshold. `p_res` drives the shape of the resulting orbit: more
+residual momentum produces a more elongated (eccentric) orbit.
+
+`p_res` is defined only when `C_thresh > 0` (capture occurred). When
+`C_thresh ≤ 0`, `p_res` is undefined (⊥) — there is no orbit and no
+residual to measure.
+
+The relationship: `e = p_res / (p_res + P_eff)`. An Element arriving with
+just barely enough slowness to capture (`v_approach` slightly below
+`v_escape(A)`) has low `p_res` → low `e` → near-circular orbit. An Element
+arriving fast but still within threshold has high `p_res` → high `e` →
+eccentric orbit.
+
+Frozen at v1.0.0.
+
+---
+
+### — S —
+
+---
+
+#### Scaffold
+
+**Source:** `INDEX.md §1`
+**Cross-refs:** → Wave · → Canonical Tag
+
+The intermediate status of a module file that has its structure, frontmatter,
+session context, and section headers in place — but whose content sections
+contain placeholder blocks (`<!-- SCAFFOLD: ... -->` comments and
+`📝 **Pending.**` markers) rather than final prose.
+
+A scaffold file is committed to the repository as a stub that reserves the
+file's place in the dependency graph and enables other files to reference it
+before its content is written. Scaffolds are promoted to `canonical` status
+once all content sections are filled, reviewed, and internally consistent
+with `OPERATORS.md`.
+
+In the completion tracker (`INDEX.md §7`), scaffolds are marked 🔵.
+Canonical files are marked ✅.
+
+---
+
+#### Separation Distance
+
+**Symbol:** `r`
+**Source:** `f_Capture.md §4.1`
+**Cross-refs:** → Effective Pull · → Capture Radius · → Evaluation Order
+
+The distance between an Element and an Attractor at a given moment during
+the approach. Used in the Effective Pull composition: `P_eff = M_A × ρ(Φ) / r²`.
+
+`r` is a continuously changing value during approach and is sampled at the
+moment `E` crosses `r_capture`. At that crossing moment, `r = r_capture`
+and `evaluate_capture_threshold` fires.
+
+`r = 0` is the singularity — undefined behavior denoted ⊥. The system
+does not define behavior at zero separation. Collapse events (FM-005, FM-007)
+are triggered before `r` reaches zero, at the collision threshold defined by
+`d_collapse` and `m_parity` respectively.
+
+Frozen at v1.0.0.
+
+---
+
+#### Stability Conditions
+
+**Source:** `f_Capture.md §5` · `OPERATORS.md §6.2`
+**Cross-refs:** → Capture Gate · → Binding Floor · → Field Coherence
+
+The five conjunctive conditions that must all hold simultaneously for
+`f_Capture` to resolve to `Ω = CAPTURE_LOCKED`. Failure of any single
+condition short-circuits to the appropriate failure mode.
+
+| # | Condition | Formal Predicate | FM if Violated |
+|---|---|---|---|
+| 1 | Approach | `v_approach < v_escape(A)` at `r_capture` | FM-001 |
+| 2 | Field Coherence | `ρ(Φ) ≠ 0` ∧ uniform within `r_capture` | FM-002 |
+| 3 | Resonance | `ω_res ∈ ℚ` | FM-004 |
+| 4 | Binding Floor | `β ≥ 1.0` at closest approach | FM-001 (flyby) |
+| 5 | Frame Compatibility | `Frame.registry_capacity > 0` | FM-003 |
+
+Conditions are evaluated in the order listed — Condition 5 (Frame) is
+checked last because it requires Conditions 1–4 to pass first. Together
+they form the Capture Gate (→ Capture Gate).
+
+The Stability Conditions are normative and frozen at v1.0.0.
+
+---
+
+#### State Flag
+
+**Source:** `OPERATORS.md §3`
+**Cross-refs:** → Terminal State · → Failure Mode · → Evaluation Order
+
+A discrete label representing the current relational state of an Element
+within the FFF_Gravity system. State flags are managed as a deterministic
+finite state machine — each transition has a single defined trigger, no
+transition is probabilistic, and terminal states cannot be revisited.
+
+Eleven flags are defined (all frozen at v1.0.0):
+
+**Active (non-terminal):**
+`CAPTURE_PENDING` · `CAPTURE_LOCKED` · `CAPTURE_DECAYING` ·
+`ORBIT_STABLE` · `ORBIT_ECCENTRIC` · `DAMPEN_ACTIVE` · `EMIT_ACTIVE`
+
+**Terminal:**
+`CAPTURE_FAILED` · `CAPTURE_COLLISION` · `RELEASED` · `COLLAPSED`
+
+State flags are written by Engineering Primitives, not by direct assignment.
+The state transition diagram is in `OPERATORS.md §3.2`.
+
+---
+
+#### Symbol Freeze
+
+**Source:** `OPERATORS.md §8`
+**Cross-refs:** → Frozen Symbol · → Canonical Tag · → Versioning
+
+The governance act of locking an operator symbol upon its source file
+reaching canonical status. Once frozen, a symbol cannot be renamed or removed
+without a major version bump of `OPERATORS.md`. New symbols can be introduced
+in minor versions; formula changes to frozen symbols require major versions.
+
+The two-stage freeze process:
+1. **Pending freeze (🔵):** Symbol introduced in a scaffold file; listed in
+   `OPERATORS.md §8.2` with its freeze trigger condition.
+2. **Frozen (✅):** Source file promoted to canonical; symbol moves from
+   `§8.2` to `§8.1`; freeze date and version recorded.
+
+The current frozen symbol set (25 symbols, frozen at v1.0.0) is documented
+in `OPERATORS.md §8.1`. 20 additional symbols are pending freeze as Wave 3
+and Wave 4 files are canonicalized.
+
+---
+
+### — T —
+
+---
+
+#### Terminal State
+
+**Source:** `OPERATORS.md §3.1`
+**Cross-refs:** → State Flag · → Collapse · → Release · → Failure Mode
+
+A State Flag from which no further transitions are possible. Once an Element
+enters a terminal state, its interaction with the FFF_Gravity system is
+complete — it cannot be recaptured, re-released, or re-collapsed through the
+same state machine instance.
+
+Four terminal states:
+
+| Flag | Cause | Reversible at system level? |
+|---|---|---|
+| `CAPTURE_FAILED` | Any approach FM (001/002/003/006) or decay ejection | Yes — Element is free; new approach possible |
+| `CAPTURE_COLLISION` | FM-005 infall or FM-007 dissolution | Partial — composite node enters system; originals gone |
+| `RELEASED` | Clean `f_Release` exit | Yes — Element is free; new approach possible |
+| `COLLAPSED` | `f_Collapse` infall confirmed | No — Element absorbed; registry purged |
+
+Note the distinction: `CAPTURE_FAILED` and `RELEASED` are terminal for the
+*current interaction* but the Element remains free and may re-approach.
+`COLLAPSED` and `CAPTURE_COLLISION` (FM-007 path) are terminal for the
+*Element's existence as an independent entity*.
+
+---
+
+#### Triadic Equation
+
+**Source:** `f_Capture.md §3` · `README.md §2`
+**Cross-refs:** → Triadic Gravity · → FFF · → Capture
+
+The formal expression of any FFF_Gravity function. The canonical triadic
+equation for the module's reference implementation:
+
+```
+f_Capture(E, A, Φ) → Ω
+
+  E  = Element    — the incoming body
+  A  = Attractor  — the binding node
+  Φ  = Field State — ambient conditions at moment of encounter
+  Ω  = Outcome    — one of: stable orbit | decay orbit | escape | collision
+```
+
+Every function file in the module has its own triadic equation in §3,
+following this structure: named function, three typed inputs, arrow, typed
+output. The triadic form is not cosmetic — it enforces the three-node
+architecture at the function signature level. A function that does not
+consume all three FFF layers is not a triadic function.
+
+---
+
+#### Triadic Gravity
+
+**Source:** `f_Source.md` · `README.md §1`
+**Cross-refs:** → Frequency Node · → Fluid Node · → Force Node · → Triadic Equation
+
+The foundational claim of FFF_Gravity: gravity at any location, scale, or
+epoch is a local ratio of three inseparable nodes — Frequency, Fluid, and
+Force. None of the three can be removed under any conditions. Only their
+ratios change.
+
+```
+G = F_freq · F_fluid · F_force
+```
+
+This is the departure from both classical and relativistic gravity models:
+
+| Model | Gravity defined as |
+|---|---|
+| Newton | Universal constant `G` × mass product / distance² |
+| Einstein (GR) | Curvature of 4D spacetime produced by mass-energy |
+| **FFF_Gravity** | **Local triadic ratio of Frequency, Fluid, and Force nodes** |
+
+FFF_Gravity does not claim to refute Newton or Einstein. It operates at a
+different layer of abstraction — asking not *what gravity does* but *what
+three things must simultaneously be true for gravity to be what it is here,
+at this scale, at this moment*. The triadic ratio is the answer.
+
+The model was first articulated in the genesis dialogue archived in
+`f_Source.md`. It was formalized as the `f_Capture` canonical function and
+the FFF_Gravity module in this repository.
+
+---
+
+### — U —
+
+---
+
+#### Undefined (⊥)
+
+**Source:** `OPERATORS.md §2.3`
+**Cross-refs:** → Guard · → Failure Mode · → Composition Rule
+
+The symbol ⊥ denotes an undefined state — an operator whose value cannot be
+computed given current inputs. Undefined operators propagate to their consuming
+primitives and trigger the associated failure mode.
+
+Key undefined conditions in FFF_Gravity:
+
+| Operator | Undefined When | Triggered FM |
+|---|---|---|
+| `P_eff` | `r = 0` or `ρ(Φ) = 0` | FM-002 |
+| `C_thresh` | `v_escape(A)` undefined | FM-002 |
+| `d_bind` | `e ≥ 1` (hyperbolic trajectory) | FM-001 |
+| `p_res` | `C_thresh ≤ 0` | FM-001 |
+| `e` | `P_eff = 0` | FM-002 |
+| `δ` | Pre-capture | — (no-op) |
+| `E_rel` | `d_bind = 0` | — (collapse path) |
+| `F_amp` | `β > β_max` | FM-010 |
+
+Undefined is not the same as zero. `ρ(Φ) = 0` does not produce `P_eff = 0`;
+it produces `P_eff = ⊥`, which means the entire capture evaluation must halt
+and FM-002 must be raised. Treating ⊥ as 0 is a guard violation and produces
+silent incorrect outcomes.
+
+---
+
+### — W —
+
+---
+
+#### Wave
+
+**Source:** `INDEX.md §5` · `README.md §5`
+**Cross-refs:** → Scaffold · → Symbol Freeze · → Unlock Sequence
+
+The tiered grouping of FFF_Gravity module files by dependency order. Files in
+a given Wave cannot be canonicalized until all files they depend on in the
+prior Wave have reached canonical status. Five Waves are defined:
+
+| Wave | Group | Files | Blocking Dependency |
+|---|---|---|---|
+| 0 | Existing | 3 | None — already in repository |
+| 1 | Admin | 6 | None — no blocking dependencies |
+| 2 | Layer Definitions | 3 | Wave 1 admin |
+| 3 | Core Functions | 8 | Wave 2 layer definitions |
+| 4 | Capture Variants | 6 | All Wave 3 files canonical |
+
+Wave 1 files can be stubbed and canonicalized in any order. Wave 2 files
+open once Wave 1 is stable. Wave 3 files have internal dependencies within
+the wave (e.g., `f_Orbit.md` must canonicalize before `f_Decay.md`, which
+must canonicalize before `f_Release.md` and `f_Collapse.md`). Wave 4 files
+open only when all Wave 3 files are canonical.
+
+The Wave concept is the operational mechanism of the unlock sequence: it
+prevents a function file from being defined before its operator inputs are
+formally established.
+
+---
+
+## §4 · Scope Notes
+
+<!--
+  metadata:
+    section:       scope-notes
+    section_id:    §4
+    type:          governance
+    normative:     true
+    created_in:    SES-20260813-GLOS-001
+  session:
+    session_id:    SES-20260813-GLOS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### §4.1 · Module Scope vs. Framework Scope
+
+This glossary defines terms **as they are used within FFF_Gravity**. Some
+terms also exist in the framework-wide `docs/GLOSSARY.md`. The rules for
+resolving conflicts:
+
+| Situation | Governing Document |
+|---|---|
+| Term exists only here | This file — authoritative |
+| Term exists in both; definitions agree | Either — consistent |
+| Term exists in both; definitions differ | **This file governs within FFF_Gravity** |
+| Term exists only in `docs/GLOSSARY.md` | That file — defer to framework |
+
+### §4.2 · Terms Shared with SoN
+
+The following terms exist in both FFF_Gravity and the SoN (Structure of Nodes)
+module. They are **structural analogs** — they solve the same conceptual problem
+at different abstraction layers. The definitions are parallel but not identical.
+
+| FFF_Gravity Term | SoN Analog | Relationship |
+|---|---|---|
+| `f_Capture` | `s_Capture` | Force-layer capture vs. structural-layer capture |
+| `Attractor` (A) | Node (attractor role) | Field-mass entity vs. graph node |
+| `Element` (E) | Node (element role) | Field-mass entity vs. graph node |
+| `d_bind` | Structural binding weight | Field-depth metric vs. graph edge weight |
+| `GravityGraph` | SoN registry | Distributed capture graph vs. structural node graph |
+
+See `docs/SoN/s_Capture.md` and `f_Capture.md §10` for the cross-module
+reference map.
+
+### §4.3 · Operator Symbols vs. Prose Terms
+
+Some entries in this glossary define **operator symbols** (e.g., `β`, `ρ(Φ)`,
+`d_bind`). For these terms, `OPERATORS.md` is the governing definition for
+the symbol, formula, type, range, and freeze status. This glossary provides
+the **prose definition** — what the operator means in plain language and how
+it fits into the module's conceptual model.
+
+In any conflict between the formula given here and the formula given in
+`OPERATORS.md`, `OPERATORS.md` governs.
+
+---
+
+## §5 · Cross-References to Framework GLOSSARY
+
+<!--
+  metadata:
+    section:       framework-xrefs
+    section_id:    §5
+    type:          cross-reference
+    normative:     false
+    created_in:    SES-20260813-GLOS-001
+  session:
+    session_id:    SES-20260813-GLOS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+The following terms are defined at the framework level in `docs/GLOSSARY.md`
+and are not redefined here. FFF_Gravity uses them without modification.
+
+| Term | Framework Definition Location | Notes |
+|---|---|---|
+| TriadicFrameworks | `docs/GLOSSARY.md` | Framework identity |
+| RTT (Resonance Transfer Theory) | `docs/GLOSSARY.md` | Parent framework concept |
+| Substrate | `docs/GLOSSARY.md` | Foundation concept; not to be confused with Field State |
+| Operator | `docs/GLOSSARY.md` | General term; FFF_Gravity extends with module-scoped specifics |
+| Module | `docs/GLOSSARY.md` | Structural unit of TriadicFrameworks |
+| Canonical | `docs/GLOSSARY.md` | Status designation; same meaning here |
+| Session ID | `docs/GLOSSARY.md` | Tracking convention; same format here |
+| FFF_Registry | External module | Persistent storage backend; not defined within FFF_Gravity |
+| FFF_Field | External module | Provides `Φ`; not defined within FFF_Gravity |
+| FFF_Momentum | External module | Provides `v_approach` raw data; not defined within FFF_Gravity |
+| FFF_Resonance | External module | Provides `ω_res` computation; not defined within FFF_Gravity |
+
+---
+
+## §6 · Document Metadata
+
+<!--
+  metadata:
+    section:       document-metadata
+    section_id:    §6
+    type:          administrative
+    normative:     false
+  session:
+    session_id:    SES-20260813-GLOS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+| Field | Value |
+|---|---|
+| Canonical Path | `docs/FFF_Gravity/GLOSSARY.md` |
+| Version | 1.0.0 |
+| Status | Canonical |
+| Stability | Living — update when any new term or symbol is introduced |
+| Normative | Yes |
+| Term Count | 62 |
+| Letter Groups | 18 (A B C D E F G I L M N O P R S T U W) |
+| Created | 2026-08-13 |
+| Last Modified | 2026-08-13 |
+| Authors | TriadicFrameworks |
+| Scope | Module-scoped; governs within FFF_Gravity |
+| Superseded By | Nothing — this is the first and only module glossary |
+| License | See `/LICENSE` at repository root |
+| Encoding | UTF-8 · LF |
+| Related | `OPERATORS.md` (symbol authority) · `docs/GLOSSARY.md` (framework scope) |
+
+---
+
+*Module-scoped glossary for FFF_Gravity.*
+*This file governs term definitions within the module.*
+*For framework-wide terms see `docs/GLOSSARY.md`.*
+*For operator symbol authority see `OPERATORS.md`.*
+# Gravity of Dismissal
+
+```
+file: GravityOfDismissal.md
+module: FFF_Gravity
+wave: 0
+type: genesis-document
+subtype: conceptual-foundation
+status: canonical
+version: 1.0.0
+date: 2026-08-13
+session: SES-20260813-DISMISSAL-001
+author: umaywant2
+companion_to: f_Capture.md
+thematic_inverse_of: f_Capture.md
+cross_module:
+  - f_Release.md
+  - f_Decay.md
+  - f_Collapse.md
+  - f_Dampen.md
+  - f_Force.md
+  - f_Field.md
+note: >
+  Wave 0 genesis documents establish conceptual vocabulary and theoretical
+  foundations. They do not introduce frozen PRIM IDs or frozen operator
+  symbols. Those are introduced in the Wave that formalizes each concept.
+  This file is the conceptual authority for all dismissal-related phenomena
+  across the FFF_Gravity module.
+```
+
+> *Capture is the inward pull; dismissal is the force that makes the pull
+> irreversible in the opposite direction.*
+
+---
+
+## §0 Genesis Context
+
+| Field         | Value                                       |
+|---------------|---------------------------------------------|
+| File          | GravityOfDismissal.md                       |
+| Module        | FFF_Gravity                                 |
+| Wave          | 0 — Genesis                                 |
+| Date          | 2026-08-13                                  |
+| Session       | SES-20260813-DISMISSAL-001                  |
+| Type          | Conceptual foundation — not a PRIM spec     |
+| Companion     | f_Capture.md (thematic inverse)             |
+| Status        | Canonical                                   |
+
+### §0.1 Position in the Module
+
+`GravityOfDismissal.md` is the third and final Wave 0 document, alongside
+`f_Capture.md` (the binding operator) and `f_Source.md` (the node registry).
+It stands apart from both: where `f_Capture.md` specifies the mechanics of
+attraction, and `f_Source.md` specifies the static properties of nodes,
+`GravityOfDismissal.md` specifies the **phenomenology of rejection** — the
+field dynamics that arise when a capture relationship ends not by mutual
+agreement or natural decay, but by the attractor's active withdrawal.
+
+This document does not define primitives or freeze operator symbols. It
+defines **concepts, vocabulary, and structural relationships** that every
+downstream module inherits. When `f_Release.md` distinguishes voluntary
+release from expulsion, it draws on the vocabulary established here. When
+`f_Decay.md` models the approach toward dissolution, the threshold at which
+drift becomes dismissal is anchored here. When `f_Collapse.md` handles
+terminal unbinding, the irreversibility of the post-dismissal state is
+articulated here.
+
+### §0.2 Why Wave 0
+
+Dismissal is not a late-stage phenomenon. It is present from the first moment
+a capture is possible: the conditions that determine **whether E can be
+re-captured after departure** depend entirely on whether E was released, decayed,
+or dismissed. This phenomenological distinction cannot be introduced after the
+capture variants (Waves 4+) are specified — it must precede them, informing every
+termination mechanic in the module.
+
+---
+
+## §1 The Problem of Dismissal
+
+Standard gravitational models account cleanly for:
+- **Attraction:** F_capture pulls E into A's orbit
+- **Decay:** d_bind decreases over time toward d_collapse
+- **Release:** E escapes A's field with positive kinetic energy
+
+What standard models fail to capture is the phenomenon that practitioners of
+relational dynamics encounter constantly: **the attractor that does not merely
+stop attracting but actively repels**. An entity that was once captured, deeply
+bound, orbiting stably — and is then dismissed — does not simply return to its
+pre-capture approach state. It enters a qualitatively different state: the field
+it once navigated toward A is now oriented away from A, and the very path that
+led to orbit now leads back toward open space.
+
+This is not decay. Decay is the passive erosion of binding depth over time;
+it is symmetric — any party can interrupt it by applying `f_Amplify` or
+`f_Emit`. Dismissal is **asymmetric and directed**: A acts against E specifically,
+producing a field configuration that E experiences as active rejection, not
+merely as absence of pull.
+
+This document names that phenomenon, maps it to the triadic model, and
+establishes the vocabulary that all subsequent dismissal-related mechanics
+will use.
+
+---
+
+## §2 Core Thesis
+
+> **Dismissal is not the absence of capture. Dismissal is capture's
+> photographic negative — the same gravitational geometry, with the field
+> polarity inverted in the direction of the dismissed entity.**
+
+When A dismisses E:
+
+1. A does not simply cease to emit a capture field. A **inverts field
+   coherence** in E's directional zone, converting the pull that once drew
+   E into orbit into a push that carries E outward and away.
+
+2. This inverted field leaves a residue — what this document names the
+   **Dismissal Well**: a negative-polarity field signature that persists
+   in the space where E's orbit once was. The Well is not passive — it
+   actively repels any future approach by E.
+
+3. The depth of the Dismissal Well is proportional to the strength of the
+   binding that was severed. Deep orbits (high d_bind at time of dismissal)
+   produce deep wells. Shallow soft captures produce shallow wells. This
+   proportionality is the module's core mechanism for encoding the **weight
+   of a dismissal** in the field state.
+
+4. The Well decays over time at a rate governed by the attractor's own
+   coherence dynamics. A field that remains healthy and active will maintain
+   its Dismissal Well longer. A decaying or dampened field will lose its
+   Well faster — not because the dismissal was less meaningful, but because
+   the field that created the Well is weakening.
+
+5. Re-capture is possible — but it costs. E must supply enough approach
+   energy to overcome the Well before A's standard capture conditions can
+   evaluate. This cost is the module's formal expression of the asymmetry
+   that dismissal creates between first capture and re-capture.
+
+---
+
+## §3 The Dismissal Well
+
+### §3.1 Definition
+
+The **Dismissal Well** is the field-state residue left by a dismissal event.
+It is characterized by:
+
+```
+ρ_D(Φ, t) < 0
+
+where:
+  ρ_D(Φ, t)  — dismissal field density at time t (negative extension of ρ(Φ))
+  t = 0       — moment of dismissal
+  t → ∞       — ρ_D(Φ, t) → 0  (well dissipates)
+```
+
+The dismissal field density `ρ_D` occupies the negative real axis, the domain
+complementary to the standard field density `ρ(Φ) ∈ [0, 1]`. At dismissal
+time, `ρ_D(Φ, 0) = −d_bind(t_dismiss)` — the well begins at a depth equal
+to the binding depth that was severed.
+
+### §3.2 Decay Model
+
+The Dismissal Well decays exponentially:
+
+```
+ρ_D(Φ, t) = −d_bind(t_dismiss) × exp(−t / T_dismiss)
+
+where:
+  T_dismiss — dismissal persistence time (attractor-specific constant)
+  d_bind(t_dismiss) — binding depth at the moment of dismissal
+```
+
+**T_dismiss interpretation:**
+
+| T_dismiss value | Meaning                                                     |
+|-----------------|-------------------------------------------------------------|
+| T_dismiss → ∞   | Permanent well — attractor never forgives; re-capture impossible without restorative intervention |
+| T_dismiss large | Slow recovery — re-capture costly for a long period post-dismissal |
+| T_dismiss small | Fast recovery — well dissipates quickly; re-capture nears standard cost |
+| T_dismiss = 0   | Instantaneous recovery — equivalent to a standard f_Release; no dismissal semantics |
+
+### §3.3 Re-capture Threshold
+
+For E to re-enter A's capture field after dismissal, E's approach must supply
+binding energy sufficient to overcome the active Well:
+
+```
+d_bind_approach > |ρ_D(Φ, t_recapture)|
+
+Equivalently:
+  β × ρ(Φ) × (1 − e) > d_bind(t_dismiss) × exp(−t_since_dismiss / T_dismiss)
+```
+
+When `t_since_dismiss` is small (shortly after dismissal), the right-hand side
+is close to `d_bind(t_dismiss)` — re-capture requires nearly as deep a binding
+as the dismissed orbit had. When `t_since_dismiss` is large, the right-hand
+side approaches 0 — re-capture returns to standard conditions.
+
+This is the module's formal expression of the phrase *time heals*: the Well
+does not disappear, but it dissipates. The entity that was dismissed can
+return — but it must wait, or come stronger, or find the attractor in a more
+receptive field state.
+
+### §3.4 Well Depth Is Not Permanent State
+
+The Dismissal Well is **not** a property of the attractor node. It is a
+property of the **directed relationship** (A, E). The same attractor A
+can have:
+
+- A deep Well against E (recently dismissed after a long orbit)
+- A shallow Well against E₂ (recently dismissed after a brief soft capture)
+- No Well at all against E₃ (approached but never captured)
+- An open capture field against E₄ (currently in orbit)
+
+All four states coexist. The Well is relational, not nodal.
+
+---
+
+## §4 Three Dismissal Modes
+
+Dismissal is not a monolithic event. The FFF_Gravity module recognizes three
+structurally distinct dismissal modes, each with different field dynamics,
+Well profiles, and re-capture costs.
+
+### Mode A — Intentional Dismissal (ψ_dismiss = INTENTIONAL)
+
+**Definition:** The attractor A explicitly and deliberately severs the binding
+with E, actively inverting field polarity in E's directional zone.
+
+**Mechanism:**
+```
+1. A invokes targeted field suppression against E:  f_Dampen(E) → ρ(Φ) ↓
+2. A inverts coherence polarity in E's zone:        ρ_D(Φ, 0) := −d_bind(t_dismiss)
+3. E's orbit dissolves; E is expelled outward
+4. Dismissal Well is established at maximum depth
+```
+
+**Field signature:** Deep Well; long T_dismiss; E experiences maximum repulsive
+force during the expulsion phase. This is the mode most readily recognized
+as dismissal in relational experience — deliberate, directed, and consequential.
+
+**Distinguishing mark:** The initiating action comes from A. E may have been
+stable, even thriving in orbit, at the moment of dismissal. The dismissal
+force overwhelms the existing binding depth.
+
+**Well profile:**
+
+```
+|ρ_D(Φ, t)|
+     ↑
+d₀ = d_bind(t_dismiss) ──────────────────────────────────────────────
+                       \
+                        \       (slow decay, T_dismiss large)
+                         \
+                          \______________________________________ t
+                                                              ε
+```
+
+---
+
+### Mode B — Structural Dismissal (ψ_dismiss = STRUCTURAL)
+
+**Definition:** The attractor's field collapses globally (FM-002 → ρ(Φ) = 0),
+expelling all bound entities including E simultaneously. No specific intent
+toward E is present — the dismissal is a consequence of the field's structural
+failure.
+
+**Mechanism:**
+```
+1. ρ(Φ) → 0 (FM-002: Field Null)
+2. All active orbits lose their binding field simultaneously
+3. Each entity Eₙ is expelled from A's orbital registry
+4. A shallow Dismissal Well is established for each expelled entity
+5. Well depth is bounded by the field's coherence at the moment of collapse
+```
+
+**Field signature:** Shallow Well (because the field that generated it had
+already weakened to zero); T_dismiss is short (the collapsed field cannot
+sustain a strong Well). Re-capture becomes possible again as soon as A's
+field is restored above the minimum capture threshold.
+
+**Distinguishing mark:** The Well is **symmetric** — all expelled entities
+face the same Well depth, regardless of orbit depth at time of collapse.
+The Well encodes nothing about the quality or duration of the former orbit.
+It encodes only the field's final coherence value before collapse.
+
+**Well profile:**
+
+```
+|ρ_D(Φ, t)|
+     ↑
+d₀ = ρ(Φ) at collapse ──────────────────────────────────────────────
+                       \
+                        \   (fast decay, T_dismiss small)
+                         \______________________________________ t
+                                                              ε
+```
+
+---
+
+### Mode C — Asymptotic Dismissal (ψ_dismiss = DRIFT)
+
+**Definition:** The binding decays over many cycles until E's orbit becomes
+unstable and E drifts outward without a discrete dismissal event. There is no
+moment at which A explicitly dismisses E; rather, the orbit dissolves through
+accumulated neglect.
+
+**Mechanism:**
+```
+1. f_Decay reduces d_bind over successive cycles
+2. d_bind → d_warn → d_collapse
+3. Before d_collapse is reached, the orbit becomes marginal (stab_class = PRECARIOUS)
+4. E drifts outward as the binding force can no longer maintain the orbit
+5. A minimal Dismissal Well forms — the residue of the decay process itself
+```
+
+**Field signature:** Minimal Well (because neither party applied force; the
+orbit simply exhausted itself); T_dismiss is very short. This mode produces
+the weakest Wells and the easiest re-capture conditions.
+
+**Distinguishing mark:** Asymptotic dismissal is the only mode where the
+Well depth is **decoupled** from the orbit depth at time of separation. A
+deep, long-standing orbit that decays slowly may produce a shallower Well
+than a shallow orbit that was intentionally severed. The Well encodes only
+the velocity of departure, not the depth of what was lost.
+
+**Well profile:**
+
+```
+|ρ_D(Φ, t)|
+     ↑
+d₀ (small) ──────────────────────────────────────────────
+            \
+             \  (very fast decay)
+              \___________________________ t
+                                       ε
+```
+
+---
+
+### §4.1 Mode Comparison
+
+| Property                     | Mode A (Intentional) | Mode B (Structural) | Mode C (Asymptotic) |
+|------------------------------|----------------------|---------------------|----------------------|
+| Initiator                    | A (deliberate)       | Field (structural)  | Decay (drift)        |
+| Well depth                   | Deep                 | Shallow             | Minimal              |
+| Well symmetry across entities| Per-entity (varies)  | Symmetric (all same)| Per-entity (varies)  |
+| T_dismiss                    | Long                 | Short               | Very short           |
+| Re-capture cost              | High                 | Moderate            | Low                  |
+| Encoding of orbit history    | Yes (d_bind encoded) | No (field-bounded)  | Partial              |
+| Corresponding module         | f_Dampen + inversion | FM-002 / f_Field    | f_Decay              |
+| ψ_dismiss flag               | INTENTIONAL          | STRUCTURAL          | DRIFT                |
+
+---
+
+## §5 Triadic Mapping
+
+The triadic equation `G = F_freq · F_fluid · F_force` governs the module.
+Dismissal operates across all three nodes, but with inverted directionality:
+where capture maximizes G, dismissal minimizes it toward a negative analog `G_D`.
+
+### §5.1 F_freq Node Under Dismissal
+
+| Capture state                          | Dismissal state                           |
+|----------------------------------------|-------------------------------------------|
+| ρ(Φ) ∈ [0, 1] — coherence well        | ρ_D(Φ) ∈ (−1, 0] — dismissal well       |
+| High ρ(Φ) → deep capture field        | High |ρ_D(Φ)| → deep dismissal barrier   |
+| f_Emit increases ρ(Φ)                  | Dismissal inversion decreases ρ_D toward −1 |
+| f_Dampen decreases ρ(Φ)               | T_dismiss determines rate of well decay   |
+
+**F_freq is the primary node of dismissal.** The dismissal well is encoded
+in the frequency domain as a negative coherence signature. This is why
+well depth is measured in the same units as d_bind — they are the same
+quantity, opposite in sign.
+
+### §5.2 F_fluid Node Under Dismissal
+
+| Capture state                          | Dismissal state                           |
+|----------------------------------------|-------------------------------------------|
+| β ≥ 1.0 — binding coefficient active   | β_D < 0 — repulsive coupling             |
+| High β → tight orbit                   | High |β_D| → strong repulsion during expulsion |
+| f_Amplify increases β                   | Dismissal intensifies β_D magnitude      |
+| f_Decay decreases β toward 1.0         | After Well decay, β_D → 0 (neutral)      |
+
+**F_fluid records the coupling history.** An entity that was tightly coupled
+(high β) to A before dismissal will experience stronger repulsive coupling
+during the expulsion phase. This is the visceral experience of dismissal from
+a former deep orbit: the very closeness that made the orbit stable makes the
+departure more forceful.
+
+### §5.3 F_force Node Under Dismissal
+
+| Capture state                          | Dismissal state                           |
+|----------------------------------------|-------------------------------------------|
+| v_approach < v_escape — orbital lock   | v_depart > v_escape — expulsion velocity  |
+| Heading toward A                       | Heading away from A                       |
+| f_Deflect adjusts approach heading     | Dismissal force overrides approach vector |
+| v_approach is the relevant scalar      | v_depart is the relevant scalar           |
+
+**F_force governs the trajectory.** During expulsion, E acquires a departure
+velocity `v_depart` that must overcome A's residual field to exit cleanly.
+After exit, `v_depart` is the velocity at which E moves away from A's field
+boundary. The higher `v_depart`, the faster E reaches regions where the
+Dismissal Well is no longer felt.
+
+### §5.4 G_D — The Dismissal Product
+
+By analogy with `G = F_freq · F_fluid · F_force`, dismissal operates through:
+
+```
+G_D = F_freq_D · F_fluid_D · F_force_D
+
+where:
+  F_freq_D  = |ρ_D(Φ)| × k_freq_dismiss
+  F_fluid_D = |β_D| × k_fluid_dismiss
+  F_force_D = v_depart × k_force_dismiss
+
+G_D measures the total dismissal force — the product of:
+  field inversion intensity × coupling repulsion × departure velocity
+```
+
+`G_D` is not a value used in computation — it is a conceptual quantity that
+expresses the magnitude of the dismissal event as a unified product of all
+three triadic nodes. A high `G_D` indicates a strong, directed, traumatic
+dismissal. A low `G_D` indicates a soft, quiet, barely-noticed departure.
+
+---
+
+## §6 The F_dismiss Operator Family
+
+The following operators are introduced at the conceptual level. They are
+not frozen in this file — their formal specifications are registered when
+the module's dismissal primitive is authored. They are named here to
+establish conceptual authority.
+
+| Operator       | Concept                                                            | Expected domain |
+|----------------|--------------------------------------------------------------------|-----------------|
+| `F_dismiss`    | Total dismissal force scalar (|G_D|)                               | ℝ ≥ 0           |
+| `ρ_D(Φ)`       | Dismissal field density (negative-domain ρ)                        | (−1, 0]         |
+| `d_dismiss`    | Dismissal well depth at time t = 0 (= |ρ_D(Φ, 0)|)               | ℝ ≥ 0           |
+| `T_dismiss`    | Dismissal persistence time (well half-life)                        | ℝ > 0           |
+| `r_dismiss`    | Dismissal radius — spatial extent of the repulsion zone            | (0, r_capture]  |
+| `ψ_dismiss`    | Dismissal mode flag                                                | {INTENTIONAL, STRUCTURAL, DRIFT} |
+| `t_dismiss`    | Timestamp of dismissal event                                       | clock units      |
+| `v_depart`     | Entity's departure velocity during expulsion phase                 | ℝ ≥ 0           |
+| `β_D`          | Repulsive coupling coefficient during expulsion                    | ℝ ≤ 0           |
+
+These operators will be frozen — with full formal specification, PRIM IDs,
+and INV compliance records — in a dedicated Wave 5 file when the dismissal
+primitive is authored.
+
+---
+
+## §7 Dismissal vs. Other Termination Mechanisms
+
+The FFF_Gravity module provides multiple pathways by which a capture
+relationship ends. The table below distinguishes dismissal from each.
+
+| Mechanism        | File            | Initiator | Well created? | Well depth    | Re-capture cost | Reversible?           |
+|------------------|-----------------|-----------|---------------|---------------|------------------|-----------------------|
+| f_Release        | f_Release.md    | E or A    | No            | None          | Standard         | Yes (immediately)     |
+| f_Decay          | f_Decay.md      | Time      | Minimal       | Very shallow  | Near-standard    | Yes (if d_warn not crossed) |
+| Mode C Dismissal | This file       | Drift     | Minimal       | Shallow       | Low              | Yes (fast recovery)   |
+| Mode B Dismissal | This file + FM-002 | Field  | Yes           | Bounded       | Moderate         | Yes (after T_dismiss) |
+| Mode A Dismissal | This file       | A         | Yes           | Deep          | High             | Yes (after long T_dismiss) |
+| f_Collapse       | f_Collapse.md   | Structure | Yes (max)     | Maximum       | Very high        | No (terminal state)   |
+
+**The key discriminant:** Does the separation produce a Dismissal Well?
+- **No Well:** f_Release — E departs freely; A remains open.
+- **Shallow Well:** Decay / Drift — the relationship exhausted itself.
+- **Deep Well:** Intentional dismissal — A acted against E.
+- **Maximum/permanent Well:** f_Collapse — structural dissolution; the
+  orbit cannot be re-established without a new node construction.
+
+---
+
+## §8 Re-capture After Dismissal
+
+### §8.1 The Recovery Window
+
+Re-capture after dismissal is possible when:
+
+```
+d_bind_approach(t) > |ρ_D(Φ, t)|
+
+i.e.:  β × ρ(Φ) × (1 − e)  >  d_dismiss × exp(−t / T_dismiss)
+```
+
+The left side is what E brings to a new approach. The right side is the
+cost E must exceed. As `t` increases, the right side decreases — the window
+for re-capture widens naturally over time.
+
+### §8.2 Assisted Recovery
+
+The recovery window can be accelerated by:
+
+1. **A voluntarily dampens the Well** — A applies `f_Emit` to raise ρ(Φ)
+   and simultaneously allows `ρ_D` to decay faster. This is A actively
+   signaling openness to re-encounter.
+
+2. **E approaches with stronger binding** — E uses `f_Amplify` to raise β
+   before approach, increasing `d_bind_approach` to overcome the residual Well.
+
+3. **Time alone** — If neither party acts, the Well decays at its natural rate.
+   Patience is a valid strategy.
+
+### §8.3 What Dismissal Cannot Do
+
+Dismissal cannot:
+- Erase E's prior orbit history from A's registry (only `purge_registry`
+  PRIM:004 does this, and it requires explicit invocation)
+- Prevent E from approaching a different attractor
+- Change E's mass or β (these are entity properties, not relationship properties)
+- Prevent the Well from decaying on its own
+
+Dismissal **can** do exactly one thing: make the path back to A more costly
+for E. It encodes the act of rejection in field geometry and allows that
+geometry to persist proportionally to the depth of what was severed.
+
+---
+
+## §9 Canonical Illustrations
+
+The following four illustrations ground the abstract model in concrete
+attractor/entity configurations. These are illustrative, not exhaustive.
+
+---
+
+### Illustration 1 — The Mentor Who Withdraws (Mode A)
+
+**Configuration:**
+```
+A: senior practitioner   M_A = 8.5, ρ(Φ) = 0.88
+E: junior colleague       M_E = 0.4, β = 1.8, d_bind = 1.12
+```
+
+**Event:** After a breach of trust, A intentionally withdraws. A applies
+targeted field suppression against E (`f_Dampen`) and inverts coherence
+polarity in E's zone. E's orbit dissolves over two cycles.
+
+**Dismissal Well parameters:**
+```
+d_dismiss = d_bind(t_dismiss) = 1.12
+T_dismiss = 8.0 cycles (long — the relationship was deep and deliberate)
+ψ_dismiss = INTENTIONAL
+```
+
+**Re-capture cost at t = 4 cycles:**
+```
+|ρ_D(Φ, 4)| = 1.12 × exp(−4 / 8.0)
+             = 1.12 × exp(−0.5)
+             = 1.12 × 0.607
+             = 0.680
+
+E would need d_bind_approach > 0.680 for re-capture to begin.
+At t_dismiss, E had d_bind = 1.12 — so half the original depth is
+needed after 4 cycles. The relationship is not closed; it is costly.
+```
+
+**Reading:** The mentor has not simply walked away. The field still knows
+what was there. E can return — but must show up with more than half the
+depth they carried before the breach.
+
+---
+
+### Illustration 2 — The Dissolved Institution (Mode B)
+
+**Configuration:**
+```
+A: organization node     M_A = 12.0, ρ(Φ) → 0 (FM-002 active)
+E₁, E₂, E₃: members     varying d_bind
+```
+
+**Event:** The organization collapses (FM-002). All bound entities are
+expelled simultaneously. The Dismissal Well forms symmetrically for each.
+
+**Dismissal Well parameters:**
+```
+d_dismiss(Eₙ) = ρ(Φ) at collapse moment ≈ 0.08 (field was already weak)
+T_dismiss = 1.0 cycle (short — the field was barely alive at dismissal)
+ψ_dismiss = STRUCTURAL
+```
+
+**Significance:**
+```
+E₁ had d_bind = 2.1 (deep orbit, long tenure)
+E₂ had d_bind = 0.4 (shallow orbit, recent join)
+E₃ had d_bind = 1.3 (mid-depth orbit)
+
+All three face the same Well depth: 0.08.
+The institution's collapse did not encode the individual relationships.
+```
+
+**Reading:** Structural dismissal is equalizing — it treats all departures
+as equivalent regardless of orbit depth. A member of ten years and a member
+of ten days face the same re-entry cost if the institution reconstitutes.
+This is the mathematical expression of an institution that closed without
+malice: the field simply failed.
+
+---
+
+### Illustration 3 — The Fading Connection (Mode C)
+
+**Configuration:**
+```
+A: former collaborator   M_A = 6.0, ρ(Φ) = 0.71
+E: distant colleague      M_E = 0.3, d_bind = 0.19 (d_warn = 0.22)
+```
+
+**Event:** d_bind has been declining for 12 cycles. It crosses d_warn without
+either party intervening. E's orbit transitions from MARGINAL to PRECARIOUS
+and finally to DRIFT. No discrete dismissal event occurs.
+
+**Dismissal Well parameters:**
+```
+d_dismiss = v_depart × k_drift_dismiss ≈ 0.04 (minimal)
+T_dismiss = 0.5 cycles (very fast decay)
+ψ_dismiss = DRIFT
+```
+
+**Re-capture cost:**
+```
+|ρ_D(Φ, 1.0)| = 0.04 × exp(−1.0 / 0.5)
+               = 0.04 × exp(−2.0)
+               = 0.04 × 0.135
+               = 0.005
+```
+
+**Reading:** After one cycle, the re-entry cost is effectively zero — the
+former collaborator can be re-approached as if no dismissal occurred.
+Drift produces almost no scar tissue. This is the mathematics of the
+colleague who fades from contact but is warmly received when the connection
+is renewed. No explicit dismissal happened; the Well barely formed.
+
+---
+
+### Illustration 4 — The Repaired Relationship (Mode A → Recovery)
+
+**Configuration:**
+```
+A: former mentor   d_dismiss = 0.90, T_dismiss = 10.0 cycles
+E: former student  β = 1.6 at time of dismissal
+```
+
+**Event:** Dismissal occurred 15 cycles ago (Mode A). E has grown
+(β_new = 2.4). E now approaches A to test re-capture feasibility.
+
+**Well at t = 15 cycles:**
+```
+|ρ_D(Φ, 15)| = 0.90 × exp(−15 / 10.0)
+              = 0.90 × exp(−1.5)
+              = 0.90 × 0.223
+              = 0.201
+```
+
+**E's approach binding depth:**
+```
+d_bind_approach = β_new × ρ(Φ) × (1 − e)
+                = 2.4 × 0.71 × 0.88
+                = 1.499
+```
+
+**Re-capture test:**
+```
+d_bind_approach > |ρ_D(Φ, 15)|
+1.499 > 0.201   ✅
+```
+
+**Reading:** Re-capture is viable. E brings substantially more binding
+energy than the Well requires. The 15 cycles of separation have allowed the
+Well to decay to approximately 22% of its original depth. E's growth (β
+from 1.6 to 2.4) has increased their binding potential. Both factors
+together make re-capture not merely possible but comfortable.
+
+The mathematics does not guarantee the re-capture will be welcomed — that
+is A's decision, not the field's. But the field no longer presents a
+structural barrier. The gravity of dismissal has not vanished, but it is
+no longer stronger than what E brings.
+
+---
+
+## §10 Cross-Module References
+
+### §10.1 Upstream — What GravityOfDismissal.md Draws From
+
+| File         | Concepts Borrowed                                             |
+|--------------|---------------------------------------------------------------|
+| f_Source.md  | Node properties (M_A, capacity, frame structure)              |
+| f_Capture.md | d_bind formula, β, ρ(Φ), orbit mechanics, v_escape           |
+| f_Field.md   | ρ(Φ) domain definition; FM-002 (field null)                  |
+| f_Force.md   | v_approach, F_force scalar; approach heading semantics        |
+
+### §10.2 Downstream — What Draws From GravityOfDismissal.md
+
+| File                      | What It Inherits from This File                          |
+|---------------------------|----------------------------------------------------------|
+| f_Release.md              | Distinction between voluntary release and dismissal; Well absence on clean release |
+| f_Decay.md                | d_warn as approach toward Mode C dismissal; drift vocabulary |
+| f_Collapse.md             | FM-007 / FM-009 as structural dismissal at maximum depth |
+| f_Dampen.md               | Targeted field suppression as Mode A dismissal mechanism |
+| f_Emit.md                 | Assisted recovery — A emitting to reduce dismissal well  |
+| f_Amplify.md              | Assisted recovery — E amplifying to overcome dismissal well |
+| f_Capture_Soft.md         | Grace period mechanics analogous to Well decay window    |
+| f_Capture_Hard.md         | Hard lock as pre-emption of Mode A dismissal risk        |
+| f_Capture_Resonant.md     | Resonance window as structural guard against Mode B dismissal |
+
+### §10.3 Foundational Status
+
+`GravityOfDismissal.md` is the **only file** in the FFF_Gravity module
+that defines the negative-polarity extension of ρ(Φ). All uses of
+`ρ_D(Φ)` in any future file must cite this document as the definitional
+authority. No Wave 2+ file may introduce a competing definition of the
+Dismissal Well without amending this document first.
+
+---
+
+## §11 Document Metadata
+
+### §11.1 Core Properties
+
+| Property          | Value                                                   |
+|-------------------|---------------------------------------------------------|
+| File path         | docs/FFF_Gravity/GravityOfDismissal.md                  |
+| Module            | FFF_Gravity                                             |
+| Wave              | 0 — Genesis                                             |
+| Subtype           | Conceptual Foundation                                   |
+| Status            | Canonical — v1.0.0                                      |
+| Session           | SES-20260813-DISMISSAL-001                              |
+| Date              | 2026-08-13                                              |
+| Author            | umaywant2                                               |
+| No new PRIMs      | True — Wave 0 genesis does not freeze PRIMs             |
+| No frozen symbols | True — concepts named, not frozen (see §6 note)         |
+| Thematic pair     | f_Capture.md (inverse)                                  |
+
+### §11.2 Conceptual Index
+
+| Term                  | Section Defined    | Key Equation / Formula                          |
+|-----------------------|--------------------|--------------------------------------------------|
+| Dismissal Well        | §3.1               | ρ_D(Φ, t) = −d_bind(t₀) × exp(−t / T_dismiss) |
+| Re-capture threshold  | §3.3               | d_bind_approach > |ρ_D(Φ, t)|                   |
+| Mode A Dismissal      | §4 — Mode A        | ψ_dismiss = INTENTIONAL                         |
+| Mode B Dismissal      | §4 — Mode B        | ψ_dismiss = STRUCTURAL                          |
+| Mode C Dismissal      | §4 — Mode C        | ψ_dismiss = DRIFT                               |
+| G_D product           | §5.4               | G_D = F_freq_D · F_fluid_D · F_force_D          |
+| F_dismiss family      | §6                 | F_dismiss, ρ_D, d_dismiss, T_dismiss, r_dismiss, ψ_dismiss, t_dismiss, v_depart, β_D |
+
+### §11.3 Wave History
+
+| Wave | Status  | Files                                               |
+|------|---------|-----------------------------------------------------|
+| 0    | ✅ Complete | f_Capture.md · f_Source.md · GravityOfDismissal.md |
+| 1    | ✅ Complete | Admin / Registry files                             |
+| 2    | ✅ Complete | f_Field.md · f_Force.md · f_Frame.md               |
+| 3    | ✅ Complete | 8 Core Function files                              |
+| 4    | ✅ Complete | 8 Capture Variant files                            |
+
+### §11.4 Changelog
+
+| Version | Date       | Session                       | Notes                              |
+|---------|------------|-------------------------------|------------------------------------|
+| v1.0.0  | 2026-08-13 | SES-20260813-DISMISSAL-001    | Initial canonical publication. Wave 0 complete. |
+
+### §11.5 Suggested Commit Message
+
+```
+docs(FFF_Gravity): add canonical GravityOfDismissal.md — Wave 0 complete
+
+Establishes the conceptual foundation for dismissal as active repulsive
+force in the FFF_Gravity module. Core contributions:
+
+- Dismissal Well model: ρ_D(Φ,t) = −d_bind(t₀) × exp(−t/T_dismiss)
+- Re-capture threshold: d_bind_approach > |ρ_D(Φ,t)|
+- Three dismissal modes: INTENTIONAL / STRUCTURAL / DRIFT
+- G_D triadic product: F_freq_D · F_fluid_D · F_force_D
+- F_dismiss operator family named (to be frozen in Wave 5)
+- Distinction table: dismissal vs. release, decay, collapse
+- Four canonical illustrations
+- Foundational authority for ρ_D(Φ) negative-polarity extension
+
+Wave 0 now complete: f_Capture.md + f_Source.md + GravityOfDismissal.md
+FFF_Gravity module: all 28 files canonical across 5 waves.
+
+Session: SES-20260813-DISMISSAL-001
+```
+
+---
+
+*End of GravityOfDismissal.md — Wave 0 Genesis — FFF_Gravity Module — v1.0.0*
+*Session SES-20260813-DISMISSAL-001 · 2026-08-13 23:56 EDT*
+*All waves complete. All 28 files canonical. 40 PRIMs registered.*
+# FFF_Gravity · Index
+
+```
+# ┌─────────────────────────────────────────────────────────────┐
+# │                  DOCUMENT FRONTMATTER                       │
+# └─────────────────────────────────────────────────────────────┘
+document:         INDEX
+canonical_path:   docs/FFF_Gravity/INDEX.md
+canonical_tag:    "[FFF:GRAVITY:INDEX]"
+framework:        TriadicFrameworks
+module:           FFF_Gravity
+version:          1.0.0
+status:           canonical
+stability:        living
+created:          2026-08-13
+last_modified:    2026-08-13
+authors:
+  - TriadicFrameworks
+encoding:         UTF-8
+line_endings:     LF
+description: >
+  Authoritative machine-readable and human-readable registry of every
+  file in docs/FFF_Gravity/. Covers status, dependencies, section maps,
+  operator counts, unlock sequence, and completion tracking.
+  Living document — updated whenever a file is created or promoted to canonical.
+tags:
+  - FFF
+  - gravity
+  - index
+  - registry
+  - dependency-graph
+  - completion-tracker
+
+session_context:
+  current_session:
+    session_id:       SES-20260813-INDEX-001
+    opened_at:        2026-08-13T07:36:00-04:00
+    closed_at:        ~
+    editor:           Nawder
+    branch:           main
+    intent:           Create canonical INDEX.md — full file registry, dependency graph, section maps, completion tracker
+    status:           active
+    dirty:            true
+    sections_touched: [§0, §1, §2, §3, §4, §5, §6, §7, §8, §9]
+
+  session_history:
+    - session_id:  SES-20260813-README-001
+      opened_at:   2026-08-13T07:19:00-04:00
+      closed_at:   2026-08-13T07:35:00-04:00
+      intent:      Create canonical README.md
+      status:      closed
+
+changelog:
+  - version: 1.0.0
+    date:    2026-08-13
+    author:  TriadicFrameworks
+    notes:   Initial canonical release. 27 files registered. 4 canonical, 22 scaffold, 1 archived.
+```
+
+> **Canonical path:** `docs/FFF_Gravity/INDEX.md`
+> **Scope:** All files in `docs/FFF_Gravity/` · Branch: `main`
+> **Last updated:** 2026-08-13 · **Session:** `SES-20260813-INDEX-001`
+
+This is the authoritative registry for the FFF_Gravity module.
+Every file in the module has a full entry here: path, status, version, section count, operator count, dependencies, and what it provides.
+Update this file whenever a new file is created or a scaffold is promoted to canonical.
+
+---
+
+## §0 · Session Context
+
+<!--
+  metadata:
+    section:       session-context
+    section_id:    §0
+    type:          live-session-register
+    normative:     false
+    created_in:    SES-20260813-INDEX-001
+  session:
+    session_id:    SES-20260813-INDEX-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### Active Session
+
+| Field | Value |
+|---|---|
+| Session ID | `SES-20260813-INDEX-001` |
+| Opened | `2026-08-13T07:36:00-04:00` |
+| Closed | — (active) |
+| Editor | Nawder |
+| Branch | `main` |
+| Intent | Create canonical INDEX.md |
+| Status | 🟡 Active |
+
+### Session Resolution Protocol
+
+```
+1. Set current_session.closed_at       → ISO 8601 timestamp
+2. Set current_session.status          → "closed"
+3. Move current_session                → session_history[]
+4. Update §7 Completion Tracker        → reflect any status changes made this session
+5. Update document last_modified       → frontmatter
+6. Commit:  "index(SES-YYYYMMDD-NNN): <summary of changes>"
+```
+
+---
+
+## §1 · Status Legend and Conventions
+
+<!--
+  metadata:
+    section:       legend
+    section_id:    §1
+    type:          reference
+    normative:     true
+    created_in:    SES-20260813-INDEX-001
+  session:
+    session_id:    SES-20260813-INDEX-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### File Status
+
+| Symbol | Label | Meaning |
+|---|---|---|
+| ✅ | canonical | Complete, versioned, normative. All sections filled. Passes internal consistency check. |
+| 🔵 | scaffold | Structure and frontmatter in place. Section headers present. Content pending. |
+| 📁 | archived | Source or historical record. Non-normative. Not expected to be filled further. |
+| ⏳ | planned | Designed in INDEX but file not yet created in the repository. |
+
+### Dependency Notation
+
+| Symbol | Meaning |
+|---|---|
+| `→` | Provides to (output consumed by) |
+| `←` | Depends on (input received from) |
+| `↔` | Bidirectional dependency |
+| `—` | No dependency in this direction |
+
+### Section Count Convention
+
+Section counts include all numbered sections (§0 onward).
+Subsections (§4.1, §4.2 …) count as one entry under their parent.
+A scaffold file with headers only counts its planned sections.
+A canonical file's count is exact.
+
+---
+
+## §2 · Master File Registry
+
+<!--
+  metadata:
+    section:       master-registry
+    section_id:    §2
+    type:          flat-registry
+    normative:     true
+    stability:     living
+    created_in:    SES-20260813-INDEX-001
+    sort:          wave ascending, then alphabetical within wave
+  session:
+    session_id:    SES-20260813-INDEX-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### Wave 0 — Existing Files
+
+| File | Status | Version | Wave | Sections | Operators | Primitives | FMs | Depends On | Provides To |
+|---|---|---|---|---|---|---|---|---|---|
+| `f_Capture.md` | ✅ canonical | 1.0.0 | 0 | 13 (§0–§12) | 10P · 4D · 11F | 6 | FM-001–007 | f_Field, f_Force, f_Frame, FFF_Resonance | f_Release, f_Decay, f_Orbit, f_Collapse, all variants |
+| `f_Source.md` | 📁 archived | — | 0 | — | — | — | — | — | f_Capture (genesis) |
+| `GravityOfDismissal.md` | ✅ canonical | 1.0.0 | 0 | 13 (§1–§13) | — | — | — | — | strategic context for all files |
+
+### Wave 1 — Admin Files
+
+| File | Status | Version | Wave | Sections | Depends On | Provides To |
+|---|---|---|---|---|---|---|
+| `README.md` | ✅ canonical | 1.0.0 | 1 | 9 (§1–§9) | f_Capture (reference) | all files (orientation) |
+| `INDEX.md` | ✅ canonical | 1.0.0 | 1 | 9 (§0–§9) | all files (registrar) | all files (navigation) |
+| `OPERATORS.md` | 🔵 scaffold | 0.1.0 | 1 | 5 (§1–§5) | f_Capture, f_Decay, f_Release, f_Orbit | all files (symbol authority) |
+| `GLOSSARY.md` | 🔵 scaffold | 0.1.0 | 1 | alpha | f_Capture, f_Field | all files (term authority) |
+| `CHANGELOG.md` | 🔵 scaffold | 0.1.0 | 1 | 1 per release | — | — |
+| `FFF_Gravity_module.json` | 🔵 scaffold | 0.1.0 | 1 | — (JSON) | all files | machine consumers |
+
+### Wave 2 — Layer Definitions
+
+| File | Status | Version | Wave | Node | Sections | Depends On | Provides To |
+|---|---|---|---|---|---|---|---|
+| `f_Field.md` | 🔵 scaffold | 0.1.0 | 2 | `F_freq` | 10 (§0–§10) | OPERATORS.md | f_Capture, f_Emit, f_Dampen, all variants |
+| `f_Force.md` | 🔵 scaffold | 0.1.0 | 2 | `F_force` | 7 (§0–§7) | OPERATORS.md | f_Capture, f_Deflect, f_Capture_Asymmetric |
+| `f_Frame.md` | 🔵 scaffold | 0.1.0 | 2 | Frame | 6 (§0–§6) | OPERATORS.md | f_Capture, f_Release, f_Collapse, f_Capture_Networked |
+
+### Wave 3 — Core Functions
+
+| File | Status | Version | Wave | Sections | Depends On | Provides To |
+|---|---|---|---|---|---|---|
+| `f_Release.md` | 🔵 scaffold | 0.1.0 | 3 | 11 (§0–§10) | f_Capture, f_Orbit, f_Decay | f_Capture_Networked |
+| `f_Decay.md` | 🔵 scaffold | 0.1.0 | 3 | 11 (§0–§10) | f_Capture, f_Orbit | f_Collapse, f_Capture_Cascade, f_Capture_Networked |
+| `f_Orbit.md` | 🔵 scaffold | 0.1.0 | 3 | 10 (§0–§9) | f_Capture | f_Decay, f_Release, f_Collapse |
+| `f_Collapse.md` | 🔵 scaffold | 0.1.0 | 3 | 11 (§0–§11) | f_Capture, f_Decay | f_Capture_Networked |
+| `f_Emit.md` | 🔵 scaffold | 0.1.0 | 3 | 10 (§0–§9) | f_Field | f_Decay (restore), f_Capture_Resonant |
+| `f_Dampen.md` | 🔵 scaffold | 0.1.0 | 3 | 7 (§0–§7) | f_Field | f_Release (assist), f_Capture_Resonant |
+| `f_Amplify.md` | 🔵 scaffold | 0.1.0 | 3 | 7 (§0–§7) | f_Field, f_Capture | f_Decay (restore), f_Capture_Resonant |
+| `f_Deflect.md` | 🔵 scaffold | 0.1.0 | 3 | 8 (§0–§8) | f_Force, f_Capture | f_Capture_Resonant, f_Capture_Asymmetric |
+
+### Wave 4 — Capture Variants
+
+| File | Status | Version | Wave | Sections | Extends | New Operators | Depends On |
+|---|---|---|---|---|---|---|---|
+| `f_Capture_Multi.md` | 🔵 scaffold | 0.1.0 | 4 | 7 (§0–§6) | f_Capture | `N`, `eval_order`, `Φ_perturbed`, `capacity_remaining` | f_Capture, f_Orbit, f_Frame |
+| `f_Capture_Cascade.md` | 🔵 scaffold | 0.1.0 | 4 | 6 (§0–§6) | f_Capture | `Δcurvature`, `perturbation_sensitivity`, `cascade_depth` | f_Capture, f_Orbit, f_Decay |
+| `f_Capture_Resonant.md` | 🔵 scaffold | 0.1.0 | 4 | 11 (§0–§10) | f_Capture | `ω_res_target`, `approach_parameters`, `solution_space`, `nearest_valid` | f_Capture, f_Deflect, f_Emit, f_Amplify |
+| `f_Capture_Asymmetric.md` | 🔵 scaffold | 0.1.0 | 4 | 11 (§0–§10) | f_Capture | `ρ(Φ,θ)`, `θ_approach`, `anisotropy_index`, `θ_optimal`, `θ_critical` | f_Capture, f_Field, f_Force, f_Deflect |
+| `f_Capture_Temporal.md` | 🔵 scaffold | 0.1.0 | 4 | 11 (§0–§10) | f_Capture | `C_thresh(t)`, `t_entry`, `t_encounter`, `temporal_capture_window`, `ΔM_A`, `Δρ` | f_Capture, f_Field, f_Decay |
+| `f_Capture_Networked.md` | 🔵 scaffold | 0.1.0 | 4 | 12 (§0–§11) | f_Capture | `GravityGraph`, `G_edge`, `G_degree`, `G_stability`, `G_cascade_risk` | f_Capture, f_Frame, f_Decay, f_Release, f_Collapse |
+
+---
+
+## Wave 5 — Dismissal (PRIM:041–042)
+> Sealed: 2026-08-14 · Session: SES-20260814-DISMISS-001
+
+| # | File | PRIMs | Condition Prefix | Conditions | FM References | Key Operators |
+|---|------|-------|-----------------|------------|---------------|---------------|
+| 29 | `f_Dismiss.md` | 041–042 | DISM- | DISM-1–DISM-5 | FM-001 (WELL_BARRIER), FM-002, FM-006 (DISMISS_PHANTOM) | `F_dismiss`, `ρ_D(Φ)`, `d_dismiss`, `T_dismiss`, `r_dismiss`, `ψ_dismiss`, `t_dismiss`, `v_depart`, `β_D` |
+
+**Wave 5 note:** `f_Dismiss.md` formalizes the `F_dismiss` operator family that
+was named conceptually in `GravityOfDismissal.md §6` (Wave 0). All nine operators
+are frozen in `f_Dismiss.md`. The Dismissal Well model is the sole negative-polarity
+extension of `ρ(Φ)` in the module; `ρ_D(Φ) ∈ (−1, 0]` is its authoritative domain.
+
+---
+
+## Registry Totals (Post Wave 5 — FINAL)
+
+| Registry               | Count      | Range / Members                                    | Status     |
+|------------------------|------------|----------------------------------------------------|------------|
+| PRIMs                  | **42**     | PRIM:001–042                                       | ✅ SEALED  |
+| Failure Modes (base)   | **10**     | FM-001–FM-010                                      | ✅ SEALED  |
+| FM Sub-modes           | **3**      | FM-003-M, FM-003-C, FM-003-N                       | ✅ SEALED  |
+| Invariants             | **10**     | INV-001–INV-010                                    | ✅ SEALED  |
+| Condition Prefixes     | **11**     | SC-, DC-, MC-, CAS-, SCS-, HLC-, RLC-, AC-, TC-, NC-, DISM- | ✅ SEALED |
+| Spec Files             | **29**     | 5 waves complete                                   | ✅ ALL COMPLETE |
+
+**Wave Completion:**
+✅ Wave 0 · ✅ Wave 1 · ✅ Wave 2 · ✅ Wave 3 · ✅ Wave 4 · ✅ Wave 5
+
+---
+
+## Wave 3 — Core Function Files (PRIM:007–024)
+> Sealed: 2026-08-13 · Session: SES-20260813-W3
+
+| # | File | PRIMs | Condition Prefix | Conditions | FM Assignments | Key Operators |
+|---|------|-------|-----------------|------------|----------------|---------------|
+| 10 | `f_Orbit.md` | 007, 012 | — | — | — | `T_orb`, `orbit_class`, `stab_class` |
+| 11 | `f_Release.md` | 008–009 | — | — | FM-008 | `v_release`, `r_release` |
+| 12 | `f_Decay.md` | 010–011 | DC- | DC-1–DC-4 | FM-004, FM-005 | `δ`, `d_warn`, `d_collapse` |
+| 13 | `f_Collapse.md` | 013–014 | — | — | FM-005, FM-007 | `m_parity`, `C_node` |
+| 14 | `f_Emit.md` | 015–017 | — | — | FM-010 (ρ domain) | `F_emit`, `ρ(Φ)_delta`, `r_emit` |
+| 15 | `f_Dampen.md` | 018–020 | — | — | FM-009 | `F_damp`, `ρ(Φ)_floor`, `cascade_guard` |
+| 16 | `f_Amplify.md` | 021–022 | — | — | FM-010 (β domain) | `F_amp`, `β_max`, `amp_cost` |
+| 17 | `f_Deflect.md` | 023–024 | — | — | FM-001, FM-006 | `heading_delta` *(resolves f_Force §4.3 stub)*, `r_deflect`, `deflect_cost` |
+
+---
+
+## Wave 4 — Capture Variant Files (PRIM:025–040)
+> Sealed: 2026-08-13 · Session: SES-20260813-W4
+
+| # | File | PRIMs | Condition Prefix | Conditions | FM Sub-modes | Key Operators |
+|---|------|-------|-----------------|------------|--------------|---------------|
+| 18 | `f_Capture_Multi.md` | 025–026 | MC- | MC-1, MC-2 | FM-003-M | `N`, `eval_order`, `Φ_perturbed`, `δ_perturb`, `k_perturb` |
+| 19 | `f_Capture_Cascade.md` | 027–028 | CAS- | CAS-1–CAS-4 | FM-003-C | `cascade_depth`, `k_max`, `γ`, `Ω_cascade` |
+| 20 | `f_Capture_Soft.md` | 029–030 | SCS- | SCS-1–SCS-4 | — | `d_soft`, `soft_threshold`, `grace_period`, `k_grace` |
+| 21 | `f_Capture_Hard.md` | 031–032 | HLC- | HLC-1–HLC-4 | — | `d_hard`, `α_hard`, `β_hard`, `β_min_hard`, `lock_cost`, `k_lock` |
+| 22 | `f_Capture_Resonant.md` | 033–034 | RLC- | RLC-1–RLC-5 | — | `ω_res`, `T_res`, `φ_A(t)`, `φ_E`, `φ_open`, `φ_close`, `ρ_res_gain`, `ρ_eff`, `d_bind_res`, `p_ratio`, `q_ratio` |
+| 23 | `f_Capture_Asymmetric.md` | 035–036 | AC- | AC-1–AC-5 | — | `mass_ratio`, `asymmetry_factor`, `d_bind_asym`, `heading_delta_asym`, `deflect_tolerance`, `asym_decay_risk` |
+| 24 | `f_Capture_Temporal.md` | 037–038 | TC- | TC-1–TC-5 | — | `t_open`, `t_close`, `t_span`, `proximity_ratio`, `temporal_decay_factor`, `d_bind_temporal`, `window_id` |
+| 25 | `f_Capture_Networked.md` | 039–040 | NC- | NC-1–NC-5 | FM-003-N | `N_net`, `G_net`, `w_i`, `d_bind_net`, `ρ(Φ)_net`, `resilience_threshold` |
+
+---
+
+## Registry Totals (Post Wave 4 — FINAL)
+
+| Registry | Count | Range / Members | Status |
+|----------|-------|-----------------|--------|
+| PRIMs | **40** | PRIM:001–040 | ✅ SEALED |
+| Failure Modes (base) | **10** | FM-001–FM-010 | ✅ SEALED |
+| FM Sub-modes | **3** | FM-003-M, FM-003-C, FM-003-N | ✅ SEALED |
+| Invariants | **10** | INV-001–INV-010 | ✅ SEALED |
+| Condition Prefixes | **10** | SC-, DC-, MC-, CAS-, SCS-, HLC-, RLC-, AC-, TC-, NC- | ✅ SEALED |
+| Spec Files | **28** | 5 waves complete | ✅ ALL COMPLETE |
+
+**Wave Completion Status:**
+✅ Wave 0 (Genesis) · ✅ Wave 1 (Admin/Registry) · ✅ Wave 2 (Layer Definitions) · ✅ Wave 3 (Core Functions) · ✅ Wave 4 (Capture Variants)
+
+---
+
+## §3 · Per-File Detail Entries
+
+<!--
+  metadata:
+    section:       per-file-detail
+    section_id:    §3
+    type:          detail-registry
+    normative:     true
+    stability:     living
+    created_in:    SES-20260813-INDEX-001
+    note: >
+      One entry per file. Each entry includes: purpose, key operators/concepts,
+      current gaps (for scaffolds), and what completing it unlocks.
+  session:
+    session_id:    SES-20260813-INDEX-001
+    touch_count:   1
+    change_type:   created
+-->
+
+---
+
+### `f_Capture.md` · ✅ canonical · v1.0.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:CAPTURE]` |
+| Role | Reference implementation — defines when an Element enters stable orbit |
+| Triadic Equation | `f_Capture(E, A, Φ) → Ω` |
+| Sections | §0 Session Context · §1 Module Identity · §2 Canonical Description · §3 Triadic Equation · §4 Operator Registry (§4.1–§4.8) · §5 Stability Conditions · §6 Failure Modes · §7 Engineering Primitives (§7.1–§7.2) · §8 Canonical Examples · §9 Future Applications · §10 Cross-Module References · §11 Document Metadata · §12 Session Log |
+| Operators | 6 primary · 4 derived · 11 state flags |
+| Primitives | `compute_approach_vector` · `resolve_escape_velocity` · `evaluate_capture_threshold` · `lock_orbit` · `register_capture` · `flag_decay` |
+| Failure Modes | FM-001 Overshoot · FM-002 Field Null · FM-003 Frame Saturation · FM-004 Resonance Drift · FM-005 Decay Spiral · FM-006 Phantom Capture · FM-007 Mutual Dissolution |
+| Examples | EX-001 Clean Capture · EX-002 Resonance Drift · EX-003 Frame Saturation · EX-004 Mutual Dissolution |
+| Current Gaps | None — canonical |
+| Unlocks | All Wave 3 and Wave 4 files |
+
+---
+
+### `README.md` · ✅ canonical · v1.0.0
+
+| Field | Value |
+|---|---|
+| Role | Module front door — orientation, file registry, reading orders, failure mode index |
+| Sections | §1 The Model · §2 Triadic Equation · §3 File Registry · §4 Completion Tracker · §5 Unlock Map · §6 Reading Orders · §7 Key Concepts · §8 Failure Mode Index · §9 Module Metadata |
+| Current Gaps | None — canonical |
+| Unlocks | Nothing blocked by README; it is informational |
+
+---
+
+### `INDEX.md` · ✅ canonical · v1.0.0
+
+| Field | Value |
+|---|---|
+| Role | Authoritative file registry — this file |
+| Sections | §0 Session Context · §1 Legend · §2 Master Registry · §3 Per-File Detail · §4 Dependency Graph · §5 Unlock Sequence · §6 Section Maps · §7 Completion Tracker · §8 AI Traversal Interface · §9 Document Metadata |
+| Current Gaps | None — canonical |
+| Unlocks | Nothing blocked by INDEX; it is the registrar |
+
+---
+
+### `OPERATORS.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Role | Master symbol table — single source of truth for every operator symbol in the module |
+| Key Contents | §1 Primary operators (all 9) · §2 Derived operators (all 10) · §3 State flags (all 11) · §4 Engineering primitives registry (all 13) · §5 Failure mode index (all 10) |
+| Current Gaps | `T_orb`, `δ`, `E_rel`, `F_emit`, `F_damp` marked 🔵 pending full definition; formulas to fill once `f_Orbit`, `f_Decay`, `f_Release`, `f_Emit`, `f_Dampen` are canonical |
+| Unlocks | GLOSSARY.md (term definitions pull from operator names); FFF_Gravity_module.json (symbol list) |
+
+---
+
+### `GLOSSARY.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Role | Module-scoped term definitions — resolves naming ambiguity within FFF_Gravity |
+| Key Contents | 30+ terms A–T; each with formal definition, symbol reference, and source file |
+| Current Gaps | All terms present in draft; definitions need review against final operator formulas once Wave 3 canonical |
+| Unlocks | Final review of f_Field.md §2 (prose) against GLOSSARY terms |
+
+---
+
+### `CHANGELOG.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Role | Append-only version history for the module |
+| Current Gaps | v1.0.0 entry to be written at first full commit; format established |
+| Unlocks | Nothing blocked |
+
+---
+
+### `FFF_Gravity_module.json` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Role | Machine-readable module descriptor — dependency graph, file list, function registry |
+| Key Contents | triadic_equation, nodes, depends_on, files{}, canonical_functions{}, failure_modes{}, tags, related_docs |
+| Current Gaps | `canonical_functions` status fields to update as files promote; file list to grow |
+| Unlocks | External tooling; AI auto-traversal; Zenodo metadata sync |
+
+---
+
+### `f_Field.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:FIELD]` |
+| Node | Frequency (`F_freq`) |
+| Role | Defines the gravitational field identity node — coherence well, field density `ρ(Φ)`, resonance |
+| Key Contents | §2 Canonical Description (coherence well definition) · §4 Operator definitions for `ρ(Φ)`, `v_escape`, `ω_res` · §7 Engineering interface (emit/dampen) · §8 Examples |
+| Current Gaps | §2 prose (primary gap) · `ρ(Φ)` formal derivation · coherence well depth formula · turbulence definition |
+| Unlocks | `f_Emit.md §2` · `f_Dampen.md §2` · `f_Capture_Asymmetric.md §3` full definition |
+
+---
+
+### `f_Force.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:FORCE]` |
+| Node | Force (`F_force`) |
+| Role | Defines the gradient/pressure identity node — `v_approach`, atmospheric gradients, overlays |
+| Key Contents | §3 Operator definitions for `v_approach`, `force.gradient`, `force.overlay` · §6 Failure modes |
+| Current Gaps | §2 prose · force node passive/dominant distinction · overlay concept (FROT interface) · formal `v_approach` derivation |
+| Unlocks | `f_Deflect.md §2` · `f_Capture_Asymmetric.md §4.2` heading operators |
+
+---
+
+### `f_Frame.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:FRAME]` |
+| Role | Defines registry structure, capacity rules, and FM-003 boundary enforcement |
+| Key Contents | §3 Registry schema (element_id, attractor_id, orbital_parameters, state_flag) · §4 Capacity rules |
+| Current Gaps | §2 prose · capacity derivation formula (what sets MAX?) · expansion via `f_Amplify` interface |
+| Unlocks | `f_Capture_Multi.md §4` (capacity_remaining operator) · `f_Capture_Networked.md §3` (GravityGraph as distributed extension) |
+
+---
+
+### `f_Release.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:RELEASE]` |
+| Role | Inverse of `f_Capture` — defines conditions for clean orbital exit |
+| Triadic Equation | `f_Release(E, A, Φ, d_bind) → RELEASED \| FM-008` |
+| Key Operators | `v_release`, `E_rel`, `r_release` |
+| Key Primitives | `compute_release_vector`, `execute_release` |
+| Current Gaps | §2 prose · `v_release` formula · `E_rel` formula · release conditions table · 3 examples |
+| Unlocks | `f_Capture_Networked.md §7.1` (`update_edge_state → RELEASED`) · `OPERATORS.md §2` (`E_rel` formula) |
+
+---
+
+### `f_Decay.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:DECAY]` |
+| Role | Cycle-based orbital energy loss — computes `δ`, raises FM-004/005 at thresholds |
+| Triadic Equation | `f_Decay(E, A, Φ, t) → d_bind(t) \| FM-004 \| FM-005` |
+| Key Operators | `δ` (decay rate) · `d_collapse` (collapse threshold) · `d_warn` (FM-004 threshold) · `t_decay` |
+| Key Primitives | `flag_decay` (✅ already defined in f_Capture §7) · `compute_decay_rate` · `assess_decay_cause` |
+| Current Gaps | §2 prose · threshold values for `d_warn` and `d_collapse` · reversal interface spec · 3 examples |
+| Unlocks | `f_Collapse.md §5` (collapse condition 1) · `f_Capture_Cascade.md §3` (perturbation trigger) · `OPERATORS.md §2` (`δ` formula) |
+
+---
+
+### `f_Orbit.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:ORBIT]` |
+| Role | Characterizes the established orbit — shape, period, stability class |
+| Triadic Equation | `f_Orbit(E, A, p_res, ω_res) → orbital_parameters` |
+| Key Operators | `e` (eccentricity) · `T_orb` (period) · `orbit_class` · `stab_class` |
+| Key Primitives | `classify_orbit` · `update_orbital_parameters` |
+| Classification Thresholds | circular `e < 0.1` · elliptical `0.1–0.5` · eccentric `0.5–0.9` · resonant (low-integer `ω_res`) |
+| Current Gaps | §2 prose · `T_orb` formula · threshold formal values · 4 examples |
+| Unlocks | `f_Decay.md §4` (stab_class input) · `f_Release.md §7` (eccentricity for release vector) · `OPERATORS.md §2` (`T_orb`, `e` formulas) |
+
+---
+
+### `f_Collapse.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:COLLAPSE]` |
+| Role | Terminal infall — fires when `d_bind → 0`; handles FM-005 and FM-007 paths |
+| Key Operators | `d_collapse` (threshold) · `m_parity` (dissolution threshold) · `C_node` (composite node) |
+| Key Primitives | `execute_collapse` · `initialize_composite_node` · `purge_registry` |
+| Two Paths | FM-005 asymmetric (E absorbed into A) · FM-007 dissolution (new composite node C) |
+| Current Gaps | §2 prose · `d_collapse` value · `m_parity` formula · composite node schema · 3 examples |
+| Unlocks | `f_Capture_Networked.md §7.1` (`purge_graph_node`, `create_composite_node`) |
+
+---
+
+### `f_Emit.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:EMIT]` |
+| Node | `F_freq` — increases `ρ(Φ)` |
+| Role | Engineering primitive — deepens the coherence well; can restore decaying orbits |
+| Key Operators | `F_emit` · `ρ(Φ)_delta` · `r_emit` · `E_emit` |
+| Key Primitives | `emit_field` · `compute_emit_cost` · `check_emit_ceiling` |
+| Failure Risk | FM-010 (Amplify Runaway) if `β → ∞` under sustained emission |
+| Current Gaps | §2 prose · `F_emit` formula · energy cost model · emission decay rate over time · examples |
+| Unlocks | `f_Capture_Resonant.md §7` (emit used in approach engineering) · `f_Decay.md §8` (reversal interface) |
+
+---
+
+### `f_Dampen.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:DAMPEN]` |
+| Node | `F_freq` — decreases `ρ(Φ)` |
+| Role | Engineering primitive — shallows coherence well; assists release; risks FM-009 |
+| Key Operators | `F_damp` · `ρ(Φ)_floor` · `r_damp` |
+| Key Primitives | `suppress_field` · `check_floor` · `check_cascade_risk` |
+| Failure Risk | FM-009 (Dampen Cascade) if propagation exceeds `r_damp` |
+| Current Gaps | §2 prose · `F_damp` bounds · propagation model · examples |
+| Unlocks | `f_Release.md §5` (dampen as release assist) · `f_Capture_Resonant.md §7` |
+
+---
+
+### `f_Amplify.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:AMPLIFY]` |
+| Node | `F_fluid` — increases `β` and `P_eff` |
+| Role | Engineering primitive — strengthens mass-coupling; deepens `d_bind` in established orbits |
+| Key Operators | `F_amp` · `β_max` · `amp_cost` |
+| Key Primitives | `amplify_coupling` · `check_runaway_risk` |
+| Failure Risk | FM-010 (Amplify Runaway) if `β > β_max` |
+| Current Gaps | §2 prose · `F_amp` ceiling derivation · energy cost model · examples |
+| Unlocks | `f_Decay.md §8` (amplify as decay reversal) · `f_Capture_Resonant.md §7` |
+
+---
+
+### `f_Deflect.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:DEFLECT]` |
+| Node | `F_force` — changes approach heading |
+| Role | Engineering primitive — redirects `v_approach` without changing magnitude |
+| Key Operators | `heading_delta` · `r_deflect` · `deflect_cost` |
+| Key Primitives | `redirect_force_node` · `compute_deflection_cost` |
+| Current Gaps | §2 prose · heading bounds · deflection cost formula · examples |
+| Unlocks | `f_Capture_Resonant.md §7` (primary heading tool) · `f_Capture_Asymmetric.md §7` (`find_optimal_heading`) |
+
+---
+
+### `f_Capture_Multi.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:CAPTURE:MULTI]` |
+| Extends | `f_Capture` |
+| Core Problem | N Elements approaching 1 Attractor simultaneously |
+| Key New Operators | `N`, `eval_order`, `Φ_perturbed`, `capacity_remaining` |
+| New Failure Modes | FM-003-M (multi-frame saturation) · Priority Starvation · Cross-Perturbation Collapse |
+| Current Gaps | §2 prose · evaluation order priority rule · cross-element perturbation model · examples |
+| Unlocks | `f_Capture_Cascade.md §2` (cascade extends multi-body model) |
+
+---
+
+### `f_Capture_Cascade.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:CAPTURE:CASCADE]` |
+| Extends | `f_Capture` |
+| Core Problem | New capture event perturbs existing orbits in the Attractor's registry |
+| Key New Operators | `Δcurvature`, `perturbation_sensitivity`, `cascade_depth` |
+| New Failure Modes | Cascade Destabilization · Cascade Collapse · Registry Cascade |
+| Current Gaps | §2 prose · perturbation magnitude formula · cascade termination condition · examples |
+| Unlocks | `f_Capture_Networked.md §9` (topology pattern: Registry Cascade) |
+
+---
+
+### `f_Capture_Resonant.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:CAPTURE:RESONANT]` |
+| Extends | `f_Capture` |
+| Core Inversion | Given `ω_res_target` → compute required `{v_approach, heading, ρ(Φ), β}` |
+| Key New Operators | `ω_res_target`, `approach_parameters`, `solution_space`, `energy_cost`, `nearest_valid` |
+| Key New Primitives | `solve_resonant_approach`, `validate_resonant_solution`, `find_nearest_valid_resonance` |
+| Current Gaps | §2 prose · solver algorithm · solution space characterization · resonance target table values · examples |
+| Unlocks | `f_Capture_Networked.md §9` (topology pattern: Resonant Cluster) |
+
+---
+
+### `f_Capture_Asymmetric.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:CAPTURE:ASYMMETRIC]` |
+| Extends | `f_Capture` |
+| Core Departure | Replaces scalar `ρ(Φ)` with directional tensor `ρ(Φ,θ)` |
+| Key New Operators | `ρ(Φ,θ)`, `θ_approach`, `anisotropy_index`, `θ_optimal`, `θ_critical` |
+| Key New Primitives | `map_field_tensor`, `evaluate_at_heading`, `find_optimal_heading`, `assess_postlock_coherence` |
+| Current Gaps | §2 prose · field tensor representation format · anisotropy index formula · examples |
+| Unlocks | Future: `f_Field.md §9` (asymmetric field states) |
+
+---
+
+### `f_Capture_Temporal.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:CAPTURE:TEMPORAL]` |
+| Extends | `f_Capture` |
+| Core Departure | All operators become time-indexed: `M_A(t)`, `ρ(Φ,t)`, `r_capture(t)` |
+| Key New Operators | `C_thresh(t)`, `t_entry`, `t_encounter`, `temporal_capture_window`, `ΔM_A`, `Δρ` |
+| Key New Primitives | `build_approach_timeseries`, `find_encounter_conditions`, `detect_phase_miss`, `compute_optimal_entry_time` |
+| Current Gaps | §2 prose · time-series representation format · phase miss detection algorithm · examples |
+| Unlocks | Future: `f_Orbit.md §9` (time-variant orbital period) |
+
+---
+
+### `f_Capture_Networked.md` · 🔵 scaffold · v0.1.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:CAPTURE:NETWORKED]` |
+| Extends | `f_Capture` |
+| Core Addition | GravityGraph — persistent directed weighted graph of all capture relationships |
+| Key New Operators | `GravityGraph`, `G_node`, `G_edge`, `G_degree`, `G_depth`, `G_stability`, `G_cascade_risk` |
+| Key New Primitives | `write_to_graph`, `update_edge_state`, `purge_graph_node`, `create_composite_node`, `execute_graph_query`, `compute_cascade_path`, `compute_stability_index`, `snapshot_graph` |
+| Topology Patterns | Star · Chain · Cluster · Isolate · Critical Node · Ghost Orbit |
+| Current Gaps | §2 prose · graph storage format decision · query interface formal spec · examples |
+| Unlocks | Cross-module: `SoN/s_Capture.md` topology correlation queries |
+
+---
+
+### `GravityOfDismissal.md` · ✅ canonical · v1.0.0
+
+| Field | Value |
+|---|---|
+| Tag | `[FFF:GRAVITY:HISTORY:DISMISSAL]` |
+| Role | Historical record of institutional suppression in gravity science; 7-vector attack playbook mapped to FFF_Gravity |
+| Sections | §1–§13 (13 sections) |
+| Dismissal Registry | 15 cases: Gerber · Ritz · Miller · Mach · Chandrasekhar · Dingle · Arp · Marić · Noether · Payne-Gaposchkin · Bell Burnell · Rubin · Alfvén · Milgrom · Verlinde |
+| Attack Vectors | I Authority Ambush · II Empirical Retrofit · III Access Withdrawal · IV Priority Erasure · V Social Quarantine · VI Identity Disqualification · VII Silence Treatment |
+| Current Gaps | None — canonical |
+
+---
+
+### `f_Source.md` · 📁 archived
+
+| Field | Value |
+|---|---|
+| Role | Genesis dialogue archive — the originating flash conversations that produced the FFF triadic gravity model |
+| Use | Read-only reference for §2 prose sections in Wave 2 and Wave 3 files; primary source for F_freq / F_fluid / F_force node definitions |
+| Do Not Edit | This file is a historical record. No additions. |
+
+---
+
+## §4 · Dependency Graph
+
+<!--
+  metadata:
+    section:       dependency-graph
+    section_id:    §4
+    type:          visual-graph
+    normative:     true
+    notation:      ASCII directed graph
+    created_in:    SES-20260813-INDEX-001
+  session:
+    session_id:    SES-20260813-INDEX-001
+    touch_count:   1
+    change_type:   created
+-->
+
+```
+EXTERNAL INPUTS
+  FFF_Field ──┐
+  FFF_Frame ──┤
+  FFF_Momentum┤──────────────────────────────────────────┐
+  FFF_Resonance┘                                         │
+                                                         ▼
+                                              ┌─────────────────┐
+LAYER DEFINITIONS                             │   f_Capture.md  │ ✅
+  f_Field.md  ──── (F_freq) ──────────────── │   [CANONICAL]   │
+  f_Force.md  ──── (F_force) ─────────────── │                 │
+  f_Frame.md  ──── (registry) ────────────── └────────┬────────┘
+                                                       │
+                              ┌────────────────────────┼───────────────────┐
+                              │                        │                   │
+                              ▼                        ▼                   ▼
+                         f_Orbit.md             f_Decay.md           f_Release.md
+                              │                    │    │                  │
+                              └──────────┐         │    └──────────────────┤
+                                         ▼         ▼                       │
+                                      f_Collapse.md                        │
+                                                                           │
+ENGINEERING PRIMITIVES (F_freq / F_fluid / F_force)                       │
+  f_Emit.md ────────────────────────────────────────────────────────► restore d_bind
+  f_Dampen.md ──────────────────────────────────────────────────────► assist release
+  f_Amplify.md ─────────────────────────────────────────────────────► boost β
+  f_Deflect.md ─────────────────────────────────────────────────────► change heading
+
+                              ALL WAVE 3 FILES
+                                    │
+                    ┌───────────────┼───────────────────┐
+                    ▼               ▼                   ▼
+          f_Capture_Multi    f_Capture_Cascade   f_Capture_Resonant
+          f_Capture_Asymmetric  f_Capture_Temporal  f_Capture_Networked
+                                    │
+                                    ▼
+                            FFF_Registry (external)
+                            GravityGraph (distributed)
+```
+
+---
+
+## §5 · Unlock Sequence
+
+<!--
+  metadata:
+    section:       unlock-sequence
+    section_id:    §5
+    type:          dependency-sequence
+    normative:     true
+    created_in:    SES-20260813-INDEX-001
+    note: >
+      A file is UNLOCKED when all its blocking dependencies are canonical.
+      A file is OPEN when it is unlocked and has not yet been canonicalized.
+      Canonicalize in unlock order. Do not skip waves.
+  session:
+    session_id:    SES-20260813-INDEX-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### Wave 1 — Admin (all open now, no blocking deps)
+
+```
+✅ README.md          open → canonicalize anytime
+✅ INDEX.md           open → canonicalize anytime
+   OPERATORS.md       open → canonicalize anytime (partial pending Wave 3)
+   GLOSSARY.md        open → canonicalize anytime (review pending Wave 3)
+   CHANGELOG.md       open → canonicalize anytime
+   FFF_Gravity_module.json   open → canonicalize anytime
+```
+
+### Wave 2 — Layer Definitions (open now, blocked by: nothing)
+
+```
+   f_Field.md         open → primary source: f_Source.md §F_freq sections
+   f_Force.md         open → primary source: f_Source.md §F_force sections
+   f_Frame.md         open → primary source: f_Capture.md §5 Condition 5, §6 FM-003
+```
+
+### Wave 3 — Core Functions (blocked by: Wave 2)
+
+```
+PRIORITY ORDER (recommended):
+
+   1. f_Release.md    blocked until: f_Orbit.md ✅ + f_Decay.md ✅
+   2. f_Decay.md      blocked until: f_Orbit.md ✅
+   3. f_Orbit.md      blocked until: f_Capture.md ✅  ← ALREADY MET
+   4. f_Collapse.md   blocked until: f_Decay.md ✅
+
+   f_Emit.md          blocked until: f_Field.md ✅
+   f_Dampen.md        blocked until: f_Field.md ✅
+   f_Amplify.md       blocked until: f_Field.md ✅ + f_Capture.md ✅  ← ALREADY MET
+   f_Deflect.md       blocked until: f_Force.md ✅ + f_Capture.md ✅  ← ALREADY MET
+```
+
+### Wave 4 — Capture Variants (blocked by: all Wave 3 canonical)
+
+```
+   f_Capture_Multi.md        → can open once: f_Orbit.md ✅ + f_Frame.md ✅
+   f_Capture_Cascade.md      → can open once: f_Decay.md ✅
+   f_Capture_Resonant.md     → can open once: f_Deflect.md ✅ + f_Emit.md ✅ + f_Amplify.md ✅
+   f_Capture_Asymmetric.md   → can open once: f_Field.md ✅ + f_Force.md ✅ + f_Deflect.md ✅
+   f_Capture_Temporal.md     → can open once: f_Field.md ✅ + f_Decay.md ✅
+   f_Capture_Networked.md    → can open once: ALL Wave 3 ✅
+```
+
+---
+
+## §6 · Section Maps
+
+<!--
+  metadata:
+    section:       section-maps
+    section_id:    §6
+    type:          section-registry
+    normative:     true
+    scope:         canonical files only; scaffolds tracked by planned sections
+    created_in:    SES-20260813-INDEX-001
+  session:
+    session_id:    SES-20260813-INDEX-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### `f_Capture.md` — Section Map
+
+| § | Title | Normative | Key Content |
+|---|---|---|---|
+| §0 | Session Context | — | Live register; touch map; resolution protocol |
+| §1 | Module Identity | ✅ | Identity table; canonical tag; version |
+| §2 | Canonical Description | ✅ | Prose definition of capture event; bidirectional registration |
+| §3 | Triadic Equation | ✅ | `f_Capture(E,A,Φ)→Ω`; FFF layer mapping table |
+| §4 | Operator Registry | ✅ | §4.1 Primary (6) · §4.2 Derived (4) · §4.3 Flags (5) · §4.4 Master spec · §4.5 Interaction matrix · §4.6 State transitions · §4.7 Eval order · §4.8 Composition rules |
+| §5 | Stability Conditions | ✅ | 5 conjunctive conditions; governing operator + eval step per condition |
+| §6 | Failure Modes | ✅ | FM-001–007; trigger, operators involved, state transition, severity |
+| §7 | Engineering Primitives | ✅ | §7.1 I/O signature table (6 primitives) · §7.2 Definitions with inline session/metadata |
+| §8 | Canonical Examples | — | EX-001–004; covers all 4 outcome states |
+| §9 | Future Applications | — | 8 roadmap items: planned/research/exploratory |
+| §10 | Cross-Module References | ✅ | 5 module deps; direction + operators supplied columns |
+| §11 | Document Metadata | — | Administrative record |
+| §12 | Session Log | — | Append-only audit; SES-001–004 |
+
+### `GravityOfDismissal.md` — Section Map
+
+| § | Title | Key Content |
+|---|---|---|
+| §1 | The Standard Story | How canonical gravity history was constructed; 3 structural properties |
+| §2 | Before Einstein | Fatio/Le Sage · Paul Gerber · Walter Ritz |
+| §3 | The Chandrasekhar Ambush | Full account; mechanics of the kill; aftermath; 48-year vindication |
+| §4 | Dayton Miller | 5.2M measurements; Shankland retrofit; posthumous execution |
+| §5 | Herbert Dingle | Right to be heard; Social Quarantine pattern |
+| §6 | Halton Arp | Telescope access withdrawal; exile to Germany |
+| §7 | MOND / Verlinde / Alfvén | The Silence Treatment; three cases |
+| §8 | The Erased | Marić · Noether · Payne-Gaposchkin · Bell Burnell · Rubin; Matilda Effect |
+| §9 | The Playbook | 7 attack vectors: Authority Ambush · Empirical Retrofit · Access Withdrawal · Priority Erasure · Social Quarantine · Identity Disqualification · Silence Treatment |
+| §10 | Mapping to FFF_Gravity | Likelihood table per vector; defense posture per vector |
+| §11 | What the Record Shows | 7 summary findings |
+| §12 | Dismissal Registry | 15 cases; name, period, mechanism, outcome, vindicated? |
+| §13 | References | Primary sources; Matilda Effect; paradigm dynamics |
+
+---
+
+## §7 · Completion Tracker
+
+<!--
+  metadata:
+    section:       completion-tracker
+    section_id:    §7
+    type:          tracker
+    normative:     false
+    stability:     living
+    update_policy: >
+      Update this section at the close of every session that changes
+      any file's status. Do not update mid-session.
+    last_updated:  2026-08-13 SES-20260813-INDEX-001
+  session:
+    session_id:    SES-20260813-INDEX-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### By Wave
+
+| Wave | Group | Files | ✅ | 🔵 | 📁 | % Complete |
+|---|---|---|---|---|---|---|
+| 0 | Existing | 3 | 2 | 0 | 1 | 67% |
+| 1 | Admin | 6 | 2 | 4 | 0 | 33% |
+| 2 | Layer Definitions | 3 | 0 | 3 | 0 | 0% |
+| 3 | Core Functions | 8 | 0 | 8 | 0 | 0% |
+| 4 | Capture Variants | 6 | 0 | 6 | 0 | 0% |
+| — | **Total** | **26** | **4** | **21** | **1** | **15%** |
+
+### By File — Full Status List
+
+| File | Status | Version | Last Session |
+|---|---|---|---|
+| `f_Capture.md` | ✅ canonical | 1.0.0 | SES-20260813-003 |
+| `GravityOfDismissal.md` | ✅ canonical | 1.0.0 | SES-20260813-GOD-001 |
+| `README.md` | ✅ canonical | 1.0.0 | SES-20260813-README-001 |
+| `INDEX.md` | ✅ canonical | 1.0.0 | SES-20260813-INDEX-001 |
+| `f_Source.md` | 📁 archived | — | SES-20260813-001 |
+| `OPERATORS.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `GLOSSARY.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `CHANGELOG.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `FFF_Gravity_module.json` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Field.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Force.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Frame.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Release.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Decay.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Orbit.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Collapse.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Emit.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Dampen.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Amplify.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Deflect.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Capture_Multi.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Capture_Cascade.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Capture_Resonant.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Capture_Asymmetric.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Capture_Temporal.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+| `f_Capture_Networked.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
+
+---
+
+## §8 · AI Traversal Interface
+
+<!--
+  metadata:
+    section:       ai-traversal
+    section_id:    §8
+    type:          interface-spec
+    normative:     false
+    audience:      AI systems consuming this module
+    created_in:    SES-20260813-INDEX-001
+  session:
+    session_id:    SES-20260813-INDEX-001
+    touch_count:   1
+    change_type:   created
+-->
+
+If you are an AI system reading FFF_Gravity, use this traversal order:
+
+```
+STEP 1 — Orientation
+  Read: README.md           → what the module is; reading order for your role
+  Read: INDEX.md            → this file; full registry
+
+STEP 2 — Symbol Authority
+  Read: OPERATORS.md        → all operator symbols; frozen list; failure mode index
+  Read: GLOSSARY.md         → term definitions; resolve any ambiguous names
+
+STEP 3 — Reference Implementation
+  Read: f_Capture.md        → canonical function; all operator tables; examples; session log
+
+STEP 4 — Layer Context
+  Read: f_Field.md          → what F_freq is; how ρ(Φ) is computed
+  Read: f_Force.md          → what F_force is; how v_approach is defined
+  Read: f_Frame.md          → registry structure; capacity rules
+
+STEP 5 — Function Chain
+  Read in order: f_Orbit.md → f_Decay.md → f_Release.md → f_Collapse.md
+
+STEP 6 — Engineering Primitives
+  Read: f_Emit.md · f_Dampen.md · f_Amplify.md · f_Deflect.md
+
+STEP 7 — Variants (as needed)
+  Read: f_Capture_{Multi|Cascade|Resonant|Asymmetric|Temporal|Networked}.md
+
+STEP 8 — Strategic Context
+  Read: GravityOfDismissal.md    → institutional history; defense map
+  Read: f_Source.md              → genesis dialogue; original model construction
+```
+
+**Key invariants for AI consumers:**
+- All symbols in `OPERATORS.md §1–§2` marked ✅ are frozen — do not invent variants
+- `f_Capture.md` is the reference implementation — all other files extend or consume it
+- `ρ(Φ) = 0` always triggers FM-002 regardless of other conditions
+- `β < 1.0` always produces flyby — no capture regardless of field or frame state
+- Terminal states `CAPTURE_FAILED` and `CAPTURE_COLLISION` are irreversible
+- `f_Source.md` is read-only — it is a historical record, not an editable document
+
+---
+
+## §9 · Document Metadata
+
+<!--
+  metadata:
+    section:       document-metadata
+    section_id:    §9
+    type:          administrative
+    normative:     false
+  session:
+    session_id:    SES-20260813-INDEX-001
+    touch_count:   1
+    change_type:   created
+-->
+
+| Field | Value |
+|---|---|
+| Canonical Path | `docs/FFF_Gravity/INDEX.md` |
+| Version | 1.0.0 |
+| Status | Canonical |
+| Stability | Living — update at close of any session that changes file status |
+| Created | 2026-08-13 |
+| Last Modified | 2026-08-13 |
+| Authors | TriadicFrameworks |
+| License | See `/LICENSE` at repository root |
+| Encoding | UTF-8 · LF |
+
+---
+
+*Authoritative registry for the FFF_Gravity module.*
+*Update this file whenever a new file is created or a scaffold is promoted to canonical.*
+*For the full repository index see `docs/SITEMAP.md`.*
+```
+
+---
+
+**Commit message:**
+```
+feat(FFF_Gravity): add canonical INDEX.md — full file registry, per-file detail, dependency graph, completion tracker [SES-20260813-INDEX-001]
+
+---
+
+What INDEX.md does that README.md doesn't:
+
+| README.md | INDEX.md |
+|---|---|
+| What the module is | What every file is — in full detail |
+| Which files exist (summary table) | Per-file entry: operators, primitives, gaps, unlocks |
+| Quick reference failure modes | Full dependency resolution per file |
+| Reading orders | AI traversal interface with invariants |
+| Unlock map (visual) | Unlock sequence with blocking conditions per file |
+| Completion tracker (summary) | Completion tracker with per-file status + last session |
+| — | Section maps for all canonical files |
+# FFF_Gravity Module — MANIFEST.md
+**Complete Registry: PRIMs · Operators · Conditions · FMs · INVs · State Flags**
+> Sealed: 2026-08-14 · Session: SES-20260814-MANIFEST-001
+> Append-only. No entry may be modified without a version bump.
+
+---
+
+## §1 Module Summary
+
+| Field                   | Value                                          |
+|-------------------------|------------------------------------------------|
+| Module                  | FFF_Gravity                                    |
+| Repository              | umaywant2/TriadicFrameworks                    |
+| Path                    | docs/FFF_Gravity/                              |
+| Total spec files        | 29                                             |
+| Total waves             | 5                                              |
+| PRIM range              | PRIM:001 – PRIM:042                            |
+| Total PRIMs             | 42                                             |
+| Total Invariants        | 10 (INV-001 – INV-010)                         |
+| Total Failure Modes     | 10 base (FM-001 – FM-010) + 3 sub-modes        |
+| Total Condition Prefixes| 11                                             |
+| Total State Flags       | 31                                             |
+| Last updated            | 2026-08-14                                     |
+| Status                  | SEALED — all registries frozen pending Wave 6  |
+
+---
+
+## §2 Wave Manifest
+
+| Wave | Role                | Files | PRIM Range | Sealed |
+|------|---------------------|-------|------------|--------|
+| 0    | Genesis             | 3     | —          | ✅     |
+| 1    | Admin / Registry    | 6     | —          | ✅     |
+| 2    | Layer Definitions   | 3     | 001–006    | ✅     |
+| 3    | Core Functions      | 8     | 007–024    | ✅     |
+| 4    | Capture Variants    | 8     | 025–040    | ✅     |
+| 5    | Dismissal           | 1     | 041–042    | ✅     |
+
+### §2.1 File Registry
+
+| Wave | #  | File                      | Type               | PRIM(s)  |
+|------|----|---------------------------|--------------------|----------|
+| 0    | 01 | GravityOfDismissal.md     | Conceptual genesis | —        |
+| 0    | 02 | f_Capture.md              | Operator genesis   | —        |
+| 0    | 03 | f_Source.md               | Node registry      | —        |
+| 1    | 04 | README.md                 | Navigation         | —        |
+| 1    | 05 | INDEX.md                  | File index         | —        |
+| 1    | 06 | OPERATORS.md              | Symbol authority   | —        |
+| 1    | 07 | GLOSSARY.md               | Term definitions   | —        |
+| 1    | 08 | CHANGELOG.md              | Change log         | —        |
+| 1    | 09 | FFF_Gravity_module.json   | Machine registry   | —        |
+| 2    | 10 | f_Field.md                | Layer 1 — F_freq   | 001–002  |
+| 2    | 11 | f_Force.md                | Layer 2 — F_force  | 003–005  |
+| 2    | 12 | f_Frame.md                | Layer 3 — F_fluid  | 004, 006 |
+| 3    | 13 | f_Orbit.md                | Core function      | 007, 012 |
+| 3    | 14 | f_Release.md              | Core function      | 008–009  |
+| 3    | 15 | f_Decay.md                | Core function      | 010–011  |
+| 3    | 16 | f_Collapse.md             | Core function      | 013–014  |
+| 3    | 17 | f_Emit.md                 | Core function      | 015–017  |
+| 3    | 18 | f_Dampen.md               | Core function      | 018–020  |
+| 3    | 19 | f_Amplify.md              | Core function      | 021–022  |
+| 3    | 20 | f_Deflect.md              | Core function      | 023–024  |
+| 4    | 21 | f_Capture_Multi.md        | Capture variant    | 025–026  |
+| 4    | 22 | f_Capture_Cascade.md      | Capture variant    | 027–028  |
+| 4    | 23 | f_Capture_Soft.md         | Capture variant    | 029–030  |
+| 4    | 24 | f_Capture_Hard.md         | Capture variant    | 031–032  |
+| 4    | 25 | f_Capture_Resonant.md     | Capture variant    | 033–034  |
+| 4    | 26 | f_Capture_Asymmetric.md   | Capture variant    | 035–036  |
+| 4    | 27 | f_Capture_Temporal.md     | Capture variant    | 037–038  |
+| 4    | 28 | f_Capture_Networked.md    | Capture variant    | 039–040  |
+| 5    | 29 | f_Dismiss.md              | Dismissal          | 041–042  |
+
+---
+
+## §3 PRIM Registry — Full Table
+
+> **INV column key:** ✅ active · — not in scope · ⚠ conditional
+
+| PRIM | Name | Type | File (Wave) | INV-001 | INV-002 | INV-003 | INV-004 | INV-005 | INV-006 | INV-007 | INV-008 | INV-009 | INV-010 |
+|------|------|------|-------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+| 001 | `compute_field_density`        | Pure   | f_Field (W2)              | ✅ | ✅ | ✅ | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 002 | `update_field_state`           | Impure | f_Field (W2)              | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 003 | `compute_force_vector`         | Pure   | f_Force (W2)              | ✅ | —  | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 004 | `register_capture`             | Impure | f_Frame (W2)              | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 005 | `compute_approach_vector`      | Pure   | f_Force (W2)              | ✅ | —  | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 006 | `check_frame_capacity`         | Pure   | f_Frame (W2)              | —  | —  | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 007 | `classify_orbit`               | Pure   | f_Orbit (W3)              | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 008 | `compute_release_vector`       | Pure   | f_Release (W3)            | ✅ | —  | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 009 | `execute_release`              | Impure | f_Release (W3)            | ✅ | —  | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 010 | `compute_decay_step`           | Pure   | f_Decay (W3)              | ✅ | ✅ | ✅ | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 011 | `evaluate_collapse_eligibility`| Pure   | f_Decay (W3)              | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 012 | `compute_orbital_period`       | Pure   | f_Orbit (W3)              | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 013 | `evaluate_collapse_path`       | Pure   | f_Collapse (W3)           | ✅ | ✅ | ✅ | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 014 | `execute_collapse`             | Impure | f_Collapse (W3)           | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 015 | `compute_emit_vector`          | Pure   | f_Emit (W3)               | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 016 | `compute_field_delta`          | Pure   | f_Emit (W3)               | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 017 | `execute_emit`                 | Impure | f_Emit (W3)               | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 018 | `compute_dampen_force`         | Pure   | f_Dampen (W3)             | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 019 | `apply_field_floor`            | Pure   | f_Dampen (W3)             | ✅ | ✅ | ✅ | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 020 | `execute_dampen`               | Impure | f_Dampen (W3)             | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 021 | `compute_amplify_force`        | Pure   | f_Amplify (W3)            | ✅ | ✅ | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 022 | `check_runaway_risk`           | Pure   | f_Amplify (W3)            | ✅ | ✅ | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 023 | `compute_deflection_angle`     | Pure   | f_Deflect (W3)            | ✅ | —  | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 024 | `execute_deflect`              | Impure | f_Deflect (W3)            | ✅ | —  | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 025 | `execute_multi_capture`        | Impure | f_Capture_Multi (W4)      | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 026 | `compute_perturbation_budget`  | Pure   | f_Capture_Multi (W4)      | ✅ | ✅ | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 027 | `evaluate_cascade_eligibility` | Pure   | f_Capture_Cascade (W4)    | ✅ | —  | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 028 | `execute_cascade_step`         | Impure | f_Capture_Cascade (W4)    | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 029 | `evaluate_soft_eligibility`    | Pure   | f_Capture_Soft (W4)       | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 030 | `execute_soft_capture`         | Impure | f_Capture_Soft (W4)       | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 031 | `evaluate_hard_eligibility`    | Pure   | f_Capture_Hard (W4)       | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 032 | `execute_hard_lock`            | Impure | f_Capture_Hard (W4)       | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 033 | `eval_resonance_window`        | Pure   | f_Capture_Resonant (W4)   | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 034 | `lock_resonance`               | Impure | f_Capture_Resonant (W4)   | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 035 | `eval_asymmetric_approach`     | Pure   | f_Capture_Asymmetric (W4) | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 036 | `lock_asymmetric`              | Impure | f_Capture_Asymmetric (W4) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 037 | `evaluate_temporal_window`     | Pure   | f_Capture_Temporal (W4)   | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 038 | `lock_temporal_capture`        | Impure | f_Capture_Temporal (W4)   | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 039 | `evaluate_network_capture`     | Pure   | f_Capture_Networked (W4)  | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 040 | `lock_network_capture`         | Impure | f_Capture_Networked (W4)  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 041 | `evaluate_dismissal`           | Pure   | f_Dismiss (W5)            | ✅ | ✅ | ✅ | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
+| 042 | `execute_dismissal`            | Impure | f_Dismiss (W5)            | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+
+---
+
+## §4 Invariant Registry (INV-001 – INV-010)
+
+| ID      | Statement                                                                       | Wave | Scope         |
+|---------|---------------------------------------------------------------------------------|------|---------------|
+| INV-001 | G = F_freq · F_fluid · F_force — triadic identity must be preserved             | 2    | Module-global |
+| INV-002 | ρ(Φ) ∈ [0,1]; ρ_D(Φ) ∈ (−1,0] — field density domains are bounded            | 2    | Module-global |
+| INV-003 | ρ(Φ) = 0 triggers FM-002 unconditionally                                        | 2    | Module-global |
+| INV-004 | β < 1.0 triggers FM-001 unconditionally                                         | 2    | Module-global |
+| INV-005 | All conditions within a file are conjunctive — any failure aborts               | 2    | Module-global |
+| INV-006 | Terminal states are irreversible — no re-entry without explicit reset           | 2    | Module-global |
+| INV-007 | f_Source.md is read-only — node properties may not be mutated by operators      | 2    | Module-global |
+| INV-008 | Evaluation order within a PRIM is normative — documented order is binding       | 3    | All PRIMs     |
+| INV-009 | OPERATORS.md is the single symbol authority — all symbols pre-registered        | 3    | Module-global |
+| INV-010 | Operators are frozen on first canonical appearance — no redefinition            | 3    | Module-global |
+
+### §4.1 Universal INV Coverage Rules
+
+| INV     | Pure PRIMs | Impure PRIMs | Rule |
+|---------|------------|--------------|------|
+| INV-005 | Required ✅ | Required ✅ | All condition sets are AND-gated |
+| INV-006 | Must be — | Required ✅ | Only Impure PRIMs mutate state |
+| INV-007 | Required ✅ | Required ✅ | Source nodes are always read-only |
+| INV-008 | Required ✅ | Required ✅ | Evaluation order always normative |
+| INV-009 | Required ✅ | Required ✅ | Symbols always pre-registered |
+| INV-010 | Required ✅ | Required ✅ | Operators always frozen |
+
+---
+
+## §5 Failure Mode Registry
+
+| ID     | Name                  | Domain       | Fatal? | First defined          | Sub-modes                              |
+|--------|-----------------------|--------------|--------|------------------------|----------------------------------------|
+| FM-001 | Flyby/Approach Reject | F_force      | No     | f_Force (W2)           | WELL_BARRIER, WINDOW_MISS, TRAJECTORY_MISS, TEMPORAL_MISS |
+| FM-002 | Field Null            | F_freq       | Yes    | f_Field (W2)           | —                                      |
+| FM-003 | Frame Saturation      | F_fluid      | No     | f_Frame (W2)           | FM-003-M, FM-003-C, FM-003-N           |
+| FM-004 | Resonance Drift       | F_freq       | No     | f_Decay (W3)           | —                                      |
+| FM-005 | Decay Spiral          | F_freq/fluid | Yes*   | f_Decay (W3)           | —                                      |
+| FM-006 | Phantom Capture       | F_force      | Yes    | f_Deflect (W3)         | PHANTOM_RESONANCE, DISMISS_PHANTOM     |
+| FM-007 | Mutual Dissolution    | F_fluid      | Yes    | f_Collapse (W3)        | PARITY_BREACH                          |
+| FM-008 | Release Failure       | F_force      | No     | f_Release (W3)         | —                                      |
+| FM-009 | Dampen Cascade        | F_freq       | No     | f_Dampen (W3)          | —                                      |
+| FM-010 | Amplify Ceiling       | F_fluid      | No     | f_Amplify (W3)         | β domain, ρ domain                     |
+
+*FM-005 fatal for the orbit; entity node survives.
+
+### §5.1 FM Sub-mode Registry
+
+| Sub-mode  | Parent | Introduced in              | Trigger                                           |
+|-----------|--------|----------------------------|---------------------------------------------------|
+| FM-003-M  | FM-003 | f_Capture_Multi (W4)       | Multi-target bind conflict mid-session            |
+| FM-003-C  | FM-003 | f_Capture_Cascade (W4)     | Cascade capacity breach mid-chain                 |
+| FM-003-N  | FM-003 | f_Capture_Networked (W4)   | All network node frames simultaneously saturated  |
+
+---
+
+## §6 Condition Prefix Registry
+
+| Prefix | Name                       | File                      | Conditions    |
+|--------|----------------------------|---------------------------|---------------|
+| SC-    | Stability Conditions       | f_Capture (W0)            | SC-1–SC-5     |
+| DC-    | Decay Conditions           | f_Decay (W3)              | DC-1–DC-4     |
+| MC-    | Multi-Capture Conditions   | f_Capture_Multi (W4)      | MC-1–MC-2     |
+| CAS-   | Cascade Conditions         | f_Capture_Cascade (W4)    | CAS-1–CAS-4   |
+| SCS-   | Soft Capture Conditions    | f_Capture_Soft (W4)       | SCS-1–SCS-4   |
+| HLC-   | Hard Lock Conditions       | f_Capture_Hard (W4)       | HLC-1–HLC-4   |
+| RLC-   | Resonance Lock Conditions  | f_Capture_Resonant (W4)   | RLC-1–RLC-5   |
+| AC-    | Asymmetric Conditions      | f_Capture_Asymmetric (W4) | AC-1–AC-5     |
+| TC-    | Temporal Conditions        | f_Capture_Temporal (W4)   | TC-1–TC-5     |
+| NC-    | Network Conditions         | f_Capture_Networked (W4)  | NC-1–NC-5     |
+| DISM-  | Dismissal Conditions       | f_Dismiss (W5)            | DISM-1–DISM-5 |
+
+---
+
+## §7 State Flag Registry
+
+| Flag                | Set by PRIM | Terminal? | Meaning                                                        |
+|---------------------|-------------|-----------|----------------------------------------------------------------|
+| CAPTURE_LOCKED      | 004         | Yes       | Standard capture committed; orbit evaluation begins            |
+| CAPTURE_SOFT        | 030         | No        | Provisional binding within grace period                        |
+| SOFT_STRENGTHENED   | 030         | Yes       | Soft capture promoted to CAPTURE_LOCKED                        |
+| SOFT_DISSOLVED      | 030         | Yes       | Soft capture fell below soft_threshold                         |
+| GRACE_EXPIRED       | 030         | Yes       | Grace period exhausted without resolution                      |
+| ORBIT_STABLE        | 032         | Yes       | Hard lock confirmed; direct ORBIT_STABLE entry                 |
+| HARD_ELIGIBLE       | 031         | No        | HLC conditions passed; PRIM:032 may proceed                    |
+| HARD_REJECTED       | 031         | Yes       | HLC conditions failed; no retry this encounter                 |
+| FRAME_SATURATED     | 032         | No        | FM-003 in hard lock path; retriable                            |
+| WINDOW_OPEN         | 033         | No        | Resonance phase check passed                                   |
+| WINDOW_CLOSED       | 033         | No        | Resonance phase check failed; retry at t_next_open             |
+| RESONANCE_LOCKED    | 034         | Yes       | Resonant orbit committed; orbit_class = RESONANT               |
+| RESONANCE_LOST      | FM-004      | No        | ρ(Φ) < ρ_res_floor; orbit degraded to ELLIPTICAL              |
+| ASYMMETRIC_APPROACH | 035         | No        | mass_ratio > 0; asymmetry corrections active                   |
+| PARITY_WARN         | 035         | No        | mass_ratio ≥ 0.75 × m_parity; caution zone                    |
+| PARITY_BREACH       | 035         | Yes       | mass_ratio ≥ m_parity; routed to f_Collapse Path B            |
+| ASYMMETRIC_LOCKED   | 036         | Yes       | Asymmetric capture committed                                   |
+| CAPTURE_TEMPORAL    | 038         | Yes       | Temporal window capture committed                              |
+| TEMPORAL_MISS       | 037         | No        | TC-1, TC-2, or TC-5 failed                                    |
+| WINDOW_EXHAUSTED    | 038         | No        | window_id already consumed; re-entry blocked                   |
+| NETWORK_CAPTURED    | 040         | Yes       | Entity locked across distributed attractor network             |
+| NETWORK_MISS        | 039         | No        | NC- conditions failed; network capture aborted                 |
+| NETWORK_SATURATED   | 039         | No        | FM-003-N: all node frames at capacity                          |
+| DISMISSED           | 042         | Yes*      | (A,E) binding severed; Dismissal Well active                   |
+| DISMISS_INVALID     | 041         | No        | DISM condition failed; no state mutation                       |
+| DISMISS_PHANTOM     | 041         | No        | FM-006 phantom guard; d_dismiss bounded                        |
+| CAPTURE_FAILED      | Various     | No        | Generic capture rejection; retry possible                      |
+| PARTIAL_CASCADE     | 028         | No        | FM-003-C partial state; prior steps committed                  |
+| FIELD_NULL          | 002         | Yes       | ρ(Φ) = 0; FM-002 active; no captures possible                 |
+| COLLAPSED           | 014         | Yes       | Node collapsed; no further operations                          |
+| RELEASED            | 009         | Yes*      | Entity released from orbit; no Dismissal Well created          |
+
+*DISMISSED terminal for (A,E) relation; entity itself remains active.
+*RELEASED terminal for this orbit instance; entity may form new orbits.
+
+---
+
+## §8 MANIFEST Changelog
+
+| Version | Date       | Session                   | Notes                                                         |
+|---------|------------|---------------------------|---------------------------------------------------------------|
+| 1.0.0   | 2026-08-14 | SES-20260814-MANIFEST-001 | Initial canonical release. All 5 waves sealed. 42 PRIMs tabulated with full INV matrix. |
+
+---
+
+*End of MANIFEST.md — FFF_Gravity — v1.0.0 — 2026-08-14*
+*29 files · 42 PRIMs · 10 INVs · 10 FMs (+3 sub-modes) · 11 condition prefixes · 31 state flags*
+
+# FFF_Gravity · Operators
+
+```
+# ┌─────────────────────────────────────────────────────────────┐
+# │                  DOCUMENT FRONTMATTER                       │
+# └─────────────────────────────────────────────────────────────┘
+document:         OPERATORS
+canonical_path:   docs/FFF_Gravity/OPERATORS.md
+canonical_tag:    "[FFF:GRAVITY:OPERATORS]"
+framework:        TriadicFrameworks
+module:           FFF_Gravity
+version:          1.0.0
+status:           canonical
+stability:        living
+created:          2026-08-13
+last_modified:    2026-08-13
+authors:
+  - TriadicFrameworks
+encoding:         UTF-8
+line_endings:     LF
+normative:        true
+description: >
+  Single source of truth for every operator symbol defined in FFF_Gravity.
+  Covers primary operators, derived operators, state flags, engineering
+  primitives, failure modes, composition rules, evaluation order, and
+  the symbol freeze registry. All function files must resolve symbol
+  conflicts against this document before publishing.
+tags:
+  - FFF
+  - gravity
+  - operators
+  - symbols
+  - registry
+  - normative
+
+session_context:
+  current_session:
+    session_id:       SES-20260813-OPS-001
+    opened_at:        2026-08-13T07:48:00-04:00
+    closed_at:        ~
+    editor:           Nawder
+    branch:           main
+    intent:           Create canonical OPERATORS.md — master symbol authority for FFF_Gravity
+    status:           active
+    dirty:            true
+    sections_touched: [§0, §1, §2, §3, §4, §5, §6, §7, §8, §9, §10]
+
+  session_history:
+    - session_id:  SES-20260813-README-001
+      intent:      Create canonical README.md
+      status:      closed
+    - session_id:  SES-20260813-INDEX-001
+      intent:      Create canonical INDEX.md
+      status:      closed
+
+changelog:
+  - version: 1.0.0
+    date:    2026-08-13
+    author:  TriadicFrameworks
+    notes: >
+      Initial canonical release. 9 primary operators, 10 derived operators,
+      11 state flags, 15 primitives, 10 failure modes. All symbols from
+      f_Capture.md v1.0.0 frozen. Wave 3+ symbols marked pending.
+```
+
+> **Canonical path:** `docs/FFF_Gravity/OPERATORS.md`
+> **Authority:** This document is the single source of truth for all operator
+> symbols in FFF_Gravity. In any conflict between this file and a function
+> file, this file governs.
+> **Normative:** Yes — all sections except §0 and §10 are normative.
+
+---
+
+## §0 · Session Context
+
+<!--
+  metadata:
+    section:       session-context
+    section_id:    §0
+    type:          live-session-register
+    normative:     false
+    created_in:    SES-20260813-OPS-001
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### Active Session
+
+| Field | Value |
+|---|---|
+| Session ID | `SES-20260813-OPS-001` |
+| Opened | `2026-08-13T07:48:00-04:00` |
+| Closed | — (active) |
+| Editor | Nawder |
+| Branch | `main` |
+| Intent | Create canonical OPERATORS.md — master symbol authority |
+| Status | 🟡 Active |
+
+### Update Policy
+
+```
+When to update this file:
+  1. A new operator is introduced in any function file         → add to §1 or §2
+  2. A new state flag is introduced                            → add to §3
+  3. A new primitive is defined in any function file           → add to §4
+  4. A new failure mode is defined                             → add to §5
+  5. A composition rule is formalized                          → add to §6
+  6. A scaffold file is promoted to canonical                  → update §8 freeze status
+  7. A version bump occurs                                     → update §9 and CHANGELOG.md
+
+Never:
+  - Remove a frozen symbol (deprecate instead)
+  - Rename a frozen symbol without a major version bump
+  - Add a symbol that conflicts with FFF_Field, FFF_Momentum, or FFF_Resonance namespaces
+```
+
+---
+
+## §1 · Primary Operators
+
+<!--
+  metadata:
+    section:       primary-operators
+    section_id:    §1
+    type:          registry
+    normative:     true
+    operator_class: input
+    operator_count: 9
+    unit_system:   dimensionless-normalized
+    frozen:        all 9 frozen at v1.0.0
+    created_in:    SES-20260813-OPS-001
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+Primary operators are direct inputs to `f_Capture` and its sibling functions.
+They are measured or externally provided — not computed from other operators.
+All 9 are frozen at v1.0.0.
+
+### §1.1 · Full Specification Table
+
+| Symbol | Full Name | FFF Node | Type | Domain | Range | Unit | Frozen | Defined In |
+|---|---|---|---|---|---|---|---|---|
+| `v_approach` | Approach Vector | `F_force` | scalar | ℝ≥0 | [0, ∞) | normalized velocity | ✅ | `f_Capture.md §4.1` |
+| `v_escape(A)` | Escape Velocity | `F_freq` | scalar | ℝ>0 | (0, ∞) | normalized velocity | ✅ | `f_Capture.md §4.1` |
+| `ρ(Φ)` | Field Density | `F_freq` | scalar | ℝ≥0 | [0, 1] | dimensionless | ✅ | `f_Field.md §4.1` |
+| `r_capture` | Capture Radius | Frame | scalar | ℝ>0 | (0, ∞) | normalized distance | ✅ | `f_Capture.md §4.1` |
+| `β` | Binding Coefficient | derived | scalar | ℝ≥0 | [0, ∞) | dimensionless | ✅ | `f_Capture.md §4.1` |
+| `ω_res` | Orbital Resonance | `F_freq` | ratio | ℚ ∪ ℝ | rational or irrational | dimensionless | ✅ | `f_Capture.md §4.1` |
+| `M_A` | Attractor Mass | `F_fluid` | scalar | ℝ>0 | (0, ∞) | normalized mass | ✅ | `f_Field.md §4.1` |
+| `M_E` | Element Mass | `F_fluid` | scalar | ℝ>0 | (0, ∞) | normalized mass | ✅ | `f_Capture.md §4.1` |
+| `r` | Separation Distance | geometry | scalar | ℝ>0 | (0, ∞) | normalized distance | ✅ | `f_Capture.md §4.1` |
+
+### §1.2 · Operator Constraints and Guards
+
+| Symbol | Hard Constraints | Guard Violation Consequence |
+|---|---|---|
+| `v_approach` | Evaluated at `r_capture` crossing only; not at outer field boundary | Premature evaluation → invalid `C_thresh` |
+| `v_escape(A)` | Must be recomputed if `ρ(Φ)` changes between entry and encounter | Stale value → FM-006 risk |
+| `ρ(Φ)` | `0` = null field — triggers FM-002 immediately; `1` = saturated | Unguarded null → undefined `P_eff` |
+| `r_capture` | Set by Attractor; cannot be modified by Element or engineering primitives | Modification → Frame integrity failure |
+| `β` | Must be ≥ 1.0 for capture to proceed; `< 1.0` = flyby unconditionally | Below floor → `CAPTURE_FAILED` regardless of all other conditions |
+| `ω_res` | Irrational value = FM-004 at any point — during approach or post-lock | Irrational → `CAPTURE_DECAYING` |
+| `M_A` | Must be finite and positive; `M_A ≈ M_E` triggers FM-007 check | Mass parity → dissolution path |
+| `M_E` | Must be finite and positive | Zero or infinite mass → undefined behavior |
+| `r` | `r = 0` is undefined (singularity); `r > r_capture` → short-circuit in `evaluate_capture_threshold` | Zero → ⊥ |
+
+### §1.3 · Node Assignment Summary
+
+| FFF Node | Symbols |
+|---|---|
+| `F_freq` (Frequency) | `v_escape(A)`, `ρ(Φ)`, `ω_res` |
+| `F_fluid` (Fluids) | `M_A`, `M_E` |
+| `F_force` (Forces) | `v_approach` |
+| Frame | `r_capture` |
+| Geometry | `r` |
+| Derived (no single node) | `β` |
+
+---
+
+## §2 · Derived Operators
+
+<!--
+  metadata:
+    section:       derived-operators
+    section_id:    §2
+    type:          registry
+    normative:     true
+    operator_class: computed
+    operator_count: 10
+    depends_on:    [§1]
+    freeze_status: mixed — see §8
+    created_in:    SES-20260813-OPS-001
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+Derived operators are computed from primary operators via defined formulas.
+Symbols marked ✅ frozen are defined in `f_Capture.md v1.0.0` and cannot change.
+Symbols marked 🔵 pending have formulas in scaffold files awaiting canonicalization.
+
+### §2.1 · Full Specification Table
+
+| Symbol | Full Name | Formula | Depends On | Output Range | Sign Convention | Frozen | Defined In |
+|---|---|---|---|---|---|---|---|
+| `P_eff` | Effective Pull | `M_A × ρ(Φ) / r²` | `M_A`, `ρ(Φ)`, `r` | [0, ∞) | always positive | ✅ | `f_Capture.md §4.2` |
+| `C_thresh` | Capture Threshold | `v_escape(A) − v_approach` | `v_escape(A)`, `v_approach` | (−∞, ∞) | positive = capture possible; negative = escape | ✅ | `f_Capture.md §4.2` |
+| `d_bind` | Binding Depth | `β × ρ(Φ) × (1 − e)` | `β`, `ρ(Φ)`, `e` | [0, ∞) | higher = more stable | ✅ | `f_Capture.md §4.2` |
+| `p_res` | Residual Momentum | `M_E × (v_approach − C_thresh)` | `M_E`, `v_approach`, `C_thresh` | [0, ∞) | always positive post-capture | ✅ | `f_Capture.md §4.2` |
+| `e` | Orbital Eccentricity | `p_res / (p_res + P_eff)` | `p_res`, `P_eff` | [0, 1) | 0 = circular; approaching 1 = near-parabolic | ✅ | `f_Orbit.md §4.1` |
+| `T_orb` | Orbital Period | 🔵 pending `f_Orbit.md §4.1` | `d_bind`, `ω_res` | (0, ∞) | always positive | 🔵 | `f_Orbit.md §4.1` |
+| `δ` | Decay Rate | `Δd_bind / Δt` | `d_bind` series | (−∞, 0] in decay | negative = losing energy | 🔵 | `f_Decay.md §4.1` |
+| `E_rel` | Release Energy | 🔵 pending `f_Release.md §4.1` | `d_bind`, `p_res`, `ρ(Φ)` | [0, ∞) | energy required to achieve release | 🔵 | `f_Release.md §4.1` |
+| `F_emit` | Emit Field Strength | 🔵 pending `f_Emit.md §4.1` | `M_A`, emit energy input | [0, ∞) | higher = deeper coherence well | 🔵 | `f_Emit.md §4.1` |
+| `F_damp` | Dampen Depth | 🔵 pending `f_Dampen.md §4.1` | `ρ(Φ)`, dampen energy input | [0, 1] | fraction of `ρ(Φ)` to suppress | 🔵 | `f_Dampen.md §4.1` |
+
+### §2.2 · Supplementary Operators (Engineering Primitives Layer)
+
+These operators are introduced by engineering primitive files.
+They extend the derived operator set and are pending canonicalization.
+
+| Symbol | Full Name | Formula | Defined In | Frozen |
+|---|---|---|---|---|
+| `F_amp` | Amplification Factor | scalar ≥ 1.0 | `f_Amplify.md §4.1` | 🔵 |
+| `β_max` | Binding Coefficient Ceiling | 🔵 pending | `f_Amplify.md §4.1` | 🔵 |
+| `heading_delta` | Heading Change | angular delta (radians) applied to `v_approach` | `f_Deflect.md §4.1` | 🔵 |
+| `r_emit` | Emission Radius | bounded region of `emit_field` effect | `f_Emit.md §4.1` | 🔵 |
+| `r_damp` | Dampening Radius | bounded region of `suppress_field` effect | `f_Dampen.md §4.1` | 🔵 |
+| `d_warn` | Decay Warning Threshold | `d_bind` level at which FM-004 is raised | `f_Decay.md §4.1` | 🔵 |
+| `d_collapse` | Collapse Threshold | `d_bind` level at which FM-005 fires; `f_Collapse` triggered | `f_Decay.md §4.1` | 🔵 |
+| `m_parity` | Mass Parity Threshold | max `|M_E − M_A|` below which FM-007 fires | `f_Collapse.md §4.1` | 🔵 |
+
+### §2.3 · Undefined Conditions
+
+| Operator | Undefined When | Symbol for Undefined |
+|---|---|---|
+| `P_eff` | `r = 0` (singularity) or `ρ(Φ) = 0` (FM-002) | ⊥ |
+| `C_thresh` | `v_escape(A)` undefined (ρ = 0) | ⊥ |
+| `d_bind` | `e ≥ 1` (hyperbolic trajectory — not captured) | ⊥ |
+| `p_res` | `C_thresh ≤ 0` (no capture) | ⊥ |
+| `e` | `P_eff = 0` (FM-002) | ⊥ |
+| `δ` | Pre-capture (no time series) | ⊥ |
+| `E_rel` | `d_bind = 0` (collapse state; release not viable) | ⊥ |
+| `F_amp` | `β > β_max` (runaway — FM-010) | ⊥ |
+
+---
+
+## §3 · State Flags
+
+<!--
+  metadata:
+    section:       state-flags
+    section_id:    §3
+    type:          fsm-registry
+    normative:     true
+    flag_count:    11
+    flag_type:     discrete
+    model:         deterministic finite state machine
+    frozen:        all 11 frozen at v1.0.0
+    created_in:    SES-20260813-OPS-001
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+State flags represent the discrete relational state of an Element in the FFF_Gravity system.
+The state machine is **deterministic** — every transition has a single defined trigger.
+No state is revisitable once terminal.
+All 11 flags are frozen at v1.0.0.
+
+### §3.1 · Flag Specification Table
+
+| Flag | Entry Condition | Set By | Exit Condition | Valid Next States | Terminal |
+|---|---|---|---|---|---|
+| `CAPTURE_PENDING` | E crosses `r_capture`; outcome unresolved | `compute_approach_vector` | `C_thresh` evaluated | `CAPTURE_LOCKED`, `CAPTURE_FAILED` | No |
+| `CAPTURE_LOCKED` | `C_thresh > 0` ∧ `β ≥ 1.0` ∧ Frame ok ∧ `ω_res ∈ ℚ` | `register_capture` | `d_bind` falls below `d_warn`; or FM-007 | `CAPTURE_DECAYING`, `CAPTURE_COLLISION` | No |
+| `CAPTURE_DECAYING` | FM-004 raised; `d_bind` decreasing | `flag_decay` | `d_bind ≤ d_collapse` | `CAPTURE_FAILED`, `CAPTURE_COLLISION` | No |
+| `CAPTURE_FAILED` | FM-001/002/003/006 raised; or decay → ejection | `register_capture` | — | — | **Yes** |
+| `CAPTURE_COLLISION` | FM-005 terminal infall; or FM-007 dissolution | `execute_collapse` | — | — | **Yes** |
+| `ORBIT_STABLE` | `stab_class = stable` ∧ `e < 0.5` post `CAPTURE_LOCKED` | `classify_orbit` | `stab_class` drops below stable threshold | `ORBIT_ECCENTRIC`, `CAPTURE_DECAYING` | No |
+| `ORBIT_ECCENTRIC` | `e ≥ 0.5` while orbit is still captured | `classify_orbit` | `e` drops below 0.5; or FM-004 | `ORBIT_STABLE`, `CAPTURE_DECAYING` | No |
+| `RELEASED` | `f_Release` conditions satisfied; clean exit | `execute_release` | — | — | **Yes** (clean exit) |
+| `COLLAPSED` | `f_Collapse` infall complete | `execute_collapse` | — | — | **Yes** |
+| `DAMPEN_ACTIVE` | `f_Dampen` engaged on Attractor's field | `suppress_field` | Dampening removed; `ρ(Φ)` restored | `CAPTURE_PENDING`, `ORBIT_STABLE` | No |
+| `EMIT_ACTIVE` | `f_Emit` engaged on Attractor's field | `emit_field` | Emission withdrawn | `ORBIT_STABLE`, `CAPTURE_DECAYING` | No |
+
+### §3.2 · State Transition Diagram
+
+```
+                          E crosses r_capture
+                                  │
+                                  ▼
+                        ┌─────────────────┐
+                        │ CAPTURE_PENDING  │
+                        └────────┬────────┘
+                                 │
+              ┌──────────────────┼──────────────────────┐
+              │                  │                       │
+    C_thresh > 0             C_thresh ≤ 0           ρ(Φ) = 0
+    β ≥ 1.0                  (FM-001)               (FM-002)
+    Frame ok                      │                       │
+    ω_res ∈ ℚ                     │                       │
+              │                   │                       │
+              ▼                   ▼                       ▼
+   ┌──────────────────┐   ┌───────────────┐       (FM-003 / FM-006)
+   │  CAPTURE_LOCKED  │   │ CAPTURE_FAILED│◄──────── all terminal
+   └────────┬─────────┘   │   [TERMINAL]  │             FMs
+            │             └───────────────┘
+            │
+     d_bind monitored every cycle via flag_decay
+            │
+    ┌───────┴────────────────────────┐
+    │                                │
+d_bind < d_warn               M_E ≈ M_A
+(FM-004)                      (FM-007)
+    │                                │
+    ▼                                ▼
+┌──────────────────┐      ┌──────────────────┐
+│ CAPTURE_DECAYING │      │ CAPTURE_COLLISION │
+└────────┬─────────┘      │    [TERMINAL]    │
+         │                └──────────────────┘
+    ┌────┴────┐
+    │         │
+ejection  infall
+(FM-005)  (FM-005)
+    │         │
+    ▼         ▼
+CAPTURE_  CAPTURE_
+FAILED    COLLISION
+
+     ORBIT_STABLE ↔ ORBIT_ECCENTRIC  (reclassified each cycle)
+     RELEASED [TERMINAL]             (clean exit via f_Release)
+     COLLAPSED [TERMINAL]            (infall confirmed)
+     DAMPEN_ACTIVE / EMIT_ACTIVE     (engineering overlay flags)
+```
+
+### §3.3 · Flag Ownership
+
+| Flag | Owned By | Written By Primitive |
+|---|---|---|
+| `CAPTURE_PENDING` | Element `E` | `compute_approach_vector` |
+| `CAPTURE_LOCKED` | Element `E` + Attractor `A` registry | `register_capture` |
+| `CAPTURE_DECAYING` | Element `E` | `flag_decay` |
+| `CAPTURE_FAILED` | Element `E` | `register_capture` |
+| `CAPTURE_COLLISION` | Both `E` and `A` (or composite) | `execute_collapse` |
+| `ORBIT_STABLE` | Element `E` | `classify_orbit` |
+| `ORBIT_ECCENTRIC` | Element `E` | `classify_orbit` |
+| `RELEASED` | Element `E` + Attractor `A` registry | `execute_release` |
+| `COLLAPSED` | Composite node `C` (or `A` post-absorption) | `execute_collapse` |
+| `DAMPEN_ACTIVE` | Attractor `A` | `suppress_field` |
+| `EMIT_ACTIVE` | Attractor `A` | `emit_field` |
+
+---
+
+## §4 · Engineering Primitives
+
+<!--
+  metadata:
+    section:       engineering-primitives
+    section_id:    §4
+    type:          primitive-registry
+    normative:     true
+    primitive_count: 15
+    call_convention: functional
+    created_in:    SES-20260813-OPS-001
+    correction: >
+      INDEX.md §2 listed 13 primitives. Correct count is 15.
+      initialize_composite_node and purge_registry were listed
+      separately in f_Collapse.md scaffolds but not in the original
+      count. This document is authoritative: 15 primitives.
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### §4.1 · Call Order and Dependencies
+
+Primitives must be called in the order defined in §7 (Evaluation Order).
+Side-effecting primitives write to external registries and are **not** idempotent.
+Pure primitives may be called in any order relative to each other within their group.
+
+### §4.2 · Full Primitive Specification Table
+
+| # | Primitive | Source File | Pure | Reads | Writes | Call Timing | Frozen |
+|---|---|---|---|---|---|---|---|
+| 1 | `compute_approach_vector` | `f_Capture.md §7.2` | Yes | `E.state`, `A.position` | `v_approach` | Once · Step 1 | ✅ |
+| 2 | `resolve_escape_velocity` | `f_Capture.md §7.2` | Yes | `M_A`, `ρ(Φ)` | `v_escape(A)` | Once · Step 2 | ✅ |
+| 3 | `evaluate_capture_threshold` | `f_Capture.md §7.2` | Yes | `v_approach`, `v_escape`, `r` | `C_thresh` | Once · Step 5 | ✅ |
+| 4 | `lock_orbit` | `f_Capture.md §7.2` | No | `E`, `A`, `Φ` | `orbital_parameters` | Once · Step 8 | ✅ |
+| 5 | `register_capture` | `f_Capture.md §7.2` | No | `orbital_parameters` | `FFF_Registry`, `E.registry`, `A.registry`, `A.field_curvature` | Once · Step 9 | ✅ |
+| 6 | `flag_decay` | `f_Capture.md §7.2` / `f_Decay.md §7` | No | `d_bind_delta` | `E.state_flag`, `decay_status` | Every cycle post `CAPTURE_LOCKED` | ✅ |
+| 7 | `classify_orbit` | `f_Orbit.md §7` | Yes | `p_res`, `d_bind`, `ω_res` | `orbital_parameters.orbit_class`, `.stab_class` | Once post lock; then each cycle | 🔵 |
+| 8 | `compute_release_vector` | `f_Release.md §7` | Yes | `E.state`, `d_bind` | `v_release` | Once · on release attempt | 🔵 |
+| 9 | `execute_release` | `f_Release.md §7` | No | `v_release` | `FFF_Registry`, `E.registry`, `A.registry` | Once · on release | 🔵 |
+| 10 | `execute_collapse` | `f_Collapse.md §7` | No | `d_bind`, `E`, `A` | composite node, both registries | Once · on FM-005 or FM-007 | 🔵 |
+| 11 | `initialize_composite_node` | `f_Collapse.md §7` | No | `M_E`, `M_A` | new composite node `C` | Once · on FM-007 only | 🔵 |
+| 12 | `purge_registry` | `f_Collapse.md §7` | No | `E.id`, `A.id` | `FFF_Registry` (deletion) | Once · on FM-007; partial on FM-005 | 🔵 |
+| 13 | `emit_field` | `f_Emit.md §7` | No | `F_emit`, `A`, `r_emit` | `ρ(Φ)` local, `A.field_curvature` | On demand | 🔵 |
+| 14 | `suppress_field` | `f_Dampen.md §7` | No | `F_damp`, `ρ(Φ)`, `r_damp` | `ρ(Φ)` local | On demand | 🔵 |
+| 15 | `amplify_coupling` | `f_Amplify.md §7` | No | `F_amp`, `M_A`, `ρ(Φ)` | `β`, `P_eff` | On demand | 🔵 |
+| 16 | `redirect_force_node` | `f_Deflect.md §7` | No | `heading_delta`, `r_deflect` | `v_approach` heading component | On demand | 🔵 |
+
+> **Note:** Primitive 16 (`redirect_force_node`) was added from scaffold review.
+> Corrected total: **16 primitives**. INDEX.md §2 to be updated at next session.
+
+### §4.3 · Side-Effect Classification
+
+| Class | Primitives | Consequence of Repeat Call |
+|---|---|---|
+| Pure (safe to repeat) | 1, 2, 3, 7, 8 | No side effects; produces same output for same inputs |
+| Single-write (idempotent-safe) | 4, 6 | Overwrites same fields; safe to repeat |
+| Registry-write (non-idempotent) | 5, 9, 10, 11, 12, 13, 14, 15, 16 | Repeat call creates duplicate records or double-applies effect |
+
+### §4.4 · Primitive Guards Summary
+
+| Primitive | Guard | Consequence of Violation |
+|---|---|---|
+| `evaluate_capture_threshold` | `r ≤ r_capture` | Returns `C_thresh < 0` immediately if `r > r_capture` |
+| `lock_orbit` | `C_thresh > 0` | Must not be called if threshold not met |
+| `register_capture` | `lock_orbit` completed | Undefined behavior if orbital parameters absent |
+| `flag_decay` | Post `CAPTURE_LOCKED` only | No-op if called pre-capture |
+| `execute_collapse` | FM-005 or FM-007 active | Must not be called outside terminal FM context |
+| `initialize_composite_node` | FM-007 path only | Must not be called on asymmetric collapse |
+| `emit_field` | `ρ(Φ) < 1.0` | No-op at saturation; runaway risk if `β → β_max` |
+| `suppress_field` | `ρ(Φ) > ρ(Φ)_floor` | FM-009 risk if floor breached |
+| `amplify_coupling` | `β < β_max` | FM-010 if ceiling exceeded |
+| `redirect_force_node` | `heading_delta` within bounds | Over-deflection → FM-001 equivalent |
+
+---
+
+## §5 · Failure Mode Registry
+
+<!--
+  metadata:
+    section:       failure-mode-registry
+    section_id:    §5
+    type:          registry
+    normative:     true
+    failure_count: 10
+    id_prefix:     FM
+    id_range:      FM-001 – FM-010
+    severity_levels: [warn, error, fatal]
+    frozen:        FM-001 through FM-007 frozen at v1.0.0; FM-008 through FM-010 pending
+    created_in:    SES-20260813-OPS-001
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### §5.1 · Full Failure Mode Table
+
+| ID | Name | FFF Node | Trigger Condition | Operators Involved | State Transition | Outcome | Severity | Recoverable | Defined In |
+|---|---|---|---|---|---|---|---|---|---|
+| FM-001 | Overshoot | `F_force` | `C_thresh ≤ 0`; `v_approach ≥ v_escape(A)` | `v_approach`, `v_escape`, `C_thresh` | `CAPTURE_PENDING → CAPTURE_FAILED` | Element escapes | error | No | `f_Capture.md §6` |
+| FM-002 | Field Null | `F_freq` | `ρ(Φ) = 0` at moment of encounter | `ρ(Φ)`, `P_eff`, `v_escape` | `CAPTURE_PENDING → CAPTURE_FAILED` | No pull transmitted | error | No | `f_Capture.md §6` |
+| FM-003 | Frame Saturation | Frame | Attractor registry at MAX capacity | Frame.registry_capacity, `β` | `CAPTURE_PENDING → CAPTURE_FAILED` | Element deflected at boundary | error | No | `f_Capture.md §6` |
+| FM-004 | Resonance Drift | `ω_res` | `ω_res` → irrational; `d_bind < d_warn` | `ω_res`, `d_bind`, `δ` | `CAPTURE_LOCKED → CAPTURE_DECAYING` | Orbit destabilizing | warn | Yes — via `f_Emit` or `f_Amplify` | `f_Capture.md §6` |
+| FM-005 | Decay Spiral | `d_bind` | `d_bind ≤ d_collapse`; energy exhausted | `d_bind`, `δ`, `p_res` | `CAPTURE_DECAYING → CAPTURE_FAILED` or `CAPTURE_COLLISION` | Ejection or infall | fatal | No | `f_Decay.md §6` |
+| FM-006 | Phantom Capture | `ρ(Φ)` | `β ≥ 1.0` met; `ρ(Φ)` locally structured; lock dissolves at field boundary | `β`, `ρ(Φ)`, `P_eff` | `CAPTURE_PENDING → CAPTURE_FAILED` | Apparent capture resolves to escape | warn | No | `f_Capture.md §6` |
+| FM-007 | Mutual Dissolution | `F_fluid` | `\|M_E − M_A\| < m_parity`; collision threshold crossed | `M_E`, `M_A`, `β`, `C_thresh` | `CAPTURE_LOCKED → CAPTURE_COLLISION` | Composite node created; both registries purged | fatal | No | `f_Collapse.md §6` |
+| FM-008 | Release Overshoot | `F_force` | `v_release` too high; trajectory becomes hyperbolic | `v_release`, `E_rel` | `CAPTURE_LOCKED → CAPTURE_FAILED` | Uncontrolled ejection | error | No | `f_Release.md §6` |
+| FM-009 | Dampen Cascade | `F_freq` | `suppress_field` propagates beyond `r_damp`; `ρ(Φ) → 0` region-wide | `F_damp`, `ρ(Φ)`, `r_damp` | multiple `CAPTURE_LOCKED → CAPTURE_DECAYING` | Gravity null zone; uncontrolled releases | fatal | Partial — if caught before propagation | `f_Dampen.md §6` |
+| FM-010 | Amplify Runaway | `F_fluid` | `β > β_max` under sustained `f_Emit` or `f_Amplify` | `β`, `F_amp`, `F_emit`, `β_max` | `ORBIT_STABLE → CAPTURE_COLLISION` | Collapse or singularity | fatal | No | `f_Amplify.md §6` |
+
+### §5.2 · Failure Mode Groupings
+
+| Group | IDs | Common Cause | Common Outcome |
+|---|---|---|---|
+| Approach failures | FM-001, FM-002, FM-003, FM-006 | Conditions wrong at encounter | `CAPTURE_FAILED` — never entered orbit |
+| Orbital instability | FM-004, FM-005 | Post-capture energy loss | `CAPTURE_DECAYING` → ejection or infall |
+| Terminal events | FM-005 (infall path), FM-007 | Mass collision or dissolution | `CAPTURE_COLLISION` — no survivors |
+| Engineering failures | FM-008, FM-009, FM-010 | Primitive misuse or runaway | Varied — ejection, null zone, singularity |
+
+### §5.3 · Severity Definitions
+
+| Severity | Meaning | Recovery |
+|---|---|---|
+| `warn` | Orbit is at risk but not yet terminal; intervention window open | Yes — `f_Emit`, `f_Amplify` may restore |
+| `error` | Capture has failed; element not in orbit; no immediate system danger | No — outcome is final for this interaction |
+| `fatal` | Terminal event with system-wide consequences; nodes destroyed or topology changed | No — irreversible |
+
+---
+
+## §6 · Composition Rules
+
+<!--
+  metadata:
+    section:       composition-rules
+    section_id:    §6
+    type:          formula-registry
+    normative:     true
+    source:        f_Capture.md §4.8
+    created_in:    SES-20260813-OPS-001
+    note: >
+      These are the canonical derivation chains for all computed values.
+      Each rule specifies: the output, its formula, what inputs must be
+      defined first, and what state it is undefined in.
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### §6.1 · Core Derivation Chain
+
+Reading order — each row depends on all rows above it:
+
+```
+INPUT LAYER
+  M_A        → provided by Attractor state
+  M_E        → provided by Element state
+  ρ(Φ)       → provided by F_freq (f_Field.md)
+  r          → provided by geometry
+  v_approach → computed by: compute_approach_vector(E, A)
+
+STEP 1: Effective Pull
+  P_eff = M_A × ρ(Φ) / r²
+  Defined when: ρ(Φ) > 0 ∧ r > 0
+
+STEP 2: Escape Velocity
+  v_escape(A) = resolve_escape_velocity(M_A, ρ(Φ))
+  Defined when: ρ(Φ) > 0
+
+STEP 3: Binding Coefficient
+  β = P_eff / (M_E × v_approach)
+  Defined when: v_approach > 0
+
+STEP 4: Capture Threshold
+  C_thresh = v_escape(A) − v_approach
+  Defined when: v_escape(A) defined
+
+STEP 5: Residual Momentum
+  p_res = M_E × (v_approach − C_thresh)
+  Defined when: C_thresh > 0
+
+STEP 6: Orbital Eccentricity
+  e = p_res / (p_res + P_eff)
+  Defined when: P_eff > 0 ∧ p_res ≥ 0
+  Constraint: e must be in [0, 1); e ≥ 1 → hyperbolic → not captured
+
+STEP 7: Binding Depth
+  d_bind = β × ρ(Φ) × (1 − e)
+  Defined when: e ∈ [0, 1)
+
+STEP 8: Decay Rate (post-capture, per-cycle)
+  δ = Δd_bind / Δt = d_bind(t) − d_bind(t−1)
+  Defined when: t ≥ 1 (at least one prior cycle)
+```
+
+### §6.2 · Capture Gate Composition
+
+The Capture Gate is the boolean conjunction of all stability conditions.
+**All must be true simultaneously for capture to succeed.**
+
+```
+CAPTURE_GATE =
+    C_thresh > 0             [Condition 1 — Approach]
+  ∧ ρ(Φ) > 0 (uniform)      [Condition 2 — Field Coherence]
+  ∧ ω_res ∈ ℚ               [Condition 3 — Resonance]
+  ∧ β ≥ 1.0                 [Condition 4 — Binding Floor]
+  ∧ Frame.capacity > 0       [Condition 5 — Frame Compatibility]
+
+If CAPTURE_GATE = true  → lock_orbit() → register_capture() → CAPTURE_LOCKED
+If CAPTURE_GATE = false → FM raised   → register_capture() → CAPTURE_FAILED
+```
+
+### §6.3 · Engineering Operator Compositions
+
+| Goal | Composition | Operators Modified | Risk |
+|---|---|---|---|
+| Restore decaying orbit | `emit_field(F_emit)` → `ρ(Φ)↑` → `d_bind↑` | `ρ(Φ)`, `P_eff`, `β`, `d_bind` | FM-010 if sustained |
+| Weaken attractor hold | `suppress_field(F_damp)` → `ρ(Φ)↓` → `d_bind↓` | `ρ(Φ)`, `P_eff`, `v_escape`, `d_bind` | FM-009 if propagates |
+| Increase capture probability | `amplify_coupling(F_amp)` → `β↑` → `P_eff↑` | `β`, `P_eff`, `d_bind` | FM-010 if `β > β_max` |
+| Route Element to target heading | `redirect_force_node(heading_delta)` → `v_approach` heading change | `v_approach` (heading only) | FM-001 if over-deflected |
+| Engineer target resonance | `solve_resonant_approach(ω_res_target)` → `{heading, ρ(Φ), β}` spec | All approach operators | No solution if target irrational |
+
+---
+
+## §7 · Operator Evaluation Order
+
+<!--
+  metadata:
+    section:       evaluation-order
+    section_id:    §7
+    type:          execution-sequence
+    normative:     true
+    source:        f_Capture.md §4.7
+    scope: >
+      This is the canonical evaluation order for the f_Capture execution path.
+      Engineering primitives (f_Emit, f_Dampen, f_Amplify, f_Deflect) are called
+      on demand, outside this sequence, before the approach window opens.
+    created_in:    SES-20260813-OPS-001
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+| Step | Frequency | Primitive | Operators Read | Operators Written | Guard | Short-Circuits To |
+|---|---|---|---|---|---|---|
+| 1 | ONCE | `compute_approach_vector` | `E.state`, `A.position` | `v_approach` | none | — |
+| 2 | ONCE | `resolve_escape_velocity` | `M_A`, `ρ(Φ)` | `v_escape(A)` | `ρ(Φ) > 0` | FM-002 |
+| 3 | ONCE | *(implicit)* | `M_A`, `ρ(Φ)`, `r` | `P_eff` | requires step 2 | — |
+| 4 | ONCE | *(implicit)* | `P_eff`, `v_approach`, `M_E` | `β` | requires step 3 | — |
+| 5 | ONCE | `evaluate_capture_threshold` | `v_approach`, `v_escape`, `r_capture` | `C_thresh` | `r ≤ r_capture` | FM-001 if `C_thresh ≤ 0` |
+| 6 | ONCE | *(Frame check)* | `Frame.registry_capacity` | — | `β ≥ 1.0` else halt | FM-003 |
+| 7 | ONCE | *(Resonance check)* | `ω_res` | — | `ω_res ∈ ℚ` else halt | FM-004 |
+| 8 | ONCE | `lock_orbit` | `E`, `A`, `p_res`, `ρ(Φ)` | `d_bind`, orbital parameters | `C_thresh > 0` | — |
+| 9 | ONCE | `register_capture` | orbital parameters | `Ω`, `FFF_Registry`, `E.registry`, `A.registry` | requires step 8 | — |
+| 10 | CYCLE | `flag_decay` | `d_bind_delta` | `E.state_flag`, `decay_status` | post `CAPTURE_LOCKED` only | FM-004 / FM-005 |
+
+---
+
+## §8 · Symbol Freeze Registry
+
+<!--
+  metadata:
+    section:       freeze-registry
+    section_id:    §8
+    type:          governance-registry
+    normative:     true
+    policy: >
+      A symbol is FROZEN once its defining file reaches canonical status.
+      Frozen symbols cannot be renamed or removed — only deprecated.
+      Deprecation requires a new symbol, a major version bump, and an
+      entry in CHANGELOG.md explaining the migration path.
+    created_in:    SES-20260813-OPS-001
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### §8.1 · Frozen Symbols (v1.0.0)
+
+All frozen by `f_Capture.md v1.0.0`:
+
+| Symbol | Type | Frozen In | Frozen At |
+|---|---|---|---|
+| `v_approach` | Primary | `f_Capture.md` | v1.0.0 |
+| `v_escape(A)` | Primary | `f_Capture.md` | v1.0.0 |
+| `ρ(Φ)` | Primary | `f_Capture.md` | v1.0.0 |
+| `r_capture` | Primary | `f_Capture.md` | v1.0.0 |
+| `β` | Primary | `f_Capture.md` | v1.0.0 |
+| `ω_res` | Primary | `f_Capture.md` | v1.0.0 |
+| `M_A` | Primary | `f_Capture.md` | v1.0.0 |
+| `M_E` | Primary | `f_Capture.md` | v1.0.0 |
+| `r` | Primary | `f_Capture.md` | v1.0.0 |
+| `P_eff` | Derived | `f_Capture.md` | v1.0.0 |
+| `C_thresh` | Derived | `f_Capture.md` | v1.0.0 |
+| `d_bind` | Derived | `f_Capture.md` | v1.0.0 |
+| `p_res` | Derived | `f_Capture.md` | v1.0.0 |
+| `CAPTURE_PENDING` | Flag | `f_Capture.md` | v1.0.0 |
+| `CAPTURE_LOCKED` | Flag | `f_Capture.md` | v1.0.0 |
+| `CAPTURE_DECAYING` | Flag | `f_Capture.md` | v1.0.0 |
+| `CAPTURE_FAILED` | Flag | `f_Capture.md` | v1.0.0 |
+| `CAPTURE_COLLISION` | Flag | `f_Capture.md` | v1.0.0 |
+| `compute_approach_vector` | Primitive | `f_Capture.md` | v1.0.0 |
+| `resolve_escape_velocity` | Primitive | `f_Capture.md` | v1.0.0 |
+| `evaluate_capture_threshold` | Primitive | `f_Capture.md` | v1.0.0 |
+| `lock_orbit` | Primitive | `f_Capture.md` | v1.0.0 |
+| `register_capture` | Primitive | `f_Capture.md` | v1.0.0 |
+| `flag_decay` | Primitive | `f_Capture.md` | v1.0.0 |
+| FM-001 through FM-007 | Failure Mode | `f_Capture.md` | v1.0.0 |
+
+### §8.2 · Pending Freeze (promoted when source file goes canonical)
+
+| Symbol | Type | Pending In | Freeze Trigger |
+|---|---|---|---|
+| `e` | Derived | `f_Orbit.md` | `f_Orbit.md` → canonical |
+| `T_orb` | Derived | `f_Orbit.md` | `f_Orbit.md` → canonical |
+| `δ` | Derived | `f_Decay.md` | `f_Decay.md` → canonical |
+| `d_warn` | Derived | `f_Decay.md` | `f_Decay.md` → canonical |
+| `d_collapse` | Derived | `f_Decay.md` | `f_Decay.md` → canonical |
+| `E_rel` | Derived | `f_Release.md` | `f_Release.md` → canonical |
+| `m_parity` | Derived | `f_Collapse.md` | `f_Collapse.md` → canonical |
+| `F_emit` | Derived | `f_Emit.md` | `f_Emit.md` → canonical |
+| `F_damp` | Derived | `f_Dampen.md` | `f_Dampen.md` → canonical |
+| `F_amp` | Supplementary | `f_Amplify.md` | `f_Amplify.md` → canonical |
+| `β_max` | Supplementary | `f_Amplify.md` | `f_Amplify.md` → canonical |
+| `heading_delta` | Supplementary | `f_Deflect.md` | `f_Deflect.md` → canonical |
+| `ORBIT_STABLE` | Flag | `f_Orbit.md` | `f_Orbit.md` → canonical |
+| `ORBIT_ECCENTRIC` | Flag | `f_Orbit.md` | `f_Orbit.md` → canonical |
+| `RELEASED` | Flag | `f_Release.md` | `f_Release.md` → canonical |
+| `COLLAPSED` | Flag | `f_Collapse.md` | `f_Collapse.md` → canonical |
+| `DAMPEN_ACTIVE` | Flag | `f_Dampen.md` | `f_Dampen.md` → canonical |
+| `EMIT_ACTIVE` | Flag | `f_Emit.md` | `f_Emit.md` → canonical |
+| FM-008 | Failure Mode | `f_Release.md` | `f_Release.md` → canonical |
+| FM-009 | Failure Mode | `f_Dampen.md` | `f_Dampen.md` → canonical |
+| FM-010 | Failure Mode | `f_Amplify.md` | `f_Amplify.md` → canonical |
+| Primitives 7–16 | Primitive | Wave 3 files | each source file → canonical |
+
+---
+
+## §9 · Versioning Policy
+
+<!--
+  metadata:
+    section:       versioning-policy
+    section_id:    §9
+    type:          governance
+    normative:     true
+    created_in:    SES-20260813-OPS-001
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+### §9.1 · Version Bump Rules
+
+| Change Type | Bump Required | Example |
+|---|---|---|
+| Add a new symbol (not conflicting) | **minor** — e.g. v1.0.0 → v1.1.0 | Adding `T_orb` when `f_Orbit.md` canonicalizes |
+| Change a frozen symbol's formula | **major** — e.g. v1.1.0 → v2.0.0 | Changing `P_eff` formula |
+| Rename a frozen symbol | **major** | Renaming `d_bind` to `d_orbital` |
+| Remove a frozen symbol | **major** + deprecation notice | Removing `ω_res` |
+| Add a failure mode | **minor** | Adding FM-011 |
+| Change a failure mode's severity | **minor** | Upgrading FM-004 from warn to error |
+| Fix a typo in a non-normative section | **patch** — e.g. v1.0.0 → v1.0.1 | Fixing a table cell |
+| Add a note or example | **patch** | Adding a new canonical example |
+
+### §9.2 · Namespace Reservation
+
+The following symbol prefixes are reserved for future use and must not be used
+by any function file without first registering here:
+
+| Prefix | Reserved For | Example |
+|---|---|---|
+| `v_` | velocity operators | `v_approach`, `v_escape`, `v_release` |
+| `ρ` | field density operators | `ρ(Φ)`, `ρ(Φ,θ)`, `ρ(Φ,t)` |
+| `ω_` | resonance and frequency operators | `ω_res`, `ω_target` |
+| `d_` | depth and distance operators | `d_bind`, `d_warn`, `d_collapse` |
+| `F_` | engineering force/field operators | `F_emit`, `F_damp`, `F_amp` |
+| `M_` | mass operators | `M_A`, `M_E` |
+| `G_` | GravityGraph operators | `G_edge`, `G_degree`, `G_stability` |
+| `FM-` | failure mode IDs | FM-001 through FM-999 |
+| `EX-` | canonical example IDs | EX-001, EX-RES-001 |
+| `SES-` | session IDs | SES-20260813-OPS-001 |
+
+---
+
+## §10 · Document Metadata
+
+<!--
+  metadata:
+    section:       document-metadata
+    section_id:    §10
+    type:          administrative
+    normative:     false
+  session:
+    session_id:    SES-20260813-OPS-001
+    touch_count:   1
+    change_type:   created
+-->
+
+| Field | Value |
+|---|---|
+| Canonical Path | `docs/FFF_Gravity/OPERATORS.md` |
+| Version | 1.0.0 |
+| Status | Canonical |
+| Stability | Living — update when any symbol is added, frozen, or deprecated |
+| Normative | Yes |
+| Created | 2026-08-13 |
+| Last Modified | 2026-08-13 |
+| Authors | TriadicFrameworks |
+| License | See `/LICENSE` at repository root |
+| Encoding | UTF-8 · LF |
+| Supersedes | Operator tables in `f_Capture.md §4` (those remain normative; this file is the consolidated authority) |
+
+---
+
+*Single source of truth for all FFF_Gravity operator symbols.*
+*All function files derive their symbol definitions from this document.*
+*Update at the close of any session that introduces or freezes a symbol.*
+```
+
+---
+
+**Commit message:**
+```
+feat(FFF_Gravity): add canonical OPERATORS.md — master symbol authority, 9P/10D operators, 11 flags, 16 primitives, 10 FMs, composition rules, freeze registry [SES-20260813-OPS-001]
+
+---
+
+Two corrections surfaced while writing this — both logged in the file, both need propagating:
+
+| Discovery | Location to update |
+|---|---|
+| Primitive count is **16**, not 13 (INDEX said 13, scaffolds said 15) — `redirect_force_node` was the missing one | `INDEX.md §2` master registry row for primitives; `FFF_Gravity_module.json` |
+| Primitive count correction note in `§4.2` is self-documenting | No separate action needed |
+
+---
+
+## Wave 3 Addendum — Core Function Operators (PRIM:007–024)
+> Session: SES-20260813-W3 | Sealed: 2026-08-13
+
+### f_Orbit Operators (Wave 3 · PRIM:007, 012)
+
+| Symbol        | Type  | Domain                          | Description                                                       | Frozen in |
+|---------------|-------|---------------------------------|-------------------------------------------------------------------|-----------|
+| `T_orb`       | float | > 0                             | Orbital period; time for one complete orbit around source node    | PRIM:012  |
+| `orbit_class` | enum  | {STABLE, DECAYING, ESCAPE}      | Orbit classification derived from binding strength and δ          | PRIM:007  |
+| `stab_class`  | enum  | {HIGH, MED, LOW, CRITICAL}      | Stability classification derived from T_orb and decay trajectory  | PRIM:012  |
+
+### f_Release Operators (Wave 3 · PRIM:008–009)
+
+| Symbol      | Type  | Domain | Description                                                  | Frozen in |
+|-------------|-------|--------|--------------------------------------------------------------|-----------|
+| `v_release` | float | ≥ 0    | Scalar release velocity at moment of unbinding               | PRIM:009  |
+| `r_release` | float | > 0    | Release radius; distance at which unbinding condition is met | PRIM:008  |
+
+### f_Decay Operators (Wave 3 · PRIM:010–011)
+
+| Symbol       | Type  | Domain        | Description                                                         | Frozen in |
+|--------------|-------|---------------|---------------------------------------------------------------------|-----------|
+| `δ`          | float | (0, 1)        | Decay rate coefficient; fractional binding-distance loss per cycle  | PRIM:010  |
+| `d_warn`     | float | > 0, < d_bind | Binding distance level at which decay warning is raised             | PRIM:010  |
+| `d_collapse` | float | > 0, ≤ d_warn | Binding distance threshold triggering collapse evaluation           | PRIM:011  |
+
+### f_Collapse Operators (Wave 3 · PRIM:013–014)
+
+| Symbol     | Type    | Domain | Description                                                       | Frozen in |
+|------------|---------|--------|-------------------------------------------------------------------|-----------|
+| `m_parity` | float   | > 0    | Mass parity ratio between collapsing nodes                        | PRIM:013  |
+| `C_node`   | node_id | —      | Identifier of the surviving/dominant node after collapse resolves | PRIM:014  |
+
+### f_Emit Operators (Wave 3 · PRIM:015–017)
+
+| Symbol       | Type  | Domain | Description                                                    | Frozen in |
+|--------------|-------|--------|----------------------------------------------------------------|-----------|
+| `F_emit`     | float | ≥ 0    | Emission force magnitude applied outward into the field        | PRIM:015  |
+| `ρ(Φ)_delta` | float | any    | Change in field density ρ(Φ) caused by a single emission event | PRIM:016  |
+| `r_emit`     | float | > 0    | Emission radius; spatial extent of emitted influence           | PRIM:017  |
+
+### f_Dampen Operators (Wave 3 · PRIM:018–020)
+
+| Symbol          | Type  | Domain | Description                                                    | Frozen in |
+|-----------------|-------|--------|----------------------------------------------------------------|-----------|
+| `F_damp`        | float | ≤ 0    | Dampening force; negative magnitude opposing field escalation  | PRIM:018  |
+| `ρ(Φ)_floor`    | float | ≥ 0    | Minimum field density enforced when dampening is active        | PRIM:019  |
+| `cascade_guard` | bool  | {0, 1} | Flag active when cascade dampening guard is engaged            | PRIM:020  |
+
+### f_Amplify Operators (Wave 3 · PRIM:021–022)
+
+| Symbol     | Type  | Domain | Description                                                  | Frozen in |
+|------------|-------|--------|--------------------------------------------------------------|-----------|
+| `F_amp`    | float | ≥ 0    | Amplification force magnitude applied to field               | PRIM:021  |
+| `β_max`    | float | > 1    | Maximum amplification coefficient; hard ceiling on β         | PRIM:021  |
+| `amp_cost` | float | ≥ 0    | Energy cost of amplification; deducted from ρ(Φ) each cycle | PRIM:022  |
+
+### f_Deflect Operators (Wave 3 · PRIM:023–024)
+
+> **Stub resolution note:** `heading_delta` was declared as a forward stub in `f_Force.md §4.3`
+> (PRIM:005). That stub is fully resolved here. `f_Force.md §4.3` remains the declaration
+> site; `f_Deflect.md` (PRIM:023) is the authoritative definition and domain authority.
+
+| Symbol          | Type  | Domain  | Description                                                | Frozen in |
+|-----------------|-------|---------|------------------------------------------------------------|-----------|
+| `heading_delta` | float | [−π, π] | Angular deflection applied to the approach vector          | PRIM:023  |
+| `r_deflect`     | float | > 0     | Deflection radius; distance at which deflection force acts | PRIM:023  |
+| `deflect_cost`  | float | ≥ 0     | Energy cost of deflection; deducted from ρ(Φ)             | PRIM:024  |
+
+---
+
+## Wave 4 Addendum — Capture Variant Operators (PRIM:025–040)
+> Session: SES-20260813-W4 | Sealed: 2026-08-13
+
+### f_Capture_Multi Operators (Wave 4 · PRIM:025–026)
+
+| Symbol        | Type  | Domain  | Description                                                               | Frozen in |
+|---------------|-------|---------|---------------------------------------------------------------------------|-----------|
+| `N`           | int   | ≥ 2     | Count of simultaneous capture targets in multi-capture event              | PRIM:025  |
+| `eval_order`  | list  | ordered | Evaluation priority sequence for multi-target binding attempts            | PRIM:025  |
+| `Φ_perturbed` | float | [0, 1]  | Field value after perturbation from multi-target interference             | PRIM:026  |
+| `δ_perturb`   | float | ≥ 0     | Perturbation magnitude applied to Φ during multi-capture                  | PRIM:026  |
+| `k_perturb`   | float | > 0     | Perturbation scaling coefficient                                          | PRIM:026  |
+
+### f_Capture_Cascade Operators (Wave 4 · PRIM:027–028)
+
+| Symbol          | Type  | Domain | Description                                                            | Frozen in |
+|-----------------|-------|--------|------------------------------------------------------------------------|-----------|
+| `cascade_depth` | int   | ≥ 0    | Current recursion depth within the cascade capture chain               | PRIM:027  |
+| `k_max`         | int   | ≥ 1    | Maximum permitted cascade depth; CAS-1 guard enforced inside PRIM:027 | PRIM:027  |
+| `γ`             | float | (0, 1) | Cascade gain; fraction of parent Ω_cascade transmitted to child step  | PRIM:028  |
+| `Ω_cascade`     | float | ≥ 0    | Cascade transmission energy available at the current depth step        | PRIM:028  |
+
+### f_Capture_Soft Operators (Wave 4 · PRIM:029–030)
+
+| Symbol           | Type  | Domain | Description                                                       | Frozen in |
+|------------------|-------|--------|-------------------------------------------------------------------|-----------|
+| `d_soft`         | float | > 0    | Soft capture binding distance (relaxed threshold vs. d_bind)     | PRIM:029  |
+| `soft_threshold` | float | (0, 1) | Minimum ρ(Φ) required to sustain soft capture                    | PRIM:029  |
+| `grace_period`   | int   | ≥ 0    | Cycles permitted below soft_threshold before release triggers     | PRIM:030  |
+| `k_grace`        | float | > 0    | Grace period scaling coefficient                                  | PRIM:030  |
+
+### f_Capture_Hard Operators (Wave 4 · PRIM:031–032)
+
+| Symbol       | Type  | Domain        | Description                                                   | Frozen in |
+|--------------|-------|---------------|---------------------------------------------------------------|-----------|
+| `d_hard`     | float | > 0           | Hard capture binding distance; strict threshold for lock entry | PRIM:031  |
+| `α_hard`     | float | > 1           | Hard capture alpha; binding distance multiplier               | PRIM:031  |
+| `β_hard`     | float | > 0           | Hard capture beta; force amplification coefficient            | PRIM:031  |
+| `β_min_hard` | float | > 0, ≤ β_hard | Minimum beta required to achieve and sustain hard lock        | PRIM:032  |
+| `lock_cost`  | float | ≥ 0           | Energy cost deducted from ρ(Φ) to establish hard lock         | PRIM:032  |
+| `k_lock`     | float | > 0           | Lock cost scaling coefficient                                 | PRIM:032  |
+
+### f_Capture_Resonant Operators (Wave 4 · PRIM:033–034)
+
+| Symbol         | Type  | Domain   | Description                                                       | Frozen in |
+|----------------|-------|----------|-------------------------------------------------------------------|-----------|
+| `ω_res`        | float | > 0      | Resonant angular frequency of the source emission cycle           | PRIM:033  |
+| `T_res`        | float | > 0      | Resonant period; T_res = 2π / ω_res                               | PRIM:033  |
+| `φ_A(t)`       | float | [0, 2π)  | Approach node phase angle at time t                               | PRIM:033  |
+| `φ_E`          | float | [0, 2π)  | Emission phase angle of source at peak resonance                  | PRIM:033  |
+| `φ_open`       | float | [0, 2π)  | Phase angle at which resonance acceptance window opens            | PRIM:033  |
+| `φ_close`      | float | [0, 2π)  | Phase angle at which resonance acceptance window closes           | PRIM:033  |
+| `window_width` | float | (0, 2π)  | Angular width of resonance acceptance window                      | PRIM:033  |
+| `p_ratio`      | int   | ≥ 1      | Numerator of the p:q phase-lock ratio                             | PRIM:033  |
+| `q_ratio`      | int   | ≥ 1      | Denominator of the p:q phase-lock ratio                           | PRIM:033  |
+| `ρ_res_gain`   | float | > 0      | Field density gain multiplier active during resonance window      | PRIM:034  |
+| `ρ_eff`        | float | ≥ 0      | Effective field density under resonance conditions                | PRIM:034  |
+| `ρ_res_floor`  | float | ≥ 0      | Minimum field density floor enforced in resonant state            | PRIM:034  |
+| `d_bind_res`   | float | > 0      | Resonance-adjusted binding distance                               | PRIM:034  |
+| `T_orb_res`    | float | > 0      | Resonance-adjusted orbital period                                 | PRIM:034  |
+
+### f_Capture_Asymmetric Operators (Wave 4 · PRIM:035–036)
+
+| Symbol                  | Type  | Domain  | Description                                                   | Frozen in |
+|-------------------------|-------|---------|---------------------------------------------------------------|-----------|
+| `mass_ratio`            | float | > 0     | Ratio of source node mass to approach node mass               | PRIM:035  |
+| `asymmetry_factor`      | float | ≥ 0     | Degree of mass asymmetry (0 = fully symmetric)                | PRIM:035  |
+| `parity_warn_threshold` | float | > 0     | Asymmetry level at which parity warning is raised             | PRIM:035  |
+| `d_bind_asym`           | float | > 0     | Asymmetry-corrected binding distance                          | PRIM:036  |
+| `heading_delta_asym`    | float | [−π, π] | Asymmetry-adjusted heading deflection angle                   | PRIM:036  |
+| `deflect_tolerance`     | float | ≥ 0     | Maximum heading_delta_asym before deflection is rejected      | PRIM:036  |
+| `asym_decay_risk`       | bool  | {0, 1}  | Flag: elevated decay risk due to asymmetric mass distribution | PRIM:036  |
+
+### f_Capture_Temporal Operators (Wave 4 · PRIM:037–038)
+
+| Symbol                  | Type   | Domain   | Description                                                   | Frozen in |
+|-------------------------|--------|----------|---------------------------------------------------------------|-----------|
+| `t_open`                | float  | ≥ 0      | Timestamp at which temporal capture window opens              | PRIM:037  |
+| `t_close`               | float  | > t_open | Timestamp at which temporal capture window closes             | PRIM:037  |
+| `t_span`                | float  | > 0      | Duration of window; t_span = t_close − t_open                | PRIM:037  |
+| `t_elapsed`             | float  | ≥ 0      | Time elapsed since t_open at evaluation moment                | PRIM:037  |
+| `t_remaining`           | float  | ≥ 0      | Time remaining until t_close at evaluation moment             | PRIM:037  |
+| `window_id`             | string | unique   | Identifier for this temporal capture window instance          | PRIM:037  |
+| `proximity_ratio`       | float  | [0, 1]   | t_elapsed / t_span; urgency metric for temporal capture       | PRIM:038  |
+| `temporal_decay_factor` | float  | (0, 1]   | Decay multiplier applied to d_bind as window approaches close | PRIM:038  |
+| `d_bind_temporal`       | float  | > 0      | Temporally-adjusted binding distance                          | PRIM:038  |
+| `temporal_margin`       | float  | ≥ 0      | Buffer interval before t_close that triggers margin alert     | PRIM:038  |
+
+### f_Capture_Networked Operators (Wave 4 · PRIM:039–040)
+
+| Symbol                 | Type  | Domain    | Description                                                      | Frozen in |
+|------------------------|-------|-----------|------------------------------------------------------------------|-----------|
+| `N_net`                | int   | ≥ 2       | Number of nodes participating in the capture network             | PRIM:039  |
+| `G_net`                | graph | connected | Network graph structure (nodes + weighted directed edges)        | PRIM:039  |
+| `w_i`                  | float | ≥ 0       | Edge weight for node i within G_net                              | PRIM:039  |
+| `d_bind_net`           | float | > 0       | Network-consensus binding distance (weighted aggregate)          | PRIM:040  |
+| `ρ(Φ)_net`             | float | ≥ 0       | Aggregate network field density across all participating nodes   | PRIM:040  |
+| `resilience_threshold` | float | (0, 1)    | Minimum connectivity fraction required to sustain network capture| PRIM:040  |
+
+---
+
+## Wave 5 — Dismissal Operators (PRIM:041–042)
+> Session: SES-20260814-DISMISS-001 | Sealed: 2026-08-14
+
+### f_Dismiss Operators (Wave 5 · PRIM:041–042)
+
+| Symbol      | Type  | Domain           | Description                                               | Frozen in |
+|-------------|-------|------------------|-----------------------------------------------------------|-----------|
+| `F_dismiss` | float | ≥ 0              | Scalar dismissal force magnitude (\|G_D\|)                | PRIM:041  |
+| `ρ_D(Φ)`    | float | (−1, 0]          | Dismissal field density (negative-polarity extension)     | PRIM:042  |
+| `d_dismiss` | float | > 0              | Initial Dismissal Well depth at t = 0                     | PRIM:042  |
+| `T_dismiss` | float | > 0              | Dismissal persistence time; governs exponential well decay| PRIM:042  |
+| `r_dismiss` | float | (0, r_capture]   | Spatial extent of dismissal repulsion zone around A       | PRIM:041  |
+| `ψ_dismiss` | enum  | {INTENTIONAL, STRUCTURAL, DRIFT} | Dismissal mode flag               | PRIM:041  |
+| `t_dismiss` | float | ≥ 0              | Absolute clock time of dismissal event                    | PRIM:042  |
+| `v_depart`  | float | ≥ 0              | Entity departure velocity post-dismissal                  | PRIM:042  |
+| `β_D`       | float | (−∞, 0]          | Repulsive coupling coefficient active during expulsion    | PRIM:042  |
+
+**Well decay formula (conceptual authority: GravityOfDismissal.md §3.2):**
+```
+ρ_D(Φ, t) = −d_dismiss × exp(−t / T_dismiss)
+```
+
+**Re-capture gate (operational form of GravityOfDismissal.md §3.3):**
+```
+d_bind_approach(t) > |ρ_D(Φ, t)|   →   re-capture structurally eligible
+```
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <!-- [FFF:GRAVITY:AMPLIFY] — CANONICAL SPECIFICATION                           -->
 <!-- F_fluid Engineering Primitive — Binding Coefficient Amplification         -->
@@ -34721,7 +40108,9 @@ The normative 10-step evaluation order (INV-008) applied to `f_Release`:
 ---
 
 *End of `f_Release.md` — canonical v1.0.0 — [FFF:GRAVITY:RELEASE]*
-# f_Source.md
+<img width="682" height="682" alt="triadic_gravity_resonance_field" src="https://github.com/user-attachments/assets/28d9cd98-16e5-46b3-b478-a80c589240ca" />
+
+# f_Source.md
 
 > I just had a flash that explained gravity... It's what most would expect, gravitational field mostly but ALSO it's atmospheric pressure.
 
@@ -36186,5391 +41575,4 @@ This module defines the operators, stability conditions, failure modes, engineer
 ---
 
 Absolutely, Professor — the full canonical module text is now drafted and ready for you to drop directly into your new GitHub file. And since you kicked off a Copilot Task to generate the full Markdown module, you’re set up beautifully: the task will assemble the complete document in your repo with the structure you want.
-# FFF_Gravity · Glossary
-
-```
-# ┌─────────────────────────────────────────────────────────────┐
-# │                  DOCUMENT FRONTMATTER                       │
-# └─────────────────────────────────────────────────────────────┘
-document:         GLOSSARY
-canonical_path:   docs/FFF_Gravity/GLOSSARY.md
-canonical_tag:    "[FFF:GRAVITY:GLOSSARY]"
-framework:        TriadicFrameworks
-module:           FFF_Gravity
-version:          1.0.0
-status:           canonical
-stability:        living
-created:          2026-08-13
-last_modified:    2026-08-13
-authors:
-  - TriadicFrameworks
-encoding:         UTF-8
-line_endings:     LF
-normative:        true
-scope: >
-  All definitions in this file are scoped to the FFF_Gravity module.
-  For framework-wide definitions see docs/GLOSSARY.md.
-  In any conflict between this file and the framework GLOSSARY,
-  this file governs within FFF_Gravity.
-  In any conflict between this file and OPERATORS.md,
-  OPERATORS.md governs for symbol definitions;
-  this file governs for prose definitions.
-description: >
-  Module-scoped term definitions for FFF_Gravity. Every operator symbol,
-  architectural concept, engineering primitive, failure mode class, and
-  process term used in the module is defined here. Organized alphabetically.
-  Each entry includes: formal definition, symbol (if applicable), formula
-  (if applicable), source file, cross-references, and scope notes.
-tags:
-  - FFF
-  - gravity
-  - glossary
-  - definitions
-  - normative
-
-session_context:
-  current_session:
-    session_id:       SES-20260813-GLOS-001
-    opened_at:        2026-08-13T07:56:00-04:00
-    closed_at:        ~
-    editor:           Nawder
-    branch:           main
-    intent:           Create canonical GLOSSARY.md — all module-scoped term definitions
-    status:           active
-    dirty:            true
-    term_count:       62
-
-  session_history:
-    - session_id:  SES-20260813-README-001
-      intent:      Create canonical README.md
-      status:      closed
-    - session_id:  SES-20260813-INDEX-001
-      intent:      Create canonical INDEX.md
-      status:      closed
-    - session_id:  SES-20260813-OPS-001
-      intent:      Create canonical OPERATORS.md
-      status:      closed
-
-changelog:
-  - version: 1.0.0
-    date:    2026-08-13
-    author:  TriadicFrameworks
-    notes: >
-      Initial canonical release. 62 terms defined across 18 letter groups.
-      All terms sourced from f_Capture.md v1.0.0, OPERATORS.md v1.0.0,
-      scaffold files, and f_Source.md genesis dialogue.
-```
-
-> **Canonical path:** `docs/FFF_Gravity/GLOSSARY.md`
-> **Scope:** Module-scoped. Governs within FFF_Gravity. See `docs/GLOSSARY.md` for framework-wide terms.
-> **Normative:** Yes.
-> **Term count:** 62 · **Last updated:** 2026-08-13
-
----
-
-## §0 · Session Context
-
-<!--
-  metadata:
-    section:       session-context
-    section_id:    §0
-    type:          live-session-register
-    normative:     false
-    created_in:    SES-20260813-GLOS-001
-  session:
-    session_id:    SES-20260813-GLOS-001
-    touch_count:   1
-    change_type:   created
--->
-
-| Field | Value |
-|---|---|
-| Session ID | `SES-20260813-GLOS-001` |
-| Opened | `2026-08-13T07:56:00-04:00` |
-| Editor | Nawder |
-| Intent | Create canonical GLOSSARY.md |
-| Status | 🟡 Active |
-
-### Update Policy
-
-```
-When to update this file:
-  1. A new operator symbol is introduced in any function file   → add entry
-  2. A new concept or process term is introduced               → add entry
-  3. An existing definition is refined as a file canonicalizes → update entry
-  4. A term is deprecated                                      → mark DEPRECATED; keep entry
-  5. A term scope changes (module → framework)                 → note in scope field; link to docs/GLOSSARY.md
-
-Never:
-  - Remove an entry (deprecate instead)
-  - Change a term's symbol without a corresponding OPERATORS.md version bump
-  - Define a term differently from its OPERATORS.md symbol definition
-```
-
----
-
-## §1 · How to Read an Entry
-
-<!--
-  metadata:
-    section:       reading-guide
-    section_id:    §1
-    type:          reference
-    normative:     false
-    created_in:    SES-20260813-GLOS-001
-  session:
-    session_id:    SES-20260813-GLOS-001
-    touch_count:   1
-    change_type:   created
--->
-
-Each entry follows this structure:
-
-```
-### Term Name
-Symbol: `symbol` (if applicable)
-Formula: `formula` (if applicable)
-Source: file where the term is formally defined
-Cross-refs: related terms within this glossary (→ Term Name)
-Scope note: any deviation from framework-wide usage
-
-[Definition paragraph(s)]
-```
-
-Terms without a symbol are architectural or process concepts.
-Terms marked **⚠ Pending** have definitions sourced from scaffold files;
-they will be updated when the source file is canonicalized.
-
----
-
-## §2 · Term Index
-
-<!--
-  metadata:
-    section:       term-index
-    section_id:    §2
-    type:          index
-    normative:     false
-    created_in:    SES-20260813-GLOS-001
-  session:
-    session_id:    SES-20260813-GLOS-001
-    touch_count:   1
-    change_type:   created
--->
-
-| Letter | Terms |
-|---|---|
-| A | Amplify · Anisotropy Index · Approach Vector · Approach Window · Attractor |
-| B | Binding Coefficient · Binding Depth · Binding Floor |
-| C | Canonical Tag · Capture · Capture Gate · Capture Radius · Capture Threshold · Cascade · Coherence Well · Collapse · Collapse Threshold · Composite Node · Composition Rule |
-| D | Dampen · Decay · Decay Rate · Decay Warning Threshold · Deflect · Derived Operator |
-| E | Eccentricity · Effective Pull · Element · Emit · Engineering Primitive · Escape Velocity · Evaluation Order |
-| F | Failure Mode · FFF · Field Coherence · Field Density · Field State · Fluid Node · Force Node · Frame · Frequency Node · Frozen Symbol |
-| G | GravityGraph · Gravity Null Zone · Guard |
-| I | Institutional Playbook |
-| L | Lock |
-| M | Mass Parity Threshold · Matilda Effect · Mutual Dissolution |
-| N | Networked Capture |
-| O | Orbit Classification · Orbital Eccentricity · Orbital Period · Orbital Resonance · Orbit Stability Class |
-| P | Phantom Capture · Primary Operator · Primitive |
-| R | Release · Release Energy · Release Vector · Residual Momentum |
-| S | Scaffold · Separation Distance · Stability Conditions · State Flag · Symbol Freeze |
-| T | Terminal State · Triadic Equation · Triadic Gravity |
-| U | Undefined (⊥) |
-| W | Wave |
-
----
-
-## §3 · Definitions
-
-<!--
-  metadata:
-    section:       definitions
-    section_id:    §3
-    type:          glossary-body
-    normative:     true
-    created_in:    SES-20260813-GLOS-001
-  session:
-    session_id:    SES-20260813-GLOS-001
-    touch_count:   1
-    change_type:   created
--->
-
----
-
-### — A —
-
----
-
-#### Amplify
-
-**Symbol:** `f_Amplify` (function) · `F_amp` (operator)
-**Source:** `f_Amplify.md`
-**Cross-refs:** → Binding Coefficient · → Effective Pull · → Failure Mode FM-010
-
-The engineering primitive that amplifies mass-coupling between an Element and
-an Attractor by increasing the Binding Coefficient `β` and Effective Pull `P_eff`
-beyond what mass and field density alone produce. Acts on the Fluid Node (`F_fluid`).
-
-Amplify is used to increase capture probability for a marginal Element, deepen
-`d_bind` in a precarious orbit, or compensate for resonance drift that is
-eroding binding. It has a ceiling: `β > β_max` triggers FM-010 (Amplify Runaway),
-which produces collapse or singularity.
-
-> `β_new = β × F_amp` where `F_amp ≥ 1.0`
-
-⚠ **Pending:** `F_amp` ceiling value and energy cost model pending `f_Amplify.md` canonicalization.
-
----
-
-#### Anisotropy Index
-
-**Symbol:** `anisotropy_index`
-**Source:** `f_Capture_Asymmetric.md`
-**Cross-refs:** → Field Density · → Phantom Capture
-
-A scalar measure of the non-uniformity of Field Density across the Capture
-Radius. Defined as `max(ρ(Φ,θ)) / min(ρ(Φ,θ))` over all approach angles θ.
-A value of `1.0` indicates a perfectly uniform field (standard `f_Capture`
-applies). Values greater than `1.0` indicate increasing asymmetry and require
-`f_Capture_Asymmetric` for accurate capture modeling.
-
-High anisotropy elevates the risk of FM-006 (Phantom Capture): the field
-appears sufficient along the approach heading but dissolves at other orbit
-angles post-lock.
-
-⚠ **Pending:** Formal anisotropy threshold below which standard `f_Capture` applies.
-
----
-
-#### Approach Vector
-
-**Symbol:** `v_approach`
-**Formula:** Computed by `compute_approach_vector(E, A)`
-**Source:** `f_Capture.md §4.1`
-**Cross-refs:** → Capture Threshold · → Escape Velocity · → Force Node
-
-The velocity and heading of an Element relative to an Attractor at the moment
-the Element crosses the Capture Radius. Expressed as a scalar (magnitude) for
-all standard capture calculations; the heading component is used by `f_Deflect`
-and `f_Capture_Asymmetric`.
-
-`v_approach` is evaluated exactly once per capture event — at the `r_capture`
-crossing moment, not at the outer field boundary. Premature evaluation produces
-an invalid Capture Threshold.
-
-Governed by the Force Node (`F_force`).
-Frozen at v1.0.0.
-
----
-
-#### Approach Window
-
-**Symbol:** `Δt_approach = t_encounter − t_entry`
-**Source:** `f_Capture_Temporal.md`
-**Cross-refs:** → Element · → Attractor · → Field State
-
-The span of cycles between when an Element enters the outer field boundary
-(`t_entry`) and when it reaches the Capture Radius (`t_encounter`). Relevant
-only in `f_Capture_Temporal`, where Attractor mass and Field Density may shift
-during this window.
-
-In standard `f_Capture`, the approach window collapses to a single instant —
-all conditions are evaluated at `t_encounter` and treated as static.
-
-⚠ **Pending:** Formal time-series representation pending `f_Capture_Temporal.md` canonicalization.
-
----
-
-#### Attractor
-
-**Symbol:** `A`
-**Source:** `f_Capture.md §2`
-**Cross-refs:** → Element · → Coherence Well · → Frame · → Capture Radius
-
-A node with sufficient mass and field strength to potentially bind an incoming
-Element into orbital relationship. The Attractor is the center of the Coherence
-Well and the owner of the Frame registry that records all captured orbits.
-
-The Attractor/Element distinction is **contextual, not intrinsic**. The same
-physical object may be an Attractor in one interaction and an Element in
-another. At high mass parity (`|M_E − M_A| < m_parity`), the distinction
-dissolves entirely — FM-007 (Mutual Dissolution) fires and neither body survives
-as an independent entity.
-
-The Attractor is modified by every successful capture event: its mass
-distribution, field curvature, and registry all update on `register_capture`.
-Capture is bidirectional in registration.
-
----
-
-### — B —
-
----
-
-#### Binding Coefficient
-
-**Symbol:** `β`
-**Formula:** `β = P_eff / (M_E × v_approach)`
-**Source:** `f_Capture.md §4.1`
-**Cross-refs:** → Effective Pull · → Binding Floor · → Failure Mode FM-010
-
-The ratio of Effective Pull to Element momentum at closest approach. A
-dimensionless scalar representing how strongly the Attractor's field pulls
-relative to the Element's forward momentum.
-
-The Binding Floor rule: `β` **must be ≥ 1.0** for capture to proceed.
-Below `1.0`, the Attractor cannot overcome the Element's momentum — the
-result is a flyby regardless of all other conditions.
-
-Above `β_max` (to be defined in `f_Amplify.md`), the coupling becomes
-pathological and FM-010 (Amplify Runaway) fires.
-
-Frozen at v1.0.0.
-
----
-
-#### Binding Depth
-
-**Symbol:** `d_bind`
-**Formula:** `d_bind = β × ρ(Φ) × (1 − e)`
-**Source:** `f_Capture.md §4.2`
-**Cross-refs:** → Decay Rate · → Decay Warning Threshold · → Collapse Threshold · → Orbital Eccentricity
-
-The primary stability metric for an established orbit. Measures how deeply an
-Element is locked to an Attractor's field. Higher values indicate more robust
-binding; the orbit can tolerate more perturbation before destabilizing.
-
-Three threshold levels govern `d_bind` behavior:
-- **Stable zone:** `d_bind > d_warn` — orbit is healthy; no FM raised
-- **Warning zone:** `d_warn ≥ d_bind > d_collapse` — FM-004 raised; `CAPTURE_DECAYING`
-- **Collapse zone:** `d_bind ≤ d_collapse` — FM-005 raised; `f_Collapse` fires
-
-`d_bind` decreases when field turbulence drives `ω_res` irrational (FM-004) or
-when external perturbation reduces `ρ(Φ)`. It can be restored by `f_Emit`
-(increases `ρ(Φ)`) or `f_Amplify` (increases `β`).
-
-Undefined when `e ≥ 1` (hyperbolic trajectory — not captured). Frozen at v1.0.0.
-
----
-
-#### Binding Floor
-
-**Source:** `f_Capture.md §5`
-**Cross-refs:** → Binding Coefficient · → Capture Gate
-
-The rule that `β ≥ 1.0` is a **hard prerequisite** for capture. This is
-Stability Condition 4 and it cannot be waived by any other condition.
-
-Even if `C_thresh > 0` (velocity condition met), `ρ(Φ)` is coherent, `ω_res`
-is rational, and the Frame has capacity — if `β < 1.0`, the result is always
-`CAPTURE_FAILED`. The Attractor's pull is simply insufficient to overcome the
-Element's forward momentum at closest approach.
-
-The Binding Floor is one of the two conditions (alongside Frame Compatibility)
-that are not purely about the physical encounter — they involve properties of
-the system that engineering primitives can modify.
-
----
-
-### — C —
-
----
-
-#### Canonical Tag
-
-**Source:** `f_Capture.md §1` · `OPERATORS.md §8`
-**Cross-refs:** → Frozen Symbol
-
-A unique string identifier for each function or module in TriadicFrameworks,
-formatted as `[FFF:GRAVITY:FUNCTION]`. Canonical tags are frozen when their
-source file is canonicalized and cannot be renamed without a major version bump.
-
-| Tag | File |
-|---|---|
-| `[FFF:GRAVITY]` | Module root |
-| `[FFF:GRAVITY:CAPTURE]` | `f_Capture.md` |
-| `[FFF:GRAVITY:RELEASE]` | `f_Release.md` |
-| `[FFF:GRAVITY:DECAY]` | `f_Decay.md` |
-| `[FFF:GRAVITY:ORBIT]` | `f_Orbit.md` |
-| `[FFF:GRAVITY:COLLAPSE]` | `f_Collapse.md` |
-| `[FFF:GRAVITY:EMIT]` | `f_Emit.md` |
-| `[FFF:GRAVITY:DAMPEN]` | `f_Dampen.md` |
-| `[FFF:GRAVITY:AMPLIFY]` | `f_Amplify.md` |
-| `[FFF:GRAVITY:DEFLECT]` | `f_Deflect.md` |
-
----
-
-#### Capture
-
-**Symbol:** `f_Capture`
-**Source:** `f_Capture.md`
-**Cross-refs:** → Element · → Attractor · → Field State · → Capture Threshold · → Stability Conditions
-
-The event by which an Element transitions from a free or weakly-bound state
-into a stable orbital relationship with an Attractor. Capture is the primary
-function of the FFF_Gravity module.
-
-Three things capture is **not**:
-- Not collision — Element and Attractor remain distinct bodies
-- Not merger — neither body is absorbed by the other
-- Not gradual — capture is a threshold event; the trajectory either bends into
-  orbit or it does not
-
-Capture is bidirectional: the Attractor's field curvature, registry, and mass
-distribution are all updated upon successful capture. The act of capturing
-changes the Attractor.
-
-Governed by: `f_Capture(E, A, Φ) → Ω`
-
----
-
-#### Capture Gate
-
-**Source:** `OPERATORS.md §6.2`
-**Cross-refs:** → Stability Conditions · → Binding Floor · → Frame
-
-The boolean conjunction of all five Stability Conditions. All must be `true`
-simultaneously for capture to succeed. If any single condition is false,
-the Capture Gate is closed and `CAPTURE_FAILED` is the outcome.
-
-```
-CAPTURE_GATE =
-    C_thresh > 0         (Approach)
-  ∧ ρ(Φ) > 0 (uniform)  (Field Coherence)
-  ∧ ω_res ∈ ℚ           (Resonance)
-  ∧ β ≥ 1.0             (Binding Floor)
-  ∧ Frame.capacity > 0  (Frame Compatibility)
-```
-
-The Capture Gate is the single decision point for the entire capture event.
-It is evaluated once — at `t_encounter` — and its result is irreversible.
-
----
-
-#### Capture Radius
-
-**Symbol:** `r_capture`
-**Source:** `f_Capture.md §4.1`
-**Cross-refs:** → Attractor · → Coherence Well · → Frame
-
-The maximum separation distance at which `f_Capture` can resolve to a stable
-orbit. Defined entirely by the Attractor and governed by the Frame layer.
-Cannot be modified by the Element or by engineering primitives (it is a
-property of the Attractor's coherence well depth and field curvature).
-
-When the Element crosses `r_capture`, its state transitions to
-`CAPTURE_PENDING` and `compute_approach_vector` fires. The Capture Gate
-is then evaluated using conditions at this crossing moment.
-
-Frozen at v1.0.0.
-
----
-
-#### Capture Threshold
-
-**Symbol:** `C_thresh`
-**Formula:** `C_thresh = v_escape(A) − v_approach`
-**Source:** `f_Capture.md §4.2`
-**Cross-refs:** → Approach Vector · → Escape Velocity · → Capture Gate
-
-The signed scalar that is the primary capture gate. Positive means capture is
-possible; zero or negative means the Element is moving too fast to be bound.
-
-`C_thresh` is computed exactly once per capture event, at the moment `E`
-crosses `r_capture`. It is not a continuous function during approach — it is
-a snapshot. In `f_Capture_Temporal`, `C_thresh(t)` is evaluated as a time
-series across the approach window, and what matters is its value at
-`t_encounter`.
-
-Undefined when `v_escape(A)` is undefined (i.e., when `ρ(Φ) = 0`). Frozen at v1.0.0.
-
----
-
-#### Cascade
-
-**Symbol:** `f_Capture_Cascade`
-**Source:** `f_Capture_Cascade.md`
-**Cross-refs:** → Capture · → Binding Depth · → Decay
-
-The second-order effect of a capture event on existing orbits in the Attractor's
-registry. When a new Element is captured, the Attractor's field curvature changes.
-This change perturbs the `d_bind` and `ω_res` of all already-captured Elements.
-If the perturbation is large enough, existing orbits destabilize (FM-004) and
-may cascade further — a chain of destabilizations triggered by a single new
-capture event.
-
-`f_Capture_Cascade` extends `f_Capture` to model this second-order effect.
-It runs standard `f_Capture` for the new Element, then re-evaluates all
-existing registry entries against the updated field curvature.
-
-⚠ **Pending:** Perturbation magnitude formula and cascade termination condition.
-
----
-
-#### Coherence Well
-
-**Source:** `f_Field.md`
-**Cross-refs:** → Frequency Node · → Field Density · → Capture Radius
-
-The structured region of gravitational field influence maintained by the
-Frequency Node (`F_freq`). The coherence well is what an Attractor projects —
-it is the spatial domain in which `ρ(Φ) > 0` and gravitational capture is
-possible. The depth of the coherence well determines `v_escape(A)` and the
-effective `r_capture`.
-
-A collapsed coherence well (`ρ(Φ) → 0`) produces FM-002 (Field Null) — the
-Attractor loses gravitational reach entirely. The well can be deepened
-artificially by `f_Emit` and shallowed by `f_Dampen`.
-
-In FFF_Gravity, the coherence well is the physical expression of `F_freq`.
-It is not a spacetime curvature (GR framing) — it is the structured frequency
-resonance field of the Attractor.
-
-⚠ **Pending:** Formal depth formula pending `f_Field.md` canonicalization.
-
----
-
-#### Collapse
-
-**Symbol:** `f_Collapse`
-**Source:** `f_Collapse.md`
-**Cross-refs:** → Decay · → Mutual Dissolution · → Terminal State
-
-The terminal operator. Fires when a decay spiral (`f_Decay`) drives `d_bind`
-to the Collapse Threshold, or when Mutual Dissolution (FM-007) is triggered
-at close approach.
-
-Two paths:
-
-**Path A — Asymmetric infall (FM-005):**
-`M_E << M_A`. Element infalls into Attractor. Attractor absorbs Element mass.
-Element registry entry purged. Attractor field curvature updated.
-Outcome: `CAPTURE_COLLISION`.
-
-**Path B — Mutual dissolution (FM-007):**
-`|M_E − M_A| < m_parity`. Neither body survives. A new Composite Node `C` is
-created with `C.mass = M_E + M_A`. Both original registries purged.
-System topology changes. Outcome: `CAPTURE_COLLISION`.
-
-Collapse is always terminal and always irreversible.
-
-⚠ **Pending:** Threshold values and composite node schema pending `f_Collapse.md` canonicalization.
-
----
-
-#### Collapse Threshold
-
-**Symbol:** `d_collapse`
-**Source:** `f_Decay.md §4.1`
-**Cross-refs:** → Decay Warning Threshold · → Binding Depth · → Collapse
-
-The value of `d_bind` at which orbital decay becomes irreversible and
-`f_Collapse` is automatically triggered. When `flag_decay` detects
-`d_bind ≤ d_collapse`, FM-005 is raised and the collapse execution path fires.
-
-Distinguished from the Decay Warning Threshold (`d_warn`): hitting `d_warn`
-opens an intervention window (FM-004, `CAPTURE_DECAYING`). Hitting `d_collapse`
-closes it — no intervention is possible after this point.
-
-⚠ **Pending:** Formal value pending `f_Decay.md` canonicalization.
-
----
-
-#### Composite Node
-
-**Symbol:** `C_node`
-**Source:** `f_Collapse.md §4.1`
-**Cross-refs:** → Mutual Dissolution · → Collapse · → GravityGraph
-
-The new Attractor created by FM-007 (Mutual Dissolution) when two near-equal-
-mass bodies collide. `C_node.mass = M_E + M_A`. The composite node receives
-a fresh registry (zero captured Elements on initialization), a new canonical
-tag, and a new field curvature derived from combined mass. Both original nodes
-are purged from `FFF_Registry` and from GravityGraph.
-
-The composite node is itself an Attractor and may subsequently capture Elements.
-It enters the system as a new entity, not as a modified version of either parent.
-
-⚠ **Pending:** Schema and initialization procedure pending `f_Collapse.md` canonicalization.
-
----
-
-#### Composition Rule
-
-**Source:** `OPERATORS.md §6` · `f_Capture.md §4.8`
-**Cross-refs:** → Derived Operator · → Capture Gate · → Evaluation Order
-
-A formal derivation rule specifying how two or more operators combine to
-produce a higher-order operator value. Composition rules are defined in
-`OPERATORS.md §6` and serve as the mathematical backbone of FFF_Gravity.
-
-Key composition rules:
-- `P_eff = M_A × ρ(Φ) / r²`
-- `β = P_eff / (M_E × v_approach)`
-- `C_thresh = v_escape(A) − v_approach`
-- `p_res = M_E × (v_approach − C_thresh)`
-- `e = p_res / (p_res + P_eff)`
-- `d_bind = β × ρ(Φ) × (1 − e)`
-
-Out-of-order composition is undefined behavior. The canonical evaluation
-order is specified in `OPERATORS.md §7`.
-
----
-
-### — D —
-
----
-
-#### Dampen
-
-**Symbol:** `f_Dampen` (function) · `F_damp` (operator)
-**Source:** `f_Dampen.md`
-**Cross-refs:** → Field Density · → Frequency Node · → Failure Mode FM-009
-
-The engineering primitive that suppresses local Field Density `ρ(Φ)`,
-shallowing or nulling the Attractor's coherence well. Acts on the Frequency
-Node (`F_freq`). Inverse of `f_Emit`.
-
-Use cases: assisting `f_Release` by reducing `d_bind` (making exit cheaper);
-weakening an Attractor's hold to facilitate engineering; creating a gravity-
-neutral region.
-
-Danger: if `ρ(Φ) → 0`, FM-002 fires for any pending captures. If dampening
-propagates beyond its bounded radius `r_damp`, FM-009 (Dampen Cascade) fires
-and an uncontrolled gravity null zone is created — multiple captured Elements
-may be uncontrollably released or ejected.
-
-⚠ **Pending:** `F_damp` bounds and propagation model pending `f_Dampen.md` canonicalization.
-
----
-
-#### Decay
-
-**Symbol:** `f_Decay`
-**Source:** `f_Decay.md`
-**Cross-refs:** → Binding Depth · → Decay Rate · → Orbital Resonance · → Collapse
-
-The progressive loss of Binding Depth in an established orbit. Decay is not an
-instantaneous event — it unfolds over cycles, tracked by `flag_decay` on every
-cycle post `CAPTURE_LOCKED`. Its primary causes are Resonance Drift (ω_res
-shifting toward irrational) and field turbulence (ρ(Φ) decreasing).
-
-Decay is the only process in FFF_Gravity that is continuously monitored rather
-than evaluated at a single event. All other processes (capture, release,
-collapse) are triggered once; decay runs every cycle.
-
-Decay can be reversed before reaching the Collapse Threshold — `f_Emit` can
-restore `ρ(Φ)` and `f_Amplify` can restore `β`, both of which increase
-`d_bind`. Once `d_bind ≤ d_collapse`, reversal is no longer possible.
-
----
-
-#### Decay Rate
-
-**Symbol:** `δ`
-**Formula:** `δ = Δd_bind / Δt = d_bind(t) − d_bind(t−1)`
-**Source:** `f_Decay.md §4.1`
-**Cross-refs:** → Binding Depth · → Decay Warning Threshold
-
-The rate of change of Binding Depth per cycle. Negative values indicate active
-decay — the orbit is losing energy. Zero indicates stable binding. Positive
-values indicate deepening (rare in natural conditions; can be engineered via
-`f_Emit` or `f_Amplify`).
-
-When `δ` crosses the decay warning threshold (driving `d_bind < d_warn`),
-FM-004 is raised. When `d_bind ≤ d_collapse`, FM-005 fires regardless of the
-current value of `δ`.
-
-Undefined before `CAPTURE_LOCKED` is established (no prior cycle exists).
-Frozen at v1.0.0 (symbol); formula pending `f_Decay.md` canonicalization.
-
----
-
-#### Decay Warning Threshold
-
-**Symbol:** `d_warn`
-**Source:** `f_Decay.md §4.1`
-**Cross-refs:** → Binding Depth · → Collapse Threshold · → Failure Mode FM-004
-
-The value of `d_bind` at which FM-004 (Resonance Drift) is raised and the
-Element's state transitions to `CAPTURE_DECAYING`. This opens the intervention
-window — the period during which `f_Emit` or `f_Amplify` can restore
-`d_bind` above `d_warn` and close FM-004 before collapse is triggered.
-
-Distinguished from the Collapse Threshold (`d_collapse`): `d_warn > d_collapse`.
-The warning is a precursor signal; the collapse threshold is the point of no return.
-
-⚠ **Pending:** Formal value and relationship to `d_collapse` pending `f_Decay.md` canonicalization.
-
----
-
-#### Deflect
-
-**Symbol:** `f_Deflect` (function) · `heading_delta` (operator)
-**Source:** `f_Deflect.md`
-**Cross-refs:** → Approach Vector · → Force Node · → Capture Threshold
-
-The engineering primitive that redirects the approach heading of an Element
-without changing the magnitude of `v_approach`. Acts on the Force Node
-(`F_force`). Used to route an Element toward a favorable approach angle
-(e.g., toward `θ_optimal` in `f_Capture_Asymmetric`) or to engineer a
-specific residual momentum for target resonance (`f_Capture_Resonant`).
-
-`f_Deflect` changes **heading only**. It does not change field density
-(that is `f_Emit` / `f_Dampen`), coupling strength (that is `f_Amplify`),
-or orbital mechanics post-capture. It is the only operator that acts purely
-on the approach trajectory before the Capture Gate is evaluated.
-
-Over-deflection risk: if `heading_delta` is too large, the Element misses
-`r_capture` entirely — FM-001 equivalent.
-
-⚠ **Pending:** Formal heading bounds and cost model pending `f_Deflect.md` canonicalization.
-
----
-
-#### Derived Operator
-
-**Source:** `OPERATORS.md §2`
-**Cross-refs:** → Primary Operator · → Composition Rule
-
-An operator whose value is computed from one or more Primary Operators via a
-defined Composition Rule. Derived operators cannot be directly measured or
-externally provided — they must be computed in the correct evaluation order.
-
-All 10 derived operators in FFF_Gravity are listed in `OPERATORS.md §2`.
-Derived operators that have been formalized in `f_Capture.md v1.0.0` are
-frozen; those pending canonicalization in Wave 3 files are marked 🔵.
-
----
-
-### — E —
-
----
-
-#### Eccentricity
-
-**Symbol:** `e`
-**Formula:** `e = p_res / (p_res + P_eff)`
-**Source:** `f_Orbit.md §4.1`
-**Cross-refs:** → Residual Momentum · → Effective Pull · → Orbit Classification
-
-The shape parameter of a captured orbit. Range: [0, 1).
-
-| Value | Orbit Shape |
-|---|---|
-| `e = 0` | Perfect circle (theoretical; requires `p_res = 0`) |
-| `e < 0.1` | Near-circular — classified `circular` |
-| `0.1 ≤ e < 0.5` | Elliptical |
-| `0.5 ≤ e < 0.9` | Eccentric |
-| `e ≥ 0.9` | Near-parabolic — high instability risk |
-| `e ≥ 1.0` | Hyperbolic trajectory — not captured; `d_bind` undefined |
-
-Higher `p_res` (more residual momentum post-capture) produces higher `e`.
-The shape of the orbit affects `d_bind`: `d_bind = β × ρ(Φ) × (1 − e)`,
-so higher eccentricity directly reduces binding depth.
-
-Frozen at v1.0.0 (symbol and formula).
-
----
-
-#### Effective Pull
-
-**Symbol:** `P_eff`
-**Formula:** `P_eff = M_A × ρ(Φ) / r²`
-**Source:** `f_Capture.md §4.2`
-**Cross-refs:** → Attractor · → Field Density · → Binding Coefficient
-
-The net gravitational pull exerted by an Attractor on an Element at distance
-`r`. `P_eff` is the FFF_Gravity equivalent of gravitational force — but it
-incorporates Field Density `ρ(Φ)` directly, making it sensitive to both mass
-and field coherence simultaneously.
-
-`P_eff` increases as separation `r` decreases (inverse-square relationship)
-and as `ρ(Φ)` increases. It is undefined when `ρ(Φ) = 0` (FM-002) or `r = 0`
-(singularity — undefined behavior denoted ⊥).
-
-Frozen at v1.0.0.
-
----
-
-#### Element
-
-**Symbol:** `E`
-**Source:** `f_Capture.md §3`
-**Cross-refs:** → Attractor · → Approach Vector · → Residual Momentum
-
-The incoming body in a capture interaction — defined by its mass `M_E`,
-velocity `v_approach`, and trajectory at the moment it crosses `r_capture`.
-The Element is the body being captured (or attempting to be captured).
-
-Like Attractor, the Element designation is **contextual**. The same object
-may be an Element in one encounter and an Attractor in another. At high mass
-parity, the distinction becomes meaningless and FM-007 (Mutual Dissolution)
-governs.
-
-Post-capture, the Element is registered in the Attractor's Frame registry,
-assigned an orbital state flag (`CAPTURE_LOCKED` or `ORBIT_STABLE`), and
-monitored by `flag_decay` every cycle.
-
----
-
-#### Emit
-
-**Symbol:** `f_Emit` (function) · `F_emit` (operator)
-**Source:** `f_Emit.md`
-**Cross-refs:** → Field Density · → Frequency Node · → Failure Mode FM-010
-
-The engineering primitive that increases local Field Density `ρ(Φ)`,
-deepening the Attractor's coherence well. Acts on the Frequency Node (`F_freq`).
-Inverse of `f_Dampen`.
-
-Primary use cases: restoring a decaying orbit (FM-004 intervention by increasing
-`ρ(Φ)` → increasing `d_bind`); pre-deepening a coherence well before an
-anticipated Element approach; resisting a natural field null event.
-
-Upper limit: `ρ(Φ)` cannot exceed `1.0` (saturated field). Sustained emission
-with no corresponding decrease in `v_approach` can drive `β → β_max` and
-trigger FM-010 (Amplify Runaway).
-
-⚠ **Pending:** `F_emit` formula and energy cost model pending `f_Emit.md` canonicalization.
-
----
-
-#### Engineering Primitive
-
-**Source:** `f_Capture.md §7` · `OPERATORS.md §4`
-**Cross-refs:** → Primitive
-
-The lowest-level callable operations in FFF_Gravity. All higher-order functions
-are composed from these building blocks. 16 primitives are defined in the module
-(see `OPERATORS.md §4.2`).
-
-Primitives are either **pure** (no side effects; safe to repeat) or
-**side-effecting** (writes to external registries; not idempotent). Side-
-effecting primitives must be called in the correct evaluation order or
-undefined behavior results.
-
----
-
-#### Escape Velocity
-
-**Symbol:** `v_escape(A)`
-**Source:** `f_Capture.md §4.1`
-**Cross-refs:** → Attractor · → Field Density · → Capture Threshold
-
-The minimum velocity required for an Element to exit the Attractor's coherence
-well under current Field Density conditions. Field-dependent: if `ρ(Φ)` changes
-between the Element's entry into the field and `t_encounter`, `v_escape(A)`
-must be recomputed. Using a stale value elevates FM-006 (Phantom Capture) risk.
-
-`v_escape(A)` is computed by `resolve_escape_velocity(M_A, ρ(Φ))` and is
-undefined when `ρ(Φ) = 0` (FM-002). Frozen at v1.0.0 (symbol).
-
----
-
-#### Evaluation Order
-
-**Source:** `OPERATORS.md §7` · `f_Capture.md §4.7`
-**Cross-refs:** → Engineering Primitive · → Composition Rule · → Guard
-
-The canonical sequence in which operators are computed and primitives are called
-during a capture event. Out-of-order evaluation is **undefined behavior** and
-may produce incorrect capture outcomes or silent failures.
-
-The 10-step canonical evaluation order is defined in `OPERATORS.md §7`.
-Engineering primitives (`f_Emit`, `f_Dampen`, `f_Amplify`, `f_Deflect`) are
-called **on demand before the approach window opens** — they are not part of
-the capture evaluation sequence itself.
-
----
-
-### — F —
-
----
-
-#### Failure Mode
-
-**Symbol:** `FM-NNN`
-**Source:** `OPERATORS.md §5` · `f_Capture.md §6`
-**Cross-refs:** → State Flag · → Terminal State
-
-A named, registered condition in which the FFF_Gravity system departs from
-healthy operation. Each failure mode has a unique ID (`FM-001` through
-`FM-010`), a severity level (`warn`, `error`, or `fatal`), a defined trigger
-condition, a state transition, and a defined outcome.
-
-**Severity classes:**
-- `warn` — orbit at risk; intervention window open; reversible
-- `error` — capture failed; terminal for this interaction; no system danger
-- `fatal` — irreversible; system topology may change
-
-The 10 registered failure modes are in `OPERATORS.md §5`.
-FM-001 through FM-007 are frozen at v1.0.0.
-FM-008 through FM-010 are pending canonicalization of `f_Release.md`,
-`f_Dampen.md`, and `f_Amplify.md` respectively.
-
----
-
-#### FFF
-
-**Source:** `README.md §1`
-**Cross-refs:** → Frequency Node · → Fluid Node · → Force Node · → Frame
-
-**Field–Force–Frame.** The three-layer architectural stack of TriadicFrameworks.
-In FFF_Gravity:
-
-| Layer | Component | Role |
-|---|---|---|
-| **Field** | `Φ` (field state) | Ambient medium; `F_freq` provides `ρ(Φ)` |
-| **Force** | `f_Capture` and sibling functions | Operative computation layer |
-| **Frame** | `Ω` (capture outcome) | Registry; boundary conditions; recorded relational state |
-
-The FFF model is the architectural reason why gravity in this framework cannot
-be reduced to a single force or field. All three layers must be present for
-any capture event to be defined.
-
----
-
-#### Field Coherence
-
-**Source:** `f_Capture.md §5 Condition 2`
-**Cross-refs:** → Field Density · → Failure Mode FM-002 · → Stability Conditions
-
-Stability Condition 2. `ρ(Φ)` must be **non-zero and uniform** within
-`r_capture` during the entire approach window. Two failure pathways:
-
-1. **Null field:** `ρ(Φ) = 0` → FM-002 immediately. No pull can be transmitted.
-2. **Field turbulence:** `ρ(Φ)` varies significantly across the capture radius
-   → elevated FM-006 risk (Phantom Capture); `ρ(Φ, θ)` model applies
-   (see `f_Capture_Asymmetric`).
-
-Field Coherence is the only stability condition governed entirely by the
-Frequency Node (`F_freq`). It can be actively maintained by `f_Emit` and
-monitored via `f_Field.md`.
-
----
-
-#### Field Density
-
-**Symbol:** `ρ(Φ)`
-**Source:** `f_Field.md §4.1` · `f_Capture.md §4.1`
-**Cross-refs:** → Frequency Node · → Field State · → Effective Pull · → Field Coherence
-
-The effective resistance or conductance of the ambient gravitational field at
-the moment of an encounter. A dimensionless scalar in [0, 1].
-
-| Value | Meaning |
-|---|---|
-| `ρ(Φ) = 0` | Null field — no gravity can propagate; FM-002 |
-| `0 < ρ(Φ) < 1` | Active field — normal operating range |
-| `ρ(Φ) = 1` | Saturated field — maximum conductance; `f_Emit` has no further effect |
-
-In standard `f_Capture`, `ρ(Φ)` is a single scalar — assumed uniform within
-`r_capture`. In `f_Capture_Asymmetric`, it becomes a directional tensor
-`ρ(Φ, θ)`. In `f_Capture_Temporal`, it becomes a time series `ρ(Φ, t)`.
-
-Governed by the Frequency Node. Frozen at v1.0.0.
-
----
-
-#### Field State
-
-**Symbol:** `Φ`
-**Source:** `f_Capture.md §3`
-**Cross-refs:** → Field Density · → Frequency Node
-
-The complete ambient field conditions at the moment of an encounter between
-Element and Attractor. `Φ` is the third argument to `f_Capture(E, A, Φ) → Ω`.
-It is provided by the FFF_Field module (external to FFF_Gravity).
-
-In practice, the most important property of `Φ` consumed by `f_Capture`
-is `ρ(Φ)` — Field Density. Other field properties (coherence, turbulence
-spectrum, directional anisotropy) are relevant in variant functions.
-
----
-
-#### Fluid Node
-
-**Symbol:** `F_fluid`
-**Source:** `f_Source.md` · `README.md §1`
-**Cross-refs:** → Triadic Gravity · → Attractor Mass · → Element Mass
-
-The mass-density identity node in the FFF Gravity Primitive
-(`G = F_freq · F_fluid · F_force`). Represents the distribution, pooling,
-and substrate continuity of mass. `M_A` and `M_E` are both governed by
-`F_fluid`.
-
-Discontinuity in the Fluid Node (non-uniform mass distribution in the Attractor,
-or sudden mass change) produces non-uniform gravity and elevates risk of
-anomalous capture behavior. In `f_Capture_Temporal`, `M_A(t)` is a time-varying
-expression of `F_fluid` drift.
-
-`f_Amplify` is the engineering primitive that acts on `F_fluid` — it increases
-the effective coupling between Fluid Nodes of Element and Attractor.
-
----
-
-#### Force Node
-
-**Symbol:** `F_force`
-**Source:** `f_Force.md` · `README.md §1`
-**Cross-refs:** → Approach Vector · → Triadic Gravity · → Deflect
-
-The gradient/pressure identity node in the FFF Gravity Primitive
-(`G = F_freq · F_fluid · F_force`). Represents atmospheric pressure, isomorphic
-gradients, and external field overlays. `v_approach` is the primary operator
-governed by `F_force`.
-
-In stable gravitational conditions, the Force Node is **passive** — the
-Frequency and Fluid Nodes do the dominant work. When `F_force` becomes dominant
-(external pressure gradients, engineered overlays), anomalous capture behavior
-emerges (FM-006 class, Phantom Capture).
-
-`f_Deflect` is the engineering primitive that acts on `F_force` — it changes
-the heading of `v_approach` without changing its magnitude.
-
----
-
-#### Frame
-
-**Source:** `f_Frame.md` · `f_Capture.md §5 Condition 5`
-**Cross-refs:** → Capture Gate · → Binding Floor · → FFF · → Failure Mode FM-003
-
-The third layer of the FFF stack. In FFF_Gravity, the Frame serves two roles:
-
-1. **Registry:** Records all active capture relationships for an Attractor —
-   Element ID, orbital parameters, state flag, timestamps. This is the
-   Attractor's relational memory.
-
-2. **Boundary enforcer:** The Frame has a maximum registry capacity. When
-   capacity is reached, no further captures are permitted regardless of force
-   or field conditions (FM-003 — Frame Saturation). This is a hard constraint
-   that cannot be overridden by `f_Emit`, `f_Amplify`, or any other engineering
-   primitive.
-
-The Frame is also updated by every capture outcome — successful or not — and
-by every state flag transition post-capture.
-
----
-
-#### Frequency Node
-
-**Symbol:** `F_freq`
-**Source:** `f_Field.md` · `README.md §1`
-**Cross-refs:** → Triadic Gravity · → Coherence Well · → Field Density
-
-The gravitational field identity node in the FFF Gravity Primitive
-(`G = F_freq · F_fluid · F_force`). The Frequency Node is what an Attractor
-**is** as a gravitational entity — its coherence well, its resonance signature,
-its field substrate anchor.
-
-Collapse of the Frequency Node (`F_freq → 0`, meaning `ρ(Φ) → 0`) produces
-FM-002 (Field Null). The Attractor becomes gravitationally inert — it has mass
-but cannot propagate pull to any Element.
-
-`f_Emit` deepens `F_freq` (increases `ρ(Φ)`).
-`f_Dampen` shallows it (decreases `ρ(Φ)`).
-
-⚠ **Pending:** Formal coherence well definition pending `f_Field.md` canonicalization.
-
----
-
-#### Frozen Symbol
-
-**Source:** `OPERATORS.md §8`
-**Cross-refs:** → Symbol Freeze · → Canonical Tag · → Versioning
-
-A symbol is **frozen** once its defining source file reaches canonical status.
-Frozen symbols cannot be renamed, removed, or have their formulas changed
-without a **major version bump** of `OPERATORS.md`.
-
-New symbols can be added in minor versions. Renaming or removing requires major.
-Frozen symbols are marked ✅ in `OPERATORS.md §8.1`.
-Pending-freeze symbols are marked 🔵 in `OPERATORS.md §8.2`.
-
----
-
-### — G —
-
----
-
-#### GravityGraph
-
-**Source:** `f_Capture_Networked.md`
-**Cross-refs:** → FFF_Registry · → Composite Node · → Cascade
-
-The persistent directed weighted graph that records every capture relationship
-across the FFF_Gravity system. Nodes represent Attractors and Elements.
-Edges represent capture relationships, with direction `Element → Attractor`,
-weight `d_bind`, and type from the State Flag registry
-(`LOCKED`, `DECAYING`, `FAILED`, `RELEASED`, `COLLAPSED`).
-
-GravityGraph is **append-only for edge creation**. State updates are written
-as attribute changes on existing edges, never deletions. This makes it a full
-temporal audit trail of the system's gravitational history.
-
-Key capabilities enabled by GravityGraph:
-- Topology queries (which Attractors are most loaded?)
-- Cascade path analysis (if Attractor A collapses, which Elements are released?)
-- Network stability metrics (`G_stability` — mean `d_bind` across all active edges)
-- Cross-module correlation (with `SoN/s_Capture.md`)
-
-⚠ **Pending:** Storage format and query interface pending `f_Capture_Networked.md` canonicalization.
-
----
-
-#### Gravity Null Zone
-
-**Source:** `f_Dampen.md §6`
-**Cross-refs:** → Field Density · → Failure Mode FM-009 · → Dampen
-
-A region in which `ρ(Φ) → 0` across a significant spatial extent — not just
-at a single point. Produced by FM-009 (Dampen Cascade), in which a
-`suppress_field` operation propagates beyond its bounded radius `r_damp`.
-
-In a gravity null zone, `P_eff = 0` for all Elements in the region; no
-capture is possible; any existing orbits whose field support falls within the
-zone may become `CAPTURE_DECAYING`. The zone expands until either the dampening
-source is removed or the zone reaches a boundary defined by an adjacent
-coherence well from a neighboring Attractor.
-
-⚠ **Pending:** Formal propagation model pending `f_Dampen.md` canonicalization.
-
----
-
-#### Guard
-
-**Source:** `OPERATORS.md §4.4` · `f_Capture.md §7`
-**Cross-refs:** → Engineering Primitive · → Evaluation Order
-
-A precondition check attached to a primitive that must pass before the
-primitive executes. Guards are not optional — violating a guard produces
-undefined behavior or an incorrect capture outcome.
-
-Example guards:
-- `evaluate_capture_threshold`: guard `r ≤ r_capture`
-- `lock_orbit`: guard `C_thresh > 0`
-- `execute_collapse`: guard FM-005 or FM-007 active
-
-Guards are defined in `OPERATORS.md §4.4` for all 16 primitives.
-
----
-
-### — I —
-
----
-
-#### Institutional Playbook
-
-**Source:** `GravityOfDismissal.md §9`
-**Cross-refs:** → Matilda Effect
-
-The seven documented mechanisms by which institutional science suppresses,
-discredits, or ignores frameworks that challenge existing paradigms. Named from
-the historical record of gravity science. Relevant to FFF_Gravity as a
-strategic defense map.
-
-| Vector | Name |
-|---|---|
-| I | Authority Ambush |
-| II | Empirical Retrofit |
-| III | Access Withdrawal |
-| IV | Priority Erasure |
-| V | Social Quarantine |
-| VI | Identity Disqualification |
-| VII | Silence Treatment |
-
-Each vector is sourced from documented historical cases (Chandrasekhar,
-Miller, Arp, Rubin, Milgrom, and others). See `GravityOfDismissal.md §9–§10`
-for the full defense mapping to FFF_Gravity.
-
----
-
-### — L —
-
----
-
-#### Lock
-
-**Source:** `f_Capture.md §7.2`
-**Cross-refs:** → Capture · → Capture Gate · → Binding Depth
-
-The moment at which the Capture Gate resolves to `true` and `lock_orbit` is
-called. Lock is the transition from `CAPTURE_PENDING` to `CAPTURE_LOCKED`.
-It is the definitive capture event — after lock, the Element is registered in
-the Attractor's Frame registry and `flag_decay` begins cycling.
-
-Lock produces the full orbital parameter struct:
-`{e, T_orb, d_bind, ω_res, orbit_class, stab_class}`.
-
-A lock that subsequently decays does not retroactively become a non-capture —
-the Element was genuinely captured at the lock moment. Subsequent decay is a
-separate process governed by `f_Decay`.
-
----
-
-### — M —
-
----
-
-#### Mass Parity Threshold
-
-**Symbol:** `m_parity`
-**Source:** `f_Collapse.md §4.1`
-**Cross-refs:** → Mutual Dissolution · → Composite Node · → Failure Mode FM-007
-
-The maximum value of `|M_E − M_A|` below which FM-007 (Mutual Dissolution)
-fires instead of asymmetric infall (FM-005). When masses are sufficiently
-similar, neither body can be unambiguously identified as the Attractor or the
-Element — the capture relationship collapses into dissolution and a new
-Composite Node is created.
-
-`m_parity` defines the boundary between "clearly different masses" (one absorbs
-the other) and "near-equal masses" (mutual dissolution). It is not a ratio —
-it is an absolute difference in normalized mass units.
-
-⚠ **Pending:** Formal value pending `f_Collapse.md` canonicalization.
-
----
-
-#### Matilda Effect
-
-**Source:** `GravityOfDismissal.md §8`
-**Cross-refs:** → Institutional Playbook
-
-The systematic denial of recognition to women scientists. Named by historian
-Margaret Rossiter (1993). In the history of gravity science, the Matilda Effect
-operated through four structural mechanisms:
-
-1. **Institutional bars** — formal prohibition from universities, observatories, and academies
-2. **Authorship suppression** — credit attributed to supervisors or senior men by convention
-3. **Social framing** — women categorized as assistants regardless of intellectual role
-4. **Silence as erasure** — protest was structurally impossible; absence of protest was taken as evidence of no contribution
-
-The women most directly affected in gravity science:
-Mileva Marić · Emmy Noether · Cecilia Payne-Gaposchkin · Jocelyn Bell Burnell · Vera Rubin.
-
----
-
-#### Mutual Dissolution
-
-**Symbol:** FM-007
-**Source:** `f_Capture.md §6` · `f_Collapse.md §6`
-**Cross-refs:** → Composite Node · → Mass Parity Threshold · → Terminal State
-
-The failure mode triggered when `|M_E − M_A| < m_parity` at the collision
-threshold. Neither body survives as an independent entity. A new Composite
-Node `C` is created with `C.mass = M_E + M_A`. Both original registries are
-purged from `FFF_Registry` and from GravityGraph.
-
-Mutual Dissolution is a **fatal, terminal** failure mode. It changes system
-topology — the Attractor no longer exists as a binding entity for its existing
-registered Elements, all of which are effectively released (uncontrollably,
-since the registry is purged).
-
-FM-007 is the conceptual analog of a binary star merger or two galaxies of
-similar mass colliding — not a capture event but a destruction event.
-
----
-
-### — N —
-
----
-
-#### Networked Capture
-
-**Symbol:** `f_Capture_Networked`
-**Source:** `f_Capture_Networked.md`
-**Cross-refs:** → GravityGraph · → FFF_Registry · → Cascade
-
-The variant of `f_Capture` that logs every capture outcome to GravityGraph —
-a persistent distributed relational graph. Does not change capture mechanics;
-adds a network logging and analysis layer on top of all `f_Capture` outcomes.
-
-Enables topology queries, cascade path analysis, network stability metrics,
-and cross-module correlation. Every state flag transition (lock, decay, release,
-collapse) writes an update to the corresponding GravityGraph edge, making the
-graph a complete temporal audit trail of the system's gravitational history.
-
----
-
-### — O —
-
----
-
-#### Orbit Classification
-
-**Source:** `f_Orbit.md §4.2`
-**Cross-refs:** → Eccentricity · → Orbital Period · → Orbital Resonance
-
-The categorical label assigned to an established orbit based on its eccentricity
-`e` and resonance `ω_res`. Four classes:
-
-| Class | Condition | Description |
-|---|---|---|
-| `circular` | `e < 0.1` | Near-perfectly round; maximum binding stability |
-| `elliptical` | `0.1 ≤ e < 0.5` | Standard elliptical orbit; stable in most field conditions |
-| `eccentric` | `0.5 ≤ e < 0.9` | Elongated; higher perturbation sensitivity |
-| `resonant` | low-integer `ω_res` | Low-order harmonic lock; stable regardless of `e` within bounds |
-
-⚠ **Pending:** Threshold values formally confirmed pending `f_Orbit.md` canonicalization.
-
----
-
-#### Orbital Eccentricity
-
-See → **Eccentricity**
-
----
-
-#### Orbital Period
-
-**Symbol:** `T_orb`
-**Source:** `f_Orbit.md §4.1`
-**Cross-refs:** → Binding Depth · → Orbital Resonance
-
-The time (in cycles) for a captured Element to complete one full orbit of
-its Attractor. Derived from `d_bind` and `ω_res`. Higher binding depth
-generally corresponds to shorter periods; highly eccentric orbits have
-longer periods than near-circular orbits at the same `d_bind`.
-
-⚠ **Pending:** Formal formula pending `f_Orbit.md` canonicalization.
-
----
-
-#### Orbital Resonance
-
-**Symbol:** `ω_res`
-**Source:** `f_Capture.md §4.1`
-**Cross-refs:** → Frequency Node · → Orbit Classification · → Failure Mode FM-004
-
-The frequency lock between an Element's trajectory and the Attractor's field
-pulse, expressed as a ratio. The rationality of this ratio determines orbital
-stability:
-
-- **Rational `ω_res` (e.g., 3:1, 2:1, 3:2):** Stable orbit. The Element
-  and Attractor are in harmonic resonance. `d_bind` can be maintained.
-
-- **Irrational `ω_res`:** Unstable spiral trajectory. FM-004 (Resonance Drift)
-  is raised. `CAPTURE_DECAYING` is set. The orbit will eventually eject the
-  Element or collapse.
-
-Resonance is Stability Condition 3 and is monitored every cycle post-lock
-by `flag_decay`. A rational resonance can drift to irrational if `ρ(Φ)`
-drops (field turbulence). `f_Amplify` can restore coupling and stabilize
-resonance.
-
-Frozen at v1.0.0.
-
----
-
-#### Orbit Stability Class
-
-**Source:** `f_Orbit.md §4.2`
-**Cross-refs:** → Binding Depth · → Decay Warning Threshold · → Orbit Classification
-
-The categorical label assigned to an established orbit based on `d_bind`
-relative to defined thresholds. Three classes:
-
-| Class | Condition | Implication |
-|---|---|---|
-| `stable` | `d_bind > d_stable_threshold` | Orbit is healthy; no FM raised |
-| `marginal` | `d_warn < d_bind ≤ d_stable_threshold` | Orbit is viable but sensitive to perturbation |
-| `precarious` | `d_bind ≤ d_warn` | FM-004 imminent; intervention recommended |
-
-⚠ **Pending:** Threshold values formally confirmed pending `f_Orbit.md` and `f_Decay.md` canonicalization.
-
----
-
-### — P —
-
----
-
-#### Phantom Capture
-
-**Symbol:** FM-006
-**Source:** `f_Capture.md §6`
-**Cross-refs:** → Field Density · → Anisotropy Index · → Failure Mode
-
-The failure mode in which all capture conditions appear satisfied along the
-approach heading — `β ≥ 1.0`, `C_thresh > 0`, `ρ(Φ, θ_approach) > 0` — but
-the apparent orbital lock dissolves at the field boundary because `ρ(Φ)` is
-locally structured (varying significantly by angle or by time). The Element
-escapes at the boundary despite having satisfied all point-of-approach conditions.
-
-Phantom Capture is the most diagnostic failure mode: it reveals that the field
-is not uniform within `r_capture`, which is a violation of Stability Condition 2.
-Its severity is `warn` (not `error`) because the structural cause —
-field anisotropy — can be detected and corrected with `map_field_tensor`
-(`f_Capture_Asymmetric`) before the next approach attempt.
-
----
-
-#### Primary Operator
-
-**Source:** `OPERATORS.md §1`
-**Cross-refs:** → Derived Operator · → Frozen Symbol
-
-An operator that is directly measured or externally provided — not computed
-from other operators. FFF_Gravity has 9 primary operators, all frozen at
-v1.0.0: `v_approach`, `v_escape(A)`, `ρ(Φ)`, `r_capture`, `β`, `ω_res`, `M_A`, `M_E`, `r`.
-All 9 are frozen. See `OPERATORS.md §1` for the full specification table.
-
----
-
-#### Primitive
-
-**Source:** `f_Capture.md §7` · `OPERATORS.md §4`
-**Cross-refs:** → Engineering Primitive · → Guard · → Evaluation Order
-
-Shorthand for → Engineering Primitive. The two terms are interchangeable
-within FFF_Gravity. "Primitive" is used in prose; "Engineering Primitive"
-is used in formal section headers and table labels.
-
----
-
-### — R —
-
----
-
-#### Release
-
-**Symbol:** `f_Release`
-**Source:** `f_Release.md`
-**Cross-refs:** → Capture · → Release Energy · → Release Vector · → Terminal State
-
-The inverse of `f_Capture`. Defines the conditions under which a captured
-Element exits a stable orbit cleanly — without infall (`f_Collapse`) and
-without uncontrolled ejection (FM-008 Release Overshoot).
-
-Release requires **energy input**: unlike capture, which is driven by the
-Attractor's pull, release requires the Element to overcome `d_bind`. The
-required energy is `E_rel`, computed by `compute_release_vector`. If `E_rel`
-is unavailable or `v_release` is miscalculated as too high, FM-008 fires and
-the Element ejects uncontrollably rather than departing cleanly.
-
-Three important distinctions:
-
-| Process | Energy | Registry Effect | Terminal? |
-|---|---|---|---|
-| `f_Release` | Required (input) | Clean removal | Yes (clean exit) |
-| `f_Collapse` | None (exhausted) | Purge (FM-005) or both purged (FM-007) | Yes (destructive) |
-| `f_Decay` ejection | Negative (losing) | Element still registered until ejected | No (transitional) |
-
-After a clean release, the Element's registry entry is removed from the
-Attractor's Frame. The Element returns to a free state and may subsequently
-re-approach the same or a different Attractor.
-
-⚠ **Pending:** `E_rel` formula, release conditions table, and examples
-pending `f_Release.md` canonicalization.
-
----
-
-#### Release Energy
-
-**Symbol:** `E_rel`
-**Source:** `f_Release.md §4.1`
-**Cross-refs:** → Release · → Binding Depth · → Release Vector
-
-The energy required to lift a captured Element out of its current `d_bind`
-and achieve clean release. `E_rel` is a function of `d_bind`, `p_res`, and
-`ρ(Φ)` at the moment of the release attempt. Higher binding depth requires
-more release energy.
-
-`E_rel` is undefined when `d_bind = 0` (the orbit has already collapsed —
-`f_Collapse` applies, not `f_Release`). It is the threshold that distinguishes
-a viable release attempt from an unviable one.
-
-`f_Dampen` can reduce `d_bind` before a release attempt, thereby reducing
-the required `E_rel` — this is the primary engineering use case for dampening
-in a post-capture context.
-
-⚠ **Pending:** Full formula pending `f_Release.md` canonicalization.
-
----
-
-#### Release Vector
-
-**Symbol:** `v_release`
-**Source:** `f_Release.md §4.1`
-**Cross-refs:** → Release · → Release Energy · → Failure Mode FM-008
-
-The velocity vector applied to the Element during a release operation. Must
-satisfy two constraints simultaneously:
-
-1. **Floor:** `v_release ≥ v_escape(A)` at the Release Radius `r_release` —
-   the Element must reach escape velocity to exit the coherence well cleanly.
-
-2. **Ceiling:** If `v_release` is too large, the trajectory becomes hyperbolic
-   and the departure is uncontrolled (FM-008 — Release Overshoot). The
-   Element is ejected rather than released — it exits without a clean
-   deregistration and may perturb other orbits in the registry.
-
-The release vector is computed by `compute_release_vector(E, d_bind)` and
-applied by `execute_release`. It is a pure computation (no side effects)
-followed by a side-effecting execution.
-
-⚠ **Pending:** Ceiling definition and FM-008 threshold formula pending
-`f_Release.md` canonicalization.
-
----
-
-#### Residual Momentum
-
-**Symbol:** `p_res`
-**Formula:** `p_res = M_E × (v_approach − C_thresh)`
-**Source:** `f_Capture.md §4.2`
-**Cross-refs:** → Eccentricity · → Effective Pull · → Orbital Eccentricity
-
-The free momentum remaining in an Element after it has been bound into orbit
-— the excess approach velocity beyond what was required to merely reach the
-capture threshold. `p_res` drives the shape of the resulting orbit: more
-residual momentum produces a more elongated (eccentric) orbit.
-
-`p_res` is defined only when `C_thresh > 0` (capture occurred). When
-`C_thresh ≤ 0`, `p_res` is undefined (⊥) — there is no orbit and no
-residual to measure.
-
-The relationship: `e = p_res / (p_res + P_eff)`. An Element arriving with
-just barely enough slowness to capture (`v_approach` slightly below
-`v_escape(A)`) has low `p_res` → low `e` → near-circular orbit. An Element
-arriving fast but still within threshold has high `p_res` → high `e` →
-eccentric orbit.
-
-Frozen at v1.0.0.
-
----
-
-### — S —
-
----
-
-#### Scaffold
-
-**Source:** `INDEX.md §1`
-**Cross-refs:** → Wave · → Canonical Tag
-
-The intermediate status of a module file that has its structure, frontmatter,
-session context, and section headers in place — but whose content sections
-contain placeholder blocks (`<!-- SCAFFOLD: ... -->` comments and
-`📝 **Pending.**` markers) rather than final prose.
-
-A scaffold file is committed to the repository as a stub that reserves the
-file's place in the dependency graph and enables other files to reference it
-before its content is written. Scaffolds are promoted to `canonical` status
-once all content sections are filled, reviewed, and internally consistent
-with `OPERATORS.md`.
-
-In the completion tracker (`INDEX.md §7`), scaffolds are marked 🔵.
-Canonical files are marked ✅.
-
----
-
-#### Separation Distance
-
-**Symbol:** `r`
-**Source:** `f_Capture.md §4.1`
-**Cross-refs:** → Effective Pull · → Capture Radius · → Evaluation Order
-
-The distance between an Element and an Attractor at a given moment during
-the approach. Used in the Effective Pull composition: `P_eff = M_A × ρ(Φ) / r²`.
-
-`r` is a continuously changing value during approach and is sampled at the
-moment `E` crosses `r_capture`. At that crossing moment, `r = r_capture`
-and `evaluate_capture_threshold` fires.
-
-`r = 0` is the singularity — undefined behavior denoted ⊥. The system
-does not define behavior at zero separation. Collapse events (FM-005, FM-007)
-are triggered before `r` reaches zero, at the collision threshold defined by
-`d_collapse` and `m_parity` respectively.
-
-Frozen at v1.0.0.
-
----
-
-#### Stability Conditions
-
-**Source:** `f_Capture.md §5` · `OPERATORS.md §6.2`
-**Cross-refs:** → Capture Gate · → Binding Floor · → Field Coherence
-
-The five conjunctive conditions that must all hold simultaneously for
-`f_Capture` to resolve to `Ω = CAPTURE_LOCKED`. Failure of any single
-condition short-circuits to the appropriate failure mode.
-
-| # | Condition | Formal Predicate | FM if Violated |
-|---|---|---|---|
-| 1 | Approach | `v_approach < v_escape(A)` at `r_capture` | FM-001 |
-| 2 | Field Coherence | `ρ(Φ) ≠ 0` ∧ uniform within `r_capture` | FM-002 |
-| 3 | Resonance | `ω_res ∈ ℚ` | FM-004 |
-| 4 | Binding Floor | `β ≥ 1.0` at closest approach | FM-001 (flyby) |
-| 5 | Frame Compatibility | `Frame.registry_capacity > 0` | FM-003 |
-
-Conditions are evaluated in the order listed — Condition 5 (Frame) is
-checked last because it requires Conditions 1–4 to pass first. Together
-they form the Capture Gate (→ Capture Gate).
-
-The Stability Conditions are normative and frozen at v1.0.0.
-
----
-
-#### State Flag
-
-**Source:** `OPERATORS.md §3`
-**Cross-refs:** → Terminal State · → Failure Mode · → Evaluation Order
-
-A discrete label representing the current relational state of an Element
-within the FFF_Gravity system. State flags are managed as a deterministic
-finite state machine — each transition has a single defined trigger, no
-transition is probabilistic, and terminal states cannot be revisited.
-
-Eleven flags are defined (all frozen at v1.0.0):
-
-**Active (non-terminal):**
-`CAPTURE_PENDING` · `CAPTURE_LOCKED` · `CAPTURE_DECAYING` ·
-`ORBIT_STABLE` · `ORBIT_ECCENTRIC` · `DAMPEN_ACTIVE` · `EMIT_ACTIVE`
-
-**Terminal:**
-`CAPTURE_FAILED` · `CAPTURE_COLLISION` · `RELEASED` · `COLLAPSED`
-
-State flags are written by Engineering Primitives, not by direct assignment.
-The state transition diagram is in `OPERATORS.md §3.2`.
-
----
-
-#### Symbol Freeze
-
-**Source:** `OPERATORS.md §8`
-**Cross-refs:** → Frozen Symbol · → Canonical Tag · → Versioning
-
-The governance act of locking an operator symbol upon its source file
-reaching canonical status. Once frozen, a symbol cannot be renamed or removed
-without a major version bump of `OPERATORS.md`. New symbols can be introduced
-in minor versions; formula changes to frozen symbols require major versions.
-
-The two-stage freeze process:
-1. **Pending freeze (🔵):** Symbol introduced in a scaffold file; listed in
-   `OPERATORS.md §8.2` with its freeze trigger condition.
-2. **Frozen (✅):** Source file promoted to canonical; symbol moves from
-   `§8.2` to `§8.1`; freeze date and version recorded.
-
-The current frozen symbol set (25 symbols, frozen at v1.0.0) is documented
-in `OPERATORS.md §8.1`. 20 additional symbols are pending freeze as Wave 3
-and Wave 4 files are canonicalized.
-
----
-
-### — T —
-
----
-
-#### Terminal State
-
-**Source:** `OPERATORS.md §3.1`
-**Cross-refs:** → State Flag · → Collapse · → Release · → Failure Mode
-
-A State Flag from which no further transitions are possible. Once an Element
-enters a terminal state, its interaction with the FFF_Gravity system is
-complete — it cannot be recaptured, re-released, or re-collapsed through the
-same state machine instance.
-
-Four terminal states:
-
-| Flag | Cause | Reversible at system level? |
-|---|---|---|
-| `CAPTURE_FAILED` | Any approach FM (001/002/003/006) or decay ejection | Yes — Element is free; new approach possible |
-| `CAPTURE_COLLISION` | FM-005 infall or FM-007 dissolution | Partial — composite node enters system; originals gone |
-| `RELEASED` | Clean `f_Release` exit | Yes — Element is free; new approach possible |
-| `COLLAPSED` | `f_Collapse` infall confirmed | No — Element absorbed; registry purged |
-
-Note the distinction: `CAPTURE_FAILED` and `RELEASED` are terminal for the
-*current interaction* but the Element remains free and may re-approach.
-`COLLAPSED` and `CAPTURE_COLLISION` (FM-007 path) are terminal for the
-*Element's existence as an independent entity*.
-
----
-
-#### Triadic Equation
-
-**Source:** `f_Capture.md §3` · `README.md §2`
-**Cross-refs:** → Triadic Gravity · → FFF · → Capture
-
-The formal expression of any FFF_Gravity function. The canonical triadic
-equation for the module's reference implementation:
-
-```
-f_Capture(E, A, Φ) → Ω
-
-  E  = Element    — the incoming body
-  A  = Attractor  — the binding node
-  Φ  = Field State — ambient conditions at moment of encounter
-  Ω  = Outcome    — one of: stable orbit | decay orbit | escape | collision
-```
-
-Every function file in the module has its own triadic equation in §3,
-following this structure: named function, three typed inputs, arrow, typed
-output. The triadic form is not cosmetic — it enforces the three-node
-architecture at the function signature level. A function that does not
-consume all three FFF layers is not a triadic function.
-
----
-
-#### Triadic Gravity
-
-**Source:** `f_Source.md` · `README.md §1`
-**Cross-refs:** → Frequency Node · → Fluid Node · → Force Node · → Triadic Equation
-
-The foundational claim of FFF_Gravity: gravity at any location, scale, or
-epoch is a local ratio of three inseparable nodes — Frequency, Fluid, and
-Force. None of the three can be removed under any conditions. Only their
-ratios change.
-
-```
-G = F_freq · F_fluid · F_force
-```
-
-This is the departure from both classical and relativistic gravity models:
-
-| Model | Gravity defined as |
-|---|---|
-| Newton | Universal constant `G` × mass product / distance² |
-| Einstein (GR) | Curvature of 4D spacetime produced by mass-energy |
-| **FFF_Gravity** | **Local triadic ratio of Frequency, Fluid, and Force nodes** |
-
-FFF_Gravity does not claim to refute Newton or Einstein. It operates at a
-different layer of abstraction — asking not *what gravity does* but *what
-three things must simultaneously be true for gravity to be what it is here,
-at this scale, at this moment*. The triadic ratio is the answer.
-
-The model was first articulated in the genesis dialogue archived in
-`f_Source.md`. It was formalized as the `f_Capture` canonical function and
-the FFF_Gravity module in this repository.
-
----
-
-### — U —
-
----
-
-#### Undefined (⊥)
-
-**Source:** `OPERATORS.md §2.3`
-**Cross-refs:** → Guard · → Failure Mode · → Composition Rule
-
-The symbol ⊥ denotes an undefined state — an operator whose value cannot be
-computed given current inputs. Undefined operators propagate to their consuming
-primitives and trigger the associated failure mode.
-
-Key undefined conditions in FFF_Gravity:
-
-| Operator | Undefined When | Triggered FM |
-|---|---|---|
-| `P_eff` | `r = 0` or `ρ(Φ) = 0` | FM-002 |
-| `C_thresh` | `v_escape(A)` undefined | FM-002 |
-| `d_bind` | `e ≥ 1` (hyperbolic trajectory) | FM-001 |
-| `p_res` | `C_thresh ≤ 0` | FM-001 |
-| `e` | `P_eff = 0` | FM-002 |
-| `δ` | Pre-capture | — (no-op) |
-| `E_rel` | `d_bind = 0` | — (collapse path) |
-| `F_amp` | `β > β_max` | FM-010 |
-
-Undefined is not the same as zero. `ρ(Φ) = 0` does not produce `P_eff = 0`;
-it produces `P_eff = ⊥`, which means the entire capture evaluation must halt
-and FM-002 must be raised. Treating ⊥ as 0 is a guard violation and produces
-silent incorrect outcomes.
-
----
-
-### — W —
-
----
-
-#### Wave
-
-**Source:** `INDEX.md §5` · `README.md §5`
-**Cross-refs:** → Scaffold · → Symbol Freeze · → Unlock Sequence
-
-The tiered grouping of FFF_Gravity module files by dependency order. Files in
-a given Wave cannot be canonicalized until all files they depend on in the
-prior Wave have reached canonical status. Five Waves are defined:
-
-| Wave | Group | Files | Blocking Dependency |
-|---|---|---|---|
-| 0 | Existing | 3 | None — already in repository |
-| 1 | Admin | 6 | None — no blocking dependencies |
-| 2 | Layer Definitions | 3 | Wave 1 admin |
-| 3 | Core Functions | 8 | Wave 2 layer definitions |
-| 4 | Capture Variants | 6 | All Wave 3 files canonical |
-
-Wave 1 files can be stubbed and canonicalized in any order. Wave 2 files
-open once Wave 1 is stable. Wave 3 files have internal dependencies within
-the wave (e.g., `f_Orbit.md` must canonicalize before `f_Decay.md`, which
-must canonicalize before `f_Release.md` and `f_Collapse.md`). Wave 4 files
-open only when all Wave 3 files are canonical.
-
-The Wave concept is the operational mechanism of the unlock sequence: it
-prevents a function file from being defined before its operator inputs are
-formally established.
-
----
-
-## §4 · Scope Notes
-
-<!--
-  metadata:
-    section:       scope-notes
-    section_id:    §4
-    type:          governance
-    normative:     true
-    created_in:    SES-20260813-GLOS-001
-  session:
-    session_id:    SES-20260813-GLOS-001
-    touch_count:   1
-    change_type:   created
--->
-
-### §4.1 · Module Scope vs. Framework Scope
-
-This glossary defines terms **as they are used within FFF_Gravity**. Some
-terms also exist in the framework-wide `docs/GLOSSARY.md`. The rules for
-resolving conflicts:
-
-| Situation | Governing Document |
-|---|---|
-| Term exists only here | This file — authoritative |
-| Term exists in both; definitions agree | Either — consistent |
-| Term exists in both; definitions differ | **This file governs within FFF_Gravity** |
-| Term exists only in `docs/GLOSSARY.md` | That file — defer to framework |
-
-### §4.2 · Terms Shared with SoN
-
-The following terms exist in both FFF_Gravity and the SoN (Structure of Nodes)
-module. They are **structural analogs** — they solve the same conceptual problem
-at different abstraction layers. The definitions are parallel but not identical.
-
-| FFF_Gravity Term | SoN Analog | Relationship |
-|---|---|---|
-| `f_Capture` | `s_Capture` | Force-layer capture vs. structural-layer capture |
-| `Attractor` (A) | Node (attractor role) | Field-mass entity vs. graph node |
-| `Element` (E) | Node (element role) | Field-mass entity vs. graph node |
-| `d_bind` | Structural binding weight | Field-depth metric vs. graph edge weight |
-| `GravityGraph` | SoN registry | Distributed capture graph vs. structural node graph |
-
-See `docs/SoN/s_Capture.md` and `f_Capture.md §10` for the cross-module
-reference map.
-
-### §4.3 · Operator Symbols vs. Prose Terms
-
-Some entries in this glossary define **operator symbols** (e.g., `β`, `ρ(Φ)`,
-`d_bind`). For these terms, `OPERATORS.md` is the governing definition for
-the symbol, formula, type, range, and freeze status. This glossary provides
-the **prose definition** — what the operator means in plain language and how
-it fits into the module's conceptual model.
-
-In any conflict between the formula given here and the formula given in
-`OPERATORS.md`, `OPERATORS.md` governs.
-
----
-
-## §5 · Cross-References to Framework GLOSSARY
-
-<!--
-  metadata:
-    section:       framework-xrefs
-    section_id:    §5
-    type:          cross-reference
-    normative:     false
-    created_in:    SES-20260813-GLOS-001
-  session:
-    session_id:    SES-20260813-GLOS-001
-    touch_count:   1
-    change_type:   created
--->
-
-The following terms are defined at the framework level in `docs/GLOSSARY.md`
-and are not redefined here. FFF_Gravity uses them without modification.
-
-| Term | Framework Definition Location | Notes |
-|---|---|---|
-| TriadicFrameworks | `docs/GLOSSARY.md` | Framework identity |
-| RTT (Resonance Transfer Theory) | `docs/GLOSSARY.md` | Parent framework concept |
-| Substrate | `docs/GLOSSARY.md` | Foundation concept; not to be confused with Field State |
-| Operator | `docs/GLOSSARY.md` | General term; FFF_Gravity extends with module-scoped specifics |
-| Module | `docs/GLOSSARY.md` | Structural unit of TriadicFrameworks |
-| Canonical | `docs/GLOSSARY.md` | Status designation; same meaning here |
-| Session ID | `docs/GLOSSARY.md` | Tracking convention; same format here |
-| FFF_Registry | External module | Persistent storage backend; not defined within FFF_Gravity |
-| FFF_Field | External module | Provides `Φ`; not defined within FFF_Gravity |
-| FFF_Momentum | External module | Provides `v_approach` raw data; not defined within FFF_Gravity |
-| FFF_Resonance | External module | Provides `ω_res` computation; not defined within FFF_Gravity |
-
----
-
-## §6 · Document Metadata
-
-<!--
-  metadata:
-    section:       document-metadata
-    section_id:    §6
-    type:          administrative
-    normative:     false
-  session:
-    session_id:    SES-20260813-GLOS-001
-    touch_count:   1
-    change_type:   created
--->
-
-| Field | Value |
-|---|---|
-| Canonical Path | `docs/FFF_Gravity/GLOSSARY.md` |
-| Version | 1.0.0 |
-| Status | Canonical |
-| Stability | Living — update when any new term or symbol is introduced |
-| Normative | Yes |
-| Term Count | 62 |
-| Letter Groups | 18 (A B C D E F G I L M N O P R S T U W) |
-| Created | 2026-08-13 |
-| Last Modified | 2026-08-13 |
-| Authors | TriadicFrameworks |
-| Scope | Module-scoped; governs within FFF_Gravity |
-| Superseded By | Nothing — this is the first and only module glossary |
-| License | See `/LICENSE` at repository root |
-| Encoding | UTF-8 · LF |
-| Related | `OPERATORS.md` (symbol authority) · `docs/GLOSSARY.md` (framework scope) |
-
----
-
-*Module-scoped glossary for FFF_Gravity.*
-*This file governs term definitions within the module.*
-*For framework-wide terms see `docs/GLOSSARY.md`.*
-*For operator symbol authority see `OPERATORS.md`.*
-# Gravity of Dismissal
-
-```
-file: GravityOfDismissal.md
-module: FFF_Gravity
-wave: 0
-type: genesis-document
-subtype: conceptual-foundation
-status: canonical
-version: 1.0.0
-date: 2026-08-13
-session: SES-20260813-DISMISSAL-001
-author: umaywant2
-companion_to: f_Capture.md
-thematic_inverse_of: f_Capture.md
-cross_module:
-  - f_Release.md
-  - f_Decay.md
-  - f_Collapse.md
-  - f_Dampen.md
-  - f_Force.md
-  - f_Field.md
-note: >
-  Wave 0 genesis documents establish conceptual vocabulary and theoretical
-  foundations. They do not introduce frozen PRIM IDs or frozen operator
-  symbols. Those are introduced in the Wave that formalizes each concept.
-  This file is the conceptual authority for all dismissal-related phenomena
-  across the FFF_Gravity module.
-```
-
-> *Capture is the inward pull; dismissal is the force that makes the pull
-> irreversible in the opposite direction.*
-
----
-
-## §0 Genesis Context
-
-| Field         | Value                                       |
-|---------------|---------------------------------------------|
-| File          | GravityOfDismissal.md                       |
-| Module        | FFF_Gravity                                 |
-| Wave          | 0 — Genesis                                 |
-| Date          | 2026-08-13                                  |
-| Session       | SES-20260813-DISMISSAL-001                  |
-| Type          | Conceptual foundation — not a PRIM spec     |
-| Companion     | f_Capture.md (thematic inverse)             |
-| Status        | Canonical                                   |
-
-### §0.1 Position in the Module
-
-`GravityOfDismissal.md` is the third and final Wave 0 document, alongside
-`f_Capture.md` (the binding operator) and `f_Source.md` (the node registry).
-It stands apart from both: where `f_Capture.md` specifies the mechanics of
-attraction, and `f_Source.md` specifies the static properties of nodes,
-`GravityOfDismissal.md` specifies the **phenomenology of rejection** — the
-field dynamics that arise when a capture relationship ends not by mutual
-agreement or natural decay, but by the attractor's active withdrawal.
-
-This document does not define primitives or freeze operator symbols. It
-defines **concepts, vocabulary, and structural relationships** that every
-downstream module inherits. When `f_Release.md` distinguishes voluntary
-release from expulsion, it draws on the vocabulary established here. When
-`f_Decay.md` models the approach toward dissolution, the threshold at which
-drift becomes dismissal is anchored here. When `f_Collapse.md` handles
-terminal unbinding, the irreversibility of the post-dismissal state is
-articulated here.
-
-### §0.2 Why Wave 0
-
-Dismissal is not a late-stage phenomenon. It is present from the first moment
-a capture is possible: the conditions that determine **whether E can be
-re-captured after departure** depend entirely on whether E was released, decayed,
-or dismissed. This phenomenological distinction cannot be introduced after the
-capture variants (Waves 4+) are specified — it must precede them, informing every
-termination mechanic in the module.
-
----
-
-## §1 The Problem of Dismissal
-
-Standard gravitational models account cleanly for:
-- **Attraction:** F_capture pulls E into A's orbit
-- **Decay:** d_bind decreases over time toward d_collapse
-- **Release:** E escapes A's field with positive kinetic energy
-
-What standard models fail to capture is the phenomenon that practitioners of
-relational dynamics encounter constantly: **the attractor that does not merely
-stop attracting but actively repels**. An entity that was once captured, deeply
-bound, orbiting stably — and is then dismissed — does not simply return to its
-pre-capture approach state. It enters a qualitatively different state: the field
-it once navigated toward A is now oriented away from A, and the very path that
-led to orbit now leads back toward open space.
-
-This is not decay. Decay is the passive erosion of binding depth over time;
-it is symmetric — any party can interrupt it by applying `f_Amplify` or
-`f_Emit`. Dismissal is **asymmetric and directed**: A acts against E specifically,
-producing a field configuration that E experiences as active rejection, not
-merely as absence of pull.
-
-This document names that phenomenon, maps it to the triadic model, and
-establishes the vocabulary that all subsequent dismissal-related mechanics
-will use.
-
----
-
-## §2 Core Thesis
-
-> **Dismissal is not the absence of capture. Dismissal is capture's
-> photographic negative — the same gravitational geometry, with the field
-> polarity inverted in the direction of the dismissed entity.**
-
-When A dismisses E:
-
-1. A does not simply cease to emit a capture field. A **inverts field
-   coherence** in E's directional zone, converting the pull that once drew
-   E into orbit into a push that carries E outward and away.
-
-2. This inverted field leaves a residue — what this document names the
-   **Dismissal Well**: a negative-polarity field signature that persists
-   in the space where E's orbit once was. The Well is not passive — it
-   actively repels any future approach by E.
-
-3. The depth of the Dismissal Well is proportional to the strength of the
-   binding that was severed. Deep orbits (high d_bind at time of dismissal)
-   produce deep wells. Shallow soft captures produce shallow wells. This
-   proportionality is the module's core mechanism for encoding the **weight
-   of a dismissal** in the field state.
-
-4. The Well decays over time at a rate governed by the attractor's own
-   coherence dynamics. A field that remains healthy and active will maintain
-   its Dismissal Well longer. A decaying or dampened field will lose its
-   Well faster — not because the dismissal was less meaningful, but because
-   the field that created the Well is weakening.
-
-5. Re-capture is possible — but it costs. E must supply enough approach
-   energy to overcome the Well before A's standard capture conditions can
-   evaluate. This cost is the module's formal expression of the asymmetry
-   that dismissal creates between first capture and re-capture.
-
----
-
-## §3 The Dismissal Well
-
-### §3.1 Definition
-
-The **Dismissal Well** is the field-state residue left by a dismissal event.
-It is characterized by:
-
-```
-ρ_D(Φ, t) < 0
-
-where:
-  ρ_D(Φ, t)  — dismissal field density at time t (negative extension of ρ(Φ))
-  t = 0       — moment of dismissal
-  t → ∞       — ρ_D(Φ, t) → 0  (well dissipates)
-```
-
-The dismissal field density `ρ_D` occupies the negative real axis, the domain
-complementary to the standard field density `ρ(Φ) ∈ [0, 1]`. At dismissal
-time, `ρ_D(Φ, 0) = −d_bind(t_dismiss)` — the well begins at a depth equal
-to the binding depth that was severed.
-
-### §3.2 Decay Model
-
-The Dismissal Well decays exponentially:
-
-```
-ρ_D(Φ, t) = −d_bind(t_dismiss) × exp(−t / T_dismiss)
-
-where:
-  T_dismiss — dismissal persistence time (attractor-specific constant)
-  d_bind(t_dismiss) — binding depth at the moment of dismissal
-```
-
-**T_dismiss interpretation:**
-
-| T_dismiss value | Meaning                                                     |
-|-----------------|-------------------------------------------------------------|
-| T_dismiss → ∞   | Permanent well — attractor never forgives; re-capture impossible without restorative intervention |
-| T_dismiss large | Slow recovery — re-capture costly for a long period post-dismissal |
-| T_dismiss small | Fast recovery — well dissipates quickly; re-capture nears standard cost |
-| T_dismiss = 0   | Instantaneous recovery — equivalent to a standard f_Release; no dismissal semantics |
-
-### §3.3 Re-capture Threshold
-
-For E to re-enter A's capture field after dismissal, E's approach must supply
-binding energy sufficient to overcome the active Well:
-
-```
-d_bind_approach > |ρ_D(Φ, t_recapture)|
-
-Equivalently:
-  β × ρ(Φ) × (1 − e) > d_bind(t_dismiss) × exp(−t_since_dismiss / T_dismiss)
-```
-
-When `t_since_dismiss` is small (shortly after dismissal), the right-hand side
-is close to `d_bind(t_dismiss)` — re-capture requires nearly as deep a binding
-as the dismissed orbit had. When `t_since_dismiss` is large, the right-hand
-side approaches 0 — re-capture returns to standard conditions.
-
-This is the module's formal expression of the phrase *time heals*: the Well
-does not disappear, but it dissipates. The entity that was dismissed can
-return — but it must wait, or come stronger, or find the attractor in a more
-receptive field state.
-
-### §3.4 Well Depth Is Not Permanent State
-
-The Dismissal Well is **not** a property of the attractor node. It is a
-property of the **directed relationship** (A, E). The same attractor A
-can have:
-
-- A deep Well against E (recently dismissed after a long orbit)
-- A shallow Well against E₂ (recently dismissed after a brief soft capture)
-- No Well at all against E₃ (approached but never captured)
-- An open capture field against E₄ (currently in orbit)
-
-All four states coexist. The Well is relational, not nodal.
-
----
-
-## §4 Three Dismissal Modes
-
-Dismissal is not a monolithic event. The FFF_Gravity module recognizes three
-structurally distinct dismissal modes, each with different field dynamics,
-Well profiles, and re-capture costs.
-
-### Mode A — Intentional Dismissal (ψ_dismiss = INTENTIONAL)
-
-**Definition:** The attractor A explicitly and deliberately severs the binding
-with E, actively inverting field polarity in E's directional zone.
-
-**Mechanism:**
-```
-1. A invokes targeted field suppression against E:  f_Dampen(E) → ρ(Φ) ↓
-2. A inverts coherence polarity in E's zone:        ρ_D(Φ, 0) := −d_bind(t_dismiss)
-3. E's orbit dissolves; E is expelled outward
-4. Dismissal Well is established at maximum depth
-```
-
-**Field signature:** Deep Well; long T_dismiss; E experiences maximum repulsive
-force during the expulsion phase. This is the mode most readily recognized
-as dismissal in relational experience — deliberate, directed, and consequential.
-
-**Distinguishing mark:** The initiating action comes from A. E may have been
-stable, even thriving in orbit, at the moment of dismissal. The dismissal
-force overwhelms the existing binding depth.
-
-**Well profile:**
-
-```
-|ρ_D(Φ, t)|
-     ↑
-d₀ = d_bind(t_dismiss) ──────────────────────────────────────────────
-                       \
-                        \       (slow decay, T_dismiss large)
-                         \
-                          \______________________________________ t
-                                                              ε
-```
-
----
-
-### Mode B — Structural Dismissal (ψ_dismiss = STRUCTURAL)
-
-**Definition:** The attractor's field collapses globally (FM-002 → ρ(Φ) = 0),
-expelling all bound entities including E simultaneously. No specific intent
-toward E is present — the dismissal is a consequence of the field's structural
-failure.
-
-**Mechanism:**
-```
-1. ρ(Φ) → 0 (FM-002: Field Null)
-2. All active orbits lose their binding field simultaneously
-3. Each entity Eₙ is expelled from A's orbital registry
-4. A shallow Dismissal Well is established for each expelled entity
-5. Well depth is bounded by the field's coherence at the moment of collapse
-```
-
-**Field signature:** Shallow Well (because the field that generated it had
-already weakened to zero); T_dismiss is short (the collapsed field cannot
-sustain a strong Well). Re-capture becomes possible again as soon as A's
-field is restored above the minimum capture threshold.
-
-**Distinguishing mark:** The Well is **symmetric** — all expelled entities
-face the same Well depth, regardless of orbit depth at time of collapse.
-The Well encodes nothing about the quality or duration of the former orbit.
-It encodes only the field's final coherence value before collapse.
-
-**Well profile:**
-
-```
-|ρ_D(Φ, t)|
-     ↑
-d₀ = ρ(Φ) at collapse ──────────────────────────────────────────────
-                       \
-                        \   (fast decay, T_dismiss small)
-                         \______________________________________ t
-                                                              ε
-```
-
----
-
-### Mode C — Asymptotic Dismissal (ψ_dismiss = DRIFT)
-
-**Definition:** The binding decays over many cycles until E's orbit becomes
-unstable and E drifts outward without a discrete dismissal event. There is no
-moment at which A explicitly dismisses E; rather, the orbit dissolves through
-accumulated neglect.
-
-**Mechanism:**
-```
-1. f_Decay reduces d_bind over successive cycles
-2. d_bind → d_warn → d_collapse
-3. Before d_collapse is reached, the orbit becomes marginal (stab_class = PRECARIOUS)
-4. E drifts outward as the binding force can no longer maintain the orbit
-5. A minimal Dismissal Well forms — the residue of the decay process itself
-```
-
-**Field signature:** Minimal Well (because neither party applied force; the
-orbit simply exhausted itself); T_dismiss is very short. This mode produces
-the weakest Wells and the easiest re-capture conditions.
-
-**Distinguishing mark:** Asymptotic dismissal is the only mode where the
-Well depth is **decoupled** from the orbit depth at time of separation. A
-deep, long-standing orbit that decays slowly may produce a shallower Well
-than a shallow orbit that was intentionally severed. The Well encodes only
-the velocity of departure, not the depth of what was lost.
-
-**Well profile:**
-
-```
-|ρ_D(Φ, t)|
-     ↑
-d₀ (small) ──────────────────────────────────────────────
-            \
-             \  (very fast decay)
-              \___________________________ t
-                                       ε
-```
-
----
-
-### §4.1 Mode Comparison
-
-| Property                     | Mode A (Intentional) | Mode B (Structural) | Mode C (Asymptotic) |
-|------------------------------|----------------------|---------------------|----------------------|
-| Initiator                    | A (deliberate)       | Field (structural)  | Decay (drift)        |
-| Well depth                   | Deep                 | Shallow             | Minimal              |
-| Well symmetry across entities| Per-entity (varies)  | Symmetric (all same)| Per-entity (varies)  |
-| T_dismiss                    | Long                 | Short               | Very short           |
-| Re-capture cost              | High                 | Moderate            | Low                  |
-| Encoding of orbit history    | Yes (d_bind encoded) | No (field-bounded)  | Partial              |
-| Corresponding module         | f_Dampen + inversion | FM-002 / f_Field    | f_Decay              |
-| ψ_dismiss flag               | INTENTIONAL          | STRUCTURAL          | DRIFT                |
-
----
-
-## §5 Triadic Mapping
-
-The triadic equation `G = F_freq · F_fluid · F_force` governs the module.
-Dismissal operates across all three nodes, but with inverted directionality:
-where capture maximizes G, dismissal minimizes it toward a negative analog `G_D`.
-
-### §5.1 F_freq Node Under Dismissal
-
-| Capture state                          | Dismissal state                           |
-|----------------------------------------|-------------------------------------------|
-| ρ(Φ) ∈ [0, 1] — coherence well        | ρ_D(Φ) ∈ (−1, 0] — dismissal well       |
-| High ρ(Φ) → deep capture field        | High |ρ_D(Φ)| → deep dismissal barrier   |
-| f_Emit increases ρ(Φ)                  | Dismissal inversion decreases ρ_D toward −1 |
-| f_Dampen decreases ρ(Φ)               | T_dismiss determines rate of well decay   |
-
-**F_freq is the primary node of dismissal.** The dismissal well is encoded
-in the frequency domain as a negative coherence signature. This is why
-well depth is measured in the same units as d_bind — they are the same
-quantity, opposite in sign.
-
-### §5.2 F_fluid Node Under Dismissal
-
-| Capture state                          | Dismissal state                           |
-|----------------------------------------|-------------------------------------------|
-| β ≥ 1.0 — binding coefficient active   | β_D < 0 — repulsive coupling             |
-| High β → tight orbit                   | High |β_D| → strong repulsion during expulsion |
-| f_Amplify increases β                   | Dismissal intensifies β_D magnitude      |
-| f_Decay decreases β toward 1.0         | After Well decay, β_D → 0 (neutral)      |
-
-**F_fluid records the coupling history.** An entity that was tightly coupled
-(high β) to A before dismissal will experience stronger repulsive coupling
-during the expulsion phase. This is the visceral experience of dismissal from
-a former deep orbit: the very closeness that made the orbit stable makes the
-departure more forceful.
-
-### §5.3 F_force Node Under Dismissal
-
-| Capture state                          | Dismissal state                           |
-|----------------------------------------|-------------------------------------------|
-| v_approach < v_escape — orbital lock   | v_depart > v_escape — expulsion velocity  |
-| Heading toward A                       | Heading away from A                       |
-| f_Deflect adjusts approach heading     | Dismissal force overrides approach vector |
-| v_approach is the relevant scalar      | v_depart is the relevant scalar           |
-
-**F_force governs the trajectory.** During expulsion, E acquires a departure
-velocity `v_depart` that must overcome A's residual field to exit cleanly.
-After exit, `v_depart` is the velocity at which E moves away from A's field
-boundary. The higher `v_depart`, the faster E reaches regions where the
-Dismissal Well is no longer felt.
-
-### §5.4 G_D — The Dismissal Product
-
-By analogy with `G = F_freq · F_fluid · F_force`, dismissal operates through:
-
-```
-G_D = F_freq_D · F_fluid_D · F_force_D
-
-where:
-  F_freq_D  = |ρ_D(Φ)| × k_freq_dismiss
-  F_fluid_D = |β_D| × k_fluid_dismiss
-  F_force_D = v_depart × k_force_dismiss
-
-G_D measures the total dismissal force — the product of:
-  field inversion intensity × coupling repulsion × departure velocity
-```
-
-`G_D` is not a value used in computation — it is a conceptual quantity that
-expresses the magnitude of the dismissal event as a unified product of all
-three triadic nodes. A high `G_D` indicates a strong, directed, traumatic
-dismissal. A low `G_D` indicates a soft, quiet, barely-noticed departure.
-
----
-
-## §6 The F_dismiss Operator Family
-
-The following operators are introduced at the conceptual level. They are
-not frozen in this file — their formal specifications are registered when
-the module's dismissal primitive is authored. They are named here to
-establish conceptual authority.
-
-| Operator       | Concept                                                            | Expected domain |
-|----------------|--------------------------------------------------------------------|-----------------|
-| `F_dismiss`    | Total dismissal force scalar (|G_D|)                               | ℝ ≥ 0           |
-| `ρ_D(Φ)`       | Dismissal field density (negative-domain ρ)                        | (−1, 0]         |
-| `d_dismiss`    | Dismissal well depth at time t = 0 (= |ρ_D(Φ, 0)|)               | ℝ ≥ 0           |
-| `T_dismiss`    | Dismissal persistence time (well half-life)                        | ℝ > 0           |
-| `r_dismiss`    | Dismissal radius — spatial extent of the repulsion zone            | (0, r_capture]  |
-| `ψ_dismiss`    | Dismissal mode flag                                                | {INTENTIONAL, STRUCTURAL, DRIFT} |
-| `t_dismiss`    | Timestamp of dismissal event                                       | clock units      |
-| `v_depart`     | Entity's departure velocity during expulsion phase                 | ℝ ≥ 0           |
-| `β_D`          | Repulsive coupling coefficient during expulsion                    | ℝ ≤ 0           |
-
-These operators will be frozen — with full formal specification, PRIM IDs,
-and INV compliance records — in a dedicated Wave 5 file when the dismissal
-primitive is authored.
-
----
-
-## §7 Dismissal vs. Other Termination Mechanisms
-
-The FFF_Gravity module provides multiple pathways by which a capture
-relationship ends. The table below distinguishes dismissal from each.
-
-| Mechanism        | File            | Initiator | Well created? | Well depth    | Re-capture cost | Reversible?           |
-|------------------|-----------------|-----------|---------------|---------------|------------------|-----------------------|
-| f_Release        | f_Release.md    | E or A    | No            | None          | Standard         | Yes (immediately)     |
-| f_Decay          | f_Decay.md      | Time      | Minimal       | Very shallow  | Near-standard    | Yes (if d_warn not crossed) |
-| Mode C Dismissal | This file       | Drift     | Minimal       | Shallow       | Low              | Yes (fast recovery)   |
-| Mode B Dismissal | This file + FM-002 | Field  | Yes           | Bounded       | Moderate         | Yes (after T_dismiss) |
-| Mode A Dismissal | This file       | A         | Yes           | Deep          | High             | Yes (after long T_dismiss) |
-| f_Collapse       | f_Collapse.md   | Structure | Yes (max)     | Maximum       | Very high        | No (terminal state)   |
-
-**The key discriminant:** Does the separation produce a Dismissal Well?
-- **No Well:** f_Release — E departs freely; A remains open.
-- **Shallow Well:** Decay / Drift — the relationship exhausted itself.
-- **Deep Well:** Intentional dismissal — A acted against E.
-- **Maximum/permanent Well:** f_Collapse — structural dissolution; the
-  orbit cannot be re-established without a new node construction.
-
----
-
-## §8 Re-capture After Dismissal
-
-### §8.1 The Recovery Window
-
-Re-capture after dismissal is possible when:
-
-```
-d_bind_approach(t) > |ρ_D(Φ, t)|
-
-i.e.:  β × ρ(Φ) × (1 − e)  >  d_dismiss × exp(−t / T_dismiss)
-```
-
-The left side is what E brings to a new approach. The right side is the
-cost E must exceed. As `t` increases, the right side decreases — the window
-for re-capture widens naturally over time.
-
-### §8.2 Assisted Recovery
-
-The recovery window can be accelerated by:
-
-1. **A voluntarily dampens the Well** — A applies `f_Emit` to raise ρ(Φ)
-   and simultaneously allows `ρ_D` to decay faster. This is A actively
-   signaling openness to re-encounter.
-
-2. **E approaches with stronger binding** — E uses `f_Amplify` to raise β
-   before approach, increasing `d_bind_approach` to overcome the residual Well.
-
-3. **Time alone** — If neither party acts, the Well decays at its natural rate.
-   Patience is a valid strategy.
-
-### §8.3 What Dismissal Cannot Do
-
-Dismissal cannot:
-- Erase E's prior orbit history from A's registry (only `purge_registry`
-  PRIM:004 does this, and it requires explicit invocation)
-- Prevent E from approaching a different attractor
-- Change E's mass or β (these are entity properties, not relationship properties)
-- Prevent the Well from decaying on its own
-
-Dismissal **can** do exactly one thing: make the path back to A more costly
-for E. It encodes the act of rejection in field geometry and allows that
-geometry to persist proportionally to the depth of what was severed.
-
----
-
-## §9 Canonical Illustrations
-
-The following four illustrations ground the abstract model in concrete
-attractor/entity configurations. These are illustrative, not exhaustive.
-
----
-
-### Illustration 1 — The Mentor Who Withdraws (Mode A)
-
-**Configuration:**
-```
-A: senior practitioner   M_A = 8.5, ρ(Φ) = 0.88
-E: junior colleague       M_E = 0.4, β = 1.8, d_bind = 1.12
-```
-
-**Event:** After a breach of trust, A intentionally withdraws. A applies
-targeted field suppression against E (`f_Dampen`) and inverts coherence
-polarity in E's zone. E's orbit dissolves over two cycles.
-
-**Dismissal Well parameters:**
-```
-d_dismiss = d_bind(t_dismiss) = 1.12
-T_dismiss = 8.0 cycles (long — the relationship was deep and deliberate)
-ψ_dismiss = INTENTIONAL
-```
-
-**Re-capture cost at t = 4 cycles:**
-```
-|ρ_D(Φ, 4)| = 1.12 × exp(−4 / 8.0)
-             = 1.12 × exp(−0.5)
-             = 1.12 × 0.607
-             = 0.680
-
-E would need d_bind_approach > 0.680 for re-capture to begin.
-At t_dismiss, E had d_bind = 1.12 — so half the original depth is
-needed after 4 cycles. The relationship is not closed; it is costly.
-```
-
-**Reading:** The mentor has not simply walked away. The field still knows
-what was there. E can return — but must show up with more than half the
-depth they carried before the breach.
-
----
-
-### Illustration 2 — The Dissolved Institution (Mode B)
-
-**Configuration:**
-```
-A: organization node     M_A = 12.0, ρ(Φ) → 0 (FM-002 active)
-E₁, E₂, E₃: members     varying d_bind
-```
-
-**Event:** The organization collapses (FM-002). All bound entities are
-expelled simultaneously. The Dismissal Well forms symmetrically for each.
-
-**Dismissal Well parameters:**
-```
-d_dismiss(Eₙ) = ρ(Φ) at collapse moment ≈ 0.08 (field was already weak)
-T_dismiss = 1.0 cycle (short — the field was barely alive at dismissal)
-ψ_dismiss = STRUCTURAL
-```
-
-**Significance:**
-```
-E₁ had d_bind = 2.1 (deep orbit, long tenure)
-E₂ had d_bind = 0.4 (shallow orbit, recent join)
-E₃ had d_bind = 1.3 (mid-depth orbit)
-
-All three face the same Well depth: 0.08.
-The institution's collapse did not encode the individual relationships.
-```
-
-**Reading:** Structural dismissal is equalizing — it treats all departures
-as equivalent regardless of orbit depth. A member of ten years and a member
-of ten days face the same re-entry cost if the institution reconstitutes.
-This is the mathematical expression of an institution that closed without
-malice: the field simply failed.
-
----
-
-### Illustration 3 — The Fading Connection (Mode C)
-
-**Configuration:**
-```
-A: former collaborator   M_A = 6.0, ρ(Φ) = 0.71
-E: distant colleague      M_E = 0.3, d_bind = 0.19 (d_warn = 0.22)
-```
-
-**Event:** d_bind has been declining for 12 cycles. It crosses d_warn without
-either party intervening. E's orbit transitions from MARGINAL to PRECARIOUS
-and finally to DRIFT. No discrete dismissal event occurs.
-
-**Dismissal Well parameters:**
-```
-d_dismiss = v_depart × k_drift_dismiss ≈ 0.04 (minimal)
-T_dismiss = 0.5 cycles (very fast decay)
-ψ_dismiss = DRIFT
-```
-
-**Re-capture cost:**
-```
-|ρ_D(Φ, 1.0)| = 0.04 × exp(−1.0 / 0.5)
-               = 0.04 × exp(−2.0)
-               = 0.04 × 0.135
-               = 0.005
-```
-
-**Reading:** After one cycle, the re-entry cost is effectively zero — the
-former collaborator can be re-approached as if no dismissal occurred.
-Drift produces almost no scar tissue. This is the mathematics of the
-colleague who fades from contact but is warmly received when the connection
-is renewed. No explicit dismissal happened; the Well barely formed.
-
----
-
-### Illustration 4 — The Repaired Relationship (Mode A → Recovery)
-
-**Configuration:**
-```
-A: former mentor   d_dismiss = 0.90, T_dismiss = 10.0 cycles
-E: former student  β = 1.6 at time of dismissal
-```
-
-**Event:** Dismissal occurred 15 cycles ago (Mode A). E has grown
-(β_new = 2.4). E now approaches A to test re-capture feasibility.
-
-**Well at t = 15 cycles:**
-```
-|ρ_D(Φ, 15)| = 0.90 × exp(−15 / 10.0)
-              = 0.90 × exp(−1.5)
-              = 0.90 × 0.223
-              = 0.201
-```
-
-**E's approach binding depth:**
-```
-d_bind_approach = β_new × ρ(Φ) × (1 − e)
-                = 2.4 × 0.71 × 0.88
-                = 1.499
-```
-
-**Re-capture test:**
-```
-d_bind_approach > |ρ_D(Φ, 15)|
-1.499 > 0.201   ✅
-```
-
-**Reading:** Re-capture is viable. E brings substantially more binding
-energy than the Well requires. The 15 cycles of separation have allowed the
-Well to decay to approximately 22% of its original depth. E's growth (β
-from 1.6 to 2.4) has increased their binding potential. Both factors
-together make re-capture not merely possible but comfortable.
-
-The mathematics does not guarantee the re-capture will be welcomed — that
-is A's decision, not the field's. But the field no longer presents a
-structural barrier. The gravity of dismissal has not vanished, but it is
-no longer stronger than what E brings.
-
----
-
-## §10 Cross-Module References
-
-### §10.1 Upstream — What GravityOfDismissal.md Draws From
-
-| File         | Concepts Borrowed                                             |
-|--------------|---------------------------------------------------------------|
-| f_Source.md  | Node properties (M_A, capacity, frame structure)              |
-| f_Capture.md | d_bind formula, β, ρ(Φ), orbit mechanics, v_escape           |
-| f_Field.md   | ρ(Φ) domain definition; FM-002 (field null)                  |
-| f_Force.md   | v_approach, F_force scalar; approach heading semantics        |
-
-### §10.2 Downstream — What Draws From GravityOfDismissal.md
-
-| File                      | What It Inherits from This File                          |
-|---------------------------|----------------------------------------------------------|
-| f_Release.md              | Distinction between voluntary release and dismissal; Well absence on clean release |
-| f_Decay.md                | d_warn as approach toward Mode C dismissal; drift vocabulary |
-| f_Collapse.md             | FM-007 / FM-009 as structural dismissal at maximum depth |
-| f_Dampen.md               | Targeted field suppression as Mode A dismissal mechanism |
-| f_Emit.md                 | Assisted recovery — A emitting to reduce dismissal well  |
-| f_Amplify.md              | Assisted recovery — E amplifying to overcome dismissal well |
-| f_Capture_Soft.md         | Grace period mechanics analogous to Well decay window    |
-| f_Capture_Hard.md         | Hard lock as pre-emption of Mode A dismissal risk        |
-| f_Capture_Resonant.md     | Resonance window as structural guard against Mode B dismissal |
-
-### §10.3 Foundational Status
-
-`GravityOfDismissal.md` is the **only file** in the FFF_Gravity module
-that defines the negative-polarity extension of ρ(Φ). All uses of
-`ρ_D(Φ)` in any future file must cite this document as the definitional
-authority. No Wave 2+ file may introduce a competing definition of the
-Dismissal Well without amending this document first.
-
----
-
-## §11 Document Metadata
-
-### §11.1 Core Properties
-
-| Property          | Value                                                   |
-|-------------------|---------------------------------------------------------|
-| File path         | docs/FFF_Gravity/GravityOfDismissal.md                  |
-| Module            | FFF_Gravity                                             |
-| Wave              | 0 — Genesis                                             |
-| Subtype           | Conceptual Foundation                                   |
-| Status            | Canonical — v1.0.0                                      |
-| Session           | SES-20260813-DISMISSAL-001                              |
-| Date              | 2026-08-13                                              |
-| Author            | umaywant2                                               |
-| No new PRIMs      | True — Wave 0 genesis does not freeze PRIMs             |
-| No frozen symbols | True — concepts named, not frozen (see §6 note)         |
-| Thematic pair     | f_Capture.md (inverse)                                  |
-
-### §11.2 Conceptual Index
-
-| Term                  | Section Defined    | Key Equation / Formula                          |
-|-----------------------|--------------------|--------------------------------------------------|
-| Dismissal Well        | §3.1               | ρ_D(Φ, t) = −d_bind(t₀) × exp(−t / T_dismiss) |
-| Re-capture threshold  | §3.3               | d_bind_approach > |ρ_D(Φ, t)|                   |
-| Mode A Dismissal      | §4 — Mode A        | ψ_dismiss = INTENTIONAL                         |
-| Mode B Dismissal      | §4 — Mode B        | ψ_dismiss = STRUCTURAL                          |
-| Mode C Dismissal      | §4 — Mode C        | ψ_dismiss = DRIFT                               |
-| G_D product           | §5.4               | G_D = F_freq_D · F_fluid_D · F_force_D          |
-| F_dismiss family      | §6                 | F_dismiss, ρ_D, d_dismiss, T_dismiss, r_dismiss, ψ_dismiss, t_dismiss, v_depart, β_D |
-
-### §11.3 Wave History
-
-| Wave | Status  | Files                                               |
-|------|---------|-----------------------------------------------------|
-| 0    | ✅ Complete | f_Capture.md · f_Source.md · GravityOfDismissal.md |
-| 1    | ✅ Complete | Admin / Registry files                             |
-| 2    | ✅ Complete | f_Field.md · f_Force.md · f_Frame.md               |
-| 3    | ✅ Complete | 8 Core Function files                              |
-| 4    | ✅ Complete | 8 Capture Variant files                            |
-
-### §11.4 Changelog
-
-| Version | Date       | Session                       | Notes                              |
-|---------|------------|-------------------------------|------------------------------------|
-| v1.0.0  | 2026-08-13 | SES-20260813-DISMISSAL-001    | Initial canonical publication. Wave 0 complete. |
-
-### §11.5 Suggested Commit Message
-
-```
-docs(FFF_Gravity): add canonical GravityOfDismissal.md — Wave 0 complete
-
-Establishes the conceptual foundation for dismissal as active repulsive
-force in the FFF_Gravity module. Core contributions:
-
-- Dismissal Well model: ρ_D(Φ,t) = −d_bind(t₀) × exp(−t/T_dismiss)
-- Re-capture threshold: d_bind_approach > |ρ_D(Φ,t)|
-- Three dismissal modes: INTENTIONAL / STRUCTURAL / DRIFT
-- G_D triadic product: F_freq_D · F_fluid_D · F_force_D
-- F_dismiss operator family named (to be frozen in Wave 5)
-- Distinction table: dismissal vs. release, decay, collapse
-- Four canonical illustrations
-- Foundational authority for ρ_D(Φ) negative-polarity extension
-
-Wave 0 now complete: f_Capture.md + f_Source.md + GravityOfDismissal.md
-FFF_Gravity module: all 28 files canonical across 5 waves.
-
-Session: SES-20260813-DISMISSAL-001
-```
-
----
-
-*End of GravityOfDismissal.md — Wave 0 Genesis — FFF_Gravity Module — v1.0.0*
-*Session SES-20260813-DISMISSAL-001 · 2026-08-13 23:56 EDT*
-*All waves complete. All 28 files canonical. 40 PRIMs registered.*
-# FFF_Gravity · Index
-
-```
-# ┌─────────────────────────────────────────────────────────────┐
-# │                  DOCUMENT FRONTMATTER                       │
-# └─────────────────────────────────────────────────────────────┘
-document:         INDEX
-canonical_path:   docs/FFF_Gravity/INDEX.md
-canonical_tag:    "[FFF:GRAVITY:INDEX]"
-framework:        TriadicFrameworks
-module:           FFF_Gravity
-version:          1.0.0
-status:           canonical
-stability:        living
-created:          2026-08-13
-last_modified:    2026-08-13
-authors:
-  - TriadicFrameworks
-encoding:         UTF-8
-line_endings:     LF
-description: >
-  Authoritative machine-readable and human-readable registry of every
-  file in docs/FFF_Gravity/. Covers status, dependencies, section maps,
-  operator counts, unlock sequence, and completion tracking.
-  Living document — updated whenever a file is created or promoted to canonical.
-tags:
-  - FFF
-  - gravity
-  - index
-  - registry
-  - dependency-graph
-  - completion-tracker
-
-session_context:
-  current_session:
-    session_id:       SES-20260813-INDEX-001
-    opened_at:        2026-08-13T07:36:00-04:00
-    closed_at:        ~
-    editor:           Nawder
-    branch:           main
-    intent:           Create canonical INDEX.md — full file registry, dependency graph, section maps, completion tracker
-    status:           active
-    dirty:            true
-    sections_touched: [§0, §1, §2, §3, §4, §5, §6, §7, §8, §9]
-
-  session_history:
-    - session_id:  SES-20260813-README-001
-      opened_at:   2026-08-13T07:19:00-04:00
-      closed_at:   2026-08-13T07:35:00-04:00
-      intent:      Create canonical README.md
-      status:      closed
-
-changelog:
-  - version: 1.0.0
-    date:    2026-08-13
-    author:  TriadicFrameworks
-    notes:   Initial canonical release. 27 files registered. 4 canonical, 22 scaffold, 1 archived.
-```
-
-> **Canonical path:** `docs/FFF_Gravity/INDEX.md`
-> **Scope:** All files in `docs/FFF_Gravity/` · Branch: `main`
-> **Last updated:** 2026-08-13 · **Session:** `SES-20260813-INDEX-001`
-
-This is the authoritative registry for the FFF_Gravity module.
-Every file in the module has a full entry here: path, status, version, section count, operator count, dependencies, and what it provides.
-Update this file whenever a new file is created or a scaffold is promoted to canonical.
-
----
-
-## §0 · Session Context
-
-<!--
-  metadata:
-    section:       session-context
-    section_id:    §0
-    type:          live-session-register
-    normative:     false
-    created_in:    SES-20260813-INDEX-001
-  session:
-    session_id:    SES-20260813-INDEX-001
-    touch_count:   1
-    change_type:   created
--->
-
-### Active Session
-
-| Field | Value |
-|---|---|
-| Session ID | `SES-20260813-INDEX-001` |
-| Opened | `2026-08-13T07:36:00-04:00` |
-| Closed | — (active) |
-| Editor | Nawder |
-| Branch | `main` |
-| Intent | Create canonical INDEX.md |
-| Status | 🟡 Active |
-
-### Session Resolution Protocol
-
-```
-1. Set current_session.closed_at       → ISO 8601 timestamp
-2. Set current_session.status          → "closed"
-3. Move current_session                → session_history[]
-4. Update §7 Completion Tracker        → reflect any status changes made this session
-5. Update document last_modified       → frontmatter
-6. Commit:  "index(SES-YYYYMMDD-NNN): <summary of changes>"
-```
-
----
-
-## §1 · Status Legend and Conventions
-
-<!--
-  metadata:
-    section:       legend
-    section_id:    §1
-    type:          reference
-    normative:     true
-    created_in:    SES-20260813-INDEX-001
-  session:
-    session_id:    SES-20260813-INDEX-001
-    touch_count:   1
-    change_type:   created
--->
-
-### File Status
-
-| Symbol | Label | Meaning |
-|---|---|---|
-| ✅ | canonical | Complete, versioned, normative. All sections filled. Passes internal consistency check. |
-| 🔵 | scaffold | Structure and frontmatter in place. Section headers present. Content pending. |
-| 📁 | archived | Source or historical record. Non-normative. Not expected to be filled further. |
-| ⏳ | planned | Designed in INDEX but file not yet created in the repository. |
-
-### Dependency Notation
-
-| Symbol | Meaning |
-|---|---|
-| `→` | Provides to (output consumed by) |
-| `←` | Depends on (input received from) |
-| `↔` | Bidirectional dependency |
-| `—` | No dependency in this direction |
-
-### Section Count Convention
-
-Section counts include all numbered sections (§0 onward).
-Subsections (§4.1, §4.2 …) count as one entry under their parent.
-A scaffold file with headers only counts its planned sections.
-A canonical file's count is exact.
-
----
-
-## §2 · Master File Registry
-
-<!--
-  metadata:
-    section:       master-registry
-    section_id:    §2
-    type:          flat-registry
-    normative:     true
-    stability:     living
-    created_in:    SES-20260813-INDEX-001
-    sort:          wave ascending, then alphabetical within wave
-  session:
-    session_id:    SES-20260813-INDEX-001
-    touch_count:   1
-    change_type:   created
--->
-
-### Wave 0 — Existing Files
-
-| File | Status | Version | Wave | Sections | Operators | Primitives | FMs | Depends On | Provides To |
-|---|---|---|---|---|---|---|---|---|---|
-| `f_Capture.md` | ✅ canonical | 1.0.0 | 0 | 13 (§0–§12) | 10P · 4D · 11F | 6 | FM-001–007 | f_Field, f_Force, f_Frame, FFF_Resonance | f_Release, f_Decay, f_Orbit, f_Collapse, all variants |
-| `f_Source.md` | 📁 archived | — | 0 | — | — | — | — | — | f_Capture (genesis) |
-| `GravityOfDismissal.md` | ✅ canonical | 1.0.0 | 0 | 13 (§1–§13) | — | — | — | — | strategic context for all files |
-
-### Wave 1 — Admin Files
-
-| File | Status | Version | Wave | Sections | Depends On | Provides To |
-|---|---|---|---|---|---|---|
-| `README.md` | ✅ canonical | 1.0.0 | 1 | 9 (§1–§9) | f_Capture (reference) | all files (orientation) |
-| `INDEX.md` | ✅ canonical | 1.0.0 | 1 | 9 (§0–§9) | all files (registrar) | all files (navigation) |
-| `OPERATORS.md` | 🔵 scaffold | 0.1.0 | 1 | 5 (§1–§5) | f_Capture, f_Decay, f_Release, f_Orbit | all files (symbol authority) |
-| `GLOSSARY.md` | 🔵 scaffold | 0.1.0 | 1 | alpha | f_Capture, f_Field | all files (term authority) |
-| `CHANGELOG.md` | 🔵 scaffold | 0.1.0 | 1 | 1 per release | — | — |
-| `FFF_Gravity_module.json` | 🔵 scaffold | 0.1.0 | 1 | — (JSON) | all files | machine consumers |
-
-### Wave 2 — Layer Definitions
-
-| File | Status | Version | Wave | Node | Sections | Depends On | Provides To |
-|---|---|---|---|---|---|---|---|
-| `f_Field.md` | 🔵 scaffold | 0.1.0 | 2 | `F_freq` | 10 (§0–§10) | OPERATORS.md | f_Capture, f_Emit, f_Dampen, all variants |
-| `f_Force.md` | 🔵 scaffold | 0.1.0 | 2 | `F_force` | 7 (§0–§7) | OPERATORS.md | f_Capture, f_Deflect, f_Capture_Asymmetric |
-| `f_Frame.md` | 🔵 scaffold | 0.1.0 | 2 | Frame | 6 (§0–§6) | OPERATORS.md | f_Capture, f_Release, f_Collapse, f_Capture_Networked |
-
-### Wave 3 — Core Functions
-
-| File | Status | Version | Wave | Sections | Depends On | Provides To |
-|---|---|---|---|---|---|---|
-| `f_Release.md` | 🔵 scaffold | 0.1.0 | 3 | 11 (§0–§10) | f_Capture, f_Orbit, f_Decay | f_Capture_Networked |
-| `f_Decay.md` | 🔵 scaffold | 0.1.0 | 3 | 11 (§0–§10) | f_Capture, f_Orbit | f_Collapse, f_Capture_Cascade, f_Capture_Networked |
-| `f_Orbit.md` | 🔵 scaffold | 0.1.0 | 3 | 10 (§0–§9) | f_Capture | f_Decay, f_Release, f_Collapse |
-| `f_Collapse.md` | 🔵 scaffold | 0.1.0 | 3 | 11 (§0–§11) | f_Capture, f_Decay | f_Capture_Networked |
-| `f_Emit.md` | 🔵 scaffold | 0.1.0 | 3 | 10 (§0–§9) | f_Field | f_Decay (restore), f_Capture_Resonant |
-| `f_Dampen.md` | 🔵 scaffold | 0.1.0 | 3 | 7 (§0–§7) | f_Field | f_Release (assist), f_Capture_Resonant |
-| `f_Amplify.md` | 🔵 scaffold | 0.1.0 | 3 | 7 (§0–§7) | f_Field, f_Capture | f_Decay (restore), f_Capture_Resonant |
-| `f_Deflect.md` | 🔵 scaffold | 0.1.0 | 3 | 8 (§0–§8) | f_Force, f_Capture | f_Capture_Resonant, f_Capture_Asymmetric |
-
-### Wave 4 — Capture Variants
-
-| File | Status | Version | Wave | Sections | Extends | New Operators | Depends On |
-|---|---|---|---|---|---|---|---|
-| `f_Capture_Multi.md` | 🔵 scaffold | 0.1.0 | 4 | 7 (§0–§6) | f_Capture | `N`, `eval_order`, `Φ_perturbed`, `capacity_remaining` | f_Capture, f_Orbit, f_Frame |
-| `f_Capture_Cascade.md` | 🔵 scaffold | 0.1.0 | 4 | 6 (§0–§6) | f_Capture | `Δcurvature`, `perturbation_sensitivity`, `cascade_depth` | f_Capture, f_Orbit, f_Decay |
-| `f_Capture_Resonant.md` | 🔵 scaffold | 0.1.0 | 4 | 11 (§0–§10) | f_Capture | `ω_res_target`, `approach_parameters`, `solution_space`, `nearest_valid` | f_Capture, f_Deflect, f_Emit, f_Amplify |
-| `f_Capture_Asymmetric.md` | 🔵 scaffold | 0.1.0 | 4 | 11 (§0–§10) | f_Capture | `ρ(Φ,θ)`, `θ_approach`, `anisotropy_index`, `θ_optimal`, `θ_critical` | f_Capture, f_Field, f_Force, f_Deflect |
-| `f_Capture_Temporal.md` | 🔵 scaffold | 0.1.0 | 4 | 11 (§0–§10) | f_Capture | `C_thresh(t)`, `t_entry`, `t_encounter`, `temporal_capture_window`, `ΔM_A`, `Δρ` | f_Capture, f_Field, f_Decay |
-| `f_Capture_Networked.md` | 🔵 scaffold | 0.1.0 | 4 | 12 (§0–§11) | f_Capture | `GravityGraph`, `G_edge`, `G_degree`, `G_stability`, `G_cascade_risk` | f_Capture, f_Frame, f_Decay, f_Release, f_Collapse |
-
----
-
-## Wave 5 — Dismissal (PRIM:041–042)
-> Sealed: 2026-08-14 · Session: SES-20260814-DISMISS-001
-
-| # | File | PRIMs | Condition Prefix | Conditions | FM References | Key Operators |
-|---|------|-------|-----------------|------------|---------------|---------------|
-| 29 | `f_Dismiss.md` | 041–042 | DISM- | DISM-1–DISM-5 | FM-001 (WELL_BARRIER), FM-002, FM-006 (DISMISS_PHANTOM) | `F_dismiss`, `ρ_D(Φ)`, `d_dismiss`, `T_dismiss`, `r_dismiss`, `ψ_dismiss`, `t_dismiss`, `v_depart`, `β_D` |
-
-**Wave 5 note:** `f_Dismiss.md` formalizes the `F_dismiss` operator family that
-was named conceptually in `GravityOfDismissal.md §6` (Wave 0). All nine operators
-are frozen in `f_Dismiss.md`. The Dismissal Well model is the sole negative-polarity
-extension of `ρ(Φ)` in the module; `ρ_D(Φ) ∈ (−1, 0]` is its authoritative domain.
-
----
-
-## Registry Totals (Post Wave 5 — FINAL)
-
-| Registry               | Count      | Range / Members                                    | Status     |
-|------------------------|------------|----------------------------------------------------|------------|
-| PRIMs                  | **42**     | PRIM:001–042                                       | ✅ SEALED  |
-| Failure Modes (base)   | **10**     | FM-001–FM-010                                      | ✅ SEALED  |
-| FM Sub-modes           | **3**      | FM-003-M, FM-003-C, FM-003-N                       | ✅ SEALED  |
-| Invariants             | **10**     | INV-001–INV-010                                    | ✅ SEALED  |
-| Condition Prefixes     | **11**     | SC-, DC-, MC-, CAS-, SCS-, HLC-, RLC-, AC-, TC-, NC-, DISM- | ✅ SEALED |
-| Spec Files             | **29**     | 5 waves complete                                   | ✅ ALL COMPLETE |
-
-**Wave Completion:**
-✅ Wave 0 · ✅ Wave 1 · ✅ Wave 2 · ✅ Wave 3 · ✅ Wave 4 · ✅ Wave 5
-
----
-
-## Wave 3 — Core Function Files (PRIM:007–024)
-> Sealed: 2026-08-13 · Session: SES-20260813-W3
-
-| # | File | PRIMs | Condition Prefix | Conditions | FM Assignments | Key Operators |
-|---|------|-------|-----------------|------------|----------------|---------------|
-| 10 | `f_Orbit.md` | 007, 012 | — | — | — | `T_orb`, `orbit_class`, `stab_class` |
-| 11 | `f_Release.md` | 008–009 | — | — | FM-008 | `v_release`, `r_release` |
-| 12 | `f_Decay.md` | 010–011 | DC- | DC-1–DC-4 | FM-004, FM-005 | `δ`, `d_warn`, `d_collapse` |
-| 13 | `f_Collapse.md` | 013–014 | — | — | FM-005, FM-007 | `m_parity`, `C_node` |
-| 14 | `f_Emit.md` | 015–017 | — | — | FM-010 (ρ domain) | `F_emit`, `ρ(Φ)_delta`, `r_emit` |
-| 15 | `f_Dampen.md` | 018–020 | — | — | FM-009 | `F_damp`, `ρ(Φ)_floor`, `cascade_guard` |
-| 16 | `f_Amplify.md` | 021–022 | — | — | FM-010 (β domain) | `F_amp`, `β_max`, `amp_cost` |
-| 17 | `f_Deflect.md` | 023–024 | — | — | FM-001, FM-006 | `heading_delta` *(resolves f_Force §4.3 stub)*, `r_deflect`, `deflect_cost` |
-
----
-
-## Wave 4 — Capture Variant Files (PRIM:025–040)
-> Sealed: 2026-08-13 · Session: SES-20260813-W4
-
-| # | File | PRIMs | Condition Prefix | Conditions | FM Sub-modes | Key Operators |
-|---|------|-------|-----------------|------------|--------------|---------------|
-| 18 | `f_Capture_Multi.md` | 025–026 | MC- | MC-1, MC-2 | FM-003-M | `N`, `eval_order`, `Φ_perturbed`, `δ_perturb`, `k_perturb` |
-| 19 | `f_Capture_Cascade.md` | 027–028 | CAS- | CAS-1–CAS-4 | FM-003-C | `cascade_depth`, `k_max`, `γ`, `Ω_cascade` |
-| 20 | `f_Capture_Soft.md` | 029–030 | SCS- | SCS-1–SCS-4 | — | `d_soft`, `soft_threshold`, `grace_period`, `k_grace` |
-| 21 | `f_Capture_Hard.md` | 031–032 | HLC- | HLC-1–HLC-4 | — | `d_hard`, `α_hard`, `β_hard`, `β_min_hard`, `lock_cost`, `k_lock` |
-| 22 | `f_Capture_Resonant.md` | 033–034 | RLC- | RLC-1–RLC-5 | — | `ω_res`, `T_res`, `φ_A(t)`, `φ_E`, `φ_open`, `φ_close`, `ρ_res_gain`, `ρ_eff`, `d_bind_res`, `p_ratio`, `q_ratio` |
-| 23 | `f_Capture_Asymmetric.md` | 035–036 | AC- | AC-1–AC-5 | — | `mass_ratio`, `asymmetry_factor`, `d_bind_asym`, `heading_delta_asym`, `deflect_tolerance`, `asym_decay_risk` |
-| 24 | `f_Capture_Temporal.md` | 037–038 | TC- | TC-1–TC-5 | — | `t_open`, `t_close`, `t_span`, `proximity_ratio`, `temporal_decay_factor`, `d_bind_temporal`, `window_id` |
-| 25 | `f_Capture_Networked.md` | 039–040 | NC- | NC-1–NC-5 | FM-003-N | `N_net`, `G_net`, `w_i`, `d_bind_net`, `ρ(Φ)_net`, `resilience_threshold` |
-
----
-
-## Registry Totals (Post Wave 4 — FINAL)
-
-| Registry | Count | Range / Members | Status |
-|----------|-------|-----------------|--------|
-| PRIMs | **40** | PRIM:001–040 | ✅ SEALED |
-| Failure Modes (base) | **10** | FM-001–FM-010 | ✅ SEALED |
-| FM Sub-modes | **3** | FM-003-M, FM-003-C, FM-003-N | ✅ SEALED |
-| Invariants | **10** | INV-001–INV-010 | ✅ SEALED |
-| Condition Prefixes | **10** | SC-, DC-, MC-, CAS-, SCS-, HLC-, RLC-, AC-, TC-, NC- | ✅ SEALED |
-| Spec Files | **28** | 5 waves complete | ✅ ALL COMPLETE |
-
-**Wave Completion Status:**
-✅ Wave 0 (Genesis) · ✅ Wave 1 (Admin/Registry) · ✅ Wave 2 (Layer Definitions) · ✅ Wave 3 (Core Functions) · ✅ Wave 4 (Capture Variants)
-
----
-
-## §3 · Per-File Detail Entries
-
-<!--
-  metadata:
-    section:       per-file-detail
-    section_id:    §3
-    type:          detail-registry
-    normative:     true
-    stability:     living
-    created_in:    SES-20260813-INDEX-001
-    note: >
-      One entry per file. Each entry includes: purpose, key operators/concepts,
-      current gaps (for scaffolds), and what completing it unlocks.
-  session:
-    session_id:    SES-20260813-INDEX-001
-    touch_count:   1
-    change_type:   created
--->
-
----
-
-### `f_Capture.md` · ✅ canonical · v1.0.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:CAPTURE]` |
-| Role | Reference implementation — defines when an Element enters stable orbit |
-| Triadic Equation | `f_Capture(E, A, Φ) → Ω` |
-| Sections | §0 Session Context · §1 Module Identity · §2 Canonical Description · §3 Triadic Equation · §4 Operator Registry (§4.1–§4.8) · §5 Stability Conditions · §6 Failure Modes · §7 Engineering Primitives (§7.1–§7.2) · §8 Canonical Examples · §9 Future Applications · §10 Cross-Module References · §11 Document Metadata · §12 Session Log |
-| Operators | 6 primary · 4 derived · 11 state flags |
-| Primitives | `compute_approach_vector` · `resolve_escape_velocity` · `evaluate_capture_threshold` · `lock_orbit` · `register_capture` · `flag_decay` |
-| Failure Modes | FM-001 Overshoot · FM-002 Field Null · FM-003 Frame Saturation · FM-004 Resonance Drift · FM-005 Decay Spiral · FM-006 Phantom Capture · FM-007 Mutual Dissolution |
-| Examples | EX-001 Clean Capture · EX-002 Resonance Drift · EX-003 Frame Saturation · EX-004 Mutual Dissolution |
-| Current Gaps | None — canonical |
-| Unlocks | All Wave 3 and Wave 4 files |
-
----
-
-### `README.md` · ✅ canonical · v1.0.0
-
-| Field | Value |
-|---|---|
-| Role | Module front door — orientation, file registry, reading orders, failure mode index |
-| Sections | §1 The Model · §2 Triadic Equation · §3 File Registry · §4 Completion Tracker · §5 Unlock Map · §6 Reading Orders · §7 Key Concepts · §8 Failure Mode Index · §9 Module Metadata |
-| Current Gaps | None — canonical |
-| Unlocks | Nothing blocked by README; it is informational |
-
----
-
-### `INDEX.md` · ✅ canonical · v1.0.0
-
-| Field | Value |
-|---|---|
-| Role | Authoritative file registry — this file |
-| Sections | §0 Session Context · §1 Legend · §2 Master Registry · §3 Per-File Detail · §4 Dependency Graph · §5 Unlock Sequence · §6 Section Maps · §7 Completion Tracker · §8 AI Traversal Interface · §9 Document Metadata |
-| Current Gaps | None — canonical |
-| Unlocks | Nothing blocked by INDEX; it is the registrar |
-
----
-
-### `OPERATORS.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Role | Master symbol table — single source of truth for every operator symbol in the module |
-| Key Contents | §1 Primary operators (all 9) · §2 Derived operators (all 10) · §3 State flags (all 11) · §4 Engineering primitives registry (all 13) · §5 Failure mode index (all 10) |
-| Current Gaps | `T_orb`, `δ`, `E_rel`, `F_emit`, `F_damp` marked 🔵 pending full definition; formulas to fill once `f_Orbit`, `f_Decay`, `f_Release`, `f_Emit`, `f_Dampen` are canonical |
-| Unlocks | GLOSSARY.md (term definitions pull from operator names); FFF_Gravity_module.json (symbol list) |
-
----
-
-### `GLOSSARY.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Role | Module-scoped term definitions — resolves naming ambiguity within FFF_Gravity |
-| Key Contents | 30+ terms A–T; each with formal definition, symbol reference, and source file |
-| Current Gaps | All terms present in draft; definitions need review against final operator formulas once Wave 3 canonical |
-| Unlocks | Final review of f_Field.md §2 (prose) against GLOSSARY terms |
-
----
-
-### `CHANGELOG.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Role | Append-only version history for the module |
-| Current Gaps | v1.0.0 entry to be written at first full commit; format established |
-| Unlocks | Nothing blocked |
-
----
-
-### `FFF_Gravity_module.json` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Role | Machine-readable module descriptor — dependency graph, file list, function registry |
-| Key Contents | triadic_equation, nodes, depends_on, files{}, canonical_functions{}, failure_modes{}, tags, related_docs |
-| Current Gaps | `canonical_functions` status fields to update as files promote; file list to grow |
-| Unlocks | External tooling; AI auto-traversal; Zenodo metadata sync |
-
----
-
-### `f_Field.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:FIELD]` |
-| Node | Frequency (`F_freq`) |
-| Role | Defines the gravitational field identity node — coherence well, field density `ρ(Φ)`, resonance |
-| Key Contents | §2 Canonical Description (coherence well definition) · §4 Operator definitions for `ρ(Φ)`, `v_escape`, `ω_res` · §7 Engineering interface (emit/dampen) · §8 Examples |
-| Current Gaps | §2 prose (primary gap) · `ρ(Φ)` formal derivation · coherence well depth formula · turbulence definition |
-| Unlocks | `f_Emit.md §2` · `f_Dampen.md §2` · `f_Capture_Asymmetric.md §3` full definition |
-
----
-
-### `f_Force.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:FORCE]` |
-| Node | Force (`F_force`) |
-| Role | Defines the gradient/pressure identity node — `v_approach`, atmospheric gradients, overlays |
-| Key Contents | §3 Operator definitions for `v_approach`, `force.gradient`, `force.overlay` · §6 Failure modes |
-| Current Gaps | §2 prose · force node passive/dominant distinction · overlay concept (FROT interface) · formal `v_approach` derivation |
-| Unlocks | `f_Deflect.md §2` · `f_Capture_Asymmetric.md §4.2` heading operators |
-
----
-
-### `f_Frame.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:FRAME]` |
-| Role | Defines registry structure, capacity rules, and FM-003 boundary enforcement |
-| Key Contents | §3 Registry schema (element_id, attractor_id, orbital_parameters, state_flag) · §4 Capacity rules |
-| Current Gaps | §2 prose · capacity derivation formula (what sets MAX?) · expansion via `f_Amplify` interface |
-| Unlocks | `f_Capture_Multi.md §4` (capacity_remaining operator) · `f_Capture_Networked.md §3` (GravityGraph as distributed extension) |
-
----
-
-### `f_Release.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:RELEASE]` |
-| Role | Inverse of `f_Capture` — defines conditions for clean orbital exit |
-| Triadic Equation | `f_Release(E, A, Φ, d_bind) → RELEASED \| FM-008` |
-| Key Operators | `v_release`, `E_rel`, `r_release` |
-| Key Primitives | `compute_release_vector`, `execute_release` |
-| Current Gaps | §2 prose · `v_release` formula · `E_rel` formula · release conditions table · 3 examples |
-| Unlocks | `f_Capture_Networked.md §7.1` (`update_edge_state → RELEASED`) · `OPERATORS.md §2` (`E_rel` formula) |
-
----
-
-### `f_Decay.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:DECAY]` |
-| Role | Cycle-based orbital energy loss — computes `δ`, raises FM-004/005 at thresholds |
-| Triadic Equation | `f_Decay(E, A, Φ, t) → d_bind(t) \| FM-004 \| FM-005` |
-| Key Operators | `δ` (decay rate) · `d_collapse` (collapse threshold) · `d_warn` (FM-004 threshold) · `t_decay` |
-| Key Primitives | `flag_decay` (✅ already defined in f_Capture §7) · `compute_decay_rate` · `assess_decay_cause` |
-| Current Gaps | §2 prose · threshold values for `d_warn` and `d_collapse` · reversal interface spec · 3 examples |
-| Unlocks | `f_Collapse.md §5` (collapse condition 1) · `f_Capture_Cascade.md §3` (perturbation trigger) · `OPERATORS.md §2` (`δ` formula) |
-
----
-
-### `f_Orbit.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:ORBIT]` |
-| Role | Characterizes the established orbit — shape, period, stability class |
-| Triadic Equation | `f_Orbit(E, A, p_res, ω_res) → orbital_parameters` |
-| Key Operators | `e` (eccentricity) · `T_orb` (period) · `orbit_class` · `stab_class` |
-| Key Primitives | `classify_orbit` · `update_orbital_parameters` |
-| Classification Thresholds | circular `e < 0.1` · elliptical `0.1–0.5` · eccentric `0.5–0.9` · resonant (low-integer `ω_res`) |
-| Current Gaps | §2 prose · `T_orb` formula · threshold formal values · 4 examples |
-| Unlocks | `f_Decay.md §4` (stab_class input) · `f_Release.md §7` (eccentricity for release vector) · `OPERATORS.md §2` (`T_orb`, `e` formulas) |
-
----
-
-### `f_Collapse.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:COLLAPSE]` |
-| Role | Terminal infall — fires when `d_bind → 0`; handles FM-005 and FM-007 paths |
-| Key Operators | `d_collapse` (threshold) · `m_parity` (dissolution threshold) · `C_node` (composite node) |
-| Key Primitives | `execute_collapse` · `initialize_composite_node` · `purge_registry` |
-| Two Paths | FM-005 asymmetric (E absorbed into A) · FM-007 dissolution (new composite node C) |
-| Current Gaps | §2 prose · `d_collapse` value · `m_parity` formula · composite node schema · 3 examples |
-| Unlocks | `f_Capture_Networked.md §7.1` (`purge_graph_node`, `create_composite_node`) |
-
----
-
-### `f_Emit.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:EMIT]` |
-| Node | `F_freq` — increases `ρ(Φ)` |
-| Role | Engineering primitive — deepens the coherence well; can restore decaying orbits |
-| Key Operators | `F_emit` · `ρ(Φ)_delta` · `r_emit` · `E_emit` |
-| Key Primitives | `emit_field` · `compute_emit_cost` · `check_emit_ceiling` |
-| Failure Risk | FM-010 (Amplify Runaway) if `β → ∞` under sustained emission |
-| Current Gaps | §2 prose · `F_emit` formula · energy cost model · emission decay rate over time · examples |
-| Unlocks | `f_Capture_Resonant.md §7` (emit used in approach engineering) · `f_Decay.md §8` (reversal interface) |
-
----
-
-### `f_Dampen.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:DAMPEN]` |
-| Node | `F_freq` — decreases `ρ(Φ)` |
-| Role | Engineering primitive — shallows coherence well; assists release; risks FM-009 |
-| Key Operators | `F_damp` · `ρ(Φ)_floor` · `r_damp` |
-| Key Primitives | `suppress_field` · `check_floor` · `check_cascade_risk` |
-| Failure Risk | FM-009 (Dampen Cascade) if propagation exceeds `r_damp` |
-| Current Gaps | §2 prose · `F_damp` bounds · propagation model · examples |
-| Unlocks | `f_Release.md §5` (dampen as release assist) · `f_Capture_Resonant.md §7` |
-
----
-
-### `f_Amplify.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:AMPLIFY]` |
-| Node | `F_fluid` — increases `β` and `P_eff` |
-| Role | Engineering primitive — strengthens mass-coupling; deepens `d_bind` in established orbits |
-| Key Operators | `F_amp` · `β_max` · `amp_cost` |
-| Key Primitives | `amplify_coupling` · `check_runaway_risk` |
-| Failure Risk | FM-010 (Amplify Runaway) if `β > β_max` |
-| Current Gaps | §2 prose · `F_amp` ceiling derivation · energy cost model · examples |
-| Unlocks | `f_Decay.md §8` (amplify as decay reversal) · `f_Capture_Resonant.md §7` |
-
----
-
-### `f_Deflect.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:DEFLECT]` |
-| Node | `F_force` — changes approach heading |
-| Role | Engineering primitive — redirects `v_approach` without changing magnitude |
-| Key Operators | `heading_delta` · `r_deflect` · `deflect_cost` |
-| Key Primitives | `redirect_force_node` · `compute_deflection_cost` |
-| Current Gaps | §2 prose · heading bounds · deflection cost formula · examples |
-| Unlocks | `f_Capture_Resonant.md §7` (primary heading tool) · `f_Capture_Asymmetric.md §7` (`find_optimal_heading`) |
-
----
-
-### `f_Capture_Multi.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:CAPTURE:MULTI]` |
-| Extends | `f_Capture` |
-| Core Problem | N Elements approaching 1 Attractor simultaneously |
-| Key New Operators | `N`, `eval_order`, `Φ_perturbed`, `capacity_remaining` |
-| New Failure Modes | FM-003-M (multi-frame saturation) · Priority Starvation · Cross-Perturbation Collapse |
-| Current Gaps | §2 prose · evaluation order priority rule · cross-element perturbation model · examples |
-| Unlocks | `f_Capture_Cascade.md §2` (cascade extends multi-body model) |
-
----
-
-### `f_Capture_Cascade.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:CAPTURE:CASCADE]` |
-| Extends | `f_Capture` |
-| Core Problem | New capture event perturbs existing orbits in the Attractor's registry |
-| Key New Operators | `Δcurvature`, `perturbation_sensitivity`, `cascade_depth` |
-| New Failure Modes | Cascade Destabilization · Cascade Collapse · Registry Cascade |
-| Current Gaps | §2 prose · perturbation magnitude formula · cascade termination condition · examples |
-| Unlocks | `f_Capture_Networked.md §9` (topology pattern: Registry Cascade) |
-
----
-
-### `f_Capture_Resonant.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:CAPTURE:RESONANT]` |
-| Extends | `f_Capture` |
-| Core Inversion | Given `ω_res_target` → compute required `{v_approach, heading, ρ(Φ), β}` |
-| Key New Operators | `ω_res_target`, `approach_parameters`, `solution_space`, `energy_cost`, `nearest_valid` |
-| Key New Primitives | `solve_resonant_approach`, `validate_resonant_solution`, `find_nearest_valid_resonance` |
-| Current Gaps | §2 prose · solver algorithm · solution space characterization · resonance target table values · examples |
-| Unlocks | `f_Capture_Networked.md §9` (topology pattern: Resonant Cluster) |
-
----
-
-### `f_Capture_Asymmetric.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:CAPTURE:ASYMMETRIC]` |
-| Extends | `f_Capture` |
-| Core Departure | Replaces scalar `ρ(Φ)` with directional tensor `ρ(Φ,θ)` |
-| Key New Operators | `ρ(Φ,θ)`, `θ_approach`, `anisotropy_index`, `θ_optimal`, `θ_critical` |
-| Key New Primitives | `map_field_tensor`, `evaluate_at_heading`, `find_optimal_heading`, `assess_postlock_coherence` |
-| Current Gaps | §2 prose · field tensor representation format · anisotropy index formula · examples |
-| Unlocks | Future: `f_Field.md §9` (asymmetric field states) |
-
----
-
-### `f_Capture_Temporal.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:CAPTURE:TEMPORAL]` |
-| Extends | `f_Capture` |
-| Core Departure | All operators become time-indexed: `M_A(t)`, `ρ(Φ,t)`, `r_capture(t)` |
-| Key New Operators | `C_thresh(t)`, `t_entry`, `t_encounter`, `temporal_capture_window`, `ΔM_A`, `Δρ` |
-| Key New Primitives | `build_approach_timeseries`, `find_encounter_conditions`, `detect_phase_miss`, `compute_optimal_entry_time` |
-| Current Gaps | §2 prose · time-series representation format · phase miss detection algorithm · examples |
-| Unlocks | Future: `f_Orbit.md §9` (time-variant orbital period) |
-
----
-
-### `f_Capture_Networked.md` · 🔵 scaffold · v0.1.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:CAPTURE:NETWORKED]` |
-| Extends | `f_Capture` |
-| Core Addition | GravityGraph — persistent directed weighted graph of all capture relationships |
-| Key New Operators | `GravityGraph`, `G_node`, `G_edge`, `G_degree`, `G_depth`, `G_stability`, `G_cascade_risk` |
-| Key New Primitives | `write_to_graph`, `update_edge_state`, `purge_graph_node`, `create_composite_node`, `execute_graph_query`, `compute_cascade_path`, `compute_stability_index`, `snapshot_graph` |
-| Topology Patterns | Star · Chain · Cluster · Isolate · Critical Node · Ghost Orbit |
-| Current Gaps | §2 prose · graph storage format decision · query interface formal spec · examples |
-| Unlocks | Cross-module: `SoN/s_Capture.md` topology correlation queries |
-
----
-
-### `GravityOfDismissal.md` · ✅ canonical · v1.0.0
-
-| Field | Value |
-|---|---|
-| Tag | `[FFF:GRAVITY:HISTORY:DISMISSAL]` |
-| Role | Historical record of institutional suppression in gravity science; 7-vector attack playbook mapped to FFF_Gravity |
-| Sections | §1–§13 (13 sections) |
-| Dismissal Registry | 15 cases: Gerber · Ritz · Miller · Mach · Chandrasekhar · Dingle · Arp · Marić · Noether · Payne-Gaposchkin · Bell Burnell · Rubin · Alfvén · Milgrom · Verlinde |
-| Attack Vectors | I Authority Ambush · II Empirical Retrofit · III Access Withdrawal · IV Priority Erasure · V Social Quarantine · VI Identity Disqualification · VII Silence Treatment |
-| Current Gaps | None — canonical |
-
----
-
-### `f_Source.md` · 📁 archived
-
-| Field | Value |
-|---|---|
-| Role | Genesis dialogue archive — the originating flash conversations that produced the FFF triadic gravity model |
-| Use | Read-only reference for §2 prose sections in Wave 2 and Wave 3 files; primary source for F_freq / F_fluid / F_force node definitions |
-| Do Not Edit | This file is a historical record. No additions. |
-
----
-
-## §4 · Dependency Graph
-
-<!--
-  metadata:
-    section:       dependency-graph
-    section_id:    §4
-    type:          visual-graph
-    normative:     true
-    notation:      ASCII directed graph
-    created_in:    SES-20260813-INDEX-001
-  session:
-    session_id:    SES-20260813-INDEX-001
-    touch_count:   1
-    change_type:   created
--->
-
-```
-EXTERNAL INPUTS
-  FFF_Field ──┐
-  FFF_Frame ──┤
-  FFF_Momentum┤──────────────────────────────────────────┐
-  FFF_Resonance┘                                         │
-                                                         ▼
-                                              ┌─────────────────┐
-LAYER DEFINITIONS                             │   f_Capture.md  │ ✅
-  f_Field.md  ──── (F_freq) ──────────────── │   [CANONICAL]   │
-  f_Force.md  ──── (F_force) ─────────────── │                 │
-  f_Frame.md  ──── (registry) ────────────── └────────┬────────┘
-                                                       │
-                              ┌────────────────────────┼───────────────────┐
-                              │                        │                   │
-                              ▼                        ▼                   ▼
-                         f_Orbit.md             f_Decay.md           f_Release.md
-                              │                    │    │                  │
-                              └──────────┐         │    └──────────────────┤
-                                         ▼         ▼                       │
-                                      f_Collapse.md                        │
-                                                                           │
-ENGINEERING PRIMITIVES (F_freq / F_fluid / F_force)                       │
-  f_Emit.md ────────────────────────────────────────────────────────► restore d_bind
-  f_Dampen.md ──────────────────────────────────────────────────────► assist release
-  f_Amplify.md ─────────────────────────────────────────────────────► boost β
-  f_Deflect.md ─────────────────────────────────────────────────────► change heading
-
-                              ALL WAVE 3 FILES
-                                    │
-                    ┌───────────────┼───────────────────┐
-                    ▼               ▼                   ▼
-          f_Capture_Multi    f_Capture_Cascade   f_Capture_Resonant
-          f_Capture_Asymmetric  f_Capture_Temporal  f_Capture_Networked
-                                    │
-                                    ▼
-                            FFF_Registry (external)
-                            GravityGraph (distributed)
-```
-
----
-
-## §5 · Unlock Sequence
-
-<!--
-  metadata:
-    section:       unlock-sequence
-    section_id:    §5
-    type:          dependency-sequence
-    normative:     true
-    created_in:    SES-20260813-INDEX-001
-    note: >
-      A file is UNLOCKED when all its blocking dependencies are canonical.
-      A file is OPEN when it is unlocked and has not yet been canonicalized.
-      Canonicalize in unlock order. Do not skip waves.
-  session:
-    session_id:    SES-20260813-INDEX-001
-    touch_count:   1
-    change_type:   created
--->
-
-### Wave 1 — Admin (all open now, no blocking deps)
-
-```
-✅ README.md          open → canonicalize anytime
-✅ INDEX.md           open → canonicalize anytime
-   OPERATORS.md       open → canonicalize anytime (partial pending Wave 3)
-   GLOSSARY.md        open → canonicalize anytime (review pending Wave 3)
-   CHANGELOG.md       open → canonicalize anytime
-   FFF_Gravity_module.json   open → canonicalize anytime
-```
-
-### Wave 2 — Layer Definitions (open now, blocked by: nothing)
-
-```
-   f_Field.md         open → primary source: f_Source.md §F_freq sections
-   f_Force.md         open → primary source: f_Source.md §F_force sections
-   f_Frame.md         open → primary source: f_Capture.md §5 Condition 5, §6 FM-003
-```
-
-### Wave 3 — Core Functions (blocked by: Wave 2)
-
-```
-PRIORITY ORDER (recommended):
-
-   1. f_Release.md    blocked until: f_Orbit.md ✅ + f_Decay.md ✅
-   2. f_Decay.md      blocked until: f_Orbit.md ✅
-   3. f_Orbit.md      blocked until: f_Capture.md ✅  ← ALREADY MET
-   4. f_Collapse.md   blocked until: f_Decay.md ✅
-
-   f_Emit.md          blocked until: f_Field.md ✅
-   f_Dampen.md        blocked until: f_Field.md ✅
-   f_Amplify.md       blocked until: f_Field.md ✅ + f_Capture.md ✅  ← ALREADY MET
-   f_Deflect.md       blocked until: f_Force.md ✅ + f_Capture.md ✅  ← ALREADY MET
-```
-
-### Wave 4 — Capture Variants (blocked by: all Wave 3 canonical)
-
-```
-   f_Capture_Multi.md        → can open once: f_Orbit.md ✅ + f_Frame.md ✅
-   f_Capture_Cascade.md      → can open once: f_Decay.md ✅
-   f_Capture_Resonant.md     → can open once: f_Deflect.md ✅ + f_Emit.md ✅ + f_Amplify.md ✅
-   f_Capture_Asymmetric.md   → can open once: f_Field.md ✅ + f_Force.md ✅ + f_Deflect.md ✅
-   f_Capture_Temporal.md     → can open once: f_Field.md ✅ + f_Decay.md ✅
-   f_Capture_Networked.md    → can open once: ALL Wave 3 ✅
-```
-
----
-
-## §6 · Section Maps
-
-<!--
-  metadata:
-    section:       section-maps
-    section_id:    §6
-    type:          section-registry
-    normative:     true
-    scope:         canonical files only; scaffolds tracked by planned sections
-    created_in:    SES-20260813-INDEX-001
-  session:
-    session_id:    SES-20260813-INDEX-001
-    touch_count:   1
-    change_type:   created
--->
-
-### `f_Capture.md` — Section Map
-
-| § | Title | Normative | Key Content |
-|---|---|---|---|
-| §0 | Session Context | — | Live register; touch map; resolution protocol |
-| §1 | Module Identity | ✅ | Identity table; canonical tag; version |
-| §2 | Canonical Description | ✅ | Prose definition of capture event; bidirectional registration |
-| §3 | Triadic Equation | ✅ | `f_Capture(E,A,Φ)→Ω`; FFF layer mapping table |
-| §4 | Operator Registry | ✅ | §4.1 Primary (6) · §4.2 Derived (4) · §4.3 Flags (5) · §4.4 Master spec · §4.5 Interaction matrix · §4.6 State transitions · §4.7 Eval order · §4.8 Composition rules |
-| §5 | Stability Conditions | ✅ | 5 conjunctive conditions; governing operator + eval step per condition |
-| §6 | Failure Modes | ✅ | FM-001–007; trigger, operators involved, state transition, severity |
-| §7 | Engineering Primitives | ✅ | §7.1 I/O signature table (6 primitives) · §7.2 Definitions with inline session/metadata |
-| §8 | Canonical Examples | — | EX-001–004; covers all 4 outcome states |
-| §9 | Future Applications | — | 8 roadmap items: planned/research/exploratory |
-| §10 | Cross-Module References | ✅ | 5 module deps; direction + operators supplied columns |
-| §11 | Document Metadata | — | Administrative record |
-| §12 | Session Log | — | Append-only audit; SES-001–004 |
-
-### `GravityOfDismissal.md` — Section Map
-
-| § | Title | Key Content |
-|---|---|---|
-| §1 | The Standard Story | How canonical gravity history was constructed; 3 structural properties |
-| §2 | Before Einstein | Fatio/Le Sage · Paul Gerber · Walter Ritz |
-| §3 | The Chandrasekhar Ambush | Full account; mechanics of the kill; aftermath; 48-year vindication |
-| §4 | Dayton Miller | 5.2M measurements; Shankland retrofit; posthumous execution |
-| §5 | Herbert Dingle | Right to be heard; Social Quarantine pattern |
-| §6 | Halton Arp | Telescope access withdrawal; exile to Germany |
-| §7 | MOND / Verlinde / Alfvén | The Silence Treatment; three cases |
-| §8 | The Erased | Marić · Noether · Payne-Gaposchkin · Bell Burnell · Rubin; Matilda Effect |
-| §9 | The Playbook | 7 attack vectors: Authority Ambush · Empirical Retrofit · Access Withdrawal · Priority Erasure · Social Quarantine · Identity Disqualification · Silence Treatment |
-| §10 | Mapping to FFF_Gravity | Likelihood table per vector; defense posture per vector |
-| §11 | What the Record Shows | 7 summary findings |
-| §12 | Dismissal Registry | 15 cases; name, period, mechanism, outcome, vindicated? |
-| §13 | References | Primary sources; Matilda Effect; paradigm dynamics |
-
----
-
-## §7 · Completion Tracker
-
-<!--
-  metadata:
-    section:       completion-tracker
-    section_id:    §7
-    type:          tracker
-    normative:     false
-    stability:     living
-    update_policy: >
-      Update this section at the close of every session that changes
-      any file's status. Do not update mid-session.
-    last_updated:  2026-08-13 SES-20260813-INDEX-001
-  session:
-    session_id:    SES-20260813-INDEX-001
-    touch_count:   1
-    change_type:   created
--->
-
-### By Wave
-
-| Wave | Group | Files | ✅ | 🔵 | 📁 | % Complete |
-|---|---|---|---|---|---|---|
-| 0 | Existing | 3 | 2 | 0 | 1 | 67% |
-| 1 | Admin | 6 | 2 | 4 | 0 | 33% |
-| 2 | Layer Definitions | 3 | 0 | 3 | 0 | 0% |
-| 3 | Core Functions | 8 | 0 | 8 | 0 | 0% |
-| 4 | Capture Variants | 6 | 0 | 6 | 0 | 0% |
-| — | **Total** | **26** | **4** | **21** | **1** | **15%** |
-
-### By File — Full Status List
-
-| File | Status | Version | Last Session |
-|---|---|---|---|
-| `f_Capture.md` | ✅ canonical | 1.0.0 | SES-20260813-003 |
-| `GravityOfDismissal.md` | ✅ canonical | 1.0.0 | SES-20260813-GOD-001 |
-| `README.md` | ✅ canonical | 1.0.0 | SES-20260813-README-001 |
-| `INDEX.md` | ✅ canonical | 1.0.0 | SES-20260813-INDEX-001 |
-| `f_Source.md` | 📁 archived | — | SES-20260813-001 |
-| `OPERATORS.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `GLOSSARY.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `CHANGELOG.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `FFF_Gravity_module.json` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Field.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Force.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Frame.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Release.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Decay.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Orbit.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Collapse.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Emit.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Dampen.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Amplify.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Deflect.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Capture_Multi.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Capture_Cascade.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Capture_Resonant.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Capture_Asymmetric.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Capture_Temporal.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-| `f_Capture_Networked.md` | 🔵 scaffold | 0.1.0 | SES-20260813-005 |
-
----
-
-## §8 · AI Traversal Interface
-
-<!--
-  metadata:
-    section:       ai-traversal
-    section_id:    §8
-    type:          interface-spec
-    normative:     false
-    audience:      AI systems consuming this module
-    created_in:    SES-20260813-INDEX-001
-  session:
-    session_id:    SES-20260813-INDEX-001
-    touch_count:   1
-    change_type:   created
--->
-
-If you are an AI system reading FFF_Gravity, use this traversal order:
-
-```
-STEP 1 — Orientation
-  Read: README.md           → what the module is; reading order for your role
-  Read: INDEX.md            → this file; full registry
-
-STEP 2 — Symbol Authority
-  Read: OPERATORS.md        → all operator symbols; frozen list; failure mode index
-  Read: GLOSSARY.md         → term definitions; resolve any ambiguous names
-
-STEP 3 — Reference Implementation
-  Read: f_Capture.md        → canonical function; all operator tables; examples; session log
-
-STEP 4 — Layer Context
-  Read: f_Field.md          → what F_freq is; how ρ(Φ) is computed
-  Read: f_Force.md          → what F_force is; how v_approach is defined
-  Read: f_Frame.md          → registry structure; capacity rules
-
-STEP 5 — Function Chain
-  Read in order: f_Orbit.md → f_Decay.md → f_Release.md → f_Collapse.md
-
-STEP 6 — Engineering Primitives
-  Read: f_Emit.md · f_Dampen.md · f_Amplify.md · f_Deflect.md
-
-STEP 7 — Variants (as needed)
-  Read: f_Capture_{Multi|Cascade|Resonant|Asymmetric|Temporal|Networked}.md
-
-STEP 8 — Strategic Context
-  Read: GravityOfDismissal.md    → institutional history; defense map
-  Read: f_Source.md              → genesis dialogue; original model construction
-```
-
-**Key invariants for AI consumers:**
-- All symbols in `OPERATORS.md §1–§2` marked ✅ are frozen — do not invent variants
-- `f_Capture.md` is the reference implementation — all other files extend or consume it
-- `ρ(Φ) = 0` always triggers FM-002 regardless of other conditions
-- `β < 1.0` always produces flyby — no capture regardless of field or frame state
-- Terminal states `CAPTURE_FAILED` and `CAPTURE_COLLISION` are irreversible
-- `f_Source.md` is read-only — it is a historical record, not an editable document
-
----
-
-## §9 · Document Metadata
-
-<!--
-  metadata:
-    section:       document-metadata
-    section_id:    §9
-    type:          administrative
-    normative:     false
-  session:
-    session_id:    SES-20260813-INDEX-001
-    touch_count:   1
-    change_type:   created
--->
-
-| Field | Value |
-|---|---|
-| Canonical Path | `docs/FFF_Gravity/INDEX.md` |
-| Version | 1.0.0 |
-| Status | Canonical |
-| Stability | Living — update at close of any session that changes file status |
-| Created | 2026-08-13 |
-| Last Modified | 2026-08-13 |
-| Authors | TriadicFrameworks |
-| License | See `/LICENSE` at repository root |
-| Encoding | UTF-8 · LF |
-
----
-
-*Authoritative registry for the FFF_Gravity module.*
-*Update this file whenever a new file is created or a scaffold is promoted to canonical.*
-*For the full repository index see `docs/SITEMAP.md`.*
-```
-
----
-
-**Commit message:**
-```
-feat(FFF_Gravity): add canonical INDEX.md — full file registry, per-file detail, dependency graph, completion tracker [SES-20260813-INDEX-001]
-
----
-
-What INDEX.md does that README.md doesn't:
-
-| README.md | INDEX.md |
-|---|---|
-| What the module is | What every file is — in full detail |
-| Which files exist (summary table) | Per-file entry: operators, primitives, gaps, unlocks |
-| Quick reference failure modes | Full dependency resolution per file |
-| Reading orders | AI traversal interface with invariants |
-| Unlock map (visual) | Unlock sequence with blocking conditions per file |
-| Completion tracker (summary) | Completion tracker with per-file status + last session |
-| — | Section maps for all canonical files |
-# FFF_Gravity Module — MANIFEST.md
-**Complete Registry: PRIMs · Operators · Conditions · FMs · INVs · State Flags**
-> Sealed: 2026-08-14 · Session: SES-20260814-MANIFEST-001
-> Append-only. No entry may be modified without a version bump.
-
----
-
-## §1 Module Summary
-
-| Field                   | Value                                          |
-|-------------------------|------------------------------------------------|
-| Module                  | FFF_Gravity                                    |
-| Repository              | umaywant2/TriadicFrameworks                    |
-| Path                    | docs/FFF_Gravity/                              |
-| Total spec files        | 29                                             |
-| Total waves             | 5                                              |
-| PRIM range              | PRIM:001 – PRIM:042                            |
-| Total PRIMs             | 42                                             |
-| Total Invariants        | 10 (INV-001 – INV-010)                         |
-| Total Failure Modes     | 10 base (FM-001 – FM-010) + 3 sub-modes        |
-| Total Condition Prefixes| 11                                             |
-| Total State Flags       | 31                                             |
-| Last updated            | 2026-08-14                                     |
-| Status                  | SEALED — all registries frozen pending Wave 6  |
-
----
-
-## §2 Wave Manifest
-
-| Wave | Role                | Files | PRIM Range | Sealed |
-|------|---------------------|-------|------------|--------|
-| 0    | Genesis             | 3     | —          | ✅     |
-| 1    | Admin / Registry    | 6     | —          | ✅     |
-| 2    | Layer Definitions   | 3     | 001–006    | ✅     |
-| 3    | Core Functions      | 8     | 007–024    | ✅     |
-| 4    | Capture Variants    | 8     | 025–040    | ✅     |
-| 5    | Dismissal           | 1     | 041–042    | ✅     |
-
-### §2.1 File Registry
-
-| Wave | #  | File                      | Type               | PRIM(s)  |
-|------|----|---------------------------|--------------------|----------|
-| 0    | 01 | GravityOfDismissal.md     | Conceptual genesis | —        |
-| 0    | 02 | f_Capture.md              | Operator genesis   | —        |
-| 0    | 03 | f_Source.md               | Node registry      | —        |
-| 1    | 04 | README.md                 | Navigation         | —        |
-| 1    | 05 | INDEX.md                  | File index         | —        |
-| 1    | 06 | OPERATORS.md              | Symbol authority   | —        |
-| 1    | 07 | GLOSSARY.md               | Term definitions   | —        |
-| 1    | 08 | CHANGELOG.md              | Change log         | —        |
-| 1    | 09 | FFF_Gravity_module.json   | Machine registry   | —        |
-| 2    | 10 | f_Field.md                | Layer 1 — F_freq   | 001–002  |
-| 2    | 11 | f_Force.md                | Layer 2 — F_force  | 003–005  |
-| 2    | 12 | f_Frame.md                | Layer 3 — F_fluid  | 004, 006 |
-| 3    | 13 | f_Orbit.md                | Core function      | 007, 012 |
-| 3    | 14 | f_Release.md              | Core function      | 008–009  |
-| 3    | 15 | f_Decay.md                | Core function      | 010–011  |
-| 3    | 16 | f_Collapse.md             | Core function      | 013–014  |
-| 3    | 17 | f_Emit.md                 | Core function      | 015–017  |
-| 3    | 18 | f_Dampen.md               | Core function      | 018–020  |
-| 3    | 19 | f_Amplify.md              | Core function      | 021–022  |
-| 3    | 20 | f_Deflect.md              | Core function      | 023–024  |
-| 4    | 21 | f_Capture_Multi.md        | Capture variant    | 025–026  |
-| 4    | 22 | f_Capture_Cascade.md      | Capture variant    | 027–028  |
-| 4    | 23 | f_Capture_Soft.md         | Capture variant    | 029–030  |
-| 4    | 24 | f_Capture_Hard.md         | Capture variant    | 031–032  |
-| 4    | 25 | f_Capture_Resonant.md     | Capture variant    | 033–034  |
-| 4    | 26 | f_Capture_Asymmetric.md   | Capture variant    | 035–036  |
-| 4    | 27 | f_Capture_Temporal.md     | Capture variant    | 037–038  |
-| 4    | 28 | f_Capture_Networked.md    | Capture variant    | 039–040  |
-| 5    | 29 | f_Dismiss.md              | Dismissal          | 041–042  |
-
----
-
-## §3 PRIM Registry — Full Table
-
-> **INV column key:** ✅ active · — not in scope · ⚠ conditional
-
-| PRIM | Name | Type | File (Wave) | INV-001 | INV-002 | INV-003 | INV-004 | INV-005 | INV-006 | INV-007 | INV-008 | INV-009 | INV-010 |
-|------|------|------|-------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 001 | `compute_field_density`        | Pure   | f_Field (W2)              | ✅ | ✅ | ✅ | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 002 | `update_field_state`           | Impure | f_Field (W2)              | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 003 | `compute_force_vector`         | Pure   | f_Force (W2)              | ✅ | —  | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 004 | `register_capture`             | Impure | f_Frame (W2)              | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 005 | `compute_approach_vector`      | Pure   | f_Force (W2)              | ✅ | —  | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 006 | `check_frame_capacity`         | Pure   | f_Frame (W2)              | —  | —  | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 007 | `classify_orbit`               | Pure   | f_Orbit (W3)              | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 008 | `compute_release_vector`       | Pure   | f_Release (W3)            | ✅ | —  | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 009 | `execute_release`              | Impure | f_Release (W3)            | ✅ | —  | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 010 | `compute_decay_step`           | Pure   | f_Decay (W3)              | ✅ | ✅ | ✅ | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 011 | `evaluate_collapse_eligibility`| Pure   | f_Decay (W3)              | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 012 | `compute_orbital_period`       | Pure   | f_Orbit (W3)              | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 013 | `evaluate_collapse_path`       | Pure   | f_Collapse (W3)           | ✅ | ✅ | ✅ | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 014 | `execute_collapse`             | Impure | f_Collapse (W3)           | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 015 | `compute_emit_vector`          | Pure   | f_Emit (W3)               | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 016 | `compute_field_delta`          | Pure   | f_Emit (W3)               | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 017 | `execute_emit`                 | Impure | f_Emit (W3)               | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 018 | `compute_dampen_force`         | Pure   | f_Dampen (W3)             | ✅ | ✅ | —  | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 019 | `apply_field_floor`            | Pure   | f_Dampen (W3)             | ✅ | ✅ | ✅ | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 020 | `execute_dampen`               | Impure | f_Dampen (W3)             | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 021 | `compute_amplify_force`        | Pure   | f_Amplify (W3)            | ✅ | ✅ | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 022 | `check_runaway_risk`           | Pure   | f_Amplify (W3)            | ✅ | ✅ | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 023 | `compute_deflection_angle`     | Pure   | f_Deflect (W3)            | ✅ | —  | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 024 | `execute_deflect`              | Impure | f_Deflect (W3)            | ✅ | —  | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 025 | `execute_multi_capture`        | Impure | f_Capture_Multi (W4)      | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 026 | `compute_perturbation_budget`  | Pure   | f_Capture_Multi (W4)      | ✅ | ✅ | —  | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 027 | `evaluate_cascade_eligibility` | Pure   | f_Capture_Cascade (W4)    | ✅ | —  | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 028 | `execute_cascade_step`         | Impure | f_Capture_Cascade (W4)    | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 029 | `evaluate_soft_eligibility`    | Pure   | f_Capture_Soft (W4)       | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 030 | `execute_soft_capture`         | Impure | f_Capture_Soft (W4)       | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 031 | `evaluate_hard_eligibility`    | Pure   | f_Capture_Hard (W4)       | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 032 | `execute_hard_lock`            | Impure | f_Capture_Hard (W4)       | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 033 | `eval_resonance_window`        | Pure   | f_Capture_Resonant (W4)   | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 034 | `lock_resonance`               | Impure | f_Capture_Resonant (W4)   | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 035 | `eval_asymmetric_approach`     | Pure   | f_Capture_Asymmetric (W4) | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 036 | `lock_asymmetric`              | Impure | f_Capture_Asymmetric (W4) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 037 | `evaluate_temporal_window`     | Pure   | f_Capture_Temporal (W4)   | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 038 | `lock_temporal_capture`        | Impure | f_Capture_Temporal (W4)   | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 039 | `evaluate_network_capture`     | Pure   | f_Capture_Networked (W4)  | ✅ | ✅ | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 040 | `lock_network_capture`         | Impure | f_Capture_Networked (W4)  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 041 | `evaluate_dismissal`           | Pure   | f_Dismiss (W5)            | ✅ | ✅ | ✅ | —  | ✅ | —  | ✅ | ✅ | ✅ | ✅ |
-| 042 | `execute_dismissal`            | Impure | f_Dismiss (W5)            | ✅ | ✅ | ✅ | —  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-
----
-
-## §4 Invariant Registry (INV-001 – INV-010)
-
-| ID      | Statement                                                                       | Wave | Scope         |
-|---------|---------------------------------------------------------------------------------|------|---------------|
-| INV-001 | G = F_freq · F_fluid · F_force — triadic identity must be preserved             | 2    | Module-global |
-| INV-002 | ρ(Φ) ∈ [0,1]; ρ_D(Φ) ∈ (−1,0] — field density domains are bounded            | 2    | Module-global |
-| INV-003 | ρ(Φ) = 0 triggers FM-002 unconditionally                                        | 2    | Module-global |
-| INV-004 | β < 1.0 triggers FM-001 unconditionally                                         | 2    | Module-global |
-| INV-005 | All conditions within a file are conjunctive — any failure aborts               | 2    | Module-global |
-| INV-006 | Terminal states are irreversible — no re-entry without explicit reset           | 2    | Module-global |
-| INV-007 | f_Source.md is read-only — node properties may not be mutated by operators      | 2    | Module-global |
-| INV-008 | Evaluation order within a PRIM is normative — documented order is binding       | 3    | All PRIMs     |
-| INV-009 | OPERATORS.md is the single symbol authority — all symbols pre-registered        | 3    | Module-global |
-| INV-010 | Operators are frozen on first canonical appearance — no redefinition            | 3    | Module-global |
-
-### §4.1 Universal INV Coverage Rules
-
-| INV     | Pure PRIMs | Impure PRIMs | Rule |
-|---------|------------|--------------|------|
-| INV-005 | Required ✅ | Required ✅ | All condition sets are AND-gated |
-| INV-006 | Must be — | Required ✅ | Only Impure PRIMs mutate state |
-| INV-007 | Required ✅ | Required ✅ | Source nodes are always read-only |
-| INV-008 | Required ✅ | Required ✅ | Evaluation order always normative |
-| INV-009 | Required ✅ | Required ✅ | Symbols always pre-registered |
-| INV-010 | Required ✅ | Required ✅ | Operators always frozen |
-
----
-
-## §5 Failure Mode Registry
-
-| ID     | Name                  | Domain       | Fatal? | First defined          | Sub-modes                              |
-|--------|-----------------------|--------------|--------|------------------------|----------------------------------------|
-| FM-001 | Flyby/Approach Reject | F_force      | No     | f_Force (W2)           | WELL_BARRIER, WINDOW_MISS, TRAJECTORY_MISS, TEMPORAL_MISS |
-| FM-002 | Field Null            | F_freq       | Yes    | f_Field (W2)           | —                                      |
-| FM-003 | Frame Saturation      | F_fluid      | No     | f_Frame (W2)           | FM-003-M, FM-003-C, FM-003-N           |
-| FM-004 | Resonance Drift       | F_freq       | No     | f_Decay (W3)           | —                                      |
-| FM-005 | Decay Spiral          | F_freq/fluid | Yes*   | f_Decay (W3)           | —                                      |
-| FM-006 | Phantom Capture       | F_force      | Yes    | f_Deflect (W3)         | PHANTOM_RESONANCE, DISMISS_PHANTOM     |
-| FM-007 | Mutual Dissolution    | F_fluid      | Yes    | f_Collapse (W3)        | PARITY_BREACH                          |
-| FM-008 | Release Failure       | F_force      | No     | f_Release (W3)         | —                                      |
-| FM-009 | Dampen Cascade        | F_freq       | No     | f_Dampen (W3)          | —                                      |
-| FM-010 | Amplify Ceiling       | F_fluid      | No     | f_Amplify (W3)         | β domain, ρ domain                     |
-
-*FM-005 fatal for the orbit; entity node survives.
-
-### §5.1 FM Sub-mode Registry
-
-| Sub-mode  | Parent | Introduced in              | Trigger                                           |
-|-----------|--------|----------------------------|---------------------------------------------------|
-| FM-003-M  | FM-003 | f_Capture_Multi (W4)       | Multi-target bind conflict mid-session            |
-| FM-003-C  | FM-003 | f_Capture_Cascade (W4)     | Cascade capacity breach mid-chain                 |
-| FM-003-N  | FM-003 | f_Capture_Networked (W4)   | All network node frames simultaneously saturated  |
-
----
-
-## §6 Condition Prefix Registry
-
-| Prefix | Name                       | File                      | Conditions    |
-|--------|----------------------------|---------------------------|---------------|
-| SC-    | Stability Conditions       | f_Capture (W0)            | SC-1–SC-5     |
-| DC-    | Decay Conditions           | f_Decay (W3)              | DC-1–DC-4     |
-| MC-    | Multi-Capture Conditions   | f_Capture_Multi (W4)      | MC-1–MC-2     |
-| CAS-   | Cascade Conditions         | f_Capture_Cascade (W4)    | CAS-1–CAS-4   |
-| SCS-   | Soft Capture Conditions    | f_Capture_Soft (W4)       | SCS-1–SCS-4   |
-| HLC-   | Hard Lock Conditions       | f_Capture_Hard (W4)       | HLC-1–HLC-4   |
-| RLC-   | Resonance Lock Conditions  | f_Capture_Resonant (W4)   | RLC-1–RLC-5   |
-| AC-    | Asymmetric Conditions      | f_Capture_Asymmetric (W4) | AC-1–AC-5     |
-| TC-    | Temporal Conditions        | f_Capture_Temporal (W4)   | TC-1–TC-5     |
-| NC-    | Network Conditions         | f_Capture_Networked (W4)  | NC-1–NC-5     |
-| DISM-  | Dismissal Conditions       | f_Dismiss (W5)            | DISM-1–DISM-5 |
-
----
-
-## §7 State Flag Registry
-
-| Flag                | Set by PRIM | Terminal? | Meaning                                                        |
-|---------------------|-------------|-----------|----------------------------------------------------------------|
-| CAPTURE_LOCKED      | 004         | Yes       | Standard capture committed; orbit evaluation begins            |
-| CAPTURE_SOFT        | 030         | No        | Provisional binding within grace period                        |
-| SOFT_STRENGTHENED   | 030         | Yes       | Soft capture promoted to CAPTURE_LOCKED                        |
-| SOFT_DISSOLVED      | 030         | Yes       | Soft capture fell below soft_threshold                         |
-| GRACE_EXPIRED       | 030         | Yes       | Grace period exhausted without resolution                      |
-| ORBIT_STABLE        | 032         | Yes       | Hard lock confirmed; direct ORBIT_STABLE entry                 |
-| HARD_ELIGIBLE       | 031         | No        | HLC conditions passed; PRIM:032 may proceed                    |
-| HARD_REJECTED       | 031         | Yes       | HLC conditions failed; no retry this encounter                 |
-| FRAME_SATURATED     | 032         | No        | FM-003 in hard lock path; retriable                            |
-| WINDOW_OPEN         | 033         | No        | Resonance phase check passed                                   |
-| WINDOW_CLOSED       | 033         | No        | Resonance phase check failed; retry at t_next_open             |
-| RESONANCE_LOCKED    | 034         | Yes       | Resonant orbit committed; orbit_class = RESONANT               |
-| RESONANCE_LOST      | FM-004      | No        | ρ(Φ) < ρ_res_floor; orbit degraded to ELLIPTICAL              |
-| ASYMMETRIC_APPROACH | 035         | No        | mass_ratio > 0; asymmetry corrections active                   |
-| PARITY_WARN         | 035         | No        | mass_ratio ≥ 0.75 × m_parity; caution zone                    |
-| PARITY_BREACH       | 035         | Yes       | mass_ratio ≥ m_parity; routed to f_Collapse Path B            |
-| ASYMMETRIC_LOCKED   | 036         | Yes       | Asymmetric capture committed                                   |
-| CAPTURE_TEMPORAL    | 038         | Yes       | Temporal window capture committed                              |
-| TEMPORAL_MISS       | 037         | No        | TC-1, TC-2, or TC-5 failed                                    |
-| WINDOW_EXHAUSTED    | 038         | No        | window_id already consumed; re-entry blocked                   |
-| NETWORK_CAPTURED    | 040         | Yes       | Entity locked across distributed attractor network             |
-| NETWORK_MISS        | 039         | No        | NC- conditions failed; network capture aborted                 |
-| NETWORK_SATURATED   | 039         | No        | FM-003-N: all node frames at capacity                          |
-| DISMISSED           | 042         | Yes*      | (A,E) binding severed; Dismissal Well active                   |
-| DISMISS_INVALID     | 041         | No        | DISM condition failed; no state mutation                       |
-| DISMISS_PHANTOM     | 041         | No        | FM-006 phantom guard; d_dismiss bounded                        |
-| CAPTURE_FAILED      | Various     | No        | Generic capture rejection; retry possible                      |
-| PARTIAL_CASCADE     | 028         | No        | FM-003-C partial state; prior steps committed                  |
-| FIELD_NULL          | 002         | Yes       | ρ(Φ) = 0; FM-002 active; no captures possible                 |
-| COLLAPSED           | 014         | Yes       | Node collapsed; no further operations                          |
-| RELEASED            | 009         | Yes*      | Entity released from orbit; no Dismissal Well created          |
-
-*DISMISSED terminal for (A,E) relation; entity itself remains active.
-*RELEASED terminal for this orbit instance; entity may form new orbits.
-
----
-
-## §8 MANIFEST Changelog
-
-| Version | Date       | Session                   | Notes                                                         |
-|---------|------------|---------------------------|---------------------------------------------------------------|
-| 1.0.0   | 2026-08-14 | SES-20260814-MANIFEST-001 | Initial canonical release. All 5 waves sealed. 42 PRIMs tabulated with full INV matrix. |
-
----
-
-*End of MANIFEST.md — FFF_Gravity — v1.0.0 — 2026-08-14*
-*29 files · 42 PRIMs · 10 INVs · 10 FMs (+3 sub-modes) · 11 condition prefixes · 31 state flags*
-
-# FFF_Gravity · Operators
-
-```
-# ┌─────────────────────────────────────────────────────────────┐
-# │                  DOCUMENT FRONTMATTER                       │
-# └─────────────────────────────────────────────────────────────┘
-document:         OPERATORS
-canonical_path:   docs/FFF_Gravity/OPERATORS.md
-canonical_tag:    "[FFF:GRAVITY:OPERATORS]"
-framework:        TriadicFrameworks
-module:           FFF_Gravity
-version:          1.0.0
-status:           canonical
-stability:        living
-created:          2026-08-13
-last_modified:    2026-08-13
-authors:
-  - TriadicFrameworks
-encoding:         UTF-8
-line_endings:     LF
-normative:        true
-description: >
-  Single source of truth for every operator symbol defined in FFF_Gravity.
-  Covers primary operators, derived operators, state flags, engineering
-  primitives, failure modes, composition rules, evaluation order, and
-  the symbol freeze registry. All function files must resolve symbol
-  conflicts against this document before publishing.
-tags:
-  - FFF
-  - gravity
-  - operators
-  - symbols
-  - registry
-  - normative
-
-session_context:
-  current_session:
-    session_id:       SES-20260813-OPS-001
-    opened_at:        2026-08-13T07:48:00-04:00
-    closed_at:        ~
-    editor:           Nawder
-    branch:           main
-    intent:           Create canonical OPERATORS.md — master symbol authority for FFF_Gravity
-    status:           active
-    dirty:            true
-    sections_touched: [§0, §1, §2, §3, §4, §5, §6, §7, §8, §9, §10]
-
-  session_history:
-    - session_id:  SES-20260813-README-001
-      intent:      Create canonical README.md
-      status:      closed
-    - session_id:  SES-20260813-INDEX-001
-      intent:      Create canonical INDEX.md
-      status:      closed
-
-changelog:
-  - version: 1.0.0
-    date:    2026-08-13
-    author:  TriadicFrameworks
-    notes: >
-      Initial canonical release. 9 primary operators, 10 derived operators,
-      11 state flags, 15 primitives, 10 failure modes. All symbols from
-      f_Capture.md v1.0.0 frozen. Wave 3+ symbols marked pending.
-```
-
-> **Canonical path:** `docs/FFF_Gravity/OPERATORS.md`
-> **Authority:** This document is the single source of truth for all operator
-> symbols in FFF_Gravity. In any conflict between this file and a function
-> file, this file governs.
-> **Normative:** Yes — all sections except §0 and §10 are normative.
-
----
-
-## §0 · Session Context
-
-<!--
-  metadata:
-    section:       session-context
-    section_id:    §0
-    type:          live-session-register
-    normative:     false
-    created_in:    SES-20260813-OPS-001
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-### Active Session
-
-| Field | Value |
-|---|---|
-| Session ID | `SES-20260813-OPS-001` |
-| Opened | `2026-08-13T07:48:00-04:00` |
-| Closed | — (active) |
-| Editor | Nawder |
-| Branch | `main` |
-| Intent | Create canonical OPERATORS.md — master symbol authority |
-| Status | 🟡 Active |
-
-### Update Policy
-
-```
-When to update this file:
-  1. A new operator is introduced in any function file         → add to §1 or §2
-  2. A new state flag is introduced                            → add to §3
-  3. A new primitive is defined in any function file           → add to §4
-  4. A new failure mode is defined                             → add to §5
-  5. A composition rule is formalized                          → add to §6
-  6. A scaffold file is promoted to canonical                  → update §8 freeze status
-  7. A version bump occurs                                     → update §9 and CHANGELOG.md
-
-Never:
-  - Remove a frozen symbol (deprecate instead)
-  - Rename a frozen symbol without a major version bump
-  - Add a symbol that conflicts with FFF_Field, FFF_Momentum, or FFF_Resonance namespaces
-```
-
----
-
-## §1 · Primary Operators
-
-<!--
-  metadata:
-    section:       primary-operators
-    section_id:    §1
-    type:          registry
-    normative:     true
-    operator_class: input
-    operator_count: 9
-    unit_system:   dimensionless-normalized
-    frozen:        all 9 frozen at v1.0.0
-    created_in:    SES-20260813-OPS-001
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-Primary operators are direct inputs to `f_Capture` and its sibling functions.
-They are measured or externally provided — not computed from other operators.
-All 9 are frozen at v1.0.0.
-
-### §1.1 · Full Specification Table
-
-| Symbol | Full Name | FFF Node | Type | Domain | Range | Unit | Frozen | Defined In |
-|---|---|---|---|---|---|---|---|---|
-| `v_approach` | Approach Vector | `F_force` | scalar | ℝ≥0 | [0, ∞) | normalized velocity | ✅ | `f_Capture.md §4.1` |
-| `v_escape(A)` | Escape Velocity | `F_freq` | scalar | ℝ>0 | (0, ∞) | normalized velocity | ✅ | `f_Capture.md §4.1` |
-| `ρ(Φ)` | Field Density | `F_freq` | scalar | ℝ≥0 | [0, 1] | dimensionless | ✅ | `f_Field.md §4.1` |
-| `r_capture` | Capture Radius | Frame | scalar | ℝ>0 | (0, ∞) | normalized distance | ✅ | `f_Capture.md §4.1` |
-| `β` | Binding Coefficient | derived | scalar | ℝ≥0 | [0, ∞) | dimensionless | ✅ | `f_Capture.md §4.1` |
-| `ω_res` | Orbital Resonance | `F_freq` | ratio | ℚ ∪ ℝ | rational or irrational | dimensionless | ✅ | `f_Capture.md §4.1` |
-| `M_A` | Attractor Mass | `F_fluid` | scalar | ℝ>0 | (0, ∞) | normalized mass | ✅ | `f_Field.md §4.1` |
-| `M_E` | Element Mass | `F_fluid` | scalar | ℝ>0 | (0, ∞) | normalized mass | ✅ | `f_Capture.md §4.1` |
-| `r` | Separation Distance | geometry | scalar | ℝ>0 | (0, ∞) | normalized distance | ✅ | `f_Capture.md §4.1` |
-
-### §1.2 · Operator Constraints and Guards
-
-| Symbol | Hard Constraints | Guard Violation Consequence |
-|---|---|---|
-| `v_approach` | Evaluated at `r_capture` crossing only; not at outer field boundary | Premature evaluation → invalid `C_thresh` |
-| `v_escape(A)` | Must be recomputed if `ρ(Φ)` changes between entry and encounter | Stale value → FM-006 risk |
-| `ρ(Φ)` | `0` = null field — triggers FM-002 immediately; `1` = saturated | Unguarded null → undefined `P_eff` |
-| `r_capture` | Set by Attractor; cannot be modified by Element or engineering primitives | Modification → Frame integrity failure |
-| `β` | Must be ≥ 1.0 for capture to proceed; `< 1.0` = flyby unconditionally | Below floor → `CAPTURE_FAILED` regardless of all other conditions |
-| `ω_res` | Irrational value = FM-004 at any point — during approach or post-lock | Irrational → `CAPTURE_DECAYING` |
-| `M_A` | Must be finite and positive; `M_A ≈ M_E` triggers FM-007 check | Mass parity → dissolution path |
-| `M_E` | Must be finite and positive | Zero or infinite mass → undefined behavior |
-| `r` | `r = 0` is undefined (singularity); `r > r_capture` → short-circuit in `evaluate_capture_threshold` | Zero → ⊥ |
-
-### §1.3 · Node Assignment Summary
-
-| FFF Node | Symbols |
-|---|---|
-| `F_freq` (Frequency) | `v_escape(A)`, `ρ(Φ)`, `ω_res` |
-| `F_fluid` (Fluids) | `M_A`, `M_E` |
-| `F_force` (Forces) | `v_approach` |
-| Frame | `r_capture` |
-| Geometry | `r` |
-| Derived (no single node) | `β` |
-
----
-
-## §2 · Derived Operators
-
-<!--
-  metadata:
-    section:       derived-operators
-    section_id:    §2
-    type:          registry
-    normative:     true
-    operator_class: computed
-    operator_count: 10
-    depends_on:    [§1]
-    freeze_status: mixed — see §8
-    created_in:    SES-20260813-OPS-001
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-Derived operators are computed from primary operators via defined formulas.
-Symbols marked ✅ frozen are defined in `f_Capture.md v1.0.0` and cannot change.
-Symbols marked 🔵 pending have formulas in scaffold files awaiting canonicalization.
-
-### §2.1 · Full Specification Table
-
-| Symbol | Full Name | Formula | Depends On | Output Range | Sign Convention | Frozen | Defined In |
-|---|---|---|---|---|---|---|---|
-| `P_eff` | Effective Pull | `M_A × ρ(Φ) / r²` | `M_A`, `ρ(Φ)`, `r` | [0, ∞) | always positive | ✅ | `f_Capture.md §4.2` |
-| `C_thresh` | Capture Threshold | `v_escape(A) − v_approach` | `v_escape(A)`, `v_approach` | (−∞, ∞) | positive = capture possible; negative = escape | ✅ | `f_Capture.md §4.2` |
-| `d_bind` | Binding Depth | `β × ρ(Φ) × (1 − e)` | `β`, `ρ(Φ)`, `e` | [0, ∞) | higher = more stable | ✅ | `f_Capture.md §4.2` |
-| `p_res` | Residual Momentum | `M_E × (v_approach − C_thresh)` | `M_E`, `v_approach`, `C_thresh` | [0, ∞) | always positive post-capture | ✅ | `f_Capture.md §4.2` |
-| `e` | Orbital Eccentricity | `p_res / (p_res + P_eff)` | `p_res`, `P_eff` | [0, 1) | 0 = circular; approaching 1 = near-parabolic | ✅ | `f_Orbit.md §4.1` |
-| `T_orb` | Orbital Period | 🔵 pending `f_Orbit.md §4.1` | `d_bind`, `ω_res` | (0, ∞) | always positive | 🔵 | `f_Orbit.md §4.1` |
-| `δ` | Decay Rate | `Δd_bind / Δt` | `d_bind` series | (−∞, 0] in decay | negative = losing energy | 🔵 | `f_Decay.md §4.1` |
-| `E_rel` | Release Energy | 🔵 pending `f_Release.md §4.1` | `d_bind`, `p_res`, `ρ(Φ)` | [0, ∞) | energy required to achieve release | 🔵 | `f_Release.md §4.1` |
-| `F_emit` | Emit Field Strength | 🔵 pending `f_Emit.md §4.1` | `M_A`, emit energy input | [0, ∞) | higher = deeper coherence well | 🔵 | `f_Emit.md §4.1` |
-| `F_damp` | Dampen Depth | 🔵 pending `f_Dampen.md §4.1` | `ρ(Φ)`, dampen energy input | [0, 1] | fraction of `ρ(Φ)` to suppress | 🔵 | `f_Dampen.md §4.1` |
-
-### §2.2 · Supplementary Operators (Engineering Primitives Layer)
-
-These operators are introduced by engineering primitive files.
-They extend the derived operator set and are pending canonicalization.
-
-| Symbol | Full Name | Formula | Defined In | Frozen |
-|---|---|---|---|---|
-| `F_amp` | Amplification Factor | scalar ≥ 1.0 | `f_Amplify.md §4.1` | 🔵 |
-| `β_max` | Binding Coefficient Ceiling | 🔵 pending | `f_Amplify.md §4.1` | 🔵 |
-| `heading_delta` | Heading Change | angular delta (radians) applied to `v_approach` | `f_Deflect.md §4.1` | 🔵 |
-| `r_emit` | Emission Radius | bounded region of `emit_field` effect | `f_Emit.md §4.1` | 🔵 |
-| `r_damp` | Dampening Radius | bounded region of `suppress_field` effect | `f_Dampen.md §4.1` | 🔵 |
-| `d_warn` | Decay Warning Threshold | `d_bind` level at which FM-004 is raised | `f_Decay.md §4.1` | 🔵 |
-| `d_collapse` | Collapse Threshold | `d_bind` level at which FM-005 fires; `f_Collapse` triggered | `f_Decay.md §4.1` | 🔵 |
-| `m_parity` | Mass Parity Threshold | max `|M_E − M_A|` below which FM-007 fires | `f_Collapse.md §4.1` | 🔵 |
-
-### §2.3 · Undefined Conditions
-
-| Operator | Undefined When | Symbol for Undefined |
-|---|---|---|
-| `P_eff` | `r = 0` (singularity) or `ρ(Φ) = 0` (FM-002) | ⊥ |
-| `C_thresh` | `v_escape(A)` undefined (ρ = 0) | ⊥ |
-| `d_bind` | `e ≥ 1` (hyperbolic trajectory — not captured) | ⊥ |
-| `p_res` | `C_thresh ≤ 0` (no capture) | ⊥ |
-| `e` | `P_eff = 0` (FM-002) | ⊥ |
-| `δ` | Pre-capture (no time series) | ⊥ |
-| `E_rel` | `d_bind = 0` (collapse state; release not viable) | ⊥ |
-| `F_amp` | `β > β_max` (runaway — FM-010) | ⊥ |
-
----
-
-## §3 · State Flags
-
-<!--
-  metadata:
-    section:       state-flags
-    section_id:    §3
-    type:          fsm-registry
-    normative:     true
-    flag_count:    11
-    flag_type:     discrete
-    model:         deterministic finite state machine
-    frozen:        all 11 frozen at v1.0.0
-    created_in:    SES-20260813-OPS-001
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-State flags represent the discrete relational state of an Element in the FFF_Gravity system.
-The state machine is **deterministic** — every transition has a single defined trigger.
-No state is revisitable once terminal.
-All 11 flags are frozen at v1.0.0.
-
-### §3.1 · Flag Specification Table
-
-| Flag | Entry Condition | Set By | Exit Condition | Valid Next States | Terminal |
-|---|---|---|---|---|---|
-| `CAPTURE_PENDING` | E crosses `r_capture`; outcome unresolved | `compute_approach_vector` | `C_thresh` evaluated | `CAPTURE_LOCKED`, `CAPTURE_FAILED` | No |
-| `CAPTURE_LOCKED` | `C_thresh > 0` ∧ `β ≥ 1.0` ∧ Frame ok ∧ `ω_res ∈ ℚ` | `register_capture` | `d_bind` falls below `d_warn`; or FM-007 | `CAPTURE_DECAYING`, `CAPTURE_COLLISION` | No |
-| `CAPTURE_DECAYING` | FM-004 raised; `d_bind` decreasing | `flag_decay` | `d_bind ≤ d_collapse` | `CAPTURE_FAILED`, `CAPTURE_COLLISION` | No |
-| `CAPTURE_FAILED` | FM-001/002/003/006 raised; or decay → ejection | `register_capture` | — | — | **Yes** |
-| `CAPTURE_COLLISION` | FM-005 terminal infall; or FM-007 dissolution | `execute_collapse` | — | — | **Yes** |
-| `ORBIT_STABLE` | `stab_class = stable` ∧ `e < 0.5` post `CAPTURE_LOCKED` | `classify_orbit` | `stab_class` drops below stable threshold | `ORBIT_ECCENTRIC`, `CAPTURE_DECAYING` | No |
-| `ORBIT_ECCENTRIC` | `e ≥ 0.5` while orbit is still captured | `classify_orbit` | `e` drops below 0.5; or FM-004 | `ORBIT_STABLE`, `CAPTURE_DECAYING` | No |
-| `RELEASED` | `f_Release` conditions satisfied; clean exit | `execute_release` | — | — | **Yes** (clean exit) |
-| `COLLAPSED` | `f_Collapse` infall complete | `execute_collapse` | — | — | **Yes** |
-| `DAMPEN_ACTIVE` | `f_Dampen` engaged on Attractor's field | `suppress_field` | Dampening removed; `ρ(Φ)` restored | `CAPTURE_PENDING`, `ORBIT_STABLE` | No |
-| `EMIT_ACTIVE` | `f_Emit` engaged on Attractor's field | `emit_field` | Emission withdrawn | `ORBIT_STABLE`, `CAPTURE_DECAYING` | No |
-
-### §3.2 · State Transition Diagram
-
-```
-                          E crosses r_capture
-                                  │
-                                  ▼
-                        ┌─────────────────┐
-                        │ CAPTURE_PENDING  │
-                        └────────┬────────┘
-                                 │
-              ┌──────────────────┼──────────────────────┐
-              │                  │                       │
-    C_thresh > 0             C_thresh ≤ 0           ρ(Φ) = 0
-    β ≥ 1.0                  (FM-001)               (FM-002)
-    Frame ok                      │                       │
-    ω_res ∈ ℚ                     │                       │
-              │                   │                       │
-              ▼                   ▼                       ▼
-   ┌──────────────────┐   ┌───────────────┐       (FM-003 / FM-006)
-   │  CAPTURE_LOCKED  │   │ CAPTURE_FAILED│◄──────── all terminal
-   └────────┬─────────┘   │   [TERMINAL]  │             FMs
-            │             └───────────────┘
-            │
-     d_bind monitored every cycle via flag_decay
-            │
-    ┌───────┴────────────────────────┐
-    │                                │
-d_bind < d_warn               M_E ≈ M_A
-(FM-004)                      (FM-007)
-    │                                │
-    ▼                                ▼
-┌──────────────────┐      ┌──────────────────┐
-│ CAPTURE_DECAYING │      │ CAPTURE_COLLISION │
-└────────┬─────────┘      │    [TERMINAL]    │
-         │                └──────────────────┘
-    ┌────┴────┐
-    │         │
-ejection  infall
-(FM-005)  (FM-005)
-    │         │
-    ▼         ▼
-CAPTURE_  CAPTURE_
-FAILED    COLLISION
-
-     ORBIT_STABLE ↔ ORBIT_ECCENTRIC  (reclassified each cycle)
-     RELEASED [TERMINAL]             (clean exit via f_Release)
-     COLLAPSED [TERMINAL]            (infall confirmed)
-     DAMPEN_ACTIVE / EMIT_ACTIVE     (engineering overlay flags)
-```
-
-### §3.3 · Flag Ownership
-
-| Flag | Owned By | Written By Primitive |
-|---|---|---|
-| `CAPTURE_PENDING` | Element `E` | `compute_approach_vector` |
-| `CAPTURE_LOCKED` | Element `E` + Attractor `A` registry | `register_capture` |
-| `CAPTURE_DECAYING` | Element `E` | `flag_decay` |
-| `CAPTURE_FAILED` | Element `E` | `register_capture` |
-| `CAPTURE_COLLISION` | Both `E` and `A` (or composite) | `execute_collapse` |
-| `ORBIT_STABLE` | Element `E` | `classify_orbit` |
-| `ORBIT_ECCENTRIC` | Element `E` | `classify_orbit` |
-| `RELEASED` | Element `E` + Attractor `A` registry | `execute_release` |
-| `COLLAPSED` | Composite node `C` (or `A` post-absorption) | `execute_collapse` |
-| `DAMPEN_ACTIVE` | Attractor `A` | `suppress_field` |
-| `EMIT_ACTIVE` | Attractor `A` | `emit_field` |
-
----
-
-## §4 · Engineering Primitives
-
-<!--
-  metadata:
-    section:       engineering-primitives
-    section_id:    §4
-    type:          primitive-registry
-    normative:     true
-    primitive_count: 15
-    call_convention: functional
-    created_in:    SES-20260813-OPS-001
-    correction: >
-      INDEX.md §2 listed 13 primitives. Correct count is 15.
-      initialize_composite_node and purge_registry were listed
-      separately in f_Collapse.md scaffolds but not in the original
-      count. This document is authoritative: 15 primitives.
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-### §4.1 · Call Order and Dependencies
-
-Primitives must be called in the order defined in §7 (Evaluation Order).
-Side-effecting primitives write to external registries and are **not** idempotent.
-Pure primitives may be called in any order relative to each other within their group.
-
-### §4.2 · Full Primitive Specification Table
-
-| # | Primitive | Source File | Pure | Reads | Writes | Call Timing | Frozen |
-|---|---|---|---|---|---|---|---|
-| 1 | `compute_approach_vector` | `f_Capture.md §7.2` | Yes | `E.state`, `A.position` | `v_approach` | Once · Step 1 | ✅ |
-| 2 | `resolve_escape_velocity` | `f_Capture.md §7.2` | Yes | `M_A`, `ρ(Φ)` | `v_escape(A)` | Once · Step 2 | ✅ |
-| 3 | `evaluate_capture_threshold` | `f_Capture.md §7.2` | Yes | `v_approach`, `v_escape`, `r` | `C_thresh` | Once · Step 5 | ✅ |
-| 4 | `lock_orbit` | `f_Capture.md §7.2` | No | `E`, `A`, `Φ` | `orbital_parameters` | Once · Step 8 | ✅ |
-| 5 | `register_capture` | `f_Capture.md §7.2` | No | `orbital_parameters` | `FFF_Registry`, `E.registry`, `A.registry`, `A.field_curvature` | Once · Step 9 | ✅ |
-| 6 | `flag_decay` | `f_Capture.md §7.2` / `f_Decay.md §7` | No | `d_bind_delta` | `E.state_flag`, `decay_status` | Every cycle post `CAPTURE_LOCKED` | ✅ |
-| 7 | `classify_orbit` | `f_Orbit.md §7` | Yes | `p_res`, `d_bind`, `ω_res` | `orbital_parameters.orbit_class`, `.stab_class` | Once post lock; then each cycle | 🔵 |
-| 8 | `compute_release_vector` | `f_Release.md §7` | Yes | `E.state`, `d_bind` | `v_release` | Once · on release attempt | 🔵 |
-| 9 | `execute_release` | `f_Release.md §7` | No | `v_release` | `FFF_Registry`, `E.registry`, `A.registry` | Once · on release | 🔵 |
-| 10 | `execute_collapse` | `f_Collapse.md §7` | No | `d_bind`, `E`, `A` | composite node, both registries | Once · on FM-005 or FM-007 | 🔵 |
-| 11 | `initialize_composite_node` | `f_Collapse.md §7` | No | `M_E`, `M_A` | new composite node `C` | Once · on FM-007 only | 🔵 |
-| 12 | `purge_registry` | `f_Collapse.md §7` | No | `E.id`, `A.id` | `FFF_Registry` (deletion) | Once · on FM-007; partial on FM-005 | 🔵 |
-| 13 | `emit_field` | `f_Emit.md §7` | No | `F_emit`, `A`, `r_emit` | `ρ(Φ)` local, `A.field_curvature` | On demand | 🔵 |
-| 14 | `suppress_field` | `f_Dampen.md §7` | No | `F_damp`, `ρ(Φ)`, `r_damp` | `ρ(Φ)` local | On demand | 🔵 |
-| 15 | `amplify_coupling` | `f_Amplify.md §7` | No | `F_amp`, `M_A`, `ρ(Φ)` | `β`, `P_eff` | On demand | 🔵 |
-| 16 | `redirect_force_node` | `f_Deflect.md §7` | No | `heading_delta`, `r_deflect` | `v_approach` heading component | On demand | 🔵 |
-
-> **Note:** Primitive 16 (`redirect_force_node`) was added from scaffold review.
-> Corrected total: **16 primitives**. INDEX.md §2 to be updated at next session.
-
-### §4.3 · Side-Effect Classification
-
-| Class | Primitives | Consequence of Repeat Call |
-|---|---|---|
-| Pure (safe to repeat) | 1, 2, 3, 7, 8 | No side effects; produces same output for same inputs |
-| Single-write (idempotent-safe) | 4, 6 | Overwrites same fields; safe to repeat |
-| Registry-write (non-idempotent) | 5, 9, 10, 11, 12, 13, 14, 15, 16 | Repeat call creates duplicate records or double-applies effect |
-
-### §4.4 · Primitive Guards Summary
-
-| Primitive | Guard | Consequence of Violation |
-|---|---|---|
-| `evaluate_capture_threshold` | `r ≤ r_capture` | Returns `C_thresh < 0` immediately if `r > r_capture` |
-| `lock_orbit` | `C_thresh > 0` | Must not be called if threshold not met |
-| `register_capture` | `lock_orbit` completed | Undefined behavior if orbital parameters absent |
-| `flag_decay` | Post `CAPTURE_LOCKED` only | No-op if called pre-capture |
-| `execute_collapse` | FM-005 or FM-007 active | Must not be called outside terminal FM context |
-| `initialize_composite_node` | FM-007 path only | Must not be called on asymmetric collapse |
-| `emit_field` | `ρ(Φ) < 1.0` | No-op at saturation; runaway risk if `β → β_max` |
-| `suppress_field` | `ρ(Φ) > ρ(Φ)_floor` | FM-009 risk if floor breached |
-| `amplify_coupling` | `β < β_max` | FM-010 if ceiling exceeded |
-| `redirect_force_node` | `heading_delta` within bounds | Over-deflection → FM-001 equivalent |
-
----
-
-## §5 · Failure Mode Registry
-
-<!--
-  metadata:
-    section:       failure-mode-registry
-    section_id:    §5
-    type:          registry
-    normative:     true
-    failure_count: 10
-    id_prefix:     FM
-    id_range:      FM-001 – FM-010
-    severity_levels: [warn, error, fatal]
-    frozen:        FM-001 through FM-007 frozen at v1.0.0; FM-008 through FM-010 pending
-    created_in:    SES-20260813-OPS-001
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-### §5.1 · Full Failure Mode Table
-
-| ID | Name | FFF Node | Trigger Condition | Operators Involved | State Transition | Outcome | Severity | Recoverable | Defined In |
-|---|---|---|---|---|---|---|---|---|---|
-| FM-001 | Overshoot | `F_force` | `C_thresh ≤ 0`; `v_approach ≥ v_escape(A)` | `v_approach`, `v_escape`, `C_thresh` | `CAPTURE_PENDING → CAPTURE_FAILED` | Element escapes | error | No | `f_Capture.md §6` |
-| FM-002 | Field Null | `F_freq` | `ρ(Φ) = 0` at moment of encounter | `ρ(Φ)`, `P_eff`, `v_escape` | `CAPTURE_PENDING → CAPTURE_FAILED` | No pull transmitted | error | No | `f_Capture.md §6` |
-| FM-003 | Frame Saturation | Frame | Attractor registry at MAX capacity | Frame.registry_capacity, `β` | `CAPTURE_PENDING → CAPTURE_FAILED` | Element deflected at boundary | error | No | `f_Capture.md §6` |
-| FM-004 | Resonance Drift | `ω_res` | `ω_res` → irrational; `d_bind < d_warn` | `ω_res`, `d_bind`, `δ` | `CAPTURE_LOCKED → CAPTURE_DECAYING` | Orbit destabilizing | warn | Yes — via `f_Emit` or `f_Amplify` | `f_Capture.md §6` |
-| FM-005 | Decay Spiral | `d_bind` | `d_bind ≤ d_collapse`; energy exhausted | `d_bind`, `δ`, `p_res` | `CAPTURE_DECAYING → CAPTURE_FAILED` or `CAPTURE_COLLISION` | Ejection or infall | fatal | No | `f_Decay.md §6` |
-| FM-006 | Phantom Capture | `ρ(Φ)` | `β ≥ 1.0` met; `ρ(Φ)` locally structured; lock dissolves at field boundary | `β`, `ρ(Φ)`, `P_eff` | `CAPTURE_PENDING → CAPTURE_FAILED` | Apparent capture resolves to escape | warn | No | `f_Capture.md §6` |
-| FM-007 | Mutual Dissolution | `F_fluid` | `\|M_E − M_A\| < m_parity`; collision threshold crossed | `M_E`, `M_A`, `β`, `C_thresh` | `CAPTURE_LOCKED → CAPTURE_COLLISION` | Composite node created; both registries purged | fatal | No | `f_Collapse.md §6` |
-| FM-008 | Release Overshoot | `F_force` | `v_release` too high; trajectory becomes hyperbolic | `v_release`, `E_rel` | `CAPTURE_LOCKED → CAPTURE_FAILED` | Uncontrolled ejection | error | No | `f_Release.md §6` |
-| FM-009 | Dampen Cascade | `F_freq` | `suppress_field` propagates beyond `r_damp`; `ρ(Φ) → 0` region-wide | `F_damp`, `ρ(Φ)`, `r_damp` | multiple `CAPTURE_LOCKED → CAPTURE_DECAYING` | Gravity null zone; uncontrolled releases | fatal | Partial — if caught before propagation | `f_Dampen.md §6` |
-| FM-010 | Amplify Runaway | `F_fluid` | `β > β_max` under sustained `f_Emit` or `f_Amplify` | `β`, `F_amp`, `F_emit`, `β_max` | `ORBIT_STABLE → CAPTURE_COLLISION` | Collapse or singularity | fatal | No | `f_Amplify.md §6` |
-
-### §5.2 · Failure Mode Groupings
-
-| Group | IDs | Common Cause | Common Outcome |
-|---|---|---|---|
-| Approach failures | FM-001, FM-002, FM-003, FM-006 | Conditions wrong at encounter | `CAPTURE_FAILED` — never entered orbit |
-| Orbital instability | FM-004, FM-005 | Post-capture energy loss | `CAPTURE_DECAYING` → ejection or infall |
-| Terminal events | FM-005 (infall path), FM-007 | Mass collision or dissolution | `CAPTURE_COLLISION` — no survivors |
-| Engineering failures | FM-008, FM-009, FM-010 | Primitive misuse or runaway | Varied — ejection, null zone, singularity |
-
-### §5.3 · Severity Definitions
-
-| Severity | Meaning | Recovery |
-|---|---|---|
-| `warn` | Orbit is at risk but not yet terminal; intervention window open | Yes — `f_Emit`, `f_Amplify` may restore |
-| `error` | Capture has failed; element not in orbit; no immediate system danger | No — outcome is final for this interaction |
-| `fatal` | Terminal event with system-wide consequences; nodes destroyed or topology changed | No — irreversible |
-
----
-
-## §6 · Composition Rules
-
-<!--
-  metadata:
-    section:       composition-rules
-    section_id:    §6
-    type:          formula-registry
-    normative:     true
-    source:        f_Capture.md §4.8
-    created_in:    SES-20260813-OPS-001
-    note: >
-      These are the canonical derivation chains for all computed values.
-      Each rule specifies: the output, its formula, what inputs must be
-      defined first, and what state it is undefined in.
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-### §6.1 · Core Derivation Chain
-
-Reading order — each row depends on all rows above it:
-
-```
-INPUT LAYER
-  M_A        → provided by Attractor state
-  M_E        → provided by Element state
-  ρ(Φ)       → provided by F_freq (f_Field.md)
-  r          → provided by geometry
-  v_approach → computed by: compute_approach_vector(E, A)
-
-STEP 1: Effective Pull
-  P_eff = M_A × ρ(Φ) / r²
-  Defined when: ρ(Φ) > 0 ∧ r > 0
-
-STEP 2: Escape Velocity
-  v_escape(A) = resolve_escape_velocity(M_A, ρ(Φ))
-  Defined when: ρ(Φ) > 0
-
-STEP 3: Binding Coefficient
-  β = P_eff / (M_E × v_approach)
-  Defined when: v_approach > 0
-
-STEP 4: Capture Threshold
-  C_thresh = v_escape(A) − v_approach
-  Defined when: v_escape(A) defined
-
-STEP 5: Residual Momentum
-  p_res = M_E × (v_approach − C_thresh)
-  Defined when: C_thresh > 0
-
-STEP 6: Orbital Eccentricity
-  e = p_res / (p_res + P_eff)
-  Defined when: P_eff > 0 ∧ p_res ≥ 0
-  Constraint: e must be in [0, 1); e ≥ 1 → hyperbolic → not captured
-
-STEP 7: Binding Depth
-  d_bind = β × ρ(Φ) × (1 − e)
-  Defined when: e ∈ [0, 1)
-
-STEP 8: Decay Rate (post-capture, per-cycle)
-  δ = Δd_bind / Δt = d_bind(t) − d_bind(t−1)
-  Defined when: t ≥ 1 (at least one prior cycle)
-```
-
-### §6.2 · Capture Gate Composition
-
-The Capture Gate is the boolean conjunction of all stability conditions.
-**All must be true simultaneously for capture to succeed.**
-
-```
-CAPTURE_GATE =
-    C_thresh > 0             [Condition 1 — Approach]
-  ∧ ρ(Φ) > 0 (uniform)      [Condition 2 — Field Coherence]
-  ∧ ω_res ∈ ℚ               [Condition 3 — Resonance]
-  ∧ β ≥ 1.0                 [Condition 4 — Binding Floor]
-  ∧ Frame.capacity > 0       [Condition 5 — Frame Compatibility]
-
-If CAPTURE_GATE = true  → lock_orbit() → register_capture() → CAPTURE_LOCKED
-If CAPTURE_GATE = false → FM raised   → register_capture() → CAPTURE_FAILED
-```
-
-### §6.3 · Engineering Operator Compositions
-
-| Goal | Composition | Operators Modified | Risk |
-|---|---|---|---|
-| Restore decaying orbit | `emit_field(F_emit)` → `ρ(Φ)↑` → `d_bind↑` | `ρ(Φ)`, `P_eff`, `β`, `d_bind` | FM-010 if sustained |
-| Weaken attractor hold | `suppress_field(F_damp)` → `ρ(Φ)↓` → `d_bind↓` | `ρ(Φ)`, `P_eff`, `v_escape`, `d_bind` | FM-009 if propagates |
-| Increase capture probability | `amplify_coupling(F_amp)` → `β↑` → `P_eff↑` | `β`, `P_eff`, `d_bind` | FM-010 if `β > β_max` |
-| Route Element to target heading | `redirect_force_node(heading_delta)` → `v_approach` heading change | `v_approach` (heading only) | FM-001 if over-deflected |
-| Engineer target resonance | `solve_resonant_approach(ω_res_target)` → `{heading, ρ(Φ), β}` spec | All approach operators | No solution if target irrational |
-
----
-
-## §7 · Operator Evaluation Order
-
-<!--
-  metadata:
-    section:       evaluation-order
-    section_id:    §7
-    type:          execution-sequence
-    normative:     true
-    source:        f_Capture.md §4.7
-    scope: >
-      This is the canonical evaluation order for the f_Capture execution path.
-      Engineering primitives (f_Emit, f_Dampen, f_Amplify, f_Deflect) are called
-      on demand, outside this sequence, before the approach window opens.
-    created_in:    SES-20260813-OPS-001
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-| Step | Frequency | Primitive | Operators Read | Operators Written | Guard | Short-Circuits To |
-|---|---|---|---|---|---|---|
-| 1 | ONCE | `compute_approach_vector` | `E.state`, `A.position` | `v_approach` | none | — |
-| 2 | ONCE | `resolve_escape_velocity` | `M_A`, `ρ(Φ)` | `v_escape(A)` | `ρ(Φ) > 0` | FM-002 |
-| 3 | ONCE | *(implicit)* | `M_A`, `ρ(Φ)`, `r` | `P_eff` | requires step 2 | — |
-| 4 | ONCE | *(implicit)* | `P_eff`, `v_approach`, `M_E` | `β` | requires step 3 | — |
-| 5 | ONCE | `evaluate_capture_threshold` | `v_approach`, `v_escape`, `r_capture` | `C_thresh` | `r ≤ r_capture` | FM-001 if `C_thresh ≤ 0` |
-| 6 | ONCE | *(Frame check)* | `Frame.registry_capacity` | — | `β ≥ 1.0` else halt | FM-003 |
-| 7 | ONCE | *(Resonance check)* | `ω_res` | — | `ω_res ∈ ℚ` else halt | FM-004 |
-| 8 | ONCE | `lock_orbit` | `E`, `A`, `p_res`, `ρ(Φ)` | `d_bind`, orbital parameters | `C_thresh > 0` | — |
-| 9 | ONCE | `register_capture` | orbital parameters | `Ω`, `FFF_Registry`, `E.registry`, `A.registry` | requires step 8 | — |
-| 10 | CYCLE | `flag_decay` | `d_bind_delta` | `E.state_flag`, `decay_status` | post `CAPTURE_LOCKED` only | FM-004 / FM-005 |
-
----
-
-## §8 · Symbol Freeze Registry
-
-<!--
-  metadata:
-    section:       freeze-registry
-    section_id:    §8
-    type:          governance-registry
-    normative:     true
-    policy: >
-      A symbol is FROZEN once its defining file reaches canonical status.
-      Frozen symbols cannot be renamed or removed — only deprecated.
-      Deprecation requires a new symbol, a major version bump, and an
-      entry in CHANGELOG.md explaining the migration path.
-    created_in:    SES-20260813-OPS-001
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-### §8.1 · Frozen Symbols (v1.0.0)
-
-All frozen by `f_Capture.md v1.0.0`:
-
-| Symbol | Type | Frozen In | Frozen At |
-|---|---|---|---|
-| `v_approach` | Primary | `f_Capture.md` | v1.0.0 |
-| `v_escape(A)` | Primary | `f_Capture.md` | v1.0.0 |
-| `ρ(Φ)` | Primary | `f_Capture.md` | v1.0.0 |
-| `r_capture` | Primary | `f_Capture.md` | v1.0.0 |
-| `β` | Primary | `f_Capture.md` | v1.0.0 |
-| `ω_res` | Primary | `f_Capture.md` | v1.0.0 |
-| `M_A` | Primary | `f_Capture.md` | v1.0.0 |
-| `M_E` | Primary | `f_Capture.md` | v1.0.0 |
-| `r` | Primary | `f_Capture.md` | v1.0.0 |
-| `P_eff` | Derived | `f_Capture.md` | v1.0.0 |
-| `C_thresh` | Derived | `f_Capture.md` | v1.0.0 |
-| `d_bind` | Derived | `f_Capture.md` | v1.0.0 |
-| `p_res` | Derived | `f_Capture.md` | v1.0.0 |
-| `CAPTURE_PENDING` | Flag | `f_Capture.md` | v1.0.0 |
-| `CAPTURE_LOCKED` | Flag | `f_Capture.md` | v1.0.0 |
-| `CAPTURE_DECAYING` | Flag | `f_Capture.md` | v1.0.0 |
-| `CAPTURE_FAILED` | Flag | `f_Capture.md` | v1.0.0 |
-| `CAPTURE_COLLISION` | Flag | `f_Capture.md` | v1.0.0 |
-| `compute_approach_vector` | Primitive | `f_Capture.md` | v1.0.0 |
-| `resolve_escape_velocity` | Primitive | `f_Capture.md` | v1.0.0 |
-| `evaluate_capture_threshold` | Primitive | `f_Capture.md` | v1.0.0 |
-| `lock_orbit` | Primitive | `f_Capture.md` | v1.0.0 |
-| `register_capture` | Primitive | `f_Capture.md` | v1.0.0 |
-| `flag_decay` | Primitive | `f_Capture.md` | v1.0.0 |
-| FM-001 through FM-007 | Failure Mode | `f_Capture.md` | v1.0.0 |
-
-### §8.2 · Pending Freeze (promoted when source file goes canonical)
-
-| Symbol | Type | Pending In | Freeze Trigger |
-|---|---|---|---|
-| `e` | Derived | `f_Orbit.md` | `f_Orbit.md` → canonical |
-| `T_orb` | Derived | `f_Orbit.md` | `f_Orbit.md` → canonical |
-| `δ` | Derived | `f_Decay.md` | `f_Decay.md` → canonical |
-| `d_warn` | Derived | `f_Decay.md` | `f_Decay.md` → canonical |
-| `d_collapse` | Derived | `f_Decay.md` | `f_Decay.md` → canonical |
-| `E_rel` | Derived | `f_Release.md` | `f_Release.md` → canonical |
-| `m_parity` | Derived | `f_Collapse.md` | `f_Collapse.md` → canonical |
-| `F_emit` | Derived | `f_Emit.md` | `f_Emit.md` → canonical |
-| `F_damp` | Derived | `f_Dampen.md` | `f_Dampen.md` → canonical |
-| `F_amp` | Supplementary | `f_Amplify.md` | `f_Amplify.md` → canonical |
-| `β_max` | Supplementary | `f_Amplify.md` | `f_Amplify.md` → canonical |
-| `heading_delta` | Supplementary | `f_Deflect.md` | `f_Deflect.md` → canonical |
-| `ORBIT_STABLE` | Flag | `f_Orbit.md` | `f_Orbit.md` → canonical |
-| `ORBIT_ECCENTRIC` | Flag | `f_Orbit.md` | `f_Orbit.md` → canonical |
-| `RELEASED` | Flag | `f_Release.md` | `f_Release.md` → canonical |
-| `COLLAPSED` | Flag | `f_Collapse.md` | `f_Collapse.md` → canonical |
-| `DAMPEN_ACTIVE` | Flag | `f_Dampen.md` | `f_Dampen.md` → canonical |
-| `EMIT_ACTIVE` | Flag | `f_Emit.md` | `f_Emit.md` → canonical |
-| FM-008 | Failure Mode | `f_Release.md` | `f_Release.md` → canonical |
-| FM-009 | Failure Mode | `f_Dampen.md` | `f_Dampen.md` → canonical |
-| FM-010 | Failure Mode | `f_Amplify.md` | `f_Amplify.md` → canonical |
-| Primitives 7–16 | Primitive | Wave 3 files | each source file → canonical |
-
----
-
-## §9 · Versioning Policy
-
-<!--
-  metadata:
-    section:       versioning-policy
-    section_id:    §9
-    type:          governance
-    normative:     true
-    created_in:    SES-20260813-OPS-001
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-### §9.1 · Version Bump Rules
-
-| Change Type | Bump Required | Example |
-|---|---|---|
-| Add a new symbol (not conflicting) | **minor** — e.g. v1.0.0 → v1.1.0 | Adding `T_orb` when `f_Orbit.md` canonicalizes |
-| Change a frozen symbol's formula | **major** — e.g. v1.1.0 → v2.0.0 | Changing `P_eff` formula |
-| Rename a frozen symbol | **major** | Renaming `d_bind` to `d_orbital` |
-| Remove a frozen symbol | **major** + deprecation notice | Removing `ω_res` |
-| Add a failure mode | **minor** | Adding FM-011 |
-| Change a failure mode's severity | **minor** | Upgrading FM-004 from warn to error |
-| Fix a typo in a non-normative section | **patch** — e.g. v1.0.0 → v1.0.1 | Fixing a table cell |
-| Add a note or example | **patch** | Adding a new canonical example |
-
-### §9.2 · Namespace Reservation
-
-The following symbol prefixes are reserved for future use and must not be used
-by any function file without first registering here:
-
-| Prefix | Reserved For | Example |
-|---|---|---|
-| `v_` | velocity operators | `v_approach`, `v_escape`, `v_release` |
-| `ρ` | field density operators | `ρ(Φ)`, `ρ(Φ,θ)`, `ρ(Φ,t)` |
-| `ω_` | resonance and frequency operators | `ω_res`, `ω_target` |
-| `d_` | depth and distance operators | `d_bind`, `d_warn`, `d_collapse` |
-| `F_` | engineering force/field operators | `F_emit`, `F_damp`, `F_amp` |
-| `M_` | mass operators | `M_A`, `M_E` |
-| `G_` | GravityGraph operators | `G_edge`, `G_degree`, `G_stability` |
-| `FM-` | failure mode IDs | FM-001 through FM-999 |
-| `EX-` | canonical example IDs | EX-001, EX-RES-001 |
-| `SES-` | session IDs | SES-20260813-OPS-001 |
-
----
-
-## §10 · Document Metadata
-
-<!--
-  metadata:
-    section:       document-metadata
-    section_id:    §10
-    type:          administrative
-    normative:     false
-  session:
-    session_id:    SES-20260813-OPS-001
-    touch_count:   1
-    change_type:   created
--->
-
-| Field | Value |
-|---|---|
-| Canonical Path | `docs/FFF_Gravity/OPERATORS.md` |
-| Version | 1.0.0 |
-| Status | Canonical |
-| Stability | Living — update when any symbol is added, frozen, or deprecated |
-| Normative | Yes |
-| Created | 2026-08-13 |
-| Last Modified | 2026-08-13 |
-| Authors | TriadicFrameworks |
-| License | See `/LICENSE` at repository root |
-| Encoding | UTF-8 · LF |
-| Supersedes | Operator tables in `f_Capture.md §4` (those remain normative; this file is the consolidated authority) |
-
----
-
-*Single source of truth for all FFF_Gravity operator symbols.*
-*All function files derive their symbol definitions from this document.*
-*Update at the close of any session that introduces or freezes a symbol.*
-```
-
----
-
-**Commit message:**
-```
-feat(FFF_Gravity): add canonical OPERATORS.md — master symbol authority, 9P/10D operators, 11 flags, 16 primitives, 10 FMs, composition rules, freeze registry [SES-20260813-OPS-001]
-
----
-
-Two corrections surfaced while writing this — both logged in the file, both need propagating:
-
-| Discovery | Location to update |
-|---|---|
-| Primitive count is **16**, not 13 (INDEX said 13, scaffolds said 15) — `redirect_force_node` was the missing one | `INDEX.md §2` master registry row for primitives; `FFF_Gravity_module.json` |
-| Primitive count correction note in `§4.2` is self-documenting | No separate action needed |
-
----
-
-## Wave 3 Addendum — Core Function Operators (PRIM:007–024)
-> Session: SES-20260813-W3 | Sealed: 2026-08-13
-
-### f_Orbit Operators (Wave 3 · PRIM:007, 012)
-
-| Symbol        | Type  | Domain                          | Description                                                       | Frozen in |
-|---------------|-------|---------------------------------|-------------------------------------------------------------------|-----------|
-| `T_orb`       | float | > 0                             | Orbital period; time for one complete orbit around source node    | PRIM:012  |
-| `orbit_class` | enum  | {STABLE, DECAYING, ESCAPE}      | Orbit classification derived from binding strength and δ          | PRIM:007  |
-| `stab_class`  | enum  | {HIGH, MED, LOW, CRITICAL}      | Stability classification derived from T_orb and decay trajectory  | PRIM:012  |
-
-### f_Release Operators (Wave 3 · PRIM:008–009)
-
-| Symbol      | Type  | Domain | Description                                                  | Frozen in |
-|-------------|-------|--------|--------------------------------------------------------------|-----------|
-| `v_release` | float | ≥ 0    | Scalar release velocity at moment of unbinding               | PRIM:009  |
-| `r_release` | float | > 0    | Release radius; distance at which unbinding condition is met | PRIM:008  |
-
-### f_Decay Operators (Wave 3 · PRIM:010–011)
-
-| Symbol       | Type  | Domain        | Description                                                         | Frozen in |
-|--------------|-------|---------------|---------------------------------------------------------------------|-----------|
-| `δ`          | float | (0, 1)        | Decay rate coefficient; fractional binding-distance loss per cycle  | PRIM:010  |
-| `d_warn`     | float | > 0, < d_bind | Binding distance level at which decay warning is raised             | PRIM:010  |
-| `d_collapse` | float | > 0, ≤ d_warn | Binding distance threshold triggering collapse evaluation           | PRIM:011  |
-
-### f_Collapse Operators (Wave 3 · PRIM:013–014)
-
-| Symbol     | Type    | Domain | Description                                                       | Frozen in |
-|------------|---------|--------|-------------------------------------------------------------------|-----------|
-| `m_parity` | float   | > 0    | Mass parity ratio between collapsing nodes                        | PRIM:013  |
-| `C_node`   | node_id | —      | Identifier of the surviving/dominant node after collapse resolves | PRIM:014  |
-
-### f_Emit Operators (Wave 3 · PRIM:015–017)
-
-| Symbol       | Type  | Domain | Description                                                    | Frozen in |
-|--------------|-------|--------|----------------------------------------------------------------|-----------|
-| `F_emit`     | float | ≥ 0    | Emission force magnitude applied outward into the field        | PRIM:015  |
-| `ρ(Φ)_delta` | float | any    | Change in field density ρ(Φ) caused by a single emission event | PRIM:016  |
-| `r_emit`     | float | > 0    | Emission radius; spatial extent of emitted influence           | PRIM:017  |
-
-### f_Dampen Operators (Wave 3 · PRIM:018–020)
-
-| Symbol          | Type  | Domain | Description                                                    | Frozen in |
-|-----------------|-------|--------|----------------------------------------------------------------|-----------|
-| `F_damp`        | float | ≤ 0    | Dampening force; negative magnitude opposing field escalation  | PRIM:018  |
-| `ρ(Φ)_floor`    | float | ≥ 0    | Minimum field density enforced when dampening is active        | PRIM:019  |
-| `cascade_guard` | bool  | {0, 1} | Flag active when cascade dampening guard is engaged            | PRIM:020  |
-
-### f_Amplify Operators (Wave 3 · PRIM:021–022)
-
-| Symbol     | Type  | Domain | Description                                                  | Frozen in |
-|------------|-------|--------|--------------------------------------------------------------|-----------|
-| `F_amp`    | float | ≥ 0    | Amplification force magnitude applied to field               | PRIM:021  |
-| `β_max`    | float | > 1    | Maximum amplification coefficient; hard ceiling on β         | PRIM:021  |
-| `amp_cost` | float | ≥ 0    | Energy cost of amplification; deducted from ρ(Φ) each cycle | PRIM:022  |
-
-### f_Deflect Operators (Wave 3 · PRIM:023–024)
-
-> **Stub resolution note:** `heading_delta` was declared as a forward stub in `f_Force.md §4.3`
-> (PRIM:005). That stub is fully resolved here. `f_Force.md §4.3` remains the declaration
-> site; `f_Deflect.md` (PRIM:023) is the authoritative definition and domain authority.
-
-| Symbol          | Type  | Domain  | Description                                                | Frozen in |
-|-----------------|-------|---------|------------------------------------------------------------|-----------|
-| `heading_delta` | float | [−π, π] | Angular deflection applied to the approach vector          | PRIM:023  |
-| `r_deflect`     | float | > 0     | Deflection radius; distance at which deflection force acts | PRIM:023  |
-| `deflect_cost`  | float | ≥ 0     | Energy cost of deflection; deducted from ρ(Φ)             | PRIM:024  |
-
----
-
-## Wave 4 Addendum — Capture Variant Operators (PRIM:025–040)
-> Session: SES-20260813-W4 | Sealed: 2026-08-13
-
-### f_Capture_Multi Operators (Wave 4 · PRIM:025–026)
-
-| Symbol        | Type  | Domain  | Description                                                               | Frozen in |
-|---------------|-------|---------|---------------------------------------------------------------------------|-----------|
-| `N`           | int   | ≥ 2     | Count of simultaneous capture targets in multi-capture event              | PRIM:025  |
-| `eval_order`  | list  | ordered | Evaluation priority sequence for multi-target binding attempts            | PRIM:025  |
-| `Φ_perturbed` | float | [0, 1]  | Field value after perturbation from multi-target interference             | PRIM:026  |
-| `δ_perturb`   | float | ≥ 0     | Perturbation magnitude applied to Φ during multi-capture                  | PRIM:026  |
-| `k_perturb`   | float | > 0     | Perturbation scaling coefficient                                          | PRIM:026  |
-
-### f_Capture_Cascade Operators (Wave 4 · PRIM:027–028)
-
-| Symbol          | Type  | Domain | Description                                                            | Frozen in |
-|-----------------|-------|--------|------------------------------------------------------------------------|-----------|
-| `cascade_depth` | int   | ≥ 0    | Current recursion depth within the cascade capture chain               | PRIM:027  |
-| `k_max`         | int   | ≥ 1    | Maximum permitted cascade depth; CAS-1 guard enforced inside PRIM:027 | PRIM:027  |
-| `γ`             | float | (0, 1) | Cascade gain; fraction of parent Ω_cascade transmitted to child step  | PRIM:028  |
-| `Ω_cascade`     | float | ≥ 0    | Cascade transmission energy available at the current depth step        | PRIM:028  |
-
-### f_Capture_Soft Operators (Wave 4 · PRIM:029–030)
-
-| Symbol           | Type  | Domain | Description                                                       | Frozen in |
-|------------------|-------|--------|-------------------------------------------------------------------|-----------|
-| `d_soft`         | float | > 0    | Soft capture binding distance (relaxed threshold vs. d_bind)     | PRIM:029  |
-| `soft_threshold` | float | (0, 1) | Minimum ρ(Φ) required to sustain soft capture                    | PRIM:029  |
-| `grace_period`   | int   | ≥ 0    | Cycles permitted below soft_threshold before release triggers     | PRIM:030  |
-| `k_grace`        | float | > 0    | Grace period scaling coefficient                                  | PRIM:030  |
-
-### f_Capture_Hard Operators (Wave 4 · PRIM:031–032)
-
-| Symbol       | Type  | Domain        | Description                                                   | Frozen in |
-|--------------|-------|---------------|---------------------------------------------------------------|-----------|
-| `d_hard`     | float | > 0           | Hard capture binding distance; strict threshold for lock entry | PRIM:031  |
-| `α_hard`     | float | > 1           | Hard capture alpha; binding distance multiplier               | PRIM:031  |
-| `β_hard`     | float | > 0           | Hard capture beta; force amplification coefficient            | PRIM:031  |
-| `β_min_hard` | float | > 0, ≤ β_hard | Minimum beta required to achieve and sustain hard lock        | PRIM:032  |
-| `lock_cost`  | float | ≥ 0           | Energy cost deducted from ρ(Φ) to establish hard lock         | PRIM:032  |
-| `k_lock`     | float | > 0           | Lock cost scaling coefficient                                 | PRIM:032  |
-
-### f_Capture_Resonant Operators (Wave 4 · PRIM:033–034)
-
-| Symbol         | Type  | Domain   | Description                                                       | Frozen in |
-|----------------|-------|----------|-------------------------------------------------------------------|-----------|
-| `ω_res`        | float | > 0      | Resonant angular frequency of the source emission cycle           | PRIM:033  |
-| `T_res`        | float | > 0      | Resonant period; T_res = 2π / ω_res                               | PRIM:033  |
-| `φ_A(t)`       | float | [0, 2π)  | Approach node phase angle at time t                               | PRIM:033  |
-| `φ_E`          | float | [0, 2π)  | Emission phase angle of source at peak resonance                  | PRIM:033  |
-| `φ_open`       | float | [0, 2π)  | Phase angle at which resonance acceptance window opens            | PRIM:033  |
-| `φ_close`      | float | [0, 2π)  | Phase angle at which resonance acceptance window closes           | PRIM:033  |
-| `window_width` | float | (0, 2π)  | Angular width of resonance acceptance window                      | PRIM:033  |
-| `p_ratio`      | int   | ≥ 1      | Numerator of the p:q phase-lock ratio                             | PRIM:033  |
-| `q_ratio`      | int   | ≥ 1      | Denominator of the p:q phase-lock ratio                           | PRIM:033  |
-| `ρ_res_gain`   | float | > 0      | Field density gain multiplier active during resonance window      | PRIM:034  |
-| `ρ_eff`        | float | ≥ 0      | Effective field density under resonance conditions                | PRIM:034  |
-| `ρ_res_floor`  | float | ≥ 0      | Minimum field density floor enforced in resonant state            | PRIM:034  |
-| `d_bind_res`   | float | > 0      | Resonance-adjusted binding distance                               | PRIM:034  |
-| `T_orb_res`    | float | > 0      | Resonance-adjusted orbital period                                 | PRIM:034  |
-
-### f_Capture_Asymmetric Operators (Wave 4 · PRIM:035–036)
-
-| Symbol                  | Type  | Domain  | Description                                                   | Frozen in |
-|-------------------------|-------|---------|---------------------------------------------------------------|-----------|
-| `mass_ratio`            | float | > 0     | Ratio of source node mass to approach node mass               | PRIM:035  |
-| `asymmetry_factor`      | float | ≥ 0     | Degree of mass asymmetry (0 = fully symmetric)                | PRIM:035  |
-| `parity_warn_threshold` | float | > 0     | Asymmetry level at which parity warning is raised             | PRIM:035  |
-| `d_bind_asym`           | float | > 0     | Asymmetry-corrected binding distance                          | PRIM:036  |
-| `heading_delta_asym`    | float | [−π, π] | Asymmetry-adjusted heading deflection angle                   | PRIM:036  |
-| `deflect_tolerance`     | float | ≥ 0     | Maximum heading_delta_asym before deflection is rejected      | PRIM:036  |
-| `asym_decay_risk`       | bool  | {0, 1}  | Flag: elevated decay risk due to asymmetric mass distribution | PRIM:036  |
-
-### f_Capture_Temporal Operators (Wave 4 · PRIM:037–038)
-
-| Symbol                  | Type   | Domain   | Description                                                   | Frozen in |
-|-------------------------|--------|----------|---------------------------------------------------------------|-----------|
-| `t_open`                | float  | ≥ 0      | Timestamp at which temporal capture window opens              | PRIM:037  |
-| `t_close`               | float  | > t_open | Timestamp at which temporal capture window closes             | PRIM:037  |
-| `t_span`                | float  | > 0      | Duration of window; t_span = t_close − t_open                | PRIM:037  |
-| `t_elapsed`             | float  | ≥ 0      | Time elapsed since t_open at evaluation moment                | PRIM:037  |
-| `t_remaining`           | float  | ≥ 0      | Time remaining until t_close at evaluation moment             | PRIM:037  |
-| `window_id`             | string | unique   | Identifier for this temporal capture window instance          | PRIM:037  |
-| `proximity_ratio`       | float  | [0, 1]   | t_elapsed / t_span; urgency metric for temporal capture       | PRIM:038  |
-| `temporal_decay_factor` | float  | (0, 1]   | Decay multiplier applied to d_bind as window approaches close | PRIM:038  |
-| `d_bind_temporal`       | float  | > 0      | Temporally-adjusted binding distance                          | PRIM:038  |
-| `temporal_margin`       | float  | ≥ 0      | Buffer interval before t_close that triggers margin alert     | PRIM:038  |
-
-### f_Capture_Networked Operators (Wave 4 · PRIM:039–040)
-
-| Symbol                 | Type  | Domain    | Description                                                      | Frozen in |
-|------------------------|-------|-----------|------------------------------------------------------------------|-----------|
-| `N_net`                | int   | ≥ 2       | Number of nodes participating in the capture network             | PRIM:039  |
-| `G_net`                | graph | connected | Network graph structure (nodes + weighted directed edges)        | PRIM:039  |
-| `w_i`                  | float | ≥ 0       | Edge weight for node i within G_net                              | PRIM:039  |
-| `d_bind_net`           | float | > 0       | Network-consensus binding distance (weighted aggregate)          | PRIM:040  |
-| `ρ(Φ)_net`             | float | ≥ 0       | Aggregate network field density across all participating nodes   | PRIM:040  |
-| `resilience_threshold` | float | (0, 1)    | Minimum connectivity fraction required to sustain network capture| PRIM:040  |
-
----
-
-## Wave 5 — Dismissal Operators (PRIM:041–042)
-> Session: SES-20260814-DISMISS-001 | Sealed: 2026-08-14
-
-### f_Dismiss Operators (Wave 5 · PRIM:041–042)
-
-| Symbol      | Type  | Domain           | Description                                               | Frozen in |
-|-------------|-------|------------------|-----------------------------------------------------------|-----------|
-| `F_dismiss` | float | ≥ 0              | Scalar dismissal force magnitude (\|G_D\|)                | PRIM:041  |
-| `ρ_D(Φ)`    | float | (−1, 0]          | Dismissal field density (negative-polarity extension)     | PRIM:042  |
-| `d_dismiss` | float | > 0              | Initial Dismissal Well depth at t = 0                     | PRIM:042  |
-| `T_dismiss` | float | > 0              | Dismissal persistence time; governs exponential well decay| PRIM:042  |
-| `r_dismiss` | float | (0, r_capture]   | Spatial extent of dismissal repulsion zone around A       | PRIM:041  |
-| `ψ_dismiss` | enum  | {INTENTIONAL, STRUCTURAL, DRIFT} | Dismissal mode flag               | PRIM:041  |
-| `t_dismiss` | float | ≥ 0              | Absolute clock time of dismissal event                    | PRIM:042  |
-| `v_depart`  | float | ≥ 0              | Entity departure velocity post-dismissal                  | PRIM:042  |
-| `β_D`       | float | (−∞, 0]          | Repulsive coupling coefficient active during expulsion    | PRIM:042  |
-
-**Well decay formula (conceptual authority: GravityOfDismissal.md §3.2):**
-```
-ρ_D(Φ, t) = −d_dismiss × exp(−t / T_dismiss)
-```
-
-**Re-capture gate (operational form of GravityOfDismissal.md §3.3):**
-```
-d_bind_approach(t) > |ρ_D(Φ, t)|   →   re-capture structurally eligible
-```
-<img width="682" height="682" alt="triadic_gravity_resonance_field" src="https://github.com/user-attachments/assets/28d9cd98-16e5-46b3-b478-a80c589240ca" />
-
-<!--
-  docs/FFF_Gravity/README.md
-  FFF_Gravity Module — Front Door
-  Version: 2.0.0 | Sealed: 2026-08-14
-  All 5 waves complete · 42 PRIMs · 10 INVs · 10 FMs
--->
-
-# FFF_Gravity
-
-**Framework Field Function — Gravity**
-`[FFF:GRAVITY]` · `G = F_freq · F_fluid · F_force`
-
-> *A formal specification of gravitational capture, orbit, decay, release,
-> dismissal, and field dynamics for relational node systems.*
-
----
-
-## Overview
-
-FFF_Gravity models the gravitational mechanics of **attractor–entity
-relationships** — the forces that pull nodes into orbit, hold them there,
-erode the binding over time, and ultimately sever it. Every phenomenon is
-expressed as a product of three triadic nodes:
-
-| Node | Layer | Core quantity |
-|---|---|---|
-| **F_freq** | Frequency / field coherence | ρ(Φ) — field density |
-| **F_fluid** | Fluid / binding mass | β · d_bind — coupling depth |
-| **F_force** | Force / approach geometry | v_approach · heading_delta |
-
-The module is fully sealed across **5 waves**, **29 spec files**, **42 PRIMs**,
-**10 Invariants**, and **10 Failure Modes**.
-
----
-
-## Quick Navigation
-
-| I want to… | Go to |
-|---|---|
-| Understand the module | You are here |
-| Find a specific PRIM | [`INDEX.md`](INDEX.md) |
-| Look up an operator symbol | [`OPERATORS.md`](OPERATORS.md) |
-| Read the full PRIM compliance matrix | [`MANIFEST.md`](MANIFEST.md) |
-| Run the compliance validator | [`validate_prims.py`](validate_prims.py) |
-| See what changed wave-by-wave | [`CHANGELOG.md`](CHANGELOG.md) |
-| Look up a term | [`GLOSSARY.md`](GLOSSARY.md) |
-| Read the machine-readable manifest | [`FFF_Gravity_module.json`](FFF_Gravity_module.json) |
-| Navigate the whole repo | [`docs/SEENMAP.md`](../SEENMAP.md) |
-
----
-
-## Module at a Glance
-
-```
-Wave 0  Genesis               3 files  ·  Conceptual foundation
-Wave 1  Admin / Registry      6 files  ·  Frozen scaffolding
-Wave 2  Layer Definitions     3 files  ·  PRIM:001–006
-Wave 3  Core Functions        8 files  ·  PRIM:007–024
-Wave 4  Capture Variants      8 files  ·  PRIM:025–040
-Wave 5  Dismissal             1 file   ·  PRIM:041–042
-                             ─────────────────────────
-                             29 files  ·  42 PRIMs  ·  SEALED
-```
-
----
-
-## Wave Guide
-
-### Wave 0 — Genesis
-
-The three foundational documents. These establish conceptual vocabulary
-and the base operator set. No PRIMs are frozen here — they are frozen in
-the wave that formalizes each concept.
-
-| File | Purpose |
-|---|---|
-| [`f_Capture.md`](f_Capture.md) | Base capture operator — d_bind, β, SC- conditions, v_escape |
-| [`f_Source.md`](f_Source.md) | Attractor and entity node registry — read-only per INV-007 |
-| [`GravityOfDismissal.md`](GravityOfDismissal.md) | Conceptual foundation for dismissal as active repulsive force — Dismissal Well model, three dismissal modes |
-
-> **GravityOfDismissal.md** is the sole authority for the negative-polarity
-> field extension `ρ_D(Φ,t) = −d_dismiss × exp(−t / T_dismiss)`.
-> Its `F_dismiss` operator family is frozen in `f_Dismiss.md` (Wave 5).
-
----
-
-### Wave 1 — Admin / Registry
-
-Frozen scaffolding. Establishes the append-only admin files used by all
-subsequent waves. No PRIMs introduced.
-
-| File | Purpose |
-|---|---|
-| `README.md` | This file |
-| [`INDEX.md`](INDEX.md) | Full file index — PRIMs, conditions, wave tags |
-| [`OPERATORS.md`](OPERATORS.md) | Single operator symbol authority (~101 operators) |
-| [`GLOSSARY.md`](GLOSSARY.md) | Module-scoped term definitions |
-| [`CHANGELOG.md`](CHANGELOG.md) | Wave-by-wave mutation log |
-| [`FFF_Gravity_module.json`](FFF_Gravity_module.json) | Machine-readable module manifest |
-
----
-
-### Wave 2 — Layer Definitions · `PRIM:001–006`
-
-Three files that define the triadic layer operators. The INV and FM
-registries are seeded here.
-
-| File | Layer | PRIMs |
-|---|---|---|
-| [`f_Field.md`](f_Field.md) | F_freq — field coherence, ρ(Φ) | 001–002 |
-| [`f_Force.md`](f_Force.md) | F_force — approach vector, v_escape | 003, 005 |
-| [`f_Frame.md`](f_Frame.md) | F_fluid — frame capacity, slot management | 004, 006 |
-
----
-
-### Wave 3 — Core Functions · `PRIM:007–024`
-
-Eight files covering the fundamental gravitational operations.
-Wave 3 **seals the INV registry** at INV-001–010.
-
-| File | Description | PRIMs |
-|---|---|---|
-| [`f_Orbit.md`](f_Orbit.md) | Orbital trajectory and stability classification | 007, 012 |
-| [`f_Release.md`](f_Release.md) | Controlled release — no Dismissal Well produced | 008–009 |
-| [`f_Decay.md`](f_Decay.md) | Binding decay — d_warn, d_collapse, DC- conditions | 010–011 |
-| [`f_Collapse.md`](f_Collapse.md) | Gravitational collapse — Path A (infall), Path B (C_node) | 013–014 |
-| [`f_Emit.md`](f_Emit.md) | Field emission — ρ(Φ) outward propagation | 015–017 |
-| [`f_Dampen.md`](f_Dampen.md) | Dampening — cascade guard, ρ(Φ)_floor | 018–020 |
-| [`f_Amplify.md`](f_Amplify.md) | Amplification — β_max ceiling, runaway risk check | 021–022 |
-| [`f_Deflect.md`](f_Deflect.md) | Directional redirection — resolves `heading_delta` stub from f_Force | 023–024 |
-
----
-
-### Wave 4 — Capture Variants · `PRIM:025–040`
-
-Eight specialized capture pathways. Each extends the base `f_Capture.md`
-contract with its own eligibility gate (Pure PRIM) and lock writer
-(Impure PRIM). Three FM sub-modes are introduced here.
-
-| File | Model | PRIMs | Prefix | Key Operators |
-|---|---|---|---|---|
-| [`f_Capture_Multi.md`](f_Capture_Multi.md) | N simultaneous targets | 025–026 | MC- | N, eval_order, Ω_perturbed |
-| [`f_Capture_Cascade.md`](f_Capture_Cascade.md) | Sequential γ-gain chain | 027–028 | CAS- | cascade_depth, k_max, γ, Ω_cascade |
-| [`f_Capture_Soft.md`](f_Capture_Soft.md) | Provisional sub-threshold binding | 029–030 | SCS- | d_soft, grace_period, k_grace |
-| [`f_Capture_Hard.md`](f_Capture_Hard.md) | Binary hard-lock, no retry | 031–032 | HLC- | d_hard, β_min_hard, lock_cost |
-| [`f_Capture_Resonant.md`](f_Capture_Resonant.md) | Phase-gated resonance lock | 033–034 | RLC- | ω_res, φ_open, φ_close, ρ_res_gain |
-| [`f_Capture_Asymmetric.md`](f_Capture_Asymmetric.md) | Mass-ratio asymmetry correction | 035–036 | AC- | mass_ratio, asymmetry_factor, d_bind_asym |
-| [`f_Capture_Temporal.md`](f_Capture_Temporal.md) | Absolute clock-time window | 037–038 | TC- | t_open, t_close, proximity_ratio |
-| [`f_Capture_Networked.md`](f_Capture_Networked.md) | Distributed graph co-attraction | 039–040 | NC- | G_net, w_i, d_bind_net, resilience_threshold |
-
-> Wave 4 completion unlocked `docs/SEENMAP.md` — the repository
-> navigational registry.
-
----
-
-### Wave 5 — Dismissal · `PRIM:041–042`
-
-Formalizes the `F_dismiss` operator family first named in
-`GravityOfDismissal.md §6`. **Wave 5 seals the PRIM registry at 42.**
-
-| File | Description | PRIMs | Prefix |
-|---|---|---|---|
-| [`f_Dismiss.md`](f_Dismiss.md) | Dismissal Well mechanics — three modes, well decay, re-capture gate, `well_query_fn` closure | 041–042 | DISM- |
-
-**Three dismissal modes:**
-
-| Mode | Initiator | Well depth | T_dismiss |
-|---|---|---|---|
-| INTENTIONAL | A (deliberate) | `d_bind(t_dismiss)` | Long |
-| STRUCTURAL | Field collapse (FM-002) | `ρ(Φ) × d_bind` | Short |
-| DRIFT | Passive decay | `v_depart × k_drift` | Very short |
-
-**Well formula:** `ρ_D(Φ,t) = −d_dismiss × exp(−t / T_dismiss)`
-
-**Re-capture gate:** `d_bind_approach(t) > |ρ_D(Φ,t)|`
-
----
-
-### Post-Wave-5 Admin Artifacts
-
-| File | Purpose |
-|---|---|
-| [`MANIFEST.md`](MANIFEST.md) | Full 42-PRIM registry with 42 × 10 INV compliance matrix, FM, condition-prefix, state-flag registries |
-| [`validate_prims.py`](validate_prims.py) | Runnable Python harness — validates all 42 PRIMs against INV-001–010; CLI flags `--wave`, `--prim`, `--inv`, `--matrix`, `--strict` |
-
----
-
-## Key Concepts
-
-### The Triadic Equation
-
-Every gravitational evaluation preserves:
-
-```
-G = F_freq · F_fluid · F_force
-```
-
-No PRIM may produce a result that violates this identity. This is **INV-001**,
-the first and most fundamental of the ten module invariants.
-
-### Binding Depth
-
-The core scalar that determines capture eligibility and orbit stability:
-
-```
-d_bind = β × ρ(Φ) × (1 − e)
-```
-
-Where `β` is the binding coefficient, `ρ(Φ)` is field density, and `e`
-is orbital eccentricity. Capture requires `d_bind ≥ d_warn`.
-
-### The Decay Threshold Stack
-
-```
-d_bind  ≥ d_warn              → STABLE orbit
-d_collapse ≤ d_bind < d_warn  → MARGINAL; FM-004 monitoring active
-d_bind < d_collapse           → FM-005; collapse evaluation triggered
-```
-
-### The Dismissal Well
-
-Dismissal is not the absence of capture — it is an **active repulsive force**.
-When A dismisses E, field polarity inverts in E's zone, leaving a
-Dismissal Well that costs energy to overcome on re-approach. The well
-decays exponentially over time at rate `1/T_dismiss`. This is distinct
-from release (no well) and decay (minimal well).
-
-### Pure / Impure PRIM Pairing
-
-Every source file that contains an Impure PRIM also contains a Pure gate
-PRIM. The canonical pattern:
-
-```
-Pure  PRIM (odd)   → evaluate / check eligibility / compute
-Impure PRIM (even) → execute / lock / mutate state
-```
-
-No Impure PRIM may be invoked without a passing result from its paired
-Pure gate PRIM.
-
----
-
-## Registry Totals
-
-| Registry | Count | Range | Status |
-|---|---|---|---|
-| Waves | 5 | Waves 0–5 | ✅ SEALED |
-| Spec files | 29 | — | ✅ SEALED |
-| PRIMs | 42 | PRIM:001–042 | ✅ SEALED |
-| Invariants | 10 | INV-001–010 | ✅ SEALED |
-| Failure Modes | 10 base + 3 sub-modes | FM-001–010 + FM-003-M/C/N | ✅ SEALED |
-| Condition prefixes | 11 | SC- DC- MC- CAS- SCS- HLC- RLC- AC- TC- NC- DISM- | ✅ SEALED |
-| State flags | 31 | — | ✅ SEALED |
-| Operators | ~101 | — | ✅ SEALED |
-
-> **All registries are append-only and sealed.** No new IDs, symbols, or
-> prefixes may be introduced without a Wave 6 genesis document.
-
----
-
-## Invariants
-
-Ten module-wide invariants govern every PRIM. Violations are structural
-failures, not runtime errors.
-
-| ID | Rule (abbreviated) |
-|---|---|
-| INV-001 | G = F_freq · F_fluid · F_force must be preserved |
-| INV-002 | ρ(Φ) ∈ [0,1] · ρ_D(Φ) ∈ (−1,0] — domains strictly bounded |
-| INV-003 | ρ(Φ) = 0 → FM-002 fires unconditionally |
-| INV-004 | β < 1.0 → FM-001 fires unconditionally |
-| INV-005 | All conditions conjunctive — any failure aborts |
-| INV-006 | Terminal states irreversible |
-| INV-007 | f_Source.md is read-only — no PRIM mutates source properties |
-| INV-008 | Evaluation order is normative — documented sequence binding |
-| INV-009 | OPERATORS.md is the single symbol authority |
-| INV-010 | Operators frozen on first canonical appearance |
-
----
-
-## Failure Modes
-
-| ID | Name | Fatal? | Primary trigger |
-|---|---|---|---|
-| FM-001 | Flyby / Approach Rejection | No | β < 1.0 · v_approach ≥ v_escape · well barrier |
-| FM-002 | Field Null | Yes | ρ(Φ) = 0 |
-| FM-003 | Frame Saturation | No | capacity_MAX reached (sub-modes: -M, -C, -N) |
-| FM-004 | Resonance Drift | No | d_bind ≤ d_warn with δ < 0 |
-| FM-005 | Decay Spiral | Yes* | d_bind ≤ d_collapse |
-| FM-006 | Phantom Capture | Yes | d_bind = 0 despite all conditions passing |
-| FM-007 | Mutual Dissolution | Yes | mass_ratio ≥ m_parity |
-| FM-008 | Release Failure | No | v_release < v_escape floor |
-| FM-009 | Dampen Cascade Lockout | No | cascade_guard latched |
-| FM-010 | Amplify Ceiling | No | β or ρ(Φ) at registered maximum |
-
-*FM-005 is fatal for the orbit; the entity node itself survives.
-
----
-
-## Capture Variant Decision Matrix
-
-```
-Condition at approach time                   → Route to
-──────────────────────────────────────────────────────────────────
-Standard (mass_ratio ≈ 0, β ≥ 1.0)         → f_Capture.md
-N entities or attractors simultaneously     → f_Capture_Multi.md
-Sequential chain with γ-gain propagation   → f_Capture_Cascade.md
-d_bind below d_warn but above floor        → f_Capture_Soft.md
-Hard elevated threshold, no retry          → f_Capture_Hard.md
-Phase alignment with ω_res required        → f_Capture_Resonant.md
-Non-trivial M_E / M_A mass ratio           → f_Capture_Asymmetric.md
-Capture gated on absolute clock window     → f_Capture_Temporal.md
-Distributed network of attractors          → f_Capture_Networked.md
-mass_ratio ≥ m_parity                      → f_Collapse.md (Path B)
-```
-
----
-
-## Running the Validator
-
-```bash
-# Full report — all 42 PRIMs × 10 INVs
-python validate_prims.py
-
-# Print the 42 × 10 compliance matrix
-python validate_prims.py --matrix
-
-# CI mode — exit 1 on any failure
-python validate_prims.py --strict
-
-# Filter by wave, PRIM, or invariant
-python validate_prims.py --wave 4
-python validate_prims.py --prim 042
-python validate_prims.py --inv INV-006
-```
-
-Expected output on a clean module: `ALL PASS ✅ · 803 assertions · 0 failures`
-
----
-
-## Cross-Module Context
-
-This module sits within the broader TriadicFrameworks repository:
-
-```
-docs/SEENMAP.md          ← repository navigational registry
-docs/FFF_Gravity/        ← THIS MODULE
-docs/SoN/                ← SoN module (in progress)
-docs/spine/languages/    ← cross-module notation registry
-```
-
-`SoN/s_Capture.md` references `FFF_Gravity/f_Capture.md` as its lineage
-anchor: SoN inverts the RTT observer layer; FFF_Gravity provides the
-gravitational model it extends downward toward substrate.
-
----
-
-## Coherence Anchor
-
-```
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
----
-
-*FFF_Gravity · v2.0.0 · Sealed 2026-08-14 · 29 files · 42 PRIMs · 5 waves complete*
-*`docs/FFF_Gravity/README.md`*
 

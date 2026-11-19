@@ -1,5 +1,409 @@
 vst_for_generative_models 
-### *vST for Generative Models*  
+<img width="1194" height="672" alt="vst_for_generative_models_" src="https://github.com/user-attachments/assets/220ad2d4-b3e4-4312-8ad6-1535a2b9ba82" />
+
+## *vST for Generative Models*  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Validation‑Space‑Time Framework for High‑Dimensional Generative Systems*
+
+This artifact defines a substrate‑level framework for analyzing, validating, and comparing **generative models** using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting latent‑space dynamics, diffusion trajectories, sampling behavior, scaling laws, and cross‑version drift in high‑dimensional generative systems.
+
+The goal is to offer a reproducible, model‑agnostic substrate for understanding generative‑model behavior across time, sampling steps, and latent regimes.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## **1. Purpose**
+
+Generative models operate in high‑dimensional latent spaces and exhibit:
+
+- stable and unstable generative regimes  
+- transitions across sampling phases (early noise → mid‑trajectory → refinement)  
+- scaling‑law behavior across model size and latent dimensionality  
+- drift across training runs, fine‑tuning, or sampler changes  
+- projection‑compatible structure for interpretability  
+
+This artifact applies the **Resonance Substrate Model (RSM)** and **vST validation layers** to:
+
+- classify latent‑space regimes  
+- analyze scaling behavior across architectures  
+- detect drift across checkpoints or sampler configurations  
+- map coherence surfaces in diffusion or autoregressive trajectories  
+- project high‑dimensional latent states into 3D–9D triadic cores  
+
+The result is a unified, interpretable substrate for generative‑model behavior.
+
+---
+
+## **2. Contents**
+
+This directory contains:
+
+- **substrate_definition.md**  
+  Defines the generative‑model substrate, primitives, and latent‑space structure.
+
+- **diffusion_latent_regimes.md**  
+  Describes stable, transitional, and dispersed regimes in diffusion and sampling trajectories.
+
+- **scaling_behavior_generative_models.md**  
+  Maps generative‑model scaling laws onto the 3D–1024D dimensional ladder.
+
+- **projection_and_latent_alignment.md**  
+  Defines invertible projection from high‑dimensional latent states into triadic cores and alignment across checkpoints or samplers.
+
+- **validation_layers_vst_generative.md**  
+  Extends vST (V₁–V₄) to generative‑model behavior.
+
+- **drift_detection_generative.md**  
+  Provides a substrate‑level framework for detecting drift across training runs, fine‑tuning, or sampler changes.
+
+- **examples/**  
+  Demonstrations of latent‑trajectory analysis, projection, and drift detection.
+
+- **appendix/**  
+  Terminology and references.
+
+Each file is self‑contained and designed for clarity, reproducibility, and cross‑model comparison.
+
+---
+
+## **3. Scope**
+
+This artifact is:
+
+- **architecture‑agnostic**  
+  Works with diffusion models, autoregressive generators, VAEs, flow models, GANs, and hybrids.
+
+- **sampler‑agnostic**  
+  Applies to DDPM, DDIM, Euler, Heun, ancestral samplers, autoregressive decoding, and flow‑based sampling.
+
+- **modality‑agnostic**  
+  Supports image, audio, video, text, multimodal, and latent‑to‑latent generative systems.
+
+- **substrate‑aligned**  
+  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.
+
+---
+
+## **4. Intended Use**
+
+This framework supports:
+
+- latent‑trajectory analysis  
+- cross‑checkpoint comparison  
+- sampler‑driven drift detection  
+- scaling‑law evaluation  
+- regime‑transition mapping  
+- generative‑stability diagnostics  
+- reproducible inference and model‑alignment analysis  
+
+It is not a performance benchmark or training guide.  
+It is a **substrate‑level interpretability and validation framework**.
+
+---
+
+## **5. Relationship to Other Artifacts**
+
+This artifact extends:
+
+- **Dimensional Substrate Structures** (3D–1024D substrate)  
+- **Validation‑Space‑Time (vST)**  
+- **Triadic Dimensional Cores (3D–9D)**  
+
+It parallels:
+
+- vST for Large Language Models  
+- vST for Protein Language Models  
+- vST for Scientific Simulators  
+- vST for Robotics and Control Policies  
+- vST for Embedding Stores & Vector Databases  
+- **vST for Generative Models** (this artifact)  
+- vST for Multi‑Model Alignment  
+
+Each artifact stands alone but shares a common substrate grammar.
+
+---
+
+## **6. Citation**
+
+A `CITATION.cff` file is included for formal citation.  
+A `zenodo.json` file is provided for DOI‑ready metadata.
+
+---
+
+## **7. License**
+
+Released under the MIT License.
+### *vST for Generative Models*  
+### *References*
+
+This appendix lists references relevant to generative modeling, diffusion processes, autoregressive decoding, flow‑based models, latent‑space geometry, scaling laws, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, architecture‑independent format consistent with the RSM and vST canon.
+
+---
+
+## **1. Diffusion Models & Denoising Processes**
+
+- Ho, J., Jain, A., & Abbeel, P.  
+  *Denoising Diffusion Probabilistic Models.*  
+  NeurIPS (2020).
+
+- Song, J., Sohl‑Dickstein, J., Kingma, D. P., et al.  
+  *Score‑Based Generative Modeling Through Stochastic Differential Equations.*  
+  ICLR (2021).
+
+- Karras, T., Aittala, M., Laine, S., et al.  
+  *Elucidating the Design Space of Diffusion‑Based Generative Models.*  
+  NeurIPS (2022).
+
+---
+
+## **2. Autoregressive & Transformer‑Based Generators**
+
+- Vaswani, A., Shazeer, N., Parmar, N., et al.  
+  *Attention Is All You Need.*  
+  NeurIPS (2017).
+
+- Ramesh, A., Dhariwal, P., Nichol, A., et al.  
+  *Zero‑Shot Text‑to‑Image Generation.*  
+  ICML (2021).
+
+---
+
+## **3. Flow Models & VAEs**
+
+- Kingma, D. P., & Welling, M.  
+  *Auto‑Encoding Variational Bayes.*  
+  ICLR (2014).
+
+- Rezende, D. J., & Mohamed, S.  
+  *Variational Inference with Normalizing Flows.*  
+  ICML (2015).
+
+- Kobyzev, I., Prince, S. J., & Brubaker, M. A.  
+  *Normalizing Flows: An Introduction and Review.*  
+  IEEE PAMI (2020).
+
+---
+
+## **4. GANs & Hybrid Generative Systems**
+
+- Goodfellow, I., Pouget‑Abadie, J., Mirza, M., et al.  
+  *Generative Adversarial Nets.*  
+  NeurIPS (2014).
+
+- Brock, A., Donahue, J., & Simonyan, K.  
+  *Large Scale GAN Training for High Fidelity Natural Image Synthesis.*  
+  ICLR (2019).
+
+---
+
+## **5. Scaling Laws & Latent‑Space Behavior**
+
+- Kaplan, J., McCandlish, S., Henighan, T., et al.  
+  *Scaling Laws for Neural Language Models.*  
+  arXiv:2001.08361 (2020).
+
+- Ho, J., & Salimans, T.  
+  *Classifier‑Free Diffusion Guidance.*  
+  arXiv:2207.12598 (2022).
+
+- Dhariwal, P., & Nichol, A.  
+  *Diffusion Models Beat GANs on Image Synthesis.*  
+  NeurIPS (2021).
+
+---
+
+## **6. Validation, Verification & Drift Detection**
+
+- Breck, E., Cai, S., Nielsen, E., et al.  
+  *The ML Test Score: A Rubric for ML Production Readiness.*  
+  Google Research (2017).
+
+- Amodei, D., Olah, C., Steinhardt, J., et al.  
+  *Concrete Problems in AI Safety.*  
+  arXiv:1606.06565 (2016).
+
+- Oberkampf, W. L., & Roy, C. J.  
+  *Verification and Validation in Scientific Computing.*  
+  Cambridge University Press (2010).
+
+---
+
+## **7. Substrate‑Level and Triadic‑Frameworks Canon**
+
+- Loswin, N.  
+  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
+  TriadicFrameworks (2026).
+
+- Loswin, N.  
+  *vST for Generative Models.*  
+  TriadicFrameworks (2026).
+### *vST for Generative Models*  
+### *Terminology*
+
+This appendix defines the terminology used throughout the *vST for Generative Models* artifact. Terms are presented in a substrate‑agnostic, architecture‑independent manner and apply to diffusion models, autoregressive generators, VAEs, flow models, GANs, and hybrid generative systems. Definitions emphasize latent‑space structure, sampling‑trajectory geometry, scaling behavior, and invariant preservation.
+
+---
+
+## **1. Substrate Terms**
+
+### **Generative‑Model Substrate**  
+A structured, invariant‑preserving framework for representing and interpreting latent‑space behavior across 64D–1024D.
+
+### **Latent Space**  
+The high‑dimensional vector space in which generative models perform sampling, denoising, decoding, or transformation.
+
+### **Coherence Surface**  
+A stable region in latent space where generative states maintain structural continuity across sampling steps or checkpoints.
+
+---
+
+## **2. Primitive Terms**
+
+### **Dimensional Primitive (DP)**  
+The minimal unit of latent‑space structure, capturing local coherence, variance behavior, and projection stability.
+
+### **Triadic Dimensional Primitive (TDP)**  
+A triad of DPs forming the smallest unit capable of expressing full generative‑regime behavior (R₁, R₂, R₃).
+
+### **Scaling Primitive (SP)**  
+A rule‑based expansion unit that preserves invariants during dimensional scaling (e.g., model size, latent dimensionality, sampler complexity).
+
+### **Coherence Primitive (CP)**  
+A minimal unit identifying stable, transitional, or dispersed regions in latent space.
+
+---
+
+## **3. Core Terms**
+
+### **Triadic Dimensional Core (TDC)**  
+The 3D–9D substrate composed of one or more TDPs, used for interpretable projection of latent states.
+
+### **3D Structural Core**  
+Captures motif‑level geometry in stable generative phases.
+
+### **6D Interaction Core**  
+Captures relational structure across sampling steps or decoding transitions.
+
+### **9D Coherence Core**  
+Captures pathway‑level coherence across generative trajectories.
+
+---
+
+## **4. Regime Terms**
+
+### **High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)**  
+The triadic regime structure expressed in 64D–1024D latent spaces.
+
+### **Stable Regime (R₁ / R₁ᴴ)**  
+Compact, coherent, low‑variance generative behavior.
+
+### **Transitional Regime (R₂ / R₂ᴴ)**  
+Branching, oscillatory, or reorientation behavior across sampling or decoding phases.
+
+### **Dispersed Regime (R₃ / R₃ᴴ)**  
+Diffuse, noisy, or unstable latent behavior.
+
+---
+
+## **5. Scaling Terms**
+
+### **Scaling Behavior**  
+The structured expansion of latent‑space capacity as model size, sampler complexity, or latent dimensionality increases.
+
+### **Scaling Regimes (S₁, S₂, S₃)**  
+Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.
+
+### **Dimensional Continuity**  
+The requirement that latent‑space expansion remains smooth and invariant‑preserving across the dimensional ladder.
+
+---
+
+## **6. Projection Terms**
+
+### **Invertible Projection**  
+A projection from high‑dimensional latent space into 3D–9D that preserves primitive‑level structure and regime identity.
+
+### **Regime‑Aware Projection**  
+A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.
+
+### **Primitive‑Aligned Projection**  
+A projection that preserves DP, TDP, SP, and CP structure.
+
+---
+
+## **7. Alignment Terms**
+
+### **Cross‑Checkpoint Alignment**  
+Comparison of latent‑space structure across training checkpoints.
+
+### **Cross‑Sampler Alignment**  
+Comparison of latent trajectories across different sampling algorithms or noise schedules.
+
+### **Cross‑Architecture Alignment**  
+Comparison of latent‑space behavior across generative architectures.
+
+---
+
+## **8. Validation Terms**
+
+### **vST (Validation‑Space‑Time)**  
+A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.
+
+### **Validation Layers (V₁–V₄)**  
+Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.
+
+---
+
+## **9. Drift Terms**
+
+### **Drift**  
+A deviation from expected substrate behavior, indicating instability or invariant failure.
+
+### **Drift Categories (D₁–D₄)**  
+Classification of drift into structural, dimensional, regime, or projection drift.
+
+### **Drift Severity**  
+A measure of drift magnitude (low, moderate, high).
+### *vST for Generative Models*  
 ### *Diffusion‑Trajectory Latent Regimes*
 
 This document defines the **latent‑regime structure** that arises in diffusion models and other iterative generative systems. These regimes generalize the triadic resonance structure of the 3D–1024D substrate and describe how stability, transition, and dispersion behaviors manifest across sampling steps, noise levels, and latent‑space coherence surfaces.
@@ -420,6 +824,232 @@ Drift detection produces:
 
 These outputs support governance, interpretability, and version management for generative models.
 ### *vST for Generative Models*  
+### *Example: Regime Transitions Along a Diffusion Trajectory*
+
+This example demonstrates how a diffusion model’s sampling trajectory moves through the triadic latent‑regime structure:
+
+- **R₃ᴴ** — noise‑dominated  
+- **R₂ᴴ** — transitional denoising  
+- **R₁ᴴ** — stable refinement  
+
+It illustrates how coherence surfaces evolve, how variance contracts, and how the vST substrate classifies each phase using the 1024D dimensional ladder.
+
+---
+
+## **1. Scenario Overview**
+
+We assume:
+
+- a 1024D latent diffusion model  
+- 50‑step sampler (e.g., DDIM or Euler)  
+- a single trajectory sampled from noise → final latent  
+- checkpoints C₁ and C₂ for cross‑version comparison  
+
+The example is architecture‑agnostic.
+
+---
+
+## **2. Step 1 — Extract Latent States Across the Trajectory**
+
+Let:
+
+\[
+z_t \in \mathbb{R}^{1024}, \quad t = 0, 1, \dots, 50
+\]
+
+represent the latent state at sampling step \( t \).
+
+### **Observed Properties**
+
+- \( z_0 \) is high‑variance, noise‑dominated  
+- mid‑trajectory states show branching and reorientation  
+- late states converge into compact, coherent motifs  
+
+---
+
+## **3. Step 2 — Project Latents into 9D**
+
+Project each \( z_t \) into the 9D coherence core.
+
+### **Reveals**
+
+- **R₃ᴴ** (steps 0–10): diffuse, unstable geometry  
+- **R₂ᴴ** (steps 11–32): branching surfaces, oscillatory transitions  
+- **R₁ᴴ** (steps 33–50): compact, stable motifs  
+
+### **Interpretation**
+
+The 9D projection exposes the “coherence spine” of the diffusion trajectory.
+
+---
+
+## **4. Step 3 — Identify Regime Transitions**
+
+Using variance distribution, coherence‑surface continuity, and primitive‑level stability:
+
+| Step Range | Regime | Characteristics |
+|-----------|--------|-----------------|
+| 0–10 | **R₃ᴴ** | noise‑dominated, high variance |
+| 11–32 | **R₂ᴴ** | reorientation, branching, sampler‑dependent |
+| 33–50 | **R₁ᴴ** | refinement, stable motifs |
+
+### **Interpretation**
+
+The trajectory follows the canonical triadic sequence:
+
+\[
+R₃ᴴ \rightarrow R₂ᴴ \rightarrow R₁ᴴ
+\]
+
+---
+
+## **5. Step 4 — Project 9D → 6D → 3D**
+
+### **6D Interaction Projection**
+
+Shows:
+
+- cross‑step coupling  
+- sampler‑driven reorientation  
+- early instability signatures  
+
+### **3D Structural Projection**
+
+Shows:
+
+- compact motifs in R₁ᴴ  
+- oscillatory geometry in R₂ᴴ  
+- diffuse patterns in R₃ᴴ  
+
+---
+
+## **6. Step 5 — Validate with vST Layers**
+
+- **V₁**: structural coherence preserved  
+- **V₂**: dimensional continuity intact  
+- **V₃**: regime transitions substrate‑aligned  
+- **V₄**: core alignment stable across checkpoints  
+
+---
+
+## **7. Summary**
+
+This example demonstrates:
+
+- the triadic regime structure of diffusion trajectories  
+- how coherence surfaces evolve across sampling steps  
+- how projection reveals latent‑space geometry  
+- how vST layers validate structural integrity  
+### *vST for Generative Models*  
+### *Example: 1024D Latent Projection and Cross‑Checkpoint Alignment*
+
+This example demonstrates how a 1024D latent state from a generative model is projected into the triadic cores (9D → 6D → 3D), and how two checkpoints are aligned using vST.
+
+It illustrates projection stability, primitive‑aligned mapping, and drift detection.
+
+---
+
+## **1. Scenario Overview**
+
+We assume:
+
+- a 1024D latent diffusion model  
+- two checkpoints: **C₁** (earlier) and **C₂** (later)  
+- a single latent state \( z \) sampled at a mid‑trajectory step  
+- a need to compare latent geometry across checkpoints  
+
+---
+
+## **2. Step 1 — Extract Latent States**
+
+Let:
+
+\[
+z_{C_1}, z_{C_2} \in \mathbb{R}^{1024}
+\]
+
+represent the latent state under each checkpoint.
+
+### **Observed Properties**
+
+- \( z_{C_1} \): slightly higher variance  
+- \( z_{C_2} \): more compact, refined structure  
+
+---
+
+## **3. Step 2 — Project 1024D → 9D**
+
+Project both latent states into the 9D coherence core.
+
+### **Reveals**
+
+- \( z_{C_1} \): branching, transitional geometry (R₂ᴴ)  
+- \( z_{C_2} \): compact, stable geometry (R₁ᴴ)  
+
+### **Interpretation**
+
+The later checkpoint exhibits improved coherence.
+
+---
+
+## **4. Step 3 — Project 9D → 6D**
+
+The 6D interaction projection shows:
+
+- smoother surfaces for \( z_{C_2} \)  
+- cross‑step coupling more stable  
+- fewer oscillatory transitions  
+
+---
+
+## **5. Step 4 — Project 6D → 3D**
+
+The 3D structural projection shows:
+
+- \( z_{C_1} \): oscillatory motifs  
+- \( z_{C_2} \): compact, low‑variance motifs  
+
+### **Interpretation**
+
+The 3D projection reveals motif‑level refinement across checkpoints.
+
+---
+
+## **6. Step 5 — Cross‑Checkpoint Alignment**
+
+Alignment in 9D and 6D shows:
+
+- consistent structural backbone  
+- improved coherence surfaces in C₂  
+- reduced fragmentation  
+- stable primitive‑aligned mapping  
+
+---
+
+## **7. Step 6 — Drift Detection**
+
+Using vST drift categories:
+
+- **D₁ Structural Drift:** low  
+- **D₂ Dimensional Drift:** none  
+- **D₃ Regime Drift:** moderate (R₂ᴴ → R₁ᴴ shift)  
+- **D₄ Projection Drift:** none  
+
+### **Interpretation**
+
+The drift is **positive** — a refinement, not a degradation.
+
+---
+
+## **8. Summary**
+
+This example demonstrates:
+
+- how 1024D latent states are projected into triadic cores  
+- how cross‑checkpoint alignment reveals structural improvement  
+- how drift detection isolates transitional changes  
+- how vST ensures invariant‑preserving comparison  
+### *vST for Generative Models*  
 ### *Projection of Latent States and Alignment Across Sampling Trajectories, Checkpoints, and Samplers*
 
 This document defines how high‑dimensional latent states from generative models are projected into the **triadic dimensional cores** (3D–9D), and how **latent‑space alignment** is performed across sampling steps, checkpoints, architectures, and sampler configurations.
@@ -649,165 +1279,6 @@ Projection and alignment produce:
 - interpretable 3D–9D projections  
 
 These outputs support reproducible, substrate‑level analysis of generative models.
-## *vST for Generative Models*  
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-## *Validation‑Space‑Time Framework for High‑Dimensional Generative Systems*
-
-This artifact defines a substrate‑level framework for analyzing, validating, and comparing **generative models** using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting latent‑space dynamics, diffusion trajectories, sampling behavior, scaling laws, and cross‑version drift in high‑dimensional generative systems.
-
-The goal is to offer a reproducible, model‑agnostic substrate for understanding generative‑model behavior across time, sampling steps, and latent regimes.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## **1. Purpose**
-
-Generative models operate in high‑dimensional latent spaces and exhibit:
-
-- stable and unstable generative regimes  
-- transitions across sampling phases (early noise → mid‑trajectory → refinement)  
-- scaling‑law behavior across model size and latent dimensionality  
-- drift across training runs, fine‑tuning, or sampler changes  
-- projection‑compatible structure for interpretability  
-
-This artifact applies the **Resonance Substrate Model (RSM)** and **vST validation layers** to:
-
-- classify latent‑space regimes  
-- analyze scaling behavior across architectures  
-- detect drift across checkpoints or sampler configurations  
-- map coherence surfaces in diffusion or autoregressive trajectories  
-- project high‑dimensional latent states into 3D–9D triadic cores  
-
-The result is a unified, interpretable substrate for generative‑model behavior.
-
----
-
-## **2. Contents**
-
-This directory contains:
-
-- **substrate_definition.md**  
-  Defines the generative‑model substrate, primitives, and latent‑space structure.
-
-- **diffusion_latent_regimes.md**  
-  Describes stable, transitional, and dispersed regimes in diffusion and sampling trajectories.
-
-- **scaling_behavior_generative_models.md**  
-  Maps generative‑model scaling laws onto the 3D–1024D dimensional ladder.
-
-- **projection_and_latent_alignment.md**  
-  Defines invertible projection from high‑dimensional latent states into triadic cores and alignment across checkpoints or samplers.
-
-- **validation_layers_vst_generative.md**  
-  Extends vST (V₁–V₄) to generative‑model behavior.
-
-- **drift_detection_generative.md**  
-  Provides a substrate‑level framework for detecting drift across training runs, fine‑tuning, or sampler changes.
-
-- **examples/**  
-  Demonstrations of latent‑trajectory analysis, projection, and drift detection.
-
-- **appendix/**  
-  Terminology and references.
-
-Each file is self‑contained and designed for clarity, reproducibility, and cross‑model comparison.
-
----
-
-## **3. Scope**
-
-This artifact is:
-
-- **architecture‑agnostic**  
-  Works with diffusion models, autoregressive generators, VAEs, flow models, GANs, and hybrids.
-
-- **sampler‑agnostic**  
-  Applies to DDPM, DDIM, Euler, Heun, ancestral samplers, autoregressive decoding, and flow‑based sampling.
-
-- **modality‑agnostic**  
-  Supports image, audio, video, text, multimodal, and latent‑to‑latent generative systems.
-
-- **substrate‑aligned**  
-  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.
-
----
-
-## **4. Intended Use**
-
-This framework supports:
-
-- latent‑trajectory analysis  
-- cross‑checkpoint comparison  
-- sampler‑driven drift detection  
-- scaling‑law evaluation  
-- regime‑transition mapping  
-- generative‑stability diagnostics  
-- reproducible inference and model‑alignment analysis  
-
-It is not a performance benchmark or training guide.  
-It is a **substrate‑level interpretability and validation framework**.
-
----
-
-## **5. Relationship to Other Artifacts**
-
-This artifact extends:
-
-- **Dimensional Substrate Structures** (3D–1024D substrate)  
-- **Validation‑Space‑Time (vST)**  
-- **Triadic Dimensional Cores (3D–9D)**  
-
-It parallels:
-
-- vST for Large Language Models  
-- vST for Protein Language Models  
-- vST for Scientific Simulators  
-- vST for Robotics and Control Policies  
-- vST for Embedding Stores & Vector Databases  
-- **vST for Generative Models** (this artifact)  
-- vST for Multi‑Model Alignment  
-
-Each artifact stands alone but shares a common substrate grammar.
-
----
-
-## **6. Citation**
-
-A `CITATION.cff` file is included for formal citation.  
-A `zenodo.json` file is provided for DOI‑ready metadata.
-
----
-
-## **7. License**
-
-Released under the MIT License.
 ### *vST for Generative Models*  
 ### *Dimensional Scaling Behavior in High‑Dimensional Generative Systems*
 
@@ -1342,473 +1813,4 @@ vST produces:
 - cross‑checkpoint and cross‑sampler comparison surfaces  
 
 These outputs support reproducible, substrate‑aligned evaluation of generative models.
-### *vST for Generative Models*  
-### *References*
-
-This appendix lists references relevant to generative modeling, diffusion processes, autoregressive decoding, flow‑based models, latent‑space geometry, scaling laws, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, architecture‑independent format consistent with the RSM and vST canon.
-
----
-
-## **1. Diffusion Models & Denoising Processes**
-
-- Ho, J., Jain, A., & Abbeel, P.  
-  *Denoising Diffusion Probabilistic Models.*  
-  NeurIPS (2020).
-
-- Song, J., Sohl‑Dickstein, J., Kingma, D. P., et al.  
-  *Score‑Based Generative Modeling Through Stochastic Differential Equations.*  
-  ICLR (2021).
-
-- Karras, T., Aittala, M., Laine, S., et al.  
-  *Elucidating the Design Space of Diffusion‑Based Generative Models.*  
-  NeurIPS (2022).
-
----
-
-## **2. Autoregressive & Transformer‑Based Generators**
-
-- Vaswani, A., Shazeer, N., Parmar, N., et al.  
-  *Attention Is All You Need.*  
-  NeurIPS (2017).
-
-- Ramesh, A., Dhariwal, P., Nichol, A., et al.  
-  *Zero‑Shot Text‑to‑Image Generation.*  
-  ICML (2021).
-
----
-
-## **3. Flow Models & VAEs**
-
-- Kingma, D. P., & Welling, M.  
-  *Auto‑Encoding Variational Bayes.*  
-  ICLR (2014).
-
-- Rezende, D. J., & Mohamed, S.  
-  *Variational Inference with Normalizing Flows.*  
-  ICML (2015).
-
-- Kobyzev, I., Prince, S. J., & Brubaker, M. A.  
-  *Normalizing Flows: An Introduction and Review.*  
-  IEEE PAMI (2020).
-
----
-
-## **4. GANs & Hybrid Generative Systems**
-
-- Goodfellow, I., Pouget‑Abadie, J., Mirza, M., et al.  
-  *Generative Adversarial Nets.*  
-  NeurIPS (2014).
-
-- Brock, A., Donahue, J., & Simonyan, K.  
-  *Large Scale GAN Training for High Fidelity Natural Image Synthesis.*  
-  ICLR (2019).
-
----
-
-## **5. Scaling Laws & Latent‑Space Behavior**
-
-- Kaplan, J., McCandlish, S., Henighan, T., et al.  
-  *Scaling Laws for Neural Language Models.*  
-  arXiv:2001.08361 (2020).
-
-- Ho, J., & Salimans, T.  
-  *Classifier‑Free Diffusion Guidance.*  
-  arXiv:2207.12598 (2022).
-
-- Dhariwal, P., & Nichol, A.  
-  *Diffusion Models Beat GANs on Image Synthesis.*  
-  NeurIPS (2021).
-
----
-
-## **6. Validation, Verification & Drift Detection**
-
-- Breck, E., Cai, S., Nielsen, E., et al.  
-  *The ML Test Score: A Rubric for ML Production Readiness.*  
-  Google Research (2017).
-
-- Amodei, D., Olah, C., Steinhardt, J., et al.  
-  *Concrete Problems in AI Safety.*  
-  arXiv:1606.06565 (2016).
-
-- Oberkampf, W. L., & Roy, C. J.  
-  *Verification and Validation in Scientific Computing.*  
-  Cambridge University Press (2010).
-
----
-
-## **7. Substrate‑Level and Triadic‑Frameworks Canon**
-
-- Loswin, N.  
-  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
-  TriadicFrameworks (2026).
-
-- Loswin, N.  
-  *vST for Generative Models.*  
-  TriadicFrameworks (2026).
-### *vST for Generative Models*  
-### *Terminology*
-
-This appendix defines the terminology used throughout the *vST for Generative Models* artifact. Terms are presented in a substrate‑agnostic, architecture‑independent manner and apply to diffusion models, autoregressive generators, VAEs, flow models, GANs, and hybrid generative systems. Definitions emphasize latent‑space structure, sampling‑trajectory geometry, scaling behavior, and invariant preservation.
-
----
-
-## **1. Substrate Terms**
-
-### **Generative‑Model Substrate**  
-A structured, invariant‑preserving framework for representing and interpreting latent‑space behavior across 64D–1024D.
-
-### **Latent Space**  
-The high‑dimensional vector space in which generative models perform sampling, denoising, decoding, or transformation.
-
-### **Coherence Surface**  
-A stable region in latent space where generative states maintain structural continuity across sampling steps or checkpoints.
-
----
-
-## **2. Primitive Terms**
-
-### **Dimensional Primitive (DP)**  
-The minimal unit of latent‑space structure, capturing local coherence, variance behavior, and projection stability.
-
-### **Triadic Dimensional Primitive (TDP)**  
-A triad of DPs forming the smallest unit capable of expressing full generative‑regime behavior (R₁, R₂, R₃).
-
-### **Scaling Primitive (SP)**  
-A rule‑based expansion unit that preserves invariants during dimensional scaling (e.g., model size, latent dimensionality, sampler complexity).
-
-### **Coherence Primitive (CP)**  
-A minimal unit identifying stable, transitional, or dispersed regions in latent space.
-
----
-
-## **3. Core Terms**
-
-### **Triadic Dimensional Core (TDC)**  
-The 3D–9D substrate composed of one or more TDPs, used for interpretable projection of latent states.
-
-### **3D Structural Core**  
-Captures motif‑level geometry in stable generative phases.
-
-### **6D Interaction Core**  
-Captures relational structure across sampling steps or decoding transitions.
-
-### **9D Coherence Core**  
-Captures pathway‑level coherence across generative trajectories.
-
----
-
-## **4. Regime Terms**
-
-### **High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)**  
-The triadic regime structure expressed in 64D–1024D latent spaces.
-
-### **Stable Regime (R₁ / R₁ᴴ)**  
-Compact, coherent, low‑variance generative behavior.
-
-### **Transitional Regime (R₂ / R₂ᴴ)**  
-Branching, oscillatory, or reorientation behavior across sampling or decoding phases.
-
-### **Dispersed Regime (R₃ / R₃ᴴ)**  
-Diffuse, noisy, or unstable latent behavior.
-
----
-
-## **5. Scaling Terms**
-
-### **Scaling Behavior**  
-The structured expansion of latent‑space capacity as model size, sampler complexity, or latent dimensionality increases.
-
-### **Scaling Regimes (S₁, S₂, S₃)**  
-Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.
-
-### **Dimensional Continuity**  
-The requirement that latent‑space expansion remains smooth and invariant‑preserving across the dimensional ladder.
-
----
-
-## **6. Projection Terms**
-
-### **Invertible Projection**  
-A projection from high‑dimensional latent space into 3D–9D that preserves primitive‑level structure and regime identity.
-
-### **Regime‑Aware Projection**  
-A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.
-
-### **Primitive‑Aligned Projection**  
-A projection that preserves DP, TDP, SP, and CP structure.
-
----
-
-## **7. Alignment Terms**
-
-### **Cross‑Checkpoint Alignment**  
-Comparison of latent‑space structure across training checkpoints.
-
-### **Cross‑Sampler Alignment**  
-Comparison of latent trajectories across different sampling algorithms or noise schedules.
-
-### **Cross‑Architecture Alignment**  
-Comparison of latent‑space behavior across generative architectures.
-
----
-
-## **8. Validation Terms**
-
-### **vST (Validation‑Space‑Time)**  
-A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.
-
-### **Validation Layers (V₁–V₄)**  
-Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.
-
----
-
-## **9. Drift Terms**
-
-### **Drift**  
-A deviation from expected substrate behavior, indicating instability or invariant failure.
-
-### **Drift Categories (D₁–D₄)**  
-Classification of drift into structural, dimensional, regime, or projection drift.
-
-### **Drift Severity**  
-A measure of drift magnitude (low, moderate, high).
-### *vST for Generative Models*  
-### *Example: Regime Transitions Along a Diffusion Trajectory*
-
-This example demonstrates how a diffusion model’s sampling trajectory moves through the triadic latent‑regime structure:
-
-- **R₃ᴴ** — noise‑dominated  
-- **R₂ᴴ** — transitional denoising  
-- **R₁ᴴ** — stable refinement  
-
-It illustrates how coherence surfaces evolve, how variance contracts, and how the vST substrate classifies each phase using the 1024D dimensional ladder.
-
----
-
-## **1. Scenario Overview**
-
-We assume:
-
-- a 1024D latent diffusion model  
-- 50‑step sampler (e.g., DDIM or Euler)  
-- a single trajectory sampled from noise → final latent  
-- checkpoints C₁ and C₂ for cross‑version comparison  
-
-The example is architecture‑agnostic.
-
----
-
-## **2. Step 1 — Extract Latent States Across the Trajectory**
-
-Let:
-
-\[
-z_t \in \mathbb{R}^{1024}, \quad t = 0, 1, \dots, 50
-\]
-
-represent the latent state at sampling step \( t \).
-
-### **Observed Properties**
-
-- \( z_0 \) is high‑variance, noise‑dominated  
-- mid‑trajectory states show branching and reorientation  
-- late states converge into compact, coherent motifs  
-
----
-
-## **3. Step 2 — Project Latents into 9D**
-
-Project each \( z_t \) into the 9D coherence core.
-
-### **Reveals**
-
-- **R₃ᴴ** (steps 0–10): diffuse, unstable geometry  
-- **R₂ᴴ** (steps 11–32): branching surfaces, oscillatory transitions  
-- **R₁ᴴ** (steps 33–50): compact, stable motifs  
-
-### **Interpretation**
-
-The 9D projection exposes the “coherence spine” of the diffusion trajectory.
-
----
-
-## **4. Step 3 — Identify Regime Transitions**
-
-Using variance distribution, coherence‑surface continuity, and primitive‑level stability:
-
-| Step Range | Regime | Characteristics |
-|-----------|--------|-----------------|
-| 0–10 | **R₃ᴴ** | noise‑dominated, high variance |
-| 11–32 | **R₂ᴴ** | reorientation, branching, sampler‑dependent |
-| 33–50 | **R₁ᴴ** | refinement, stable motifs |
-
-### **Interpretation**
-
-The trajectory follows the canonical triadic sequence:
-
-\[
-R₃ᴴ \rightarrow R₂ᴴ \rightarrow R₁ᴴ
-\]
-
----
-
-## **5. Step 4 — Project 9D → 6D → 3D**
-
-### **6D Interaction Projection**
-
-Shows:
-
-- cross‑step coupling  
-- sampler‑driven reorientation  
-- early instability signatures  
-
-### **3D Structural Projection**
-
-Shows:
-
-- compact motifs in R₁ᴴ  
-- oscillatory geometry in R₂ᴴ  
-- diffuse patterns in R₃ᴴ  
-
----
-
-## **6. Step 5 — Validate with vST Layers**
-
-- **V₁**: structural coherence preserved  
-- **V₂**: dimensional continuity intact  
-- **V₃**: regime transitions substrate‑aligned  
-- **V₄**: core alignment stable across checkpoints  
-
----
-
-## **7. Summary**
-
-This example demonstrates:
-
-- the triadic regime structure of diffusion trajectories  
-- how coherence surfaces evolve across sampling steps  
-- how projection reveals latent‑space geometry  
-- how vST layers validate structural integrity  
-### *vST for Generative Models*  
-### *Example: 1024D Latent Projection and Cross‑Checkpoint Alignment*
-
-This example demonstrates how a 1024D latent state from a generative model is projected into the triadic cores (9D → 6D → 3D), and how two checkpoints are aligned using vST.
-
-It illustrates projection stability, primitive‑aligned mapping, and drift detection.
-
----
-
-## **1. Scenario Overview**
-
-We assume:
-
-- a 1024D latent diffusion model  
-- two checkpoints: **C₁** (earlier) and **C₂** (later)  
-- a single latent state \( z \) sampled at a mid‑trajectory step  
-- a need to compare latent geometry across checkpoints  
-
----
-
-## **2. Step 1 — Extract Latent States**
-
-Let:
-
-\[
-z_{C_1}, z_{C_2} \in \mathbb{R}^{1024}
-\]
-
-represent the latent state under each checkpoint.
-
-### **Observed Properties**
-
-- \( z_{C_1} \): slightly higher variance  
-- \( z_{C_2} \): more compact, refined structure  
-
----
-
-## **3. Step 2 — Project 1024D → 9D**
-
-Project both latent states into the 9D coherence core.
-
-### **Reveals**
-
-- \( z_{C_1} \): branching, transitional geometry (R₂ᴴ)  
-- \( z_{C_2} \): compact, stable geometry (R₁ᴴ)  
-
-### **Interpretation**
-
-The later checkpoint exhibits improved coherence.
-
----
-
-## **4. Step 3 — Project 9D → 6D**
-
-The 6D interaction projection shows:
-
-- smoother surfaces for \( z_{C_2} \)  
-- cross‑step coupling more stable  
-- fewer oscillatory transitions  
-
----
-
-## **5. Step 4 — Project 6D → 3D**
-
-The 3D structural projection shows:
-
-- \( z_{C_1} \): oscillatory motifs  
-- \( z_{C_2} \): compact, low‑variance motifs  
-
-### **Interpretation**
-
-The 3D projection reveals motif‑level refinement across checkpoints.
-
----
-
-## **6. Step 5 — Cross‑Checkpoint Alignment**
-
-Alignment in 9D and 6D shows:
-
-- consistent structural backbone  
-- improved coherence surfaces in C₂  
-- reduced fragmentation  
-- stable primitive‑aligned mapping  
-
----
-
-## **7. Step 6 — Drift Detection**
-
-Using vST drift categories:
-
-- **D₁ Structural Drift:** low  
-- **D₂ Dimensional Drift:** none  
-- **D₃ Regime Drift:** moderate (R₂ᴴ → R₁ᴴ shift)  
-- **D₄ Projection Drift:** none  
-
-### **Interpretation**
-
-The drift is **positive** — a refinement, not a degradation.
-
----
-
-## **8. Summary**
-
-This example demonstrates:
-
-- how 1024D latent states are projected into triadic cores  
-- how cross‑checkpoint alignment reveals structural improvement  
-- how drift detection isolates transitional changes  
-- how vST ensures invariant‑preserving comparison  
 

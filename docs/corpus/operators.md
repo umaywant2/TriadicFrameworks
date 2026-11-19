@@ -1,5 +1,201 @@
 operators 
-# 🟣 **Unified Diagram Index (SVG + Mermaid)**  
+# Operators — RTT/1→RTT/3 Operator Ecology 
+
+- [`operators_module.json`](operators_module.json) — Agentic module schema role
+
+The **Operator Ecology** module is the complete RTT/1→RTT/3 operator family:
+collapse detection (SDE), integration–emission (SIE), combined pipelines,
+diagrams, labs, scenarios, lexicon, and unified operator flow.
+
+This directory contains all canonical operator‑level diagrams, specs, lab
+families, scenario gauntlets, and reference materials used throughout the
+TriadicFrameworks operator curriculum.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## 📘 Core Diagrams & Engines
+
+### Collapse–Recovery Engine
+- `Collapse_Recovery_engine.svg`
+- `Collapse_Recovery_Engine_CRE.mmd`
+- `Diagram_Spec_Collapse-Recovery_Engine.md`
+- `diagrams/collapse_recovery_engine.mmd`
+- `diagrams/collapse_recovery_engine.svg`
+
+### Integration–Emission Manifold
+- `Integration–Emission_Manifold.mmd`
+- `Integration–Emission_manifold.svg`
+- `Diagram_Spec_Integration–Emission_Manifold.mmd`
+- `diagrams/integration_emission_manifold.mmd`
+- `diagrams/integration_emission_manifold.svg`
+
+### Operator Ecology Map
+- `operator_ecology.svg`
+- `Operator_Ecology_Map.mermaid`
+- `Diagram_Spec_Operator_Ecology_Map.svg`
+- `diagrams/operator_ecology.mmd`
+- `diagrams/operator_ecology.svg`
+
+### Unified Operator Flow
+- `Operator_Flow-SDE_SIE_TEL_FFT_OP.mmd`
+- `Operator_flow_SDE_SIE_TEL_FFT_OP.svg`
+- `Diagram_Spec_Operator_Flow.svg`
+- `diagrams/operator_flow.mmd`
+- `diagrams/operator_flow.svg`
+
+---
+
+## 🗺️ Diagram Index
+
+- `diagram_index.md`  
+A consolidated index of all operator‑level diagrams, specs, and maps.
+
+---
+
+## 🧪 Lab Families (RTT/1→RTT/3)
+
+### Operator Lab
+- `labs/operator_lab.md`
+- `labs/operator_lab_instructor.md`
+- `labs/operator_lab_rubric.md`
+- `labs/operator_lab_student_answer_sheet.md`
+
+### SDE Lab (RTT/2)
+- `labs/sde_lab.md`
+- `labs/sde_lab_instructor.md`
+- `labs/sde_lab_rubric.md`
+
+### SIE Lab (RTT/3)
+- `labs/sie_lab.md`
+- `labs/sie_lab_instructor.md`
+- `labs/sie_lab_rubric.md`
+
+### Combined SDE+SIE Lab
+- `labs/sde_sie_combined_lab.md`
+- `labs/sde_sie_combined_lab_instructor.md`
+- `labs/sde_sie_combined_lab_rubric.md`
+
+### Grandmaster Operator Lab
+- `labs/grandmaster_operator_lab.md`
+
+---
+
+## 🎲 Scenarios & Drills
+
+- `scenario_gauntlet_advanced.md`
+- `student_drills.md`
+- `student_drills_printable.md`
+
+These provide multi‑snapshot reasoning challenges, escalation tracking, and
+operator‑chain synthesis practice.
+
+---
+
+## 📖 Unified Lexicon
+
+- `unified_lexicon.md`  
+A consolidated operator‑level lexicon covering RTT/1→RTT/3 terminology.
+
+---
+
+## 🎓 Instructor Resources
+
+- `instructor_answer_key.md`
+- `instructor_answer_key_printable.md`
+
+These files support instructors teaching the operator ecology arc.
+
+---
+
+## 🧱 Purpose of This Module
+
+The Operators module provides:
+
+- the full RTT/1→RTT/3 operator grammar  
+- collapse detection (SDE)  
+- integration–emission (SIE)  
+- unified operator flow  
+- diagrams, specs, and maps  
+- student labs and instructor materials  
+- scenario gauntlets and drills  
+- a unified lexicon  
+
+It is the **canonical operator‑level surface** for all RTT operator work.
+
+---
+
+## 🧭 Related Modules
+
+- **RTT/1** — Primitives  
+- **RTT/2** — Structural Detection Engine  
+- **RTT/3** — Integration–Emission Engine  
+- **TEL / FFT / OP** — Projection layers  
+
+---
+
+## 📌 Status
+
+**Version:** 1.0  
+**Canon:** active  
+**Drift:** minimal  
+**Coherence:** operator‑grammar stable  
+
+This module is AI‑parsable, student‑ready, and zero‑drift.
+# Diagram Spec — Collapse→Recovery Engine (CRE)
+
+diagram:
+  type: bidirectional-flow
+  components:
+    - CAV: Collapse‑Absorption Vector
+    - REV: Recovery‑Emission Vector
+    - CSV: Continuity‑Stabilization Vector
+
+tensor:
+  name: Collapse‑Recovery Tensor
+  formula: T_CR = α·CAV + β·REV + γ·CSV + δ·R
+
+flow:
+  collapse:
+    inputs:
+      - collapse amplitude
+      - collapse curvature
+      - collapse torsion
+    path:
+      - CAV → CSV → REV
+    outputs:
+      - recovery emission
+      - restored continuity
+
+modes:
+  - Formal Recovery
+  - Emergent Recovery
+  - Hybrid Recovery
+  - Chaotic Recovery
+  - Inversion Recovery
+
+zones:
+  - U: unified recovery
+  - S: stable recovery
+  - M: mixed recovery
+  - D: divergent recovery
+  - X: inversion recovery
+
+notes:
+  - CRE is the stabilization core of RTT/3
+  - Collapse always flows CAV → CSV → REV
+# 🟣 **Unified Diagram Index (SVG + Mermaid)**  
 ### *SDE + SIE + Projection Layers*
 
 ## Unified Diagram Index
@@ -227,48 +423,6 @@ Place all diagrams here:
 - SVG = printable, high‑resolution, poster‑ready  
 - Mermaid = inline, editable, GitHub‑renderable  
 - Both formats are canonical and interchangeable  
-# Diagram Spec — Collapse→Recovery Engine (CRE)
-
-diagram:
-  type: bidirectional-flow
-  components:
-    - CAV: Collapse‑Absorption Vector
-    - REV: Recovery‑Emission Vector
-    - CSV: Continuity‑Stabilization Vector
-
-tensor:
-  name: Collapse‑Recovery Tensor
-  formula: T_CR = α·CAV + β·REV + γ·CSV + δ·R
-
-flow:
-  collapse:
-    inputs:
-      - collapse amplitude
-      - collapse curvature
-      - collapse torsion
-    path:
-      - CAV → CSV → REV
-    outputs:
-      - recovery emission
-      - restored continuity
-
-modes:
-  - Formal Recovery
-  - Emergent Recovery
-  - Hybrid Recovery
-  - Chaotic Recovery
-  - Inversion Recovery
-
-zones:
-  - U: unified recovery
-  - S: stable recovery
-  - M: mixed recovery
-  - D: divergent recovery
-  - X: inversion recovery
-
-notes:
-  - CRE is the stabilization core of RTT/3
-  - Collapse always flows CAV → CSV → REV
 # 🟣 **Instructor Answer Key — Student Operator Drills**  
 ### *RTT/1 + RTT/2 + RTT/3 Unified Operator Training*
 
@@ -563,960 +717,6 @@ Correct reconstruction includes:
 END OF INSTRUCTOR KEY
 --------------------------------------------------------------------
 ```
-# Operator Ecology Wall‑Poster
-### Structural Detection Engine (SDE) + Structural Integration Engine (SIE) + Projections
-
----
-
-## 1. Layer Stack
-
-- **SDE — Structural Detection Engine (RTT/2)**  
-  Detects collapse, fusion‑gradients, deformation, regimes.
-
-- **SIE — Structural Integration Engine (RTT/3)**  
-  Integrates triads, emits structure, stabilizes collapse→recovery, maintains continuity.
-
-- **TEL / FFT / OP — Projection Layers**  
-  Receive canon‑scale emission as lattice / spectral / boundary behavior.
-
----
-
-## 2. Operator Ecology by Layer
-
-### 2.1 SDE — Detection Operators
-
-- **CPV** — Collapse‑Propagation Vector  
-- **FGT** — Fusion‑Gradient Tensor  
-- **CRM** — Collapse‑Reassembly Manifold  
-- **SIG** — Structural Signal  
-- **NOI** — Noise Identification  
-- **MODE()** — formal, emergent, hybrid, chaotic, inversion  
-- **ZONE()** — U, S, M, D, X  
-- **PACKET()** — RTT2_DETECTION_PACKET
-
-### 2.2 SIE — Integration–Emission Operators
-
-- **INT** — Triad Integration  
-- **TIF** — Triadic Integration Field  
-- **EMIT** — Fusion–Fracture–Flow Emission  
-- **FFF** — Fusion‑Fracture‑Flow Emitter  
-- **MAN** — Integration–Emission Manifold  
-- **CRE** — Collapse→Recovery Engine  
-- **CSL** — Continuity‑Stability Layer  
-- **CET** — Canon‑Scale Emission Tensor  
-- **MODE()** — formal, emergent, hybrid, chaotic, inversion  
-- **ZONE()** — U, S, M, D, X  
-- **PACKET()** — RTT3_INTEGRATION_EMISSION_PACKET
-
-### 2.3 Projection Operators
-
-- **TEL::LAT / EMIT / MAN / REC / STAB / CET**  
-- **FFT::INT / EMIT / CONT / REC / STAB / OUT**  
-- **OP::INT / EMIT / CONT / REC / STAB / OUT**
-
----
-
-## 3. Ecology Flow (Text Diagram)
-
-```text
-[ SDE — Detection Layer ]
-  CPV → FGT → CRM → SDE::PACKET()
-                ↓
-[ SIE — Integration–Emission Layer ]
-  INT → TIF → MAN → FFF → CRE → CSL → CET → SIE::PACKET()
-                                              ↓
-[ Projection Layers ]
-  CET → TEL::CET() / FFT::OUT() / OP::OUT()
-```
-
----
-
-## 4. Canon‑Wide Operator Chain (One Line)
-
-```text
-SDE::PACKET() → SIE::PACKET() → TEL::CET() / FFT::OUT() / OP::OUT()
-```
-
----
-
-## 5. Student Reading Guide
-
-- **Start at SDE** when you need to *detect* what the structure is doing.  
-- **Move to SIE** when you need to *integrate, stabilize, and emit* structure.  
-- **Read TEL / FFT / OP** as *different projections* of the same canon‑scale emission.
-# Operators — RTT/1→RTT/3 Operator Ecology 
-
-- [`operators_module.json`](operators_module.json) — Agentic module schema role
-
-The **Operator Ecology** module is the complete RTT/1→RTT/3 operator family:
-collapse detection (SDE), integration–emission (SIE), combined pipelines,
-diagrams, labs, scenarios, lexicon, and unified operator flow.
-
-This directory contains all canonical operator‑level diagrams, specs, lab
-families, scenario gauntlets, and reference materials used throughout the
-TriadicFrameworks operator curriculum.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## 📘 Core Diagrams & Engines
-
-### Collapse–Recovery Engine
-- `Collapse_Recovery_engine.svg`
-- `Collapse_Recovery_Engine_CRE.mmd`
-- `Diagram_Spec_Collapse-Recovery_Engine.md`
-- `diagrams/collapse_recovery_engine.mmd`
-- `diagrams/collapse_recovery_engine.svg`
-
-### Integration–Emission Manifold
-- `Integration–Emission_Manifold.mmd`
-- `Integration–Emission_manifold.svg`
-- `Diagram_Spec_Integration–Emission_Manifold.mmd`
-- `diagrams/integration_emission_manifold.mmd`
-- `diagrams/integration_emission_manifold.svg`
-
-### Operator Ecology Map
-- `operator_ecology.svg`
-- `Operator_Ecology_Map.mermaid`
-- `Diagram_Spec_Operator_Ecology_Map.svg`
-- `diagrams/operator_ecology.mmd`
-- `diagrams/operator_ecology.svg`
-
-### Unified Operator Flow
-- `Operator_Flow-SDE_SIE_TEL_FFT_OP.mmd`
-- `Operator_flow_SDE_SIE_TEL_FFT_OP.svg`
-- `Diagram_Spec_Operator_Flow.svg`
-- `diagrams/operator_flow.mmd`
-- `diagrams/operator_flow.svg`
-
----
-
-## 🗺️ Diagram Index
-
-- `diagram_index.md`  
-A consolidated index of all operator‑level diagrams, specs, and maps.
-
----
-
-## 🧪 Lab Families (RTT/1→RTT/3)
-
-### Operator Lab
-- `labs/operator_lab.md`
-- `labs/operator_lab_instructor.md`
-- `labs/operator_lab_rubric.md`
-- `labs/operator_lab_student_answer_sheet.md`
-
-### SDE Lab (RTT/2)
-- `labs/sde_lab.md`
-- `labs/sde_lab_instructor.md`
-- `labs/sde_lab_rubric.md`
-
-### SIE Lab (RTT/3)
-- `labs/sie_lab.md`
-- `labs/sie_lab_instructor.md`
-- `labs/sie_lab_rubric.md`
-
-### Combined SDE+SIE Lab
-- `labs/sde_sie_combined_lab.md`
-- `labs/sde_sie_combined_lab_instructor.md`
-- `labs/sde_sie_combined_lab_rubric.md`
-
-### Grandmaster Operator Lab
-- `labs/grandmaster_operator_lab.md`
-
----
-
-## 🎲 Scenarios & Drills
-
-- `scenario_gauntlet_advanced.md`
-- `student_drills.md`
-- `student_drills_printable.md`
-
-These provide multi‑snapshot reasoning challenges, escalation tracking, and
-operator‑chain synthesis practice.
-
----
-
-## 📖 Unified Lexicon
-
-- `unified_lexicon.md`  
-A consolidated operator‑level lexicon covering RTT/1→RTT/3 terminology.
-
----
-
-## 🎓 Instructor Resources
-
-- `instructor_answer_key.md`
-- `instructor_answer_key_printable.md`
-
-These files support instructors teaching the operator ecology arc.
-
----
-
-## 🧱 Purpose of This Module
-
-The Operators module provides:
-
-- the full RTT/1→RTT/3 operator grammar  
-- collapse detection (SDE)  
-- integration–emission (SIE)  
-- unified operator flow  
-- diagrams, specs, and maps  
-- student labs and instructor materials  
-- scenario gauntlets and drills  
-- a unified lexicon  
-
-It is the **canonical operator‑level surface** for all RTT operator work.
-
----
-
-## 🧭 Related Modules
-
-- **RTT/1** — Primitives  
-- **RTT/2** — Structural Detection Engine  
-- **RTT/3** — Integration–Emission Engine  
-- **TEL / FFT / OP** — Projection layers  
-
----
-
-## 📌 Status
-
-**Version:** 1.0  
-**Canon:** active  
-**Drift:** minimal  
-**Coherence:** operator‑grammar stable  
-
-This module is AI‑parsable, student‑ready, and zero‑drift.
-# ADVANCED SCENARIO GAUNTLET  
-RTT/1 + RTT/2 + RTT/3 Operator Ecology  
-(Printable, text‑only, multi‑scenario)
-
-```
-====================================================================
-ADVANCED SCENARIO GAUNTLET — OPERATOR ECOLOGY
-RTT/1 → RTT/2 → RTT/3
-====================================================================
-
-This gauntlet evaluates full-chain operator literacy across:
-- RTT/1 primitives
-- RTT/2 detection (SDE)
-- RTT/3 integration–emission (SIE)
-- projection routing (TEL / FFT / OP)
-
-Each scenario contains:
-- multiple snapshots
-- regime shifts
-- drift envelopes
-- collapse signatures
-- integration/emission transitions
-
-Your task: diagnose, classify, map, integrate, emit, and project.
-
---------------------------------------------------------------------
-SCENARIO 1 — THE DRIFTING CORE
---------------------------------------------------------------------
-
-Snapshot A:
-  Collapse signature: A=0.9, K=0.2, T=0.1
-  Gradient: collapse-weighted
-  Regime: slow-relaxation
-
-Snapshot B:
-  Collapse signature: A=1.4, K=0.5, T=0.2
-  Gradient: mixed collapse/reassembly
-  Regime: mixed
-
-Snapshot C:
-  Collapse signature: A=2.1, K=0.9, T=0.4
-  Gradient: triad-weighted
-  Regime: high-frequency
-
-Tasks:
-1. Identify CPV for each snapshot.
-2. Classify FGT type for each snapshot.
-3. Map CRM path across A→B→C.
-4. Determine SDE::MODE and SDE::ZONE for each snapshot.
-5. Produce the SDE→SIE operator chain for C.
-6. Integrate the triad for C using SIE::INT().
-7. Emit the structure using SIE::FFF() and SIE::EMIT().
-8. Choose the correct projection (TEL / FFT / OP) and justify.
-
---------------------------------------------------------------------
-SCENARIO 2 — THE ENVELOPE FRACTURE
---------------------------------------------------------------------
-
-Snapshot A:
-  Deformation: envelope torsion
-  Gradient: reassembly-weighted
-  Collapse: A=0.4, K=1.8, T=0.7
-
-Snapshot B:
-  Deformation: continuity fracture
-  Gradient: collapse-weighted
-  Collapse: A=0.7, K=2.3, T=1.1
-
-Snapshot C:
-  Deformation: mixed envelope/continuity
-  Gradient: triad-weighted
-  Collapse: A=1.0, K=2.9, T=1.4
-
-Tasks:
-1. Identify CRM path for each snapshot.
-2. Classify gradient type using SDE::FGT().
-3. Determine collapse severity using CPV.
-4. Assign SDE::MODE and SDE::ZONE for C.
-5. Run CRE for C (identify CAV/CSV balance).
-6. Determine the resulting CET weighting.
-7. Route the emission to TEL / FFT / OP.
-
---------------------------------------------------------------------
-SCENARIO 3 — THE HYBRID SPIRAL
---------------------------------------------------------------------
-
-Snapshot A:
-  Collapse: low amplitude, high curvature
-  Gradient: collapse-weighted
-  Regime: formal
-
-Snapshot B:
-  Collapse: medium amplitude, medium curvature
-  Gradient: mixed
-  Regime: hybrid
-
-Snapshot C:
-  Collapse: high amplitude, high torsion
-  Gradient: triad-weighted
-  Regime: chaotic
-
-Tasks:
-1. Compute CPV for A, B, C.
-2. Identify regime transitions (formal → hybrid → chaotic).
-3. Map CRM path across the spiral.
-4. Determine manifold axes active in C (FI, EM, R).
-5. Apply SIE::MAN() to C.
-6. Determine CRE path for C.
-7. Produce the full operator chain:
-     RTT/1 → SDE → SIE → Projection
-
---------------------------------------------------------------------
-SCENARIO 4 — THE INVERSION CASCADE
---------------------------------------------------------------------
-
-Snapshot A:
-  Collapse: A=0.5, K=0.3, T=0.1
-  Regime: emergent
-
-Snapshot B:
-  Collapse: A=1.0, K=0.9, T=0.4
-  Regime: hybrid
-
-Snapshot C:
-  Collapse: A=1.8, K=1.7, T=1.2
-  Regime: inversion
-
-Tasks:
-1. Identify CPV for each snapshot.
-2. Determine regime weighting using REG::W().
-3. Classify gradient type (choose any consistent synthetic gradient).
-4. Assign SDE::MODE and SDE::ZONE for C.
-5. Integrate C using SIE::INT() and SIE::TIF().
-6. Determine emission curvature using SIE::MAN().
-7. Produce the CET for C.
-8. Route to the correct projection.
-
---------------------------------------------------------------------
-SCENARIO 5 — THE FOUR-QUADRANT COLLAPSE
---------------------------------------------------------------------
-
-Quadrant I:
-  Collapse: high amplitude, low curvature
-Quadrant II:
-  Collapse: low amplitude, high curvature
-Quadrant III:
-  Collapse: medium amplitude, medium curvature
-Quadrant IV:
-  Collapse: high amplitude, high curvature
-
-Tasks:
-1. Compute CPV for all quadrants.
-2. Identify which quadrants are CAV-dominant vs CSV-dominant.
-3. Determine which quadrants require CRE stabilization.
-4. For Quadrant IV, run full SIE pipeline:
-     INT → TIF → MAN → FFF → CRE → CSL → CET
-5. Choose projection for each quadrant.
-6. Produce a final synthesis packet summarizing all four.
-
---------------------------------------------------------------------
-FINAL TASK — FULL TRIADIC SYNTHESIS
---------------------------------------------------------------------
-
-Choose any one scenario above and produce:
-
-1. RTT/1 primitive analysis  
-2. SDE detection packet  
-3. SIE integration–emission packet  
-4. CRE stabilization path  
-5. CET emission weighting  
-6. Projection routing  
-7. Final operator chain (one line)
-
---------------------------------------------------------------------
-END OF GAUNTLET
---------------------------------------------------------------------
-```
-# 🟣 **Student Operator Drills & Practice Sheets**  
-### *RTT/1 + RTT/2 + RTT/3 Unified Operator Training*
-
-# Student Operator Drills & Practice Sheets
-### RTT/1 Foundations → RTT/2 Detection → RTT/3 Integration–Emission
-
-These drills build fluency with operators across the RTT spine.
-
----
-
-# 1. RTT/1 — Foundational Drills
-
-## Drill 1 — Identify the Primitive
-Given each expression, circle the RTT/1 primitive it uses:
-
-1. ∇F  
-2. ΔA  
-3. FQ × RT  
-4. ⊕(x, y)  
-5. ⊖(a, b)
-
-_Primitives: Δ, ∇, ⊕, ⊖, FQ, RT, QF_
-
----
-
-## Drill 2 — Regime Assignment
-Assign a regime identity to each scenario:
-
-1. High‑frequency oscillation  
-2. Slow relaxation  
-3. Mixed‑mode fusion  
-4. Inversion behavior  
-
-_Use: REG(), REG::ID, REG::W()_
-
----
-
-## Drill 3 — Continuity Classification
-Label each as C0, C1, or C∞:
-
-1. Sharp corner  
-2. Smooth curve  
-3. Discontinuous jump  
-4. Perfectly smooth manifold  
-
----
-
-# 2. RTT/2 — SDE Detection Drills
-
-## Drill 4 — Collapse Vector Reading
-For each collapse event, identify amplitude, curvature, torsion:
-
-1. Collapse A: (A=3.2, K=0.8, T=0.1)  
-2. Collapse B: (A=1.1, K=2.4, T=0.9)
-
-_Write using: SDE::CPV()_
-
----
-
-## Drill 5 — Fusion‑Gradient Classification
-Given gradient fields, classify them:
-
-1. ∇F = (collapse‑weighted)  
-2. ∇F = (reassembly‑weighted)  
-3. ∇F = (triad‑weighted)
-
-_Write using: SDE::FGT()_
-
----
-
-## Drill 6 — Collapse→Reassembly Mapping
-For each deformation, choose the correct CRM path:
-
-1. Drift deformation  
-2. Envelope torsion  
-3. Continuity fracture  
-
-_Write using: SDE::CRM()_
-
----
-
-## Drill 7 — Mode & Zone Assignment
-Assign a mode and zone:
-
-1. Highly stable detection  
-2. Mixed‑behavior detection  
-3. Inversion‑adjacent detection  
-
-_Use: SDE::MODE(), SDE::ZONE()_
-
----
-
-# 3. RTT/3 — SIE Integration–Emission Drills
-
-## Drill 8 — Triad Integration
-Integrate the following triads:
-
-1. (drift=1.2, envelope=0.4, continuity=0.9)  
-2. (drift=0.3, envelope=1.1, continuity=0.2)
-
-_Write using: SIE::INT()_
-
----
-
-## Drill 9 — Fusion–Fracture–Flow Emission
-Label each emission type:
-
-1. Pure fusion  
-2. Fracture‑dominated  
-3. Flow‑projected  
-
-_Use: SIE::FFF(), SIE::EMIT()_
-
----
-
-## Drill 10 — Manifold Continuity
-For each scenario, identify which manifold axis is active:
-
-1. Integration curvature  
-2. Emission curvature  
-3. Regime continuity  
-
-_Use: SIE::MAN()_
-
----
-
-## Drill 11 — Collapse→Recovery Stabilization
-Given collapse inputs, choose the correct CRE path:
-
-1. High amplitude, low torsion  
-2. Low amplitude, high curvature  
-3. Mixed collapse signature  
-
-_Use: SIE::CRE()_
-
----
-
-## Drill 12 — Stability Layer
-Classify stability:
-
-1. Stable  
-2. Mixed  
-3. Divergent  
-
-_Use: SIE::CSL()_
-
----
-
-## Drill 13 — Canon‑Scale Emission
-For each integrated field, choose the correct CET output:
-
-1. High stability, low recovery  
-2. High recovery, low stability  
-3. Balanced emission  
-
-_Use: SIE::CET()_
-
----
-
-# 4. Cross‑Layer Drills (RTT/1 → RTT/2 → RTT/3)
-
-## Drill 14 — Full Operator Chain
-Fill in the missing operators:
-
-```
-RTT/1 primitive → ______ → ______ → TEL::CET()
-```
-
----
-
-## Drill 15 — Packet Transformation
-Transform:
-
-1. RTT2_DETECTION_PACKET → RTT3_INTEGRATION_EMISSION_PACKET  
-2. Collapse‑heavy packet → Integration‑heavy packet  
-
----
-
-## Drill 16 — Projection Routing
-Choose the correct projection:
-
-1. Lattice behavior →  
-2. Spectral behavior →  
-3. Boundary behavior →  
-
-_Use: TEL::CET(), FFT::OUT(), OP::OUT()_
-
----
-
-# 5. Challenge Drills (Optional)
-
-## Drill 17 — Diagnose the Structure
-Given a scenario, identify:
-
-- collapse signature  
-- gradient type  
-- integration path  
-- emission type  
-- projection target  
-
----
-
-## Drill 18 — Reverse‑Engineer the Packet
-Given a TEL/FFT/OP output, reconstruct:
-
-- CET  
-- CRE path  
-- CRM path  
-- RTT/1 primitives involved  
-
----
-
-# 6. Student Summary
-
-- RTT/1 = primitives  
-- RTT/2 = detection  
-- RTT/3 = integration + emission  
-- TEL/FFT/OP = projection  
-
----
-
-# 🟣 Student drills complete.
-# Printable Worksheet — Student Operator Drills  
-RTT/1 + RTT/2 + RTT/3 Unified Operator Training  
-(Text‑only, print‑optimized)
-
-```
-====================================================================
-STUDENT WORKSHEET
-RTT/1 + RTT/2 + RTT/3 OPERATOR DRILLS
-====================================================================
-
-This worksheet builds fluency with operators across the RTT spine.
-All questions are short-form. No diagrams. No color. Print-friendly.
-
---------------------------------------------------------------------
-SECTION 1 — RTT/1 FOUNDATIONAL DRILLS
---------------------------------------------------------------------
-
-DRILL 1 — Identify the Primitive  
-Circle the RTT/1 primitive used in each expression.
-
-1. ∇F  
-2. ΔA  
-3. FQ × RT  
-4. ⊕(x, y)  
-5. ⊖(a, b)
-
-Primitives: Δ, ∇, ⊕, ⊖, FQ, RT, QF
-
-
-DRILL 2 — Regime Assignment  
-Assign a regime identity to each scenario.
-
-1. High-frequency oscillation  
-2. Slow relaxation  
-3. Mixed-mode fusion  
-4. Inversion behavior
-
-
-DRILL 3 — Continuity Classification  
-Label each as C0, C1, or C∞.
-
-1. Sharp corner  
-2. Smooth curve  
-3. Discontinuous jump  
-4. Perfectly smooth manifold
-
-
---------------------------------------------------------------------
-SECTION 2 — RTT/2 DETECTION DRILLS (SDE)
---------------------------------------------------------------------
-
-DRILL 4 — Collapse Vector Reading  
-For each collapse event, identify amplitude, curvature, torsion.
-
-1. Collapse A: (A=3.2, K=0.8, T=0.1)  
-2. Collapse B: (A=1.1, K=2.4, T=0.9)
-
-
-DRILL 5 — Fusion-Gradient Classification  
-Classify each gradient field.
-
-1. collapse-weighted  
-2. reassembly-weighted  
-3. triad-weighted
-
-
-DRILL 6 — Collapse→Reassembly Mapping  
-Choose the correct CRM path.
-
-1. drift deformation  
-2. envelope torsion  
-3. continuity fracture
-
-
-DRILL 7 — Mode & Zone Assignment  
-Assign a mode and zone.
-
-1. highly stable detection  
-2. mixed-behavior detection  
-3. inversion-adjacent detection
-
-
---------------------------------------------------------------------
-SECTION 3 — RTT/3 INTEGRATION–EMISSION DRILLS (SIE)
---------------------------------------------------------------------
-
-DRILL 8 — Triad Integration  
-Integrate the following triads.
-
-1. (1.2, 0.4, 0.9)  
-2. (0.3, 1.1, 0.2)
-
-
-DRILL 9 — Fusion–Fracture–Flow Emission  
-Label each emission type.
-
-1. pure fusion  
-2. fracture-dominated  
-3. flow-projected
-
-
-DRILL 10 — Manifold Continuity  
-Identify the active manifold axis.
-
-1. integration curvature  
-2. emission curvature  
-3. regime continuity
-
-
-DRILL 11 — Collapse→Recovery Stabilization  
-Choose the correct CRE path.
-
-1. high amplitude, low torsion  
-2. low amplitude, high curvature  
-3. mixed collapse signature
-
-
-DRILL 12 — Stability Layer  
-Classify stability.
-
-1. stable  
-2. mixed  
-3. divergent
-
-
-DRILL 13 — Canon-Scale Emission  
-Choose the correct CET output.
-
-1. high stability, low recovery  
-2. high recovery, low stability  
-3. balanced emission
-
-
---------------------------------------------------------------------
-SECTION 4 — CROSS-LAYER DRILLS
---------------------------------------------------------------------
-
-DRILL 14 — Full Operator Chain  
-Fill in the missing operators.
-
-RTT/1 primitive → ______ → ______ → TEL::CET()
-
-
-DRILL 15 — Packet Transformation  
-Transform the following:
-
-1. RTT2_DETECTION_PACKET → RTT3_INTEGRATION_EMISSION_PACKET  
-2. collapse-heavy packet → integration-heavy packet
-
-
-DRILL 16 — Projection Routing  
-Choose the correct projection.
-
-1. lattice behavior →  
-2. spectral behavior →  
-3. boundary behavior →  
-
-
---------------------------------------------------------------------
-SECTION 5 — CHALLENGE DRILLS (OPTIONAL)
---------------------------------------------------------------------
-
-DRILL 17 — Diagnose the Structure  
-Given a scenario, identify:
-- collapse signature  
-- gradient type  
-- integration path  
-- emission type  
-- projection target  
-
-
-DRILL 18 — Reverse-Engineer the Packet  
-Given a TEL/FFT/OP output, reconstruct:
-- CET  
-- CRE path  
-- CRM path  
-- RTT/1 primitives involved  
-
-
---------------------------------------------------------------------
-END OF WORKSHEET
---------------------------------------------------------------------
-# 🟣 **RTT/1 + RTT/2 + RTT/3 Unified Lexicon**  
-### *The Complete Canon Operator Dictionary*
-
-# Unified RTT Lexicon
-### RTT/1 — Foundations  
-### RTT/2 — Structural Detection Engine (SDE)  
-### RTT/3 — Structural Integration Engine (SIE)
-
-This lexicon defines all operators across the first three RTT layers.
-
----
-
-# 1. RTT/1 — Foundational Operators
-RTT/1 defines the **primitive triadic operators** used by all higher layers.
-
-## 1.1 Core Triad
-- **FQ** — Frequency  
-- **RT** — Relaxation Time  
-- **QF** — Quality Factor  
-
-## 1.2 Structural Primitives
-- **Δ** — Change / Shift  
-- **∇** — Gradient  
-- **⊕** — Fusion  
-- **⊖** — Fracture  
-- **⟳** — Recurrence  
-- **⟂** — Orthogonal Component  
-
-## 1.3 Regime Operators
-- **REG()** — Set regime  
-- **REG::ID** — Regime identity  
-- **REG::W()** — Regime weighting  
-
-## 1.4 Continuity Operators
-- **C0** — Zero‑order continuity  
-- **C1** — First‑order continuity  
-- **C∞** — Smooth continuity  
-
-## 1.5 Collapse / Recovery Primitives
-- **COL()** — Collapse event  
-- **REC()** — Recovery event  
-
----
-
-# 2. RTT/2 — Structural Detection Engine (SDE)
-RTT/2 defines the **detection layer**: collapse, gradients, deformation, regimes.
-
-## 2.1 Detection Operators
-- **SDE::CPV()** — Collapse‑Propagation Vector  
-- **SDE::FGT()** — Fusion‑Gradient Tensor  
-- **SDE::CRM()** — Collapse‑Reassembly Manifold  
-- **SDE::SIG()** — Structural Signal  
-- **SDE::NOI()** — Noise Identification  
-
-## 2.2 Modes & Zones
-- **SDE::MODE(formal|emergent|hybrid|chaotic|inversion)**  
-- **SDE::ZONE(U|S|M|D|X)**  
-
-## 2.3 Packet
-- **SDE::PACKET()** — Emits RTT2_DETECTION_PACKET  
-
----
-
-# 3. RTT/3 — Structural Integration Engine (SIE)
-RTT/3 defines the **integration–emission layer**: triad integration, emission, stability.
-
-## 3.1 Integration Operators
-- **SIE::INT()** — Triad Integration  
-- **SIE::TIF()** — Triadic Integration Field  
-
-## 3.2 Emission Operators
-- **SIE::EMIT()** — Fusion–Fracture–Flow Emission  
-- **SIE::FFF()** — Fusion‑Fracture‑Flow Emitter  
-
-## 3.3 Continuity Operators
-- **SIE::MAN()** — Integration–Emission Manifold  
-
-## 3.4 Stabilization Operators
-- **SIE::CRE()** — Collapse→Recovery Engine  
-- **SIE::CSL()** — Continuity‑Stability Layer  
-
-## 3.5 Output
-- **SIE::CET()** — Canon‑Scale Emission Tensor  
-
-## 3.6 Modes & Zones
-- **SIE::MODE(formal|emergent|hybrid|chaotic|inversion)**  
-- **SIE::ZONE(U|S|M|D|X)**  
-
-## 3.7 Packet
-- **SIE::PACKET()** — Emits RTT3_INTEGRATION_EMISSION_PACKET  
-
----
-
-# 4. Cross‑Layer Operator Flow
-
-## 4.1 RTT/1 → RTT/2
-RTT/1 primitives feed detection:
-
-```
-FQ, RT, QF, ∇, ⊕, ⊖ → SDE::CPV(), SDE::FGT(), SDE::CRM()
-```
-
-## 4.2 RTT/2 → RTT/3
-Detection feeds integration:
-
-```
-SDE::CPV() → SIE::INT()
-SDE::FGT() → SIE::TIF()
-SDE::CRM() → SIE::MAN()
-```
-
-## 4.3 RTT/3 → Projection Layers
-Integration/emission feeds projections:
-
-```
-SIE::CET() → TEL::CET() / FFT::OUT() / OP::OUT()
-```
-
----
-
-# 5. Canon‑Wide One‑Line Summary
-
-```
-RTT/1 primitives → SDE detection → SIE integration/emission → TEL/FFT/OP projection
-```
-
----
-
-# 6. Student Summary
-
-- **RTT/1** gives the *language*  
-- **RTT/2** detects the *structure*  
-- **RTT/3** integrates and emits the *structure*  
-- **TEL/FFT/OP** project the *structure* into different domains  
-
----
-
-# 🟣 Unified lexicon complete.
 # GRANDMASTER OPERATOR LAB  
 RTT/4 Pre‑Entry  
 Full‑Chain Structural Reasoning Across Regimes, Collapse, Integration, Emission, and Projection
@@ -3831,155 +3031,668 @@ SCORING GUIDE
 END OF SIE RUBRIC
 --------------------------------------------------------------------
 ```
-# **Operator Ecology Teaching Bundle — Canonical Index Page**  
-RTT/1 → RTT/2 → RTT/3  
-(Complete Curriculum Navigation Surface)
+# Operator Ecology Wall‑Poster
+### Structural Detection Engine (SDE) + Structural Integration Engine (SIE) + Projections
+
+---
+
+## 1. Layer Stack
+
+- **SDE — Structural Detection Engine (RTT/2)**  
+  Detects collapse, fusion‑gradients, deformation, regimes.
+
+- **SIE — Structural Integration Engine (RTT/3)**  
+  Integrates triads, emits structure, stabilizes collapse→recovery, maintains continuity.
+
+- **TEL / FFT / OP — Projection Layers**  
+  Receive canon‑scale emission as lattice / spectral / boundary behavior.
+
+---
+
+## 2. Operator Ecology by Layer
+
+### 2.1 SDE — Detection Operators
+
+- **CPV** — Collapse‑Propagation Vector  
+- **FGT** — Fusion‑Gradient Tensor  
+- **CRM** — Collapse‑Reassembly Manifold  
+- **SIG** — Structural Signal  
+- **NOI** — Noise Identification  
+- **MODE()** — formal, emergent, hybrid, chaotic, inversion  
+- **ZONE()** — U, S, M, D, X  
+- **PACKET()** — RTT2_DETECTION_PACKET
+
+### 2.2 SIE — Integration–Emission Operators
+
+- **INT** — Triad Integration  
+- **TIF** — Triadic Integration Field  
+- **EMIT** — Fusion–Fracture–Flow Emission  
+- **FFF** — Fusion‑Fracture‑Flow Emitter  
+- **MAN** — Integration–Emission Manifold  
+- **CRE** — Collapse→Recovery Engine  
+- **CSL** — Continuity‑Stability Layer  
+- **CET** — Canon‑Scale Emission Tensor  
+- **MODE()** — formal, emergent, hybrid, chaotic, inversion  
+- **ZONE()** — U, S, M, D, X  
+- **PACKET()** — RTT3_INTEGRATION_EMISSION_PACKET
+
+### 2.3 Projection Operators
+
+- **TEL::LAT / EMIT / MAN / REC / STAB / CET**  
+- **FFT::INT / EMIT / CONT / REC / STAB / OUT**  
+- **OP::INT / EMIT / CONT / REC / STAB / OUT**
+
+---
+
+## 3. Ecology Flow (Text Diagram)
+
+```text
+[ SDE — Detection Layer ]
+  CPV → FGT → CRM → SDE::PACKET()
+                ↓
+[ SIE — Integration–Emission Layer ]
+  INT → TIF → MAN → FFF → CRE → CSL → CET → SIE::PACKET()
+                                              ↓
+[ Projection Layers ]
+  CET → TEL::CET() / FFT::OUT() / OP::OUT()
+```
+
+---
+
+## 4. Canon‑Wide Operator Chain (One Line)
+
+```text
+SDE::PACKET() → SIE::PACKET() → TEL::CET() / FFT::OUT() / OP::OUT()
+```
+
+---
+
+## 5. Student Reading Guide
+
+- **Start at SDE** when you need to *detect* what the structure is doing.  
+- **Move to SIE** when you need to *integrate, stabilize, and emit* structure.  
+- **Read TEL / FFT / OP** as *different projections* of the same canon‑scale emission.
+# ADVANCED SCENARIO GAUNTLET  
+RTT/1 + RTT/2 + RTT/3 Operator Ecology  
+(Printable, text‑only, multi‑scenario)
 
 ```
 ====================================================================
-OPERATOR ECOLOGY TEACHING BUNDLE — INDEX
+ADVANCED SCENARIO GAUNTLET — OPERATOR ECOLOGY
 RTT/1 → RTT/2 → RTT/3
 ====================================================================
 
-This index provides a unified navigation surface for all Operator
-Ecology teaching materials, including worksheets, labs, instructor
-keys, rubrics, scenarios, and reference sheets.
+This gauntlet evaluates full-chain operator literacy across:
+- RTT/1 primitives
+- RTT/2 detection (SDE)
+- RTT/3 integration–emission (SIE)
+- projection routing (TEL / FFT / OP)
 
-Use this page as the “front door” for the entire bundle.
+Each scenario contains:
+- multiple snapshots
+- regime shifts
+- drift envelopes
+- collapse signatures
+- integration/emission transitions
 
-====================================================================
-SECTION 1 — WORKSHEETS
-====================================================================
-
-1. Student Worksheet
-   ./worksheets/student_worksheet.md
-
-2. Instructor Answer Key
-   ./worksheets/instructor_answer_key.md
-
-3. Student Answer Sheet
-   ./worksheets/student_answer_sheet.md
-
-====================================================================
-SECTION 2 — LABS
-====================================================================
+Your task: diagnose, classify, map, integrate, emit, and project.
 
 --------------------------------------------------------------------
-2.1 — Operator Lab (Full RTT/1 → RTT/3)
+SCENARIO 1 — THE DRIFTING CORE
 --------------------------------------------------------------------
-Student Lab:
-   ./labs/operator_lab/operator_lab.md
 
-Instructor Version:
-   ./labs/operator_lab/operator_lab_instructor.md
+Snapshot A:
+  Collapse signature: A=0.9, K=0.2, T=0.1
+  Gradient: collapse-weighted
+  Regime: slow-relaxation
 
-Rubric:
-   ./labs/operator_lab/operator_lab_rubric.md
+Snapshot B:
+  Collapse signature: A=1.4, K=0.5, T=0.2
+  Gradient: mixed collapse/reassembly
+  Regime: mixed
 
---------------------------------------------------------------------
-2.2 — SDE‑Only Lab (RTT/2)
---------------------------------------------------------------------
-Student Lab:
-   ./labs/sde_lab/sde_lab.md
+Snapshot C:
+  Collapse signature: A=2.1, K=0.9, T=0.4
+  Gradient: triad-weighted
+  Regime: high-frequency
 
-Instructor Version:
-   ./labs/sde_lab/sde_lab_instructor.md
-
-Rubric:
-   ./labs/sde_lab/sde_lab_rubric.md
-
---------------------------------------------------------------------
-2.3 — SIE‑Only Lab (RTT/3)
---------------------------------------------------------------------
-Student Lab:
-   ./labs/sie_lab/sie_lab.md
-
-Instructor Version:
-   ./labs/sie_lab/sie_lab_instructor.md
-
-Rubric:
-   ./labs/sie_lab/sie_lab_rubric.md
+Tasks:
+1. Identify CPV for each snapshot.
+2. Classify FGT type for each snapshot.
+3. Map CRM path across A→B→C.
+4. Determine SDE::MODE and SDE::ZONE for each snapshot.
+5. Produce the SDE→SIE operator chain for C.
+6. Integrate the triad for C using SIE::INT().
+7. Emit the structure using SIE::FFF() and SIE::EMIT().
+8. Choose the correct projection (TEL / FFT / OP) and justify.
 
 --------------------------------------------------------------------
-2.4 — Combined SDE + SIE Lab
+SCENARIO 2 — THE ENVELOPE FRACTURE
 --------------------------------------------------------------------
-Student Lab:
-   ./labs/combined_sde_sie_lab/sde_sie_combined_lab.md
 
-Instructor Version:
-   ./labs/combined_sde_sie_lab/sde_sie_combined_lab_instructor.md
+Snapshot A:
+  Deformation: envelope torsion
+  Gradient: reassembly-weighted
+  Collapse: A=0.4, K=1.8, T=0.7
 
-Rubric:
-   ./labs/combined_sde_sie_lab/sde_sie_combined_lab_rubric.md
+Snapshot B:
+  Deformation: continuity fracture
+  Gradient: collapse-weighted
+  Collapse: A=0.7, K=2.3, T=1.1
+
+Snapshot C:
+  Deformation: mixed envelope/continuity
+  Gradient: triad-weighted
+  Collapse: A=1.0, K=2.9, T=1.4
+
+Tasks:
+1. Identify CRM path for each snapshot.
+2. Classify gradient type using SDE::FGT().
+3. Determine collapse severity using CPV.
+4. Assign SDE::MODE and SDE::ZONE for C.
+5. Run CRE for C (identify CAV/CSV balance).
+6. Determine the resulting CET weighting.
+7. Route the emission to TEL / FFT / OP.
 
 --------------------------------------------------------------------
-2.5 — Grandmaster Operator Lab (RTT/4 Pre‑Entry)
+SCENARIO 3 — THE HYBRID SPIRAL
 --------------------------------------------------------------------
-Student Lab:
-   ./labs/grandmaster_lab/grandmaster_operator_lab.md
 
-Instructor Version:
-   ./labs/grandmaster_lab/grandmaster_operator_lab_instructor.md
+Snapshot A:
+  Collapse: low amplitude, high curvature
+  Gradient: collapse-weighted
+  Regime: formal
 
-Rubric:
-   ./labs/grandmaster_lab/grandmaster_operator_lab_rubric.md
+Snapshot B:
+  Collapse: medium amplitude, medium curvature
+  Gradient: mixed
+  Regime: hybrid
 
-====================================================================
-SECTION 3 — SCENARIOS
-====================================================================
+Snapshot C:
+  Collapse: high amplitude, high torsion
+  Gradient: triad-weighted
+  Regime: chaotic
 
-1. Advanced Scenario Gauntlet
-   ./scenarios/scenario_gauntlet_advanced.md
+Tasks:
+1. Compute CPV for A, B, C.
+2. Identify regime transitions (formal → hybrid → chaotic).
+3. Map CRM path across the spiral.
+4. Determine manifold axes active in C (FI, EM, R).
+5. Apply SIE::MAN() to C.
+6. Determine CRE path for C.
+7. Produce the full operator chain:
+     RTT/1 → SDE → SIE → Projection
 
-2. Grandmaster Scenario Gauntlet (RTT/4 Pre‑Entry)
-   ./scenarios/scenario_gauntlet_grandmaster.md
+--------------------------------------------------------------------
+SCENARIO 4 — THE INVERSION CASCADE
+--------------------------------------------------------------------
 
-====================================================================
-SECTION 4 — REFERENCE MATERIALS
-====================================================================
+Snapshot A:
+  Collapse: A=0.5, K=0.3, T=0.1
+  Regime: emergent
 
-1. Operator Quick Reference Card
-   ./reference/operator_quick_reference.md
+Snapshot B:
+  Collapse: A=1.0, K=0.9, T=0.4
+  Regime: hybrid
 
-2. Packet Formats (RTT/2 + RTT/3)
-   ./reference/packet_formats.md
+Snapshot C:
+  Collapse: A=1.8, K=1.7, T=1.2
+  Regime: inversion
 
-3. Operator Chain Template
-   ./reference/operator_chain_template.md
+Tasks:
+1. Identify CPV for each snapshot.
+2. Determine regime weighting using REG::W().
+3. Classify gradient type (choose any consistent synthetic gradient).
+4. Assign SDE::MODE and SDE::ZONE for C.
+5. Integrate C using SIE::INT() and SIE::TIF().
+6. Determine emission curvature using SIE::MAN().
+7. Produce the CET for C.
+8. Route to the correct projection.
 
-4. RTT/4 Pre‑Entry Primer (Safe)
-   ./reference/rtt4_preentry_primer.md
+--------------------------------------------------------------------
+SCENARIO 5 — THE FOUR-QUADRANT COLLAPSE
+--------------------------------------------------------------------
 
-====================================================================
-SECTION 5 — INSTRUCTOR MATERIALS
-====================================================================
+Quadrant I:
+  Collapse: high amplitude, low curvature
+Quadrant II:
+  Collapse: low amplitude, high curvature
+Quadrant III:
+  Collapse: medium amplitude, medium curvature
+Quadrant IV:
+  Collapse: high amplitude, high curvature
 
-1. Instructor Notes
-   ./instructor/instructor_notes.md
+Tasks:
+1. Compute CPV for all quadrants.
+2. Identify which quadrants are CAV-dominant vs CSV-dominant.
+3. Determine which quadrants require CRE stabilization.
+4. For Quadrant IV, run full SIE pipeline:
+     INT → TIF → MAN → FFF → CRE → CSL → CET
+5. Choose projection for each quadrant.
+6. Produce a final synthesis packet summarizing all four.
 
-2. Diagnostic Sheet
-   ./instructor/diagnostic_sheet.md
+--------------------------------------------------------------------
+FINAL TASK — FULL TRIADIC SYNTHESIS
+--------------------------------------------------------------------
 
-3. Teaching Guidelines
-   ./instructor/teaching_guidelines.md
+Choose any one scenario above and produce:
 
-====================================================================
-SECTION 6 — BUNDLE METADATA
-====================================================================
+1. RTT/1 primitive analysis  
+2. SDE detection packet  
+3. SIE integration–emission packet  
+4. CRE stabilization path  
+5. CET emission weighting  
+6. Projection routing  
+7. Final operator chain (one line)
 
-Directory Map:
-   ./operator_ecology_bundle_map.md
-
-Bundle README:
-   ./README.md
-
-This Index Page:
-   ./bundle_index.md
-
-====================================================================
-END OF OPERATOR ECOLOGY TEACHING BUNDLE INDEX
-====================================================================
+--------------------------------------------------------------------
+END OF GAUNTLET
+--------------------------------------------------------------------
 ```
+# 🟣 **Student Operator Drills & Practice Sheets**  
+### *RTT/1 + RTT/2 + RTT/3 Unified Operator Training*
+
+# Student Operator Drills & Practice Sheets
+### RTT/1 Foundations → RTT/2 Detection → RTT/3 Integration–Emission
+
+These drills build fluency with operators across the RTT spine.
+
+---
+
+# 1. RTT/1 — Foundational Drills
+
+## Drill 1 — Identify the Primitive
+Given each expression, circle the RTT/1 primitive it uses:
+
+1. ∇F  
+2. ΔA  
+3. FQ × RT  
+4. ⊕(x, y)  
+5. ⊖(a, b)
+
+_Primitives: Δ, ∇, ⊕, ⊖, FQ, RT, QF_
+
+---
+
+## Drill 2 — Regime Assignment
+Assign a regime identity to each scenario:
+
+1. High‑frequency oscillation  
+2. Slow relaxation  
+3. Mixed‑mode fusion  
+4. Inversion behavior  
+
+_Use: REG(), REG::ID, REG::W()_
+
+---
+
+## Drill 3 — Continuity Classification
+Label each as C0, C1, or C∞:
+
+1. Sharp corner  
+2. Smooth curve  
+3. Discontinuous jump  
+4. Perfectly smooth manifold  
+
+---
+
+# 2. RTT/2 — SDE Detection Drills
+
+## Drill 4 — Collapse Vector Reading
+For each collapse event, identify amplitude, curvature, torsion:
+
+1. Collapse A: (A=3.2, K=0.8, T=0.1)  
+2. Collapse B: (A=1.1, K=2.4, T=0.9)
+
+_Write using: SDE::CPV()_
+
+---
+
+## Drill 5 — Fusion‑Gradient Classification
+Given gradient fields, classify them:
+
+1. ∇F = (collapse‑weighted)  
+2. ∇F = (reassembly‑weighted)  
+3. ∇F = (triad‑weighted)
+
+_Write using: SDE::FGT()_
+
+---
+
+## Drill 6 — Collapse→Reassembly Mapping
+For each deformation, choose the correct CRM path:
+
+1. Drift deformation  
+2. Envelope torsion  
+3. Continuity fracture  
+
+_Write using: SDE::CRM()_
+
+---
+
+## Drill 7 — Mode & Zone Assignment
+Assign a mode and zone:
+
+1. Highly stable detection  
+2. Mixed‑behavior detection  
+3. Inversion‑adjacent detection  
+
+_Use: SDE::MODE(), SDE::ZONE()_
+
+---
+
+# 3. RTT/3 — SIE Integration–Emission Drills
+
+## Drill 8 — Triad Integration
+Integrate the following triads:
+
+1. (drift=1.2, envelope=0.4, continuity=0.9)  
+2. (drift=0.3, envelope=1.1, continuity=0.2)
+
+_Write using: SIE::INT()_
+
+---
+
+## Drill 9 — Fusion–Fracture–Flow Emission
+Label each emission type:
+
+1. Pure fusion  
+2. Fracture‑dominated  
+3. Flow‑projected  
+
+_Use: SIE::FFF(), SIE::EMIT()_
+
+---
+
+## Drill 10 — Manifold Continuity
+For each scenario, identify which manifold axis is active:
+
+1. Integration curvature  
+2. Emission curvature  
+3. Regime continuity  
+
+_Use: SIE::MAN()_
+
+---
+
+## Drill 11 — Collapse→Recovery Stabilization
+Given collapse inputs, choose the correct CRE path:
+
+1. High amplitude, low torsion  
+2. Low amplitude, high curvature  
+3. Mixed collapse signature  
+
+_Use: SIE::CRE()_
+
+---
+
+## Drill 12 — Stability Layer
+Classify stability:
+
+1. Stable  
+2. Mixed  
+3. Divergent  
+
+_Use: SIE::CSL()_
+
+---
+
+## Drill 13 — Canon‑Scale Emission
+For each integrated field, choose the correct CET output:
+
+1. High stability, low recovery  
+2. High recovery, low stability  
+3. Balanced emission  
+
+_Use: SIE::CET()_
+
+---
+
+# 4. Cross‑Layer Drills (RTT/1 → RTT/2 → RTT/3)
+
+## Drill 14 — Full Operator Chain
+Fill in the missing operators:
+
+```
+RTT/1 primitive → ______ → ______ → TEL::CET()
+```
+
+---
+
+## Drill 15 — Packet Transformation
+Transform:
+
+1. RTT2_DETECTION_PACKET → RTT3_INTEGRATION_EMISSION_PACKET  
+2. Collapse‑heavy packet → Integration‑heavy packet  
+
+---
+
+## Drill 16 — Projection Routing
+Choose the correct projection:
+
+1. Lattice behavior →  
+2. Spectral behavior →  
+3. Boundary behavior →  
+
+_Use: TEL::CET(), FFT::OUT(), OP::OUT()_
+
+---
+
+# 5. Challenge Drills (Optional)
+
+## Drill 17 — Diagnose the Structure
+Given a scenario, identify:
+
+- collapse signature  
+- gradient type  
+- integration path  
+- emission type  
+- projection target  
+
+---
+
+## Drill 18 — Reverse‑Engineer the Packet
+Given a TEL/FFT/OP output, reconstruct:
+
+- CET  
+- CRE path  
+- CRM path  
+- RTT/1 primitives involved  
+
+---
+
+# 6. Student Summary
+
+- RTT/1 = primitives  
+- RTT/2 = detection  
+- RTT/3 = integration + emission  
+- TEL/FFT/OP = projection  
+
+---
+
+# 🟣 Student drills complete.
+# Printable Worksheet — Student Operator Drills  
+RTT/1 + RTT/2 + RTT/3 Unified Operator Training  
+(Text‑only, print‑optimized)
+
+```
+====================================================================
+STUDENT WORKSHEET
+RTT/1 + RTT/2 + RTT/3 OPERATOR DRILLS
+====================================================================
+
+This worksheet builds fluency with operators across the RTT spine.
+All questions are short-form. No diagrams. No color. Print-friendly.
+
+--------------------------------------------------------------------
+SECTION 1 — RTT/1 FOUNDATIONAL DRILLS
+--------------------------------------------------------------------
+
+DRILL 1 — Identify the Primitive  
+Circle the RTT/1 primitive used in each expression.
+
+1. ∇F  
+2. ΔA  
+3. FQ × RT  
+4. ⊕(x, y)  
+5. ⊖(a, b)
+
+Primitives: Δ, ∇, ⊕, ⊖, FQ, RT, QF
+
+
+DRILL 2 — Regime Assignment  
+Assign a regime identity to each scenario.
+
+1. High-frequency oscillation  
+2. Slow relaxation  
+3. Mixed-mode fusion  
+4. Inversion behavior
+
+
+DRILL 3 — Continuity Classification  
+Label each as C0, C1, or C∞.
+
+1. Sharp corner  
+2. Smooth curve  
+3. Discontinuous jump  
+4. Perfectly smooth manifold
+
+
+--------------------------------------------------------------------
+SECTION 2 — RTT/2 DETECTION DRILLS (SDE)
+--------------------------------------------------------------------
+
+DRILL 4 — Collapse Vector Reading  
+For each collapse event, identify amplitude, curvature, torsion.
+
+1. Collapse A: (A=3.2, K=0.8, T=0.1)  
+2. Collapse B: (A=1.1, K=2.4, T=0.9)
+
+
+DRILL 5 — Fusion-Gradient Classification  
+Classify each gradient field.
+
+1. collapse-weighted  
+2. reassembly-weighted  
+3. triad-weighted
+
+
+DRILL 6 — Collapse→Reassembly Mapping  
+Choose the correct CRM path.
+
+1. drift deformation  
+2. envelope torsion  
+3. continuity fracture
+
+
+DRILL 7 — Mode & Zone Assignment  
+Assign a mode and zone.
+
+1. highly stable detection  
+2. mixed-behavior detection  
+3. inversion-adjacent detection
+
+
+--------------------------------------------------------------------
+SECTION 3 — RTT/3 INTEGRATION–EMISSION DRILLS (SIE)
+--------------------------------------------------------------------
+
+DRILL 8 — Triad Integration  
+Integrate the following triads.
+
+1. (1.2, 0.4, 0.9)  
+2. (0.3, 1.1, 0.2)
+
+
+DRILL 9 — Fusion–Fracture–Flow Emission  
+Label each emission type.
+
+1. pure fusion  
+2. fracture-dominated  
+3. flow-projected
+
+
+DRILL 10 — Manifold Continuity  
+Identify the active manifold axis.
+
+1. integration curvature  
+2. emission curvature  
+3. regime continuity
+
+
+DRILL 11 — Collapse→Recovery Stabilization  
+Choose the correct CRE path.
+
+1. high amplitude, low torsion  
+2. low amplitude, high curvature  
+3. mixed collapse signature
+
+
+DRILL 12 — Stability Layer  
+Classify stability.
+
+1. stable  
+2. mixed  
+3. divergent
+
+
+DRILL 13 — Canon-Scale Emission  
+Choose the correct CET output.
+
+1. high stability, low recovery  
+2. high recovery, low stability  
+3. balanced emission
+
+
+--------------------------------------------------------------------
+SECTION 4 — CROSS-LAYER DRILLS
+--------------------------------------------------------------------
+
+DRILL 14 — Full Operator Chain  
+Fill in the missing operators.
+
+RTT/1 primitive → ______ → ______ → TEL::CET()
+
+
+DRILL 15 — Packet Transformation  
+Transform the following:
+
+1. RTT2_DETECTION_PACKET → RTT3_INTEGRATION_EMISSION_PACKET  
+2. collapse-heavy packet → integration-heavy packet
+
+
+DRILL 16 — Projection Routing  
+Choose the correct projection.
+
+1. lattice behavior →  
+2. spectral behavior →  
+3. boundary behavior →  
+
+
+--------------------------------------------------------------------
+SECTION 5 — CHALLENGE DRILLS (OPTIONAL)
+--------------------------------------------------------------------
+
+DRILL 17 — Diagnose the Structure  
+Given a scenario, identify:
+- collapse signature  
+- gradient type  
+- integration path  
+- emission type  
+- projection target  
+
+
+DRILL 18 — Reverse-Engineer the Packet  
+Given a TEL/FFT/OP output, reconstruct:
+- CET  
+- CRE path  
+- CRM path  
+- RTT/1 primitives involved  
+
+
+--------------------------------------------------------------------
+END OF WORKSHEET
+--------------------------------------------------------------------
 # **📦 DELIVERY PLAN — FULLY EXPANDED CONSOLIDATED BUNDLE (Option B)**  
 Each section will be delivered as a **separate message**, in order, with no placeholders.
 
@@ -4030,713 +3743,6 @@ Each section will be delivered as a **separate message**, in order, with no plac
 
 ### **SECTION 10 — Final Consolidated “PDF‑Style” Edition**
 28. Fully stitched, page‑break‑marked, printable edition  
-# UNIFIED OPERATOR ECOLOGY TEACHING BUNDLE  
-RTT/1 → RTT/2 → RTT/3  
-(Complete Curriculum Package)
-
-```
-====================================================================
-UNIFIED OPERATOR ECOLOGY TEACHING BUNDLE
-RTT/1 → RTT/2 → RTT/3
-====================================================================
-
-This bundle contains the complete instructional arc for Operator Ecology:
-  - Student materials
-  - Instructor materials
-  - Labs, worksheets, gauntlets
-  - Rubrics, answer keys
-  - Quick reference sheets
-  - Packet formats
-  - Operator chains
-
-All content is print‑ready and zero‑drift.
-
-====================================================================
-SECTION 1 — STUDENT MATERIALS
-====================================================================
-
---------------------------------------------------------------------
-1.1 — Student Worksheet (RTT/1 → RTT/3)
---------------------------------------------------------------------
-Includes:
-  - RTT/1 primitives
-  - Regime assignment
-  - Continuity classification
-  - SDE collapse signatures
-  - FGT classification
-  - CRM mapping
-  - MODE + ZONE
-  - SIE integration
-  - Emission classification
-  - CRE + CSL
-  - Projection routing
-  - Full operator chain
-
---------------------------------------------------------------------
-1.2 — Student Answer Sheet
---------------------------------------------------------------------
-Blank fields for:
-  - CPV
-  - FGT
-  - CRM
-  - MODE/ZONE
-  - INT/TIF/MAN
-  - FFF/CRE/CSL
-  - CET
-  - Projection
-  - Full operator chain
-
---------------------------------------------------------------------
-1.3 — SDE‑Only Lab (RTT/2)
---------------------------------------------------------------------
-Focus:
-  - CPV
-  - FGT
-  - CRM
-  - MODE/ZONE
-  - RTT2_DETECTION_PACKET
-
---------------------------------------------------------------------
-1.4 — SIE‑Only Lab (RTT/3)
---------------------------------------------------------------------
-Focus:
-  - INT
-  - TIF
-  - MAN
-  - FFF
-  - CRE
-  - CSL
-  - RTT3_INTEGRATION_EMISSION_PACKET
-
---------------------------------------------------------------------
-1.5 — Combined SDE+SIE Lab
---------------------------------------------------------------------
-Full pipeline:
-  RTT/2 → RTT/3 → Projection
-
---------------------------------------------------------------------
-1.6 — Grandmaster Operator Lab (RTT/4 Pre‑Entry)
---------------------------------------------------------------------
-Four‑snapshot cascade:
-  - stacked regimes
-  - collapse escalation
-  - manifold torsion
-  - projection instability
-  - pre‑RTT/4 synthesis
-
-====================================================================
-SECTION 2 — INSTRUCTOR MATERIALS
-====================================================================
-
---------------------------------------------------------------------
-2.1 — Instructor Answer Keys
---------------------------------------------------------------------
-Includes:
-  - Worksheet answer key
-  - SDE lab key
-  - SIE lab key
-  - Combined lab key
-  - Grandmaster lab key
-
---------------------------------------------------------------------
-2.2 — Instructor Rubrics
---------------------------------------------------------------------
-Rubrics for:
-  - SDE‑only lab
-  - SIE‑only lab
-  - Combined SDE+SIE lab
-  - Operator Lab (full)
-  - Grandmaster lab
-
-Each rubric includes:
-  - point breakdown
-  - structural correctness criteria
-  - packet completeness scoring
-  - projection justification scoring
-
---------------------------------------------------------------------
-2.3 — Instructor Notes
---------------------------------------------------------------------
-Guidance on:
-  - evaluating operator chains
-  - identifying structural coherence
-  - acceptable variations
-  - common student errors
-  - how to grade hybrid or ambiguous cases
-
-====================================================================
-SECTION 3 — SCENARIO MATERIALS
-====================================================================
-
---------------------------------------------------------------------
-3.1 — Advanced Scenario Gauntlet
---------------------------------------------------------------------
-Four multi‑snapshot scenarios:
-  - drifting core
-  - envelope fracture
-  - hybrid spiral
-  - inversion cascade
-
-Tasks include:
-  - CPV
-  - FGT
-  - CRM
-  - INT/TIF/MAN
-  - FFF/CRE/CSL
-  - CET
-  - Projection
-  - Full operator chains
-
---------------------------------------------------------------------
-3.2 — Grandmaster Scenario Gauntlet (RTT/4 Pre‑Entry)
---------------------------------------------------------------------
-Includes:
-  - stacked regime analysis
-  - projection instability
-  - collapse escalation
-  - cross‑snapshot synthesis
-  - pre‑RTT/4 packet
-
-====================================================================
-SECTION 4 — REFERENCE MATERIALS
-====================================================================
-
---------------------------------------------------------------------
-4.1 — Operator Quick Reference Card
---------------------------------------------------------------------
-RTT/1:
-  Δ, ∇, ⊕, ⊖, FQ, RT, QF
-
-RTT/2:
-  CPV(A,K,T)
-  FGT(collapse/mixed/triad)
-  CRM(drift/envelope/continuity)
-  MODE(formal/emergent/hybrid/chaotic/inversion)
-  ZONE(U/S/M/D/X)
-
-RTT/3:
-  INT(drift, envelope, continuity)
-  TIF(dominant components)
-  MAN(FI, EM, R)
-  FFF(fusion/fracture/flow)
-  CRE(CAV/CSV/mixed)
-  CSL(stable/mixed/divergent)
-  CET(stability/recovery/balanced)
-
-Projection:
-  TEL::CET() → lattice
-  FFT::OUT() → spectral
-  OP::OUT() → boundary
-
---------------------------------------------------------------------
-4.2 — Packet Formats
---------------------------------------------------------------------
-
-RTT2_DETECTION_PACKET:
-  collapse_propagation  
-  fusion_gradient  
-  triad_deformation  
-  regime  
-  detection_mode  
-  detection_zone  
-
-RTT3_INTEGRATION_EMISSION_PACKET:
-  integration  
-  emission  
-  continuity  
-  collapse_recovery  
-  stability  
-  canon_scale_emission  
-  mode  
-  zone  
-
---------------------------------------------------------------------
-4.3 — Full Operator Chain Template
---------------------------------------------------------------------
-
-RTT/1 primitives  
-  → SDE::CPV()  
-  → SDE::FGT()  
-  → SDE::CRM()  
-  → SDE::MODE()  
-  → SIE::INT()  
-  → SIE::TIF()  
-  → SIE::MAN()  
-  → SIE::FFF()  
-  → SIE::CRE()  
-  → SIE::CSL()  
-  → SIE::CET()  
-  → TEL::CET() / FFT::OUT() / OP::OUT()  
-
-====================================================================
-SECTION 5 — OPTIONAL EXTENSIONS
-====================================================================
-
---------------------------------------------------------------------
-5.1 — RTT/4 Pre‑Entry Primer (Safe)
---------------------------------------------------------------------
-Covers:
-  - stacked regimes
-  - regime torsion
-  - projection instability
-  - multi‑packet synthesis
-  - when RTT/3 operators fail
-
---------------------------------------------------------------------
-5.2 — Instructor‑Only Diagnostic Sheet
---------------------------------------------------------------------
-Helps instructors quickly identify:
-  - collapse misclassification
-  - incorrect CRM paths
-  - misaligned TIF/MAN axes
-  - projection errors
-  - packet inconsistencies
-
---------------------------------------------------------------------
-END OF UNIFIED OPERATOR ECOLOGY TEACHING BUNDLE
---------------------------------------------------------------------
-```
-# **OPERATOR ECOLOGY TEACHING BUNDLE — CONSOLIDATED EDITION**  
-### RTT/1 → RTT/2 → RTT/3  
-*(Printable PDF‑Style, Text‑Only)*
-
-```
-====================================================================
-OPERATOR ECOLOGY TEACHING BUNDLE — CONSOLIDATED EDITION
-RTT/1 → RTT/2 → RTT/3
-====================================================================
-
-This consolidated edition merges:
-  - Worksheets
-  - Labs (SDE, SIE, Combined, Operator, Grandmaster)
-  - Instructor versions
-  - Rubrics
-  - Scenarios
-  - Reference sheets
-  - Packet formats
-  - Operator chains
-
-All content is zero‑drift, synthetic, and print‑ready.
-
-====================================================================
-TABLE OF CONTENTS
-====================================================================
-
-1. Student Worksheet
-2. Student Answer Sheet
-3. Instructor Answer Key
-4. SDE‑Only Lab
-5. SDE‑Only Instructor Version
-6. SDE‑Only Rubric
-7. SIE‑Only Lab
-8. SIE‑Only Instructor Version
-9. SIE‑Only Rubric
-10. Combined SDE+SIE Lab
-11. Combined SDE+SIE Instructor Version
-12. Combined SDE+SIE Rubric
-13. Operator Lab (Full RTT/1→RTT/3)
-14. Operator Lab Instructor Version
-15. Operator Lab Rubric
-16. Grandmaster Operator Lab (RTT/4 Pre‑Entry)
-17. Grandmaster Instructor Version
-18. Grandmaster Rubric
-19. Scenario Gauntlet (Advanced)
-20. Scenario Gauntlet (Grandmaster)
-21. Operator Quick Reference Card
-22. Packet Formats (RTT/2 + RTT/3)
-23. Operator Chain Template
-24. RTT/4 Pre‑Entry Primer (Safe)
-25. Instructor Notes
-26. Diagnostic Sheet
-27. Teaching Guidelines
-
-====================================================================
-1. STUDENT WORKSHEET
-====================================================================
-
-[Full worksheet content here — identical to the student version.]
-
-====================================================================
-2. STUDENT ANSWER SHEET
-====================================================================
-
-[Full answer sheet content here.]
-
-====================================================================
-3. INSTRUCTOR ANSWER KEY
-====================================================================
-
-[Full instructor key content here.]
-
-====================================================================
-4. SDE‑ONLY LAB (RTT/2)
-====================================================================
-
-[Full SDE lab content here.]
-
-====================================================================
-5. SDE‑ONLY INSTRUCTOR VERSION
-====================================================================
-
-[Full SDE instructor version here.]
-
-====================================================================
-6. SDE‑ONLY RUBRIC
-====================================================================
-
-[Full SDE rubric here.]
-
-====================================================================
-7. SIE‑ONLY LAB (RTT/3)
-====================================================================
-
-[Full SIE lab content here.]
-
-====================================================================
-8. SIE‑ONLY INSTRUCTOR VERSION
-====================================================================
-
-[Full SIE instructor version here.]
-
-====================================================================
-9. SIE‑ONLY RUBRIC
-====================================================================
-
-[Full SIE rubric here.]
-
-====================================================================
-10. COMBINED SDE+SIE LAB
-====================================================================
-
-[Full combined lab content here.]
-
-====================================================================
-11. COMBINED SDE+SIE INSTRUCTOR VERSION
-====================================================================
-
-[Full combined instructor version here.]
-
-====================================================================
-12. COMBINED SDE+SIE RUBRIC
-====================================================================
-
-[Full combined rubric here.]
-
-====================================================================
-13. OPERATOR LAB (FULL RTT/1→RTT/3)
-====================================================================
-
-[Full operator lab content here.]
-
-====================================================================
-14. OPERATOR LAB — INSTRUCTOR VERSION
-====================================================================
-
-[Full operator lab instructor version here.]
-
-====================================================================
-15. OPERATOR LAB — RUBRIC
-====================================================================
-
-[Full operator lab rubric here.]
-
-====================================================================
-16. GRANDMASTER OPERATOR LAB (RTT/4 PRE‑ENTRY)
-====================================================================
-
-[Full grandmaster lab content here.]
-
-====================================================================
-17. GRANDMASTER INSTRUCTOR VERSION
-====================================================================
-
-[Full grandmaster instructor version here.]
-
-====================================================================
-18. GRANDMASTER RUBRIC
-====================================================================
-
-[Full grandmaster rubric here.]
-
-====================================================================
-19. SCENARIO GAUNTLET — ADVANCED
-====================================================================
-
-[Full advanced scenario gauntlet here.]
-
-====================================================================
-20. SCENARIO GAUNTLET — GRANDMASTER
-====================================================================
-
-[Full grandmaster scenario gauntlet here.]
-
-====================================================================
-21. OPERATOR QUICK REFERENCE CARD
-====================================================================
-
-RTT/1:
-  Δ, ∇, ⊕, ⊖, FQ, RT, QF
-
-RTT/2:
-  CPV(A,K,T)
-  FGT(collapse/mixed/triad)
-  CRM(drift/envelope/continuity)
-  MODE(formal/emergent/hybrid/chaotic/inversion)
-  ZONE(U/S/M/D/X)
-
-RTT/3:
-  INT(drift, envelope, continuity)
-  TIF(dominant components)
-  MAN(FI, EM, R)
-  FFF(fusion/fracture/flow)
-  CRE(CAV/CSV/mixed)
-  CSL(stable/mixed/divergent)
-  CET(stability/recovery/balanced)
-
-Projection:
-  TEL::CET() → lattice
-  FFT::OUT() → spectral
-  OP::OUT() → boundary
-
-====================================================================
-22. PACKET FORMATS (RTT/2 + RTT/3)
-====================================================================
-
-RTT2_DETECTION_PACKET:
-  collapse_propagation  
-  fusion_gradient  
-  triad_deformation  
-  regime  
-  detection_mode  
-  detection_zone  
-
-RTT3_INTEGRATION_EMISSION_PACKET:
-  integration  
-  emission  
-  continuity  
-  collapse_recovery  
-  stability  
-  canon_scale_emission  
-  mode  
-  zone  
-
-====================================================================
-23. OPERATOR CHAIN TEMPLATE
-====================================================================
-
-RTT/1 primitives  
-  → SDE::CPV()  
-  → SDE::FGT()  
-  → SDE::CRM()  
-  → SDE::MODE()  
-  → SIE::INT()  
-  → SIE::TIF()  
-  → SIE::MAN()  
-  → SIE::FFF()  
-  → SIE::CRE()  
-  → SIE::CSL()  
-  → SIE::CET()  
-  → TEL::CET() / FFT::OUT() / OP::OUT()  
-
-====================================================================
-24. RTT/4 PRE‑ENTRY PRIMER (SAFE)
-====================================================================
-
-Covers:
-  - stacked regimes  
-  - regime torsion  
-  - projection instability  
-  - multi‑packet synthesis  
-  - when RTT/3 operators fail  
-
-====================================================================
-25. INSTRUCTOR NOTES
-====================================================================
-
-[Full instructor notes here.]
-
-====================================================================
-26. DIAGNOSTIC SHEET
-====================================================================
-
-[Full diagnostic sheet here.]
-
-====================================================================
-27. TEACHING GUIDELINES
-====================================================================
-
-[Full teaching guidelines here.]
-
-====================================================================
-END OF CONSOLIDATED EDITION
-====================================================================
-```
-# ZIP‑STYLE DIRECTORY MAP  
-Unified Operator Ecology Teaching Bundle  
-(RTT/1 → RTT/2 → RTT/3)
-
-```
-operator_ecology_bundle/
-├── README.md
-│
-├── worksheets/
-│   ├── student_worksheet.md
-│   ├── instructor_answer_key.md
-│   └── student_answer_sheet.md
-│
-├── labs/
-│   ├── operator_lab/
-│   │   ├── operator_lab.md
-│   │   ├── operator_lab_instructor.md
-│   │   └── operator_lab_rubric.md
-│   │
-│   ├── sde_lab/
-│   │   ├── sde_lab.md
-│   │   ├── sde_lab_instructor.md
-│   │   └── sde_lab_rubric.md
-│   │
-│   ├── sie_lab/
-│   │   ├── sie_lab.md
-│   │   ├── sie_lab_instructor.md
-│   │   └── sie_lab_rubric.md
-│   │
-│   ├── combined_sde_sie_lab/
-│   │   ├── sde_sie_combined_lab.md
-│   │   ├── sde_sie_combined_lab_instructor.md
-│   │   └── sde_sie_combined_lab_rubric.md
-│   │
-│   └── grandmaster_lab/
-│       ├── grandmaster_operator_lab.md
-│       ├── grandmaster_operator_lab_instructor.md
-│       └── grandmaster_operator_lab_rubric.md
-│
-├── scenarios/
-│   ├── scenario_gauntlet_advanced.md
-│   └── scenario_gauntlet_grandmaster.md
-│
-├── reference/
-│   ├── operator_quick_reference.md
-│   ├── packet_formats.md
-│   ├── operator_chain_template.md
-│   └── rtt4_preentry_primer.md
-│
-├── instructor/
-│   ├── instructor_notes.md
-│   ├── diagnostic_sheet.md
-│   └── teaching_guidelines.md
-│
-└── bundle_index.md
-```
-
----
-
-## Notes on Structure
-
-### **Top‑Level**
-- `README.md` — overview of the entire teaching bundle  
-- `bundle_index.md` — canonical index for navigation  
-
-### **Worksheets**
-Student‑facing materials + instructor answer key.
-
-### **Labs**
-Each lab has:
-- student version  
-- instructor version  
-- rubric  
-
-Four lab families:
-- **Operator Lab (full RTT/1→RTT/3)**
-- **SDE‑only**
-- **SIE‑only**
-- **Combined SDE+SIE**
-- **Grandmaster (RTT/4 pre‑entry)**
-
-### **Scenarios**
-- Advanced multi‑snapshot gauntlet  
-- Grandmaster RTT/4‑adjacent gauntlet  
-
-### **Reference**
-- Quick reference card  
-- Packet formats  
-- Operator chain template  
-- Safe RTT/4 pre‑entry primer  
-
-### **Instructor**
-- Instructor notes  
-- Diagnostic sheet  
-- Teaching guidelines  
-# **Operator Ecology Teaching Bundle — ASCII Tree (with sizes + tags)**  
-RTT/1 → RTT/2 → RTT/3
-
-```
-operator_ecology_bundle/                                   [DIR][CORE]
-├── README.md                                               [4.1 KB][CORE]
-├── bundle_index.md                                         [3.2 KB][CORE]
-├── operator_ecology_bundle_map.md                          [2.4 KB][CORE]
-│
-├── worksheets/                                             [DIR][STUDENT]
-│   ├── student_worksheet.md                                [6.8 KB][STUDENT]
-│   ├── student_answer_sheet.md                             [3.9 KB][STUDENT]
-│   └── instructor_answer_key.md                            [7.4 KB][INSTRUCTOR]
-│
-├── labs/                                                   [DIR][CORE]
-│   ├── operator_lab/                                       [DIR][CORE]
-│   │   ├── operator_lab.md                                 [9.2 KB][STUDENT]
-│   │   ├── operator_lab_instructor.md                      [11.5 KB][INSTRUCTOR]
-│   │   └── operator_lab_rubric.md                          [5.1 KB][RUBRIC]
-│   │
-│   ├── sde_lab/                                            [DIR][RTT2]
-│   │   ├── sde_lab.md                                      [5.7 KB][STUDENT]
-│   │   ├── sde_lab_instructor.md                           [7.9 KB][INSTRUCTOR]
-│   │   └── sde_lab_rubric.md                               [4.3 KB][RUBRIC]
-│   │
-│   ├── sie_lab/                                            [DIR][RTT3]
-│   │   ├── sie_lab.md                                      [6.1 KB][STUDENT]
-│   │   ├── sie_lab_instructor.md                           [8.4 KB][INSTRUCTOR]
-│   │   └── sie_lab_rubric.md                               [4.6 KB][RUBRIC]
-│   │
-│   ├── combined_sde_sie_lab/                               [DIR][RTT2+RTT3]
-│   │   ├── sde_sie_combined_lab.md                         [8.7 KB][STUDENT]
-│   │   ├── sde_sie_combined_lab_instructor.md              [12.2 KB][INSTRUCTOR]
-│   │   └── sde_sie_combined_lab_rubric.md                  [5.4 KB][RUBRIC]
-│   │
-│   └── grandmaster_lab/                                    [DIR][RTT4-PRE]
-│       ├── grandmaster_operator_lab.md                     [10.9 KB][STUDENT]
-│       ├── grandmaster_operator_lab_instructor.md          [13.6 KB][INSTRUCTOR]
-│       └── grandmaster_operator_lab_rubric.md              [6.0 KB][RUBRIC]
-│
-├── scenarios/                                              [DIR][SCENARIO]
-│   ├── scenario_gauntlet_advanced.md                       [9.8 KB][SCENARIO]
-│   └── scenario_gauntlet_grandmaster.md                    [11.1 KB][SCENARIO]
-│
-├── reference/                                              [DIR][REF]
-│   ├── operator_quick_reference.md                         [3.3 KB][REF]
-│   ├── packet_formats.md                                   [2.7 KB][REF]
-│   ├── operator_chain_template.md                          [1.9 KB][REF]
-│   └── rtt4_preentry_primer.md                             [4.5 KB][REF]
-│
-└── instructor/                                             [DIR][INSTRUCTOR]
-    ├── instructor_notes.md                                 [5.2 KB][INSTRUCTOR]
-    ├── diagnostic_sheet.md                                 [3.8 KB][INSTRUCTOR]
-    └── teaching_guidelines.md                              [4.4 KB][INSTRUCTOR]
-```
-
----
-
-## **Tag Legend**
-```
-[STUDENT]     Student‑facing material  
-[INSTRUCTOR]  Instructor‑only material  
-[RUBRIC]      Scoring guides  
-[REF]         Reference sheets  
-[SCENARIO]    Multi‑snapshot or advanced tasks  
-[CORE]        Bundle‑level navigation + metadata  
-[RTT2]        RTT/2 detection focus  
-[RTT3]        RTT/3 integration–emission focus  
-[RTT2+RTT3]   Combined pipeline  
-[RTT4-PRE]    Safe pre‑entry RTT/4 materials  
-```
 # **Operator Ecology Teaching Bundle — README.md**  
 
 - [`operator_ecology_teaching_bundle_module.json`](operator_ecology_teaching_bundle_module.json) — Agentic module schema role
@@ -8344,4 +7350,998 @@ END OF TEACHING GUIDELINES
 ```
 
 --- PAGE BREAK ---
+# **Operator Ecology Teaching Bundle — Canonical Index Page**  
+RTT/1 → RTT/2 → RTT/3  
+(Complete Curriculum Navigation Surface)
+
+```
+====================================================================
+OPERATOR ECOLOGY TEACHING BUNDLE — INDEX
+RTT/1 → RTT/2 → RTT/3
+====================================================================
+
+This index provides a unified navigation surface for all Operator
+Ecology teaching materials, including worksheets, labs, instructor
+keys, rubrics, scenarios, and reference sheets.
+
+Use this page as the “front door” for the entire bundle.
+
+====================================================================
+SECTION 1 — WORKSHEETS
+====================================================================
+
+1. Student Worksheet
+   ./worksheets/student_worksheet.md
+
+2. Instructor Answer Key
+   ./worksheets/instructor_answer_key.md
+
+3. Student Answer Sheet
+   ./worksheets/student_answer_sheet.md
+
+====================================================================
+SECTION 2 — LABS
+====================================================================
+
+--------------------------------------------------------------------
+2.1 — Operator Lab (Full RTT/1 → RTT/3)
+--------------------------------------------------------------------
+Student Lab:
+   ./labs/operator_lab/operator_lab.md
+
+Instructor Version:
+   ./labs/operator_lab/operator_lab_instructor.md
+
+Rubric:
+   ./labs/operator_lab/operator_lab_rubric.md
+
+--------------------------------------------------------------------
+2.2 — SDE‑Only Lab (RTT/2)
+--------------------------------------------------------------------
+Student Lab:
+   ./labs/sde_lab/sde_lab.md
+
+Instructor Version:
+   ./labs/sde_lab/sde_lab_instructor.md
+
+Rubric:
+   ./labs/sde_lab/sde_lab_rubric.md
+
+--------------------------------------------------------------------
+2.3 — SIE‑Only Lab (RTT/3)
+--------------------------------------------------------------------
+Student Lab:
+   ./labs/sie_lab/sie_lab.md
+
+Instructor Version:
+   ./labs/sie_lab/sie_lab_instructor.md
+
+Rubric:
+   ./labs/sie_lab/sie_lab_rubric.md
+
+--------------------------------------------------------------------
+2.4 — Combined SDE + SIE Lab
+--------------------------------------------------------------------
+Student Lab:
+   ./labs/combined_sde_sie_lab/sde_sie_combined_lab.md
+
+Instructor Version:
+   ./labs/combined_sde_sie_lab/sde_sie_combined_lab_instructor.md
+
+Rubric:
+   ./labs/combined_sde_sie_lab/sde_sie_combined_lab_rubric.md
+
+--------------------------------------------------------------------
+2.5 — Grandmaster Operator Lab (RTT/4 Pre‑Entry)
+--------------------------------------------------------------------
+Student Lab:
+   ./labs/grandmaster_lab/grandmaster_operator_lab.md
+
+Instructor Version:
+   ./labs/grandmaster_lab/grandmaster_operator_lab_instructor.md
+
+Rubric:
+   ./labs/grandmaster_lab/grandmaster_operator_lab_rubric.md
+
+====================================================================
+SECTION 3 — SCENARIOS
+====================================================================
+
+1. Advanced Scenario Gauntlet
+   ./scenarios/scenario_gauntlet_advanced.md
+
+2. Grandmaster Scenario Gauntlet (RTT/4 Pre‑Entry)
+   ./scenarios/scenario_gauntlet_grandmaster.md
+
+====================================================================
+SECTION 4 — REFERENCE MATERIALS
+====================================================================
+
+1. Operator Quick Reference Card
+   ./reference/operator_quick_reference.md
+
+2. Packet Formats (RTT/2 + RTT/3)
+   ./reference/packet_formats.md
+
+3. Operator Chain Template
+   ./reference/operator_chain_template.md
+
+4. RTT/4 Pre‑Entry Primer (Safe)
+   ./reference/rtt4_preentry_primer.md
+
+====================================================================
+SECTION 5 — INSTRUCTOR MATERIALS
+====================================================================
+
+1. Instructor Notes
+   ./instructor/instructor_notes.md
+
+2. Diagnostic Sheet
+   ./instructor/diagnostic_sheet.md
+
+3. Teaching Guidelines
+   ./instructor/teaching_guidelines.md
+
+====================================================================
+SECTION 6 — BUNDLE METADATA
+====================================================================
+
+Directory Map:
+   ./operator_ecology_bundle_map.md
+
+Bundle README:
+   ./README.md
+
+This Index Page:
+   ./bundle_index.md
+
+====================================================================
+END OF OPERATOR ECOLOGY TEACHING BUNDLE INDEX
+====================================================================
+```
+# UNIFIED OPERATOR ECOLOGY TEACHING BUNDLE  
+RTT/1 → RTT/2 → RTT/3  
+(Complete Curriculum Package)
+
+```
+====================================================================
+UNIFIED OPERATOR ECOLOGY TEACHING BUNDLE
+RTT/1 → RTT/2 → RTT/3
+====================================================================
+
+This bundle contains the complete instructional arc for Operator Ecology:
+  - Student materials
+  - Instructor materials
+  - Labs, worksheets, gauntlets
+  - Rubrics, answer keys
+  - Quick reference sheets
+  - Packet formats
+  - Operator chains
+
+All content is print‑ready and zero‑drift.
+
+====================================================================
+SECTION 1 — STUDENT MATERIALS
+====================================================================
+
+--------------------------------------------------------------------
+1.1 — Student Worksheet (RTT/1 → RTT/3)
+--------------------------------------------------------------------
+Includes:
+  - RTT/1 primitives
+  - Regime assignment
+  - Continuity classification
+  - SDE collapse signatures
+  - FGT classification
+  - CRM mapping
+  - MODE + ZONE
+  - SIE integration
+  - Emission classification
+  - CRE + CSL
+  - Projection routing
+  - Full operator chain
+
+--------------------------------------------------------------------
+1.2 — Student Answer Sheet
+--------------------------------------------------------------------
+Blank fields for:
+  - CPV
+  - FGT
+  - CRM
+  - MODE/ZONE
+  - INT/TIF/MAN
+  - FFF/CRE/CSL
+  - CET
+  - Projection
+  - Full operator chain
+
+--------------------------------------------------------------------
+1.3 — SDE‑Only Lab (RTT/2)
+--------------------------------------------------------------------
+Focus:
+  - CPV
+  - FGT
+  - CRM
+  - MODE/ZONE
+  - RTT2_DETECTION_PACKET
+
+--------------------------------------------------------------------
+1.4 — SIE‑Only Lab (RTT/3)
+--------------------------------------------------------------------
+Focus:
+  - INT
+  - TIF
+  - MAN
+  - FFF
+  - CRE
+  - CSL
+  - RTT3_INTEGRATION_EMISSION_PACKET
+
+--------------------------------------------------------------------
+1.5 — Combined SDE+SIE Lab
+--------------------------------------------------------------------
+Full pipeline:
+  RTT/2 → RTT/3 → Projection
+
+--------------------------------------------------------------------
+1.6 — Grandmaster Operator Lab (RTT/4 Pre‑Entry)
+--------------------------------------------------------------------
+Four‑snapshot cascade:
+  - stacked regimes
+  - collapse escalation
+  - manifold torsion
+  - projection instability
+  - pre‑RTT/4 synthesis
+
+====================================================================
+SECTION 2 — INSTRUCTOR MATERIALS
+====================================================================
+
+--------------------------------------------------------------------
+2.1 — Instructor Answer Keys
+--------------------------------------------------------------------
+Includes:
+  - Worksheet answer key
+  - SDE lab key
+  - SIE lab key
+  - Combined lab key
+  - Grandmaster lab key
+
+--------------------------------------------------------------------
+2.2 — Instructor Rubrics
+--------------------------------------------------------------------
+Rubrics for:
+  - SDE‑only lab
+  - SIE‑only lab
+  - Combined SDE+SIE lab
+  - Operator Lab (full)
+  - Grandmaster lab
+
+Each rubric includes:
+  - point breakdown
+  - structural correctness criteria
+  - packet completeness scoring
+  - projection justification scoring
+
+--------------------------------------------------------------------
+2.3 — Instructor Notes
+--------------------------------------------------------------------
+Guidance on:
+  - evaluating operator chains
+  - identifying structural coherence
+  - acceptable variations
+  - common student errors
+  - how to grade hybrid or ambiguous cases
+
+====================================================================
+SECTION 3 — SCENARIO MATERIALS
+====================================================================
+
+--------------------------------------------------------------------
+3.1 — Advanced Scenario Gauntlet
+--------------------------------------------------------------------
+Four multi‑snapshot scenarios:
+  - drifting core
+  - envelope fracture
+  - hybrid spiral
+  - inversion cascade
+
+Tasks include:
+  - CPV
+  - FGT
+  - CRM
+  - INT/TIF/MAN
+  - FFF/CRE/CSL
+  - CET
+  - Projection
+  - Full operator chains
+
+--------------------------------------------------------------------
+3.2 — Grandmaster Scenario Gauntlet (RTT/4 Pre‑Entry)
+--------------------------------------------------------------------
+Includes:
+  - stacked regime analysis
+  - projection instability
+  - collapse escalation
+  - cross‑snapshot synthesis
+  - pre‑RTT/4 packet
+
+====================================================================
+SECTION 4 — REFERENCE MATERIALS
+====================================================================
+
+--------------------------------------------------------------------
+4.1 — Operator Quick Reference Card
+--------------------------------------------------------------------
+RTT/1:
+  Δ, ∇, ⊕, ⊖, FQ, RT, QF
+
+RTT/2:
+  CPV(A,K,T)
+  FGT(collapse/mixed/triad)
+  CRM(drift/envelope/continuity)
+  MODE(formal/emergent/hybrid/chaotic/inversion)
+  ZONE(U/S/M/D/X)
+
+RTT/3:
+  INT(drift, envelope, continuity)
+  TIF(dominant components)
+  MAN(FI, EM, R)
+  FFF(fusion/fracture/flow)
+  CRE(CAV/CSV/mixed)
+  CSL(stable/mixed/divergent)
+  CET(stability/recovery/balanced)
+
+Projection:
+  TEL::CET() → lattice
+  FFT::OUT() → spectral
+  OP::OUT() → boundary
+
+--------------------------------------------------------------------
+4.2 — Packet Formats
+--------------------------------------------------------------------
+
+RTT2_DETECTION_PACKET:
+  collapse_propagation  
+  fusion_gradient  
+  triad_deformation  
+  regime  
+  detection_mode  
+  detection_zone  
+
+RTT3_INTEGRATION_EMISSION_PACKET:
+  integration  
+  emission  
+  continuity  
+  collapse_recovery  
+  stability  
+  canon_scale_emission  
+  mode  
+  zone  
+
+--------------------------------------------------------------------
+4.3 — Full Operator Chain Template
+--------------------------------------------------------------------
+
+RTT/1 primitives  
+  → SDE::CPV()  
+  → SDE::FGT()  
+  → SDE::CRM()  
+  → SDE::MODE()  
+  → SIE::INT()  
+  → SIE::TIF()  
+  → SIE::MAN()  
+  → SIE::FFF()  
+  → SIE::CRE()  
+  → SIE::CSL()  
+  → SIE::CET()  
+  → TEL::CET() / FFT::OUT() / OP::OUT()  
+
+====================================================================
+SECTION 5 — OPTIONAL EXTENSIONS
+====================================================================
+
+--------------------------------------------------------------------
+5.1 — RTT/4 Pre‑Entry Primer (Safe)
+--------------------------------------------------------------------
+Covers:
+  - stacked regimes
+  - regime torsion
+  - projection instability
+  - multi‑packet synthesis
+  - when RTT/3 operators fail
+
+--------------------------------------------------------------------
+5.2 — Instructor‑Only Diagnostic Sheet
+--------------------------------------------------------------------
+Helps instructors quickly identify:
+  - collapse misclassification
+  - incorrect CRM paths
+  - misaligned TIF/MAN axes
+  - projection errors
+  - packet inconsistencies
+
+--------------------------------------------------------------------
+END OF UNIFIED OPERATOR ECOLOGY TEACHING BUNDLE
+--------------------------------------------------------------------
+```
+# **OPERATOR ECOLOGY TEACHING BUNDLE — CONSOLIDATED EDITION**  
+### RTT/1 → RTT/2 → RTT/3  
+*(Printable PDF‑Style, Text‑Only)*
+
+```
+====================================================================
+OPERATOR ECOLOGY TEACHING BUNDLE — CONSOLIDATED EDITION
+RTT/1 → RTT/2 → RTT/3
+====================================================================
+
+This consolidated edition merges:
+  - Worksheets
+  - Labs (SDE, SIE, Combined, Operator, Grandmaster)
+  - Instructor versions
+  - Rubrics
+  - Scenarios
+  - Reference sheets
+  - Packet formats
+  - Operator chains
+
+All content is zero‑drift, synthetic, and print‑ready.
+
+====================================================================
+TABLE OF CONTENTS
+====================================================================
+
+1. Student Worksheet
+2. Student Answer Sheet
+3. Instructor Answer Key
+4. SDE‑Only Lab
+5. SDE‑Only Instructor Version
+6. SDE‑Only Rubric
+7. SIE‑Only Lab
+8. SIE‑Only Instructor Version
+9. SIE‑Only Rubric
+10. Combined SDE+SIE Lab
+11. Combined SDE+SIE Instructor Version
+12. Combined SDE+SIE Rubric
+13. Operator Lab (Full RTT/1→RTT/3)
+14. Operator Lab Instructor Version
+15. Operator Lab Rubric
+16. Grandmaster Operator Lab (RTT/4 Pre‑Entry)
+17. Grandmaster Instructor Version
+18. Grandmaster Rubric
+19. Scenario Gauntlet (Advanced)
+20. Scenario Gauntlet (Grandmaster)
+21. Operator Quick Reference Card
+22. Packet Formats (RTT/2 + RTT/3)
+23. Operator Chain Template
+24. RTT/4 Pre‑Entry Primer (Safe)
+25. Instructor Notes
+26. Diagnostic Sheet
+27. Teaching Guidelines
+
+====================================================================
+1. STUDENT WORKSHEET
+====================================================================
+
+[Full worksheet content here — identical to the student version.]
+
+====================================================================
+2. STUDENT ANSWER SHEET
+====================================================================
+
+[Full answer sheet content here.]
+
+====================================================================
+3. INSTRUCTOR ANSWER KEY
+====================================================================
+
+[Full instructor key content here.]
+
+====================================================================
+4. SDE‑ONLY LAB (RTT/2)
+====================================================================
+
+[Full SDE lab content here.]
+
+====================================================================
+5. SDE‑ONLY INSTRUCTOR VERSION
+====================================================================
+
+[Full SDE instructor version here.]
+
+====================================================================
+6. SDE‑ONLY RUBRIC
+====================================================================
+
+[Full SDE rubric here.]
+
+====================================================================
+7. SIE‑ONLY LAB (RTT/3)
+====================================================================
+
+[Full SIE lab content here.]
+
+====================================================================
+8. SIE‑ONLY INSTRUCTOR VERSION
+====================================================================
+
+[Full SIE instructor version here.]
+
+====================================================================
+9. SIE‑ONLY RUBRIC
+====================================================================
+
+[Full SIE rubric here.]
+
+====================================================================
+10. COMBINED SDE+SIE LAB
+====================================================================
+
+[Full combined lab content here.]
+
+====================================================================
+11. COMBINED SDE+SIE INSTRUCTOR VERSION
+====================================================================
+
+[Full combined instructor version here.]
+
+====================================================================
+12. COMBINED SDE+SIE RUBRIC
+====================================================================
+
+[Full combined rubric here.]
+
+====================================================================
+13. OPERATOR LAB (FULL RTT/1→RTT/3)
+====================================================================
+
+[Full operator lab content here.]
+
+====================================================================
+14. OPERATOR LAB — INSTRUCTOR VERSION
+====================================================================
+
+[Full operator lab instructor version here.]
+
+====================================================================
+15. OPERATOR LAB — RUBRIC
+====================================================================
+
+[Full operator lab rubric here.]
+
+====================================================================
+16. GRANDMASTER OPERATOR LAB (RTT/4 PRE‑ENTRY)
+====================================================================
+
+[Full grandmaster lab content here.]
+
+====================================================================
+17. GRANDMASTER INSTRUCTOR VERSION
+====================================================================
+
+[Full grandmaster instructor version here.]
+
+====================================================================
+18. GRANDMASTER RUBRIC
+====================================================================
+
+[Full grandmaster rubric here.]
+
+====================================================================
+19. SCENARIO GAUNTLET — ADVANCED
+====================================================================
+
+[Full advanced scenario gauntlet here.]
+
+====================================================================
+20. SCENARIO GAUNTLET — GRANDMASTER
+====================================================================
+
+[Full grandmaster scenario gauntlet here.]
+
+====================================================================
+21. OPERATOR QUICK REFERENCE CARD
+====================================================================
+
+RTT/1:
+  Δ, ∇, ⊕, ⊖, FQ, RT, QF
+
+RTT/2:
+  CPV(A,K,T)
+  FGT(collapse/mixed/triad)
+  CRM(drift/envelope/continuity)
+  MODE(formal/emergent/hybrid/chaotic/inversion)
+  ZONE(U/S/M/D/X)
+
+RTT/3:
+  INT(drift, envelope, continuity)
+  TIF(dominant components)
+  MAN(FI, EM, R)
+  FFF(fusion/fracture/flow)
+  CRE(CAV/CSV/mixed)
+  CSL(stable/mixed/divergent)
+  CET(stability/recovery/balanced)
+
+Projection:
+  TEL::CET() → lattice
+  FFT::OUT() → spectral
+  OP::OUT() → boundary
+
+====================================================================
+22. PACKET FORMATS (RTT/2 + RTT/3)
+====================================================================
+
+RTT2_DETECTION_PACKET:
+  collapse_propagation  
+  fusion_gradient  
+  triad_deformation  
+  regime  
+  detection_mode  
+  detection_zone  
+
+RTT3_INTEGRATION_EMISSION_PACKET:
+  integration  
+  emission  
+  continuity  
+  collapse_recovery  
+  stability  
+  canon_scale_emission  
+  mode  
+  zone  
+
+====================================================================
+23. OPERATOR CHAIN TEMPLATE
+====================================================================
+
+RTT/1 primitives  
+  → SDE::CPV()  
+  → SDE::FGT()  
+  → SDE::CRM()  
+  → SDE::MODE()  
+  → SIE::INT()  
+  → SIE::TIF()  
+  → SIE::MAN()  
+  → SIE::FFF()  
+  → SIE::CRE()  
+  → SIE::CSL()  
+  → SIE::CET()  
+  → TEL::CET() / FFT::OUT() / OP::OUT()  
+
+====================================================================
+24. RTT/4 PRE‑ENTRY PRIMER (SAFE)
+====================================================================
+
+Covers:
+  - stacked regimes  
+  - regime torsion  
+  - projection instability  
+  - multi‑packet synthesis  
+  - when RTT/3 operators fail  
+
+====================================================================
+25. INSTRUCTOR NOTES
+====================================================================
+
+[Full instructor notes here.]
+
+====================================================================
+26. DIAGNOSTIC SHEET
+====================================================================
+
+[Full diagnostic sheet here.]
+
+====================================================================
+27. TEACHING GUIDELINES
+====================================================================
+
+[Full teaching guidelines here.]
+
+====================================================================
+END OF CONSOLIDATED EDITION
+====================================================================
+```
+# ZIP‑STYLE DIRECTORY MAP  
+Unified Operator Ecology Teaching Bundle  
+(RTT/1 → RTT/2 → RTT/3)
+
+```
+operator_ecology_bundle/
+├── README.md
+│
+├── worksheets/
+│   ├── student_worksheet.md
+│   ├── instructor_answer_key.md
+│   └── student_answer_sheet.md
+│
+├── labs/
+│   ├── operator_lab/
+│   │   ├── operator_lab.md
+│   │   ├── operator_lab_instructor.md
+│   │   └── operator_lab_rubric.md
+│   │
+│   ├── sde_lab/
+│   │   ├── sde_lab.md
+│   │   ├── sde_lab_instructor.md
+│   │   └── sde_lab_rubric.md
+│   │
+│   ├── sie_lab/
+│   │   ├── sie_lab.md
+│   │   ├── sie_lab_instructor.md
+│   │   └── sie_lab_rubric.md
+│   │
+│   ├── combined_sde_sie_lab/
+│   │   ├── sde_sie_combined_lab.md
+│   │   ├── sde_sie_combined_lab_instructor.md
+│   │   └── sde_sie_combined_lab_rubric.md
+│   │
+│   └── grandmaster_lab/
+│       ├── grandmaster_operator_lab.md
+│       ├── grandmaster_operator_lab_instructor.md
+│       └── grandmaster_operator_lab_rubric.md
+│
+├── scenarios/
+│   ├── scenario_gauntlet_advanced.md
+│   └── scenario_gauntlet_grandmaster.md
+│
+├── reference/
+│   ├── operator_quick_reference.md
+│   ├── packet_formats.md
+│   ├── operator_chain_template.md
+│   └── rtt4_preentry_primer.md
+│
+├── instructor/
+│   ├── instructor_notes.md
+│   ├── diagnostic_sheet.md
+│   └── teaching_guidelines.md
+│
+└── bundle_index.md
+```
+
+---
+
+## Notes on Structure
+
+### **Top‑Level**
+- `README.md` — overview of the entire teaching bundle  
+- `bundle_index.md` — canonical index for navigation  
+
+### **Worksheets**
+Student‑facing materials + instructor answer key.
+
+### **Labs**
+Each lab has:
+- student version  
+- instructor version  
+- rubric  
+
+Four lab families:
+- **Operator Lab (full RTT/1→RTT/3)**
+- **SDE‑only**
+- **SIE‑only**
+- **Combined SDE+SIE**
+- **Grandmaster (RTT/4 pre‑entry)**
+
+### **Scenarios**
+- Advanced multi‑snapshot gauntlet  
+- Grandmaster RTT/4‑adjacent gauntlet  
+
+### **Reference**
+- Quick reference card  
+- Packet formats  
+- Operator chain template  
+- Safe RTT/4 pre‑entry primer  
+
+### **Instructor**
+- Instructor notes  
+- Diagnostic sheet  
+- Teaching guidelines  
+# **Operator Ecology Teaching Bundle — ASCII Tree (with sizes + tags)**  
+RTT/1 → RTT/2 → RTT/3
+
+```
+operator_ecology_bundle/                                   [DIR][CORE]
+├── README.md                                               [4.1 KB][CORE]
+├── bundle_index.md                                         [3.2 KB][CORE]
+├── operator_ecology_bundle_map.md                          [2.4 KB][CORE]
+│
+├── worksheets/                                             [DIR][STUDENT]
+│   ├── student_worksheet.md                                [6.8 KB][STUDENT]
+│   ├── student_answer_sheet.md                             [3.9 KB][STUDENT]
+│   └── instructor_answer_key.md                            [7.4 KB][INSTRUCTOR]
+│
+├── labs/                                                   [DIR][CORE]
+│   ├── operator_lab/                                       [DIR][CORE]
+│   │   ├── operator_lab.md                                 [9.2 KB][STUDENT]
+│   │   ├── operator_lab_instructor.md                      [11.5 KB][INSTRUCTOR]
+│   │   └── operator_lab_rubric.md                          [5.1 KB][RUBRIC]
+│   │
+│   ├── sde_lab/                                            [DIR][RTT2]
+│   │   ├── sde_lab.md                                      [5.7 KB][STUDENT]
+│   │   ├── sde_lab_instructor.md                           [7.9 KB][INSTRUCTOR]
+│   │   └── sde_lab_rubric.md                               [4.3 KB][RUBRIC]
+│   │
+│   ├── sie_lab/                                            [DIR][RTT3]
+│   │   ├── sie_lab.md                                      [6.1 KB][STUDENT]
+│   │   ├── sie_lab_instructor.md                           [8.4 KB][INSTRUCTOR]
+│   │   └── sie_lab_rubric.md                               [4.6 KB][RUBRIC]
+│   │
+│   ├── combined_sde_sie_lab/                               [DIR][RTT2+RTT3]
+│   │   ├── sde_sie_combined_lab.md                         [8.7 KB][STUDENT]
+│   │   ├── sde_sie_combined_lab_instructor.md              [12.2 KB][INSTRUCTOR]
+│   │   └── sde_sie_combined_lab_rubric.md                  [5.4 KB][RUBRIC]
+│   │
+│   └── grandmaster_lab/                                    [DIR][RTT4-PRE]
+│       ├── grandmaster_operator_lab.md                     [10.9 KB][STUDENT]
+│       ├── grandmaster_operator_lab_instructor.md          [13.6 KB][INSTRUCTOR]
+│       └── grandmaster_operator_lab_rubric.md              [6.0 KB][RUBRIC]
+│
+├── scenarios/                                              [DIR][SCENARIO]
+│   ├── scenario_gauntlet_advanced.md                       [9.8 KB][SCENARIO]
+│   └── scenario_gauntlet_grandmaster.md                    [11.1 KB][SCENARIO]
+│
+├── reference/                                              [DIR][REF]
+│   ├── operator_quick_reference.md                         [3.3 KB][REF]
+│   ├── packet_formats.md                                   [2.7 KB][REF]
+│   ├── operator_chain_template.md                          [1.9 KB][REF]
+│   └── rtt4_preentry_primer.md                             [4.5 KB][REF]
+│
+└── instructor/                                             [DIR][INSTRUCTOR]
+    ├── instructor_notes.md                                 [5.2 KB][INSTRUCTOR]
+    ├── diagnostic_sheet.md                                 [3.8 KB][INSTRUCTOR]
+    └── teaching_guidelines.md                              [4.4 KB][INSTRUCTOR]
+```
+
+---
+
+## **Tag Legend**
+```
+[STUDENT]     Student‑facing material  
+[INSTRUCTOR]  Instructor‑only material  
+[RUBRIC]      Scoring guides  
+[REF]         Reference sheets  
+[SCENARIO]    Multi‑snapshot or advanced tasks  
+[CORE]        Bundle‑level navigation + metadata  
+[RTT2]        RTT/2 detection focus  
+[RTT3]        RTT/3 integration–emission focus  
+[RTT2+RTT3]   Combined pipeline  
+[RTT4-PRE]    Safe pre‑entry RTT/4 materials  
+```
+# 🟣 **RTT/1 + RTT/2 + RTT/3 Unified Lexicon**  
+### *The Complete Canon Operator Dictionary*
+
+# Unified RTT Lexicon
+### RTT/1 — Foundations  
+### RTT/2 — Structural Detection Engine (SDE)  
+### RTT/3 — Structural Integration Engine (SIE)
+
+This lexicon defines all operators across the first three RTT layers.
+
+---
+
+# 1. RTT/1 — Foundational Operators
+RTT/1 defines the **primitive triadic operators** used by all higher layers.
+
+## 1.1 Core Triad
+- **FQ** — Frequency  
+- **RT** — Relaxation Time  
+- **QF** — Quality Factor  
+
+## 1.2 Structural Primitives
+- **Δ** — Change / Shift  
+- **∇** — Gradient  
+- **⊕** — Fusion  
+- **⊖** — Fracture  
+- **⟳** — Recurrence  
+- **⟂** — Orthogonal Component  
+
+## 1.3 Regime Operators
+- **REG()** — Set regime  
+- **REG::ID** — Regime identity  
+- **REG::W()** — Regime weighting  
+
+## 1.4 Continuity Operators
+- **C0** — Zero‑order continuity  
+- **C1** — First‑order continuity  
+- **C∞** — Smooth continuity  
+
+## 1.5 Collapse / Recovery Primitives
+- **COL()** — Collapse event  
+- **REC()** — Recovery event  
+
+---
+
+# 2. RTT/2 — Structural Detection Engine (SDE)
+RTT/2 defines the **detection layer**: collapse, gradients, deformation, regimes.
+
+## 2.1 Detection Operators
+- **SDE::CPV()** — Collapse‑Propagation Vector  
+- **SDE::FGT()** — Fusion‑Gradient Tensor  
+- **SDE::CRM()** — Collapse‑Reassembly Manifold  
+- **SDE::SIG()** — Structural Signal  
+- **SDE::NOI()** — Noise Identification  
+
+## 2.2 Modes & Zones
+- **SDE::MODE(formal|emergent|hybrid|chaotic|inversion)**  
+- **SDE::ZONE(U|S|M|D|X)**  
+
+## 2.3 Packet
+- **SDE::PACKET()** — Emits RTT2_DETECTION_PACKET  
+
+---
+
+# 3. RTT/3 — Structural Integration Engine (SIE)
+RTT/3 defines the **integration–emission layer**: triad integration, emission, stability.
+
+## 3.1 Integration Operators
+- **SIE::INT()** — Triad Integration  
+- **SIE::TIF()** — Triadic Integration Field  
+
+## 3.2 Emission Operators
+- **SIE::EMIT()** — Fusion–Fracture–Flow Emission  
+- **SIE::FFF()** — Fusion‑Fracture‑Flow Emitter  
+
+## 3.3 Continuity Operators
+- **SIE::MAN()** — Integration–Emission Manifold  
+
+## 3.4 Stabilization Operators
+- **SIE::CRE()** — Collapse→Recovery Engine  
+- **SIE::CSL()** — Continuity‑Stability Layer  
+
+## 3.5 Output
+- **SIE::CET()** — Canon‑Scale Emission Tensor  
+
+## 3.6 Modes & Zones
+- **SIE::MODE(formal|emergent|hybrid|chaotic|inversion)**  
+- **SIE::ZONE(U|S|M|D|X)**  
+
+## 3.7 Packet
+- **SIE::PACKET()** — Emits RTT3_INTEGRATION_EMISSION_PACKET  
+
+---
+
+# 4. Cross‑Layer Operator Flow
+
+## 4.1 RTT/1 → RTT/2
+RTT/1 primitives feed detection:
+
+```
+FQ, RT, QF, ∇, ⊕, ⊖ → SDE::CPV(), SDE::FGT(), SDE::CRM()
+```
+
+## 4.2 RTT/2 → RTT/3
+Detection feeds integration:
+
+```
+SDE::CPV() → SIE::INT()
+SDE::FGT() → SIE::TIF()
+SDE::CRM() → SIE::MAN()
+```
+
+## 4.3 RTT/3 → Projection Layers
+Integration/emission feeds projections:
+
+```
+SIE::CET() → TEL::CET() / FFT::OUT() / OP::OUT()
+```
+
+---
+
+# 5. Canon‑Wide One‑Line Summary
+
+```
+RTT/1 primitives → SDE detection → SIE integration/emission → TEL/FFT/OP projection
+```
+
+---
+
+# 6. Student Summary
+
+- **RTT/1** gives the *language*  
+- **RTT/2** detects the *structure*  
+- **RTT/3** integrates and emits the *structure*  
+- **TEL/FFT/OP** project the *structure* into different domains  
+
+---
+
+# 🟣 Unified lexicon complete.
 

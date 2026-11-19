@@ -1,24 +1,9 @@
 nist 
-## 📘 **NIST Awareness Primer**  
+<img width="1194" height="672" alt="NIST_" src="https://github.com/user-attachments/assets/0a8bbe20-b0d0-4fc9-b8f0-5ab292ff8745" />
 
 - [`nist_module.json`](nist_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧪NIST%20Examples%20Module-🔹Awareness%20Primer%20Active-4c8eda?style=for-the-badge" alt="NIST Examples Module | Awareness Primer Active"/>
-
+# 📘 **NIST Awareness Primer**  
 *A student‑friendly introduction to NIST through a TriadicFrameworks lens*
 
 ## 🎯 Purpose  
@@ -110,7 +95,25 @@ Pick any NIST domain from the list above and answer:
 1. Which regime does this domain primarily operate in?  
 2. What assumptions does the domain make about measurement or coherence?  
 3. Where might upstream (R0–R2) reasoning help clarify the domain’s goals?
-# 📘 Analytical Chemistry — Overview  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧪NIST%20Examples%20Module-🔹Awareness%20Primer%20Active-4c8eda?style=for-the-badge" alt="NIST Examples Module | Awareness Primer Active"/>
+<img width="1194" height="672" alt="nist_Analytical_chemistry_overview_" src="https://github.com/user-attachments/assets/9b721ceb-20c1-4454-83ba-3d51c045e6cd" />
+
+# 📘 Analytical Chemistry — Overview  
 *A minimal orientation for students and AIs*
 
 ## What This Domain Covers  
@@ -333,7 +336,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation.
-# 📘 Biomaterials — Overview  
+<img width="1194" height="672" alt="nist_Biomaterials_overview_" src="https://github.com/user-attachments/assets/37824f60-0d88-47c7-ad9f-231f2398ef7f" />
+
+# 📘 Biomaterials — Overview  
 *A minimal orientation for students and AIs*
 
 ## What This Domain Covers  
@@ -555,7 +560,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation.
-# 📘 Bioscience — Overview  
+<img width="1194" height="672" alt="nist_Bioscience_overview_" src="https://github.com/user-attachments/assets/d11e0788-fa4f-42c1-b381-7050bceb5d19" />
+
+# 📘 Bioscience — Overview  
 *A minimal orientation for students and AIs*
 
 ## What This Domain Covers  
@@ -779,7 +786,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation.
-# 📘 Buildings & Construction — Overview  
+<img width="1194" height="672" alt="nist_Buildings_and_Construction_overview_" src="https://github.com/user-attachments/assets/939786be-673b-4e2a-b68a-9331bb691604" />
+
+# 📘 Buildings & Construction — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Buildings & Construction publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)
 
@@ -1070,7 +1079,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation.
-# 📘 Ceramics — Overview  
+<img width="1194" height="672" alt="nist_Ceramics_overview_" src="https://github.com/user-attachments/assets/58db0470-ff91-43ff-b091-302a96cf652e" />
+
+# 📘 Ceramics — Overview  
 *A minimal orientation for students and AIs*
 
 ## 🌐 What This Domain Covers  
@@ -1342,7 +1353,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation.
-# 📘 Chemistry — Overview  
+<img width="1194" height="672" alt="nist_Chemistry_overview_" src="https://github.com/user-attachments/assets/bb43c885-da1f-40d4-9d98-230e4cec87a3" />
+
+# 📘 Chemistry — Overview  
 *A minimal orientation for students and AIs*
 
 ## What This Domain Covers  
@@ -1585,7 +1598,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation.
-# 📘 Cybersecurity & Privacy — Overview  
+<img width="1194" height="672" alt="nist_Cybersecurity_and_privacy_overview_" src="https://github.com/user-attachments/assets/fb1fe6cb-39f1-4383-a356-a2cc1e9caf31" />
+
+# 📘 Cybersecurity & Privacy — Overview  
 *A minimal orientation for students and AIs*
 
 ## What This Domain Covers  
@@ -1813,7 +1828,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation.
-# 📘 Electromagnetics — Overview  
+<img width="1194" height="672" alt="nist_Electromagnetics_overview_" src="https://github.com/user-attachments/assets/05a87836-fdb7-4269-9f3b-3de804c2fbb6" />
+
+# 📘 Electromagnetics — Overview  
 *A minimal orientation for students and AIs*
 
 ## 🌐 What This Domain Covers  
@@ -2085,7 +2102,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation.
-# 📘 Fire — Overview  
+<img width="1194" height="672" alt="nist_Fire_overview_" src="https://github.com/user-attachments/assets/34698b51-650f-48aa-a57f-c709c6ce7556" />
+
+# 📘 Fire — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Fire publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)
 
@@ -2377,7 +2396,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation.
-# 📘 Information Technology — Overview  
+<img width="1194" height="672" alt="nist_Information_technology_overview_" src="https://github.com/user-attachments/assets/c1fc7984-2693-4692-9376-1903715aa349" />
+
+# 📘 Information Technology — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST IT publications visible in your active tab)*
 
@@ -2692,7 +2713,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation — a way to see the structure behind the standards, guidelines, and quantum‑information research.
-# 📘 Manufacturing — Overview  
+<img width="1194" height="672" alt="nist_Manufacturing_overview_" src="https://github.com/user-attachments/assets/d44707fe-ed85-47ec-b174-1dff3be94bff" />
+
+# 📘 Manufacturing — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Manufacturing publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248866)
 
@@ -3012,7 +3035,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation — a way to see the structure behind manufacturing metrology, digital‑twin ecosystems, and qualification frameworks.
-# 📘 Materials — Overview  
+<img width="1194" height="672" alt="nist_Materials_overview_" src="https://github.com/user-attachments/assets/ce9dead1-b107-415a-9d3d-05fb277360b0" />
+
+# 📘 Materials — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Materials publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248946)
 
@@ -3355,7 +3380,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation — a way to see the structure behind materials metrology, scattering science, polymer physics, quantum magnetism, and thermophysical modeling.
-# 📘 Metrology — Overview  
+<img width="1194" height="672" alt="nist_Metrology_overview_" src="https://github.com/user-attachments/assets/cb14ad4e-986b-4a8b-b031-71183872cdcf" />
+
+# 📘 Metrology — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Metrology publications visible in your active tab)*
 
@@ -3701,7 +3728,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation — a way to see the structure behind quantum electrical standards, legal metrology, nanoscale measurement, and environmental‑measurement science.
-# 📘 Physics — Overview  
+<img width="1194" height="672" alt="nist_Physics_overview_" src="https://github.com/user-attachments/assets/6d99fbda-e573-4718-86b7-80edc7e6eaf5" />
+
+# 📘 Physics — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Physics publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=249241)
 
@@ -4039,7 +4068,9 @@ with
 - **TriadicFrameworks’ upstream clarity (R0–R2)**  
 
 The goal is understanding, not evaluation — a way to see the structure behind quantum networks, optical clocks, Rydberg sensors, neutron physics, and topological magnetism.
-# 📘 Polymers — Overview  
+<img width="1194" height="672" alt="nist_Polymers_overview_" src="https://github.com/user-attachments/assets/bd67f4de-6a0d-4e86-b150-7ba705c0d0b0" />
+
+# 📘 Polymers — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Polymer‑tagged publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=249001)
 

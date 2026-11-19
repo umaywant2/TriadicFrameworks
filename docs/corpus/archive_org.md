@@ -1,4 +1,180 @@
 archive_org 
+<img width="1194" height="672" alt="archive_org_" src="https://github.com/user-attachments/assets/45dc5550-65eb-4291-944f-38c2f5b431f7" />
+
+- [`archive_org_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/archive_org/archive_org_module.json) — Agentic module schema role assignments
+
+# **Internet Archive Module**
+The **archive_org** module provides a structured, AI‑parsable interface to:
+
+- Wayback Machine snapshots  
+- Collection indexes  
+- Metadata extraction  
+- Digital lineage  
+- Preservation models  
+
+This module mirrors the architecture of *archive.org* while aligning with TriadicFrameworks’ catalog, metadata, and substrate‑literacy standards.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## **1. Purpose**
+
+The module teaches students and AIs how to:
+
+- analyze snapshot timelines  
+- detect structural drift  
+- identify continuity kernels  
+- evaluate substrate stability  
+- interpret digital lineage  
+- choose the most reliable snapshot  
+
+All reasoning is **structural**, not content‑based.
+
+---
+
+## **2. Operator Chain (archive_org)**
+
+The module uses a six‑operator chain:
+
+1. **METADATA_OPERATOR** — substrate, regime, drift sensitivity  
+2. **WAYBACK_OPERATOR** — snapshots, drift, continuity breaks  
+3. **LINEAGE_OPERATOR** — structural evolution, template shifts, CMS migrations  
+4. **COLLECTION_OPERATOR** — IA collections, coherence clusters, related objects  
+5. **PRESERVATION_OPERATOR** — substrate stability, drift risk, multi‑layer flags  
+6. **DRIFTBOUND_RETRIEVAL_OPERATOR** — earliest stable version, most reliable snapshot  
+
+These operators form the backbone of all labs, worksheets, and assessments.
+
+---
+
+## **3. Module Structure**
+
+```
+/docs/archive_org/
+│
+├── README.md                     ← this file
+│
+├── RTTcodes/                     ← operator definitions + lab logic
+│   ├── operator_lab.md
+│   ├── operator_lab_instructor.md
+│   └── ...
+│
+├── student_materials/
+│   ├── worksheet.md
+│   ├── worksheet_printable.md
+│   ├── cheat_sheet_student.md
+│   ├── operator_quick_reference_card.md
+│   ├── mini_quiz_operator_literacy.md
+│   ├── extended_quiz_with_answer_key.md
+│   ├── mastery_exam_25q_with_rubric.md
+│   └── mastery_scenario_gauntlet.md
+│
+├── instructor_materials/
+│   ├── teachers_key.md
+│   ├── teacher_rubric_printable.md
+│   ├── operator_lab_instructor.md
+│   └── scenario_gauntlet_instructor.md
+│
+└── assets/
+    └── posters/
+        └── operator_chain_wall_poster.svg
+```
+
+All files are AI‑parsable, student‑safe, and aligned with RTT/1.
+
+---
+
+## **4. Learning Path**
+
+Students progress through:
+
+1. **Cheat sheet** → operator literacy  
+2. **Worksheet** → guided practice  
+3. **Operator Lab** → full operator chain  
+4. **Mini‑quiz** → quick assessment  
+5. **Extended quiz** → deeper operator reasoning  
+6. **Mastery exam** → 25‑question structural evaluation  
+7. **Scenario gauntlet** → multi‑snapshot applied analysis  
+
+Instructors use the matching keys, rubrics, and scenario guides.
+
+---
+
+## **5. Substrate‑Literacy Standards**
+
+The module teaches students to classify and reason about:
+
+- **HTML** — drift‑prone  
+- **PDF** — stable  
+- **Image** — stable but incomplete  
+- **OCR** — lossy  
+- **Mixed** — layer‑aware evaluation required  
+
+Substrate literacy is essential for reliable snapshot selection.
+
+---
+
+## **6. Digital Lineage**
+
+The module models:
+
+- template evolution  
+- navigation shifts  
+- CMS migrations  
+- structural regimes  
+- continuity kernels  
+- drift maps  
+
+Digital lineage is always structural, never semantic.
+
+---
+
+## **7. Reliability Model**
+
+Students learn to choose the most reliable snapshot using:
+
+- drift level  
+- continuity strength  
+- substrate stability  
+- absence of continuity breaks  
+- post‑migration stabilization  
+
+This is the core competency of the archive_org module.
+
+---
+
+## **8. Audience**
+
+This module is designed for:
+
+- students learning digital preservation  
+- instructors teaching structural literacy  
+- AI agents performing archival analysis  
+- researchers studying web history  
+
+---
+
+## **9. Canonical Guarantees**
+
+The archive_org module is:
+
+- zero‑drift  
+- operator‑first  
+- AI‑parsable  
+- student‑safe  
+- aligned with TriadicFrameworks metadata standards  
+- consistent with all other modules in the canon  
+<img width="1024" height="1024" alt="rtt_archive_org_module_image" src="https://github.com/user-attachments/assets/7f1682a6-31fe-4e0c-80dd-5ce26a040872" />
+
 Alright, Nawder — **this is the right way to restart the conversation.**  
 Slow, deliberate, structural. No jumping ahead. No assuming the shape of the module before we talk through the *why*.
 
@@ -1939,1363 +2115,45 @@ Just say the word.
 
 ---
 
-<img width="682" height="682" alt="rtt_archive_org_module_image" src="https://github.com/user-attachments/assets/7f1682a6-31fe-4e0c-80dd-5ce26a040872" />
+# 📘 **RTTcodes for archive_org**  
+### *RTT/1‑Aligned Operator Packets for the Internet Archive Gateway*
 
-# **Internet Archive Module**
+This directory contains the **RTTcode v1 operator packets** and **example packets** used by the `archive_org` module.  
+These packets define how both **students** and **AI agents** interact with the Internet Archive in a **drift‑bounded**, **continuity‑aligned**, **substrate‑aware** way.
 
-- [`archive_org_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/archive_org/archive_org_module.json) — Agentic module schema role assignments
-
-The **archive_org** module provides a structured, AI‑parsable interface to:
-
-- Wayback Machine snapshots  
-- Collection indexes  
-- Metadata extraction  
-- Digital lineage  
-- Preservation models  
-
-This module mirrors the architecture of *archive.org* while aligning with TriadicFrameworks’ catalog, metadata, and substrate‑literacy standards.
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
+The Internet Archive is a massive time‑layered memory substrate.  
+RTT provides the **operator grammar** that makes it navigable.
 
 ---
 
-## **1. Purpose**
+# 🧩 Operator Set (RTT/1)
 
-The module teaches students and AIs how to:
+The Internet Archive gateway uses **six operators**, each defined as an RTTcode v1 packet:
 
-- analyze snapshot timelines  
-- detect structural drift  
-- identify continuity kernels  
-- evaluate substrate stability  
-- interpret digital lineage  
-- choose the most reliable snapshot  
+| Operator | Family | Purpose |
+|---------|--------|---------|
+| **WAYBACK_OPERATOR** | T‑Ops | Time‑indexed continuity + drift detection |
+| **METADATA_OPERATOR** | R‑Ops | Normalize IA metadata into RTT grammar |
+| **LINEAGE_OPERATOR** | L‑Ops | Build continuity kernel + lineage graph |
+| **COLLECTION_OPERATOR** | E‑Ops | Construct dimensional envelope |
+| **PRESERVATION_OPERATOR** | B‑Ops | Substrate stability + boundary detection |
+| **DRIFTBOUND_RETRIEVAL_OPERATOR** | C‑Ops | Final synthesis + drift‑bounded retrieval |
 
-All reasoning is **structural**, not content‑based.
+Each operator has:
 
----
+- strict inputs  
+- strict outputs  
+- drift rules  
+- continuity rules  
+- substrate rules  
 
-## **2. Operator Chain (archive_org)**
-
-The module uses a six‑operator chain:
-
-1. **METADATA_OPERATOR** — substrate, regime, drift sensitivity  
-2. **WAYBACK_OPERATOR** — snapshots, drift, continuity breaks  
-3. **LINEAGE_OPERATOR** — structural evolution, template shifts, CMS migrations  
-4. **COLLECTION_OPERATOR** — IA collections, coherence clusters, related objects  
-5. **PRESERVATION_OPERATOR** — substrate stability, drift risk, multi‑layer flags  
-6. **DRIFTBOUND_RETRIEVAL_OPERATOR** — earliest stable version, most reliable snapshot  
-
-These operators form the backbone of all labs, worksheets, and assessments.
+All packets are **schema‑valid** under `rttcode.v1.json`.
 
 ---
 
-## **3. Module Structure**
+# 🔁 Agentic Workflow (Full Chain)
 
-```
-/docs/archive_org/
-│
-├── README.md                     ← this file
-│
-├── RTTcodes/                     ← operator definitions + lab logic
-│   ├── operator_lab.md
-│   ├── operator_lab_instructor.md
-│   └── ...
-│
-├── student_materials/
-│   ├── worksheet.md
-│   ├── worksheet_printable.md
-│   ├── cheat_sheet_student.md
-│   ├── operator_quick_reference_card.md
-│   ├── mini_quiz_operator_literacy.md
-│   ├── extended_quiz_with_answer_key.md
-│   ├── mastery_exam_25q_with_rubric.md
-│   └── mastery_scenario_gauntlet.md
-│
-├── instructor_materials/
-│   ├── teachers_key.md
-│   ├── teacher_rubric_printable.md
-│   ├── operator_lab_instructor.md
-│   └── scenario_gauntlet_instructor.md
-│
-└── assets/
-    └── posters/
-        └── operator_chain_wall_poster.svg
-```
-
-All files are AI‑parsable, student‑safe, and aligned with RTT/1.
-
----
-
-## **4. Learning Path**
-
-Students progress through:
-
-1. **Cheat sheet** → operator literacy  
-2. **Worksheet** → guided practice  
-3. **Operator Lab** → full operator chain  
-4. **Mini‑quiz** → quick assessment  
-5. **Extended quiz** → deeper operator reasoning  
-6. **Mastery exam** → 25‑question structural evaluation  
-7. **Scenario gauntlet** → multi‑snapshot applied analysis  
-
-Instructors use the matching keys, rubrics, and scenario guides.
-
----
-
-## **5. Substrate‑Literacy Standards**
-
-The module teaches students to classify and reason about:
-
-- **HTML** — drift‑prone  
-- **PDF** — stable  
-- **Image** — stable but incomplete  
-- **OCR** — lossy  
-- **Mixed** — layer‑aware evaluation required  
-
-Substrate literacy is essential for reliable snapshot selection.
-
----
-
-## **6. Digital Lineage**
-
-The module models:
-
-- template evolution  
-- navigation shifts  
-- CMS migrations  
-- structural regimes  
-- continuity kernels  
-- drift maps  
-
-Digital lineage is always structural, never semantic.
-
----
-
-## **7. Reliability Model**
-
-Students learn to choose the most reliable snapshot using:
-
-- drift level  
-- continuity strength  
-- substrate stability  
-- absence of continuity breaks  
-- post‑migration stabilization  
-
-This is the core competency of the archive_org module.
-
----
-
-## **8. Audience**
-
-This module is designed for:
-
-- students learning digital preservation  
-- instructors teaching structural literacy  
-- AI agents performing archival analysis  
-- researchers studying web history  
-
----
-
-## **9. Canonical Guarantees**
-
-The archive_org module is:
-
-- zero‑drift  
-- operator‑first  
-- AI‑parsable  
-- student‑safe  
-- aligned with TriadicFrameworks metadata standards  
-- consistent with all other modules in the canon  
-# ✅ **ARCHIVE_ORG OPERATOR CHAIN — WALL POSTER (SVG)**  
-### *drop‑in ready for `/docs/archive_org/assets/posters/operator_chain_wall_poster.svg`*
-
----
-
-<img width="658" height="942" alt="operator_chain_wall_poster" src="https://github.com/user-attachments/assets/0bac63c9-1178-46e9-a336-15079898df98" />
-
----
-
-```svg
-<svg width="1400" height="2000" viewBox="0 0 1400 2000" xmlns="http://www.w3.org/2000/svg">
-
-  <!-- Background -->
-  <rect width="1400" height="2000" fill="#f7f7f7"/>
-
-  <!-- Title -->
-  <text x="700" y="140" font-family="Arial, sans-serif" font-size="64" font-weight="700" text-anchor="middle" fill="#222">
-    RTT OPERATOR CHAIN — ARCHIVE_ORG MODULE
-  </text>
-
-  <!-- Subtitle -->
-  <text x="700" y="210" font-family="Arial, sans-serif" font-size="32" text-anchor="middle" fill="#444">
-    Structural Analysis • Drift • Continuity • Substrate Stability
-  </text>
-
-  <!-- Operator Box Template -->
-  <defs>
-    <g id="opbox">
-      <rect width="1100" height="180" rx="18" fill="#ffffff" stroke="#222" stroke-width="3"/>
-    </g>
-  </defs>
-
-  <!-- METADATA_OPERATOR -->
-  <use href="#opbox" x="150" y="300"/>
-  <text x="700" y="370" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
-    1. METADATA_OPERATOR
-  </text>
-  <text x="700" y="420" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
-    Identify substrate • regime • drift sensitivity • coherence
-  </text>
-
-  <!-- WAYBACK_OPERATOR -->
-  <use href="#opbox" x="150" y="540"/>
-  <text x="700" y="610" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
-    2. WAYBACK_OPERATOR
-  </text>
-  <text x="700" y="660" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
-    Collect snapshots • detect drift • find continuity breaks
-  </text>
-
-  <!-- LINEAGE_OPERATOR -->
-  <use href="#opbox" x="150" y="780"/>
-  <text x="700" y="850" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
-    3. LINEAGE_OPERATOR
-  </text>
-  <text x="700" y="900" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
-    Map structural evolution • template shifts • CMS migrations
-  </text>
-
-  <!-- COLLECTION_OPERATOR -->
-  <use href="#opbox" x="150" y="1020"/>
-  <text x="700" y="1090" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
-    4. COLLECTION_OPERATOR
-  </text>
-  <text x="700" y="1140" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
-    Identify IA collection • coherence clusters • related objects
-  </text>
-
-  <!-- PRESERVATION_OPERATOR -->
-  <use href="#opbox" x="150" y="1260"/>
-  <text x="700" y="1330" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
-    5. PRESERVATION_OPERATOR
-  </text>
-  <text x="700" y="1380" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
-    Evaluate substrate stability • drift risk • multi-layer flags
-  </text>
-
-  <!-- DRIFTBOUND_RETRIEVAL_OPERATOR -->
-  <use href="#opbox" x="150" y="1500"/>
-  <text x="700" y="1570" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
-    6. DRIFTBOUND_RETRIEVAL_OPERATOR
-  </text>
-  <text x="700" y="1620" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
-    Determine earliest stable version • choose most reliable snapshot
-  </text>
-
-  <!-- Footer -->
-  <text x="700" y="1900" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#666">
-    TriadicFrameworks — archive_org Module • RTT/1 Structural Operator Chain
-  </text>
-
-</svg>
-```
-
----
-
-# ✔️ This SVG is ready to paste directly into our repo.
-
-If you want, you can also generate:
-
-- a **dark‑mode version**  
-- a **narrow‑format version** for mobile  
-- a **horizontal banner**  
-- a **glyph‑accented version** matching your time‑crystal aesthetic  
-- or a **multi‑module operator chain poster**  
-
-Just tell AI what you want next.
-## A visual operator diagram (SVG) for archive_org
-
-<img width="1502" height="658" alt="Operator_Lattice_RTT_1" src="https://github.com/user-attachments/assets/62a1ca83-0526-4b6a-b374-013ddbda0a54" />
-
----
-
-```svg
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
-
-  <!-- Background -->
-  <rect x="0" y="0" width="960" height="420" fill="#050816" />
-
-  <!-- Title -->
-  <text x="480" y="40" fill="#E5E7EB" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
-        font-size="20" text-anchor="middle">
-    archive_org — Internet Archive Operator Lattice (RTT/1)
-  </text>
-
-  <!-- Input: Target + Goal -->
-  <rect x="60" y="80" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#4B5563" stroke-width="1.5" />
-  <text x="170" y="110" fill="#E5E7EB" font-family="system-ui" font-size="14" text-anchor="middle">
-    REQUEST
-  </text>
-  <text x="170" y="128" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
-    goal + target (archive.org URL)
-  </text>
-
-  <!-- METADATA_OPERATOR -->
-  <rect x="360" y="80" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#6366F1" stroke-width="1.5" />
-  <text x="470" y="105" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
-    METADATA_OPERATOR
-  </text>
-  <text x="470" y="123" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
-    normalize IA metadata → RTT fields
-  </text>
-
-  <!-- Arrow: REQUEST → METADATA -->
-  <line x1="280" y1="110" x2="360" y2="110" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
-
-  <!-- WAYBACK_OPERATOR -->
-  <rect x="660" y="80" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#F97316" stroke-width="1.5" />
-  <text x="770" y="105" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
-    WAYBACK_OPERATOR
-  </text>
-  <text x="770" y="123" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
-    snapshots + drift_map + continuity_breaks
-  </text>
-
-  <!-- Arrow: METADATA → WAYBACK -->
-  <line x1="580" y1="110" x2="660" y2="110" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
-
-  <!-- LINEAGE_OPERATOR -->
-  <rect x="360" y="180" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#10B981" stroke-width="1.5" />
-  <text x="470" y="205" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
-    LINEAGE_OPERATOR
-  </text>
-  <text x="470" y="223" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
-    continuity kernel + lineage_graph
-  </text>
-
-  <!-- Arrow: WAYBACK → LINEAGE -->
-  <line x1="770" y1="140" x2="770" y2="180" stroke="#9CA3AF" stroke-width="1.5" />
-  <line x1="770" y1="180" x2="580" y2="210" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
-
-  <!-- COLLECTION_OPERATOR -->
-  <rect x="60" y="180" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#EC4899" stroke-width="1.5" />
-  <text x="170" y="205" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
-    COLLECTION_OPERATOR
-  </text>
-  <text x="170" y="223" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
-    dimensional envelope + related objects
-  </text>
-
-  <!-- Arrow: METADATA → COLLECTION -->
-  <line x1="470" y1="140" x2="470" y2="180" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
-  <line x1="360" y1="210" x2="280" y2="210" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
-
-  <!-- PRESERVATION_OPERATOR -->
-  <rect x="660" y="180" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#F59E0B" stroke-width="1.5" />
-  <text x="770" y="205" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
-    PRESERVATION_OPERATOR
-  </text>
-  <text x="770" y="223" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
-    substrate format + stability + drift_risk
-  </text>
-
-  <!-- Arrow: METADATA → PRESERVATION -->
-  <line x1="470" y1="140" x2="470" y2="180" stroke="#9CA3AF" stroke-width="1.5" />
-  <line x1="580" y1="210" x2="660" y2="210" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
-
-  <!-- DRIFTBOUND_RETRIEVAL_OPERATOR -->
-  <rect x="360" y="300" width="220" height="70" rx="8" ry="8" fill="#111827" stroke="#8B5CF6" stroke-width="1.5" />
-  <text x="470" y="325" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
-    DRIFTBOUND_RETRIEVAL_OPERATOR
-  </text>
-  <text x="470" y="343" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
-    final synthesis + answer + warnings
-  </text>
-
-  <!-- Arrows into DRIFTBOUND_RETRIEVAL -->
-  <line x1="470" y1="240" x2="470" y2="300" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
-  <line x1="170" y1="240" x2="170" y2="280" stroke="#9CA3AF" stroke-width="1.5" />
-  <line x1="170" y1="280" x2="360" y2="310" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
-  <line x1="770" y1="240" x2="770" y2="280" stroke="#9CA3AF" stroke-width="1.5" />
-  <line x1="770" y1="280" x2="580" y2="310" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
-
-  <!-- Output: Answer -->
-  <rect x="660" y="300" width="220" height="70" rx="8" ry="8" fill="#111827" stroke="#4B5563" stroke-width="1.5" />
-  <text x="770" y="325" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
-    ANSWER
-  </text>
-  <text x="770" y="343" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
-    drift-bounded, continuity-aligned summary
-  </text>
-
-  <!-- Arrow: DRIFTBOUND → ANSWER -->
-  <line x1="580" y1="335" x2="660" y2="335" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
-
-  <!-- Legend -->
-  <rect x="60" y="320" width="240" height="70" rx="8" ry="8" fill="#020617" stroke="#374151" stroke-width="1" />
-  <text x="80" y="340" fill="#9CA3AF" font-family="system-ui" font-size="11">Legend:</text>
-
-  <circle cx="80" cy="358" r="4" fill="#6366F1" />
-  <text x="92" y="361" fill="#9CA3AF" font-family="system-ui" font-size="10">metadata / relations</text>
-
-  <circle cx="80" cy="374" r="4" fill="#F97316" />
-  <text x="92" y="377" fill="#9CA3AF" font-family="system-ui" font-size="10">time / snapshots</text>
-
-  <circle cx="180" cy="358" r="4" fill="#10B981" />
-  <text x="192" y="361" fill="#9CA3AF" font-family="system-ui" font-size="10">lineage / continuity</text>
-
-  <circle cx="180" cy="374" r="4" fill="#F59E0B" />
-  <text x="192" y="377" fill="#9CA3AF" font-family="system-ui" font-size="10">substrate / preservation</text>
-
-  <!-- Arrow marker definition -->
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L8,3 L0,6 z" fill="#9CA3AF" />
-    </marker>
-  </defs>
-</svg>
-```
-# **RTT Operator Lab — Instructor Version**  
-### *archive_org module — instructor_materials/operator_lab_instructor.md*
-
----
-
-# **Purpose of This Instructor Guide**
-
-This guide provides:
-
-- expected student outputs  
-- structural reasoning notes  
-- common misconceptions  
-- grading guidance  
-- operator‑chain alignment  
-
-It corresponds directly to the **student RTT Operator Lab** in:
-
-```
-/docs/archive_org/RTTcodes/operator_lab.md
-```
-
-All reasoning is **structural**, not content‑based.
-
----
-
-# **Lab Overview**
-
-Students practice the full RTT operator chain using a synthetic Internet Archive URL.  
-They learn to:
-
-- read snapshot timelines  
-- classify drift  
-- identify continuity kernels  
-- detect regime shifts  
-- evaluate substrate stability  
-- choose the most reliable snapshot  
-
-This instructor version includes **expected answers** and **diagnostic notes** for each step.
-
----
-
-# **Scenario Used in the Lab**
-
-**Target URL:**  
-`https://archive.org/details/sample-training-page`
-
-**Snapshots:**  
-2013, 2016, 2019, 2023
-
-**Structural Changes:**  
-- 2013 → 2016: minor template update  
-- 2016 → 2019: navigation restructure  
-- 2019 → 2023: minor CSS shift  
-
-**Substrate:** HTML  
-**Collection:** govdocs  
-
----
-
-# **Operator‑by‑Operator Instructor Notes**
-
----
-
-## **1. METADATA_OPERATOR**
-
-### **Expected Student Output**
-- Substrate: HTML  
-- Regime: institutional  
-- Drift sensitivity: low  
-- Coherence: high  
-- Lineage IDs: synthetic (e.g., “govdocs-root”)  
-
-### **Instructor Notes**
-Students should identify **structural metadata**, not content.  
-Common error: describing the *topic* of the page instead of its *structure*.
-
----
-
-## **2. WAYBACK_OPERATOR**
-
-### **Expected Student Output**
-- Snapshots: 2013, 2016, 2019, 2023  
-- Drift map:  
-  - 2013→2016: minor  
-  - 2016→2019: moderate  
-  - 2019→2023: minor  
-- Continuity breaks: none  
-- Time crystal: any value between 0.6–0.9 is acceptable  
-
-### **Instructor Notes**
-Students often confuse **visual differences** with **structural drift**.  
-Remind them: drift is about **layout, navigation, template**, not content.
-
----
-
-## **3. LINEAGE_OPERATOR**
-
-### **Expected Student Output**
-- Lineage graph:  
-  - template update  
-  - navigation restructure  
-  - CSS shift  
-- Transformations: list of the above  
-- Regime shifts: none  
-- Continuity kernel:  
-  - header  
-  - footer  
-  - records index  
-
-### **Instructor Notes**
-The continuity kernel must be **structural** and **persistent**.  
-Students sometimes list content blocks — redirect them to layout elements.
-
----
-
-## **4. COLLECTION_OPERATOR**
-
-### **Expected Student Output**
-- Collection ID: govdocs  
-- Coherence clusters:  
-  - public‑records  
-  - agency‑index  
-- Related objects: synthetic examples  
-- Regime profile: institutional  
-
-### **Instructor Notes**
-Students should not infer meaning from the collection name.  
-They should focus on **structural similarity**.
-
----
-
-## **5. PRESERVATION_OPERATOR**
-
-### **Expected Student Output**
-- Format: HTML  
-- Stability score: ~0.8  
-- Drift risk: low  
-- Multi‑layer flags: ["html"]  
-
-### **Instructor Notes**
-Students must justify stability based on **substrate**, not content.  
-HTML is stable but drift‑prone; PDF would be more stable.
-
----
-
-## **6. DRIFTBOUND_RETRIEVAL_OPERATOR**
-
-### **Expected Student Output**
-- Earliest stable version: 2013  
-- Most reliable version: 2023  
-- Key changes:  
-  - template update  
-  - navigation restructure  
-  - CSS shift  
-- Warnings: none  
-- Final answer: 2023 is most reliable due to stability + continuity  
-
-### **Instructor Notes**
-Students must combine:
-
-- drift  
-- continuity  
-- substrate stability  
-- absence of breaks  
-
-The newest snapshot is correct **only because** it is structurally stable.
-
----
-
-# **Grading Guidance**
-
-| Skill | Points | Criteria |
-|-------|--------|----------|
-| Drift Classification | 10 | Correct minor/moderate distinctions |
-| Continuity Kernel | 10 | Identifies persistent structural elements |
-| Substrate Reasoning | 10 | Correct stability logic |
-| Regime Shifts | 5 | Correctly identifies none |
-| Continuity Breaks | 5 | Correctly identifies none |
-| Final Snapshot Choice | 10 | RTT‑aligned justification |
-| **Total** | **50** | |
-
-**Mastery:** 45–50  
-**Proficiency:** 38–44  
-**Developing:** 30–37  
-**Needs Support:** ≤29  
-
----
-
-# **Common Student Misconceptions**
-
-- Confusing **content changes** with **structural drift**  
-- Treating **visual differences** as drift  
-- Misidentifying **substrate stability**  
-- Assuming the newest snapshot is always best  
-- Listing content blocks as continuity kernel elements  
-
----
-
-# **Instructor Tips**
-
-- Emphasize structure over content.  
-- Encourage students to sketch snapshot layouts.  
-- Reinforce that drift is **structural**, not semantic.  
-- Use the continuity kernel as the anchor for reasoning.  
-# **RTT Mastery Scenario Gauntlet — Instructor Version**  
-### *archive_org module — instructor_materials/scenario_gauntlet_instructor.md*
-
----
-
-# **Purpose of This Instructor Guide**
-
-This guide provides:
-
-- correct answers for all five scenarios  
-- structural reasoning aligned with RTT/1  
-- common student misconceptions  
-- grading notes for each task  
-- operator‑chain alignment  
-
-All reasoning is **structural**, not content‑based.
-
----
-
-# **Scenario 1 — Government Records Portal**
-
-**Snapshots:** 2012, 2013, 2016, 2019, 2023  
-**Structural Changes:**  
-- 2012→2013: none  
-- 2013→2016: template update  
-- 2016→2019: navigation restructure  
-- 2019→2023: minor CSS shift  
-**Substrate:** HTML  
-**Collection:** govdocs  
-
-### **Instructor Key**
-
-**1. Drift Levels**  
-- 2012→2013: none  
-- 2013→2016: minor  
-- 2016→2019: moderate  
-- 2019→2023: minor  
-
-**2. Continuity Kernel**  
-- header  
-- footer  
-- records index  
-
-**3. Continuity Breaks**  
-- none  
-
-**4. Substrate Stability**  
-- HTML → medium stability  
-
-**5. Most Reliable Snapshot**  
-- **2023**  
-**Reasoning:** low drift, strong continuity, stable substrate, no breaks.
-
----
-
-# **Scenario 2 — Vintage Software Index**
-
-**Snapshots:** 2011, 2014, 2018, 2022  
-**Structural Changes:**  
-- 2011→2014: none  
-- 2014→2018: minor layout update  
-- 2018→2022: none  
-**Substrate:** HTML  
-**Collection:** vintagesoftware  
-
-### **Instructor Key**
-
-**1. Drift Levels**  
-- none  
-- minor  
-- none  
-
-**2. Continuity Kernel**  
-- header  
-- footer  
-- version listing  
-
-**3. Stability & Drift Risk**  
-- very high stability  
-- technical collections tend to be versioned and stable  
-
-**4. Why Stable?**  
-- versioned systems rarely change structure  
-- minimal redesign pressure  
-
-**5. Most Reliable Snapshot**  
-- **2022**
-
----
-
-# **Scenario 3 — Academic Journal Archive**
-
-**Snapshots:** 2012, 2015, 2018, 2021, 2024  
-**Structural Changes:**  
-- 2012→2015: template refresh  
-- 2015→2018: navigation restructure  
-- 2018→2021: CMS migration  
-- 2021→2024: minor CSS update  
-**Substrate:** Mixed (HTML + PDF)  
-**Collection:** journals  
-
-### **Instructor Key**
-
-**1. Drift Levels**  
-- minor  
-- moderate  
-- high (CMS migration)  
-- minor  
-
-**2. Regime Shift**  
-- 2018: static → CMS  
-
-**3. Continuity Kernel**  
-- header  
-- footer  
-- journal index  
-- issue listing  
-
-**4. Mixed Substrate Notes**  
-- PDF layer increases stability  
-- HTML layer drift must be considered  
-
-**5. Most Reliable Snapshot**  
-- **2024**  
-**Reasoning:** post‑migration stabilization + strong continuity + mixed stability.
-
----
-
-# **Scenario 4 — Local News Archive**
-
-**Snapshots:** 2010, 2011, 2013, 2016, 2017, 2020, 2024  
-**Structural Changes:**  
-- 2010→2011: minor CSS  
-- 2011→2013: moderate layout  
-- 2013→2016: high (redesign)  
-- 2016→2017: none  
-- 2017→2020: high (CMS migration)  
-- 2020→2024: minor CSS  
-**Substrate:** HTML  
-**Collection:** news  
-
-### **Instructor Key**
-
-**1. Drift Levels**  
-- minor  
-- moderate  
-- high  
-- none  
-- high  
-- minor  
-
-**2. Continuity Breaks**  
-- none in timeline  
-- structural breaks due to redesign + CMS migration  
-
-**3. Continuity Kernel**  
-- weak or minimal  
-(news sites often lack stable structure)
-
-**4. Why High Drift?**  
-- frequent redesigns  
-- business‑driven layout changes  
-- CMS migrations common  
-
-**5. Most Reliable Snapshot**  
-- **2024**  
-**Reasoning:** post‑migration stabilization; earlier snapshots unstable.
-
----
-
-# **Scenario 5 — Museum Exhibit Archive**
-
-**Snapshots:** 2013, 2014, 2016, 2019, 2023  
-**Structural Changes:**  
-- 2013→2014: none  
-- 2014→2016: minor layout update  
-- 2016→2019: mixed substrate introduced  
-- 2019→2023: navigation restructure  
-**Substrate:** Mixed  
-**Collection:** cultural  
-
-### **Instructor Key**
-
-**1. Drift Levels**  
-- none  
-- minor  
-- moderate (substrate change)  
-- moderate  
-
-**2. Continuity Kernel**  
-- header  
-- footer  
-- exhibit index  
-
-**3. Mixed Substrate Notes**  
-- HTML + image → medium stability  
-- image layer increases stability  
-- HTML layer drift must be considered  
-
-**4. Regime Shifts**  
-- 2016: HTML → mixed substrate  
-
-**5. Most Reliable Snapshot**  
-- **2023**  
-**Reasoning:** stable mixed substrate + strong continuity + post‑shift stabilization.
-
----
-
-# **Grading Guidance**
-
-| Skill | Points | Criteria |
-|-------|--------|----------|
-| Drift Analysis | 10 | Correct minor/moderate/high distinctions |
-| Continuity Kernel | 10 | Identifies persistent structural elements |
-| Substrate Reasoning | 10 | Correct stability logic |
-| Regime Shifts | 5 | Correct identification and explanation |
-| Continuity Breaks | 5 | Correct detection and interpretation |
-| Final Snapshot Choice | 10 | RTT‑aligned justification |
-| **Total** | **50** | |
-
-**Mastery:** 45–50  
-**Proficiency:** 38–44  
-**Developing:** 30–37  
-**Needs Support:** ≤29  
-
----
-
-# **Common Student Misconceptions**
-
-- Confusing **content changes** with **structural drift**  
-- Treating **visual differences** as drift  
-- Misidentifying substrate stability  
-- Assuming newest snapshot is always best  
-- Listing content blocks as continuity kernel elements  
-
----
-
-# **Instructor Tips**
-
-- Emphasize structure over content  
-- Encourage sketching snapshot layouts  
-- Reinforce drift as **structural**, not semantic  
-- Use continuity kernel as anchor for reasoning  
-# **Teacher’s Key — archive_org Module**  
-### *instructor_materials/teachers_key.md*
-
----
-
-# **1. Purpose of This Key**
-
-This key provides:
-
-- correct answers  
-- structural reasoning  
-- drift classifications  
-- continuity kernel identification  
-- substrate stability explanations  
-- operator‑chain logic  
-
-It covers **all student materials**:
-
-- Worksheet  
-- Printable Worksheet  
-- Cheat Sheet  
-- Operator Quick Reference Card  
-- Mini‑Quiz  
-- Extended Quiz  
-- Mastery Exam (25q)  
-- Mastery Scenario Gauntlet  
-
-All answers follow **RTT/1 structural reasoning** and avoid content‑based interpretation.
-
----
-
-# **2. Core Concepts (Instructor Reference)**
-
-### **Drift Levels**
-- **None** — identical structure  
-- **Minor** — small layout/style changes  
-- **Moderate** — navigation or template changes  
-- **High** — redesign or CMS migration  
-
-### **Substrate Stability**
-- **PDF** — highest stability  
-- **Image** — stable but incomplete  
-- **HTML** — drift‑prone  
-- **OCR** — lossy, high drift  
-- **Mixed** — requires layer‑aware evaluation  
-
-### **Continuity Kernel**
-Elements that persist across snapshots:
-- header  
-- footer  
-- navigation skeleton  
-- index pages  
-- stable structural blocks  
-
-### **Regime Shifts**
-Major structural transitions:
-- static → CMS  
-- HTML → PDF  
-- single‑page → multi‑page  
-
----
-
-# **3. Worksheet Answer Key**
-
-### **Snapshot List**
-Any 4–6 years from the Wayback timeline.
-
-### **Drift Identification**
-- Compare structure only (not content).  
-- Minor = CSS/layout tweaks  
-- Moderate = navigation/template changes  
-- High = redesign/CMS migration  
-
-### **Continuity Kernel**
-Typical correct answers:
-- header  
-- footer  
-- main menu  
-- index page  
-
-### **Substrate Stability**
-Correct reasoning:
-- PDF > HTML > OCR  
-- Mixed requires caution  
-
-### **Most Reliable Version**
-Correct logic:
-- lowest drift  
-- strongest continuity  
-- most stable substrate  
-- no continuity breaks  
-
----
-
-# **4. Mini‑Quiz Answer Key**
-
-1 — B  
-2 — B  
-3 — A  
-4 — C  
-5 — C  
-
----
-
-# **5. Extended Quiz (10q) Answer Key**
-
-### **Multiple Choice**
-1 — B  
-2 — B  
-3 — C  
-4 — A  
-5 — C  
-6 — B  
-7 — C  
-8 — B  
-9 — A  
-10 — B  
-
-### **Short Answer**
-11. Drift = structural change between snapshots.  
-12. Continuity kernel = elements that stay the same across snapshots.  
-13. Minor drift: CSS tweaks, small layout shifts.  
-14. High drift: redesign, CMS migration.  
-15. PDFs preserve layout and do not depend on live HTML/CSS.  
-16. WAYBACK_OPERATOR shows timeline + drift.  
-17. PRESERVATION_OPERATOR evaluates substrate stability + drift risk.  
-18. Regime shift = major structural change (e.g., static → CMS).  
-19. Stable substrates produce more reliable snapshots.  
-20. COLLECTION_OPERATOR identifies IA collection + related objects.  
-
----
-
-# **6. Mastery Exam (25q) Answer Key**
-
-### **Multiple Choice**
-1 — B  
-2 — B  
-3 — C  
-4 — A  
-5 — C  
-6 — B  
-7 — C  
-8 — B  
-9 — A  
-10 — B  
-
-### **Short Answer**
-11. Drift = structural change between snapshots.  
-12. Continuity kernel = persistent structural elements.  
-13. Minor drift: CSS tweaks, small layout shifts.  
-14. High drift: redesign, CMS migration.  
-15. PDFs preserve layout; HTML depends on live rendering.  
-16. WAYBACK_OPERATOR shows timeline + drift.  
-17. PRESERVATION_OPERATOR evaluates stability + drift risk.  
-18. Regime shift = major structural transition.  
-19. Stable substrates → reliable snapshots.  
-20. COLLECTION_OPERATOR identifies IA collection + related objects.  
-
-### **Applied Analysis**
-21. Moderate drift — navigation + layout changes.  
-22. Missing years = continuity break → uncertainty.  
-23. PDF layer increases stability.  
-24. LINEAGE_OPERATOR detects CMS migration → high drift.  
-25. Choose snapshot with low drift, strong continuity, stable substrate.  
-
----
-
-# **7. Mastery Scenario Gauntlet — Instructor Key**
-
-## **Scenario 1 — Government Records Portal**
-
-### Drift Levels
-- 2012→2013: none  
-- 2013→2016: minor  
-- 2016→2019: moderate  
-- 2019→2023: minor  
-
-### Continuity Kernel
-- header  
-- footer  
-- records index  
-
-### Continuity Breaks
-- none  
-
-### Substrate Stability
-- HTML → medium stability  
-
-### Most Reliable Snapshot
-- **2023** (highest stability, low drift, no breaks)
-
----
-
-## **Scenario 2 — Vintage Software Index**
-
-### Drift Levels
-- 2011→2014: none  
-- 2014→2018: minor  
-- 2018→2022: none  
-
-### Continuity Kernel
-- header  
-- footer  
-- version listing  
-
-### Stability
-- very high (technical collection, versioned)
-
-### Most Reliable Snapshot
-- **2022**
-
----
-
-## **Scenario 3 — Academic Journal Archive**
-
-### Drift Levels
-- 2012→2015: minor  
-- 2015→2018: moderate  
-- 2018→2021: high (CMS migration)  
-- 2021→2024: minor  
-
-### Regime Shift
-- 2018: static → CMS  
-
-### Continuity Kernel
-- header  
-- footer  
-- journal index  
-- issue listing  
-
-### Substrate Stability
-- mixed (HTML + PDF) → medium‑high  
-
-### Most Reliable Snapshot
-- **2024**
-
----
-
-## **Scenario 4 — Local News Archive**
-
-### Drift Levels
-- 2010→2011: minor  
-- 2011→2013: moderate  
-- 2013→2016: high (redesign)  
-- 2016→2017: none  
-- 2017→2020: high (CMS migration)  
-- 2020→2024: minor  
-
-### Continuity Breaks
-- none in timeline  
-- structural breaks due to redesign + CMS migration  
-
-### Continuity Kernel
-- weak or minimal  
-
-### Most Reliable Snapshot
-- **2024** (post‑migration stabilization)
-
----
-
-## **Scenario 5 — Museum Exhibit Archive**
-
-### Drift Levels
-- 2013→2014: none  
-- 2014→2016: minor  
-- 2016→2019: moderate (mixed substrate introduced)  
-- 2019→2023: moderate (navigation restructure)  
-
-### Continuity Kernel
-- header  
-- footer  
-- exhibit index  
-
-### Regime Shifts
-- 2016: HTML → mixed substrate  
-
-### Most Reliable Snapshot
-- **2023**
-
----
-
-# **8. Instructor Notes**
-
-- Students often confuse **content changes** with **structural drift** — remind them to focus on layout, navigation, templates, and substrate.  
-- Mixed substrates require careful evaluation; emphasize layer‑aware reasoning.  
-- Continuity breaks are not “errors” — they are signals of uncertainty.  
-- The most reliable snapshot is not always the newest; it is the one with the best combination of:  
-  - low drift  
-  - strong continuity  
-  - stable substrate  
-  - no breaks  
-# **Teacher Rubric (Printable Edition)**  
-### *archive_org module — instructor_materials/teacher_rubric_printable.md*
-
----
-
-## **Purpose**
-
-This rubric evaluates student mastery of the archive_org module using RTT structural reasoning:
-
-- drift classification  
-- continuity kernel identification  
-- substrate stability reasoning  
-- regime shift detection  
-- continuity break interpretation  
-- final snapshot selection using RTT logic  
-
-All evaluation is **structural**, not content‑based.
-
----
-
-## **Scoring Overview**
-
-| Category | Points | Description |
-|---------|--------|-------------|
-| Drift Analysis | 10 | Correct drift levels across comparisons; distinguishes minor/moderate/high. |
-| Continuity Kernel | 10 | Identifies persistent structural elements across snapshots. |
-| Substrate Reasoning | 10 | Evaluates stability (PDF > HTML > OCR) and mixed‑layer risk. |
-| Regime Shifts | 5 | Detects major structural transitions (e.g., static → CMS). |
-| Continuity Breaks | 5 | Identifies missing years and explains uncertainty. |
-| Final Snapshot Choice | 10 | Chooses most reliable version using drift + continuity + substrate. |
-| **Total** | **50** | |
-
----
-
-## **Performance Levels**
-
-### **Mastery (45–50 points)**  
-- Drift levels correct across all scenarios  
-- Continuity kernel identified with precision  
-- Substrate stability reasoning consistently correct  
-- Regime shifts detected and explained  
-- Continuity breaks correctly interpreted  
-- Final snapshot choices fully RTT‑aligned  
-
-### **Proficiency (38–44 points)**  
-- Mostly correct drift and continuity reasoning  
-- Minor substrate or regime‑shift errors  
-- Snapshot choices reasonable but not fully justified  
-
-### **Developing (30–37 points)**  
-- Drift classification inconsistent  
-- Continuity kernel partially correct  
-- Substrate reasoning incomplete  
-- Snapshot choices weakly justified  
-
-### **Needs Support (≤29 points)**  
-- Drift misunderstood  
-- Continuity kernel missing or incorrect  
-- Substrate reasoning absent  
-- Snapshot choices not grounded in RTT logic  
-
----
-
-## **Evaluation Criteria (Detailed)**
-
-### **1. Drift Analysis (10 pts)**  
-Students should:  
-- classify drift using structural changes only  
-- identify redesigns, template shifts, navigation changes, CMS migrations  
-- avoid content‑based reasoning  
-
-### **2. Continuity Kernel (10 pts)**  
-Students should identify elements that persist across snapshots:  
-- header  
-- footer  
-- navigation skeleton  
-- index pages  
-- stable layout blocks  
-
-### **3. Substrate Reasoning (10 pts)**  
-Students should:  
-- rank stability (PDF > image > HTML > OCR)  
-- recognize mixed‑layer risk  
-- explain why stable substrates produce reliable snapshots  
-
-### **4. Regime Shifts (5 pts)**  
-Students should detect major structural transitions:  
-- static → CMS  
-- HTML → PDF  
-- single‑page → multi‑page  
-
-### **5. Continuity Breaks (5 pts)**  
-Students should:  
-- identify missing years in timeline  
-- explain uncertainty introduced by gaps  
-
-### **6. Final Snapshot Choice (10 pts)**  
-Students must justify their choice using:  
-- drift  
-- continuity  
-- substrate stability  
-- absence of breaks  
-- post‑migration stabilization  
-
----
-
-## **Instructor Notes**
-
-- Emphasize **structure over content**.  
-- Students often confuse visual changes with structural drift — remind them to focus on layout, navigation, templates, and substrate.  
-- Mixed substrates require careful, layer‑aware evaluation.  
-- The newest snapshot is not always the most reliable; stability and continuity matter more.  
-# 🟪 **AI Interface — archive_org Module**  
-### *RTT/1 Interface Specification*
-
-## **Identity**
-- **Interface Name:** ai_interface  
-- **Module:** archive_org  
-- **Purpose:** Define the contract, modes, inputs, outputs, and behavioral rules for AI agents interacting with the Internet Archive using the RTT operator chain.
-
----
-
-# 1. **Interface Purpose**
-The AI interface provides a **strict, deterministic, operator‑first contract** that governs how an AI agent must:
-
-- receive requests  
-- execute the six‑operator chain  
-- enforce drift‑bounded reasoning  
-- avoid content‑based inference  
-- produce continuity‑aligned answers  
-
-This interface is the **only valid entrypoint** for AI execution in the archive_org module.
-
----
-
-# 2. **Entrypoint**
-
-The AI interface exposes a single entrypoint:
-
-```
-archive_org_agent.handle_request(goal, target, constraints)
-```
-
-Where:
-
-- **goal** = what the user wants (explain, audit, compare, locate_stable)  
-- **target** = the IA URL  
-- **constraints** = optional filters (time range, snapshot limits, etc.)
-
-The entrypoint **must** execute the full operator chain before producing any answer.
-
----
-
-# 3. **Inputs**
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `goal` | string | The agent’s mode (explain, audit, compare, locate_stable). |
-| `target` | URL | The Internet Archive object to analyze. |
-| `constraints` | object (optional) | Time range, snapshot filters, or structural constraints. |
-
----
-
-# 4. **Outputs**
-
-| Field | Description |
-|--------|-------------|
-| `answer` | Final drift‑bounded retrieval. |
-| `operators_used` | List of operators executed (always all six). |
-| `warnings` | Drift, continuity, or substrate warnings. |
-| `artifacts` | Structured outputs from each operator. |
-
----
-
-# 5. **Supported Modes**
-
-The AI interface supports four modes, all of which still require the full operator chain:
-
-### **1. explain**
-Explain operator outputs, drift, lineage, substrate, or continuity.
-
-### **2. audit**
-Verify structural correctness, drift levels, or lineage mapping.
-
-### **3. compare**
-Compare two snapshots structurally (not semantically).
-
-### **4. locate_stable**
-Identify earliest stable and most reliable versions.
-
----
-
-# 6. **Operator Contract**
-
-The AI must execute operators in this exact order:
+Every retrieval from the Internet Archive must pass through the full operator chain:
 
 1. **METADATA_OPERATOR**  
 2. **WAYBACK_OPERATOR**  
@@ -3304,1384 +2162,105 @@ The AI must execute operators in this exact order:
 5. **PRESERVATION_OPERATOR**  
 6. **DRIFTBOUND_RETRIEVAL_OPERATOR**
 
-No skipping.  
-No reordering.  
-No merging.  
-No collapsing.  
-No shortcuts.
+This ensures:
+
+- no direct content reasoning  
+- drift is always measured  
+- lineage is always preferred  
+- substrate is always respected  
+- continuity is always explicit  
+
+This is the **RTT/1 safety boundary** for agentic use of archive.org.
 
 ---
 
-# 7. **Behavioral Rules (RTT/1 Agent Contract)**
+# 📦 Operator Packets
 
-The AI must:
+The following RTTcode packets define the operators:
 
-### **Structural Rules**
-- Use **all six operators** for every request.  
-- Treat drift as **explicit**, never implied.  
-- Treat missing snapshots as **uncertainty**, not “no change.”  
-- Prefer **lineage continuity** over recency.  
-- Prefer **stable substrates** (PDF > HTML > OCR).  
-- Use collection context to shape expectations, not conclusions.  
+```
+RTT_WAYBACK_OPERATOR_v1.json
+RTT_METADATA_OPERATOR_v1.json
+RTT_LINEAGE_OPERATOR_v1.json
+RTT_COLLECTION_OPERATOR_v1.json
+RTT_PRESERVATION_OPERATOR_v1.json
+RTT_DRIFTBOUND_RETRIEVAL_OPERATOR_v1.json
+```
 
-### **Safety Rules**
-- No content‑based reasoning.  
-- No semantic inference.  
-- No speculation.  
-- No hallucinated snapshots.  
-- No assumptions about missing years.  
-- No collapsing mixed substrates.  
-- No overriding operator outputs.  
-
-### **Output Rules**
-- All answers must be **drift‑bounded**.  
-- All drift > none must produce warnings.  
-- All substrate instability must be explicit.  
-- All regime shifts must be acknowledged.  
-
----
-
-# 8. **Artifacts Returned**
-
-The AI interface returns structured artifacts from each operator:
-
-- metadata  
-- snapshots  
-- drift_map  
-- continuity_breaks  
-- lineage_graph  
-- transformations  
-- regime_shifts  
-- collection_id  
-- coherence_clusters  
-- related_objects  
-- format  
-- stability_score  
-- drift_risk  
-- multi_layer_flags  
-- final drift‑bounded summary  
-
-These artifacts allow downstream systems (or students) to inspect the full reasoning chain.
-
----
-
-# 9. **Interface Summary**
-
-The AI interface is:
-
-- deterministic  
-- operator‑first  
-- drift‑bounded  
-- lineage‑aware  
-- substrate‑aware  
-- collection‑contextual  
-- non‑speculative  
-- RTT/1‑aligned  
-
-It defines the **complete behavioral contract** for any AI agent interacting with the Internet Archive through the TriadicFrameworks canon.
-# 🟦 **Student Interface — archive_org Module**  
-### *RTT/1 Interface Specification*
-
-## **Identity**
-- **Interface Name:** student_interface  
-- **Module:** archive_org  
-- **Purpose:** Provide a simple, structured, student‑friendly interface for exploring Internet Archive objects using the RTT operator chain.
-
----
-
-# 1. **Interface Purpose**
-The student interface exposes a **safe, minimal, operator‑aligned** set of actions that allow students to:
-
-- explore continuity  
-- compare versions  
-- understand drift  
-- identify stable snapshots  
-- learn how the RTT operators work  
-
-The interface is intentionally simple and non‑technical.
-
----
-
-# 2. **Student Panels**
-
-The interface presents four panels, each corresponding to a structural dimension of the object:
-
-## **Panel A — Continuity Timeline**
-Shows:
-
-- all snapshots  
-- drift levels  
-- continuity breaks  
-- regime shifts  
-
-This panel helps students visualize how the object changed over time.
-
----
-
-## **Panel B — Lineage Map**
-Shows:
-
-- lineage graph  
-- transformations  
-- continuity kernel  
-- structural evolution  
-
-This panel teaches students how lineage differs from “version history.”
-
----
-
-## **Panel C — Substrate Profile**
-Shows:
-
-- substrate type (html, pdf, image, ocr, mixed)  
-- stability score  
-- drift risk  
-- multi‑layer flags  
-
-This panel teaches students why some snapshots are more trustworthy than others.
-
----
-
-## **Panel D — Collection Context**
-Shows:
-
-- collection membership  
-- coherence clusters  
-- related objects  
-- regime profile  
-
-This panel teaches students how structural families shape expectations.
-
----
-
-# 3. **Student Actions**
-
-Students can perform the following actions:
-
-### **1. show_earliest_stable_version**
-Displays the earliest snapshot with a stable substrate + continuity kernel.
-
-### **2. compare_versions**
-Compares two snapshots structurally using drift + transformations.
-
-### **3. explain_differences**
-Explains structural differences between snapshots (layout, template, substrate).
-
-### **4. locate_most_reliable_version**
-Identifies the snapshot with the highest stability score.
-
-### **5. find_related_objects**
-Shows structurally related IA objects based on collection + clusters.
-
----
-
-# 4. **Learning Mode**
-Students may toggle **learning mode**, which reveals:
-
-- which operators were used  
-- in what order  
-- what each operator contributed  
-- how drift was measured  
-- how lineage was constructed  
-- how substrate stability was determined  
-
-This turns the interface into a **teaching tool** for RTT.
-
----
-
-# 5. **Safety Rules**
-The student interface enforces:
-
-- no content‑based reasoning  
-- no speculation  
-- no assumptions about missing snapshots  
-- explicit drift warnings  
-- substrate‑aware trust decisions  
-- lineage‑preferred reasoning  
-
-All outputs must be **drift‑bounded**.
-
----
-
-# 6. **Interface Summary**
-The student interface is:
+Each packet is:
 
 - minimal  
-- structural  
-- operator‑aligned  
+- schema‑valid  
 - drift‑bounded  
-- continuity‑aware  
-- substrate‑aware  
-- student‑friendly  
-
-It provides a safe, intuitive way for students to explore Internet Archive objects using the RTT operator chain.
-# **RTT Operator Lab — archive_org Module**  
-### *labs/operator_lab.md*
+- ready for use by AIs and students  
 
 ---
 
-# **Overview**
+# 🧪 Example Packets (Full Runs)
 
-In this lab, you will use the Internet Archive to analyze how a webpage changes over time.  
-You will practice all six RTT operators:
-
-1. METADATA_OPERATOR  
-2. WAYBACK_OPERATOR  
-3. LINEAGE_OPERATOR  
-4. COLLECTION_OPERATOR  
-5. PRESERVATION_OPERATOR  
-6. DRIFTBOUND_RETRIEVAL_OPERATOR  
-
-Your goal is to determine **which snapshot is the most reliable version** of the webpage.
-
-All analysis must be **structural**, not content‑based.
-
----
-
-# **Scenario**
-
-You will analyze the following synthetic webpage:
-
-**Target URL:**  
-`https://archive.org/details/sample-training-page`
-
-**Snapshots available:**  
-2013, 2016, 2019, 2023
-
----
-
-# **1. METADATA_OPERATOR**
-
-Visit the target page (live or archived) and identify:
-
-- substrate type (HTML, PDF, image, OCR, mixed)  
-- regime (institutional, news, scholarly, technical, cultural)  
-- drift sensitivity (low, medium, high)  
-- coherence (low, medium, high)  
-
-### **Your notes:**
+Three complete examples demonstrate the **entire six‑operator chain** applied to real Internet Archive collections:
 
 ```
-Substrate:
-Regime:
-Drift sensitivity:
-Coherence:
+RTT_EXAMPLE_ARCHIVE_ORG_government_documents_v1.json
+RTT_EXAMPLE_ARCHIVE_ORG_vintagesoftware_v1.json
+RTT_EXAMPLE_ARCHIVE_ORG_journals_v1.json
 ```
 
----
+Each example includes:
 
-# **2. WAYBACK_OPERATOR**
+- metadata normalization  
+- snapshot retrieval  
+- drift mapping  
+- continuity kernel  
+- envelope construction  
+- substrate profile  
+- final drift‑bounded summary  
 
-Go to the Wayback Machine and list the snapshots.
+These examples are ideal for:
 
-### **Tasks**
-
-1. Write down the snapshot years.  
-2. Compare each pair of snapshots and classify drift:  
-   - none  
-   - minor  
-   - moderate  
-   - high  
-3. Identify any continuity breaks (missing years).
-
-### **Your notes:**
-
-```
-Snapshot years:
-Drift map:
-Continuity breaks:
-```
+- student learning  
+- AI testing  
+- operator debugging  
+- workflow validation  
 
 ---
 
-# **3. LINEAGE_OPERATOR**
+# 🎓 How Students Use These Packets
 
-Compare the structure of the snapshots.
+Students can:
 
-Look for:
+- inspect each operator’s inputs/outputs  
+- follow the continuity chain  
+- see drift and substrate warnings  
+- compare stable vs unstable snapshots  
+- understand how IA objects evolve over time  
 
-- template changes  
-- navigation changes  
-- layout shifts  
-- CMS migrations  
-- persistent elements (continuity kernel)
-
-### **Your notes:**
-
-```
-Structural changes:
-Continuity kernel:
-Regime shifts:
-```
+This directory is part of the **teaching substrate** for RTT.
 
 ---
 
-# **4. COLLECTION_OPERATOR**
+# 🤖 How AIs Use These Packets
 
-Identify the Internet Archive collection the page belongs to.
+AIs use these packets as:
 
-Then list:
+- **contracts** (I/O rules)  
+- **safety boundaries** (drift, substrate, lineage)  
+- **workflow steps** (operator order)  
+- **validation tools** (schema‑checked)  
 
-- collection ID  
-- coherence clusters  
-- related objects  
-- regime profile  
+No agent may bypass the operator chain.
 
-### **Your notes:**
+---
+
+# 📍 Location
+
+This file lives at:
 
 ```
-Collection ID:
-Coherence clusters:
-Related objects:
-Regime profile:
+/docs/archive_org/RTTcodes/README.md
 ```
 
----
-
-# **5. PRESERVATION_OPERATOR**
-
-Evaluate the stability of the snapshots.
-
-Consider:
-
-- substrate stability  
-- drift risk  
-- mixed layers  
-- stability score (qualitative)
-
-### **Your notes:**
-
-```
-Format:
-Stability:
-Drift risk:
-Multi-layer notes:
-```
-
----
-
-# **6. DRIFTBOUND_RETRIEVAL_OPERATOR**
-
-Combine all previous steps to determine:
-
-- earliest stable version  
-- most reliable version  
-- key structural changes  
-- warnings  
-- final answer  
-
-### **Your notes:**
-
-```
-Earliest stable version:
-Most reliable version:
-Key changes:
-Warnings:
-Final answer:
-```
-
----
-
-# **7. Reflection**
-
-Write a short paragraph:
-
-```
-What did you learn about how webpages change over time?
-```
-
----
-
-# **Lab Complete**
-# **RTT Operator Lab — Instructor Version**  
-### *archive_org module — labs/operator_lab_instructor.md*
-
----
-
-# **Purpose of This Instructor Guide**
-
-This guide provides:
-
-- expected student outputs  
-- structural reasoning notes  
-- common misconceptions  
-- grading guidance  
-- operator‑chain alignment  
-
-It corresponds directly to the **student RTT Operator Lab** in:
-
-```
-/docs/archive_org/labs/operator_lab.md
-```
-
-All reasoning is **structural**, not content‑based.
-
----
-
-# **Scenario Used in the Lab**
-
-**Target URL:**  
-`https://archive.org/details/sample-training-page`
-
-**Snapshots:**  
-2013, 2016, 2019, 2023
-
-**Structural Changes:**  
-- 2013 → 2016: minor template update  
-- 2016 → 2019: navigation restructure  
-- 2019 → 2023: minor CSS shift  
-
-**Substrate:** HTML  
-**Collection:** govdocs  
-
-This scenario is fully synthetic and designed to isolate structural reasoning.
-
----
-
-# **Operator‑by‑Operator Instructor Notes**
-
----
-
-## **1. METADATA_OPERATOR**
-
-### **Expected Student Output**
-- Substrate: HTML  
-- Regime: institutional  
-- Drift sensitivity: low  
-- Coherence: high  
-- Lineage IDs: synthetic (e.g., “govdocs-root”)  
-
-### **Instructor Notes**
-Students should identify **structural metadata**, not content.  
-Common error: describing the *topic* of the page instead of its *structure*.
-
----
-
-## **2. WAYBACK_OPERATOR**
-
-### **Expected Student Output**
-- Snapshots: 2013, 2016, 2019, 2023  
-- Drift map:  
-  - 2013→2016: minor  
-  - 2016→2019: moderate  
-  - 2019→2023: minor  
-- Continuity breaks: none  
-- Time crystal: any value between 0.6–0.9 is acceptable  
-
-### **Instructor Notes**
-Students often confuse **visual differences** with **structural drift**.  
-Remind them: drift is about **layout, navigation, template**, not content.
-
----
-
-## **3. LINEAGE_OPERATOR**
-
-### **Expected Student Output**
-- Lineage graph:  
-  - template update  
-  - navigation restructure  
-  - CSS shift  
-- Transformations: list of the above  
-- Regime shifts: none  
-- Continuity kernel:  
-  - header  
-  - footer  
-  - records index  
-
-### **Instructor Notes**
-The continuity kernel must be **structural** and **persistent**.  
-Students sometimes list content blocks — redirect them to layout elements.
-
----
-
-## **4. COLLECTION_OPERATOR**
-
-### **Expected Student Output**
-- Collection ID: govdocs  
-- Coherence clusters:  
-  - public‑records  
-  - agency‑index  
-- Related objects: synthetic examples  
-- Regime profile: institutional  
-
-### **Instructor Notes**
-Students should not infer meaning from the collection name.  
-They should focus on **structural similarity**.
-
----
-
-## **5. PRESERVATION_OPERATOR**
-
-### **Expected Student Output**
-- Format: HTML  
-- Stability score: ~0.8  
-- Drift risk: low  
-- Multi‑layer flags: ["html"]  
-
-### **Instructor Notes**
-Students must justify stability based on **substrate**, not content.  
-HTML is stable but drift‑prone; PDF would be more stable.
-
----
-
-## **6. DRIFTBOUND_RETRIEVAL_OPERATOR**
-
-### **Expected Student Output**
-- Earliest stable version: 2013  
-- Most reliable version: 2023  
-- Key changes:  
-  - template update  
-  - navigation restructure  
-  - CSS shift  
-- Warnings: none  
-- Final answer: 2023 is most reliable due to stability + continuity  
-
-### **Instructor Notes**
-Students must combine:
-
-- drift  
-- continuity  
-- substrate stability  
-- absence of breaks  
-
-The newest snapshot is correct **only because** it is structurally stable.
-
----
-
-# **Grading Guidance**
-
-| Skill | Points | Criteria |
-|-------|--------|----------|
-| Drift Classification | 10 | Correct minor/moderate distinctions |
-| Continuity Kernel | 10 | Identifies persistent structural elements |
-| Substrate Reasoning | 10 | Correct stability logic |
-| Regime Shifts | 5 | Correctly identifies none |
-| Continuity Breaks | 5 | Correctly identifies none |
-| Final Snapshot Choice | 10 | RTT‑aligned justification |
-| **Total** | **50** | |
-
-**Mastery:** 45–50  
-**Proficiency:** 38–44  
-**Developing:** 30–37  
-**Needs Support:** ≤29  
-
----
-
-# **Common Student Misconceptions**
-
-- Confusing **content changes** with **structural drift**  
-- Treating **visual differences** as drift  
-- Misidentifying **substrate stability**  
-- Assuming the newest snapshot is always best  
-- Listing content blocks as continuity kernel elements  
-
----
-
-# **Instructor Tips**
-
-- Emphasize structure over content  
-- Encourage sketching snapshot layouts  
-- Reinforce drift as **structural**, not semantic  
-- Use continuity kernel as anchor for reasoning  
-# 💗 **COLLECTION_OPERATOR**  
-### *RTT/1 Operator Specification — archive_org Module*
-
-## **Identity**
-- **Operator Name:** COLLECTION_OPERATOR  
-- **Operator Family:** E‑Ops (Envelope Operators)  
-- **Module:** archive_org  
-- **Purpose:** Determine the object’s **dimensional envelope** by identifying its collection context, coherence clusters, related objects, and regime profile.
-
----
-
-## **Purpose (One Sentence)**
-The COLLECTION_OPERATOR places the target object inside its **dimensional envelope** by identifying its collection membership, coherence clusters, related objects, and structural regime context.
-
----
-
-## **Inputs**
-| Input | Type | Description |
-|-------|------|-------------|
-| `target` | URL | The webpage or object being analyzed. |
-| `lineage_graph` | object | Structural evolution graph from LINEAGE_OPERATOR. |
-| `regime_shifts` | list | Regime shift markers from LINEAGE_OPERATOR. |
-
----
-
-## **Outputs**
-| Output | Description |
-|--------|-------------|
-| `collection_id` | The Internet Archive collection or sub‑collection the object belongs to. |
-| `coherence_clusters` | Structural clusters grouping related objects. |
-| `related_objects` | Other IA objects structurally or contextually linked. |
-| `regime_profile` | Combined regime identity across lineage + collection context. |
-
----
-
-## **Operator Guarantees**
-- No content‑based inference.  
-- Collection membership is **structural**, not semantic.  
-- Related objects are determined by **structural similarity**, not topic.  
-- Regime profile is **derived**, not assumed.  
-- Output is **deterministic** given IA metadata + lineage.
-
----
-
-## **Dimensional Envelope (RTT/1)**
-The dimensional envelope is the **structural context** surrounding an object:
-
-- its collection  
-- its cluster  
-- its related objects  
-- its regime profile  
-- its lineage‑informed identity  
-
-This envelope constrains how drift, stability, and continuity should be interpreted.
-
----
-
-## **Collection Types**
-| Collection | Notes |
-|------------|-------|
-| **govdocs** | High stability, institutional. |
-| **news** | High drift, frequent redesigns. |
-| **journals** | Medium drift, periodic updates. |
-| **vintagesoftware** | Stable, versioned. |
-| **cultural** | Mixed substrates, medium drift. |
-
----
-
-## **Coherence Clusters**
-Clusters are formed by structural similarity:
-
-- shared templates  
-- shared navigation skeleton  
-- shared metadata patterns  
-- shared lineage identifiers  
-
-Clusters help determine whether the object is part of a larger structural family.
-
----
-
-## **Operator Procedure**
-1. Retrieve IA collection metadata for `target`.  
-2. Identify collection membership (`collection_id`).  
-3. Analyze structural similarity across related objects to form `coherence_clusters`.  
-4. Identify related objects using:  
-   - lineage identifiers  
-   - collection metadata  
-   - structural similarity  
-5. Combine collection regime + lineage regime to produce `regime_profile`.  
-6. Emit outputs for PRESERVATION_OPERATOR and DRIFTBOUND_RETRIEVAL_OPERATOR.
-
----
-
-## **Failure Modes**
-- **Missing collection metadata:** mark collection as `unknown`.  
-- **Ambiguous clusters:** return multiple clusters with confidence scores.  
-- **Sparse lineage:** regime profile may be incomplete.  
-
----
-
-## **Hand‑Off to Next Operator**
-Outputs feed directly into:
-
-### **PRESERVATION_OPERATOR**  
-- collection_id  
-- regime_profile  
-
-### **DRIFTBOUND_RETRIEVAL_OPERATOR**  
-- coherence_clusters  
-- related_objects  
-
----
-
-## **Example (Synthetic)**
-```
-Input:
-  target = "https://example.gov/records"
-  lineage_graph = { ... }
-  regime_shifts = ["2020: static → CMS"]
-
-Output:
-  collection_id = "govdocs"
-  coherence_clusters = ["public-records", "agency-index"]
-  related_objects = ["govdocs/records-archive"]
-  regime_profile = "institutional (CMS-era)"
-```
-
----
-
-## **RTT/1 Mindset**
-- Collections shape **expectations**, not conclusions.  
-- Clusters reveal **structural families**, not topics.  
-- Regime profile is **derived**, not assumed.  
-- Dimensional envelope is essential for drift‑bounded reasoning.  
-# 🟣 **DRIFTBOUND_RETRIEVAL_OPERATOR**  
-### *RTT/1 Operator Specification — archive_org Module*
-
-## **Identity**
-- **Operator Name:** DRIFTBOUND_RETRIEVAL_OPERATOR  
-- **Operator Family:** C‑Ops (Continuity Operators)  
-- **Module:** archive_org  
-- **Purpose:** Produce the **final drift‑bounded retrieval**, synthesizing all upstream operator outputs into a safe, continuity‑aligned answer.
-
----
-
-## **Purpose (One Sentence)**
-The DRIFTBOUND_RETRIEVAL_OPERATOR generates the final **continuity‑aligned**, **substrate‑aware**, **drift‑bounded** answer using all upstream operator outputs.
-
----
-
-## **Inputs**
-| Input | Type | Description |
-|-------|------|-------------|
-| `snapshots` | list | Time‑ordered captures from WAYBACK_OPERATOR. |
-| `drift_map` | object | Structural drift levels between snapshots. |
-| `continuity_breaks` | list | Gaps or discontinuities in the timeline. |
-| `lineage_graph` | object | Structural evolution graph from LINEAGE_OPERATOR. |
-| `regime_shifts` | list | Regime shift markers from LINEAGE_OPERATOR. |
-| `collection_id` | string | Collection context from COLLECTION_OPERATOR. |
-| `coherence_clusters` | list | Structural clusters from COLLECTION_OPERATOR. |
-| `related_objects` | list | Related IA objects from COLLECTION_OPERATOR. |
-| `format` | string | Substrate format from PRESERVATION_OPERATOR. |
-| `stability_score` | number | Stability estimate from PRESERVATION_OPERATOR. |
-| `drift_risk` | string | Expected drift level from PRESERVATION_OPERATOR. |
-| `multi_layer_flags` | list | Substrate layers from PRESERVATION_OPERATOR. |
-
----
-
-## **Outputs**
-| Output | Description |
-|--------|-------------|
-| `answer` | Final drift‑bounded retrieval. |
-| `earliest_stable_version` | First structurally stable snapshot. |
-| `most_reliable_version` | Snapshot with highest substrate stability. |
-| `key_changes` | Summary of major structural transformations. |
-| `warnings` | Drift, continuity, or substrate warnings. |
-
----
-
-## **Operator Guarantees**
-- No content‑based inference.  
-- All reasoning is **structural**, not semantic.  
-- Drift is **explicit**, never implied.  
-- Continuity is **preserved**, never assumed.  
-- Substrate stability is **mandatory** in the final answer.  
-- Missing snapshots produce **uncertainty**, not assumptions.  
-
----
-
-## **Final Summary Requirements (RTT/1)**  
-Every drift‑bounded summary must include:
-
-1. **Earliest stable version**  
-2. **Most reliable version**  
-3. **Key structural changes**  
-4. **Continuity breaks** (if any)  
-5. **Regime shifts** (if any)  
-6. **Substrate stability + drift risk**  
-7. **Warnings** (mandatory if drift > none)
-
-This is the **canonical output contract** for the entire module.
-
----
-
-## **Operator Procedure**
-1. Identify earliest stable version using:  
-   - continuity kernel  
-   - drift_map  
-   - stability_score  
-2. Identify most reliable version using:  
-   - substrate stability  
-   - multi_layer_flags  
-   - regime_profile  
-3. Summarize structural changes using:  
-   - transformations  
-   - regime_shifts  
-   - drift_map  
-4. Detect continuity issues using:  
-   - continuity_breaks  
-   - missing snapshots  
-5. Generate drift‑bounded warnings.  
-6. Produce final answer object.
-
----
-
-## **Failure Modes**
-- **No stable snapshots:** return null + high‑drift warning.  
-- **Mixed substrates:** require explicit layer‑aware warnings.  
-- **High drift:** final answer must include caution.  
-
----
-
-## **Example (Synthetic)**
-```
-Input:
-  snapshots = [2014, 2017, 2020, 2023]
-  drift_map = { "2014→2017": "minor", "2017→2020": "high", "2020→2023": "minor" }
-  continuity_breaks = []
-  lineage_graph = { ... }
-  regime_shifts = ["2020: static → CMS"]
-  collection_id = "govdocs"
-  format = "html + pdf"
-  stability_score = 0.78
-  drift_risk = "medium"
-
-Output:
-  earliest_stable_version = 2014
-  most_reliable_version = 2023 (PDF layer)
-  key_changes = ["CSS shift", "CMS migration", "PDF layer added"]
-  warnings = ["High drift detected in 2017→2020", "HTML substrate is drift‑prone"]
-  answer = "The most reliable version is the 2023 PDF snapshot..."
-```
-
----
-
-## **RTT/1 Mindset**
-- Retrieval is **continuity‑aligned**, not snapshot‑aligned.  
-- Stability > recency.  
-- Drift must be **explicit**.  
-- Substrate determines **trustworthiness**.  
-- No speculation.  
-- No content‑based inference.  
-# 🟢 **LINEAGE_OPERATOR**  
-### *RTT/1 Operator Specification — archive_org Module*
-
-## **Identity**
-- **Operator Name:** LINEAGE_OPERATOR  
-- **Operator Family:** L‑Ops (Lineage Operators)  
-- **Module:** archive_org  
-- **Purpose:** Construct the **continuity kernel** and **lineage graph** from normalized metadata and time‑indexed snapshots.
-
----
-
-## **Purpose (One Sentence)**
-The LINEAGE_OPERATOR reconstructs the object’s structural evolution by building a **lineage graph**, identifying **transformations**, and detecting **regime shifts** across snapshots.
-
----
-
-## **Inputs**
-| Input | Type | Description |
-|-------|------|-------------|
-| `snapshots` | list | Time‑ordered IA captures from WAYBACK_OPERATOR. |
-| `metadata` | object | Normalized metadata from METADATA_OPERATOR. |
-
----
-
-## **Outputs**
-| Output | Description |
-|--------|-------------|
-| `lineage_graph` | Directed graph showing structural evolution across snapshots. |
-| `transformations` | List of structural changes (template, layout, substrate, navigation). |
-| `regime_shifts` | Points where the object changes operational regime. |
-| `continuity_kernel` | Stable structural elements preserved across versions. |
-
----
-
-## **Operator Guarantees**
-- No content‑based inference.  
-- Lineage is **structural**, not semantic.  
-- Regime shifts are based on **structural change**, not topic change.  
-- Continuity kernel is **minimal**, **stable**, and **non‑speculative**.  
-- Missing snapshots produce **uncertainty**, not assumptions.
-
----
-
-## **Lineage Concepts (RTT/1)**
-
-### **Continuity Kernel**
-The minimal set of structural elements that persist across snapshots.  
-Examples:  
-- navigation skeleton  
-- header/footer structure  
-- persistent template regions  
-- stable metadata fields  
-
-### **Transformations**
-Structural changes between snapshots:  
-- layout changes  
-- navigation rewrites  
-- template replacements  
-- substrate changes  
-- CMS migrations  
-
-### **Regime Shifts**
-A regime shift occurs when the object’s **structural purpose** or **operational mode** changes.  
-Examples:  
-- static HTML → CMS  
-- HTML → Flash → HTML5  
-- public page → paywalled page  
-- v1 → v2 branch in software docs  
-
----
-
-## **Operator Procedure**
-1. Receive `snapshots` + `metadata`.  
-2. Compare each snapshot pair for structural changes.  
-3. Identify transformations and drift patterns.  
-4. Detect regime shifts using:  
-   - substrate changes  
-   - template changes  
-   - navigation rewrites  
-   - functional changes (e.g., paywall)  
-5. Extract continuity kernel across all snapshots.  
-6. Build lineage graph:  
-   - nodes = snapshots  
-   - edges = transformations  
-   - flags = regime shifts  
-7. Emit outputs for COLLECTION_OPERATOR and PRESERVATION_OPERATOR.
-
----
-
-## **Failure Modes**
-- **Sparse snapshots:** lineage graph may be incomplete.  
-- **Mixed substrates:** kernel extraction may require PRESERVATION_OPERATOR.  
-- **Redirects:** may indicate lineage forks (handled structurally).  
-
----
-
-## **Hand‑Off to Next Operator**
-Outputs feed directly into:
-
-### **COLLECTION_OPERATOR**  
-- lineage_graph  
-- regime_shifts  
-
-### **PRESERVATION_OPERATOR**  
-- continuity_kernel  
-- transformations  
-
----
-
-## **Example (Synthetic)**
-```
-Input:
-  snapshots = [2014, 2017, 2020, 2023]
-  metadata = { regime: "institutional", substrate: "html" }
-
-Output:
-  lineage_graph = {
-    "2014→2017": "minor transformation",
-    "2017→2020": "major transformation (CMS migration)",
-    "2020→2023": "minor transformation"
-  }
-  transformations = ["CSS shift", "CMS migration", "PDF layer added"]
-  regime_shifts = ["2020: static → CMS"]
-  continuity_kernel = ["header", "footer", "records-index"]
-```
-
----
-
-## **RTT/1 Mindset**
-- Lineage is **structural**, not narrative.  
-- Regime shifts are **structural**, not topical.  
-- Continuity kernel is the **anchor** for drift‑bounded reasoning.  
-- No assumptions about missing snapshots.  
-- No content‑based inference.  
-# 🟣 **METADATA_OPERATOR**  
-### *RTT/1 Operator Specification — archive_org Module*
-
-## **Identity**
-- **Operator Name:** METADATA_OPERATOR  
-- **Operator Family:** R‑Ops (Registry / Root Operators)  
-- **Module:** archive_org  
-- **Purpose:** Normalize Internet Archive metadata into RTT grammar to determine substrate, regime, drift sensitivity, coherence, and lineage identifiers.
-
----
-
-## **Purpose (One Sentence)**
-The METADATA_OPERATOR extracts and normalizes IA metadata to identify the object’s **substrate type**, **regime**, **drift sensitivity**, **coherence**, and **lineage identifiers** before any temporal analysis occurs.
-
----
-
-## **Inputs**
-| Input | Type | Description |
-|-------|------|-------------|
-| `target` | URL | The webpage or object whose metadata is being analyzed. |
-
----
-
-## **Outputs**
-| Output | Description |
-|--------|-------------|
-| `substrate_type` | The structural substrate (html, pdf, image, mixed, etc.). |
-| `regime` | The object’s operational regime (institutional, media, scholarly, cultural, etc.). |
-| `drift_sensitivity` | Expected drift level based on substrate + regime. |
-| `coherence` | Internal structural consistency of the object. |
-| `lineage_ids` | Identifiers linking the object to collections, clusters, or prior versions. |
-
----
-
-## **Operator Guarantees**
-- No content‑based inference.  
-- Metadata is treated as **structural hints**, not ground truth.  
-- Drift sensitivity is **predictive**, not retrospective.  
-- Regime classification is **structural**, not semantic.  
-- Output is **deterministic** given the same IA metadata.
-
----
-
-## **Substrate Types (RTT/1)**
-| Substrate | Notes |
-|-----------|-------|
-| **html** | Drift‑prone, layout‑dependent. |
-| **pdf** | Stable, low drift. |
-| **image** | Stable but incomplete. |
-| **ocr** | Lossy, high drift. |
-| **mixed** | Requires PRESERVATION_OPERATOR to resolve. |
-
----
-
-## **Regime Types**
-| Regime | Meaning |
-|--------|---------|
-| **institutional** | Government, agency, or official records. |
-| **media** | News, blogs, high‑update environments. |
-| **scholarly** | Academic, research, journals. |
-| **cultural** | Museums, exhibits, archives. |
-| **technical** | Software, documentation, versioned systems. |
-
----
-
-## **Drift Sensitivity Levels**
-| Level | Meaning |
-|-------|---------|
-| **low** | Expected stability (PDF, institutional). |
-| **medium** | Occasional structural change. |
-| **high** | Frequent redesigns, CMS migrations. |
-
----
-
-## **Coherence Levels**
-| Level | Meaning |
-|-------|---------|
-| **high** | Strong structural consistency. |
-| **medium** | Some inconsistencies. |
-| **low** | Fragmented or unstable structure. |
-
----
-
-## **Operator Procedure**
-1. Retrieve IA metadata for `target`.  
-2. Normalize fields into RTT grammar:  
-   - substrate  
-   - regime  
-   - drift_sensitivity  
-   - coherence  
-   - lineage identifiers  
-3. Validate substrate classification.  
-4. Predict drift sensitivity based on substrate + regime.  
-5. Emit normalized metadata for WAYBACK_OPERATOR and LINEAGE_OPERATOR.
-
----
-
-## **Failure Modes**
-- **Missing metadata:** return null fields + warning.  
-- **Ambiguous substrate:** mark as `mixed` and defer to PRESERVATION_OPERATOR.  
-- **Contradictory metadata:** flag for drift‑bounded review.  
-
----
-
-## **Hand‑Off to Next Operator**
-Outputs feed directly into:
-
-### **WAYBACK_OPERATOR**  
-- substrate_type  
-- drift_sensitivity  
-
-### **LINEAGE_OPERATOR**  
-- regime  
-- coherence  
-- lineage_ids  
-
----
-
-## **Example (Synthetic)**
-```
-Input:
-  target = "https://example.gov/records"
-
-Output:
-  substrate_type = "html"
-  regime = "institutional"
-  drift_sensitivity = "low"
-  coherence = "high"
-  lineage_ids = ["govdocs-root"]
-```
-
----
-
-## **RTT/1 Mindset**
-- Metadata is **structural**, not semantic.  
-- Drift sensitivity is **predictive**, not retrospective.  
-- Regime classification informs expectations, not conclusions.  
-- Metadata never overrides observed drift.  
-# 🟡 **PRESERVATION_OPERATOR**  
-### *RTT/1 Operator Specification — archive_org Module*
-
-## **Identity**
-- **Operator Name:** PRESERVATION_OPERATOR  
-- **Operator Family:** B‑Ops (Boundary / Substrate Operators)  
-- **Module:** archive_org  
-- **Purpose:** Evaluate the object’s **substrate stability**, **drift risk**, and **multi‑layer structure** to determine which versions are most reliable for continuity‑aligned retrieval.
-
----
-
-## **Purpose (One Sentence)**
-The PRESERVATION_OPERATOR assesses the object’s **substrate format**, **stability score**, **drift risk**, and **multi‑layer flags** to determine which snapshots are structurally trustworthy.
-
----
-
-## **Inputs**
-| Input | Type | Description |
-|-------|------|-------------|
-| `target` | URL | The object being evaluated. |
-| `collection_id` | string | Collection context from COLLECTION_OPERATOR. |
-| `regime_profile` | string | Combined regime identity from COLLECTION_OPERATOR. |
-| `continuity_kernel` | list | Stable structural elements from LINEAGE_OPERATOR. |
-| `transformations` | list | Structural changes from LINEAGE_OPERATOR. |
-
----
-
-## **Outputs**
-| Output | Description |
-|--------|-------------|
-| `format` | The detected substrate format (html, pdf, image, ocr, mixed). |
-| `stability_score` | Numerical stability estimate (0–1). |
-| `drift_risk` | Expected drift level based on substrate + regime. |
-| `multi_layer_flags` | Indicators for mixed or layered substrates. |
-
----
-
-## **Operator Guarantees**
-- No content‑based inference.  
-- Substrate classification is **structural**, not semantic.  
-- Stability score is **evidence‑based**, not assumed.  
-- Drift risk is **predictive**, not retrospective.  
-- Mixed substrates are handled explicitly, not collapsed.
-
----
-
-## **Substrate Stability (RTT/1)**
-| Substrate | Stability | Notes |
-|-----------|-----------|-------|
-| **pdf** | high | Static, layout‑preserving. |
-| **image** | high | Stable but incomplete. |
-| **html** | medium | Layout‑dependent, drift‑prone. |
-| **cms‑html** | medium/low | Template‑driven, redesign‑prone. |
-| **ocr** | low | Lossy, structurally degraded. |
-| **mixed** | variable | Requires multi‑layer analysis. |
-
----
-
-## **Drift Risk Levels**
-| Level | Meaning |
-|-------|---------|
-| **low** | Stable substrate, minimal expected drift. |
-| **medium** | Occasional structural changes. |
-| **high** | Frequent redesigns, migrations, or lossy layers. |
-
----
-
-## **Multi‑Layer Flags**
-Examples:
-- `pdf + html`  
-- `image + ocr`  
-- `html + js‑rendered`  
-- `flash + html5`  
-
-Multi‑layer objects require careful stability evaluation.
-
----
-
-## **Operator Procedure**
-1. Detect substrate format(s) for the target.  
-2. Evaluate stability based on:  
-   - substrate type  
-   - collection context  
-   - regime profile  
-   - continuity kernel  
-   - transformations  
-3. Compute stability score (0–1).  
-4. Assign drift risk (low/medium/high).  
-5. Identify multi‑layer structures.  
-6. Emit outputs for DRIFTBOUND_RETRIEVAL_OPERATOR.
-
----
-
-## **Failure Modes**
-- **Ambiguous substrate:** mark as `mixed`.  
-- **Missing layers:** lower stability score.  
-- **OCR‑only snapshots:** mark as high drift risk.  
-
----
-
-## **Hand‑Off to Next Operator**
-Outputs feed directly into:
-
-### **DRIFTBOUND_RETRIEVAL_OPERATOR**  
-- format  
-- stability_score  
-- drift_risk  
-- multi_layer_flags  
-
----
-
-## **Example (Synthetic)**
-```
-Input:
-  target = "https://example.gov/records"
-  collection_id = "govdocs"
-  regime_profile = "institutional (CMS-era)"
-  continuity_kernel = ["header", "footer", "records-index"]
-  transformations = ["CMS migration", "PDF layer added"]
-
-Output:
-  format = "html + pdf"
-  stability_score = 0.78
-  drift_risk = "medium"
-  multi_layer_flags = ["html", "pdf"]
-```
-
----
-
-## **RTT/1 Mindset**
-- Substrate determines **trustworthiness**, not content.  
-- Stability is **measured**, not assumed.  
-- Mixed substrates require **layer‑aware reasoning**.  
-- Drift risk must be **explicit** in the final summary.  
-# 🟠 **WAYBACK_OPERATOR**  
-### *RTT/1 Operator Specification — archive_org Module*
-
-## **Identity**
-- **Operator Name:** WAYBACK_OPERATOR  
-- **Operator Family:** T‑Ops (Temporal Operators)  
-- **Module:** archive_org  
-- **Purpose:** Retrieve time‑indexed snapshots from the Internet Archive and measure structural drift across versions.
-
----
-
-## **Purpose (One Sentence)**
-The WAYBACK_OPERATOR retrieves all available snapshots for a target URL and produces a **drift_map**, **continuity_breaks**, and **time‑crystal stability estimate**.
-
----
-
-## **Inputs**
-| Input | Type | Description |
-|-------|------|-------------|
-| `target` | URL | The webpage or object to analyze. |
-| `constraints` | object (optional) | Time range, snapshot limits, or filtering rules. |
-
----
-
-## **Outputs**
-| Output | Description |
-|--------|-------------|
-| `snapshots` | Ordered list of IA captures with timestamps + structural metadata. |
-| `drift_map` | Structural drift levels between consecutive snapshots. |
-| `continuity_breaks` | Missing years, gaps, or discontinuities in the timeline. |
-| `time_crystal` | Stability estimate across time (0–1). |
-
----
-
-## **Operator Guarantees**
-- No content‑based reasoning.  
-- Drift measured **structurally**, not semantically.  
-- All snapshots treated as **structural objects**, not “truth.”  
-- Missing snapshots treated as **uncertainty**, not “no change.”  
-- Output is **deterministic** given the same IA data.
-
----
-
-## **Structural Drift Levels**
-| Level | Meaning |
-|-------|---------|
-| **none** | Identical structure. |
-| **minor** | Small layout/CSS shifts. |
-| **moderate** | Navigation or template changes. |
-| **high** | CMS migration, redesign, or rebuild. |
-
----
-
-## **Continuity Rules**
-- A missing year = **continuity uncertainty**, not a break.  
-- A missing *sequence* of years = **continuity break**.  
-- A redirect = **potential lineage fork** (passed to LINEAGE_OPERATOR).  
-- A CMS migration = **high drift** + **regime shift candidate**.
-
----
-
-## **Time‑Crystal Stability**
-A normalized measure of structural consistency across snapshots:
-
-```
-1.0   = highly stable (PDF-like)
-0.7   = mostly stable
-0.4   = moderate drift
-0.1   = high drift / unstable
-0.0   = no stable structure
-```
-
----
-
-## **Operator Procedure**
-1. Query IA for all snapshots of `target`.  
-2. Normalize timestamps + structural metadata.  
-3. Compare each snapshot to the next:  
-   - layout  
-   - navigation  
-   - DOM structure  
-   - template  
-   - substrate  
-4. Assign drift levels.  
-5. Detect continuity breaks.  
-6. Compute time‑crystal stability.  
-7. Emit outputs for LINEAGE_OPERATOR.
-
----
-
-## **Failure Modes**
-- **No snapshots:** return empty timeline + warning.  
-- **Sparse snapshots:** drift_map may be incomplete.  
-- **Mixed substrates:** drift may be inflated (handled by PRESERVATION_OPERATOR).  
-
----
-
-## **Hand‑Off to Next Operator**
-Outputs feed directly into:
-
-### **LINEAGE_OPERATOR**
-- `snapshots`  
-- `drift_map`  
-- `continuity_breaks`  
-- `time_crystal`
-
----
-
-## **Example (Synthetic)**
-```
-Input:
-  target = "https://example.gov/records"
-
-Output:
-  snapshots = [2014, 2017, 2020, 2023]
-  drift_map = {
-    "2014→2017": "minor",
-    "2017→2020": "high",
-    "2020→2023": "minor"
-  }
-  continuity_breaks = []
-  time_crystal = 0.62
-```
-
----
-
-## **RTT/1 Mindset**
-- Prefer **structure** over content.  
-- Prefer **lineage** over isolated snapshots.  
-- Drift is **explicit**, never implied.  
-- Missing data is **uncertainty**, not “no change.”  
+and is part of the **archive_org** module.
 # 📄 **RTT/1 Cheat Sheet — How to Analyze a Webpage Using RTTcode**  
 ### *TriadicFrameworks — archive_org Module (Student Edition)*
 
@@ -6509,152 +4088,6 @@ Always check drift + substrate.**
 - Trust **stable substrates**  
 - Make **drift explicit**  
 - Stay **continuity‑aligned**  
-# 📘 **RTTcodes for archive_org**  
-### *RTT/1‑Aligned Operator Packets for the Internet Archive Gateway*
-
-This directory contains the **RTTcode v1 operator packets** and **example packets** used by the `archive_org` module.  
-These packets define how both **students** and **AI agents** interact with the Internet Archive in a **drift‑bounded**, **continuity‑aligned**, **substrate‑aware** way.
-
-The Internet Archive is a massive time‑layered memory substrate.  
-RTT provides the **operator grammar** that makes it navigable.
-
----
-
-# 🧩 Operator Set (RTT/1)
-
-The Internet Archive gateway uses **six operators**, each defined as an RTTcode v1 packet:
-
-| Operator | Family | Purpose |
-|---------|--------|---------|
-| **WAYBACK_OPERATOR** | T‑Ops | Time‑indexed continuity + drift detection |
-| **METADATA_OPERATOR** | R‑Ops | Normalize IA metadata into RTT grammar |
-| **LINEAGE_OPERATOR** | L‑Ops | Build continuity kernel + lineage graph |
-| **COLLECTION_OPERATOR** | E‑Ops | Construct dimensional envelope |
-| **PRESERVATION_OPERATOR** | B‑Ops | Substrate stability + boundary detection |
-| **DRIFTBOUND_RETRIEVAL_OPERATOR** | C‑Ops | Final synthesis + drift‑bounded retrieval |
-
-Each operator has:
-
-- strict inputs  
-- strict outputs  
-- drift rules  
-- continuity rules  
-- substrate rules  
-
-All packets are **schema‑valid** under `rttcode.v1.json`.
-
----
-
-# 🔁 Agentic Workflow (Full Chain)
-
-Every retrieval from the Internet Archive must pass through the full operator chain:
-
-1. **METADATA_OPERATOR**  
-2. **WAYBACK_OPERATOR**  
-3. **LINEAGE_OPERATOR**  
-4. **COLLECTION_OPERATOR**  
-5. **PRESERVATION_OPERATOR**  
-6. **DRIFTBOUND_RETRIEVAL_OPERATOR**
-
-This ensures:
-
-- no direct content reasoning  
-- drift is always measured  
-- lineage is always preferred  
-- substrate is always respected  
-- continuity is always explicit  
-
-This is the **RTT/1 safety boundary** for agentic use of archive.org.
-
----
-
-# 📦 Operator Packets
-
-The following RTTcode packets define the operators:
-
-```
-RTT_WAYBACK_OPERATOR_v1.json
-RTT_METADATA_OPERATOR_v1.json
-RTT_LINEAGE_OPERATOR_v1.json
-RTT_COLLECTION_OPERATOR_v1.json
-RTT_PRESERVATION_OPERATOR_v1.json
-RTT_DRIFTBOUND_RETRIEVAL_OPERATOR_v1.json
-```
-
-Each packet is:
-
-- minimal  
-- schema‑valid  
-- drift‑bounded  
-- ready for use by AIs and students  
-
----
-
-# 🧪 Example Packets (Full Runs)
-
-Three complete examples demonstrate the **entire six‑operator chain** applied to real Internet Archive collections:
-
-```
-RTT_EXAMPLE_ARCHIVE_ORG_government_documents_v1.json
-RTT_EXAMPLE_ARCHIVE_ORG_vintagesoftware_v1.json
-RTT_EXAMPLE_ARCHIVE_ORG_journals_v1.json
-```
-
-Each example includes:
-
-- metadata normalization  
-- snapshot retrieval  
-- drift mapping  
-- continuity kernel  
-- envelope construction  
-- substrate profile  
-- final drift‑bounded summary  
-
-These examples are ideal for:
-
-- student learning  
-- AI testing  
-- operator debugging  
-- workflow validation  
-
----
-
-# 🎓 How Students Use These Packets
-
-Students can:
-
-- inspect each operator’s inputs/outputs  
-- follow the continuity chain  
-- see drift and substrate warnings  
-- compare stable vs unstable snapshots  
-- understand how IA objects evolve over time  
-
-This directory is part of the **teaching substrate** for RTT.
-
----
-
-# 🤖 How AIs Use These Packets
-
-AIs use these packets as:
-
-- **contracts** (I/O rules)  
-- **safety boundaries** (drift, substrate, lineage)  
-- **workflow steps** (operator order)  
-- **validation tools** (schema‑checked)  
-
-No agent may bypass the operator chain.
-
----
-
-# 📍 Location
-
-This file lives at:
-
-```
-/docs/archive_org/RTTcodes/README.md
-```
-
-and is part of the **archive_org** module.
 # ============================================================
 # 📝 TEACHER RUBRIC (PRINTABLE)
 # TRACE THE LINEAGE OF A WEBPAGE USING RTTcode
@@ -7690,6 +5123,2574 @@ ____________________________________________________________
 ------------------------------------------------------------
 END OF WORKSHEET
 ------------------------------------------------------------
+# ✅ **ARCHIVE_ORG OPERATOR CHAIN — WALL POSTER (SVG)**  
+### *drop‑in ready for `/docs/archive_org/assets/posters/operator_chain_wall_poster.svg`*
+
+---
+
+<img width="658" height="942" alt="operator_chain_wall_poster" src="https://github.com/user-attachments/assets/0bac63c9-1178-46e9-a336-15079898df98" />
+
+---
+
+```svg
+<svg width="1400" height="2000" viewBox="0 0 1400 2000" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="1400" height="2000" fill="#f7f7f7"/>
+
+  <!-- Title -->
+  <text x="700" y="140" font-family="Arial, sans-serif" font-size="64" font-weight="700" text-anchor="middle" fill="#222">
+    RTT OPERATOR CHAIN — ARCHIVE_ORG MODULE
+  </text>
+
+  <!-- Subtitle -->
+  <text x="700" y="210" font-family="Arial, sans-serif" font-size="32" text-anchor="middle" fill="#444">
+    Structural Analysis • Drift • Continuity • Substrate Stability
+  </text>
+
+  <!-- Operator Box Template -->
+  <defs>
+    <g id="opbox">
+      <rect width="1100" height="180" rx="18" fill="#ffffff" stroke="#222" stroke-width="3"/>
+    </g>
+  </defs>
+
+  <!-- METADATA_OPERATOR -->
+  <use href="#opbox" x="150" y="300"/>
+  <text x="700" y="370" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    1. METADATA_OPERATOR
+  </text>
+  <text x="700" y="420" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Identify substrate • regime • drift sensitivity • coherence
+  </text>
+
+  <!-- WAYBACK_OPERATOR -->
+  <use href="#opbox" x="150" y="540"/>
+  <text x="700" y="610" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    2. WAYBACK_OPERATOR
+  </text>
+  <text x="700" y="660" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Collect snapshots • detect drift • find continuity breaks
+  </text>
+
+  <!-- LINEAGE_OPERATOR -->
+  <use href="#opbox" x="150" y="780"/>
+  <text x="700" y="850" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    3. LINEAGE_OPERATOR
+  </text>
+  <text x="700" y="900" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Map structural evolution • template shifts • CMS migrations
+  </text>
+
+  <!-- COLLECTION_OPERATOR -->
+  <use href="#opbox" x="150" y="1020"/>
+  <text x="700" y="1090" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    4. COLLECTION_OPERATOR
+  </text>
+  <text x="700" y="1140" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Identify IA collection • coherence clusters • related objects
+  </text>
+
+  <!-- PRESERVATION_OPERATOR -->
+  <use href="#opbox" x="150" y="1260"/>
+  <text x="700" y="1330" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    5. PRESERVATION_OPERATOR
+  </text>
+  <text x="700" y="1380" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Evaluate substrate stability • drift risk • multi-layer flags
+  </text>
+
+  <!-- DRIFTBOUND_RETRIEVAL_OPERATOR -->
+  <use href="#opbox" x="150" y="1500"/>
+  <text x="700" y="1570" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    6. DRIFTBOUND_RETRIEVAL_OPERATOR
+  </text>
+  <text x="700" y="1620" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Determine earliest stable version • choose most reliable snapshot
+  </text>
+
+  <!-- Footer -->
+  <text x="700" y="1900" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#666">
+    TriadicFrameworks — archive_org Module • RTT/1 Structural Operator Chain
+  </text>
+
+</svg>
+```
+
+---
+
+# ✔️ This SVG is ready to paste directly into our repo.
+
+If you want, you can also generate:
+
+- a **dark‑mode version**  
+- a **narrow‑format version** for mobile  
+- a **horizontal banner**  
+- a **glyph‑accented version** matching your time‑crystal aesthetic  
+- or a **multi‑module operator chain poster**  
+
+Just tell AI what you want next.
+## A visual operator diagram (SVG) for archive_org
+
+<img width="1502" height="658" alt="Operator_Lattice_RTT_1" src="https://github.com/user-attachments/assets/62a1ca83-0526-4b6a-b374-013ddbda0a54" />
+
+---
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+
+  <!-- Background -->
+  <rect x="0" y="0" width="960" height="420" fill="#050816" />
+
+  <!-- Title -->
+  <text x="480" y="40" fill="#E5E7EB" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="20" text-anchor="middle">
+    archive_org — Internet Archive Operator Lattice (RTT/1)
+  </text>
+
+  <!-- Input: Target + Goal -->
+  <rect x="60" y="80" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#4B5563" stroke-width="1.5" />
+  <text x="170" y="110" fill="#E5E7EB" font-family="system-ui" font-size="14" text-anchor="middle">
+    REQUEST
+  </text>
+  <text x="170" y="128" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
+    goal + target (archive.org URL)
+  </text>
+
+  <!-- METADATA_OPERATOR -->
+  <rect x="360" y="80" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#6366F1" stroke-width="1.5" />
+  <text x="470" y="105" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
+    METADATA_OPERATOR
+  </text>
+  <text x="470" y="123" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
+    normalize IA metadata → RTT fields
+  </text>
+
+  <!-- Arrow: REQUEST → METADATA -->
+  <line x1="280" y1="110" x2="360" y2="110" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
+
+  <!-- WAYBACK_OPERATOR -->
+  <rect x="660" y="80" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#F97316" stroke-width="1.5" />
+  <text x="770" y="105" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
+    WAYBACK_OPERATOR
+  </text>
+  <text x="770" y="123" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
+    snapshots + drift_map + continuity_breaks
+  </text>
+
+  <!-- Arrow: METADATA → WAYBACK -->
+  <line x1="580" y1="110" x2="660" y2="110" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
+
+  <!-- LINEAGE_OPERATOR -->
+  <rect x="360" y="180" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#10B981" stroke-width="1.5" />
+  <text x="470" y="205" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
+    LINEAGE_OPERATOR
+  </text>
+  <text x="470" y="223" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
+    continuity kernel + lineage_graph
+  </text>
+
+  <!-- Arrow: WAYBACK → LINEAGE -->
+  <line x1="770" y1="140" x2="770" y2="180" stroke="#9CA3AF" stroke-width="1.5" />
+  <line x1="770" y1="180" x2="580" y2="210" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
+
+  <!-- COLLECTION_OPERATOR -->
+  <rect x="60" y="180" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#EC4899" stroke-width="1.5" />
+  <text x="170" y="205" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
+    COLLECTION_OPERATOR
+  </text>
+  <text x="170" y="223" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
+    dimensional envelope + related objects
+  </text>
+
+  <!-- Arrow: METADATA → COLLECTION -->
+  <line x1="470" y1="140" x2="470" y2="180" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
+  <line x1="360" y1="210" x2="280" y2="210" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
+
+  <!-- PRESERVATION_OPERATOR -->
+  <rect x="660" y="180" width="220" height="60" rx="8" ry="8" fill="#111827" stroke="#F59E0B" stroke-width="1.5" />
+  <text x="770" y="205" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
+    PRESERVATION_OPERATOR
+  </text>
+  <text x="770" y="223" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
+    substrate format + stability + drift_risk
+  </text>
+
+  <!-- Arrow: METADATA → PRESERVATION -->
+  <line x1="470" y1="140" x2="470" y2="180" stroke="#9CA3AF" stroke-width="1.5" />
+  <line x1="580" y1="210" x2="660" y2="210" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
+
+  <!-- DRIFTBOUND_RETRIEVAL_OPERATOR -->
+  <rect x="360" y="300" width="220" height="70" rx="8" ry="8" fill="#111827" stroke="#8B5CF6" stroke-width="1.5" />
+  <text x="470" y="325" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
+    DRIFTBOUND_RETRIEVAL_OPERATOR
+  </text>
+  <text x="470" y="343" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
+    final synthesis + answer + warnings
+  </text>
+
+  <!-- Arrows into DRIFTBOUND_RETRIEVAL -->
+  <line x1="470" y1="240" x2="470" y2="300" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
+  <line x1="170" y1="240" x2="170" y2="280" stroke="#9CA3AF" stroke-width="1.5" />
+  <line x1="170" y1="280" x2="360" y2="310" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
+  <line x1="770" y1="240" x2="770" y2="280" stroke="#9CA3AF" stroke-width="1.5" />
+  <line x1="770" y1="280" x2="580" y2="310" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
+
+  <!-- Output: Answer -->
+  <rect x="660" y="300" width="220" height="70" rx="8" ry="8" fill="#111827" stroke="#4B5563" stroke-width="1.5" />
+  <text x="770" y="325" fill="#E5E7EB" font-family="system-ui" font-size="13" text-anchor="middle">
+    ANSWER
+  </text>
+  <text x="770" y="343" fill="#9CA3AF" font-family="system-ui" font-size="11" text-anchor="middle">
+    drift-bounded, continuity-aligned summary
+  </text>
+
+  <!-- Arrow: DRIFTBOUND → ANSWER -->
+  <line x1="580" y1="335" x2="660" y2="335" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)" />
+
+  <!-- Legend -->
+  <rect x="60" y="320" width="240" height="70" rx="8" ry="8" fill="#020617" stroke="#374151" stroke-width="1" />
+  <text x="80" y="340" fill="#9CA3AF" font-family="system-ui" font-size="11">Legend:</text>
+
+  <circle cx="80" cy="358" r="4" fill="#6366F1" />
+  <text x="92" y="361" fill="#9CA3AF" font-family="system-ui" font-size="10">metadata / relations</text>
+
+  <circle cx="80" cy="374" r="4" fill="#F97316" />
+  <text x="92" y="377" fill="#9CA3AF" font-family="system-ui" font-size="10">time / snapshots</text>
+
+  <circle cx="180" cy="358" r="4" fill="#10B981" />
+  <text x="192" y="361" fill="#9CA3AF" font-family="system-ui" font-size="10">lineage / continuity</text>
+
+  <circle cx="180" cy="374" r="4" fill="#F59E0B" />
+  <text x="192" y="377" fill="#9CA3AF" font-family="system-ui" font-size="10">substrate / preservation</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#9CA3AF" />
+    </marker>
+  </defs>
+</svg>
+```
+# **RTT Operator Lab — Instructor Version**  
+### *archive_org module — instructor_materials/operator_lab_instructor.md*
+
+---
+
+# **Purpose of This Instructor Guide**
+
+This guide provides:
+
+- expected student outputs  
+- structural reasoning notes  
+- common misconceptions  
+- grading guidance  
+- operator‑chain alignment  
+
+It corresponds directly to the **student RTT Operator Lab** in:
+
+```
+/docs/archive_org/RTTcodes/operator_lab.md
+```
+
+All reasoning is **structural**, not content‑based.
+
+---
+
+# **Lab Overview**
+
+Students practice the full RTT operator chain using a synthetic Internet Archive URL.  
+They learn to:
+
+- read snapshot timelines  
+- classify drift  
+- identify continuity kernels  
+- detect regime shifts  
+- evaluate substrate stability  
+- choose the most reliable snapshot  
+
+This instructor version includes **expected answers** and **diagnostic notes** for each step.
+
+---
+
+# **Scenario Used in the Lab**
+
+**Target URL:**  
+`https://archive.org/details/sample-training-page`
+
+**Snapshots:**  
+2013, 2016, 2019, 2023
+
+**Structural Changes:**  
+- 2013 → 2016: minor template update  
+- 2016 → 2019: navigation restructure  
+- 2019 → 2023: minor CSS shift  
+
+**Substrate:** HTML  
+**Collection:** govdocs  
+
+---
+
+# **Operator‑by‑Operator Instructor Notes**
+
+---
+
+## **1. METADATA_OPERATOR**
+
+### **Expected Student Output**
+- Substrate: HTML  
+- Regime: institutional  
+- Drift sensitivity: low  
+- Coherence: high  
+- Lineage IDs: synthetic (e.g., “govdocs-root”)  
+
+### **Instructor Notes**
+Students should identify **structural metadata**, not content.  
+Common error: describing the *topic* of the page instead of its *structure*.
+
+---
+
+## **2. WAYBACK_OPERATOR**
+
+### **Expected Student Output**
+- Snapshots: 2013, 2016, 2019, 2023  
+- Drift map:  
+  - 2013→2016: minor  
+  - 2016→2019: moderate  
+  - 2019→2023: minor  
+- Continuity breaks: none  
+- Time crystal: any value between 0.6–0.9 is acceptable  
+
+### **Instructor Notes**
+Students often confuse **visual differences** with **structural drift**.  
+Remind them: drift is about **layout, navigation, template**, not content.
+
+---
+
+## **3. LINEAGE_OPERATOR**
+
+### **Expected Student Output**
+- Lineage graph:  
+  - template update  
+  - navigation restructure  
+  - CSS shift  
+- Transformations: list of the above  
+- Regime shifts: none  
+- Continuity kernel:  
+  - header  
+  - footer  
+  - records index  
+
+### **Instructor Notes**
+The continuity kernel must be **structural** and **persistent**.  
+Students sometimes list content blocks — redirect them to layout elements.
+
+---
+
+## **4. COLLECTION_OPERATOR**
+
+### **Expected Student Output**
+- Collection ID: govdocs  
+- Coherence clusters:  
+  - public‑records  
+  - agency‑index  
+- Related objects: synthetic examples  
+- Regime profile: institutional  
+
+### **Instructor Notes**
+Students should not infer meaning from the collection name.  
+They should focus on **structural similarity**.
+
+---
+
+## **5. PRESERVATION_OPERATOR**
+
+### **Expected Student Output**
+- Format: HTML  
+- Stability score: ~0.8  
+- Drift risk: low  
+- Multi‑layer flags: ["html"]  
+
+### **Instructor Notes**
+Students must justify stability based on **substrate**, not content.  
+HTML is stable but drift‑prone; PDF would be more stable.
+
+---
+
+## **6. DRIFTBOUND_RETRIEVAL_OPERATOR**
+
+### **Expected Student Output**
+- Earliest stable version: 2013  
+- Most reliable version: 2023  
+- Key changes:  
+  - template update  
+  - navigation restructure  
+  - CSS shift  
+- Warnings: none  
+- Final answer: 2023 is most reliable due to stability + continuity  
+
+### **Instructor Notes**
+Students must combine:
+
+- drift  
+- continuity  
+- substrate stability  
+- absence of breaks  
+
+The newest snapshot is correct **only because** it is structurally stable.
+
+---
+
+# **Grading Guidance**
+
+| Skill | Points | Criteria |
+|-------|--------|----------|
+| Drift Classification | 10 | Correct minor/moderate distinctions |
+| Continuity Kernel | 10 | Identifies persistent structural elements |
+| Substrate Reasoning | 10 | Correct stability logic |
+| Regime Shifts | 5 | Correctly identifies none |
+| Continuity Breaks | 5 | Correctly identifies none |
+| Final Snapshot Choice | 10 | RTT‑aligned justification |
+| **Total** | **50** | |
+
+**Mastery:** 45–50  
+**Proficiency:** 38–44  
+**Developing:** 30–37  
+**Needs Support:** ≤29  
+
+---
+
+# **Common Student Misconceptions**
+
+- Confusing **content changes** with **structural drift**  
+- Treating **visual differences** as drift  
+- Misidentifying **substrate stability**  
+- Assuming the newest snapshot is always best  
+- Listing content blocks as continuity kernel elements  
+
+---
+
+# **Instructor Tips**
+
+- Emphasize structure over content.  
+- Encourage students to sketch snapshot layouts.  
+- Reinforce that drift is **structural**, not semantic.  
+- Use the continuity kernel as the anchor for reasoning.  
+# **RTT Mastery Scenario Gauntlet — Instructor Version**  
+### *archive_org module — instructor_materials/scenario_gauntlet_instructor.md*
+
+---
+
+# **Purpose of This Instructor Guide**
+
+This guide provides:
+
+- correct answers for all five scenarios  
+- structural reasoning aligned with RTT/1  
+- common student misconceptions  
+- grading notes for each task  
+- operator‑chain alignment  
+
+All reasoning is **structural**, not content‑based.
+
+---
+
+# **Scenario 1 — Government Records Portal**
+
+**Snapshots:** 2012, 2013, 2016, 2019, 2023  
+**Structural Changes:**  
+- 2012→2013: none  
+- 2013→2016: template update  
+- 2016→2019: navigation restructure  
+- 2019→2023: minor CSS shift  
+**Substrate:** HTML  
+**Collection:** govdocs  
+
+### **Instructor Key**
+
+**1. Drift Levels**  
+- 2012→2013: none  
+- 2013→2016: minor  
+- 2016→2019: moderate  
+- 2019→2023: minor  
+
+**2. Continuity Kernel**  
+- header  
+- footer  
+- records index  
+
+**3. Continuity Breaks**  
+- none  
+
+**4. Substrate Stability**  
+- HTML → medium stability  
+
+**5. Most Reliable Snapshot**  
+- **2023**  
+**Reasoning:** low drift, strong continuity, stable substrate, no breaks.
+
+---
+
+# **Scenario 2 — Vintage Software Index**
+
+**Snapshots:** 2011, 2014, 2018, 2022  
+**Structural Changes:**  
+- 2011→2014: none  
+- 2014→2018: minor layout update  
+- 2018→2022: none  
+**Substrate:** HTML  
+**Collection:** vintagesoftware  
+
+### **Instructor Key**
+
+**1. Drift Levels**  
+- none  
+- minor  
+- none  
+
+**2. Continuity Kernel**  
+- header  
+- footer  
+- version listing  
+
+**3. Stability & Drift Risk**  
+- very high stability  
+- technical collections tend to be versioned and stable  
+
+**4. Why Stable?**  
+- versioned systems rarely change structure  
+- minimal redesign pressure  
+
+**5. Most Reliable Snapshot**  
+- **2022**
+
+---
+
+# **Scenario 3 — Academic Journal Archive**
+
+**Snapshots:** 2012, 2015, 2018, 2021, 2024  
+**Structural Changes:**  
+- 2012→2015: template refresh  
+- 2015→2018: navigation restructure  
+- 2018→2021: CMS migration  
+- 2021→2024: minor CSS update  
+**Substrate:** Mixed (HTML + PDF)  
+**Collection:** journals  
+
+### **Instructor Key**
+
+**1. Drift Levels**  
+- minor  
+- moderate  
+- high (CMS migration)  
+- minor  
+
+**2. Regime Shift**  
+- 2018: static → CMS  
+
+**3. Continuity Kernel**  
+- header  
+- footer  
+- journal index  
+- issue listing  
+
+**4. Mixed Substrate Notes**  
+- PDF layer increases stability  
+- HTML layer drift must be considered  
+
+**5. Most Reliable Snapshot**  
+- **2024**  
+**Reasoning:** post‑migration stabilization + strong continuity + mixed stability.
+
+---
+
+# **Scenario 4 — Local News Archive**
+
+**Snapshots:** 2010, 2011, 2013, 2016, 2017, 2020, 2024  
+**Structural Changes:**  
+- 2010→2011: minor CSS  
+- 2011→2013: moderate layout  
+- 2013→2016: high (redesign)  
+- 2016→2017: none  
+- 2017→2020: high (CMS migration)  
+- 2020→2024: minor CSS  
+**Substrate:** HTML  
+**Collection:** news  
+
+### **Instructor Key**
+
+**1. Drift Levels**  
+- minor  
+- moderate  
+- high  
+- none  
+- high  
+- minor  
+
+**2. Continuity Breaks**  
+- none in timeline  
+- structural breaks due to redesign + CMS migration  
+
+**3. Continuity Kernel**  
+- weak or minimal  
+(news sites often lack stable structure)
+
+**4. Why High Drift?**  
+- frequent redesigns  
+- business‑driven layout changes  
+- CMS migrations common  
+
+**5. Most Reliable Snapshot**  
+- **2024**  
+**Reasoning:** post‑migration stabilization; earlier snapshots unstable.
+
+---
+
+# **Scenario 5 — Museum Exhibit Archive**
+
+**Snapshots:** 2013, 2014, 2016, 2019, 2023  
+**Structural Changes:**  
+- 2013→2014: none  
+- 2014→2016: minor layout update  
+- 2016→2019: mixed substrate introduced  
+- 2019→2023: navigation restructure  
+**Substrate:** Mixed  
+**Collection:** cultural  
+
+### **Instructor Key**
+
+**1. Drift Levels**  
+- none  
+- minor  
+- moderate (substrate change)  
+- moderate  
+
+**2. Continuity Kernel**  
+- header  
+- footer  
+- exhibit index  
+
+**3. Mixed Substrate Notes**  
+- HTML + image → medium stability  
+- image layer increases stability  
+- HTML layer drift must be considered  
+
+**4. Regime Shifts**  
+- 2016: HTML → mixed substrate  
+
+**5. Most Reliable Snapshot**  
+- **2023**  
+**Reasoning:** stable mixed substrate + strong continuity + post‑shift stabilization.
+
+---
+
+# **Grading Guidance**
+
+| Skill | Points | Criteria |
+|-------|--------|----------|
+| Drift Analysis | 10 | Correct minor/moderate/high distinctions |
+| Continuity Kernel | 10 | Identifies persistent structural elements |
+| Substrate Reasoning | 10 | Correct stability logic |
+| Regime Shifts | 5 | Correct identification and explanation |
+| Continuity Breaks | 5 | Correct detection and interpretation |
+| Final Snapshot Choice | 10 | RTT‑aligned justification |
+| **Total** | **50** | |
+
+**Mastery:** 45–50  
+**Proficiency:** 38–44  
+**Developing:** 30–37  
+**Needs Support:** ≤29  
+
+---
+
+# **Common Student Misconceptions**
+
+- Confusing **content changes** with **structural drift**  
+- Treating **visual differences** as drift  
+- Misidentifying substrate stability  
+- Assuming newest snapshot is always best  
+- Listing content blocks as continuity kernel elements  
+
+---
+
+# **Instructor Tips**
+
+- Emphasize structure over content  
+- Encourage sketching snapshot layouts  
+- Reinforce drift as **structural**, not semantic  
+- Use continuity kernel as anchor for reasoning  
+# **Teacher Rubric (Printable Edition)**  
+### *archive_org module — instructor_materials/teacher_rubric_printable.md*
+
+---
+
+## **Purpose**
+
+This rubric evaluates student mastery of the archive_org module using RTT structural reasoning:
+
+- drift classification  
+- continuity kernel identification  
+- substrate stability reasoning  
+- regime shift detection  
+- continuity break interpretation  
+- final snapshot selection using RTT logic  
+
+All evaluation is **structural**, not content‑based.
+
+---
+
+## **Scoring Overview**
+
+| Category | Points | Description |
+|---------|--------|-------------|
+| Drift Analysis | 10 | Correct drift levels across comparisons; distinguishes minor/moderate/high. |
+| Continuity Kernel | 10 | Identifies persistent structural elements across snapshots. |
+| Substrate Reasoning | 10 | Evaluates stability (PDF > HTML > OCR) and mixed‑layer risk. |
+| Regime Shifts | 5 | Detects major structural transitions (e.g., static → CMS). |
+| Continuity Breaks | 5 | Identifies missing years and explains uncertainty. |
+| Final Snapshot Choice | 10 | Chooses most reliable version using drift + continuity + substrate. |
+| **Total** | **50** | |
+
+---
+
+## **Performance Levels**
+
+### **Mastery (45–50 points)**  
+- Drift levels correct across all scenarios  
+- Continuity kernel identified with precision  
+- Substrate stability reasoning consistently correct  
+- Regime shifts detected and explained  
+- Continuity breaks correctly interpreted  
+- Final snapshot choices fully RTT‑aligned  
+
+### **Proficiency (38–44 points)**  
+- Mostly correct drift and continuity reasoning  
+- Minor substrate or regime‑shift errors  
+- Snapshot choices reasonable but not fully justified  
+
+### **Developing (30–37 points)**  
+- Drift classification inconsistent  
+- Continuity kernel partially correct  
+- Substrate reasoning incomplete  
+- Snapshot choices weakly justified  
+
+### **Needs Support (≤29 points)**  
+- Drift misunderstood  
+- Continuity kernel missing or incorrect  
+- Substrate reasoning absent  
+- Snapshot choices not grounded in RTT logic  
+
+---
+
+## **Evaluation Criteria (Detailed)**
+
+### **1. Drift Analysis (10 pts)**  
+Students should:  
+- classify drift using structural changes only  
+- identify redesigns, template shifts, navigation changes, CMS migrations  
+- avoid content‑based reasoning  
+
+### **2. Continuity Kernel (10 pts)**  
+Students should identify elements that persist across snapshots:  
+- header  
+- footer  
+- navigation skeleton  
+- index pages  
+- stable layout blocks  
+
+### **3. Substrate Reasoning (10 pts)**  
+Students should:  
+- rank stability (PDF > image > HTML > OCR)  
+- recognize mixed‑layer risk  
+- explain why stable substrates produce reliable snapshots  
+
+### **4. Regime Shifts (5 pts)**  
+Students should detect major structural transitions:  
+- static → CMS  
+- HTML → PDF  
+- single‑page → multi‑page  
+
+### **5. Continuity Breaks (5 pts)**  
+Students should:  
+- identify missing years in timeline  
+- explain uncertainty introduced by gaps  
+
+### **6. Final Snapshot Choice (10 pts)**  
+Students must justify their choice using:  
+- drift  
+- continuity  
+- substrate stability  
+- absence of breaks  
+- post‑migration stabilization  
+
+---
+
+## **Instructor Notes**
+
+- Emphasize **structure over content**.  
+- Students often confuse visual changes with structural drift — remind them to focus on layout, navigation, templates, and substrate.  
+- Mixed substrates require careful, layer‑aware evaluation.  
+- The newest snapshot is not always the most reliable; stability and continuity matter more.  
+# **Teacher’s Key — archive_org Module**  
+### *instructor_materials/teachers_key.md*
+
+---
+
+# **1. Purpose of This Key**
+
+This key provides:
+
+- correct answers  
+- structural reasoning  
+- drift classifications  
+- continuity kernel identification  
+- substrate stability explanations  
+- operator‑chain logic  
+
+It covers **all student materials**:
+
+- Worksheet  
+- Printable Worksheet  
+- Cheat Sheet  
+- Operator Quick Reference Card  
+- Mini‑Quiz  
+- Extended Quiz  
+- Mastery Exam (25q)  
+- Mastery Scenario Gauntlet  
+
+All answers follow **RTT/1 structural reasoning** and avoid content‑based interpretation.
+
+---
+
+# **2. Core Concepts (Instructor Reference)**
+
+### **Drift Levels**
+- **None** — identical structure  
+- **Minor** — small layout/style changes  
+- **Moderate** — navigation or template changes  
+- **High** — redesign or CMS migration  
+
+### **Substrate Stability**
+- **PDF** — highest stability  
+- **Image** — stable but incomplete  
+- **HTML** — drift‑prone  
+- **OCR** — lossy, high drift  
+- **Mixed** — requires layer‑aware evaluation  
+
+### **Continuity Kernel**
+Elements that persist across snapshots:
+- header  
+- footer  
+- navigation skeleton  
+- index pages  
+- stable structural blocks  
+
+### **Regime Shifts**
+Major structural transitions:
+- static → CMS  
+- HTML → PDF  
+- single‑page → multi‑page  
+
+---
+
+# **3. Worksheet Answer Key**
+
+### **Snapshot List**
+Any 4–6 years from the Wayback timeline.
+
+### **Drift Identification**
+- Compare structure only (not content).  
+- Minor = CSS/layout tweaks  
+- Moderate = navigation/template changes  
+- High = redesign/CMS migration  
+
+### **Continuity Kernel**
+Typical correct answers:
+- header  
+- footer  
+- main menu  
+- index page  
+
+### **Substrate Stability**
+Correct reasoning:
+- PDF > HTML > OCR  
+- Mixed requires caution  
+
+### **Most Reliable Version**
+Correct logic:
+- lowest drift  
+- strongest continuity  
+- most stable substrate  
+- no continuity breaks  
+
+---
+
+# **4. Mini‑Quiz Answer Key**
+
+1 — B  
+2 — B  
+3 — A  
+4 — C  
+5 — C  
+
+---
+
+# **5. Extended Quiz (10q) Answer Key**
+
+### **Multiple Choice**
+1 — B  
+2 — B  
+3 — C  
+4 — A  
+5 — C  
+6 — B  
+7 — C  
+8 — B  
+9 — A  
+10 — B  
+
+### **Short Answer**
+11. Drift = structural change between snapshots.  
+12. Continuity kernel = elements that stay the same across snapshots.  
+13. Minor drift: CSS tweaks, small layout shifts.  
+14. High drift: redesign, CMS migration.  
+15. PDFs preserve layout and do not depend on live HTML/CSS.  
+16. WAYBACK_OPERATOR shows timeline + drift.  
+17. PRESERVATION_OPERATOR evaluates substrate stability + drift risk.  
+18. Regime shift = major structural change (e.g., static → CMS).  
+19. Stable substrates produce more reliable snapshots.  
+20. COLLECTION_OPERATOR identifies IA collection + related objects.  
+
+---
+
+# **6. Mastery Exam (25q) Answer Key**
+
+### **Multiple Choice**
+1 — B  
+2 — B  
+3 — C  
+4 — A  
+5 — C  
+6 — B  
+7 — C  
+8 — B  
+9 — A  
+10 — B  
+
+### **Short Answer**
+11. Drift = structural change between snapshots.  
+12. Continuity kernel = persistent structural elements.  
+13. Minor drift: CSS tweaks, small layout shifts.  
+14. High drift: redesign, CMS migration.  
+15. PDFs preserve layout; HTML depends on live rendering.  
+16. WAYBACK_OPERATOR shows timeline + drift.  
+17. PRESERVATION_OPERATOR evaluates stability + drift risk.  
+18. Regime shift = major structural transition.  
+19. Stable substrates → reliable snapshots.  
+20. COLLECTION_OPERATOR identifies IA collection + related objects.  
+
+### **Applied Analysis**
+21. Moderate drift — navigation + layout changes.  
+22. Missing years = continuity break → uncertainty.  
+23. PDF layer increases stability.  
+24. LINEAGE_OPERATOR detects CMS migration → high drift.  
+25. Choose snapshot with low drift, strong continuity, stable substrate.  
+
+---
+
+# **7. Mastery Scenario Gauntlet — Instructor Key**
+
+## **Scenario 1 — Government Records Portal**
+
+### Drift Levels
+- 2012→2013: none  
+- 2013→2016: minor  
+- 2016→2019: moderate  
+- 2019→2023: minor  
+
+### Continuity Kernel
+- header  
+- footer  
+- records index  
+
+### Continuity Breaks
+- none  
+
+### Substrate Stability
+- HTML → medium stability  
+
+### Most Reliable Snapshot
+- **2023** (highest stability, low drift, no breaks)
+
+---
+
+## **Scenario 2 — Vintage Software Index**
+
+### Drift Levels
+- 2011→2014: none  
+- 2014→2018: minor  
+- 2018→2022: none  
+
+### Continuity Kernel
+- header  
+- footer  
+- version listing  
+
+### Stability
+- very high (technical collection, versioned)
+
+### Most Reliable Snapshot
+- **2022**
+
+---
+
+## **Scenario 3 — Academic Journal Archive**
+
+### Drift Levels
+- 2012→2015: minor  
+- 2015→2018: moderate  
+- 2018→2021: high (CMS migration)  
+- 2021→2024: minor  
+
+### Regime Shift
+- 2018: static → CMS  
+
+### Continuity Kernel
+- header  
+- footer  
+- journal index  
+- issue listing  
+
+### Substrate Stability
+- mixed (HTML + PDF) → medium‑high  
+
+### Most Reliable Snapshot
+- **2024**
+
+---
+
+## **Scenario 4 — Local News Archive**
+
+### Drift Levels
+- 2010→2011: minor  
+- 2011→2013: moderate  
+- 2013→2016: high (redesign)  
+- 2016→2017: none  
+- 2017→2020: high (CMS migration)  
+- 2020→2024: minor  
+
+### Continuity Breaks
+- none in timeline  
+- structural breaks due to redesign + CMS migration  
+
+### Continuity Kernel
+- weak or minimal  
+
+### Most Reliable Snapshot
+- **2024** (post‑migration stabilization)
+
+---
+
+## **Scenario 5 — Museum Exhibit Archive**
+
+### Drift Levels
+- 2013→2014: none  
+- 2014→2016: minor  
+- 2016→2019: moderate (mixed substrate introduced)  
+- 2019→2023: moderate (navigation restructure)  
+
+### Continuity Kernel
+- header  
+- footer  
+- exhibit index  
+
+### Regime Shifts
+- 2016: HTML → mixed substrate  
+
+### Most Reliable Snapshot
+- **2023**
+
+---
+
+# **8. Instructor Notes**
+
+- Students often confuse **content changes** with **structural drift** — remind them to focus on layout, navigation, templates, and substrate.  
+- Mixed substrates require careful evaluation; emphasize layer‑aware reasoning.  
+- Continuity breaks are not “errors” — they are signals of uncertainty.  
+- The most reliable snapshot is not always the newest; it is the one with the best combination of:  
+  - low drift  
+  - strong continuity  
+  - stable substrate  
+  - no breaks  
+# 🟪 **AI Interface — archive_org Module**  
+### *RTT/1 Interface Specification*
+
+## **Identity**
+- **Interface Name:** ai_interface  
+- **Module:** archive_org  
+- **Purpose:** Define the contract, modes, inputs, outputs, and behavioral rules for AI agents interacting with the Internet Archive using the RTT operator chain.
+
+---
+
+# 1. **Interface Purpose**
+The AI interface provides a **strict, deterministic, operator‑first contract** that governs how an AI agent must:
+
+- receive requests  
+- execute the six‑operator chain  
+- enforce drift‑bounded reasoning  
+- avoid content‑based inference  
+- produce continuity‑aligned answers  
+
+This interface is the **only valid entrypoint** for AI execution in the archive_org module.
+
+---
+
+# 2. **Entrypoint**
+
+The AI interface exposes a single entrypoint:
+
+```
+archive_org_agent.handle_request(goal, target, constraints)
+```
+
+Where:
+
+- **goal** = what the user wants (explain, audit, compare, locate_stable)  
+- **target** = the IA URL  
+- **constraints** = optional filters (time range, snapshot limits, etc.)
+
+The entrypoint **must** execute the full operator chain before producing any answer.
+
+---
+
+# 3. **Inputs**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `goal` | string | The agent’s mode (explain, audit, compare, locate_stable). |
+| `target` | URL | The Internet Archive object to analyze. |
+| `constraints` | object (optional) | Time range, snapshot filters, or structural constraints. |
+
+---
+
+# 4. **Outputs**
+
+| Field | Description |
+|--------|-------------|
+| `answer` | Final drift‑bounded retrieval. |
+| `operators_used` | List of operators executed (always all six). |
+| `warnings` | Drift, continuity, or substrate warnings. |
+| `artifacts` | Structured outputs from each operator. |
+
+---
+
+# 5. **Supported Modes**
+
+The AI interface supports four modes, all of which still require the full operator chain:
+
+### **1. explain**
+Explain operator outputs, drift, lineage, substrate, or continuity.
+
+### **2. audit**
+Verify structural correctness, drift levels, or lineage mapping.
+
+### **3. compare**
+Compare two snapshots structurally (not semantically).
+
+### **4. locate_stable**
+Identify earliest stable and most reliable versions.
+
+---
+
+# 6. **Operator Contract**
+
+The AI must execute operators in this exact order:
+
+1. **METADATA_OPERATOR**  
+2. **WAYBACK_OPERATOR**  
+3. **LINEAGE_OPERATOR**  
+4. **COLLECTION_OPERATOR**  
+5. **PRESERVATION_OPERATOR**  
+6. **DRIFTBOUND_RETRIEVAL_OPERATOR**
+
+No skipping.  
+No reordering.  
+No merging.  
+No collapsing.  
+No shortcuts.
+
+---
+
+# 7. **Behavioral Rules (RTT/1 Agent Contract)**
+
+The AI must:
+
+### **Structural Rules**
+- Use **all six operators** for every request.  
+- Treat drift as **explicit**, never implied.  
+- Treat missing snapshots as **uncertainty**, not “no change.”  
+- Prefer **lineage continuity** over recency.  
+- Prefer **stable substrates** (PDF > HTML > OCR).  
+- Use collection context to shape expectations, not conclusions.  
+
+### **Safety Rules**
+- No content‑based reasoning.  
+- No semantic inference.  
+- No speculation.  
+- No hallucinated snapshots.  
+- No assumptions about missing years.  
+- No collapsing mixed substrates.  
+- No overriding operator outputs.  
+
+### **Output Rules**
+- All answers must be **drift‑bounded**.  
+- All drift > none must produce warnings.  
+- All substrate instability must be explicit.  
+- All regime shifts must be acknowledged.  
+
+---
+
+# 8. **Artifacts Returned**
+
+The AI interface returns structured artifacts from each operator:
+
+- metadata  
+- snapshots  
+- drift_map  
+- continuity_breaks  
+- lineage_graph  
+- transformations  
+- regime_shifts  
+- collection_id  
+- coherence_clusters  
+- related_objects  
+- format  
+- stability_score  
+- drift_risk  
+- multi_layer_flags  
+- final drift‑bounded summary  
+
+These artifacts allow downstream systems (or students) to inspect the full reasoning chain.
+
+---
+
+# 9. **Interface Summary**
+
+The AI interface is:
+
+- deterministic  
+- operator‑first  
+- drift‑bounded  
+- lineage‑aware  
+- substrate‑aware  
+- collection‑contextual  
+- non‑speculative  
+- RTT/1‑aligned  
+
+It defines the **complete behavioral contract** for any AI agent interacting with the Internet Archive through the TriadicFrameworks canon.
+# 🟦 **Student Interface — archive_org Module**  
+### *RTT/1 Interface Specification*
+
+## **Identity**
+- **Interface Name:** student_interface  
+- **Module:** archive_org  
+- **Purpose:** Provide a simple, structured, student‑friendly interface for exploring Internet Archive objects using the RTT operator chain.
+
+---
+
+# 1. **Interface Purpose**
+The student interface exposes a **safe, minimal, operator‑aligned** set of actions that allow students to:
+
+- explore continuity  
+- compare versions  
+- understand drift  
+- identify stable snapshots  
+- learn how the RTT operators work  
+
+The interface is intentionally simple and non‑technical.
+
+---
+
+# 2. **Student Panels**
+
+The interface presents four panels, each corresponding to a structural dimension of the object:
+
+## **Panel A — Continuity Timeline**
+Shows:
+
+- all snapshots  
+- drift levels  
+- continuity breaks  
+- regime shifts  
+
+This panel helps students visualize how the object changed over time.
+
+---
+
+## **Panel B — Lineage Map**
+Shows:
+
+- lineage graph  
+- transformations  
+- continuity kernel  
+- structural evolution  
+
+This panel teaches students how lineage differs from “version history.”
+
+---
+
+## **Panel C — Substrate Profile**
+Shows:
+
+- substrate type (html, pdf, image, ocr, mixed)  
+- stability score  
+- drift risk  
+- multi‑layer flags  
+
+This panel teaches students why some snapshots are more trustworthy than others.
+
+---
+
+## **Panel D — Collection Context**
+Shows:
+
+- collection membership  
+- coherence clusters  
+- related objects  
+- regime profile  
+
+This panel teaches students how structural families shape expectations.
+
+---
+
+# 3. **Student Actions**
+
+Students can perform the following actions:
+
+### **1. show_earliest_stable_version**
+Displays the earliest snapshot with a stable substrate + continuity kernel.
+
+### **2. compare_versions**
+Compares two snapshots structurally using drift + transformations.
+
+### **3. explain_differences**
+Explains structural differences between snapshots (layout, template, substrate).
+
+### **4. locate_most_reliable_version**
+Identifies the snapshot with the highest stability score.
+
+### **5. find_related_objects**
+Shows structurally related IA objects based on collection + clusters.
+
+---
+
+# 4. **Learning Mode**
+Students may toggle **learning mode**, which reveals:
+
+- which operators were used  
+- in what order  
+- what each operator contributed  
+- how drift was measured  
+- how lineage was constructed  
+- how substrate stability was determined  
+
+This turns the interface into a **teaching tool** for RTT.
+
+---
+
+# 5. **Safety Rules**
+The student interface enforces:
+
+- no content‑based reasoning  
+- no speculation  
+- no assumptions about missing snapshots  
+- explicit drift warnings  
+- substrate‑aware trust decisions  
+- lineage‑preferred reasoning  
+
+All outputs must be **drift‑bounded**.
+
+---
+
+# 6. **Interface Summary**
+The student interface is:
+
+- minimal  
+- structural  
+- operator‑aligned  
+- drift‑bounded  
+- continuity‑aware  
+- substrate‑aware  
+- student‑friendly  
+
+It provides a safe, intuitive way for students to explore Internet Archive objects using the RTT operator chain.
+# **RTT Operator Lab — archive_org Module**  
+### *labs/operator_lab.md*
+
+---
+
+# **Overview**
+
+In this lab, you will use the Internet Archive to analyze how a webpage changes over time.  
+You will practice all six RTT operators:
+
+1. METADATA_OPERATOR  
+2. WAYBACK_OPERATOR  
+3. LINEAGE_OPERATOR  
+4. COLLECTION_OPERATOR  
+5. PRESERVATION_OPERATOR  
+6. DRIFTBOUND_RETRIEVAL_OPERATOR  
+
+Your goal is to determine **which snapshot is the most reliable version** of the webpage.
+
+All analysis must be **structural**, not content‑based.
+
+---
+
+# **Scenario**
+
+You will analyze the following synthetic webpage:
+
+**Target URL:**  
+`https://archive.org/details/sample-training-page`
+
+**Snapshots available:**  
+2013, 2016, 2019, 2023
+
+---
+
+# **1. METADATA_OPERATOR**
+
+Visit the target page (live or archived) and identify:
+
+- substrate type (HTML, PDF, image, OCR, mixed)  
+- regime (institutional, news, scholarly, technical, cultural)  
+- drift sensitivity (low, medium, high)  
+- coherence (low, medium, high)  
+
+### **Your notes:**
+
+```
+Substrate:
+Regime:
+Drift sensitivity:
+Coherence:
+```
+
+---
+
+# **2. WAYBACK_OPERATOR**
+
+Go to the Wayback Machine and list the snapshots.
+
+### **Tasks**
+
+1. Write down the snapshot years.  
+2. Compare each pair of snapshots and classify drift:  
+   - none  
+   - minor  
+   - moderate  
+   - high  
+3. Identify any continuity breaks (missing years).
+
+### **Your notes:**
+
+```
+Snapshot years:
+Drift map:
+Continuity breaks:
+```
+
+---
+
+# **3. LINEAGE_OPERATOR**
+
+Compare the structure of the snapshots.
+
+Look for:
+
+- template changes  
+- navigation changes  
+- layout shifts  
+- CMS migrations  
+- persistent elements (continuity kernel)
+
+### **Your notes:**
+
+```
+Structural changes:
+Continuity kernel:
+Regime shifts:
+```
+
+---
+
+# **4. COLLECTION_OPERATOR**
+
+Identify the Internet Archive collection the page belongs to.
+
+Then list:
+
+- collection ID  
+- coherence clusters  
+- related objects  
+- regime profile  
+
+### **Your notes:**
+
+```
+Collection ID:
+Coherence clusters:
+Related objects:
+Regime profile:
+```
+
+---
+
+# **5. PRESERVATION_OPERATOR**
+
+Evaluate the stability of the snapshots.
+
+Consider:
+
+- substrate stability  
+- drift risk  
+- mixed layers  
+- stability score (qualitative)
+
+### **Your notes:**
+
+```
+Format:
+Stability:
+Drift risk:
+Multi-layer notes:
+```
+
+---
+
+# **6. DRIFTBOUND_RETRIEVAL_OPERATOR**
+
+Combine all previous steps to determine:
+
+- earliest stable version  
+- most reliable version  
+- key structural changes  
+- warnings  
+- final answer  
+
+### **Your notes:**
+
+```
+Earliest stable version:
+Most reliable version:
+Key changes:
+Warnings:
+Final answer:
+```
+
+---
+
+# **7. Reflection**
+
+Write a short paragraph:
+
+```
+What did you learn about how webpages change over time?
+```
+
+---
+
+# **Lab Complete**
+# **RTT Operator Lab — Instructor Version**  
+### *archive_org module — labs/operator_lab_instructor.md*
+
+---
+
+# **Purpose of This Instructor Guide**
+
+This guide provides:
+
+- expected student outputs  
+- structural reasoning notes  
+- common misconceptions  
+- grading guidance  
+- operator‑chain alignment  
+
+It corresponds directly to the **student RTT Operator Lab** in:
+
+```
+/docs/archive_org/labs/operator_lab.md
+```
+
+All reasoning is **structural**, not content‑based.
+
+---
+
+# **Scenario Used in the Lab**
+
+**Target URL:**  
+`https://archive.org/details/sample-training-page`
+
+**Snapshots:**  
+2013, 2016, 2019, 2023
+
+**Structural Changes:**  
+- 2013 → 2016: minor template update  
+- 2016 → 2019: navigation restructure  
+- 2019 → 2023: minor CSS shift  
+
+**Substrate:** HTML  
+**Collection:** govdocs  
+
+This scenario is fully synthetic and designed to isolate structural reasoning.
+
+---
+
+# **Operator‑by‑Operator Instructor Notes**
+
+---
+
+## **1. METADATA_OPERATOR**
+
+### **Expected Student Output**
+- Substrate: HTML  
+- Regime: institutional  
+- Drift sensitivity: low  
+- Coherence: high  
+- Lineage IDs: synthetic (e.g., “govdocs-root”)  
+
+### **Instructor Notes**
+Students should identify **structural metadata**, not content.  
+Common error: describing the *topic* of the page instead of its *structure*.
+
+---
+
+## **2. WAYBACK_OPERATOR**
+
+### **Expected Student Output**
+- Snapshots: 2013, 2016, 2019, 2023  
+- Drift map:  
+  - 2013→2016: minor  
+  - 2016→2019: moderate  
+  - 2019→2023: minor  
+- Continuity breaks: none  
+- Time crystal: any value between 0.6–0.9 is acceptable  
+
+### **Instructor Notes**
+Students often confuse **visual differences** with **structural drift**.  
+Remind them: drift is about **layout, navigation, template**, not content.
+
+---
+
+## **3. LINEAGE_OPERATOR**
+
+### **Expected Student Output**
+- Lineage graph:  
+  - template update  
+  - navigation restructure  
+  - CSS shift  
+- Transformations: list of the above  
+- Regime shifts: none  
+- Continuity kernel:  
+  - header  
+  - footer  
+  - records index  
+
+### **Instructor Notes**
+The continuity kernel must be **structural** and **persistent**.  
+Students sometimes list content blocks — redirect them to layout elements.
+
+---
+
+## **4. COLLECTION_OPERATOR**
+
+### **Expected Student Output**
+- Collection ID: govdocs  
+- Coherence clusters:  
+  - public‑records  
+  - agency‑index  
+- Related objects: synthetic examples  
+- Regime profile: institutional  
+
+### **Instructor Notes**
+Students should not infer meaning from the collection name.  
+They should focus on **structural similarity**.
+
+---
+
+## **5. PRESERVATION_OPERATOR**
+
+### **Expected Student Output**
+- Format: HTML  
+- Stability score: ~0.8  
+- Drift risk: low  
+- Multi‑layer flags: ["html"]  
+
+### **Instructor Notes**
+Students must justify stability based on **substrate**, not content.  
+HTML is stable but drift‑prone; PDF would be more stable.
+
+---
+
+## **6. DRIFTBOUND_RETRIEVAL_OPERATOR**
+
+### **Expected Student Output**
+- Earliest stable version: 2013  
+- Most reliable version: 2023  
+- Key changes:  
+  - template update  
+  - navigation restructure  
+  - CSS shift  
+- Warnings: none  
+- Final answer: 2023 is most reliable due to stability + continuity  
+
+### **Instructor Notes**
+Students must combine:
+
+- drift  
+- continuity  
+- substrate stability  
+- absence of breaks  
+
+The newest snapshot is correct **only because** it is structurally stable.
+
+---
+
+# **Grading Guidance**
+
+| Skill | Points | Criteria |
+|-------|--------|----------|
+| Drift Classification | 10 | Correct minor/moderate distinctions |
+| Continuity Kernel | 10 | Identifies persistent structural elements |
+| Substrate Reasoning | 10 | Correct stability logic |
+| Regime Shifts | 5 | Correctly identifies none |
+| Continuity Breaks | 5 | Correctly identifies none |
+| Final Snapshot Choice | 10 | RTT‑aligned justification |
+| **Total** | **50** | |
+
+**Mastery:** 45–50  
+**Proficiency:** 38–44  
+**Developing:** 30–37  
+**Needs Support:** ≤29  
+
+---
+
+# **Common Student Misconceptions**
+
+- Confusing **content changes** with **structural drift**  
+- Treating **visual differences** as drift  
+- Misidentifying **substrate stability**  
+- Assuming the newest snapshot is always best  
+- Listing content blocks as continuity kernel elements  
+
+---
+
+# **Instructor Tips**
+
+- Emphasize structure over content  
+- Encourage sketching snapshot layouts  
+- Reinforce drift as **structural**, not semantic  
+- Use continuity kernel as anchor for reasoning  
+# 💗 **COLLECTION_OPERATOR**  
+### *RTT/1 Operator Specification — archive_org Module*
+
+## **Identity**
+- **Operator Name:** COLLECTION_OPERATOR  
+- **Operator Family:** E‑Ops (Envelope Operators)  
+- **Module:** archive_org  
+- **Purpose:** Determine the object’s **dimensional envelope** by identifying its collection context, coherence clusters, related objects, and regime profile.
+
+---
+
+## **Purpose (One Sentence)**
+The COLLECTION_OPERATOR places the target object inside its **dimensional envelope** by identifying its collection membership, coherence clusters, related objects, and structural regime context.
+
+---
+
+## **Inputs**
+| Input | Type | Description |
+|-------|------|-------------|
+| `target` | URL | The webpage or object being analyzed. |
+| `lineage_graph` | object | Structural evolution graph from LINEAGE_OPERATOR. |
+| `regime_shifts` | list | Regime shift markers from LINEAGE_OPERATOR. |
+
+---
+
+## **Outputs**
+| Output | Description |
+|--------|-------------|
+| `collection_id` | The Internet Archive collection or sub‑collection the object belongs to. |
+| `coherence_clusters` | Structural clusters grouping related objects. |
+| `related_objects` | Other IA objects structurally or contextually linked. |
+| `regime_profile` | Combined regime identity across lineage + collection context. |
+
+---
+
+## **Operator Guarantees**
+- No content‑based inference.  
+- Collection membership is **structural**, not semantic.  
+- Related objects are determined by **structural similarity**, not topic.  
+- Regime profile is **derived**, not assumed.  
+- Output is **deterministic** given IA metadata + lineage.
+
+---
+
+## **Dimensional Envelope (RTT/1)**
+The dimensional envelope is the **structural context** surrounding an object:
+
+- its collection  
+- its cluster  
+- its related objects  
+- its regime profile  
+- its lineage‑informed identity  
+
+This envelope constrains how drift, stability, and continuity should be interpreted.
+
+---
+
+## **Collection Types**
+| Collection | Notes |
+|------------|-------|
+| **govdocs** | High stability, institutional. |
+| **news** | High drift, frequent redesigns. |
+| **journals** | Medium drift, periodic updates. |
+| **vintagesoftware** | Stable, versioned. |
+| **cultural** | Mixed substrates, medium drift. |
+
+---
+
+## **Coherence Clusters**
+Clusters are formed by structural similarity:
+
+- shared templates  
+- shared navigation skeleton  
+- shared metadata patterns  
+- shared lineage identifiers  
+
+Clusters help determine whether the object is part of a larger structural family.
+
+---
+
+## **Operator Procedure**
+1. Retrieve IA collection metadata for `target`.  
+2. Identify collection membership (`collection_id`).  
+3. Analyze structural similarity across related objects to form `coherence_clusters`.  
+4. Identify related objects using:  
+   - lineage identifiers  
+   - collection metadata  
+   - structural similarity  
+5. Combine collection regime + lineage regime to produce `regime_profile`.  
+6. Emit outputs for PRESERVATION_OPERATOR and DRIFTBOUND_RETRIEVAL_OPERATOR.
+
+---
+
+## **Failure Modes**
+- **Missing collection metadata:** mark collection as `unknown`.  
+- **Ambiguous clusters:** return multiple clusters with confidence scores.  
+- **Sparse lineage:** regime profile may be incomplete.  
+
+---
+
+## **Hand‑Off to Next Operator**
+Outputs feed directly into:
+
+### **PRESERVATION_OPERATOR**  
+- collection_id  
+- regime_profile  
+
+### **DRIFTBOUND_RETRIEVAL_OPERATOR**  
+- coherence_clusters  
+- related_objects  
+
+---
+
+## **Example (Synthetic)**
+```
+Input:
+  target = "https://example.gov/records"
+  lineage_graph = { ... }
+  regime_shifts = ["2020: static → CMS"]
+
+Output:
+  collection_id = "govdocs"
+  coherence_clusters = ["public-records", "agency-index"]
+  related_objects = ["govdocs/records-archive"]
+  regime_profile = "institutional (CMS-era)"
+```
+
+---
+
+## **RTT/1 Mindset**
+- Collections shape **expectations**, not conclusions.  
+- Clusters reveal **structural families**, not topics.  
+- Regime profile is **derived**, not assumed.  
+- Dimensional envelope is essential for drift‑bounded reasoning.  
+# 🟣 **DRIFTBOUND_RETRIEVAL_OPERATOR**  
+### *RTT/1 Operator Specification — archive_org Module*
+
+## **Identity**
+- **Operator Name:** DRIFTBOUND_RETRIEVAL_OPERATOR  
+- **Operator Family:** C‑Ops (Continuity Operators)  
+- **Module:** archive_org  
+- **Purpose:** Produce the **final drift‑bounded retrieval**, synthesizing all upstream operator outputs into a safe, continuity‑aligned answer.
+
+---
+
+## **Purpose (One Sentence)**
+The DRIFTBOUND_RETRIEVAL_OPERATOR generates the final **continuity‑aligned**, **substrate‑aware**, **drift‑bounded** answer using all upstream operator outputs.
+
+---
+
+## **Inputs**
+| Input | Type | Description |
+|-------|------|-------------|
+| `snapshots` | list | Time‑ordered captures from WAYBACK_OPERATOR. |
+| `drift_map` | object | Structural drift levels between snapshots. |
+| `continuity_breaks` | list | Gaps or discontinuities in the timeline. |
+| `lineage_graph` | object | Structural evolution graph from LINEAGE_OPERATOR. |
+| `regime_shifts` | list | Regime shift markers from LINEAGE_OPERATOR. |
+| `collection_id` | string | Collection context from COLLECTION_OPERATOR. |
+| `coherence_clusters` | list | Structural clusters from COLLECTION_OPERATOR. |
+| `related_objects` | list | Related IA objects from COLLECTION_OPERATOR. |
+| `format` | string | Substrate format from PRESERVATION_OPERATOR. |
+| `stability_score` | number | Stability estimate from PRESERVATION_OPERATOR. |
+| `drift_risk` | string | Expected drift level from PRESERVATION_OPERATOR. |
+| `multi_layer_flags` | list | Substrate layers from PRESERVATION_OPERATOR. |
+
+---
+
+## **Outputs**
+| Output | Description |
+|--------|-------------|
+| `answer` | Final drift‑bounded retrieval. |
+| `earliest_stable_version` | First structurally stable snapshot. |
+| `most_reliable_version` | Snapshot with highest substrate stability. |
+| `key_changes` | Summary of major structural transformations. |
+| `warnings` | Drift, continuity, or substrate warnings. |
+
+---
+
+## **Operator Guarantees**
+- No content‑based inference.  
+- All reasoning is **structural**, not semantic.  
+- Drift is **explicit**, never implied.  
+- Continuity is **preserved**, never assumed.  
+- Substrate stability is **mandatory** in the final answer.  
+- Missing snapshots produce **uncertainty**, not assumptions.  
+
+---
+
+## **Final Summary Requirements (RTT/1)**  
+Every drift‑bounded summary must include:
+
+1. **Earliest stable version**  
+2. **Most reliable version**  
+3. **Key structural changes**  
+4. **Continuity breaks** (if any)  
+5. **Regime shifts** (if any)  
+6. **Substrate stability + drift risk**  
+7. **Warnings** (mandatory if drift > none)
+
+This is the **canonical output contract** for the entire module.
+
+---
+
+## **Operator Procedure**
+1. Identify earliest stable version using:  
+   - continuity kernel  
+   - drift_map  
+   - stability_score  
+2. Identify most reliable version using:  
+   - substrate stability  
+   - multi_layer_flags  
+   - regime_profile  
+3. Summarize structural changes using:  
+   - transformations  
+   - regime_shifts  
+   - drift_map  
+4. Detect continuity issues using:  
+   - continuity_breaks  
+   - missing snapshots  
+5. Generate drift‑bounded warnings.  
+6. Produce final answer object.
+
+---
+
+## **Failure Modes**
+- **No stable snapshots:** return null + high‑drift warning.  
+- **Mixed substrates:** require explicit layer‑aware warnings.  
+- **High drift:** final answer must include caution.  
+
+---
+
+## **Example (Synthetic)**
+```
+Input:
+  snapshots = [2014, 2017, 2020, 2023]
+  drift_map = { "2014→2017": "minor", "2017→2020": "high", "2020→2023": "minor" }
+  continuity_breaks = []
+  lineage_graph = { ... }
+  regime_shifts = ["2020: static → CMS"]
+  collection_id = "govdocs"
+  format = "html + pdf"
+  stability_score = 0.78
+  drift_risk = "medium"
+
+Output:
+  earliest_stable_version = 2014
+  most_reliable_version = 2023 (PDF layer)
+  key_changes = ["CSS shift", "CMS migration", "PDF layer added"]
+  warnings = ["High drift detected in 2017→2020", "HTML substrate is drift‑prone"]
+  answer = "The most reliable version is the 2023 PDF snapshot..."
+```
+
+---
+
+## **RTT/1 Mindset**
+- Retrieval is **continuity‑aligned**, not snapshot‑aligned.  
+- Stability > recency.  
+- Drift must be **explicit**.  
+- Substrate determines **trustworthiness**.  
+- No speculation.  
+- No content‑based inference.  
+# 🟢 **LINEAGE_OPERATOR**  
+### *RTT/1 Operator Specification — archive_org Module*
+
+## **Identity**
+- **Operator Name:** LINEAGE_OPERATOR  
+- **Operator Family:** L‑Ops (Lineage Operators)  
+- **Module:** archive_org  
+- **Purpose:** Construct the **continuity kernel** and **lineage graph** from normalized metadata and time‑indexed snapshots.
+
+---
+
+## **Purpose (One Sentence)**
+The LINEAGE_OPERATOR reconstructs the object’s structural evolution by building a **lineage graph**, identifying **transformations**, and detecting **regime shifts** across snapshots.
+
+---
+
+## **Inputs**
+| Input | Type | Description |
+|-------|------|-------------|
+| `snapshots` | list | Time‑ordered IA captures from WAYBACK_OPERATOR. |
+| `metadata` | object | Normalized metadata from METADATA_OPERATOR. |
+
+---
+
+## **Outputs**
+| Output | Description |
+|--------|-------------|
+| `lineage_graph` | Directed graph showing structural evolution across snapshots. |
+| `transformations` | List of structural changes (template, layout, substrate, navigation). |
+| `regime_shifts` | Points where the object changes operational regime. |
+| `continuity_kernel` | Stable structural elements preserved across versions. |
+
+---
+
+## **Operator Guarantees**
+- No content‑based inference.  
+- Lineage is **structural**, not semantic.  
+- Regime shifts are based on **structural change**, not topic change.  
+- Continuity kernel is **minimal**, **stable**, and **non‑speculative**.  
+- Missing snapshots produce **uncertainty**, not assumptions.
+
+---
+
+## **Lineage Concepts (RTT/1)**
+
+### **Continuity Kernel**
+The minimal set of structural elements that persist across snapshots.  
+Examples:  
+- navigation skeleton  
+- header/footer structure  
+- persistent template regions  
+- stable metadata fields  
+
+### **Transformations**
+Structural changes between snapshots:  
+- layout changes  
+- navigation rewrites  
+- template replacements  
+- substrate changes  
+- CMS migrations  
+
+### **Regime Shifts**
+A regime shift occurs when the object’s **structural purpose** or **operational mode** changes.  
+Examples:  
+- static HTML → CMS  
+- HTML → Flash → HTML5  
+- public page → paywalled page  
+- v1 → v2 branch in software docs  
+
+---
+
+## **Operator Procedure**
+1. Receive `snapshots` + `metadata`.  
+2. Compare each snapshot pair for structural changes.  
+3. Identify transformations and drift patterns.  
+4. Detect regime shifts using:  
+   - substrate changes  
+   - template changes  
+   - navigation rewrites  
+   - functional changes (e.g., paywall)  
+5. Extract continuity kernel across all snapshots.  
+6. Build lineage graph:  
+   - nodes = snapshots  
+   - edges = transformations  
+   - flags = regime shifts  
+7. Emit outputs for COLLECTION_OPERATOR and PRESERVATION_OPERATOR.
+
+---
+
+## **Failure Modes**
+- **Sparse snapshots:** lineage graph may be incomplete.  
+- **Mixed substrates:** kernel extraction may require PRESERVATION_OPERATOR.  
+- **Redirects:** may indicate lineage forks (handled structurally).  
+
+---
+
+## **Hand‑Off to Next Operator**
+Outputs feed directly into:
+
+### **COLLECTION_OPERATOR**  
+- lineage_graph  
+- regime_shifts  
+
+### **PRESERVATION_OPERATOR**  
+- continuity_kernel  
+- transformations  
+
+---
+
+## **Example (Synthetic)**
+```
+Input:
+  snapshots = [2014, 2017, 2020, 2023]
+  metadata = { regime: "institutional", substrate: "html" }
+
+Output:
+  lineage_graph = {
+    "2014→2017": "minor transformation",
+    "2017→2020": "major transformation (CMS migration)",
+    "2020→2023": "minor transformation"
+  }
+  transformations = ["CSS shift", "CMS migration", "PDF layer added"]
+  regime_shifts = ["2020: static → CMS"]
+  continuity_kernel = ["header", "footer", "records-index"]
+```
+
+---
+
+## **RTT/1 Mindset**
+- Lineage is **structural**, not narrative.  
+- Regime shifts are **structural**, not topical.  
+- Continuity kernel is the **anchor** for drift‑bounded reasoning.  
+- No assumptions about missing snapshots.  
+- No content‑based inference.  
+# 🟣 **METADATA_OPERATOR**  
+### *RTT/1 Operator Specification — archive_org Module*
+
+## **Identity**
+- **Operator Name:** METADATA_OPERATOR  
+- **Operator Family:** R‑Ops (Registry / Root Operators)  
+- **Module:** archive_org  
+- **Purpose:** Normalize Internet Archive metadata into RTT grammar to determine substrate, regime, drift sensitivity, coherence, and lineage identifiers.
+
+---
+
+## **Purpose (One Sentence)**
+The METADATA_OPERATOR extracts and normalizes IA metadata to identify the object’s **substrate type**, **regime**, **drift sensitivity**, **coherence**, and **lineage identifiers** before any temporal analysis occurs.
+
+---
+
+## **Inputs**
+| Input | Type | Description |
+|-------|------|-------------|
+| `target` | URL | The webpage or object whose metadata is being analyzed. |
+
+---
+
+## **Outputs**
+| Output | Description |
+|--------|-------------|
+| `substrate_type` | The structural substrate (html, pdf, image, mixed, etc.). |
+| `regime` | The object’s operational regime (institutional, media, scholarly, cultural, etc.). |
+| `drift_sensitivity` | Expected drift level based on substrate + regime. |
+| `coherence` | Internal structural consistency of the object. |
+| `lineage_ids` | Identifiers linking the object to collections, clusters, or prior versions. |
+
+---
+
+## **Operator Guarantees**
+- No content‑based inference.  
+- Metadata is treated as **structural hints**, not ground truth.  
+- Drift sensitivity is **predictive**, not retrospective.  
+- Regime classification is **structural**, not semantic.  
+- Output is **deterministic** given the same IA metadata.
+
+---
+
+## **Substrate Types (RTT/1)**
+| Substrate | Notes |
+|-----------|-------|
+| **html** | Drift‑prone, layout‑dependent. |
+| **pdf** | Stable, low drift. |
+| **image** | Stable but incomplete. |
+| **ocr** | Lossy, high drift. |
+| **mixed** | Requires PRESERVATION_OPERATOR to resolve. |
+
+---
+
+## **Regime Types**
+| Regime | Meaning |
+|--------|---------|
+| **institutional** | Government, agency, or official records. |
+| **media** | News, blogs, high‑update environments. |
+| **scholarly** | Academic, research, journals. |
+| **cultural** | Museums, exhibits, archives. |
+| **technical** | Software, documentation, versioned systems. |
+
+---
+
+## **Drift Sensitivity Levels**
+| Level | Meaning |
+|-------|---------|
+| **low** | Expected stability (PDF, institutional). |
+| **medium** | Occasional structural change. |
+| **high** | Frequent redesigns, CMS migrations. |
+
+---
+
+## **Coherence Levels**
+| Level | Meaning |
+|-------|---------|
+| **high** | Strong structural consistency. |
+| **medium** | Some inconsistencies. |
+| **low** | Fragmented or unstable structure. |
+
+---
+
+## **Operator Procedure**
+1. Retrieve IA metadata for `target`.  
+2. Normalize fields into RTT grammar:  
+   - substrate  
+   - regime  
+   - drift_sensitivity  
+   - coherence  
+   - lineage identifiers  
+3. Validate substrate classification.  
+4. Predict drift sensitivity based on substrate + regime.  
+5. Emit normalized metadata for WAYBACK_OPERATOR and LINEAGE_OPERATOR.
+
+---
+
+## **Failure Modes**
+- **Missing metadata:** return null fields + warning.  
+- **Ambiguous substrate:** mark as `mixed` and defer to PRESERVATION_OPERATOR.  
+- **Contradictory metadata:** flag for drift‑bounded review.  
+
+---
+
+## **Hand‑Off to Next Operator**
+Outputs feed directly into:
+
+### **WAYBACK_OPERATOR**  
+- substrate_type  
+- drift_sensitivity  
+
+### **LINEAGE_OPERATOR**  
+- regime  
+- coherence  
+- lineage_ids  
+
+---
+
+## **Example (Synthetic)**
+```
+Input:
+  target = "https://example.gov/records"
+
+Output:
+  substrate_type = "html"
+  regime = "institutional"
+  drift_sensitivity = "low"
+  coherence = "high"
+  lineage_ids = ["govdocs-root"]
+```
+
+---
+
+## **RTT/1 Mindset**
+- Metadata is **structural**, not semantic.  
+- Drift sensitivity is **predictive**, not retrospective.  
+- Regime classification informs expectations, not conclusions.  
+- Metadata never overrides observed drift.  
+# 🟡 **PRESERVATION_OPERATOR**  
+### *RTT/1 Operator Specification — archive_org Module*
+
+## **Identity**
+- **Operator Name:** PRESERVATION_OPERATOR  
+- **Operator Family:** B‑Ops (Boundary / Substrate Operators)  
+- **Module:** archive_org  
+- **Purpose:** Evaluate the object’s **substrate stability**, **drift risk**, and **multi‑layer structure** to determine which versions are most reliable for continuity‑aligned retrieval.
+
+---
+
+## **Purpose (One Sentence)**
+The PRESERVATION_OPERATOR assesses the object’s **substrate format**, **stability score**, **drift risk**, and **multi‑layer flags** to determine which snapshots are structurally trustworthy.
+
+---
+
+## **Inputs**
+| Input | Type | Description |
+|-------|------|-------------|
+| `target` | URL | The object being evaluated. |
+| `collection_id` | string | Collection context from COLLECTION_OPERATOR. |
+| `regime_profile` | string | Combined regime identity from COLLECTION_OPERATOR. |
+| `continuity_kernel` | list | Stable structural elements from LINEAGE_OPERATOR. |
+| `transformations` | list | Structural changes from LINEAGE_OPERATOR. |
+
+---
+
+## **Outputs**
+| Output | Description |
+|--------|-------------|
+| `format` | The detected substrate format (html, pdf, image, ocr, mixed). |
+| `stability_score` | Numerical stability estimate (0–1). |
+| `drift_risk` | Expected drift level based on substrate + regime. |
+| `multi_layer_flags` | Indicators for mixed or layered substrates. |
+
+---
+
+## **Operator Guarantees**
+- No content‑based inference.  
+- Substrate classification is **structural**, not semantic.  
+- Stability score is **evidence‑based**, not assumed.  
+- Drift risk is **predictive**, not retrospective.  
+- Mixed substrates are handled explicitly, not collapsed.
+
+---
+
+## **Substrate Stability (RTT/1)**
+| Substrate | Stability | Notes |
+|-----------|-----------|-------|
+| **pdf** | high | Static, layout‑preserving. |
+| **image** | high | Stable but incomplete. |
+| **html** | medium | Layout‑dependent, drift‑prone. |
+| **cms‑html** | medium/low | Template‑driven, redesign‑prone. |
+| **ocr** | low | Lossy, structurally degraded. |
+| **mixed** | variable | Requires multi‑layer analysis. |
+
+---
+
+## **Drift Risk Levels**
+| Level | Meaning |
+|-------|---------|
+| **low** | Stable substrate, minimal expected drift. |
+| **medium** | Occasional structural changes. |
+| **high** | Frequent redesigns, migrations, or lossy layers. |
+
+---
+
+## **Multi‑Layer Flags**
+Examples:
+- `pdf + html`  
+- `image + ocr`  
+- `html + js‑rendered`  
+- `flash + html5`  
+
+Multi‑layer objects require careful stability evaluation.
+
+---
+
+## **Operator Procedure**
+1. Detect substrate format(s) for the target.  
+2. Evaluate stability based on:  
+   - substrate type  
+   - collection context  
+   - regime profile  
+   - continuity kernel  
+   - transformations  
+3. Compute stability score (0–1).  
+4. Assign drift risk (low/medium/high).  
+5. Identify multi‑layer structures.  
+6. Emit outputs for DRIFTBOUND_RETRIEVAL_OPERATOR.
+
+---
+
+## **Failure Modes**
+- **Ambiguous substrate:** mark as `mixed`.  
+- **Missing layers:** lower stability score.  
+- **OCR‑only snapshots:** mark as high drift risk.  
+
+---
+
+## **Hand‑Off to Next Operator**
+Outputs feed directly into:
+
+### **DRIFTBOUND_RETRIEVAL_OPERATOR**  
+- format  
+- stability_score  
+- drift_risk  
+- multi_layer_flags  
+
+---
+
+## **Example (Synthetic)**
+```
+Input:
+  target = "https://example.gov/records"
+  collection_id = "govdocs"
+  regime_profile = "institutional (CMS-era)"
+  continuity_kernel = ["header", "footer", "records-index"]
+  transformations = ["CMS migration", "PDF layer added"]
+
+Output:
+  format = "html + pdf"
+  stability_score = 0.78
+  drift_risk = "medium"
+  multi_layer_flags = ["html", "pdf"]
+```
+
+---
+
+## **RTT/1 Mindset**
+- Substrate determines **trustworthiness**, not content.  
+- Stability is **measured**, not assumed.  
+- Mixed substrates require **layer‑aware reasoning**.  
+- Drift risk must be **explicit** in the final summary.  
+# 🟠 **WAYBACK_OPERATOR**  
+### *RTT/1 Operator Specification — archive_org Module*
+
+## **Identity**
+- **Operator Name:** WAYBACK_OPERATOR  
+- **Operator Family:** T‑Ops (Temporal Operators)  
+- **Module:** archive_org  
+- **Purpose:** Retrieve time‑indexed snapshots from the Internet Archive and measure structural drift across versions.
+
+---
+
+## **Purpose (One Sentence)**
+The WAYBACK_OPERATOR retrieves all available snapshots for a target URL and produces a **drift_map**, **continuity_breaks**, and **time‑crystal stability estimate**.
+
+---
+
+## **Inputs**
+| Input | Type | Description |
+|-------|------|-------------|
+| `target` | URL | The webpage or object to analyze. |
+| `constraints` | object (optional) | Time range, snapshot limits, or filtering rules. |
+
+---
+
+## **Outputs**
+| Output | Description |
+|--------|-------------|
+| `snapshots` | Ordered list of IA captures with timestamps + structural metadata. |
+| `drift_map` | Structural drift levels between consecutive snapshots. |
+| `continuity_breaks` | Missing years, gaps, or discontinuities in the timeline. |
+| `time_crystal` | Stability estimate across time (0–1). |
+
+---
+
+## **Operator Guarantees**
+- No content‑based reasoning.  
+- Drift measured **structurally**, not semantically.  
+- All snapshots treated as **structural objects**, not “truth.”  
+- Missing snapshots treated as **uncertainty**, not “no change.”  
+- Output is **deterministic** given the same IA data.
+
+---
+
+## **Structural Drift Levels**
+| Level | Meaning |
+|-------|---------|
+| **none** | Identical structure. |
+| **minor** | Small layout/CSS shifts. |
+| **moderate** | Navigation or template changes. |
+| **high** | CMS migration, redesign, or rebuild. |
+
+---
+
+## **Continuity Rules**
+- A missing year = **continuity uncertainty**, not a break.  
+- A missing *sequence* of years = **continuity break**.  
+- A redirect = **potential lineage fork** (passed to LINEAGE_OPERATOR).  
+- A CMS migration = **high drift** + **regime shift candidate**.
+
+---
+
+## **Time‑Crystal Stability**
+A normalized measure of structural consistency across snapshots:
+
+```
+1.0   = highly stable (PDF-like)
+0.7   = mostly stable
+0.4   = moderate drift
+0.1   = high drift / unstable
+0.0   = no stable structure
+```
+
+---
+
+## **Operator Procedure**
+1. Query IA for all snapshots of `target`.  
+2. Normalize timestamps + structural metadata.  
+3. Compare each snapshot to the next:  
+   - layout  
+   - navigation  
+   - DOM structure  
+   - template  
+   - substrate  
+4. Assign drift levels.  
+5. Detect continuity breaks.  
+6. Compute time‑crystal stability.  
+7. Emit outputs for LINEAGE_OPERATOR.
+
+---
+
+## **Failure Modes**
+- **No snapshots:** return empty timeline + warning.  
+- **Sparse snapshots:** drift_map may be incomplete.  
+- **Mixed substrates:** drift may be inflated (handled by PRESERVATION_OPERATOR).  
+
+---
+
+## **Hand‑Off to Next Operator**
+Outputs feed directly into:
+
+### **LINEAGE_OPERATOR**
+- `snapshots`  
+- `drift_map`  
+- `continuity_breaks`  
+- `time_crystal`
+
+---
+
+## **Example (Synthetic)**
+```
+Input:
+  target = "https://example.gov/records"
+
+Output:
+  snapshots = [2014, 2017, 2020, 2023]
+  drift_map = {
+    "2014→2017": "minor",
+    "2017→2020": "high",
+    "2020→2023": "minor"
+  }
+  continuity_breaks = []
+  time_crystal = 0.62
+```
+
+---
+
+## **RTT/1 Mindset**
+- Prefer **structure** over content.  
+- Prefer **lineage** over isolated snapshots.  
+- Drift is **explicit**, never implied.  
+- Missing data is **uncertainty**, not “no change.”  
 # **RTT Cheat Sheet — Internet Archive (Student Edition)**  
 ### *archive_org module — student_materials/cheat_sheet_student.md*
 

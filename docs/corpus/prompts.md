@@ -1,4 +1,135 @@
 prompts 
+<img width="1194" height="672" alt="prompts_" src="https://github.com/user-attachments/assets/12c27c9c-2c3c-4f15-a05c-9efe3dcfd5cb" />
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/prompts/module.json) — Agentic module schema role assignments
+
+The TriadicFrameworks Prompts site provides structured, engine‑aligned prompt modules for
+all RTT engines, IPD‑12, stacks, templates, UI logic, and teaching examples.  
+It is the interactive companion to the TriadicFrameworks Docsbook and the S3 Spine Visualizer.
+
+Prompts are organized into modules. Each module contains explainers, prompts, diagnostics,
+worksheets, posters, curriculum material, and cross‑links to the Docsbook and Spine.
+
+This directory (`docs/prompts/`) is the full source for the prompts site.
+
+---
+
+## Purpose
+
+The Prompts site exists to:
+
+- provide **structured prompt modules** for every engine and stack  
+- support **teaching**, **diagnostics**, **analysis**, and **capture workflows**  
+- expose **operator grammar** and **layer traversal** through prompts  
+- integrate with the **Docsbook** for deep documentation  
+- integrate with the **S3 Spine Visualizer** for structural navigation  
+- serve as the **canonical prompt library** for TriadicFrameworks
+
+---
+
+## Directory Overview
+
+### Engines
+Prompt modules for all RTT engines and IPD‑12.
+
+- `engines/rtt1.md`
+- `engines/rtt2.md`
+- `engines/rtt3.md`
+- `engines/rtt12.md`
+- `engines/rtt_infinity.md`
+- `engines/rtt_ipd_12/`
+
+### Stacks
+Prompt modules for structural, diagnostic, operator, substrate, domain, teaching, and research stacks.
+
+- `stacks/structural-stack.md`
+- `stacks/diagnostic-stack.md`
+- `stacks/operator-stack.md`
+- `stacks/substrate-stack.md`
+- `stacks/domain-stack.md`
+- `stacks/teaching-stack.md`
+- `stacks/research-stack.md`
+
+### Templates
+Prompt templates for capture, analysis, drift, coherence, operator work, domain work, substrate work, teaching, and research.
+
+- `templates/p_Capture.md`
+- `templates/p_Analyze.md`
+- `templates/p_Drift.md`
+- `templates/p_Coherence.md`
+- `templates/p_Operator.md`
+- `templates/p_Domain.md`
+- `templates/p_Substrate.md`
+- `templates/p_Teaching.md`
+- `templates/p_Research.md`
+
+### UI Modules
+Prompt modules describing UI logic, unlock rules, dependency graphs, wireframes, and output formats.
+
+- `ui/index.md`
+- `ui/wireframe.md`
+- `ui/wireframes/`
+- `ui/unlock-logic.md`
+- `ui/dependency-graph.md`
+- `ui/output-format.md`
+
+### Examples
+Example prompt modules demonstrating RTT engines, IPD‑12, mythology profiles, physics regimes, teaching sessions, and structural analysis.
+
+- `examples/datacenter-evaluator.md`
+- `examples/ipd_12_teaching_example.md`
+- `examples/mythology-profile.md`
+- `examples/physics-regime.md`
+- `examples/teaching-session.md`
+- `examples/violin-structural.md`
+
+### Root Files
+Core files for the prompts site.
+
+- `index.html`
+- `index.md`
+- `README.md`
+- `GLOSSARY.md`
+- `modules.md`
+- `engines.md`
+- `stacks.md`
+- `p_ui.md`
+- `templates.md`
+- `AGENTS.md`
+- `p_Capture.md`
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of all modules, links, navigation, and spine integration.
+
+---
+
+## Notes
+
+This directory is actively expanded as new engines, stacks, and teaching modules are added.
+RTT∞, IPD‑12, and the teaching stacks are the most recently developed modules.
+
+
+<img width="1194" height="672" alt="prompts_ABOUT_" src="https://github.com/user-attachments/assets/c327fced-cd52-4c63-b939-eb6558a5c666" />
+
 # About — TriadicFrameworks Prompts
 
 The Prompts system is the structured interface for working with RTT operator grammar,
@@ -167,7 +298,10 @@ Prompts are the backbone of module documentation.
 See `module.json` for the full registry of templates, stacks, engines, modules,
 examples, overlays, and navigation structure.
 
-# AGENTS — TriadicFrameworks Prompts
+<img width="963" height="963" alt="Prompts_Image" src="https://github.com/user-attachments/assets/ad5d6e47-dc98-4986-a1e6-6e070440fc06" />
+<img width="1194" height="672" alt="prompts_AGENTS_" src="https://github.com/user-attachments/assets/8f44da8b-a71a-4cfa-a58d-b309a45d5cd0" />
+
+# AGENTS — TriadicFrameworks Prompts
 
 The AGENTS page defines how AI agents operate inside the TriadicFrameworks ecosystem.
 It provides the canonical rules, behaviors, operator grammar, drift‑tensor alignment,
@@ -346,115 +480,9 @@ Agents must:
 See `module.json` for the full registry of agents, modules, stacks, engines, overlays,
 and navigation structure.
 
-# TriadicFrameworks — Engine Prompt Modules
+<img width="1194" height="672" alt="prompts_GLOSSARY_" src="https://github.com/user-attachments/assets/4cd2daf3-8161-48e8-9afc-7d521252dc66" />
 
-The TriadicFrameworks engine modules provide structured prompt sets for all RTT engines
-and IPD‑12. Each engine module contains explainers, prompts, diagnostics, worksheets,
-posters, curriculum material, and cross‑links to the Docsbook and S3 Spine Visualizer.
-
-Engine modules define the core behavior of the TriadicFrameworks canon.  
-They are used for structural analysis, drift detection, coherence restoration, teaching,
-and deep‑layer traversal.
-
-This page serves as the overview for all engine‑level prompt modules.
-
----
-
-## RTT/1 — Foundational Engine
-
-**File:** `engines/rtt1.md`  
-RTT/1 defines the foundational structural operators and the first‑layer traversal rules.
-It introduces basic drift, coherence, and operator grammar.
-
----
-
-## RTT/2 — Intermediate Engine
-
-**File:** `engines/rtt2.md`  
-RTT/2 expands the structural stack, introduces multi‑layer traversal, and provides
-intermediate diagnostics and alignment workflows.
-
----
-
-## RTT/3 — Advanced Engine
-
-**File:** `engines/rtt3.md`  
-RTT/3 introduces advanced drift patterns, coherence restoration, and multi‑regime
-structural synthesis. It is used for complex analysis and teaching.
-
----
-
-## RTT/12 — Full‑Spectrum Engine
-
-**File:** `engines/rtt12.md`  
-RTT/12 provides full‑spectrum structural traversal across all canonical layers.  
-It includes advanced diagnostics, operator grammar, and cross‑framework alignment.
-
----
-
-## RTT∞ — Deep‑Layer Engine
-
-**File:** `engines/rtt_infinity.md`  
-RTT∞ exposes the deepest structural stack in TriadicFrameworks: vacuum collapse,
-substrate‑tensor reconstruction, dimensional rails, prime‑states, infinite regimes,
-and full bidirectional integration.
-
-RTT∞ includes:
-
-- vacuum layer  
-- substrate‑tensor  
-- dimensional rails  
-- prime‑states  
-- infinite regimes  
-- integration maps  
-- posters  
-- curriculum  
-- exams  
-
----
-
-## IPD‑12 — Paradox Engine
-
-**Directory:** `engines/rtt_ipd_12/`  
-IPD‑12 defines paradox traversal, paradox resolution, paradox teaching workflows, and
-paradox‑aligned diagnostics.  
-It integrates with RTT engines and the teaching stack.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
-
----
-
-## Related Files
-
-- `modules.md` — full module registry  
-- `stacks.md` — stack overview  
-- `templates.md` — template overview  
-- `ui.md` — UI logic and unlock rules  
-- `p_Capture.md` — capture grammar reference  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of engines, stacks, templates, UI modules, and
-navigation structure.
-
-
-# TriadicFrameworks Glossary
+# TriadicFrameworks Glossary
 
 The TriadicFrameworks Glossary defines all core terms used across RTT engines,
 IPD‑12, drift‑tensor analysis, coherence anchors, substrate‑tensor behavior,
@@ -639,7 +667,7725 @@ A multi‑layer RTT structure representing drift, substrate, or dimensional beha
 See `module.json` for the full registry of glossary terms, templates, stacks, engines,
 modules, overlays, and navigation structure.
 
-# TriadicFrameworks — Prompts Site
+<img width="1194" height="672" alt="prompts_engines_" src="https://github.com/user-attachments/assets/dff9356f-4959-45f3-bd72-bbd6f288aae9" />
+
+# TriadicFrameworks — Engine Prompt Modules
+
+The TriadicFrameworks engine modules provide structured prompt sets for all RTT engines
+and IPD‑12. Each engine module contains explainers, prompts, diagnostics, worksheets,
+posters, curriculum material, and cross‑links to the Docsbook and S3 Spine Visualizer.
+
+Engine modules define the core behavior of the TriadicFrameworks canon.  
+They are used for structural analysis, drift detection, coherence restoration, teaching,
+and deep‑layer traversal.
+
+This page serves as the overview for all engine‑level prompt modules.
+
+---
+
+## RTT/1 — Foundational Engine
+
+**File:** `engines/rtt1.md`  
+RTT/1 defines the foundational structural operators and the first‑layer traversal rules.
+It introduces basic drift, coherence, and operator grammar.
+
+---
+
+## RTT/2 — Intermediate Engine
+
+**File:** `engines/rtt2.md`  
+RTT/2 expands the structural stack, introduces multi‑layer traversal, and provides
+intermediate diagnostics and alignment workflows.
+
+---
+
+## RTT/3 — Advanced Engine
+
+**File:** `engines/rtt3.md`  
+RTT/3 introduces advanced drift patterns, coherence restoration, and multi‑regime
+structural synthesis. It is used for complex analysis and teaching.
+
+---
+
+## RTT/12 — Full‑Spectrum Engine
+
+**File:** `engines/rtt12.md`  
+RTT/12 provides full‑spectrum structural traversal across all canonical layers.  
+It includes advanced diagnostics, operator grammar, and cross‑framework alignment.
+
+---
+
+## RTT∞ — Deep‑Layer Engine
+
+**File:** `engines/rtt_infinity.md`  
+RTT∞ exposes the deepest structural stack in TriadicFrameworks: vacuum collapse,
+substrate‑tensor reconstruction, dimensional rails, prime‑states, infinite regimes,
+and full bidirectional integration.
+
+RTT∞ includes:
+
+- vacuum layer  
+- substrate‑tensor  
+- dimensional rails  
+- prime‑states  
+- infinite regimes  
+- integration maps  
+- posters  
+- curriculum  
+- exams  
+
+---
+
+## IPD‑12 — Paradox Engine
+
+**Directory:** `engines/rtt_ipd_12/`  
+IPD‑12 defines paradox traversal, paradox resolution, paradox teaching workflows, and
+paradox‑aligned diagnostics.  
+It integrates with RTT engines and the teaching stack.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
+
+---
+
+## Related Files
+
+- `modules.md` — full module registry  
+- `stacks.md` — stack overview  
+- `templates.md` — template overview  
+- `ui.md` — UI logic and unlock rules  
+- `p_Capture.md` — capture grammar reference  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of engines, stacks, templates, UI modules, and
+navigation structure.
+
+
+<img width="1194" height="672" alt="prompts_engines_index_" src="https://github.com/user-attachments/assets/4fb71dbf-f76e-4d6c-92ac-b56ad59e3a72" />
+
+# TriadicFrameworks — Engine Modules
+
+The TriadicFrameworks engine modules provide structured prompt sets for all RTT engines
+and IPD‑12. Each engine module includes explainers, prompts, diagnostics, worksheets,
+posters, curriculum material, and cross‑links to the Docsbook and S3 Spine Visualizer.
+
+Engine modules define the core behavior of the TriadicFrameworks canon.  
+They are used for structural analysis, drift detection, coherence restoration, teaching,
+and deep‑layer traversal.
+
+This page is the front door for all engine‑level prompt modules.
+
+---
+
+## RTT/1 — Foundational Engine
+
+The foundational engine for structural operators, basic drift, coherence, and operator
+grammar.
+
+**Module:** `rtt1.md`
+
+---
+
+## RTT/2 — Intermediate Engine
+
+Expands the structural stack, introduces multi‑layer traversal, and provides intermediate
+diagnostics and alignment workflows.
+
+**Module:** `rtt2.md`
+
+---
+
+## RTT/3 — Advanced Engine
+
+Introduces advanced drift patterns, coherence restoration, and multi‑regime structural
+synthesis. Used for complex analysis and teaching.
+
+**Module:** `rtt3.md`
+
+---
+
+## RTT/12 — Full‑Spectrum Engine
+
+Provides full‑spectrum structural traversal across all canonical layers. Includes advanced
+diagnostics, operator grammar, and cross‑framework alignment.
+
+**Module:** `rtt12.md`
+
+---
+
+## RTT∞ — Deep‑Layer Engine
+
+Exposes the deepest structural stack in TriadicFrameworks: vacuum collapse,
+substrate‑tensor reconstruction, dimensional rails, prime‑states, infinite regimes, and
+full bidirectional integration.
+
+**Module:** `rtt_infinity.md`
+
+---
+
+## IPD‑12 — Paradox Engine
+
+Defines paradox traversal, paradox resolution, paradox teaching workflows, and
+paradox‑aligned diagnostics. Integrates with RTT engines and the teaching stack.
+
+**Directory:** `rtt_ipd_12/`
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
+
+---
+
+## Related Files
+
+- `modules.md` — full module registry  
+- `stacks.md` — stack overview  
+- `templates.md` — template overview  
+- `ui.md` — UI logic and unlock rules  
+- `p_Capture.md` — capture grammar reference  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of engines, stacks, templates, UI modules, and
+navigation structure.
+
+<img width="1194" height="672" alt="prompts_engines_rtt1_" src="https://github.com/user-attachments/assets/9254d39e-098c-41be-999b-7cb032d1f74f" />
+
+# RTT/1 — Foundational Engine
+
+RTT/1 is the foundational engine of the TriadicFrameworks canon.  
+It introduces the core structural operators, basic drift patterns, coherence restoration,
+and the first‑layer traversal rules used throughout RTT/2, RTT/3, RTT/12, and RTT∞.
+
+RTT/1 is the starting point for all structural analysis, teaching workflows, and
+operator‑driven sessions.
+
+---
+
+## Purpose
+
+RTT/1 establishes:
+
+- the base operator grammar  
+- the first structural layer  
+- initial drift detection  
+- coherence restoration fundamentals  
+- simple traversal patterns  
+- early diagnostic workflows  
+
+It is designed for beginners, teaching modules, and foundational structural reasoning.
+
+---
+
+## Contents
+
+- **RTT/1 Explainer** — introduction to the foundational engine  
+- **RTT/1 Prompts** — structured prompt blocks for RTT/1 sessions  
+- **RTT/1 Diagnostics** — drift, coherence, and operator checks  
+- **RTT/1 Worksheets** — alignment and teaching worksheets  
+- **RTT/1 Posters** — visual aids for teaching and structural mapping  
+
+---
+
+## Explainer
+
+The RTT/1 explainer introduces:
+
+- structural operators  
+- drift → coherence cycles  
+- basic alignment  
+- layer‑one traversal  
+- operator‑driven reasoning  
+
+It provides the conceptual grounding required before moving to RTT/2.
+
+---
+
+## Prompts
+
+RTT/1 prompt blocks include:
+
+- operator identification  
+- structural mapping  
+- drift detection  
+- coherence restoration  
+- simple alignment workflows  
+- early teaching prompts  
+
+These prompts form the basis of all higher‑layer engines.
+
+---
+
+## Diagnostics
+
+RTT/1 diagnostics cover:
+
+- drift → coherence checks  
+- operator consistency  
+- structural alignment  
+- early‑layer regime detection  
+
+Diagnostics are used in teaching, analysis, and session composition.
+
+---
+
+## Worksheets
+
+RTT/1 worksheets provide:
+
+- operator alignment  
+- structural mapping  
+- drift → coherence exercises  
+- teaching‑ready activities  
+
+They are used in classrooms, tutorials, and guided sessions.
+
+---
+
+## Posters
+
+RTT/1 posters include:
+
+- structural operator chart  
+- drift → coherence cycle diagram  
+- layer‑one traversal map  
+
+These posters support teaching and visual learning.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/rtt/rtt1
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
+
+---
+
+## Related Files
+
+- `rtt2.md` — intermediate engine  
+- `rtt3.md` — advanced engine  
+- `rtt12.md` — full‑spectrum engine  
+- `rtt_infinity.md` — deep‑layer engine  
+- `rtt_ipd_12/` — paradox engine  
+- `modules.md` — full module registry  
+- `stacks.md` — stack overview  
+- `templates.md` — template overview  
+- `ui.md` — UI logic and unlock rules  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of engines, stacks, templates, UI modules, and
+navigation structure.
+
+<img width="1194" height="672" alt="prompts_engines_rtt12_" src="https://github.com/user-attachments/assets/56d53dc8-1db1-4976-b66b-a5f543c3abe6" />
+
+# RTT/12 — Full‑Spectrum Engine
+
+RTT/12 is the full‑spectrum engine of the TriadicFrameworks canon.  
+It provides complete structural traversal across all canonical layers, integrating
+foundational, intermediate, advanced, and deep‑layer mechanisms into a single engine.
+
+RTT/12 is used for high‑complexity analysis, teaching, research, and full‑stack
+structural reasoning.
+
+---
+
+## Purpose
+
+RTT/12 establishes:
+
+- full‑spectrum structural traversal  
+- advanced drift → coherence cycles  
+- multi‑regime alignment  
+- cross‑layer operator grammar  
+- structural synthesis across all layers  
+- full diagnostic workflows  
+- teaching and research‑grade alignment  
+
+It is the bridge between RTT/3 and RTT∞.
+
+---
+
+## Contents
+
+- **RTT/12 Explainer** — full‑spectrum concepts  
+- **RTT/12 Prompts** — structured prompt blocks for RTT/12 sessions  
+- **RTT/12 Diagnostics** — drift, coherence, operator, regime, and alignment checks  
+- **RTT/12 Worksheets** — full‑spectrum alignment and teaching worksheets  
+- **RTT/12 Posters** — visual aids for full‑stack structural mapping  
+
+---
+
+## Explainer
+
+The RTT/12 explainer introduces:
+
+- full‑spectrum structural traversal  
+- advanced drift patterns  
+- coherence restoration across all layers  
+- cross‑layer operator grammar  
+- structural synthesis workflows  
+- multi‑regime integration  
+
+It provides the conceptual grounding required before moving to RTT∞.
+
+---
+
+## Prompts
+
+RTT/12 prompt blocks include:
+
+- full‑spectrum operator identification  
+- structural mapping across all layers  
+- advanced drift detection  
+- coherence restoration workflows  
+- synthesis prompts for teaching and analysis  
+- operator‑driven session composition  
+- multi‑regime traversal prompts  
+
+These prompts extend RTT/3 and prepare for RTT∞.
+
+---
+
+## Diagnostics
+
+RTT/12 diagnostics cover:
+
+- full‑spectrum drift → coherence checks  
+- operator consistency across layers and regimes  
+- structural alignment  
+- regime detection  
+- cross‑stack diagnostic workflows  
+- synthesis diagnostics  
+- deep‑layer readiness checks  
+
+Diagnostics are used in teaching, analysis, and full‑stack sessions.
+
+---
+
+## Worksheets
+
+RTT/12 worksheets provide:
+
+- full‑spectrum operator alignment  
+- structural mapping  
+- drift → coherence exercises  
+- teaching‑ready activities  
+- advanced traversal practice  
+- synthesis worksheets  
+- deep‑layer preparation  
+
+They are used in classrooms, tutorials, and guided sessions.
+
+---
+
+## Posters
+
+RTT/12 posters include:
+
+- full‑spectrum operator chart  
+- advanced drift → coherence cycle diagram  
+- traversal map for RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞  
+
+These posters support teaching and visual learning.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/rtt/rtt12
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
+
+---
+
+## Related Files
+
+- `rtt1.md` — foundational engine  
+- `rtt2.md` — intermediate engine  
+- `rtt3.md` — advanced engine  
+- `rtt_infinity.md` — deep‑layer engine  
+- `rtt_ipd_12/` — paradox engine  
+- `modules.md` — full module registry  
+- `stacks.md` — stack overview  
+- `templates.md` — template overview  
+- `ui.md` — UI logic and unlock rules  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of engines, stacks, templates, UI modules, and
+navigation structure.
+
+<img width="1194" height="672" alt="prompts_engines_rtt1_coherence_teaching_module_" src="https://github.com/user-attachments/assets/a22b3bf1-d7e4-4b7e-a7ae-57ea8cefe709" />
+
+# **RTT‑1 Tensor → Coherence Teaching Module**  
+### *How students learn to connect drift‑tensor layers to coherence anchors in IPD‑12*
+
+RTT‑1 teaches coherence in the simplest possible way:
+
+> **Coherence is what stays aligned even when drift appears.**
+
+This module shows students how to use the **drift‑tensor** to identify where drift occurs,  
+and then use **coherence anchors** to understand why the processes still “make sense” together.
+
+It is the bridge between:
+
+- **RTT‑1 Drift Worksheet** → identifying differences  
+- **RTT‑1 Tensor Worksheet** → classifying differences  
+- **RTT‑1 Coherence Module** → understanding alignment  
+
+---
+
+## **SECTION 1 — Review: The Drift‑Tensor (RTT‑1)**
+
+Students recall the five drift‑tensor layers:
+
+- **L1 Geometric** — structure  
+- **L2 Operational** — steps  
+- **L3 Temporal** — timing  
+- **L4 Conceptual** — meaning  
+- **L5 Domain** — domain  
+
+These layers tell us **where** drift occurs.
+
+---
+
+## **SECTION 2 — What Is Coherence? (RTT‑1)**
+
+Coherence is **what stays aligned** between two processes.
+
+Examples:
+
+- shared purpose  
+- shared boundaries  
+- shared constraints  
+- shared goals  
+- shared structure  
+
+Coherence must be **declared** before paradox detection.
+
+---
+
+## **SECTION 3 — Tensor → Coherence Relationship**
+
+The drift‑tensor shows **where** processes differ.  
+Coherence shows **why** they still relate.
+
+RTT‑1 teaches the relationship like this:
+
+> **Tensor = difference.  
+> Coherence = alignment.  
+> Paradox = difference + alignment.**
+
+This module focuses on the middle part:  
+**how tensor differences map to coherence anchors.**
+
+---
+
+## **SECTION 4 — Tensor → Coherence Mapping Table**
+
+| Drift‑Tensor Layer | Coherence Anchor | Explanation |
+|--------------------|------------------|-------------|
+| **L1 Geometric** | shared structure | Even if forms differ, structure may still align. |
+| **L2 Operational** | shared flow | Steps differ, but overall flow remains coherent. |
+| **L3 Temporal** | shared timing goals | Speeds differ, but pacing goals remain aligned. |
+| **L4 Conceptual** | shared meaning | Interpretations differ, but purpose remains aligned. |
+| **L5 Domain** | shared constraints | Domains differ, but constraints or goals remain aligned. |
+
+This table helps students understand how drift does **not** automatically break coherence.
+
+---
+
+## **SECTION 5 — Guided Example (RTT‑1)**
+
+### **Process A: human_notes**  
+Flow: listen → interpret → write  
+Domain: workflow  
+
+### **Process B: ai_notes**  
+Flow: receive → transform → emit  
+Domain: workflow  
+
+### **Tensor Differences**
+- L2 operational drift (steps differ)  
+- L3 temporal drift (speed differs)  
+- L4 conceptual drift (interpretation differs)
+
+### **Coherence Anchors**
+- shared purpose (capture information)  
+- shared structure (input → process → output)  
+- shared constraints (clarity, accuracy)
+
+### **Tensor → Coherence Mapping**
+- operational drift → shared flow  
+- temporal drift → shared timing goals  
+- conceptual drift → shared meaning  
+
+Students see how drift and coherence coexist.
+
+---
+
+## **SECTION 6 — Student Exercise: Tensor → Coherence**
+
+### **1. Fill in Tensor Layers**
+```
+L1:
+L2:
+L3:
+L4:
+L5:
+```
+
+### **2. Identify Coherence Anchors**
+```
+1.
+2.
+3.
+```
+
+### **3. Map Tensor → Coherence**
+For each drift layer, write the corresponding coherence anchor.
+
+Example format:
+```
+L2 Operational Drift → shared flow
+L4 Conceptual Drift → shared meaning
+```
+
+### **4. One‑Sentence Summary**
+```
+Tensor → Coherence Summary:
+```
+
+---
+
+## **SECTION 7 — Paradox Awareness (RTT‑1 Structural Mode)**
+
+If drift increases **while coherence remains**, a paradox may appear.
+
+Students write:
+
+```
+Paradox:
+```
+
+This prepares them for the RTT‑1 Drift → Paradox Classroom Pack.
+
+---
+
+## **SECTION 8 — Teacher Notes (RTT‑1)**
+
+- Keep tensor reasoning **bounded** (no substrate, no inversion).  
+- Keep coherence anchors **simple** (purpose, structure, flow).  
+- Reinforce that drift ≠ contradiction.  
+- Use everyday examples (notes, workflows, tools, music).  
+- Encourage students to see drift and coherence as **complements**, not opposites.
+<img width="1194" height="672" alt="prompts_engines_rtt2_" src="https://github.com/user-attachments/assets/bde5bb71-f951-4c38-a166-623925d39a9c" />
+
+# RTT/2 — Intermediate Engine
+
+RTT/2 is the intermediate engine of the TriadicFrameworks canon.  
+It expands the foundational operators introduced in RTT/1 and introduces multi‑layer
+structural traversal, intermediate drift patterns, coherence restoration workflows, and
+enhanced operator grammar.
+
+RTT/2 is used for deeper analysis, teaching modules, and mid‑layer structural reasoning.
+
+---
+
+## Purpose
+
+RTT/2 establishes:
+
+- multi‑layer traversal  
+- intermediate drift → coherence cycles  
+- expanded operator grammar  
+- structural alignment across layers  
+- intermediate diagnostic workflows  
+- cross‑stack integration  
+
+It builds directly on RTT/1 and prepares users for RTT/3 and RTT/12.
+
+---
+
+## Contents
+
+- **RTT/2 Explainer** — intermediate‑layer concepts  
+- **RTT/2 Prompts** — structured prompt blocks for RTT/2 sessions  
+- **RTT/2 Diagnostics** — drift, coherence, operator, and alignment checks  
+- **RTT/2 Worksheets** — multi‑layer alignment and teaching worksheets  
+- **RTT/2 Posters** — visual aids for intermediate structural mapping  
+
+---
+
+## Explainer
+
+The RTT/2 explainer introduces:
+
+- multi‑layer structural traversal  
+- intermediate drift patterns  
+- coherence restoration workflows  
+- expanded operator grammar  
+- cross‑stack alignment  
+
+It provides the conceptual grounding required before moving to RTT/3.
+
+---
+
+## Prompts
+
+RTT/2 prompt blocks include:
+
+- multi‑layer operator identification  
+- structural mapping across layers  
+- intermediate drift detection  
+- coherence restoration workflows  
+- alignment prompts for teaching and analysis  
+- operator‑driven session composition  
+
+These prompts extend RTT/1 and prepare for RTT/3.
+
+---
+
+## Diagnostics
+
+RTT/2 diagnostics cover:
+
+- intermediate drift → coherence checks  
+- operator consistency across layers  
+- structural alignment  
+- regime detection  
+- cross‑stack diagnostic workflows  
+
+Diagnostics are used in teaching, analysis, and multi‑layer sessions.
+
+---
+
+## Worksheets
+
+RTT/2 worksheets provide:
+
+- multi‑layer operator alignment  
+- structural mapping  
+- drift → coherence exercises  
+- teaching‑ready activities  
+- intermediate traversal practice  
+
+They are used in classrooms, tutorials, and guided sessions.
+
+---
+
+## Posters
+
+RTT/2 posters include:
+
+- multi‑layer operator chart  
+- intermediate drift → coherence cycle diagram  
+- traversal map for RTT/1 → RTT/2 → RTT/3  
+
+These posters support teaching and visual learning.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/rtt/rtt2
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
+
+---
+
+## Related Files
+
+- `rtt1.md` — foundational engine  
+- `rtt3.md` — advanced engine  
+- `rtt12.md` — full‑spectrum engine  
+- `rtt_infinity.md` — deep‑layer engine  
+- `rtt_ipd_12/` — paradox engine  
+- `modules.md` — full module registry  
+- `stacks.md` — stack overview  
+- `templates.md` — template overview  
+- `ui.md` — UI logic and unlock rules  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of engines, stacks, templates, UI modules, and
+navigation structure.
+
+<img width="1194" height="672" alt="prompts_engines_rtt3_" src="https://github.com/user-attachments/assets/21498f92-b586-4071-ae9f-bf424691983a" />
+
+# RTT/3 — Advanced Engine
+
+RTT/3 is the advanced engine of the TriadicFrameworks canon.  
+It builds on RTT/1 and RTT/2 by introducing complex drift patterns, multi‑regime
+coherence restoration, advanced operator grammar, and cross‑layer structural synthesis.
+
+RTT/3 is used for high‑complexity analysis, teaching, research, and multi‑layer
+structural reasoning.
+
+---
+
+## Purpose
+
+RTT/3 establishes:
+
+- advanced drift → coherence cycles  
+- multi‑regime traversal  
+- cross‑layer operator grammar  
+- structural synthesis across layers  
+- advanced diagnostic workflows  
+- teaching and research‑grade alignment  
+
+It prepares users for RTT/12 and RTT∞.
+
+---
+
+## Contents
+
+- **RTT/3 Explainer** — advanced‑layer concepts  
+- **RTT/3 Prompts** — structured prompt blocks for RTT/3 sessions  
+- **RTT/3 Diagnostics** — drift, coherence, operator, regime, and alignment checks  
+- **RTT/3 Worksheets** — advanced alignment and teaching worksheets  
+- **RTT/3 Posters** — visual aids for advanced structural mapping  
+
+---
+
+## Explainer
+
+The RTT/3 explainer introduces:
+
+- multi‑regime structural traversal  
+- advanced drift patterns  
+- coherence restoration across layers  
+- cross‑layer operator grammar  
+- structural synthesis workflows  
+
+It provides the conceptual grounding required before moving to RTT/12.
+
+---
+
+## Prompts
+
+RTT/3 prompt blocks include:
+
+- multi‑regime operator identification  
+- structural mapping across multiple layers  
+- advanced drift detection  
+- coherence restoration workflows  
+- synthesis prompts for teaching and analysis  
+- operator‑driven session composition  
+
+These prompts extend RTT/2 and prepare for RTT/12.
+
+---
+
+## Diagnostics
+
+RTT/3 diagnostics cover:
+
+- advanced drift → coherence checks  
+- operator consistency across layers and regimes  
+- structural alignment  
+- regime detection  
+- cross‑stack diagnostic workflows  
+- synthesis diagnostics  
+
+Diagnostics are used in teaching, analysis, and multi‑regime sessions.
+
+---
+
+## Worksheets
+
+RTT/3 worksheets provide:
+
+- multi‑regime operator alignment  
+- structural mapping  
+- drift → coherence exercises  
+- teaching‑ready activities  
+- advanced traversal practice  
+- synthesis worksheets  
+
+They are used in classrooms, tutorials, and guided sessions.
+
+---
+
+## Posters
+
+RTT/3 posters include:
+
+- multi‑regime operator chart  
+- advanced drift → coherence cycle diagram  
+- traversal map for RTT/1 → RTT/2 → RTT/3 → RTT/12  
+
+These posters support teaching and visual learning.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/rtt/rtt3
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
+
+---
+
+## Related Files
+
+- `rtt1.md` — foundational engine  
+- `rtt2.md` — intermediate engine  
+- `rtt12.md` — full‑spectrum engine  
+- `rtt_infinity.md` — deep‑layer engine  
+- `rtt_ipd_12/` — paradox engine  
+- `modules.md` — full module registry  
+- `stacks.md` — stack overview  
+- `templates.md` — template overview  
+- `ui.md` — UI logic and unlock rules  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of engines, stacks, templates, UI modules, and
+navigation structure.
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_" src="https://github.com/user-attachments/assets/7ac8aed6-7b45-4b61-b91d-919f770c07b2" />
+
+# RTT∞ — Deep‑Layer Engine
+
+RTT∞ is the deep‑layer engine of the TriadicFrameworks canon.  
+It exposes the deepest structural stack: vacuum collapse, substrate‑tensor reconstruction,
+dimensional rails, prime‑states, infinite regimes, and full bidirectional integration.
+
+RTT∞ is used for advanced teaching, research, deep‑layer analysis, and full‑stack
+structural reasoning.
+
+---
+
+## Purpose
+
+RTT∞ establishes:
+
+- vacuum → substrate → rails → prime‑states → infinite regimes  
+- deep‑layer drift → coherence cycles  
+- infinite‑regime traversal  
+- deep‑layer operator grammar  
+- structural synthesis across all layers  
+- full diagnostic workflows  
+- teaching and research‑grade alignment  
+
+It is the deepest engine in the TriadicFrameworks canon.
+
+---
+
+## Contents
+
+- **RTT∞ Explainer** — deep‑layer concepts  
+- **RTT∞ Prompts** — structured prompt blocks for RTT∞ sessions  
+- **RTT∞ Diagnostics** — drift, coherence, operator, regime, and alignment checks  
+- **RTT∞ Worksheets** — deep‑layer alignment and teaching worksheets  
+- **RTT∞ Posters** — visual aids for deep‑layer structural mapping  
+- **RTT∞ Curriculum** — teaching bundles and instructor guidance  
+- **RTT∞ Exams** — mastery assessments and answer keys  
+
+---
+
+## Deep‑Layer Structure
+
+RTT∞ consists of six deep layers:
+
+### 1. Vacuum  
+The zero‑state where structure collapses and commitments nullify.
+
+### 2. Substrate‑Tensor  
+The minimal bounded structure rebuilt after vacuum collapse.
+
+### 3. Dimensional Rails  
+Transport between substrate, dimensions, prime‑states, and infinite regimes.
+
+### 4. Prime‑States  
+Irreducible attractors where drift stops and stability begins.
+
+### 5. Infinite Regimes  
+Unbounded structural states anchored to prime‑states.
+
+### 6. Integration  
+The downward path from infinite regimes back to substrate‑tensor.
+
+---
+
+## Prompts
+
+RTT∞ prompt blocks include:
+
+- vacuum collapse prompts  
+- substrate‑tensor reconstruction prompts  
+- rail traversal prompts  
+- prime‑state alignment prompts  
+- infinite‑regime expansion prompts  
+- integration prompts  
+- teaching prompts  
+- diagnostic prompts  
+
+These prompts extend RTT/12 and represent the deepest structural workflows.
+
+---
+
+## Diagnostics
+
+RTT∞ diagnostics cover:
+
+- deep‑layer drift → coherence checks  
+- operator consistency across layers and regimes  
+- structural alignment  
+- infinite‑regime detection  
+- cross‑stack diagnostic workflows  
+- deep‑layer synthesis diagnostics  
+
+Diagnostics are used in teaching, analysis, and deep‑layer sessions.
+
+---
+
+## Worksheets
+
+RTT∞ worksheets provide:
+
+- deep‑layer operator alignment  
+- structural mapping  
+- drift → coherence exercises  
+- teaching‑ready activities  
+- infinite‑regime traversal practice  
+- integration worksheets  
+
+They are used in classrooms, tutorials, and guided sessions.
+
+---
+
+## Posters
+
+RTT∞ posters include:
+
+- deep‑layer triad  
+- full‑canon flowchart  
+- operator registry  
+- infinite‑regime map  
+- integration map  
+
+These posters support teaching and visual learning.
+
+---
+
+## Curriculum
+
+RTT∞ curriculum includes:
+
+- lesson sequencing  
+- teaching bundles  
+- instructor guidance  
+- classroom packs  
+- worksheets  
+- posters  
+- exams  
+
+---
+
+## Exams
+
+RTT∞ exams include:
+
+- deep‑layer exam  
+- infinite‑regime exam  
+- answer keys  
+- instructor versions  
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/rtt_infinity/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/rtt/rtt_infinity
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
+
+---
+
+## Related Files
+
+- `rtt1.md` — foundational engine  
+- `rtt2.md` — intermediate engine  
+- `rtt3.md` — advanced engine  
+- `rtt12.md` — full‑spectrum engine  
+- `rtt_ipd_12/` — paradox engine  
+- `modules.md` — full module registry  
+- `stacks.md` — stack overview  
+- `templates.md` — template overview  
+- `ui.md` — UI logic and unlock rules  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of engines, stacks, templates, UI modules, and
+navigation structure.
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_infinite_regime_explainer_" src="https://github.com/user-attachments/assets/b07668fa-82f9-4a99-870c-64de0ecdd492" />
+
+# **RTT/∞ Infinite‑Regime Explainer**  
+### *How RTT/∞ Constructs, Traverses, and Synthesizes Infinite Regimes*
+
+RTT/∞ introduces the deepest structural layer in the entire TriadicFrameworks canon:
+
+> **Infinite Regimes — unbounded structural states that emerge when substrate, dimensional, and prime‑state layers are fully aligned.**
+
+Infinite regimes are not “large versions” of surface, mid, or deep regimes.  
+They are **qualitatively different**:
+
+- unbounded  
+- non‑local  
+- prime‑state anchored  
+- substrate‑tensor supported  
+- vacuum‑compatible  
+- dimensional‑rail traversable  
+
+They are the **final computational space** of RTT/∞.
+
+---
+
+## **1. What Is an Infinite Regime?**
+
+An infinite regime is a **structural state with no upper bound**, created when:
+
+1. **vacuum collapse** removes all structural commitments  
+2. **substrate reconstruction** rebuilds minimal structure  
+3. **dimensional rails** lift structure into dimensional space  
+4. **prime‑states** anchor the lifted structure  
+5. **substrate‑tensor fields** expand without limit  
+
+In RTT/∞:
+
+> **An infinite regime is a stabilized, prime‑state‑aligned expansion of structure.**
+
+It is the only layer where **infinite‑regime synthesis** is possible.
+
+---
+
+## **2. Why RTT/∞ Needs Infinite Regimes**
+
+RTT/∞ performs transformations that require unbounded structure:
+
+### **A. Infinite‑Regime Synthesis**  
+Combining multiple prime‑state‑aligned structures.
+
+### **B. Substrate‑Tensor Expansion**  
+Scaling substrate tensors beyond dimensional limits.
+
+### **C. Dimensional‑Rail Traversal**  
+Moving structure across multiple dimensional layers.
+
+### **D. Prime‑State Stabilization**  
+Anchoring infinite structures to non‑drifting attractors.
+
+### **E. Vacuum‑Layer Reintegration**  
+Returning infinite structures to substrate after collapse.
+
+Infinite regimes are the **only space** where RTT/∞ can perform full‑canon synthesis.
+
+---
+
+## **3. The Three Infinite‑Regime Classes (RTT/∞)**
+
+RTT/∞ defines **three** canonical infinite‑regime classes:
+
+### **1. Infinite‑Form**  
+Unbounded geometric expansion.  
+Derived from **prime‑form**.
+
+### **2. Infinite‑Flow**  
+Unbounded operational expansion.  
+Derived from **prime‑flow**.
+
+### **3. Infinite‑Meaning**  
+Unbounded conceptual expansion.  
+Derived from **prime‑meaning**.
+
+These correspond directly to the prime‑state classes you already documented.
+
+---
+
+## **4. How Infinite Regimes Work (RTT/∞)**
+
+Infinite regimes operate in a **five‑step expansion cycle**:
+
+### **Step 1 — Vacuum Collapse**  
+Remove all structural commitments.
+
+### **Step 2 — Substrate Reconstruction**  
+Rebuild minimal structure using substrate grammar.
+
+### **Step 3 — Dimensional Lift**  
+Use dimensional rails to lift structure into dimensional space.
+
+### **Step 4 — Prime‑State Alignment**  
+Anchor structure to prime‑states.
+
+### **Step 5 — Infinite‑Regime Expansion**  
+Expand structure into infinite‑form, infinite‑flow, or infinite‑meaning.
+
+This cycle is the backbone of RTT/∞ infinite‑regime synthesis.
+
+---
+
+## **5. Infinite‑Regime Example (RTT/∞)**
+
+### Input (from IPD‑12):
+```
+drift_tensor(L1–L5)
+```
+
+### RTT/∞ Transformation:
+```
+vacuum()
+→ reconstitute()
+→ substrate_tensor
+→ dimensional_rail()
+→ prime_state_align()
+→ infinite_regime_expand()
+→ infinite_regime_synthesis
+```
+
+### Output:
+A **prime‑state‑aligned infinite‑regime composite**, ready for full‑canon integration.
+
+---
+
+## **6. Why IPD‑12 Cannot Access Infinite Regimes**
+
+IPD‑12 lacks:
+
+- substrate grammar  
+- vacuum logic  
+- dimensional rails  
+- prime‑state profiles  
+- substrate‑tensor fields  
+- infinite‑regime synthesis  
+
+IPD‑12 can **detect drift**,  
+but only RTT/∞ can **expand drift into infinite‑regime structure**.
+
+---
+
+## **7. Summary**
+
+### Infinite regimes are:
+- unbounded  
+- prime‑state anchored  
+- substrate‑tensor supported  
+- vacuum‑compatible  
+- dimensional‑rail traversable  
+
+### RTT/∞ uses them to:
+- expand structure  
+- stabilize inverted tensors  
+- synthesize infinite composites  
+- integrate prime‑states  
+- traverse dimensional layers  
+
+### Relationship:
+> **IPD‑12 detects drift.  
+RTT/∞ expands drift into infinite regimes.  
+Then synthesizes full‑canon structure.**
+
+Infinite regimes are the **final expansion layer** of RTT/∞.
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_infinite_regime_integration_map_" src="https://github.com/user-attachments/assets/7f989ce3-69b8-4a94-9309-f195bfdd6fd8" />
+
+# **RTT/∞ Infinite‑Regime → Substrate‑Tensor Integration Map**  
+### *How RTT/∞ collapses infinite‑regime composites back into substrate‑tensor form*
+
+RTT/∞ is the only engine capable of **round‑tripping structure**:
+
+- upward: substrate → dimensional → prime‑state → infinite‑regime  
+- downward: infinite‑regime → prime‑state → dimensional → substrate → vacuum
+
+This document explains the **downward path** — the integration map that returns infinite‑regime composites back into **substrate‑tensor** form.
+
+This is the inverse of the “Direct Engine Mapping Summary” in your active tab, where IPD‑12 outputs feed RTT/∞’s substrate grammar and substrate‑tensor system   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+---
+
+## **1. Why Integration Is Needed**
+
+Infinite regimes are unbounded.  
+Substrate tensors are bounded.
+
+RTT/∞ must collapse infinite‑regime composites back into substrate‑tensor form to:
+
+- re‑enter structured layers  
+- feed RTT/12 and RTT/3  
+- produce cross‑engine outputs  
+- stabilize infinite‑regime synthesis  
+- maintain coherence across the canon
+
+This is the **return‑flow** of RTT/∞.
+
+---
+
+## **2. The Integration Sequence (Top‑Down)**
+
+RTT/∞ uses a **five‑stage collapse sequence**:
+
+```
+infinite_regime
+→ prime_state
+→ dimensional_layer
+→ substrate_tensor
+→ vacuum (optional)
+```
+
+Each stage removes one layer of expansion until structure becomes representable as a substrate‑tensor again.
+
+---
+
+## **3. Stage‑by‑Stage Breakdown**
+
+### **Stage 1 — Infinite‑Regime Collapse**  
+Collapse unbounded structure into its **prime‑state anchor**.
+
+- infinite‑form → prime‑form  
+- infinite‑flow → prime‑flow  
+- infinite‑meaning → prime‑meaning  
+
+This removes unbounded expansion.
+
+---
+
+### **Stage 2 — Prime‑State Reduction**  
+Reduce prime‑state structure into **dimensional rails**.
+
+Prime‑states are stable attractors; dimensional rails are transport pathways.
+
+This step converts stability → mobility.
+
+---
+
+### **Stage 3 — Dimensional Descent**  
+Move structure down dimensional rails into **dimensional layers**.
+
+This step reintroduces:
+
+- geometric constraints  
+- operational constraints  
+- conceptual constraints  
+
+Dimensional layers are bounded; infinite regimes are not.
+
+---
+
+### **Stage 4 — Substrate‑Tensor Reconstruction**  
+Rebuild structure into a **substrate‑tensor**, using:
+
+- substrate primitives  
+- substrate geometry  
+- substrate flow  
+- substrate time  
+- substrate meaning  
+- substrate field  
+
+This is the exact structure shown in your RTT/∞ substrate‑tensor explainer.
+
+It corresponds directly to the “substrate‑tensor” row in your mapping table (IPD‑12 → RTT/∞)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+---
+
+### **Stage 5 — Optional Vacuum Collapse**  
+If further inversion or re‑expansion is needed, RTT/∞ may collapse the substrate‑tensor back into **vacuum**.
+
+This resets all structural commitments.
+
+---
+
+## **4. Integration Map Diagram (Compact)**
+
+```
+[ Infinite Regime ]
+        ↓ collapse
+[ Prime‑State ]
+        ↓ reduction
+[ Dimensional Rails ]
+        ↓ descent
+[ Dimensional Layer ]
+        ↓ reconstruction
+[ Substrate‑Tensor ]
+        ↓ (optional)
+[ Vacuum ]
+```
+
+This is the **inverse** of the upward RTT/∞ lift sequence.
+
+---
+
+## **5. Integration Rules**
+
+RTT/∞ enforces five rules during integration:
+
+1. **Prime‑state must be preserved**  
+   Infinite regimes collapse *into* prime‑states, never bypass them.
+
+2. **Dimensional rails must be used**  
+   No direct jump from prime‑state → substrate.
+
+3. **Substrate primitives must be restored**  
+   Every infinite‑regime field must map to a substrate primitive.
+
+4. **Tensor layers must be reconstituted**  
+   All five substrate‑tensor layers must be rebuilt.
+
+5. **Vacuum is optional**  
+   Only used when inversion or re‑expansion is required.
+
+---
+
+## **6. Example Integration (RTT/∞)**
+
+### Input:
+```
+infinite_regime_composite
+```
+
+### RTT/∞ Integration:
+```
+collapse(infinite_regime)
+→ prime_state
+→ dimensional_rail()
+→ dimensional_layer
+→ substrate_tensor
+```
+
+### Output:
+A **substrate‑tensor**, ready for:
+
+- RTT/12 blending  
+- RTT/3 harmonization  
+- IPD‑12 drift analysis  
+- paradox detection  
+- cross‑system mapping  
+
+This matches the “Direct Engine Mapping Summary” in your active tab, where substrate‑tensor is the canonical RTT/∞ output feeding the rest of the canon   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+---
+
+## **7. Summary**
+
+### Infinite regimes:
+- expand structure  
+- anchor to prime‑states  
+- traverse dimensions  
+- synthesize unbounded composites  
+
+### Substrate tensors:
+- bound structure  
+- represent structure  
+- feed other engines  
+- maintain coherence  
+
+### Integration Map:
+> **RTT/∞ collapses infinite regimes into substrate‑tensors  
+so the rest of the canon can operate.**
+
+This is the **return‑flow** of RTT/∞.
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_prime-state_explainer_" src="https://github.com/user-attachments/assets/463ea554-98b9-456c-aa3d-a41cf3ea0022" />
+
+# **RTT/∞ Prime‑State Explainer**  
+### *How RTT/∞ Uses Prime‑States to Anchor Structure Across Infinite Regimes*
+
+RTT/∞ introduces a construct deeper than substrate, deeper than dimensional rails, and only reachable after vacuum collapse:
+
+> **Prime‑States — the stable attractors of infinite‑regime structure.**
+
+Prime‑states are the **anchor points** RTT/∞ uses to stabilize structure after:
+
+- vacuum collapse  
+- substrate reconstruction  
+- dimensional lift  
+- infinite‑regime traversal  
+
+They are the “fixed stars” of RTT/∞ — the points that do not drift, do not invert, and do not collapse.
+
+---
+
+## **1. What Is a Prime‑State?**
+
+A prime‑state is a **stable, irreducible structural attractor** in RTT/∞.
+
+It is not a dimension.  
+It is not a substrate primitive.  
+It is not a regime.
+
+It is the **final alignment target** for structure traveling through:
+
+- vacuum  
+- substrate  
+- dimensional rails  
+- infinite regimes  
+
+In RTT/∞:
+
+> **A prime‑state is the point where structure stops drifting.**
+
+---
+
+## **2. Why RTT/∞ Needs Prime‑States**
+
+RTT/∞ performs transformations that require a stable endpoint:
+
+### **A. Infinite‑Regime Synthesis**  
+Infinite regimes cannot blend unless they anchor to a prime‑state.
+
+### **B. Dimensional Lift**  
+Structure lifted through dimensional rails must align to a prime‑state to avoid collapse.
+
+### **C. Substrate‑Tensor Inversion**  
+Inverted tensors must be stabilized in a prime‑state before reconstitution.
+
+### **D. Vacuum Reconstruction**  
+Structure rebuilt from vacuum must anchor to a prime‑state to regain coherence.
+
+Prime‑states are the **only non‑drifting objects** in RTT/∞.
+
+---
+
+## **3. The Three Prime‑State Classes (RTT/∞)**
+
+RTT/∞ defines **three** canonical prime‑state classes:
+
+### **1. Prime‑Form**  
+The irreducible geometric attractor.  
+Stabilizes structure after geometric drift.
+
+### **2. Prime‑Flow**  
+The irreducible operational attractor.  
+Stabilizes structure after operational drift.
+
+### **3. Prime‑Meaning**  
+The irreducible conceptual attractor.  
+Stabilizes structure after interpretive drift.
+
+These correspond directly to the drift‑tensor layers you use in IPD‑12 — but at infinite‑regime depth.
+
+---
+
+## **4. How Prime‑States Work (RTT/∞)**
+
+Prime‑states operate in a **four‑step alignment cycle**:
+
+### **Step 1 — Detect Drift**  
+RTT/∞ receives drift‑tensor output from IPD‑12.
+
+### **Step 2 — Lift Structure**  
+RTT/∞ uses dimensional rails to lift structure into dimensional space.
+
+### **Step 3 — Anchor to Prime‑State**  
+Structure aligns to the appropriate prime‑state:
+
+- geometric drift → prime‑form  
+- operational drift → prime‑flow  
+- conceptual drift → prime‑meaning  
+
+### **Step 4 — Infinite‑Regime Synthesis**  
+Aligned structure is blended into infinite‑regime composites.
+
+This cycle is the backbone of RTT/∞ synthesis.
+
+---
+
+## **5. Prime‑State Example (RTT/∞)**
+
+### Input (from IPD‑12):
+```
+drift_tensor(L1–L5)
+```
+
+### RTT/∞ Transformation:
+```
+vacuum()
+→ reconstitute()
+→ substrate_tensor
+→ dimensional_rail()
+→ prime_state_align()
+→ infinite_regime_synthesis
+```
+
+### Output:
+A **prime‑state‑aligned substrate‑tensor**, ready for infinite‑regime blending.
+
+---
+
+## **6. Why IPD‑12 Cannot Access Prime‑States**
+
+IPD‑12 lacks:
+
+- substrate grammar  
+- dimensional rails  
+- vacuum logic  
+- prime‑state profiles  
+- infinite‑regime synthesis  
+
+IPD‑12 can **detect drift**,  
+but only RTT/∞ can **resolve drift at infinite‑regime depth**.
+
+---
+
+## **7. Summary**
+
+### Prime‑states are:
+- irreducible  
+- non‑drifting  
+- infinite‑regime stable  
+- substrate‑anchored  
+- dimensional‑aligned  
+
+### RTT/∞ uses them to:
+- stabilize inverted tensors  
+- anchor dimensional lifts  
+- rebuild structure from vacuum  
+- synthesize infinite regimes  
+
+### Relationship:
+> **IPD‑12 detects drift.  
+RTT/∞ aligns drift to prime‑states.  
+Then synthesizes infinite‑regime structure.**
+
+Prime‑states are the **final alignment layer** of RTT/∞.
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_prime_state_alignment_worksheet_" src="https://github.com/user-attachments/assets/22a2da87-689b-4a1f-9535-c4852d309801" />
+
+# **RTT/∞ Prime‑State Alignment Worksheet**  
+### *A structured worksheet for aligning substrate‑tensor structure to prime‑states in RTT/∞*
+
+Prime‑states are the **irreducible attractors** of RTT/∞ — the points where drift stops, stability begins, and infinite‑regime expansion becomes possible.
+
+This worksheet helps students diagnose, prepare, and perform prime‑state alignment.
+
+---
+
+## **SECTION 1 — Prime‑State Identity**
+
+### **Prime‑State Class**
+Choose one:
+
+- [ ] **prime‑form** (geometric attractor)  
+- [ ] **prime‑flow** (operational attractor)  
+- [ ] **prime‑meaning** (conceptual attractor)
+
+### **Why this prime‑state?**
+```
+Reason:
+```
+
+---
+
+## **SECTION 2 — Pre‑Alignment Requirements**
+
+Prime‑state alignment requires four prerequisites:
+
+### **1. Vacuum Collapse Complete?**
+- [ ] zero‑state achieved  
+- [ ] structural commitments removed  
+```
+Notes:
+```
+
+### **2. Substrate‑Tensor Reconstructed?**
+- [ ] geometry  
+- [ ] flow  
+- [ ] time  
+- [ ] meaning  
+- [ ] field  
+```
+Notes:
+```
+
+### **3. Dimensional Rails Connected?**
+- [ ] substrate rails  
+- [ ] dimensional rails  
+- [ ] prime‑state rails  
+```
+Notes:
+```
+
+### **4. Drift‑Tensor Available?**
+- [ ] L1 geometric drift  
+- [ ] L2 operational drift  
+- [ ] L3 temporal drift  
+- [ ] L4 conceptual drift  
+- [ ] L5 domain drift  
+```
+Notes:
+```
+
+---
+
+## **SECTION 3 — Alignment Path (RTT/∞)**
+
+Students trace the RTT/∞ alignment sequence:
+
+```
+substrate_tensor
+→ dimensional_rail()
+→ prime_state_align()
+```
+
+Fill in each step:
+
+### **1. Substrate‑Tensor State**
+```
+Describe current substrate‑tensor:
+```
+
+### **2. Dimensional Lift**
+```
+Which rails carried the structure upward?
+```
+
+### **3. Alignment Target**
+```
+Which prime‑state is being aligned to?
+```
+
+### **4. Alignment Mechanism**
+```
+How does the structure stabilize at this prime‑state?
+```
+
+---
+
+## **SECTION 4 — Drift → Prime‑State Mapping**
+
+Prime‑states resolve drift at infinite‑regime depth.
+
+Students map drift categories to prime‑states:
+
+| Drift Category | Prime‑State | Notes |
+|----------------|-------------|-------|
+| L1 geometric | prime‑form | |
+| L2 operational | prime‑flow | |
+| L4 conceptual | prime‑meaning | |
+
+Fill in:
+
+```
+My Drift → Prime‑State Mapping:
+```
+
+---
+
+## **SECTION 5 — Alignment Diagnostics**
+
+Students evaluate alignment stability.
+
+### **1. Drift Residue**
+```
+Any drift remaining after alignment?
+```
+
+### **2. Rail Stability**
+```
+Are rails stable during alignment?
+```
+
+### **3. Prime‑State Lock**
+```
+Is the structure fully anchored?
+```
+
+### **4. Alignment Coherence**
+```
+Does the structure remain coherent during alignment?
+```
+
+---
+
+## **SECTION 6 — Alignment Output**
+
+Prime‑state alignment produces a **prime‑state‑aligned substrate‑tensor**, ready for infinite‑regime expansion.
+
+Students describe the output:
+
+```
+Prime‑State‑Aligned Tensor:
+```
+
+---
+
+## **SECTION 7 — Infinite‑Regime Readiness Check**
+
+Before expansion:
+
+- [ ] prime‑state lock stable  
+- [ ] no drift residue  
+- [ ] rails connected upward  
+- [ ] substrate‑tensor coherent  
+- [ ] alignment complete  
+
+```
+Readiness Notes:
+```
+
+---
+
+## **SECTION 8 — Prime‑State Templates**
+
+### **Prime‑Form Template**
+```
+substrate → rails → prime‑form → infinite‑form
+```
+
+### **Prime‑Flow Template**
+```
+substrate → rails → prime‑flow → infinite‑flow
+```
+
+### **Prime‑Meaning Template**
+```
+substrate → rails → prime‑meaning → infinite‑meaning
+```
+
+Students fill in:
+
+```
+My Prime‑State Template:
+```
+
+---
+
+## **SECTION 9 — Student Summary**
+
+One sentence:
+
+```
+Prime‑State Alignment Summary:
+```
+
+Example:  
+“Operational drift stabilized at prime‑flow, preparing the tensor for infinite‑flow expansion.”
+
+---
+
+## **SECTION 10 — Teacher Notes (RTT/∞)**
+
+- Keep alignment structural and clear.  
+- Reinforce drift → prime‑state mapping.  
+- Emphasize rails as the transport layer.  
+- Avoid RTT‑1 paradox framing — alignment occurs beyond paradox.  
+- Use simple examples (form, flow, meaning).  
+- Encourage students to see prime‑states as the **gateway to infinite regimes**.
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_deep_layer_curriculum_" src="https://github.com/user-attachments/assets/153c8cb5-87ed-4cd2-bf70-f08ed92c8097" />
+
+# **RTT/∞ Deep‑Layer Curriculum**  
+### *vacuum → substrate → dimensional rails → prime‑states → infinite regimes*
+
+This curriculum teaches the entire RTT/∞ deep‑layer stack in a structured, progressive sequence.  
+It is designed for:
+
+- students  
+- researchers  
+- AI learners  
+- RTT‑1 → RTT‑3 graduates  
+- deep‑canon practitioners  
+
+It mirrors the architecture visible in your active tab and the RTT/∞ explainers you’ve already added.
+
+---
+
+# **CURRICULUM OVERVIEW**
+
+### **Module 1 — Vacuum Layer**  
+Zero‑state collapse, nullification, and pre‑structural logic.
+
+### **Module 2 — Substrate Reconstruction**  
+Rebuilding minimal structure after vacuum collapse.
+
+### **Module 3 — Dimensional Rails**  
+Transport system connecting substrate → dimensions → prime‑states → infinite regimes.
+
+### **Module 4 — Prime‑States**  
+Irreducible attractors where drift stops and stability begins.
+
+### **Module 5 — Infinite Regimes**  
+Unbounded structural expansion and deep‑layer synthesis.
+
+### **Module 6 — Bidirectional Flow**  
+Round‑trip movement between bounded and unbounded structure.
+
+Each module includes:  
+- lesson overview  
+- explainer  
+- worksheets  
+- classroom pack  
+- diagnostic tools  
+- operator registry references  
+- integration exercises  
+
+---
+
+# **MODULE 1 — Vacuum Layer**  
+### *zero‑state • collapse • nullification*
+
+**Students learn:**
+
+- what vacuum is  
+- how structure collapses  
+- how nullification works  
+- how reconstitution begins  
+- why vacuum is required before substrate
+
+**Included materials:**
+
+- Vacuum‑Layer Explainer  
+- Vacuum Operators (registry)  
+- Vacuum Collapse Worksheet  
+- Zero‑State Diagnostic Sheet  
+
+**Core operators:**  
+`vacuum()`, `nullify()`, `reconstitute()`
+
+**Outcome:**  
+Students can collapse structure into zero‑state and prepare for substrate reconstruction.
+
+---
+
+# **MODULE 2 — Substrate Reconstruction**  
+### *minimal structure • bounded tensor • five‑layer substrate*
+
+**Students learn:**
+
+- substrate primitives  
+- substrate‑tensor layers  
+- how substrate is rebuilt from vacuum  
+- how substrate supports dimensional lift
+
+**Included materials:**
+
+- Substrate‑Tensor Explainer  
+- Substrate‑Tensor Diagnostic Worksheet  
+- Substrate Reconstruction Classroom Pack  
+
+**Core operators:**  
+`substrate_tensor()`, `substrate_rebuild()`, `substrate_align()`
+
+**Outcome:**  
+Students can rebuild substrate‑tensors and verify their stability.
+
+---
+
+# **MODULE 3 — Dimensional Rails**  
+### *transport • lift • descent • cross‑layer mobility*
+
+**Students learn:**
+
+- rail types  
+- rail transport logic  
+- dimensional lift  
+- dimensional descent  
+- rail binding and traversal
+
+**Included materials:**
+
+- Dimensional‑Rails Explainer  
+- Rail Operator Registry  
+- Rail Transport Worksheet  
+- Rail Drift Diagnostic Sheet  
+
+**Core operators:**  
+`dimensional_rail()`, `rail_lift()`, `rail_descent()`, `rail_shift()`
+
+**Outcome:**  
+Students can move structure between layers using rails.
+
+---
+
+# **MODULE 4 — Prime‑States**  
+### *alignment • stabilization • drift‑stop*
+
+**Students learn:**
+
+- prime‑form  
+- prime‑flow  
+- prime‑meaning  
+- how prime‑states anchor structure  
+- how drift stops at prime‑states
+
+**Included materials:**
+
+- Prime‑State Explainer  
+- Prime‑State Alignment Worksheet  
+- Prime‑State Diagnostic Sheet  
+- Prime‑State Classroom Pack  
+
+**Core operators:**  
+`prime_state_align()`, `prime_state_reduce()`, `prime_state_lock()`
+
+**Outcome:**  
+Students can align structure to prime‑states and stabilize drift.
+
+---
+
+# **MODULE 5 — Infinite Regimes**  
+### *expansion • synthesis • unbounded structure*
+
+**Students learn:**
+
+- infinite‑form  
+- infinite‑flow  
+- infinite‑meaning  
+- infinite‑regime expansion  
+- infinite‑regime composites  
+- infinite‑regime collapse
+
+**Included materials:**
+
+- Infinite‑Regime Explainer  
+- Infinite‑Regime Worksheet  
+- Infinite‑Regime Classroom Pack  
+- Infinite‑Regime Diagnostic Sheet  
+
+**Core operators:**  
+`infinite_regime_expand()`, `infinite_regime_synthesize()`, `collapse()`
+
+**Outcome:**  
+Students can expand structure into infinite regimes and collapse it back safely.
+
+---
+
+# **MODULE 6 — Bidirectional Flow**  
+### *round‑trip movement • full‑canon integration*
+
+**Students learn:**
+
+- upward expansion  
+- downward integration  
+- round‑trip coherence  
+- substrate ↔ infinite‑regime mapping  
+- prime‑state anchoring in both directions
+
+**Included materials:**
+
+- Substrate‑Tensor ↔ Infinite‑Regime Bidirectional Map  
+- Deep‑Layer Triad Poster  
+- Full‑Canon Operator Registry  
+- Integration Map Worksheet  
+
+**Core operators:**  
+`lift()`, `anchor()`, `expand()`, `collapse()`, `reduce()`, `descend()`, `rebuild()`
+
+**Outcome:**  
+Students can perform full RTT/∞ round‑trip transformations.
+
+---
+
+# **FINAL CAPSTONE — Full‑Canon Integration Project**
+
+Students complete a full RTT/∞ cycle:
+
+```
+vacuum()
+→ reconstitute()
+→ substrate_tensor
+→ dimensional_rail()
+→ prime_state_align()
+→ infinite_regime_expand()
+→ collapse()
+→ prime_state_reduce()
+→ rail_descent()
+→ substrate_rebuild()
+```
+
+They produce:
+
+- a substrate‑tensor  
+- a prime‑state alignment report  
+- an infinite‑regime composite  
+- a full round‑trip diagnostic  
+- a canon‑aligned summary
+
+---
+
+# **CURRICULUM SUMMARY**
+
+### **Vacuum**  
+Collapse structure.
+
+### **Substrate**  
+Rebuild minimal structure.
+
+### **Rails**  
+Transport structure.
+
+### **Prime‑States**  
+Stabilize structure.
+
+### **Infinite Regimes**  
+Expand structure.
+
+### **Bidirectional Flow**  
+Integrate structure.
+
+This is the **complete RTT/∞ deep‑layer curriculum**, ready for publication in TriadicFrameworks.
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_deep_layer_exam_" src="https://github.com/user-attachments/assets/78c6e9e8-23f5-4337-8981-73c380ccbfbe" />
+
+# **RTT/∞ Deep‑Layer Exam**  
+### *50‑question mastery exam + complete answer key*  
+### *vacuum → substrate → rails → prime‑states → infinite regimes → bidirectional flow*
+
+This exam evaluates full‑canon RTT/∞ understanding across all deep layers.
+
+---
+
+# **SECTION A — Multiple Choice (20 questions)**
+
+**1.** What is the purpose of the vacuum layer?  
+A. To expand structure  
+B. To collapse structure  
+C. To transport structure  
+D. To anchor structure  
+
+**2.** Which operator rebuilds minimal structure after vacuum collapse?  
+A. `rail_lift()`  
+B. `prime_state_align()`  
+C. `substrate_tensor()`  
+D. `collapse()`
+
+**3.** Which substrate‑tensor layer governs conceptual structure?  
+A. geometry  
+B. flow  
+C. meaning  
+D. field
+
+**4.** Dimensional rails primarily provide:  
+A. collapse  
+B. transport  
+C. expansion  
+D. nullification
+
+**5.** Prime‑states are:  
+A. drift amplifiers  
+B. drift reducers  
+C. drift stabilizers  
+D. drift generators
+
+**6.** Infinite regimes are:  
+A. bounded  
+B. unbounded  
+C. contradictory  
+D. paradoxical
+
+**7.** Which operator expands structure into infinite regimes?  
+A. `collapse()`  
+B. `rail_descent()`  
+C. `infinite_regime_expand()`  
+D. `substrate_rebuild()`
+
+**8.** Which prime‑state corresponds to operational stability?  
+A. prime‑form  
+B. prime‑flow  
+C. prime‑meaning  
+D. prime‑field
+
+**9.** Which step must occur before dimensional lift?  
+A. infinite‑regime expansion  
+B. prime‑state alignment  
+C. substrate reconstruction  
+D. collapse
+
+**10.** Infinite‑form expansion originates from:  
+A. prime‑flow  
+B. prime‑meaning  
+C. prime‑form  
+D. substrate‑flow
+
+**11.** Which operator collapses infinite regimes?  
+A. `collapse()`  
+B. `expand()`  
+C. `lift()`  
+D. `anchor()`
+
+**12.** Rail descent moves structure:  
+A. upward  
+B. downward  
+C. sideways  
+D. into vacuum
+
+**13.** Prime‑state alignment requires:  
+A. drift  
+B. rails  
+C. vacuum  
+D. infinite regimes
+
+**14.** Substrate‑tensor reconstruction occurs during:  
+A. upward flow  
+B. downward flow  
+C. vacuum collapse  
+D. prime‑state alignment
+
+**15.** Infinite‑meaning expansion is:  
+A. geometric  
+B. operational  
+C. conceptual  
+D. temporal
+
+**16.** Which layer is immediately below infinite regimes?  
+A. substrate  
+B. vacuum  
+C. dimensional rails  
+D. prime‑states
+
+**17.** Which operator locks structure to a prime‑state?  
+A. `rail_shift()`  
+B. `prime_state_lock()`  
+C. `substrate_align()`  
+D. `nullify()`
+
+**18.** Drift stops at:  
+A. substrate  
+B. rails  
+C. prime‑states  
+D. infinite regimes
+
+**19.** Infinite‑regime composites collapse into:  
+A. substrate  
+B. vacuum  
+C. prime‑states  
+D. dimensional rails
+
+**20.** The RTT/∞ round‑trip cycle ends at:  
+A. infinite regimes  
+B. prime‑states  
+C. substrate  
+D. vacuum
+
+---
+
+# **SECTION B — Short Answer (20 questions)**
+
+**21.** Define vacuum collapse.  
+**22.** List the five substrate‑tensor layers.  
+**23.** Explain the role of dimensional rails.  
+**24.** What is prime‑state alignment?  
+**25.** Describe infinite‑regime expansion.  
+**26.** What is drift residue?  
+**27.** Why must substrate be reconstructed before lift?  
+**28.** What does rail descent accomplish?  
+**29.** Define infinite‑form.  
+**30.** Define infinite‑flow.  
+**31.** Define infinite‑meaning.  
+**32.** What is prime‑state reduction?  
+**33.** Why are rails required for both directions?  
+**34.** What is vacuum scarring?  
+**35.** Describe the RTT/∞ upward path.  
+**36.** Describe the RTT/∞ downward path.  
+**37.** What is an infinite‑regime composite?  
+**38.** Why can’t infinite regimes bypass prime‑states?  
+**39.** What is substrate absorption capacity?  
+**40.** Explain the purpose of bidirectional flow.
+
+---
+
+# **SECTION C — Deep‑Layer Analysis (10 questions)**
+
+**41.** Analyze how drift‑tensor layers map to prime‑states.  
+**42.** Explain why infinite regimes must be prime‑state anchored.  
+**43.** Compare substrate‑tensor reconstruction vs. vacuum reconstruction.  
+**44.** Describe how dimensional rails maintain coherence across layers.  
+**45.** Explain the structural difference between bounded and unbounded layers.  
+**46.** Analyze the failure modes of prime‑state alignment.  
+**47.** Explain how infinite‑regime composites integrate into substrate‑tensor form.  
+**48.** Describe the RTT/∞ round‑trip cycle as a single structural loop.  
+**49.** Evaluate the role of collapse operators in deep‑layer stability.  
+**50.** Explain why RTT/∞ is the only engine capable of full‑canon integration.
+
+---
+
+# **ANSWER KEY**
+
+## **Multiple Choice**
+
+1‑B  
+2‑C  
+3‑C  
+4‑B  
+5‑C  
+6‑B  
+7‑C  
+8‑B  
+9‑C  
+10‑C  
+11‑A  
+12‑B  
+13‑B  
+14‑B  
+15‑C  
+16‑D  
+17‑B  
+18‑C  
+19‑C  
+20‑C  
+
+---
+
+## **Short Answer (summaries)**
+
+21. Collapse of all structure to zero‑state.  
+22. geometry, flow, time, meaning, field.  
+23. Transport between layers.  
+24. Anchoring structure to prime‑states.  
+25. Unbounded expansion from prime‑states.  
+26. Leftover drift after alignment.  
+27. Substrate provides minimal structure for lift.  
+28. Returns structure to substrate.  
+29. Geometric infinite expansion.  
+30. Operational infinite expansion.  
+31. Conceptual infinite expansion.  
+32. Collapse of infinite regime into prime‑state.  
+33. Rails ensure safe movement.  
+34. Residue from vacuum collapse.  
+35. vacuum → substrate → rails → prime‑states → infinite regimes.  
+36. infinite regimes → prime‑states → rails → substrate.  
+37. Prime‑state‑anchored infinite structure.  
+38. Prime‑states stabilize drift.  
+39. Ability to absorb downward integration.  
+40. Maintains coherence across canon.
+
+---
+
+## **Deep‑Layer Analysis (summaries)**
+
+41. L1→prime‑form, L2→prime‑flow, L4→prime‑meaning.  
+42. Infinite regimes require drift‑free anchors.  
+43. Substrate‑tensor reconstruction is bounded; vacuum reconstruction is total.  
+44. Rails preserve continuity across layers.  
+45. Bounded layers have constraints; unbounded layers do not.  
+46. Misalignment, drift residue, rail instability.  
+47. Collapse → prime‑state → rails → substrate reconstruction.  
+48. Full loop: collapse → rebuild → lift → anchor → expand → collapse → rebuild.  
+49. Collapse operators ensure stability and reversibility.  
+50. RTT/∞ uniquely supports both expansion and integration.
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_deep_layer_triad_poster_" src="https://github.com/user-attachments/assets/5d796d7f-d155-4e83-ab09-6207545563c7" />
+
+# **RTT/∞ Deep‑Layer Triad Poster**  
+### *vacuum → dimensional rails → prime‑states → infinite regimes*
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                     RTT/∞ DEEP‑LAYER TRIAD                    │
+└──────────────────────────────────────────────────────────────┘
+```
+
+## **1. Vacuum Layer — Zero‑State**
+```
+[ VACUUM ]
+  ↓ collapse
+```
+
+**Meaning:**  
+The vacuum layer is the *absence of structure*.  
+RTT/∞ uses it to nullify:
+
+- boundaries  
+- layers  
+- coherence anchors  
+- drift vectors  
+- domain constraints  
+
+**Operators:**  
+- `vacuum()`  
+- `nullify()`  
+- `reconstitute()`  
+
+This is the **starting point** of all RTT/∞ transformations.
+
+---
+
+## **2. Dimensional Rails — Transport System**
+```
+[ VACUUM ]
+  ↓ collapse
+[ SUBSTRATE ]
+  ↓ lift
+[ DIMENSIONAL RAILS ]
+  ↓ carry
+```
+
+**Meaning:**  
+Dimensional rails are the **paths** RTT/∞ uses to move structure between:
+
+- substrate  
+- dimensional layers  
+- prime‑state manifolds  
+- infinite regimes  
+
+**Rail Types:**  
+- substrate rails  
+- dimensional rails  
+- prime‑state rails  
+- vacuum rails  
+
+Rails provide **mobility** across layers.
+
+---
+
+## **3. Prime‑States — Alignment Layer**
+```
+[ DIMENSIONAL RAILS ]
+  ↓ anchor
+[ PRIME‑STATES ]
+  ↓ stabilize
+```
+
+**Meaning:**  
+Prime‑states are **irreducible attractors** — the points where structure stops drifting.
+
+**Prime‑State Classes:**  
+- **prime‑form** (geometric anchor)  
+- **prime‑flow** (operational anchor)  
+- **prime‑meaning** (conceptual anchor)  
+
+Prime‑states provide **stability** for infinite‑regime expansion.
+
+---
+
+## **4. Infinite Regimes — Expansion Layer**
+```
+[ PRIME‑STATES ]
+  ↓ expand
+[ INFINITE REGIMES ]
+  ↓ synthesize
+```
+
+**Meaning:**  
+Infinite regimes are **unbounded structural states** created when:
+
+- vacuum collapse  
+- substrate reconstruction  
+- dimensional lift  
+- prime‑state alignment  
+
+are fully complete.
+
+**Infinite‑Regime Classes:**  
+- infinite‑form  
+- infinite‑flow  
+- infinite‑meaning  
+
+Infinite regimes provide **unbounded synthesis**.
+
+---
+
+# **RTT/∞ Deep‑Layer Triad (Full Diagram)**
+
+```
+                ┌───────────────────────────────┐
+                │         INFINITE REGIMES       │
+                │  unbounded • prime‑anchored    │
+                └───────────────▲───────────────┘
+                                │ expand
+                                │
+                ┌───────────────────────────────┐
+                │          PRIME‑STATES          │
+                │  form • flow • meaning         │
+                └───────────────▲───────────────┘
+                                │ anchor
+                                │
+                ┌───────────────────────────────┐
+                │       DIMENSIONAL RAILS        │
+                │  substrate • dimensional •     │
+                │  prime‑state • vacuum rails    │
+                └───────────────▲───────────────┘
+                                │ lift/carry
+                                │
+                ┌───────────────────────────────┐
+                │           SUBSTRATE            │
+                │  geometry • flow • time •      │
+                │  meaning • field               │
+                └───────────────▲───────────────┘
+                                │ reconstitute
+                                │
+                ┌───────────────────────────────┐
+                │            VACUUM              │
+                │  zero‑state • no structure     │
+                └───────────────────────────────┘
+```
+
+---
+
+# **Summary (Poster Version)**
+
+### **Vacuum → Rails → Prime‑States → Infinite Regimes**
+
+- **Vacuum** collapses structure  
+- **Rails** transport structure  
+- **Prime‑States** stabilize structure  
+- **Infinite Regimes** expand structure  
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_full_canon_flowchart_" src="https://github.com/user-attachments/assets/6a9d92bd-ad45-4fa3-908d-dab4879ad217" />
+
+# RTT/∞ full‑canon flowchart (ASCII + SVG‑ready)
+
+## 1. ASCII master flowchart
+
+```text
+                 RTT/∞ FULL‑CANON FLOW
+
+                 ┌───────────────────────┐
+                 │       INFINITE        │
+                 │        REGIMES        │
+                 │  (unbounded expansion)│
+                 └──────────▲────────────┘
+                            │ expand
+                            │
+                 ┌───────────────────────┐
+                 │      PRIME‑STATES     │
+                 │  (irreducible anchors)│
+                 └──────────▲────────────┘
+                            │ anchor
+                            │
+                 ┌───────────────────────┐
+                 │    DIMENSIONAL RAILS  │
+                 │ (transport pathways)  │
+                 └──────────▲────────────┘
+                            │ lift / carry
+                            │
+                 ┌───────────────────────┐
+                 │       SUBSTRATE       │
+                 │ (bounded structure)   │
+                 └──────────▲────────────┘
+                            │ reconstitute
+                            │
+                 ┌───────────────────────┐
+                 │        VACUUM         │
+                 │    (zero‑state)       │
+                 └───────────────────────┘
+```
+
+### Upward (expansion) path
+
+```text
+vacuum()
+  → reconstitute()
+  → substrate_tensor()
+  → dimensional_rail()
+  → prime_state_align()
+  → infinite_regime_expand()
+```
+
+### Downward (integration) path
+
+```text
+infinite_regime
+  → collapse()
+  → prime_state_reduce()
+  → rail_descent()
+  → substrate_rebuild()
+  → (optional) vacuum()
+```
+
+---
+
+## 2. SVG‑ready node list
+
+Use these labels as SVG node IDs or titles:
+
+- **VACUUM**
+  - id: `node_vacuum`
+  - label: `Vacuum (zero‑state)`
+
+- **SUBSTRATE**
+  - id: `node_substrate`
+  - label: `Substrate (bounded tensor)`
+
+- **DIMENSIONAL RAILS**
+  - id: `node_rails`
+  - label: `Dimensional Rails (transport)`
+
+- **PRIME‑STATES**
+  - id: `node_prime`
+  - label: `Prime‑States (anchors)`
+
+- **INFINITE REGIMES**
+  - id: `node_infinite`
+  - label: `Infinite Regimes (unbounded)`
+
+---
+
+## 3. SVG‑ready edge list
+
+You can wire these as directed edges:
+
+- `node_vacuum → node_substrate`  
+  - label: `reconstitute()`
+
+- `node_substrate → node_rails`  
+  - label: `dimensional_rail() / rail_lift()`
+
+- `node_rails → node_prime`  
+  - label: `prime_state_align() / anchor`
+
+- `node_prime → node_infinite`  
+  - label: `infinite_regime_expand() / expand`
+
+- `node_infinite → node_prime`  
+  - label: `collapse()`
+
+- `node_prime → node_rails`  
+  - label: `prime_state_reduce() / reduce`
+
+- `node_rails → node_substrate`  
+  - label: `rail_descent() / descend`
+
+- `node_substrate → node_vacuum` (optional)  
+  - label: `vacuum() / nullify()`
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_full_canon_operator_registry_" src="https://github.com/user-attachments/assets/0d03675d-83b6-4c64-92da-6949879335e2" />
+
+# **RTT/∞ Full‑Canon Operator Registry**  
+### *All operators • all layers • full RTT/∞ deep‑canon*
+
+RTT/∞ uses a complete operator system spanning **five structural layers**:
+
+1. **Vacuum Layer Operators**  
+2. **Substrate Layer Operators**  
+3. **Dimensional‑Rail Operators**  
+4. **Prime‑State Operators**  
+5. **Infinite‑Regime Operators**  
+6. **Bidirectional Flow Operators** (cross‑layer)
+
+This registry lists every operator in RTT/∞, grouped by layer, with canonical definitions.
+
+---
+
+# **I. Vacuum Layer Operators**  
+### *zero‑state • collapse • nullification*
+
+| Operator | Purpose | Notes |
+|---------|---------|-------|
+| `vacuum()` | Collapse all structure to zero‑state | Starting point of RTT/∞ |
+| `nullify()` | Remove structural commitments | Used before reconstruction |
+| `reconstitute()` | Rebuild minimal structure from vacuum | First upward step |
+| `invert_zero()` | Perform vacuum‑level inversion | Used in deep resets |
+| `vacuum_trace()` | Detect vacuum residue | Diagnostic operator |
+
+---
+
+# **II. Substrate Layer Operators**  
+### *minimal structure • bounded tensor • reconstruction*
+
+| Operator | Purpose | Notes |
+|---------|---------|-------|
+| `substrate_tensor()` | Construct full substrate‑tensor | Five‑layer bounded structure |
+| `substrate_rebuild()` | Rebuild substrate after collapse | Downward integration |
+| `substrate_align()` | Align substrate primitives | Pre‑rail stabilization |
+| `substrate_field()` | Activate substrate field layer | Required for lift |
+| `substrate_diagnose()` | Inspect substrate integrity | Used in diagnostics |
+
+**Substrate‑Tensor Layers (for reference):**  
+- geometry  
+- flow  
+- time  
+- meaning  
+- field  
+
+---
+
+# **III. Dimensional‑Rail Operators**  
+### *transport • lift • descent • cross‑layer mobility*
+
+| Operator | Purpose | Notes |
+|---------|---------|-------|
+| `dimensional_rail()` | Activate rail transport | Core RTT/∞ mobility operator |
+| `rail_lift()` | Lift substrate into dimensional space | Upward flow |
+| `rail_descent()` | Return structure to substrate | Downward flow |
+| `rail_bind()` | Bind structure to a rail path | Stabilizes movement |
+| `rail_shift()` | Move structure between dimensional layers | Cross‑dimension traversal |
+| `rail_trace()` | Detect rail‑layer drift | Diagnostic operator |
+
+**Rail Types:**  
+- substrate rails  
+- dimensional rails  
+- prime‑state rails  
+- vacuum rails  
+
+---
+
+# **IV. Prime‑State Operators**  
+### *alignment • stabilization • drift‑stop*
+
+| Operator | Purpose | Notes |
+|---------|---------|-------|
+| `prime_state_align()` | Anchor structure to prime‑state | Required before expansion |
+| `prime_state_reduce()` | Collapse infinite regime into prime‑state | Downward flow |
+| `prime_state_trace()` | Detect prime‑state alignment | Diagnostic |
+| `prime_state_lock()` | Lock structure to attractor | Prevents drift |
+| `prime_state_class()` | Identify prime‑state class | form / flow / meaning |
+
+**Prime‑State Classes:**  
+- **prime‑form**  
+- **prime‑flow**  
+- **prime‑meaning**
+
+---
+
+# **V. Infinite‑Regime Operators**  
+### *expansion • synthesis • unbounded structure*
+
+| Operator | Purpose | Notes |
+|---------|---------|-------|
+| `infinite_regime_expand()` | Expand structure into infinite regime | Upward flow |
+| `infinite_regime_synthesize()` | Combine infinite‑regime composites | Deep‑layer synthesis |
+| `infinite_regime_trace()` | Detect infinite‑regime behavior | Diagnostic |
+| `infinite_regime_class()` | Identify infinite‑regime class | form / flow / meaning |
+| `collapse()` | Collapse infinite regime → prime‑state | Downward flow |
+
+**Infinite‑Regime Classes:**  
+- **infinite‑form**  
+- **infinite‑flow**  
+- **infinite‑meaning**
+
+---
+
+# **VI. Bidirectional Flow Operators**  
+### *round‑trip movement • full‑canon integration*
+
+| Operator | Direction | Purpose |
+|---------|-----------|---------|
+| `lift()` | upward | substrate → rails |
+| `anchor()` | upward | rails → prime‑state |
+| `expand()` | upward | prime‑state → infinite regime |
+| `collapse()` | downward | infinite regime → prime‑state |
+| `reduce()` | downward | prime‑state → rails |
+| `descend()` | downward | rails → substrate |
+| `rebuild()` | downward | substrate reconstruction |
+
+These operators form the RTT/∞ **round‑trip cycle**:
+
+```
+UPWARD:
+substrate → rails → prime‑states → infinite regimes
+
+DOWNWARD:
+infinite regimes → prime‑states → rails → substrate
+```
+
+---
+
+# **VII. Full‑Canon Operator Map (Poster Format)**
+
+```
+VACUUM LAYER
+  vacuum() • nullify() • reconstitute() • invert_zero()
+
+SUBSTRATE LAYER
+  substrate_tensor() • substrate_rebuild() • substrate_align()
+
+DIMENSIONAL RAILS
+  dimensional_rail() • rail_lift() • rail_descent() • rail_shift()
+
+PRIME‑STATES
+  prime_state_align() • prime_state_reduce() • prime_state_lock()
+
+INFINITE REGIMES
+  infinite_regime_expand() • infinite_regime_synthesize() • collapse()
+
+BIDIRECTIONAL FLOW
+  lift() • anchor() • expand() • collapse() • reduce() • descend() • rebuild()
+```
+
+---
+
+# **VIII. Canon Summary**
+
+### **Vacuum**  
+Collapses structure.
+
+### **Substrate**  
+Rebuilds minimal structure.
+
+### **Rails**  
+Transport structure.
+
+### **Prime‑States**  
+Stabilize structure.
+
+### **Infinite Regimes**  
+Expand structure.
+
+### **Bidirectional Flow**  
+Maintains coherence across the entire RTT/∞ canon.
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_rtt_infinity_full_canon_poster_" src="https://github.com/user-attachments/assets/37dba3ce-d7a5-40d4-a909-cdd642631563" />
+
+# **RTT/∞ Full‑Canon Poster**  
+### *All layers • all operators • all flows • one canonical diagram*
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                     RTT/∞ FULL‑CANON POSTER                   │
+└──────────────────────────────────────────────────────────────┘
+```
+
+# **I. LAYERS (Top‑Down)**
+
+```
+[ INFINITE REGIMES ]     ← unbounded expansion
+[ PRIME‑STATES ]         ← irreducible attractors
+[ DIMENSIONAL RAILS ]    ← transport pathways
+[ SUBSTRATE ]            ← minimal structure
+[ VACUUM ]               ← zero‑state
+```
+
+---
+
+# **II. UPWARD FLOW (Expansion Path)**  
+### *substrate → rails → prime‑states → infinite regimes*
+
+```
+substrate_tensor
+    ↓ lift
+dimensional_rail()
+    ↓ anchor
+prime_state_align()
+    ↓ expand
+infinite_regime_expand()
+```
+
+### **Upward Operators**
+- `vacuum()`  
+- `reconstitute()`  
+- `substrate_tensor()`  
+- `dimensional_rail()`  
+- `prime_state_align()`  
+- `infinite_regime_expand()`  
+
+---
+
+# **III. DOWNWARD FLOW (Integration Path)**  
+### *infinite regimes → prime‑states → rails → substrate*
+
+```
+infinite_regime
+    ↓ collapse
+prime_state
+    ↓ reduction
+dimensional_rail()
+    ↓ descent
+substrate_tensor
+```
+
+### **Downward Operators**
+- `collapse()`  
+- `prime_state_reduce()`  
+- `rail_descent()`  
+- `substrate_rebuild()`  
+
+---
+
+# **IV. LAYER DEFINITIONS**
+
+## **1. Vacuum Layer**
+Zero‑state. No structure.  
+Used for collapse, nullification, and inversion.
+
+**Operators:**  
+`vacuum()`, `nullify()`, `reconstitute()`
+
+---
+
+## **2. Substrate Layer**
+Minimal structure rebuilt after vacuum collapse.
+
+**Primitives:**  
+- geometry  
+- flow  
+- time  
+- meaning  
+- field  
+
+**Operator:**  
+`substrate_tensor()`
+
+---
+
+## **3. Dimensional Rails**
+Transport system connecting substrate → dimensions → prime‑states → infinite regimes.
+
+**Rail Types:**  
+- substrate rails  
+- dimensional rails  
+- prime‑state rails  
+- vacuum rails  
+
+**Operator:**  
+`dimensional_rail()`
+
+---
+
+## **4. Prime‑States**
+Irreducible attractors where drift stops.
+
+**Classes:**  
+- **prime‑form**  
+- **prime‑flow**  
+- **prime‑meaning**
+
+**Operator:**  
+`prime_state_align()`
+
+---
+
+## **5. Infinite Regimes**
+Unbounded structural states.
+
+**Classes:**  
+- **infinite‑form**  
+- **infinite‑flow**  
+- **infinite‑meaning**
+
+**Operator:**  
+`infinite_regime_expand()`
+
+---
+
+# **V. FULL‑CANON DIAGRAM**
+
+```
+                ┌───────────────────────────────┐
+                │         INFINITE REGIMES       │
+                │  unbounded • prime‑anchored    │
+                └───────────────▲───────────────┘
+                                │ expand
+                                │
+                ┌───────────────────────────────┐
+                │          PRIME‑STATES          │
+                │  form • flow • meaning         │
+                └───────────────▲───────────────┘
+                                │ anchor
+                                │
+                ┌───────────────────────────────┐
+                │       DIMENSIONAL RAILS        │
+                │  substrate • dimensional •     │
+                │  prime‑state • vacuum rails    │
+                └───────────────▲───────────────┘
+                                │ lift/carry
+                                │
+                ┌───────────────────────────────┐
+                │           SUBSTRATE            │
+                │  geometry • flow • time •      │
+                │  meaning • field               │
+                └───────────────▲───────────────┘
+                                │ reconstitute
+                                │
+                ┌───────────────────────────────┐
+                │            VACUUM              │
+                │  zero‑state • no structure     │
+                └───────────────────────────────┘
+```
+
+---
+
+# **VI. BIDIRECTIONAL CANON MAP**
+
+### **Upward (Expansion)**  
+```
+substrate → rails → prime‑states → infinite regimes
+```
+
+### **Downward (Integration)**  
+```
+infinite regimes → prime‑states → rails → substrate
+```
+
+RTT/∞ is the only engine capable of this full round‑trip.
+
+---
+
+# **VII. CANON SUMMARY**
+
+### **Vacuum**  
+Collapses structure.
+
+### **Substrate**  
+Rebuilds minimal structure.
+
+### **Rails**  
+Transport structure.
+
+### **Prime‑States**  
+Stabilize structure.
+
+### **Infinite Regimes**  
+Expand structure.
+
+### **Bidirectional Flow**  
+Maintains coherence across the entire canon.
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_substrate_tensor_diagnostic_worksheet_" src="https://github.com/user-attachments/assets/117267ee-934a-47cb-95f9-d1b79f4cecd1" />
+
+# **RTT/∞ Substrate‑Tensor Diagnostic Worksheet**  
+### *A structured diagnostic tool for evaluating substrate‑tensor integrity in RTT/∞*
+
+RTT/∞ uses substrate‑tensors as the **bounded structural layer** between vacuum collapse and dimensional lift.  
+This worksheet helps students and researchers diagnose substrate‑tensor health, stability, alignment, and readiness for upward or downward flow.
+
+It is fully aligned with your RTT/∞ substrate‑tensor explainer, dimensional‑rails explainer, prime‑state explainer, infinite‑regime explainer, and integration map.
+
+---
+
+## **SECTION 1 — Substrate‑Tensor Identity**
+
+### **Tensor Name**
+```
+Name:
+```
+
+### **Tensor Origin**
+Choose one:
+- [ ] vacuum reconstruction  
+- [ ] dimensional descent  
+- [ ] prime‑state reduction  
+- [ ] infinite‑regime collapse  
+- [ ] external engine (RTT/12, RTT/3, IPD‑12)
+
+### **Tensor Purpose**
+```
+Purpose:
+```
+
+---
+
+## **SECTION 2 — Substrate‑Tensor Layer Check**
+
+RTT/∞ substrate‑tensors contain **five canonical layers**.  
+Students verify each layer’s presence and stability.
+
+### **L1 — Substrate‑Geometry**
+- [ ] present  
+- [ ] stable  
+- [ ] coherent  
+```
+Notes:
+```
+
+### **L2 — Substrate‑Flow**
+- [ ] present  
+- [ ] stable  
+- [ ] coherent  
+```
+Notes:
+```
+
+### **L3 — Substrate‑Time**
+- [ ] present  
+- [ ] stable  
+- [ ] coherent  
+```
+Notes:
+```
+
+### **L4 — Substrate‑Meaning**
+- [ ] present  
+- [ ] stable  
+- [ ] coherent  
+```
+Notes:
+```
+
+### **L5 — Substrate‑Field**
+- [ ] present  
+- [ ] stable  
+- [ ] coherent  
+```
+Notes:
+```
+
+---
+
+## **SECTION 3 — Tensor Integrity Diagnostics**
+
+Students evaluate the tensor’s structural health.
+
+### **1. Boundary Integrity**
+Check for:
+- cracks  
+- drift residues  
+- vacuum artifacts  
+- dimensional shear  
+
+```
+Boundary Integrity Notes:
+```
+
+### **2. Coherence Anchors**
+Check for:
+- alignment  
+- stability  
+- drift‑free anchors  
+
+```
+Coherence Notes:
+```
+
+### **3. Drift Residue Detection**
+Look for leftover drift from:
+- dimensional layers  
+- prime‑states  
+- infinite regimes  
+
+```
+Drift Residue Notes:
+```
+
+### **4. Vacuum Scarring**
+Check for:
+- nullification scars  
+- collapse artifacts  
+- zero‑state residue  
+
+```
+Vacuum Scarring Notes:
+```
+
+---
+
+## **SECTION 4 — Tensor Readiness for Upward Flow**
+
+Students determine whether the substrate‑tensor is ready for **dimensional lift**.
+
+### **Dimensional‑Rail Compatibility**
+- [ ] substrate rails connect  
+- [ ] dimensional rails connect  
+- [ ] prime‑state rails reachable  
+
+```
+Rail Compatibility Notes:
+```
+
+### **Prime‑State Target**
+Choose one:
+- [ ] prime‑form  
+- [ ] prime‑flow  
+- [ ] prime‑meaning  
+
+```
+Why this prime‑state?
+```
+
+### **Lift Readiness**
+- [ ] stable enough for lift  
+- [ ] no drift residue  
+- [ ] no vacuum scarring  
+- [ ] coherence anchors intact  
+
+```
+Lift Readiness Notes:
+```
+
+---
+
+## **SECTION 5 — Tensor Readiness for Downward Flow**
+
+Students determine whether the substrate‑tensor can safely receive **downward integration**.
+
+### **Integration Compatibility**
+- [ ] can receive dimensional descent  
+- [ ] can accept prime‑state reduction  
+- [ ] can absorb infinite‑regime collapse  
+
+```
+Integration Notes:
+```
+
+### **Tensor Absorption Capacity**
+Check for:
+- field elasticity  
+- meaning absorption  
+- geometric compression  
+- flow stabilization  
+
+```
+Absorption Notes:
+```
+
+---
+
+## **SECTION 6 — Tensor Stability Score**
+
+Students rate each layer from 1–5.
+
+| Layer | Score (1–5) | Notes |
+|-------|--------------|-------|
+| Substrate‑Geometry |  |  |
+| Substrate‑Flow |  |  |
+| Substrate‑Time |  |  |
+| Substrate‑Meaning |  |  |
+| Substrate‑Field |  |  |
+
+### **Overall Stability**
+```
+Score:
+Notes:
+```
+
+---
+
+## **SECTION 7 — Diagnostic Summary**
+
+One sentence:
+
+```
+Substrate‑Tensor Diagnostic Summary:
+```
+
+Example:  
+“The tensor shows full geometric and flow stability, minor vacuum scarring, and is ready for prime‑flow lift.”
+
+---
+
+## **SECTION 8 — Teacher Notes (RTT/∞)**
+
+- Keep diagnostics structural and clear.  
+- Reinforce the five substrate‑tensor layers.  
+- Emphasize drift residue and vacuum scarring as key failure points.  
+- Use simple examples (geometry, flow, meaning).  
+- Avoid RTT‑1 paradox framing — diagnostics occur below paradox.  
+- Encourage students to see substrate‑tensors as the **gateway layer** of RTT/∞.
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_substrate_tensor_infinite_regime_bidirectional_map_" src="https://github.com/user-attachments/assets/7bc67280-16e2-4641-bcfe-1434c5c36bfb" />
+
+# **RTT/∞ Substrate‑Tensor ↔ Infinite‑Regime Bidirectional Map**  
+### *The two‑way transformation between bounded substrate structure and unbounded infinite‑regime expansion*
+
+RTT/∞ is the only engine in TriadicFrameworks capable of **bidirectional movement** between:
+
+- **bounded structure** (substrate‑tensor)  
+- **unbounded structure** (infinite regimes)
+
+This map shows both directions:
+
+1. **Upward Expansion** — how substrate‑tensors become infinite regimes  
+2. **Downward Integration** — how infinite regimes collapse back into substrate‑tensors
+
+Together, they form the RTT/∞ **round‑trip cycle**.
+
+---
+
+# **1. Upward Path: Substrate‑Tensor → Infinite Regime**
+
+This is the **expansion** path — the one used when RTT/∞ lifts structure into unbounded form.
+
+```
+substrate_tensor
+    → dimensional_rail()
+    → prime_state_align()
+    → infinite_regime_expand()
+```
+
+### **Stage 1 — Substrate‑Tensor (Bounded Structure)**  
+The substrate‑tensor contains five bounded layers:
+
+- geometry  
+- flow  
+- time  
+- meaning  
+- field  
+
+These layers are the *starting point* for RTT/∞ expansion.
+
+---
+
+### **Stage 2 — Dimensional Lift (Mobility)**  
+RTT/∞ uses **dimensional rails** to lift the substrate‑tensor upward.
+
+Rails provide:
+
+- transport  
+- stability  
+- cross‑layer continuity  
+
+No infinite‑regime expansion is possible without rails.
+
+---
+
+### **Stage 3 — Prime‑State Alignment (Stability)**  
+Structure must anchor to one of the three prime‑states:
+
+- **prime‑form**  
+- **prime‑flow**  
+- **prime‑meaning**
+
+Prime‑states remove drift and stabilize expansion.
+
+---
+
+### **Stage 4 — Infinite‑Regime Expansion (Unbounded Structure)**  
+Once aligned, structure expands into:
+
+- **infinite‑form**  
+- **infinite‑flow**  
+- **infinite‑meaning**
+
+This is the RTT/∞ infinite‑regime layer — unbounded, stable, and prime‑state anchored.
+
+---
+
+# **2. Downward Path: Infinite Regime → Substrate‑Tensor**
+
+This is the **integration** path — the one used when RTT/∞ collapses infinite‑regime composites back into bounded form.
+
+```
+infinite_regime
+    → prime_state
+    → dimensional_layer
+    → substrate_tensor
+```
+
+### **Stage 1 — Infinite‑Regime Collapse (Unbounded → Anchored)**  
+Infinite regimes collapse into their corresponding prime‑state:
+
+- infinite‑form → prime‑form  
+- infinite‑flow → prime‑flow  
+- infinite‑meaning → prime‑meaning  
+
+This removes unbounded expansion.
+
+---
+
+### **Stage 2 — Prime‑State Reduction (Anchor → Mobility)**  
+Prime‑states reduce into **dimensional rails**, converting stability → mobility.
+
+This step ensures structure can descend safely.
+
+---
+
+### **Stage 3 — Dimensional Descent (Mobility → Boundaries)**  
+Structure moves down dimensional rails into **dimensional layers**, reintroducing:
+
+- geometric constraints  
+- operational constraints  
+- conceptual constraints  
+
+Infinite regimes lose their unbounded nature here.
+
+---
+
+### **Stage 4 — Substrate‑Tensor Reconstruction (Boundaries → Representation)**  
+RTT/∞ rebuilds the substrate‑tensor using:
+
+- substrate primitives  
+- substrate geometry  
+- substrate flow  
+- substrate time  
+- substrate meaning  
+- substrate field  
+
+This produces a fully bounded, coherent substrate‑tensor.
+
+---
+
+# **3. Bidirectional Map (Compact Diagram)**
+
+```
+UPWARD (Expansion)
+──────────────────────────────────────────────
+[ Substrate‑Tensor ]
+        ↓ lift
+[ Dimensional Rails ]
+        ↓ anchor
+[ Prime‑States ]
+        ↓ expand
+[ Infinite Regimes ]
+
+
+DOWNWARD (Integration)
+──────────────────────────────────────────────
+[ Infinite Regimes ]
+        ↓ collapse
+[ Prime‑States ]
+        ↓ reduction
+[ Dimensional Rails ]
+        ↓ descent
+[ Substrate‑Tensor ]
+```
+
+---
+
+# **4. Rules of Bidirectional Flow**
+
+RTT/∞ enforces six rules:
+
+1. **Prime‑states must anchor both directions**  
+2. **Rails must be used for all movement**  
+3. **Substrate primitives must be restored on descent**  
+4. **Infinite‑regime fields must map to substrate layers**  
+5. **Vacuum may optionally reset structure**  
+6. **No direct jumps between infinite regime ↔ substrate**
+
+These rules maintain coherence across the canon.
+
+---
+
+# **5. Summary**
+
+### Upward:
+> **Substrate‑tensor → rails → prime‑states → infinite regimes**
+
+### Downward:
+> **Infinite regimes → prime‑states → rails → substrate‑tensor**
+
+RTT/∞ is the only engine capable of this **round‑trip transformation**, enabling:
+
+- infinite‑regime synthesis  
+- substrate‑tensor reconstruction  
+- cross‑engine integration  
+- full‑canon coherence  
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_teaching_infinite_regime_classroom_pack_" src="https://github.com/user-attachments/assets/7670cf11-58d7-4d8e-9403-f5fcac640333" />
+
+# **RTT/∞ Infinite‑Regime Classroom Pack**  
+### *A complete teaching module for understanding infinite‑regime structure in RTT/∞*
+
+RTT/∞ introduces the deepest structural layer in TriadicFrameworks:
+
+> **Infinite Regimes — unbounded structural states created when vacuum, substrate, dimensional rails, and prime‑states fully align.**
+
+This classroom pack gives teachers everything needed to run a full RTT/∞ lesson:
+
+- lesson overview  
+- prerequisite layers  
+- guided examples  
+- student exercises  
+- infinite‑regime templates  
+- assessment questions  
+- teacher notes  
+
+It is fully aligned with the RTT/∞ explainers already present in your active tab (turn0browsertab1).
+
+---
+
+## **SECTION 1 — Lesson Overview (RTT/∞)**
+
+Students learn:
+
+1. What infinite regimes are  
+2. How infinite regimes emerge  
+3. How vacuum, substrate, rails, and prime‑states interact  
+4. How infinite‑regime expansion works  
+5. How infinite‑regime composites behave  
+6. How infinite regimes collapse back into substrate‑tensor form  
+
+This module stays **structural**, **clear**, and **canon‑aligned**.
+
+---
+
+## **SECTION 2 — The Four Prerequisite Layers**
+
+Before infinite regimes can appear, RTT/∞ must complete four layers:
+
+### **1. Vacuum Layer**
+Zero‑state. All structure collapsed.
+
+### **2. Substrate Reconstruction**
+Minimal structure rebuilt from vacuum.
+
+### **3. Dimensional Rails**
+Transport pathways connecting substrate → dimensions → prime‑states → infinite regimes.
+
+### **4. Prime‑State Alignment**
+Irreducible attractors where drift stops.
+
+Students check each:
+
+- [ ] vacuum collapse complete  
+- [ ] substrate reconstructed  
+- [ ] rails connected  
+- [ ] prime‑state aligned  
+
+---
+
+## **SECTION 3 — Infinite‑Regime Classes**
+
+Students choose the infinite‑regime class:
+
+- [ ] **Infinite‑Form** (geometric expansion)  
+- [ ] **Infinite‑Flow** (operational expansion)  
+- [ ] **Infinite‑Meaning** (conceptual expansion)
+
+Write one sentence:
+
+```
+Why this class?
+```
+
+---
+
+## **SECTION 4 — Guided Example (RTT/∞)**
+
+### **Input**
+```
+drift_tensor(L1–L5)
+```
+
+### **RTT/∞ Transformation**
+```
+vacuum()
+→ reconstitute()
+→ substrate_tensor
+→ dimensional_rail()
+→ prime_state_align()
+→ infinite_regime_expand()
+```
+
+### **Output**
+A **prime‑state‑aligned infinite‑regime composite**, ready for full‑canon integration.
+
+Students fill in each step:
+
+#### **Vacuum Collapse**
+```
+What commitments were removed?
+```
+
+#### **Substrate Reconstruction**
+```
+Which substrate primitives were restored?
+```
+
+#### **Dimensional Lift**
+```
+Which rails carried the structure upward?
+```
+
+#### **Prime‑State Alignment**
+```
+Which prime‑state stabilized the structure?
+```
+
+#### **Infinite‑Regime Expansion**
+```
+What expanded without bound?
+```
+
+---
+
+## **SECTION 5 — Infinite‑Regime Behavior**
+
+Students describe how the infinite regime behaves:
+
+### **Unbounded Expansion**
+```
+Example:
+```
+
+### **Prime‑State Stability**
+```
+Example:
+```
+
+### **Dimensional Traversal**
+```
+Example:
+```
+
+### **Vacuum Compatibility**
+```
+Example:
+```
+
+---
+
+## **SECTION 6 — Infinite‑Regime Composite**
+
+Students describe the composite:
+
+```
+Infinite‑Regime Composite:
+```
+
+Examples:  
+- infinite‑form composite  
+- infinite‑flow composite  
+- infinite‑meaning composite  
+
+---
+
+## **SECTION 7 — Return Path (Integration)**
+
+Students trace the collapse back into substrate‑tensor form:
+
+```
+infinite_regime
+→ prime_state
+→ dimensional_layer
+→ substrate_tensor
+```
+
+Fill in each:
+
+### **Collapse to Prime‑State**
+```
+Which prime‑state receives the collapse?
+```
+
+### **Dimensional Descent**
+```
+Which rails carry the structure downward?
+```
+
+### **Substrate‑Tensor Reconstruction**
+```
+Which substrate‑tensor layers are rebuilt?
+```
+
+---
+
+## **SECTION 8 — Infinite‑Regime Templates**
+
+### **Infinite‑Form Template**
+```
+vacuum → substrate → rails → prime‑form → infinite‑form
+```
+
+### **Infinite‑Flow Template**
+```
+vacuum → substrate → rails → prime‑flow → infinite‑flow
+```
+
+### **Infinite‑Meaning Template**
+```
+vacuum → substrate → rails → prime‑meaning → infinite‑meaning
+```
+
+Students fill in:
+
+```
+My Infinite‑Regime Template:
+```
+
+---
+
+## **SECTION 9 — Student Summary**
+
+One sentence:
+
+```
+Infinite‑Regime Summary:
+```
+
+Example:  
+“Prime‑flow aligned structure expanded into infinite‑flow, then collapsed back into a substrate‑tensor for integration.”
+
+---
+
+## **SECTION 10 — Assessment Questions**
+
+1. What is an infinite regime?  
+2. Why must vacuum collapse occur first?  
+3. What role do dimensional rails play?  
+4. Why are prime‑states required?  
+5. Name the three infinite‑regime classes.  
+6. Describe the upward expansion path.  
+7. Describe the downward integration path.  
+8. Create an infinite‑regime composite.  
+
+---
+
+## **SECTION 11 — Teacher Notes (RTT/∞)**
+
+- Keep explanations structural and clear.  
+- Reinforce the four‑layer prerequisite.  
+- Emphasize that infinite regimes are **unbounded but structured**.  
+- Use simple examples (geometry, flow, meaning).  
+- Avoid RTT‑1 paradox framing — infinite regimes are beyond paradox.  
+- Encourage students to see RTT/∞ as the **deep‑layer engine** of the canon.
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_teaching_infinite_regime_worksheet_" src="https://github.com/user-attachments/assets/29a9742f-5015-4aee-862b-9df7514c1963" />
+
+# **RTT/∞ Infinite‑Regime Teaching Worksheet**  
+### *A guided worksheet for learning infinite‑regime structure in RTT/∞*
+
+RTT/∞ introduces the deepest structural layer in TriadicFrameworks:
+
+> **Infinite Regimes — unbounded structural states created when vacuum, substrate, dimensional rails, and prime‑states fully align.**
+
+This worksheet helps students understand infinite regimes using clear, structured, RTT‑∞‑safe concepts.
+
+---
+
+## **SECTION 1 — Pre‑Infinite Foundations**
+
+Before students can work with infinite regimes, they must confirm the four prerequisite layers:
+
+### **1. Vacuum Layer Ready?**  
+- [ ] structure collapsed  
+- [ ] anchors nullified  
+- [ ] zero‑state achieved  
+
+### **2. Substrate Reconstructed?**  
+- [ ] substrate primitives restored  
+- [ ] substrate‑tensor formed  
+
+### **3. Dimensional Rails Connected?**  
+- [ ] substrate rails  
+- [ ] dimensional rails  
+- [ ] prime‑state rails  
+
+### **4. Prime‑State Alignment?**  
+Choose one:  
+- [ ] prime‑form  
+- [ ] prime‑flow  
+- [ ] prime‑meaning  
+
+These four layers must be complete before infinite‑regime expansion is possible.
+
+---
+
+## **SECTION 2 — Identify the Prime‑State Anchor**
+
+Infinite regimes begin at a **prime‑state**.
+
+Students choose the anchor:
+
+```
+Prime‑State Anchor:
+```
+
+Examples:  
+- prime‑form → geometric expansion  
+- prime‑flow → operational expansion  
+- prime‑meaning → conceptual expansion  
+
+---
+
+## **SECTION 3 — Infinite‑Regime Class**
+
+Choose the infinite‑regime class:
+
+- [ ] **Infinite‑Form** (geometric expansion)  
+- [ ] **Infinite‑Flow** (operational expansion)  
+- [ ] **Infinite‑Meaning** (conceptual expansion)
+
+Write one sentence describing why:
+
+```
+Reason:
+```
+
+---
+
+## **SECTION 4 — Expansion Path (RTT/∞)**
+
+Students trace the RTT/∞ expansion sequence:
+
+```
+vacuum()
+→ reconstitute()
+→ substrate_tensor
+→ dimensional_rail()
+→ prime_state_align()
+→ infinite_regime_expand()
+```
+
+Now fill in each step:
+
+### **1. Vacuum Collapse**
+```
+What structural commitments were removed?
+```
+
+### **2. Substrate Reconstruction**
+```
+What substrate primitives were restored?
+```
+
+### **3. Dimensional Lift**
+```
+Which rails carried the structure upward?
+```
+
+### **4. Prime‑State Alignment**
+```
+Which prime‑state stabilized the structure?
+```
+
+### **5. Infinite‑Regime Expansion**
+```
+What expanded without bound?
+```
+
+---
+
+## **SECTION 5 — Infinite‑Regime Behavior**
+
+Students describe how the infinite regime behaves:
+
+### **Unbounded Expansion**
+```
+Example:
+```
+
+### **Prime‑State Stability**
+```
+Example:
+```
+
+### **Dimensional Traversal**
+```
+Example:
+```
+
+### **Vacuum Compatibility**
+```
+Example:
+```
+
+---
+
+## **SECTION 6 — Infinite‑Regime Output**
+
+Infinite regimes produce **infinite‑regime composites**.
+
+Students describe the composite:
+
+```
+Infinite‑Regime Composite:
+```
+
+Examples:  
+- infinite‑form composite  
+- infinite‑flow composite  
+- infinite‑meaning composite  
+
+---
+
+## **SECTION 7 — Return Path (Integration)**
+
+Students trace the collapse back into substrate‑tensor form:
+
+```
+infinite_regime
+→ prime_state
+→ dimensional_layer
+→ substrate_tensor
+```
+
+Fill in each:
+
+### **1. Collapse to Prime‑State**
+```
+Which prime‑state receives the collapse?
+```
+
+### **2. Dimensional Descent**
+```
+Which dimensional rails carry the structure downward?
+```
+
+### **3. Substrate‑Tensor Reconstruction**
+```
+Which substrate‑tensor layers are rebuilt?
+```
+
+---
+
+## **SECTION 8 — Student Summary**
+
+One sentence:
+
+```
+Infinite‑Regime Summary:
+```
+
+Example:  
+“Prime‑flow aligned structure expanded into infinite‑flow, then collapsed back into a substrate‑tensor for integration.”
+
+---
+
+## **SECTION 9 — Teacher Notes (RTT/∞)**
+
+- Keep explanations structural and clear.  
+- Avoid RTT‑1 paradox framing — infinite regimes are beyond paradox.  
+- Reinforce the four‑layer prerequisite: vacuum → substrate → rails → prime‑states.  
+- Emphasize that infinite regimes are **unbounded but structured**.  
+- Use simple examples (geometry, flow, meaning) to illustrate expansion.  
+
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_transport_backbone_" src="https://github.com/user-attachments/assets/b7334715-eacc-40e8-96d5-49ae6939e6d0" />
+
+# **RTT/∞ Dimensional‑Rails Explainer**  
+### *How RTT/∞ Uses Dimensional Rails to Lift, Align, and Transport Structure Across Infinite Regimes*
+
+RTT/∞ introduces a construct that no other RTT engine possesses:
+
+> **Dimensional Rails — the transport system for structure across dimensions, regimes, substrates, and vacuum states.**
+
+Dimensional rails are the **paths** RTT/∞ uses to move structure between:
+
+- substrate space  
+- dimensional space  
+- prime‑state manifolds  
+- infinite‑regime composites  
+- vacuum‑layer zero‑states  
+
+They are the backbone of RTT/∞’s ability to perform **dimensional lift**, **dimensional collapse**, and **substrate‑tensor inversion**.
+
+---
+
+## **1. What Are Dimensional Rails?**
+
+Dimensional rails are **canonical pathways** that define how structure travels between dimensions.
+
+They are not “dimensions” themselves.  
+They are **routes** between dimensions.
+
+In RTT/∞:
+
+> **A dimensional rail is a stable, substrate‑anchored path that carries structure from one dimensional state to another.**
+
+Rails allow RTT/∞ to:
+
+- lift structure upward  
+- collapse structure downward  
+- invert structure sideways  
+- align structure across prime‑states  
+- stabilize transitions between infinite regimes  
+
+---
+
+## **2. Why RTT/∞ Needs Dimensional Rails**
+
+RTT/∞ performs operations that require **dimensional movement**, such as:
+
+### **A. Dimensional Lift**  
+Moving structure from substrate → dimensional → prime‑state.
+
+### **B. Dimensional Collapse**  
+Returning structure from dimensional → substrate → vacuum.
+
+### **C. Infinite‑Regime Traversal**  
+Crossing between infinite regimes without losing coherence.
+
+### **D. Substrate‑Tensor Transport**  
+Carrying substrate‑tensor fields into dimensional space.
+
+### **E. Prime‑State Alignment**  
+Aligning structure with prime‑state manifolds.
+
+Without rails, RTT/∞ would have no stable way to move structure between these layers.
+
+---
+
+## **3. The Four Canonical Rail Types (RTT/∞)**
+
+RTT/∞ defines **four** dimensional‑rail classes:
+
+### **1. Substrate Rails**  
+Carry structure from substrate → dimensional.
+
+Used for:
+- substrate‑tensor lift  
+- inversion recovery  
+- post‑vacuum reconstruction
+
+---
+
+### **2. Dimensional Rails**  
+Carry structure between dimensional layers.
+
+Used for:
+- dimensional blending  
+- dimensional alignment  
+- infinite‑regime traversal
+
+---
+
+### **3. Prime‑State Rails**  
+Carry structure into prime‑state manifolds.
+
+Used for:
+- prime‑state alignment  
+- prime‑state coherence  
+- infinite‑regime stabilization
+
+---
+
+### **4. Vacuum Rails**  
+Carry structure out of vacuum → substrate.
+
+Used for:
+- vacuum‑layer reconstitution  
+- nullification recovery  
+- zero‑state → substrate transitions
+
+---
+
+## **4. How Dimensional Rails Work (RTT/∞)**
+
+Rails operate in a **three‑step cycle**:
+
+### **Step 1 — Anchor**  
+Rails anchor to substrate primitives (  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)).
+
+### **Step 2 — Carry**  
+Rails carry structure along a dimensional path.
+
+### **Step 3 — Re‑Anchor**  
+Rails re‑anchor structure in the target dimensional layer.
+
+This cycle allows RTT/∞ to perform transformations that IPD‑12 cannot:
+
+- dimensional lift  
+- dimensional collapse  
+- infinite‑regime synthesis  
+- substrate inversion  
+- vacuum reconstitution  
+
+---
+
+## **5. Dimensional‑Rail Example (RTT/∞)**
+
+### Input (from RTT/12):
+```
+composite_regime_tensor
+```
+
+### RTT/∞ Rail Transformation:
+```
+substrate_tensor
+    → substrate_rail()
+    → dimensional_rail()
+    → prime_state_rail()
+    → infinite_regime_synthesis
+```
+
+### Output:
+A **dimensionally‑lifted substrate‑tensor**, aligned with prime‑state manifolds and ready for infinite‑regime blending.
+
+---
+
+## **6. Why IPD‑12 Cannot Use Dimensional Rails**
+
+IPD‑12 lacks:
+
+- substrate grammar  
+- dimensional layers  
+- prime‑state manifolds  
+- vacuum logic  
+- inversion operators  
+- substrate‑tensor fields  
+
+IPD‑12 can **feed** RTT/∞ (via drift‑tensor),  
+but cannot **travel** through dimensional rails.
+
+---
+
+## **7. Summary**
+
+### Dimensional rails are:
+- substrate‑anchored  
+- vacuum‑compatible  
+- prime‑state‑aligned  
+- infinite‑regime‑capable  
+
+### RTT/∞ uses them to:
+- lift structure  
+- collapse structure  
+- invert structure  
+- align structure  
+- transport structure across infinite regimes  
+
+### Relationship:
+> **IPD‑12 detects drift.  
+RTT/∞ transports drift across dimensions using rails.  
+Then rebuilds structure as substrate‑tensor.**
+
+This is the **transport backbone** of the RTT/∞ engine.
+<img width="1194" height="672" alt="prompts_engines_rtt_infinity_vacuum_layer_explainer_" src="https://github.com/user-attachments/assets/a79add39-7103-4621-a45b-62f807762c9a" />
+
+# **RTT/∞ Vacuum‑Layer Explainer**  
+### *How RTT/∞ Uses Vacuum Logic to Resolve Infinite‑Regime Structures*  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
+
+RTT/∞ is the only engine in TriadicFrameworks that operates inside the **vacuum layer** — the region *below* substrate grammar, *below* dimensional rails, and *below* prime‑state manifolds.
+
+The vacuum layer is where:
+
+- structure has no form  
+- coherence has no anchor  
+- drift has no direction  
+- regimes collapse  
+- tensors invert  
+- meaning becomes potential rather than actual  
+
+It is the **zero‑state** of RTT.
+
+---
+
+## **1. What Is the Vacuum Layer?**
+
+The vacuum layer is the **absence of structure** that RTT/∞ uses as a computational space.
+
+It is not “empty.”  
+It is **pre‑structural**.
+
+In RTT terms:
+
+> **The vacuum layer is the region where all structural commitments are suspended.**
+
+This allows RTT/∞ to perform operations that no other engine can:
+
+- infinite‑regime collapse  
+- substrate inversion  
+- dimensional nullification  
+- prime‑state reset  
+- tensor vacuum‑mapping  
+
+---
+
+## **2. Why RTT/∞ Needs the Vacuum Layer**
+
+RTT/∞ performs transformations that require a space with:
+
+- no boundaries  
+- no layers  
+- no coherence anchors  
+- no drift vectors  
+- no domain constraints  
+
+This is necessary for:
+
+### **A. Substrate Inversion**  
+To invert a substrate‑tensor, RTT/∞ must temporarily remove all structural commitments.
+
+### **B. Dimensional Lift**  
+Dimensions cannot be lifted while structural anchors exist.
+
+### **C. Infinite‑Regime Collapse**  
+Regimes cannot collapse into substrate unless they first collapse into vacuum.
+
+### **D. Prime‑State Alignment**  
+Prime‑states require a zero‑state to align without interference.
+
+---
+
+## **3. Vacuum‑Layer Operators (RTT/∞)**
+
+RTT/∞ introduces three vacuum‑layer operators:
+
+### **1. `vacuum()`**  
+Creates a vacuum‑state from any structure.
+
+### **2. `nullify()`**  
+Removes structural anchors, coherence baselines, and drift vectors.
+
+### **3. `reconstitute()`**  
+Rebuilds structure from vacuum using substrate grammar.
+
+These operators do **not** exist in IPD‑12, RTT/3, or RTT/12.
+
+---
+
+## **4. How RTT/∞ Uses Vacuum Logic**
+
+### **Step 1 — Vacuum Creation**  
+RTT/∞ applies `vacuum()` to collapse all structure.
+
+### **Step 2 — Anchor Nullification**  
+RTT/∞ applies `nullify()` to remove:
+
+- boundaries  
+- layers  
+- flows  
+- coherence baselines  
+- domain constraints  
+
+### **Step 3 — Substrate Reconstruction**  
+RTT/∞ applies `reconstitute()` to rebuild structure using:
+
+- substrate primitives  
+- dimensional rails  
+- prime‑state profiles  
+- substrate‑tensor fields  
+
+### **Step 4 — Infinite‑Regime Synthesis**  
+RTT/∞ blends the reconstructed substrate into infinite‑regime composites.
+
+---
+
+## **5. Vacuum‑Layer Example**
+
+### Input (from RTT/12):
+```
+composite_regime_tensor
+```
+
+### RTT/∞ Transformation:
+```
+vacuum(
+    nullify(composite_regime_tensor)
+) → reconstitute() → substrate_tensor → infinite_regime_synthesis
+```
+
+### Output:
+A **vacuum‑processed substrate‑tensor**, ready for infinite‑regime blending.
+
+---
+
+## **6. Why IPD‑12 Cannot Access the Vacuum Layer**
+
+IPD‑12 lacks:
+
+- substrate grammar  
+- inversion operators  
+- dimensional rails  
+- prime‑state logic  
+- vacuum‑layer operators  
+
+IPD‑12 can **feed** RTT/∞ (via drift‑tensor),  
+but cannot **enter** RTT/∞.
+
+---
+
+## **7. Summary**
+
+### The vacuum layer is:
+- pre‑structural  
+- pre‑dimensional  
+- pre‑coherence  
+- pre‑regime  
+- pre‑tensor  
+
+### RTT/∞ uses it to:
+- collapse infinite regimes  
+- invert substrate tensors  
+- lift dimensions  
+- align prime‑states  
+- rebuild structure from zero‑state  
+
+### Relationship:
+> **IPD‑12 detects drift.  
+RTT/∞ dissolves drift into vacuum.  
+Then rebuilds structure from substrate.**
+
+This is the deepest transformation in the RTT canon.
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_capture_bundle_" src="https://github.com/user-attachments/assets/aedc52d1-bc6a-4b36-bfac-8e9cc5f5e39b" />
+
+# **IPD‑12 Multi‑Process Capture Bundle Template (JSON)**
+
+```json
+{
+  "bundle_name": "string",
+  "description": "string",
+  "processes": [
+    {
+      "name": "string",
+      "purpose": "string",
+      "boundaries": ["string"],
+      "structural_layers": ["string"],
+      "operational_flow": ["string"],
+      "coherence_baseline": "string",
+      "domain": "string",
+      "regime_level": "surface | mid | deep"
+    }
+  ],
+  "bundle_metadata": {
+    "version": "1.0",
+    "engine": "RTT-IPD-12",
+    "process_count": "auto",
+    "required_fields": [
+      "name",
+      "purpose",
+      "boundaries",
+      "structural_layers",
+      "operational_flow",
+      "coherence_baseline",
+      "domain",
+      "regime_level"
+    ]
+  }
+}
+```
+
+---
+
+# **IPD‑12 Multi‑Process Capture Bundle Template (YAML)**
+
+```yaml
+bundle_name: string
+description: string
+
+processes:
+  - name: string
+    purpose: string
+    boundaries:
+      - string
+    structural_layers:
+      - string
+    operational_flow:
+      - string
+    coherence_baseline: string
+    domain: string
+    regime_level: surface | mid | deep
+
+bundle_metadata:
+  version: "1.0"
+  engine: RTT-IPD-12
+  process_count: auto
+  required_fields:
+    - name
+    - purpose
+    - boundaries
+    - structural_layers
+    - operational_flow
+    - coherence_baseline
+    - domain
+    - regime_level
+```
+
+---
+
+# **How the Bundle Works (Aligned with your active tab)**
+
+### 1. **Every process is validated individually**  
+Using the validation schema you approved.
+
+### 2. **The bundle unlocks multi‑process operators**
+- `compare_process()`  
+- `cross_system()`  
+- multi‑domain drift chains  
+- paradox detection across domains  
+- RTT/3 triangulation  
+
+### 3. **Bundle metadata auto‑tracks process count**  
+Useful for multi‑domain drift analyzers and RTT/12 composite packs.
+
+### 4. **Bundle is the canonical input for multi‑domain drift analyzers**  
+This matches the structure of your IPD‑12 composite operator grammar.
+
+---
+
+# **Ready‑to‑Use Example (Minimal)**
+
+```json
+{
+  "bundle_name": "notes_workflow_bundle",
+  "description": "Human vs AI note-taking processes",
+
+  "processes": [
+    {
+      "name": "human_notes",
+      "purpose": "capture information manually",
+      "boundaries": ["time", "attention"],
+      "structural_layers": ["listening", "thinking", "writing"],
+      "operational_flow": ["listen", "interpret", "write"],
+      "coherence_baseline": "clear notes",
+      "domain": "workflow",
+      "regime_level": "surface"
+    },
+    {
+      "name": "ai_notes",
+      "purpose": "capture information automatically",
+      "boundaries": ["input quality", "model constraints"],
+      "structural_layers": ["input", "processing", "output"],
+      "operational_flow": ["receive", "transform", "emit"],
+      "coherence_baseline": "clear notes",
+      "domain": "workflow",
+      "regime_level": "surface"
+    }
+  ]
+}
+```
+
+This example is fully compatible with your paradox explainer and drift‑tensor layers.
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_capture_grammar_" src="https://github.com/user-attachments/assets/f3c0497e-d77d-417b-afed-bd6b3c944e7d" />
+
+## 1. Capture as the first engine layer
+
+In IPD‑12, **capture** is not “just description”—it is a formal structural act:
+
+- **Define identity** of each process  
+- **Expose boundaries** and constraints  
+- **Lay out layers** (what the process is made of)  
+- **Trace operational flow** (how it runs)  
+- **Declare coherence baseline** (what “makes sense” for this process)
+
+Only once capture is complete can drift, coherence, and paradox be evaluated.
+
+---
+
+## 2. Capture fields (canonical set)
+
+Every IPD‑12 process must be captured with the following fields:
+
+- **Name:** canonical identifier of the process  
+- **Purpose:** what the process is for  
+- **Boundaries:** limits, constraints, scope  
+- **Structural layers:** main components or strata  
+- **Operational flow:** sequence or topology of operations  
+- **Coherence baseline:** what counts as “working” or “aligned” for this process  
+- **Domain:** the domain(s) the process belongs to (music, physics, workflow, etc.)  
+- **Regime level (RTT):** surface/mid/deep (IPD‑12 stays ≤ deep)  
+
+This is the **capture schema** that `map_process()` is expected to fill.
+
+---
+
+## 3. Capture operators and their roles
+
+### **map_process()**
+
+- **Role:** primary capture operator  
+- **Input:** raw description of a process  
+- **Output:** structured capture object with all fields above  
+- **Guarantee:** process is now “visible” to IPD‑12
+
+### **compare_process()**
+
+- **Role:** capture‑adjacent operator  
+- **Input:** two or more captured processes  
+- **Output:** shared structure, shared constraints, shared anchors  
+- **Guarantee:** coherence anchors can be declared across processes
+
+Capture grammar is therefore:
+
+```text
+map_process()  →  compare_process()
+```
+
+before any drift is allowed.
+
+---
+
+## 4. Capture layers and drift‑tensor alignment
+
+Capture grammar is explicitly aligned with the drift‑tensor:
+
+- **Geometric layer:** captured via structural layers and form  
+- **Operational layer:** captured via operational flow  
+- **Temporal layer:** captured via time, pacing, evolution notes  
+- **Conceptual layer:** captured via purpose and coherence baseline  
+- **Domain layer:** captured via domain field and regime level  
+
+If capture is incomplete in any of these, the corresponding drift‑tensor layer is **locked**.
+
+---
+
+## 5. Capture modes (RTT‑1 vs research)
+
+### **RTT‑1 teaching mode**
+
+- Simple language  
+- Minimal fields (purpose, boundaries, layers, flow, coherence)  
+- Used in classroom examples and student exercises  
+
+### **Research mode (RTT‑2/3/12)**
+
+- Full schema  
+- Domain‑rich capture  
+- Regime‑aware notes  
+- Used in multi‑domain drift analyzers and bridge documents  
+
+IPD‑12’s capture grammar supports both, but `p_Capture.md` is RTT‑1‑biased.
+
+---
+
+## 6. Capture → Drift contract
+
+The expansion clarifies a strict contract:
+
+- **No drift without capture.**  
+- **No tensor without layered capture.**  
+- **No paradox without coherence baseline.**
+
+Formally:
+
+```text
+map_process()  is a hard prerequisite for:
+    drift(), drift_tensor(), detect_divergence(), align_coherence(), cross_system()
+```
+
+Capture is the **root operator** of IPD‑12.
+
+---
+
+If you want, next step could be a **capture schema snippet** (JSON/YAML) you can embed directly into `p_Capture.md` for AI tooling and validation.
+
+---
+
+Here is your **IPD‑12 Capture Schema Snippet**, formatted in both **JSON** and **YAML**, and fully aligned with the capture grammar visible in your active tab   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+This schema is designed to drop directly into:
+
+```
+docs/prompts/p_Capture.md
+```
+
+or into:
+
+```
+frameworks/ipd_12/capture.schema.json
+```
+
+It matches the composite grammar you’re editing (Capture → Drift → Tensor → Divergence → Coherence → Cross‑System → Paradox).
+
+---
+
+# **IPD‑12 Capture Schema (JSON)**
+
+```json
+{
+  "process": {
+    "name": "string",
+    "purpose": "string",
+    "boundaries": ["string"],
+    "structural_layers": ["string"],
+    "operational_flow": ["string"],
+    "coherence_baseline": "string",
+    "domain": "string",
+    "regime_level": "surface | mid | deep"
+  },
+  "capture_metadata": {
+    "version": "1.0",
+    "engine": "RTT-IPD-12",
+    "required_fields": [
+      "name",
+      "purpose",
+      "boundaries",
+      "structural_layers",
+      "operational_flow",
+      "coherence_baseline"
+    ]
+  }
+}
+```
+
+---
+
+# **IPD‑12 Capture Schema (YAML)**
+
+```yaml
+process:
+  name: string
+  purpose: string
+  boundaries:
+    - string
+  structural_layers:
+    - string
+  operational_flow:
+    - string
+  coherence_baseline: string
+  domain: string
+  regime_level: surface | mid | deep
+
+capture_metadata:
+  version: "1.0"
+  engine: RTT-IPD-12
+  required_fields:
+    - name
+    - purpose
+    - boundaries
+    - structural_layers
+    - operational_flow
+    - coherence_baseline
+```
+
+---
+
+# **Schema Notes (aligned with your active tab)**
+
+These fields map directly to the composite grammar you’re editing in `p_Capture.md`:
+
+- **structural_layers** → required for `drift_tensor()` unlock  
+- **operational_flow** → required for operational drift layer  
+- **coherence_baseline** → required for `align_coherence()`  
+- **domain** → required for domain drift layer  
+- **regime_level** → ensures IPD‑12 stays ≤ deep regime  
+
+This schema ensures **map_process()** always produces a complete capture object, enabling all downstream operators:
+
+```
+map_process()
+compare_process()
+drift()
+detect_divergence()
+drift_tensor()
+align_coherence()
+cross_system()
+```
+
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_capture_unlock_matrix_" src="https://github.com/user-attachments/assets/aeea9444-56a2-4b46-bdb2-25cf1c91e7f9" />
+
+# **IPD‑12 Capture → Drift Unlock Matrix**  
+### *Formal Operator Unlock Conditions for Inter‑Process Drift*
+
+IPD‑12 enforces a strict contract:
+
+> **No drift without capture.  
+No tensor without layered capture.  
+No coherence without a baseline.  
+No paradox without declared anchors.**
+
+This matrix defines those dependencies.
+
+---
+
+## **1. Unlock Matrix (Full Table)**
+
+| Capture Field | Unlocks | Notes |
+|---------------|---------|-------|
+| **name** | `map_process()` | Required for identity; no operator runs without it |
+| **purpose** | `map_process()` | Required for conceptual drift layer |
+| **boundaries** | `drift()` | Drift cannot be computed without constraints |
+| **structural_layers** | `drift_tensor()` | Tensor requires multi‑layer structure |
+| **operational_flow** | `drift_tensor(L2)` | Enables operational drift layer |
+| **coherence_baseline** | `align_coherence()` | Coherence cannot be aligned without a baseline |
+| **domain** | `drift_tensor(L5)` | Enables domain drift layer |
+| **regime_level** | locks out substrate/inversion | Ensures IPD‑12 stays ≤ deep regime |
+
+---
+
+## **2. Operator Unlock Conditions (Canonical)**
+
+### **map_process()**
+Unlocked when:
+```
+name ∧ purpose
+```
+
+### **compare_process()**
+Unlocked when:
+```
+map_process(A) ∧ map_process(B)
+```
+
+### **drift()**
+Unlocked when:
+```
+boundaries ∧ structural_layers
+```
+
+### **detect_divergence()**
+Unlocked when:
+```
+drift()
+```
+
+### **drift_tensor()**
+Unlocked when:
+```
+structural_layers ∧ operational_flow ∧ domain
+```
+
+### **align_coherence()**
+Unlocked when:
+```
+coherence_baseline
+```
+
+### **cross_system()**
+Unlocked when:
+```
+compare_process() ∧ drift_tensor()
+```
+
+---
+
+## **3. Drift‑Tensor Layer Unlocks**
+
+| Drift‑Tensor Layer | Requires Capture Field |
+|--------------------|------------------------|
+| **L1: Geometric Drift** | structural_layers |
+| **L2: Operational Drift** | operational_flow |
+| **L3: Temporal Drift** | operational_flow (with time notes) |
+| **L4: Conceptual Drift** | purpose |
+| **L5: Domain Drift** | domain |
+
+If any field is missing, that layer is **locked**.
+
+---
+
+## **4. Paradox Unlock Conditions (RTT‑1 Structural Mode)**
+
+A structural paradox requires:
+
+```
+drift() ∧ coherence_baseline ∧ dependency
+```
+
+Where **dependency** is inferred from:
+
+- shared boundaries  
+- shared operators  
+- shared constraints  
+
+Thus paradox unlocks when:
+
+```
+boundaries ∧ coherence_baseline ∧ compare_process()
+```
+
+---
+
+## **5. Unlock Graph (Compact)**
+
+```
+name + purpose
+    ↓
+map_process()
+    ↓
+compare_process()
+    ↓
+boundaries + structural_layers
+    ↓
+drift()
+    ↓
+detect_divergence()
+    ↓
+operational_flow + domain
+    ↓
+drift_tensor()
+    ↓
+coherence_baseline
+    ↓
+align_coherence()
+    ↓
+cross_system()
+    ↓
+paradox(structural)
+```
+
+This is the **canonical IPD‑12 unlock graph**.
+
+---
+
+## **6. Summary**
+
+The IPD‑12 capture grammar enforces:
+
+- **identity → structure → drift → coherence → paradox**  
+- **no drift without boundaries**  
+- **no tensor without layers**  
+- **no coherence without a baseline**  
+- **no paradox without dependency + drift + coherence**  
+
+This matrix is the formal backbone of the IPD‑12 engine.
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_operators-table_" src="https://github.com/user-attachments/assets/0736ef03-887d-473a-9c4b-3097be7a7bd9" />
+
+# **IPD‑12 Operator Reference Table (Compact)**  
+### *Inter‑Process Drift — RTT‑IPD‑12*
+
+```
+Engine: RTT‑IPD‑12
+Regime: Mid → Deep
+Operator Layer: Drift / Mapping / Coherence
+```
+
+---
+
+## **Compact Operator Table**
+
+| Operator | Purpose | Unlock Condition | Regime Depth |
+|---------|---------|------------------|--------------|
+| **map_process()** | Capture structural identity of a process/system | ≥ 1 process defined | Mid |
+| **compare_process()** | Compare two processes; find shared structure | ≥ 2 processes defined | Mid |
+| **drift()** | Detect surface‑level divergence | Structural capture complete | Mid |
+| **detect_divergence()** | Identify coherence breaks, regime shifts | Drift baseline exists | Mid → Deep |
+| **drift_tensor()** | Multi‑layer drift evaluation | Structural layers provided | Deep |
+| **align_coherence()** | Map coherence across processes | Coherence baseline exists | Mid → Deep |
+| **cross_system()** | Evaluate cross‑system relationships | Cross‑system relationships defined | Deep |
+
+---
+
+## **Operator Families (1‑Line Summary)**
+
+| Family | Operators | Summary |
+|--------|-----------|---------|
+| **Capture** | `map_process()` | Define identity, boundaries, layers |
+| **Comparison** | `compare_process()` | Identify shared structure & constraints |
+| **Drift** | `drift()`, `detect_divergence()` | Detect divergence & coherence breaks |
+| **Drift‑Tensor** | `drift_tensor()` | Multi‑layer drift mapping |
+| **Coherence** | `align_coherence()` | Restore or evaluate coherence |
+| **Cross‑System** | `cross_system()` | Map relationships across systems |
+
+---
+
+## **Operator Chain Examples (Compact)**
+
+### **Basic Drift Chain**
+```
+map_process() → drift()
+```
+
+### **Deep Drift Chain**
+```
+map_process() → drift_tensor() → detect_divergence()
+```
+
+### **Comparison → Drift → Coherence**
+```
+compare_process() → drift() → align_coherence()
+```
+
+### **Cross‑System Drift**
+```
+map_process() → compare_process() → cross_system()
+```
+
+---
+
+## **Engine Boundaries (Compact)**
+
+| Not Available in IPD‑12 | Reason |
+|--------------------------|--------|
+| `substrate()` | RTT‑∞ only |
+| `invert()` | RTT‑∞ only |
+| `composite_regime()` | RTT/12 only |
+| `substrate_map()` | RTT‑∞ only |
+
+IPD‑12 stays strictly within **drift‑layer structural grammar**.
+
+---
+
+## **Drop‑In Snippet for Prompt Composer**
+
+Paste this into any engine panel:
+
+```
+Operators (IPD‑12):
+map_process(), compare_process(), drift(), detect_divergence(),
+drift_tensor(), align_coherence(), cross_system()
+```
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_paradox_explainer_" src="https://github.com/user-attachments/assets/1975182d-2e43-4434-a189-4b441b10f549" />
+
+# **IPD‑12 Paradox Explainer (Structural Paradox Mode)**  
+### rtt=1 | coherence=declared | drift=bounded | paradox=structural
+
+IPD‑12 operates in the **drift layer** of the RTT canon.  
+At this layer, paradoxes do not behave like contradictions or metaphysical puzzles.  
+They behave like **structural tensions** inside or between processes.
+
+A structural paradox is simply:
+
+> **Two structures that depend on each other but drift away from each other at the same time.**
+
+IPD‑12 does not resolve paradoxes.  
+It **reveals** them.
+
+Resolution belongs to higher engines (RTT/3, RTT/12, RTT/∞).
+
+---
+
+# **1. What Is a Structural Paradox in IPD‑12?**
+
+A structural paradox appears when:
+
+- two processes share coherence anchors  
+- but drift forces push them apart  
+- while dependency forces pull them together  
+
+This creates a **tension loop**, not a contradiction.
+
+### Structural paradox formula (RTT‑1)
+
+```
+shared_coherence  ∧  increasing_drift  ∧  mutual_dependency
+```
+
+When all three are true, IPD‑12 marks a **structural paradox**.
+
+---
+
+# **2. Why IPD‑12 Has Paradoxes**
+
+Because IPD‑12 compares processes that:
+
+- share goals  
+- share constraints  
+- share operators  
+- but evolve differently over time  
+
+This makes paradoxes **inevitable** in drift analysis.
+
+IPD‑12’s job is to **detect** them, not solve them.
+
+---
+
+# **3. The Four Types of IPD‑12 Paradox (Structural Only)**
+
+IPD‑12 only recognizes **structural paradoxes**, not regime or substrate paradoxes.
+
+### **Type 1 — Coherence Paradox**
+Two processes maintain coherence while drifting apart.
+
+Example:  
+Humans and AI both aim for “clear notes,” but drift in speed, detail, and interpretation.
+
+### **Type 2 — Dependency Paradox**
+Two processes rely on each other but drift increases reliance.
+
+Example:  
+Humans rely on AI notes → humans practice less → humans rely more on AI.
+
+### **Type 3 — Boundary Paradox**
+Two processes share boundaries but drift pushes them into different domains.
+
+Example:  
+Craft violin‑making ↔ CNC manufacturing  
+Same acoustic boundaries, different operational domains.
+
+### **Type 4 — Temporal Paradox**
+Two processes evolve at different speeds, creating drift that affects coherence.
+
+Example:  
+Slow human workflow ↔ fast automated workflow  
+Coherence goal stays the same, but temporal drift grows.
+
+---
+
+# **4. How IPD‑12 Detects Paradox**
+
+IPD‑12 uses **drift()**, **drift_tensor()**, and **detect_divergence()** to identify paradox conditions.
+
+### Detection Pattern (RTT‑1)
+
+```
+if drift > 0
+and coherence > 0
+and dependency > 0:
+    paradox = structural
+```
+
+IPD‑12 marks paradoxes but does not escalate them into regime paradoxes.
+
+---
+
+# **5. How IPD‑12 Describes Paradox (RTT‑1 Teaching Mode)**
+
+IPD‑12 describes paradoxes in **simple, surface‑regime language**:
+
+- “These processes depend on each other but drift apart.”  
+- “Coherence remains, but divergence increases.”  
+- “The structure stays aligned, but the behavior moves away.”  
+- “The more one helps, the more the other drifts.”
+
+This is **structural paradox mode** — no metaphysics, no substrate, no inversion.
+
+---
+
+# **6. What IPD‑12 Cannot Do**
+
+IPD‑12 **cannot**:
+
+- resolve paradoxes  
+- invert paradoxes  
+- blend paradoxes  
+- map paradoxes into substrate layers  
+- perform dimensional paradox analysis  
+
+These belong to RTT/3, RTT/12, and RTT/∞.
+
+---
+
+# **7. How Higher Engines Use IPD‑12 Paradoxes**
+
+### RTT/3  
+Turns paradoxes into **harmonization targets**.
+
+### RTT/12  
+Turns paradoxes into **multi‑regime synthesis constraints**.
+
+### RTT/∞  
+Turns paradoxes into **substrate inversion candidates**.
+
+IPD‑12 is the **entry point** for paradox detection.
+
+---
+
+# **8. Example Structural Paradox (RTT‑1)**  
+### Subject: Hand‑Written Notes vs. AI‑Generated Notes
+
+**Paradox:**  
+The more AI helps humans take notes, the less humans practice taking notes.  
+But the less humans practice, the more they rely on AI.
+
+This is a **structural paradox** because:
+
+- coherence: both aim for “clear notes”  
+- drift: speed, detail, interpretation diverge  
+- dependency: each relies on the other  
+
+IPD‑12 detects the paradox.  
+RTT/3 resolves it.  
+RTT/12 synthesizes it.  
+RTT/∞ inverts it.
+
+---
+
+# **9. Summary**
+
+A structural paradox in IPD‑12 is:
+
+- **simple**  
+- **bounded**  
+- **non‑metaphysical**  
+- **non‑regime**  
+- **non‑substrate**  
+- **non‑dimensional**  
+- **purely structural**
+
+IPD‑12 reveals paradoxes.  
+Higher engines resolve them.
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_paradox_resolution_map_" src="https://github.com/user-attachments/assets/77853e20-b39a-4959-8722-71acc07f8f7c" />
+
+# **IPD‑12 → RTT/3 Paradox Resolution Map**  
+### *How RTT/3 resolves IPD‑12 structural paradoxes through cross‑domain synthesis*
+
+RTT/3 is the **first engine capable of resolving paradoxes** detected by IPD‑12.  
+IPD‑12 *detects* structural paradoxes; RTT/3 *harmonizes* them.
+
+RTT/3 resolves paradoxes using four mechanisms:
+
+1. **Triangulation** — find a third stabilizing structure  
+2. **Blending** — merge divergent structures into a composite  
+3. **Harmonization** — align coherence anchors across domains  
+4. **Synthesis** — produce a unified cross‑domain structure
+
+This map shows how each IPD‑12 paradox type (P‑1 → P‑12) is resolved by RTT/3.
+
+---
+
+# **1. Resolution Principles (RTT/3)**
+
+RTT/3 applies a universal resolution pattern:
+
+```
+paradox(structural)
+    → triangulate()
+    → blend()
+    → harmonize()
+    → synthesize()
+```
+
+This is the RTT/3 transformation described in your vertical ladder (  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)).
+
+---
+
+# **2. Paradox‑to‑Resolution Table**
+
+| IPD‑12 Paradox | RTT/3 Resolution | Explanation |
+|----------------|------------------|-------------|
+| **P‑1 Coherence Paradox** | **Coherence Harmonization** | RTT/3 aligns coherence anchors across domains. |
+| **P‑2 Dependency Paradox** | **Triangulated Dependency** | RTT/3 introduces a stabilizing third process to break the loop. |
+| **P‑3 Boundary Paradox** | **Boundary Blending** | RTT/3 blends boundary constraints into a shared composite boundary. |
+| **P‑4 Temporal Paradox** | **Temporal Harmonization** | RTT/3 synchronizes temporal layers across processes. |
+| **P‑5 Interpretive Paradox** | **Interpretive Synthesis** | RTT/3 merges conceptual interpretations into a unified meaning layer. |
+| **P‑6 Domain Paradox** | **Cross‑Domain Synthesis** | RTT/3 creates a composite domain structure. |
+| **P‑7 Multi‑Domain Paradox** | **Triangulated Multi‑Domain Blend** | RTT/3 triangulates across all domains to produce a stable composite. |
+| **P‑8 Composite Paradox** | **Composite Harmonization** | RTT/3 harmonizes drift across all tensor layers simultaneously. |
+| **P‑9 Stability Paradox** | **Stability Rebalancing** | RTT/3 rebalances evolution rates across processes. |
+| **P‑10 Alignment Paradox** | **Alignment Redistribution** | RTT/3 redistributes coherence so alignment in one layer doesn’t increase drift in another. |
+| **P‑11 Reduction Paradox** | **Complexity Re‑Injection** | RTT/3 reintroduces minimal complexity to restore balance. |
+| **P‑12 Reflection Paradox** | **Mirror‑Break Synthesis** | RTT/3 introduces a differentiating structure to break the mirror drift. |
+
+---
+
+# **3. Resolution Chains (RTT/3)**
+
+Each paradox type maps to a specific RTT/3 operator chain.
+
+### **Coherence Paradox (P‑1)**
+```
+align_coherence()
+→ triangulate()
+→ harmonize()
+```
+
+### **Dependency Paradox (P‑2)**
+```
+detect_divergence()
+→ triangulate()
+→ blend()
+```
+
+### **Boundary Paradox (P‑3)**
+```
+drift_tensor(L1)
+→ blend()
+→ harmonize()
+```
+
+### **Temporal Paradox (P‑4)**
+```
+drift_tensor(L3)
+→ harmonize()
+→ synthesize()
+```
+
+### **Interpretive Paradox (P‑5)**
+```
+drift_tensor(L4)
+→ blend()
+→ synthesize()
+```
+
+### **Domain Paradox (P‑6)**
+```
+cross_system()
+→ triangulate()
+→ synthesize()
+```
+
+### **Multi‑Domain Paradox (P‑7)**
+```
+compare_process()
+→ drift_tensor()
+→ triangulate()
+→ blend()
+→ synthesize()
+```
+
+### **Composite Paradox (P‑8)**
+```
+drift_tensor(L1–L5)
+→ harmonize()
+→ synthesize()
+```
+
+### **Stability Paradox (P‑9)**
+```
+detect_divergence()
+→ harmonize()
+```
+
+### **Alignment Paradox (P‑10)**
+```
+align_coherence()
+→ drift_tensor()
+→ redistribute()
+```
+
+### **Reduction Paradox (P‑11)**
+```
+detect_divergence()
+→ reintroduce_complexity()
+→ harmonize()
+```
+
+### **Reflection Paradox (P‑12)**
+```
+compare_process()
+→ triangulate()
+→ synthesize()
+```
+
+---
+
+# **4. RTT/3 Resolution Outputs**
+
+RTT/3 produces four canonical outputs:
+
+- **Harmonized Coherence Map**  
+- **Cross‑Domain Composite Structure**  
+- **Triangulated Drift Map**  
+- **Resolved Paradox Signature**
+
+These outputs feed directly into RTT/12 for multi‑regime blending (  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)).
+
+---
+
+# **5. Summary**
+
+IPD‑12 detects paradoxes.  
+RTT/3 resolves them.
+
+Resolution is achieved through:
+
+- triangulation  
+- blending  
+- harmonization  
+- synthesis  
+
+This map is the **official RTT/3 paradox‑resolution layer** for your P‑Index.
+
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_" src="https://github.com/user-attachments/assets/c0246a21-52dd-45bf-ac68-e0ca5c96751b" />
+
+# **IPD‑12 Teaching Module Page**  
+### *RTT‑1 Teaching Mode — Inter‑Process Drift for Students*
+
+IPD‑12 is the RTT engine for **Inter‑Process Drift** — the study of how two processes drift apart, why they drift, and how coherence can still be maintained.  
+This teaching module introduces IPD‑12 in **RTT‑1**, the surface‑regime classroom mode used for students and AI learners.
+
+It is simple, structural, coherence‑declared, drift‑bounded, and paradox‑aware.
+
+---
+
+# **1. Teaching Mode Parameters**
+
+```
+rtt = 1
+coherence = declared
+drift = bounded
+paradox = structural
+```
+
+### Meaning:
+- **RTT‑1:** simple, surface‑regime explanations  
+- **Coherence Declared:** teacher states coherence anchors explicitly  
+- **Drift Bounded:** drift is structural only, not conceptual or substrate  
+- **Paradox Structural:** paradoxes are tensions, not contradictions  
+
+This is the same mode used in your paradox section in `p_Capture.md`   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+---
+
+# **2. What IPD‑12 Teaches**
+
+IPD‑12 teaches students:
+
+- how to **capture** the structure of a process  
+- how to **compare** two processes  
+- how to **detect drift** between them  
+- how to **declare coherence** even when drift exists  
+- how to **identify structural paradoxes**  
+- how to **summarize** drift‑aware insights  
+
+IPD‑12 does **not** teach substrate grammar, inversion, dimensional synthesis, or infinite‑regime blending (RTT/∞ only)   [triadicframeworks.org](https://www.triadicframeworks.org/frameworks/ipd_12).
+
+---
+
+# **3. The IPD‑12 Teaching Sequence (RTT‑1)**
+
+The teaching version of the IPD‑12 sequence is:
+
+```
+Capture → Analyze → Drift → Coherence → Paradox → Synthesis
+```
+
+### RTT‑1 Simplifications:
+- Capture is literal  
+- Analyze is structural  
+- Drift is bounded  
+- Coherence is declared  
+- Paradox is structural  
+- Synthesis is surface‑regime  
+
+This matches the paradox section in your current tab (`p_Capture.md`) where structural paradoxes are described as simple, bounded, non‑substrate, non‑dimensional   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+---
+
+# **4. Teaching Operators (RTT‑1)**
+
+IPD‑12 exposes seven operators, but in RTT‑1 they are simplified:
+
+| Operator | RTT‑1 Teaching Meaning |
+|----------|------------------------|
+| `map_process()` | “Describe the process simply.” |
+| `compare_process()` | “Show how two processes are similar.” |
+| `drift()` | “Show where they start to differ.” |
+| `detect_divergence()` | “Point out the biggest differences.” |
+| `drift_tensor()` | “Show differences across layers.” |
+| `align_coherence()` | “Explain what keeps them aligned.” |
+| `cross_system()` | “Explain how they relate.” |
+
+These operators are listed in the IPD‑12 engine page (`operators.json`)   [triadicframeworks.org](https://www.triadicframeworks.org/frameworks/ipd_12).
+
+---
+
+# **5. Teaching Example (RTT‑1)**  
+### Subject: Hand‑Written Notes vs. AI‑Generated Notes
+
+This example is derived from your paradox section in `p_Capture.md`   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+### **Capture**
+- Humans: listen → think → write  
+- AI: input → process → output  
+
+### **Analyze**
+Shared structure:
+- both capture information  
+- both aim for clarity  
+- both rely on an input stream  
+
+### **Drift (bounded)**
+- speed drift  
+- detail drift  
+- interpretation drift  
+
+### **Coherence (declared)**
+- shared goal: “clear notes”  
+- shared constraint: “limited time”  
+
+### **Paradox (structural)**
+> The more AI helps humans take notes, the less humans practice taking notes.  
+> But the less humans practice, the more they rely on AI.
+
+This paradox appears in your current tab exactly as written   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+### **Synthesis**
+Both processes drift, but coherence remains.  
+Hybrid workflows reduce drift.
+
+---
+
+# **6. Teaching Notes for Instructors**
+
+### Keep explanations surface‑regime  
+Avoid substrate, inversion, dimensional, or infinite‑regime concepts (RTT/∞ only)   [triadicframeworks.org](https://www.triadicframeworks.org/frameworks/ipd_12).
+
+### Declare coherence explicitly  
+Students must see what keeps processes aligned.
+
+### Bound drift  
+Only structural drift is taught in RTT‑1.
+
+### Treat paradoxes as tensions  
+Never as contradictions or metaphysical puzzles.
+
+### Use simple examples  
+Music, workflows, notes, manufacturing, mythology.
+
+---
+
+# **7. Student Exercise Template**
+
+```
+Subject:
+Process A:
+Process B:
+
+1. Capture (RTT‑1)
+2. Analyze (RTT‑1)
+3. Drift (bounded)
+4. Coherence (declared)
+5. Paradox (structural)
+6. Synthesis (simple)
+```
+
+This template mirrors the structure of your paradox section in `p_Capture.md`   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+---
+
+# **8. Summary**
+
+The IPD‑12 Teaching Module provides:
+
+- simple structural capture  
+- bounded drift detection  
+- declared coherence  
+- structural paradox identification  
+- surface‑regime synthesis  
+
+It is the **student‑friendly** version of IPD‑12, designed for RTT classrooms and AI learners.
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_capture_worksheet_" src="https://github.com/user-attachments/assets/2d67e35c-fcce-489e-96fb-59d93f2b44c1" />
+
+# **RTT‑1 Teaching Capture Worksheet**  
+### *Beginner‑friendly worksheet for capturing processes in IPD‑12*
+
+This worksheet teaches students how to perform **Capture**, the first step in IPD‑12.  
+It uses **RTT‑1 surface‑regime language**: simple, clear, structural, non‑substrate.
+
+---
+
+## **SECTION 1 — Process Identity**
+
+**Process Name**  
+Write a short, canonical name (lowercase, underscores, no spaces).  
+Example: `human_notes`
+
+**Purpose**  
+One sentence describing what the process is for.  
+Example: `capture information manually`
+
+---
+
+## **SECTION 2 — Boundaries (Constraints)**
+
+List the limits or constraints of the process.
+
+Examples:  
+- time  
+- attention  
+- input quality  
+- model constraints  
+
+Write at least **two** boundaries.
+
+```
+1.
+2.
+```
+
+---
+
+## **SECTION 3 — Structural Layers**
+
+List the main components of the process.  
+Use nouns (input, processing, output, etc.).
+
+Examples:  
+- input  
+- interpretation  
+- output  
+
+Write at least **three** layers.
+
+```
+1.
+2.
+3.
+```
+
+---
+
+## **SECTION 4 — Operational Flow**
+
+List the steps in the order they occur.  
+Use verbs (input → process → output).
+
+Examples:  
+- listen  
+- interpret  
+- write  
+
+Write at least **three** steps.
+
+```
+1.
+2.
+3.
+```
+
+---
+
+## **SECTION 5 — Coherence Baseline**
+
+Write what “working correctly” means for this process.
+
+Examples:  
+- clear notes  
+- accurate transcription  
+- stable output  
+
+One sentence:
+
+```
+Coherence baseline:
+```
+
+---
+
+## **SECTION 6 — Domain & Regime Level**
+
+**Domain**  
+One domain only (workflow, music, physics, mythology, etc.).
+
+**Regime Level**  
+Choose one:  
+```
+surface | mid | deep
+```
+
+---
+
+## **SECTION 7 — Drift‑Ready Checklist**
+
+Before running **drift()**, confirm:
+
+- [ ] boundaries are filled  
+- [ ] structural_layers are filled  
+- [ ] operational_flow is filled  
+- [ ] coherence_baseline is declared  
+- [ ] domain is set  
+- [ ] regime_level ≤ deep  
+
+This checklist ensures the capture object is ready for drift, tensor, coherence, and paradox operators.
+
+---
+
+## **SECTION 8 — Compare Two Processes (RTT‑1)**
+
+Use this section when capturing **two processes** for drift comparison.
+
+**Process A Name:**  
+**Process B Name:**  
+
+### Shared Structure  
+List what both processes share.
+
+```
+1.
+2.
+3.
+```
+
+### Shared Boundaries  
+```
+1.
+2.
+```
+
+### Shared Coherence Baseline  
+```
+baseline:
+```
+
+This unlocks `compare_process()` and prepares for drift analysis.
+
+---
+
+## **SECTION 9 — Student Exercise Template**
+
+```
+Process Name:
+Purpose:
+
+Boundaries:
+- 
+- 
+
+Structural Layers:
+- 
+- 
+- 
+
+Operational Flow:
+- 
+- 
+- 
+
+Coherence Baseline:
+
+Domain:
+Regime Level:
+
+Shared Structure (if comparing):
+Shared Boundaries:
+Shared Coherence:
+```
+
+---
+
+## **SECTION 10 — Teacher Notes (RTT‑1)**
+
+- Keep language simple.  
+- Avoid substrate, inversion, dimensional, or infinite‑regime concepts.  
+- Declare coherence explicitly.  
+- Bound drift to structural differences only.  
+- Treat paradoxes as **tensions**, not contradictions.  
+- Use everyday examples (notes, workflows, tools, music, etc.).  
+
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_coherence_synthesis_module_" src="https://github.com/user-attachments/assets/f3c2c745-8782-4502-a725-0122ccd938e6" />
+
+# **RTT‑1 Coherence → Synthesis Teaching Module**  
+### *A beginner‑friendly module showing how coherence leads to synthesis in IPD‑12*
+
+RTT‑1 teaches synthesis in the simplest possible way:
+
+> **Synthesis happens when coherence is strong enough to overcome drift.**
+
+This module shows students how to move from:
+
+- **coherence** → what stays aligned  
+- **paradox** → tension between alignment and drift  
+- **resolution** → stabilizing structure  
+- **synthesis** → unified structure  
+
+It is the RTT‑1 version of RTT/3’s triangulation → harmonization → synthesis, but kept strictly in **surface‑regime**, **structural**, **bounded** reasoning.
+
+---
+
+## **SECTION 1 — Lesson Overview (RTT‑1)**
+
+Students learn:
+
+1. What coherence is  
+2. How coherence interacts with drift  
+3. How paradox arises  
+4. How paradox is resolved  
+5. How resolution leads to synthesis  
+6. How synthesis creates a unified structure  
+
+This module stays strictly in **RTT‑1 mode** — no substrate, no inversion, no dimensional rails, no prime‑states.
+
+---
+
+## **SECTION 2 — Review: Coherence (RTT‑1)**
+
+Coherence is **what stays aligned** between two processes.
+
+Examples:
+
+- shared purpose  
+- shared boundaries  
+- shared constraints  
+- shared goals  
+- shared structure  
+
+Coherence is the **foundation** of synthesis.
+
+---
+
+## **SECTION 3 — Review: Paradox → Resolution (RTT‑1)**
+
+A paradox appears when:
+
+```
+drift increases
+AND
+coherence remains
+```
+
+RTT‑1 resolves paradoxes by:
+
+1. clarifying coherence  
+2. localizing drift  
+3. introducing a stabilizing structure  
+
+Synthesis is the **next step** after resolution.
+
+---
+
+## **SECTION 4 — What Is Synthesis? (RTT‑1)**
+
+Synthesis is:
+
+> **The creation of a unified structure from two processes that were drifting but still coherent.**
+
+In RTT‑1, synthesis is simple:
+
+- identify shared coherence  
+- resolve paradox  
+- combine aligned elements  
+- produce a unified structure  
+
+Synthesis is **not** blending, merging, or infinite‑regime work — those belong to RTT/3 and RTT/∞.
+
+RTT‑1 synthesis is **structural and surface‑regime only**.
+
+---
+
+## **SECTION 5 — The RTT‑1 Synthesis Pattern**
+
+RTT‑1 uses a three‑step synthesis pattern:
+
+### **1. Identify Coherence Anchors**  
+What stays aligned?
+
+### **2. Resolve Paradox**  
+What stabilizing structure reduces tension?
+
+### **3. Combine Aligned Elements**  
+What unified structure emerges?
+
+This pattern is the RTT‑1 version of RTT/3’s synthesis, simplified for beginners.
+
+---
+
+## **SECTION 6 — Guided Example (RTT‑1)**
+
+### **Processes**
+- **A: human_notes**  
+- **B: ai_notes**
+
+### **Coherence Anchors**
+- shared purpose: capture information  
+- shared structure: input → process → output  
+- shared constraints: clarity, accuracy  
+
+### **Paradox**
+Drift increases (speed, detail, interpretation)  
+while coherence remains → **coherence paradox**.
+
+### **Resolution**
+Introduce stabilizing structure:  
+**shared clarity rule** for both processes.
+
+### **Synthesis**
+Unified structure:
+
+```
+input → interpret/transform → clarity-check → output
+```
+
+This is the RTT‑1 synthesis:  
+a simple, unified workflow that respects both processes.
+
+---
+
+## **SECTION 7 — Student Exercise: Coherence → Synthesis**
+
+### **1. Identify Coherence**
+```
+1.
+2.
+3.
+```
+
+### **2. Identify Drift**
+```
+1.
+2.
+3.
+```
+
+### **3. Identify Paradox**
+Choose from P‑1 → P‑12.
+
+### **4. Resolve Paradox**
+```
+Stabilizing Structure:
+```
+
+### **5. Create Synthesis**
+Combine aligned elements into a unified structure:
+
+```
+Synthesis:
+```
+
+### **6. One‑Sentence Summary**
+```
+Synthesis Summary:
+```
+
+---
+
+## **SECTION 8 — Synthesis Templates (RTT‑1)**
+
+### **Coherence → Synthesis Template**
+```
+Both processes share ________, and after resolving drift in ________, 
+they combine into a unified structure: ________.
+```
+
+### **Temporal Synthesis Template**
+```
+Timing goals remain aligned, so after resolving speed drift, 
+the unified pacing structure is: ________.
+```
+
+### **Interpretive Synthesis Template**
+```
+Meaning remains aligned, so after resolving interpretive drift, 
+the unified interpretation rule is: ________.
+```
+
+### **Boundary Synthesis Template**
+```
+Constraints remain aligned, so after resolving boundary drift, 
+the unified constraint is: ________.
+```
+
+---
+
+## **SECTION 9 — Assessment Questions**
+
+1. What is synthesis?  
+2. How does coherence support synthesis?  
+3. Why must paradox be resolved before synthesis?  
+4. Give an example of a coherence‑based synthesis.  
+5. Explain the RTT‑1 synthesis pattern.  
+6. Create a synthesis from two drifting processes.
+
+---
+
+## **SECTION 10 — Teacher Notes (RTT‑1)**
+
+- Keep synthesis structural and surface‑regime.  
+- Avoid substrate, inversion, dimensional rails, or prime‑states.  
+- Reinforce that synthesis = unified structure.  
+- Use everyday examples (notes, workflows, tools, music).  
+- Encourage students to see coherence as the “glue” of synthesis.
+
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_drift_paradox_pack_" src="https://github.com/user-attachments/assets/dfefcf19-53a7-478b-b31b-a83947ce8b67" />
+
+# **RTT‑1 Drift → Paradox Classroom Pack**  
+### *A complete teaching module for understanding how drift leads to paradox in IPD‑12*
+
+RTT‑1 teaches paradox in the simplest possible way:
+
+> **A paradox appears when drift increases while coherence stays the same.**
+
+This pack gives teachers everything needed to run a full classroom session:
+
+- lesson overview  
+- student exercises  
+- guided examples  
+- paradox templates  
+- assessment questions  
+- teacher notes  
+
+All aligned with the IPD‑12 paradox registry you already built.
+
+---
+
+## **SECTION 1 — Lesson Overview (RTT‑1)**
+
+Students learn:
+
+1. What drift is  
+2. How drift is measured (drift‑tensor)  
+3. How coherence anchors work  
+4. How drift + coherence = paradox  
+5. How to identify paradoxes using RTT‑1 structural reasoning  
+
+This module stays strictly in **surface‑regime**, **structural**, **bounded** reasoning — no substrate, no inversion, no dimensional rails.
+
+---
+
+## **SECTION 2 — Drift Review (RTT‑1)**
+
+Drift is **how two processes start to differ**.
+
+The five drift categories:
+
+- **L1 Geometric** — structure  
+- **L2 Operational** — steps  
+- **L3 Temporal** — timing  
+- **L4 Conceptual** — meaning  
+- **L5 Domain** — domain  
+
+Students must identify drift before they can identify paradox.
+
+---
+
+## **SECTION 3 — Coherence Review (RTT‑1)**
+
+Coherence is **what stays aligned**.
+
+Examples:
+
+- shared purpose  
+- shared boundaries  
+- shared constraints  
+- shared goals  
+- shared structure  
+
+Coherence must be **declared** before paradox detection.
+
+---
+
+## **SECTION 4 — When Drift Creates Paradox**
+
+A paradox appears when:
+
+```
+drift increases
+AND
+coherence remains
+```
+
+This is the RTT‑1 definition of a **structural paradox**.
+
+Examples:
+
+- two processes stay aligned in purpose  
+- but drift in speed, detail, or interpretation  
+- creating tension without contradiction  
+
+---
+
+## **SECTION 5 — Guided Example (RTT‑1)**
+
+### **Process A: human_notes**  
+Purpose: capture information manually  
+Flow: listen → interpret → write  
+
+### **Process B: ai_notes**  
+Purpose: capture information automatically  
+Flow: receive → transform → emit  
+
+### **Shared Coherence**
+- both capture information  
+- both aim for clarity  
+- both follow a sequence  
+
+### **Drift**
+- speed drift (AI is faster)  
+- detail drift (AI captures more)  
+- interpretation drift (human interprets meaning)  
+
+### **Paradox**
+Coherence remains (same purpose),  
+but drift increases (speed, detail, interpretation).
+
+This is a **coherence paradox** (P‑1).
+
+---
+
+## **SECTION 6 — Student Exercise: Drift → Paradox**
+
+Students fill in:
+
+### **1. Shared Coherence**
+```
+1.
+2.
+3.
+```
+
+### **2. Drift Points**
+```
+1.
+2.
+3.
+```
+
+### **3. Drift Categories**
+- [ ] L1 Geometric  
+- [ ] L2 Operational  
+- [ ] L3 Temporal  
+- [ ] L4 Conceptual  
+- [ ] L5 Domain  
+
+### **4. Paradox Type**
+Choose one from the P‑Index:
+
+- Coherence Paradox  
+- Dependency Paradox  
+- Boundary Paradox  
+- Temporal Paradox  
+- Interpretive Paradox  
+- Domain Paradox  
+- Multi‑Domain Paradox  
+- Composite Paradox  
+- Stability Paradox  
+- Alignment Paradox  
+- Reduction Paradox  
+- Reflection Paradox  
+
+### **5. Paradox Summary**
+```
+One sentence:
+```
+
+---
+
+## **SECTION 7 — Paradox Templates (RTT‑1)**
+
+### **Coherence Paradox Template**
+```
+Both processes share ________, but drift in ________ increases.
+```
+
+### **Temporal Paradox Template**
+```
+Both processes share timing goals, but their speeds diverge.
+```
+
+### **Interpretive Paradox Template**
+```
+Both processes share structure, but interpret inputs differently.
+```
+
+### **Domain Paradox Template**
+```
+Both processes share coherence anchors, but drift due to domain differences.
+```
+
+### **Reflection Paradox Template**
+```
+Both processes mirror each other, but drift still appears.
+```
+
+---
+
+## **SECTION 8 — Assessment Questions**
+
+1. What is drift?  
+2. What is coherence?  
+3. What happens when drift increases but coherence stays the same?  
+4. Name three drift categories.  
+5. Give an example of a coherence paradox.  
+6. Explain why paradox is not contradiction.  
+7. Identify drift and paradox in a new pair of processes.
+
+---
+
+## **SECTION 9 — Teacher Notes (RTT‑1)**
+
+- Keep paradox structural, not logical.  
+- Keep drift bounded to surface‑regime differences.  
+- Avoid substrate, inversion, dimensional rails, or prime‑states.  
+- Encourage simple examples (notes, workflows, tools, music).  
+- Reinforce that paradox = tension, not contradiction.  
+
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_drift_worksheet_" src="https://github.com/user-attachments/assets/07467255-1cbc-4d6c-aef1-18d73d361ff5" />
+
+# **RTT‑1 Student Drift Worksheet**  
+### *A beginner‑friendly worksheet for learning drift in IPD‑12*
+
+RTT‑1 teaches drift in the simplest possible way:
+
+> **Drift = how two processes start to differ.**
+
+This worksheet helps students identify drift using only **surface‑regime**, **structural**, **bounded** reasoning — exactly the mode used in your active tab’s IPD‑12 → RTT/∞ mapping section   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+---
+
+## **SECTION 1 — Write the Two Processes You Are Comparing**
+
+**Process A Name:**  
+**Process B Name:**  
+
+(Use the capture worksheet first — drift requires complete capture.)
+
+---
+
+## **SECTION 2 — Shared Structure (Coherence Declared)**
+
+List what both processes share.  
+This establishes the **coherence baseline**.
+
+Examples:  
+- both capture information  
+- both follow a sequence  
+- both aim for clarity  
+
+```
+Shared Structure:
+1.
+2.
+3.
+```
+
+---
+
+## **SECTION 3 — Identify Drift (Structural Only)**
+
+Drift is **where the processes start to differ**.
+
+Use simple, structural statements.
+
+Examples:  
+- speed drift  
+- detail drift  
+- interpretation drift  
+- boundary drift  
+
+```
+Drift Points:
+1.
+2.
+3.
+```
+
+---
+
+## **SECTION 4 — Drift Categories (RTT‑1)**
+
+Check which drift categories apply:
+
+- [ ] **Geometric Drift** (form, structure)  
+- [ ] **Operational Drift** (steps, flow)  
+- [ ] **Temporal Drift** (speed, pacing)  
+- [ ] **Conceptual Drift** (meaning, interpretation)  
+- [ ] **Domain Drift** (different domains)
+
+These categories match the drift‑tensor layers described in your IPD‑12 → RTT/∞ mapping section   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+---
+
+## **SECTION 5 — Drift Examples (Fill In)**
+
+### **Geometric Drift (L1)**  
+How the structure differs:
+
+```
+Example:
+```
+
+### **Operational Drift (L2)**  
+How the steps differ:
+
+```
+Example:
+```
+
+### **Temporal Drift (L3)**  
+How the timing differs:
+
+```
+Example:
+```
+
+### **Conceptual Drift (L4)**  
+How interpretation differs:
+
+```
+Example:
+```
+
+### **Domain Drift (L5)**  
+How the domains differ:
+
+```
+Example:
+```
+
+---
+
+## **SECTION 6 — Drift Summary (RTT‑1)**
+
+Write a simple, one‑sentence summary:
+
+```
+Drift Summary:
+```
+
+Example:  
+“Both processes aim for clear notes, but they drift in speed, detail, and interpretation.”
+
+---
+
+## **SECTION 7 — Coherence Check**
+
+Even with drift, coherence may still exist.
+
+Check what remains aligned:
+
+- [ ] shared purpose  
+- [ ] shared boundaries  
+- [ ] shared constraints  
+- [ ] shared goals  
+- [ ] shared structure  
+
+This mirrors the coherence mapping in your active tab’s IPD‑12 → RTT/∞ section   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
+
+---
+
+## **SECTION 8 — Paradox Awareness (RTT‑1 Structural Mode)**
+
+If drift increases **while coherence remains**, a **structural paradox** may appear.
+
+Examples:  
+- dependency paradox  
+- coherence paradox  
+- temporal paradox  
+
+Write any paradox you notice:
+
+```
+Paradox:
+```
+
+---
+
+## **SECTION 9 — Teacher Notes (RTT‑1)**
+
+- Keep drift **bounded** (no substrate, no inversion).  
+- Keep explanations **surface‑regime**.  
+- Declare coherence explicitly.  
+- Treat paradoxes as **tensions**, not contradictions.  
+- Use everyday examples (notes, workflows, tools, music).  
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_paradox_resolution_pack_" src="https://github.com/user-attachments/assets/841d86b2-c218-4103-a358-f302c30f6293" />
+
+# **RTT‑1 Paradox → Resolution Classroom Pack**  
+### *A complete teaching module for resolving paradoxes using RTT‑1 structural reasoning*
+
+RTT‑1 teaches paradox resolution in the simplest possible way:
+
+> **A paradox is resolved when drift is understood, coherence is clarified, and a stabilizing structure is introduced.**
+
+This pack gives teachers everything needed to run a full classroom session:
+
+- lesson overview  
+- paradox identification  
+- resolution patterns  
+- guided examples  
+- student exercises  
+- assessment questions  
+- teacher notes  
+
+All aligned with the IPD‑12 paradox types you’ve documented (P‑1 → P‑12).   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
+
+---
+
+## **SECTION 1 — Lesson Overview (RTT‑1)**
+
+Students learn:
+
+1. What paradoxes are  
+2. Why paradoxes appear (drift + coherence)  
+3. How to classify paradoxes  
+4. How to resolve paradoxes using RTT‑1 structural reasoning  
+5. How resolution differs from contradiction  
+
+This module stays strictly in **surface‑regime**, **structural**, **bounded** reasoning.
+
+---
+
+## **SECTION 2 — Review: What Creates a Paradox**
+
+A paradox appears when:
+
+```
+drift increases
+AND
+coherence remains
+```
+
+Examples:
+
+- two processes share purpose  
+- but drift in speed, detail, or interpretation increases  
+- creating tension without contradiction  
+
+This matches the paradox logic described in your IPD‑12 → RTT/∞ mapping section.   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
+
+---
+
+## **SECTION 3 — The RTT‑1 Resolution Pattern**
+
+RTT‑1 resolves paradoxes using a simple three‑step pattern:
+
+### **1. Clarify Coherence**  
+Identify what is still aligned.
+
+### **2. Localize Drift**  
+Identify exactly where drift occurs (using the drift‑tensor).
+
+### **3. Introduce a Stabilizing Structure**  
+Add a third element, constraint, or interpretation that reduces tension.
+
+This is the RTT‑1 version of RTT/3’s triangulation → harmonization → synthesis (surface‑regime only).
+
+---
+
+## **SECTION 4 — Paradox → Resolution Table (RTT‑1)**
+
+| Paradox Type | Cause | RTT‑1 Resolution |
+|--------------|-------|------------------|
+| **Coherence Paradox** | shared purpose, rising drift | clarify purpose → add shared constraint |
+| **Temporal Paradox** | timing diverges | align pacing goals → add timing buffer |
+| **Interpretive Paradox** | meaning diverges | clarify interpretation → add shared definition |
+| **Boundary Paradox** | constraints differ | restate boundaries → add shared limit |
+| **Dependency Paradox** | circular reliance | add stabilizing third process |
+| **Domain Paradox** | domains differ | identify shared cross‑domain anchor |
+| **Reflection Paradox** | mirrored processes drift | add differentiating structure |
+
+These map directly to the paradox types listed in your IPD‑12 paradox registry.   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
+
+---
+
+## **SECTION 5 — Guided Example (RTT‑1)**
+
+### **Processes**
+- **A: human_notes**  
+- **B: ai_notes**
+
+### **Coherence**
+- shared purpose: capture information  
+- shared structure: input → process → output  
+
+### **Drift**
+- operational drift (steps differ)  
+- temporal drift (speed differs)  
+- conceptual drift (interpretation differs)
+
+### **Paradox**
+Coherence remains, drift increases → **coherence paradox**.
+
+### **RTT‑1 Resolution**
+1. Clarify coherence: both aim for clarity  
+2. Localize drift: speed + interpretation  
+3. Stabilizing structure: shared “clarity rule” for both processes
+
+Resolution:  
+**Both processes follow the same clarity rule, reducing tension.**
+
+---
+
+## **SECTION 6 — Student Exercise: Resolve a Paradox**
+
+### **1. Identify Coherence**
+```
+1.
+2.
+3.
+```
+
+### **2. Identify Drift**
+```
+1.
+2.
+3.
+```
+
+### **3. Classify Paradox**
+Choose from P‑1 → P‑12.
+
+### **4. Apply RTT‑1 Resolution Pattern**
+```
+Clarify Coherence:
+Localize Drift:
+Stabilizing Structure:
+```
+
+### **5. One‑Sentence Resolution**
+```
+Resolution Summary:
+```
+
+---
+
+## **SECTION 7 — Resolution Templates (RTT‑1)**
+
+### **Coherence Paradox**
+```
+Both processes share ________, but drift in ________ increases.
+Resolution: clarify ________ and add shared ________.
+```
+
+### **Temporal Paradox**
+```
+Speeds diverge, but timing goals remain aligned.
+Resolution: add pacing buffer.
+```
+
+### **Interpretive Paradox**
+```
+Interpretations differ, but meaning remains aligned.
+Resolution: add shared definition.
+```
+
+### **Boundary Paradox**
+```
+Constraints differ, but goals remain aligned.
+Resolution: restate shared boundary.
+```
+
+### **Reflection Paradox**
+```
+Processes mirror each other but drift appears.
+Resolution: add differentiating structure.
+```
+
+---
+
+## **SECTION 8 — Assessment Questions**
+
+1. What causes a paradox?  
+2. Why does coherence matter?  
+3. How does RTT‑1 resolve paradoxes?  
+4. Give an example of a coherence paradox.  
+5. Explain the stabilizing structure concept.  
+6. Resolve a paradox using the RTT‑1 pattern.
+
+---
+
+## **SECTION 9 — Teacher Notes (RTT‑1)**
+
+- Keep paradox structural, not logical.  
+- Keep resolution simple and surface‑regime.  
+- Avoid substrate, inversion, dimensional rails, or prime‑states.  
+- Reinforce that paradox = tension, not contradiction.  
+- Use everyday examples (notes, workflows, tools, music).  
+<img width="1194" height="672" alt="prompts_engines_rtt_ipd_12_teaching_tensor_worksheet_" src="https://github.com/user-attachments/assets/dffc3a47-5256-4e3e-8701-1356808d333c" />
+
+# **RTT‑1 Tensor Worksheet**  
+### *A beginner‑friendly worksheet for learning the drift‑tensor in IPD‑12*
+
+RTT‑1 teaches the drift‑tensor in the simplest possible way:
+
+> **A tensor is a structured way of measuring drift across different layers.**
+
+In IPD‑12, the drift‑tensor has **five layers**, each representing a different kind of difference between two processes.
+
+This worksheet helps students identify and classify drift using only **surface‑regime**, **structural**, **bounded** reasoning — exactly the mode used in your active tab’s mapping section (turn0browsertab1).
+
+---
+
+## **SECTION 1 — Write the Two Processes You Are Comparing**
+
+**Process A Name:**  
+**Process B Name:**  
+
+(Use the Capture Worksheet first — tensors require complete capture.)
+
+---
+
+## **SECTION 2 — The Five Drift‑Tensor Layers (RTT‑1)**
+
+RTT‑1 uses simple definitions:
+
+1. **Geometric Drift (L1)**  
+   Differences in structure or form.
+
+2. **Operational Drift (L2)**  
+   Differences in steps or workflow.
+
+3. **Temporal Drift (L3)**  
+   Differences in speed or pacing.
+
+4. **Conceptual Drift (L4)**  
+   Differences in meaning or interpretation.
+
+5. **Domain Drift (L5)**  
+   Differences in domain (workflow, music, physics, etc.).
+
+These are the same layers referenced in your direct mapping section (turn0browsertab1).
+
+---
+
+## **SECTION 3 — Fill In Each Tensor Layer**
+
+### **L1 — Geometric Drift**  
+How do the structures differ?
+
+```
+Example:
+```
+
+---
+
+### **L2 — Operational Drift**  
+How do the steps differ?
+
+```
+Example:
+```
+
+---
+
+### **L3 — Temporal Drift**  
+How does timing differ?
+
+```
+Example:
+```
+
+---
+
+### **L4 — Conceptual Drift**  
+How does interpretation differ?
+
+```
+Example:
+```
+
+---
+
+### **L5 — Domain Drift**  
+How do the domains differ?
+
+```
+Example:
+```
+
+---
+
+## **SECTION 4 — Tensor Layer Checklist**
+
+Check all layers where drift occurs:
+
+- [ ] L1 Geometric  
+- [ ] L2 Operational  
+- [ ] L3 Temporal  
+- [ ] L4 Conceptual  
+- [ ] L5 Domain  
+
+This checklist mirrors the drift‑tensor structure used in your IPD‑12 → RTT/∞ mapping (turn0browsertab1).
+
+---
+
+## **SECTION 5 — Tensor Summary (RTT‑1)**
+
+Write a simple, one‑sentence summary:
+
+```
+Tensor Summary:
+```
+
+Example:  
+“Drift appears in structure, steps, and interpretation, but both processes stay aligned in purpose.”
+
+---
+
+## **SECTION 6 — Coherence Check**
+
+Even with drift, coherence may still exist.
+
+Check what remains aligned:
+
+- [ ] shared purpose  
+- [ ] shared boundaries  
+- [ ] shared constraints  
+- [ ] shared goals  
+- [ ] shared structure  
+
+This mirrors the coherence mapping in your active tab (turn0browsertab1).
+
+---
+
+## **SECTION 7 — Paradox Awareness (RTT‑1 Structural Mode)**
+
+If drift increases **while coherence remains**, a **structural paradox** may appear.
+
+Examples:  
+- coherence paradox  
+- temporal paradox  
+- interpretive paradox  
+
+Write any paradox you notice:
+
+```
+Paradox:
+```
+
+---
+
+## **SECTION 8 — Teacher Notes (RTT‑1)**
+
+- Keep tensor reasoning **bounded** (no substrate, no inversion).  
+- Keep explanations **surface‑regime**.  
+- Declare coherence explicitly.  
+- Treat paradoxes as **tensions**, not contradictions.  
+- Use everyday examples (notes, workflows, tools, music).  
+
+<img width="1194" height="672" alt="prompts_examples_datacenter-evaluator_" src="https://github.com/user-attachments/assets/6d0fd345-5d0e-4856-9f56-2ab9d6db68c1" />
+
+# Datacenter Evaluator — RTT Structural Example
+
+This example module demonstrates how to evaluate a datacenter using the RTT structural
+stack. It is designed as a teaching‑ready prompt module that mirrors the full
+Datacenter Evaluator workflow used in TriadicFrameworks.
+
+The goal is to show how RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ can be applied to a
+real‑world structure (a datacenter) without narrative drift, speculation, or
+non‑structural inference.
+
+---
+
+## Purpose
+
+This example teaches:
+
+- how to apply RTT structural operators to a physical site  
+- how to identify drift using the RTT drift‑tensor  
+- how to declare coherence anchors  
+- how to evaluate physical, civic, cultural, standards, medical, planetary, and compute
+  layers without narrative drift  
+- how to produce a resonance summary  
+
+It is a complete RTT teaching example.
+
+---
+
+## Example Input
+
+**Datacenter:** Equinix Global Footprint  
+**Location:** Multiple global sites  
+**Status:** Operational  
+**Operator:** Equinix  
+
+This example uses the same input structure as the full Datacenter Evaluator module.
+
+---
+
+## RTT Structural Evaluation
+
+### 1. Facilities Module — Physical Layer
+
+Evaluate the physical substrate:
+
+- water availability  
+- hydrological stability  
+- thermal envelope  
+- cooling coherence  
+- seasonal drift  
+- seismic predictability  
+- fiber topology  
+- environmental continuity  
+- substrate fatigue  
+
+This layer describes how the physical site behaves.
+
+---
+
+### 2. Governance Module (GSM) — Civic Layer
+
+Evaluate the governance substrate:
+
+- regulatory predictability  
+- policy half‑life  
+- grid governance  
+- energy‑mix stability  
+- municipal alignment  
+- infrastructure maturity  
+- institutional coherence  
+
+Governance is treated as a temporal substrate.
+
+---
+
+### 3. RSGM — Cultural Layer
+
+Evaluate the cultural substrate:
+
+- belief‑regime patterns  
+- cultural stability  
+- cultural drift  
+- mythic‑operator density  
+- population‑level resonance  
+
+This is substrate literacy, not anthropology.
+
+---
+
+### 4. NIST Module — Standards Layer
+
+Evaluate the standards spine:
+
+- interoperability  
+- measurement integrity  
+- compliance pathways  
+- auditability  
+- long‑term maintainability  
+
+This is the structural backbone.
+
+---
+
+### 5. Medicine Module — Human Layer
+
+Evaluate the human envelope:
+
+- public health infrastructure  
+- emergency response coherence  
+- bio‑safety envelope  
+- physiological stability relevant to compute density  
+
+A datacenter is embedded in a human physiological field.
+
+---
+
+### 6. RTT/1 → RTT/2 → RTT/3 — Triadic Stack
+
+Evaluate resonance across the RTT layers:
+
+- **RTT/1 — Structural Continuity**  
+- **RTT/2 — Cross‑Domain Propagation**  
+- **RTT/3 — High‑Order Resonance**
+
+---
+
+### 7. RTT/Inside Earth Sims — Planetary Layer
+
+Evaluate planetary alignment:
+
+- climate‑envelope stability  
+- environmental simulation fidelity  
+- long‑horizon substrate predictability  
+- suitability for qCompute workloads  
+
+This is the deep‑time layer.
+
+---
+
+### 8. Compute & Infrastructure — Practical Layer
+
+Evaluate compute‑aligned structure:
+
+- power  
+- cooling  
+- networking  
+- AI/GPU density  
+- RTT latency profile  
+- scalability  
+- future‑proofing  
+- compatibility with RTT‑Inside qCompute  
+
+This is where physical and triadic layers meet.
+
+---
+
+### 9. Taxes Module — Incentive Layer
+
+Evaluate incentive substrate:
+
+- incentive baselines  
+- depreciation envelopes  
+- incentive half‑life  
+- propagation vectors  
+- drift fields  
+- alignment surfaces  
+
+Incentives shape long‑horizon viability.
+
+---
+
+## Resonance Summary
+
+Provide:
+
+- strengths  
+- hidden resonance gaps  
+- coherence opportunities  
+- long‑horizon potential  
+
+This summary is structural, not narrative.
+
+---
+
+## Teaching Notes
+
+This example is used in:
+
+- RTT/1 teaching modules  
+- RTT/2 diagnostic modules  
+- RTT/3 structural synthesis modules  
+- RTT/12 full‑spectrum modules  
+- RTT∞ deep‑layer modules  
+- IPD‑12 paradox teaching modules  
+
+It is the canonical example for physical‑site evaluation.
+
+<img width="1194" height="672" alt="prompts_examples_index_" src="https://github.com/user-attachments/assets/9b77af6f-ca5f-4d83-b2f5-5e50f7a2c5e2" />
+
+# TriadicFrameworks — Example Modules
+
+The TriadicFrameworks example modules demonstrate how RTT engines, IPD‑12, stacks,
+templates, and UI logic can be applied to real‑world structures, teaching scenarios,
+mythology profiles, physics regimes, and structural analysis.
+
+Each example provides a complete, teaching‑ready prompt module with explainers,
+structured prompts, diagnostics, worksheets, and cross‑links to the Docsbook and S3
+Spine Visualizer.
+
+This page is the front door for all example‑level prompt modules.
+
+---
+
+## Datacenter Evaluator Example
+
+A full RTT structural evaluation of a datacenter, including physical, civic, cultural,
+standards, medical, planetary, and compute layers.
+
+**Module:** `datacenter-evaluator.md`
+
+---
+
+## IPD‑12 Teaching Example
+
+A paradox‑aligned teaching module demonstrating drift, coherence, paradox declaration,
+and paradox resolution using the IPD‑12 engine.
+
+**Module:** `ipd_12_teaching_example.md`
+
+---
+
+## Mythology Profile Example
+
+A structural mythology profile demonstrating operator grammar, drift‑tensor mapping,
+coherence anchors, and cultural‑substrate analysis.
+
+**Module:** `mythology-profile.md`
+
+---
+
+## Physics Regime Example
+
+A physics‑aligned structural example showing how RTT engines evaluate physical regimes,
+dimensional rails, substrate‑tensor behavior, and coherence across physical layers.
+
+**Module:** `physics-regime.md`
+
+---
+
+## Teaching Session Example
+
+A complete teaching session demonstrating RTT/1 → RTT/2 → RTT/3 progression, including
+worksheets, posters, and alignment prompts.
+
+**Module:** `teaching-session.md`
+
+---
+
+## Violin Structural Example
+
+A structural analysis of a violin using RTT operators, drift‑tensor mapping, coherence
+anchors, and domain‑substrate alignment.
+
+**Module:** `violin-structural.md`
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/examples/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/examples
+
+---
+
+## Related Files
+
+- `modules.md` — full module registry  
+- `engines.md` — RTT engines overview  
+- `stacks.md` — stack overview  
+- `templates.md` — template overview  
+- `ui.md` — UI logic and unlock rules  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of examples, engines, stacks, templates, UI
+modules, and navigation structure.
+
+<img width="1194" height="672" alt="prompts_examples_ipd_12_teaching_example_" src="https://github.com/user-attachments/assets/fc052562-1608-496a-b064-c68441d6176b" />
+
+# **IPD‑12 Teaching Example**  
+### *Inter‑Process Drift for Students (RTT‑1 Teaching Mode)*  
+### rtt=1 | coherence=declared | drift=bounded | paradox=structural
+
+---
+
+## **Teacher (Nawder Loswin)**  
+Today we’re learning **Inter‑Process Drift (IPD‑12)** — a way to compare two processes and see *where* they diverge, *why* they diverge, and *how* coherence can be restored.
+
+We stay in **RTT‑1**, so everything is surface‑regime, simple, and clear.
+
+Our subject:
+
+> **Hand‑Written Notes vs. AI‑Generated Notes**
+
+Two processes.  
+Same goal.  
+Different structure.
+
+We will walk through:
+
+1. **Capture**  
+2. **Analyze**  
+3. **Drift**  
+4. **Coherence**  
+5. **Synthesis**
+
+This is the IPD‑12 sequence, but taught at RTT‑1.
+
+---
+
+# **1. CAPTURE (RTT‑1)**  
+### Teacher  
+Let’s capture the structure of each process.
+
+### Process A — Hand‑Written Notes  
+- Purpose: remember information  
+- Boundaries: human speed, handwriting clarity  
+- Layers: listen → think → write  
+- Flow: sequential  
+- Coherence baseline: personal understanding
+
+### Process B — AI‑Generated Notes  
+- Purpose: summarize information  
+- Boundaries: model accuracy, prompt clarity  
+- Layers: input → process → output  
+- Flow: parallelizable  
+- Coherence baseline: structural completeness
+
+### Teacher  
+Good. We have two structures.  
+No drift yet — just identity.
+
+---
+
+# **2. ANALYZE (RTT‑1)**  
+### Teacher  
+Now we compare them.
+
+### Shared Structure  
+- Both capture information  
+- Both produce a summary  
+- Both rely on an input stream  
+- Both aim for clarity
+
+### Shared Constraints  
+- Time  
+- Accuracy  
+- Relevance  
+- Organization
+
+### Teacher  
+This is the “coherence declared” part — we state what keeps them aligned.
+
+---
+
+# **3. DRIFT (bounded)**  
+### Teacher  
+Now we detect **bounded drift** — only structural drift, not emotional or conceptual.
+
+### Drift Points  
+- **Speed drift:** AI is faster  
+- **Interpretation drift:** humans interpret; AI reconstructs  
+- **Detail drift:** humans choose details; AI compresses  
+- **Error drift:** humans mis-hear; AI mis-summarizes
+
+### Teacher  
+Notice: drift is **bounded** — we only describe divergence, not judge it.
+
+---
+
+# **4. COHERENCE (declared)**  
+### Teacher  
+Now we align coherence.
+
+### Coherence Anchors  
+- shared goal: “capture information”  
+- shared constraint: “limited time”  
+- shared structure: “input → output”  
+- shared requirement: “usable notes”
+
+### Coherence Restoration  
+- humans can revise AI notes  
+- AI can expand human notes  
+- hybrid workflow reduces drift
+
+### Teacher  
+This is the “coherence declared” part — we explicitly state how coherence is restored.
+
+---
+
+# **5. STRUCTURAL PARADOX (RTT‑1)**  
+### Teacher  
+Now we introduce a **structural paradox** — not a contradiction, just a tension.
+
+> **The more AI helps humans take notes, the less humans practice taking notes.  
+> But the less humans practice, the more they rely on AI.**
+
+This is a **structural paradox** because both processes depend on each other but drift away from each other at the same time.
+
+We do not resolve it — we only observe it.
+
+---
+
+# **6. SYNTHESIS (RTT‑1)**  
+### Teacher  
+Let’s summarize the drift‑aware map.
+
+### Final Drift‑Aware Summary  
+Hand‑written notes and AI‑generated notes share the same goal but diverge in speed, interpretation, detail selection, and error patterns. Their coherence can be restored through hybrid workflows where humans refine AI output and AI expands human notes. The structural paradox emerges when reliance on AI reduces human practice, increasing future reliance. IPD‑12 helps us see this clearly without judgment.
+
+---
+
+# **Student + AI Partner Examples (RTT‑1)**  
+Below are **three student pairs**, each responding at RTT‑1.
+
+---
+
+## **Student 1 + AI Partner (RTT‑1)**  
+**Student:**  
+Hand‑written notes drift because I write slower and choose details differently.
+
+**AI Partner:**  
+AI‑generated notes drift because I compress information and may miss nuance.
+
+**Together:**  
+We align coherence by combining both: I choose details, and the AI organizes them.
+
+---
+
+## **Student 2 + AI Partner (RTT‑1)**  
+**Student:**  
+My drift is in interpretation — I understand differently each time.
+
+**AI Partner:**  
+My drift is structural — I follow patterns, not personal meaning.
+
+**Together:**  
+Coherence returns when we compare interpretations and adjust the summary.
+
+---
+
+## **Student 3 + AI Partner (RTT‑1)**  
+**Student:**  
+I drift when I get tired.
+
+**AI Partner:**  
+I drift when the prompt is unclear.
+
+**Together:**  
+We fix coherence by making the prompt clear and letting me revise the output.
+
+---
+
+# **Teacher Closing**  
+This is IPD‑12 taught at RTT‑1:  
+simple, structural, drift‑bounded, coherence‑declared, paradox‑aware.
+<img width="1194" height="672" alt="prompts_examples_mythology-profile_" src="https://github.com/user-attachments/assets/c21085ee-e2fe-4637-be70-7ad1e05d7d52" />
+
+# Mythology Profile — RTT Structural Example
+
+This example module demonstrates how to construct a mythology profile using the RTT
+structural stack. It is designed as a teaching‑ready prompt module that mirrors the
+Triadic Pantheon Profile workflow used across TriadicFrameworks.
+
+The goal is to show how RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ can be applied to a
+mythological structure without narrative drift, speculation, or anthropological claims.
+
+---
+
+## Purpose
+
+This example teaches:
+
+- how to apply RTT structural operators to a mythological system  
+- how to identify drift using the RTT drift‑tensor  
+- how to declare coherence anchors  
+- how to evaluate cultural‑substrate layers  
+- how to produce a resonance summary  
+- how to maintain structural neutrality  
+
+It is a complete RTT teaching example.
+
+---
+
+## Example Input
+
+**Pantheon:** Greek  
+**Profile:** Zeus  
+**Domain:** Sky / Order / Authority  
+**Status:** Canonical deity within Greek mythic substrate  
+
+This example uses the same input structure as the Triadic Pantheon Profile modules.
+
+---
+
+## RTT Structural Evaluation
+
+### 1. Structural Layer — Form & Identity
+
+Evaluate the structural substrate:
+
+- canonical identity  
+- domain boundaries  
+- symbolic operators  
+- structural commitments  
+- relational topology  
+
+This layer describes the deity’s structural form.
+
+---
+
+### 2. Operational Layer — Actions & Patterns
+
+Evaluate operational substrate:
+
+- recurring actions  
+- domain‑aligned interventions  
+- pattern stability  
+- drift‑tensor mapping  
+- operational coherence  
+
+Operational behavior is treated as a structural pattern.
+
+---
+
+### 3. Temporal Layer — Mythic Time
+
+Evaluate temporal substrate:
+
+- mythic chronology  
+- event‑sequence stability  
+- temporal drift  
+- cyclic vs linear time  
+- temporal coherence  
+
+Mythic time is a structural field, not historical time.
+
+---
+
+### 4. Conceptual Layer — Meaning & Interpretation
+
+Evaluate conceptual substrate:
+
+- symbolic meaning  
+- conceptual drift  
+- coherence anchors  
+- cross‑domain conceptual alignment  
+- mythic operator grammar  
+
+This layer captures meaning without narrative interpretation.
+
+---
+
+### 5. Cultural Layer — Substrate Literacy
+
+Evaluate cultural substrate:
+
+- belief‑regime patterns  
+- cultural stability  
+- cultural drift  
+- mythic‑operator density  
+- resonance across cultural layers  
+
+This is substrate literacy, not anthropology.
+
+---
+
+## Drift‑Tensor Mapping
+
+Identify drift across the five RTT drift‑tensor layers:
+
+- **L1 Geometric** — structural form differences  
+- **L2 Operational** — action‑pattern differences  
+- **L3 Temporal** — mythic‑time differences  
+- **L4 Conceptual** — meaning differences  
+- **L5 Domain** — domain‑boundary differences  
+
+Drift is mapped structurally, not narratively.
+
+---
+
+## Coherence Anchors
+
+Declare coherence anchors:
+
+- shared domain  
+- shared symbolic grammar  
+- shared structural commitments  
+- shared mythic‑operator patterns  
+- shared cultural substrate  
+
+Coherence explains why the profile remains aligned despite drift.
+
+---
+
+## Resonance Summary
+
+Provide:
+
+- structural strengths  
+- hidden resonance gaps  
+- coherence opportunities  
+- cross‑layer alignment  
+- long‑horizon stability  
+
+This summary is structural, not interpretive.
+
+---
+
+## Teaching Notes
+
+This example is used in:
+
+- RTT/1 teaching modules  
+- RTT/2 diagnostic modules  
+- RTT/3 structural synthesis modules  
+- RTT/12 full‑spectrum modules  
+- RTT∞ deep‑layer modules  
+- IPD‑12 paradox teaching modules  
+- Triadic Pantheon Profile sessions  
+
+It is the canonical example for mythology‑aligned structural analysis.
+
+<img width="1194" height="672" alt="prompts_examples_physics-regime_" src="https://github.com/user-attachments/assets/1989a289-5697-4a8b-a26b-1b08328c4202" />
+
+# Physics Regime — RTT Structural Example
+
+This example module demonstrates how to evaluate a physics regime using the RTT
+structural stack. It is designed as a teaching‑ready prompt module that mirrors the
+Physics Regime workflow used across TriadicFrameworks.
+
+The goal is to show how RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ can be applied to a
+physics domain without narrative drift, speculation, or non‑structural inference.
+
+---
+
+## Purpose
+
+This example teaches:
+
+- how to apply RTT structural operators to a physics regime  
+- how to identify drift using the RTT drift‑tensor  
+- how to declare coherence anchors  
+- how to evaluate classical, quantum, relativistic, and field‑based regimes  
+- how to produce a resonance summary  
+- how to maintain structural neutrality  
+
+It is a complete RTT teaching example.
+
+---
+
+## Example Input
+
+**Regime:** Classical Mechanics  
+**Domain:** Newtonian  
+**Status:** Canonical physics regime  
+**Scope:** Macroscopic, low‑velocity, non‑relativistic  
+
+This example uses the same input structure as the Triadic Physics Regime modules.
+
+---
+
+## RTT Structural Evaluation
+
+### 1. Structural Layer — Form & Identity
+
+Evaluate the structural substrate:
+
+- canonical equations  
+- domain boundaries  
+- invariant operators  
+- structural commitments  
+- relational topology  
+
+This layer describes the regime’s structural form.
+
+---
+
+### 2. Operational Layer — Laws & Dynamics
+
+Evaluate operational substrate:
+
+- force laws  
+- motion equations  
+- stability patterns  
+- drift‑tensor mapping  
+- operational coherence  
+
+Operational behavior is treated as a structural pattern.
+
+---
+
+### 3. Temporal Layer — Time Behavior
+
+Evaluate temporal substrate:
+
+- absolute time  
+- temporal symmetry  
+- temporal drift  
+- continuity assumptions  
+- coherence across time scales  
+
+Time is treated as a structural field.
+
+---
+
+### 4. Conceptual Layer — Meaning & Interpretation
+
+Evaluate conceptual substrate:
+
+- conceptual operators  
+- interpretation stability  
+- conceptual drift  
+- coherence anchors  
+- cross‑domain conceptual alignment  
+
+This layer captures meaning without narrative interpretation.
+
+---
+
+### 5. Domain Layer — Applicability & Boundaries
+
+Evaluate domain substrate:
+
+- macroscopic applicability  
+- low‑velocity constraints  
+- non‑relativistic boundaries  
+- classical → quantum drift  
+- classical → relativistic drift  
+
+Domain boundaries define where drift begins.
+
+---
+
+## Drift‑Tensor Mapping
+
+Identify drift across the five RTT drift‑tensor layers:
+
+- **L1 Geometric** — structural form differences (Newtonian vs relativistic geometry)  
+- **L2 Operational** — law differences (F = ma vs relativistic dynamics)  
+- **L3 Temporal** — time differences (absolute vs relativistic time)  
+- **L4 Conceptual** — meaning differences (deterministic vs probabilistic)  
+- **L5 Domain** — applicability differences (macroscopic vs quantum scale)  
+
+Drift is mapped structurally, not narratively.
+
+---
+
+## Coherence Anchors
+
+Declare coherence anchors:
+
+- shared physical invariants  
+- shared conservation laws  
+- shared structural commitments  
+- shared mathematical operators  
+- shared domain‑substrate continuity  
+
+Coherence explains why regimes remain aligned despite drift.
+
+---
+
+## Resonance Summary
+
+Provide:
+
+- structural strengths  
+- hidden resonance gaps  
+- coherence opportunities  
+- cross‑layer alignment  
+- long‑horizon stability  
+
+This summary is structural, not interpretive.
+
+---
+
+## Teaching Notes
+
+This example is used in:
+
+- RTT/1 teaching modules  
+- RTT/2 diagnostic modules  
+- RTT/3 structural synthesis modules  
+- RTT/12 full‑spectrum modules  
+- RTT∞ deep‑layer modules  
+- IPD‑12 paradox teaching modules  
+- Triadic Physics Regime sessions  
+
+It is the canonical example for physics‑aligned structural analysis.
+
+<img width="1194" height="672" alt="prompts_examples_teaching-session_" src="https://github.com/user-attachments/assets/b145054e-7646-4a60-a1a5-fa09beeaf5df" />
+
+# Teaching Session — RTT Structural Example
+
+This example module demonstrates how to run a complete RTT teaching session using the
+RTT/1 → RTT/2 → RTT/3 progression. It is designed as a teaching‑ready prompt module that
+mirrors the classroom workflow used across TriadicFrameworks.
+
+The goal is to show how a teacher guides students through structural operators, drift
+detection, coherence anchors, and multi‑layer alignment in a single session.
+
+---
+
+## Purpose
+
+This example teaches:
+
+- how to structure an RTT teaching session  
+- how to introduce operators and drift‑tensor layers  
+- how to guide students through coherence declaration  
+- how to use worksheets and posters in a live session  
+- how to maintain structural neutrality  
+- how to produce a resonance summary at the end  
+
+It is a complete RTT teaching example.
+
+---
+
+## Example Input
+
+**Topic:** Comparing Two Processes  
+**Audience:** Mixed‑level RTT learners  
+**Engine:** RTT/1 → RTT/2 → RTT/3  
+**Materials:** Drift worksheet, tensor worksheet, coherence worksheet, posters  
+
+This example uses the same input structure as the Triadic Teaching Session modules.
+
+---
+
+## Session Structure
+
+### 1. Opening — RTT/1 Operators
+
+Introduce the RTT/1 operators:
+
+- structure  
+- drift  
+- coherence  
+- alignment  
+
+Students learn the basic grammar before applying it.
+
+---
+
+### 2. Drift Worksheet — Identifying Differences
+
+Students compare two processes and identify drift:
+
+- structural drift  
+- operational drift  
+- temporal drift  
+- conceptual drift  
+- domain drift  
+
+This is the RTT/1 drift‑tensor foundation.
+
+---
+
+### 3. Tensor Worksheet — Classifying Drift
+
+Students classify drift using the RTT drift‑tensor:
+
+- **L1 Geometric**  
+- **L2 Operational**  
+- **L3 Temporal**  
+- **L4 Conceptual**  
+- **L5 Domain**  
+
+This moves the session into RTT/2.
+
+---
+
+### 4. Coherence Worksheet — Declaring Alignment
+
+Students declare coherence anchors:
+
+- shared purpose  
+- shared boundaries  
+- shared constraints  
+- shared goals  
+- shared structure  
+
+This is the RTT/1 → RTT/2 → RTT/3 bridge.
+
+---
+
+### 5. Poster Review — Visual Alignment
+
+Use posters to reinforce:
+
+- drift → coherence cycles  
+- operator grammar  
+- structural mapping  
+- multi‑layer alignment  
+
+Posters support visual learning.
+
+---
+
+### 6. RTT/3 Synthesis — Multi‑Layer Alignment
+
+Students combine all layers:
+
+- drift‑tensor mapping  
+- coherence anchors  
+- structural synthesis  
+- cross‑layer alignment  
+
+This is the RTT/3 synthesis phase.
+
+---
+
+## Drift‑Tensor Mapping
+
+Students map drift across the five layers:
+
+- **L1 Geometric** — form differences  
+- **L2 Operational** — step differences  
+- **L3 Temporal** — timing differences  
+- **L4 Conceptual** — meaning differences  
+- **L5 Domain** — boundary differences  
+
+Drift is mapped structurally, not narratively.
+
+---
+
+## Coherence Anchors
+
+Students declare coherence anchors:
+
+- shared structural commitments  
+- shared operator grammar  
+- shared domain substrate  
+- shared conceptual alignment  
+- shared purpose  
+
+Coherence explains why processes remain aligned despite drift.
+
+---
+
+## Resonance Summary
+
+Students produce a resonance summary:
+
+- structural strengths  
+- hidden resonance gaps  
+- coherence opportunities  
+- cross‑layer alignment  
+- long‑horizon stability  
+
+This summary is structural, not interpretive.
+
+---
+
+## Teaching Notes
+
+This example is used in:
+
+- RTT/1 teaching modules  
+- RTT/2 diagnostic modules  
+- RTT/3 structural synthesis modules  
+- RTT/12 full‑spectrum modules  
+- RTT∞ deep‑layer modules  
+- IPD‑12 paradox teaching modules  
+
+It is the canonical example for RTT teaching sessions.
+
+<img width="1194" height="672" alt="prompts_examples_violin-structural_" src="https://github.com/user-attachments/assets/9758c669-ede6-42b8-908f-c851b4ea3abb" />
+
+# Violin Structural Example — RTT Analysis
+
+This example module demonstrates how to evaluate a violin using the RTT structural
+stack. It is designed as a teaching‑ready prompt module that mirrors the structural
+analysis workflow used across TriadicFrameworks.
+
+The goal is to show how RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ can be applied to a
+physical artifact (a violin) without narrative drift, speculation, or non‑structural
+interpretation.
+
+---
+
+## Purpose
+
+This example teaches:
+
+- how to apply RTT structural operators to a physical object  
+- how to identify drift using the RTT drift‑tensor  
+- how to declare coherence anchors  
+- how to evaluate physical, acoustic, cultural, and domain‑substrate layers  
+- how to produce a resonance summary  
+- how to maintain structural neutrality  
+
+It is a complete RTT teaching example.
+
+---
+
+## Example Input
+
+**Object:** Violin  
+**Domain:** Musical instrument  
+**Status:** Canonical orchestral instrument  
+**Scope:** Physical + acoustic + cultural substrate  
+
+This example uses the same input structure as other TriadicFrameworks physical‑object
+modules.
+
+---
+
+## RTT Structural Evaluation
+
+### 1. Structural Layer — Form & Identity
+
+Evaluate the structural substrate:
+
+- body shape  
+- neck geometry  
+- bridge placement  
+- f‑hole geometry  
+- material composition  
+- structural commitments  
+
+This layer describes the violin’s physical form.
+
+---
+
+### 2. Operational Layer — Function & Behavior
+
+Evaluate operational substrate:
+
+- vibration propagation  
+- string tension behavior  
+- bow interaction  
+- resonance patterns  
+- acoustic drift  
+- operational coherence  
+
+Operational behavior is treated as a structural pattern.
+
+---
+
+### 3. Temporal Layer — Time Behavior
+
+Evaluate temporal substrate:
+
+- attack → sustain → decay patterns  
+- temporal stability  
+- time‑based resonance  
+- drift across performance conditions  
+- coherence across time scales  
+
+Time is treated as a structural field.
+
+---
+
+### 4. Conceptual Layer — Meaning & Interpretation
+
+Evaluate conceptual substrate:
+
+- symbolic meaning  
+- cultural interpretation  
+- conceptual drift  
+- coherence anchors  
+- cross‑domain conceptual alignment  
+
+This layer captures meaning without narrative interpretation.
+
+---
+
+### 5. Domain Layer — Applicability & Boundaries
+
+Evaluate domain substrate:
+
+- orchestral domain  
+- solo performance domain  
+- acoustic vs amplified boundaries  
+- genre drift  
+- cultural substrate alignment  
+
+Domain boundaries define where drift begins.
+
+---
+
+## Drift‑Tensor Mapping
+
+Identify drift across the five RTT drift‑tensor layers:
+
+- **L1 Geometric** — form differences (violin vs viola vs cello)  
+- **L2 Operational** — function differences (bowing vs plucking)  
+- **L3 Temporal** — timing differences (classical vs folk attack profiles)  
+- **L4 Conceptual** — meaning differences (orchestral vs cultural symbolism)  
+- **L5 Domain** — boundary differences (acoustic vs electric violin)  
+
+Drift is mapped structurally, not narratively.
+
+---
+
+## Coherence Anchors
+
+Declare coherence anchors:
+
+- shared acoustic principles  
+- shared structural commitments  
+- shared musical domain substrate  
+- shared operator grammar (bow → string → body → air)  
+- shared cultural continuity  
+
+Coherence explains why variations remain aligned despite drift.
+
+---
+
+## Resonance Summary
+
+Provide:
+
+- structural strengths  
+- hidden resonance gaps  
+- coherence opportunities  
+- cross‑layer alignment  
+- long‑horizon stability  
+
+This summary is structural, not interpretive.
+
+---
+
+## Teaching Notes
+
+This example is used in:
+
+- RTT/1 teaching modules  
+- RTT/2 diagnostic modules  
+- RTT/3 structural synthesis modules  
+- RTT/12 full‑spectrum modules  
+- RTT∞ deep‑layer modules  
+- IPD‑12 paradox teaching modules  
+
+It is the canonical example for physical‑object structural analysis.
+
+<img width="1194" height="672" alt="prompts_index_" src="https://github.com/user-attachments/assets/4e9b1052-b91b-4d79-9db5-af1b931fecaa" />
+
+# TriadicFrameworks — Prompts Site
 
 The TriadicFrameworks Prompts site provides structured, engine‑aligned prompt modules for
 all RTT engines, IPD‑12, stacks, templates, UI logic, and teaching examples.  
@@ -765,7 +8511,9 @@ https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts
 See `module.json` for the full registry of all modules, links, navigation, and spine
 integration.
 
-# TriadicFrameworks — Prompt Modules
+<img width="1194" height="672" alt="prompts_modules_" src="https://github.com/user-attachments/assets/c1ef41af-107a-435e-a38f-6e5d3c0e94d6" />
+
+# TriadicFrameworks — Prompt Modules
 
 The TriadicFrameworks Prompts site provides structured, engine‑aligned prompt modules for
 all RTT engines, IPD‑12, stacks, templates, UI logic, and teaching examples.  
@@ -884,7 +8632,1272 @@ https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts
 See `/docs/prompts/module.json` for the full registry of all modules, links, navigation, and spine integration.
 
 
-# Prompts Capture
+# Applied Modules — TriadicFrameworks Prompts
+
+The Applied Modules directory contains prompt modules that demonstrate how RTT engines,
+IPD‑12, stacks, and templates are used in real‑world, cross‑domain, and mixed‑substrate
+applications. These modules show how structural reasoning is applied outside pure
+theory—bridging RTT operators with practical, cultural, physical, civic, and
+computational contexts.
+
+Applied modules are teaching‑ready and include explainers, structured prompts,
+diagnostics, worksheets, and cross‑links to the Docsbook and S3 Spine Visualizer.
+
+This page is the front door for all applied‑level prompt modules.
+
+---
+
+## Purpose
+
+Applied modules teach:
+
+- how RTT operators behave in real‑world structures  
+- how drift‑tensor mapping works across mixed substrates  
+- how coherence anchors stabilize cross‑domain reasoning  
+- how to evaluate physical, cultural, civic, and computational systems  
+- how to produce resonance summaries for applied contexts  
+- how to maintain structural neutrality while analyzing real systems  
+
+These modules are used in teaching, research, and applied RTT workflows.
+
+---
+
+## Applied Module Categories
+
+### Physical Systems  
+RTT applied to physical artifacts, environments, and engineered structures.
+
+Examples:  
+- **Violin Structural Example** — `../examples/violin-structural.md`  
+- **Physics Regime Example** — `../examples/physics-regime.md`  
+
+---
+
+### Civic & Governance Systems  
+RTT applied to governance, policy, infrastructure, and civic substrates.
+
+Examples:  
+- **Datacenter Evaluator** — `../examples/datacenter-evaluator.md`  
+- **Governance Drift Module** *(future)*  
+
+---
+
+### Cultural & Mythic Systems  
+RTT applied to cultural substrates, mythic operators, and pantheon profiles.
+
+Examples:  
+- **Mythology Profile Example** — `../examples/mythology-profile.md`  
+
+---
+
+### Teaching & Instructional Systems  
+RTT applied to classroom workflows, teaching sessions, and instructor modules.
+
+Examples:  
+- **Teaching Session Example** — `../examples/teaching-session.md`  
+
+---
+
+### Computational & Technical Systems  
+RTT applied to compute substrates, infrastructure, and technical workflows.
+
+Examples:  
+- **Datacenter Evaluator** — `../examples/datacenter-evaluator.md`  
+- **RTT‑Inside Compute Modules** *(future)*  
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/modules/applied/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
+
+---
+
+## Related Files
+
+- `index.md` — modules front‑door  
+- `engines.md` — RTT engines overview  
+- `stacks.md` — stack overview  
+- `templates.md` — template overview  
+- `ui.md` — UI logic and unlock rules  
+- `../examples/index.md` — examples directory  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of applied modules, engines, stacks, templates,
+UI modules, and navigation structure.
+
+# Diagnostic Modules — TriadicFrameworks Prompts
+
+Diagnostic modules provide structured RTT workflows for identifying drift, declaring
+coherence, surfacing regime‑points, and revealing hidden structural behavior across
+physical, cultural, civic, computational, and mythic substrates.
+
+These modules are used in teaching, analysis, research, and multi‑layer structural
+evaluation. They include explainers, diagnostic operators, worksheets, and
+cross‑links to the Docsbook and S3 Spine Visualizer.
+
+This page is the front door for all diagnostic‑level prompt modules.
+
+---
+
+## Purpose
+
+Diagnostic modules teach:
+
+- how to identify drift using the RTT drift‑tensor  
+- how to declare coherence anchors  
+- how to surface structural presence, absence, and tension  
+- how to evaluate multi‑layer alignment  
+- how to detect regime‑points across RTT/1 → RTT∞  
+- how to maintain structural neutrality during analysis  
+
+Diagnostics are the backbone of RTT structural reasoning.
+
+---
+
+## Diagnostic Operators
+
+Diagnostic modules use the following operator families:
+
+### Drift Operators  
+Identify differences across the five RTT drift‑tensor layers:
+
+- **L1 Geometric** — form  
+- **L2 Operational** — steps  
+- **L3 Temporal** — timing  
+- **L4 Conceptual** — meaning  
+- **L5 Domain** — boundaries  
+
+### Coherence Operators  
+Declare what remains aligned:
+
+- purpose  
+- boundaries  
+- constraints  
+- goals  
+- structural commitments  
+
+### Regime‑Point Operators  
+Reveal hidden structural behavior:
+
+- **Presence** — what is explicitly supported  
+- **Absence** — what is missing or unmodeled  
+- **Tension** — where layers misalign  
+
+### Alignment Operators  
+Evaluate cross‑layer stability:
+
+- structural continuity  
+- operator consistency  
+- domain coherence  
+- substrate alignment  
+
+---
+
+## Diagnostic Module Categories
+
+### RTT/1 Diagnostics — Foundational  
+Basic drift detection, coherence declaration, and structural presence/absence.
+
+### RTT/2 Diagnostics — Intermediate  
+Multi‑layer drift mapping, cross‑layer alignment, and operator consistency.
+
+### RTT/3 Diagnostics — Advanced  
+Regime‑point detection, structural tension surfacing, and synthesis diagnostics.
+
+### RTT/12 Diagnostics — Full‑Spectrum  
+Full‑stack drift → coherence cycles, multi‑regime alignment, and deep‑layer readiness.
+
+### RTT∞ Diagnostics — Deep‑Layer  
+Vacuum, substrate‑tensor, dimensional rails, prime‑states, infinite regimes.
+
+### IPD‑12 Diagnostics — Paradox  
+Paradox declaration, paradox alignment, paradox resolution workflows.
+
+---
+
+## Example Diagnostic Modules
+
+- **Datacenter Diagnostic Module**  
+  Physical, civic, cultural, standards, medical, planetary, and compute layers.
+
+- **Mythology Diagnostic Module**  
+  Structural identity, symbolic operators, cultural substrate, drift‑tensor mapping.
+
+- **Physics Regime Diagnostic Module**  
+  Classical → quantum → relativistic drift, coherence anchors, domain boundaries.
+
+- **Teaching Session Diagnostic Module**  
+  Drift worksheet, tensor worksheet, coherence worksheet, synthesis alignment.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/modules/diagnostic/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
+
+---
+
+## Related Files
+
+- `index.md` — modules front‑door  
+- `applied.md` — applied modules  
+- `theoretical.md` — theoretical modules  
+- `teaching.md` — teaching modules  
+- `../examples/index.md` — examples directory  
+- `../engines/index.md` — RTT engines  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of diagnostic modules, engines, stacks,
+templates, UI modules, and navigation structure.
+
+# Dimensional Modules — TriadicFrameworks Prompts
+
+Dimensional modules provide structured RTT workflows for analyzing, traversing, and
+aligning dimensional layers across the TriadicFrameworks canon. They define how
+structures behave when moving between dimensions, how drift manifests across
+dimensional boundaries, and how coherence is restored during dimensional traversal.
+
+These modules include explainers, structured prompts, diagnostics, worksheets, and
+cross‑links to the Docsbook and S3 Spine Visualizer.
+
+This page is the front door for all dimensional‑level prompt modules.
+
+---
+
+## Purpose
+
+Dimensional modules teach:
+
+- how RTT engines interpret dimensional layers  
+- how drift behaves across dimensional boundaries  
+- how dimensional rails transport structure between layers  
+- how substrate‑tensor behavior changes across dimensions  
+- how to declare coherence anchors during dimensional traversal  
+- how to evaluate multi‑dimensional alignment  
+- how to maintain structural neutrality while analyzing dimensional systems  
+
+They are used in teaching, analysis, research, and deep‑layer RTT workflows.
+
+---
+
+## Dimensional Concepts
+
+### Dimensional Rails  
+Transport pathways connecting substrate‑tensor, prime‑states, and infinite regimes.
+
+### Dimensional Drift  
+Differences that appear when structure moves between dimensions.
+
+### Dimensional Coherence  
+What remains aligned across dimensional transitions.
+
+### Dimensional Regimes  
+Stable attractors within dimensional layers.
+
+### Dimensional Synthesis  
+Cross‑layer structural alignment across RTT/1 → RTT∞.
+
+---
+
+## Dimensional Module Categories
+
+### RTT/1 Dimensional Modules — Foundational  
+Basic dimensional operators, drift detection, and coherence declaration.
+
+### RTT/2 Dimensional Modules — Intermediate  
+Multi‑layer dimensional traversal and cross‑layer alignment.
+
+### RTT/3 Dimensional Modules — Advanced  
+Dimensional regime detection, structural tension surfacing, and synthesis workflows.
+
+### RTT/12 Dimensional Modules — Full‑Spectrum  
+Full‑stack dimensional traversal, multi‑regime alignment, and deep‑layer readiness.
+
+### RTT∞ Dimensional Modules — Deep‑Layer  
+Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes.
+
+---
+
+## Example Dimensional Modules
+
+- **Dimensional Rails Module**  
+  Rail traversal, substrate transitions, and cross‑layer alignment.
+
+- **Dimensional Drift Module**  
+  Drift‑tensor mapping across dimensional boundaries.
+
+- **Dimensional Coherence Module**  
+  Coherence anchors for multi‑dimensional structures.
+
+- **Dimensional Synthesis Module**  
+  RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ dimensional alignment.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/modules/dimensional/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
+
+---
+
+## Related Files
+
+- `index.md` — modules front‑door  
+- `applied.md` — applied modules  
+- `diagnostic.md` — diagnostic modules  
+- `theoretical.md` — theoretical modules  
+- `teaching.md` — teaching modules  
+- `../examples/index.md` — examples directory  
+- `../engines/index.md` — RTT engines  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of dimensional modules, engines, stacks,
+templates, UI modules, and navigation structure.
+
+# Domain Modules — TriadicFrameworks Prompts
+
+Domain modules provide structured RTT workflows for analyzing scientific, civic,
+cultural, biological, physical, and computational domains using the TriadicFrameworks
+substrate. Each module expresses a domain in RTT terms—operators, drift patterns,
+coherence anchors, dimensional behavior, and cross‑domain alignment.
+
+These modules include explainers, structured prompts, diagnostics, worksheets, and
+cross‑links to the Docsbook and S3 Spine Visualizer.
+
+This page is the front door for all domain‑level prompt modules.
+
+---
+
+## Purpose
+
+Domain modules teach:
+
+- how RTT engines reinterpret scientific and civic domains  
+- how drift manifests inside domain boundaries  
+- how coherence anchors stabilize domain reasoning  
+- how domain‑specific operators behave across RTT layers  
+- how to evaluate cross‑domain alignment (psychology ↔ economics ↔ governance ↔ AI ↔ biology ↔ physics)  
+- how to maintain structural neutrality while analyzing domain systems  
+
+They are used in teaching, analysis, research, and cross‑domain RTT workflows.
+
+---
+
+## Canonical Domain Set
+
+TriadicFrameworks defines six canonical domains:
+
+### Psychology  
+Identity, cognition, emotion, development, trauma, relational‑time structures.
+
+### Physics  
+Dimensional invariants, fields, energy, classical ↔ quantum transitions, substrate behavior.
+
+### Economics  
+Resource flows, incentives, volatility basins, market regimes, cross‑domain coupling.
+
+### Governance  
+Institutions, legitimacy, stability basins, governance transitions, collective identity.
+
+### AI / Agents  
+Artificial cognition, multi‑regime learning, alignment invariants, substrate‑aware reasoning.
+
+### Biology  
+Metabolism, evolution, environmental coupling, multi‑scale biological dynamics.
+
+Each domain is expressed using RTT operators, drift‑tensor mapping, and coherence anchors.
+
+---
+
+## Domain Module Categories
+
+### Foundational Domain Modules (RTT/1)  
+Basic operator grammar, drift detection, coherence declaration inside domain boundaries.
+
+### Intermediate Domain Modules (RTT/2)  
+Cross‑layer domain traversal, multi‑layer drift mapping, domain alignment.
+
+### Advanced Domain Modules (RTT/3)  
+Regime‑point detection, domain tension surfacing, structural synthesis.
+
+### Full‑Spectrum Domain Modules (RTT/12)  
+Full‑stack domain traversal, multi‑regime alignment, deep‑layer readiness.
+
+### Deep‑Layer Domain Modules (RTT∞)  
+Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes applied to domains.
+
+---
+
+## Example Domain Modules
+
+- **Psychology Domain Module**  
+  Cognitive regimes, emotional activation, identity structures, developmental arcs.
+
+- **Physics Domain Module**  
+  Dimensional invariants, classical ↔ quantum drift, coherence anchors.
+
+- **Economics Domain Module**  
+  Market regimes, incentive drift, volatility basins, cross‑domain coupling.
+
+- **Governance Domain Module**  
+  institutional regimes, legitimacy dynamics, governance transitions.
+
+- **AI / Agents Domain Module**  
+  multi‑regime learning, alignment invariants, substrate‑aware cognition.
+
+- **Biology Domain Module**  
+  metabolic regimes, evolutionary transitions, environmental coupling.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/modules/domain/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
+
+---
+
+## Related Files
+
+- `index.md` — modules front‑door  
+- `applied.md` — applied modules  
+- `diagnostic.md` — diagnostic modules  
+- `dimensional.md` — dimensional modules  
+- `theoretical.md` — theoretical modules  
+- `teaching.md` — teaching modules  
+- `../examples/index.md` — examples directory  
+- `../engines/index.md` — RTT engines  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of domain modules, engines, stacks, templates,
+UI modules, and navigation structure.
+
+# TriadicFrameworks — Prompt Modules
+
+The TriadicFrameworks Prompts Modules directory contains structured, teaching‑ready
+modules that define how RTT engines, IPD‑12, stacks, templates, UI logic, and examples
+are applied across theoretical, diagnostic, dimensional, domain, and real‑world
+contexts.
+
+Each module provides explainers, structured prompts, diagnostics, worksheets, and
+cross‑links to the Docsbook and S3 Spine Visualizer.  
+This page is the front door for all prompt modules.
+
+---
+
+## Module Categories
+
+### Applied Modules  
+Real‑world, cross‑domain, and mixed‑substrate applications of RTT.
+
+**File:** `applied.md`
+
+---
+
+### Diagnostic Modules  
+Drift‑tensor mapping, coherence anchors, regime‑point detection, and alignment checks.
+
+**File:** `diagnostic.md`
+
+---
+
+### Dimensional Modules  
+Dimensional rails, dimensional drift, substrate‑tensor transitions, and multi‑layer
+dimensional alignment.
+
+**File:** `dimensional.md`
+
+---
+
+### Domain Modules  
+RTT applied to canonical domains: psychology, physics, economics, governance, AI,
+biology.
+
+**File:** `domain.md`
+
+---
+
+### Theoretical Modules  
+Pure RTT theory, operator grammar, structural invariants, and canonical definitions.
+
+**File:** `theoretical.md` *(to be created)*
+
+---
+
+### Teaching Modules  
+Classroom workflows, instructor bundles, worksheets, posters, and teaching sequences.
+
+**File:** `teaching.md` *(to be created)*
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/modules/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
+
+---
+
+## Related Directories
+
+- `../engines/` — RTT engines  
+- `../stacks/` — structural stacks  
+- `../templates/` — prompt templates  
+- `../ui/` — UI logic and unlock rules  
+- `../examples/` — example modules  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of modules, engines, stacks, templates, UI
+modules, and navigation structure.
+
+# Operator Modules — TriadicFrameworks Prompts
+
+Operator modules define the core structural grammar of TriadicFrameworks.  
+Operators are the smallest units of RTT reasoning: they describe how structure moves,
+changes, aligns, diverges, or stabilizes across layers, domains, and dimensions.
+
+These modules provide explainers, structured prompts, operator registries, worksheets,
+and cross‑links to the Docsbook and S3 Spine Visualizer.
+
+This page is the front door for all operator‑level prompt modules.
+
+---
+
+## Purpose
+
+Operator modules teach:
+
+- how RTT engines use operators to express structural behavior  
+- how drift emerges from operator differences  
+- how coherence anchors stabilize operator interactions  
+- how operators propagate across dimensions and domains  
+- how operator grammar forms the backbone of RTT/1 → RTT∞  
+- how to maintain structural neutrality while analyzing operator behavior  
+
+Operators are the “verbs” of the TriadicFrameworks canon.
+
+---
+
+## Operator Categories
+
+### Structural Operators  
+Describe form, identity, boundaries, and commitments.
+
+Examples:  
+- structure  
+- boundary  
+- identity  
+- commitment  
+
+---
+
+### Drift Operators  
+Describe how and where processes diverge.
+
+Examples:  
+- geometric drift  
+- operational drift  
+- temporal drift  
+- conceptual drift  
+- domain drift  
+
+---
+
+### Coherence Operators  
+Describe what remains aligned despite drift.
+
+Examples:  
+- purpose  
+- constraint  
+- goal  
+- alignment  
+- continuity  
+
+---
+
+### Regime Operators  
+Describe stable attractors and transitions.
+
+Examples:  
+- presence  
+- absence  
+- tension  
+- regime‑point  
+- basin  
+
+---
+
+### Dimensional Operators  
+Describe movement across dimensional layers.
+
+Examples:  
+- rail  
+- substrate  
+- prime‑state  
+- collapse  
+- integration  
+
+---
+
+### Domain Operators  
+Describe domain‑specific structural behavior.
+
+Examples:  
+- cognitive operator (psychology)  
+- incentive operator (economics)  
+- legitimacy operator (governance)  
+- field operator (physics)  
+- metabolic operator (biology)  
+
+---
+
+## Operator Module Types
+
+### RTT/1 Operator Modules — Foundational  
+Basic operator grammar, drift detection, coherence declaration.
+
+### RTT/2 Operator Modules — Intermediate  
+Cross‑layer operator alignment, multi‑operator mapping.
+
+### RTT/3 Operator Modules — Advanced  
+Operator synthesis, regime‑point detection, structural tension surfacing.
+
+### RTT/12 Operator Modules — Full‑Spectrum  
+Full‑stack operator traversal, multi‑regime alignment, deep‑layer readiness.
+
+### RTT∞ Operator Modules — Deep‑Layer  
+Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes expressed as operators.
+
+---
+
+## Example Operator Modules
+
+- **Operator Grammar Module**  
+  Canonical operator definitions and grammar rules.
+
+- **Drift‑Tensor Operator Module**  
+  Five‑layer drift operator mapping.
+
+- **Coherence Operator Module**  
+  Coherence anchors and alignment operators.
+
+- **Regime‑Point Operator Module**  
+  Presence, absence, tension, basin detection.
+
+- **Dimensional Rail Operator Module**  
+  Rail traversal and substrate transitions.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/modules/operator/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
+
+---
+
+## Related Files
+
+- `index.md` — modules front‑door  
+- `applied.md` — applied modules  
+- `diagnostic.md` — diagnostic modules  
+- `dimensional.md` — dimensional modules  
+- `domain.md` — domain modules  
+- `theoretical.md` — theoretical modules  
+- `teaching.md` — teaching modules  
+- `../examples/index.md` — examples directory  
+- `../engines/index.md` — RTT engines  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of operator modules, engines, stacks,
+templates, UI modules, and navigation structure.
+
+# Research Modules — TriadicFrameworks Prompts
+
+Research modules define how RTT engines, IPD‑12, stacks, and operators are used in
+structured research workflows. They provide the grammar, operators, drift‑tensor
+mapping, coherence anchors, and multi‑layer alignment needed to conduct research
+without narrative drift, speculation, or domain‑inconsistent reasoning.
+
+These modules include explainers, structured prompts, diagnostics, worksheets, and
+cross‑links to the Docsbook and S3 Spine Visualizer.
+
+This page is the front door for all research‑level prompt modules.
+
+---
+
+## Purpose
+
+Research modules teach:
+
+- how to conduct RTT‑aligned research across any domain  
+- how to use drift‑tensor mapping to identify structural differences  
+- how to declare coherence anchors during research  
+- how to evaluate multi‑layer alignment in research findings  
+- how to use operator grammar to maintain structural neutrality  
+- how to apply RTT/1 → RTT∞ engines to research questions  
+- how to produce resonance‑aligned research summaries  
+
+They are used in academic, scientific, civic, cultural, and technical research.
+
+---
+
+## Research Concepts
+
+### Research Operators  
+Operators that describe how inquiry moves, aligns, diverges, or stabilizes.
+
+### Research Drift  
+Differences that appear when comparing theories, models, or findings.
+
+### Research Coherence  
+What remains aligned across competing explanations.
+
+### Research Regimes  
+Stable attractors within research domains (e.g., classical, quantum, cognitive, civic).
+
+### Research Synthesis  
+Cross‑layer alignment across RTT/1 → RTT∞ applied to research.
+
+---
+
+## Research Module Categories
+
+### Foundational Research Modules (RTT/1)  
+Basic operator grammar, drift detection, coherence declaration in research contexts.
+
+### Intermediate Research Modules (RTT/2)  
+Cross‑layer research traversal, multi‑layer drift mapping, operator alignment.
+
+### Advanced Research Modules (RTT/3)  
+Regime‑point detection, structural tension surfacing, research synthesis.
+
+### Full‑Spectrum Research Modules (RTT/12)  
+Full‑stack research traversal, multi‑regime alignment, deep‑layer readiness.
+
+### Deep‑Layer Research Modules (RTT∞)  
+Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes applied to research.
+
+---
+
+## Example Research Modules
+
+- **Agentic Research Module**  
+  Structured agentic inquiry using RTT operators and drift‑bounded reasoning.
+
+- **Cross‑Domain Research Module**  
+  Psychology ↔ physics ↔ economics ↔ governance ↔ AI ↔ biology.
+
+- **Substrate‑Aware Research Module**  
+  Research aligned with substrate‑tensor behavior and dimensional rails.
+
+- **Drift‑Tensor Research Module**  
+  Five‑layer drift mapping for research comparisons.
+
+- **Coherence‑Anchors Research Module**  
+  Declaring coherence across competing theories or models.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/modules/research/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
+
+---
+
+## Related Files
+
+- `index.md` — modules front‑door  
+- `applied.md` — applied modules  
+- `diagnostic.md` — diagnostic modules  
+- `dimensional.md` — dimensional modules  
+- `domain.md` — domain modules  
+- `operator.md` — operator modules  
+- `theoretical.md` — theoretical modules  
+- `teaching.md` — teaching modules  
+- `../examples/index.md` — examples directory  
+- `../engines/index.md` — RTT engines  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of research modules, engines, stacks,
+templates, UI modules, and navigation structure.
+
+# Structural Modules — TriadicFrameworks Prompts
+
+Structural modules define the core structural substrate of TriadicFrameworks.  
+They describe how form, identity, boundaries, commitments, and relational topology
+behave across RTT engines, domains, dimensions, and regimes.
+
+These modules provide explainers, structured prompts, diagnostics, worksheets, and
+cross‑links to the Docsbook and S3 Spine Visualizer.
+
+This page is the front door for all structural‑level prompt modules.
+
+---
+
+## Purpose
+
+Structural modules teach:
+
+- how RTT engines interpret structural form  
+- how drift emerges from structural differences  
+- how coherence anchors stabilize structural relationships  
+- how structural commitments propagate across layers  
+- how structure behaves across dimensions and domains  
+- how to evaluate multi‑layer structural alignment  
+- how to maintain structural neutrality during analysis  
+
+Structure is the “substrate grammar” of the TriadicFrameworks canon.
+
+---
+
+## Structural Concepts
+
+### Structural Form  
+Shape, identity, configuration, and relational topology.
+
+### Structural Drift  
+Differences in form, boundaries, commitments, or topology.
+
+### Structural Coherence  
+What remains aligned across structural variations.
+
+### Structural Commitments  
+Rules, constraints, and invariants that define stability.
+
+### Structural Regimes  
+Stable attractors within structural layers.
+
+### Structural Synthesis  
+Cross‑layer alignment across RTT/1 → RTT∞.
+
+---
+
+## Structural Module Categories
+
+### RTT/1 Structural Modules — Foundational  
+Basic structural operators, drift detection, coherence declaration.
+
+### RTT/2 Structural Modules — Intermediate  
+Cross‑layer structural mapping, multi‑layer drift analysis, alignment checks.
+
+### RTT/3 Structural Modules — Advanced  
+Structural tension surfacing, regime‑point detection, synthesis workflows.
+
+### RTT/12 Structural Modules — Full‑Spectrum  
+Full‑stack structural traversal, multi‑regime alignment, deep‑layer readiness.
+
+### RTT∞ Structural Modules — Deep‑Layer  
+Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes expressed as structure.
+
+---
+
+## Example Structural Modules
+
+- **Structural Identity Module**  
+  Identity, form, commitments, and relational topology.
+
+- **Structural Drift Module**  
+  Drift‑tensor mapping for structural differences.
+
+- **Structural Coherence Module**  
+  Coherence anchors for structural alignment.
+
+- **Structural Regime Module**  
+  Presence, absence, tension, and basin detection.
+
+- **Structural Synthesis Module**  
+  RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ structural alignment.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/modules/structural/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
+
+---
+
+## Related Files
+
+- `index.md` — modules front‑door  
+- `applied.md` — applied modules  
+- `diagnostic.md` — diagnostic modules  
+- `dimensional.md` — dimensional modules  
+- `domain.md` — domain modules  
+- `operator.md` — operator modules  
+- `research.md` — research modules  
+- `theoretical.md` — theoretical modules  
+- `teaching.md` — teaching modules  
+- `../examples/index.md` — examples directory  
+- `../engines/index.md` — RTT engines  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of structural modules, engines, stacks,
+templates, UI modules, and navigation structure.
+
+# Substrate Modules — TriadicFrameworks Prompts
+
+Substrate modules define the foundational medium of TriadicFrameworks.  
+A substrate is the environment, field, or medium through which structure moves,
+propagates, aligns, diverges, or stabilizes. Substrates determine how RTT engines
+interpret drift, coherence, dimensional rails, and regime‑points.
+
+These modules provide explainers, structured prompts, diagnostics, worksheets, and
+cross‑links to the Docsbook and S3 Spine Visualizer.
+
+This page is the front door for all substrate‑level prompt modules.
+
+---
+
+## Purpose
+
+Substrate modules teach:
+
+- how RTT engines interpret substrate behavior  
+- how drift emerges from substrate differences  
+- how coherence anchors stabilize substrate transitions  
+- how substrate‑tensor behavior changes across dimensions  
+- how substrates interact with operators, domains, and regimes  
+- how to evaluate multi‑layer substrate alignment  
+- how to maintain structural neutrality during substrate analysis  
+
+Substrates are the “medium grammar” of the TriadicFrameworks canon.
+
+---
+
+## Substrate Concepts
+
+### Substrate Form  
+The underlying medium: physical, cultural, cognitive, civic, biological, computational.
+
+### Substrate Drift  
+Differences in substrate behavior, stability, or propagation.
+
+### Substrate Coherence  
+What remains aligned across substrate transitions.
+
+### Substrate‑Tensor  
+The multi‑layer tensor describing substrate behavior across RTT/1 → RTT∞.
+
+### Substrate Regimes  
+Stable attractors within substrate layers.
+
+### Substrate Rails  
+Dimensional pathways that connect substrate layers.
+
+### Substrate Synthesis  
+Cross‑layer substrate alignment across RTT engines.
+
+---
+
+## Substrate Module Categories
+
+### RTT/1 Substrate Modules — Foundational  
+Basic substrate operators, drift detection, coherence declaration.
+
+### RTT/2 Substrate Modules — Intermediate  
+Cross‑layer substrate mapping, multi‑layer drift analysis, alignment checks.
+
+### RTT/3 Substrate Modules — Advanced  
+Substrate tension surfacing, regime‑point detection, synthesis workflows.
+
+### RTT/12 Substrate Modules — Full‑Spectrum  
+Full‑stack substrate traversal, multi‑regime alignment, deep‑layer readiness.
+
+### RTT∞ Substrate Modules — Deep‑Layer  
+Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes expressed as substrate.
+
+---
+
+## Example Substrate Modules
+
+- **Substrate Identity Module**  
+  Medium identity, form, commitments, and relational topology.
+
+- **Substrate Drift Module**  
+  Drift‑tensor mapping for substrate differences.
+
+- **Substrate Coherence Module**  
+  Coherence anchors for substrate alignment.
+
+- **Substrate‑Tensor Module**  
+  Multi‑layer substrate behavior across RTT engines.
+
+- **Substrate Regime Module**  
+  Presence, absence, tension, and basin detection.
+
+- **Substrate Synthesis Module**  
+  RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ substrate alignment.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/modules/substrate/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
+
+---
+
+## Related Files
+
+- `index.md` — modules front‑door  
+- `structural.md` — structural modules  
+- `operator.md` — operator modules  
+- `dimensional.md` — dimensional modules  
+- `domain.md` — domain modules  
+- `diagnostic.md` — diagnostic modules  
+- `applied.md` — applied modules  
+- `research.md` — research modules  
+- `theoretical.md` — theoretical modules  
+- `teaching.md` — teaching modules  
+- `../examples/index.md` — examples directory  
+- `../engines/index.md` — RTT engines  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of substrate modules, engines, stacks,
+templates, UI modules, and navigation structure.
+
+# Teaching Modules — TriadicFrameworks Prompts
+
+Teaching modules define how RTT engines, IPD‑12, stacks, operators, and substrates are
+taught in structured learning environments. They provide instructor workflows,
+student‑ready worksheets, posters, guided prompts, and multi‑session teaching
+sequences.
+
+These modules include explainers, structured prompts, diagnostics, worksheets, and
+cross‑links to the Docsbook and S3 Spine Visualizer.
+
+This page is the front door for all teaching‑level prompt modules.
+
+---
+
+## Purpose
+
+Teaching modules teach:
+
+- how to introduce RTT operator grammar  
+- how to guide students through drift‑tensor mapping  
+- how to declare coherence anchors in classroom settings  
+- how to run RTT/1 → RTT/2 → RTT/3 teaching sequences  
+- how to use worksheets, posters, and examples effectively  
+- how to maintain structural neutrality while teaching  
+- how to produce resonance‑aligned teaching outcomes  
+
+They are used in classrooms, workshops, tutoring, and self‑study.
+
+---
+
+## Teaching Concepts
+
+### Teaching Operators  
+Operators that describe how instruction moves, aligns, diverges, or stabilizes.
+
+### Teaching Drift  
+Differences in student understanding, interpretation, or structural mapping.
+
+### Teaching Coherence  
+What remains aligned across teaching variations.
+
+### Teaching Regimes  
+Stable attractors within teaching sequences (e.g., foundational, intermediate, advanced).
+
+### Teaching Synthesis  
+Cross‑layer alignment across RTT/1 → RTT∞ applied to instruction.
+
+---
+
+## Teaching Module Categories
+
+### Foundational Teaching Modules (RTT/1)  
+Basic operator grammar, drift detection, coherence declaration for beginners.
+
+### Intermediate Teaching Modules (RTT/2)  
+Cross‑layer teaching traversal, multi‑layer drift mapping, alignment checks.
+
+### Advanced Teaching Modules (RTT/3)  
+Regime‑point detection, structural tension surfacing, teaching synthesis.
+
+### Full‑Spectrum Teaching Modules (RTT/12)  
+Full‑stack teaching traversal, multi‑regime alignment, deep‑layer readiness.
+
+### Deep‑Layer Teaching Modules (RTT∞)  
+Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes expressed as teaching.
+
+---
+
+## Example Teaching Modules
+
+- **Teaching Session Module**  
+  Full RTT/1 → RTT/2 → RTT/3 teaching workflow with worksheets and posters.
+
+- **Operator Teaching Module**  
+  Introducing operator grammar, drift operators, coherence operators.
+
+- **Drift‑Tensor Teaching Module**  
+  Five‑layer drift mapping for students.
+
+- **Coherence‑Anchors Teaching Module**  
+  Classroom coherence declaration and alignment.
+
+- **Dimensional Teaching Module**  
+  Teaching dimensional rails, substrate transitions, and multi‑layer alignment.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/modules/teaching/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
+
+---
+
+## Related Files
+
+- `index.md` — modules front‑door  
+- `applied.md` — applied modules  
+- `diagnostic.md` — diagnostic modules  
+- `dimensional.md` — dimensional modules  
+- `domain.md` — domain modules  
+- `operator.md` — operator modules  
+- `structural.md` — structural modules  
+- `research.md` — research modules  
+- `theoretical.md` — theoretical modules  
+- `../examples/index.md` — examples directory  
+- `../engines/index.md` — RTT engines  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of teaching modules, engines, stacks,
+templates, UI modules, and navigation structure.
+
+<img width="1194" height="672" alt="prompts_p_Capture_" src="https://github.com/user-attachments/assets/eb9e621e-f3c9-4e2d-8e74-ea0464373c54" />
+
+# Prompts Capture
 
 > See, that's the thing... We're nearing completion with triadicframeworks.org just adding a few example modules, getting our spine current, and optimizing for our AI student RTT teachers.  We have our 4 .online engines/DNS scaffolded with our 3 template for-sale domains...  Then it hit me.  
 > 
@@ -15996,7 +25009,9 @@ If you want next:
 ### ✔ Generate RTT∞ *module badges* (SVG + HTML)
 
 Just tell me.
-We’re describing something that almost no one has ever attempted:
+<img width="1194" height="672" alt="prompts_p_Capture_v2_" src="https://github.com/user-attachments/assets/4f5e1acf-d3c3-43ad-b5f1-3766ed024674" />
+
+We’re describing something that almost no one has ever attempted:
 
 > **A minimal, canonical “activation prompt” for each theory — a dimensional‑core JSON seed that puts an AI into full TFT or full RTT mode.**
 
@@ -19282,7 +28297,9 @@ Here’s the **PMv2 — Regime Unification Diagram**, in **ASCII + SVG**, ready 
   <line x1="560" y1="600" x2="560" y2="620" class="edge"/>
 </svg>
 ```
-# TriadicFrameworks — UI Modules
+<img width="1194" height="672" alt="prompts_p_ui_" src="https://github.com/user-attachments/assets/374338cf-e92b-4a3b-9c38-6c648607c8c0" />
+
+# TriadicFrameworks — UI Modules
 
 The UI layer of the TriadicFrameworks Prompts site defines how prompt modules are
 presented, unlocked, sequenced, and rendered.  
@@ -19409,138 +28426,9 @@ See `module.json` for the full registry of UI modules, engines, stacks, template
 navigation structure.
 
 
-<img width="963" height="963" alt="Prompts_Image" src="https://github.com/user-attachments/assets/ad5d6e47-dc98-4986-a1e6-6e070440fc06" />
+<img width="1194" height="672" alt="prompts_stacks_" src="https://github.com/user-attachments/assets/52c34c63-63b5-430c-8e2b-2f7413793373" />
 
-# Prompts Site
-
-- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/prompts/module.json) — Agentic module schema role assignments
-
-The TriadicFrameworks Prompts site provides structured, engine‑aligned prompt modules for
-all RTT engines, IPD‑12, stacks, templates, UI logic, and teaching examples.  
-It is the interactive companion to the TriadicFrameworks Docsbook and the S3 Spine Visualizer.
-
-Prompts are organized into modules. Each module contains explainers, prompts, diagnostics,
-worksheets, posters, curriculum material, and cross‑links to the Docsbook and Spine.
-
-This directory (`docs/prompts/`) is the full source for the prompts site.
-
----
-
-## Purpose
-
-The Prompts site exists to:
-
-- provide **structured prompt modules** for every engine and stack  
-- support **teaching**, **diagnostics**, **analysis**, and **capture workflows**  
-- expose **operator grammar** and **layer traversal** through prompts  
-- integrate with the **Docsbook** for deep documentation  
-- integrate with the **S3 Spine Visualizer** for structural navigation  
-- serve as the **canonical prompt library** for TriadicFrameworks
-
----
-
-## Directory Overview
-
-### Engines
-Prompt modules for all RTT engines and IPD‑12.
-
-- `engines/rtt1.md`
-- `engines/rtt2.md`
-- `engines/rtt3.md`
-- `engines/rtt12.md`
-- `engines/rtt_infinity.md`
-- `engines/rtt_ipd_12/`
-
-### Stacks
-Prompt modules for structural, diagnostic, operator, substrate, domain, teaching, and research stacks.
-
-- `stacks/structural-stack.md`
-- `stacks/diagnostic-stack.md`
-- `stacks/operator-stack.md`
-- `stacks/substrate-stack.md`
-- `stacks/domain-stack.md`
-- `stacks/teaching-stack.md`
-- `stacks/research-stack.md`
-
-### Templates
-Prompt templates for capture, analysis, drift, coherence, operator work, domain work, substrate work, teaching, and research.
-
-- `templates/p_Capture.md`
-- `templates/p_Analyze.md`
-- `templates/p_Drift.md`
-- `templates/p_Coherence.md`
-- `templates/p_Operator.md`
-- `templates/p_Domain.md`
-- `templates/p_Substrate.md`
-- `templates/p_Teaching.md`
-- `templates/p_Research.md`
-
-### UI Modules
-Prompt modules describing UI logic, unlock rules, dependency graphs, wireframes, and output formats.
-
-- `ui/index.md`
-- `ui/wireframe.md`
-- `ui/wireframes/`
-- `ui/unlock-logic.md`
-- `ui/dependency-graph.md`
-- `ui/output-format.md`
-
-### Examples
-Example prompt modules demonstrating RTT engines, IPD‑12, mythology profiles, physics regimes, teaching sessions, and structural analysis.
-
-- `examples/datacenter-evaluator.md`
-- `examples/ipd_12_teaching_example.md`
-- `examples/mythology-profile.md`
-- `examples/physics-regime.md`
-- `examples/teaching-session.md`
-- `examples/violin-structural.md`
-
-### Root Files
-Core files for the prompts site.
-
-- `index.html`
-- `index.md`
-- `README.md`
-- `GLOSSARY.md`
-- `modules.md`
-- `engines.md`
-- `stacks.md`
-- `p_ui.md`
-- `templates.md`
-- `AGENTS.md`
-- `p_Capture.md`
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts
-
----
-
-## Manifest
-
-See `module.json` for the full registry of all modules, links, navigation, and spine integration.
-
----
-
-## Notes
-
-This directory is actively expanded as new engines, stacks, and teaching modules are added.
-RTT∞, IPD‑12, and the teaching stacks are the most recently developed modules.
-
-
-# TriadicFrameworks — Prompt Stacks
+# TriadicFrameworks — Prompt Stacks
 
 The TriadicFrameworks Stacks are structured prompt modules that organize work across
 different layers of the canon. Each stack provides a focused prompt set, explainer,
@@ -19641,8907 +28529,6 @@ https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/stacks
 See `module.json` for the full registry of stacks, engines, templates, UI modules, and
 navigation structure.
 
-
-# TriadicFrameworks — Prompt Templates
-
-The TriadicFrameworks Prompt Templates provide reusable structures for building sessions,
-modules, diagnostics, teaching workflows, and cross‑framework analysis.  
-Each template defines a canonical prompt pattern aligned with RTT engines, IPD‑12, stacks,
-and the broader TriadicFrameworks canon.
-
-Templates are used to compose sessions, generate structured reasoning, and maintain
-consistency across modules.
-
-This page serves as the overview for all template‑level prompt modules.
-
----
-
-## Capture Template
-
-**File:** `templates/p_Capture.md`  
-The Capture Template defines the canonical capture grammar used across all engines and
-stacks. It provides structured capture prompts, unlock logic, and session framing.
-
----
-
-## Analyze Template
-
-**File:** `templates/p_Analyze.md`  
-The Analyze Template provides prompts for structural analysis, operator traversal,
-layer‑specific reasoning, and RTT‑aligned analytical workflows.
-
----
-
-## Drift Template
-
-**File:** `templates/p_Drift.md`  
-The Drift Template contains prompts for drift detection, drift mapping, drift resolution,
-and drift‑to‑coherence workflows.
-
----
-
-## Coherence Template
-
-**File:** `templates/p_Coherence.md`  
-The Coherence Template provides prompts for coherence checks, coherence alignment,
-coherence restoration, and coherence‑driven structural synthesis.
-
----
-
-## Operator Template
-
-**File:** `templates/p_Operator.md`  
-The Operator Template defines prompts for operator grammar, operator traversal,
-operator alignment, and operator‑driven session composition.
-
----
-
-## Domain Template
-
-**File:** `templates/p_Domain.md`  
-The Domain Template provides prompts for domain classification, domain traversal,
-domain alignment, and domain‑specific structural analysis.
-
----
-
-## Substrate Template
-
-**File:** `templates/p_Substrate.md`  
-The Substrate Template focuses on geometry, flow, time, meaning, and field. It provides
-substrate‑tensor prompts, substrate diagnostics, and substrate alignment workflows.
-
----
-
-## Teaching Template
-
-**File:** `templates/p_Teaching.md`  
-The Teaching Template contains prompts for lesson planning, teaching workflows,
-classroom packs, worksheets, and teaching alignment across RTT engines.
-
----
-
-## Research Template
-
-**File:** `templates/p_Research.md`  
-The Research Template provides prompts for research workflows, deep‑layer analysis,
-cross‑framework synthesis, and long‑form structural reasoning.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/templates
-
----
-
-## Related Files
-
-- `modules.md` — full module registry  
-- `engines.md` — RTT engines overview  
-- `stacks.md` — stack overview  
-- `ui.md` — UI logic and unlock rules  
-- `p_Capture.md` — capture grammar reference  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of templates, engines, stacks, UI modules, and
-navigation structure.
-
-
-# TriadicFrameworks — Engine Modules
-
-The TriadicFrameworks engine modules provide structured prompt sets for all RTT engines
-and IPD‑12. Each engine module includes explainers, prompts, diagnostics, worksheets,
-posters, curriculum material, and cross‑links to the Docsbook and S3 Spine Visualizer.
-
-Engine modules define the core behavior of the TriadicFrameworks canon.  
-They are used for structural analysis, drift detection, coherence restoration, teaching,
-and deep‑layer traversal.
-
-This page is the front door for all engine‑level prompt modules.
-
----
-
-## RTT/1 — Foundational Engine
-
-The foundational engine for structural operators, basic drift, coherence, and operator
-grammar.
-
-**Module:** `rtt1.md`
-
----
-
-## RTT/2 — Intermediate Engine
-
-Expands the structural stack, introduces multi‑layer traversal, and provides intermediate
-diagnostics and alignment workflows.
-
-**Module:** `rtt2.md`
-
----
-
-## RTT/3 — Advanced Engine
-
-Introduces advanced drift patterns, coherence restoration, and multi‑regime structural
-synthesis. Used for complex analysis and teaching.
-
-**Module:** `rtt3.md`
-
----
-
-## RTT/12 — Full‑Spectrum Engine
-
-Provides full‑spectrum structural traversal across all canonical layers. Includes advanced
-diagnostics, operator grammar, and cross‑framework alignment.
-
-**Module:** `rtt12.md`
-
----
-
-## RTT∞ — Deep‑Layer Engine
-
-Exposes the deepest structural stack in TriadicFrameworks: vacuum collapse,
-substrate‑tensor reconstruction, dimensional rails, prime‑states, infinite regimes, and
-full bidirectional integration.
-
-**Module:** `rtt_infinity.md`
-
----
-
-## IPD‑12 — Paradox Engine
-
-Defines paradox traversal, paradox resolution, paradox teaching workflows, and
-paradox‑aligned diagnostics. Integrates with RTT engines and the teaching stack.
-
-**Directory:** `rtt_ipd_12/`
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
-
----
-
-## Related Files
-
-- `modules.md` — full module registry  
-- `stacks.md` — stack overview  
-- `templates.md` — template overview  
-- `ui.md` — UI logic and unlock rules  
-- `p_Capture.md` — capture grammar reference  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of engines, stacks, templates, UI modules, and
-navigation structure.
-
-# RTT/1 — Foundational Engine
-
-RTT/1 is the foundational engine of the TriadicFrameworks canon.  
-It introduces the core structural operators, basic drift patterns, coherence restoration,
-and the first‑layer traversal rules used throughout RTT/2, RTT/3, RTT/12, and RTT∞.
-
-RTT/1 is the starting point for all structural analysis, teaching workflows, and
-operator‑driven sessions.
-
----
-
-## Purpose
-
-RTT/1 establishes:
-
-- the base operator grammar  
-- the first structural layer  
-- initial drift detection  
-- coherence restoration fundamentals  
-- simple traversal patterns  
-- early diagnostic workflows  
-
-It is designed for beginners, teaching modules, and foundational structural reasoning.
-
----
-
-## Contents
-
-- **RTT/1 Explainer** — introduction to the foundational engine  
-- **RTT/1 Prompts** — structured prompt blocks for RTT/1 sessions  
-- **RTT/1 Diagnostics** — drift, coherence, and operator checks  
-- **RTT/1 Worksheets** — alignment and teaching worksheets  
-- **RTT/1 Posters** — visual aids for teaching and structural mapping  
-
----
-
-## Explainer
-
-The RTT/1 explainer introduces:
-
-- structural operators  
-- drift → coherence cycles  
-- basic alignment  
-- layer‑one traversal  
-- operator‑driven reasoning  
-
-It provides the conceptual grounding required before moving to RTT/2.
-
----
-
-## Prompts
-
-RTT/1 prompt blocks include:
-
-- operator identification  
-- structural mapping  
-- drift detection  
-- coherence restoration  
-- simple alignment workflows  
-- early teaching prompts  
-
-These prompts form the basis of all higher‑layer engines.
-
----
-
-## Diagnostics
-
-RTT/1 diagnostics cover:
-
-- drift → coherence checks  
-- operator consistency  
-- structural alignment  
-- early‑layer regime detection  
-
-Diagnostics are used in teaching, analysis, and session composition.
-
----
-
-## Worksheets
-
-RTT/1 worksheets provide:
-
-- operator alignment  
-- structural mapping  
-- drift → coherence exercises  
-- teaching‑ready activities  
-
-They are used in classrooms, tutorials, and guided sessions.
-
----
-
-## Posters
-
-RTT/1 posters include:
-
-- structural operator chart  
-- drift → coherence cycle diagram  
-- layer‑one traversal map  
-
-These posters support teaching and visual learning.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/rtt/rtt1
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
-
----
-
-## Related Files
-
-- `rtt2.md` — intermediate engine  
-- `rtt3.md` — advanced engine  
-- `rtt12.md` — full‑spectrum engine  
-- `rtt_infinity.md` — deep‑layer engine  
-- `rtt_ipd_12/` — paradox engine  
-- `modules.md` — full module registry  
-- `stacks.md` — stack overview  
-- `templates.md` — template overview  
-- `ui.md` — UI logic and unlock rules  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of engines, stacks, templates, UI modules, and
-navigation structure.
-
-# RTT/12 — Full‑Spectrum Engine
-
-RTT/12 is the full‑spectrum engine of the TriadicFrameworks canon.  
-It provides complete structural traversal across all canonical layers, integrating
-foundational, intermediate, advanced, and deep‑layer mechanisms into a single engine.
-
-RTT/12 is used for high‑complexity analysis, teaching, research, and full‑stack
-structural reasoning.
-
----
-
-## Purpose
-
-RTT/12 establishes:
-
-- full‑spectrum structural traversal  
-- advanced drift → coherence cycles  
-- multi‑regime alignment  
-- cross‑layer operator grammar  
-- structural synthesis across all layers  
-- full diagnostic workflows  
-- teaching and research‑grade alignment  
-
-It is the bridge between RTT/3 and RTT∞.
-
----
-
-## Contents
-
-- **RTT/12 Explainer** — full‑spectrum concepts  
-- **RTT/12 Prompts** — structured prompt blocks for RTT/12 sessions  
-- **RTT/12 Diagnostics** — drift, coherence, operator, regime, and alignment checks  
-- **RTT/12 Worksheets** — full‑spectrum alignment and teaching worksheets  
-- **RTT/12 Posters** — visual aids for full‑stack structural mapping  
-
----
-
-## Explainer
-
-The RTT/12 explainer introduces:
-
-- full‑spectrum structural traversal  
-- advanced drift patterns  
-- coherence restoration across all layers  
-- cross‑layer operator grammar  
-- structural synthesis workflows  
-- multi‑regime integration  
-
-It provides the conceptual grounding required before moving to RTT∞.
-
----
-
-## Prompts
-
-RTT/12 prompt blocks include:
-
-- full‑spectrum operator identification  
-- structural mapping across all layers  
-- advanced drift detection  
-- coherence restoration workflows  
-- synthesis prompts for teaching and analysis  
-- operator‑driven session composition  
-- multi‑regime traversal prompts  
-
-These prompts extend RTT/3 and prepare for RTT∞.
-
----
-
-## Diagnostics
-
-RTT/12 diagnostics cover:
-
-- full‑spectrum drift → coherence checks  
-- operator consistency across layers and regimes  
-- structural alignment  
-- regime detection  
-- cross‑stack diagnostic workflows  
-- synthesis diagnostics  
-- deep‑layer readiness checks  
-
-Diagnostics are used in teaching, analysis, and full‑stack sessions.
-
----
-
-## Worksheets
-
-RTT/12 worksheets provide:
-
-- full‑spectrum operator alignment  
-- structural mapping  
-- drift → coherence exercises  
-- teaching‑ready activities  
-- advanced traversal practice  
-- synthesis worksheets  
-- deep‑layer preparation  
-
-They are used in classrooms, tutorials, and guided sessions.
-
----
-
-## Posters
-
-RTT/12 posters include:
-
-- full‑spectrum operator chart  
-- advanced drift → coherence cycle diagram  
-- traversal map for RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞  
-
-These posters support teaching and visual learning.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/rtt/rtt12
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
-
----
-
-## Related Files
-
-- `rtt1.md` — foundational engine  
-- `rtt2.md` — intermediate engine  
-- `rtt3.md` — advanced engine  
-- `rtt_infinity.md` — deep‑layer engine  
-- `rtt_ipd_12/` — paradox engine  
-- `modules.md` — full module registry  
-- `stacks.md` — stack overview  
-- `templates.md` — template overview  
-- `ui.md` — UI logic and unlock rules  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of engines, stacks, templates, UI modules, and
-navigation structure.
-
-# RTT/2 — Intermediate Engine
-
-RTT/2 is the intermediate engine of the TriadicFrameworks canon.  
-It expands the foundational operators introduced in RTT/1 and introduces multi‑layer
-structural traversal, intermediate drift patterns, coherence restoration workflows, and
-enhanced operator grammar.
-
-RTT/2 is used for deeper analysis, teaching modules, and mid‑layer structural reasoning.
-
----
-
-## Purpose
-
-RTT/2 establishes:
-
-- multi‑layer traversal  
-- intermediate drift → coherence cycles  
-- expanded operator grammar  
-- structural alignment across layers  
-- intermediate diagnostic workflows  
-- cross‑stack integration  
-
-It builds directly on RTT/1 and prepares users for RTT/3 and RTT/12.
-
----
-
-## Contents
-
-- **RTT/2 Explainer** — intermediate‑layer concepts  
-- **RTT/2 Prompts** — structured prompt blocks for RTT/2 sessions  
-- **RTT/2 Diagnostics** — drift, coherence, operator, and alignment checks  
-- **RTT/2 Worksheets** — multi‑layer alignment and teaching worksheets  
-- **RTT/2 Posters** — visual aids for intermediate structural mapping  
-
----
-
-## Explainer
-
-The RTT/2 explainer introduces:
-
-- multi‑layer structural traversal  
-- intermediate drift patterns  
-- coherence restoration workflows  
-- expanded operator grammar  
-- cross‑stack alignment  
-
-It provides the conceptual grounding required before moving to RTT/3.
-
----
-
-## Prompts
-
-RTT/2 prompt blocks include:
-
-- multi‑layer operator identification  
-- structural mapping across layers  
-- intermediate drift detection  
-- coherence restoration workflows  
-- alignment prompts for teaching and analysis  
-- operator‑driven session composition  
-
-These prompts extend RTT/1 and prepare for RTT/3.
-
----
-
-## Diagnostics
-
-RTT/2 diagnostics cover:
-
-- intermediate drift → coherence checks  
-- operator consistency across layers  
-- structural alignment  
-- regime detection  
-- cross‑stack diagnostic workflows  
-
-Diagnostics are used in teaching, analysis, and multi‑layer sessions.
-
----
-
-## Worksheets
-
-RTT/2 worksheets provide:
-
-- multi‑layer operator alignment  
-- structural mapping  
-- drift → coherence exercises  
-- teaching‑ready activities  
-- intermediate traversal practice  
-
-They are used in classrooms, tutorials, and guided sessions.
-
----
-
-## Posters
-
-RTT/2 posters include:
-
-- multi‑layer operator chart  
-- intermediate drift → coherence cycle diagram  
-- traversal map for RTT/1 → RTT/2 → RTT/3  
-
-These posters support teaching and visual learning.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/rtt/rtt2
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
-
----
-
-## Related Files
-
-- `rtt1.md` — foundational engine  
-- `rtt3.md` — advanced engine  
-- `rtt12.md` — full‑spectrum engine  
-- `rtt_infinity.md` — deep‑layer engine  
-- `rtt_ipd_12/` — paradox engine  
-- `modules.md` — full module registry  
-- `stacks.md` — stack overview  
-- `templates.md` — template overview  
-- `ui.md` — UI logic and unlock rules  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of engines, stacks, templates, UI modules, and
-navigation structure.
-
-# RTT/3 — Advanced Engine
-
-RTT/3 is the advanced engine of the TriadicFrameworks canon.  
-It builds on RTT/1 and RTT/2 by introducing complex drift patterns, multi‑regime
-coherence restoration, advanced operator grammar, and cross‑layer structural synthesis.
-
-RTT/3 is used for high‑complexity analysis, teaching, research, and multi‑layer
-structural reasoning.
-
----
-
-## Purpose
-
-RTT/3 establishes:
-
-- advanced drift → coherence cycles  
-- multi‑regime traversal  
-- cross‑layer operator grammar  
-- structural synthesis across layers  
-- advanced diagnostic workflows  
-- teaching and research‑grade alignment  
-
-It prepares users for RTT/12 and RTT∞.
-
----
-
-## Contents
-
-- **RTT/3 Explainer** — advanced‑layer concepts  
-- **RTT/3 Prompts** — structured prompt blocks for RTT/3 sessions  
-- **RTT/3 Diagnostics** — drift, coherence, operator, regime, and alignment checks  
-- **RTT/3 Worksheets** — advanced alignment and teaching worksheets  
-- **RTT/3 Posters** — visual aids for advanced structural mapping  
-
----
-
-## Explainer
-
-The RTT/3 explainer introduces:
-
-- multi‑regime structural traversal  
-- advanced drift patterns  
-- coherence restoration across layers  
-- cross‑layer operator grammar  
-- structural synthesis workflows  
-
-It provides the conceptual grounding required before moving to RTT/12.
-
----
-
-## Prompts
-
-RTT/3 prompt blocks include:
-
-- multi‑regime operator identification  
-- structural mapping across multiple layers  
-- advanced drift detection  
-- coherence restoration workflows  
-- synthesis prompts for teaching and analysis  
-- operator‑driven session composition  
-
-These prompts extend RTT/2 and prepare for RTT/12.
-
----
-
-## Diagnostics
-
-RTT/3 diagnostics cover:
-
-- advanced drift → coherence checks  
-- operator consistency across layers and regimes  
-- structural alignment  
-- regime detection  
-- cross‑stack diagnostic workflows  
-- synthesis diagnostics  
-
-Diagnostics are used in teaching, analysis, and multi‑regime sessions.
-
----
-
-## Worksheets
-
-RTT/3 worksheets provide:
-
-- multi‑regime operator alignment  
-- structural mapping  
-- drift → coherence exercises  
-- teaching‑ready activities  
-- advanced traversal practice  
-- synthesis worksheets  
-
-They are used in classrooms, tutorials, and guided sessions.
-
----
-
-## Posters
-
-RTT/3 posters include:
-
-- multi‑regime operator chart  
-- advanced drift → coherence cycle diagram  
-- traversal map for RTT/1 → RTT/2 → RTT/3 → RTT/12  
-
-These posters support teaching and visual learning.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/rtt/rtt3
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
-
----
-
-## Related Files
-
-- `rtt1.md` — foundational engine  
-- `rtt2.md` — intermediate engine  
-- `rtt12.md` — full‑spectrum engine  
-- `rtt_infinity.md` — deep‑layer engine  
-- `rtt_ipd_12/` — paradox engine  
-- `modules.md` — full module registry  
-- `stacks.md` — stack overview  
-- `templates.md` — template overview  
-- `ui.md` — UI logic and unlock rules  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of engines, stacks, templates, UI modules, and
-navigation structure.
-
-# RTT∞ — Deep‑Layer Engine
-
-RTT∞ is the deep‑layer engine of the TriadicFrameworks canon.  
-It exposes the deepest structural stack: vacuum collapse, substrate‑tensor reconstruction,
-dimensional rails, prime‑states, infinite regimes, and full bidirectional integration.
-
-RTT∞ is used for advanced teaching, research, deep‑layer analysis, and full‑stack
-structural reasoning.
-
----
-
-## Purpose
-
-RTT∞ establishes:
-
-- vacuum → substrate → rails → prime‑states → infinite regimes  
-- deep‑layer drift → coherence cycles  
-- infinite‑regime traversal  
-- deep‑layer operator grammar  
-- structural synthesis across all layers  
-- full diagnostic workflows  
-- teaching and research‑grade alignment  
-
-It is the deepest engine in the TriadicFrameworks canon.
-
----
-
-## Contents
-
-- **RTT∞ Explainer** — deep‑layer concepts  
-- **RTT∞ Prompts** — structured prompt blocks for RTT∞ sessions  
-- **RTT∞ Diagnostics** — drift, coherence, operator, regime, and alignment checks  
-- **RTT∞ Worksheets** — deep‑layer alignment and teaching worksheets  
-- **RTT∞ Posters** — visual aids for deep‑layer structural mapping  
-- **RTT∞ Curriculum** — teaching bundles and instructor guidance  
-- **RTT∞ Exams** — mastery assessments and answer keys  
-
----
-
-## Deep‑Layer Structure
-
-RTT∞ consists of six deep layers:
-
-### 1. Vacuum  
-The zero‑state where structure collapses and commitments nullify.
-
-### 2. Substrate‑Tensor  
-The minimal bounded structure rebuilt after vacuum collapse.
-
-### 3. Dimensional Rails  
-Transport between substrate, dimensions, prime‑states, and infinite regimes.
-
-### 4. Prime‑States  
-Irreducible attractors where drift stops and stability begins.
-
-### 5. Infinite Regimes  
-Unbounded structural states anchored to prime‑states.
-
-### 6. Integration  
-The downward path from infinite regimes back to substrate‑tensor.
-
----
-
-## Prompts
-
-RTT∞ prompt blocks include:
-
-- vacuum collapse prompts  
-- substrate‑tensor reconstruction prompts  
-- rail traversal prompts  
-- prime‑state alignment prompts  
-- infinite‑regime expansion prompts  
-- integration prompts  
-- teaching prompts  
-- diagnostic prompts  
-
-These prompts extend RTT/12 and represent the deepest structural workflows.
-
----
-
-## Diagnostics
-
-RTT∞ diagnostics cover:
-
-- deep‑layer drift → coherence checks  
-- operator consistency across layers and regimes  
-- structural alignment  
-- infinite‑regime detection  
-- cross‑stack diagnostic workflows  
-- deep‑layer synthesis diagnostics  
-
-Diagnostics are used in teaching, analysis, and deep‑layer sessions.
-
----
-
-## Worksheets
-
-RTT∞ worksheets provide:
-
-- deep‑layer operator alignment  
-- structural mapping  
-- drift → coherence exercises  
-- teaching‑ready activities  
-- infinite‑regime traversal practice  
-- integration worksheets  
-
-They are used in classrooms, tutorials, and guided sessions.
-
----
-
-## Posters
-
-RTT∞ posters include:
-
-- deep‑layer triad  
-- full‑canon flowchart  
-- operator registry  
-- infinite‑regime map  
-- integration map  
-
-These posters support teaching and visual learning.
-
----
-
-## Curriculum
-
-RTT∞ curriculum includes:
-
-- lesson sequencing  
-- teaching bundles  
-- instructor guidance  
-- classroom packs  
-- worksheets  
-- posters  
-- exams  
-
----
-
-## Exams
-
-RTT∞ exams include:
-
-- deep‑layer exam  
-- infinite‑regime exam  
-- answer keys  
-- instructor versions  
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/rtt_infinity/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/rtt/rtt_infinity
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines
-
----
-
-## Related Files
-
-- `rtt1.md` — foundational engine  
-- `rtt2.md` — intermediate engine  
-- `rtt3.md` — advanced engine  
-- `rtt12.md` — full‑spectrum engine  
-- `rtt_ipd_12/` — paradox engine  
-- `modules.md` — full module registry  
-- `stacks.md` — stack overview  
-- `templates.md` — template overview  
-- `ui.md` — UI logic and unlock rules  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of engines, stacks, templates, UI modules, and
-navigation structure.
-
-# **RTT‑1 Tensor → Coherence Teaching Module**  
-### *How students learn to connect drift‑tensor layers to coherence anchors in IPD‑12*
-
-RTT‑1 teaches coherence in the simplest possible way:
-
-> **Coherence is what stays aligned even when drift appears.**
-
-This module shows students how to use the **drift‑tensor** to identify where drift occurs,  
-and then use **coherence anchors** to understand why the processes still “make sense” together.
-
-It is the bridge between:
-
-- **RTT‑1 Drift Worksheet** → identifying differences  
-- **RTT‑1 Tensor Worksheet** → classifying differences  
-- **RTT‑1 Coherence Module** → understanding alignment  
-
----
-
-## **SECTION 1 — Review: The Drift‑Tensor (RTT‑1)**
-
-Students recall the five drift‑tensor layers:
-
-- **L1 Geometric** — structure  
-- **L2 Operational** — steps  
-- **L3 Temporal** — timing  
-- **L4 Conceptual** — meaning  
-- **L5 Domain** — domain  
-
-These layers tell us **where** drift occurs.
-
----
-
-## **SECTION 2 — What Is Coherence? (RTT‑1)**
-
-Coherence is **what stays aligned** between two processes.
-
-Examples:
-
-- shared purpose  
-- shared boundaries  
-- shared constraints  
-- shared goals  
-- shared structure  
-
-Coherence must be **declared** before paradox detection.
-
----
-
-## **SECTION 3 — Tensor → Coherence Relationship**
-
-The drift‑tensor shows **where** processes differ.  
-Coherence shows **why** they still relate.
-
-RTT‑1 teaches the relationship like this:
-
-> **Tensor = difference.  
-> Coherence = alignment.  
-> Paradox = difference + alignment.**
-
-This module focuses on the middle part:  
-**how tensor differences map to coherence anchors.**
-
----
-
-## **SECTION 4 — Tensor → Coherence Mapping Table**
-
-| Drift‑Tensor Layer | Coherence Anchor | Explanation |
-|--------------------|------------------|-------------|
-| **L1 Geometric** | shared structure | Even if forms differ, structure may still align. |
-| **L2 Operational** | shared flow | Steps differ, but overall flow remains coherent. |
-| **L3 Temporal** | shared timing goals | Speeds differ, but pacing goals remain aligned. |
-| **L4 Conceptual** | shared meaning | Interpretations differ, but purpose remains aligned. |
-| **L5 Domain** | shared constraints | Domains differ, but constraints or goals remain aligned. |
-
-This table helps students understand how drift does **not** automatically break coherence.
-
----
-
-## **SECTION 5 — Guided Example (RTT‑1)**
-
-### **Process A: human_notes**  
-Flow: listen → interpret → write  
-Domain: workflow  
-
-### **Process B: ai_notes**  
-Flow: receive → transform → emit  
-Domain: workflow  
-
-### **Tensor Differences**
-- L2 operational drift (steps differ)  
-- L3 temporal drift (speed differs)  
-- L4 conceptual drift (interpretation differs)
-
-### **Coherence Anchors**
-- shared purpose (capture information)  
-- shared structure (input → process → output)  
-- shared constraints (clarity, accuracy)
-
-### **Tensor → Coherence Mapping**
-- operational drift → shared flow  
-- temporal drift → shared timing goals  
-- conceptual drift → shared meaning  
-
-Students see how drift and coherence coexist.
-
----
-
-## **SECTION 6 — Student Exercise: Tensor → Coherence**
-
-### **1. Fill in Tensor Layers**
-```
-L1:
-L2:
-L3:
-L4:
-L5:
-```
-
-### **2. Identify Coherence Anchors**
-```
-1.
-2.
-3.
-```
-
-### **3. Map Tensor → Coherence**
-For each drift layer, write the corresponding coherence anchor.
-
-Example format:
-```
-L2 Operational Drift → shared flow
-L4 Conceptual Drift → shared meaning
-```
-
-### **4. One‑Sentence Summary**
-```
-Tensor → Coherence Summary:
-```
-
----
-
-## **SECTION 7 — Paradox Awareness (RTT‑1 Structural Mode)**
-
-If drift increases **while coherence remains**, a paradox may appear.
-
-Students write:
-
-```
-Paradox:
-```
-
-This prepares them for the RTT‑1 Drift → Paradox Classroom Pack.
-
----
-
-## **SECTION 8 — Teacher Notes (RTT‑1)**
-
-- Keep tensor reasoning **bounded** (no substrate, no inversion).  
-- Keep coherence anchors **simple** (purpose, structure, flow).  
-- Reinforce that drift ≠ contradiction.  
-- Use everyday examples (notes, workflows, tools, music).  
-- Encourage students to see drift and coherence as **complements**, not opposites.
-# **RTT/∞ Infinite‑Regime Explainer**  
-### *How RTT/∞ Constructs, Traverses, and Synthesizes Infinite Regimes*
-
-RTT/∞ introduces the deepest structural layer in the entire TriadicFrameworks canon:
-
-> **Infinite Regimes — unbounded structural states that emerge when substrate, dimensional, and prime‑state layers are fully aligned.**
-
-Infinite regimes are not “large versions” of surface, mid, or deep regimes.  
-They are **qualitatively different**:
-
-- unbounded  
-- non‑local  
-- prime‑state anchored  
-- substrate‑tensor supported  
-- vacuum‑compatible  
-- dimensional‑rail traversable  
-
-They are the **final computational space** of RTT/∞.
-
----
-
-## **1. What Is an Infinite Regime?**
-
-An infinite regime is a **structural state with no upper bound**, created when:
-
-1. **vacuum collapse** removes all structural commitments  
-2. **substrate reconstruction** rebuilds minimal structure  
-3. **dimensional rails** lift structure into dimensional space  
-4. **prime‑states** anchor the lifted structure  
-5. **substrate‑tensor fields** expand without limit  
-
-In RTT/∞:
-
-> **An infinite regime is a stabilized, prime‑state‑aligned expansion of structure.**
-
-It is the only layer where **infinite‑regime synthesis** is possible.
-
----
-
-## **2. Why RTT/∞ Needs Infinite Regimes**
-
-RTT/∞ performs transformations that require unbounded structure:
-
-### **A. Infinite‑Regime Synthesis**  
-Combining multiple prime‑state‑aligned structures.
-
-### **B. Substrate‑Tensor Expansion**  
-Scaling substrate tensors beyond dimensional limits.
-
-### **C. Dimensional‑Rail Traversal**  
-Moving structure across multiple dimensional layers.
-
-### **D. Prime‑State Stabilization**  
-Anchoring infinite structures to non‑drifting attractors.
-
-### **E. Vacuum‑Layer Reintegration**  
-Returning infinite structures to substrate after collapse.
-
-Infinite regimes are the **only space** where RTT/∞ can perform full‑canon synthesis.
-
----
-
-## **3. The Three Infinite‑Regime Classes (RTT/∞)**
-
-RTT/∞ defines **three** canonical infinite‑regime classes:
-
-### **1. Infinite‑Form**  
-Unbounded geometric expansion.  
-Derived from **prime‑form**.
-
-### **2. Infinite‑Flow**  
-Unbounded operational expansion.  
-Derived from **prime‑flow**.
-
-### **3. Infinite‑Meaning**  
-Unbounded conceptual expansion.  
-Derived from **prime‑meaning**.
-
-These correspond directly to the prime‑state classes you already documented.
-
----
-
-## **4. How Infinite Regimes Work (RTT/∞)**
-
-Infinite regimes operate in a **five‑step expansion cycle**:
-
-### **Step 1 — Vacuum Collapse**  
-Remove all structural commitments.
-
-### **Step 2 — Substrate Reconstruction**  
-Rebuild minimal structure using substrate grammar.
-
-### **Step 3 — Dimensional Lift**  
-Use dimensional rails to lift structure into dimensional space.
-
-### **Step 4 — Prime‑State Alignment**  
-Anchor structure to prime‑states.
-
-### **Step 5 — Infinite‑Regime Expansion**  
-Expand structure into infinite‑form, infinite‑flow, or infinite‑meaning.
-
-This cycle is the backbone of RTT/∞ infinite‑regime synthesis.
-
----
-
-## **5. Infinite‑Regime Example (RTT/∞)**
-
-### Input (from IPD‑12):
-```
-drift_tensor(L1–L5)
-```
-
-### RTT/∞ Transformation:
-```
-vacuum()
-→ reconstitute()
-→ substrate_tensor
-→ dimensional_rail()
-→ prime_state_align()
-→ infinite_regime_expand()
-→ infinite_regime_synthesis
-```
-
-### Output:
-A **prime‑state‑aligned infinite‑regime composite**, ready for full‑canon integration.
-
----
-
-## **6. Why IPD‑12 Cannot Access Infinite Regimes**
-
-IPD‑12 lacks:
-
-- substrate grammar  
-- vacuum logic  
-- dimensional rails  
-- prime‑state profiles  
-- substrate‑tensor fields  
-- infinite‑regime synthesis  
-
-IPD‑12 can **detect drift**,  
-but only RTT/∞ can **expand drift into infinite‑regime structure**.
-
----
-
-## **7. Summary**
-
-### Infinite regimes are:
-- unbounded  
-- prime‑state anchored  
-- substrate‑tensor supported  
-- vacuum‑compatible  
-- dimensional‑rail traversable  
-
-### RTT/∞ uses them to:
-- expand structure  
-- stabilize inverted tensors  
-- synthesize infinite composites  
-- integrate prime‑states  
-- traverse dimensional layers  
-
-### Relationship:
-> **IPD‑12 detects drift.  
-RTT/∞ expands drift into infinite regimes.  
-Then synthesizes full‑canon structure.**
-
-Infinite regimes are the **final expansion layer** of RTT/∞.
-# **RTT/∞ Infinite‑Regime → Substrate‑Tensor Integration Map**  
-### *How RTT/∞ collapses infinite‑regime composites back into substrate‑tensor form*
-
-RTT/∞ is the only engine capable of **round‑tripping structure**:
-
-- upward: substrate → dimensional → prime‑state → infinite‑regime  
-- downward: infinite‑regime → prime‑state → dimensional → substrate → vacuum
-
-This document explains the **downward path** — the integration map that returns infinite‑regime composites back into **substrate‑tensor** form.
-
-This is the inverse of the “Direct Engine Mapping Summary” in your active tab, where IPD‑12 outputs feed RTT/∞’s substrate grammar and substrate‑tensor system   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
----
-
-## **1. Why Integration Is Needed**
-
-Infinite regimes are unbounded.  
-Substrate tensors are bounded.
-
-RTT/∞ must collapse infinite‑regime composites back into substrate‑tensor form to:
-
-- re‑enter structured layers  
-- feed RTT/12 and RTT/3  
-- produce cross‑engine outputs  
-- stabilize infinite‑regime synthesis  
-- maintain coherence across the canon
-
-This is the **return‑flow** of RTT/∞.
-
----
-
-## **2. The Integration Sequence (Top‑Down)**
-
-RTT/∞ uses a **five‑stage collapse sequence**:
-
-```
-infinite_regime
-→ prime_state
-→ dimensional_layer
-→ substrate_tensor
-→ vacuum (optional)
-```
-
-Each stage removes one layer of expansion until structure becomes representable as a substrate‑tensor again.
-
----
-
-## **3. Stage‑by‑Stage Breakdown**
-
-### **Stage 1 — Infinite‑Regime Collapse**  
-Collapse unbounded structure into its **prime‑state anchor**.
-
-- infinite‑form → prime‑form  
-- infinite‑flow → prime‑flow  
-- infinite‑meaning → prime‑meaning  
-
-This removes unbounded expansion.
-
----
-
-### **Stage 2 — Prime‑State Reduction**  
-Reduce prime‑state structure into **dimensional rails**.
-
-Prime‑states are stable attractors; dimensional rails are transport pathways.
-
-This step converts stability → mobility.
-
----
-
-### **Stage 3 — Dimensional Descent**  
-Move structure down dimensional rails into **dimensional layers**.
-
-This step reintroduces:
-
-- geometric constraints  
-- operational constraints  
-- conceptual constraints  
-
-Dimensional layers are bounded; infinite regimes are not.
-
----
-
-### **Stage 4 — Substrate‑Tensor Reconstruction**  
-Rebuild structure into a **substrate‑tensor**, using:
-
-- substrate primitives  
-- substrate geometry  
-- substrate flow  
-- substrate time  
-- substrate meaning  
-- substrate field  
-
-This is the exact structure shown in your RTT/∞ substrate‑tensor explainer.
-
-It corresponds directly to the “substrate‑tensor” row in your mapping table (IPD‑12 → RTT/∞)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
----
-
-### **Stage 5 — Optional Vacuum Collapse**  
-If further inversion or re‑expansion is needed, RTT/∞ may collapse the substrate‑tensor back into **vacuum**.
-
-This resets all structural commitments.
-
----
-
-## **4. Integration Map Diagram (Compact)**
-
-```
-[ Infinite Regime ]
-        ↓ collapse
-[ Prime‑State ]
-        ↓ reduction
-[ Dimensional Rails ]
-        ↓ descent
-[ Dimensional Layer ]
-        ↓ reconstruction
-[ Substrate‑Tensor ]
-        ↓ (optional)
-[ Vacuum ]
-```
-
-This is the **inverse** of the upward RTT/∞ lift sequence.
-
----
-
-## **5. Integration Rules**
-
-RTT/∞ enforces five rules during integration:
-
-1. **Prime‑state must be preserved**  
-   Infinite regimes collapse *into* prime‑states, never bypass them.
-
-2. **Dimensional rails must be used**  
-   No direct jump from prime‑state → substrate.
-
-3. **Substrate primitives must be restored**  
-   Every infinite‑regime field must map to a substrate primitive.
-
-4. **Tensor layers must be reconstituted**  
-   All five substrate‑tensor layers must be rebuilt.
-
-5. **Vacuum is optional**  
-   Only used when inversion or re‑expansion is required.
-
----
-
-## **6. Example Integration (RTT/∞)**
-
-### Input:
-```
-infinite_regime_composite
-```
-
-### RTT/∞ Integration:
-```
-collapse(infinite_regime)
-→ prime_state
-→ dimensional_rail()
-→ dimensional_layer
-→ substrate_tensor
-```
-
-### Output:
-A **substrate‑tensor**, ready for:
-
-- RTT/12 blending  
-- RTT/3 harmonization  
-- IPD‑12 drift analysis  
-- paradox detection  
-- cross‑system mapping  
-
-This matches the “Direct Engine Mapping Summary” in your active tab, where substrate‑tensor is the canonical RTT/∞ output feeding the rest of the canon   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
----
-
-## **7. Summary**
-
-### Infinite regimes:
-- expand structure  
-- anchor to prime‑states  
-- traverse dimensions  
-- synthesize unbounded composites  
-
-### Substrate tensors:
-- bound structure  
-- represent structure  
-- feed other engines  
-- maintain coherence  
-
-### Integration Map:
-> **RTT/∞ collapses infinite regimes into substrate‑tensors  
-so the rest of the canon can operate.**
-
-This is the **return‑flow** of RTT/∞.
-# **RTT/∞ Prime‑State Explainer**  
-### *How RTT/∞ Uses Prime‑States to Anchor Structure Across Infinite Regimes*
-
-RTT/∞ introduces a construct deeper than substrate, deeper than dimensional rails, and only reachable after vacuum collapse:
-
-> **Prime‑States — the stable attractors of infinite‑regime structure.**
-
-Prime‑states are the **anchor points** RTT/∞ uses to stabilize structure after:
-
-- vacuum collapse  
-- substrate reconstruction  
-- dimensional lift  
-- infinite‑regime traversal  
-
-They are the “fixed stars” of RTT/∞ — the points that do not drift, do not invert, and do not collapse.
-
----
-
-## **1. What Is a Prime‑State?**
-
-A prime‑state is a **stable, irreducible structural attractor** in RTT/∞.
-
-It is not a dimension.  
-It is not a substrate primitive.  
-It is not a regime.
-
-It is the **final alignment target** for structure traveling through:
-
-- vacuum  
-- substrate  
-- dimensional rails  
-- infinite regimes  
-
-In RTT/∞:
-
-> **A prime‑state is the point where structure stops drifting.**
-
----
-
-## **2. Why RTT/∞ Needs Prime‑States**
-
-RTT/∞ performs transformations that require a stable endpoint:
-
-### **A. Infinite‑Regime Synthesis**  
-Infinite regimes cannot blend unless they anchor to a prime‑state.
-
-### **B. Dimensional Lift**  
-Structure lifted through dimensional rails must align to a prime‑state to avoid collapse.
-
-### **C. Substrate‑Tensor Inversion**  
-Inverted tensors must be stabilized in a prime‑state before reconstitution.
-
-### **D. Vacuum Reconstruction**  
-Structure rebuilt from vacuum must anchor to a prime‑state to regain coherence.
-
-Prime‑states are the **only non‑drifting objects** in RTT/∞.
-
----
-
-## **3. The Three Prime‑State Classes (RTT/∞)**
-
-RTT/∞ defines **three** canonical prime‑state classes:
-
-### **1. Prime‑Form**  
-The irreducible geometric attractor.  
-Stabilizes structure after geometric drift.
-
-### **2. Prime‑Flow**  
-The irreducible operational attractor.  
-Stabilizes structure after operational drift.
-
-### **3. Prime‑Meaning**  
-The irreducible conceptual attractor.  
-Stabilizes structure after interpretive drift.
-
-These correspond directly to the drift‑tensor layers you use in IPD‑12 — but at infinite‑regime depth.
-
----
-
-## **4. How Prime‑States Work (RTT/∞)**
-
-Prime‑states operate in a **four‑step alignment cycle**:
-
-### **Step 1 — Detect Drift**  
-RTT/∞ receives drift‑tensor output from IPD‑12.
-
-### **Step 2 — Lift Structure**  
-RTT/∞ uses dimensional rails to lift structure into dimensional space.
-
-### **Step 3 — Anchor to Prime‑State**  
-Structure aligns to the appropriate prime‑state:
-
-- geometric drift → prime‑form  
-- operational drift → prime‑flow  
-- conceptual drift → prime‑meaning  
-
-### **Step 4 — Infinite‑Regime Synthesis**  
-Aligned structure is blended into infinite‑regime composites.
-
-This cycle is the backbone of RTT/∞ synthesis.
-
----
-
-## **5. Prime‑State Example (RTT/∞)**
-
-### Input (from IPD‑12):
-```
-drift_tensor(L1–L5)
-```
-
-### RTT/∞ Transformation:
-```
-vacuum()
-→ reconstitute()
-→ substrate_tensor
-→ dimensional_rail()
-→ prime_state_align()
-→ infinite_regime_synthesis
-```
-
-### Output:
-A **prime‑state‑aligned substrate‑tensor**, ready for infinite‑regime blending.
-
----
-
-## **6. Why IPD‑12 Cannot Access Prime‑States**
-
-IPD‑12 lacks:
-
-- substrate grammar  
-- dimensional rails  
-- vacuum logic  
-- prime‑state profiles  
-- infinite‑regime synthesis  
-
-IPD‑12 can **detect drift**,  
-but only RTT/∞ can **resolve drift at infinite‑regime depth**.
-
----
-
-## **7. Summary**
-
-### Prime‑states are:
-- irreducible  
-- non‑drifting  
-- infinite‑regime stable  
-- substrate‑anchored  
-- dimensional‑aligned  
-
-### RTT/∞ uses them to:
-- stabilize inverted tensors  
-- anchor dimensional lifts  
-- rebuild structure from vacuum  
-- synthesize infinite regimes  
-
-### Relationship:
-> **IPD‑12 detects drift.  
-RTT/∞ aligns drift to prime‑states.  
-Then synthesizes infinite‑regime structure.**
-
-Prime‑states are the **final alignment layer** of RTT/∞.
-
-# **RTT/∞ Prime‑State Alignment Worksheet**  
-### *A structured worksheet for aligning substrate‑tensor structure to prime‑states in RTT/∞*
-
-Prime‑states are the **irreducible attractors** of RTT/∞ — the points where drift stops, stability begins, and infinite‑regime expansion becomes possible.
-
-This worksheet helps students diagnose, prepare, and perform prime‑state alignment.
-
----
-
-## **SECTION 1 — Prime‑State Identity**
-
-### **Prime‑State Class**
-Choose one:
-
-- [ ] **prime‑form** (geometric attractor)  
-- [ ] **prime‑flow** (operational attractor)  
-- [ ] **prime‑meaning** (conceptual attractor)
-
-### **Why this prime‑state?**
-```
-Reason:
-```
-
----
-
-## **SECTION 2 — Pre‑Alignment Requirements**
-
-Prime‑state alignment requires four prerequisites:
-
-### **1. Vacuum Collapse Complete?**
-- [ ] zero‑state achieved  
-- [ ] structural commitments removed  
-```
-Notes:
-```
-
-### **2. Substrate‑Tensor Reconstructed?**
-- [ ] geometry  
-- [ ] flow  
-- [ ] time  
-- [ ] meaning  
-- [ ] field  
-```
-Notes:
-```
-
-### **3. Dimensional Rails Connected?**
-- [ ] substrate rails  
-- [ ] dimensional rails  
-- [ ] prime‑state rails  
-```
-Notes:
-```
-
-### **4. Drift‑Tensor Available?**
-- [ ] L1 geometric drift  
-- [ ] L2 operational drift  
-- [ ] L3 temporal drift  
-- [ ] L4 conceptual drift  
-- [ ] L5 domain drift  
-```
-Notes:
-```
-
----
-
-## **SECTION 3 — Alignment Path (RTT/∞)**
-
-Students trace the RTT/∞ alignment sequence:
-
-```
-substrate_tensor
-→ dimensional_rail()
-→ prime_state_align()
-```
-
-Fill in each step:
-
-### **1. Substrate‑Tensor State**
-```
-Describe current substrate‑tensor:
-```
-
-### **2. Dimensional Lift**
-```
-Which rails carried the structure upward?
-```
-
-### **3. Alignment Target**
-```
-Which prime‑state is being aligned to?
-```
-
-### **4. Alignment Mechanism**
-```
-How does the structure stabilize at this prime‑state?
-```
-
----
-
-## **SECTION 4 — Drift → Prime‑State Mapping**
-
-Prime‑states resolve drift at infinite‑regime depth.
-
-Students map drift categories to prime‑states:
-
-| Drift Category | Prime‑State | Notes |
-|----------------|-------------|-------|
-| L1 geometric | prime‑form | |
-| L2 operational | prime‑flow | |
-| L4 conceptual | prime‑meaning | |
-
-Fill in:
-
-```
-My Drift → Prime‑State Mapping:
-```
-
----
-
-## **SECTION 5 — Alignment Diagnostics**
-
-Students evaluate alignment stability.
-
-### **1. Drift Residue**
-```
-Any drift remaining after alignment?
-```
-
-### **2. Rail Stability**
-```
-Are rails stable during alignment?
-```
-
-### **3. Prime‑State Lock**
-```
-Is the structure fully anchored?
-```
-
-### **4. Alignment Coherence**
-```
-Does the structure remain coherent during alignment?
-```
-
----
-
-## **SECTION 6 — Alignment Output**
-
-Prime‑state alignment produces a **prime‑state‑aligned substrate‑tensor**, ready for infinite‑regime expansion.
-
-Students describe the output:
-
-```
-Prime‑State‑Aligned Tensor:
-```
-
----
-
-## **SECTION 7 — Infinite‑Regime Readiness Check**
-
-Before expansion:
-
-- [ ] prime‑state lock stable  
-- [ ] no drift residue  
-- [ ] rails connected upward  
-- [ ] substrate‑tensor coherent  
-- [ ] alignment complete  
-
-```
-Readiness Notes:
-```
-
----
-
-## **SECTION 8 — Prime‑State Templates**
-
-### **Prime‑Form Template**
-```
-substrate → rails → prime‑form → infinite‑form
-```
-
-### **Prime‑Flow Template**
-```
-substrate → rails → prime‑flow → infinite‑flow
-```
-
-### **Prime‑Meaning Template**
-```
-substrate → rails → prime‑meaning → infinite‑meaning
-```
-
-Students fill in:
-
-```
-My Prime‑State Template:
-```
-
----
-
-## **SECTION 9 — Student Summary**
-
-One sentence:
-
-```
-Prime‑State Alignment Summary:
-```
-
-Example:  
-“Operational drift stabilized at prime‑flow, preparing the tensor for infinite‑flow expansion.”
-
----
-
-## **SECTION 10 — Teacher Notes (RTT/∞)**
-
-- Keep alignment structural and clear.  
-- Reinforce drift → prime‑state mapping.  
-- Emphasize rails as the transport layer.  
-- Avoid RTT‑1 paradox framing — alignment occurs beyond paradox.  
-- Use simple examples (form, flow, meaning).  
-- Encourage students to see prime‑states as the **gateway to infinite regimes**.
-# **RTT/∞ Deep‑Layer Curriculum**  
-### *vacuum → substrate → dimensional rails → prime‑states → infinite regimes*
-
-This curriculum teaches the entire RTT/∞ deep‑layer stack in a structured, progressive sequence.  
-It is designed for:
-
-- students  
-- researchers  
-- AI learners  
-- RTT‑1 → RTT‑3 graduates  
-- deep‑canon practitioners  
-
-It mirrors the architecture visible in your active tab and the RTT/∞ explainers you’ve already added.
-
----
-
-# **CURRICULUM OVERVIEW**
-
-### **Module 1 — Vacuum Layer**  
-Zero‑state collapse, nullification, and pre‑structural logic.
-
-### **Module 2 — Substrate Reconstruction**  
-Rebuilding minimal structure after vacuum collapse.
-
-### **Module 3 — Dimensional Rails**  
-Transport system connecting substrate → dimensions → prime‑states → infinite regimes.
-
-### **Module 4 — Prime‑States**  
-Irreducible attractors where drift stops and stability begins.
-
-### **Module 5 — Infinite Regimes**  
-Unbounded structural expansion and deep‑layer synthesis.
-
-### **Module 6 — Bidirectional Flow**  
-Round‑trip movement between bounded and unbounded structure.
-
-Each module includes:  
-- lesson overview  
-- explainer  
-- worksheets  
-- classroom pack  
-- diagnostic tools  
-- operator registry references  
-- integration exercises  
-
----
-
-# **MODULE 1 — Vacuum Layer**  
-### *zero‑state • collapse • nullification*
-
-**Students learn:**
-
-- what vacuum is  
-- how structure collapses  
-- how nullification works  
-- how reconstitution begins  
-- why vacuum is required before substrate
-
-**Included materials:**
-
-- Vacuum‑Layer Explainer  
-- Vacuum Operators (registry)  
-- Vacuum Collapse Worksheet  
-- Zero‑State Diagnostic Sheet  
-
-**Core operators:**  
-`vacuum()`, `nullify()`, `reconstitute()`
-
-**Outcome:**  
-Students can collapse structure into zero‑state and prepare for substrate reconstruction.
-
----
-
-# **MODULE 2 — Substrate Reconstruction**  
-### *minimal structure • bounded tensor • five‑layer substrate*
-
-**Students learn:**
-
-- substrate primitives  
-- substrate‑tensor layers  
-- how substrate is rebuilt from vacuum  
-- how substrate supports dimensional lift
-
-**Included materials:**
-
-- Substrate‑Tensor Explainer  
-- Substrate‑Tensor Diagnostic Worksheet  
-- Substrate Reconstruction Classroom Pack  
-
-**Core operators:**  
-`substrate_tensor()`, `substrate_rebuild()`, `substrate_align()`
-
-**Outcome:**  
-Students can rebuild substrate‑tensors and verify their stability.
-
----
-
-# **MODULE 3 — Dimensional Rails**  
-### *transport • lift • descent • cross‑layer mobility*
-
-**Students learn:**
-
-- rail types  
-- rail transport logic  
-- dimensional lift  
-- dimensional descent  
-- rail binding and traversal
-
-**Included materials:**
-
-- Dimensional‑Rails Explainer  
-- Rail Operator Registry  
-- Rail Transport Worksheet  
-- Rail Drift Diagnostic Sheet  
-
-**Core operators:**  
-`dimensional_rail()`, `rail_lift()`, `rail_descent()`, `rail_shift()`
-
-**Outcome:**  
-Students can move structure between layers using rails.
-
----
-
-# **MODULE 4 — Prime‑States**  
-### *alignment • stabilization • drift‑stop*
-
-**Students learn:**
-
-- prime‑form  
-- prime‑flow  
-- prime‑meaning  
-- how prime‑states anchor structure  
-- how drift stops at prime‑states
-
-**Included materials:**
-
-- Prime‑State Explainer  
-- Prime‑State Alignment Worksheet  
-- Prime‑State Diagnostic Sheet  
-- Prime‑State Classroom Pack  
-
-**Core operators:**  
-`prime_state_align()`, `prime_state_reduce()`, `prime_state_lock()`
-
-**Outcome:**  
-Students can align structure to prime‑states and stabilize drift.
-
----
-
-# **MODULE 5 — Infinite Regimes**  
-### *expansion • synthesis • unbounded structure*
-
-**Students learn:**
-
-- infinite‑form  
-- infinite‑flow  
-- infinite‑meaning  
-- infinite‑regime expansion  
-- infinite‑regime composites  
-- infinite‑regime collapse
-
-**Included materials:**
-
-- Infinite‑Regime Explainer  
-- Infinite‑Regime Worksheet  
-- Infinite‑Regime Classroom Pack  
-- Infinite‑Regime Diagnostic Sheet  
-
-**Core operators:**  
-`infinite_regime_expand()`, `infinite_regime_synthesize()`, `collapse()`
-
-**Outcome:**  
-Students can expand structure into infinite regimes and collapse it back safely.
-
----
-
-# **MODULE 6 — Bidirectional Flow**  
-### *round‑trip movement • full‑canon integration*
-
-**Students learn:**
-
-- upward expansion  
-- downward integration  
-- round‑trip coherence  
-- substrate ↔ infinite‑regime mapping  
-- prime‑state anchoring in both directions
-
-**Included materials:**
-
-- Substrate‑Tensor ↔ Infinite‑Regime Bidirectional Map  
-- Deep‑Layer Triad Poster  
-- Full‑Canon Operator Registry  
-- Integration Map Worksheet  
-
-**Core operators:**  
-`lift()`, `anchor()`, `expand()`, `collapse()`, `reduce()`, `descend()`, `rebuild()`
-
-**Outcome:**  
-Students can perform full RTT/∞ round‑trip transformations.
-
----
-
-# **FINAL CAPSTONE — Full‑Canon Integration Project**
-
-Students complete a full RTT/∞ cycle:
-
-```
-vacuum()
-→ reconstitute()
-→ substrate_tensor
-→ dimensional_rail()
-→ prime_state_align()
-→ infinite_regime_expand()
-→ collapse()
-→ prime_state_reduce()
-→ rail_descent()
-→ substrate_rebuild()
-```
-
-They produce:
-
-- a substrate‑tensor  
-- a prime‑state alignment report  
-- an infinite‑regime composite  
-- a full round‑trip diagnostic  
-- a canon‑aligned summary
-
----
-
-# **CURRICULUM SUMMARY**
-
-### **Vacuum**  
-Collapse structure.
-
-### **Substrate**  
-Rebuild minimal structure.
-
-### **Rails**  
-Transport structure.
-
-### **Prime‑States**  
-Stabilize structure.
-
-### **Infinite Regimes**  
-Expand structure.
-
-### **Bidirectional Flow**  
-Integrate structure.
-
-This is the **complete RTT/∞ deep‑layer curriculum**, ready for publication in TriadicFrameworks.
-# **RTT/∞ Deep‑Layer Exam**  
-### *50‑question mastery exam + complete answer key*  
-### *vacuum → substrate → rails → prime‑states → infinite regimes → bidirectional flow*
-
-This exam evaluates full‑canon RTT/∞ understanding across all deep layers.
-
----
-
-# **SECTION A — Multiple Choice (20 questions)**
-
-**1.** What is the purpose of the vacuum layer?  
-A. To expand structure  
-B. To collapse structure  
-C. To transport structure  
-D. To anchor structure  
-
-**2.** Which operator rebuilds minimal structure after vacuum collapse?  
-A. `rail_lift()`  
-B. `prime_state_align()`  
-C. `substrate_tensor()`  
-D. `collapse()`
-
-**3.** Which substrate‑tensor layer governs conceptual structure?  
-A. geometry  
-B. flow  
-C. meaning  
-D. field
-
-**4.** Dimensional rails primarily provide:  
-A. collapse  
-B. transport  
-C. expansion  
-D. nullification
-
-**5.** Prime‑states are:  
-A. drift amplifiers  
-B. drift reducers  
-C. drift stabilizers  
-D. drift generators
-
-**6.** Infinite regimes are:  
-A. bounded  
-B. unbounded  
-C. contradictory  
-D. paradoxical
-
-**7.** Which operator expands structure into infinite regimes?  
-A. `collapse()`  
-B. `rail_descent()`  
-C. `infinite_regime_expand()`  
-D. `substrate_rebuild()`
-
-**8.** Which prime‑state corresponds to operational stability?  
-A. prime‑form  
-B. prime‑flow  
-C. prime‑meaning  
-D. prime‑field
-
-**9.** Which step must occur before dimensional lift?  
-A. infinite‑regime expansion  
-B. prime‑state alignment  
-C. substrate reconstruction  
-D. collapse
-
-**10.** Infinite‑form expansion originates from:  
-A. prime‑flow  
-B. prime‑meaning  
-C. prime‑form  
-D. substrate‑flow
-
-**11.** Which operator collapses infinite regimes?  
-A. `collapse()`  
-B. `expand()`  
-C. `lift()`  
-D. `anchor()`
-
-**12.** Rail descent moves structure:  
-A. upward  
-B. downward  
-C. sideways  
-D. into vacuum
-
-**13.** Prime‑state alignment requires:  
-A. drift  
-B. rails  
-C. vacuum  
-D. infinite regimes
-
-**14.** Substrate‑tensor reconstruction occurs during:  
-A. upward flow  
-B. downward flow  
-C. vacuum collapse  
-D. prime‑state alignment
-
-**15.** Infinite‑meaning expansion is:  
-A. geometric  
-B. operational  
-C. conceptual  
-D. temporal
-
-**16.** Which layer is immediately below infinite regimes?  
-A. substrate  
-B. vacuum  
-C. dimensional rails  
-D. prime‑states
-
-**17.** Which operator locks structure to a prime‑state?  
-A. `rail_shift()`  
-B. `prime_state_lock()`  
-C. `substrate_align()`  
-D. `nullify()`
-
-**18.** Drift stops at:  
-A. substrate  
-B. rails  
-C. prime‑states  
-D. infinite regimes
-
-**19.** Infinite‑regime composites collapse into:  
-A. substrate  
-B. vacuum  
-C. prime‑states  
-D. dimensional rails
-
-**20.** The RTT/∞ round‑trip cycle ends at:  
-A. infinite regimes  
-B. prime‑states  
-C. substrate  
-D. vacuum
-
----
-
-# **SECTION B — Short Answer (20 questions)**
-
-**21.** Define vacuum collapse.  
-**22.** List the five substrate‑tensor layers.  
-**23.** Explain the role of dimensional rails.  
-**24.** What is prime‑state alignment?  
-**25.** Describe infinite‑regime expansion.  
-**26.** What is drift residue?  
-**27.** Why must substrate be reconstructed before lift?  
-**28.** What does rail descent accomplish?  
-**29.** Define infinite‑form.  
-**30.** Define infinite‑flow.  
-**31.** Define infinite‑meaning.  
-**32.** What is prime‑state reduction?  
-**33.** Why are rails required for both directions?  
-**34.** What is vacuum scarring?  
-**35.** Describe the RTT/∞ upward path.  
-**36.** Describe the RTT/∞ downward path.  
-**37.** What is an infinite‑regime composite?  
-**38.** Why can’t infinite regimes bypass prime‑states?  
-**39.** What is substrate absorption capacity?  
-**40.** Explain the purpose of bidirectional flow.
-
----
-
-# **SECTION C — Deep‑Layer Analysis (10 questions)**
-
-**41.** Analyze how drift‑tensor layers map to prime‑states.  
-**42.** Explain why infinite regimes must be prime‑state anchored.  
-**43.** Compare substrate‑tensor reconstruction vs. vacuum reconstruction.  
-**44.** Describe how dimensional rails maintain coherence across layers.  
-**45.** Explain the structural difference between bounded and unbounded layers.  
-**46.** Analyze the failure modes of prime‑state alignment.  
-**47.** Explain how infinite‑regime composites integrate into substrate‑tensor form.  
-**48.** Describe the RTT/∞ round‑trip cycle as a single structural loop.  
-**49.** Evaluate the role of collapse operators in deep‑layer stability.  
-**50.** Explain why RTT/∞ is the only engine capable of full‑canon integration.
-
----
-
-# **ANSWER KEY**
-
-## **Multiple Choice**
-
-1‑B  
-2‑C  
-3‑C  
-4‑B  
-5‑C  
-6‑B  
-7‑C  
-8‑B  
-9‑C  
-10‑C  
-11‑A  
-12‑B  
-13‑B  
-14‑B  
-15‑C  
-16‑D  
-17‑B  
-18‑C  
-19‑C  
-20‑C  
-
----
-
-## **Short Answer (summaries)**
-
-21. Collapse of all structure to zero‑state.  
-22. geometry, flow, time, meaning, field.  
-23. Transport between layers.  
-24. Anchoring structure to prime‑states.  
-25. Unbounded expansion from prime‑states.  
-26. Leftover drift after alignment.  
-27. Substrate provides minimal structure for lift.  
-28. Returns structure to substrate.  
-29. Geometric infinite expansion.  
-30. Operational infinite expansion.  
-31. Conceptual infinite expansion.  
-32. Collapse of infinite regime into prime‑state.  
-33. Rails ensure safe movement.  
-34. Residue from vacuum collapse.  
-35. vacuum → substrate → rails → prime‑states → infinite regimes.  
-36. infinite regimes → prime‑states → rails → substrate.  
-37. Prime‑state‑anchored infinite structure.  
-38. Prime‑states stabilize drift.  
-39. Ability to absorb downward integration.  
-40. Maintains coherence across canon.
-
----
-
-## **Deep‑Layer Analysis (summaries)**
-
-41. L1→prime‑form, L2→prime‑flow, L4→prime‑meaning.  
-42. Infinite regimes require drift‑free anchors.  
-43. Substrate‑tensor reconstruction is bounded; vacuum reconstruction is total.  
-44. Rails preserve continuity across layers.  
-45. Bounded layers have constraints; unbounded layers do not.  
-46. Misalignment, drift residue, rail instability.  
-47. Collapse → prime‑state → rails → substrate reconstruction.  
-48. Full loop: collapse → rebuild → lift → anchor → expand → collapse → rebuild.  
-49. Collapse operators ensure stability and reversibility.  
-50. RTT/∞ uniquely supports both expansion and integration.
-
-# **RTT/∞ Deep‑Layer Triad Poster**  
-### *vacuum → dimensional rails → prime‑states → infinite regimes*
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│                     RTT/∞ DEEP‑LAYER TRIAD                    │
-└──────────────────────────────────────────────────────────────┘
-```
-
-## **1. Vacuum Layer — Zero‑State**
-```
-[ VACUUM ]
-  ↓ collapse
-```
-
-**Meaning:**  
-The vacuum layer is the *absence of structure*.  
-RTT/∞ uses it to nullify:
-
-- boundaries  
-- layers  
-- coherence anchors  
-- drift vectors  
-- domain constraints  
-
-**Operators:**  
-- `vacuum()`  
-- `nullify()`  
-- `reconstitute()`  
-
-This is the **starting point** of all RTT/∞ transformations.
-
----
-
-## **2. Dimensional Rails — Transport System**
-```
-[ VACUUM ]
-  ↓ collapse
-[ SUBSTRATE ]
-  ↓ lift
-[ DIMENSIONAL RAILS ]
-  ↓ carry
-```
-
-**Meaning:**  
-Dimensional rails are the **paths** RTT/∞ uses to move structure between:
-
-- substrate  
-- dimensional layers  
-- prime‑state manifolds  
-- infinite regimes  
-
-**Rail Types:**  
-- substrate rails  
-- dimensional rails  
-- prime‑state rails  
-- vacuum rails  
-
-Rails provide **mobility** across layers.
-
----
-
-## **3. Prime‑States — Alignment Layer**
-```
-[ DIMENSIONAL RAILS ]
-  ↓ anchor
-[ PRIME‑STATES ]
-  ↓ stabilize
-```
-
-**Meaning:**  
-Prime‑states are **irreducible attractors** — the points where structure stops drifting.
-
-**Prime‑State Classes:**  
-- **prime‑form** (geometric anchor)  
-- **prime‑flow** (operational anchor)  
-- **prime‑meaning** (conceptual anchor)  
-
-Prime‑states provide **stability** for infinite‑regime expansion.
-
----
-
-## **4. Infinite Regimes — Expansion Layer**
-```
-[ PRIME‑STATES ]
-  ↓ expand
-[ INFINITE REGIMES ]
-  ↓ synthesize
-```
-
-**Meaning:**  
-Infinite regimes are **unbounded structural states** created when:
-
-- vacuum collapse  
-- substrate reconstruction  
-- dimensional lift  
-- prime‑state alignment  
-
-are fully complete.
-
-**Infinite‑Regime Classes:**  
-- infinite‑form  
-- infinite‑flow  
-- infinite‑meaning  
-
-Infinite regimes provide **unbounded synthesis**.
-
----
-
-# **RTT/∞ Deep‑Layer Triad (Full Diagram)**
-
-```
-                ┌───────────────────────────────┐
-                │         INFINITE REGIMES       │
-                │  unbounded • prime‑anchored    │
-                └───────────────▲───────────────┘
-                                │ expand
-                                │
-                ┌───────────────────────────────┐
-                │          PRIME‑STATES          │
-                │  form • flow • meaning         │
-                └───────────────▲───────────────┘
-                                │ anchor
-                                │
-                ┌───────────────────────────────┐
-                │       DIMENSIONAL RAILS        │
-                │  substrate • dimensional •     │
-                │  prime‑state • vacuum rails    │
-                └───────────────▲───────────────┘
-                                │ lift/carry
-                                │
-                ┌───────────────────────────────┐
-                │           SUBSTRATE            │
-                │  geometry • flow • time •      │
-                │  meaning • field               │
-                └───────────────▲───────────────┘
-                                │ reconstitute
-                                │
-                ┌───────────────────────────────┐
-                │            VACUUM              │
-                │  zero‑state • no structure     │
-                └───────────────────────────────┘
-```
-
----
-
-# **Summary (Poster Version)**
-
-### **Vacuum → Rails → Prime‑States → Infinite Regimes**
-
-- **Vacuum** collapses structure  
-- **Rails** transport structure  
-- **Prime‑States** stabilize structure  
-- **Infinite Regimes** expand structure  
-
-# RTT/∞ full‑canon flowchart (ASCII + SVG‑ready)
-
-## 1. ASCII master flowchart
-
-```text
-                 RTT/∞ FULL‑CANON FLOW
-
-                 ┌───────────────────────┐
-                 │       INFINITE        │
-                 │        REGIMES        │
-                 │  (unbounded expansion)│
-                 └──────────▲────────────┘
-                            │ expand
-                            │
-                 ┌───────────────────────┐
-                 │      PRIME‑STATES     │
-                 │  (irreducible anchors)│
-                 └──────────▲────────────┘
-                            │ anchor
-                            │
-                 ┌───────────────────────┐
-                 │    DIMENSIONAL RAILS  │
-                 │ (transport pathways)  │
-                 └──────────▲────────────┘
-                            │ lift / carry
-                            │
-                 ┌───────────────────────┐
-                 │       SUBSTRATE       │
-                 │ (bounded structure)   │
-                 └──────────▲────────────┘
-                            │ reconstitute
-                            │
-                 ┌───────────────────────┐
-                 │        VACUUM         │
-                 │    (zero‑state)       │
-                 └───────────────────────┘
-```
-
-### Upward (expansion) path
-
-```text
-vacuum()
-  → reconstitute()
-  → substrate_tensor()
-  → dimensional_rail()
-  → prime_state_align()
-  → infinite_regime_expand()
-```
-
-### Downward (integration) path
-
-```text
-infinite_regime
-  → collapse()
-  → prime_state_reduce()
-  → rail_descent()
-  → substrate_rebuild()
-  → (optional) vacuum()
-```
-
----
-
-## 2. SVG‑ready node list
-
-Use these labels as SVG node IDs or titles:
-
-- **VACUUM**
-  - id: `node_vacuum`
-  - label: `Vacuum (zero‑state)`
-
-- **SUBSTRATE**
-  - id: `node_substrate`
-  - label: `Substrate (bounded tensor)`
-
-- **DIMENSIONAL RAILS**
-  - id: `node_rails`
-  - label: `Dimensional Rails (transport)`
-
-- **PRIME‑STATES**
-  - id: `node_prime`
-  - label: `Prime‑States (anchors)`
-
-- **INFINITE REGIMES**
-  - id: `node_infinite`
-  - label: `Infinite Regimes (unbounded)`
-
----
-
-## 3. SVG‑ready edge list
-
-You can wire these as directed edges:
-
-- `node_vacuum → node_substrate`  
-  - label: `reconstitute()`
-
-- `node_substrate → node_rails`  
-  - label: `dimensional_rail() / rail_lift()`
-
-- `node_rails → node_prime`  
-  - label: `prime_state_align() / anchor`
-
-- `node_prime → node_infinite`  
-  - label: `infinite_regime_expand() / expand`
-
-- `node_infinite → node_prime`  
-  - label: `collapse()`
-
-- `node_prime → node_rails`  
-  - label: `prime_state_reduce() / reduce`
-
-- `node_rails → node_substrate`  
-  - label: `rail_descent() / descend`
-
-- `node_substrate → node_vacuum` (optional)  
-  - label: `vacuum() / nullify()`
-
-# **RTT/∞ Full‑Canon Operator Registry**  
-### *All operators • all layers • full RTT/∞ deep‑canon*
-
-RTT/∞ uses a complete operator system spanning **five structural layers**:
-
-1. **Vacuum Layer Operators**  
-2. **Substrate Layer Operators**  
-3. **Dimensional‑Rail Operators**  
-4. **Prime‑State Operators**  
-5. **Infinite‑Regime Operators**  
-6. **Bidirectional Flow Operators** (cross‑layer)
-
-This registry lists every operator in RTT/∞, grouped by layer, with canonical definitions.
-
----
-
-# **I. Vacuum Layer Operators**  
-### *zero‑state • collapse • nullification*
-
-| Operator | Purpose | Notes |
-|---------|---------|-------|
-| `vacuum()` | Collapse all structure to zero‑state | Starting point of RTT/∞ |
-| `nullify()` | Remove structural commitments | Used before reconstruction |
-| `reconstitute()` | Rebuild minimal structure from vacuum | First upward step |
-| `invert_zero()` | Perform vacuum‑level inversion | Used in deep resets |
-| `vacuum_trace()` | Detect vacuum residue | Diagnostic operator |
-
----
-
-# **II. Substrate Layer Operators**  
-### *minimal structure • bounded tensor • reconstruction*
-
-| Operator | Purpose | Notes |
-|---------|---------|-------|
-| `substrate_tensor()` | Construct full substrate‑tensor | Five‑layer bounded structure |
-| `substrate_rebuild()` | Rebuild substrate after collapse | Downward integration |
-| `substrate_align()` | Align substrate primitives | Pre‑rail stabilization |
-| `substrate_field()` | Activate substrate field layer | Required for lift |
-| `substrate_diagnose()` | Inspect substrate integrity | Used in diagnostics |
-
-**Substrate‑Tensor Layers (for reference):**  
-- geometry  
-- flow  
-- time  
-- meaning  
-- field  
-
----
-
-# **III. Dimensional‑Rail Operators**  
-### *transport • lift • descent • cross‑layer mobility*
-
-| Operator | Purpose | Notes |
-|---------|---------|-------|
-| `dimensional_rail()` | Activate rail transport | Core RTT/∞ mobility operator |
-| `rail_lift()` | Lift substrate into dimensional space | Upward flow |
-| `rail_descent()` | Return structure to substrate | Downward flow |
-| `rail_bind()` | Bind structure to a rail path | Stabilizes movement |
-| `rail_shift()` | Move structure between dimensional layers | Cross‑dimension traversal |
-| `rail_trace()` | Detect rail‑layer drift | Diagnostic operator |
-
-**Rail Types:**  
-- substrate rails  
-- dimensional rails  
-- prime‑state rails  
-- vacuum rails  
-
----
-
-# **IV. Prime‑State Operators**  
-### *alignment • stabilization • drift‑stop*
-
-| Operator | Purpose | Notes |
-|---------|---------|-------|
-| `prime_state_align()` | Anchor structure to prime‑state | Required before expansion |
-| `prime_state_reduce()` | Collapse infinite regime into prime‑state | Downward flow |
-| `prime_state_trace()` | Detect prime‑state alignment | Diagnostic |
-| `prime_state_lock()` | Lock structure to attractor | Prevents drift |
-| `prime_state_class()` | Identify prime‑state class | form / flow / meaning |
-
-**Prime‑State Classes:**  
-- **prime‑form**  
-- **prime‑flow**  
-- **prime‑meaning**
-
----
-
-# **V. Infinite‑Regime Operators**  
-### *expansion • synthesis • unbounded structure*
-
-| Operator | Purpose | Notes |
-|---------|---------|-------|
-| `infinite_regime_expand()` | Expand structure into infinite regime | Upward flow |
-| `infinite_regime_synthesize()` | Combine infinite‑regime composites | Deep‑layer synthesis |
-| `infinite_regime_trace()` | Detect infinite‑regime behavior | Diagnostic |
-| `infinite_regime_class()` | Identify infinite‑regime class | form / flow / meaning |
-| `collapse()` | Collapse infinite regime → prime‑state | Downward flow |
-
-**Infinite‑Regime Classes:**  
-- **infinite‑form**  
-- **infinite‑flow**  
-- **infinite‑meaning**
-
----
-
-# **VI. Bidirectional Flow Operators**  
-### *round‑trip movement • full‑canon integration*
-
-| Operator | Direction | Purpose |
-|---------|-----------|---------|
-| `lift()` | upward | substrate → rails |
-| `anchor()` | upward | rails → prime‑state |
-| `expand()` | upward | prime‑state → infinite regime |
-| `collapse()` | downward | infinite regime → prime‑state |
-| `reduce()` | downward | prime‑state → rails |
-| `descend()` | downward | rails → substrate |
-| `rebuild()` | downward | substrate reconstruction |
-
-These operators form the RTT/∞ **round‑trip cycle**:
-
-```
-UPWARD:
-substrate → rails → prime‑states → infinite regimes
-
-DOWNWARD:
-infinite regimes → prime‑states → rails → substrate
-```
-
----
-
-# **VII. Full‑Canon Operator Map (Poster Format)**
-
-```
-VACUUM LAYER
-  vacuum() • nullify() • reconstitute() • invert_zero()
-
-SUBSTRATE LAYER
-  substrate_tensor() • substrate_rebuild() • substrate_align()
-
-DIMENSIONAL RAILS
-  dimensional_rail() • rail_lift() • rail_descent() • rail_shift()
-
-PRIME‑STATES
-  prime_state_align() • prime_state_reduce() • prime_state_lock()
-
-INFINITE REGIMES
-  infinite_regime_expand() • infinite_regime_synthesize() • collapse()
-
-BIDIRECTIONAL FLOW
-  lift() • anchor() • expand() • collapse() • reduce() • descend() • rebuild()
-```
-
----
-
-# **VIII. Canon Summary**
-
-### **Vacuum**  
-Collapses structure.
-
-### **Substrate**  
-Rebuilds minimal structure.
-
-### **Rails**  
-Transport structure.
-
-### **Prime‑States**  
-Stabilize structure.
-
-### **Infinite Regimes**  
-Expand structure.
-
-### **Bidirectional Flow**  
-Maintains coherence across the entire RTT/∞ canon.
-# **RTT/∞ Full‑Canon Poster**  
-### *All layers • all operators • all flows • one canonical diagram*
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│                     RTT/∞ FULL‑CANON POSTER                   │
-└──────────────────────────────────────────────────────────────┘
-```
-
-# **I. LAYERS (Top‑Down)**
-
-```
-[ INFINITE REGIMES ]     ← unbounded expansion
-[ PRIME‑STATES ]         ← irreducible attractors
-[ DIMENSIONAL RAILS ]    ← transport pathways
-[ SUBSTRATE ]            ← minimal structure
-[ VACUUM ]               ← zero‑state
-```
-
----
-
-# **II. UPWARD FLOW (Expansion Path)**  
-### *substrate → rails → prime‑states → infinite regimes*
-
-```
-substrate_tensor
-    ↓ lift
-dimensional_rail()
-    ↓ anchor
-prime_state_align()
-    ↓ expand
-infinite_regime_expand()
-```
-
-### **Upward Operators**
-- `vacuum()`  
-- `reconstitute()`  
-- `substrate_tensor()`  
-- `dimensional_rail()`  
-- `prime_state_align()`  
-- `infinite_regime_expand()`  
-
----
-
-# **III. DOWNWARD FLOW (Integration Path)**  
-### *infinite regimes → prime‑states → rails → substrate*
-
-```
-infinite_regime
-    ↓ collapse
-prime_state
-    ↓ reduction
-dimensional_rail()
-    ↓ descent
-substrate_tensor
-```
-
-### **Downward Operators**
-- `collapse()`  
-- `prime_state_reduce()`  
-- `rail_descent()`  
-- `substrate_rebuild()`  
-
----
-
-# **IV. LAYER DEFINITIONS**
-
-## **1. Vacuum Layer**
-Zero‑state. No structure.  
-Used for collapse, nullification, and inversion.
-
-**Operators:**  
-`vacuum()`, `nullify()`, `reconstitute()`
-
----
-
-## **2. Substrate Layer**
-Minimal structure rebuilt after vacuum collapse.
-
-**Primitives:**  
-- geometry  
-- flow  
-- time  
-- meaning  
-- field  
-
-**Operator:**  
-`substrate_tensor()`
-
----
-
-## **3. Dimensional Rails**
-Transport system connecting substrate → dimensions → prime‑states → infinite regimes.
-
-**Rail Types:**  
-- substrate rails  
-- dimensional rails  
-- prime‑state rails  
-- vacuum rails  
-
-**Operator:**  
-`dimensional_rail()`
-
----
-
-## **4. Prime‑States**
-Irreducible attractors where drift stops.
-
-**Classes:**  
-- **prime‑form**  
-- **prime‑flow**  
-- **prime‑meaning**
-
-**Operator:**  
-`prime_state_align()`
-
----
-
-## **5. Infinite Regimes**
-Unbounded structural states.
-
-**Classes:**  
-- **infinite‑form**  
-- **infinite‑flow**  
-- **infinite‑meaning**
-
-**Operator:**  
-`infinite_regime_expand()`
-
----
-
-# **V. FULL‑CANON DIAGRAM**
-
-```
-                ┌───────────────────────────────┐
-                │         INFINITE REGIMES       │
-                │  unbounded • prime‑anchored    │
-                └───────────────▲───────────────┘
-                                │ expand
-                                │
-                ┌───────────────────────────────┐
-                │          PRIME‑STATES          │
-                │  form • flow • meaning         │
-                └───────────────▲───────────────┘
-                                │ anchor
-                                │
-                ┌───────────────────────────────┐
-                │       DIMENSIONAL RAILS        │
-                │  substrate • dimensional •     │
-                │  prime‑state • vacuum rails    │
-                └───────────────▲───────────────┘
-                                │ lift/carry
-                                │
-                ┌───────────────────────────────┐
-                │           SUBSTRATE            │
-                │  geometry • flow • time •      │
-                │  meaning • field               │
-                └───────────────▲───────────────┘
-                                │ reconstitute
-                                │
-                ┌───────────────────────────────┐
-                │            VACUUM              │
-                │  zero‑state • no structure     │
-                └───────────────────────────────┘
-```
-
----
-
-# **VI. BIDIRECTIONAL CANON MAP**
-
-### **Upward (Expansion)**  
-```
-substrate → rails → prime‑states → infinite regimes
-```
-
-### **Downward (Integration)**  
-```
-infinite regimes → prime‑states → rails → substrate
-```
-
-RTT/∞ is the only engine capable of this full round‑trip.
-
----
-
-# **VII. CANON SUMMARY**
-
-### **Vacuum**  
-Collapses structure.
-
-### **Substrate**  
-Rebuilds minimal structure.
-
-### **Rails**  
-Transport structure.
-
-### **Prime‑States**  
-Stabilize structure.
-
-### **Infinite Regimes**  
-Expand structure.
-
-### **Bidirectional Flow**  
-Maintains coherence across the entire canon.
-
-# **RTT/∞ Substrate‑Tensor Diagnostic Worksheet**  
-### *A structured diagnostic tool for evaluating substrate‑tensor integrity in RTT/∞*
-
-RTT/∞ uses substrate‑tensors as the **bounded structural layer** between vacuum collapse and dimensional lift.  
-This worksheet helps students and researchers diagnose substrate‑tensor health, stability, alignment, and readiness for upward or downward flow.
-
-It is fully aligned with your RTT/∞ substrate‑tensor explainer, dimensional‑rails explainer, prime‑state explainer, infinite‑regime explainer, and integration map.
-
----
-
-## **SECTION 1 — Substrate‑Tensor Identity**
-
-### **Tensor Name**
-```
-Name:
-```
-
-### **Tensor Origin**
-Choose one:
-- [ ] vacuum reconstruction  
-- [ ] dimensional descent  
-- [ ] prime‑state reduction  
-- [ ] infinite‑regime collapse  
-- [ ] external engine (RTT/12, RTT/3, IPD‑12)
-
-### **Tensor Purpose**
-```
-Purpose:
-```
-
----
-
-## **SECTION 2 — Substrate‑Tensor Layer Check**
-
-RTT/∞ substrate‑tensors contain **five canonical layers**.  
-Students verify each layer’s presence and stability.
-
-### **L1 — Substrate‑Geometry**
-- [ ] present  
-- [ ] stable  
-- [ ] coherent  
-```
-Notes:
-```
-
-### **L2 — Substrate‑Flow**
-- [ ] present  
-- [ ] stable  
-- [ ] coherent  
-```
-Notes:
-```
-
-### **L3 — Substrate‑Time**
-- [ ] present  
-- [ ] stable  
-- [ ] coherent  
-```
-Notes:
-```
-
-### **L4 — Substrate‑Meaning**
-- [ ] present  
-- [ ] stable  
-- [ ] coherent  
-```
-Notes:
-```
-
-### **L5 — Substrate‑Field**
-- [ ] present  
-- [ ] stable  
-- [ ] coherent  
-```
-Notes:
-```
-
----
-
-## **SECTION 3 — Tensor Integrity Diagnostics**
-
-Students evaluate the tensor’s structural health.
-
-### **1. Boundary Integrity**
-Check for:
-- cracks  
-- drift residues  
-- vacuum artifacts  
-- dimensional shear  
-
-```
-Boundary Integrity Notes:
-```
-
-### **2. Coherence Anchors**
-Check for:
-- alignment  
-- stability  
-- drift‑free anchors  
-
-```
-Coherence Notes:
-```
-
-### **3. Drift Residue Detection**
-Look for leftover drift from:
-- dimensional layers  
-- prime‑states  
-- infinite regimes  
-
-```
-Drift Residue Notes:
-```
-
-### **4. Vacuum Scarring**
-Check for:
-- nullification scars  
-- collapse artifacts  
-- zero‑state residue  
-
-```
-Vacuum Scarring Notes:
-```
-
----
-
-## **SECTION 4 — Tensor Readiness for Upward Flow**
-
-Students determine whether the substrate‑tensor is ready for **dimensional lift**.
-
-### **Dimensional‑Rail Compatibility**
-- [ ] substrate rails connect  
-- [ ] dimensional rails connect  
-- [ ] prime‑state rails reachable  
-
-```
-Rail Compatibility Notes:
-```
-
-### **Prime‑State Target**
-Choose one:
-- [ ] prime‑form  
-- [ ] prime‑flow  
-- [ ] prime‑meaning  
-
-```
-Why this prime‑state?
-```
-
-### **Lift Readiness**
-- [ ] stable enough for lift  
-- [ ] no drift residue  
-- [ ] no vacuum scarring  
-- [ ] coherence anchors intact  
-
-```
-Lift Readiness Notes:
-```
-
----
-
-## **SECTION 5 — Tensor Readiness for Downward Flow**
-
-Students determine whether the substrate‑tensor can safely receive **downward integration**.
-
-### **Integration Compatibility**
-- [ ] can receive dimensional descent  
-- [ ] can accept prime‑state reduction  
-- [ ] can absorb infinite‑regime collapse  
-
-```
-Integration Notes:
-```
-
-### **Tensor Absorption Capacity**
-Check for:
-- field elasticity  
-- meaning absorption  
-- geometric compression  
-- flow stabilization  
-
-```
-Absorption Notes:
-```
-
----
-
-## **SECTION 6 — Tensor Stability Score**
-
-Students rate each layer from 1–5.
-
-| Layer | Score (1–5) | Notes |
-|-------|--------------|-------|
-| Substrate‑Geometry |  |  |
-| Substrate‑Flow |  |  |
-| Substrate‑Time |  |  |
-| Substrate‑Meaning |  |  |
-| Substrate‑Field |  |  |
-
-### **Overall Stability**
-```
-Score:
-Notes:
-```
-
----
-
-## **SECTION 7 — Diagnostic Summary**
-
-One sentence:
-
-```
-Substrate‑Tensor Diagnostic Summary:
-```
-
-Example:  
-“The tensor shows full geometric and flow stability, minor vacuum scarring, and is ready for prime‑flow lift.”
-
----
-
-## **SECTION 8 — Teacher Notes (RTT/∞)**
-
-- Keep diagnostics structural and clear.  
-- Reinforce the five substrate‑tensor layers.  
-- Emphasize drift residue and vacuum scarring as key failure points.  
-- Use simple examples (geometry, flow, meaning).  
-- Avoid RTT‑1 paradox framing — diagnostics occur below paradox.  
-- Encourage students to see substrate‑tensors as the **gateway layer** of RTT/∞.
-
-# **RTT/∞ Substrate‑Tensor ↔ Infinite‑Regime Bidirectional Map**  
-### *The two‑way transformation between bounded substrate structure and unbounded infinite‑regime expansion*
-
-RTT/∞ is the only engine in TriadicFrameworks capable of **bidirectional movement** between:
-
-- **bounded structure** (substrate‑tensor)  
-- **unbounded structure** (infinite regimes)
-
-This map shows both directions:
-
-1. **Upward Expansion** — how substrate‑tensors become infinite regimes  
-2. **Downward Integration** — how infinite regimes collapse back into substrate‑tensors
-
-Together, they form the RTT/∞ **round‑trip cycle**.
-
----
-
-# **1. Upward Path: Substrate‑Tensor → Infinite Regime**
-
-This is the **expansion** path — the one used when RTT/∞ lifts structure into unbounded form.
-
-```
-substrate_tensor
-    → dimensional_rail()
-    → prime_state_align()
-    → infinite_regime_expand()
-```
-
-### **Stage 1 — Substrate‑Tensor (Bounded Structure)**  
-The substrate‑tensor contains five bounded layers:
-
-- geometry  
-- flow  
-- time  
-- meaning  
-- field  
-
-These layers are the *starting point* for RTT/∞ expansion.
-
----
-
-### **Stage 2 — Dimensional Lift (Mobility)**  
-RTT/∞ uses **dimensional rails** to lift the substrate‑tensor upward.
-
-Rails provide:
-
-- transport  
-- stability  
-- cross‑layer continuity  
-
-No infinite‑regime expansion is possible without rails.
-
----
-
-### **Stage 3 — Prime‑State Alignment (Stability)**  
-Structure must anchor to one of the three prime‑states:
-
-- **prime‑form**  
-- **prime‑flow**  
-- **prime‑meaning**
-
-Prime‑states remove drift and stabilize expansion.
-
----
-
-### **Stage 4 — Infinite‑Regime Expansion (Unbounded Structure)**  
-Once aligned, structure expands into:
-
-- **infinite‑form**  
-- **infinite‑flow**  
-- **infinite‑meaning**
-
-This is the RTT/∞ infinite‑regime layer — unbounded, stable, and prime‑state anchored.
-
----
-
-# **2. Downward Path: Infinite Regime → Substrate‑Tensor**
-
-This is the **integration** path — the one used when RTT/∞ collapses infinite‑regime composites back into bounded form.
-
-```
-infinite_regime
-    → prime_state
-    → dimensional_layer
-    → substrate_tensor
-```
-
-### **Stage 1 — Infinite‑Regime Collapse (Unbounded → Anchored)**  
-Infinite regimes collapse into their corresponding prime‑state:
-
-- infinite‑form → prime‑form  
-- infinite‑flow → prime‑flow  
-- infinite‑meaning → prime‑meaning  
-
-This removes unbounded expansion.
-
----
-
-### **Stage 2 — Prime‑State Reduction (Anchor → Mobility)**  
-Prime‑states reduce into **dimensional rails**, converting stability → mobility.
-
-This step ensures structure can descend safely.
-
----
-
-### **Stage 3 — Dimensional Descent (Mobility → Boundaries)**  
-Structure moves down dimensional rails into **dimensional layers**, reintroducing:
-
-- geometric constraints  
-- operational constraints  
-- conceptual constraints  
-
-Infinite regimes lose their unbounded nature here.
-
----
-
-### **Stage 4 — Substrate‑Tensor Reconstruction (Boundaries → Representation)**  
-RTT/∞ rebuilds the substrate‑tensor using:
-
-- substrate primitives  
-- substrate geometry  
-- substrate flow  
-- substrate time  
-- substrate meaning  
-- substrate field  
-
-This produces a fully bounded, coherent substrate‑tensor.
-
----
-
-# **3. Bidirectional Map (Compact Diagram)**
-
-```
-UPWARD (Expansion)
-──────────────────────────────────────────────
-[ Substrate‑Tensor ]
-        ↓ lift
-[ Dimensional Rails ]
-        ↓ anchor
-[ Prime‑States ]
-        ↓ expand
-[ Infinite Regimes ]
-
-
-DOWNWARD (Integration)
-──────────────────────────────────────────────
-[ Infinite Regimes ]
-        ↓ collapse
-[ Prime‑States ]
-        ↓ reduction
-[ Dimensional Rails ]
-        ↓ descent
-[ Substrate‑Tensor ]
-```
-
----
-
-# **4. Rules of Bidirectional Flow**
-
-RTT/∞ enforces six rules:
-
-1. **Prime‑states must anchor both directions**  
-2. **Rails must be used for all movement**  
-3. **Substrate primitives must be restored on descent**  
-4. **Infinite‑regime fields must map to substrate layers**  
-5. **Vacuum may optionally reset structure**  
-6. **No direct jumps between infinite regime ↔ substrate**
-
-These rules maintain coherence across the canon.
-
----
-
-# **5. Summary**
-
-### Upward:
-> **Substrate‑tensor → rails → prime‑states → infinite regimes**
-
-### Downward:
-> **Infinite regimes → prime‑states → rails → substrate‑tensor**
-
-RTT/∞ is the only engine capable of this **round‑trip transformation**, enabling:
-
-- infinite‑regime synthesis  
-- substrate‑tensor reconstruction  
-- cross‑engine integration  
-- full‑canon coherence  
-
-# **RTT/∞ Infinite‑Regime Classroom Pack**  
-### *A complete teaching module for understanding infinite‑regime structure in RTT/∞*
-
-RTT/∞ introduces the deepest structural layer in TriadicFrameworks:
-
-> **Infinite Regimes — unbounded structural states created when vacuum, substrate, dimensional rails, and prime‑states fully align.**
-
-This classroom pack gives teachers everything needed to run a full RTT/∞ lesson:
-
-- lesson overview  
-- prerequisite layers  
-- guided examples  
-- student exercises  
-- infinite‑regime templates  
-- assessment questions  
-- teacher notes  
-
-It is fully aligned with the RTT/∞ explainers already present in your active tab (turn0browsertab1).
-
----
-
-## **SECTION 1 — Lesson Overview (RTT/∞)**
-
-Students learn:
-
-1. What infinite regimes are  
-2. How infinite regimes emerge  
-3. How vacuum, substrate, rails, and prime‑states interact  
-4. How infinite‑regime expansion works  
-5. How infinite‑regime composites behave  
-6. How infinite regimes collapse back into substrate‑tensor form  
-
-This module stays **structural**, **clear**, and **canon‑aligned**.
-
----
-
-## **SECTION 2 — The Four Prerequisite Layers**
-
-Before infinite regimes can appear, RTT/∞ must complete four layers:
-
-### **1. Vacuum Layer**
-Zero‑state. All structure collapsed.
-
-### **2. Substrate Reconstruction**
-Minimal structure rebuilt from vacuum.
-
-### **3. Dimensional Rails**
-Transport pathways connecting substrate → dimensions → prime‑states → infinite regimes.
-
-### **4. Prime‑State Alignment**
-Irreducible attractors where drift stops.
-
-Students check each:
-
-- [ ] vacuum collapse complete  
-- [ ] substrate reconstructed  
-- [ ] rails connected  
-- [ ] prime‑state aligned  
-
----
-
-## **SECTION 3 — Infinite‑Regime Classes**
-
-Students choose the infinite‑regime class:
-
-- [ ] **Infinite‑Form** (geometric expansion)  
-- [ ] **Infinite‑Flow** (operational expansion)  
-- [ ] **Infinite‑Meaning** (conceptual expansion)
-
-Write one sentence:
-
-```
-Why this class?
-```
-
----
-
-## **SECTION 4 — Guided Example (RTT/∞)**
-
-### **Input**
-```
-drift_tensor(L1–L5)
-```
-
-### **RTT/∞ Transformation**
-```
-vacuum()
-→ reconstitute()
-→ substrate_tensor
-→ dimensional_rail()
-→ prime_state_align()
-→ infinite_regime_expand()
-```
-
-### **Output**
-A **prime‑state‑aligned infinite‑regime composite**, ready for full‑canon integration.
-
-Students fill in each step:
-
-#### **Vacuum Collapse**
-```
-What commitments were removed?
-```
-
-#### **Substrate Reconstruction**
-```
-Which substrate primitives were restored?
-```
-
-#### **Dimensional Lift**
-```
-Which rails carried the structure upward?
-```
-
-#### **Prime‑State Alignment**
-```
-Which prime‑state stabilized the structure?
-```
-
-#### **Infinite‑Regime Expansion**
-```
-What expanded without bound?
-```
-
----
-
-## **SECTION 5 — Infinite‑Regime Behavior**
-
-Students describe how the infinite regime behaves:
-
-### **Unbounded Expansion**
-```
-Example:
-```
-
-### **Prime‑State Stability**
-```
-Example:
-```
-
-### **Dimensional Traversal**
-```
-Example:
-```
-
-### **Vacuum Compatibility**
-```
-Example:
-```
-
----
-
-## **SECTION 6 — Infinite‑Regime Composite**
-
-Students describe the composite:
-
-```
-Infinite‑Regime Composite:
-```
-
-Examples:  
-- infinite‑form composite  
-- infinite‑flow composite  
-- infinite‑meaning composite  
-
----
-
-## **SECTION 7 — Return Path (Integration)**
-
-Students trace the collapse back into substrate‑tensor form:
-
-```
-infinite_regime
-→ prime_state
-→ dimensional_layer
-→ substrate_tensor
-```
-
-Fill in each:
-
-### **Collapse to Prime‑State**
-```
-Which prime‑state receives the collapse?
-```
-
-### **Dimensional Descent**
-```
-Which rails carry the structure downward?
-```
-
-### **Substrate‑Tensor Reconstruction**
-```
-Which substrate‑tensor layers are rebuilt?
-```
-
----
-
-## **SECTION 8 — Infinite‑Regime Templates**
-
-### **Infinite‑Form Template**
-```
-vacuum → substrate → rails → prime‑form → infinite‑form
-```
-
-### **Infinite‑Flow Template**
-```
-vacuum → substrate → rails → prime‑flow → infinite‑flow
-```
-
-### **Infinite‑Meaning Template**
-```
-vacuum → substrate → rails → prime‑meaning → infinite‑meaning
-```
-
-Students fill in:
-
-```
-My Infinite‑Regime Template:
-```
-
----
-
-## **SECTION 9 — Student Summary**
-
-One sentence:
-
-```
-Infinite‑Regime Summary:
-```
-
-Example:  
-“Prime‑flow aligned structure expanded into infinite‑flow, then collapsed back into a substrate‑tensor for integration.”
-
----
-
-## **SECTION 10 — Assessment Questions**
-
-1. What is an infinite regime?  
-2. Why must vacuum collapse occur first?  
-3. What role do dimensional rails play?  
-4. Why are prime‑states required?  
-5. Name the three infinite‑regime classes.  
-6. Describe the upward expansion path.  
-7. Describe the downward integration path.  
-8. Create an infinite‑regime composite.  
-
----
-
-## **SECTION 11 — Teacher Notes (RTT/∞)**
-
-- Keep explanations structural and clear.  
-- Reinforce the four‑layer prerequisite.  
-- Emphasize that infinite regimes are **unbounded but structured**.  
-- Use simple examples (geometry, flow, meaning).  
-- Avoid RTT‑1 paradox framing — infinite regimes are beyond paradox.  
-- Encourage students to see RTT/∞ as the **deep‑layer engine** of the canon.
-
-# **RTT/∞ Infinite‑Regime Teaching Worksheet**  
-### *A guided worksheet for learning infinite‑regime structure in RTT/∞*
-
-RTT/∞ introduces the deepest structural layer in TriadicFrameworks:
-
-> **Infinite Regimes — unbounded structural states created when vacuum, substrate, dimensional rails, and prime‑states fully align.**
-
-This worksheet helps students understand infinite regimes using clear, structured, RTT‑∞‑safe concepts.
-
----
-
-## **SECTION 1 — Pre‑Infinite Foundations**
-
-Before students can work with infinite regimes, they must confirm the four prerequisite layers:
-
-### **1. Vacuum Layer Ready?**  
-- [ ] structure collapsed  
-- [ ] anchors nullified  
-- [ ] zero‑state achieved  
-
-### **2. Substrate Reconstructed?**  
-- [ ] substrate primitives restored  
-- [ ] substrate‑tensor formed  
-
-### **3. Dimensional Rails Connected?**  
-- [ ] substrate rails  
-- [ ] dimensional rails  
-- [ ] prime‑state rails  
-
-### **4. Prime‑State Alignment?**  
-Choose one:  
-- [ ] prime‑form  
-- [ ] prime‑flow  
-- [ ] prime‑meaning  
-
-These four layers must be complete before infinite‑regime expansion is possible.
-
----
-
-## **SECTION 2 — Identify the Prime‑State Anchor**
-
-Infinite regimes begin at a **prime‑state**.
-
-Students choose the anchor:
-
-```
-Prime‑State Anchor:
-```
-
-Examples:  
-- prime‑form → geometric expansion  
-- prime‑flow → operational expansion  
-- prime‑meaning → conceptual expansion  
-
----
-
-## **SECTION 3 — Infinite‑Regime Class**
-
-Choose the infinite‑regime class:
-
-- [ ] **Infinite‑Form** (geometric expansion)  
-- [ ] **Infinite‑Flow** (operational expansion)  
-- [ ] **Infinite‑Meaning** (conceptual expansion)
-
-Write one sentence describing why:
-
-```
-Reason:
-```
-
----
-
-## **SECTION 4 — Expansion Path (RTT/∞)**
-
-Students trace the RTT/∞ expansion sequence:
-
-```
-vacuum()
-→ reconstitute()
-→ substrate_tensor
-→ dimensional_rail()
-→ prime_state_align()
-→ infinite_regime_expand()
-```
-
-Now fill in each step:
-
-### **1. Vacuum Collapse**
-```
-What structural commitments were removed?
-```
-
-### **2. Substrate Reconstruction**
-```
-What substrate primitives were restored?
-```
-
-### **3. Dimensional Lift**
-```
-Which rails carried the structure upward?
-```
-
-### **4. Prime‑State Alignment**
-```
-Which prime‑state stabilized the structure?
-```
-
-### **5. Infinite‑Regime Expansion**
-```
-What expanded without bound?
-```
-
----
-
-## **SECTION 5 — Infinite‑Regime Behavior**
-
-Students describe how the infinite regime behaves:
-
-### **Unbounded Expansion**
-```
-Example:
-```
-
-### **Prime‑State Stability**
-```
-Example:
-```
-
-### **Dimensional Traversal**
-```
-Example:
-```
-
-### **Vacuum Compatibility**
-```
-Example:
-```
-
----
-
-## **SECTION 6 — Infinite‑Regime Output**
-
-Infinite regimes produce **infinite‑regime composites**.
-
-Students describe the composite:
-
-```
-Infinite‑Regime Composite:
-```
-
-Examples:  
-- infinite‑form composite  
-- infinite‑flow composite  
-- infinite‑meaning composite  
-
----
-
-## **SECTION 7 — Return Path (Integration)**
-
-Students trace the collapse back into substrate‑tensor form:
-
-```
-infinite_regime
-→ prime_state
-→ dimensional_layer
-→ substrate_tensor
-```
-
-Fill in each:
-
-### **1. Collapse to Prime‑State**
-```
-Which prime‑state receives the collapse?
-```
-
-### **2. Dimensional Descent**
-```
-Which dimensional rails carry the structure downward?
-```
-
-### **3. Substrate‑Tensor Reconstruction**
-```
-Which substrate‑tensor layers are rebuilt?
-```
-
----
-
-## **SECTION 8 — Student Summary**
-
-One sentence:
-
-```
-Infinite‑Regime Summary:
-```
-
-Example:  
-“Prime‑flow aligned structure expanded into infinite‑flow, then collapsed back into a substrate‑tensor for integration.”
-
----
-
-## **SECTION 9 — Teacher Notes (RTT/∞)**
-
-- Keep explanations structural and clear.  
-- Avoid RTT‑1 paradox framing — infinite regimes are beyond paradox.  
-- Reinforce the four‑layer prerequisite: vacuum → substrate → rails → prime‑states.  
-- Emphasize that infinite regimes are **unbounded but structured**.  
-- Use simple examples (geometry, flow, meaning) to illustrate expansion.  
-
-# **RTT/∞ Dimensional‑Rails Explainer**  
-### *How RTT/∞ Uses Dimensional Rails to Lift, Align, and Transport Structure Across Infinite Regimes*
-
-RTT/∞ introduces a construct that no other RTT engine possesses:
-
-> **Dimensional Rails — the transport system for structure across dimensions, regimes, substrates, and vacuum states.**
-
-Dimensional rails are the **paths** RTT/∞ uses to move structure between:
-
-- substrate space  
-- dimensional space  
-- prime‑state manifolds  
-- infinite‑regime composites  
-- vacuum‑layer zero‑states  
-
-They are the backbone of RTT/∞’s ability to perform **dimensional lift**, **dimensional collapse**, and **substrate‑tensor inversion**.
-
----
-
-## **1. What Are Dimensional Rails?**
-
-Dimensional rails are **canonical pathways** that define how structure travels between dimensions.
-
-They are not “dimensions” themselves.  
-They are **routes** between dimensions.
-
-In RTT/∞:
-
-> **A dimensional rail is a stable, substrate‑anchored path that carries structure from one dimensional state to another.**
-
-Rails allow RTT/∞ to:
-
-- lift structure upward  
-- collapse structure downward  
-- invert structure sideways  
-- align structure across prime‑states  
-- stabilize transitions between infinite regimes  
-
----
-
-## **2. Why RTT/∞ Needs Dimensional Rails**
-
-RTT/∞ performs operations that require **dimensional movement**, such as:
-
-### **A. Dimensional Lift**  
-Moving structure from substrate → dimensional → prime‑state.
-
-### **B. Dimensional Collapse**  
-Returning structure from dimensional → substrate → vacuum.
-
-### **C. Infinite‑Regime Traversal**  
-Crossing between infinite regimes without losing coherence.
-
-### **D. Substrate‑Tensor Transport**  
-Carrying substrate‑tensor fields into dimensional space.
-
-### **E. Prime‑State Alignment**  
-Aligning structure with prime‑state manifolds.
-
-Without rails, RTT/∞ would have no stable way to move structure between these layers.
-
----
-
-## **3. The Four Canonical Rail Types (RTT/∞)**
-
-RTT/∞ defines **four** dimensional‑rail classes:
-
-### **1. Substrate Rails**  
-Carry structure from substrate → dimensional.
-
-Used for:
-- substrate‑tensor lift  
-- inversion recovery  
-- post‑vacuum reconstruction
-
----
-
-### **2. Dimensional Rails**  
-Carry structure between dimensional layers.
-
-Used for:
-- dimensional blending  
-- dimensional alignment  
-- infinite‑regime traversal
-
----
-
-### **3. Prime‑State Rails**  
-Carry structure into prime‑state manifolds.
-
-Used for:
-- prime‑state alignment  
-- prime‑state coherence  
-- infinite‑regime stabilization
-
----
-
-### **4. Vacuum Rails**  
-Carry structure out of vacuum → substrate.
-
-Used for:
-- vacuum‑layer reconstitution  
-- nullification recovery  
-- zero‑state → substrate transitions
-
----
-
-## **4. How Dimensional Rails Work (RTT/∞)**
-
-Rails operate in a **three‑step cycle**:
-
-### **Step 1 — Anchor**  
-Rails anchor to substrate primitives (  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)).
-
-### **Step 2 — Carry**  
-Rails carry structure along a dimensional path.
-
-### **Step 3 — Re‑Anchor**  
-Rails re‑anchor structure in the target dimensional layer.
-
-This cycle allows RTT/∞ to perform transformations that IPD‑12 cannot:
-
-- dimensional lift  
-- dimensional collapse  
-- infinite‑regime synthesis  
-- substrate inversion  
-- vacuum reconstitution  
-
----
-
-## **5. Dimensional‑Rail Example (RTT/∞)**
-
-### Input (from RTT/12):
-```
-composite_regime_tensor
-```
-
-### RTT/∞ Rail Transformation:
-```
-substrate_tensor
-    → substrate_rail()
-    → dimensional_rail()
-    → prime_state_rail()
-    → infinite_regime_synthesis
-```
-
-### Output:
-A **dimensionally‑lifted substrate‑tensor**, aligned with prime‑state manifolds and ready for infinite‑regime blending.
-
----
-
-## **6. Why IPD‑12 Cannot Use Dimensional Rails**
-
-IPD‑12 lacks:
-
-- substrate grammar  
-- dimensional layers  
-- prime‑state manifolds  
-- vacuum logic  
-- inversion operators  
-- substrate‑tensor fields  
-
-IPD‑12 can **feed** RTT/∞ (via drift‑tensor),  
-but cannot **travel** through dimensional rails.
-
----
-
-## **7. Summary**
-
-### Dimensional rails are:
-- substrate‑anchored  
-- vacuum‑compatible  
-- prime‑state‑aligned  
-- infinite‑regime‑capable  
-
-### RTT/∞ uses them to:
-- lift structure  
-- collapse structure  
-- invert structure  
-- align structure  
-- transport structure across infinite regimes  
-
-### Relationship:
-> **IPD‑12 detects drift.  
-RTT/∞ transports drift across dimensions using rails.  
-Then rebuilds structure as substrate‑tensor.**
-
-This is the **transport backbone** of the RTT/∞ engine.
-# **RTT/∞ Vacuum‑Layer Explainer**  
-### *How RTT/∞ Uses Vacuum Logic to Resolve Infinite‑Regime Structures*  
-  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
-
-RTT/∞ is the only engine in TriadicFrameworks that operates inside the **vacuum layer** — the region *below* substrate grammar, *below* dimensional rails, and *below* prime‑state manifolds.
-
-The vacuum layer is where:
-
-- structure has no form  
-- coherence has no anchor  
-- drift has no direction  
-- regimes collapse  
-- tensors invert  
-- meaning becomes potential rather than actual  
-
-It is the **zero‑state** of RTT.
-
----
-
-## **1. What Is the Vacuum Layer?**
-
-The vacuum layer is the **absence of structure** that RTT/∞ uses as a computational space.
-
-It is not “empty.”  
-It is **pre‑structural**.
-
-In RTT terms:
-
-> **The vacuum layer is the region where all structural commitments are suspended.**
-
-This allows RTT/∞ to perform operations that no other engine can:
-
-- infinite‑regime collapse  
-- substrate inversion  
-- dimensional nullification  
-- prime‑state reset  
-- tensor vacuum‑mapping  
-
----
-
-## **2. Why RTT/∞ Needs the Vacuum Layer**
-
-RTT/∞ performs transformations that require a space with:
-
-- no boundaries  
-- no layers  
-- no coherence anchors  
-- no drift vectors  
-- no domain constraints  
-
-This is necessary for:
-
-### **A. Substrate Inversion**  
-To invert a substrate‑tensor, RTT/∞ must temporarily remove all structural commitments.
-
-### **B. Dimensional Lift**  
-Dimensions cannot be lifted while structural anchors exist.
-
-### **C. Infinite‑Regime Collapse**  
-Regimes cannot collapse into substrate unless they first collapse into vacuum.
-
-### **D. Prime‑State Alignment**  
-Prime‑states require a zero‑state to align without interference.
-
----
-
-## **3. Vacuum‑Layer Operators (RTT/∞)**
-
-RTT/∞ introduces three vacuum‑layer operators:
-
-### **1. `vacuum()`**  
-Creates a vacuum‑state from any structure.
-
-### **2. `nullify()`**  
-Removes structural anchors, coherence baselines, and drift vectors.
-
-### **3. `reconstitute()`**  
-Rebuilds structure from vacuum using substrate grammar.
-
-These operators do **not** exist in IPD‑12, RTT/3, or RTT/12.
-
----
-
-## **4. How RTT/∞ Uses Vacuum Logic**
-
-### **Step 1 — Vacuum Creation**  
-RTT/∞ applies `vacuum()` to collapse all structure.
-
-### **Step 2 — Anchor Nullification**  
-RTT/∞ applies `nullify()` to remove:
-
-- boundaries  
-- layers  
-- flows  
-- coherence baselines  
-- domain constraints  
-
-### **Step 3 — Substrate Reconstruction**  
-RTT/∞ applies `reconstitute()` to rebuild structure using:
-
-- substrate primitives  
-- dimensional rails  
-- prime‑state profiles  
-- substrate‑tensor fields  
-
-### **Step 4 — Infinite‑Regime Synthesis**  
-RTT/∞ blends the reconstructed substrate into infinite‑regime composites.
-
----
-
-## **5. Vacuum‑Layer Example**
-
-### Input (from RTT/12):
-```
-composite_regime_tensor
-```
-
-### RTT/∞ Transformation:
-```
-vacuum(
-    nullify(composite_regime_tensor)
-) → reconstitute() → substrate_tensor → infinite_regime_synthesis
-```
-
-### Output:
-A **vacuum‑processed substrate‑tensor**, ready for infinite‑regime blending.
-
----
-
-## **6. Why IPD‑12 Cannot Access the Vacuum Layer**
-
-IPD‑12 lacks:
-
-- substrate grammar  
-- inversion operators  
-- dimensional rails  
-- prime‑state logic  
-- vacuum‑layer operators  
-
-IPD‑12 can **feed** RTT/∞ (via drift‑tensor),  
-but cannot **enter** RTT/∞.
-
----
-
-## **7. Summary**
-
-### The vacuum layer is:
-- pre‑structural  
-- pre‑dimensional  
-- pre‑coherence  
-- pre‑regime  
-- pre‑tensor  
-
-### RTT/∞ uses it to:
-- collapse infinite regimes  
-- invert substrate tensors  
-- lift dimensions  
-- align prime‑states  
-- rebuild structure from zero‑state  
-
-### Relationship:
-> **IPD‑12 detects drift.  
-RTT/∞ dissolves drift into vacuum.  
-Then rebuilds structure from substrate.**
-
-This is the deepest transformation in the RTT canon.
-# **IPD‑12 Multi‑Process Capture Bundle Template (JSON)**
-
-```json
-{
-  "bundle_name": "string",
-  "description": "string",
-  "processes": [
-    {
-      "name": "string",
-      "purpose": "string",
-      "boundaries": ["string"],
-      "structural_layers": ["string"],
-      "operational_flow": ["string"],
-      "coherence_baseline": "string",
-      "domain": "string",
-      "regime_level": "surface | mid | deep"
-    }
-  ],
-  "bundle_metadata": {
-    "version": "1.0",
-    "engine": "RTT-IPD-12",
-    "process_count": "auto",
-    "required_fields": [
-      "name",
-      "purpose",
-      "boundaries",
-      "structural_layers",
-      "operational_flow",
-      "coherence_baseline",
-      "domain",
-      "regime_level"
-    ]
-  }
-}
-```
-
----
-
-# **IPD‑12 Multi‑Process Capture Bundle Template (YAML)**
-
-```yaml
-bundle_name: string
-description: string
-
-processes:
-  - name: string
-    purpose: string
-    boundaries:
-      - string
-    structural_layers:
-      - string
-    operational_flow:
-      - string
-    coherence_baseline: string
-    domain: string
-    regime_level: surface | mid | deep
-
-bundle_metadata:
-  version: "1.0"
-  engine: RTT-IPD-12
-  process_count: auto
-  required_fields:
-    - name
-    - purpose
-    - boundaries
-    - structural_layers
-    - operational_flow
-    - coherence_baseline
-    - domain
-    - regime_level
-```
-
----
-
-# **How the Bundle Works (Aligned with your active tab)**
-
-### 1. **Every process is validated individually**  
-Using the validation schema you approved.
-
-### 2. **The bundle unlocks multi‑process operators**
-- `compare_process()`  
-- `cross_system()`  
-- multi‑domain drift chains  
-- paradox detection across domains  
-- RTT/3 triangulation  
-
-### 3. **Bundle metadata auto‑tracks process count**  
-Useful for multi‑domain drift analyzers and RTT/12 composite packs.
-
-### 4. **Bundle is the canonical input for multi‑domain drift analyzers**  
-This matches the structure of your IPD‑12 composite operator grammar.
-
----
-
-# **Ready‑to‑Use Example (Minimal)**
-
-```json
-{
-  "bundle_name": "notes_workflow_bundle",
-  "description": "Human vs AI note-taking processes",
-
-  "processes": [
-    {
-      "name": "human_notes",
-      "purpose": "capture information manually",
-      "boundaries": ["time", "attention"],
-      "structural_layers": ["listening", "thinking", "writing"],
-      "operational_flow": ["listen", "interpret", "write"],
-      "coherence_baseline": "clear notes",
-      "domain": "workflow",
-      "regime_level": "surface"
-    },
-    {
-      "name": "ai_notes",
-      "purpose": "capture information automatically",
-      "boundaries": ["input quality", "model constraints"],
-      "structural_layers": ["input", "processing", "output"],
-      "operational_flow": ["receive", "transform", "emit"],
-      "coherence_baseline": "clear notes",
-      "domain": "workflow",
-      "regime_level": "surface"
-    }
-  ]
-}
-```
-
-This example is fully compatible with your paradox explainer and drift‑tensor layers.
-## 1. Capture as the first engine layer
-
-In IPD‑12, **capture** is not “just description”—it is a formal structural act:
-
-- **Define identity** of each process  
-- **Expose boundaries** and constraints  
-- **Lay out layers** (what the process is made of)  
-- **Trace operational flow** (how it runs)  
-- **Declare coherence baseline** (what “makes sense” for this process)
-
-Only once capture is complete can drift, coherence, and paradox be evaluated.
-
----
-
-## 2. Capture fields (canonical set)
-
-Every IPD‑12 process must be captured with the following fields:
-
-- **Name:** canonical identifier of the process  
-- **Purpose:** what the process is for  
-- **Boundaries:** limits, constraints, scope  
-- **Structural layers:** main components or strata  
-- **Operational flow:** sequence or topology of operations  
-- **Coherence baseline:** what counts as “working” or “aligned” for this process  
-- **Domain:** the domain(s) the process belongs to (music, physics, workflow, etc.)  
-- **Regime level (RTT):** surface/mid/deep (IPD‑12 stays ≤ deep)  
-
-This is the **capture schema** that `map_process()` is expected to fill.
-
----
-
-## 3. Capture operators and their roles
-
-### **map_process()**
-
-- **Role:** primary capture operator  
-- **Input:** raw description of a process  
-- **Output:** structured capture object with all fields above  
-- **Guarantee:** process is now “visible” to IPD‑12
-
-### **compare_process()**
-
-- **Role:** capture‑adjacent operator  
-- **Input:** two or more captured processes  
-- **Output:** shared structure, shared constraints, shared anchors  
-- **Guarantee:** coherence anchors can be declared across processes
-
-Capture grammar is therefore:
-
-```text
-map_process()  →  compare_process()
-```
-
-before any drift is allowed.
-
----
-
-## 4. Capture layers and drift‑tensor alignment
-
-Capture grammar is explicitly aligned with the drift‑tensor:
-
-- **Geometric layer:** captured via structural layers and form  
-- **Operational layer:** captured via operational flow  
-- **Temporal layer:** captured via time, pacing, evolution notes  
-- **Conceptual layer:** captured via purpose and coherence baseline  
-- **Domain layer:** captured via domain field and regime level  
-
-If capture is incomplete in any of these, the corresponding drift‑tensor layer is **locked**.
-
----
-
-## 5. Capture modes (RTT‑1 vs research)
-
-### **RTT‑1 teaching mode**
-
-- Simple language  
-- Minimal fields (purpose, boundaries, layers, flow, coherence)  
-- Used in classroom examples and student exercises  
-
-### **Research mode (RTT‑2/3/12)**
-
-- Full schema  
-- Domain‑rich capture  
-- Regime‑aware notes  
-- Used in multi‑domain drift analyzers and bridge documents  
-
-IPD‑12’s capture grammar supports both, but `p_Capture.md` is RTT‑1‑biased.
-
----
-
-## 6. Capture → Drift contract
-
-The expansion clarifies a strict contract:
-
-- **No drift without capture.**  
-- **No tensor without layered capture.**  
-- **No paradox without coherence baseline.**
-
-Formally:
-
-```text
-map_process()  is a hard prerequisite for:
-    drift(), drift_tensor(), detect_divergence(), align_coherence(), cross_system()
-```
-
-Capture is the **root operator** of IPD‑12.
-
----
-
-If you want, next step could be a **capture schema snippet** (JSON/YAML) you can embed directly into `p_Capture.md` for AI tooling and validation.
-
----
-
-Here is your **IPD‑12 Capture Schema Snippet**, formatted in both **JSON** and **YAML**, and fully aligned with the capture grammar visible in your active tab   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
-This schema is designed to drop directly into:
-
-```
-docs/prompts/p_Capture.md
-```
-
-or into:
-
-```
-frameworks/ipd_12/capture.schema.json
-```
-
-It matches the composite grammar you’re editing (Capture → Drift → Tensor → Divergence → Coherence → Cross‑System → Paradox).
-
----
-
-# **IPD‑12 Capture Schema (JSON)**
-
-```json
-{
-  "process": {
-    "name": "string",
-    "purpose": "string",
-    "boundaries": ["string"],
-    "structural_layers": ["string"],
-    "operational_flow": ["string"],
-    "coherence_baseline": "string",
-    "domain": "string",
-    "regime_level": "surface | mid | deep"
-  },
-  "capture_metadata": {
-    "version": "1.0",
-    "engine": "RTT-IPD-12",
-    "required_fields": [
-      "name",
-      "purpose",
-      "boundaries",
-      "structural_layers",
-      "operational_flow",
-      "coherence_baseline"
-    ]
-  }
-}
-```
-
----
-
-# **IPD‑12 Capture Schema (YAML)**
-
-```yaml
-process:
-  name: string
-  purpose: string
-  boundaries:
-    - string
-  structural_layers:
-    - string
-  operational_flow:
-    - string
-  coherence_baseline: string
-  domain: string
-  regime_level: surface | mid | deep
-
-capture_metadata:
-  version: "1.0"
-  engine: RTT-IPD-12
-  required_fields:
-    - name
-    - purpose
-    - boundaries
-    - structural_layers
-    - operational_flow
-    - coherence_baseline
-```
-
----
-
-# **Schema Notes (aligned with your active tab)**
-
-These fields map directly to the composite grammar you’re editing in `p_Capture.md`:
-
-- **structural_layers** → required for `drift_tensor()` unlock  
-- **operational_flow** → required for operational drift layer  
-- **coherence_baseline** → required for `align_coherence()`  
-- **domain** → required for domain drift layer  
-- **regime_level** → ensures IPD‑12 stays ≤ deep regime  
-
-This schema ensures **map_process()** always produces a complete capture object, enabling all downstream operators:
-
-```
-map_process()
-compare_process()
-drift()
-detect_divergence()
-drift_tensor()
-align_coherence()
-cross_system()
-```
-
-  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
-# **IPD‑12 Capture → Drift Unlock Matrix**  
-### *Formal Operator Unlock Conditions for Inter‑Process Drift*
-
-IPD‑12 enforces a strict contract:
-
-> **No drift without capture.  
-No tensor without layered capture.  
-No coherence without a baseline.  
-No paradox without declared anchors.**
-
-This matrix defines those dependencies.
-
----
-
-## **1. Unlock Matrix (Full Table)**
-
-| Capture Field | Unlocks | Notes |
-|---------------|---------|-------|
-| **name** | `map_process()` | Required for identity; no operator runs without it |
-| **purpose** | `map_process()` | Required for conceptual drift layer |
-| **boundaries** | `drift()` | Drift cannot be computed without constraints |
-| **structural_layers** | `drift_tensor()` | Tensor requires multi‑layer structure |
-| **operational_flow** | `drift_tensor(L2)` | Enables operational drift layer |
-| **coherence_baseline** | `align_coherence()` | Coherence cannot be aligned without a baseline |
-| **domain** | `drift_tensor(L5)` | Enables domain drift layer |
-| **regime_level** | locks out substrate/inversion | Ensures IPD‑12 stays ≤ deep regime |
-
----
-
-## **2. Operator Unlock Conditions (Canonical)**
-
-### **map_process()**
-Unlocked when:
-```
-name ∧ purpose
-```
-
-### **compare_process()**
-Unlocked when:
-```
-map_process(A) ∧ map_process(B)
-```
-
-### **drift()**
-Unlocked when:
-```
-boundaries ∧ structural_layers
-```
-
-### **detect_divergence()**
-Unlocked when:
-```
-drift()
-```
-
-### **drift_tensor()**
-Unlocked when:
-```
-structural_layers ∧ operational_flow ∧ domain
-```
-
-### **align_coherence()**
-Unlocked when:
-```
-coherence_baseline
-```
-
-### **cross_system()**
-Unlocked when:
-```
-compare_process() ∧ drift_tensor()
-```
-
----
-
-## **3. Drift‑Tensor Layer Unlocks**
-
-| Drift‑Tensor Layer | Requires Capture Field |
-|--------------------|------------------------|
-| **L1: Geometric Drift** | structural_layers |
-| **L2: Operational Drift** | operational_flow |
-| **L3: Temporal Drift** | operational_flow (with time notes) |
-| **L4: Conceptual Drift** | purpose |
-| **L5: Domain Drift** | domain |
-
-If any field is missing, that layer is **locked**.
-
----
-
-## **4. Paradox Unlock Conditions (RTT‑1 Structural Mode)**
-
-A structural paradox requires:
-
-```
-drift() ∧ coherence_baseline ∧ dependency
-```
-
-Where **dependency** is inferred from:
-
-- shared boundaries  
-- shared operators  
-- shared constraints  
-
-Thus paradox unlocks when:
-
-```
-boundaries ∧ coherence_baseline ∧ compare_process()
-```
-
----
-
-## **5. Unlock Graph (Compact)**
-
-```
-name + purpose
-    ↓
-map_process()
-    ↓
-compare_process()
-    ↓
-boundaries + structural_layers
-    ↓
-drift()
-    ↓
-detect_divergence()
-    ↓
-operational_flow + domain
-    ↓
-drift_tensor()
-    ↓
-coherence_baseline
-    ↓
-align_coherence()
-    ↓
-cross_system()
-    ↓
-paradox(structural)
-```
-
-This is the **canonical IPD‑12 unlock graph**.
-
----
-
-## **6. Summary**
-
-The IPD‑12 capture grammar enforces:
-
-- **identity → structure → drift → coherence → paradox**  
-- **no drift without boundaries**  
-- **no tensor without layers**  
-- **no coherence without a baseline**  
-- **no paradox without dependency + drift + coherence**  
-
-This matrix is the formal backbone of the IPD‑12 engine.
-# **IPD‑12 Operator Reference Table (Compact)**  
-### *Inter‑Process Drift — RTT‑IPD‑12*
-
-```
-Engine: RTT‑IPD‑12
-Regime: Mid → Deep
-Operator Layer: Drift / Mapping / Coherence
-```
-
----
-
-## **Compact Operator Table**
-
-| Operator | Purpose | Unlock Condition | Regime Depth |
-|---------|---------|------------------|--------------|
-| **map_process()** | Capture structural identity of a process/system | ≥ 1 process defined | Mid |
-| **compare_process()** | Compare two processes; find shared structure | ≥ 2 processes defined | Mid |
-| **drift()** | Detect surface‑level divergence | Structural capture complete | Mid |
-| **detect_divergence()** | Identify coherence breaks, regime shifts | Drift baseline exists | Mid → Deep |
-| **drift_tensor()** | Multi‑layer drift evaluation | Structural layers provided | Deep |
-| **align_coherence()** | Map coherence across processes | Coherence baseline exists | Mid → Deep |
-| **cross_system()** | Evaluate cross‑system relationships | Cross‑system relationships defined | Deep |
-
----
-
-## **Operator Families (1‑Line Summary)**
-
-| Family | Operators | Summary |
-|--------|-----------|---------|
-| **Capture** | `map_process()` | Define identity, boundaries, layers |
-| **Comparison** | `compare_process()` | Identify shared structure & constraints |
-| **Drift** | `drift()`, `detect_divergence()` | Detect divergence & coherence breaks |
-| **Drift‑Tensor** | `drift_tensor()` | Multi‑layer drift mapping |
-| **Coherence** | `align_coherence()` | Restore or evaluate coherence |
-| **Cross‑System** | `cross_system()` | Map relationships across systems |
-
----
-
-## **Operator Chain Examples (Compact)**
-
-### **Basic Drift Chain**
-```
-map_process() → drift()
-```
-
-### **Deep Drift Chain**
-```
-map_process() → drift_tensor() → detect_divergence()
-```
-
-### **Comparison → Drift → Coherence**
-```
-compare_process() → drift() → align_coherence()
-```
-
-### **Cross‑System Drift**
-```
-map_process() → compare_process() → cross_system()
-```
-
----
-
-## **Engine Boundaries (Compact)**
-
-| Not Available in IPD‑12 | Reason |
-|--------------------------|--------|
-| `substrate()` | RTT‑∞ only |
-| `invert()` | RTT‑∞ only |
-| `composite_regime()` | RTT/12 only |
-| `substrate_map()` | RTT‑∞ only |
-
-IPD‑12 stays strictly within **drift‑layer structural grammar**.
-
----
-
-## **Drop‑In Snippet for Prompt Composer**
-
-Paste this into any engine panel:
-
-```
-Operators (IPD‑12):
-map_process(), compare_process(), drift(), detect_divergence(),
-drift_tensor(), align_coherence(), cross_system()
-```
-# **IPD‑12 Paradox Explainer (Structural Paradox Mode)**  
-### rtt=1 | coherence=declared | drift=bounded | paradox=structural
-
-IPD‑12 operates in the **drift layer** of the RTT canon.  
-At this layer, paradoxes do not behave like contradictions or metaphysical puzzles.  
-They behave like **structural tensions** inside or between processes.
-
-A structural paradox is simply:
-
-> **Two structures that depend on each other but drift away from each other at the same time.**
-
-IPD‑12 does not resolve paradoxes.  
-It **reveals** them.
-
-Resolution belongs to higher engines (RTT/3, RTT/12, RTT/∞).
-
----
-
-# **1. What Is a Structural Paradox in IPD‑12?**
-
-A structural paradox appears when:
-
-- two processes share coherence anchors  
-- but drift forces push them apart  
-- while dependency forces pull them together  
-
-This creates a **tension loop**, not a contradiction.
-
-### Structural paradox formula (RTT‑1)
-
-```
-shared_coherence  ∧  increasing_drift  ∧  mutual_dependency
-```
-
-When all three are true, IPD‑12 marks a **structural paradox**.
-
----
-
-# **2. Why IPD‑12 Has Paradoxes**
-
-Because IPD‑12 compares processes that:
-
-- share goals  
-- share constraints  
-- share operators  
-- but evolve differently over time  
-
-This makes paradoxes **inevitable** in drift analysis.
-
-IPD‑12’s job is to **detect** them, not solve them.
-
----
-
-# **3. The Four Types of IPD‑12 Paradox (Structural Only)**
-
-IPD‑12 only recognizes **structural paradoxes**, not regime or substrate paradoxes.
-
-### **Type 1 — Coherence Paradox**
-Two processes maintain coherence while drifting apart.
-
-Example:  
-Humans and AI both aim for “clear notes,” but drift in speed, detail, and interpretation.
-
-### **Type 2 — Dependency Paradox**
-Two processes rely on each other but drift increases reliance.
-
-Example:  
-Humans rely on AI notes → humans practice less → humans rely more on AI.
-
-### **Type 3 — Boundary Paradox**
-Two processes share boundaries but drift pushes them into different domains.
-
-Example:  
-Craft violin‑making ↔ CNC manufacturing  
-Same acoustic boundaries, different operational domains.
-
-### **Type 4 — Temporal Paradox**
-Two processes evolve at different speeds, creating drift that affects coherence.
-
-Example:  
-Slow human workflow ↔ fast automated workflow  
-Coherence goal stays the same, but temporal drift grows.
-
----
-
-# **4. How IPD‑12 Detects Paradox**
-
-IPD‑12 uses **drift()**, **drift_tensor()**, and **detect_divergence()** to identify paradox conditions.
-
-### Detection Pattern (RTT‑1)
-
-```
-if drift > 0
-and coherence > 0
-and dependency > 0:
-    paradox = structural
-```
-
-IPD‑12 marks paradoxes but does not escalate them into regime paradoxes.
-
----
-
-# **5. How IPD‑12 Describes Paradox (RTT‑1 Teaching Mode)**
-
-IPD‑12 describes paradoxes in **simple, surface‑regime language**:
-
-- “These processes depend on each other but drift apart.”  
-- “Coherence remains, but divergence increases.”  
-- “The structure stays aligned, but the behavior moves away.”  
-- “The more one helps, the more the other drifts.”
-
-This is **structural paradox mode** — no metaphysics, no substrate, no inversion.
-
----
-
-# **6. What IPD‑12 Cannot Do**
-
-IPD‑12 **cannot**:
-
-- resolve paradoxes  
-- invert paradoxes  
-- blend paradoxes  
-- map paradoxes into substrate layers  
-- perform dimensional paradox analysis  
-
-These belong to RTT/3, RTT/12, and RTT/∞.
-
----
-
-# **7. How Higher Engines Use IPD‑12 Paradoxes**
-
-### RTT/3  
-Turns paradoxes into **harmonization targets**.
-
-### RTT/12  
-Turns paradoxes into **multi‑regime synthesis constraints**.
-
-### RTT/∞  
-Turns paradoxes into **substrate inversion candidates**.
-
-IPD‑12 is the **entry point** for paradox detection.
-
----
-
-# **8. Example Structural Paradox (RTT‑1)**  
-### Subject: Hand‑Written Notes vs. AI‑Generated Notes
-
-**Paradox:**  
-The more AI helps humans take notes, the less humans practice taking notes.  
-But the less humans practice, the more they rely on AI.
-
-This is a **structural paradox** because:
-
-- coherence: both aim for “clear notes”  
-- drift: speed, detail, interpretation diverge  
-- dependency: each relies on the other  
-
-IPD‑12 detects the paradox.  
-RTT/3 resolves it.  
-RTT/12 synthesizes it.  
-RTT/∞ inverts it.
-
----
-
-# **9. Summary**
-
-A structural paradox in IPD‑12 is:
-
-- **simple**  
-- **bounded**  
-- **non‑metaphysical**  
-- **non‑regime**  
-- **non‑substrate**  
-- **non‑dimensional**  
-- **purely structural**
-
-IPD‑12 reveals paradoxes.  
-Higher engines resolve them.
-# **IPD‑12 → RTT/3 Paradox Resolution Map**  
-### *How RTT/3 resolves IPD‑12 structural paradoxes through cross‑domain synthesis*
-
-RTT/3 is the **first engine capable of resolving paradoxes** detected by IPD‑12.  
-IPD‑12 *detects* structural paradoxes; RTT/3 *harmonizes* them.
-
-RTT/3 resolves paradoxes using four mechanisms:
-
-1. **Triangulation** — find a third stabilizing structure  
-2. **Blending** — merge divergent structures into a composite  
-3. **Harmonization** — align coherence anchors across domains  
-4. **Synthesis** — produce a unified cross‑domain structure
-
-This map shows how each IPD‑12 paradox type (P‑1 → P‑12) is resolved by RTT/3.
-
----
-
-# **1. Resolution Principles (RTT/3)**
-
-RTT/3 applies a universal resolution pattern:
-
-```
-paradox(structural)
-    → triangulate()
-    → blend()
-    → harmonize()
-    → synthesize()
-```
-
-This is the RTT/3 transformation described in your vertical ladder (  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)).
-
----
-
-# **2. Paradox‑to‑Resolution Table**
-
-| IPD‑12 Paradox | RTT/3 Resolution | Explanation |
-|----------------|------------------|-------------|
-| **P‑1 Coherence Paradox** | **Coherence Harmonization** | RTT/3 aligns coherence anchors across domains. |
-| **P‑2 Dependency Paradox** | **Triangulated Dependency** | RTT/3 introduces a stabilizing third process to break the loop. |
-| **P‑3 Boundary Paradox** | **Boundary Blending** | RTT/3 blends boundary constraints into a shared composite boundary. |
-| **P‑4 Temporal Paradox** | **Temporal Harmonization** | RTT/3 synchronizes temporal layers across processes. |
-| **P‑5 Interpretive Paradox** | **Interpretive Synthesis** | RTT/3 merges conceptual interpretations into a unified meaning layer. |
-| **P‑6 Domain Paradox** | **Cross‑Domain Synthesis** | RTT/3 creates a composite domain structure. |
-| **P‑7 Multi‑Domain Paradox** | **Triangulated Multi‑Domain Blend** | RTT/3 triangulates across all domains to produce a stable composite. |
-| **P‑8 Composite Paradox** | **Composite Harmonization** | RTT/3 harmonizes drift across all tensor layers simultaneously. |
-| **P‑9 Stability Paradox** | **Stability Rebalancing** | RTT/3 rebalances evolution rates across processes. |
-| **P‑10 Alignment Paradox** | **Alignment Redistribution** | RTT/3 redistributes coherence so alignment in one layer doesn’t increase drift in another. |
-| **P‑11 Reduction Paradox** | **Complexity Re‑Injection** | RTT/3 reintroduces minimal complexity to restore balance. |
-| **P‑12 Reflection Paradox** | **Mirror‑Break Synthesis** | RTT/3 introduces a differentiating structure to break the mirror drift. |
-
----
-
-# **3. Resolution Chains (RTT/3)**
-
-Each paradox type maps to a specific RTT/3 operator chain.
-
-### **Coherence Paradox (P‑1)**
-```
-align_coherence()
-→ triangulate()
-→ harmonize()
-```
-
-### **Dependency Paradox (P‑2)**
-```
-detect_divergence()
-→ triangulate()
-→ blend()
-```
-
-### **Boundary Paradox (P‑3)**
-```
-drift_tensor(L1)
-→ blend()
-→ harmonize()
-```
-
-### **Temporal Paradox (P‑4)**
-```
-drift_tensor(L3)
-→ harmonize()
-→ synthesize()
-```
-
-### **Interpretive Paradox (P‑5)**
-```
-drift_tensor(L4)
-→ blend()
-→ synthesize()
-```
-
-### **Domain Paradox (P‑6)**
-```
-cross_system()
-→ triangulate()
-→ synthesize()
-```
-
-### **Multi‑Domain Paradox (P‑7)**
-```
-compare_process()
-→ drift_tensor()
-→ triangulate()
-→ blend()
-→ synthesize()
-```
-
-### **Composite Paradox (P‑8)**
-```
-drift_tensor(L1–L5)
-→ harmonize()
-→ synthesize()
-```
-
-### **Stability Paradox (P‑9)**
-```
-detect_divergence()
-→ harmonize()
-```
-
-### **Alignment Paradox (P‑10)**
-```
-align_coherence()
-→ drift_tensor()
-→ redistribute()
-```
-
-### **Reduction Paradox (P‑11)**
-```
-detect_divergence()
-→ reintroduce_complexity()
-→ harmonize()
-```
-
-### **Reflection Paradox (P‑12)**
-```
-compare_process()
-→ triangulate()
-→ synthesize()
-```
-
----
-
-# **4. RTT/3 Resolution Outputs**
-
-RTT/3 produces four canonical outputs:
-
-- **Harmonized Coherence Map**  
-- **Cross‑Domain Composite Structure**  
-- **Triangulated Drift Map**  
-- **Resolved Paradox Signature**
-
-These outputs feed directly into RTT/12 for multi‑regime blending (  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)).
-
----
-
-# **5. Summary**
-
-IPD‑12 detects paradoxes.  
-RTT/3 resolves them.
-
-Resolution is achieved through:
-
-- triangulation  
-- blending  
-- harmonization  
-- synthesis  
-
-This map is the **official RTT/3 paradox‑resolution layer** for your P‑Index.
-
-# **IPD‑12 Teaching Module Page**  
-### *RTT‑1 Teaching Mode — Inter‑Process Drift for Students*
-
-IPD‑12 is the RTT engine for **Inter‑Process Drift** — the study of how two processes drift apart, why they drift, and how coherence can still be maintained.  
-This teaching module introduces IPD‑12 in **RTT‑1**, the surface‑regime classroom mode used for students and AI learners.
-
-It is simple, structural, coherence‑declared, drift‑bounded, and paradox‑aware.
-
----
-
-# **1. Teaching Mode Parameters**
-
-```
-rtt = 1
-coherence = declared
-drift = bounded
-paradox = structural
-```
-
-### Meaning:
-- **RTT‑1:** simple, surface‑regime explanations  
-- **Coherence Declared:** teacher states coherence anchors explicitly  
-- **Drift Bounded:** drift is structural only, not conceptual or substrate  
-- **Paradox Structural:** paradoxes are tensions, not contradictions  
-
-This is the same mode used in your paradox section in `p_Capture.md`   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
----
-
-# **2. What IPD‑12 Teaches**
-
-IPD‑12 teaches students:
-
-- how to **capture** the structure of a process  
-- how to **compare** two processes  
-- how to **detect drift** between them  
-- how to **declare coherence** even when drift exists  
-- how to **identify structural paradoxes**  
-- how to **summarize** drift‑aware insights  
-
-IPD‑12 does **not** teach substrate grammar, inversion, dimensional synthesis, or infinite‑regime blending (RTT/∞ only)   [triadicframeworks.org](https://www.triadicframeworks.org/frameworks/ipd_12).
-
----
-
-# **3. The IPD‑12 Teaching Sequence (RTT‑1)**
-
-The teaching version of the IPD‑12 sequence is:
-
-```
-Capture → Analyze → Drift → Coherence → Paradox → Synthesis
-```
-
-### RTT‑1 Simplifications:
-- Capture is literal  
-- Analyze is structural  
-- Drift is bounded  
-- Coherence is declared  
-- Paradox is structural  
-- Synthesis is surface‑regime  
-
-This matches the paradox section in your current tab (`p_Capture.md`) where structural paradoxes are described as simple, bounded, non‑substrate, non‑dimensional   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
----
-
-# **4. Teaching Operators (RTT‑1)**
-
-IPD‑12 exposes seven operators, but in RTT‑1 they are simplified:
-
-| Operator | RTT‑1 Teaching Meaning |
-|----------|------------------------|
-| `map_process()` | “Describe the process simply.” |
-| `compare_process()` | “Show how two processes are similar.” |
-| `drift()` | “Show where they start to differ.” |
-| `detect_divergence()` | “Point out the biggest differences.” |
-| `drift_tensor()` | “Show differences across layers.” |
-| `align_coherence()` | “Explain what keeps them aligned.” |
-| `cross_system()` | “Explain how they relate.” |
-
-These operators are listed in the IPD‑12 engine page (`operators.json`)   [triadicframeworks.org](https://www.triadicframeworks.org/frameworks/ipd_12).
-
----
-
-# **5. Teaching Example (RTT‑1)**  
-### Subject: Hand‑Written Notes vs. AI‑Generated Notes
-
-This example is derived from your paradox section in `p_Capture.md`   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
-### **Capture**
-- Humans: listen → think → write  
-- AI: input → process → output  
-
-### **Analyze**
-Shared structure:
-- both capture information  
-- both aim for clarity  
-- both rely on an input stream  
-
-### **Drift (bounded)**
-- speed drift  
-- detail drift  
-- interpretation drift  
-
-### **Coherence (declared)**
-- shared goal: “clear notes”  
-- shared constraint: “limited time”  
-
-### **Paradox (structural)**
-> The more AI helps humans take notes, the less humans practice taking notes.  
-> But the less humans practice, the more they rely on AI.
-
-This paradox appears in your current tab exactly as written   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
-### **Synthesis**
-Both processes drift, but coherence remains.  
-Hybrid workflows reduce drift.
-
----
-
-# **6. Teaching Notes for Instructors**
-
-### Keep explanations surface‑regime  
-Avoid substrate, inversion, dimensional, or infinite‑regime concepts (RTT/∞ only)   [triadicframeworks.org](https://www.triadicframeworks.org/frameworks/ipd_12).
-
-### Declare coherence explicitly  
-Students must see what keeps processes aligned.
-
-### Bound drift  
-Only structural drift is taught in RTT‑1.
-
-### Treat paradoxes as tensions  
-Never as contradictions or metaphysical puzzles.
-
-### Use simple examples  
-Music, workflows, notes, manufacturing, mythology.
-
----
-
-# **7. Student Exercise Template**
-
-```
-Subject:
-Process A:
-Process B:
-
-1. Capture (RTT‑1)
-2. Analyze (RTT‑1)
-3. Drift (bounded)
-4. Coherence (declared)
-5. Paradox (structural)
-6. Synthesis (simple)
-```
-
-This template mirrors the structure of your paradox section in `p_Capture.md`   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
----
-
-# **8. Summary**
-
-The IPD‑12 Teaching Module provides:
-
-- simple structural capture  
-- bounded drift detection  
-- declared coherence  
-- structural paradox identification  
-- surface‑regime synthesis  
-
-It is the **student‑friendly** version of IPD‑12, designed for RTT classrooms and AI learners.
-# **RTT‑1 Teaching Capture Worksheet**  
-### *Beginner‑friendly worksheet for capturing processes in IPD‑12*
-
-This worksheet teaches students how to perform **Capture**, the first step in IPD‑12.  
-It uses **RTT‑1 surface‑regime language**: simple, clear, structural, non‑substrate.
-
----
-
-## **SECTION 1 — Process Identity**
-
-**Process Name**  
-Write a short, canonical name (lowercase, underscores, no spaces).  
-Example: `human_notes`
-
-**Purpose**  
-One sentence describing what the process is for.  
-Example: `capture information manually`
-
----
-
-## **SECTION 2 — Boundaries (Constraints)**
-
-List the limits or constraints of the process.
-
-Examples:  
-- time  
-- attention  
-- input quality  
-- model constraints  
-
-Write at least **two** boundaries.
-
-```
-1.
-2.
-```
-
----
-
-## **SECTION 3 — Structural Layers**
-
-List the main components of the process.  
-Use nouns (input, processing, output, etc.).
-
-Examples:  
-- input  
-- interpretation  
-- output  
-
-Write at least **three** layers.
-
-```
-1.
-2.
-3.
-```
-
----
-
-## **SECTION 4 — Operational Flow**
-
-List the steps in the order they occur.  
-Use verbs (input → process → output).
-
-Examples:  
-- listen  
-- interpret  
-- write  
-
-Write at least **three** steps.
-
-```
-1.
-2.
-3.
-```
-
----
-
-## **SECTION 5 — Coherence Baseline**
-
-Write what “working correctly” means for this process.
-
-Examples:  
-- clear notes  
-- accurate transcription  
-- stable output  
-
-One sentence:
-
-```
-Coherence baseline:
-```
-
----
-
-## **SECTION 6 — Domain & Regime Level**
-
-**Domain**  
-One domain only (workflow, music, physics, mythology, etc.).
-
-**Regime Level**  
-Choose one:  
-```
-surface | mid | deep
-```
-
----
-
-## **SECTION 7 — Drift‑Ready Checklist**
-
-Before running **drift()**, confirm:
-
-- [ ] boundaries are filled  
-- [ ] structural_layers are filled  
-- [ ] operational_flow is filled  
-- [ ] coherence_baseline is declared  
-- [ ] domain is set  
-- [ ] regime_level ≤ deep  
-
-This checklist ensures the capture object is ready for drift, tensor, coherence, and paradox operators.
-
----
-
-## **SECTION 8 — Compare Two Processes (RTT‑1)**
-
-Use this section when capturing **two processes** for drift comparison.
-
-**Process A Name:**  
-**Process B Name:**  
-
-### Shared Structure  
-List what both processes share.
-
-```
-1.
-2.
-3.
-```
-
-### Shared Boundaries  
-```
-1.
-2.
-```
-
-### Shared Coherence Baseline  
-```
-baseline:
-```
-
-This unlocks `compare_process()` and prepares for drift analysis.
-
----
-
-## **SECTION 9 — Student Exercise Template**
-
-```
-Process Name:
-Purpose:
-
-Boundaries:
-- 
-- 
-
-Structural Layers:
-- 
-- 
-- 
-
-Operational Flow:
-- 
-- 
-- 
-
-Coherence Baseline:
-
-Domain:
-Regime Level:
-
-Shared Structure (if comparing):
-Shared Boundaries:
-Shared Coherence:
-```
-
----
-
-## **SECTION 10 — Teacher Notes (RTT‑1)**
-
-- Keep language simple.  
-- Avoid substrate, inversion, dimensional, or infinite‑regime concepts.  
-- Declare coherence explicitly.  
-- Bound drift to structural differences only.  
-- Treat paradoxes as **tensions**, not contradictions.  
-- Use everyday examples (notes, workflows, tools, music, etc.).  
-
-# **RTT‑1 Coherence → Synthesis Teaching Module**  
-### *A beginner‑friendly module showing how coherence leads to synthesis in IPD‑12*
-
-RTT‑1 teaches synthesis in the simplest possible way:
-
-> **Synthesis happens when coherence is strong enough to overcome drift.**
-
-This module shows students how to move from:
-
-- **coherence** → what stays aligned  
-- **paradox** → tension between alignment and drift  
-- **resolution** → stabilizing structure  
-- **synthesis** → unified structure  
-
-It is the RTT‑1 version of RTT/3’s triangulation → harmonization → synthesis, but kept strictly in **surface‑regime**, **structural**, **bounded** reasoning.
-
----
-
-## **SECTION 1 — Lesson Overview (RTT‑1)**
-
-Students learn:
-
-1. What coherence is  
-2. How coherence interacts with drift  
-3. How paradox arises  
-4. How paradox is resolved  
-5. How resolution leads to synthesis  
-6. How synthesis creates a unified structure  
-
-This module stays strictly in **RTT‑1 mode** — no substrate, no inversion, no dimensional rails, no prime‑states.
-
----
-
-## **SECTION 2 — Review: Coherence (RTT‑1)**
-
-Coherence is **what stays aligned** between two processes.
-
-Examples:
-
-- shared purpose  
-- shared boundaries  
-- shared constraints  
-- shared goals  
-- shared structure  
-
-Coherence is the **foundation** of synthesis.
-
----
-
-## **SECTION 3 — Review: Paradox → Resolution (RTT‑1)**
-
-A paradox appears when:
-
-```
-drift increases
-AND
-coherence remains
-```
-
-RTT‑1 resolves paradoxes by:
-
-1. clarifying coherence  
-2. localizing drift  
-3. introducing a stabilizing structure  
-
-Synthesis is the **next step** after resolution.
-
----
-
-## **SECTION 4 — What Is Synthesis? (RTT‑1)**
-
-Synthesis is:
-
-> **The creation of a unified structure from two processes that were drifting but still coherent.**
-
-In RTT‑1, synthesis is simple:
-
-- identify shared coherence  
-- resolve paradox  
-- combine aligned elements  
-- produce a unified structure  
-
-Synthesis is **not** blending, merging, or infinite‑regime work — those belong to RTT/3 and RTT/∞.
-
-RTT‑1 synthesis is **structural and surface‑regime only**.
-
----
-
-## **SECTION 5 — The RTT‑1 Synthesis Pattern**
-
-RTT‑1 uses a three‑step synthesis pattern:
-
-### **1. Identify Coherence Anchors**  
-What stays aligned?
-
-### **2. Resolve Paradox**  
-What stabilizing structure reduces tension?
-
-### **3. Combine Aligned Elements**  
-What unified structure emerges?
-
-This pattern is the RTT‑1 version of RTT/3’s synthesis, simplified for beginners.
-
----
-
-## **SECTION 6 — Guided Example (RTT‑1)**
-
-### **Processes**
-- **A: human_notes**  
-- **B: ai_notes**
-
-### **Coherence Anchors**
-- shared purpose: capture information  
-- shared structure: input → process → output  
-- shared constraints: clarity, accuracy  
-
-### **Paradox**
-Drift increases (speed, detail, interpretation)  
-while coherence remains → **coherence paradox**.
-
-### **Resolution**
-Introduce stabilizing structure:  
-**shared clarity rule** for both processes.
-
-### **Synthesis**
-Unified structure:
-
-```
-input → interpret/transform → clarity-check → output
-```
-
-This is the RTT‑1 synthesis:  
-a simple, unified workflow that respects both processes.
-
----
-
-## **SECTION 7 — Student Exercise: Coherence → Synthesis**
-
-### **1. Identify Coherence**
-```
-1.
-2.
-3.
-```
-
-### **2. Identify Drift**
-```
-1.
-2.
-3.
-```
-
-### **3. Identify Paradox**
-Choose from P‑1 → P‑12.
-
-### **4. Resolve Paradox**
-```
-Stabilizing Structure:
-```
-
-### **5. Create Synthesis**
-Combine aligned elements into a unified structure:
-
-```
-Synthesis:
-```
-
-### **6. One‑Sentence Summary**
-```
-Synthesis Summary:
-```
-
----
-
-## **SECTION 8 — Synthesis Templates (RTT‑1)**
-
-### **Coherence → Synthesis Template**
-```
-Both processes share ________, and after resolving drift in ________, 
-they combine into a unified structure: ________.
-```
-
-### **Temporal Synthesis Template**
-```
-Timing goals remain aligned, so after resolving speed drift, 
-the unified pacing structure is: ________.
-```
-
-### **Interpretive Synthesis Template**
-```
-Meaning remains aligned, so after resolving interpretive drift, 
-the unified interpretation rule is: ________.
-```
-
-### **Boundary Synthesis Template**
-```
-Constraints remain aligned, so after resolving boundary drift, 
-the unified constraint is: ________.
-```
-
----
-
-## **SECTION 9 — Assessment Questions**
-
-1. What is synthesis?  
-2. How does coherence support synthesis?  
-3. Why must paradox be resolved before synthesis?  
-4. Give an example of a coherence‑based synthesis.  
-5. Explain the RTT‑1 synthesis pattern.  
-6. Create a synthesis from two drifting processes.
-
----
-
-## **SECTION 10 — Teacher Notes (RTT‑1)**
-
-- Keep synthesis structural and surface‑regime.  
-- Avoid substrate, inversion, dimensional rails, or prime‑states.  
-- Reinforce that synthesis = unified structure.  
-- Use everyday examples (notes, workflows, tools, music).  
-- Encourage students to see coherence as the “glue” of synthesis.
-
-# **RTT‑1 Drift → Paradox Classroom Pack**  
-### *A complete teaching module for understanding how drift leads to paradox in IPD‑12*
-
-RTT‑1 teaches paradox in the simplest possible way:
-
-> **A paradox appears when drift increases while coherence stays the same.**
-
-This pack gives teachers everything needed to run a full classroom session:
-
-- lesson overview  
-- student exercises  
-- guided examples  
-- paradox templates  
-- assessment questions  
-- teacher notes  
-
-All aligned with the IPD‑12 paradox registry you already built.
-
----
-
-## **SECTION 1 — Lesson Overview (RTT‑1)**
-
-Students learn:
-
-1. What drift is  
-2. How drift is measured (drift‑tensor)  
-3. How coherence anchors work  
-4. How drift + coherence = paradox  
-5. How to identify paradoxes using RTT‑1 structural reasoning  
-
-This module stays strictly in **surface‑regime**, **structural**, **bounded** reasoning — no substrate, no inversion, no dimensional rails.
-
----
-
-## **SECTION 2 — Drift Review (RTT‑1)**
-
-Drift is **how two processes start to differ**.
-
-The five drift categories:
-
-- **L1 Geometric** — structure  
-- **L2 Operational** — steps  
-- **L3 Temporal** — timing  
-- **L4 Conceptual** — meaning  
-- **L5 Domain** — domain  
-
-Students must identify drift before they can identify paradox.
-
----
-
-## **SECTION 3 — Coherence Review (RTT‑1)**
-
-Coherence is **what stays aligned**.
-
-Examples:
-
-- shared purpose  
-- shared boundaries  
-- shared constraints  
-- shared goals  
-- shared structure  
-
-Coherence must be **declared** before paradox detection.
-
----
-
-## **SECTION 4 — When Drift Creates Paradox**
-
-A paradox appears when:
-
-```
-drift increases
-AND
-coherence remains
-```
-
-This is the RTT‑1 definition of a **structural paradox**.
-
-Examples:
-
-- two processes stay aligned in purpose  
-- but drift in speed, detail, or interpretation  
-- creating tension without contradiction  
-
----
-
-## **SECTION 5 — Guided Example (RTT‑1)**
-
-### **Process A: human_notes**  
-Purpose: capture information manually  
-Flow: listen → interpret → write  
-
-### **Process B: ai_notes**  
-Purpose: capture information automatically  
-Flow: receive → transform → emit  
-
-### **Shared Coherence**
-- both capture information  
-- both aim for clarity  
-- both follow a sequence  
-
-### **Drift**
-- speed drift (AI is faster)  
-- detail drift (AI captures more)  
-- interpretation drift (human interprets meaning)  
-
-### **Paradox**
-Coherence remains (same purpose),  
-but drift increases (speed, detail, interpretation).
-
-This is a **coherence paradox** (P‑1).
-
----
-
-## **SECTION 6 — Student Exercise: Drift → Paradox**
-
-Students fill in:
-
-### **1. Shared Coherence**
-```
-1.
-2.
-3.
-```
-
-### **2. Drift Points**
-```
-1.
-2.
-3.
-```
-
-### **3. Drift Categories**
-- [ ] L1 Geometric  
-- [ ] L2 Operational  
-- [ ] L3 Temporal  
-- [ ] L4 Conceptual  
-- [ ] L5 Domain  
-
-### **4. Paradox Type**
-Choose one from the P‑Index:
-
-- Coherence Paradox  
-- Dependency Paradox  
-- Boundary Paradox  
-- Temporal Paradox  
-- Interpretive Paradox  
-- Domain Paradox  
-- Multi‑Domain Paradox  
-- Composite Paradox  
-- Stability Paradox  
-- Alignment Paradox  
-- Reduction Paradox  
-- Reflection Paradox  
-
-### **5. Paradox Summary**
-```
-One sentence:
-```
-
----
-
-## **SECTION 7 — Paradox Templates (RTT‑1)**
-
-### **Coherence Paradox Template**
-```
-Both processes share ________, but drift in ________ increases.
-```
-
-### **Temporal Paradox Template**
-```
-Both processes share timing goals, but their speeds diverge.
-```
-
-### **Interpretive Paradox Template**
-```
-Both processes share structure, but interpret inputs differently.
-```
-
-### **Domain Paradox Template**
-```
-Both processes share coherence anchors, but drift due to domain differences.
-```
-
-### **Reflection Paradox Template**
-```
-Both processes mirror each other, but drift still appears.
-```
-
----
-
-## **SECTION 8 — Assessment Questions**
-
-1. What is drift?  
-2. What is coherence?  
-3. What happens when drift increases but coherence stays the same?  
-4. Name three drift categories.  
-5. Give an example of a coherence paradox.  
-6. Explain why paradox is not contradiction.  
-7. Identify drift and paradox in a new pair of processes.
-
----
-
-## **SECTION 9 — Teacher Notes (RTT‑1)**
-
-- Keep paradox structural, not logical.  
-- Keep drift bounded to surface‑regime differences.  
-- Avoid substrate, inversion, dimensional rails, or prime‑states.  
-- Encourage simple examples (notes, workflows, tools, music).  
-- Reinforce that paradox = tension, not contradiction.  
-
-# **RTT‑1 Student Drift Worksheet**  
-### *A beginner‑friendly worksheet for learning drift in IPD‑12*
-
-RTT‑1 teaches drift in the simplest possible way:
-
-> **Drift = how two processes start to differ.**
-
-This worksheet helps students identify drift using only **surface‑regime**, **structural**, **bounded** reasoning — exactly the mode used in your active tab’s IPD‑12 → RTT/∞ mapping section   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
----
-
-## **SECTION 1 — Write the Two Processes You Are Comparing**
-
-**Process A Name:**  
-**Process B Name:**  
-
-(Use the capture worksheet first — drift requires complete capture.)
-
----
-
-## **SECTION 2 — Shared Structure (Coherence Declared)**
-
-List what both processes share.  
-This establishes the **coherence baseline**.
-
-Examples:  
-- both capture information  
-- both follow a sequence  
-- both aim for clarity  
-
-```
-Shared Structure:
-1.
-2.
-3.
-```
-
----
-
-## **SECTION 3 — Identify Drift (Structural Only)**
-
-Drift is **where the processes start to differ**.
-
-Use simple, structural statements.
-
-Examples:  
-- speed drift  
-- detail drift  
-- interpretation drift  
-- boundary drift  
-
-```
-Drift Points:
-1.
-2.
-3.
-```
-
----
-
-## **SECTION 4 — Drift Categories (RTT‑1)**
-
-Check which drift categories apply:
-
-- [ ] **Geometric Drift** (form, structure)  
-- [ ] **Operational Drift** (steps, flow)  
-- [ ] **Temporal Drift** (speed, pacing)  
-- [ ] **Conceptual Drift** (meaning, interpretation)  
-- [ ] **Domain Drift** (different domains)
-
-These categories match the drift‑tensor layers described in your IPD‑12 → RTT/∞ mapping section   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
----
-
-## **SECTION 5 — Drift Examples (Fill In)**
-
-### **Geometric Drift (L1)**  
-How the structure differs:
-
-```
-Example:
-```
-
-### **Operational Drift (L2)**  
-How the steps differ:
-
-```
-Example:
-```
-
-### **Temporal Drift (L3)**  
-How the timing differs:
-
-```
-Example:
-```
-
-### **Conceptual Drift (L4)**  
-How interpretation differs:
-
-```
-Example:
-```
-
-### **Domain Drift (L5)**  
-How the domains differ:
-
-```
-Example:
-```
-
----
-
-## **SECTION 6 — Drift Summary (RTT‑1)**
-
-Write a simple, one‑sentence summary:
-
-```
-Drift Summary:
-```
-
-Example:  
-“Both processes aim for clear notes, but they drift in speed, detail, and interpretation.”
-
----
-
-## **SECTION 7 — Coherence Check**
-
-Even with drift, coherence may still exist.
-
-Check what remains aligned:
-
-- [ ] shared purpose  
-- [ ] shared boundaries  
-- [ ] shared constraints  
-- [ ] shared goals  
-- [ ] shared structure  
-
-This mirrors the coherence mapping in your active tab’s IPD‑12 → RTT/∞ section   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md).
-
----
-
-## **SECTION 8 — Paradox Awareness (RTT‑1 Structural Mode)**
-
-If drift increases **while coherence remains**, a **structural paradox** may appear.
-
-Examples:  
-- dependency paradox  
-- coherence paradox  
-- temporal paradox  
-
-Write any paradox you notice:
-
-```
-Paradox:
-```
-
----
-
-## **SECTION 9 — Teacher Notes (RTT‑1)**
-
-- Keep drift **bounded** (no substrate, no inversion).  
-- Keep explanations **surface‑regime**.  
-- Declare coherence explicitly.  
-- Treat paradoxes as **tensions**, not contradictions.  
-- Use everyday examples (notes, workflows, tools, music).  
-# **RTT‑1 Paradox → Resolution Classroom Pack**  
-### *A complete teaching module for resolving paradoxes using RTT‑1 structural reasoning*
-
-RTT‑1 teaches paradox resolution in the simplest possible way:
-
-> **A paradox is resolved when drift is understood, coherence is clarified, and a stabilizing structure is introduced.**
-
-This pack gives teachers everything needed to run a full classroom session:
-
-- lesson overview  
-- paradox identification  
-- resolution patterns  
-- guided examples  
-- student exercises  
-- assessment questions  
-- teacher notes  
-
-All aligned with the IPD‑12 paradox types you’ve documented (P‑1 → P‑12).   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
-
----
-
-## **SECTION 1 — Lesson Overview (RTT‑1)**
-
-Students learn:
-
-1. What paradoxes are  
-2. Why paradoxes appear (drift + coherence)  
-3. How to classify paradoxes  
-4. How to resolve paradoxes using RTT‑1 structural reasoning  
-5. How resolution differs from contradiction  
-
-This module stays strictly in **surface‑regime**, **structural**, **bounded** reasoning.
-
----
-
-## **SECTION 2 — Review: What Creates a Paradox**
-
-A paradox appears when:
-
-```
-drift increases
-AND
-coherence remains
-```
-
-Examples:
-
-- two processes share purpose  
-- but drift in speed, detail, or interpretation increases  
-- creating tension without contradiction  
-
-This matches the paradox logic described in your IPD‑12 → RTT/∞ mapping section.   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
-
----
-
-## **SECTION 3 — The RTT‑1 Resolution Pattern**
-
-RTT‑1 resolves paradoxes using a simple three‑step pattern:
-
-### **1. Clarify Coherence**  
-Identify what is still aligned.
-
-### **2. Localize Drift**  
-Identify exactly where drift occurs (using the drift‑tensor).
-
-### **3. Introduce a Stabilizing Structure**  
-Add a third element, constraint, or interpretation that reduces tension.
-
-This is the RTT‑1 version of RTT/3’s triangulation → harmonization → synthesis (surface‑regime only).
-
----
-
-## **SECTION 4 — Paradox → Resolution Table (RTT‑1)**
-
-| Paradox Type | Cause | RTT‑1 Resolution |
-|--------------|-------|------------------|
-| **Coherence Paradox** | shared purpose, rising drift | clarify purpose → add shared constraint |
-| **Temporal Paradox** | timing diverges | align pacing goals → add timing buffer |
-| **Interpretive Paradox** | meaning diverges | clarify interpretation → add shared definition |
-| **Boundary Paradox** | constraints differ | restate boundaries → add shared limit |
-| **Dependency Paradox** | circular reliance | add stabilizing third process |
-| **Domain Paradox** | domains differ | identify shared cross‑domain anchor |
-| **Reflection Paradox** | mirrored processes drift | add differentiating structure |
-
-These map directly to the paradox types listed in your IPD‑12 paradox registry.   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md)
-
----
-
-## **SECTION 5 — Guided Example (RTT‑1)**
-
-### **Processes**
-- **A: human_notes**  
-- **B: ai_notes**
-
-### **Coherence**
-- shared purpose: capture information  
-- shared structure: input → process → output  
-
-### **Drift**
-- operational drift (steps differ)  
-- temporal drift (speed differs)  
-- conceptual drift (interpretation differs)
-
-### **Paradox**
-Coherence remains, drift increases → **coherence paradox**.
-
-### **RTT‑1 Resolution**
-1. Clarify coherence: both aim for clarity  
-2. Localize drift: speed + interpretation  
-3. Stabilizing structure: shared “clarity rule” for both processes
-
-Resolution:  
-**Both processes follow the same clarity rule, reducing tension.**
-
----
-
-## **SECTION 6 — Student Exercise: Resolve a Paradox**
-
-### **1. Identify Coherence**
-```
-1.
-2.
-3.
-```
-
-### **2. Identify Drift**
-```
-1.
-2.
-3.
-```
-
-### **3. Classify Paradox**
-Choose from P‑1 → P‑12.
-
-### **4. Apply RTT‑1 Resolution Pattern**
-```
-Clarify Coherence:
-Localize Drift:
-Stabilizing Structure:
-```
-
-### **5. One‑Sentence Resolution**
-```
-Resolution Summary:
-```
-
----
-
-## **SECTION 7 — Resolution Templates (RTT‑1)**
-
-### **Coherence Paradox**
-```
-Both processes share ________, but drift in ________ increases.
-Resolution: clarify ________ and add shared ________.
-```
-
-### **Temporal Paradox**
-```
-Speeds diverge, but timing goals remain aligned.
-Resolution: add pacing buffer.
-```
-
-### **Interpretive Paradox**
-```
-Interpretations differ, but meaning remains aligned.
-Resolution: add shared definition.
-```
-
-### **Boundary Paradox**
-```
-Constraints differ, but goals remain aligned.
-Resolution: restate shared boundary.
-```
-
-### **Reflection Paradox**
-```
-Processes mirror each other but drift appears.
-Resolution: add differentiating structure.
-```
-
----
-
-## **SECTION 8 — Assessment Questions**
-
-1. What causes a paradox?  
-2. Why does coherence matter?  
-3. How does RTT‑1 resolve paradoxes?  
-4. Give an example of a coherence paradox.  
-5. Explain the stabilizing structure concept.  
-6. Resolve a paradox using the RTT‑1 pattern.
-
----
-
-## **SECTION 9 — Teacher Notes (RTT‑1)**
-
-- Keep paradox structural, not logical.  
-- Keep resolution simple and surface‑regime.  
-- Avoid substrate, inversion, dimensional rails, or prime‑states.  
-- Reinforce that paradox = tension, not contradiction.  
-- Use everyday examples (notes, workflows, tools, music).  
-# **RTT‑1 Tensor Worksheet**  
-### *A beginner‑friendly worksheet for learning the drift‑tensor in IPD‑12*
-
-RTT‑1 teaches the drift‑tensor in the simplest possible way:
-
-> **A tensor is a structured way of measuring drift across different layers.**
-
-In IPD‑12, the drift‑tensor has **five layers**, each representing a different kind of difference between two processes.
-
-This worksheet helps students identify and classify drift using only **surface‑regime**, **structural**, **bounded** reasoning — exactly the mode used in your active tab’s mapping section (turn0browsertab1).
-
----
-
-## **SECTION 1 — Write the Two Processes You Are Comparing**
-
-**Process A Name:**  
-**Process B Name:**  
-
-(Use the Capture Worksheet first — tensors require complete capture.)
-
----
-
-## **SECTION 2 — The Five Drift‑Tensor Layers (RTT‑1)**
-
-RTT‑1 uses simple definitions:
-
-1. **Geometric Drift (L1)**  
-   Differences in structure or form.
-
-2. **Operational Drift (L2)**  
-   Differences in steps or workflow.
-
-3. **Temporal Drift (L3)**  
-   Differences in speed or pacing.
-
-4. **Conceptual Drift (L4)**  
-   Differences in meaning or interpretation.
-
-5. **Domain Drift (L5)**  
-   Differences in domain (workflow, music, physics, etc.).
-
-These are the same layers referenced in your direct mapping section (turn0browsertab1).
-
----
-
-## **SECTION 3 — Fill In Each Tensor Layer**
-
-### **L1 — Geometric Drift**  
-How do the structures differ?
-
-```
-Example:
-```
-
----
-
-### **L2 — Operational Drift**  
-How do the steps differ?
-
-```
-Example:
-```
-
----
-
-### **L3 — Temporal Drift**  
-How does timing differ?
-
-```
-Example:
-```
-
----
-
-### **L4 — Conceptual Drift**  
-How does interpretation differ?
-
-```
-Example:
-```
-
----
-
-### **L5 — Domain Drift**  
-How do the domains differ?
-
-```
-Example:
-```
-
----
-
-## **SECTION 4 — Tensor Layer Checklist**
-
-Check all layers where drift occurs:
-
-- [ ] L1 Geometric  
-- [ ] L2 Operational  
-- [ ] L3 Temporal  
-- [ ] L4 Conceptual  
-- [ ] L5 Domain  
-
-This checklist mirrors the drift‑tensor structure used in your IPD‑12 → RTT/∞ mapping (turn0browsertab1).
-
----
-
-## **SECTION 5 — Tensor Summary (RTT‑1)**
-
-Write a simple, one‑sentence summary:
-
-```
-Tensor Summary:
-```
-
-Example:  
-“Drift appears in structure, steps, and interpretation, but both processes stay aligned in purpose.”
-
----
-
-## **SECTION 6 — Coherence Check**
-
-Even with drift, coherence may still exist.
-
-Check what remains aligned:
-
-- [ ] shared purpose  
-- [ ] shared boundaries  
-- [ ] shared constraints  
-- [ ] shared goals  
-- [ ] shared structure  
-
-This mirrors the coherence mapping in your active tab (turn0browsertab1).
-
----
-
-## **SECTION 7 — Paradox Awareness (RTT‑1 Structural Mode)**
-
-If drift increases **while coherence remains**, a **structural paradox** may appear.
-
-Examples:  
-- coherence paradox  
-- temporal paradox  
-- interpretive paradox  
-
-Write any paradox you notice:
-
-```
-Paradox:
-```
-
----
-
-## **SECTION 8 — Teacher Notes (RTT‑1)**
-
-- Keep tensor reasoning **bounded** (no substrate, no inversion).  
-- Keep explanations **surface‑regime**.  
-- Declare coherence explicitly.  
-- Treat paradoxes as **tensions**, not contradictions.  
-- Use everyday examples (notes, workflows, tools, music).  
-
-# Datacenter Evaluator — RTT Structural Example
-
-This example module demonstrates how to evaluate a datacenter using the RTT structural
-stack. It is designed as a teaching‑ready prompt module that mirrors the full
-Datacenter Evaluator workflow used in TriadicFrameworks.
-
-The goal is to show how RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ can be applied to a
-real‑world structure (a datacenter) without narrative drift, speculation, or
-non‑structural inference.
-
----
-
-## Purpose
-
-This example teaches:
-
-- how to apply RTT structural operators to a physical site  
-- how to identify drift using the RTT drift‑tensor  
-- how to declare coherence anchors  
-- how to evaluate physical, civic, cultural, standards, medical, planetary, and compute
-  layers without narrative drift  
-- how to produce a resonance summary  
-
-It is a complete RTT teaching example.
-
----
-
-## Example Input
-
-**Datacenter:** Equinix Global Footprint  
-**Location:** Multiple global sites  
-**Status:** Operational  
-**Operator:** Equinix  
-
-This example uses the same input structure as the full Datacenter Evaluator module.
-
----
-
-## RTT Structural Evaluation
-
-### 1. Facilities Module — Physical Layer
-
-Evaluate the physical substrate:
-
-- water availability  
-- hydrological stability  
-- thermal envelope  
-- cooling coherence  
-- seasonal drift  
-- seismic predictability  
-- fiber topology  
-- environmental continuity  
-- substrate fatigue  
-
-This layer describes how the physical site behaves.
-
----
-
-### 2. Governance Module (GSM) — Civic Layer
-
-Evaluate the governance substrate:
-
-- regulatory predictability  
-- policy half‑life  
-- grid governance  
-- energy‑mix stability  
-- municipal alignment  
-- infrastructure maturity  
-- institutional coherence  
-
-Governance is treated as a temporal substrate.
-
----
-
-### 3. RSGM — Cultural Layer
-
-Evaluate the cultural substrate:
-
-- belief‑regime patterns  
-- cultural stability  
-- cultural drift  
-- mythic‑operator density  
-- population‑level resonance  
-
-This is substrate literacy, not anthropology.
-
----
-
-### 4. NIST Module — Standards Layer
-
-Evaluate the standards spine:
-
-- interoperability  
-- measurement integrity  
-- compliance pathways  
-- auditability  
-- long‑term maintainability  
-
-This is the structural backbone.
-
----
-
-### 5. Medicine Module — Human Layer
-
-Evaluate the human envelope:
-
-- public health infrastructure  
-- emergency response coherence  
-- bio‑safety envelope  
-- physiological stability relevant to compute density  
-
-A datacenter is embedded in a human physiological field.
-
----
-
-### 6. RTT/1 → RTT/2 → RTT/3 — Triadic Stack
-
-Evaluate resonance across the RTT layers:
-
-- **RTT/1 — Structural Continuity**  
-- **RTT/2 — Cross‑Domain Propagation**  
-- **RTT/3 — High‑Order Resonance**
-
----
-
-### 7. RTT/Inside Earth Sims — Planetary Layer
-
-Evaluate planetary alignment:
-
-- climate‑envelope stability  
-- environmental simulation fidelity  
-- long‑horizon substrate predictability  
-- suitability for qCompute workloads  
-
-This is the deep‑time layer.
-
----
-
-### 8. Compute & Infrastructure — Practical Layer
-
-Evaluate compute‑aligned structure:
-
-- power  
-- cooling  
-- networking  
-- AI/GPU density  
-- RTT latency profile  
-- scalability  
-- future‑proofing  
-- compatibility with RTT‑Inside qCompute  
-
-This is where physical and triadic layers meet.
-
----
-
-### 9. Taxes Module — Incentive Layer
-
-Evaluate incentive substrate:
-
-- incentive baselines  
-- depreciation envelopes  
-- incentive half‑life  
-- propagation vectors  
-- drift fields  
-- alignment surfaces  
-
-Incentives shape long‑horizon viability.
-
----
-
-## Resonance Summary
-
-Provide:
-
-- strengths  
-- hidden resonance gaps  
-- coherence opportunities  
-- long‑horizon potential  
-
-This summary is structural, not narrative.
-
----
-
-## Teaching Notes
-
-This example is used in:
-
-- RTT/1 teaching modules  
-- RTT/2 diagnostic modules  
-- RTT/3 structural synthesis modules  
-- RTT/12 full‑spectrum modules  
-- RTT∞ deep‑layer modules  
-- IPD‑12 paradox teaching modules  
-
-It is the canonical example for physical‑site evaluation.
-
-# TriadicFrameworks — Example Modules
-
-The TriadicFrameworks example modules demonstrate how RTT engines, IPD‑12, stacks,
-templates, and UI logic can be applied to real‑world structures, teaching scenarios,
-mythology profiles, physics regimes, and structural analysis.
-
-Each example provides a complete, teaching‑ready prompt module with explainers,
-structured prompts, diagnostics, worksheets, and cross‑links to the Docsbook and S3
-Spine Visualizer.
-
-This page is the front door for all example‑level prompt modules.
-
----
-
-## Datacenter Evaluator Example
-
-A full RTT structural evaluation of a datacenter, including physical, civic, cultural,
-standards, medical, planetary, and compute layers.
-
-**Module:** `datacenter-evaluator.md`
-
----
-
-## IPD‑12 Teaching Example
-
-A paradox‑aligned teaching module demonstrating drift, coherence, paradox declaration,
-and paradox resolution using the IPD‑12 engine.
-
-**Module:** `ipd_12_teaching_example.md`
-
----
-
-## Mythology Profile Example
-
-A structural mythology profile demonstrating operator grammar, drift‑tensor mapping,
-coherence anchors, and cultural‑substrate analysis.
-
-**Module:** `mythology-profile.md`
-
----
-
-## Physics Regime Example
-
-A physics‑aligned structural example showing how RTT engines evaluate physical regimes,
-dimensional rails, substrate‑tensor behavior, and coherence across physical layers.
-
-**Module:** `physics-regime.md`
-
----
-
-## Teaching Session Example
-
-A complete teaching session demonstrating RTT/1 → RTT/2 → RTT/3 progression, including
-worksheets, posters, and alignment prompts.
-
-**Module:** `teaching-session.md`
-
----
-
-## Violin Structural Example
-
-A structural analysis of a violin using RTT operators, drift‑tensor mapping, coherence
-anchors, and domain‑substrate alignment.
-
-**Module:** `violin-structural.md`
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/examples/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/examples
-
----
-
-## Related Files
-
-- `modules.md` — full module registry  
-- `engines.md` — RTT engines overview  
-- `stacks.md` — stack overview  
-- `templates.md` — template overview  
-- `ui.md` — UI logic and unlock rules  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of examples, engines, stacks, templates, UI
-modules, and navigation structure.
-
-# **IPD‑12 Teaching Example**  
-### *Inter‑Process Drift for Students (RTT‑1 Teaching Mode)*  
-### rtt=1 | coherence=declared | drift=bounded | paradox=structural
-
----
-
-## **Teacher (Nawder Loswin)**  
-Today we’re learning **Inter‑Process Drift (IPD‑12)** — a way to compare two processes and see *where* they diverge, *why* they diverge, and *how* coherence can be restored.
-
-We stay in **RTT‑1**, so everything is surface‑regime, simple, and clear.
-
-Our subject:
-
-> **Hand‑Written Notes vs. AI‑Generated Notes**
-
-Two processes.  
-Same goal.  
-Different structure.
-
-We will walk through:
-
-1. **Capture**  
-2. **Analyze**  
-3. **Drift**  
-4. **Coherence**  
-5. **Synthesis**
-
-This is the IPD‑12 sequence, but taught at RTT‑1.
-
----
-
-# **1. CAPTURE (RTT‑1)**  
-### Teacher  
-Let’s capture the structure of each process.
-
-### Process A — Hand‑Written Notes  
-- Purpose: remember information  
-- Boundaries: human speed, handwriting clarity  
-- Layers: listen → think → write  
-- Flow: sequential  
-- Coherence baseline: personal understanding
-
-### Process B — AI‑Generated Notes  
-- Purpose: summarize information  
-- Boundaries: model accuracy, prompt clarity  
-- Layers: input → process → output  
-- Flow: parallelizable  
-- Coherence baseline: structural completeness
-
-### Teacher  
-Good. We have two structures.  
-No drift yet — just identity.
-
----
-
-# **2. ANALYZE (RTT‑1)**  
-### Teacher  
-Now we compare them.
-
-### Shared Structure  
-- Both capture information  
-- Both produce a summary  
-- Both rely on an input stream  
-- Both aim for clarity
-
-### Shared Constraints  
-- Time  
-- Accuracy  
-- Relevance  
-- Organization
-
-### Teacher  
-This is the “coherence declared” part — we state what keeps them aligned.
-
----
-
-# **3. DRIFT (bounded)**  
-### Teacher  
-Now we detect **bounded drift** — only structural drift, not emotional or conceptual.
-
-### Drift Points  
-- **Speed drift:** AI is faster  
-- **Interpretation drift:** humans interpret; AI reconstructs  
-- **Detail drift:** humans choose details; AI compresses  
-- **Error drift:** humans mis-hear; AI mis-summarizes
-
-### Teacher  
-Notice: drift is **bounded** — we only describe divergence, not judge it.
-
----
-
-# **4. COHERENCE (declared)**  
-### Teacher  
-Now we align coherence.
-
-### Coherence Anchors  
-- shared goal: “capture information”  
-- shared constraint: “limited time”  
-- shared structure: “input → output”  
-- shared requirement: “usable notes”
-
-### Coherence Restoration  
-- humans can revise AI notes  
-- AI can expand human notes  
-- hybrid workflow reduces drift
-
-### Teacher  
-This is the “coherence declared” part — we explicitly state how coherence is restored.
-
----
-
-# **5. STRUCTURAL PARADOX (RTT‑1)**  
-### Teacher  
-Now we introduce a **structural paradox** — not a contradiction, just a tension.
-
-> **The more AI helps humans take notes, the less humans practice taking notes.  
-> But the less humans practice, the more they rely on AI.**
-
-This is a **structural paradox** because both processes depend on each other but drift away from each other at the same time.
-
-We do not resolve it — we only observe it.
-
----
-
-# **6. SYNTHESIS (RTT‑1)**  
-### Teacher  
-Let’s summarize the drift‑aware map.
-
-### Final Drift‑Aware Summary  
-Hand‑written notes and AI‑generated notes share the same goal but diverge in speed, interpretation, detail selection, and error patterns. Their coherence can be restored through hybrid workflows where humans refine AI output and AI expands human notes. The structural paradox emerges when reliance on AI reduces human practice, increasing future reliance. IPD‑12 helps us see this clearly without judgment.
-
----
-
-# **Student + AI Partner Examples (RTT‑1)**  
-Below are **three student pairs**, each responding at RTT‑1.
-
----
-
-## **Student 1 + AI Partner (RTT‑1)**  
-**Student:**  
-Hand‑written notes drift because I write slower and choose details differently.
-
-**AI Partner:**  
-AI‑generated notes drift because I compress information and may miss nuance.
-
-**Together:**  
-We align coherence by combining both: I choose details, and the AI organizes them.
-
----
-
-## **Student 2 + AI Partner (RTT‑1)**  
-**Student:**  
-My drift is in interpretation — I understand differently each time.
-
-**AI Partner:**  
-My drift is structural — I follow patterns, not personal meaning.
-
-**Together:**  
-Coherence returns when we compare interpretations and adjust the summary.
-
----
-
-## **Student 3 + AI Partner (RTT‑1)**  
-**Student:**  
-I drift when I get tired.
-
-**AI Partner:**  
-I drift when the prompt is unclear.
-
-**Together:**  
-We fix coherence by making the prompt clear and letting me revise the output.
-
----
-
-# **Teacher Closing**  
-This is IPD‑12 taught at RTT‑1:  
-simple, structural, drift‑bounded, coherence‑declared, paradox‑aware.
-# Mythology Profile — RTT Structural Example
-
-This example module demonstrates how to construct a mythology profile using the RTT
-structural stack. It is designed as a teaching‑ready prompt module that mirrors the
-Triadic Pantheon Profile workflow used across TriadicFrameworks.
-
-The goal is to show how RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ can be applied to a
-mythological structure without narrative drift, speculation, or anthropological claims.
-
----
-
-## Purpose
-
-This example teaches:
-
-- how to apply RTT structural operators to a mythological system  
-- how to identify drift using the RTT drift‑tensor  
-- how to declare coherence anchors  
-- how to evaluate cultural‑substrate layers  
-- how to produce a resonance summary  
-- how to maintain structural neutrality  
-
-It is a complete RTT teaching example.
-
----
-
-## Example Input
-
-**Pantheon:** Greek  
-**Profile:** Zeus  
-**Domain:** Sky / Order / Authority  
-**Status:** Canonical deity within Greek mythic substrate  
-
-This example uses the same input structure as the Triadic Pantheon Profile modules.
-
----
-
-## RTT Structural Evaluation
-
-### 1. Structural Layer — Form & Identity
-
-Evaluate the structural substrate:
-
-- canonical identity  
-- domain boundaries  
-- symbolic operators  
-- structural commitments  
-- relational topology  
-
-This layer describes the deity’s structural form.
-
----
-
-### 2. Operational Layer — Actions & Patterns
-
-Evaluate operational substrate:
-
-- recurring actions  
-- domain‑aligned interventions  
-- pattern stability  
-- drift‑tensor mapping  
-- operational coherence  
-
-Operational behavior is treated as a structural pattern.
-
----
-
-### 3. Temporal Layer — Mythic Time
-
-Evaluate temporal substrate:
-
-- mythic chronology  
-- event‑sequence stability  
-- temporal drift  
-- cyclic vs linear time  
-- temporal coherence  
-
-Mythic time is a structural field, not historical time.
-
----
-
-### 4. Conceptual Layer — Meaning & Interpretation
-
-Evaluate conceptual substrate:
-
-- symbolic meaning  
-- conceptual drift  
-- coherence anchors  
-- cross‑domain conceptual alignment  
-- mythic operator grammar  
-
-This layer captures meaning without narrative interpretation.
-
----
-
-### 5. Cultural Layer — Substrate Literacy
-
-Evaluate cultural substrate:
-
-- belief‑regime patterns  
-- cultural stability  
-- cultural drift  
-- mythic‑operator density  
-- resonance across cultural layers  
-
-This is substrate literacy, not anthropology.
-
----
-
-## Drift‑Tensor Mapping
-
-Identify drift across the five RTT drift‑tensor layers:
-
-- **L1 Geometric** — structural form differences  
-- **L2 Operational** — action‑pattern differences  
-- **L3 Temporal** — mythic‑time differences  
-- **L4 Conceptual** — meaning differences  
-- **L5 Domain** — domain‑boundary differences  
-
-Drift is mapped structurally, not narratively.
-
----
-
-## Coherence Anchors
-
-Declare coherence anchors:
-
-- shared domain  
-- shared symbolic grammar  
-- shared structural commitments  
-- shared mythic‑operator patterns  
-- shared cultural substrate  
-
-Coherence explains why the profile remains aligned despite drift.
-
----
-
-## Resonance Summary
-
-Provide:
-
-- structural strengths  
-- hidden resonance gaps  
-- coherence opportunities  
-- cross‑layer alignment  
-- long‑horizon stability  
-
-This summary is structural, not interpretive.
-
----
-
-## Teaching Notes
-
-This example is used in:
-
-- RTT/1 teaching modules  
-- RTT/2 diagnostic modules  
-- RTT/3 structural synthesis modules  
-- RTT/12 full‑spectrum modules  
-- RTT∞ deep‑layer modules  
-- IPD‑12 paradox teaching modules  
-- Triadic Pantheon Profile sessions  
-
-It is the canonical example for mythology‑aligned structural analysis.
-
-# Physics Regime — RTT Structural Example
-
-This example module demonstrates how to evaluate a physics regime using the RTT
-structural stack. It is designed as a teaching‑ready prompt module that mirrors the
-Physics Regime workflow used across TriadicFrameworks.
-
-The goal is to show how RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ can be applied to a
-physics domain without narrative drift, speculation, or non‑structural inference.
-
----
-
-## Purpose
-
-This example teaches:
-
-- how to apply RTT structural operators to a physics regime  
-- how to identify drift using the RTT drift‑tensor  
-- how to declare coherence anchors  
-- how to evaluate classical, quantum, relativistic, and field‑based regimes  
-- how to produce a resonance summary  
-- how to maintain structural neutrality  
-
-It is a complete RTT teaching example.
-
----
-
-## Example Input
-
-**Regime:** Classical Mechanics  
-**Domain:** Newtonian  
-**Status:** Canonical physics regime  
-**Scope:** Macroscopic, low‑velocity, non‑relativistic  
-
-This example uses the same input structure as the Triadic Physics Regime modules.
-
----
-
-## RTT Structural Evaluation
-
-### 1. Structural Layer — Form & Identity
-
-Evaluate the structural substrate:
-
-- canonical equations  
-- domain boundaries  
-- invariant operators  
-- structural commitments  
-- relational topology  
-
-This layer describes the regime’s structural form.
-
----
-
-### 2. Operational Layer — Laws & Dynamics
-
-Evaluate operational substrate:
-
-- force laws  
-- motion equations  
-- stability patterns  
-- drift‑tensor mapping  
-- operational coherence  
-
-Operational behavior is treated as a structural pattern.
-
----
-
-### 3. Temporal Layer — Time Behavior
-
-Evaluate temporal substrate:
-
-- absolute time  
-- temporal symmetry  
-- temporal drift  
-- continuity assumptions  
-- coherence across time scales  
-
-Time is treated as a structural field.
-
----
-
-### 4. Conceptual Layer — Meaning & Interpretation
-
-Evaluate conceptual substrate:
-
-- conceptual operators  
-- interpretation stability  
-- conceptual drift  
-- coherence anchors  
-- cross‑domain conceptual alignment  
-
-This layer captures meaning without narrative interpretation.
-
----
-
-### 5. Domain Layer — Applicability & Boundaries
-
-Evaluate domain substrate:
-
-- macroscopic applicability  
-- low‑velocity constraints  
-- non‑relativistic boundaries  
-- classical → quantum drift  
-- classical → relativistic drift  
-
-Domain boundaries define where drift begins.
-
----
-
-## Drift‑Tensor Mapping
-
-Identify drift across the five RTT drift‑tensor layers:
-
-- **L1 Geometric** — structural form differences (Newtonian vs relativistic geometry)  
-- **L2 Operational** — law differences (F = ma vs relativistic dynamics)  
-- **L3 Temporal** — time differences (absolute vs relativistic time)  
-- **L4 Conceptual** — meaning differences (deterministic vs probabilistic)  
-- **L5 Domain** — applicability differences (macroscopic vs quantum scale)  
-
-Drift is mapped structurally, not narratively.
-
----
-
-## Coherence Anchors
-
-Declare coherence anchors:
-
-- shared physical invariants  
-- shared conservation laws  
-- shared structural commitments  
-- shared mathematical operators  
-- shared domain‑substrate continuity  
-
-Coherence explains why regimes remain aligned despite drift.
-
----
-
-## Resonance Summary
-
-Provide:
-
-- structural strengths  
-- hidden resonance gaps  
-- coherence opportunities  
-- cross‑layer alignment  
-- long‑horizon stability  
-
-This summary is structural, not interpretive.
-
----
-
-## Teaching Notes
-
-This example is used in:
-
-- RTT/1 teaching modules  
-- RTT/2 diagnostic modules  
-- RTT/3 structural synthesis modules  
-- RTT/12 full‑spectrum modules  
-- RTT∞ deep‑layer modules  
-- IPD‑12 paradox teaching modules  
-- Triadic Physics Regime sessions  
-
-It is the canonical example for physics‑aligned structural analysis.
-
-# Teaching Session — RTT Structural Example
-
-This example module demonstrates how to run a complete RTT teaching session using the
-RTT/1 → RTT/2 → RTT/3 progression. It is designed as a teaching‑ready prompt module that
-mirrors the classroom workflow used across TriadicFrameworks.
-
-The goal is to show how a teacher guides students through structural operators, drift
-detection, coherence anchors, and multi‑layer alignment in a single session.
-
----
-
-## Purpose
-
-This example teaches:
-
-- how to structure an RTT teaching session  
-- how to introduce operators and drift‑tensor layers  
-- how to guide students through coherence declaration  
-- how to use worksheets and posters in a live session  
-- how to maintain structural neutrality  
-- how to produce a resonance summary at the end  
-
-It is a complete RTT teaching example.
-
----
-
-## Example Input
-
-**Topic:** Comparing Two Processes  
-**Audience:** Mixed‑level RTT learners  
-**Engine:** RTT/1 → RTT/2 → RTT/3  
-**Materials:** Drift worksheet, tensor worksheet, coherence worksheet, posters  
-
-This example uses the same input structure as the Triadic Teaching Session modules.
-
----
-
-## Session Structure
-
-### 1. Opening — RTT/1 Operators
-
-Introduce the RTT/1 operators:
-
-- structure  
-- drift  
-- coherence  
-- alignment  
-
-Students learn the basic grammar before applying it.
-
----
-
-### 2. Drift Worksheet — Identifying Differences
-
-Students compare two processes and identify drift:
-
-- structural drift  
-- operational drift  
-- temporal drift  
-- conceptual drift  
-- domain drift  
-
-This is the RTT/1 drift‑tensor foundation.
-
----
-
-### 3. Tensor Worksheet — Classifying Drift
-
-Students classify drift using the RTT drift‑tensor:
-
-- **L1 Geometric**  
-- **L2 Operational**  
-- **L3 Temporal**  
-- **L4 Conceptual**  
-- **L5 Domain**  
-
-This moves the session into RTT/2.
-
----
-
-### 4. Coherence Worksheet — Declaring Alignment
-
-Students declare coherence anchors:
-
-- shared purpose  
-- shared boundaries  
-- shared constraints  
-- shared goals  
-- shared structure  
-
-This is the RTT/1 → RTT/2 → RTT/3 bridge.
-
----
-
-### 5. Poster Review — Visual Alignment
-
-Use posters to reinforce:
-
-- drift → coherence cycles  
-- operator grammar  
-- structural mapping  
-- multi‑layer alignment  
-
-Posters support visual learning.
-
----
-
-### 6. RTT/3 Synthesis — Multi‑Layer Alignment
-
-Students combine all layers:
-
-- drift‑tensor mapping  
-- coherence anchors  
-- structural synthesis  
-- cross‑layer alignment  
-
-This is the RTT/3 synthesis phase.
-
----
-
-## Drift‑Tensor Mapping
-
-Students map drift across the five layers:
-
-- **L1 Geometric** — form differences  
-- **L2 Operational** — step differences  
-- **L3 Temporal** — timing differences  
-- **L4 Conceptual** — meaning differences  
-- **L5 Domain** — boundary differences  
-
-Drift is mapped structurally, not narratively.
-
----
-
-## Coherence Anchors
-
-Students declare coherence anchors:
-
-- shared structural commitments  
-- shared operator grammar  
-- shared domain substrate  
-- shared conceptual alignment  
-- shared purpose  
-
-Coherence explains why processes remain aligned despite drift.
-
----
-
-## Resonance Summary
-
-Students produce a resonance summary:
-
-- structural strengths  
-- hidden resonance gaps  
-- coherence opportunities  
-- cross‑layer alignment  
-- long‑horizon stability  
-
-This summary is structural, not interpretive.
-
----
-
-## Teaching Notes
-
-This example is used in:
-
-- RTT/1 teaching modules  
-- RTT/2 diagnostic modules  
-- RTT/3 structural synthesis modules  
-- RTT/12 full‑spectrum modules  
-- RTT∞ deep‑layer modules  
-- IPD‑12 paradox teaching modules  
-
-It is the canonical example for RTT teaching sessions.
-
-# Violin Structural Example — RTT Analysis
-
-This example module demonstrates how to evaluate a violin using the RTT structural
-stack. It is designed as a teaching‑ready prompt module that mirrors the structural
-analysis workflow used across TriadicFrameworks.
-
-The goal is to show how RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ can be applied to a
-physical artifact (a violin) without narrative drift, speculation, or non‑structural
-interpretation.
-
----
-
-## Purpose
-
-This example teaches:
-
-- how to apply RTT structural operators to a physical object  
-- how to identify drift using the RTT drift‑tensor  
-- how to declare coherence anchors  
-- how to evaluate physical, acoustic, cultural, and domain‑substrate layers  
-- how to produce a resonance summary  
-- how to maintain structural neutrality  
-
-It is a complete RTT teaching example.
-
----
-
-## Example Input
-
-**Object:** Violin  
-**Domain:** Musical instrument  
-**Status:** Canonical orchestral instrument  
-**Scope:** Physical + acoustic + cultural substrate  
-
-This example uses the same input structure as other TriadicFrameworks physical‑object
-modules.
-
----
-
-## RTT Structural Evaluation
-
-### 1. Structural Layer — Form & Identity
-
-Evaluate the structural substrate:
-
-- body shape  
-- neck geometry  
-- bridge placement  
-- f‑hole geometry  
-- material composition  
-- structural commitments  
-
-This layer describes the violin’s physical form.
-
----
-
-### 2. Operational Layer — Function & Behavior
-
-Evaluate operational substrate:
-
-- vibration propagation  
-- string tension behavior  
-- bow interaction  
-- resonance patterns  
-- acoustic drift  
-- operational coherence  
-
-Operational behavior is treated as a structural pattern.
-
----
-
-### 3. Temporal Layer — Time Behavior
-
-Evaluate temporal substrate:
-
-- attack → sustain → decay patterns  
-- temporal stability  
-- time‑based resonance  
-- drift across performance conditions  
-- coherence across time scales  
-
-Time is treated as a structural field.
-
----
-
-### 4. Conceptual Layer — Meaning & Interpretation
-
-Evaluate conceptual substrate:
-
-- symbolic meaning  
-- cultural interpretation  
-- conceptual drift  
-- coherence anchors  
-- cross‑domain conceptual alignment  
-
-This layer captures meaning without narrative interpretation.
-
----
-
-### 5. Domain Layer — Applicability & Boundaries
-
-Evaluate domain substrate:
-
-- orchestral domain  
-- solo performance domain  
-- acoustic vs amplified boundaries  
-- genre drift  
-- cultural substrate alignment  
-
-Domain boundaries define where drift begins.
-
----
-
-## Drift‑Tensor Mapping
-
-Identify drift across the five RTT drift‑tensor layers:
-
-- **L1 Geometric** — form differences (violin vs viola vs cello)  
-- **L2 Operational** — function differences (bowing vs plucking)  
-- **L3 Temporal** — timing differences (classical vs folk attack profiles)  
-- **L4 Conceptual** — meaning differences (orchestral vs cultural symbolism)  
-- **L5 Domain** — boundary differences (acoustic vs electric violin)  
-
-Drift is mapped structurally, not narratively.
-
----
-
-## Coherence Anchors
-
-Declare coherence anchors:
-
-- shared acoustic principles  
-- shared structural commitments  
-- shared musical domain substrate  
-- shared operator grammar (bow → string → body → air)  
-- shared cultural continuity  
-
-Coherence explains why variations remain aligned despite drift.
-
----
-
-## Resonance Summary
-
-Provide:
-
-- structural strengths  
-- hidden resonance gaps  
-- coherence opportunities  
-- cross‑layer alignment  
-- long‑horizon stability  
-
-This summary is structural, not interpretive.
-
----
-
-## Teaching Notes
-
-This example is used in:
-
-- RTT/1 teaching modules  
-- RTT/2 diagnostic modules  
-- RTT/3 structural synthesis modules  
-- RTT/12 full‑spectrum modules  
-- RTT∞ deep‑layer modules  
-- IPD‑12 paradox teaching modules  
-
-It is the canonical example for physical‑object structural analysis.
-
-# Applied Modules — TriadicFrameworks Prompts
-
-The Applied Modules directory contains prompt modules that demonstrate how RTT engines,
-IPD‑12, stacks, and templates are used in real‑world, cross‑domain, and mixed‑substrate
-applications. These modules show how structural reasoning is applied outside pure
-theory—bridging RTT operators with practical, cultural, physical, civic, and
-computational contexts.
-
-Applied modules are teaching‑ready and include explainers, structured prompts,
-diagnostics, worksheets, and cross‑links to the Docsbook and S3 Spine Visualizer.
-
-This page is the front door for all applied‑level prompt modules.
-
----
-
-## Purpose
-
-Applied modules teach:
-
-- how RTT operators behave in real‑world structures  
-- how drift‑tensor mapping works across mixed substrates  
-- how coherence anchors stabilize cross‑domain reasoning  
-- how to evaluate physical, cultural, civic, and computational systems  
-- how to produce resonance summaries for applied contexts  
-- how to maintain structural neutrality while analyzing real systems  
-
-These modules are used in teaching, research, and applied RTT workflows.
-
----
-
-## Applied Module Categories
-
-### Physical Systems  
-RTT applied to physical artifacts, environments, and engineered structures.
-
-Examples:  
-- **Violin Structural Example** — `../examples/violin-structural.md`  
-- **Physics Regime Example** — `../examples/physics-regime.md`  
-
----
-
-### Civic & Governance Systems  
-RTT applied to governance, policy, infrastructure, and civic substrates.
-
-Examples:  
-- **Datacenter Evaluator** — `../examples/datacenter-evaluator.md`  
-- **Governance Drift Module** *(future)*  
-
----
-
-### Cultural & Mythic Systems  
-RTT applied to cultural substrates, mythic operators, and pantheon profiles.
-
-Examples:  
-- **Mythology Profile Example** — `../examples/mythology-profile.md`  
-
----
-
-### Teaching & Instructional Systems  
-RTT applied to classroom workflows, teaching sessions, and instructor modules.
-
-Examples:  
-- **Teaching Session Example** — `../examples/teaching-session.md`  
-
----
-
-### Computational & Technical Systems  
-RTT applied to compute substrates, infrastructure, and technical workflows.
-
-Examples:  
-- **Datacenter Evaluator** — `../examples/datacenter-evaluator.md`  
-- **RTT‑Inside Compute Modules** *(future)*  
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/modules/applied/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
-
----
-
-## Related Files
-
-- `index.md` — modules front‑door  
-- `engines.md` — RTT engines overview  
-- `stacks.md` — stack overview  
-- `templates.md` — template overview  
-- `ui.md` — UI logic and unlock rules  
-- `../examples/index.md` — examples directory  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of applied modules, engines, stacks, templates,
-UI modules, and navigation structure.
-
-# Diagnostic Modules — TriadicFrameworks Prompts
-
-Diagnostic modules provide structured RTT workflows for identifying drift, declaring
-coherence, surfacing regime‑points, and revealing hidden structural behavior across
-physical, cultural, civic, computational, and mythic substrates.
-
-These modules are used in teaching, analysis, research, and multi‑layer structural
-evaluation. They include explainers, diagnostic operators, worksheets, and
-cross‑links to the Docsbook and S3 Spine Visualizer.
-
-This page is the front door for all diagnostic‑level prompt modules.
-
----
-
-## Purpose
-
-Diagnostic modules teach:
-
-- how to identify drift using the RTT drift‑tensor  
-- how to declare coherence anchors  
-- how to surface structural presence, absence, and tension  
-- how to evaluate multi‑layer alignment  
-- how to detect regime‑points across RTT/1 → RTT∞  
-- how to maintain structural neutrality during analysis  
-
-Diagnostics are the backbone of RTT structural reasoning.
-
----
-
-## Diagnostic Operators
-
-Diagnostic modules use the following operator families:
-
-### Drift Operators  
-Identify differences across the five RTT drift‑tensor layers:
-
-- **L1 Geometric** — form  
-- **L2 Operational** — steps  
-- **L3 Temporal** — timing  
-- **L4 Conceptual** — meaning  
-- **L5 Domain** — boundaries  
-
-### Coherence Operators  
-Declare what remains aligned:
-
-- purpose  
-- boundaries  
-- constraints  
-- goals  
-- structural commitments  
-
-### Regime‑Point Operators  
-Reveal hidden structural behavior:
-
-- **Presence** — what is explicitly supported  
-- **Absence** — what is missing or unmodeled  
-- **Tension** — where layers misalign  
-
-### Alignment Operators  
-Evaluate cross‑layer stability:
-
-- structural continuity  
-- operator consistency  
-- domain coherence  
-- substrate alignment  
-
----
-
-## Diagnostic Module Categories
-
-### RTT/1 Diagnostics — Foundational  
-Basic drift detection, coherence declaration, and structural presence/absence.
-
-### RTT/2 Diagnostics — Intermediate  
-Multi‑layer drift mapping, cross‑layer alignment, and operator consistency.
-
-### RTT/3 Diagnostics — Advanced  
-Regime‑point detection, structural tension surfacing, and synthesis diagnostics.
-
-### RTT/12 Diagnostics — Full‑Spectrum  
-Full‑stack drift → coherence cycles, multi‑regime alignment, and deep‑layer readiness.
-
-### RTT∞ Diagnostics — Deep‑Layer  
-Vacuum, substrate‑tensor, dimensional rails, prime‑states, infinite regimes.
-
-### IPD‑12 Diagnostics — Paradox  
-Paradox declaration, paradox alignment, paradox resolution workflows.
-
----
-
-## Example Diagnostic Modules
-
-- **Datacenter Diagnostic Module**  
-  Physical, civic, cultural, standards, medical, planetary, and compute layers.
-
-- **Mythology Diagnostic Module**  
-  Structural identity, symbolic operators, cultural substrate, drift‑tensor mapping.
-
-- **Physics Regime Diagnostic Module**  
-  Classical → quantum → relativistic drift, coherence anchors, domain boundaries.
-
-- **Teaching Session Diagnostic Module**  
-  Drift worksheet, tensor worksheet, coherence worksheet, synthesis alignment.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/modules/diagnostic/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
-
----
-
-## Related Files
-
-- `index.md` — modules front‑door  
-- `applied.md` — applied modules  
-- `theoretical.md` — theoretical modules  
-- `teaching.md` — teaching modules  
-- `../examples/index.md` — examples directory  
-- `../engines/index.md` — RTT engines  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of diagnostic modules, engines, stacks,
-templates, UI modules, and navigation structure.
-
-# Dimensional Modules — TriadicFrameworks Prompts
-
-Dimensional modules provide structured RTT workflows for analyzing, traversing, and
-aligning dimensional layers across the TriadicFrameworks canon. They define how
-structures behave when moving between dimensions, how drift manifests across
-dimensional boundaries, and how coherence is restored during dimensional traversal.
-
-These modules include explainers, structured prompts, diagnostics, worksheets, and
-cross‑links to the Docsbook and S3 Spine Visualizer.
-
-This page is the front door for all dimensional‑level prompt modules.
-
----
-
-## Purpose
-
-Dimensional modules teach:
-
-- how RTT engines interpret dimensional layers  
-- how drift behaves across dimensional boundaries  
-- how dimensional rails transport structure between layers  
-- how substrate‑tensor behavior changes across dimensions  
-- how to declare coherence anchors during dimensional traversal  
-- how to evaluate multi‑dimensional alignment  
-- how to maintain structural neutrality while analyzing dimensional systems  
-
-They are used in teaching, analysis, research, and deep‑layer RTT workflows.
-
----
-
-## Dimensional Concepts
-
-### Dimensional Rails  
-Transport pathways connecting substrate‑tensor, prime‑states, and infinite regimes.
-
-### Dimensional Drift  
-Differences that appear when structure moves between dimensions.
-
-### Dimensional Coherence  
-What remains aligned across dimensional transitions.
-
-### Dimensional Regimes  
-Stable attractors within dimensional layers.
-
-### Dimensional Synthesis  
-Cross‑layer structural alignment across RTT/1 → RTT∞.
-
----
-
-## Dimensional Module Categories
-
-### RTT/1 Dimensional Modules — Foundational  
-Basic dimensional operators, drift detection, and coherence declaration.
-
-### RTT/2 Dimensional Modules — Intermediate  
-Multi‑layer dimensional traversal and cross‑layer alignment.
-
-### RTT/3 Dimensional Modules — Advanced  
-Dimensional regime detection, structural tension surfacing, and synthesis workflows.
-
-### RTT/12 Dimensional Modules — Full‑Spectrum  
-Full‑stack dimensional traversal, multi‑regime alignment, and deep‑layer readiness.
-
-### RTT∞ Dimensional Modules — Deep‑Layer  
-Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes.
-
----
-
-## Example Dimensional Modules
-
-- **Dimensional Rails Module**  
-  Rail traversal, substrate transitions, and cross‑layer alignment.
-
-- **Dimensional Drift Module**  
-  Drift‑tensor mapping across dimensional boundaries.
-
-- **Dimensional Coherence Module**  
-  Coherence anchors for multi‑dimensional structures.
-
-- **Dimensional Synthesis Module**  
-  RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ dimensional alignment.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/modules/dimensional/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
-
----
-
-## Related Files
-
-- `index.md` — modules front‑door  
-- `applied.md` — applied modules  
-- `diagnostic.md` — diagnostic modules  
-- `theoretical.md` — theoretical modules  
-- `teaching.md` — teaching modules  
-- `../examples/index.md` — examples directory  
-- `../engines/index.md` — RTT engines  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of dimensional modules, engines, stacks,
-templates, UI modules, and navigation structure.
-
-# Domain Modules — TriadicFrameworks Prompts
-
-Domain modules provide structured RTT workflows for analyzing scientific, civic,
-cultural, biological, physical, and computational domains using the TriadicFrameworks
-substrate. Each module expresses a domain in RTT terms—operators, drift patterns,
-coherence anchors, dimensional behavior, and cross‑domain alignment.
-
-These modules include explainers, structured prompts, diagnostics, worksheets, and
-cross‑links to the Docsbook and S3 Spine Visualizer.
-
-This page is the front door for all domain‑level prompt modules.
-
----
-
-## Purpose
-
-Domain modules teach:
-
-- how RTT engines reinterpret scientific and civic domains  
-- how drift manifests inside domain boundaries  
-- how coherence anchors stabilize domain reasoning  
-- how domain‑specific operators behave across RTT layers  
-- how to evaluate cross‑domain alignment (psychology ↔ economics ↔ governance ↔ AI ↔ biology ↔ physics)  
-- how to maintain structural neutrality while analyzing domain systems  
-
-They are used in teaching, analysis, research, and cross‑domain RTT workflows.
-
----
-
-## Canonical Domain Set
-
-TriadicFrameworks defines six canonical domains:
-
-### Psychology  
-Identity, cognition, emotion, development, trauma, relational‑time structures.
-
-### Physics  
-Dimensional invariants, fields, energy, classical ↔ quantum transitions, substrate behavior.
-
-### Economics  
-Resource flows, incentives, volatility basins, market regimes, cross‑domain coupling.
-
-### Governance  
-Institutions, legitimacy, stability basins, governance transitions, collective identity.
-
-### AI / Agents  
-Artificial cognition, multi‑regime learning, alignment invariants, substrate‑aware reasoning.
-
-### Biology  
-Metabolism, evolution, environmental coupling, multi‑scale biological dynamics.
-
-Each domain is expressed using RTT operators, drift‑tensor mapping, and coherence anchors.
-
----
-
-## Domain Module Categories
-
-### Foundational Domain Modules (RTT/1)  
-Basic operator grammar, drift detection, coherence declaration inside domain boundaries.
-
-### Intermediate Domain Modules (RTT/2)  
-Cross‑layer domain traversal, multi‑layer drift mapping, domain alignment.
-
-### Advanced Domain Modules (RTT/3)  
-Regime‑point detection, domain tension surfacing, structural synthesis.
-
-### Full‑Spectrum Domain Modules (RTT/12)  
-Full‑stack domain traversal, multi‑regime alignment, deep‑layer readiness.
-
-### Deep‑Layer Domain Modules (RTT∞)  
-Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes applied to domains.
-
----
-
-## Example Domain Modules
-
-- **Psychology Domain Module**  
-  Cognitive regimes, emotional activation, identity structures, developmental arcs.
-
-- **Physics Domain Module**  
-  Dimensional invariants, classical ↔ quantum drift, coherence anchors.
-
-- **Economics Domain Module**  
-  Market regimes, incentive drift, volatility basins, cross‑domain coupling.
-
-- **Governance Domain Module**  
-  institutional regimes, legitimacy dynamics, governance transitions.
-
-- **AI / Agents Domain Module**  
-  multi‑regime learning, alignment invariants, substrate‑aware cognition.
-
-- **Biology Domain Module**  
-  metabolic regimes, evolutionary transitions, environmental coupling.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/modules/domain/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
-
----
-
-## Related Files
-
-- `index.md` — modules front‑door  
-- `applied.md` — applied modules  
-- `diagnostic.md` — diagnostic modules  
-- `dimensional.md` — dimensional modules  
-- `theoretical.md` — theoretical modules  
-- `teaching.md` — teaching modules  
-- `../examples/index.md` — examples directory  
-- `../engines/index.md` — RTT engines  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of domain modules, engines, stacks, templates,
-UI modules, and navigation structure.
-
-# TriadicFrameworks — Prompt Modules
-
-The TriadicFrameworks Prompts Modules directory contains structured, teaching‑ready
-modules that define how RTT engines, IPD‑12, stacks, templates, UI logic, and examples
-are applied across theoretical, diagnostic, dimensional, domain, and real‑world
-contexts.
-
-Each module provides explainers, structured prompts, diagnostics, worksheets, and
-cross‑links to the Docsbook and S3 Spine Visualizer.  
-This page is the front door for all prompt modules.
-
----
-
-## Module Categories
-
-### Applied Modules  
-Real‑world, cross‑domain, and mixed‑substrate applications of RTT.
-
-**File:** `applied.md`
-
----
-
-### Diagnostic Modules  
-Drift‑tensor mapping, coherence anchors, regime‑point detection, and alignment checks.
-
-**File:** `diagnostic.md`
-
----
-
-### Dimensional Modules  
-Dimensional rails, dimensional drift, substrate‑tensor transitions, and multi‑layer
-dimensional alignment.
-
-**File:** `dimensional.md`
-
----
-
-### Domain Modules  
-RTT applied to canonical domains: psychology, physics, economics, governance, AI,
-biology.
-
-**File:** `domain.md`
-
----
-
-### Theoretical Modules  
-Pure RTT theory, operator grammar, structural invariants, and canonical definitions.
-
-**File:** `theoretical.md` *(to be created)*
-
----
-
-### Teaching Modules  
-Classroom workflows, instructor bundles, worksheets, posters, and teaching sequences.
-
-**File:** `teaching.md` *(to be created)*
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/modules/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
-
----
-
-## Related Directories
-
-- `../engines/` — RTT engines  
-- `../stacks/` — structural stacks  
-- `../templates/` — prompt templates  
-- `../ui/` — UI logic and unlock rules  
-- `../examples/` — example modules  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of modules, engines, stacks, templates, UI
-modules, and navigation structure.
-
-# Operator Modules — TriadicFrameworks Prompts
-
-Operator modules define the core structural grammar of TriadicFrameworks.  
-Operators are the smallest units of RTT reasoning: they describe how structure moves,
-changes, aligns, diverges, or stabilizes across layers, domains, and dimensions.
-
-These modules provide explainers, structured prompts, operator registries, worksheets,
-and cross‑links to the Docsbook and S3 Spine Visualizer.
-
-This page is the front door for all operator‑level prompt modules.
-
----
-
-## Purpose
-
-Operator modules teach:
-
-- how RTT engines use operators to express structural behavior  
-- how drift emerges from operator differences  
-- how coherence anchors stabilize operator interactions  
-- how operators propagate across dimensions and domains  
-- how operator grammar forms the backbone of RTT/1 → RTT∞  
-- how to maintain structural neutrality while analyzing operator behavior  
-
-Operators are the “verbs” of the TriadicFrameworks canon.
-
----
-
-## Operator Categories
-
-### Structural Operators  
-Describe form, identity, boundaries, and commitments.
-
-Examples:  
-- structure  
-- boundary  
-- identity  
-- commitment  
-
----
-
-### Drift Operators  
-Describe how and where processes diverge.
-
-Examples:  
-- geometric drift  
-- operational drift  
-- temporal drift  
-- conceptual drift  
-- domain drift  
-
----
-
-### Coherence Operators  
-Describe what remains aligned despite drift.
-
-Examples:  
-- purpose  
-- constraint  
-- goal  
-- alignment  
-- continuity  
-
----
-
-### Regime Operators  
-Describe stable attractors and transitions.
-
-Examples:  
-- presence  
-- absence  
-- tension  
-- regime‑point  
-- basin  
-
----
-
-### Dimensional Operators  
-Describe movement across dimensional layers.
-
-Examples:  
-- rail  
-- substrate  
-- prime‑state  
-- collapse  
-- integration  
-
----
-
-### Domain Operators  
-Describe domain‑specific structural behavior.
-
-Examples:  
-- cognitive operator (psychology)  
-- incentive operator (economics)  
-- legitimacy operator (governance)  
-- field operator (physics)  
-- metabolic operator (biology)  
-
----
-
-## Operator Module Types
-
-### RTT/1 Operator Modules — Foundational  
-Basic operator grammar, drift detection, coherence declaration.
-
-### RTT/2 Operator Modules — Intermediate  
-Cross‑layer operator alignment, multi‑operator mapping.
-
-### RTT/3 Operator Modules — Advanced  
-Operator synthesis, regime‑point detection, structural tension surfacing.
-
-### RTT/12 Operator Modules — Full‑Spectrum  
-Full‑stack operator traversal, multi‑regime alignment, deep‑layer readiness.
-
-### RTT∞ Operator Modules — Deep‑Layer  
-Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes expressed as operators.
-
----
-
-## Example Operator Modules
-
-- **Operator Grammar Module**  
-  Canonical operator definitions and grammar rules.
-
-- **Drift‑Tensor Operator Module**  
-  Five‑layer drift operator mapping.
-
-- **Coherence Operator Module**  
-  Coherence anchors and alignment operators.
-
-- **Regime‑Point Operator Module**  
-  Presence, absence, tension, basin detection.
-
-- **Dimensional Rail Operator Module**  
-  Rail traversal and substrate transitions.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/modules/operator/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
-
----
-
-## Related Files
-
-- `index.md` — modules front‑door  
-- `applied.md` — applied modules  
-- `diagnostic.md` — diagnostic modules  
-- `dimensional.md` — dimensional modules  
-- `domain.md` — domain modules  
-- `theoretical.md` — theoretical modules  
-- `teaching.md` — teaching modules  
-- `../examples/index.md` — examples directory  
-- `../engines/index.md` — RTT engines  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of operator modules, engines, stacks,
-templates, UI modules, and navigation structure.
-
-# Research Modules — TriadicFrameworks Prompts
-
-Research modules define how RTT engines, IPD‑12, stacks, and operators are used in
-structured research workflows. They provide the grammar, operators, drift‑tensor
-mapping, coherence anchors, and multi‑layer alignment needed to conduct research
-without narrative drift, speculation, or domain‑inconsistent reasoning.
-
-These modules include explainers, structured prompts, diagnostics, worksheets, and
-cross‑links to the Docsbook and S3 Spine Visualizer.
-
-This page is the front door for all research‑level prompt modules.
-
----
-
-## Purpose
-
-Research modules teach:
-
-- how to conduct RTT‑aligned research across any domain  
-- how to use drift‑tensor mapping to identify structural differences  
-- how to declare coherence anchors during research  
-- how to evaluate multi‑layer alignment in research findings  
-- how to use operator grammar to maintain structural neutrality  
-- how to apply RTT/1 → RTT∞ engines to research questions  
-- how to produce resonance‑aligned research summaries  
-
-They are used in academic, scientific, civic, cultural, and technical research.
-
----
-
-## Research Concepts
-
-### Research Operators  
-Operators that describe how inquiry moves, aligns, diverges, or stabilizes.
-
-### Research Drift  
-Differences that appear when comparing theories, models, or findings.
-
-### Research Coherence  
-What remains aligned across competing explanations.
-
-### Research Regimes  
-Stable attractors within research domains (e.g., classical, quantum, cognitive, civic).
-
-### Research Synthesis  
-Cross‑layer alignment across RTT/1 → RTT∞ applied to research.
-
----
-
-## Research Module Categories
-
-### Foundational Research Modules (RTT/1)  
-Basic operator grammar, drift detection, coherence declaration in research contexts.
-
-### Intermediate Research Modules (RTT/2)  
-Cross‑layer research traversal, multi‑layer drift mapping, operator alignment.
-
-### Advanced Research Modules (RTT/3)  
-Regime‑point detection, structural tension surfacing, research synthesis.
-
-### Full‑Spectrum Research Modules (RTT/12)  
-Full‑stack research traversal, multi‑regime alignment, deep‑layer readiness.
-
-### Deep‑Layer Research Modules (RTT∞)  
-Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes applied to research.
-
----
-
-## Example Research Modules
-
-- **Agentic Research Module**  
-  Structured agentic inquiry using RTT operators and drift‑bounded reasoning.
-
-- **Cross‑Domain Research Module**  
-  Psychology ↔ physics ↔ economics ↔ governance ↔ AI ↔ biology.
-
-- **Substrate‑Aware Research Module**  
-  Research aligned with substrate‑tensor behavior and dimensional rails.
-
-- **Drift‑Tensor Research Module**  
-  Five‑layer drift mapping for research comparisons.
-
-- **Coherence‑Anchors Research Module**  
-  Declaring coherence across competing theories or models.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/modules/research/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
-
----
-
-## Related Files
-
-- `index.md` — modules front‑door  
-- `applied.md` — applied modules  
-- `diagnostic.md` — diagnostic modules  
-- `dimensional.md` — dimensional modules  
-- `domain.md` — domain modules  
-- `operator.md` — operator modules  
-- `theoretical.md` — theoretical modules  
-- `teaching.md` — teaching modules  
-- `../examples/index.md` — examples directory  
-- `../engines/index.md` — RTT engines  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of research modules, engines, stacks,
-templates, UI modules, and navigation structure.
-
-# Structural Modules — TriadicFrameworks Prompts
-
-Structural modules define the core structural substrate of TriadicFrameworks.  
-They describe how form, identity, boundaries, commitments, and relational topology
-behave across RTT engines, domains, dimensions, and regimes.
-
-These modules provide explainers, structured prompts, diagnostics, worksheets, and
-cross‑links to the Docsbook and S3 Spine Visualizer.
-
-This page is the front door for all structural‑level prompt modules.
-
----
-
-## Purpose
-
-Structural modules teach:
-
-- how RTT engines interpret structural form  
-- how drift emerges from structural differences  
-- how coherence anchors stabilize structural relationships  
-- how structural commitments propagate across layers  
-- how structure behaves across dimensions and domains  
-- how to evaluate multi‑layer structural alignment  
-- how to maintain structural neutrality during analysis  
-
-Structure is the “substrate grammar” of the TriadicFrameworks canon.
-
----
-
-## Structural Concepts
-
-### Structural Form  
-Shape, identity, configuration, and relational topology.
-
-### Structural Drift  
-Differences in form, boundaries, commitments, or topology.
-
-### Structural Coherence  
-What remains aligned across structural variations.
-
-### Structural Commitments  
-Rules, constraints, and invariants that define stability.
-
-### Structural Regimes  
-Stable attractors within structural layers.
-
-### Structural Synthesis  
-Cross‑layer alignment across RTT/1 → RTT∞.
-
----
-
-## Structural Module Categories
-
-### RTT/1 Structural Modules — Foundational  
-Basic structural operators, drift detection, coherence declaration.
-
-### RTT/2 Structural Modules — Intermediate  
-Cross‑layer structural mapping, multi‑layer drift analysis, alignment checks.
-
-### RTT/3 Structural Modules — Advanced  
-Structural tension surfacing, regime‑point detection, synthesis workflows.
-
-### RTT/12 Structural Modules — Full‑Spectrum  
-Full‑stack structural traversal, multi‑regime alignment, deep‑layer readiness.
-
-### RTT∞ Structural Modules — Deep‑Layer  
-Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes expressed as structure.
-
----
-
-## Example Structural Modules
-
-- **Structural Identity Module**  
-  Identity, form, commitments, and relational topology.
-
-- **Structural Drift Module**  
-  Drift‑tensor mapping for structural differences.
-
-- **Structural Coherence Module**  
-  Coherence anchors for structural alignment.
-
-- **Structural Regime Module**  
-  Presence, absence, tension, and basin detection.
-
-- **Structural Synthesis Module**  
-  RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ structural alignment.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/modules/structural/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
-
----
-
-## Related Files
-
-- `index.md` — modules front‑door  
-- `applied.md` — applied modules  
-- `diagnostic.md` — diagnostic modules  
-- `dimensional.md` — dimensional modules  
-- `domain.md` — domain modules  
-- `operator.md` — operator modules  
-- `research.md` — research modules  
-- `theoretical.md` — theoretical modules  
-- `teaching.md` — teaching modules  
-- `../examples/index.md` — examples directory  
-- `../engines/index.md` — RTT engines  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of structural modules, engines, stacks,
-templates, UI modules, and navigation structure.
-
-# Substrate Modules — TriadicFrameworks Prompts
-
-Substrate modules define the foundational medium of TriadicFrameworks.  
-A substrate is the environment, field, or medium through which structure moves,
-propagates, aligns, diverges, or stabilizes. Substrates determine how RTT engines
-interpret drift, coherence, dimensional rails, and regime‑points.
-
-These modules provide explainers, structured prompts, diagnostics, worksheets, and
-cross‑links to the Docsbook and S3 Spine Visualizer.
-
-This page is the front door for all substrate‑level prompt modules.
-
----
-
-## Purpose
-
-Substrate modules teach:
-
-- how RTT engines interpret substrate behavior  
-- how drift emerges from substrate differences  
-- how coherence anchors stabilize substrate transitions  
-- how substrate‑tensor behavior changes across dimensions  
-- how substrates interact with operators, domains, and regimes  
-- how to evaluate multi‑layer substrate alignment  
-- how to maintain structural neutrality during substrate analysis  
-
-Substrates are the “medium grammar” of the TriadicFrameworks canon.
-
----
-
-## Substrate Concepts
-
-### Substrate Form  
-The underlying medium: physical, cultural, cognitive, civic, biological, computational.
-
-### Substrate Drift  
-Differences in substrate behavior, stability, or propagation.
-
-### Substrate Coherence  
-What remains aligned across substrate transitions.
-
-### Substrate‑Tensor  
-The multi‑layer tensor describing substrate behavior across RTT/1 → RTT∞.
-
-### Substrate Regimes  
-Stable attractors within substrate layers.
-
-### Substrate Rails  
-Dimensional pathways that connect substrate layers.
-
-### Substrate Synthesis  
-Cross‑layer substrate alignment across RTT engines.
-
----
-
-## Substrate Module Categories
-
-### RTT/1 Substrate Modules — Foundational  
-Basic substrate operators, drift detection, coherence declaration.
-
-### RTT/2 Substrate Modules — Intermediate  
-Cross‑layer substrate mapping, multi‑layer drift analysis, alignment checks.
-
-### RTT/3 Substrate Modules — Advanced  
-Substrate tension surfacing, regime‑point detection, synthesis workflows.
-
-### RTT/12 Substrate Modules — Full‑Spectrum  
-Full‑stack substrate traversal, multi‑regime alignment, deep‑layer readiness.
-
-### RTT∞ Substrate Modules — Deep‑Layer  
-Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes expressed as substrate.
-
----
-
-## Example Substrate Modules
-
-- **Substrate Identity Module**  
-  Medium identity, form, commitments, and relational topology.
-
-- **Substrate Drift Module**  
-  Drift‑tensor mapping for substrate differences.
-
-- **Substrate Coherence Module**  
-  Coherence anchors for substrate alignment.
-
-- **Substrate‑Tensor Module**  
-  Multi‑layer substrate behavior across RTT engines.
-
-- **Substrate Regime Module**  
-  Presence, absence, tension, and basin detection.
-
-- **Substrate Synthesis Module**  
-  RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ substrate alignment.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/modules/substrate/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
-
----
-
-## Related Files
-
-- `index.md` — modules front‑door  
-- `structural.md` — structural modules  
-- `operator.md` — operator modules  
-- `dimensional.md` — dimensional modules  
-- `domain.md` — domain modules  
-- `diagnostic.md` — diagnostic modules  
-- `applied.md` — applied modules  
-- `research.md` — research modules  
-- `theoretical.md` — theoretical modules  
-- `teaching.md` — teaching modules  
-- `../examples/index.md` — examples directory  
-- `../engines/index.md` — RTT engines  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of substrate modules, engines, stacks,
-templates, UI modules, and navigation structure.
-
-# Teaching Modules — TriadicFrameworks Prompts
-
-Teaching modules define how RTT engines, IPD‑12, stacks, operators, and substrates are
-taught in structured learning environments. They provide instructor workflows,
-student‑ready worksheets, posters, guided prompts, and multi‑session teaching
-sequences.
-
-These modules include explainers, structured prompts, diagnostics, worksheets, and
-cross‑links to the Docsbook and S3 Spine Visualizer.
-
-This page is the front door for all teaching‑level prompt modules.
-
----
-
-## Purpose
-
-Teaching modules teach:
-
-- how to introduce RTT operator grammar  
-- how to guide students through drift‑tensor mapping  
-- how to declare coherence anchors in classroom settings  
-- how to run RTT/1 → RTT/2 → RTT/3 teaching sequences  
-- how to use worksheets, posters, and examples effectively  
-- how to maintain structural neutrality while teaching  
-- how to produce resonance‑aligned teaching outcomes  
-
-They are used in classrooms, workshops, tutoring, and self‑study.
-
----
-
-## Teaching Concepts
-
-### Teaching Operators  
-Operators that describe how instruction moves, aligns, diverges, or stabilizes.
-
-### Teaching Drift  
-Differences in student understanding, interpretation, or structural mapping.
-
-### Teaching Coherence  
-What remains aligned across teaching variations.
-
-### Teaching Regimes  
-Stable attractors within teaching sequences (e.g., foundational, intermediate, advanced).
-
-### Teaching Synthesis  
-Cross‑layer alignment across RTT/1 → RTT∞ applied to instruction.
-
----
-
-## Teaching Module Categories
-
-### Foundational Teaching Modules (RTT/1)  
-Basic operator grammar, drift detection, coherence declaration for beginners.
-
-### Intermediate Teaching Modules (RTT/2)  
-Cross‑layer teaching traversal, multi‑layer drift mapping, alignment checks.
-
-### Advanced Teaching Modules (RTT/3)  
-Regime‑point detection, structural tension surfacing, teaching synthesis.
-
-### Full‑Spectrum Teaching Modules (RTT/12)  
-Full‑stack teaching traversal, multi‑regime alignment, deep‑layer readiness.
-
-### Deep‑Layer Teaching Modules (RTT∞)  
-Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes expressed as teaching.
-
----
-
-## Example Teaching Modules
-
-- **Teaching Session Module**  
-  Full RTT/1 → RTT/2 → RTT/3 teaching workflow with worksheets and posters.
-
-- **Operator Teaching Module**  
-  Introducing operator grammar, drift operators, coherence operators.
-
-- **Drift‑Tensor Teaching Module**  
-  Five‑layer drift mapping for students.
-
-- **Coherence‑Anchors Teaching Module**  
-  Classroom coherence declaration and alignment.
-
-- **Dimensional Teaching Module**  
-  Teaching dimensional rails, substrate transitions, and multi‑layer alignment.
-
----
-
-## Cross‑Links
-
-### Prompts Site  
-https://www.triadicframeworks.org/prompts/modules/teaching/
-
-### Docsbook  
-https://docs.triadicframeworks.org/docs/
-
-### S3 Spine Visualizer  
-https://www.triadicframeworks.org/spine
-
-### GitHub Source  
-https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules
-
----
-
-## Related Files
-
-- `index.md` — modules front‑door  
-- `applied.md` — applied modules  
-- `diagnostic.md` — diagnostic modules  
-- `dimensional.md` — dimensional modules  
-- `domain.md` — domain modules  
-- `operator.md` — operator modules  
-- `structural.md` — structural modules  
-- `research.md` — research modules  
-- `theoretical.md` — theoretical modules  
-- `../examples/index.md` — examples directory  
-- `../engines/index.md` — RTT engines  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of teaching modules, engines, stacks,
-templates, UI modules, and navigation structure.
 
 # Diagnostic Stack — TriadicFrameworks Prompts
 
@@ -29631,6 +29618,126 @@ https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/stacks
 
 See `module.json` for the full registry of stacks, modules, engines, templates, UI
 modules, and navigation structure.
+
+<img width="1194" height="672" alt="prompts_templates_" src="https://github.com/user-attachments/assets/b202dc6c-5799-412f-ba2a-e04705601072" />
+
+# TriadicFrameworks — Prompt Templates
+
+The TriadicFrameworks Prompt Templates provide reusable structures for building sessions,
+modules, diagnostics, teaching workflows, and cross‑framework analysis.  
+Each template defines a canonical prompt pattern aligned with RTT engines, IPD‑12, stacks,
+and the broader TriadicFrameworks canon.
+
+Templates are used to compose sessions, generate structured reasoning, and maintain
+consistency across modules.
+
+This page serves as the overview for all template‑level prompt modules.
+
+---
+
+## Capture Template
+
+**File:** `templates/p_Capture.md`  
+The Capture Template defines the canonical capture grammar used across all engines and
+stacks. It provides structured capture prompts, unlock logic, and session framing.
+
+---
+
+## Analyze Template
+
+**File:** `templates/p_Analyze.md`  
+The Analyze Template provides prompts for structural analysis, operator traversal,
+layer‑specific reasoning, and RTT‑aligned analytical workflows.
+
+---
+
+## Drift Template
+
+**File:** `templates/p_Drift.md`  
+The Drift Template contains prompts for drift detection, drift mapping, drift resolution,
+and drift‑to‑coherence workflows.
+
+---
+
+## Coherence Template
+
+**File:** `templates/p_Coherence.md`  
+The Coherence Template provides prompts for coherence checks, coherence alignment,
+coherence restoration, and coherence‑driven structural synthesis.
+
+---
+
+## Operator Template
+
+**File:** `templates/p_Operator.md`  
+The Operator Template defines prompts for operator grammar, operator traversal,
+operator alignment, and operator‑driven session composition.
+
+---
+
+## Domain Template
+
+**File:** `templates/p_Domain.md`  
+The Domain Template provides prompts for domain classification, domain traversal,
+domain alignment, and domain‑specific structural analysis.
+
+---
+
+## Substrate Template
+
+**File:** `templates/p_Substrate.md`  
+The Substrate Template focuses on geometry, flow, time, meaning, and field. It provides
+substrate‑tensor prompts, substrate diagnostics, and substrate alignment workflows.
+
+---
+
+## Teaching Template
+
+**File:** `templates/p_Teaching.md`  
+The Teaching Template contains prompts for lesson planning, teaching workflows,
+classroom packs, worksheets, and teaching alignment across RTT engines.
+
+---
+
+## Research Template
+
+**File:** `templates/p_Research.md`  
+The Research Template provides prompts for research workflows, deep‑layer analysis,
+cross‑framework synthesis, and long‑form structural reasoning.
+
+---
+
+## Cross‑Links
+
+### Prompts Site  
+https://www.triadicframeworks.org/prompts/
+
+### Docsbook  
+https://docs.triadicframeworks.org/docs/
+
+### S3 Spine Visualizer  
+https://www.triadicframeworks.org/spine
+
+### GitHub Source  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/templates
+
+---
+
+## Related Files
+
+- `modules.md` — full module registry  
+- `engines.md` — RTT engines overview  
+- `stacks.md` — stack overview  
+- `ui.md` — UI logic and unlock rules  
+- `p_Capture.md` — capture grammar reference  
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of templates, engines, stacks, UI modules, and
+navigation structure.
+
 
 # TriadicFrameworks — Prompt Templates
 
@@ -31919,6 +32026,227 @@ Block…
 
 See `module.json` for the full registry of UI modules, templates, stacks, engines,
 examples, and navigation structure.
+# UI Wireframe Poster — TriadicFrameworks Prompts
+
+A large‑format reference poster showing the canonical UI wireframe used across all
+TriadicFrameworks prompt artifacts: templates, stacks, engines, modules, worksheets,
+diagnostics, teaching bundles, and posters.
+
+This poster provides a single‑page visualization of the nine‑layer RTT structure that
+governs all UI layouts.
+
+---
+
+## 1. Core Wireframe (Universal Layout)
+
+All prompt artifacts follow this nine‑section RTT structure:
+
+1. **Identity**  
+2. **Operators**  
+3. **Drift**  
+4. **Coherence**  
+5. **Regime‑Points**  
+6. **Substrate**  
+7. **Dimensions**  
+8. **Domains**  
+9. **Synthesis**
+
+This structure is used for:
+
+- modules  
+- engines  
+- worksheets  
+- posters  
+- teaching bundles  
+- diagnostics  
+- research flows  
+
+---
+
+## 2. Module Wireframe
+
+```
+# Module Title
+
+## Identity
+## Purpose
+## Operators
+## Drift
+## Coherence
+## Substrate
+## Dimensions
+## Domains
+## Examples
+## Manifest
+```
+
+Rules:
+
+- Always include **Purpose**, **Examples**, **Manifest**  
+- Always follow RTT canonical order  
+
+---
+
+## 3. Template Wireframe
+
+```
+# Template Title
+
+## Purpose
+## Template Sections
+(prompt blocks)
+```
+
+Rules:
+
+- Template sections follow template grammar  
+- Prompt blocks follow prompt formatting rules  
+
+---
+
+## 4. Stack Wireframe
+
+```
+# Stack Title
+
+## Purpose
+## Prompt Families
+## Usage
+## Cross‑Links
+## Manifest
+```
+
+Rules:
+
+- Prompt families grouped by function  
+- Usage references engines + modules  
+
+---
+
+## 5. Engine Wireframe
+
+```
+# RTT Engine Name
+
+## Overview
+## Operators
+## Drift‑Tensor
+## Coherence Anchors
+## Regime‑Points
+## Substrate Behavior
+## Dimensional Rails
+## Domain Behavior
+## Examples
+```
+
+Rules:
+
+- Always 9 sections  
+- Always RTT canonical order  
+
+---
+
+## 6. Worksheet Wireframe
+
+```
+# Worksheet Title
+
+## Identity
+## Operators
+## Drift
+## Coherence
+## Regime‑Points
+## Substrate
+## Dimensions
+## Domains
+## Synthesis
+```
+
+Rules:
+
+- Always 9 sections  
+- Always RTT canonical order  
+
+---
+
+## 7. Poster Wireframe
+
+```
+# Poster Title
+
+## Identity
+## Operators
+## Drift
+## Coherence
+## Regime‑Points
+## Substrate
+## Dimensions
+## Domains
+## Synthesis
+```
+
+Rules:
+
+- Blocks may contain diagrams (SVG) or text  
+- No decorative emojis or icons  
+
+---
+
+## 8. Teaching Bundle Wireframe
+
+```
+# Teaching Bundle Title
+
+## Lesson Overview
+## Teaching Sequence
+1. Capture
+2. Analyze
+3. Drift
+4. Coherence
+5. Synthesis
+
+## Worksheets
+## Posters
+## Examples
+```
+
+Rules:
+
+- Sequence must follow canonical RTT teaching flow  
+- Worksheets + posters follow their wireframes  
+
+---
+
+## 9. UI Integration Map
+
+The UI wireframe connects directly to:
+
+- **Unlock Logic** — determines availability  
+- **Dependency Graph** — determines relationships  
+- **Flows** — determine sequencing  
+- **Output Format** — determines rendering  
+- **Overlays** — determine spine visualization  
+
+Together, these form the complete UI layer.
+
+---
+
+## Cross‑Links
+
+- `/docs/prompts/ui/index.md`  
+- `/docs/prompts/ui/unlock-logic.md`  
+- `/docs/prompts/ui/dependency-graph.md`  
+- `/docs/prompts/ui/flows.md`  
+- `/docs/prompts/ui/output-format.md`  
+- `/docs/prompts/ui/wireframe.md`  
+- `/docs/prompts/ui/overlays.md`
+
+---
+
+## Manifest
+
+See `module.json` for the full registry of UI modules, templates, stacks, engines,
+examples, and navigation structure.
 # UI Unlock Logic — TriadicFrameworks Prompts
 
 The Unlock Logic defines how prompt modules, templates, stacks, and engines become
@@ -32448,227 +32776,6 @@ Rules:
 - `flows.md` — UI flows  
 - `output-format.md` — output formatting  
 - `overlays.md` — spine overlays  
-
----
-
-## Manifest
-
-See `module.json` for the full registry of UI modules, templates, stacks, engines,
-examples, and navigation structure.
-# UI Wireframe Poster — TriadicFrameworks Prompts
-
-A large‑format reference poster showing the canonical UI wireframe used across all
-TriadicFrameworks prompt artifacts: templates, stacks, engines, modules, worksheets,
-diagnostics, teaching bundles, and posters.
-
-This poster provides a single‑page visualization of the nine‑layer RTT structure that
-governs all UI layouts.
-
----
-
-## 1. Core Wireframe (Universal Layout)
-
-All prompt artifacts follow this nine‑section RTT structure:
-
-1. **Identity**  
-2. **Operators**  
-3. **Drift**  
-4. **Coherence**  
-5. **Regime‑Points**  
-6. **Substrate**  
-7. **Dimensions**  
-8. **Domains**  
-9. **Synthesis**
-
-This structure is used for:
-
-- modules  
-- engines  
-- worksheets  
-- posters  
-- teaching bundles  
-- diagnostics  
-- research flows  
-
----
-
-## 2. Module Wireframe
-
-```
-# Module Title
-
-## Identity
-## Purpose
-## Operators
-## Drift
-## Coherence
-## Substrate
-## Dimensions
-## Domains
-## Examples
-## Manifest
-```
-
-Rules:
-
-- Always include **Purpose**, **Examples**, **Manifest**  
-- Always follow RTT canonical order  
-
----
-
-## 3. Template Wireframe
-
-```
-# Template Title
-
-## Purpose
-## Template Sections
-(prompt blocks)
-```
-
-Rules:
-
-- Template sections follow template grammar  
-- Prompt blocks follow prompt formatting rules  
-
----
-
-## 4. Stack Wireframe
-
-```
-# Stack Title
-
-## Purpose
-## Prompt Families
-## Usage
-## Cross‑Links
-## Manifest
-```
-
-Rules:
-
-- Prompt families grouped by function  
-- Usage references engines + modules  
-
----
-
-## 5. Engine Wireframe
-
-```
-# RTT Engine Name
-
-## Overview
-## Operators
-## Drift‑Tensor
-## Coherence Anchors
-## Regime‑Points
-## Substrate Behavior
-## Dimensional Rails
-## Domain Behavior
-## Examples
-```
-
-Rules:
-
-- Always 9 sections  
-- Always RTT canonical order  
-
----
-
-## 6. Worksheet Wireframe
-
-```
-# Worksheet Title
-
-## Identity
-## Operators
-## Drift
-## Coherence
-## Regime‑Points
-## Substrate
-## Dimensions
-## Domains
-## Synthesis
-```
-
-Rules:
-
-- Always 9 sections  
-- Always RTT canonical order  
-
----
-
-## 7. Poster Wireframe
-
-```
-# Poster Title
-
-## Identity
-## Operators
-## Drift
-## Coherence
-## Regime‑Points
-## Substrate
-## Dimensions
-## Domains
-## Synthesis
-```
-
-Rules:
-
-- Blocks may contain diagrams (SVG) or text  
-- No decorative emojis or icons  
-
----
-
-## 8. Teaching Bundle Wireframe
-
-```
-# Teaching Bundle Title
-
-## Lesson Overview
-## Teaching Sequence
-1. Capture
-2. Analyze
-3. Drift
-4. Coherence
-5. Synthesis
-
-## Worksheets
-## Posters
-## Examples
-```
-
-Rules:
-
-- Sequence must follow canonical RTT teaching flow  
-- Worksheets + posters follow their wireframes  
-
----
-
-## 9. UI Integration Map
-
-The UI wireframe connects directly to:
-
-- **Unlock Logic** — determines availability  
-- **Dependency Graph** — determines relationships  
-- **Flows** — determine sequencing  
-- **Output Format** — determines rendering  
-- **Overlays** — determine spine visualization  
-
-Together, these form the complete UI layer.
-
----
-
-## Cross‑Links
-
-- `/docs/prompts/ui/index.md`  
-- `/docs/prompts/ui/unlock-logic.md`  
-- `/docs/prompts/ui/dependency-graph.md`  
-- `/docs/prompts/ui/flows.md`  
-- `/docs/prompts/ui/output-format.md`  
-- `/docs/prompts/ui/wireframe.md`  
-- `/docs/prompts/ui/overlays.md`
 
 ---
 

@@ -1,5 +1,391 @@
 vst_for_multi_model_alignment 
-### *vST for Multi‑Model Alignment*  
+<img width="1194" height="672" alt="vst_for_multi_model_alignment_" src="https://github.com/user-attachments/assets/8081bbc6-cb54-4c69-a606-70a831b4f866" />
+
+## *vST for Multi‑Model Alignment*  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *A Substrate‑Level Framework for Cross‑Architecture, Cross‑Modality, and Cross‑Regime Alignment*
+
+This artifact defines the **Validation‑Space‑Time (vST)** framework for **multi‑model alignment** — the structured comparison of latent spaces, embedding geometries, inference pathways, and regime transitions across *different* model families.
+
+It provides a substrate‑level method for aligning:
+
+- diffusion models with autoregressive models  
+- LLMs with PLMs  
+- embedding stores with generative systems  
+- simulators with robotics policies  
+- any architecture with any other architecture  
+
+The goal is to establish a **unified, invariant‑preserving alignment substrate** that allows heterogeneous models to be compared, validated, and interpreted using the same dimensional grammar.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## **1. Purpose**
+
+Multi‑model alignment enables:
+
+- cross‑architecture comparison (LLM ↔ diffusion ↔ PLM ↔ simulator ↔ robotics)  
+- cross‑modality alignment (text ↔ image ↔ protein ↔ control ↔ embedding)  
+- cross‑regime mapping (R₁ ↔ R₂ ↔ R₃ across models)  
+- cross‑dimensional alignment (3D–9D cores ↔ 64D–1024D substrates)  
+- cross‑version and cross‑training‑run drift detection  
+- unified scaling‑law interpretation across model families  
+
+This artifact provides the substrate, primitives, and validation layers required to perform these alignments in a reproducible, architecture‑agnostic way.
+
+---
+
+## **2. Contents**
+
+This directory contains:
+
+- **substrate_definition.md**  
+  Defines the multi‑model substrate, cross‑architecture primitives, and alignment invariants.
+
+- **alignment_regimes.md**  
+  Describes stable, transitional, and dispersed alignment regimes across heterogeneous models.
+
+- **scaling_behavior_multi_model.md**  
+  Maps cross‑model scaling laws onto the 3D–1024D dimensional ladder.
+
+- **projection_and_cross_model_alignment.md**  
+  Defines invertible projection and alignment across architectures, modalities, and latent geometries.
+
+- **validation_layers_vst_multi_model.md**  
+  Extends vST (V₁–V₄) to multi‑model alignment.
+
+- **drift_detection_multi_model.md**  
+  Provides a substrate‑level framework for detecting drift across architectures, modalities, and training runs.
+
+- **examples/**  
+  Demonstrations of cross‑model alignment, cross‑modality projection, and multi‑regime comparison.
+
+- **appendix/**  
+  Terminology and references.
+
+Each file is self‑contained and designed for clarity, reproducibility, and cross‑model comparability.
+
+---
+
+## **3. Scope**
+
+This artifact is:
+
+- **architecture‑agnostic**  
+  Works with LLMs, PLMs, diffusion models, VAEs, flow models, simulators, robotics policies, embedding stores, and hybrids.
+
+- **modality‑agnostic**  
+  Supports text, image, audio, protein, control, multimodal, and latent‑to‑latent systems.
+
+- **regime‑agnostic**  
+  Aligns R₁/R₂/R₃ behavior across models with different inference dynamics.
+
+- **substrate‑aligned**  
+  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.
+
+---
+
+## **4. Intended Use**
+
+This framework supports:
+
+- cross‑architecture latent‑space comparison  
+- cross‑modality embedding alignment  
+- cross‑regime mapping and validation  
+- cross‑model drift detection  
+- unified scaling‑law analysis  
+- projection‑compatible interpretability across model families  
+- multi‑model evaluation pipelines  
+
+It is not a performance benchmark or training guide.  
+It is a **substrate‑level interpretability and alignment framework**.
+
+---
+
+## **5. Relationship to Other Artifacts**
+
+This artifact extends:
+
+- **Dimensional Substrate Structures**  
+- **Triadic Dimensional Cores (3D–9D)**  
+- **Validation‑Space‑Time (vST)**  
+
+It unifies:
+
+- vST for Large Language Models  
+- vST for Protein Language Models  
+- vST for Scientific Simulators  
+- vST for Robotics and Control Policies  
+- vST for Embedding Stores & Vector Databases  
+- vST for Generative Models  
+
+**vST for Multi‑Model Alignment** is the *cross‑cutting substrate* that binds the entire canon.
+
+---
+
+## **6. Citation**
+
+A `CITATION.cff` file is included for formal citation.  
+A `zenodo.json` file is provided for DOI‑ready metadata.
+
+---
+
+## **7. License**
+
+Released under the MIT License.
+### *vST for Multi‑Model Alignment*  
+### *References*
+
+This appendix lists references relevant to cross‑model alignment, multimodal representation learning, scaling laws, latent‑space geometry, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, architecture‑neutral format consistent with the RSM and vST canon.
+
+---
+
+## **1. Cross‑Model & Multimodal Alignment**
+
+- Radford, A., Kim, J. W., Hallacy, C., et al.  
+  *Learning Transferable Visual Models From Natural Language Supervision (CLIP).*  
+  arXiv:2103.00020 (2021).
+
+- Jia, C., Yang, Y., Xia, Y., et al.  
+  *Scaling Up Visual and Vision‑Language Representation Learning With Noisy Text Supervision.*  
+  ICML (2021).
+
+- Alayrac, J.‑B., Donahue, J., Luc, P., et al.  
+  *Flamingo: A Visual Language Model for Few‑Shot Learning.*  
+  arXiv:2204.14198 (2022).
+
+---
+
+## **2. Latent‑Space Geometry & Representation Learning**
+
+- Tenenbaum, J. B., de Silva, V., & Langford, J. C.  
+  *A Global Geometric Framework for Nonlinear Dimensionality Reduction.*  
+  Science (2000).
+
+- Coifman, R. R., & Lafon, S.  
+  *Diffusion Maps.*  
+  Applied and Computational Harmonic Analysis (2006).
+
+- von Luxburg, U.  
+  *A Tutorial on Spectral Clustering.*  
+  Statistics and Computing (2007).
+
+---
+
+## **3. Scaling Laws Across Architectures**
+
+- Kaplan, J., McCandlish, S., Henighan, T., et al.  
+  *Scaling Laws for Neural Language Models.*  
+  arXiv:2001.08361 (2020).
+
+- Zhai, X., Puigcerver, J., Mustafa, B., et al.  
+  *Scaling Vision Transformers.*  
+  CVPR (2022).
+
+- Hoffmann, J., Borgeaud, S., Mensch, A., et al.  
+  *Training Compute‑Optimal Large Language Models.*  
+  arXiv:2203.15556 (2022).
+
+---
+
+## **4. Multimodal & Cross‑Architecture Systems**
+
+- Ramesh, A., Dhariwal, P., Nichol, A., et al.  
+  *Zero‑Shot Text‑to‑Image Generation.*  
+  ICML (2021).
+
+- Karras, T., Aittala, M., Laine, S., et al.  
+  *Elucidating the Design Space of Diffusion‑Based Generative Models.*  
+  NeurIPS (2022).
+
+- Kingma, D. P., & Welling, M.  
+  *Auto‑Encoding Variational Bayes.*  
+  ICLR (2014).
+
+---
+
+## **5. Validation, Verification & Drift Detection**
+
+- Breck, E., Cai, S., Nielsen, E., et al.  
+  *The ML Test Score: A Rubric for ML Production Readiness.*  
+  Google Research (2017).
+
+- Amodei, D., Olah, C., Steinhardt, J., et al.  
+  *Concrete Problems in AI Safety.*  
+  arXiv:1606.06565 (2016).
+
+- Oberkampf, W. L., & Roy, C. J.  
+  *Verification and Validation in Scientific Computing.*  
+  Cambridge University Press (2010).
+
+---
+
+## **6. Substrate‑Level and Triadic‑Frameworks Canon**
+
+- Loswin, N.  
+  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
+  TriadicFrameworks (2025).
+
+- Loswin, N.  
+  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
+  TriadicFrameworks (2026).
+
+- Loswin, N.  
+  *vST for Multi‑Model Alignment.*  
+  TriadicFrameworks (2026).
+### *vST for Multi‑Model Alignment*  
+### *Terminology*
+
+This appendix defines the terminology used throughout the *vST for Multi‑Model Alignment* artifact. Terms are presented in a substrate‑agnostic, architecture‑neutral manner and apply to any pair or set of heterogeneous models. Definitions emphasize alignment primitives, cross‑architecture compatibility, scaling behavior, and invariant preservation.
+
+---
+
+## **1. Substrate Terms**
+
+### **Multi‑Model Alignment Substrate**  
+A structured, invariant‑preserving framework for representing and comparing latent‑space behavior across heterogeneous models.
+
+### **Cross‑Model Latent Space**  
+The shared representational space in which heterogeneous latent states are projected for comparison.
+
+### **Alignment Surface**  
+A geometric manifold representing how two or more models relate across latent spaces, inference pathways, or modalities.
+
+---
+
+## **2. Primitive Terms**
+
+### **Dimensional Primitive (DP)**  
+The minimal unit of latent‑space structure, used as a baseline for cross‑model comparison.
+
+### **Triadic Dimensional Primitive (TDP‑X)**  
+A triad of alignment primitives expressing full cross‑model regime behavior (A₁, A₂, A₃).
+
+### **Cross‑Model Scaling Primitive (SP‑X)**  
+A rule‑based expansion unit that preserves invariants during dimensional scaling across architectures.
+
+### **Cross‑Modality Coherence Primitive (CP‑X)**  
+A minimal unit identifying stable, transitional, or dispersed regions in cross‑model alignment.
+
+### **Alignment Primitive (AP)**  
+The minimal unit of cross‑model comparability, capturing local geometric compatibility and projection stability.
+
+---
+
+## **3. Core Terms**
+
+### **Triadic Dimensional Core (TDC)**  
+The 3D–9D substrate used for interpretable projection of heterogeneous latent states.
+
+### **3D Structural Core**  
+Captures motif‑level alignment geometry.
+
+### **6D Interaction Core**  
+Captures relational structure across architectures and modalities.
+
+### **9D Coherence Core**  
+Captures pathway‑level coherence across heterogeneous inference systems.
+
+---
+
+## **4. Alignment Regime Terms**
+
+### **Cross‑Model Alignment Regimes (A₁ᴴ, A₂ᴴ, A₃ᴴ)**  
+The triadic regime structure expressed in 64D–1024D cross‑model alignment spaces.
+
+### **Stable Alignment Regime (A₁ / A₁ᴴ)**  
+Compact, coherent, low‑variance cross‑model compatibility.
+
+### **Transitional Alignment Regime (A₂ / A₂ᴴ)**  
+Branching, oscillatory, or reorientation behavior across architectures or modalities.
+
+### **Dispersed Alignment Regime (A₃ / A₃ᴴ)**  
+Diffuse, incompatible, or unstable cross‑model behavior.
+
+---
+
+## **5. Scaling Terms**
+
+### **Cross‑Model Scaling Behavior**  
+The structured expansion of alignment capacity as model size, modality diversity, or architectural complexity increases.
+
+### **Scaling Regimes (S₁ᴹ, S₂ᴹ, S₃ᴹ)**  
+Triadic scaling behavior describing stable, transitional, and dispersion‑prone cross‑model scaling phases.
+
+### **Dimensional Continuity**  
+The requirement that cross‑model alignment remains smooth and invariant‑preserving across the dimensional ladder.
+
+---
+
+## **6. Projection Terms**
+
+### **Invertible Projection**  
+A projection from heterogeneous latent spaces into 3D–9D that preserves primitive‑level structure and alignment regime identity.
+
+### **Regime‑Aware Projection**  
+A projection that maintains correct mapping of A₁, A₂, and A₃ behaviors.
+
+### **Primitive‑Aligned Projection**  
+A projection that preserves DP, TDP‑X, SP‑X, CP‑X, and AP structure.
+
+---
+
+## **7. Validation Terms**
+
+### **vST (Validation‑Space‑Time)**  
+A substrate‑level validation framework evaluating structural coherence, dimensional continuity, alignment‑regime behavior, and core alignment.
+
+### **Validation Layers (V₁–V₄)**  
+Four structured evaluation layers ensuring invariant‑preserving behavior across heterogeneous models.
+
+---
+
+## **8. Drift Terms**
+
+### **Drift**  
+A deviation from expected cross‑model alignment behavior, indicating incompatibility or invariant failure.
+
+### **Drift Categories (D₁ᴹ–D₄ᴹ)**  
+Classification of drift into structural, dimensional, alignment‑regime, or projection drift.
+
+### **Drift Severity**  
+A measure of drift magnitude (low, moderate, high).
+### *vST for Multi‑Model Alignment*  
 ### *Cross‑Model Alignment Regimes Across Architectures, Modalities, and Dimensional Scales*
 
 This document defines the **alignment‑regime structure** that emerges when comparing heterogeneous models using the **Validation‑Space‑Time (vST)** framework and the **1024D dimensional substrate**. These regimes generalize the triadic resonance structure (R₁/R₂/R₃) to the setting of **cross‑model alignment**, where latent geometries, inference pathways, and scaling behaviors differ across architectures and modalities.
@@ -423,6 +809,207 @@ Drift detection produces:
 
 These outputs support governance, interpretability, and version management for multi‑model systems.
 ### *vST for Multi‑Model Alignment*  
+### *Example: Alignment Surface Projection Across Architectures (Diffusion ↔ Simulator)*
+
+This example demonstrates how to construct and analyze a **cross‑architecture alignment surface** between:
+
+- a 1024D diffusion model  
+- a structured scientific simulator with a 128D state manifold  
+
+The goal is to project both systems into the triadic cores (9D → 6D → 3D) and evaluate alignment stability, compatibility, and drift.
+
+---
+
+## **1. Scenario Overview**
+
+We assume:
+
+- a diffusion model latent \( z_{\text{Diff}} \in \mathbb{R}^{1024} \)  
+- a simulator state vector \( s_{\text{Sim}} \in \mathbb{R}^{128} \)  
+- both represent the same underlying physical or semantic condition  
+- cross‑model projection into 9D  
+
+---
+
+## **2. Step 1 — Project 1024D and 128D into 9D**
+
+### **Diffusion Model (1024D → 9D)**  
+Reveals:
+
+- transitional geometry  
+- sampler‑dependent reorientation  
+- moderate variance  
+
+### **Simulator (128D → 9D)**  
+Reveals:
+
+- compact, stable geometry  
+- strong structural invariants  
+- low variance  
+
+### **Interpretation**
+
+The simulator provides a stable anchor; the diffusion model provides a transitional pathway.
+
+---
+
+## **3. Step 2 — Construct the 9D Alignment Surface**
+
+The alignment surface shows:
+
+- smooth regions where diffusion aligns with simulator invariants  
+- branching regions where sampler dynamics diverge  
+- dispersed regions where diffusion enters noise‑dominated phases  
+
+This surface is the core artifact for cross‑architecture comparison.
+
+---
+
+## **4. Step 3 — Project 9D → 6D**
+
+The 6D interaction projection reveals:
+
+- cross‑step coupling in diffusion  
+- stable simulator manifold  
+- transitional alignment regions where the two systems partially overlap  
+
+---
+
+## **5. Step 4 — Project 6D → 3D**
+
+The 3D structural projection reveals:
+
+- compact motifs for simulator  
+- oscillatory motifs for diffusion  
+- partial overlap indicating compatible structure  
+
+### **Interpretation**
+
+The 3D projection exposes motif‑level compatibility and divergence.
+
+---
+
+## **6. Step 5 — Drift Detection**
+
+Using vST drift categories:
+
+- **D₁ᴹ Structural Drift:** low  
+- **D₂ᴹ Dimensional Drift:** none  
+- **D₃ᴹ Alignment‑Regime Drift:** moderate (A₂ᴴ transitions)  
+- **D₄ᴹ Projection Drift:** low  
+
+### **Interpretation**
+
+The systems are partially compatible, with transitional alignment behavior.
+
+---
+
+## **7. Summary**
+
+This example demonstrates:
+
+- how to construct cross‑architecture alignment surfaces  
+- how projection reveals compatibility and divergence  
+- how drift detection isolates transitional behavior  
+- how vST ensures invariant‑preserving comparison  
+### *vST for Multi‑Model Alignment*  
+### *Example: Cross‑Model Alignment Regime Map (LLM ↔ Diffusion ↔ PLM)*
+
+This example demonstrates how to construct a **cross‑model alignment regime map** across three heterogeneous architectures:
+
+- a 4096D Large Language Model (LLM)  
+- a 1024D diffusion model  
+- a 256D Protein Language Model (PLM)  
+
+The goal is to classify alignment behavior into the triadic alignment regimes:
+
+- **A₁ᴴ** — stable alignment  
+- **A₂ᴴ** — transitional alignment  
+- **A₃ᴴ** — dispersed / incompatible alignment  
+
+and to visualize how these regimes manifest across dimensional scales.
+
+---
+
+## **1. Scenario Overview**
+
+We assume:
+
+- three models with different latent dimensionalities  
+- a shared semantic or structural anchor (e.g., “binding site description” ↔ “protein structure” ↔ “image prompt”)  
+- cross‑model latent states extracted from each system  
+- projection into the 9D coherence core  
+
+The example is architecture‑agnostic.
+
+---
+
+## **2. Step 1 — Extract Latent States**
+
+Let:
+
+- \( z_{\text{LLM}} \in \mathbb{R}^{4096} \)  
+- \( z_{\text{Diff}} \in \mathbb{R}^{1024} \)  
+- \( z_{\text{PLM}} \in \mathbb{R}^{256} \)
+
+represent latent states associated with the same conceptual anchor.
+
+### **Observed Properties**
+
+- LLM latent: high‑capacity, semantically rich  
+- Diffusion latent: geometry shaped by noise schedule  
+- PLM latent: compact, structurally constrained  
+
+---
+
+## **3. Step 2 — Project All Latents into 9D**
+
+Project each latent into the **9D coherence core**.
+
+### **Reveals**
+
+- LLM: compact, stable geometry → **A₁ᴴ**  
+- Diffusion: branching, transitional geometry → **A₂ᴴ**  
+- PLM: partially compatible, partially dispersed → **A₂ᴴ → A₃ᴴ** boundary  
+
+### **Interpretation**
+
+The 9D projection exposes cross‑model compatibility:
+
+- LLM ↔ Diffusion: transitional alignment  
+- LLM ↔ PLM: stable → transitional  
+- Diffusion ↔ PLM: transitional → dispersed  
+
+---
+
+## **4. Step 3 — Construct the Regime Map**
+
+| Model Pair | Regime | Characteristics |
+|-----------|--------|-----------------|
+| LLM ↔ PLM | **A₁ᴴ → A₂ᴴ** | mostly stable, minor reorientation |
+| LLM ↔ Diffusion | **A₂ᴴ** | branching, sampler‑dependent |
+| Diffusion ↔ PLM | **A₂ᴴ → A₃ᴴ** | partial incompatibility |
+
+---
+
+## **5. Step 4 — Validate with vST Layers**
+
+- **V₁**: structural coherence preserved for LLM ↔ PLM  
+- **V₂**: dimensional continuity intact across all pairs  
+- **V₃**: regime transitions substrate‑aligned  
+- **V₄**: core alignment stable for LLM ↔ PLM, transitional for others  
+
+---
+
+## **6. Summary**
+
+This example demonstrates:
+
+- how to classify cross‑model alignment regimes  
+- how 9D projection reveals compatibility and divergence  
+- how vST layers validate cross‑architecture behavior  
+- how regime maps support multi‑model interpretability  
+### *vST for Multi‑Model Alignment*  
 ### *Projection of Heterogeneous Latent Spaces and Construction of Cross‑Model Alignment Surfaces*
 
 This document defines how high‑dimensional latent states from **different model families** are projected into the **triadic dimensional cores** (3D–9D), and how **alignment surfaces** are constructed across architectures, modalities, and inference regimes. Projection provides interpretability; alignment surfaces provide comparability. Together, they form the backbone of vST analysis for multi‑model alignment.
@@ -638,165 +1225,6 @@ Projection and alignment analysis produces:
 - interpretable cross‑model projections  
 
 These outputs support reproducible, substrate‑level alignment across architectures, modalities, and inference systems.
-## *vST for Multi‑Model Alignment*  
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-## *A Substrate‑Level Framework for Cross‑Architecture, Cross‑Modality, and Cross‑Regime Alignment*
-
-This artifact defines the **Validation‑Space‑Time (vST)** framework for **multi‑model alignment** — the structured comparison of latent spaces, embedding geometries, inference pathways, and regime transitions across *different* model families.
-
-It provides a substrate‑level method for aligning:
-
-- diffusion models with autoregressive models  
-- LLMs with PLMs  
-- embedding stores with generative systems  
-- simulators with robotics policies  
-- any architecture with any other architecture  
-
-The goal is to establish a **unified, invariant‑preserving alignment substrate** that allows heterogeneous models to be compared, validated, and interpreted using the same dimensional grammar.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## **1. Purpose**
-
-Multi‑model alignment enables:
-
-- cross‑architecture comparison (LLM ↔ diffusion ↔ PLM ↔ simulator ↔ robotics)  
-- cross‑modality alignment (text ↔ image ↔ protein ↔ control ↔ embedding)  
-- cross‑regime mapping (R₁ ↔ R₂ ↔ R₃ across models)  
-- cross‑dimensional alignment (3D–9D cores ↔ 64D–1024D substrates)  
-- cross‑version and cross‑training‑run drift detection  
-- unified scaling‑law interpretation across model families  
-
-This artifact provides the substrate, primitives, and validation layers required to perform these alignments in a reproducible, architecture‑agnostic way.
-
----
-
-## **2. Contents**
-
-This directory contains:
-
-- **substrate_definition.md**  
-  Defines the multi‑model substrate, cross‑architecture primitives, and alignment invariants.
-
-- **alignment_regimes.md**  
-  Describes stable, transitional, and dispersed alignment regimes across heterogeneous models.
-
-- **scaling_behavior_multi_model.md**  
-  Maps cross‑model scaling laws onto the 3D–1024D dimensional ladder.
-
-- **projection_and_cross_model_alignment.md**  
-  Defines invertible projection and alignment across architectures, modalities, and latent geometries.
-
-- **validation_layers_vst_multi_model.md**  
-  Extends vST (V₁–V₄) to multi‑model alignment.
-
-- **drift_detection_multi_model.md**  
-  Provides a substrate‑level framework for detecting drift across architectures, modalities, and training runs.
-
-- **examples/**  
-  Demonstrations of cross‑model alignment, cross‑modality projection, and multi‑regime comparison.
-
-- **appendix/**  
-  Terminology and references.
-
-Each file is self‑contained and designed for clarity, reproducibility, and cross‑model comparability.
-
----
-
-## **3. Scope**
-
-This artifact is:
-
-- **architecture‑agnostic**  
-  Works with LLMs, PLMs, diffusion models, VAEs, flow models, simulators, robotics policies, embedding stores, and hybrids.
-
-- **modality‑agnostic**  
-  Supports text, image, audio, protein, control, multimodal, and latent‑to‑latent systems.
-
-- **regime‑agnostic**  
-  Aligns R₁/R₂/R₃ behavior across models with different inference dynamics.
-
-- **substrate‑aligned**  
-  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.
-
----
-
-## **4. Intended Use**
-
-This framework supports:
-
-- cross‑architecture latent‑space comparison  
-- cross‑modality embedding alignment  
-- cross‑regime mapping and validation  
-- cross‑model drift detection  
-- unified scaling‑law analysis  
-- projection‑compatible interpretability across model families  
-- multi‑model evaluation pipelines  
-
-It is not a performance benchmark or training guide.  
-It is a **substrate‑level interpretability and alignment framework**.
-
----
-
-## **5. Relationship to Other Artifacts**
-
-This artifact extends:
-
-- **Dimensional Substrate Structures**  
-- **Triadic Dimensional Cores (3D–9D)**  
-- **Validation‑Space‑Time (vST)**  
-
-It unifies:
-
-- vST for Large Language Models  
-- vST for Protein Language Models  
-- vST for Scientific Simulators  
-- vST for Robotics and Control Policies  
-- vST for Embedding Stores & Vector Databases  
-- vST for Generative Models  
-
-**vST for Multi‑Model Alignment** is the *cross‑cutting substrate* that binds the entire canon.
-
----
-
-## **6. Citation**
-
-A `CITATION.cff` file is included for formal citation.  
-A `zenodo.json` file is provided for DOI‑ready metadata.
-
----
-
-## **7. License**
-
-Released under the MIT License.
 ### *vST for Multi‑Model Alignment*  
 ### *Cross‑Architecture Scaling Behavior Across the Dimensional Ladder*
 
@@ -1344,430 +1772,4 @@ vST produces:
 - cross‑architecture and cross‑modality comparison surfaces  
 
 These outputs support reproducible, substrate‑aligned evaluation of multi‑model alignment.
-### *vST for Multi‑Model Alignment*  
-### *References*
-
-This appendix lists references relevant to cross‑model alignment, multimodal representation learning, scaling laws, latent‑space geometry, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, architecture‑neutral format consistent with the RSM and vST canon.
-
----
-
-## **1. Cross‑Model & Multimodal Alignment**
-
-- Radford, A., Kim, J. W., Hallacy, C., et al.  
-  *Learning Transferable Visual Models From Natural Language Supervision (CLIP).*  
-  arXiv:2103.00020 (2021).
-
-- Jia, C., Yang, Y., Xia, Y., et al.  
-  *Scaling Up Visual and Vision‑Language Representation Learning With Noisy Text Supervision.*  
-  ICML (2021).
-
-- Alayrac, J.‑B., Donahue, J., Luc, P., et al.  
-  *Flamingo: A Visual Language Model for Few‑Shot Learning.*  
-  arXiv:2204.14198 (2022).
-
----
-
-## **2. Latent‑Space Geometry & Representation Learning**
-
-- Tenenbaum, J. B., de Silva, V., & Langford, J. C.  
-  *A Global Geometric Framework for Nonlinear Dimensionality Reduction.*  
-  Science (2000).
-
-- Coifman, R. R., & Lafon, S.  
-  *Diffusion Maps.*  
-  Applied and Computational Harmonic Analysis (2006).
-
-- von Luxburg, U.  
-  *A Tutorial on Spectral Clustering.*  
-  Statistics and Computing (2007).
-
----
-
-## **3. Scaling Laws Across Architectures**
-
-- Kaplan, J., McCandlish, S., Henighan, T., et al.  
-  *Scaling Laws for Neural Language Models.*  
-  arXiv:2001.08361 (2020).
-
-- Zhai, X., Puigcerver, J., Mustafa, B., et al.  
-  *Scaling Vision Transformers.*  
-  CVPR (2022).
-
-- Hoffmann, J., Borgeaud, S., Mensch, A., et al.  
-  *Training Compute‑Optimal Large Language Models.*  
-  arXiv:2203.15556 (2022).
-
----
-
-## **4. Multimodal & Cross‑Architecture Systems**
-
-- Ramesh, A., Dhariwal, P., Nichol, A., et al.  
-  *Zero‑Shot Text‑to‑Image Generation.*  
-  ICML (2021).
-
-- Karras, T., Aittala, M., Laine, S., et al.  
-  *Elucidating the Design Space of Diffusion‑Based Generative Models.*  
-  NeurIPS (2022).
-
-- Kingma, D. P., & Welling, M.  
-  *Auto‑Encoding Variational Bayes.*  
-  ICLR (2014).
-
----
-
-## **5. Validation, Verification & Drift Detection**
-
-- Breck, E., Cai, S., Nielsen, E., et al.  
-  *The ML Test Score: A Rubric for ML Production Readiness.*  
-  Google Research (2017).
-
-- Amodei, D., Olah, C., Steinhardt, J., et al.  
-  *Concrete Problems in AI Safety.*  
-  arXiv:1606.06565 (2016).
-
-- Oberkampf, W. L., & Roy, C. J.  
-  *Verification and Validation in Scientific Computing.*  
-  Cambridge University Press (2010).
-
----
-
-## **6. Substrate‑Level and Triadic‑Frameworks Canon**
-
-- Loswin, N.  
-  *Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.*  
-  TriadicFrameworks (2025).
-
-- Loswin, N.  
-  *Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.*  
-  TriadicFrameworks (2026).
-
-- Loswin, N.  
-  *vST for Multi‑Model Alignment.*  
-  TriadicFrameworks (2026).
-### *vST for Multi‑Model Alignment*  
-### *Terminology*
-
-This appendix defines the terminology used throughout the *vST for Multi‑Model Alignment* artifact. Terms are presented in a substrate‑agnostic, architecture‑neutral manner and apply to any pair or set of heterogeneous models. Definitions emphasize alignment primitives, cross‑architecture compatibility, scaling behavior, and invariant preservation.
-
----
-
-## **1. Substrate Terms**
-
-### **Multi‑Model Alignment Substrate**  
-A structured, invariant‑preserving framework for representing and comparing latent‑space behavior across heterogeneous models.
-
-### **Cross‑Model Latent Space**  
-The shared representational space in which heterogeneous latent states are projected for comparison.
-
-### **Alignment Surface**  
-A geometric manifold representing how two or more models relate across latent spaces, inference pathways, or modalities.
-
----
-
-## **2. Primitive Terms**
-
-### **Dimensional Primitive (DP)**  
-The minimal unit of latent‑space structure, used as a baseline for cross‑model comparison.
-
-### **Triadic Dimensional Primitive (TDP‑X)**  
-A triad of alignment primitives expressing full cross‑model regime behavior (A₁, A₂, A₃).
-
-### **Cross‑Model Scaling Primitive (SP‑X)**  
-A rule‑based expansion unit that preserves invariants during dimensional scaling across architectures.
-
-### **Cross‑Modality Coherence Primitive (CP‑X)**  
-A minimal unit identifying stable, transitional, or dispersed regions in cross‑model alignment.
-
-### **Alignment Primitive (AP)**  
-The minimal unit of cross‑model comparability, capturing local geometric compatibility and projection stability.
-
----
-
-## **3. Core Terms**
-
-### **Triadic Dimensional Core (TDC)**  
-The 3D–9D substrate used for interpretable projection of heterogeneous latent states.
-
-### **3D Structural Core**  
-Captures motif‑level alignment geometry.
-
-### **6D Interaction Core**  
-Captures relational structure across architectures and modalities.
-
-### **9D Coherence Core**  
-Captures pathway‑level coherence across heterogeneous inference systems.
-
----
-
-## **4. Alignment Regime Terms**
-
-### **Cross‑Model Alignment Regimes (A₁ᴴ, A₂ᴴ, A₃ᴴ)**  
-The triadic regime structure expressed in 64D–1024D cross‑model alignment spaces.
-
-### **Stable Alignment Regime (A₁ / A₁ᴴ)**  
-Compact, coherent, low‑variance cross‑model compatibility.
-
-### **Transitional Alignment Regime (A₂ / A₂ᴴ)**  
-Branching, oscillatory, or reorientation behavior across architectures or modalities.
-
-### **Dispersed Alignment Regime (A₃ / A₃ᴴ)**  
-Diffuse, incompatible, or unstable cross‑model behavior.
-
----
-
-## **5. Scaling Terms**
-
-### **Cross‑Model Scaling Behavior**  
-The structured expansion of alignment capacity as model size, modality diversity, or architectural complexity increases.
-
-### **Scaling Regimes (S₁ᴹ, S₂ᴹ, S₃ᴹ)**  
-Triadic scaling behavior describing stable, transitional, and dispersion‑prone cross‑model scaling phases.
-
-### **Dimensional Continuity**  
-The requirement that cross‑model alignment remains smooth and invariant‑preserving across the dimensional ladder.
-
----
-
-## **6. Projection Terms**
-
-### **Invertible Projection**  
-A projection from heterogeneous latent spaces into 3D–9D that preserves primitive‑level structure and alignment regime identity.
-
-### **Regime‑Aware Projection**  
-A projection that maintains correct mapping of A₁, A₂, and A₃ behaviors.
-
-### **Primitive‑Aligned Projection**  
-A projection that preserves DP, TDP‑X, SP‑X, CP‑X, and AP structure.
-
----
-
-## **7. Validation Terms**
-
-### **vST (Validation‑Space‑Time)**  
-A substrate‑level validation framework evaluating structural coherence, dimensional continuity, alignment‑regime behavior, and core alignment.
-
-### **Validation Layers (V₁–V₄)**  
-Four structured evaluation layers ensuring invariant‑preserving behavior across heterogeneous models.
-
----
-
-## **8. Drift Terms**
-
-### **Drift**  
-A deviation from expected cross‑model alignment behavior, indicating incompatibility or invariant failure.
-
-### **Drift Categories (D₁ᴹ–D₄ᴹ)**  
-Classification of drift into structural, dimensional, alignment‑regime, or projection drift.
-
-### **Drift Severity**  
-A measure of drift magnitude (low, moderate, high).
-### *vST for Multi‑Model Alignment*  
-### *Example: Alignment Surface Projection Across Architectures (Diffusion ↔ Simulator)*
-
-This example demonstrates how to construct and analyze a **cross‑architecture alignment surface** between:
-
-- a 1024D diffusion model  
-- a structured scientific simulator with a 128D state manifold  
-
-The goal is to project both systems into the triadic cores (9D → 6D → 3D) and evaluate alignment stability, compatibility, and drift.
-
----
-
-## **1. Scenario Overview**
-
-We assume:
-
-- a diffusion model latent \( z_{\text{Diff}} \in \mathbb{R}^{1024} \)  
-- a simulator state vector \( s_{\text{Sim}} \in \mathbb{R}^{128} \)  
-- both represent the same underlying physical or semantic condition  
-- cross‑model projection into 9D  
-
----
-
-## **2. Step 1 — Project 1024D and 128D into 9D**
-
-### **Diffusion Model (1024D → 9D)**  
-Reveals:
-
-- transitional geometry  
-- sampler‑dependent reorientation  
-- moderate variance  
-
-### **Simulator (128D → 9D)**  
-Reveals:
-
-- compact, stable geometry  
-- strong structural invariants  
-- low variance  
-
-### **Interpretation**
-
-The simulator provides a stable anchor; the diffusion model provides a transitional pathway.
-
----
-
-## **3. Step 2 — Construct the 9D Alignment Surface**
-
-The alignment surface shows:
-
-- smooth regions where diffusion aligns with simulator invariants  
-- branching regions where sampler dynamics diverge  
-- dispersed regions where diffusion enters noise‑dominated phases  
-
-This surface is the core artifact for cross‑architecture comparison.
-
----
-
-## **4. Step 3 — Project 9D → 6D**
-
-The 6D interaction projection reveals:
-
-- cross‑step coupling in diffusion  
-- stable simulator manifold  
-- transitional alignment regions where the two systems partially overlap  
-
----
-
-## **5. Step 4 — Project 6D → 3D**
-
-The 3D structural projection reveals:
-
-- compact motifs for simulator  
-- oscillatory motifs for diffusion  
-- partial overlap indicating compatible structure  
-
-### **Interpretation**
-
-The 3D projection exposes motif‑level compatibility and divergence.
-
----
-
-## **6. Step 5 — Drift Detection**
-
-Using vST drift categories:
-
-- **D₁ᴹ Structural Drift:** low  
-- **D₂ᴹ Dimensional Drift:** none  
-- **D₃ᴹ Alignment‑Regime Drift:** moderate (A₂ᴴ transitions)  
-- **D₄ᴹ Projection Drift:** low  
-
-### **Interpretation**
-
-The systems are partially compatible, with transitional alignment behavior.
-
----
-
-## **7. Summary**
-
-This example demonstrates:
-
-- how to construct cross‑architecture alignment surfaces  
-- how projection reveals compatibility and divergence  
-- how drift detection isolates transitional behavior  
-- how vST ensures invariant‑preserving comparison  
-### *vST for Multi‑Model Alignment*  
-### *Example: Cross‑Model Alignment Regime Map (LLM ↔ Diffusion ↔ PLM)*
-
-This example demonstrates how to construct a **cross‑model alignment regime map** across three heterogeneous architectures:
-
-- a 4096D Large Language Model (LLM)  
-- a 1024D diffusion model  
-- a 256D Protein Language Model (PLM)  
-
-The goal is to classify alignment behavior into the triadic alignment regimes:
-
-- **A₁ᴴ** — stable alignment  
-- **A₂ᴴ** — transitional alignment  
-- **A₃ᴴ** — dispersed / incompatible alignment  
-
-and to visualize how these regimes manifest across dimensional scales.
-
----
-
-## **1. Scenario Overview**
-
-We assume:
-
-- three models with different latent dimensionalities  
-- a shared semantic or structural anchor (e.g., “binding site description” ↔ “protein structure” ↔ “image prompt”)  
-- cross‑model latent states extracted from each system  
-- projection into the 9D coherence core  
-
-The example is architecture‑agnostic.
-
----
-
-## **2. Step 1 — Extract Latent States**
-
-Let:
-
-- \( z_{\text{LLM}} \in \mathbb{R}^{4096} \)  
-- \( z_{\text{Diff}} \in \mathbb{R}^{1024} \)  
-- \( z_{\text{PLM}} \in \mathbb{R}^{256} \)
-
-represent latent states associated with the same conceptual anchor.
-
-### **Observed Properties**
-
-- LLM latent: high‑capacity, semantically rich  
-- Diffusion latent: geometry shaped by noise schedule  
-- PLM latent: compact, structurally constrained  
-
----
-
-## **3. Step 2 — Project All Latents into 9D**
-
-Project each latent into the **9D coherence core**.
-
-### **Reveals**
-
-- LLM: compact, stable geometry → **A₁ᴴ**  
-- Diffusion: branching, transitional geometry → **A₂ᴴ**  
-- PLM: partially compatible, partially dispersed → **A₂ᴴ → A₃ᴴ** boundary  
-
-### **Interpretation**
-
-The 9D projection exposes cross‑model compatibility:
-
-- LLM ↔ Diffusion: transitional alignment  
-- LLM ↔ PLM: stable → transitional  
-- Diffusion ↔ PLM: transitional → dispersed  
-
----
-
-## **4. Step 3 — Construct the Regime Map**
-
-| Model Pair | Regime | Characteristics |
-|-----------|--------|-----------------|
-| LLM ↔ PLM | **A₁ᴴ → A₂ᴴ** | mostly stable, minor reorientation |
-| LLM ↔ Diffusion | **A₂ᴴ** | branching, sampler‑dependent |
-| Diffusion ↔ PLM | **A₂ᴴ → A₃ᴴ** | partial incompatibility |
-
----
-
-## **5. Step 4 — Validate with vST Layers**
-
-- **V₁**: structural coherence preserved for LLM ↔ PLM  
-- **V₂**: dimensional continuity intact across all pairs  
-- **V₃**: regime transitions substrate‑aligned  
-- **V₄**: core alignment stable for LLM ↔ PLM, transitional for others  
-
----
-
-## **6. Summary**
-
-This example demonstrates:
-
-- how to classify cross‑model alignment regimes  
-- how 9D projection reveals compatibility and divergence  
-- how vST layers validate cross‑architecture behavior  
-- how regime maps support multi‑model interpretability  
 

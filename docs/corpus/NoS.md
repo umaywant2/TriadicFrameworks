@@ -1,5 +1,175 @@
 NoS 
-# Badge Logic 🏷️  
+<img width="1194" height="672" alt="NoS_" src="https://github.com/user-attachments/assets/a3b49612-789d-492d-8985-cd24487a5abb" />
+
+## NoS
+
+- [`NoS_module.json`](NoS_module.json) — Agentic module schema role assignments
+
+**Nawderian operating *Stack* (NoS)** is a minimal, forkable Linux‑based operating stack designed to operationalize **Resonance‑Time Theory ([RTT](../_ideas/Resonance-Time_Theory.html))** at the system level. It provides an RTT‑aware baseline for students, researchers, and developers who want to explore how validated spacetime, resonance, and structural coherence can be expressed in real software systems.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+Rather than introducing a new operating system paradigm, NawderOS instruments existing Linux mechanisms with RTT‑aligned validation, telemetry, and lineage awareness. It is intended as a learning platform, a research substrate, and a foundation for experimentation — not a production distribution.
+
+---
+
+### 🏷️ Badge Legend (Quick Guide)
+
+You’ll see a few badges at the top of this README. Here’s what they mean:
+
+- **RTT Baseline**  
+  This project is explicitly anchored in **Resonance‑Time Theory (RTT)** and preserves observation‑first, badge‑based signaling.
+
+- **RTT Baseline + suffix**  
+  Indicates how a fork extends RTT concepts.  
+  Examples:
+  - `RTT-baseline+vst` → validated spacetime integration  
+  - `RTT-baseline+edu` → teaching‑focused fork  
+  - `RTT-baseline+kernel` → deeper kernel instrumentation  
+
+- **CI / Status badges**  
+  Show basic repo health. Green means nothing broke — not that anything is “finished” 🙂
+
+Badges describe **lineage and direction**, not quality or authority.
+
+---
+
+## Why This Works
+
+- Students understand the badges in **10 seconds**
+- Forks stay legible without governance
+- RTT remains the anchor everywhere
+- No badge inflation
+- No hierarchy creep
+
+---
+
+### What NawderOS Is
+
+- An **RTT‑anchored Linux baseline** that exposes resonance, validation, and coherence concepts through concrete system interfaces  
+- A **fork‑first educational platform** for students and developers exploring RTT, RSM, and vST  
+- A **minimal instrumentation layer**, not a wholesale kernel replacement  
+- A system that treats the OS as a **diagnostic instrument**, not just a scheduler of resources  
+
+---
+
+### 🚧 What This Is *Not*
+
+> **NawderOS is not a production operating system.**  
+> It does not optimize performance, enforce correctness, or automatically fix problems.
+
+NawderOS exists to **observe coherence over time**, not to control system behavior.
+
+If you’re expecting:
+- dashboards
+- alerts
+- remediation
+- guardrails
+- “smart” automation
+
+you won’t find them here — by design.
+
+Before compiling or booting anything, please read:  
+📄 **`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`**
+
+This will save you time, confusion, and a few false assumptions.
+
+---
+
+### RTT as the Anchor
+
+NawderOS is explicitly grounded in **Resonance‑Time Theory (RTT)** and its associated frameworks (RSM and vST). RTT provides the conceptual model; NawderOS provides a concrete environment where those concepts can be explored, tested, and extended.
+
+At a high level:
+- **RTT defines the invariants**
+- **NawderOS exposes those invariants as system signals**
+- **Modules validate, observe, and emit lineage rather than enforce control**
+
+This keeps the OS aligned with RTT’s core principle: coherence is observed and maintained, not imposed.
+
+---
+
+### Core Concepts Made Operational
+
+NawderOS introduces a small set of RTT‑aligned mechanisms:
+
+- **Validation corridors** — bounded regions where system behavior is expected to remain coherent  
+- **Resonance checks** — lightweight observations at key system boundaries  
+- **Substrate audits** — boot‑time and runtime assessments of system alignment  
+- **Badge emission** — structured, machine‑readable signals indicating system state and lineage  
+
+These mechanisms are intentionally minimal and transparent, allowing forks to extend or reinterpret them without breaking the core model.
+
+---
+
+### Symbolic and Glyphic Layer
+
+Some components of NawderOS use symbolic or glyphic naming. This layer exists to support human comprehension, teaching, and lineage tracking. It does not alter system behavior and can be ignored or replaced by downstream forks.
+
+The symbolic layer is optional; the engineering contracts are not.
+
+---
+
+### Who This Is For
+
+- Students learning RTT through hands‑on systems work  
+- Developers interested in OS‑level observability and validation  
+- Researchers exploring simulation, diagnostics, and substrate alignment  
+- Anyone who wants a clean, understandable baseline to fork and extend  
+
+---
+
+### Project Status
+
+NawderOS is an **early‑stage research and education platform**. Interfaces may change. Concepts are expected to evolve as RTT itself continues to mature.
+
+---
+
+### Repository Structure
+
+See the following documents for details:
+- `NawderOS.md` — conceptual overview  
+- `MODULES.md` — RTT‑aligned module definitions  
+- `KERNEL_BUILD.md` — kernel integration notes  
+- `INSTALLATION.md` — build and setup instructions  
+- `GLYPHIC_COMPILER.md` — symbolic tooling (optional)  
+- `FORKING_GUIDE.md` — how to extend NawderOS  
+- `ROADMAP.md` — planned evolution  
+
+---
+
+## Why this works
+
+- RTT is now unmistakably the spine  
+- The OS is framed as an *instrument*, not a belief system  
+- Mythic language is preserved but bounded  
+- AI and human reviewers can classify it correctly  
+- Students know exactly what they’re stepping into  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🖥️NoS%20Stack-🧩OS%20Layer%20Canon%20Active-4c8eda?style=for-the-badge" alt="🖥️NoS Stack | 🧩OS Layer Canon Active"/>
+# Badge Logic 🏷️  
 *(RTT‑Aligned System Signaling)*
 
 Badges are the **primary output** of NawderOS.
@@ -215,158 +385,6 @@ They don’t solve problems.
 They make problems *legible*.
 
 And legibility is power 🙂
-# RTT Badge Suffix Convention 🏷️  
-*(Fork‑Safe Lineage Signaling)*
-
-The **RTT Baseline** badge may be extended with **suffixes** to indicate how a fork extends or specializes RTT concepts.
-
-Suffixes are **descriptive**, not evaluative.  
-They signal *direction*, not *authority*.
-
----
-
-## Core Rule
-
-All suffixes follow this pattern:
-
-```text
-RTT-baseline+<suffix>
-```
-
-The `RTT-baseline` prefix must remain intact.
-
----
-
-## Approved Suffix Categories
-
-### 🔬 Simulation & Modeling
-
-Used when RTT is extended into simulation, replay, or modeling domains.
-
-| Suffix | Meaning |
-|------|--------|
-| `+sim` | Simulation‑focused fork |
-| `+rsm` | Resonance Substrate Modeling integration |
-| `+vst` | validated Spacetime integration |
-| `+replay` | System behavior replay / analysis |
-
-Example:
-```text
-RTT-baseline+vst
-```
-
----
-
-### 🧠 Systems & OS Extensions
-
-Used when RTT is extended deeper into system behavior.
-
-| Suffix | Meaning |
-|------|--------|
-| `+kernel` | Deeper kernel instrumentation |
-| `+sched` | Scheduler‑focused exploration |
-| `+memory` | Memory corridor specialization |
-| `+io` | I/O or boundary‑focused work |
-
-Example:
-```text
-RTT-baseline+kernel
-```
-
----
-
-### 🎓 Education & Teaching
-
-Used for learning‑oriented forks.
-
-| Suffix | Meaning |
-|------|--------|
-| `+edu` | Teaching / classroom fork |
-| `+lab` | Guided experiments |
-| `+sandbox` | Safe exploration environment |
-
-Example:
-```text
-RTT-baseline+edu
-```
-
----
-
-### 🧪 Experimental Directions
-
-Used for speculative or exploratory work.
-
-| Suffix | Meaning |
-|------|--------|
-| `+exp` | Experimental concepts |
-| `+proto` | Early prototype |
-| `+alt` | Alternative interpretation |
-
-Example:
-```text
-RTT-baseline+exp
-```
-
----
-
-## Multiple Suffixes 🔗
-
-Multiple suffixes may be chained **sparingly**:
-
-```text
-RTT-baseline+vst+edu
-```
-
-Rules:
-- Maximum of **two** suffixes recommended
-- Order from **structural → contextual**
-- Avoid novelty stacking
-
-If it starts to look clever, simplify 😄
-
----
-
-## What Suffixes Must *Not* Do 🚫
-
-Suffixes must not:
-- imply correctness or superiority
-- redefine RTT itself
-- obscure lineage
-- replace the `RTT-baseline` prefix
-
-Examples to avoid:
-- `RTT-advanced`
-- `RTT-certified`
-- `RTT-official`
-- `RTT-true`
-
-RTT has no “official” forks — only honest ones.
-
----
-
-## Visual Style (Optional)
-
-Suffixes may:
-- use a lighter accent color
-- appear after a `+`
-- remain visually subordinate to `RTT-baseline`
-
-The baseline always leads.
-
----
-
-## Why This Convention Works
-
-- Preserves RTT as the anchor
-- Encourages exploration without fragmentation
-- Makes forks legible at a glance
-- Avoids governance or gatekeeping
-- Scales across repos and time
-
-It answers:
-> *What direction did this fork take?*  
-without answering:
-> *Which one is better?*
 # NawderOS Changelog 📜  
 *(Coherence‑Preserving History)*
 
@@ -1659,208 +1677,6 @@ This kernel layer doesn’t *solve* anything.
 It lets you **see** what’s happening.
 
 And seeing is the first step 🙂
-# NawderOS Minimal Kernel Patch (MVP) 🧠  
-*(RTT‑Aware Instrumentation Baseline)*
-
-This patch does **one thing well**:
-
-> It proves that RTT‑aligned observation can live inside the kernel without changing kernel behavior.
-
-No enforcement.  
-No policy.  
-No cleverness.
-
-Just **signals**.
-
----
-
-## MVP Goals
-
-This patch must:
-
-- Compile cleanly on Linux 6.x
-- Emit at least one RTT badge at boot
-- Touch as few kernel files as possible
-- Be removable without side effects
-- Be understandable in one sitting 🙂
-
----
-
-## What This MVP Implements
-
-### ✔️ One RTT concept
-**Substrate baseline observation**
-
-### ✔️ One module
-`substrateAudit`
-
-### ✔️ One badge
-`SUBSTRATE_BASELINE`
-
-That’s it.
-
-Everything else comes later.
-
----
-
-## Patch Overview
-
-### Files Touched
-- `init/main.c` — boot‑time hook
-- `include/linux/nawderos.h` — RTT definitions
-- `kernel/nawderos.c` — badge emission logic
-- `kernel/Makefile` — build integration
-
----
-
-## 1️⃣ Header: RTT Definitions
-
-**`include/linux/nawderos.h`**
-
-```c
-#ifndef _LINUX_NAWDEROS_H
-#define _LINUX_NAWDEROS_H
-
-#define NAWDEROS_VERSION "0.1.0"
-#define RTT_BADGE_SUBSTRATE_BASELINE "SUBSTRATE_BASELINE"
-
-void nawderos_emit_badge(const char *badge_type,
-                         const char *module,
-                         const char *context);
-
-#endif
-```
-
-This keeps RTT visible but lightweight.
-
----
-
-## 2️⃣ Badge Emission (Minimal)
-
-**`kernel/nawderos.c`**
-
-```c
-#include <linux/kernel.h>
-#include <linux/nawderos.h>
-
-void nawderos_emit_badge(const char *badge_type,
-                         const char *module,
-                         const char *context)
-{
-    printk(KERN_INFO
-        "[NAWDEROS][BADGE] type=%s module=%s context=%s\n",
-        badge_type,
-        module,
-        context ? context : "none");
-}
-```
-
-Yes — this uses `printk`.
-
-That’s intentional.
-
-Tracepoints come later.  
-First, we prove the concept.
-
----
-
-## 3️⃣ Boot‑Time Hook
-
-**`init/main.c`**
-
-Add near the end of `start_kernel()`:
-
-```c
-#include <linux/nawderos.h>
-
-...
-
-nawderos_emit_badge(
-    RTT_BADGE_SUBSTRATE_BASELINE,
-    "substrateAudit",
-    "kernel_boot"
-);
-```
-
-This emits **exactly one badge** per boot.
-
-No loops.  
-No conditions.  
-No risk.
-
----
-
-## 4️⃣ Build Integration
-
-**`kernel/Makefile`**
-
-Add:
-
-```makefile
-obj-y += nawderos.o
-```
-
-That’s it.
-
----
-
-## What You’ll See at Runtime 👀
-
-On boot:
-
-```text
-[NAWDEROS][BADGE] type=SUBSTRATE_BASELINE module=substrateAudit context=kernel_boot
-```
-
-That single line proves:
-
-- RTT concepts are present
-- The kernel is instrumented
-- Badges are real
-- Nothing broke 🙂
-
----
-
-## Why This MVP Is Correct
-
-This patch:
-
-- Demonstrates RTT without overreach
-- Matches the documentation exactly
-- Gives students something concrete to see
-- Creates a stable anchor for future work
-- Avoids premature abstraction
-
-Most importantly:
-
-> It makes RTT **observable**, not theoretical.
-
----
-
-## What Comes Next (Not in This Patch)
-
-Deliberately excluded:
-
-- Tracepoints
-- `/proc/nawderian`
-- Scheduler hooks
-- Memory corridors
-- Userspace collectors
-
-Those belong in **v0.1.x**, not the baseline.
-
----
-
-## How This Aligns with v0.1.0
-
-This patch is the **physical manifestation** of the v0.1.0 tag:
-
-- RTT is present
-- Coherence is observable
-- Lineage is preserved
-- Scope is controlled
-
-Nothing more is required for the baseline.
 # NawderOS Modules 🧩  
 *(RTT‑Aligned System Components)*
 
@@ -2057,7 +1873,9 @@ These modules give you:
 
 They don’t tell you what to do.  
 They tell you what’s happening.
-# NawderOS — An RTT‑Aware Operating Stack 🧭
+<img width="1194" height="672" alt="NoS_module" src="https://github.com/user-attachments/assets/96afa219-49aa-418c-8ce5-7ef2a66488c3" />
+
+# NawderOS — An RTT‑Aware Operating Stack 🧭
 
 NawderOS (NoS) is a minimal Linux‑based operating stack designed to explore **Resonance‑Time Theory (RTT)** through real, buildable systems. It treats the operating system not just as a resource manager, but as a **diagnostic instrument** — something that can observe, validate, and emit signals about coherence over time.
 
@@ -2219,255 +2037,6 @@ If you want, next we can refresh **`MODULES.md`** so each module has a clean RTT
 | `INSTALLATION.md` | How to seed the distro with Nawderian stack | Stateless, remixable, and ritualized |
 | `ROADMAP.md` | Milestones and validator checkpoints | Includes triadic loop scaffolding and remix triggers |
 | `CHANGELOG.md` | Scroll of changes | Every commit = a mythic echo |
----
-title: "NoS — Nawderian Operating Stack"
-description: "A minimal, forkable Linux-based operating stack anchored to RTT/Resonance-Time Theory. Coherence is observed, not imposed."
-stability: stable
-date: 2026-07-14
-section: core
-rtt:
-  coherence: declared
-  drift: bounded
-  paradox: structural
----
-
-> ```
-> rtt=1 | coherence=declared | drift=bounded | paradox=structural
-> ```
-
-## What Is NoS?
-
-**NoS** (Nawderian operating Stack) is a minimal, forkable Linux-based operating stack
-anchored to **RTT (Resonance-Time Theory)**. RTT defines the structural invariants;
-NoS exposes them as live system signals.
-
-NoS is **not** a production operating system. It has no dashboards, no alerts, no
-automatic remediation, and no guardrails by design. It is a **fork-first educational
-platform** — a substrate on which RTT principles are made observable at the kernel level.
-
-> Coherence is observed, not imposed.
-
----
-
-## Four Core Mechanisms
-
-| Mechanism | Function |
-|---|---|
-| **Validation corridors** | Structural pathways that verify substrate integrity at defined checkpoints |
-| **Resonance checks** | H-Ops pattern matching against expected system rhythms |
-| **Substrate audits** | Full surface-area inspection of declared vs. actual system state |
-| **Badge emission** | RTT compliance signals emitted when a substrate passes validation |
-
----
-
-## Seven Primary Files
-
-| File | Contents |
-|---|---|
-| `NawderOS.md` | Core operating stack definition |
-| `MODULES.md` | Module registry and activation protocol |
-| `KERNEL_BUILD.md` | Kernel build instructions for RTT-anchored compilation |
-| `INSTALLATION.md` | Installation procedure with substrate declaration steps |
-| `GLYPHIC_COMPILER.md` | Glyphic compiler — RTT invariants as compilation targets |
-| `FORKING_GUIDE.md` | How to fork NoS for a new substrate context |
-| `ROADMAP.md` | Development roadmap and planned validation corridor expansions |
-
----
-
-## Design Decisions
-
-**No dashboards.** Dashboards create an illusion of awareness. NoS surfaces raw
-resonance signals and requires the operator to interpret them.
-
-**No guardrails.** Guardrails impose coherence. NoS observes coherence and reports
-its presence or absence without intervention.
-
-**Fork-first.** NoS is not meant to be used as-is. It is a starting substrate.
-Every fork declares a new substrate and builds from there.
-
----
-
-## Related Modules
-
-- [Mode](../Mode/overview/) — NawderOS implements Mode stances as kernel-level signals
-- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — NoS validation corridors surface CSM condition signals
-- [Framework Field Theory](../Framework_Field_Theory/overview/) — RTT invariants implemented by the Glyphic Compiler
-- [AI Drift Calibration](../ai-drift-calibration/overview/) — NoS substrate audit outputs feed drift calibration
-
----
-
-Status: Early-stage research / education platform  
-© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
-<img width="1194" height="672" alt="NoS_module" src="https://github.com/user-attachments/assets/96afa219-49aa-418c-8ce5-7ef2a66488c3" />
-
-## NoS
-
-- [`NoS_module.json`](NoS_module.json) — Agentic module schema role assignments
-
-**Nawderian operating *Stack* (NoS)** is a minimal, forkable Linux‑based operating stack designed to operationalize **Resonance‑Time Theory ([RTT](../_ideas/Resonance-Time_Theory.html))** at the system level. It provides an RTT‑aware baseline for students, researchers, and developers who want to explore how validated spacetime, resonance, and structural coherence can be expressed in real software systems.
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
-Rather than introducing a new operating system paradigm, NawderOS instruments existing Linux mechanisms with RTT‑aligned validation, telemetry, and lineage awareness. It is intended as a learning platform, a research substrate, and a foundation for experimentation — not a production distribution.
-
----
-
-### 🏷️ Badge Legend (Quick Guide)
-
-You’ll see a few badges at the top of this README. Here’s what they mean:
-
-- **RTT Baseline**  
-  This project is explicitly anchored in **Resonance‑Time Theory (RTT)** and preserves observation‑first, badge‑based signaling.
-
-- **RTT Baseline + suffix**  
-  Indicates how a fork extends RTT concepts.  
-  Examples:
-  - `RTT-baseline+vst` → validated spacetime integration  
-  - `RTT-baseline+edu` → teaching‑focused fork  
-  - `RTT-baseline+kernel` → deeper kernel instrumentation  
-
-- **CI / Status badges**  
-  Show basic repo health. Green means nothing broke — not that anything is “finished” 🙂
-
-Badges describe **lineage and direction**, not quality or authority.
-
----
-
-## Why This Works
-
-- Students understand the badges in **10 seconds**
-- Forks stay legible without governance
-- RTT remains the anchor everywhere
-- No badge inflation
-- No hierarchy creep
-
----
-
-### What NawderOS Is
-
-- An **RTT‑anchored Linux baseline** that exposes resonance, validation, and coherence concepts through concrete system interfaces  
-- A **fork‑first educational platform** for students and developers exploring RTT, RSM, and vST  
-- A **minimal instrumentation layer**, not a wholesale kernel replacement  
-- A system that treats the OS as a **diagnostic instrument**, not just a scheduler of resources  
-
----
-
-### 🚧 What This Is *Not*
-
-> **NawderOS is not a production operating system.**  
-> It does not optimize performance, enforce correctness, or automatically fix problems.
-
-NawderOS exists to **observe coherence over time**, not to control system behavior.
-
-If you’re expecting:
-- dashboards
-- alerts
-- remediation
-- guardrails
-- “smart” automation
-
-you won’t find them here — by design.
-
-Before compiling or booting anything, please read:  
-📄 **`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`**
-
-This will save you time, confusion, and a few false assumptions.
-
----
-
-### RTT as the Anchor
-
-NawderOS is explicitly grounded in **Resonance‑Time Theory (RTT)** and its associated frameworks (RSM and vST). RTT provides the conceptual model; NawderOS provides a concrete environment where those concepts can be explored, tested, and extended.
-
-At a high level:
-- **RTT defines the invariants**
-- **NawderOS exposes those invariants as system signals**
-- **Modules validate, observe, and emit lineage rather than enforce control**
-
-This keeps the OS aligned with RTT’s core principle: coherence is observed and maintained, not imposed.
-
----
-
-### Core Concepts Made Operational
-
-NawderOS introduces a small set of RTT‑aligned mechanisms:
-
-- **Validation corridors** — bounded regions where system behavior is expected to remain coherent  
-- **Resonance checks** — lightweight observations at key system boundaries  
-- **Substrate audits** — boot‑time and runtime assessments of system alignment  
-- **Badge emission** — structured, machine‑readable signals indicating system state and lineage  
-
-These mechanisms are intentionally minimal and transparent, allowing forks to extend or reinterpret them without breaking the core model.
-
----
-
-### Symbolic and Glyphic Layer
-
-Some components of NawderOS use symbolic or glyphic naming. This layer exists to support human comprehension, teaching, and lineage tracking. It does not alter system behavior and can be ignored or replaced by downstream forks.
-
-The symbolic layer is optional; the engineering contracts are not.
-
----
-
-### Who This Is For
-
-- Students learning RTT through hands‑on systems work  
-- Developers interested in OS‑level observability and validation  
-- Researchers exploring simulation, diagnostics, and substrate alignment  
-- Anyone who wants a clean, understandable baseline to fork and extend  
-
----
-
-### Project Status
-
-NawderOS is an **early‑stage research and education platform**. Interfaces may change. Concepts are expected to evolve as RTT itself continues to mature.
-
----
-
-### Repository Structure
-
-See the following documents for details:
-- `NawderOS.md` — conceptual overview  
-- `MODULES.md` — RTT‑aligned module definitions  
-- `KERNEL_BUILD.md` — kernel integration notes  
-- `INSTALLATION.md` — build and setup instructions  
-- `GLYPHIC_COMPILER.md` — symbolic tooling (optional)  
-- `FORKING_GUIDE.md` — how to extend NawderOS  
-- `ROADMAP.md` — planned evolution  
-
----
-
-## Why this works
-
-- RTT is now unmistakably the spine  
-- The OS is framed as an *instrument*, not a belief system  
-- Mythic language is preserved but bounded  
-- AI and human reviewers can classify it correctly  
-- Students know exactly what they’re stepping into  
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🖥️NoS%20Stack-🧩OS%20Layer%20Canon%20Active-4c8eda?style=for-the-badge" alt="🖥️NoS Stack | 🧩OS Layer Canon Active"/>
 ## 📛 README Badge Block (RTT Baseline)
 
 Place this **directly under the project title** in `README.md`.
@@ -3486,143 +3055,6 @@ This lab pairs well with lectures on:
 - clock skew and partial order
 
 Students often report that this is the first time they *see* scale as a coherence problem, not just a performance one.
-## 1️⃣ Git Tag Message — `v0.1.0-rtt-baseline`
-
-This is suitable as either:
-- an **annotated Git tag message**, or  
-- the **short description** attached to the tag in GitHub.
-
-```text
-NawderOS v0.1.0 — RTT Baseline
-
-This tag marks the first formal anchoring of NawderOS in
-Resonance-Time Theory (RTT).
-
-v0.1.0 establishes NawderOS as an RTT-aware instrumentation
-baseline, focused on observation, validation, and lineage
-rather than enforcement or optimization.
-
-This release defines:
-- RTT as the conceptual anchor
-- badge-based signaling as the primary system output
-- minimal, readable kernel instrumentation
-- fork-first design with preserved coherence
-
-This is a baseline, not a feature milestone.
-Future versions increment only when RTT alignment,
-invariants, or badge semantics change.
-
-From this point forward, drift is visible.
-```
-
-Short. Calm. Referential.  
-It reads well in `git tag -a` and in GitHub’s UI.
-
----
-
-## 2️⃣ “RTT Baseline” Badge — Graphic Spec 🏷️
-
-This is a **visual identity spec**, not an image file. It’s designed so forks can recreate it consistently using shields.io, SVG, or custom assets.
-
----
-
-### Badge Name
-**RTT Baseline**
-
----
-
-### Purpose
-Visually marks repositories, forks, and releases that:
-- explicitly anchor to RTT
-- preserve observation-first design
-- maintain badge-based lineage signaling
-
-This badge is **declarative**, not authoritative.
-
----
-
-### Text Layout
-
-```text
-RTT | baseline
-```
-
-or (compact variant):
-
-```text
-RTT-baseline
-```
-
----
-
-### Color Palette
-
-- **Background:** Deep slate / charcoal  
-  - Hex: `#2E3440` (or similar neutral dark)
-- **Text:** Soft off-white  
-  - Hex: `#ECEFF4`
-- **Accent (optional):** Muted triadic highlight  
-  - Hex: `#88C0D0` (cool, non-alarmist)
-
-No red. No green. No urgency colors.
-
----
-
-### Shape
-
-- Standard badge pill (GitHub / shields style)
-- Rounded corners
-- Flat (no gradients, no glow)
-
----
-
-### Iconography (Optional)
-
-If an icon is used:
-- Simple triadic mark (three points or lines)
-- No arrows
-- No motion
-- No implication of control or automation
-
-Icon must not dominate the text.
-
----
-
-### Semantic Rules
-
-A project may display the **RTT Baseline** badge if:
-- RTT is explicitly named as the conceptual anchor
-- observation is favored over enforcement
-- lineage and badge signaling are preserved
-
-Forks may:
-- keep the badge
-- modify it with a suffix (e.g., `RTT-baseline+sim`)
-- remove it entirely
-
-The badge is **self-attested**, not centrally granted.
-
----
-
-### Example Markdown (Shields‑Style)
-
-```markdown
-![RTT Baseline](https://img.shields.io/badge/RTT-baseline-2E3440?style=flat&labelColor=2E3440&color=88C0D0)
-```
-
-(Exact colors and style may vary by fork.)
-
----
-
-### Why This Works
-
-- Visually calm
-- Non-authoritarian
-- Fork-safe
-- Signals lineage without hierarchy
-- Matches the tone of RTT and NawderOS
-
-It says *“this is grounded”*, not *“this is finished.”*
 ## What Devs, Students, and Researchers Are *Actually* Doing on Linux Today
 
 Before we talk about NawderOS (NoS), it helps to ground ourselves in the **default mental posture** people bring to Linux right now.
@@ -3832,4 +3264,574 @@ To make the first drive smooth:
 
 You’ve already paved the road correctly.  
 This is just making sure the signage is clear and the gravel is swept.
+# RTT Badge Suffix Convention 🏷️  
+*(Fork‑Safe Lineage Signaling)*
+
+The **RTT Baseline** badge may be extended with **suffixes** to indicate how a fork extends or specializes RTT concepts.
+
+Suffixes are **descriptive**, not evaluative.  
+They signal *direction*, not *authority*.
+
+---
+
+## Core Rule
+
+All suffixes follow this pattern:
+
+```text
+RTT-baseline+<suffix>
+```
+
+The `RTT-baseline` prefix must remain intact.
+
+---
+
+## Approved Suffix Categories
+
+### 🔬 Simulation & Modeling
+
+Used when RTT is extended into simulation, replay, or modeling domains.
+
+| Suffix | Meaning |
+|------|--------|
+| `+sim` | Simulation‑focused fork |
+| `+rsm` | Resonance Substrate Modeling integration |
+| `+vst` | validated Spacetime integration |
+| `+replay` | System behavior replay / analysis |
+
+Example:
+```text
+RTT-baseline+vst
+```
+
+---
+
+### 🧠 Systems & OS Extensions
+
+Used when RTT is extended deeper into system behavior.
+
+| Suffix | Meaning |
+|------|--------|
+| `+kernel` | Deeper kernel instrumentation |
+| `+sched` | Scheduler‑focused exploration |
+| `+memory` | Memory corridor specialization |
+| `+io` | I/O or boundary‑focused work |
+
+Example:
+```text
+RTT-baseline+kernel
+```
+
+---
+
+### 🎓 Education & Teaching
+
+Used for learning‑oriented forks.
+
+| Suffix | Meaning |
+|------|--------|
+| `+edu` | Teaching / classroom fork |
+| `+lab` | Guided experiments |
+| `+sandbox` | Safe exploration environment |
+
+Example:
+```text
+RTT-baseline+edu
+```
+
+---
+
+### 🧪 Experimental Directions
+
+Used for speculative or exploratory work.
+
+| Suffix | Meaning |
+|------|--------|
+| `+exp` | Experimental concepts |
+| `+proto` | Early prototype |
+| `+alt` | Alternative interpretation |
+
+Example:
+```text
+RTT-baseline+exp
+```
+
+---
+
+## Multiple Suffixes 🔗
+
+Multiple suffixes may be chained **sparingly**:
+
+```text
+RTT-baseline+vst+edu
+```
+
+Rules:
+- Maximum of **two** suffixes recommended
+- Order from **structural → contextual**
+- Avoid novelty stacking
+
+If it starts to look clever, simplify 😄
+
+---
+
+## What Suffixes Must *Not* Do 🚫
+
+Suffixes must not:
+- imply correctness or superiority
+- redefine RTT itself
+- obscure lineage
+- replace the `RTT-baseline` prefix
+
+Examples to avoid:
+- `RTT-advanced`
+- `RTT-certified`
+- `RTT-official`
+- `RTT-true`
+
+RTT has no “official” forks — only honest ones.
+
+---
+
+## Visual Style (Optional)
+
+Suffixes may:
+- use a lighter accent color
+- appear after a `+`
+- remain visually subordinate to `RTT-baseline`
+
+The baseline always leads.
+
+---
+
+## Why This Convention Works
+
+- Preserves RTT as the anchor
+- Encourages exploration without fragmentation
+- Makes forks legible at a glance
+- Avoids governance or gatekeeping
+- Scales across repos and time
+
+It answers:
+> *What direction did this fork take?*  
+without answering:
+> *Which one is better?*
+# NawderOS Minimal Kernel Patch (MVP) 🧠  
+*(RTT‑Aware Instrumentation Baseline)*
+
+This patch does **one thing well**:
+
+> It proves that RTT‑aligned observation can live inside the kernel without changing kernel behavior.
+
+No enforcement.  
+No policy.  
+No cleverness.
+
+Just **signals**.
+
+---
+
+## MVP Goals
+
+This patch must:
+
+- Compile cleanly on Linux 6.x
+- Emit at least one RTT badge at boot
+- Touch as few kernel files as possible
+- Be removable without side effects
+- Be understandable in one sitting 🙂
+
+---
+
+## What This MVP Implements
+
+### ✔️ One RTT concept
+**Substrate baseline observation**
+
+### ✔️ One module
+`substrateAudit`
+
+### ✔️ One badge
+`SUBSTRATE_BASELINE`
+
+That’s it.
+
+Everything else comes later.
+
+---
+
+## Patch Overview
+
+### Files Touched
+- `init/main.c` — boot‑time hook
+- `include/linux/nawderos.h` — RTT definitions
+- `kernel/nawderos.c` — badge emission logic
+- `kernel/Makefile` — build integration
+
+---
+
+## 1️⃣ Header: RTT Definitions
+
+**`include/linux/nawderos.h`**
+
+```c
+#ifndef _LINUX_NAWDEROS_H
+#define _LINUX_NAWDEROS_H
+
+#define NAWDEROS_VERSION "0.1.0"
+#define RTT_BADGE_SUBSTRATE_BASELINE "SUBSTRATE_BASELINE"
+
+void nawderos_emit_badge(const char *badge_type,
+                         const char *module,
+                         const char *context);
+
+#endif
+```
+
+This keeps RTT visible but lightweight.
+
+---
+
+## 2️⃣ Badge Emission (Minimal)
+
+**`kernel/nawderos.c`**
+
+```c
+#include <linux/kernel.h>
+#include <linux/nawderos.h>
+
+void nawderos_emit_badge(const char *badge_type,
+                         const char *module,
+                         const char *context)
+{
+    printk(KERN_INFO
+        "[NAWDEROS][BADGE] type=%s module=%s context=%s\n",
+        badge_type,
+        module,
+        context ? context : "none");
+}
+```
+
+Yes — this uses `printk`.
+
+That’s intentional.
+
+Tracepoints come later.  
+First, we prove the concept.
+
+---
+
+## 3️⃣ Boot‑Time Hook
+
+**`init/main.c`**
+
+Add near the end of `start_kernel()`:
+
+```c
+#include <linux/nawderos.h>
+
+...
+
+nawderos_emit_badge(
+    RTT_BADGE_SUBSTRATE_BASELINE,
+    "substrateAudit",
+    "kernel_boot"
+);
+```
+
+This emits **exactly one badge** per boot.
+
+No loops.  
+No conditions.  
+No risk.
+
+---
+
+## 4️⃣ Build Integration
+
+**`kernel/Makefile`**
+
+Add:
+
+```makefile
+obj-y += nawderos.o
+```
+
+That’s it.
+
+---
+
+## What You’ll See at Runtime 👀
+
+On boot:
+
+```text
+[NAWDEROS][BADGE] type=SUBSTRATE_BASELINE module=substrateAudit context=kernel_boot
+```
+
+That single line proves:
+
+- RTT concepts are present
+- The kernel is instrumented
+- Badges are real
+- Nothing broke 🙂
+
+---
+
+## Why This MVP Is Correct
+
+This patch:
+
+- Demonstrates RTT without overreach
+- Matches the documentation exactly
+- Gives students something concrete to see
+- Creates a stable anchor for future work
+- Avoids premature abstraction
+
+Most importantly:
+
+> It makes RTT **observable**, not theoretical.
+
+---
+
+## What Comes Next (Not in This Patch)
+
+Deliberately excluded:
+
+- Tracepoints
+- `/proc/nawderian`
+- Scheduler hooks
+- Memory corridors
+- Userspace collectors
+
+Those belong in **v0.1.x**, not the baseline.
+
+---
+
+## How This Aligns with v0.1.0
+
+This patch is the **physical manifestation** of the v0.1.0 tag:
+
+- RTT is present
+- Coherence is observable
+- Lineage is preserved
+- Scope is controlled
+
+Nothing more is required for the baseline.
+---
+title: "NoS — Nawderian Operating Stack"
+description: "A minimal, forkable Linux-based operating stack anchored to RTT/Resonance-Time Theory. Coherence is observed, not imposed."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is NoS?
+
+**NoS** (Nawderian operating Stack) is a minimal, forkable Linux-based operating stack
+anchored to **RTT (Resonance-Time Theory)**. RTT defines the structural invariants;
+NoS exposes them as live system signals.
+
+NoS is **not** a production operating system. It has no dashboards, no alerts, no
+automatic remediation, and no guardrails by design. It is a **fork-first educational
+platform** — a substrate on which RTT principles are made observable at the kernel level.
+
+> Coherence is observed, not imposed.
+
+---
+
+## Four Core Mechanisms
+
+| Mechanism | Function |
+|---|---|
+| **Validation corridors** | Structural pathways that verify substrate integrity at defined checkpoints |
+| **Resonance checks** | H-Ops pattern matching against expected system rhythms |
+| **Substrate audits** | Full surface-area inspection of declared vs. actual system state |
+| **Badge emission** | RTT compliance signals emitted when a substrate passes validation |
+
+---
+
+## Seven Primary Files
+
+| File | Contents |
+|---|---|
+| `NawderOS.md` | Core operating stack definition |
+| `MODULES.md` | Module registry and activation protocol |
+| `KERNEL_BUILD.md` | Kernel build instructions for RTT-anchored compilation |
+| `INSTALLATION.md` | Installation procedure with substrate declaration steps |
+| `GLYPHIC_COMPILER.md` | Glyphic compiler — RTT invariants as compilation targets |
+| `FORKING_GUIDE.md` | How to fork NoS for a new substrate context |
+| `ROADMAP.md` | Development roadmap and planned validation corridor expansions |
+
+---
+
+## Design Decisions
+
+**No dashboards.** Dashboards create an illusion of awareness. NoS surfaces raw
+resonance signals and requires the operator to interpret them.
+
+**No guardrails.** Guardrails impose coherence. NoS observes coherence and reports
+its presence or absence without intervention.
+
+**Fork-first.** NoS is not meant to be used as-is. It is a starting substrate.
+Every fork declares a new substrate and builds from there.
+
+---
+
+## Related Modules
+
+- [Mode](../Mode/overview/) — NawderOS implements Mode stances as kernel-level signals
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — NoS validation corridors surface CSM condition signals
+- [Framework Field Theory](../Framework_Field_Theory/overview/) — RTT invariants implemented by the Glyphic Compiler
+- [AI Drift Calibration](../ai-drift-calibration/overview/) — NoS substrate audit outputs feed drift calibration
+
+---
+
+Status: Early-stage research / education platform  
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+## 1️⃣ Git Tag Message — `v0.1.0-rtt-baseline`
+
+This is suitable as either:
+- an **annotated Git tag message**, or  
+- the **short description** attached to the tag in GitHub.
+
+```text
+NawderOS v0.1.0 — RTT Baseline
+
+This tag marks the first formal anchoring of NawderOS in
+Resonance-Time Theory (RTT).
+
+v0.1.0 establishes NawderOS as an RTT-aware instrumentation
+baseline, focused on observation, validation, and lineage
+rather than enforcement or optimization.
+
+This release defines:
+- RTT as the conceptual anchor
+- badge-based signaling as the primary system output
+- minimal, readable kernel instrumentation
+- fork-first design with preserved coherence
+
+This is a baseline, not a feature milestone.
+Future versions increment only when RTT alignment,
+invariants, or badge semantics change.
+
+From this point forward, drift is visible.
+```
+
+Short. Calm. Referential.  
+It reads well in `git tag -a` and in GitHub’s UI.
+
+---
+
+## 2️⃣ “RTT Baseline” Badge — Graphic Spec 🏷️
+
+This is a **visual identity spec**, not an image file. It’s designed so forks can recreate it consistently using shields.io, SVG, or custom assets.
+
+---
+
+### Badge Name
+**RTT Baseline**
+
+---
+
+### Purpose
+Visually marks repositories, forks, and releases that:
+- explicitly anchor to RTT
+- preserve observation-first design
+- maintain badge-based lineage signaling
+
+This badge is **declarative**, not authoritative.
+
+---
+
+### Text Layout
+
+```text
+RTT | baseline
+```
+
+or (compact variant):
+
+```text
+RTT-baseline
+```
+
+---
+
+### Color Palette
+
+- **Background:** Deep slate / charcoal  
+  - Hex: `#2E3440` (or similar neutral dark)
+- **Text:** Soft off-white  
+  - Hex: `#ECEFF4`
+- **Accent (optional):** Muted triadic highlight  
+  - Hex: `#88C0D0` (cool, non-alarmist)
+
+No red. No green. No urgency colors.
+
+---
+
+### Shape
+
+- Standard badge pill (GitHub / shields style)
+- Rounded corners
+- Flat (no gradients, no glow)
+
+---
+
+### Iconography (Optional)
+
+If an icon is used:
+- Simple triadic mark (three points or lines)
+- No arrows
+- No motion
+- No implication of control or automation
+
+Icon must not dominate the text.
+
+---
+
+### Semantic Rules
+
+A project may display the **RTT Baseline** badge if:
+- RTT is explicitly named as the conceptual anchor
+- observation is favored over enforcement
+- lineage and badge signaling are preserved
+
+Forks may:
+- keep the badge
+- modify it with a suffix (e.g., `RTT-baseline+sim`)
+- remove it entirely
+
+The badge is **self-attested**, not centrally granted.
+
+---
+
+### Example Markdown (Shields‑Style)
+
+```markdown
+![RTT Baseline](https://img.shields.io/badge/RTT-baseline-2E3440?style=flat&labelColor=2E3440&color=88C0D0)
+```
+
+(Exact colors and style may vary by fork.)
+
+---
+
+### Why This Works
+
+- Visually calm
+- Non-authoritarian
+- Fork-safe
+- Signals lineage without hierarchy
+- Matches the tone of RTT and NawderOS
+
+It says *“this is grounded”*, not *“this is finished.”*
 

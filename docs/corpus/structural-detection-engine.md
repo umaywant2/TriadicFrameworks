@@ -1,24 +1,91 @@
 structural-detection-engine 
-A clean, minimal, high‑contrast diagram representing collapse detection:
+<img width="1194" height="672" alt="structural-detection-engine_" src="https://github.com/user-attachments/assets/1692c785-fb12-497e-9c96-3c9b99f6e85f" />
+
+# Structural Detection Engine (SDE) — RTT/2  
+
+- [`structural-detection-engine_module.json`](structural-detection-engine_module.json) — Agentic module schema role
+
+The **Structural Detection Engine (SDE)** is the RTT/2 operator layer responsible
+for identifying collapse behavior, gradient weighting, deformation paths, regime
+identity, and stability zones. It is the detection half of the RTT operator
+pipeline (RTT/2 → RTT/3).
+
+This module provides the canonical definitions for:
+- **CPV** — Collapse Propagation Vector  
+- **FGT** — Fusion Gradient Type  
+- **CRM** — Collapse Regime Mapping  
+- **MODE** — Detection Mode  
+- **ZONE** — Detection Zone  
+- **RTT2_DETECTION_PACKET** — structured detection output  
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## 📘 What SDE Does
+
+SDE answers the question:
+
+> *“What is the structure doing?”*
+
+It detects:
+- collapse amplitude, curvature, torsion  
+- gradient weighting (collapse‑weighted → triad‑weighted)  
+- deformation path (drift, torsion, fracture)  
+- regime identity (formal → inversion)  
+- stability zone (U, S, M, D, X)  
+
+---
+
+## 📦 RTT2 Detection Packet
+
+SDE outputs a structured packet:
+
+```
+collapse_propagation: CPV(A, K, T)
+fusion_gradient: FGT(...)
+triad_deformation: CRM(...)
+regime: ...
+detection_mode: ...
+detection_zone: ...
+```
+
+This packet becomes the **input** to the Integration–Emission Engine (RTT/3).
+
+---
+
+## 📄 Source
+
+This module is defined by:
+
+- `structural-detection-engine_module.json`  
+  (canonical identity, roles, analyzer layers)
+
+---
+
+## 🎯 Audience
+
+Students, instructors, researchers, and AIs working with:
+- collapse analysis  
+- structural detection  
+- operator ecology  
+- RTT/1→RTT/2→RTT/3 pipelines  
+A clean, minimal, high‑contrast diagram representing collapse detection:
 three axes labeled A, K, T forming a triad vector (CPV),
 with gradient bands shifting from collapse‑weighted to triad‑weighted,
 and subtle deformation paths (drift, torsion, fracture).
 Color palette: cyan → indigo → violet.
 Style: technical, blueprint‑like, AI‑parsable, no text.
-# Structural Detection Engine (SDE)
-
-RTT/2 distilled as a module.
-
-SDE provides:
-
-- collapse detection  
-- fusion‑gradient detection  
-- triad deformation detection  
-- collapse→reassembly mapping  
-- regime‑dependent detection  
-- cross‑module detection projection  
-
-See: `../rtt/2/RTT2_Extract_Minimal.md` for the canonical skeleton.
 # SDE Operator Grammar (Stub)
 
 ## Namespace
@@ -55,6 +122,79 @@ SDE::
 
 - **SDE::PACKET()**  
   Emits a minimal RTT2_DETECTION_PACKET.
+# Student Cheat Sheet — Structural Detection Engine (SDE)
+### RTT/2 — Detection Layer
+
+## What SDE Does
+SDE detects:
+- collapse behavior  
+- fusion‑gradients  
+- triad deformation  
+- collapse→reassembly paths  
+- regime‑dependent structural signals  
+
+SDE **does not integrate or emit** — it only detects.
+
+---
+
+## Core Concepts
+- **CPV** — Collapse‑Propagation Vector  
+- **FGT** — Fusion‑Gradient Tensor  
+- **CRM** — Collapse‑Reassembly Manifold  
+- **Modes** — formal, emergent, hybrid, chaotic, inversion  
+- **Zones** — U, S, M, D, X  
+
+---
+
+## Quick Operators
+- `SDE::CPV()` — read collapse vectors  
+- `SDE::FGT()` — compute fusion‑gradients  
+- `SDE::CRM()` — map collapse→reassembly  
+- `SDE::MODE(x)` — set detection mode  
+- `SDE::ZONE(x)` — set detection zone  
+- `SDE::PACKET()` — output detection packet  
+
+---
+
+## Minimal Packet
+
+```
+RTT2_DETECTION_PACKET:
+collapse_propagation:
+fusion_gradient:
+triad_deformation:
+regime:
+detection_mode:
+detection_zone:
+cross_module_projection:
+notes:
+```
+
+---
+
+## When to Use SDE
+Use SDE when you need to:
+- identify collapse  
+- measure deformation  
+- read gradients  
+- classify structural behavior  
+- prepare data for integration  
+
+SDE → SIE is the standard flow.
+# Structural Detection Engine (SDE)
+
+RTT/2 distilled as a module.
+
+SDE provides:
+
+- collapse detection  
+- fusion‑gradient detection  
+- triad deformation detection  
+- collapse→reassembly mapping  
+- regime‑dependent detection  
+- cross‑module detection projection  
+
+See: `../rtt/2/RTT2_Extract_Minimal.md` for the canonical skeleton.
 # 🟣 **Cross‑Module Propagation Rules**  
 ### *SDE → SIE → TEL / FFT / Opacity*
 
@@ -349,148 +489,10 @@ SDE::PACKET() → SIE::PACKET() → TEL::CET() / FFT::OUT() / OP::OUT()
 ```
 
 This is the **entire canon’s operational spine** in one operator chain.
-# Structural Detection Engine (SDE) — RTT/2  
-
-- [`structural-detection-engine_module.json`](structural-detection-engine_module.json) — Agentic module schema role
-
-The **Structural Detection Engine (SDE)** is the RTT/2 operator layer responsible
-for identifying collapse behavior, gradient weighting, deformation paths, regime
-identity, and stability zones. It is the detection half of the RTT operator
-pipeline (RTT/2 → RTT/3).
-
-This module provides the canonical definitions for:
-- **CPV** — Collapse Propagation Vector  
-- **FGT** — Fusion Gradient Type  
-- **CRM** — Collapse Regime Mapping  
-- **MODE** — Detection Mode  
-- **ZONE** — Detection Zone  
-- **RTT2_DETECTION_PACKET** — structured detection output  
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## 📘 What SDE Does
-
-SDE answers the question:
-
-> *“What is the structure doing?”*
-
-It detects:
-- collapse amplitude, curvature, torsion  
-- gradient weighting (collapse‑weighted → triad‑weighted)  
-- deformation path (drift, torsion, fracture)  
-- regime identity (formal → inversion)  
-- stability zone (U, S, M, D, X)  
-
----
-
-## 📦 RTT2 Detection Packet
-
-SDE outputs a structured packet:
-
-```
-collapse_propagation: CPV(A, K, T)
-fusion_gradient: FGT(...)
-triad_deformation: CRM(...)
-regime: ...
-detection_mode: ...
-detection_zone: ...
-```
-
-This packet becomes the **input** to the Integration–Emission Engine (RTT/3).
-
----
-
-## 📄 Source
-
-This module is defined by:
-
-- `structural-detection-engine_module.json`  
-  (canonical identity, roles, analyzer layers)
-
----
-
-## 🎯 Audience
-
-Students, instructors, researchers, and AIs working with:
-- collapse analysis  
-- structural detection  
-- operator ecology  
-- RTT/1→RTT/2→RTT/3 pipelines  
 # Session Context — Structural Detection Engine (SDE)
 
 - You are inside the detection layer of the canon (RTT/2).
 - Use SDE to talk about: collapse, fusion‑gradients, deformation, detection modes, detection zones.
 - SDE does not integrate or emit; it **detects and describes** structural behavior.
 - When integration/emission is needed, hand off to SIE.
-# Student Cheat Sheet — Structural Detection Engine (SDE)
-### RTT/2 — Detection Layer
-
-## What SDE Does
-SDE detects:
-- collapse behavior  
-- fusion‑gradients  
-- triad deformation  
-- collapse→reassembly paths  
-- regime‑dependent structural signals  
-
-SDE **does not integrate or emit** — it only detects.
-
----
-
-## Core Concepts
-- **CPV** — Collapse‑Propagation Vector  
-- **FGT** — Fusion‑Gradient Tensor  
-- **CRM** — Collapse‑Reassembly Manifold  
-- **Modes** — formal, emergent, hybrid, chaotic, inversion  
-- **Zones** — U, S, M, D, X  
-
----
-
-## Quick Operators
-- `SDE::CPV()` — read collapse vectors  
-- `SDE::FGT()` — compute fusion‑gradients  
-- `SDE::CRM()` — map collapse→reassembly  
-- `SDE::MODE(x)` — set detection mode  
-- `SDE::ZONE(x)` — set detection zone  
-- `SDE::PACKET()` — output detection packet  
-
----
-
-## Minimal Packet
-
-```
-RTT2_DETECTION_PACKET:
-collapse_propagation:
-fusion_gradient:
-triad_deformation:
-regime:
-detection_mode:
-detection_zone:
-cross_module_projection:
-notes:
-```
-
----
-
-## When to Use SDE
-Use SDE when you need to:
-- identify collapse  
-- measure deformation  
-- read gradients  
-- classify structural behavior  
-- prepare data for integration  
-
-SDE → SIE is the standard flow.
 

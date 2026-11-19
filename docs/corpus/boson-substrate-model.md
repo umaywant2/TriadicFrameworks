@@ -1,5 +1,88 @@
 boson-substrate-model 
-# Changelog
+<img width="1194" height="672" alt="boson-substrate-model_" src="https://github.com/user-attachments/assets/bd2880d5-4aa0-46a5-a357-83dd16caecef" />
+
+- [`bsm_module.json`](bsm_module.json) — Agentic module schema role assignments
+  
+The Boson Substrate Model (BSM) defines a minimal structural substrate intended to support higher‑order operator dynamics without encoding domain‑specific semantics or empirical claims.
+
+The model formalizes a coherent substrate layer in which operator‑mediated interactions occur under explicitly declared operating regimes. Its purpose is to make substrate assumptions, boundaries, and validation conditions inspectable and reproducible.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## Scope
+
+The BSM is:
+- Structural rather than empirical
+- Architecture‑agnostic
+- Compatible with layered modeling approaches
+
+The BSM is not:
+- A physical theory
+- A simulation framework
+- An optimization or learning model
+- A replacement for existing theoretical systems
+
+---
+
+## Contents
+
+This directory contains the complete publication surface for the Boson Substrate Model, including:
+
+- Declared operating regimes and assumptions
+- Substrate definition and operator dynamics
+- Structural validation checks
+- Discussion and limitations
+- Structural overview figure
+- Citation and archival metadata
+
+---
+
+## Intended Use
+
+The BSM is intended to serve as a stable substrate layer beneath higher‑level models. It enables those models to operate with explicit structural guarantees while retaining independent semantics, objectives, and validation criteria.
+
+Adoption of the BSM does not require modification of existing systems.
+
+---
+
+## Publication Status
+
+This work is published as a standalone technical note with citation and archival metadata. Versioning follows a conservative, publication‑oriented policy to preserve interpretability and reproducibility over time.
+
+---
+
+## License
+
+This work is released under the Creative Commons Attribution 4.0 International (CC‑BY‑4.0) license.
+
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/boson-substrate-model)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧩Minimal%20Substrate-📐Structural%20Only-4c8eda?style=for-the-badge" alt="🧩Minimal Substrate | 📐Structural Only"/>
+# Changelog
 
 All notable changes to the Boson Substrate Model (BSM) publication are documented in this file.
 
@@ -28,6 +111,45 @@ This release establishes the canonical structural definition of the Boson Substr
 - Patch versions address typographical or formatting corrections only.
 - Minor versions introduce clarifications without altering declared assumptions.
 - Major versions reflect substantive changes to substrate definition or operating regimes.
+# Metadata
+
+This directory contains citation and publication metadata for the Boson Substrate Model (BSM) technical note. These files support archival, citation, and versioning workflows and are not part of the conceptual content of the model.
+
+They exist to ensure that the publication can be referenced, indexed, and updated consistently over time.
+
+---
+
+## Files
+
+### `CITATION.cff`
+
+Defines the canonical citation information for this work. This file is used by GitHub, Zenodo, and other tooling to generate standardized citations.
+
+Update this file only when:
+- A new Zenodo version is published
+- Author or licensing information changes
+
+---
+
+### `zenodo.json`
+
+Provides structured metadata for Zenodo publication. This file mirrors the information entered during Zenodo upload and supports version lineage tracking.
+
+The `doi` field is added **after** Zenodo assigns a DOI for a given version.
+
+---
+
+## Versioning Notes
+
+- Metadata versions should match the published Zenodo version.
+- Minor formatting or typographical corrections do not require metadata updates.
+- New Zenodo versions require updating both `CITATION.cff` and `zenodo.json`.
+
+---
+
+## Scope
+
+These metadata files do not define or modify the Boson Substrate Model itself. They exist solely to support citation, archival stability, and reproducibility of the published artifact.
 ---
 title: "Boson Substrate Model"
 description: "A minimal structural substrate for operator-mediated interactions under declared regimes — architecture-agnostic, structurally grounded, and explicitly not a physical theory, simulation, or learning model."
@@ -100,128 +222,6 @@ License: CC BY 4.0. `CITATION.cff` included. Agentic: `bsm_module.json`
 ---
 
 © 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
-# Boson Substrate Model (BSM) 
-
-- [`bsm_module.json`](bsm_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧩Minimal%20Substrate-📐Structural%20Only-4c8eda?style=for-the-badge" alt="🧩Minimal Substrate | 📐Structural Only"/>
-
-The Boson Substrate Model (BSM) defines a minimal structural substrate intended to support higher‑order operator dynamics without encoding domain‑specific semantics or empirical claims.
-
-The model formalizes a coherent substrate layer in which operator‑mediated interactions occur under explicitly declared operating regimes. Its purpose is to make substrate assumptions, boundaries, and validation conditions inspectable and reproducible.
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## Scope
-
-The BSM is:
-- Structural rather than empirical
-- Architecture‑agnostic
-- Compatible with layered modeling approaches
-
-The BSM is not:
-- A physical theory
-- A simulation framework
-- An optimization or learning model
-- A replacement for existing theoretical systems
-
----
-
-## Contents
-
-This directory contains the complete publication surface for the Boson Substrate Model, including:
-
-- Declared operating regimes and assumptions
-- Substrate definition and operator dynamics
-- Structural validation checks
-- Discussion and limitations
-- Structural overview figure
-- Citation and archival metadata
-
----
-
-## Intended Use
-
-The BSM is intended to serve as a stable substrate layer beneath higher‑level models. It enables those models to operate with explicit structural guarantees while retaining independent semantics, objectives, and validation criteria.
-
-Adoption of the BSM does not require modification of existing systems.
-
----
-
-## Publication Status
-
-This work is published as a standalone technical note with citation and archival metadata. Versioning follows a conservative, publication‑oriented policy to preserve interpretability and reproducibility over time.
-
----
-
-## License
-
-This work is released under the Creative Commons Attribution 4.0 International (CC‑BY‑4.0) license.
-
-- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/boson-substrate-model)
-# Metadata
-
-This directory contains citation and publication metadata for the Boson Substrate Model (BSM) technical note. These files support archival, citation, and versioning workflows and are not part of the conceptual content of the model.
-
-They exist to ensure that the publication can be referenced, indexed, and updated consistently over time.
-
----
-
-## Files
-
-### `CITATION.cff`
-
-Defines the canonical citation information for this work. This file is used by GitHub, Zenodo, and other tooling to generate standardized citations.
-
-Update this file only when:
-- A new Zenodo version is published
-- Author or licensing information changes
-
----
-
-### `zenodo.json`
-
-Provides structured metadata for Zenodo publication. This file mirrors the information entered during Zenodo upload and supports version lineage tracking.
-
-The `doi` field is added **after** Zenodo assigns a DOI for a given version.
-
----
-
-## Versioning Notes
-
-- Metadata versions should match the published Zenodo version.
-- Minor formatting or typographical corrections do not require metadata updates.
-- New Zenodo versions require updating both `CITATION.cff` and `zenodo.json`.
-
----
-
-## Scope
-
-These metadata files do not define or modify the Boson Substrate Model itself. They exist solely to support citation, archival stability, and reproducibility of the published artifact.
 ## Abstract
 
 The Boson Substrate Model (BSM) defines a minimal structural substrate intended to support higher‑order operator dynamics without encoding domain‑specific semantics or empirical claims. Rather than proposing a new physical theory, the BSM formalizes a coherent substrate layer in which boson‑like operators propagate, interact locally, and preserve structural invariants under declared operating regimes. By making substrate assumptions explicit—such as coherence conditions, locality constraints, and boundary semantics—the model enables inspection, validation, and reproducibility of substrate behavior independent of implementation details. The BSM is architecture‑agnostic and compatible with layered modeling approaches, providing a stable foundation beneath higher‑level systems without constraining their semantics or objectives. This work presents the declared operating regimes and validation checks that define the conditions under which the substrate remains coherent and analyzable.

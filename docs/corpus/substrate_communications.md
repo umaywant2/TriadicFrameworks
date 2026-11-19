@@ -1,38 +1,7 @@
 substrate_communications 
-# Message Types  
-_Minimal structural formats for Substrate Communications._
+<img width="1194" height="672" alt="substrate_communications_" src="https://github.com/user-attachments/assets/9456acea-bee9-4eb2-95d9-5c435cdafa01" />
 
-## 1. STATE_SUMMARY
-
-Describes drift against an invariant.
-
-```
-msg_type: STATE_SUMMARY
-asset_id: <string>
-invariant_id: <string>
-time_window: { start: <t0>, end: <t1> }
-max_drift: <float>
-status: within_bounds | approaching_limit | out_of_bounds
-```
-
-## 2. PARADOX_SUMMARY
-
-Describes contradictory or incompatible signals.
-
-```
-msg_type: PARADOX_SUMMARY
-asset_id: <string>
-paradox_id: <string>
-invariant_id: <string>
-hypotheses:
-  - { source: <string>, value: <any> }
-  - { source: <string>, value: <any> }
-evidence: [<string>, ...]
-timestamp: <t>
-```
-
-These two message types are sufficient to reconstruct structural behavior across a mesh.
-# Substrate Communications  
+# Substrate Communications  
 _A minimal structural framework for drift‑aware, paradox‑preserving messaging across heterogeneous systems._
 
 - [`SubComm_module.json`](SubComm_module.json) — Agentic module schema role assignments
@@ -89,6 +58,39 @@ To keep the structure stable:
 
 This folder anchors the **core substrate‑comms grammar**.  
 Extensions should build outward, not modify the core.
+# Message Types  
+_Minimal structural formats for Substrate Communications._
+
+## 1. STATE_SUMMARY
+
+Describes drift against an invariant.
+
+```
+msg_type: STATE_SUMMARY
+asset_id: <string>
+invariant_id: <string>
+time_window: { start: <t0>, end: <t1> }
+max_drift: <float>
+status: within_bounds | approaching_limit | out_of_bounds
+```
+
+## 2. PARADOX_SUMMARY
+
+Describes contradictory or incompatible signals.
+
+```
+msg_type: PARADOX_SUMMARY
+asset_id: <string>
+paradox_id: <string>
+invariant_id: <string>
+hypotheses:
+  - { source: <string>, value: <any> }
+  - { source: <string>, value: <any> }
+evidence: [<string>, ...]
+timestamp: <t>
+```
+
+These two message types are sufficient to reconstruct structural behavior across a mesh.
 # Regime Mapping  
 _How Substrate Communications aligns with triadic interpretation._
 

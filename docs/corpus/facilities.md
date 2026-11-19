@@ -1,5 +1,180 @@
 facilities 
-# ⚡ RTT‑AGERI  
+<img width="1194" height="672" alt="Facilities_" src="https://github.com/user-attachments/assets/52c2a00d-a833-4331-9da7-36eff4ff0e6c" />
+
+- [`facilities_module.json`](facilities_module.json) — Agentic module schema role assignments
+
+# 🔰 Facilities 
+**RTT Facilities · City Systems · Modernization Frameworks**
+
+This folder contains all documentation, templates, and governance materials related to **RTT Facilities** — the physical, operational, and communication infrastructure that cities, residents, operators, and GHQ rely on during modernization cycles.
+
+The Facilities domain is grounded in the **RTT Facilities Playbook**, which defines facilities as **living systems** governed across asset classes, lifecycle phases, and audiences.
+
+This README serves as the **navigation anchor** for all Facilities‑related work.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## 🧭 Facilities Scope
+
+RTT Facilities covers:
+
+- Electrical infrastructure (above‑ground and underground)
+- Water and wastewater systems
+- Transportation corridors
+- Communications infrastructure
+- Public buildings and emergency systems
+
+Facilities work spans the full lifecycle:
+
+- Design  
+- Construction  
+- Operation  
+- Maintenance  
+- Modernization  
+- Decommissioning  
+
+Domain‑specific initiatives (such as RTT‑AGERI) live **within** this broader Facilities framework.
+
+---
+
+## ⚡ Active Facilities Domains
+
+### **RTT‑AGERI**
+**Above‑Ground Electrical Resilience Initiative**
+
+RTT‑AGERI is the first fully articulated Facilities domain, focused on modernizing **above‑ground electrical infrastructure** using:
+
+- Drift scoring  
+- Harmonics analysis  
+- Propagation modeling  
+- Corridor classification  
+- Capital‑timed modernization cycles  
+
+RTT‑AGERI documentation lives under:
+
+```
+/docs/facilities/RTT-AGERI/
+```
+
+Additional Facilities domains will follow this same structural pattern.
+
+---
+
+## 🗂️ Folder Map
+
+## **1. City‑Facing**
+Guides and communication materials for city leadership and operational teams.
+
+- `city-facing/city-manager-briefing-packet.md`  
+- `city-facing/city-manager-slide-deck.md`  
+- `city-facing/press-release-template.md`  
+
+**Purpose:**  
+Enable cities to plan, communicate, and coordinate facilities modernization and emergency response.
+
+---
+
+## **2. Residents**
+Public‑facing education and safety materials.
+
+- `residents/neighborhood-meeting-deck.md`  
+- `residents/storm-season-101.md`  
+- `residents/storm-season-dos-and-donts.md`  
+- `residents/storm-season-faq.md`  
+
+**Purpose:**  
+Provide clear, non‑technical guidance for residents during storm seasons and modernization work.
+
+---
+
+## **3. Design System**
+Governance and standards for all facilities‑related components and visual assets.
+
+- `design-system/component-creation-checklist.md`  
+- `design-system/component-naming-convention.md`  
+- `design-system/component-proposal-form.md`  
+- `design-system/design-governance-charter.md`  
+- `design-system/figma-library-structure.md`  
+- `design-system/governance-poster.md`  
+- `design-system/onboarding-guide.md`  
+- `design-system/style-guide.md`  
+
+**Purpose:**  
+Ensure consistency, clarity, and governance across all Facilities artifacts.
+
+---
+
+## **4. Strategy & Governance**
+Long‑horizon planning and GHQ‑grade governance.
+
+- `strategy/global-modernization-timeline.md`  
+- `strategy/rtt-global-facilities-strategy-2050.md`  
+- `strategy/timeline-visual-storyboard.md`  
+- `governance/rtt-global-governance-constitution.md`  
+
+**Purpose:**  
+Define global modernization cycles, capital timing, and governance structures.
+
+---
+
+## 🧱 Root‑Level Orientation Files
+
+- `index.md` — high‑level overview of the Facilities domain  
+- `global-modernization-timeline.md` — modernization cycles and capital timing  
+- `rtt-global-facilities-strategy-2050.md` — long‑range strategy  
+- `timeline-visual-storyboard.md` — visual narrative of modernization phases  
+
+These files provide **top‑level orientation** for contributors and partners.
+
+---
+
+## 📌 Contribution Notes
+
+- Facilities documentation is **audience‑segmented** — keep materials scoped accordingly.  
+- Domain‑specific initiatives (e.g., RTT‑AGERI) should live in their own subfolders.  
+- Strategy and governance documents should remain **canonical and stable**.  
+- City‑ and resident‑facing materials should remain **clear, actionable, and non‑technical**.  
+
+---
+
+## 🧭 Looking Ahead
+
+The Facilities Playbook anticipates additional shared layers, including:
+
+- Asset‑class registries  
+- Lifecycle frameworks  
+- Cross‑system propagation modeling  
+- Operator and contractor interfaces  
+- Capital and audit integration  
+
+These will be scaffolded incrementally as Facilities domains mature.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+# ⚡ RTT‑AGERI  
 ### **Above‑Ground Electrical Resilience Initiative**  
 **RTT Facilities Domain · Infrastructure Modernization · Public Safety**
 
@@ -127,1257 +302,6 @@ Each audience has a dedicated folder to prevent scope bleed and maintain clarity
 
 Earlier drafts referenced **ABERI**.  
 The canonical name is **RTT‑AGERI (Above‑Ground Electrical Resilience Initiative)**.
-# 💰📋 RTT Facilities — Capital & Audit Integration  
-**Closing the Governance Loop**
-
-This document defines how **capital planning and audit processes are structurally integrated** within the RTT Facilities framework.
-
-It is grounded in the **RTT Facilities Playbook** and applies across all Facilities domains, including **RTT‑AGERI**.
-
-Capital and audit are treated as **mutually reinforcing governance instruments**, not separate functions.
-
----
-
-## 1. Purpose
-
-Facilities governance fails when:
-
-- Capital decisions ignore risk signals, or  
-- Audits document problems without changing outcomes.
-
-The purpose of this framework is to:
-
-- Bind risk detection to capital deployment  
-- Ensure audits influence future decisions  
-- Preserve institutional memory across cycles  
-- Prevent deferred modernization through accountability  
-- Maintain public trust through transparency  
-
-Capital without audit is blind.  
-Audit without capital is performative.
-
----
-
-## 2. Capital as a Governance Instrument
-
-Within RTT Facilities, capital is not merely funding.
-
-Capital is used to:
-- Reduce systemic risk
-- Correct lifecycle misalignment
-- Prevent propagation cascades
-- Enable long‑horizon resilience
-
-Capital deployment is **explicitly justified** by scoring, classification, and governance review.
-
----
-
-## 3. Audit as a Forward‑Looking Function
-
-Audits are not post‑failure blame exercises.
-
-Facilities audits are designed to:
-- Validate scoring accuracy
-- Confirm intervention effectiveness
-- Detect governance breakdowns
-- Identify deferred modernization risk
-- Inform future capital timing
-
-Audits look **forward**, not backward.
-
----
-
-## 4. The Closed Governance Loop
-
-Facilities governance operates as a closed loop:
-
-1. **Observation & Scoring**  
-   Drift, harmonics, propagation, corridor classification
-
-2. **Governance Review**  
-   Risk thresholds evaluated, priorities set
-
-3. **Capital Allocation**  
-   Modernization cycle selected (10 / 20 / 50‑year)
-
-4. **Intervention Execution**  
-   Preventive, planned, or emergency action
-
-5. **Audit & Validation**  
-   Outcomes assessed, assumptions tested
-
-6. **Model & Strategy Update**  
-   Scoring, standards, and plans refined
-
-Breaking this loop is treated as a governance failure.
-
----
-
-## 5. Capital Timing Integration
-
-Capital planning is aligned with modernization cycles:
-
-- **10‑Year** — tactical stabilization  
-- **20‑Year** — strategic realignment  
-- **50‑Year** — generational transformation  
-
-Audit findings may:
-- Accelerate cycle entry
-- Escalate corridor priority
-- Trigger governance review
-
-Capital deferral without documented justification is auditable.
-
----
-
-## 6. Audit Triggers
-
-Audits may be triggered by:
-
-- Elevated drift or harmonics scores
-- Corridor reclassification
-- Cross‑system propagation risk
-- Emergency interventions
-- Repeated maintenance without modernization
-- Public trust erosion
-
-Audit scope scales with risk.
-
----
-
-## 7. Governance Accountability
-
-Capital and audit integration enforces accountability across:
-
-- **GHQ** — standards, scoring integrity, cross‑domain alignment  
-- **Cities** — capital planning and execution  
-- **Operators & Contractors** — compliance and performance  
-- **Leadership** — decision transparency and follow‑through  
-
-Repeated audit findings without capital response trigger escalation.
-
----
-
-## 8. Public Transparency
-
-Where appropriate, capital and audit outcomes are:
-
-- Summarized for public reporting
-- Explained in plain language
-- Linked to safety and reliability outcomes
-
-Transparency is treated as a **risk‑reduction mechanism**, not a liability.
-
----
-
-## 9. Relationship to Domain Extensions
-
-Domain initiatives (e.g., **RTT‑AGERI**):
-
-- Inherit this integration framework
-- Define domain‑specific audit protocols
-- Map scoring outcomes to capital requests
-
-They do **not** redefine capital‑audit coupling.
-
----
-
-## 10. Canonical Status
-
-This framework is **canonical**.
-
-All Facilities domains must reference it when defining capital planning, audit protocols, and governance escalation.
-# 🧭 RTT Facilities — Corridor Classification Standard  
-**Spatial Risk Units & Governance Boundaries**
-
-This document defines the **Facilities‑level corridor classification standard** used to group, assess, and govern spatially linked infrastructure assets.
-
-It is grounded in the **RTT Facilities Playbook** and applies across all Facilities domains, including **RTT‑AGERI**.
-
-Domain‑specific initiatives extend this standard with asset‑specific criteria.
-
----
-
-## 1. Purpose
-
-Facilities risk is rarely isolated to single assets.
-
-The purpose of corridor classification is to:
-
-- Group assets that share exposure, load, and failure dynamics  
-- Enable spatial risk assessment and prioritization  
-- Support propagation modeling and intervention planning  
-- Align modernization with capital timing  
-- Provide a stable governance unit across domains  
-
-Corridors are treated as **first‑class governance objects**.
-
----
-
-## 2. Corridor Definition
-
-A **corridor** is a spatially and functionally linked grouping of assets that:
-
-- Share environmental exposure  
-- Experience correlated load or stress  
-- Exhibit coupled failure or degradation patterns  
-- Can propagate risk internally or externally  
-
-Corridors may cross administrative or jurisdictional boundaries.
-
----
-
-## 3. Classification Dimensions
-
-Corridors are classified using multiple dimensions:
-
-- **Structural condition** (drift, harmonics)
-- **Environmental exposure** (climate, terrain)
-- **Load and usage intensity**
-- **Redundancy and resilience**
-- **Propagation potential**
-- **Societal impact**
-
-No single dimension determines classification.
-
----
-
-## 4. Corridor Classes
-
-Facilities corridors are classified into **five canonical classes**:
-
-| Class | Designation | Description |
-|------|-------------|-------------|
-| C‑0 | Stable | Low risk, within tolerance |
-| C‑1 | Watch | Early degradation signals |
-| C‑2 | Concern | Persistent risk requiring planning |
-| C‑3 | Critical | High risk, modernization prioritized |
-| C‑4 | Fragile | Failure likely or imminent |
-
-Classes reflect **trend and interaction**, not snapshots.
-
----
-
-## 5. Scoring Integration
-
-Corridor classification integrates:
-
-- Drift scoring
-- Harmonics scoring
-- Propagation modeling
-- Failure mode patterns
-- Environmental stress indicators
-
-Classification is reviewed periodically and after major events.
-
----
-
-## 6. Governance Thresholds
-
-Corridor class determines governance response:
-
-| Class | Governance Action |
-|------|-------------------|
-| C‑0 | Routine monitoring |
-| C‑1 | Preventive review |
-| C‑2 | Modernization planning |
-| C‑3 | Capital prioritization |
-| C‑4 | Escalation and intervention |
-
-Reclassification requires documented justification.
-
----
-
-## 7. Capital & Modernization Alignment
-
-Corridor class informs:
-
-- Modernization cycle selection (10 / 20 / 50‑year)
-- Capital allocation priority
-- Intervention class escalation
-- Audit focus
-
-Corridor inflation is treated as a governance risk.
-
----
-
-## 8. Cross‑System Considerations
-
-Corridors may:
-
-- Contain multiple asset classes
-- Intersect with other corridors
-- Act as propagation bridges between systems
-
-Cross‑system corridors trigger Facilities‑level review.
-
----
-
-## 9. Relationship to Domain Extensions
-
-Domain initiatives (e.g., **RTT‑AGERI**):
-
-- Extend this standard with asset‑specific criteria
-- Define measurement techniques
-- Map domain corridors to these canonical classes
-
-They do **not** redefine corridor classes or governance thresholds.
-
----
-
-## 10. Canonical Status
-
-This standard is **canonical**.
-
-All Facilities domains must reference it when defining, scoring, and governing corridors.
-# 🔗 RTT Facilities — Cross‑System Propagation  
-**Interdependence, Cascades, and Systemic Risk**
-
-This document defines how **risk, degradation, and failure propagate across facilities systems**, rather than remaining confined to a single asset class.
-
-It is grounded in the **RTT Facilities Playbook** and extends the Facilities‑level **Propagation Model** by making **cross‑system coupling explicit**.
-
----
-
-## 1. Purpose
-
-Modern infrastructure systems are deeply interdependent.
-
-The purpose of this document is to:
-
-- Identify how failures propagate *between* systems  
-- Prevent cascading outages through early detection  
-- Inform intervention prioritization and capital timing  
-- Support cross‑system governance and coordination  
-- Preserve public safety and trust during complex events  
-
-Cross‑system propagation is treated as a **first‑class governance risk**.
-
----
-
-## 2. What Is Cross‑System Propagation
-
-**Cross‑system propagation** occurs when degradation or failure in one facilities system:
-
-- Disrupts the operation of another system  
-- Amplifies risk beyond the original failure domain  
-- Creates delayed or secondary impacts  
-- Escalates from technical failure to societal impact  
-
-Propagation may be immediate or latent.
-
----
-
-## 3. Canonical Facilities Systems
-
-Facilities systems commonly involved in propagation include:
-
-- Electrical  
-- Water and wastewater  
-- Communications  
-- Transportation  
-- Public buildings  
-- Emergency and resilience systems  
-
-No system is assumed to be independent.
-
----
-
-## 4. Common Propagation Pathways
-
-### **Electrical → Water**
-- Power loss disables pumping and treatment
-- Water pressure and quality degrade
-
-### **Electrical → Communications**
-- Network outages impair coordination
-- Emergency response delayed
-
-### **Electrical → Transportation**
-- Traffic signals fail
-- Transit systems disrupted
-
-### **Water → Public Health**
-- Sanitation failures escalate rapidly
-- Trust erosion follows
-
-### **Communications → Emergency Services**
-- Dispatch and coordination impaired
-- Response effectiveness reduced
-
-These pathways are **bidirectional** and often compound.
-
----
-
-## 5. Propagation Layers (Revisited)
-
-Cross‑system propagation operates across layers:
-
-1. **Asset‑Level** — component failure  
-2. **Corridor‑Level** — spatial clustering  
-3. **System‑Level** — interdependent services  
-4. **Societal‑Level** — safety, trust, continuity  
-
-Facilities governance must reason across *all* layers.
-
----
-
-## 6. Stress Amplifiers
-
-Cross‑system propagation accelerates under:
-
-- Climate events  
-- Aging infrastructure  
-- Deferred modernization  
-- Staffing shortages  
-- Poor inter‑agency coordination  
-- Governance fragmentation  
-
-Amplifiers are explicitly noted during assessment.
-
----
-
-## 7. Detection & Early Warning
-
-Cross‑system propagation risk is detected through:
-
-- Drift and harmonics scoring  
-- Corridor classification  
-- Historical cascade analysis  
-- Cross‑system indicators  
-- Environmental monitoring  
-
-Early detection is prioritized over post‑event analysis.
-
----
-
-## 8. Intervention Implications
-
-When cross‑system propagation risk is identified:
-
-- Facilities‑level governance is invoked  
-- Intervention class may escalate  
-- Capital timing may accelerate  
-- Communication requirements expand  
-
-No domain intervenes in isolation when dependencies exist.
-
----
-
-## 9. Relationship to Domain Extensions
-
-Domain initiatives (e.g., **RTT‑AGERI**):
-
-- Model propagation *within* their asset class  
-- Identify cross‑system dependencies  
-- Feed results into this Facilities‑level framework  
-
-They do **not** redefine cross‑system logic.
-
----
-
-## 10. Canonical Status
-
-This document is **canonical**.
-
-All Facilities domains must reference it when assessing interdependence, cascade risk, and coordinated intervention.
-# 📉 RTT Facilities — Drift Scoring Rubric  
-**Gradual Degradation & Governance Risk**
-
-This document defines the **Facilities‑level drift scoring framework** used to identify, classify, and govern gradual degradation across facilities systems.
-
-It is grounded in the **RTT Facilities Playbook** and applies to all Facilities domains, including **RTT‑AGERI**.
-
-Domain‑specific initiatives extend this rubric with asset‑specific indicators and measurement techniques.
-
----
-
-## 1. Purpose
-
-Most infrastructure failures begin as **drift**, not events.
-
-The purpose of this rubric is to:
-
-- Detect gradual degradation before failure
-- Distinguish normal aging from systemic risk
-- Inform intervention timing and modernization cycles
-- Prevent deferred risk accumulation
-- Provide a shared drift vocabulary across domains
-
-Drift is treated as a **leading governance signal**, not a maintenance inconvenience.
-
----
-
-## 2. Drift Definition
-
-**Drift** is the gradual deviation of an asset, corridor, or system from its expected performance, condition, or risk profile over time.
-
-Drift may be:
-- Physical
-- Operational
-- Environmental
-- Organizational
-
-Drift is cumulative and often invisible without structured observation.
-
----
-
-## 3. Scoring Scale
-
-Facilities drift is scored on a **0–4 scale**:
-
-| Score | Classification | Description |
-|------|----------------|-------------|
-| 0 | None | No detectable deviation from baseline |
-| 1 | Low | Minor deviation within expected tolerance |
-| 2 | Moderate | Persistent deviation requiring attention |
-| 3 | High | Accelerating degradation increasing failure risk |
-| 4 | Critical | Drift likely to trigger failure or propagation |
-
-Scores reflect **trend and persistence**, not isolated anomalies.
-
----
-
-## 4. Assessment Dimensions
-
-Drift scoring considers multiple dimensions:
-
-- Performance variance
-- Maintenance frequency and cost
-- Environmental exposure
-- Load and usage changes
-- Historical failure correlation
-- Organizational or procedural erosion
-
-Not all dimensions apply to every asset class.
-
----
-
-## 5. Drift Patterns
-
-Common drift patterns include:
-
-- Slow material degradation
-- Incremental capacity loss
-- Increasing operational workaround reliance
-- Deferred modernization masked by maintenance
-- Governance or documentation decay
-
-Pattern recognition is as important as measurement.
-
----
-
-## 6. Governance Thresholds
-
-Drift scores trigger governance responses:
-
-| Score | Governance Response |
-|------|---------------------|
-| 0–1 | Monitor |
-| 2 | Preventive intervention review |
-| 3 | Modernization prioritization |
-| 4 | Escalation and immediate action |
-
-Thresholds may be refined by domain‑specific initiatives.
-
----
-
-## 7. Integration with Other Frameworks
-
-Drift scoring integrates with:
-
-- Harmonics scoring
-- Propagation modeling
-- Failure mode catalog
-- Intervention playbook
-- Modernization cycle matrix
-- Audit protocols
-
-Drift is often the **earliest detectable signal** in failure cascades.
-
----
-
-## 8. Lifecycle Alignment
-
-Drift is assessed across lifecycle phases:
-
-- **Design / Construction** — standards deviation
-- **Operation / Maintenance** — performance and wear
-- **Modernization** — residual risk
-- **Decommissioning** — safety and continuity risk
-
-Lifecycle‑blind drift assessment is treated as a governance failure.
-
----
-
-## 9. Relationship to Domain‑Specific Rubrics
-
-Domain initiatives (e.g., RTT‑AGERI):
-
-- Extend this rubric with asset‑specific indicators
-- Define measurement techniques and tolerances
-- Map drift scores to domain‑specific interventions
-
-They do **not** redefine the scoring scale or governance thresholds.
-
----
-
-## 10. Canonical Status
-
-This rubric is **canonical**.
-
-All Facilities domains must reference it when assessing gradual degradation and planning intervention.
-# 🗺️ RTT Facilities — Domain Map  
-**Meta‑Domain Orientation & Extension Framework**
-
-This document provides a **structural map** of the RTT Facilities domain.
-
-It defines how Facilities functions as a **meta‑domain**, how shared substrate artifacts relate to domain‑specific initiatives, and how future Facilities domains are expected to extend the framework.
-
-This map is grounded in the **RTT Facilities Playbook** and reflects the canonical Facilities substrate.
-
----
-
-## 1. Facilities as a Meta‑Domain
-
-RTT Facilities is not a single system or project.
-
-It is a **meta‑domain** governing how physical infrastructure systems are:
-
-- Observed  
-- Scored  
-- Modernized  
-- Governed  
-- Communicated  
-- Sustained across generations  
-
-Facilities provides **shared invariants** that all domain extensions inherit.
-
----
-
-## 2. Facilities Substrate (Shared Across All Domains)
-
-The following artifacts form the **Facilities substrate** and apply to *all* Facilities domains:
-
-### **Foundational**
-- `spec.md`
-- `glossary.md`
-- `facilities-lifecycle-framework.md`
-
-### **Time & Capital**
-- `global-modernization-timeline.md`
-- `modernization-cycle-matrix.md`
-- `rtt-global-facilities-strategy-2050.md`
-- `timeline-visual-storyboard.md`
-
-### **Risk & Detection**
-- `harmonics-scoring-rubric.md`
-- `propagation-model.md`
-- `failure-mode-catalog.md`
-
-### **Action & Governance**
-- `intervention-playbook.md`
-- `governance/rtt-global-governance-constitution.md`
-
-These artifacts are **canonical** and must not be redefined by domain extensions.
-
----
-
-## 3. Domain Extensions
-
-A **Facilities domain extension** focuses on a specific asset class or problem space while inheriting the Facilities substrate.
-
-Each domain extension:
-
-- References Facilities substrate artifacts
-- Adds domain‑specific scoring, standards, and governance
-- Provides audience‑segmented materials
-- Avoids redefining shared concepts
-
----
-
-## 4. Active Domain: RTT‑AGERI
-
-### **RTT‑AGERI — Above‑Ground Electrical Resilience Initiative**
-
-RTT‑AGERI is the first fully instantiated Facilities domain extension.
-
-It focuses on:
-- Above‑ground electrical infrastructure
-- Corridor‑level risk and propagation
-- Drift and harmonics‑driven degradation
-- Capital‑timed modernization
-
-AGERI extends Facilities by adding:
-- Electrical‑specific scoring
-- Corridor classification standards
-- Domain governance and audits
-- City‑ and resident‑facing materials
-
-AGERI does **not** redefine Facilities lifecycle, capital cycles, or governance structure.
-
----
-
-## 5. Anticipated Future Domains
-
-The Facilities framework anticipates additional domains, such as:
-
-- Water systems resilience
-- Wastewater modernization
-- Transportation corridor integrity
-- Communications infrastructure reliability
-- Public buildings and emergency systems
-
-Each future domain will follow the **AGERI pattern**.
-
----
-
-## 6. Audience Layers (Cross‑Cutting)
-
-Facilities domains serve multiple audiences:
-
-- **GHQ** — standards, scoring, audits, indices
-- **Cities** — implementation and capital planning
-- **Operators & Contractors** — execution and maintenance
-- **Residents** — safety, awareness, and trust
-
-Audience segmentation is enforced structurally.
-
----
-
-## 7. Structural Invariants
-
-All Facilities domains must:
-
-- Treat infrastructure as a living system
-- Prioritize early detection over reactive response
-- Align modernization with capital cycles
-- Account for cross‑system propagation
-- Preserve public trust as a first‑class asset
-
-Violations of these invariants are treated as governance risks.
-
----
-
-## 8. Canonical Status
-
-This domain map is **canonical**.
-
-It defines how Facilities grows without fragmentation.
-# 🔁 RTT Facilities — Lifecycle Framework  
-**Governed Infrastructure Across Time**
-
-This document defines the **Facilities lifecycle framework** used to govern infrastructure systems across time, risk, and capital cycles.
-
-It is grounded in the **RTT Facilities Playbook** and serves as the canonical lifecycle reference for all Facilities domains, including **RTT‑AGERI**.
-
----
-
-## 1. Purpose
-
-Facilities systems evolve continuously.
-
-The purpose of this framework is to:
-
-- Treat infrastructure as a **living system**
-- Provide a shared lifecycle vocabulary across domains
-- Align scoring, intervention, and modernization with time
-- Prevent lifecycle blind spots and deferred risk
-- Preserve institutional continuity across generations
-
-Lifecycle awareness is foundational to governance.
-
----
-
-## 2. Lifecycle Phases
-
-Facilities assets progress through six canonical lifecycle phases.
-
----
-
-### **Phase 1 — Design**
-**Intent Formation**
-
-- Requirements defined
-- Standards selected
-- Risk assumptions established
-- Future conditions anticipated
-
-**Governance Focus**
-- Standards alignment
-- Long‑horizon suitability
-- Avoidance of future lock‑in
-
----
-
-### **Phase 2 — Construction**
-**Physical Realization**
-
-- Assets built or installed
-- Design intent translated into reality
-- Initial quality and compliance verified
-
-**Governance Focus**
-- Compliance enforcement
-- Documentation integrity
-- Early deviation detection
-
----
-
-### **Phase 3 — Operation**
-**Active Service**
-
-- Assets deliver intended function
-- Performance monitored
-- Environmental and load stress applied
-
-**Governance Focus**
-- Performance stability
-- Drift detection
-- Early harmonics identification
-
----
-
-### **Phase 4 — Maintenance**
-**Life Extension**
-
-- Wear addressed
-- Minor degradation corrected
-- Service life extended
-
-**Governance Focus**
-- Preventive intervention
-- Cost‑benefit balance
-- Avoidance of maintenance‑only traps
-
----
-
-### **Phase 5 — Modernization**
-**Planned Renewal**
-
-- Assets upgraded or replaced
-- Systems realigned to future needs
-- Resilience and redundancy introduced
-
-**Governance Focus**
-- Capital timing alignment
-- Risk reduction
-- Public communication and trust
-
----
-
-### **Phase 6 — Decommissioning**
-**Governed Retirement**
-
-- Assets safely retired
-- Environmental and continuity risks managed
-- Knowledge preserved
-
-**Governance Focus**
-- Safety and compliance
-- Transition planning
-- Institutional memory capture
-
----
-
-## 3. Lifecycle Is Not Linear
-
-Facilities assets may:
-
-- Loop between phases
-- Occupy multiple phases simultaneously
-- Re‑enter modernization multiple times
-- Skip phases under emergency conditions
-
-Lifecycle governance prioritizes **awareness**, not rigid sequencing.
-
----
-
-## 4. Scoring & Detection Across the Lifecycle
-
-Scoring frameworks apply throughout the lifecycle:
-
-- **Design / Construction** — standards deviation
-- **Operation / Maintenance** — drift and harmonics
-- **Modernization** — propagation and capacity alignment
-- **Decommissioning** — safety and continuity risk
-
-Early detection is preferred at every phase.
-
----
-
-## 5. Capital Timing Integration
-
-Lifecycle phases intersect with capital cycles:
-
-- 10‑year — tactical stabilization
-- 20‑year — strategic realignment
-- 50‑year — generational transformation
-
-Modernization is treated as a **recurring lifecycle phase**, not a failure state.
-
----
-
-## 6. Governance & Accountability
-
-Lifecycle transitions trigger:
-
-- Governance review thresholds
-- Audit focus shifts
-- Intervention class changes
-- Public communication requirements
-
-Lifecycle misalignment is treated as a **governance risk**.
-
----
-
-## 7. Relationship to Domain Extensions
-
-Domain initiatives (e.g., RTT‑AGERI):
-
-- Inherit this lifecycle framework
-- Map domain‑specific assets to lifecycle phases
-- Define phase‑specific scoring and interventions
-
-They do **not** redefine lifecycle phases.
-
----
-
-## 8. Canonical Status
-
-This framework is **canonical**.
-
-All Facilities domains must reference it when defining scoring, intervention, modernization, and governance logic.
-# ⚠️ RTT Facilities — Failure Mode Catalog  
-**Canonical Structural Failure Patterns**
-
-This document defines the **Facilities‑level failure mode catalog** used to identify, classify, and govern recurring patterns of infrastructure failure across asset classes.
-
-It is grounded in the **RTT Facilities Playbook** and applies to all Facilities domains, including **RTT‑AGERI**.
-
-Domain‑specific initiatives extend this catalog with asset‑specific manifestations.
-
----
-
-## 1. Purpose
-
-Facilities failures are rarely random.
-
-The purpose of this catalog is to:
-
-- Identify recurring structural failure patterns  
-- Distinguish symptoms from root causes  
-- Enable early detection through scoring and observation  
-- Inform intervention and modernization decisions  
-- Provide a shared diagnostic language across domains  
-
-This catalog focuses on **failure modes**, not individual incidents.
-
----
-
-## 2. Failure Mode Categories
-
-Facilities failure modes are grouped into six canonical categories.
-
----
-
-### **FM‑01: Drift Accumulation**
-**Gradual degradation exceeding tolerance**
-
-**Description**
-- Performance slowly deviates from design expectations
-- Often invisible until compounded
-
-**Common Indicators**
-- Rising maintenance frequency
-- Increasing variance in performance
-- Drift scoring escalation
-
-**Typical Response**
-- Preventive intervention
-- Tactical stabilization
-- Modernization planning
-
----
-
-### **FM‑02: Harmonics & Resonance**
-**Oscillatory stress accelerating degradation**
-
-**Description**
-- Resonant behavior amplifies wear and instability
-- Often misdiagnosed as isolated defects
-
-**Common Indicators**
-- Repeated component fatigue
-- Vibration, oscillation, or frequency anomalies
-- Elevated harmonics scores
-
-**Typical Response**
-- Harmonics mitigation
-- Structural reinforcement
-- System rebalancing
-
----
-
-### **FM‑03: Propagation Cascade**
-**Failure spreading across assets or systems**
-
-**Description**
-- Local failure triggers broader system impact
-- Cross‑system dependencies amplify effects
-
-**Common Indicators**
-- Multi‑system outages
-- Delayed secondary failures
-- Propagation model flags
-
-**Typical Response**
-- Cross‑system coordination
-- Escalated governance review
-- Priority modernization
-
----
-
-### **FM‑04: Capacity Mismatch**
-**Demand exceeding system capability**
-
-**Description**
-- Systems operate beyond intended load or use
-- Often driven by growth or climate change
-
-**Common Indicators**
-- Chronic overload
-- Emergency interventions
-- Repeated service degradation
-
-**Typical Response**
-- Strategic realignment
-- Capacity expansion
-- Standards update
-
----
-
-### **FM‑05: Deferred Modernization**
-**Aging systems trapped in maintenance mode**
-
-**Description**
-- Capital deferral replaces modernization
-- Risk accumulates silently
-
-**Common Indicators**
-- Rising maintenance cost
-- Obsolete components
-- Audit findings without action
-
-**Typical Response**
-- Capital cycle escalation
-- Planned modernization
-- Governance intervention
-
----
-
-### **FM‑06: Governance Breakdown**
-**Decision failure rather than technical failure**
-
-**Description**
-- Known risks not acted upon
-- Accountability unclear or fragmented
-
-**Common Indicators**
-- Repeated audits without change
-- Conflicting authority
-- Public trust erosion
-
-**Typical Response**
-- Governance escalation
-- Audit reset
-- Structural accountability correction
-
----
-
-## 3. Failure Mode Interaction
-
-Failure modes rarely occur in isolation.
-
-Common interactions include:
-- Drift → Harmonics → Propagation
-- Capacity mismatch → Deferred modernization
-- Governance breakdown → All other modes
-
-Understanding interaction patterns is critical for prevention.
-
----
-
-## 4. Detection & Scoring Integration
-
-Failure modes are detected through:
-
-- Drift scoring
-- Harmonics scoring
-- Propagation modeling
-- Audit findings
-- Historical pattern analysis
-
-Scoring frameworks act as **early warning systems**.
-
----
-
-## 5. Intervention Alignment
-
-Each failure mode maps to:
-
-- Intervention class (Preventive / Planned / Emergency)
-- Modernization cycle (10 / 20 / 50‑year)
-- Governance threshold
-
-Failure mode identification precedes intervention selection.
-
----
-
-## 6. Relationship to Domain‑Specific Catalogs
-
-Domain initiatives (e.g., RTT‑AGERI):
-
-- Extend this catalog with asset‑specific examples
-- Map domain failures to these canonical modes
-- Do not redefine failure mode categories
-
-This ensures cross‑domain coherence.
-
----
-
-## 7. Canonical Status
-
-This catalog is **canonical**.
-
-All Facilities domains must reference these failure modes when diagnosing risk and planning intervention.
-# 📁 RTT Facilities — Folder Tree  
-**Canonical Structure · Substrate‑Aligned**
-
-This document defines the **authoritative folder structure** for the RTT Facilities domain.
-
-It reflects the Facilities Playbook, the Facilities substrate specification, and all currently instantiated Facilities artifacts, including **RTT‑AGERI**.
-
----
-
-```
-docs/facilities/
-│
-├── README.md
-├── spec.md
-├── glossary.md
-│
-├── folder_tree.md
-│
-├── global-modernization-timeline.md
-├── rtt-global-facilities-strategy-2050.md
-├── timeline-visual-storyboard.md
-│
-├── modernization-cycle-matrix.md
-├── intervention-playbook.md
-├── propagation-model.md
-├── harmonics-scoring-rubric.md
-│
-├── governance/
-│   └── rtt-global-governance-constitution.md
-│
-├── design-system/
-│   ├── component-creation-checklist.md
-│   ├── component-naming-convention.md
-│   ├── component-proposal-form.md
-│   ├── design-governance-charter.md
-│   ├── figma-library-structure.md
-│   ├── governance-poster.md
-│   ├── onboarding-guide.md
-│   └── style-guide.md
-│
-├── city-facing/
-│   ├── city-manager-briefing-packet.md
-│   ├── city-manager-slide-deck.md
-│   └── press-release-template.md
-│
-├── residents/
-│   ├── neighborhood-meeting-deck.md
-│   ├── storm-season-101.md
-│   ├── storm-season-dos-and-donts.md
-│   └── storm-season-faq.md
-│
-└── RTT-AGERI/
-    ├── README.md
-    ├── spec.md
-    │
-    ├── scoring/
-    │   ├── drift-scoring-rubric.md
-    │   ├── harmonics-scoring-rubric.md
-    │   └── propagation-model.md
-    │
-    ├── standards/
-    │   ├── corridor-classification-standard.md
-    │   ├── modernization-cycle-matrix.md
-    │   └── failure-mode-catalog.md
-    │
-    ├── governance/
-    │   ├── GHQ-governance-charter-for-RTT-AGERI.md
-    │   ├── audit-protocol.md
-    │   └── escalation-pathways.md
-    │
-    ├── city-facing/
-    │   ├── AGERI-implementation-guide.md
-    │   ├── corridor-assessment-template.md
-    │   └── modernization-rollout-checklist.md
-    │
-    ├── residents/
-    │   ├── what-is-AGERI.md
-    │   ├── safety-basics.md
-    │   └── modernization-notice-template.md
-    │
-    ├── dashboards/
-    │   ├── global-index-schema.md
-    │   ├── corridor-dashboard-mockups.md
-    │   └── data-ingestion-spec.md
-    │
-    └── glossary.md
-```
-
----
-
-## 🧭 Structural Notes
-
-### **Facilities Root**
-Contains **canonical, cross‑domain substrate artifacts**:
-- lifecycle
-- scoring
-- propagation
-- intervention
-- modernization timing
-- strategy
-- glossary
-
-These files are **referenced**, not duplicated, by domain extensions.
-
----
-
-### **RTT‑AGERI/**
-The first fully instantiated **Facilities domain extension**.
-
-It:
-- Inherits Facilities substrate definitions
-- Extends scoring, standards, and governance
-- Provides city‑ and resident‑facing materials
-- Does not redefine shared Facilities concepts
-
-Future Facilities domains will follow this same pattern.
-
----
-
-## 🔒 Canonical Status
-
-This folder tree is **canonical**.
-
-Structural changes should be:
-- Rare
-- Intentional
-- Coordinated with Facilities governance
 # 🏛️ RTT Facilities — GHQ Governance Charter  
 **Global Stewardship, Standards, and Accountability**
 
@@ -1564,1487 +488,6 @@ Uncontrolled amendment is prohibited.
 This charter is **canonical**.
 
 All Facilities governance structures derive authority from this document.
-# 🌍 RTT Facilities — Global Modernization Timeline  
-**2026–2050 · Capital · Governance · Resilience**
-
-This document defines the **global Facilities modernization timeline** used to coordinate infrastructure renewal across regions, asset classes, and generations.
-
-It is grounded in the **RTT Facilities Playbook** and serves as the canonical temporal reference for all Facilities domains, including **RTT‑AGERI**.
-
----
-
-## 1. Timeline Purpose
-
-Facilities modernization unfolds over decades, not projects.
-
-The purpose of this timeline is to:
-
-- Align modernization with long‑horizon capital cycles  
-- Coordinate interventions across regions and systems  
-- Prevent synchronized failure due to deferred action  
-- Preserve institutional continuity through generational change  
-- Provide a shared temporal frame for governance and trust  
-
----
-
-## 2. Timeline Structure
-
-The global timeline is organized into **three overlapping horizons**:
-
-### **Horizon I — Stabilization (2026–2035)**
-**10‑Year Tactical Cycle**
-
-Focus:
-- Arrest accelerating degradation
-- Address high‑risk corridors
-- Establish scoring, audits, and governance baselines
-- Build public trust through visible reliability gains
-
-Typical actions:
-- Preventive interventions
-- Tactical modernization
-- Monitoring and sensing upgrades
-
----
-
-### **Horizon II — Realignment (2036–2045)**
-**20‑Year Strategic Cycle**
-
-Focus:
-- Reconfigure systems for changing demand
-- Introduce redundancy and resilience
-- Address cross‑system dependencies
-- Normalize modernization as routine governance
-
-Typical actions:
-- Corridor‑level redesign
-- Standards‑based replacement
-- Cross‑system coordination
-
----
-
-### **Horizon III — Transformation (2046–2050+)**
-**50‑Year Generational Cycle**
-
-Focus:
-- Replace obsolete paradigms
-- Integrate climate adaptation at scale
-- Preserve long‑term public trust
-- Prepare the next generational handoff
-
-Typical actions:
-- System‑level redesign
-- Asset class transformation
-- Institutional knowledge transfer
-
----
-
-## 3. Asset‑Class Phasing
-
-Different asset classes progress through horizons at different rates.
-
-The timeline allows for:
-- Staggered modernization
-- Regional variation
-- Climate‑driven acceleration
-- Capital availability constraints
-
-No asset class is expected to modernize uniformly.
-
----
-
-## 4. Domain Integration Example — RTT‑AGERI
-
-RTT‑AGERI aligns to the global timeline as follows:
-
-- **Horizon I** — stabilize high‑risk above‑ground electrical corridors  
-- **Horizon II** — introduce redundancy and corridor reclassification  
-- **Horizon III** — redesign electrical distribution for future climate and load  
-
-Other Facilities domains will map similarly.
-
----
-
-## 5. Governance & Audit Cadence
-
-The timeline establishes:
-
-- Regular audit intervals
-- Capital review checkpoints
-- Governance escalation thresholds
-- Public reporting rhythms
-
-Time itself becomes a **governance instrument**, not a passive backdrop.
-
----
-
-## 6. Climate & Stress Adaptation
-
-The timeline explicitly accounts for:
-
-- Increasing climate volatility
-- Non‑linear stress escalation
-- Regional divergence
-- Uncertainty and surprise
-
-Modernization pacing may accelerate when stress exceeds modeled bounds.
-
----
-
-## 7. Public Trust Continuity
-
-Facilities modernization is continuous.
-
-The timeline ensures:
-- Predictable change
-- Transparent communication
-- Reduced disruption
-- Institutional memory preservation
-
-Trust erosion is treated as a timeline failure.
-
----
-
-## 8. Canonical Status
-
-This timeline is **canonical**.
-
-All Facilities domains must reference it when planning modernization, capital deployment, and governance cadence.
-# 📘 RTT Facilities — Glossary  
-**Canonical Terms & Definitions**
-
-This glossary defines **canonical terminology** used across the RTT Facilities domain.
-
-It is grounded in the **RTT Facilities Playbook** and applies to all Facilities documentation, including domain‑specific initiatives such as **RTT‑AGERI**.
-
-Domain extensions may add terms, but **must not redefine terms listed here**.
-
----
-
-## Asset Class
-A category of physical infrastructure systems with shared characteristics, lifecycle patterns, and risk profiles (e.g., electrical, water, transportation).
-
----
-
-## Capital Cycle
-A long‑horizon planning interval used to align modernization decisions with funding, governance, and lifecycle timing (typically 10, 20, or 50 years).
-
----
-
-## Corridor
-A spatially and functionally linked grouping of assets that share exposure, load, and risk characteristics.
-
----
-
-## Cross‑System Propagation
-The transmission of risk, degradation, or failure from one facilities system to another (e.g., electrical failure impacting water or communications).
-
----
-
-## Decommissioning
-The governed retirement of assets at the end of their service life, including safety, environmental, and continuity considerations.
-
----
-
-## Domain Extension
-A facilities initiative focused on a specific asset class or problem space that operates within the shared Facilities substrate (e.g., RTT‑AGERI).
-
----
-
-## Drift
-Gradual degradation or deviation from expected performance that accumulates over time and increases failure risk.
-
----
-
-## Drift Scoring
-A structured assessment of asset or system degradation used to inform monitoring, intervention, and modernization timing.
-
----
-
-## Facilities
-The physical, operational, and communicative systems that enable cities and regions to function safely, reliably, and continuously.
-
----
-
-## Facilities Playbook
-The original conceptual capture defining Facilities as living systems governed across lifecycle, risk, capital, and trust.
-
----
-
-## Governance
-The structures, processes, and accountability mechanisms used to guide decision‑making, intervention, and modernization.
-
----
-
-## GHQ
-The global governance layer responsible for standards, scoring frameworks, audits, and cross‑domain alignment.
-
----
-
-## Harmonics
-Oscillatory, resonant, or frequency‑driven behaviors that accelerate degradation and destabilize system performance.
-
----
-
-## Harmonics Scoring
-A structured assessment of resonance‑driven stress used as an early indicator of systemic risk.
-
----
-
-## Intervention
-A governed action taken to prevent, mitigate, or respond to infrastructure risk or failure.
-
----
-
-## Intervention Class
-A category of intervention defining urgency, scope, and governance requirements (Preventive, Planned, Emergency).
-
----
-
-## Lifecycle
-The full sequence of phases through which facilities assets pass: design, construction, operation, maintenance, modernization, and decommissioning.
-
----
-
-## Modernization
-Planned, capital‑aligned replacement or reconfiguration of assets to address systemic risk and future conditions.
-
----
-
-## Modernization Cycle
-A defined capital timing window (10 / 20 / 50 years) used to govern when modernization occurs.
-
----
-
-## Propagation
-The spread of stress, degradation, or failure across assets, corridors, systems, or societal layers.
-
----
-
-## Public Trust
-The confidence residents place in facilities systems to operate safely, transparently, and predictably.
-
----
-
-## Resilience
-The ability of facilities systems to absorb stress without cascading failure or loss of essential function.
-
----
-
-## Scoring Framework
-A structured method for assessing risk, degradation, or performance to inform governance and action.
-
----
-
-## Stress Amplifier
-A condition that increases the severity or speed of degradation or propagation (e.g., climate, aging, deferred maintenance).
-
----
-
-## System
-A network of interdependent assets that collectively provide a functional service (e.g., electrical distribution).
-
----
-
-## Tactical Stabilization
-Short‑horizon interventions intended to reduce immediate risk and extend asset service life.
-
----
-
-## Canonical Status
-
-This glossary is **canonical**.
-
-All Facilities documentation must reference these definitions.  
-Domain‑specific glossaries may extend this list but must not redefine existing terms.
-# 🎵 RTT Facilities — Harmonics Scoring Rubric  
-**Systemic Degradation & Resonance Risk**
-
-This document defines the **Facilities‑level harmonics scoring framework** used to identify, classify, and govern degradation caused by oscillatory, resonant, or frequency‑driven stress across facilities systems.
-
-It is grounded in the **RTT Facilities Playbook** and applies across all Facilities domains, including **RTT‑AGERI**.
-
----
-
-## 1. Purpose
-
-Harmonics are early indicators of **systemic stress**.
-
-The purpose of this rubric is to:
-
-- Detect non‑catastrophic degradation before failure
-- Identify resonance‑driven wear and instability
-- Inform modernization timing and prioritization
-- Prevent cascading failures amplified by oscillatory stress
-- Provide a shared harmonics vocabulary across domains
-
-Domain‑specific initiatives extend this rubric with asset‑specific measurement detail.
-
----
-
-## 2. Harmonics Definition
-
-**Harmonics** refer to oscillatory, resonant, or frequency‑based behaviors that:
-
-- Accelerate material fatigue
-- Destabilize system performance
-- Amplify environmental or operational stress
-- Degrade reliability without immediate failure
-
-Harmonics may be electrical, mechanical, thermal, or operational in nature.
-
----
-
-## 3. Scoring Scale
-
-Facilities harmonics are scored on a **0–4 scale**:
-
-| Score | Classification | Description |
-|------|----------------|-------------|
-| 0 | None | No detectable harmonic stress |
-| 1 | Low | Minor oscillation within tolerance |
-| 2 | Moderate | Persistent resonance causing measurable wear |
-| 3 | High | Destabilizing harmonics accelerating degradation |
-| 4 | Critical | Harmonics likely to trigger failure or propagation |
-
-Scores reflect **trend and persistence**, not single measurements.
-
----
-
-## 4. Assessment Criteria
-
-Harmonics scoring considers:
-
-- Frequency and amplitude of oscillation
-- Duration and persistence
-- Interaction with environmental stressors
-- Impact on adjacent systems or assets
-- Historical correlation with failure events
-
-Measurements may be quantitative or qualitative depending on asset class.
-
----
-
-## 5. Stress Amplifiers
-
-Harmonics severity increases under:
-
-- Aging or degraded materials
-- Climate stress (heat, wind, storms)
-- Load variability
-- Deferred maintenance
-- Poor grounding or stabilization
-- Cross‑system coupling
-
-Amplifiers are explicitly noted during scoring.
-
----
-
-## 6. Governance Thresholds
-
-Harmonics scores trigger governance actions:
-
-| Score | Governance Response |
-|------|---------------------|
-| 0–1 | Monitor |
-| 2 | Preventive intervention review |
-| 3 | Modernization prioritization |
-| 4 | Immediate escalation and intervention |
-
-Thresholds may be refined by domain‑specific initiatives.
-
----
-
-## 7. Integration with Other Frameworks
-
-Harmonics scoring integrates with:
-
-- Drift scoring
-- Propagation modeling
-- Modernization cycle matrix
-- Intervention playbook
-- Capital and audit integration
-
-Harmonics are treated as **leading indicators**, not secondary metrics.
-
----
-
-## 8. Relationship to Domain‑Specific Rubrics
-
-Domain initiatives (e.g., RTT‑AGERI):
-
-- Extend this rubric with asset‑specific metrics
-- Define measurement techniques and tolerances
-- Map harmonics scores to domain‑specific interventions
-
-They do **not** redefine the scoring scale or governance thresholds.
-
----
-
-## 9. Canonical Status
-
-This document is **canonical**.
-
-All Facilities domains must reference this rubric when assessing harmonics‑driven risk.
-# 🛠️ RTT Facilities — Intervention Playbook  
-**From Detection to Action**
-
-This document defines the **Facilities‑level intervention framework** used to translate observation, scoring, and governance decisions into **coordinated action**.
-
-It is grounded in the **RTT Facilities Playbook** and applies across all Facilities domains, including **RTT‑AGERI**.
-
----
-
-## 1. Purpose
-
-Facilities interventions are not ad‑hoc responses.
-
-The purpose of this playbook is to:
-
-- Provide a shared intervention vocabulary across domains  
-- Ensure interventions are **governed, auditable, and predictable**  
-- Align action with lifecycle phase and capital timing  
-- Prevent escalation through early, proportional response  
-- Maintain public safety and trust during change  
-
-Domain‑specific initiatives extend this playbook with asset‑specific detail.
-
----
-
-## 2. Intervention Triggers
-
-Interventions may be triggered by:
-
-- Scoring thresholds (drift, harmonics, propagation)
-- Audit findings
-- Environmental or climate events
-- Operational incidents
-- Cross‑system dependency risk
-- Governance escalation
-
-Triggers are **documented and reviewable**, not discretionary.
-
----
-
-## 3. Intervention Classes
-
-Facilities interventions fall into three primary classes:
-
-### **Class I — Preventive Interventions**
-**(Early, Low‑Disruption)**
-
-- Target emerging risk
-- Occur before service degradation
-- Often align with routine maintenance windows
-
-Examples:
-- Targeted reinforcement
-- Monitoring upgrades
-- Minor component replacement
-
----
-
-### **Class II — Planned Modernization**
-**(Capital‑Aligned)**
-
-- Address structural or systemic risk
-- Aligned with 10 / 20 / 50‑year cycles
-- Require governance approval and public communication
-
-Examples:
-- Corridor upgrades
-- Redundancy introduction
-- Standards‑based replacement
-
----
-
-### **Class III — Emergency Response**
-**(Immediate Safety Action)**
-
-- Triggered by imminent or active failure
-- Prioritize safety and continuity
-- Followed by audit and root‑cause review
-
-Examples:
-- Emergency shutdowns
-- Temporary bypasses
-- Rapid stabilization measures
-
----
-
-## 4. Lifecycle Alignment
-
-Interventions are mapped to lifecycle phases:
-
-| Lifecycle Phase | Typical Intervention |
-|-----------------|---------------------|
-| Design | Standards correction |
-| Construction | Compliance enforcement |
-| Operation | Preventive intervention |
-| Maintenance | Tactical stabilization |
-| Modernization | Planned replacement |
-| Decommissioning | Safe retirement |
-
-Interventions outside expected phases require justification.
-
----
-
-## 5. Governance Flow
-
-All interventions follow a governed flow:
-
-1. **Detection** — scoring, observation, or incident  
-2. **Classification** — intervention class assigned  
-3. **Review** — governance threshold applied  
-4. **Authorization** — approval recorded  
-5. **Execution** — coordinated action  
-6. **Audit** — outcome reviewed  
-7. **Learning** — models updated  
-
-This flow preserves accountability and learning.
-
----
-
-## 6. Capital & Resource Integration
-
-Interventions are explicitly tied to:
-
-- Capital planning cycles
-- Resource availability
-- Workforce capacity
-- Contractor coordination
-
-Emergency interventions may bypass capital planning but **must be reconciled post‑event**.
-
----
-
-## 7. Cross‑System Coordination
-
-When interventions affect multiple systems:
-
-- Facilities‑level governance is invoked
-- Cross‑system propagation risk is assessed
-- Communication is coordinated across stakeholders
-
-No domain intervenes in isolation when dependencies exist.
-
----
-
-## 8. Public Communication
-
-Interventions that affect residents require:
-
-- Clear explanation of purpose
-- Advance notice when possible
-- Safety guidance
-- Post‑intervention reporting
-
-Public trust is treated as a **critical success metric**.
-
----
-
-## 9. Relationship to Domain‑Specific Playbooks
-
-Domain initiatives (e.g., RTT‑AGERI):
-
-- Reference this playbook for intervention structure
-- Define asset‑specific actions and thresholds
-- Provide technical execution detail
-
-They do **not** redefine intervention classes or governance flow.
-
----
-
-## 10. Canonical Status
-
-This document is **canonical**.
-
-All Facilities domains must reference this playbook when defining interventions.
-# 🔄 RTT Facilities — Modernization Cycle Matrix  
-**Capital Timing · Lifecycle Alignment · Governance**
-
-This document defines the **Facilities‑level modernization cycle matrix** used to align infrastructure interventions with lifecycle phase, risk profile, and capital timing.
-
-It is grounded in the **RTT Facilities Playbook** and serves as the canonical reference for modernization planning across all Facilities domains, including **RTT‑AGERI**.
-
----
-
-## 1. Purpose
-
-Facilities modernization is not ad‑hoc.
-
-The purpose of this matrix is to:
-
-- Align modernization decisions with long‑horizon capital cycles  
-- Replace reactive maintenance with governed intervention  
-- Provide a shared timing framework across asset classes  
-- Support auditability, predictability, and public trust  
-
-Domain‑specific initiatives reference this matrix rather than redefining it.
-
----
-
-## 2. Modernization Cycles
-
-Facilities modernization operates across three primary capital cycles:
-
-### **10‑Year Cycle — Tactical Stabilization**
-- Address immediate risk and degradation
-- Prevent near‑term failure
-- Extend asset service life
-- Improve safety and reliability
-
-### **20‑Year Cycle — Strategic Realignment**
-- Reconfigure systems for changing demand
-- Introduce redundancy and resilience
-- Address systemic weaknesses
-- Align with evolving standards
-
-### **50‑Year Cycle — Generational Transformation**
-- Redesign systems for future conditions
-- Replace obsolete paradigms
-- Integrate climate adaptation
-- Preserve long‑term public trust
-
----
-
-## 3. Lifecycle Alignment
-
-Modernization cycles intersect with lifecycle phases as follows:
-
-| Lifecycle Phase | 10‑Year | 20‑Year | 50‑Year |
-|-----------------|--------|--------|--------|
-| Design | — | ✔ | ✔ |
-| Construction | — | ✔ | ✔ |
-| Operation | ✔ | ✔ | — |
-| Maintenance | ✔ | — | — |
-| Modernization | ✔ | ✔ | ✔ |
-| Decommissioning | — | ✔ | ✔ |
-
-Modernization is treated as a **recurring lifecycle phase**, not an exception.
-
----
-
-## 4. Risk & Scoring Integration
-
-Modernization timing is informed by:
-
-- Drift scoring  
-- Harmonics analysis  
-- Failure‑mode assessment  
-- Propagation risk  
-- Environmental stressors  
-
-Higher risk scores accelerate intervention **within** a cycle but do not bypass governance.
-
----
-
-## 5. Capital Planning Implications
-
-The matrix supports:
-
-- Predictable capital allocation  
-- Transparent prioritization  
-- Cross‑jurisdiction coordination  
-- Audit‑ready decision trails  
-
-Capital is deployed **before failure**, not after crisis.
-
----
-
-## 6. Governance Integration
-
-Modernization cycle selection triggers:
-
-- GHQ review thresholds  
-- Audit focus areas  
-- Escalation pathways  
-- Public communication requirements  
-
-Cycle changes require explicit governance approval.
-
----
-
-## 7. Relationship to Domain‑Specific Initiatives
-
-Domain initiatives (e.g., RTT‑AGERI):
-
-- Map domain‑specific assets to this matrix  
-- Define scoring thresholds that trigger cycle entry  
-- Provide implementation detail within approved cycles  
-
-They do **not** redefine cycle structure.
-
----
-
-## 8. Canonical Status
-
-This document is **canonical**.
-
-All Facilities domains must reference this matrix when planning modernization and capital deployment.
-# 🔗 RTT Facilities — Propagation Model  
-**Cross‑System Risk & Failure Dynamics**
-
-This document defines the **Facilities‑level propagation model** used to understand how failures, degradation, and stress propagate **within and across facilities systems**.
-
-It is grounded in the **RTT Facilities Playbook** and serves as the canonical reference for propagation logic across all Facilities domains, including **RTT‑AGERI**.
-
----
-
-## 1. Purpose
-
-Facilities systems do not fail in isolation.
-
-The purpose of this model is to:
-
-- Identify how stress and failure propagate across systems  
-- Prevent cascading failures through early detection  
-- Inform prioritization, capital timing, and governance decisions  
-- Provide a shared propagation framework for all Facilities domains  
-
-Domain‑specific initiatives may model internal propagation, but **cross‑system propagation is governed here**.
-
----
-
-## 2. Propagation Definition
-
-**Propagation** is the transmission of risk, degradation, or failure from one asset, corridor, or system to another over time.
-
-Propagation may be:
-
-- **Direct** — physical dependency (e.g., power loss disables pumps)
-- **Indirect** — operational or human dependency
-- **Temporal** — delayed effects that surface later
-- **Amplified** — compounded by environmental or systemic stress
-
----
-
-## 3. Propagation Layers
-
-Facilities propagation is modeled across four layers:
-
-### **Layer 1 — Asset‑Level**
-- Individual components
-- Localized failures
-- Immediate operational impact
-
-### **Layer 2 — Corridor‑Level**
-- Spatially linked assets
-- Shared exposure to environment or load
-- Domain‑specific modeling (e.g., AGERI corridors)
-
-### **Layer 3 — System‑Level**
-- Interdependent facilities systems:
-  - Electrical
-  - Water
-  - Communications
-  - Transportation
-  - Emergency services
-
-### **Layer 4 — Societal & Trust‑Level**
-- Public safety
-- Emergency response capacity
-- Resident confidence and trust
-
----
-
-## 4. Common Propagation Pathways
-
-Examples include:
-
-- Electrical → water pumping failure  
-- Electrical → communications outage  
-- Electrical → traffic signal disruption  
-- Electrical → emergency response degradation  
-- Water → public health impacts  
-- Communications → coordination failure  
-
-These pathways are **bidirectional** and may compound under stress.
-
----
-
-## 5. Stress Amplifiers
-
-Propagation severity increases under:
-
-- Climate events (storms, heat, flooding)
-- Aging infrastructure
-- Deferred maintenance
-- Staffing shortages
-- Poor communication
-- Capital misalignment
-
-Stress amplifiers are treated as **first‑class risk multipliers**.
-
----
-
-## 6. Detection & Early Warning
-
-Propagation risk is mitigated through:
-
-- Drift detection
-- Cross‑system indicators
-- Corridor classification
-- Historical failure pattern analysis
-- Environmental monitoring
-
-Early detection is prioritized over post‑failure response.
-
----
-
-## 7. Governance Integration
-
-Propagation modeling informs:
-
-- Modernization prioritization
-- Capital timing decisions
-- Audit focus areas
-- Escalation thresholds
-- Public communication strategy
-
-Propagation risk that crosses systems triggers **Facilities‑level governance review**, not just domain‑level action.
-
----
-
-## 8. Relationship to Domain‑Specific Models
-
-Domain initiatives (e.g., RTT‑AGERI):
-
-- Model propagation **within** their asset class
-- Feed results into this Facilities‑level model
-- Do not redefine cross‑system logic
-
-This ensures consistency and prevents siloed risk assessment.
-
----
-
-## 9. Canonical Status
-
-This document is **canonical**.
-
-All Facilities domains must reference this propagation model when addressing cross‑system risk.
-
-<img width="1194" height="672" alt="facilities_module" src="https://github.com/user-attachments/assets/60dc7c90-5008-434b-94cb-73fdfc9c58cb" />
-
-## 🔰 Facilities 
-
-- [`facilities_module.json`](facilities_module.json) — Agentic module schema role assignments
-
-**RTT Facilities · City Systems · Modernization Frameworks**
-
-This folder contains all documentation, templates, and governance materials related to **RTT Facilities** — the physical, operational, and communication infrastructure that cities, residents, operators, and GHQ rely on during modernization cycles.
-
-The Facilities domain is grounded in the **RTT Facilities Playbook**, which defines facilities as **living systems** governed across asset classes, lifecycle phases, and audiences.
-
-This README serves as the **navigation anchor** for all Facilities‑related work.
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
-
----
-
-## 🧭 Facilities Scope
-
-RTT Facilities covers:
-
-- Electrical infrastructure (above‑ground and underground)
-- Water and wastewater systems
-- Transportation corridors
-- Communications infrastructure
-- Public buildings and emergency systems
-
-Facilities work spans the full lifecycle:
-
-- Design  
-- Construction  
-- Operation  
-- Maintenance  
-- Modernization  
-- Decommissioning  
-
-Domain‑specific initiatives (such as RTT‑AGERI) live **within** this broader Facilities framework.
-
----
-
-## ⚡ Active Facilities Domains
-
-### **RTT‑AGERI**
-**Above‑Ground Electrical Resilience Initiative**
-
-RTT‑AGERI is the first fully articulated Facilities domain, focused on modernizing **above‑ground electrical infrastructure** using:
-
-- Drift scoring  
-- Harmonics analysis  
-- Propagation modeling  
-- Corridor classification  
-- Capital‑timed modernization cycles  
-
-RTT‑AGERI documentation lives under:
-
-```
-/docs/facilities/RTT-AGERI/
-```
-
-Additional Facilities domains will follow this same structural pattern.
-
----
-
-## 🗂️ Folder Map
-
-## **1. City‑Facing**
-Guides and communication materials for city leadership and operational teams.
-
-- `city-facing/city-manager-briefing-packet.md`  
-- `city-facing/city-manager-slide-deck.md`  
-- `city-facing/press-release-template.md`  
-
-**Purpose:**  
-Enable cities to plan, communicate, and coordinate facilities modernization and emergency response.
-
----
-
-## **2. Residents**
-Public‑facing education and safety materials.
-
-- `residents/neighborhood-meeting-deck.md`  
-- `residents/storm-season-101.md`  
-- `residents/storm-season-dos-and-donts.md`  
-- `residents/storm-season-faq.md`  
-
-**Purpose:**  
-Provide clear, non‑technical guidance for residents during storm seasons and modernization work.
-
----
-
-## **3. Design System**
-Governance and standards for all facilities‑related components and visual assets.
-
-- `design-system/component-creation-checklist.md`  
-- `design-system/component-naming-convention.md`  
-- `design-system/component-proposal-form.md`  
-- `design-system/design-governance-charter.md`  
-- `design-system/figma-library-structure.md`  
-- `design-system/governance-poster.md`  
-- `design-system/onboarding-guide.md`  
-- `design-system/style-guide.md`  
-
-**Purpose:**  
-Ensure consistency, clarity, and governance across all Facilities artifacts.
-
----
-
-## **4. Strategy & Governance**
-Long‑horizon planning and GHQ‑grade governance.
-
-- `strategy/global-modernization-timeline.md`  
-- `strategy/rtt-global-facilities-strategy-2050.md`  
-- `strategy/timeline-visual-storyboard.md`  
-- `governance/rtt-global-governance-constitution.md`  
-
-**Purpose:**  
-Define global modernization cycles, capital timing, and governance structures.
-
----
-
-## 🧱 Root‑Level Orientation Files
-
-- `index.md` — high‑level overview of the Facilities domain  
-- `global-modernization-timeline.md` — modernization cycles and capital timing  
-- `rtt-global-facilities-strategy-2050.md` — long‑range strategy  
-- `timeline-visual-storyboard.md` — visual narrative of modernization phases  
-
-These files provide **top‑level orientation** for contributors and partners.
-
----
-
-## 📌 Contribution Notes
-
-- Facilities documentation is **audience‑segmented** — keep materials scoped accordingly.  
-- Domain‑specific initiatives (e.g., RTT‑AGERI) should live in their own subfolders.  
-- Strategy and governance documents should remain **canonical and stable**.  
-- City‑ and resident‑facing materials should remain **clear, actionable, and non‑technical**.  
-
----
-
-## 🧭 Looking Ahead
-
-The Facilities Playbook anticipates additional shared layers, including:
-
-- Asset‑class registries  
-- Lifecycle frameworks  
-- Cross‑system propagation modeling  
-- Operator and contractor interfaces  
-- Capital and audit integration  
-
-These will be scaffolded incrementally as Facilities domains mature.
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-# 🌍 RTT Global Facilities Strategy — 2050  
-**Long‑Horizon Infrastructure Stewardship**
-
-This document defines the **RTT Global Facilities Strategy through 2050**.
-
-It establishes the long‑term posture, priorities, and governance principles guiding how facilities systems are modernized, governed, and trusted across generations.
-
-This strategy is grounded in the **RTT Facilities Playbook** and serves as the **north star** for all Facilities domains, including **RTT‑AGERI**.
-
----
-
-## 1. Strategic Premise
-
-By 2050, cities will face:
-
-- Intensifying climate stress  
-- Aging infrastructure portfolios  
-- Capital constraints  
-- Rising public expectations for reliability and transparency  
-- Increasing interdependence between systems  
-
-RTT Facilities responds by treating infrastructure as **living systems**, governed across time, risk, and trust — not as isolated assets.
-
----
-
-## 2. Strategic Objectives
-
-RTT Facilities aims to:
-
-- Shift from reactive maintenance to **governed modernization**
-- Detect infrastructure drift **before failure**
-- Reduce cascading failures across systems
-- Align capital deployment with long‑horizon value
-- Preserve institutional knowledge across generations
-- Maintain public trust during continuous change
-
----
-
-## 3. Facilities as a Portfolio
-
-Facilities are governed as a **portfolio of asset classes**, including:
-
-- Electrical
-- Water and wastewater
-- Transportation
-- Communications
-- Public buildings
-- Emergency and resilience systems
-
-Each asset class may have one or more **domain‑specific initiatives** (e.g., RTT‑AGERI), all operating within a shared Facilities substrate.
-
----
-
-## 4. Lifecycle‑Driven Governance
-
-Facilities modernization is governed across the full lifecycle:
-
-1. Design  
-2. Construction  
-3. Operation  
-4. Maintenance  
-5. Modernization  
-6. Decommissioning  
-
-Modernization is not an exception — it is a **planned, recurring phase**.
-
----
-
-## 5. Capital Timing Philosophy
-
-RTT Facilities aligns decisions with:
-
-- **10‑year cycles** — tactical interventions  
-- **20‑year cycles** — strategic realignment  
-- **50‑year cycles** — generational resilience  
-
-Scoring systems and audits inform *when* capital is deployed, not just *where*.
-
----
-
-## 6. Risk, Resilience, and Propagation
-
-Facilities governance explicitly accounts for:
-
-- Asset degradation and drift  
-- Climate and environmental stressors  
-- Human and operational risk  
-- Cascading and cross‑system failures  
-
-Resilience is defined as the **ability to absorb stress without systemic collapse**, not merely to recover after failure.
-
----
-
-## 7. Governance & Accountability
-
-RTT Facilities governance operates across:
-
-- **GHQ** — global standards, scoring, audits, indices  
-- **Cities** — implementation, operations, capital planning  
-- **Operators & Contractors** — execution and maintenance  
-- **Residents** — safety, awareness, and trust  
-
-Transparency, auditability, and early intervention are core principles.
-
----
-
-## 8. Public Trust as Infrastructure
-
-Public trust is treated as a **first‑class infrastructure asset**.
-
-Facilities modernization must:
-
-- Be explainable  
-- Be predictable  
-- Minimize disruption  
-- Communicate clearly with residents  
-
-Trust erosion is treated as a systemic risk.
-
----
-
-## 9. Domain Evolution Through 2050
-
-RTT Facilities anticipates:
-
-- New domain‑specific initiatives  
-- Evolving scoring methodologies  
-- Advances in sensing and analytics  
-- Changing climate and demographic realities  
-
-The Facilities substrate is designed to **absorb change without losing coherence**.
-
----
-
-## 10. Canonical Role
-
-This strategy is **canonical**.
-
-It sets direction, not tactics.  
-Domain‑specific documents (e.g., RTT‑AGERI) must align with this strategy but should not restate it.
-# 🧱 RTT Facilities — Domain Specification  
-**Canonical Substrate Definition**
-
-This document defines the **RTT Facilities domain** as a shared substrate for all facilities‑related initiatives, including domain‑specific extensions such as **RTT‑AGERI**.
-
-It is grounded in the original **RTT Facilities Playbook** capture and serves as the **authoritative reference** for scope, lifecycle, governance, and cross‑system integration.
-
----
-
-## 1. Domain Definition
-
-**Facilities** are the physical, operational, and communicative systems that enable cities and regions to function safely, reliably, and continuously.
-
-RTT Facilities treats infrastructure as **living systems**, governed across:
-
-- Asset classes  
-- Lifecycle phases  
-- Risk and failure modes  
-- Capital timing  
-- Governance and accountability  
-- Multi‑audience communication  
-
-Facilities work is inherently **cross‑system** and **long‑horizon**.
-
----
-
-## 2. Asset Classes
-
-The Facilities domain encompasses, but is not limited to:
-
-- Electrical infrastructure (above‑ground and underground)
-- Water systems
-- Wastewater systems
-- Transportation corridors
-- Communications infrastructure
-- Public buildings
-- Emergency and resilience systems
-
-Each asset class may have one or more **domain‑specific initiatives** (e.g., RTT‑AGERI for above‑ground electrical systems).
-
----
-
-## 3. Lifecycle Framework
-
-Facilities are governed across the full lifecycle:
-
-1. Design  
-2. Construction  
-3. Operation  
-4. Maintenance  
-5. Modernization  
-6. Decommissioning  
-
-Scoring, audits, and interventions may occur at **any lifecycle phase**, but modernization decisions are explicitly aligned with **capital timing cycles**.
-
----
-
-## 4. Risk, Failure, and Propagation
-
-Facilities governance explicitly accounts for:
-
-- Asset degradation and drift  
-- Environmental and climate stressors  
-- Human and operational factors  
-- Failure modes and cascading failures  
-- Cross‑system propagation (e.g., electrical → water → emergency response)
-
-Domain‑specific initiatives may model propagation internally, but **cross‑system propagation** is governed at the Facilities level.
-
----
-
-## 5. Governance Model
-
-Facilities governance operates across multiple layers:
-
-- **GHQ** — global standards, scoring systems, audits, indices  
-- **Cities** — implementation, operations, capital planning  
-- **Operators & Contractors** — maintenance and modernization execution  
-- **Residents** — safety, awareness, and public trust  
-
-Governance artifacts include:
-
-- Constitutions and charters  
-- Audit protocols  
-- Escalation pathways  
-- Capital and accountability integration  
-
-Facilities governance prioritizes **early detection**, **transparent decision‑making**, and **public accountability**.
-
----
-
-## 6. Capital Timing & Modernization
-
-Facilities modernization is aligned with:
-
-- 10‑year tactical cycles  
-- 20‑year strategic cycles  
-- 50‑year generational cycles  
-
-Scoring systems and audits inform **when** and **where** capital is deployed, replacing reactive maintenance with governed modernization.
-
----
-
-## 7. Audience Segmentation
-
-Facilities documentation is intentionally segmented by audience:
-
-- GHQ  
-- City leadership and operators  
-- Contractors and maintenance teams  
-- Residents and the public  
-
-Each audience receives **purpose‑built artifacts** to prevent scope bleed and maintain clarity.
-
----
-
-## 8. Domain Extensions
-
-Domain‑specific initiatives live **within** the Facilities framework and inherit its lifecycle, governance, and capital logic.
-
-Examples include:
-
-- **RTT‑AGERI** — Above‑Ground Electrical Resilience Initiative  
-
-Domain extensions must:
-
-- Reference this Facilities spec  
-- Avoid redefining shared concepts  
-- Provide domain‑specific scoring, standards, and guidance  
-
----
-
-## 9. Canonical Status
-
-This document is **canonical**.
-
-Changes should be rare, deliberate, and coordinated with GHQ governance.  
-Domain‑specific documents should reference this spec rather than duplicating it.
-# 🗺️ Facilities Modernization — Visual Timeline Storyboard  
-**RTT Facilities · Lifecycle · Capital · Governance**
-
-This storyboard provides a **visual narrative** of how Facilities modernization unfolds over time, across lifecycle phases, capital cycles, and audiences.
-
-It is grounded in the **RTT Facilities Playbook** and serves as a shared reference for all Facilities domains, including **RTT‑AGERI**.
-
----
-
-## 🌱 Phase 0 — Baseline & Orientation  
-**(Pre‑Modernization Awareness)**
-
-**What’s happening**
-- Asset inventories established  
-- Baseline condition assessments  
-- Historical failure patterns reviewed  
-- Climate and environmental context mapped  
-
-**Artifacts**
-- Facilities domain map  
-- Asset‑class registries  
-- Lifecycle framework  
-
-**Audience**
-- GHQ  
-- City leadership  
-
----
-
-## 🔍 Phase 1 — Observation & Scoring  
-**(Early Detection)**
-
-**What’s happening**
-- Drift indicators identified  
-- Harmonics and degradation signals monitored  
-- Corridor‑level observations collected  
-- Early risk flags raised  
-
-**Artifacts**
-- Domain‑specific scoring rubrics (e.g., AGERI drift & harmonics)  
-- Initial dashboards and indices  
-
-**Audience**
-- GHQ  
-- City operators  
-
----
-
-## 🧭 Phase 2 — Classification & Prioritization  
-**(Decision Framing)**
-
-**What’s happening**
-- Assets and corridors classified  
-- Risk tiers assigned  
-- Cross‑system dependencies identified  
-- Modernization candidates prioritized  
-
-**Artifacts**
-- Corridor classification standards  
-- Cross‑system propagation models  
-- Capital timing alignment  
-
-**Audience**
-- GHQ  
-- City leadership  
-
----
-
-## 🧱 Phase 3 — Planning & Capital Alignment  
-**(Commitment Phase)**
-
-**What’s happening**
-- Modernization plans drafted  
-- Capital cycles selected (10 / 20 / 50‑year)  
-- Governance approvals obtained  
-- Public communication prepared  
-
-**Artifacts**
-- Modernization cycle matrices  
-- City‑facing implementation guides  
-- Press and resident communication templates  
-
-**Audience**
-- City leadership  
-- Operators  
-- Residents  
-
----
-
-## 🛠️ Phase 4 — Execution & Modernization  
-**(Physical Change)**
-
-**What’s happening**
-- Assets upgraded or replaced  
-- Redundancy introduced  
-- Standards enforced  
-- Safety protocols active  
-
-**Artifacts**
-- Operator and contractor standards  
-- Rollout checklists  
-- On‑site governance controls  
-
-**Audience**
-- Operators  
-- Contractors  
-- City oversight  
-
----
-
-## 🔄 Phase 5 — Audit, Feedback & Learning  
-**(Stabilization)**
-
-**What’s happening**
-- Post‑modernization audits  
-- Performance measured against baseline  
-- Lessons captured  
-- Scoring models refined  
-
-**Artifacts**
-- Audit protocols  
-- Updated indices and dashboards  
-- Governance reports  
-
-**Audience**
-- GHQ  
-- City leadership  
-
----
-
-## 🌍 Phase 6 — Public Trust & Continuity  
-**(Long‑Horizon Stability)**
-
-**What’s happening**
-- Resident confidence reinforced  
-- Institutional knowledge preserved  
-- Next lifecycle loop prepared  
-
-**Artifacts**
-- Resident education materials  
-- Public reporting summaries  
-- Updated Facilities strategy  
-
-**Audience**
-- Residents  
-- Public stakeholders  
-
----
-
-## 🔗 Domain Integration Example: RTT‑AGERI
-
-RTT‑AGERI plugs into this storyboard by providing:
-
-- Electrical‑specific scoring (Phase 1)  
-- Corridor classification (Phase 2)  
-- Capital‑timed electrical modernization (Phase 3–4)  
-- Electrical performance audits (Phase 5)  
-
-Future Facilities domains will follow the same timeline structure.
-
----
-
-## 🧭 Canonical Role
-
-This storyboard is **canonical** for Facilities.
-
-Domain‑specific storyboards may extend it, but should not redefine lifecycle phases or audience flow.
 # 📡 RTT Facilities — Asset Class: Communications  
 **Continuity, Coordination, and Trust**
 
@@ -3930,6 +1373,166 @@ All extensions inherit Facilities substrate definitions.
 This asset class definition is **canonical**.
 
 All Water‑related Facilities initiatives must reference this document.
+# 💰📋 RTT Facilities — Capital & Audit Integration  
+**Closing the Governance Loop**
+
+This document defines how **capital planning and audit processes are structurally integrated** within the RTT Facilities framework.
+
+It is grounded in the **RTT Facilities Playbook** and applies across all Facilities domains, including **RTT‑AGERI**.
+
+Capital and audit are treated as **mutually reinforcing governance instruments**, not separate functions.
+
+---
+
+## 1. Purpose
+
+Facilities governance fails when:
+
+- Capital decisions ignore risk signals, or  
+- Audits document problems without changing outcomes.
+
+The purpose of this framework is to:
+
+- Bind risk detection to capital deployment  
+- Ensure audits influence future decisions  
+- Preserve institutional memory across cycles  
+- Prevent deferred modernization through accountability  
+- Maintain public trust through transparency  
+
+Capital without audit is blind.  
+Audit without capital is performative.
+
+---
+
+## 2. Capital as a Governance Instrument
+
+Within RTT Facilities, capital is not merely funding.
+
+Capital is used to:
+- Reduce systemic risk
+- Correct lifecycle misalignment
+- Prevent propagation cascades
+- Enable long‑horizon resilience
+
+Capital deployment is **explicitly justified** by scoring, classification, and governance review.
+
+---
+
+## 3. Audit as a Forward‑Looking Function
+
+Audits are not post‑failure blame exercises.
+
+Facilities audits are designed to:
+- Validate scoring accuracy
+- Confirm intervention effectiveness
+- Detect governance breakdowns
+- Identify deferred modernization risk
+- Inform future capital timing
+
+Audits look **forward**, not backward.
+
+---
+
+## 4. The Closed Governance Loop
+
+Facilities governance operates as a closed loop:
+
+1. **Observation & Scoring**  
+   Drift, harmonics, propagation, corridor classification
+
+2. **Governance Review**  
+   Risk thresholds evaluated, priorities set
+
+3. **Capital Allocation**  
+   Modernization cycle selected (10 / 20 / 50‑year)
+
+4. **Intervention Execution**  
+   Preventive, planned, or emergency action
+
+5. **Audit & Validation**  
+   Outcomes assessed, assumptions tested
+
+6. **Model & Strategy Update**  
+   Scoring, standards, and plans refined
+
+Breaking this loop is treated as a governance failure.
+
+---
+
+## 5. Capital Timing Integration
+
+Capital planning is aligned with modernization cycles:
+
+- **10‑Year** — tactical stabilization  
+- **20‑Year** — strategic realignment  
+- **50‑Year** — generational transformation  
+
+Audit findings may:
+- Accelerate cycle entry
+- Escalate corridor priority
+- Trigger governance review
+
+Capital deferral without documented justification is auditable.
+
+---
+
+## 6. Audit Triggers
+
+Audits may be triggered by:
+
+- Elevated drift or harmonics scores
+- Corridor reclassification
+- Cross‑system propagation risk
+- Emergency interventions
+- Repeated maintenance without modernization
+- Public trust erosion
+
+Audit scope scales with risk.
+
+---
+
+## 7. Governance Accountability
+
+Capital and audit integration enforces accountability across:
+
+- **GHQ** — standards, scoring integrity, cross‑domain alignment  
+- **Cities** — capital planning and execution  
+- **Operators & Contractors** — compliance and performance  
+- **Leadership** — decision transparency and follow‑through  
+
+Repeated audit findings without capital response trigger escalation.
+
+---
+
+## 8. Public Transparency
+
+Where appropriate, capital and audit outcomes are:
+
+- Summarized for public reporting
+- Explained in plain language
+- Linked to safety and reliability outcomes
+
+Transparency is treated as a **risk‑reduction mechanism**, not a liability.
+
+---
+
+## 9. Relationship to Domain Extensions
+
+Domain initiatives (e.g., **RTT‑AGERI**):
+
+- Inherit this integration framework
+- Define domain‑specific audit protocols
+- Map scoring outcomes to capital requests
+
+They do **not** redefine capital‑audit coupling.
+
+---
+
+## 10. Canonical Status
+
+This framework is **canonical**.
+
+All Facilities domains must reference it when defining capital planning, audit protocols, and governance escalation.
 # 🏙️ RTT Facilities — City Manager Briefing Packet  
 **Infrastructure Risk, Capital Readiness, and Public Trust**
 
@@ -4704,6 +2307,300 @@ Inconsistent messaging is treated as a **trust risk**.
 This messaging guide is **canonical**.
 
 All RTT‑AGERI communications — written or verbal — should align with its principles.
+# 🧭 RTT Facilities — Corridor Classification Standard  
+**Spatial Risk Units & Governance Boundaries**
+
+This document defines the **Facilities‑level corridor classification standard** used to group, assess, and govern spatially linked infrastructure assets.
+
+It is grounded in the **RTT Facilities Playbook** and applies across all Facilities domains, including **RTT‑AGERI**.
+
+Domain‑specific initiatives extend this standard with asset‑specific criteria.
+
+---
+
+## 1. Purpose
+
+Facilities risk is rarely isolated to single assets.
+
+The purpose of corridor classification is to:
+
+- Group assets that share exposure, load, and failure dynamics  
+- Enable spatial risk assessment and prioritization  
+- Support propagation modeling and intervention planning  
+- Align modernization with capital timing  
+- Provide a stable governance unit across domains  
+
+Corridors are treated as **first‑class governance objects**.
+
+---
+
+## 2. Corridor Definition
+
+A **corridor** is a spatially and functionally linked grouping of assets that:
+
+- Share environmental exposure  
+- Experience correlated load or stress  
+- Exhibit coupled failure or degradation patterns  
+- Can propagate risk internally or externally  
+
+Corridors may cross administrative or jurisdictional boundaries.
+
+---
+
+## 3. Classification Dimensions
+
+Corridors are classified using multiple dimensions:
+
+- **Structural condition** (drift, harmonics)
+- **Environmental exposure** (climate, terrain)
+- **Load and usage intensity**
+- **Redundancy and resilience**
+- **Propagation potential**
+- **Societal impact**
+
+No single dimension determines classification.
+
+---
+
+## 4. Corridor Classes
+
+Facilities corridors are classified into **five canonical classes**:
+
+| Class | Designation | Description |
+|------|-------------|-------------|
+| C‑0 | Stable | Low risk, within tolerance |
+| C‑1 | Watch | Early degradation signals |
+| C‑2 | Concern | Persistent risk requiring planning |
+| C‑3 | Critical | High risk, modernization prioritized |
+| C‑4 | Fragile | Failure likely or imminent |
+
+Classes reflect **trend and interaction**, not snapshots.
+
+---
+
+## 5. Scoring Integration
+
+Corridor classification integrates:
+
+- Drift scoring
+- Harmonics scoring
+- Propagation modeling
+- Failure mode patterns
+- Environmental stress indicators
+
+Classification is reviewed periodically and after major events.
+
+---
+
+## 6. Governance Thresholds
+
+Corridor class determines governance response:
+
+| Class | Governance Action |
+|------|-------------------|
+| C‑0 | Routine monitoring |
+| C‑1 | Preventive review |
+| C‑2 | Modernization planning |
+| C‑3 | Capital prioritization |
+| C‑4 | Escalation and intervention |
+
+Reclassification requires documented justification.
+
+---
+
+## 7. Capital & Modernization Alignment
+
+Corridor class informs:
+
+- Modernization cycle selection (10 / 20 / 50‑year)
+- Capital allocation priority
+- Intervention class escalation
+- Audit focus
+
+Corridor inflation is treated as a governance risk.
+
+---
+
+## 8. Cross‑System Considerations
+
+Corridors may:
+
+- Contain multiple asset classes
+- Intersect with other corridors
+- Act as propagation bridges between systems
+
+Cross‑system corridors trigger Facilities‑level review.
+
+---
+
+## 9. Relationship to Domain Extensions
+
+Domain initiatives (e.g., **RTT‑AGERI**):
+
+- Extend this standard with asset‑specific criteria
+- Define measurement techniques
+- Map domain corridors to these canonical classes
+
+They do **not** redefine corridor classes or governance thresholds.
+
+---
+
+## 10. Canonical Status
+
+This standard is **canonical**.
+
+All Facilities domains must reference it when defining, scoring, and governing corridors.
+# 🔗 RTT Facilities — Cross‑System Propagation  
+**Interdependence, Cascades, and Systemic Risk**
+
+This document defines how **risk, degradation, and failure propagate across facilities systems**, rather than remaining confined to a single asset class.
+
+It is grounded in the **RTT Facilities Playbook** and extends the Facilities‑level **Propagation Model** by making **cross‑system coupling explicit**.
+
+---
+
+## 1. Purpose
+
+Modern infrastructure systems are deeply interdependent.
+
+The purpose of this document is to:
+
+- Identify how failures propagate *between* systems  
+- Prevent cascading outages through early detection  
+- Inform intervention prioritization and capital timing  
+- Support cross‑system governance and coordination  
+- Preserve public safety and trust during complex events  
+
+Cross‑system propagation is treated as a **first‑class governance risk**.
+
+---
+
+## 2. What Is Cross‑System Propagation
+
+**Cross‑system propagation** occurs when degradation or failure in one facilities system:
+
+- Disrupts the operation of another system  
+- Amplifies risk beyond the original failure domain  
+- Creates delayed or secondary impacts  
+- Escalates from technical failure to societal impact  
+
+Propagation may be immediate or latent.
+
+---
+
+## 3. Canonical Facilities Systems
+
+Facilities systems commonly involved in propagation include:
+
+- Electrical  
+- Water and wastewater  
+- Communications  
+- Transportation  
+- Public buildings  
+- Emergency and resilience systems  
+
+No system is assumed to be independent.
+
+---
+
+## 4. Common Propagation Pathways
+
+### **Electrical → Water**
+- Power loss disables pumping and treatment
+- Water pressure and quality degrade
+
+### **Electrical → Communications**
+- Network outages impair coordination
+- Emergency response delayed
+
+### **Electrical → Transportation**
+- Traffic signals fail
+- Transit systems disrupted
+
+### **Water → Public Health**
+- Sanitation failures escalate rapidly
+- Trust erosion follows
+
+### **Communications → Emergency Services**
+- Dispatch and coordination impaired
+- Response effectiveness reduced
+
+These pathways are **bidirectional** and often compound.
+
+---
+
+## 5. Propagation Layers (Revisited)
+
+Cross‑system propagation operates across layers:
+
+1. **Asset‑Level** — component failure  
+2. **Corridor‑Level** — spatial clustering  
+3. **System‑Level** — interdependent services  
+4. **Societal‑Level** — safety, trust, continuity  
+
+Facilities governance must reason across *all* layers.
+
+---
+
+## 6. Stress Amplifiers
+
+Cross‑system propagation accelerates under:
+
+- Climate events  
+- Aging infrastructure  
+- Deferred modernization  
+- Staffing shortages  
+- Poor inter‑agency coordination  
+- Governance fragmentation  
+
+Amplifiers are explicitly noted during assessment.
+
+---
+
+## 7. Detection & Early Warning
+
+Cross‑system propagation risk is detected through:
+
+- Drift and harmonics scoring  
+- Corridor classification  
+- Historical cascade analysis  
+- Cross‑system indicators  
+- Environmental monitoring  
+
+Early detection is prioritized over post‑event analysis.
+
+---
+
+## 8. Intervention Implications
+
+When cross‑system propagation risk is identified:
+
+- Facilities‑level governance is invoked  
+- Intervention class may escalate  
+- Capital timing may accelerate  
+- Communication requirements expand  
+
+No domain intervenes in isolation when dependencies exist.
+
+---
+
+## 9. Relationship to Domain Extensions
+
+Domain initiatives (e.g., **RTT‑AGERI**):
+
+- Model propagation *within* their asset class  
+- Identify cross‑system dependencies  
+- Feed results into this Facilities‑level framework  
+
+They do **not** redefine cross‑system logic.
+
+---
+
+## 10. Canonical Status
+
+This document is **canonical**.
+
+All Facilities domains must reference it when assessing interdependence, cascade risk, and coordinated intervention.
 # 🌐 RTT Facilities — Global Index Schema  
 **Unified Dashboard Backbone**
 
@@ -6495,6 +4392,1098 @@ Visual drift is treated as a governance risk.
 This style guide is **canonical**.
 
 All RTT Facilities design work must align with it.
+# 📉 RTT Facilities — Drift Scoring Rubric  
+**Gradual Degradation & Governance Risk**
+
+This document defines the **Facilities‑level drift scoring framework** used to identify, classify, and govern gradual degradation across facilities systems.
+
+It is grounded in the **RTT Facilities Playbook** and applies to all Facilities domains, including **RTT‑AGERI**.
+
+Domain‑specific initiatives extend this rubric with asset‑specific indicators and measurement techniques.
+
+---
+
+## 1. Purpose
+
+Most infrastructure failures begin as **drift**, not events.
+
+The purpose of this rubric is to:
+
+- Detect gradual degradation before failure
+- Distinguish normal aging from systemic risk
+- Inform intervention timing and modernization cycles
+- Prevent deferred risk accumulation
+- Provide a shared drift vocabulary across domains
+
+Drift is treated as a **leading governance signal**, not a maintenance inconvenience.
+
+---
+
+## 2. Drift Definition
+
+**Drift** is the gradual deviation of an asset, corridor, or system from its expected performance, condition, or risk profile over time.
+
+Drift may be:
+- Physical
+- Operational
+- Environmental
+- Organizational
+
+Drift is cumulative and often invisible without structured observation.
+
+---
+
+## 3. Scoring Scale
+
+Facilities drift is scored on a **0–4 scale**:
+
+| Score | Classification | Description |
+|------|----------------|-------------|
+| 0 | None | No detectable deviation from baseline |
+| 1 | Low | Minor deviation within expected tolerance |
+| 2 | Moderate | Persistent deviation requiring attention |
+| 3 | High | Accelerating degradation increasing failure risk |
+| 4 | Critical | Drift likely to trigger failure or propagation |
+
+Scores reflect **trend and persistence**, not isolated anomalies.
+
+---
+
+## 4. Assessment Dimensions
+
+Drift scoring considers multiple dimensions:
+
+- Performance variance
+- Maintenance frequency and cost
+- Environmental exposure
+- Load and usage changes
+- Historical failure correlation
+- Organizational or procedural erosion
+
+Not all dimensions apply to every asset class.
+
+---
+
+## 5. Drift Patterns
+
+Common drift patterns include:
+
+- Slow material degradation
+- Incremental capacity loss
+- Increasing operational workaround reliance
+- Deferred modernization masked by maintenance
+- Governance or documentation decay
+
+Pattern recognition is as important as measurement.
+
+---
+
+## 6. Governance Thresholds
+
+Drift scores trigger governance responses:
+
+| Score | Governance Response |
+|------|---------------------|
+| 0–1 | Monitor |
+| 2 | Preventive intervention review |
+| 3 | Modernization prioritization |
+| 4 | Escalation and immediate action |
+
+Thresholds may be refined by domain‑specific initiatives.
+
+---
+
+## 7. Integration with Other Frameworks
+
+Drift scoring integrates with:
+
+- Harmonics scoring
+- Propagation modeling
+- Failure mode catalog
+- Intervention playbook
+- Modernization cycle matrix
+- Audit protocols
+
+Drift is often the **earliest detectable signal** in failure cascades.
+
+---
+
+## 8. Lifecycle Alignment
+
+Drift is assessed across lifecycle phases:
+
+- **Design / Construction** — standards deviation
+- **Operation / Maintenance** — performance and wear
+- **Modernization** — residual risk
+- **Decommissioning** — safety and continuity risk
+
+Lifecycle‑blind drift assessment is treated as a governance failure.
+
+---
+
+## 9. Relationship to Domain‑Specific Rubrics
+
+Domain initiatives (e.g., RTT‑AGERI):
+
+- Extend this rubric with asset‑specific indicators
+- Define measurement techniques and tolerances
+- Map drift scores to domain‑specific interventions
+
+They do **not** redefine the scoring scale or governance thresholds.
+
+---
+
+## 10. Canonical Status
+
+This rubric is **canonical**.
+
+All Facilities domains must reference it when assessing gradual degradation and planning intervention.
+# 🗺️ RTT Facilities — Domain Map  
+**Meta‑Domain Orientation & Extension Framework**
+
+This document provides a **structural map** of the RTT Facilities domain.
+
+It defines how Facilities functions as a **meta‑domain**, how shared substrate artifacts relate to domain‑specific initiatives, and how future Facilities domains are expected to extend the framework.
+
+This map is grounded in the **RTT Facilities Playbook** and reflects the canonical Facilities substrate.
+
+---
+
+## 1. Facilities as a Meta‑Domain
+
+RTT Facilities is not a single system or project.
+
+It is a **meta‑domain** governing how physical infrastructure systems are:
+
+- Observed  
+- Scored  
+- Modernized  
+- Governed  
+- Communicated  
+- Sustained across generations  
+
+Facilities provides **shared invariants** that all domain extensions inherit.
+
+---
+
+## 2. Facilities Substrate (Shared Across All Domains)
+
+The following artifacts form the **Facilities substrate** and apply to *all* Facilities domains:
+
+### **Foundational**
+- `spec.md`
+- `glossary.md`
+- `facilities-lifecycle-framework.md`
+
+### **Time & Capital**
+- `global-modernization-timeline.md`
+- `modernization-cycle-matrix.md`
+- `rtt-global-facilities-strategy-2050.md`
+- `timeline-visual-storyboard.md`
+
+### **Risk & Detection**
+- `harmonics-scoring-rubric.md`
+- `propagation-model.md`
+- `failure-mode-catalog.md`
+
+### **Action & Governance**
+- `intervention-playbook.md`
+- `governance/rtt-global-governance-constitution.md`
+
+These artifacts are **canonical** and must not be redefined by domain extensions.
+
+---
+
+## 3. Domain Extensions
+
+A **Facilities domain extension** focuses on a specific asset class or problem space while inheriting the Facilities substrate.
+
+Each domain extension:
+
+- References Facilities substrate artifacts
+- Adds domain‑specific scoring, standards, and governance
+- Provides audience‑segmented materials
+- Avoids redefining shared concepts
+
+---
+
+## 4. Active Domain: RTT‑AGERI
+
+### **RTT‑AGERI — Above‑Ground Electrical Resilience Initiative**
+
+RTT‑AGERI is the first fully instantiated Facilities domain extension.
+
+It focuses on:
+- Above‑ground electrical infrastructure
+- Corridor‑level risk and propagation
+- Drift and harmonics‑driven degradation
+- Capital‑timed modernization
+
+AGERI extends Facilities by adding:
+- Electrical‑specific scoring
+- Corridor classification standards
+- Domain governance and audits
+- City‑ and resident‑facing materials
+
+AGERI does **not** redefine Facilities lifecycle, capital cycles, or governance structure.
+
+---
+
+## 5. Anticipated Future Domains
+
+The Facilities framework anticipates additional domains, such as:
+
+- Water systems resilience
+- Wastewater modernization
+- Transportation corridor integrity
+- Communications infrastructure reliability
+- Public buildings and emergency systems
+
+Each future domain will follow the **AGERI pattern**.
+
+---
+
+## 6. Audience Layers (Cross‑Cutting)
+
+Facilities domains serve multiple audiences:
+
+- **GHQ** — standards, scoring, audits, indices
+- **Cities** — implementation and capital planning
+- **Operators & Contractors** — execution and maintenance
+- **Residents** — safety, awareness, and trust
+
+Audience segmentation is enforced structurally.
+
+---
+
+## 7. Structural Invariants
+
+All Facilities domains must:
+
+- Treat infrastructure as a living system
+- Prioritize early detection over reactive response
+- Align modernization with capital cycles
+- Account for cross‑system propagation
+- Preserve public trust as a first‑class asset
+
+Violations of these invariants are treated as governance risks.
+
+---
+
+## 8. Canonical Status
+
+This domain map is **canonical**.
+
+It defines how Facilities grows without fragmentation.
+# 🔁 RTT Facilities — Lifecycle Framework  
+**Governed Infrastructure Across Time**
+
+This document defines the **Facilities lifecycle framework** used to govern infrastructure systems across time, risk, and capital cycles.
+
+It is grounded in the **RTT Facilities Playbook** and serves as the canonical lifecycle reference for all Facilities domains, including **RTT‑AGERI**.
+
+---
+
+## 1. Purpose
+
+Facilities systems evolve continuously.
+
+The purpose of this framework is to:
+
+- Treat infrastructure as a **living system**
+- Provide a shared lifecycle vocabulary across domains
+- Align scoring, intervention, and modernization with time
+- Prevent lifecycle blind spots and deferred risk
+- Preserve institutional continuity across generations
+
+Lifecycle awareness is foundational to governance.
+
+---
+
+## 2. Lifecycle Phases
+
+Facilities assets progress through six canonical lifecycle phases.
+
+---
+
+### **Phase 1 — Design**
+**Intent Formation**
+
+- Requirements defined
+- Standards selected
+- Risk assumptions established
+- Future conditions anticipated
+
+**Governance Focus**
+- Standards alignment
+- Long‑horizon suitability
+- Avoidance of future lock‑in
+
+---
+
+### **Phase 2 — Construction**
+**Physical Realization**
+
+- Assets built or installed
+- Design intent translated into reality
+- Initial quality and compliance verified
+
+**Governance Focus**
+- Compliance enforcement
+- Documentation integrity
+- Early deviation detection
+
+---
+
+### **Phase 3 — Operation**
+**Active Service**
+
+- Assets deliver intended function
+- Performance monitored
+- Environmental and load stress applied
+
+**Governance Focus**
+- Performance stability
+- Drift detection
+- Early harmonics identification
+
+---
+
+### **Phase 4 — Maintenance**
+**Life Extension**
+
+- Wear addressed
+- Minor degradation corrected
+- Service life extended
+
+**Governance Focus**
+- Preventive intervention
+- Cost‑benefit balance
+- Avoidance of maintenance‑only traps
+
+---
+
+### **Phase 5 — Modernization**
+**Planned Renewal**
+
+- Assets upgraded or replaced
+- Systems realigned to future needs
+- Resilience and redundancy introduced
+
+**Governance Focus**
+- Capital timing alignment
+- Risk reduction
+- Public communication and trust
+
+---
+
+### **Phase 6 — Decommissioning**
+**Governed Retirement**
+
+- Assets safely retired
+- Environmental and continuity risks managed
+- Knowledge preserved
+
+**Governance Focus**
+- Safety and compliance
+- Transition planning
+- Institutional memory capture
+
+---
+
+## 3. Lifecycle Is Not Linear
+
+Facilities assets may:
+
+- Loop between phases
+- Occupy multiple phases simultaneously
+- Re‑enter modernization multiple times
+- Skip phases under emergency conditions
+
+Lifecycle governance prioritizes **awareness**, not rigid sequencing.
+
+---
+
+## 4. Scoring & Detection Across the Lifecycle
+
+Scoring frameworks apply throughout the lifecycle:
+
+- **Design / Construction** — standards deviation
+- **Operation / Maintenance** — drift and harmonics
+- **Modernization** — propagation and capacity alignment
+- **Decommissioning** — safety and continuity risk
+
+Early detection is preferred at every phase.
+
+---
+
+## 5. Capital Timing Integration
+
+Lifecycle phases intersect with capital cycles:
+
+- 10‑year — tactical stabilization
+- 20‑year — strategic realignment
+- 50‑year — generational transformation
+
+Modernization is treated as a **recurring lifecycle phase**, not a failure state.
+
+---
+
+## 6. Governance & Accountability
+
+Lifecycle transitions trigger:
+
+- Governance review thresholds
+- Audit focus shifts
+- Intervention class changes
+- Public communication requirements
+
+Lifecycle misalignment is treated as a **governance risk**.
+
+---
+
+## 7. Relationship to Domain Extensions
+
+Domain initiatives (e.g., RTT‑AGERI):
+
+- Inherit this lifecycle framework
+- Map domain‑specific assets to lifecycle phases
+- Define phase‑specific scoring and interventions
+
+They do **not** redefine lifecycle phases.
+
+---
+
+## 8. Canonical Status
+
+This framework is **canonical**.
+
+All Facilities domains must reference it when defining scoring, intervention, modernization, and governance logic.
+# ⚠️ RTT Facilities — Failure Mode Catalog  
+**Canonical Structural Failure Patterns**
+
+This document defines the **Facilities‑level failure mode catalog** used to identify, classify, and govern recurring patterns of infrastructure failure across asset classes.
+
+It is grounded in the **RTT Facilities Playbook** and applies to all Facilities domains, including **RTT‑AGERI**.
+
+Domain‑specific initiatives extend this catalog with asset‑specific manifestations.
+
+---
+
+## 1. Purpose
+
+Facilities failures are rarely random.
+
+The purpose of this catalog is to:
+
+- Identify recurring structural failure patterns  
+- Distinguish symptoms from root causes  
+- Enable early detection through scoring and observation  
+- Inform intervention and modernization decisions  
+- Provide a shared diagnostic language across domains  
+
+This catalog focuses on **failure modes**, not individual incidents.
+
+---
+
+## 2. Failure Mode Categories
+
+Facilities failure modes are grouped into six canonical categories.
+
+---
+
+### **FM‑01: Drift Accumulation**
+**Gradual degradation exceeding tolerance**
+
+**Description**
+- Performance slowly deviates from design expectations
+- Often invisible until compounded
+
+**Common Indicators**
+- Rising maintenance frequency
+- Increasing variance in performance
+- Drift scoring escalation
+
+**Typical Response**
+- Preventive intervention
+- Tactical stabilization
+- Modernization planning
+
+---
+
+### **FM‑02: Harmonics & Resonance**
+**Oscillatory stress accelerating degradation**
+
+**Description**
+- Resonant behavior amplifies wear and instability
+- Often misdiagnosed as isolated defects
+
+**Common Indicators**
+- Repeated component fatigue
+- Vibration, oscillation, or frequency anomalies
+- Elevated harmonics scores
+
+**Typical Response**
+- Harmonics mitigation
+- Structural reinforcement
+- System rebalancing
+
+---
+
+### **FM‑03: Propagation Cascade**
+**Failure spreading across assets or systems**
+
+**Description**
+- Local failure triggers broader system impact
+- Cross‑system dependencies amplify effects
+
+**Common Indicators**
+- Multi‑system outages
+- Delayed secondary failures
+- Propagation model flags
+
+**Typical Response**
+- Cross‑system coordination
+- Escalated governance review
+- Priority modernization
+
+---
+
+### **FM‑04: Capacity Mismatch**
+**Demand exceeding system capability**
+
+**Description**
+- Systems operate beyond intended load or use
+- Often driven by growth or climate change
+
+**Common Indicators**
+- Chronic overload
+- Emergency interventions
+- Repeated service degradation
+
+**Typical Response**
+- Strategic realignment
+- Capacity expansion
+- Standards update
+
+---
+
+### **FM‑05: Deferred Modernization**
+**Aging systems trapped in maintenance mode**
+
+**Description**
+- Capital deferral replaces modernization
+- Risk accumulates silently
+
+**Common Indicators**
+- Rising maintenance cost
+- Obsolete components
+- Audit findings without action
+
+**Typical Response**
+- Capital cycle escalation
+- Planned modernization
+- Governance intervention
+
+---
+
+### **FM‑06: Governance Breakdown**
+**Decision failure rather than technical failure**
+
+**Description**
+- Known risks not acted upon
+- Accountability unclear or fragmented
+
+**Common Indicators**
+- Repeated audits without change
+- Conflicting authority
+- Public trust erosion
+
+**Typical Response**
+- Governance escalation
+- Audit reset
+- Structural accountability correction
+
+---
+
+## 3. Failure Mode Interaction
+
+Failure modes rarely occur in isolation.
+
+Common interactions include:
+- Drift → Harmonics → Propagation
+- Capacity mismatch → Deferred modernization
+- Governance breakdown → All other modes
+
+Understanding interaction patterns is critical for prevention.
+
+---
+
+## 4. Detection & Scoring Integration
+
+Failure modes are detected through:
+
+- Drift scoring
+- Harmonics scoring
+- Propagation modeling
+- Audit findings
+- Historical pattern analysis
+
+Scoring frameworks act as **early warning systems**.
+
+---
+
+## 5. Intervention Alignment
+
+Each failure mode maps to:
+
+- Intervention class (Preventive / Planned / Emergency)
+- Modernization cycle (10 / 20 / 50‑year)
+- Governance threshold
+
+Failure mode identification precedes intervention selection.
+
+---
+
+## 6. Relationship to Domain‑Specific Catalogs
+
+Domain initiatives (e.g., RTT‑AGERI):
+
+- Extend this catalog with asset‑specific examples
+- Map domain failures to these canonical modes
+- Do not redefine failure mode categories
+
+This ensures cross‑domain coherence.
+
+---
+
+## 7. Canonical Status
+
+This catalog is **canonical**.
+
+All Facilities domains must reference these failure modes when diagnosing risk and planning intervention.
+# 📁 RTT Facilities — Folder Tree  
+**Canonical Structure · Substrate‑Aligned**
+
+This document defines the **authoritative folder structure** for the RTT Facilities domain.
+
+It reflects the Facilities Playbook, the Facilities substrate specification, and all currently instantiated Facilities artifacts, including **RTT‑AGERI**.
+
+---
+
+```
+docs/facilities/
+│
+├── README.md
+├── spec.md
+├── glossary.md
+│
+├── folder_tree.md
+│
+├── global-modernization-timeline.md
+├── rtt-global-facilities-strategy-2050.md
+├── timeline-visual-storyboard.md
+│
+├── modernization-cycle-matrix.md
+├── intervention-playbook.md
+├── propagation-model.md
+├── harmonics-scoring-rubric.md
+│
+├── governance/
+│   └── rtt-global-governance-constitution.md
+│
+├── design-system/
+│   ├── component-creation-checklist.md
+│   ├── component-naming-convention.md
+│   ├── component-proposal-form.md
+│   ├── design-governance-charter.md
+│   ├── figma-library-structure.md
+│   ├── governance-poster.md
+│   ├── onboarding-guide.md
+│   └── style-guide.md
+│
+├── city-facing/
+│   ├── city-manager-briefing-packet.md
+│   ├── city-manager-slide-deck.md
+│   └── press-release-template.md
+│
+├── residents/
+│   ├── neighborhood-meeting-deck.md
+│   ├── storm-season-101.md
+│   ├── storm-season-dos-and-donts.md
+│   └── storm-season-faq.md
+│
+└── RTT-AGERI/
+    ├── README.md
+    ├── spec.md
+    │
+    ├── scoring/
+    │   ├── drift-scoring-rubric.md
+    │   ├── harmonics-scoring-rubric.md
+    │   └── propagation-model.md
+    │
+    ├── standards/
+    │   ├── corridor-classification-standard.md
+    │   ├── modernization-cycle-matrix.md
+    │   └── failure-mode-catalog.md
+    │
+    ├── governance/
+    │   ├── GHQ-governance-charter-for-RTT-AGERI.md
+    │   ├── audit-protocol.md
+    │   └── escalation-pathways.md
+    │
+    ├── city-facing/
+    │   ├── AGERI-implementation-guide.md
+    │   ├── corridor-assessment-template.md
+    │   └── modernization-rollout-checklist.md
+    │
+    ├── residents/
+    │   ├── what-is-AGERI.md
+    │   ├── safety-basics.md
+    │   └── modernization-notice-template.md
+    │
+    ├── dashboards/
+    │   ├── global-index-schema.md
+    │   ├── corridor-dashboard-mockups.md
+    │   └── data-ingestion-spec.md
+    │
+    └── glossary.md
+```
+
+---
+
+## 🧭 Structural Notes
+
+### **Facilities Root**
+Contains **canonical, cross‑domain substrate artifacts**:
+- lifecycle
+- scoring
+- propagation
+- intervention
+- modernization timing
+- strategy
+- glossary
+
+These files are **referenced**, not duplicated, by domain extensions.
+
+---
+
+### **RTT‑AGERI/**
+The first fully instantiated **Facilities domain extension**.
+
+It:
+- Inherits Facilities substrate definitions
+- Extends scoring, standards, and governance
+- Provides city‑ and resident‑facing materials
+- Does not redefine shared Facilities concepts
+
+Future Facilities domains will follow this same pattern.
+
+---
+
+## 🔒 Canonical Status
+
+This folder tree is **canonical**.
+
+Structural changes should be:
+- Rare
+- Intentional
+- Coordinated with Facilities governance
+# 🌍 RTT Facilities — Global Modernization Timeline  
+**2026–2050 · Capital · Governance · Resilience**
+
+This document defines the **global Facilities modernization timeline** used to coordinate infrastructure renewal across regions, asset classes, and generations.
+
+It is grounded in the **RTT Facilities Playbook** and serves as the canonical temporal reference for all Facilities domains, including **RTT‑AGERI**.
+
+---
+
+## 1. Timeline Purpose
+
+Facilities modernization unfolds over decades, not projects.
+
+The purpose of this timeline is to:
+
+- Align modernization with long‑horizon capital cycles  
+- Coordinate interventions across regions and systems  
+- Prevent synchronized failure due to deferred action  
+- Preserve institutional continuity through generational change  
+- Provide a shared temporal frame for governance and trust  
+
+---
+
+## 2. Timeline Structure
+
+The global timeline is organized into **three overlapping horizons**:
+
+### **Horizon I — Stabilization (2026–2035)**
+**10‑Year Tactical Cycle**
+
+Focus:
+- Arrest accelerating degradation
+- Address high‑risk corridors
+- Establish scoring, audits, and governance baselines
+- Build public trust through visible reliability gains
+
+Typical actions:
+- Preventive interventions
+- Tactical modernization
+- Monitoring and sensing upgrades
+
+---
+
+### **Horizon II — Realignment (2036–2045)**
+**20‑Year Strategic Cycle**
+
+Focus:
+- Reconfigure systems for changing demand
+- Introduce redundancy and resilience
+- Address cross‑system dependencies
+- Normalize modernization as routine governance
+
+Typical actions:
+- Corridor‑level redesign
+- Standards‑based replacement
+- Cross‑system coordination
+
+---
+
+### **Horizon III — Transformation (2046–2050+)**
+**50‑Year Generational Cycle**
+
+Focus:
+- Replace obsolete paradigms
+- Integrate climate adaptation at scale
+- Preserve long‑term public trust
+- Prepare the next generational handoff
+
+Typical actions:
+- System‑level redesign
+- Asset class transformation
+- Institutional knowledge transfer
+
+---
+
+## 3. Asset‑Class Phasing
+
+Different asset classes progress through horizons at different rates.
+
+The timeline allows for:
+- Staggered modernization
+- Regional variation
+- Climate‑driven acceleration
+- Capital availability constraints
+
+No asset class is expected to modernize uniformly.
+
+---
+
+## 4. Domain Integration Example — RTT‑AGERI
+
+RTT‑AGERI aligns to the global timeline as follows:
+
+- **Horizon I** — stabilize high‑risk above‑ground electrical corridors  
+- **Horizon II** — introduce redundancy and corridor reclassification  
+- **Horizon III** — redesign electrical distribution for future climate and load  
+
+Other Facilities domains will map similarly.
+
+---
+
+## 5. Governance & Audit Cadence
+
+The timeline establishes:
+
+- Regular audit intervals
+- Capital review checkpoints
+- Governance escalation thresholds
+- Public reporting rhythms
+
+Time itself becomes a **governance instrument**, not a passive backdrop.
+
+---
+
+## 6. Climate & Stress Adaptation
+
+The timeline explicitly accounts for:
+
+- Increasing climate volatility
+- Non‑linear stress escalation
+- Regional divergence
+- Uncertainty and surprise
+
+Modernization pacing may accelerate when stress exceeds modeled bounds.
+
+---
+
+## 7. Public Trust Continuity
+
+Facilities modernization is continuous.
+
+The timeline ensures:
+- Predictable change
+- Transparent communication
+- Reduced disruption
+- Institutional memory preservation
+
+Trust erosion is treated as a timeline failure.
+
+---
+
+## 8. Canonical Status
+
+This timeline is **canonical**.
+
+All Facilities domains must reference it when planning modernization, capital deployment, and governance cadence.
+<img width="1194" height="672" alt="facilities_module" src="https://github.com/user-attachments/assets/60dc7c90-5008-434b-94cb-73fdfc9c58cb" />
+
+# 📘 RTT Facilities — Glossary  
+**Canonical Terms & Definitions**
+
+This glossary defines **canonical terminology** used across the RTT Facilities domain.
+
+It is grounded in the **RTT Facilities Playbook** and applies to all Facilities documentation, including domain‑specific initiatives such as **RTT‑AGERI**.
+
+Domain extensions may add terms, but **must not redefine terms listed here**.
+
+---
+
+## Asset Class
+A category of physical infrastructure systems with shared characteristics, lifecycle patterns, and risk profiles (e.g., electrical, water, transportation).
+
+---
+
+## Capital Cycle
+A long‑horizon planning interval used to align modernization decisions with funding, governance, and lifecycle timing (typically 10, 20, or 50 years).
+
+---
+
+## Corridor
+A spatially and functionally linked grouping of assets that share exposure, load, and risk characteristics.
+
+---
+
+## Cross‑System Propagation
+The transmission of risk, degradation, or failure from one facilities system to another (e.g., electrical failure impacting water or communications).
+
+---
+
+## Decommissioning
+The governed retirement of assets at the end of their service life, including safety, environmental, and continuity considerations.
+
+---
+
+## Domain Extension
+A facilities initiative focused on a specific asset class or problem space that operates within the shared Facilities substrate (e.g., RTT‑AGERI).
+
+---
+
+## Drift
+Gradual degradation or deviation from expected performance that accumulates over time and increases failure risk.
+
+---
+
+## Drift Scoring
+A structured assessment of asset or system degradation used to inform monitoring, intervention, and modernization timing.
+
+---
+
+## Facilities
+The physical, operational, and communicative systems that enable cities and regions to function safely, reliably, and continuously.
+
+---
+
+## Facilities Playbook
+The original conceptual capture defining Facilities as living systems governed across lifecycle, risk, capital, and trust.
+
+---
+
+## Governance
+The structures, processes, and accountability mechanisms used to guide decision‑making, intervention, and modernization.
+
+---
+
+## GHQ
+The global governance layer responsible for standards, scoring frameworks, audits, and cross‑domain alignment.
+
+---
+
+## Harmonics
+Oscillatory, resonant, or frequency‑driven behaviors that accelerate degradation and destabilize system performance.
+
+---
+
+## Harmonics Scoring
+A structured assessment of resonance‑driven stress used as an early indicator of systemic risk.
+
+---
+
+## Intervention
+A governed action taken to prevent, mitigate, or respond to infrastructure risk or failure.
+
+---
+
+## Intervention Class
+A category of intervention defining urgency, scope, and governance requirements (Preventive, Planned, Emergency).
+
+---
+
+## Lifecycle
+The full sequence of phases through which facilities assets pass: design, construction, operation, maintenance, modernization, and decommissioning.
+
+---
+
+## Modernization
+Planned, capital‑aligned replacement or reconfiguration of assets to address systemic risk and future conditions.
+
+---
+
+## Modernization Cycle
+A defined capital timing window (10 / 20 / 50 years) used to govern when modernization occurs.
+
+---
+
+## Propagation
+The spread of stress, degradation, or failure across assets, corridors, systems, or societal layers.
+
+---
+
+## Public Trust
+The confidence residents place in facilities systems to operate safely, transparently, and predictably.
+
+---
+
+## Resilience
+The ability of facilities systems to absorb stress without cascading failure or loss of essential function.
+
+---
+
+## Scoring Framework
+A structured method for assessing risk, degradation, or performance to inform governance and action.
+
+---
+
+## Stress Amplifier
+A condition that increases the severity or speed of degradation or propagation (e.g., climate, aging, deferred maintenance).
+
+---
+
+## System
+A network of interdependent assets that collectively provide a functional service (e.g., electrical distribution).
+
+---
+
+## Tactical Stabilization
+Short‑horizon interventions intended to reduce immediate risk and extend asset service life.
+
+---
+
+## Canonical Status
+
+This glossary is **canonical**.
+
+All Facilities documentation must reference these definitions.  
+Domain‑specific glossaries may extend this list but must not redefine existing terms.
 # 🌍 RTT Global Governance Constitution  
 **Authority, Stewardship, and Long‑Horizon Infrastructure Integrity**
 
@@ -6781,6 +5770,431 @@ RTT governance exists to ensure that:
 - Trust is preserved quietly  
 
 This Constitution anchors that responsibility.
+# 🎵 RTT Facilities — Harmonics Scoring Rubric  
+**Systemic Degradation & Resonance Risk**
+
+This document defines the **Facilities‑level harmonics scoring framework** used to identify, classify, and govern degradation caused by oscillatory, resonant, or frequency‑driven stress across facilities systems.
+
+It is grounded in the **RTT Facilities Playbook** and applies across all Facilities domains, including **RTT‑AGERI**.
+
+---
+
+## 1. Purpose
+
+Harmonics are early indicators of **systemic stress**.
+
+The purpose of this rubric is to:
+
+- Detect non‑catastrophic degradation before failure
+- Identify resonance‑driven wear and instability
+- Inform modernization timing and prioritization
+- Prevent cascading failures amplified by oscillatory stress
+- Provide a shared harmonics vocabulary across domains
+
+Domain‑specific initiatives extend this rubric with asset‑specific measurement detail.
+
+---
+
+## 2. Harmonics Definition
+
+**Harmonics** refer to oscillatory, resonant, or frequency‑based behaviors that:
+
+- Accelerate material fatigue
+- Destabilize system performance
+- Amplify environmental or operational stress
+- Degrade reliability without immediate failure
+
+Harmonics may be electrical, mechanical, thermal, or operational in nature.
+
+---
+
+## 3. Scoring Scale
+
+Facilities harmonics are scored on a **0–4 scale**:
+
+| Score | Classification | Description |
+|------|----------------|-------------|
+| 0 | None | No detectable harmonic stress |
+| 1 | Low | Minor oscillation within tolerance |
+| 2 | Moderate | Persistent resonance causing measurable wear |
+| 3 | High | Destabilizing harmonics accelerating degradation |
+| 4 | Critical | Harmonics likely to trigger failure or propagation |
+
+Scores reflect **trend and persistence**, not single measurements.
+
+---
+
+## 4. Assessment Criteria
+
+Harmonics scoring considers:
+
+- Frequency and amplitude of oscillation
+- Duration and persistence
+- Interaction with environmental stressors
+- Impact on adjacent systems or assets
+- Historical correlation with failure events
+
+Measurements may be quantitative or qualitative depending on asset class.
+
+---
+
+## 5. Stress Amplifiers
+
+Harmonics severity increases under:
+
+- Aging or degraded materials
+- Climate stress (heat, wind, storms)
+- Load variability
+- Deferred maintenance
+- Poor grounding or stabilization
+- Cross‑system coupling
+
+Amplifiers are explicitly noted during scoring.
+
+---
+
+## 6. Governance Thresholds
+
+Harmonics scores trigger governance actions:
+
+| Score | Governance Response |
+|------|---------------------|
+| 0–1 | Monitor |
+| 2 | Preventive intervention review |
+| 3 | Modernization prioritization |
+| 4 | Immediate escalation and intervention |
+
+Thresholds may be refined by domain‑specific initiatives.
+
+---
+
+## 7. Integration with Other Frameworks
+
+Harmonics scoring integrates with:
+
+- Drift scoring
+- Propagation modeling
+- Modernization cycle matrix
+- Intervention playbook
+- Capital and audit integration
+
+Harmonics are treated as **leading indicators**, not secondary metrics.
+
+---
+
+## 8. Relationship to Domain‑Specific Rubrics
+
+Domain initiatives (e.g., RTT‑AGERI):
+
+- Extend this rubric with asset‑specific metrics
+- Define measurement techniques and tolerances
+- Map harmonics scores to domain‑specific interventions
+
+They do **not** redefine the scoring scale or governance thresholds.
+
+---
+
+## 9. Canonical Status
+
+This document is **canonical**.
+
+All Facilities domains must reference this rubric when assessing harmonics‑driven risk.
+# 🛠️ RTT Facilities — Intervention Playbook  
+**From Detection to Action**
+
+This document defines the **Facilities‑level intervention framework** used to translate observation, scoring, and governance decisions into **coordinated action**.
+
+It is grounded in the **RTT Facilities Playbook** and applies across all Facilities domains, including **RTT‑AGERI**.
+
+---
+
+## 1. Purpose
+
+Facilities interventions are not ad‑hoc responses.
+
+The purpose of this playbook is to:
+
+- Provide a shared intervention vocabulary across domains  
+- Ensure interventions are **governed, auditable, and predictable**  
+- Align action with lifecycle phase and capital timing  
+- Prevent escalation through early, proportional response  
+- Maintain public safety and trust during change  
+
+Domain‑specific initiatives extend this playbook with asset‑specific detail.
+
+---
+
+## 2. Intervention Triggers
+
+Interventions may be triggered by:
+
+- Scoring thresholds (drift, harmonics, propagation)
+- Audit findings
+- Environmental or climate events
+- Operational incidents
+- Cross‑system dependency risk
+- Governance escalation
+
+Triggers are **documented and reviewable**, not discretionary.
+
+---
+
+## 3. Intervention Classes
+
+Facilities interventions fall into three primary classes:
+
+### **Class I — Preventive Interventions**
+**(Early, Low‑Disruption)**
+
+- Target emerging risk
+- Occur before service degradation
+- Often align with routine maintenance windows
+
+Examples:
+- Targeted reinforcement
+- Monitoring upgrades
+- Minor component replacement
+
+---
+
+### **Class II — Planned Modernization**
+**(Capital‑Aligned)**
+
+- Address structural or systemic risk
+- Aligned with 10 / 20 / 50‑year cycles
+- Require governance approval and public communication
+
+Examples:
+- Corridor upgrades
+- Redundancy introduction
+- Standards‑based replacement
+
+---
+
+### **Class III — Emergency Response**
+**(Immediate Safety Action)**
+
+- Triggered by imminent or active failure
+- Prioritize safety and continuity
+- Followed by audit and root‑cause review
+
+Examples:
+- Emergency shutdowns
+- Temporary bypasses
+- Rapid stabilization measures
+
+---
+
+## 4. Lifecycle Alignment
+
+Interventions are mapped to lifecycle phases:
+
+| Lifecycle Phase | Typical Intervention |
+|-----------------|---------------------|
+| Design | Standards correction |
+| Construction | Compliance enforcement |
+| Operation | Preventive intervention |
+| Maintenance | Tactical stabilization |
+| Modernization | Planned replacement |
+| Decommissioning | Safe retirement |
+
+Interventions outside expected phases require justification.
+
+---
+
+## 5. Governance Flow
+
+All interventions follow a governed flow:
+
+1. **Detection** — scoring, observation, or incident  
+2. **Classification** — intervention class assigned  
+3. **Review** — governance threshold applied  
+4. **Authorization** — approval recorded  
+5. **Execution** — coordinated action  
+6. **Audit** — outcome reviewed  
+7. **Learning** — models updated  
+
+This flow preserves accountability and learning.
+
+---
+
+## 6. Capital & Resource Integration
+
+Interventions are explicitly tied to:
+
+- Capital planning cycles
+- Resource availability
+- Workforce capacity
+- Contractor coordination
+
+Emergency interventions may bypass capital planning but **must be reconciled post‑event**.
+
+---
+
+## 7. Cross‑System Coordination
+
+When interventions affect multiple systems:
+
+- Facilities‑level governance is invoked
+- Cross‑system propagation risk is assessed
+- Communication is coordinated across stakeholders
+
+No domain intervenes in isolation when dependencies exist.
+
+---
+
+## 8. Public Communication
+
+Interventions that affect residents require:
+
+- Clear explanation of purpose
+- Advance notice when possible
+- Safety guidance
+- Post‑intervention reporting
+
+Public trust is treated as a **critical success metric**.
+
+---
+
+## 9. Relationship to Domain‑Specific Playbooks
+
+Domain initiatives (e.g., RTT‑AGERI):
+
+- Reference this playbook for intervention structure
+- Define asset‑specific actions and thresholds
+- Provide technical execution detail
+
+They do **not** redefine intervention classes or governance flow.
+
+---
+
+## 10. Canonical Status
+
+This document is **canonical**.
+
+All Facilities domains must reference this playbook when defining interventions.
+# 🔄 RTT Facilities — Modernization Cycle Matrix  
+**Capital Timing · Lifecycle Alignment · Governance**
+
+This document defines the **Facilities‑level modernization cycle matrix** used to align infrastructure interventions with lifecycle phase, risk profile, and capital timing.
+
+It is grounded in the **RTT Facilities Playbook** and serves as the canonical reference for modernization planning across all Facilities domains, including **RTT‑AGERI**.
+
+---
+
+## 1. Purpose
+
+Facilities modernization is not ad‑hoc.
+
+The purpose of this matrix is to:
+
+- Align modernization decisions with long‑horizon capital cycles  
+- Replace reactive maintenance with governed intervention  
+- Provide a shared timing framework across asset classes  
+- Support auditability, predictability, and public trust  
+
+Domain‑specific initiatives reference this matrix rather than redefining it.
+
+---
+
+## 2. Modernization Cycles
+
+Facilities modernization operates across three primary capital cycles:
+
+### **10‑Year Cycle — Tactical Stabilization**
+- Address immediate risk and degradation
+- Prevent near‑term failure
+- Extend asset service life
+- Improve safety and reliability
+
+### **20‑Year Cycle — Strategic Realignment**
+- Reconfigure systems for changing demand
+- Introduce redundancy and resilience
+- Address systemic weaknesses
+- Align with evolving standards
+
+### **50‑Year Cycle — Generational Transformation**
+- Redesign systems for future conditions
+- Replace obsolete paradigms
+- Integrate climate adaptation
+- Preserve long‑term public trust
+
+---
+
+## 3. Lifecycle Alignment
+
+Modernization cycles intersect with lifecycle phases as follows:
+
+| Lifecycle Phase | 10‑Year | 20‑Year | 50‑Year |
+|-----------------|--------|--------|--------|
+| Design | — | ✔ | ✔ |
+| Construction | — | ✔ | ✔ |
+| Operation | ✔ | ✔ | — |
+| Maintenance | ✔ | — | — |
+| Modernization | ✔ | ✔ | ✔ |
+| Decommissioning | — | ✔ | ✔ |
+
+Modernization is treated as a **recurring lifecycle phase**, not an exception.
+
+---
+
+## 4. Risk & Scoring Integration
+
+Modernization timing is informed by:
+
+- Drift scoring  
+- Harmonics analysis  
+- Failure‑mode assessment  
+- Propagation risk  
+- Environmental stressors  
+
+Higher risk scores accelerate intervention **within** a cycle but do not bypass governance.
+
+---
+
+## 5. Capital Planning Implications
+
+The matrix supports:
+
+- Predictable capital allocation  
+- Transparent prioritization  
+- Cross‑jurisdiction coordination  
+- Audit‑ready decision trails  
+
+Capital is deployed **before failure**, not after crisis.
+
+---
+
+## 6. Governance Integration
+
+Modernization cycle selection triggers:
+
+- GHQ review thresholds  
+- Audit focus areas  
+- Escalation pathways  
+- Public communication requirements  
+
+Cycle changes require explicit governance approval.
+
+---
+
+## 7. Relationship to Domain‑Specific Initiatives
+
+Domain initiatives (e.g., RTT‑AGERI):
+
+- Map domain‑specific assets to this matrix  
+- Define scoring thresholds that trigger cycle entry  
+- Provide implementation detail within approved cycles  
+
+They do **not** redefine cycle structure.
+
+---
+
+## 8. Canonical Status
+
+This document is **canonical**.
+
+All Facilities domains must reference this matrix when planning modernization and capital deployment.
 # 🔧 RTT Facilities — Maintenance Standards  
 **Operational Discipline Without Drift**
 
@@ -7392,6 +6806,148 @@ At this point, your Facilities framework is **fully human‑complete**:
 - Operations  
 - Transitions  
 - Orientation  
+# 🔗 RTT Facilities — Propagation Model  
+**Cross‑System Risk & Failure Dynamics**
+
+This document defines the **Facilities‑level propagation model** used to understand how failures, degradation, and stress propagate **within and across facilities systems**.
+
+It is grounded in the **RTT Facilities Playbook** and serves as the canonical reference for propagation logic across all Facilities domains, including **RTT‑AGERI**.
+
+---
+
+## 1. Purpose
+
+Facilities systems do not fail in isolation.
+
+The purpose of this model is to:
+
+- Identify how stress and failure propagate across systems  
+- Prevent cascading failures through early detection  
+- Inform prioritization, capital timing, and governance decisions  
+- Provide a shared propagation framework for all Facilities domains  
+
+Domain‑specific initiatives may model internal propagation, but **cross‑system propagation is governed here**.
+
+---
+
+## 2. Propagation Definition
+
+**Propagation** is the transmission of risk, degradation, or failure from one asset, corridor, or system to another over time.
+
+Propagation may be:
+
+- **Direct** — physical dependency (e.g., power loss disables pumps)
+- **Indirect** — operational or human dependency
+- **Temporal** — delayed effects that surface later
+- **Amplified** — compounded by environmental or systemic stress
+
+---
+
+## 3. Propagation Layers
+
+Facilities propagation is modeled across four layers:
+
+### **Layer 1 — Asset‑Level**
+- Individual components
+- Localized failures
+- Immediate operational impact
+
+### **Layer 2 — Corridor‑Level**
+- Spatially linked assets
+- Shared exposure to environment or load
+- Domain‑specific modeling (e.g., AGERI corridors)
+
+### **Layer 3 — System‑Level**
+- Interdependent facilities systems:
+  - Electrical
+  - Water
+  - Communications
+  - Transportation
+  - Emergency services
+
+### **Layer 4 — Societal & Trust‑Level**
+- Public safety
+- Emergency response capacity
+- Resident confidence and trust
+
+---
+
+## 4. Common Propagation Pathways
+
+Examples include:
+
+- Electrical → water pumping failure  
+- Electrical → communications outage  
+- Electrical → traffic signal disruption  
+- Electrical → emergency response degradation  
+- Water → public health impacts  
+- Communications → coordination failure  
+
+These pathways are **bidirectional** and may compound under stress.
+
+---
+
+## 5. Stress Amplifiers
+
+Propagation severity increases under:
+
+- Climate events (storms, heat, flooding)
+- Aging infrastructure
+- Deferred maintenance
+- Staffing shortages
+- Poor communication
+- Capital misalignment
+
+Stress amplifiers are treated as **first‑class risk multipliers**.
+
+---
+
+## 6. Detection & Early Warning
+
+Propagation risk is mitigated through:
+
+- Drift detection
+- Cross‑system indicators
+- Corridor classification
+- Historical failure pattern analysis
+- Environmental monitoring
+
+Early detection is prioritized over post‑failure response.
+
+---
+
+## 7. Governance Integration
+
+Propagation modeling informs:
+
+- Modernization prioritization
+- Capital timing decisions
+- Audit focus areas
+- Escalation thresholds
+- Public communication strategy
+
+Propagation risk that crosses systems triggers **Facilities‑level governance review**, not just domain‑level action.
+
+---
+
+## 8. Relationship to Domain‑Specific Models
+
+Domain initiatives (e.g., RTT‑AGERI):
+
+- Model propagation **within** their asset class
+- Feed results into this Facilities‑level model
+- Do not redefine cross‑system logic
+
+This ensures consistency and prevents siloed risk assessment.
+
+---
+
+## 9. Canonical Status
+
+This document is **canonical**.
+
+All Facilities domains must reference this propagation model when addressing cross‑system risk.
+
 # 📚 RTT‑AGERI — Bibliography  
 **Foundational Sources for Above‑Ground Electrical Resilience**
 
@@ -7555,6 +7111,158 @@ If you want, the next clean moves could be:
 - Or freeze the bibliography and move into citation use
 
 This is exactly how serious initiatives earn legitimacy quietly.
+# 🌐 What Is RTT‑AGERI?  
+**Planning Ahead for Reliable Neighborhood Power**
+
+---
+
+## A SIMPLE EXPLANATION
+
+RTT‑AGERI stands for **Above‑Ground Electrical Resilience Initiative**.
+
+It’s a city program focused on **planning ahead** for the parts of the electrical system that are:
+- Visible above ground  
+- Exposed to weather  
+- Shared across neighborhoods  
+
+The goal is to keep power **reliable, predictable, and safe** — especially during storm season.
+
+---
+
+## WHY THE CITY CREATED RTT‑AGERI
+
+Above‑ground electrical systems are exposed to:
+- Wind  
+- Heat  
+- Ice  
+- Falling trees  
+- Vehicle impacts  
+
+Most problems don’t appear suddenly.  
+They develop **gradually**, often long before outages happen.
+
+RTT‑AGERI helps the city:
+- Notice early warning signs  
+- Plan upgrades before emergencies  
+- Coordinate work across neighborhoods  
+- Reduce surprise outages  
+
+---
+
+## WHAT RTT‑AGERI IS *NOT*
+
+RTT‑AGERI is **not**:
+- A response to an emergency  
+- A sign that systems are failing  
+- A reason for alarm  
+- A short‑term project  
+
+It’s a **long‑term planning approach** used by responsible cities.
+
+---
+
+## HOW RTT‑AGERI WORKS (IN PLAIN TERMS)
+
+The city:
+- Reviews maintenance patterns  
+- Listens to operator experience  
+- Looks at weather exposure  
+- Studies how systems share space  
+
+This helps identify **where planning ahead makes sense** — before problems become urgent.
+
+---
+
+## WHAT IS A “CORRIDOR”?
+
+A corridor is an area where multiple systems run together, such as:
+- Streets  
+- Power lines  
+- Water pipes  
+- Communications  
+
+Looking at corridors helps the city:
+- Coordinate work  
+- Reduce repeated construction  
+- Improve reliability  
+- Minimize neighborhood disruption  
+
+---
+
+## MAINTENANCE VS MODERNIZATION
+
+**Maintenance**  
+Keeps systems running day‑to‑day.
+
+**Modernization**  
+Updates systems so they remain reliable long‑term.
+
+RTT‑AGERI helps the city understand **when maintenance is enough** and **when modernization should be planned** — calmly and deliberately.
+
+---
+
+## WHAT THIS MEANS FOR RESIDENTS
+
+RTT‑AGERI helps:
+- Reduce unexpected outages  
+- Improve coordination of street work  
+- Communicate earlier about planned projects  
+- Use public funds responsibly  
+
+Most of this work happens **behind the scenes**.
+
+---
+
+## HOW THE CITY COMMUNICATES
+
+The city is committed to:
+- Plain‑language explanations  
+- Advance notice when possible  
+- Calm, factual updates  
+- Opportunities for questions  
+
+RTT‑AGERI supports transparency — not technical overload.
+
+---
+
+## THE BIG PICTURE
+
+Reliable power doesn’t happen by accident.
+
+It happens because cities:
+- Plan early  
+- Maintain systems carefully  
+- Modernize before emergencies  
+- Communicate clearly  
+
+RTT‑AGERI is part of that responsibility.
+
+---
+
+## CLOSING
+
+RTT‑AGERI is about **preparedness, coordination, and care**.
+
+It helps the city stay ahead of problems — quietly, responsibly, and with neighborhoods in mind.
+
+Thank you for being part of a community that plans ahead.
+
+---
+
+### Why this document matters
+
+This explainer:
+- Demystifies AGERI without oversharing  
+- Reinforces calm, predictable governance  
+- Completes the resident‑facing narrative  
+- Connects storm‑season messaging to long‑term planning  
+
+At this point, your **resident communications layer is fully complete**:
+- What is RTT‑AGERI  
+- Storm Season 101  
+- Do’s & Don’ts  
+- FAQ  
+- Neighborhood meeting deck  
 # 🏘️ RTT Facilities — Neighborhood Meeting Deck  
 **How the City Plans for Reliable Infrastructure**
 
@@ -8110,158 +7818,284 @@ At this point, your **resident storm‑season suite is fully complete**:
 - Neighborhood meeting deck  
 - Do’s & Don’ts guide  
 - FAQ  
-# 🌐 What Is RTT‑AGERI?  
-**Planning Ahead for Reliable Neighborhood Power**
+# 🌍 RTT Global Facilities Strategy — 2050  
+**Long‑Horizon Infrastructure Stewardship**
+
+This document defines the **RTT Global Facilities Strategy through 2050**.
+
+It establishes the long‑term posture, priorities, and governance principles guiding how facilities systems are modernized, governed, and trusted across generations.
+
+This strategy is grounded in the **RTT Facilities Playbook** and serves as the **north star** for all Facilities domains, including **RTT‑AGERI**.
 
 ---
 
-## A SIMPLE EXPLANATION
+## 1. Strategic Premise
 
-RTT‑AGERI stands for **Above‑Ground Electrical Resilience Initiative**.
+By 2050, cities will face:
 
-It’s a city program focused on **planning ahead** for the parts of the electrical system that are:
-- Visible above ground  
-- Exposed to weather  
-- Shared across neighborhoods  
+- Intensifying climate stress  
+- Aging infrastructure portfolios  
+- Capital constraints  
+- Rising public expectations for reliability and transparency  
+- Increasing interdependence between systems  
 
-The goal is to keep power **reliable, predictable, and safe** — especially during storm season.
-
----
-
-## WHY THE CITY CREATED RTT‑AGERI
-
-Above‑ground electrical systems are exposed to:
-- Wind  
-- Heat  
-- Ice  
-- Falling trees  
-- Vehicle impacts  
-
-Most problems don’t appear suddenly.  
-They develop **gradually**, often long before outages happen.
-
-RTT‑AGERI helps the city:
-- Notice early warning signs  
-- Plan upgrades before emergencies  
-- Coordinate work across neighborhoods  
-- Reduce surprise outages  
+RTT Facilities responds by treating infrastructure as **living systems**, governed across time, risk, and trust — not as isolated assets.
 
 ---
 
-## WHAT RTT‑AGERI IS *NOT*
+## 2. Strategic Objectives
 
-RTT‑AGERI is **not**:
-- A response to an emergency  
-- A sign that systems are failing  
-- A reason for alarm  
-- A short‑term project  
+RTT Facilities aims to:
 
-It’s a **long‑term planning approach** used by responsible cities.
-
----
-
-## HOW RTT‑AGERI WORKS (IN PLAIN TERMS)
-
-The city:
-- Reviews maintenance patterns  
-- Listens to operator experience  
-- Looks at weather exposure  
-- Studies how systems share space  
-
-This helps identify **where planning ahead makes sense** — before problems become urgent.
+- Shift from reactive maintenance to **governed modernization**
+- Detect infrastructure drift **before failure**
+- Reduce cascading failures across systems
+- Align capital deployment with long‑horizon value
+- Preserve institutional knowledge across generations
+- Maintain public trust during continuous change
 
 ---
 
-## WHAT IS A “CORRIDOR”?
+## 3. Facilities as a Portfolio
 
-A corridor is an area where multiple systems run together, such as:
-- Streets  
-- Power lines  
-- Water pipes  
-- Communications  
+Facilities are governed as a **portfolio of asset classes**, including:
 
-Looking at corridors helps the city:
-- Coordinate work  
-- Reduce repeated construction  
-- Improve reliability  
-- Minimize neighborhood disruption  
+- Electrical
+- Water and wastewater
+- Transportation
+- Communications
+- Public buildings
+- Emergency and resilience systems
 
----
-
-## MAINTENANCE VS MODERNIZATION
-
-**Maintenance**  
-Keeps systems running day‑to‑day.
-
-**Modernization**  
-Updates systems so they remain reliable long‑term.
-
-RTT‑AGERI helps the city understand **when maintenance is enough** and **when modernization should be planned** — calmly and deliberately.
+Each asset class may have one or more **domain‑specific initiatives** (e.g., RTT‑AGERI), all operating within a shared Facilities substrate.
 
 ---
 
-## WHAT THIS MEANS FOR RESIDENTS
+## 4. Lifecycle‑Driven Governance
 
-RTT‑AGERI helps:
-- Reduce unexpected outages  
-- Improve coordination of street work  
-- Communicate earlier about planned projects  
-- Use public funds responsibly  
+Facilities modernization is governed across the full lifecycle:
 
-Most of this work happens **behind the scenes**.
+1. Design  
+2. Construction  
+3. Operation  
+4. Maintenance  
+5. Modernization  
+6. Decommissioning  
 
----
-
-## HOW THE CITY COMMUNICATES
-
-The city is committed to:
-- Plain‑language explanations  
-- Advance notice when possible  
-- Calm, factual updates  
-- Opportunities for questions  
-
-RTT‑AGERI supports transparency — not technical overload.
+Modernization is not an exception — it is a **planned, recurring phase**.
 
 ---
 
-## THE BIG PICTURE
+## 5. Capital Timing Philosophy
 
-Reliable power doesn’t happen by accident.
+RTT Facilities aligns decisions with:
 
-It happens because cities:
-- Plan early  
-- Maintain systems carefully  
-- Modernize before emergencies  
-- Communicate clearly  
+- **10‑year cycles** — tactical interventions  
+- **20‑year cycles** — strategic realignment  
+- **50‑year cycles** — generational resilience  
 
-RTT‑AGERI is part of that responsibility.
+Scoring systems and audits inform *when* capital is deployed, not just *where*.
 
 ---
 
-## CLOSING
+## 6. Risk, Resilience, and Propagation
 
-RTT‑AGERI is about **preparedness, coordination, and care**.
+Facilities governance explicitly accounts for:
 
-It helps the city stay ahead of problems — quietly, responsibly, and with neighborhoods in mind.
+- Asset degradation and drift  
+- Climate and environmental stressors  
+- Human and operational risk  
+- Cascading and cross‑system failures  
 
-Thank you for being part of a community that plans ahead.
+Resilience is defined as the **ability to absorb stress without systemic collapse**, not merely to recover after failure.
 
 ---
 
-### Why this document matters
+## 7. Governance & Accountability
 
-This explainer:
-- Demystifies AGERI without oversharing  
-- Reinforces calm, predictable governance  
-- Completes the resident‑facing narrative  
-- Connects storm‑season messaging to long‑term planning  
+RTT Facilities governance operates across:
 
-At this point, your **resident communications layer is fully complete**:
-- What is RTT‑AGERI  
-- Storm Season 101  
-- Do’s & Don’ts  
-- FAQ  
-- Neighborhood meeting deck  
+- **GHQ** — global standards, scoring, audits, indices  
+- **Cities** — implementation, operations, capital planning  
+- **Operators & Contractors** — execution and maintenance  
+- **Residents** — safety, awareness, and trust  
+
+Transparency, auditability, and early intervention are core principles.
+
+---
+
+## 8. Public Trust as Infrastructure
+
+Public trust is treated as a **first‑class infrastructure asset**.
+
+Facilities modernization must:
+
+- Be explainable  
+- Be predictable  
+- Minimize disruption  
+- Communicate clearly with residents  
+
+Trust erosion is treated as a systemic risk.
+
+---
+
+## 9. Domain Evolution Through 2050
+
+RTT Facilities anticipates:
+
+- New domain‑specific initiatives  
+- Evolving scoring methodologies  
+- Advances in sensing and analytics  
+- Changing climate and demographic realities  
+
+The Facilities substrate is designed to **absorb change without losing coherence**.
+
+---
+
+## 10. Canonical Role
+
+This strategy is **canonical**.
+
+It sets direction, not tactics.  
+Domain‑specific documents (e.g., RTT‑AGERI) must align with this strategy but should not restate it.
+# 🧱 RTT Facilities — Domain Specification  
+**Canonical Substrate Definition**
+
+This document defines the **RTT Facilities domain** as a shared substrate for all facilities‑related initiatives, including domain‑specific extensions such as **RTT‑AGERI**.
+
+It is grounded in the original **RTT Facilities Playbook** capture and serves as the **authoritative reference** for scope, lifecycle, governance, and cross‑system integration.
+
+---
+
+## 1. Domain Definition
+
+**Facilities** are the physical, operational, and communicative systems that enable cities and regions to function safely, reliably, and continuously.
+
+RTT Facilities treats infrastructure as **living systems**, governed across:
+
+- Asset classes  
+- Lifecycle phases  
+- Risk and failure modes  
+- Capital timing  
+- Governance and accountability  
+- Multi‑audience communication  
+
+Facilities work is inherently **cross‑system** and **long‑horizon**.
+
+---
+
+## 2. Asset Classes
+
+The Facilities domain encompasses, but is not limited to:
+
+- Electrical infrastructure (above‑ground and underground)
+- Water systems
+- Wastewater systems
+- Transportation corridors
+- Communications infrastructure
+- Public buildings
+- Emergency and resilience systems
+
+Each asset class may have one or more **domain‑specific initiatives** (e.g., RTT‑AGERI for above‑ground electrical systems).
+
+---
+
+## 3. Lifecycle Framework
+
+Facilities are governed across the full lifecycle:
+
+1. Design  
+2. Construction  
+3. Operation  
+4. Maintenance  
+5. Modernization  
+6. Decommissioning  
+
+Scoring, audits, and interventions may occur at **any lifecycle phase**, but modernization decisions are explicitly aligned with **capital timing cycles**.
+
+---
+
+## 4. Risk, Failure, and Propagation
+
+Facilities governance explicitly accounts for:
+
+- Asset degradation and drift  
+- Environmental and climate stressors  
+- Human and operational factors  
+- Failure modes and cascading failures  
+- Cross‑system propagation (e.g., electrical → water → emergency response)
+
+Domain‑specific initiatives may model propagation internally, but **cross‑system propagation** is governed at the Facilities level.
+
+---
+
+## 5. Governance Model
+
+Facilities governance operates across multiple layers:
+
+- **GHQ** — global standards, scoring systems, audits, indices  
+- **Cities** — implementation, operations, capital planning  
+- **Operators & Contractors** — maintenance and modernization execution  
+- **Residents** — safety, awareness, and public trust  
+
+Governance artifacts include:
+
+- Constitutions and charters  
+- Audit protocols  
+- Escalation pathways  
+- Capital and accountability integration  
+
+Facilities governance prioritizes **early detection**, **transparent decision‑making**, and **public accountability**.
+
+---
+
+## 6. Capital Timing & Modernization
+
+Facilities modernization is aligned with:
+
+- 10‑year tactical cycles  
+- 20‑year strategic cycles  
+- 50‑year generational cycles  
+
+Scoring systems and audits inform **when** and **where** capital is deployed, replacing reactive maintenance with governed modernization.
+
+---
+
+## 7. Audience Segmentation
+
+Facilities documentation is intentionally segmented by audience:
+
+- GHQ  
+- City leadership and operators  
+- Contractors and maintenance teams  
+- Residents and the public  
+
+Each audience receives **purpose‑built artifacts** to prevent scope bleed and maintain clarity.
+
+---
+
+## 8. Domain Extensions
+
+Domain‑specific initiatives live **within** the Facilities framework and inherit its lifecycle, governance, and capital logic.
+
+Examples include:
+
+- **RTT‑AGERI** — Above‑Ground Electrical Resilience Initiative  
+
+Domain extensions must:
+
+- Reference this Facilities spec  
+- Avoid redefining shared concepts  
+- Provide domain‑specific scoring, standards, and guidance  
+
+---
+
+## 9. Canonical Status
+
+This document is **canonical**.
+
+Changes should be rare, deliberate, and coordinated with GHQ governance.  
+Domain‑specific documents should reference this spec rather than duplicating it.
 # 🌍 RTT Facilities — Global Modernization Timeline  
 **A Long‑Horizon Framework for Infrastructure Stewardship**
 
@@ -8889,4 +8723,171 @@ With this in place, you now have:
 - A visual grammar for time  
 
 Nothing downstream can misrepresent *when* things happen without it being obvious.
+# 🗺️ Facilities Modernization — Visual Timeline Storyboard  
+**RTT Facilities · Lifecycle · Capital · Governance**
+
+This storyboard provides a **visual narrative** of how Facilities modernization unfolds over time, across lifecycle phases, capital cycles, and audiences.
+
+It is grounded in the **RTT Facilities Playbook** and serves as a shared reference for all Facilities domains, including **RTT‑AGERI**.
+
+---
+
+## 🌱 Phase 0 — Baseline & Orientation  
+**(Pre‑Modernization Awareness)**
+
+**What’s happening**
+- Asset inventories established  
+- Baseline condition assessments  
+- Historical failure patterns reviewed  
+- Climate and environmental context mapped  
+
+**Artifacts**
+- Facilities domain map  
+- Asset‑class registries  
+- Lifecycle framework  
+
+**Audience**
+- GHQ  
+- City leadership  
+
+---
+
+## 🔍 Phase 1 — Observation & Scoring  
+**(Early Detection)**
+
+**What’s happening**
+- Drift indicators identified  
+- Harmonics and degradation signals monitored  
+- Corridor‑level observations collected  
+- Early risk flags raised  
+
+**Artifacts**
+- Domain‑specific scoring rubrics (e.g., AGERI drift & harmonics)  
+- Initial dashboards and indices  
+
+**Audience**
+- GHQ  
+- City operators  
+
+---
+
+## 🧭 Phase 2 — Classification & Prioritization  
+**(Decision Framing)**
+
+**What’s happening**
+- Assets and corridors classified  
+- Risk tiers assigned  
+- Cross‑system dependencies identified  
+- Modernization candidates prioritized  
+
+**Artifacts**
+- Corridor classification standards  
+- Cross‑system propagation models  
+- Capital timing alignment  
+
+**Audience**
+- GHQ  
+- City leadership  
+
+---
+
+## 🧱 Phase 3 — Planning & Capital Alignment  
+**(Commitment Phase)**
+
+**What’s happening**
+- Modernization plans drafted  
+- Capital cycles selected (10 / 20 / 50‑year)  
+- Governance approvals obtained  
+- Public communication prepared  
+
+**Artifacts**
+- Modernization cycle matrices  
+- City‑facing implementation guides  
+- Press and resident communication templates  
+
+**Audience**
+- City leadership  
+- Operators  
+- Residents  
+
+---
+
+## 🛠️ Phase 4 — Execution & Modernization  
+**(Physical Change)**
+
+**What’s happening**
+- Assets upgraded or replaced  
+- Redundancy introduced  
+- Standards enforced  
+- Safety protocols active  
+
+**Artifacts**
+- Operator and contractor standards  
+- Rollout checklists  
+- On‑site governance controls  
+
+**Audience**
+- Operators  
+- Contractors  
+- City oversight  
+
+---
+
+## 🔄 Phase 5 — Audit, Feedback & Learning  
+**(Stabilization)**
+
+**What’s happening**
+- Post‑modernization audits  
+- Performance measured against baseline  
+- Lessons captured  
+- Scoring models refined  
+
+**Artifacts**
+- Audit protocols  
+- Updated indices and dashboards  
+- Governance reports  
+
+**Audience**
+- GHQ  
+- City leadership  
+
+---
+
+## 🌍 Phase 6 — Public Trust & Continuity  
+**(Long‑Horizon Stability)**
+
+**What’s happening**
+- Resident confidence reinforced  
+- Institutional knowledge preserved  
+- Next lifecycle loop prepared  
+
+**Artifacts**
+- Resident education materials  
+- Public reporting summaries  
+- Updated Facilities strategy  
+
+**Audience**
+- Residents  
+- Public stakeholders  
+
+---
+
+## 🔗 Domain Integration Example: RTT‑AGERI
+
+RTT‑AGERI plugs into this storyboard by providing:
+
+- Electrical‑specific scoring (Phase 1)  
+- Corridor classification (Phase 2)  
+- Capital‑timed electrical modernization (Phase 3–4)  
+- Electrical performance audits (Phase 5)  
+
+Future Facilities domains will follow the same timeline structure.
+
+---
+
+## 🧭 Canonical Role
+
+This storyboard is **canonical** for Facilities.
+
+Domain‑specific storyboards may extend it, but should not redefine lifecycle phases or audience flow.
 

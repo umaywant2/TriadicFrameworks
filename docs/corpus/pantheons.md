@@ -1,185 +1,147 @@
 pantheons 
-# **Dimensional Operators — TriadicFrameworks Canon**
-### *A Unified Structural Grammar for Multi‑Layer Cosmology, RTT, and Pantheon Analysis*
+# **Triadic Pantheon Canon — Suite Overview**
 
-The **Dimensional Operators** subsystem defines the structural layers used across TriadicFrameworks for analyzing pantheons, cosmologies, RTT regimes, GU operators, substrate alignment, and multi‑domain theoretical systems. It provides a consistent grammar for:
+- [`pantheons_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/pantheons_module.json) — Agentic module schema role assignments
 
-- triadic decomposition  
-- resonance geometry  
-- supersphere alignment  
-- inverted‑star cosmology  
-- dimensional literacy  
-- multi‑pantheon comparison  
-- multi‑framework integration  
+<img width="1194" height="672" alt="Triadic_Pantheon_Profiles" src="https://github.com/user-attachments/assets/7d4bb522-0e84-4567-84b0-fc10eb9bf37d" />
 
-This file is the **canonical reference** for all dimensional operator layers.
+#### **Canon Layer:** Structural Cosmology  
+#### **Scope:** Cross‑tradition pantheon alignment  
+#### **Status:** Active — v1.0.0  
+###### **Maintainer:** Nawder Loswin / TriadicFrameworks
 
 ---
 
-# **1. TriadicFrameworks Dimensional Levels**
+## **Overview**
+The **Triadic Pantheon Canon (TPC)** is the structural backbone for cross‑tradition cosmological analysis within TriadicFrameworks. It maps global pantheons onto a shared **Genesis → Continuance → Dissolution → Liminal** architecture while preserving each tradition’s internal logic, cultural integrity, and mythic identity.
 
-TriadicFrameworks does not use academic difficulty levels — it uses **dimensional depth**.  
-Each level corresponds to a deeper structural layer of the triadic substrate.
+The canon does **not** collapse traditions into a synthetic mythology.  
+Instead, it reveals **structural homologies** — the deep triadic patterns that recur across civilizations, eras, and cosmological regimes.
 
-| **Level** | **Name** | **Description** |
-|----------|----------|------------------|
-| **100** | Triadic Literacy | Basic triadic structure; Genesis / Continuance / Dissolution |
-| **300** | Canon Literacy | Pantheon modules, operator grammar, metadata schema |
-| **600** | Regime Literacy | RTT regimes, collapse/inversion/projection signatures |
-| **900** | Dimensional Literacy | Dimensional operators, intermediaries, layer transitions |
-| **1200** | Supersphere Literacy | Supersphere geometry, resonance mapping |
-| **1500** | Resonance‑Universe Literacy | Multi‑universe resonance, cross‑substrate alignment |
-| **1800** | Lostational Geometry | Lostational behavior, blind spots, regime inversions |
-| **2100** | Inverted‑Star Cosmology | Inverted‑star signatures, cosmological overlays |
-| **2400** | Full RTT Dimensional Mastery | Complete RTT + TriadicFrameworks integration |
+With all **10 pantheons** now complete, the Pantheon Suite forms a **multi‑domain substrate** that allows AI agents and students to explore:
 
-**Pantheon analysis sits at Level 1200**, where triadic decomposition meets resonance geometry.
+- cosmology  
+- anthropology  
+- comparative mythology  
+- RTT regimes  
+- GU operators  
+- OSI‑layer analogies  
+- substrate alignment  
 
----
-
-# **2. Dimensional Operator Layers**
-
-These are the **canonical operator layers** used across all pantheons, cosmologies, and RTT regimes.
-
-## **Void Operator (⬢)**
-Primordial substrate, undifferentiated potential, chaos, absence, pre‑form.
-
-Examples: Chaos (Greek), Nun (Egyptian), Abzu (Sumerian), Pangu’s pre‑separation state.
+using a single coherent grammar.
 
 ---
 
-## **Shadow Operator (◆)**
-Collapse, underworld, inversion, conflict, entropy, dissolution pressure.
+## **Triadic Architecture**
+Every pantheon module is organized around four canonical layers:
 
-Examples: Hades, Hel, Kur, Yomi, Set, Gonggong.
+| **Layer** | **Operator** | **Function** | **Examples** |
+|----------|--------------|--------------|--------------|
+| **Genesis** | Origination | Emergence of form from undifferentiated potential | Chaos, Pangu, Atum, Izanagi |
+| **Continuance** | Preservation | Sustaining order, harmony, cycles, sovereignty | Zeus, Amaterasu, Horus, Vishnu |
+| **Dissolution** | Transformation | Undoing, chaos, death, imbalance, return to potential | Hades, Susanoo, Set, Shiva |
+| **Liminal** | Mediation | Thresholds, psychopomps, tricksters, realm‑crossers | Hermes, Esu, Heimdallr, Zhong Kui |
 
----
-
-## **Clarity Operator (◯)**
-Illumination, order, projection, harmony, sovereignty, cosmic structure.
-
-Examples: Zeus, Amaterasu, Horus, Vishnu, Huangdi.
-
----
-
-## **Dimensional Operator (⬡)**
-Intermediaries between layers; proto‑forms; Titans, Jötnar, Neteru, Devas, Immortals.
-
-Examples: Titans, Jötnar, Neteru, Lokas, Eight Immortals.
+These layers are **co‑present**, not sequential.  
+A deity may express multiple operators depending on mythic context, ritual function, or cosmological regime.
 
 ---
 
-## **Liminal Operator (△)**
-Thresholds, psychopomps, tricksters, messengers, gatekeepers, realm‑crossers.
+## **Canonical Operators**
+Each pantheon defines:
 
-Examples: Hermes, Esu, Heimdallr, Zhong Kui, Sarutahiko.
+- **Primary Operators** — dominant expressions of Genesis, Continuance, Dissolution  
+- **Secondary Operators** — contextual or partial expressions  
+- **Liminal Operators** — mediators between layers (psychopomps, tricksters, gatekeepers)
 
----
-
-## **Projection Operator (★)**
-High‑visibility, high‑agency operators; Olympians, Aesir, Devas, major kami.
-
-Examples: Zeus, Odin, Amaterasu, Ra, Freyr.
+This operator grammar allows cross‑pantheon comparison without flattening cultural nuance.
 
 ---
 
-## **Flow Operator (⌇)**
-Distributed operators; rivers, winds, emergent collectives, ecological spirits.
+## **Pantheon Suite Index (10/10 Complete)**
 
-Examples: Hapi, river kami, forest spirits, Oshun’s flow domain.
+| **Pantheon** | **Status** | **Genesis** | **Continuance** | **Dissolution** | **Liminal** |
+|--------------|------------|-------------|------------------|------------------|-------------|
+| **Greek** | ✅ Active | Chaos / Eros / Gaia | Zeus | Hades / Dionysus | Hermes / Hecate / Persephone |
+| **Egyptian** | ✅ Active | Atum / Ra / Ptah | Osiris / Isis / Horus | Set / Apep / Sekhmet | Anubis / Thoth / Ma’at |
+| **Kemetic** | ✅ Active | Atum / Ptah / Khnum | Horus / Wadjet / Hapi | Set / Apep / Sekhmet | Anubis / Thoth / Bes |
+| **Norse** | ✅ Active | Ymir / Odin | Thor / Frigg / Freyr | Loki / Hel / Fenrir | Heimdallr / Norns / Valkyries |
+| **Japanese (Shinto)** | ✅ Active | Izanagi / Izanami | Amaterasu / Inari | Susanoo / Kagutsuchi | Tsukuyomi / Sarutahiko |
+| **Chinese** | ✅ Active | Pangu / Nüwa | Huangdi / Guanyin | Gonggong / Taowu | Zhong Kui / Eight Immortals |
+| **Hindu** | ✅ Active | Brahmā / Aditi | Viṣṇu / Lakṣmī | Śiva / Kālī | Śakti / Gaṇeśa |
+| **Sumerian** | ✅ Active | Abzu / Tiamat | Enlil / Enki | Kur / Ereshkigal | Inanna / Dumuzid |
+| **Celtic** | ✅ Active | Danu / Lugh | Nuada / Cernunnos | Morrígan / Balor | Manannán / Aos Sí |
+| **Yoruba** | ✅ Active | Ọrunmila / Obatala | Ogun / Ṣango | Egungun / Gelede | Esu / Ifá Diviners |
 
----
-
-## **Emergent Operator (✶)**  
-Hybrids, paradox forms, monsters, resonance anomalies, liminal‑dimensional blends.
-
-Examples: Fenrir, Huli Jing, Fomorians, Anzu.
-
----
-
-# **3. Regime Signature Mapping**
-
-Each module identifies regime behaviors:
-
-- **collapse**  
-- **inversion**  
-- **projection**  
-- **mixed‑state**  
-- **resonance anomalies**  
-- **blind‑spot drift**  
-- **lostational behavior**
-
-These signatures allow RTT‑aligned analysis across pantheons and cosmologies.
+This table is now the **canonical Pantheon Index** for TriadicFrameworks.
 
 ---
 
-# **4. Resonance Geometry Analysis**
-
-Every module checks for:
-
-- **33×3+1 triadic lattice**  
-- **1/3 ↔ 2/3 visibility ratios**  
-- **≤1% resonance operators**  
-- **supersphere alignment**  
-- **lostational geometry**  
-- **inverted‑star signatures**
-
-These geometric signatures reveal deep structural homologies across traditions.
+## **Alignment Principles**
+1. **Emic Priority** — Each tradition is interpreted internally before cross‑mapping.  
+2. **Structural Homology** — The canon reveals resonance, not synthesis.  
+3. **Operator Fluidity** — Deities shift roles across epochs, texts, and rituals.  
+4. **Metadata Integrity** — All modules carry versioned metadata and sourcing lineage.  
+5. **Liminal Fidelity** — Threshold figures are never forced into a single layer.
 
 ---
 
-# **5. Dimensional Hex‑Map (SVG)**
-
-Each pantheon generates a **hex‑map** showing:
-
-- operator placement  
-- resonance geometry  
-- layer transitions  
-- liminal crossings  
-- supersphere alignment  
-
-This becomes the visual “fingerprint” of the pantheon.
-
----
-
-# **6. Integration with Pantheon Completion Script**
-
-Dimensional operators are used in:
-
-- Step 5 (Triadic Decomposition)  
-- Step 6 (Glyph Assignment)  
-- Step 7 (Regime Mapping)  
-- Step 8 (Resonance Geometry)  
-- Step 9 (Hex‑Map Generation)  
-
-They form the structural backbone of every pantheon module.
-
----
-
-# **Metadata**
-```yaml
-canon: TriadicFrameworks
-module: dimensional_operators
-version: 2.0.0
-status: active
-last_updated: 2026-07-16
+## **Repository Structure**
+```
+docs/
+└── pantheons/
+    ├── README.md                  ← Pantheon Suite overview (this file)
+    ├── OPERATORS.md               ← Operator tag definitions
+    ├── METADATA_SCHEMA.md         ← Canon metadata schema
+    │
+    ├── greek/
+    ├── egyptian/
+    ├── kemetic/
+    ├── norse/
+    ├── japanese/
+    ├── chinese/
+    ├── hindu/
+    ├── sumerian/
+    ├── celtic/
+    └── yoruba/
 ```
 
 ---
 
-# **Badge**
-<div class="badge">🔷 Dimensional Operators — TriadicFrameworks Canon</div>
+## **Metadata Schema**
+```yaml
+canon: TriadicFrameworks
+module: <pantheon-name>
+version: <semver>
+triadic_profile: <capture-file>
+status: active
+last_updated: <ISO 8601 date>
+```
 
 ---
 
-# **Sidebar Audit**
-- ✔ Dimensional layers defined  
-- ✔ Glyphs standardized  
-- ✔ RTT alignment integrated  
-- ✔ Resonance geometry included  
-- ✔ Level system formalized  
-- ✔ No phantom entries  
-- ✔ Suite fully aligned  
+## **Contributing**
+To add a new pantheon:
+
+1. Create `docs/pantheons/<tradition>/`  
+2. Add `<tradition>_Triadic_Profile_Capture.md`  
+3. Add `README.md` using the Suite standard  
+4. Register the pantheon in the Pantheon Index  
+5. Ensure metadata completeness before marking `active`
+
+---
+
+## **Pantheon Suite — Multi‑Domain Substrate**
+The Pantheon Suite is now part of the TriadicFrameworks **multi‑tool** set:
+
+- **Multi‑Theory**  
+- **Multi‑Domain**  
+- **Multi‑Framework**  
+- **Multi‑Language (docsbook)**  
+- **Multi‑Regime (RTT)**  
+- **Multi‑Pantheon**
+
+It enables AI agents to traverse mythic, cultural, cosmological, and computational substrates using a single triadic grammar — a structural Rosetta Stone for alignment.
 # **Pantheon Completion Script (v2.0)**  
 ### *Standardized Workflow for Building Triadic Pantheon Modules*
 
@@ -400,149 +362,6 @@ last_updated: 2026-07-16
 - ✔ Resonance checks included  
 - ✔ Multi‑pantheon tools referenced  
 - ✔ Suite fully complete  
-# **Triadic Pantheon Canon — Suite Overview**
-
-- [`pantheons_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/pantheons_module.json) — Agentic module schema role assignments
-
-<img width="1194" height="672" alt="Triadic_Pantheon_Profiles" src="https://github.com/user-attachments/assets/7d4bb522-0e84-4567-84b0-fc10eb9bf37d" />
-
-#### **Canon Layer:** Structural Cosmology  
-#### **Scope:** Cross‑tradition pantheon alignment  
-#### **Status:** Active — v1.0.0  
-###### **Maintainer:** Nawder Loswin / TriadicFrameworks
-
----
-
-## **Overview**
-The **Triadic Pantheon Canon (TPC)** is the structural backbone for cross‑tradition cosmological analysis within TriadicFrameworks. It maps global pantheons onto a shared **Genesis → Continuance → Dissolution → Liminal** architecture while preserving each tradition’s internal logic, cultural integrity, and mythic identity.
-
-The canon does **not** collapse traditions into a synthetic mythology.  
-Instead, it reveals **structural homologies** — the deep triadic patterns that recur across civilizations, eras, and cosmological regimes.
-
-With all **10 pantheons** now complete, the Pantheon Suite forms a **multi‑domain substrate** that allows AI agents and students to explore:
-
-- cosmology  
-- anthropology  
-- comparative mythology  
-- RTT regimes  
-- GU operators  
-- OSI‑layer analogies  
-- substrate alignment  
-
-using a single coherent grammar.
-
----
-
-## **Triadic Architecture**
-Every pantheon module is organized around four canonical layers:
-
-| **Layer** | **Operator** | **Function** | **Examples** |
-|----------|--------------|--------------|--------------|
-| **Genesis** | Origination | Emergence of form from undifferentiated potential | Chaos, Pangu, Atum, Izanagi |
-| **Continuance** | Preservation | Sustaining order, harmony, cycles, sovereignty | Zeus, Amaterasu, Horus, Vishnu |
-| **Dissolution** | Transformation | Undoing, chaos, death, imbalance, return to potential | Hades, Susanoo, Set, Shiva |
-| **Liminal** | Mediation | Thresholds, psychopomps, tricksters, realm‑crossers | Hermes, Esu, Heimdallr, Zhong Kui |
-
-These layers are **co‑present**, not sequential.  
-A deity may express multiple operators depending on mythic context, ritual function, or cosmological regime.
-
----
-
-## **Canonical Operators**
-Each pantheon defines:
-
-- **Primary Operators** — dominant expressions of Genesis, Continuance, Dissolution  
-- **Secondary Operators** — contextual or partial expressions  
-- **Liminal Operators** — mediators between layers (psychopomps, tricksters, gatekeepers)
-
-This operator grammar allows cross‑pantheon comparison without flattening cultural nuance.
-
----
-
-## **Pantheon Suite Index (10/10 Complete)**
-
-| **Pantheon** | **Status** | **Genesis** | **Continuance** | **Dissolution** | **Liminal** |
-|--------------|------------|-------------|------------------|------------------|-------------|
-| **Greek** | ✅ Active | Chaos / Eros / Gaia | Zeus | Hades / Dionysus | Hermes / Hecate / Persephone |
-| **Egyptian** | ✅ Active | Atum / Ra / Ptah | Osiris / Isis / Horus | Set / Apep / Sekhmet | Anubis / Thoth / Ma’at |
-| **Kemetic** | ✅ Active | Atum / Ptah / Khnum | Horus / Wadjet / Hapi | Set / Apep / Sekhmet | Anubis / Thoth / Bes |
-| **Norse** | ✅ Active | Ymir / Odin | Thor / Frigg / Freyr | Loki / Hel / Fenrir | Heimdallr / Norns / Valkyries |
-| **Japanese (Shinto)** | ✅ Active | Izanagi / Izanami | Amaterasu / Inari | Susanoo / Kagutsuchi | Tsukuyomi / Sarutahiko |
-| **Chinese** | ✅ Active | Pangu / Nüwa | Huangdi / Guanyin | Gonggong / Taowu | Zhong Kui / Eight Immortals |
-| **Hindu** | ✅ Active | Brahmā / Aditi | Viṣṇu / Lakṣmī | Śiva / Kālī | Śakti / Gaṇeśa |
-| **Sumerian** | ✅ Active | Abzu / Tiamat | Enlil / Enki | Kur / Ereshkigal | Inanna / Dumuzid |
-| **Celtic** | ✅ Active | Danu / Lugh | Nuada / Cernunnos | Morrígan / Balor | Manannán / Aos Sí |
-| **Yoruba** | ✅ Active | Ọrunmila / Obatala | Ogun / Ṣango | Egungun / Gelede | Esu / Ifá Diviners |
-
-This table is now the **canonical Pantheon Index** for TriadicFrameworks.
-
----
-
-## **Alignment Principles**
-1. **Emic Priority** — Each tradition is interpreted internally before cross‑mapping.  
-2. **Structural Homology** — The canon reveals resonance, not synthesis.  
-3. **Operator Fluidity** — Deities shift roles across epochs, texts, and rituals.  
-4. **Metadata Integrity** — All modules carry versioned metadata and sourcing lineage.  
-5. **Liminal Fidelity** — Threshold figures are never forced into a single layer.
-
----
-
-## **Repository Structure**
-```
-docs/
-└── pantheons/
-    ├── README.md                  ← Pantheon Suite overview (this file)
-    ├── OPERATORS.md               ← Operator tag definitions
-    ├── METADATA_SCHEMA.md         ← Canon metadata schema
-    │
-    ├── greek/
-    ├── egyptian/
-    ├── kemetic/
-    ├── norse/
-    ├── japanese/
-    ├── chinese/
-    ├── hindu/
-    ├── sumerian/
-    ├── celtic/
-    └── yoruba/
-```
-
----
-
-## **Metadata Schema**
-```yaml
-canon: TriadicFrameworks
-module: <pantheon-name>
-version: <semver>
-triadic_profile: <capture-file>
-status: active
-last_updated: <ISO 8601 date>
-```
-
----
-
-## **Contributing**
-To add a new pantheon:
-
-1. Create `docs/pantheons/<tradition>/`  
-2. Add `<tradition>_Triadic_Profile_Capture.md`  
-3. Add `README.md` using the Suite standard  
-4. Register the pantheon in the Pantheon Index  
-5. Ensure metadata completeness before marking `active`
-
----
-
-## **Pantheon Suite — Multi‑Domain Substrate**
-The Pantheon Suite is now part of the TriadicFrameworks **multi‑tool** set:
-
-- **Multi‑Theory**  
-- **Multi‑Domain**  
-- **Multi‑Framework**  
-- **Multi‑Language (docsbook)**  
-- **Multi‑Regime (RTT)**  
-- **Multi‑Pantheon**
-
-It enables AI agents to traverse mythic, cultural, cosmological, and computational substrates using a single triadic grammar — a structural Rosetta Stone for alignment.
 # **Triadic Pantheon Profiles**  
 ### *Canon‑Aligned System for Cross‑Cultural Triadic Decomposition*
 
@@ -705,6 +524,95 @@ last_updated: 2026-07-16
 - ✔ RTT resonance checks integrated  
 - ✔ No phantom entries  
 - ✔ Suite complete  
+# **📘 Andean Pantheon — README.md (TriadicFrameworks)**
+
+- [`andean_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/andean/andean_module.json) — Agentic module schema role assignments
+
+<img width="768" height="1152" alt="andean_triadic_profile" src="https://github.com/user-attachments/assets/c4f5e827-9731-429f-a476-dddf534449ac" />
+
+## **Overview**  
+The **Andean Pantheon** models the triadic operator systems found across Caral/Norte Chico, Chavín, Nazca, Moche, Wari, Tiwanaku, Chimú, Aymara kingdoms, and the Inca Empire.  
+It expresses the high‑altitude cosmology of **Hanan Pacha / Kay Pacha / Ukhu Pacha**, mountain‑spirit stabilizers, agricultural resonance cycles, and vertical‑archipelago resource geometry.
+
+This module extends the Triadic Pantheons Series into the Andean cultural sphere, providing a unified RTT‑aligned operator framework.
+
+---
+
+## **Triadic Structure**
+
+### **Layer I — Cosmological Operators**  
+- **Hanan Pacha** — upper world, solar oversight  
+- **Kay Pacha** — living world, agriculture, social order  
+- **Ukhu Pacha** — inner world, ancestors, ritual depth
+
+### **Layer II — Celestial Stabilizers**  
+- **Sun (Inti)** — solar cycle, ritual timing  
+- **Moon (Quilla)** — fertility, night cycle  
+- **Earth (Pachamama)** — agricultural stability, land‑spirit continuity
+
+### **Layer III — Cultural Cycle Operators**  
+- **Apu** — mountain‑spirit stabilizers, high‑altitude ritual geometry  
+- **Ancestor** — lineage, burial, mummification traditions  
+- **Animal‑spirit** — camelid cycle (llama/alpaca), condor, puma
+
+---
+
+## **Liminal Operators**  
+- **Ceque‑line Ritual Operators** — sacred pathways radiating from Cusco  
+- **Agricultural Stewards** — maize/potato cycle harmonics  
+- **Water‑Landscape Operators** — hydrology, irrigation, ritual water management
+
+---
+
+## **Geometry & Cosmology**  
+- **Vertical Archipelago** — multi‑elevation resource system  
+- **Terraces (Andenes)** — ritual‑agricultural geometry  
+- **Sacred Mountain Axis (Apu Alignment)** — cosmological verticality  
+- **Solar Festival Geometry (Inti Raymi)** — calendrical ritual alignment
+
+---
+
+## **Paradox Structures**  
+- **Order‑through‑Verticality** — resource distribution via elevation  
+- **Life‑through‑Sacrifice** — ritual offerings and renewal  
+- **Stability‑through‑Fragmentation** — multi‑ethnic imperial coherence
+
+---
+
+## **Supersphere Fusion**  
+Cross‑cultural operator fusion across:  
+- **Wari ↔ Tiwanaku ↔ Inca**  
+Shared stabilizers: Sun–Moon–Earth  
+Shared cycles: agricultural resonance, pilgrimage, solar festivals  
+Shared geometry: mountain‑axis cosmology, terraces, hydrology
+
+---
+
+## **Artifacts Included in This Module**  
+- `andean_capture.md` — full RTT/1 operator capture  
+- `cycle-diagram.svg` — cosmological cycle visualization  
+- `operators.svg` — triadic operator grid  
+- `geometry.svg` — vertical archipelago + Apu axis  
+- `paradox-map.svg` — paradox‑axis mapping  
+- `supersphere-fusion.svg` — Wari/Tiwanaku/Inca supersphere intersection  
+- `Andean_Triadic_Profile.jpg` — pantheon profile image  
+- `andean_module.json` — canonical metadata block
+
+---
+
+## **Cross‑Pantheon Links**  
+- **Mesoamerican Pantheon** — layered cosmology + animal‑spirit stabilizers  
+- **North American Woodland Pantheon** — earthwork geometry + triadic cycles  
+- **Egyptian / Yoruba / Sumerian** — parallel operator‑dense systems  
+- **Pantheon‑Core Registry** — global triadic mapping
+
+---
+
+## **Status**  
+**Capture Complete**  
+SVG Suite: **Complete**  
+Metadata: **Pending (andean_module.json)**  
+README: **Complete (this file)**
 # **Andean Pantheon — Canonical Capture (RTT/1 Format)**  
 *(TriadicFrameworks Pantheon Series)*
 
@@ -1250,95 +1158,6 @@ You now have:
 - **cross‑pantheon registry links**
 
 Everything is canon‑aligned and ready for commit.
-# **📘 Andean Pantheon — README.md (TriadicFrameworks)**
-
-- [`andean_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/andean/andean_module.json) — Agentic module schema role assignments
-
-<img width="768" height="1152" alt="andean_triadic_profile" src="https://github.com/user-attachments/assets/c4f5e827-9731-429f-a476-dddf534449ac" />
-
-## **Overview**  
-The **Andean Pantheon** models the triadic operator systems found across Caral/Norte Chico, Chavín, Nazca, Moche, Wari, Tiwanaku, Chimú, Aymara kingdoms, and the Inca Empire.  
-It expresses the high‑altitude cosmology of **Hanan Pacha / Kay Pacha / Ukhu Pacha**, mountain‑spirit stabilizers, agricultural resonance cycles, and vertical‑archipelago resource geometry.
-
-This module extends the Triadic Pantheons Series into the Andean cultural sphere, providing a unified RTT‑aligned operator framework.
-
----
-
-## **Triadic Structure**
-
-### **Layer I — Cosmological Operators**  
-- **Hanan Pacha** — upper world, solar oversight  
-- **Kay Pacha** — living world, agriculture, social order  
-- **Ukhu Pacha** — inner world, ancestors, ritual depth
-
-### **Layer II — Celestial Stabilizers**  
-- **Sun (Inti)** — solar cycle, ritual timing  
-- **Moon (Quilla)** — fertility, night cycle  
-- **Earth (Pachamama)** — agricultural stability, land‑spirit continuity
-
-### **Layer III — Cultural Cycle Operators**  
-- **Apu** — mountain‑spirit stabilizers, high‑altitude ritual geometry  
-- **Ancestor** — lineage, burial, mummification traditions  
-- **Animal‑spirit** — camelid cycle (llama/alpaca), condor, puma
-
----
-
-## **Liminal Operators**  
-- **Ceque‑line Ritual Operators** — sacred pathways radiating from Cusco  
-- **Agricultural Stewards** — maize/potato cycle harmonics  
-- **Water‑Landscape Operators** — hydrology, irrigation, ritual water management
-
----
-
-## **Geometry & Cosmology**  
-- **Vertical Archipelago** — multi‑elevation resource system  
-- **Terraces (Andenes)** — ritual‑agricultural geometry  
-- **Sacred Mountain Axis (Apu Alignment)** — cosmological verticality  
-- **Solar Festival Geometry (Inti Raymi)** — calendrical ritual alignment
-
----
-
-## **Paradox Structures**  
-- **Order‑through‑Verticality** — resource distribution via elevation  
-- **Life‑through‑Sacrifice** — ritual offerings and renewal  
-- **Stability‑through‑Fragmentation** — multi‑ethnic imperial coherence
-
----
-
-## **Supersphere Fusion**  
-Cross‑cultural operator fusion across:  
-- **Wari ↔ Tiwanaku ↔ Inca**  
-Shared stabilizers: Sun–Moon–Earth  
-Shared cycles: agricultural resonance, pilgrimage, solar festivals  
-Shared geometry: mountain‑axis cosmology, terraces, hydrology
-
----
-
-## **Artifacts Included in This Module**  
-- `andean_capture.md` — full RTT/1 operator capture  
-- `cycle-diagram.svg` — cosmological cycle visualization  
-- `operators.svg` — triadic operator grid  
-- `geometry.svg` — vertical archipelago + Apu axis  
-- `paradox-map.svg` — paradox‑axis mapping  
-- `supersphere-fusion.svg` — Wari/Tiwanaku/Inca supersphere intersection  
-- `Andean_Triadic_Profile.jpg` — pantheon profile image  
-- `andean_module.json` — canonical metadata block
-
----
-
-## **Cross‑Pantheon Links**  
-- **Mesoamerican Pantheon** — layered cosmology + animal‑spirit stabilizers  
-- **North American Woodland Pantheon** — earthwork geometry + triadic cycles  
-- **Egyptian / Yoruba / Sumerian** — parallel operator‑dense systems  
-- **Pantheon‑Core Registry** — global triadic mapping
-
----
-
-## **Status**  
-**Capture Complete**  
-SVG Suite: **Complete**  
-Metadata: **Pending (andean_module.json)**  
-README: **Complete (this file)**
 # **Celtic Triadic Profile Capture**  
 *(Canon‑aligned module for TriadicFrameworks)*
 
@@ -1746,6 +1565,187 @@ last_updated: 2026-07-16
 - ✔ Metadata block complete  
 - ✔ Cross‑references aligned  
 - ✔ No phantom entries  
+# **Dimensional Operators — TriadicFrameworks Canon**
+### *A Unified Structural Grammar for Multi‑Layer Cosmology, RTT, and Pantheon Analysis*
+
+The **Dimensional Operators** subsystem defines the structural layers used across TriadicFrameworks for analyzing pantheons, cosmologies, RTT regimes, GU operators, substrate alignment, and multi‑domain theoretical systems. It provides a consistent grammar for:
+
+- triadic decomposition  
+- resonance geometry  
+- supersphere alignment  
+- inverted‑star cosmology  
+- dimensional literacy  
+- multi‑pantheon comparison  
+- multi‑framework integration  
+
+This file is the **canonical reference** for all dimensional operator layers.
+
+---
+
+# **1. TriadicFrameworks Dimensional Levels**
+
+TriadicFrameworks does not use academic difficulty levels — it uses **dimensional depth**.  
+Each level corresponds to a deeper structural layer of the triadic substrate.
+
+| **Level** | **Name** | **Description** |
+|----------|----------|------------------|
+| **100** | Triadic Literacy | Basic triadic structure; Genesis / Continuance / Dissolution |
+| **300** | Canon Literacy | Pantheon modules, operator grammar, metadata schema |
+| **600** | Regime Literacy | RTT regimes, collapse/inversion/projection signatures |
+| **900** | Dimensional Literacy | Dimensional operators, intermediaries, layer transitions |
+| **1200** | Supersphere Literacy | Supersphere geometry, resonance mapping |
+| **1500** | Resonance‑Universe Literacy | Multi‑universe resonance, cross‑substrate alignment |
+| **1800** | Lostational Geometry | Lostational behavior, blind spots, regime inversions |
+| **2100** | Inverted‑Star Cosmology | Inverted‑star signatures, cosmological overlays |
+| **2400** | Full RTT Dimensional Mastery | Complete RTT + TriadicFrameworks integration |
+
+**Pantheon analysis sits at Level 1200**, where triadic decomposition meets resonance geometry.
+
+---
+
+# **2. Dimensional Operator Layers**
+
+These are the **canonical operator layers** used across all pantheons, cosmologies, and RTT regimes.
+
+## **Void Operator (⬢)**
+Primordial substrate, undifferentiated potential, chaos, absence, pre‑form.
+
+Examples: Chaos (Greek), Nun (Egyptian), Abzu (Sumerian), Pangu’s pre‑separation state.
+
+---
+
+## **Shadow Operator (◆)**
+Collapse, underworld, inversion, conflict, entropy, dissolution pressure.
+
+Examples: Hades, Hel, Kur, Yomi, Set, Gonggong.
+
+---
+
+## **Clarity Operator (◯)**
+Illumination, order, projection, harmony, sovereignty, cosmic structure.
+
+Examples: Zeus, Amaterasu, Horus, Vishnu, Huangdi.
+
+---
+
+## **Dimensional Operator (⬡)**
+Intermediaries between layers; proto‑forms; Titans, Jötnar, Neteru, Devas, Immortals.
+
+Examples: Titans, Jötnar, Neteru, Lokas, Eight Immortals.
+
+---
+
+## **Liminal Operator (△)**
+Thresholds, psychopomps, tricksters, messengers, gatekeepers, realm‑crossers.
+
+Examples: Hermes, Esu, Heimdallr, Zhong Kui, Sarutahiko.
+
+---
+
+## **Projection Operator (★)**
+High‑visibility, high‑agency operators; Olympians, Aesir, Devas, major kami.
+
+Examples: Zeus, Odin, Amaterasu, Ra, Freyr.
+
+---
+
+## **Flow Operator (⌇)**
+Distributed operators; rivers, winds, emergent collectives, ecological spirits.
+
+Examples: Hapi, river kami, forest spirits, Oshun’s flow domain.
+
+---
+
+## **Emergent Operator (✶)**  
+Hybrids, paradox forms, monsters, resonance anomalies, liminal‑dimensional blends.
+
+Examples: Fenrir, Huli Jing, Fomorians, Anzu.
+
+---
+
+# **3. Regime Signature Mapping**
+
+Each module identifies regime behaviors:
+
+- **collapse**  
+- **inversion**  
+- **projection**  
+- **mixed‑state**  
+- **resonance anomalies**  
+- **blind‑spot drift**  
+- **lostational behavior**
+
+These signatures allow RTT‑aligned analysis across pantheons and cosmologies.
+
+---
+
+# **4. Resonance Geometry Analysis**
+
+Every module checks for:
+
+- **33×3+1 triadic lattice**  
+- **1/3 ↔ 2/3 visibility ratios**  
+- **≤1% resonance operators**  
+- **supersphere alignment**  
+- **lostational geometry**  
+- **inverted‑star signatures**
+
+These geometric signatures reveal deep structural homologies across traditions.
+
+---
+
+# **5. Dimensional Hex‑Map (SVG)**
+
+Each pantheon generates a **hex‑map** showing:
+
+- operator placement  
+- resonance geometry  
+- layer transitions  
+- liminal crossings  
+- supersphere alignment  
+
+This becomes the visual “fingerprint” of the pantheon.
+
+---
+
+# **6. Integration with Pantheon Completion Script**
+
+Dimensional operators are used in:
+
+- Step 5 (Triadic Decomposition)  
+- Step 6 (Glyph Assignment)  
+- Step 7 (Regime Mapping)  
+- Step 8 (Resonance Geometry)  
+- Step 9 (Hex‑Map Generation)  
+
+They form the structural backbone of every pantheon module.
+
+---
+
+# **Metadata**
+```yaml
+canon: TriadicFrameworks
+module: dimensional_operators
+version: 2.0.0
+status: active
+last_updated: 2026-07-16
+```
+
+---
+
+# **Badge**
+<div class="badge">🔷 Dimensional Operators — TriadicFrameworks Canon</div>
+
+---
+
+# **Sidebar Audit**
+- ✔ Dimensional layers defined  
+- ✔ Glyphs standardized  
+- ✔ RTT alignment integrated  
+- ✔ Resonance geometry included  
+- ✔ Level system formalized  
+- ✔ No phantom entries  
+- ✔ Suite fully aligned  
 <img width="938" height="938" alt="Egyptian_Triadic_Profile" src="https://github.com/user-attachments/assets/49c879a4-0c22-4ae4-853e-5613056edca1" />
 
 # ⭐ **EGYPTIAN CAPTURE — RTT/0 → RTT/3 (Full Canon‑Aligned Draft)**  
@@ -21444,6 +21444,95 @@ last_updated: 2026-07-16
 - ✔ Metadata block complete  
 - ✔ Cross‑references aligned  
 - ✔ No phantom entries  
+# **📘 Mesoamerican Pantheon — README.md (TriadicFrameworks)**
+
+- [`mesoamerican_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/mesoamerican/mesoamerican_module.json) — Agentic module schema role assignments
+
+<img width="1194" height="672" alt="mesoamerican_pantheon" src="https://github.com/user-attachments/assets/1803bb09-bc39-4d67-9203-43b709ee0a1e" />
+
+## **Overview**  
+The **Mesoamerican Pantheon** models the shared triadic operator systems found across Maya, Mexica/Aztec, Olmec, Zapotec, and Mixtec cultural complexes.  
+It provides a unified RTT‑aligned structure for cosmological layers, animal‑spirit stabilizers, calendar harmonics, ritual cycles, and supersphere fusion.
+
+This module is part of the **Triadic Pantheons Series**, extending the canon beyond Afro‑Eurasian traditions into the Americas.
+
+---
+
+## **Triadic Structure**
+
+### **Layer I — Cosmological Operators**  
+- **Sky** — solar oversight, avian stabilizers  
+- **Earth** — agricultural resonance, ritual centers  
+- **Underworld** — night‑cycle, jaguar operators, trial‑cycle pathways
+
+### **Layer II — Animal‑Spirit Stabilizers**  
+- **Jaguar** — power, night, underworld traversal  
+- **Serpent** — liminality, water, transition  
+- **Bird** — sky, vision, solar cycle stabilization
+
+### **Layer III — Cultural Cycle Operators**  
+- **Day‑count** — calendar harmonics (Tzolk’in / Haab’ / Tonalpohualli)  
+- **Ritual** — ballgame, sacrifice cycle, pilgrimage  
+- **Agricultural** — maize cycle, seasonal resonance
+
+---
+
+## **Liminal Operators**  
+- **Hero Twins** — duality, trial‑cycle  
+- **Maize Deity** — renewal, agricultural resonance  
+- **Storm/Rain Operators** — water, fertility, ritual timing
+
+---
+
+## **Geometry & Cosmology**  
+- **World‑Tree Axis (Yaxche)** — vertical cosmological spine  
+- **13 Heavens / 9 Underworlds** — layered cosmology  
+- **Calendar Geometry** — interlocking cycles forming harmonic triads
+
+---
+
+## **Paradox Structures**  
+- **Life‑through‑Sacrifice** — vitality emerging from ritual death  
+- **Duality‑through‑Conflict** — Hero Twin trial‑cycle  
+- **Order‑through‑Chaos** — calendar resets and cosmological renewal
+
+---
+
+## **Supersphere Fusion**  
+Cross‑cultural operator fusion across:  
+- **Maya ↔ Mexica ↔ Olmec**  
+Shared stabilizers: Jaguar–Serpent–Bird  
+Shared cycles: calendar harmonics, ritual geometry  
+Shared cosmology: layered worlds + world‑tree axis
+
+---
+
+## **Artifacts Included in This Module**  
+- `mesoamerican_capture.md` — full RTT/1 operator capture  
+- `cycle-diagram.svg` — cosmological cycle visualization  
+- `operators.svg` — triadic operator grid  
+- `geometry.svg` — world‑tree + layered cosmology  
+- `paradox-map.svg` — paradox‑axis mapping  
+- `supersphere-fusion.svg` — Maya/Mexica/Olmec supersphere intersection  
+- `Mesoamerican_Triadic_Profile.jpg` — pantheon profile image  
+- `module.json` — canonical metadata block
+
+---
+
+## **Cross‑Pantheon Links**  
+- **Andean Pantheon** — high‑altitude triadic cosmology  
+- **North American Woodland Pantheon** — mound‑builder triadic geometry  
+- **Egyptian / Yoruba / Sumerian** — parallel operator‑dense systems  
+- **Pantheon‑Core Registry** — global triadic mapping  
+
+
+---
+
+## **Status**  
+**Capture Complete**  
+SVG Suite: **Complete**  
+Metadata: **Complete**  
+README: **Complete (this file)**
 <img width="1194" height="672" alt="mesoamerican_pantheon" src="https://github.com/user-attachments/assets/9801b435-8e48-42f6-bc63-ffacc00b11b1" />
 
 Perfect — you’re sitting in the **exact right place** to begin the Mesoamerican capture, and I can see your active tab is already open to:
@@ -21919,95 +22008,6 @@ No external links, no copyrighted content, no page‑content instructions — ju
   }
 }
 ```
-# **📘 Mesoamerican Pantheon — README.md (TriadicFrameworks)**
-
-- [`mesoamerican_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/mesoamerican/mesoamerican_module.json) — Agentic module schema role assignments
-
-<img width="1194" height="672" alt="mesoamerican_pantheon" src="https://github.com/user-attachments/assets/1803bb09-bc39-4d67-9203-43b709ee0a1e" />
-
-## **Overview**  
-The **Mesoamerican Pantheon** models the shared triadic operator systems found across Maya, Mexica/Aztec, Olmec, Zapotec, and Mixtec cultural complexes.  
-It provides a unified RTT‑aligned structure for cosmological layers, animal‑spirit stabilizers, calendar harmonics, ritual cycles, and supersphere fusion.
-
-This module is part of the **Triadic Pantheons Series**, extending the canon beyond Afro‑Eurasian traditions into the Americas.
-
----
-
-## **Triadic Structure**
-
-### **Layer I — Cosmological Operators**  
-- **Sky** — solar oversight, avian stabilizers  
-- **Earth** — agricultural resonance, ritual centers  
-- **Underworld** — night‑cycle, jaguar operators, trial‑cycle pathways
-
-### **Layer II — Animal‑Spirit Stabilizers**  
-- **Jaguar** — power, night, underworld traversal  
-- **Serpent** — liminality, water, transition  
-- **Bird** — sky, vision, solar cycle stabilization
-
-### **Layer III — Cultural Cycle Operators**  
-- **Day‑count** — calendar harmonics (Tzolk’in / Haab’ / Tonalpohualli)  
-- **Ritual** — ballgame, sacrifice cycle, pilgrimage  
-- **Agricultural** — maize cycle, seasonal resonance
-
----
-
-## **Liminal Operators**  
-- **Hero Twins** — duality, trial‑cycle  
-- **Maize Deity** — renewal, agricultural resonance  
-- **Storm/Rain Operators** — water, fertility, ritual timing
-
----
-
-## **Geometry & Cosmology**  
-- **World‑Tree Axis (Yaxche)** — vertical cosmological spine  
-- **13 Heavens / 9 Underworlds** — layered cosmology  
-- **Calendar Geometry** — interlocking cycles forming harmonic triads
-
----
-
-## **Paradox Structures**  
-- **Life‑through‑Sacrifice** — vitality emerging from ritual death  
-- **Duality‑through‑Conflict** — Hero Twin trial‑cycle  
-- **Order‑through‑Chaos** — calendar resets and cosmological renewal
-
----
-
-## **Supersphere Fusion**  
-Cross‑cultural operator fusion across:  
-- **Maya ↔ Mexica ↔ Olmec**  
-Shared stabilizers: Jaguar–Serpent–Bird  
-Shared cycles: calendar harmonics, ritual geometry  
-Shared cosmology: layered worlds + world‑tree axis
-
----
-
-## **Artifacts Included in This Module**  
-- `mesoamerican_capture.md` — full RTT/1 operator capture  
-- `cycle-diagram.svg` — cosmological cycle visualization  
-- `operators.svg` — triadic operator grid  
-- `geometry.svg` — world‑tree + layered cosmology  
-- `paradox-map.svg` — paradox‑axis mapping  
-- `supersphere-fusion.svg` — Maya/Mexica/Olmec supersphere intersection  
-- `Mesoamerican_Triadic_Profile.jpg` — pantheon profile image  
-- `module.json` — canonical metadata block
-
----
-
-## **Cross‑Pantheon Links**  
-- **Andean Pantheon** — high‑altitude triadic cosmology  
-- **North American Woodland Pantheon** — mound‑builder triadic geometry  
-- **Egyptian / Yoruba / Sumerian** — parallel operator‑dense systems  
-- **Pantheon‑Core Registry** — global triadic mapping  
-
-
----
-
-## **Status**  
-**Capture Complete**  
-SVG Suite: **Complete**  
-Metadata: **Complete**  
-README: **Complete (this file)**
 # **Norse Triadic Profile Capture**  
 *(TriadicFrameworks Canon Module — Æsir + Vanir)*
 
@@ -22211,6 +22211,96 @@ last_updated: 2026-07-16
 - ✔ Metadata block complete  
 - ✔ Cross‑references aligned  
 - ✔ No phantom entries  
+# **📘 North American Woodland Pantheon — README.md (TriadicFrameworks)**
+
+- [`naw_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/north_american_woodland/naw_module.json) — Agentic module schema role assignments
+
+<img width="1194" height="672" alt="naw_triadic_profile" src="https://github.com/user-attachments/assets/b5908ee2-7ab9-47f9-9c27-9b5ca94ccfa8" />
+
+## **Overview**  
+The **North American Woodland Pantheon** models the triadic operator systems expressed across Adena, Hopewell, Fort Ancient, and Late Woodland cultural complexes.  
+It captures the cosmological grammar of **Bird / Serpent / Underworld**, earthwork geometry, burial‑complex operators, agricultural resonance cycles, and interaction‑sphere trade networks.
+
+This module extends the Triadic Pantheons Series into the Eastern Woodlands of North America, providing a unified RTT‑aligned operator framework.
+
+---
+
+## **Triadic Structure**
+
+### **Layer I — Cosmological Operators**  
+- **Bird** — sky, solar oversight, ritual signaling  
+- **Serpent** — water, liminality, underworld access  
+- **Underworld** — burial, ritual depth, ancestor pathways
+
+### **Layer II — Cultural Stabilizers**  
+- **Earthworks** — geometric enclosures, mounds, platform structures  
+- **Ritual** — burial complexes, ceremonial centers  
+- **Trade‑network** — interaction spheres, exotic‑material exchange
+
+### **Layer III — Cultural Cycle Operators**  
+- **Ancestor** — burial, lineage, mortuary ritual  
+- **Hero** — mythic exemplars, trial‑cycle motifs  
+- **Trickster** — liminal transformation, boundary crossing
+
+---
+
+## **Liminal Operators**  
+- **Mound‑Builder Priesthood** — ritual specialists overseeing earthwork construction  
+- **Burial‑Complex Operators** — Adena and Hopewell mortuary systems  
+- **Seasonal Agricultural Operators** — Eastern Agricultural Complex (sunflower, goosefoot, maygrass)
+
+---
+
+## **Geometry & Cosmology**  
+- **Circle Enclosures** — ceremonial centers and cosmological alignments  
+- **Octagon Enclosures** — geometric ritual structures (Hopewell)  
+- **Serpent Earthworks** — liminal water/underworld pathways  
+- **Platform Mounds** — ritual elevation and social signaling  
+- **Interaction Spheres** — long‑distance trade geometry (copper, mica, shells, obsidian)
+
+---
+
+## **Paradox Structures**  
+- **Order‑through‑Burial** — social coherence via mortuary ritual  
+- **Stability‑through‑Exchange** — interaction spheres binding distant groups  
+- **Identity‑through‑Fragmentation** — regional cultural variants forming a coherent whole
+
+---
+
+## **Supersphere Fusion**  
+Cross‑cultural operator fusion across:  
+- **Adena ↔ Hopewell ↔ Late Woodland**  
+Shared stabilizers: Bird–Serpent–Underworld  
+Shared cycles: agricultural resonance, mortuary pathways, trade networks  
+Shared geometry: circles, octagons, serpent forms
+
+---
+
+## **Artifacts Included in This Module**  
+- `naw_capture.md` — full RTT/1 operator capture  
+- `cycle-diagram.svg` — cosmological cycle visualization  
+- `operators.svg` — triadic operator grid  
+- `geometry.svg` — earthwork geometry (circle, octagon, serpent)  
+- `paradox-map.svg` — paradox‑axis mapping  
+- `supersphere-fusion.svg` — Adena/Hopewell/Late Woodland supersphere intersection  
+- `Woodland_Triadic_Profile.jpg` — pantheon profile image  
+- `naw_module.json` — canonical metadata block
+
+---
+
+## **Cross‑Pantheon Links**  
+- **Mesoamerican Pantheon** — layered cosmology + animal‑spirit stabilizers  
+- **Andean Pantheon** — vertical cosmology + agricultural resonance  
+- **Egyptian / Yoruba / Sumerian** — parallel operator‑dense systems  
+- **Pantheon‑Core Registry** — global triadic mapping
+
+---
+
+## **Status**  
+**Capture Complete**  
+SVG Suite: **Complete**  
+Metadata: **Pending (naw_module.json)**  
+README: **Complete (this file)**
 # **North American Woodland Pantheon — Canonical Capture (RTT/1 Format)**  
 *(TriadicFrameworks Pantheon Series)*
 
@@ -22743,96 +22833,6 @@ You now have:
 
 All three American pantheons are now fully built and canon‑aligned.
 
-# **📘 North American Woodland Pantheon — README.md (TriadicFrameworks)**
-
-- [`naw_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/north_american_woodland/naw_module.json) — Agentic module schema role assignments
-
-<img width="1194" height="672" alt="naw_triadic_profile" src="https://github.com/user-attachments/assets/b5908ee2-7ab9-47f9-9c27-9b5ca94ccfa8" />
-
-## **Overview**  
-The **North American Woodland Pantheon** models the triadic operator systems expressed across Adena, Hopewell, Fort Ancient, and Late Woodland cultural complexes.  
-It captures the cosmological grammar of **Bird / Serpent / Underworld**, earthwork geometry, burial‑complex operators, agricultural resonance cycles, and interaction‑sphere trade networks.
-
-This module extends the Triadic Pantheons Series into the Eastern Woodlands of North America, providing a unified RTT‑aligned operator framework.
-
----
-
-## **Triadic Structure**
-
-### **Layer I — Cosmological Operators**  
-- **Bird** — sky, solar oversight, ritual signaling  
-- **Serpent** — water, liminality, underworld access  
-- **Underworld** — burial, ritual depth, ancestor pathways
-
-### **Layer II — Cultural Stabilizers**  
-- **Earthworks** — geometric enclosures, mounds, platform structures  
-- **Ritual** — burial complexes, ceremonial centers  
-- **Trade‑network** — interaction spheres, exotic‑material exchange
-
-### **Layer III — Cultural Cycle Operators**  
-- **Ancestor** — burial, lineage, mortuary ritual  
-- **Hero** — mythic exemplars, trial‑cycle motifs  
-- **Trickster** — liminal transformation, boundary crossing
-
----
-
-## **Liminal Operators**  
-- **Mound‑Builder Priesthood** — ritual specialists overseeing earthwork construction  
-- **Burial‑Complex Operators** — Adena and Hopewell mortuary systems  
-- **Seasonal Agricultural Operators** — Eastern Agricultural Complex (sunflower, goosefoot, maygrass)
-
----
-
-## **Geometry & Cosmology**  
-- **Circle Enclosures** — ceremonial centers and cosmological alignments  
-- **Octagon Enclosures** — geometric ritual structures (Hopewell)  
-- **Serpent Earthworks** — liminal water/underworld pathways  
-- **Platform Mounds** — ritual elevation and social signaling  
-- **Interaction Spheres** — long‑distance trade geometry (copper, mica, shells, obsidian)
-
----
-
-## **Paradox Structures**  
-- **Order‑through‑Burial** — social coherence via mortuary ritual  
-- **Stability‑through‑Exchange** — interaction spheres binding distant groups  
-- **Identity‑through‑Fragmentation** — regional cultural variants forming a coherent whole
-
----
-
-## **Supersphere Fusion**  
-Cross‑cultural operator fusion across:  
-- **Adena ↔ Hopewell ↔ Late Woodland**  
-Shared stabilizers: Bird–Serpent–Underworld  
-Shared cycles: agricultural resonance, mortuary pathways, trade networks  
-Shared geometry: circles, octagons, serpent forms
-
----
-
-## **Artifacts Included in This Module**  
-- `naw_capture.md` — full RTT/1 operator capture  
-- `cycle-diagram.svg` — cosmological cycle visualization  
-- `operators.svg` — triadic operator grid  
-- `geometry.svg` — earthwork geometry (circle, octagon, serpent)  
-- `paradox-map.svg` — paradox‑axis mapping  
-- `supersphere-fusion.svg` — Adena/Hopewell/Late Woodland supersphere intersection  
-- `Woodland_Triadic_Profile.jpg` — pantheon profile image  
-- `naw_module.json` — canonical metadata block
-
----
-
-## **Cross‑Pantheon Links**  
-- **Mesoamerican Pantheon** — layered cosmology + animal‑spirit stabilizers  
-- **Andean Pantheon** — vertical cosmology + agricultural resonance  
-- **Egyptian / Yoruba / Sumerian** — parallel operator‑dense systems  
-- **Pantheon‑Core Registry** — global triadic mapping
-
----
-
-## **Status**  
-**Capture Complete**  
-SVG Suite: **Complete**  
-Metadata: **Pending (naw_module.json)**  
-README: **Complete (this file)**
 # **Sumerian Pantheon — Triadic Profile Overview**  
 
 - [`sumerian_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/sumerian/sumerian_module.json) — Agentic module schema role assignments
@@ -27587,84 +27587,6 @@ last_updated: 2026-07-16
 - ✔ Metadata block complete  
 - ✔ Cross‑references aligned  
 - ✔ No phantom entries  
-# Yoruba Pantheon — Sidebar
-TriadicFrameworks · Pantheon Canon
-
-## Module Files
-- **README.md** — Yoruba Pantheon overview and triadic summary  
-- **Yoruba_Triadic_Profile_Capture.md** — full RTT/0 → RTT/3 capture  
-- **module.json** — canonical metadata and structural schema  
-- **badges.html** — module identity badges  
-- **sidebar.md** — this navigation sidebar
-
----
-
-## Core Operators
-**Clarity:** Ọrunmila · Obatala · Orun · Ọba kingship · Máriwo rites  
-**Shadow:** Ogun · Ṣango · Aje · forest spirits · collapse cycles  
-**Dimensional:** Ọrun/Aiye · Ifẹ · Oyo‑Ile · glassworks · bead networks  
-**Liminal:** Esu · Ifá diviners · gate complexes · descent rituals  
-**Projection:** Ṣango kingship · Ọba lineages · coastal projection · Ifẹ art  
-**Flow:** Oshun · Oya · Niger–Benue corridor · bead networks  
-**Emergent:** Egungun · Gelede · Esiẹ corpus · Sungbo’s Eredo  
-**Void:** Olodumare · Odu Ifá · Proto‑Yoruboid substrate · Iho Eleru
-
----
-
-## Geometry Layers
-- **Clarity Cone:** Ọrunmila → Obatala → Orun → Ọba kingship  
-- **Shadow Cone:** Ogun → Ṣango → Aje → collapse cycles  
-- **Dimensional Spine:** Ọrun/Aiye → Ifẹ → Oyo‑Ile → bead/glass networks  
-- **Liminal Ring:** Esu · Ifá diviners · gate complexes · descent rituals  
-- **Projection Band:** Ṣango kingship · Ọba dynasties · Ifẹ hyperrealism  
-- **Flow Band:** Oshun · Oya · Niger–Benue corridor · bead networks  
-- **Emergent Ring:** Egungun · Gelede · Esiẹ corpus · Sungbo’s Eredo  
-- **Void Substrate:** Olodumare · Odu Ifá · Proto‑Yoruboid · Iho Eleru
-
----
-
-## Paradox Layer
-- Ifẹ (origin → multiplicity → origin)  
-- Ọrun/Aiye (above → below → above)  
-- Kingship (mortal → divine → mortal lineage)  
-- Conflict (destruction → renewal → destruction)
-
----
-
-## Corridors
-- Esu (crossroads)  
-- Ifá diviners (knowledge)  
-- Gate complexes (architectural thresholds)  
-- Ọrun → Aiye descent rituals (realm transition)
-
----
-
-## Cycles
-- Kingship cycles (Ṣango, Ọba dynasties)  
-- Empire cycles (Oyo rise/fall)  
-- Ancestral cycles (Egungun)  
-- Origin cycles (Ifẹ)  
-- Realm cycles (Ọrun/Aiye)
-
----
-
-## Triad Integration
-Yoruba participates in the Pantheon Triad:
-- **Yoruba ↔ Egyptian:** cycle/paradox resonance  
-- **Yoruba ↔ Hindu:** structural/void resonance  
-- **Yoruba ↔ Greek:** narrative/ancestral resonance  
-
-**Triad Identity:**  
-Cycle‑lineage + origin‑multiplicity apex.
-
----
-
-## Links
-- [Pantheons Overview](../README.md)  
-- [Yoruba Profile Capture](Yoruba_Triadic_Profile_Capture.md)  
-- [Egyptian Pantheon](../egyptian/README.md)  
-- [Hindu Pantheon](../hindu/README.md)  
-- [Greek Pantheon](../greek/README.md)
 <img width="1194" height="672" alt="Yoruba_Triadic_Profile" src="https://github.com/user-attachments/assets/d6f47c7b-8865-4d08-af7d-cdf258f3df01" />
 
 Below is a **fully‑formed, canon‑aligned Yoruba Triadic Profile Capture**, ready for you to paste directly into:
@@ -29051,4 +28973,82 @@ We’ve got the supersphere and operators scaffolded; next step is deciding your
 
 Where do you want to start—**core Orisha character sheets** or **lineage/realm characters** (kings, cities, ancestor complexes)?
 
+# Yoruba Pantheon — Sidebar
+TriadicFrameworks · Pantheon Canon
+
+## Module Files
+- **README.md** — Yoruba Pantheon overview and triadic summary  
+- **Yoruba_Triadic_Profile_Capture.md** — full RTT/0 → RTT/3 capture  
+- **module.json** — canonical metadata and structural schema  
+- **badges.html** — module identity badges  
+- **sidebar.md** — this navigation sidebar
+
+---
+
+## Core Operators
+**Clarity:** Ọrunmila · Obatala · Orun · Ọba kingship · Máriwo rites  
+**Shadow:** Ogun · Ṣango · Aje · forest spirits · collapse cycles  
+**Dimensional:** Ọrun/Aiye · Ifẹ · Oyo‑Ile · glassworks · bead networks  
+**Liminal:** Esu · Ifá diviners · gate complexes · descent rituals  
+**Projection:** Ṣango kingship · Ọba lineages · coastal projection · Ifẹ art  
+**Flow:** Oshun · Oya · Niger–Benue corridor · bead networks  
+**Emergent:** Egungun · Gelede · Esiẹ corpus · Sungbo’s Eredo  
+**Void:** Olodumare · Odu Ifá · Proto‑Yoruboid substrate · Iho Eleru
+
+---
+
+## Geometry Layers
+- **Clarity Cone:** Ọrunmila → Obatala → Orun → Ọba kingship  
+- **Shadow Cone:** Ogun → Ṣango → Aje → collapse cycles  
+- **Dimensional Spine:** Ọrun/Aiye → Ifẹ → Oyo‑Ile → bead/glass networks  
+- **Liminal Ring:** Esu · Ifá diviners · gate complexes · descent rituals  
+- **Projection Band:** Ṣango kingship · Ọba dynasties · Ifẹ hyperrealism  
+- **Flow Band:** Oshun · Oya · Niger–Benue corridor · bead networks  
+- **Emergent Ring:** Egungun · Gelede · Esiẹ corpus · Sungbo’s Eredo  
+- **Void Substrate:** Olodumare · Odu Ifá · Proto‑Yoruboid · Iho Eleru
+
+---
+
+## Paradox Layer
+- Ifẹ (origin → multiplicity → origin)  
+- Ọrun/Aiye (above → below → above)  
+- Kingship (mortal → divine → mortal lineage)  
+- Conflict (destruction → renewal → destruction)
+
+---
+
+## Corridors
+- Esu (crossroads)  
+- Ifá diviners (knowledge)  
+- Gate complexes (architectural thresholds)  
+- Ọrun → Aiye descent rituals (realm transition)
+
+---
+
+## Cycles
+- Kingship cycles (Ṣango, Ọba dynasties)  
+- Empire cycles (Oyo rise/fall)  
+- Ancestral cycles (Egungun)  
+- Origin cycles (Ifẹ)  
+- Realm cycles (Ọrun/Aiye)
+
+---
+
+## Triad Integration
+Yoruba participates in the Pantheon Triad:
+- **Yoruba ↔ Egyptian:** cycle/paradox resonance  
+- **Yoruba ↔ Hindu:** structural/void resonance  
+- **Yoruba ↔ Greek:** narrative/ancestral resonance  
+
+**Triad Identity:**  
+Cycle‑lineage + origin‑multiplicity apex.
+
+---
+
+## Links
+- [Pantheons Overview](../README.md)  
+- [Yoruba Profile Capture](Yoruba_Triadic_Profile_Capture.md)  
+- [Egyptian Pantheon](../egyptian/README.md)  
+- [Hindu Pantheon](../hindu/README.md)  
+- [Greek Pantheon](../greek/README.md)
 

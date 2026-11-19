@@ -1,35 +1,9 @@
 enterprise_structural_awareness 
-## Future Directions
-
-Enterprise Structural Awareness is intentionally minimal and non‑prescriptive. Future exploration may extend these concepts to additional enterprise domains without altering the core posture of structural clarity and non‑intrusion.
-
-Potential directions include:
-- Deeper alignment with enterprise documentation and standards practices
-- Exploration of structural awareness in distributed and hybrid environments
-- Application to long‑term system lifecycle and decommissioning processes
-- Integration with observability and reporting frameworks as interpretive context
-
-Any future work should preserve the principle that structural awareness augments understanding without enforcing behavior. The value of this approach lies in its ability to coexist with existing enterprise systems while improving interpretability and coherence over time.
-## Enterprise Structural Awareness  
+<img width="1194" height="672" alt="Enterprise_Structural_Awareness_" src="https://github.com/user-attachments/assets/ecc1ad07-9d26-4df7-afd8-24e71df45d08" />
 
 - [`esa_module.json`](esa_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# Enterprise Structural Awareness  
 Enterprise systems are composed of layered products, policies, configurations, and operational practices that evolve over long lifecycles. While these systems are highly capable, they often lack explicit mechanisms for declaring when assumptions hold, when they drift, and when operating contexts change.
 
 ## 🛑 Important! 
@@ -70,16 +44,23 @@ Enterprise Structural Awareness is intentionally quiet. Its value lies in making
 It is offered as a reference surface rather than a prescription, enabling enterprise teams to recognize and articulate structural context that already exists within their systems.
 
 - [repo folder](../)
-## Relationship to the Manufacturing Substrate Regime Model (MSRM)
 
-Enterprise Structural Awareness is conceptually aligned with the Manufacturing Substrate Regime Model (MSRM) in its treatment of regimes, calibration validity, and boundary semantics as structural concerns rather than operational controls.
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
-MSRM applies substrate‑level regime reasoning to manufacturing environments characterized by extreme constraints and long‑term calibration dependencies. Enterprise Structural Awareness adapts similar principles to enterprise IT systems, where configuration, policy, and lifecycle assumptions evolve over time.
-
-This work does not extend or modify MSRM. Instead, it demonstrates how MSRM‑style structural reasoning can be introduced into enterprise systems using existing configuration and metadata surfaces.
-
-The relationship is one of methodological alignment rather than dependency. Enterprise Structural Awareness remains domain‑specific to enterprise IT environments.
-## Configuration Management
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+## Configuration Management
 
 Configuration management systems define desired state across enterprise environments. They are typically declarative, versioned, and long‑lived, making them natural carriers of structural awareness.
 
@@ -175,6 +156,17 @@ Examples of policy objects include:
 - Organizational standards documents
 
 Using policy objects as structural awareness carriers allows teams to distinguish between policy intent and regime validity, supporting clearer reasoning when policies are applied outside their original assumptions.
+## Future Directions
+
+Enterprise Structural Awareness is intentionally minimal and non‑prescriptive. Future exploration may extend these concepts to additional enterprise domains without altering the core posture of structural clarity and non‑intrusion.
+
+Potential directions include:
+- Deeper alignment with enterprise documentation and standards practices
+- Exploration of structural awareness in distributed and hybrid environments
+- Application to long‑term system lifecycle and decommissioning processes
+- Integration with observability and reporting frameworks as interpretive context
+
+Any future work should preserve the principle that structural awareness augments understanding without enforcing behavior. The value of this approach lies in its ability to coexist with existing enterprise systems while improving interpretability and coherence over time.
 ## Automation Boundary Markers
 
 Automation systems operate most safely when their assumptions are explicit. Structural awareness can be used to mark boundaries beyond which automation should be interpreted cautiously.
@@ -430,4 +422,13 @@ Key terms are used consistently and intentionally:
 These terms are descriptive rather than prescriptive. They are intended to support shared understanding across teams without introducing new operational mandates.
 
 Where possible, terminology is chosen to align with familiar enterprise concepts such as configuration state, lifecycle phase, and policy context.
-
+## Relationship to the Manufacturing Substrate Regime Model (MSRM)
+
+Enterprise Structural Awareness is conceptually aligned with the Manufacturing Substrate Regime Model (MSRM) in its treatment of regimes, calibration validity, and boundary semantics as structural concerns rather than operational controls.
+
+MSRM applies substrate‑level regime reasoning to manufacturing environments characterized by extreme constraints and long‑term calibration dependencies. Enterprise Structural Awareness adapts similar principles to enterprise IT systems, where configuration, policy, and lifecycle assumptions evolve over time.
+
+This work does not extend or modify MSRM. Instead, it demonstrates how MSRM‑style structural reasoning can be introduced into enterprise systems using existing configuration and metadata surfaces.
+
+The relationship is one of methodological alignment rather than dependency. Enterprise Structural Awareness remains domain‑specific to enterprise IT environments.
+
