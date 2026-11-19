@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_case_studies_Asceticism_protocol_" src="https://github.com/user-attachments/assets/efda21b0-ce67-4fea-8170-47400a891f92" />
+
 # Resonance Asceticism: Measurement and Data-Collection Protocol
 
 **Case Study:** Resonance Asceticism
