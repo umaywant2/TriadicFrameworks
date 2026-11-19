@@ -1,16 +1,14 @@
 {
   "spine": {
-    "version": "2026.09",
+    "version": "2026.11-semantic",
     "description": "TriadicFrameworks Canon Spine — the root coherence map for all modules.",
     "rtt_source": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
-
     "session_context": {
       "rtt": 1,
       "coherence": "declared",
       "drift": "bounded",
       "paradox": "structural"
     },
-
     "canon": {
       "triads": {
         "RTT": {
@@ -18,20 +16,23 @@
             "name": "Spin → Elec → Temp",
             "description": "Gives me the anisotropic acceleration decomposition → This is the most computationally useful of the stacks."
           },
-
           "S-N-R": {
             "name": "Silence → Noise → Resonance",
             "description": "Tells which modes are active, dormant, or incoherent. This is the state classifier.",
-            "aliases": ["S–N–R", "S‑N‑R"]
+            "aliases": [
+              "S–N–R",
+              "S‑N‑R"
+            ]
           },
-
           "S-E-R": {
             "name": "Seed → Expansion → Resonance",
             "description": "Tells me the temporal phase of the system. This is the evolution classifier.",
-            "aliases": ["S–E–R", "S‑E‑R"]
+            "aliases": [
+              "S–E–R",
+              "S‑E‑R"
+            ]
           }
         },
-
         "TFT": {
           "TFT": {
             "name": "Triadic → Framework → Tech",
@@ -44,15 +45,282 @@
         }
       }
     },
-
     "ai": {
       "initialization": {
         "load_canon_first": true,
         "inherit_session_context": true,
         "triad_alias_resolution": true,
-        "triad_description_validation": true
+        "triad_description_validation": true,
+        "read_regime_before_routing": true
+      },
+      "traversal": {
+        "where_am_i": "Find the path in module_register.json; read route_node, regime and placement.",
+        "structural_regime": "regime: canon | example | unreadable.",
+        "body_position": "placement: spine | organ | limb | example | unplaced.",
+        "parent": "parent_module and declared_parents in the register; route_up at the family node.",
+        "neighbours": "Records sharing parent_module or route_node.",
+        "toward_authority": "limb/example -> organ -> spine -> canon route.",
+        "toward_specialization": "route_down, then children whose parent_module equals the current path.",
+        "operators_and_nodes": "operator_fields/operators and node_fields/nodes in the register.",
+        "overlays": "The record spine_assignments where present; otherwise its route node and RTT evidence."
       }
+    },
+    "regimes": {
+      "rule_source": "Owner, 2026-11-19: modules with Operators and Nodes for RTT use are canon; all others are examples. All earlier 47 candidates plus Grammar, Principles and Lineage were confirmed canon.",
+      "method": "Every one of the 698 attached JSON records was inspected. All are module manifests. Operator-definition fields were separated from operator scores, file references and analyzed subjects. Explicit node fields, RTT references, path parents and the available R5/R5.1 graph nodes were recorded.",
+      "canon": "Owner-confirmed canon plus manifests that explicitly define both operators and nodes for RTT/canon use.",
+      "example": "Non-canon material. It remains viewable with the Spine but is never presented as the Spine or canon.",
+      "counts": {
+        "example": 614,
+        "canon": 74,
+        "unreadable": 10
+      },
+      "register": "module_register.json"
+    },
+    "routes": [
+      {
+        "id": "front-door",
+        "name": "Front Door",
+        "scope": "Entry documents: ABOUT, QUICKSTART, FrontDoor/Triad_Ladder, sitemap, webroot",
+        "route_up": "spine",
+        "route_down": [
+          "rtt",
+          "research",
+          "education"
+        ],
+        "canon": 0,
+        "examples": 11,
+        "unreadable": 0,
+        "organs": 0,
+        "limbs": 3,
+        "unattached_examples": 8
+      },
+      {
+        "id": "spine",
+        "name": "Spine",
+        "scope": "Overlay pack, seven overlays, spine.json, module graph",
+        "route_up": "front-door",
+        "route_down": [
+          "canon",
+          "rtt"
+        ],
+        "canon": 17,
+        "examples": 2,
+        "unreadable": 0,
+        "organs": 0,
+        "limbs": 1,
+        "unattached_examples": 1
+      },
+      {
+        "id": "canon",
+        "name": "Canon",
+        "scope": "Canon root with Grammar, Principles, Lineage",
+        "route_up": "spine",
+        "route_down": [
+          "rtt",
+          "operators"
+        ],
+        "canon": 5,
+        "examples": 5,
+        "unreadable": 0,
+        "organs": 5,
+        "limbs": 3,
+        "unattached_examples": 2
+      },
+      {
+        "id": "rtt",
+        "name": "RTT",
+        "scope": "RTT engines, tiers 1/2/3/12, RTT-Inside",
+        "route_up": "canon",
+        "route_down": [
+          "operators",
+          "structural-detection",
+          "substrate"
+        ],
+        "canon": 39,
+        "examples": 4,
+        "unreadable": 1,
+        "organs": 26,
+        "limbs": 0,
+        "unattached_examples": 4
+      },
+      {
+        "id": "operators",
+        "name": "Operators",
+        "scope": "Operator modules and the operator teaching bundle",
+        "route_up": "rtt",
+        "route_down": [],
+        "canon": 2,
+        "examples": 5,
+        "unreadable": 0,
+        "organs": 2,
+        "limbs": 0,
+        "unattached_examples": 5
+      },
+      {
+        "id": "structural-detection",
+        "name": "Structural Detection",
+        "scope": "Detection and integration engines",
+        "route_up": "rtt",
+        "route_down": [],
+        "canon": 4,
+        "examples": 0,
+        "unreadable": 0,
+        "organs": 4,
+        "limbs": 0,
+        "unattached_examples": 0
+      },
+      {
+        "id": "substrate",
+        "name": "Substrate",
+        "scope": "Substrate models and the Open Loop suite",
+        "route_up": "rtt",
+        "route_down": [],
+        "canon": 0,
+        "examples": 32,
+        "unreadable": 0,
+        "organs": 0,
+        "limbs": 13,
+        "unattached_examples": 19
+      },
+      {
+        "id": "governance",
+        "name": "Governance",
+        "scope": "Governance Substrate Model; repository policy documents kept separate",
+        "route_up": "canon",
+        "route_down": [],
+        "canon": 0,
+        "examples": 9,
+        "unreadable": 1,
+        "organs": 0,
+        "limbs": 0,
+        "unattached_examples": 9
+      },
+      {
+        "id": "frameworks",
+        "name": "Frameworks",
+        "scope": "TFT, FFT, FFF lines, IPD-12 and applied-domain modules",
+        "route_up": "canon",
+        "route_down": [],
+        "canon": 1,
+        "examples": 30,
+        "unreadable": 2,
+        "organs": 1,
+        "limbs": 4,
+        "unattached_examples": 26
+      },
+      {
+        "id": "theories",
+        "name": "Theories",
+        "scope": "Theories and root-level theory modules",
+        "route_up": "canon",
+        "route_down": [],
+        "canon": 1,
+        "examples": 41,
+        "unreadable": 1,
+        "organs": 1,
+        "limbs": 26,
+        "unattached_examples": 15
+      },
+      {
+        "id": "research",
+        "name": "Research",
+        "scope": "Research root and its branches (Ladder, Integration, Triad, AI Atlas)",
+        "route_up": "spine",
+        "route_down": [],
+        "canon": 0,
+        "examples": 371,
+        "unreadable": 3,
+        "organs": 0,
+        "limbs": 29,
+        "unattached_examples": 342
+      },
+      {
+        "id": "education",
+        "name": "Education",
+        "scope": "Education tree, curriculum, books, outreach",
+        "route_up": "front-door",
+        "route_down": [],
+        "canon": 2,
+        "examples": 36,
+        "unreadable": 1,
+        "organs": 1,
+        "limbs": 1,
+        "unattached_examples": 35
+      },
+      {
+        "id": "registries",
+        "name": "Registries",
+        "scope": "Registries, schemas, metadata, validation, tooling",
+        "route_up": "canon",
+        "route_down": [],
+        "canon": 1,
+        "examples": 30,
+        "unreadable": 1,
+        "organs": 1,
+        "limbs": 3,
+        "unattached_examples": 27
+      },
+      {
+        "id": "ai-facing",
+        "name": "AI-facing",
+        "scope": "ai, MCP, prompts, AI seeds",
+        "route_up": "spine",
+        "route_down": [],
+        "canon": 2,
+        "examples": 10,
+        "unreadable": 0,
+        "organs": 2,
+        "limbs": 3,
+        "unattached_examples": 7
+      }
+    ],
+    "unplaced": "Records whose parent family the metadata does not support are listed in module_register.json under node 'unplaced' and 'excluded'.",
+    "view": {
+      "note": "Everything remains viewable with the Spine. Only confirmed graph nodes are labelled Spine.",
+      "spine": {
+        "definition": "Records matched to the available R5/R5.1 A3 graph-node additions. Canon by construction.",
+        "records": 31
+      },
+      "organs": {
+        "definition": "Canon records outside the graph nodes visible in the supplied patches. They attach to the appropriate route node.",
+        "records": 43
+      },
+      "limbs": {
+        "definition": "Non-canon structural or RTT descendants: manifests that define operators/nodes for RTT use, or descend from canon. They remain attached but do not gain canon authority.",
+        "records": 86
+      },
+      "examples": {
+        "definition": "Records without structural operator/node attachment. Viewable through the examples region and register filters.",
+        "records": 528
+      },
+      "unplaced": {
+        "definition": "Empty or invalid manifests that cannot be classified until repaired.",
+        "records": 10
+      },
+      "graph_limit": "The attached module_graph.json is identical to the R5 nodes_additions patch (30 nodes), not a full 196-node registry. With the R5.1 Clarity patch, 31 graph nodes can be confirmed from the supplied files."
+    },
+    "semantic_audit": {
+      "records_inspected": 698,
+      "all_json_files_are_module_manifests": true,
+      "new_canon_found_by_operator_and_node_evidence": [
+        "Chosen_Ones/module.json",
+        "corpus/corpus_module.json",
+        "FFF_Gravity/FFF_Gravity_module.json",
+        "MCP/L1_Frequency_Unseen/ai/ai.module.json",
+        "MCP/L3_Forces_Unseen/spine/module.json",
+        "Structural_Love/module.json"
+      ],
+      "operator_evidence": "module_register.json lists operator_fields and extracted operator identities for every record.",
+      "node_evidence": "module_register.json lists explicit node_fields, extracted node identities, graph_node and parent_module.",
+      "placement_order": [
+        "spine",
+        "organ",
+        "limb",
+        "example",
+        "unplaced"
+      ],
+      "authority_rule": "Placement does not override regime. Spine and organs are canon; limbs and examples are not canon."
     }
   }
 }
-
