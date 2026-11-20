@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_model_mismatch_" src="https://github.com/user-attachments/assets/9a307dd9-8389-4165-828a-3d458f2c2f3c" />
+
 # Predictive Analytics — Model Mismatch
 
 > **When prediction and observati** disagree, the first question is **t "**ich side is wrong?" It is "what relationship has failed to fit?"**
