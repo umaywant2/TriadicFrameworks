@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_intelligence_dimensions_" src="https://github.com/user-attachments/assets/a7d9bace-c6c9-4fcb-98de-f8bc47e641dc" />
+
 # Predictive Analytics — Intelligence Dimensions
 
 > **Intelligence may have shape before it has a score.**
