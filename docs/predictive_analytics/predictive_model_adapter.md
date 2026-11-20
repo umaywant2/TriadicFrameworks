@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_predictive_model_adapter_" src="https://github.com/user-attachments/assets/089f425c-07ed-47ec-a6e4-9536152323a6" />
+
 # Predictive Analytics — Predictive Model Adapter
 
 > **Wrap the model before you reinterpret the prediction.**
