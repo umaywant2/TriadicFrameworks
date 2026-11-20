@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_substrate_adapter_" src="https://github.com/user-attachments/assets/2225aa2f-9d7f-4c6f-b55e-4a136dc801cc" />
+
 # Predictive Analytics — Substrate Adapter
 
 > **What becomes observable depends partly on how observation is made.**
